@@ -1,6 +1,7 @@
 ---
-title: "Backedup and Notbackedup"
+title: "Backedup and NotbackedUp"
 date: 2021-02-11T11:09:51-07:00
+description: "The origins of my ubiquitous BackedUp and NotBackedUp folders"
 draft: true
 categories:
   - My System

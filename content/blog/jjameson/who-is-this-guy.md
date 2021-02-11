@@ -1,6 +1,7 @@
 ---
 title: "Who is this guy?"
 date: 2021-02-11T09:40:21-07:00
+description: "A not-so-brief introduction to Jeremy Jameson"
 draft: true
 categories:
   - Personal
