@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Services"
 date: 2021-02-11T05:03:32-07:00
 draft: true
