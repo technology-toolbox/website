@@ -14,3 +14,5 @@ rhoncus orci. Morbi eu gravida sapien. Suspendisse ac ex a nulla elementum
 bibendum ut a odio. Aenean aliquet sit amet orci vel semper. Ut at ornare velit,
 eu convallis sem. Maecenas quis justo in libero laoreet scelerisque. Curabitur
 eu lorem et ex accumsan maximus.
+
+&copy; {{< year >}} Technology Toolbox
