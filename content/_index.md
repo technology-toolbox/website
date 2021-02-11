@@ -6,7 +6,7 @@ draft: true
 
 ## Heading
 
-{{< placeholder width="1000" height="250" >}}
+{{< placeholder width="1200" height="250" class="img-fluid" >}}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, sapien
 non convallis malesuada, metus velit pretium arcu, vel lobortis elit tortor
