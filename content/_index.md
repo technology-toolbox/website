@@ -6,6 +6,8 @@ draft: true
 
 ## Heading
 
+{{< placeholder width="1000" height="250" >}}
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, sapien
 non convallis malesuada, metus velit pretium arcu, vel lobortis elit tortor
 rhoncus orci. Morbi eu gravida sapien. Suspendisse ac ex a nulla elementum
