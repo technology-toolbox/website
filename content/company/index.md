@@ -1,7 +1,10 @@
 ---
+layout: page-with-side-image
 title: "Company Overview"
 date: 2021-02-11T06:18:17-07:00
 draft: true
+imageDescription: "Large icon with bullseye and dart in center"
+imageUrl: "/company/img/icon-dart-target-bullseye-347x346.jpg"
 ---
 
 ## Background

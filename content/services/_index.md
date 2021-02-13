@@ -1,8 +1,10 @@
 ---
-layout: single
+layout: page-with-side-image
 title: "Services"
 date: 2021-02-11T05:03:32-07:00
 draft: true
+imageDescription: "Large icon with close-up of gears interacting"
+imageUrl: "/services/img/icon-gears-347x346.jpg"
 ---
 
 Technology Toolbox helps businesses successfully plan, architect, implement, and
