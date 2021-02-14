@@ -1,0 +1,83 @@
+---
+title: "Linked Files in Visual Studio Solutions"
+date: 2009-04-02T02:20:00+08:00
+excerpt: "A couple of years ago, I wrote a post introducing my system for structuring Visual Studio solutions . However, I apparently forgot to post a follow-up providing additional details, such as configuring assembly versioning and what I like to call \"shared..."
+draft: true
+categories: ["My System", "Development"]
+tags: ["My System", "Core Development", "Visual Studio", "
+                        TFS"]
+---
+
+> **Note**
+> 
+>             This post originally appeared on my MSDN blog:  
+>   
+> 
+> 
+> [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx)
+> 
+> 
+> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+
+
+A couple of years ago, I wrote a post introducing my system for [structuring Visual Studio solutions](/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx). However, I apparently forgot to post         a follow-up providing additional details, such as configuring assembly versioning         and what I like to call "shared assembly information."
+
+Before I can cover these details, I need to first ensure that you are familiar with         the concept of linking files in Visual Studio solutions, why this is a powerful         feature, and when to use it.
+
+If you ever used Visual SourceSafe (VSS), you likely used its feature for sharing         files across multiple projects. For example, you could check-in a file at the root         of your solution, and then drag-and-drop it into other projects (i.e. "subfolders")         in your solution. Thus, whenever a change was made to the file (regardless of which         particular VSS project the change was made in), the next time you "got latest" the         change would be reflected in all locations. This was a common way of, for example,         having all of your .NET assemblies in the same Visual Studio solution specify the         same assembly version.
+
+Note that Team Foundation Server (TFS) does not provide an equivalent "share file"         feature. Fortunately, however, you no longer need such a feature.
+
+Back in the days of the original Visual Studio .NET and the following version, Visual         Studio .NET 2003, whenever you added an existing file to a project, it copied the         file into the corresponding location in the project.
+
+However, in Visual Studio 2005, the **Add Existing Item** feature provided         the ability to choose to either **Add** the item or **Add As Link
+        **(via the little down arrow on the button in the dialog box).
+
+In other words, once you upgraded to Visual Studio 2005, it was no longer necessary         to rely on any "sharing" features of your source control system in order to have         multiple projects always reference the latest version of a file.
+
+Note that when you **Add **an item in Visual Studio 2005 or Visual         Studio 2008, the behavior is the same as earlier versions (meaning the file is copied         into the corresponding location within the project). When you choose to **Add
+            As Link**, however, you simply reference the file in-place. [Don't worry,         relative paths ensure that everyone on your team is free to choose whatever root         folder they wish for their individual workspaces.]
+
+To illustrate this concept, I quickly built out a "demo" solution, as shown below.
+
+![Linked files in a Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Linked%20Files%20in%20Visual%20Studio%20Solutions.JPG)
+            Figure 1: Linked files in a Visual Studio solution
+
+
+The corresponding folder structure on disk resembles the following:
+
+- Fabrikam
+    - Demo
+        - Dev *(branch)*
+            - Lab1 *(branch)*
+                - AssemblyVersionInfo.cs
+                - CustomDictionary.xml
+                - Fabrikam.Demo.sln
+                - Fabrikam.Demo.snk
+                - SharedAssemblyInfo.cs
+
+
+                - AdminConsole
+                    - AdminConsole.csproj
+                    - Program.cs
+                    - Properties
+                        - AssemblyInfo.cs
+                - CoreServices
+                    - CoreServices.csproj
+                    - Logging
+                        - Logger.cs
+                    - Properties
+                        - AssemblyInfo.cs
+
+
+Note that **AssemblyVersionInfo.cs**, **CustomDictionary.xml**,         **Fabrikam.Demo.snk**, and **SharedAssemblyInfo.cs **reside         in the same folder as the Visual Studio solution file and are subsequently "linked         into" the two Visual C# projects. Thus whenever a change is made to one of these         files, the next build of each project will reflect that change.
+
+With this foundation in place, I'll explain some other recommended best practices         over a series of follow-up posts, including:
+
+- [Using custom dictionaries in Visual Studio](/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
+- [Shared assembly info in Visual Studio projects](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx)
+- [Best practices for .NET assembly versioning](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
+
+
+Stay tuned!
+
