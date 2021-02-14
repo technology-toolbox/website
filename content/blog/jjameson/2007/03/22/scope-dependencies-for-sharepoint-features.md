@@ -14,21 +14,19 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-While integrating various SharePoint features last week, I discovered some of  the details around the dependency rules when trying to associate one feature to  another.
+While integrating various SharePoint features last week, I discovered some of the details around the dependency rules when trying to associate one feature to another.
 
-In our solution, we have created a feature for specifying custom fields (i.e.  columns) and content types. This feature is called the **{Fabrikam Project1}
-Publication Content Types** [company and project name replaced to protect  the innocent ;-) ]. This makes it very easy to setup a new environment for our solution  (e.g. DEV to TEST to PROD).
+In our solution, we have created a feature for specifying custom fields (i.e. columns) and content types. This feature is called the **{Fabrikam Project1}
+Publication Content Types** [company and project name replaced to protect the innocent ;-) ]. This makes it very easy to setup a new environment for our solution (e.g. DEV to TEST to PROD).
 
-We have a different feature that builds out a custom version of the Document  Center (a.k.a. the BDR or Business Document Repository), for example, to remove  the default **Documents **doc lib, create a bunch of other doc libs  instead, enable versioning on the doc libs, enable content types, set the default  content type appropriately based on the particular doc lib, yadda, yadda, yadda.
+We have a different feature that builds out a custom version of the Document Center (a.k.a. the BDR or Business Document Repository), for example, to remove the default **Documents **doc lib, create a bunch of other doc libs instead, enable versioning on the doc libs, enable content types, set the default content type appropriately based on the particular doc lib, yadda, yadda, yadda.
 
-This other feature is called **{Fabrikam Project1} Publication Library**,  and naturally it has a dependency on the **{Fabrikam Project1} Publication
+This other feature is called **{Fabrikam Project1} Publication Library**, and naturally it has a dependency on the **{Fabrikam Project1} Publication
 Content Types** feature.
 
-Originally, I had both features scoped to **Site **and setup a dependency  from the **Publication Library **feature to the **Publication Content Types
+Originally, I had both features scoped to **Site **and setup a dependency from the **Publication Library **feature to the **Publication Content Types
 **feature:
 
 ```
@@ -49,7 +47,7 @@ Originally, I had both features scoped to **Site **and setup a dependency  from 
 </Feature>
 ```
 
-I later realized that the **Publication Library **feature would be better scoped  to **WebApplication** instead of **Site** (perhaps I'll blog about the reasons for this  at another time), so I deactivated and uninstalled the feature, made a quick change  to the Feature.xml file to change the scope, and then attempted to install and activate  the updated feature. Unfortunately things did not go quite as smoothly as I had  expected...
+I later realized that the **Publication Library **feature would be better scoped to **WebApplication** instead of **Site** (perhaps I'll blog about the reasons for this at another time), so I deactivated and uninstalled the feature, made a quick change to the Feature.xml file to change the scope, and then attempted to install and activate the updated feature. Unfortunately things did not go quite as smoothly as I had expected...
 
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;<kbd>"Activate
 Feature.cmd"</kbd>
@@ -62,7 +60,7 @@ is not properly scoped for feature 'Fabrikam.Project1.PublicationLibrary' (id:
 higher than 'WebApplication'.</samp>
 
 Ouch...okay, no problem, I guess I'll just change the **Publication Content Types
-**feature to be scoped to **WebApplication **as well (instead of  **Site**). Another quick  deactivate, uninstall, XML file tweak, deploy, install, activate (I say "quick"  only because of the scripts that we have to simplify the deployment) and...
+**feature to be scoped to **WebApplication **as well (instead of **Site**). Another quick deactivate, uninstall, XML file tweak, deploy, install, activate (I say "quick" only because of the scripts that we have to simplify the deployment) and...
 
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationContentTypes\DeploymentFiles\Scripts&gt;<kbd>"Install
 Feature.cmd"</kbd>
@@ -74,12 +72,12 @@ feature could not be installed.</samp>
 
 Ugh...
 
-Well, so if I want the **Publication Library **feature to be installed with  **WebApplication
-**scope, then I have no choice but to remove the dependency on the  **Publication Content
-Types **feature. However, there really is a hard dependency on the other feature,  so I really hate giving that up. After a couple of minutes, it came to me...
+Well, so if I want the **Publication Library **feature to be installed with **WebApplication
+**scope, then I have no choice but to remove the dependency on the **Publication Content
+Types **feature. However, there really is a hard dependency on the other feature, so I really hate giving that up. After a couple of minutes, it came to me...
 
 We already had a feature receiver for the **Publication Library
-**feature (as mentioned  earlier to create and configure the Document Center). Why not just add a dependency  check in there? Eureka!
+**feature (as mentioned earlier to create and configure the Document Center). Why not just add a dependency check in there? Eureka!
 
 ```
 namespace Fabrikam.Project1.PublicationLibrary.Configuration

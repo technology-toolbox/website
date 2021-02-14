@@ -17,18 +17,16 @@ tags: ["TFS", "SharePoint
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 > **Update (2010-05-20)**
 > 
 > I made some changes to correct a few issues and also to include the final
 > version of the XML input file that I used to update my TFS project sites.
 
-In my [previous post](/blog/jjameson/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell), I showed how you can use PowerShell to export the quick launch  navigation from a SharePoint site to XML and subsequently add, update, and reorder  navigation nodes by modifying the XML accordingly. In this post, I'll demonstrate  a practical application of that process.
+In my [previous post](/blog/jjameson/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell), I showed how you can use PowerShell to export the quick launch navigation from a SharePoint site to XML and subsequently add, update, and reorder navigation nodes by modifying the XML accordingly. In this post, I'll demonstrate a practical application of that process.
 
-Project sites created using the MSF Agile v4.2 process template in Team Foundation  Server (TFS) 2008 have the following quick launch navigation:
+Project sites created using the MSF Agile v4.2 process template in Team Foundation Server (TFS) 2008 have the following quick launch navigation:
 
 - Documents
   - Development
@@ -45,7 +43,7 @@ Project sites created using the MSF Agile v4.2 process template in Team Foundati
   - Issues List
   - Exit Criteria Status
 
-Assuming you are using Microsoft Office SharePoint Server (MOSS) 2007 or SharePoint  Server 2010 (in order to leverage Excel Services for the dashboard functionality),  project sites created using the MSF Agile v5 process template in TFS 2010 have the  following quick launch navigation:
+Assuming you are using Microsoft Office SharePoint Server (MOSS) 2007 or SharePoint Server 2010 (in order to leverage Excel Services for the dashboard functionality), project sites created using the MSF Agile v5 process template in TFS 2010 have the following quick launch navigation:
 
 - Team Web Access
 - Dashboards
@@ -65,7 +63,7 @@ Assuming you are using Microsoft Office SharePoint Server (MOSS) 2007 or SharePo
   - Calendar
 - Process Guidance
 
-Therefore if you want to update the quick launch navigation on project sites  upgraded from TFS 2008 (or TFS 2005) -- and you don't want to make the configuration  changes manually -- then start by exporting the quick launch navigation from a new  project site created in TFS 2010 (for example, [http://cyclops/sites/DefaultCollection/Test](http://cyclops/sites/DefaultCollection/Test)):
+Therefore if you want to update the quick launch navigation on project sites upgraded from TFS 2008 (or TFS 2005) -- and you don't want to make the configuration changes manually -- then start by exporting the quick launch navigation from a new project site created in TFS 2010 (for example, [http://cyclops/sites/DefaultCollection/Test](http://cyclops/sites/DefaultCollection/Test)):
 
 ```
 # Exports the quick launch navigation for a SharePoint site as XML
@@ -173,11 +171,11 @@ This will output XML similar to the following:
 </QuickLaunch>
 ```
 
-Notice that the PowerShell script from my previous post has been updated to automatically  tokenize the URL for each navigation node (i.e. replacing the server relative URL  with "`($web.ServerRelativeUrl)`").  This token is subsequently replaced with the new server relative URL when importing  the quick launch navigation.
+Notice that the PowerShell script from my previous post has been updated to automatically tokenize the URL for each navigation node (i.e. replacing the server relative URL with "`($web.ServerRelativeUrl)`"). This token is subsequently replaced with the new server relative URL when importing the quick launch navigation.
 
-Before we can import the navigation nodes, we need to tweak the XML slightly  to account for the fact that in TFS 2008 project sites, the **Event**  list is typically used for team calendar items (not a list named **Calendar**).  This assumes, of course, that you didn't customize the team site.
+Before we can import the navigation nodes, we need to tweak the XML slightly to account for the fact that in TFS 2008 project sites, the **Event** list is typically used for team calendar items (not a list named **Calendar**). This assumes, of course, that you didn't customize the team site.
 
-However, for consistency with new TFS 2010 project sites (in terms of navigation),  we'll keep the title of the quick launch navigation node as "Calendar" and simply  refer to the **Calendar** view of the **Event **list:
+However, for consistency with new TFS 2010 project sites (in terms of navigation), we'll keep the title of the quick launch navigation node as "Calendar" and simply refer to the **Calendar** view of the **Event **list:
 
 ```
 <NavigationNode     
@@ -185,7 +183,7 @@ However, for consistency with new TFS 2010 project sites (in terms of navigation
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
 ```
 
-We also need to add nodes for the existing document libraries (e.g. **Development**)  under the new **Libraries** heading:
+We also need to add nodes for the existing document libraries (e.g. **Development**) under the new **Libraries** heading:
 
 ```
 <NavigationNode
@@ -205,11 +203,11 @@ We also need to add nodes for the existing document libraries (e.g. **Developmen
       url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
 ```
 
-These new navigation nodes compensate for the fact the **Documents**  heading is removed when updating the Quick Launch navigation. [This is removed because  the link (e.g. /sites/AdventureWorks/\_layouts/1033/viewlsts.aspx?BaseType=1 ) is  no longer valid -- due to the removal of the LCID (e.g. 1033) from the URL.]
+These new navigation nodes compensate for the fact the **Documents** heading is removed when updating the Quick Launch navigation. [This is removed because the link (e.g. /sites/AdventureWorks/\_layouts/1033/viewlsts.aspx?BaseType=1 ) is no longer valid -- due to the removal of the LCID (e.g. 1033) from the URL.]
 
-Also note that project sites created with TFS 2010 do not include the process  guidance directly on the site (unlike project sites created in TFS 2005/2008). Rather,  the Process Guidance link now refers to an HTML page that simply redirects to a  page on the Microsoft site (e.g. [http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409](http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409)).  Consequently, if you were to simply import the XML above at this point, you would  end up with two **Process Guidance** links in the quick launch navigation  (the first referring to the new HTML redirect page, and the second referring to  the deprecated process guidance that resides within the project site).
+Also note that project sites created with TFS 2010 do not include the process guidance directly on the site (unlike project sites created in TFS 2005/2008). Rather, the Process Guidance link now refers to an HTML page that simply redirects to a page on the Microsoft site (e.g. [http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409](http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409)). Consequently, if you were to simply import the XML above at this point, you would end up with two **Process Guidance** links in the quick launch navigation (the first referring to the new HTML redirect page, and the second referring to the deprecated process guidance that resides within the project site).
 
-Fortunately, this is easy to remedy with a little more PowerShell script. Suppose  we want to remove the **Process Guidance **navigation link from a TFS  project site originally created in TFS 2008 (e.g. [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)):
+Fortunately, this is easy to remedy with a little more PowerShell script. Suppose we want to remove the **Process Guidance **navigation link from a TFS project site originally created in TFS 2008 (e.g. [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)):
 
 ```
 # Deletes a quick launch navigation link from a SharePoint site
@@ -263,15 +261,12 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 
 > **Important**
 > 
-> After a navigation node has been deleted, you need to refresh the SPWeb
-> object to avoid errors like the following:
+> After a navigation node has been deleted, you need to refresh the SPWeb object to avoid errors like the following:
 > 
 > > An error occurred while enumerating through a collection: Cannot complete
 > > this action.
 > 
-> To refresh the SPWeb object (and consequently the associated SPNavigationNodeCollection),
-> simply call the `Get-SPWeb` cmdlet
-> again:
+> To refresh the SPWeb object (and consequently the associated SPNavigationNodeCollection), simply call the `Get-SPWeb` cmdlet again:
 > 
 > `$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"`
 
@@ -384,7 +379,7 @@ $DebugPreference = "Continue"
 ImportQuickLaunchNavigation $web $navigationXml
 ```
 
-After running this script, the upgraded project site should contain the following  quick launch navigation:
+After running this script, the upgraded project site should contain the following quick launch navigation:
 
 - Team Web Access
 - Dashboards
@@ -409,13 +404,13 @@ After running this script, the upgraded project site should contain the followin
   - Calendar
 - Process Guidance
 
-Note that the **Libraries **heading (which was previously labeled **Documents**) includes links to the original document libraries (e.g. **Development**, **Project Management**, etc.) as well  as links to new libraries used with the MSF Agile v5 template (e.g. **Shared
-Documents** and **Sample and Templates**) that don't currently  exist in the upgraded site. With a little more work, you could create the new libraries  as needed. However, creating a new **Shared Documents** library could  potentially confuse team members when deciding where to upload new documents.
+Note that the **Libraries **heading (which was previously labeled **Documents**) includes links to the original document libraries (e.g. **Development**, **Project Management**, etc.) as well as links to new libraries used with the MSF Agile v5 template (e.g. **Shared
+Documents** and **Sample and Templates**) that don't currently exist in the upgraded site. With a little more work, you could create the new libraries as needed. However, creating a new **Shared Documents** library could potentially confuse team members when deciding where to upload new documents.
 
 Consequently, I chose to simply remove the links for **Shared Documents
 **and **Samples and Templates **from the quick launch navigation.
 
-If you want to upgrade the quick launch navigation for numerous project sites  all at once, you can simply create a list and "pipe" it into the `ForEach-Object` cmdlet, as shown below:
+If you want to upgrade the quick launch navigation for numerous project sites all at once, you can simply create a list and "pipe" it into the `ForEach-Object` cmdlet, as shown below:
 
 ```
 $sitesToUpgrade =
@@ -441,9 +436,9 @@ $sitesToUpgrade |
     }
 ```
 
-The PowerShell script starts to get a little ugly due to the hack to avoid the "Cannot complete this action" error that I mentioned  earlier, but it does work. The upgraded TFS 2005/2008 project sites will look a  lot more like new project sites created with TFS 2010.
+The PowerShell script starts to get a little ugly due to the hack to avoid the "Cannot complete this action" error that I mentioned earlier, but it does work. The upgraded TFS 2005/2008 project sites will look a lot more like new project sites created with TFS 2010.
 
-Here is the final version of the QuickLaunch-TFS2010.xml file that I used for  upgrading my TFS project sites:
+Here is the final version of the QuickLaunch-TFS2010.xml file that I used for upgrading my TFS project sites:
 
 ```
 <QuickLaunch>

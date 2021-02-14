@@ -9,21 +9,9 @@ tags: ["My System", "SharePoint
 			2010"]
 ---
 
-This post provides a sample installation guide for an extranet platform based
-on SharePoint Server 2010 and Office Web Apps. As noted in
-[my previous post](/blog/jjameson/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact,
-a good portion of this installation guide has roots in the TechNet documentation
-for Microsoft Office SharePoint Server 2007). However, this guide augments the
-SharePoint 2010 TechNet documentation with corrections and additional content
-to fix omissions. It also includes details specific to a particular environment
-(e.g. service account names and database sizes).
+This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps. As noted in [my previous post](/blog/jjameson/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact, a good portion of this installation guide has roots in the TechNet documentation for Microsoft Office SharePoint Server 2007). However, this guide augments the SharePoint 2010 TechNet documentation with corrections and additional content to fix omissions. It also includes details specific to a particular environment (e.g. service account names and database sizes).
 
-For the sake of understanding the context of this installation guide, imagine
-being tasked with deploying a new extranet solution for Fabrikam Technologies
-(my favorite fictitious manufacturing company). The extranet solution needs
-to be available as soon as possible and thus various capabilities will be released
-over a series of short sprints (or *iterations*, if you prefer that term
-instead). The scope for the first sprint is limited to the following:
+For the sake of understanding the context of this installation guide, imagine being tasked with deploying a new extranet solution for Fabrikam Technologies (my favorite fictitious manufacturing company). The extranet solution needs to be available as soon as possible and thus various capabilities will be released over a series of short sprints (or *iterations*, if you prefer that term instead). The scope for the first sprint is limited to the following:
 
 - Site branding (minimal customization to meet Fabrikam corporate standards)
 - Claims authentication for employees, partners, suppliers, and resellers
@@ -41,24 +29,13 @@ This document explains how to install and configure the Fabrikam Extranet.
 
 ## Purpose
 
-This installation guide provides the detailed guidance and step-by step
-procedures necessary to deploy the new extranet solution for Fabrikam ([extranet.fabrikam.com](http://extranet.fabrikam.com)),
-which is built on Microsoft SharePoint Server 2010 and uses Office Web Apps
-to provide a collaboration environment for Fabrikam employees, partners,
-suppliers, and resellers.
+This installation guide provides the detailed guidance and step-by step procedures necessary to deploy the new extranet solution for Fabrikam ([extranet.fabrikam.com](http://extranet.fabrikam.com)), which is built on Microsoft SharePoint Server 2010 and uses Office Web Apps to provide a collaboration environment for Fabrikam employees, partners, suppliers, and resellers.
 
-Installation guides provide an essential reference for efficiently deploying
-solutions in a consistent, repeatable fashion. Like the checklists that
-even the most experienced pilots utilize before every takeoff, this installation
-guide minimizes the risk of accidentally omitting a critical task.
+Installation guides provide an essential reference for efficiently deploying solutions in a consistent, repeatable fashion. Like the checklists that even the most experienced pilots utilize before every takeoff, this installation guide minimizes the risk of accidentally omitting a critical task.
 
 ## Audience
 
-This document is primarily intended for the Release/Operations role for
-deploying to the Production environment (PROD). However it is also expected
-to be used by the Test team when configuring the Test environment (TEST),
-as well as the Development team when configuring the Development integration
-environment (DEV) and local development VMs.
+This document is primarily intended for the Release/Operations role for deploying to the Production environment (PROD). However it is also expected to be used by the Test team when configuring the Test environment (TEST), as well as the Development team when configuring the Development integration environment (DEV) and local development VMs.
 
 ## References
 
@@ -73,8 +50,7 @@ environment (DEV) and local development VMs.
 
 ## Document conventions
 
-To help you locate and interpret information easily, this document uses
-the following style conventions and terminology.
+To help you locate and interpret information easily, this document uses the following style conventions and terminology.
 
 <caption>Table 1: Style conventions</caption>| Element | Meaning |
 | --- | --- |
@@ -94,8 +70,7 @@ the following style conventions and terminology.
 			environments. |
 # Overview of the installation process
 
-The process for installing the Fabrikam Extranet is divided into the
-following high-level steps.
+The process for installing the Fabrikam Extranet is divided into the following high-level steps.
 
 ## Step 1: Installation prerequisites
 
@@ -107,8 +82,7 @@ Before starting the installation:
 
 ## Step 2: Deploy and configure the server infrastructure
 
-Prior to installing SharePoint Server 2010, the following tasks must
-be completed:
+Prior to installing SharePoint Server 2010, the following tasks must be completed:
 
 - Windows Server 2008 must be installed and the server(s) must be
   joined to the domain
@@ -123,8 +97,7 @@ be completed:
 
 ## Step 3: Install and configure SharePoint Server 2010
 
-The installation and configuration of SharePoint Server 2010 consists
-of the following tasks:
+The installation and configuration of SharePoint Server 2010 consists of the following tasks:
 
 - Installing the prerequisite components on each SharePoint server
   that will participate in the farm
@@ -137,8 +110,7 @@ of the following tasks:
 
 ## Step 4: Create and configure the Web application
 
-Creating and configuring the Web application consists of the following
-tasks:
+Creating and configuring the Web application consists of the following tasks:
 
 - Setting environment variables used by various installation scripts
 - Copying the build to the SharePoint server
@@ -154,13 +126,11 @@ tasks:
 
 ## Step 5: Configure service applications
 
-In this step, various service applications – including the State Service
-and the Search Service Application – are configured.
+In this step, various service applications – including the State Service and the Search Service Application – are configured.
 
 ## Step 6: Install and configure Office Web Apps
 
-Installing and configuring Office Web Apps consists of the following
-tasks:
+Installing and configuring Office Web Apps consists of the following tasks:
 
 - Installing Office Web Apps and registering the services in SharePoint
 - Starting the service instances and creating the service applications
@@ -181,28 +151,15 @@ Deploying the Fabrikam solution consists of the following tasks:
 
 ## Plan the installation
 
-There are a number of configuration parameters that need to be determined
-before installing a solution based on SharePoint Server 2010. The various
-parameters and configuration settings for the Fabrikam Extranet can be found
-in Appendix A - Planning worksheets.
+There are a number of configuration parameters that need to be determined before installing a solution based on SharePoint Server 2010. The various parameters and configuration settings for the Fabrikam Extranet can be found in Appendix A - Planning worksheets.
 
 ## Environments and naming conventions
 
-Note that this guide typically specifies the values for the Production
-environment. However it is also used to install and configure the Development
-and Test environments, as well as local environments for developers.
+Note that this guide typically specifies the values for the Production environment. However it is also used to install and configure the Development and Test environments, as well as local environments for developers.
 
-A simple naming convention is recommended to differentiate between the
-various environments.
+A simple naming convention is recommended to differentiate between the various environments.
 
-Monikers – such as host headers and service accounts – in the Development
-environment should utilize a “-dev” suffix. For example,
-[http://extranet-dev.fabrikam.com](http://extranet-dev.fabrikam.com)
-is the URL in the Development environment corresponding to
-[http://extranet.fabrikam.com](http://extranet.fabrikam.com)
-in Production. Similarly, FABRIKAM\svc-sharepoint-dev is the service account
-used in the Development environment corresponding to EXTRANET\svc-sharepoint
-in Production.
+Monikers – such as host headers and service accounts – in the Development environment should utilize a “-dev” suffix. For example, [http://extranet-dev.fabrikam.com](http://extranet-dev.fabrikam.com) is the URL in the Development environment corresponding to [http://extranet.fabrikam.com](http://extranet.fabrikam.com) in Production. Similarly, FABRIKAM\svc-sharepoint-dev is the service account used in the Development environment corresponding to EXTRANET\svc-sharepoint in Production.
 
 > **Note**
 > 
@@ -215,39 +172,19 @@ in Production.
 >       	and local development VMs, the development servers are joined to 
 >       	the FABRIKAM domain.
 
-In order to distinguish sites on local development VMs, the “-local”
-suffix is used. For example,
-[http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)
-is the recommended URL on an individual developer’s VM corresponding to
-[http://extranet.fabrikam.com](http://extranet.fabrikam.com)
-in Production. The Hosts file (%WINDIR%\System32\Drivers\etc\hosts) is used
-to associate these URLs with the loopback address (127.0.0.1).
+In order to distinguish sites on local development VMs, the “-local” suffix is used. For example, [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) is the recommended URL on an individual developer’s VM corresponding to [http://extranet.fabrikam.com](http://extranet.fabrikam.com) in Production. The Hosts file (%WINDIR%\System32\Drivers\etc\hosts) is used to associate these URLs with the loopback address (127.0.0.1).
 
-Similarly, monikers in the Test environment should utilize a “-test”
-suffix. For example,
-[http://extranet-test.fabrikam.com](http://extranet-test.fabrikam.com)
-is the recommended URL in the Test environment corresponding to
-[http://extranet.fabrikam.com](http://extranet.fabrikam.com)
-in Production. Since the Test and Production environments share the same
-Active Directory infrastructure, EXTRANET\svc-sharepoint-test is the service
-account used in the Test environment corresponding to EXTRANET\svc-sharepoint
-in Production.
+Similarly, monikers in the Test environment should utilize a “-test” suffix. For example, [http://extranet-test.fabrikam.com](http://extranet-test.fabrikam.com) is the recommended URL in the Test environment corresponding to [http://extranet.fabrikam.com](http://extranet.fabrikam.com) in Production. Since the Test and Production environments share the same Active Directory infrastructure, EXTRANET\svc-sharepoint-test is the service account used in the Test environment corresponding to EXTRANET\svc-sharepoint in Production.
 
 # Deploy and configure the server infrastructure
 
 ## Install Windows Server 2008
 
-You must properly install Windows Server 2008 R2 (or the 64-bit edition
-of Windows Server 2008) before installing SharePoint Server 2010. Install
-Windows Server 2008 according to Fabrikam corporate standards. Ensure that
-all standard programs, such as antivirus and server monitoring utilities,
-are installed and configured.
+You must properly install Windows Server 2008 R2 (or the 64-bit edition of Windows Server 2008) before installing SharePoint Server 2010. Install Windows Server 2008 according to Fabrikam corporate standards. Ensure that all standard programs, such as antivirus and server monitoring utilities, are installed and configured.
 
 ### Use a Sysprep'ed image that includes the latest service pack and patches
 
-Whenever possible, it is strongly recommended to start from a Sysprep'ed
-image to save significant time. For information on creating and using Sysprep'ed
-images for virtual machines, refer to the following blog posts:
+Whenever possible, it is strongly recommended to start from a Sysprep'ed image to save significant time. For information on creating and using Sysprep'ed images for virtual machines, refer to the following blog posts:
 
 - <cite>Creating a VM/VHD Library </cite>
   [https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](/blog/jjameson/2010/04/02/creating-a-vm-vhd-library)
@@ -257,11 +194,9 @@ images for virtual machines, refer to the following blog posts:
 
 ### Reset WSUS configuration
 
-There is a known issue when using a Sysprep'ed image and Windows Server
-Update Services (WSUS) to keep machines up-to-date with the latest patches.
+There is a known issue when using a Sysprep'ed image and Windows Server Update Services (WSUS) to keep machines up-to-date with the latest patches.
 
-To resolve the issue, remove the WSUS registry
-entries specified in [KB
+To resolve the issue, remove the WSUS registry entries specified in [KB
 903262](http://support.microsoft.com/kb/903262):
 
 1. Click **Start**, click **All Programs**,
@@ -288,9 +223,7 @@ More information on this step is available in the following blog post:
 
 ### Remove "stale" network adapters
 
-When using Hyper-V and a Sysprep'ed image, a new network adapter is created
-the first time the new VM is started (typically named "Microsoft Virtual
-Machine Bus Network Adapter #2").
+When using Hyper-V and a Sysprep'ed image, a new network adapter is created the first time the new VM is started (typically named "Microsoft Virtual Machine Bus Network Adapter #2").
 
 To cleanup the network adapters:
 
@@ -334,11 +267,7 @@ More information on this step is available in the following blog post:
 
 Expand the primary VHD for development VMs to a minimum of 33 GB.
 
-To improve the performance of SharePoint development environments, create
-two additional virtual hard drives (D: and L:). Whenever possible, spread
-the VHD files across multiple physical disks on the host, as illustrated
-in Figure 1,
-to reduce I/O contention.
+To improve the performance of SharePoint development environments, create two additional virtual hard drives (D: and L:). Whenever possible, spread the VHD files across multiple physical disks on the host, as illustrated in Figure 1, to reduce I/O contention.
 
 ![Figure 1: SharePoint development VM configuration](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Development%20VM.png)
 Figure
@@ -353,14 +282,9 @@ Figure
 >       	VHD files. This greatly simplifies the process of distributing the 
 >       	I/O in the future when another physical drive is available.
 
-Since the amount of content in development environments is expected to
-be fairly small, consider creating "data" and "log" VHDs of 1 GB and 500
-MB, respectively. Note that the Hyper-V management console does not currently
-support creating a VHD smaller than 1 GB, but it is possible to create smaller
-VHDs using PowerShell.
+Since the amount of content in development environments is expected to be fairly small, consider creating "data" and "log" VHDs of 1 GB and 500 MB, respectively. Note that the Hyper-V management console does not currently support creating a VHD smaller than 1 GB, but it is possible to create smaller VHDs using PowerShell.
 
-To create a 500 MB VHD for the SQL Server log
-files:
+To create a 500 MB VHD for the SQL Server log files:
 
 1. On the Hyper-V host, start Windows PowerShell with administrator
    privileges.
@@ -384,8 +308,7 @@ More information on this step is available in the following blog post:
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
-To save significant disk space on development VMs, set the MaxPatchCacheSize
-policy to 0 in the registry.
+To save significant disk space on development VMs, set the MaxPatchCacheSize policy to 0 in the registry.
 
 To configure the MaxPatchCacheSize policy:
 
@@ -407,8 +330,7 @@ More information on this step is available in the following blog post:
 
 ## Disable Internet Protocol version 6 (TCP/IPv6)
 
-To avoid potential issues with IPv6 addresses, disable TCP/IPv6 on the
-network adapter(s).
+To avoid potential issues with IPv6 addresses, disable TCP/IPv6 on the network adapter(s).
 
 To disable TCP/IPv6 on the network adapter(s):
 
@@ -422,8 +344,7 @@ To disable TCP/IPv6 on the network adapter(s):
 
 ## Join member server to domain
 
-After completing the installation of Windows Server 2008, configure the
-server to be a member of the extranet domain (EXTRANET).
+After completing the installation of Windows Server 2008, configure the server to be a member of the extranet domain (EXTRANET).
 
 > **Note**
 > 
@@ -432,13 +353,11 @@ server to be a member of the extranet domain (EXTRANET).
 
 ## Install latest service pack and updates
 
-Use Windows Update to install the latest service pack and updates for
-Windows Server 2008.
+Use Windows Update to install the latest service pack and updates for Windows Server 2008.
 
 ## Create service accounts
 
-A number of different service accounts need to be created in Active Directory
-before installing SharePoint Server 2010.
+A number of different service accounts need to be created in Active Directory before installing SharePoint Server 2010.
 
 To create the necessary service accounts:
 
@@ -464,13 +383,9 @@ To create the necessary service accounts:
 
 ## Create Active Directory container to track SharePoint 2010 installations
 
-In order to track SharePoint 2010 installations, a marker (called a Service
-Connection Point) is created in Active Directory. To use this marker, create
-the container in Active Directory and set the permissions for the container
-before installing any SharePoint 2010 products in the environment.
+In order to track SharePoint 2010 installations, a marker (called a Service Connection Point) is created in Active Directory. To use this marker, create the container in Active Directory and set the permissions for the container before installing any SharePoint 2010 products in the environment.
 
-To create a service connection point container
-to track installations:
+To create a service connection point container to track installations:
 
 1. On the domain controller, click **Start**, point to
    **Administrative Tools**, and then click **ADSI Edit**.
@@ -510,11 +425,9 @@ to track installations:
 
 ## DEV – Map Web application to loopback address in Hosts file
 
-On local development VMs, the Hosts file is used to associate the URLs
-of SharePoint Web applications with the loopback address (127.0.0.1).
+On local development VMs, the Hosts file is used to associate the URLs of SharePoint Web applications with the loopback address (127.0.0.1).
 
-To map the host name for a Web application
-to the loopback address:
+To map the host name for a Web application to the loopback address:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
@@ -538,9 +451,7 @@ to the loopback address:
 
 ## Allow specific host names mapped to 127.0.0.1
 
-Windows Server 2008 includes a loopback check security feature that is
-designed to help prevent reflection attacks. However this feature is problematic
-when using host names mapped to 127.0.0.1 on local development machines.
+Windows Server 2008 includes a loopback check security feature that is designed to help prevent reflection attacks. However this feature is problematic when using host names mapped to 127.0.0.1 on local development machines.
 
 > **Note**
 > 
@@ -551,11 +462,9 @@ when using host names mapped to 127.0.0.1 on local development machines.
 >       	perform the following configuration steps if HTTP 401.1 errors occur 
 >       	when accessing the site locally on the server (regardless of environment).
 
-More details about this issue can be found in
-[KB 896861](http://support.microsoft.com/kb/896861).
+More details about this issue can be found in [KB 896861](http://support.microsoft.com/kb/896861).
 
-To enable host names that are mapped to the
-loopback address:
+To enable host names that are mapped to the loopback address:
 
 1. Click **Start**, click **Run**, type
    **regedit**, and then click **OK**. If prompted
@@ -587,8 +496,7 @@ loopback address:
 
 ## DEV - Install Windows PowerShell Integrated Scripting Environment
 
-To install Windows PowerShell Integrated Scripting
-Environment (ISE):
+To install Windows PowerShell Integrated Scripting Environment (ISE):
 
 1. Start the **Server Manager** console.
 2. In the tree view on the left, click **Features**, and
@@ -655,25 +563,21 @@ To install Team Explorer:
 
 ## DEV - Install Visual Studio 2010 Service Pack 1
 
-Install Visual Studio SP1 using Windows Update or by downloading and
-running the installer from the following location:
+Install Visual Studio SP1 using Windows Update or by downloading and running the installer from the following location:
 
 <cite>Microsoft Visual Studio 2010 Service Pack 1 (Installer)</cite>
 [http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691)
 
 ## DEV – Install TFS Power Tools
 
-In order to leverage additional check-in policies, install the TFS Power
-Tools (using the default options):
+In order to leverage additional check-in policies, install the TFS Power Tools (using the default options):
 
 <cite>Visual Studio Power Tools</cite>
 [http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx](http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx)
 
 ## Install SQL Server 2008
 
-For development environments, use the following steps to install the
-64-bit edition of SQL Server 2008 R2 (or the 64-bit version of SQL Server
-2008).
+For development environments, use the following steps to install the 64-bit edition of SQL Server 2008 R2 (or the 64-bit version of SQL Server 2008).
 
 > **Important**
 > 
@@ -691,8 +595,7 @@ SQL Server 2008 setup requires .NET Framework 3.5 to be installed.
 >       	(ISE) was installed earlier then .NET Framework 3.5 has already 
 >       	been installed since it is a dependency of that feature.
 
-To install .NET Framework 3.5 on Windows Server
-2008:
+To install .NET Framework 3.5 on Windows Server 2008:
 
 1. Start the **Server Manager** console.
 2. In the tree view on the left, click **Features**, and
@@ -773,9 +676,7 @@ To install SQL Server:
 
 ## Install latest service pack for SQL Server 2008
 
-Install SQL Server 2008 R2 Service Pack 2 or SQL Server 2008 Service
-Pack 3 using Windows Update or by downloading it from one the following
-locations:
+Install SQL Server 2008 R2 Service Pack 2 or SQL Server 2008 Service Pack 3 using Windows Update or by downloading it from one the following locations:
 
 - <cite>Microsoft® SQL Server® 2008 R2 Service Pack 2</cite>
   [http://www.microsoft.com/en-us/download/details.aspx?id=30437](http://www.microsoft.com/en-us/download/details.aspx?id=30437)
@@ -784,13 +685,9 @@ locations:
 
 ## DEV - Change databases to Simple recovery model
 
-Using the Simple recovery model in SQL Server alleviates the need to
-periodically backup transaction logs in development environments and also
-allows a very small VHD to be used for the log files.
+Using the Simple recovery model in SQL Server alleviates the need to periodically backup transaction logs in development environments and also allows a very small VHD to be used for the log files.
 
-Execute the following SQL script to change all user databases and the
-out-of-the-box **model **database to use the Simple recovery
-model:
+Execute the following SQL script to change all user databases and the out-of-the-box **model **database to use the Simple recovery model:
 
 ```
 IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
@@ -847,39 +744,31 @@ More information on this step is available in the following blog post:
 
 ## DEV - Install Microsoft Office 2010
 
-Install the 32-bit edition of Microsoft Office 2010 (using the default
-installation options).
+Install the 32-bit edition of Microsoft Office 2010 (using the default installation options).
 
 ## DEV - Install Microsoft SharePoint Designer 2010
 
-Install the 32-bit edition of Microsoft SharePoint Designer 2010 (using
-the default installation options).
+Install the 32-bit edition of Microsoft SharePoint Designer 2010 (using the default installation options).
 
 ## DEV - Install Microsoft Visio 2010
 
-Install the 32-bit edition of Microsoft Visio 2010 (using the default
-installation options).
+Install the 32-bit edition of Microsoft Visio 2010 (using the default installation options).
 
 ## DEV - Install additional service packs and updates
 
-Install the latest service packs and patches for Microsoft Office and
-other products using Windows Update.
+Install the latest service packs and patches for Microsoft Office and other products using Windows Update.
 
 ## DEV - Install additional browsers and Adobe Reader
 
-For development and testing purposes, install Mozilla Firefox, Google
-Chrome, and Adobe Reader.
+For development and testing purposes, install Mozilla Firefox, Google Chrome, and Adobe Reader.
 
 # Install and configure SharePoint Server 2010
 
 ## Prepare the farm servers
 
-Before installing SharePoint Server, you must install the prerequisites
-on the SharePoint application and Web servers by using the Microsoft SharePoint
-Products Preparation Tool.
+Before installing SharePoint Server, you must install the prerequisites on the SharePoint application and Web servers by using the Microsoft SharePoint Products Preparation Tool.
 
-Use the following procedure to install prerequisites on each of the farm
-servers.
+Use the following procedure to install prerequisites on each of the farm servers.
 
 To run the preparation tool:
 
@@ -908,13 +797,9 @@ To run the preparation tool:
 
 > **Note**
 > 
-> After you complete the Microsoft SharePoint Products Preparation
-> Tool, you must install
-> [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917)
-> and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server after installing these hotfixes.
+> After you complete the Microsoft SharePoint Products Preparation Tool, you must install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917) and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server after installing these hotfixes.
 > 
-> When installing these hotfixes on Windows Server 2008 R2,
-> you may be notified that these updates are not applicable.
+> When installing these hotfixes on Windows Server 2008 R2, you may be notified that these updates are not applicable.
 
 > **Note**
 > 
@@ -929,10 +814,7 @@ To run the preparation tool:
 
 ## Install security update for Web applications using claims authentication
 
-Web applications that use claims-based authentication are at risk for
-a potential security vulnerability that might allow users to elevate privileges.
-To resolve this issue, a security update is required on each SharePoint
-server in the farm.
+Web applications that use claims-based authentication are at risk for a potential security vulnerability that might allow users to elevate privileges. To resolve this issue, a security update is required on each SharePoint server in the farm.
 
 Download and install the update from the following location:
 
@@ -958,8 +840,7 @@ Be sure to install the update on each SharePoint server in the farm.
 
 ## Install SharePoint Server 2010 on the farm servers
 
-After the prerequisites are installed, use the following procedure to
-install SharePoint Server on each of the farm servers.
+After the prerequisites are installed, use the following procedure to install SharePoint Server on each of the farm servers.
 
 To install SharePoint Server 2010:
 
@@ -996,10 +877,7 @@ To install SharePoint Server 2010:
 
 ## Create and configure the farm
 
-To create and configure the farm, you run the SharePoint Products Configuration
-Wizard. This wizard automates several configuration tasks, including creating
-the configuration database, installing services, and creating the Central
-Administration Web site.
+To create and configure the farm, you run the SharePoint Products Configuration Wizard. This wizard automates several configuration tasks, including creating the configuration database, installing services, and creating the Central Administration Web site.
 
 > **Important**
 > 
@@ -1007,8 +885,7 @@ Administration Web site.
 >       	will host the Central Administration Web site before you run the 
 >       	wizard on the other servers in the farm.
 
-To run the configuration wizard and configure
-the farm:
+To run the configuration wizard and configure the farm:
 
 1. On the server that will host the Central Administration site, click
    **Start**, point to **All Programs**, click
@@ -1092,21 +969,13 @@ the farm:
 
 ## Add Web servers to the farm
 
-After creating the farm on the first server, add the remaining servers
-by following the process described in the previous section. However, rather
-than selecting the option to create a new farm, instead select the option
-to join an existing farm and then follow the wizard steps to join the farm.
+After creating the farm on the first server, add the remaining servers by following the process described in the previous section. However, rather than selecting the option to create a new farm, instead select the option to join an existing farm and then follow the wizard steps to join the farm.
 
 ## Add SharePoint Central Administration to the Local intranet zone
 
-Adding the Central Administration site to the **Local intranet**
-zone (and using the default settings for this zone) enables single sign-on
-when accessing the site. This task should be completed on the server that
-hosts the Central Administration site. It can also be performed on other
-servers used to access the Central Administration site.
+Adding the Central Administration site to the **Local intranet** zone (and using the default settings for this zone) enables single sign-on when accessing the site. This task should be completed on the server that hosts the Central Administration site. It can also be performed on other servers used to access the Central Administration site.
 
-To add the Central Administration site to the
-Local intranet zone:
+To add the Central Administration site to the Local intranet zone:
 
 1. In Internet Explorer, on the **Tools** menu, click
    **Internet Options**.
@@ -1132,24 +1001,16 @@ More information on this step is available in the following blog post:
 
 ## Add the URL for the extranet website to the Local intranet zone
 
-In order to access the extranet website locally on the SharePoint server,
-follow the steps in the previous section to add
-[http://extranet.fabrikam.com](http://extranet.fabrikam.com)
-to the **Local intranet** zone.
+In order to access the extranet website locally on the SharePoint server, follow the steps in the previous section to add [http://extranet.fabrikam.com](http://extranet.fabrikam.com) to the **Local intranet** zone.
 
 ## Add the SharePoint bin folder to the PATH environment variable
 
 On each SharePoint server in the farm, append **C:\Program Files\Common
-Files\Microsoft Shared\web server extensions\14\BIN** to the
-**PATH** environment variable (in order to run stsadm.exe from
-various folder locations without having to specify the full path).
+Files\Microsoft Shared\web server extensions\14\BIN** to the **PATH** environment variable (in order to run stsadm.exe from various folder locations without having to specify the full path).
 
 ## Grant DCOM permissions on IIS WAMREG admin Service
 
-In order to avoid errors in the Windows event log (e.g. Event ID 10016),
-grant the WSS\_ADMIN\_WPG and WSS\_WPG groups appropriate permissions on the
-IIS WAMREG admin Service, as described in
-[KB 920783](http://support.microsoft.com/kb/920783).
+In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant the WSS\_ADMIN\_WPG and WSS\_WPG groups appropriate permissions on the IIS WAMREG admin Service, as described in [KB 920783](http://support.microsoft.com/kb/920783).
 
 > **Important**
 > 
@@ -1161,8 +1022,7 @@ IIS WAMREG admin Service, as described in
 >       	take ownership of the corresponding registry key and grant administrators 
 >       	permissions to update the configuration.
 
-To grant Administrators permissions to update
-the configuration in Windows Server 2008 R2:
+To grant Administrators permissions to update the configuration in Windows Server 2008 R2:
 
 1. Click the **Start** menu, type **regedit**,
    and then click **regedit.exe**. If prompted by **
@@ -1188,8 +1048,7 @@ the configuration in Windows Server 2008 R2:
 > **OK**.
 > 7. Close the Registry Editor window.
 
-To configure permissions for the IIS WAMREG
-Admin Service:
+To configure permissions for the IIS WAMREG Admin Service:
 
 1. Click the **Start **menu, type
    **dcomcnfg**, and then click **dcomcnfg.exe**.
@@ -1227,9 +1086,7 @@ More information on this step is available in the following blog post:
 
 ## Rename TaxonomyPicker.ascx
 
-In order to avoid errors in the Windows event log (e.g. Source: SharePoint
-Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx
-file.
+In order to avoid errors in the Windows event log (e.g. Source: SharePoint Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 
 > **Important**
 > 
@@ -1253,8 +1110,7 @@ To rename the TaxonomyPicker.ascx file:
 
 ## Configure diagnostic logging and usage and health data collection
 
-After you add the remaining servers to the farm, configure initial diagnostic
-logging and usage and health data collection for the farm.
+After you add the remaining servers to the farm, configure initial diagnostic logging and usage and health data collection for the farm.
 
 To configure diagnostic logging:
 
@@ -1282,10 +1138,7 @@ To configure usage and health data collection:
 
 ## Configure service accounts
 
-Managed accounts are used for various farm components in SharePoint 2010.
-In order to specify a service account when configuring various SharePoint
-features, the service account must first be registered as a managed account
-in Central Administration.
+Managed accounts are used for various farm components in SharePoint 2010. In order to specify a service account when configuring various SharePoint features, the service account must first be registered as a managed account in Central Administration.
 
 > **Note**
 > 
@@ -1310,8 +1163,7 @@ To configure service accounts:
 
 ## Configure mail services
 
-This section describes how to configure outgoing e-mail in order to send
-e-mail alerts to site users and notifications to site administrators.
+This section describes how to configure outgoing e-mail in order to send e-mail alerts to site users and notifications to site administrators.
 
 To configure the outgoing e-mail settings:
 
@@ -1331,11 +1183,7 @@ To configure the outgoing e-mail settings:
 
 ## DEV - Configure timer job history
 
-SharePoint Server 2010 is configured by default to preserve 7 days of
-historical information about timer jobs. However, the cleanup job is scheduled
-to run once per week on Sundays. For development environments that are powered
-off on weekends, this cleanup job may never run and consequently the growth
-of the job history table in the SharePoint\_Config database can cause issues.
+SharePoint Server 2010 is configured by default to preserve 7 days of historical information about timer jobs. However, the cleanup job is scheduled to run once per week on Sundays. For development environments that are powered off on weekends, this cleanup job may never run and consequently the growth of the job history table in the SharePoint\_Config database can cause issues.
 
 To change the schedule for deleting timer job history:
 
@@ -1378,25 +1226,16 @@ Install the SharePoint Server 2010 cumulative update for August 2012:
 (SharePoint server-package): August 28, 2012</cite>
 [http://support.microsoft.com/kb/2687353](http://support.microsoft.com/kb/2687353)
 
-After installing the update on each server in the farm, run the SharePoint
-Products and Technologies Configuration Wizard (PSConfigUI.exe) to upgrade
-the farm.
+After installing the update on each server in the farm, run the SharePoint Products and Technologies Configuration Wizard (PSConfigUI.exe) to upgrade the farm.
 
 # Create and configure the Web application
 
 ## Set environment variables
 
-By default, the installation scripts for the Fabrikam Extranet solution
-install Release builds to
-[http://extranet.fabrikam.com](http://extranet.fabrikam.com).
-If installing the solution to a different URL, set the environment variable
-FABRIKAM\_EXTRANET\_URL to the URL of the site. To install Debug builds, set
-the environment variable FABRIKAM\_BUILD\_CONFIGURATION to Debug.
+By default, the installation scripts for the Fabrikam Extranet solution install Release builds to [http://extranet.fabrikam.com](http://extranet.fabrikam.com). If installing the solution to a different URL, set the environment variable FABRIKAM\_EXTRANET\_URL to the URL of the site. To install Debug builds, set the environment variable FABRIKAM\_BUILD\_CONFIGURATION to Debug.
 
 For example, Figure
-2 shows the environment variables for a local development VM (where
-FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
-[http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
+2 shows the environment variables for a local development VM (where FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL = [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
 
 ![Setting environment variables](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Environment-Variables-Fabrikam-Extranet.png)
 Figure 2: Setting
@@ -1404,12 +1243,9 @@ environment variables
 
 ## DEV - Snapshot VM
 
-To allow the ability to quickly rollback the development environment
-to a "clean" state, create a snapshot of the virtual machine at this point.
-Name the snapshot **Baseline SharePoint Server 2010 configuration**.
+To allow the ability to quickly rollback the development environment to a "clean" state, create a snapshot of the virtual machine at this point. Name the snapshot **Baseline SharePoint Server 2010 configuration**.
 
-More information about using VM snapshots for SharePoint development
-is available in the following blog posts:
+More information about using VM snapshots for SharePoint development is available in the following blog posts:
 
 - <cite>Virtual Machine Snapshots and SharePoint Development, Part
   1</cite>
@@ -1420,28 +1256,24 @@ is available in the following blog posts:
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
-Copy the Fabrikam Extranet build from the release server (e.g.
-[\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\{build
+Copy the Fabrikam Extranet build from the release server (e.g. [\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\{build
 version}](file://DAZZLER/Builds/Fabrikam/Demo)) to the SharePoint server running Central Administration.
 
-For the Test and Production environments, always designate the specific
-build to be deployed. For example:
+For the Test and Production environments, always designate the specific build to be deployed. For example:
 
 ```
 robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 
 		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
 ```
 
-For development environments, the "latest" version may be specified.
-For example:
+For development environments, the "latest" version may be specified. For example:
 
 ```
 robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 
 		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
 ```
 
-Developers may alternately choose to deploy to local environments directly
-from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Main).
+Developers may alternately choose to deploy to local environments directly from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Main).
 
 ## Create the Web application and initial site collections
 
@@ -1453,15 +1285,9 @@ from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Ma
 >       	log files in the desired locations. This eliminates the need to 
 >       	move the data and/or log files after the databases have been created.
 
-The Web application and initial site collections can either be created
-using PowerShell scripts or through Central Administration. Using the PowerShell
-scripts will result in significantly shorter deployment times, whereas completing
-the equivalent procedures through Central Administration will provide greater
-familiarity with the various configuration options in SharePoint Server
-2010.
+The Web application and initial site collections can either be created using PowerShell scripts or through Central Administration. Using the PowerShell scripts will result in significantly shorter deployment times, whereas completing the equivalent procedures through Central Administration will provide greater familiarity with the various configuration options in SharePoint Server 2010.
 
-To create the Web application using the PowerShell
-scripts:
+To create the Web application using the PowerShell scripts:
 
 1. On the **Start** menu, click **All Programs**,
    click Microsoft SharePoint 2010 Products, right-click **SharePoint
@@ -1497,8 +1323,7 @@ scripts:
 8. Proceed to the next section (Expand
    content database files).
 
-To create the Web application using SharePoint
-Central Administration:
+To create the Web application using SharePoint Central Administration:
 
 1. On the Central Administration home page, in the **Application
    Management** section, click **Manage web applications**.
@@ -1540,8 +1365,7 @@ Central Administration:
 4. Wait for the Web application to be created and then click
    **OK**.
 
-To create the initial site collections using
-SharePoint Central Administration:
+To create the initial site collections using SharePoint Central Administration:
 
 1. On the Central Administration home page, in the **Application
    Management** section, click **Create site collections**.
@@ -1570,11 +1394,7 @@ SharePoint Central Administration:
 
 ## Expand content database files
 
-By default, SharePoint content database files are created with very small
-initial sizes but with autogrowth enabled. Specifically, the data and log
-files for content databases are created with initial sizes of 25 MB and
-3 MB, respectively. If these defaults were to be used on content databases
-expected to grow significantly, performance would be severely impacted.
+By default, SharePoint content database files are created with very small initial sizes but with autogrowth enabled. Specifically, the data and log files for content databases are created with initial sizes of 25 MB and 3 MB, respectively. If these defaults were to be used on content databases expected to grow significantly, performance would be severely impacted.
 
 > **Note**
 > 
@@ -1596,8 +1416,7 @@ To increase the size of the database files:
    the new values for **Initial Size** and **Autogrowth**.
 6. Click **OK**.
 
-The following SQL statements can be used as an alternative to setting
-the sizes through the Database Properties dialog:
+The following SQL statements can be used as an alternative to setting the sizes through the Database Properties dialog:
 
 ```
 USE [master]
@@ -1618,12 +1437,7 @@ GO
 
 ## Configure object cache user accounts
 
-The object cache in SharePoint Server 2010 performs queries using one
-of two user accounts: the “Portal Super User” or the “Portal Super Reader.”
-These user accounts must be properly configured to ensure the object cache
-works correctly. The Portal Super User account must be an account that has
-Full Control access to the Web application. The Portal Super Reader account
-must be an account that has Full Read access to the Web application.
+The object cache in SharePoint Server 2010 performs queries using one of two user accounts: the “Portal Super User” or the “Portal Super Reader.” These user accounts must be properly configured to ensure the object cache works correctly. The Portal Super User account must be an account that has Full Control access to the Web application. The Portal Super Reader account must be an account that has Full Read access to the Web application.
 
 To configure object cache user accounts:
 
@@ -1655,16 +1469,14 @@ To configure object cache user accounts:
 
 ## Configure the People Picker to support searches across one-way trust
 
-Use this procedure to enable selection of users and groups on the Fabrikam
-Extranet from the internal domain (FABRIKAM).
+Use this procedure to enable selection of users and groups on the Fabrikam Extranet from the internal domain (FABRIKAM).
 
 > **Note**
 > 
 >       	A one-way trust relationship has been established from the extranet 
 >       	domain (EXTRANET) to the internal domain (FABRIKAM).
 
-To enable selection of people and groups from
-the internal Fabrikam domain:
+To enable selection of people and groups from the internal Fabrikam domain:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
@@ -1678,13 +1490,9 @@ the internal Fabrikam domain:
 
 > **Note**
 > 
-> The key specified above can be any string. It is used to
-> encrypt the password specified in the following procedure when
-> storing the credentials in the database.
+> The key specified above can be any string. It is used to encrypt the password specified in the following procedure when storing the credentials in the database.
 > 
-> This key is used to encrypt the password for the account
-> used to access the forest or domain. The encryption string must
-> be the same for every server in the farm.
+> This key is used to encrypt the password for the account used to access the forest or domain. The encryption string must be the same for every server in the farm.
 > 3. Repeat the steps above on each Web server in the farm.
 > 4. On one of the front-end Web servers, type the following command:
 
@@ -1744,13 +1552,9 @@ To add an HTTPS binding to the site in IIS:
 
 ## Enable anonymous access to the site
 
-In addition to enabling anonymous access on the Web application, the
-root Web of the site collection must also be configured to enable anonymous
-access. This can be accomplished using a PowerShell script or through the
-corresponding administration page on the site.
+In addition to enabling anonymous access on the Web application, the root Web of the site collection must also be configured to enable anonymous access. This can be accomplished using a PowerShell script or through the corresponding administration page on the site.
 
-To enable anonymous access to the site using
-PowerShell:
+To enable anonymous access to the site using PowerShell:
 
 1. On the **Start** menu, click **All Programs**,
    click Microsoft SharePoint 2010 Products, right-click **SharePoint
@@ -1773,8 +1577,7 @@ PowerShell:
 5. Proceed to the next section (Configure
    claims-based authentication).
 
-To enable anonymous access to the site using
-the site permissions page:
+To enable anonymous access to the site using the site permissions page:
 
 1. Browse to the home page of the site ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 2. Click **Site Actions **and then click **Site
@@ -1799,8 +1602,7 @@ the site permissions page:
 > - Stores membership and role information for customers, partners,
 >   suppliers, and resellers in a SQL Server database (FabrikamDemo)
 
-In this section, claims-based authentication using a SQL Server database
-is configured using the following high-level steps:
+In this section, claims-based authentication using a SQL Server database is configured using the following high-level steps:
 
 1. Create and configure the membership/role database
 2. Modify the Web.config files for the following sites in order to
@@ -1813,13 +1615,9 @@ is configured using the following high-level steps:
 
 ### Create and configure the membership/role database
 
-In this step, the database for storing membership and role information
-for external users (e.g. customers, partners, suppliers, and resellers)
-is created and specific service accounts are added to the appropriate database
-roles.
+In this step, the database for storing membership and role information for external users (e.g. customers, partners, suppliers, and resellers) is created and specific service accounts are added to the appropriate database roles.
 
-To create the database used for storing membership
-and role information:
+To create the database used for storing membership and role information:
 
 1. Click **Start**, point to **All Programs**,
    click **Accessories**, and right-click **Command
@@ -1859,8 +1657,7 @@ and role information:
 
 8. Wait for the database to be created and then click **Finish**.
 
-To add the service accounts to the membership/role
-database:
+To add the service accounts to the membership/role database:
 
 1. Start SQL Server Management Studio and connect to the appropriate
    server.
@@ -1905,8 +1702,7 @@ database:
 
 ### Add Web.config modifications for claims-based authentication
 
-In order to complete the configuration of claims-based authentication,
-it is necessary to modify the Web.config files for the following sites:
+In order to complete the configuration of claims-based authentication, it is necessary to modify the Web.config files for the following sites:
 
 - SharePoint Central Administration v4
 - Security Token Service
@@ -1917,8 +1713,7 @@ it is necessary to modify the Web.config files for the following sites:
 >       	These configuration changes must be completed on each SharePoint 
 >       	server in the farm.
 
-To configure the Central Administration Web.config
-file:
+To configure the Central Administration Web.config file:
 
 1. Click **Start**, point to **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
@@ -1994,8 +1789,7 @@ file:
 7. Repeat the steps above on each Web server in the farm that hosts
    the Central Administration site.
 
-To configure the Security Token Service Web.config
-file:
+To configure the Security Token Service Web.config file:
 
 1. In **Internet Information Services (IIS) Manager**,
    in the **Connections **pane, expand the **SharePoint
@@ -2053,8 +1847,7 @@ file:
 4. Save the changes to the Web.config file and close the editor.
 5. Repeat the steps above on each Web server in the farm.
 
-To configure the Web.config file for the Fabrikam
-Extranet Web application:
+To configure the Web.config file for the Fabrikam Extranet Web application:
 
 1. In **Internet Information Services (IIS) Manager**,
    in the **Connections **pane, right-click the Web application
@@ -2159,9 +1952,7 @@ To create a user for the Fabrikam Extranet:
 
 ### Validate claims authentication configuration
 
-At this point in the installation, claims authentication for the Fabrikam
-Extranet Web application has been configured and a new site collection has
-been created based on the Publishing Portal template.
+At this point in the installation, claims authentication for the Fabrikam Extranet Web application has been configured and a new site collection has been created based on the Publishing Portal template.
 
 The site should resemble the following:
 
@@ -2169,12 +1960,9 @@ The site should resemble the following:
 Figure 3: Default home page for “Publishing Portal” site in SharePoint
 Server 2010
 
-Although the site does not yet have the Fabrikam branding or any custom
-code deployed, it is still possible to validate the basic functionality
-of the site (most notably that claims authentication is working as expected).
+Although the site does not yet have the Fabrikam branding or any custom code deployed, it is still possible to validate the basic functionality of the site (most notably that claims authentication is working as expected).
 
-The steps in this section validate the Web application works as expected
-when using both Forms-Based Authentication and Windows authentication.
+The steps in this section validate the Web application works as expected when using both Forms-Based Authentication and Windows authentication.
 
 To login to the website using forms authentication:
 
@@ -2209,17 +1997,14 @@ To login to the website using Windows authentication:
 
 ## Enable disk-based caching for the Web application
 
-By default, the disk-based BLOB cache is off, but it is strongly recommended
-to enable disk-based caching in order to vastly reduce the number of database
-roundtrips for each and every page request on your site.
+By default, the disk-based BLOB cache is off, but it is strongly recommended to enable disk-based caching in order to vastly reduce the number of database roundtrips for each and every page request on your site.
 
 This is discussed in more detail in the following blog post:
 
 <cite>Always Enable Disk-Based Caching in SharePoint Server 2010</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010)
 
-Use the following procedure to configure disk-based cache settings for
-a Web application.
+Use the following procedure to configure disk-based cache settings for a Web application.
 
 > **Important**
 > 
@@ -2332,13 +2117,9 @@ To add members to SharePoint groups:
 
 ## Configure the State Service
 
-The State Service is required in order to use the out-of-the-box workflows
-in SharePoint Server 2010 (e.g. Approval - SharePoint 2010) or any other
-features that leverage InfoPath Forms Services.
+The State Service is required in order to use the out-of-the-box workflows in SharePoint Server 2010 (e.g. Approval - SharePoint 2010) or any other features that leverage InfoPath Forms Services.
 
-When using the Farm Configuration Wizard to configure the State Service,
-the resulting database is named StateService\_{GUID}. In order to avoid lengthy
-database names containing GUIDs, the State Service is configured using PowerShell.
+When using the Farm Configuration Wizard to configure the State Service, the resulting database is named StateService\_{GUID}. In order to avoid lengthy database names containing GUIDs, the State Service is configured using PowerShell.
 
 To configure the State Service:
 
@@ -2363,15 +2144,11 @@ To configure the State Service:
 
 ## Create and configure the Search Service Application
 
-When using the Farm Configuration Wizard to create and configure the
-Search Service Application, the resulting databases are named Search\_Service\_Application\_DB\_{GUID},
-Search\_Service\_Application\_CrawlDB\_{GUID}, and Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
+When using the Farm Configuration Wizard to create and configure the Search Service Application, the resulting databases are named Search\_Service\_Application\_DB\_{GUID}, Search\_Service\_Application\_CrawlDB\_{GUID}, and Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
 
-In order to avoid the lengthy database names containing GUIDs, the Search
-Service Application is created and configured using PowerShell.
+In order to avoid the lengthy database names containing GUIDs, the Search Service Application is created and configured using PowerShell.
 
-To create and configure the Search Service
-Application:
+To create and configure the Search Service Application:
 
 1. On the **Start** menu, click **All Programs**,
    click **Microsoft SharePoint 2010 Products**, right-click
@@ -2406,8 +2183,7 @@ Application:
 
 ## Configure the search crawl schedules
 
-Use the following procedure to configure the crawl schedules for the
-default content source.
+Use the following procedure to configure the crawl schedules for the default content source.
 
 To configure the crawl schedules:
 
@@ -2443,8 +2219,7 @@ To configure the crawl schedules:
 
 ## Install Office Web Apps
 
-In this section, the Office Web Apps are installed from the installation
-source.
+In this section, the Office Web Apps are installed from the installation source.
 
 > **Important**
 > 
@@ -2479,8 +2254,7 @@ To install Office Web Apps:
 
 ## Run PSConfig to register Office Web Apps services
 
-In this task the Office Web Apps services are registered on the SharePoint
-server.
+In this task the Office Web Apps services are registered on the SharePoint server.
 
 > **Important**
 > 
@@ -2506,12 +2280,9 @@ To run PSConfig to register the services:
 
 ## Start the Office Web Apps service instances and create service applications
 
-A service instance provides the physical location for a service application.
-The service instances must be started for each server that will run the
-Office Web Apps service applications.
+A service instance provides the physical location for a service application. The service instances must be started for each server that will run the Office Web Apps service applications.
 
-To start the service instances by using Central
-Administration:
+To start the service instances by using Central Administration:
 
 1. On the Central Administration home page, under **System Settings**,
    click **Manage services on server**.
@@ -2545,27 +2316,19 @@ To create the service applications and proxies:
 
 ## Configure Excel Services Application trusted location
 
-When the Excel Services Application is created, a default trusted location
-is automatically configured (**http://**) for all content on
-the SharePoint farm. This default trusted location enables any file to be
-loaded from the SharePoint farm or stand-alone deployment on Excel Services.
-However, this default trusted location does not support HTTPS (https://)
-and therefore results in the following error when attempting to access an
-Excel workbook on a secured connection:
+When the Excel Services Application is created, a default trusted location is automatically configured (**http://**) for all content on the SharePoint farm. This default trusted location enables any file to be loaded from the SharePoint farm or stand-alone deployment on Excel Services. However, this default trusted location does not support HTTPS (https://) and therefore results in the following error when attempting to access an Excel workbook on a secured connection:
 
 > This workbook cannot be opened because it is not stored in an Excel
 > Services Application trusted location.
 
-Use the following procedure to change the default trusted location to
-support HTTPS.
+Use the following procedure to change the default trusted location to support HTTPS.
 
 > **Important**
 > 
 >       	Skip this section for environments that are not configured with 
 >       	SSL certificates (e.g. development environments).
 
-To configure the Excel Services Application
-trusted location for HTTPS instead of HTTP:
+To configure the Excel Services Application trusted location for HTTPS instead of HTTP:
 
 1. On the Central Administration home page, in the **Application
    Management **section, click **Manage service applications**.
@@ -2592,13 +2355,9 @@ trusted location for HTTPS instead of HTTP:
 
 ## Configure the Office Web Apps cache
 
-By default, when you install Office Web Apps, the cache available to
-render documents is 100 GB and the cache expiration period is 30 days. Also
-note that cached content for Office Web Apps is stored in a SharePoint content
-database.
+By default, when you install Office Web Apps, the cache available to render documents is 100 GB and the cache expiration period is 30 days. Also note that cached content for Office Web Apps is stored in a SharePoint content database.
 
-To configure the Office Web Apps cache and
-create a separate content database for caching:
+To configure the Office Web Apps cache and create a separate content database for caching:
 
 1. On the **Start** menu, click **All Programs**,
    click Microsoft SharePoint 2010 Products, right-click **SharePoint
@@ -2646,8 +2405,7 @@ create a separate content database for caching:
    iisreset
    ```
 
-To increase the size of the database files
-for the Office Web Apps cache:
+To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate
    server.
@@ -2662,8 +2420,7 @@ for the Office Web Apps cache:
    the new values for **Initial Size** and **Autogrowth**.
 6. Click **OK**.
 
-The following SQL statements can be used as an alternative to setting
-the sizes through the Database Properties dialog:
+The following SQL statements can be used as an alternative to setting the sizes through the Database Properties dialog:
 
 ```
 USE [master]
@@ -2686,12 +2443,9 @@ GO
 
     Apps
 
-Since the service account used to run the Office Web Apps service applications
-is different from the account used to run the application pool for the Web
-application, it is necessary to explicitly grant access to the content database.
+Since the service account used to run the Office Web Apps service applications is different from the account used to run the application pool for the Web application, it is necessary to explicitly grant access to the content database.
 
-To grant the Office Web Apps service account
-access to the content database:
+To grant the Office Web Apps service account access to the content database:
 
 1. On the **Start** menu, click **All Programs**,
    click **Microsoft SharePoint 2010 Products**, right-click
@@ -2712,13 +2466,7 @@ access to the content database:
 
 ## Configure logging
 
-The Fabrikam Extranet needs to be configured to log errors, warnings,
-and informational messages to the Event Log. The events are logged to the
-**Application** event log with a **Source** value
-of **Fabrikam Demo Site**. Since the service account used for
-the Web application does not have permission to create custom a event source,
-the **Fabrikam Demo Site **event source must be created by
-an administrator.
+The Fabrikam Extranet needs to be configured to log errors, warnings, and informational messages to the Event Log. The events are logged to the **Application** event log with a **Source** value of **Fabrikam Demo Site**. Since the service account used for the Web application does not have permission to create custom a event source, the **Fabrikam Demo Site **event source must be created by an administrator.
 
 > **Important**
 > 
@@ -2784,9 +2532,7 @@ To install and activate the features:
 6. Wait for the feature activations to complete, and then minimize
    or close the PowerShell command prompt.
 
-At this point, the home page of the Fabrikam Extranet site should resemble
-the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
-**Reusable Content Sample** links).
+At this point, the home page of the Fabrikam Extranet site should resemble the screenshot shown in Figure 4 (but without the **Sample Style Guide** and **Reusable Content Sample** links).
 
 ![Fabrikam Extranet home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Fabrikam%20Extranet%20-%20home%20page.png)
 Figure 4: Fabrikam
@@ -2831,11 +2577,9 @@ To create the sample content:
 
 ### Create site collection for a Fabrikam partner
 
-A site collection for a Fabrikam partner can either be created using
-a PowerShell script or through Central Administration.
+A site collection for a Fabrikam partner can either be created using a PowerShell script or through Central Administration.
 
-To create a site collection for a Fabrikam
-partner using the PowerShell script:
+To create a site collection for a Fabrikam partner using the PowerShell script:
 
 1. On the **Start** menu, click **All Programs**,
    click **Microsoft SharePoint 2010 Products**, right-click
@@ -2860,8 +2604,7 @@ partner using the PowerShell script:
 5. Proceed to the next section (Apply
    the “Fabrikam Partner Site” template to the top-level site).
 
-To create a site collection for a Fabrikam
-partner using Central Administration:
+To create a site collection for a Fabrikam partner using Central Administration:
 
 1. On the Central Administration home page, in the **Application
    Management **section, click **Create site collections**.
@@ -2904,8 +2647,7 @@ partner using Central Administration:
 
     template to the top-level site
 
-To apply the custom site template to the top-level
-site in the site collection:
+To apply the custom site template to the top-level site in the site collection:
 
 1. Browse to the new site collection (e.g.
    [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)). Since no template
@@ -2933,8 +2675,7 @@ Edit the site home page to:
 
 ### Create the team collaboration site
 
-To create a team collaboration site for a partner
-site:
+To create a team collaboration site for a partner site:
 
 1. Browse to the partner site collection (e.g.
    [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
@@ -2966,28 +2707,14 @@ Edit the site home page to:
 
 # Appendix A - Planning worksheets
 
-There are a number of configuration parameters that need to be determined
-before installing the Fabrikam Extranet solution. The various parameters
-and configuration settings are listed in the following tables.
+There are a number of configuration parameters that need to be determined before installing the Fabrikam Extranet solution. The various parameters and configuration settings are listed in the following tables.
 
 <caption><a name="Table_2_-_Service_accounts">Table 2 - Service 
 			accounts</a></caption>| User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
 | EXTRANET\svc-sql  | Service account for SQL Server  | No  | Used to run SQL Server and cluster services  |
 | EXTRANET\svc-sql-agent  | Service account for SQL Server Agent  | No  | Used to run SQL Server Agent  |
-| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the 
-				SharePoint configuration database. It also acts as the application 
-				pool identity account for the SharePoint Central Administration 
-				application pool, and it is the account under which the Windows 
-				SharePoint Services Timer service runs. The SharePoint Products 
-				Configuration Wizard adds this account to the SQL Server
-				**dbcreator** and **securityadmin** 
-				server roles.<br><br>The farm service account must be a domain user account, but 
-				it does not need to be a member of any specific security group 
-				on the servers in the farm. It is recommended to follow the 
-				principle of least privilege and specify a user account that 
-				is not a member of the Administrators group on any of the servers 
-				in the farm. |
+| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the Windows SharePoint Services Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
 | EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation 
 				2010 Search and SharePoint Server 2010 Search)  |
 | EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be 

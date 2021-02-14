@@ -7,24 +7,16 @@ categories: ["Development", "My System"]
 tags: ["Subtext"]
 ---
 
-In
-[last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18), I mentioned how I recently created an account on GitHub,
-primarily so I can contribute the various bug fixes and enhancements that I've
-made to the Subtext blog engine.
+In [last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18), I mentioned how I recently created an account on GitHub, primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine.
 
-In addition to the trivial bug fix that I mentioned before, I have merged
-a number of other changes that I previously made to my private build of Subtext.
+In addition to the trivial bug fix that I mentioned before, I have merged a number of other changes that I previously made to my private build of Subtext.
 
-I'm not sure whether all or any of these changes will find their way into
-Phil's repo, but I certainly hope so. Here is a list of the issues that I created
-(in most of these, you will see a corresponding change in my private fork of
-Subtext):
+I'm not sure whether all or any of these changes will find their way into Phil's repo, but I certainly hope so. Here is a list of the issues that I created (in most of these, you will see a corresponding change in my private fork of Subtext):
 
 <cite>Subtext issues created by me</cite>
 [https://github.com/Haacked/Subtext/issues/created\_by/jeremy-jameson](http://github.com/Haacked/Subtext/issues/created_by/jeremy-jameson)
 
-My Subtext fork does not currently include all of the changes I've made to
-Subtext for TechnologyToolbox.com, but it is close.
+My Subtext fork does not currently include all of the changes I've made to Subtext for TechnologyToolbox.com, but it is close.
 
 Here are the changes that I *haven't* yet merged into my Subtext fork:
 
@@ -61,12 +53,9 @@ HtmlHelper.HtmlSafe method when paragraphs are separated by newline characters
   to retrieve a Gravatar (i.e. by specifying Visible="false" on the Image
   control)
 
-Honestly, I'm not sure whether these changes would be valuable to others.
-While these were all necessary for the TechnologyToolbox.com site, some of them
-might be too specific for other sites (especially the ones marked "HACK").
+Honestly, I'm not sure whether these changes would be valuable to others. While these were all necessary for the TechnologyToolbox.com site, some of them might be too specific for other sites (especially the ones marked "HACK").
 
-If you have an interest in one or more of the above fixes, let me know and
-we can see about getting them merged into my Subtext fork.
+If you have an interest in one or more of the above fixes, let me know and we can see about getting them merged into my Subtext fork.
 
 Enjoy!
 

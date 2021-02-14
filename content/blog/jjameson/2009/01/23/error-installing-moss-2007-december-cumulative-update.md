@@ -14,15 +14,13 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Earlier this week I built a new Microsoft Office SharePoint Server (MOSS) 2007  development VM using a fresh install of Windows Server 2008, SQL Server 2008, and  Visual Studio 2008. The process wasn't quite as smooth as I had hoped.
+Earlier this week I built a new Microsoft Office SharePoint Server (MOSS) 2007 development VM using a fresh install of Windows Server 2008, SQL Server 2008, and Visual Studio 2008. The process wasn't quite as smooth as I had hoped.
 
-One of the issues I encountered occurs when you attempt to go straight from a  slipstreamed install of MOSS 2007 Service Pack 1 (SP1) to the [December Cumulative Update](http://support.microsoft.com/kb/960011)  (CU), bypassing the July Infrastructure Update (IU).
+One of the issues I encountered occurs when you attempt to go straight from a slipstreamed install of MOSS 2007 Service Pack 1 (SP1) to the [December Cumulative Update](http://support.microsoft.com/kb/960011) (CU), bypassing the July Infrastructure Update (IU).
 
-Since the December CU includes the July IU, I thought this would be okay. Unfortunately  an `SPUpgradeException` occurs during the "build-to-build" upgrade:
+Since the December CU includes the July IU, I thought this would be okay. Unfortunately an `SPUpgradeException` occurs during the "build-to-build" upgrade:
 
 C:\NotBackedUp\Temp&gt;<kbd>psconfig -cmd upgrade -inplace b2b -wait</kbd>
 
@@ -71,7 +69,7 @@ Upon cracking open the upgrade log file, I found the following:
    at Microsoft.SharePoint.Upgrade.SPWebTemplateSequence.ActivateSiteFeatures(List`1 lstsiteidToUpgrade, List`1& lstsiteidExceptions, List`1& lstwebinfoExceptions)
 ```
 
-Notice that it is complaining about a feature not being installed on the farm.  This feature ('2b1e4cbf-b5ba-48a4-926a-37100ad77dee') is actually the new "S2SearchAdmin"  interface included in the July IU that substantially improves the Search Administration  pages. Assuming you didn't install the July IU separately (which on this brand new  VM, I had not), you need to explicitly install the new features first:
+Notice that it is complaining about a feature not being installed on the farm. This feature ('2b1e4cbf-b5ba-48a4-926a-37100ad77dee') is actually the new "S2SearchAdmin" interface included in the July IU that substantially improves the Search Administration pages. Assuming you didn't install the July IU separately (which on this brand new VM, I had not), you need to explicitly install the new features first:
 
 C:\NotBackedUp\Temp&gt;<kbd>psconfig -cmd installfeatures</kbd>
 
@@ -168,5 +166,5 @@ Total number of unsuccessful configuration settings: 0<br>
 Successfully stopped the configuration of SharePoint Products and Technologies.<br>
 Configuration of the SharePoint Products and Technologies has succeeded.</samp>
 
-It turns out there are several other gotchas when working with SharePoint on  Windows Server 2008. However, given the length of this post, I think I'll blog about  those separately ;-)
+It turns out there are several other gotchas when working with SharePoint on Windows Server 2008. However, given the length of this post, I think I'll blog about those separately ;-)
 

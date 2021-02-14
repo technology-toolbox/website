@@ -14,30 +14,28 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-This week I finally got around to fixing a bug that would occasionally occur  when deploying our solution based on Microsoft Office SharePoint Server (MOSS) 2007.
+This week I finally got around to fixing a bug that would occasionally occur when deploying our solution based on Microsoft Office SharePoint Server (MOSS) 2007.
 
-In the solution we use a variety of different features to configure different  aspects of the site (for example, creating a /Public site and configuring the default  page for that site with a login Web Part as well as some initial content). We also  use features to add Web.config elements, such as those required for configuring  Forms-Based Authentication and integrating with various Web services.
+In the solution we use a variety of different features to configure different aspects of the site (for example, creating a /Public site and configuring the default page for that site with a login Web Part as well as some initial content). We also use features to add Web.config elements, such as those required for configuring Forms-Based Authentication and integrating with various Web services.
 
-One of the problems that I encountered during the first deployment to the Production  environment (PROD) is that when [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), the following error occurred sporadically:
+One of the problems that I encountered during the first deployment to the Production environment (PROD) is that when [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), the following error occurred sporadically:
 
 > A web configuration modification operation is already running.
 
-As a workaround, I simply activated the remaining features manually (initially  by directly invoking <samp>stsadm.exe -o activatefeature</samp>, but later by making  a temporary copy of the script and removing the features that had already been successfully  activated). Note that the error only occurred in PROD (at least in the beginning)  and therefore we didn't consider it a high priority to fix.
+As a workaround, I simply activated the remaining features manually (initially by directly invoking <samp>stsadm.exe -o activatefeature</samp>, but later by making a temporary copy of the script and removing the features that had already been successfully activated). Note that the error only occurred in PROD (at least in the beginning) and therefore we didn't consider it a high priority to fix.
 
-Months went by and each time the solution was deployed to PROD, the workaround  would be used whenever the error occurred.
+Months went by and each time the solution was deployed to PROD, the workaround would be used whenever the error occurred.
 
-I thought about putting a simple hack in the code to sleep for 5 or 10 seconds  (assuming the Web.config modifications would finish running in that amount of time),  but I never implemented that hack since my preference was to fix the fundamental  problem instead.
+I thought about putting a simple hack in the code to sleep for 5 or 10 seconds (assuming the Web.config modifications would finish running in that amount of time), but I never implemented that hack since my preference was to fix the fundamental problem instead.
 
-This week, I had some time to tackle the problem so I modified my local development  environment to more closely mimic PROD (i.e. by adding a second front-end Web server  to the farm). Consequently I was able to reproduce the bug on a consistent basis.
+This week, I had some time to tackle the problem so I modified my local development environment to more closely mimic PROD (i.e. by adding a second front-end Web server to the farm). Consequently I was able to reproduce the bug on a consistent basis.
 
-When there are multiple front-end Web servers in the SharePoint farm, we need  to wait for the timer job that performs the Web.config modifications to complete  before continuing. Otherwise, the "configuration modification
-operation is already running" error may occur when applying Web.config changes  from two different features in rapid succession.
+When there are multiple front-end Web servers in the SharePoint farm, we need to wait for the timer job that performs the Web.config modifications to complete before continuing. Otherwise, the "configuration modification
+operation is already running" error may occur when applying Web.config changes from two different features in rapid succession.
 
-To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class) **class in the **ApplyWebConfigModifications**  method:
+To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class) **class in the **ApplyWebConfigModifications** method:
 
 ```
 if (webApp.Farm.TimerService.Instances.Count > 1)
@@ -62,7 +60,7 @@ if (webApp.Farm.TimerService.Instances.Count > 1)
 ```
 
 As you can see, most of the work is delegated to the **SharePointTimerJobHelper
-**class. **SharePointWebConfigHelper** only knows the name of  the one-time timer job (`"Windows SharePoint Services  Web.Config Update"`) and a reasonable amount of time that the timer  job should take to complete (20 seconds). Note that it doesn't necessarily wait  the full 20 seconds for the timer job to complete (essentially the original hack  that I thought about implementing). Rather it waits at most 20 seconds for the timer  job to complete. Also note that there is no guarantee that the timer job actually  finished (or even ran) when the call to `SharePointTimerJobHelper.WaitForOnetimeJobToFinish`  returns. However, in my testing I found that 20 seconds seemed like a good choice  for the <var>maximumWaitTime</var> parameter.
+**class. **SharePointWebConfigHelper** only knows the name of the one-time timer job (`"Windows SharePoint Services  Web.Config Update"`) and a reasonable amount of time that the timer job should take to complete (20 seconds). Note that it doesn't necessarily wait the full 20 seconds for the timer job to complete (essentially the original hack that I thought about implementing). Rather it waits at most 20 seconds for the timer job to complete. Also note that there is no guarantee that the timer job actually finished (or even ran) when the call to `SharePointTimerJobHelper.WaitForOnetimeJobToFinish` returns. However, in my testing I found that 20 seconds seemed like a good choice for the <var>maximumWaitTime</var> parameter.
 
 Here is the code for the **SharePointTimerJobHelper **class:
 
@@ -240,7 +238,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-When applying Web.config changes through a feature, messages similar to the following  are logged:
+When applying Web.config changes through a feature, messages similar to the following are logged:
 
 ```
 Verbose: Applying Web.config modifications to Web application (SharePoint - fabrikam-test80)... 
@@ -255,5 +253,5 @@ Information: Waited 15 seconds for the one-time job (Windows SharePoint Services
 Information: Successfully applied Web.config modifications to Web application (SharePoint - fabrikam-test80).
 ```
 
-In this particular instance, it took 15 seconds for the Web.config changes to  be applied and the corresponding one-time SharePoint timer job to be cleaned up.  However, this trace was captured from a VM in my home lab. I suspect PROD will actually  be significantly faster.
+In this particular instance, it took 15 seconds for the Web.config changes to be applied and the corresponding one-time SharePoint timer job to be cleaned up. However, this trace was captured from a VM in my home lab. I suspect PROD will actually be significantly faster.
 

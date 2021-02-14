@@ -13,18 +13,18 @@ tags: ["Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-The "Announcements" feature that I developed for a customer about a year ago uses         a modal popup window to display content to users. The solution leverages the [AJAX Control Toolkit](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/Default.aspx) to render the modal popups -- specifically the **ModalPopupExtender**         class.
+The "Announcements" feature that I developed for a customer about a year ago uses a modal popup window to display content to users. The solution leverages the [AJAX Control Toolkit](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/Default.aspx) to render the modal popups -- specifically the **ModalPopupExtender** class.
 
-Refer to the following site for more information on the **ModalPopupExtender**         class, including a sample page that demonstrates a popup window:
+Refer to the following site for more information on the **ModalPopupExtender** class, including a sample page that demonstrates a popup window:
 
 <cite>ModalPopup Demonstration</cite>
 [http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)
 
-To encapsulate the functionality for rendering modal popup windows, the "Announcements"         feature builds upon a lightweight "Modal Popup Framework." [Admittedly, calling         this a "framework" is a little bit of a stretch.]
+To encapsulate the functionality for rendering modal popup windows, the "Announcements" feature builds upon a lightweight "Modal Popup Framework." [Admittedly, calling this a "framework" is a little bit of a stretch.]
 
-The framework essentially consists of the **ModalPopupWebPart** abstract         base class which is primarily responsible for rendering the **ModalPanel**         (i.e. a `<div>` element that serves as the container for content         to display in the modal popup window), the **Title Bar**, and link         buttons (**OK **and **Cancel**) to dismiss the popup window.
+The framework essentially consists of the **ModalPopupWebPart** abstract base class which is primarily responsible for rendering the **ModalPanel** (i.e. a `<div>` element that serves as the container for content to display in the modal popup window), the **Title Bar**, and link buttons (**OK **and **Cancel**) to dismiss the popup window.
 
 > **Note**
 > 
@@ -39,9 +39,9 @@ Figure 1: Elements of a modal popup window
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Modal-Popup-Window-Elements.png)
 
-As noted previously, the **ModalPopupWebPart** base class does not         specify the main content to render in the popup window; nor does it specify the         dimensions (width and height) of the popup window. Instead, Web Parts that derive         from **ModalPopupWebPart** specify the content (and, optionally, the         width and height of the main content).
+As noted previously, the **ModalPopupWebPart** base class does not specify the main content to render in the popup window; nor does it specify the dimensions (width and height) of the popup window. Instead, Web Parts that derive from **ModalPopupWebPart** specify the content (and, optionally, the width and height of the main content).
 
-For example, the modal popup window shown in Figure 1 was generated using the following         sample code:
+For example, the modal popup window shown in Figure 1 was generated using the following sample code:
 
 ```
 using System;
@@ -97,14 +97,14 @@ modalPanelContent.Height = new Unit(100);
 }
 ```
 
-&hellip;it is possible to constrain the height of the modal popup window and         show a scrollbar as necessary. This is illustrated in the following figure.
+&hellip;it is possible to constrain the height of the modal popup window and show a scrollbar as necessary. This is illustrated in the following figure.
 
 ![Constraining the height of content displayed in a modal popup window](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Constrained-Height.png)
 Figure 2: Constraining the height of content displayed in a modal popup window
 
-In addition to creating various user interface elements for modal popup windows,         the **ModalPopupWebPart** also converts client-side events (e.g. clicking         the **OK** link button) into server-side events. Note that this postback         occurs asynchronously in order to preserve the "AJAX" experience by avoiding a refresh         of the entire page. The **ModalPopupWebPart** base class also allows         the labels of the **OK** and **Cancel** link buttons to         be changed by derived classes, as well as the ability to hide either of the link         buttons.
+In addition to creating various user interface elements for modal popup windows, the **ModalPopupWebPart** also converts client-side events (e.g. clicking the **OK** link button) into server-side events. Note that this postback occurs asynchronously in order to preserve the "AJAX" experience by avoiding a refresh of the entire page. The **ModalPopupWebPart** base class also allows the labels of the **OK** and **Cancel** link buttons to be changed by derived classes, as well as the ability to hide either of the link buttons.
 
-For example, it might be desireable to hide the **Cancel** link button         and change the text of the **OK** button to be "Close" instead. When         the user clicks the "Close" button, the derived Web Part can specify a server-side         event handler (or simply override the **OnModalPopupOk** method) to         perform some action.
+For example, it might be desireable to hide the **Cancel** link button and change the text of the **OK** button to be "Close" instead. When the user clicks the "Close" button, the derived Web Part can specify a server-side event handler (or simply override the **OnModalPopupOk** method) to perform some action.
 
 ```
 protected override void OnModalPopupOk(
@@ -118,7 +118,7 @@ protected override void OnModalPopupOk(
         }
 ```
 
-If you would like to see the "Modal Popup Framework" in action, simply download         and unzip the attachment to this post, open the Visual Studio 2010 solution, and         then run it.
+If you would like to see the "Modal Popup Framework" in action, simply download and unzip the attachment to this post, open the Visual Studio 2010 solution, and then run it.
 
-In my next post, I'll describe the "Announcements" feature that builds upon this         framework in order to show marketing announcements on a SharePoint site.
+In my next post, I'll describe the "Announcements" feature that builds upon this framework in order to show marketing announcements on a SharePoint site.
 

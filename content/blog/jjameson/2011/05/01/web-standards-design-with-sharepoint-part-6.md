@@ -16,16 +16,16 @@ tags: ["SharePoint 2010", "Tugboat"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx) **in SharePoint 2010.
+In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx) **in SharePoint 2010.
 
 > **Note**
 > 
 >             You can achieve similar results in Microsoft Office SharePoint Server (MOSS) 2007
 >             using the **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
 
-For those of you that haven't yet read my previous post, the goal was to take a         SharePoint list like the one shown below...
+For those of you that haven't yet read my previous post, the goal was to take a SharePoint list like the one shown below...
 
 ![Specials list](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List.png)
 Figure 1: Specials list
@@ -71,21 +71,21 @@ Figure 1: Specials list
 ```
 
 After replacing the static HTML for the weekly specials section with an **XsltListViewWebPart
-**(and specifying the necessary XSL to transform the SharePoint list items         into the desired HTML), the content on the Tugboat home page no longer needs to         be updated directly. Instead, new items can be added to the custom **Specials
-**list (or existing items updated) in order to dynamically update the content         on the home page.
+**(and specifying the necessary XSL to transform the SharePoint list items into the desired HTML), the content on the Tugboat home page no longer needs to be updated directly. Instead, new items can be added to the custom **Specials
+**list (or existing items updated) in order to dynamically update the content on the home page.
 
-However, as I mentioned at the end of my previous post, there's a problem. What         happens if the number of items in the list is greater than the expected number?         The following screenshot shows the updated home page content after adding a fourth         item to the **Specials **list.
+However, as I mentioned at the end of my previous post, there's a problem. What happens if the number of items in the list is greater than the expected number? The following screenshot shows the updated home page content after adding a fourth item to the **Specials **list.
 
 ![Too many items in the weekly specials section](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Too-Many-Specials.png)
 Figure 2: Too many items in the weekly specials section
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Too-Many-Specials.png)
 
-While we *could* modify the XSLT to only render the first three items from         the SharePoint list, this really isn't the best implementation choice. A better         way of limiting the number of list items rendered in the weekly specials section         is to use a custom view on the underlying list (instead of rendering items based         on the default **All Items **view).
+While we *could* modify the XSLT to only render the first three items from the SharePoint list, this really isn't the best implementation choice. A better way of limiting the number of list items rendered in the weekly specials section is to use a custom view on the underlying list (instead of rendering items based on the default **All Items **view).
 
-Let's suppose that in addition to restricting the number of weekly specials displayed         on the home page (to three items), we also want to show the most recent items first.
+Let's suppose that in addition to restricting the number of weekly specials displayed on the home page (to three items), we also want to show the most recent items first.
 
-To achieve the two goals, start by creating a new view on the **Specials **         list using the following parameters:
+To achieve the two goals, start by creating a new view on the **Specials ** list using the following parameters:
 
 - Name: **Most Recent Specials**
 - Web address of this view: **MostRecent**
@@ -102,7 +102,7 @@ To achieve the two goals, start by creating a new view on the **Specials **     
   - Number of items to display: **3**
   - **Limit the total number of items returned to the specified amount.**
 
-Once we change the **XsltListViewWebPart **on the home page to use         the **Most Recent Specials **view, the weekly specials section renders         as expected regardless of the number of items in the **Specials **list.
+Once we change the **XsltListViewWebPart **on the home page to use the **Most Recent Specials **view, the weekly specials section renders as expected regardless of the number of items in the **Specials **list.
 
 ![Using the &quot;Most Recent Specials&quot; view (instead of &quot;All Items&quot;) renders the home page as expected](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List-XsltListViewWebPart.png)
 Figure 3: Using the "Most Recent Specials" view (instead of "All Items") renders
@@ -110,11 +110,11 @@ the home page as expected
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List-XsltListViewWebPart.png)
 
-Now that we have the **XsltListViewWebPart **rendering the desired         HTML, we can turn our attention to automatically creating the **Specials **         list (as well as the custom view), populating the list with default items, and adding         an instance of the **XsltListViewWebPart **to the home page.
+Now that we have the **XsltListViewWebPart **rendering the desired HTML, we can turn our attention to automatically creating the **Specials ** list (as well as the custom view), populating the list with default items, and adding an instance of the **XsltListViewWebPart **to the home page.
 
 ## Creating the Custom List
 
-While you could create the **Specials **list via a feature using CAML,         I prefer to create custom SharePoint lists using code instead. The reason is because         business requirements invariably change over time and I find it much easier to start         out with code since it seems almost inevitable that you'll be programmatically manipulating         SharePoint lists anyway.
+While you could create the **Specials **list via a feature using CAML, I prefer to create custom SharePoint lists using code instead. The reason is because business requirements invariably change over time and I find it much easier to start out with code since it seems almost inevitable that you'll be programmatically manipulating SharePoint lists anyway.
 
 Here's the code I wrote to create automatically create and configure the new **            Specials **list:
 
@@ -246,7 +246,7 @@ private static void ConfigureViewsForSpecialsList(
 
 ## Adding the Default Items to the List
 
-I populate the default list items using a couple of other helper methods (but only         if the list is empty upon activation of the feature -- in order to avoid adding         duplicate items to the list):
+I populate the default list items using a couple of other helper methods (but only if the list is empty upon activation of the feature -- in order to avoid adding duplicate items to the list):
 
 ```
 private static void CreateDefaultItemsInSpecialsList(
@@ -304,11 +304,11 @@ private static void CreateDefaultItemsInSpecialsList(
         }
 ```
 
-There are certainly other ways to avoid adding duplicate items to a list, but this         method is straightforward and sufficient for this scenario.
+There are certainly other ways to avoid adding duplicate items to a list, but this method is straightforward and sufficient for this scenario.
 
 ## Adding the XsltListViewWebPart to the Home Page
 
-In order to add the new **XsltListViewWebPart **to the home page, I         modified the existing **ConfigureHomeSiteDefaultPage **method that         I created previously:
+In order to add the new **XsltListViewWebPart **to the home page, I modified the existing **ConfigureHomeSiteDefaultPage **method that I created previously:
 
 ```
 private static void ConfigureHomeSiteDefaultPage(
@@ -404,9 +404,9 @@ private static void ConfigureSpecialsWebPart(
 
 ## Deploying the Sample Solution
 
-I've attached an updated version of the Tugboat solution in case you are interested         in seeing the changes to render the weekly specials from a SharePoint list.
+I've attached an updated version of the Tugboat solution in case you are interested in seeing the changes to render the weekly specials from a SharePoint list.
 
-Here are the instructions to deploy the Tugboat sample to your own SharePoint environment.         First, download the attachment and unzip the files. Then you simply need to create         a few domain users and run a handful of PowerShell scripts, as described below.
+Here are the instructions to deploy the Tugboat sample to your own SharePoint environment. First, download the attachment and unzip the files. Then you simply need to create a few domain users and run a handful of PowerShell scripts, as described below.
 
 #### To deploy the Tugboat solution to SharePoint:
 
@@ -446,11 +446,11 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
 >             accounts). However, I recommend this in order to bypass SharePoint timer jobs when
 >             deploying the WSPs.
 
-At this point you should be able to modify your hosts file accordingly and browse         to either [http://www-local.tugboatcoffee.com](http://www-local.tugboatcoffee.com)         (to view the site as an anonymous user) or [http://tugboatcoffee-local](http://tugboatcoffee-local)         (to view the site as an administrator).
+At this point you should be able to modify your hosts file accordingly and browse to either [http://www-local.tugboatcoffee.com](http://www-local.tugboatcoffee.com) (to view the site as an anonymous user) or [http://tugboatcoffee-local](http://tugboatcoffee-local) (to view the site as an administrator).
 
 ## Additional Resources
 
-Here are some additional resources that you may find helpful for rendering SharePoint         list items using the **XsltListViewWebPart**.
+Here are some additional resources that you may find helpful for rendering SharePoint list items using the **XsltListViewWebPart**.
 
 <cite>XsltListViewWebPart and Custom List Views</cite>
 [http://msdn.microsoft.com/en-us/library/ff806162.aspx](http://msdn.microsoft.com/en-us/library/ff806162.aspx)

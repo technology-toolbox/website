@@ -15,33 +15,27 @@ tags: ["MOSS 2007", "Web Development", "SharePoint
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Prior to the recent "v2" release on my current project, we had been using the  ASP.NET **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)** to manage the various roles used by the Web site.
+Prior to the recent "v2" release on my current project, we had been using the ASP.NET **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)** to manage the various roles used by the Web site.
 
-Over a month ago, someone contacted me about an issue he was encountering with  a specific user. The problem turned out to be caused by the fact that the user was  not added to the **Authenticated Users **role.
+Over a month ago, someone contacted me about an issue he was encountering with a specific user. The problem turned out to be caused by the fact that the user was not added to the **Authenticated Users **role.
 
-If you've ever used Forms-Based Authentication (FBA) against Active Directory,  then you've likely used built-in groups like **NT AUTHORITY\Authenticated
-Users** to restrict access to specific content. Unfortunately, if you want  to do the same thing when using FBA with users and roles stored in SQL Server, you  have to explicitly create the **Authenticated Users** role and ensure  that every user is added to the role.
+If you've ever used Forms-Based Authentication (FBA) against Active Directory, then you've likely used built-in groups like **NT AUTHORITY\Authenticated
+Users** to restrict access to specific content. Unfortunately, if you want to do the same thing when using FBA with users and roles stored in SQL Server, you have to explicitly create the **Authenticated Users** role and ensure that every user is added to the role.
 
-Shortly after we identified the root cause of the issue I mentioned earlier,  I created a work item in Team Foundation Server to come up with a solution for avoiding  this issue in the future:
+Shortly after we identified the root cause of the issue I mentioned earlier, I created a work item in Team Foundation Server to come up with a solution for avoiding this issue in the future:
 
-> **Title:** Membership in the "Authenticated Users" role should
-> be implicit
+> **Title:** Membership in the "Authenticated Users" role should be implicit
 > 
 > **Description:
-> **Administrators shouldn't have to explicitly add users to the "Authenticated
-> Users" role. Instead, membership in this role should be implicit, since anyone
-> that specifies a username/password is considered "authenticated".
+> **Administrators shouldn't have to explicitly add users to the "Authenticated Users" role. Instead, membership in this role should be implicit, since anyone that specifies a username/password is considered "authenticated".
 > 
-> Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we
-> are currently using doesn't function this way.
+> Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we are currently using doesn't function this way.
 
-In the "v2" solution, I created a custom role provider that automatically manages  the **Authenticated Users **role (in other words, administrators do  not need to create the role in the underlying database or explicitly add users to  the role).
+In the "v2" solution, I created a custom role provider that automatically manages the **Authenticated Users **role (in other words, administrators do not need to create the role in the underlying database or explicitly add users to the role).
 
-Fortunately, the ASP.NET **SqlRoleProvider** is not marked as `sealed` and therefore it requires very little code to implement the  custom role provider.
+Fortunately, the ASP.NET **SqlRoleProvider** is not marked as `sealed` and therefore it requires very little code to implement the custom role provider.
 
 I started by overriding the **RoleExists** method:
 
@@ -61,7 +55,7 @@ public override bool RoleExists(
         }
 ```
 
-As you can see, this simply checks if the "Authenticated Users" role was specified,  in which case it returns `true` regardless  of whether the role exists in the underlying database.
+As you can see, this simply checks if the "Authenticated Users" role was specified, in which case it returns `true` regardless of whether the role exists in the underlying database.
 
 Next, I proceeded to override the **IsUserInRole** method:
 
@@ -82,9 +76,9 @@ public override bool IsUserInRole(
         }
 ```
 
-Notice the comment that I added to the `return`  statement. At first, I thought about validating the specified user (to ensure the  user actually exists), but then I thought "Why take the extra database hit (i.e.  calling the **Membership.GetUser **method) just to ensure the user  exists?"
+Notice the comment that I added to the `return` statement. At first, I thought about validating the specified user (to ensure the user actually exists), but then I thought "Why take the extra database hit (i.e. calling the **Membership.GetUser **method) just to ensure the user exists?"
 
-The reality is that the **IsUserInRole** method will never get called  with an invalid user (since the user wouldn't be able to login in the first place).
+The reality is that the **IsUserInRole** method will never get called with an invalid user (since the user wouldn't be able to login in the first place).
 
 I then moved on to something slightly more challenging - implementing the **GetRolesForUser** method:
 
@@ -100,9 +94,9 @@ public override string[] GetRolesForUser(
         }
 ```
 
-As you can see, I'm simply augmenting the list of roles specified for the user  in the database with the additional **Authenticated Users **role.
+As you can see, I'm simply augmenting the list of roles specified for the user in the database with the additional **Authenticated Users **role.
 
-As I mentioned before, we were previously using the **SqlRoleProvider**  and thus the **Authenticated Users** role had already been added to  the database. Even though I added a section to the v2.0 installation guide to explicitly  delete the **Authenticated Users** role prior to upgrading, I still  thought it wise to avoid "blindly" adding the **Authenticated Users**  role to the list of roles returned from the database (potentially adding a duplicate).  Consequently, in the helper method I check to see if the role is already specified  before prepending it to the list:
+As I mentioned before, we were previously using the **SqlRoleProvider** and thus the **Authenticated Users** role had already been added to the database. Even though I added a section to the v2.0 installation guide to explicitly delete the **Authenticated Users** role prior to upgrading, I still thought it wise to avoid "blindly" adding the **Authenticated Users** role to the list of roles returned from the database (potentially adding a duplicate). Consequently, in the helper method I check to see if the role is already specified before prepending it to the list:
 
 ```
 private static string[] AddAuthenticatedUsersRole(
@@ -131,16 +125,11 @@ private static string[] AddAuthenticatedUsersRole(
         }
 ```
 
-After overriding a few more methods (e.g. **DeleteRole**), I then  swapped out the **SqlRoleProvider **with the custom role provider.  That's when I encountered the following error in IIS Manager (after clicking **.NET Roles**):
+After overriding a few more methods (e.g. **DeleteRole**), I then swapped out the **SqlRoleProvider **with the custom role provider. That's when I encountered the following error in IIS Manager (after clicking **.NET Roles**):
 
-> This feature cannot be used because the default provider is not a trusted
-> provider.
+> This feature cannot be used because the default provider is not a trusted provider.
 > 
-> You can use this feature only when the default provider is a trusted provider.
-> If you are a server administrator, you can make a provider a trusted provider
-> by adding the provider type to the trusted providers list in the Administration.config
-> file. The provider has to be strongly typed and added to the GAC (Global Assembly
-> Cache).
+> You can use this feature only when the default provider is a trusted provider. If you are a server administrator, you can make a provider a trusted provider by adding the provider type to the trusted providers list in the Administration.config file. The provider has to be strongly typed and added to the GAC (Global Assembly Cache).
 
 I then added the following steps to the installation guide:
 
@@ -171,9 +160,9 @@ I then added the following steps to the installation guide:
 > 
 > 5. Save the changes to the file and close Notepad.
 
-Once I had made the custom role provider a trusted provider, I was able to verify  some basic functionality and fix a couple of bugs. For example, I discovered that  while it's okay to throw an exception in the **FindUsersInRole **method  when the "Authenticated Users" role is specified, IIS Manager doesn't like it when  you throw an exception from the **GetUsersInRole **method. If you throw  an exception in the **GetUsersInRole** method, then it prohibits the  list of roles from being displayed in IIS Manager. Consequently, I simply chose  to return an empty list of users when **GetUsersInRole **is called  for the "Authenticated Users" role.
+Once I had made the custom role provider a trusted provider, I was able to verify some basic functionality and fix a couple of bugs. For example, I discovered that while it's okay to throw an exception in the **FindUsersInRole **method when the "Authenticated Users" role is specified, IIS Manager doesn't like it when you throw an exception from the **GetUsersInRole **method. If you throw an exception in the **GetUsersInRole** method, then it prohibits the list of roles from being displayed in IIS Manager. Consequently, I simply chose to return an empty list of users when **GetUsersInRole **is called for the "Authenticated Users" role.
 
-An alternative that I briefly considered for the **GetUsersInRole**  method was to simply query the database for all users, but that just didn't feel  right in my gut. It's probably not an issue when you have at most a few thousand  users, but I was concerned about performance with tens of thousands of users.
+An alternative that I briefly considered for the **GetUsersInRole** method was to simply query the database for all users, but that just didn't feel right in my gut. It's probably not an issue when you have at most a few thousand users, but I was concerned about performance with tens of thousands of users.
 
 Here is the complete source for the custom role provider:
 
@@ -537,5 +526,5 @@ Note that there are a few issues in IIS Manager when using this custom role prov
   **GetRolesForUser **method will include "Authenticated Users" in
   the returned list.
 
-Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider**  again ;-)
+Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider** again ;-)
 

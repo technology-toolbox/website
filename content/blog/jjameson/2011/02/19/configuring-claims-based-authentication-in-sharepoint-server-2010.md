@@ -15,27 +15,25 @@ tags: ["My System", "SharePoint
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-I thought it would be helpful to share my step-by-step procedures for manually  configuring claims-based authentication in SharePoint Server 2010 using an "ASP.NET  database" and corresponding membership and role providers.
+I thought it would be helpful to share my step-by-step procedures for manually configuring claims-based authentication in SharePoint Server 2010 using an "ASP.NET database" and corresponding membership and role providers.
 
-Note that the following TechNet article provides *some*of the steps for  configuring claims-based authentication in SharePoint Server 2010 (using the LDAP  provider instead of the ASP.NET SQL providers):
+Note that the following TechNet article provides *some*of the steps for configuring claims-based authentication in SharePoint Server 2010 (using the LDAP provider instead of the ASP.NET SQL providers):
 
 <cite>Configure forms-based authentication for a claims-based Web application
 (SharePoint Server 2010)</cite>
 [http://technet.microsoft.com/en-us/library/ee806890.aspx](http://technet.microsoft.com/en-us/library/ee806890.aspx)
 
-I had originally intended this post to simply serve as a precursor to [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), but during the process of writing this post, I realized that there  are many pieces lacking from the TechNet article. For example, if you use the current  PowerShell script provided in the above TechNet article, you end up with a Web application  that doesn't support Search (because it does not enable both Windows authentication  as well as Forms-Based Authentication).
+I had originally intended this post to simply serve as a precursor to [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), but during the process of writing this post, I realized that there are many pieces lacking from the TechNet article. For example, if you use the current PowerShell script provided in the above TechNet article, you end up with a Web application that doesn't support Search (because it does not enable both Windows authentication as well as Forms-Based Authentication).
 
-In this post, I'll share a "real world" process for creating and configuring  a Web application in SharePoint Server 2010 using claims-based authentication.
+In this post, I'll share a "real world" process for creating and configuring a Web application in SharePoint Server 2010 using claims-based authentication.
 
-In the following procedures, assume that we are configuring the public Internet  site for Fabrikam Technologies (my favorite fictitious manufacturing company) and  we want to provide the ability for customers and partners to login and access personalized  content. User accounts for customers and partners are stored in a SQL Server database  (FabrikamDemo).
+In the following procedures, assume that we are configuring the public Internet site for Fabrikam Technologies (my favorite fictitious manufacturing company) and we want to provide the ability for customers and partners to login and access personalized content. User accounts for customers and partners are stored in a SQL Server database (FabrikamDemo).
 
-[User accounts for Fabrikam employees are stored in Active Directory. Consequently,  Fabrikam employees will not login using forms-based authentication. Rather, in order  to author content and manage the site, Fabrikam employees authenticate with the  site using Windows authentication (in other words, via the generic login window  that varies slightly depending on the Web browser being used).]
+[User accounts for Fabrikam employees are stored in Active Directory. Consequently, Fabrikam employees will not login using forms-based authentication. Rather, in order to author content and manage the site, Fabrikam employees authenticate with the site using Windows authentication (in other words, via the generic login window that varies slightly depending on the Web browser being used).]
 
-The relevant service accounts for claims-based authentication are listed in the  following table.
+The relevant service accounts for claims-based authentication are listed in the following table.
 
 <caption><a name="Table-1">Table 1 - Service Accounts</a></caption>| User Logon Name | Full Name | Description |
 | --- | --- | --- |
@@ -44,9 +42,9 @@ The relevant service accounts for claims-based authentication are listed in the 
 	Central Administration site, as well as the application pool for the Security 
 	Token Service application.  |
 | EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam Web application |
-[Assume that Fabrikam has established an "extranet" Active Directory domain which  will be used to host the SharePoint farm. In order to allow Fabrikam employees to  authenticate with their internal domain (FABRIKAM) credentials, a one-way trust  is established from the EXTRANET domain to the FABRIKAM domain.]
+[Assume that Fabrikam has established an "extranet" Active Directory domain which will be used to host the SharePoint farm. In order to allow Fabrikam employees to authenticate with their internal domain (FABRIKAM) credentials, a one-way trust is established from the EXTRANET domain to the FABRIKAM domain.]
 
-Configuring claims-based authentication using a SQL Server database consists  of the following high-level steps:
+Configuring claims-based authentication using a SQL Server database consists of the following high-level steps:
 
 1. Create and configure the membership/role database
 2. Create the Web application and initial site collection (or configure an
@@ -63,7 +61,7 @@ Configuring claims-based authentication using a SQL Server database consists  of
 
 ### Step 1 - Create and configure the membership/role database
 
-In this step, the database for storing ASP.NET membership and role information  is created and the two service accounts specified in Table 1 are added to to the appropriate database roles.
+In this step, the database for storing ASP.NET membership and role information is created and the two service accounts specified in Table 1 are added to to the appropriate database roles.
 
 #### To create the database used for storing ASP.NET membership and role information:
 
@@ -223,7 +221,7 @@ In this step, the Web application and initial site collection are created.
 
 ### Step 3 - Configure SSL on the Web site
 
-When using Forms-Based Authentication, it is important to secure the communication  between the clients and the Web servers (in order to avoid sending user credentials  in clear text over the network). In this section, the Web application is modified  to support both HTTP and HTTPS, and the corresponding SSL certificate is configured  for the Web site.
+When using Forms-Based Authentication, it is important to secure the communication between the clients and the Web servers (in order to avoid sending user credentials in clear text over the network). In this section, the Web application is modified to support both HTTP and HTTPS, and the corresponding SSL certificate is configured for the Web site.
 
 #### To add a public URL to HTTPS:
 
@@ -261,7 +259,7 @@ When using Forms-Based Authentication, it is important to secure the communicati
 
 ### Step 4 - Enable anonymous access to the site
 
-In addition to enabling anonymous access on the Web application, the root Web  of the site collection must also be configured to enable anonymous access.
+In addition to enabling anonymous access on the Web application, the root Web of the site collection must also be configured to enable anonymous access.
 
 #### To enable anonymous access to the site:
 
@@ -318,7 +316,7 @@ In addition to enabling anonymous access on the Web application, the root Web  o
 
 ### Step 5 - Add Web.config modifications for claims-based authentication
 
-In order to complete the configuration of claims-based authentication, it is  necessary to modify the Web.config files for the following sites:
+In order to complete the configuration of claims-based authentication, it is necessary to modify the Web.config files for the following sites:
 
 - SharePoint Central Administration v4
 - Security Token Service
@@ -532,7 +530,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 ### Step 7 - Validate the configuration of the Web application
 
-The final step is to validate the Web application works as expected when using  both Forms-Based Authentication and Windows authentication.
+The final step is to validate the Web application works as expected when using both Forms-Based Authentication and Windows authentication.
 
 #### To login to the Fabrikam Web site using Forms-Based Authentication:
 
@@ -566,5 +564,5 @@ The final step is to validate the Web application works as expected when using  
 
 ### What's next?
 
-In [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), I explain how to create a custom Web Part that can be used to  provide a "branded" login page (instead of the generic "Sign In" page provided out-of-the-box  in SharePoint Server 2010).
+In [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), I explain how to create a custom Web Part that can be used to provide a "branded" login page (instead of the generic "Sign In" page provided out-of-the-box in SharePoint Server 2010).
 

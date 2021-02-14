@@ -14,14 +14,14 @@ tags: ["My System", "SQL Server", "
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-A little over two years ago, I wrote a post about [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1), in which I mentioned setting         the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk         space while installing the service pack). [Note that the credit for this trick really         goes to [Heath Stewart](http://blogs.msdn.com/heaths/) -- as I mentioned         in my original post.]
+A little over two years ago, I wrote a post about [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1), in which I mentioned setting the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk space while installing the service pack). [Note that the credit for this trick really goes to [Heath Stewart](http://blogs.msdn.com/heaths/) -- as I mentioned in my original post.]
 
-I've also mentioned in various posts that I make heavy use of virtualization in         the "[Jameson
-Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab) and that I prefer to keep my VHDs reasonably         small. This is especially valuable when, for example, I need to copy a VM from one         of my home servers and take it "on the road" with me to a customer site.
+I've also mentioned in various posts that I make heavy use of virtualization in the "[Jameson
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab) and that I prefer to keep my VHDs reasonably small. This is especially valuable when, for example, I need to copy a VM from one of my home servers and take it "on the road" with me to a customer site.
 
-As such, one of the first things that I typically do when building out a new VM         is to run the following from a command prompt:
+As such, one of the first things that I typically do when building out a new VM is to run the following from a command prompt:
 
 ```
 reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
@@ -31,13 +31,13 @@ Then I move on to installing products based on the intended purpose of the VM.
 
 Here's an excerpt from the [MSDN page for MaxPatchCacheSize](http://msdn.microsoft.com/en-us/library/aa369798%28VS.85%29.aspx):
 
-> If this per-machine system policy is set to a value greater than 0, Windows Installer             saves older versions of files in a cache when a patch is applied to an application.             Caching can increase the performance of future installations that otherwise need             to obtain the old files from a original application source.
+> If this per-machine system policy is set to a value greater than 0, Windows Installer saves older versions of files in a cache when a patch is applied to an application. Caching can increase the performance of future installations that otherwise need to obtain the old files from a original application source.
 > 
 > ...
 > 
-> If the value of the MaxPatchCacheSize policy is set to 0, no additional files are             saved.
+> If the value of the MaxPatchCacheSize policy is set to 0, no additional files are saved.
 
-To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look at         the following figure, which shows the disk space usage on a freshly built Windows         Server 2008 R2 VM, after installing SQL Server 2008 and subsequently running Windows         Update to install all of the latest patches (including SQL Server 2008 Service Pack         1).
+To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look at the following figure, which shows the disk space usage on a freshly built Windows Server 2008 R2 VM, after installing SQL Server 2008 and subsequently running Windows Update to install all of the latest patches (including SQL Server 2008 Service Pack 1).
 
 ![Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-WS2008-R2%20(with%20SQL%202008%20SP1).png)
 Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize
@@ -45,11 +45,11 @@ not set)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage-WS2008-R2%20%28with%20SQL%202008%20SP1%29.png)
 
-Note that the \Windows\Installer\$PatchCache$ folder is consuming almost 1 GB of         space on the VHD.
+Note that the \Windows\Installer\$PatchCache$ folder is consuming almost 1 GB of space on the VHD.
 
-I've mentioned before that a gigabyte or two isn't all that much when your physical         hard drive is several hundred gigabytes in size. However, the same number on a 20         GB VHD is a different matter altogether.
+I've mentioned before that a gigabyte or two isn't all that much when your physical hard drive is several hundred gigabytes in size. However, the same number on a 20 GB VHD is a different matter altogether.
 
-The following figure shows the disk space usage for a similar configuration (i.e.         a freshly built Windows Server 2008 R2 VM with SQL Server 2008 SP1), but this time         with MaxPatchCacheSize set to 0 prior to starting the installation of SQL Server.
+The following figure shows the disk space usage for a similar configuration (i.e. a freshly built Windows Server 2008 R2 VM with SQL Server 2008 SP1), but this time with MaxPatchCacheSize set to 0 prior to starting the installation of SQL Server.
 
 ![Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_After%20restricting%20MaxPatchCacheSize.png)
 Figure 2: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize
@@ -57,9 +57,9 @@ set to 0)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_After%20restricting%20MaxPatchCacheSize.png)
 
-Observe that the $PatchCache$ folder isn't even visible in the disk usage view,         and the free space on the VHD is substantially larger. You can imagine how the delta         between the two configurations would increase substantially as more products --         and thus more patches -- are installed.
+Observe that the $PatchCache$ folder isn't even visible in the disk usage view, and the free space on the VHD is substantially larger. You can imagine how the delta between the two configurations would increase substantially as more products -- and thus more patches -- are installed.
 
-As noted on MSDN, the registry setting "does not affect files that have already         been saved." In other words, if you set MaxPatchCacheSize to 0 after installing         a bunch of products and patches, then you're pretty much stuck with the "wasted"         disk space -- unless you use something like MSIZAP to clean up the Installer files.
+As noted on MSDN, the registry setting "does not affect files that have already been saved." In other words, if you set MaxPatchCacheSize to 0 after installing a bunch of products and patches, then you're pretty much stuck with the "wasted" disk space -- unless you use something like MSIZAP to clean up the Installer files.
 
 > **Important**
 > 
@@ -81,5 +81,5 @@ As noted on MSDN, the registry setting "does not affect files that have already 
 >             parameter) and search around a little for the expected file. Once I located the
 >             version it needed, SQL Server Setup continued on its way and completed successfully.
 
-Note that I don't set MaxPatchCacheSize to 0 on physical machines (although I thought         about it recently when setting up my laptop with a new 80GB SSD drive). Ultimately,         it's a judgment call that you need to make based on how much disk space you are         willing to trade for the convenience of simpler software and patch installations.
+Note that I don't set MaxPatchCacheSize to 0 on physical machines (although I thought about it recently when setting up my laptop with a new 80GB SSD drive). Ultimately, it's a judgment call that you need to make based on how much disk space you are willing to trade for the convenience of simpler software and patch installations.
 

@@ -15,15 +15,13 @@ tags: ["SharePoint
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I often find myself deleting sites  (in DEV and TEST environments) and subsequently re-activating features or running  some migration utility to recreate the site hierarchy.
+When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I often find myself deleting sites (in DEV and TEST environments) and subsequently re-activating features or running some migration utility to recreate the site hierarchy.
 
-In fact, a few years ago this became such a common task on the Agilent Technologies  project that I wrote a simple "DeleteWeb" program to overcome the fact that <samp>stsadm.exe -o deleteweb</samp> doesn't work on sites that have subsites.
+In fact, a few years ago this became such a common task on the Agilent Technologies project that I wrote a simple "DeleteWeb" program to overcome the fact that <samp>stsadm.exe -o deleteweb</samp> doesn't work on sites that have subsites.
 
-Note that there really wasn't much to the DeleteWeb program. Almost all of the  work was performed by the **DeleteHelper** class:
+Note that there really wasn't much to the DeleteWeb program. Almost all of the work was performed by the **DeleteHelper** class:
 
 ```
 using System;
@@ -79,9 +77,9 @@ namespace DeleteWeb
 }
 ```
 
-I was hoping that SharePoint Server 2010 would address this scenario out-of-the-box,  but that doesn't appear to be the case.
+I was hoping that SharePoint Server 2010 would address this scenario out-of-the-box, but that doesn't appear to be the case.
 
-Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test))  that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo)  and [http://foobar/Test/bar](http://foobar/Test/bar)). If you attempt  to use the **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)**  cmdlet in SharePoint Server 2010 to delete the site...
+Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test)) that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo) and [http://foobar/Test/bar](http://foobar/Test/bar)). If you attempt to use the **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)** cmdlet in SharePoint Server 2010 to delete the site...
 
 ```
 Remove-SPWeb "http://foobar/Test" -Confirm:$false
@@ -89,19 +87,14 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 
 ...then you will encounter an error similar to the following:
 
-> Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
-> has subsites.
-> 
+> Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that has subsites.
 > At line:1 char:13
 > 
 > + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false
-> 
-> + CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb)
->   [Remove-SPWeb], SPException
-> 
+> + CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb], SPException
 > + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
-In order to delete a site that has subsites using PowerShell, we simply need  to convert the C# code shown above into a corresponding PowerShell function, as  shown below:
+In order to delete a site that has subsites using PowerShell, we simply need to convert the C# code shown above into a corresponding PowerShell function, as shown below:
 
 ```
 # Completely deletes the specified Web (including all subsites)
@@ -135,5 +128,5 @@ If ($web -ne $null)
 }
 ```
 
-Note that the script handles the case where `$web`  is null -- in other words, when the specified Web doesn't exist (for example, when  running the script a second time).
+Note that the script handles the case where `$web` is null -- in other words, when the specified Web doesn't exist (for example, when running the script a second time).
 

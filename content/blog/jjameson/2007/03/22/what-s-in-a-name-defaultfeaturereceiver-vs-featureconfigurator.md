@@ -13,15 +13,13 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In my previous post ([Scope
-Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features)) you may have noticed that in the Feature.xml  file, I specified the feature receiver class as **DefaultFeatureReceiver
-**but the code sample is actually from **FeatureConfigurator**.  This warrants a little explanation.
+Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features)) you may have noticed that in the Feature.xml file, I specified the feature receiver class as **DefaultFeatureReceiver
+**but the code sample is actually from **FeatureConfigurator**. This warrants a little explanation.
 
-In order to simplify the development and debugging of feature receivers, I find  it much easier to put the bulk of the code in a FeatureConfigurator class and then  have the DefaultFeatureReceiver class simply be a "thin shell" that utilizes the  underlying FeatureConfigurator class to do the bulk of the work:
+In order to simplify the development and debugging of feature receivers, I find it much easier to put the bulk of the code in a FeatureConfigurator class and then have the DefaultFeatureReceiver class simply be a "thin shell" that utilizes the underlying FeatureConfigurator class to do the bulk of the work:
 
 ```
 namespace Fabrikam.Project1.PublicationLibrary.Configuration
@@ -53,7 +51,7 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
 }
 ```
 
-The bulk of the development (and debugging) of the feature receiver is then performed  using a separate Visual Studio test project:
+The bulk of the development (and debugging) of the feature receiver is then performed using a separate Visual Studio test project:
 
 ```
 namespace Fabrikam.Project1.PublicationLibrary.DeveloperTests.Configuration

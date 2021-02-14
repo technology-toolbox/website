@@ -16,11 +16,9 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx)
 > 
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In my [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I showed how you can quickly create an AJAX-enabled Web application  in Microsoft Office SharePoint Server (MOSS) 2007.
+In my [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I showed how you can quickly create an AJAX-enabled Web application in Microsoft Office SharePoint Server (MOSS) 2007.
 
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
@@ -30,7 +28,7 @@ I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)
 
-Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)** class in ASP.NET AJAX, the sample Web Part should be mostly  self-explanatory:
+Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)** class in ASP.NET AJAX, the sample Web Part should be mostly self-explanatory:
 
 ```
 using System;
@@ -97,9 +95,9 @@ namespace Fabrikam.Demo.Web.WebParts
 }
 ```
 
-However, notice that the sample Web Part inherits from my custom **AjaxWebPart**  class. Before looking at the details of the **AjaxWebPart **class,  let's see what happens when **SampleAjaxUpdateWebPart** is changed  to inherit from **System.Web.UI.WebControls.WebParts.WebPart **instead.
+However, notice that the sample Web Part inherits from my custom **AjaxWebPart** class. Before looking at the details of the **AjaxWebPart **class, let's see what happens when **SampleAjaxUpdateWebPart** is changed to inherit from **System.Web.UI.WebControls.WebParts.WebPart **instead.
 
-After changing the base class and building the solution, the following commands  are used to update the assembly in the GAC and recycle the application pool for  the Fabrikam site:
+After changing the base class and building the solution, the following commands are used to update the assembly in the GAC and recycle the application pool for the Fabrikam site:
 
 ```
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
@@ -113,15 +111,15 @@ cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
 ```
 
-Attempting to browse to the home page of the site now results in an error. After  tweaking the Web.config file to set `<SafeMode CallStack="true"  ...>` and `<customErrors mode="Off"  />`, the details of the error are revealed:
+Attempting to browse to the home page of the site now results in an error. After tweaking the Web.config file to set `<SafeMode CallStack="true"  ...>` and `<customErrors mode="Off"  />`, the details of the error are revealed:
 
 > System.InvalidOperationException: The control with ID 'updatePanel' requires
 > a ScriptManager on the page. The ScriptManager must appear before any controls
 > that need it.
 
-This is no real surprise, since BlueBand.master doesn't declare an instance of  the ASP.NET **[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)** (which is required for providing the ASP.NET AJAX script  files on any AJAX-enabled page). Mike Ammerlaan covers this in [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3) that I referenced in yesterday's post.
+This is no real surprise, since BlueBand.master doesn't declare an instance of the ASP.NET **[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)** (which is required for providing the ASP.NET AJAX script files on any AJAX-enabled page). Mike Ammerlaan covers this in [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3) that I referenced in yesterday's post.
 
-While we *could* modify BlueBand.master to declare a **ScriptManager**,  an alternative is to instead use a little bit of code in the **CreateChildControls
+While we *could* modify BlueBand.master to declare a **ScriptManager**, an alternative is to instead use a little bit of code in the **CreateChildControls
 **method of the Web Part to dynamically create one, if necessary:
 
 ```
@@ -134,7 +132,7 @@ if (ScriptManager.GetCurrent(this.Page) == null)
             }
 ```
 
-Mike's post also describes adding the following startup script in order to enable  UpdatePanels to be used on a page:
+Mike's post also describes adding the following startup script in order to enable UpdatePanels to be used on a page:
 
 ```
 <script type='text/javascript'>
@@ -143,15 +141,15 @@ Mike's post also describes adding the following startup script in order to enabl
 </script>
 ```
 
-In my experience, the UpdatePanels seem to work just fine without this startup  script, but there are scenarios where out-of-the-box SharePoint functionality is  broken after enabling AJAX if you don't add this startup script. For example, the **Edit Page** button in the page editing toolbar sometimes stops working.  It doesn't seem to happen all the time, but when it does, it's obviously very frustrating.
+In my experience, the UpdatePanels seem to work just fine without this startup script, but there are scenarios where out-of-the-box SharePoint functionality is broken after enabling AJAX if you don't add this startup script. For example, the **Edit Page** button in the page editing toolbar sometimes stops working. It doesn't seem to happen all the time, but when it does, it's obviously very frustrating.
 
 I've also seen the following error when using the **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)** from the AJAX Control Toolkit on a SharePoint site:
 
 > Extender Controls may not be Registered before PreRender
 
-To avoid this error, you have to force the child controls to be created during  the Init phase of the page lifecycle.
+To avoid this error, you have to force the child controls to be created during the Init phase of the page lifecycle.
 
-The custom **AjaxWebPart **base class handles all of the fixup necessary  to avoid these issues:
+The custom **AjaxWebPart **base class handles all of the fixup necessary to avoid these issues:
 
 ```
 using System;
@@ -225,7 +223,7 @@ namespace Fabrikam.Demo.Web.WebParts
 }
 ```
 
-The **BaseWebPart **class simply provides the ability to render  an error message instead of whatever content would normally be rendered in the Web  Part if an error had not occurred. It's only purpose in this case is to enable Web  Parts that derive from **AjaxWebPart **to use the error handling feature.
+The **BaseWebPart **class simply provides the ability to render an error message instead of whatever content would normally be rendered in the Web Part if an error had not occurred. It's only purpose in this case is to enable Web Parts that derive from **AjaxWebPart **to use the error handling feature.
 
 ```
 using System.Web;
@@ -276,5 +274,5 @@ namespace Fabrikam.Demo.Web.WebParts
 }
 ```
 
-In a future post, I'll describe the AJAX modal popup framework that I developed  for MOSS 2007 (for example, to display announcements on a site).
+In a future post, I'll describe the AJAX modal popup framework that I developed for MOSS 2007 (for example, to display announcements on a site).
 
