@@ -89,7 +89,7 @@ That's when I discovered the following from the release notes for the SDK:
 
 Unfortunately, these instructions aren't quite right -- or at least they didn't         work verbatim in my environment. The workaround stated above makes you think there's         an environment variable (`%mssdk%`) that refers to the path where the         SDK is installed. However, this wasn't configured on DAZZLER.
 
-Also, I didn't find my copy of VCProjectEngine.dll in an **x64 **folder,         but rather in an **amd64 **folder:
+Also, I didn't find my copy of VCProjectEngine.dll in an **x64** folder,         but rather in an **amd64** folder:
 
 > C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64\VCProjectEngine.dll
 

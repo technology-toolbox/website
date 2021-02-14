@@ -91,8 +91,7 @@ In order to minimize the amount of CSS for the site, I chose to extract only  th
 
 ### Company Overview
 
-The "Company Overview" page is very similar to the **Services**  page shown above, so there's really no sense including a screenshot of it in this  post. If you want see what it looks like, just click the **Company
-**link in the site navigation.
+The "Company Overview" page is very similar to the **Services**  page shown above, so there's really no sense including a screenshot of it in this  post. If you want see what it looks like, just click the **Company** link in the site navigation.
 
 ### Contact Form
 
@@ -136,7 +135,7 @@ My new blog is currently powered by [Subtext](http://subtextproject.com)  -- or 
 
 The primary content on the blog home page is, not surprisingly, the most recent  list of posts (sorted in descending order). The secondary content provides links  for the blog RSS feed, quickly finding blog posts by tags or categories (note that  Subtext supports these concepts differently), and browsing through the historical  archive of posts.
 
-Figure 9 shows a typical blog post. The secondary content is similar to that  shown on the blog home page, but also contains a **Recent Posts **section.  The thought behind this is that people often find blog posts through search sites  like Google or Bing, so when they browse directly to an individual post, we should  try to "hook" them into reading other posts during the same visit. [The **Recent Posts **section is not shown on the blog home page, since this would  be redundant with the items shown in the primary content area on that page.]
+Figure 9 shows a typical blog post. The secondary content is similar to that  shown on the blog home page, but also contains a **Recent Posts** section.  The thought behind this is that people often find blog posts through search sites  like Google or Bing, so when they browse directly to an individual post, we should  try to "hook" them into reading other posts during the same visit. [The **Recent Posts** section is not shown on the blog home page, since this would  be redundant with the items shown in the primary content area on that page.]
 
 ![Sample blog post](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png)
 
@@ -144,7 +143,7 @@ Figure 9 shows a typical blog post. The secondary content is similar to that  sh
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
 
-Note that the form for adding a comment to a blog post uses the same custom CAPTCHA  control described previously for the **Contact **form. Getting this  to work as expected was another reason why I had to modify the Subtext solution  for the Technology Toolbox site. Again, I'll cover this in more detail in a subsequent  post.
+Note that the form for adding a comment to a blog post uses the same custom CAPTCHA  control described previously for the **Contact** form. Getting this  to work as expected was another reason why I had to modify the Subtext solution  for the Technology Toolbox site. Again, I'll cover this in more detail in a subsequent  post.
 
 At first I was little wary of having both "tags" and "categories" for blog posts  (since [my old MSDN blog](http://blogs.msdn.com/b/jjameson) only used  tags). However, after experimenting with a couple of different taxonomies before  settling on my initial list of categories and tags, I discovered that I actually  liked the way Subtext supports these distinct facets.
 
@@ -159,13 +158,13 @@ Other blog-related topics that I plan to cover in subsequent posts include:
 
 ### Logical Architecture
 
-As noted in the previous section, the **Blog **portion of the Technology  Toolbox site is powered by Subtext (an ASP.NET MVC application for which the current  release is built with Visual Studio 2008). However, the other areas of the site  are based on a "classic" ASP.NET Web application built with Visual Studio 2010 (that  targets .NET Framework 3.5).
+As noted in the previous section, the **Blog** portion of the Technology  Toolbox site is powered by Subtext (an ASP.NET MVC application for which the current  release is built with Visual Studio 2008). However, the other areas of the site  are based on a "classic" ASP.NET Web application built with Visual Studio 2010 (that  targets .NET Framework 3.5).
 
 Originally, I had planned on using .NET Framework 4 for the entire site (and  actually had it running in that configuration for a little while), but that was  before I swapped out the original blog engine for Subtext. [I discovered some serious  scalability issues in the original blog engine selected for the site.]
 
 Upon switching to Subtext, I thought about using ASP.NET MVC across the entire  site. However, I ran into several issues when upgrading the Subtext solution from  Visual Studio 2008 to Visual Studio 2010 -- and to be perfectly honest, I really  don't like working in Visual Studio 2008 these days (unless I absolutely have to).  In order to avoid any further delay, I decided to "punt" and use two different solutions  for the site.
 
-Figure 10 illustrates how the two solutions are merged together during the deployment  process. The **blog **folder is configured as a separate application  in IIS. It contains the Subtext solution and a few updated/additional files from  the "Caelum" solution -- such as the site map file and the custom blog skin.
+Figure 10 illustrates how the two solutions are merged together during the deployment  process. The **blog** folder is configured as a separate application  in IIS. It contains the Subtext solution and a few updated/additional files from  the "Caelum" solution -- such as the site map file and the custom blog skin.
 
 ![Solution architecture](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg)
 

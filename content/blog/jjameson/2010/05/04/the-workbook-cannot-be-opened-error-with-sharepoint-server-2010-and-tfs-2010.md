@@ -22,7 +22,7 @@ While most of the upgrade went fairly smooth, during the process I discovered (w
 
 Note that if you use Microsoft Office SharePoint Server (MOSS) 2007 or SharePoint Server 2010 when creating new TFS project sites, you get some really rich dashboard functionality that is enabled through Excel Services (which, as I noted earlier, is a compelling reason to upgrade from WSS to SharePoint Server 2010 for TFS project sites).
 
-Also note that Jon Tsao wrote a blog post a couple of months ago with the steps to [configure SharePoint Server 2010 for dashboard compatibility with TFS 2010](http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx). [Be aware that Jon's post was based on a pre-release version of SharePoint Server 2010, so a couple of the screenshots and corresponding configuration steps are out-of-date (for example, the link you click to configure Excel Services is no longer accessible via the **Manage services on server** link under the **System Settings **section of SharePoint Central Administration. Instead, you need to click the **Manage service applications **link under the **Application Management **section.]
+Also note that Jon Tsao wrote a blog post a couple of months ago with the steps to [configure SharePoint Server 2010 for dashboard compatibility with TFS 2010](http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx). [Be aware that Jon's post was based on a pre-release version of SharePoint Server 2010, so a couple of the screenshots and corresponding configuration steps are out-of-date (for example, the link you click to configure Excel Services is no longer accessible via the **Manage services on server** link under the **System Settings** section of SharePoint Central Administration. Instead, you need to click the **Manage service applications** link under the **Application Management** section.]
 
 I followed Jon's post to configure my environment, but I found that when I browsed to a new TFS project site, all of the Excel Web Parts displayed the following error:
 
@@ -83,13 +83,13 @@ While it's somewhat bewildering that Excel Services needs to create a table in t
 
 To add the the service account for SharePoint service applications to the underlying content databases:
 
-1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**. The **Connect to Server **dialog box opens.
-2. In the **Server type **list, click **Database Engine**.
+1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**. The **Connect to Server** dialog box opens.
+2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the SharePoint content databases, and then click **Connect**.
 4. In **Object Explorer**, expand **Security**, and then expand **Logins**.
 5. Right-click the login corresponding to the service account used for SharePoint service applications (**TECHTOOLBOX\svc-spserviceapp**) and then click **Properties**.
 6. In the login properties dialog box,
-   1. On the **User Mapping **page, in the **Users mapped to the login** list, click the checkbox for the SharePoint content database (**WSS\_Content**), and then in the database role membership list, click the checkboxes for the following roles:
+   1. On the **User Mapping** page, in the **Users mapped to the login** list, click the checkbox for the SharePoint content database (**WSS\_Content**), and then in the database role membership list, click the checkboxes for the following roles:
       - **db\_owner**
       - **public**
    2. Repeat the previous step for any additional content databases that need to be accessed by Excel Services.
@@ -97,7 +97,7 @@ To add the the service account for SharePoint service applications to the underl
 
 > **Update (2011-04-14)**
 > 
-> I should have updated this post long ago based on the comment added by "todh2" regarding granting access to the database. Instead of using SQL Server Management Studio to configure permissions on the content database for the service account, use a little PowerShell to invoke the **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx) **method:
+> I should have updated this post long ago based on the comment added by "todh2" regarding granting access to the database. Instead of using SQL Server Management Studio to configure permissions on the content database for the service account, use a little PowerShell to invoke the **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)** method:
 > 
 > ```
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0

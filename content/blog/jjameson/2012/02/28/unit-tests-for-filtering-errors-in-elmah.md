@@ -23,14 +23,14 @@ a few minutes creating a blog post about them just in case.
 As I mentioned before, I created these unit tests to validate my custom JavaScript
 error filter (in other words, the content of the `errorFilter/test/jscript/expression`
 element in Web.config). In ELMAH, this filter is implemented in the **
-JScriptAssertion **class.
+JScriptAssertion** class.
 
 However, I didn't start by creating a unit test for **JScriptAssertion**.
 Rather, as I typically do when approaching a problem, I started with a simpler
 scenario (so I could develop an approach for the unit tests and verify things
 worked as expected).
 
-The first unit test I wrote was for the **TypeAssertion **class:
+The first unit test I wrote was for the **TypeAssertion** class:
 
 ```
 [TestMethod()]
@@ -60,7 +60,7 @@ The first unit test I wrote was for the **TypeAssertion **class:
         }
 ```
 
-The **TypeAssertion **shown above is equivalent to the following
+The **TypeAssertion** shown above is equivalent to the following
 in Web.config:
 
 ```
@@ -108,8 +108,8 @@ an **HttpRequestValidationException**:
         }
 ```
 
-The next step was to translate these **TypeAssertion **unit
-tests into equivalent unit tests for the **JScriptAssertion **class:
+The next step was to translate these **TypeAssertion** unit
+tests into equivalent unit tests for the **JScriptAssertion** class:
 
 ```
 [TestMethod()]
@@ -348,10 +348,9 @@ BaseException instanceof HttpRequestValidationException
 I was a little baffled when this final unit test came up "green" (since I
 had copied and pasted the JavaScript from the Web.config file). As noted in
 my previous post, the problem I encountered with the JavaScript filter turned
-out to be some sort of caching issue in the **FullTrustEvaluationStrategy
-**class -- and therefore not something I discovered via the unit tests.
+out to be some sort of caching issue in the **FullTrustEvaluationStrategy** class -- and therefore not something I discovered via the unit tests.
 
-However, the unit tests I created for **JScriptAssertion **reassured
+However, the unit tests I created for **JScriptAssertion** reassured
 me that I wasn't simply losing my mind when trying to figure out why the JavaScript
 filter wasn't working as expected.
 

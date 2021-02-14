@@ -41,9 +41,9 @@ Here is the process that I use to cleanup the network adapters:
    start devmgmt.msc
    ```
 
-2. In the **Device Manager **window:
+2. In the **Device Manager**window:
    
-   1. Click the **View **menu and then click **Show hidden
+   1. Click the **View** menu and then click **Show hidden
       devices**.
    2. Expand **Network adapters**.
    3. Right-click each network adapter that begins with **Microsoft
@@ -51,10 +51,10 @@ Here is the process that I use to cleanup the network adapters:
       Bus Network Adapter", "Microsoft Virtual Machine Bus Network Adapter #2")
       and click **Uninstall**. When prompted to confirm the device
       uninstall, click **OK**.
-   4. If you notice any extra **Microsoft ISATAP Adapter **items,
+   4. If you notice any extra **Microsoft ISATAP Adapter** items,
       then uninstall those as well. (I occasionally see these, but it doesn't
       happen all the time like the duplicate VM Bus network adapters.)
-   5. Right-click **Network adapters **and then click **
+   5. Right-click **Network adapters** and then click **
       Scan for hardware changes**. (This will recreate the default adapter
       named "Microsoft Virtual Machine Bus Network Adapter".)
 

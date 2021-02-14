@@ -89,8 +89,7 @@ Function Name: Do_RSSetSharePointExclusionPath
 Source Line Number: 914
 ```
 
-As noted in [KB 917826](http://support.microsoft.com/kb/917826), there         appears to be a known issue when Reporting Services is configured to run using a         domain account. For JUBILEE, the **ReportServer **application pool         was configured to run as **TECHTOOLBOX\svc-mom-das **(the SCOM data         access service account). After changing the app pool to run as **NetworkService
-**instead, I ran the standalone install of KB 970892 and it completed successfully.
+As noted in [KB 917826](http://support.microsoft.com/kb/917826), there         appears to be a known issue when Reporting Services is configured to run using a         domain account. For JUBILEE, the **ReportServer** application pool         was configured to run as **TECHTOOLBOX\svc-mom-das** (the SCOM data         access service account). After changing the app pool to run as **NetworkService** instead, I ran the standalone install of KB 970892 and it completed successfully.
 
 I then changed the app pool identity back to TECHTOOLBOX\svc-mom-das (since that         appears to be how SCOM 2007 wants it configured) and verified that a couple of reports         run successfully. Woohoo!
 

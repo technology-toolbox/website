@@ -31,7 +31,7 @@ By following the above MSDN documentation, I successfully added a Product
 Backlog workbook as well as an Iteration Backlog workbook. [Note that I used
 [Hakan Eskici's script to automate the rather tedious process of updating the
 work item types](http://blogs.msdn.com/hakane/archive/2010/04/27/sample-script-to-enable-new-features-in-upgraded-team-projects-tfs-2010-rtm.aspx) to support the workbook queries -- for example to add the
-**Story Points **field to **Scenario **work items.]
+**Story Points** field to **Scenario** work items.]
 
 Logically, my next step was to add the new TFS 2010 dashboard functionality
 to my existing project sites.
@@ -71,7 +71,7 @@ command:
 
 > **Note**
 > 
-> You must run the **File.BatchNewTeamProject **command
+> You must run the **File.BatchNewTeamProject** command
 > directly on the TFS/SharePoint Server (which means you must have previously
 > installed Team Explorer or Visual Studio on the server) -- not from
 > a remote client with Visual Studio.
@@ -125,7 +125,7 @@ upgraded project site.
 At that point, I decided to take a different approach altogether.
 
 If you look at the site features for a new project site created with the
-MSF Agile v5 template TFS 2010 (click **Site Settings**,then in the **Site Actions **section, click **Manage
+MSF Agile v5 template TFS 2010 (click **Site Settings**, then in the **Site Actions** section, click **Manage
 site features**), you will notice the following features are activated:
 
 <caption>Site (Web) Features</caption>| Display Name  | Description  | Name  | Id  |
@@ -149,8 +149,7 @@ for External Lists**), but from a TFS perspective -- and the purposes
 of this post -- only the four features listed above are of interest.
 
 Similarly, if you look at the corresponding site collection features (click
-**Site Settings**, then in the **Site Collection Administration
-**section, click **Go to top level site settings**, then
+**Site Settings**, then in the **Site Collection Administration** section, click **Go to top level site settings**, then
 click **Site collection features**), you will notice the following
 feature is activated:
 
@@ -176,17 +175,16 @@ with Excel reporting -- assuming you are running Microsft Office SharePoint
 Server (MOSS) 2007 or SharePoint Server 2010).
 
 Based on my investigation, I decided to activate the **Agile Dashboards
-with Excel Reporting **feature on my site.
+with Excel Reporting** feature on my site.
 
 Note that you can activate the feature in a variety of ways:
 
-- On the **Features **page in **Site Settings
-  **(e.g.
+- On the **Features** page in **Site Settings** (e.g.
   [http://cyclops/sites/AdventureWorks/\_layouts/ManageFeatures.aspx](http://cyclops/sites/AdventureWorks/_layouts/ManageFeatures.aspx))
 - Using StsAdm.exe (e.g. <samp>stsadm -o activatefeature -name TfsDashboardAgileMoss
   -url <a href="http://cyclops/sites/AdventureWorks">http://cyclops/sites/AdventureWorks</a></samp>)
 - If you are running SharePoint Server 2010, using PowerShell and the
-  **[Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)** cmdlet.
+  **[Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)**  cmdlet.
 
 Since I have a number of TFS project sites to upgrade, I chose to activate
 the feature using PowerShell:
@@ -216,11 +214,9 @@ To make the Burndown dashboard the default page for an upgraded project site:
 
 1. Browse to the home page of the project site (e.g.
    [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)).
-2. In the quick launch navigation on the left, under the **Dashboards
-   **heading, click **Burndown**.
-3. On the **Burndown **page, select the **Page
-   **tab.
-4. In the **Page Actions **group of the Ribbon, click
+2. In the quick launch navigation on the left, under the **Dashboards** heading, click **Burndown**.
+3. On the **Burndown** page, select the **Page** tab.
+4. In the **Page Actions** group of the Ribbon, click
    **Make Homepage**. When prompted to set the page as the site's
    home page, click **OK**.
 

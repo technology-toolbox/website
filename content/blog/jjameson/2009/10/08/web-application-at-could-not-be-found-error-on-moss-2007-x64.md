@@ -61,7 +61,7 @@ C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;<kbd>PrintSharePointSi
 <samp>Title: Fabrikam
 </samp>
 
-However, if you change the platform target to **x86 **and thus force         the process to run in 32-bit then things don't go well:
+However, if you change the platform target to **x86** and thus force         the process to run in 32-bit then things don't go well:
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;<kbd>PrintSharePointSiteTitle.exe http://fabrikam-local</kbd>
 

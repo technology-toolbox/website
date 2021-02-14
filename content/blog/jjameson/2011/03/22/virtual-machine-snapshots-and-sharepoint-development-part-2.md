@@ -160,8 +160,7 @@ Note that prior to using Hyper-V snapshots, I used to create SharePoint backups 
 
 This works reasonably well -- and, in fact, that process is still used in our Test         environment since it is comprised of multiple VMs (one for SQL Server and two SharePoint         servers). However, it does require more work to revert to a previous point in time.         For example, an additional database restore must be performed on our custom database         -- since that obviously isn't included in the SharePoint backup. We also have to         manually "DR.D" (deactivate, retract, and delete) the custom SharePoint features         and solutions and subsequently "ADA" (add, deploy, and activate) the corresponding         versions that match the SharePoint backup.
 
-This is certainly doable...it just takes more work than clicking the **Apply...
-**menu item in Hyper-V Manager to revert a development VM to a snapshot.
+This is certainly doable...it just takes more work than clicking the **Apply...** menu item in Hyper-V Manager to revert a development VM to a snapshot.
 
 Uh oh...look at the time! I have to get my daughter off to school. Fortunately,         I believe I've covered everything I intended to in this post. I hope you find Hyper-V         snapshots as valuable as I do when working with SharePoint.
 

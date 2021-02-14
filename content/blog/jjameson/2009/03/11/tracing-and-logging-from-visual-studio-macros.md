@@ -22,7 +22,7 @@ As I mentioned in a [post](/blog/jjameson/2009/03/06/large-visual-studio-solutio
 
 Before sharing some of my most frequently used macros, however, I wanted to first  introduce the method I use to trace events and log messages while running various  macros.
 
-Take a look at the following **Output **window from Visual Studio.  Notice how there is an item in the **Show output from **dropdown list  titled **Macros **(a.k.a. "the macro output pane").
+Take a look at the following **Output** window from Visual Studio.  Notice how there is an item in the **Show output from** dropdown list  titled **Macros** (a.k.a. "the macro output pane").
 
 ![Macro output pane](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Macro%20Output%20Pane.png)
 

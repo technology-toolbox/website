@@ -32,7 +32,7 @@ However, trying to identify each database operation  simply by looking at the co
 
 Instead, I prefer to go straight to the source when identifying the number of database roundtrips. Using SQL Server Profiler, you can quickly -- and reliably -- determine the level of "chattiness" between your application and the backend database.
 
-Note that the **Standard **template selected by default in SQL Server Profiler specifies to trace the following events:
+Note that the **Standard** template selected by default in SQL Server Profiler specifies to trace the following events:
 
 - **Security Audit**
   - **Audit Login**

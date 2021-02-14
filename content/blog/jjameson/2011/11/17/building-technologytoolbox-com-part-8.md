@@ -149,7 +149,7 @@ the database runs on the same server as the website in that environment.
 
 > **Tip**
 > 
->       Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** 
+>       Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)**  
 >       class from the .NET Framework is a convenient way to parse URLs in PowerShell 
 >       (for example to extract the hostname, as shown above).
 
@@ -200,7 +200,7 @@ of years ago:
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 
 Subtext requires read/write access to the App\_Data folder, so I use the
-**[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**
+**[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**  
 utility to configure the NTFS permissions:
 
 ```
@@ -213,7 +213,7 @@ Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
 
 The /blog folder must be converted to an application (due to some of the
 configuration settings specified in the Subtext Web.config file). In IIS Manager,
-this is accompished by right-clicking the **blog **folder and then
+this is accompished by right-clicking the **blog** folder and then
 clicking **Convert to Application**. In PowerShell, this is accomplished
 using the `New-WebApplication` command:
 
@@ -480,7 +480,7 @@ a beta version of the solution is ready.
 
 The reason I put the quotes around "manual" is because most of the deployment
 is scripted. The only thing that needs to be done is to open a PowerShell window
-(using the **Run as administrator **option) and execute the script
+(using the **Run as administrator** option) and execute the script
 above.:
 
 ```

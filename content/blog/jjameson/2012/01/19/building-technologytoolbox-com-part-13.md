@@ -9,7 +9,7 @@ tags: ["Subtext", "Web Development"]
 
 In
 [my previous post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12), I showed how jQuery and a CSS sprite are used to render
-the expandable list under the **Archives **section on the various
+the expandable list under the **Archives** section on the various
 blog pages of the Technology Toolbox site. However, I intentionally omitted
 details about referencing the jQuery scripts and CSS. In this post, I'll show
 how to serve minified versions of JavaScript and CSS files in Production environments
@@ -187,7 +187,7 @@ when any of the CSS files are updated. (Refer to
 
 > **Note**
 > 
->       If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)** method with the `<script>` 
+>       If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**  method with the `<script>` 
 >       elements but not the `<link>` 
 >       elements, it's simply because it doesn't work otherwise (despite the 
 >       presence of the `runat="server"` 
@@ -321,7 +321,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 ```
 
 Note that the .NET Framework doesn't currently include an "**HtmlScript**"
-control (similar to the **[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)**) control. Consequently it takes a tiny bit more code to
+control (similar to the **[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)** ) control. Consequently it takes a tiny bit more code to
 render as expected.
 
 ### JQueryReference Control
@@ -331,7 +331,7 @@ as to automatically switch between "http://" and "https://" -- I created the
 **JQueryReference** control. Using this control, the `Version` attribute can be specified
 instead of the `SourceFile` and
 `DebugSourceFile` attributes
-(which is still possible since **JQueryReference **inherits from
+(which is still possible since **JQueryReference** inherits from
 **JavaScriptReference**). By default, I initialize **Version**
 to the current version of jQuery (i.e. 1.7.1).
 

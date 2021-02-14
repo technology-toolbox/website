@@ -18,7 +18,7 @@ tags: ["Core Development", "TFS"]
 While attending TechReady (an internal Microsoft training conference) last week,         I learned a lot -- not only about future versions of our products, but also numerous         tips and tricks for current versions. One of the most valuable insights I gained         was from a session on branching in Team Foundation Server (TFS). If you've read         my [previous post on structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions), then you know that         I'm a proponent of branching from the start in order to easily support parallel         development and periodically stabilizing for a release.
 
 I had previously read the [TFS Branching
-Guidance on CodePlex](http://www.codeplex.com/BranchingGuidance), although I admit it has been a rather long time. Nevertheless,         I still understood the commonly used **Main**, **Dev**,         and **Release **branches. However, I discovered during the session         last week that I had a fundamental misunderstanding about *baseless merges*         in TFS. Prior to last week, I thought a baseless merge occurred when the source         and target do not share any ancestry in the branching         tree. In other words, I thought that as long as the target resides on a branch that         can be traced through some lineage to the source branch, then TFS has sufficient         "knowledge" (i.e. algorithms) to merge changes from the source to the target.
+Guidance on CodePlex](http://www.codeplex.com/BranchingGuidance), although I admit it has been a rather long time. Nevertheless,         I still understood the commonly used **Main**, **Dev**,         and **Release** branches. However, I discovered during the session         last week that I had a fundamental misunderstanding about *baseless merges*         in TFS. Prior to last week, I thought a baseless merge occurred when the source         and target do not share any ancestry in the branching         tree. In other words, I thought that as long as the target resides on a branch that         can be traced through some lineage to the source branch, then TFS has sufficient         "knowledge" (i.e. algorithms) to merge changes from the source to the target.
 
 As I stated before, this was a misunderstanding on my part. When I asked a question         about trying to delay the branching for stabilization for as long as possible, the         presenters of the session -- [James Pickell](http://blogs.msdn.com/jampick)         and [Mario Rodriguez](http://blogs.msdn.com/mrod) -- pointed out that         a baseless merge occurs whenever the target is not in a "first level" branch from         the source. In other words, you can automerge from parent-to-child (or child-to-parent),         but you cannot automerge from grandchild-to-grandparent.
 
@@ -48,9 +48,9 @@ There are a couple of significant problems with reactive branching:
 - In order to merge code changes from a QFE (a.k.a. hotfix) or service pack back into
   **Main** (and remember, we almost always want the fixes in QFEs to
   be incorporated into **Main**), we would either need to first automerge
-  the changes into the **Release **branch and then merge the changes
-  into **Main **-- or else perform a baseless merge (which, generally
-  speaking, we want to avoid). If we merge the changes into the **Release **
+  the changes into the **Release** branch and then merge the changes
+  into **Main** -- or else perform a baseless merge (which, generally
+  speaking, we want to avoid). If we merge the changes into the **Release**
   branch, then that code no longer reflects the actual Release build (e.g. v1.0) but
   rather the Release build plus some number of changes. Yes, we could still use labels
   to "snapshot" the source code for the Release version, but as James pointed out,
@@ -63,7 +63,7 @@ There are a couple of significant problems with reactive branching:
   branching strategy shown in Figure 1.
 
 So, in summary, while it may seem a little backwards to create your **Service
-Pack **branch before your **Release **branch, there are         compelling reasons to do so. As for me, I now consider my "reactive branching" strategy         to be a thing of the past.
+Pack** branch before your **Release** branch, there are         compelling reasons to do so. As for me, I now consider my "reactive branching" strategy         to be a thing of the past.
 
 Thanks to James and Mario for setting me straight!
 

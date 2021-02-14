@@ -26,9 +26,9 @@ SharePoint Server (MOSS) 2007 for a site and you also elect to use a custom
 master page (really any master page other than default.master -- including BlueBand.master,
 BlackBand.master, etc.) then you will notice that the Document Center site does
 not inherit the master page. Sure, you can go to the **Site Master Page
-Settings **for the parent site, select a different master page, check
+Settings** for the parent site, select a different master page, check
 the **Reset all subsites to inherit this Site Master Page setting**
-checkbox, and click **OK **as many times as you want, but it is
+checkbox, and click **OK** as many times as you want, but it is
 not going to make any difference. The Document Center site will always look
 like it is rendered with default.master.
 

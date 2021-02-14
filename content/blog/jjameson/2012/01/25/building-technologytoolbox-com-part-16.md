@@ -103,8 +103,7 @@ image. For example, here is the configuration file currently used for Technology
 </s3capcha>
 ```
 
-In Mahdi's code, the configuration file is read using the **LoadConfig
-**method in his **s3capcha **helper class:
+In Mahdi's code, the configuration file is read using the **LoadConfig** method in his **s3capcha** helper class:
 
 ```
 private static bool LoadConfig()
@@ -149,14 +148,13 @@ public static string GetHtmlCodes(string PathTo, out int SessionValue)
 ```
 
 First of all, I'm not a fan of using return values (`bool`,
-`int`, or otherwise) to indicate success/failure (like **LoadConfig
-**does). I'd much rather see a `void` method that throws an
+`int`, or otherwise) to indicate success/failure (like **LoadConfig** does). I'd much rather see a `void` method that throws an
 exception when something goes wrong.
 
 Secondly, there's a subtle bug in Mahdi's code: it is not thread-safe. Note
 that **Message** is defined as a `static` member. Consequently
 it is *possible*that more than one thread could attempt to initialize
-the configuration via the **LoadConfig **method. Is it *probable*?
+the configuration via the **LoadConfig** method. Is it *probable*?
 No, but I still prefer to see it "done right" -- especially in solutions that
 I work on.
 
@@ -257,8 +255,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
 This class uses the
 [singleton](http://en.wikipedia.org/wiki/Singleton_pattern) pattern
 to ensure that only one instance is ever created. It also ensures thread safety
-via the `lock` statement. The **LoadCaptchaConfiguration
-**method is based on Mahdi's **LoadConfig **method.
+via the `lock` statement. The **LoadCaptchaConfiguration** method is based on Mahdi's **LoadConfig** method.
 
 Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
@@ -305,14 +302,14 @@ hash of the expected value in the cookie.
 > just this moment.
 
 I also encountered some issues when using the CAPTCHA control on a page where
-view state is disabled and an **UpdatePanel **is used to perform
+view state is disabled and an **UpdatePanel** is used to perform
 a partial page update (e.g. Subtext blog pages).
 
 One problem was due to a
 [known issue with jQuery and update panels](http://stackoverflow.com/questions/256195/jquery-document-ready-and-updatepanels). Fortunately, this one is relatively
 easy to fix, once you know what the issue is. However, after fixing that issue,
 I soon discovered another problem when using the CAPTCHA control within an
-**UpdatePanel **on a blog page (after a comment has been added).
+**UpdatePanel** on a blog page (after a comment has been added).
 After a little debugging and some subsequent refactoring, I was able to resolve
 these issues.
 
@@ -572,7 +569,7 @@ a bug in the Subtext solution. When the CAPTCHA control failed validation
 (either because no image or an incorrect image is selected), the "Submit"
 button would show "undefined" after the partial page update.
 
-To fix this bug, I changed the **endRequest **function in
+To fix this bug, I changed the **endRequest** function in
 the Subtext common.js file from this:
 
 ```

@@ -66,7 +66,7 @@ For the purposes of this post -- er, I mean, for the Fabrikam intranet scenario
 of features. The first feature contains the master page and associated resources
 (e.g. CSS files), while the second feature simply applies the custom master
 page to a site. [Note: Applying a custom master page is really easy using the
-**Master page **link under the **Look and Feel **section
+**Master page** link under the **Look and Feel** section
 of **Site Settings**. However, for the purposes of showing how
 one WSP can (and often should) contain multiple features, I am going to apply
 the custom master page by activating a second feature.]
@@ -75,13 +75,13 @@ Thinking ahead a little in the Fabrikam scenario, rather than naming our
 solution (and corresponding features) something like **Fabrikam.Demo.MasterPage**,
 let's use a more generic moniker that conveys the intent that the solution/features
 may eventually contain other publishing resources (for example, page layouts).
-As such, let's call our solution **Fabrikam.Demo.Publishing **and
+As such, let's call our solution **Fabrikam.Demo.Publishing** and
 our corresponding features **Fabrikam.Demo.Publishing.Layouts**
 and **Fabrikam.Demo.Publishing.DefaultSiteConfiguration**. [In
 the time it has taken me to come up with this sample scenario, I've decided
 to not only apply the custom master page via the second feature, but also to
 automatically set the site logo, instead of making an administrator update it
-manually via the **Title, description, and icon **link in
+manually via the **Title, description, and icon** link in
 **Site Settings**. Sure, one could argue this is "scope creep"
 since Fabrikam didn't explicitly ask for this in the scenario, but, hey, sometimes
 you really want to impress the customer, especially if it can be done with something
@@ -90,8 +90,7 @@ that requires almost no effort ;-) ]
 ### Creating the Visual Studio Solution
 
 The first step is to create a Visual Studio solution. Again, rather than
-making a solution specifically for the **Fabrikam.Demo.Publishing
-**SharePoint solution, let's keep it more general in case other projects
+making a solution specifically for the **Fabrikam.Demo.Publishing** SharePoint solution, let's keep it more general in case other projects
 are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**.
 If you've seen my post on
 [structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) or my later post on
@@ -103,21 +102,19 @@ is to build out a "shell" that looks like the following:
     	Figure 1: Visual Studio solution before adding SharePoint features
 
 Next, I create a new Visual Studio solution folder called **Publishing**
-and then add a new **Class Library **project named **Publishing.csproj
-**(in
+and then add a new **Class Library** project named **Publishing.csproj** (in
 [C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)).
 [Note that the Visual Studio solution folder simply helps "partition" the solution
 and makes it really easy in the future to
 [load and unload multiple projects](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need
-to add a **Publishing.DeveloperTests **project for unit tests corresponding
+to add a **Publishing.DeveloperTests** project for unit tests corresponding
 to code in **Publishing.csproj**).]
 
 Since I didn't create the project with the fully qualified name (in order
-to conserve precious space within the Visual Studio **Solution Explorer
-**window), I then update the project properties to change the assembly
+to conserve precious space within the Visual Studio **Solution Explorer** window), I then update the project properties to change the assembly
 name and default namespace to **Fabrikam.Demo.Publishing**. I also
-delete the default **Class1.cs **file (which gets created with
-every **Class Library **project), add some
+delete the default **Class1.cs** file (which gets created with
+every **Class Library** project), add some
 [linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the
 assembly, configure shared assembly information for the new project (as described
 in my previous posts), and add some assembly references (e.g. to the **
@@ -133,23 +130,22 @@ configurations to:
 - Generate XML documentation files
 - Set the base address for the assembly
 
-Next, I create a couple of folders named **Layouts **and
-**DefaultSiteConfiguration **-- corresponding for each feature
--- as well as a **DeploymentFiles **folder for files and scripts
+Next, I create a couple of folders named **Layouts** and
+**DefaultSiteConfiguration** -- corresponding for each feature
+-- as well as a **DeploymentFiles** folder for files and scripts
 related to the deployment of our features (in other words, the files needed
 to create our WSP as well as some scripts that save us from having to type lengthy
 stsadm.exe commands whenever deploying our solution).
 
 Within the **Layouts** folder, I then create some additional
 folders to contain the various files in the **Fabrikam.Demo.Publishing.Layouts**
-feature. Likewise, within the **DefaultSiteConfiguration **folder,
-I add some corresponding folders for the **Fabrikam.Demo.Publishing.DefaultSiteConfiguration
-**feature.
+feature. Likewise, within the **DefaultSiteConfiguration** folder,
+I add some corresponding folders for the **Fabrikam.Demo.Publishing.DefaultSiteConfiguration** feature.
 
 I then start adding feature.xml files, master pages, images, CSS files, etc.
 into the appropriate locations for each feature. Once I have these files in
 place, I then add the files used to build the WSP -- as well as the actual scripts
-to deploy the solution -- into the **DeploymentFiles **folder.
+to deploy the solution -- into the **DeploymentFiles** folder.
 
 After that's all done, the Visual Studio solution looks like the following:
 
@@ -163,7 +159,7 @@ After that's all done, the Visual Studio solution looks like the following:
 ### Files for Creating SharePoint Web Solution Package (WSP)
 
 Assuming you've developed custom SharePoint WSPs before, the contents of
-**manifest.xml **should be very familiar:
+**manifest.xml** should be very familiar:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -313,15 +309,13 @@ WSP.
 
 Finally, it's time to run the "ADA" portion of "DR.DADA"...
 
-Since I'm running Windows Server 2008, I first use the **Run as administrator
-**option on a **Visual Studio 2008 Command Prompt**. Then
+Since I'm running Windows Server 2008, I first use the **Run as administrator** option on a **Visual Studio 2008 Command Prompt**. Then
 I set two environment variables: one that specifies the URL of the Fabrikam
 intranet site on my local development VM and the other that specifies to add
 the Debug build of my solution. (Normally I would set these once in the Environment
 Variables dialog box so that I never need to set them again on this development
 environment, but I set them explicitly here for the purposes of explaining the
-variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts
-**folder and then **Add Solution.cmd**, followed by
+variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder and then **Add Solution.cmd**, followed by
 **Deploy Solution.cmd**, and then finally **Activate Features.cmd**.
 
 ```
@@ -667,8 +661,7 @@ echo Done
 
 ### Deploying an Updated Master Page
 
-Suppose that after deploying the **Fabrikam.Demo.Publishing
-**solution, I need to make a change to the master page. All I need to
+Suppose that after deploying the **Fabrikam.Demo.Publishing** solution, I need to make a change to the master page. All I need to
 do is make the update to FabrikamMinimal.master, rebuild the Visual Studio solution
 (which will create an updated WSP containing the changes to the master page),
 and then "DR.DADA" the features. Note that while I could certainly run each
@@ -796,10 +789,9 @@ echo Done
 ::
 ```
 
-Note that **GAC Assemblies.cmd **updates all assemblies contained
+Note that **GAC Assemblies.cmd** updates all assemblies contained
 in the SharePoint WSP. This allows us, for example, to fix a bug in **
-Fabrikam.Demo.CoreServices.dll** and still use the **GAC Assemblies.cmd
-**script to quickly deploy the code change.
+Fabrikam.Demo.CoreServices.dll** and still use the **GAC Assemblies.cmd** script to quickly deploy the code change.
 
 Also note that you need to recycle the application pool for your SharePoint
 site after updating the assemblies in the GAC:
@@ -837,7 +829,7 @@ off my plate after all this time.
 
 Note that if Fabrikam approached us with another scenario that we decided
 to implement in a different WSP, we could quickly copy the files from the
-**Publishing **project and only have to make minimal changes to
+**Publishing** project and only have to make minimal changes to
 get the new WSP built and deployed.
 
 Before finishing off this post, I also want to ensure that you are aware

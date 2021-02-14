@@ -65,7 +65,7 @@ Are there pending changes, as indicated by the source control icons next
 to the **Subtext.Framework** and **Subtext.Web** projects?
 Or, are there no pending changes, as indicated by the empty list in the
 **Git Pending Changes** window? [...and yes, I did try clicking
-the **Refresh **button -- in case you think that might be the issue.]
+the **Refresh** button -- in case you think that might be the issue.]
 
 The correct answer seems to be "this is a bug in the Git Source Control Provider
 for Visual Studio." I say this based on the output from "<kbd>git status</kbd>":

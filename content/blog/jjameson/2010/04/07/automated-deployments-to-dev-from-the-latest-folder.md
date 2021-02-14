@@ -32,7 +32,7 @@ The following figure illustrates how deployments to the Development environment 
 > **Note**
 > 
 > At some point since I created my Build and Deployment slide in PowerPoint
-> years ago, I started naming the folder **\_latest **instead
+> years ago, I started naming the folder **\_latest** instead
 > of **Latest** (so that, by default, it appears above all of
 > the version folders in Windows Explorer).
 
@@ -44,7 +44,7 @@ The **\_latest** folder greatly simplifies the automated deployment  process by:
 
 If a build is broken (for example, a developer checks in code that doesn't compile)  then the automated deployment process deploys the build as usual, except that the **\_latest** folder contains the last good build (not the broken build).
 
-To copy the build to the **\_latest **folder, I add a custom target  to the TFSBuild.proj file:
+To copy the build to the **\_latest** folder, I add a custom target  to the TFSBuild.proj file:
 
 ```
 <Target Name="CopyBuildToLatestFolder">

@@ -79,13 +79,13 @@ the "investigation" phase after switching to Ask Mode.
 > in focus.
 > 
 > During Tell Mode, work items are often immediately triaged as **
-> Approved**, or work items triaged as **Investigate **
+> Approved**, or work items triaged as **Investigate**
 > are often just fixed without further review. This is no longer the case
 > once we enter Ask Mode.
 > 
 > In Ask Mode every work item is first assigned a triage of **Investigate**.
 > The person responsible for investigating the item must thoroughly document
-> details about the item -- in the **Description **field of the
+> details about the item -- in the **Description** field of the
 > work item, unless a more formal DCR (Design Change Request) is deemed necessary.
 > 
 > The investigator (typically a member of the Development team) documents
@@ -116,12 +116,12 @@ the "investigation" phase after switching to Ask Mode.
 > [1549](https://extranet.fabrikam.com/sites/Project1/Lists/Work%20Items/DispForm.aspx?ID=1549).
 > 
 > After documenting these details, the investigator then changes the
-> **Triage **field to **Recommend Approve **(if
+> **Triage** field to **Recommend Approve** (if
 > the value in making the change is greater than the associated risk) or
-> **Recommend Reject **(if the risk of making the change outweighs
+> **Recommend Reject** (if the risk of making the change outweighs
 > the value). The Triage Team then reviews the detailed information about
-> the work item and either changes the **Triage **field to
-> **Approved **or **Not Approved **(i.e. "punt to
+> the work item and either changes the **Triage** field to
+> **Approved** or **Not Approved** (i.e. "punt to
 > v.Next").
 > 
 > Note that the Triage Team can certainly "overrule" the investigator,
@@ -129,7 +129,7 @@ the "investigation" phase after switching to Ask Mode.
 > work item until approval is received from the Triage Team (i.e. the **Triage**
 > field is set to **Approved**). Also note that, unless you are a member
 > of the Triage Team -- and even then, only during a formal triage meeting
-> -- <u>you should not change the <b>Triage </b>field to anything except
+> -- <u>you should not change the <b>Triage</b> field to anything except
 > <b>Recommend Approve</b> or <b>Recommend Reject</b></u>. Otherwise, you
 > should fully expect a thorough hazing from virtually all team members.
 > 
@@ -172,9 +172,9 @@ to -- unless you actually were a member of this project ;-)
 > 
 > There appear to be (at least) two problems when following the repro steps:
 > 
-> 1. The **Literature Summary **list (rendered by LiteratureResults.asp
+> 1. The **Literature Summary** list (rendered by LiteratureResults.asp
 >    when isortorder=9) should show the number of publications matching the
->    specified criteria, grouped by **Literature Type **(a.k.a.
+>    specified criteria, grouped by **Literature Type** (a.k.a.
 >    publication type, a.k.a. Content Type in SharePoint, a.k.a. the ContentType2
 >    managed property). The list should be ordered by **Literature
 >    Type**.
@@ -185,7 +185,7 @@ to -- unless you actually were a member of this project ;-)
 > 
 > #### Proposal:
 > 
-> Correct the **Literature Summary **view to properly group
+> Correct the **Literature Summary** view to properly group
 > and order by publication type. Increase the maximum number of search results
 > in this scenario from 200 to 1000.
 > 
@@ -203,12 +203,12 @@ to -- unless you actually were a member of this project ;-)
 > than 200 Applications matched the specified criteria).
 > 
 > While it is simple to increase the maximum number of results (for example,
-> from 200 to 1000) when rendering the **Literature Summary **
+> from 200 to 1000) when rendering the **Literature Summary**
 > view, this will put considerable load on SharePoint Search for two reasons:
 > 
 > 1. We need to order first by ContentType2 in order to return the result
 >    set in the order expected by the legacy ASP code that generates the
->    **Literature Summary **view.
+>    **Literature Summary** view.
 > 2. SharePoint Search is optimized to sort by rank first (since it is
 >    typically desired to show the "best" results at the top of the list).
 >    In order to return a result set of, say, 1000 items sorted by something
@@ -233,7 +233,7 @@ to -- unless you actually were a member of this project ;-)
 > value to allow 1000 results. (1 hour).
 > 
 > **Release Management** **
-> **Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
+> ** Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
 > (1 hour)
 > 
 > **Test**

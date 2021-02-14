@@ -29,7 +29,7 @@ All you have to do to integrate this feature on your site is:
 
 1. Enter the URL of your site
 2. Read and agree to the terms of use
-3. Click the **Generate Code **button
+3. Click the **Generate Code** button
 4. Copy/paste a small amount of HTML into your site
 
 You can [read more](http://blogs.msdn.com/translation/archive/2009/03/18/announcing-the-microsoft-translator-web-page-widget.aspx) about the Microsoft Translator Widget on the [Translation team's blog](http://blogs.msdn.com/translation) if you want more details.

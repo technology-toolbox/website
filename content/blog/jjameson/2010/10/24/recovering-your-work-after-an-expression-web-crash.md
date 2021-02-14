@@ -60,7 +60,7 @@ The very first thing I did was to take a screenshot of Expression Web so that  a
 
 The next thing I did was to choose the option to start debugging the application  (instead of sending the crash info to Microsoft and restarting). I chose to launch  a new instance of Visual Studio for debugging purposes.
 
-Inside Visual Studio, I clicked the **Debug **menu and then clicked **Save Dump As...**
+Inside Visual Studio, I clicked the **Debug** menu and then clicked **Save Dump As...**
 
 I specified the location and name for the mini-dump file and saved it.
 
@@ -73,7 +73,7 @@ You could also use something like ADPlus to create the mini-dump as well.
 How you get the dump really doesn't matter...just be sure you get it.
 
 I subsequently installed the [Debugging
-Tools for Windows](http://www.microsoft.com/whdc/devtools/debugging/default.mspx), so that I'd once again have access to WinDbg. Note that the  install process has changed for this since the last time I used it. You now have  to download the debugging tools through the Windows SDK Setup Wizard. I recommend  you select the **Debugging Tools **option under **Redistributable
+Tools for Windows](http://www.microsoft.com/whdc/devtools/debugging/default.mspx), so that I'd once again have access to WinDbg. Note that the  install process has changed for this since the last time I used it. You now have  to download the debugging tools through the Windows SDK Setup Wizard. I recommend  you select the **Debugging Tools** option under **Redistributable
 Packages**, and subsequently run **C:\Program Files\Microsoft SDKs\Windows\v7.1\Redist\Debugging
 Tools for Windows\dbg\_x86.msi** to install the 32-bit version of the debugging  tools (since Expression Web 4 is a 32-bit app). Be aware that opening a dump file  from an x86 process in the x64 debugging tools will give you [a rather cryptic error message](http://www.bing.com/search?q=WinDbg+0n193).
 

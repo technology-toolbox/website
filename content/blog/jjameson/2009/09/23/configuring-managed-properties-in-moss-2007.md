@@ -37,7 +37,7 @@ The problem is that you cannot map a managed property to a crawled property unti
 
 In other words, if you start with a clean MOSS environment and then add a **Product** managed property, you will find that you cannot map it to **ows\_Product** because SharePoint doesn't yet know about that crawled property.
 
-In order for it to recognize the crawled property, it must first have indexed a piece of content with a value specified in the **Product **field (column). Then SharePoint will create a crawled property (as mentioned earlier).
+In order for it to recognize the crawled property, it must first have indexed a piece of content with a value specified in the **Product** field (column). Then SharePoint will create a crawled property (as mentioned earlier).
 
 I also mentioned earlier that upon activation of my Search features, I automatically configure managed properties (and map them to the corresponding crawled properties). Assuming the crawled properties are defined (i.e. content has previously been crawled with those properties), then all is well. However, if the specified crawled property does not exist, then SharePoint silently ignores the attempt to map the managed property to the (non-existent) crawled property.
 

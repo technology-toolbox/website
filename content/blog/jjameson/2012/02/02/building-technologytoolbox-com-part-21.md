@@ -318,7 +318,7 @@ These two behaviors are easy to implement using jQuery:
     </div>
 ```
 
-Here is the **configureSearchBox **function:
+Here is the **configureSearchBox** function:
 
 ```
 function configureSearchBox(searchBox)
@@ -356,7 +356,7 @@ one or more terms) and when the search box contains the default text (i.e. the
 user clicks the search icon without first typing one or more terms). This is
 similar to the out-of-the-box behavior of SharePoint Search.
 
-This requires a little more code in the **submitSearch **function
+This requires a little more code in the **submitSearch** function
 shown earlier:
 
 ```

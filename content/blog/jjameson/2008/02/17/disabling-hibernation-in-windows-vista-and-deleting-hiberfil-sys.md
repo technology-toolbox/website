@@ -19,11 +19,11 @@ As I described in [my previous post](/blog/jjameson/2008/02/17/an-update-on-disk
 
 In order to free up some much needed space, I decided to disable hibernation, which         would seem like a straightforward process. In fact, if memory serves, this was actually         quite easy in Windows XP. However, in Vista, disabling hibernation **and**         deleting the corresponding system file is a little tricky. Note that on my laptop         with 4 GB of RAM, C:\hiberfil.sys consumes about 3.37 GB -- which I really need         back, thank you very much.
 
-My initial assumption was that the option to disable hibernation lies somewhere         in the **Power Options **area of the **Control Panel**.         However, after poking around in there for a few minutes and not finding it, I proceeded         to perform a search in **Control Panel **for "**hibernate**"         which displayed the following result:
+My initial assumption was that the option to disable hibernation lies somewhere         in the **Power Options** area of the **Control Panel**.         However, after poking around in there for a few minutes and not finding it, I proceeded         to perform a search in **Control Panel** for "**hibernate**"         which displayed the following result:
 
 > **Turn hibernation on or off**
 
-Perfect...this looks like precisely the option I was looking for. Unfortunately,         when I clicked this link, it just took me back to the **Power Options **         area that I had already thoroughly explored. Figuring I had simply missed the obvious,         I proceeded to set the following options under advanced power settings:
+Perfect...this looks like precisely the option I was looking for. Unfortunately,         when I clicked this link, it just took me back to the **Power Options**          area that I had already thoroughly explored. Figuring I had simply missed the obvious,         I proceeded to set the following options under advanced power settings:
 
 > **Sleep**
 > 
@@ -33,7 +33,7 @@ Perfect...this looks like precisely the option I was looking for. Unfortunately,
 > > > 
 > > > **Plugged in: Never**
 
-Note that setting the value to **0 **minutes is the same as saying         "never hibernate." Okay, so now I should be able to delete the massive hiberfil.sys         file, right?
+Note that setting the value to **0** minutes is the same as saying         "never hibernate." Okay, so now I should be able to delete the massive hiberfil.sys         file, right?
 
 Wrong.
 
@@ -43,17 +43,16 @@ Still wrong.
 
 Come on now...be reasonable...what's it going to take to delete that file?
 
-It turns out that the way you delete hiberfil.sys is by using the **Disk Cleanup
-**utility.
+It turns out that the way you delete hiberfil.sys is by using the **Disk Cleanup** utility.
 
 To delete hiberfil.sys in Windows Vista:
 
 1. Start **Disk Cleanup**.
-2. On the **Disk Cleanup Options **window, click **Files from all users
+2. On the **Disk Cleanup Options** window, click **Files from all users
    on this computer**.
-3. On the **Disk Cleanup: Drive Selection **window, click select the system
+3. On the **Disk Cleanup: Drive Selection** window, click select the system
    drive where Windows Vista is installed, and then click **OK**.
-4. Wait for the utility to scan the drive and then in the **Disk Cleanup **
+4. Wait for the utility to scan the drive and then in the **Disk Cleanup**
    window, click the checkbox next to **Hibernation File Cleaner**, clear
    all of the other checkboxes, and then click **OK**. When prompted to
    confirm the operation, click **Delete Files**.

@@ -35,12 +35,12 @@ show the latest blog post.
 > of my "Original Feed" ([https://www.technologytoolbox.com/blog/jjameson/rss.aspx](/blog/jjameson/rss.aspx))
 > when pinging my blog from Feedburner.
 > 
-> According to the **Ping Feedburner **page, you are supposed
+> According to the **Ping Feedburner** page, you are supposed
 > to provide "the address of the Web site hosting the source feed" but
 > I encountered an error each time I tried specifying the "Original Feed"
 > address. I'm guessing this is caused by the fact that Subtext redirects
 > to the Feedburner URL whenever a request is made to "rss.aspx" and the
-> **User-Agent **HTTP header does not start with `"FeedBurner"` (refer to the
+> **User-Agent** HTTP header does not start with `"FeedBurner"` (refer to the
 > `RedirectToFeedBurnerIfNecessary()` method in `BaseSyndicationHandler` if
 > you are using Subtext and you aren't sure what I'm talking about here).
 

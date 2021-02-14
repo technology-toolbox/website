@@ -46,7 +46,7 @@ ORDER BY [System.Id]
 
 See the problem with this Web Part and upgraded MSF Agile v4 TFS projects?
 
-Too bad the query specified for the Web Part doesn't explicitly *exclude* "unwanted" work item types (i.e. **Issue **and **Shared Steps**) instead of *including* a list of specific work item types. In other words, if the Web Part specified the following query, then **Scenario** work items would automatically be shown on upgraded project sites:
+Too bad the query specified for the Web Part doesn't explicitly *exclude* "unwanted" work item types (i.e. **Issue** and **Shared Steps**) instead of *including* a list of specific work item types. In other words, if the Web Part specified the following query, then **Scenario** work items would automatically be shown on upgraded project sites:
 
 ```
 SELECT [System.Id], [System.Title]
@@ -83,7 +83,7 @@ ORDER BY [System.Id]
 
 If you've done much SharePoint development, or if you've seen my [previous post on the **SharePointWebPartManager** class](/blog/jjameson/2009/10/17/introducing-the-sharepointwebparthelper-class), then you are likely familiar with programmatically manipulating Web Parts using the **[SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)** class.
 
-Before listing the PowerShell script that will update the query on the **Project Work Items **Web Part, it is important to note that the Web Part is actually displayed on each of the dashboard pages:
+Before listing the PowerShell script that will update the query on the **Project Work Items** Web Part, it is important to note that the Web Part is actually displayed on each of the dashboard pages:
 
 - Burndown
 - Quality
@@ -169,5 +169,5 @@ $sitesToUpgrade |
     }
 ```
 
-After running this script, the **Project Work Items **Web Part on each dashboard page will show scenarios in addition to the other work item types in the MSF Agile v4 process template.
+After running this script, the **Project Work Items** Web Part on each dashboard page will show scenarios in addition to the other work item types in the MSF Agile v4 process template.
 

@@ -67,7 +67,7 @@ Well, that certainly makes this a trivial exercise...all I need to do is reverse
 
 Well, not quite.
 
-The fact is that **description **will likely never be set in your  environment -- even if you enter a description when creating a page. This is especially  true if you used one of the out-of-the-box master pages -- like BlueBand.master  --as a starting point for creating your own master page.
+The fact is that **description** will likely never be set in your  environment -- even if you enter a description when creating a page. This is especially  true if you used one of the out-of-the-box master pages -- like BlueBand.master  --as a starting point for creating your own master page.
 
 To understand why, let's look at the out-of-the-box **Description**  managed property. By default, this managed property is set to **Include values
 from a single crawled property based on the order specified** and is mapped  to the following crawled properties:
@@ -110,10 +110,9 @@ Note that **Description** is inherited from the **System Page**  content type. H
 </ContentType>
 ```
 
-The **Description **field is actually **Comments**!  This explains why the default crawled property mappings for the **Description**  managed property fail to populate the values in search results. While you could  try modifying the crawled property mappings for **Description **to  add **ows\_Comments**, [I don't recommend it](/blog/jjameson/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites). There's a better way to accomplish what we are trying  to achieve.
+The **Description** field is actually **Comments**!  This explains why the default crawled property mappings for the **Description**  managed property fail to populate the values in search results. While you could  try modifying the crawled property mappings for **Description** to  add **ows\_Comments**, [I don't recommend it](/blog/jjameson/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites). There's a better way to accomplish what we are trying  to achieve.
 
-Recall that the second crawled property mapped to the **Description
-**managed property is **DESCRIPTION(Text)** -- which is from  the **Web **crawled property category (d1b5d3f0-c0b3-11cf-9a92-00a0c908dbf1).  This corresponds to meta tags in HTML pages (e.g. `<meta name="description"  content="..." />`). Knowing this, getting the page descriptions is simply  a matter of ensuring that our pages include this meta tag and populate it with the **Description **-- er, I mean **Comments **-- for each  page.
+Recall that the second crawled property mapped to the **Description** managed property is **DESCRIPTION(Text)** -- which is from  the **Web** crawled property category (d1b5d3f0-c0b3-11cf-9a92-00a0c908dbf1).  This corresponds to meta tags in HTML pages (e.g. `<meta name="description"  content="..." />`). Knowing this, getting the page descriptions is simply  a matter of ensuring that our pages include this meta tag and populate it with the **Description** -- er, I mean **Comments** -- for each  page.
 
 Some of you may be thinking you need some custom MetaTag WebControl to do this  -- based on various posts around the Internet -- but this isn't explicitly required.  Just use the out-of-the-box [FieldValue](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webcontrols.fieldvalue.aspx) control instead. In your master pages, modify your `<head>`  element to include the following:
 

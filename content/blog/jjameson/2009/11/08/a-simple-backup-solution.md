@@ -85,7 +85,7 @@ If you've seen any of my scripts before, then you'll quickly notice the typical 
 
 I use similar token parsing of the output from the **[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)** and [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx) system commands to generate the name of the backup file (e.g. <samp>Backup-differential-2009-11-09-12-30-AM.bkf</samp>).
 
-Also note that the [type of backup](http://technet.microsoft.com/en-us/library/cc784306%28WS.10%29.aspx) (e.g. **normal **or **differential**) can be specified as a parameter when running the batch file. This is really powerful for scheduling different types of backups on various schedules.
+Also note that the [type of backup](http://technet.microsoft.com/en-us/library/cc784306%28WS.10%29.aspx) (e.g. **normal** or **differential**) can be specified as a parameter when running the batch file. This is really powerful for scheduling different types of backups on various schedules.
 
 Here are the scheduled backups on one of my servers (BEAST):
 
@@ -96,13 +96,13 @@ Here are the scheduled backups on one of my servers (BEAST):
 | Full Backup | At 1:00 AM every Sun of every week |
 The **Daily Backup** task is configured as follows:
 
-- **Run: **C:\BackedUp\Backup.cmd daily &gt;&gt; Backup.log
+- **Run:** C:\BackedUp\Backup.cmd daily &gt;&gt; Backup.log
 - **Start in:** C:\BackedUp
 - **Run as:** TECHTOOLBOX\svc-backup
 
 Note that I specifically chose the middle of the day to perform daily backups so that I could potentially recover a file that was created in the morning but mistakenly deleted in the afternoon. I suppose I could schedule incremental backups throughout the day, but honestly, I haven't seen the need given my situation.
 
-Also note that the service account that I use for backups (TECHTOOLBOX\svc-backup) is only a member of the **Backup Operators **group. It is not a member of the **Administrators **group.
+Also note that the service account that I use for backups (TECHTOOLBOX\svc-backup) is only a member of the **Backup Operators** group. It is not a member of the **Administrators** group.
 
 Consequently there's a known issue with running batch files using scheduled tasks due to out-of-the-box security restrictions on cmd.exe:
 

@@ -26,8 +26,7 @@ However, just because we used VSS doesn't mean we didn't follow good Software  C
 
 The particular branch that a developer uses would thus depend on whether the  changes are for the next major release or a QFE (hotfix) for the version running  in Production. For example, after deploying the [Technical Support site](http://www.chem.agilent.com/en-US/Support) (i.e.  v2.0), we began working on the "General Site" (i.e. v3.0). [Note that in Agilent's  terminology, the "General Site" essentially refers to everything outside of Technical  Support, the Literature Library, and the Online Store (i.e. the "Buy" tab).]
 
-However, since we didn't create the **v3.0** branch until shortly  before the v3.0 release, all v3 ("General Site") development was initially done  on the **Main** branch -- just like v2 (Tech Support) development was  initially done in **Main** prior to creating the **v2.0
-**branch.
+However, since we didn't create the **v3.0** branch until shortly  before the v3.0 release, all v3 ("General Site") development was initially done  on the **Main** branch -- just like v2 (Tech Support) development was  initially done in **Main** prior to creating the **v2.0** branch.
 
 This branching strategy works really well, regardless of which particular SCM  system you actually use. The key thing to remember is that all of the changes should  eventually make it into the **Main** branch (since that branch will  eventually be used to create another branch for the next major release).
 
@@ -96,8 +95,7 @@ Note that I put the word *magic* in quotes because it's really not magic  at all
 | /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping 
 	source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project 
 	user-specific options (i.e. \*.suo and \*.user) |
-For example, let's suppose that I've checked in some changes to the **v3.0
-**branch that need to be propagated to the **Main **branch.  I would open a command prompt and run the following:
+For example, let's suppose that I've checked in some changes to the **v3.0** branch that need to be propagated to the **Main** branch.  I would open a command prompt and run the following:
 
 C:\NotBackedUp\Agilent&gt;<kbd>DiffBranches.cmd v3.0 Main</kbd>
 

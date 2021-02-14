@@ -26,7 +26,7 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
 
 1. Create a new virtual machine named **ws2008std-x86** with a dynamically expanding VHD. [Note that I used to set the maximum size of the primary VHD file to 16 GB (back in the days of Windows Server 2003) but now I typically set the maximum size to 20 GB. Remember that you can always expand it later as necessary, and you don't even need tools like Partition Magic anymore in order to increase the size of the partition because this "just works" in Windows Server 2008 directly from the Disk Management MMC snap-in.]
 2. Insert your DVD for Windows Server 2008 Standard Edition (x86) and install the operating system. I do not recommend adding any server roles or features at this point, because, honestly, I've just found there to be lots of issues when you SysPrep after installing more than just the base OS. Many times you can workaround these issues, but most of the time my preference is to avoid the problems altogether.
-3. After the OS is installed, run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE) **and **Shutdown **when SysPrep is done. [Note that for Windows Server 2003 you had to copy the SysPrep folder from a CAB file on the installation media (or download it from microsoft.com), but thankfully this extra step is no longer necessary in Windows Server 2008.]
+3. After the OS is installed, run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE)** and **Shutdown** when SysPrep is done. [Note that for Windows Server 2003 you had to copy the SysPrep folder from a CAB file on the installation media (or download it from microsoft.com), but thankfully this extra step is no longer necessary in Windows Server 2008.]
 4. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_RTM.vhd**.
 5. Boot the VM, go through the Mini-Setup process and once again name the server **ws2008std-x86**.
 6. Next, install SP2 for Windows Server 2008. Then run the Windows Component Clean Tool (COMPCLN.exe) to [reclaim some disk space after installing SP2](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2) and reboot the VM.
@@ -42,20 +42,20 @@ At this point, you have clean images for the following configurations:
 - Windows Server 2008 x86 SP2
 - Windows Server 2008 x86 SP2 with all of the latest patches
 
-Now you can simply create a new VM (for example, named **foobar**) and select the option to create a new VHD for the VM. However, before booting the new VM for the first time, copy **ws2008std-x86.vhd **to **foobar.vhd**, thus starting from a SysPrep'ed image of Windows Server 2008 x86 SP2 with all of the latest patches.
+Now you can simply create a new VM (for example, named **foobar**) and select the option to create a new VHD for the VM. However, before booting the new VM for the first time, copy **ws2008std-x86.vhd** to **foobar.vhd**, thus starting from a SysPrep'ed image of Windows Server 2008 x86 SP2 with all of the latest patches.
 
 Note that there might be a scenario where you are trying to identify an issue that only occurs after installing SP2 or one of the recent patches from Windows Update. In this case, you would copy **ws2008std-x86\_RTM.vhd** or **ws2008std-x86\_SP2.vhd**, respectively, when overwriting **foobar.vhd**.
 
 In other words, the "snapshots" of the VHD file allow you to quickly go back to different baseline versions of the OS. Don't confuse the word "snapshots" that I've used here with the term as it applies to Hyper-V. [I definitely don't recommend using Hyper-V snapshots in order to support this particular scenario (they are great for other scenarios -- just not this one).]
 
-Suppose that some time goes by and you find that it takes longer than you would like to install the latest patches from Windows Update whenever you create a new VM. To resolve this issue, simply boot the **ws2008std-x86 **VM, run Windows Update, reboot, and then run SysPrep again. The next time you create a new VM starting from a copy of **ws2008std-x86.vhd**, you won't have to wait long at all for Windows Update to finish.
+Suppose that some time goes by and you find that it takes longer than you would like to install the latest patches from Windows Update whenever you create a new VM. To resolve this issue, simply boot the **ws2008std-x86** VM, run Windows Update, reboot, and then run SysPrep again. The next time you create a new VM starting from a copy of **ws2008std-x86.vhd**, you won't have to wait long at all for Windows Update to finish.
 
 Let's fast forward to some future point in time when Windows Server 2008 SP3 is released. Here is what I will do in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) at that point:
 
 1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86\_RTM.vhd** (thereby "purging" the baseline VM image of all of the patches and updates).
 2. Boot the VM, go through the Mini-Setup process and name the server **ws2008std-x86**.
 3. Install SP3 for Windows Server 2008 and, presumably, run the Windows Component Clean Tool (COMPCLN.exe) to reclaim some disk space, and reboot the VM.
-4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE) **and **Shutdown **when SysPrep is done.
+4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE)** and **Shutdown** when SysPrep is done.
 5. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_SP3.vhd**.
 
 I should point out that your **ws2008std-x86** image isn't going to do you much good if you need to install SharePoint Server 2010 (because it is 64-bit only). Therefore, like me, you should consider creating additional VM images in your library, such as:

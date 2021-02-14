@@ -18,8 +18,7 @@ tags: ["MOSS 2007", "SharePoint
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In [my previous post](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I introduced a scenario for using the "Reusable Content" feature  in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In  this post, I show you how to programmatically add **Reusable Content
-**list items (which is very helpful when deploying to multiple environments,  such as DEV, TEST, and PROD) as well as how to insert reusable content into a Publishing  HTML field on a page (e.g. the **Page Content **field). I also provide  a complete code sample for SharePoint 2010 that demonstrates the key concepts discussed  in this series.
+In [my previous post](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I introduced a scenario for using the "Reusable Content" feature  in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In  this post, I show you how to programmatically add **Reusable Content** list items (which is very helpful when deploying to multiple environments,  such as DEV, TEST, and PROD) as well as how to insert reusable content into a Publishing  HTML field on a page (e.g. the **Page Content** field). I also provide  a complete code sample for SharePoint 2010 that demonstrates the key concepts discussed  in this series.
 
 ### Adding a new Reusable Content list item
 
@@ -27,7 +26,7 @@ Since reusable content in SharePoint is enabled by the Publishing features, I  c
 
 In case you are not familiar with the "ensure" logic that I tend to implement  in various SharePoint helper classes, in essence the code performs any necessary  actions to achieve some condition (for example, ensure a specific page exists --  by creating a new page if one doesn't already exist). The key design principle in  the "ensure" logic is to avoid trampling any manual changes that may have been made  to SharePoint by content authors and administrators.
 
-When it comes to adding a piece of reusable content, this "ensure" logic means  that we only want to configure the **Reusable Content **list item if  it doesn't already exist. In other words, we don't want to overwrite the content  if the list item already exists, because it may have been updated by a content author  or administrator since it was originally created (presumably upon activation of  some feature). [There are scenarios where you *do* want to overwrite the  existing site configuration, but those are beyond the scope of this post.]
+When it comes to adding a piece of reusable content, this "ensure" logic means  that we only want to configure the **Reusable Content** list item if  it doesn't already exist. In other words, we don't want to overwrite the content  if the list item already exists, because it may have been updated by a content author  or administrator since it was originally created (presumably upon activation of  some feature). [There are scenarios where you *do* want to overwrite the  existing site configuration, but those are beyond the scope of this post.]
 
 For example, consider the following method of **SharePointPublishingHelper**:
 
@@ -50,10 +49,9 @@ SPListItem reusableContent =
                     "Copyright&copy; 2009 Contoso Corporation - All Rights Reserved");
 ```
 
-If the specified **Reusable Content **list item already exists (found  by matching on the **Title **field), then the existing list item is  returned. Otherwise, a new list item is added (with the specified field values)  and subsequently returned. Note that we don't want to overwrite the content in the  list item because someone may have updated the copyright content (e.g. "Copyright&copy;  2011 Fabrikam Technologies - All Rights Reserved").
+If the specified **Reusable Content** list item already exists (found  by matching on the **Title** field), then the existing list item is  returned. Otherwise, a new list item is added (with the specified field values)  and subsequently returned. Note that we don't want to overwrite the content in the  list item because someone may have updated the copyright content (e.g. "Copyright&copy;  2011 Fabrikam Technologies - All Rights Reserved").
 
-Also note that the **Reusable Content **list is configured for approval  by default, and -- as I mentioned in [part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1) -- "bad things" happen when a page includes a reference  to reusable content that has not been approved. Consequently, the **EnsureReusableContentItem
-**method also takes care of approving the list item (if it does not have  at least one approved version):
+Also note that the **Reusable Content** list is configured for approval  by default, and -- as I mentioned in [part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1) -- "bad things" happen when a page includes a reference  to reusable content that has not been approved. Consequently, the **EnsureReusableContentItem** method also takes care of approving the list item (if it does not have  at least one approved version):
 
 ```
 public static SPListItem EnsureReusableContentItem(
@@ -217,7 +215,7 @@ The method is rather long, but keep in mind that roughly half of the code above 
 
 ### Adding reusable content to a page
 
-Once you have the **Reusable Content **list item created (either  manually or programmatically using code like that shown above), the next task is  to add the content to a page. Since I'm assuming you already know how to do that  using the out-of-the-box page editing features in SharePoint, let's see how this  can be achieved through code.
+Once you have the **Reusable Content** list item created (either  manually or programmatically using code like that shown above), the next task is  to add the content to a page. Since I'm assuming you already know how to do that  using the out-of-the-box page editing features in SharePoint, let's see how this  can be achieved through code.
 
 First it is important to understand how reusable content is implemented in SharePoint  (the foundation is the same in MOSS 2007 and SharePoint 2010). There are two key  concepts to grasp:
 
@@ -279,10 +277,9 @@ The corresponding "view format" is shown below:
 > I have no idea why the out-of-the-box **Byline** and
 > **Quote** reusable content items in SharePoint 2010 specify
 > **Automatic Update** = **Yes**. I can see the
-> reasoning for enabling automatic update of the default **Copyright
-> **item, but these other two baffle me.
+> reasoning for enabling automatic update of the default **Copyright** item, but these other two baffle me.
 
-Look again at the sample "storage format" HTML above. Notice how the reusable  content placeholders (i.e. the &lt;span&gt; elements) do not specify which **Reusable Content **list item to render. Rather, the list item is  determined based on the position of the placeholder (relative to other placeholders)  -- which is matched to the corresponding item specified in the "header" (by index).
+Look again at the sample "storage format" HTML above. Notice how the reusable  content placeholders (i.e. the &lt;span&gt; elements) do not specify which **Reusable Content** list item to render. Rather, the list item is  determined based on the position of the placeholder (relative to other placeholders)  -- which is matched to the corresponding item specified in the "header" (by index).
 
 In other words, if you were to swap the order of the &lt;a&gt; elements in the  "header"...
 
@@ -337,8 +334,7 @@ This actually makes the code for inserting reusable content into Publishing HTML
     </p>
 ```
 
-Rather than simply listing the code for inserting reusable content into a page  (which you can easily access in the attached sample solution), start by reviewing  some of the unit tests that I created when developing the **InsertReusableContentIntoHtmlField
-**method:
+Rather than simply listing the code for inserting reusable content into a page  (which you can easily access in the attached sample solution), start by reviewing  some of the unit tests that I created when developing the **InsertReusableContentIntoHtmlField** method:
 
 ```
 /// <summary>
@@ -473,9 +469,8 @@ Rather than simply listing the code for inserting reusable content into a page  
 > **Note**
 > 
 > Initially, I added the code for inserting reusable content into a page to
-> the **SharePointPublishingHelper **class. However, I ended
-> up refactoring this code into the new **SharePointHtmlFieldHelper
-> **class. I'll discuss this new class in more detail in part 3 of
+> the **SharePointPublishingHelper** class. However, I ended
+> up refactoring this code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new class in more detail in part 3 of
 > this series.
 
 ### Sample "Reusable Content" solution for SharePoint Server 2010
@@ -555,8 +550,7 @@ Here are the instructions to deploy the sample to your own SharePoint environmen
 
 At this point you should be able to modify your hosts file accordingly and browse  to either [http://www-local.fabrikam.com](http://www-local.tugboatcoffee.com)  (to view the site as an anonymous user) or [http://fabrikam-local](http://tugboatcoffee-local) (to view the site as an administrator).
 
-You can then click the **Reusable Content Sample **link on the home  page of the site to view the sample page. Once you have verified the page renders  as expected, modify the corresponding item in the **Reusable Content
-**list and verify the page is "automatically updated" accordingly. [Now that  you understand how reusable content works in SharePoint, you know the page isn't  "automatically updated" at all. Rather, the dynamically generated "view format"  renders the updated content.]
+You can then click the **Reusable Content Sample** link on the home  page of the site to view the sample page. Once you have verified the page renders  as expected, modify the corresponding item in the **Reusable Content** list and verify the page is "automatically updated" accordingly. [Now that  you understand how reusable content works in SharePoint, you know the page isn't  "automatically updated" at all. Rather, the dynamically generated "view format"  renders the updated content.]
 
 In [part 3 of this series](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3), I'll discuss various ways of accessing the "expanded"  HTML content (a.k.a. the "view format.")
 

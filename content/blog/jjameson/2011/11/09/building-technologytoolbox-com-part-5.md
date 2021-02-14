@@ -39,7 +39,7 @@ applied:
 > <a href="http://www.transcendingcss.com/">Transcending CSS</a>. Berkley:
 > New Riders, 2007: 65.</cite>
 
-Even without clicking the **See full-sized image **link for
+Even without clicking the **See full-sized image** link for
 Figure 1, it is pretty clear that my MSDN blog does *not* look very good
 "naked." Where are the headings? Why do you have to scroll past the list of
 tags and the archive list (i.e. posts by month) to see the most recent posts?
@@ -85,7 +85,7 @@ That is when I discovered the hAtom 0.1 microformat:
 > 
 > - hfeed (**`hfeed`**). optional.
 >   - **`feed category`**. optional. keywords or phrases,
->     using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+>     using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")** .
 >   - hentry (**`hentry`**).
 >     - **`entry-title`**. required. text.
 >     - **`entry-content`**. optional (see field description).
@@ -95,11 +95,11 @@ That is when I discovered the hAtom 0.1 microformat:
 >       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern"). [\*]
 >     - **`published`**. optional using
 >       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
->     - **`author`**. required using **[hCard](http://microformats.org/wiki/hcard "hcard")**.
+>     - **`author`**. required using **[hCard](http://microformats.org/wiki/hcard "hcard")** .
 >       [\*]
 >     - **`bookmark`** (permalink). optional, using
->       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
->     - tags. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+>       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")** .
+>     - tags. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")** .
 > 
 > <cite>-- <a href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
 > </cite>
@@ -233,7 +233,7 @@ CSS rules are applied.
 
 Similarly, I use CSS rules to conditionally show the "comment bubble" icon
 along with a link to view the comments for a particular post. For example, in
-Figure 3 notice how the **Last Day with Microsoft **post includes
+Figure 3 notice how the **Last Day with Microsoft** post includes
 an icon and the corresponding number of comments on the same line as the publication
 date, whereas the first post in the list does not. This is accomplished by adding
 an additional class to the list item to indicate that a particular post has

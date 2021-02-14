@@ -52,7 +52,7 @@ To satisfy this design goal, I created a new
 setting](http://msdn.microsoft.com/en-us/library/cftf714c.aspx) named **EnableAnalytics** with a default value of
 **False**.
 
-Next I added an ASP.NET control named **AnalyticsScript **to
+Next I added an ASP.NET control named **AnalyticsScript** to
 encapsulate the logic to conditionally render the Google script:
 
 ```
@@ -122,7 +122,7 @@ Then I added the new control to the master page:
 ...
 ```
 
-At this point, I changed the **EnableAnalytics **setting in
+At this point, I changed the **EnableAnalytics** setting in
 the Web.config file and verified that everything worked as expected. It was
 close, but not quite right...
 
@@ -139,8 +139,8 @@ method to **Render**.
 > **Note**
 > 
 >       I've used other techniques in the past to eliminate extraneous markup 
->       -- specifically overriding the **RenderBeginTag **and
->       **RenderEndTag **methods. In a followup post I will explain 
+>       -- specifically overriding the **RenderBeginTag** and
+>       **RenderEndTag** methods. In a followup post I will explain 
 >       why I used a different approach for this scenario.
 
 At this point, the script rendered as expected -- provided I remembered to
@@ -151,8 +151,8 @@ True** (i.e. for environments other than my local development environment).
 
 Thinking that it would be preferable to enable analytics by default in DEV,
 TEST, and PROD -- but still disable it in local development environments --
-I changed the default value for **EnableAnalytics **to **
-True **and added another application setting to specify a "filter" as
+I changed the default value for **EnableAnalytics** to **
+True** and added another application setting to specify a "filter" as
 an additional check for determining whether or not to emit the analytics script:
 
 ```
@@ -248,7 +248,7 @@ as illustrated in Figure 1.
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Analytics-Account-Home.png)
 
 After some refactoring and performance optimization, here is the updated
-implementation of the **AnalyticsScript **class:
+implementation of the **AnalyticsScript** class:
 
 ```
 using System;
@@ -325,8 +325,8 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 }
 ```
 
-The new **AnalyticsHelper **class contains some of the code
-originally added to the **AnalyticsScript **control. The original
+The new **AnalyticsHelper** class contains some of the code
+originally added to the **AnalyticsScript** control. The original
 code has also been enhanced to support different analytics keys for DEV,
 TEST, and PROD:
 
@@ -449,7 +449,7 @@ namespace TechnologyToolbox.Caelum.Website
 The implementation still supports the ability to override the analytics
 key by specifying a value in the Web.config file (for example, if I wanted
 to record metrics for some other environment). In my Web.config files, however,
-the **AnalyticsKey **setting is left empty:
+the **AnalyticsKey** setting is left empty:
 
 ```
 <configuration>

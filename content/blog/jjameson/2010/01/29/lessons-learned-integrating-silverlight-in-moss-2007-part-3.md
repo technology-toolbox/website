@@ -40,21 +40,21 @@ I also mentioned that the user control originally contained the following code:
 
 In addition to the two problems with this code that I covered in my previous post,         I mentioned there was another issue with the original declaration of the `<object>` element for the Silverlight control.
 
-Here's a partial screenshot of the home page of the portal, after clicking the **            Site Actions **menu and then clicking **Edit Page**.
+Here's a partial screenshot of the home page of the portal, after clicking the **            Site Actions** menu and then clicking **Edit Page**.
 
 ![No menus open](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20No%20menu%20open.png)
 Figure 1: No menus open
 
 While the above screenshot doesn't illustrate any problem, the caption gives you         a hint as to what's coming next.
 
-The following screenshot shows what happens when you click the **Page **         menu.
+The following screenshot shows what happens when you click the **Page**          menu.
 
 ![Page menu items obscured by Silverlight control](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20Obscured%20menu.png)
 Figure 2: Page menu items obscured by Silverlight control
 
-Good luck trying to click the **Delete Page**, **Add Web Parts**,         and **Modify Web Parts **menu items!
+Good luck trying to click the **Delete Page**, **Add Web Parts**,         and **Modify Web Parts** menu items!
 
-Note that menu items on the **Workflow **and **Tools **         menus are similarly obscured.
+Note that menu items on the **Workflow** and **Tools**          menus are similarly obscured.
 
 Fortunately, once I discovered this problem, it didn't take long to find a solution.         The trick is to set the [Windowless](http://msdn.microsoft.com/en-us/library/cc838156%28VS.95%29.aspx) property to **true** in the `<object>`         element, as illustrated in the following screenshot:
 

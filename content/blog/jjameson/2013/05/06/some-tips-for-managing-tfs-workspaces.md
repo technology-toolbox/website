@@ -136,14 +136,14 @@ off when passing each folder to the <kbd>tf workfold /cloak</kbd> command:
 $tfFolders | foreach { tf workfold /cloak $_.Substring(1) }
 ```
 
-Now suppose that I want to build the **CoreServices **project.
+Now suppose that I want to build the **CoreServices** project.
 Consequently I need to uncloak that folder and get the latest version from TFS.
 However, in this particular case, the **CoreServices** folder contains
 a number of branches (e.g. multiple "lab" development branches under the
-**Dev** folder, the **Main **branch, and multiple
-release branches under the **Release **folder).
+**Dev** folder, the **Main** branch, and multiple
+release branches under the **Release** folder).
 
-Here are the commands to only get the **Main **branch:
+Here are the commands to only get the **Main** branch:
 
 ```
 tf workfold /decloak CoreServices
@@ -161,9 +161,8 @@ tf workfold /cloak CoreServices/Release
 tf get CoreServices /recursive
 ```
 
-At this point, my workspace contains an exact copy of the **Main
-**branch -- and only the **Main **branch -- for the
-**CoreServices **project.
+At this point, my workspace contains an exact copy of the **Main** branch -- and only the **Main** branch -- for the
+**CoreServices** project.
 
 Since I probably also want to build the latest version of the ELN and Research
 Portal solutions, I can use similar commands for those folders:
@@ -220,7 +219,7 @@ tf workfold /cloak "ResearchPortal/Release"
 tf get "ResearchPortal" /recursive
 ```
 
-Note that the **ELN HD **folder contains a number of "prototype"
+Note that the **ELN HD** folder contains a number of "prototype"
 folders that probably should have been moved under the Dev folder by now...but
 you get the point.
 

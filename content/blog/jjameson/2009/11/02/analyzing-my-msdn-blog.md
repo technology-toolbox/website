@@ -132,7 +132,7 @@ I read one of Scott Hanselman's posts a while ago that talked about calculating 
 
 The last area that I want to cover in this post is with regards to Internet search         results -- which I briefly mentioned earlier. In other words, while it is interesting         that blog posts like [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages) and [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file) are at the top of the list,         what I find more interesting is *why* they appear at the top of the list.
 
-Let's start with the most popular post. Drilling down on the 12,246 views in the         Community Server dashboard (which does not include "AggViews") to see the list of         referrals, I encountered the largest HTML table I've ever seen on a page (over 5,500         rows). After a couple of attempts, I managed to copy all of the data into my Excel         workbook and then sort by **Hits **descending.
+Let's start with the most popular post. Drilling down on the 12,246 views in the         Community Server dashboard (which does not include "AggViews") to see the list of         referrals, I encountered the largest HTML table I've ever seen on a page (over 5,500         rows). After a couple of attempts, I managed to copy all of the data into my Excel         workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
 <caption>            Table 4: Top referrals by URL for post - <a href="/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages">

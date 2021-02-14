@@ -22,7 +22,7 @@ This morning it occurred to me that I could integrate this into my MSDN blog wit
 
 Note that, as I've mentioned before, MSDN (and TechNet) blogs are currently powered by [Community Server](http://en.wikipedia.org/wiki/Community_Server). Consequently, the search options available to us are limited.
 
-Yesterday I discovered that sometime last fall, the MSDN folks replaced the Community Server search functionality with Bing search. If you click the **Search **link on this page, you'll see what I mean. Unfortunately, when you use that search page, you get results from all MSDN blogs even though you may want to see the results from, say, just my blog.
+Yesterday I discovered that sometime last fall, the MSDN folks replaced the Community Server search functionality with Bing search. If you click the **Search** link on this page, you'll see what I mean. Unfortunately, when you use that search page, you get results from all MSDN blogs even though you may want to see the results from, say, just my blog.
 
 > **Update (2009-04-20)**
 > 
@@ -126,11 +126,11 @@ Note that `method="get"` is specified on the `<form>` element. From this, we kno
 
 Note that a little more JavaScript is required than I would actually prefer in order to avoid handle a couple of interesting scenarios.
 
-The first scenario is where a user presses the <kbd>Enter</kbd> key instead of clicking the **Search **button. Depending on the browser, pressing the <kbd>Enter</kbd> key in a form element may submit the form. However, since the Bing search feature is bypassing the form submission (and just redirecting directly to the search results page), we don't want to postback to the server. Otherwise, we would simply refresh the current page (and lose any search keywords specified by the user).
+The first scenario is where a user presses the <kbd>Enter</kbd> key instead of clicking the **Search** button. Depending on the browser, pressing the <kbd>Enter</kbd> key in a form element may submit the form. However, since the Bing search feature is bypassing the form submission (and just redirecting directly to the search results page), we don't want to postback to the server. Otherwise, we would simply refresh the current page (and lose any search keywords specified by the user).
 
-The second scenario is where someone doesn't specify any search keywords and instead just clicks the **Search **button. This is because if you don't specify any query terms (i.e. the "q" query string parameter), then you simply get redirected to [http://www.bing.com](http://www.bing.com/) (which would thoroughly confuse most people -- including myself).
+The second scenario is where someone doesn't specify any search keywords and instead just clicks the **Search** button. This is because if you don't specify any query terms (i.e. the "q" query string parameter), then you simply get redirected to [http://www.bing.com](http://www.bing.com/) (which would thoroughly confuse most people -- including myself).
 
-If you have a Community Server blog, all you need to do is copy/paste the code provided above into the **News **field on the **Title, Description, and News **page, change the value of the **siteUrl **variable accordingly, and then click **Save**. Then you -- or anyone browsing your blog -- will be able to search your posts without having to specify a site filter each time.
+If you have a Community Server blog, all you need to do is copy/paste the code provided above into the **News** field on the **Title, Description, and News** page, change the value of the **siteUrl** variable accordingly, and then click **Save**. Then you -- or anyone browsing your blog -- will be able to search your posts without having to specify a site filter each time.
 
 > **Update**
 > 

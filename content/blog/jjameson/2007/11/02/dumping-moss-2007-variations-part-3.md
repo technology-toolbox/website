@@ -38,15 +38,14 @@ If you are using variations, and you happen to notice your OWSTimer.exe process 
 
 As I have mentioned before, the decision to abandon variations was not an easy one         to make and it is not possible to point to one particular problem as the proverbial         "straw."
 
-Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US **         site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
+Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**          site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
 
 ![Elapsed Time for Variation Page Propagation](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(before).jpg "Elapsed Time for Variation Page Propagation")
 Figure 1: Elapsed Time for Variation Page Propagation
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28before%29.jpg)
 
-Notice how the time required to propagate each page increases substantially as the         number of pages increases. As I pointed out in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), I believe this is due to the use of the **Relationships List
-**(stored in the **AllUserData** table) in combination with         the content deployment API. Also notice how the time required to propagate each         page dropped substantially after adding the index described in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2). Lastly, notice how long it took to propagate 2074 pages before the         index, compared with the remaining 959 pages after the index was added.
+Notice how the time required to propagate each page increases substantially as the         number of pages increases. As I pointed out in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), I believe this is due to the use of the **Relationships List** (stored in the **AllUserData** table) in combination with         the content deployment API. Also notice how the time required to propagate each         page dropped substantially after adding the index described in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2). Lastly, notice how long it took to propagate 2074 pages before the         index, compared with the remaining 959 pages after the index was added.
 
 The following graph "zooms in" on the time period after the index was added.
 
@@ -61,7 +60,7 @@ The problem is that, as I described in [part 2](/blog/jjameson/2007/10/31/dumpin
 
 The bottom line is that, even with the index I proposed in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), the content deployment (a.k.a. PRIME) API used by the variations         feature to propagate pages incurs signficant overhead.
 
-As a comparison, I believe our last FAQ migration (without variations) completed         in about 4 hours for 16,000 pages (3,200 pages x 5 languages). Note, however, that         in order to achieve this throughput, we had to forego all of the value-add of the         variations feature, such as automatically creating a new FAQ on the **ja-JP**,         **ko-KR**, **zh-CN**, and **zh-TW **sites         (in preparation for translation), when the corresponding FAQ is approved on the         **en-US** site.
+As a comparison, I believe our last FAQ migration (without variations) completed         in about 4 hours for 16,000 pages (3,200 pages x 5 languages). Note, however, that         in order to achieve this throughput, we had to forego all of the value-add of the         variations feature, such as automatically creating a new FAQ on the **ja-JP**,         **ko-KR**, **zh-CN**, and **zh-TW** sites         (in preparation for translation), when the corresponding FAQ is approved on the         **en-US** site.
 
 Like I said, it was a difficult decision, and a painful one at that.
 

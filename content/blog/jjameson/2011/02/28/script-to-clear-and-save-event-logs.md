@@ -141,6 +141,5 @@ Done</samp>
 
 Also note that it's very easy to clear the event logs on a remote machine (assuming  you have the necessary permissions and firewall ports open), simply by specifying  the server name as a parameter to the script. If it's not readily apparent from  the script above, the event logs are saved to the root of the C: drive with a corresponding  timestamp (for example, Application\_20110301\_0559.evt) and subsequently cleared.
 
-It's also probably worth mentioning that the current version of this script isn't  "bulletproof" -- meaning that you may still see a few warnings or errors in the **Administrative Events **view of the Event Viewer MMC snap-in. This  is because event logs nested under **Applications and Services Logs
-**(such as **TerminalServices-PNPDevices**) are not currently  detected (and therefore subsequently saved/cleared). Honestly, this has never been  enough of a pain for me to actually invest the effort in fixing the script.
+It's also probably worth mentioning that the current version of this script isn't  "bulletproof" -- meaning that you may still see a few warnings or errors in the **Administrative Events** view of the Event Viewer MMC snap-in. This  is because event logs nested under **Applications and Services Logs** (such as **TerminalServices-PNPDevices**) are not currently  detected (and therefore subsequently saved/cleared). Honestly, this has never been  enough of a pain for me to actually invest the effort in fixing the script.
 

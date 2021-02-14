@@ -46,9 +46,9 @@ When he sent out an email to the team, I was forced to Reply All, fess up about 
 
 So, lessons learned...
 
-I typically create top-level test lists in Visual Studio called **Long Running Tests **and **Quick Tests**. Well, you can guess which tests I ran before checking in my changeset ;-)
+I typically create top-level test lists in Visual Studio called **Long Running Tests** and **Quick Tests**. Well, you can guess which tests I ran before checking in my changeset ;-)
 
-Just remember, after you have unit tested your changes, subsequently diff'ed the code to ensure no errant changes were made, and then proceed guiding the cursor rapidly towards that **Check In **button...slow down, take a deep breath, and validate whether you really feel confident that you haven't broken anything. This is especially important when you are "under the gun" from a time perspective -- when obviously mistakes are more likely.
+Just remember, after you have unit tested your changes, subsequently diff'ed the code to ensure no errant changes were made, and then proceed guiding the cursor rapidly towards that **Check In** button...slow down, take a deep breath, and validate whether you really feel confident that you haven't broken anything. This is especially important when you are "under the gun" from a time perspective -- when obviously mistakes are more likely.
 
 Perhaps those "Long Running Tests" aren't really so long after all. I know the time that my bug cost Dan was far more than the time it would have taken me to run all of the unit tests prior to checking in.
 

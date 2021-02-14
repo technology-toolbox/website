@@ -31,7 +31,7 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
    system.
 2. On the Build Server, the entire solution is labeled in the source control system
    to "snapshot" the exact state of the solution at the point in time just prior to
-   the build. The label includes the version number (for example, **1.0.1.0 **
+   the build. The label includes the version number (for example, **1.0.1.0**
    in the case of the initial build).
 3. Using the label established in the previous step, all of the source code for the
    solution is copied from the Source Control Server to the Build Server, thereby ensuring
@@ -68,7 +68,7 @@ guide)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_3%20-%20Automated%20build%20and%20deployment.png)
 
-Note that in Figure 3, the automated installation process actually installs version         1.0.3.0 but installs it from the Latest folder on the Release Server. At the point         in time represented in Figure 3, the contents of the **Latest** and         **1.0.3.0 **folders are identical. Using this mirrored structure greatly         simplifies the automated installs of the latest build into the DEV environment.         Also note that the build illustrated in Figure 3 includes install scripts, in addition         to the build output (i.e. compiled code) and the installation guide (which has been         updated to specify the install scripts to be used for installing the solution).         These install scripts are a key piece of the automated installation process -- and         subsequent "manual" installs into other environments (as described below).
+Note that in Figure 3, the automated installation process actually installs version         1.0.3.0 but installs it from the Latest folder on the Release Server. At the point         in time represented in Figure 3, the contents of the **Latest** and         **1.0.3.0** folders are identical. Using this mirrored structure greatly         simplifies the automated installs of the latest build into the DEV environment.         Also note that the build illustrated in Figure 3 includes install scripts, in addition         to the build output (i.e. compiled code) and the installation guide (which has been         updated to specify the install scripts to be used for installing the solution).         These install scripts are a key piece of the automated installation process -- and         subsequent "manual" installs into other environments (as described below).
 
 Note that the process illustrated in Figure 3 does not require any manual intervention         and can therefore be performed on a scheduled basis (&agrave; la, the "daily         build") or ad hoc, simply by executing the scheduled task as desired. Each subsequent         build includes the source code changes checked-in to the source control system --         thus incorporating new features and bug fixes -- and is automatically installed         into the DEV environment -- thus providing visibility to all team members on the         progress of development. This is particularly useful for the Test team (in order         to create test cases).
 
@@ -114,7 +114,7 @@ Figure 6: Installing the RC2 version to TEST
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_6%20-%20Installing%20the%20RC2%20version%20to%20TEST.png)
 
-Assume that the second release candidate (version **1.0.379.0 **in         Figure 6) passes all of the test cases. The final step is to install the solution         into the production environment, as illustrated in Figure 7.
+Assume that the second release candidate (version **1.0.379.0** in         Figure 6) passes all of the test cases. The final step is to install the solution         into the production environment, as illustrated in Figure 7.
 
 ![Installing the V1.0 release to PROD](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_7%20-%20Installing%20the%20V1.0%20release%20to%20PROD.png)
 Figure 7: Installing the V1.0 release to PROD

@@ -135,7 +135,7 @@ attribute), allows the styling to be controlled via CSS. For example:
 
 In addition to required fields, you may need to add other types of validators
 (for example, to ensure a valid email address is specified). Be sure to add
-a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)** control as well.
+a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)**  control as well.
 
 At this point, the markup for the Contact form looked like this:
 
@@ -216,7 +216,7 @@ At this point, the markup for the Contact form looked like this:
 ### Step 4: Display confirmation message
 
 At this point the form is complete from a visual perspective, but it doesn't
-actually do anything when you click the **Submit **button.
+actually do anything when you click the **Submit** button.
 
 Rather than immediately getting into the details of storing or transmitting
 the contact information, I started out by looking at the overall user experience.
@@ -386,7 +386,7 @@ Personally, I prefer to use the
 [application
 settings](http://msdn.microsoft.com/en-us/library/cftf714c.aspx) introduced in Visual Studio 2005 (rather than the **appSettings**
 element included in the original version of the .NET Framework). Consequently,
-I created a couple of items under the **Settings **tab on the project
+I created a couple of items under the **Settings** tab on the project
 properties:
 
 - ContactFormMailFromAddress
@@ -412,8 +412,7 @@ file.
 At this point, I started thinking about ways to "break" the solution. For
 example, what if instead of specifying a single "To" email address, we need
 to specify multiple recipients (and, for whatever reason, we don't want to use
-a distribution list)? To support that scenario, the **ContactFormMailToAddress
-**would contain a semicolon-delimited list of email addresses. For example:
+a distribution list)? To support that scenario, the **ContactFormMailToAddress** would contain a semicolon-delimited list of email addresses. For example:
 
 ```
 <configuration>
@@ -491,8 +490,8 @@ a dozen emails generated via the Contact form, but none of them have been from
 bots.]
 
 However, at this point, there was still a minor issue with the form regarding
-the **Preferred Contact Method **and corresponding **Email
-Address **and **Telephone **fields. Up to this point, I
+the **Preferred Contact Method** and corresponding **Email
+Address** and **Telephone** fields. Up to this point, I
 had not made either of these fields mandatory, based on the reasoning that some
 people may want to specify *only* their email addresses, while others
 may want to specify *only* their telephone numbers.
@@ -503,9 +502,9 @@ a good thing. Likewise, if you say you prefer an email response but don't specif
 an email address, then I really can't honor your wishes.
 
 To avoid these scenarios, I added a couple more **RequiredFieldValidator**
-controls to the form (one for the **Email Address **field and the
-other for the **Telephone **field). I also changed the default
-option for **Preferred Contact Method **to **Telephone**.
+controls to the form (one for the **Email Address** field and the
+other for the **Telephone** field). I also changed the default
+option for **Preferred Contact Method** to **Telephone**.
 [I don't know about you, but I'd much rather start a business relationship with
 a live conversation rather than exchanging emails. Email is a wonderful tool,
 but it also tends to slow things down a little and -- on rare occasions -- can
@@ -548,7 +547,7 @@ private void ConfigureFormFields()
 ```
 
 To ensure the fields are initially configured as expected, I call the
-**ConfigureFormFields **method when the page is first requested:
+**ConfigureFormFields** method when the page is first requested:
 
 ```
 protected void Page_Load(
@@ -595,8 +594,7 @@ Okay, *almost* done...
 
 While all of the functionality was complete at this point, there was still
 a little room for improvement. Rather than doing a full postback whenever the
-**Preferred Contact Method **is changed, I added an **UpdatePanel
-**to perform a partial page update instead. In other words, I sprinkled
+**Preferred Contact Method** is changed, I added an **UpdatePanel** to perform a partial page update instead. In other words, I sprinkled
 a little AJAX onto the Contact form once it was almost completely "baked."
 
 Generally speaking, this is how I approach AJAX-enabling a feature:
@@ -623,8 +621,7 @@ by adding an **UpdatePanel** around all of the form fields:
         </asp:Panel>
 ```
 
-However, in this particular scenario, only the **Email Address
-**and **Telephone **fields (and corresponding validators)
+However, in this particular scenario, only the **Email Address** and **Telephone** fields (and corresponding validators)
 are updated by the AJAX postback. Consequently, it is much more efficient to
 enclose only those controls in the **UpdatePanel**:
 
@@ -665,5 +662,5 @@ enclose only those controls in the **UpdatePanel**:
 
 You can see this for yourself by inspecting the AJAX postback using the
 **Network** tab in the Internet Explorer Developer Tools or via
-the **Net **panel in Firebug/Firefox.
+the **Net** panel in Firebug/Firefox.
 

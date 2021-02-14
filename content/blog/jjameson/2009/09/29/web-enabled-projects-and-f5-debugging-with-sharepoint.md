@@ -33,7 +33,7 @@ Unfortunately, there's no user interface in Visual Studio 2008 for "Web-enabling
 
 To Web-enable your C# class library project and configure for ASP.NET debugging:
 
-1. In the **Solution Explorer **window, select the class library
+1. In the **Solution Explorer** window, select the class library
    project.
 2. Right-click the project name and then click **Unload Project**.
 3. Right-click the unloaded project and then click **Edit {project name}**.
@@ -46,26 +46,24 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition=""  />`
 6. On the **File** menu, click **Close**. When prompted
 to save the file, click **Yes**.
-7. In the **Solution Explorer **window, right-click the project,
+7. In the **Solution Explorer** window, right-click the project,
 and then click **Reload Project**.
 8. Wait for the project to finish loading, right-click the project name again,
-and click **Properties**. Notice that there is now a **Web
-**tab in the project settings.
-9. On the project settings **Web **tab, under the **Servers
-**section:
+and click **Properties**. Notice that there is now a **Web** tab in the project settings.
+9. On the project settings **Web** tab, under the **Servers**section:
 1. Clear the **Apply server settings to all users (store in project
 file)** checkbox (since various members of the Development team might
 use different URLs for their local SharePoint sites).
-2. Select the **Use Custom Web Server **option, and in the
-**Server Url **box, type the URL of your SharePoint site (e.g.
+2. Select the **Use Custom Web Server** option, and in the
+**Server Url** box, type the URL of your SharePoint site (e.g.
 [http://fabweb-local](http://fabweb-local/)).
 10. Close the project settings window.
-11. In the **Solution Explorer **window, right-click the project,
+11. In the **Solution Explorer** window, right-click the project,
 and then click **Set as StartUp Project**.
 
 > **Note**
 > 
-> In addition to seeing the **Web **tab in project settings,
+> In addition to seeing the **Web** tab in project settings,
 > you will also find that adding items like ASPX pages and ASCX controls is
 > much easier after "Web-enabing" your project.
 
@@ -73,14 +71,13 @@ To ensure ASP.NET debugging is enabled on the Web site [note these instructions 
 
 1. Click **Start**, click **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
-2. In the **Connections **pane, expand the computer name.
+2. In the **Connections** pane, expand the computer name.
 3. Expand **Sites**.
 4. Select the Web site or application that you want to debug.
-5. Under the **ASP.NET **section, double-click **.NET Compilation**.
-6. Under the **Behavior **section, ensure the value of **
-   Debug **is set to **True**.
-7. If necessary, click **Apply **in the **Actions
-   **pane.
+5. Under the **ASP.NET** section, double-click **.NET Compilation**.
+6. Under the **Behavior** section, ensure the value of **
+   Debug** is set to **True**.
+7. If necessary, click **Apply** in the **Actions** pane.
 
 Assuming you have deployed your solution and activated your features, your can  now set a breakpoint and press <kbd>F5</kbd> to start debugging. Woohoo!
 

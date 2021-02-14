@@ -35,7 +35,7 @@ To customize your TFS comparison tool in Visual Studio 2008:
 - Command: **C:\NotBackedUp\Public\Toolbox\DiffMerge\DiffMerge.exe**
 - Arguments: **%1 %2**
 
-Obviously, you may need to adjust the path to **DiffMerge.exe **as necessary for your environment.
+Obviously, you may need to adjust the path to **DiffMerge.exe** as necessary for your environment.
 
 In the past, I tried other tools like BeyondCompare -- but I preferred the simplicity of WinDiff. Then, a couple of years ago, one of my peers pointed me to an internal tool called "Odd" that would do intra-line highlighting. However, I couldn't get over the fact that this was an internal tool only -- and thus not something I could recommend to customers.
 

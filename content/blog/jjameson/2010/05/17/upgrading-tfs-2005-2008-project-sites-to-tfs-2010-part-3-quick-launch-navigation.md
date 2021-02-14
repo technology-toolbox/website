@@ -177,7 +177,7 @@ Notice that the PowerShell script from my previous post has been updated to auto
 
 Before we can import the navigation nodes, we need to tweak the XML slightly  to account for the fact that in TFS 2008 project sites, the **Event**  list is typically used for team calendar items (not a list named **Calendar**).  This assumes, of course, that you didn't customize the team site.
 
-However, for consistency with new TFS 2010 project sites (in terms of navigation),  we'll keep the title of the quick launch navigation node as "Calendar" and simply  refer to the **Calendar** view of the **Event **list:
+However, for consistency with new TFS 2010 project sites (in terms of navigation),  we'll keep the title of the quick launch navigation node as "Calendar" and simply  refer to the **Calendar** view of the **Event** list:
 
 ```
 <NavigationNode     
@@ -209,7 +209,7 @@ These new navigation nodes compensate for the fact the **Documents**  heading is
 
 Also note that project sites created with TFS 2010 do not include the process  guidance directly on the site (unlike project sites created in TFS 2005/2008). Rather,  the Process Guidance link now refers to an HTML page that simply redirects to a  page on the Microsoft site (e.g. [http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409](http://go.microsoft.com/fwlink/?LinkId=153652&clcid=0x409)).  Consequently, if you were to simply import the XML above at this point, you would  end up with two **Process Guidance** links in the quick launch navigation  (the first referring to the new HTML redirect page, and the second referring to  the deprecated process guidance that resides within the project site).
 
-Fortunately, this is easy to remedy with a little more PowerShell script. Suppose  we want to remove the **Process Guidance **navigation link from a TFS  project site originally created in TFS 2008 (e.g. [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)):
+Fortunately, this is easy to remedy with a little more PowerShell script. Suppose  we want to remove the **Process Guidance** navigation link from a TFS  project site originally created in TFS 2008 (e.g. [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)):
 
 ```
 # Deletes a quick launch navigation link from a SharePoint site
@@ -409,11 +409,10 @@ After running this script, the upgraded project site should contain the followin
   - Calendar
 - Process Guidance
 
-Note that the **Libraries **heading (which was previously labeled **Documents**) includes links to the original document libraries (e.g. **Development**, **Project Management**, etc.) as well  as links to new libraries used with the MSF Agile v5 template (e.g. **Shared
+Note that the **Libraries** heading (which was previously labeled **Documents**) includes links to the original document libraries (e.g. **Development**, **Project Management**, etc.) as well  as links to new libraries used with the MSF Agile v5 template (e.g. **Shared
 Documents** and **Sample and Templates**) that don't currently  exist in the upgraded site. With a little more work, you could create the new libraries  as needed. However, creating a new **Shared Documents** library could  potentially confuse team members when deciding where to upload new documents.
 
-Consequently, I chose to simply remove the links for **Shared Documents
-**and **Samples and Templates **from the quick launch navigation.
+Consequently, I chose to simply remove the links for **Shared Documents** and **Samples and Templates** from the quick launch navigation.
 
 If you want to upgrade the quick launch navigation for numerous project sites  all at once, you can simply create a list and "pipe" it into the `ForEach-Object` cmdlet, as shown below:
 

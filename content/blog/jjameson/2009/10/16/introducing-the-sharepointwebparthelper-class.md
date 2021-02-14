@@ -20,7 +20,7 @@ In a previous post, I introduced the [DR.DADA approach to SharePoint development
 
 For example, on my latest project, we needed a login page as well as a legal disclaimer page for a customer service portal based on Microsoft Office SharePoint Server (MOSS) 2007. Thus I created a "PublicSiteConfiguration" feature that, upon activation:
 
-1. Automatically creates the **/Public **site
+1. Automatically creates the **/Public** site
 2. Populates the page content on the /Public/Pages/default.aspx page and adds an instance of a custom Login Form Web Part to the page
 3. Creates the /Public/Pages/Disclaimer.aspx page and populates its default content
 

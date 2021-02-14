@@ -63,9 +63,9 @@ has a Visual Studio solution containing two projects:
 - CoreServices.SharePoint
 
 The Fabrikam.Demo.CoreServices assembly contains shared code used throughout
-the solution (such as the **StringHelper **class). The Fabrikam.Demo.CoreServices.SharePoint
+the solution (such as the **StringHelper** class). The Fabrikam.Demo.CoreServices.SharePoint
 assembly contains common code used when developing SharePoint solutions (such
-as the **SharePointSecurityHelper **class).
+as the **SharePointSecurityHelper** class).
 
 Next we need to instrument each assembly in the list:
 
@@ -101,7 +101,7 @@ against a signed assembly, the following warning is emitted:
 > Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly
 > named assembly. It will need to be re-signed before it can be executed.
 
-This is why the **Code Coverage Detail **dialog in Visual Studio
+This is why the **Code Coverage Detail** dialog in Visual Studio
 allows you to specify a **Re-signing key file**.
 
 To re-sign the instrumented assembly from the PowerShell script, we need
@@ -197,7 +197,7 @@ $assembliesToInstrument |
         }
 ```
 
-The function simply uses the **Copy-Item **cmdlet to copy the
+The function simply uses the **Copy-Item** cmdlet to copy the
 instrumented assembly to each destination "bin" older:
 
 ```
@@ -230,7 +230,7 @@ $assembliesToInstrument |
 ```
 
 The `UpdateGacAssemblyIfNecessary`
-function uses **gacutil.exe **to check if the assembly is already
+function uses **gacutil.exe** to check if the assembly is already
 in the GAC (in which case it is replaced with the instrumented assembly). If
 the assembly is not already in the GAC, then no action is performed.
 
@@ -270,13 +270,11 @@ function UpdateGacAssemblyIfNecessary(
 
 > **Note**
 > 
->       I've seen a number of resources that suggest using the **[Publish.GacInstall](http://msdn.microsoft.com/en-us/library/system.enterpriseservices.internal.publish.gacinstall.aspx) **method (in the **System.EnterpriseServices.Internal
->       **namespace) to install an assembly in the GAC. However, I also 
+>       I've seen a number of resources that suggest using the **[Publish.GacInstall](http://msdn.microsoft.com/en-us/library/system.enterpriseservices.internal.publish.gacinstall.aspx)**  method (in the **System.EnterpriseServices.Internal** namespace) to install an assembly in the GAC. However, I also 
 >       recall seeing an MSDN blog post that indicated this was only intended 
->       to be used for adding COM interop assemblies and that **gacutil.exe
->       **should be used instead. For Development environments, using
->       **gacutil.exe **is acceptable, but for Test and Production 
->       environments, you should not rely on **gacutil.exe **for 
+>       to be used for adding COM interop assemblies and that **gacutil.exe** should be used instead. For Development environments, using
+>       **gacutil.exe** is acceptable, but for Test and Production 
+>       environments, you should not rely on **gacutil.exe** for 
 >       installing assemblies in the GAC.
 
 ### Step 4: Start the code coverage profiler
@@ -331,8 +329,8 @@ order for the SharePoint tests to work), a test settings file must be specified:
 ```
 
 In order to consolidate the results from multiple test projects, I execute
-**mstest.exe **only once and specify all of the test assemblies
-using separate **/testcontainer **parameters (one for each test
+**mstest.exe** only once and specify all of the test assemblies
+using separate **/testcontainer** parameters (one for each test
 assembly):
 
 ```
@@ -549,7 +547,7 @@ that contains some SharePoint-specific code) as well as corresponding unit/integ
 tests. You should be able to extract the files, create an "[http://fabrikam-local](http://fabrikam-local)"
 Web application in SharePoint 2010 (or use the FABRIKAM\_DEMO\_URL environment
 variable to point to one of your existing Web applications), and then run the
-PowerShell script from the **Source **folder to perform code coverage
+PowerShell script from the **Source** folder to perform code coverage
 analysis:
 
 ```

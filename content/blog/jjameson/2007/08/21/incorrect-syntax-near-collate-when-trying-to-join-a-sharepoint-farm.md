@@ -19,7 +19,7 @@ I encountered another nasty bug this morning while rebuilding our Microsoft Offi
 
 After running the SharePoint Products and Technologies Configuration Wizard on the         SSP server to create the farm, I ran the wizard on the first front-end Web server         in order to join it to the new farm. On the second step of the configuration wizard,         I left the default option selected (**Yes, I want to connect to an existing server
 farm**) and then clicked **Next**. On the **Specify Configuration
-Database Settings **step, I typed the name of the SQL Server and         then clicked **Retrieve Database Names**.
+Database Settings** step, I typed the name of the SQL Server and         then clicked **Retrieve Database Names**.
 
 At this point, I was presented with the oh-so-lovely "Unhandled exception" dialog         displayed by the .NET Framework when something very bad happens.
 

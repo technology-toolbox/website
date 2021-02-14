@@ -113,9 +113,9 @@ To create the necessary service accounts for SharePoint Server 2010 and TFS 2010
 1. Start the **Active Directory Users and Computers** console.
 2. Under the domain node in the tree, select the node for the organizational unit where
    the service account should be created (e.g. **IT\Service Accounts**).
-3. On the **Action **menu, point to **New**, and then click
+3. On the **Action** menu, point to **New**, and then click
    **User**.
-4. In the **New Object - User **dialog:
+4. In the **New Object - User**dialog:
    1. Enter the information from [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **Next**.
    3. Clear the **User must change password** at next logon check box.
@@ -132,14 +132,14 @@ To create the domain groups for SharePoint Server 2010 and TFS 2010:
 1. If necessary, start the **Active Directory Users and Computers** console.
 2. Under the domain node in the tree, select the node for the OU where the group should
    be created (e.g. **IT\Groups**).
-3. On the **Action **menu, point to **New**, and then click
+3. On the **Action** menu, point to **New**, and then click
    **Group**.
-4. In the **New Object - Group **dialog:
+4. In the **New Object - Group**dialog:
    1. Enter the information from [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **OK**.
 5. Repeat steps 3 and 4 to create the remaining groups listed in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 6. Add the appropriate users to each domain group created in this step.
-7. Close the **Active Directory Users and Computers **console.
+7. Close the **Active Directory Users and Computers** console.
 
 ### Back Up Team Foundation Server Data
 
@@ -192,20 +192,20 @@ To add the SharePoint administrators group to the local WSS\_ADMIN\_WPG group, o
 
 1. Click **Start**, point to **Administrative Tools**, and
    then click **Server Manager**.
-2. In the **Server Manager **console, expand **Configuration**,
+2. In the **Server Manager** console, expand **Configuration**,
    expand **Local Users and Groups**, and then click **Groups**.
-3. In the list of groups, right-click **WSS\_ADMIN\_WPG **and then click
+3. In the list of groups, right-click **WSS\_ADMIN\_WPG** and then click
    **Properties**.
-4. In the **WSS\_ADMIN\_WPG Properties **dialog box, click **Add**.
+4. In the **WSS\_ADMIN\_WPG Properties** dialog box, click **Add**.
 5. In the Select Users, Computers, Service Accounts or Groups dialog box, type the
    name of the SharePoint administrators group specified in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), click **Check Names**, and then click **OK**.
-6. Click **OK **to save the changes to the group.
+6. Click **OK** to save the changes to the group.
 
 To add the SharePoint administrators group to the database role, on the database         server:
 
 1. Click **Start**, point to **All Programs**, point to **            Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
-   The **Connect to Server **dialog box opens.
-2. In the **Server type **list, click **Database Engine**.
+   The **Connect to Server** dialog box opens.
+2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the configuration database, and then click
    **Connect**.
 4. In **Object Explorer**, expand **Security**, and then
@@ -214,9 +214,9 @@ To add the SharePoint administrators group to the database role, on the database
    and click **New login**. If the SharePoint administrator group already
    has a corresponding login for SQL Server, right-click the login and then click **                Properties**.
 6. In the login properties dialog box:
-   1. On the **General** page, in the **Login name **box, type
+   1. On the **General** page, in the **Login name** box, type
       the name of the SharePoint administrators group from [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) using the form {DOMAIN}\{group name}.
-   2. On the **User Mapping **page, in the **Users mapped to the login**
+   2. On the **User Mapping** page, in the **Users mapped to the login**
       list, click the checkbox next to the SharePoint configuration database (from Table
       3), and then in the database role membership list, click the checkbox for **SharePoint\_Shell\_Access**.
    3. Click **OK**.
@@ -259,7 +259,7 @@ To fix the TaxonomyPicker.ascx file:
    notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
    ```
 
-3. In Notepad, in the assembly specified in the **Control **directive,
+3. In Notepad, in the assembly specified in the **Control** directive,
    replace the **"&#44;**" (without the quotes) with a comma (',')
    and then save the file.
 
@@ -321,13 +321,12 @@ To start the Excel Calculation Services and Secure Store Service in SharePoint S
 
 1. On the SharePoint Central Administration home page, click **Configuration
    Wizards**.
-2. On the **Configuration Wizards** page, in the **Farm Configuration
-   **section, click **Launch the Farm Configuration Wizard**.
-3. On the **Configure your SharePoint Farm **page:
+2. On the **Configuration Wizards** page, in the **Farm Configuration** section, click **Launch the Farm Configuration Wizard**.
+3. On the **Configure your SharePoint Farm**page:
    1. Click **Start the Wizard**.
    2. In the **Service Account** section, ensure the option to **Create
-      a new managed account** is selected, in the **User name **box,
-      type the service account for SharePoint service applications listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and type the corresponding password in the **Password **
+      a new managed account** is selected, in the **User name** box,
+      type the service account for SharePoint service applications listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and type the corresponding password in the **Password**
       box. In the **Services** section, clear the checkboxes for all of the
       services except **Excel Services Application** and **Secure Store
       Service**. Click **Next**.
@@ -357,8 +356,8 @@ To configure the Secure Store Service for TFS dashboards:
 3. If a key has not been generated before:
    1. In the **Key Management** group of the Ribbon, click **Generate
       New Key**.
-   2. On the **Generate New Key **page, type a pass phrase string in the
-      **Pass Phrase **box, type the same string in the **Confirm Pass Phrase**
+   2. On the **Generate New Key** page, type a pass phrase string in the
+      **Pass Phrase** box, type the same string in the **Confirm Pass Phrase**
       box, and then click **OK**.
 4. In the **Manage Target Applications** group, click **New**.
 5. On the **Create New Secure Store Target Application** page, enter the
@@ -366,10 +365,10 @@ To configure the Secure Store Service for TFS dashboards:
 6. On the **Specify credential fields for your Secure Store Target Application**
    page, click **Next** to accept the default fields (**Windows User
    Name** and **Windows Password**).
-7. On the **Specify the membership settings **page, in the **Target
+7. On the **Specify the membership settings** page, in the **Target
    Application Administrators** field, add the TFS administrators group specified
-   in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). In the **Members **field, enter the group(s) from
-   [Table 7](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). Click **OK **to complete configuring the target application.
+   in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). In the **Members** field, enter the group(s) from
+   [Table 7](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). Click **OK** to complete configuring the target application.
 
 To set credentials for the TFS target application:
 
@@ -382,12 +381,11 @@ To set credentials for the TFS target application:
 
 To add the TFS service account to the SharePoint Farm Administrators group:
 
-1. On the SharePoint Central Administration home page, in the **Security **
+1. On the SharePoint Central Administration home page, in the **Security**
    section, click **Manage the farm administrators group**.
 2. On the **People and Groups - Farm Administrators** page, in the toolbar,
-   on the **New **menu, click **Add Users**.
-3. In the **Grant Permissions **dialog box, in the **Users/Groups
-   **box, type the TFS service account listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), clear the **Send welcome e-mail to the new users** checkbox,
+   on the **New** menu, click **Add Users**.
+3. In the **Grant Permissions** dialog box, in the **Users/Groups** box, type the TFS service account listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), clear the **Send welcome e-mail to the new users** checkbox,
    and click **OK**.
 
 ### Restore Data
@@ -402,33 +400,33 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 
 1. Click **Start**, point to **All Programs**, point to **            Microsoft SQL Server 2008**, point to **Configuration Tools**,
    and click **Reporting Services Configuration Manager**. If prompted
-   by **User Account Control **to allow the program to make changes to
+   by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
 2. The **Reporting Services Configuration Connection** dialog box appears.
-3. In the **Server Name **box, ensure the TFS application server is specified.
+3. In the **Server Name** box, ensure the TFS application server is specified.
    In **Report Server Instance**, ensure the correct instance is specified.
    Click **Connect**.
-4. On the **Reporting Services Configuration Manager** page, click **            Start **if the Report Service status reads **Stopped**.
+4. On the **Reporting Services Configuration Manager** page, click **            Start** if the Report Service status reads **Stopped**.
 5. In the navigation bar, click **Web Service URL**.
 6. On the **Web Service URL** page, click **Apply** to accept
    the default values in the **Virtual Directory**, **IP Address**,
-   and **TCP Port **boxes.
+   and **TCP Port** boxes.
 7. In the navigation bar, click **Database**.
 8. On the **Report Server Database** page, click **Change Database**.
 9. The **Report Server Database Configuration Wizard** appears.
-10. On the **Action **page of the wizard, click **Choose an existing
+10. On the **Action** page of the wizard, click **Choose an existing
     report server database**, and click **Next**.
-11. On the **Database Server **page of the wizard, type the name of the
+11. On the **Database Server** page of the wizard, type the name of the
     TFS database server (BEAST) in **Server Name**, and then click **                Test Connection**. Confirm the test connection succeeded by clicking
     **OK**, and then click **Next.**
 12. On the **Database** page of the wizard, in the **Report Server
     Database** dropdown list, select **ReportServer**, and then
     click **Next**.
-13. On the **Credentials **page of the wizard, click **Next **
+13. On the **Credentials** page of the wizard, click **Next**
     to accept the default values in the **Authentication Type**, **User
-    name**, and **Password **boxes (i.e. **Service Credentials**
+    name**, and **Password** boxes (i.e. **Service Credentials**
     and **NT AUTHORITY\NETWORK SERVICE**).
-14. On the **Summary **page of the wizard, verify the information, and
+14. On the **Summary** page of the wizard, verify the information, and
     click **Next**.
 15. On the **Progress and Finish** page of the wizard, confirm the configuration
     was successful, and then click **Finish**.
@@ -443,7 +441,7 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 20. In the navigation bar for **Reporting Services Configuration Manager**,
     click **Encryption Keys**.
 21. On the **Encryption Keys** page, click **Restore**.
-22. The **Restore Encryption Key **window appears.
+22. The **Restore Encryption Key** window appears.
 23. Locate the encryption key backup file created previously, type the corresponding
     password, and then click **OK**.
 24. In the **Reporting Services Configuration Manager**, click **            Exit**.
@@ -461,7 +459,7 @@ To resolve this error, remove the duplicate server using one of the following me
 
 - Start the **Reporting Services Configuration Manager**, connect to
   the Reporting Services instance, and then in the navigation bar, click **Scale-out
-  Deployment**. On the **Scale-out Deployment **page, select
+  Deployment**. On the **Scale-out Deployment** page, select
   the duplicate server instance and then click **Remove Server**.
 - Use the [rskeymgmt
   utility](http://msdn.microsoft.com/en-us/library/ms162822.aspx) to identify and remove the duplicate server (by first specifying the
@@ -482,7 +480,7 @@ To attach the SharePoint content database by using Windows Powershell:
 
 1. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
    Shell**, and then click **Run as administrator**. If prompted
-   by **User Account Control **to allow the program to make changes to
+   by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
 
 2. At the Windows PowerShell command prompt, type the following command:
@@ -542,7 +540,7 @@ There are also a couple of other issues with the upgraded TFS project site:
 To reset the home page for a TFS project site:
 
 1. Browse to the Site Settings page for the site (e.g. [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
-2. On the **Site Settings** page, in the **Site Actions **
+2. On the **Site Settings** page, in the **Site Actions**
    section, click **Reset to site definition**.
 3. On the **Reset Page to Site Definition Version** page, click the option
    to **Reset all pages in this site to site definition version**, and
@@ -558,9 +556,9 @@ To reset the home page for a TFS project site:
 To remove obolete links from the top link bar of a TFS project site:
 
 1. Browse to the Site Settings page for the site (e.g. [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
-2. On the **Site Settings** page, in the **Look and Feel **
+2. On the **Site Settings** page, in the **Look and Feel**
    section, click **Top link bar**.
-3. On the **Top Link Bar **page, click the edit icon next to the navigation
+3. On the **Top Link Bar** page, click the edit icon next to the navigation
    item.
 4. On the **Edit Navigation Link** page, click **Delete**.
    When prompted to confirm deleting the link, click **OK**.
@@ -581,7 +579,7 @@ Tool**), upgrade TFS using the parameters specified in [Table 8](/blog/jjameson/
 
 Browse to one of the upgraded TFS project sites to confirm the **Remaining Work**         Web Part on the home page renders as expected (now that the TFS extensions for SharePoint         have been installed).
 
-Note that a different error may be shown in the **Remaining Work **         Web Part:
+Note that a different error may be shown in the **Remaining Work**          Web Part:
 
 > Reporting Services Error
 > 
@@ -614,8 +612,8 @@ Figure 2: Upgraded TFS project site in SharePoint Server 2010
 > **Tip**
 > 
 >             To significantly improve the appearance of the upgraded TFS project home page, edit
->             the **Remaining Work** Web Part and set the **Height **
->             to **600 pixels **and the **Width **to **900 pixels**.
+>             the **Remaining Work** Web Part and set the **Height** 
+>             to **600 pixels** and the **Width** to **900 pixels**.
 
 For more information on updating a team project, refer to the following MSDN article:
 
@@ -632,8 +630,8 @@ There appears to be a bug in SharePoint Server 2010 when the service account for
 To avoid this error, add the the second service account to the underlying content         databases. On the database server:
 
 1. Click **Start**, point to **All Programs**, point to **                Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
-   The **Connect to Server **dialog box opens.
-2. In the **Server type **list, click **Database Engine**.
+   The **Connect to Server** dialog box opens.
+2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the SharePoint content databases, and then
    click **Connect**.
 4. In **Object Explorer**, expand **Security**, and then
@@ -641,7 +639,7 @@ To avoid this error, add the the second service account to the underlying conten
 5. Right-click the login corresponding to the service account used for SharePoint service
    applications (**TECHTOOLBOX\svc-spserviceapp**) and then click **                    Properties**.
 6. In the login properties dialog box,
-   1. On the **User Mapping **page, in the **Users mapped to the login**
+   1. On the **User Mapping** page, in the **Users mapped to the login**
       list, click the checkbox for the SharePoint content database (**WSS\_Content**),
       and then in the database role membership list, click the checkboxes for the following
       roles:

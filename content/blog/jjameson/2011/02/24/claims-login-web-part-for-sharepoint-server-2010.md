@@ -23,12 +23,12 @@ If you follow those steps, then when you browse to the home page of the site and
 ![Default login page in SharePoint Server 2010 (/_login/default.aspx)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-1.png)
 Figure 1: Default login page in SharePoint Server 2010 (/\_login/default.aspx)
 
-If you click **Forms Authentication **in the dropdown list, you are         redirected to the default login form (/\_forms/default.aspx), shown in Figure 2.
+If you click **Forms Authentication** in the dropdown list, you are         redirected to the default login form (/\_forms/default.aspx), shown in Figure 2.
 
 ![Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-2.png)
 Figure 2: Default form for FBA in SharePoint Server 2010 (/\_forms/default.aspx)
 
-Note that if you click **Windows Authentication **in the dropdown list,         you are presented with the login dialog provided by the Web browser (or, if you         are logged into a workstation with domain credentials, and you are using Internet         Explorer -- and you've added the site to your **Local intranet **zone         -- then instead you are [transparently authenticated](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials) with the site).
+Note that if you click **Windows Authentication** in the dropdown list,         you are presented with the login dialog provided by the Web browser (or, if you         are logged into a workstation with domain credentials, and you are using Internet         Explorer -- and you've added the site to your **Local intranet** zone         -- then instead you are [transparently authenticated](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials) with the site).
 
 While the sign-in experience shown in the preceeding screenshots is great for prototypes         and proofs-of-concept (for example, to demonstrate why claims-based authentication         in SharePoint 2010 is much better than FBA in Microsoft Office SharePoint Server         2007), it obviously isn't going to be sufficient for real world solutions. Instead         we need a "branded" login page like the one shown in Figure 3.
 
@@ -39,7 +39,7 @@ Figure 3: Custom login page in SharePoint Server 2010
 
 Note that I didn't expend significant effort trying to get the custom login page         to look great. Rather I wanted to focus on the core functionality. There's definitely         signficant room for improvement in the look-and-feel area (for example, using a         custom page layout to get rid of the left navigation (i.e. **Press Releases**)         that we probably wouldn't want to show on a real site. [Also note that I didn't         even bother to replace the default "Adventure Works" in the masthead with "Fabrikam".]
 
-However, the user experience is already substantially improved by eliminating the         dropdown list of available authentication types. Instead, we assume that most users         of the site will be customers or partners that login using FBA. Fabrikam employees         simply need to click the **Fabrikam Employee Sign In **link in order         to authenticate with their Windows (i.e. domain) credentials.
+However, the user experience is already substantially improved by eliminating the         dropdown list of available authentication types. Instead, we assume that most users         of the site will be customers or partners that login using FBA. Fabrikam employees         simply need to click the **Fabrikam Employee Sign In** link in order         to authenticate with their Windows (i.e. domain) credentials.
 
 Now, if all we wanted was to replace the out-of-the-box login pages with the custom         page shown in Figure 3, there are plenty of references out there already that show         you how to do this. [Just search the Internet for something like ***SharePoint
 claims custom login page***and you'll find lots of examples that         essentially demonstrate the same concept.]
@@ -181,7 +181,7 @@ Note that, thanks to the OOTB ASP.NET **[Login](http://msdn.microsoft.com/en-us/
 
 The implementation above actually works as expected -- well, up to a point.
 
-The problem is that when you click the out-of-the-box **Sign Out **         link anytime after authenticating via the custom Web Part, a rather nasty unhandled         exception occurs:
+The problem is that when you click the out-of-the-box **Sign Out**          link anytime after authenticating via the custom Web Part, a rather nasty unhandled         exception occurs:
 
 ```
 [ArgumentException: Exception of type 'System.ArgumentException' was thrown.
@@ -215,8 +215,7 @@ However, when I logged in using the Claims Login Form Web Part, I found that the
 
 When I then clicked **Sign Out**, I noticed that while the "FedAuth"         cookie was removed from the subsequent request, the ".ASPXAUTH" cookie was not.         In other words, the presence of an ".ASPXAUTH" cookie (without a "FedAuth" cookie)         causes SharePoint Server 2010 to "blow chunks."
 
-To remedy the issue, I moved the code in the **LoginForm\_LoggedIn **         event handler into the **LoginForm\_Authenticate **event handler. Since         the user is redirected upon successful login, this prevents the ASP.NET **Login
-**control from generating the ".ASPXAUTH" cookie. With this change, the OOTB         **Sign Out **link started working as expected.
+To remedy the issue, I moved the code in the **LoginForm\_LoggedIn**          event handler into the **LoginForm\_Authenticate** event handler. Since         the user is redirected upon successful login, this prevents the ASP.NET **Login** control from generating the ".ASPXAUTH" cookie. With this change, the OOTB         **Sign Out** link started working as expected.
 
 I then moved on to making the Claims Login Form Web Part more robust by adding the         following features:
 
@@ -230,7 +229,7 @@ I then moved on to making the Claims Login Form Web Part more robust by adding t
 - Disable the form fields and validator controls when the page is in edit mode (so
   that content authors don't have to enter "bogus" credentials in order to save changes
   to the page)
-- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https) **to automatically redirect from HTTP to HTTPS (except
+- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)** to automatically redirect from HTTP to HTTPS (except
   in development environments, of course)
 - Show a warning when the connection is not secure (i.e. in development environments
   or when the SSL redirect has been explicitly disabled via the Web.config file)
@@ -255,7 +254,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
      Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full
      Control access to Web applications
-2. Complete the procedures detailed in **Step 1** from [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010) to create and configure the **FabrikamDemo **database
+2. Complete the procedures detailed in **Step 1** from [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010) to create and configure the **FabrikamDemo** database
    (i.e. the ASP.NET membership/role database).
 3. Complete the procedures detailed in **Step 5**from my previous post
    to add the Web.config modifications for claims-based authentication to the following
@@ -310,7 +309,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
    & '.\Activate Features.ps1'
    ```
 
-At this point you should be able to browse to the Fabrikam site and click the **            Sign In **link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo **database         (refer to **Step 6 **in my previous post for instructions on how to         do this).
+At this point you should be able to browse to the Fabrikam site and click the **            Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
 
 > **Update (2011-02-26)**
 > 

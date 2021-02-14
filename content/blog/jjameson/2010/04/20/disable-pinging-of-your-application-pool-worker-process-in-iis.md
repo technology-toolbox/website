@@ -21,7 +21,7 @@ In case you aren't aware of it, IIS monitors the health of the worker process fo
 
 However, if you are stepping through a Web request in the debugger (presumably in an isolated environment where you aren't affecting other team members), then it is mighty inconvenient to have IIS terminate the process you are debugging.
 
-Consequently, one of the first things I try to remember to do after creating a new application pool -- e.g. creating a new Web application in Microsoft Office SharePoint Server (MOSS) 2007 -- is to change the **Ping Enabled **setting to **False**.
+Consequently, one of the first things I try to remember to do after creating a new application pool -- e.g. creating a new Web application in Microsoft Office SharePoint Server (MOSS) 2007 -- is to change the **Ping Enabled** setting to **False**.
 
 I just did a quick Bing search and found the following resources (in case you want more info or detailed steps):
 

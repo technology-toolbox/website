@@ -31,7 +31,7 @@ page layout.
 
 In that post, I also showed how the Technology Toolbox site is comprised
 of two Visual Studio solutions that are merged together during the deployment
-process. Requests for URLs under **/blog **are handled by Subtext.
+process. Requests for URLs under **/blog** are handled by Subtext.
 All other requests (such as the Technology Toolbox home page) are handled by
 the "Caelum" solution.
 
@@ -60,7 +60,7 @@ or update data.
 
 To create the new DAL, I added a new C# library project (**Data.csproj**)
 to the solution in order to isolate the DAL in a separate assembly (**TechnologyToolbox.Caelum.Data.dll**).
-Then I added a new **ADO.NET Entity Data Model **to the project
+Then I added a new **ADO.NET Entity Data Model** to the project
 (**Caelum.edmx**).
 
 Since Subtext stores blog posts in the **subtext\_Content** table,
@@ -84,12 +84,12 @@ using (CaelumEntities context = new CaelumEntities())
     }
 ```
 
-Note that **DateSyndicated **represents the date/time a blog
+Note that **DateSyndicated** represents the date/time a blog
 post was published, so ordering the results by this property (in descending
 order) and then using the
 [**Take()**](http://msdn.microsoft.com/en-us/library/bb503062.aspx)
 method (to limit the results to three) yields the desired items for the
-**Most Recent Posts **section.
+**Most Recent Posts** section.
 
 Once I had the minimal "plumbing" necessary to retrieve the list of recent
 posts from the Subtext database, I turned my attention to displaying the results.
@@ -179,13 +179,13 @@ Once I have defined the semantic markup for a feature (usually via
 and then start replacing the sample content with ASP.NET controls to render
 the dynamic content.
 
-For the **Most Recent Posts **section on the site home page,
+For the **Most Recent Posts** section on the site home page,
 I added a new user control to the project (**RecentPosts.ascx**),
 copied the sample HTML above into the user control, and then added an instance
 of the control to the site home page.
 
 Next I replaced the static `<div  class="hentry">` elements
-with an ASP.NET **Repeater **control:
+with an ASP.NET **Repeater** control:
 
 ```
 <div class="hfeed posts-recent">
@@ -230,8 +230,7 @@ with an ASP.NET **Repeater **control:
 >       URL to a blog post).
 
 In the corresponding code-behind for the user control, I added code to retrieve
-the list of recent posts and bind the results to the **Repeater
-**control:
+the list of recent posts and bind the results to the **Repeater** control:
 
 ```
 using System;
@@ -337,8 +336,7 @@ to the **BlogHelper.GetEntryUrl** method:
                                 (DateTime) Eval("DateSyndicated"))) %>'>
                           <span class="label">Comments: </span>
                           <span class="value count">{TODO: 0}</span>
-                        </asp:HyperLink>
-                    </li>
+                        </asp:HyperLink>                     </li>
                 </ul>
                 ...
             </div>
@@ -350,7 +348,7 @@ to the **BlogHelper.GetEntryUrl** method:
 After running another quick test to verify the URLs are generated correctly,
 I replaced the sample date/time values for each post with the actual values
 specified in **DateSyndicated**. This is simply a matter of formatting
-the **DateTime **value as shown below:
+the **DateTime** value as shown below:
 
 ```
 <div class="hfeed posts-recent">
@@ -363,13 +361,9 @@ the **DateTime **value as shown below:
                 <ul class="post-info">
                     <li class="published">
                         <span class="label">Published </span>
-                        <span class="value"><%# Eval(
-                            "DateSyndicated",
-                            "{0:MMMM d, yyyy}") %></span>
+                        <span class="value"><%# Eval( "DateSyndicated", "{0:MMMM d, yyyy}") %></span>
                         <span class="label"> at </span>
-                        <span class="value"><%# Eval(
-                            "DateSyndicated",
-                            "{0:t}") %></span>
+                        <span class="value"><%# Eval( "DateSyndicated", "{0:t}") %></span>
                     </li>
                     ...
                 </ul>
@@ -411,8 +405,7 @@ hide the comments icon (and corresponding link) using CSS.
                                 (string) Eval("EntryName"),
                                 (DateTime) Eval("DateSyndicated"))) %>'>
                           <span class="label">Comments: </span>
-                          <span class="value count"><%# Eval(
-                            "FeedBackCount") %></span>
+                          <span class="value count"><%# Eval( "FeedBackCount") %></span>
                         </asp:HyperLink>
                     </li>
                 </ul>

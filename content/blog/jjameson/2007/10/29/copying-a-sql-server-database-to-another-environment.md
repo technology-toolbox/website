@@ -45,18 +45,18 @@ In other words, by using the **COPY\_ONLY** option I avoided screwing  up the sc
 
 However, there are a couple of issues with this approach:
 
-- You cannot specify the **COPY\_ONLY **option through the UI
+- You cannot specify the **COPY\_ONLY** option through the UI
   in SQL Server Management Studio, but this is no big deal -- you can start by
   configuring most of the backup options using the UI, script the action to generate
-  the corresponding SQL, and then add the **COPY\_ONLY **option as
+  the corresponding SQL, and then add the **COPY\_ONLY** option as
   shown above
-- You cannot restore a backup created using the **COPY\_ONLY **
+- You cannot restore a backup created using the **COPY\_ONLY**
   option through the UI in SQL Server Management Studio; in the **Restore
-  Database **dialog, when you select the **From device** option
+  Database** dialog, when you select the **From device** option
   and then specify the backup file previously created with the **COPY\_ONLY**
   option, no backup sets are displayed
 
-The second problem was puzzling to me. After specifying my backup file, when  I attempted to change to the **Options **page, I encountered the following  error:
+The second problem was puzzling to me. After specifying my backup file, when  I attempted to change to the **Options** page, I encountered the following  error:
 
 > You must select a restore source.
 
@@ -67,7 +67,7 @@ RESTORE FILELISTONLY
 FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
 ```
 
-To restore from a **COPY\_ONLY **backup, use a command similar to  the following:
+To restore from a **COPY\_ONLY** backup, use a command similar to  the following:
 
 ```
 RESTORE DATABASE [WSS_Content_TEST]

@@ -32,11 +32,11 @@ Apparently there are known issues with these two updates -- both of which are fo
 
 The problem with KB 972493 started after installing Windows Server 2008 Service Pack 2 (SP2), because that includes the prerequisite patch ([KB 940518](http://support.microsoft.com/kb/940518)).
 
-My initial attempt at resolving the warnings in WSUS was to create a separate computer group under my existing **Technology Toolbox **group called **WSUS Servers**. I then moved COLOSSUS (my one and only WSUS server) to this new group and approved the aforementioned patches on that group alone.
+My initial attempt at resolving the warnings in WSUS was to create a separate computer group under my existing **Technology Toolbox** group called **WSUS Servers**. I then moved COLOSSUS (my one and only WSUS server) to this new group and approved the aforementioned patches on that group alone.
 
-Sadly, the current version of WSUS does not provide a way to decline updates for a specific group only. Instead the approval field is simply **Not Approved **for all computers groups except **WSUS Servers**.
+Sadly, the current version of WSUS does not provide a way to decline updates for a specific group only. Instead the approval field is simply **Not Approved** for all computers groups except **WSUS Servers**.
 
-Consequently, Windows Update would detect these two patches for install, but the subsequent install would refuse to actually apply the patches -- thus perpetually leaving all of my Windows Server 2008 SP2 servers that are not running WSUS with a "99%" **Installed/Not Applicable Percentage** (and also causing them to appear in the **Computers Needing Updates **columns in the daily WSUS report).
+Consequently, Windows Update would detect these two patches for install, but the subsequent install would refuse to actually apply the patches -- thus perpetually leaving all of my Windows Server 2008 SP2 servers that are not running WSUS with a "99%" **Installed/Not Applicable Percentage** (and also causing them to appear in the **Computers Needing Updates** columns in the daily WSUS report).
 
 I really wish there were some other way to resolve the issue without declining the updates altogether -- but I certainly couldn't find one, and based on a number of support cases I read regarding similar issues, this seems to be the recommended solution.
 

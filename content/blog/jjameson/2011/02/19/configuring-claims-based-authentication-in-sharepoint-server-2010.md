@@ -86,18 +86,18 @@ In this step, the database for storing ASP.NET membership and role information  
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**,
    click **Next**.
 
-5. On the **Select a Setup Option **page, ensure the option to
-   **Configure SQL Server for application services **is selected and
+5. On the **Select a Setup Option** page, ensure the option to
+   **Configure SQL Server for application services** is selected and
    then click **Next**.
 
-6. On the **Select the Server and Database **page:
+6. On the **Select the Server and Database** page:
    
-   1. In the **Server **box, type the name of the database server.
-   2. Ensure the **Windows authentication **option is selected.
-   3. In the **Database **dropdown list, type **FabrikamDemo**.
+   1. In the **Server** box, type the name of the database server.
+   2. Ensure the **Windows authentication** option is selected.
+   3. In the **Database** dropdown list, type **FabrikamDemo**.
    4. Click **Next**.
 
-7. On the **Confirm Your Settings **page, verify the settings,
+7. On the **Confirm Your Settings** page, verify the settings,
    and then click **Next**.
 
 8. Wait for the database to be created and then click **Finish**.
@@ -107,8 +107,8 @@ In this step, the database for storing ASP.NET membership and role information  
 1. On a computer with SQL Server management tools installed, click **
    Start**, point to **All Programs**, click **Microsoft
    SQL Server 2008**, and then click **SQL Server Management Studio**.
-   The **Connect to Server **dialog box opens.
-2. In the **Server type **list, click **Database Engine**.
+   The **Connect to Server** dialog box opens.
+2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the database, and then click
    **Connect**.
 4. In **Object Explorer**, expand **Security**, and
@@ -116,8 +116,8 @@ In this step, the database for storing ASP.NET membership and role information  
 5. Right-click the login corresponding to the SharePoint farm service account
    (**EXTRANET\svc-sharepoint**) and then click **Properties**.
 6. In the login properties dialog box:
-   1. On the **User Mapping **page, in the **Users mapped
-      to the login **list, click the checkbox for the ASP.NET membership
+   1. On the **User Mapping** page, in the **Users mapped
+      to the login** list, click the checkbox for the ASP.NET membership
       database (**FabrikamDemo**), and then in the database role
       membership list, click the checkboxes for the following roles:
       - **aspnet\_Membership\_BasicAccess**
@@ -153,7 +153,7 @@ In this step, the Web application and initial site collection are created.
 
 #### To create the Fabrikam Web application:
 
-1. On the **Start **menu, click **All Programs**,
+1. On the **Start** menu, click **All Programs**,
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click **Run
    as administrator**. If prompted by User Account Control to allow the
@@ -228,16 +228,16 @@ When using Forms-Based Authentication, it is important to secure the communicati
 #### To add a public URL to HTTPS:
 
 1. On the Central Administration home page, click **Application Management**.
-2. On the **Application Management **page, in the **Web
-   Applications **section, click **Configure alternate access mappings**.
-3. On the **Alternate Access Mappings **page, click **Edit
+2. On the **Application Management** page, in the **Web
+   Applications** section, click **Configure alternate access mappings**.
+3. On the **Alternate Access Mappings** page, click **Edit
    Public URLs**.
-4. On the **Edit Public Zone URLs **page:
-   1. In the **Alternate Access Mapping Collection **section,
+4. On the **Edit Public Zone URLs**page:
+   1. In the **Alternate Access Mapping Collection** section,
       select the Web application to configure.
-   2. In the **Public URLs **section, copy the URL from the
-      **Default **box to the **Internet **box, and change
-      **http:// **to **https://**.
+   2. In the **Public URLs** section, copy the URL from the
+      **Default** box to the **Internet** box, and change
+      **http://** to **https://**.
    3. Click **Save**.
 
 #### To add an HTTPS binding to the site in IIS:
@@ -246,18 +246,17 @@ When using Forms-Based Authentication, it is important to secure the communicati
    and then click **Internet Information Services (IIS) Manager**.
 2. In Internet Information Services (IIS) Manager, click the plus sign (+)
    next to the server name that contains the Web application, and then click the
-   plus sign next to **Sites **to view the Web applications that have
+   plus sign next to **Sites** to view the Web applications that have
    been created.
 3. Click the name of the Web application (**SharePoint -- www.fabrikam.com80**).
-   In the **Actions** section, under the **Edit Site
-   **heading, click **Bindings...**.
-4. In the **Site Bindings **window, click **Add**.
-5. In the **Add Site Binding **window:
-   1. In the **Type: **dropdown, select **https**.
-   2. In the **SSL Certificate: **dropdown, select the certificate
+   In the **Actions** section, under the **Edit Site** heading, click **Bindings...**.
+4. In the **Site Bindings** window, click **Add**.
+5. In the **Add Site Binding**window:
+   1. In the **Type:** dropdown, select **https**.
+   2. In the **SSL Certificate:** dropdown, select the certificate
       corresponding to the site.
    3. Click **OK**.
-   4. In the **Site Bindings **window, click **Close**.
+   4. In the **Site Bindings** window, click **Close**.
 
 ### Step 4 - Enable anonymous access to the site
 
@@ -329,9 +328,9 @@ In order to complete the configuration of claims-based authentication, it is  ne
 1. Click **Start**, point to **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
 2. In **Internet Information Services (IIS) Manager**, in the
-   **Connections **pane, click the plus sign (+) next to the server
+   **Connections** pane, click the plus sign (+) next to the server
    name that contains the Web application, and then click the plus sign next to
-   **Sites **to view the Web applications that have been created.
+   **Sites** to view the Web applications that have been created.
 3. Right-click **SharePoint Central Administration v4**, and then
    click **Explore**. Windows Explorer opens, with the directories
    for the selected Web application listed.
@@ -349,11 +348,11 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > 
 >       If you see a dialog box that says that Windows cannot open the file, 
 >       click **Select the program from a list**, and then click
->       **OK**. In the **Open With **dialog box, click
+>       **OK**. In the **Open With** dialog box, click
 >       **Notepad**, and then click **OK**.
 
 5. In the Web.config editor:
-   1. After the end of the **/configuration/configSections **
+   1. After the end of the **/configuration/configSections**
       element (i.e. `</configSections>`),
       add the following elements:
       
@@ -369,8 +368,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 >       	Be sure to replace the **{databaseServer}** placeholder 
 >       	in the connection string with the name of the database server.
 
-    2. Find the **/configuration/system.web/roleManager/providers
-    **section and add the following elements:
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
     
@@ -380,8 +378,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
           applicationName="Fabrikam Demo Site"
           connectionStringName="FabrikamDemo" />
         ```
-    3. Find the **/configuration/system.web/membership/providers
-    **section and add the following elements:
+    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     
     
     
@@ -398,11 +395,9 @@ In order to complete the configuration of claims-based authentication, it is  ne
 #### To configure the Security Token Service Web.config file:
 
 1. In **Internet Information Services (IIS) Manager**, in the
-   **Connections **pane, expand the **SharePoint Web Services
-   **site, right-click the **SecurityTokenServiceApplication
-   **subsite, and then click **Explore**.
+   **Connections** pane, expand the **SharePoint Web Services** site, right-click the **SecurityTokenServiceApplication** subsite, and then click **Explore**.
 
-2. Double-click the **Web.config **file to open the file.
+2. Double-click the **Web.config** file to open the file.
 
 3. In the Web.config editor, add the following elements to the `<configuration>`
    root element:
@@ -447,11 +442,11 @@ In order to complete the configuration of claims-based authentication, it is  ne
 #### To configure the Web.config file for the Fabrikam Web application:
 
 1. In **Internet Information Services (IIS) Manager**, in the
-   **Connections **pane, right-click the **SharePoint - www.fabrikam.com80**
+   **Connections** pane, right-click the **SharePoint - www.fabrikam.com80**
    site, and then click **Explore**.
-2. Double-click the **Web.config **file to open the file.
+2. Double-click the **Web.config** file to open the file.
 3. In the Web.config editor:
-   1. After the end of the **/configuration/configSections **
+   1. After the end of the **/configuration/configSections**
       element (i.e. `</configSections>`),
       add the following elements:
       
@@ -467,8 +462,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 >       	Be sure to replace the **{databaseServer}** placeholder 
 >       	in the connection string with the name of the database server.
 
-    2. Find the **/configuration/system.web/roleManager/providers
-    **section and add the following elements:
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
     
@@ -483,8 +477,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > 
 >       	Do not overwrite any existing entries in this Web.config file.
 
-    3. Find the **/configuration/system.web/membership/providers
-    **section and add the following elements:
+    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     
     
     
@@ -511,23 +504,23 @@ In order to complete the configuration of claims-based authentication, it is  ne
    and then double-click **.NET Users**.
 2. When prompted with an error stating the feature cannot be used because the
    default provider is not a trusted provider, click **OK**.
-3. In the **Actions **pane, click **Set Default Provider...**
-4. In the **Edit .NET Users Settings **dialog box, note that the
+3. In the **Actions** pane, click **Set Default Provider...**
+4. In the **Edit .NET Users Settings** dialog box, note that the
    default provider configured in SharePoint Server 2010 is "i". In the **
-   Default Provider **list, click **FabrikamSqlMembershipProvider**,
+   Default Provider** list, click **FabrikamSqlMembershipProvider**,
    and then click **OK**.
 5. In the **Actions** pane, click **Add...**
 6. When prompted with an error stating the default .NET Roles provider does
    not exist, click **OK**.
-7. In the **Add .NET User **dialog:
-   1. On the **.NET User Account Details **page, type the appropriate
+7. In the **Add .NET User**dialog:
+   1. On the **.NET User Account Details** page, type the appropriate
       values in the **User Name**, **E-mail**,
       **Password**, **Confirm Password**, **Question**,
-      and **Answer **boxes, and then click **Next**.
-   2. On the **.NET User Roles **page, click **Finish**.
-8. In the **Actions **pane, click **Set Default Provider...**
-9. In the **Edit .NET Users Settings **dialog box, in the
-   **Default Provider **list, click **i**, and then click
+      and **Answer** boxes, and then click **Next**.
+   2. On the **.NET User Roles** page, click **Finish**.
+8. In the **Actions** pane, click **Set Default Provider...**
+9. In the **Edit .NET Users Settings** dialog box, in the
+   **Default Provider** list, click **i**, and then click
    **OK**.
 
 ### Step 7 - Validate the configuration of the Web application
@@ -538,17 +531,17 @@ The final step is to validate the Web application works as expected when using  
 
 1. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.
-2. On the **Sign In **page:
+2. On the **Sign In**page:
    1. In the dropdown list, click **Forms Authentication**.
-   2. When prompted to enter the **User name **and **Password**,
+   2. When prompted to enter the **User name** and **Password**,
       type the credentials specified in the previous step and then click
       **Sign In**.
-3. Verify the home page is displayed and the **Sign In **link
+3. Verify the home page is displayed and the **Sign In** link
    has been replaced with the "Welcome" menu.
 
 #### To login to the Fabrikam Web site using Windows authentication:
 
-1. Add the Fabrikam Web site to the **Local intranet **zone (in
+1. Add the Fabrikam Web site to the **Local intranet** zone (in
    order to seamlessly authenticate with the current domain credentials).
 
 > **Note**
@@ -559,9 +552,9 @@ The final step is to validate the Web application works as expected when using  
 > [http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 > 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
 > and click **Sign In**.
-> 3. On the **Sign In **page, in the dropdown list, click
+> 3. On the **Sign In** page, in the dropdown list, click
 > **Windows Authentication**.
-> 4. Verify the home page is displayed and the **Sign In **link
+> 4. Verify the home page is displayed and the **Sign In** link
 > has been replaced with the "Welcome" menu.
 
 ### What's next?

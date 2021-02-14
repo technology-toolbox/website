@@ -20,7 +20,7 @@ While it typically takes less than a minute or two to configure an expiration po
 
 For example, suppose I have a "Temporary Files" document library for which I want the files to be deleted approximately one day after they are added to the library.
 
-The following C# code shows how to configure an expiration policy on the specified document library (passed as an **SPList **object):
+The following C# code shows how to configure an expiration policy on the specified document library (passed as an **SPList** object):
 
 ```
 using Microsoft.Office.RecordsManagement.InformationPolicy;
@@ -80,7 +80,7 @@ This code adds an expiration policy to the library if it hasn't yet been configu
 
 > **Note**
 > 
-> As shown in the HACK comment above, I fetch a new **SPList **object in order to avoid the following error when configuring the expiration policy immediately after creating a new document library:
+> As shown in the HACK comment above, I fetch a new **SPList** object in order to avoid the following error when configuring the expiration policy immediately after creating a new document library:
 > 
 > The object has been updated by another user since it was last fetched.
 > 

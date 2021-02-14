@@ -25,11 +25,11 @@ After migrating the roughly 300 posts from my MSDN blog (running on the Telligen
 
 Note that the default configuration of BlogEngine.NET does not require a SQL  Server database. Instead blog posts are stored as individual XML files and accessed  through a provider that encapsulates the underlying storage mechanism.
 
-Suspecting the XML storage implementation to be the source of the performance  problem, I spent a few minutes creating a SQL Server database and switching from  the **XmlBlogProvider **to the **[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**  -- and subsequently migrated my historical content into the database. I fully expected  this to resolve the scalability issue I discovered shortly before.
+Suspecting the XML storage implementation to be the source of the performance  problem, I spent a few minutes creating a SQL Server database and switching from  the **XmlBlogProvider** to the **[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**   -- and subsequently migrated my historical content into the database. I fully expected  this to resolve the scalability issue I discovered shortly before.
 
 Unfortunately it did not.
 
-After spending about a half hour walking through BlogEngine.NET in the debugger,  I discovered that the source of the problem was not in the underlying blog provider  (i.e. **XmlBlogProvider **or **DbBlogProvider**), but  rather in the service layer "above" the provider.
+After spending about a half hour walking through BlogEngine.NET in the debugger,  I discovered that the source of the problem was not in the underlying blog provider  (i.e. **XmlBlogProvider** or **DbBlogProvider**), but  rather in the service layer "above" the provider.
 
 It turns out that BlogEngine.NET caches all of your blog posts in memory -- regardless  of whether you choose to store them in XML files or in a SQL Server database. And  it's not just the post summary information that is cached in memory. Rather it's  the *entire content of each and every post*.
 
@@ -83,7 +83,7 @@ Consequently, I moved on to looking at another CMS solution that includes bloggi
 
 ### Umbraco
 
-Umbraco is relatively easy to install and configure, but I discovered some issues  when you want to run it in isolation within your site. For example, as I mentioned  in my previous post, I was looking for a blogging solution to serve content from  the **/blog **folder of TechnologyToolbox.com while other areas of  the site are served from a different ASP.NET application.
+Umbraco is relatively easy to install and configure, but I discovered some issues  when you want to run it in isolation within your site. For example, as I mentioned  in my previous post, I was looking for a blogging solution to serve content from  the **/blog** folder of TechnologyToolbox.com while other areas of  the site are served from a different ASP.NET application.
 
 In this configuration, I encountered an error similar to the one described in  the following issue:
 

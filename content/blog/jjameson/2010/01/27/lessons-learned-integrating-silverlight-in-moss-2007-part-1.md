@@ -102,9 +102,9 @@ The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include 
 
 Note that the developer also had to manually configure the build order to ensure the Silverlight project gets compiled before the **Fabrikam.Portal.Web** project -- or else the build could potentially break (if the XAP file was not found in the expected location because it had never been built before) or, even worse, the WSP could include an old version of the XAP file.
 
-While everything appeared to work as expected, there was a fundamental problem with this approach. The developer only changed the output path for the **Debug** configuration of  the **Fabrikam.Portal.Web.ServiceWheel** project. In other words, when it came time to create our **Release **builds, the build would either break (if the **Debug **build hadn't copied the XAP file to the expected location yet) or the Release build would include the **Debug **build of the XAP file in the **Release **build of the WSP.
+While everything appeared to work as expected, there was a fundamental problem with this approach. The developer only changed the output path for the **Debug** configuration of  the **Fabrikam.Portal.Web.ServiceWheel** project. In other words, when it came time to create our **Release** builds, the build would either break (if the **Debug** build hadn't copied the XAP file to the expected location yet) or the Release build would include the **Debug** build of the XAP file in the **Release** build of the WSP.
 
-While it probably isn't the worst thing to include a **Debug **version of an assembly in a **Release **build, it's definitely not a best practice. However, more importantly, changing the output path in order to copy the XAP file into the expected location is not compatible with Team Foundation Build.
+While it probably isn't the worst thing to include a **Debug** version of an assembly in a **Release** build, it's definitely not a best practice. However, more importantly, changing the output path in order to copy the XAP file into the expected location is not compatible with Team Foundation Build.
 
 As I noted in a [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
@@ -114,7 +114,7 @@ In other words, whenever you find yourself about to specify ".." in the output p
 
 In order to resolve the issues around integrating the Silverlight XAP file into the WSP, I made the following changes:
 
-- Reverted the output path for the **Debug** configuration of the **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e. **Bin\Debug **instead of **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
+- Reverted the output path for the **Debug** configuration of the **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e. **Bin\Debug** instead of **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
 - Added a reference from the **Fabrikam.Portal.Web** project to the **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not explicitly required by the code within the **Fabrikam.Portal.Web** project, there really is a dependency between the two projects. Establishing this reference ensures the projects are built in the correct order (without having to manually tweak the build order of the projects in the solution).
 - Modified the **Fabrikam.Portal.Web** project (by unloading the project and then editing the MSBuild file directly) to include the following:
 

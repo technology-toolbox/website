@@ -32,8 +32,7 @@ With that matter out of the way, I proceeded with the rest of the project setup.
 
 ### Create the project in Team Foundation Server
 
-Once I had a project name ("Caelum"), the next step was to create a corresponding  TFS project. I chose to use the **MSF for Agile Software Development v5.0
-**process template. Note that I use my "admin" account (**TECHTOOLBOX\jjameson-admin**)  to create TFS projects and complete other configuration changes.
+Once I had a project name ("Caelum"), the next step was to create a corresponding  TFS project. I chose to use the **MSF for Agile Software Development v5.0** process template. Note that I use my "admin" account (**TECHTOOLBOX\jjameson-admin**)  to create TFS projects and complete other configuration changes.
 
 Next I bulk-loaded my initial list of work items using Microsoft Excel. I've  listed these initial tasks in a [previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template), in case you are interested in what they are.
 
@@ -41,8 +40,7 @@ The first task is to configure the permissions for the TFS project and the secon
 
 ### Create initial source tree and Visual Studio solution
 
-At this point, I switched from my admin account to my regular account, created  a Visual Studio solution and a couple of projects (i.e. **CoreServices
-**and **CoreServices.DeveloperTests**), and subsequently checked  these in to TFS, as illustrated in the following screenshot.
+At this point, I switched from my admin account to my regular account, created  a Visual Studio solution and a couple of projects (i.e. **CoreServices** and **CoreServices.DeveloperTests**), and subsequently checked  these in to TFS, as illustrated in the following screenshot.
 
 ![Caelum - Initial source tree and Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Initial%20source%20tree.png)
 
@@ -55,10 +53,10 @@ At this point, I switched from my admin account to my regular account, created  
 > I recommend creating folders like **Documents** (or "docs"
 > if you prefer that instead), **References** (or "lib"),
 > **Source** (or "src"), and **Tools** under the
-> **Main **folder.
+> **Main** folder.
 > 
 > Shortly after checking in this changeset, I realized that I forgot to
-> add a **Source** folder under **Main **and put
+> add a **Source** folder under **Main** and put
 > the solution in there -- instead of in the **Main** folder.
 > Consequently I moved the items to the correct location and checked in the
 > corresponding changeset.
@@ -110,8 +108,7 @@ This is how I prefer to start out. I then disable specific rules if I find them 
 
 ### Add "SharedAssemblyInfo" and "AssemblyVersionInfo" files to Visual Studio solution
 
-Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs
-**files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
+Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs** files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
 
 <cite>Shared Assembly Info in Visual Studio Projects</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions)
@@ -141,15 +138,14 @@ If you are wondering why I didn't configure these check-in policies earlier,  th
 
 ### Create Web site project
 
-With a solid foundation in place, the final step was to create a new ASP.NET  Web project and add it to the solution. Note that like the **CoreServices
-**and **CoreServices.DeveloperTests **projects, the **Website** project includes the following linked files:
+With a solid foundation in place, the final step was to create a new ASP.NET  Web project and add it to the solution. Note that like the **CoreServices** and **CoreServices.DeveloperTests** projects, the **Website** project includes the following linked files:
 
 - AssemblyVersionInfo.cs
 - SharedAssemblyInfo.cs
 - CustomDictionary.xml
 - TechnologyToolbox.Caelum.snk
 
-Similarly, it is configured to treat all warnings as errors (under the **Build **section in the project properties) and it uses the same code  analysis rule set described earlier.
+Similarly, it is configured to treat all warnings as errors (under the **Build** section in the project properties) and it uses the same code  analysis rule set described earlier.
 
 Consequently, I had to make a number of changes to the default code generated  by Visual Studio in order to get the project to compile successfully.
 

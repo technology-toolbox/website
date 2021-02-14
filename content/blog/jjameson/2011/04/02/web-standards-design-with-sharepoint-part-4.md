@@ -29,10 +29,9 @@ Figure 1: Tugboat - Home page
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
 
-The first step was to get the actual content for the home page into SharePoint 2010.         To achieve this, I created a new site based on the **Publishing Portal **template         and uploaded the home page images (e.g. boat.jpg) to the **Site Collection Images
-**library.
+The first step was to get the actual content for the home page into SharePoint 2010.         To achieve this, I created a new site based on the **Publishing Portal** template         and uploaded the home page images (e.g. boat.jpg) to the **Site Collection Images** library.
 
-Then I added a custom page layout (TugboatWelcomePageLayout1.aspx) that I created         previously for MOSS 2007. Note that this custom page layout simply provides the         ability to specify "main" content as well as "secondary" content using the out-of-the-box         **Welcome Page **content type.
+Then I added a custom page layout (TugboatWelcomePageLayout1.aspx) that I created         previously for MOSS 2007. Note that this custom page layout simply provides the         ability to specify "main" content as well as "secondary" content using the out-of-the-box         **Welcome Page** content type.
 
 Next, I upgraded the "Find Location" Web Part used to render the form at the top         of the Tugboat home page (since, as I described in my previous post, you can't mockup         an HTML form using the SharePoint Publishing HTML field or Content Editor Web Part).
 
@@ -71,9 +70,9 @@ Figure 3: Tugboat home page in SharePoint 2010 (step 2)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-2.png)
 
-Wow! What a difference the "right" CSS makes. As you can see, the main content for         the Tugboat home page is now very close to how it should look (i.e. Figure 1). However,         by removing the link to nightandday.master, the masthead obviously looks terrible.         If you squint really hard, you should be able to still see the Welcome control (i.e.         the **Sign In **link) as well as the help button.
+Wow! What a difference the "right" CSS makes. As you can see, the main content for         the Tugboat home page is now very close to how it should look (i.e. Figure 1). However,         by removing the link to nightandday.master, the masthead obviously looks terrible.         If you squint really hard, you should be able to still see the Welcome control (i.e.         the **Sign In** link) as well as the help button.
 
-In order to make the Tugboat sample in SharePoint match the HTML "prototype" created         by the designers (i.e. Dan Cederholm and Ethan Marcotte), let's remove the SharePoint         ribbon content when viewing the site as an anonymous user (in other words, when         browing the *Internet*site using the fully-qualified domain name -- e.g. [http://www.tugboatcoffee.com](http://www.tugboatcoffee.com)). Note         that we'll keep the ribbon for authenticated users (e.g. content authors and administrators         accessing the site using the intranet URL -- e.g. [http://tugboatcoffee](http://tugboatcoffee)).
+In order to make the Tugboat sample in SharePoint match the HTML "prototype" created         by the designers (i.e. Dan Cederholm and Ethan Marcotte), let's remove the SharePoint         ribbon content when viewing the site as an anonymous user (in other words, when         browing the *Internet* site using the fully-qualified domain name -- e.g. [http://www.tugboatcoffee.com](http://www.tugboatcoffee.com)). Note         that we'll keep the ribbon for authenticated users (e.g. content authors and administrators         accessing the site using the intranet URL -- e.g. [http://tugboatcoffee](http://tugboatcoffee)).
 
 The first step in getting rid of the ribbon is to remove the search box and move         the "top row elements" (e.g. the Welcome control and help link) into the `<div id="s4-searcharea">`         element. This is essentially just a cut-and-paste of one section in the master page         to another:
 
@@ -137,13 +136,11 @@ Figure 4: Tugboat home page in SharePoint 2010 (step 3)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-3.png)
 
-After simply rearranging some content, it's now much easier to see the **Sign In
-**link.
+After simply rearranging some content, it's now much easier to see the **Sign In** link.
 
 You might be wondering why I decided to place the "top row elements" inside the         `<div id="s4-searcharea">`         element, since this certainly isn't semantic HTML. Well, to be honest, I actually         didn't do this initially (in other words, I placed the "top row elements" inside         a different &lt;div&gt; container element).
 
-At first, everything seemed to work just fine (from an anonymous user's perspective).         However, when I viewed the site as an authenticated user and then clicked **Show Ribbon
-**from the **Site Actions **menu, I saw the following:
+At first, everything seemed to work just fine (from an anonymous user's perspective).         However, when I viewed the site as an authenticated user and then clicked **Show Ribbon** from the **Site Actions** menu, I saw the following:
 
 ![Tugboat home page in SharePoint 2010 (with &quot;top row elements&quot; not inside the &quot;s4-searcharea&quot; &amp;lt;div&amp;gt;)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-3-bad.png)
 Figure 5: Tugboat home page in SharePoint 2010 (with "top row elements" not inside
@@ -151,7 +148,7 @@ the "s4-searcharea" &lt;div&gt;)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-3-bad.png)
 
-Notice how the **Browse**, **Page**, and **Publish **tabs do not render         correctly. When I moved them into the `<div id="s4-searcharea">`         element, I noticed the ribbon tabs rendered as expected for authorized users. Remember         what I said earlier about "subtle" bugs?!
+Notice how the **Browse**, **Page**, and **Publish** tabs do not render         correctly. When I moved them into the `<div id="s4-searcharea">`         element, I noticed the ribbon tabs rendered as expected for authorized users. Remember         what I said earlier about "subtle" bugs?!
 
 The next step is get rid of the OOTB `<div class="s4-notdlg top-row">` content (i.e.         the "Adventure Works" logo) and add the custom Tugboat masthead farther down in         the master page:
 
@@ -207,8 +204,7 @@ You might also have noticed that I made a few minor tweaks to the HTML provided 
 
 At this point, we at least have a site that isn't "hard on the eyes" or potentially         offensive to our client (since we are no longer showing the "white-on-light" Adventure         Works logo at the top of the Tugboat site).
 
-Now let's get rid of the **Tugboat Coffee**, **Home**, and **Press Releases
-**content on the left side of the page.
+Now let's get rid of the **Tugboat Coffee**, **Home**, and **Press Releases** content on the left side of the page.
 
 This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">`         , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" />`and `<div id="s4-leftpanel">`)         and consequently adding some more hidden `ContentPlaceHolder`controls at the bottom of the page:
 
@@ -285,7 +281,7 @@ Now that we've got the main area of the page matching the HTML prototype created
 If you search the Internet for something like **SharePoint
 2010 hide ribbon anonymous**, you'll find a number of different recommendations.
 
-Someone suggested wrapping the **SPRibbon **control in the **&lt;LoggedInTemplate&gt;**         of an ASP.NET **LoginView **control. This certainly sounds like a logical choice         and indeed it does work in the "anonymous user scenario" as shown below:
+Someone suggested wrapping the **SPRibbon** control in the **&lt;LoggedInTemplate&gt;**         of an ASP.NET **LoginView** control. This certainly sounds like a logical choice         and indeed it does work in the "anonymous user scenario" as shown below:
 
 ![Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-8.png)
 Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden
@@ -293,9 +289,9 @@ from anonymous users)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-8.png)
 
-Yes, we still see the dark blue band, but notice that the breadcrumb control and         **Sign In **link are no longer visible. However, there's a problem.
+Yes, we still see the dark blue band, but notice that the breadcrumb control and         **Sign In** link are no longer visible. However, there's a problem.
 
-Take a look at the following screenshot taken for an authenticated user after clicking         **Show Ribbon **on the **Site Actions **menu:
+Take a look at the following screenshot taken for an authenticated user after clicking         **Show Ribbon** on the **Site Actions** menu:
 
 ![Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-8-bad.png)
 Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using
@@ -305,9 +301,9 @@ ASP.NET LoginView control)
 
 Do you see the problem? [Hint: Imagine you want to view the properties of the page.]
 
-Where the heck did the **Page **and **Publishing **tabs go? Good question.
+Where the heck did the **Page** and **Publishing** tabs go? Good question.
 
-I have no idea why the seemingly trivial change of wrapping the **SPRibbon**         control in a **LoginView **control fundamentally breaks the OOTB ribbon functionality,         but it does (at least in the RTM version of SharePoint Server 2010).
+I have no idea why the seemingly trivial change of wrapping the **SPRibbon**         control in a **LoginView** control fundamentally breaks the OOTB ribbon functionality,         but it does (at least in the RTM version of SharePoint Server 2010).
 
 So, instead of using a **LoginView** control, I wrapped the **SPRibbon** control         in a **SPSecurityTrimmedControl** instead:
 
@@ -359,7 +355,7 @@ Fortunately, this is fairly easy to override by adding a little CSS to the maste
 </head>
 ```
 
-In this case, using a **LoginView **control (and `<AnonymousTemplate>`)         works as expected.
+In this case, using a **LoginView** control (and `<AnonymousTemplate>`)         works as expected.
 
 Here are the results after step 9:
 

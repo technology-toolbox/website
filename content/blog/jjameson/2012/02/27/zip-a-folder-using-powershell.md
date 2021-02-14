@@ -55,8 +55,7 @@ However, what if you don't have the PowerShell Community Extensions installed
 case, it takes a little more work.
 
 If you Google "PowerShell zip files" you'll quickly discover a number of
-resources that show how to create a zip file using the **Set-Content
-**cmdlet, followed by the use of the **[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)** method on the **Folder **shell object. For
+resources that show how to create a zip file using the **Set-Content** cmdlet, followed by the use of the **[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)**  method on the **Folder** shell object. For
 example,
 [David Aiken's blog post](http://blogs.msdn.com/b/daiken/archive/2007/02/12/compress-files-with-windows-powershell-then-package-a-windows-vista-sidebar-gadget.aspx) shows the following:
 
@@ -101,7 +100,7 @@ However, there are a few problems with this approach:
 >       ...
 
 - Relying exclusively on a 500 ms delay (to wait for the asynchronous
-  **CopyHere **operation to complete) seems a little "dicey"
+  **CopyHere** operation to complete) seems a little "dicey"
   to me. In other words, how do you know the zip operation completed successfully?
 
 A different approach is to place the call to **Start-Sleep**
@@ -110,9 +109,9 @@ number (as shown in
 [another blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html)). This is the approach I used last year and it seemed
 to work just fine -- most of the time.
 
-As I mentioned before, the **CopyHere **method runs asynchronously.
-When the **CopyHere **operation is running, a dialog is displayed
-with a **Cancel **button -- and if you click this by mistake (or
+As I mentioned before, the **CopyHere** method runs asynchronously.
+When the **CopyHere** operation is running, a dialog is displayed
+with a **Cancel** button -- and if you click this by mistake (or
 press <kbd>Enter</kbd> when the dialog box has the focus) then, well, let's
 just say that you aren't on the "Happy Path" anymore.
 
@@ -121,9 +120,8 @@ specifically, counting all of the files and folders in the zip file and comparin
 it to the expected number. The approach shown in the
 [other blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html) I referred to before only counts the items in the "root"
 of the zip file (which, honestly, does seem to work reliably -- even when you
-click the **Cancel **button during the **CopyHere
-**operation). However, I wanted a higher degree of confidence that wasn't
-based on the assumption that cancelling the **CopyHere **operation
+click the **Cancel** button during the **CopyHere** operation). However, I wanted a higher degree of confidence that wasn't
+based on the assumption that cancelling the **CopyHere** operation
 is treated as a "transaction."
 
 First, we need a function to create a zip file for a specific folder (a.k.a.
@@ -253,7 +251,7 @@ function GetWaitInterval(
 }
 ```
 
-To determine if the **CopyHere **operation is running, I check
+To determine if the **CopyHere** operation is running, I check
 to see if the zip file can be locked exclusively:
 
 ```

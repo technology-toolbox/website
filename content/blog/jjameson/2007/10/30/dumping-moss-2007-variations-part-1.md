@@ -31,7 +31,7 @@ The first error is due to the fact that MOSS 2007 does not automatically change 
 
 To be honest, we "punted" the errors in the second category above (i.e. those caused         by some mysterious NullReferenceException), since there weren't very many and we         had more important problems to investigate. Besides, we could always come back to         that later if we found it still occurred in subsequent builds of our solution.
 
-The fundamental problem is that we change the content type (and page layout) of         the default pages in order to display the hierarchy of Frequently Asked Questions         (FAQs) next to a list of the FAQs for the currently selected site within the hierarchy.         This is cleverly done using a custom page layout that one of my fellow MCS team         members, Ron Tielke, developed that contains an ASP.NET menu control on the left         and a Content Query Web Part on the right. In other words, the content type of **            default.aspx **starts out as **Welcome Page** (since we         are using the OOTB **Publishing with Workflow** site definition), but         we change it to **FAQ Node Page** (a custom content type that we have         defined which derives from **Page** -- just like **Welcome Page**).         Consequently, users can drill down into the FAQ sites and view FAQs within a particular         category.
+The fundamental problem is that we change the content type (and page layout) of         the default pages in order to display the hierarchy of Frequently Asked Questions         (FAQs) next to a list of the FAQs for the currently selected site within the hierarchy.         This is cleverly done using a custom page layout that one of my fellow MCS team         members, Ron Tielke, developed that contains an ASP.NET menu control on the left         and a Content Query Web Part on the right. In other words, the content type of **            default.aspx** starts out as **Welcome Page** (since we         are using the OOTB **Publishing with Workflow** site definition), but         we change it to **FAQ Node Page** (a custom content type that we have         defined which derives from **Page** -- just like **Welcome Page**).         Consequently, users can drill down into the FAQ sites and view FAQs within a particular         category.
 
 Once we understood the nature of the error, we believed that we could circumvent         the problem with custom content types by waiting until after the variation sites         and pages are propagated (and "paired up") before changing the content type. In         fact, this worked...for a while.
 
@@ -64,8 +64,8 @@ The fundamental problem that I have with the "by design" response is that if you
 Here are the repro steps to break the variations feature using no custom code and         no custom content types:
 
 1. Create a new Web application
-2. Create a site collection using the **Publishing Portal **site definition
-3. Configure variations using / as the **Location **for the **Variation
+2. Create a site collection using the **Publishing Portal** site definition
+3. Configure variations using / as the **Location** for the **Variation
    Home** (use defaults for all other settings)
 4. Create a new variation label with the following:
 
@@ -80,13 +80,13 @@ Here are the repro steps to break the variations feature using no custom code an
                 Publishing site template: Publishing Site with Workflow
 
 **
-5. Create the variation hierarchies (to create the **/en-US **site)
+5. Create the variation hierarchies (to create the **/en-US** site)
 6. Create a new site under the variation source site (**/en-US/foo**)
 7. Change the content type of the default page in the new site (**/en-US/foo/default.aspx**)
-from **Welcome Page **to **Article Page**. Note that in
-order to change the content type of the page, you need to view the underlying **                Pages** library (use **Site Actions **--&gt; **View All Site
+from **Welcome Page** to **Article Page**. Note that in
+order to change the content type of the page, you need to view the underlying **                Pages** library (use **Site Actions** --&gt; **View All Site
 Content**) and then edit the properties on the page.
-8. Change the page layout to **Article page with summary links **and approve
+8. Change the page layout to **Article page with summary links** and approve
 the page.
 9. Create a new variation label with the following:
 
@@ -96,7 +96,7 @@ the page.
     
                 Locale: Japanese**
 
-10. Create the variation hierarchies (to create the **/ja-JP **and **            /ja-JP/foo **sites)
+10. Create the variation hierarchies (to create the **/ja-JP** and **            /ja-JP/foo** sites)
 11. View the variation logs and notice the failure with the following error:
 
 > The variation system failed to pair up pages http://foobar/en-US/foo/Pages/default.aspx                 and /ja-JP/foo/Pages/default.aspx because their Content Types do not match.

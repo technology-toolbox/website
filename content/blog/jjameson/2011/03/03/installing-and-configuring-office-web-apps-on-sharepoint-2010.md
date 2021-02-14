@@ -68,19 +68,16 @@ Use the following procedure to change the default trusted location to support  H
 
 of HTTP:
 
-1. On the Central Administration home page, in the **Application Management
-   **section, click **Manage service applications**.
-2. On the **Service Applications **tab, click **Excel Services
-   Application **(where the **Type **column is **Excel
+1. On the Central Administration home page, in the **Application Management** section, click **Manage service applications**.
+2. On the **Service Applications** tab, click **Excel Services
+   Application** (where the **Type** column is **Excel
    Services Application Web Service Application**).
-3. On the **Manage Excel Services Application **page, click
+3. On the **Manage Excel Services Application** page, click
    **Trusted File Locations**.
-4. On the **Excel Services Application Trusted File Locations
-   **page, click the default trusted file location (**http://**)
+4. On the **Excel Services Application Trusted File Locations** page, click the default trusted file location (**http://**)
    to edit the corresponding settings.
-5. On the **Excel Services Application Edit Trusted File Location
-   **page, in the **Location **section, change the **
-   Address **from **http:// **to **https:// **
+5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **
+   Address** from **http://** to **https://**
    and then click **OK**.
 
 > **Note**
@@ -199,14 +196,13 @@ for caching:
 #### To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
-2. In the **Object Explorer**, expand the **Databases
-   **folder.
-3. Right-click the **OfficeWebAppsCache **database and then click
+2. In the **Object Explorer**, expand the **Databases** folder.
+3. Right-click the **OfficeWebAppsCache** database and then click
    **Properties**.
-4. In the **Database Properties **dialog, in the **Select
-   a page **area on the left, click **Files**.
+4. In the **Database Properties** dialog, in the **Select
+   a page** area on the left, click **Files**.
 5. Using the settings specified in the following table, specify the new values
-   for **Initial Size **and **Autogrowth**.
+   for **Initial Size** and **Autogrowth**.
 
 <caption>Table 2 - Initial data and log file sizes</caption>    | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
     | --- | --- | --- | --- | --- | --- |

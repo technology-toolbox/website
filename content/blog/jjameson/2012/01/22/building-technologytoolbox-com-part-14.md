@@ -177,7 +177,7 @@ the Web.config file using something like the following:
 ```
 
 Note that if you don't specify the `redirectMode`
-attribute, it defaults to **[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)**, which causes the URL to change to something like
+attribute, it defaults to **[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)** , which causes the URL to change to something like
 the following:
 
 > http://.../Errors/Generic.aspx?aspxerrorpath=...
@@ -452,7 +452,7 @@ element is used:
 >       editing the Web.config file directly), under the **IIS** 
 >       section double-click **Error Pages** (to modify the
 >       `<httpErrors>` 
->       element) or under the **ASP.NET **section double-click
+>       element) or under the **ASP.NET** section double-click
 >       **.NET Error Pages**. (to modify the `<customErrors>` 
 >       element).
 

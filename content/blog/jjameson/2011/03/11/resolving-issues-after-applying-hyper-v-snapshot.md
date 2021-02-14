@@ -62,6 +62,5 @@ For example:
 
 Note that this issue doesn't always occur when rolling back a snapshot. It depends  on how old the snapshot is (specifically whether or not the machine account password  has changed in the domain since the snapshot was taken).
 
-One of the other things I've learned about using snapshots with a domain-joined  VM is that you should be sure to enable the **Time synchronization
-**service on the VM. I typically disable this service on domain-joined VMs  (since the time is synchronized from the domain controller). However, when using  snapshots, the latency in waiting for the time to synchronize after applying a snapshot  can quickly become unbearable (especially if you are frequently applying a snapshot).
+One of the other things I've learned about using snapshots with a domain-joined  VM is that you should be sure to enable the **Time synchronization** service on the VM. I typically disable this service on domain-joined VMs  (since the time is synchronized from the domain controller). However, when using  snapshots, the latency in waiting for the time to synchronize after applying a snapshot  can quickly become unbearable (especially if you are frequently applying a snapshot).
 

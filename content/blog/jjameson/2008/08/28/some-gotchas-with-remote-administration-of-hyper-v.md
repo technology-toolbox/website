@@ -126,8 +126,7 @@ corresponding feature:
    to continue, click **Continue**.)
 2. In **Server Manager**, under **Features Summary**,
    click **Add Features**.
-3. In the **Add Features Wizard**, on the **Select Features
-   **page, expand **Remote Server Administration Tools**,
+3. In the **Add Features Wizard**, on the **Select Features** page, expand **Remote Server Administration Tools**,
    and then expand **Remote Administration Tools**
 4. Click **Hyper-V Tools**, and then proceed through the rest
    of the wizard.

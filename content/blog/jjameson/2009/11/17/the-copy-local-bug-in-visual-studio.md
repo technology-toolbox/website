@@ -27,8 +27,8 @@ It turns out that I was using a rather elaborate workaround for a problem that i
 
 To workaround the "Copy Local" bug and force a referenced assembly to always be copied to the output folder (regardless of whether the referenced assembly is in the GAC):
 
-1. In the **Solution Explorer **window in Visual Studio, expand the **References** folder for the project and then select the referenced assembly.
-2. In the **Properties **window, change the value of **Copy Local **to **False**, and then change it back to **True**.
+1. In the **Solution Explorer** window in Visual Studio, expand the **References** folder for the project and then select the referenced assembly.
+2. In the **Properties** window, change the value of **Copy Local** to **False**, and then change it back to **True**.
 
 Following these two simple steps explicitly adds `<Private>True</Private>` to the project file, as shown in the following example:
 
@@ -40,7 +40,7 @@ Following these two simple steps explicitly adds `<Private>True</Private>` to th
     </ProjectReference>
 ```
 
-When you add a referenced assembly in Visual Studio using a project reference, **Copy Local **defaults to **True**, but Visual Studio doesn't explicitly state this in the MSBuild project file. Toggling the value of **Copy Local **forces this element to be added to the project file and consequently you no longer need any hacks to reference the assembly in its original output folder.
+When you add a referenced assembly in Visual Studio using a project reference, **Copy Local** defaults to **True**, but Visual Studio doesn't explicitly state this in the MSBuild project file. Toggling the value of **Copy Local** forces this element to be added to the project file and consequently you no longer need any hacks to reference the assembly in its original output folder.
 
 At this point, you might be wondering why do I bring this up after all this time? After all, hasn't the hack I came up with for building SharePoint Web Solution Packages (WSPs) been working for several years? Well, yes, in most cases it works just fine.
 

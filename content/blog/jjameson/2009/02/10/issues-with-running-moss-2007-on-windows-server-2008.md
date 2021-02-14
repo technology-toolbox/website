@@ -33,7 +33,7 @@ See it?
 
 No? How about a hint...
 
-Suppose you are configuring your farm for the first time and you need to start the         **Office SharePoint Server Search **service. Which link do you need         to click?
+Suppose you are configuring your farm for the first time and you need to start the         **Office SharePoint Server Search** service. Which link do you need         to click?
 
 See it now?
 
@@ -47,15 +47,14 @@ See anything missing?
 
 Actually, there are two things missing:
 
-- The **Services on server **link
-- The **Incoming e-mail settings **link
+- The **Services on server** link
+- The **Incoming e-mail settings** link
 
 Hmmm...that's odd, isn't it?
 
 It turns out that you need to run Internet Explorer as an administrator whenever         you access Central Administration. In other words, you need to right-click Internet         Explorer in the Start menu and then click **Run as administrator**.         (Note that you cannot right-click the **Internet** shortcut -- since         it doesn't give you the option to **Run as administrator**; you need         to click Start, then click **All Programs**, and then right-click *that***Internet Explorer**).
 
-You will then find all of the expected links under the **Topology and Services
-**section.
+You will then find all of the expected links under the **Topology and Services** section.
 
 ![MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS2007-WS2008-Operations(Admin).jpg)
 Figure 3: MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE

@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "Toolbox"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-If you develop solutions for Microsoft Office SharePoint Server (MOSS) 2007,  you may notice that certain SharePoint assemblies always get copied to your Visual  Studio project output folder even though these referenced assemblies are configured  with **Copy Local **= **False**. Since these assemblies  should always refer to the ones installed by MOSS 2007 on the destination environment,  you obviously don't want to deploy these as part of your solution.
+If you develop solutions for Microsoft Office SharePoint Server (MOSS) 2007,  you may notice that certain SharePoint assemblies always get copied to your Visual  Studio project output folder even though these referenced assemblies are configured  with **Copy Local** = **False**. Since these assemblies  should always refer to the ones installed by MOSS 2007 on the destination environment,  you obviously don't want to deploy these as part of your solution.
 
 The "extraneous" files that I've seen copied are:
 
@@ -89,7 +89,7 @@ End Sub
 
 While these copied files may not seem like a significant issue, if you configure  automated daily builds of your solution and subsequently copy each daily build to  a "Release Server" -- or if you have multiple branches of your solution available  on your local development VM -- then the disk space consumed by these files can  really add up.
 
-For example, across the 7 branches of the solution from my previous project (with  some of the later branches containing 52 Visual Studio projects), a simple search  for **Microsoft.\* **returned 316 items consuming a whopping 746 MB  of disk space. This is a significant amount of space when you consider that I typically  allocate anywhere from 16-20GB for each VHD.
+For example, across the 7 branches of the solution from my previous project (with  some of the later branches containing 52 Visual Studio projects), a simple search  for **Microsoft.\*** returned 316 items consuming a whopping 746 MB  of disk space. This is a significant amount of space when you consider that I typically  allocate anywhere from 16-20GB for each VHD.
 
 After running the script above, I regain roughly 750MB of wasted disk space.
 

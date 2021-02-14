@@ -22,10 +22,10 @@ While using SharePoint WCM features to create *documents* might seem a little   
 For example, section 13.0 of each and every document must contain the company's         standard "Sexual Harassment Statement" which essentially consists of several paragraphs         of legal text followed by some customizable text to specify which managers are responsible         for handling complaints regarding any form of harassment.
 
 When I heard about this requirement, I immediately thought of the Reusable Content         feature in SharePoint. The idea is that the Legal department specifies the bulk         of the content for section 13.0 (via a list item in the centralized **Reusable
-Content **list). The document authors are only responsible for specifying         information about the managers designated to handle complaints (in other words,         the content that varies with each document).
+Content** list). The document authors are only responsible for specifying         information about the managers designated to handle complaints (in other words,         the content that varies with each document).
 
-Note that the **Reusable Content **list item has the **Automatic
-Update **field set to **Yes**, as shown below. This is the         key to "centrally managing" the content. [Also note that in this particular solution,         the document authors have read-only access to the **Reusable Content **         list.]
+Note that the **Reusable Content** list item has the **Automatic
+Update** field set to **Yes**, as shown below. This is the         key to "centrally managing" the content. [Also note that in this particular solution,         the document authors have read-only access to the **Reusable Content**          list.]
 
 ![Reusable Content list](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content-List.png)
 Figure 1: Reusable Content list
@@ -46,7 +46,7 @@ Figure 3: Reusable Content in "edit" mode
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-edit-mode.png)
 
-One of the more interesting issues that I encountered when using the reusable content         feature in SharePoint is that when a user does not have access to the corresponding         list item in the **Reusable Content **list, the content is silently         removed from the page. This makes sense when you think about it, but it's certainly         a "gotcha" to be aware of.
+One of the more interesting issues that I encountered when using the reusable content         feature in SharePoint is that when a user does not have access to the corresponding         list item in the **Reusable Content** list, the content is silently         removed from the page. This makes sense when you think about it, but it's certainly         a "gotcha" to be aware of.
 
 For example, consider the following screenshot that shows the same page as Figure         3. However, the following screenshot was taken *prior* to approving the list         item shown in Figure 1 above.
 
@@ -58,16 +58,15 @@ list)
 
 > **Important**
 > 
->             By default, the **Reusable Content **list is configured for content
+>             By default, the **Reusable Content** list is configured for content
 >             approval. Consequently when you add list items (either programmatically or through
->             the site), the **Approval Status **defaults to **Pending**.
+>             the site), the **Approval Status** defaults to **Pending**.
 >             In order for users with limited access to see the content as expected, a published
 >             version of the **Reusable Content** list item must be available.
 
 Note that this post was primarily intended to introduce a scenario for using the         reusable content feature in SharePoint.
 
-In [my next post](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2), I'll show you how to programmatically add **Reusable Content
-**list items (which is very helpful when deploying to multiple environments,         such as DEV, TEST, and PROD).
+In [my next post](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2), I'll show you how to programmatically add **Reusable Content** list items (which is very helpful when deploying to multiple environments,         such as DEV, TEST, and PROD).
 
 In [part 3 of this series](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3), I'll show you how to "expand" the reusable content         placeholders within, for example, the Page Content field (essentially just two lines         of code), as well as some of the "gotchas" with the out-of-the-box solution (including         a workaround).
 

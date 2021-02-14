@@ -29,7 +29,7 @@ have administrative access to servers in their Development Integration Environme
 (DEV) -- we actually wanted to restrict the members of the local **Administrators**
 group on all servers in DEV. However, what if we need to address a slightly
 different scenario in which we want a specific user or group to always be a
-member of the local **Administrators **group -- in addition to
+member of the local **Administrators** group -- in addition to
 other group members (that vary by server)?
 
 For example, consider the fact that I use
@@ -42,18 +42,17 @@ configuration -- or at least for someone who primarily considers himself an
 AppDev (Application Development) flavor of Microsoft consultant.
 
 At a bare minimum, your SCOM service account needs to be a member of the
-**Performance Monitor Users **group on each monitored server. Rather
+**Performance Monitor Users** group on each monitored server. Rather
 than forcing myself to configure this on all of my existing servers as well
 on new servers and VMs that I will undoubtedly add in the future, I decided
 to apply this change using Group Policy instead.
 
 However, in this scenario, I don't want to *restrict*the members
-of the **Performance Monitor Users **group on each monitored server.
+of the **Performance Monitor Users** group on each monitored server.
 Rather I simply want to ensure that the SCOM service account is a member of
 this group *in addition to any other members*.
 
-To address this scenario, I created a startup script called **EnsureLocalGroupMembership.cmd
-**in the following folder:
+To address this scenario, I created a startup script called **EnsureLocalGroupMembership.cmd** in the following folder:
 
 > \\corp.technologytoolbox.com\SysVol\corp.technologytoolbox.com\Policies\{GUID}\Machine\Scripts\Startup\OperationsManager
 
@@ -84,5 +83,5 @@ Here are the settings for the Group Policy:
 
 By linking this Group Policy to the appropriate OU (i.e. **IT/Resources/Servers**)
 the SCOM service account is ensured to be a member of the local **Performance
-Monitor Users **group on each monitored server. Voilà!
+Monitor Users** group on each monitored server. Voilà!
 

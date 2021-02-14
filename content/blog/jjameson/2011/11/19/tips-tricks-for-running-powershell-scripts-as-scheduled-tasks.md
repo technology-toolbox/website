@@ -77,7 +77,7 @@ configured it to run as a scheduled task with the following properties:
 - **Add arguments:** -Command "C:\Temp.ps1"
 
 Deleting the temporary files and then running the scheduled task results
-in the following message in the **Last Run Result **column:
+in the following message in the **Last Run Result** column:
 
 > The operation completed successfully. (0x0)
 
@@ -98,14 +98,13 @@ information other than the fact that PowerShell.exe exited with return code
 We need to be able to inspect a log file containing all of the output from
 the script.
 
-Like me, you might try using the **[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**
+Like me, you might try using the **[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**  
 cmdlet to create a log file:
 
 ```
 $ErrorActionPreference = "Stop"
 
-Start-Transcript -Path "$env:TEMP\Temp.log"
-
+Start-Transcript-Path"$env:TEMP\Temp.log"   
 Write-Host "Changing to TEMP folder..."
 ...
 Write-Host "Success"
@@ -116,8 +115,7 @@ Stop-Transcript
 > **Note**
 > 
 >       In order to avoid issues when running the script interactively from 
->       a PowerShell window, we really should call **Stop-Transcript
->       **when an error occurs (i.e. by using **Trap**). 
+>       a PowerShell window, we really should call **Stop-Transcript** when an error occurs (i.e. by using **Trap**). 
 >       Otherwise, if an error occurs while running the script from a PowerShell 
 >       prompt, the transcript file remains open and you need to type <kbd>Stop-Transcript</kbd> 
 >       to close it.
@@ -175,15 +173,14 @@ the exception message still appears on a single line (rather than as five separa
 lines and nicely indented like how it appears when running interactively).
 
 While I could probably live with the exception message formatting issue,
-there's a much larger issue with the **Start-Transcript **cmdlet:
+there's a much larger issue with the **Start-Transcript** cmdlet:
 
 <cite>Unable to capture ALL session output into a transcript</cite>
 [https://connect.microsoft.com/PowerShell/feedback/details/315875/unable-to-capture-all-session-output-into-a-transcript](https://connect.microsoft.com/PowerShell/feedback/details/315875/unable-to-capture-all-session-output-into-a-transcript)
 
-Once I discovered this, I decided that while **Start-Transcript
-**seems like a good idea, it's not quite yet ready for primetime.
+Once I discovered this, I decided that while **Start-Transcript** seems like a good idea, it's not quite yet ready for primetime.
 
-Instead of trying to use **Start-Transcript **to create a log
+Instead of trying to use **Start-Transcript** to create a log
 file for the PowerShell script, let's try modifying the scheduled task to create
 the log file instead, by changing the arguments of the scheduled task action
 to the following:
@@ -221,7 +218,7 @@ EXIT %ERRORLEVEL%
 
 Notice the use of `$LASTEXITCODE` and `EXIT %ERRORLEVEL%`
 in order to "bubble up" any non-zero return code from PowerShell to the
-**Last Run Result **column in Task Scheduler. In other words, when
+**Last Run Result** column in Task Scheduler. In other words, when
 an error occurs while running the PowerShell script, we don't want the scheduled
 task to report "<samp>The operation completed successfully. (0x0)</samp>"; rather
 it should indicate that something bad happpened (which would trigger us to examine

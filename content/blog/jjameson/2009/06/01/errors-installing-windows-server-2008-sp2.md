@@ -116,7 +116,7 @@ less than 5 GB.
 
 Using **Hyper-V Manager**, I expanded the VHD from 20 GB to
 22 GB and then started the VM up again. I then logged into the VM and used the
-**Disk Management **console to extend the volume to include the
+**Disk Management** console to extend the volume to include the
 additional 2 GB of available storage.
 
 Next, I kicked off the installation of Windows Server 2008 SP2 again. This

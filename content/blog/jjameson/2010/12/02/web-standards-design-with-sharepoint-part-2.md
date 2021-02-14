@@ -127,9 +127,9 @@ Also note that one of my goals with the SharePoint solution was to leave the CSS
 
 When I originally created the Tugboat master page, it was obvious which sections         of the page would be rendered by the master page and which sections would be rendered         by the actual page content. Specifically, the masthead (a.k.a. "header") at the         top of the page and the footer would be included in the master page, whereas everything         else is considered page content.
 
-However, it wasn't immediately obvious how the actual page content would be specified.         My first thought was to simply use the PageContent** **field for the         main content (i.e. **Find a Location**, **This Week's Specials**,         and **Coffee News & Goings On**) and a Content Editor Web Part         for the secondary content (i.e. **Drink Menu **and **Press**).         However, there was one fundamental problem with that. Any guesses?
+However, it wasn't immediately obvious how the actual page content would be specified.         My first thought was to simply use the PageContent field for the         main content (i.e. **Find a Location**, **This Week's Specials**,         and **Coffee News & Goings On**) and a Content Editor Web Part         for the secondary content (i.e. **Drink Menu** and **Press**).         However, there was one fundamental problem with that. Any guesses?
 
-The **Find a Location **feature at the top of the page utilizes an         INPUT element -- and SharePoint won't let you specify any HTML form elements in         the PageContent field (even if, as in my case, you don't even care about whether         the form element actually functions). Consequently I ended up creating the FindLocationWebPart         in Sprint 1, although it really just emits the HTML and provides access to the map         -- it doesn't actually help a coffee addict find the nearest Tugboat location ;-)
+The **Find a Location** feature at the top of the page utilizes an         INPUT element -- and SharePoint won't let you specify any HTML form elements in         the PageContent field (even if, as in my case, you don't even care about whether         the form element actually functions). Consequently I ended up creating the FindLocationWebPart         in Sprint 1, although it really just emits the HTML and provides access to the map         -- it doesn't actually help a coffee addict find the nearest Tugboat location ;-)
 
 Therefore I knew that I needed a Web Part zone above the PageContent field in order         to render an instance of the FindLocationWebPart.
 
@@ -151,7 +151,7 @@ The following picture illustrates the various fields and Web Part zones for Tugb
 ![TugboatWelcomePageLayout1](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-WelcomePageLayout1.png)
 Figure 3: TugboatWelcomePageLayout1
 
-As I mentioned before, for Sprint 1, I'll just be using the PageContent field and         a couple of the Web Part zones (**Top Left Zone **and **Top Right
+As I mentioned before, for Sprint 1, I'll just be using the PageContent field and         a couple of the Web Part zones (**Top Left Zone** and **Top Right
 Zone**). Well, actually, in the end I'll only be using the **Top Right
 Zone**. "Why?" you ask. Keep reading.
 
@@ -218,7 +218,7 @@ Hence I like to use one or more "\*Configuration" features whose sole purpose is
 1. Set the master page for the site (SPWeb) to Tugboat.master.
 2. Upload the various images referenced on the home page (e.g. boat.jpg) to the **            PublishingImages** library.
 3. Configure the default page for the site (i.e. change the page layout to TugboatWelcomePageLayout1,
-   set the **PageContent **field to render the main content, add the Content
+   set the **PageContent** field to render the main content, add the Content
    Editor Web Part to render the secondary content, and add an instance of the FindLocationWebPart).
 
 Fortunately, having done this kind of stuff many times in the past, it didn't take         very long to write that code and mark the corresponding task as "Done."
@@ -249,7 +249,7 @@ Figure 5: "Find a Location" map (IE8)
 
 Notice how the map completely obscures the secondary content (e.g. **Drink Menu**)?         Obviously that's not the way the designer, Dan, intended for it to work. [Note that         this doesn't happen in IE8 when viewing the static HTML site (in other words, outside         of SharePoint).]
 
-My first thought was that I must not have copied the HTML correctly when creating         the FindLocationWebPart. However, I soon discovered that the *inner*HTML         is the same (in other words, the HTML emitted by the Web Part) but the additional         HTML added by the Web Part zone is enough to break Internet Explorer. In the long         term, I'd like to fix this problem the *right way* by creating a custom **[WebPartZone](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.webpartzone.aspx)** for SharePoint that doesn't emit any additional         markup (at least when **DesignMode **is **false**).
+My first thought was that I must not have copied the HTML correctly when creating         the FindLocationWebPart. However, I soon discovered that the *inner*HTML         is the same (in other words, the HTML emitted by the Web Part) but the additional         HTML added by the Web Part zone is enough to break Internet Explorer. In the long         term, I'd like to fix this problem the *right way* by creating a custom **[WebPartZone](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.webpartzone.aspx)**  for SharePoint that doesn't emit any additional         markup (at least when **DesignMode** is **false**).
 
 However, for Sprint 1, I chose to "punt" and simply embed the FindLocationWebPart         directly in the page layout. [Yeah, I know, it's not ideal, but in the world of         software, sometimes you have to find creative ways to stay within [the "triangle"](http://en.wikipedia.org/wiki/Project_management_triangle) ;-) ]
 

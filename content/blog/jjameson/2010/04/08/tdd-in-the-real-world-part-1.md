@@ -27,7 +27,7 @@ When I first started using NUnit, I kept thinking to myself: "This is great!...H
 
 It's been well over 5 years since I worked on a "pure" .NET solution; rather most of my time is spent working on solutions based on SharePoint, and much less frequently these days, BizTalk Server. I also get called in occasionally to do something spiffy with SQL Server and Analysis Services.
 
-Sometimes I dream about how nice it would be to just build something with nothing more than what comes out-of-the-box with Visual Studio and the .NET Framework. Things like ASP.NET MVC just seem so developer-friendly. Of course, then I start thinking about all the really cool things you can do with SharePoint -- even if it does make life more, um, *challenging** ***in some regards.
+Sometimes I dream about how nice it would be to just build something with nothing more than what comes out-of-the-box with Visual Studio and the .NET Framework. Things like ASP.NET MVC just seem so developer-friendly. Of course, then I start thinking about all the really cool things you can do with SharePoint -- even if it does make life more, um, *challenging*in some regards.
 
 The way I approach TDD is to do it where it makes sense, meaning that it adds more value over the long run than the effort you put into it. Many people might argue that TDD should be used all the time, but I doubt those people spend most of their time working on SharePoint solutions ;-)
 

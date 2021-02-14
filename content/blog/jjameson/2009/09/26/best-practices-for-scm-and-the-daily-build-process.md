@@ -85,7 +85,7 @@ All code included in a build must be checked into source control before the buil
 
 > **Tip**
 > 
->             You can use the **Builds **check-in policy for TFS to ensure the solution
+>             You can use the **Builds** check-in policy for TFS to ensure the solution
 >             compiles before a developer is allowed to check-in a changeset.
 
 Each member of the Development team is responsible for ensuring the following:
@@ -115,7 +115,7 @@ Each member of the Development team is responsible for ensuring the following:
 
 > **Tip**
 > 
->             You can use the **Testing Policy **check-in policy for TFS to ensure
+>             You can use the **Testing Policy** check-in policy for TFS to ensure
 >             that specific unit tests pass before a developer is allowed to check-in a changeset.
 
 If any of the above conditions cannot be met, the code should not be checked into         source control.

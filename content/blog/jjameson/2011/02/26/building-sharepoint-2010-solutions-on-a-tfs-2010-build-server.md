@@ -46,7 +46,7 @@ Second, the MSDN article instructs you to copy several Visual Studio SharePoint
 assemblies to the GAC on the build server:
 
 > **Copy the SharePoint Tool Assemblies and Files to the GAC
-> **The following assemblies must be copied to the GAC of the build
+> ** The following assemblies must be copied to the GAC of the build
 > system:
 > 
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.dll

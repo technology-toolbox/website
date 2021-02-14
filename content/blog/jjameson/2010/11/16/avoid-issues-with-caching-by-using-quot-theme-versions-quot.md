@@ -56,7 +56,7 @@ For example, suppose we've previously deployed the folders and files shown above
         - Fabrikam-Basic.css
         - Fabrikam-Main.css
 
-This rename is done in the source control system (not directly in the Style Library within SharePoint) and includes updating the custom Fabrikam master page(s) to refer to the **Theme1.1 **folder. When the new WSP is deployed, the Theme1.1 folder is created in the Style Library, the master page is updated, and users subsequently see the site rendered with the new CSS rules.
+This rename is done in the source control system (not directly in the Style Library within SharePoint) and includes updating the custom Fabrikam master page(s) to refer to the **Theme1.1** folder. When the new WSP is deployed, the Theme1.1 folder is created in the Style Library, the master page is updated, and users subsequently see the site rendered with the new CSS rules.
 
 Note that this rename is done at most once per Sprint (i.e. release to Production) -- it certainly isn't done each and every time a developer touches one of the CSS files.
 

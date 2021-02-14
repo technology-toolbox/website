@@ -113,7 +113,7 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureAttribute,
         }
 ```
 
-Notice that the code for instantiating new instances of the **SPWebConfigModification **class is now performed by the custom **SharePointWebConfigHelper** class:
+Notice that the code for instantiating new instances of the **SPWebConfigModification** class is now performed by the custom **SharePointWebConfigHelper** class:
 
 ```
 using System;
@@ -356,7 +356,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-The helper class also provides methods to apply and remove the Web.config modifications. However, be aware that there is currently a bug in the **SPWebConfigModification **infrastructure in which Web.config modifications are only removed from the Web.config file for the default zone (not, for example, the Internet zone).
+The helper class also provides methods to apply and remove the Web.config modifications. However, be aware that there is currently a bug in the **SPWebConfigModification** infrastructure in which Web.config modifications are only removed from the Web.config file for the default zone (not, for example, the Internet zone).
 
 Be sure to specify a unique "owner" of your Web.config modifications, such as the namespace of the class that adds them.
 

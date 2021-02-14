@@ -19,7 +19,7 @@ In [my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharep
 
 Note that in any "real world" deployment of SharePoint Server 2010, you're going to want to configure the State Service (or else you won't be able to use any features that depend on InfoPath Forms Services -- including the out-of-the-box approval workflow).
 
-While you are certainly welcome to use Central Administration and/or the Farm Configuration Wizard to configure the **State Service **service application, personally I don't recommend it. Why not? Simple...you end up with one of those nasty database names with a GUID in it.
+While you are certainly welcome to use Central Administration and/or the Farm Configuration Wizard to configure the **State Service** service application, personally I don't recommend it. Why not? Simple...you end up with one of those nasty database names with a GUID in it.
 
 It's not that I put heroic effort into avoiding database names with GUIDs in them. After all, if you follow the instructions in one of the installation guides I've written for various SharePoint projects, then you'll find that PSConfig.exe creates the SharePoint\_AdminContent\_{GUID} database for Central Administration. Personally, that one doesn't bother me (much) -- probably because the amount of SQL traffic to that database is negligible. However, I can't say the same for the numerous other SharePoint databases.
 

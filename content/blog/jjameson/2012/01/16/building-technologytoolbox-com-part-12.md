@@ -9,7 +9,7 @@ tags: ["Subtext", "Web Development"]
 
 In
 [my previous post](/blog/jjameson/2012/01/15/building-technologytoolbox-com-part-11), I briefly mentioned how I use a CSS sprite and jQuery
-to render the expandable list under the **Archives **section on
+to render the expandable list under the **Archives** section on
 the various blog pages of the Technology Toolbox site.
 
 ![Blog home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png)
@@ -33,8 +33,7 @@ provide similar functionality but "minimize" the archive list by default and
 allow users to "drill into" the list if they choose to.
 
 If you look "under the covers" at one of the pages on my new blog, you can
-see how I started out by defining some semantic markup for the **Archives
-**section
+see how I started out by defining some semantic markup for the **Archives** section
 [using a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3):
 
 ```
@@ -136,9 +135,9 @@ than a user control) since the HTML that needs to be emitted is relatively simpl
 
 Since I prefer to develop iteratively (moving rapidly in a series of small
 steps), I started by setting the CSS class for the control and overriding the
-**[TagKey](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tagkey.aspx)** property (since it defaults to `<span>`
+**[TagKey](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tagkey.aspx)**  property (since it defaults to `<span>`
 -- and I want this control to emit a `<div>` instead). I also
-added the "Archives" heading as well as a **Literal **control to
+added the "Archives" heading as well as a **Literal** control to
 serve as a placeholder for the list(s) that will be generated from the query
 results.
 
@@ -415,7 +414,7 @@ Thanks to the great head start provided by Kent's code, I was able to complete
 the expand/collapse feature in less than an hour.
 
 After adding the script to the **PostArchiveList** control (and
-adding a **[PartialCachingAttribute](http://msdn.microsoft.com/en-us/library/system.web.ui.partialcachingattribute.aspx)** to improve performance by minimizing the
+adding a **[PartialCachingAttribute](http://msdn.microsoft.com/en-us/library/system.web.ui.partialcachingattribute.aspx)**  to improve performance by minimizing the
 number of database calls), I ended up with the following:
 
 ```

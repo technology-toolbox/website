@@ -18,10 +18,9 @@ tags: ["My System", "Simplify", "
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-Last summer I wrote a post introducing [my simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) -- including a **Logger
-**class that is really just a thin wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
+Last summer I wrote a post introducing [my simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) -- including a **Logger** class that is really just a thin wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
 
-A few months ago, I enhanced the **Logger **class to log exceptions         in a consistent fashion.
+A few months ago, I enhanced the **Logger** class to log exceptions         in a consistent fashion.
 
 I used the "[Yellow
 Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)" provided by ASP.NET as a reference for logging the details         of the exception. Here's a screenshot from a sample that I whipped up this morning:
@@ -169,11 +168,11 @@ In order to log exceptions, I added two new overloads for the **LogError**      
         }
 ```
 
-Note that the stack trace is generated using the **AppendExceptionDetail **         helper method.
+Note that the stack trace is generated using the **AppendExceptionDetail**          helper method.
 
 This makes it really easy to log exceptions in ASP.NET Web applications -- including         solutions built on Microsoft Office SharePoint Server (MOSS) 2007 and Windows SharePoint         Services -- as well as other types of .NET applications (e.g. console applications).
 
-Here is the complete source for the updated **Logger **class:
+Here is the complete source for the updated **Logger** class:
 
 ```
 #define TRACE

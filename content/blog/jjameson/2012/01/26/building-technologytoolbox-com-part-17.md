@@ -34,18 +34,18 @@ Note that the Caelum website is a "classic" ASP.NET Web application, while
 Subtext is an ASP.NET MVC application. During the deployment process, the two
 solutions are merged together.
 
-The **blog **folder is configured as a separate application
+The **blog** folder is configured as a separate application
 in IIS. It contains the Subtext solution and a few updated/additional files
 from the "Caelum" solution -- such as the site map file and the custom blog
 skin.
 
 Due to the ELMAH configuration specified in the root Web.config file and
 custom controls specified in the Subtext skin created for Technology Toolbox,
-there are actually dependencies between the **blog **application
+there are actually dependencies between the **blog** application
 and the Caelum solution.
 
 Consequently, it is necessary to copy files from the Caelum solution into
-the corresponding locations within the Subtext **blog **application.
+the corresponding locations within the Subtext **blog** application.
 
 For example, to use the custom CAPTCHA control described in my previous post,
 the Subtext skin specifies the following (in PostComment.ascx):
@@ -78,12 +78,12 @@ Similarly, when the Subtext application goes looking for the Caelum assemblies
 (e.g. for the base class of the user control -- in other words, the code-behind),
 it only looks in the **blog\bin** folder (not the **www.technologytoolbox\bin**
 folder). The fact that ASP.NET does not probe for assemblies in the root
-**bin **folder is very important -- especially when it comes to
+**bin** folder is very important -- especially when it comes to
 using ELMAH.
 
 If ELMAH is configured in the Web.config file of the root application (i.e.
 **www.technologytoolbox\Web.config**) but the ELMAH assembly is
-not in the **blog\bin **folder (and presumably not in the GAC either),
+not in the **blog\bin** folder (and presumably not in the GAC either),
 then any request processed by Subtext will generate an unhandled exception:
 
 > Exception type: ConfigurationErrorsException
@@ -91,9 +91,8 @@ then any request processed by Subtext will generate an unhandled exception:
 > Exception message: Could not load file or assembly 'Elmah' or one of its
 > dependencies. The system cannot find the file specified.
 
-Copying the ELMAH assembly from the root **bin **folder (where
-it was deployed as a result of adding it as a reference to the **Website
-**project in the Caelum solution) into the **blog\bin **
+Copying the ELMAH assembly from the root **bin** folder (where
+it was deployed as a result of adding it as a reference to the **Website** project in the Caelum solution) into the **blog\bin**
 folder resolves the issue. Similarly, the CAPTCHA user control (Captcha.ascx)
 and "Caelum" assemblies need to be copied as well.
 
@@ -111,9 +110,8 @@ other runtime behavior), and the actual images themselves. Oh, and we obviously
 need the Caelum assembly containing the code-behind for the user control as
 well.
 
-To copy these files into the corresponding folders in the **blog
-**application, I created a new MSBuild target named **CopySharedFilesToBlogApplication**
-(by unloading the **Website **project in Visual Studio and then
+To copy these files into the corresponding folders in the **blog** application, I created a new MSBuild target named **CopySharedFilesToBlogApplication**
+(by unloading the **Website** project in Visual Studio and then
 editing the **Website.csproj** file):
 
 ```
@@ -144,7 +142,7 @@ To ensure this target is executed as part of every build, I modified the
 >       [one of my previous blog posts](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files)).
 
 If you were to reload the project file at this point and perform a build,
-you would see the "TODO:" message in the **Output **window.
+you would see the "TODO:" message in the **Output** window.
 
 To specify the list of files needed by the CAPTCHA control, I defined a new
 **ItemGroup**:
@@ -158,8 +156,8 @@ To specify the list of files needed by the CAPTCHA control, I defined a new
   </ItemGroup>
 ```
 
-Then I added a **Copy **task to copy the CAPTCHA files into
-the corresponding locations under the **blog **folder (in other
+Then I added a **Copy** task to copy the CAPTCHA files into
+the corresponding locations under the **blog** folder (in other
 words, by preserving the relative path of each file that is copied):
 
 ```
@@ -186,7 +184,7 @@ folder:
 
 To copy dependencies (e.g. the ELMAH assembly and other Caelum assemblies
 referenced in the **Website** project), I added one more
-**Copy **task:
+**Copy** task:
 
 ```
 <Target Name="CopySharedFilesToBlogApplication">
@@ -213,7 +211,7 @@ Here is the completed target:
 ```
 
 With these changes, whenever a file in the website project is updated, all
-of the "shared" files are copied to the **blog **application when
+of the "shared" files are copied to the **blog** application when
 a build is is performed in Visual Studio.
 
 However, what about when the solution is built using Team Foundation Build,
@@ -222,7 +220,7 @@ and subsequently deployed from the **\_PublishedWebsites** folder?
 To support that scenario, I created another task named **CopySharedFilesToBlogApplicationInWebProjectOutputDir**
 (admittedly a mouthful, but so be it). This target is similar to the previous
 one, except that it uses the `$(WebProjectOutputDir)`
-variable to copy the files to the **\_PublishedWebsites **folder:
+variable to copy the files to the **\_PublishedWebsites** folder:
 
 ```
 <!--

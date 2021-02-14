@@ -28,18 +28,18 @@ Also note the following KB article is effectively worthless these days even thou
 
 To view the list of downloaded program files (e.g. ActiveX controls) in Internet Explorer:
 
-1. Open Internet Explorer, click **Tools **and then click **Internet Options**.
-2. In the **Internet Options **window, on the **General **tab, in the **Browsing history **section, click **Settings**.
+1. Open Internet Explorer, click **Tools** and then click **Internet Options**.
+2. In the **Internet Options** window, on the **General** tab, in the **Browsing history** section, click **Settings**.
 3. In the **Temporary Internet Files and History Settings** window, click **View Objects**.
 
 Some Microsoft KB articles suggest that you can easily remove a downloaded program file using the "occache.dll" shell extension simply by right-clicking the file and then clicking "Remove". That might very well have been true back in the old days (e.g. Windows XP). However, in my recent experience (on Windows 7 and Windows Server 2008), the only item that appears on the context menu is "Properties" -- which doesn't provide any way to remove the item.
 
 To remove a downloaded program file (e.g. an ActiveX control) on Windows 7 with Internet Explorer 8:
 
-1. Open Internet Explorer, click **Tools **and then click **Internet Options**.
-2. In the **Internet Options **window, on the **Programs **tab, click **Manage add-ons**.
-3. In the **Manage Add-ons** window, in the **Show: **dropdown list, click **Downloaded controls**, right-click the item that you want to remove, and then click **More Information**.
-4. In the **More Information **window, click **Remove**. If necessary, enter the credentials for an administrator on the computer, and then click **Yes **to remove the downloaded program file.
+1. Open Internet Explorer, click **Tools** and then click **Internet Options**.
+2. In the **Internet Options** window, on the **Programs** tab, click **Manage add-ons**.
+3. In the **Manage Add-ons** window, in the **Show:** dropdown list, click **Downloaded controls**, right-click the item that you want to remove, and then click **More Information**.
+4. In the **More Information** window, click **Remove**. If necessary, enter the credentials for an administrator on the computer, and then click **Yes** to remove the downloaded program file.
 
 These steps should also work for Windows Vista as well (although I haven't tried them) -- but, honestly, does anyone even care about Windows Vista anymore?  ;-)
 

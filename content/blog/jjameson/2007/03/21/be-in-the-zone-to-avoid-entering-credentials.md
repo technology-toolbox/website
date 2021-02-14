@@ -59,7 +59,7 @@ authenticate:
    view or change security settings** box, click **Local intranet**,
    and then click **Sites**.
 3. At this point, depending on whether you are using Windows Vista or Windows
-   Server 2003, you may need to click the **Advanced **button
+   Server 2003, you may need to click the **Advanced** button
    to view the list of sites in this zone.
 4. Clear the **Require server verification (https:) for all sites
    in this zone** check box.
@@ -77,6 +77,6 @@ authenticate:
 
 So, the next time you see that generic login box pop up when browsing to
 a local or intranet site, rather than entering the same username and password
-that you are currently authenticated with, click **Cancel **and
+that you are currently authenticated with, click **Cancel** and
 then follow the steps above instead.
 

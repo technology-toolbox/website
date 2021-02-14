@@ -23,7 +23,7 @@ Two important aspects of the Fabrikam site are that it is configured for anonymo
 
 So the question I have this morning is this...
 
-How long would it take *you* to create a new SharePoint Web application  (http://fabrikam), create the corresponding site collection using the Publishing  Portal** **template, extend it to create an alternate access mapping  for the Internet zone (http://www.fabrikam.com), enable anonymous access, and configure  FBA on the site (including configuring the membership and role providers)? One hour?  30 minutes? How about 15 minutes? Do you think it's possible to do all this in just  a few minutes?
+How long would it take *you* to create a new SharePoint Web application  (http://fabrikam), create the corresponding site collection using the Publishing  Portal template, extend it to create an alternate access mapping  for the Internet zone (http://www.fabrikam.com), enable anonymous access, and configure  FBA on the site (including configuring the membership and role providers)? One hour?  30 minutes? How about 15 minutes? Do you think it's possible to do all this in just  a few minutes?
 
 If you have a well documented Installation Guide -- not unlike the ones I've  created for various clients ;-) -- then you should be able to go through all of  these steps in about 15 minutes. However, you're definitely going to be moving through  the steps fairly quickly, so you had better be careful not to make any mistakes  or omit any steps. This also assumes that you copy/paste the Web.config modifications  for the membership and role providers, because I doubt many people -- if anyone  -- could type those in from scratch in that amount of time.
 
@@ -116,7 +116,7 @@ by environment* -- such as the default URL for the Fabrikam site. Following  the
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 ```
 
-While we would obviously never want to deploy Debug builds to the Production  environment (only Release builds), we almost always deploy Debug builds to LOCAL  and DEV environments (in order to make it easier to troubleshoot issues). Since  the deployment scripts default to Release builds, Doug needs to set the **FABRIKAM\_BUILD\_CONFIGURATION **environment variable to **Debug**.
+While we would obviously never want to deploy Debug builds to the Production  environment (only Release builds), we almost always deploy Debug builds to LOCAL  and DEV environments (in order to make it easier to troubleshoot issues). Since  the deployment scripts default to Release builds, Doug needs to set the **FABRIKAM\_BUILD\_CONFIGURATION** environment variable to **Debug**.
 
 > **Note**
 > 
@@ -137,8 +137,7 @@ set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
 
 When creating the Web application for the Fabrikam site, a new application pool  is created as necessary using the corresponding service account (e.g. %USERDOMAIN%\svc-web-fabrikam  or %USERDOMAIN%\svc-web-fabrikam-dev). The **FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD**  environment variable is used to avoid specifying the actual password for the service  account in the script that creates the Web application.
 
-Note that this password only needs to be set when creating (or recreating) the  Web application. In other words, unlike the **FABRIKAM\_BUILD\_CONFIGURATION**  and **FABRIKAM\_DEMO\_URL **environment variables, **FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD
-**should never be set as a system environment variable but rather always  set temporarily via a command prompt.
+Note that this password only needs to be set when creating (or recreating) the  Web application. In other words, unlike the **FABRIKAM\_BUILD\_CONFIGURATION**  and **FABRIKAM\_DEMO\_URL** environment variables, **FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD** should never be set as a system environment variable but rather always  set temporarily via a command prompt.
 
 ### Step 4 - Change to the deployment scripts folder for the custom STSADM commands
 
@@ -205,7 +204,7 @@ solution
 cd ..\..\Web\DeploymentFiles\Scripts
 ```
 
-Additional configuration of the Fabrikam site -- such as enabling anonymous access  and adding the various FBA Web.config entries -- is performed using a custom SharePoint  feature (**Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**).  This feature is part of **Fabrikam.Demo.Web.wsp** -- which is deployed  using the scripts in the **Web\DeploymentFiles\Scripts **folder.
+Additional configuration of the Fabrikam site -- such as enabling anonymous access  and adding the various FBA Web.config entries -- is performed using a custom SharePoint  feature (**Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**).  This feature is part of **Fabrikam.Demo.Web.wsp** -- which is deployed  using the scripts in the **Web\DeploymentFiles\Scripts** folder.
 
 ### Step 10 - Add the custom Fabrikam Web solution (Fabrikam.Demo.Web.wsp)
 
@@ -277,7 +276,7 @@ Integrated Security=true" />
   </connectionStrings>
 ```
 
-The **FabrikamDemo **database contains the tables and stored procedures  used by the membership and role providers.
+The **FabrikamDemo** database contains the tables and stored procedures  used by the membership and role providers.
 
 #### AddAuthenticationWebConfigModifications
 
@@ -338,11 +337,11 @@ Notice that the default role provider is set to `AspNetWindowsTokenRoleProvider,
 
 #### SharePointWebConfigHelper.ApplyWebConfigModifications
 
-After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class), we then must apply them in order  to actually make the changes to the configuration files.
+After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)**  via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**  class), we then must apply them in order  to actually make the changes to the configuration files.
 
 #### EnableAnonymousAccessOnRootWeb
 
-Most of the work in enabling anonymous access on the top-level site is performed  using a method in the custom **SharePointWebHelper** class. However,  first we must get the root **SPWeb **from the **SPWebApplication**:
+Most of the work in enabling anonymous access on the top-level site is performed  using a method in the custom **SharePointWebHelper** class. However,  first we must get the root **SPWeb** from the **SPWebApplication**:
 
 ```
 internal static void EnableAnonymousAccessOnRootWeb(
@@ -413,7 +412,7 @@ Here's the relevant code from the **SharePointWebHelper** class:
 
 #### ConfigureSqlRoleProviderJob
 
-Currently, the **SPWebConfigModification** class doesn't provide  a way to make Web.config changes for a specific zone. Consequently, the default  role provider can't be set to two different values in the Web.config files using  the** SPWebConfigModification **class.
+Currently, the **SPWebConfigModification** class doesn't provide  a way to make Web.config changes for a specific zone. Consequently, the default  role provider can't be set to two different values in the Web.config files using  the** SPWebConfigModification** class.
 
 Instead, I created a custom SharePoint timer job that reads the Web.config file  for the Internet zone and updates the default role provider if it is not currently  set to `FabrikamSqlRoleProvider`.  The custom timer is created upon activation of the FBA configuration feature (and  removed when the feature is deactivated). I scheduled the timer job to run every  two minutes (which seems reasonable given the minimal amount of work performed by  the timer job).
 
@@ -619,15 +618,14 @@ While it might sound like there's a lot of custom code here, I just checked Visu
 > custom STSADM commands used in the Fabrikam solution for extending (and
 > unextending) the Web application were originally based on Gary's code.
 
-I should also point out that I explicitly left out the detailed steps for creating  the service account used by the app pool as well as the **FabrikamDemo
-**database (since these are expected to be one-time operations for each environment).  Use [aspnet\_regsql.exe](http://msdn.microsoft.com/en-us/library/ms229862%28VS.80%29.aspx)  to create the membership database and then use SQL Server Management Studio to add  the Fabrikam service account (e.g. %USERDOMAIN%\svc-web-fabrikam-dev) to the following  database roles in the **FabrikamDemo **database:
+I should also point out that I explicitly left out the detailed steps for creating  the service account used by the app pool as well as the **FabrikamDemo** database (since these are expected to be one-time operations for each environment).  Use [aspnet\_regsql.exe](http://msdn.microsoft.com/en-us/library/ms229862%28VS.80%29.aspx)  to create the membership database and then use SQL Server Management Studio to add  the Fabrikam service account (e.g. %USERDOMAIN%\svc-web-fabrikam-dev) to the following  database roles in the **FabrikamDemo** database:
 
 - **aspnet\_Membership\_BasicAccess**
 - **aspnet\_Membership\_ReportingAccess**
 - **aspnet\_Roles\_BasicAccess**
 - **aspnet\_Roles\_ReportingAccess**
 
-Once you've done this, you should be able to add a user (using the IIS 7 console)  and subsequently click the **Sign In **link on the home page of your  local Fabrikam site to login.
+Once you've done this, you should be able to add a user (using the IIS 7 console)  and subsequently click the **Sign In** link on the home page of your  local Fabrikam site to login.
 
 To remove (or prepare to rebuild) the Fabrikam Web application, run the following:
 
@@ -649,7 +647,7 @@ cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
 
 The STSADM utility will complain a little while retracting the solutions (since  the Web application was deleted prior to retracting **Fabrikam.Demo.Web.wsp**),  but don't worry, it all gets cleaned up regardless of the warnings.
 
-If the warnings during the "retract solutions" step really bother you, then you  can use the scripts specific to each WSP in order to retract and delete them (retract **Fabrikam.Demo.Web.wsp **first, then delete the Web applications,  then retract **Fabrikam.Demo.StsAdm.Commands.wsp**, and finally delete  the two WSPs from SharePoint).
+If the warnings during the "retract solutions" step really bother you, then you  can use the scripts specific to each WSP in order to retract and delete them (retract **Fabrikam.Demo.Web.wsp** first, then delete the Web applications,  then retract **Fabrikam.Demo.StsAdm.Commands.wsp**, and finally delete  the two WSPs from SharePoint).
 
 In my [next post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I cover a similar method for configuring AJAX in SharePoint applications.
 

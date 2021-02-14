@@ -68,7 +68,7 @@ However, I see two problems with KB 920783:
 
 I definitely don't recommend doing that -- unless you just like making more
 work for yourself than necessary. Instead, you should specify the local
-**WSS\_ADMIN\_WPG **and **WSS\_WPG **groups rather than
+**WSS\_ADMIN\_WPG** and **WSS\_WPG** groups rather than
 a specific user. This is what I've been doing for the last couple of years so
 trust me, it works.
 
@@ -93,7 +93,7 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > **Update (2009-10-29)**
 > 
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't
-> specify the **WSS\_ADMIN\_WPG **group -- only the **
+> specify the **WSS\_ADMIN\_WPG** group -- only the **
 > WSS\_WPG** group.
 > 
 > Ugh...that will teach me to try to recall something like this from
@@ -121,7 +121,7 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > 
 > 1. Click the **Start** menu, type **regedit**,
 >    and then click **regedit.exe**. If prompted by
->    **User Account Control **to allow the program to make
+>    **User Account Control** to allow the program to make
 >    changes to this computer, click **Yes**.
 > 2. In the **Registry Editor** window, search for "61738644-F196-11D0-9953-00C04FD919C1"
 >    to find HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
@@ -129,14 +129,13 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    key and then click **Permissions**.
 > 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
 >    dialog box, click **Advanced**.
-> 5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}
->    **dialog box:
->    1. Click the **Owner **tab.
->    2. In the **Change owner to **list, click the
->       **Administrators **group.
+> 5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
+>    1. Click the **Owner** tab.
+>    2. In the **Change owner to** list, click the
+>       **Administrators** group.
 >    3. Click **OK**.
 > 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
->    dialog box, click the **Administrators **group, then
+>    dialog box, click the **Administrators** group, then
 >    click the checkbox to allow the group **Full Control**,
 >    and click **OK**.
 > 7. Close the Registry Editor window.

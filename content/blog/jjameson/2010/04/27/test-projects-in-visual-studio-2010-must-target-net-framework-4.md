@@ -31,7 +31,7 @@ Then I looked more closely at the error:
 
 Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target .NET Framework 4?
 
-I then looked at the settings for the project that failed to build (Security.DeveloperTests) and confirmed that, yes, the **Target framework **setting had indeed been changed to **.NET Framework 4**. Hmmm...must have just been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
+I then looked at the settings for the project that failed to build (Security.DeveloperTests) and confirmed that, yes, the **Target framework** setting had indeed been changed to **.NET Framework 4**. Hmmm...must have just been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
 
 Unfortunately, that's when I got the following warning:
 

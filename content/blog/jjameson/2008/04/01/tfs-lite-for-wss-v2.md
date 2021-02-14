@@ -25,7 +25,7 @@ tags: ["Core Development", "WSS v2"]
 
 For almost as long as I can remember (okay, not really that long -- but at least  as far back as 2003), I've been using SharePoint lists as a bug tracking tool on  almost all of the customer projects that I have been involved with. Contrary to  what you might think, many of our enterprise customers do not have effective tools  and processes in place for managing a software development project.
 
-Long before I ever even heard of "Whitehorse" and "Burton" -- now known by their  official monikers, Visual Studio Team System (VSTS) and Team Foundation Server (TFS)  -- I discovered that Windows SharePoint Services v2 included the essential core  features for tracking bugs and change requests. I remember sitting down and customizing  the out-of-the-box **Issues** list in WSS v2 so that the fields were  essentially identical those in Product Studio, which -- at that time -- was the  primary tool used by the product groups in Redmond (Product Studio was the successor  to RAID). I added some new fields (for example, **Area**, **Triage**,  and **Severity**) and modified existing fields, such as changing the **Priority **choices to **1 - High**, **2 - Medium**,  and **3 - Low** (to sort by the preferred order by default).
+Long before I ever even heard of "Whitehorse" and "Burton" -- now known by their  official monikers, Visual Studio Team System (VSTS) and Team Foundation Server (TFS)  -- I discovered that Windows SharePoint Services v2 included the essential core  features for tracking bugs and change requests. I remember sitting down and customizing  the out-of-the-box **Issues** list in WSS v2 so that the fields were  essentially identical those in Product Studio, which -- at that time -- was the  primary tool used by the product groups in Redmond (Product Studio was the successor  to RAID). I added some new fields (for example, **Area**, **Triage**,  and **Severity**) and modified existing fields, such as changing the **Priority** choices to **1 - High**, **2 - Medium**,  and **3 - Low** (to sort by the preferred order by default).
 
 The beauty of doing this in WSS v2 is that a) it is incredibly easy to setup,  and b) it is a supported product that requires no custom code whatsoever. In other  words, there is no need to download and learn one of the many freely available (but  not commercially supported) bug tracking tools. In fact, the ability to save a site  (or just a single list) as a template meant that I could configure a new bug tracking  "application" for a customer within a matter of minutes.
 
@@ -124,7 +124,7 @@ The **Top 10 Issues** Web Part on the dashboard is a simple List View Web  Part 
 
 > **Current** is equal to **Yes**
 > 
-> And **Blocked **is equal to **Yes**
+> And **Blocked** is equal to **Yes**
 
 Note that the **Blocked** field indicates there is an issue in completing  the work item.
 

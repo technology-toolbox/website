@@ -24,7 +24,7 @@ Refer to the following site for more information on the **ModalPopupExtender**  
 
 To encapsulate the functionality for rendering modal popup windows, the "Announcements"         feature builds upon a lightweight "Modal Popup Framework." [Admittedly, calling         this a "framework" is a little bit of a stretch.]
 
-The framework essentially consists of the **ModalPopupWebPart** abstract         base class which is primarily responsible for rendering the **ModalPanel**         (i.e. a `<div>` element that serves as the container for content         to display in the modal popup window), the **Title Bar**, and link         buttons (**OK **and **Cancel**) to dismiss the popup window.
+The framework essentially consists of the **ModalPopupWebPart** abstract         base class which is primarily responsible for rendering the **ModalPanel**         (i.e. a `<div>` element that serves as the container for content         to display in the modal popup window), the **Title Bar**, and link         buttons (**OK** and **Cancel**) to dismiss the popup window.
 
 > **Note**
 > 

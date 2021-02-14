@@ -147,7 +147,7 @@ private static void ExportSummaryPages(
 ```
 
 The **EnsureOfflineFile** method simply checks to see if the
-specified file exists and, if not, uses the **[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)** class in the .NET Framework to download it (but first
+specified file exists and, if not, uses the **[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)**  class in the .NET Framework to download it (but first
 ensuring the specified destination folder exists -- since the
 [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx)
 method won't automatically create any necessary folders):
@@ -193,7 +193,7 @@ private static void EnsureOfflineFile(
 ### Step 2: Create a new BlogML document
 
 While I could have chosen to "handcraft" a BlogML file using something like
-**XmlTextWriter **or **XmlDocument**, during my initial
+**XmlTextWriter** or **XmlDocument**, during my initial
 research for migrating my blog I discovered
 [BlogML .NET](http://blogml.codeplex.com/), which makes it very easy
 to create the corresponding XML file with substantially less coding on my part.
@@ -271,7 +271,7 @@ static void Main(string[] args)
 folder" (e.g. C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html),
 looks for a specific string (`"No blog posts  have yet been created"`) to see if, in fact, there are any posts
 for the corresponding month, and then parses the HTML using an instance of the
-**HtmlDocument **class from the Html Agility Pack.
+**HtmlDocument** class from the Html Agility Pack.
 
 ```
 private static void ExportPostSummaries(
@@ -335,8 +335,7 @@ private static void ExportPostSummaries(
 
 Even if you haven't used the Html Agility Pack before (which is something
 I highly recommend if you ever encounter the need to parse HTML), it should
-be relatively easy to understand the parsing logic in the **ExportPostSummaries
-**method. Here is a sample HTML fragment that shows the "interesting"
+be relatively easy to understand the parsing logic in the **ExportPostSummaries** method. Here is a sample HTML fragment that shows the "interesting"
 elements that are used to extract the post title and excerpt (i.e. summary)
 and add these to the BlogML document.
 
@@ -376,11 +375,11 @@ and add these to the BlogML document.
 
 ### Step 4: Download each blog post and parse the HTML
 
-At this point, the instance of **BlogMLBlog **contains about
+At this point, the instance of **BlogMLBlog** contains about
 300 posts, but only the title and excerpt of each post. The next step is to
 populate the full content for each post as well as set some additional metadata
 (e.g. the date each post was published). This functionality is implemented in
-the **ExportPosts **method.
+the **ExportPosts** method.
 
 ```
 static void Main(string[] args)
@@ -544,7 +543,7 @@ element).
 
 #### Transforming blog post content
 
-As its name implies, the **TransformOriginalPostContent **method
+As its name implies, the **TransformOriginalPostContent** method
 "massages" the content of each post in order to:
 
 - Remove "junk" added by the Telligent WYSIWYG HTML editor that I don't
@@ -626,8 +625,7 @@ private static void RemoveUnwantedAttributes(
         }
 ```
 
-Link translation is also relatively easy thanks to the **HtmlNode.Descendants
-**method and the fact that the URLs for each post on my new blog are
+Link translation is also relatively easy thanks to the **HtmlNode.Descendants** method and the fact that the URLs for each post on my new blog are
 very similar to the old URLs:
 
 ```
@@ -688,10 +686,10 @@ URLs from the legacy system to the new URLs within SharePoint.
 
 Note that I originally tried using only the Html Agility Pack to ensure the
 post content is well-formed. However, I found some instances in my blog posts
-where the **HtmlDocument **class did not fix mismatched tags.
+where the **HtmlDocument** class did not fix mismatched tags.
 
 Rather than attempting to debug somebody else's code, I decided to "punt"
-and just use my **HtmlCleaner **class instead -- since I've used
+and just use my **HtmlCleaner** class instead -- since I've used
 this extensively in the past. Note that **HtmlCleaner** is really
 just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
@@ -846,7 +844,7 @@ future, but it's what I'm currently using.
 
 My intent is that posts are typically associated with one or two categories
 (e.g. **SharePoint** + **Development**) and tags are
-used to further refine categories (e.g. **MOSS 2007 **vs.
+used to further refine categories (e.g. **MOSS 2007** vs.
 **SharePoint 2010**). The important thing to realize about tags
 and categories in Subtext is that categories are implemented as a highly structured
 taxonomy (meaning you have to explicitly define the list of available categories)
@@ -889,8 +887,8 @@ private static void AppendBlogPostTags(
         }
 ```
 
-The **GetPostTags **method simply uses the now familiar parsing
-functionality of **HtmlDocument **to extract the list of tags from
+The **GetPostTags** method simply uses the now familiar parsing
+functionality of **HtmlDocument** to extract the list of tags from
 the offline post file:
 
 ```
@@ -918,8 +916,8 @@ private static string[] GetPostTags(
         }
 ```
 
-I created the **GetNewTag **method (called from the **
-AppendBlogPostTags **method above) when I realized I should have used
+I created the **GetNewTag** method (called from the **
+AppendBlogPostTags** method above) when I realized I should have used
 a different tag on my MSDN blog (i.e. **SharePoint 2010** -- instead
 of **SharePoint Server 2010**):
 
@@ -970,14 +968,13 @@ mapping, illustrated below:
 | WSUS | Infrastructure |
 > **Note**
 > 
->       Since posts tagged with **PowerShell** or **SQL Server
->       **could fall into different categories depending on their specific 
->       content (e.g. **Infrastructure **or **Development**), 
+>       Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific 
+>       content (e.g. **Infrastructure** or **Development**), 
 >       I decided not to use these tags for mapping (and instead rely on categories 
 >       being derived from other tags on the same post).
 
-This mapping is implemented in the **MapTagToCategory **method,
-which is called from the **FillPostCategories **method:
+This mapping is implemented in the **MapTagToCategory** method,
+which is called from the **FillPostCategories** method:
 
 ```
 private static void FillPostCategories(
@@ -1193,7 +1190,7 @@ private static void ExportPostComments(
         }
 ```
 
-The **GetFeedbackHtmlForPost **method is where the "magic" happens
+The **GetFeedbackHtmlForPost** method is where the "magic" happens
 for Web scraping the fake Ajax request used to retrieve the comments:
 
 ```
@@ -1328,7 +1325,7 @@ static void Main(string[] args)
         }
 ```
 
-The **SaveBlogML **method is very simple...
+The **SaveBlogML** method is very simple...
 
 ```
 private static void SaveBlogML(
@@ -1352,13 +1349,12 @@ to an XML file. Instead, it provides you a base class (**BlogMLWriterBase**)
 that you need to derive from (and implement the abstract **InternalWriteBlog**
 method).
 
-Fortunately, this wasn't an issue since I was able to copy the **BlogMLWriter
-**class from the Subtext source code and make a couple of tweaks to make
+Fortunately, this wasn't an issue since I was able to copy the **BlogMLWriter** class from the Subtext source code and make a couple of tweaks to make
 it work for my migration tool.
 
 ### Step 7: Import the BlogML file
 
-With the 5 MB XML file generated by my **ExportMsdnBlog **utility,
+With the 5 MB XML file generated by my **ExportMsdnBlog** utility,
 I was almost ready to import the BlogML file into Subtext for the final time.
 However, I discovered a couple of issues during my testing:
 
@@ -1408,7 +1404,7 @@ work as expected (since the BlogML file specifies a default namespace):
 ```
 
 In hindsight, I suppose another alternative would have been to customize
-the **WritePosts **method of the **BlogMLWriter **
+the **WritePosts** method of the **BlogMLWriter**
 class to use LINQ to select the objects from the **PostCollection**
 in a specific order (instead of the simple `foreach` loop currently specified
 in that method). If this was something I expected to use on an ongoing basis,

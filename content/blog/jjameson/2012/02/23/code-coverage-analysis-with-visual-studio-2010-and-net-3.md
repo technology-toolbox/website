@@ -56,7 +56,7 @@ inside Visual Studio. This resulted in the following message from Visual Studio:
 Okay, perhaps what that Microsoft MVP meant is that you need to run the unit
 tests outside the debugger (e.g. by using Ctrl + F5). Ummm...yeah...I tried
 that -- it doesn't work. When I click the Show Code Coverage Results toolbar
-button in the **Test Results **window, I see the following:
+button in the **Test Results** window, I see the following:
 
 > Cannot find any coverage data (.coverage or .coveragexml) files. Check test
 > run details for possible errors.

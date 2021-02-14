@@ -46,14 +46,14 @@ Let's start with a simple scenario -- or, more precisely, a very basic hack
 attempt. Specifically, imagine for a moment that you are a hacker and you want
 to "probe" an ASP.NET website to see if it is configured to block potentially
 malicious input strings submitted by the client. In other words, you want to
-see if the **validateRequest **attribute has been set to
-**false **in the Web.config file or on a specific page. [If your
+see if the **validateRequest** attribute has been set to
+**false** in the Web.config file or on a specific page. [If your
 website currently does this, I really hope you know what you are doing.]
 
 You can quickly check this by specifying a "?&lt;script&gt;" query string
 when requesting a page. Assuming the default (i.e. secure) configuration, an
-**HttpRequestValidationException **will occur, and -- assuming
-the ELMAH **ErrorMailModule **is configured -- the exception will
+**HttpRequestValidationException** will occur, and -- assuming
+the ELMAH **ErrorMailModule** is configured -- the exception will
 trigger an email to the designated recipients.
 
 Since, like me, you probably don't want to be bothered by a message whenever
@@ -95,7 +95,7 @@ element and checking if the current "filter source" is the **ErrorMailModule**):
 ```
 
 With the configuration shown above, anytime someone causes an **HttpRequestValidationException**,
-the error is logged via **ErrorLogModule **(which, in my configuration
+the error is logged via **ErrorLogModule** (which, in my configuration
 means it is written to the SQL Server database) but the email message is suppressed,
 courtesy of the filter.
 
@@ -312,12 +312,12 @@ but here is the gist of it:
 > when using **FilterSourceType.Name** (in other words,
 > **FilterSourceType.Name** is not evaluated the second time
 > through when the **ErrorMailModule** context object is passed
-> to the **Eval **method).
+> to the **Eval** method).
 > 
 > The filter should work the same in Full trust and Medium trust
 > (meaning the error should be logged, but an email should not be sent from
 > ELMAH due to the filter). Instead of correctly applying the filter in the
-> Full trust configuration, **FilterSourceType.Name **is not
+> Full trust configuration, **FilterSourceType.Name** is not
 > evaluated as expected (it appears to be evaluated as **"ErrorLogModule"**
 > even though the context object is **ErrorMailModule**).
 

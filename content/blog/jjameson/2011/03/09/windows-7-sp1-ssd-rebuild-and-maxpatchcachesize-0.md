@@ -62,7 +62,7 @@ I then proceeded to install the following:
    - **Safari**
    - **Chrome**
    - **Opera**
-3. **Virtual CloneDrive -- **my preferred tool for dealing with .iso and
+3. **Virtual CloneDrive --** my preferred tool for dealing with .iso and
    .img files downloaded from MSDN
 4. Essential productivity "stuff":
    - **Microsoft Office Professional Plus 2010**
@@ -76,7 +76,7 @@ I then proceeded to install the following:
 8. **Team Foundation Server Power Tools**
 9. **Visual Studio 2010 Service Pack 1**
 10. **Microsoft Expression Studio 4**
-11. **System Center Operations Manager (SCOM) 2007 R2 **-- just the Operations
+11. **System Center Operations Manager (SCOM) 2007 R2** -- just the Operations
     Console (so I can easily manage the various servers in the "Jameson Datacenter"
     from my Windows 7 desktop)
 12. **Mozilla Thunderbird (**if you are wondering why I use this in addition
@@ -90,20 +90,20 @@ I then proceeded to install the following:
     5. **MSBuild Community Tasks**
     6. **Paint.NET**
     7. **Rooler**
-15. **Adobe Flash **-- I wish I didn't need this, but the Web "is what
+15. **Adobe Flash** -- I wish I didn't need this, but the Web "is what
     it is"...although there's probably some people out there saying the same thing about
     Silverlight :-)
-16. **Adobe Reader **-- another thing I wish I didn't need to install (especially
+16. **Adobe Reader** -- another thing I wish I didn't need to install (especially
     since the Adobe developers apparently can't figure out how -- or are simply too
     lazy -- to get it to work with roaming profiles, thereby forcing me to install the
     old 8.1.x version)
 17. Personal "stuff":
-    1. **Microsoft Money **(yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not now...probably not ever)
-    2. **ActivePython 2.7.1.3 (64-bit) **-- for running PocketSense (Python)
+    1. **Microsoft Money** (yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not now...probably not ever)
+    2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
        scripts in order to download quotes and credit card statements into Money via OFX
-    3. **Windows Live Essentials -- **primarily for Windows Live Photo Gallery
+    3. **Windows Live Essentials --** primarily for Windows Live Photo Gallery
        and Windows Live Movie Maker
-    4. **Sony Picture Utility -- **unfortunately, I can't import video directly
+    4. **Sony Picture Utility --** unfortunately, I can't import video directly
        onto my computer from my five-year old digital camcorder; intead I have to use this
        (admittedly poor) software instead
 

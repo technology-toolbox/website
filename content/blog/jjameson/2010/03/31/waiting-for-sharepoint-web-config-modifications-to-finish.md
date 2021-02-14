@@ -37,7 +37,7 @@ This week, I had some time to tackle the problem so I modified my local developm
 When there are multiple front-end Web servers in the SharePoint farm, we need  to wait for the timer job that performs the Web.config modifications to complete  before continuing. Otherwise, the "configuration modification
 operation is already running" error may occur when applying Web.config changes  from two different features in rapid succession.
 
-To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class) **class in the **ApplyWebConfigModifications**  method:
+To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**  class in the **ApplyWebConfigModifications**  method:
 
 ```
 if (webApp.Farm.TimerService.Instances.Count > 1)
@@ -61,10 +61,9 @@ if (webApp.Farm.TimerService.Instances.Count > 1)
             }
 ```
 
-As you can see, most of the work is delegated to the **SharePointTimerJobHelper
-**class. **SharePointWebConfigHelper** only knows the name of  the one-time timer job (`"Windows SharePoint Services  Web.Config Update"`) and a reasonable amount of time that the timer  job should take to complete (20 seconds). Note that it doesn't necessarily wait  the full 20 seconds for the timer job to complete (essentially the original hack  that I thought about implementing). Rather it waits at most 20 seconds for the timer  job to complete. Also note that there is no guarantee that the timer job actually  finished (or even ran) when the call to `SharePointTimerJobHelper.WaitForOnetimeJobToFinish`  returns. However, in my testing I found that 20 seconds seemed like a good choice  for the <var>maximumWaitTime</var> parameter.
+As you can see, most of the work is delegated to the **SharePointTimerJobHelper** class. **SharePointWebConfigHelper** only knows the name of  the one-time timer job (`"Windows SharePoint Services  Web.Config Update"`) and a reasonable amount of time that the timer  job should take to complete (20 seconds). Note that it doesn't necessarily wait  the full 20 seconds for the timer job to complete (essentially the original hack  that I thought about implementing). Rather it waits at most 20 seconds for the timer  job to complete. Also note that there is no guarantee that the timer job actually  finished (or even ran) when the call to `SharePointTimerJobHelper.WaitForOnetimeJobToFinish`  returns. However, in my testing I found that 20 seconds seemed like a good choice  for the <var>maximumWaitTime</var> parameter.
 
-Here is the code for the **SharePointTimerJobHelper **class:
+Here is the code for the **SharePointTimerJobHelper** class:
 
 ```
 using System;

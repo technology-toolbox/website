@@ -116,7 +116,7 @@ function Main()
 Main
 ```
 
-If you aren't familiar with the "`-EA 0`" abbreviated syntax, just realize that it's a short way of saying "`-ErrorAction SilentlyContinue`", or in other words you are telling PowerShell, "there's a chance this command may generate an error, but I'm okay with that -- just ignore it." For example, if you try to add the SharePoint PowerShell snap-in but the snap-in has already been added, then you get an error. However, in order to run the script from Windows PowerShell ISE (Integrated Shell Environment) or from a plain ol' PowerShell prompt (i.e. not the **SharePoint 2010 Management Shell **shortcut), then we need to ensure the SharePoint snap-in is loaded.
+If you aren't familiar with the "`-EA 0`" abbreviated syntax, just realize that it's a short way of saying "`-ErrorAction SilentlyContinue`", or in other words you are telling PowerShell, "there's a chance this command may generate an error, but I'm okay with that -- just ignore it." For example, if you try to add the SharePoint PowerShell snap-in but the snap-in has already been added, then you get an error. However, in order to run the script from Windows PowerShell ISE (Integrated Shell Environment) or from a plain ol' PowerShell prompt (i.e. not the **SharePoint 2010 Management Shell** shortcut), then we need to ensure the SharePoint snap-in is loaded.
 
 The rest of the script should be pretty obvious. However, it might be worth pointing out that I explicitly add the "`-Debug:$false`" parameter to the various SharePoint cmdlets because I often set `$DebugPreference = "Continue"` in order to get debug messages from my scripts, but I don't want to see the SharePoint debug messages.
 
@@ -126,7 +126,7 @@ Also keep in mind that this script creates a Web application with claims authent
 
 ### Create Site Collections.ps1
 
-At this point, we have a brand new Web application but it doesn't contain any site collections. While the Fabrikam Internet site will likely end up having numerous site collections, let's start out by simply creating the top-level site (i.e. "/") using the **Publishing Portal **site definition.
+At this point, we have a brand new Web application but it doesn't contain any site collections. While the Fabrikam Internet site will likely end up having numerous site collections, let's start out by simply creating the top-level site (i.e. "/") using the **Publishing Portal** site definition.
 
 ```
 $ErrorActionPreference = "Stop"
@@ -183,7 +183,7 @@ There's not much worth noting about this script, except perhaps to be aware that
 
 For an Internet-facing site, I can't think of any scenario where we wouldn't want to allow anonymous access to at least some part of the site (even for an extranet site, at a minimum, we would probably want to support a custom login page as well as some generic content, such as terms and conditions for using the site).
 
-For the Fabrikam site, most of the content will be available to anonymous users. Therefore, we use a script to avoid having to repeatedly configure anonymous access through **Site Actions **-&gt; **Site Permissions** (a.k.a. /\_layouts/user.aspx). By "repeatedly" I am referring to performing this configuration change in each environment (DEV, TEST, and PROD) or whenever a developer decides to rebuild the Web application in his or her local SharePoint environment.
+For the Fabrikam site, most of the content will be available to anonymous users. Therefore, we use a script to avoid having to repeatedly configure anonymous access through **Site Actions** -&gt; **Site Permissions** (a.k.a. /\_layouts/user.aspx). By "repeatedly" I am referring to performing this configuration change in each environment (DEV, TEST, and PROD) or whenever a developer decides to rebuild the Web application in his or her local SharePoint environment.
 
 ```
 $ErrorActionPreference = "Stop"
@@ -248,9 +248,9 @@ If you *have* seen the errors I'm referring to, then you're probably familiar wi
 <cite>Configure object cache user accounts</cite>
 [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)
 
-Here's a script to get rid of those pesky errors. It assumes the Portal Super User is **{DOMAIN}\svc-sp-psu** (or perhaps some variant depending on environment, such as **{DOMAIN}\svc-sp-psu-dev**) and the Portal Super Reader is **{DOMAIN}\svc-sp-psr **(or, again, some variant of this).
+Here's a script to get rid of those pesky errors. It assumes the Portal Super User is **{DOMAIN}\svc-sp-psu** (or perhaps some variant depending on environment, such as **{DOMAIN}\svc-sp-psu-dev**) and the Portal Super Reader is **{DOMAIN}\svc-sp-psr** (or, again, some variant of this).
 
-It takes care of adding the appropriate user policies on the Web application (**Full Control **to **{DOMAIN}\svc-sp-psu,** and **Full Read **to **{DOMAIN}\svc-sp-psr**), as well as setting the corresponding properties on the Web application -- as described in the above TechNet article. It also ensures the specified service accounts are indeed valid (via the `GetUserDisplayName` function).
+It takes care of adding the appropriate user policies on the Web application (**Full Control** to **{DOMAIN}\svc-sp-psu,** and **Full Read** to **{DOMAIN}\svc-sp-psr**), as well as setting the corresponding properties on the Web application -- as described in the above TechNet article. It also ensures the specified service accounts are indeed valid (via the `GetUserDisplayName` function).
 
 ```
 $ErrorActionPreference = "Stop"
@@ -457,7 +457,7 @@ Let's start with a script to add the solution (note that additional solutions ma
 
 If you've been developing with SharePoint 2010 for any signficant period of time, then you might have encountered issues due to "stale" assemblies being used for event receivers (unless perhaps you simply do all of your "DR.DADA" operations through Visual Studio and never through PowerShell). This is because your assemblies are actually loaded into the PowerShell process during various deployment operations (for example, when you invoke the `Add-SPSolution` cmdlet). I discovered this issue the "hard way" -- in other words, by attaching WinDbg to my PowerShell command prompt.
 
-When I searched the Internet for ***PowerShell reload assembly ***(looking for an easy way to unload a specific assembly), I discovered the following blog post:
+When I searched the Internet for ***PowerShell reload assembly***(looking for an easy way to unload a specific assembly), I discovered the following blog post:
 
 <cite>PowerShell Does Not Reload Upgraded Assemblies </cite>
 [http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies](http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies)
@@ -865,7 +865,7 @@ Let's start by deactivating the features...
 
 ### Deactivate Features.ps1
 
-If you've carefully examined the **Activate Features.ps1 **script, then there's really no point in scrutinizing the following script ;-)
+If you've carefully examined the **Activate Features.ps1** script, then there's really no point in scrutinizing the following script ;-)
 
 ```
 param(
@@ -994,7 +994,7 @@ Main $force
 
 ### Retract Solutions.ps1
 
-After the features are deactivated, we are ready to retract the solution from the Web application. Like the **Deploy Solutions.ps1 **script, I try to avoid SharePoint timer jobs -- if possible -- so that developers can be as productive as possible.
+After the features are deactivated, we are ready to retract the solution from the Web application. Like the **Deploy Solutions.ps1** script, I try to avoid SharePoint timer jobs -- if possible -- so that developers can be as productive as possible.
 
 ```
 param(
@@ -1169,12 +1169,12 @@ function Main()
 Main
 ```
 
-This script essentially performs the same activities as the **Default **deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you'll find that I changed the **Activate On Default **property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
+This script essentially performs the same activities as the **Default** deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you'll find that I changed the **Activate On Default** property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
 
 <cite>SharePoint Features Activated by Default</cite>
 [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default)
 
-Consequently, I used the **Redeploy Features.ps1 **script to ensure the WebAppConfiguration feature is activated (thus ensuring my custom Sign In page for claims authentication was configured on the Web application).
+Consequently, I used the **Redeploy Features.ps1** script to ensure the WebAppConfiguration feature is activated (thus ensuring my custom Sign In page for claims authentication was configured on the Web application).
 
 ### Upgrade Solutions.ps1
 

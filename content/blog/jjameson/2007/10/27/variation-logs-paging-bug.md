@@ -18,7 +18,7 @@ tags: ["MOSS 2007"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-It's embarrassing how my blog posts rapidly died off after this past June. However  it's even more embarrassing to disclose the paging bug when viewing the **Variation Logs **page in Microsoft Office SharePoint Server (MOSS) 2007.
+It's embarrassing how my blog posts rapidly died off after this past June. However  it's even more embarrassing to disclose the paging bug when viewing the **Variation Logs** page in Microsoft Office SharePoint Server (MOSS) 2007.
 
 [By the way, my intent is to jump back on the blogging bandwagon over the next  couple of weeks. I will share some important discoveries our team has made over  the last several months while building the second version of our solution based  on MOSS 2007 for a large enterprise customer.]
 
@@ -29,9 +29,9 @@ To view the variation logs and observe the paging bug:
 1. Browse to the home page of the top level site, click **Site Actions**,
    point to **Site Settings**, and then click **Modify All Site
    Settings**.
-2. On the **Site Settings **page, in the **Site Collection
-   Administration **section, click **Variation logs**.
-3. On the **Variation Logs **page, observe that the results are
+2. On the **Site Settings** page, in the **Site Collection
+   Administration** section, click **Variation logs**.
+3. On the **Variation Logs** page, observe that the results are
    sorted by **Time Started (GMT)** in descending order and that only
    the first 20 log entries are shown.
 4. Click the right arrow in the paging control (i.e. "**1 - 20 &gt;**")
@@ -46,7 +46,7 @@ Ending this post here really wouldn't be helpful at all -- I'd simply be pointin
 
 The short answer is query the SharePoint database directly. [Remember it's okay  to query SharePoint databases all you want (realizing that this isn't technically  supported, because Microsoft may change the schema over time) -- just don't modify  your database directly unless you are running a script provided by PSS or you wouldn't  object to rebuilding your SharePoint environment if you encounter a problem after  modifying the database.]
 
-The long answer is derived by using SQL Server Profiler to capture the SELECT  statement used to render the **Variation Logs **page. The query looks  something like this:
+The long answer is derived by using SQL Server Profiler to capture the SELECT  statement used to render the **Variation Logs** page. The query looks  something like this:
 
 ```
 SELECT ...
@@ -65,11 +65,9 @@ WHERE
 ORDER BY
 ```
 
-The first time you browse to the **Variation Logs **page, the ORDER  BY clause specifies to sort first by **tp\_Created **descending and  then by **tp\_ID **ascending. However, when you page to the next set  of results, the ORDER BY clause only specifies **tp\_ID **-- thus displaying  the oldest log entries first.
+The first time you browse to the **Variation Logs** page, the ORDER  BY clause specifies to sort first by **tp\_Created** descending and  then by **tp\_ID** ascending. However, when you page to the next set  of results, the ORDER BY clause only specifies **tp\_ID** -- thus displaying  the oldest log entries first.
 
-Note that the previous SELECT statement is substantially shorter than the actual  statement executed (large portions of the statement have been replaced by ellipses).  The key thing to note is that the log entries -- or, more generally, the status  messages for all long running operations -- are stored in the **AllUserData
-**table (**UserData **is a view on the **AllUserData
-**table). If you are not familiar with the **AllUserData** table,  it is almost always the largest table in the SharePoint content database -- in terms  of number of rows -- and contains all items in the various SharePoint lists. In  other words, **Long Running Operation Status** is just another SharePoint  list. Talk about eating your own dogfood!
+Note that the previous SELECT statement is substantially shorter than the actual  statement executed (large portions of the statement have been replaced by ellipses).  The key thing to note is that the log entries -- or, more generally, the status  messages for all long running operations -- are stored in the **AllUserData** table (**UserData** is a view on the **AllUserData** table). If you are not familiar with the **AllUserData** table,  it is almost always the largest table in the SharePoint content database -- in terms  of number of rows -- and contains all items in the various SharePoint lists. In  other words, **Long Running Operation Status** is just another SharePoint  list. Talk about eating your own dogfood!
 
 Thus, to circumvent the paging bug in the **Variation Logs** page,  use a query similiar to the following:
 

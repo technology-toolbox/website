@@ -129,7 +129,7 @@ file:
     ...  </FullTextSearchEngineSettings>
 ```
 
-**Recommendation: **Implement the fix described above to prevent
+**Recommendation:** Implement the fix described above to prevent
 "automatic search results" from being added by the Subtext master page -- or
 try upgrading to a newer version of Lucene.Net to see if it still spews errors
 when the HTTP referrer specifies something like:
@@ -154,7 +154,7 @@ attempts to crawl (or re-crawl) the image at some later point in time (after
 the application pool has recycled).
 
 The problem is that -- at least in Subtext 2.5.2.0 -- the key and initialization
-vector (IV) used in the **CaptchaBase **class are randomly generated
+vector (IV) used in the **CaptchaBase** class are randomly generated
 each time the Web application starts up. What I found particularly interesting
 is at some point there was intent to generate these values once per environment.
 At least that is what I inferred from the following comment:
@@ -264,7 +264,7 @@ to a rather annoying error -- allowing me to redirect my efforts elsewhere.
 > In my case, these errors stopped occurring around the middle of December
 > (and I switched to a fixed key and IV in early October).
 
-**Recommendation: **Implement the fix described above and then
+**Recommendation:** Implement the fix described above and then
 be patient.
 
 ### System.Security.SecurityException: Request failed. (IdenticonHandler.ashx)
@@ -403,7 +403,7 @@ public class GravatarService
     }
 ```
 
-In the **Comments **control, I modified the logic for displaying
+In the **Comments** control, I modified the logic for displaying
 Gravatar images next to post comments:
 
 ```
@@ -501,7 +501,7 @@ specify their email addresses:
 Without the code changes in Subtext that I show above, your site can't address
 both scenarios. Then again, maybe you aren't quite as "nitpicky" as I am ;-)
 
-**Recommendation: **Merge Subtext revision
+**Recommendation:** Merge Subtext revision
 [r4237](http://code.google.com/p/subtext/source/detail?r=4237) into
 your version of Subtext (optionally merging my updates to the **GravatarService**
 and **Comments** classes to provide more customization options
@@ -520,12 +520,11 @@ a security hole in your solution or in ASP.NET itself.]
 
 After spending a few minutes investigating the bug, I found the culprit to
 be ICSharpCode.SharpZipLib.dll. A little more digging and I discovered the latest
-version of this assembly has the **AllowPartiallyTrusterCallers
-**assembly attribute.
+version of this assembly has the **AllowPartiallyTrusterCallers** assembly attribute.
 
 Woohoo! I love bugs that take less than an hour to resolve.
 
-**Recommendation: **Download the latest version of ICSharpCode.SharpZipLib.dll,
+**Recommendation:** Download the latest version of ICSharpCode.SharpZipLib.dll,
 overwrite the previous version in the Subtext solution, and rebuild. Then go
 celebrate your bug-bashing victory by pouring yourself a glass of Maker's Mark.
 
@@ -561,8 +560,7 @@ actually throws a **SecurityException**:
 > System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 > failed.
 
-The problem is in the **OnLoad **method of the **CategoryEntryList
-**class. To fix this bug, I changed it to the following:
+The problem is in the **OnLoad** method of the **CategoryEntryList** class. To fix this bug, I changed it to the following:
 
 ```
 protected override void OnLoad(EventArgs e)
@@ -603,7 +601,7 @@ protected override void OnLoad(EventArgs e)
 >       There are a few other places in the Subtext solution where the 
 >       **HttpHelper.SetFileNotFoundResponse** method is called 
 >       (and should probably be updated as well to avoid issues when running 
->       in **Medium **trust). However, at present, I haven't bothered 
+>       in **Medium** trust). However, at present, I haven't bothered 
 >       to change those (since I am trying to minimize the number of changes 
 >       that I make to my Subtext branch).
 
@@ -645,7 +643,7 @@ my check-in comments below:
 Then again, perhaps Pingback functionality and correct spelling (even in
 code) just isn't all that important to you.
 
-**Recommendation: **If you are genuinely interested in getting
+**Recommendation:** If you are genuinely interested in getting
 pingbacks working in Subtext, then contact me. [Perhaps we can work out a trade
 for a small bottle of Maker's Mark. Oh wait, there's probably some law against
 shipping a bottle of bourbon across state lines. Well, I'm sure we can figure
@@ -675,7 +673,7 @@ or `Subtext.Framework.Web.Handlers.SubtextPage.get_Repository()`
 -- and all but one do *not* specify an HTTP referrer. Again, this seems
 to point to hackers trying to find a vulnerability in the site.
 
-**Recommendation: **Keep an eye on this one and perhaps do some
+**Recommendation:** Keep an eye on this one and perhaps do some
 more research on known security holes in Subtext (maybe older versions?).
 
 ### System.ArgumentOutOfRangeException: Index and length must refer to a location
@@ -696,7 +694,7 @@ outside the U.S.?
 Well, maybe just somebody "innocently" screwing around with my site -- all
 under the guise of some "holding" company.
 
-**Recommendation: **Another one to keep an eye on.
+**Recommendation:** Another one to keep an eye on.
 
 ### System.Data.SqlClient.SqlException: A network-related or instance-specific
 
@@ -719,7 +717,7 @@ the company, so I'd better watch for similar outages in the future.
 Since this error has only happened one time (back on November 3rd), I'll
 call it a "fluke" and let it slide.
 
-**Recommendation: **Consider contacting the hosting provider
+**Recommendation:** Consider contacting the hosting provider
 if this occurs more frequently in the future.
 
 ### System.Data.SqlClient.SqlException: Timeout expired...
@@ -732,8 +730,7 @@ Similar to the previous error:
 It happened once on November 8th and then twice on January 11th. From my
 notes, I know that the November 8th instance was my own fault. I was doing a
 bulk update on a number of blog posts (using a little utility that I wrote)
-and the tool ended up creating a lock on the **subtext\_Content
-**table. Ugh.
+and the tool ended up creating a lock on the **subtext\_Content** table. Ugh.
 
 See, this is exactly why Microsoft doesn't support directly querying SharePoint
 databases. You have to be *very* careful when accessing Production databases
@@ -744,7 +741,7 @@ I'm not sure what happened on January 11. All I know is that I wasn't running
 any kind of bulk update at that time. I'll keep an eye out for future instances
 of this error.
 
-**Recommendation: **Before running any kind of utility in Production,
+**Recommendation:** Before running any kind of utility in Production,
 ensure you run it in the Test environment (that was recently
 ["refreshed" from Production](/blog/jjameson/2011/11/14/building-technologytoolbox-com-part-7)) and monitor locks in SQL Server while testing.
 
@@ -754,7 +751,7 @@ One-time only...back on November 2nd.
 
 No HTTP referrer.
 
-**Recommendation: **Call it a rather lame attempt at hacking
+**Recommendation:** Call it a rather lame attempt at hacking
 the site and move on.
 
 ### System.Web.HttpException: This is an invalid webresource request.
@@ -764,7 +761,7 @@ While more frequent than the previous error, this error has only occurred
 
 Looks like more pathetic hacking attempts.
 
-**Recommendation: **Consider configuring a filter in ELMAH to
+**Recommendation:** Consider configuring a filter in ELMAH to
 weed out the hacking "noise."
 
 > **Update (2012-02-28)**
@@ -793,7 +790,7 @@ days (for tracking RSS views). This explains the absence of HTTP referrer. Perha
 it's not hackers after all...still seems a little suspicious, but perhaps it
 only occurs with certain RSS readers.
 
-**Recommendation: **Ignore (for now).
+**Recommendation:** Ignore (for now).
 
 ### System.UriFormatException: Invalid URI: The URI scheme is not valid.
 
@@ -803,7 +800,7 @@ A quick look at the HTTP\_REFERER field tells me all I need to know. Seriously,
 whoever you are at 173.234.181.91, go away. I'm not interested in your "enhancements"
 and I don't think people visiting my site would be either.
 
-**Recommendation: **Ignore (hacker)
+**Recommendation:** Ignore (hacker)
 
 ### System.InvalidOperationException: Sorry, but we cannot accept this comment.
 
@@ -815,7 +812,7 @@ when adding a comment.
 
 Bastard.
 
-**Recommendation: **Ignore (hacker)
+**Recommendation:** Ignore (hacker)
 
 ### System.Web.HttpException: The file '/blog/jjameson/user/CreateUser.aspx'
 
@@ -827,7 +824,7 @@ week later on November 29th. Both from the same IP address (96.31.35.33).
 Seriously, you're going to have to try harder than that. Perhaps you should
 try some SQL-injection attacks instead?!
 
-**Recommendation: **Ignore (hacker)
+**Recommendation:** Ignore (hacker)
 
 ### System.Web.HttpException: The file '/blog/jjameson/post.aspx' does not exist.
 
@@ -836,7 +833,7 @@ instance, the HTTP referrer is actually my Feedburner URL. In the second one,
 there is no HTTP referrer, but it appears to be from a crawler for a Russian
 search engine I'm not familiar with (YandexBot).
 
-**Recommendation: **Ignore (for now)
+**Recommendation:** Ignore (for now)
 
 ### System.ArgumentException: Invalid postback or callback argument. Event validation
 
@@ -853,7 +850,7 @@ YAHA (yet another hacking attempt):
 > data is valid and expected, use the ClientScriptManager.RegisterForEventValidation
 > method in order to register the postback or callback data for validation.
 
-**Recommendation: **Ignore it...or, better yet, take a moment
+**Recommendation:** Ignore it...or, better yet, take a moment
 to enjoy all of the out-of-the-box "goodness" we get for free when it comes
 to security in ASP.NET. [It really helps to offset what you feel whenever you
 see Microsoft release a security patch for the .NET Framework.]

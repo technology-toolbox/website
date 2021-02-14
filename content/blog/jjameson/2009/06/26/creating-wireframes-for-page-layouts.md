@@ -29,7 +29,7 @@ I then paste the screenshot into Visio.
 
 Next, I deemphasize the portions of the page rendered by the master page. To accomplish         this, add a rectangle with the text **Header (Master Page)** over the         top portion of the page. Then fill the rectangle with light gray (**Shade 15%**)         and set the transparency to **30%**. Repeat similar steps for the footer         and other content provided by the master page.
 
-The next step is to emphasize the various fields that we need to define in the corresponding         content type. In Figure 1, it is easy to discern that we have a **Title**         (i.e. "Glycomics Solution"), a **Page Image** (i.e. the circular image         on the right side of the page), and some arbitrary amount of **Page Content**         (i.e. the "stuff" in the middle). I also chose to provide a **Subtitle **         field for the bold text at the top of the page. Isolating the **Subtitle**         allows us to provide "semantic markup" and better control the formatting and layout         of this content.
+The next step is to emphasize the various fields that we need to define in the corresponding         content type. In Figure 1, it is easy to discern that we have a **Title**         (i.e. "Glycomics Solution"), a **Page Image** (i.e. the circular image         on the right side of the page), and some arbitrary amount of **Page Content**         (i.e. the "stuff" in the middle). I also chose to provide a **Subtitle**          field for the bold text at the top of the page. Isolating the **Subtitle**         allows us to provide "semantic markup" and better control the formatting and layout         of this content.
 
 To highlight these various fields, I create rectangles with corresponding text and         fill them with a very light red (**Tint 35%**) and again set the transparency         to **30%**.
 
@@ -55,8 +55,7 @@ Figure 4: Press Release (Page Layout)
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28Page%20Layout%29.jpg)
 
 Note the importance of choosing good sample pages when mocking up the wireframes         for page layouts. I chose the example press release above based on the fact that         it had "additional contact" information. In other words, all press releases have         primary contact information (which I chose to map to the out-of-the-box **Contact
-Name**, **Contact Phone**, and **Contact E-mail Address
-**fields), but only some press releases have additional contacts -- which         may consist of one more more individuals. Rather than attempting to create separate         fields for each individual's name, phone number, and e-mail address, we chose to         simply provide a single field for greater flexibility.
+Name**, **Contact Phone**, and **Contact E-mail Address** fields), but only some press releases have additional contacts -- which         may consist of one more more individuals. Rather than attempting to create separate         fields for each individual's name, phone number, and e-mail address, we chose to         simply provide a single field for greater flexibility.
 
 Some pages may be comprised of both fields and Web Parts. For example, consider         the following product detail page.
 

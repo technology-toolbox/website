@@ -19,7 +19,7 @@ arrow image next to each list item.
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
 If you use Firebug to inspect one of the list items in the **Most Popular
-Posts **section, you'll notice the CSS `background` property is set to:
+Posts** section, you'll notice the CSS `background` property is set to:
 
     url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px transparent
 
@@ -37,8 +37,7 @@ icons used throughout the site.
 
     	Figure 2: list-item-sprite-1.0.png
 
-Notice that the "dashed arrow" icon used in the **Most Popular Posts
-**section is actually the fifth image in the set (starting from the lower-left
+Notice that the "dashed arrow" icon used in the **Most Popular Posts** section is actually the fifth image in the set (starting from the lower-left
 corner). This explains the negative offsets specified in the CSS rule (specifically,
 -200px -137px).
 
@@ -75,7 +74,7 @@ multiple lines. Imagine instead that all of the list item icons shown in Figure
 2 were arranged in close proximity (say, for example, aligned vertically with
 minimal white space between them). In other words, imagine the "minus" icon
 were directly below the "dashed arrow" icon used in the **Most Popular
-Posts **section.
+Posts** section.
 
 Consequently, in cases where the list item spans two lines (e.g. **
 Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010)**)
@@ -92,7 +91,7 @@ Aaron Barker explains more about this technique in the following blog post:
 >       Not all of the CSS sprites used on the Technology Toolbox site use the 
 >       diagonal layout. For example, the "radio button" images used in the 
 >       "slider" control (i.e. to the right of the **SharePoint Architecture 
->       and Development **heading in Figure 1) are rendered using a 22x40 
+>       and Development** heading in Figure 1) are rendered using a 22x40 
 >       sprite. In this case, there's no need to avoid potential issues due 
 >       to a variable height of the element the CSS rule applies to.
 
@@ -186,6 +185,6 @@ icon has already been downloaded. Simply tweaking the x and y positions toggles
 which icon is displayed.
 
 I'll explain more about the jQuery expandable list used to render the
-**Archives **section in a separate
+**Archives** section in a separate
 [post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12).
 

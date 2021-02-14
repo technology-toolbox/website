@@ -46,7 +46,7 @@ of whether or not the "www." prefix is specified by a user.
 That got me thinking...what would happen if visitors attempted to access
 other areas of the site without specifying "www." -- in particular the blog
 pages served up by Subtext? After all, in the Subtext **Host Admin**
-page, the **Host **field is explicitly set to **www.technologytoolbox.com**
+page, the **Host** field is explicitly set to **www.technologytoolbox.com**
 (and, at that point, I had not configured any aliases).
 
 I did end up configuring Subtext to support both www.technologytoolbox.com
@@ -90,7 +90,7 @@ but requires far fewer brain cycles than the rule I configured above (not
 to mention a fraction of the time to create when using IIS Manager).
 
 Here are the corresponding configuration elements added by the
-**Canonical domain name **SEO template in URL Rewrite 2.0:
+**Canonical domain name** SEO template in URL Rewrite 2.0:
 
 ```
 <rewrite>
@@ -120,7 +120,7 @@ Whereas the second rule is equivalent to the following:
 > For any request in which the host is *not* www.technologytoolbox.com,
 > redirect it to www.technologytoolbox.com.
 
-After learning about the new **Canonical domain name **SEO
+After learning about the new **Canonical domain name** SEO
 template, I was tempted to replace the original rule I created back in October.
 However, I decided to leave the "handcrafted" rule at this point.
 

@@ -29,7 +29,7 @@ To address this scenario in the "Jameson Datacenter", I have defined a Group Pol
           - **Group Name: Administrators**
           - **Members: TECHTOOLBOX\Development Admins, TECHTOOLBOX\Domain Admins**
 
-By linking this Group Policy to the appropriate OU (i.e. **Development/Resources/Servers**) the members of the local **Administrators **group are automatically configured as soon as I join a new DEV server to the domain and reboot.
+By linking this Group Policy to the appropriate OU (i.e. **Development/Resources/Servers**) the members of the local **Administrators** group are automatically configured as soon as I join a new DEV server to the domain and reboot.
 
 See [Part 2 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-2)for an alternate method of managing group membership through Group Policy.
 

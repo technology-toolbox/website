@@ -32,7 +32,7 @@ Figure 1: SharePoint Designer - "Error Creating Control"
 1. Start **Control Panel** and then open **Administrative Tools**.
 2. In Windows Vista, right-click **Microsoft .NET Framework 2.0 Configuration**
    and click **Run as administrator**. If you are not using Windows Vista,
-   then right-click and select **Run as... **and specify an account that
+   then right-click and select **Run as...** and specify an account that
    is a member of the local Administrators group (because you don't normally login
    with an administrative account, right?). Enter the appropriate credentials to start
    the configuration console.

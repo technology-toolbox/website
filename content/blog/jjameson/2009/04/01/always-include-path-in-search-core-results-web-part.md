@@ -22,7 +22,7 @@ If you don't include **Path** in the **SelectColumns** property of the Search Co
 
 If you look at the default XSLT stylesheet for the Core Results Web Part, you won't find any mention of "path" -- however, that apparently doesn't mean that it is safe to remove from the list of selected columns.
 
-If you don't include **Path**, then the **url **element in the search results XML is not populated and consequently the search result links are rendered useless.
+If you don't include **Path**, then the **url** element in the search results XML is not populated and consequently the search result links are rendered useless.
 
 ...and that's no April Fools joke!
 

@@ -73,8 +73,7 @@ Consequently, you can specify a command like the following to grant permissions 
 icacls dogfood.vhd /grant "NT VIRTUAL MACHINE\C60995EB-8B7D-46DB-BD1E-3638CD1AEC32":(R,W)
 ```
 
-Note that the GUID varies with each VM, so you'll need to tweak this accordingly  for your environment. To find the GUID to use, examine the **Virtual Machines
-**folder for the VM.
+Note that the GUID varies with each VM, so you'll need to tweak this accordingly  for your environment. To find the GUID to use, examine the **Virtual Machines** folder for the VM.
 
 Also note that you may need to use the VM settings to remove the VHD from the  IDE controller and subsequently re-add it (in other words, it looks like Hyper-V  does not recognize that the file permissions have been updated in the background).
 

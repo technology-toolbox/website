@@ -31,7 +31,7 @@ In the process of reviewing my old document, I came across the following:
 > 
 > All Debug builds should create symbol files for debugging purposes. These symbols             are included as part of the setup to facilitate debugging in other environments             such as DEV.
 > 
-> > **Important **
+> > **Important**
 > > 
 > >                 Do not include Debug symbols in the Release configuration of the setup projects.
 
@@ -47,7 +47,7 @@ However, including debugging symbols (i.e. PDB files) in Release builds certainl
 
 In other words, the Development Plan should say:
 
-> **Important **
+> **Important**
 > 
 >             Always include Debug symbols in the Release configuration of the setup projects
 >             -- or, preferably, make them available from a symbol server.

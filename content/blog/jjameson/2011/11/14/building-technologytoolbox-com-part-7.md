@@ -83,8 +83,7 @@ tier and the data tier. In order to allow the Web application to communicate
 with the remote SQL Server database, the app pool in TEST is configured to run
 as **NetworkService**. In addition, the machine account for the
 Web server (i.e. CYCLOPS) must be granted access to the database. This is accomplished
-by adding **TECHTOOLBOX\CYCLOPS$** to the **db\_datareader
-**and **db\_datawriter **database roles.
+by adding **TECHTOOLBOX\CYCLOPS$** to the **db\_datareader** and **db\_datawriter** database roles.
 
 Here is the SQL script I wrote to refresh the Test environment from Production.
 Also note that I update the **subtext\_Config** table to reflect

@@ -26,7 +26,7 @@ Like many of you out there, I receive a lot of email on a daily basis. Now imagi
 
 As a consultant, I find the key to effectively managing my inbox is separating the         important messages from the lower priority items. For example, email specific to         the particular project I am working on at any given time is definitely at the top         of the "important" list, whereas the numerous messages that I receive simply by         being a member of a DL (distribution list) are lower priority.
 
-Most of you are probably already using the **E-mail Rules **feature         in Outlook to help manage your inboxes. If not, then open Outlook, and on the **            Tools **menu, click **Rules and Alerts**.
+Most of you are probably already using the **E-mail Rules** feature         in Outlook to help manage your inboxes. If not, then open Outlook, and on the **            Tools** menu, click **Rules and Alerts**.
 
 This post details the rules that I use for ensuring my Outlook **Inbox**         folder only contains the really good stuff (and how everything else gets shuffled         off to a different location).
 
@@ -43,13 +43,13 @@ As you can see, I received literally thousands of email messages during my hiatu
 
 Before explaining the various Outlook rules that I have configured, let's first         cover the fundamentals of the various folders and archives illustrated above.
 
-I have created folders under **Inbox** corresponding to various distribution         lists. I have also created an "archive" -- which is really just a .pst file (Outlook         Personal Folders) -- for any DL where I want to preserve some history. Periodically,         I move the contents of the DL folders under **Inbox **into the corresponding         archive files. [Note that I originally used a single archive file, but found that         over time these folders could grow to be very large and subsequently split the archive         into multiple files.]
+I have created folders under **Inbox** corresponding to various distribution         lists. I have also created an "archive" -- which is really just a .pst file (Outlook         Personal Folders) -- for any DL where I want to preserve some history. Periodically,         I move the contents of the DL folders under **Inbox** into the corresponding         archive files. [Note that I originally used a single archive file, but found that         over time these folders could grow to be very large and subsequently split the archive         into multiple files.]
 
 I configure rules within Outlook to "preprocess" messages sent either directly to         me or to DLs that I belong to.
 
 > **Important**
 > 
->             The reason for using DL folders under the **Inbox **folder -- instead
+>             The reason for using DL folders under the **Inbox** folder -- instead
 >             of having the Outlook rules route directly to the archive (.pst) files -- is to
 >             ensure the rules are processed on the Exchange server.
 >             
@@ -74,11 +74,11 @@ For example, I have a rule named **SharePoint 2010 discussions** configured     
 
 As you can see from the previous screenshot, this rule automatically routed 1,837         messages sent to the **SharePoint 2010 Discussion** DL to the corresponding         **SharePoint 2010** folder.
 
-I include the exception where my name is in the To or Cc box in order to ensure         that any responses to messages that I send to a DL remain in the **Inbox **         folder (since I am likely looking for help or providing assistance to someone else         and therefore want to view the responses as soon as possible).
+I include the exception where my name is in the To or Cc box in order to ensure         that any responses to messages that I send to a DL remain in the **Inbox**          folder (since I am likely looking for help or providing assistance to someone else         and therefore want to view the responses as soon as possible).
 
 Of the 32 rules that I currently have configured, most are for DL processing. However,         there are a couple of interesting variants.
 
-If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications **         rule as follows:
+If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications**          rule as follows:
 
 > Apply this rule after the message arrives
 > from [xxx@microsoft.com](mailto:xxx@microsoft.com)
@@ -94,20 +94,19 @@ Further down the list of email rules, I have one named **High Priority Items**:
 
 While somewhat serving as a list of various managers I've had during my tenure with         Microsoft, this rule is really used to ensure that email from these individuals         doesn't mistakenly "slip through the cracks" and get processed by the very last         rule.
 
-Note that I also have a **Project Mail **rule configured for similar         purposes:
+Note that I also have a **Project Mail** rule configured for similar         purposes:
 
 > Apply this rule after the message arrives
 > sent to FrontierV3Dev or KPMG-COM Project Team or ...
 > stop processing more rules
 
-The very last rule that I have configured in Outlook is named **Low Priority Items
-**and is configured as follows:
+The very last rule that I have configured in Outlook is named **Low Priority Items** and is configured as follows:
 
 > Apply this rule after the message arrives
 > move it to the Low Priority Items folder
 > except if my name is in the To or Cc box
 
-In other words, any email message that somehow makes its way into my inbox, but         is neither processed by a previous email rule nor sent directly to me, is summarily         routed to my **Low Priority Items **folder. While I strive to catch         up on this folder every couple of days, in all honesty, it is sometimes a week or         more before I read these messages.
+In other words, any email message that somehow makes its way into my inbox, but         is neither processed by a previous email rule nor sent directly to me, is summarily         routed to my **Low Priority Items** folder. While I strive to catch         up on this folder every couple of days, in all honesty, it is sometimes a week or         more before I read these messages.
 
 While I'd like to take all of the credit for this system of managing email, I must         confess that the concept of the "Low Priority" folder is one I picked up from someone         else a long, long time ago. I wish I could remember whose Webcast that was, but         it's been so long that all I remember is that it was someone from Microsoft. Heck,         for all I know, he could have pilfered the concept from somebody else.
 

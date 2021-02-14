@@ -88,11 +88,11 @@ iteration for completing work items.</small>
     |                             Open Work Items<br>                         | <ul>                                <li>ID</li><br>                                <li>Title</li><br>                                <li>Category</li><br>                                <li>Status</li><br>                                <li>Priority</li><br>                                <li>Severity</li><br>                                <li>Area</li><br>                                <li>Blocked</li><br>                                <li>Assigned To</li></ul> |                             Severity<br>                         |                             Status is not equal to Closed<br>                         | <ol>                                <li>Category</li><br>                                <li>Priority</li></ol> |
     |                             Project Checklist<br>                         | <ul>                                <li>ID</li><br>                                <li>Title</li><br>                                <li>Category</li><br>                                <li>Status</li><br>                                <li>Priority</li><br>                                <li>Severity</li><br>                                <li>Area</li><br>                                <li>Assigned To</li><br>                                <li>KPI</li></ul> | <ol>                                <li>Priority</li><br>                                <li>Severity</li></ol> |                             Status is not equal to Closed<br><br>                            And<br><br>                            Exit Criteria is equal to Yes<br>                         | <ol>                                <li>Iteration</li><br>                                <li>Category</li></ol> |
 
-8. Create a new document library named **Pages** and select **Web Part page **
+8. Create a new document library named **Pages** and select **Web Part page**
    as the document template.
 
-9. In the **Pages **library, create a new page called **ProjectSummary.aspx **
-   using the **Header, Footer, 3 Columns **layout.
+9. In the **Pages** library, create a new page called **ProjectSummary.aspx**
+   using the **Header, Footer, 3 Columns** layout.
 
 10. Create and configure the various project summary Web Parts based on the underlying
     Work Items list:
@@ -105,22 +105,22 @@ iteration for completing work items.</small>
     |                             Priorities/Milestones<br>                         | Title |                             ID<br>                         |                             Status is not equal to Closed<br><br>                            And<br><br>                            Exit Criteria is equal to Yes<br>                         |                             Iteration<br><br>                            (Expanded)<br>                         |                             100<br><br>                            (Display items in batches of the specified size.)<br>                         |
 
 <small>* Change the filter as necessary to match the current iteration.</small>
-11. (Optional) Modify the **Project Summary **Web Part to display an image corresponding
+11. (Optional) Modify the **Project Summary** Web Part to display an image corresponding
 to the designated KPI value (using SharePoint Designer and a tiny bit of XSLT as
 described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
-12. In the **Links **list, add a link to the **Project Summary **page.
+12. In the **Links** list, add a link to the **Project Summary** page.
 
 ![Project Summary &quot;dashboard&quot;](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v3.jpg "Project Summary \"dashboard\"")
 Figure 1: Project Summary "dashboard"
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_TFS%20Lite%20-%20WSS%20v3.jpg)
 
-You might be wondering why I chose to base the Work Items list on Tasks instead         of just creating a custom list from scratch. Aside from the fact that the Tasks         list saves me from having to create a few columns, the real reason is to automatically         e-mail team members when a work item is assigned to them. If you simply create a         custom list and add an **Assigned To** column, you'll find that the option to         **Send e-mail when ownership is assigned? **is conspicuously absent from the         **Advanced Settings** page for the list.
+You might be wondering why I chose to base the Work Items list on Tasks instead         of just creating a custom list from scratch. Aside from the fact that the Tasks         list saves me from having to create a few columns, the real reason is to automatically         e-mail team members when a work item is assigned to them. If you simply create a         custom list and add an **Assigned To** column, you'll find that the option to         **Send e-mail when ownership is assigned?** is conspicuously absent from the         **Advanced Settings** page for the list.
 
 You certainly don't have to implement the list this way. Alternatively, you could         choose to use alerts instead and have people "subscribe" to changes in the **My Work
 Items** view. However, I chose a "push" model instead of a "pull" model to         ensure people are always alerted right away when they are responsible for working         on something.
 
-You also might be wondering how work items can be related to each other since I         chose not to base the new Work Items list on the Issues list. Given the change in         behavior in the WSS v3 Issues list for related items, I recommend simply adding         a section to the **Description **field name named **Related Items **and then         insert hyperlinks to other items. The primary reason for this is to avoid the performance         impact as the number of work items grows large.
+You also might be wondering how work items can be related to each other since I         chose not to base the new Work Items list on the Issues list. Given the change in         behavior in the WSS v3 Issues list for related items, I recommend simply adding         a section to the **Description** field name named **Related Items** and then         insert hyperlinks to other items. The primary reason for this is to avoid the performance         impact as the number of work items grows large.
 
 > **Important**
 > 

@@ -29,7 +29,7 @@ Even if you decide to go the "SharePoint language pack" route (in other words, c
 
 For example, suppose that, like me, you use custom SharePoint features to configure default content on a site.
 
-If you always activate the features through **Site Settings **(i.e. by browsing to the admin pages of the site), then everything works as expected (because `Thread.CurrentThread.CurrentUICulture` is set to right locale based on the context of the current SharePoint site).
+If you always activate the features through **Site Settings** (i.e. by browsing to the admin pages of the site), then everything works as expected (because `Thread.CurrentThread.CurrentUICulture` is set to right locale based on the context of the current SharePoint site).
 
 However, what if, like me, you prefer to activate features via the command line instead (e.g. using PowerShell of StsAdm.exe)? In that case,  `Thread.CurrentThread.CurrentUICulture` is always going to be set to your operating system language/region ("en-US" in my case). That obviously isn't going to retrieve the Spanish text when configuring a SharePoint site created in the Spanish language.
 
@@ -208,5 +208,5 @@ Lastly, here's an excerpt from a custom "Announcements" feature that shows how t
         }
 ```
 
-I hope you find the **CurrentUICultureSwitcher **class to be useful when creating SharePoint solutions that need to support more than one language.
+I hope you find the **CurrentUICultureSwitcher** class to be useful when creating SharePoint solutions that need to support more than one language.
 

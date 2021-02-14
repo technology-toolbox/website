@@ -63,14 +63,13 @@ Note that the top-level Deploy Solutions.cmd script simply calls each Deploy  So
 
 You might be wondering why this failed, since the output clearly states "Operation  completed successfully" for both WSPs.
 
-Browsing to the **Solution Management **page in SharePoint Central  Administration, the **Status **column for **fabrikam.portal.web.wsp
-**showed **Error**. Clicking the link to view more details showed  an error stating that the solution is already deployed. Well, duh, that's because  the timer job that was created to deploy fabrikam.portal.web.wsp ran twice!
+Browsing to the **Solution Management** page in SharePoint Central  Administration, the **Status** column for **fabrikam.portal.web.wsp** showed **Error**. Clicking the link to view more details showed  an error stating that the solution is already deployed. Well, duh, that's because  the timer job that was created to deploy fabrikam.portal.web.wsp ran twice!
 
 If the timer job had been "properly cleaned up" then everything would be fine.
 
 Note that this problem doesn't occur each and every time the solutions are deployed.  Unfortunately, it's one of those sporadic problems that tend to cause much heartburn  for anyone who works in the world of software (think deadlocks in SQL Server or  race conditions in a multithreaded application).
 
-Also note that the specified WSP was actually deployed, which means the features  can be subsequently activated (i.e. the second "A" in the "DR.DADA" process). However,  I never like to leave the **Solution Management **page showing any  items with **Error **status (even if the error is benign, like this  scenario).
+Also note that the specified WSP was actually deployed, which means the features  can be subsequently activated (i.e. the second "A" in the "DR.DADA" process). However,  I never like to leave the **Solution Management** page showing any  items with **Error** status (even if the error is benign, like this  scenario).
 
 Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION environment  variable and then redeploy the solutions:
 
@@ -87,7 +86,7 @@ Solutions.cmd"</kbd>
 
 ...
 
-Fortunately, when the "-force" option is specified, even if the deployment timer  job isn't properly cleaned up -- in other words, it isn't deleted -- no error occurs  when the solution is deployed the second time, and the **Status **column  on the **Solution Management **page shows **Deployed**.
+Fortunately, when the "-force" option is specified, even if the deployment timer  job isn't properly cleaned up -- in other words, it isn't deleted -- no error occurs  when the solution is deployed the second time, and the **Status** column  on the **Solution Management** page shows **Deployed**.
 
 If you find this problem occurs frequently in your environment, you might consider  always specifying the "-force" option when deploying SharePoint solutions (which  is what we recently did on my latest project).
 

@@ -48,8 +48,7 @@ public static class ScorecardService
 
 Note that the presentation layer simply needs to know a list of sites to specify.  Whether the scorecard data comes directly from a database, an external Web service,  or something else entirely doesn't matter from the presentation perspective. We  just need to get some scorecard data and display it.
 
-As I mentioned before, suppose we want to show a summary view on the left side  of the page, perhaps with a list of KPI names along with rollup status values across  all sites for various time periods. Rather than aggregating the scorecard data in  the presentation layer, we can instead add another method to the **ScorecardService
-**class:
+As I mentioned before, suppose we want to show a summary view on the left side  of the page, perhaps with a list of KPI names along with rollup status values across  all sites for various time periods. Rather than aggregating the scorecard data in  the presentation layer, we can instead add another method to the **ScorecardService** class:
 
 ```
 public static DataTable GetScorecardSummaryTable(
@@ -63,7 +62,7 @@ The purpose of **GetScorecardSummaryTable** is to aggregate the  list of KPIs ac
 
 Now you can see how the **ScorecardService** class encapsulates  the business rules we need to implement -- rather than having these scattered throughout  the presentation layer.
 
-You might be wondering why the **GetScorecardSummaryTable** returns  a generic DataTable instead of a typed DataTable. After all, having just proclaimed  my love for typed DataSets, why wouldn't I use Visual Studio to add another table  (e.g. **ScorecardSummary**) to **ScorecardData **and populate  an instance of that table instead of using a generic DataTable?
+You might be wondering why the **GetScorecardSummaryTable** returns  a generic DataTable instead of a typed DataTable. After all, having just proclaimed  my love for typed DataSets, why wouldn't I use Visual Studio to add another table  (e.g. **ScorecardSummary**) to **ScorecardData** and populate  an instance of that table instead of using a generic DataTable?
 
 The problem is that we don't know at design-time what the columns in the summary  table will be. We know the first column in the summary table will contain the KPI  names. However, each additional column in the table corresponds to a time period  specified in the underlying data.
 
@@ -87,7 +86,7 @@ public static DataTable GetScorecardDetailTable(
         }
 ```
 
-Similar to the **GetScorecardSummaryTable **method, the **GetScorecardDetailTable** method returns a generic DataTable that will subsequently  be rendered by the presentation tier (i.e. the ASP.NET user control). Perhaps something  like this:
+Similar to the **GetScorecardSummaryTable** method, the **GetScorecardDetailTable** method returns a generic DataTable that will subsequently  be rendered by the presentation tier (i.e. the ASP.NET user control). Perhaps something  like this:
 
 <caption>Key Performance Indicators (Detail)</caption>| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
@@ -172,7 +171,7 @@ public static DataTable GetScorecardSummaryTable(
 
 This turns out to be incredibly powerful because, in the presentation layer,  we can now support a variety of ways to filter the list of scorecard items (without  having to change the service layer).
 
-In the user control (KpiScorecard.ascx), all we need to do is retrieve the scorecard  data by providing a list of sites (in other words, get an instance of the **ScorecardData **DataSet), and subsequently determine which items  to show:
+In the user control (KpiScorecard.ascx), all we need to do is retrieve the scorecard  data by providing a list of sites (in other words, get an instance of the **ScorecardData** DataSet), and subsequently determine which items  to show:
 
 ```
 private void UpdateScorecardSummaryView()
@@ -220,7 +219,7 @@ Based on the previous change to **GetScorecardSummaryTable** (to  support the ab
 
 Note that when refactoring code to add overloads that accept an `IEnumerable` parameter,  you'll want to ensure the functionality of the original method remains the same.
 
-For example, suppose the original **GetScorecardDetailTable **method  used a DataView to filter the **ScorecardItems** table on the specified  KPI name:
+For example, suppose the original **GetScorecardDetailTable** method  used a DataView to filter the **ScorecardItems** table on the specified  KPI name:
 
 ```
 public static DataTable GetScorecardDetailTable(

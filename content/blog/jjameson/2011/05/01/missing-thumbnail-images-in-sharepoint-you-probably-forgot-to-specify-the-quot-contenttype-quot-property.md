@@ -59,5 +59,5 @@ To get the thumbnails to render as expected, I simply modified the Elements.xml 
 </Elements>
 ```
 
-By simply adding the **ContentType **property (and setting it to "Image"), SharePoint automatically creates the corresponding thumbnail for each image when adding the item to the picture library.
+By simply adding the **ContentType** property (and setting it to "Image"), SharePoint automatically creates the corresponding thumbnail for each image when adding the item to the picture library.
 

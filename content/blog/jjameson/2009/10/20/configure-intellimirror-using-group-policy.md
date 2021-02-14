@@ -73,7 +73,7 @@ In order to allow users access to create their own folders on \\BEAST\Users$, I 
   - Permissions
     - Full Control
 
-I also created a hidden share for the C:\BackedUp\Users folder and granted **Full Control **to **Authenticated Users **(since the NTFS permissions above ultimately determine the level of access for all users).
+I also created a hidden share for the C:\BackedUp\Users folder and granted **Full Control** to **Authenticated Users** (since the NTFS permissions above ultimately determine the level of access for all users).
 
 Thus when a new user logs in for the first time, a corresponding folder is created on the server and all of the user's files are stored on the server.
 

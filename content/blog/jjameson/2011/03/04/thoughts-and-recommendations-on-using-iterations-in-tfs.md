@@ -20,7 +20,7 @@ Have you ever lost work items in Team Foundation Server? I know I have.
 
 Well, let me clarify that...it's not that I actually *lost* work items due to some bug in TFS or failure on the database server. Rather -- and I'm a little embarrassed to admit this -- it's just that I somehow *misplaced* them (which also occasionally happens with other items as well, such as my wallet). In other words, I can't seem to quickly find one or more work items that I'm certain I created previously in a particular TFS project.
 
-The problem -- at least in my case -- is due to the out-of-the-box queries that you get with the **MSF for Agile Software Development v5.0 **process template in TFS 2010.
+The problem -- at least in my case -- is due to the out-of-the-box queries that you get with the **MSF for Agile Software Development v5.0** process template in TFS 2010.
 
 To understand why work items occasionally go [AWOL](http://en.wikipedia.org/wiki/Desertion), let's quickly review the default queries that are created for a "MSF Agile v5" project:
 
@@ -49,7 +49,7 @@ To understand why work items occasionally go [AWOL](http://en.wikipedia.org/wiki
   - Product Backlog
   - Products Planning
 
-I'm assuming you're familiar with most, if not all, of these queries. Even if you're not, it should be fairly obvious that all of the queries under **Iteration 1 **include a filter like:
+I'm assuming you're familiar with most, if not all, of these queries. Even if you're not, it should be fairly obvious that all of the queries under **Iteration 1** include a filter like:
 
 - **Team Project = @Project**
 - **And Iteration Path Under foobar2010\Iteration 1**
@@ -63,20 +63,20 @@ Likewise, all of the "My" queries (e.g. **My Bugs**) include a filter like:
 - **And Assigned To = @Me**
 - ...
 
-Note that the **Product Backlog **and **Product Planning **queries include a filter like:
+Note that the **Product Backlog** and **Product Planning** queries include a filter like:
 
 - **Team Project = @Project**
 - **And Area Path Under @Project**
 - **And Work Item Type = User Story**
 - ...
 
-Now, with that rather lengthy introduction out of the way, imagine that we use Microsoft Excel to quickly add a bunch of tasks (or bugs). However, we forget (or neglect) to set the **Assigned To **and **Iteration Path **properties. What happens?
+Now, with that rather lengthy introduction out of the way, imagine that we use Microsoft Excel to quickly add a bunch of tasks (or bugs). However, we forget (or neglect) to set the **Assigned To** and **Iteration Path** properties. What happens?
 
 Yep, you guessed it...none of those new work items will show up in any of the out-of-the-box queries.
 
 "Doh!" [Imagine Homer Simpson saying that...it's funnier.]
 
-Now, the truth is this really isn't the fault of TFS -- after all, we were the ones who didn't set the Iteration Path correctly, thereby ensuring the bugs and/or tasks appeared as expected in the results of the corresponding "iteration query" (e.g. **Active Bugs **or **Active Tasks**).
+Now, the truth is this really isn't the fault of TFS -- after all, we were the ones who didn't set the Iteration Path correctly, thereby ensuring the bugs and/or tasks appeared as expected in the results of the corresponding "iteration query" (e.g. **Active Bugs** or **Active Tasks**).
 
 To understand how to avoid this situation, first note that I like to configure the iterations for a TFS project similar to the following:
 
@@ -102,7 +102,7 @@ What you call them really doesn't matter to me. That's just a name. What *is* im
 
 [Yes, customizing the iterations like I've shown above does require a little extra work to update references to the renamed iterations, but honestly it doesn't take more than a few minutes.]
 
-To avoid mistakenly "losing" work items, I like to create a new query under the **Troubleshooting **folder, called **Work Items with Invalid Iteration **and set the filter to something like:
+To avoid mistakenly "losing" work items, I like to create a new query under the **Troubleshooting** folder, called **Work Items with Invalid Iteration** and set the filter to something like:
 
 - **Team Project = @Project**
 - **And (**
@@ -110,9 +110,9 @@ To avoid mistakenly "losing" work items, I like to create a new query under the 
   - **Or Iteration Path = foobar2010\v1.0**
 - **)**
 
-In case it's not immediately obvious, the "And (...)" in the filter above reflects a **Group Clause **in TFS.
+In case it's not immediately obvious, the "And (...)" in the filter above reflects a **Group Clause** in TFS.
 
-[It's a good idea to periodically check the queries in the **Troubleshooting **folder to ensure they return zero results.]
+[It's a good idea to periodically check the queries in the **Troubleshooting** folder to ensure they return zero results.]
 
-Note that **v1.1 **and **vNext **are intended to be used as "buckets" for future functionality (in other words, whenever we identify something that we want to track, but we don't yet know which iteration it will actually be worked on). At the point in time where we actually release v1.0 of the solution (and start working on v1.1 -- and perhaps even v2.0 in parallel), then we would need to add new iterations and update the **Work Items with Invalid Iteration **query accordingly.
+Note that **v1.1** and **vNext** are intended to be used as "buckets" for future functionality (in other words, whenever we identify something that we want to track, but we don't yet know which iteration it will actually be worked on). At the point in time where we actually release v1.0 of the solution (and start working on v1.1 -- and perhaps even v2.0 in parallel), then we would need to add new iterations and update the **Work Items with Invalid Iteration** query accordingly.
 

@@ -23,8 +23,7 @@ Hmmm...how should I phrase this?
 
 It has been a very *educational* couple of weeks on my current SharePoint  project.
 
-During the rebuild of our Test environment, the SharePoint Products and Technologies  Configuration Wizard failed when it was unable to find the **%SystemRoot%\System32\drivers\etc\hosts
-**file. We had encountered this error during the original installation on  the SSP server in the Test environment because someone had renamed the file from **hosts **to **hosts-old**. Therefore we suspected the  same problem this time around, thinking that perhaps there was some scheduled script  or group policy that was disabling local host name resolution.
+During the rebuild of our Test environment, the SharePoint Products and Technologies  Configuration Wizard failed when it was unable to find the **%SystemRoot%\System32\drivers\etc\hosts** file. We had encountered this error during the original installation on  the SSP server in the Test environment because someone had renamed the file from **hosts** to **hosts-old**. Therefore we suspected the  same problem this time around, thinking that perhaps there was some scheduled script  or group policy that was disabling local host name resolution.
 
 For those of you that may not have attempted to read the status messages as they  flash by in the Configuration Wizard, step 4 changes the permissions on the hosts  file to grant the WSS\_ADMIN\_WPG group the following permissions:
 
@@ -90,7 +89,7 @@ It turns out that this is a bug in MOSS 2007 (although I am still waiting for  P
 
 I never recommend to customers having your service accounts be members of the  local Administrators group. Quite honestly, this is simply too dangerous and presents  a whole slew of risks that are beyond the scope of this posting. Since the service  account that I am using is *not* a member of the local Administrators group,  when the timer job deletes the file, it does not have permission to recreate the  file. Recall that earlier I mentioned that step 4 of the Configuration Wizard only  grants permissions on the hosts file itself to the WSS\_ADMIN\_WPG group (which the  service account is a member of). Hence the disappearing hosts file.
 
-The workaround is to grant the following permissions for the WSS\_ADMIN\_WPG on  the **%SystemRoot%\System32\drivers\etc **folder:
+The workaround is to grant the following permissions for the WSS\_ADMIN\_WPG on  the **%SystemRoot%\System32\drivers\etc** folder:
 
 - Traverse Folder / Execute File
 - List Folder / Read Data

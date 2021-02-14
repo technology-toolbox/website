@@ -15,17 +15,17 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master which most people now instantly associate with SharePoint as soon as they see it. Note that when you create a new site based on the **Team Site **site template or the **Collaboration Portal** site template in MOSS 2007, your site is configured to use default.master for both site pages (e.g. default.aspx) as well as system pages (e.g. /{list}/Forms/AllItems.aspx).
+Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master which most people now instantly associate with SharePoint as soon as they see it. Note that when you create a new site based on the **Team Site** site template or the **Collaboration Portal** site template in MOSS 2007, your site is configured to use default.master for both site pages (e.g. default.aspx) as well as system pages (e.g. /{list}/Forms/AllItems.aspx).
 
-You can easily change the master page used for both site pages as well as system pages by clicking the **Master page **link under the **Look and Feel **section on the **Site Settings **page.
+You can easily change the master page used for both site pages as well as system pages by clicking the **Master page** link under the **Look and Feel** section on the **Site Settings** page.
 
 However, note that your site also uses another master page -- application.master -- for application pages (e.g. /\_layouts/viewlsts.aspx). In MOSS 2007, there is no out-of-the-box way to configure application pages to use a different master page. This typically isn't a significant issue because application pages are usually only used by administrators of the site. However, there's at least one notable exception.
 
-When you create a site (say, for example, /Library) using the **Document Center **site template, then you will notice that the default page (e.g. /Library/default.aspx) has a link to **View All Site Content **which refers to the "view lists" page (e.g. /Library/\_layouts/viewlsts.aspx). Consequently when any of your users click this link, they actually see a page that is rendered with application.master.
+When you create a site (say, for example, /Library) using the **Document Center** site template, then you will notice that the default page (e.g. /Library/default.aspx) has a link to **View All Site Content** which refers to the "view lists" page (e.g. /Library/\_layouts/viewlsts.aspx). Consequently when any of your users click this link, they actually see a page that is rendered with application.master.
 
 This is exactly the scenario I encountered on the Agilent Technologies project a couple of years ago.
 
-When I researched this problem, I discovered that it was identified as a bug back in the Beta 2 days, but it was classified as "won't fix" since -- at least at that time -- it was only expected that site administrators would ever view pages rendered with application.master. In other words, the bug that I found didn't explicitly mention the **Document Center **site template.
+When I researched this problem, I discovered that it was identified as a bug back in the Beta 2 days, but it was classified as "won't fix" since -- at least at that time -- it was only expected that site administrators would ever view pages rendered with application.master. In other words, the bug that I found didn't explicitly mention the **Document Center** site template.
 
 Since we needed a solution for Agilent right away, I had to come up with a workaround, er, I mean *creative solution*. The following approach is based on the original solution that I developed for Agilent (but improved to use the master page configured through **Site Settings**, rather than specifying the master page in a configuration file).
 

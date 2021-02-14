@@ -48,11 +48,10 @@ What can you tell just by looking at the diagram? What are the business rules th
 
 Why about the primary keys on the various tables?
 
-- The primary key on the **Scorecard **table is obvioulsy **ScorecardId**.
-- The primary key on the **ScorecardItem **table is **ScorecardItemId
-  **-- although not quite as obvious as the **Scorecard **table, since
+- The primary key on the **Scorecard** table is obvioulsy **ScorecardId**.
+- The primary key on the **ScorecardItem** table is **ScorecardItemId** -- although not quite as obvious as the **Scorecard** table, since
   there are multiple key icons shown on that table in the designer. However, you can
-  infer this from the relationship between **ScorecardItem** and **                KpiStatus **-- and the fact that only the **ScorecardItemId**
+  infer this from the relationship between **ScorecardItem** and **                KpiStatus** -- and the fact that only the **ScorecardItemId**
   column appears in the **KpiStatus** table. [Wouldn't it be nice if
   the DataSet designer in Visual Studio showed a different icon for the primary key
   from for other unique keys?]
@@ -60,19 +59,18 @@ Why about the primary keys on the various tables?
   -- which again, can be inferred from the relationship between the **ClientSite**
   and **ScorecardItem** tables.
 - The primary key on the **KpiStatus** table is **(ScorecardItemId,
-  Period) **-- thus allowing each scorecard item to specify one or more KPI
+  Period)** -- thus allowing each scorecard item to specify one or more KPI
   status values (for different time periods).
 
-If you were to right-click on the **ScorecardId **column in the **            ScorecardItem **table in Visual Studio and then click **Edit key...**,         you would see that there is a unique constraint on (**ScorecardId**,         **ClientSiteId**, **KpiName**). In other words, each scorecard         can only specify one scorecard item for given site and KPI (e.g. we don't want to         allow "Site1" to have two scorecard items that refer to "KeyPerformanceIndicator1").
+If you were to right-click on the **ScorecardId** column in the **            ScorecardItem** table in Visual Studio and then click **Edit key...**,         you would see that there is a unique constraint on (**ScorecardId**,         **ClientSiteId**, **KpiName**). In other words, each scorecard         can only specify one scorecard item for given site and KPI (e.g. we don't want to         allow "Site1" to have two scorecard items that refer to "KeyPerformanceIndicator1").
 
 Also note that since a primary key on a table must be unique, the constraint on         the **KpiStatus** table ensures that a scorecard item (i.e. a KPI)         is only allowed to specify one KPI status for a particular time period. It just         doesn't make sense that "KeyPerformanceIndicator1" could be both "Green" and "Red"         for, say, the "2010 Q1" time period -- it has to be one or other (or "Yellow", I         suppose).
 
-We can also see that there is a unique constraint on the **ClientSiteName
-**column in the **ClientSite** table. Here's where things get         slightly more complicated. Suppose that we wanted to retrieve data from this DataSet         by filtering on the **ClientSiteName**. In other words, we want to         only show KPI information for a particular site. Seems reasonable, right?
+We can also see that there is a unique constraint on the **ClientSiteName** column in the **ClientSite** table. Here's where things get         slightly more complicated. Suppose that we wanted to retrieve data from this DataSet         by filtering on the **ClientSiteName**. In other words, we want to         only show KPI information for a particular site. Seems reasonable, right?
 
 What if two completely different clients each had a site named "Headquarters"? That         could definitely be a problem, because we certainly wouldn't want to show one client's         data to a different client.
 
-However, in order for that to actually occur, we would first have to populate the         DataSet with information from two different clients. Since that wasn't how I intended         this DataSet to be used, I chose to add a unique constraint on the **ClientSiteName**         column. If, at some later point in time, new scenarios were added and I needed to         use this typed DataSet to store data from multiple clients, then I would probably         add a **Client **table and adjust the relationships and constraints         accordingly.
+However, in order for that to actually occur, we would first have to populate the         DataSet with information from two different clients. Since that wasn't how I intended         this DataSet to be used, I chose to add a unique constraint on the **ClientSiteName**         column. If, at some later point in time, new scenarios were added and I needed to         use this typed DataSet to store data from multiple clients, then I would probably         add a **Client** table and adjust the relationships and constraints         accordingly.
 
 Okay, so where exactly are we -- after all this verbiage?
 

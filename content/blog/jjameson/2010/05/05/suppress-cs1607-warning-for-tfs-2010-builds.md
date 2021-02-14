@@ -45,7 +45,7 @@ I even tried changing one of the "problem" assemblies to specify a fully-qualifi
 
 ...but that didn't work either.
 
-I ended resolving the issue by keeping **Treat warnings as errors **set to **All**, but adding the following to the project file:
+I ended resolving the issue by keeping **Treat warnings as errors** set to **All**, but adding the following to the project file:
 
 ```
 <WarningsNotAsErrors>1607</WarningsNotAsErrors>

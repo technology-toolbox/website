@@ -33,10 +33,10 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > ***
 > 
 > 
-> **From: **Roee Adler
-> **Sent: **Sunday, August 01, 2010 11:36 AM
-> **To: **Jeremy Jameson
-> **Subject: **MSDN Blogs: Contact request: Your Soluto Post
+> **From:** Roee Adler
+> **Sent:** Sunday, August 01, 2010 11:36 AM
+> **To:** Jeremy Jameson
+> **Subject:** MSDN Blogs: Contact request: Your Soluto Post
 > 
 > **Subject:** Your Soluto Post
 > 
@@ -47,10 +47,10 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > ***
 > 
 > 
-> **From: **Jeremy Jameson
-> **Sent: **Monday, August 02, 2010 4:04 PM
-> **To: **Roee Adler
-> **Subject: **RE: MSDN Blogs: Contact request: Your Soluto Post
+> **From:** Jeremy Jameson
+> **Sent:** Monday, August 02, 2010 4:04 PM
+> **To:** Roee Adler
+> **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 > 
 > Rose,
 > 
@@ -69,10 +69,10 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > ***
 > 
 > 
-> **From: **Roee Adler
-> **Sent: **Monday, August 02, 2010 8:06 AM
-> **To: **Jeremy Jameson
-> **Subject: **RE: MSDN Blogs: Contact request: Your Soluto Post
+> **From:** Roee Adler
+> **Sent:** Monday, August 02, 2010 8:06 AM
+> **To:** Jeremy Jameson
+> **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 > 
 > Hi Jeremy.
 > 
@@ -93,10 +93,10 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > ***
 > 
 > 
-> **From: **Jeremy Jameson
-> **Sent: **Tuesday, August 03, 2010 1:35 AM
-> **To: **Roee Adler
-> **Subject: **RE: MSDN Blogs: Contact request: Your Soluto Post
+> **From:** Jeremy Jameson
+> **Sent:** Tuesday, August 03, 2010 1:35 AM
+> **To:** Roee Adler
+> **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 > 
 > Roee,
 > 
@@ -125,10 +125,10 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > ***
 > 
 > 
-> **From: **Roee Adler
-> **Sent: **Tuesday, August 03, 2010 9:20 AM
-> **To: **Jeremy Jameson
-> **Subject: **RE: MSDN Blogs: Contact request: Your Soluto Post
+> **From:** Roee Adler
+> **Sent:** Tuesday, August 03, 2010 9:20 AM
+> **To:** Jeremy Jameson
+> **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 > 
 > Thanks Jeremy :)
 > 

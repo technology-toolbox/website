@@ -58,7 +58,7 @@ Note that the original project settings specified **Platform target: Any CPU** a
 
 > Could not load file or assembly 'NativeHelpers, Version=1.5.0.4, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
 
-This was easy enough to fix simply by setting **Platform target **to **x86 **and then recompiling.
+This was easy enough to fix simply by setting **Platform target** to **x86** and then recompiling.
 
 So, why do I blog about Password Minder after all this time? Well, just this week I finally got around to incorporating it into my "Toolbox" Visual Studio solution that is scheduled to build daily using Team Foundation Server, and I discovered that my Team Foundation Build server wasn't setup to build C++ projects, which is what I will blog about next.
 

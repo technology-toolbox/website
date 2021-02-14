@@ -44,8 +44,7 @@ Also, before [ULS Viewer](http://archive.msdn.microsoft.com/ULSViewer)         c
 
 Thankfully, ULS was substantially improved in SharePoint 2010. The product group         also made it much, much easier to write your own messages and events using ULS.         Now that you can specify your own categories, there's really no reason not to log         to ULS from your custom SharePoint solutions.
 
-As you can see in the above mapping, my new **SPLogger **class essentially         replaced the old **Logger **class that I used in MOSS 2007. I should         probably cover the **SPLogger **class in a separate post, since some         of you are probably wondering why I wrote this code instead of using the **SharePointLogger
-**class from [the SharePoint Guidance section on MSDN](http://msdn.microsoft.com/en-us/library/ff649628.aspx).
+As you can see in the above mapping, my new **SPLogger** class essentially         replaced the old **Logger** class that I used in MOSS 2007. I should         probably cover the **SPLogger** class in a separate post, since some         of you are probably wondering why I wrote this code instead of using the **SharePointLogger** class from [the SharePoint Guidance section on MSDN](http://msdn.microsoft.com/en-us/library/ff649628.aspx).
 
 I'll try to get to that...eventually.
 
@@ -55,12 +54,11 @@ I've mentioned in the past that, even after tools like WSPBuilder came along, I 
 
 However, I must say that I've really grown fond of the new SharePoint tooling support         in Visual Studio 2010. It's not perfect -- get over it, no software is ever perfect         -- and I still find myself having to frequently tweak the XML that is automatically         generated as a result of adding a file to the solution. However it's still a huge         step forward in terms of SharePoint developer productivity.
 
-I think my biggest gripe is that by default when you <kbd>CTRL+Shift+B</kbd> to         build the Visual Studio solution, SharePoint projects don't automatically update         the WSP. In my experience, the time required to rebuild the WSP is short enough         that I'd prefer the "Package" option to be the default. I suppose I really should         just modify the project file to set the **IsPackaging **variable.
+I think my biggest gripe is that by default when you <kbd>CTRL+Shift+B</kbd> to         build the Visual Studio solution, SharePoint projects don't automatically update         the WSP. In my experience, the time required to rebuild the WSP is short enough         that I'd prefer the "Package" option to be the default. I suppose I really should         just modify the project file to set the **IsPackaging** variable.
 
 ### "DefaultFeatureReceiver is dead, FeatureConfigurator is not"
 
-Several years ago, I explained why I like to [separate the bulk of the code for custom **SPFeatureReceiver **classes](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).         As you can see from the mapping above, you no longer need to create a **DefaultFeatureReceiver
-**class -- the SharePoint features in VS2010 will easily create an equivalent         for you with a couple of clicks of the mouse.
+Several years ago, I explained why I like to [separate the bulk of the code for custom **SPFeatureReceiver** classes](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).         As you can see from the mapping above, you no longer need to create a **DefaultFeatureReceiver** class -- the SharePoint features in VS2010 will easily create an equivalent         for you with a couple of clicks of the mouse.
 
 Whether or not you choose to "refactor" the build of your feature configuration         code into a separate class is really up to you. Personally, I still find separate         "FeatureConfigurator" classes easier to debug.
 
@@ -72,7 +70,7 @@ Assume for the moment that Tugboat was a real site running on MOSS 2007. In that
 
 As described in [yesterday's post](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4), during the process of upgrading the solution to SharePoint         2010, I had to make a few tweaks to the CSS files in order to resolve some issues         specific to the new version of SharePoint.
 
-Consequently, in order to force the updated CSS files to be downloaded the next         time customers visited the upgraded site, I simply renamed the folder and updated         the corresponding references throughout the solution. This is one of those areas         where the SharePoint tooling in Visual Studio 2010 isn't quite "perfect." While         it does update some of the attributes in the Elements.xml file (specifically, the         **Path **attributes), it doesn't make all of the necessary changes         (e.g. the **Url **attributes are not updated). This might be a result         of my tweaking of the Elements.xml file (for example, to add **Type="GhostableInLibrary"**         to each &lt;File&gt; element), but it seems like this should be taken care of automatically.
+Consequently, in order to force the updated CSS files to be downloaded the next         time customers visited the upgraded site, I simply renamed the folder and updated         the corresponding references throughout the solution. This is one of those areas         where the SharePoint tooling in Visual Studio 2010 isn't quite "perfect." While         it does update some of the attributes in the Elements.xml file (specifically, the         **Path** attributes), it doesn't make all of the necessary changes         (e.g. the **Url** attributes are not updated). This might be a result         of my tweaking of the Elements.xml file (for example, to add **Type="GhostableInLibrary"**         to each &lt;File&gt; element), but it seems like this should be taken care of automatically.
 
 Fortunately, this isn't a scenario that occurs frequently.
 

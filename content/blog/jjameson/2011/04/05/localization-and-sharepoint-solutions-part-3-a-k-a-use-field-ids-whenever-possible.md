@@ -72,7 +72,7 @@ ImageFieldValue pageImage =
                 ...
 ```
 
-This code subseqeuntly broke when running against localized SharePoint sites. Similar to the **SPBuiltInFieldId** class, the SharePoint Publishing infrastructure provides the **[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx) **class for identifying fields like "Page Image":
+This code subseqeuntly broke when running against localized SharePoint sites. Similar to the **SPBuiltInFieldId** class, the SharePoint Publishing infrastructure provides the **[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)** class for identifying fields like "Page Image":
 
 ```
 ImageFieldValue pageImage =

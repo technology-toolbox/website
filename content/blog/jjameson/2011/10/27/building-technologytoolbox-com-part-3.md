@@ -122,8 +122,7 @@ Figure 1 shows the corresponding Design view of the master page in Expression  W
 
 ### Default.aspx
 
-The site home page references Default.master and specifies its content using  the **MainContent **placeholder as well as the additional CSS and JavaScript  files needed to support the "slideshow" content (via the **AdditionalHeadContent
-**placeholder):
+The site home page references Default.master and specifies its content using  the **MainContent** placeholder as well as the additional CSS and JavaScript  files needed to support the "slideshow" content (via the **AdditionalHeadContent** placeholder):
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Default.master" %>
@@ -316,7 +315,7 @@ The site home page references Default.master and specifies its content using  th
 ```
 
 The following screenshot shows the home page rendered in a browser. [This screenshot  is actually from the live site -- not the static HTML prototype. However, the only  difference with the prototype version is the first item under the **Most Recent
-Posts **section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
+Posts** section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
 
@@ -326,10 +325,9 @@ Posts **section. Hence I didn't bother capturing a different screenshot from  th
 
 ### BlogPost.master
 
-When viewing an individual blog post, a different master page is used in order  to render common elements such as the sidebar content (e.g. **Recent Posts
-**and **Tags**) as well as the comment form.
+When viewing an individual blog post, a different master page is used in order  to render common elements such as the sidebar content (e.g. **Recent Posts** and **Tags**) as well as the comment form.
 
-BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent**) that is subsequently used to specify the content of  a specific blog post.
+BlogPost.master defines a new **ContentPlaceHolder** control (i.e. **PostContent**) that is subsequently used to specify the content of  a specific blog post.
 
 ```
 <%@ Master Language="C#" MasterPageFile="~/Default.master"%>
@@ -636,7 +634,7 @@ BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent
 
 ### Sample blog post - new-blog-location.aspx
 
-Here is a sample blog page from the Caelum prototype (referencing BlogPost.master  and specifying the content of the post in the **PostContent **placeholder):
+Here is a sample blog page from the Caelum prototype (referencing BlogPost.master  and specifying the content of the post in the **PostContent** placeholder):
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="../../../../BlogPost.master" %>
@@ -716,8 +714,7 @@ Figure 3 shows roughly what the corresponding page looks like when rendered in  
 
 The primary benefit of creating a static HTML prototype is the ability to rapidly  throw together some sample HTML content and subsequently create the corresponding  CSS rules to style the pages. While you can certainly achieve the same result using  Visual Studio and your actual SharePoint or ASP.NET Web project, it is typically  much faster to do this using static HTML.
 
-Similarly, when the time comes to develop some JavaScript for the site, it is  often easier to work against a static HTML file rather than an actual page rendered  in the context of the Web application. You can see some examples of this in the  code shown above (e.g. the jQuery used to collapse the lists in the **Archives
-**section of the blog pages).
+Similarly, when the time comes to develop some JavaScript for the site, it is  often easier to work against a static HTML file rather than an actual page rendered  in the context of the Web application. You can see some examples of this in the  code shown above (e.g. the jQuery used to collapse the lists in the **Archives** section of the blog pages).
 
 ### Disadvantages of using a static HTML prototype
 

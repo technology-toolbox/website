@@ -48,7 +48,7 @@ Figure 2: Home page with custom master page and page layout
 
 Note that the actual page content is identical in the two figures above -- I've         simply "re-skinned" the site to look substantially different from the default SharePoint         look-and-feel. Also note that there are two fundamental problems with the out-of-the-box         page content.
 
-First, in the **Page Content **field, the default content is far from         "semantic HTML" and contains numerous nested tables (to achieve the two-column layout).         This is easily seen in the following screenshot, in which I've disabled the linked         style sheets:
+First, in the **Page Content** field, the default content is far from         "semantic HTML" and contains numerous nested tables (to achieve the two-column layout).         This is easily seen in the following screenshot, in which I've disabled the linked         style sheets:
 
 ![Home page with custom master page and page layout (linked CSS files disabled)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout2.png)
 Figure 3: Home page with custom master page and page layout (linked CSS files disabled)
@@ -65,7 +65,7 @@ Second, the default page layout does not expose either of the Summary Links fiel
 >             to Web Part properties are not shown in the **Version History** for
 >             a page, whereas changes to a Summary Links field are shown.)
 
-To mitigate these issues, I chose to tweak the default content for the home page         (to replace the **Page Content **with semantic HTML -- while still         preserving the two-column layout within the field -- and to replace the "News" Web         Part with corresponding Summary Links).
+To mitigate these issues, I chose to tweak the default content for the home page         (to replace the **Page Content** with semantic HTML -- while still         preserving the two-column layout within the field -- and to replace the "News" Web         Part with corresponding Summary Links).
 
 The following figure shows the end result (note that I overlayed the grid using         the [960 Gridder](http://gridder.andreehansson.se/) for illustrative         purposes):
 

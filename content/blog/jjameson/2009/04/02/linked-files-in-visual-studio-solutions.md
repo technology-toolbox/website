@@ -26,12 +26,11 @@ Note that Team Foundation Server (TFS) does not provide an equivalent "share fil
 
 Back in the days of the original Visual Studio .NET and the following version, Visual         Studio .NET 2003, whenever you added an existing file to a project, it copied the         file into the corresponding location in the project.
 
-However, in Visual Studio 2005, the **Add Existing Item** feature provided         the ability to choose to either **Add** the item or **Add As Link
-**(via the little down arrow on the button in the dialog box).
+However, in Visual Studio 2005, the **Add Existing Item** feature provided         the ability to choose to either **Add** the item or **Add As Link** (via the little down arrow on the button in the dialog box).
 
 In other words, once you upgraded to Visual Studio 2005, it was no longer necessary         to rely on any "sharing" features of your source control system in order to have         multiple projects always reference the latest version of a file.
 
-Note that when you **Add **an item in Visual Studio 2005 or Visual         Studio 2008, the behavior is the same as earlier versions (meaning the file is copied         into the corresponding location within the project). When you choose to **Add
+Note that when you **Add** an item in Visual Studio 2005 or Visual         Studio 2008, the behavior is the same as earlier versions (meaning the file is copied         into the corresponding location within the project). When you choose to **Add
 As Link**, however, you simply reference the file in-place. [Don't worry,         relative paths ensure that everyone on your team is free to choose whatever root         folder they wish for their individual workspaces.]
 
 To illustrate this concept, I quickly built out a "demo" solution, as shown below.
@@ -70,7 +69,7 @@ The corresponding folder structure on disk resembles the following:
           - Properties
             - AssemblyInfo.cs
 
-Note that **AssemblyVersionInfo.cs**, **CustomDictionary.xml**,         **Fabrikam.Demo.snk**, and **SharedAssemblyInfo.cs **reside         in the same folder as the Visual Studio solution file and are subsequently "linked         into" the two Visual C# projects. Thus whenever a change is made to one of these         files, the next build of each project will reflect that change.
+Note that **AssemblyVersionInfo.cs**, **CustomDictionary.xml**,         **Fabrikam.Demo.snk**, and **SharedAssemblyInfo.cs** reside         in the same folder as the Visual Studio solution file and are subsequently "linked         into" the two Visual C# projects. Thus whenever a change is made to one of these         files, the next build of each project will reflect that change.
 
 With this foundation in place, I'll explain some other recommended best practices         over a series of follow-up posts, including:
 

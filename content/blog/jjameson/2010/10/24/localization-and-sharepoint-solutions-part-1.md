@@ -31,9 +31,9 @@ For KPMG, the answer was just the opposite -- regions across the world are respo
 
 In other words, the Agilent solution did not involve the use of any OS or SharePoint language packs and thus required "custom" localization functionality, whereas the KPMG solution followed the more typical approach of installing language packs and leveraging the "out-of-the-box" localization functionality.
 
-The OOTB localization that I'm referring to is the fact that after you install one or more language packs for SharePoint, when you subsequently go to create a new site, the **Create Site **page (newsbweb.aspx) displays a dropdown list listing the available languages.
+The OOTB localization that I'm referring to is the fact that after you install one or more language packs for SharePoint, when you subsequently go to create a new site, the **Create Site** page (newsbweb.aspx) displays a dropdown list listing the available languages.
 
-Let's suppose that you pick **Spanish **when creating a new site. The[SPWeb.Language](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.language%28v=office.12%29.aspx) property on this new site is set to 3082 (not 1034 as suggested by the MSDN Library). Subsequent page requests for anything under the Spanish site will have the [`Thread.CurrentThread.CurrentUICulture`](http://msdn.microsoft.com/en-us/library/system.threading.thread.currentuiculture.aspx) set to "es-ES" -- thus instructing the Resource Manager to look up Spanish resources (e.g. localized text).
+Let's suppose that you pick **Spanish** when creating a new site. The[SPWeb.Language](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.language%28v=office.12%29.aspx) property on this new site is set to 3082 (not 1034 as suggested by the MSDN Library). Subsequent page requests for anything under the Spanish site will have the [`Thread.CurrentThread.CurrentUICulture`](http://msdn.microsoft.com/en-us/library/system.threading.thread.currentuiculture.aspx) set to "es-ES" -- thus instructing the Resource Manager to look up Spanish resources (e.g. localized text).
 
 Consequently, all you need to do is provide Spanish resource files and SharePoint (and the .NET Framework) will essentially do the rest for you (although not quite everything -- something I'll cover in a separate post).
 

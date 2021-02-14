@@ -44,27 +44,26 @@ After ensuring that I had full backups of all SQL Server databases (as well as  
 
 I was less concerned with upgrading the version of SQL Server during the rebuild  process, because in my experience the SQL Server team has done a great job in the  area of restoring databases from one version to another.
 
-Note that while my TFS instance was originally built with Team Foundation Server  2005, I upgraded this to TFS 2008 a couple of years ago and later applied TFS SP1  as well. This is important to note because in TFS 2008, there is no separate install  for the data tier (hence my first deviation from KB 955601). I also encountered  an issue when trying to manually process the **TfsWarehouse **database,  but I'm getting ahead of myself, so I'll cover more about that in a moment.
+Note that while my TFS instance was originally built with Team Foundation Server  2005, I upgraded this to TFS 2008 a couple of years ago and later applied TFS SP1  as well. This is important to note because in TFS 2008, there is no separate install  for the data tier (hence my first deviation from KB 955601). I also encountered  an issue when trying to manually process the **TfsWarehouse** database,  but I'm getting ahead of myself, so I'll cover more about that in a moment.
 
 After installing SQL Server 2008 SP1 and restoring my TFS databases, I found  that most everything worked as expected in TFS except for the reports.
 
-Note that I didn't attempt to restore the **TfsWarehouse** Analysis  Services (OLAP) database from a backup, but rather rebuilt it using the [**SetupWarehouse
-**utility](http://msdn.microsoft.com/en-us/library/ms400783.aspx), as prescribed in the aforementioned KB article:
+Note that I didn't attempt to restore the **TfsWarehouse** Analysis  Services (OLAP) database from a backup, but rather rebuilt it using the [**SetupWarehouse** utility](http://msdn.microsoft.com/en-us/library/ms400783.aspx), as prescribed in the aforementioned KB article:
 
 ```
 SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml 
 -a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
 ```
 
-This command completed successfully. However, when I attempted to process the **TfsWarehouse **OLAP database, I encountered an error that stated  the service account that I had configured for Analysis Services (TECHTOOLBOX\svc-sql-as)  could not login to the **TfsWarehouse **relational database.
+This command completed successfully. However, when I attempted to process the **TfsWarehouse** OLAP database, I encountered an error that stated  the service account that I had configured for Analysis Services (TECHTOOLBOX\svc-sql-as)  could not login to the **TfsWarehouse** relational database.
 
 After digging around a little, I discovered that the data source configured by  TFS for populating the OLAP database (i.e. **TfsWarehouseDataSource**)  is configured with the following security setting:
 
 - **Impersonation Info: ImpersonateServiceAccount**
 
-After ensuring the **TECHTOOLBOX\svc-sql-as **service account was  added to the **TfsWarehouseDataReader **role in the **TfsWarehouse**  relational database, I continued getting the error when trying to process the OLAP  database. I even attempted to process the TFS data warehouse by invoking it from  Warehouse Controller Web service (i.e. [http://localhost:8080/warehouse/v1.0/warehousecontroller.asmx](http://localhost:8080/warehouse/v1.0/warehousecontroller.asmx))  but no luck there either.
+After ensuring the **TECHTOOLBOX\svc-sql-as** service account was  added to the **TfsWarehouseDataReader** role in the **TfsWarehouse**  relational database, I continued getting the error when trying to process the OLAP  database. I even attempted to process the TFS data warehouse by invoking it from  Warehouse Controller Web service (i.e. [http://localhost:8080/warehouse/v1.0/warehousecontroller.asmx](http://localhost:8080/warehouse/v1.0/warehousecontroller.asmx))  but no luck there either.
 
-I found that if I changed the **Impersonation Info **setting on **TfsWarehouseDataSource** to **ImpersonateAccount** (a.k.a.  "**Use a specific user name and password**") and entered the credentials  for the TFS reporting service (TECHTOOLBOX\svc-tfsreports) -- which is automatically  configured as a member of the **TfsWarehouseDataReader **role in the **TfsWarehouse** relational database -- then the error no longer occurred.
+I found that if I changed the **Impersonation Info** setting on **TfsWarehouseDataSource** to **ImpersonateAccount** (a.k.a.  "**Use a specific user name and password**") and entered the credentials  for the TFS reporting service (TECHTOOLBOX\svc-tfsreports) -- which is automatically  configured as a member of the **TfsWarehouseDataReader** role in the **TfsWarehouse** relational database -- then the error no longer occurred.
 
 However, I wasn't comfortable with leaving this change in place because it might  cause other issues in the future, and it almost certainly puts the TFS installation  into the dreaded "unsupported" category.
 
@@ -228,8 +227,7 @@ validation failed with an infrastructure error. Check for previous errors. [CLIE
 
 After researching this a little bit, I suspected that SQL Server was attempting  to use Kerberos to impersonate the Analysis Services service account. Following [KB 917409](http://support.microsoft.com/kb/917409), I then registered  a Service Principal Name (SPN) for the Analysis Services service on BEAST and ensured  the proper settings in Active Directory to enable delegation.
 
-However, I still couldn't get it to work. At that point, I decided to just "punt"  the issue and change the service account for Analysis Services to run as **NetworkService **instead of a domain account. Consequently, I had to add **NT AUTHORITY\NETWORK SERVICE** to the **TfsWarehouseDataReader
-**role in the **TfsWarehouse** relational database.
+However, I still couldn't get it to work. At that point, I decided to just "punt"  the issue and change the service account for Analysis Services to run as **NetworkService** instead of a domain account. Consequently, I had to add **NT AUTHORITY\NETWORK SERVICE** to the **TfsWarehouseDataReader** role in the **TfsWarehouse** relational database.
 
 At this point, I confirmed that the TFS data warehouse could be successfully  updated (using the Warehouse Controller).
 
@@ -238,7 +236,7 @@ You might be wondering why I chose to use a domain account in the first place.  
 > type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**
 > in **Account Name** for every service.
 
-Thus I thought that I *should** ***be able to use a domain  account for Analysis Services.
+Thus I thought that I *should*be able to use a domain  account for Analysis Services.
 
 As a sanity check, I also found the following in [SQL Server 2008
 books online](http://msdn.microsoft.com/en-us/library/ms174905.aspx):
@@ -254,7 +252,7 @@ Note that after all this work, I was really only at the beginning of the overall
 > 1. Install Team Foundation Server in the new environment and make sure it is
 >    operational. For detailed instructions...
 
-I continued following the MSDN article and restored my database backups (except  for the **ReportServer **and **ReportServerTempDB **databases  -- but I'll get to that in a moment).
+I continued following the MSDN article and restored my database backups (except  for the **ReportServer** and **ReportServerTempDB** databases  -- but I'll get to that in a moment).
 
 While subsequently attempting to attach the SharePoint content database (for  the TFS project team sites), I encountered an error because my TFS server was previously  running Windows SharePoint Services v2 but was now running WSS v3. When I installed  TFS in my "new environment" I had to first integrate SP1 into the installation of  Team Foundation Server (i.e. a prerequisite for supporting SQL Server 2008 and Windows  Server 2008). In other words, installing SP1 onto an existing TFS 2008 doesn't upgrade  the environment to WSS v3. However, installing TFS 2008 with SP1 integrated will  install WSS v3.
 

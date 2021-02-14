@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "SharePoint
 
 In
 [part 2 of this series](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2), I explained how to programmatically add a new
-**Reusable Content **list item and subsequently add it to a Publishing
+**Reusable Content** list item and subsequently add it to a Publishing
 HTML field on a page. I also provided a complete sample for SharePoint 2010
 that demonstrates how this can be accomplished with minimal effort (thanks to
 some nitfy helper classes).
@@ -58,10 +58,10 @@ that says something like "Please wait while...").
 
 The most important aspect of the "Export to PDF" feature -- with regards
 to reusable content -- is that it runs within the context of a SharePoint HTTP
-request. In other words, when **SPContext.Current **is not null.
+request. In other words, when **SPContext.Current** is not null.
 During that original sprint, I discovered that it is actually quite trivial
 to "expand" the reusable content placeholders in Publishing HTML fields *when****SPContext.Current****is not null*.
-On the other hand, when **SPContext.Current ***is*null,
+On the other hand, when **SPContext.Current** *is*null,
 it takes a fair amount of custom code to retrieve the same content. More on
 that in a moment.
 
@@ -85,10 +85,10 @@ HtmlField pageContentField =
 ```
 
 If you look at this method with Reflector, you'll see that most of the work
-is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx) **class.
+is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx)**  class.
 
 If SPContext.Current is null, then a NullReferenceException is thrown in
-the **[HtmlEditorInternal.ConvertStorageFormatToViewFormat](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal_members%28v=office.12%29.aspx)** method (due
+the **[HtmlEditorInternal.ConvertStorageFormatToViewFormat](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal_members%28v=office.12%29.aspx)**  method (due
 to an attempt to reference SPContext.Current.Site).
 
 When developing the original "Export to PDF" solution, I implemented a hack
@@ -157,8 +157,7 @@ The problem with running the export in a workflow, however, is that SPContext.Cu
 is null -- and unlike, my simple hack in the intial sprint, a warning message
 simply wasn't going to cut it in this case ;-)
 
-Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper
-**class for getting the "expanded" HTML content from a Publishing HTML
+Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper** class for getting the "expanded" HTML content from a Publishing HTML
 field:
 
 ```
@@ -195,30 +194,28 @@ Let's just say that I'm not expecting that to happen, but that doesn't mean
 I can't hope for more robust code from the SharePoint team.]
 
 The reason why I require an SPWeb object is so I can subsequently read the
-corresponding list items from the **Reusable Content **list. [Technically
+corresponding list items from the **Reusable Content** list. [Technically
 speaking, I really only need an SPSite object, but I chose an SPWeb in order
 to provide additional detail in cases where "malformed" content is detected
 (e.g. the number of placeholders specified in the HTML does not match the number
 of items in the reusable content "header").]
 
 If you look at the code (see attachment on previous post), then you'll see
-that I'm essentially just following the original implementation in **HtmlEditorInternal
-**except that I don't rely on SPContext.Current and instead use the specified
-SPWeb parameter to access the **Reusable Content **list.
+that I'm essentially just following the original implementation in **HtmlEditorInternal** except that I don't rely on SPContext.Current and instead use the specified
+SPWeb parameter to access the **Reusable Content** list.
 
 > **Important**
 > 
 >       Also note that, unlike the original **HtmlEditorInternal** 
 >       implementation, I don't leverage any caching when fetching **Reusable 
->       Content **list items. Consequently, you should be wary of using 
+>       Content** list items. Consequently, you should be wary of using 
 >       this implementation in very high volume scenarios. For the purposes 
 >       of my current project, performance has proved to be more than adequate.
 
 I should point out, however, that I still prefer to use the out-of-the-box
 SharePoint code whenever possible, which is why I provide a wrapper method in
 the **SharePointPublishingHelper** class that determines whether
-or not it is "safe" to use the **HtmlField.GetFieldValueAsHtml
-**method:
+or not it is "safe" to use the **HtmlField.GetFieldValueAsHtml** method:
 
 ```
 /// <summary>
@@ -266,8 +263,7 @@ or not it is "safe" to use the **HtmlField.GetFieldValueAsHtml
 
 If you download the sample solution from my previous post, you can run all
 the various unit tests to verify things are working as expected, including the
-following unit test, which demonstrates why you can't use the **HtmlField.GetFieldValueAsHtml
-**method when SPContext.Current is null:
+following unit test, which demonstrates why you can't use the **HtmlField.GetFieldValueAsHtml** method when SPContext.Current is null:
 
 ```
 /// <summary>

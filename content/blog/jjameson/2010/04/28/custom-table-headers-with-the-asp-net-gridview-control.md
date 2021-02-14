@@ -214,7 +214,7 @@ Running the Web application at this point renders a simple table similar to the 
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)** event:
+Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**  event:
 
 ```
 protected void ScorecardDetailView_RowCreated(
@@ -310,7 +310,7 @@ private static void AddThresholdsHeaderRow(
         }
 ```
 
-Of course, we obviously need to call this method, so let's modify the **UpdateScorecardDetailView **method to add the thresholds header row after  binding the GridView control:
+Of course, we obviously need to call this method, so let's modify the **UpdateScorecardDetailView** method to add the thresholds header row after  binding the GridView control:
 
 ```
 private void UpdateScorecardDetailView()
@@ -389,10 +389,9 @@ What happens when a post back occurs on the page? Recall that I originally added
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-Notice that we no longer see the **Thresholds** header in the table.  This is because the **UpdateScorecardDetailView **method is not called  on post back, and the custom header row that we inserted before is not serialized  in view state. [The table also appears to be "corrupted" -- meaning some extraneous  cells appear on the right side of the table.]
+Notice that we no longer see the **Thresholds** header in the table.  This is because the **UpdateScorecardDetailView** method is not called  on post back, and the custom header row that we inserted before is not serialized  in view state. [The table also appears to be "corrupted" -- meaning some extraneous  cells appear on the right side of the table.]
 
-My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow
-**method in the PreRenderComplete phase of the page instead of from the **UpdateScorecardDetailView **method (to force the header row to be  added regardless of whether we are binding the GridView to a data source or rendering  it from view state):
+My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow** method in the PreRenderComplete phase of the page instead of from the **UpdateScorecardDetailView** method (to force the header row to be  added regardless of whether we are binding the GridView to a data source or rendering  it from view state):
 
 ```
 protected void Page_Load(
@@ -420,14 +419,13 @@ protected void Page_Load(
 
 Upon first inspection, this appeared to work because the **Thresholds**  header is added on the initial page request, as well as upon post back. However,  there's still a problem...
 
-Take another look at the table above. What happened to the row containing the  details for the **Denver **site?
+Take another look at the table above. What happened to the row containing the  details for the **Denver** site?
 
 It turns out that adding a custom header row to a GridView (using the approach  I've discussed here) corrupts the view state for the control. Consequently, if you  rely on the GridView to render properly from view state, then you have a nasty bug.  [On the other hand, if you don't need or want to render the GridView from view state,  then at this point, you can consider it "good enough" and move on to your next development  task.]
 
 To resolve this bug, we need to find a way to avoid corrupting the view state  of the GridView control, while still adding a custom header row.
 
-It turns out this is really easy. Instead of adding the header row during the  PreRenderComplete phase of the page, let's instead call the **AddThresholdsHeaderRow
-**method in the SaveStateComplete** **phase:
+It turns out this is really easy. Instead of adding the header row during the  PreRenderComplete phase of the page, let's instead call the **AddThresholdsHeaderRow** method in the SaveStateComplete phase:
 
 ```
 protected void Page_Load(

@@ -18,9 +18,9 @@ tags: ["My System", "Core Development", "Visual Studio"]
 
 In my [previous post](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server), I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis.
 
-If you are ever find yourself "starting from a clean slate" on a software development project, I hope you take advantage of the opportunity to not only enable Code Analysis, but also to treat all Code Analysis warnings as errors. That's right, go ahead and check all of those boxes (for both **Debug **and **Release **configurations, of course) so that whenever potential issues are reported by Code Analysis, it stops developers dead in their tracks and considers the build to be broken.
+If you are ever find yourself "starting from a clean slate" on a software development project, I hope you take advantage of the opportunity to not only enable Code Analysis, but also to treat all Code Analysis warnings as errors. That's right, go ahead and check all of those boxes (for both **Debug** and **Release** configurations, of course) so that whenever potential issues are reported by Code Analysis, it stops developers dead in their tracks and considers the build to be broken.
 
-While you're at it, go ahead and select the **All **option in the **Treat warnings as errors **section on the **Build **tab (something I definitely recommend as a best practice). Again, be sure to do this for all build configurations.
+While you're at it, go ahead and select the **All** option in the **Treat warnings as errors** section on the **Build** tab (something I definitely recommend as a best practice). Again, be sure to do this for all build configurations.
 
 Yes, this is going to be really painful for some developers.
 

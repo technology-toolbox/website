@@ -10,7 +10,7 @@ tags: ["Core
 
 In
 [my previous post](/blog/jjameson/2011/11/28/building-technologytoolbox-com-part-9), I shared the inner workings of the **Most Recent
-Posts **section on the Technology Toolbox home page. In this post, I'll
+Posts** section on the Technology Toolbox home page. In this post, I'll
 show you how I built on that foundation to generate the content for the
 **Most Popular Posts** section.
 
@@ -20,7 +20,7 @@ show you how I built on that foundation to generate the content for the
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
-Similar to the **Most Recent Posts **section, the **Most
+Similar to the **Most Recent Posts** section, the **Most
 Popular Posts** section is generated using an ASP.NET user control, as
 illustrated in the corresponding page layout.
 
@@ -33,7 +33,7 @@ illustrated in the corresponding page layout.
 Note that in the Subtext database, blog posts are stored in the **subtext\_Content**
 table and the statistics about the number of views for each blog post are stored
 in the **subtext\_EntryViewCount** table. Therefore, the first step
-in developing the **Most Popular Posts **feature for the home page
+in developing the **Most Popular Posts** feature for the home page
 was to expand the entity model.
 
 ### Updating the Data Access Layer
@@ -43,27 +43,25 @@ I completed the following steps to update the entity model:
 1. In Visual Studio, open the entity data model (**Caelum.edmx**).
 2. In the Entity Data Model Designer, right-click the background and then
    click **Update Model from Database...**
-3. In the **Update Wizard **window:
+3. In the **Update Wizard**window:
    1. If necessary, on the **Choose Your Data Connection**
       step, ensure the Subtext database is selected and then click **
       Next**.
    2. On the **Choose Your Database Objects** step, in the
-      **Add **tab, expand **Tables**, click the
+      **Add** tab, expand **Tables**, click the
       check box for **subtext\_EntryViewCount** (and **subtext\_Content**
       if this table was not previously added to the model), and then click
       **Finish**.
 4. For the **subtext\_Content**table, ensure the properties
    are set as follows:
    - **E****ntity
-     Set Name: **Entries
-   - **N****ame:
-     **Entry
-5. For the **subtext\_EntryViewCount **table, ensure the properties
+     Set Name:** Entries
+   - **N****ame:** Entry
+5. For the **subtext\_EntryViewCount**table, ensure the properties
    are set as follows:
    - **E****ntity
-     Set Name: **EntryViewCounts
-   - **N****ame:
-     **EntryViewCount
+     Set Name:** EntryViewCounts
+   - **N****ame:** EntryViewCount
 
 At this point, the model should resemble the following:
 
@@ -87,12 +85,11 @@ using (CaelumEntities context = new CaelumEntities())
         }
 ```
 
-In Subtext, **WebCount **represents the number of times a blog
+In Subtext, **WebCount** represents the number of times a blog
 post has been viewed through the website, and **AggCount** represents
 "aggregated" views (e.g. posts viewed by RSS subscribers). Note that I chose
 to assign "weighting" factors to Web views vs. RSS views. This is similar to
-the formula used in the out-of-the-box **subtext\_GetPopularPosts
-**stored procedure (although, unlike that sproc, I chose *not*
+the formula used in the out-of-the-box **subtext\_GetPopularPosts** stored procedure (although, unlike that sproc, I chose *not*
 to include the number of post comments when determining which posts are the
 most popular). That sproc is used to render the **Top Posts** section
 on the Subtext dashboard page, and I *believe* the formula is based on
@@ -112,9 +109,9 @@ I chose not to use the existing sproc for a couple of reasons:
    is that when you start getting blog posts with tens of thousands of hits
    (due to high rankings in Google search results), the influence of
    **AggCount** and number of comments becomes insignificant.
-2. Since I had already created the **Most Recent Posts **user
+2. Since I had already created the **Most Recent Posts** user
    control using the Entity Framework and a simple LINQ query, I wanted to
-   keep the implementation of the **Most Popular Posts **user
+   keep the implementation of the **Most Popular Posts** user
    control similar (to minimize development time and simplify maintenance of
    the code going forward).
 
@@ -149,7 +146,7 @@ as the basis for the **Most Popular Posts** section:
 > **Note**
 > 
 >       Based on the appearance of the list items shown in Figure 1, you might 
->       think the **Most Popular Posts **section is rendered using 
+>       think the **Most Popular Posts** section is rendered using 
 >       an *uunordered* list (since there are no numbers next to the 
 >       list items). However, that is simply the result of a custom "sprite" 
 >       image (to render the arrows) and a little CSS. I'll cover that detail 
@@ -163,13 +160,12 @@ a feature using
 and start replacing the sample content with ASP.NET controls to render the dynamic
 content.
 
-For the **Most Popular Posts **section on the site home page,
+For the **Most Popular Posts** section on the site home page,
 I added a new user control to the project (**PopularPosts.ascx**),
 copied the sample HTML above into the user control, and then added an instance
 of the control to the site home page.
 
-In order to render an ordered list, I use an ASP.NET **Repeater
-**control, with a custom **HeaderTemplate**, **ItemTemplate**,
+In order to render an ordered list, I use an ASP.NET **Repeater** control, with a custom **HeaderTemplate**, **ItemTemplate**,
 and **FooterTemplate**:
 
 ```
@@ -199,8 +195,7 @@ and **FooterTemplate**:
 >       method came from (or what it does).
 
 In the corresponding code-behind for the user control, I added code to retrieve
-the top 10 most popular posts and bind the results to the **Repeater
-**control:
+the top 10 most popular posts and bind the results to the **Repeater** control:
 
 ```
 using System;
@@ -239,7 +234,7 @@ At this point, I ran a quick test to ensure the user control worked as expected.
 With the feature "functionally" complete, I turned my attention to performance
 tuning.
 
-As with the control used to render the **Most Recent Posts **
+As with the control used to render the **Most Recent Posts**
 ssection, I added a cache directive to the new user control (PopularPosts.ascx)
 and specified a duration of one hour (3600 seconds):
 

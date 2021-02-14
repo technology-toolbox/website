@@ -40,7 +40,7 @@ Next, remove the SharePoint content database (e.g. WSS\_Content\_TFS) containing
 2. On the **Manage Content Databases** page, in the list of content
    databases, click the name of the content database to remove (e.g. **WSS\_Content\_TFS**).
 3. On the **Manage Content Database Settings** page, click the
-   **Remove content database **checkbox. When prompted to confirm
+   **Remove content database** checkbox. When prompted to confirm
    removing the content database, click **OK**.
 
 Delete the databases that will be restored from backup (e.g. ReportServerDB,  ReportServerTempDB, TfsWarehouse, and WSS\_Content\_TFS) as well as the new TFS 2010  databases:
@@ -71,8 +71,7 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
 1. On the **Start** menu, click **All Programs**,
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click **Run
-   as administrator**. If prompted by **User Account Control
-   **to allow the program to make changes to this computer, click
+   as administrator**. If prompted by **User Account Control** to allow the program to make changes to this computer, click
    **Yes**.
 
 2. At the Windows PowerShell command prompt, type the following command:

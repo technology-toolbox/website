@@ -47,7 +47,7 @@ Once you've configured the default database locations, anytime you create a new 
 
 Of course, when creating MOSS 2007 databases for a Production (or Test) environment, you still need to resize them appropriately in order to avoid having them simply auto-grow from a very small initial size (in order to avoid fragmentation and optimize performance).
 
-Suppose you need to determine the default database locations through SQL (perhaps because you are scripting the process to create your databases). If you fire up SQL Server Profiler and start a new trace (the default trace options are fine), you will find that SQL Server Management Studio executes the following SQL statements when viewing the **Database Settings **page in the **Server Properties **window:
+Suppose you need to determine the default database locations through SQL (perhaps because you are scripting the process to create your databases). If you fire up SQL Server Profiler and start a new trace (the default trace options are fine), you will find that SQL Server Management Studio executes the following SQL statements when viewing the **Database Settings** page in the **Server Properties** window:
 
 ```
 declare @RegPathParams sysname

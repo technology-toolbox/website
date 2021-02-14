@@ -23,10 +23,10 @@ Fortunately, the Visual Studio folks have provided a way to bypass gated check-i
 
 To grant permission to bypass a gated check-in:
 
-1. In the **Team Explorer **window, expand the appropriate project, right-click **Builds**, and then click **Security...**
-2. In the **{Project} Security** window, in the **Add users and groups **section, click **Windows User or Group**,** **and then click **Add...**
-3. In the **Select Users, Computers, or Groups **window, type the name of the service account used for TFS builds (e.g. **TECHTOOLBOX\svc-build**), and then click **OK**.
-4. In the **{Project} Security** window, in the list of permissions, for the **Override check-in validation by build **permission, click the checkbox in the **Allow **column, and then click **OK**.
+1. In the **Team Explorer** window, expand the appropriate project, right-click **Builds**, and then click **Security...**
+2. In the **{Project} Security** window, in the **Add users and groups** section, click **Windows User or Group**, and then click **Add...**
+3. In the **Select Users, Computers, or Groups** window, type the name of the service account used for TFS builds (e.g. **TECHTOOLBOX\svc-build**), and then click **OK**.
+4. In the **{Project} Security** window, in the list of permissions, for the **Override check-in validation by build** permission, click the checkbox in the **Allow** column, and then click **OK**.
 
 Then you simply need to modify the IncrementAssemblyVersion.proj file (described in my previous post) to specify the <samp>/bypass</samp> option with the <samp>tf.exe checkin</samp> command.
 

@@ -35,7 +35,7 @@ Shortly after starting to troubleshoot the problem, I discovered the following  
 > The communication object, System.ServiceModel.Channels.ServiceChannel, cannot
 > be used for communication because it is in the Faulted state.
 
-I also noticed from the stack trace that the error occurred while calling the **Dispose **method of the Web service proxy class.
+I also noticed from the stack trace that the error occurred while calling the **Dispose** method of the Web service proxy class.
 
 After a [quick Internet search](http://www.bing.com/search?q=Dispose+%22cannot+be+used+for+communication+because+it+is+in+the+Faulted+state%22&form=QBRE&qs=n), I discovered that there's a well-known problem with WCF  service proxies and the `using` statement in C#. [It obviously wasn't  well-known to me until yesterday.]
 
@@ -96,8 +96,7 @@ using (CalculatorClient client = new CalculatorClient())
         Console.WriteLine("Hope this code wasn't important, because it might not happen.");
 ```
 
-The problem is that if an error occurs while calling the Web service, then when `this.Close()` is subsequently called from the **Dispose
-**method, a [**CommunicationObjectFaultedException**](http://msdn.microsoft.com/en-us/library/system.servicemodel.communicationobjectfaultedexception.aspx) is thrown ("The
+The problem is that if an error occurs while calling the Web service, then when `this.Close()` is subsequently called from the **Dispose** method, a [**CommunicationObjectFaultedException**](http://msdn.microsoft.com/en-us/library/system.servicemodel.communicationobjectfaultedexception.aspx) is thrown ("The
 communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used
 for communication because it is in the Faulted state.").
 
@@ -195,8 +194,7 @@ Calling client.Add(0.0, 0.0);
 Got System.ServiceModel.EndpointNotFoundException from Divide.
 ```
 
-The reality is that the WCF team might never fix this bug -- heck, for all I  know, this behavior could be marked as "by design." However, I'd like to think that  WCF service proxies will eventually be "fixed" (which is to say "function as I --  and many other .NET developers -- would expect them to). I suppose another option  would be to remove the **IDisposable **interface from **ClientBase
-**altogether (but I certainly don't like that idea).
+The reality is that the WCF team might never fix this bug -- heck, for all I  know, this behavior could be marked as "by design." However, I'd like to think that  WCF service proxies will eventually be "fixed" (which is to say "function as I --  and many other .NET developers -- would expect them to). I suppose another option  would be to remove the **IDisposable** interface from **ClientBase** altogether (but I certainly don't like that idea).
 
 And so continues my neverending quest to make the world of software a simpler  -- and happier -- place to live in ;-)
 

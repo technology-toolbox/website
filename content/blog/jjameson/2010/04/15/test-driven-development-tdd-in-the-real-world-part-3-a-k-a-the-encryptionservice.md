@@ -22,19 +22,17 @@ In my [previous post](/blog/jjameson/2010/04/09/test-driven-development-tdd-in-t
 
 Suppose that we are developing a Web application and we need to encrypt some  sensitive data, such as credentials used to access an external system. In other  words, we need our Web application to support single-sign on (SSO) in order to access  or display data from another system, and we want to store the SSO credentials in  encrypted form. [Let's assume we're not going to leverage the Transparent Data Encryption  (TDE) features in SQL Server for this particular scenario, which could potentially  eliminate the need for us to encrypt and decrypt the data ourselves.]
 
-Each user of the Web application will specify his or her username/password for  accessing the external system, which we will subsequently encrypt and store in the  user's profile. Consequently, we want to create a class with an **Encrypt
-**method that encapsulates the details (such as which encryption method to  use).
+Each user of the Web application will specify his or her username/password for  accessing the external system, which we will subsequently encrypt and store in the  user's profile. Consequently, we want to create a class with an **Encrypt** method that encapsulates the details (such as which encryption method to  use).
 
 The .NET Framework makes it relatively easy to encrypt and decrypt data using  a variety of different algorithms, so it shouldn't take much work to create the **Encrypt** method (and corresponding **Decrypt** method).
 
 However, in my experience, the most difficult part of encrypting data is managing  the keys used to encrypt and decrypt the data. For this scenario, let's assume the  key used to encrypt the data is managed internally by the encryption service. In  other words, each user's SSO credentials are encrypted using the same key.
 
-Let's start by writing a couple of unit tests. However, before we do that we  first need to decide where to put the unit tests. Start by creating a new C# **Class Library **project called **Security**, then create  a corresponding project using the C# **Test Project **template called **Security.DeveloperTests**.
+Let's start by writing a couple of unit tests. However, before we do that we  first need to decide where to put the unit tests. Start by creating a new C# **Class Library** project called **Security**, then create  a corresponding project using the C# **Test Project** template called **Security.DeveloperTests**.
 
 At this point, I also recommend changing the default namespaces and assembly  names to something more meaningful, like **Fabrikam.Demo.Security**,  as well as configuring several other options such as enabling code analysis and  treating all warnings as errors (including both compilation warnings as well as  code analysis warnings). I also recommend [configuring shared assembly information](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects) and signing the assemblies with a strong  name key.
 
-The second thing we need to do is decide on a class name for the **Encrypt
-**and **Decrypt **methods. How about **EncryptionService**?
+The second thing we need to do is decide on a class name for the **Encrypt** and **Decrypt** methods. How about **EncryptionService**?
 
 Now we can write a couple of very simple unit tests:
 
@@ -106,7 +104,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 
 As you can see, my definition of encrypting a simple string "successfully" is  very basic. Actually, you might call it laughable, since all I'm doing is ensuring  we don't get back a null or empty string, as well as verifying the encrypted text  (i.e. *ciphertext*) is not the same as the original text (i.e. *plaintext*).  However, I'm assuming that the unit test for the **Decrypt** method  will actually verify the **EncryptionService** is doing what we need  it to do. One could argue that the **Encrypt001** unit test doesn't  really add any value and therefore could be eliminated, but let's keep it for the  sake of clarity.
 
-If we attempt to build the solution at this point, we get some compilation errors  because the **EncryptionService **doesn't actually exist. Consequently,  let's add the corresponding "shell" to the **Security **project:
+If we attempt to build the solution at this point, we get some compilation errors  because the **EncryptionService** doesn't actually exist. Consequently,  let's add the corresponding "shell" to the **Security** project:
 
 ```
 namespace Fabrikam.Demo.Security
@@ -141,11 +139,11 @@ namespace Fabrikam.Demo.Security
 }
 ```
 
-Note that at this point, we're not worried about the actual implementation of  the **Encrypt **and **Decrypt **methods. Rather, we just  want to get the solution to compile so that we can ensure our new unit tests are  "red" (i.e. they fail) before we actually start working on making them "green" (i.e.  pass).
+Note that at this point, we're not worried about the actual implementation of  the **Encrypt** and **Decrypt** methods. Rather, we just  want to get the solution to compile so that we can ensure our new unit tests are  "red" (i.e. they fail) before we actually start working on making them "green" (i.e.  pass).
 
 However, we have a problem...
 
-The **Decrypt001 **unit test actually passes -- even though we aren't  really encrypting and decrypting the specified text!
+The **Decrypt001** unit test actually passes -- even though we aren't  really encrypting and decrypting the specified text!
 
 Well, that certainly isn't good. Let's modify the unit test a little to ensure  that it fails based on the current implementation:
 
@@ -168,7 +166,7 @@ That's better...now both of our unit tests fail due to the following error:
 
 > Assert.AreNotEqual failed. Expected any value except:&lt;foobar&gt;. Actual:&lt;foobar&gt;.
 
-Perhaps you'd rather see a more meaningful message when the test fails. In that  case, you can specify the optional `message` parameter when using one  of the methods on the **Assert **class:
+Perhaps you'd rather see a more meaningful message when the test fails. In that  case, you can specify the optional `message` parameter when using one  of the methods on the **Assert** class:
 
 ```
 Assert.AreNotEqual<string>(
@@ -190,7 +188,7 @@ Now let's focus on getting our unit tests to pass.
 
 As I mentioned before, the most difficult part of encrypting data is managing  the keys used to encrypt and decrypt the data. For this scenario, I mentioned that  the goal is to provide a mechanism for securely storing SSO credentials for a Web  application.
 
-If you are familiar with ASP.NET, you are probably aware that you can configure  the [**SqlMembershipProvider**](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.aspx) to store passwords either in clear, encrypted,  or hashed form. Here is some corresponding text from the MSDN page for **[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)** property:
+If you are familiar with ASP.NET, you are probably aware that you can configure  the [**SqlMembershipProvider**](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.aspx) to store passwords either in clear, encrypted,  or hashed form. Here is some corresponding text from the MSDN page for **[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)**  property:
 
 > Encrypted and Hashed passwords are encrypted or hashed by default based on information
 > supplied in the
@@ -199,7 +197,7 @@ If you are familiar with ASP.NET, you are probably aware that you can configure 
 
 If other words, if you encrypt passwords using the **SqlMembershipProvider**,  it uses a symmetric-key algorithm based on the machineKey element in Web.config.  Assuming you implement the necessary security around your Web.config files, this  mitigates the difficulty in managing the key necessary to encrypt and decrypt data.
 
-The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)**method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)** method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
+The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)** method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)**  method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
 
 Note, however, that the **EncryptPassword** and **DecryptPassword**  methods are `protected` (not `public`). Consequently, without  reverting to some unsupported or poorly performing hack (e.g. using reflection to  call the protected methods), we need to inherit from the **SqlMembershipProvider**  class in order to use this functionality.
 
@@ -209,8 +207,7 @@ In other words, the **EncryptionService** class will delegate the  work of actua
 
 While we could certainly rely on the unit tests already developed to (indirectly)  test the new **InternalEncryptionService** class, I prefer to create  unit tests at the "lower layers" so that in the event something breaks, I can start  investigating from the lowest layer (thus minimizing the amount of code I need to  debug).
 
-With that in mind, let's copy/paste the unit tests for the **EncryptionService
-**class (i.e. EncryptionServiceTest.cs) to create unit tests for the **InternalEncryptionService** class:
+With that in mind, let's copy/paste the unit tests for the **EncryptionService** class (i.e. EncryptionServiceTest.cs) to create unit tests for the **InternalEncryptionService** class:
 
 ```
 using System;
@@ -290,7 +287,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 > and **Decrypt** methods with as little work (i.e. custom code)
 > as possible.
 
-Next, copy/paste the **EncryptionService **class (i.e. EncryptionService.cs)  to create the **InternalEncryptionService** class and make the necessary  changes to inherit from **SqlMembershipProvider **(note that you'll  need to add references to System.Configuration and System.Web):
+Next, copy/paste the **EncryptionService** class (i.e. EncryptionService.cs)  to create the **InternalEncryptionService** class and make the necessary  changes to inherit from **SqlMembershipProvider** (note that you'll  need to add references to System.Configuration and System.Web):
 
 ```
 using System.Web.Security;
@@ -332,11 +329,11 @@ Attempting to build the solution at this point results in the following error:
 > 'Fabrikam.Demo.Security.InternalEncryptionService' is inaccessible due to its
 > protection level
 
-This makes sense because **InternalEncryptionService **is marked  as internal, yet we are trying to access it from the separate **Fabrikam.Demo.Security.DeveloperTests**  assembly.
+This makes sense because **InternalEncryptionService** is marked  as internal, yet we are trying to access it from the separate **Fabrikam.Demo.Security.DeveloperTests**  assembly.
 
 Note that if you create your unit tests using some built-in features of Visual  Studio, it will automatically create "wrapper" classes that you can use in unit  testing scenarios like this. However, since I tend to just create unit tests via  code (often via copy/paste like I explained above), I don't typically rely on these  wrapper classes.
 
-An alternative for this scenario -- since our class is marked as `internal`  -- is to add an **[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)** to the AssemblyInfo.cs file for the **Security **project (which creates the **Fabrikam.Demo.Security**  assembly):
+An alternative for this scenario -- since our class is marked as `internal`  -- is to add an **[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)**  to the AssemblyInfo.cs file for the **Security** project (which creates the **Fabrikam.Demo.Security**  assembly):
 
 ```
 using System.Reflection;
@@ -386,10 +383,10 @@ With the **InternalsVisibleToAttribute** specifed, the solution  builds and we n
 > 
 > If you tend to run your unit tests in Visual Studio using the **Test
 > List Editor** (like I do) then I recommend adding the **Full
-> Class Name **column to the view (in order to resolve any ambiguity
+> Class Name** column to the view (in order to resolve any ambiguity
 > between unit tests and easily identify the class where the unit test is
 > implemented). You should also consider adding this column to the **
-> Test Results **window. [Personally, I find the **Full Class
+> Test Results** window. [Personally, I find the **Full Class
 > Name** column to be much more valuable than the **Project**
 > column that gets added by default.]
 
@@ -448,9 +445,7 @@ Now build the solution and run the unit tests.
 
 Voila! The two unit tests for the **InternalEncryptionService**  class are now "green" (i.e. passing). Woohoo!
 
-The next step is to get the remaining unit tests (i.e. the two for the **EncryptionService** class) to pass. As noted before, this is simply  a matter of delegating the work performed by the **EncryptionService
-**class to the corresponding methods in the **InternalEncryptionService
-**class:
+The next step is to get the remaining unit tests (i.e. the two for the **EncryptionService** class) to pass. As noted before, this is simply  a matter of delegating the work performed by the **EncryptionService** class to the corresponding methods in the **InternalEncryptionService** class:
 
 ```
 public static class EncryptionService
@@ -489,7 +484,7 @@ As I mentioned in my previous post, whenever you write a new piece of code, you 
 
 In the code examples provided so far, did you notice how little error handling  is implemented? What happens if we try to encrypt a null or empty string? What should  we expect to happen?
 
-We should definitely make the code more robust by validating the parameters in  the **InternalEncryptionService **class -- but if we're doing TDD,  then we should try to remember to write the unit test first (ensuring that it fails  before implementing the necessary work to make it pass). For example, add the following  unit test to InternalEncryptionServiceTest.cs:
+We should definitely make the code more robust by validating the parameters in  the **InternalEncryptionService** class -- but if we're doing TDD,  then we should try to remember to write the unit test first (ensuring that it fails  before implementing the necessary work to make it pass). For example, add the following  unit test to InternalEncryptionServiceTest.cs:
 
 ```
 /// <summary>
@@ -521,7 +516,7 @@ We should definitely make the code more robust by validating the parameters in  
         }
 ```
 
-If you run this new unit test, you will find that it fails because, even though  an **ArgumentNullException **is thrown, the message specified in the  exception ("String reference not set to an instance of
+If you run this new unit test, you will find that it fails because, even though  an **ArgumentNullException** is thrown, the message specified in the  exception ("String reference not set to an instance of
 a String.\r\nParameter name: s") does not match the expected message.
 
 Add another unit test to validate that an empty string is also handled as expected  (since it shouldn't take more than 30 seconds or so to copy/paste and make the necessary  changes):
@@ -558,7 +553,7 @@ Add another unit test to validate that an empty string is also handled as expect
 
 What's interesting at this point is that while the **EncryptWithInvalidParameter002**  test fails, the failure isn't due to an unexpected exception message but rather  because an exception was *not* thrown. This highlights an interesting scenario  -- and perhaps prompts a question that you might never have asked yourself if you  weren't using TDD: Should we be able to encrypt an empty string?
 
-According to the ASP.NET team, the answer is "yes" (based on the implementation  of the **SqlMembershipProvider **class). In fact, this unit test makes  it really easy to step into the debugger and verify that we do indeed get back "garbled"  text when calling the **Encrypt** method with an empty string. [Yet  another reason to use TDD -- it makes it really easy to dive into the debugger without  going through the effort of spinning up a Web application and browsing to the site.]
+According to the ASP.NET team, the answer is "yes" (based on the implementation  of the **SqlMembershipProvider** class). In fact, this unit test makes  it really easy to step into the debugger and verify that we do indeed get back "garbled"  text when calling the **Encrypt** method with an empty string. [Yet  another reason to use TDD -- it makes it really easy to dive into the debugger without  going through the effort of spinning up a Web application and browsing to the site.]
 
 Assuming we agree with this expected behavior for encrypting an empty string  (which seems reasonable), then it makes sense to replace the **EncryptWithInvalidParameter002**  test with a different test:
 
@@ -582,15 +577,15 @@ Assuming we agree with this expected behavior for encrypting an empty string  (w
 
 Even though this test might not appear to add any value (since it passes without  making any changes to the code), in my opinion it is valuable because it helps others  developers (or even me, at some later point in time) quickly understand the expected  behavior of the code simply by reading through the unit tests. It also ensures that  we don't accidentally change the behavior (based on the assumption that an empty  string should be encrypted successfully).
 
-Next we should add similar unit tests to ensure the **Decrypt ** method handles null and empty input values as expected. Finally, make the necessary  code changes to get the new unit tests to pass and check-in the updated code.
+Next we should add similar unit tests to ensure the **Decrypt**  method handles null and empty input values as expected. Finally, make the necessary  code changes to get the new unit tests to pass and check-in the updated code.
 
 So at this point, are we done? Well, sort of.
 
-Yes, the **EncryptionService **does what we need it to do, but there's  one problem -- and it might be considered a relatively big problem depending on  your perspective.
+Yes, the **EncryptionService** does what we need it to do, but there's  one problem -- and it might be considered a relatively big problem depending on  your perspective.
 
 At the start, I mentioned that the goal was to be able to encrypt SSO credentials  for a Web application. Suppose that both you and I have the same password (merely  by coincidence). Should the **EncryptionService** return the same value  when encrypting my password and your password? Most security experts would tell  you "no, you should use some kind of 'salt' (or 'entropy' as I like to call it)  when encrypting values like this."
 
-Consequently we should consider making the **Encrypt **and **Decrypt **methods more robust by adding another parameter:
+Consequently we should consider making the **Encrypt** and **Decrypt** methods more robust by adding another parameter:
 
 ```
 namespace Fabrikam.Demo.Security

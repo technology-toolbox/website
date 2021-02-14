@@ -56,8 +56,7 @@ Here is what comes to immediately to mind for the **StringHelper.Truncate**  met
 - How should the method behave if a null string is specified?
 - What are the limits on the maximum length parameter?
 
-More often than not, when a parameter is null, you simply throw an **ArgumentNullException
-**and be done with it -- but is that the right behavior in this case? In  my opinion, the answer is no -- if we specify a null or empty string, then the **StringHelper.Truncate **method should should simply return a null  or empty string, respectively.
+More often than not, when a parameter is null, you simply throw an **ArgumentNullException** and be done with it -- but is that the right behavior in this case? In  my opinion, the answer is no -- if we specify a null or empty string, then the **StringHelper.Truncate** method should should simply return a null  or empty string, respectively.
 
 From this foundation, let's start with the following unit tests:
 
@@ -101,15 +100,13 @@ Some people might say that these arbitrary method names don't help you quickly  
 
 Instead, when a unit test goes from "green" to "red" I jump straight to the source  of the unit test to figure out what the unit test is validating in order to understand  why it's no longer passing. If you don't mind coming up with lengthy method names  for your unit tests, then by all means, go right ahead.
 
-I should also point out how I like to organize my unit tests. Let's suppose that  the **StringHelper **class will reside in the **Fabrikam.Demo.CoreServices
-**assembly. In addition to the **Fabrikam.Demo.CoreServices
-**project file, I create a second project named **Fabrikam.Demo.CoreServices.DeveloperTests**.  Note that as I mentioned in the previous post, I like to use the "DeveloperTests"  moniker to denote that these are tests created by the Development team (as opposed  to the Test team) and may contain both unit tests as well as integration tests (where  it makes more sense to create an integration test instead of -- or in addition to  -- a unit test).
+I should also point out how I like to organize my unit tests. Let's suppose that  the **StringHelper** class will reside in the **Fabrikam.Demo.CoreServices** assembly. In addition to the **Fabrikam.Demo.CoreServices** project file, I create a second project named **Fabrikam.Demo.CoreServices.DeveloperTests**.  Note that as I mentioned in the previous post, I like to use the "DeveloperTests"  moniker to denote that these are tests created by the Development team (as opposed  to the Test team) and may contain both unit tests as well as integration tests (where  it makes more sense to create an integration test instead of -- or in addition to  -- a unit test).
 
 Okay, let's get back to writing the unit tests...
 
 While it seems obvious that the maximum length parameter must be greater than  zero, it's also important to realize that if we were to specify a value of 1 or  2, then we wouldn't even have enough space for the ellipsis (...) in the returned  string.
 
-In order to validate the maximum length parameter, let's assume that it must  be a minimum of 4 (to allow for a single character from the input string and the  three characters for the ellipsis). This is definitely a somewhat arbitrary number  (and arguably not an adequate length) -- and you might very well have chosen a minimum  of 5, 10, or perhaps something even larger. However, in order to make the **StringHelper.Truncate **method as flexible as possible, let's use  a minimum of 4.
+In order to validate the maximum length parameter, let's assume that it must  be a minimum of 4 (to allow for a single character from the input string and the  three characters for the ellipsis). This is definitely a somewhat arbitrary number  (and arguably not an adequate length) -- and you might very well have chosen a minimum  of 5, 10, or perhaps something even larger. However, in order to make the **StringHelper.Truncate** method as flexible as possible, let's use  a minimum of 4.
 
 From this we can write another unit test right away:
 
@@ -144,8 +141,7 @@ If this unit test doesn't make sense, take a look at my previous post on [testin
 
 At this point, it seems like a good point to advance from TDD step 1 ("Write  the unit tests first") to step 2 ("Add the minimal amount of code necessary to get  the unit tests to compile").
 
-In order to get the unit tests to compile, we need to stub out the **StringHelper.Truncate
-**method:
+In order to get the unit tests to compile, we need to stub out the **StringHelper.Truncate** method:
 
 ```
 public static class StringHelper
@@ -168,8 +164,7 @@ Unfortunately, this isn't quite enough to successfully compile the code -- assum
 > error : CA1801 : Microsoft.Usage : Parameter 'maxLength' of 'StringHelper.Truncate(string,
 > int)' is never used. Remove the parameter or use it in the method body.
 
-To resolve these errors, let's add a little more code to the **Truncate
-**method:
+To resolve these errors, let's add a little more code to the **Truncate** method:
 
 ```
 public static string Truncate(
@@ -224,7 +219,7 @@ To resolve this error, we need to tweak the unit test a little bit (to remove  t
 
 At this point, the solution builds without any errors and we can advance to TDD  step 3 ("Run the tests and ensure they fail").
 
-When the tests are run, we get a couple of debug assertion failures, but if we  click the **Ignore **button a couple of times we find that all three  unit tests are failing (which is exactly what we want at this point).
+When the tests are run, we get a couple of debug assertion failures, but if we  click the **Ignore** button a couple of times we find that all three  unit tests are failing (which is exactly what we want at this point).
 
 Now let's move on to TDD step 4 ("Write the code to make the unit tests pass").  Let's replace the debug assertions with code that actually does what we need it  to do:
 
@@ -251,10 +246,9 @@ public static string Truncate(
 
 Running the unit tests again, we find that all of the unit tests pass. Woohoo!
 
-However, we're obviously not done because the **Truncate **method  clearly still has a ways to go before it actually does something useful.
+However, we're obviously not done because the **Truncate** method  clearly still has a ways to go before it actually does something useful.
 
-Let's add another unit test by copying and pasting **Truncate001
-**and modifying it accordingly:
+Let's add another unit test by copying and pasting **Truncate001** and modifying it accordingly:
 
 ```
 /// <summary>
@@ -274,7 +268,7 @@ Let's add another unit test by copying and pasting **Truncate001
         }
 ```
 
-Running the tests confirms that **Truncate003 **fails as expected  (since at this point, we are just returning `"TODO:"`  from the **Truncate **method). Let's add a little bit of code to find  the last space in the input string and truncate accordingly:
+Running the tests confirms that **Truncate003** fails as expected  (since at this point, we are just returning `"TODO:"`  from the **Truncate** method). Let's add a little bit of code to find  the last space in the input string and truncate accordingly:
 
 ```
 public static string Truncate(
@@ -301,7 +295,7 @@ public static string Truncate(
         }
 ```
 
-Running the unit tests shows that we are all "green" at this point. Excellent,  that means we're done, right? The **Truncate **method does what we  expect it to?
+Running the unit tests shows that we are all "green" at this point. Excellent,  that means we're done, right? The **Truncate** method does what we  expect it to?
 
 Well, yes, it does what we expect it do in this particular case, but something  doesn't feel right about the current implementation. It seems too simple ;-)
 
@@ -387,8 +381,7 @@ Let's test the boundaries a little by adding yet another unit test:
 
 Sure enough, this new test fails, because the string is truncated and the ellipsis  added -- even though the maximum length specified is sufficient to hold the entire  input string.
 
-Consequently, we need to add a little more code to the **Truncate
-**method:
+Consequently, we need to add a little more code to the **Truncate** method:
 
 ```
 public static string Truncate(
@@ -426,8 +419,7 @@ public static string Truncate(
 
 At this point, we could very well call the **Truncate** method done  and move on to more challenging tasks.
 
-However, suppose that instead of using the **LastIndexOf **method  to find a space in the input string, we mistakenly used the **IndexOf
-**method to search for a space from the beginning of the string. What would  happen?
+However, suppose that instead of using the **LastIndexOf** method  to find a space in the input string, we mistakenly used the **IndexOf** method to search for a space from the beginning of the string. What would  happen?
 
 Well, unfortunately, all of the unit tests created so far would still pass. That's  certainly not good.
 
@@ -439,8 +431,7 @@ Well, unfortunately, all of the unit tests created so far would still pass. That
 
 The reason for this is that when familiarizing myself with code that I didn't  write, I find it very helpful to be able to read through unit tests almost like  a spec, meaning that you typically start at a high level (or the simplest scenario)  and then gradually work your way down through more and more complex scenarios.
 
-Consequently, let's add one last test case for the **StringHelper.Truncate
-**method:
+Consequently, let's add one last test case for the **StringHelper.Truncate** method:
 
 ```
 /// <summary>

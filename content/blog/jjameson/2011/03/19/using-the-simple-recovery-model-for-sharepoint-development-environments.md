@@ -19,7 +19,7 @@ A little more than three years ago, I blogged about [the default recovery model 
 
 Since you typically don't care about potential data loss in SharePoint development VMs -- and consequently never bother to configure scheduled database backups -- you might as well *always*use the Simple recovery model for *all*of your development databases. This alleviates the need to periodically backup your transaction logs and also allows you to [use a very small VHD](/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v) for the database log files.
 
-Here's a short SQL script that changes all user databases and the out-of-the-box **model **database to use the Simple recovery model:
+Here's a short SQL script that changes all user databases and the out-of-the-box **model** database to use the Simple recovery model:
 
 ```
 IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
@@ -69,5 +69,5 @@ BEGIN
 END
 ```
 
-Note that by changing the **model **database, any new databases created in the development environment (such as content databases created for new Web applications) will be configured to use the Simple recovery model by default.
+Note that by changing the **model** database, any new databases created in the development environment (such as content databases created for new Web applications) will be configured to use the Simple recovery model by default.
 

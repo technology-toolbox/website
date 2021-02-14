@@ -72,7 +72,7 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 | Check for the latest installation guide. | The version of the installation guide that I used was last updated: 
 	March 29, 2010 (TFSInstall-3292010.chm). |
 | Back up your data. | I performed full backups of all "user" databases as well as a backup 
-	of the **TfsWarehouse **OLAP database.<br><br>I also ensured that I had a backup of the encryption key for SQL Server 
+	of the **TfsWarehouse** OLAP database.<br><br>I also ensured that I had a backup of the encryption key for SQL Server 
 	Reporting Services. |
 | Check for supported hardware and software. | Note that TFS 2008 supported x64 on the data-tier but not on the application-tier. 
 	Consequently, when I built out my TFS 2008 environment, I used Windows Server 
@@ -95,8 +95,7 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 		<li>TECHTOOLBOX\svc-spserviceapp</li>
 		<li>TECHTOOLBOX\svc-web-tfs</li>
 	</ul>
-	None of the service accounts are members of the **Administrators
-	**security group. |
+	None of the service accounts are members of the **Administrators** security group. |
 | Check for supported environment settings. | The functional level of my Active Directory domain (TECHTOOLBOX) is Windows 
 	Server 2008 mode.<br><br>I ensured the firewall ports for SQL Server were configured as necessary. |
 | Set up Internet Information Services (IIS). | To reduce the time and effort required for the upgrade, I relied on the 
@@ -139,7 +138,7 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 	I didn't have to uninstall the previous version. |
 | Restore your data. | When restoring data from the Production environment to the Test environment 
 	to perform a test of the upgrade process, I used SQL Server Management Studio 
-	to add permissions for the corresponding test accounts.<br><br>For example, I added **TECHTOOLBOX\svc-tfs-test **to the 
+	to add permissions for the corresponding test accounts.<br><br>For example, I added **TECHTOOLBOX\svc-tfs-test** to the 
 	corresponding TFS databases and gave it the same permissions as **
 	TECHTOOLBOX\svc-tfs**. Similarly, I added **TECHTOOLBOX\CYCLOPS-TEST$** 
 	and give it the same permissions as **TECHTOOLBOX\CYCLOPS$** 

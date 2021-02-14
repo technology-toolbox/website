@@ -23,10 +23,10 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 > ***
 > 
 > 
-> **From: **Jeremy Jameson
-> **Sent: **Friday, May 21, 2010 11:00 AM
-> **To: **[...]
-> **Subject: **Windows Server Backup: "Select Items to Recover" does             not show backed up files
+> **From:** Jeremy Jameson
+> **Sent:** Friday, May 21, 2010 11:00 AM
+> **To:** [...]
+> **Subject:** Windows Server Backup: "Select Items to Recover" does             not show backed up files
 > 
 > On a server running Windows Server 2008 R2, I have completed a backup with the following             options:
 > 

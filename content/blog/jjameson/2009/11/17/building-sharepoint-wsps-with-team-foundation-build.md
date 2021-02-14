@@ -36,7 +36,7 @@ So, if you are building SharePoint WSPs -- regardless of whether you use the rea
 
 As I first mentioned in my previous post, relative paths work just fine when compiling from within Visual Studio or using MSBuild from the command line. However, they don't work at all when queuing the builds through Team Foundation Build.
 
-The problem with relative paths is that Team Foundation Build uses a different folder structure when compiling your projects. Specifically, it changes the output folder for all compiled items to be under a new **Binaries **folder -- not the location specified in the project settings within Visual Studio.
+The problem with relative paths is that Team Foundation Build uses a different folder structure when compiling your projects. Specifically, it changes the output folder for all compiled items to be under a new **Binaries** folder -- not the location specified in the project settings within Visual Studio.
 
 In other words, if you refer to a referenced assembly using something like:
 
@@ -44,11 +44,11 @@ In other words, if you refer to a referenced assembly using something like:
 
 then you will find that this works just fine when building through Visual Studio -- or even when compiling using TFSBuild.proj from the command line (a.k.a. a "Desktop Build"). However, if you then queue the build through Team Foundation Server, you'll find your build fails because the referenced assembly was actually output to a different folder.
 
-If you dive into the log file for the build, you will find that Team Foundation Build modifies the **OutDir **variable and sets it to something like:
+If you dive into the log file for the build, you will find that Team Foundation Build modifies the **OutDir** variable and sets it to something like:
 
 > C:\Users\svc-build\AppData\Local\Temp\Demo\Daily Build - Main\Binaries\Debug\
 
-So the trick to building WSPs with Team Foundation Build is to leverage the **OutDir **variable instead of relying on relative paths to referenced assemblies.
+So the trick to building WSPs with Team Foundation Build is to leverage the **OutDir** variable instead of relying on relative paths to referenced assemblies.
 
 Here is the updated DDF file based on [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
 

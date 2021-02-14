@@ -18,7 +18,7 @@ tags: ["MOSS 2007"]
 
 When using Microsoft Office SharePoint Server (MOSS) 2007 on an Internet-facing site, you almost certainly don't want to include items like announcements, contacts, etc. in search results.
 
-Consequently, I recommend customers create additional search scopes that explicitly exclude these items and use these scopes instead (for example, by explicitly setting the **Scope **property on the Core Results Web Part).
+Consequently, I recommend customers create additional search scopes that explicitly exclude these items and use these scopes instead (for example, by explicitly setting the **Scope** property on the Core Results Web Part).
 
 I actually recommend against making any changes to the out-of-the-box (OOTB) **All Sites** scope so that you can continue to use that scope for internal users -- as well as for troubleshooting purposes. [This is my general recommendation for almost all things SharePoint -- or other solutions for that matter -- meaning that if you can easily customize the technology to suit your needs without changing the OOTB behavior, then you should certainly use that approach. Trust me, this makes your support calls go much, much faster.]
 
