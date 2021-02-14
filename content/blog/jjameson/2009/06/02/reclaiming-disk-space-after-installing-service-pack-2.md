@@ -9,8 +9,8 @@ tags: ["Windows Vista", "Windows Server", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx)
 > 

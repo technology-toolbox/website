@@ -53,16 +53,18 @@ With the updated model, the following LINQ query can be used to retrieve the to
 
 
 
-    using (CaelumEntities context = new CaelumEntities())
-            {
-                var q = (from entry in context.Entries
-                        join views in context.EntryViewCounts
-                            on entry.ID equals views.EntryID
-                        orderby (views.WebCount * 15)
-                                + (views.AggCount * 10) descending
-                        select entry).Take(10);
-    
-            }
+```
+using (CaelumEntities context = new CaelumEntities())
+        {
+            var q = (from entry in context.Entries
+                    join views in context.EntryViewCounts
+                        on entry.ID equals views.EntryID
+                    orderby (views.WebCount * 15)
+                            + (views.AggCount * 10) descending
+                    select entry).Take(10);
+
+        }
+```
 
 
 
@@ -86,20 +88,22 @@ One of the primary goals in developing the Technology Toolbox site is ensuring 
 
 
 
-    <div class="posts-most-popular">
-        <h2>Most Popular Posts</h2>
-        <ol>
-            <li><a rel="bookmark" href="/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx">
-                Issues Deploying SharePoint Solution Packages</a></li>
-            <li><a rel="bookmark" href="/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx">
-                The Case of the Disappearing Hosts File</a></li>
-            <li><a rel="bookmark" href="/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx">
-                Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010)</a></li>
-            <li>...</li>
-            <li>...</li>
-            ...
-        </ol>
-    </div>
+```
+<div class="posts-most-popular">
+    <h2>Most Popular Posts</h2>
+    <ol>
+        <li><a rel="bookmark" href="/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx">
+            Issues Deploying SharePoint Solution Packages</a></li>
+        <li><a rel="bookmark" href="/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx">
+            The Case of the Disappearing Hosts File</a></li>
+        <li><a rel="bookmark" href="/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx">
+            Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010)</a></li>
+        <li>...</li>
+        <li>...</li>
+        ...
+    </ol>
+</div>
+```
 
 
 
@@ -125,24 +129,26 @@ In order to render an ordered list, I use an ASP.NET **Repeater**control, with 
 
 
 
-    <div class="posts-most-popular">
-        <h2>
-            Most Popular Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <HeaderTemplate>
-                <ol>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <li><a href="<%# BlogHelper.GetEntryUrl(
-                            (string) Eval("EntryName"),
-                            (DateTime) Eval("DateSyndicated")) %>" rel="bookmark">
-                    <%# Eval("Title") %></a></li>
-            </ItemTemplate>
-            <FooterTemplate>
-                </ol>
-            </FooterTemplate>
-        </asp:Repeater>
-    </div>
+```
+<div class="posts-most-popular">
+    <h2>
+        Most Popular Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <HeaderTemplate>
+            <ol>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <li><a href="<%# BlogHelper.GetEntryUrl(
+                        (string) Eval("EntryName"),
+                        (DateTime) Eval("DateSyndicated")) %>" rel="bookmark">
+                <%# Eval("Title") %></a></li>
+        </ItemTemplate>
+        <FooterTemplate>
+            </ol>
+        </FooterTemplate>
+    </asp:Repeater>
+</div>
+```
 
 
 
@@ -158,33 +164,35 @@ In the corresponding code-behind for the user control, I added code to retrieve 
 
 
 
-    using System;
-    using System.Linq;
-    using TechnologyToolbox.Caelum.Data;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Linq;
+using TechnologyToolbox.Caelum.Data;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    public partial class PopularPosts : System.Web.UI.UserControl
     {
-        public partial class PopularPosts : System.Web.UI.UserControl
+        protected void Page_Load(
+            object sender,
+            EventArgs e)
         {
-            protected void Page_Load(
-                object sender,
-                EventArgs e)
+            using (CaelumEntities context = new CaelumEntities())
             {
-                using (CaelumEntities context = new CaelumEntities())
-                {
-                    var q = (from entry in context.Entries
-                            join views in context.EntryViewCounts
-                                on entry.ID equals views.EntryID
-                            orderby (views.WebCount * 15)
-                                    + (views.AggCount * 10) descending
-                            select entry).Take(10);
-    
-                    PostList.DataSource = q;
-                    PostList.DataBind();
-                }
+                var q = (from entry in context.Entries
+                        join views in context.EntryViewCounts
+                            on entry.ID equals views.EntryID
+                        orderby (views.WebCount * 15)
+                                + (views.AggCount * 10) descending
+                        select entry).Take(10);
+
+                PostList.DataSource = q;
+                PostList.DataBind();
             }
         }
-    }}
+    }
+}}
+```
 
 
 
@@ -198,7 +206,9 @@ As with the control used to render the **Most Recent Posts **ssection, I added 
 
 
 
-    <%@ OutputCache Duration="3600" VaryByParam="None" %>
+```
+<%@ OutputCache Duration="3600" VaryByParam="None" %>
+```
 
 
 
@@ -208,26 +218,28 @@ Here is the complete source for PopularPosts.ascx:
 
 
 
-    <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PopularPosts.ascx.cs"
-        Inherits="TechnologyToolbox.Caelum.Website.Controls.PopularPosts" %>
-    <%@ OutputCache Duration="3600" VaryByParam="None" %>
-    <%@ Import Namespace="TechnologyToolbox.Caelum.Website" %>
-    <div class="posts-most-popular">
-        <h2>
-            Most Popular Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <HeaderTemplate>
-                <ol>
-            </HeaderTemplate>
-            <ItemTemplate>
-                <li><a href="<%# BlogHelper.GetEntryUrl(
-                            (string) Eval("EntryName"),
-                            (DateTime) Eval("DateSyndicated")) %>" rel="bookmark">
-                    <%# Eval("Title") %></a></li>
-            </ItemTemplate>
-            <FooterTemplate>
-                </ol>
-            </FooterTemplate>
-        </asp:Repeater>
-    </div>
+```
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PopularPosts.ascx.cs"
+    Inherits="TechnologyToolbox.Caelum.Website.Controls.PopularPosts" %>
+<%@ OutputCache Duration="3600" VaryByParam="None" %>
+<%@ Import Namespace="TechnologyToolbox.Caelum.Website" %>
+<div class="posts-most-popular">
+    <h2>
+        Most Popular Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <HeaderTemplate>
+            <ol>
+        </HeaderTemplate>
+        <ItemTemplate>
+            <li><a href="<%# BlogHelper.GetEntryUrl(
+                        (string) Eval("EntryName"),
+                        (DateTime) Eval("DateSyndicated")) %>" rel="bookmark">
+                <%# Eval("Title") %></a></li>
+        </ItemTemplate>
+        <FooterTemplate>
+            </ol>
+        </FooterTemplate>
+    </asp:Repeater>
+</div>
+```
 

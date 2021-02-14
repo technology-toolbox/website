@@ -13,8 +13,8 @@ tags: ["Core Development", "Visual Studio"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx)
@@ -29,28 +29,30 @@ Along with [my Visual Studio macros for unloading/reloading projects in a soluti
 
 
 
-    Public Sub CollapseAllItems()
-        Dim solutionExplorer As Window = _
-            DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
-    
-        DTE.SuppressUI = True
-    
-        Try
-            Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
-    
-            For Each item As UIHierarchyItem _
-                In solutionHierarchy.UIHierarchyItems
-    
-                CollapseItem(item, solutionHierarchy)
-            Next
-        Catch ex As Exception
-            WriteOutput("Error collapsing all items: " _
-                & ex.Message)
-    
-        Finally
-            DTE.SuppressUI = False
-        End Try
-    End Sub
+```
+Public Sub CollapseAllItems()
+    Dim solutionExplorer As Window = _
+        DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
+
+    DTE.SuppressUI = True
+
+    Try
+        Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
+
+        For Each item As UIHierarchyItem _
+            In solutionHierarchy.UIHierarchyItems
+
+            CollapseItem(item, solutionHierarchy)
+        Next
+    Catch ex As Exception
+        WriteOutput("Error collapsing all items: " _
+            & ex.Message)
+
+    Finally
+        DTE.SuppressUI = False
+    End Try
+End Sub
+```
 
 
 
@@ -58,26 +60,28 @@ The `CollapseItem()` method is used to recursively collapse each item  in the hi
 
 
 
-    Private Sub CollapseItem( _
-        ByVal item As UIHierarchyItem, _
-        ByVal solutionHierarchy As UIHierarchy)
-    
-        For Each child As UIHierarchyItem In item.UIHierarchyItems
-            CollapseItem(child, solutionHierarchy)
-        Next
-    
+```
+Private Sub CollapseItem( _
+    ByVal item As UIHierarchyItem, _
+    ByVal solutionHierarchy As UIHierarchy)
+
+    For Each child As UIHierarchyItem In item.UIHierarchyItems
+        CollapseItem(child, solutionHierarchy)
+    Next
+
+    If (item.UIHierarchyItems.Expanded = True) Then
+        WriteOutput("Collapsing item (" & item.Name & ")...")
+        item.UIHierarchyItems.Expanded = False
+
+        ' HACK: Known bug in Visual Studio 2005
+        ' http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=114597
         If (item.UIHierarchyItems.Expanded = True) Then
-            WriteOutput("Collapsing item (" & item.Name & ")...")
-            item.UIHierarchyItems.Expanded = False
-    
-            ' HACK: Known bug in Visual Studio 2005
-            ' http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=114597
-            If (item.UIHierarchyItems.Expanded = True) Then
-                item.Select(vsUISelectionType.vsUISelectionTypeSelect)
-                solutionHierarchy.DoDefaultAction()
-            End If
+            item.Select(vsUISelectionType.vsUISelectionTypeSelect)
+            solutionHierarchy.DoDefaultAction()
         End If
-    End Sub
+    End If
+End Sub
+```
 
 
 

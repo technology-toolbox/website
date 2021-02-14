@@ -12,8 +12,8 @@ tags: ["MOSS 2007", "Core Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx)
 > 

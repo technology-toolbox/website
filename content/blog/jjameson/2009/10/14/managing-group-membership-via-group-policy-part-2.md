@@ -11,8 +11,8 @@ tags: ["My System", "Simplify", "Windows
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx)
@@ -43,7 +43,9 @@ The contents of the script are actually quite trival:
 
 
 
-    net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
+```
+net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
+```
 
 
 

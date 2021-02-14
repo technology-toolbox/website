@@ -10,8 +10,8 @@ tags: ["My System", "Simplify"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx)
@@ -65,20 +65,20 @@ I configure rules within Outlook to "preprocess" messages sent either directly t
 I just inspected my email rules in Outlook and found that I am now up to 32 rules.         Note that most of these rules follow the same basic structure:
 
 
-> Apply this rule after the message arrives  
->          sent to people or distribution list  
->          move it to the specified folder  
->          except if my name is in the To or Cc box  
+> Apply this rule after the message arrives
+>          sent to people or distribution list
+>          move it to the specified folder
+>          except if my name is in the To or Cc box
 >          stop processing more rules
 
 
 For example, I have a rule named **SharePoint 2010 discussions** configured         as follows:
 
 
-> Apply this rule after the message arrives  
->          sent to SharePoint 2010 Discussion  
->          move it to the SharePoint 2010 folder  
->          except if my name is in the To or Cc box  
+> Apply this rule after the message arrives
+>          sent to SharePoint 2010 Discussion
+>          move it to the SharePoint 2010 folder
+>          except if my name is in the To or Cc box
 >          stop processing more rules
 
 
@@ -91,8 +91,8 @@ Of the 32 rules that I currently have configured, most are for DL processing. Ho
 If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications **         rule as follows:
 
 
-> Apply this rule after the message arrives  
->          from [xxx@microsoft.com](mailto:xxx@microsoft.com)  
+> Apply this rule after the message arrives
+>          from [xxx@microsoft.com](mailto:xxx@microsoft.com)
 >          move it to the TFS Notifications folder
 
 
@@ -101,8 +101,8 @@ Note that [xxx@microsoft.com](mailto:xxx@microsoft.com) is the email         add
 Further down the list of email rules, I have one named **High Priority Items**:
 
 
-> Apply this rule after the message arrives  
->          from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine  
+> Apply this rule after the message arrives
+>          from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine
 >          stop processing more rules
 
 
@@ -111,8 +111,8 @@ While somewhat serving as a list of various managers I've had during my tenure w
 Note that I also have a **Project Mail **rule configured for similar         purposes:
 
 
-> Apply this rule after the message arrives  
->          sent to FrontierV3Dev or KPMG-COM Project Team or ...  
+> Apply this rule after the message arrives
+>          sent to FrontierV3Dev or KPMG-COM Project Team or ...
 >          stop processing more rules
 
 
@@ -120,8 +120,8 @@ The very last rule that I have configured in Outlook is named **Low Priority Ite
         **and is configured as follows:
 
 
-> Apply this rule after the message arrives  
->          move it to the Low Priority Items folder  
+> Apply this rule after the message arrives
+>          move it to the Low Priority Items folder
 >          except if my name is in the To or Cc box
 
 

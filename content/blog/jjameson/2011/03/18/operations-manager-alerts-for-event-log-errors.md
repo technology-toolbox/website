@@ -10,8 +10,8 @@ tags: ["My System", "Simplify", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx)
 > 
@@ -57,12 +57,12 @@ To create a rule that generates an alert whenever an error occurs in the Applica
         | Event Level | Equals | Error |
     2. Click **Next**.
 8. On the **Configure Alerts **page:
-    1. In the **Alert description **box, specify the following:  
-        **Source: $Data/EventSourceName$  
-Event ID: $Data/EventDisplayNumber$  
-Event Category: $Data/EventCategory$  
-User: $Data/UserName$  
-Computer: $Data/LoggingComputer$  
+    1. In the **Alert description **box, specify the following:
+        **Source: $Data/EventSourceName$
+Event ID: $Data/EventDisplayNumber$
+Event Category: $Data/EventCategory$
+User: $Data/UserName$
+Computer: $Data/LoggingComputer$
 Event Description: $Data/EventDescription$**
     2. In the **Severity **option, click **Warning**.
     3. Click **Alert suppression...** to define the handling of duplicate alerts. In the **Alert Suppression **dialog:
@@ -82,12 +82,12 @@ Repeat the process to create a similar alert for errors in the System event log.
 
 > **Important**
 > 
-> If you do not specify any fields in the Alert Suppression dialog, then you may receive numerous alerts within a short period of time (for example, when SharePoint Server 2010 floods the Application event log due to an issue with least-privilege configuration).  
->   
-> When this occurs, Operations Manager will detect the high frequency of alerts and temporarily suspend the notification, and display a different alert instead:  
->   
-> **Alert rule: **Alert generation was temporarily suspended due to too many alerts.  
->   
+> If you do not specify any fields in the Alert Suppression dialog, then you may receive numerous alerts within a short period of time (for example, when SharePoint Server 2010 floods the Application event log due to an issue with least-privilege configuration).
+> 
+> When this occurs, Operations Manager will detect the high frequency of alerts and temporarily suspend the notification, and display a different alert instead:
+> 
+> **Alert rule: **Alert generation was temporarily suspended due to too many alerts.
+> 
 > **Alert description: **A rule has generated 50 alerts in the last 60 seconds. Usually, when a rule generates this many alerts, it is because the rule definition is misconfigured. Please examine the rule for errors. In order to avoid excessive load, this rule will be temporarily suspended until ...
 
 

@@ -12,8 +12,8 @@ tags: ["TFS", "SharePoint
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx)
@@ -45,9 +45,11 @@ Diving into the SharePoint ULS logs, I discovered the underlying problem:
 
 
 
-    05/13/2010 06:11:25.69 ... Secure Store Service ... ValidateCredentialClaims - Access Denied: Claims stored in the credentials did not match with the group claim for a group app. ...
-    05/13/2010 06:11:25.69 ... Secure Store Service ... The Microsoft Secure Store Service application Secure Store Service failed to retrieve credentials. The error returned was 'Access is denied.'. For more information, see the Microsoft SharePoint Products and Technologies Software Development Kit (SDK). ...
-    05/13/2010 06:11:25.69 ... Secure Store Service ... GetCredentials failed with the following exception: System.ServiceModel.FaultException`1[Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault]: Access is denied. (Fault Detail is equal to Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault). ...
+```
+05/13/2010 06:11:25.69 ... Secure Store Service ... ValidateCredentialClaims - Access Denied: Claims stored in the credentials did not match with the group claim for a group app. ...
+05/13/2010 06:11:25.69 ... Secure Store Service ... The Microsoft Secure Store Service application Secure Store Service failed to retrieve credentials. The error returned was 'Access is denied.'. For more information, see the Microsoft SharePoint Products and Technologies Software Development Kit (SDK). ...
+05/13/2010 06:11:25.69 ... Secure Store Service ... GetCredentials failed with the following exception: System.ServiceModel.FaultException`1[Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault]: Access is denied. (Fault Detail is equal to Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault). ...
+```
 
 
 

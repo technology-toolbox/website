@@ -12,8 +12,8 @@ tags: ["Windows
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx)
@@ -64,7 +64,7 @@ Lastly, I want to point out one of the stumbling blocks that I encountered alon
 According to the corresponding[KB article](http://support.microsoft.com/kb/950050):
 
 
-> **Update for Windows Server 2008 (KB950050)**  
+> **Update for Windows Server 2008 (KB950050)**
 > 
 > 	This 32-bit update package includes the release version of the following:
 > 

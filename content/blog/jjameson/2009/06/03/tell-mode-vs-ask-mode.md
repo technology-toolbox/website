@@ -12,8 +12,8 @@ tags: ["My System", "Core
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx)
@@ -36,8 +36,8 @@ I'll warn you...this is a rather long post and not one I'm expecting many peopl
 > * * *
 > 
 > 
-> **From:** JAMESON,JEREMY (Non-A-BPI-AM,unix1)   
-> **Sent:** Thursday, October 18, 2007 8:03 AM  
+> **From:** JAMESON,JEREMY (Non-A-BPI-AM,unix1) 
+> **Sent:** Thursday, October 18, 2007 8:03 AM
 > **Subject:** v2.0 Transition from "Tell Mode" to "Ask Mode"
 > 
 > 
@@ -214,20 +214,20 @@ I have included slightly "scrubbed" versions of a couple of the bugs below, in 
 > 
 > #### Teams Impacted
 > 
-> **Development**  
+> **Development**
 > 
 > 	Modify LiteratureSearchResults.asp to change the max number of results to 
 > 	be a variable with a default value of 200.
 > 
 > Modify SetSortParameters in SearchModule.inc to set the sort expression 
 > 	used in ESI (strSortExpression) and to override the default max results 
-> 	value to allow 1000 results. (1 hour).  
->   
-> **Release Management** **  
+> 	value to allow 1000 results. (1 hour).
+> 
+> **Release Management** **
 > **Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM 
-> 	(1 hour)  
->   
-> **Test**  
+> 	(1 hour)
+> 
+> **Test**
 > 
 > 	Retest ESI Chromatogram searches through legacy General Site (2 hours)
 
@@ -278,21 +278,21 @@ I have included slightly "scrubbed" versions of a couple of the bugs below, in 
 > 
 > #### Teams Impacted
 > 
-> **Development**  
+> **Development**
 > 
 > 	Modify LiteratureResults.asp to no longer exclude Certificate of Analysis 
 > 	and MSDS publications by default (0.5 hours).
 > 
-> **Release Management**  
+> **Release Management**
 > 
 > 	Merge updated ASP file into legacy VSS and deploy to WCOSLSCD and CAGCHEM 
 > 	(0.5 hours)
 > 
-> **Test**  
+> **Test**
 > 
 > 	Retest ESI Library searches through legacy General Site (2 hours)
 > 
-> **Product Management**  
+> **Product Management**
 > 
 > 	Review new Library search results on legacy General Site to determine if 
 > 	the large number of Certificate of Analysis and MSDS publications has a 

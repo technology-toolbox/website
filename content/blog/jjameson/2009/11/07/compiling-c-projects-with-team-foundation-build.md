@@ -10,8 +10,8 @@ tags: ["Core Development", "TFS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx)
@@ -74,27 +74,35 @@ That's when I discovered the following from the release notes for the SDK:
 > 
 > On an X86 machine, run:
 > 
->   
-> 
-> 
->     cd %mssdk%\VC\bin
 > 
 > 
 > 
->     regsvr32 vcprojectengine.dll
+> ```
+> cd %mssdk%\VC\bin
+> ```
+> 
+> 
+> 
+> ```
+> regsvr32 vcprojectengine.dll
+> ```
 > 
 > 
 > 
 > On an X64 machine, run:
 > 
->   
-> 
-> 
->     cd %mssdk%\VC\bin\X64
 > 
 > 
 > 
->     regsvr32 vcprojectengine.dll
+> ```
+> cd %mssdk%\VC\bin\X64
+> ```
+> 
+> 
+> 
+> ```
+> regsvr32 vcprojectengine.dll
+> ```
 
 
 Unfortunately, these instructions aren't quite right -- or at least they didn't         work verbatim in my environment. The workaround stated above makes you think there's         an environment variable (`%mssdk%`) that refers to the path where the         SDK is installed. However, this wasn't configured on DAZZLER.

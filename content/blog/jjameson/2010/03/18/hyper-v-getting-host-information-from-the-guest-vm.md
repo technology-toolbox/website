@@ -10,8 +10,8 @@ tags: ["Infrastructure", "Virtualization"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/18/hyper-v-getting-host-information-from-the-guest-vm.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/18/hyper-v-getting-host-information-from-the-guest-vm.aspx)

@@ -10,8 +10,8 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx)

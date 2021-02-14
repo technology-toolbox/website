@@ -11,8 +11,8 @@ tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TF
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx)
@@ -58,8 +58,10 @@ Note that I didn't attempt to restore the **TfsWarehouse** Analysis  Services (O
 
 
 
-    SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml 
-    -a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
+```
+SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml 
+-a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
+```
 
 
 
@@ -88,56 +90,56 @@ Well, you can probably imagine what happened...
 
 Yep...same error. Unable to process the OLAP database due to the following error:
 
-Log Name: Application  
-Source: TFS Warehouse  
-Event ID: 3000  
-Task Category: None  
-Level: Error  
-Keywords: Classic  
-User: N/A  
-Computer: cyclops.corp.technologytoolbox.com  
-Description:  
-TF53010: The following error has occurred in a Team Foundation component or extension:  
-Machine: CYCLOPS  
-Application Domain: /LM/W3SVC/453528946/ROOT/Warehouse-2-129116740741730815  
-Assembly: Microsoft.TeamFoundation.Warehouse, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a; v2.0.50727  
-Process Details:  
-Process Name: w3wp  
-Process Id: 2660  
-Thread Id: 3120  
-Account name: TECHTOOLBOX\svc-tfs  
-  
-Detailed Message: Create OLAP failed  
-Exception Message: Internal error: The operation terminated unsuccessfully.  
-Internal error: The operation terminated unsuccessfully.  
-...  
-OLE DB error: OLE DB or ODBC error: Login failed for user 'TECHTOOLBOX\svc-sql-as'.; 42000.  
-Errors in the high-level relational engine. A connection could not be made to the data source with the DataSourceID of 'TfsWarehouseDataSource', Name of 'TfsWarehouseDataSource'.  
-Errors in the OLAP storage engine: An error occurred while the dimension, with the ID of 'File', Name of 'File' was being processed.  
-Errors in the OLAP storage engine: An error occurred while the 'File Extension' attribute of the 'File' dimension from the 'TfsWarehouse' database was being processed.  
-...  
-(type OperationException)  
-  
-Exception Stack Trace: at Microsoft.AnalysisServices.AnalysisServicesClient.SendExecuteAndReadResponse(ImpactDetailCollection impacts, Boolean expectEmptyResults, Boolean throwIfError)  
-at Microsoft.AnalysisServices.AnalysisServicesClient.Process(IMajorObject obj, ProcessType type, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, ImpactDetailCollection impact)  
-at Microsoft.AnalysisServices.Server.Process(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)  
-at Microsoft.AnalysisServices.Server.SendProcess(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)  
-at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType, ErrorConfiguration errorConfiguration, XmlaWarningCollection warnings)  
-at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType)  
-at Microsoft.TeamFoundation.Warehouse.OlapCreator.ProcessOlapNoTransaction(Boolean schemaUpdated, UpdateStatusStore updateStatus, Server server, SqlTransaction transaction)  
+Log Name: Application
+Source: TFS Warehouse
+Event ID: 3000
+Task Category: None
+Level: Error
+Keywords: Classic
+User: N/A
+Computer: cyclops.corp.technologytoolbox.com
+Description:
+TF53010: The following error has occurred in a Team Foundation component or extension:
+Machine: CYCLOPS
+Application Domain: /LM/W3SVC/453528946/ROOT/Warehouse-2-129116740741730815
+Assembly: Microsoft.TeamFoundation.Warehouse, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a; v2.0.50727
+Process Details:
+Process Name: w3wp
+Process Id: 2660
+Thread Id: 3120
+Account name: TECHTOOLBOX\svc-tfs
+
+Detailed Message: Create OLAP failed
+Exception Message: Internal error: The operation terminated unsuccessfully.
+Internal error: The operation terminated unsuccessfully.
+...
+OLE DB error: OLE DB or ODBC error: Login failed for user 'TECHTOOLBOX\svc-sql-as'.; 42000.
+Errors in the high-level relational engine. A connection could not be made to the data source with the DataSourceID of 'TfsWarehouseDataSource', Name of 'TfsWarehouseDataSource'.
+Errors in the OLAP storage engine: An error occurred while the dimension, with the ID of 'File', Name of 'File' was being processed.
+Errors in the OLAP storage engine: An error occurred while the 'File Extension' attribute of the 'File' dimension from the 'TfsWarehouse' database was being processed.
+...
+(type OperationException)
+
+Exception Stack Trace: at Microsoft.AnalysisServices.AnalysisServicesClient.SendExecuteAndReadResponse(ImpactDetailCollection impacts, Boolean expectEmptyResults, Boolean throwIfError)
+at Microsoft.AnalysisServices.AnalysisServicesClient.Process(IMajorObject obj, ProcessType type, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, ImpactDetailCollection impact)
+at Microsoft.AnalysisServices.Server.Process(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)
+at Microsoft.AnalysisServices.Server.SendProcess(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)
+at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType, ErrorConfiguration errorConfiguration, XmlaWarningCollection warnings)
+at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType)
+at Microsoft.TeamFoundation.Warehouse.OlapCreator.ProcessOlapNoTransaction(Boolean schemaUpdated, UpdateStatusStore updateStatus, Server server, SqlTransaction transaction)
 at Microsoft.TeamFoundation.Warehouse.OlapCreator.CreateOlap(WarehouseConfig whConf, String accessUser, String[] dataReaderAccounts, Boolean dropDB, Boolean processCube)
 
 ...along with the corresponding error on the data tier:
 
-Log Name: Application  
-Source: MSSQLServerOLAPService  
-Event ID: 3  
-Task Category: (289)  
-Level: Error  
-Keywords: Classic  
-User: N/A  
-Computer: beast.corp.technologytoolbox.com  
-Description:  
+Log Name: Application
+Source: MSSQLServerOLAPService
+Event ID: 3
+Task Category: (289)
+Level: Error
+Keywords: Classic
+User: N/A
+Computer: beast.corp.technologytoolbox.com
+Description:
 Error during OLE DB operation. Error Code = 0xC1060000, External Code = 0x80040E4D: Login failed for user 'TECHTOOLBOX\svc-sql-as'. 42000.
 
 At this point, I suspected a bug due to the fact that I was using Windows Server  2008 R2 on my backend SQL Server, because I had carefully followed each step in  the [TFS install guide](http://www.microsoft.com/downloads/details.aspx?FamilyId=FF12844F-398C-4FE9-8B0D-9E84181D9923&amp;displaylang=en) for a dual-server deployment. I then rebuilt BEAST again,  but this time used Windows Server 2008 (instead of Windows Server 2008 R2).
@@ -148,15 +150,15 @@ However, at this point, I firmly believed that I was in a "supported configurati
 
 I discovered that just prior to the error in the event log shown above, the following  event was logged:
 
-Log Name: Application  
-Source: MSSQLSERVER  
-Event ID: 18456  
-Task Category: Logon  
-Level: Information  
-Keywords: Classic,Audit Failure  
-User: TECHTOOLBOX\svc-sql-as  
-Computer: beast.corp.technologytoolbox.com  
-Description:  
+Log Name: Application
+Source: MSSQLSERVER
+Event ID: 18456
+Task Category: Logon
+Level: Information
+Keywords: Classic,Audit Failure
+User: TECHTOOLBOX\svc-sql-as
+Computer: beast.corp.technologytoolbox.com
+Description:
 Login failed for user 'TECHTOOLBOX\svc-sql-as'. Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. [CLIENT: 192.168.0.101]
 
 After researching this a little bit, I suspected that SQL Server was attempting  to use Kerberos to impersonate the Analysis Services service account. Following [KB 917409](http://support.microsoft.com/kb/917409), I then registered  a Service Principal Name (SPN) for the Analysis Services service on BEAST and ensured  the proper settings in Active Directory to enable delegation.
@@ -224,19 +226,21 @@ Putting aside any concerns about copyright infringement or licensing issues for 
 
 
 
-    private static void CreateReportServerProxy()
-            {
-                string reportsServerUrl = GetReportsServerUrl();
-                new Uri(reportsServerUrl);
-                //m_proxy = new ReportingService();
-                m_proxy = new ReportingService2005();
-                //m_proxy.Url = reportsServerUrl;
-                m_proxy.Url = reportsServerUrl.Replace(
-                    "ReportService.asmx",
-                    "ReportService2005.asmx");
-    
-                m_proxy.Credentials = m_tfs.Credentials;
-            }
+```
+private static void CreateReportServerProxy()
+        {
+            string reportsServerUrl = GetReportsServerUrl();
+            new Uri(reportsServerUrl);
+            //m_proxy = new ReportingService();
+            m_proxy = new ReportingService2005();
+            //m_proxy.Url = reportsServerUrl;
+            m_proxy.Url = reportsServerUrl.Replace(
+                "ReportService.asmx",
+                "ReportService2005.asmx");
+
+            m_proxy.Credentials = m_tfs.Credentials;
+        }
+```
 
 
 
@@ -244,7 +248,7 @@ This was necessary to avoid the following error:
 
 
 > System.InvalidOperationException: Client found response content type of '', 
-> but expected 'text/xml'.  
+> but expected 'text/xml'.
 > 
 > The request failed with an empty response.
 

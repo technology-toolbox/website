@@ -10,8 +10,8 @@ tags: ["Web Development"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx)
@@ -36,100 +36,102 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
 
 
 
-    <%@ Page Language="C#" AutoEventWireup="true"    CodeBehind="ConstrainedTable.aspx.cs"    Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>
-    
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"                                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    
-    <html xmlns="http://www.w3.org/1999/xhtml" >
-    <head runat="server">
-        <title>Demo - Constrained Tabular Data</title>
-        <link rel="Stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css" />
-        <style>
-            /* Basic formatting
-            ----------------------------------------------------------------------*/
-            body {
-                color:#000000;
-                font-family: Verdana, Arial, Helvetica;
-                font-size: small;
-                margin: 10px;
-            }
-            h1, h2, h3, h4, h5, h6, strong {
-                font-weight: bold;
-            }
-            h1 {
-                font-size: 1.5em;
-                margin: .67em 0;
-            }
-            table caption {
-                font-weight: bold;
-                margin: 10px 0;
-            }
-            table.displayTable {
-                border-left: 1px solid #36295E;
-                border-right: 1px solid #36295E;
-                margin: 1em 0;
-            }
-            table.displayTable th {
-                text-align: left;
-            }
-            table.displayTable th, table.displayTable td {
-                border-bottom: 1px solid #36295E;
-                padding: 5px 10px;
-                vertical-align: top;
-            }
-            table.displayTable thead th {
-                background: #36295E;
-                color: #FFF;
-                padding: 8px 10px;
-                border-bottom-width: 0;
-            }        
-            table.displayTable tr.altRow {
-                background: #F4F4F4;
-            }
-            /* =constrainedTable
-            ----------------------------------------------------------------------*/
-            table.constrainedTable {
-                table-layout: fixed;
-                width: 540px;
-            }
-            table.constrainedTable th.nameColumn {
-                width: 140px;
-            }        
-            table.constrainedTable td {
-                overflow: hidden;
-                -o-text-overflow: ellipsis; /* Opera */
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-        </style>
-    </head>
-    <body>
-        <form id="form1" runat="server">
-            <h1>Demo - Constrained Tabular Data</h1>
-            <asp:GridView ID="ConstrainedGrid" runat="server"
-                AutoGenerateColumns="false"
-                Caption="Constrained Table"
-                CssClass="displayTable constrainedTable"
-                OnRowDataBound="ConstrainedGrid_RowDataBound"
-                EnableViewState="false"
-                UseAccessibleHeader="true">
-                <AlternatingRowStyle CssClass="altRow" />
-                <RowStyle CssClass="row" />
-                <Columns>
-                    <asp:HyperLinkField
-                        DataTextField="Site"
-                        DataNavigateUrlFields="URL"
-                        HeaderText="Site"
-                        HeaderStyle-CssClass="nameColumn" />
-                    <asp:BoundField
-                        DataField="Notes"
-                        HeaderText="Notes"
-                        HeaderStyle-CssClass="notesColumn" />
-                </Columns>
-            </asp:GridView>
-        </form>
-    </body>
-    </html>
+```
+<%@ Page Language="C#" AutoEventWireup="true"    CodeBehind="ConstrainedTable.aspx.cs"    Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"                                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Demo - Constrained Tabular Data</title>
+    <link rel="Stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css" />
+    <style>
+        /* Basic formatting
+        ----------------------------------------------------------------------*/
+        body {
+            color:#000000;
+            font-family: Verdana, Arial, Helvetica;
+            font-size: small;
+            margin: 10px;
+        }
+        h1, h2, h3, h4, h5, h6, strong {
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin: .67em 0;
+        }
+        table caption {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        table.displayTable {
+            border-left: 1px solid #36295E;
+            border-right: 1px solid #36295E;
+            margin: 1em 0;
+        }
+        table.displayTable th {
+            text-align: left;
+        }
+        table.displayTable th, table.displayTable td {
+            border-bottom: 1px solid #36295E;
+            padding: 5px 10px;
+            vertical-align: top;
+        }
+        table.displayTable thead th {
+            background: #36295E;
+            color: #FFF;
+            padding: 8px 10px;
+            border-bottom-width: 0;
+        }        
+        table.displayTable tr.altRow {
+            background: #F4F4F4;
+        }
+        /* =constrainedTable
+        ----------------------------------------------------------------------*/
+        table.constrainedTable {
+            table-layout: fixed;
+            width: 540px;
+        }
+        table.constrainedTable th.nameColumn {
+            width: 140px;
+        }        
+        table.constrainedTable td {
+            overflow: hidden;
+            -o-text-overflow: ellipsis; /* Opera */
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Demo - Constrained Tabular Data</h1>
+        <asp:GridView ID="ConstrainedGrid" runat="server"
+            AutoGenerateColumns="false"
+            Caption="Constrained Table"
+            CssClass="displayTable constrainedTable"
+            OnRowDataBound="ConstrainedGrid_RowDataBound"
+            EnableViewState="false"
+            UseAccessibleHeader="true">
+            <AlternatingRowStyle CssClass="altRow" />
+            <RowStyle CssClass="row" />
+            <Columns>
+                <asp:HyperLinkField
+                    DataTextField="Site"
+                    DataNavigateUrlFields="URL"
+                    HeaderText="Site"
+                    HeaderStyle-CssClass="nameColumn" />
+                <asp:BoundField
+                    DataField="Notes"
+                    HeaderText="Notes"
+                    HeaderStyle-CssClass="notesColumn" />
+            </Columns>
+        </asp:GridView>
+    </form>
+</body>
+</html>
+```
 
 
 
@@ -137,19 +139,21 @@ The most interesting parts of the ASP.NET page are the CSS rules for the `constr
 
 
 
-    table.constrainedTable {
-        table-layout: fixed;
-        width: 540px;
-    }
-    table.constrainedTable th.nameColumn {
-        width: 140px;
-    }        
-    table.constrainedTable td {
-        overflow: hidden;
-        -o-text-overflow: ellipsis; /* Opera */
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+```
+table.constrainedTable {
+    table-layout: fixed;
+    width: 540px;
+}
+table.constrainedTable th.nameColumn {
+    width: 140px;
+}        
+table.constrainedTable td {
+    overflow: hidden;
+    -o-text-overflow: ellipsis; /* Opera */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+```
 
 
 
@@ -174,17 +178,19 @@ When using an ASP.NET GridView control, I recommend using the [RowDataBound](htt
 
 
 
-    protected void ConstrainedGrid_RowDataBound(
-                object sender,
-                GridViewRowEventArgs e)
+```
+protected void ConstrainedGrid_RowDataBound(
+            object sender,
+            GridViewRowEventArgs e)
+        {
+            foreach (TableCell cell in e.Row.Cells)
             {
-                foreach (TableCell cell in e.Row.Cells)
-                {
-                    // Note: We need to decode the cell text in order to avoid
-                    // having it encoded twice (e.g. "&amp;gt;")
-                    cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
-                }
+                // Note: We need to decode the cell text in order to avoid
+                // having it encoded twice (e.g. "&amp;gt;")
+                cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
             }
+        }
+```
 
 
 
@@ -196,90 +202,92 @@ Here is the complete code-behind for my sample ASP.NET page so you can run it yo
 
 
 
-    using System;
-    using System.Data;
-    using System.Globalization;
-    using System.Web;
-    using System.Web.UI.WebControls;
-    
-    namespace Fabrikam.Demo.Web.UI
+```
+using System;
+using System.Data;
+using System.Globalization;
+using System.Web;
+using System.Web.UI.WebControls;
+
+namespace Fabrikam.Demo.Web.UI
+{
+    public partial class ConstrainedTable : System.Web.UI.Page
     {
-        public partial class ConstrainedTable : System.Web.UI.Page
+        protected void Page_PreRender(
+            object sender,
+            EventArgs e)
         {
-            protected void Page_PreRender(
-                object sender,
-                EventArgs e)
-            {
-                BindSampleData(this.ConstrainedGrid);
-    
-                this.ConstrainedGrid.HeaderRow.TableSection =
-                    TableRowSection.TableHeader;
-            }
-    
-            #region BindSampleData
-    
-            private static void BindSampleData(
-                GridView grid)
-            {
-                DataTable sampleData = new DataTable();
-                sampleData.Locale = CultureInfo.InvariantCulture;
-    
-                sampleData.Columns.Add("Site");
-                sampleData.Columns.Add("URL");
-                sampleData.Columns.Add("Notes");
-    
-                sampleData.Rows.Add(
-                    new object[]
-                    {
-                        "Microsoft",
-                        "http://www.microsoft.com",
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                            + "Morbi at sem lorem, ac blandit leo. Phasellus at"
-                            + "ligula vitae enim dignissim tincidunt ornare nisl."
-                    });
-    
-                sampleData.Rows.Add(
-                    new object[]
-                    {
-                        "MSDN",
-                        "http://msdn.microsoft.com",
-                        "Sed posuere mattis egestas. Aliquam commodo dolor"
-                            + " vulputate odio lacinia bibendum. Nullam bibendum,"
-                            + " neque vitae ullamcorper elementum, ligula dolor"
-                            + " mollis erat, ut ultricies mauris tortor ut eros."
-                    });
-    
-                sampleData.Rows.Add(
-                    new object[]
-                    {
-                        "TechNet",
-                        "http://technet.microsoft.com",
-                        "Vestibulum a leo nisl, sit amet porta eros. Proin vitae"
-                            + " semper nunc. In facilisis nunc sit amet lacus"
-                            + " accumsan mattis. Nulla facilisi. Pellentesque nisl"
-                            + " sapien, dignissim ultrices semper et, mollis"
-                            + " interdum sem. "
-                    });
-                
-                grid.DataSource = sampleData;
-                grid.DataBind();
-            }
-    
-            #endregion
-    
-            protected void ConstrainedGrid_RowDataBound(
-                object sender,
-                GridViewRowEventArgs e)
-            {
-                foreach (TableCell cell in e.Row.Cells)
+            BindSampleData(this.ConstrainedGrid);
+
+            this.ConstrainedGrid.HeaderRow.TableSection =
+                TableRowSection.TableHeader;
+        }
+
+        #region BindSampleData
+
+        private static void BindSampleData(
+            GridView grid)
+        {
+            DataTable sampleData = new DataTable();
+            sampleData.Locale = CultureInfo.InvariantCulture;
+
+            sampleData.Columns.Add("Site");
+            sampleData.Columns.Add("URL");
+            sampleData.Columns.Add("Notes");
+
+            sampleData.Rows.Add(
+                new object[]
                 {
-                    // Note: We need to decode the cell text in order to avoid
-                    // having it encoded twice (e.g. "&amp;gt;")
-                    cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
-                }
+                    "Microsoft",
+                    "http://www.microsoft.com",
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        + "Morbi at sem lorem, ac blandit leo. Phasellus at"
+                        + "ligula vitae enim dignissim tincidunt ornare nisl."
+                });
+
+            sampleData.Rows.Add(
+                new object[]
+                {
+                    "MSDN",
+                    "http://msdn.microsoft.com",
+                    "Sed posuere mattis egestas. Aliquam commodo dolor"
+                        + " vulputate odio lacinia bibendum. Nullam bibendum,"
+                        + " neque vitae ullamcorper elementum, ligula dolor"
+                        + " mollis erat, ut ultricies mauris tortor ut eros."
+                });
+
+            sampleData.Rows.Add(
+                new object[]
+                {
+                    "TechNet",
+                    "http://technet.microsoft.com",
+                    "Vestibulum a leo nisl, sit amet porta eros. Proin vitae"
+                        + " semper nunc. In facilisis nunc sit amet lacus"
+                        + " accumsan mattis. Nulla facilisi. Pellentesque nisl"
+                        + " sapien, dignissim ultrices semper et, mollis"
+                        + " interdum sem. "
+                });
+            
+            grid.DataSource = sampleData;
+            grid.DataBind();
+        }
+
+        #endregion
+
+        protected void ConstrainedGrid_RowDataBound(
+            object sender,
+            GridViewRowEventArgs e)
+        {
+            foreach (TableCell cell in e.Row.Cells)
+            {
+                // Note: We need to decode the cell text in order to avoid
+                // having it encoded twice (e.g. "&amp;gt;")
+                cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
             }
         }
     }
+}
+```
 
 
 

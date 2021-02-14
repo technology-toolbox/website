@@ -9,8 +9,8 @@ tags: ["SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx)
 > 
@@ -35,43 +35,45 @@ I started by writing some PowerShell script to export the quick launch navigatio
 
 
 
-    # Exports the quick launch navigation for a SharePoint site as XML
-    
-    function ExportQuickLaunchNavigation(
-        [Microsoft.SharePoint.SPWeb] $web)
+```
+# Exports the quick launch navigation for a SharePoint site as XML
+
+function ExportQuickLaunchNavigation(
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    $xml = [xml] "<QuickLaunch/>"
+
+    foreach ($navigationNode in $web.Navigation.QuickLaunch)
     {
-        $xml = [xml] "<QuickLaunch/>"
-    
-        foreach ($navigationNode in $web.Navigation.QuickLaunch)
-        {
-            AddNavigationElement $navigationNode $xml.DocumentElement
-        }
-    
-        return $xml
+        AddNavigationElement $navigationNode $xml.DocumentElement
     }
-    
-    function AddNavigationElement(
-        [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode,
-        [System.Xml.XmlElement] $parentElement)
+
+    return $xml
+}
+
+function AddNavigationElement(
+    [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode,
+    [System.Xml.XmlElement] $parentElement)
+{
+    $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
+
+    $parentElement.AppendChild($navElement) > $null
+
+    $navElement.SetAttribute("title", $navigationNode.Title)
+    $navElement.SetAttribute("url", $navigationNode.Url)
+
+    foreach ($childNode in $navigationNode.Children)
     {
-        $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
-    
-        $parentElement.AppendChild($navElement) > $null
-    
-        $navElement.SetAttribute("title", $navigationNode.Title)
-        $navElement.SetAttribute("url", $navigationNode.Url)
-    
-        foreach ($childNode in $navigationNode.Children)
-        {
-            AddNavigationElement $childNode $navElement
-        }
+        AddNavigationElement $childNode $navElement
     }
-    
-    $web = Get-SPWeb "http://foobar3/sites/Test"
-    
-    $navigationXml = ExportQuickLaunchNavigation($web)
-    
-    $navigationXml.OuterXml
+}
+
+$web = Get-SPWeb "http://foobar3/sites/Test"
+
+$navigationXml = ExportQuickLaunchNavigation($web)
+
+$navigationXml.OuterXml
+```
 
 
 
@@ -79,31 +81,33 @@ Assuming the referenced site is based on the out-of-the-box Team Site template, 
 
 
 
-    <QuickLaunch>
-      <NavigationNode
-          title="Libraries"
-          url="/sites/Test/_layouts/viewlsts.aspx?BaseType=1">
-        <NavigationNode title="Site Pages" url="/sites/Test/SitePages" />
-        <NavigationNode
-          title="Shared Documents"
-          url="/sites/Test/Shared Documents/Forms/AllItems.aspx" />
-      </NavigationNode>
-      <NavigationNode
-          title="Lists"
-          url="/sites/Test/_layouts/viewlsts.aspx?BaseType=0">
-        <NavigationNode
-          title="Calendar"
-          url="/sites/Test/Lists/Calendar/calendar.aspx" />
-        <NavigationNode title="Tasks" url="/sites/Test/Lists/Tasks/AllItems.aspx" />
-      </NavigationNode>
-      <NavigationNode
-          title="Discussions"
-          url="/sites/Test/_layouts/viewlsts.aspx?BaseType=0&amp;ListTemplate=108">
-        <NavigationNode
-          title="Team Discussion"
-          url="/sites/Test/Lists/Team Discussion/AllItems.aspx" />
-      </NavigationNode>
-    </QuickLaunch>
+```
+<QuickLaunch>
+  <NavigationNode
+      title="Libraries"
+      url="/sites/Test/_layouts/viewlsts.aspx?BaseType=1">
+    <NavigationNode title="Site Pages" url="/sites/Test/SitePages" />
+    <NavigationNode
+      title="Shared Documents"
+      url="/sites/Test/Shared Documents/Forms/AllItems.aspx" />
+  </NavigationNode>
+  <NavigationNode
+      title="Lists"
+      url="/sites/Test/_layouts/viewlsts.aspx?BaseType=0">
+    <NavigationNode
+      title="Calendar"
+      url="/sites/Test/Lists/Calendar/calendar.aspx" />
+    <NavigationNode title="Tasks" url="/sites/Test/Lists/Tasks/AllItems.aspx" />
+  </NavigationNode>
+  <NavigationNode
+      title="Discussions"
+      url="/sites/Test/_layouts/viewlsts.aspx?BaseType=0&amp;ListTemplate=108">
+    <NavigationNode
+      title="Team Discussion"
+      url="/sites/Test/Lists/Team Discussion/AllItems.aspx" />
+  </NavigationNode>
+</QuickLaunch>
+```
 
 
 
@@ -136,18 +140,20 @@ To understand how the import process should work, consider the following input X
 
 
 
-    <QuickLaunch>
-      <NavigationNode
-        title="My MSDN Blog"
-        url="http://blogs.msdn.com/jjameson">
-        <NavigationNode
-          title="My MSDN Blog - Dashboard"
-          url="http://blogs.msdn.com/controlpanel/blogs/default.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Team Web Access"
-        url="/sites/AdventureWorks/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
-    </QuickLaunch>
+```
+<QuickLaunch>
+  <NavigationNode
+    title="My MSDN Blog"
+    url="http://blogs.msdn.com/jjameson">
+    <NavigationNode
+      title="My MSDN Blog - Dashboard"
+      url="http://blogs.msdn.com/controlpanel/blogs/default.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Team Web Access"
+    url="/sites/AdventureWorks/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
+</QuickLaunch>
+```
 
 
 
@@ -170,118 +176,120 @@ Here is the corresponding PowerShell script to import the quick launch navigatio
 
 
 
-    # Imports the quick launch navigation for a SharePoint site from the specified
-    # XML (adding, renaming, and moving navigation nodes as necessary)
-    
-    function EnsureNavigationNode(
-        [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
-        [string] $title,
-        [string] $url)
-    {
-        Write-Debug "Ensuring navigation node ($title - $url)..."
-            
-        [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
-            $nodes | Where-Object {$_.Url -eq $url}
-    
-        If ($node -eq $null)
-        {
-            Write-Debug "Creating new navigation node ($title - $url)..."
-    
-            $node = New-Object Microsoft.SharePoint.Navigation.SPNavigationNode(
-                $title,
-                $url,
-                $true)
-    
-            $null = $nodes.AddAsLast($node)
-            $nodes.Navigation.Web.Update()
-        }
-    
-        If ($node.Title -ne $title)
-        {
-            Write-Debug ("Updating title of navigation node ($($node.Title)) to" `
-                + "($title)...")
-    
-            $node.Title = $title
-            $node.Update()
-        }
-    
-        return $node
-    }
-    
-    function ImportNavigationNodes(
-        [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
-        [System.Xml.XmlNodeList] $navElements)
-    {
-        [int] $position = 0
-    
-        foreach ($navElement in $navElements)
-        {
-            $title = $navElement.GetAttribute("title")
-            $url = $navElement.GetAttribute("url")
-    
-            [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
-                EnsureNavigationNode $nodes $title $url
-    
-            If ($position -eq 0)
-            {
-                $navigationNode.MoveToFirst($nodes)
-            }
-            Else
-            {
-                $navigationNode.Move($nodes, $nodes[$position - 1])
-            }
-    
-            $position = $position + 1
-    
-            $childNodes = $navElement.SelectNodes("NavigationNode")
-            If ($childNodes.Count -gt 0)
-            {
-                ImportNavigationNodes $navigationNode.Children $childNodes
-            }
-        }
-    }
-    
-    function ImportQuickLaunchNavigation(
-        [Microsoft.SharePoint.SPWeb] $web,
-        [xml] $navigationXml)
-    {
-        Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
+```
+# Imports the quick launch navigation for a SharePoint site from the specified
+# XML (adding, renaming, and moving navigation nodes as necessary)
+
+function EnsureNavigationNode(
+    [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
+    [string] $title,
+    [string] $url)
+{
+    Write-Debug "Ensuring navigation node ($title - $url)..."
         
-        $nodes = $web.Navigation.QuickLaunch
-    
-        $navElements = $navigationXml.SelectNodes(
-            "/QuickLaunch/NavigationNode")
-    
-        If ($navElements.Count -gt 0)
+    [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
+        $nodes | Where-Object {$_.Url -eq $url}
+
+    If ($node -eq $null)
+    {
+        Write-Debug "Creating new navigation node ($title - $url)..."
+
+        $node = New-Object Microsoft.SharePoint.Navigation.SPNavigationNode(
+            $title,
+            $url,
+            $true)
+
+        $null = $nodes.AddAsLast($node)
+        $nodes.Navigation.Web.Update()
+    }
+
+    If ($node.Title -ne $title)
+    {
+        Write-Debug ("Updating title of navigation node ($($node.Title)) to" `
+            + "($title)...")
+
+        $node.Title = $title
+        $node.Update()
+    }
+
+    return $node
+}
+
+function ImportNavigationNodes(
+    [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
+    [System.Xml.XmlNodeList] $navElements)
+{
+    [int] $position = 0
+
+    foreach ($navElement in $navElements)
+    {
+        $title = $navElement.GetAttribute("title")
+        $url = $navElement.GetAttribute("url")
+
+        [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
+            EnsureNavigationNode $nodes $title $url
+
+        If ($position -eq 0)
         {
-            ImportNavigationNodes $nodes $navElements
+            $navigationNode.MoveToFirst($nodes)
         }
         Else
         {
-            Write-Host "No navigation nodes found to import."
+            $navigationNode.Move($nodes, $nodes[$position - 1])
+        }
+
+        $position = $position + 1
+
+        $childNodes = $navElement.SelectNodes("NavigationNode")
+        If ($childNodes.Count -gt 0)
+        {
+            ImportNavigationNodes $navigationNode.Children $childNodes
         }
     }
+}
+
+function ImportQuickLaunchNavigation(
+    [Microsoft.SharePoint.SPWeb] $web,
+    [xml] $navigationXml)
+{
+    Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
     
-    $navigationXml = [xml] @"
-    <QuickLaunch>
-      <NavigationNode
-        title="My MSDN Blog"
-        url="http://blogs.msdn.com/jjameson">
-        <NavigationNode
-          title="My MSDN Blog - Dashboard"
-          url="http://blogs.msdn.com/controlpanel/blogs/default.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Team Web Access"
-        url="/sites/AdventureWorks/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
-    </QuickLaunch>
-    "@
-    
-    $DebugPreference = "SilentlyContinue"
-    $web = Get-SPWeb "http://foobar3/sites/Test"
-    
-    $DebugPreference = "Continue"
-    ImportQuickLaunchNavigation $web $navigationXml
+    $nodes = $web.Navigation.QuickLaunch
+
+    $navElements = $navigationXml.SelectNodes(
+        "/QuickLaunch/NavigationNode")
+
+    If ($navElements.Count -gt 0)
+    {
+        ImportNavigationNodes $nodes $navElements
+    }
+    Else
+    {
+        Write-Host "No navigation nodes found to import."
+    }
+}
+
+$navigationXml = [xml] @"
+<QuickLaunch>
+  <NavigationNode
+    title="My MSDN Blog"
+    url="http://blogs.msdn.com/jjameson">
+    <NavigationNode
+      title="My MSDN Blog - Dashboard"
+      url="http://blogs.msdn.com/controlpanel/blogs/default.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Team Web Access"
+    url="/sites/AdventureWorks/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
+</QuickLaunch>
+"@
+
+$DebugPreference = "SilentlyContinue"
+$web = Get-SPWeb "http://foobar3/sites/Test"
+
+$DebugPreference = "Continue"
+ImportQuickLaunchNavigation $web $navigationXml
+```
 
 
 

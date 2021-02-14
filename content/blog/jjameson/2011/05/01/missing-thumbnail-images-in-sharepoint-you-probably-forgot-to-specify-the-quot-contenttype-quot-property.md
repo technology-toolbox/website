@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx)
 > 
@@ -24,17 +24,19 @@ Here is the content of my original Elements.xml file (used to add the images to 
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <Module
-        Name="HomeSiteImages"
-        Url="PublishingImages"
-        Path="HomeSiteConfiguration\PublishingImages">
-        <File Url="boat.jpg" Type="GhostableInLibrary"/>
-        <File Url="fame.jpg" Type="GhostableInLibrary"/>
-        <File Url="ropes.jpg" Type="GhostableInLibrary"/>
-      </Module>
-    </Elements>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module
+    Name="HomeSiteImages"
+    Url="PublishingImages"
+    Path="HomeSiteConfiguration\PublishingImages">
+    <File Url="boat.jpg" Type="GhostableInLibrary"/>
+    <File Url="fame.jpg" Type="GhostableInLibrary"/>
+    <File Url="ropes.jpg" Type="GhostableInLibrary"/>
+  </Module>
+</Elements>
+```
 
 
 
@@ -42,26 +44,28 @@ To get the thumbnails to render as expected, I simply modified the Elements.xml 
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <Module
-        Name="HomeSiteImages"
-        Url="PublishingImages"
-        Path="HomeSiteConfiguration\PublishingImages">
-        <File Url="boat.jpg" Type="GhostableInLibrary">
-          <Property Name="ContentType"
-            Value="$Resources:cmscore,contenttype_image_name;" />
-        </File>
-        <File Url="fame.jpg" Type="GhostableInLibrary">
-          <Property Name="ContentType"
-            Value="$Resources:cmscore,contenttype_image_name;" />
-        </File>
-        <File Url="ropes.jpg" Type="GhostableInLibrary">
-          <Property Name="ContentType"
-            Value="$Resources:cmscore,contenttype_image_name;" />
-        </File>
-      </Module>
-    </Elements>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module
+    Name="HomeSiteImages"
+    Url="PublishingImages"
+    Path="HomeSiteConfiguration\PublishingImages">
+    <File Url="boat.jpg" Type="GhostableInLibrary">
+      <Property Name="ContentType"
+        Value="$Resources:cmscore,contenttype_image_name;" />
+    </File>
+    <File Url="fame.jpg" Type="GhostableInLibrary">
+      <Property Name="ContentType"
+        Value="$Resources:cmscore,contenttype_image_name;" />
+    </File>
+    <File Url="ropes.jpg" Type="GhostableInLibrary">
+      <Property Name="ContentType"
+        Value="$Resources:cmscore,contenttype_image_name;" />
+    </File>
+  </Module>
+</Elements>
+```
 
 
 

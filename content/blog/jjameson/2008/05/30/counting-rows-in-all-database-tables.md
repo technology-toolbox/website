@@ -10,8 +10,8 @@ tags: ["SQL Server", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx)
 > 
@@ -25,16 +25,18 @@ Sometimes when I get "dropped into" a consulting situation with a new customer, 
 While you could certainly craft some SQL to `SELECT COUNT(*)` from each user table, this is very inefficient. A much better way is to simply query the system tables as shown below:
 
 
-    SELECT
-        sysobjects.Name
-        , sysindexes.Rows
-    FROM
-        sysobjects
-        INNER JOIN sysindexes
-        ON sysobjects.id = sysindexes.id
-    WHERE
-        type = 'U'
-        AND sysindexes.IndId < 2
-    ORDER BY
-        sysobjects.Namecode
+```
+SELECT
+    sysobjects.Name
+    , sysindexes.Rows
+FROM
+    sysobjects
+    INNER JOIN sysindexes
+    ON sysobjects.id = sysindexes.id
+WHERE
+    type = 'U'
+    AND sysindexes.IndId < 2
+ORDER BY
+    sysobjects.Namecode
+```
 

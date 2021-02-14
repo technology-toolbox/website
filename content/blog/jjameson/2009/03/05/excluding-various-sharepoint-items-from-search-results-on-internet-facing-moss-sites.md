@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx)
 > 

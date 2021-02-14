@@ -11,8 +11,8 @@ tags: ["Debugging", "Web Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx)
@@ -37,23 +37,25 @@ A few hours ago I was authoring a new blog post (not this one -- a different  on
 
 
 
-    Problem signature:
-      Problem Event Name:	BEX
-      Application Name:	ExpressionWeb.exe
-      Application Version:	4.0.1165.0
-      Application Timestamp:	4bfaf4bc
-      Fault Module Name:	StackHash_0a9e
-      Fault Module Version:	0.0.0.0
-      Fault Module Timestamp:	00000000
-      Exception Offset:	00000000
-      Exception Code:	c0000005
-      Exception Data:	00000008
-      OS Version:	6.1.7600.2.0.0.256.1
-      Locale ID:	1033
-      Additional Information 1:	0a9e
-      Additional Information 2:	0a9e372d3b4ad19135b953a78882e789
-      Additional Information 3:	0a9e
-      Additional Information 4:	0a9e372d3b4ad19135b953a78882e789
+```
+Problem signature:
+  Problem Event Name:	BEX
+  Application Name:	ExpressionWeb.exe
+  Application Version:	4.0.1165.0
+  Application Timestamp:	4bfaf4bc
+  Fault Module Name:	StackHash_0a9e
+  Fault Module Version:	0.0.0.0
+  Fault Module Timestamp:	00000000
+  Exception Offset:	00000000
+  Exception Code:	c0000005
+  Exception Data:	00000008
+  OS Version:	6.1.7600.2.0.0.256.1
+  Locale ID:	1033
+  Additional Information 1:	0a9e
+  Additional Information 2:	0a9e372d3b4ad19135b953a78882e789
+  Additional Information 3:	0a9e
+  Additional Information 4:	0a9e372d3b4ad19135b953a78882e789
+```
 
 
 
@@ -92,7 +94,9 @@ Therefore, the first thing I did (after setting up my symbol path again -- **SRV
 
 
 
-    .loadby sos clr
+```
+.loadby sos clr
+```
 
 
 
@@ -100,7 +104,9 @@ Hoping that my "lost" work (i.e. the HTML content) was stored somewhere in memor
 
 
 
-    !dumpheap -strings -min 500
+```
+!dumpheap -strings -min 500
+```
 
 
 
@@ -110,7 +116,9 @@ I then scanned the entire memory process for a phrase (i.e. "Agilent solution") 
 
 
 
-    s -u 0 L?0xffffffff "Agilent solution"
+```
+s -u 0 L?0xffffffff "Agilent solution"
+```
 
 
 
@@ -120,7 +128,9 @@ In my case, this returned several hundred results. However, I got lucky (which  
 
 
 
-    du /c 100 0f6dfa22
+```
+du /c 100 0f6dfa22
+```
 
 
 
@@ -132,8 +142,10 @@ Here's the output from this command:
 0:000&gt; <kbd>du /c 100 0f6dfa22</kbd>
 
 
-    0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "
-    0f6dfc22  "the "out-of-the-box" .	localization functionality.</p>.	<p>The "out-of-the-box" localization that I'm re"
+```
+0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "
+0f6dfc22  "the "out-of-the-box" .	localization functionality.</p>.	<p>The "out-of-the-box" localization that I'm re"
+```
 
 
 
@@ -141,7 +153,9 @@ Since this looked to be exactly what I was looking for, I opened the **Memory** 
 
 
 
-    du /c 100 0f6de52a 0f6e0434
+```
+du /c 100 0f6de52a 0f6e0434
+```
 
 
 
@@ -155,8 +169,10 @@ The answer -- thankfully -- is "no." You can just loop through all of the memory
 
 
 
-    .foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo 
-    ********}
+```
+.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo 
+********}
+```
 
 
 

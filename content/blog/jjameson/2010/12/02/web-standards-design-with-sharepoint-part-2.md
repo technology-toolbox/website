@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
@@ -179,41 +179,43 @@ Consequently I added a new CSS file (called SharePointFixes.css) containing the 
 
 
 
-    /* =core (SharePoint core.css overrides)
-    ------------------------------------------------------------------------------*/
-    /* Override .ms-WPBody rules from core.css so that content within Web Parts
-     * (e.g. a Content Editor Web Part) appears similar to other text on the page
-     * (for example, as defined in the CSS rules for <body>) */ 
-    .ms-WPBody {
-        /* HACK: Setting the rule to "inherit" works in Firefox, but not in IE8 */
-        /* font-family: inherit; */
-        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
-        /* font-size: inherit; */
-        font-size: 100%;
-    }
-    .ms-WPBody a:link, .ms-WPBody a:visited,
-    .ms-WPBody a:hover, .ms-WPBody a:active {
-        color: #3792B3;
-    }
-    .ms-WPBody td {
-        /* font-family: inherit; */
-        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
-        /* font-size: inherit; */
-        font-size: 100%;
-    }
-    .ms-WPBody span {
-        /* font-size: inherit; */
-        font-size: 100%;
-    }
-    /* =pageLayouts (SharePoint pageLayouts.css overrides)
-    ------------------------------------------------------------------------------*/
-    .pageContent {
-        color: inherit;
-        /* font-family: inherit; */
-        font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
-        /* font-size: inherit; */
-        font-size: 100%;
-    }
+```
+/* =core (SharePoint core.css overrides)
+------------------------------------------------------------------------------*/
+/* Override .ms-WPBody rules from core.css so that content within Web Parts
+ * (e.g. a Content Editor Web Part) appears similar to other text on the page
+ * (for example, as defined in the CSS rules for <body>) */ 
+.ms-WPBody {
+    /* HACK: Setting the rule to "inherit" works in Firefox, but not in IE8 */
+    /* font-family: inherit; */
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+    /* font-size: inherit; */
+    font-size: 100%;
+}
+.ms-WPBody a:link, .ms-WPBody a:visited,
+.ms-WPBody a:hover, .ms-WPBody a:active {
+    color: #3792B3;
+}
+.ms-WPBody td {
+    /* font-family: inherit; */
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+    /* font-size: inherit; */
+    font-size: 100%;
+}
+.ms-WPBody span {
+    /* font-size: inherit; */
+    font-size: 100%;
+}
+/* =pageLayouts (SharePoint pageLayouts.css overrides)
+------------------------------------------------------------------------------*/
+.pageContent {
+    color: inherit;
+    /* font-family: inherit; */
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif;
+    /* font-size: inherit; */
+    font-size: 100%;
+}
+```
 
 
 
@@ -281,11 +283,13 @@ To deploy the Tugboat sample site to SharePoint:
 1. Click **Start**, point to **All Programs**, point to **            Accessories**, and right-click **Command Prompt**, and then
             click **Run as administrator**.
 2. At the command prompt, type the following command to set the enviroment variable
-            corresponding to a local (developer) environment:  
+            corresponding to a local (developer) environment:
 
 
 
-        set TUGBOAT_URL=http://tugboatcoffee-local
+    ```
+    set TUGBOAT_URL=http://tugboatcoffee-local
+    ```
 
 
 
@@ -296,16 +300,20 @@ To deploy the Tugboat sample site to SharePoint:
 >                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 >                     when deploying and retracting the solution.
 3. Set environment variables to specify the credentials to use for the Tugboat application
-            pool:  
-
-  
-
-
-        set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+            pool:
 
 
 
-        set TUGBOAT_APP_POOL_PASSWORD={password}
+
+    ```
+    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+    ```
+
+
+
+    ```
+    set TUGBOAT_APP_POOL_PASSWORD={password}
+    ```
 
 
 
@@ -313,32 +321,42 @@ To deploy the Tugboat sample site to SharePoint:
 > **Important**
 > 
 >                     Be sure to specify a valid local or domain user.
-4. Change to the folder containing the deployment scripts:  
+4. Change to the folder containing the deployment scripts:
 
 
 
-        cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
-5. Type the following command:  
+    ```
+    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
+    ```
+5. Type the following command:
 
 
 
-        "Create Web Applications.cmd"
+    ```
+    "Create Web Applications.cmd"
+    ```
 6. Wait for the new Web application and corresponding site collection to be created,
-            and then type the following command:  
+            and then type the following command:
 
 
 
-        "Add Solutions.cmd"
-7. Wait for the solution to be added and then type the following command:  
+    ```
+    "Add Solutions.cmd"
+    ```
+7. Wait for the solution to be added and then type the following command:
 
 
 
-        "Deploy Solutions.cmd"
-8. Wait for the solution to be deployed and then type the following command:  
+    ```
+    "Deploy Solutions.cmd"
+    ```
+8. Wait for the solution to be deployed and then type the following command:
 
 
 
-        "Activate Features.cmd"
+    ```
+    "Activate Features.cmd"
+    ```
 9. Wait for the feature activations to complete, and then minimize or close the command
             prompt.
 

@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx)
@@ -30,21 +30,23 @@ Fortunately, the SharePoint API provides the `PublishingWeb.GetPagesListName` me
 
 
 
-    private static string GetDefaultSearchResultsPageUrl(
-                SPWeb searchWeb)
-            {
-                Debug.Assert(searchWeb != null);
-    
-                string pageListName = PublishingWeb.GetPagesListName(searchWeb);
-    
-                string defaultSearchResultsPageUrl = string.Format(
-                    CultureInfo.InvariantCulture,
-                    "{0}/{1}/Results.aspx",
-                    searchWeb.ServerRelativeUrl,
-                    pageListName);
-    
-                return defaultSearchResultsPageUrl;
-            }
+```
+private static string GetDefaultSearchResultsPageUrl(
+            SPWeb searchWeb)
+        {
+            Debug.Assert(searchWeb != null);
+
+            string pageListName = PublishingWeb.GetPagesListName(searchWeb);
+
+            string defaultSearchResultsPageUrl = string.Format(
+                CultureInfo.InvariantCulture,
+                "{0}/{1}/Results.aspx",
+                searchWeb.ServerRelativeUrl,
+                pageListName);
+
+            return defaultSearchResultsPageUrl;
+        }
+```
 
 
 
@@ -58,7 +60,9 @@ Unfortunately, the developer then added the following code to his feature:
 
 
 
-    SPList pages = web.Lists[PublishingWeb.GetPagesListName(web)];
+```
+SPList pages = web.Lists[PublishingWeb.GetPagesListName(web)];
+```
 
 
 
@@ -66,7 +70,9 @@ This seems natural, after all, since `web.Lists` is simply an `SPListCollection`
 
 
 
-    public SPList this [string strListName] { get; }
+```
+public SPList this [string strListName] { get; }
+```
 
 
 
@@ -80,7 +86,9 @@ The correct way to get the **Pages **list is to use the [`PublishingWeb.GetPages
 
 
 
-    SPList pages = web.Lists[PublishingWeb.GetPagesListId(web)];
+```
+SPList pages = web.Lists[PublishingWeb.GetPagesListId(web)];
+```
 
 
 

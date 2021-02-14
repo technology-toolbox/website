@@ -12,8 +12,8 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx)
@@ -102,41 +102,43 @@ Assuming you've developed custom SharePoint WSPs before, the contents of**manif
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <Solution xmlns="http://schemas.microsoft.com/sharepoint/"
-        SolutionId="5A186A38-5A93-45db-9321-CC8F21B3488A">
-      <FeatureManifests>
-        <FeatureManifest
-          Location="Fabrikam.Demo.Publishing.DefaultSiteConfiguration\Feature.xml"/>
-        <FeatureManifest
-          Location="Fabrikam.Demo.Publishing.Layouts\Feature.xml"/>
-      </FeatureManifests>
-      <Assemblies>
-        <Assembly
-          DeploymentTarget="GlobalAssemblyCache"
-          Location="Fabrikam.Demo.CoreServices.dll" />
-        <Assembly
-          DeploymentTarget="GlobalAssemblyCache"
-          Location="Fabrikam.Demo.Publishing.dll">
-          <SafeControls>
-            <SafeControl
-              Assembly="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
-              Namespace="Fabrikam.Demo.Publishing.Layouts.Web.UI.WebControls"
-              Safe="True"
-              TypeName="*" />
-            <SafeControl
-              Assembly="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
-              Namespace="Fabrikam.Demo.Publishing.Layouts.MasterPages"
-              Safe="True"
-              TypeName="*" />
-            </SafeControls>
-        </Assembly>
-      </Assemblies>
-      <TemplateFiles>
-        <TemplateFile Location="ControlTemplates\Fabrikam\Demo\Publishing\Layouts\GlobalNavigation.ascx" />
-        <TemplateFile Location="ControlTemplates\Fabrikam\Demo\Publishing\Layouts\StyleDeclarations.ascx" />
-      </TemplateFiles>
-    </Solution>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/"
+    SolutionId="5A186A38-5A93-45db-9321-CC8F21B3488A">
+  <FeatureManifests>
+    <FeatureManifest
+      Location="Fabrikam.Demo.Publishing.DefaultSiteConfiguration\Feature.xml"/>
+    <FeatureManifest
+      Location="Fabrikam.Demo.Publishing.Layouts\Feature.xml"/>
+  </FeatureManifests>
+  <Assemblies>
+    <Assembly
+      DeploymentTarget="GlobalAssemblyCache"
+      Location="Fabrikam.Demo.CoreServices.dll" />
+    <Assembly
+      DeploymentTarget="GlobalAssemblyCache"
+      Location="Fabrikam.Demo.Publishing.dll">
+      <SafeControls>
+        <SafeControl
+          Assembly="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
+          Namespace="Fabrikam.Demo.Publishing.Layouts.Web.UI.WebControls"
+          Safe="True"
+          TypeName="*" />
+        <SafeControl
+          Assembly="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
+          Namespace="Fabrikam.Demo.Publishing.Layouts.MasterPages"
+          Safe="True"
+          TypeName="*" />
+        </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="ControlTemplates\Fabrikam\Demo\Publishing\Layouts\GlobalNavigation.ascx" />
+    <TemplateFile Location="ControlTemplates\Fabrikam\Demo\Publishing\Layouts\StyleDeclarations.ascx" />
+  </TemplateFiles>
+</Solution>
+```
 
 
 
@@ -144,73 +146,75 @@ The contents of the WSP (i.e. files and folder structure) are defined in**wsp\_
 
 
 
-    ;
-    ; This ddf specifies the structure of the .wsp solution cab file.
-    ;
-    ; HACK: OPTION EXPLICIT cannot be used when specifying a variable with the /D option,
-    ; otherwise MakeCAB aborts with an error similar to the following:
-    ;
-    ;		ERROR: Option Explicit and variable not defined: BUILD_CONFIGURATION
-    ;
-    ;.OPTION EXPLICIT	; Generate errors for undefined variables
-    
-    .Set CabinetNameTemplate=Fabrikam.Demo.Publishing.wsp
-    
-    ; The following variable must be set when calling MakeCAB (using the /D option)
-    ;.Define BUILD_CONFIGURATION=
-    
-    .Set DiskDirectoryTemplate=CDROM	; All cabinets go in a single directory
-    .Set CompressionType=MSZIP			; All files are compressed in cabinet files
-    .Set UniqueFiles=ON
-    .Set Cabinet=ON
-    .Set DiskDirectory1=Package
-    
-    ..\..\DeploymentFiles\PackageFiles\manifest.xml
-    
-    Fabrikam.Demo.Publishing.dll
-    
-    ; Note: Referenced assemblies must be specified with a path corresponding to the
-    ; build configuration. If the path is not specified to the referenced assembly,
-    ; then the build works fine as long as the referenced assembly is not in the GAC.
-    ;
-    ; However, when the referenced assembly is in the GAC (i.e. after a deployment)
-    ; then MakeCAB will not be able to find the referenced assembly (since it is no
-    ; longer copied to the current project's bin\Debug or bin\Release folder).
-    
-    ..\..\..\CoreServices\bin\%BUILD_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
-    ..\..\DefaultSiteConfiguration\FeatureFiles\Feature.xml
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts
-    ..\..\Layouts\FeatureFiles\Feature.xml
-    ..\..\Layouts\FeatureFiles\ProvisionedFiles.xml
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\MasterPages
-    ..\..\Layouts\MasterPages\FabrikamMinimal.master
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Images
-    ..\..\Layouts\Images\FabrikamLogo_32x32.png
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Themes\Theme1
-    ..\..\Layouts\Themes\Theme1\BreadcrumbBullet.gif
-    ..\..\Layouts\Themes\Theme1\FauxColumn-Fixed-2Col.png
-    ..\..\Layouts\Themes\Theme1\FauxColumn-Fixed-3Col.png
-    ..\..\Layouts\Themes\Theme1\Fabrikam-Basic.css
-    ..\..\Layouts\Themes\Theme1\Fabrikam-Core.css
-    ..\..\Layouts\Themes\Theme1\Fabrikam-FixedLayout.css
-    ..\..\Layouts\Themes\Theme1\Fabrikam-IE.css
-    ..\..\Layouts\Themes\Theme1\Fabrikam-IE6.css
-    ..\..\Layouts\Themes\Theme1\Fabrikam-QuirksMode.css
-    ..\..\Layouts\Themes\Theme1\Tab-LeftSide.jpg
-    ..\..\Layouts\Themes\Theme1\Tab-RightSide.jpg
-    
-    .Set DestinationDir=ControlTemplates\Fabrikam\Demo\Publishing\Layouts
-    ..\..\Layouts\Web\UI\WebControls\GlobalNavigation.ascx
-    ..\..\Layouts\Web\UI\WebControls\StyleDeclarations.ascx
-    
-    .Set DestinationDir=Layouts\Fabrikam
-    ..\..\Layouts\MasterPages\FabrikamMinimal.master
+```
+;
+; This ddf specifies the structure of the .wsp solution cab file.
+;
+; HACK: OPTION EXPLICIT cannot be used when specifying a variable with the /D option,
+; otherwise MakeCAB aborts with an error similar to the following:
+;
+;		ERROR: Option Explicit and variable not defined: BUILD_CONFIGURATION
+;
+;.OPTION EXPLICIT	; Generate errors for undefined variables
+
+.Set CabinetNameTemplate=Fabrikam.Demo.Publishing.wsp
+
+; The following variable must be set when calling MakeCAB (using the /D option)
+;.Define BUILD_CONFIGURATION=
+
+.Set DiskDirectoryTemplate=CDROM	; All cabinets go in a single directory
+.Set CompressionType=MSZIP			; All files are compressed in cabinet files
+.Set UniqueFiles=ON
+.Set Cabinet=ON
+.Set DiskDirectory1=Package
+
+..\..\DeploymentFiles\PackageFiles\manifest.xml
+
+Fabrikam.Demo.Publishing.dll
+
+; Note: Referenced assemblies must be specified with a path corresponding to the
+; build configuration. If the path is not specified to the referenced assembly,
+; then the build works fine as long as the referenced assembly is not in the GAC.
+;
+; However, when the referenced assembly is in the GAC (i.e. after a deployment)
+; then MakeCAB will not be able to find the referenced assembly (since it is no
+; longer copied to the current project's bin\Debug or bin\Release folder).
+
+..\..\..\CoreServices\bin\%BUILD_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
+..\..\DefaultSiteConfiguration\FeatureFiles\Feature.xml
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts
+..\..\Layouts\FeatureFiles\Feature.xml
+..\..\Layouts\FeatureFiles\ProvisionedFiles.xml
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\MasterPages
+..\..\Layouts\MasterPages\FabrikamMinimal.master
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Images
+..\..\Layouts\Images\FabrikamLogo_32x32.png
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Themes\Theme1
+..\..\Layouts\Themes\Theme1\BreadcrumbBullet.gif
+..\..\Layouts\Themes\Theme1\FauxColumn-Fixed-2Col.png
+..\..\Layouts\Themes\Theme1\FauxColumn-Fixed-3Col.png
+..\..\Layouts\Themes\Theme1\Fabrikam-Basic.css
+..\..\Layouts\Themes\Theme1\Fabrikam-Core.css
+..\..\Layouts\Themes\Theme1\Fabrikam-FixedLayout.css
+..\..\Layouts\Themes\Theme1\Fabrikam-IE.css
+..\..\Layouts\Themes\Theme1\Fabrikam-IE6.css
+..\..\Layouts\Themes\Theme1\Fabrikam-QuirksMode.css
+..\..\Layouts\Themes\Theme1\Tab-LeftSide.jpg
+..\..\Layouts\Themes\Theme1\Tab-RightSide.jpg
+
+.Set DestinationDir=ControlTemplates\Fabrikam\Demo\Publishing\Layouts
+..\..\Layouts\Web\UI\WebControls\GlobalNavigation.ascx
+..\..\Layouts\Web\UI\WebControls\StyleDeclarations.ascx
+
+.Set DestinationDir=Layouts\Fabrikam
+..\..\Layouts\MasterPages\FabrikamMinimal.master
+```
 
 
 
@@ -220,21 +224,23 @@ Next, I unload **Publishing.csproj** and edit the MSBuild file directly in orde
 
 
 
-    <PropertyGroup>
-        <BuildDependsOn>
-          $(BuildDependsOn);
-          CreateSharePointSolutionPackage
-        </BuildDependsOn>
-      </PropertyGroup>
-      <Target
-        Name="CreateSharePointSolutionPackage"
-        Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
-        Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
-        <Message Text="Creating SharePoint solution package..." />
-        <Exec
-          Command="makecab /D BUILD_CONFIGURATION=$(ConfigurationName) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;"
-          WorkingDirectory="$(OutDir)" />
-      </Target>
+```
+<PropertyGroup>
+    <BuildDependsOn>
+      $(BuildDependsOn);
+      CreateSharePointSolutionPackage
+    </BuildDependsOn>
+  </PropertyGroup>
+  <Target
+    Name="CreateSharePointSolutionPackage"
+    Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
+    Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
+    <Message Text="Creating SharePoint solution package..." />
+    <Exec
+      Command="makecab /D BUILD_CONFIGURATION=$(ConfigurationName) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;"
+      WorkingDirectory="$(OutDir)" />
+  </Target>
+```
 
 
 
@@ -248,7 +254,9 @@ Since I'm running Windows Server 2008, I first use the **Run as administrator**
 
 
 
-    Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+```
+Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+```
 
 
 C:\Windows\system32&gt;<kbd>set FABRIKAM_FABWEB_URL=http://fabweb-local</kbd>
@@ -260,35 +268,41 @@ C:\Windows\system32&gt;<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Add 	Solution.cmd"</kbd>
 
 
-    Adding Fabrikam.Demo.Publishing (Debug)...
-    
-    Operation completed successfully.
-    
-    Done
+```
+Adding Fabrikam.Demo.Publishing (Debug)...
+
+Operation completed successfully.
+
+Done
+```
 
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Deploy 	Solution.cmd"</kbd>
 
 
-    Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
-    
-    Operation completed successfully.
-    
-    Done
+```
+Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
+
+Operation completed successfully.
+
+Done
+```
 
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Activate 	Features.cmd"</kbd>
 
 
-    Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
-    
-    Operation completed successfully.
-    
-    Activating Fabrikam.Demo.Publishing.DefaultSiteConfiguration on http://fabweb-local...
-    
-    Operation completed successfully.
-    
-    Done
+```
+Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
+
+Operation completed successfully.
+
+Activating Fabrikam.Demo.Publishing.DefaultSiteConfiguration on http://fabweb-local...
+
+Operation completed successfully.
+
+Done
+```
 
 
 
@@ -306,34 +320,36 @@ Here are the contents of **Add Solution.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    if ("%FABRIKAM_BUILD_CONFIGURATION%")==("") set FABRIKAM_BUILD_CONFIGURATION=Release
-    
-    set SOLUTION_NAME=Fabrikam.Demo.Publishing
-    echo Adding %SOLUTION_NAME% (%FABRIKAM_BUILD_CONFIGURATION%)...
-    %SPDIR%\bin\stsadm.exe -o addsolution -filename "..\..\bin\%FABRIKAM_BUILD_CONFIGURATION%\Package\%SOLUTION_NAME%.wsp"
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+if ("%FABRIKAM_BUILD_CONFIGURATION%")==("") set FABRIKAM_BUILD_CONFIGURATION=Release
+
+set SOLUTION_NAME=Fabrikam.Demo.Publishing
+echo Adding %SOLUTION_NAME% (%FABRIKAM_BUILD_CONFIGURATION%)...
+%SPDIR%\bin\stsadm.exe -o addsolution -filename "..\..\bin\%FABRIKAM_BUILD_CONFIGURATION%\Package\%SOLUTION_NAME%.wsp"
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -354,47 +370,49 @@ Here are the contents of **Deploy Solution.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    if ("%DEPLOY_METHOD%")==("") set DEPLOY_METHOD=-immediate
-    
-    if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
-    
-    if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
-    
-    REM Sometimes it is necessary to force the deployment to circumvent errors
-    REM set FORCE_OPTION=-force
-    
-    REM For LOCAL environments, use synchronous method (i.e. avoid scheduled timer job)
-    if ("%FABRIKAM_FABWEB_URL%")==("http://fabweb-local") set DEPLOY_METHOD=-local
-    
-    set SOLUTION_NAME=Fabrikam.Demo.Publishing
-    echo Deploying %SOLUTION_NAME% on %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url %FABRIKAM_FABWEB_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    if ("%DEPLOY_METHOD%")==("-immediate") %SPDIR%\bin\stsadm.exe -o execadmsvcjobs
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+if ("%DEPLOY_METHOD%")==("") set DEPLOY_METHOD=-immediate
+
+if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
+
+if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
+
+REM Sometimes it is necessary to force the deployment to circumvent errors
+REM set FORCE_OPTION=-force
+
+REM For LOCAL environments, use synchronous method (i.e. avoid scheduled timer job)
+if ("%FABRIKAM_FABWEB_URL%")==("http://fabweb-local") set DEPLOY_METHOD=-local
+
+set SOLUTION_NAME=Fabrikam.Demo.Publishing
+echo Deploying %SOLUTION_NAME% on %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url %FABRIKAM_FABWEB_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
+if %ERRORLEVEL% neq 0 goto Errors
+
+if ("%DEPLOY_METHOD%")==("-immediate") %SPDIR%\bin\stsadm.exe -o execadmsvcjobs
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -414,42 +432,44 @@ Here are the contents of **Activate Features.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    
-    if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
-    
-    if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
-    
-    set FEATURE_NAME=Fabrikam.Demo.Publishing.Layouts
-    echo Activating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o activatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    set FEATURE_NAME=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
-    echo Activating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o activatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+
+if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
+
+if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
+
+set FEATURE_NAME=Fabrikam.Demo.Publishing.Layouts
+echo Activating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o activatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL%
+if %ERRORLEVEL% neq 0 goto Errors
+
+set FEATURE_NAME=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
+echo Activating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o activatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL%
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -463,45 +483,47 @@ Here are the contents of **Deactivate Features.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    
-    REM Sometimes it is necessary to force the operation to circumvent errors
-    REM set FORCE_OPTION=-force
-    
-    if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
-    
-    if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
-    
-    set FEATURE_NAME=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
-    echo Deactivating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o deactivatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL% %FORCE_OPTION%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    set FEATURE_NAME=Fabrikam.Demo.Publishing.Layouts
-    echo Deactivating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o deactivatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL% %FORCE_OPTION%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+
+REM Sometimes it is necessary to force the operation to circumvent errors
+REM set FORCE_OPTION=-force
+
+if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
+
+if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
+
+set FEATURE_NAME=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
+echo Deactivating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o deactivatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL% %FORCE_OPTION%
+if %ERRORLEVEL% neq 0 goto Errors
+
+set FEATURE_NAME=Fabrikam.Demo.Publishing.Layouts
+echo Deactivating %FEATURE_NAME% on %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o deactivatefeature -filename %FEATURE_NAME%\Feature.xml -url %FABRIKAM_FABWEB_URL% %FORCE_OPTION%
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -509,44 +531,46 @@ Here are the contents of **Retract Solution.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    if ("%RETRACT_METHOD%")==("") set RETRACT_METHOD=-immediate
-    
-    if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
-    
-    if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
-    
-    REM For LOCAL environments, use synchronous method (i.e. avoid scheduled timer job)
-    if ("%FABRIKAM_FABWEB_URL%")==("http://fabweb-local") set RETRACT_METHOD=-local
-    
-    set SOLUTION_NAME=Fabrikam.Demo.Publishing
-    echo Retracting %SOLUTION_NAME% from %FABRIKAM_FABWEB_URL%...
-    %SPDIR%\bin\stsadm.exe -o retractsolution -name "%SOLUTION_NAME%.wsp" -url %FABRIKAM_FABWEB_URL% %RETRACT_METHOD%
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    if ("%RETRACT_METHOD%")==("-immediate") %SPDIR%\bin\stsadm.exe -o execadmsvcjobs
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+if ("%RETRACT_METHOD%")==("") set RETRACT_METHOD=-immediate
+
+if ("%FABRIKAM_FABWEB_URL%")==("") set FABRIKAM_FABWEB_URL=http://fabweb
+
+if ("%1") NEQ ("") set FABRIKAM_FABWEB_URL=%1
+
+REM For LOCAL environments, use synchronous method (i.e. avoid scheduled timer job)
+if ("%FABRIKAM_FABWEB_URL%")==("http://fabweb-local") set RETRACT_METHOD=-local
+
+set SOLUTION_NAME=Fabrikam.Demo.Publishing
+echo Retracting %SOLUTION_NAME% from %FABRIKAM_FABWEB_URL%...
+%SPDIR%\bin\stsadm.exe -o retractsolution -name "%SOLUTION_NAME%.wsp" -url %FABRIKAM_FABWEB_URL% %RETRACT_METHOD%
+if %ERRORLEVEL% neq 0 goto Errors
+
+if ("%RETRACT_METHOD%")==("-immediate") %SPDIR%\bin\stsadm.exe -o execadmsvcjobs
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -554,33 +578,35 @@ Here are the contents of **Delete Solution.cmd**:
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
-    
-    set SOLUTION_NAME=Fabrikam.Demo.Publishing
-    echo Deleting %SOLUTION_NAME%...
-    %SPDIR%\bin\stsadm.exe -o deletesolution -name "%SOLUTION_NAME%.wsp"
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%SPDIR%")==("") set SPDIR="%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12"
+
+set SOLUTION_NAME=Fabrikam.Demo.Publishing
+echo Deleting %SOLUTION_NAME%...
+%SPDIR%\bin\stsadm.exe -o deletesolution -name "%SOLUTION_NAME%.wsp"
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -590,71 +616,73 @@ Suppose that after deploying the **Fabrikam.Demo.Publishing**solution, I need t
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if /I ("%1") == ("-quick") set QUICK_DEPLOY=1
-    
-    if ("%QUICK_DEPLOY%") == ("1") goto RetractSolution
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Deactivating Features..."
-    call "Deactivate Features.cmd"
-    
-    :RetractSolution
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Retracting Solution..."
-    call "Retract Solution.cmd"
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Deleting Solution..."
-    call "Delete Solution.cmd"
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Adding Solution..."
-    call "Add Solution.cmd"
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Deploying Solution..."
-    call "Deploy Solution.cmd"
-    
-    if ("%QUICK_DEPLOY%") == ("1") goto Quit
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Activating Features..."
-    call "Activate Features.cmd"
-    
-    goto Quit
-    
-    :: ----------------------------------------------------------------------------
-    ::
-    :LogMessage
-    
-    REM Strip leading and trailing quotes and then display message with timestamp
-    set MESSAGE=%1
-    set MESSAGE=%MESSAGE:~1,-1%
-    
-    for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
-    for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
-    echo %currentDate% %currentTime% - %MESSAGE%
-    
-    goto :eof
-    
-    :: ----------------------------------------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: ----------------------------------------------------------------------------
-    ::
-    :Quit
-    
-    Call :LogMessage "Done"
-    
-    :: ----------------------------------------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if /I ("%1") == ("-quick") set QUICK_DEPLOY=1
+
+if ("%QUICK_DEPLOY%") == ("1") goto RetractSolution
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Deactivating Features..."
+call "Deactivate Features.cmd"
+
+:RetractSolution
+:: ----------------------------------------------------------------------------
+call :LogMessage "Retracting Solution..."
+call "Retract Solution.cmd"
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Deleting Solution..."
+call "Delete Solution.cmd"
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Adding Solution..."
+call "Add Solution.cmd"
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Deploying Solution..."
+call "Deploy Solution.cmd"
+
+if ("%QUICK_DEPLOY%") == ("1") goto Quit
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Activating Features..."
+call "Activate Features.cmd"
+
+goto Quit
+
+:: ----------------------------------------------------------------------------
+::
+:LogMessage
+
+REM Strip leading and trailing quotes and then display message with timestamp
+set MESSAGE=%1
+set MESSAGE=%MESSAGE:~1,-1%
+
+for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
+for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
+echo %currentDate% %currentTime% - %MESSAGE%
+
+goto :eof
+
+:: ----------------------------------------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: ----------------------------------------------------------------------------
+::
+:Quit
+
+Call :LogMessage "Done"
+
+:: ----------------------------------------------------------------------------
+::
+```
 
 
 
@@ -676,36 +704,38 @@ While we could certainly use **Redeploy Features.cmd** (or even`Redeploy Soluti
 
 
 
-    @echo off
-    
-    setlocal
-    
-    if ("%FABRIKAM_BUILD_CONFIGURATION%")==("") set FABRIKAM_BUILD_CONFIGURATION=Release
-    
-    echo Installing assembly: Fabrikam.Demo.CoreServices.dll (%FABRIKAM_BUILD_CONFIGURATION%)
-    gacutil /nologo -i ..\..\..\CoreServices\bin\%FABRIKAM_BUILD_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    echo Installing assembly: Fabrikam.Demo.Publishing.dll (%FABRIKAM_BUILD_CONFIGURATION%)
-    gacutil /nologo -i ..\..\bin\%FABRIKAM_BUILD_CONFIGURATION%\Fabrikam.Demo.Publishing.dll
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    goto Quit
-    
-    :: -----------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
-    
-    :: -----------------------------------------------
-    ::
-    :Quit
-    
-    echo Done
-    
-    :: -----------------------------------------------
-    ::
+```
+@echo off
+
+setlocal
+
+if ("%FABRIKAM_BUILD_CONFIGURATION%")==("") set FABRIKAM_BUILD_CONFIGURATION=Release
+
+echo Installing assembly: Fabrikam.Demo.CoreServices.dll (%FABRIKAM_BUILD_CONFIGURATION%)
+gacutil /nologo -i ..\..\..\CoreServices\bin\%FABRIKAM_BUILD_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
+if %ERRORLEVEL% neq 0 goto Errors
+
+echo Installing assembly: Fabrikam.Demo.Publishing.dll (%FABRIKAM_BUILD_CONFIGURATION%)
+gacutil /nologo -i ..\..\bin\%FABRIKAM_BUILD_CONFIGURATION%\Fabrikam.Demo.Publishing.dll
+if %ERRORLEVEL% neq 0 goto Errors
+
+goto Quit
+
+:: -----------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+
+:: -----------------------------------------------
+::
+:Quit
+
+echo Done
+
+:: -----------------------------------------------
+::
+```
 
 
 
@@ -717,17 +747,21 @@ Also note that you need to recycle the application pool for your SharePoint sit
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"GAC 	Assemblies.cmd"</kbd>
 
 
-    Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
-    Assembly successfully added to the cache
-    Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
-    Assembly successfully added to the cache
-    Done
+```
+Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
+Assembly successfully added to the cache
+Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
+Assembly successfully added to the cache
+Done
+```
 
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>C:\Windows\System32\inetsrv\appcmd.exe 	recycle apppool "SharePoint - foobar-local80"</kbd>
 
 
-    "SharePoint - foobar-local80" successfully recycled
+```
+"SharePoint - foobar-local80" successfully recycled
+```
 
 
 

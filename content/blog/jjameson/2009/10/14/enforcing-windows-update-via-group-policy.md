@@ -9,8 +9,8 @@ tags: ["My System", "Simplify", "WSUS", "Windows Server", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/15/enforcing-windows-update-via-group-policy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/15/enforcing-windows-update-via-group-policy.aspx)
 > 

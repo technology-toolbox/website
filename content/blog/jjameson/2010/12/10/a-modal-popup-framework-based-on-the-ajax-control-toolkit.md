@@ -9,8 +9,8 @@ tags: ["Web Development"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx)
@@ -53,43 +53,45 @@ For example, the modal popup window shown in Figure 1 was generated using the fo
 
 
 
-    using System;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    
-    namespace Fabrikam.Demo.Web.UI.WebControls
+```
+using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace Fabrikam.Demo.Web.UI.WebControls
+{
+    public class SamplePopupWebPart : ModalPopupWebPart
     {
-        public class SamplePopupWebPart : ModalPopupWebPart
+        private Panel modalPanelContent;
+        private LiteralControl content;
+
+        protected override void CreateChildControls()
         {
-            private Panel modalPanelContent;
-            private LiteralControl content;
-    
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-    
-                modalPanelContent = new Panel();
-                modalPanelContent.CssClass = "modalPanelContent";
-                modalPanelContent.Width = new Unit(400);
-                base.ModalPanel.Controls.Add(modalPanelContent);
-                
-                content = new LiteralControl();
-                modalPanelContent.Controls.Add(content);
-                content.Text =
-    @"<div class='mainContent'>Lorem ipsum dolor sit amet, consectetur adipiscing
-     elit. Cras imperdiet ligula ut turpis tristique ultricies. Aliquam accumsan mi
-     at ligula porta consectetur. Maecenas aliquam dictum dui quis venenatis. Donec
-     eros velit, dictum vel pretium eu, tempus eu neque. Aliquam tortor mi, lacinia
-     sit amet iaculis sit amet, porttitor sed neque. Sed eu turpis ante. Sed
-     consequat suscipit elit, non posuere sapien hendrerit pharetra. Integer dapibus
-     tortor a magna convallis congue. Mauris mollis turpis eu enim ornare
-     sollicitudin. Etiam nec lacus libero. Aliquam mattis rhoncus bibendum. Nunc
-     placerat nibh ut odio rhoncus ut gravida est suscipit. Etiam nec massa ut nibh
-     mattis fermentum rutrum vel tortor. Phasellus vitae eros ante.</div>";
-    
-            }
+            base.CreateChildControls();
+
+            modalPanelContent = new Panel();
+            modalPanelContent.CssClass = "modalPanelContent";
+            modalPanelContent.Width = new Unit(400);
+            base.ModalPanel.Controls.Add(modalPanelContent);
+            
+            content = new LiteralControl();
+            modalPanelContent.Controls.Add(content);
+            content.Text =
+@"<div class='mainContent'>Lorem ipsum dolor sit amet, consectetur adipiscing
+ elit. Cras imperdiet ligula ut turpis tristique ultricies. Aliquam accumsan mi
+ at ligula porta consectetur. Maecenas aliquam dictum dui quis venenatis. Donec
+ eros velit, dictum vel pretium eu, tempus eu neque. Aliquam tortor mi, lacinia
+ sit amet iaculis sit amet, porttitor sed neque. Sed eu turpis ante. Sed
+ consequat suscipit elit, non posuere sapien hendrerit pharetra. Integer dapibus
+ tortor a magna convallis congue. Mauris mollis turpis eu enim ornare
+ sollicitudin. Etiam nec lacus libero. Aliquam mattis rhoncus bibendum. Nunc
+ placerat nibh ut odio rhoncus ut gravida est suscipit. Etiam nec massa ut nibh
+ mattis fermentum rutrum vel tortor. Phasellus vitae eros ante.</div>";
+
         }
     }
+}
+```
 
 
 
@@ -97,7 +99,9 @@ Note that by specifying the height of the **modalPanelContent** element:
 
 
 
-    modalPanelContent.Height = new Unit(100);
+```
+modalPanelContent.Height = new Unit(100);
+```
 
 
 
@@ -105,9 +109,11 @@ Note that by specifying the height of the **modalPanelContent** element:
 
 
 
-    .modalPanel div.modalPanelContent {
-        overflow: auto;
-    }
+```
+.modalPanel div.modalPanelContent {
+    overflow: auto;
+}
+```
 
 
 
@@ -123,15 +129,17 @@ For example, it might be desireable to hide the **Cancel** link button         a
 
 
 
-    protected override void OnModalPopupOk(
-                EventArgs e)
-            {
-                Debug.WriteLine("SamplePopupWebPart::OnModalPopupOk()");
-    
-                base.OnModalPopupOk(e);
-    
-                // Do something here...
-            }
+```
+protected override void OnModalPopupOk(
+            EventArgs e)
+        {
+            Debug.WriteLine("SamplePopupWebPart::OnModalPopupOk()");
+
+            base.OnModalPopupOk(e);
+
+            // Do something here...
+        }
+```
 
 
 

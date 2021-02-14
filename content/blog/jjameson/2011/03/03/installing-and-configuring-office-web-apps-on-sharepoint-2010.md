@@ -12,8 +12,8 @@ tags: ["Infrastructure", "SharePoint
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx)
@@ -126,70 +126,74 @@ for caching:
 2. From the Windows PowerShell command prompt, run the following script:
 
 
-        $ErrorActionPreference = "Stop"
-        
-        Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-        
-        function ConfigureOfficeWebAppsCache(
-            [string] $webAppUrl,
-            [int] $cacheSizeInGigabytes,
-            [int] $expirationPeriodInDays,
-            [string] $cacheDatabaseName)
+    ```
+    $ErrorActionPreference = "Stop"
+    
+    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+    
+    function ConfigureOfficeWebAppsCache(
+        [string] $webAppUrl,
+        [int] $cacheSizeInGigabytes,
+        [int] $expirationPeriodInDays,
+        [string] $cacheDatabaseName)
+    {
+        Write-Host ("Configuring Office Web Apps cache for Web application" `
+            + " ($webAppUrl)...")
+    
+        Write-Debug "cacheSizeInGigabytes: $cacheSizeInGigabytes"
+        Write-Debug "expirationPeriodInDays: $expirationPeriodInDays"
+        Write-Debug "cacheDatabaseName: $cacheDatabaseName"
+    
+        $cacheSizeInBytes = $cacheSizeInGigabytes * 1024 * 1024 * 1024
+        $webApp = Get-SPWebApplication --Identity $webAppUrl -Debug:$false
+        $webApp | Set-SPOfficeWebAppsCache `
+            -ExpirationPeriodInDays $expirationPeriodInDays `
+            -MaxSizeInBytes $cacheSizeInBytes -Debug:$false
+    
+        $cacheDatabase = Get-SPContentDatabase $cacheDatabaseName -Debug:$false -EA 0
+    
+        if ($cacheDatabase -eq $null)
         {
-            Write-Host ("Configuring Office Web Apps cache for Web application" `
-                + " ($webAppUrl)...")
-        
-            Write-Debug "cacheSizeInGigabytes: $cacheSizeInGigabytes"
-            Write-Debug "expirationPeriodInDays: $expirationPeriodInDays"
-            Write-Debug "cacheDatabaseName: $cacheDatabaseName"
-        
-            $cacheSizeInBytes = $cacheSizeInGigabytes * 1024 * 1024 * 1024
-            $webApp = Get-SPWebApplication --Identity $webAppUrl -Debug:$false
-            $webApp | Set-SPOfficeWebAppsCache `
-                -ExpirationPeriodInDays $expirationPeriodInDays `
-                -MaxSizeInBytes $cacheSizeInBytes -Debug:$false
-        
-            $cacheDatabase = Get-SPContentDatabase $cacheDatabaseName -Debug:$false -EA 0
-        
-            if ($cacheDatabase -eq $null)
-            {
-                $cacheDatabase = New-SPContentDatabase -Name $cacheDatabaseName `
-                    -WebApplication $webApp -Debug:$false
-            }
-        
-            Get-SPOfficeWebAppsCache -WebApplication $webapp -Debug:$false |
-                Move-SPSite -DestinationDatabase $cacheDatabase -Confirm:$false `
-                -Debug:$false
-        
-            Write-Host "Restricting the cache database to a single site collection..."
-        
-            $database = Get-SPContentDatabase $cacheDatabase
-        
-            $database.MaximumSiteCount = 1
-            $database.WarningSiteCount = 0
-            $database.Update()
-        
-            Write-Host -Fore Green ("Successfully configured Office Web Apps cache for" `
-                + " Web application ($webAppUrl).")
+            $cacheDatabase = New-SPContentDatabase -Name $cacheDatabaseName `
+                -WebApplication $webApp -Debug:$false
         }
-        
-        function Main()
-        {
-            $webAppUrl = "http://extranet.fabrikam.com"
-            $cacheSizeInGigabytes = 20
-            $expirationPeriodInDays = 30
-            $cacheDatabaseName = "OfficeWebAppsCache"
-        
-            ConfigureOfficeWebAppsCache $webAppUrl $cacheSizeInGigabytes `
-                $expirationPeriodInDays $cacheDatabaseName
-        }
-        
-        Main
+    
+        Get-SPOfficeWebAppsCache -WebApplication $webapp -Debug:$false |
+            Move-SPSite -DestinationDatabase $cacheDatabase -Confirm:$false `
+            -Debug:$false
+    
+        Write-Host "Restricting the cache database to a single site collection..."
+    
+        $database = Get-SPContentDatabase $cacheDatabase
+    
+        $database.MaximumSiteCount = 1
+        $database.WarningSiteCount = 0
+        $database.Update()
+    
+        Write-Host -Fore Green ("Successfully configured Office Web Apps cache for" `
+            + " Web application ($webAppUrl).")
+    }
+    
+    function Main()
+    {
+        $webAppUrl = "http://extranet.fabrikam.com"
+        $cacheSizeInGigabytes = 20
+        $expirationPeriodInDays = 30
+        $cacheDatabaseName = "OfficeWebAppsCache"
+    
+        ConfigureOfficeWebAppsCache $webAppUrl $cacheSizeInGigabytes `
+            $expirationPeriodInDays $cacheDatabaseName
+    }
+    
+    Main
+    ```
 3. Wait for the script to complete and verify that no errors occurred during the process.
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
 
 
-        iisreset
+    ```
+    iisreset
+    ```
 
 
 #### To increase the size of the database files for the Office Web Apps cache:
@@ -211,20 +215,22 @@ The following SQL statements can be used as an alternative to setting the sizes 
 
 
 
-    USE [master]
-    GO
-    ALTER DATABASE [OfficeWebAppsCache]
-    MODIFY FILE(
-        NAME = N'OfficeWebAppsCache'
-        , SIZE = 10240000KB
-        , FILEGROWTH = 512000KB)
-    GO
-    ALTER DATABASE [OfficeWebAppsCache]
-    MODIFY FILE(
-        NAME = N'OfficeWebAppsCache_log'
-        , SIZE = 409600KB
-        , MAXSIZE = 4096000KB)
-    GO
+```
+USE [master]
+GO
+ALTER DATABASE [OfficeWebAppsCache]
+MODIFY FILE(
+    NAME = N'OfficeWebAppsCache'
+    , SIZE = 10240000KB
+    , FILEGROWTH = 512000KB)
+GO
+ALTER DATABASE [OfficeWebAppsCache]
+MODIFY FILE(
+    NAME = N'OfficeWebAppsCache_log'
+    , SIZE = 409600KB
+    , MAXSIZE = 4096000KB)
+GO
+```
 
 
 
@@ -238,7 +244,9 @@ Since the service account used to run the Office Web Apps service applications  
 2. From the Windows PowerShell command prompt, type the following commands:
 
 
-        $webApp = Get-SPWebApplication "http://extranet.fabrikam.com"
-        
-        $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
+    ```
+    $webApp = Get-SPWebApplication "http://extranet.fabrikam.com"
+    
+    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
+    ```
 

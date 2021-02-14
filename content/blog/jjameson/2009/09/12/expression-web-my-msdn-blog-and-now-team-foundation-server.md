@@ -9,8 +9,8 @@ tags: ["My System", "Web Development", "TFS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx)
@@ -29,19 +29,23 @@ Before finally choosing Expression Web, I looked at various other tools for auth
 My template simply contains a variety of markup that I commonly use when creating         blog posts, such as:
 
 
-    <blockquote class="directQuote errorMessage">
-        [Direct quote, error message]</blockquote>
+```
+<blockquote class="directQuote errorMessage">
+    [Direct quote, error message]</blockquote>
+```
 
 
 Whenever I need to create a new blog post, I simply copy my template (i.e. default.htm)         into the corresponding Archive\{year}\{month}\{day} folder, rename the file to something         like **sharepoint-2010-sneak-peek.aspx**, and then start replacing         the placeholder text with the corresponding content. Note that I have defined a         few custom CSS rules in Community Server to change the style of my blog content,         such as:
 
 
-    .directQuote {
-        font-style: italic;
-    }
-    .errorMessage {
-        color: red;
-    }
+```
+.directQuote {
+    font-style: italic;
+}
+.errorMessage {
+    color: red;
+}
+```
 
 
 I define these styles in a CSS file (i.e. Themes\MSDN\MSDN.css) that is referenced         by each page, thus giving me a WYSIWYG (What You See Is What You Get) experience         when authoring blog content. This is one of the biggest things lacking from the         editing functionality provided by Community Server, meaning that it doesn't apply         your custom CSS rules when previewing a blog post before publishing.

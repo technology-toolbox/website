@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/30/finding-the-content-type-id-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/30/finding-the-content-type-id-in-moss-2007.aspx)
 > 

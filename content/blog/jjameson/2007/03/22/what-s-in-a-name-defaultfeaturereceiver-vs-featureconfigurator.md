@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx)
@@ -29,33 +29,35 @@ In order to simplify the development and debugging of feature receivers, I find 
 
 
 
-    namespace Fabrikam.Project1.PublicationLibrary.Configuration
-    {
-        [CLSCompliant(false)]
-        public class DefaultFeatureReceiver : SPFeatureReceiver
-          {
-            [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
-            public override void FeatureActivated(
-                SPFeatureReceiverProperties properties)
+```
+namespace Fabrikam.Project1.PublicationLibrary.Configuration
+{
+    [CLSCompliant(false)]
+    public class DefaultFeatureReceiver : SPFeatureReceiver
+      {
+        [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
+        public override void FeatureActivated(
+            SPFeatureReceiverProperties properties)
+        {
+            if (properties == null)
             {
-                if (properties == null)
-                {
-                    throw new ArgumentNullException("properties");
-                }
-    
-                SPWebApplication webApp = properties.Feature.Parent as SPWebApplication;
-    
-                if (webApp == null)
-                {
-                    throw new InvalidOperationException(
-                        "The feature must be activated at the 'WebApplication' scope.");
-                }
-    
-                FeatureConfigurator.Configure(webApp);
+                throw new ArgumentNullException("properties");
             }
-            ...
-       }
-    }
+
+            SPWebApplication webApp = properties.Feature.Parent as SPWebApplication;
+
+            if (webApp == null)
+            {
+                throw new InvalidOperationException(
+                    "The feature must be activated at the 'WebApplication' scope.");
+            }
+
+            FeatureConfigurator.Configure(webApp);
+        }
+        ...
+   }
+}
+```
 
 
 
@@ -63,27 +65,29 @@ The bulk of the development (and debugging) of the feature receiver is then perf
 
 
 
-    namespace Fabrikam.Project1.PublicationLibrary.DeveloperTests.Configuration
+```
+namespace Fabrikam.Project1.PublicationLibrary.DeveloperTests.Configuration
+{
+    [TestClass()]
+    public class FeatureConfiguratorTest
     {
-        [TestClass()]
-        public class FeatureConfiguratorTest
+        ...
+
+        [TestMethod()]
+        public void ConfigureTest()
         {
-            ...
-    
-            [TestMethod()]
-            public void ConfigureTest()
-            {
-                string project1Url = Properties.Settings.Default.Project1Url;
-    
-                Uri webAppUri = new Uri(project1Url);
-    
-                SPWebApplication webApp = SPWebApplication.Lookup(webAppUri);
-    
-                FeatureConfigurator.Configure(webApp);
-    
-                // If we make it to here without an exception, then all is well
-                Assert.IsTrue(true);
-            }
+            string project1Url = Properties.Settings.Default.Project1Url;
+
+            Uri webAppUri = new Uri(project1Url);
+
+            SPWebApplication webApp = SPWebApplication.Lookup(webAppUri);
+
+            FeatureConfigurator.Configure(webApp);
+
+            // If we make it to here without an exception, then all is well
+            Assert.IsTrue(true);
         }
     }
+}
+```
 

@@ -10,8 +10,8 @@ tags: ["Personal"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx)
 > 

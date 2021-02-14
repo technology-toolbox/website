@@ -10,8 +10,8 @@ tags: ["My System"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx)
 > 
@@ -23,35 +23,37 @@ For the sake of this post, let's assume that you have a directory that contains 
 A few years ago, I created the following script (starting from a sample I found in the [Script Center on TechNet](http://technet.microsoft.com/en-us/scriptcenter/default.aspx)) to recursively enumerate a folder structure, identify any empty folders, and subsequently delete them.
 
 
-    Option Explicit
+```
+Option Explicit
+
+If (WScript.Arguments.Count <> 1) Then
+    WScript.Echo("Usage: cscript DeleteEmptyFolders.vbs {path}")    
+    WScript.Quit(1)
+End If
+
+Dim strPath
+strPath = WScript.Arguments(0)
+
+Dim fso
+Set fso = CreateObject("Scripting.FileSystemObject")
+
+Dim objFolder
+Set objFolder = fso.GetFolder(strPath)
+
+DeleteEmptyFolders objFolder
+
+Sub DeleteEmptyFolders(folder)
+    Dim subfolder
+    For Each subfolder in folder.SubFolders
+        DeleteEmptyFolders subfolder
+    Next
     
-    If (WScript.Arguments.Count <> 1) Then
-        WScript.Echo("Usage: cscript DeleteEmptyFolders.vbs {path}")    
-        WScript.Quit(1)
-    End If
-    
-    Dim strPath
-    strPath = WScript.Arguments(0)
-    
-    Dim fso
-    Set fso = CreateObject("Scripting.FileSystemObject")
-    
-    Dim objFolder
-    Set objFolder = fso.GetFolder(strPath)
-    
-    DeleteEmptyFolders objFolder
-    
-    Sub DeleteEmptyFolders(folder)
-        Dim subfolder
-        For Each subfolder in folder.SubFolders
-            DeleteEmptyFolders subfolder
-        Next
-        
-        If folder.SubFolders.Count = 0 And folder.Files.Count = 0 Then
-            WScript.Echo folder.Path & " is empty"
-            fso.DeleteFolder folder.Path
-        End If    
-    End Sub
+    If folder.SubFolders.Count = 0 And folder.Files.Count = 0 Then
+        WScript.Echo folder.Path & " is empty"
+        fso.DeleteFolder folder.Path
+    End If    
+End Sub
+```
 
 
 As you can see, there's really nothing complex here. Nevertheless I still find it to be a very useful script from time to time, so I thought I should share it. I used it this morning and it occurred to me that I should throw it up on the blog.

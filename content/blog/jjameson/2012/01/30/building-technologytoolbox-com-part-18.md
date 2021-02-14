@@ -17,7 +17,9 @@ If you look at the HTML for a Subtext blog page, you'll discover it specifies a
 
 
 
-    <link id="opensearch" rel="search" type="..." href="..." Title="..." />
+```
+<link id="opensearch" rel="search" type="..." href="..." Title="..." />
+```
 
 
 

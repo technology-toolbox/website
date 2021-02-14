@@ -13,8 +13,8 @@ tags: ["WSUS", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx)
@@ -27,17 +27,19 @@ Windows Update started generating errors last week on one of my servers. Specifi
 
 
 
-    Log Name:      System
-    Source:        Microsoft-Windows-WindowsUpdateClient
-    Date:          6/30/2010 3:03:25 AM
-    Event ID:      20
-    Task Category: Windows Update Agent
-    Level:         Error
-    Keywords:      Failure,Installation
-    User:          SYSTEM
-    Computer:      jubilee.corp.technologytoolbox.com
-    Description:
-    Installation Failure: Windows failed to install the following update with error 0x80070643: Microsoft .NET Framework 4 for Windows Server 2008 x64-based Systems (KB982671).
+```
+Log Name:      System
+Source:        Microsoft-Windows-WindowsUpdateClient
+Date:          6/30/2010 3:03:25 AM
+Event ID:      20
+Task Category: Windows Update Agent
+Level:         Error
+Keywords:      Failure,Installation
+User:          SYSTEM
+Computer:      jubilee.corp.technologytoolbox.com
+Description:
+Installation Failure: Windows failed to install the following update with error 0x80070643: Microsoft .NET Framework 4 for Windows Server 2008 x64-based Systems (KB982671).
+```
 
 
 

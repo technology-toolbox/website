@@ -13,8 +13,8 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx)
@@ -39,68 +39,70 @@ Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-
 
 
 
-    using System;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    using System.Web.UI.WebControls.WebParts;
-    
-    namespace Fabrikam.Demo.Web.WebParts
+```
+using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+
+namespace Fabrikam.Demo.Web.WebParts
+{
+    /// <summary>
+    /// A sample Web Part used to demonstrate AJAX update functionality.
+    /// </summary>
+    public class SampleAjaxUpdateWebPart : AjaxWebPart
     {
+        Label timestamp;
+
         /// <summary>
-        /// A sample Web Part used to demonstrate AJAX update functionality.
+        /// Called by the ASP.NET page framework to notify server controls that
+        /// use composition-based implementation to create any child controls
+        /// they contain in preparation for posting back or rendering.
         /// </summary>
-        public class SampleAjaxUpdateWebPart : AjaxWebPart
+        protected override void CreateChildControls()
         {
-            Label timestamp;
-    
-            /// <summary>
-            /// Called by the ASP.NET page framework to notify server controls that
-            /// use composition-based implementation to create any child controls
-            /// they contain in preparation for posting back or rendering.
-            /// </summary>
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-    
-                LiteralControl literal = new LiteralControl(
-                    "<p>Web Part loaded at: " + DateTime.Now + "</p>");
-    
-                this.Controls.Add(literal);
-    
-                UpdatePanel updatePanel = new UpdatePanel();
-                updatePanel.ID = "updatePanel";
-                updatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
-                this.Controls.Add(updatePanel);
-    
-                timestamp = new Label();
-                timestamp.ID = "timestamp";
-                timestamp.Text = "Click <b>Update</b> to update this label";
-                updatePanel.ContentTemplateContainer.Controls.Add(timestamp);
-    
-                Panel buttonPanel = new Panel();
-                this.Controls.Add(buttonPanel);
-    
-                LinkButton updateButton = new LinkButton();
-                updateButton.ID = "update";
-                updateButton.Text = "Update";
-                updateButton.Click += new EventHandler(updateButton_Click);
-                buttonPanel.Controls.Add(updateButton);
-    
-                AsyncPostBackTrigger updateButtonPostBackTrigger =
-                    new AsyncPostBackTrigger();
-    
-                updateButtonPostBackTrigger.ControlID = updateButton.ID;
-                updatePanel.Triggers.Add(updateButtonPostBackTrigger);
-            }
-    
-            private void updateButton_Click(
-                object sender,
-                EventArgs e)
-            {
-                timestamp.Text = "Timestamp updated at: " + DateTime.Now;
-            }
+            base.CreateChildControls();
+
+            LiteralControl literal = new LiteralControl(
+                "<p>Web Part loaded at: " + DateTime.Now + "</p>");
+
+            this.Controls.Add(literal);
+
+            UpdatePanel updatePanel = new UpdatePanel();
+            updatePanel.ID = "updatePanel";
+            updatePanel.UpdateMode = UpdatePanelUpdateMode.Conditional;
+            this.Controls.Add(updatePanel);
+
+            timestamp = new Label();
+            timestamp.ID = "timestamp";
+            timestamp.Text = "Click <b>Update</b> to update this label";
+            updatePanel.ContentTemplateContainer.Controls.Add(timestamp);
+
+            Panel buttonPanel = new Panel();
+            this.Controls.Add(buttonPanel);
+
+            LinkButton updateButton = new LinkButton();
+            updateButton.ID = "update";
+            updateButton.Text = "Update";
+            updateButton.Click += new EventHandler(updateButton_Click);
+            buttonPanel.Controls.Add(updateButton);
+
+            AsyncPostBackTrigger updateButtonPostBackTrigger =
+                new AsyncPostBackTrigger();
+
+            updateButtonPostBackTrigger.ControlID = updateButton.ID;
+            updatePanel.Triggers.Add(updateButtonPostBackTrigger);
+        }
+
+        private void updateButton_Click(
+            object sender,
+            EventArgs e)
+        {
+            timestamp.Text = "Timestamp updated at: " + DateTime.Now;
         }
     }
+}
+```
 
 
 
@@ -108,19 +110,25 @@ However, notice that the sample Web Part inherits from my custom **AjaxWebPart**
 
 After changing the base class and building the solution, the following commands  are used to update the assembly in the GAC and recycle the application pool for  the Fabrikam site:
 
-  
-  
-
-
-    cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
 
 
 
-    "GAC Assemblies.cmd"
+
+```
+cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
+```
 
 
 
-    C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
+```
+"GAC Assemblies.cmd"
+```
+
+
+
+```
+C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
+```
 
 
 
@@ -142,13 +150,15 @@ While we *could* modify BlueBand.master to declare a **ScriptManager**,  an alte
 
 
 
-    if (ScriptManager.GetCurrent(this.Page) == null)
-                {
-                    ScriptManager scriptHandler = new ScriptManager();
-                    scriptHandler.ID = "scriptHandler";
-                    scriptHandler.EnablePartialRendering = true;
-                    this.Controls.Add(scriptHandler);
-                }
+```
+if (ScriptManager.GetCurrent(this.Page) == null)
+            {
+                ScriptManager scriptHandler = new ScriptManager();
+                scriptHandler.ID = "scriptHandler";
+                scriptHandler.EnablePartialRendering = true;
+                this.Controls.Add(scriptHandler);
+            }
+```
 
 
 
@@ -156,10 +166,12 @@ Mike's post also describes adding the following startup script in order to enabl
 
 
 
-    <script type='text/javascript'>
-      _spOriginalFormAction = document.forms[0].action;
-      _spSuppressFormOnSubmitWrapper=true;
-    </script>
+```
+<script type='text/javascript'>
+  _spOriginalFormAction = document.forms[0].action;
+  _spSuppressFormOnSubmitWrapper=true;
+</script>
+```
 
 
 
@@ -177,75 +189,77 @@ The custom **AjaxWebPart **base class handles all of the fixup necessary  to avo
 
 
 
-    using System;
-    using System.Web.UI;
-    using System.Web.UI.WebControls.WebParts;
-    
-    using Microsoft.SharePoint.Utilities;
-    
-    namespace Fabrikam.Demo.Web.WebParts
+```
+using System;
+using System.Web.UI;
+using System.Web.UI.WebControls.WebParts;
+
+using Microsoft.SharePoint.Utilities;
+
+namespace Fabrikam.Demo.Web.WebParts
+{
+    /// <summary>
+    /// Serves as the base class for custom ASP.NET Web Part controls that
+    /// utilize AJAX for asynchronous partial page updates.
+    /// </summary>
+    public class AjaxWebPart : BaseWebPart
     {
         /// <summary>
-        /// Serves as the base class for custom ASP.NET Web Part controls that
-        /// utilize AJAX for asynchronous partial page updates.
+        /// Raises the <see cref="System.Web.UI.Control.Init"/> event.
         /// </summary>
-        public class AjaxWebPart : BaseWebPart
+        /// <remarks>
+        /// This method is overridden to mitigate known issues with AJAX and
+        /// SharePoint.
+        /// </remarks>
+        /// <param name="e">An <see cref="System.EventArgs"/> object that
+        /// contains the event data.</param>
+        protected override void OnInit(
+            EventArgs e)
         {
-            /// <summary>
-            /// Raises the <see cref="System.Web.UI.Control.Init"/> event.
-            /// </summary>
-            /// <remarks>
-            /// This method is overridden to mitigate known issues with AJAX and
-            /// SharePoint.
-            /// </remarks>
-            /// <param name="e">An <see cref="System.EventArgs"/> object that
-            /// contains the event data.</param>
-            protected override void OnInit(
-                EventArgs e)
+            base.OnInit(e);
+
+            // HACK: In SharePoint, EnsureChildControls() must be called during
+            // the Init phase of the page life cycle in order to avoid an error:
+            //
+            // "Extender Controls may not be Registered before PreRender"
+            EnsureChildControls();
+
+            // HACK: AJAX breaks the OOTB functionality in SharePoint (e.g. the
+            // "Edit Page" button)
+            //
+            // http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3
+            ScriptManager.RegisterStartupScript(
+                this,
+                typeof(AjaxWebPart),
+                "UpdatePanelFixup",
+                "_spOriginalFormAction = document.forms[0].action;"
+                    + " _spSuppressFormOnSubmitWrapper=true;",
+                true);
+        }
+
+        /// <summary>
+        /// Called by the ASP.NET page framework to notify server controls
+        /// that use composition-based implementation to create any child
+        /// controls they contain in preparation for posting back or rendering.
+        /// </summary>
+        /// <remarks>This method is overridden to ensure the page contains an
+        /// instance of the <see cref="System.Web.UI.ScriptManager"/> class.
+        /// </remarks>
+        protected override void CreateChildControls()
+        {
+            base.CreateChildControls();
+
+            if (ScriptManager.GetCurrent(this.Page) == null)
             {
-                base.OnInit(e);
-    
-                // HACK: In SharePoint, EnsureChildControls() must be called during
-                // the Init phase of the page life cycle in order to avoid an error:
-                //
-                // "Extender Controls may not be Registered before PreRender"
-                EnsureChildControls();
-    
-                // HACK: AJAX breaks the OOTB functionality in SharePoint (e.g. the
-                // "Edit Page" button)
-                //
-                // http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3
-                ScriptManager.RegisterStartupScript(
-                    this,
-                    typeof(AjaxWebPart),
-                    "UpdatePanelFixup",
-                    "_spOriginalFormAction = document.forms[0].action;"
-                        + " _spSuppressFormOnSubmitWrapper=true;",
-                    true);
-            }
-    
-            /// <summary>
-            /// Called by the ASP.NET page framework to notify server controls
-            /// that use composition-based implementation to create any child
-            /// controls they contain in preparation for posting back or rendering.
-            /// </summary>
-            /// <remarks>This method is overridden to ensure the page contains an
-            /// instance of the <see cref="System.Web.UI.ScriptManager"/> class.
-            /// </remarks>
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-    
-                if (ScriptManager.GetCurrent(this.Page) == null)
-                {
-                    ScriptManager scriptHandler = new ScriptManager();
-                    scriptHandler.ID = "scriptHandler";
-                    scriptHandler.EnablePartialRendering = true;
-                    this.Controls.Add(scriptHandler);
-                }
+                ScriptManager scriptHandler = new ScriptManager();
+                scriptHandler.ID = "scriptHandler";
+                scriptHandler.EnablePartialRendering = true;
+                this.Controls.Add(scriptHandler);
             }
         }
     }
+}
+```
 
 
 
@@ -253,52 +267,54 @@ The **BaseWebPart **class simply provides the ability to render  an error messag
 
 
 
-    using System.Web;
-    using System.Web.UI;
-    using System.Web.UI.WebControls.WebParts;
-    
-    namespace Fabrikam.Demo.Web.WebParts
+```
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls.WebParts;
+
+namespace Fabrikam.Demo.Web.WebParts
+{
+    /// <summary>
+    /// Serves as the base class for custom ASP.NET Web Part controls, adding
+    /// basic error handling functionality.
+    /// </summary>
+    public abstract class BaseWebPart : WebPart
     {
         /// <summary>
-        /// Serves as the base class for custom ASP.NET Web Part controls, adding
-        /// basic error handling functionality.
+        /// Gets or sets the message to display when an error occurs with the
+        /// Web Part.
         /// </summary>
-        public abstract class BaseWebPart : WebPart
+        protected string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// Renders the contents of the control to the specified writer.
+        /// </summary>
+        /// <remarks>
+        /// This method is overridden to determine whether to render the child
+        /// controls or an error message.</remarks>
+        /// <param name="writer">The <c>HtmlTextWriter</c> object that receives
+        /// the server control content.</param>
+        protected override void RenderContents(
+            HtmlTextWriter writer)
         {
-            /// <summary>
-            /// Gets or sets the message to display when an error occurs with the
-            /// Web Part.
-            /// </summary>
-            protected string ErrorMessage { get; set; }
-    
-            /// <summary>
-            /// Renders the contents of the control to the specified writer.
-            /// </summary>
-            /// <remarks>
-            /// This method is overridden to determine whether to render the child
-            /// controls or an error message.</remarks>
-            /// <param name="writer">The <c>HtmlTextWriter</c> object that receives
-            /// the server control content.</param>
-            protected override void RenderContents(
-                HtmlTextWriter writer)
+            if (string.IsNullOrEmpty(this.ErrorMessage) == true)
             {
-                if (string.IsNullOrEmpty(this.ErrorMessage) == true)
-                {
-                    base.RenderContents(writer);
-                }
-                else
-                {
-                    writer.AddAttribute(
-                        HtmlTextWriterAttribute.Class,
-                        "errorMessage");
-    
-                    writer.RenderBeginTag(HtmlTextWriterTag.P);
-                    HttpUtility.HtmlEncode(this.ErrorMessage, writer);
-                    writer.RenderEndTag();
-                }
+                base.RenderContents(writer);
+            }
+            else
+            {
+                writer.AddAttribute(
+                    HtmlTextWriterAttribute.Class,
+                    "errorMessage");
+
+                writer.RenderBeginTag(HtmlTextWriterTag.P);
+                HttpUtility.HtmlEncode(this.ErrorMessage, writer);
+                writer.RenderEndTag();
             }
         }
     }
+}
+```
 
 
 

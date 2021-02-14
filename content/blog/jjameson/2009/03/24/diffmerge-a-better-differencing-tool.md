@@ -10,8 +10,8 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx)
 > 

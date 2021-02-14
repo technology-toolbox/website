@@ -53,14 +53,16 @@ These changes make the LINQ queries much easier to read. For example, the follo
 
 
 
-    using (CaelumEntities context = new CaelumEntities())
-        {
-            var q = (from entry in context.Entries
-                     orderby entry.DateSyndicated descending
-                     select entry).Take(3);
-    
-            // TODO: Process the query results (e.g. data bind to a control)
-        }
+```
+using (CaelumEntities context = new CaelumEntities())
+    {
+        var q = (from entry in context.Entries
+                 orderby entry.DateSyndicated descending
+                 select entry).Take(3);
+
+        // TODO: Process the query results (e.g. data bind to a control)
+    }
+```
 
 
 
@@ -76,73 +78,75 @@ Here is the HTML structure for the **Most Recent Posts** section on the site ho
 
 
 
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>
-        <div class="hentry">
-            <h3 class="entry-title">
-                <a href="/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"
-                    rel="bookmark">Introducing TechnologyToolbox.com</a></h3>
-            <ul class="post-info">
-                <li class="published">
-                    <span class="label">Published </span>
-                    <span class="value">October 17, 2011</span>
-                    <span class="label"> at </span>
-                    <span class="value">11:51 AM</span>
-                </li>
-                <li class="vcard author">
-                    by <span class="fn">Jeremy Jameson</span>
-                </li>
-                <li class="comments none">
-                    <a href="/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx#postComments">
-                    <span class="label">Comments: </span>
-                    <span class="value count">0</span></a>
-                </li>
-            </ul>
-            <div class="entry-summary">
-                <p>In this inaugural post for my new blog location, I'll introduce
-                    various features of the new Technology Toolbox website and
-                    provide a high-level overview of the underlying architecture.
-                    Subsequent posts will cover different aspects of the site in
-                    greater detail.</p>
-            </div>
-        </div>
-        <div class="hentry">
-            <h3 class="entry-title">
-                <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx"
-                    rel="bookmark">
-                    Last Day with Microsoft</a></h3>
-            <ul class="post-info">
-                <li class="published">
-                    <span class="label">Published </span>
-                    <span class="value">September 2, 2011</span>
-                    <span class="label"> at </span>
-                    <span class="value">3:43 PM</span>
-                </li>
-                <li class="vcard author">by <span class="fn">
-                    Jeremy Jameson</span></li>
-                <li class="comments">
-                    <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx#postComments">
-                        <span class="label">Comments: </span>
-                        <span class="value count">11</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="entry-summary">
-                ...
-            </div>
-        </div>
-        <div class="hentry">
-            <h3 class="entry-title">
-                <a href="/blog/jjameson/archive/2011/09/02/new-blog-location-http-www-technologytoolbox-com-blog-jjameson.aspx"
-                    rel="bookmark">...</a></h3>
-            <ul class="post-info">
-                ...
-            </ul>
-            <div class="entry-summary">
-                ...
-            </div>
+```
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>
+    <div class="hentry">
+        <h3 class="entry-title">
+            <a href="/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"
+                rel="bookmark">Introducing TechnologyToolbox.com</a></h3>
+        <ul class="post-info">
+            <li class="published">
+                <span class="label">Published </span>
+                <span class="value">October 17, 2011</span>
+                <span class="label"> at </span>
+                <span class="value">11:51 AM</span>
+            </li>
+            <li class="vcard author">
+                by <span class="fn">Jeremy Jameson</span>
+            </li>
+            <li class="comments none">
+                <a href="/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx#postComments">
+                <span class="label">Comments: </span>
+                <span class="value count">0</span></a>
+            </li>
+        </ul>
+        <div class="entry-summary">
+            <p>In this inaugural post for my new blog location, I'll introduce
+                various features of the new Technology Toolbox website and
+                provide a high-level overview of the underlying architecture.
+                Subsequent posts will cover different aspects of the site in
+                greater detail.</p>
         </div>
     </div>
+    <div class="hentry">
+        <h3 class="entry-title">
+            <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx"
+                rel="bookmark">
+                Last Day with Microsoft</a></h3>
+        <ul class="post-info">
+            <li class="published">
+                <span class="label">Published </span>
+                <span class="value">September 2, 2011</span>
+                <span class="label"> at </span>
+                <span class="value">3:43 PM</span>
+            </li>
+            <li class="vcard author">by <span class="fn">
+                Jeremy Jameson</span></li>
+            <li class="comments">
+                <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx#postComments">
+                    <span class="label">Comments: </span>
+                    <span class="value count">11</span>
+                </a>
+            </li>
+        </ul>
+        <div class="entry-summary">
+            ...
+        </div>
+    </div>
+    <div class="hentry">
+        <h3 class="entry-title">
+            <a href="/blog/jjameson/archive/2011/09/02/new-blog-location-http-www-technologytoolbox-com-blog-jjameson.aspx"
+                rel="bookmark">...</a></h3>
+        <ul class="post-info">
+            ...
+        </ul>
+        <div class="entry-summary">
+            ...
+        </div>
+    </div>
+</div>
+```
 
 
 
@@ -154,37 +158,39 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET **R
 
 
 
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>    
-        <asp:Repeater runat="server" ID="PostList">
-            <ItemTemplate>
-                <div class="hentry">
-                    <h3 class="entry-title">
-                        <a href="{TODO: /blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx}"
-                            rel="bookmark"><%# Eval("Title") %></a></h3>
-                    <ul class="post-info">
-                        <li class="published">
-                            <span class="label">Published </span>
-                            <span class="value">{TODO: October 17, 2011}</span>
-                            <span class="label"> at </span>
-                            <span class="value">{TODO: 11:51 AM}</span>
-                        </li>
-                        <li class="vcard author">
-                            by <span class="fn"><%# Eval("Author") %></span>
-                        </li>
-                        <li class="comments none">
-                            <a href="{TODO: /blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx}#postComments">
-                            <span class="label">Comments: </span>
-                            <span class="value count">{TODO: 0}</span></a>
-                        </li>
-                    </ul>
-                    <div class="entry-summary">
-                        <p><%# Eval("Description") %></p>
-                    </div>
+```
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>    
+    <asp:Repeater runat="server" ID="PostList">
+        <ItemTemplate>
+            <div class="hentry">
+                <h3 class="entry-title">
+                    <a href="{TODO: /blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx}"
+                        rel="bookmark"><%# Eval("Title") %></a></h3>
+                <ul class="post-info">
+                    <li class="published">
+                        <span class="label">Published </span>
+                        <span class="value">{TODO: October 17, 2011}</span>
+                        <span class="label"> at </span>
+                        <span class="value">{TODO: 11:51 AM}</span>
+                    </li>
+                    <li class="vcard author">
+                        by <span class="fn"><%# Eval("Author") %></span>
+                    </li>
+                    <li class="comments none">
+                        <a href="{TODO: /blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx}#postComments">
+                        <span class="label">Comments: </span>
+                        <span class="value count">{TODO: 0}</span></a>
+                    </li>
+                </ul>
+                <div class="entry-summary">
+                    <p><%# Eval("Description") %></p>
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+```
 
 
 
@@ -203,31 +209,33 @@ In the corresponding code-behind for the user control, I added code to retrieve 
 
 
 
-    using System;
-    using System.Linq;
-    using TechnologyToolbox.Caelum.Data;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Linq;
+using TechnologyToolbox.Caelum.Data;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    /// ...
+    public partial class RecentPosts : System.Web.UI.UserControl
     {
-        /// ...
-        public partial class RecentPosts : System.Web.UI.UserControl
+        protected void Page_Load(
+            object sender,
+            EventArgs e)
         {
-            protected void Page_Load(
-                object sender,
-                EventArgs e)
+            using (CaelumEntities context = new CaelumEntities())
             {
-                using (CaelumEntities context = new CaelumEntities())
-                {
-                    var q = (from entry in context.Entries
-                             orderby entry.DateSyndicated descending
-                             select entry).Take(3);
-    
-                    PostList.DataSource = q;
-                    PostList.DataBind();
-                }
+                var q = (from entry in context.Entries
+                         orderby entry.DateSyndicated descending
+                         select entry).Take(3);
+
+                PostList.DataSource = q;
+                PostList.DataBind();
             }
         }
     }
+}
+```
 
 
 
@@ -237,32 +245,34 @@ In order to generate the URL for a specific blog post, I created a simple "help
 
 
 
-    namespace TechnologyToolbox.Caelum.Website
+```
+namespace TechnologyToolbox.Caelum.Website
+{
+    /// ...
+    public static class BlogHelper
     {
         /// ...
-        public static class BlogHelper
+        public static Uri GetEntryUrl(
+               string entryName,
+               DateTime dateSyndicated)
         {
-            /// ...
-            public static Uri GetEntryUrl(
-                   string entryName,
-                   DateTime dateSyndicated)
+            if (string.IsNullOrEmpty(entryName) == true)
             {
-                if (string.IsNullOrEmpty(entryName) == true)
-                {
-                    throw new ArgumentException(
-                        "The entry name must be specified.");
-                }
-    
-                string entryUrl = string.Format(
-                    CultureInfo.InvariantCulture,
-                    "/blog/jjameson/archive/{0:yyyy}/{0:MM}/{0:dd}/{1}.aspx",
-                    dateSyndicated,
-                    entryName);
-    
-                return new Uri(entryUrl, UriKind.Relative);
+                throw new ArgumentException(
+                    "The entry name must be specified.");
             }
+
+            string entryUrl = string.Format(
+                CultureInfo.InvariantCulture,
+                "/blog/jjameson/archive/{0:yyyy}/{0:MM}/{0:dd}/{1}.aspx",
+                dateSyndicated,
+                entryName);
+
+            return new Uri(entryUrl, UriKind.Relative);
         }
     }
+}
+```
 
 
 
@@ -281,43 +291,45 @@ Then I replaced the placeholders for the post URL with corresponding calls to t
 
 
 
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <ItemTemplate>
-                <div class="hentry">
-                    <h3 class="entry-title">
-                        <a href="<%# BlogHelper.GetEntryUrl(
-                            (string) Eval("EntryName"),
-                            (DateTime) Eval("DateSyndicated")) %>"
-                            rel="bookmark"><%# Eval("Title") %></a></h3>
-                    <ul class="post-info">
-                        <li class="published">
-                            <span class="label">Published </span>
-                            <span class="value">{TODO: October 17, 2011}</span>
-                            <span class="label"> at </span>
-                            <span class="value">{TODO: 11:51 AM}</span>
-                        </li>
-                        <li class="vcard author">
-                            ...
-                        </li>
-                        <li class="comments none">
-                            <asp:HyperLink runat="server"
-                              NavigateUrl='<%# string.Format(
-                                "{0}#postComments",
-                                BlogHelper.GetEntryUrl(
-                                    (string) Eval("EntryName"),
-                                    (DateTime) Eval("DateSyndicated"))) %>'>
-                              <span class="label">Comments: </span>
-                              <span class="value count">{TODO: 0}</span>
-                            </asp:HyperLink>
-                        </li>
-                    </ul>
-                    ...
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+```
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <ItemTemplate>
+            <div class="hentry">
+                <h3 class="entry-title">
+                    <a href="<%# BlogHelper.GetEntryUrl(
+                        (string) Eval("EntryName"),
+                        (DateTime) Eval("DateSyndicated")) %>"
+                        rel="bookmark"><%# Eval("Title") %></a></h3>
+                <ul class="post-info">
+                    <li class="published">
+                        <span class="label">Published </span>
+                        <span class="value">{TODO: October 17, 2011}</span>
+                        <span class="label"> at </span>
+                        <span class="value">{TODO: 11:51 AM}</span>
+                    </li>
+                    <li class="vcard author">
+                        ...
+                    </li>
+                    <li class="comments none">
+                        <asp:HyperLink runat="server"
+                          NavigateUrl='<%# string.Format(
+                            "{0}#postComments",
+                            BlogHelper.GetEntryUrl(
+                                (string) Eval("EntryName"),
+                                (DateTime) Eval("DateSyndicated"))) %>'>
+                          <span class="label">Comments: </span>
+                          <span class="value count">{TODO: 0}</span>
+                        </asp:HyperLink>
+                    </li>
+                </ul>
+                ...
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+```
 
 
 
@@ -325,31 +337,33 @@ After running another quick test to verify the URLs are generated correctly, I 
 
 
 
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <ItemTemplate>
-                <div class="hentry">
-                    <h3 class="entry-title">
-                        ...</h3>
-                    <ul class="post-info">
-                        <li class="published">
-                            <span class="label">Published </span>
-                            <span class="value"><%# Eval(
-                                "DateSyndicated",
-                                "{0:MMMM d, yyyy}") %></span>
-                            <span class="label"> at </span>
-                            <span class="value"><%# Eval(
-                                "DateSyndicated",
-                                "{0:t}") %></span>
-                        </li>
-                        ...
-                    </ul>
+```
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <ItemTemplate>
+            <div class="hentry">
+                <h3 class="entry-title">
+                    ...</h3>
+                <ul class="post-info">
+                    <li class="published">
+                        <span class="label">Published </span>
+                        <span class="value"><%# Eval(
+                            "DateSyndicated",
+                            "{0:MMMM d, yyyy}") %></span>
+                        <span class="label"> at </span>
+                        <span class="value"><%# Eval(
+                            "DateSyndicated",
+                            "{0:t}") %></span>
+                    </li>
                     ...
-                </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+                </ul>
+                ...
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+```
 
 
 
@@ -357,40 +371,42 @@ At this point, the feature was almost complete. The only thing left to do was t
 
 
 
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <ItemTemplate>
-                <div class="hentry">
-                    <h3 class="entry-title">
-                        ...</h3>
-                    <ul class="post-info">
-                        <li class="published">
-                            ...
-                        </li>
-                        <li class="vcard author">
-                            ...
-                        </li>
-                        <li class="comments<%# (int)Eval("FeedBackCount") == 0 ? " none" : string.Empty %>">
-                            <asp:HyperLink runat="server"
-                              NavigateUrl='<%# string.Format(
-                                "{0}#postComments",
-                                BlogHelper.GetEntryUrl(
-                                    (string) Eval("EntryName"),
-                                    (DateTime) Eval("DateSyndicated"))) %>'>
-                              <span class="label">Comments: </span>
-                              <span class="value count"><%# Eval(
-                                "FeedBackCount") %></span>
-                            </asp:HyperLink>
-                        </li>
-                    </ul>
-                    <div class="entry-summary">
+```
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <ItemTemplate>
+            <div class="hentry">
+                <h3 class="entry-title">
+                    ...</h3>
+                <ul class="post-info">
+                    <li class="published">
                         ...
-                    </div>
+                    </li>
+                    <li class="vcard author">
+                        ...
+                    </li>
+                    <li class="comments<%# (int)Eval("FeedBackCount") == 0 ? " none" : string.Empty %>">
+                        <asp:HyperLink runat="server"
+                          NavigateUrl='<%# string.Format(
+                            "{0}#postComments",
+                            BlogHelper.GetEntryUrl(
+                                (string) Eval("EntryName"),
+                                (DateTime) Eval("DateSyndicated"))) %>'>
+                          <span class="label">Comments: </span>
+                          <span class="value count"><%# Eval(
+                            "FeedBackCount") %></span>
+                        </asp:HyperLink>
+                    </li>
+                </ul>
+                <div class="entry-summary">
+                    ...
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+```
 
 
 
@@ -400,7 +416,9 @@ In order to greatly reduce the number of roundtrips to SQL Server, I added a ca
 
 
 
-    <%@ OutputCache Duration="300" VaryByParam="None" %>
+```
+<%@ OutputCache Duration="300" VaryByParam="None" %>
+```
 
 
 
@@ -408,53 +426,55 @@ Here is the complete source for RecentPosts.ascx:
 
 
 
-    <%@ Control Language="C#" AutoEventWireup="true"
-        CodeBehind="RecentPosts.ascx.cs"
-        Inherits="TechnologyToolbox.Caelum.Website.Controls.RecentPosts" %>
-    <%@ OutputCache Duration="300" VaryByParam="None" %>
-    <%@ Import Namespace="TechnologyToolbox.Caelum.Website" %>
-    <div class="hfeed posts-recent">
-        <h2>Most Recent Posts</h2>
-        <asp:Repeater runat="server" ID="PostList">
-            <ItemTemplate>
-                <div class="hentry">
-                    <h3 class="entry-title">
-                        <a href="<%# BlogHelper.GetEntryUrl(
-                            (string) Eval("EntryName"),
-                            (DateTime) Eval("DateSyndicated")) %>"
-                           rel="bookmark"><%# Eval("Title") %></a></h3>
-                    <ul class="post-info">
-                        <li class="published">
-                            <span class="label">Published </span>
-                            <span class="value"><%# Eval(
-                                "DateSyndicated",
-                                "{0:MMMM d, yyyy}") %></span>
-                            <span class="label"> at </span>
-                            <span class="value"><%# Eval(
-                                "DateSyndicated",
-                                "{0:t}") %></span>
-                        </li>
-                        <li class="vcard author">
-                            by <span class="fn"><%# Eval("Author") %></span>
-                        </li>
-                        <li class="comments<%# (int)Eval("FeedBackCount") == 0 ? " none" : string.Empty %>">
-                            <asp:HyperLink runat="server"
-                              NavigateUrl='<%# string.Format(
-                                "{0}#postComments",
-                                BlogHelper.GetEntryUrl(
-                                    (string) Eval("EntryName"),
-                                    (DateTime) Eval("DateSyndicated"))) %>'>
-                              <span class="label">Comments: </span>
-                              <span class="value count"><%# Eval(
-                                "FeedBackCount") %></span>
-                          </asp:HyperLink>
-                        </li>
-                    </ul>
-                    <div class="entry-summary">
-                        <p><%# Eval("Description") %></p>
-                    </div>
+```
+<%@ Control Language="C#" AutoEventWireup="true"
+    CodeBehind="RecentPosts.ascx.cs"
+    Inherits="TechnologyToolbox.Caelum.Website.Controls.RecentPosts" %>
+<%@ OutputCache Duration="300" VaryByParam="None" %>
+<%@ Import Namespace="TechnologyToolbox.Caelum.Website" %>
+<div class="hfeed posts-recent">
+    <h2>Most Recent Posts</h2>
+    <asp:Repeater runat="server" ID="PostList">
+        <ItemTemplate>
+            <div class="hentry">
+                <h3 class="entry-title">
+                    <a href="<%# BlogHelper.GetEntryUrl(
+                        (string) Eval("EntryName"),
+                        (DateTime) Eval("DateSyndicated")) %>"
+                       rel="bookmark"><%# Eval("Title") %></a></h3>
+                <ul class="post-info">
+                    <li class="published">
+                        <span class="label">Published </span>
+                        <span class="value"><%# Eval(
+                            "DateSyndicated",
+                            "{0:MMMM d, yyyy}") %></span>
+                        <span class="label"> at </span>
+                        <span class="value"><%# Eval(
+                            "DateSyndicated",
+                            "{0:t}") %></span>
+                    </li>
+                    <li class="vcard author">
+                        by <span class="fn"><%# Eval("Author") %></span>
+                    </li>
+                    <li class="comments<%# (int)Eval("FeedBackCount") == 0 ? " none" : string.Empty %>">
+                        <asp:HyperLink runat="server"
+                          NavigateUrl='<%# string.Format(
+                            "{0}#postComments",
+                            BlogHelper.GetEntryUrl(
+                                (string) Eval("EntryName"),
+                                (DateTime) Eval("DateSyndicated"))) %>'>
+                          <span class="label">Comments: </span>
+                          <span class="value count"><%# Eval(
+                            "FeedBackCount") %></span>
+                      </asp:HyperLink>
+                    </li>
+                </ul>
+                <div class="entry-summary">
+                    <p><%# Eval("Description") %></p>
                 </div>
-            </ItemTemplate>
-        </asp:Repeater>
-    </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+```
 

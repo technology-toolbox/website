@@ -10,8 +10,8 @@ tags: ["TFS"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx)
@@ -30,14 +30,18 @@ If you need to perform the upgrade again (and you don't have the luxury of apply
 
 First, use the Team Foundation Server Configuration Tool to unconfigure components  on the server:
 
-  
-
-
-    cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
 
 
 
-    TfsConfig.exe setup /uninstall:All
+```
+cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
+```
+
+
+
+```
+TfsConfig.exe setup /uninstall:All
+```
 
 
 
@@ -79,23 +83,27 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
 2. At the Windows PowerShell command prompt, type the following command:
 
 
-        Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> 
-        	-WebApplication <URL> [-Updateuserexperience]
+    ```
+    Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> 
+    	-WebApplication <URL> [-Updateuserexperience]
+    ```
 
 
-Where:  
+Where:
 
     - <var>&lt;DatabaseName&gt;</var> is the name of the database you want 	to upgrade.
     - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
     - <var>&lt;URL&gt;</var> is the URL for the Web application that will 	host the sites.
     - <var>-Updateuserexperience</var> specifies to update the sites with 	the new SharePoint user experience (part of Visual Upgrade). If you omit 	this parameter, the sites retain the old user experience after upgrade.
 
-  
+
 For example:
 
 
-        Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV 
-        	-WebApplication http://cyclops-dev -Updateuserexperience
+    ```
+    Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV 
+    	-WebApplication http://cyclops-dev -Updateuserexperience
+    ```
 
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and  click **Configure Installed Features**.

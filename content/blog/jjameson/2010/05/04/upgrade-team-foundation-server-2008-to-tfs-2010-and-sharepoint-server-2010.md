@@ -11,8 +11,8 @@ tags: ["My System", "Visual Studio", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx)
@@ -300,7 +300,9 @@ To fix the TaxonomyPicker.ascx file:
                 
 
 
-        notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
+    ```
+    notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
+    ```
 3. In Notepad, in the assembly specified in the **Control **directive,
                 replace the **"&#44;**" (without the quotes) with a comma (',')
                 and then save the file.
@@ -327,8 +329,8 @@ In order to avoid errors in the Windows event log (e.g. Source: SharePoint Found
 
 To rename the TaxonomyPicker.ascx file:
 
-1. Open Windows Explorer and browse to the following folder:  
-  
+1. Open Windows Explorer and browse to the following folder:
+
 **C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 2. Right-click **TaxonomyPicker.ascx**, click **Rename**,
             and then change the filename to **TaxonomyPicker.ascx\_broken**.
@@ -549,12 +551,14 @@ To attach the SharePoint content database by using Windows Powershell:
             
 
 
-        Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName>
-                            -WebApplication <URL> [-Updateuserexperience]
+    ```
+    Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName>
+                        -WebApplication <URL> [-Updateuserexperience]
+    ```
 
 
 
-            Where:  
+            Where:
 
     - <samp>                        &lt;DatabaseName&gt;</samp>
                     is the name of the database you want to upgrade.
@@ -566,14 +570,16 @@ To attach the SharePoint content database by using Windows Powershell:
                     user experience (part of Visual Upgrade). If you omit this parameter, the sites
                     retain the old user experience after upgrade.
 
-  
+
 
             For example:
             
 
 
-        Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication
-                            http://cyclops -Updateuserexperience
+    ```
+    Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication
+                        http://cyclops -Updateuserexperience
+    ```
 
 
 More information on attaching SharePoint content databases is provided in the following         TechNet article:
@@ -659,8 +665,8 @@ Note that a different error may be shown in the **Remaining Work **         Web 
 > 
 > * * *
 > 
-> An error has occurred during report processing. (rsProcessingAborted) Get Online         Help  
->          Query execution failed for dataset 'DefaultIterationParam'. (rsErrorExecutingCommand)         Get Online Help  
+> An error has occurred during report processing. (rsProcessingAborted) Get Online         Help
+>          Query execution failed for dataset 'DefaultIterationParam'. (rsErrorExecutingCommand)         Get Online Help
 >          For more information about this error navigate to the report server on the local         server machine, or enable remote errors
 > 
 > * * *
@@ -736,11 +742,13 @@ To avoid this error, add the the second service account to the underlying conten
 > 
 > 
 > 
->     Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
->     
->     $webApp = Get-SPWebApplication "http://cyclops"
->     
->     $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
+> ```
+> Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+> 
+> $webApp = Get-SPWebApplication "http://cyclops"
+> 
+> $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
+> ```
 
 
 ####         Configure enterprise application definition for TFS dashboards

@@ -11,8 +11,8 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx)
@@ -41,8 +41,10 @@ A quick Windows Live Search for ["Disk Management could not start Virtual Disk S
 
 
 
-    netsh advfirewall firewall set rule group="Remote Volume Management" new 
-    enable=yes
+```
+netsh advfirewall firewall set rule group="Remote Volume Management" new 
+enable=yes
+```
 
 
 
@@ -60,6 +62,8 @@ Once I edited the command line to replace the quotation marks, the command compl
 C:\&gt;<kbd>netsh advfirewall firewall set rule group="Remote Volume Management" new enable=yes</kbd>
 
 
-    Updated 3 rule(s).
-    Ok.
+```
+Updated 3 rule(s).
+Ok.
+```
 

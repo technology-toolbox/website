@@ -47,33 +47,35 @@ Now let's add a little bit of script to a sample page:
 
 
 
-    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
-      Inherits="Demo._Default" %>
-    
-    <!DOCTYPE html PUBLIC
-    "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-      <title>jQuery Demo</title>
-      <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-        type="text/javascript"></script>
-    </head>
-    <body>
-        <form id="form1" runat="server">
-        <h1>
-          jQuery Demo
-        </h1>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $("h1").fadeOut();
-            $("h1").fadeIn();
-          });
-        </script>
-        </form>
-    </body>
-    </html>
+```
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
+  Inherits="Demo._Default" %>
+
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>jQuery Demo</title>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <h1>
+      jQuery Demo
+    </h1>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("h1").fadeOut();
+        $("h1").fadeIn();
+      });
+    </script>
+    </form>
+</body>
+</html>
+```
 
 
 
@@ -85,14 +87,16 @@ You probably already know that the default Web.config file contains the followin
 
 
 
-    <configuration>
-        ...
-        <system.web>
-            <compilation debug="true">
-        ...
-        </system.web>
-        ...
-    </configuration>
+```
+<configuration>
+    ...
+    <system.web>
+        <compilation debug="true">
+    ...
+    </system.web>
+    ...
+</configuration>
+```
 
 
 
@@ -102,11 +106,13 @@ However the Web.config file for Release builds does not contain the `debug` attr
 
 
 
-    <configuration ...>
-      <system.web>
-        <compilation xdt:Transform="RemoveAttributes(debug)" />
-      </system.web>
-    </configuration>
+```
+<configuration ...>
+  <system.web>
+    <compilation xdt:Transform="RemoveAttributes(debug)" />
+  </system.web>
+</configuration>
+```
 
 
 
@@ -114,15 +120,17 @@ We can leverage this fact to conditionally include different versions of the jQ
 
 
 
-    <% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
-      <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
-        type="text/javascript"></script>
-    <% } else { %>
-      <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-        type="text/javascript"></script>
-    <% } %>
+```
+<% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
+    type="text/javascript"></script>
+<% } else { %>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"></script>
+<% } %>
+```
 
 
 
@@ -132,31 +140,33 @@ This technique obviously works with your own script files -- and CSS files as w
 
 
 
-    <head runat="server">
-      ...
-      <title>Technology Toolbox</title>
-      ...
-    <% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
-      <link href="~/Themes/Theme-1.0/Main.css" rel="stylesheet" type="text/css" />
-      <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
-        type="text/javascript"></script>
-      <script
-        src="<%= ResolveUrl("~/Scripts/Caelum-1.0.1.js") %>"
-        type="text/javascript"></script>
-    <% } else { %>
-      <link
-        href="~/Themes/Theme-1.0/Theme-1.0.5.min.css" rel="stylesheet"
-        type="text/css" />
-      <script
-        src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-        type="text/javascript"></script>
-      <script
-        src="<%= ResolveUrl("~/Scripts/Caelum-1.0.1.min.js") %>"
-        type="text/javascript"></script>
-    <% } %>
-      ...
-    </head>
+```
+<head runat="server">
+  ...
+  <title>Technology Toolbox</title>
+  ...
+<% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
+  <link href="~/Themes/Theme-1.0/Main.css" rel="stylesheet" type="text/css" />
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
+    type="text/javascript"></script>
+  <script
+    src="<%= ResolveUrl("~/Scripts/Caelum-1.0.1.js") %>"
+    type="text/javascript"></script>
+<% } else { %>
+  <link
+    href="~/Themes/Theme-1.0/Theme-1.0.5.min.css" rel="stylesheet"
+    type="text/css" />
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    type="text/javascript"></script>
+  <script
+    src="<%= ResolveUrl("~/Scripts/Caelum-1.0.1.min.js") %>"
+    type="text/javascript"></script>
+<% } %>
+  ...
+</head>
+```
 
 
 
@@ -191,39 +201,41 @@ This control replaces `<link>` elements used to reference a CSS file. Instead o
 
 
 
-    using System;
-    using System.Web;
-    using System.Web.UI.HtmlControls;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Web;
+using System.Web.UI.HtmlControls;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    public class CssReference : HtmlLink
     {
-        public class CssReference : HtmlLink
+        public CssReference()
         {
-            public CssReference()
+            this.Attributes.Add("rel", "stylesheet");
+            this.Attributes.Add("type", "text/css");
+        }
+
+        public string CssFile { get; set; }
+        public string DebugCssFile { get; set; }
+
+        protected override void OnPreRender(
+            EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            if (this.Context.IsDebuggingEnabled == true)
             {
-                this.Attributes.Add("rel", "stylesheet");
-                this.Attributes.Add("type", "text/css");
+                this.Href = this.DebugCssFile;
             }
-    
-            public string CssFile { get; set; }
-            public string DebugCssFile { get; set; }
-    
-            protected override void OnPreRender(
-                EventArgs e)
+            else
             {
-                base.OnPreRender(e);
-    
-                if (this.Context.IsDebuggingEnabled == true)
-                {
-                    this.Href = this.DebugCssFile;
-                }
-                else
-                {
-                    this.Href = this.CssFile;
-                }
+                this.Href = this.CssFile;
             }
         }
     }
+}
+```
 
 
 
@@ -233,57 +245,59 @@ This control replaces `<script>` elements used to reference a JavaScript file. 
 
 
 
-    using System;
-    using System.Web;
-    using System.Web.UI;
-    using System.Web.UI.HtmlControls;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    public class JavaScriptReference : HtmlControl
     {
-        public class JavaScriptReference : HtmlControl
+        public JavaScriptReference() : base("script")
         {
-            public JavaScriptReference() : base("script")
+            this.Attributes.Add("type", "text/javascript");
+        }
+        
+        public string SourceFile { get; set; }
+        public string DebugSourceFile { get; set; }
+
+        protected override void OnPreRender(
+            EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            if (this.Context.IsDebuggingEnabled == true)
             {
-                this.Attributes.Add("type", "text/javascript");
+                string path = ResolveUrl(this.DebugSourceFile);
+
+                this.Attributes.Add("src", path);
             }
-            
-            public string SourceFile { get; set; }
-            public string DebugSourceFile { get; set; }
-    
-            protected override void OnPreRender(
-                EventArgs e)
+            else
             {
-                base.OnPreRender(e);
-    
-                if (this.Context.IsDebuggingEnabled == true)
-                {
-                    string path = ResolveUrl(this.DebugSourceFile);
-    
-                    this.Attributes.Add("src", path);
-                }
-                else
-                {
-                    string path = ResolveUrl(this.SourceFile);
-    
-                    this.Attributes.Add("src", path);
-                }
-            }
-    
-            protected override void Render(
-                HtmlTextWriter writer)
-            {
-                if (writer == null)
-                {
-                    throw new ArgumentNullException("writer");
-                }
-    
-                writer.WriteBeginTag(this.TagName);
-                this.RenderAttributes(writer);
-                writer.Write(">");
-                writer.WriteEndTag(this.TagName);
+                string path = ResolveUrl(this.SourceFile);
+
+                this.Attributes.Add("src", path);
             }
         }
+
+        protected override void Render(
+            HtmlTextWriter writer)
+        {
+            if (writer == null)
+            {
+                throw new ArgumentNullException("writer");
+            }
+
+            writer.WriteBeginTag(this.TagName);
+            this.RenderAttributes(writer);
+            writer.Write(">");
+            writer.WriteEndTag(this.TagName);
+        }
     }
+}
+```
 
 
 
@@ -295,59 +309,61 @@ To encapsulate the details of referencing jQuery hosted on a CDN -- as well as 
 
 
 
-    using System;
-    using System.Globalization;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Globalization;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    [System.Diagnostics.CodeAnalysis.SuppressMessage(
+        "Microsoft.Naming",
+        "CA1702:CompoundWordsShouldBeCasedCorrectly",
+        MessageId = "JQuery")]
+    public class JQueryReference : JavaScriptReference
     {
+        public JQueryReference()
+        {
+            this.Version = "1.7.1"; // default to latest version
+        }
+
+        public string Version { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Microsoft.Naming",
-            "CA1702:CompoundWordsShouldBeCasedCorrectly",
-            MessageId = "JQuery")]
-        public class JQueryReference : JavaScriptReference
+            "CA2204:Literals should be spelled correctly",
+            MessageId = "jQuery")]
+        protected override void OnPreRender(
+            EventArgs e)
         {
-            public JQueryReference()
+            if (string.IsNullOrEmpty(this.Version) == true)
             {
-                this.Version = "1.7.1"; // default to latest version
+                throw new InvalidOperationException(
+                    "The jQuery version must be specified.");
             }
-    
-            public string Version { get; set; }
-    
-            [System.Diagnostics.CodeAnalysis.SuppressMessage(
-                "Microsoft.Naming",
-                "CA2204:Literals should be spelled correctly",
-                MessageId = "jQuery")]
-            protected override void OnPreRender(
-                EventArgs e)
+
+            if (string.IsNullOrEmpty(this.SourceFile) == true)
             {
-                if (string.IsNullOrEmpty(this.Version) == true)
-                {
-                    throw new InvalidOperationException(
-                        "The jQuery version must be specified.");
-                }
-    
-                if (string.IsNullOrEmpty(this.SourceFile) == true)
-                {
-                    this.SourceFile = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "{0}://ajax.googleapis.com/ajax/libs/jquery/{1}/jquery.min.js",
-                        this.Page.Request.IsSecureConnection ? "https" : "http",
-                        this.Version);
-                }
-    
-                if (string.IsNullOrEmpty(this.DebugSourceFile) == true)
-                {
-                    this.DebugSourceFile = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "{0}://ajax.googleapis.com/ajax/libs/jquery/{1}/jquery.js",
-                        this.Page.Request.IsSecureConnection ? "https" : "http",
-                        this.Version);
-                }
-                    
-                base.OnPreRender(e);
+                this.SourceFile = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "{0}://ajax.googleapis.com/ajax/libs/jquery/{1}/jquery.min.js",
+                    this.Page.Request.IsSecureConnection ? "https" : "http",
+                    this.Version);
             }
+
+            if (string.IsNullOrEmpty(this.DebugSourceFile) == true)
+            {
+                this.DebugSourceFile = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "{0}://ajax.googleapis.com/ajax/libs/jquery/{1}/jquery.js",
+                    this.Page.Request.IsSecureConnection ? "https" : "http",
+                    this.Version);
+            }
+                
+            base.OnPreRender(e);
         }
     }
+}
+```
 
 
 
@@ -357,17 +373,19 @@ Leveraging these new controls, the corresponding `<head>` section now looks lik
 
 
 
-    <head runat="server">
-      ...
-      <title>Technology Toolbox</title>
-      ...
-      <caelum:CssReference runat="server"
-        CssFile="~/Themes/Theme-1.0/Theme-1.0.5.min.css"
-        DebugCssFile="~/Themes/Theme-1.0/Main.css" />
-      <caelum:JQueryReference runat="server" />
-      <caelum:JavaScriptReference runat="server"
-        SourceFile="~/Scripts/Caelum-1.0.1.min.js"
-        DebugSourceFile="~/Scripts/Caelum-1.0.1.js" />
-      ...
-    </head>
+```
+<head runat="server">
+  ...
+  <title>Technology Toolbox</title>
+  ...
+  <caelum:CssReference runat="server"
+    CssFile="~/Themes/Theme-1.0/Theme-1.0.5.min.css"
+    DebugCssFile="~/Themes/Theme-1.0/Main.css" />
+  <caelum:JQueryReference runat="server" />
+  <caelum:JavaScriptReference runat="server"
+    SourceFile="~/Scripts/Caelum-1.0.1.min.js"
+    DebugSourceFile="~/Scripts/Caelum-1.0.1.js" />
+  ...
+</head>
+```
 

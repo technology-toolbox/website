@@ -10,8 +10,8 @@ tags: ["My System", "Toolbox"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)
@@ -49,17 +49,17 @@ I attribute the reasoning to several factors:
 Factor #1 is addressed by creating various folders under NotBackedUp and storing  the gigabytes of stuff that I have managed to download over the last 8 years in  various folders underneath:
 
 
-> \NotBackedUp\Builds  
+> \NotBackedUp\Builds
 > 
-> ...  
+> ...
 > 
-> \NotBackedUp\Public\Download  
+> \NotBackedUp\Public\Download
 > 
-> \NotBackedUp\Public\Toolbox  
+> \NotBackedUp\Public\Toolbox
 > 
-> ...  
+> ...
 > 
-> \NotBackedUp\Temp  
+> \NotBackedUp\Temp
 > 
 > \NotBackedUp\VMs
 
@@ -74,7 +74,9 @@ Factor #2 is addressed by redirecting the "My Documents" folder to
 
 
 
-    robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
+```
+robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
+```
 
 
 

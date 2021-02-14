@@ -12,8 +12,8 @@ tags: ["WSUS", "Infrastructure", "Virtualization", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx)
 > 
@@ -26,16 +26,18 @@ Here's a useful script for those, like me, that [use SysPrep'ed images to create
 
 
 
-    net stop wuauserv
-    
-    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
-    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
-    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
-    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
-    
-    net start wuauserv
-    
-    wuauclt.exe /resetauthorization /detectnow
+```
+net stop wuauserv
+
+reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
+reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
+reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
+reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
+
+net start wuauserv
+
+wuauclt.exe /resetauthorization /detectnow
+```
 
 
 

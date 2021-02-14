@@ -12,8 +12,8 @@ tags: ["My System", "SharePoint
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx)
@@ -75,14 +75,18 @@ In this step, the database for storing ASP.NET membership and role information  
 2. At the command prompt, type the following command:
 
 
-        cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
+    ```
+    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
+    ```
 3. Type the following command:
 
 
-        aspnet_regsql.exe
+    ```
+    aspnet_regsql.exe
+    ```
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click **Next**.
 5. On the **Select a Setup Option **page, ensure the option to**Configure SQL Server for application services **is selected and then click **Next**.
-6. On the **Select the Server and Database **page:  
+6. On the **Select the Server and Database **page:
 
     1. In the **Server **box, type the name of the database server.
     2. Ensure the **Windows authentication **option is selected.
@@ -140,44 +144,46 @@ In this step, the Web application and initial site collection are created.
 #### To create the Fabrikam Web application:
 
 1. On the **Start **menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click**SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
-2. From the Windows PowerShell command prompt, run the following script:  
+2. From the Windows PowerShell command prompt, run the following script:
 
 
 
-        $ErrorActionPreference = "Stop"
-        
-        $appPoolUserName = "EXTRANET\svc-web-fabrikam"
-        $membershipProviderName = "FabrikamSqlMembershipProvider"
-        $roleProviderName = "FabrikamSqlRoleProvider"
-        $webAppName = "SharePoint - www.fabrikam.com80"
-        $webAppUrl = "http://www.fabrikam.com"
-        $contentDatabaseName = "WSS_Content_FabrikamDemo"
-        $appPoolName = $webAppName
-        
-        Write-Debug "Get service account for application pool ($appPoolUserName)..."
-        $appPoolAccount = Get-SPManagedAccount -Identity $appPoolUserName -EA 0
-        
-        if($appPoolAccount -eq $null)
-        {
-            Write-Host "Registering managed account ($appPoolUserName)..."
-        
-            Write-Debug "Get credential ($appPoolUserName)..."
-            $appPoolCredential = Get-Credential $appPoolUserName
-        
-            $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential
-        } 
-        
-        $windowsAuthProvider = New-SPAuthenticationProvider
-        $formsAuthProvider = New-SPAuthenticationProvider `
-            -ASPNETMembershipProvider $membershipProviderName `
-            -ASPNETRoleProviderName $roleProviderName
-        
-        $authProviders = $windowsAuthProvider, $formsAuthProvider
-        
-        $webApp = New-SPWebApplication -Name $webAppName -AllowAnonymousAccess `
-            -ApplicationPool $appPoolName -AuthenticationMethod "NTLM" `
-            -ApplicationPoolAccount $appPoolAccount -Url $webAppUrl -Port 80 `
-            -AuthenticationProvider $authProviders -DatabaseName $contentDatabaseName
+    ```
+    $ErrorActionPreference = "Stop"
+    
+    $appPoolUserName = "EXTRANET\svc-web-fabrikam"
+    $membershipProviderName = "FabrikamSqlMembershipProvider"
+    $roleProviderName = "FabrikamSqlRoleProvider"
+    $webAppName = "SharePoint - www.fabrikam.com80"
+    $webAppUrl = "http://www.fabrikam.com"
+    $contentDatabaseName = "WSS_Content_FabrikamDemo"
+    $appPoolName = $webAppName
+    
+    Write-Debug "Get service account for application pool ($appPoolUserName)..."
+    $appPoolAccount = Get-SPManagedAccount -Identity $appPoolUserName -EA 0
+    
+    if($appPoolAccount -eq $null)
+    {
+        Write-Host "Registering managed account ($appPoolUserName)..."
+    
+        Write-Debug "Get credential ($appPoolUserName)..."
+        $appPoolCredential = Get-Credential $appPoolUserName
+    
+        $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential
+    } 
+    
+    $windowsAuthProvider = New-SPAuthenticationProvider
+    $formsAuthProvider = New-SPAuthenticationProvider `
+        -ASPNETMembershipProvider $membershipProviderName `
+        -ASPNETRoleProviderName $roleProviderName
+    
+    $authProviders = $windowsAuthProvider, $formsAuthProvider
+    
+    $webApp = New-SPWebApplication -Name $webAppName -AllowAnonymousAccess `
+        -ApplicationPool $appPoolName -AuthenticationMethod "NTLM" `
+        -ApplicationPoolAccount $appPoolAccount -Url $webAppUrl -Port 80 `
+        -AuthenticationProvider $authProviders -DatabaseName $contentDatabaseName
+    ```
 
 
 #### To create the initial site collection for the Web application:
@@ -186,19 +192,21 @@ In this step, the Web application and initial site collection are created.
 2. From the Windows PowerShell command prompt, run the following script:
 
 
-        $ErrorActionPreference = "Stop"
-        
-        $webAppUrl = "http://www.fabrikam.com"
-        $siteName = "Fabrikam"
-        $siteDescription = "Public Internet site for Fabrikam Technologies"
-        $siteTemplate = "BLANKINTERNETCONTAINER#0"
-        
-        $ownerAlias = $env:USERDOMAIN + "\" + $env:USERNAME
-        
-        $siteUrl = $webAppUrl + "/"
-        
-        New-SPSite $siteUrl -OwnerAlias $ownerAlias -Name $siteName `
-            -Description $siteDescription -Template $siteTemplate
+    ```
+    $ErrorActionPreference = "Stop"
+    
+    $webAppUrl = "http://www.fabrikam.com"
+    $siteName = "Fabrikam"
+    $siteDescription = "Public Internet site for Fabrikam Technologies"
+    $siteTemplate = "BLANKINTERNETCONTAINER#0"
+    
+    $ownerAlias = $env:USERDOMAIN + "\" + $env:USERNAME
+    
+    $siteUrl = $webAppUrl + "/"
+    
+    New-SPSite $siteUrl -OwnerAlias $ownerAlias -Name $siteName `
+        -Description $siteDescription -Template $siteTemplate
+    ```
 
 
 ### Step 3 - Configure SSL on the Web site
@@ -239,49 +247,51 @@ In addition to enabling anonymous access on the Web application, the root Web  o
 2. From the Windows PowerShell command prompt, run the following script:
 
 
-        $ErrorActionPreference = "Stop"
-        
-        Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-        
-        $webUrl = "http://www.fabrikam.com/"
-        
-        function EnableAnonymousAccess(
-            [Microsoft.SharePoint.SPWeb] $web)
+    ```
+    $ErrorActionPreference = "Stop"
+    
+    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+    
+    $webUrl = "http://www.fabrikam.com/"
+    
+    function EnableAnonymousAccess(
+        [Microsoft.SharePoint.SPWeb] $web)
+    {
+        Write-Debug "Enabling anonymous access on site ($($web.Url))..."
+    
+        $anonymousPermissionMask =
+            [Microsoft.SharePoint.SPBasePermissions]::Open `
+            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewFormPages `
+            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewListItems `
+            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewPages `
+            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewVersions
+    
+        if ($web.AnonymousPermMask64 -eq $anonymousPermissionMask)
         {
-            Write-Debug "Enabling anonymous access on site ($($web.Url))..."
-        
-            $anonymousPermissionMask =
-                [Microsoft.SharePoint.SPBasePermissions]::Open `
-                -bor [Microsoft.SharePoint.SPBasePermissions]::ViewFormPages `
-                -bor [Microsoft.SharePoint.SPBasePermissions]::ViewListItems `
-                -bor [Microsoft.SharePoint.SPBasePermissions]::ViewPages `
-                -bor [Microsoft.SharePoint.SPBasePermissions]::ViewVersions
-        
-            if ($web.AnonymousPermMask64 -eq $anonymousPermissionMask)
-            {
-                Write-Debug `
-                    "Anonymous access is already enabled on site ($($web.Url))."
-                    
-                return;
-            }
-        
-            if ($web.HasUniqueRoleAssignments -eq $false)
-            {
-                $web.BreakRoleInheritance($true);
-            }
-        
-            $web.AnonymousPermMask64 = $anonymousPermissionMask;
-            $web.Update();
-            
-            Write-Host -Fore Green `
-                "Successfully enabled anonymous access on site ($($web.Url))."
+            Write-Debug `
+                "Anonymous access is already enabled on site ($($web.Url))."
+                
+            return;
         }
+    
+        if ($web.HasUniqueRoleAssignments -eq $false)
+        {
+            $web.BreakRoleInheritance($true);
+        }
+    
+        $web.AnonymousPermMask64 = $anonymousPermissionMask;
+        $web.Update();
         
-        $DebugPreference = "SilentlyContinue"
-        $web = Get-SPWeb $webUrl
-        
-        $DebugPreference = "Continue"
-        EnableAnonymousAccess $web
+        Write-Host -Fore Green `
+            "Successfully enabled anonymous access on site ($($web.Url))."
+    }
+    
+    $DebugPreference = "SilentlyContinue"
+    $web = Get-SPWeb $webUrl
+    
+    $DebugPreference = "Continue"
+    EnableAnonymousAccess $web
+    ```
 
 
 ### Step 5 - Add Web.config modifications for claims-based authentication
@@ -319,10 +329,12 @@ In order to complete the configuration of claims-based authentication, it is  ne
     1. After the end of the **/configuration/configSections **	element (i.e. `</configSections>`), 	add the following elements:	
 
 
-            <connectionStrings>
-                <add name="FabrikamDemo"
-                  connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-              </connectionStrings>
+        ```
+        <connectionStrings>
+            <add name="FabrikamDemo"
+              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+          </connectionStrings>
+        ```
 
 
 
@@ -335,18 +347,22 @@ In order to complete the configuration of claims-based authentication, it is  ne
     2. Find the **/configuration/system.web/roleManager/providers	**section and add the following elements:	
 
 
-            <add name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
+        ```
+        <add name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        ```
     3. Find the **/configuration/system.web/membership/providers	**section and add the following elements:	
 
 
-            <add name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              passwordFormat="Hashed" />
+        ```
+        <add name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          passwordFormat="Hashed" />
+        ```
 6. Save the changes to the Web.config file and close the editor.
 
 
@@ -357,33 +373,35 @@ In order to complete the configuration of claims-based authentication, it is  ne
 3. In the Web.config editor, add the following elements to the `<configuration>` root element:
 
 
-        <connectionStrings>
+    ```
+    <connectionStrings>
+      <add
+      name="FabrikamDemo"
+      connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+    </connectionStrings>
+    
+    <system.web>
+      <membership>
+        <providers>
           <add
-          name="FabrikamDemo"
-          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
-        
-        <system.web>
-          <membership>
-            <providers>
-              <add
-              name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              passwordFormat="Hashed" />
-            </providers>
-          </membership>
-          <roleManager>
-            <providers>
-              <add
-              name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
-            </providers>
-          </roleManager>
-        </system.web>
+          name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          passwordFormat="Hashed" />
+        </providers>
+      </membership>
+      <roleManager>
+        <providers>
+          <add
+          name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        </providers>
+      </roleManager>
+    </system.web>
+    ```
 
 
 
@@ -404,10 +422,12 @@ In order to complete the configuration of claims-based authentication, it is  ne
     1. After the end of the **/configuration/configSections **	element (i.e. `</configSections>`), 	add the following elements:	
 
 
-            <connectionStrings>
-                <add name="FabrikamDemo"
-                  connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-              </connectionStrings>
+        ```
+        <connectionStrings>
+            <add name="FabrikamDemo"
+              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+          </connectionStrings>
+        ```
 
 
 
@@ -420,10 +440,12 @@ In order to complete the configuration of claims-based authentication, it is  ne
     2. Find the **/configuration/system.web/roleManager/providers	**section and add the following elements:	
 
 
-            <add name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
+        ```
+        <add name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        ```
 
 
 
@@ -435,15 +457,17 @@ In order to complete the configuration of claims-based authentication, it is  ne
     3. Find the **/configuration/system.web/membership/providers	**section and add the following elements:	
 
 
-            <add name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              enablePasswordReset="true"
-              enablePasswordRetrieval="false"
-              passwordFormat="Hashed"
-              requiresQuestionAndAnswer="true"
-              requiresUniqueEmail="true" />
+        ```
+        <add name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          enablePasswordReset="true"
+          enablePasswordRetrieval="false"
+          passwordFormat="Hashed"
+          requiresQuestionAndAnswer="true"
+          requiresUniqueEmail="true" />
+        ```
 4. Save the changes to the Web.config file and close the editor.
 
 

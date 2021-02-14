@@ -23,29 +23,31 @@ If you look "under the covers" at one of the pages on my new blog, you can see 
 
 
 
-    <div class="posts-archive">
-      <h2>Archives</h2>
+```
+<div class="posts-archive">
+  <h2>Archives</h2>
+  <ul>
+    <li>2011
       <ul>
-        <li>2011
-          <ul>
-            <li><a href="/blog/jjameson/archive/2011/09.aspx">September (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/08.aspx">August (1)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/05.aspx">May (3)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/04.aspx">April (10)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/03.aspx">March (22)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/02.aspx">February (6)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/01.aspx">January (2)</a></li>
-          </ul>
-        </li>
-        <li>2010
-          <ul>
-            <li><a href="/blog/jjameson/archive/2010/12.aspx">December (8)</a></li>
-            ...
-          </ul>
-        </li>
+        <li><a href="/blog/jjameson/archive/2011/09.aspx">September (2)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/08.aspx">August (1)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/05.aspx">May (3)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/04.aspx">April (10)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/03.aspx">March (22)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/02.aspx">February (6)</a></li>
+        <li><a href="/blog/jjameson/archive/2011/01.aspx">January (2)</a></li>
+      </ul>
+    </li>
+    <li>2010
+      <ul>
+        <li><a href="/blog/jjameson/archive/2010/12.aspx">December (8)</a></li>
         ...
       </ul>
-    </div>
+    </li>
+    ...
+  </ul>
+</div>
+```
 
 
 
@@ -67,25 +69,27 @@ Consequently I spent a few minutes translating the SQL query in my head for gro
 
 
 
-    var q = from entry in context.Entries
-                group entry by entry.DateSyndicated.Value.Year
-                    into YearGroups
-                orderby YearGroups.Key descending
-                select new
-                {
-                    Year = YearGroups.Key,
-                    MonthGroups =
-                        from yearGroup in YearGroups
-                        group yearGroup
-                            by yearGroup.DateSyndicated.Value.Month
-                            into MonthGroups
-                        orderby MonthGroups.Key descending
-                        select new
-                        {
-                            Month = MonthGroups.Key,
-                            Count = MonthGroups.Count()
-                        }
-                };
+```
+var q = from entry in context.Entries
+            group entry by entry.DateSyndicated.Value.Year
+                into YearGroups
+            orderby YearGroups.Key descending
+            select new
+            {
+                Year = YearGroups.Key,
+                MonthGroups =
+                    from yearGroup in YearGroups
+                    group yearGroup
+                        by yearGroup.DateSyndicated.Value.Month
+                        into MonthGroups
+                    orderby MonthGroups.Key descending
+                    select new
+                    {
+                        Month = MonthGroups.Key,
+                        Count = MonthGroups.Count()
+                    }
+            };
+```
 
 
 
@@ -115,49 +119,51 @@ Since I prefer to develop iteratively (moving rapidly in a series of small step
 
 
 
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    public class PostArchiveList : WebControl
     {
-        public class PostArchiveList : WebControl
+        Literal list;
+
+        public PostArchiveList()
         {
-            Literal list;
-    
-            public PostArchiveList()
-            {
-                this.CssClass = "posts-archive";
-            }
-    
-            protected override HtmlTextWriterTag TagKey
-            {
-                get { return HtmlTextWriterTag.Div; }
-            }
-    
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-                
-                this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
-    
-                list = new Literal();
-                this.Controls.Add(list);
-            }
-    
-            protected override void OnPreRender(
-                EventArgs e)
-            {
-                base.OnPreRender(e);
-    
-                    StringBuilder buffer = new StringBuilder();
-                    buffer.Append("<ul>");
-    
-                    buffer.Append("<li>TODO: Show results from query</li>");
-    
-                    buffer.Append("</ul>");
-    
-                    list.Text = buffer.ToString();
-                }
+            this.CssClass = "posts-archive";
+        }
+
+        protected override HtmlTextWriterTag TagKey
+        {
+            get { return HtmlTextWriterTag.Div; }
+        }
+
+        protected override void CreateChildControls()
+        {
+            base.CreateChildControls();
+            
+            this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
+
+            list = new Literal();
+            this.Controls.Add(list);
+        }
+
+        protected override void OnPreRender(
+            EventArgs e)
+        {
+            base.OnPreRender(e);
+
+                StringBuilder buffer = new StringBuilder();
+                buffer.Append("<ul>");
+
+                buffer.Append("<li>TODO: Show results from query</li>");
+
+                buffer.Append("</ul>");
+
+                list.Text = buffer.ToString();
             }
         }
     }
+}
+```
 
 
 
@@ -165,67 +171,69 @@ Once I confirmed the basic structure of the HTML was being emitted as desired, 
 
 
 
-    protected override void OnPreRender(
-                EventArgs e)
+```
+protected override void OnPreRender(
+            EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            using (CaelumEntities context = new CaelumEntities())
             {
-                base.OnPreRender(e);
-    
-                using (CaelumEntities context = new CaelumEntities())
+                var q = from entry in context.Entries
+                        group entry by entry.DateSyndicated.Value.Year
+                            into YearGroups
+                        orderby YearGroups.Key descending
+                        select new
+                        {
+                            Year = YearGroups.Key,
+                            MonthGroups =
+                                from yearGroup in YearGroups
+                                group yearGroup
+                                    by yearGroup.DateSyndicated.Value.Month
+                                    into MonthGroups
+                                orderby MonthGroups.Key descending
+                                select new
+                                {
+                                    Month = MonthGroups.Key,
+                                    Count = MonthGroups.Count()
+                                }
+                        };
+
+                StringBuilder buffer = new StringBuilder();
+                buffer.Append("<ul>");
+
+                foreach (var result in q)
                 {
-                    var q = from entry in context.Entries
-                            group entry by entry.DateSyndicated.Value.Year
-                                into YearGroups
-                            orderby YearGroups.Key descending
-                            select new
-                            {
-                                Year = YearGroups.Key,
-                                MonthGroups =
-                                    from yearGroup in YearGroups
-                                    group yearGroup
-                                        by yearGroup.DateSyndicated.Value.Month
-                                        into MonthGroups
-                                    orderby MonthGroups.Key descending
-                                    select new
-                                    {
-                                        Month = MonthGroups.Key,
-                                        Count = MonthGroups.Count()
-                                    }
-                            };
-    
-                    StringBuilder buffer = new StringBuilder();
+                    buffer.AppendFormat(
+                        CultureInfo.CurrentCulture,
+                        "<li>{0}",
+                        result.Year);
+
                     buffer.Append("<ul>");
-    
-                    foreach (var result in q)
+
+                    foreach (var monthGroup in result.MonthGroups)
                     {
+                        string monthName = GetMonthName(monthGroup.Month);
+
                         buffer.AppendFormat(
                             CultureInfo.CurrentCulture,
-                            "<li>{0}",
-                            result.Year);
-    
-                        buffer.Append("<ul>");
-    
-                        foreach (var monthGroup in result.MonthGroups)
-                        {
-                            string monthName = GetMonthName(monthGroup.Month);
-    
-                            buffer.AppendFormat(
-                                CultureInfo.CurrentCulture,
-    "<li><a href='/blog/jjameson/archive/{0}/{1:D2}.aspx'>{2} ({3})</a></li>",
-                                result.Year,
-                                monthGroup.Month,
-                                monthName,
-                                monthGroup.Count);
-                        }
-    
-                        buffer.Append("</ul>");
-                        buffer.Append("</li>");
+"<li><a href='/blog/jjameson/archive/{0}/{1:D2}.aspx'>{2} ({3})</a></li>",
+                            result.Year,
+                            monthGroup.Month,
+                            monthName,
+                            monthGroup.Count);
                     }
-    
+
                     buffer.Append("</ul>");
-    
-                    list.Text = buffer.ToString();
+                    buffer.Append("</li>");
                 }
+
+                buffer.Append("</ul>");
+
+                list.Text = buffer.ToString();
             }
+        }
+```
 
 
 
@@ -233,13 +241,15 @@ The **GetMonthName** method is, as expected, rather trivial:
 
 
 
-    private static string GetMonthName(
-                int month)
-            {
-                DateTime date = new DateTime(2011, month, 1);
-    
-                return date.ToString("MMMM", CultureInfo.CurrentCulture);
-            }
+```
+private static string GetMonthName(
+            int month)
+        {
+            DateTime date = new DateTime(2011, month, 1);
+
+            return date.ToString("MMMM", CultureInfo.CurrentCulture);
+        }
+```
 
 
 
@@ -277,22 +287,24 @@ However, I discovered a couple of issues with that code (written by Kent Safran
 - It didn't work with my markup because it assumes the parent `<ul>` 	elements have ID attributes. For example:	
 
 
-        jQuery.fn.jqcollapse = function (o) {
-        
-            ...
-        
-            $(this).each(function () {
-        
-                var e = $(this).attr('id');
-        
-                $('#' + e + ' li > ul').each(function (i) {
-                   ...
-                });
-        
-                ...
-                $('#' + e + ' ul').hide();
+    ```
+    jQuery.fn.jqcollapse = function (o) {
+    
+        ...
+    
+        $(this).each(function () {
+    
+            var e = $(this).attr('id');
+    
+            $('#' + e + ' li > ul').each(function (i) {
+               ...
             });
-        };
+    
+            ...
+            $('#' + e + ' ul').hide();
+        });
+    };
+    ```
 
 
 	Now, I certainly don't consider myself a jQuery expert but, generally speaking, 	this doesn't seem like very good practice when writing jQuery plugins.
@@ -303,53 +315,55 @@ Don't get me wrong...my intent is not to bash Kent's code. On the contrary, wit
 
 
 
-    // collapseList() was originally based on the following jQuery plug-in:
-    //
-    //   http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists
-    (function ($) {
-        $.fn.collapseList = function (options) {
-            // Create some defaults, extending them with any options provided
-            var settings = $.extend({
-                    slide: true,
-                    speed: 300,
-                    easing: ''
-                },
-                options);
-    
-            return this.each(function () {
-                $(this).find('li>ul').each(function () {
-                    var parentListItem = $(this).parent('li');
-                    var childList = $(this).remove();
-    
-                    if (parentListItem.children('a').length == 0) {
-                        parentListItem.wrapInner('<a/>');
-                    }
-    
-                    parentListItem.addClass('expandable');
-    
-                    parentListItem.find('a').css('cursor', 'pointer').click(
-                        function () {
-                            if (settings.slide == true) {
-                                childList.slideToggle(
-                                    settings.speed,
-                                    settings.easing);
-                            }
-                            else {
-                                childList.toggle();
-                            }
-    
-                            parentListItem.toggleClass('expandable');
-                            parentListItem.toggleClass('expanded');
-                        });
-    
-                    parentListItem.append(childList);
-    
-                    $(this).hide();
-                });
+```
+// collapseList() was originally based on the following jQuery plug-in:
+//
+//   http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists
+(function ($) {
+    $.fn.collapseList = function (options) {
+        // Create some defaults, extending them with any options provided
+        var settings = $.extend({
+                slide: true,
+                speed: 300,
+                easing: ''
+            },
+            options);
+
+        return this.each(function () {
+            $(this).find('li>ul').each(function () {
+                var parentListItem = $(this).parent('li');
+                var childList = $(this).remove();
+
+                if (parentListItem.children('a').length == 0) {
+                    parentListItem.wrapInner('<a/>');
+                }
+
+                parentListItem.addClass('expandable');
+
+                parentListItem.find('a').css('cursor', 'pointer').click(
+                    function () {
+                        if (settings.slide == true) {
+                            childList.slideToggle(
+                                settings.speed,
+                                settings.easing);
+                        }
+                        else {
+                            childList.toggle();
+                        }
+
+                        parentListItem.toggleClass('expandable');
+                        parentListItem.toggleClass('expanded');
+                    });
+
+                parentListItem.append(childList);
+
+                $(this).hide();
             });
-    
-        };
-    })(jQuery);
+        });
+
+    };
+})(jQuery);
+```
 
 
 
@@ -365,14 +379,16 @@ Here are the corresponding CSS rules:
 
 
 
-    ul li.expandable {
-      background: url('Images/list-item-sprites-1.0.png') no-repeat -100px -246px;
-      padding-left: 15px;
-    }
-    ul li.expanded {
-      background: url('Images/list-item-sprites-1.0.png') no-repeat -150px -196px;
-      padding-left: 15px;
-    }
+```
+ul li.expandable {
+  background: url('Images/list-item-sprites-1.0.png') no-repeat -100px -246px;
+  padding-left: 15px;
+}
+ul li.expanded {
+  background: url('Images/list-item-sprites-1.0.png') no-repeat -150px -196px;
+  padding-left: 15px;
+}
+```
 
 
 
@@ -382,114 +398,116 @@ After adding the script to the **PostArchiveList** control (and adding a **[Par
 
 
 
-    using System;
-    using System.Globalization;
-    using System.Linq;
-    using System.Text;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    using TechnologyToolbox.Caelum.Data;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TechnologyToolbox.Caelum.Data;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    [PartialCaching(300)]
+    public class PostArchiveList : WebControl
     {
-        [PartialCaching(300)]
-        public class PostArchiveList : WebControl
+        Literal list;
+
+        public PostArchiveList()
         {
-            Literal list;
-    
-            public PostArchiveList()
+            this.CssClass = "posts-archive";
+        }
+
+        protected override HtmlTextWriterTag TagKey
+        {
+            get { return HtmlTextWriterTag.Div; }
+        }
+
+        protected override void CreateChildControls()
+        {
+            base.CreateChildControls();
+            
+            this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
+
+            list = new Literal();
+            this.Controls.Add(list);
+        }
+
+        private static string GetMonthName(
+            int month)
+        {
+            DateTime date = new DateTime(2011, month, 1);
+
+            return date.ToString("MMMM", CultureInfo.CurrentCulture);
+        }
+
+        protected override void OnPreRender(
+            EventArgs e)
+        {
+            base.OnPreRender(e);
+
+            using (CaelumEntities context = new CaelumEntities())
             {
-                this.CssClass = "posts-archive";
-            }
-    
-            protected override HtmlTextWriterTag TagKey
-            {
-                get { return HtmlTextWriterTag.Div; }
-            }
-    
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-                
-                this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
-    
-                list = new Literal();
-                this.Controls.Add(list);
-            }
-    
-            private static string GetMonthName(
-                int month)
-            {
-                DateTime date = new DateTime(2011, month, 1);
-    
-                return date.ToString("MMMM", CultureInfo.CurrentCulture);
-            }
-    
-            protected override void OnPreRender(
-                EventArgs e)
-            {
-                base.OnPreRender(e);
-    
-                using (CaelumEntities context = new CaelumEntities())
+                var q = from entry in context.Entries
+                        group entry by entry.DateSyndicated.Value.Year
+                            into YearGroups
+                        orderby YearGroups.Key descending
+                        select new
+                        {
+                            Year = YearGroups.Key,
+                            MonthGroups =
+                                from yearGroup in YearGroups
+                                group yearGroup
+                                    by yearGroup.DateSyndicated.Value.Month
+                                    into MonthGroups
+                                orderby MonthGroups.Key descending
+                                select new
+                                {
+                                    Month = MonthGroups.Key,
+                                    Count = MonthGroups.Count()
+                                }
+                        };
+
+                StringBuilder buffer = new StringBuilder();
+                buffer.Append("<ul>");
+
+                foreach (var result in q)
                 {
-                    var q = from entry in context.Entries
-                            group entry by entry.DateSyndicated.Value.Year
-                                into YearGroups
-                            orderby YearGroups.Key descending
-                            select new
-                            {
-                                Year = YearGroups.Key,
-                                MonthGroups =
-                                    from yearGroup in YearGroups
-                                    group yearGroup
-                                        by yearGroup.DateSyndicated.Value.Month
-                                        into MonthGroups
-                                    orderby MonthGroups.Key descending
-                                    select new
-                                    {
-                                        Month = MonthGroups.Key,
-                                        Count = MonthGroups.Count()
-                                    }
-                            };
-    
-                    StringBuilder buffer = new StringBuilder();
+                    buffer.AppendFormat(
+                        CultureInfo.CurrentCulture,
+                        "<li>{0}",
+                        result.Year);
+
                     buffer.Append("<ul>");
-    
-                    foreach (var result in q)
+
+                    foreach (var monthGroup in result.MonthGroups)
                     {
+                        string monthName = GetMonthName(monthGroup.Month);
+
                         buffer.AppendFormat(
                             CultureInfo.CurrentCulture,
-                            "<li>{0}",
-                            result.Year);
-    
-                        buffer.Append("<ul>");
-    
-                        foreach (var monthGroup in result.MonthGroups)
-                        {
-                            string monthName = GetMonthName(monthGroup.Month);
-    
-                            buffer.AppendFormat(
-                                CultureInfo.CurrentCulture,
-    "<li><a href='/blog/jjameson/archive/{0}/{1:D2}.aspx'>{2} ({3})</a></li>",
-                                result.Year,
-                                monthGroup.Month,
-                                monthName,
-                                monthGroup.Count);
-                        }
-    
-                        buffer.Append("</ul>");
-                        buffer.Append("</li>");
+"<li><a href='/blog/jjameson/archive/{0}/{1:D2}.aspx'>{2} ({3})</a></li>",
+                            result.Year,
+                            monthGroup.Month,
+                            monthName,
+                            monthGroup.Count);
                     }
-    
+
                     buffer.Append("</ul>");
-    
-                    buffer.Append("<script type='text/javascript'>");
-                    buffer.Append("$('.posts-archive>ul').collapseList();");
-                    buffer.Append("</script>");
-    
-                    list.Text = buffer.ToString();
+                    buffer.Append("</li>");
                 }
+
+                buffer.Append("</ul>");
+
+                buffer.Append("<script type='text/javascript'>");
+                buffer.Append("$('.posts-archive>ul').collapseList();");
+                buffer.Append("</script>");
+
+                list.Text = buffer.ToString();
             }
         }
     }
+}
+```
 

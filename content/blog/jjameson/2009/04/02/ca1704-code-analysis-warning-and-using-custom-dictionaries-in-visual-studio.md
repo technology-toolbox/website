@@ -12,8 +12,8 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
@@ -38,7 +38,7 @@ Once you enable Code Analysis on your projects, you are likely to encounter warn
 If you right-click one of these warnings and then click **Show Error Help**,  you will find the following:
 
 
-> **How to Fix Violations**  
+> **How to Fix Violations**
 > 
 > To fix a violation of this rule, correct the spelling of the word or add the 
 > word to a custom dictionary named CustomDictionary.xml. Place the dictionary 
@@ -70,14 +70,16 @@ Now you can simply add items to the CustomDictionary.xml for the solution, as  s
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <Dictionary>
-      <Words>
-        <Recognized>
-          <Word>Fabrikam</Word>
-        </Recognized>
-      </Words>
-    </Dictionary>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<Dictionary>
+  <Words>
+    <Recognized>
+      <Word>Fabrikam</Word>
+    </Recognized>
+  </Words>
+</Dictionary>
+```
 
 
 

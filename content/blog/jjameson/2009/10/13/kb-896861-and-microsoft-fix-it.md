@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx)
 > 
@@ -25,7 +25,7 @@ A couple of days ago, I rebuilt one of my development VMs for Microsoft Office S
 
 When I browsed to KB 896861 this week, I noticed that it has been updated since the last time I saw it. Apparently, this has become such a common issue that Microsoft now provides an automated way to fix the issue:
 
-[Fix this problem](http://go.microsoft.com/?linkid=9686309 "Microsoft Fix it")   
+[Fix this problem](http://go.microsoft.com/?linkid=9686309 "Microsoft Fix it") 
 Microsoft Fix it 50306
 
 This was the first time I've seen a reference to **Microsoft Fix it**, and I have to say that I like it -- and for more than just the cute moniker and button image, too!

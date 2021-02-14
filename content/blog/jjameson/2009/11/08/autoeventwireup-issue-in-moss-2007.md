@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx)
 > 
@@ -60,15 +60,19 @@ Note that in ASP.NET, the default value for the [`AutoEventWireup`](http://suppo
 In other words, the solution to the problem would seem to be simply be a matter of changing something like this...
 
 
-    <%@ Master Language="C#" AutoEventWireup="true" Codebehind="FabrikamMinimal.master.cs"
-        Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
+```
+<%@ Master Language="C#" AutoEventWireup="true" Codebehind="FabrikamMinimal.master.cs"
+    Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
+```
 
 
 ...to this:
 
 
-    <%@ Master Language="C#" Codebehind="FabrikamMinimal.master.cs"
-        Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
+```
+<%@ Master Language="C#" Codebehind="FabrikamMinimal.master.cs"
+    Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
+```
 
 
 Unfortunately -- at least in my experience -- this doesn't work. It only leads to other errors, such as:
@@ -80,11 +84,13 @@ Unfortunately -- at least in my experience -- this doesn't work. It only leads t
 The above error occurs when the master page contains something like the following:
 
 
-    <asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
-                    SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
-                    RenderCurrentNodeAsLink="true"
-                    SkipLinkText=""
-                    OnPreRender="BreadcrumbSiteMapPath_OnPreRender">
+```
+<asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
+                SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
+                RenderCurrentNodeAsLink="true"
+                SkipLinkText=""
+                OnPreRender="BreadcrumbSiteMapPath_OnPreRender">
+```
 
 
 I attempted to resolve this by converting the `BreadcrumbSiteMapPath_OnPreRender` event handler to a method and invoking the method from the `Page_PreRender` event handler instead. However, that only led to yet another error:

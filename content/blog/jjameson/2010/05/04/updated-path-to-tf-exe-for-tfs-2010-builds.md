@@ -10,8 +10,8 @@ tags: ["My System", "Core Development", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx)
 > 
@@ -23,9 +23,11 @@ After [upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010](/
 In a previous post, I detailed the process that I recommend for [incrementing the assembly version with each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build), in which I explained how to add a property so that we can use the TFS command-line utility to checkout the assembly version files and subsequently check them back in:
 
 
-    <PropertyGroup>
-        <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
-      </PropertyGroup>
+```
+<PropertyGroup>
+    <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
+  </PropertyGroup>
+```
 
 
 While this worked great on a TFS 2008 build server, the path to the TFS command-line utility has changed for a TFS 2010 build server.
@@ -33,7 +35,9 @@ While this worked great on a TFS 2008 build server, the path to the TFS command-
 To use the same technique on a TFS 2010 build server, specify the following instead:
 
 
-    <PropertyGroup>
-        <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
-      </PropertyGroup>
+```
+<PropertyGroup>
+    <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
+  </PropertyGroup>
+```
 

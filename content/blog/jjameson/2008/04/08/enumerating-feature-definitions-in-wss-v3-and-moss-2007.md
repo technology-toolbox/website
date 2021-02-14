@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx)
@@ -28,77 +28,79 @@ Note that there is no real "magic" in generating this list -- just a little code
 
 
 
-    using System;
-    
-    using Microsoft.SharePoint;
-    using Microsoft.SharePoint.Administration;
-    
-    namespace EnumFeatureDefs
+```
+using System;
+
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Administration;
+
+namespace EnumFeatureDefs
+{
+    class Program
     {
-        class Program
+        private static readonly Guid excelServerSolutionId =
+            new Guid("{7ed6cd55-b479-4eb7-a529-e99a24c10bd3}");
+
+        static void Main(            
+            string[] args)
         {
-            private static readonly Guid excelServerSolutionId =
-                new Guid("{7ed6cd55-b479-4eb7-a529-e99a24c10bd3}");
-    
-            static void Main(            
-                string[] args)
+            Uri url = new Uri("http://foobar/sites/TfsLite");            
+
+            SPWebApplication webApp = SPWebApplication.Lookup(url);
+
+            EnumerateFeatureDefinitions(webApp.Farm.FeatureDefinitions,
+                webApp.Farm.Solutions);
+        }
+
+        private static void EnumerateFeatureDefinitions(
+            SPFeatureDefinitionCollection featureDefs,
+            SPSolutionCollection solutions)
+        {
+            Console.WriteLine("{0}\t{1}\t{2}\t{3}",
+                "Feature Id",
+                "Display Name",
+                "Scope",
+                "Solution");
+
+            foreach (SPFeatureDefinition featureDef in featureDefs)
             {
-                Uri url = new Uri("http://foobar/sites/TfsLite");            
-    
-                SPWebApplication webApp = SPWebApplication.Lookup(url);
-    
-                EnumerateFeatureDefinitions(webApp.Farm.FeatureDefinitions,
-                    webApp.Farm.Solutions);
-            }
-    
-            private static void EnumerateFeatureDefinitions(
-                SPFeatureDefinitionCollection featureDefs,
-                SPSolutionCollection solutions)
-            {
-                Console.WriteLine("{0}\t{1}\t{2}\t{3}",
-                    "Feature Id",
-                    "Display Name",
-                    "Scope",
-                    "Solution");
-    
-                foreach (SPFeatureDefinition featureDef in featureDefs)
+                string solutionName = string.Empty;
+
+                if (featureDef.SolutionId != Guid.Empty)
                 {
-                    string solutionName = string.Empty;
-    
-                    if (featureDef.SolutionId != Guid.Empty)
+                    if (featureDef.SolutionId.Equals(excelServerSolutionId))
                     {
-                        if (featureDef.SolutionId.Equals(excelServerSolutionId))
+                        solutionName = "Microsoft.Office.Excel.Server";
+                    }
+                    else
+                    {
+                        SPSolution solution = solutions[featureDef.SolutionId];
+
+                        if (solution == null)
                         {
-                            solutionName = "Microsoft.Office.Excel.Server";
+                            // Similar to Microsoft.Office.Excel.Server,
+                            // the solution is marked Hidden="TRUE" and
+                            // therefore does not appear in the list of
+                            // solutions for the farm.
+                            solutionName = "(Hidden)";
                         }
                         else
                         {
-                            SPSolution solution = solutions[featureDef.SolutionId];
-    
-                            if (solution == null)
-                            {
-                                // Similar to Microsoft.Office.Excel.Server,
-                                // the solution is marked Hidden="TRUE" and
-                                // therefore does not appear in the list of
-                                // solutions for the farm.
-                                solutionName = "(Hidden)";
-                            }
-                            else
-                            {
-                                solutionName = solution.DisplayName;
-                            }
+                            solutionName = solution.DisplayName;
                         }
                     }
-    
-                    Console.WriteLine("{0}\t{1}\t{2}\t{3}",
-                        featureDef.Id,
-                        featureDef.DisplayName,
-                        featureDef.Scope,
-                        solutionName);
                 }
+
+                Console.WriteLine("{0}\t{1}\t{2}\t{3}",
+                    featureDef.Id,
+                    featureDef.DisplayName,
+                    featureDef.Scope,
+                    solutionName);
             }
         }
     }
+}
+```
 
 
 

@@ -12,8 +12,8 @@ tags: ["My System", "Simplify", "MOSS 2007", "Core
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/09/environment-naming-conventions.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/09/environment-naming-conventions.aspx)

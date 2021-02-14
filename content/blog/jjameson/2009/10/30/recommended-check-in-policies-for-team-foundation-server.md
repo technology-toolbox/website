@@ -9,8 +9,8 @@ tags: ["My System", "Core Development", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx)
 > 

@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx)
@@ -50,12 +50,14 @@ Oops...almost forgot..here's some SQL to quickly toggle the recovery model for  
 
 
 
-    USE [master]
-    GO
-    ALTER DATABASE [WSS_Content] SET RECOVERY SIMPLE
-    GO
-    ALTER DATABASE [WSS_Content] SET RECOVERY FULL
-    GO
+```
+USE [master]
+GO
+ALTER DATABASE [WSS_Content] SET RECOVERY SIMPLE
+GO
+ALTER DATABASE [WSS_Content] SET RECOVERY FULL
+GO
+```
 
 
 

@@ -10,8 +10,8 @@ tags: [""]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx)
 > 

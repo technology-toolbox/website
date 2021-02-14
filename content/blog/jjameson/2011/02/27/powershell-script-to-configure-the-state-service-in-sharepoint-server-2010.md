@@ -9,8 +9,8 @@ tags: ["SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx)
 > 
@@ -33,55 +33,57 @@ Here's a simple script to do just that.
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    # The State Service is required in order to use the out-of-the-box workflows in
-    # SharePoint Server 2010 (e.g. Approval - SharePoint 2010) or any other features
-    # that leverage InfoPath Forms Services.
-    #
-    # When using the Farm Configuration Wizard to configure the State Service, the
-    # resulting database is named StateService_{GUID}. In order to avoid lengthy
-    # database names containing GUIDs, the State Service is configured using PowerShell.
-    
-    function ConfigureStateService(
-        [string] $stateServiceName = $(Throw "Value cannot be null: stateServiceName"),
-        [string] $stateServiceDatabaseName =
-            $(Throw "Value cannot be null: stateServiceDatabaseName"))
-    {
-        Write-Host "Configuring the State Service..."
-    
-        Write-Debug "stateServiceName: $stateServiceName"
-        Write-Debug "stateServiceDatabaseName: $stateServiceDatabaseName"
-    
-        $serviceApp = Get-SPStateServiceApplication -Identity "$stateServiceName" `
-            -Debug:$false -EA 0
-    
-        If ($serviceApp -ne $null)
-        {        
-            Write-Host "The State Service has already been configured."
-            return
-        }
-        
-        $database = New-SPStateServiceDatabase -Name $stateServiceDatabaseName `
-            -Debug:$false
-        $serviceApp = New-SPStateServiceApplication -Name $stateServiceName `
-            -Database $database -Debug:$false
-        New-SPStateServiceApplicationProxy -ServiceApplication $serviceApp `
-            -Name $stateServiceName -DefaultProxyGroup -Debug:$false > $null
-    Write-Host -Fore Green "Successfully configured the State Service."
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+# The State Service is required in order to use the out-of-the-box workflows in
+# SharePoint Server 2010 (e.g. Approval - SharePoint 2010) or any other features
+# that leverage InfoPath Forms Services.
+#
+# When using the Farm Configuration Wizard to configure the State Service, the
+# resulting database is named StateService_{GUID}. In order to avoid lengthy
+# database names containing GUIDs, the State Service is configured using PowerShell.
+
+function ConfigureStateService(
+    [string] $stateServiceName = $(Throw "Value cannot be null: stateServiceName"),
+    [string] $stateServiceDatabaseName =
+        $(Throw "Value cannot be null: stateServiceDatabaseName"))
+{
+    Write-Host "Configuring the State Service..."
+
+    Write-Debug "stateServiceName: $stateServiceName"
+    Write-Debug "stateServiceDatabaseName: $stateServiceDatabaseName"
+
+    $serviceApp = Get-SPStateServiceApplication -Identity "$stateServiceName" `
+        -Debug:$false -EA 0
+
+    If ($serviceApp -ne $null)
+    {        
+        Write-Host "The State Service has already been configured."
+        return
     }
     
-    function Main()
-    {
-        $stateServiceName = "State Service"
-        $stateServiceDatabaseName = "StateService"
-    
-        ConfigureStateService $stateServiceName $stateServiceDatabaseName
-    }
-    
-    Main
+    $database = New-SPStateServiceDatabase -Name $stateServiceDatabaseName `
+        -Debug:$false
+    $serviceApp = New-SPStateServiceApplication -Name $stateServiceName `
+        -Database $database -Debug:$false
+    New-SPStateServiceApplicationProxy -ServiceApplication $serviceApp `
+        -Name $stateServiceName -DefaultProxyGroup -Debug:$false > $null
+Write-Host -Fore Green "Successfully configured the State Service."
+}
+
+function Main()
+{
+    $stateServiceName = "State Service"
+    $stateServiceDatabaseName = "StateService"
+
+    ConfigureStateService $stateServiceName $stateServiceDatabaseName
+}
+
+Main
+```
 
 
 

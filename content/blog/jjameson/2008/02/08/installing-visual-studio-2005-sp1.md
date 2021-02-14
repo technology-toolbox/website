@@ -10,8 +10,8 @@ tags: ["Core Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx)
@@ -30,67 +30,67 @@ After double-clicking the "Golden Shield" (a.k.a. the Windows Update icon in  th
 Looking at the event log, I noticed the following errors:
 
 
-> Event Type: Error  
+> Event Type: Error
 > 
-> Event Source: MsiInstaller  
+> Event Source: MsiInstaller
 > 
-> Event Category: None  
+> Event Category: None
 > 
-> Event ID: 1008  
+> Event ID: 1008
 > 
-> Date: 2/8/2008  
+> Date: 2/8/2008
 > 
-> Time: 6:03:44 AM  
+> Time: 6:03:44 AM
 > 
-> User: JJAMESON1\Administrator  
+> User: JJAMESON1\Administrator
 > 
-> Computer: JJAMESON1  
+> Computer: JJAMESON1
 > 
-> Description:  
+> Description:
 > 
 > The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to 
 > an error in software restriction policy processing. The object cannot be trusted.
 > 
-> Event Type: Error  
+> Event Type: Error
 > 
-> Event Source: MsiInstaller  
+> Event Source: MsiInstaller
 > 
-> Event Category: None  
+> Event Category: None
 > 
-> Event ID: 11718  
+> Event ID: 11718
 > 
-> Date: 2/8/2008  
+> Date: 2/8/2008
 > 
-> Time: 6:03:44 AM  
+> Time: 6:03:44 AM
 > 
-> User: JJAMESON1\Administrator  
+> User: JJAMESON1\Administrator
 > 
-> Computer: JJAMESON1  
+> Computer: JJAMESON1
 > 
-> Description:  
+> Description:
 > 
 > Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU -- Error 
 > 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature 
 > check. For more information about a possible resolution for this problem, see
 > [http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
 > 
-> Event Type: Error  
+> Event Type: Error
 > 
-> Event Source: MsiInstaller  
+> Event Source: MsiInstaller
 > 
-> Event Category: None  
+> Event Category: None
 > 
-> Event ID: 1023  
+> Event ID: 1023
 > 
-> Date: 2/8/2008  
+> Date: 2/8/2008
 > 
-> Time: 6:03:55 AM  
+> Time: 6:03:55 AM
 > 
-> User: JJAMESON1\Administrator  
+> User: JJAMESON1\Administrator
 > 
-> Computer: JJAMESON1  
+> Computer: JJAMESON1
 > 
-> Description:  
+> Description:
 > 
 > Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU - Update 
 > 'Microsoft Visual Studio 2005 Team Explorer - ENU Service Pack 1 (KB926601)' 
@@ -105,32 +105,34 @@ blog](http://blogs.msdn.com/heaths)):
 
 
 
-    :: This is basically a combination of two of Heath Stewart's blog postings
-    :: 
-    :: http://blogs.msdn.com/heaths/archive/2007/01/11/workaround-for-error-1718.aspx
-    :: http://blogs.msdn.com/heaths/archive/2006/11/28/save-time-and-space-for-vs-2005-sp1-by-disabling-the-patch-cache.aspx
-    
-    reg export HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers "CodeIdentifiers.reg" /y
-    reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers /v PolicyScope /t REG_DWORD /d 1 /f
-    
-    reg export HKLM\Software\Policies\Microsoft\Windows\Installer "Installer.reg" /y
-    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
-    
-    net stop msiserver
-    
-    start /wait VS80sp1-KB926601-X86-ENU.exe /L*v+ "VS80sp1-KB926601-X86-ENU.log" /quiet
-    
-    reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers /v PolicyScope /f
-    reg import "CodeIdentifiers.reg"
-    
-    reg delete HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /f
-    reg import "Installer.reg"
-    
-    net stop msiserver
-    
-    del /q "CodeIdentifiers.reg" 2>nul
-    
-    del /q "Installer.reg" 2>nul
+```
+:: This is basically a combination of two of Heath Stewart's blog postings
+:: 
+:: http://blogs.msdn.com/heaths/archive/2007/01/11/workaround-for-error-1718.aspx
+:: http://blogs.msdn.com/heaths/archive/2006/11/28/save-time-and-space-for-vs-2005-sp1-by-disabling-the-patch-cache.aspx
+
+reg export HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers "CodeIdentifiers.reg" /y
+reg add HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers /v PolicyScope /t REG_DWORD /d 1 /f
+
+reg export HKLM\Software\Policies\Microsoft\Windows\Installer "Installer.reg" /y
+reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+
+net stop msiserver
+
+start /wait VS80sp1-KB926601-X86-ENU.exe /L*v+ "VS80sp1-KB926601-X86-ENU.log" /quiet
+
+reg delete HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers /v PolicyScope /f
+reg import "CodeIdentifiers.reg"
+
+reg delete HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /f
+reg import "Installer.reg"
+
+net stop msiserver
+
+del /q "CodeIdentifiers.reg" 2>nul
+
+del /q "Installer.reg" 2>nul
+```
 
 
 

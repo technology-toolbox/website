@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx)
@@ -31,11 +31,13 @@ Such is the case with my current MOSS 2007 development VM. Most every morning, I
 
 
 
-    01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 3301, use count 7, key ...
-    01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 2225, use count 59, key ...
-    01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5728, use count 1, key ...
-    01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5731, use count 1, key ...
-    01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5732, use count 1, key ...
+```
+01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 3301, use count 7, key ...
+01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 2225, use count 59, key ...
+01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5728, use count 1, key ...
+01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5731, use count 1, key ...
+01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5732, use count 1, key ...
+```
 
 
 
@@ -49,17 +51,19 @@ As for addressing my daily "log purging" needs, I simply created the following s
 
 
 
-    @echo off
-    setlocal
-    
-    set LogFolder=%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12\LOGS
-    
-    echo This will delete all of the log files in the following folder:
-    echo    %LogFolder%
-    echo Are you sure you want to do this? (Press CTRL+C to exit)
-    pause
-    
-    del /q "%LogFolder%\*.log"
+```
+@echo off
+setlocal
+
+set LogFolder=%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12\LOGS
+
+echo This will delete all of the log files in the following folder:
+echo    %LogFolder%
+echo Are you sure you want to do this? (Press CTRL+C to exit)
+pause
+
+del /q "%LogFolder%\*.log"
+```
 
 
 

@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx)
 > 
@@ -56,30 +56,32 @@ To resolve the build bloat issue, I modified our TFSBuild.proj file to override 
 
 
 
-    <Target Name="BeforeDropBuild">
-        <Message Importance="high"
-          Text="Removing extraneous files from the build..." />
-    
-        <!-- We do not currently deploy anything from the _PublishedWebsites folders -->
-        <RemoveDir
-          Directories="$(BinariesRoot)\Debug\_PublishedWebsites;
-            $(BinariesRoot)\Release\_PublishedWebsites;" />
-    
-        <!--
-          The following assemblies are either included in the WSPs
-          or else should not be included in the build
-          (e.g. Microsoft.Office.Server.Search.dll).
-        -->
-        <CreateItem
-          Include="$(BinariesRoot)\**\AjaxControlToolkit.dll;
-            $(BinariesRoot)\**\Microsoft.Office.Server.Search.dll;
-            $(BinariesRoot)\**\Microsoft.SharePoint.Server.Search.dll;
-            $(BinariesRoot)\**\Telerik.Web.UI.dll" >
-          <Output TaskParameter="Include" ItemName="FilesToDelete"/>
-        </CreateItem>
-    
-        <Delete Files="@(FilesToDelete)" />
-      </Target>
+```
+<Target Name="BeforeDropBuild">
+    <Message Importance="high"
+      Text="Removing extraneous files from the build..." />
+
+    <!-- We do not currently deploy anything from the _PublishedWebsites folders -->
+    <RemoveDir
+      Directories="$(BinariesRoot)\Debug\_PublishedWebsites;
+        $(BinariesRoot)\Release\_PublishedWebsites;" />
+
+    <!--
+      The following assemblies are either included in the WSPs
+      or else should not be included in the build
+      (e.g. Microsoft.Office.Server.Search.dll).
+    -->
+    <CreateItem
+      Include="$(BinariesRoot)\**\AjaxControlToolkit.dll;
+        $(BinariesRoot)\**\Microsoft.Office.Server.Search.dll;
+        $(BinariesRoot)\**\Microsoft.SharePoint.Server.Search.dll;
+        $(BinariesRoot)\**\Telerik.Web.UI.dll" >
+      <Output TaskParameter="Include" ItemName="FilesToDelete"/>
+    </CreateItem>
+
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+```
 
 
 

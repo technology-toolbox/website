@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx)
 > 
@@ -62,22 +62,24 @@ In other words, when I said earlier that I could add FBA users to a SharePoint g
 By the way, here's some script to automatically create a user in SQL Server for the service account and add it to the necessary database roles:
 
 
-    USE [FabrikamPortal]
-    GO
-    
-    CREATE USER [TECHTOOLBOX\svc-web-fabrikam-dev]
-    FOR LOGIN [TECHTOOLBOX\svc-web-fabrikam-dev]
-    WITH DEFAULT_SCHEMA=[dbo]
-    GO
-    
-    EXEC sp_addrolemember N'aspnet_Membership_BasicAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
-    GO
-    EXEC sp_addrolemember N'aspnet_Membership_ReportingAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
-    GO
-    EXEC sp_addrolemember N'aspnet_Roles_BasicAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
-    GO
-    EXEC sp_addrolemember N'aspnet_Roles_ReportingAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
-    GO
+```
+USE [FabrikamPortal]
+GO
+
+CREATE USER [TECHTOOLBOX\svc-web-fabrikam-dev]
+FOR LOGIN [TECHTOOLBOX\svc-web-fabrikam-dev]
+WITH DEFAULT_SCHEMA=[dbo]
+GO
+
+EXEC sp_addrolemember N'aspnet_Membership_BasicAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
+GO
+EXEC sp_addrolemember N'aspnet_Membership_ReportingAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
+GO
+EXEC sp_addrolemember N'aspnet_Roles_BasicAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
+GO
+EXEC sp_addrolemember N'aspnet_Roles_ReportingAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
+GO
+```
 
 
 You'll obviously need to replace the name of your ASP.NET database and service account accordingly.

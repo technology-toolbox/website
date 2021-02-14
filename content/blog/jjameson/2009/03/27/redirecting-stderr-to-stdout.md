@@ -11,8 +11,8 @@ tags: ["Core Development", "Windows Vista", "Windows Server"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx)
@@ -29,7 +29,9 @@ I would have sworn the last time I tried something like the following in Windows
 
 
 
-    "Redeploy Features.cmd" > tmp.log 2>&1
+```
+"Redeploy Features.cmd" > tmp.log 2>&1
+```
 
 
 

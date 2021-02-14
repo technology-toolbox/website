@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "SQL Server"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx)
@@ -26,12 +26,14 @@ A couple of weeks ago I was troubleshooting a performance problem with the varia
 
 
 
-    BACKUP DATABASE [WSS_Content]
-    TO DISK = N'H:\WSS_Content.bak'
-    WITH NOFORMAT, NOINIT
-        , NAME = N'WSS_Content-Full Database Backup'
-        , SKIP, NOREWIND, NOUNLOAD, STATS = 10
-        , COPY_ONLY
+```
+BACKUP DATABASE [WSS_Content]
+TO DISK = N'H:\WSS_Content.bak'
+WITH NOFORMAT, NOINIT
+    , NAME = N'WSS_Content-Full Database Backup'
+    , SKIP, NOREWIND, NOUNLOAD, STATS = 10
+    , COPY_ONLY
+```
 
 
 
@@ -68,8 +70,10 @@ When I first encountered this problem, I thought I had a corrupt backup file.  H
 
 
 
-    RESTORE FILELISTONLY
-    FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
+```
+RESTORE FILELISTONLY
+FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
+```
 
 
 
@@ -77,14 +81,16 @@ To restore from a **COPY\_ONLY **backup, use a command similar to  the following
 
 
 
-    RESTORE DATABASE [WSS_Content_TEST]
-    FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
-    WITH FILE = 1
-        , MOVE N'WSS_Content'
-            TO N'E:\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WSS_Content_TEST.MDF'
-        , MOVE N'WSS_Content_Log'
-            TO N'L:\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WSS_Content_TEST_Log.LDF'
-        , NOUNLOAD, STATS = 10
+```
+RESTORE DATABASE [WSS_Content_TEST]
+FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
+WITH FILE = 1
+    , MOVE N'WSS_Content'
+        TO N'E:\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WSS_Content_TEST.MDF'
+    , MOVE N'WSS_Content_Log'
+        TO N'L:\Microsoft SQL Server\MSSQL.1\MSSQL\Data\WSS_Content_TEST_Log.LDF'
+    , NOUNLOAD, STATS = 10
+```
 
 
 

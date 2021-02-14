@@ -10,8 +10,8 @@ tags: ["My System", "Core Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx)
 > 
@@ -30,105 +30,107 @@ Here's an example implementation of a custom exception class to support these sc
 
 
 
-    using System;
-    using System.Runtime.Serialization;
-    using System.Security.Permissions;
-    
-    namespace Fabrikam.Demo.CoreServices
+```
+using System;
+using System.Runtime.Serialization;
+using System.Security.Permissions;
+
+namespace Fabrikam.Demo.CoreServices
+{
+    /// <summary>
+    /// The exception that is thrown when an error occurs that can be recovered
+    /// by a user. The exception message is presumed to be safe to display to
+    /// users (in other words, the error message does not contain any sensitive
+    /// information).
+    /// </summary>
+    /// <remarks>
+    /// A "recoverable" error may be caused by a transient condition (e.g. a
+    /// remote Web service is too busy), in which case the request can simply be
+    /// resubmitted at a later time; or the "recoverable" error may require user
+    /// action in order to resolve the condition that caused the error (e.g.
+    /// the SSO credentials for an external system are not specified in the
+    /// user's profile).
+    /// </remarks>
+    [Serializable]
+    public class RecoverableException : Exception, ISerializable
     {
         /// <summary>
-        /// The exception that is thrown when an error occurs that can be recovered
-        /// by a user. The exception message is presumed to be safe to display to
-        /// users (in other words, the error message does not contain any sensitive
-        /// information).
+        /// Initializes a new instance of the <see cref="RecoverableException"/>
+        /// class.
         /// </summary>
-        /// <remarks>
-        /// A "recoverable" error may be caused by a transient condition (e.g. a
-        /// remote Web service is too busy), in which case the request can simply be
-        /// resubmitted at a later time; or the "recoverable" error may require user
-        /// action in order to resolve the condition that caused the error (e.g.
-        /// the SSO credentials for an external system are not specified in the
-        /// user's profile).
-        /// </remarks>
-        [Serializable]
-        public class RecoverableException : Exception, ISerializable
+        public RecoverableException()
         {
-            /// <summary>
-            /// Initializes a new instance of the <see cref="RecoverableException"/>
-            /// class.
-            /// </summary>
-            public RecoverableException()
-            {
-            }
-    
-            /// <summary>
-            /// Initializes a new instance of the <see cref="RecoverableException"/>
-            /// class, using the specified message.
-            /// </summary>
-            /// <param name="message">The description of the error condition.
-            /// </param>
-            public RecoverableException(
-                string message) : base(message)
-            {
-            }
-    
-            /// <summary>
-            /// Initializes a new instance of the <see cref="RecoverableException"/>
-            /// class, using the specified message and the inner exception.
-            /// </summary>
-            /// <param name="message">The description of the error condition.
-            /// </param>
-            /// <param name="innerException">The inner exception to be used.</param>
-            public RecoverableException(
-                string message,
-                Exception innerException) : base(message, innerException)
-            {
-            }
-    
-            /// <summary>
-            /// Initializes a new instance of the <see cref="RecoverableException"/>
-            /// class, using the specified serialization information and context
-            /// objects.
-            /// </summary>
-            /// <param name="info">Information relevant to the deserialization
-            /// process.</param>
-            /// <param name="context">The context of the deserialization
-            /// process.</param>
-            protected RecoverableException(
-                SerializationInfo info,
-                StreamingContext context) : base(info, context)
-            {
-            }
-    
-    
-            #region ISerializable Members
-    
-            /// <summary>
-            /// Sets the
-            /// <see cref="System.Runtime.Serialization.SerializationInfo"/>
-            /// with information about the exception.
-            /// </summary>
-            /// <param name="info">The
-            /// <see cref="System.Runtime.Serialization.SerializationInfo"/> that
-            /// holds the serialized object data about the exception being thrown.
-            /// </param>
-            /// <param name="context">The
-            /// <see cref="System.Runtime.Serialization.StreamingContext"/> that
-            /// contains contextual information about the source or destination.
-            /// </param>
-            [SecurityPermission(
-                SecurityAction.LinkDemand,
-                Flags = SecurityPermissionFlag.SerializationFormatter)]
-            public override void GetObjectData(
-                SerializationInfo info,
-                StreamingContext context)
-            {
-                base.GetObjectData(info, context);
-            }
-    
-            #endregion
         }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RecoverableException"/>
+        /// class, using the specified message.
+        /// </summary>
+        /// <param name="message">The description of the error condition.
+        /// </param>
+        public RecoverableException(
+            string message) : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RecoverableException"/>
+        /// class, using the specified message and the inner exception.
+        /// </summary>
+        /// <param name="message">The description of the error condition.
+        /// </param>
+        /// <param name="innerException">The inner exception to be used.</param>
+        public RecoverableException(
+            string message,
+            Exception innerException) : base(message, innerException)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RecoverableException"/>
+        /// class, using the specified serialization information and context
+        /// objects.
+        /// </summary>
+        /// <param name="info">Information relevant to the deserialization
+        /// process.</param>
+        /// <param name="context">The context of the deserialization
+        /// process.</param>
+        protected RecoverableException(
+            SerializationInfo info,
+            StreamingContext context) : base(info, context)
+        {
+        }
+
+
+        #region ISerializable Members
+
+        /// <summary>
+        /// Sets the
+        /// <see cref="System.Runtime.Serialization.SerializationInfo"/>
+        /// with information about the exception.
+        /// </summary>
+        /// <param name="info">The
+        /// <see cref="System.Runtime.Serialization.SerializationInfo"/> that
+        /// holds the serialized object data about the exception being thrown.
+        /// </param>
+        /// <param name="context">The
+        /// <see cref="System.Runtime.Serialization.StreamingContext"/> that
+        /// contains contextual information about the source or destination.
+        /// </param>
+        [SecurityPermission(
+            SecurityAction.LinkDemand,
+            Flags = SecurityPermissionFlag.SerializationFormatter)]
+        public override void GetObjectData(
+            SerializationInfo info,
+            StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+        }
+
+        #endregion
     }
+}
+```
 
 
 
@@ -136,27 +138,29 @@ The following code snippet shows an example of catching "expected" and "unexpect
 
 
 
-    try
-                {
-                    BindSiteList();
-    
-                    SelectDefaultSiteForExport();
-                }
-                catch (RecoverableException ex)
-                {
-                    SiteList.Items.Clear();
-    
-                    DelayedLoadErrorMessage.Text = ex.Message;
-                }
-                catch (Exception ex)
-                {
-                    Logger.LogError(ex);
-    
-                    SiteList.Items.Clear();
-    
-                    DelayedLoadErrorMessage.Text =
-                        Resources.Error_UnexpectedError_ReferToEventLog);
-                }
+```
+try
+            {
+                BindSiteList();
+
+                SelectDefaultSiteForExport();
+            }
+            catch (RecoverableException ex)
+            {
+                SiteList.Items.Clear();
+
+                DelayedLoadErrorMessage.Text = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+
+                SiteList.Items.Clear();
+
+                DelayedLoadErrorMessage.Text =
+                    Resources.Error_UnexpectedError_ReferToEventLog);
+            }
+```
 
 
 

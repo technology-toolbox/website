@@ -11,8 +11,8 @@ tags: ["Visual Studio", "TFS", "SharePoint
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx)
@@ -44,7 +44,7 @@ should be:
 Second, the MSDN article instructs you to copy several Visual Studio SharePoint assemblies to the GAC on the build server:
 
 
-> **Copy the SharePoint Tool Assemblies and Files to the GAC  
+> **Copy the SharePoint Tool Assemblies and Files to the GAC
 > **The following assemblies must be copied to the GAC of the build 
 > 	system:
 > 

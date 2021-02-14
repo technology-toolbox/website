@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "Core Development", "Toolbox"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx)
@@ -33,15 +33,17 @@ Regardless of what you call it, here is what I periodically use to view the raw 
 
 
 
-    <xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-      <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
-      <xsl:template match="/">
-        <xmp>
-          <xsl:copy-of select="*"/>
-        </xmp>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+  <xsl:template match="/">
+    <xmp>
+      <xsl:copy-of select="*"/>
+    </xmp>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 

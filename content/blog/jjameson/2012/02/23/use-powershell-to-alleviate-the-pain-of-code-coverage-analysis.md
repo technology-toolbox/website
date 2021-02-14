@@ -32,12 +32,14 @@ Let's start by defining a list of the assemblies that will be analyzed for code
 
 
 
-    [string[]] $assembliesToInstrument =
-        @(
-            "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
-            ("CoreServices\SharePoint\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
-        )
+```
+[string[]] $assembliesToInstrument =
+    @(
+        "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
+        ("CoreServices\SharePoint\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
+    )
+```
 
 
 
@@ -53,10 +55,12 @@ Next we need to instrument each assembly in the list:
 
 
 
-    $assembliesToInstrument |
-            ForEach-Object {
-                InstrumentAssembly $_            
-            }
+```
+$assembliesToInstrument |
+        ForEach-Object {
+            InstrumentAssembly $_            
+        }
+```
 
 
 
@@ -64,14 +68,16 @@ The `InstrumentAssembly` function simply executes[VSInstr](http://msdn.microso
 
 
 
-    function InstrumentAssembly(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
-    {
-        [string] $vsinstr = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSInstr.exe"
-    
-        & $vsinstr "$assemblyPath" /coverage
-    }
+```
+function InstrumentAssembly(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    [string] $vsinstr = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSInstr.exe"
+
+    & $vsinstr "$assemblyPath" /coverage
+}
+```
 
 
 
@@ -90,12 +96,14 @@ To re-sign the instrumented assembly from the PowerShell script, we need to use
 
 
 
-    $assembliesToInstrument |
-            ForEach-Object {
-                InstrumentAssembly $_
-                
-                SignAssembly $_
-            }
+```
+$assembliesToInstrument |
+        ForEach-Object {
+            InstrumentAssembly $_
+            
+            SignAssembly $_
+        }
+```
 
 
 
@@ -103,14 +111,16 @@ The `SignAssembly` function simply executes[Sn.exe](http://msdn.microsoft.com/
 
 
 
-    function SignAssembly(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
-    {
-        [string] $sn = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
-            
-        & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
-    }
+```
+function SignAssembly(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    [string] $sn = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
+        
+    & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
+}
+```
 
 
 
@@ -128,13 +138,15 @@ The corresponding array variable in PowerShell is:
 
 
 
-    [string[]] $testAssemblies =
-        @(
-            ("CoreServices\DeveloperTests\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
-            ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
-        )
+```
+[string[]] $testAssemblies =
+    @(
+        ("CoreServices\DeveloperTests\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
+        ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
+    )
+```
 
 
 
@@ -142,7 +154,9 @@ To copy the instrumented assemblies into the "bin" folders for the test projects
 
 
 
-    $testBinFolders = GetAssemblyFolders($testAssemblies)
+```
+$testBinFolders = GetAssemblyFolders($testAssemblies)
+```
 
 
 
@@ -150,20 +164,22 @@ The `GetAssemblyFolders`function is straightforward:
 
 
 
-    function GetAssemblyFolders(
-        [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
-    {
-        [string[]] $folders = @()
-        
-        $assemblyPaths |
-            ForEach-Object {
-                [string] $folder = (Get-Item $_).DirectoryName
+```
+function GetAssemblyFolders(
+    [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
+{
+    [string[]] $folders = @()
     
-                $folders += $folder
-            }
-    
-        return $folders
-    }
+    $assemblyPaths |
+        ForEach-Object {
+            [string] $folder = (Get-Item $_).DirectoryName
+
+            $folders += $folder
+        }
+
+    return $folders
+}
+```
 
 
 
@@ -171,14 +187,16 @@ With the list of instrumented assemblies and the list of folders containing the
 
 
 
-    $assembliesToInstrument |
-            ForEach-Object {
-                InstrumentAssembly $_
-                
-                SignAssembly $_
-    
-                CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
-            }
+```
+$assembliesToInstrument |
+        ForEach-Object {
+            InstrumentAssembly $_
+            
+            SignAssembly $_
+
+            CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
+        }
+```
 
 
 
@@ -186,15 +204,17 @@ The function simply uses the **Copy-Item **cmdlet to copy the instrumented asse
 
 
 
-    function CopyInstrumentedAssemblyToTestBinFolders(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
-        [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
-    {
-        $testBinFolders |
-            ForEach-Object {
-                Copy-Item $assemblyPath $_
-            }
-    }
+```
+function CopyInstrumentedAssemblyToTestBinFolders(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
+    [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
+{
+    $testBinFolders |
+        ForEach-Object {
+            Copy-Item $assemblyPath $_
+        }
+}
+```
 
 
 
@@ -202,16 +222,18 @@ Also note that if the assemblies are deployed to the global assembly cache (e.g
 
 
 
-    $assembliesToInstrument |
-            ForEach-Object {
-                InstrumentAssembly $_
-                
-                SignAssembly $_
-    
-                CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
-    
-                UpdateGacAssemblyIfNecessary $_
-            }
+```
+$assembliesToInstrument |
+        ForEach-Object {
+            InstrumentAssembly $_
+            
+            SignAssembly $_
+
+            CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
+
+            UpdateGacAssemblyIfNecessary $_
+        }
+```
 
 
 
@@ -219,31 +241,33 @@ The `UpdateGacAssemblyIfNecessary` function uses **gacutil.exe **to check if th
 
 
 
-    function UpdateGacAssemblyIfNecessary(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+```
+function UpdateGacAssemblyIfNecessary(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    [string] $baseName = (Get-Item $assemblyPath).BaseName
+
+    [string] $gacutil = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft SDKs\Windows\v7.0A\Bin\gacutil.exe"
+
+    [string] $numberOfItemsInGac = & $gacutil -l $baseName |
+        Select-String "^Number of items =" |
+            ForEach { $_.Line.Split("=")[1].Trim() }
+            
+    If ($numberOfItemsInGac -eq "0")
     {
-        [string] $baseName = (Get-Item $assemblyPath).BaseName
-    
-        [string] $gacutil = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft SDKs\Windows\v7.0A\Bin\gacutil.exe"
-    
-        [string] $numberOfItemsInGac = & $gacutil -l $baseName |
-            Select-String "^Number of items =" |
-                ForEach { $_.Line.Split("=")[1].Trim() }
-                
-        If ($numberOfItemsInGac -eq "0")
-        {
-            Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
-        }
-        ElseIf ($numberOfItemsInGac -eq "1")
-        {
-            & $gacutil /if $assemblyPath
-        }
-        Else
-        {
-            Throw "Unexpected number of items in the GAC: " + $numberOfItemsInGac
-        }
+        Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
     }
+    ElseIf ($numberOfItemsInGac -eq "1")
+    {
+        & $gacutil /if $assemblyPath
+    }
+    Else
+    {
+        Throw "Unexpected number of items in the GAC: " + $numberOfItemsInGac
+    }
+}
+```
 
 
 
@@ -276,21 +300,23 @@ After a little refactoring in the script, I ended up with a function used to st
 
 
 
-    function ToggleCodeCoverageProfiling(
-        [bool] $enable)
+```
+function ToggleCodeCoverageProfiling(
+    [bool] $enable)
+{
+    [string] $vsperfcmd = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSPerfCmd.exe"
+
+    If ($enable -eq $true)
     {
-        [string] $vsperfcmd = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSPerfCmd.exe"
-    
-        If ($enable -eq $true)
-        {
-            & $vsperfcmd /START:COVERAGE /OUTPUT:Fabrikam.Demo
-        }
-        Else
-        {
-            & $vsperfcmd /SHUTDOWN
-        }
+        & $vsperfcmd /START:COVERAGE /OUTPUT:Fabrikam.Demo
     }
+    Else
+    {
+        & $vsperfcmd /SHUTDOWN
+    }
+}
+```
 
 
 
@@ -298,7 +324,9 @@ To start the code coverage profiler, simply call the function and pass`$true`:
 
 
 
-    ToggleCodeCoverageProfiling $true
+```
+ToggleCodeCoverageProfiling $true
+```
 
 
 
@@ -308,18 +336,20 @@ With the code coverage profiler running, the next step is to run the unit/integr
 
 
 
-    [string] $testSettingsPath = "LocalTestRun.testrunconfig"
+```
+[string] $testSettingsPath = "LocalTestRun.testrunconfig"
+
+    ...
+
+    $assembliesToInstrument |
+        ForEach-Object {
+            ...
+        }
     
-        ...
-    
-        $assembliesToInstrument |
-            ForEach-Object {
-                ...
-            }
-        
-        ToggleCodeCoverageProfiling $true
-    
-        RunTests $testAssemblies $testSettingsPath
+    ToggleCodeCoverageProfiling $true
+
+    RunTests $testAssemblies $testSettingsPath
+```
 
 
 
@@ -327,27 +357,29 @@ In order to consolidate the results from multiple test projects, I execute**mst
 
 
 
-    function RunTests(
-        [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"),
-        [string] $testSettingsPath)
-    {
-        [string] $mstest = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Common7\IDE\MSTest.exe"
-    
-        [string[]] $parameters = @("/nologo")
-    
-        $assemblyPaths |
-            ForEach-Object {
-                $parameters += ('/testcontainer:"' + $_ + '"')
-            }
-        
-        If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
-        {
-            $parameters += ('/testsettings:' + $testSettingsPath)
+```
+function RunTests(
+    [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"),
+    [string] $testSettingsPath)
+{
+    [string] $mstest = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Common7\IDE\MSTest.exe"
+
+    [string[]] $parameters = @("/nologo")
+
+    $assemblyPaths |
+        ForEach-Object {
+            $parameters += ('/testcontainer:"' + $_ + '"')
         }
     
-        & $mstest $parameters
+    If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
+    {
+        $parameters += ('/testsettings:' + $testSettingsPath)
     }
+
+    & $mstest $parameters
+}
+```
 
 
 
@@ -357,7 +389,9 @@ Once the unit/integration tests have completed, the final step is to stop the c
 
 
 
-    ToggleCodeCoverageProfiling $false
+```
+ToggleCodeCoverageProfiling $false
+```
 
 
 
@@ -369,169 +403,171 @@ Here is the script in its entirety.
 
 
 
-    $ErrorActionPreference = "Stop"
+```
+$ErrorActionPreference = "Stop"
+
+function CopyInstrumentedAssemblyToTestBinFolders(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
+    [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
+{
+    $testBinFolders |
+        ForEach-Object {
+            Write-Debug ("Copying assembly (" + $assemblyPath `
+                + ") to folder (" + $_ + ")...")
+
+            Copy-Item $assemblyPath $_
+        }
+}
+
+function GetAssemblyFolders(
+    [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
+{
+    [string[]] $folders = @()
     
-    function CopyInstrumentedAssemblyToTestBinFolders(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
-        [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
-    {
-        $testBinFolders |
-            ForEach-Object {
-                Write-Debug ("Copying assembly (" + $assemblyPath `
-                    + ") to folder (" + $_ + ")...")
-    
-                Copy-Item $assemblyPath $_
-            }
-    }
-    
-    function GetAssemblyFolders(
-        [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
-    {
-        [string[]] $folders = @()
-        
-        $assemblyPaths |
-            ForEach-Object {
-                [string] $folder = (Get-Item $_).DirectoryName
-    
-                $folders += $folder
-            }
-    
-        return $folders
-    }
-    
-    function InstrumentAssembly(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
-    {
-        [string] $vsinstr = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSInstr.exe"
-    
-        & $vsinstr "$assemblyPath" /coverage
-    }
-    
-    function RunTests(
-        [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"),
-        [string] $testSettingsPath)
-    {
-        [string] $mstest = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Common7\IDE\MSTest.exe"
-    
-        [string[]] $parameters = @("/nologo")
-    
-        $assemblyPaths |
-            ForEach-Object {
-                $parameters += ('/testcontainer:"' + $_ + '"')
-            }
-        
-        If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
-        {
-            $parameters += ('/testsettings:' + $testSettingsPath)
+    $assemblyPaths |
+        ForEach-Object {
+            [string] $folder = (Get-Item $_).DirectoryName
+
+            $folders += $folder
+        }
+
+    return $folders
+}
+
+function InstrumentAssembly(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    [string] $vsinstr = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSInstr.exe"
+
+    & $vsinstr "$assemblyPath" /coverage
+}
+
+function RunTests(
+    [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"),
+    [string] $testSettingsPath)
+{
+    [string] $mstest = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Common7\IDE\MSTest.exe"
+
+    [string[]] $parameters = @("/nologo")
+
+    $assemblyPaths |
+        ForEach-Object {
+            $parameters += ('/testcontainer:"' + $_ + '"')
         }
     
-        Write-Debug "Running tests..."
-        & $mstest $parameters
-    }
-    
-    function SignAssembly(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+    If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
     {
-        Write-Debug ("Signing assembly (" + $assemblyPath + ")...")
-    
-        [string] $sn = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
+        $parameters += ('/testsettings:' + $testSettingsPath)
+    }
+
+    Write-Debug "Running tests..."
+    & $mstest $parameters
+}
+
+function SignAssembly(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    Write-Debug ("Signing assembly (" + $assemblyPath + ")...")
+
+    [string] $sn = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
+        
+    & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
+}
+
+function ToggleCodeCoverageProfiling(
+    [bool] $enable)
+{
+    [string] $vsperfcmd = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSPerfCmd.exe"
+
+    If ($enable -eq $true)
+    {
+        Write-Debug "Starting code coverage profiler..."
+
+        & $vsperfcmd /START:COVERAGE /OUTPUT:Fabrikam.Demo
+    }
+    Else
+    {
+        Write-Debug "Stopping code coverage profiler..."
+
+        & $vsperfcmd /SHUTDOWN
+    }
+}
+
+function UpdateGacAssemblyIfNecessary(
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+{
+    [string] $baseName = (Get-Item $assemblyPath).BaseName
+
+    Write-Debug ("Checking if assembly (" + $baseName + ") is in the GAC...")
+
+    [string] $gacutil = "${env:ProgramFiles(x86)}" `
+        + "\Microsoft SDKs\Windows\v7.0A\Bin\gacutil.exe"
+
+    [string] $numberOfItemsInGac = & $gacutil -l $baseName |
+        Select-String "^Number of items =" |
+            ForEach { $_.Line.Split("=")[1].Trim() }
             
-        & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
-    }
-    
-    function ToggleCodeCoverageProfiling(
-        [bool] $enable)
+    If ($numberOfItemsInGac -eq "0")
     {
-        [string] $vsperfcmd = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft Visual Studio 10.0\Team Tools\Performance Tools\x64\VSPerfCmd.exe"
-    
-        If ($enable -eq $true)
-        {
-            Write-Debug "Starting code coverage profiler..."
-    
-            & $vsperfcmd /START:COVERAGE /OUTPUT:Fabrikam.Demo
-        }
-        Else
-        {
-            Write-Debug "Stopping code coverage profiler..."
-    
-            & $vsperfcmd /SHUTDOWN
-        }
+        Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
     }
-    
-    function UpdateGacAssemblyIfNecessary(
-        [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
+    ElseIf ($numberOfItemsInGac -eq "1")
     {
-        [string] $baseName = (Get-Item $assemblyPath).BaseName
-    
-        Write-Debug ("Checking if assembly (" + $baseName + ") is in the GAC...")
-    
-        [string] $gacutil = "${env:ProgramFiles(x86)}" `
-            + "\Microsoft SDKs\Windows\v7.0A\Bin\gacutil.exe"
-    
-        [string] $numberOfItemsInGac = & $gacutil -l $baseName |
-            Select-String "^Number of items =" |
-                ForEach { $_.Line.Split("=")[1].Trim() }
-                
-        If ($numberOfItemsInGac -eq "0")
-        {
-            Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
-        }
-        ElseIf ($numberOfItemsInGac -eq "1")
-        {
-            Write-Debug ("Updating GAC assembly (" + $baseName + ")...")
-    
-            & $gacutil /if $assemblyPath
-        }
-        Else
-        {
-            Throw "Unexpected number of items in the GAC: " + $numberOfItemsInGac
-        }
+        Write-Debug ("Updating GAC assembly (" + $baseName + ")...")
+
+        & $gacutil /if $assemblyPath
     }
-    
-    function Main
+    Else
     {
-        [string] $testSettingsPath = "LocalTestRun.testrunconfig"
-    
-        [string[]] $assembliesToInstrument =
-        @(
-            "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
-            ("CoreServices\SharePoint\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
-        )
-        
-        [string[]] $testAssemblies =
-        @(
-            ("CoreServices\DeveloperTests\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
-            ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
-                + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
-        )
-    
-        [string[]] $testBinFolders = GetAssemblyFolders($testAssemblies)
-    
-        $assembliesToInstrument |
-            ForEach-Object {
-                InstrumentAssembly $_
-                
-                SignAssembly $_
-    
-                CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
-    
-                UpdateGacAssemblyIfNecessary $_
-            }
-        
-        ToggleCodeCoverageProfiling $true
-    
-        RunTests $testAssemblies $testSettingsPath
-    
-        ToggleCodeCoverageProfiling $false
+        Throw "Unexpected number of items in the GAC: " + $numberOfItemsInGac
     }
+}
+
+function Main
+{
+    [string] $testSettingsPath = "LocalTestRun.testrunconfig"
+
+    [string[]] $assembliesToInstrument =
+    @(
+        "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
+        ("CoreServices\SharePoint\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
+    )
     
-    Main
+    [string[]] $testAssemblies =
+    @(
+        ("CoreServices\DeveloperTests\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
+        ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
+            + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
+    )
+
+    [string[]] $testBinFolders = GetAssemblyFolders($testAssemblies)
+
+    $assembliesToInstrument |
+        ForEach-Object {
+            InstrumentAssembly $_
+            
+            SignAssembly $_
+
+            CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
+
+            UpdateGacAssemblyIfNecessary $_
+        }
+    
+    ToggleCodeCoverageProfiling $true
+
+    RunTests $testAssemblies $testSettingsPath
+
+    ToggleCodeCoverageProfiling $false
+}
+
+Main
+```
 
 
 
@@ -541,5 +577,7 @@ I have attached a sample Visual Studio 2010 solution that contains a couple of 
 
 
 
-    & '.\Run Developer Tests with Code Coverage.ps1'
+```
+& '.\Run Developer Tests with Code Coverage.ps1'
+```
 

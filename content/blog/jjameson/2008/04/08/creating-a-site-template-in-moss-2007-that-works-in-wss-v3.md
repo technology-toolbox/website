@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx)
@@ -40,13 +40,15 @@ Digging into the SharePoint logs I noticed the following:
 
 
 
-    04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".	 
-    04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
-    04/08/2008 ... Marking web-scoped features active from manifest at URL "http://wss-dev/Test"
-    04/08/2008 ... Failed to mark site-scoped features active in site 'http://wss-dev/Test'.
-    04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test".
-    04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test", error The template you have chosen is invalid or cannot be found. 0x81071e44
-    04/08/2008 ... The template you have chosen is invalid or cannot be found.
+```
+04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".	 
+04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
+04/08/2008 ... Marking web-scoped features active from manifest at URL "http://wss-dev/Test"
+04/08/2008 ... Failed to mark site-scoped features active in site 'http://wss-dev/Test'.
+04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test".
+04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test", error The template you have chosen is invalid or cannot be found. 0x81071e44
+04/08/2008 ... The template you have chosen is invalid or cannot be found.
+```
 
 
 
@@ -72,84 +74,86 @@ Using WinDiff to compare the manifest file from the TFS Lite site template with 
 
 
 
-    <SiteFeatures>
-      <!-- CTypes -->
-      <Feature ID="695b6570-a48b-4a8e-8ea5-26ea7fc1d162" />
-      <!-- Fields -->
-      <Feature ID="ca7bd552-10b1-4563-85b9-5ed1d39c962a" />
-      <!-- IssueTrackingWorkflow -->
-      <Feature ID="fde5d850-671e-4143-950a-87b473922dc7" />
-      <!-- BasicWebParts -->
-      <Feature ID="00bfea71-1c5e-4a24-b310-ba51c3eb7a57" />
-      <!-- IPFSSiteFeatures -->
-      <Feature ID="c88c4ff1-dbf5-4649-ad9f-c6c426ebcbf5" />
-      <!-- ExcelServerSite -->
-      <Feature ID="3cb475e7-4e87-45eb-a1f3-db96ad7cf313" />
-    </SiteFeatures>
-    <WebFeatures>
-      <!-- WebPageLibrary -->
-      <Feature ID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" />
-      <!-- TransMgmtLib -->
-      <Feature ID="29d85c25-170c-4df9-a641-12db0b9d4130" />
-      <!-- BizAppsListTemplates -->
-      <Feature ID="065c78be-5231-477e-a972-14177cc5b3c7" />
-      <!-- IssuesList -->
-      <Feature ID="00bfea71-5932-4f9c-ad71-1557e5751100" />
-      <!-- PremiumWeb -->
-      <Feature ID="0806d127-06e6-447a-980e-2e90b03101b8" />
-      <!-- WorkflowHistoryList -->
-      <Feature ID="00bfea71-4ea5-48d4-a4ad-305cf7030140" />
-      <!-- ReportListTemplate -->
-      <Feature ID="2510d73f-7109-4ccc-8a1c-314894deeb3a" />
-      <!-- NoCodeWorkflowLibrary -->
-      <Feature ID="00bfea71-f600-43f6-a895-40c0de7b0117" />
-      <!-- SurveysList -->
-      <Feature ID="00bfea71-eb8a-40b1-80c7-506be7590102" />
-      <!-- RelatedLinksScopeSettingsLink -->
-      <Feature ID="e8734bb6-be8e-48a1-b036-5a40ff0b8a81" />
-      <!-- AnalyticsLinks -->
-      <Feature ID="56dd7fe7-a155-4283-b5e6-6147560601ee" />
-      <!-- GridList -->
-      <Feature ID="00bfea71-3a1d-41d3-a0ee-651d11570120" />
-      <!-- GanttTasksList -->
-      <Feature ID="00bfea71-513d-4ca0-96c2-6a47775c0119" />
-      <!-- SlideLibrary -->
-      <Feature ID="0be49fe9-9bc9-409d-abf9-702753bd878d" />
-      <!-- LinksList -->
-      <Feature ID="00bfea71-2062-426c-90bf-714c59600103" />
-      <!-- MobilityRedirect -->
-      <Feature ID="f41cc668-37e5-4743-b4a8-74d1db3fd8a4" />
-      <!-- workflowProcessList -->
-      <Feature ID="00bfea71-2d77-4a75-9fca-76516689e21a" />
-      <!-- TasksList -->
-      <Feature ID="00bfea71-a83e-497e-9ba0-7a5c597d0107" />
-      <!-- TeamCollab -->
-      <Feature ID="00bfea71-4ea5-48d4-a4ad-7ea5c011abe5" />
-      <!-- BaseWeb -->
-      <Feature ID="99fe402e-89a0-45aa-9163-85342e865dc8" />
-      <!-- AnnouncementsList -->
-      <Feature ID="00bfea71-d1ce-42de-9c63-a44004ce0104" />
-      <!-- PictureLibrary -->
-      <Feature ID="00bfea71-52d4-45b3-b544-b1c71b620109" />
-      <!-- ContactsList -->
-      <Feature ID="00bfea71-7e6d-4186-9ba8-c047ac750105" />
-      <!-- CustomList -->
-      <Feature ID="00bfea71-de22-43b2-a848-c05709900100" />
-      <!-- DocumentLibrary -->
-      <Feature ID="00bfea71-e717-4e80-aa17-d0c71b360101" />
-      <!-- DiscussionsList -->
-      <Feature ID="00bfea71-6a49-43fa-b535-d15c05500108" />
-      <!-- DataSourceLibrary -->
-      <Feature ID="00bfea71-f381-423d-b9d1-da7a54c50110" />
-      <!-- DataConnectionLibrary -->
-      <Feature ID="00bfea71-dbd7-4f72-b8cb-da7ac0440130" />
-      <!-- EventsList -->
-      <Feature ID="00bfea71-ec85-4903-972d-ebe475780106" />
-      <!-- XmlFormLibrary -->
-      <Feature ID="00bfea71-1e1d-4562-b56a-f05371bb0115" />
-      <!-- IPFSWebFeatures -->
-      <Feature ID="a0e5a010-1329-49d4-9e09-f280cdbed37d" />
-    </WebFeatures>
+```
+<SiteFeatures>
+  <!-- CTypes -->
+  <Feature ID="695b6570-a48b-4a8e-8ea5-26ea7fc1d162" />
+  <!-- Fields -->
+  <Feature ID="ca7bd552-10b1-4563-85b9-5ed1d39c962a" />
+  <!-- IssueTrackingWorkflow -->
+  <Feature ID="fde5d850-671e-4143-950a-87b473922dc7" />
+  <!-- BasicWebParts -->
+  <Feature ID="00bfea71-1c5e-4a24-b310-ba51c3eb7a57" />
+  <!-- IPFSSiteFeatures -->
+  <Feature ID="c88c4ff1-dbf5-4649-ad9f-c6c426ebcbf5" />
+  <!-- ExcelServerSite -->
+  <Feature ID="3cb475e7-4e87-45eb-a1f3-db96ad7cf313" />
+</SiteFeatures>
+<WebFeatures>
+  <!-- WebPageLibrary -->
+  <Feature ID="00bfea71-c796-4402-9f2f-0eb9a6e71b18" />
+  <!-- TransMgmtLib -->
+  <Feature ID="29d85c25-170c-4df9-a641-12db0b9d4130" />
+  <!-- BizAppsListTemplates -->
+  <Feature ID="065c78be-5231-477e-a972-14177cc5b3c7" />
+  <!-- IssuesList -->
+  <Feature ID="00bfea71-5932-4f9c-ad71-1557e5751100" />
+  <!-- PremiumWeb -->
+  <Feature ID="0806d127-06e6-447a-980e-2e90b03101b8" />
+  <!-- WorkflowHistoryList -->
+  <Feature ID="00bfea71-4ea5-48d4-a4ad-305cf7030140" />
+  <!-- ReportListTemplate -->
+  <Feature ID="2510d73f-7109-4ccc-8a1c-314894deeb3a" />
+  <!-- NoCodeWorkflowLibrary -->
+  <Feature ID="00bfea71-f600-43f6-a895-40c0de7b0117" />
+  <!-- SurveysList -->
+  <Feature ID="00bfea71-eb8a-40b1-80c7-506be7590102" />
+  <!-- RelatedLinksScopeSettingsLink -->
+  <Feature ID="e8734bb6-be8e-48a1-b036-5a40ff0b8a81" />
+  <!-- AnalyticsLinks -->
+  <Feature ID="56dd7fe7-a155-4283-b5e6-6147560601ee" />
+  <!-- GridList -->
+  <Feature ID="00bfea71-3a1d-41d3-a0ee-651d11570120" />
+  <!-- GanttTasksList -->
+  <Feature ID="00bfea71-513d-4ca0-96c2-6a47775c0119" />
+  <!-- SlideLibrary -->
+  <Feature ID="0be49fe9-9bc9-409d-abf9-702753bd878d" />
+  <!-- LinksList -->
+  <Feature ID="00bfea71-2062-426c-90bf-714c59600103" />
+  <!-- MobilityRedirect -->
+  <Feature ID="f41cc668-37e5-4743-b4a8-74d1db3fd8a4" />
+  <!-- workflowProcessList -->
+  <Feature ID="00bfea71-2d77-4a75-9fca-76516689e21a" />
+  <!-- TasksList -->
+  <Feature ID="00bfea71-a83e-497e-9ba0-7a5c597d0107" />
+  <!-- TeamCollab -->
+  <Feature ID="00bfea71-4ea5-48d4-a4ad-7ea5c011abe5" />
+  <!-- BaseWeb -->
+  <Feature ID="99fe402e-89a0-45aa-9163-85342e865dc8" />
+  <!-- AnnouncementsList -->
+  <Feature ID="00bfea71-d1ce-42de-9c63-a44004ce0104" />
+  <!-- PictureLibrary -->
+  <Feature ID="00bfea71-52d4-45b3-b544-b1c71b620109" />
+  <!-- ContactsList -->
+  <Feature ID="00bfea71-7e6d-4186-9ba8-c047ac750105" />
+  <!-- CustomList -->
+  <Feature ID="00bfea71-de22-43b2-a848-c05709900100" />
+  <!-- DocumentLibrary -->
+  <Feature ID="00bfea71-e717-4e80-aa17-d0c71b360101" />
+  <!-- DiscussionsList -->
+  <Feature ID="00bfea71-6a49-43fa-b535-d15c05500108" />
+  <!-- DataSourceLibrary -->
+  <Feature ID="00bfea71-f381-423d-b9d1-da7a54c50110" />
+  <!-- DataConnectionLibrary -->
+  <Feature ID="00bfea71-dbd7-4f72-b8cb-da7ac0440130" />
+  <!-- EventsList -->
+  <Feature ID="00bfea71-ec85-4903-972d-ebe475780106" />
+  <!-- XmlFormLibrary -->
+  <Feature ID="00bfea71-1e1d-4562-b56a-f05371bb0115" />
+  <!-- IPFSWebFeatures -->
+  <Feature ID="a0e5a010-1329-49d4-9e09-f280cdbed37d" />
+</WebFeatures>
+```
 
 
 

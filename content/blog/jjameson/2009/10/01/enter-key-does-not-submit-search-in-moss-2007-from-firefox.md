@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx)
@@ -52,54 +52,56 @@ Here is the script that I found would need to be added to the custom master page
 
 
 
-    <%--
-    HACK: Bug 126525 - "Search" not working in Mozilla Firefox 3.0
-    
-    Replace the onKeyPress event for Firefox in order to avoid submitting the form
-    and subsequently canceling the redirect to the search results page.
-    
-    (http://social.technet.microsoft.com/Forums/it-IT/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3)
-    
-    Note that the element ID and corresponding JavaScript function contain a
-    unique identifier (i.e. ""). This unique identifier is set within the
-    OnInit() method of the SearchBoxEx control:
-    
-      this.m_strUniqueNamePrefix =
-        "S" + SearchCommon.HashString(this.UniqueID) + "_";
-    
-    Note that SearchCommon.HashString(string str) returns the following:
-    
-      str.GetHashCode().ToString("X", CultureInfo.CurrentCulture);
-    
-    As long as the structure of the page is not changed (i.e. the name of
-    the SearchBoxEx control as well as the naming containers that hold
-    the control) then this unique identifier should not change.
-    --%>
-    
-    <script language="javascript">
-    function replaceOnKeyPress()
+```
+<%--
+HACK: Bug 126525 - "Search" not working in Mozilla Firefox 3.0
+
+Replace the onKeyPress event for Firefox in order to avoid submitting the form
+and subsequently canceling the redirect to the search results page.
+
+(http://social.technet.microsoft.com/Forums/it-IT/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3)
+
+Note that the element ID and corresponding JavaScript function contain a
+unique identifier (i.e. ""). This unique identifier is set within the
+OnInit() method of the SearchBoxEx control:
+
+  this.m_strUniqueNamePrefix =
+    "S" + SearchCommon.HashString(this.UniqueID) + "_";
+
+Note that SearchCommon.HashString(string str) returns the following:
+
+  str.GetHashCode().ToString("X", CultureInfo.CurrentCulture);
+
+As long as the structure of the page is not changed (i.e. the name of
+the SearchBoxEx control as well as the naming containers that hold
+the control) then this unique identifier should not change.
+--%>
+
+<script language="javascript">
+function replaceOnKeyPress()
+{
+  var theFunction = "S5F221A6C_Submit();";
+  var theInputID = "ctl00_siteSearchBoxEx_S5F221A6C_InputKeywords";
+ 
+  var txt = document.getElementById(theInputID);
+  var browser = navigator.appName;
+  if (txt && (browser == "Netscape"))
+  {
+    txt.onkeypress = function(e)
     {
-      var theFunction = "S5F221A6C_Submit();";
-      var theInputID = "ctl00_siteSearchBoxEx_S5F221A6C_InputKeywords";
-     
-      var txt = document.getElementById(theInputID);
-      var browser = navigator.appName;
-      if (txt && (browser == "Netscape"))
+      var key = String.fromCharCode(e.keyCode);
+      if (key == "\n" || key == "\r")
       {
-        txt.onkeypress = function(e)
-        {
-          var key = String.fromCharCode(e.keyCode);
-          if (key == "\n" || key == "\r")
-          {
-            eval(theFunction);
-            return false;
-          }
-        }
+        eval(theFunction);
+        return false;
       }
     }
-     
-    replaceOnKeyPress();
-    </script>
+  }
+}
+ 
+replaceOnKeyPress();
+</script>
+```
 
 
 

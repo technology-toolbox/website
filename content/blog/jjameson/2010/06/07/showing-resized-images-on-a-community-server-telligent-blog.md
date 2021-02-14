@@ -10,8 +10,8 @@ tags: ["My System"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx)
@@ -36,18 +36,20 @@ Here's some typical HTML markup for showing images in my blog posts:
 
 
 
-    <div class="image">
-            <img src="http://blogs.msdn.com/photos/jjameson/images/9997719/500x258.aspx"
-                alt="Hyper-V Manager showing the staggered start of various VMs"
-                width="500" height="258" />
-            <div class="caption">
-                Figure 1: Hyper-V staggered start</div>
-            <div class="imageLink">
-                <a href="http://blogs.msdn.com/photos/jjameson/images/9997719/original.aspx"
-                target="_blank">
-                    See full-sized image.</a>
-            </div>
+```
+<div class="image">
+        <img src="http://blogs.msdn.com/photos/jjameson/images/9997719/500x258.aspx"
+            alt="Hyper-V Manager showing the staggered start of various VMs"
+            width="500" height="258" />
+        <div class="caption">
+            Figure 1: Hyper-V staggered start</div>
+        <div class="imageLink">
+            <a href="http://blogs.msdn.com/photos/jjameson/images/9997719/original.aspx"
+            target="_blank">
+                See full-sized image.</a>
         </div>
+    </div>
+```
 
 
 

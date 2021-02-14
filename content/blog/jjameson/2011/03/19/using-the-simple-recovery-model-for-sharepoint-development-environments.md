@@ -9,8 +9,8 @@ tags: ["My System", "MOSS 2007", "SQL Server", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx)
 > 
@@ -25,51 +25,53 @@ Here's a short SQL script that changes all user databases and the out-of-the-box
 
 
 
-    IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
+```
+IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
+
+CREATE TABLE #CommandQueue
+(
+    ID INT IDENTITY ( 1, 1 )
+    , SqlStatement VARCHAR(1000)
+)
+
+INSERT INTO    #CommandQueue
+(
+    SqlStatement
+)
+SELECT
+    'ALTER DATABASE [' + name + '] SET RECOVERY SIMPLE'
+FROM
+    sys.databases
+WHERE
+    name NOT IN ( 'master', 'msdb', 'tempdb' )
+
+DECLARE @id INT
+
+SELECT @id = MIN(ID)
+FROM #CommandQueue
+
+WHILE @id IS NOT NULL
+BEGIN
+    DECLARE @sqlStatement VARCHAR(1000)
     
-    CREATE TABLE #CommandQueue
-    (
-        ID INT IDENTITY ( 1, 1 )
-        , SqlStatement VARCHAR(1000)
-    )
-    
-    INSERT INTO    #CommandQueue
-    (
-        SqlStatement
-    )
     SELECT
-        'ALTER DATABASE [' + name + '] SET RECOVERY SIMPLE'
+        @sqlStatement = SqlStatement
     FROM
-        sys.databases
+        #CommandQueue
     WHERE
-        name NOT IN ( 'master', 'msdb', 'tempdb' )
-    
-    DECLARE @id INT
-    
+        ID = @id
+
+    PRINT 'Executing ''' + @sqlStatement + '''...'
+
+    EXEC (@sqlStatement)
+
+    DELETE FROM #CommandQueue
+    WHERE ID = @id
+
     SELECT @id = MIN(ID)
     FROM #CommandQueue
-    
-    WHILE @id IS NOT NULL
-    BEGIN
-        DECLARE @sqlStatement VARCHAR(1000)
-        
-        SELECT
-            @sqlStatement = SqlStatement
-        FROM
-            #CommandQueue
-        WHERE
-            ID = @id
-    
-        PRINT 'Executing ''' + @sqlStatement + '''...'
-    
-        EXEC (@sqlStatement)
-    
-        DELETE FROM #CommandQueue
-        WHERE ID = @id
-    
-        SELECT @id = MIN(ID)
-        FROM #CommandQueue
-    END
+END
+```
 
 
 

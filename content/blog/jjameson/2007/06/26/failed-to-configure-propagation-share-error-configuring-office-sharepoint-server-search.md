@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx)
 > 

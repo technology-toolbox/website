@@ -45,40 +45,42 @@ Here is the SQL script I wrote to refresh the Test environment from Production. 
 
 
 
-    USE tempdb
-    GO
-    DROP DATABASE Caelum
-    GO
-    
-    RESTORE DATABASE [Caelum]
-        FROM  DISK = N'C:\NotBackedUp\Backups\Caelum\Caelum_backup_2011-11-14-14-35.bak'
-        WITH  FILE = 1
-            ,  MOVE N'Caelum_data' TO N'C:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Caelum.mdf'
-            ,  MOVE N'Caelum_log' TO N'C:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Data\Caelum.ldf'
-            ,  NOUNLOAD
-            ,  STATS = 10
-    GO
-    
-    IF NOT EXISTS (
-        SELECT * FROM master..syslogins
-        WHERE name = 'TECHTOOLBOX\CYCLOPS$')
-    BEGIN
-        CREATE LOGIN [TECHTOOLBOX\CYCLOPS$]
-        FROM WINDOWS WITH DEFAULT_DATABASE=[tempdb]
-    END
-    
-    USE [Caelum]
-    GO
-    CREATE USER [TECHTOOLBOX\CYCLOPS$] FOR LOGIN [TECHTOOLBOX\CYCLOPS$]
-    GO
-    EXEC sp_addrolemember N'db_datareader', N'TECHTOOLBOX\CYCLOPS$'
-    GO
-    EXEC sp_addrolemember N'db_datawriter', N'TECHTOOLBOX\CYCLOPS$'
-    GO
-    
-    UPDATE subtext_Config
-    SET Host = N'www-test.technologytoolbox.com'
-    WHERE Title = 'Random Musings of Jeremy Jameson'
+```
+USE tempdb
+GO
+DROP DATABASE Caelum
+GO
+
+RESTORE DATABASE [Caelum]
+    FROM  DISK = N'C:\NotBackedUp\Backups\Caelum\Caelum_backup_2011-11-14-14-35.bak'
+    WITH  FILE = 1
+        ,  MOVE N'Caelum_data' TO N'C:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Caelum.mdf'
+        ,  MOVE N'Caelum_log' TO N'C:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Data\Caelum.ldf'
+        ,  NOUNLOAD
+        ,  STATS = 10
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM master..syslogins
+    WHERE name = 'TECHTOOLBOX\CYCLOPS$')
+BEGIN
+    CREATE LOGIN [TECHTOOLBOX\CYCLOPS$]
+    FROM WINDOWS WITH DEFAULT_DATABASE=[tempdb]
+END
+
+USE [Caelum]
+GO
+CREATE USER [TECHTOOLBOX\CYCLOPS$] FOR LOGIN [TECHTOOLBOX\CYCLOPS$]
+GO
+EXEC sp_addrolemember N'db_datareader', N'TECHTOOLBOX\CYCLOPS$'
+GO
+EXEC sp_addrolemember N'db_datawriter', N'TECHTOOLBOX\CYCLOPS$'
+GO
+
+UPDATE subtext_Config
+SET Host = N'www-test.technologytoolbox.com'
+WHERE Title = 'Random Musings of Jeremy Jameson'
+```
 
 
 
@@ -92,43 +94,45 @@ Consequently, rather than adding the machine account to the database roles, the
 
 
 
-    USE tempdb
-    GO
-    DROP DATABASE Caelum
-    GO
-    
-    RESTORE DATABASE [Caelum]
-        FROM  DISK = N'\\beast\Backups\Caelum\Caelum_backup_2011-11-14-14-35.bak'
-        WITH  FILE = 1
-            ,  MOVE N'Caelum_data' TO N'D:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Caelum.mdf'
-            ,  MOVE N'Caelum_log' TO N'L:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Data\Caelum.ldf'
-            ,  NOUNLOAD
-            ,  STATS = 10
-    GO
-    
-    IF NOT EXISTS (
-        SELECT * FROM master..syslogins
-        WHERE name = 'IIS APPPOOL\www-dev.technologytoolbox.com')
-    BEGIN
-        CREATE LOGIN [IIS APPPOOL\www-dev.technologytoolbox.com]
-        FROM WINDOWS WITH DEFAULT_DATABASE=[tempdb]
-    END
-    
-    USE [Caelum]
-    GO
-    CREATE USER [IIS APPPOOL\www-dev.technologytoolbox.com]
-    FOR LOGIN [IIS APPPOOL\www-dev.technologytoolbox.com]
-    GO
-    EXEC sp_addrolemember
-        N'db_datareader',
-        N'IIS APPPOOL\www-dev.technologytoolbox.com'
-    GO
-    EXEC sp_addrolemember
-        N'db_datawriter',
-        N'IIS APPPOOL\www-dev.technologytoolbox.com'
-    GO
-    
-    UPDATE subtext_Config
-    SET Host = N'www-dev.technologytoolbox.com'
-    WHERE Title = 'Random Musings of Jeremy Jameson'
+```
+USE tempdb
+GO
+DROP DATABASE Caelum
+GO
+
+RESTORE DATABASE [Caelum]
+    FROM  DISK = N'\\beast\Backups\Caelum\Caelum_backup_2011-11-14-14-35.bak'
+    WITH  FILE = 1
+        ,  MOVE N'Caelum_data' TO N'D:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\Caelum.mdf'
+        ,  MOVE N'Caelum_log' TO N'L:\NotBackedUp\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Data\Caelum.ldf'
+        ,  NOUNLOAD
+        ,  STATS = 10
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM master..syslogins
+    WHERE name = 'IIS APPPOOL\www-dev.technologytoolbox.com')
+BEGIN
+    CREATE LOGIN [IIS APPPOOL\www-dev.technologytoolbox.com]
+    FROM WINDOWS WITH DEFAULT_DATABASE=[tempdb]
+END
+
+USE [Caelum]
+GO
+CREATE USER [IIS APPPOOL\www-dev.technologytoolbox.com]
+FOR LOGIN [IIS APPPOOL\www-dev.technologytoolbox.com]
+GO
+EXEC sp_addrolemember
+    N'db_datareader',
+    N'IIS APPPOOL\www-dev.technologytoolbox.com'
+GO
+EXEC sp_addrolemember
+    N'db_datawriter',
+    N'IIS APPPOOL\www-dev.technologytoolbox.com'
+GO
+
+UPDATE subtext_Config
+SET Host = N'www-dev.technologytoolbox.com'
+WHERE Title = 'Random Musings of Jeremy Jameson'
+```
 

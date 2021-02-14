@@ -14,8 +14,8 @@ tags: ["TFS", "SharePoint
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx)
@@ -79,48 +79,50 @@ Therefore if you want to update the quick launch navigation on project sites  up
 
 
 
-    # Exports the quick launch navigation for a SharePoint site as XML
-    
-    function ExportQuickLaunchNavigation(
-        [Microsoft.SharePoint.SPWeb] $web)
+```
+# Exports the quick launch navigation for a SharePoint site as XML
+
+function ExportQuickLaunchNavigation(
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    $xml = [xml] "<QuickLaunch/>"
+
+    foreach ($navigationNode in $web.Navigation.QuickLaunch)
     {
-        $xml = [xml] "<QuickLaunch/>"
-    
-        foreach ($navigationNode in $web.Navigation.QuickLaunch)
-        {
-            AddNavigationElement $navigationNode $xml.DocumentElement $web
-        }
-    
-        return $xml
+        AddNavigationElement $navigationNode $xml.DocumentElement $web
     }
-    
-    function AddNavigationElement(
-        [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode,
-        [System.Xml.XmlElement] $parentElement,
-        [Microsoft.SharePoint.SPWeb] $web)
+
+    return $xml
+}
+
+function AddNavigationElement(
+    [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode,
+    [System.Xml.XmlElement] $parentElement,
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    $url = $navigationNode.Url.Replace(
+        $web.ServerRelativeUrl,
+        "(`$web.ServerRelativeUrl)")
+        
+    $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
+
+    $parentElement.AppendChild($navElement) > $null
+
+    $navElement.SetAttribute("title", $navigationNode.Title)
+    $navElement.SetAttribute("url", $url)
+
+    foreach ($childNode in $navigationNode.Children)
     {
-        $url = $navigationNode.Url.Replace(
-            $web.ServerRelativeUrl,
-            "(`$web.ServerRelativeUrl)")
-            
-        $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
-    
-        $parentElement.AppendChild($navElement) > $null
-    
-        $navElement.SetAttribute("title", $navigationNode.Title)
-        $navElement.SetAttribute("url", $url)
-    
-        foreach ($childNode in $navigationNode.Children)
-        {
-            AddNavigationElement $childNode $navElement $web
-        }
+        AddNavigationElement $childNode $navElement $web
     }
-    
-    $web = Get-SPWeb "http://cyclops/sites/DefaultCollection/Test"
-    
-    $navigationXml = ExportQuickLaunchNavigation($web)
-    
-    $navigationXml.OuterXml > QuickLaunch-TFS2010.xml
+}
+
+$web = Get-SPWeb "http://cyclops/sites/DefaultCollection/Test"
+
+$navigationXml = ExportQuickLaunchNavigation($web)
+
+$navigationXml.OuterXml > QuickLaunch-TFS2010.xml
+```
 
 
 
@@ -128,62 +130,64 @@ This will output XML similar to the following:
 
 
 
-    <QuickLaunch>
-      <NavigationNode
-        title="Team Web Access"
-        url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
-      <NavigationNode
-        title="Dashboards"
-        url="($web.ServerRelativeUrl)/Dashboards/Forms/AllItems.aspx">
-        <NavigationNode
-          title="Burndown"
-          url="($web.ServerRelativeUrl)/Dashboards/Burndown.aspx" />
-        <NavigationNode
-          title="Quality"
-          url="($web.ServerRelativeUrl)/Dashboards/Quality.aspx" />
-        <NavigationNode
-          title="Bugs"
-          url="($web.ServerRelativeUrl)/Dashboards/Bugs.aspx" />
-        <NavigationNode
-          title="Test"
-          url="($web.ServerRelativeUrl)/Dashboards/Test.aspx" />
-        <NavigationNode
-          title="Build"
-          url="($web.ServerRelativeUrl)/Dashboards/Build.aspx" />
-        <NavigationNode
-          title="My Dashboard"
-          url="($web.ServerRelativeUrl)/Dashboards/MyDashboard.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Excel Reports"
-        url="($web.ServerRelativeUrl)/Reports/Forms/AllItems.aspx" />
-      <NavigationNode
-        title="Reports"
-        url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ReportList" />
-      <NavigationNode
-        title="Libraries"
-        url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=1">
-        <NavigationNode
-          title="Team Wiki"
-          url="($web.ServerRelativeUrl)/Team Wiki" />
-        <NavigationNode
-          title="Shared Documents"
-          url="($web.ServerRelativeUrl)/Shared Documents/Forms/AllItems.aspx" />
-        <NavigationNode
-          title="Samples and Templates"
-          url="($web.ServerRelativeUrl)/Samples and Templates/Forms/AllItems.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Lists"
-        url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=0">
-        <NavigationNode
-          title="Calendar"
-          url="($web.ServerRelativeUrl)/Lists/Calendar/calendar.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Process Guidance"
-        url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ProcessGuidance&amp;tf%3aDocumentPath=Supporting+Files%2fProcessGuidance.htm" />
-    </QuickLaunch>
+```
+<QuickLaunch>
+  <NavigationNode
+    title="Team Web Access"
+    url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
+  <NavigationNode
+    title="Dashboards"
+    url="($web.ServerRelativeUrl)/Dashboards/Forms/AllItems.aspx">
+    <NavigationNode
+      title="Burndown"
+      url="($web.ServerRelativeUrl)/Dashboards/Burndown.aspx" />
+    <NavigationNode
+      title="Quality"
+      url="($web.ServerRelativeUrl)/Dashboards/Quality.aspx" />
+    <NavigationNode
+      title="Bugs"
+      url="($web.ServerRelativeUrl)/Dashboards/Bugs.aspx" />
+    <NavigationNode
+      title="Test"
+      url="($web.ServerRelativeUrl)/Dashboards/Test.aspx" />
+    <NavigationNode
+      title="Build"
+      url="($web.ServerRelativeUrl)/Dashboards/Build.aspx" />
+    <NavigationNode
+      title="My Dashboard"
+      url="($web.ServerRelativeUrl)/Dashboards/MyDashboard.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Excel Reports"
+    url="($web.ServerRelativeUrl)/Reports/Forms/AllItems.aspx" />
+  <NavigationNode
+    title="Reports"
+    url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ReportList" />
+  <NavigationNode
+    title="Libraries"
+    url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=1">
+    <NavigationNode
+      title="Team Wiki"
+      url="($web.ServerRelativeUrl)/Team Wiki" />
+    <NavigationNode
+      title="Shared Documents"
+      url="($web.ServerRelativeUrl)/Shared Documents/Forms/AllItems.aspx" />
+    <NavigationNode
+      title="Samples and Templates"
+      url="($web.ServerRelativeUrl)/Samples and Templates/Forms/AllItems.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Lists"
+    url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=0">
+    <NavigationNode
+      title="Calendar"
+      url="($web.ServerRelativeUrl)/Lists/Calendar/calendar.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Process Guidance"
+    url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ProcessGuidance&amp;tf%3aDocumentPath=Supporting+Files%2fProcessGuidance.htm" />
+</QuickLaunch>
+```
 
 
 
@@ -195,9 +199,11 @@ However, for consistency with new TFS 2010 project sites (in terms of navigation
 
 
 
-    <NavigationNode     
-          title="Calendar"
-          url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
+```
+<NavigationNode     
+      title="Calendar"
+      url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
+```
 
 
 
@@ -205,21 +211,23 @@ We also need to add nodes for the existing document libraries (e.g. **Developmen
 
 
 
+```
+<NavigationNode
+      title="Development"
+      url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
     <NavigationNode
-          title="Development"
-          url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
-        <NavigationNode
-          title="Project Management"
-          url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
-        <NavigationNode
-          title="Requirements"
-          url="($web.ServerRelativeUrl)/Requirements" />
-        <NavigationNode
-          title="Security"
-          url="($web.ServerRelativeUrl)/Security" />
-        <NavigationNode
-          title="Test"
-          url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
+      title="Project Management"
+      url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
+    <NavigationNode
+      title="Requirements"
+      url="($web.ServerRelativeUrl)/Requirements" />
+    <NavigationNode
+      title="Security"
+      url="($web.ServerRelativeUrl)/Security" />
+    <NavigationNode
+      title="Test"
+      url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
+```
 
 
 
@@ -231,53 +239,55 @@ Fortunately, this is easy to remedy with a little more PowerShell script. Suppos
 
 
 
-    # Deletes a quick launch navigation link from a SharePoint site
-    
-    function DeleteNavigationNode(
-        [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
-        [string] $titleOrUrl)
+```
+# Deletes a quick launch navigation link from a SharePoint site
+
+function DeleteNavigationNode(
+    [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
+    [string] $titleOrUrl)
+{
+    $node = $nodes | Where-Object {
+        ($_.Title -eq $titleOrUrl) -or ($_.Url -eq $titleOrUrl)}
+
+    If ($node -ne $null)
     {
-        $node = $nodes | Where-Object {
-            ($_.Title -eq $titleOrUrl) -or ($_.Url -eq $titleOrUrl)}
-    
-        If ($node -ne $null)
+        If ($node -is [System.Object[]])
         {
-            If ($node -is [System.Object[]])
-            {
-                foreach ($tmpNode in $nodes)
-                {
-                    Write-Debug ("Deleting navigation node" `
-                        + " ($($tmpNode.Title) - $($tmpNode.Url))...")
-                        
-                    $tmpNode.Delete()
-                }
-            }
-            Else
+            foreach ($tmpNode in $nodes)
             {
                 Write-Debug ("Deleting navigation node" `
-                    + " ($($node.Title) - $($node.Url))...")
+                    + " ($($tmpNode.Title) - $($tmpNode.Url))...")
                     
-                $node.Delete()
+                $tmpNode.Delete()
             }
         }
         Else
         {
-            # No node found with specified title or URL (recurse on child nodes)
-            foreach ($node in $nodes)
+            Write-Debug ("Deleting navigation node" `
+                + " ($($node.Title) - $($node.Url))...")
+                
+            $node.Delete()
+        }
+    }
+    Else
+    {
+        # No node found with specified title or URL (recurse on child nodes)
+        foreach ($node in $nodes)
+        {
+            If ($node.Children.Count -gt 0)
             {
-                If ($node.Children.Count -gt 0)
-                {
-                    DeleteNavigationNode $node.Children $titleOrUrl
-                }
+                DeleteNavigationNode $node.Children $titleOrUrl
             }
         }
     }
-    
-    $DebugPreference = "SilentlyContinue"
-    $web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
-    
-    $DebugPreference = "Continue"
-    DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
+}
+
+$DebugPreference = "SilentlyContinue"
+$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
+
+$DebugPreference = "Continue"
+DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
+```
 
 
 
@@ -305,110 +315,112 @@ Now we can import the quick launch navigation from the XML into the project site
 
 
 
-    # Imports the quick launch navigation for a SharePoint site from the specified
-    # XML (adding, renaming, and moving navigation nodes as necessary)
-    
-    function EnsureNavigationNode(
-        [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
-        [string] $title,
-        [string] $url)
-    {
-        Write-Debug "Ensuring navigation node ($title - $url)..."
-            
-        [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
-            $nodes | Where-Object {$_.Url -eq $url}
-    
-        If ($node -eq $null)
-        {
-            Write-Debug "Creating new navigation node ($title - $url)..."
-    
-            $node = New-Object Microsoft.SharePoint.Navigation.SPNavigationNode(
-                $title,
-                $url,
-                $true)
-    
-            $null = $nodes.AddAsLast($node)
-            $nodes.Navigation.Web.Update()
-        }
-    
-        If ($node.Title -ne $title)
-        {
-            Write-Debug ("Updating title of navigation node ($($node.Title)) to" `
-                + "($title)...")
-    
-            $node.Title = $title
-            $node.Update()
-        }
-    
-        return $node
-    }
-    
-    function ImportNavigationNodes(
-        [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
-        [System.Xml.XmlNodeList] $navElements,
-        [Microsoft.SharePoint.SPWeb] $web)
-    {
-        [int] $position = 0
-    
-        foreach ($navElement in $navElements)
-        {
-            $title = $navElement.GetAttribute("title")
-            $url = $navElement.GetAttribute("url")
-    
-            $url = $url.Replace(
-                "(`$web.ServerRelativeUrl)",
-                $web.ServerRelativeUrl)
-            
-            [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
-                EnsureNavigationNode $nodes $title $url
-    
-            If ($position -eq 0)
-            {
-                $navigationNode.MoveToFirst($nodes)
-            }
-            Else
-            {
-                $navigationNode.Move($nodes, $nodes[$position - 1])
-            }
-    
-            $position = $position + 1
-    
-            $childNodes = $navElement.SelectNodes("NavigationNode")
-            If ($childNodes.Count -gt 0)
-            {
-                ImportNavigationNodes $navigationNode.Children $childNodes $web
-            }
-        }
-    }
-    
-    function ImportQuickLaunchNavigation(
-        [Microsoft.SharePoint.SPWeb] $web,
-        [xml] $navigationXml)
-    {
-        Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
+```
+# Imports the quick launch navigation for a SharePoint site from the specified
+# XML (adding, renaming, and moving navigation nodes as necessary)
+
+function EnsureNavigationNode(
+    [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
+    [string] $title,
+    [string] $url)
+{
+    Write-Debug "Ensuring navigation node ($title - $url)..."
         
-        $nodes = $web.Navigation.QuickLaunch
-    
-        $navElements = $navigationXml.SelectNodes(
-            "/QuickLaunch/NavigationNode")
-    
-        If ($navElements.Count -gt 0)
+    [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
+        $nodes | Where-Object {$_.Url -eq $url}
+
+    If ($node -eq $null)
+    {
+        Write-Debug "Creating new navigation node ($title - $url)..."
+
+        $node = New-Object Microsoft.SharePoint.Navigation.SPNavigationNode(
+            $title,
+            $url,
+            $true)
+
+        $null = $nodes.AddAsLast($node)
+        $nodes.Navigation.Web.Update()
+    }
+
+    If ($node.Title -ne $title)
+    {
+        Write-Debug ("Updating title of navigation node ($($node.Title)) to" `
+            + "($title)...")
+
+        $node.Title = $title
+        $node.Update()
+    }
+
+    return $node
+}
+
+function ImportNavigationNodes(
+    [Microsoft.SharePoint.Navigation.SPNavigationNodeCollection] $nodes,
+    [System.Xml.XmlNodeList] $navElements,
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    [int] $position = 0
+
+    foreach ($navElement in $navElements)
+    {
+        $title = $navElement.GetAttribute("title")
+        $url = $navElement.GetAttribute("url")
+
+        $url = $url.Replace(
+            "(`$web.ServerRelativeUrl)",
+            $web.ServerRelativeUrl)
+        
+        [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
+            EnsureNavigationNode $nodes $title $url
+
+        If ($position -eq 0)
         {
-            ImportNavigationNodes $nodes $navElements $web
+            $navigationNode.MoveToFirst($nodes)
         }
         Else
         {
-            Write-Host "No navigation nodes found to import."
+            $navigationNode.Move($nodes, $nodes[$position - 1])
+        }
+
+        $position = $position + 1
+
+        $childNodes = $navElement.SelectNodes("NavigationNode")
+        If ($childNodes.Count -gt 0)
+        {
+            ImportNavigationNodes $navigationNode.Children $childNodes $web
         }
     }
+}
+
+function ImportQuickLaunchNavigation(
+    [Microsoft.SharePoint.SPWeb] $web,
+    [xml] $navigationXml)
+{
+    Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
     
-    [xml] $navigationXml = Get-Content .\QuickLaunch-TFS2010.xml
-    
-    $DebugPreference = "SilentlyContinue"
-    $web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
-    
-    $DebugPreference = "Continue"
-    ImportQuickLaunchNavigation $web $navigationXml
+    $nodes = $web.Navigation.QuickLaunch
+
+    $navElements = $navigationXml.SelectNodes(
+        "/QuickLaunch/NavigationNode")
+
+    If ($navElements.Count -gt 0)
+    {
+        ImportNavigationNodes $nodes $navElements $web
+    }
+    Else
+    {
+        Write-Host "No navigation nodes found to import."
+    }
+}
+
+[xml] $navigationXml = Get-Content .\QuickLaunch-TFS2010.xml
+
+$DebugPreference = "SilentlyContinue"
+$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
+
+$DebugPreference = "Continue"
+ImportQuickLaunchNavigation $web $navigationXml
+```
 
 
 
@@ -447,27 +459,29 @@ If you want to upgrade the quick launch navigation for numerous project sites  a
 
 
 
-    $sitesToUpgrade =
-        @(
-            "http://cyclops/sites/AdventureWorks",
-            "http://cyclops/sites/Demo",
-            "http://cyclops/sites/Toolbox"
-        )
-    
-    $sitesToUpgrade |
-        ForEach-Object {
-            $DebugPreference = "SilentlyContinue"
-            $web = Get-SPWeb $_
-    
-            $DebugPreference = "Continue"
-            DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
-            
-            $DebugPreference = "SilentlyContinue"
-            $web = Get-SPWeb $_
-            
-            $DebugPreference = "Continue"
-            ImportQuickLaunchNavigation $web $navigationXml
-        }
+```
+$sitesToUpgrade =
+    @(
+        "http://cyclops/sites/AdventureWorks",
+        "http://cyclops/sites/Demo",
+        "http://cyclops/sites/Toolbox"
+    )
+
+$sitesToUpgrade |
+    ForEach-Object {
+        $DebugPreference = "SilentlyContinue"
+        $web = Get-SPWeb $_
+
+        $DebugPreference = "Continue"
+        DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
+        
+        $DebugPreference = "SilentlyContinue"
+        $web = Get-SPWeb $_
+        
+        $DebugPreference = "Continue"
+        ImportQuickLaunchNavigation $web $navigationXml
+    }
+```
 
 
 
@@ -477,69 +491,71 @@ Here is the final version of the QuickLaunch-TFS2010.xml file that I used for  u
 
 
 
-    <QuickLaunch>
-      <NavigationNode
-        title="Team Web Access"
-        url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
-      <NavigationNode
-        title="Dashboards"
-        url="($web.ServerRelativeUrl)/Dashboards/Forms/AllItems.aspx">
-        <NavigationNode
-          title="Burndown"
-          url="($web.ServerRelativeUrl)/Dashboards/Burndown.aspx" />
-        <NavigationNode
-          title="Quality"
-          url="($web.ServerRelativeUrl)/Dashboards/Quality.aspx" />
-        <NavigationNode
-          title="Bugs"
-          url="($web.ServerRelativeUrl)/Dashboards/Bugs.aspx" />
-        <NavigationNode
-          title="Test"
-          url="($web.ServerRelativeUrl)/Dashboards/Test.aspx" />
-        <NavigationNode
-          title="Build"
-          url="($web.ServerRelativeUrl)/Dashboards/Build.aspx" />
-        <NavigationNode
-          title="My Dashboard"
-          url="($web.ServerRelativeUrl)/Dashboards/MyDashboard.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Excel Reports"
-        url="($web.ServerRelativeUrl)/Reports/Forms/AllItems.aspx" />
-      <NavigationNode
-        title="Reports"
-        url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ReportList" />
-      <NavigationNode
-        title="Libraries"
-        url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=1">
-        <NavigationNode
-          title="Team Wiki"
-          url="($web.ServerRelativeUrl)/Team Wiki" />
-        <NavigationNode
-          title="Development"
-          url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
-        <NavigationNode
-          title="Project Management"
-          url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
-        <NavigationNode
-          title="Requirements"
-          url="($web.ServerRelativeUrl)/Requirements" />
-        <NavigationNode
-          title="Security"
-          url="($web.ServerRelativeUrl)/Security" />
-        <NavigationNode
-          title="Test"
-          url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Lists"
-        url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=0">
-        <NavigationNode
-          title="Calendar"
-          url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
-      </NavigationNode>
-      <NavigationNode
-        title="Process Guidance"
-        url="http://go.microsoft.com/fwlink/?LinkId=153652&amp;clcid=0x409" />
-    </QuickLaunch>
+```
+<QuickLaunch>
+  <NavigationNode
+    title="Team Web Access"
+    url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=WebAccess" />
+  <NavigationNode
+    title="Dashboards"
+    url="($web.ServerRelativeUrl)/Dashboards/Forms/AllItems.aspx">
+    <NavigationNode
+      title="Burndown"
+      url="($web.ServerRelativeUrl)/Dashboards/Burndown.aspx" />
+    <NavigationNode
+      title="Quality"
+      url="($web.ServerRelativeUrl)/Dashboards/Quality.aspx" />
+    <NavigationNode
+      title="Bugs"
+      url="($web.ServerRelativeUrl)/Dashboards/Bugs.aspx" />
+    <NavigationNode
+      title="Test"
+      url="($web.ServerRelativeUrl)/Dashboards/Test.aspx" />
+    <NavigationNode
+      title="Build"
+      url="($web.ServerRelativeUrl)/Dashboards/Build.aspx" />
+    <NavigationNode
+      title="My Dashboard"
+      url="($web.ServerRelativeUrl)/Dashboards/MyDashboard.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Excel Reports"
+    url="($web.ServerRelativeUrl)/Reports/Forms/AllItems.aspx" />
+  <NavigationNode
+    title="Reports"
+    url="($web.ServerRelativeUrl)/_layouts/tfsredirect.aspx?tf%3aType=ReportList" />
+  <NavigationNode
+    title="Libraries"
+    url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=1">
+    <NavigationNode
+      title="Team Wiki"
+      url="($web.ServerRelativeUrl)/Team Wiki" />
+    <NavigationNode
+      title="Development"
+      url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
+    <NavigationNode
+      title="Project Management"
+      url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
+    <NavigationNode
+      title="Requirements"
+      url="($web.ServerRelativeUrl)/Requirements" />
+    <NavigationNode
+      title="Security"
+      url="($web.ServerRelativeUrl)/Security" />
+    <NavigationNode
+      title="Test"
+      url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Lists"
+    url="($web.ServerRelativeUrl)/_layouts/viewlsts.aspx?BaseType=0">
+    <NavigationNode
+      title="Calendar"
+      url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
+  </NavigationNode>
+  <NavigationNode
+    title="Process Guidance"
+    url="http://go.microsoft.com/fwlink/?LinkId=153652&amp;clcid=0x409" />
+</QuickLaunch>
+```
 

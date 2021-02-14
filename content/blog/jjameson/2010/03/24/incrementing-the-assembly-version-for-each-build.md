@@ -12,8 +12,8 @@ tags: ["My System", "Core Development", "TFS"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx)
@@ -80,7 +80,9 @@ After downloading and installing the custom tasks, import them into your TFSBuil
 
 
 
-    <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+```
+<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+```
 
 
 
@@ -88,9 +90,11 @@ Note that there may be times when we want to build the solution without incremen
 
 
 
-    <!-- Set this property to true to build without incrementing the assembly version. -->
-        <SkipIncrementAssemblyVersion
-          Condition=" '$(SkipIncrementAssemblyVersion)' == '' " >false</SkipIncrementAssemblyVersion>
+```
+<!-- Set this property to true to build without incrementing the assembly version. -->
+    <SkipIncrementAssemblyVersion
+      Condition=" '$(SkipIncrementAssemblyVersion)' == '' " >false</SkipIncrementAssemblyVersion>
+```
 
 
 
@@ -98,7 +102,9 @@ Here is an example of specifying this property as a command-line option:
 
 
 
-    msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
+```
+msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
+```
 
 
 
@@ -106,9 +112,11 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 
 
 
-    <PropertyGroup>
-        <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
-      </PropertyGroup>
+```
+<PropertyGroup>
+    <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
+  </PropertyGroup>
+```
 
 
 
@@ -124,9 +132,11 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 > 
 > 
 > 
->     <PropertyGroup>
->         <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
->       </PropertyGroup>
+> ```
+> <PropertyGroup>
+>     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
+>   </PropertyGroup>
+> ```
 
 
 One of the things that I've struggled with in the past is that "Desktop Builds"  and "Team Builds" behave quite differently in certain areas. For example, when performing  a Desktop Build (i.e. running msbuild on TFSBuild.proj from a command prompt), the **SolutionRoot **and **BuildProjectFolderPath **properties  for my sample Fabrikam solution are set as follows:
@@ -145,30 +155,32 @@ Consequently, define a new property (**SolutionWorkingDirectory**)  and conditit
 
 
 
-    <!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
-      significantly between desktop builds and builds started using Team
-      Foundation Build (in other words, builds queued on TFS build agents).
-      
-      For desktop builds:
-      
-      SolutionRoot = C:\NotBackedUp\Fabrikam\Demo
-      BuildProjectFolderPath = C:\NotBackedUp\Fabrikam\Demo\Main\Source
-      
-      For builds performed using Team Foundation Build:
-      
-      SolutionRoot = C:\Users\svc-build\AppData\Local\Temp\Demo\Automated Build - Main\Sources
-      BuildProjectFolderPath = $/Demo/Main/Source
-      
-      In order to update files (i.e. check out and subseqeuntly check-in) in the solution
-      regardless of which build type is currently running, conditionally  set the
-      "SolutionWorkingDirectory" property.
-      -->
-      <PropertyGroup Condition=" '$(IsDesktopBuild)' == 'true' ">
-        <SolutionWorkingDirectory>$(BuildProjectFolderPath)</SolutionWorkingDirectory>
-      </PropertyGroup>
-      <PropertyGroup Condition=" '$(IsDesktopBuild)' != 'true' ">
-        <SolutionWorkingDirectory>$(SolutionRoot)\Source</SolutionWorkingDirectory>
-      </PropertyGroup>
+```
+<!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
+  significantly between desktop builds and builds started using Team
+  Foundation Build (in other words, builds queued on TFS build agents).
+  
+  For desktop builds:
+  
+  SolutionRoot = C:\NotBackedUp\Fabrikam\Demo
+  BuildProjectFolderPath = C:\NotBackedUp\Fabrikam\Demo\Main\Source
+  
+  For builds performed using Team Foundation Build:
+  
+  SolutionRoot = C:\Users\svc-build\AppData\Local\Temp\Demo\Automated Build - Main\Sources
+  BuildProjectFolderPath = $/Demo/Main/Source
+  
+  In order to update files (i.e. check out and subseqeuntly check-in) in the solution
+  regardless of which build type is currently running, conditionally  set the
+  "SolutionWorkingDirectory" property.
+  -->
+  <PropertyGroup Condition=" '$(IsDesktopBuild)' == 'true' ">
+    <SolutionWorkingDirectory>$(BuildProjectFolderPath)</SolutionWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(IsDesktopBuild)' != 'true' ">
+    <SolutionWorkingDirectory>$(SolutionRoot)\Source</SolutionWorkingDirectory>
+  </PropertyGroup>
+```
 
 
 
@@ -176,10 +188,12 @@ Next, override the **AfterGet **target to checkout the version files  from TFS, 
 
 
 
-    <Target Name="AfterGet">
-        <CallTarget Targets="CheckOutVersionFilesFromSourceControl"/>
-        <CallTarget Targets="UpdateVersionFilesInSourceControl"/>
-      </Target>
+```
+<Target Name="AfterGet">
+    <CallTarget Targets="CheckOutVersionFilesFromSourceControl"/>
+    <CallTarget Targets="UpdateVersionFilesInSourceControl"/>
+  </Target>
+```
 
 
 
@@ -187,19 +201,21 @@ Here is the custom target to checkout the version files. Note that this target  
 
 
 
-    <Target Name="CheckOutVersionFilesFromSourceControl"
-        Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
-        <Message Importance="high"
-          Text="Checking out version files from source control..." />
-    
-        <Message Importance="high"
-          Text="SolutionWorkingDirectory: $(SolutionWorkingDirectory)" />
-    
-        <Exec
-          WorkingDirectory="$(SolutionWorkingDirectory)"
-          Command="$(TeamFoundationVersionControlTool) checkout AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
-    
-      </Target>
+```
+<Target Name="CheckOutVersionFilesFromSourceControl"
+    Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
+    <Message Importance="high"
+      Text="Checking out version files from source control..." />
+
+    <Message Importance="high"
+      Text="SolutionWorkingDirectory: $(SolutionWorkingDirectory)" />
+
+    <Exec
+      WorkingDirectory="$(SolutionWorkingDirectory)"
+      Command="$(TeamFoundationVersionControlTool) checkout AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
+
+  </Target>
+```
 
 
 
@@ -207,7 +223,9 @@ Note that AssemblyVersionInfo.txt is just a simple text file used by the custom 
 
 
 
-    1.0.38.0
+```
+1.0.38.0
+```
 
 
 
@@ -215,22 +233,24 @@ The AssemblyVersionInfo.cs file is generated by the custom Version task. For  ex
 
 
 
-    //------------------------------------------------------------------------------
-    // <auto-generated>
-    //     This code was generated by a tool.
-    //     Runtime Version:2.0.50727.4200
-    //
-    //     Changes to this file may cause incorrect behavior and will be lost if
-    //     the code is regenerated.
-    // </auto-generated>
-    //------------------------------------------------------------------------------
-    
-    using System;
-    using System.Reflection;
-    using System.Runtime.CompilerServices;
-    using System.Runtime.InteropServices;
-    
-    [assembly: AssemblyFileVersion("1.0.38.0")]
+```
+//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//     Runtime Version:2.0.50727.4200
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyFileVersion("1.0.38.0")]
+```
 
 
 
@@ -238,32 +258,34 @@ Here is the custom target to update the version files in TFS. Like the `CheckOut
 
 
 
-    <Target Name="UpdateVersionFilesInSourceControl"
-        Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
-        <Message Importance="high"
-          Text="Updating version files in source control..." />
-    
-        <Message Importance="high"
-          Text="SolutionWorkingDirectory: $(SolutionWorkingDirectory)" />
-    
-        <Copy
-          Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' and '$(IsDesktopBuild)' != 'true' "
-          SourceFiles="$(SolutionRoot)\..\BuildType\AssemblyVersionInfo.txt"
-          DestinationFiles="$(SolutionWorkingDirectory)\AssemblyVersionInfo.txt"/>
-    
-        <AssemblyInfo
-          Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' "
-          CodeLanguage="CS"
-          OutputFile="$(SolutionWorkingDirectory)\AssemblyVersionInfo.cs"
-          AssemblyFileVersion="$(Major).$(Minor).$(Build).$(Revision)" />
-    
-        <Exec
-          WorkingDirectory="$(SolutionWorkingDirectory)"
-          Command="$(TeamFoundationVersionControlTool) checkin
-     /override:&quot;Check-in from automated build&quot;
-     /comment:&quot;Increment assembly version ($(BuildNumber)) $(NoCICheckinComment)&quot;
-     AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
-      </Target>
+```
+<Target Name="UpdateVersionFilesInSourceControl"
+    Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
+    <Message Importance="high"
+      Text="Updating version files in source control..." />
+
+    <Message Importance="high"
+      Text="SolutionWorkingDirectory: $(SolutionWorkingDirectory)" />
+
+    <Copy
+      Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' and '$(IsDesktopBuild)' != 'true' "
+      SourceFiles="$(SolutionRoot)\..\BuildType\AssemblyVersionInfo.txt"
+      DestinationFiles="$(SolutionWorkingDirectory)\AssemblyVersionInfo.txt"/>
+
+    <AssemblyInfo
+      Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' "
+      CodeLanguage="CS"
+      OutputFile="$(SolutionWorkingDirectory)\AssemblyVersionInfo.cs"
+      AssemblyFileVersion="$(Major).$(Minor).$(Build).$(Revision)" />
+
+    <Exec
+      WorkingDirectory="$(SolutionWorkingDirectory)"
+      Command="$(TeamFoundationVersionControlTool) checkin
+ /override:&quot;Check-in from automated build&quot;
+ /comment:&quot;Increment assembly version ($(BuildNumber)) $(NoCICheckinComment)&quot;
+ AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
+  </Target>
+```
 
 
 
@@ -273,41 +295,43 @@ Finally, use the **BuildNumberOverrideTarget **and a custom target  to actually 
 
 
 
-    <Target Name="BuildNumberOverrideTarget">
-        <CallTarget Targets="SetBuildNumber"/>
-      </Target>
-    
-      <Target Name="SetBuildNumber">
-        <Attrib Files="AssemblyVersionInfo.txt" ReadOnly="false"/>
-    
-        <Version
-          Condition=" '$(SkipIncrementAssemblyVersion)' == 'true' "
-          VersionFile="AssemblyVersionInfo.txt"
-          BuildType="None"
-          RevisionType="None">
-          <Output TaskParameter="Major" PropertyName="Major" />
-          <Output TaskParameter="Minor" PropertyName="Minor" />
-          <Output TaskParameter="Build" PropertyName="Build" />
-          <Output TaskParameter="Revision" PropertyName="Revision" />
-        </Version>
-    
-        <Version
-          Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' "
-          VersionFile="AssemblyVersionInfo.txt"
-          BuildType="Increment"
-          RevisionType="None">
-          <Output TaskParameter="Major" PropertyName="Major" />
-          <Output TaskParameter="Minor" PropertyName="Minor" />
-          <Output TaskParameter="Build" PropertyName="Build" />
-          <Output TaskParameter="Revision" PropertyName="Revision" />
-        </Version>
-    
-        <PropertyGroup>
-          <BuildNumber>$(Major).$(Minor).$(Build).$(Revision)</BuildNumber>
-        </PropertyGroup>
-        <Message Importance="high"
-          Text="Build number set to &quot;$(BuildNumber)&quot;" />
-      </Target>
+```
+<Target Name="BuildNumberOverrideTarget">
+    <CallTarget Targets="SetBuildNumber"/>
+  </Target>
+
+  <Target Name="SetBuildNumber">
+    <Attrib Files="AssemblyVersionInfo.txt" ReadOnly="false"/>
+
+    <Version
+      Condition=" '$(SkipIncrementAssemblyVersion)' == 'true' "
+      VersionFile="AssemblyVersionInfo.txt"
+      BuildType="None"
+      RevisionType="None">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+
+    <Version
+      Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' "
+      VersionFile="AssemblyVersionInfo.txt"
+      BuildType="Increment"
+      RevisionType="None">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+
+    <PropertyGroup>
+      <BuildNumber>$(Major).$(Minor).$(Build).$(Revision)</BuildNumber>
+    </PropertyGroup>
+    <Message Importance="high"
+      Text="Build number set to &quot;$(BuildNumber)&quot;" />
+  </Target>
+```
 
 
 

@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Infrastructure", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx)
 > 
@@ -49,60 +49,62 @@ This script searches the specified server's Application event log for ASP.NET lo
 
 
 
-    Option Explicit
-    
-    If (WScript.Arguments.Count <> 1) Then
-        WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")    
-        WScript.Quit(1)
-    End If
-    
-    Dim strServer
-    strServer = WScript.Arguments(0)
-    
-    WScript.Echo("Logon failure events for server: " & strServer)
-    
-    Call ListLogonFailureEventsForServer(strServer)
-    
-    Sub ListLogonFailureEventsForServer(ByVal strServer)
-    
-        Dim objWMIService
-        Set objWMIService = GetObject("winmgmts:" _
-            & "{impersonationLevel=impersonate}!\\" & strServer & "\root\cimv2")
-    
-        Dim colEvents
-        Set colEvents = objWMIService.ExecQuery _
-            ("Select * from Win32_NTLogEvent" _
-            & " Where" _
-                & " Logfile = 'Application'" _
-                & " and EventCode = '1315'" _
-                & " and Message LIKE '%Membership credential verification failed%'")
-    
-        WScript.Echo("Number of logon failure events (" & strServer & "): " _
-            & colEvents.Count)
-    
-        Dim objEvent
-        For Each objEvent In colEvents
-            Dim index1
-            index1 = InStr(objEvent.Message, "Name to authenticate: ")
-    
-            Dim strUser
-    
-            If (index1 < 0) Then
-                strUser = "(Unknown)"
-            Else
-                index1 = index1 + Len("Name to authenticate: ")
-    
-                Dim index2
-                index2 = InStr(index1, objEvent.Message, vbCr)
-    
-                strUser = Mid(objEvent.Message, index1, index2 - index1)
-            End If
-    
-            WScript.Echo(objEvent.TimeGenerated & "	" & strUser)
-        Next
-    
-        WScript.Echo()
-    End Sub
+```
+Option Explicit
+
+If (WScript.Arguments.Count <> 1) Then
+    WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")    
+    WScript.Quit(1)
+End If
+
+Dim strServer
+strServer = WScript.Arguments(0)
+
+WScript.Echo("Logon failure events for server: " & strServer)
+
+Call ListLogonFailureEventsForServer(strServer)
+
+Sub ListLogonFailureEventsForServer(ByVal strServer)
+
+    Dim objWMIService
+    Set objWMIService = GetObject("winmgmts:" _
+        & "{impersonationLevel=impersonate}!\\" & strServer & "\root\cimv2")
+
+    Dim colEvents
+    Set colEvents = objWMIService.ExecQuery _
+        ("Select * from Win32_NTLogEvent" _
+        & " Where" _
+            & " Logfile = 'Application'" _
+            & " and EventCode = '1315'" _
+            & " and Message LIKE '%Membership credential verification failed%'")
+
+    WScript.Echo("Number of logon failure events (" & strServer & "): " _
+        & colEvents.Count)
+
+    Dim objEvent
+    For Each objEvent In colEvents
+        Dim index1
+        index1 = InStr(objEvent.Message, "Name to authenticate: ")
+
+        Dim strUser
+
+        If (index1 < 0) Then
+            strUser = "(Unknown)"
+        Else
+            index1 = index1 + Len("Name to authenticate: ")
+
+            Dim index2
+            index2 = InStr(index1, objEvent.Message, vbCr)
+
+            strUser = Mid(objEvent.Message, index1, index2 - index1)
+        End If
+
+        WScript.Echo(objEvent.TimeGenerated & "	" & strUser)
+    Next
+
+    WScript.Echo()
+End Sub
+```
 
 
 
@@ -112,44 +114,46 @@ This script searches the Application event logs for each server in the farm look
 
 
 
-    Option Explicit
-    
-    If (WScript.Arguments.Count <> 1) Then
-        WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")    
-        WScript.Quit(1)
-    End If
-    
-    Dim strUser
-    strUser = WScript.Arguments(0)
-    
-    WScript.Echo("Logon failure events for user: " & strUser)
-    
-    Call ListLogonFailureEventsForUser(strUser, "WCOSLSC0")
-    Call ListLogonFailureEventsForUser(strUser, "WCOSLSC9")
-    
-    Sub ListLogonFailureEventsForUser(ByVal strUser, ByVal strServer)
-    
-        Dim objWMIService
-        Set objWMIService = GetObject("winmgmts:" _
-            & "{impersonationLevel=impersonate}!\\" & strServer & "\root\cimv2")
-    
-        Dim colEvents
-        Set colEvents = objWMIService.ExecQuery _
-            ("Select * from Win32_NTLogEvent" _
-            & " Where" _
-                & " Logfile = 'Application'" _
-                & " and EventCode = '1315'" _
-                & " and Message LIKE '%Membership credential verification failed%" _
-                    & "Name to authenticate: " & strUser & "%'")
-    
-        WScript.Echo("Number of logon failure events (" & strServer & "): " _
-            & colEvents.Count)
-    
-        Dim objEvent
-        For Each objEvent In colEvents
-            WScript.Echo(objEvent.TimeGenerated)
-        Next
-    
-        WScript.Echo()
-    End Sub
+```
+Option Explicit
+
+If (WScript.Arguments.Count <> 1) Then
+    WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")    
+    WScript.Quit(1)
+End If
+
+Dim strUser
+strUser = WScript.Arguments(0)
+
+WScript.Echo("Logon failure events for user: " & strUser)
+
+Call ListLogonFailureEventsForUser(strUser, "WCOSLSC0")
+Call ListLogonFailureEventsForUser(strUser, "WCOSLSC9")
+
+Sub ListLogonFailureEventsForUser(ByVal strUser, ByVal strServer)
+
+    Dim objWMIService
+    Set objWMIService = GetObject("winmgmts:" _
+        & "{impersonationLevel=impersonate}!\\" & strServer & "\root\cimv2")
+
+    Dim colEvents
+    Set colEvents = objWMIService.ExecQuery _
+        ("Select * from Win32_NTLogEvent" _
+        & " Where" _
+            & " Logfile = 'Application'" _
+            & " and EventCode = '1315'" _
+            & " and Message LIKE '%Membership credential verification failed%" _
+                & "Name to authenticate: " & strUser & "%'")
+
+    WScript.Echo("Number of logon failure events (" & strServer & "): " _
+        & colEvents.Count)
+
+    Dim objEvent
+    For Each objEvent In colEvents
+        WScript.Echo(objEvent.TimeGenerated)
+    Next
+
+    WScript.Echo()
+End Sub
+```
 

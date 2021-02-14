@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx)
@@ -33,8 +33,10 @@ The FORCE\_OPTION environment variable is subsequently included in the line that
 
 
 
-    %SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url 
-    %FABRIKAM_PORTAL_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
+```
+%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url 
+%FABRIKAM_PORTAL_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
+```
 
 
 
@@ -72,10 +74,10 @@ Also note that the specified WSP was actually deployed, which means the features
 Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION environment  variable and then redeploy the solutions:
 
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>set FORCE_OPTION=-force</kbd>  
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>"Retract Solutions.cmd"</kbd>  
-...  
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>"Deploy Solutions.cmd"</kbd>  
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>set FORCE_OPTION=-force</kbd>
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>"Retract Solutions.cmd"</kbd>
+...
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;<kbd>"Deploy Solutions.cmd"</kbd>
 ...
 
 

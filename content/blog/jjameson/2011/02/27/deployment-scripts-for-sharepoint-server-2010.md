@@ -10,8 +10,8 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx)
 > 
@@ -41,83 +41,85 @@ This script is used to create the Fabrikam Web application in SharePoint:
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function Main()
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function Main()
+{
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        Write-Host "Creating Web application ($webAppUrl)..."
-    
-        $hostHeader = $webAppUrl.Substring("http://".Length)
-    
-        $webAppName = "SharePoint - " + $hostHeader + "80"
-    
-        $membershipProviderName = "FabrikamSqlMembershipProvider"
-        $roleProviderName = "FabrikamSqlRoleProvider"
-        $contentDatabaseName = "WSS_Content_FabrikamDemo"
-        $appPoolName = $webAppName
-    
-        $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam"
-    
-        if (($webAppUrl -eq "http://www-local.fabrikam.com") -or
-            ($webAppUrl -eq "http://www-dev.fabrikam.com"))
-        {
-        	Write-Debug "Overriding variables for Development environment..."
-            $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam-dev"
-        }
-        elseif ($webAppUrl -eq "http://www-test.fabrikam.com")
-        {
-        	Write-Debug "Overriding variables for Test environment..."
-            $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam-test"
-        }
-    
-        Write-Debug "hostHeader: $hostHeader"
-        Write-Debug "webAppName: $webAppName"
-        Write-Debug "appPoolName: $appPoolName"
-        Write-Debug "appPoolUserName: $appPoolUserName"
-        Write-Debug "contentDatabaseName: $contentDatabaseName"
-    
-        Write-Debug "Get service account for application pool ($appPoolUserName)..."
-        $appPoolAccount = Get-SPManagedAccount -Identity $appPoolUserName `
-            -Debug:$false -EA 0
-    
-        If ($appPoolAccount -eq $null)
-        {
-            Write-Host "Registering managed account ($appPoolUserName)..."
-    
-            Write-Debug "Get credential ($appPoolUserName)..."
-            $appPoolCredential = Get-Credential $appPoolUserName
-    
-            $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential `
-                -Debug:$false
-        } 
-    
-        $windowsAuthProvider = New-SPAuthenticationProvider -Debug:$false
-        $formsAuthProvider = New-SPAuthenticationProvider `
-            -ASPNETMembershipProvider $membershipProviderName `
-            -ASPNETRoleProviderName $roleProviderName `
-            -Debug:$false
-    
-        $authProviders = $windowsAuthProvider, $formsAuthProvider
-    
-        $webApp = New-SPWebApplication -Name $webAppName -AllowAnonymousAccess `
-            -ApplicationPool $appPoolName -AuthenticationMethod "NTLM" `
-            -ApplicationPoolAccount $appPoolAccount -Url $webAppUrl -Port 80 `
-            -AuthenticationProvider $authProviders -HostHeader $hostHeader `
-            -DatabaseName $contentDatabaseName `
-            -Debug:$false
-    
-        Write-Host -Fore Green "Successfully created Web application ($webAppUrl)."
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    Main
+
+    Write-Host "Creating Web application ($webAppUrl)..."
+
+    $hostHeader = $webAppUrl.Substring("http://".Length)
+
+    $webAppName = "SharePoint - " + $hostHeader + "80"
+
+    $membershipProviderName = "FabrikamSqlMembershipProvider"
+    $roleProviderName = "FabrikamSqlRoleProvider"
+    $contentDatabaseName = "WSS_Content_FabrikamDemo"
+    $appPoolName = $webAppName
+
+    $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam"
+
+    if (($webAppUrl -eq "http://www-local.fabrikam.com") -or
+        ($webAppUrl -eq "http://www-dev.fabrikam.com"))
+    {
+    	Write-Debug "Overriding variables for Development environment..."
+        $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam-dev"
+    }
+    elseif ($webAppUrl -eq "http://www-test.fabrikam.com")
+    {
+    	Write-Debug "Overriding variables for Test environment..."
+        $appPoolUserName = $env:USERDOMAIN + "\svc-web-fabrikam-test"
+    }
+
+    Write-Debug "hostHeader: $hostHeader"
+    Write-Debug "webAppName: $webAppName"
+    Write-Debug "appPoolName: $appPoolName"
+    Write-Debug "appPoolUserName: $appPoolUserName"
+    Write-Debug "contentDatabaseName: $contentDatabaseName"
+
+    Write-Debug "Get service account for application pool ($appPoolUserName)..."
+    $appPoolAccount = Get-SPManagedAccount -Identity $appPoolUserName `
+        -Debug:$false -EA 0
+
+    If ($appPoolAccount -eq $null)
+    {
+        Write-Host "Registering managed account ($appPoolUserName)..."
+
+        Write-Debug "Get credential ($appPoolUserName)..."
+        $appPoolCredential = Get-Credential $appPoolUserName
+
+        $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential `
+            -Debug:$false
+    } 
+
+    $windowsAuthProvider = New-SPAuthenticationProvider -Debug:$false
+    $formsAuthProvider = New-SPAuthenticationProvider `
+        -ASPNETMembershipProvider $membershipProviderName `
+        -ASPNETRoleProviderName $roleProviderName `
+        -Debug:$false
+
+    $authProviders = $windowsAuthProvider, $formsAuthProvider
+
+    $webApp = New-SPWebApplication -Name $webAppName -AllowAnonymousAccess `
+        -ApplicationPool $appPoolName -AuthenticationMethod "NTLM" `
+        -ApplicationPoolAccount $appPoolAccount -Url $webAppUrl -Port 80 `
+        -AuthenticationProvider $authProviders -HostHeader $hostHeader `
+        -DatabaseName $contentDatabaseName `
+        -Debug:$false
+
+    Write-Host -Fore Green "Successfully created Web application ($webAppUrl)."
+}
+
+Main
+```
 
 
 
@@ -135,52 +137,54 @@ At this point, we have a brand new Web application but it doesn't contain any si
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function CreateSiteCollection(
-        [string] $siteUrl = $(Throw "Value cannot be null: siteUrl"),
-        [string] $ownerAlias = $(Throw "Value cannot be null: ownerAlias"),
-        [string] $siteName = $(Throw "Value cannot be null: siteName"),
-        [string] $siteTemplate = $(Throw "Value cannot be null: siteTemplate"),
-        [string] $siteDescription)
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function CreateSiteCollection(
+    [string] $siteUrl = $(Throw "Value cannot be null: siteUrl"),
+    [string] $ownerAlias = $(Throw "Value cannot be null: ownerAlias"),
+    [string] $siteName = $(Throw "Value cannot be null: siteName"),
+    [string] $siteTemplate = $(Throw "Value cannot be null: siteTemplate"),
+    [string] $siteDescription)
+{
+    Write-Host "Creating site collection ($siteUrl)..."
+
+    Write-Debug "ownerAlias: $ownerAlias"
+    Write-Debug "siteName: $siteName"
+    Write-Debug "siteTemplate: $siteTemplate"
+    Write-Debug "siteDescription: $siteDescription"
+
+    New-SPSite $siteUrl -OwnerAlias $ownerAlias -Name $siteName `
+        -Description $siteDescription -Template $siteTemplate -Debug:$false > $null
+
+    Write-Host -Fore Green "Successfully created site collection ($siteUrl)."
+}
+
+function Main
+{
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        Write-Host "Creating site collection ($siteUrl)..."
-    
-        Write-Debug "ownerAlias: $ownerAlias"
-        Write-Debug "siteName: $siteName"
-        Write-Debug "siteTemplate: $siteTemplate"
-        Write-Debug "siteDescription: $siteDescription"
-    
-        New-SPSite $siteUrl -OwnerAlias $ownerAlias -Name $siteName `
-            -Description $siteDescription -Template $siteTemplate -Debug:$false > $null
-    
-        Write-Host -Fore Green "Successfully created site collection ($siteUrl)."
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    function Main
-    {
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        Write-Debug "webAppUrl: $webAppUrl"
-    
-        $ownerAlias = $env:USERDOMAIN + "\" + $env:USERNAME
-    
-        # Create default site collection (i.e. the "root Web")
-        $siteUrl = $webAppUrl + "/"
-        $siteName = "Fabrikam"
-        $siteTemplate = "BLANKINTERNETCONTAINER#0"
-        $siteDescription = "Public Internet site for Fabrikam Technologies"
-        CreateSiteCollection $siteUrl $ownerAlias $siteName $siteTemplate `
-            $siteDescription
-    }
-    
-    Main
+
+    Write-Debug "webAppUrl: $webAppUrl"
+
+    $ownerAlias = $env:USERDOMAIN + "\" + $env:USERNAME
+
+    # Create default site collection (i.e. the "root Web")
+    $siteUrl = $webAppUrl + "/"
+    $siteName = "Fabrikam"
+    $siteTemplate = "BLANKINTERNETCONTAINER#0"
+    $siteDescription = "Public Internet site for Fabrikam Technologies"
+    CreateSiteCollection $siteUrl $ownerAlias $siteName $siteTemplate `
+        $siteDescription
+}
+
+Main
+```
 
 
 
@@ -194,57 +198,59 @@ For the Fabrikam site, most of the content will be available to anonymous users.
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function EnableAnonymousAccess(
-        [Microsoft.SharePoint.SPWeb] $web = $(Throw "Value cannot be null: web"))
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function EnableAnonymousAccess(
+    [Microsoft.SharePoint.SPWeb] $web = $(Throw "Value cannot be null: web"))
+{
+    Write-Host "Enabling anonymous access on site ($($web.Url))..."
+
+    $anonymousPermissionMask =
+        [Microsoft.SharePoint.SPBasePermissions]::Open `
+        -bor [Microsoft.SharePoint.SPBasePermissions]::ViewFormPages `
+        -bor [Microsoft.SharePoint.SPBasePermissions]::ViewListItems `
+        -bor [Microsoft.SharePoint.SPBasePermissions]::ViewPages `
+        -bor [Microsoft.SharePoint.SPBasePermissions]::ViewVersions
+
+    If ($web.AnonymousPermMask64 -eq $anonymousPermissionMask)
     {
-        Write-Host "Enabling anonymous access on site ($($web.Url))..."
-    
-        $anonymousPermissionMask =
-            [Microsoft.SharePoint.SPBasePermissions]::Open `
-            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewFormPages `
-            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewListItems `
-            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewPages `
-            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewVersions
-    
-        If ($web.AnonymousPermMask64 -eq $anonymousPermissionMask)
-        {
-            Write-Host `
-                "Anonymous access is already enabled on the site ($($web.Url))."
-                
-            return;
-        }
-    
-        If ($web.HasUniqueRoleAssignments -eq $false)
-        {
-            $web.BreakRoleInheritance($true);
-        }
-    
-        $web.AnonymousPermMask64 = $anonymousPermissionMask;
-        $web.Update();
-        
-        Write-Host -Fore Green `
-            "Successfully enabled anonymous access on site ($($web.Url))."
+        Write-Host `
+            "Anonymous access is already enabled on the site ($($web.Url))."
+            
+        return;
     }
-    
-    function Main()
+
+    If ($web.HasUniqueRoleAssignments -eq $false)
     {
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        $webUrl = $webAppUrl + "/"
-        $web = Get-SPWeb $webUrl -Debug:$false
-        EnableAnonymousAccess $web
-        $web.Dispose()
+        $web.BreakRoleInheritance($true);
     }
+
+    $web.AnonymousPermMask64 = $anonymousPermissionMask;
+    $web.Update();
     
-    Main
+    Write-Host -Fore Green `
+        "Successfully enabled anonymous access on site ($($web.Url))."
+}
+
+function Main()
+{
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
+    {
+        $webAppUrl = "http://www.fabrikam.com"
+    }
+
+    $webUrl = $webAppUrl + "/"
+    $web = Get-SPWeb $webUrl -Debug:$false
+    EnableAnonymousAccess $web
+    $web.Dispose()
+}
+
+Main
+```
 
 
 
@@ -264,152 +270,154 @@ It takes care of adding the appropriate user policies on the Web application (**
 
 
 
-    $ErrorActionPreference = "Stop"
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function ConfigureObjectCacheUserAccounts(
+    [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
+    [string] $portalSuperUserAccount =
+        $(Throw "Value cannot be null: portalSuperUserAccount"),
+    [string] $portalSuperReaderAccount =
+        $(Throw "Value cannot be null: portalSuperReaderAccount"))
+{
+    Write-Host ("Configuring object cache user accounts for Web application" `
+        + " ($webAppUrl)...")
+
+    Write-Debug "portalSuperUserAccount: $portalSuperUserAccount"
+    Write-Debug "portalSuperReaderAccount: $portalSuperReaderAccount"
+
+    $webApp = Get-SPWebApplication -Identity $webAppUrl -Debug:$false
+
+    SetWebAppUserPolicy $webApp $portalSuperUserAccount "Full Control"
+    SetWebAppProperty $webApp "portalsuperuseraccount" $portalSuperUserAccount
+
+    SetWebAppUserPolicy $webApp $portalSuperReaderAccount "Full Read"
+    SetWebAppProperty $webApp "portalsuperreaderaccount" $portalSuperReaderAccount
+
+    Write-Host -Fore Green ("Successfully configured object cache user accounts" `
+        + " for Web application ($webAppUrl).")
+}
+
+function GetUserDisplayName(
+    [string] $userName = $(Throw "Value cannot be null: userName"))
+{
+    Write-Debug "Getting display name for user ($userName)..."
+
+    $userNameParts = $userName.Split("\")
+    $samAccountName = $userNameParts[1]
     
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+    $filter = "(&(objectCategory=User)(samAccountName=$samAccountName))"
+
+    $searcher = New-Object System.DirectoryServices.DirectorySearcher
+    $searcher.Filter = $filter
+
+    $path = $searcher.FindOne()
     
-    function ConfigureObjectCacheUserAccounts(
-        [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
-        [string] $portalSuperUserAccount =
-            $(Throw "Value cannot be null: portalSuperUserAccount"),
-        [string] $portalSuperReaderAccount =
-            $(Throw "Value cannot be null: portalSuperReaderAccount"))
+    If ($path -eq $null)
     {
-        Write-Host ("Configuring object cache user accounts for Web application" `
-            + " ($webAppUrl)...")
-    
-        Write-Debug "portalSuperUserAccount: $portalSuperUserAccount"
-        Write-Debug "portalSuperReaderAccount: $portalSuperReaderAccount"
-    
-        $webApp = Get-SPWebApplication -Identity $webAppUrl -Debug:$false
-    
-        SetWebAppUserPolicy $webApp $portalSuperUserAccount "Full Control"
-        SetWebAppProperty $webApp "portalsuperuseraccount" $portalSuperUserAccount
-    
-        SetWebAppUserPolicy $webApp $portalSuperReaderAccount "Full Read"
-        SetWebAppProperty $webApp "portalsuperreaderaccount" $portalSuperReaderAccount
-    
-        Write-Host -Fore Green ("Successfully configured object cache user accounts" `
-            + " for Web application ($webAppUrl).")
+        Throw "User not found ($userName)."
     }
     
-    function GetUserDisplayName(
-        [string] $userName = $(Throw "Value cannot be null: userName"))
+    $user = $path.GetDirectoryEntry()
+    
+    Write-Debug "Found display name for user ($($user.DisplayName))."
+    return $user.DisplayName
+}
+
+function SetWebAppProperty(
+    [Microsoft.SharePoint.Administration.SPWebApplication] $webApp =
+         $(Throw "Value cannot be null: webApp"),
+    [string] $propertyName = $(Throw "Value cannot be null: propertyName"),
+    [string] $propertyValue)
+{
+    Write-Debug ("Setting property ($propertyName) on Web application" `
+        + " ($($webApp.Url)...")
+        
+    If ($webApp.Properties[$propertyName] -eq $propertyValue)
     {
-        Write-Debug "Getting display name for user ($userName)..."
-    
-        $userNameParts = $userName.Split("\")
-        $samAccountName = $userNameParts[1]
-        
-        $filter = "(&(objectCategory=User)(samAccountName=$samAccountName))"
-    
-        $searcher = New-Object System.DirectoryServices.DirectorySearcher
-        $searcher.Filter = $filter
-    
-        $path = $searcher.FindOne()
-        
-        If ($path -eq $null)
-        {
-            Throw "User not found ($userName)."
-        }
-        
-        $user = $path.GetDirectoryEntry()
-        
-        Write-Debug "Found display name for user ($($user.DisplayName))."
-        return $user.DisplayName
+        Write-Debug ("The Web application property ($propertyName) is already set" `
+            + " to the expected value ($propertyValue).")
+
+        return;
     }
     
-    function SetWebAppProperty(
-        [Microsoft.SharePoint.Administration.SPWebApplication] $webApp =
-             $(Throw "Value cannot be null: webApp"),
-        [string] $propertyName = $(Throw "Value cannot be null: propertyName"),
-        [string] $propertyValue)
+    $webApp.Properties[$propertyName] = $propertyValue
+    $webApp.Update()
+    
+    Write-Debug ("Successfully set property ($propertyName) on Web" `
+        + " application ($($webApp.Url)) to '$propertyValue'.")
+    
+}
+    
+function SetWebAppUserPolicy(
+    [Microsoft.SharePoint.Administration.SPWebApplication] $webApp =
+        $(Throw "Value cannot be null: webApp"),
+    [string] $userName = $(Throw "Value cannot be null: userName"),
+    [string] $permissions = $(Throw "Value cannot be null: permissions"))
+{
+    Write-Debug ("Setting policy ($permissions) for user" `
+        + " ($userName) on Web application ($($webApp.Url))...")
+    
+    [Microsoft.SharePoint.Administration.SPPolicyRole] $policyRole =
+        $webApp.PolicyRoles | where {$_.Name -eq $permissions}
+        
+    if ($policyRole -eq $null)
     {
-        Write-Debug ("Setting property ($propertyName) on Web application" `
-            + " ($($webApp.Url)...")
-            
-        If ($webApp.Properties[$propertyName] -eq $propertyValue)
-        {
-            Write-Debug ("The Web application property ($propertyName) is already set" `
-                + " to the expected value ($propertyValue).")
-    
-            return;
-        }
-        
-        $webApp.Properties[$propertyName] = $propertyValue
-        $webApp.Update()
-        
-        Write-Debug ("Successfully set property ($propertyName) on Web" `
-            + " application ($($webApp.Url)) to '$propertyValue'.")
-        
+        Throw "Invalid permissions ($permissions)."
     }
-        
-    function SetWebAppUserPolicy(
-        [Microsoft.SharePoint.Administration.SPWebApplication] $webApp =
-            $(Throw "Value cannot be null: webApp"),
-        [string] $userName = $(Throw "Value cannot be null: userName"),
-        [string] $permissions = $(Throw "Value cannot be null: permissions"))
+
+    $userDisplayName = GetUserDisplayName $userName
+    
+    [Microsoft.SharePoint.Administration.SPPolicyCollection] $policies =
+        $webApp.Policies
+
+    [Microsoft.SharePoint.Administration.SPPolicy] $policy = $policies.Add(
+        $userName,
+        $userDisplayName)
+    
+    $policy.PolicyRoleBindings.Add($policyRole)
+    $webApp.Update()
+    
+    Write-Debug ("Successfully added policy ($permissions) for user" `
+        + " ($userName) to Web application ($($webApp.Url))...")
+}
+
+function Main()
+{
+    $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu"
+    $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr"
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        Write-Debug ("Setting policy ($permissions) for user" `
-            + " ($userName) on Web application ($($webApp.Url))...")
-        
-        [Microsoft.SharePoint.Administration.SPPolicyRole] $policyRole =
-            $webApp.PolicyRoles | where {$_.Name -eq $permissions}
-            
-        if ($policyRole -eq $null)
-        {
-            Throw "Invalid permissions ($permissions)."
-        }
-    
-        $userDisplayName = GetUserDisplayName $userName
-        
-        [Microsoft.SharePoint.Administration.SPPolicyCollection] $policies =
-            $webApp.Policies
-    
-        [Microsoft.SharePoint.Administration.SPPolicy] $policy = $policies.Add(
-            $userName,
-            $userDisplayName)
-        
-        $policy.PolicyRoleBindings.Add($policyRole)
-        $webApp.Update()
-        
-        Write-Debug ("Successfully added policy ($permissions) for user" `
-            + " ($userName) to Web application ($($webApp.Url))...")
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    function Main()
+
+    Write-Debug "webAppUrl: $webAppUrl"
+
+    if (($webAppUrl -eq "http://www-local.fabrikam.com") -or
+        ($webAppUrl -eq "http://www-dev.fabrikam.com"))
     {
-        $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu"
-        $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr"
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        Write-Debug "webAppUrl: $webAppUrl"
-    
-        if (($webAppUrl -eq "http://www-local.fabrikam.com") -or
-            ($webAppUrl -eq "http://www-dev.fabrikam.com"))
-        {
-            Write-Debug "Overriding variables for Development environment..."
-            $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu-dev"
-            $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr-dev"
-        }
-        elseif ($webAppUrl -eq "http://www-test.fabrikam.com")
-        {
-            Write-Debug "Overriding variables for Test environment..."
-            $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu-test"
-            $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr-test"
-        }
-    
-        ConfigureObjectCacheUserAccounts $webAppUrl $portalSuperUserAccount `
-            $portalSuperReaderAccount
-    
+        Write-Debug "Overriding variables for Development environment..."
+        $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu-dev"
+        $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr-dev"
     }
-    
-    Main
+    elseif ($webAppUrl -eq "http://www-test.fabrikam.com")
+    {
+        Write-Debug "Overriding variables for Test environment..."
+        $portalSuperUserAccount = $env:USERDOMAIN + "\svc-sp-psu-test"
+        $portalSuperReaderAccount = $env:USERDOMAIN + "\svc-sp-psr-test"
+    }
+
+    ConfigureObjectCacheUserAccounts $webAppUrl $portalSuperUserAccount `
+        $portalSuperReaderAccount
+
+}
+
+Main
+```
 
 
 
@@ -427,39 +435,41 @@ The following script ensures the custom event source is registered.
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Function AddEventLogSource(
-        [string] $source = $(Throw "Value cannot be null: source"))
+```
+$ErrorActionPreference = "Stop"
+
+Function AddEventLogSource(
+    [string] $source = $(Throw "Value cannot be null: source"))
+{
+    $source = $source.Trim()
+
+    If ([string]::IsNullOrEmpty($source) -eq $true)
     {
-        $source = $source.Trim()
+        Throw "The name of the event source is required."
+    }
     
-        If ([string]::IsNullOrEmpty($source) -eq $true)
-        {
-            Throw "The name of the event source is required."
-        }
+    $sourceExists = [System.Diagnostics.EventLog]::SourceExists($source)
+    If ($sourceExists -eq $true)
+    {
+        Write-Host "The event source ($source) already exists."
+    }
+    Else
+    {
+        Write-Host "Creating event source ($source)..."
         
-        $sourceExists = [System.Diagnostics.EventLog]::SourceExists($source)
-        If ($sourceExists -eq $true)
-        {
-            Write-Host "The event source ($source) already exists."
-        }
-        Else
-        {
-            Write-Host "Creating event source ($source)..."
-            
-            [System.Diagnostics.EventLog]::CreateEventSource($source, "Application")
-            
-            Write-Host -Fore Green "Successfully created event source ($source)."
-        }
+        [System.Diagnostics.EventLog]::CreateEventSource($source, "Application")
+        
+        Write-Host -Fore Green "Successfully created event source ($source)."
     }
-    
-    function Main
-    {
-        AddEventLogSource "Fabrikam Demo Site"
-    }
-    
-    Main
+}
+
+function Main
+{
+    AddEventLogSource "Fabrikam Demo Site"
+}
+
+Main
+```
 
 
 
@@ -483,70 +493,72 @@ I found Lauri's approach to be invaluable for isolating the AppDomain that loads
 
 
 
-    param(
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
-    
-    # When a solution is added to SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+```
+param(
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a solution is added to SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function AddSolution(
+    [string] $solutionPath = $(Throw "Value cannot be null: solutionPath"))
+{
+    Write-Host "Adding solution ($solutionPath)..."
+
+    Resolve-Path $solutionPath | Add-SPSolution -Debug:$false > $null
+
+    Write-Host -Fore Green "Successfully added solution ($solutionPath)."
+}
+
+function Main()
+{
+    Write-Host "Adding solutions..."
+
+    $buildConfiguration = $env:FABRIKAM_BUILD_CONFIGURATION
+    If ($buildConfiguration -eq $null)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
-        return
-    }
-    
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+        $buildConfiguration = "Release"
+    }Write-Debug "buildConfiguration: $buildConfiguration"
+
+    # For desktop builds, the WSP is created in the
+    # ..\..\Web\bin\{Debug|Release} folder.
+    # However, with Team Foundation Build, the WSP is created in the
+    # $(BinariesRoot)\{Debug|Release} folder.    
+    $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
+    If ((Test-Path $solutionFile) -eq $false)
     {
-        $DebugPreference = "Continue"
+        $solutionFile = "..\..\$buildConfiguration\Fabrikam.Demo.Web.wsp"
     }
-    
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function AddSolution(
-        [string] $solutionPath = $(Throw "Value cannot be null: solutionPath"))
-    {
-        Write-Host "Adding solution ($solutionPath)..."
-    
-        Resolve-Path $solutionPath | Add-SPSolution -Debug:$false > $null
-    
-        Write-Host -Fore Green "Successfully added solution ($solutionPath)."
-    }
-    
-    function Main()
-    {
-        Write-Host "Adding solutions..."
-    
-        $buildConfiguration = $env:FABRIKAM_BUILD_CONFIGURATION
-        If ($buildConfiguration -eq $null)
-        {
-            $buildConfiguration = "Release"
-        }Write-Debug "buildConfiguration: $buildConfiguration"
-    
-        # For desktop builds, the WSP is created in the
-        # ..\..\Web\bin\{Debug|Release} folder.
-        # However, with Team Foundation Build, the WSP is created in the
-        # $(BinariesRoot)\{Debug|Release} folder.    
-        $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
-        If ((Test-Path $solutionFile) -eq $false)
-        {
-            $solutionFile = "..\..\$buildConfiguration\Fabrikam.Demo.Web.wsp"
-        }
-    
-        AddSolution $solutionFile
-    }
-    
-    Main
+
+    AddSolution $solutionFile
+}
+
+Main
+```
 
 
 
@@ -568,95 +580,97 @@ Note that in a SharePoint farm comprised of multiple servers, this deployment mu
 
 
 
-    param(
-        [switch] $force,
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
+```
+param(
+    [switch] $force,
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a solution is deployed to SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"    
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
     
-    # When a solution is deployed to SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function DeploySolution(
+    [string] $solutionName = $(Throw "Value cannot be null: solutionName"),
+    [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
+    [bool] $force,
+    [bool] $local)
+{
+    Write-Host ("Deploying solution ($solutionName) to Web application" `
+        + " ($webAppUrl)...")
+    
+    If ($force -eq $true)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"    
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
-        return
+        Write-Debug "The solution deployment will be forced."
     }
     
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+    If ($local -eq $true)
     {
-        $DebugPreference = "Continue"
+        Write-Debug ("The solution will be deployed locally (bypassing" `
+            + " SharePoint timer job).")
     }
-        
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function DeploySolution(
-        [string] $solutionName = $(Throw "Value cannot be null: solutionName"),
-        [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
-        [bool] $force,
-        [bool] $local)
+
+    Install-SPSolution $solutionName -GACDeployment `
+        -WebApplication $webAppUrl -Force:([bool]::Parse($force)) `
+        -Local:([bool]::Parse($local)) -Confirm:$false -Debug:$false
+
+    # If the deployment was performed using a SharePoint timer job, then wait
+    # for the timer job to finish
+    If (-not $local)
     {
-        Write-Host ("Deploying solution ($solutionName) to Web application" `
-            + " ($webAppUrl)...")
-        
-        If ($force -eq $true)
-        {
-            Write-Debug "The solution deployment will be forced."
-        }
-        
-        If ($local -eq $true)
-        {
-            Write-Debug ("The solution will be deployed locally (bypassing" `
-                + " SharePoint timer job).")
-        }
-    
-        Install-SPSolution $solutionName -GACDeployment `
-            -WebApplication $webAppUrl -Force:([bool]::Parse($force)) `
-            -Local:([bool]::Parse($local)) -Confirm:$false -Debug:$false
-    
-        # If the deployment was performed using a SharePoint timer job, then wait
-        # for the timer job to finish
-        If (-not $local)
-        {
-        	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionName
-        }
-    
-        Write-Host -Fore Green ("Successfully deployed solution ($solutionName)" `
-            + " to Web application ($webAppUrl).")
+    	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionName
     }
-    
-    function Main(
-        [bool] $force)
+
+    Write-Host -Fore Green ("Successfully deployed solution ($solutionName)" `
+        + " to Web application ($webAppUrl).")
+}
+
+function Main(
+    [bool] $force)
+{
+    Write-Host "Deploying solutions..."
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        Write-Host "Deploying solutions..."
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        [bool] $local = $false
-    
-        If (($webAppUrl -eq "http://www-local.fabrikam.com") `
-        	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
-        {
-            $local = $true
-        }
-    
-        DeploySolution "Fabrikam.Demo.Web.wsp" $webAppUrl $force $local
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    Main $force
+
+    [bool] $local = $false
+
+    If (($webAppUrl -eq "http://www-local.fabrikam.com") `
+    	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
+    {
+        $local = $true
+    }
+
+    DeploySolution "Fabrikam.Demo.Web.wsp" $webAppUrl $force $local
+}
+
+Main $force
+```
 
 
 
@@ -672,88 +686,90 @@ Here's a script that allows you to wait for either specific solution deployment 
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function WaitForSharePointTimerJobToFinish([Microsoft.SharePoint.Administration.SPJobDefinition] $job)
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function WaitForSharePointTimerJobToFinish([Microsoft.SharePoint.Administration.SPJobDefinition] $job)
+{
+    If ($job -eq $null)
     {
-        If ($job -eq $null)
-        {
-            return
-        }
-        
-        $jobName = $job.Name
-        
-        Write-Host -NoNewLine ("Waiting for SharePoint timer job ($jobName) to" `
-            + " finish...")
-        
-        While ((Get-SPTimerJob $jobName -Debug:$false) -ne $null) 
-        {
-            Write-Host -NoNewLine "."
-            Start-Sleep -Seconds 5
-        }
-        Write-Host
-    
-        Write-Host "The SharePoint timer job ($jobName) has finished."
+        return
     }
     
-    function WaitForSolutionDeploymentJobsToFinish([string] $solutionName)
+    $jobName = $job.Name
+    
+    Write-Host -NoNewLine ("Waiting for SharePoint timer job ($jobName) to" `
+        + " finish...")
+    
+    While ((Get-SPTimerJob $jobName -Debug:$false) -ne $null) 
     {
-        Write-Debug "solutionName: $solutionName"
-    
-        If ([string]::IsNullOrEmpty($solutionName) -eq $true)
-        {
-            Write-Debug "Waiting for all solution deployment jobs to finish..."
-            $jobNameFilter = "*solution-deployment*"
-        }
-        Else
-        {
-            Write-Debug ("Waiting for solution deployment " `
-                + " ($solutionName) to finish...")
-    
-            $jobNameFilter = "*solution-deployment*$solutionName*"
-        }
-        
-        Write-Debug "jobNameFilter: $jobNameFilter"
-        
-        $jobs = Get-SPTimerJob -Debug:$false  | Where { $_.Name -like $jobNameFilter }
-        
-        If ($jobs -eq $null)
-        {
-            Write-Debug "No solution deployment jobs found"
-            return
-        }
-        
-        If ($jobs -is [Array])
-        {
-            Foreach ($job in $jobs)
-            {
-                WaitForSharePointTimerJobToFinish $job
-            }
-        }
-        Else
-        {
-            WaitForSharePointTimerJobToFinish $jobs
-        }
+        Write-Host -NoNewLine "."
+        Start-Sleep -Seconds 5
+    }
+    Write-Host
+
+    Write-Host "The SharePoint timer job ($jobName) has finished."
+}
+
+function WaitForSolutionDeploymentJobsToFinish([string] $solutionName)
+{
+    Write-Debug "solutionName: $solutionName"
+
+    If ([string]::IsNullOrEmpty($solutionName) -eq $true)
+    {
+        Write-Debug "Waiting for all solution deployment jobs to finish..."
+        $jobNameFilter = "*solution-deployment*"
+    }
+    Else
+    {
+        Write-Debug ("Waiting for solution deployment " `
+            + " ($solutionName) to finish...")
+
+        $jobNameFilter = "*solution-deployment*$solutionName*"
     }
     
-    function Main()
+    Write-Debug "jobNameFilter: $jobNameFilter"
+    
+    $jobs = Get-SPTimerJob -Debug:$false  | Where { $_.Name -like $jobNameFilter }
+    
+    If ($jobs -eq $null)
     {
-        If ($args.Count -eq 0)
-        {
-            WaitForSolutionDeploymentJobsToFinish
-        }
-        Else
-        {
-            Foreach ($solutionName in $args)
-            {            
-                WaitForSolutionDeploymentJobsToFinish $solutionName
-            }
-        }
+        Write-Debug "No solution deployment jobs found"
+        return
     }
     
-    Main $args
+    If ($jobs -is [Array])
+    {
+        Foreach ($job in $jobs)
+        {
+            WaitForSharePointTimerJobToFinish $job
+        }
+    }
+    Else
+    {
+        WaitForSharePointTimerJobToFinish $jobs
+    }
+}
+
+function Main()
+{
+    If ($args.Count -eq 0)
+    {
+        WaitForSolutionDeploymentJobsToFinish
+    }
+    Else
+    {
+        Foreach ($solutionName in $args)
+        {            
+            WaitForSolutionDeploymentJobsToFinish $solutionName
+        }
+    }
+}
+
+Main $args
+```
 
 
 
@@ -765,122 +781,124 @@ Also note that, like **Deploy Solutions.ps1**, the following script supports an 
 
 
 
-    param(
-        [switch] $force,
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
-    
-    # When a feature is activated in SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+```
+param(
+    [switch] $force,
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a feature is activated in SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function ActivateFeature(
+    [string] $featureName = $(Throw "Value cannot be null: featureName"),
+    [string] $siteUrl = "",
+    [bool] $force = $false)
+{
+    Write-Debug "Activating feature ($featureName)..."
+    Write-Debug "featureName: $featureName"
+
+    If ($force -eq $true)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
-        return
+        Write-Debug "The feature activation will be forced."
     }
-    
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+
+    $feature = Get-SPFeature $featureName -Debug:$false
+
+    If ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Farm)
     {
-        $DebugPreference = "Continue"
-    }
-    
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function ActivateFeature(
-        [string] $featureName = $(Throw "Value cannot be null: featureName"),
-        [string] $siteUrl = "",
-        [bool] $force = $false)
-    {
-        Write-Debug "Activating feature ($featureName)..."
-        Write-Debug "featureName: $featureName"
-    
-        If ($force -eq $true)
-        {
-            Write-Debug "The feature activation will be forced."
-        }
-    
-        $feature = Get-SPFeature $featureName -Debug:$false
-    
-        If ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Farm)
-        {
-            $feature = Get-SPFeature $featureName -Farm -Debug:$false -EA 0
-    
-            If ($feature -ne $null -and ($force -eq $false))
-            {
-                Write-Host "The feature ($featureName) is already activated on the farm."
-                return;
-            }
-    
-            Write-Host "Activating feature ($featureName) on farm..."
-    
-            Enable-SPFeature $featureName -Force:([bool]::Parse($force)) `
-                -Confirm:$false -Debug:$false
-    
-            Write-Host -Fore Green ("Successfully activated farm feature" `
-                + " ($featureName).")
-    
-            return
-        }
-        ElseIf ($feature.Scope -eq `
-            [Microsoft.SharePoint.SPFeatureScope]::WebApplication)
-        {
-            $feature = Get-SPFeature $featureName -WebApplication $siteUrl `
-                -Debug:$false -EA 0
-        }
-        ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Site)
-        {
-            $feature = Get-SPFeature $featureName -Site $siteUrl -Debug:$false -EA 0
-        }
-        ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Web)
-        {
-            $feature = Get-SPFeature $featureName -Web $siteUrl -Debug:$false -EA 0
-        }
-    
+        $feature = Get-SPFeature $featureName -Farm -Debug:$false -EA 0
+
         If ($feature -ne $null -and ($force -eq $false))
         {
-            Write-Host ("The feature ($featureName) is already activated on the site" `
-                + " ($siteUrl)...")
-    
+            Write-Host "The feature ($featureName) is already activated on the farm."
             return;
         }
-    
-        Write-Host "Activating feature ($featureName) on site ($siteUrl)..."
-    
-        Enable-SPFeature $featureName -Url $siteUrl `
-            -Force:([bool]::Parse($force)) -Confirm:$false -Debug:$false
-    
-        Write-Host -Fore Green ("Successfully activated feature ($featureName) on" `
-            + " site ($siteUrl).")
+
+        Write-Host "Activating feature ($featureName) on farm..."
+
+        Enable-SPFeature $featureName -Force:([bool]::Parse($force)) `
+            -Confirm:$false -Debug:$false
+
+        Write-Host -Fore Green ("Successfully activated farm feature" `
+            + " ($featureName).")
+
+        return
     }
-    
-    function Main()
+    ElseIf ($feature.Scope -eq `
+        [Microsoft.SharePoint.SPFeatureScope]::WebApplication)
     {
-        Write-Host "Activating features..."
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        $siteUrl = $webAppUrl + "/"
-    
-        ActivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
-        ActivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $force
-        ActivateFeature "Fabrikam.Demo.Web_HomeSiteConfiguration" $siteUrl $force
+        $feature = Get-SPFeature $featureName -WebApplication $siteUrl `
+            -Debug:$false -EA 0
     }
-    
-    Main
+    ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Site)
+    {
+        $feature = Get-SPFeature $featureName -Site $siteUrl -Debug:$false -EA 0
+    }
+    ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Web)
+    {
+        $feature = Get-SPFeature $featureName -Web $siteUrl -Debug:$false -EA 0
+    }
+
+    If ($feature -ne $null -and ($force -eq $false))
+    {
+        Write-Host ("The feature ($featureName) is already activated on the site" `
+            + " ($siteUrl)...")
+
+        return;
+    }
+
+    Write-Host "Activating feature ($featureName) on site ($siteUrl)..."
+
+    Enable-SPFeature $featureName -Url $siteUrl `
+        -Force:([bool]::Parse($force)) -Confirm:$false -Debug:$false
+
+    Write-Host -Fore Green ("Successfully activated feature ($featureName) on" `
+        + " site ($siteUrl).")
+}
+
+function Main()
+{
+    Write-Host "Activating features..."
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
+    {
+        $webAppUrl = "http://www.fabrikam.com"
+    }
+
+    $siteUrl = $webAppUrl + "/"
+
+    ActivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
+    ActivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $force
+    ActivateFeature "Fabrikam.Demo.Web_HomeSiteConfiguration" $siteUrl $force
+}
+
+Main
+```
 
 
 
@@ -896,128 +914,130 @@ If you've carefully examined the **Activate Features.ps1 **script, then there's 
 
 
 
-    param(
-        [switch] $force,
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
-    
-    # When a feature is deactivated in SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+```
+param(
+    [switch] $force,
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a feature is deactivated in SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function DeactivateFeature(
+    [string] $featureName = $(Throw "Value cannot be null: featureName"),
+    [string] $siteUrl = "",
+    [bool] $force = $false)
+{
+    Write-Debug "Deactivating feature ($featureName)..."
+    Write-Debug "siteUrl: $siteUrl"
+
+    If ($force -eq $true)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+        Write-Debug "The feature deactivation will be forced."
+    }
+    
+    $feature = Get-SPFeature $featureName -Debug:$false -EA 0 
+
+    If ($feature -eq $null)
+    {
+        Write-Warning "The specified feature ($featureName) was not found."
         return
     }
-    
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+
+    If ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Farm)
     {
-        $DebugPreference = "Continue"
-    }
-    
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function DeactivateFeature(
-        [string] $featureName = $(Throw "Value cannot be null: featureName"),
-        [string] $siteUrl = "",
-        [bool] $force = $false)
-    {
-        Write-Debug "Deactivating feature ($featureName)..."
-        Write-Debug "siteUrl: $siteUrl"
-    
-        If ($force -eq $true)
+        $feature = Get-SPFeature $featureName -Farm -Debug:$false -EA 0
+
+        If ($feature -eq $null)
         {
-            Write-Debug "The feature deactivation will be forced."
+            Write-Host "The feature ($featureName) is not activated on the farm."
+            return
         }
         
-        $feature = Get-SPFeature $featureName -Debug:$false -EA 0 
-    
-        If ($feature -eq $null)
-        {
-            Write-Warning "The specified feature ($featureName) was not found."
-            return
-        }
-    
-        If ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Farm)
-        {
-            $feature = Get-SPFeature $featureName -Farm -Debug:$false -EA 0
-    
-            If ($feature -eq $null)
-            {
-                Write-Host "The feature ($featureName) is not activated on the farm."
-                return
-            }
-            
-            Write-Host "Deactivating farm feature ($featureName)..."
-            
-            Disable-SPFeature $featureName -Force:([bool]::Parse($force)) `
-                -Confirm:$false -Debug:$false
-            
-            Write-Host -Fore Green ("Successfully deactivated farm feature" `
-                + " ($featureName).")
-            
-            return
-        }
-        ElseIf ($feature.Scope -eq `
-            [Microsoft.SharePoint.SPFeatureScope]::WebApplication)
-        {
-            $feature = Get-SPFeature $featureName -WebApplication $siteUrl `
-                -Debug:$false -EA 0
-        }
-        ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Site)
-        {
-            $feature = Get-SPFeature $featureName -Site $siteUrl -Debug:$false -EA 0
-        }
-        ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Web)
-        {
-            $feature = Get-SPFeature $featureName -Web $siteUrl -Debug:$false -EA 0
-        }
-    
-        If ($feature -eq $null)
-        {
-            Write-Host ("The feature ($featureName) is not activated on the site" `
-                + " ($siteUrl)...")
-    
-            return
-        }
-    
-        Write-Host "Deactivating feature ($featureName) on site ($siteUrl)..."
-    
-        Disable-SPFeature $featureName -Url $siteUrl -Force:([bool]::Parse($force)) `
+        Write-Host "Deactivating farm feature ($featureName)..."
+        
+        Disable-SPFeature $featureName -Force:([bool]::Parse($force)) `
             -Confirm:$false -Debug:$false
-        	
-        Write-Host -Fore Green ("Successfully deactivated feature ($featureName) on" `
-            + " site ($siteUrl).")
+        
+        Write-Host -Fore Green ("Successfully deactivated farm feature" `
+            + " ($featureName).")
+        
+        return
     }
-    
-    function Main(
-        [bool] $force)
+    ElseIf ($feature.Scope -eq `
+        [Microsoft.SharePoint.SPFeatureScope]::WebApplication)
     {
-        Write-Host "Deactivating features..."
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        $siteUrl = $webAppUrl + "/"
-    
-        DeactivateFeature "Fabrikam.Demo.Web_HomeSiteConfiguration" $siteUrl $force
-        DeactivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $forceDeactivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
+        $feature = Get-SPFeature $featureName -WebApplication $siteUrl `
+            -Debug:$false -EA 0
     }
-    
-    Main $force
+    ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Site)
+    {
+        $feature = Get-SPFeature $featureName -Site $siteUrl -Debug:$false -EA 0
+    }
+    ElseIf ($feature.Scope -eq [Microsoft.SharePoint.SPFeatureScope]::Web)
+    {
+        $feature = Get-SPFeature $featureName -Web $siteUrl -Debug:$false -EA 0
+    }
+
+    If ($feature -eq $null)
+    {
+        Write-Host ("The feature ($featureName) is not activated on the site" `
+            + " ($siteUrl)...")
+
+        return
+    }
+
+    Write-Host "Deactivating feature ($featureName) on site ($siteUrl)..."
+
+    Disable-SPFeature $featureName -Url $siteUrl -Force:([bool]::Parse($force)) `
+        -Confirm:$false -Debug:$false
+    	
+    Write-Host -Fore Green ("Successfully deactivated feature ($featureName) on" `
+        + " site ($siteUrl).")
+}
+
+function Main(
+    [bool] $force)
+{
+    Write-Host "Deactivating features..."
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
+    {
+        $webAppUrl = "http://www.fabrikam.com"
+    }
+
+    $siteUrl = $webAppUrl + "/"
+
+    DeactivateFeature "Fabrikam.Demo.Web_HomeSiteConfiguration" $siteUrl $force
+    DeactivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $forceDeactivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
+}
+
+Main $force
+```
 
 
 
@@ -1027,107 +1047,109 @@ After the features are deactivated, we are ready to retract the solution from th
 
 
 
-    param(
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
-    
-    # When a solution is retracted from SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+```
+param(
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a solution is retracted from SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function RetractSolution(
+    [string] $solutionName = $(Throw "Value cannot be null: solutionName"),
+    [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
+    [bool] $local)
+{
+    Write-Host ("Retracting solution ($solutionName) from Web application" `
+        + " ($webAppUrl)...")
+
+    If ($local -eq $true)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+        Write-Debug ("The solution will be retracted locally (bypassing" `
+            + " SharePoint timer job).")
+    }
+    
+    $webApp = Get-SPWebApplication $webAppUrl -Debug:$false
+
+    $solution = Get-SPSolution $solutionName -Debug:$false -EA 0
+
+    If ($solution -eq $null)
+    {
+        Write-Warning "The specified solution ($solutionName) was not found."
         return
     }
     
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+    $deployedWebApp = $solution.DeployedWebApplications |
+        Where { $_.Url -eq $webApp.Url }    
+    
+    If ($deployedWebApp -eq $null)
     {
-        $DebugPreference = "Continue"
+        Write-Host ("The solution ($solutionName) is not deployed to the" `
+            + " specified Web application ($webAppUrl).")
+
+        return;    
     }
     
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function RetractSolution(
-        [string] $solutionName = $(Throw "Value cannot be null: solutionName"),
-        [string] $webAppUrl = $(Throw "Value cannot be null: webAppUrl"),
-        [bool] $local)
+    Uninstall-SPSolution $solutionName -WebApplication $webAppUrl `
+    	-Local:([bool]::Parse($local)) -Confirm:$false -Debug:$false
+
+    # If the retraction was performed using a SharePoint timer job, then wait
+    # for the timer job to finish
+    If ($local -eq $false)
     {
-        Write-Host ("Retracting solution ($solutionName) from Web application" `
-            + " ($webAppUrl)...")
-    
-        If ($local -eq $true)
-        {
-            Write-Debug ("The solution will be retracted locally (bypassing" `
-                + " SharePoint timer job).")
-        }
-        
-        $webApp = Get-SPWebApplication $webAppUrl -Debug:$false
-    
-        $solution = Get-SPSolution $solutionName -Debug:$false -EA 0
-    
-        If ($solution -eq $null)
-        {
-            Write-Warning "The specified solution ($solutionName) was not found."
-            return
-        }
-        
-        $deployedWebApp = $solution.DeployedWebApplications |
-            Where { $_.Url -eq $webApp.Url }    
-        
-        If ($deployedWebApp -eq $null)
-        {
-            Write-Host ("The solution ($solutionName) is not deployed to the" `
-                + " specified Web application ($webAppUrl).")
-    
-            return;    
-        }
-        
-        Uninstall-SPSolution $solutionName -WebApplication $webAppUrl `
-        	-Local:([bool]::Parse($local)) -Confirm:$false -Debug:$false
-    
-        # If the retraction was performed using a SharePoint timer job, then wait
-        # for the timer job to finish
-        If ($local -eq $false)
-        {
-        	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionName
-        }
-    
-        Write-Host -Fore Green ("Successfully retracted solution ($solutionName)" `
-            + " from Web application ($webAppUrl).")
+    	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionName
     }
-    
-    function Main()
+
+    Write-Host -Fore Green ("Successfully retracted solution ($solutionName)" `
+        + " from Web application ($webAppUrl).")
+}
+
+function Main()
+{
+    Write-Host "Retracting solutions..."
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        Write-Host "Retracting solutions..."
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        $local = $false
-    
-        If (($webAppUrl -eq "http://www-local.fabrikam.com") `
-        	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
-        {
-            $local = $true
-        }
-    
-        RetractSolution "Fabrikam.Demo.Web.wsp" $webAppUrl $local
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    Main
+
+    $local = $false
+
+    If (($webAppUrl -eq "http://www-local.fabrikam.com") `
+    	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
+    {
+        $local = $true
+    }
+
+    RetractSolution "Fabrikam.Demo.Web.wsp" $webAppUrl $local
+}
+
+Main
+```
 
 
 
@@ -1137,41 +1159,43 @@ Lastly, it's time to delete the old solution from the SharePoint farm...
 
 
 
-    # When a solution is deleted from SharePoint, the corresponding assembly is
-    # *not* loaded into the PowerShell AppDomain. Consequently, there is no reason
-    # to start a new PowerShell instance when running this script (unlike the
-    # "Add", "Deploy", "Activate", "Deactivate", "Retract", and "Upgrade" scripts).
-    
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function DeleteSolution(
-        [string] $solutionName = $(Throw "Value cannot be null: solutionName"))
+```
+# When a solution is deleted from SharePoint, the corresponding assembly is
+# *not* loaded into the PowerShell AppDomain. Consequently, there is no reason
+# to start a new PowerShell instance when running this script (unlike the
+# "Add", "Deploy", "Activate", "Deactivate", "Retract", and "Upgrade" scripts).
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function DeleteSolution(
+    [string] $solutionName = $(Throw "Value cannot be null: solutionName"))
+{
+    Write-Host "Deleting solution ($solutionName)..."
+
+    $solution = Get-SPSolution $solutionName -EA 0 -Debug:$false
+
+    If ($solution -eq $null)
     {
-        Write-Host "Deleting solution ($solutionName)..."
-    
-        $solution = Get-SPSolution $solutionName -EA 0 -Debug:$false
-    
-        If ($solution -eq $null)
-        {
-            Write-Warning "The specified solution ($solutionName) was not found."
-            return
-        }
-    
-        Remove-SPSolution $solutionName -Confirm:$false -Debug:$false
-    
-        Write-Host -Fore Green "Successfully deleted solution ($solutionName)."
+        Write-Warning "The specified solution ($solutionName) was not found."
+        return
     }
+
+    Remove-SPSolution $solutionName -Confirm:$false -Debug:$false
+
+    Write-Host -Fore Green "Successfully deleted solution ($solutionName)."
+}
+
+function Main()
+{
+    Write-Host "Deleting solutions..."
     
-    function Main()
-    {
-        Write-Host "Deleting solutions..."
-        
-        DeleteSolution "Fabrikam.Demo.Web.wsp"
-    }
-    
-    Main
+    DeleteSolution "Fabrikam.Demo.Web.wsp"
+}
+
+Main
+```
 
 
 
@@ -1183,24 +1207,26 @@ If, like me, you get tired of cycling through the command history (F7) to repeat
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    function Main()
-    {
-        & '.\Deactivate Features.ps1'
-    
-        & '.\Retract Solutions.ps1'
-    
-        & '.\Delete Solutions.ps1'
-    
-        & '.\Add Solutions.ps1'
-    
-        & '.\Deploy Solutions.ps1'
-    
-        & '.\Activate Features.ps1'
-    }
-    
-    Main
+```
+$ErrorActionPreference = "Stop"
+
+function Main()
+{
+    & '.\Deactivate Features.ps1'
+
+    & '.\Retract Solutions.ps1'
+
+    & '.\Delete Solutions.ps1'
+
+    & '.\Add Solutions.ps1'
+
+    & '.\Deploy Solutions.ps1'
+
+    & '.\Activate Features.ps1'
+}
+
+Main
+```
 
 
 
@@ -1218,111 +1244,113 @@ While the "DR.DADA" process doesn't typically take very long, there are a limite
 
 
 
-    param(
-        [switch] $force,
-        [switch] $runInThisAppDomain,
-        [switch] $debug)
+```
+param(
+    [switch] $force,
+    [switch] $runInThisAppDomain,
+    [switch] $debug)
+
+# When a solution is upgraded in SharePoint, the corresponding assembly is loaded
+# into the PowerShell AppDomain (along with any referenced assemblies). This can
+# be seen by attaching to the PowerShell process with WinDbg and viewing modules
+# as they are loaded.
+#
+# In order to avoid issues during the deployment, force the script to run in a new
+# instance of PowerShell (and thus a new AppDomain). This is accomplished using a
+# technique originally noted by Lauri Perltonen
+# (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
+If (-not $runInThisAppDomain)
+{
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
+    PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
+    return
+}
+
+# If "-Debug" option is specified, enable debug messages in new PowerShell instance
+If ($debug -eq $true)
+{
+    $DebugPreference = "Continue"
+}
+
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function UpgradeSolution(
+    [string] $solutionPath = $(Throw "Value cannot be null: solutionPath"),
+    [bool] $force,
+    [bool] $local)
+{
+    Write-Host "Upgrading solution ($solutionPath)..."
     
-    # When a solution is upgraded in SharePoint, the corresponding assembly is loaded
-    # into the PowerShell AppDomain (along with any referenced assemblies). This can
-    # be seen by attaching to the PowerShell process with WinDbg and viewing modules
-    # as they are loaded.
-    #
-    # In order to avoid issues during the deployment, force the script to run in a new
-    # instance of PowerShell (and thus a new AppDomain). This is accomplished using a
-    # technique originally noted by Lauri Perltonen
-    # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
-    If (-not $runInThisAppDomain)
+    If ($force -eq $true)
     {
-        Write-Host -Fore Yellow "Invoking script in a new app domain"
-        PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
-        return
+        Write-Debug "The solution upgrade will be forced."
     }
     
-    # If "-Debug" option is specified, enable debug messages in new PowerShell instance
-    If ($debug -eq $true)
+    If ($local -eq $true)
     {
-        $DebugPreference = "Continue"
+        Write-Debug ("The solution will be upgraded locally (bypassing" `
+            + " SharePoint timer job).")
     }
     
-    $ErrorActionPreference = "Stop"
+    $literalPath = Resolve-Path $solutionPath
+    $solutionFile = Get-Item $literalPath
     
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function UpgradeSolution(
-        [string] $solutionPath = $(Throw "Value cannot be null: solutionPath"),
-        [bool] $force,
-        [bool] $local)
+    Update-SPSolution $solutionFile.Name -LiteralPath $literalPath -GACDeployment `
+        -Force:([bool]::Parse($force)) -Local:([bool]::Parse($local)) `
+        -Debug:$false > $null
+        
+    # If the deployment was performed using a SharePoint timer job, then wait
+    # for the timer job to finish
+    If ($local -eq $false)
     {
-        Write-Host "Upgrading solution ($solutionPath)..."
-        
-        If ($force -eq $true)
-        {
-            Write-Debug "The solution upgrade will be forced."
-        }
-        
-        If ($local -eq $true)
-        {
-            Write-Debug ("The solution will be upgraded locally (bypassing" `
-                + " SharePoint timer job).")
-        }
-        
-        $literalPath = Resolve-Path $solutionPath
-        $solutionFile = Get-Item $literalPath
-        
-        Update-SPSolution $solutionFile.Name -LiteralPath $literalPath -GACDeployment `
-            -Force:([bool]::Parse($force)) -Local:([bool]::Parse($local)) `
-            -Debug:$false > $null
-            
-        # If the deployment was performed using a SharePoint timer job, then wait
-        # for the timer job to finish
-        If ($local -eq $false)
-        {
-        	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionFile.Name
-        }
-        
-        Write-Host -Fore Green "Successfully upgraded solution ($solutionPath)."
+    	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionFile.Name
     }
     
-    function Main(
-        [bool] $force)
+    Write-Host -Fore Green "Successfully upgraded solution ($solutionPath)."
+}
+
+function Main(
+    [bool] $force)
+{
+    Write-Host "Upgrading solutions..."
+
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        Write-Host "Upgrading solutions..."
-    
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        $local = $false
-    
-        If (($webAppUrl -eq "http://www-local.fabrikam.com") `
-        	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
-        {
-            $local = $true
-        }
-    
-        $buildConfiguration = $env:FABRIKAM_BUILD_CONFIGURATION
-        If ($buildConfiguration -eq $null)
-        {
-            $buildConfiguration = "Release"
-        }Write-Debug "buildConfiguration: $buildConfiguration"
-    
-        # For desktop builds, the WSP is created in the
-        # ..\..\Web\bin\{Debug|Release} folder.
-        # However, with Team Foundation Build, the WSP is created in the
-        # $(BinariesRoot)\{Debug|Release} folder.    
-        $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
-        If ((Test-Path $solutionFile) -eq $false)
-        {
-            $solutionFile = "..\..\$buildConfiguration\Fabrikam.Demo.Web.wsp"
-        }
-    
-        UpgradeSolution $solutionFile $force $local
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    Main $force
+
+    $local = $false
+
+    If (($webAppUrl -eq "http://www-local.fabrikam.com") `
+    	-or ($webAppUrl -eq "http://www-dev.fabrikam.com"))
+    {
+        $local = $true
+    }
+
+    $buildConfiguration = $env:FABRIKAM_BUILD_CONFIGURATION
+    If ($buildConfiguration -eq $null)
+    {
+        $buildConfiguration = "Release"
+    }Write-Debug "buildConfiguration: $buildConfiguration"
+
+    # For desktop builds, the WSP is created in the
+    # ..\..\Web\bin\{Debug|Release} folder.
+    # However, with Team Foundation Build, the WSP is created in the
+    # $(BinariesRoot)\{Debug|Release} folder.    
+    $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
+    If ((Test-Path $solutionFile) -eq $false)
+    {
+        $solutionFile = "..\..\$buildConfiguration\Fabrikam.Demo.Web.wsp"
+    }
+
+    UpgradeSolution $solutionFile $force $local
+}
+
+Main $force
+```
 
 
 
@@ -1338,37 +1366,39 @@ On my local development VM, I often find it helpful to "nuke" the Fabrikam Web a
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-    
-    function Main()
+```
+$ErrorActionPreference = "Stop"
+
+Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+
+function Main()
+{
+    $webAppUrl = $env:FABRIKAM_DEMO_URL
+    If ($webAppUrl -eq $null)
     {
-        $webAppUrl = $env:FABRIKAM_DEMO_URL
-        If ($webAppUrl -eq $null)
-        {
-            $webAppUrl = "http://www.fabrikam.com"
-        }
-    
-        Write-Debug "webAppUrl: $webAppUrl"
-    
-        Remove-SPWebApplication $webAppUrl -DeleteIISSite -RemoveContentDatabases `
-            -Debug:$false
+        $webAppUrl = "http://www.fabrikam.com"
     }
-    
-    Main
+
+    Write-Debug "webAppUrl: $webAppUrl"
+
+    Remove-SPWebApplication $webAppUrl -DeleteIISSite -RemoveContentDatabases `
+        -Debug:$false
+}
+
+Main
+```
 
 
 
 In fact, on several occasions I've found it to be *very* helpful to rollback my SharePoint 2010 Hyper-V VM to a snapshot that I took shortly after installing SharePoint Server 2010 and creating the farm (but before creating any Web applications or configuring any service applications). Whenever I do that, I simply need to force a "Get Latest" from TFS (since my TFS workspace isn't aware that I've rolled back my VHD to an earlier point in time), compile and package the solution, and then run the scripts described above in the following order:
 
-& '.\Create Web Application.ps1'  
-& '.\Create Site Collections.ps1'  
-& '.\Enable Anonymous Access.ps1'  
-& '.\Configure Object Cache User Accounts.ps1'  
-& '.\Add Event Log Sources.ps1'  
-& '.\Add Solutions.ps1'  
-& '.\Deploy Solutions.ps1'  
+& '.\Create Web Application.ps1'
+& '.\Create Site Collections.ps1'
+& '.\Enable Anonymous Access.ps1'
+& '.\Configure Object Cache User Accounts.ps1'
+& '.\Add Event Log Sources.ps1'
+& '.\Add Solutions.ps1'
+& '.\Deploy Solutions.ps1'
 & '.\Activate Features.ps1'
 
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm able to rebuild my development environment in a matter of minutes.

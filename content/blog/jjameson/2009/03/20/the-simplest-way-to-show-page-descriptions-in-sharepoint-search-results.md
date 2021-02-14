@@ -11,8 +11,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx)
@@ -43,18 +43,20 @@ If you look at the default XSL for the Search Core Results Web Part in MOSS 2007
 
 
 
-    <div class="srch-Description">
-          <xsl:choose>
-            <xsl:when test="hithighlightedsummary[. != '']">
-              <xsl:call-template name="HitHighlighting">
-                <xsl:with-param name="hh" select="hithighlightedsummary" />
-              </xsl:call-template>
-            </xsl:when>
-            <xsl:when test="description[. != '']">
-              <xsl:value-of select="description"/>
-            </xsl:when>
-          </xsl:choose>
-        </div >
+```
+<div class="srch-Description">
+      <xsl:choose>
+        <xsl:when test="hithighlightedsummary[. != '']">
+          <xsl:call-template name="HitHighlighting">
+            <xsl:with-param name="hh" select="hithighlightedsummary" />
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:when test="description[. != '']">
+          <xsl:value-of select="description"/>
+        </xsl:when>
+      </xsl:choose>
+    </div >
+```
 
 
 
@@ -62,18 +64,20 @@ Well, that certainly makes this a trivial exercise...all I need to do is reverse
 
 
 
-    <div class="srch-Description">
-          <xsl:choose>
-            <xsl:when test="description[. != '']">
-              <xsl:value-of select="description"/>
-            </xsl:when>
-            <xsl:when test="hithighlightedsummary[. != '']">
-              <xsl:call-template name="HitHighlighting">
-                <xsl:with-param name="hh" select="hithighlightedsummary" />
-              </xsl:call-template>
-            </xsl:when>
-          </xsl:choose>
-        </div >
+```
+<div class="srch-Description">
+      <xsl:choose>
+        <xsl:when test="description[. != '']">
+          <xsl:value-of select="description"/>
+        </xsl:when>
+        <xsl:when test="hithighlightedsummary[. != '']">
+          <xsl:call-template name="HitHighlighting">
+            <xsl:with-param name="hh" select="hithighlightedsummary" />
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
+    </div >
+```
 
 
 
@@ -104,24 +108,26 @@ Note that **Description** is inherited from the **System Page**  content type. H
 
 
 
-    <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2"
-        Name="System Page"
-        Group="_Hidden"
-        Version="0">
-      <FieldRefs>
-        <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
-        <FieldRef ID="{5f47e085-2150-41dc-b661-442f3027f552}" Name="SelectFilename" />
-        <FieldRef ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Name="FileLeafRef" />
-        <FieldRef ID="{8c06beca-0777-48f7-91c7-6da68bc07b69}" Name="Created" />
-        <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
-        <FieldRef ID="{28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f}" Name="Modified" />
-        <FieldRef ID="{822c78e3-1ea9-4943-b449-57863ad33ca9}" Name="Modified_x0020_By" />
-        <FieldRef ID="{4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb}" Name="Created_x0020_By" />
-        <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" />
-        <FieldRef ID="{51d39414-03dc-4bd0-b777-d3e20cb350f7}" Name="PublishingStartDate" />
-        ...
-      </FieldRefs>
-    </ContentType>
+```
+<ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2"
+    Name="System Page"
+    Group="_Hidden"
+    Version="0">
+  <FieldRefs>
+    <FieldRef ID="{c042a256-787d-4a6f-8a8a-cf6ab767f12d}" Name="ContentType" />
+    <FieldRef ID="{5f47e085-2150-41dc-b661-442f3027f552}" Name="SelectFilename" />
+    <FieldRef ID="{8553196d-ec8d-4564-9861-3dbe931050c8}" Name="FileLeafRef" />
+    <FieldRef ID="{8c06beca-0777-48f7-91c7-6da68bc07b69}" Name="Created" />
+    <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+    <FieldRef ID="{28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f}" Name="Modified" />
+    <FieldRef ID="{822c78e3-1ea9-4943-b449-57863ad33ca9}" Name="Modified_x0020_By" />
+    <FieldRef ID="{4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb}" Name="Created_x0020_By" />
+    <FieldRef ID="{9da97a8a-1da5-4a77-98d3-4bc10456e700}" Name="Comments" />
+    <FieldRef ID="{51d39414-03dc-4bd0-b777-d3e20cb350f7}" Name="PublishingStartDate" />
+    ...
+  </FieldRefs>
+</ContentType>
+```
 
 
 
@@ -134,9 +140,11 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
 
 
 
-    <asp:Literal runat="server"
-        Text="&lt;meta name=&quot;description&quot; content=&quot;" /><SharePoint:FieldValue runat="server"
-        FieldName="Comments" /><asp:Literal runat="server" Text="&quot;&gt;" />
+```
+<asp:Literal runat="server"
+    Text="&lt;meta name=&quot;description&quot; content=&quot;" /><SharePoint:FieldValue runat="server"
+    FieldName="Comments" /><asp:Literal runat="server" Text="&quot;&gt;" />
+```
 
 
 
@@ -153,9 +161,11 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
 
 
 
-    <meta name="description"        
-        content="<SharePoint:FieldValue
-        FieldName='Comments' runat='server'/>" />
+```
+<meta name="description"        
+    content="<SharePoint:FieldValue
+    FieldName='Comments' runat='server'/>" />
+```
 
 
 

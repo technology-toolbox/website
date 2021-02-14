@@ -15,18 +15,20 @@ Let's start with a very simple PowerShell script to use as an example (Temp.ps1)
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Write-Host "Changing to TEMP folder..."
-    cd $env:TEMP
-    
-    Write-Host "Creating file..."
-    New-Item Temp.txt -Type File -Value "foobar"
-    
-    Write-Host "Copying file..."
-    Copy-Item Temp.txt Temp-Copy.txt
-    
-    Write-Host "Success"
+```
+$ErrorActionPreference = "Stop"
+
+Write-Host "Changing to TEMP folder..."
+cd $env:TEMP
+
+Write-Host "Creating file..."
+New-Item Temp.txt -Type File -Value "foobar"
+
+Write-Host "Copying file..."
+Copy-Item Temp.txt Temp-Copy.txt
+
+Write-Host "Success"
+```
 
 
 
@@ -34,22 +36,24 @@ When you run this script the first time, it should complete successfully and th
 
 
 
-    PS C:\Users\jjameson\AppData\Local\Temp> C:\Temp.ps1
-    Changing to TEMP folder...
-    Creating file...
-    
-    
-        Directory: C:\Users\jjameson\AppData\Local\Temp
-    
-    
-    Mode                LastWriteTime     Length Name
-    ----                -------------     ------ ----
-    -a---        11/19/2011   5:37 AM          6 Temp.txt
-    Copying file...
-    Success
-    
-    
-    PS C:\Users\jjameson\AppData\Local\Temp>
+```
+PS C:\Users\jjameson\AppData\Local\Temp> C:\Temp.ps1
+Changing to TEMP folder...
+Creating file...
+
+
+    Directory: C:\Users\jjameson\AppData\Local\Temp
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+-a---        11/19/2011   5:37 AM          6 Temp.txt
+Copying file...
+Success
+
+
+PS C:\Users\jjameson\AppData\Local\Temp>
+```
 
 
 
@@ -57,16 +61,18 @@ However, when you run the script again, an error occurs:
 
 
 
-    PS C:\Users\jjameson\AppData\Local\Temp> C:\Temp.ps1
-    Changing to TEMP folder...
-    Creating file...
-    New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.
-    At C:\Temp.ps1:7 char:9
-    + New-Item <<<<  Temp.txt -Type File -Value "foobar"
-        + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException
-        + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
-    
-    PS C:\Users\jjameson\AppData\Local\Temp>
+```
+PS C:\Users\jjameson\AppData\Local\Temp> C:\Temp.ps1
+Changing to TEMP folder...
+Creating file...
+New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.
+At C:\Temp.ps1:7 char:9
++ New-Item <<<<  Temp.txt -Type File -Value "foobar"
+    + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException
+    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+
+PS C:\Users\jjameson\AppData\Local\Temp>
+```
 
 
 
@@ -99,15 +105,17 @@ Like me, you might try using the **[Start-Transcript](http://technet.microsoft.c
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Start-Transcript -Path "$env:TEMP\Temp.log"
-    
-    Write-Host "Changing to TEMP folder..."
-    ...
-    Write-Host "Success"
-    
-    Stop-Transcript
+```
+$ErrorActionPreference = "Stop"
+
+Start-Transcript -Path "$env:TEMP\Temp.log"
+
+Write-Host "Changing to TEMP folder..."
+...
+Write-Host "Success"
+
+Stop-Transcript
+```
 
 
 
@@ -127,17 +135,19 @@ Running the scheduled task now produces the following in the Temp.log file (as 
 
 
 
-    **********************
-    Windows PowerShell Transcript Start
-    Start time: 20111119062551
-    Username  : TECHTOOLBOX\jjameson 
-    Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1) 
-    **********************
-    Transcript started, output file is C:\Users\jjameson\AppData\Local\Temp\Temp.log
-    Changing to TEMP folder...Creating file...New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.At C:\Temp.ps1:9 char:9+ New-Item <<<<  Temp.txt -Type File -Value "foobar"    + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand **********************
-    Windows PowerShell Transcript End
-    End time: 20111119062551
-    ***********************
+```
+**********************
+Windows PowerShell Transcript Start
+Start time: 20111119062551
+Username  : TECHTOOLBOX\jjameson 
+Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1) 
+**********************
+Transcript started, output file is C:\Users\jjameson\AppData\Local\Temp\Temp.log
+Changing to TEMP folder...Creating file...New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.At C:\Temp.ps1:9 char:9+ New-Item <<<<  Temp.txt -Type File -Value "foobar"    + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand **********************
+Windows PowerShell Transcript End
+End time: 20111119062551
+***********************
+```
 
 
 
@@ -151,22 +161,24 @@ Some people suggest either adding "``r`n`" to the end of every `Write-Host` sta
 
 
 
-    $ErrorActionPreference = "Stop"
-    
-    Start-Transcript -Path "$env:TEMP\Temp.log"
-    
-    Write-Host "Changing to TEMP folder...`r`n"
-    cd $env:TEMP
-    
-    Write-Host "Creating file...`r`n"
-    New-Item Temp.txt -Type File -Value "foobar"
-    
-    Write-Host "Copying file...`r`n"
-    Copy-Item Temp.txt Temp-Copy.txt
-    
-    Write-Host "Success`r`n"
-    
-    Stop-Transcript
+```
+$ErrorActionPreference = "Stop"
+
+Start-Transcript -Path "$env:TEMP\Temp.log"
+
+Write-Host "Changing to TEMP folder...`r`n"
+cd $env:TEMP
+
+Write-Host "Creating file...`r`n"
+New-Item Temp.txt -Type File -Value "foobar"
+
+Write-Host "Copying file...`r`n"
+Copy-Item Temp.txt Temp-Copy.txt
+
+Write-Host "Success`r`n"
+
+Stop-Transcript
+```
 
 
 
@@ -190,12 +202,14 @@ Deleting the temporary files (to start with the "happy path" scenario first) an
 
 
 
-    Directory: C:\Users\jjameson\AppData\Local\Temp
-    
-    
-    Mode                LastWriteTime     Length Name
-    ----                -------------     ------ ----
-    -a---        11/19/2011   8:19 AM          6 Temp.txt
+```
+Directory: C:\Users\jjameson\AppData\Local\Temp
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+-a---        11/19/2011   8:19 AM          6 Temp.txt
+```
 
 
 
@@ -209,8 +223,10 @@ Here is the sample command file from my previous post (Rebuild Website.cmd):
 
 
 
-    PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
-    EXIT %ERRORLEVEL%
+```
+PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
+EXIT %ERRORLEVEL%
+```
 
 
 
@@ -253,32 +269,34 @@ Here is a sample log file (as viewed in Notepad), which shows the `Write-Host` m
 
 
 
-    Defaulting to latest build for Caelum...
-    Defaulting to latest build for Subtext...
-    Defaulting to Debug build configuration...
-    Stopping website (www-dev.technologytoolbox.com)...
-    Successfully stopped website (www-dev.technologytoolbox.com).
-    Removing website (www-dev.technologytoolbox.com)...
-    Successfully removed website (www-dev.technologytoolbox.com).
-    Removing website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
-    Successfully removed website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
-    Removing application pool (www-dev.technologytoolbox.com)...
-    Successfully removed application pool (www-dev.technologytoolbox.com).
-    Creating application pool (www-dev.technologytoolbox.com)...
-    Successfully created application pool (www-dev.technologytoolbox.com).
-    Creating website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
-    Successfully created website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
-    Creating website (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
-    Successfully created website (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
-    Copying Subtext website content...
-    Successfully copied Subtext website content.
-    Granting read/write access on Subtext App_Data folder...
-    processed file: C:\inetpub\wwwroot\www-dev.technologytoolbox.com\blog\App_Data
-    Successfully processed 1 files; Failed processing 0 files
-    Successfully granted read/write access on Subtext App_Data folder.
-    Creating new application for blog site...
-    Successfully created new application for blog site.
-    Copying Caelum website content...
-    Successfully copied Caelum website content.
-    Successfully rebuilt Web application.
+```
+Defaulting to latest build for Caelum...
+Defaulting to latest build for Subtext...
+Defaulting to Debug build configuration...
+Stopping website (www-dev.technologytoolbox.com)...
+Successfully stopped website (www-dev.technologytoolbox.com).
+Removing website (www-dev.technologytoolbox.com)...
+Successfully removed website (www-dev.technologytoolbox.com).
+Removing website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
+Successfully removed website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
+Removing application pool (www-dev.technologytoolbox.com)...
+Successfully removed application pool (www-dev.technologytoolbox.com).
+Creating application pool (www-dev.technologytoolbox.com)...
+Successfully created application pool (www-dev.technologytoolbox.com).
+Creating website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
+Successfully created website folder (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
+Creating website (C:\inetpub\wwwroot\www-dev.technologytoolbox.com)...
+Successfully created website (C:\inetpub\wwwroot\www-dev.technologytoolbox.com).
+Copying Subtext website content...
+Successfully copied Subtext website content.
+Granting read/write access on Subtext App_Data folder...
+processed file: C:\inetpub\wwwroot\www-dev.technologytoolbox.com\blog\App_Data
+Successfully processed 1 files; Failed processing 0 files
+Successfully granted read/write access on Subtext App_Data folder.
+Creating new application for blog site...
+Successfully created new application for blog site.
+Copying Caelum website content...
+Successfully copied Caelum website content.
+Successfully rebuilt Web application.
+```
 

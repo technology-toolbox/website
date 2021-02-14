@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx)
 > 
@@ -26,39 +26,41 @@ To do this, I created the following script and dropped it in my SharePoint [Tool
 
 
 
-    @echo off
-    
-    @echo Stopping services...
-    
-    iisreset /stop /noforce
-    
-    net stop "Windows SharePoint Services Timer"
-    
-    net stop "Windows SharePoint Services Administration"
-    
-    net stop "Office SharePoint Server Search"
-    
-    net stop "Windows SharePoint Services Search"
-    
-    net stop "Windows SharePoint Services Tracing"
-    
-    @pause
-    
-    @echo Starting services...
-    
-    net start "Windows SharePoint Services Tracing"
-    
-    net start "Windows SharePoint Services Search"
-    
-    net start "Office SharePoint Server Search"
-    
-    net start "Windows SharePoint Services Administration"
-    
-    net start "Windows SharePoint Services Timer"
-    
-    iisreset /start
-    
-    @pause
+```
+@echo off
+
+@echo Stopping services...
+
+iisreset /stop /noforce
+
+net stop "Windows SharePoint Services Timer"
+
+net stop "Windows SharePoint Services Administration"
+
+net stop "Office SharePoint Server Search"
+
+net stop "Windows SharePoint Services Search"
+
+net stop "Windows SharePoint Services Tracing"
+
+@pause
+
+@echo Starting services...
+
+net start "Windows SharePoint Services Tracing"
+
+net start "Windows SharePoint Services Search"
+
+net start "Office SharePoint Server Search"
+
+net start "Windows SharePoint Services Administration"
+
+net start "Windows SharePoint Services Timer"
+
+iisreset /start
+
+@pause
+```
 
 
 

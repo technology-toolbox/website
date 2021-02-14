@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx)
 > 
@@ -38,11 +38,13 @@ To workaround the "Copy Local" bug and force a referenced assembly to always be 
 Following these two simple steps explicitly adds `<Private>True</Private>` to the project file, as shown in the following example:
 
 
-    <ProjectReference Include="..\CoreServices\CoreServices.csproj">
-          <Project>{01C58D27-9818-45D6-A0B6-8EF765CA9397}</Project>
-          <Name>CoreServices %28CoreServices\CoreServices%29</Name>
-          <Private>True</Private>
-        </ProjectReference>
+```
+<ProjectReference Include="..\CoreServices\CoreServices.csproj">
+      <Project>{01C58D27-9818-45D6-A0B6-8EF765CA9397}</Project>
+      <Name>CoreServices %28CoreServices\CoreServices%29</Name>
+      <Private>True</Private>
+    </ProjectReference>
+```
 
 
 When you add a referenced assembly in Visual Studio using a project reference, **Copy Local **defaults to **True**, but Visual Studio doesn't explicitly state this in the MSBuild project file. Toggling the value of **Copy Local **forces this element to be added to the project file and consequently you no longer need any hacks to reference the assembly in its original output folder.

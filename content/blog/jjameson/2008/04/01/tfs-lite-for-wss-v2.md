@@ -11,8 +11,8 @@ tags: ["Core Development", "WSS v2"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx)
@@ -84,9 +84,9 @@ The overall project status displayed on the dashboard is simply a Content Editor
 The **Project Summary** Web Part on the dashboard began as a simple List View  Web Part using the following criteria:
 
 
-> **Current** is equal to **Yes**  
+> **Current** is equal to **Yes**
 > 
-> And **Exit Criteria** is equal to **Yes**  
+> And **Exit Criteria** is equal to **Yes**
 > 
 > And **Iteration** is equal to **Project\v1.0\M0**
 
@@ -101,20 +101,22 @@ A minimal amount of custom XSLT was then added to display an image based on the 
 
 
 
-    <xsl:choose>
-        <xsl:when test="@KPI='Green'">
-          <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />
-        </xsl:when>
-        <xsl:when test="@KPI='Yellow'">
-          <img alt="Yellow" src="/sites/Frontier/Image%20Library/kpinormal-1.gif" />
-        </xsl:when>
-        <xsl:when test="@KPI='Red'">
-          <img alt="Red" src="/sites/Frontier/Image%20Library/kpinormal-2.gif" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of disable-output-escaping="no" select="@KPI" />
-        </xsl:otherwise>
-      </xsl:choose>
+```
+<xsl:choose>
+    <xsl:when test="@KPI='Green'">
+      <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />
+    </xsl:when>
+    <xsl:when test="@KPI='Yellow'">
+      <img alt="Yellow" src="/sites/Frontier/Image%20Library/kpinormal-1.gif" />
+    </xsl:when>
+    <xsl:when test="@KPI='Red'">
+      <img alt="Red" src="/sites/Frontier/Image%20Library/kpinormal-2.gif" />
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:value-of disable-output-escaping="no" select="@KPI" />
+    </xsl:otherwise>
+  </xsl:choose>
+```
 
 
 
@@ -125,9 +127,9 @@ Note that the image paths are hard-coded to use a picture library (named "Image 
 The **Accomplishments** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
 
 
-> **Current** is equal to **Yes**  
+> **Current** is equal to **Yes**
 > 
-> And **Status** is equal to **Closed**  
+> And **Status** is equal to **Closed**
 > 
 > And **ModifiedFilter** is greater than or equal to **[Today]**
 
@@ -139,7 +141,7 @@ Note that **ModifiedFilter** is a calculated column simply used to filter  out i
 The **Top 10 Issues** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
 
 
-> **Current** is equal to **Yes**  
+> **Current** is equal to **Yes**
 > 
 > And **Blocked **is equal to **Yes**
 
@@ -152,9 +154,9 @@ The criteria for **Priorities/Milestones** Web Part is similar to the **Project
 Summary** Web Part:
 
 
-> **Current** is equal to **Yes**  
+> **Current** is equal to **Yes**
 > 
-> And **Exit Criteria** is equal to **Yes**  
+> And **Exit Criteria** is equal to **Yes**
 > 
 > And **Status** is not equal to **Closed**
 

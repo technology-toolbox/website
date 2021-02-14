@@ -11,8 +11,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx)
@@ -48,20 +48,22 @@ The long answer is derived by using SQL Server Profiler to capture the SELECT  s
 
 
 
-    SELECT ...
-    FROM
-        UserData
-        ...
-    WHERE
-        (UserData.tp_IsCurrent = 1)
+```
+SELECT ...
+FROM
+    UserData
+    ...
+WHERE
+    (UserData.tp_IsCurrent = 1)
+    AND ...
+    AND
+    (
+        (UserData.[nvarchar8] LIKE '%Variation%')
         AND ...
-        AND
-        (
-            (UserData.[nvarchar8] LIKE '%Variation%')
-            AND ...
-            AND (t1.DirName='Long Running Operation Status')
-        )
-    ORDER BY
+        AND (t1.DirName='Long Running Operation Status')
+    )
+ORDER BY
+```
 
 
 
@@ -73,17 +75,19 @@ Thus, to circumvent the paging bug in the **Variation Logs** page,  use a query 
 
 
 
-    SELECT
-        UserData.[nvarchar1] AS 'Log Entry'
-        ,UserData.[tp_Created] AS 'Time Started (GMT)'
-        ,UserData.[tp_Modified] AS 'Time Last Updated (GMT)'
-        ,UserData.[ntext5] AS 'Messages'
-    FROM
-        UserData
-    WHERE
-        tp_ListId = '{GUID}'
-        AND nvarchar8 LIKE '%Variation%'
-        AND tp_DirName = 'Long Running Operation Status'
+```
+SELECT
+    UserData.[nvarchar1] AS 'Log Entry'
+    ,UserData.[tp_Created] AS 'Time Started (GMT)'
+    ,UserData.[tp_Modified] AS 'Time Last Updated (GMT)'
+    ,UserData.[ntext5] AS 'Messages'
+FROM
+    UserData
+WHERE
+    tp_ListId = '{GUID}'
+    AND nvarchar8 LIKE '%Variation%'
+    AND tp_DirName = 'Long Running Operation Status'
+```
 
 
 
@@ -92,9 +96,11 @@ Status** list, which can be obtained via the following query:
 
 
 
-    SELECT tp_ID
-    FROM AllLists
-    WHERE tp_Title = 'Long Running Operation Status'
+```
+SELECT tp_ID
+FROM AllLists
+WHERE tp_Title = 'Long Running Operation Status'
+```
 
 
 
@@ -102,16 +108,18 @@ Note that we can actually get a significantly better query plan if we drop the  
 
 
 
-    SELECT
-        UserData.[nvarchar1] AS 'Log Entry'
-        ,UserData.[tp_Created] AS 'Time Started (GMT)'
-        ,UserData.[tp_Modified] AS 'Time Last Updated (GMT)'
-        ,UserData.[ntext5] AS 'Messages'
-    FROM
-        UserData
-    WHERE
-        tp_ListId = '{GUID}'
-        AND nvarchar8 LIKE '%Variation%'
+```
+SELECT
+    UserData.[nvarchar1] AS 'Log Entry'
+    ,UserData.[tp_Created] AS 'Time Started (GMT)'
+    ,UserData.[tp_Modified] AS 'Time Last Updated (GMT)'
+    ,UserData.[ntext5] AS 'Messages'
+FROM
+    UserData
+WHERE
+    tp_ListId = '{GUID}'
+    AND nvarchar8 LIKE '%Variation%'
+```
 
 
 

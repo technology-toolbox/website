@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx)

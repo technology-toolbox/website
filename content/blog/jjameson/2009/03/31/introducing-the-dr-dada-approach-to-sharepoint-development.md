@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx)
@@ -51,8 +51,10 @@ What's that? We've deployed the DocumentCart feature to Production and now we  n
 
 
 
-    SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
-             SPFieldType.Text, false);
+```
+SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
+         SPFieldType.Text, false);
+```
 
 
 

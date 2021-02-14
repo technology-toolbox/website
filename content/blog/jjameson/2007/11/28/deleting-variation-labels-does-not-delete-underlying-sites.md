@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx)
 > 

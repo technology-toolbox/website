@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3", "Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx)
 > 
@@ -45,112 +45,114 @@ To understand how the 960 Grid System is used on our SharePoint site, consider t
 
 
 
-    <%@ Master Language="C#" CodeBehind="Fabrikam.master.cs" Inherits="Fabrikam.Portal.Web.UI.FabrikamMasterPage, Fabrikam.Portal.Web,
-            Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8cdcbca6f69701f" %>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <%@ Import Namespace="Microsoft.SharePoint" %>
-    <%@ Register TagPrefix="SharePoint"
-        Namespace="Microsoft.SharePoint.WebControls"
-        Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-    <%@ Register TagPrefix="WebPartPages"
-        Namespace="Microsoft.SharePoint.WebPartPages"
-        Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-    <%@ Register TagPrefix="PublishingWebControls"
-        Namespace="Microsoft.SharePoint.Publishing.WebControls"
-        Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
-    <%@ Register TagPrefix="FabrikamWebControls"
-        Namespace="Fabrikam.Portal.Web.UI.WebControls"
-        Assembly="Fabrikam.Portal.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8cdcbca6f69701f" %>
-    <%@ Register TagPrefix="PublishingConsole"
-        TagName="Console"
-        Src="~/_controltemplates/PublishingConsole.ascx" %>
-    <%@ Register TagPrefix="PublishingSiteAction"
-        TagName="SiteActionMenu"
-        Src="~/_controltemplates/PublishingActionMenu.ascx" %>
-    <%@ Register TagPrefix="Fabrikam"
-        TagName="Welcome"
-        Src="~/_controltemplates/Fabrikam/Welcome.ascx" %>
-    <html dir="<%$Resources:wss, multipages_direction_dir_value %>"
-        runat="server" __expr-val-dir="ltr">
-    <head runat="server">
-        <meta name="GENERATOR" content="Microsoft SharePoint" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <SharePoint:RobotsMetaTag runat="server" />
-        <title id="onetidTitle"><asp:ContentPlaceHolder ID="PlaceHolderPageTitle" runat="server" /></title>
-        <SharePoint:CssLink runat="server" />
-        <!--Styles used for positioning, font and spacing definitions-->
-        <SharePoint:CssRegistration
-            runat="server"
-            Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
-        <link rel="stylesheet" type="text/css"
-            href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
-        <SharePoint:ScriptLink Name="init.js" runat="server" />
-        <!--Placeholder for additional overrides-->
-        <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
-    </head>
-    <body>
-        <form runat="server" onsubmit="return _spFormOnSubmitWrapper();">
-        <asp:ScriptManager runat="server" />
-        <WebPartPages:SPWebPartManager ID="mainWPManager" runat="server" />
-        <div class="container_12">
-            <div id="masthead">
-                <div id="logo">
-                    <a href="/" title="Go to Start Page">
-                        <img src="/Style Library/Images/Fabrikam/fabrikam-logo.png" />
-                    </a>
-                </div>
-                <div id="welcomearea">
-                    <%--
-                        Generally speaking, style attributes should be avoided in
-                        HTML. Styling should instead be applied exclusively through
-                        CSS.
-                       
-                        However the SharePoint SiteActionMenu control emits HTML
-                        similar to the following:
-                       
-                            <table height="100%" class="ms-siteaction" ...>
-                                ...
-                            </table>
-                       
-                        When CSS is disabled, the height of the SiteActionMenu is
-                        ridiculous (which makes it more difficult to troubleshoot
-                        other styling issues). Consequently, limit the height of the
-                        container <div> to avoid this issue.
-                    --%>
-                    <div id="siteactionmenu" style="height: 18px">
-                        <PublishingSiteAction:SiteActionMenu runat="server" />
-                    </div>
-                    <div class="welcome">
-                        <Fabrikam:Welcome id="WelcomeUserControl" runat="server" />
-                    </div>
-                </div>
-                <PublishingWebControls:AuthoringContainer runat="server">
-                    <PublishingConsole:Console runat="server" />
-                </PublishingWebControls:AuthoringContainer>
+```
+<%@ Master Language="C#" CodeBehind="Fabrikam.master.cs" Inherits="Fabrikam.Portal.Web.UI.FabrikamMasterPage, Fabrikam.Portal.Web,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8cdcbca6f69701f" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register TagPrefix="SharePoint"
+    Namespace="Microsoft.SharePoint.WebControls"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="WebPartPages"
+    Namespace="Microsoft.SharePoint.WebPartPages"
+    Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="PublishingWebControls"
+    Namespace="Microsoft.SharePoint.Publishing.WebControls"
+    Assembly="Microsoft.SharePoint.Publishing, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="FabrikamWebControls"
+    Namespace="Fabrikam.Portal.Web.UI.WebControls"
+    Assembly="Fabrikam.Portal.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8cdcbca6f69701f" %>
+<%@ Register TagPrefix="PublishingConsole"
+    TagName="Console"
+    Src="~/_controltemplates/PublishingConsole.ascx" %>
+<%@ Register TagPrefix="PublishingSiteAction"
+    TagName="SiteActionMenu"
+    Src="~/_controltemplates/PublishingActionMenu.ascx" %>
+<%@ Register TagPrefix="Fabrikam"
+    TagName="Welcome"
+    Src="~/_controltemplates/Fabrikam/Welcome.ascx" %>
+<html dir="<%$Resources:wss, multipages_direction_dir_value %>"
+    runat="server" __expr-val-dir="ltr">
+<head runat="server">
+    <meta name="GENERATOR" content="Microsoft SharePoint" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <SharePoint:RobotsMetaTag runat="server" />
+    <title id="onetidTitle"><asp:ContentPlaceHolder ID="PlaceHolderPageTitle" runat="server" /></title>
+    <SharePoint:CssLink runat="server" />
+    <!--Styles used for positioning, font and spacing definitions-->
+    <SharePoint:CssRegistration
+        runat="server"
+        Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
+    <link rel="stylesheet" type="text/css"
+        href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
+    <SharePoint:ScriptLink Name="init.js" runat="server" />
+    <!--Placeholder for additional overrides-->
+    <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+</head>
+<body>
+    <form runat="server" onsubmit="return _spFormOnSubmitWrapper();">
+    <asp:ScriptManager runat="server" />
+    <WebPartPages:SPWebPartManager ID="mainWPManager" runat="server" />
+    <div class="container_12">
+        <div id="masthead">
+            <div id="logo">
+                <a href="/" title="Go to Start Page">
+                    <img src="/Style Library/Images/Fabrikam/fabrikam-logo.png" />
+                </a>
             </div>
-            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+            <div id="welcomearea">
+                <%--
+                    Generally speaking, style attributes should be avoided in
+                    HTML. Styling should instead be applied exclusively through
+                    CSS.
+                   
+                    However the SharePoint SiteActionMenu control emits HTML
+                    similar to the following:
+                   
+                        <table height="100%" class="ms-siteaction" ...>
+                            ...
+                        </table>
+                   
+                    When CSS is disabled, the height of the SiteActionMenu is
+                    ridiculous (which makes it more difficult to troubleshoot
+                    other styling issues). Consequently, limit the height of the
+                    container <div> to avoid this issue.
+                --%>
+                <div id="siteactionmenu" style="height: 18px">
+                    <PublishingSiteAction:SiteActionMenu runat="server" />
+                </div>
+                <div class="welcome">
+                    <Fabrikam:Welcome id="WelcomeUserControl" runat="server" />
+                </div>
+            </div>
+            <PublishingWebControls:AuthoringContainer runat="server">
+                <PublishingConsole:Console runat="server" />
+            </PublishingWebControls:AuthoringContainer>
         </div>
-        <asp:Panel ID="Panel1" Visible="false" runat="server">
-            <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" />
-            <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" />
-        </asp:Panel>
-        </form>
-    </body>
-    </html>
+        <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+    </div>
+    <asp:Panel ID="Panel1" Visible="false" runat="server">
+        <asp:ContentPlaceHolder ID="PlaceHolderSearchArea" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleBreadcrumb" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageImage" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyLeftBorder" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderNavSpacer" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleLeftBorder" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaSeparator" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderMiniConsole" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderPageDescription" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyAreaClass" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderTitleAreaClass" runat="server" />
+        <asp:ContentPlaceHolder ID="PlaceHolderBodyRightMargin" runat="server" />
+    </asp:Panel>
+    </form>
+</body>
+</html>
+```
 
 
 
@@ -160,8 +162,10 @@ Ignoring the differences in the page directives (which are irrelevant when discu
 
 
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+```
 
 
 
@@ -169,8 +173,10 @@ You should always specify a DOCTYPE in your Web pages in order to avoid the drea
 
 
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
-       "http://www.w3.org/TR/html4/strict.dtd">
+```
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+```
 
 
 
@@ -180,8 +186,10 @@ In the MSDN minimal master page sample, the following items immediately follow t
 
 
 
-    <WebPartPages:SPWebPartManager runat="server"/>
-      <SharePoint:RobotsMetaTag runat="server"/>
+```
+<WebPartPages:SPWebPartManager runat="server"/>
+  <SharePoint:RobotsMetaTag runat="server"/>
+```
 
 
 
@@ -191,7 +199,9 @@ The next important difference between the sample MSDN master page and the one sh
 
 
 
-    <SharePoint:CssLink runat="server"/>
+```
+<SharePoint:CssLink runat="server"/>
+```
 
 
 
@@ -199,13 +209,15 @@ My master page, however, specifies the following:
 
 
 
-    <SharePoint:CssLink runat="server" />
-        <!--Styles used for positioning, font and spacing definitions-->
-        <SharePoint:CssRegistration
-            runat="server"
-            Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
-        <link rel="stylesheet" type="text/css"
-            href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
+```
+<SharePoint:CssLink runat="server" />
+    <!--Styles used for positioning, font and spacing definitions-->
+    <SharePoint:CssRegistration
+        runat="server"
+        Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
+    <link rel="stylesheet" type="text/css"
+        href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
+```
 
 
 
@@ -223,8 +235,10 @@ The reason why the custom CSS file contains the "-Main" suffix is because it typ
 
 
 
-    @import url('Fabrikam-Basic.css');
-    @import url('960.css');
+```
+@import url('Fabrikam-Basic.css');
+@import url('960.css');
+```
 
 
 
@@ -236,164 +250,166 @@ Here are the contents of Fabrikam-Basic.css:
 
 
 
-    /* Reset styles to standardize formatting across various browsers (refer to
-     * http://meyerweb.com/eric/tools/css/reset/ and
-     * http://developer.yahoo.com/yui/reset/ for more info).
-     *
-     * Note that Eric's original approach is a little too "aggressive" for
-     * SharePoint sites. For example, the "vertical-align: baseline;" reset rule
-     * subsequently breaks many different areas of the site. Consequently, we base
-     * our reset rules on the simpler set from the Yahoo! YUI team.
-    ------------------------------------------------------------------------------*/
-    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset,
-    input, textarea, p, blockquote, th, td {
-        margin: 0;
-        padding: 0;
-    }
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    fieldset, img {
-        border: 0;
-    }
-    address, caption, cite, code, dfn, em, strong, th, var {
-        font-style: normal;
-        font-weight: normal;
-    }
-    ol, ul {
-        list-style: none;
-    }
-    caption, th {
-        text-align: left;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 100%;
-        font-weight: normal;
-    }
-    q:before, q:after {
-        content: '';
-    }
-    abbr, acronym {
-        border: 0;
-    }
-    hr {
-        border: 0;
-        background: #000;
-        color: black;
-        height: 1px;
-        margin: 0;
-    }
-    /* HTML elements (Ideally, this section should not contain any CSS classes,
-     * but rather only contain generic CSS rules for HTML elements. These rules
-     * essentially undo the "reset" rules above in order to achieve the desired
-     * formatting across various "A-grade" browsers.
-    ------------------------------------------------------------------------------*/
-    body {
-        background: #fff;
-        color: #58595b;
-        font-family: Arial, Helvetica, Sans-Serif;
-        font-size: small;
-    }
-    h1, h2, h3, h4, h5, h6, strong {
-        font-weight: bold;
-    }
-    h1 {
-        color: #868686;
-        font-size: 2.3em;
-        font-style: italic;
-        font-weight: bold;
-        margin: .67em 0;
-    }
-    h2 {
-        color: #3a3b3c;
-        font-size: 1.5em;
-        font-weight: bold;
-        margin: .83em 0;
-    }
-    h3 {
-        color: #303435;
-        font-size: 1.17em;
-        font-weight: bold;
-        margin: 1em 0;
-    }
-    h4 {
-        font-weight: bold;
-        margin: 1.33em 0;
-    }
-    h5 {
-        font-size: 0.83em;
-        font-weight: bold;
-        margin: 1.67em 0;
-    }
-    h6 {
-        font-size: 0.67em;
-        font-weight: bold;
-        margin: 2.33em 0;
-    }
-    abbr, acronym {
-        border-bottom: 1px dotted #000;
-        cursor: help;
-    }
-    blockquote {
-        margin: 1em 40px;
-    }
-    em {
-        font-style: italic;
-    }
-    dl, ol, ul {
-        margin: 1em 1em 1em 2em;
-    }
-    dl dd {
-        margin-left: 1em;
-    }
-    input[type="checkbox"] {
-        margin-right: 5px;
-    }
-    input[type="submit"] {
-        padding: 1px 4px;
-    }
-    ol li {
-        list-style: decimal outside;
-    }
-    ul li {
-        list-style: disc outside;
-    }
-    /* HACK: As noted above, this section should not contain rules for specific CSS
-     * classes, but rather generic CSS rules for all HTML elements. However,
-     * table-based layout is so rampant in MOSS 2007 that caution must be used when
-     * applying rules to tables -- or else the page layout becomes atrocious.
-     * Consequently, we use a CSS class to explicitly distinguish tables that are
-     * intended to be shown to users ("display tables") from the generic tables used
-     * for layout (i.e. "layout tables").
-     */
-    th, table.displayTable td {
-        border: 1px solid #000;
-        padding: .5em;
-    }
-    th {
-        font-weight: bold;
-        text-align: center;
-    }
-    caption {
-        margin-bottom: .5em;
-        text-align: center;
-    }
-    fieldset {
-      margin-left: 2px;
-      margin-right: 2px;
-      padding: 0.35em 0.625em 0.75em;
-      border: 2px groove ThreeDFace;
-    }
-    /* HACK: See note above regarding use of "displayTable" class in this section */
-    p, fieldset, table.displayTable {
-        margin-bottom: 1em;
-    }
-    hr {
-        background: #fff;
-        border-top: solid 1px #c3c3c3;
-        margin: 1em 0;
-    }
+```
+/* Reset styles to standardize formatting across various browsers (refer to
+ * http://meyerweb.com/eric/tools/css/reset/ and
+ * http://developer.yahoo.com/yui/reset/ for more info).
+ *
+ * Note that Eric's original approach is a little too "aggressive" for
+ * SharePoint sites. For example, the "vertical-align: baseline;" reset rule
+ * subsequently breaks many different areas of the site. Consequently, we base
+ * our reset rules on the simpler set from the Yahoo! YUI team.
+------------------------------------------------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset,
+input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+}
+hr {
+    border: 0;
+    background: #000;
+    color: black;
+    height: 1px;
+    margin: 0;
+}
+/* HTML elements (Ideally, this section should not contain any CSS classes,
+ * but rather only contain generic CSS rules for HTML elements. These rules
+ * essentially undo the "reset" rules above in order to achieve the desired
+ * formatting across various "A-grade" browsers.
+------------------------------------------------------------------------------*/
+body {
+    background: #fff;
+    color: #58595b;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: small;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    font-weight: bold;
+}
+h1 {
+    color: #868686;
+    font-size: 2.3em;
+    font-style: italic;
+    font-weight: bold;
+    margin: .67em 0;
+}
+h2 {
+    color: #3a3b3c;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: .83em 0;
+}
+h3 {
+    color: #303435;
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+h4 {
+    font-weight: bold;
+    margin: 1.33em 0;
+}
+h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+    margin: 1.67em 0;
+}
+h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+    margin: 2.33em 0;
+}
+abbr, acronym {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+blockquote {
+    margin: 1em 40px;
+}
+em {
+    font-style: italic;
+}
+dl, ol, ul {
+    margin: 1em 1em 1em 2em;
+}
+dl dd {
+    margin-left: 1em;
+}
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+input[type="submit"] {
+    padding: 1px 4px;
+}
+ol li {
+    list-style: decimal outside;
+}
+ul li {
+    list-style: disc outside;
+}
+/* HACK: As noted above, this section should not contain rules for specific CSS
+ * classes, but rather generic CSS rules for all HTML elements. However,
+ * table-based layout is so rampant in MOSS 2007 that caution must be used when
+ * applying rules to tables -- or else the page layout becomes atrocious.
+ * Consequently, we use a CSS class to explicitly distinguish tables that are
+ * intended to be shown to users ("display tables") from the generic tables used
+ * for layout (i.e. "layout tables").
+ */
+th, table.displayTable td {
+    border: 1px solid #000;
+    padding: .5em;
+}
+th {
+    font-weight: bold;
+    text-align: center;
+}
+caption {
+    margin-bottom: .5em;
+    text-align: center;
+}
+fieldset {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 2px groove ThreeDFace;
+}
+/* HACK: See note above regarding use of "displayTable" class in this section */
+p, fieldset, table.displayTable {
+    margin-bottom: 1em;
+}
+hr {
+    background: #fff;
+    border-top: solid 1px #c3c3c3;
+    margin: 1em 0;
+}
+```
 
 
 
@@ -407,46 +423,48 @@ While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most
 
 
 
-    /* =core (SharePoint core.css overrides)
-    ------------------------------------------------------------------------------*/
-    .ms-pagebreadcrumb {
-        border: 0;    
-    }
-    .ms-pagebreadcrumb a {
-        background-color: inherit;
-        color: inherit;
-    }
-    .ms-PartSpacingHorizontal {
-        width: 0px !important;
-    }
-    .ms-MenuUIPopupBody table {
-        color: #4C4C4C;
-    }
-    /* Override .ms-WPBody rules from core.css so that content within Web Parts
-     * (e.g. a Content Editor Web Part) appears similar to other text on the page
-     * (for example, as defined in the CSS rules for <body>) */
-    .ms-WPBody {
-        font-family: inherit;
-        font-size: inherit;
-    }
-    .ms-WPBody a:link, .ms-WPBody a:visited,
-    .ms-WPBody a:hover, .ms-WPBody a:active {
-        color: #003399;
-    }
-    .ms-WPBody td {
-        font-size: inherit;
-        font-family: inherit;
-    }
-    .ms-WPBody span {
-        font-size: inherit;
-    }
-    .ms-WPHeader td {
-        border-bottom: 1px solid #303435;
-    }
-    .ms-WPTitle {
-        color: #303435;
-        font-family: inherit;
-    }
+```
+/* =core (SharePoint core.css overrides)
+------------------------------------------------------------------------------*/
+.ms-pagebreadcrumb {
+    border: 0;    
+}
+.ms-pagebreadcrumb a {
+    background-color: inherit;
+    color: inherit;
+}
+.ms-PartSpacingHorizontal {
+    width: 0px !important;
+}
+.ms-MenuUIPopupBody table {
+    color: #4C4C4C;
+}
+/* Override .ms-WPBody rules from core.css so that content within Web Parts
+ * (e.g. a Content Editor Web Part) appears similar to other text on the page
+ * (for example, as defined in the CSS rules for <body>) */
+.ms-WPBody {
+    font-family: inherit;
+    font-size: inherit;
+}
+.ms-WPBody a:link, .ms-WPBody a:visited,
+.ms-WPBody a:hover, .ms-WPBody a:active {
+    color: #003399;
+}
+.ms-WPBody td {
+    font-size: inherit;
+    font-family: inherit;
+}
+.ms-WPBody span {
+    font-size: inherit;
+}
+.ms-WPHeader td {
+    border-bottom: 1px solid #303435;
+}
+.ms-WPTitle {
+    color: #303435;
+    font-family: inherit;
+}
+```
 
 
 
@@ -456,7 +474,9 @@ Returning to the contents of the master page, the following element is used to e
 
 
 
-    <div class="container_12">
+```
+<div class="container_12">
+```
 
 
 
@@ -473,17 +493,17 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint 
 
 > **Update (2010-12-02)**
 > 
-> Part 2 in this series in *finally* available ;-)  
->   
-> **Web Standards Design with SharePoint, Part 2**  
+> Part 2 in this series in *finally* available ;-)
+> 
+> **Web Standards Design with SharePoint, Part 2**
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
 
 
 
 > **Update (2011-01-31)**
 > 
-> Part 3 in this series provides a sample SharePoint master page and various page layouts based on the 960 Grid System.  
->   
-> **Web Standards Design with SharePoint, Part 3**  
+> Part 3 in this series provides a sample SharePoint master page and various page layouts based on the 960 Grid System.
+> 
+> **Web Standards Design with SharePoint, Part 3**
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 

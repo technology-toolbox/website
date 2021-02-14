@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx)
 > 

@@ -10,8 +10,8 @@ tags: ["Core Development", "Visual Studio"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macros-for-unloading-reloading-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macros-for-unloading-reloading-projects.aspx)
@@ -28,49 +28,51 @@ Here is my `UnloadAllProjects()` macro:
 
 
 
-    Public Sub UnloadAllProjects()
-        If (DTE.Solution Is Nothing _
-            Or DTE.Solution.Count = 0) Then
-    
-            MessageBox.Show( _
-                "Cannot unload all projects because no solution is open.", _
-                "Error", _
-                MessageBoxButtons.OK, _
-                MessageBoxIcon.Error)
-    
-            Exit Sub
-        End If
-    
-        Dim solutionName As String = _
-            DTE.Solution.Properties.Item("Name").Value.ToString()
-    
-        WriteOutput("Unloading projects in solution (" & solutionName & ")...")
-    
-        Dim solutionExplorer As Window = _
-            DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
-    
-        solutionExplorer.Activate()
-    
-        Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
-    
-        For Each proj As Project In DTE.Solution.Projects
-            ' Note that the project may be a solution folder, in which case we
-            ' want to unload all of the projects within the solution folder.
-            '
-            ' Also note if the project is already unloaded, or is a solution
-            ' folder containing no projects -- then a COM exception occurs.
-            Try
-                UnloadProject(proj, solutionName, solutionHierarchy)
-            Catch ex As Exception
-                WriteOutput("Error unloading project (" & proj.Name & "): " _
-                    & ex.Message)
-    
-            End Try
-        Next
-    
-        WriteOutput("Successfully unloaded projects in solution (" _
-                    & solutionName & ").")
-    End Sub
+```
+Public Sub UnloadAllProjects()
+    If (DTE.Solution Is Nothing _
+        Or DTE.Solution.Count = 0) Then
+
+        MessageBox.Show( _
+            "Cannot unload all projects because no solution is open.", _
+            "Error", _
+            MessageBoxButtons.OK, _
+            MessageBoxIcon.Error)
+
+        Exit Sub
+    End If
+
+    Dim solutionName As String = _
+        DTE.Solution.Properties.Item("Name").Value.ToString()
+
+    WriteOutput("Unloading projects in solution (" & solutionName & ")...")
+
+    Dim solutionExplorer As Window = _
+        DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
+
+    solutionExplorer.Activate()
+
+    Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
+
+    For Each proj As Project In DTE.Solution.Projects
+        ' Note that the project may be a solution folder, in which case we
+        ' want to unload all of the projects within the solution folder.
+        '
+        ' Also note if the project is already unloaded, or is a solution
+        ' folder containing no projects -- then a COM exception occurs.
+        Try
+            UnloadProject(proj, solutionName, solutionHierarchy)
+        Catch ex As Exception
+            WriteOutput("Error unloading project (" & proj.Name & "): " _
+                & ex.Message)
+
+        End Try
+    Next
+
+    WriteOutput("Successfully unloaded projects in solution (" _
+                & solutionName & ").")
+End Sub
+```
 
 
 
@@ -78,32 +80,34 @@ The actual work of unloading a project is delegated to the `UnloadProject()`  me
 
 
 
-    Private Sub UnloadProject( _
-        ByVal proj As Project, _
-        ByVal solutionName As String, _
-        ByVal solutionHierarchy As UIHierarchy)
-    
-        Debug.Assert(Not proj Is Nothing)
-        Debug.Assert(String.IsNullOrEmpty(solutionName) = False)
-        Debug.Assert(Not solutionHierarchy Is Nothing)
-    
-        WriteOutput("Unloading project (" & proj.Name & ")...")
-    
-        If (proj.Kind = Constants.vsProjectKindMisc) Then
-            ' "Miscellaenous Files" cannot be unloaded
-            WriteOutput("Project (" & proj.Name & ") cannot be unloaded.")
-            Return
-        End If
-    
-        Dim projPath As String = solutionName & "\" & proj.Name
-    
-        Dim obj As Object = solutionHierarchy.GetItem(projPath)
-        obj.Select(vsUISelectionType.vsUISelectionTypeSelect)
-    
-        Dim projectName As String = proj.Name
-        DTE.ExecuteCommand("Project.UnloadProject")
-        WriteOutput("Successfully unloaded project (" & projectName & ").")
-    End Sub
+```
+Private Sub UnloadProject( _
+    ByVal proj As Project, _
+    ByVal solutionName As String, _
+    ByVal solutionHierarchy As UIHierarchy)
+
+    Debug.Assert(Not proj Is Nothing)
+    Debug.Assert(String.IsNullOrEmpty(solutionName) = False)
+    Debug.Assert(Not solutionHierarchy Is Nothing)
+
+    WriteOutput("Unloading project (" & proj.Name & ")...")
+
+    If (proj.Kind = Constants.vsProjectKindMisc) Then
+        ' "Miscellaenous Files" cannot be unloaded
+        WriteOutput("Project (" & proj.Name & ") cannot be unloaded.")
+        Return
+    End If
+
+    Dim projPath As String = solutionName & "\" & proj.Name
+
+    Dim obj As Object = solutionHierarchy.GetItem(projPath)
+    obj.Select(vsUISelectionType.vsUISelectionTypeSelect)
+
+    Dim projectName As String = proj.Name
+    DTE.ExecuteCommand("Project.UnloadProject")
+    WriteOutput("Successfully unloaded project (" & projectName & ").")
+End Sub
+```
 
 
 
@@ -119,75 +123,77 @@ If you take the above code and essentially search-and-replace "unload" with "rel
 
 
 
-    Public Sub ReloadAllProjects()
-        If (DTE.Solution Is Nothing _
-            Or DTE.Solution.Count = 0) Then
-    
-            MessageBox.Show( _
-                "Cannot reload all projects because no solution is open.", _
-                "Error", _
-                MessageBoxButtons.OK, _
-                MessageBoxIcon.Error)
-    
-            Exit Sub
-        End If
-    
-        Dim solutionName As String = _
-            DTE.Solution.Properties.Item("Name").Value.ToString()
-    
-        WriteOutput("Reloading projects in solution (" & solutionName & ")...")
-    
-        Dim solutionExplorer As Window = _
-            DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
-    
-        solutionExplorer.Activate()
-    
-        Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
-    
-        For Each proj As Project In DTE.Solution.Projects
-            ' Note that the project may be a solution folder, in which case we
-            ' want to reload all of the projects within the solution folder.
-            '
-            ' Also note if the project is already loaded, or is a solution
-            ' folder containing no projects -- then a COM exception occurs.
-            Try
-                ReloadProject(proj, solutionName, solutionHierarchy)
-            Catch ex As Exception
-                WriteOutput("Error reloading project (" & proj.Name & "): " _
-                    & ex.Message)
-    
-            End Try
-        Next
-    
-        WriteOutput("Successfully reloaded projects in solution (" _
-                    & solutionName & ").")
-    End Sub
-    
-    Private Sub ReloadProject( _
-        ByVal proj As Project, _
-        ByVal solutionName As String, _
-        ByVal solutionHierarchy As UIHierarchy)
-    
-        Debug.Assert(Not proj Is Nothing)
-        Debug.Assert(String.IsNullOrEmpty(solutionName) = False)
-        Debug.Assert(Not solutionHierarchy Is Nothing)
-    
-        WriteOutput("Reloading project (" & proj.Name & ")...")
-    
-        If (proj.Kind = Constants.vsProjectKindMisc) Then
-            ' "Miscellaenous Files" cannot be unloaded
-            WriteOutput("Project (" & proj.Name & ") cannot be unloaded.")
-            Return
-        End If
-    
-        Dim projPath As String = solutionName & "\" & proj.Name
-    
-        Dim obj As Object = solutionHierarchy.GetItem(projPath)
-        obj.Select(vsUISelectionType.vsUISelectionTypeSelect)
-    
-        DTE.ExecuteCommand("Project.ReloadProject")
-        WriteOutput("Successfully reloaded project (" & proj.Name & ").")
-    End Sub
+```
+Public Sub ReloadAllProjects()
+    If (DTE.Solution Is Nothing _
+        Or DTE.Solution.Count = 0) Then
+
+        MessageBox.Show( _
+            "Cannot reload all projects because no solution is open.", _
+            "Error", _
+            MessageBoxButtons.OK, _
+            MessageBoxIcon.Error)
+
+        Exit Sub
+    End If
+
+    Dim solutionName As String = _
+        DTE.Solution.Properties.Item("Name").Value.ToString()
+
+    WriteOutput("Reloading projects in solution (" & solutionName & ")...")
+
+    Dim solutionExplorer As Window = _
+        DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
+
+    solutionExplorer.Activate()
+
+    Dim solutionHierarchy As UIHierarchy = solutionExplorer.Object
+
+    For Each proj As Project In DTE.Solution.Projects
+        ' Note that the project may be a solution folder, in which case we
+        ' want to reload all of the projects within the solution folder.
+        '
+        ' Also note if the project is already loaded, or is a solution
+        ' folder containing no projects -- then a COM exception occurs.
+        Try
+            ReloadProject(proj, solutionName, solutionHierarchy)
+        Catch ex As Exception
+            WriteOutput("Error reloading project (" & proj.Name & "): " _
+                & ex.Message)
+
+        End Try
+    Next
+
+    WriteOutput("Successfully reloaded projects in solution (" _
+                & solutionName & ").")
+End Sub
+
+Private Sub ReloadProject( _
+    ByVal proj As Project, _
+    ByVal solutionName As String, _
+    ByVal solutionHierarchy As UIHierarchy)
+
+    Debug.Assert(Not proj Is Nothing)
+    Debug.Assert(String.IsNullOrEmpty(solutionName) = False)
+    Debug.Assert(Not solutionHierarchy Is Nothing)
+
+    WriteOutput("Reloading project (" & proj.Name & ")...")
+
+    If (proj.Kind = Constants.vsProjectKindMisc) Then
+        ' "Miscellaenous Files" cannot be unloaded
+        WriteOutput("Project (" & proj.Name & ") cannot be unloaded.")
+        Return
+    End If
+
+    Dim projPath As String = solutionName & "\" & proj.Name
+
+    Dim obj As Object = solutionHierarchy.GetItem(projPath)
+    obj.Select(vsUISelectionType.vsUISelectionTypeSelect)
+
+    DTE.ExecuteCommand("Project.ReloadProject")
+    WriteOutput("Successfully reloaded project (" & proj.Name & ").")
+End Sub
+```
 
 
 

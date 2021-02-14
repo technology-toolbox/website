@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx)
 > 
@@ -32,36 +32,38 @@ If you are using SharePoint Server 2010 (or SharePoint Foundation), then you can
 
 
 
-    # Adds a "Wiki" library to a SharePoint site
+```
+# Adds a "Wiki" library to a SharePoint site
+
+function AddWikiLibrary(
+    [Microsoft.SharePoint.SPweb] $web,
+    $libraryName,
+    $libraryDescription)
+{
+    Write-Debug "Adding wiki library ($libraryName) to site ($($web.Url))..."
+                    
+    $listId = $web.Lists.Add(
+        $name,
+        $description,
+        [Microsoft.SharePoint.SPListTemplateType]::WebPageLibrary)
     
-    function AddWikiLibrary(
-        [Microsoft.SharePoint.SPweb] $web,
-        $libraryName,
-        $libraryDescription)
-    {
-        Write-Debug "Adding wiki library ($libraryName) to site ($($web.Url))..."
-                        
-        $listId = $web.Lists.Add(
-            $name,
-            $description,
-            [Microsoft.SharePoint.SPListTemplateType]::WebPageLibrary)
-        
-        $wikiLibrary = $web.Lists[$listId]
-        
-        $null = [Microsoft.SharePoint.Utilities.SPUtility]::AddDefaultWikiContent(
-            $wikiLibrary)
-    }
+    $wikiLibrary = $web.Lists[$listId]
     
-    $name = "Team Wiki"
-    
-    $description = "Share knowledge for a Team Project by adding or editing" `
-        + " content in this wiki"
-    
-    $DebugPreference = "SilentlyContinue"
-    $web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
-    
-    $DebugPreference = "Continue"
-    AddWikiLibrary $web $name $description
+    $null = [Microsoft.SharePoint.Utilities.SPUtility]::AddDefaultWikiContent(
+        $wikiLibrary)
+}
+
+$name = "Team Wiki"
+
+$description = "Share knowledge for a Team Project by adding or editing" `
+    + " content in this wiki"
+
+$DebugPreference = "SilentlyContinue"
+$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"
+
+$DebugPreference = "Continue"
+AddWikiLibrary $web $name $description
+```
 
 
 
@@ -71,20 +73,22 @@ Lastly, as I demonstrated in the earlier post, by using PowerShell you can easil
 
 
 
-    $sitesToUpgrade =
-        @(
-            "http://cyclops/sites/AdventureWorks",
-            "http://cyclops/sites/Demo",
-            "http://cyclops/sites/Toolbox"
-        )
-    
-    $sitesToUpgrade |
-        ForEach-Object {
-            $DebugPreference = "SilentlyContinue"
-            $web = Get-SPWeb $_
-    
-            $DebugPreference = "Continue"
-            AddWikiLibrary $web $name $description
-            $web.Dispose()
-        }
+```
+$sitesToUpgrade =
+    @(
+        "http://cyclops/sites/AdventureWorks",
+        "http://cyclops/sites/Demo",
+        "http://cyclops/sites/Toolbox"
+    )
+
+$sitesToUpgrade |
+    ForEach-Object {
+        $DebugPreference = "SilentlyContinue"
+        $web = Get-SPWeb $_
+
+        $DebugPreference = "Continue"
+        AddWikiLibrary $web $name $description
+        $web.Dispose()
+    }
+```
 

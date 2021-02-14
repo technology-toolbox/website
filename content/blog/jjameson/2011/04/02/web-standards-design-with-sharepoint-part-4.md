@@ -10,8 +10,8 @@ tags: ["SharePoint 2010", "Tugboat"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx)
@@ -67,9 +67,11 @@ Once I completed "step 1" (having the custom Tugboat.master rendering the exact 
 
 
 
-    <SharePoint:CssRegistration
-    name="<% $SPUrl:~sitecollection/Style Library/Tugboat/Themes/Theme1/css/screen.css%>"
-    After="corev4.css" runat="server"/>
+```
+<SharePoint:CssRegistration
+name="<% $SPUrl:~sitecollection/Style Library/Tugboat/Themes/Theme1/css/screen.css%>"
+After="corev4.css" runat="server"/>
+```
 
 
 
@@ -90,47 +92,49 @@ The first step in getting rid of the ribbon is to remove the search box and move
 
 
 
-    <div id="s4-searcharea" class="s4-search s4-rp">
-        <SharePoint:DelegateControl runat="server" ControlId="GlobalSiteLink0" />
-        <a href="#" tabindex="-1" style="display:none"></a>
-        <SharePoint:DelegateControl ControlId="GlobalSiteLink3-mini"
-            Scope="Farm" runat="server" />
-        <span class="s4-help">
-            <span
-    style="height:17px;width:17px;position:relative;display:inline-block;overflow:hidden;"
-    class="s4-clust">
-                <a href="javascript:TopHelpButtonClick('HelpHome')"
-                    style="height:17px;width:17px;display:inline-block;"
-                    accesskey="<%$Resources:wss,multipages_helplink_accesskey%>"
-                    id="TopHelpLink" title="<%$Resources:wss,multipages_helplinkalt_text%>"
-                    runat="server">
-                    <img src="/_layouts/images/fgimg.png"
-    alt="<%$Resources:wss,multipages_helplinkalt_text%>"
-    style="left:-0px !important;top:-309px !important;position:absolute;"
-    align="absmiddle" border="0" runat="server" />
-                </a>
-            </span>
+```
+<div id="s4-searcharea" class="s4-search s4-rp">
+    <SharePoint:DelegateControl runat="server" ControlId="GlobalSiteLink0" />
+    <a href="#" tabindex="-1" style="display:none"></a>
+    <SharePoint:DelegateControl ControlId="GlobalSiteLink3-mini"
+        Scope="Farm" runat="server" />
+    <span class="s4-help">
+        <span
+style="height:17px;width:17px;position:relative;display:inline-block;overflow:hidden;"
+class="s4-clust">
+            <a href="javascript:TopHelpButtonClick('HelpHome')"
+                style="height:17px;width:17px;display:inline-block;"
+                accesskey="<%$Resources:wss,multipages_helplink_accesskey%>"
+                id="TopHelpLink" title="<%$Resources:wss,multipages_helplinkalt_text%>"
+                runat="server">
+                <img src="/_layouts/images/fgimg.png"
+alt="<%$Resources:wss,multipages_helplinkalt_text%>"
+style="left:-0px !important;top:-309px !important;position:absolute;"
+align="absmiddle" border="0" runat="server" />
+            </a>
         </span>
-        <div class="s4-trc-container-menu">
-            <wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
-            <wssuc:MUISelector runat="server"/>
-        </div>
-        <SharePoint:DelegateControl ControlId="GlobalSiteLink2" Scope="Farm" runat="server" />
-        <span>
-            <span style="display:inline-block;position:relative;">
-                <Sharepoint:DeveloperDashboardLauncher
-                ID="DeveloperDashboardLauncher"
-                NavigateUrl="javascript:ToggleDeveloperDashboard()"
-                runat="server"
-                ImageUrl="/_layouts/images/fgimg.png"
-                Text="<%$Resources:wss,multipages_launchdevdashalt_text%>"
-                OffsetX=0
-                OffsetY=222
-                Height=16
-                Width=16 />
-            </span>
-        </span>
+    </span>
+    <div class="s4-trc-container-menu">
+        <wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
+        <wssuc:MUISelector runat="server"/>
     </div>
+    <SharePoint:DelegateControl ControlId="GlobalSiteLink2" Scope="Farm" runat="server" />
+    <span>
+        <span style="display:inline-block;position:relative;">
+            <Sharepoint:DeveloperDashboardLauncher
+            ID="DeveloperDashboardLauncher"
+            NavigateUrl="javascript:ToggleDeveloperDashboard()"
+            runat="server"
+            ImageUrl="/_layouts/images/fgimg.png"
+            Text="<%$Resources:wss,multipages_launchdevdashalt_text%>"
+            OffsetX=0
+            OffsetY=222
+            Height=16
+            Width=16 />
+        </span>
+    </span>
+</div>
+```
 
 
 
@@ -138,10 +142,12 @@ Note that since I decided to remove the Search box for the sake of simplifying t
 
 
 
-    <asp:Panel Visible="false" runat="server">
-        ...
-        <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" />
-    </asp:Panel>
+```
+<asp:Panel Visible="false" runat="server">
+    ...
+    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" />
+</asp:Panel>
+```
 
 
 
@@ -174,40 +180,42 @@ The next step is get rid of the OOTB `<div class="s4-notdlg top-row">` content (
 
 
 
-    <div id="s4-workspace">
-      <div class="s4-notdlg top-row">
-        <div id="header" class="group">
-          <div id="header-inner">
-            <div id="nav" class="group">
-              <div id="logo" class="group">
-                <h1>
-                  <SharePoint:SPLinkButton id="onetidProjectPropertyTitleGraphic"
-                    runat="server" NavigateUrl="~site/">
-                    <img alt="Tugboat"
-                      src="/Style Library/Tugboat/Themes/Theme1/img/logo-lofi.gif">
-                  </SharePoint:SPLinkButton></h1>
-                  <p>Pulling you along since 2009.</p>
-                </div>
-                <img id="tugboat" alt="tugboat"
-                  src="/Style Library/Tugboat/Themes/Theme1/img/tugboat.png">
-                <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" runat="server">
-                <ul class="group">
-                  <li>
-                    <a href="#"><strong>Home <em>News and Trends</em></strong></a></li>
-                  <li>
-                    <a href="#">
-                      <strong>Our Coffee <em>Handcrafted Beans</em></strong></a></li>
-                  <li>
-                    <a href="#"><strong>Store <em>Shop Online</em></strong></a></li>
-                  <li class="last">
-                    <a href="#"><strong>About <em>Company Info</em></strong></a></li>
-                </ul>
-                </asp:ContentPlaceHolder>
-              </div>
+```
+<div id="s4-workspace">
+  <div class="s4-notdlg top-row">
+    <div id="header" class="group">
+      <div id="header-inner">
+        <div id="nav" class="group">
+          <div id="logo" class="group">
+            <h1>
+              <SharePoint:SPLinkButton id="onetidProjectPropertyTitleGraphic"
+                runat="server" NavigateUrl="~site/">
+                <img alt="Tugboat"
+                  src="/Style Library/Tugboat/Themes/Theme1/img/logo-lofi.gif">
+              </SharePoint:SPLinkButton></h1>
+              <p>Pulling you along since 2009.</p>
             </div>
+            <img id="tugboat" alt="tugboat"
+              src="/Style Library/Tugboat/Themes/Theme1/img/tugboat.png">
+            <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" runat="server">
+            <ul class="group">
+              <li>
+                <a href="#"><strong>Home <em>News and Trends</em></strong></a></li>
+              <li>
+                <a href="#">
+                  <strong>Our Coffee <em>Handcrafted Beans</em></strong></a></li>
+              <li>
+                <a href="#"><strong>Store <em>Shop Online</em></strong></a></li>
+              <li class="last">
+                <a href="#"><strong>About <em>Company Info</em></strong></a></li>
+            </ul>
+            </asp:ContentPlaceHolder>
           </div>
         </div>
-        ...
+      </div>
+    </div>
+    ...
+```
 
 
 
@@ -234,19 +242,21 @@ This is simply a matter of removing a few elements (specifically `<div id="s4-ti
 
 
 
-    <asp:Panel Visible="false" runat="server">
-      ...
-      <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderWikiNavigator" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server" />
-      <asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
-    </asp:Panel>
+```
+<asp:Panel Visible="false" runat="server">
+  ...
+  <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderWikiNavigator" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server" />
+  <asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
+</asp:Panel>
+```
 
 
 
@@ -262,17 +272,19 @@ Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv
 
 
 
-    <div class="s4-ca main-container" id="MSO_ContentDiv" runat="server">
-      <a name="mainContent"></a>
-      <div class="group" id="wrap">
-        <asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
-        <hr/>
-        <div id="pageFooter">
-          Copyright &copy; 2009.  Tugboat Coffee is a ficticious demonstration,
-          handcrafted by <a href="http://simplebits.com/">SimpleBits</a>.
-    </div> <!-- /pageFooter -->
-      </div>
-    </div>
+```
+<div class="s4-ca main-container" id="MSO_ContentDiv" runat="server">
+  <a name="mainContent"></a>
+  <div class="group" id="wrap">
+    <asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
+    <hr/>
+    <div id="pageFooter">
+      Copyright &copy; 2009.  Tugboat Coffee is a ficticious demonstration,
+      handcrafted by <a href="http://simplebits.com/">SimpleBits</a>.
+</div> <!-- /pageFooter -->
+  </div>
+</div>
+```
 
 
 
@@ -294,10 +306,12 @@ This is easy to change by adding a little CSS to the custom SharePointFixes.css 
 
 
 
-    .s4-ca {
-        background-color: inherit;
-        margin-left: 0;
-    }
+```
+.s4-ca {
+    background-color: inherit;
+    margin-left: 0;
+}
+```
 
 
 
@@ -344,16 +358,18 @@ So, instead of using a **LoginView** control, I wrapped the **SPRibbon** control
 
 
 
-    <div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
-      <Sharepoint:SPSecurityTrimmedControl runat="server"
-        PermissionMode="Any"
-        PermissionsString="AddAndCustomizePages, AddListItems, ApplyThemeAndBorder,
-    EditListItems, EnumeratePermissions, DeleteListItems, ManageAlerts, ManageLists,
-    ManageSubwebs, ManageWeb, ViewUsageData ">
-        <SharePoint:SPRibbon runat="server"
-          PlaceholderElementId="RibbonContainer"
-          CssFile="">
-          ...
+```
+<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
+  <Sharepoint:SPSecurityTrimmedControl runat="server"
+    PermissionMode="Any"
+    PermissionsString="AddAndCustomizePages, AddListItems, ApplyThemeAndBorder,
+EditListItems, EnumeratePermissions, DeleteListItems, ManageAlerts, ManageLists,
+ManageSubwebs, ManageWeb, ViewUsageData ">
+    <SharePoint:SPRibbon runat="server"
+      PlaceholderElementId="RibbonContainer"
+      CssFile="">
+      ...
+```
 
 
 
@@ -381,19 +397,21 @@ Fortunately, this is fairly easy to override by adding a little CSS to the maste
 
 
 
-    <head runat="server">
-    ...
-    <asp:LoginView runat="server">
-        <AnonymousTemplate>
-            <style type="text/css">
-            body #s4-ribbonrow {
-                height: auto !important;
-                min-height: 0 !important;
-            }
-            </style>
-        </AnonymousTemplate>
-    </asp:LoginView>
-    </head>
+```
+<head runat="server">
+...
+<asp:LoginView runat="server">
+    <AnonymousTemplate>
+        <style type="text/css">
+        body #s4-ribbonrow {
+            height: auto !important;
+            min-height: 0 !important;
+        }
+        </style>
+    </AnonymousTemplate>
+</asp:LoginView>
+</head>
+```
 
 
 
@@ -425,17 +443,19 @@ The problem is due the default link rules in the custom Tugboat CSS. Fortunately
 
 
 
-    /*
-        HACK: Avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
-    
-    a:link, a:visited {
-    */
-    .main-container a:link, .main-container a:visited {
-      font-weight: bold;
-      text-decoration: none;
-      outline: none;
-      color: #3792b3;
-    }
+```
+/*
+    HACK: Avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
+
+a:link, a:visited {
+*/
+.main-container a:link, .main-container a:visited {
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  color: #3792b3;
+}
+```
 
 
 
@@ -443,17 +463,19 @@ As you can see, I simply qualified Dan's CSS rules a little bit in order to styl
 
 
 
-    /*
-        HACK: The following CSS rule was tweaked slightly due to the change above
-        to avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
-    
-    div.more-btn a {
-    */
-    div.more-btn a:link, div.more-btn a:visited {
-      ...
-      color: #fff;
-      ...
-    }
+```
+/*
+    HACK: The following CSS rule was tweaked slightly due to the change above
+    to avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
+
+div.more-btn a {
+*/
+div.more-btn a:link, div.more-btn a:visited {
+  ...
+  color: #fff;
+  ...
+}
+```
 
 
 
@@ -491,57 +513,77 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
             the program to make changes to the computer, click **Yes**.
 3. From the Windows PowerShell command prompt, change to the directory containing the
             deployment scripts (e.g. C:\NotBackedUp\Tugboat\Dev\Lab2\Source\DeploymentFiles\Scripts),
-            and run the following commands:  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-        $env:TUGBOAT_URL = "http://tugboatcoffee-local"
+            and run the following commands:
 
 
 
-        $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
 
 
 
-        & '.\Add Event Log Sources.ps1'
 
 
 
-        & '.\Create Web Application.ps1'
 
 
 
-        & '.\Configure Object Cache User Accounts.ps1'
+
+    ```
+    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
+    ```
 
 
 
-        & '.\Create Site Collections.ps1'
+    ```
+    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
+    ```
 
 
 
-        & '.\Enable Anonymous Access.ps1'
+    ```
+    & '.\Add Event Log Sources.ps1'
+    ```
 
 
 
-        & '.\Add Solutions.ps1'
+    ```
+    & '.\Create Web Application.ps1'
+    ```
 
 
 
-        & '.\Deploy Solutions.ps1'
+    ```
+    & '.\Configure Object Cache User Accounts.ps1'
+    ```
 
 
 
-        & '.\Activate Features.ps1'
+    ```
+    & '.\Create Site Collections.ps1'
+    ```
+
+
+
+    ```
+    & '.\Enable Anonymous Access.ps1'
+    ```
+
+
+
+    ```
+    & '.\Add Solutions.ps1'
+    ```
+
+
+
+    ```
+    & '.\Deploy Solutions.ps1'
+    ```
+
+
+
+    ```
+    & '.\Activate Features.ps1'
+    ```
 
 
 

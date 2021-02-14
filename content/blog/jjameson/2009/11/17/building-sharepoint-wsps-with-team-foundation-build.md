@@ -10,8 +10,8 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx)
 > 
@@ -59,71 +59,73 @@ So the trick to building WSPs with Team Foundation Build is to leverage the **Ou
 Here is the updated DDF file based on [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
 
 
-    ;
-    ; This ddf specifies the structure of the .wsp solution cab file.
-    ;
-    ; HACK: OPTION EXPLICIT cannot be used when specifying a variable with the /D option,
-    ; otherwise MakeCAB aborts with an error similar to the following:
-    ;
-    ;        ERROR: Option Explicit and variable not defined: OUT_DIR
-    ;
-    ;.OPTION EXPLICIT    ; Generate errors for undefined variables
-    
-    .Set CabinetNameTemplate=Fabrikam.Demo.Publishing.wsp
-    
-    ; The following variable must be set when calling MakeCAB (using the /D option)
-    ;.Define OUT_DIR=
-    
-    .Set DiskDirectoryTemplate=CDROM    ; All cabinets go in a single directory
-    .Set CompressionType=MSZIP            ; All files are compressed in cabinet files
-    .Set UniqueFiles=ON
-    .Set Cabinet=ON
-    .Set DiskDirectory1=%OUT_DIR%\Package
-    
-    DeploymentFiles\PackageFiles\manifest.xml
-    
-    .Set SourceDir=%OUT_DIR%            ; Copy assemblies from %OUT_DIR% folder
-    
-    Fabrikam.Demo.Publishing.dll
-    Fabrikam.Demo.CoreServices.dll
-    
-    .Set SourceDir=                    ; Copy files relative to project folder
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
-    DefaultSiteConfiguration\FeatureFiles\Feature.xml
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts
-    Layouts\FeatureFiles\Feature.xml
-    Layouts\FeatureFiles\ProvisionedFiles.xml
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\MasterPages
-    Layouts\MasterPages\FabrikamMinimal.master
-    
-    ;.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\PageLayouts
-    ;Layouts\PageLayouts\MinimalPage.aspx
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Images
-    Layouts\Images\FabrikamLogo_32x32.png
-    
-    .Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Themes\Theme1
-    Layouts\Themes\Theme1\BreadcrumbBullet.gif
-    Layouts\Themes\Theme1\FauxColumn-Fixed-2Col.png
-    Layouts\Themes\Theme1\FauxColumn-Fixed-3Col.png
-    Layouts\Themes\Theme1\Fabrikam-Basic.css
-    Layouts\Themes\Theme1\Fabrikam-Core.css
-    Layouts\Themes\Theme1\Fabrikam-FixedLayout.css
-    Layouts\Themes\Theme1\Fabrikam-IE.css
-    Layouts\Themes\Theme1\Fabrikam-IE6.css
-    Layouts\Themes\Theme1\Fabrikam-QuirksMode.css
-    Layouts\Themes\Theme1\Tab-LeftSide.jpg
-    Layouts\Themes\Theme1\Tab-RightSide.jpg
-    
-    .Set DestinationDir=ControlTemplates\Fabrikam\Demo\Publishing\Layouts
-    Layouts\Web\UI\WebControls\GlobalNavigation.ascx
-    Layouts\Web\UI\WebControls\StyleDeclarations.ascx
-    
-    .Set DestinationDir=Layouts\Fabrikam
-    Layouts\MasterPages\FabrikamMinimal.master
+```
+;
+; This ddf specifies the structure of the .wsp solution cab file.
+;
+; HACK: OPTION EXPLICIT cannot be used when specifying a variable with the /D option,
+; otherwise MakeCAB aborts with an error similar to the following:
+;
+;        ERROR: Option Explicit and variable not defined: OUT_DIR
+;
+;.OPTION EXPLICIT    ; Generate errors for undefined variables
+
+.Set CabinetNameTemplate=Fabrikam.Demo.Publishing.wsp
+
+; The following variable must be set when calling MakeCAB (using the /D option)
+;.Define OUT_DIR=
+
+.Set DiskDirectoryTemplate=CDROM    ; All cabinets go in a single directory
+.Set CompressionType=MSZIP            ; All files are compressed in cabinet files
+.Set UniqueFiles=ON
+.Set Cabinet=ON
+.Set DiskDirectory1=%OUT_DIR%\Package
+
+DeploymentFiles\PackageFiles\manifest.xml
+
+.Set SourceDir=%OUT_DIR%            ; Copy assemblies from %OUT_DIR% folder
+
+Fabrikam.Demo.Publishing.dll
+Fabrikam.Demo.CoreServices.dll
+
+.Set SourceDir=                    ; Copy files relative to project folder
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.DefaultSiteConfiguration
+DefaultSiteConfiguration\FeatureFiles\Feature.xml
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts
+Layouts\FeatureFiles\Feature.xml
+Layouts\FeatureFiles\ProvisionedFiles.xml
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\MasterPages
+Layouts\MasterPages\FabrikamMinimal.master
+
+;.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\PageLayouts
+;Layouts\PageLayouts\MinimalPage.aspx
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Images
+Layouts\Images\FabrikamLogo_32x32.png
+
+.Set DestinationDir=Fabrikam.Demo.Publishing.Layouts\Themes\Theme1
+Layouts\Themes\Theme1\BreadcrumbBullet.gif
+Layouts\Themes\Theme1\FauxColumn-Fixed-2Col.png
+Layouts\Themes\Theme1\FauxColumn-Fixed-3Col.png
+Layouts\Themes\Theme1\Fabrikam-Basic.css
+Layouts\Themes\Theme1\Fabrikam-Core.css
+Layouts\Themes\Theme1\Fabrikam-FixedLayout.css
+Layouts\Themes\Theme1\Fabrikam-IE.css
+Layouts\Themes\Theme1\Fabrikam-IE6.css
+Layouts\Themes\Theme1\Fabrikam-QuirksMode.css
+Layouts\Themes\Theme1\Tab-LeftSide.jpg
+Layouts\Themes\Theme1\Tab-RightSide.jpg
+
+.Set DestinationDir=ControlTemplates\Fabrikam\Demo\Publishing\Layouts
+Layouts\Web\UI\WebControls\GlobalNavigation.ascx
+Layouts\Web\UI\WebControls\StyleDeclarations.ascx
+
+.Set DestinationDir=Layouts\Fabrikam
+Layouts\MasterPages\FabrikamMinimal.master
+```
 
 
 Note how I've replaced the BUILD\_CONFIGURATION variable with the OUT\_DIR variable. Not surprisingly, the OUT\_DIR variable in the DDF is specified similar to how BUILD\_CONFIGURATION was previously specified when calling makecab.exe. However, unlike the build configuration the OutDir variable will likely contain spaces as well as a trailing slash (which makecab.exe apparently doesn't like). Therefore we must quote the OutDir variable and append with "." if a trailing slash is found.
@@ -131,18 +133,20 @@ Note how I've replaced the BUILD\_CONFIGURATION variable with the OUT\_DIR varia
 Here is the corresponding update to the project file:
 
 
-    <PropertyGroup>
-        <BuildDependsOn>
-          $(BuildDependsOn);
-          CreateSharePointSolutionPackage
-        </BuildDependsOn>
-        <QuotedOutDir>"$(OutDir)"</QuotedOutDir>
-        <QuotedOutDir Condition="HasTrailingSlash($(OutDir))">"$(OutDir)."</QuotedOutDir>
-      </PropertyGroup>
-      <Target Name="CreateSharePointSolutionPackage" Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);" Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
-        <Message Text="Creating SharePoint solution package..." />
-        <Exec Command="makecab /D OUT_DIR=$(QuotedOutDir) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;" />
-      </Target>
+```
+<PropertyGroup>
+    <BuildDependsOn>
+      $(BuildDependsOn);
+      CreateSharePointSolutionPackage
+    </BuildDependsOn>
+    <QuotedOutDir>"$(OutDir)"</QuotedOutDir>
+    <QuotedOutDir Condition="HasTrailingSlash($(OutDir))">"$(OutDir)."</QuotedOutDir>
+  </PropertyGroup>
+  <Target Name="CreateSharePointSolutionPackage" Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);" Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
+    <Message Text="Creating SharePoint solution package..." />
+    <Exec Command="makecab /D OUT_DIR=$(QuotedOutDir) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;" />
+  </Target>
+```
 
 
 With these changes, the SharePoint WSP is successfully built regardless of whether it is compiled through Visual Studio, from the command line using MSBuild and the TFSBuild.proj file, or as an automated build using a Team Foundation Build server.

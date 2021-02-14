@@ -10,8 +10,8 @@ tags: ["SQL Server"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/23/sql-server-authentication-modes.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/23/sql-server-authentication-modes.aspx)
@@ -28,8 +28,8 @@ I dug up an email that I had sent to a different customer (that, for whatever r
 
 * * *
 
-**From:** Jeremy Jameson   
-**To: **[names removed to protect the innocent]  
+**From:** Jeremy Jameson 
+**To: **[names removed to protect the innocent]
 **Subject: **SQL Server Authentication Modes
 
 Here is some info from MSDN:
@@ -40,7 +40,7 @@ Here is some info from MSDN:
 > Microsoft® SQL Server™ can operate in one of two security (authentication) 
 > 	modes:
 > 
-> - Windows Authentication Mode (Windows Authentication)  
+> - Windows Authentication Mode (Windows Authentication)
 > 
 > 		Windows Authentication mode allows a user to connect through a Microsoft 
 > 		Windows NT® 4.0 or Windows® 2000 user account.

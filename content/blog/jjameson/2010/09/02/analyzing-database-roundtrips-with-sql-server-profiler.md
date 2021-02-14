@@ -9,8 +9,8 @@ tags: ["My System", "SQL Server"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx)
 > 

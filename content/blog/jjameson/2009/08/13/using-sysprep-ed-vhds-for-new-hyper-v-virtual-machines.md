@@ -11,8 +11,8 @@ tags: ["My System", "Core Development", "Virtualization"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx)
@@ -79,7 +79,9 @@ Consequently, you can specify a command like the following to grant permissions 
 
 
 
-    icacls dogfood.vhd /grant "NT VIRTUAL MACHINE\C60995EB-8B7D-46DB-BD1E-3638CD1AEC32":(R,W)
+```
+icacls dogfood.vhd /grant "NT VIRTUAL MACHINE\C60995EB-8B7D-46DB-BD1E-3638CD1AEC32":(R,W)
+```
 
 
 

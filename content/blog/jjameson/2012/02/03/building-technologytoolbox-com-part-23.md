@@ -11,18 +11,20 @@ You may have noticed the following code in[my post from earlier today](building
 
 
 
-    ...
-                    else if (string.Compare(
+```
+...
+                else if (string.Compare(
+                    request.Url.Host,
+                    "technologytoolbox.com",
+                    StringComparison.OrdinalIgnoreCase) == 0
+                    || string.Compare(
                         request.Url.Host,
-                        "technologytoolbox.com",
-                        StringComparison.OrdinalIgnoreCase) == 0
-                        || string.Compare(
-                            request.Url.Host,
-                            "www.technologytoolbox.com",
-                            StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        ...
-                    }
+                        "www.technologytoolbox.com",
+                        StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    ...
+                }
+```
 
 
 
@@ -52,23 +54,25 @@ This resulted in the following elements being added to the Web.config 	file:
 
 
 
-    <configuration>
-      <system.webServer>
-        ...
-        <rewrite>
-          <rules>
-            <rule name="Redirect technologytoolbox.com to www.technologytoolbox.com"
-              stopProcessing="true">
-              <match url="(.*)" />
-              <conditions>
-                <add input="{HTTP_HOST}" pattern="^technologytoolbox\.com$" />
-              </conditions>
-              <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
-            </rule>
-          </rules>
-        </rewrite>
-      </system.webServer>
-    </configuration>
+```
+<configuration>
+  <system.webServer>
+    ...
+    <rewrite>
+      <rules>
+        <rule name="Redirect technologytoolbox.com to www.technologytoolbox.com"
+          stopProcessing="true">
+          <match url="(.*)" />
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^technologytoolbox\.com$" />
+          </conditions>
+          <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
 
 
 
@@ -78,18 +82,20 @@ Here are the corresponding configuration elements added by the	**Canonical doma
 
 
 
-    <rewrite>
-          <rules>
-            <rule name="CanonicalHostNameRule1">
-              <match url="(.*)" />
-              <conditions>
-                <add input="{HTTP_HOST}" pattern="^www\.technologytoolbox\.com$"
-                  negate="true" />
-              </conditions>
-              <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
-            </rule>
-          </rules>
-        </rewrite>
+```
+<rewrite>
+      <rules>
+        <rule name="CanonicalHostNameRule1">
+          <match url="(.*)" />
+          <conditions>
+            <add input="{HTTP_HOST}" pattern="^www\.technologytoolbox\.com$"
+              negate="true" />
+          </conditions>
+          <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
+        </rule>
+      </rules>
+    </rewrite>
+```
 
 
 

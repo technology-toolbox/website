@@ -12,8 +12,8 @@ tags: ["TFS", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx)
@@ -42,22 +42,24 @@ Here's a little script to reset all pages in a list of sites to the site definit
 
 
 
-    $sitesToReset =
-        @(
-            "http://cyclops/sites/AdventureWorks",
-            "http://cyclops/sites/Demo",
-            "http://cyclops/sites/Toolbox"
-        )
-    
-    $sitesToReset |
-        ForEach-Object {
-            $DebugPreference = "SilentlyContinue"
-            $web = Get-SPWeb $_
-    
-            $DebugPreference = "Continue"
-            
-            Write-Debug "Reghosting all pages in site ($($web.Url))..."
-            $web.RevertAllDocumentContentStreams()
-            $web.Dispose()
-        }
+```
+$sitesToReset =
+    @(
+        "http://cyclops/sites/AdventureWorks",
+        "http://cyclops/sites/Demo",
+        "http://cyclops/sites/Toolbox"
+    )
+
+$sitesToReset |
+    ForEach-Object {
+        $DebugPreference = "SilentlyContinue"
+        $web = Get-SPWeb $_
+
+        $DebugPreference = "Continue"
+        
+        Write-Debug "Reghosting all pages in site ($($web.Url))..."
+        $web.RevertAllDocumentContentStreams()
+        $web.Dispose()
+    }
+```
 

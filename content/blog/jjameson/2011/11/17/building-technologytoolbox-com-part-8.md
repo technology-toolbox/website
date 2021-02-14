@@ -50,47 +50,49 @@ For a complete list of the IIS cmdlets, refer to the following Technet article:
 
 
 
-    ...
-    Import-Module WebAdministration
-    
-    function RemoveWebsite(
-        [string] $siteName = $(Throw "Value cannot be null: siteName"),
-        [string] $sitePath = $(Throw "Value cannot be null: sitePath"))
+```
+...
+Import-Module WebAdministration
+
+function RemoveWebsite(
+    [string] $siteName = $(Throw "Value cannot be null: siteName"),
+    [string] $sitePath = $(Throw "Value cannot be null: sitePath"))
+{
+    # HACK: Don't use "Get-Website -Name ..."
+    # https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites
+    #
+    #$site = Get-Website -Name $siteName
+
+    $site = Get-Item ("IIS:\Sites\" + $siteName) -EA 0
+
+    If ($site -ne $null -and $site.Name -eq $siteName)
     {
-        # HACK: Don't use "Get-Website -Name ..."
-        # https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites
-        #
-        #$site = Get-Website -Name $siteName
-    
-        $site = Get-Item ("IIS:\Sites\" + $siteName) -EA 0
-    
-        If ($site -ne $null -and $site.Name -eq $siteName)
-        {
-            Write-Host "Stopping website ($siteName)...`r`n"
-            Stop-Website -Name $siteName
-            Write-Host "Successfully stopped website ($siteName).`r`n"
-    
-            Write-Host "Removing website ($siteName)...`r`n"
-            Remove-Website -Name $siteName
-            Write-Host "Successfully removed website ($siteName).`r`n"
-        }
-    
-        If (Test-Path $sitePath)
-        {
-            Write-Host "Removing website folder ($sitePath)...`r`n"
-            Remove-Item $sitePath -Recurse
-            Write-Host "Successfully removed website folder ($sitePath).`r`n"
-        }
-    
-        $appPool = Get-Item ("IIS:\AppPools\" + $siteName) -EA 0
-    
-        If ($appPool -ne $null)
-        {
-            Write-Host "Removing application pool ($siteName)...`r`n"
-            Remove-WebAppPool -Name $siteName
-            Write-Host "Successfully removed application pool ($siteName).`r`n"
-        }
+        Write-Host "Stopping website ($siteName)...`r`n"
+        Stop-Website -Name $siteName
+        Write-Host "Successfully stopped website ($siteName).`r`n"
+
+        Write-Host "Removing website ($siteName)...`r`n"
+        Remove-Website -Name $siteName
+        Write-Host "Successfully removed website ($siteName).`r`n"
     }
+
+    If (Test-Path $sitePath)
+    {
+        Write-Host "Removing website folder ($sitePath)...`r`n"
+        Remove-Item $sitePath -Recurse
+        Write-Host "Successfully removed website folder ($sitePath).`r`n"
+    }
+
+    $appPool = Get-Item ("IIS:\AppPools\" + $siteName) -EA 0
+
+    If ($appPool -ne $null)
+    {
+        Write-Host "Removing application pool ($siteName)...`r`n"
+        Remove-WebAppPool -Name $siteName
+        Write-Host "Successfully removed application pool ($siteName).`r`n"
+    }
+}
+```
 
 
 
@@ -113,26 +115,28 @@ Like the Production environment, the website runs in a dedicated application po
 
 
 
-    ...
-        $siteUrl = [System.Uri] $env:CAELUM_URL
-    ...
-        $siteName = $($siteUrl.Host)
-        $appPoolIdentity = "IIS APPPOOL\" + $siteName
-    
-        If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
-        {
-            $appPoolIdentity = "NT AUTHORITY\Network Service"
-        }
-    ...
-        Write-Host "Creating application pool ($siteName)...`r`n"
-        $appPool = New-WebAppPool -Name $siteName
-        If ($appPoolIdentity -eq "NT AUTHORITY\Network Service")
-        {
-            Write-Host "Setting app pool identity ($appPoolIdentity)...`r`n"
-            $appPool.processModel.identityType = "NetworkService"
-            $appPool | Set-Item
-            Write-Host "Successfully set app pool identity ($appPoolIdentity).`r`n"
-        }
+```
+...
+    $siteUrl = [System.Uri] $env:CAELUM_URL
+...
+    $siteName = $($siteUrl.Host)
+    $appPoolIdentity = "IIS APPPOOL\" + $siteName
+
+    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+    {
+        $appPoolIdentity = "NT AUTHORITY\Network Service"
+    }
+...
+    Write-Host "Creating application pool ($siteName)...`r`n"
+    $appPool = New-WebAppPool -Name $siteName
+    If ($appPoolIdentity -eq "NT AUTHORITY\Network Service")
+    {
+        Write-Host "Setting app pool identity ($appPoolIdentity)...`r`n"
+        $appPool.processModel.identityType = "NetworkService"
+        $appPool | Set-Item
+        Write-Host "Successfully set app pool identity ($appPoolIdentity).`r`n"
+    }
+```
 
 
 
@@ -151,11 +155,13 @@ Prior to creating the IIS website, the corresponding folder must be created:
 
 
 
-    $sitePath = "C:\inetpub\wwwroot\" + $siteName
-    
-        Write-Host "Creating website folder ($sitePath)...`r`n"
-        New-Item -Type Directory -Path $sitePath > $null
-        Write-Host "Successfully created website folder ($sitePath).`r`n"
+```
+$sitePath = "C:\inetpub\wwwroot\" + $siteName
+
+    Write-Host "Creating website folder ($sitePath)...`r`n"
+    New-Item -Type Directory -Path $sitePath > $null
+    Write-Host "Successfully created website folder ($sitePath).`r`n"
+```
 
 
 
@@ -165,11 +171,13 @@ Next, the `New-Website` cmdlet is used to create the website in IIS:
 
 
 
-    Write-Host "Creating website ($sitePath)...`r`n"
-        New-Website -Name $siteName -HostHeader $siteName `
-            -PhysicalPath $sitePath -ApplicationPool $siteName > $null
-    
-        Write-Host "Successfully created website ($sitePath).`r`n"
+```
+Write-Host "Creating website ($sitePath)...`r`n"
+    New-Website -Name $siteName -HostHeader $siteName `
+        -PhysicalPath $sitePath -ApplicationPool $siteName > $null
+
+    Write-Host "Successfully created website ($sitePath).`r`n"
+```
 
 
 
@@ -179,9 +187,11 @@ The Subtext solution is deployed by copying files from the Release server (DAZZ
 
 
 
-    Write-Host "Copying Subtext website content...`r`n"
-        Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
-        Write-Host "Successfully copied Subtext website content.`r`n"
+```
+Write-Host "Copying Subtext website content...`r`n"
+    Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
+    Write-Host "Successfully copied Subtext website content.`r`n"
+```
 
 
 
@@ -197,9 +207,11 @@ Subtext requires read/write access to the App\_Data folder, so I use the**[icac
 
 
 
-    Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
-        icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
-        Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
+```
+Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
+    icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
+    Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
+```
 
 
 
@@ -209,9 +221,11 @@ The /blog folder must be converted to an application (due to some of the config
 
 
 
-    Write-Host "Creating new application for blog site...`r`n"
-        New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
-        Write-Host "Successfully created new application for blog site.`r`n"
+```
+Write-Host "Creating new application for blog site...`r`n"
+    New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
+    Write-Host "Successfully created new application for blog site.`r`n"
+```
 
 
 
@@ -221,9 +235,11 @@ Similar to step 6, the Caelum solution is deployed by copying files from the Re
 
 
 
-    Write-Host "Copying Caelum website content...`r`n"
-        Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
-        Write-Host "Successfully copied Caelum website content.`r`n"
+```
+Write-Host "Copying Caelum website content...`r`n"
+    Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
+    Write-Host "Successfully copied Caelum website content.`r`n"
+```
 
 
 
@@ -239,13 +255,15 @@ For these reasons, I create configuration files as necessary for each environmen
 
 
 
-    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
-        {
-            Write-Host "Overwriting Web.config files...`r`n"
-            Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
-            Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
-            Write-Host "Successfully overwrote Web.config files.`r`n"
-        }
+```
+If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+    {
+        Write-Host "Overwriting Web.config files...`r`n"
+        Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
+        Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
+        Write-Host "Successfully overwrote Web.config files.`r`n"
+    }
+```
 
 
 
@@ -257,170 +275,172 @@ Here is the complete script that incorporates all of the steps above.
 
 
 
-    param(
-        [string] $caelumVersion,
-        [string] $subtextVersion,
-        [string] $buildConfiguration)
-    
-    $ErrorActionPreference = "Stop"
-    
-    Import-Module WebAdministration
-    
-    function RemoveWebsite(
-        [string] $siteName = $(Throw "Value cannot be null: siteName"),
-        [string] $sitePath = $(Throw "Value cannot be null: sitePath"))
+```
+param(
+    [string] $caelumVersion,
+    [string] $subtextVersion,
+    [string] $buildConfiguration)
+
+$ErrorActionPreference = "Stop"
+
+Import-Module WebAdministration
+
+function RemoveWebsite(
+    [string] $siteName = $(Throw "Value cannot be null: siteName"),
+    [string] $sitePath = $(Throw "Value cannot be null: sitePath"))
+{
+    # HACK: Don't use "Get-Website -Name ..."
+    # https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites
+    #
+    #$site = Get-Website -Name $siteName
+
+    $site = Get-Item ("IIS:\Sites\" + $siteName) -EA 0
+
+    If ($site -ne $null -and $site.Name -eq $siteName)
     {
-        # HACK: Don't use "Get-Website -Name ..."
-        # https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites
-        #
-        #$site = Get-Website -Name $siteName
-    
-        $site = Get-Item ("IIS:\Sites\" + $siteName) -EA 0
-    
-        If ($site -ne $null -and $site.Name -eq $siteName)
-        {
-            Write-Host "Stopping website ($siteName)...`r`n"
-            Stop-Website -Name $siteName
-            Write-Host "Successfully stopped website ($siteName).`r`n"
-    
-            Write-Host "Removing website ($siteName)...`r`n"
-            Remove-Website -Name $siteName
-            Write-Host "Successfully removed website ($siteName).`r`n"
-        }
-    
-        If (Test-Path $sitePath)
-        {
-            Write-Host "Removing website folder ($sitePath)...`r`n"
-            Remove-Item $sitePath -Recurse
-            Write-Host "Successfully removed website folder ($sitePath).`r`n"
-        }
-    
-        $appPool = Get-Item ("IIS:\AppPools\" + $siteName) -EA 0
-    
-        If ($appPool -ne $null)
-        {
-            Write-Host "Removing application pool ($siteName)...`r`n"
-            Remove-WebAppPool -Name $siteName
-            Write-Host "Successfully removed application pool ($siteName).`r`n"
-        }
+        Write-Host "Stopping website ($siteName)...`r`n"
+        Stop-Website -Name $siteName
+        Write-Host "Successfully stopped website ($siteName).`r`n"
+
+        Write-Host "Removing website ($siteName)...`r`n"
+        Remove-Website -Name $siteName
+        Write-Host "Successfully removed website ($siteName).`r`n"
     }
-    
-    function Main(
-        [string] $caelumVersion,
-        [string] $subtextVersion,
-        [string] $buildConfiguration)
+
+    If (Test-Path $sitePath)
     {
-        If ([string]::IsNullOrEmpty($env:CAELUM_URL) -eq $true)
-        {
-            Throw "CAELUM_URL environment variable must be set."
-        }
+        Write-Host "Removing website folder ($sitePath)...`r`n"
+        Remove-Item $sitePath -Recurse
+        Write-Host "Successfully removed website folder ($sitePath).`r`n"
+    }
+
+    $appPool = Get-Item ("IIS:\AppPools\" + $siteName) -EA 0
+
+    If ($appPool -ne $null)
+    {
+        Write-Host "Removing application pool ($siteName)...`r`n"
+        Remove-WebAppPool -Name $siteName
+        Write-Host "Successfully removed application pool ($siteName).`r`n"
+    }
+}
+
+function Main(
+    [string] $caelumVersion,
+    [string] $subtextVersion,
+    [string] $buildConfiguration)
+{
+    If ([string]::IsNullOrEmpty($env:CAELUM_URL) -eq $true)
+    {
+        Throw "CAELUM_URL environment variable must be set."
+    }
+
+    $siteUrl = [System.Uri] $env:CAELUM_URL
     
-        $siteUrl = [System.Uri] $env:CAELUM_URL
-        
-        Write-Debug "Absolute URL: $($siteUrl.AbsoluteUri)"
-    
-        If (($($siteUrl.AbsoluteUri) -eq "http://www-local.technologytoolbox.com/") `
-        	-or ($($siteUrl.AbsoluteUri) -eq "http://www-dev.technologytoolbox.com/"))
-        {
-            If ([string]::IsNullOrEmpty($caelumVersion) -eq $true)
-            {
-                Write-Host "Defaulting to latest build for Caelum...`r`n"
-                $caelumVersion = "_latest"
-            }
-            
-            If ([string]::IsNullOrEmpty($subtextVersion) -eq $true)
-            {
-                Write-Host "Defaulting to latest build for Subtext...`r`n"
-                $subtextVersion = "_latest"
-            }
-    
-            If ([string]::IsNullOrEmpty($buildConfiguration) -eq $true)
-            {
-                Write-Host "Defaulting to Debug build configuration...`r`n"
-                $buildConfiguration = "Debug"
-            }
-        }
-    
+    Write-Debug "Absolute URL: $($siteUrl.AbsoluteUri)"
+
+    If (($($siteUrl.AbsoluteUri) -eq "http://www-local.technologytoolbox.com/") `
+    	-or ($($siteUrl.AbsoluteUri) -eq "http://www-dev.technologytoolbox.com/"))
+    {
         If ([string]::IsNullOrEmpty($caelumVersion) -eq $true)
         {
-            Throw "Caelum build version must be specified for this environment."
+            Write-Host "Defaulting to latest build for Caelum...`r`n"
+            $caelumVersion = "_latest"
         }
-    
+        
         If ([string]::IsNullOrEmpty($subtextVersion) -eq $true)
         {
-            Throw "Subtext build version must be specified for this environment."
+            Write-Host "Defaulting to latest build for Subtext...`r`n"
+            $subtextVersion = "_latest"
         }
-    
+
         If ([string]::IsNullOrEmpty($buildConfiguration) -eq $true)
         {
-            Write-Host "Defaulting to Release build configuration...`r`n"
-            $buildConfiguration = "Release"
+            Write-Host "Defaulting to Debug build configuration...`r`n"
+            $buildConfiguration = "Debug"
         }
-    
-        $siteName = $($siteUrl.Host)
-    
-        $sitePath = "C:\inetpub\wwwroot\" + $siteName
-        $appPoolIdentity = "IIS APPPOOL\" + $siteName
-    
-        If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
-        {
-            $appPoolIdentity = "NT AUTHORITY\Network Service"
-        }
-    
-        Write-Debug "App pool identity: $appPoolIdentity"
-    
-        RemoveWebsite $siteName $sitePath
-    
-        Write-Host "Creating application pool ($siteName)...`r`n"
-        $appPool = New-WebAppPool -Name $siteName
-        If ($appPoolIdentity -eq "NT AUTHORITY\Network Service")
-        {
-            Write-Host "Setting app pool identity ($appPoolIdentity)...`r`n"
-            $appPool.processModel.identityType = "NetworkService"
-            $appPool | Set-Item
-            Write-Host "Successfully set app pool identity ($appPoolIdentity).`r`n"
-        }
-    
-        Write-Host "Successfully created application pool ($siteName).`r`n"
-    
-        Write-Host "Creating website folder ($sitePath)...`r`n"
-        New-Item -Type Directory -Path $sitePath > $null
-        Write-Host "Successfully created website folder ($sitePath).`r`n"
-    
-        Write-Host "Creating website ($sitePath)...`r`n"
-        New-Website -Name $siteName -HostHeader $siteName `
-            -PhysicalPath $sitePath -ApplicationPool $siteName > $null
-    
-        Write-Host "Successfully created website ($sitePath).`r`n"
-    
-        Write-Host "Copying Subtext website content...`r`n"
-        Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
-        Write-Host "Successfully copied Subtext website content.`r`n"
-    
-        Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
-        icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
-        Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
-    
-        Write-Host "Creating new application for blog site...`r`n"
-        New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
-        Write-Host "Successfully created new application for blog site.`r`n"
-    
-        Write-Host "Copying Caelum website content...`r`n"
-        Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
-        Write-Host "Successfully copied Caelum website content.`r`n"
-    
-        If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
-        {
-            Write-Host "Overwriting Web.config files...`r`n"
-            Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
-            Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
-            Write-Host "Successfully overwrote Web.config files.`r`n"
-        }
-    
-        Write-Host -Fore Green "Successfully rebuilt Web application.`r`n"
     }
-    
-    Main $caelumVersion $subtextVersion $buildConfiguration
+
+    If ([string]::IsNullOrEmpty($caelumVersion) -eq $true)
+    {
+        Throw "Caelum build version must be specified for this environment."
+    }
+
+    If ([string]::IsNullOrEmpty($subtextVersion) -eq $true)
+    {
+        Throw "Subtext build version must be specified for this environment."
+    }
+
+    If ([string]::IsNullOrEmpty($buildConfiguration) -eq $true)
+    {
+        Write-Host "Defaulting to Release build configuration...`r`n"
+        $buildConfiguration = "Release"
+    }
+
+    $siteName = $($siteUrl.Host)
+
+    $sitePath = "C:\inetpub\wwwroot\" + $siteName
+    $appPoolIdentity = "IIS APPPOOL\" + $siteName
+
+    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+    {
+        $appPoolIdentity = "NT AUTHORITY\Network Service"
+    }
+
+    Write-Debug "App pool identity: $appPoolIdentity"
+
+    RemoveWebsite $siteName $sitePath
+
+    Write-Host "Creating application pool ($siteName)...`r`n"
+    $appPool = New-WebAppPool -Name $siteName
+    If ($appPoolIdentity -eq "NT AUTHORITY\Network Service")
+    {
+        Write-Host "Setting app pool identity ($appPoolIdentity)...`r`n"
+        $appPool.processModel.identityType = "NetworkService"
+        $appPool | Set-Item
+        Write-Host "Successfully set app pool identity ($appPoolIdentity).`r`n"
+    }
+
+    Write-Host "Successfully created application pool ($siteName).`r`n"
+
+    Write-Host "Creating website folder ($sitePath)...`r`n"
+    New-Item -Type Directory -Path $sitePath > $null
+    Write-Host "Successfully created website folder ($sitePath).`r`n"
+
+    Write-Host "Creating website ($sitePath)...`r`n"
+    New-Website -Name $siteName -HostHeader $siteName `
+        -PhysicalPath $sitePath -ApplicationPool $siteName > $null
+
+    Write-Host "Successfully created website ($sitePath).`r`n"
+
+    Write-Host "Copying Subtext website content...`r`n"
+    Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
+    Write-Host "Successfully copied Subtext website content.`r`n"
+
+    Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
+    icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
+    Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
+
+    Write-Host "Creating new application for blog site...`r`n"
+    New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
+    Write-Host "Successfully created new application for blog site.`r`n"
+
+    Write-Host "Copying Caelum website content...`r`n"
+    Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
+    Write-Host "Successfully copied Caelum website content.`r`n"
+
+    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+    {
+        Write-Host "Overwriting Web.config files...`r`n"
+        Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
+        Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
+        Write-Host "Successfully overwrote Web.config files.`r`n"
+    }
+
+    Write-Host -Fore Green "Successfully rebuilt Web application.`r`n"
+}
+
+Main $caelumVersion $subtextVersion $buildConfiguration
+```
 
 
 
@@ -442,8 +462,10 @@ To invoke the PowerShell script and capture all of the commands and correspondin
 
 
 
-    PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
-    EXIT %ERRORLEVEL%
+```
+PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
+EXIT %ERRORLEVEL%
+```
 
 
 
@@ -461,8 +483,10 @@ The reason I put the quotes around "manual" is because most of the deployment i
 
 
 
-    PS C:\> cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'
-    PS C:\NotBackedUp\...\Scripts> & '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9
+```
+PS C:\> cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'
+PS C:\NotBackedUp\...\Scripts> & '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9
+```
 
 
 

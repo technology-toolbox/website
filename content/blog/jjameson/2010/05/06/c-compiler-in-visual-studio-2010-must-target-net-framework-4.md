@@ -10,8 +10,8 @@ tags: ["Core Development", "Visual Studio", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx)
 > 

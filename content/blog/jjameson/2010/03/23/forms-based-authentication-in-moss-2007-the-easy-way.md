@@ -10,8 +10,8 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx)
@@ -56,64 +56,88 @@ For the purposes of this post, we'll focus on the last part of this scenario  --
 
 When doing scenario-based development, I often like to start with the end user  experience and then figure out the steps to make that user experience a reality.  In this case, let's say that after getting the Fabrikam solution from TFS and building  the solution, Doug opens a command prompt and runs the following commands:
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-    set FABRIKAM_DEMO_URL=http://fabrikam-local
 
 
 
-    set FABRIKAM_BUILD_CONFIGURATION=Debug
 
 
 
-    set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
 
 
 
-    cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
 
 
 
-    "Add Solution.cmd"
+
+```
+set FABRIKAM_DEMO_URL=http://fabrikam-local
+```
 
 
 
-    "Deploy Solution.cmd"
+```
+set FABRIKAM_BUILD_CONFIGURATION=Debug
+```
 
 
 
-    cd ..\..\..\..\DeploymentFiles\Scripts
+```
+set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+```
 
 
 
-    "Create Web Applications.cmd"
+```
+cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+```
 
 
 
-    cd ..\..\Web\DeploymentFiles\Scripts
+```
+"Add Solution.cmd"
+```
 
 
 
-    "Add Solution.cmd"
+```
+"Deploy Solution.cmd"
+```
 
 
 
-    "Deploy Solution.cmd"
+```
+cd ..\..\..\..\DeploymentFiles\Scripts
+```
 
 
 
-    "Activate Features.cmd"
+```
+"Create Web Applications.cmd"
+```
+
+
+
+```
+cd ..\..\Web\DeploymentFiles\Scripts
+```
+
+
+
+```
+"Add Solution.cmd"
+```
+
+
+
+```
+"Deploy Solution.cmd"
+```
+
+
+
+```
+"Activate Features.cmd"
+```
 
 
 
@@ -125,7 +149,9 @@ It seems pretty straightforward, doesn't it? Let's dive into the details, step-b
 
 
 
-    set FABRIKAM_DEMO_URL=http://fabrikam-local
+```
+set FABRIKAM_DEMO_URL=http://fabrikam-local
+```
 
 
 
@@ -136,7 +162,9 @@ by environment* -- such as the default URL for the Fabrikam site. Following  the
 
 
 
-    set FABRIKAM_BUILD_CONFIGURATION=Debug
+```
+set FABRIKAM_BUILD_CONFIGURATION=Debug
+```
 
 
 
@@ -159,7 +187,9 @@ While we would obviously never want to deploy Debug builds to the Production  en
 
 
 
-    set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+```
+set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+```
 
 
 
@@ -171,7 +201,9 @@ Note that this password only needs to be set when creating (or recreating) the  
 
 
 
-    cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+```
+cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+```
 
 
 
@@ -184,7 +216,9 @@ In order to use the custom STSADM commands for the Fabrikam solution, the corres
 
 
 
-    "Add Solution.cmd"
+```
+"Add Solution.cmd"
+```
 
 
 
@@ -194,7 +228,9 @@ While it's certainly possible to invoke the STSADM utility directly in order  to
 
 
 
-    "Deploy Solution.cmd"
+```
+"Deploy Solution.cmd"
+```
 
 
 
@@ -206,7 +242,9 @@ Note that at this point in the process, all that Doug has done is prepare his  e
 
 
 
-    cd ..\..\..\..\DeploymentFiles\Scripts
+```
+cd ..\..\..\..\DeploymentFiles\Scripts
+```
 
 
 
@@ -216,7 +254,9 @@ The Fabrikam solution is organized hierarchically by feature areas and WSPs.  In
 
 
 
-    "Create Web Applications.cmd"
+```
+"Create Web Applications.cmd"
+```
 
 
 
@@ -237,7 +277,9 @@ solution
 
 
 
-    cd ..\..\Web\DeploymentFiles\Scripts
+```
+cd ..\..\Web\DeploymentFiles\Scripts
+```
 
 
 
@@ -247,7 +289,9 @@ Additional configuration of the Fabrikam site -- such as enabling anonymous acce
 
 
 
-    "Add Solution.cmd"
+```
+"Add Solution.cmd"
+```
 
 
 
@@ -257,7 +301,9 @@ Similar to step 5, a script is used to add **Fabrikam.Demo.Web.wsp**  to the Sha
 
 
 
-    "Deploy Solution.cmd"
+```
+"Deploy Solution.cmd"
+```
 
 
 
@@ -267,7 +313,9 @@ After the WSP is added to the farm, it must be deployed before the features can 
 
 
 
-    "Activate Features.cmd"
+```
+"Activate Features.cmd"
+```
 
 
 
@@ -283,19 +331,21 @@ Or, for those of you that prefer to read code instead...
 
 
 
-    string databaseServer = webApp.ContentDatabases[0].Server;
-             AddConnectionStringWebConfigModifications(webApp, databaseServer);
-    
-             AddAuthenticationWebConfigModifications(webApp);
-             AddMembershipWebConfigModifications(webApp);
-             AddRoleManagerWebConfigModifications(webApp);
-    
-             webApp.Update();
-             SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
-    
-             EnableAnonymousAccessOnRootWeb(webApp);
-                
-             ConfigureSqlRoleProviderJob.Register(webApp);
+```
+string databaseServer = webApp.ContentDatabases[0].Server;
+         AddConnectionStringWebConfigModifications(webApp, databaseServer);
+
+         AddAuthenticationWebConfigModifications(webApp);
+         AddMembershipWebConfigModifications(webApp);
+         AddRoleManagerWebConfigModifications(webApp);
+
+         webApp.Update();
+         SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
+
+         EnableAnonymousAccessOnRootWeb(webApp);
+            
+         ConfigureSqlRoleProviderJob.Register(webApp);
+```
 
 
 
@@ -309,12 +359,14 @@ The **AddConnectionStringWebConfigModifications** method adds the  following ele
 
 
 
-    <connectionStrings>
-        <add name="FabrikamDemo"
-          connectionString="Server={databaseServer};
-    Database=FabrikamDemo;
-    Integrated Security=true" />
-      </connectionStrings>
+```
+<connectionStrings>
+    <add name="FabrikamDemo"
+      connectionString="Server={databaseServer};
+Database=FabrikamDemo;
+Integrated Security=true" />
+  </connectionStrings>
+```
 
 
 
@@ -326,11 +378,13 @@ The **AddAuthenticationWebConfigModifications** method adds the  following eleme
 
 
 
-    <authentication mode="{Windows|Forms}">
-          <forms
-            defaultUrl="/"
-            timeout="60" />
-        </authentication>
+```
+<authentication mode="{Windows|Forms}">
+      <forms
+        defaultUrl="/"
+        timeout="60" />
+    </authentication>
+```
 
 
 
@@ -344,21 +398,23 @@ The **AddMembershipWebConfigModifications** method adds the following  elements 
 
 
 
-    <membership defaultProvider="FabrikamSqlMembershipProvider">
-          <providers>
-            <clear />
-            <add name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web,
-                Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Site"
-              connectionStringName="FabrikamDemo"
-              enablePasswordReset="true"
-              enablePasswordRetrieval="false"
-              passwordFormat="Hashed"
-              requiresQuestionAndAnswer="true"
-              requiresUniqueEmail="true" />
-          </providers>
-        </membership>
+```
+<membership defaultProvider="FabrikamSqlMembershipProvider">
+      <providers>
+        <clear />
+        <add name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web,
+            Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Site"
+          connectionStringName="FabrikamDemo"
+          enablePasswordReset="true"
+          enablePasswordRetrieval="false"
+          passwordFormat="Hashed"
+          requiresQuestionAndAnswer="true"
+          requiresUniqueEmail="true" />
+      </providers>
+    </membership>
+```
 
 
 
@@ -370,16 +426,18 @@ The **AddRoleManagerWebConfigModifications** method adds the following  elements
 
 
 
-    <roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
-          <providers>
-            <remove name="AspNetSqlRoleProvider" />
-            <add name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web,
-                Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Site"
-              connectionStringName="FabrikamDemo" />
-          </providers>
-        </roleManager>
+```
+<roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
+      <providers>
+        <remove name="AspNetSqlRoleProvider" />
+        <add name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web,
+            Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Site"
+          connectionStringName="FabrikamDemo" />
+      </providers>
+    </roleManager>
+```
 
 
 
@@ -395,16 +453,18 @@ Most of the work in enabling anonymous access on the top-level site is performed
 
 
 
-    internal static void EnableAnonymousAccessOnRootWeb(
-                SPWebApplication webApp)
+```
+internal static void EnableAnonymousAccessOnRootWeb(
+            SPWebApplication webApp)
+        {
+            Debug.Assert(webApp != null);
+
+            using (SPSite site = webApp.Sites["/"])
             {
-                Debug.Assert(webApp != null);
-    
-                using (SPSite site = webApp.Sites["/"])
-                {
-                    SharePointWebHelper.EnableAnonymousAccess(site.RootWeb);
-                }
+                SharePointWebHelper.EnableAnonymousAccess(site.RootWeb);
             }
+        }
+```
 
 
 
@@ -412,55 +472,57 @@ Here's the relevant code from the **SharePointWebHelper** class:
 
 
 
-    /// <summary>
-            /// Ensures anonymous access is enabled on the specified site.
-            /// </summary>
-            /// <param name="web">The site on which anonymous access should be
-            /// enabled.</param>
-            public static void EnableAnonymousAccess(
-                SPWeb web)
+```
+/// <summary>
+        /// Ensures anonymous access is enabled on the specified site.
+        /// </summary>
+        /// <param name="web">The site on which anonymous access should be
+        /// enabled.</param>
+        public static void EnableAnonymousAccess(
+            SPWeb web)
+        {
+            if (web == null)
             {
-                if (web == null)
-                {
-                    throw new ArgumentNullException("web");
-                }
-    
+                throw new ArgumentNullException("web");
+            }
+
+            Logger.LogDebug(
+                CultureInfo.InvariantCulture,
+                "Enabling anonymous access on site ({0})...",
+                web.Url);
+
+            SPBasePermissions anonymousPermissionMask =
+                SPBasePermissions.Open
+                | SPBasePermissions.ViewFormPages
+                | SPBasePermissions.ViewListItems
+                | SPBasePermissions.ViewPages
+                | SPBasePermissions.ViewVersions;
+
+            if (web.AnonymousPermMask64 ==
+                anonymousPermissionMask)
+            {
                 Logger.LogDebug(
                     CultureInfo.InvariantCulture,
-                    "Enabling anonymous access on site ({0})...",
+                    "Anonymous access is already enabled on site ({0}).",
                     web.Url);
-    
-                SPBasePermissions anonymousPermissionMask =
-                    SPBasePermissions.Open
-                    | SPBasePermissions.ViewFormPages
-                    | SPBasePermissions.ViewListItems
-                    | SPBasePermissions.ViewPages
-                    | SPBasePermissions.ViewVersions;
-    
-                if (web.AnonymousPermMask64 ==
-                    anonymousPermissionMask)
-                {
-                    Logger.LogDebug(
-                        CultureInfo.InvariantCulture,
-                        "Anonymous access is already enabled on site ({0}).",
-                        web.Url);
-    
-                    return;
-                }
-    
-                if (web.HasUniqueRoleAssignments == false)
-                {
-                    web.BreakRoleInheritance(true);
-                }
-    
-                web.AnonymousPermMask64 = anonymousPermissionMask;
-                web.Update();
-    
-                Logger.LogInfo(
-                    CultureInfo.InvariantCulture,
-                    "Successfully enabled anonymous access on site ({0}).",
-                    web.Url);
+
+                return;
             }
+
+            if (web.HasUniqueRoleAssignments == false)
+            {
+                web.BreakRoleInheritance(true);
+            }
+
+            web.AnonymousPermMask64 = anonymousPermissionMask;
+            web.Update();
+
+            Logger.LogInfo(
+                CultureInfo.InvariantCulture,
+                "Successfully enabled anonymous access on site ({0}).",
+                web.Url);
+        }
+```
 
 
 
@@ -472,189 +534,191 @@ Instead, I created a custom SharePoint timer job that reads the Web.config file 
 
 
 
-    using System;
-    using System.Configuration;
-    using System.Diagnostics;
-    using System.Security.Permissions;
-    using System.Web.Configuration;
-    
-    using Microsoft.SharePoint;
-    using Microsoft.SharePoint.Administration;
-    using Microsoft.SharePoint.Security;
-    
-    using Fabrikam.Demo.CoreServices.Logging;
-    
-    namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
+```
+using System;
+using System.Configuration;
+using System.Diagnostics;
+using System.Security.Permissions;
+using System.Web.Configuration;
+
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Administration;
+using Microsoft.SharePoint.Security;
+
+using Fabrikam.Demo.CoreServices.Logging;
+
+namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
+{
+    /// <summary>
+    /// SharePoint timer job that ensures the default role provider for the
+    /// Internet zone is set to "FabrikamSqlRoleProvider".
+    /// </summary>
+    /// <remarks>
+    /// The
+    /// <see cref="Microsoft.SharePoint.Administration.SPWebConfigModification"/>
+    /// class does not currently provide a way to make Web.config modifications
+    /// for a specific zone. To circumvent this limitation, a custom timer job
+    /// is used to set the default role provider in the Web.config file
+    /// corresponding to the Internet zone.</remarks>
+    [CLSCompliant(false)]
+    public class ConfigureSqlRoleProviderJob : SPJobDefinition
     {
         /// <summary>
-        /// SharePoint timer job that ensures the default role provider for the
-        /// Internet zone is set to "FabrikamSqlRoleProvider".
+        /// The name of the job.
         /// </summary>
-        /// <remarks>
-        /// The
-        /// <see cref="Microsoft.SharePoint.Administration.SPWebConfigModification"/>
-        /// class does not currently provide a way to make Web.config modifications
-        /// for a specific zone. To circumvent this limitation, a custom timer job
-        /// is used to set the default role provider in the Web.config file
-        /// corresponding to the Internet zone.</remarks>
-        [CLSCompliant(false)]
-        public class ConfigureSqlRoleProviderJob : SPJobDefinition
+        public const string JobName =
+            "Fabrikam-ConfigureSqlRoleProviderJob";
+
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="ConfigureSqlRoleProviderJob"/> class.
+        /// </summary>
+        public ConfigureSqlRoleProviderJob() { }
+
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="ConfigureSqlRoleProviderJob"/> class.
+        /// </summary>
+        /// <param name="webApp">The Web application to configure the SQL role
+        /// provider on.</param>
+        public ConfigureSqlRoleProviderJob(
+            SPWebApplication webApp)
+            : base(JobName, webApp, null, SPJobLockType.None)
         {
-            /// <summary>
-            /// The name of the job.
-            /// </summary>
-            public const string JobName =
-                "Fabrikam-ConfigureSqlRoleProviderJob";
-    
-            /// <summary>
-            /// Initializes a new instance of the
-            /// <see cref="ConfigureSqlRoleProviderJob"/> class.
-            /// </summary>
-            public ConfigureSqlRoleProviderJob() { }
-    
-            /// <summary>
-            /// Initializes a new instance of the
-            /// <see cref="ConfigureSqlRoleProviderJob"/> class.
-            /// </summary>
-            /// <param name="webApp">The Web application to configure the SQL role
-            /// provider on.</param>
-            public ConfigureSqlRoleProviderJob(
-                SPWebApplication webApp)
-                : base(JobName, webApp, null, SPJobLockType.None)
+        }
+
+        /// <summary>
+        /// Executes the job definition.
+        /// </summary>
+        /// <param name="targetInstanceId">Not used (for this job type).</param>
+        [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
+        public override void Execute(
+            Guid targetInstanceId)
+        {
+            base.Execute(targetInstanceId);
+
+            ConfigureSqlRoleProviderOnInternetZone(this.WebApplication);
+        }
+
+        internal static void ConfigureSqlRoleProviderOnInternetZone(
+            SPWebApplication webApp)
+        {
+            if (webApp == null)
             {
+                throw new ArgumentNullException("webApp");
             }
-    
-            /// <summary>
-            /// Executes the job definition.
-            /// </summary>
-            /// <param name="targetInstanceId">Not used (for this job type).</param>
-            [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
-            public override void Execute(
-                Guid targetInstanceId)
+
+            SPIisSettings iisSettings = webApp.IisSettings[SPUrlZone.Internet];
+            
+            // HACK: It would be preferable to simply check the value of
+            // iisSettings.RoleManager for the expected value. However, this
+            // property was not always found to be consistent with the value
+            // specified in the Web.config file.
+
+            Configuration config = WebConfigurationManager.OpenWebConfiguration(
+                "/",
+                iisSettings.ServerComment);
+
+            RoleManagerSection roleManagerSection =
+                (RoleManagerSection) config.GetSection(
+                    "system.web/roleManager");
+
+            if (roleManagerSection == null)
             {
-                base.Execute(targetInstanceId);
-    
-                ConfigureSqlRoleProviderOnInternetZone(this.WebApplication);
+                throw new InvalidOperationException(
+                    "The system.web/roleManager section was not found in the"
+                        + " config file.");
             }
-    
-            internal static void ConfigureSqlRoleProviderOnInternetZone(
-                SPWebApplication webApp)
+
+            if (roleManagerSection.DefaultProvider
+                == "FabrikamSqlRoleProvider")
             {
-                if (webApp == null)
-                {
-                    throw new ArgumentNullException("webApp");
-                }
-    
-                SPIisSettings iisSettings = webApp.IisSettings[SPUrlZone.Internet];
-                
-                // HACK: It would be preferable to simply check the value of
-                // iisSettings.RoleManager for the expected value. However, this
-                // property was not always found to be consistent with the value
-                // specified in the Web.config file.
-    
-                Configuration config = WebConfigurationManager.OpenWebConfiguration(
-                    "/",
-                    iisSettings.ServerComment);
-    
-                RoleManagerSection roleManagerSection =
-                    (RoleManagerSection) config.GetSection(
-                        "system.web/roleManager");
-    
-                if (roleManagerSection == null)
-                {
-                    throw new InvalidOperationException(
-                        "The system.web/roleManager section was not found in the"
-                            + " config file.");
-                }
-    
-                if (roleManagerSection.DefaultProvider
-                    == "FabrikamSqlRoleProvider")
-                {
-                    Logger.LogDebug(
-                        "The default role provider for the Internet zone is set to"
-                            + " the expected value (FabrikamSqlRoleProvider).");
-    
-                    return;
-                }
-    
                 Logger.LogDebug(
-                    "Setting default role provider for the Internet zone to"
-                        + " FabrikamSqlRoleProvider...");
-    
-                roleManagerSection.DefaultProvider = "FabrikamSqlRoleProvider";
-                config.Save();
-                
+                    "The default role provider for the Internet zone is set to"
+                        + " the expected value (FabrikamSqlRoleProvider).");
+
+                return;
+            }
+
+            Logger.LogDebug(
+                "Setting default role provider for the Internet zone to"
+                    + " FabrikamSqlRoleProvider...");
+
+            roleManagerSection.DefaultProvider = "FabrikamSqlRoleProvider";
+            config.Save();
+            
+            Logger.LogInfo(
+                "Successfully set default role provider for the Internet zone"
+                    + " to FabrikamSqlRoleProvider.");
+        }
+
+        internal static string PreferredTitle
+        {
+            get { return "Fabrikam - Configure SQL Role Provider"; }
+        }
+
+        internal static void Register(
+            SPWebApplication webApp)
+        {
+            if (webApp == null)
+            {
+                throw new ArgumentNullException("webApp");
+            }
+
+            ConfigureSqlRoleProviderJob job =
+                webApp.JobDefinitions.GetValue<ConfigureSqlRoleProviderJob>(
+                    JobName);
+
+            if (job == null)
+            {
+                Logger.LogDebug(
+                    "Creating new job for configuring SQL role provider...");
+
+                job = new ConfigureSqlRoleProviderJob(webApp);
+
+                job.Title = PreferredTitle;
+
+                SPMinuteSchedule schedule = new SPMinuteSchedule();
+                schedule.BeginSecond = 0;
+                schedule.EndSecond = 59;
+                schedule.Interval = 2;
+
+                job.Schedule = schedule;
+                job.Update();
+
                 Logger.LogInfo(
-                    "Successfully set default role provider for the Internet zone"
-                        + " to FabrikamSqlRoleProvider.");
+                    "Successfully created new job for configuring SQL role"
+                        + " provider.");
             }
-    
-            internal static string PreferredTitle
+        }
+
+        internal static void Unregister(
+            SPWebApplication webApp)
+        {
+            if (webApp == null)
             {
-                get { return "Fabrikam - Configure SQL Role Provider"; }
+                throw new ArgumentNullException("webApp");
             }
-    
-            internal static void Register(
-                SPWebApplication webApp)
+
+            ConfigureSqlRoleProviderJob job =
+                webApp.JobDefinitions.GetValue<ConfigureSqlRoleProviderJob>(
+                    JobName);
+
+            if (job != null)
             {
-                if (webApp == null)
-                {
-                    throw new ArgumentNullException("webApp");
-                }
-    
-                ConfigureSqlRoleProviderJob job =
-                    webApp.JobDefinitions.GetValue<ConfigureSqlRoleProviderJob>(
-                        JobName);
-    
-                if (job == null)
-                {
-                    Logger.LogDebug(
-                        "Creating new job for configuring SQL role provider...");
-    
-                    job = new ConfigureSqlRoleProviderJob(webApp);
-    
-                    job.Title = PreferredTitle;
-    
-                    SPMinuteSchedule schedule = new SPMinuteSchedule();
-                    schedule.BeginSecond = 0;
-                    schedule.EndSecond = 59;
-                    schedule.Interval = 2;
-    
-                    job.Schedule = schedule;
-                    job.Update();
-    
-                    Logger.LogInfo(
-                        "Successfully created new job for configuring SQL role"
-                            + " provider.");
-                }
-            }
-    
-            internal static void Unregister(
-                SPWebApplication webApp)
-            {
-                if (webApp == null)
-                {
-                    throw new ArgumentNullException("webApp");
-                }
-    
-                ConfigureSqlRoleProviderJob job =
-                    webApp.JobDefinitions.GetValue<ConfigureSqlRoleProviderJob>(
-                        JobName);
-    
-                if (job != null)
-                {
-                    Logger.LogDebug(
-                        "Deleting job for configuring SQL role provider...");
-    
-                    job.Delete();
-    
-                    Logger.LogInfo(
-                        "Successfully deleted job for configuring SQL role"
-                            + " provider.");
-                }
+                Logger.LogDebug(
+                    "Deleting job for configuring SQL role provider...");
+
+                job.Delete();
+
+                Logger.LogInfo(
+                    "Successfully deleted job for configuring SQL role"
+                        + " provider.");
             }
         }
     }
+}
+```
 
 
 
@@ -689,24 +753,32 @@ Once you've done this, you should be able to add a user (using the IIS 7 console
 
 To remove (or prepare to rebuild) the Fabrikam Web application, run the following:
 
-  
-  
-  
-
-
-    cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
 
 
 
-    "Delete Web Applications.cmd"
+
+
+```
+cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
+```
 
 
 
-    "Retract Solutions.cmd"
+```
+"Delete Web Applications.cmd"
+```
 
 
 
-    "Delete Solutions.cmd"
+```
+"Retract Solutions.cmd"
+```
+
+
+
+```
+"Delete Solutions.cmd"
+```
 
 
 

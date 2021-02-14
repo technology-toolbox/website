@@ -9,8 +9,8 @@ tags: ["Personal"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx)
 > 

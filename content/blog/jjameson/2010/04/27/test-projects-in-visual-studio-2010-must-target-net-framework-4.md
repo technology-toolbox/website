@@ -9,8 +9,8 @@ tags: ["Core Development", "Visual Studio"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx)
 > 

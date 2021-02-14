@@ -24,8 +24,8 @@ tags: ["Web Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx)
@@ -93,14 +93,16 @@ So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that encap
 
 
 
-    <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KpiScorecard.ascx.cs"
-        Inherits="Fabrikam.Demo.Web.UI.Tables.KpiScorecard" %>
-    <div class="kpiScorecard">
-        <div class="webPartToolbar">
-            <asp:LinkButton runat="server" ID="PostBackButton" Text="Post Back" />
-        </div>
-        <asp:GridView runat="server" ID="ScorecardDetailView" OnRowCreated="ScorecardDetailView_RowCreated" />
+```
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KpiScorecard.ascx.cs"
+    Inherits="Fabrikam.Demo.Web.UI.Tables.KpiScorecard" %>
+<div class="kpiScorecard">
+    <div class="webPartToolbar">
+        <asp:LinkButton runat="server" ID="PostBackButton" Text="Post Back" />
     </div>
+    <asp:GridView runat="server" ID="ScorecardDetailView" OnRowCreated="ScorecardDetailView_RowCreated" />
+</div>
+```
 
 
 
@@ -108,101 +110,103 @@ In the corresponding code-behind file, we'll create some sample data (which will
 
 
 
-    using System;
-    using System.Data;
-    using System.Globalization;
-    
-    namespace Fabrikam.Demo.Web.UI.Tables
+```
+using System;
+using System.Data;
+using System.Globalization;
+
+namespace Fabrikam.Demo.Web.UI.Tables
+{
+    public partial class KpiScorecard : System.Web.UI.UserControl
     {
-        public partial class KpiScorecard : System.Web.UI.UserControl
+        protected void Page_Load(
+            object sender,
+            EventArgs e)
         {
-            protected void Page_Load(
-                object sender,
-                EventArgs e)
+            if (this.Page.IsPostBack == true)
             {
-                if (this.Page.IsPostBack == true)
-                {
-                    // Render the KPI scorecard from view state
-                    return;
-                }
-    
-                UpdateScorecardDetailView();
+                // Render the KPI scorecard from view state
+                return;
             }
-    
-            private static DataTable GetScorecardDetailTable()
-            {
-                DataTable detailTable = new DataTable();
-                detailTable.Locale = CultureInfo.CurrentCulture;
-    
-                detailTable.Columns.Add("Site");
-                detailTable.Columns.Add("2009 Q3");
-                detailTable.Columns.Add("2009 Q4");
-                detailTable.Columns.Add("2010 Q1");
-                detailTable.Columns.Add("Threshold - Exceeds");
-                detailTable.Columns.Add("Threshold - Meets");
-                detailTable.Columns.Add("Threshold - Does Not Meet");
-    
-                detailTable.Rows.Add(
-                    new object[]
-                    {
-                        "Duncan",
-                        "93%",
-                        "95%",
-                        "92%",
-                        ">= 90%",
-                        "86% - 90%",
-                        "<= 85%"
-                    });
-    
-                detailTable.Rows.Add(
-                    new object[]
-                    {
-                        "Dallas ",
-                        "94%",
-                        "91%",
-                        "90%",
-                        ">= 92%",
-                        "88% - 92%",
-                        "<= 88%"
-                    });
-    
-                detailTable.Rows.Add(
-                    new object[]
-                    {
-                        "Albuquerque",
-                        "91%",
-                        "87%",
-                        "85%",
-                        ">= 90%",
-                        "86% - 90%",
-                        "<= 85%"
-                    });
-    
-                detailTable.Rows.Add(
-                    new object[]
-                    {
-                        "Denver",
-                        "94%",
-                        "91%",
-                        "92%",
-                        ">= 90%",
-                        "86% - 90%",
-                        "<= 85%"
-                    });
-    
-                return detailTable;
-            }
-    
-            private void UpdateScorecardDetailView()
-            {
-                using (DataTable detailTable = GetScorecardDetailTable())
+
+            UpdateScorecardDetailView();
+        }
+
+        private static DataTable GetScorecardDetailTable()
+        {
+            DataTable detailTable = new DataTable();
+            detailTable.Locale = CultureInfo.CurrentCulture;
+
+            detailTable.Columns.Add("Site");
+            detailTable.Columns.Add("2009 Q3");
+            detailTable.Columns.Add("2009 Q4");
+            detailTable.Columns.Add("2010 Q1");
+            detailTable.Columns.Add("Threshold - Exceeds");
+            detailTable.Columns.Add("Threshold - Meets");
+            detailTable.Columns.Add("Threshold - Does Not Meet");
+
+            detailTable.Rows.Add(
+                new object[]
                 {
-                    ScorecardDetailView.DataSource = detailTable;
-                    ScorecardDetailView.DataBind();
-                }
+                    "Duncan",
+                    "93%",
+                    "95%",
+                    "92%",
+                    ">= 90%",
+                    "86% - 90%",
+                    "<= 85%"
+                });
+
+            detailTable.Rows.Add(
+                new object[]
+                {
+                    "Dallas ",
+                    "94%",
+                    "91%",
+                    "90%",
+                    ">= 92%",
+                    "88% - 92%",
+                    "<= 88%"
+                });
+
+            detailTable.Rows.Add(
+                new object[]
+                {
+                    "Albuquerque",
+                    "91%",
+                    "87%",
+                    "85%",
+                    ">= 90%",
+                    "86% - 90%",
+                    "<= 85%"
+                });
+
+            detailTable.Rows.Add(
+                new object[]
+                {
+                    "Denver",
+                    "94%",
+                    "91%",
+                    "92%",
+                    ">= 90%",
+                    "86% - 90%",
+                    "<= 85%"
+                });
+
+            return detailTable;
+        }
+
+        private void UpdateScorecardDetailView()
+        {
+            using (DataTable detailTable = GetScorecardDetailTable())
+            {
+                ScorecardDetailView.DataSource = detailTable;
+                ScorecardDetailView.DataBind();
             }
         }
     }
+}
+```
 
 
 
@@ -229,30 +233,32 @@ Let's start customizing the header by replacing the lengthy column headings for 
 
 
 
-    protected void ScorecardDetailView_RowCreated(
-                object sender,
-                GridViewRowEventArgs e)
+```
+protected void ScorecardDetailView_RowCreated(
+            object sender,
+            GridViewRowEventArgs e)
+        {
+            if (e == null)
             {
-                if (e == null)
-                {
-                    throw new ArgumentNullException("e");
-                }
-    
-                if (e.Row.RowType == DataControlRowType.Header)
-                {
-                    e.Row.Cells[e.Row.Cells.Count - 1].Text =
-                        "<img src='/_layouts/images/kpidefault-2.gif'"
-                            + " alt='Does Not Meet' />";
-    
-                    e.Row.Cells[e.Row.Cells.Count - 2].Text =
-                        "<img src='/_layouts/images/kpidefault-1.gif'"
-                            + " alt='Meets' />";
-    
-                    e.Row.Cells[e.Row.Cells.Count - 3].Text =
-                        "<img src='/_layouts/images/kpidefault-0.gif'"
-                            + " alt='Exceeds' />";
-                }
+                throw new ArgumentNullException("e");
             }
+
+            if (e.Row.RowType == DataControlRowType.Header)
+            {
+                e.Row.Cells[e.Row.Cells.Count - 1].Text =
+                    "<img src='/_layouts/images/kpidefault-2.gif'"
+                        + " alt='Does Not Meet' />";
+
+                e.Row.Cells[e.Row.Cells.Count - 2].Text =
+                    "<img src='/_layouts/images/kpidefault-1.gif'"
+                        + " alt='Meets' />";
+
+                e.Row.Cells[e.Row.Cells.Count - 3].Text =
+                    "<img src='/_layouts/images/kpidefault-0.gif'"
+                        + " alt='Exceeds' />";
+            }
+        }
+```
 
 
 
@@ -281,52 +287,54 @@ Now let's add a method to insert another row into the table rendered by the Grid
 
 
 
-    private static void AddThresholdsHeaderRow(
-                GridView scorecardDetailView)
+```
+private static void AddThresholdsHeaderRow(
+            GridView scorecardDetailView)
+        {
+            Debug.Assert(scorecardDetailView != null);
+
+            if (scorecardDetailView.Controls.Count < 1)
             {
-                Debug.Assert(scorecardDetailView != null);
-    
-                if (scorecardDetailView.Controls.Count < 1)
-                {
-                    // No data to display in the grid (i.e. the user has not
-                    // selected a KPI in the summary table and therefore the
-                    // detail table has not yet been bound to any data)
-                    return;
-                }
-    
-                Debug.Assert(scorecardDetailView.Controls.Count == 1);
-                Table table = (Table)scorecardDetailView.Controls[0];
-                TableRow headerRow = table.Rows[0];
-    
-                using (GridViewRow additionalHeaderRow = new GridViewRow(
-                    -1,
-                    -1,
-                    DataControlRowType.Header,
-                    DataControlRowState.Normal))
-                {
-    
-                    int numberOfHeaderCellsToMove = headerRow.Cells.Count - 3;
-    
-                    for (int i = 0; i < numberOfHeaderCellsToMove; i++)
-                    {
-                        TableCell headerCell = headerRow.Cells[0];
-                        headerRow.Cells.RemoveAt(0);
-                        additionalHeaderRow.Cells.Add(headerCell);
-                        headerCell.RowSpan = 2;
-                    }
-    
-                    using (TableHeaderCell newHeaderCell = new TableHeaderCell())
-                    {
-                        newHeaderCell.ColumnSpan = 3;
-                        newHeaderCell.Text = "Thresholds";
-                        additionalHeaderRow.Cells.Add(newHeaderCell);
-                    }
-    
-                    table.Controls.AddAt(
-                        0,
-                        additionalHeaderRow);
-                }
+                // No data to display in the grid (i.e. the user has not
+                // selected a KPI in the summary table and therefore the
+                // detail table has not yet been bound to any data)
+                return;
             }
+
+            Debug.Assert(scorecardDetailView.Controls.Count == 1);
+            Table table = (Table)scorecardDetailView.Controls[0];
+            TableRow headerRow = table.Rows[0];
+
+            using (GridViewRow additionalHeaderRow = new GridViewRow(
+                -1,
+                -1,
+                DataControlRowType.Header,
+                DataControlRowState.Normal))
+            {
+
+                int numberOfHeaderCellsToMove = headerRow.Cells.Count - 3;
+
+                for (int i = 0; i < numberOfHeaderCellsToMove; i++)
+                {
+                    TableCell headerCell = headerRow.Cells[0];
+                    headerRow.Cells.RemoveAt(0);
+                    additionalHeaderRow.Cells.Add(headerCell);
+                    headerCell.RowSpan = 2;
+                }
+
+                using (TableHeaderCell newHeaderCell = new TableHeaderCell())
+                {
+                    newHeaderCell.ColumnSpan = 3;
+                    newHeaderCell.Text = "Thresholds";
+                    additionalHeaderRow.Cells.Add(newHeaderCell);
+                }
+
+                table.Controls.AddAt(
+                    0,
+                    additionalHeaderRow);
+            }
+        }
+```
 
 
 
@@ -334,16 +342,18 @@ Of course, we obviously need to call this method, so let's modify the **UpdateSc
 
 
 
-    private void UpdateScorecardDetailView()
+```
+private void UpdateScorecardDetailView()
+        {
+            using (DataTable detailTable = GetScorecardDetailTable())
             {
-                using (DataTable detailTable = GetScorecardDetailTable())
-                {
-                    ScorecardDetailView.DataSource = detailTable;
-                    ScorecardDetailView.DataBind();
-                }
-    
-                AddThresholdsHeaderRow(ScorecardDetailView);
+                ScorecardDetailView.DataSource = detailTable;
+                ScorecardDetailView.DataBind();
             }
+
+            AddThresholdsHeaderRow(ScorecardDetailView);
+        }
+```
 
 
 
@@ -364,41 +374,43 @@ Looking at the HTML source, we can see the extra table row has been inserted,  a
 
 
 
-    <table style="border-collapse: collapse"
-            id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
-            cellspacing="0">
-            <tbody>
-                <tr>
-                    <th rowspan="2" scope="col">
-                        Site
-                    </th>
-                    <th rowspan="2" scope="col">
-                        2009 Q3
-                    </th>
-                    <th rowspan="2" scope="col">
-                        2009 Q4
-                    </th>
-                    <th rowspan="2" scope="col">
-                        2010 Q1
-                    </th>
-                    <th colspan="3">
-                        Thresholds
-                    </th>
-                </tr>
-                <tr>
-                    <th scope="col">
-                        <img alt="Exceeds" src="/_layouts/images/kpidefault-0.gif">
-                    </th>
-                    <th scope="col">
-                        <img alt="Meets" src="/_layouts/images/kpidefault-1.gif">
-                    </th>
-                    <th scope="col">
-                        <img alt="Does Not Meet" src="/_layouts/images/kpidefault-2.gif">
-                    </th>
-                </tr>
-                ...
-            </tbody>
-        </table>
+```
+<table style="border-collapse: collapse"
+        id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
+        cellspacing="0">
+        <tbody>
+            <tr>
+                <th rowspan="2" scope="col">
+                    Site
+                </th>
+                <th rowspan="2" scope="col">
+                    2009 Q3
+                </th>
+                <th rowspan="2" scope="col">
+                    2009 Q4
+                </th>
+                <th rowspan="2" scope="col">
+                    2010 Q1
+                </th>
+                <th colspan="3">
+                    Thresholds
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">
+                    <img alt="Exceeds" src="/_layouts/images/kpidefault-0.gif">
+                </th>
+                <th scope="col">
+                    <img alt="Meets" src="/_layouts/images/kpidefault-1.gif">
+                </th>
+                <th scope="col">
+                    <img alt="Does Not Meet" src="/_layouts/images/kpidefault-2.gif">
+                </th>
+            </tr>
+            ...
+        </tbody>
+    </table>
+```
 
 
 
@@ -423,27 +435,29 @@ My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow*
 
 
 
-    protected void Page_Load(
-                object sender,
-                EventArgs e)
+```
+protected void Page_Load(
+            object sender,
+            EventArgs e)
+        {
+            this.Page.PreRenderComplete += new EventHandler(Page_PreRenderComplete);
+
+            if (this.Page.IsPostBack == true)
             {
-                this.Page.PreRenderComplete += new EventHandler(Page_PreRenderComplete);
-    
-                if (this.Page.IsPostBack == true)
-                {
-                    // Render the KPI scorecard from view state
-                    return;
-                }
-    
-                UpdateScorecardDetailView();
+                // Render the KPI scorecard from view state
+                return;
             }
-    
-            void Page_PreRenderComplete(
-                object sender,
-                EventArgs e)
-            {
-                AddThresholdsHeaderRow(ScorecardDetailView);
-            }
+
+            UpdateScorecardDetailView();
+        }
+
+        void Page_PreRenderComplete(
+            object sender,
+            EventArgs e)
+        {
+            AddThresholdsHeaderRow(ScorecardDetailView);
+        }
+```
 
 
 
@@ -459,27 +473,29 @@ It turns out this is really easy. Instead of adding the header row during the  P
 
 
 
-    protected void Page_Load(
-                        object sender,
-                        EventArgs e)
+```
+protected void Page_Load(
+                    object sender,
+                    EventArgs e)
+        {
+            this.Page.SaveStateComplete += new EventHandler(Page_SaveStateComplete);
+
+            if (this.Page.IsPostBack == true)
             {
-                this.Page.SaveStateComplete += new EventHandler(Page_SaveStateComplete);
-    
-                if (this.Page.IsPostBack == true)
-                {
-                    // Render the KPI scorecard from view state
-                    return;
-                }
-    
-                UpdateScorecardDetailView();
+                // Render the KPI scorecard from view state
+                return;
             }
-    
-            void Page_SaveStateComplete(
-                object sender,
-                EventArgs e)
-            {
-                AddThresholdsHeaderRow(ScorecardDetailView);
-            }
+
+            UpdateScorecardDetailView();
+        }
+
+        void Page_SaveStateComplete(
+            object sender,
+            EventArgs e)
+        {
+            AddThresholdsHeaderRow(ScorecardDetailView);
+        }
+```
 
 
 

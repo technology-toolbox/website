@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx)
@@ -28,7 +28,9 @@ I noted in a previous post that we have created a PublishingLayouts feature cont
 
 
 
-    stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
+```
+stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
+```
 
 
 
@@ -36,8 +38,10 @@ However, as soon as I tried to deploy the solution using the following command:
 
 
 
-    stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url
-    	http://foobar/ -local
+```
+stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url
+	http://foobar/ -local
+```
 
 
 
@@ -52,7 +56,9 @@ I must have spent 30 minutes trying to figure out why this command did not work 
 
 
 
-    stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
+```
+stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
+```
 
 
 

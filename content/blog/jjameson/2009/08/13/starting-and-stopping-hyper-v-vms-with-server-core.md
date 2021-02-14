@@ -10,8 +10,8 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx)
@@ -45,5 +45,7 @@ Now, whenever I am unable to manage my Hyper-V servers remotely, I can use somet
 
 
 
-    cscript \NotBackedUp\Public\Toolbox\Scripts\ManageVM.vbs XAVIER1 start
+```
+cscript \NotBackedUp\Public\Toolbox\Scripts\ManageVM.vbs XAVIER1 start
+```
 

@@ -11,8 +11,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx)
@@ -51,7 +51,9 @@ For example, in the **Default** zone you probably want to specify:
 
 
 
-    <authentication mode="Windows" />
+```
+<authentication mode="Windows" />
+```
 
 
 
@@ -59,9 +61,11 @@ Whereas in the **Internet** zone you instead need something like this:
 
 
 
-    <authentication mode="Forms">
-          <forms loginUrl="/Public/Pages/default.aspx" defaultUrl="/" />
-        </authentication>
+```
+<authentication mode="Forms">
+      <forms loginUrl="/Public/Pages/default.aspx" defaultUrl="/" />
+    </authentication>
+```
 
 
 

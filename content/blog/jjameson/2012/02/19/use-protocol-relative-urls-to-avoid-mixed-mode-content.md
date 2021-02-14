@@ -17,7 +17,9 @@ My initial fix for this issue was to change references like:
 
 
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/.../jquery.min.js"></script>
+```
+<script type="text/javascript" src="http://ajax.googleapis.com/.../jquery.min.js"></script>
+```
 
 
 
@@ -25,7 +27,9 @@ My initial fix for this issue was to change references like:
 
 
 
-    <script type="text/javascript" src="<%= Request.IsSecureConnection ? "https" : "http" %>://ajax.googleapis.com/.../jquery.min.js"></script>
+```
+<script type="text/javascript" src="<%= Request.IsSecureConnection ? "https" : "http" %>://ajax.googleapis.com/.../jquery.min.js"></script>
+```
 
 
 
@@ -50,7 +54,9 @@ Consequently I updated my fix to incorporate Phil's recommendation:
 
 
 
-    <script type="text/javascript" src="//ajax.googleapis.com/.../jquery.min.js"></script>
+```
+<script type="text/javascript" src="//ajax.googleapis.com/.../jquery.min.js"></script>
+```
 
 
 
@@ -60,7 +66,9 @@ So, why do I bother to blog about this topic this morning? Well, I just discover
 
 
 
-    <script src='http://www.google.com/jsapi' type='text/javascript'></script>
+```
+<script src='http://www.google.com/jsapi' type='text/javascript'></script>
+```
 
 
 

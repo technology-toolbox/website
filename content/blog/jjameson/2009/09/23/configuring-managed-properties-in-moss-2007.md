@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx)
 > 
@@ -51,129 +51,131 @@ I often refer to this as "the chicken and the egg" problem with SharePoint manag
 The "magic" behind automatically configuring managed properties upon feature activation is really not magic at all. It simply uses my "[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) framework" (and even calling this a framework is definitely a stretch) with a little bit of help from my SharePointSearchHelper class:
 
 
-    namespace Fabrikam.Project1.Search.Configuration
+```
+namespace Fabrikam.Project1.Search.Configuration
+{
+    /// <summary>
+    /// Exposes static methods for configuring the <b>Fabrikam.Project1.Search</b>
+    /// feature. This class cannot be inherited.
+    /// </summary>
+    /// <remarks>
+    /// All methods of the <b>FeatureConfigurator</b> class are static and can
+    /// therefore be called without creating an instance of the class.
+    /// </remarks>  
+    [CLSCompliant(false)]
+    [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
+    public sealed class FeatureConfigurator
     {
+        ...
+
         /// <summary>
-        /// Exposes static methods for configuring the <b>Fabrikam.Project1.Search</b>
-        /// feature. This class cannot be inherited.
+        /// Configures the various objects used for the Search features,
+        /// including custom search scopes and managed properties, as well as a
+        /// Search Center (and all of the corresponding pages) on the
+        /// specified site.
         /// </summary>
-        /// <remarks>
-        /// All methods of the <b>FeatureConfigurator</b> class are static and can
-        /// therefore be called without creating an instance of the class.
-        /// </remarks>  
-        [CLSCompliant(false)]
-        [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
-        public sealed class FeatureConfigurator
+        /// <param name="web">An
+        /// <see cref="Microsoft.SharePoint.SPSite"/> object representing the
+        /// site collection to configure.</param>
+        public static void Configure(
+            SPSite site)
         {
-            ...
-    
-            /// <summary>
-            /// Configures the various objects used for the Search features,
-            /// including custom search scopes and managed properties, as well as a
-            /// Search Center (and all of the corresponding pages) on the
-            /// specified site.
-            /// </summary>
-            /// <param name="web">An
-            /// <see cref="Microsoft.SharePoint.SPSite"/> object representing the
-            /// site collection to configure.</param>
-            public static void Configure(
-                SPSite site)
+            if (site == null)
             {
-                if (site == null)
-                {
-                    throw new ArgumentNullException("site");
-                }
-    
-                Logger.LogDebug(
-                    CultureInfo.InvariantCulture,
-                    "Configuring Fabrikam.Project1.Search on site ({0})...",
-                    site.Url);
-    
-                ConfigureSspSettings(site);
-    
-                ConfigureSearchCenter(site);
-    
-                Logger.LogInfo(
-                    CultureInfo.InvariantCulture,
-                    "Successfully configured Fabrikam.Project1.Search on site ({0}).",
-                    site.Url);
+                throw new ArgumentNullException("site");
             }
-            
-            ...
-            
-            private static void ConfigureManagedProperties(
-                Schema sspSchema)
-            {
-                Debug.Assert(sspSchema != null);
-    
-                ManagedPropertyCollection properties = sspSchema.AllManagedProperties;
-    
-                // Configure "ListItemIntId" managed property
-                ManagedProperty property =
-                    SharePointSearchHelper.EnsureManagedProperty(
-                        properties,
-                        "ListItemIntId",
-                        ManagedDataType.Integer);
-    
-                SharePointSearchHelper.EnsureManagedPropertyMapping(
-                    property,
-                    "ows_ID",
-                    SharePointSearchHelper.CrawledPropertyCategory.SharePoint,
-                    SharePointSearchHelper.CrawledPropertyVariantType.Integer);
-    
-                // Configure "Product" managed property
-                property = SharePointSearchHelper.EnsureManagedProperty(
+
+            Logger.LogDebug(
+                CultureInfo.InvariantCulture,
+                "Configuring Fabrikam.Project1.Search on site ({0})...",
+                site.Url);
+
+            ConfigureSspSettings(site);
+
+            ConfigureSearchCenter(site);
+
+            Logger.LogInfo(
+                CultureInfo.InvariantCulture,
+                "Successfully configured Fabrikam.Project1.Search on site ({0}).",
+                site.Url);
+        }
+        
+        ...
+        
+        private static void ConfigureManagedProperties(
+            Schema sspSchema)
+        {
+            Debug.Assert(sspSchema != null);
+
+            ManagedPropertyCollection properties = sspSchema.AllManagedProperties;
+
+            // Configure "ListItemIntId" managed property
+            ManagedProperty property =
+                SharePointSearchHelper.EnsureManagedProperty(
                     properties,
-                    "Product",
-                    ManagedDataType.Text);
-    
-                SharePointSearchHelper.EnsureManagedPropertyMapping(
-                    property,
-                    "ows_Product",
-                    SharePointSearchHelper.CrawledPropertyCategory.SharePoint,
-                    SharePointSearchHelper.CrawledPropertyVariantType.MultiValuedText);
-    
-                // Configure "ContentTypeName" managed property
-                ...
-            }
-            
-            ...
-    
-            private static void ConfigureSspSettings(
-                SPSite site)
-            {
-                Debug.Assert(site != null);
-    
-                SearchContext context = SearchContext.GetContext(site);
-                if (context == null)
-                {
-                    string message = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "Unable to get SearchContext for site ({0}).",
-                        site.Url);
-    
-                    throw new ArgumentException(message);
-                }
-    
-                Schema sspSchema = new Schema(context);
-                if (sspSchema == null)
-                {
-                    string message = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "Unable to get SSP schema for search context ({0}).",
-                        context.Name);
-    
-                    throw new ArgumentException(message);
-                }            
-    
-                ConfigureFileTypes(context);
-    
-                ConfigureManagedProperties(sspSchema);
-    
-                ConfigureSearchScopes(context, site.Url);
-            }
-    
+                    "ListItemIntId",
+                    ManagedDataType.Integer);
+
+            SharePointSearchHelper.EnsureManagedPropertyMapping(
+                property,
+                "ows_ID",
+                SharePointSearchHelper.CrawledPropertyCategory.SharePoint,
+                SharePointSearchHelper.CrawledPropertyVariantType.Integer);
+
+            // Configure "Product" managed property
+            property = SharePointSearchHelper.EnsureManagedProperty(
+                properties,
+                "Product",
+                ManagedDataType.Text);
+
+            SharePointSearchHelper.EnsureManagedPropertyMapping(
+                property,
+                "ows_Product",
+                SharePointSearchHelper.CrawledPropertyCategory.SharePoint,
+                SharePointSearchHelper.CrawledPropertyVariantType.MultiValuedText);
+
+            // Configure "ContentTypeName" managed property
             ...
         }
+        
+        ...
+
+        private static void ConfigureSspSettings(
+            SPSite site)
+        {
+            Debug.Assert(site != null);
+
+            SearchContext context = SearchContext.GetContext(site);
+            if (context == null)
+            {
+                string message = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "Unable to get SearchContext for site ({0}).",
+                    site.Url);
+
+                throw new ArgumentException(message);
+            }
+
+            Schema sspSchema = new Schema(context);
+            if (sspSchema == null)
+            {
+                string message = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "Unable to get SSP schema for search context ({0}).",
+                    context.Name);
+
+                throw new ArgumentException(message);
+            }            
+
+            ConfigureFileTypes(context);
+
+            ConfigureManagedProperties(sspSchema);
+
+            ConfigureSearchScopes(context, site.Url);
+        }
+
+        ...
     }
+}
+```
 

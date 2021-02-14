@@ -11,8 +11,8 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3", "Web Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx)
@@ -31,28 +31,30 @@ Note that the [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/
 
 
 
-    <system.diagnostics>
-        <sources>
-          <source name="defaultTraceSource" switchName="allTraceLevel">
-            <listeners>
-              <add name="webPageTraceListener" />
-            </listeners>
-          </source>
-        </sources>
-        <sharedListeners>
-          <add type="System.Web.WebPageTraceListener, System.Web, Version=2.0.0.0,
-    Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-            name="webPageTraceListener" traceOutputOptions="None" />
-        </sharedListeners>
-        <switches>
-          <add name="allTraceLevel" value="All" />
-          <add name="verboseTraceLevel" value="Verbose" />
-          <add name="infoTraceLevel" value="Info" />
-          <add name="warningTraceLevel" value="Warning" />
-          <add name="errorTraceLevel" value="Error" />
-          <add name="offTraceLevel" value="Off" />
-        </switches>
-      </system.diagnostics>
+```
+<system.diagnostics>
+    <sources>
+      <source name="defaultTraceSource" switchName="allTraceLevel">
+        <listeners>
+          <add name="webPageTraceListener" />
+        </listeners>
+      </source>
+    </sources>
+    <sharedListeners>
+      <add type="System.Web.WebPageTraceListener, System.Web, Version=2.0.0.0,
+Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        name="webPageTraceListener" traceOutputOptions="None" />
+    </sharedListeners>
+    <switches>
+      <add name="allTraceLevel" value="All" />
+      <add name="verboseTraceLevel" value="Verbose" />
+      <add name="infoTraceLevel" value="Info" />
+      <add name="warningTraceLevel" value="Warning" />
+      <add name="errorTraceLevel" value="Error" />
+      <add name="offTraceLevel" value="Off" />
+    </switches>
+  </system.diagnostics>
+```
 
 
 
@@ -60,9 +62,11 @@ Also note that ASP.NET tracing must be enabled using the `<trace>`  element with
 
 
 
-    <system.web>
-        <trace enabled="true" pageOutput="false" requestLimit="50" localOnly="true" />
-      </system.web>
+```
+<system.web>
+    <trace enabled="true" pageOutput="false" requestLimit="50" localOnly="true" />
+  </system.web>
+```
 
 
 

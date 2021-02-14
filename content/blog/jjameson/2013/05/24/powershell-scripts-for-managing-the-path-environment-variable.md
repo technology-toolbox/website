@@ -24,9 +24,11 @@ Nevertheless, I prefer to use a PowerShell script to complete this task in a fr
 
 
 
-    C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program 
-    	Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget 
-    	"Machine"
+```
+C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program 
+	Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget 
+	"Machine"
+```
 
 
 
@@ -45,52 +47,54 @@ In addition to the script to add folders to the Path environment variable (Add-
 
 
 
-    <#
-    .SYNOPSIS
-    Gets the list of folders specified in the Path environment variable.
-    
-    .PARAMETER EnvironmentVariableTarget
-    Specifies the "scope" to use when querying the Path environment variable
-    ("Process", "Machine", or "User"). Defaults to "Process" if the parameter is
-    not specified.
-    
-    .EXAMPLE
-    .\Get-PathFolders.ps1
-    C:\Windows\system32\WindowsPowerShell\v1.0\
-    C:\Windows\system32
-    C:\Windows
-    C:\Windows\System32\Wbem
-    ...
-    
-    Description
-    -----------
-    The output from this example lists each folder in the Path environment variable
-    for the current process.
-    
-    .EXAMPLE
-    .\Get-PathFolders.ps1 User
-    C:\NotBackedUp\Public\Toolbox
-    
-    Description
-    -----------
-    The output from this example assumes one folder
-    ("C:\NotBackedUp\Public\Toolbox") has previously been added to the user's Path
-    environment variable.
-    #>
-    param(
-        [string] $EnvironmentVariableTarget = "Process")
-    
-    Set-StrictMode -Version Latest
-    $ErrorActionPreference = "Stop"
-    
-    [string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
-        "Path",
-        $EnvironmentVariableTarget) -Split ";"
-    
-    If ($pathFolders -ne $null)
-    {
-        Write-Output $pathFolders
-    }
+```
+<#
+.SYNOPSIS
+Gets the list of folders specified in the Path environment variable.
+
+.PARAMETER EnvironmentVariableTarget
+Specifies the "scope" to use when querying the Path environment variable
+("Process", "Machine", or "User"). Defaults to "Process" if the parameter is
+not specified.
+
+.EXAMPLE
+.\Get-PathFolders.ps1
+C:\Windows\system32\WindowsPowerShell\v1.0\
+C:\Windows\system32
+C:\Windows
+C:\Windows\System32\Wbem
+...
+
+Description
+-----------
+The output from this example lists each folder in the Path environment variable
+for the current process.
+
+.EXAMPLE
+.\Get-PathFolders.ps1 User
+C:\NotBackedUp\Public\Toolbox
+
+Description
+-----------
+The output from this example assumes one folder
+("C:\NotBackedUp\Public\Toolbox") has previously been added to the user's Path
+environment variable.
+#>
+param(
+    [string] $EnvironmentVariableTarget = "Process")
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
+
+[string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
+    "Path",
+    $EnvironmentVariableTarget) -Split ";"
+
+If ($pathFolders -ne $null)
+{
+    Write-Output $pathFolders
+}
+```
 
 
 
@@ -98,107 +102,109 @@ In addition to the script to add folders to the Path environment variable (Add-
 
 
 
-    <#
-    .SYNOPSIS
-    Adds one or more folders to the Path environment variable.
-    
-    .PARAMETER Folders
-    Specifies the folders to add to the Path environment variable..
-    
-    .PARAMETER EnvironmentVariableTarget
-    Specifies the "scope" to use for the Path environment variable ("Process",
-    "Machine", or "User"). Defaults to "Process" if the parameter is not specified.
-    
-    .EXAMPLE
-    .\Add-PathFolders.ps1 C:\NotBackedUp\Public\Toolbox
-    #>
-    param(
-        [parameter(Mandatory = $true, ValueFromPipeline = $true)]
-        [string[]] $Folders,
-        [string] $EnvironmentVariableTarget = "Process")
-    
-    begin
-    {
-        Set-StrictMode -Version Latest
-        $ErrorActionPreference = "Stop"
-    
-        Write-Verbose "Path environment variable target: $EnvironmentVariableTarget"
-    
-        [bool] $isInputFromPipeline =
-            ($PSBoundParameters.ContainsKey("Folders") -eq $false)
-    
-        [int] $foldersAdded = 0
-    
-        [string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
-            "Path",
-            $EnvironmentVariableTarget) -Split ";"
-    
-        [Collections.ArrayList] $folderList = New-Object Collections.ArrayList
-    
-        $pathFolders | foreach {
-            $folderList.Add($_) | Out-Null
-        }
+```
+<#
+.SYNOPSIS
+Adds one or more folders to the Path environment variable.
+
+.PARAMETER Folders
+Specifies the folders to add to the Path environment variable..
+
+.PARAMETER EnvironmentVariableTarget
+Specifies the "scope" to use for the Path environment variable ("Process",
+"Machine", or "User"). Defaults to "Process" if the parameter is not specified.
+
+.EXAMPLE
+.\Add-PathFolders.ps1 C:\NotBackedUp\Public\Toolbox
+#>
+param(
+    [parameter(Mandatory = $true, ValueFromPipeline = $true)]
+    [string[]] $Folders,
+    [string] $EnvironmentVariableTarget = "Process")
+
+begin
+{
+    Set-StrictMode -Version Latest
+    $ErrorActionPreference = "Stop"
+
+    Write-Verbose "Path environment variable target: $EnvironmentVariableTarget"
+
+    [bool] $isInputFromPipeline =
+        ($PSBoundParameters.ContainsKey("Folders") -eq $false)
+
+    [int] $foldersAdded = 0
+
+    [string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
+        "Path",
+        $EnvironmentVariableTarget) -Split ";"
+
+    [Collections.ArrayList] $folderList = New-Object Collections.ArrayList
+
+    $pathFolders | foreach {
+        $folderList.Add($_) | Out-Null
     }
-    
-    process
+}
+
+process
+{
+    If ($isInputFromPipeline -eq $true)
     {
-        If ($isInputFromPipeline -eq $true)
-        {
-            $items = $_
-        }
-        Else
-        {
-            $items = $Folders
-        }
-    
-        $items | foreach {
-            [string] $folder = $_
-    
-            [bool] $isFolderInList = $false
-    
-            $folderList | foreach {
-                If ([string]::Compare($_, $folder, $true) -eq 0)
-                {
-                    Write-Verbose ("The folder ($folder) is already included" `
-                        + " in the Path environment variable.")
-    
-                    $isFolderInList = $true
-                    return
-                }
-            }
-    
-            If ($isFolderInList -eq $false)
+        $items = $_
+    }
+    Else
+    {
+        $items = $Folders
+    }
+
+    $items | foreach {
+        [string] $folder = $_
+
+        [bool] $isFolderInList = $false
+
+        $folderList | foreach {
+            If ([string]::Compare($_, $folder, $true) -eq 0)
             {
-                Write-Verbose ("Adding folder ($folder) to Path environment" `
-                    + " variable...")
-    
-                $folderList.Add($folder) | Out-Null
-    
-                $foldersAdded++
+                Write-Verbose ("The folder ($folder) is already included" `
+                    + " in the Path environment variable.")
+
+                $isFolderInList = $true
+                return
             }
         }
-    }
-    
-    end
-    {
-        If ($foldersAdded -eq 0)
+
+        If ($isFolderInList -eq $false)
         {
-            Write-Verbose ("No changes to the Path environment variable are" `
-                + " necessary.")
-    
-            return
+            Write-Verbose ("Adding folder ($folder) to Path environment" `
+                + " variable...")
+
+            $folderList.Add($folder) | Out-Null
+
+            $foldersAdded++
         }
-    
-        [string] $delimitedFolders = $folderList -Join ";"
-    
-        [Environment]::SetEnvironmentVariable(
-            "Path",
-            $delimitedFolders,
-            $EnvironmentVariableTarget)
-    
-        Write-Verbose ("Successfully added $foldersAdded folder(s) to Path" `
-            + " environment variable.")
     }
+}
+
+end
+{
+    If ($foldersAdded -eq 0)
+    {
+        Write-Verbose ("No changes to the Path environment variable are" `
+            + " necessary.")
+
+        return
+    }
+
+    [string] $delimitedFolders = $folderList -Join ";"
+
+    [Environment]::SetEnvironmentVariable(
+        "Path",
+        $delimitedFolders,
+        $EnvironmentVariableTarget)
+
+    Write-Verbose ("Successfully added $foldersAdded folder(s) to Path" `
+        + " environment variable.")
+}
+```
 
 
 
@@ -206,107 +212,109 @@ In addition to the script to add folders to the Path environment variable (Add-
 
 
 
-    <#
-    .SYNOPSIS
-    Removes one or more folders from the Path environment variable.
-    
-    .PARAMETER Folders
-    Specifies the folders to remove from the Path environment variable..
-    
-    .PARAMETER EnvironmentVariableTarget
-    Specifies the "scope" to use for the Path environment variable ("Process",
-    "Machine", or "User"). Defaults to "Process" if the parameter is not specified.
-    
-    .EXAMPLE
-    .\Remove-PathFolders.ps1 C:\NotBackedUp\Public\Toolbox
-    #>
-    param(
-        [parameter(Mandatory = $true, ValueFromPipeline = $true)]
-        [string[]] $Folders,
-        [string] $EnvironmentVariableTarget = "Process")
-    
-    begin
-    {
-        Set-StrictMode -Version Latest
-        $ErrorActionPreference = "Stop"
-    
-        Write-Verbose "Path environment variable target: $EnvironmentVariableTarget"
-    
-        [bool] $isInputFromPipeline =
-            ($PSBoundParameters.ContainsKey("Folders") -eq $false)
-    
-        [int] $foldersRemoved = 0
-    
-        [string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
-            "Path",
-            $EnvironmentVariableTarget) -Split ";"
-    
-        [Collections.ArrayList] $folderList = New-Object Collections.ArrayList
-    
-        $pathFolders | foreach {
-            $folderList.Add($_) | Out-Null
-        }
+```
+<#
+.SYNOPSIS
+Removes one or more folders from the Path environment variable.
+
+.PARAMETER Folders
+Specifies the folders to remove from the Path environment variable..
+
+.PARAMETER EnvironmentVariableTarget
+Specifies the "scope" to use for the Path environment variable ("Process",
+"Machine", or "User"). Defaults to "Process" if the parameter is not specified.
+
+.EXAMPLE
+.\Remove-PathFolders.ps1 C:\NotBackedUp\Public\Toolbox
+#>
+param(
+    [parameter(Mandatory = $true, ValueFromPipeline = $true)]
+    [string[]] $Folders,
+    [string] $EnvironmentVariableTarget = "Process")
+
+begin
+{
+    Set-StrictMode -Version Latest
+    $ErrorActionPreference = "Stop"
+
+    Write-Verbose "Path environment variable target: $EnvironmentVariableTarget"
+
+    [bool] $isInputFromPipeline =
+        ($PSBoundParameters.ContainsKey("Folders") -eq $false)
+
+    [int] $foldersRemoved = 0
+
+    [string[]] $pathFolders = [Environment]::GetEnvironmentVariable(
+        "Path",
+        $EnvironmentVariableTarget) -Split ";"
+
+    [Collections.ArrayList] $folderList = New-Object Collections.ArrayList
+
+    $pathFolders | foreach {
+        $folderList.Add($_) | Out-Null
     }
-    
-    process
+}
+
+process
+{
+    If ($isInputFromPipeline -eq $true)
     {
-        If ($isInputFromPipeline -eq $true)
+        $items = $_
+    }
+    Else
+    {
+        $items = $Folders
+    }
+
+    $items | foreach {
+        [string] $folder = $_
+
+        [bool] $isFolderInList = $false
+
+        for ([int] $i = 0; $i -lt $folderList.Count; $i++)
         {
-            $items = $_
-        }
-        Else
-        {
-            $items = $Folders
-        }
-    
-        $items | foreach {
-            [string] $folder = $_
-    
-            [bool] $isFolderInList = $false
-    
-            for ([int] $i = 0; $i -lt $folderList.Count; $i++)
+            If ([string]::Compare($folderList[$i], $folder, $true) -eq 0)
             {
-                If ([string]::Compare($folderList[$i], $folder, $true) -eq 0)
-                {
-                    $isFolderInList = $true
-    
-                    Write-Verbose ("Removing folder ($folder) from Path" `
-                        + " environment variable...")
-    
-                    $folderList.RemoveAt($i)
-                    $i--
-    
-                    $foldersRemoved++
-                }
-            }
-    
-            If ($isFolderInList -eq $false)
-            {
-                Write-Verbose ("The folder ($folder) is not specified in the Path" `
-                    + " list.")
-    
+                $isFolderInList = $true
+
+                Write-Verbose ("Removing folder ($folder) from Path" `
+                    + " environment variable...")
+
+                $folderList.RemoveAt($i)
+                $i--
+
+                $foldersRemoved++
             }
         }
-    }
-    
-    end
-    {
-        If ($foldersRemoved -eq 0)
+
+        If ($isFolderInList -eq $false)
         {
-            Write-Verbose ("No changes to the Path environment variable are" `
-                + " necessary.")
-    
-            return
+            Write-Verbose ("The folder ($folder) is not specified in the Path" `
+                + " list.")
+
         }
-    
-        [string] $delimitedFolders = $folderList -Join ";"
-    
-        [Environment]::SetEnvironmentVariable(
-            "Path",
-            $delimitedFolders,
-            $EnvironmentVariableTarget)
-    
-        Write-Verbose ("Successfully removed $foldersRemoved folder(s) from Path" `
-            + " environment variable.")
     }
+}
+
+end
+{
+    If ($foldersRemoved -eq 0)
+    {
+        Write-Verbose ("No changes to the Path environment variable are" `
+            + " necessary.")
+
+        return
+    }
+
+    [string] $delimitedFolders = $folderList -Join ";"
+
+    [Environment]::SetEnvironmentVariable(
+        "Path",
+        $delimitedFolders,
+        $EnvironmentVariableTarget)
+
+    Write-Verbose ("Successfully removed $foldersRemoved folder(s) from Path" `
+        + " environment variable.")
+}
+```
 

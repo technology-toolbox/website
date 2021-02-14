@@ -15,7 +15,9 @@ For example, after running:
 
 
 
-    cscript "Clear Event Logs.vbs"
+```
+cscript "Clear Event Logs.vbs"
+```
 
 
 
@@ -27,7 +29,9 @@ I started out by simply typing the following in a PowerShell window:
 
 
 
-    wevtutil el | % { wevtutil cl $_ }
+```
+wevtutil el | % { wevtutil cl $_ }
+```
 
 
 
@@ -35,7 +39,9 @@ However, typing that command even once every few days quickly grew tiresome, so
 
 
 
-    C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
+```
+C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
+```
 
 
 
@@ -67,24 +73,26 @@ However, typing that command even once every few days quickly grew tiresome, so
 
 
 
-    <#
-    .SYNOPSIS
-    Clears all Windows event logs.
-    
-    .DESCRIPTION
-    Clearing all of the Windows event logs is useful in development environments
-    (for example, to check if a computer reboots "cleanly" -- i.e. without any
-    errors).
-    
-    .EXAMPLE
-    .\Clear-EventLogs.ps1
-    
-    .NOTES
-    This script must be run with administrator privileges.
-    #>
-    
-    Set-StrictMode -Version Latest
-    $ErrorActionPreference = "Stop"
-    
-    wevtutil el | ForEach-Object { wevtutil cl $_ }
+```
+<#
+.SYNOPSIS
+Clears all Windows event logs.
+
+.DESCRIPTION
+Clearing all of the Windows event logs is useful in development environments
+(for example, to check if a computer reboots "cleanly" -- i.e. without any
+errors).
+
+.EXAMPLE
+.\Clear-EventLogs.ps1
+
+.NOTES
+This script must be run with administrator privileges.
+#>
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
+
+wevtutil el | ForEach-Object { wevtutil cl $_ }
+```
 

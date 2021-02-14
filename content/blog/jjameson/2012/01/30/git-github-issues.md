@@ -40,12 +40,14 @@ The correct answer seems to be "this is a bug in the Git Source Control Provider
 
 
 
-    $ cd /c/NotBackedUp/Subtext/
-    
-    jjameson@FOOBAR7 /c/NotBackedUp/Subtext (master)
-    $ git status
-    # On branch master
-    nothing to commit (working directory clean)
+```
+$ cd /c/NotBackedUp/Subtext/
+
+jjameson@FOOBAR7 /c/NotBackedUp/Subtext (master)
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+```
 
 
 

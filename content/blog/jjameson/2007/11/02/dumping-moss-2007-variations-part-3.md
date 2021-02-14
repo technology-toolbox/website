@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx)

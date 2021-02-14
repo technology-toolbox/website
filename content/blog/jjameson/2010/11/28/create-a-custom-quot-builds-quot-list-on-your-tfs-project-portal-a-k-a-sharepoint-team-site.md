@@ -10,8 +10,8 @@ tags: ["My System", "TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx)
 > 

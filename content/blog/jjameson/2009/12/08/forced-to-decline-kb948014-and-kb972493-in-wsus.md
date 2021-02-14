@@ -9,8 +9,8 @@ tags: ["WSUS", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx)
 > 
@@ -21,9 +21,9 @@ In [last night's post](/blog/jjameson/2009/12/07/error-installing-kb-970892-when
 
 I should also mention that in order to get my WSUS report to come up completely clean, I had to decline the the following updates:
 
-- **Description of the Windows Server Update Services 3.0 Service Pack 1 package  
+- **Description of the Windows Server Update Services 3.0 Service Pack 1 package
 **[http://support.microsoft.com/kb/948014](http://support.microsoft.com/kb/948014)
-- **Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager  
+- **Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
 **[http://support.microsoft.com/kb/972493](http://support.microsoft.com/kb/972493)
 
 

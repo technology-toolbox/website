@@ -27,13 +27,15 @@ Using IIS Manager, I made a quick change to disable directory browsing on Techn
 
 
 
-    <configuration>
-      ...
-      <system.webServer>
-        ...
-        <directoryBrowse enabled="false" />
-      </system.webServer>
-    </configuration>
+```
+<configuration>
+  ...
+  <system.webServer>
+    ...
+    <directoryBrowse enabled="false" />
+  </system.webServer>
+</configuration>
+```
 
 
 

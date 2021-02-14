@@ -10,8 +10,8 @@ tags: ["My System", "SQL Server", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
@@ -29,7 +29,9 @@ As such, one of the first things that I typically do when building out a new VM 
 
 
 
-    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+```
+reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+```
 
 
 
@@ -75,8 +77,8 @@ As noted on MSDN, the registry setting "does not affect files that have already 
 > **Important**
 > 
 >             Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare occasions
->             where you have to do a little more work when installing new products or features.  
->   
+>             where you have to do a little more work when installing new products or features.
+> 
 > 
 >             For example, while testing my upgrade from TFS 2008 to TFS 2010 on a new set of
 >             VMs, I first installed SharePoint Server 2010 on one of the VMs. Then I subsequently
@@ -85,8 +87,8 @@ As noted on MSDN, the registry setting "does not affect files that have already 
 >             when I went to add Reporting Services, SQL Server Setup complained about not being
 >             able to find the version of sqlncli.msi it needed (because it was installed from
 >             a temporary folder via Windows Update but since my MaxPatchCacheSize was set to
->             0, it wasn't copied to the \Windows\Installer\$PatchCache$ folder).  
->   
+>             0, it wasn't copied to the \Windows\Installer\$PatchCache$ folder).
+> 
 > 
 >             Consequently, I simply had to extract the service pack (using the /EXTRACT command-line
 >             parameter) and search around a little for the expected file. Once I located the

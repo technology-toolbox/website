@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "TFS", "SharePoint
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx)
@@ -47,23 +47,25 @@ Here is the XML input file that I used with the **File.BatchNewTeamProject** co
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project xmlns="ProjectCreationSettingsFileSchema.xsd">
-      <TFSName>http://cyclops:8080/tfs/DefaultCollection</TFSName>
-      <LogFolder>C:\NotBackedUp\Temp</LogFolder>
-      <ProjectName>AdventureWorks</ProjectName>
-      <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
-      <ProjectReportsEnabled>false</ProjectReportsEnabled>
-      <ProjectSiteEnabled>true</ProjectSiteEnabled>
-      <ProjectSiteWebApplication>http://cyclops</ProjectSiteWebApplication>
-      <ProjectSitePath>sites/AdventureWorks</ProjectSitePath>
-      <ProjectSiteTitle>Adventure Works</ProjectSiteTitle>
-      <!--
-      <ProjectSiteDescription>This team project was created based on the 'MSF for Agile Software Development - v4.2' process template, but subsequently upgraded for TFS 2010.</ProjectSiteDescription>
-      -->
-      <ProjectSiteDescription></ProjectSiteDescription>
-      <ProcessTemplateName>MSF for Agile Software Development v5.0</ProcessTemplateName>
-    </Project>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="ProjectCreationSettingsFileSchema.xsd">
+  <TFSName>http://cyclops:8080/tfs/DefaultCollection</TFSName>
+  <LogFolder>C:\NotBackedUp\Temp</LogFolder>
+  <ProjectName>AdventureWorks</ProjectName>
+  <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
+  <ProjectReportsEnabled>false</ProjectReportsEnabled>
+  <ProjectSiteEnabled>true</ProjectSiteEnabled>
+  <ProjectSiteWebApplication>http://cyclops</ProjectSiteWebApplication>
+  <ProjectSitePath>sites/AdventureWorks</ProjectSitePath>
+  <ProjectSiteTitle>Adventure Works</ProjectSiteTitle>
+  <!--
+  <ProjectSiteDescription>This team project was created based on the 'MSF for Agile Software Development - v4.2' process template, but subsequently upgraded for TFS 2010.</ProjectSiteDescription>
+  -->
+  <ProjectSiteDescription></ProjectSiteDescription>
+  <ProcessTemplateName>MSF for Agile Software Development v5.0</ProcessTemplateName>
+</Project>
+```
 
 
 
@@ -147,7 +149,9 @@ Since I have a number of TFS project sites to upgrade, I chose to activate the 
 
 
 
-    Enable-SPFeature "TfsDashboardAgileMoss" -Url "http://cyclops/sites/AdventureWorks"
+```
+Enable-SPFeature "TfsDashboardAgileMoss" -Url "http://cyclops/sites/AdventureWorks"
+```
 
 
 
@@ -183,15 +187,17 @@ Lastly, note that if you use PowerShell to activate the dashboard feature, you 
 
 
 
-    $sitesToUpgrade =
-       @(
-    "http://cyclops/sites/AdventureWorks",
-    "http://cyclops/sites/Demo",
-    "http://cyclops/sites/Toolbox"
-       )
-    
-    $sitesToUpgrade |
-       ForEach-Object {
-          Enable-SPFeature "TfsDashboardAgileMoss" -Url $_
-       }
+```
+$sitesToUpgrade =
+   @(
+"http://cyclops/sites/AdventureWorks",
+"http://cyclops/sites/Demo",
+"http://cyclops/sites/Toolbox"
+   )
+
+$sitesToUpgrade |
+   ForEach-Object {
+      Enable-SPFeature "TfsDashboardAgileMoss" -Url $_
+   }
+```
 

@@ -11,8 +11,8 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
@@ -51,12 +51,14 @@ In short (and with no error handling), use something like the following to creat
 
 
 
-    $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
-        -namespace "root\virtualization"
-        
-    $vhdService.CreateDynamicVirtualHardDisk(
-        "C:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
-        200MB)
+```
+$vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
+    -namespace "root\virtualization"
+    
+$vhdService.CreateDynamicVirtualHardDisk(
+    "C:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
+    200MB)
+```
 
 
 
@@ -83,7 +85,9 @@ Note that you'll probably need to change the permissions on the new VHD in order
 
 
 
-    icacls foobar5_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
+```
+icacls foobar5_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
+```
 
 
 

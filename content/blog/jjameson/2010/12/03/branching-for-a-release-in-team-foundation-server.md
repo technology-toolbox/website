@@ -9,8 +9,8 @@ tags: ["My System", "TFS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx)
@@ -172,14 +172,16 @@ To increment the Revision portion of the assembly version on the "Service Pack" 
 3. Location the **&lt;Version&gt;** task used to increment the assembly
             version and change the `BuildType`
             to `"None"` and the `RevisionType` to `"Increment"`,
-            as shown below:  
+            as shown below:
 
 
 
-        <Version
-              VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
-              BuildType="None"
-              RevisionType="Increment">
+    ```
+    <Version
+          VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
+          BuildType="None"
+          RevisionType="Increment">
+    ```
 4. Save the changes to the file.
 5. Right-click the updated MSBuild file and click **Check In Pending Changes...**
 6. In the **Check In - Source Files **window:

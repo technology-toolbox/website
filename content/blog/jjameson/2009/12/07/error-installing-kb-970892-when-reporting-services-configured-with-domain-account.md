@@ -9,8 +9,8 @@ tags: ["SQL Server", "Infrastructure"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx)
@@ -78,20 +78,22 @@ After downloading and installing the standalone patch installation, I discovered
 
 
 
-    MSI (s) (F0:54) [21:09:49:565]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIAC31.tmp, Entrypoint: Do_RSSetSharePointExclusionPath
-    <Func Name='LaunchFunction'>
-    Function=Do_RSSetSharePointExclusionPath
-    <Func Name='GetCAContext'>
-    <EndFunc Name='GetCAContext' Return='T' GetLastError='203'>
-    Doing Action: Do_RSSetSharePointExclusionPath
-    PerfTime Start: Do_RSSetSharePointExclusionPath : Mon Dec 07 21:09:49 2009
-    <Func Name='Do_RSSetSharePointExclusionPath'>
-    The application pool /s already exists.
-    Error Code: 0x80077374 (29556)
-    Windows Error Text: Source File Name: sqlca\sqliisca.cpp
-    Compiler Timestamp: Mon Nov 17 17:05:40 2008
-    Function Name: Do_RSSetSharePointExclusionPath
-    Source Line Number: 914
+```
+MSI (s) (F0:54) [21:09:49:565]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIAC31.tmp, Entrypoint: Do_RSSetSharePointExclusionPath
+<Func Name='LaunchFunction'>
+Function=Do_RSSetSharePointExclusionPath
+<Func Name='GetCAContext'>
+<EndFunc Name='GetCAContext' Return='T' GetLastError='203'>
+Doing Action: Do_RSSetSharePointExclusionPath
+PerfTime Start: Do_RSSetSharePointExclusionPath : Mon Dec 07 21:09:49 2009
+<Func Name='Do_RSSetSharePointExclusionPath'>
+The application pool /s already exists.
+Error Code: 0x80077374 (29556)
+Windows Error Text: Source File Name: sqlca\sqliisca.cpp
+Compiler Timestamp: Mon Nov 17 17:05:40 2008
+Function Name: Do_RSSetSharePointExclusionPath
+Source Line Number: 914
+```
 
 
 

@@ -10,8 +10,8 @@ tags: ["Windows Server", "Infrastructure"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx)
@@ -27,9 +27,9 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 
 > * * *
 > 
-> **From: **Jeremy Jameson  
-> **Sent: **Friday, May 21, 2010 11:00 AM  
-> **To: **[...]  
+> **From: **Jeremy Jameson
+> **Sent: **Friday, May 21, 2010 11:00 AM
+> **To: **[...]
 > **Subject: **Windows Server Backup: "Select Items to Recover" does             not show backed up files
 > 
 > On a server running Windows Server 2008 R2, I have completed a backup with the following             options:
@@ -43,18 +43,18 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 > 
 > According to the backup log file, all of the files in the specified location are             successfully backed up:
 > 
-> Backed up C:\  
->              Backed up C:\BackedUp\  
->              ...  
->              Backed up C:\BackedUp\Profiles\  
->              Backed up C:\BackedUp\Profiles\jjameson\  
->              Backed up C:\BackedUp\Profiles\jjameson\NTUSER.DAT  
->              Backed up C:\BackedUp\Profiles\jjameson\ntuser.dat.LOG  
->              Backed up C:\BackedUp\Profiles\jjameson\ntuser.ini  
->              Backed up C:\BackedUp\Profiles\jjameson\ntuser.pol  
->              Backed up C:\BackedUp\Profiles\jjameson\Application Data\  
->              Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\  
->              Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\CLR Security             Config\  
+> Backed up C:\
+>              Backed up C:\BackedUp\
+>              ...
+>              Backed up C:\BackedUp\Profiles\
+>              Backed up C:\BackedUp\Profiles\jjameson\
+>              Backed up C:\BackedUp\Profiles\jjameson\NTUSER.DAT
+>              Backed up C:\BackedUp\Profiles\jjameson\ntuser.dat.LOG
+>              Backed up C:\BackedUp\Profiles\jjameson\ntuser.ini
+>              Backed up C:\BackedUp\Profiles\jjameson\ntuser.pol
+>              Backed up C:\BackedUp\Profiles\jjameson\Application Data\
+>              Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\
+>              Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\CLR Security             Config\
 >              ...
 > 
 > However, when I try to recover the files, it appears as if the files were not backed             up, as shown in the screenshot below.
@@ -78,8 +78,8 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 > 
 > Doesn't this seem like a bug (since the files can be backed up, but they cannot             be recovered)?
 > 
-> Jeremy Jameson  
-> **Microsoft Consulting Services**  
+> Jeremy Jameson
+> **Microsoft Consulting Services**
 >              ...
 > 
 > * * *

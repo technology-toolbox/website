@@ -10,8 +10,8 @@ tags: ["Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx)
 > 

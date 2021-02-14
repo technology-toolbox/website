@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx)
 > 

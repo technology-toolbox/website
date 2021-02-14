@@ -10,8 +10,8 @@ tags: ["Personal"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx)
@@ -99,7 +99,7 @@ What about the bottom 10 posts?
 | --- | --- | --- |
 |                     151<br>                 |                     Adventures in Upgrading TFS<br>                 |                     0<br>                 |
 |                     150<br>                 |                     AutoEventWireup Issue in MOSS 2007<br>                 |                     0<br>                 |
-|                     149<br>                 | [ArgumentNullException with Optional PublishingPage.Description Property  <br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) |                     678<br>                 |
+|                     149<br>                 | [ArgumentNullException with Optional PublishingPage.Description Property<br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) |                     678<br>                 |
 |                     148<br>                 | [Eliminate MBSA Warnings Using Default Security Settings Policy](/blog/jjameson/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy) |                     679<br>                 |
 |                     147<br>                 | [Constraining<br>                        Tables with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css) |                     728<br>                 |
 |                     146<br>                 | [DataNavigateUrlFormatString Does Not Allow "javascript:"](/blog/jjameson/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript) |                     773<br>                 |

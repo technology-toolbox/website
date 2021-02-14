@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx)
@@ -27,9 +27,11 @@ For a couple of months now, I have been using the following command to add mysel
 
 
 
-    stsadm.exe -o addpermissionpolicy -url
-    http://foobar/sites/Migration -userlogin 
-    {DOMAIN\username} -permissionlevel "Full Control"
+```
+stsadm.exe -o addpermissionpolicy -url
+http://foobar/sites/Migration -userlogin 
+{DOMAIN\username} -permissionlevel "Full Control"
+```
 
 
 
@@ -41,9 +43,11 @@ I initially suggested the following command:
 
 
 
-    stsadm.exe -o addpermissionpolicy -url
-    http://foobar/sites/Migration -userlogin 
-    "NT AUTHORITY\Authenticated Users" -permissionlevel "Read"
+```
+stsadm.exe -o addpermissionpolicy -url
+http://foobar/sites/Migration -userlogin 
+"NT AUTHORITY\Authenticated Users" -permissionlevel "Read"
+```
 
 
 
@@ -53,17 +57,19 @@ Revisiting the issue a few hours later, I just spent a couple of minutes crankin
 
 
 
-    static void Main(string[] args)
+```
+static void Main(string[] args)
+{
+    Uri siteUrl = new Uri("http://foobar/sites/Migration");
+
+    SPWebApplication application = SPWebApplication.Lookup(siteUrl);
+
+    foreach (SPPolicyRole policyRole in application.PolicyRoles)
     {
-        Uri siteUrl = new Uri("http://foobar/sites/Migration");
-    
-        SPWebApplication application = SPWebApplication.Lookup(siteUrl);
-    
-        foreach (SPPolicyRole policyRole in application.PolicyRoles)
-        {
-            Console.WriteLine(policyRole.Name);
-        }
+        Console.WriteLine(policyRole.Name);
     }
+}
+```
 
 
 
@@ -75,7 +81,9 @@ Therefore the command that I should have suggested to my colleague is:
 
 
 
-    stsadm.exe -o addpermissionpolicy -url
-    http://foobar/sites/Migration -userlogin 
-    "NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
+```
+stsadm.exe -o addpermissionpolicy -url
+http://foobar/sites/Migration -userlogin 
+"NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
+```
 

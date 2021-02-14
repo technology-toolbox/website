@@ -10,8 +10,8 @@ tags: ["My System", "Core Development", "Visual Studio"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx)
 > 
@@ -29,11 +29,13 @@ Yes, this is going to be really painful for some developers.
 For example, you can say goodbye to using the overload of string.Format() that doesn't specify a CultureInfo:
 
 
-    string foo = "here";
-    
-                string logMessage = string.Format(
-                    "Imagine something interesting {0}.",
-                    foo);
+```
+string foo = "here";
+
+            string logMessage = string.Format(
+                "Imagine something interesting {0}.",
+                foo);
+```
 
 
 Attempting this will now result in a broken build:
@@ -45,12 +47,14 @@ Attempting this will now result in a broken build:
 To avoid the CA1305 error, you will need to use something like this instead:
 
 
-    string foo = "here";
-    
-                string logMessage = string.Format(
-                    CultureInfo.InvariantCulture,
-                    "Imagine something interesting {0}.",
-                    foo);
+```
+string foo = "here";
+
+            string logMessage = string.Format(
+                CultureInfo.InvariantCulture,
+                "Imagine something interesting {0}.",
+                foo);
+```
 
 
 You will also need to enable signing of all assemblies with a strong name key, and also specify various assembly level attributes (e.g. [`\[assembly: CLSCompliant(true)\]`](http://msdn.microsoft.com/en-us/library/system.clscompliantattribute.aspx)). However, if you follow the steps I've provided in a [previous post](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), this should only take you at most 1-2 minutes.
@@ -74,10 +78,12 @@ Note that you will undoubtedly need to [suppress some specific Code Analysis war
 So, in conclusion, think of the Code Analysis feature in Visual Studio as a way of *choosing* a more strict compiler. For example, back in the days when I used to program in C on Unix, the compiler wouldn't complain when I wrote something like this (even though this is obviously very wrong):
 
 
-    if (i = 1)
-                {
-                    ...
-                }
+```
+if (i = 1)
+            {
+                ...
+            }
+```
 
 
 I was relieved when I switched to C++ and these kinds of bugs were a thing of the past. [Note that I never switch my coding style to use something like "`1 == i`" in order to avoid these errors.]

@@ -11,8 +11,8 @@ tags: ["SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/14/stsadm-to-windows-powershell-mapping-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/14/stsadm-to-windows-powershell-mapping-sharepoint-server-2010.aspx)
 > 

@@ -11,8 +11,8 @@ tags: ["Personal"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx)

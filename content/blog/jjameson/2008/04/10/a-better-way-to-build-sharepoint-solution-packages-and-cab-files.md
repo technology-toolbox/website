@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx)
@@ -25,8 +25,10 @@ Here is a sample of a post-build event used to create a SharePoint solution pack
 
 
 
-    @echo Creating SharePoint solution package...
-    makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
+```
+@echo Creating SharePoint solution package...
+makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
+```
 
 
 
@@ -34,11 +36,13 @@ Converting this simple "makecab" command to an MSBuild target is easy -- just us
 
 
 
-    <Target Name="CreateSharePointSolutionPackage">
-      <Message Text='Creating SharePoint solution package...' />
-      <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
-        WorkingDirectory='$(OutDir)' />
-    </Target>
+```
+<Target Name="CreateSharePointSolutionPackage">
+  <Message Text='Creating SharePoint solution package...' />
+  <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
+    WorkingDirectory='$(OutDir)' />
+</Target>
+```
 
 
 
@@ -48,13 +52,15 @@ At this point, however, note that I haven't really improved the situation at all
 
 
 
-    <Target Name="CreateSharePointSolutionPackage"
-      Inputs="DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
-      Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
-      <Message Text='Creating SharePoint solution package...' />
-      <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
-        WorkingDirectory='$(OutDir)' />
-    </Target>
+```
+<Target Name="CreateSharePointSolutionPackage"
+  Inputs="DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
+  Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
+  <Message Text='Creating SharePoint solution package...' />
+  <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
+    WorkingDirectory='$(OutDir)' />
+</Target>
+```
 
 
 
@@ -64,21 +70,23 @@ What I really wanted to specify in the `Inputs`         attribute is all of the 
 
 
 
-    <ItemGroup>
-      <Reference Include="...">
-    </ItemGroup
-    <ItemGroup>
-      <Compile Include="...">
-    </ItemGroup
-    <ItemGroup>
-      <None Include="...">
-    </ItemGroup
-    <ItemGroup>
-      <Content Include="...">
-    </ItemGroup
-    <ItemGroup>
-      <ProjectReference Include="...">
-    </ItemGroup>
+```
+<ItemGroup>
+  <Reference Include="...">
+</ItemGroup
+<ItemGroup>
+  <Compile Include="...">
+</ItemGroup
+<ItemGroup>
+  <None Include="...">
+</ItemGroup
+<ItemGroup>
+  <Content Include="...">
+</ItemGroup
+<ItemGroup>
+  <ProjectReference Include="...">
+</ItemGroup>
+```
 
 
 
@@ -107,13 +115,15 @@ Here is the updated MSBuild target with the correct inputs specified:
 
 
 
-    <Target Name="CreateSharePointSolutionPackage"
-      Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
-      Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
-      <Message Text='Creating SharePoint solution package...' />
-      <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
-        WorkingDirectory='$(OutDir)' />
-    </Target>
+```
+<Target Name="CreateSharePointSolutionPackage"
+  Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
+  Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
+  <Message Text='Creating SharePoint solution package...' />
+  <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
+    WorkingDirectory='$(OutDir)' />
+</Target>
+```
 
 
 
@@ -132,12 +142,14 @@ The second option seems a little more elegant than the first, and hence is what 
 
 
 
-    <PropertyGroup>
-      <BuildDependsOn>
-        $(BuildDependsOn);
-        CreateSharePointSolutionPackage
-      </BuildDependsOn>
-    </PropertyGroup>
+```
+<PropertyGroup>
+  <BuildDependsOn>
+    $(BuildDependsOn);
+    CreateSharePointSolutionPackage
+  </BuildDependsOn>
+</PropertyGroup>
+```
 
 
 

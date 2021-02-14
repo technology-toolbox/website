@@ -10,8 +10,8 @@ tags: ["Personal"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx)
 > 

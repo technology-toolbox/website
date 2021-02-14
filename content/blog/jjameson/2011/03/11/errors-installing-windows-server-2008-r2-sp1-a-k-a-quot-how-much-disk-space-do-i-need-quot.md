@@ -10,8 +10,8 @@ tags: ["Windows Server", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/12/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/12/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx)
 > 

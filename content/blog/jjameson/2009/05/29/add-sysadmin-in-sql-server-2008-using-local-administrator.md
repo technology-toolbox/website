@@ -10,8 +10,8 @@ tags: ["SQL Server"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx)
 > 

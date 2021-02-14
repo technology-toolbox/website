@@ -11,8 +11,8 @@ tags: ["Core Development", "Debugging", "Toolbox"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/04/procdump-an-easier-way-to-create-a-mini-dump.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/04/procdump-an-easier-way-to-create-a-mini-dump.aspx)
@@ -31,9 +31,11 @@ Here's a little script that I keep on my desktop that shows how to write a mini-
 
 
 
-    cd C:\NotBackedUp\Temp\ExpressionWeb
-    
-    C:\NotBackedUp\Public\Toolbox\procdump.exe -e -ma ExpressionWeb.exe
+```
+cd C:\NotBackedUp\Temp\ExpressionWeb
+
+C:\NotBackedUp\Public\Toolbox\procdump.exe -e -ma ExpressionWeb.exe
+```
 
 
 

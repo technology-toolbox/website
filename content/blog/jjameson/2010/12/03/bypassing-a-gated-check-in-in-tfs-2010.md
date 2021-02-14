@@ -9,8 +9,8 @@ tags: ["TFS"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx)
 > 
@@ -35,10 +35,12 @@ Then you simply need to modify the IncrementAssemblyVersion.proj file (described
 
 
 
-    <Exec
-      WorkingDirectory="$(BuildProjectFolderPath)"
-      Command="$(TeamFoundationVersionControlTool) checkin /bypass /override:&quot;Check-in from automated build&quot; /comment:&quot;Increment assembly version ($(IncrementedAssemblyVersion)) $(NoCICheckinComment)&quot; AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
-    </Project>
+```
+<Exec
+  WorkingDirectory="$(BuildProjectFolderPath)"
+  Command="$(TeamFoundationVersionControlTool) checkin /bypass /override:&quot;Check-in from automated build&quot; /comment:&quot;Increment assembly version ($(IncrementedAssemblyVersion)) $(NoCICheckinComment)&quot; AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
+</Project>
+```
 
 
 
@@ -57,17 +59,17 @@ In case you are wondering how I configured the gated check-in build definition, 
 | --- | --- | --- |
 | General | Build definition name | Gated Check-in - Main |
 | Trigger | Gated Check-in - accept check-ins only if the submitted changes merge and build successfully | (selected) |
-| Workspace | Source Control Folder  <br>Build Agent Folder | $/foobar2010/Main  <br>$(SourceDir) |
+| Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
 | Build Defaults | This build copies output files to a drop folder | (not selected) |
 | Process | Build process template: | DefaultTemplate.xaml |
 |   | Build process parameters: |   |
 |   | Items to Build<ul><li>Solutions/Projects</li>
-<li>Configurations</li></ul> |   <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li>
+<li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li>
 <li>Release - Any CPU</li></ul> |
 |   | Clean Workspace | False |
 |   | Perform Code Analysis | Never |
-|   | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> |   <br>False |
-|   | Agent Settings<ul><li>Maximum Agent Execution Time</li></ul> |   <br>00:15:00 |
+|   | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> | <br>False |
+|   | Agent Settings<ul><li>Maximum Agent Execution Time</li></ul> | <br>00:15:00 |
 |   | Copy Outputs to Drop Folder | False |
 |   | Create Work Item on Failure | False |
 |   | Label Sources | False |

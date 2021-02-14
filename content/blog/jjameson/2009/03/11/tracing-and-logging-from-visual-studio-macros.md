@@ -11,8 +11,8 @@ tags: ["Core Development", "Visual Studio"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx)
@@ -41,20 +41,22 @@ The macro output pane is actually created on-the-fly, as necessary, whenever  I 
 
 
 
-    Private Function GetMacroOutputPane() As OutputWindowPane
-            Dim ow As OutputWindow = _
-                DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
-    
-            Dim outputPane As OutputWindowPane
-    
-            Try
-                outputPane = ow.OutputWindowPanes.Item("Macros")
-            Catch ex As Exception
-                outputPane = ow.OutputWindowPanes.Add("Macros")
-            End Try
-    
-            Return outputPane
-        End Function
+```
+Private Function GetMacroOutputPane() As OutputWindowPane
+        Dim ow As OutputWindow = _
+            DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
+
+        Dim outputPane As OutputWindowPane
+
+        Try
+            outputPane = ow.OutputWindowPanes.Item("Macros")
+        Catch ex As Exception
+            outputPane = ow.OutputWindowPanes.Add("Macros")
+        End Try
+
+        Return outputPane
+    End Function
+```
 
 
 
@@ -64,19 +66,21 @@ In order to simplify writing output messages -- as well as timestamp each messag
 
 
 
-    Private Sub WriteOutput( _
-            ByVal s As String)
-    
-            Dim buffer As StringBuilder = New StringBuilder
-    
-            buffer.Append(Date.Now.ToLongTimeString())
-            buffer.Append(" ")
-            buffer.Append(s)
-            buffer.Append(vbCrLf)
-    
-            Dim output As String = buffer.ToString()
-    
-            Dim outputPane As OutputWindowPane = GetMacroOutputPane()
-            outputPane.OutputString(output)
-        End Sub
+```
+Private Sub WriteOutput( _
+        ByVal s As String)
+
+        Dim buffer As StringBuilder = New StringBuilder
+
+        buffer.Append(Date.Now.ToLongTimeString())
+        buffer.Append(" ")
+        buffer.Append(s)
+        buffer.Append(vbCrLf)
+
+        Dim output As String = buffer.ToString()
+
+        Dim outputPane As OutputWindowPane = GetMacroOutputPane()
+        outputPane.OutputString(output)
+    End Sub
+```
 

@@ -12,8 +12,8 @@ tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx)
@@ -52,41 +52,43 @@ Here's the corresponding pieces from my updated Web.csproj file for the Tugboat 
 
 
 
-    <Target Name="AfterBuild">
-        <CallTarget Targets="RemoveExtraneousFilesFromBuild" />
-      </Target>
-      <Target Name="RemoveExtraneousFilesFromBuild">
-        <Message Importance="high" Text="Removing extraneous files from build output ($(OutDir))..." />
-        <!--
-          The following assemblies are either included in the WSPs
-          or else should not be included in the build
-          (e.g. Microsoft.SharePoint.dll).
-        -->
-        <CreateItem Include="$(OutDir)\Microsoft.BusinessData.dll;
-          $(OutDir)\Microsoft.HtmlTrans.Interface.dll;
-          $(OutDir)\Microsoft.IdentityModel.dll;
-          $(OutDir)\Microsoft.Internal.Mime.dll;
-          $(OutDir)\Microsoft.Office.Server.dll;
-          $(OutDir)\Microsoft.Office.Server.UI.dll;
-          $(OutDir)\Microsoft.Office.Server.UserProfiles.dll;
-          $(OutDir)\Microsoft.SharePoint.AdministrationOperation.dll;
-          $(OutDir)\Microsoft.SharePoint.Client.ServerRuntime.dll;
-          $(OutDir)\Microsoft.SharePoint.Diagnostics.dll;
-          $(OutDir)\Microsoft.SharePoint.dll;
-          $(OutDir)\Microsoft.SharePoint.Dsp.dll;
-          $(OutDir)\Microsoft.SharePoint.Library.dll;
-          $(OutDir)\Microsoft.SharePoint.PowerShell.dll;
-          $(OutDir)\Microsoft.SharePoint.Publishing.dll;
-          $(OutDir)\Microsoft.SharePoint.Search.dll;
-          $(OutDir)\Microsoft.SharePoint.Security.dll;
-          $(OutDir)\Microsoft.SharePoint.Taxonomy.dll;
-          $(OutDir)\Microsoft.Web.Administration.dll;
-          $(OutDir)\Microsoft.Web.CommandUI.dll;
-          $(OutDir)\Microsoft.Web.Design.Server.dll;">
-          <Output TaskParameter="Include" ItemName="FilesToDelete" />
-        </CreateItem>
-        <Delete Files="@(FilesToDelete)" />
-      </Target>
+```
+<Target Name="AfterBuild">
+    <CallTarget Targets="RemoveExtraneousFilesFromBuild" />
+  </Target>
+  <Target Name="RemoveExtraneousFilesFromBuild">
+    <Message Importance="high" Text="Removing extraneous files from build output ($(OutDir))..." />
+    <!--
+      The following assemblies are either included in the WSPs
+      or else should not be included in the build
+      (e.g. Microsoft.SharePoint.dll).
+    -->
+    <CreateItem Include="$(OutDir)\Microsoft.BusinessData.dll;
+      $(OutDir)\Microsoft.HtmlTrans.Interface.dll;
+      $(OutDir)\Microsoft.IdentityModel.dll;
+      $(OutDir)\Microsoft.Internal.Mime.dll;
+      $(OutDir)\Microsoft.Office.Server.dll;
+      $(OutDir)\Microsoft.Office.Server.UI.dll;
+      $(OutDir)\Microsoft.Office.Server.UserProfiles.dll;
+      $(OutDir)\Microsoft.SharePoint.AdministrationOperation.dll;
+      $(OutDir)\Microsoft.SharePoint.Client.ServerRuntime.dll;
+      $(OutDir)\Microsoft.SharePoint.Diagnostics.dll;
+      $(OutDir)\Microsoft.SharePoint.dll;
+      $(OutDir)\Microsoft.SharePoint.Dsp.dll;
+      $(OutDir)\Microsoft.SharePoint.Library.dll;
+      $(OutDir)\Microsoft.SharePoint.PowerShell.dll;
+      $(OutDir)\Microsoft.SharePoint.Publishing.dll;
+      $(OutDir)\Microsoft.SharePoint.Search.dll;
+      $(OutDir)\Microsoft.SharePoint.Security.dll;
+      $(OutDir)\Microsoft.SharePoint.Taxonomy.dll;
+      $(OutDir)\Microsoft.Web.Administration.dll;
+      $(OutDir)\Microsoft.Web.CommandUI.dll;
+      $(OutDir)\Microsoft.Web.Design.Server.dll;">
+      <Output TaskParameter="Include" ItemName="FilesToDelete" />
+    </CreateItem>
+    <Delete Files="@(FilesToDelete)" />
+  </Target>
+```
 
 
 

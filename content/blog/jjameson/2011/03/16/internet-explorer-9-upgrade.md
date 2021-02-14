@@ -10,8 +10,8 @@ tags: ["Simplify", "Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx)
 > 

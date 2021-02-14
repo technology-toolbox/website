@@ -67,21 +67,23 @@ Note that s3Capcha uses a simple XML file to specify various CAPTCHA options, s
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <s3capcha>
-      <icons>
-        <name>apple,cherries,grapes,pear,strawberry,watermelon</name>
-        <title>Apple,Cherries,Grapes,Pear,Strawberry,Watermelon</title>
-        <width>60</width>
-        <height>60</height>
-        <ext>jpg</ext>
-        <folder>fruit</folder>
-      </icons>
-      <message>
-        To prevent spam from being submitted, please select the following fruit:
-        <strong>{0}</strong>
-      </message>
-    </s3capcha>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<s3capcha>
+  <icons>
+    <name>apple,cherries,grapes,pear,strawberry,watermelon</name>
+    <title>Apple,Cherries,Grapes,Pear,Strawberry,Watermelon</title>
+    <width>60</width>
+    <height>60</height>
+    <ext>jpg</ext>
+    <folder>fruit</folder>
+  </icons>
+  <message>
+    To prevent spam from being submitted, please select the following fruit:
+    <strong>{0}</strong>
+  </message>
+</s3capcha>
+```
 
 
 
@@ -89,17 +91,19 @@ In Mahdi's code, the configuration file is read using the **LoadConfig**method 
 
 
 
-    private static bool LoadConfig()
+```
+private static bool LoadConfig()
+    {
+        string FilePath = "~/s3capcha/config.xml";
+        FilePath = HttpContext.Current.Server.MapPath(FilePath);
+        if (System.IO.File.Exists(FilePath))
         {
-            string FilePath = "~/s3capcha/config.xml";
-            FilePath = HttpContext.Current.Server.MapPath(FilePath);
-            if (System.IO.File.Exists(FilePath))
-            {
-                ...
-                return true;
-            }
-            return false;
+            ...
+            return true;
         }
+        return false;
+    }
+```
 
 
 
@@ -107,28 +111,30 @@ In Mahdi's code, the configuration file is read using the **LoadConfig**method 
 
 
 
-    public static string GetHtmlCodes(string PathTo, out int SessionValue)
+```
+public static string GetHtmlCodes(string PathTo, out int SessionValue)
+    {
+        bool HasValue = false;
+        if (string.IsNullOrEmpty(Message))
+            HasValue = LoadConfig();
+        else
+            HasValue = true;
+
+        if (HasValue)
         {
-            bool HasValue = false;
-            if (string.IsNullOrEmpty(Message))
-                HasValue = LoadConfig();
-            else
-                HasValue = true;
-    
-            if (HasValue)
-            {
-                ...
-                string WriteThis = "<div class=\"s3capcha\"><p>" + ...
-                ...
-                SessionValue = RandomValues[RandomIndex];
-                return WriteThis;
-            }
-            else
-            {
-                SessionValue = -1;
-                return "Invalid data, config file not found";
-            }
+            ...
+            string WriteThis = "<div class=\"s3capcha\"><p>" + ...
+            ...
+            SessionValue = RandomValues[RandomIndex];
+            return WriteThis;
         }
+        else
+        {
+            SessionValue = -1;
+            return "Invalid data, config file not found";
+        }
+    }
+```
 
 
 
@@ -140,94 +146,96 @@ To encapsulate the CAPTCHA configuration code, I created a new class called**Ca
 
 
 
-    using System.Collections.ObjectModel;
-    using System.Globalization;
-    using System.Web;
-    using System.Xml;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
+```
+using System.Collections.ObjectModel;
+using System.Globalization;
+using System.Web;
+using System.Xml;
+
+namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
+{
+    internal sealed class CaptchaConfiguration
     {
-        internal sealed class CaptchaConfiguration
+        public const string CaptchaKey = "s3capcha";
+                
+        public string Message { get; private set; }
+        public string IconFolder { get; private set; }
+        public string IconFileExtension { get; private set; }
+
+        public int Width { get; private set; }
+        public int Height { get; private set; }
+
+        public ReadOnlyCollection<string> IconNames { get; private set; }
+        public ReadOnlyCollection<string> IconTitles { get; private set; }
+
+        private static CaptchaConfiguration instance;
+        private static readonly object lockObject = new object();
+
+        private CaptchaConfiguration() { }
+
+        public static CaptchaConfiguration Instance
         {
-            public const string CaptchaKey = "s3capcha";
-                    
-            public string Message { get; private set; }
-            public string IconFolder { get; private set; }
-            public string IconFileExtension { get; private set; }
-    
-            public int Width { get; private set; }
-            public int Height { get; private set; }
-    
-            public ReadOnlyCollection<string> IconNames { get; private set; }
-            public ReadOnlyCollection<string> IconTitles { get; private set; }
-    
-            private static CaptchaConfiguration instance;
-            private static readonly object lockObject = new object();
-    
-            private CaptchaConfiguration() { }
-    
-            public static CaptchaConfiguration Instance
+            get
             {
-                get
+                if (instance == null)
                 {
-                    if (instance == null)
+                    lock (lockObject)
                     {
-                        lock (lockObject)
+                        if (instance == null)
                         {
-                            if (instance == null)
-                            {
-                                instance = LoadCaptchaConfiguration();
-                            }
+                            instance = LoadCaptchaConfiguration();
                         }
                     }
-    
-                    return instance;
                 }
-            }
-    
-            private static CaptchaConfiguration LoadCaptchaConfiguration()
-            {
-                CaptchaConfiguration config = new CaptchaConfiguration();
-    
-                string configFilename = HttpContext.Current.Server.MapPath(
-                    "~/Controls/Captcha/config.xml");
-    
-                XmlDocument doc = new XmlDocument();
-                doc.Load(configFilename);
-    
-                string baseNode = "/s3capcha/icons/";
-    
-                XmlNode node = doc.SelectSingleNode(baseNode + "name");
-                string[] iconNames = node.InnerText.Split(new char[] { ',' });
-                config.IconNames = new ReadOnlyCollection<string>(iconNames);
-    
-                node = doc.SelectSingleNode(baseNode + "title");
-                string[] iconTitles = node.InnerText.Split(new char[] { ',' });
-                config.IconTitles = new ReadOnlyCollection<string>(iconTitles);
-    
-                node = doc.SelectSingleNode(baseNode + "width");
-                config.Width = int.Parse(
-                    node.InnerText,
-                    CultureInfo.InvariantCulture);
-    
-                node = doc.SelectSingleNode(baseNode + "height");
-                config.Height = int.Parse(
-                    node.InnerText,
-                    CultureInfo.InvariantCulture);
-    
-                node = doc.SelectSingleNode(baseNode + "ext");
-                config.IconFileExtension = node.InnerText;
-    
-                node = doc.SelectSingleNode(baseNode + "folder");
-                config.IconFolder = node.InnerText;
-    
-                node = doc.SelectSingleNode("s3capcha/message");
-                config.Message = node.InnerXml;
-    
-                return config;
+
+                return instance;
             }
         }
+
+        private static CaptchaConfiguration LoadCaptchaConfiguration()
+        {
+            CaptchaConfiguration config = new CaptchaConfiguration();
+
+            string configFilename = HttpContext.Current.Server.MapPath(
+                "~/Controls/Captcha/config.xml");
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(configFilename);
+
+            string baseNode = "/s3capcha/icons/";
+
+            XmlNode node = doc.SelectSingleNode(baseNode + "name");
+            string[] iconNames = node.InnerText.Split(new char[] { ',' });
+            config.IconNames = new ReadOnlyCollection<string>(iconNames);
+
+            node = doc.SelectSingleNode(baseNode + "title");
+            string[] iconTitles = node.InnerText.Split(new char[] { ',' });
+            config.IconTitles = new ReadOnlyCollection<string>(iconTitles);
+
+            node = doc.SelectSingleNode(baseNode + "width");
+            config.Width = int.Parse(
+                node.InnerText,
+                CultureInfo.InvariantCulture);
+
+            node = doc.SelectSingleNode(baseNode + "height");
+            config.Height = int.Parse(
+                node.InnerText,
+                CultureInfo.InvariantCulture);
+
+            node = doc.SelectSingleNode(baseNode + "ext");
+            config.IconFileExtension = node.InnerText;
+
+            node = doc.SelectSingleNode(baseNode + "folder");
+            config.IconFolder = node.InnerText;
+
+            node = doc.SelectSingleNode("s3capcha/message");
+            config.Message = node.InnerXml;
+
+            return config;
+        }
     }
+}
+```
 
 
 
@@ -237,7 +245,9 @@ Using this class, CAPTCHA configuration paramaters can be accessed using someth
 
 
 
-    CaptchaConfiguration.Instance.Message
+```
+CaptchaConfiguration.Instance.Message
+```
 
 
 
@@ -281,19 +291,21 @@ I chose to encapsulate most of the CAPTCHA code from Mahdi's CodeProject sample
 
 
 
-    <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
-        Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
-    <script language="javascript" type="text/javascript"
-      src="<%=ResolveClientUrl("~/Controls/Captcha/Scripts/s3Capcha.js")%>"></script>
-    <script language="javascript" type="text/javascript">
-        $(document).ready(function () { $('#capcha').s3Capcha(); });
-    </script>
-    <div id="capcha">
-        <asp:Literal ID="CaptchaPlaceholder" runat="server"></asp:Literal>
-        <asp:CustomValidator runat="server" ID="CaptchaValidator"
-            CssClass="validator" ErrorMessage="The correct image is not selected."
-            Text="(invalid)" OnServerValidate="ValidateCaptchaControl" />
-    </div>
+```
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
+    Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
+<script language="javascript" type="text/javascript"
+  src="<%=ResolveClientUrl("~/Controls/Captcha/Scripts/s3Capcha.js")%>"></script>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () { $('#capcha').s3Capcha(); });
+</script>
+<div id="capcha">
+    <asp:Literal ID="CaptchaPlaceholder" runat="server"></asp:Literal>
+    <asp:CustomValidator runat="server" ID="CaptchaValidator"
+        CssClass="validator" ErrorMessage="The correct image is not selected."
+        Text="(invalid)" OnServerValidate="ValidateCaptchaControl" />
+</div>
+```
 
 
 
@@ -303,47 +315,49 @@ This implementation worked as expected for the Contact form (shown in Figure 1)
 
 
 
-    <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
-        Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
-    <script language="javascript" type="text/javascript"
-      src="<%=ResolveClientUrl("~/Controls/Captcha/Scripts/s3Capcha.js")%>"></script>
-    <script language="javascript" type="text/javascript">
-        $(document).ready(function () { $('#captcha').s3Capcha(); });
-    
+```
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
+    Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
+<script language="javascript" type="text/javascript"
+  src="<%=ResolveClientUrl("~/Controls/Captcha/Scripts/s3Capcha.js")%>"></script>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () { $('#captcha').s3Capcha(); });
+
+    <%--
+        If the CAPTCHA is being used on a page where viewstate is disabled and
+        an UpdatePanel is used to perform a partial page update, then we need to
+        configure the CAPTCHA images again, using the technique described for
+        jQuery and ASP.NET UpdatePanels:
+
+        http://stackoverflow.com/questions/256195/jquery-document-ready-and-updatepanels
+
+        Also note that if no UpdatePanel is being used (e.g. on
+        /Contact/Default.aspx) then the Sys "namespace" will be undefined.
+    --%>
+    if (typeof Sys != 'undefined') {
         <%--
-            If the CAPTCHA is being used on a page where viewstate is disabled and
-            an UpdatePanel is used to perform a partial page update, then we need to
-            configure the CAPTCHA images again, using the technique described for
-            jQuery and ASP.NET UpdatePanels:
-    
-            http://stackoverflow.com/questions/256195/jquery-document-ready-and-updatepanels
-    
-            Also note that if no UpdatePanel is being used (e.g. on
-            /Contact/Default.aspx) then the Sys "namespace" will be undefined.
+            After a comment is submitted for a blog post (using an
+            UpdatePanel to perform a partial page update), the "captcha"
+            element will no longer be available, so this time use a function
+            that checks if the element exists before attempting to configure it
         --%>
-        if (typeof Sys != 'undefined') {
-            <%--
-                After a comment is submitted for a blog post (using an
-                UpdatePanel to perform a partial page update), the "captcha"
-                element will no longer be available, so this time use a function
-                that checks if the element exists before attempting to configure it
-            --%>
-            var prm = Sys.WebForms.PageRequestManager.getInstance();
-            prm.add_endRequest(configureCaptcha);
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        prm.add_endRequest(configureCaptcha);
+    }
+
+    function configureCaptcha() {
+        if ($('#captcha') != null) {
+            $('#captcha').s3Capcha();
         }
-    
-        function configureCaptcha() {
-            if ($('#captcha') != null) {
-                $('#captcha').s3Capcha();
-            }
-        }
-    </script>
-    <div id="captcha">
-        <asp:Literal ID="CaptchaPlaceholder" runat="server"></asp:Literal>
-        <asp:CustomValidator runat="server" ID="CaptchaValidator"
-            CssClass="validator" ErrorMessage="The correct image is not selected."
-            Text="(invalid)" OnServerValidate="ValidateCaptchaControl" />
-    </div>
+    }
+</script>
+<div id="captcha">
+    <asp:Literal ID="CaptchaPlaceholder" runat="server"></asp:Literal>
+    <asp:CustomValidator runat="server" ID="CaptchaValidator"
+        CssClass="validator" ErrorMessage="The correct image is not selected."
+        Text="(invalid)" OnServerValidate="ValidateCaptchaControl" />
+</div>
+```
 
 
 
@@ -359,175 +373,177 @@ This implementation worked as expected for the Contact form (shown in Figure 1)
 
 
 
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Text;
-    using System.Web;
-    using System.Web.UI.WebControls;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
+```
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+using System.Web;
+using System.Web.UI.WebControls;
+
+namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
+{
+    public partial class CaptchaControl : System.Web.UI.UserControl
     {
-        public partial class CaptchaControl : System.Web.UI.UserControl
+        private static readonly CaptchaConfiguration config =
+            CaptchaConfiguration.Instance;
+
+        public bool IsValid
         {
-            private static readonly CaptchaConfiguration config =
-                CaptchaConfiguration.Instance;
-    
-            public bool IsValid
+            get
             {
-                get
+                bool isValid = false;
+
+                HttpCookie cookie =
+                    Request.Cookies[CaptchaConfiguration.CaptchaKey];
+
+                if (cookie != null
+                    && string.IsNullOrEmpty(cookie.Value) == false)
                 {
-                    bool isValid = false;
-    
-                    HttpCookie cookie =
-                        Request.Cookies[CaptchaConfiguration.CaptchaKey];
-    
-                    if (cookie != null
-                        && string.IsNullOrEmpty(cookie.Value) == false)
-                    {
-                        string formValue =
-                            Request.Form[CaptchaConfiguration.CaptchaKey];
-                        
-                        int numericValue = 0;
-    
-                        bool success = int.TryParse(
-                            formValue,
-                            NumberStyles.Integer,
-                            CultureInfo.InvariantCulture,
-                            out numericValue);
-    
-                        if (success == true)
-                        {
-                            string hashedFormValue = GetHashedCaptchaValue(
-                                numericValue);
-    
-                            isValid = (hashedFormValue == cookie.Value);
-                        }
-                    }
-    
-                    return isValid;
-                }
-            }
-    
-            public string ValidationGroup
-            {
-                get { return CaptchaValidator.ValidationGroup; }
-                set { CaptchaValidator.ValidationGroup = value; }
-            }
-    
-            private void BindCaptchaControl()
-            {
-                string basePath = ResolveClientUrl("~/Controls/Captcha");
-                
-                List<int> values = new List<int>();
-                for (int i = 0; i < config.IconNames.Count; i++)
-                {
-                    values.Add(i);
-                }
-    
-                values = ShuffleList(values);
-    
-                Random rand = new Random();
-                int randomIndex = rand.Next(0, config.IconNames.Count - 1);
-    
-                StringBuilder buffer = new StringBuilder();
-                buffer.Append("<div class=\"s3capcha\"><p>");
-                buffer.AppendFormat(
-                    CultureInfo.InvariantCulture,
-                    config.Message,
-                    config.IconTitles[values[randomIndex]]);
-    
-                buffer.Append("</p>");
-    
-                int[] randomValues = new int[config.IconNames.Count];
-    
-                for (int i = 0; i < config.IconNames.Count; i++)
-                {
-                    randomValues[i] = rand.Next();
-    
-                    buffer.AppendFormat(
+                    string formValue =
+                        Request.Form[CaptchaConfiguration.CaptchaKey];
+                    
+                    int numericValue = 0;
+
+                    bool success = int.TryParse(
+                        formValue,
+                        NumberStyles.Integer,
                         CultureInfo.InvariantCulture,
-    "<div style=\"float:left\">"
-        + "<span>{0} "
-            + "<input type=\"radio\" name=\"s3capcha\" value=\"{1}\" />"
-        + "</span>"
-        + "<div class=\"img\" style=\"background:url({2}) bottom left no-repeat;"
-            + " width:{3}px; height:{4}px; cursor:pointer; display:none;\">"
-        + "</div>"
-    + "</div>",
-                        config.IconTitles[values[i]],
-                        randomValues[i],
-                        basePath + "/icons/" + config.IconFolder + "/"
-                            + config.IconNames[values[i]]
-                            + "." + config.IconFileExtension,
-                        config.Width,
-                        config.Height);
+                        out numericValue);
+
+                    if (success == true)
+                    {
+                        string hashedFormValue = GetHashedCaptchaValue(
+                            numericValue);
+
+                        isValid = (hashedFormValue == cookie.Value);
+                    }
                 }
-                
-                buffer.Append("<div style=\"clear:left\"></div></div>");
-    
-                CaptchaPlaceholder.Text = buffer.ToString();
-    
-                HttpCookie cookie = new HttpCookie(CaptchaConfiguration.CaptchaKey);
-                cookie.Value = GetHashedCaptchaValue(randomValues[randomIndex]);
-                
-                Response.SetCookie(cookie);
-            }
-    
-            private static string GetHashedCaptchaValue(
-                int value)
-            {
-                string temp = value.ToString(CultureInfo.InvariantCulture);
-    
-                int hash = temp.GetHashCode();
-    
-                return hash.ToString(CultureInfo.InvariantCulture);
-            }
-    
-            protected void Page_PreRender(
-                object sender,
-                EventArgs e)
-            {
-                if (IsPostBack == false
-                    || this.Page.EnableViewState == false)
-                {
-                    BindCaptchaControl();
-                }
-            }
-    
-            private static List<int> ShuffleList(
-                List<int> input)
-            {
-                List<int> output = new List<int>();
-                Random rnd = new Random();
-    
-                while (input.Count > 0)
-                {
-                    int index = rnd.Next(0, input.Count);
-                    output.Add(input[index]);
-                    input.RemoveAt(index);
-                }
-    
-                input.Clear();
-                input = null;
-                rnd = null;
-    
-                return output;
-            }
-            
-            protected void ValidateCaptchaControl(
-                object source,
-                ServerValidateEventArgs e)
-            {
-                if (e == null)
-                {
-                    throw new ArgumentNullException("e");
-                }
-    
-                e.IsValid = IsValid;
+
+                return isValid;
             }
         }
+
+        public string ValidationGroup
+        {
+            get { return CaptchaValidator.ValidationGroup; }
+            set { CaptchaValidator.ValidationGroup = value; }
+        }
+
+        private void BindCaptchaControl()
+        {
+            string basePath = ResolveClientUrl("~/Controls/Captcha");
+            
+            List<int> values = new List<int>();
+            for (int i = 0; i < config.IconNames.Count; i++)
+            {
+                values.Add(i);
+            }
+
+            values = ShuffleList(values);
+
+            Random rand = new Random();
+            int randomIndex = rand.Next(0, config.IconNames.Count - 1);
+
+            StringBuilder buffer = new StringBuilder();
+            buffer.Append("<div class=\"s3capcha\"><p>");
+            buffer.AppendFormat(
+                CultureInfo.InvariantCulture,
+                config.Message,
+                config.IconTitles[values[randomIndex]]);
+
+            buffer.Append("</p>");
+
+            int[] randomValues = new int[config.IconNames.Count];
+
+            for (int i = 0; i < config.IconNames.Count; i++)
+            {
+                randomValues[i] = rand.Next();
+
+                buffer.AppendFormat(
+                    CultureInfo.InvariantCulture,
+"<div style=\"float:left\">"
+    + "<span>{0} "
+        + "<input type=\"radio\" name=\"s3capcha\" value=\"{1}\" />"
+    + "</span>"
+    + "<div class=\"img\" style=\"background:url({2}) bottom left no-repeat;"
+        + " width:{3}px; height:{4}px; cursor:pointer; display:none;\">"
+    + "</div>"
++ "</div>",
+                    config.IconTitles[values[i]],
+                    randomValues[i],
+                    basePath + "/icons/" + config.IconFolder + "/"
+                        + config.IconNames[values[i]]
+                        + "." + config.IconFileExtension,
+                    config.Width,
+                    config.Height);
+            }
+            
+            buffer.Append("<div style=\"clear:left\"></div></div>");
+
+            CaptchaPlaceholder.Text = buffer.ToString();
+
+            HttpCookie cookie = new HttpCookie(CaptchaConfiguration.CaptchaKey);
+            cookie.Value = GetHashedCaptchaValue(randomValues[randomIndex]);
+            
+            Response.SetCookie(cookie);
+        }
+
+        private static string GetHashedCaptchaValue(
+            int value)
+        {
+            string temp = value.ToString(CultureInfo.InvariantCulture);
+
+            int hash = temp.GetHashCode();
+
+            return hash.ToString(CultureInfo.InvariantCulture);
+        }
+
+        protected void Page_PreRender(
+            object sender,
+            EventArgs e)
+        {
+            if (IsPostBack == false
+                || this.Page.EnableViewState == false)
+            {
+                BindCaptchaControl();
+            }
+        }
+
+        private static List<int> ShuffleList(
+            List<int> input)
+        {
+            List<int> output = new List<int>();
+            Random rnd = new Random();
+
+            while (input.Count > 0)
+            {
+                int index = rnd.Next(0, input.Count);
+                output.Add(input[index]);
+                input.RemoveAt(index);
+            }
+
+            input.Clear();
+            input = null;
+            rnd = null;
+
+            return output;
+        }
+        
+        protected void ValidateCaptchaControl(
+            object source,
+            ServerValidateEventArgs e)
+        {
+            if (e == null)
+            {
+                throw new ArgumentNullException("e");
+            }
+
+            e.IsValid = IsValid;
+        }
     }
+}
+```
 
 
 
@@ -540,17 +556,19 @@ To fix this bug, I changed the **endRequest **function in 	the Subtext common.j
 
 
 
-    function endRequest(sender, args) {
-        //Re-enable button
-        var button = $get(sender._postBackSettings.sourceElement.id);
-        if (button) {
-            button.disabled = false;
-            button.value = button.oldValue;
-            if (button.className == 'button-disabled') {
-                button.className = 'buttonSubmit';
-            }
+```
+function endRequest(sender, args) {
+    //Re-enable button
+    var button = $get(sender._postBackSettings.sourceElement.id);
+    if (button) {
+        button.disabled = false;
+        button.value = button.oldValue;
+        if (button.className == 'button-disabled') {
+            button.className = 'buttonSubmit';
         }
     }
+}
+```
 
 
 
@@ -558,17 +576,19 @@ To fix this bug, I changed the **endRequest **function in 	the Subtext common.j
 
 
 
-    function endRequest(sender, args) {
-        //Re-enable button
-        var button = $get(sender._postBackSettings.sourceElement.id);
-        if (button) {
-            button.disabled = false;
-            if (button.oldValue && button.oldValue != '') {
-                button.value = button.oldValue;
-            }
-            if (button.className == 'button-disabled') {
-                button.className = 'buttonSubmit';
-            }
+```
+function endRequest(sender, args) {
+    //Re-enable button
+    var button = $get(sender._postBackSettings.sourceElement.id);
+    if (button) {
+        button.disabled = false;
+        if (button.oldValue && button.oldValue != '') {
+            button.value = button.oldValue;
+        }
+        if (button.className == 'button-disabled') {
+            button.className = 'buttonSubmit';
         }
     }
+}
+```
 

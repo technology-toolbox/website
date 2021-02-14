@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx)
@@ -33,43 +33,45 @@ This is precisely what I developed my custom `SharePointPage` base  class for:
 
 
 
-    /// <summary>
-        /// Base class for ASP.NET pages that run under the context of a SharePoint
-        /// site (e.g. /en-US/Search/Library/_layouts/PublicationSummary.aspx).
-        /// </summary>
-        /// <remarks>
-        /// Inheriting from this base class ensures that the correct master page is
-        /// used (as specified by the current site context).
-        /// </remarks>
-        public class SharePointPage : Page
+```
+/// <summary>
+    /// Base class for ASP.NET pages that run under the context of a SharePoint
+    /// site (e.g. /en-US/Search/Library/_layouts/PublicationSummary.aspx).
+    /// </summary>
+    /// <remarks>
+    /// Inheriting from this base class ensures that the correct master page is
+    /// used (as specified by the current site context).
+    /// </remarks>
+    public class SharePointPage : Page
+    {
+        protected override void OnPreInit(
+            EventArgs e)
         {
-            protected override void OnPreInit(
-                EventArgs e)
-            {
-                base.OnPreInit(e);
-    
-                SetMasterPageFromCurrentWeb();
-            }
-    
-            private void SetMasterPageFromCurrentWeb()
-            {
-                if (SPContext.Current == null)
-                {
-                    throw new InvalidOperationException(
-                        "This page must execute within a SharePoint site"
-                        + " (SPContext.Current is null).");
-                }
-    
-                string masterPageFile = SPContext.Current.Web.CustomMasterUrl;
-    
-                Logger.LogDebug(
-                    CultureInfo.InvariantCulture,
-                    "Overriding master page with {0}...",
-                    masterPageFile);
-    
-                this.MasterPageFile = masterPageFile;
-            }
+            base.OnPreInit(e);
+
+            SetMasterPageFromCurrentWeb();
         }
+
+        private void SetMasterPageFromCurrentWeb()
+        {
+            if (SPContext.Current == null)
+            {
+                throw new InvalidOperationException(
+                    "This page must execute within a SharePoint site"
+                    + " (SPContext.Current is null).");
+            }
+
+            string masterPageFile = SPContext.Current.Web.CustomMasterUrl;
+
+            Logger.LogDebug(
+                CultureInfo.InvariantCulture,
+                "Overriding master page with {0}...",
+                masterPageFile);
+
+            this.MasterPageFile = masterPageFile;
+        }
+    }
+```
 
 
 
@@ -77,11 +79,13 @@ To see a real-world example of this in action, simply browse to [one of the "pub
 
 
 
-    public partial class PublicationSummary : SharePointPage,
-            IView<PrimaryDocumentData.PrimaryDocumentRow>
-        {
-            ...
-        }
+```
+public partial class PublicationSummary : SharePointPage,
+        IView<PrimaryDocumentData.PrimaryDocumentRow>
+    {
+        ...
+    }
+```
 
 
 

@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx)
@@ -55,7 +55,7 @@ It turns out the problem is caused by the Microsoft Office Live Add-in 1.3. Onc
 > 
 > **You cannot view a forms-based authentication Windows SharePoint 
 > 		Services 3.0 site if you have Office Live Update 1.2 for Microsoft Office 
-> 		Live Workspace installed  
+> 		Live Workspace installed
 > **[http://support.microsoft.com/kb/972535](http://support.microsoft.com/kb/972535)
 > 
 > According to the KB article, it is fixed in the June 2009 Cumulative 

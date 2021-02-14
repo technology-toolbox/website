@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/07/deleting-large-sites-and-recovering-from-the-failed-deletion-of-a-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/07/deleting-large-sites-and-recovering-from-the-failed-deletion-of-a-site.aspx)
@@ -36,8 +36,10 @@ Since my goal was to get TEST up and running as quickly as possible, I ended  up
 
 
 
-    DELETE FROM SiteMap
-    WHERE Id = 'A4E86B02-49E1-4960-843E-125BB13D6C54'
+```
+DELETE FROM SiteMap
+WHERE Id = 'A4E86B02-49E1-4960-843E-125BB13D6C54'
+```
 
 
 

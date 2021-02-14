@@ -13,8 +13,8 @@ tags: ["MOSS 2007", "Web Development"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
@@ -93,11 +93,13 @@ To deploy the Fabrikam Demo to SharePoint:
 1. Click **Start**, point to **All Programs**, point to **            Accessories**, and right-click **Command Prompt**, and then
             click **Run as administrator**.
 2. At the command prompt, type the following command to set the enviroment variable
-            corresponding to a local (developer) environment:  
+            corresponding to a local (developer) environment:
 
 
 
-        set FABRIKAM_INTRANET_URL=http://fabweb-local
+    ```
+    set FABRIKAM_INTRANET_URL=http://fabweb-local
+    ```
 
 
 
@@ -108,16 +110,20 @@ To deploy the Fabrikam Demo to SharePoint:
 >                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 >                     when deploying and retracting the solution.
 3. Set environment variables to specify the credentials to use for the Fabrikam application
-            pool:  
-
-  
-
-
-        set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
+            pool:
 
 
 
-        set FABRIKAM_APP_POOL_PASSWORD={password}
+
+    ```
+    set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
+    ```
+
+
+
+    ```
+    set FABRIKAM_APP_POOL_PASSWORD={password}
+    ```
 
 
 
@@ -125,32 +131,42 @@ To deploy the Fabrikam Demo to SharePoint:
 > **Important**
 > 
 >                     Be sure to specify a valid local or domain user.
-4. Change to the folder containing the deployment scripts:  
+4. Change to the folder containing the deployment scripts:
 
 
 
-        cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
-5. Type the following command:  
+    ```
+    cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
+    ```
+5. Type the following command:
 
 
 
-        "Create Web Applications.cmd"
+    ```
+    "Create Web Applications.cmd"
+    ```
 6. Wait for the new Web application and corresponding site collection to be created,
-            and then type the following command:  
+            and then type the following command:
 
 
 
-        "Add Solutions.cmd"
-7. Wait for the solution to be added and then type the following command:  
+    ```
+    "Add Solutions.cmd"
+    ```
+7. Wait for the solution to be added and then type the following command:
 
 
 
-        "Deploy Solutions.cmd"
-8. Wait for the solution to be deployed and then type the following command:  
+    ```
+    "Deploy Solutions.cmd"
+    ```
+8. Wait for the solution to be deployed and then type the following command:
 
 
 
-        "Activate Features.cmd"
+    ```
+    "Activate Features.cmd"
+    ```
 9. Wait for the feature activations to complete, and then minimize or close the command
             prompt.
 

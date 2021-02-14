@@ -10,8 +10,8 @@ tags: ["SharePoint 2010"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
@@ -63,126 +63,128 @@ I started out with a very basic implementation:
 
 
 
-    using ...
-    
-    namespace Fabrikam.Demo.Web.UI.WebControls
+```
+using ...
+
+namespace Fabrikam.Demo.Web.UI.WebControls
+{
+    [ToolboxItemAttribute(false)]
+    public class ClaimsLoginFormWebPart : WebPart
     {
-        [ToolboxItemAttribute(false)]
-        public class ClaimsLoginFormWebPart : WebPart
+        private Login loginForm;
+
+        protected override void CreateChildControls()
         {
-            private Login loginForm;
-    
-            protected override void CreateChildControls()
+            base.CreateChildControls();
+
+            this.loginForm = new Login();
+
+            this.loginForm.Authenticate += new AuthenticateEventHandler(
+                LoginForm_Authenticate);
+
+            this.loginForm.LoggedIn += new System.EventHandler(
+                LoginForm_LoggedIn);
+
+            this.Controls.Add(loginForm);
+        }
+
+        private void LoginForm_Authenticate(
+            object sender,
+            AuthenticateEventArgs e)
+        {
+            if (e == null)
             {
-                base.CreateChildControls();
-    
-                this.loginForm = new Login();
-    
-                this.loginForm.Authenticate += new AuthenticateEventHandler(
-                    LoginForm_Authenticate);
-    
-                this.loginForm.LoggedIn += new System.EventHandler(
-                    LoginForm_LoggedIn);
-    
-                this.Controls.Add(loginForm);
+                throw new ArgumentNullException("e");
             }
-    
-            private void LoginForm_Authenticate(
-                object sender,
-                AuthenticateEventArgs e)
+
+            e.Authenticated = SPClaimsUtility.AuthenticateFormsUser(
+                new Uri(SPContext.Current.Web.Url),
+                this.loginForm.UserName,
+                this.loginForm.Password);
+        }
+
+        private void LoginForm_LoggedIn(
+            object sender,
+            EventArgs e)
+        {
+            if (e == null)
             {
-                if (e == null)
-                {
-                    throw new ArgumentNullException("e");
-                }
-    
-                e.Authenticated = SPClaimsUtility.AuthenticateFormsUser(
+                throw new ArgumentNullException("e");
+            }
+
+            string membershipProviderName = "FabrikamSqlMembershipProvider";
+            string roleProviderName = "FabrikamSqlRoleProvider";
+
+            SecurityToken token =
+                SPSecurityContext.SecurityTokenForFormsAuthentication(
                     new Uri(SPContext.Current.Web.Url),
+                    membershipProviderName,
+                    roleProviderName,
                     this.loginForm.UserName,
                     this.loginForm.Password);
-            }
-    
-            private void LoginForm_LoggedIn(
-                object sender,
-                EventArgs e)
+
+            SPFederationAuthenticationModule.Current.SetPrincipalAndWriteSessionToken(
+                    token);
+
+            RedirectToSuccessUrl();
+        }
+
+        /// <summary>
+        /// The following method was snarfed from
+        /// Microsoft.SharePoint.IdentityModel.Pages.IdentityModelSignInPageBase.
+        /// </summary>
+        private void RedirectToSuccessUrl()
+        {
+            string uriString = null;
+            if (
+                this.Context == null
+                || this.Context.Request == null
+                || this.Context.Request.QueryString == null)
             {
-                if (e == null)
-                {
-                    throw new ArgumentNullException("e");
-                }
-    
-                string membershipProviderName = "FabrikamSqlMembershipProvider";
-                string roleProviderName = "FabrikamSqlRoleProvider";
-    
-                SecurityToken token =
-                    SPSecurityContext.SecurityTokenForFormsAuthentication(
-                        new Uri(SPContext.Current.Web.Url),
-                        membershipProviderName,
-                        roleProviderName,
-                        this.loginForm.UserName,
-                        this.loginForm.Password);
-    
-                SPFederationAuthenticationModule.Current.SetPrincipalAndWriteSessionToken(
-                        token);
-    
-                RedirectToSuccessUrl();
+                uriString = null;
             }
-    
-            /// <summary>
-            /// The following method was snarfed from
-            /// Microsoft.SharePoint.IdentityModel.Pages.IdentityModelSignInPageBase.
-            /// </summary>
-            private void RedirectToSuccessUrl()
+            else if (
+                string.IsNullOrEmpty(
+                    this.Context.Request.QueryString["loginasanotheruser"]) == false
+                && string.Equals(
+                    this.Context.Request.QueryString["loginasanotheruser"],
+                    "true",
+                    StringComparison.OrdinalIgnoreCase)
+                && string.IsNullOrEmpty(
+                    this.Context.Request.QueryString["Source"]) == false)
             {
-                string uriString = null;
-                if (
-                    this.Context == null
-                    || this.Context.Request == null
-                    || this.Context.Request.QueryString == null)
-                {
-                    uriString = null;
-                }
-                else if (
-                    string.IsNullOrEmpty(
-                        this.Context.Request.QueryString["loginasanotheruser"]) == false
-                    && string.Equals(
-                        this.Context.Request.QueryString["loginasanotheruser"],
-                        "true",
-                        StringComparison.OrdinalIgnoreCase)
-                    && string.IsNullOrEmpty(
-                        this.Context.Request.QueryString["Source"]) == false)
-                {
-                    uriString = this.Context.Request.QueryString["Source"];
-                }
-                else if (string.IsNullOrEmpty(
-                    this.Context.Request.QueryString["ReturnUrl"]) == false)
-                {
-                    uriString = this.Context.Request.QueryString["ReturnUrl"];
-                }
-    
-                if (uriString == null)
-                {
-                    uriString = "/";
-                }
-    
-                Debug.WriteLine(
-                    string.Format(
-                        CultureInfo.CurrentCulture,
-                        "Successfully authenticated, redirecting to {0}.",
-                        uriString));
-    
-                SPRedirectFlags trusted = SPRedirectFlags.Default;
-                if (((SPControl.GetContextWeb(this.Context) == null)
-                    && Uri.IsWellFormedUriString(uriString, UriKind.Absolute))
-                    && (SPWebApplication.Lookup(new Uri(uriString)) != null))
-                {
-                    trusted = SPRedirectFlags.Trusted;
-                }
-    
-                SPUtility.Redirect(uriString, trusted, this.Context);
+                uriString = this.Context.Request.QueryString["Source"];
             }
+            else if (string.IsNullOrEmpty(
+                this.Context.Request.QueryString["ReturnUrl"]) == false)
+            {
+                uriString = this.Context.Request.QueryString["ReturnUrl"];
+            }
+
+            if (uriString == null)
+            {
+                uriString = "/";
+            }
+
+            Debug.WriteLine(
+                string.Format(
+                    CultureInfo.CurrentCulture,
+                    "Successfully authenticated, redirecting to {0}.",
+                    uriString));
+
+            SPRedirectFlags trusted = SPRedirectFlags.Default;
+            if (((SPControl.GetContextWeb(this.Context) == null)
+                && Uri.IsWellFormedUriString(uriString, UriKind.Absolute))
+                && (SPWebApplication.Lookup(new Uri(uriString)) != null))
+            {
+                trusted = SPRedirectFlags.Trusted;
+            }
+
+            SPUtility.Redirect(uriString, trusted, this.Context);
         }
     }
+}
+```
 
 
 
@@ -194,14 +196,16 @@ The problem is that when you click the out-of-the-box **Sign Out **         link
 
 
 
-    [ArgumentException: Exception of type 'System.ArgumentException' was thrown.
-    Parameter name: encodedValue]
-    Microsoft.SharePoint.Administration.Claims.SPClaimEncodingManager.DecodeClaimFromFormsSuffix(String encodedValue) +25829214
-    Microsoft.SharePoint.Administration.Claims.SPClaimProviderManager.GetProviderUserKey(String encodedSuffix) +73
-    Microsoft.SharePoint.ApplicationRuntime.SPHeaderManager.AddIsapiHeaders(HttpContext context, String encodedUrl, NameValueCollection headers) +845
-    Microsoft.SharePoint.ApplicationRuntime.SPRequestModule.PreRequestExecuteAppHandler(Object oSender, EventArgs ea) +352
-    System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80
-    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171
+```
+[ArgumentException: Exception of type 'System.ArgumentException' was thrown.
+Parameter name: encodedValue]
+Microsoft.SharePoint.Administration.Claims.SPClaimEncodingManager.DecodeClaimFromFormsSuffix(String encodedValue) +25829214
+Microsoft.SharePoint.Administration.Claims.SPClaimProviderManager.GetProviderUserKey(String encodedSuffix) +73
+Microsoft.SharePoint.ApplicationRuntime.SPHeaderManager.AddIsapiHeaders(HttpContext context, String encodedUrl, NameValueCollection headers) +845
+Microsoft.SharePoint.ApplicationRuntime.SPRequestModule.PreRequestExecuteAppHandler(Object oSender, EventArgs ea) +352
+System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80
+System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171
+```
 
 
 
@@ -290,46 +294,62 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
             **Yes**.
 5. From the Windows PowerShell command prompt, change to the directory containing the
             deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
-            and run the following scripts:  
-
-  
-  
-  
-  
-  
-  
-  
-
-
-        & '.\Create Web Application.ps1'
+            and run the following scripts:
 
 
 
-        & '.\Create Site Collections.ps1'
 
 
 
-        & '.\Enable Anonymous Access.ps1'
 
 
 
-        & '.\Configure Object Cache User Accounts.ps1'
+
+    ```
+    & '.\Create Web Application.ps1'
+    ```
 
 
 
-        & '.\Add Event Log Sources.ps1'
+    ```
+    & '.\Create Site Collections.ps1'
+    ```
 
 
 
-        & '.\Add Solutions.ps1'
+    ```
+    & '.\Enable Anonymous Access.ps1'
+    ```
 
 
 
-        & '.\Deploy Solutions.ps1'
+    ```
+    & '.\Configure Object Cache User Accounts.ps1'
+    ```
 
 
 
-        & '.\Activate Features.ps1'
+    ```
+    & '.\Add Event Log Sources.ps1'
+    ```
+
+
+
+    ```
+    & '.\Add Solutions.ps1'
+    ```
+
+
+
+    ```
+    & '.\Deploy Solutions.ps1'
+    ```
+
+
+
+    ```
+    & '.\Activate Features.ps1'
+    ```
 
 
 At this point you should be able to browse to the Fabrikam site and click the **            Sign In **link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo **database         (refer to **Step 6 **in my previous post for instructions on how to         do this).

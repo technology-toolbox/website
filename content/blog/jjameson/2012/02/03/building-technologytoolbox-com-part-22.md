@@ -33,51 +33,53 @@ Next I added an ASP.NET control named **AnalyticsScript **to encapsulate the lo
 
 
 
-    using System;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    using TechnologyToolbox.Caelum.Website.Properties;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TechnologyToolbox.Caelum.Website.Properties;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    [ToolboxData("<{0}:AnalyticsScript runat=server></{0}:AnalyticsScript>")]
+    public class AnalyticsScript : WebControl
     {
-        [ToolboxData("<{0}:AnalyticsScript runat=server></{0}:AnalyticsScript>")]
-        public class AnalyticsScript : WebControl
+        protected override void OnLoad(
+            EventArgs e)
         {
-            protected override void OnLoad(
-                EventArgs e)
+            base.OnLoad(e);
+
+            this.Visible = Settings.Default.EnableAnalytics;
+        }
+
+        protected override void RenderContents(
+            HtmlTextWriter writer)
+        {
+            if (writer == null)
             {
-                base.OnLoad(e);
-    
-                this.Visible = Settings.Default.EnableAnalytics;
+                throw new ArgumentNullException("writer");
             }
-    
-            protected override void RenderContents(
-                HtmlTextWriter writer)
-            {
-                if (writer == null)
-                {
-                    throw new ArgumentNullException("writer");
-                }
-    
-                writer.WriteBeginTag("script");
-                writer.WriteAttribute("type", "text/javascript", false);
-                writer.Write(HtmlTextWriter.TagRightChar);
-    
-                writer.WriteLineNoTabs(
-    @"    var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-25899478-1']);
-        _gaq.push(['_trackPageview']);
-    
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();");
-    
-                writer.WriteEndTag("script");
-            }
+
+            writer.WriteBeginTag("script");
+            writer.WriteAttribute("type", "text/javascript", false);
+            writer.Write(HtmlTextWriter.TagRightChar);
+
+            writer.WriteLineNoTabs(
+@"    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-25899478-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();");
+
+            writer.WriteEndTag("script");
         }
     }
+}
+```
 
 
 
@@ -85,20 +87,22 @@ Then I added the new control to the master page:
 
 
 
-    <%@ Master ... %>
-    <%@ Register Tagprefix="caelum"
-      Namespace="TechnologyToolbox.Caelum.Website.Controls"
-      Assembly="TechnologyToolbox.Caelum.Website, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=f55b5d7768fcda39" %>
-    ...
-    <html ...>
-    
-    <head runat="server">
-      ...
-      <caelum:AnalyticsScript runat="server" />
-      <asp:ContentPlaceHolder id="AdditionalHeadContent" runat="server" />
-    </head>
-    ...
+```
+<%@ Master ... %>
+<%@ Register Tagprefix="caelum"
+  Namespace="TechnologyToolbox.Caelum.Website.Controls"
+  Assembly="TechnologyToolbox.Caelum.Website, Version=1.0.0.0,
+    Culture=neutral, PublicKeyToken=f55b5d7768fcda39" %>
+...
+<html ...>
+
+<head runat="server">
+  ...
+  <caelum:AnalyticsScript runat="server" />
+  <asp:ContentPlaceHolder id="AdditionalHeadContent" runat="server" />
+</head>
+...
+```
 
 
 
@@ -128,20 +132,22 @@ Thinking that it would be preferable to enable analytics by default in DEV, TES
 
 
 
-    <configuration>
+```
+<configuration>
+  ...
+  <applicationSettings>
+    <TechnologyToolbox.Caelum.Website.Properties.Settings>
       ...
-      <applicationSettings>
-        <TechnologyToolbox.Caelum.Website.Properties.Settings>
-          ...
-          <setting name="EnableAnalytics" serializeAs="String">
-            <value>True</value>
-          </setting>
-          <setting name="AnalyticsEnvironmentFilter" serializeAs="String">
-            <value>^(www)?(-dev)?(-test)?\.?technologytoolbox.com</value>
-          </setting>
-        </TechnologyToolbox.Caelum.Website.Properties.Settings>
-      </applicationSettings>
-    </configuration>
+      <setting name="EnableAnalytics" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="AnalyticsEnvironmentFilter" serializeAs="String">
+        <value>^(www)?(-dev)?(-test)?\.?technologytoolbox.com</value>
+      </setting>
+    </TechnologyToolbox.Caelum.Website.Properties.Settings>
+  </applicationSettings>
+</configuration>
+```
 
 
 
@@ -149,24 +155,26 @@ I then updated the **AnalyticsScript** control to compare the URL of the curren
 
 
 
-    protected override void OnLoad(
-                EventArgs e)
+```
+protected override void OnLoad(
+            EventArgs e)
+        {
+            base.OnLoad(e);
+
+            bool enableAnalytics = Settings.Default.EnableAnalytics;
+
+            if (enableAnalytics == true)
             {
-                base.OnLoad(e);
-    
-                bool enableAnalytics = Settings.Default.EnableAnalytics;
-    
-                if (enableAnalytics == true)
-                {
-                    string pattern = Settings.Default.AnalyticsEnvironmentFilter;
-    
-                    enableAnalytics = Regex.IsMatch(
-                        this.Page.Request.Url.Host,
-                        pattern);
-                }
-    
-                this.Visible = enableAnalytics;
+                string pattern = Settings.Default.AnalyticsEnvironmentFilter;
+
+                enableAnalytics = Regex.IsMatch(
+                    this.Page.Request.Url.Host,
+                    pattern);
             }
+
+            this.Visible = enableAnalytics;
+        }
+```
 
 
 
@@ -174,17 +182,19 @@ At this point, I also removed the hard-coded analytics key by adding another ap
 
 
 
-    <configuration>
+```
+<configuration>
+  ...
+  <applicationSettings>
+    <TechnologyToolbox.Caelum.Website.Properties.Settings>
       ...
-      <applicationSettings>
-        <TechnologyToolbox.Caelum.Website.Properties.Settings>
-          ...
-          <setting name="AnalyticsKey" serializeAs="String">
-            <value>UA-25899478-1</value>
-          </setting>
-        </TechnologyToolbox.Caelum.Website.Properties.Settings>
-      </applicationSettings>
-    </configuration>
+      <setting name="AnalyticsKey" serializeAs="String">
+        <value>UA-25899478-1</value>
+      </setting>
+    </TechnologyToolbox.Caelum.Website.Properties.Settings>
+  </applicationSettings>
+</configuration>
+```
 
 
 
@@ -221,78 +231,80 @@ After some refactoring and performance optimization, here is the updated 	imple
 
 
 
-    using System;
-    using System.Diagnostics;
-    using System.Web.UI;
-    
-    namespace TechnologyToolbox.Caelum.Website.Controls
+```
+using System;
+using System.Diagnostics;
+using System.Web.UI;
+
+namespace TechnologyToolbox.Caelum.Website.Controls
+{
+    [ToolboxData("<{0}:AnalyticsScript runat=server></{0}:AnalyticsScript>")]
+    public class AnalyticsScript : Control
     {
-        [ToolboxData("<{0}:AnalyticsScript runat=server></{0}:AnalyticsScript>")]
-        public class AnalyticsScript : Control
+        private static bool __enableAnalytics = false;
+        private static string __analyticsKey = null;
+
+        private static bool __initialized = false;
+        private static object __lockObject = new object();
+        
+        protected override void OnLoad(
+            EventArgs e)
         {
-            private static bool __enableAnalytics = false;
-            private static string __analyticsKey = null;
-    
-            private static bool __initialized = false;
-            private static object __lockObject = new object();
-            
-            protected override void OnLoad(
-                EventArgs e)
+            base.OnLoad(e);
+
+            if (__initialized == false)
             {
-                base.OnLoad(e);
-    
-                if (__initialized == false)
+                lock (__lockObject)
                 {
-                    lock (__lockObject)
+                    if (__initialized == false)
                     {
-                        if (__initialized == false)
+                        __enableAnalytics = AnalyticsHelper.IsAnalyticsEnabled(
+                            this.Page.Request);
+
+                        if (__enableAnalytics == true)
                         {
-                            __enableAnalytics = AnalyticsHelper.IsAnalyticsEnabled(
+                            __analyticsKey = AnalyticsHelper.GetAnalyticsKey(
                                 this.Page.Request);
-    
-                            if (__enableAnalytics == true)
-                            {
-                                __analyticsKey = AnalyticsHelper.GetAnalyticsKey(
-                                    this.Page.Request);
-                            }
-    
-                            __initialized = true;
                         }
+
+                        __initialized = true;
                     }
                 }
-    
-                this.Visible = __enableAnalytics;
             }
-    
-            protected override void Render(
-                HtmlTextWriter writer)
+
+            this.Visible = __enableAnalytics;
+        }
+
+        protected override void Render(
+            HtmlTextWriter writer)
+        {
+            if (writer == null)
             {
-                if (writer == null)
-                {
-                    throw new ArgumentNullException("writer");
-                }
-    
-                Debug.Assert(string.IsNullOrEmpty(__analyticsKey) == false);
-    
-                writer.WriteBeginTag("script");
-                writer.WriteAttribute("type", "text/javascript", false);
-                writer.Write(HtmlTextWriter.TagRightChar);
-    
-                writer.WriteLineNoTabs(
-    @"    var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '" + __analyticsKey + @"']);
-        _gaq.push(['_trackPageview']);
-    
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();");
-    
-                writer.WriteEndTag("script");
+                throw new ArgumentNullException("writer");
             }
+
+            Debug.Assert(string.IsNullOrEmpty(__analyticsKey) == false);
+
+            writer.WriteBeginTag("script");
+            writer.WriteAttribute("type", "text/javascript", false);
+            writer.Write(HtmlTextWriter.TagRightChar);
+
+            writer.WriteLineNoTabs(
+@"    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '" + __analyticsKey + @"']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();");
+
+            writer.WriteEndTag("script");
         }
     }
+}
+```
 
 
 
@@ -301,119 +313,121 @@ The new **AnalyticsHelper **class contains some of the code 	originally added t
 
 
 
-    using System;
-    using System.Globalization;
-    using System.Text.RegularExpressions;
-    using System.Web;
-    using TechnologyToolbox.Caelum.CoreServices.Logging;
-    using TechnologyToolbox.Caelum.Website.Properties;
-    
-    namespace TechnologyToolbox.Caelum.Website
+```
+using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Web;
+using TechnologyToolbox.Caelum.CoreServices.Logging;
+using TechnologyToolbox.Caelum.Website.Properties;
+
+namespace TechnologyToolbox.Caelum.Website
+{
+    public static class AnalyticsHelper
     {
-        public static class AnalyticsHelper
+        public static string GetAnalyticsKey(
+            HttpRequest request)
         {
-            public static string GetAnalyticsKey(
-                HttpRequest request)
+            HttpRequestWrapper wrapper = new HttpRequestWrapper(request);
+            return GetAnalyticsKey(wrapper);
+        }
+
+        public static string GetAnalyticsKey(
+            HttpRequestBase request)
+        {
+            if (request == null)
             {
-                HttpRequestWrapper wrapper = new HttpRequestWrapper(request);
-                return GetAnalyticsKey(wrapper);
+                throw new ArgumentNullException("request");
             }
-    
-            public static string GetAnalyticsKey(
-                HttpRequestBase request)
+
+            string key = Settings.Default.AnalyticsKey;
+
+            if (string.IsNullOrEmpty(key) == true)
             {
-                if (request == null)
+                if (string.Compare(
+                    request.Url.Host,
+                    "www-dev.technologytoolbox.com",
+                    StringComparison.OrdinalIgnoreCase) == 0)
                 {
-                    throw new ArgumentNullException("request");
+                    key = "UA-25949832-1";
                 }
-    
-                string key = Settings.Default.AnalyticsKey;
-    
-                if (string.IsNullOrEmpty(key) == true)
+                else if (string.Compare(
+                    request.Url.Host,
+                    "www-test.technologytoolbox.com",
+                    StringComparison.OrdinalIgnoreCase) == 0)
                 {
-                    if (string.Compare(
+                    key = "UA-25899478-1";
+                }
+                else if (string.Compare(
+                    request.Url.Host,
+                    "technologytoolbox.com",
+                    StringComparison.OrdinalIgnoreCase) == 0
+                    || string.Compare(
                         request.Url.Host,
-                        "www-dev.technologytoolbox.com",
+                        "www.technologytoolbox.com",
                         StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        key = "UA-25949832-1";
-                    }
-                    else if (string.Compare(
-                        request.Url.Host,
-                        "www-test.technologytoolbox.com",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        key = "UA-25899478-1";
-                    }
-                    else if (string.Compare(
-                        request.Url.Host,
-                        "technologytoolbox.com",
-                        StringComparison.OrdinalIgnoreCase) == 0
-                        || string.Compare(
-                            request.Url.Host,
-                            "www.technologytoolbox.com",
-                            StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        key = "UA-25915894-1";
-                    }
-                    else
-                    {
-                        string message = string.Format(
-                            CultureInfo.CurrentCulture,
-                            "No analytics key specified for hostname ({0}).",
-                            request.Url.Host);
-    
-                        throw new InvalidOperationException(message);
-                    }
-                }
-    
-                return key;
-            }
-    
-            public static bool IsAnalyticsEnabled(
-                HttpRequest request)
-            {
-                HttpRequestWrapper wrapper = new HttpRequestWrapper(request);
-                return IsAnalyticsEnabled(wrapper);
-            }
-    
-            public static bool IsAnalyticsEnabled(
-                HttpRequestBase request)
-            {
-                if (request == null)
                 {
-                    throw new ArgumentNullException("request");
+                    key = "UA-25915894-1";
                 }
-    
-                Logger.LogDebug("Checking if analytics feature is enabled...");
-    
-                bool enableAnalytics = Settings.Default.EnableAnalytics;
-    
-                if (enableAnalytics == true)
+                else
                 {
-                    string pattern = Settings.Default.AnalyticsEnvironmentFilter;
-                    
-                    Logger.LogDebug(
+                    string message = string.Format(
                         CultureInfo.CurrentCulture,
-                        "Checking if host ({0}) matches analytics environment"
-                            + " filter ({1})...",
-                        request.Url.Host,
-                        pattern);
-    
-                    enableAnalytics = Regex.IsMatch(
-                        request.Url.Host,
-                        pattern);
+                        "No analytics key specified for hostname ({0}).",
+                        request.Url.Host);
+
+                    throw new InvalidOperationException(message);
                 }
-    
+            }
+
+            return key;
+        }
+
+        public static bool IsAnalyticsEnabled(
+            HttpRequest request)
+        {
+            HttpRequestWrapper wrapper = new HttpRequestWrapper(request);
+            return IsAnalyticsEnabled(wrapper);
+        }
+
+        public static bool IsAnalyticsEnabled(
+            HttpRequestBase request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException("request");
+            }
+
+            Logger.LogDebug("Checking if analytics feature is enabled...");
+
+            bool enableAnalytics = Settings.Default.EnableAnalytics;
+
+            if (enableAnalytics == true)
+            {
+                string pattern = Settings.Default.AnalyticsEnvironmentFilter;
+                
                 Logger.LogDebug(
                     CultureInfo.CurrentCulture,
-                    "Analytics feature is {0}.",
-                    enableAnalytics ? "enabled" : "disabled");
-    
-                return enableAnalytics;
+                    "Checking if host ({0}) matches analytics environment"
+                        + " filter ({1})...",
+                    request.Url.Host,
+                    pattern);
+
+                enableAnalytics = Regex.IsMatch(
+                    request.Url.Host,
+                    pattern);
             }
+
+            Logger.LogDebug(
+                CultureInfo.CurrentCulture,
+                "Analytics feature is {0}.",
+                enableAnalytics ? "enabled" : "disabled");
+
+            return enableAnalytics;
         }
     }
+}
+```
 
 
 
@@ -422,23 +436,25 @@ The implementation still supports the ability to override the analytics 	key by
 
 
 
-    <configuration>
+```
+<configuration>
+  ...
+  <applicationSettings>
+    <TechnologyToolbox.Caelum.Website.Properties.Settings>
       ...
-      <applicationSettings>
-        <TechnologyToolbox.Caelum.Website.Properties.Settings>
-          ...
-          <setting name="EnableAnalytics" serializeAs="String">
-            <value>True</value>
-          </setting>
-          <setting name="AnalyticsEnvironmentFilter" serializeAs="String">
-            <value>^(www)?(-dev)?(-test)?\.?technologytoolbox.com</value>
-          </setting>
-          <setting name="AnalyticsKey" serializeAs="String">
-            <value />
-          </setting>
-        </TechnologyToolbox.Caelum.Website.Properties.Settings>
-      </applicationSettings>
-    </configuration>
+      <setting name="EnableAnalytics" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="AnalyticsEnvironmentFilter" serializeAs="String">
+        <value>^(www)?(-dev)?(-test)?\.?technologytoolbox.com</value>
+      </setting>
+      <setting name="AnalyticsKey" serializeAs="String">
+        <value />
+      </setting>
+    </TechnologyToolbox.Caelum.Website.Properties.Settings>
+  </applicationSettings>
+</configuration>
+```
 
 
 

@@ -12,8 +12,8 @@ tags: ["SharePoint
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx)
@@ -32,57 +32,59 @@ Note that there really wasn't much to the DeleteWeb program. Almost all of the  
 
 
 
-    using System;
-    using System.Diagnostics;
-    using System.Globalization;
-    
-    using Microsoft.SharePoint;
-    
-    namespace DeleteWeb
+```
+using System;
+using System.Diagnostics;
+using System.Globalization;
+
+using Microsoft.SharePoint;
+
+namespace DeleteWeb
+{
+    public sealed class DeleteHelper
     {
-        public sealed class DeleteHelper
+        private DeleteHelper() { } // all members are static
+
+        public static void DeleteWeb(
+            string siteUrl)
         {
-            private DeleteHelper() { } // all members are static
-    
-            public static void DeleteWeb(
-                string siteUrl)
+            using (SPSite site = new SPSite(siteUrl))
             {
-                using (SPSite site = new SPSite(siteUrl))
+                using (SPWeb web = site.OpenWeb())
                 {
-                    using (SPWeb web = site.OpenWeb())
+                    if (string.Compare(web.Url, siteUrl, true,
+                        CultureInfo.InvariantCulture) != 0)
                     {
-                        if (string.Compare(web.Url, siteUrl, true,
-                            CultureInfo.InvariantCulture) != 0)
-                        {
-                            throw new InvalidOperationException(
-                                "Invalid Web URL. Verify the URL and try again.");
-                        }
-    
-                        DeleteWeb(web);
+                        throw new InvalidOperationException(
+                            "Invalid Web URL. Verify the URL and try again.");
                     }
+
+                    DeleteWeb(web);
                 }
-            }
-    
-            public static void DeleteWeb(
-                SPWeb web)
-            {
-                SPWebCollection subwebs = web.GetSubwebsForCurrentUser();
-    
-                if (subwebs.Count > 0)
-                {
-                    foreach (SPWeb subweb in subwebs)
-                    {
-                        DeleteWeb(subweb);
-                        subweb.Dispose();
-                    }
-                }
-    
-                Debug.WriteLine("Deleting web: " + web.ServerRelativeUrl);
-                web.Delete();
-                return;
             }
         }
+
+        public static void DeleteWeb(
+            SPWeb web)
+        {
+            SPWebCollection subwebs = web.GetSubwebsForCurrentUser();
+
+            if (subwebs.Count > 0)
+            {
+                foreach (SPWeb subweb in subwebs)
+                {
+                    DeleteWeb(subweb);
+                    subweb.Dispose();
+                }
+            }
+
+            Debug.WriteLine("Deleting web: " + web.ServerRelativeUrl);
+            web.Delete();
+            return;
+        }
     }
+}
+```
 
 
 
@@ -92,7 +94,9 @@ Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test))  th
 
 
 
-    Remove-SPWeb "http://foobar/Test" -Confirm:$false
+```
+Remove-SPWeb "http://foobar/Test" -Confirm:$false
+```
 
 
 
@@ -100,14 +104,14 @@ Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test))  th
 
 
 > Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that 
-> has subsites.  
+> has subsites.
 > 
-> At line:1 char:13  
+> At line:1 char:13
 > 
-> + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false  
+> + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false
 > 
 > + CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) 
-> [Remove-SPWeb], SPException  
+> [Remove-SPWeb], SPException
 > 
 > + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
@@ -116,35 +120,37 @@ In order to delete a site that has subsites using PowerShell, we simply need  to
 
 
 
-    # Completely deletes the specified Web (including all subsites)
+```
+# Completely deletes the specified Web (including all subsites)
+
+function RemoveSPWebRecursively(
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    Write-Debug "Removing site ($($web.Url))..."
     
-    function RemoveSPWebRecursively(
-        [Microsoft.SharePoint.SPWeb] $web)
+    $subwebs = $web.GetSubwebsForCurrentUser()
+    
+    foreach($subweb in $subwebs)
     {
-        Write-Debug "Removing site ($($web.Url))..."
-        
-        $subwebs = $web.GetSubwebsForCurrentUser()
-        
-        foreach($subweb in $subwebs)
-        {
-            RemoveSPWebRecursively($subweb)
-            $subweb.Dispose()
-        }
-        
-        $DebugPreference = "SilentlyContinue"
-        Remove-SPWeb $web -Confirm:$false
-        $DebugPreference = "Continue"
+        RemoveSPWebRecursively($subweb)
+        $subweb.Dispose()
     }
     
     $DebugPreference = "SilentlyContinue"
-    $web = Get-SPWeb "http://foobar/Test"
+    Remove-SPWeb $web -Confirm:$false
     $DebugPreference = "Continue"
-    
-    If ($web -ne $null)
-    {
-        RemoveSPWebRecursively $web
-        $web.Dispose()
-    }
+}
+
+$DebugPreference = "SilentlyContinue"
+$web = Get-SPWeb "http://foobar/Test"
+$DebugPreference = "Continue"
+
+If ($web -ne $null)
+{
+    RemoveSPWebRecursively $web
+    $web.Dispose()
+}
+```
 
 
 

@@ -12,8 +12,8 @@ tags: ["My System", "TFS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
@@ -142,7 +142,9 @@ By default, the drop location is set to:
 
 
 
-    BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + BuildDetail.BuildNumber
+```
+BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + BuildDetail.BuildNumber
+```
 
 
 
@@ -152,7 +154,9 @@ More importantly, I want to make it as easy as possible for the Test and Release
 
 
 
-    BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
+```
+BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
+```
 
 
 
@@ -175,7 +179,9 @@ While I certainly don't expect any errors to occur with the InvokeProcess activi
 
 
 
-    New Exception(errOutput)
+```
+New Exception(errOutput)
+```
 
 
 
@@ -201,60 +207,62 @@ Next, create the actual MSBuild file to increment the assembly version (Incremen
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5"
-      DefaultTargets="IncrementAssemblyVersion">
-      
-      <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
-      <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TeamBuild\Microsoft.TeamFoundation.Build.targets" />
-    
-      <PropertyGroup>
-        <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
-      </PropertyGroup>
-    
-      <Target Name="IncrementAssemblyVersion">
-        <Message Importance="high"
-          Text="Checking out version files from source control..." />
-    
-        <Exec
-          WorkingDirectory="$(BuildProjectFolderPath)"
-          Command="$(TeamFoundationVersionControlTool) checkout AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
-    
-        <Message Importance="high"
-          Text="Incrementing the assembly version..." />
-    
-        <Version
-          VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
-          BuildType="Increment"
-          RevisionType="None">
-          <Output TaskParameter="Major" PropertyName="Major" />
-          <Output TaskParameter="Minor" PropertyName="Minor" />
-          <Output TaskParameter="Build" PropertyName="Build" />
-          <Output TaskParameter="Revision" PropertyName="Revision" />
-        </Version>
-    
-        <CreateProperty
-          Value="$(Major).$(Minor).$(Build).$(Revision)">
-          <Output TaskParameter="Value" PropertyName="IncrementedAssemblyVersion" />
-        </CreateProperty>
-    
-        <Message Importance="high"
-          Text="Updating version file ($(BuildProjectFolderPath)\AssemblyVersionInfo.cs) with incremented assembly version ($(IncrementedAssemblyVersion))..." />
-    
-        <AssemblyInfo
-          CodeLanguage="CS"
-          OutputFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.cs"
-          AssemblyFileVersion="$(IncrementedAssemblyVersion)" />
-    
-        <Message Importance="high"
-          Text="Checking in version files to source control..." />
-    
-        <Exec
-          WorkingDirectory="$(BuildProjectFolderPath)"
-          Command="$(TeamFoundationVersionControlTool) checkin /override:&quot;Check-in from automated build&quot; /comment:&quot;Increment assembly version ($(IncrementedAssemblyVersion)) $(NoCICheckinComment)&quot; AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
-    
-      </Target>
-    </Project>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5"
+  DefaultTargets="IncrementAssemblyVersion">
+  
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TeamBuild\Microsoft.TeamFoundation.Build.targets" />
+
+  <PropertyGroup>
+    <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
+  </PropertyGroup>
+
+  <Target Name="IncrementAssemblyVersion">
+    <Message Importance="high"
+      Text="Checking out version files from source control..." />
+
+    <Exec
+      WorkingDirectory="$(BuildProjectFolderPath)"
+      Command="$(TeamFoundationVersionControlTool) checkout AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
+
+    <Message Importance="high"
+      Text="Incrementing the assembly version..." />
+
+    <Version
+      VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
+      BuildType="Increment"
+      RevisionType="None">
+      <Output TaskParameter="Major" PropertyName="Major" />
+      <Output TaskParameter="Minor" PropertyName="Minor" />
+      <Output TaskParameter="Build" PropertyName="Build" />
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </Version>
+
+    <CreateProperty
+      Value="$(Major).$(Minor).$(Build).$(Revision)">
+      <Output TaskParameter="Value" PropertyName="IncrementedAssemblyVersion" />
+    </CreateProperty>
+
+    <Message Importance="high"
+      Text="Updating version file ($(BuildProjectFolderPath)\AssemblyVersionInfo.cs) with incremented assembly version ($(IncrementedAssemblyVersion))..." />
+
+    <AssemblyInfo
+      CodeLanguage="CS"
+      OutputFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.cs"
+      AssemblyFileVersion="$(IncrementedAssemblyVersion)" />
+
+    <Message Importance="high"
+      Text="Checking in version files to source control..." />
+
+    <Exec
+      WorkingDirectory="$(BuildProjectFolderPath)"
+      Command="$(TeamFoundationVersionControlTool) checkin /override:&quot;Check-in from automated build&quot; /comment:&quot;Increment assembly version ($(IncrementedAssemblyVersion)) $(NoCICheckinComment)&quot; AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>
+
+  </Target>
+</Project>
+```
 
 
 
@@ -300,10 +308,10 @@ In case you are wondering how I configure build definitions, here are the settin
 |                     General<br>                 |                     Build definition name<br>                 |                     Automated Build - Main<br>                 |
 |                     Trigger<br>                 | Schedule - build every week on the following days<ul>                        <li>Monday</li><br>                        <li>Tuesday</li><br>                        <li>Wednesday</li><br>                        <li>Thursday</li><br>                        <li>Friday</li><br>                        <li>Saturday</li><br>                        <li>Sunday</li><br>                    </ul> |                     (selected)<br>                 |
 |  |                     Queue the build on the build controller at:<br>                 |                     4:45 AM<br>                 |
-|                     Workspace<br>                 |                     Source Control Folder  <br><br>                    Build Agent Folder<br>                 |                     $/foobar2010/Main  <br><br>                    $(SourceDir)<br>                 |
+|                     Workspace<br>                 |                     Source Control Folder<br><br>                    Build Agent Folder<br>                 |                     $/foobar2010/Main<br><br>                    $(SourceDir)<br>                 |
 |                     Build Defaults<br>                 |                     Copy build output to the following drop folder (UNC path, such as \\server\share):<br>                 |                     \\dazzler\Builds\foobar2010<br>                 |
 |                     Process<br>                 |                     Build process template:<br>                 |                     CustomTemplate.xaml<br>                 |
 |  |                     Build process parameters:<br>                 |  |
-|  | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> |   <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
-|                     Retention Policy<br>                 | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> |   <br>  <br><br>                    Keep All<br>                 |
+|  | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> | <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
+|                     Retention Policy<br>                 | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> | <br><br><br>                    Keep All<br>                 |
 

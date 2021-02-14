@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx)
@@ -44,57 +44,59 @@ I discovered the following (the interesting stuff starts about halfway down):
 
 
 
-    01/15/2009 13:55:07  1  INF                  Entering function CreateCentralAdministrationSiteForm.CreateCentralAdministrationSiteFormInitializeBeforeShow
-    01/15/2009 13:55:07  1  INF                    Found a task by the name of adminvs in the task collection
-    01/15/2009 13:55:07  1  INF                    Entering function TaskCommon.GenerateRandomUnUsedPort
-    01/15/2009 13:55:07  1  INF                      Entering function TaskCommon.EnsureIIs
-    01/15/2009 13:55:07  1  INF                        Entering function PreRequisiteChecks.IsIisInstalled
-    01/15/2009 13:55:07  1  INF                          Entering function PreRequisiteChecks.IsRightVersionOfIis
-    01/15/2009 13:55:07  1  INF                            Version of IIS is 7
-    01/15/2009 13:55:07  1  INF                          Leaving function PreRequisiteChecks.IsRightVersionOfIis
-    01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsIisInstalled
-    01/15/2009 13:55:07  1  INF                        Entering function PreRequisiteChecks.IsRightVersionOfIis
-    01/15/2009 13:55:07  1  INF                          Version of IIS is 7
-    01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsRightVersionOfIis
-    01/15/2009 13:55:07  1  INF                        Entering function ServiceHelper.Start
-    01/15/2009 13:55:07  1  INF                          Trying to start service W3SVC and waiting 120 sec to do so
-    01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do 
-    01/15/2009 13:55:07  1  INF                          starting service W3SVC (it may already be started)
-    01/15/2009 13:55:07  1  INF                        Leaving function ServiceHelper.Start
-    01/15/2009 13:55:07  1  INF                      Leaving function TaskCommon.EnsureIIs
-    01/15/2009 13:55:07  1  INF                      Trying to see if port 9183 is free on machine DMX-FOOBAR2.  Min port we will try is 1024, Max port we will try is 49151
-    01/15/2009 13:55:32  1  INF                      A SocketException was thrown with SocketError TimedOut
-    01/15/2009 13:55:32  1  INF                      Entering function Common.BuildExceptionInformation
-    01/15/2009 13:55:32  1  INF                        Entering function Common.BuildExceptionMessage
-    01/15/2009 13:55:32  1  INF                          Entering function StringResourceManager.GetResourceString
-    01/15/2009 13:55:32  1  INF                            Resource id to be retrieved is ExceptionInfo for language English (United States)
-    01/15/2009 13:55:32  1  INF                            Resource retrieved id ExceptionInfo is An exception of type {0} was thrown.  Additional exception information: {1}
-    01/15/2009 13:55:32  1  INF                          Leaving function StringResourceManager.GetResourceString
-    01/15/2009 13:55:32  1  INF                        Leaving function Common.BuildExceptionMessage
-    01/15/2009 13:55:32  1  INF                      Leaving function Common.BuildExceptionInformation
-    01/15/2009 13:55:32  1  ERR                      An exception of type System.Net.Sockets.SocketException was thrown.  Additional exception information: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:9183
-    System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:9183
-       at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
-       at Microsoft.SharePoint.PostSetupConfiguration.TaskCommon.GenerateRandomUnUsedPort(Int32 max, Int32 min, Int32 maxTries, TaskBase task)
-    01/15/2009 13:55:32  1  WRN                      We are going to ignore all SocketExceptions that are not SocketError.ConnectionRefused
-    01/15/2009 13:55:32  1  INF                      Have not found a free port yet.  Number of tries is 1.  Min port we will try is 1024, Max port we will try is 49151
-    01/15/2009 13:55:32  1  INF                      Trying to see if port 23051 is free on machine DMX-FOOBAR2.  Min port we will try is 1024, Max port we will try is 49151
-    01/15/2009 13:55:57  1  INF                      A SocketException was thrown with SocketError TimedOut
-    01/15/2009 13:55:57  1  INF                      Entering function Common.BuildExceptionInformation
-    01/15/2009 13:55:57  1  INF                        Entering function Common.BuildExceptionMessage
-    01/15/2009 13:55:57  1  INF                          Entering function StringResourceManager.GetResourceString
-    01/15/2009 13:55:57  1  INF                            Resource id to be retrieved is ExceptionInfo for language English (United States)
-    01/15/2009 13:55:57  1  INF                            Resource retrieved id ExceptionInfo is An exception of type {0} was thrown.  Additional exception information: {1}
-    01/15/2009 13:55:57  1  INF                          Leaving function StringResourceManager.GetResourceString
-    01/15/2009 13:55:57  1  INF                        Leaving function Common.BuildExceptionMessage
-    01/15/2009 13:55:57  1  INF                      Leaving function Common.BuildExceptionInformation
-    01/15/2009 13:55:57  1  ERR                      An exception of type System.Net.Sockets.SocketException was thrown.  Additional exception information: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:23051
-    System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:23051
-       at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
-       at Microsoft.SharePoint.PostSetupConfiguration.TaskCommon.GenerateRandomUnUsedPort(Int32 max, Int32 min, Int32 maxTries, TaskBase task)
-    01/15/2009 13:55:57  1  WRN                      We are going to ignore all SocketExceptions that are not SocketError.ConnectionRefused
-    01/15/2009 13:55:57  1  INF                      Have not found a free port yet.  Number of tries is 2.  Min port we will try is 1024, Max port we will try is 49151
-    01/15/2009 13:55:57  1  INF                      Trying to see if port [blah-blah, blah-blah, blah-blah]
+```
+01/15/2009 13:55:07  1  INF                  Entering function CreateCentralAdministrationSiteForm.CreateCentralAdministrationSiteFormInitializeBeforeShow
+01/15/2009 13:55:07  1  INF                    Found a task by the name of adminvs in the task collection
+01/15/2009 13:55:07  1  INF                    Entering function TaskCommon.GenerateRandomUnUsedPort
+01/15/2009 13:55:07  1  INF                      Entering function TaskCommon.EnsureIIs
+01/15/2009 13:55:07  1  INF                        Entering function PreRequisiteChecks.IsIisInstalled
+01/15/2009 13:55:07  1  INF                          Entering function PreRequisiteChecks.IsRightVersionOfIis
+01/15/2009 13:55:07  1  INF                            Version of IIS is 7
+01/15/2009 13:55:07  1  INF                          Leaving function PreRequisiteChecks.IsRightVersionOfIis
+01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsIisInstalled
+01/15/2009 13:55:07  1  INF                        Entering function PreRequisiteChecks.IsRightVersionOfIis
+01/15/2009 13:55:07  1  INF                          Version of IIS is 7
+01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsRightVersionOfIis
+01/15/2009 13:55:07  1  INF                        Entering function ServiceHelper.Start
+01/15/2009 13:55:07  1  INF                          Trying to start service W3SVC and waiting 120 sec to do so
+01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do 
+01/15/2009 13:55:07  1  INF                          starting service W3SVC (it may already be started)
+01/15/2009 13:55:07  1  INF                        Leaving function ServiceHelper.Start
+01/15/2009 13:55:07  1  INF                      Leaving function TaskCommon.EnsureIIs
+01/15/2009 13:55:07  1  INF                      Trying to see if port 9183 is free on machine DMX-FOOBAR2.  Min port we will try is 1024, Max port we will try is 49151
+01/15/2009 13:55:32  1  INF                      A SocketException was thrown with SocketError TimedOut
+01/15/2009 13:55:32  1  INF                      Entering function Common.BuildExceptionInformation
+01/15/2009 13:55:32  1  INF                        Entering function Common.BuildExceptionMessage
+01/15/2009 13:55:32  1  INF                          Entering function StringResourceManager.GetResourceString
+01/15/2009 13:55:32  1  INF                            Resource id to be retrieved is ExceptionInfo for language English (United States)
+01/15/2009 13:55:32  1  INF                            Resource retrieved id ExceptionInfo is An exception of type {0} was thrown.  Additional exception information: {1}
+01/15/2009 13:55:32  1  INF                          Leaving function StringResourceManager.GetResourceString
+01/15/2009 13:55:32  1  INF                        Leaving function Common.BuildExceptionMessage
+01/15/2009 13:55:32  1  INF                      Leaving function Common.BuildExceptionInformation
+01/15/2009 13:55:32  1  ERR                      An exception of type System.Net.Sockets.SocketException was thrown.  Additional exception information: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:9183
+System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:9183
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.SharePoint.PostSetupConfiguration.TaskCommon.GenerateRandomUnUsedPort(Int32 max, Int32 min, Int32 maxTries, TaskBase task)
+01/15/2009 13:55:32  1  WRN                      We are going to ignore all SocketExceptions that are not SocketError.ConnectionRefused
+01/15/2009 13:55:32  1  INF                      Have not found a free port yet.  Number of tries is 1.  Min port we will try is 1024, Max port we will try is 49151
+01/15/2009 13:55:32  1  INF                      Trying to see if port 23051 is free on machine DMX-FOOBAR2.  Min port we will try is 1024, Max port we will try is 49151
+01/15/2009 13:55:57  1  INF                      A SocketException was thrown with SocketError TimedOut
+01/15/2009 13:55:57  1  INF                      Entering function Common.BuildExceptionInformation
+01/15/2009 13:55:57  1  INF                        Entering function Common.BuildExceptionMessage
+01/15/2009 13:55:57  1  INF                          Entering function StringResourceManager.GetResourceString
+01/15/2009 13:55:57  1  INF                            Resource id to be retrieved is ExceptionInfo for language English (United States)
+01/15/2009 13:55:57  1  INF                            Resource retrieved id ExceptionInfo is An exception of type {0} was thrown.  Additional exception information: {1}
+01/15/2009 13:55:57  1  INF                          Leaving function StringResourceManager.GetResourceString
+01/15/2009 13:55:57  1  INF                        Leaving function Common.BuildExceptionMessage
+01/15/2009 13:55:57  1  INF                      Leaving function Common.BuildExceptionInformation
+01/15/2009 13:55:57  1  ERR                      An exception of type System.Net.Sockets.SocketException was thrown.  Additional exception information: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:23051
+System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.0.11:23051
+   at System.Net.Sockets.TcpClient..ctor(String hostname, Int32 port)
+   at Microsoft.SharePoint.PostSetupConfiguration.TaskCommon.GenerateRandomUnUsedPort(Int32 max, Int32 min, Int32 maxTries, TaskBase task)
+01/15/2009 13:55:57  1  WRN                      We are going to ignore all SocketExceptions that are not SocketError.ConnectionRefused
+01/15/2009 13:55:57  1  INF                      Have not found a free port yet.  Number of tries is 2.  Min port we will try is 1024, Max port we will try is 49151
+01/15/2009 13:55:57  1  INF                      Trying to see if port [blah-blah, blah-blah, blah-blah]
+```
 
 
 
@@ -106,16 +108,18 @@ It turns out the Config Wizard was choking on the IPv6 address returned for the 
 C:\Users\jjameson&gt;<kbd>ping dmx-foobar2</kbd>
 
 
-    Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
-    Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-    Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-    Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-    Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-    
-    Ping statistics for fe80::8d3a:793e:c6ee:67d9%12:
-        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-    Approximate round trip times in milli-seconds:
-        Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
+Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
+
+Ping statistics for fe80::8d3a:793e:c6ee:67d9%12:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
 
 
 
@@ -130,16 +134,18 @@ Once I did this, I confirmed that the hostname of the VM resolved to an IPv4 add
 C:\Users\jjameson&gt;<kbd>ping dmx-foobar2</kbd>
 
 
-    Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:
-    Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-    Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-    Reply from 127.0.0.1: bytes=32time<1ms TTL=128
-    Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-    
-    Ping statistics for 127.0.0.1:
-        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-    Approximate round trip times in milli-seconds:
-        Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
+Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32time<1ms TTL=128
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+
+Ping statistics for 127.0.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+```
 
 
 

@@ -9,8 +9,8 @@ tags: ["My System", "MOSS 2007", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx)
 > 
@@ -41,98 +41,100 @@ Enter the **CultureUICultureSwitcher** class...
 
 
 
-    using System;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.Threading;
-    
-    namespace Fabrikam.Demo.CoreServices
+```
+using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.Threading;
+
+namespace Fabrikam.Demo.CoreServices
+{
+    /// <summary>
+    /// Temporarily changes the current culture used by the Resource Manager to
+    /// look up culture-specific resources at run time.
+    /// </summary>
+    public class CurrentUICultureSwitcher : IDisposable
     {
+        private CultureInfo previousUICulture;
+
+        private bool disposed;
+
         /// <summary>
-        /// Temporarily changes the current culture used by the Resource Manager to
-        /// look up culture-specific resources at run time.
+        /// Initializes a new instance of the
+        /// <see cref="CurrentUICultureSwitcher"/> class and sets the current
+        /// culture used by the Resource Manager to look up culture-specific
+        /// resources at run time.
         /// </summary>
-        public class CurrentUICultureSwitcher : IDisposable
+        /// <param name="culture">The culture to be used when looking up
+        /// culture-specific resources.</param>
+        public CurrentUICultureSwitcher(
+            CultureInfo culture)
         {
-            private CultureInfo previousUICulture;
-    
-            private bool disposed;
-    
-            /// <summary>
-            /// Initializes a new instance of the
-            /// <see cref="CurrentUICultureSwitcher"/> class and sets the current
-            /// culture used by the Resource Manager to look up culture-specific
-            /// resources at run time.
-            /// </summary>
-            /// <param name="culture">The culture to be used when looking up
-            /// culture-specific resources.</param>
-            public CurrentUICultureSwitcher(
-                CultureInfo culture)
+            if (Thread.CurrentThread.CurrentUICulture != culture)
             {
-                if (Thread.CurrentThread.CurrentUICulture != culture)
-                {
-                    previousUICulture = Thread.CurrentThread.CurrentUICulture;
-    
-                    Thread.CurrentThread.CurrentUICulture = culture;
-                }
+                previousUICulture = Thread.CurrentThread.CurrentUICulture;
+
+                Thread.CurrentThread.CurrentUICulture = culture;
             }
-    
-            /// <summary>
-            /// Attempts to free resources and perform other cleanup operations
-            /// before the object is reclaimed by garbage collection.
-            /// </summary>
-            /// <remarks>
-            /// Assuming all instances of the <see cref="CurrentUICultureSwitcher"/>
-            /// class are properly disposed, the finalizer should never be invoked.
-            /// </remarks>
-            ~CurrentUICultureSwitcher()
-            {
-                Debug.Fail("CurrentUICultureSwitcher was not properly disposed.");
-                Dispose(false);
-            }
-    
-            #region IDisposable implementation
-    
-            /// <summary>
-            /// Releases all resources associated with an instance of the class.
-            /// </summary>
-            public void Dispose()
-            {
-                Dispose(true);
-                GC.SuppressFinalize(this);
-            }
-    
-            /// <summary>
-            /// Releases resources associated with an instance of the class.
-            /// </summary>
-            /// <param name="disposing"><c>true</c> if managed resources should be
-            /// disposed; <c>false</c> if only unmanaged resources should be
-            /// disposed.</param>
-            protected virtual void Dispose(
-                bool disposing)
-            {
-                if (disposed == false)
-                {
-                    if (previousUICulture != null)
-                    {
-                        Thread.CurrentThread.CurrentUICulture =
-                            previousUICulture;
-                    }
-    
-                    if (disposing)
-                    {
-                        // Release all managed resources here
-                    }
-    
-                    // Release all unmanaged resources here
-                }
-    
-                disposed = true;
-            }
-    
-            #endregion
         }
+
+        /// <summary>
+        /// Attempts to free resources and perform other cleanup operations
+        /// before the object is reclaimed by garbage collection.
+        /// </summary>
+        /// <remarks>
+        /// Assuming all instances of the <see cref="CurrentUICultureSwitcher"/>
+        /// class are properly disposed, the finalizer should never be invoked.
+        /// </remarks>
+        ~CurrentUICultureSwitcher()
+        {
+            Debug.Fail("CurrentUICultureSwitcher was not properly disposed.");
+            Dispose(false);
+        }
+
+        #region IDisposable implementation
+
+        /// <summary>
+        /// Releases all resources associated with an instance of the class.
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Releases resources associated with an instance of the class.
+        /// </summary>
+        /// <param name="disposing"><c>true</c> if managed resources should be
+        /// disposed; <c>false</c> if only unmanaged resources should be
+        /// disposed.</param>
+        protected virtual void Dispose(
+            bool disposing)
+        {
+            if (disposed == false)
+            {
+                if (previousUICulture != null)
+                {
+                    Thread.CurrentThread.CurrentUICulture =
+                        previousUICulture;
+                }
+
+                if (disposing)
+                {
+                    // Release all managed resources here
+                }
+
+                // Release all unmanaged resources here
+            }
+
+            disposed = true;
+        }
+
+        #endregion
     }
+}
+```
 
 
 
@@ -142,32 +144,34 @@ Here's an example unit test that demonstrates how the class is expected to work:
 
 
 
-    /// <summary>
-            /// Basic test for CurrentUICultureSwitcher.
-            /// </summary>
-            [TestMethod()]
-            public void CurrentUICultureSwitcherTest001()
+```
+/// <summary>
+        /// Basic test for CurrentUICultureSwitcher.
+        /// </summary>
+        [TestMethod()]
+        public void CurrentUICultureSwitcherTest001()
+        {
+            const int defaultCultureLcid = 1033;
+            const int newCultureLcid = 3082;
+
+            Assert.AreEqual(
+                defaultCultureLcid,
+                CultureInfo.CurrentUICulture.LCID);
+
+            CultureInfo newCulture = new CultureInfo(newCultureLcid);
+
+            using (new CurrentUICultureSwitcher(newCulture))
             {
-                const int defaultCultureLcid = 1033;
-                const int newCultureLcid = 3082;
-    
                 Assert.AreEqual(
-                    defaultCultureLcid,
-                    CultureInfo.CurrentUICulture.LCID);
-    
-                CultureInfo newCulture = new CultureInfo(newCultureLcid);
-    
-                using (new CurrentUICultureSwitcher(newCulture))
-                {
-                    Assert.AreEqual(
-                        newCultureLcid,
-                        CultureInfo.CurrentUICulture.LCID);
-                }
-    
-                Assert.AreEqual(
-                    defaultCultureLcid,
+                    newCultureLcid,
                     CultureInfo.CurrentUICulture.LCID);
             }
+
+            Assert.AreEqual(
+                defaultCultureLcid,
+                CultureInfo.CurrentUICulture.LCID);
+        }
+```
 
 
 
@@ -175,44 +179,46 @@ Lastly, here's an excerpt from a custom "Announcements" feature that shows how t
 
 
 
-    /// <summary>
-            /// Creates and configures the "Announcements" site under the specified
-            /// Web.
-            /// </summary>
-            /// <param name="parentWeb">An
-            /// <see cref="Microsoft.SharePoint.SPWeb"/> object representing the
-            /// parent Web of the "Announcements" site. This can either be the
-            /// root Web ("/") or a language Web (e.g. "/es-ES").</param>
-            public static void Configure(
-                SPWeb parentWeb)
+```
+/// <summary>
+        /// Creates and configures the "Announcements" site under the specified
+        /// Web.
+        /// </summary>
+        /// <param name="parentWeb">An
+        /// <see cref="Microsoft.SharePoint.SPWeb"/> object representing the
+        /// parent Web of the "Announcements" site. This can either be the
+        /// root Web ("/") or a language Web (e.g. "/es-ES").</param>
+        public static void Configure(
+            SPWeb parentWeb)
+        {
+            if (parentWeb == null)
             {
-                if (parentWeb == null)
-                {
-                    throw new ArgumentNullException("parentWeb");
-                }
-    
-                Logger.LogDebug(
-                    CultureInfo.CurrentCulture,
-                    "Configuring Announcements site under parent Web ({0})...",
-                    parentWeb.Url);
-    
-                // Change CurrentUICulture to ensure the "Announcements" site is
-                // localized according to the language of the parent site.
-                using (new CurrentUICultureSwitcher(parentWeb.Locale))
-                {
-                    using (SPWeb announcementsWeb = EnsureAnnouncementsWeb(
-                        parentWeb))
-                    {
-                        ConfigureAnnouncementsWeb(announcementsWeb);
-                    }
-                }
-    
-                Logger.LogInfo(
-                    CultureInfo.CurrentCulture,
-                    "Successfully configured Announcements site under parent"
-                        + " Web ({0}).",
-                    parentWeb.Url);
+                throw new ArgumentNullException("parentWeb");
             }
+
+            Logger.LogDebug(
+                CultureInfo.CurrentCulture,
+                "Configuring Announcements site under parent Web ({0})...",
+                parentWeb.Url);
+
+            // Change CurrentUICulture to ensure the "Announcements" site is
+            // localized according to the language of the parent site.
+            using (new CurrentUICultureSwitcher(parentWeb.Locale))
+            {
+                using (SPWeb announcementsWeb = EnsureAnnouncementsWeb(
+                    parentWeb))
+                {
+                    ConfigureAnnouncementsWeb(announcementsWeb);
+                }
+            }
+
+            Logger.LogInfo(
+                CultureInfo.CurrentCulture,
+                "Successfully configured Announcements site under parent"
+                    + " Web ({0}).",
+                parentWeb.Url);
+        }
+```
 
 
 

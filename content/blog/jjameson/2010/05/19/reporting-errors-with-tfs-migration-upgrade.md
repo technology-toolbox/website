@@ -10,8 +10,8 @@ tags: ["SQL Server", "TFS"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx)
@@ -38,10 +38,10 @@ During the upgrade, a warning occurs indicating the reports could not be succes
 > 	a connection failure, timeout or low disk condition within the database. 
 > 	---&gt; System.Data.SqlClient.SqlException: The EXECUTE permission was denied 
 > 	on the object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema 
-> 	'sys'.  
+> 	'sys'.
 > 
 > 	at Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String 
-> 	Report, Boolean CacheReport, ExpirationDefinition Expiration)  
+> 	Report, Boolean CacheReport, ExpirationDefinition Expiration)
 > 
 > 	at Microsoft.ReportingServices.WebServer.ReportingService2005.SetCacheOptions(String 
 > 	Report, Boolean CacheReport, ExpirationDefinition Expiration)
@@ -101,41 +101,43 @@ Fortunately, once you've confirmed the root cause of the issue, resolving it is
 
 
 
-    USE master
-    GO
-    GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO RSExecRole
-    GO
-    GRANT EXECUTE ON master.dbo.xp_sqlagent_enum_jobs TO RSExecRole
-    GO
-    GRANT EXECUTE ON master.dbo.xp_sqlagent_is_starting TO RSExecRole
-    GO
-    USE msdb
-    GO
-    -- Permissions for SQL Agent SP's
-    GRANT EXECUTE ON msdb.dbo.sp_help_category TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_add_category TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_add_job TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_add_jobserver TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_add_jobstep TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_add_jobschedule TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_help_job TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_delete_job TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_help_jobschedule TO RSExecRole
-    GO
-    GRANT EXECUTE ON msdb.dbo.sp_verify_job_identifiers TO RSExecRole
-    GO
-    GRANT SELECT ON msdb.dbo.sysjobs TO RSExecRole
-    GO
-    GRANT SELECT ON msdb.dbo.syscategories TO RSExecRole
-    GO
+```
+USE master
+GO
+GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO RSExecRole
+GO
+GRANT EXECUTE ON master.dbo.xp_sqlagent_enum_jobs TO RSExecRole
+GO
+GRANT EXECUTE ON master.dbo.xp_sqlagent_is_starting TO RSExecRole
+GO
+USE msdb
+GO
+-- Permissions for SQL Agent SP's
+GRANT EXECUTE ON msdb.dbo.sp_help_category TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_add_category TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_add_job TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_add_jobserver TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_add_jobstep TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_add_jobschedule TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_help_job TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_delete_job TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_help_jobschedule TO RSExecRole
+GO
+GRANT EXECUTE ON msdb.dbo.sp_verify_job_identifiers TO RSExecRole
+GO
+GRANT SELECT ON msdb.dbo.sysjobs TO RSExecRole
+GO
+GRANT SELECT ON msdb.dbo.syscategories TO RSExecRole
+GO
+```
 
 
 
@@ -152,17 +154,19 @@ I initially attempted to fix this issue using the File.BatchNewTeamProject comm
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <Project xmlns="ProjectCreationSettingsFileSchema.xsd">
-      <TFSName>http://cyclops-dev:8080/tfs/DefaultCollection</TFSName>
-      <LogFolder>C:\NotBackedUp\Temp</LogFolder>
-      <ProjectName>AdventureWorks</ProjectName>
-      <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
-      <ProjectReportsEnabled>true</ProjectReportsEnabled>
-      <ProjectReportsForceUpload>true</ProjectReportsForceUpload>
-      <ProjectSiteEnabled>false</ProjectSiteEnabled>
-      <ProcessTemplateName>MSF for Agile Software Development - v4.2</ProcessTemplateName>
-    </Project>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="ProjectCreationSettingsFileSchema.xsd">
+  <TFSName>http://cyclops-dev:8080/tfs/DefaultCollection</TFSName>
+  <LogFolder>C:\NotBackedUp\Temp</LogFolder>
+  <ProjectName>AdventureWorks</ProjectName>
+  <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
+  <ProjectReportsEnabled>true</ProjectReportsEnabled>
+  <ProjectReportsForceUpload>true</ProjectReportsForceUpload>
+  <ProjectSiteEnabled>false</ProjectSiteEnabled>
+  <ProcessTemplateName>MSF for Agile Software Development - v4.2</ProcessTemplateName>
+</Project>
+```
 
 
 

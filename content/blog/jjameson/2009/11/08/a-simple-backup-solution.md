@@ -10,8 +10,8 @@ tags: ["My System", "Windows Server", "Infrastructure"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx)
 > 
@@ -29,60 +29,64 @@ For as long as I can remember, Windows Server has included the NTBackup utility.
 Here is the simple batch file that I use to perform scheduled backups:
 
 
-    @echo off
-    
-    setlocal
-    
-    set BACKUP_TYPE=normal
-    
-    if ("%1") NEQ ("") set BACKUP_TYPE=%1
-    
-    for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
-    for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
-    set BACKUP_TIMESTAMP=%currentDate%-%currentTime:~0,2%-%currentTime:~3,2%-%currentTime:~6,2%
-    
-    set BACKUP_FILE=D:\NotBackedUp\Backups\Backup-%BACKUP_TYPE%-%BACKUP_TIMESTAMP%.bkf
-    
-    :: ----------------------------------------------------------------------------
-    call :LogMessage "Starting backup..."
-    call :LogMessage "BACKUP_TYPE: %BACKUP_TYPE%"
-    call :LogMessage "BACKUP_FILE: %BACKUP_FILE%"
-    
-    C:\WINDOWS\system32\ntbackup.exe backup C:\BackedUp /n "Backup created %BACKUP_TIMESTAMP%" /m %BACKUP_TYPE% /j "Backup (%BACKUP_TYPE%)" /f "%BACKUP_FILE%"
-    if %ERRORLEVEL% neq 0 goto Errors
-    
-    call :LogMessage "Successfully completed backup."
-    
-    goto :eof
-    
-    :: ----------------------------------------------------------------------------
-    ::
-    :LogMessage
-    
-    REM Strip leading and trailing quotes and then display message with timestamp
-    set MESSAGE=%1
-    set MESSAGE=%MESSAGE:~1,-1%
-    
-    for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
-    for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
-    echo %currentDate% %currentTime% - %MESSAGE%
-    
-    goto :eof
-    
-    :: ----------------------------------------------------------------------------
-    ::
-    :Errors
-    
-    echo Warning! One or more errors detected.
+```
+@echo off
+
+setlocal
+
+set BACKUP_TYPE=normal
+
+if ("%1") NEQ ("") set BACKUP_TYPE=%1
+
+for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
+for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
+set BACKUP_TIMESTAMP=%currentDate%-%currentTime:~0,2%-%currentTime:~3,2%-%currentTime:~6,2%
+
+set BACKUP_FILE=D:\NotBackedUp\Backups\Backup-%BACKUP_TYPE%-%BACKUP_TIMESTAMP%.bkf
+
+:: ----------------------------------------------------------------------------
+call :LogMessage "Starting backup..."
+call :LogMessage "BACKUP_TYPE: %BACKUP_TYPE%"
+call :LogMessage "BACKUP_FILE: %BACKUP_FILE%"
+
+C:\WINDOWS\system32\ntbackup.exe backup C:\BackedUp /n "Backup created %BACKUP_TIMESTAMP%" /m %BACKUP_TYPE% /j "Backup (%BACKUP_TYPE%)" /f "%BACKUP_FILE%"
+if %ERRORLEVEL% neq 0 goto Errors
+
+call :LogMessage "Successfully completed backup."
+
+goto :eof
+
+:: ----------------------------------------------------------------------------
+::
+:LogMessage
+
+REM Strip leading and trailing quotes and then display message with timestamp
+set MESSAGE=%1
+set MESSAGE=%MESSAGE:~1,-1%
+
+for /f "tokens=2-4 delims=/ " %%i in ('date /t') do set currentDate=%%k-%%i-%%j
+for /f "tokens=1-2" %%i in ('time /t') do set currentTime=%%i %%j
+echo %currentDate% %currentTime% - %MESSAGE%
+
+goto :eof
+
+:: ----------------------------------------------------------------------------
+::
+:Errors
+
+echo Warning! One or more errors detected.
+```
 
 
 If you've seen any of my scripts before, then you'll quickly notice the typical `LogMessage` "function" that I use to write messages prefixed with a timestamp. For example here's the output from the log for this morning's backup:
 
 
-    2009-11-09 12:30 AM - Starting backup...
-    2009-11-09 12:30 AM - BACKUP_TYPE: differential
-    2009-11-09 12:30 AM - BACKUP_FILE: D:\NotBackedUp\Backups\Backup-differential-2009-11-09-12-30-AM.bkf
-    2009-11-09 12:31 AM - Successfully completed backup.
+```
+2009-11-09 12:30 AM - Starting backup...
+2009-11-09 12:30 AM - BACKUP_TYPE: differential
+2009-11-09 12:30 AM - BACKUP_FILE: D:\NotBackedUp\Backups\Backup-differential-2009-11-09-12-30-AM.bkf
+2009-11-09 12:31 AM - Successfully completed backup.
+```
 
 
 I use similar token parsing of the output from the **[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)** and [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx) system commands to generate the name of the backup file (e.g. <samp>Backup-differential-2009-11-09-12-30-AM.bkf</samp>).

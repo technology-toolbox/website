@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx)
 > 

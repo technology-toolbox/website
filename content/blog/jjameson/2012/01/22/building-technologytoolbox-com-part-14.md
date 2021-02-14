@@ -53,33 +53,35 @@ With ELMAH in place, most of the "heavy lifting" has already been performed for
 
 
 
-    using System;
-    using System.Web;
-    
-    namespace TechnologyToolbox.Caelum.Website.Errors
+```
+using System;
+using System.Web;
+
+namespace TechnologyToolbox.Caelum.Website.Errors
+{
+    /// <summary>
+    /// Simulates an unhandled exception on the site (useful for demonstrating
+    /// or troubleshooting the error handling functionality on the site).
+    /// </summary>
+    public class SimulateErrorHandler : IHttpHandler
     {
-        /// <summary>
-        /// Simulates an unhandled exception on the site (useful for demonstrating
-        /// or troubleshooting the error handling functionality on the site).
-        /// </summary>
-        public class SimulateErrorHandler : IHttpHandler
+        public void ProcessRequest(
+            HttpContext context)
         {
-            public void ProcessRequest(
-                HttpContext context)
+            throw new InvalidOperationException(
+                "Imagine something interesting here...");
+        }
+
+        public bool IsReusable
+        {
+            get
             {
-                throw new InvalidOperationException(
-                    "Imagine something interesting here...");
-            }
-    
-            public bool IsReusable
-            {
-                get
-                {
-                    return false;
-                }
+                return false;
             }
         }
     }
+}
+```
 
 
 
@@ -89,14 +91,16 @@ If the volume of traffic on your site is relatively low, you might consider con
 
 
 
-    <elmah>
-        <errorMail
-          from="no-reply@technologytoolbox.com"
-          to="web-support@technologytoolbox.com"
-          priority="High"
-          smtpPort="25"
-          smtpServer="smtp.technologytoolbox.com" />
-      </elmah>
+```
+<elmah>
+    <errorMail
+      from="no-reply@technologytoolbox.com"
+      to="web-support@technologytoolbox.com"
+      priority="High"
+      smtpPort="25"
+      smtpServer="smtp.technologytoolbox.com" />
+  </elmah>
+```
 
 
 
@@ -118,11 +122,13 @@ You've probably created a similar error page before and "wired it up" in the We
 
 
 
-    <system.web>
-        ...
-        <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
-        ...
-      </system.web>
+```
+<system.web>
+    ...
+    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
+    ...
+  </system.web>
+```
 
 
 
@@ -136,8 +142,10 @@ Consequently if users attempt to refresh the page, they are simply requesting t
 
 
 
-    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
-          redirectMode="ResponseRewrite" />
+```
+<customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
+      redirectMode="ResponseRewrite" />
+```
 
 
 
@@ -151,22 +159,24 @@ Consequently, you should add a little code to set the status code to indicate s
 
 
 
-    protected void Page_Load(
-                   object sender,
-                   EventArgs e)
+```
+protected void Page_Load(
+               object sender,
+               EventArgs e)
+        {
+            Exception ex = Server.GetLastError();
+
+            HttpException httpEx = ex as HttpException;
+
+            if (httpEx != null)
             {
-                Exception ex = Server.GetLastError();
-    
-                HttpException httpEx = ex as HttpException;
-    
-                if (httpEx != null)
-                {
-                    Response.StatusCode = httpEx.GetHttpCode();
-                }
-                else
-                {
-                    Response.StatusCode = 500;
-                }
+                Response.StatusCode = httpEx.GetHttpCode();
+            }
+            else
+            {
+                Response.StatusCode = 500;
+            }
+```
 
 
 
@@ -184,9 +194,11 @@ For the Technology Toolbox site, most of the implementation resides in the mast
 
 
 
-    <%@ Page Title="Error - Technology Toolbox" Language="C#" AutoEventWireup="true"
-      CodeBehind="Generic.aspx.cs" MasterPageFile="~/Errors/Error.master"
-      Inherits="TechnologyToolbox.Caelum.Website.Errors.GenericErrorPage" %>
+```
+<%@ Page Title="Error - Technology Toolbox" Language="C#" AutoEventWireup="true"
+  CodeBehind="Generic.aspx.cs" MasterPageFile="~/Errors/Error.master"
+  Inherits="TechnologyToolbox.Caelum.Website.Errors.GenericErrorPage" %>
+```
 
 
 
@@ -194,14 +206,16 @@ For the Technology Toolbox site, most of the implementation resides in the mast
 
 
 
-    using System.Web.UI;
-    
-    namespace TechnologyToolbox.Caelum.Website.Errors
+```
+using System.Web.UI;
+
+namespace TechnologyToolbox.Caelum.Website.Errors
+{
+    public partial class GenericErrorPage : Page
     {
-        public partial class GenericErrorPage : Page
-        {
-        }
     }
+}
+```
 
 
 
@@ -209,58 +223,60 @@ For the Technology Toolbox site, most of the implementation resides in the mast
 
 
 
-    <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Error.master.cs"
-      Inherits="TechnologyToolbox.Caelum.Website.Errors.ErrorMasterPage" %>
-    
-    <%@ Register TagPrefix="caelum"
-      Namespace="TechnologyToolbox.Caelum.Website.Controls"
-      Assembly="TechnologyToolbox.Caelum.Website, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f55b5d7768fcda39" %>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-    <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
-      <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-      <title>Error - Technology Toolbox</title>
-      <caelum:CssReference runat="server"
-        CssFile="~/Themes/Theme-1.0/Theme-1.0.5.min.css"
-        DebugCssFile="~/Themes/Theme-1.0/Main.css" />
-    </head>
-    <body id="technology-toolbox-com">
-      <form runat="server">
-      <div id="wrapper">
-        <div id="branding">
-          <h1>
-            <a href="/">
-              <img alt="Technology Toolbox"
-                src="/Images/TechnologyToolbox-Logo.png" /></a></h1>
-        </div>
-        <div id="error" class="container_12 clear-fix">
-          <div id="contentMain" class="grid_7">
-            <h2>
-              <asp:ContentPlaceHolder runat="server" ID="PageHeading">
-                Error</asp:ContentPlaceHolder>
-            </h2>
-            <asp:ContentPlaceHolder runat="server" ID="PageContent">
-              <p>
-                We apologize, but an error occurred and your request could not be
-                completed.</p>
-              <p>
-                This error has been logged. If you have additional information
-                regarding what may have caused this error, please
-                <a href="/Contact">contact us</a>.</p>
-            </asp:ContentPlaceHolder>
-          </div>
-          <div id="contentSub" class="grid_5">
-            <asp:ContentPlaceHolder runat="server" ID="PageImage">
-              <img alt="Bug" src="/Images/icon-bug-347x346.jpg"
-                width="347" height="346" />
-            </asp:ContentPlaceHolder>
-          </div>
-        </div>
+```
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Error.master.cs"
+  Inherits="TechnologyToolbox.Caelum.Website.Errors.ErrorMasterPage" %>
+
+<%@ Register TagPrefix="caelum"
+  Namespace="TechnologyToolbox.Caelum.Website.Controls"
+  Assembly="TechnologyToolbox.Caelum.Website, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f55b5d7768fcda39" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <title>Error - Technology Toolbox</title>
+  <caelum:CssReference runat="server"
+    CssFile="~/Themes/Theme-1.0/Theme-1.0.5.min.css"
+    DebugCssFile="~/Themes/Theme-1.0/Main.css" />
+</head>
+<body id="technology-toolbox-com">
+  <form runat="server">
+  <div id="wrapper">
+    <div id="branding">
+      <h1>
+        <a href="/">
+          <img alt="Technology Toolbox"
+            src="/Images/TechnologyToolbox-Logo.png" /></a></h1>
+    </div>
+    <div id="error" class="container_12 clear-fix">
+      <div id="contentMain" class="grid_7">
+        <h2>
+          <asp:ContentPlaceHolder runat="server" ID="PageHeading">
+            Error</asp:ContentPlaceHolder>
+        </h2>
+        <asp:ContentPlaceHolder runat="server" ID="PageContent">
+          <p>
+            We apologize, but an error occurred and your request could not be
+            completed.</p>
+          <p>
+            This error has been logged. If you have additional information
+            regarding what may have caused this error, please
+            <a href="/Contact">contact us</a>.</p>
+        </asp:ContentPlaceHolder>
       </div>
-      </form>
-    </body>
-    </html>
+      <div id="contentSub" class="grid_5">
+        <asp:ContentPlaceHolder runat="server" ID="PageImage">
+          <img alt="Bug" src="/Images/icon-bug-347x346.jpg"
+            width="347" height="346" />
+        </asp:ContentPlaceHolder>
+      </div>
+    </div>
+  </div>
+  </form>
+</body>
+</html>
+```
 
 
 
@@ -268,33 +284,35 @@ For the Technology Toolbox site, most of the implementation resides in the mast
 
 
 
-    using System;
-    using System.Web;
-    using System.Web.UI;
-    
-    namespace TechnologyToolbox.Caelum.Website.Errors
+```
+using System;
+using System.Web;
+using System.Web.UI;
+
+namespace TechnologyToolbox.Caelum.Website.Errors
+{
+    public partial class ErrorMasterPage : MasterPage
     {
-        public partial class ErrorMasterPage : MasterPage
+        protected void Page_Load(
+               object sender,
+               EventArgs e)
         {
-            protected void Page_Load(
-                   object sender,
-                   EventArgs e)
+            Exception ex = Server.GetLastError();
+
+            HttpException httpEx = ex as HttpException;
+
+            if (httpEx != null)
             {
-                Exception ex = Server.GetLastError();
-    
-                HttpException httpEx = ex as HttpException;
-    
-                if (httpEx != null)
-                {
-                    Response.StatusCode = httpEx.GetHttpCode();
-                }
-                else
-                {
-                    Response.StatusCode = 500;
-                }
+                Response.StatusCode = httpEx.GetHttpCode();
+            }
+            else
+            {
+                Response.StatusCode = 500;
             }
         }
     }
+}
+```
 
 
 
@@ -342,14 +360,16 @@ For the first scenario (i.e. when the request specifies a path that does not co
 
 
 
-    <system.webServer>
-        <httpErrors>
-          <remove statusCode="404" subStatusCode="-1" />
-          <error statusCode="404" prefixLanguageFilePath=""
-            path="/Errors/404.aspx" responseMode="ExecuteURL" />
-        </httpErrors>
-        ...
-      </system.webServer>
+```
+<system.webServer>
+    <httpErrors>
+      <remove statusCode="404" subStatusCode="-1" />
+      <error statusCode="404" prefixLanguageFilePath=""
+        path="/Errors/404.aspx" responseMode="ExecuteURL" />
+    </httpErrors>
+    ...
+  </system.webServer>
+```
 
 
 
@@ -357,14 +377,16 @@ For the second scenario (e.g. when the request specifies a non-existent ASPX pa
 
 
 
-    <system.web>
-        ...
-        <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
-          redirectMode="ResponseRewrite">
-          <error statusCode="404" redirect="~/Errors/404.aspx" />
-        </customErrors>
-        ...
-      </system.web>
+```
+<system.web>
+    ...
+    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
+      redirectMode="ResponseRewrite">
+      <error statusCode="404" redirect="~/Errors/404.aspx" />
+    </customErrors>
+    ...
+  </system.web>
+```
 
 
 
@@ -387,24 +409,26 @@ You may have noticed from Figure 3 that I prefer to show the server-relative UR
 
 
 
-    <%@ Page Title="404 Error - Technology Toolbox" Language="C#"
-      AutoEventWireup="true" CodeBehind="404.aspx.cs"
-      MasterPageFile="~/Errors/Error.master"
-      Inherits="TechnologyToolbox.Caelum.Website.Errors.Error404Page" %>
-    
-    <asp:Content runat="server" ContentPlaceHolderID="PageHeading">
-      HTTP 404 (That's an error)</asp:Content>
-    <asp:Content runat="server" ContentPlaceHolderID="PageContent">
-      <p>
-        The requested URL (<span class="url"><%= RequestUrl.PathAndQuery %></span>)
-        was not found on this server.</p>
-      <p>
-        Please review the URL and make sure that it is spelled correctly.</p>
-    </asp:Content>
-    <asp:Content runat="server" ContentPlaceHolderID="PageImage">
-      <img alt="No entry" src="/Images/icon-do-not-enter-347x346.jpg"
-        width="347" height="346" />
-    </asp:Content>
+```
+<%@ Page Title="404 Error - Technology Toolbox" Language="C#"
+  AutoEventWireup="true" CodeBehind="404.aspx.cs"
+  MasterPageFile="~/Errors/Error.master"
+  Inherits="TechnologyToolbox.Caelum.Website.Errors.Error404Page" %>
+
+<asp:Content runat="server" ContentPlaceHolderID="PageHeading">
+  HTTP 404 (That's an error)</asp:Content>
+<asp:Content runat="server" ContentPlaceHolderID="PageContent">
+  <p>
+    The requested URL (<span class="url"><%= RequestUrl.PathAndQuery %></span>)
+    was not found on this server.</p>
+  <p>
+    Please review the URL and make sure that it is spelled correctly.</p>
+</asp:Content>
+<asp:Content runat="server" ContentPlaceHolderID="PageImage">
+  <img alt="No entry" src="/Images/icon-do-not-enter-347x346.jpg"
+    width="347" height="346" />
+</asp:Content>
+```
 
 
 
@@ -412,132 +436,134 @@ You may have noticed from Figure 3 that I prefer to show the server-relative UR
 
 
 
-    using System;
-    using System.Diagnostics;
-    using System.Web.UI;
-    
-    namespace TechnologyToolbox.Caelum.Website.Errors
+```
+using System;
+using System.Diagnostics;
+using System.Web.UI;
+
+namespace TechnologyToolbox.Caelum.Website.Errors
+{
+    /// <summary>
+    /// Displays a custom message when a "file not found" error occurs.
+    /// </summary>
+    public partial class Error404Page : Page
     {
+        protected Uri RequestUrl { get; private set; }
+
         /// <summary>
-        /// Displays a custom message when a "file not found" error occurs.
+        /// Returns the originally requested URL (by parsing the specified
+        /// request URL).
         /// </summary>
-        public partial class Error404Page : Page
+        /// <remarks>
+        /// When the <customErrors> configuration redirects to this page,
+        /// Request.Url contains either the original URL
+        /// (e.g. ".../foobar.aspx") or the URL of the 404 error page with the
+        /// original URL specified in a query string parameter
+        /// (e.g. ".../404.aspx?aspxerrorpath=/blog/jjameson/...") depending on
+        /// whether redirectMode="ResponseRewrite" or
+        /// redirectMode="ResponseRedirect".
+        /// 
+        /// However, when a native IIS7 request redirects to this page (e.g.
+        /// when requesting "/foobar") then Request.Url is something like
+        // ".../Errors/404.aspx?404;https://www.technologytoolbox.com:80/foobar".
+        ///
+        /// Consequently, a little parsing may be necessary in order to show the
+        /// relevant info to the user.
+        /// </remarks>
+        /// <param name="requestUrl">The URL of the request (i.e. Request.Url).</param>
+        /// <returns>The originally requested URL.</returns>
+        internal static Uri GetOriginalRequestUrl(
+            Uri requestUrl)
         {
-            protected Uri RequestUrl { get; private set; }
-    
-            /// <summary>
-            /// Returns the originally requested URL (by parsing the specified
-            /// request URL).
-            /// </summary>
-            /// <remarks>
-            /// When the <customErrors> configuration redirects to this page,
-            /// Request.Url contains either the original URL
-            /// (e.g. ".../foobar.aspx") or the URL of the 404 error page with the
-            /// original URL specified in a query string parameter
-            /// (e.g. ".../404.aspx?aspxerrorpath=/blog/jjameson/...") depending on
-            /// whether redirectMode="ResponseRewrite" or
-            /// redirectMode="ResponseRedirect".
-            /// 
-            /// However, when a native IIS7 request redirects to this page (e.g.
-            /// when requesting "/foobar") then Request.Url is something like
-            // ".../Errors/404.aspx?404;https://www.technologytoolbox.com:80/foobar".
-            ///
-            /// Consequently, a little parsing may be necessary in order to show the
-            /// relevant info to the user.
-            /// </remarks>
-            /// <param name="requestUrl">The URL of the request (i.e. Request.Url).</param>
-            /// <returns>The originally requested URL.</returns>
-            internal static Uri GetOriginalRequestUrl(
-                Uri requestUrl)
+            Debug.Assert(requestUrl.IsAbsoluteUri == true);
+
+            if (string.Compare(
+                requestUrl.AbsolutePath,
+                "/Errors/404.aspx",
+                StringComparison.OrdinalIgnoreCase) == 0)
             {
-                Debug.Assert(requestUrl.IsAbsoluteUri == true);
-    
-                if (string.Compare(
-                    requestUrl.AbsolutePath,
-                    "/Errors/404.aspx",
-                    StringComparison.OrdinalIgnoreCase) == 0)
+                if (requestUrl.Query.StartsWith(
+                    "?404;",
+                    StringComparison.OrdinalIgnoreCase) == true)
                 {
-                    if (requestUrl.Query.StartsWith(
-                        "?404;",
-                        StringComparison.OrdinalIgnoreCase) == true)
+                    string originalUrl = requestUrl.Query.Substring(
+                        "?404;".Length);
+
+                    Uri newUrl;
+
+                    bool success = Uri.TryCreate(
+                        originalUrl,
+                        UriKind.Absolute,
+                        out newUrl);
+
+                    if (success == true)
                     {
-                        string originalUrl = requestUrl.Query.Substring(
-                            "?404;".Length);
-    
-                        Uri newUrl;
-    
-                        bool success = Uri.TryCreate(
-                            originalUrl,
-                            UriKind.Absolute,
-                            out newUrl);
-    
-                        if (success == true)
-                        {
-                            requestUrl = newUrl;
-                        }
-                    }
-    
-                    // HACK:
-                    // This was initially implemented as an "else if", but then I
-                    // discovered that in some environments (DEV, for example), a
-                    // "double redirect" occurs to 404.aspx. The first with
-                    // Request.URL =
-                    // http://www-dev.technologytoolbox.com/Errors/404.aspx?aspxerrorpath=/blog/jjameson/category/19.aspx
-                    // and the second with Request.URL =
-                    // http://www-dev.technologytoolbox.com/Errors/404.aspx?404;http://www-dev.technologytoolbox.com:80/Errors/404.aspx?aspxerrorpath=/blog/jjameson/category/19.aspx
-                    //
-                    // By changing this to "if" -- instead of "else if" -- the
-                    // desired result is achieved regardless of whether one or two
-                    // redirects occur.
-                    if (requestUrl.Query.StartsWith(
-                        "?aspxerrorpath=",
-                        StringComparison.OrdinalIgnoreCase) == true)
-                    {
-                        string originalUrl = requestUrl.Query.Substring(
-                            "?aspxerrorpath=".Length);
-    
-                        Uri newUrl;
-    
-                        // In order to access the PathAndQuery property, we must
-                        // have an absolute URL, but the "aspxerrorpath" query
-                        // string parameter specifies a server-relative URL.
-                        bool success = Uri.TryCreate(
-                            originalUrl,
-                            UriKind.RelativeOrAbsolute,
-                            out newUrl);
-    
-                        if (success == true)
-                        {
-                            if (newUrl.IsAbsoluteUri == false)
-                            {
-                                newUrl = new Uri(requestUrl, newUrl);
-                            }
-    
-                            Debug.Assert(newUrl.IsAbsoluteUri == true);
-                            requestUrl = newUrl;
-                        }
+                        requestUrl = newUrl;
                     }
                 }
-    
-                return requestUrl;
+
+                // HACK:
+                // This was initially implemented as an "else if", but then I
+                // discovered that in some environments (DEV, for example), a
+                // "double redirect" occurs to 404.aspx. The first with
+                // Request.URL =
+                // http://www-dev.technologytoolbox.com/Errors/404.aspx?aspxerrorpath=/blog/jjameson/category/19.aspx
+                // and the second with Request.URL =
+                // http://www-dev.technologytoolbox.com/Errors/404.aspx?404;http://www-dev.technologytoolbox.com:80/Errors/404.aspx?aspxerrorpath=/blog/jjameson/category/19.aspx
+                //
+                // By changing this to "if" -- instead of "else if" -- the
+                // desired result is achieved regardless of whether one or two
+                // redirects occur.
+                if (requestUrl.Query.StartsWith(
+                    "?aspxerrorpath=",
+                    StringComparison.OrdinalIgnoreCase) == true)
+                {
+                    string originalUrl = requestUrl.Query.Substring(
+                        "?aspxerrorpath=".Length);
+
+                    Uri newUrl;
+
+                    // In order to access the PathAndQuery property, we must
+                    // have an absolute URL, but the "aspxerrorpath" query
+                    // string parameter specifies a server-relative URL.
+                    bool success = Uri.TryCreate(
+                        originalUrl,
+                        UriKind.RelativeOrAbsolute,
+                        out newUrl);
+
+                    if (success == true)
+                    {
+                        if (newUrl.IsAbsoluteUri == false)
+                        {
+                            newUrl = new Uri(requestUrl, newUrl);
+                        }
+
+                        Debug.Assert(newUrl.IsAbsoluteUri == true);
+                        requestUrl = newUrl;
+                    }
+                }
             }
-    
-            protected void Page_PreRender(
-                object sender,
-                EventArgs e)
-            {
-                RequestUrl = GetOriginalRequestUrl(Request.Url);
-    
-                // When a native IIS7 request redirects to this page (e.g.
-                // when requesting "/foobar") then there is no underlying
-                // HttpException for the master page to retrieve the status code
-                // from (and consequently it sets the status code to 500). Therefore
-                // explicitly overwrite the status code in the PreRender phase of
-                // the page lifecycle.
-                Response.StatusCode = 404;
-            }
+
+            return requestUrl;
+        }
+
+        protected void Page_PreRender(
+            object sender,
+            EventArgs e)
+        {
+            RequestUrl = GetOriginalRequestUrl(Request.Url);
+
+            // When a native IIS7 request redirects to this page (e.g.
+            // when requesting "/foobar") then there is no underlying
+            // HttpException for the master page to retrieve the status code
+            // from (and consequently it sets the status code to 500). Therefore
+            // explicitly overwrite the status code in the PreRender phase of
+            // the page lifecycle.
+            Response.StatusCode = 404;
         }
     }
+}
+```
 
 
 

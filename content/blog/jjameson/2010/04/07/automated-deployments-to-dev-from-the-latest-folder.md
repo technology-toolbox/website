@@ -11,8 +11,8 @@ tags: ["My System", "Simplify", "Core Development", "TFS"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx)
@@ -56,15 +56,17 @@ To copy the build to the **\_latest **folder, I add a custom target  to the TFSB
 
 
 
-    <Target Name="CopyBuildToLatestFolder">
-        <CreateItem Include="$(DropLocation)\$(BuildNumber)\**\*.*" >
-          <Output TaskParameter="Include" ItemName="FilesToCopy"/>
-        </CreateItem>
-        <RemoveDir Directories="$(DropLocation)\_latest" />
-        <Copy
-          SourceFiles="@(FilesToCopy)"
-          DestinationFiles="@(FilesToCopy->'$(DropLocation)\_latest\\%(RecursiveDir)%(Filename)%(Extension)')"/>
-      </Target>
+```
+<Target Name="CopyBuildToLatestFolder">
+    <CreateItem Include="$(DropLocation)\$(BuildNumber)\**\*.*" >
+      <Output TaskParameter="Include" ItemName="FilesToCopy"/>
+    </CreateItem>
+    <RemoveDir Directories="$(DropLocation)\_latest" />
+    <Copy
+      SourceFiles="@(FilesToCopy)"
+      DestinationFiles="@(FilesToCopy->'$(DropLocation)\_latest\\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>
+```
 
 
 
@@ -72,18 +74,20 @@ Then I override the **AfterDropBuild** target to invoke the custom  target -- bu
 
 
 
-    <!-- After dropping a successful build, copy it to the "_latest" folder. -->
-      <Target Name="AfterDropBuild"
-        Condition=" '$(IsDesktopBuild)' != 'true' ">
-        <GetBuildProperties
-          TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
-          BuildUri="$(BuildUri)">
-          <Output TaskParameter="CompilationSuccess" PropertyName="BuildCompilationSuccess" />
-        </GetBuildProperties>
-    
-        <CallTarget Targets="CopyBuildToLatestFolder"
-          Condition=" '$(BuildCompilationSuccess)' == 'True' "/>
-      </Target>
+```
+<!-- After dropping a successful build, copy it to the "_latest" folder. -->
+  <Target Name="AfterDropBuild"
+    Condition=" '$(IsDesktopBuild)' != 'true' ">
+    <GetBuildProperties
+      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+      BuildUri="$(BuildUri)">
+      <Output TaskParameter="CompilationSuccess" PropertyName="BuildCompilationSuccess" />
+    </GetBuildProperties>
+
+    <CallTarget Targets="CopyBuildToLatestFolder"
+      Condition=" '$(BuildCompilationSuccess)' == 'True' "/>
+  </Target>
+```
 
 
 

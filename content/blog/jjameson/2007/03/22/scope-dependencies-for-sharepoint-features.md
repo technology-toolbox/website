@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx)
@@ -37,21 +37,23 @@ Originally, I had both features scoped to **Site **and setup a dependency  from 
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <Feature xmlns="http://schemas.microsoft.com/sharepoint/"
-      Id="49B204D0-7E35-4460-A691-A7D481C463B4"
-      ...
-      Scope="Site"
-      ...
-      ReceiverAssembly="Fabrikam.Project1.PublicationLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b7a42e9b9b5355f"
-      ReceiverClass="Fabrikam.Project1.PublicationLibrary.Configuration.DefaultFeatureReceiver">
-      <ActivationDependencies>
-        <!-- Fabrikam.Project1.PublicationContentTypes -->
-        <ActivationDependency FeatureId="9F5C14F1-CF58-47c7-BBBA-DA9A8637DEAB" />
-      </ActivationDependencies>
-      <ElementManifests>
-      </ElementManifests>
-    </Feature>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/"
+  Id="49B204D0-7E35-4460-A691-A7D481C463B4"
+  ...
+  Scope="Site"
+  ...
+  ReceiverAssembly="Fabrikam.Project1.PublicationLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8b7a42e9b9b5355f"
+  ReceiverClass="Fabrikam.Project1.PublicationLibrary.Configuration.DefaultFeatureReceiver">
+  <ActivationDependencies>
+    <!-- Fabrikam.Project1.PublicationContentTypes -->
+    <ActivationDependency FeatureId="9F5C14F1-CF58-47c7-BBBA-DA9A8637DEAB" />
+  </ActivationDependencies>
+  <ElementManifests>
+  </ElementManifests>
+</Feature>
+```
 
 
 
@@ -80,44 +82,46 @@ We already had a feature receiver for the **Publication Library**feature (as me
 
 
 
-    namespace Fabrikam.Project1.PublicationLibrary.Configuration
+```
+namespace Fabrikam.Project1.PublicationLibrary.Configuration
+{
+    [CLSCompliant(false)]
+    public sealed class FeatureConfigurator
     {
-        [CLSCompliant(false)]
-        public sealed class FeatureConfigurator
+        readonly static Guid publicationContentTypesFeatureId =
+            new Guid("9F5C14F1-CF58-47c7-BBBA-DA9A8637DEAB");
+        
+        private FeatureConfigurator() { } // all methods are static
+        
+        public static void Configure(
+            SPWebApplication webApp)
         {
-            readonly static Guid publicationContentTypesFeatureId =
-                new Guid("9F5C14F1-CF58-47c7-BBBA-DA9A8637DEAB");
-            
-            private FeatureConfigurator() { } // all methods are static
-            
-            public static void Configure(
-                SPWebApplication webApp)
+            if (webApp == null)
             {
-                if (webApp == null)
-                {
-                    throw new ArgumentNullException("webApp");
-                }
-                
-                Debug.WriteLine("Configuring Fabrikam.Project1.PublicationLibrary feature...");
-                
-                SPSite site = webApp.Sites["/"];
-                
-                // We cannot specify an explicit dependency on the PublicationContentTypes feature
-                // because that feature must be scoped to 'Site' (since it contains Field elements).
-                // Therefore we check this dependency via custom code when this feature is activated.
-                SPFeature feature = site.Features[publicationContentTypesFeatureId];
-                
-                if (feature == null)
-                {
-                    throw new InvalidOperationException(
-                        "The Publication Content Types feature must be activated on the site"
-                        + " in order to use the Publication Library feature.");
-                }
-    
-                ...
+                throw new ArgumentNullException("webApp");
             }
+            
+            Debug.WriteLine("Configuring Fabrikam.Project1.PublicationLibrary feature...");
+            
+            SPSite site = webApp.Sites["/"];
+            
+            // We cannot specify an explicit dependency on the PublicationContentTypes feature
+            // because that feature must be scoped to 'Site' (since it contains Field elements).
+            // Therefore we check this dependency via custom code when this feature is activated.
+            SPFeature feature = site.Features[publicationContentTypesFeatureId];
+            
+            if (feature == null)
+            {
+                throw new InvalidOperationException(
+                    "The Publication Content Types feature must be activated on the site"
+                    + " in order to use the Publication Library feature.");
+            }
+
+            ...
         }
     }
+}
+```
 
 
 

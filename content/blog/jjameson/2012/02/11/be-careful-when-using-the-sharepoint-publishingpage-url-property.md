@@ -24,43 +24,45 @@ Here's a simple repro I whipped up this morning -- with hopes it will help me r
 
 
 
-    using System;
-    using Microsoft.SharePoint;
-    using Microsoft.SharePoint.Publishing;
-    
-    namespace PublishingPageUrlDemo
+```
+using System;
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Publishing;
+
+namespace PublishingPageUrlDemo
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
+            Uri siteUrl;
+
+            if (args.Length != 1)
             {
-                Uri siteUrl;
-    
-                if (args.Length != 1)
+                throw new ArgumentException(
+                    "Usage: PublishingPageUrlDemo {site URL}");
+            }
+
+            siteUrl = new Uri(args[0]);
+
+            using (SPSite site = new SPSite(siteUrl.AbsoluteUri))
+            {
+                using (SPWeb web = site.OpenWeb(siteUrl.PathAndQuery))
                 {
-                    throw new ArgumentException(
-                        "Usage: PublishingPageUrlDemo {site URL}");
-                }
-    
-                siteUrl = new Uri(args[0]);
-    
-                using (SPSite site = new SPSite(siteUrl.AbsoluteUri))
-                {
-                    using (SPWeb web = site.OpenWeb(siteUrl.PathAndQuery))
-                    {
-                        PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
-    
-                        PublishingPage page = pubWeb.GetPublishingPage(
-                            pubWeb.PagesListName + "/default.aspx");
-    
-                        // According to Intellisense (and the current MSDN
-                        // documentation), PublishingPage.Url gets the
-                        // server-relative URL, but the following outputs the
-                        // site-relative URL ("Pages/default.aspx")
-                        Console.WriteLine("page.Url: {0}", page.Url);
-                    }
+                    PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
+
+                    PublishingPage page = pubWeb.GetPublishingPage(
+                        pubWeb.PagesListName + "/default.aspx");
+
+                    // According to Intellisense (and the current MSDN
+                    // documentation), PublishingPage.Url gets the
+                    // server-relative URL, but the following outputs the
+                    // site-relative URL ("Pages/default.aspx")
+                    Console.WriteLine("page.Url: {0}", page.Url);
                 }
             }
         }
     }
+}
+```
 

@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "TFS", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx)
 > 

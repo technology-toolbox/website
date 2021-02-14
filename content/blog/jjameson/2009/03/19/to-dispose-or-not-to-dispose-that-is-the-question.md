@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx)
@@ -34,7 +34,7 @@ The most interesting thing to come out of this email thread -- at least for me, 
 In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has been, well, nixed...
 
 
-> **SPSite.RootWeb Property**  
+> **SPSite.RootWeb Property**
 > 
 > An earlier version of this article indicated that the calling application should 
 > dispose of the SPSite.RootWeb property just before disposing of the SPSite object 
@@ -43,8 +43,8 @@ In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has be
 > 
 > ...
 > 
-> **SPWeb.ParentWeb Property**  
-> **Updated Guidance**  
+> **SPWeb.ParentWeb Property**
+> **Updated Guidance**
 > 
 > An earlier version of this article recommended that the calling application 
 > should dispose of the SPWeb.ParentWeb. This is no longer the official guidance. 
@@ -69,60 +69,62 @@ For example, consider the following method from my `SharePointHelper`  class (wh
 
 
 
-    /// <summary>
-        /// Finds a child Web based on the name (relative URL).
-        /// </summary>
-        /// <remarks>
-        /// This is useful because SPWebCollection[name] does not return null
-        /// or throw an exception if the specified web does not exist.
-        /// </remarks>
-        /// <param name="parentWeb">The parent Web to search.</param>
-        /// <param name="name">The name (i.e. URL) of the child Web to find.</param>
-        /// <returns>An SPWeb object (which must be disposed by the caller) if
-        /// the child Web is found, otherwise null.</returns>
-        public static SPWeb FindWeb(
-            SPWeb parentWeb,
-            string name)
+```
+/// <summary>
+    /// Finds a child Web based on the name (relative URL).
+    /// </summary>
+    /// <remarks>
+    /// This is useful because SPWebCollection[name] does not return null
+    /// or throw an exception if the specified web does not exist.
+    /// </remarks>
+    /// <param name="parentWeb">The parent Web to search.</param>
+    /// <param name="name">The name (i.e. URL) of the child Web to find.</param>
+    /// <returns>An SPWeb object (which must be disposed by the caller) if
+    /// the child Web is found, otherwise null.</returns>
+    public static SPWeb FindWeb(
+        SPWeb parentWeb,
+        string name)
+    {
+        if (parentWeb == null)
         {
-            if (parentWeb == null)
-            {
-                throw new ArgumentNullException("parentWeb");
-            }
-    
-            if (name == null)
-            {
-                throw new ArgumentNullException("name");
-            }
-    
-            name = name.Trim();
-            if (string.IsNullOrEmpty(name))
-            {
-                throw new ArgumentException(
-                    "The name of the Web must be specified.",
-                    "name");
-            }
-    
-            SPWeb childWeb = parentWeb.Webs[name];
-    
-            // HACK: SPWebCollection[name] does not return null or throw
-            // an exception if the specified web does not exist.
-            try
-            {
-                Guid webId = childWeb.ID;
-    
-                // In order to avoid a code analysis warning about webId not
-                // being used we need to do "something" with webId;
-                // a simple assertion is sufficient
-                Debug.Assert(webId != Guid.Empty);
-            }
-            catch (FileNotFoundException)
-            {
-                childWeb.Dispose();
-                childWeb = null;
-            }
-    
-            return childWeb;
+            throw new ArgumentNullException("parentWeb");
         }
+
+        if (name == null)
+        {
+            throw new ArgumentNullException("name");
+        }
+
+        name = name.Trim();
+        if (string.IsNullOrEmpty(name))
+        {
+            throw new ArgumentException(
+                "The name of the Web must be specified.",
+                "name");
+        }
+
+        SPWeb childWeb = parentWeb.Webs[name];
+
+        // HACK: SPWebCollection[name] does not return null or throw
+        // an exception if the specified web does not exist.
+        try
+        {
+            Guid webId = childWeb.ID;
+
+            // In order to avoid a code analysis warning about webId not
+            // being used we need to do "something" with webId;
+            // a simple assertion is sufficient
+            Debug.Assert(webId != Guid.Empty);
+        }
+        catch (FileNotFoundException)
+        {
+            childWeb.Dispose();
+            childWeb = null;
+        }
+
+        return childWeb;
+    }
+```
 
 
 
@@ -138,15 +140,17 @@ If you instantiate an object that implements `IDisposable` -- either  through th
 
 
 
-    private void ConfigureSampleContentWeb(
-            SPWeb parentWeb)
+```
+private void ConfigureSampleContentWeb(
+        SPWeb parentWeb)
+    {
+        using (SPWeb samplesWeb =
+            SharePointHelper.FindWeb(parentWeb, "Samples"))
         {
-            using (SPWeb samplesWeb =
-                SharePointHelper.FindWeb(parentWeb, "Samples"))
-            {
-                ConfigureSamplePages(samplesWeb);
-            }
+            ConfigureSamplePages(samplesWeb);
         }
+    }
+```
 
 
 

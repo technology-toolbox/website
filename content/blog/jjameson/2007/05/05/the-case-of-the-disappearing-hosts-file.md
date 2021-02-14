@@ -12,8 +12,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx)
@@ -47,24 +47,26 @@ After recreating the hosts file, I was able to successfully complete the Configu
 
 
 
-    Application Server Administration job failed for service instance
-     Microsoft.Office.Server.Search.Administration.SearchServiceInstance (...).
-    
-    Reason: Could not find file 'D:\WINNT\system32\drivers\etc\HOSTS'.
-    
-    Techinal Support Details:
-    System.IO.FileNotFoundException: Could not find file 'D:\WINNT\system32\drivers\etc\HOSTS'.
-    File name: 'D:\WINNT\system32\drivers\etc\HOSTS'
-       at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-       at System.IO.FileStream.Init(...)
-       at System.IO.FileStream..ctor(...)
-       at System.IO.StreamReader..ctor(...)
-       at System.IO.FileInfo.OpenText()
-       at Microsoft.Search.Administration.Security.HOSTSFile.ParseHOSTSFile(...)
-       at Microsoft.Search.Administration.Security.HOSTSFile.ConfigureDedicatedGathering(...)
-       at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.SynchronizeDefaultContentSource(...)
-       at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.Synchronize()
-       at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
+```
+Application Server Administration job failed for service instance
+ Microsoft.Office.Server.Search.Administration.SearchServiceInstance (...).
+
+Reason: Could not find file 'D:\WINNT\system32\drivers\etc\HOSTS'.
+
+Techinal Support Details:
+System.IO.FileNotFoundException: Could not find file 'D:\WINNT\system32\drivers\etc\HOSTS'.
+File name: 'D:\WINNT\system32\drivers\etc\HOSTS'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(...)
+   at System.IO.FileStream..ctor(...)
+   at System.IO.StreamReader..ctor(...)
+   at System.IO.FileInfo.OpenText()
+   at Microsoft.Search.Administration.Security.HOSTSFile.ParseHOSTSFile(...)
+   at Microsoft.Search.Administration.Security.HOSTSFile.ConfigureDedicatedGathering(...)
+   at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.SynchronizeDefaultContentSource(...)
+   at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.Synchronize()
+   at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
+```
 
 
 
@@ -76,20 +78,22 @@ I then restored the hosts file (yet) again, but did not give the WSS\_ADMIN\_WPG
 
 
 
-    Application Server Administration job failed for service instance
-     Microsoft.Office.Server.Search.Administration.SearchServiceInstance (...).
-    
-    Reason: Access to the path 'D:\WINNT\system32\drivers\etc\HOSTS' is denied.
-    
-    Techinal Support Details:
-    System.UnauthorizedAccessException: Access to the path 'D:\WINNT\system32\drivers\etc\HOSTS' is denied.
-       at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-       at System.IO.FileInfo.Delete()
-       at Microsoft.Search.Administration.Security.HOSTSFile.CleanupDedicatedGathering(...)
-       at Microsoft.Search.Administration.Security.HOSTSFile.ConfigureDedicatedGathering(...)
-       at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.SynchronizeDefaultContentSource(...)
-       at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.Synchronize()
-       at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
+```
+Application Server Administration job failed for service instance
+ Microsoft.Office.Server.Search.Administration.SearchServiceInstance (...).
+
+Reason: Access to the path 'D:\WINNT\system32\drivers\etc\HOSTS' is denied.
+
+Techinal Support Details:
+System.UnauthorizedAccessException: Access to the path 'D:\WINNT\system32\drivers\etc\HOSTS' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileInfo.Delete()
+   at Microsoft.Search.Administration.Security.HOSTSFile.CleanupDedicatedGathering(...)
+   at Microsoft.Search.Administration.Security.HOSTSFile.ConfigureDedicatedGathering(...)
+   at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.SynchronizeDefaultContentSource(...)
+   at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.Synchronize()
+   at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
+```
 
 
 

@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx)
 > 
@@ -44,14 +44,16 @@ While five database calls certainly *seems* reasonable for rendering a page requ
 
 
 
-    exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
-        @DocLeafName=N'controls.css', ...
-    
-    exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
-        @DocLeafName=N'page-layouts-21.css', ...
-    
-    exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
-        @DocLeafName=N'home.jpg', ...
+```
+exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
+    @DocLeafName=N'controls.css', ...
+
+exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
+    @DocLeafName=N'page-layouts-21.css', ...
+
+exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
+    @DocLeafName=N'home.jpg', ...
+```
 
 
 

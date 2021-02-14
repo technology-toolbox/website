@@ -9,8 +9,8 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx)
 > 
@@ -31,20 +31,22 @@ On the right side of the Burndown dashboard, you'll find the **Project Work Item
 
 
 
-    SELECT [System.Id], [System.Title]
-    FROM WorkItems
-    WHERE
+```
+SELECT [System.Id], [System.Title]
+FROM WorkItems
+WHERE
+(
+    [System.TeamProject] = @project
+    AND
     (
-        [System.TeamProject] = @project
-        AND
-        (
-            [System.WorkItemType] = 'Bug'
-            OR [System.WorkItemType] = 'Task'
-            OR [System.WorkItemType] = 'Test Case'
-            OR [System.WorkItemType] = 'User Story'
-        )
+        [System.WorkItemType] = 'Bug'
+        OR [System.WorkItemType] = 'Task'
+        OR [System.WorkItemType] = 'Test Case'
+        OR [System.WorkItemType] = 'User Story'
     )
-    ORDER BY [System.Id]
+)
+ORDER BY [System.Id]
+```
 
 
 
@@ -54,17 +56,19 @@ Too bad the query specified for the Web Part doesn't explicitly *exclude* "unwan
 
 
 
-    SELECT [System.Id], [System.Title]
-    FROM WorkItems
-    WHERE
+```
+SELECT [System.Id], [System.Title]
+FROM WorkItems
+WHERE
+(
+    [System.TeamProject] = @project
+    AND
     (
-        [System.TeamProject] = @project
-        AND
-        (
-            [System.WorkItemType] <> 'Issue'OR [System.WorkItemType] <> 'Shared Steps'
-        )
+        [System.WorkItemType] <> 'Issue'OR [System.WorkItemType] <> 'Shared Steps'
     )
-    ORDER BY [System.Id]
+)
+ORDER BY [System.Id]
+```
 
 
 
@@ -72,20 +76,22 @@ Consequently, for upgraded project sites we need to update the Web Part query to
 
 
 
-    SELECT [System.Id], [System.Title]
-    FROM WorkItems
-    WHERE
+```
+SELECT [System.Id], [System.Title]
+FROM WorkItems
+WHERE
+(
+    [System.TeamProject] = @project
+    AND
     (
-        [System.TeamProject] = @project
-        AND
-        (
-            [System.WorkItemType] = 'Bug'
-            OR [System.WorkItemType] = 'Task'
-            OR [System.WorkItemType] = 'Test Case'
-            OR [System.WorkItemType] = 'Scenario'
-        )
+        [System.WorkItemType] = 'Bug'
+        OR [System.WorkItemType] = 'Task'
+        OR [System.WorkItemType] = 'Test Case'
+        OR [System.WorkItemType] = 'Scenario'
     )
-    ORDER BY [System.Id]
+)
+ORDER BY [System.Id]
+```
 
 
 
@@ -105,78 +111,80 @@ Since each instance of the Web Part specifies its own query, we need to update t
 
 
 
-    # Updates the "Project Work Items" Web Part on the dashboard pages of TFS
-    # project sites originally created with the MSF Agile v4.x process template
-    # in order to show "Scenario" work items (instead of "User Story" work items)
+```
+# Updates the "Project Work Items" Web Part on the dashboard pages of TFS
+# project sites originally created with the MSF Agile v4.x process template
+# in order to show "Scenario" work items (instead of "User Story" work items)
+
+function UpdateWorkItemSummaryWebPartOnEachDashboardPage(
+    [Microsoft.SharePoint.SPWeb] $web)
+{
+    Write-Debug "Updating work item summary Web Parts on site ($($web.Url))..."
     
-    function UpdateWorkItemSummaryWebPartOnEachDashboardPage(
-        [Microsoft.SharePoint.SPWeb] $web)
-    {
-        Write-Debug "Updating work item summary Web Parts on site ($($web.Url))..."
-        
-        $pagesToUpdate =
-        @(
-            "Dashboards/Burndown.aspx",
-            "Dashboards/Quality.aspx",
-            "Dashboards/Bugs.aspx",
-            "Dashboards/Test.aspx",
-            "Dashboards/Build.aspx",
-            "Dashboards/MyDashboard.aspx"
-        )
-        
-        $pagesToUpdate |
-            ForEach-Object {                        
-                $wpm = $web.GetLimitedWebPartManager(
-                    $_,
-                    [System.Web.UI.WebControls.WebParts.PersonalizationScope]::Shared)
-                
-                UpdateWorkItemSummaryWebParts $wpm
-                $wpm.Dispose()
-            }
-    }
+    $pagesToUpdate =
+    @(
+        "Dashboards/Burndown.aspx",
+        "Dashboards/Quality.aspx",
+        "Dashboards/Bugs.aspx",
+        "Dashboards/Test.aspx",
+        "Dashboards/Build.aspx",
+        "Dashboards/MyDashboard.aspx"
+    )
     
-    function UpdateWorkItemSummaryWebParts(
-        [Microsoft.SharePoint.WebPartPages.SPLimitedWebPartManager] $wpm)
-    {
-        Write-Debug "Updating work item summary Web Part on page ($($wpm.ServerRelativeUrl))..."
-        
-        $wpm.WebParts |
-            Where-Object {
-                $_ -is [Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart]} |
-            ForEach-Object {
-                UpdateWorkItemSummaryWebPart $wpm $_      
-            }
-    }
-    
-    function UpdateWorkItemSummaryWebPart(
-        [Microsoft.SharePoint.WebPartPages.SPLimitedWebPartManager] $wpm,
-        [Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart] $webPart)
-    {
-        Write-Debug "Updating Web Part ($($webPart.Title))..."
-    
-        $webPart.Query = $webPart.Query.Replace("User Story", "Scenario")
-        $wpm.SaveChanges($webPart)
-        
-        Write-Debug "Successfully updated Web Part ($($webPart.Title))."
-    }
-    
-    $sitesToUpgrade =
-        @(
-            "http://cyclops/sites/AdventureWorks",
-            "http://cyclops/sites/Demo",
-            "http://cyclops/sites/Toolbox"
-        )
-    
-    $sitesToUpgrade |
-        ForEach-Object {
-            $DebugPreference = "SilentlyContinue"
-            $web = Get-SPWeb $_
-    
-            $DebugPreference = "Continue"
-            UpdateWorkItemSummaryWebPartOnEachDashboardPage $web
-    
-            $web.Dispose()
+    $pagesToUpdate |
+        ForEach-Object {                        
+            $wpm = $web.GetLimitedWebPartManager(
+                $_,
+                [System.Web.UI.WebControls.WebParts.PersonalizationScope]::Shared)
+            
+            UpdateWorkItemSummaryWebParts $wpm
+            $wpm.Dispose()
         }
+}
+
+function UpdateWorkItemSummaryWebParts(
+    [Microsoft.SharePoint.WebPartPages.SPLimitedWebPartManager] $wpm)
+{
+    Write-Debug "Updating work item summary Web Part on page ($($wpm.ServerRelativeUrl))..."
+    
+    $wpm.WebParts |
+        Where-Object {
+            $_ -is [Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart]} |
+        ForEach-Object {
+            UpdateWorkItemSummaryWebPart $wpm $_      
+        }
+}
+
+function UpdateWorkItemSummaryWebPart(
+    [Microsoft.SharePoint.WebPartPages.SPLimitedWebPartManager] $wpm,
+    [Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart] $webPart)
+{
+    Write-Debug "Updating Web Part ($($webPart.Title))..."
+
+    $webPart.Query = $webPart.Query.Replace("User Story", "Scenario")
+    $wpm.SaveChanges($webPart)
+    
+    Write-Debug "Successfully updated Web Part ($($webPart.Title))."
+}
+
+$sitesToUpgrade =
+    @(
+        "http://cyclops/sites/AdventureWorks",
+        "http://cyclops/sites/Demo",
+        "http://cyclops/sites/Toolbox"
+    )
+
+$sitesToUpgrade |
+    ForEach-Object {
+        $DebugPreference = "SilentlyContinue"
+        $web = Get-SPWeb $_
+
+        $DebugPreference = "Continue"
+        UpdateWorkItemSummaryWebPartOnEachDashboardPage $web
+
+        $web.Dispose()
+    }
+```
 
 
 

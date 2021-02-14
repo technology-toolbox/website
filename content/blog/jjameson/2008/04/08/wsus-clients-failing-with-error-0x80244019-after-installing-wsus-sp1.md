@@ -10,8 +10,8 @@ tags: ["WSUS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx)
@@ -24,14 +24,16 @@ Last week I discovered that many of my servers were no longer updating successfu
 
 
 
-    2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: SendRequestToServerForFileInformation failed with 0x80190194
-    2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: ShouldFileBeDownloaded failed with 0x80190194
-    2008-03-22 18:53:24:377 808 ba0 Misc WARNING: DownloadFileInternal failed for http://colossus:8530/selfupdate/wuident.cab: error 0x80190194
-    2008-03-22 18:53:24:377 808 ba0 Setup FATAL: IsUpdateRequired failed with error 0x80244019
-    2008-03-22 18:53:24:377 808 ba0 Setup WARNING: SelfUpdate: Default Service: IsUpdateRequired failed: 0x80244019
-    2008-03-22 18:53:24:377 808 ba0 Setup WARNING: SelfUpdate: Default Service: IsUpdateRequired failed, error = 0x80244019
-    2008-03-22 18:53:24:377 808 ba0 Agent * WARNING: Skipping scan, self-update check returned 0x80244019
-    2008-03-22 18:53:25:002 808 ba0 Agent * WARNING: Exit code = 0x80244019
+```
+2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: SendRequestToServerForFileInformation failed with 0x80190194
+2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: ShouldFileBeDownloaded failed with 0x80190194
+2008-03-22 18:53:24:377 808 ba0 Misc WARNING: DownloadFileInternal failed for http://colossus:8530/selfupdate/wuident.cab: error 0x80190194
+2008-03-22 18:53:24:377 808 ba0 Setup FATAL: IsUpdateRequired failed with error 0x80244019
+2008-03-22 18:53:24:377 808 ba0 Setup WARNING: SelfUpdate: Default Service: IsUpdateRequired failed: 0x80244019
+2008-03-22 18:53:24:377 808 ba0 Setup WARNING: SelfUpdate: Default Service: IsUpdateRequired failed, error = 0x80244019
+2008-03-22 18:53:24:377 808 ba0 Agent * WARNING: Skipping scan, self-update check returned 0x80244019
+2008-03-22 18:53:25:002 808 ba0 Agent * WARNING: Exit code = 0x80244019
+```
 
 
 
@@ -40,14 +42,14 @@ Upon troubleshooting the problem, I discovered that the **SelfUpdate**         v
 A little post mortem analysis further revealed the following event on COLOSSUS:
 
 
-> Event Type: Information  
->          Event Source: MsiInstaller  
->          Event Category: None  
->          Event ID: 11724  
->          Date: 3/22/2008  
->          Time: 7:17:29 AM  
->          Computer: COLOSSUS  
->          Description:  
+> Event Type: Information
+>          Event Source: MsiInstaller
+>          Event Category: None
+>          Event ID: 11724
+>          Date: 3/22/2008
+>          Time: 7:17:29 AM
+>          Computer: COLOSSUS
+>          Description:
 >          Product: Microsoft Windows Server Update Services 3.0 -- Removal completed successfully.
 
 

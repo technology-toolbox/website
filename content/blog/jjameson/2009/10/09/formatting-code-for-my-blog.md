@@ -10,8 +10,8 @@ tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx)
 > 
@@ -29,29 +29,33 @@ When I started looking at approaches for improving the formatting of code for my
 What I mean by semantic markup is that code should be wrapped in a `<code>` tag -- as well as a `<pre>` tag (in order to correctly display line breaks, indenting, etc.). To understand what I mean by semantic markup for code, consider the following example:
 
 
-    using System;
-    
-    public class Class1
+```
+using System;
+
+public class Class1
+{
+    public Class1()
     {
-        public Class1()
-        {
-            string foo = "foo";
-        }
+        string foo = "foo";
     }
+}
+```
 
 
 In HTML markup, this is expressed as:
 
 
-    <div class='codeBlock'><pre><code><span style='color:#0000ff'>using</span> System;
-    
-    <span style='color:#0000ff'>public</span> <span style='color:#0000ff'>class</span> <span style='color:#2b91af'>Class1
-    </span>{
-        <span style='color:#0000ff'>public</span> Class1()
-        {
-            <span style='color:#0000ff'>string</span> foo = <span style='color:#a31515'>"foo"</span>;
-        }
-    }</code></pre></div>
+```
+<div class='codeBlock'><pre><code><span style='color:#0000ff'>using</span> System;
+
+<span style='color:#0000ff'>public</span> <span style='color:#0000ff'>class</span> <span style='color:#2b91af'>Class1
+</span>{
+    <span style='color:#0000ff'>public</span> Class1()
+    {
+        <span style='color:#0000ff'>string</span> foo = <span style='color:#a31515'>"foo"</span>;
+    }
+}</code></pre></div>
+```
 
 
 The `<div class='codeBlock'>`element is used to constrain lengthy code blocks (i.e. show a vertical scrollbar when necessary) and also format code with a background color and border.
@@ -59,33 +63,37 @@ The `<div class='codeBlock'>`element is used to constrain lengthy code blocks (i
 Note that in the stricted sense, this isn't 100% semantic markup because the `<span>` tags are used to apply presentational styles, namely the various font colors. Truly semantic markup for code would specify something more like this:
 
 
-    <div class='codeBlock'><pre><code><span class='keyword'>using</span> System;
-    
-    <span class='keyword'>public</span> <span class='keyword'>class</span> <span class="userType">Class1
-    </span>{
-        <span class='keyword'>public</span> Class1()
-        {
-            <span class='keyword'>string</span> foo = <span class='string'>"foo"</span>;
-        }
+```
+<div class='codeBlock'><pre><code><span class='keyword'>using</span> System;
+
+<span class='keyword'>public</span> <span class='keyword'>class</span> <span class="userType">Class1
+</span>{
+    <span class='keyword'>public</span> Class1()
+    {
+        <span class='keyword'>string</span> foo = <span class='string'>"foo"</span>;
     }
-    </code></pre></div>
+}
+</code></pre></div>
+```
 
 
 CSS rules could then be used to achieve the color syntax highlighting:
 
 
-    code .keyword
-    {
-        color: #0000ff;
-    }
-    code .string
-    {
-        color: #a31515;
-    }
-    code .userType
-    {
-        color: #2b91af;
-    }
+```
+code .keyword
+{
+    color: #0000ff;
+}
+code .string
+{
+    color: #a31515;
+}
+code .userType
+{
+    color: #2b91af;
+}
+```
 
 
 Anyway, getting back to the real topic for this post...
@@ -111,267 +119,269 @@ Note that -- at least to this point -- I haven't made any attempt to generate 10
 Here's the updated code that I now use for my Rtf2Html.exe utility:
 
 
-    // Original source:
-    // http://blogs.msdn.com/delay/archive/2008/03/13/
-    // blogging-code-samples-should-be-easy-free-convertclipboardrtftohtmltext-tool-and-source-code.aspx
-    
-    using System;
-    using System.Collections.Generic;
-    using System.Drawing;
-    using System.Text;
-    using System.Windows.Forms;
-    
-    // Convert Visual Studio 2008 RTF clipboard format into HTML by replacing the
-    // clipboard contents with its HTML representation in text format suitable for
-    // pasting into a web page or blog.
-    // USE: Copy to clipboard in VS, run this app (no UI), paste converted text
-    // NOTE: This is NOT a general-purpose RTF-to-HTML converter! It works well
-    // enough on the simple input I've tried, but may break for other input.
-    // TODO: Convert into a real application with a notify icon and hotkey.
-    namespace ConvertClipboardRtfToHtmlText
+```
+// Original source:
+// http://blogs.msdn.com/delay/archive/2008/03/13/
+// blogging-code-samples-should-be-easy-free-convertclipboardrtftohtmltext-tool-and-source-code.aspx
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+// Convert Visual Studio 2008 RTF clipboard format into HTML by replacing the
+// clipboard contents with its HTML representation in text format suitable for
+// pasting into a web page or blog.
+// USE: Copy to clipboard in VS, run this app (no UI), paste converted text
+// NOTE: This is NOT a general-purpose RTF-to-HTML converter! It works well
+// enough on the simple input I've tried, but may break for other input.
+// TODO: Convert into a real application with a notify icon and hotkey.
+namespace ConvertClipboardRtfToHtmlText
+{
+    static class ConvertClipboardRtfToHtmlText
     {
-        static class ConvertClipboardRtfToHtmlText
+        private const string colorTbl = "\\colortbl;";
+        private const string colorFieldTag = "cf";
+        private const string tabExpansion = "    ";
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Microsoft.Maintainability",
+            "CA1502:AvoidExcessiveComplexity")]
+        [STAThread]
+        static void Main()
         {
-            private const string colorTbl = "\\colortbl;";
-            private const string colorFieldTag = "cf";
-            private const string tabExpansion = "    ";
-    
-            [System.Diagnostics.CodeAnalysis.SuppressMessage(
-                "Microsoft.Maintainability",
-                "CA1502:AvoidExcessiveComplexity")]
-            [STAThread]
-            static void Main()
+            if (Clipboard.ContainsText(TextDataFormat.Rtf))
             {
-                if (Clipboard.ContainsText(TextDataFormat.Rtf))
+                // Create color table, populate with default color
+                List<Color> colors = new List<Color>();
+                Color defaultColor = Color.FromArgb(0, 0, 0);
+                colors.Add(defaultColor);
+
+                bool insideSpan = false;
+
+                // Get RTF
+                string rtf = Clipboard.GetText(TextDataFormat.Rtf);
+
+                // Parse color table
+                int i = rtf.IndexOf(
+                    colorTbl,
+                    StringComparison.OrdinalIgnoreCase);
+
+                if (-1 != i)
                 {
-                    // Create color table, populate with default color
-                    List<Color> colors = new List<Color>();
-                    Color defaultColor = Color.FromArgb(0, 0, 0);
-                    colors.Add(defaultColor);
-    
-                    bool insideSpan = false;
-    
-                    // Get RTF
-                    string rtf = Clipboard.GetText(TextDataFormat.Rtf);
-    
-                    // Parse color table
-                    int i = rtf.IndexOf(
-                        colorTbl,
-                        StringComparison.OrdinalIgnoreCase);
-    
-                    if (-1 != i)
+                    i += colorTbl.Length;
+
+                    // When copying from Visual Studio, we expect
+                    // "\\colortbl;\r\n". However when copying from SQL Server
+                    // Management Studio, we expect just "\\colortbl;".
+                    SkipOptionalText(rtf, ref i, "\r\n");
+
+                    while ((i < rtf.Length) && ('}' != rtf[i]))
                     {
-                        i += colorTbl.Length;
-    
-                        // When copying from Visual Studio, we expect
-                        // "\\colortbl;\r\n". However when copying from SQL Server
-                        // Management Studio, we expect just "\\colortbl;".
+                        // Add color to color table
                         SkipOptionalText(rtf, ref i, "\r\n");
-    
-                        while ((i < rtf.Length) && ('}' != rtf[i]))
-                        {
-                            // Add color to color table
-                            SkipOptionalText(rtf, ref i, "\r\n");
-                            SkipExpectedText(rtf, ref i, "\\red");
-                            byte red = (byte)ParseNumericField(rtf, ref i);
-                            SkipExpectedText(rtf, ref i, "\\green");
-                            byte green = (byte)ParseNumericField(rtf, ref i);
-                            SkipExpectedText(rtf, ref i, "\\blue");
-                            byte blue = (byte)ParseNumericField(rtf, ref i);
-                            colors.Add(Color.FromArgb(red, green, blue));
-                            SkipOptionalText(rtf, ref i, "\r\n");
-                            SkipExpectedText(rtf, ref i, ";");
-                        }
+                        SkipExpectedText(rtf, ref i, "\\red");
+                        byte red = (byte)ParseNumericField(rtf, ref i);
+                        SkipExpectedText(rtf, ref i, "\\green");
+                        byte green = (byte)ParseNumericField(rtf, ref i);
+                        SkipExpectedText(rtf, ref i, "\\blue");
+                        byte blue = (byte)ParseNumericField(rtf, ref i);
+                        colors.Add(Color.FromArgb(red, green, blue));
+                        SkipOptionalText(rtf, ref i, "\r\n");
+                        SkipExpectedText(rtf, ref i, ";");
                     }
-                    else
+                }
+                else
+                {
+                    throw new NotSupportedException(
+                        "Missing/unknown colorTbl.");
+                }
+
+                // Find start of text and parse
+                i = rtf.IndexOf("\\fs", StringComparison.OrdinalIgnoreCase);
+                if (-1 != i)
+                {
+                    // Skip font size tag
+                    while ((i < rtf.Length) && (' ' != rtf[i]))
                     {
-                        throw new NotSupportedException(
-                            "Missing/unknown colorTbl.");
-                    }
-    
-                    // Find start of text and parse
-                    i = rtf.IndexOf("\\fs", StringComparison.OrdinalIgnoreCase);
-                    if (-1 != i)
-                    {
-                        // Skip font size tag
-                        while ((i < rtf.Length) && (' ' != rtf[i]))
-                        {
-                            i++;
-                        }
                         i++;
-    
-                        // Begin building HTML text
-                        StringBuilder sb = new StringBuilder();
-                        sb.Append("<div class='codeBlock'><pre><code>");
-                        while (i < rtf.Length)
+                    }
+                    i++;
+
+                    // Begin building HTML text
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("<div class='codeBlock'><pre><code>");
+                    while (i < rtf.Length)
+                    {
+                        if ('\\' == rtf[i])
                         {
-                            if ('\\' == rtf[i])
+                            // Parse escape code
+                            i++;
+                            if ((i < rtf.Length) &&
+                                (('{' == rtf[i])
+                                    || ('}' == rtf[i])
+                                    || ('\\' == rtf[i])))
                             {
-                                // Parse escape code
-                                i++;
-                                if ((i < rtf.Length) &&
-                                    (('{' == rtf[i])
-                                        || ('}' == rtf[i])
-                                        || ('\\' == rtf[i])))
-                                {
-                                    // Escaped '{' or '}' or '\'
-                                    sb.Append(rtf[i]);
-                                }
-                                else
-                                {
-                                    // Parse tag
-                                    int tagEnd = rtf.IndexOf(' ', i);
-                                    if (-1 != tagEnd)
-                                    {
-                                        if (rtf.Substring(
-                                            i,
-                                            tagEnd - i).StartsWith(
-                                                colorFieldTag,
-                                                StringComparison.OrdinalIgnoreCase))
-                                        {
-                                            // Parse color field tag
-                                            i += colorFieldTag.Length;
-                                            int colorIndex = ParseNumericField(rtf, ref i);
-                                            if ((colorIndex < 0)
-                                                || (colors.Count <= colorIndex))
-                                            {
-                                                throw new NotSupportedException(
-                                                    "Bad color index.");
-                                            }
-    
-                                            if (insideSpan == true)
-                                            {
-                                                sb.Append("</span>");
-                                                insideSpan = false;
-                                            }
-    
-                                            // Change to new color
-                                            if (colors[colorIndex] != defaultColor)
-                                            {
-                                                sb.AppendFormat(
-                                                    "<span style='color:#{0:x2}{1:x2}{2:x2}'>",
-                                                    colors[colorIndex].R, colors[colorIndex].G,
-                                                    colors[colorIndex].B);
-    
-                                                insideSpan = true;
-                                            }
-                                        }
-                                        else if ("par" ==
-                                            rtf.Substring(i, tagEnd - i))
-                                        {
-                                            sb.Append(Environment.NewLine);
-                                        }
-                                        else if ("tab" ==
-                                            rtf.Substring(i, tagEnd - i))
-                                        {
-                                            sb.Append(tabExpansion);
-                                        }
-    
-                                        // Skip tag
-                                        i = tagEnd;
-                                    }
-                                    else
-                                    {
-                                        throw new NotSupportedException(
-                                            "Malformed tag.");
-                                    }
-                                }
-                            }
-                            else if ('}' == rtf[i])
-                            {
-                                // Terminal curly; done
-                                break;
+                                // Escaped '{' or '}' or '\'
+                                sb.Append(rtf[i]);
                             }
                             else
                             {
-                                // Normal character; HTML-escape '<', '>', and '&'
-                                switch (rtf[i])
+                                // Parse tag
+                                int tagEnd = rtf.IndexOf(' ', i);
+                                if (-1 != tagEnd)
                                 {
-                                    case '<':
-                                        sb.Append("&lt;");
-                                        break;
-                                    case '>':
-                                        sb.Append("&gt;");
-                                        break;
-                                    case '&':
-                                        sb.Append("&amp;");
-                                        break;
-                                    default:
-                                        sb.Append(rtf[i]);
-                                        break;
+                                    if (rtf.Substring(
+                                        i,
+                                        tagEnd - i).StartsWith(
+                                            colorFieldTag,
+                                            StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        // Parse color field tag
+                                        i += colorFieldTag.Length;
+                                        int colorIndex = ParseNumericField(rtf, ref i);
+                                        if ((colorIndex < 0)
+                                            || (colors.Count <= colorIndex))
+                                        {
+                                            throw new NotSupportedException(
+                                                "Bad color index.");
+                                        }
+
+                                        if (insideSpan == true)
+                                        {
+                                            sb.Append("</span>");
+                                            insideSpan = false;
+                                        }
+
+                                        // Change to new color
+                                        if (colors[colorIndex] != defaultColor)
+                                        {
+                                            sb.AppendFormat(
+                                                "<span style='color:#{0:x2}{1:x2}{2:x2}'>",
+                                                colors[colorIndex].R, colors[colorIndex].G,
+                                                colors[colorIndex].B);
+
+                                            insideSpan = true;
+                                        }
+                                    }
+                                    else if ("par" ==
+                                        rtf.Substring(i, tagEnd - i))
+                                    {
+                                        sb.Append(Environment.NewLine);
+                                    }
+                                    else if ("tab" ==
+                                        rtf.Substring(i, tagEnd - i))
+                                    {
+                                        sb.Append(tabExpansion);
+                                    }
+
+                                    // Skip tag
+                                    i = tagEnd;
+                                }
+                                else
+                                {
+                                    throw new NotSupportedException(
+                                        "Malformed tag.");
                                 }
                             }
-                            i++;
                         }
-                        
-                        // Trim any trailing empty lines
-                        while ((2 <= sb.Length)
-                            && ('\r' == sb[sb.Length - 2])
-                            && ('\n' == sb[sb.Length - 1]))
+                        else if ('}' == rtf[i])
                         {
-                            sb.Length -= 2;
+                            // Terminal curly; done
+                            break;
                         }
-    
-                        // Finish building HTML text
-                        if (insideSpan == true)
+                        else
                         {
-                            sb.Append("</span>");
-                            insideSpan = false;
+                            // Normal character; HTML-escape '<', '>', and '&'
+                            switch (rtf[i])
+                            {
+                                case '<':
+                                    sb.Append("&lt;");
+                                    break;
+                                case '>':
+                                    sb.Append("&gt;");
+                                    break;
+                                case '&':
+                                    sb.Append("&amp;");
+                                    break;
+                                default:
+                                    sb.Append(rtf[i]);
+                                    break;
+                            }
                         }
-    
-                        sb.Append("</code></pre></div>");
-    
-                        // Update the clipboard text
-                        Clipboard.SetText(sb.ToString());
+                        i++;
                     }
-                    else
+                    
+                    // Trim any trailing empty lines
+                    while ((2 <= sb.Length)
+                        && ('\r' == sb[sb.Length - 2])
+                        && ('\n' == sb[sb.Length - 1]))
                     {
-                        throw new NotSupportedException(
-                            "Missing text section.");
+                        sb.Length -= 2;
                     }
-                }
-            }
-    
-            // Skip the specified text
-            private static void SkipExpectedText(string s, ref int i, string text)
-            {
-                foreach (char c in text)
-                {
-                    if ((s.Length <= i) || (c != s[i]))
+
+                    // Finish building HTML text
+                    if (insideSpan == true)
                     {
-                        throw new NotSupportedException("Expected text missing.");
+                        sb.Append("</span>");
+                        insideSpan = false;
                     }
-                    i++;
+
+                    sb.Append("</code></pre></div>");
+
+                    // Update the clipboard text
+                    Clipboard.SetText(sb.ToString());
                 }
-            }
-    
-            private static void SkipOptionalText(
-                string s,
-                ref int i,
-                string text)
-            {
-                string substring = s.Substring(i, text.Length);
-    
-                if (substring == text)
+                else
                 {
-                    i += text.Length;
+                    throw new NotSupportedException(
+                        "Missing text section.");
                 }
-            }
-    
-            // Parse a numeric field
-            private static int ParseNumericField(string s, ref int i)
-            {
-                int value = 0;
-                while ((i < s.Length) && char.IsDigit(s[i]))
-                {
-                    value *= 10;
-                    value += s[i] - '0';
-                    i++;
-                }
-                return value;
             }
         }
+
+        // Skip the specified text
+        private static void SkipExpectedText(string s, ref int i, string text)
+        {
+            foreach (char c in text)
+            {
+                if ((s.Length <= i) || (c != s[i]))
+                {
+                    throw new NotSupportedException("Expected text missing.");
+                }
+                i++;
+            }
+        }
+
+        private static void SkipOptionalText(
+            string s,
+            ref int i,
+            string text)
+        {
+            string substring = s.Substring(i, text.Length);
+
+            if (substring == text)
+            {
+                i += text.Length;
+            }
+        }
+
+        // Parse a numeric field
+        private static int ParseNumericField(string s, ref int i)
+        {
+            int value = 0;
+            while ((i < s.Length) && char.IsDigit(s[i]))
+            {
+                value *= 10;
+                value += s[i] - '0';
+                i++;
+            }
+            return value;
+        }
     }
+}
+```
 
 
 I suppose I could have kept the ConvertClipboardRtfToHtmlText moniker that David originally had, but for some reason I decided to abbreviate it. In hindsight, I'm really not sure why I didn't keep the name, but oh well...

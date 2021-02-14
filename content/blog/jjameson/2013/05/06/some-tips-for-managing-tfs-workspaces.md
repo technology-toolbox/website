@@ -24,14 +24,18 @@ Sometime last year, I discovered there's an easier way to do this, assuming you
 
 From a Visual Studio command prompt, simply use the <kbd>tfpt scorch</kbd> command. For example:
 
-  
-
-
-    cd "\NotBackedUp\Dow\Collaboration\ELN HD"
 
 
 
-    tfpt scorch Main /r
+```
+cd "\NotBackedUp\Dow\Collaboration\ELN HD"
+```
+
+
+
+```
+tfpt scorch Main /r
+```
 
 
 
@@ -47,19 +51,25 @@ In that case, you can combine the <kbd>tf.exe</kbd> utility with PowerShell to 
 
 I start by invoking PowerShell from a Visual Studio command prompt, changing to the root folder for the project, and then storing the output from the<kbd>tf dir</kbd> command in a variable:
 
-  
-  
-
-
-    PowerShell
 
 
 
-    cd C:\NotBackedUp\Dow\Collaboration
+
+```
+PowerShell
+```
 
 
 
-    $output = tf dir
+```
+cd C:\NotBackedUp\Dow\Collaboration
+```
+
+
+
+```
+$output = tf dir
+```
 
 
 
@@ -67,22 +77,24 @@ At this point, the `$output` variable contains something like:
 
 
 
-    $/Dow Collaboration:
-    $2007
-    $2010
-    $BuildProcessTemplates
-    $Byron's Code
-    $CoatingsSharePointFeature
-    $CoatingsSharePointFeature(before resource export)
-    $CoatingsSiteDirectory-v1
-    $CoatingsSiteDirectory-v2
-    $CoreServices
-    $ELN HD
-    ...
-    $ResearchPortal
-    $SharePointCustomBuildWorkflow
-    
-    21 item(s)
+```
+$/Dow Collaboration:
+$2007
+$2010
+$BuildProcessTemplates
+$Byron's Code
+$CoatingsSharePointFeature
+$CoatingsSharePointFeature(before resource export)
+$CoatingsSiteDirectory-v1
+$CoatingsSiteDirectory-v2
+$CoreServices
+$ELN HD
+...
+$ResearchPortal
+$SharePointCustomBuildWorkflow
+
+21 item(s)
+```
 
 
 
@@ -90,7 +102,9 @@ From this, I can parse the folder names in the team project. Note that I don't 
 
 
 
-    $tfFolders = $output[1..($output.Length - 3)]
+```
+$tfFolders = $output[1..($output.Length - 3)]
+```
 
 
 
@@ -98,19 +112,21 @@ Now the `$tfFolders` variable contains something like:
 
 
 
-    $2007
-    $2010
-    $BuildProcessTemplates
-    $Byron's Code
-    $CoatingsSharePointFeature
-    $CoatingsSharePointFeature(before resource export)
-    $CoatingsSiteDirectory-v1
-    $CoatingsSiteDirectory-v2
-    $CoreServices
-    $ELN HD
-    ...
-    $ResearchPortal
-    $SharePointCustomBuildWorkflow
+```
+$2007
+$2010
+$BuildProcessTemplates
+$Byron's Code
+$CoatingsSharePointFeature
+$CoatingsSharePointFeature(before resource export)
+$CoatingsSiteDirectory-v1
+$CoatingsSiteDirectory-v2
+$CoreServices
+$ELN HD
+...
+$ResearchPortal
+$SharePointCustomBuildWorkflow
+```
 
 
 
@@ -118,7 +134,9 @@ With this, I can quickly run as command to cloak all of the folders. However, n
 
 
 
-    $tfFolders | foreach { tf workfold /cloak $_.Substring(1) }
+```
+$tfFolders | foreach { tf workfold /cloak $_.Substring(1) }
+```
 
 
 
@@ -126,24 +144,32 @@ Now suppose that I want to build the **CoreServices **project. Consequently I n
 
 Here are the commands to only get the **Main **branch:
 
-  
-  
-  
-
-
-    tf workfold /decloak CoreServices
 
 
 
-    tf workfold /cloak CoreServices/Dev
+
+
+```
+tf workfold /decloak CoreServices
+```
 
 
 
-    tf workfold /cloak CoreServices/Release
+```
+tf workfold /cloak CoreServices/Dev
+```
 
 
 
-    tf get CoreServices /recursive
+```
+tf workfold /cloak CoreServices/Release
+```
+
+
+
+```
+tf get CoreServices /recursive
+```
 
 
 
@@ -151,70 +177,96 @@ At this point, my workspace contains an exact copy of the **Main**branch -- and
 
 Since I probably also want to build the latest version of the ELN and Research Portal solutions, I can use similar commands for those folders:
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-    tf workfold /decloak "ELN HD"
 
 
 
-    tf workfold /cloak "ELN HD/Business Data Connectivity Models"
 
 
 
-    tf workfold /cloak "ELN HD/Dev"
 
 
 
-    tf workfold /cloak "ELN HD/POC Code"
 
 
 
-    tf workfold /cloak "ELN HD/Release"
 
 
 
-    tf workfold /cloak "ELN HD/Security"
+```
+tf workfold /decloak "ELN HD"
+```
 
 
 
-    tf workfold /cloak "ELN HD/Storyboarding"
+```
+tf workfold /cloak "ELN HD/Business Data Connectivity Models"
+```
 
 
 
-    tf workfold /cloak "ELN HD/UserInterface"
+```
+tf workfold /cloak "ELN HD/Dev"
+```
 
 
 
-    tf get "ELN HD" /recursive
+```
+tf workfold /cloak "ELN HD/POC Code"
+```
 
 
 
-    tf workfold /decloak "ResearchPortal"
+```
+tf workfold /cloak "ELN HD/Release"
+```
 
 
 
-    tf workfold /cloak "ResearchPortal/Dev"
+```
+tf workfold /cloak "ELN HD/Security"
+```
 
 
 
-    tf workfold /cloak "ResearchPortal/Release"
+```
+tf workfold /cloak "ELN HD/Storyboarding"
+```
 
 
 
-    tf get "ResearchPortal" /recursive
+```
+tf workfold /cloak "ELN HD/UserInterface"
+```
+
+
+
+```
+tf get "ELN HD" /recursive
+```
+
+
+
+```
+tf workfold /decloak "ResearchPortal"
+```
+
+
+
+```
+tf workfold /cloak "ResearchPortal/Dev"
+```
+
+
+
+```
+tf workfold /cloak "ResearchPortal/Release"
+```
+
+
+
+```
+tf get "ResearchPortal" /recursive
+```
 
 
 

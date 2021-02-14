@@ -11,8 +11,8 @@ tags: ["Core Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx)
@@ -31,26 +31,28 @@ With NUnit, you could specify the expected message text of the exception and  NU
 
 
 
-    [TestMethod()]
-    [ExpectedException(typeof(ArgumentException))]
-    public void FindByWhidWithInvalidWhid()
+```
+[TestMethod()]
+[ExpectedException(typeof(ArgumentException))]
+public void FindByWhidWithInvalidWhid()
+{
+    const string expectedExceptionMessage = "A valid WHID must be specified.\r\nParameter name: whid";
+
+    string project1Url = Properties.Settings.Default.Project1Url;
+
+    SPSite site = new SPSite(project1Url);
+
+    try
     {
-        const string expectedExceptionMessage = "A valid WHID must be specified.\r\nParameter name: whid";
-    
-        string project1Url = Properties.Settings.Default.Project1Url;
-    
-        SPSite site = new SPSite(project1Url);
-    
-        try
-        {
-            PrimaryDocumentService.FindByWhid(site, 0);
-        }
-        catch (ArgumentException ex)
-        {
-            Assert.AreEqual(expectedExceptionMessage, ex.Message);
-            throw;
-        }
+        PrimaryDocumentService.FindByWhid(site, 0);
     }
+    catch (ArgumentException ex)
+    {
+        Assert.AreEqual(expectedExceptionMessage, ex.Message);
+        throw;
+    }
+}
+```
 
 
 

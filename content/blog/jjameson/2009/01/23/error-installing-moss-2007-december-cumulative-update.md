@@ -11,8 +11,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx)
@@ -39,12 +39,14 @@ Upon cracking open the upgrade log file, I found the following:
 
 
 
-    [SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating site-collection-scoped features...
-    [SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating feature 2b1e4cbf-b5ba-48a4-926a-37100ad77dee in site collection with URL "http://ssp-public-local/ssp/admin", force=False.
-    [SPWebTemplateSequence] [ERROR] [1/19/2009 6:35:31 AM]: Template OSRV#0: Exception thrown in activating SPSite scoped features for SPSite with URL "http://ssp-public-local/ssp/admin" (Id=9774ded8-a54e-49e7-b010-7f741446e28f). Skipping this SPSite for template upgrade.  Exception: System.InvalidOperationException: Feature '2b1e4cbf-b5ba-48a4-926a-37100ad77dee' is not installed in this farm, and can not be added to this scope.
-       at Microsoft.SharePoint.SPFeatureCollection.AddInternal(Guid featureId, SPFeaturePropertyCollection properties, Boolean force, Boolean fMarkOnly)
-       at Microsoft.SharePoint.SPFeatureCollection.Add(Guid featureId, Boolean force)
-       at Microsoft.SharePoint.Upgrade.SPWebTemplateSequence.ActivateSiteFeatures(List`1 lstsiteidToUpgrade, List`1& lstsiteidExceptions, List`1& lstwebinfoExceptions)
+```
+[SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating site-collection-scoped features...
+[SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating feature 2b1e4cbf-b5ba-48a4-926a-37100ad77dee in site collection with URL "http://ssp-public-local/ssp/admin", force=False.
+[SPWebTemplateSequence] [ERROR] [1/19/2009 6:35:31 AM]: Template OSRV#0: Exception thrown in activating SPSite scoped features for SPSite with URL "http://ssp-public-local/ssp/admin" (Id=9774ded8-a54e-49e7-b010-7f741446e28f). Skipping this SPSite for template upgrade.  Exception: System.InvalidOperationException: Feature '2b1e4cbf-b5ba-48a4-926a-37100ad77dee' is not installed in this farm, and can not be added to this scope.
+   at Microsoft.SharePoint.SPFeatureCollection.AddInternal(Guid featureId, SPFeaturePropertyCollection properties, Boolean force, Boolean fMarkOnly)
+   at Microsoft.SharePoint.SPFeatureCollection.Add(Guid featureId, Boolean force)
+   at Microsoft.SharePoint.Upgrade.SPWebTemplateSequence.ActivateSiteFeatures(List`1 lstsiteidToUpgrade, List`1& lstsiteidExceptions, List`1& lstwebinfoExceptions)
+```
 
 
 

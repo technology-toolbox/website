@@ -11,8 +11,8 @@ tags: ["Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx)
 > 

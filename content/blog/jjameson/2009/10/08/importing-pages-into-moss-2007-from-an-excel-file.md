@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx)
@@ -56,7 +56,9 @@ To convert an Excel file to a DataSet XML file:
 
 
 
-    ConvertToDataSet.exe Sample.xslx
+```
+ConvertToDataSet.exe Sample.xslx
+```
 
 
 
@@ -64,7 +66,9 @@ To import pages from the generated DataSet XML file:
 
 
 
-    ImportPages.exe http://fabrikam Sample.xml
+```
+ImportPages.exe http://fabrikam Sample.xml
+```
 
 
 
@@ -72,74 +76,76 @@ Here is the code for the ConvertToDataSet.exe utility:
 
 
 
-    using System;
-    using System.Data;
-    using System.IO;
-    
-    using Fabrikam.Demo.CoreServices;
-    
-    namespace Fabrikam.Demo.Tools.ConvertToDataSet
+```
+using System;
+using System.Data;
+using System.IO;
+
+using Fabrikam.Demo.CoreServices;
+
+namespace Fabrikam.Demo.Tools.ConvertToDataSet
+{
+    /// <summary>
+    /// Main class for the ConvertToDataSet.exe utility.
+    /// </summary>
+    class Program
     {
-        /// <summary>
-        /// Main class for the ConvertToDataSet.exe utility.
-        /// </summary>
-        class Program
+        private Program() { } // all members are static
+
+        private static void Main(
+            string[] args)
         {
-            private Program() { } // all members are static
-    
-            private static void Main(
-                string[] args)
+            if (args.Length != 1)
             {
-                if (args.Length != 1)
+                Console.Error.WriteLine(
+                    "Usage: ConvertToDataSet"
+                    + " {filename}");
+
+                Environment.Exit(1);
+            }
+
+            string inputFileName = args[0];
+
+            try
+            {
+                string fileExtension = Path.GetExtension(inputFileName);
+
+                if (string.Compare(
+                    fileExtension,
+                    ".xml",
+                    StringComparison.OrdinalIgnoreCase) == 0)
                 {
-                    Console.Error.WriteLine(
-                        "Usage: ConvertToDataSet"
-                        + " {filename}");
-    
-                    Environment.Exit(1);
+                    throw new ArgumentException(
+                        "Cannot convert an XML file to a DataSet.");
                 }
-    
-                string inputFileName = args[0];
-    
-                try
-                {
-                    string fileExtension = Path.GetExtension(inputFileName);
-    
-                    if (string.Compare(
-                        fileExtension,
-                        ".xml",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        throw new ArgumentException(
-                            "Cannot convert an XML file to a DataSet.");
-                    }
-    
-                    string outputFileName = Path.ChangeExtension(inputFileName, "xml");
-    
-                    DataSet data = DataSetHelper.LoadFromFile(inputFileName);
-    
-                    data.WriteXml(outputFileName);
-    
-                    Console.WriteLine(
-                        "DataSet serialized to file: {0}",
-                        outputFileName);
-    
-                    Environment.Exit(0);
-                }
-                catch (Exception ex)
-                {
-                    Console.Error.WriteLine(ex.Message);
-    
-    #if DEBUG
-                    Console.Error.WriteLine("(stack trace):");
-                    Console.Error.WriteLine(ex.StackTrace);
-    #endif
-    
-                    Environment.Exit(1);
-                }
+
+                string outputFileName = Path.ChangeExtension(inputFileName, "xml");
+
+                DataSet data = DataSetHelper.LoadFromFile(inputFileName);
+
+                data.WriteXml(outputFileName);
+
+                Console.WriteLine(
+                    "DataSet serialized to file: {0}",
+                    outputFileName);
+
+                Environment.Exit(0);
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine(ex.Message);
+
+#if DEBUG
+                Console.Error.WriteLine("(stack trace):");
+                Console.Error.WriteLine(ex.StackTrace);
+#endif
+
+                Environment.Exit(1);
             }
         }
     }
+}
+```
 
 
 
@@ -147,181 +153,183 @@ Note that the bulk of the code has been refactored into my `DataSetHelper`  clas
 
 
 
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.OleDb;
-    using System.Globalization;
-    using System.IO;
-    
-    namespace Fabrikam.Demo.CoreServices
+```
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
+using System.Globalization;
+using System.IO;
+
+namespace Fabrikam.Demo.CoreServices
+{
+    /// <summary>
+    /// Exposes static methods for commonly used helper functions for
+    /// the <see cref="System.Data.DataSet" /> class.
+    /// This class cannot be inherited.
+    /// </summary>
+    /// <remarks>
+    /// All methods of the <c>DataSetHelper</c> class are static and can
+    /// therefore be called without creating an instance of the class.
+    /// </remarks>
+    public sealed class DataSetHelper
     {
+        private DataSetHelper() { } // all members are static
+
         /// <summary>
-        /// Exposes static methods for commonly used helper functions for
-        /// the <see cref="System.Data.DataSet" /> class.
-        /// This class cannot be inherited.
+        /// Loads a DataSet from the specified file.
         /// </summary>
-        /// <remarks>
-        /// All methods of the <c>DataSetHelper</c> class are static and can
-        /// therefore be called without creating an instance of the class.
-        /// </remarks>
-        public sealed class DataSetHelper
+        /// <remarks>The input file may be an Excel file (.xls or .xlsx) or a
+        /// simple CSV file (i.e. comma-separated values).</remarks>
+        /// <param name="fileName">The filename (including the path) from which
+        /// to load the data.</param>
+        /// <returns>A <see cref="System.Data.DataSet" /> containing the data
+        /// read from the file.</returns>
+        public static DataSet LoadFromFile(
+            string fileName)
         {
-            private DataSetHelper() { } // all members are static
-    
-            /// <summary>
-            /// Loads a DataSet from the specified file.
-            /// </summary>
-            /// <remarks>The input file may be an Excel file (.xls or .xlsx) or a
-            /// simple CSV file (i.e. comma-separated values).</remarks>
-            /// <param name="fileName">The filename (including the path) from which
-            /// to load the data.</param>
-            /// <returns>A <see cref="System.Data.DataSet" /> containing the data
-            /// read from the file.</returns>
-            public static DataSet LoadFromFile(
-                string fileName)
+            if (fileName == null)
             {
-                if (fileName == null)
-                {
-                    throw new ArgumentNullException("fileName");
-                }
-                else if (string.IsNullOrEmpty(fileName) == true)
-                {
-                    throw new ArgumentException(
-                        "The file name must be specified.",
-                        "fileName");
-                }
-    
-                FileInfo inputFileInfo = new FileInfo(fileName);
-    
-                string connectionString = GetOleDbConnectionString(inputFileInfo);
-    
-                OleDbConnection connection = new OleDbConnection(connectionString);
-                connection.Open();
-    
-                string[] tableNames = GetTableNames(inputFileInfo, connection);
-    
-                DataSet data = new DataSet();
-                data.Locale = CultureInfo.InvariantCulture;
-    
-                foreach (string tableName in tableNames)
-                {
-                    DataTable table = data.Tables.Add(tableName);
-    
-                    string commandText = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "SELECT * FROM [{0}]",
-                        tableName);
-    
-                    OleDbCommand selectCommand = new OleDbCommand(
-                        commandText,
-                        connection);
-    
-                    OleDbDataAdapter adapter = new OleDbDataAdapter(selectCommand);
-    
-                    adapter.Fill(table);
-                }
-    
-                return data;
+                throw new ArgumentNullException("fileName");
             }
-    
-            private static string GetOleDbConnectionString(
-                FileInfo inputFileInfo)
+            else if (string.IsNullOrEmpty(fileName) == true)
             {
-                string connectionString = null;
-    
-                if (string.Compare(
-                    inputFileInfo.Extension,
-                    ".xls",
-                    StringComparison.OrdinalIgnoreCase) == 0)
-                {
-                    connectionString =
-                        @"Provider=Microsoft.Jet.OLEDB.4.0;"
-                        + "Data Source=" + inputFileInfo.FullName + ";"
-                        + "Extended Properties=\"Excel 8.0;HDR=YES;\"";
-                }
-                else if (string.Compare(
-                    inputFileInfo.Extension,
-                    ".xlsx",
-                    StringComparison.OrdinalIgnoreCase) == 0)
-                {
-                    connectionString =
-                        @"Provider=Microsoft.ACE.OLEDB.12.0;"
-                        + "Data Source=" + inputFileInfo.FullName + ";"
-                        + "Extended Properties=\"Excel 12.0;HDR=Yes;ReadOnly=true;"
-                        + "IMEX=1;\"";
-                }
-                else
-                {
-                    string folder = inputFileInfo.DirectoryName;
-    
-                    connectionString =
-                        @"Provider=Microsoft.Jet.OLEDB.4.0;"
-                        + "Data Source=" + folder + ";"
-                        + "Extended Properties=\"text;HDR=YES;FMT=Delimited;\"";
-    
-                }
-    
-                return connectionString;
+                throw new ArgumentException(
+                    "The file name must be specified.",
+                    "fileName");
             }
-    
-            private static string[] GetTableNames(
-                FileInfo inputFileInfo,
-                OleDbConnection connection)
+
+            FileInfo inputFileInfo = new FileInfo(fileName);
+
+            string connectionString = GetOleDbConnectionString(inputFileInfo);
+
+            OleDbConnection connection = new OleDbConnection(connectionString);
+            connection.Open();
+
+            string[] tableNames = GetTableNames(inputFileInfo, connection);
+
+            DataSet data = new DataSet();
+            data.Locale = CultureInfo.InvariantCulture;
+
+            foreach (string tableName in tableNames)
             {
-                bool isExcelFile = false;
-    
-                if (string.Compare(
-                    inputFileInfo.Extension,
-                    ".xls",
-                    StringComparison.OrdinalIgnoreCase) == 0)
+                DataTable table = data.Tables.Add(tableName);
+
+                string commandText = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "SELECT * FROM [{0}]",
+                    tableName);
+
+                OleDbCommand selectCommand = new OleDbCommand(
+                    commandText,
+                    connection);
+
+                OleDbDataAdapter adapter = new OleDbDataAdapter(selectCommand);
+
+                adapter.Fill(table);
+            }
+
+            return data;
+        }
+
+        private static string GetOleDbConnectionString(
+            FileInfo inputFileInfo)
+        {
+            string connectionString = null;
+
+            if (string.Compare(
+                inputFileInfo.Extension,
+                ".xls",
+                StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                connectionString =
+                    @"Provider=Microsoft.Jet.OLEDB.4.0;"
+                    + "Data Source=" + inputFileInfo.FullName + ";"
+                    + "Extended Properties=\"Excel 8.0;HDR=YES;\"";
+            }
+            else if (string.Compare(
+                inputFileInfo.Extension,
+                ".xlsx",
+                StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                connectionString =
+                    @"Provider=Microsoft.ACE.OLEDB.12.0;"
+                    + "Data Source=" + inputFileInfo.FullName + ";"
+                    + "Extended Properties=\"Excel 12.0;HDR=Yes;ReadOnly=true;"
+                    + "IMEX=1;\"";
+            }
+            else
+            {
+                string folder = inputFileInfo.DirectoryName;
+
+                connectionString =
+                    @"Provider=Microsoft.Jet.OLEDB.4.0;"
+                    + "Data Source=" + folder + ";"
+                    + "Extended Properties=\"text;HDR=YES;FMT=Delimited;\"";
+
+            }
+
+            return connectionString;
+        }
+
+        private static string[] GetTableNames(
+            FileInfo inputFileInfo,
+            OleDbConnection connection)
+        {
+            bool isExcelFile = false;
+
+            if (string.Compare(
+                inputFileInfo.Extension,
+                ".xls",
+                StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                isExcelFile = true;
+            }
+            else if (string.Compare(
+                inputFileInfo.Extension,
+                ".xlsx",
+                StringComparison.OrdinalIgnoreCase) == 0)
+            {
+                isExcelFile = true;
+            }
+
+            if (isExcelFile == true)
+            {
+                // Get all of the Table names from the Excel workbook 
+                DataTable worksheetTables = connection.GetOleDbSchemaTable(
+                    OleDbSchemaGuid.Tables,
+                    null);
+
+                List<string> tableNames = new List<string>();
+
+                for (int i = 0; i < worksheetTables.Rows.Count; i++)
                 {
-                    isExcelFile = true;
-                }
-                else if (string.Compare(
-                    inputFileInfo.Extension,
-                    ".xlsx",
-                    StringComparison.OrdinalIgnoreCase) == 0)
-                {
-                    isExcelFile = true;
-                }
-    
-                if (isExcelFile == true)
-                {
-                    // Get all of the Table names from the Excel workbook 
-                    DataTable worksheetTables = connection.GetOleDbSchemaTable(
-                        OleDbSchemaGuid.Tables,
-                        null);
-    
-                    List<string> tableNames = new List<string>();
-    
-                    for (int i = 0; i < worksheetTables.Rows.Count; i++)
+                    string tableName =
+                        (string)worksheetTables.Rows[i]["TABLE_NAME"];
+
+                    if (string.Compare(
+                        tableName,
+                        "_xlnm#_FilterDatabase",
+                        StringComparison.OrdinalIgnoreCase) == 0)
                     {
-                        string tableName =
-                            (string)worksheetTables.Rows[i]["TABLE_NAME"];
-    
-                        if (string.Compare(
-                            tableName,
-                            "_xlnm#_FilterDatabase",
-                            StringComparison.OrdinalIgnoreCase) == 0)
-                        {
-                            continue;
-                        }
-    
-                        tableNames.Add(tableName);
+                        continue;
                     }
-    
-                    return tableNames.ToArray();
+
+                    tableNames.Add(tableName);
                 }
-                else
-                {
-                    string[] tableNames = new string[1];
-                    tableNames[0] = inputFileInfo.Name;
-                    return tableNames;
-                }
+
+                return tableNames.ToArray();
+            }
+            else
+            {
+                string[] tableNames = new string[1];
+                tableNames[0] = inputFileInfo.Name;
+                return tableNames;
             }
         }
     }
+}
+```
 
 
 
@@ -331,258 +339,260 @@ Here's the code for the `PageImporter` class:
 
 
 
-    using System;
-    using System.Data;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.IO;
-    
-    using Microsoft.SharePoint;
-    using Microsoft.SharePoint.Publishing;
-    
-    using Fabrikam.Demo.CoreServices;
-    using Fabrikam.Demo.CoreServices.Logging;
-    using Fabrikam.Demo.CoreServices.SharePoint;
-    
-    namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
+```
+using System;
+using System.Data;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Publishing;
+
+using Fabrikam.Demo.CoreServices;
+using Fabrikam.Demo.CoreServices.Logging;
+using Fabrikam.Demo.CoreServices.SharePoint;
+
+namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
+{
+    /// <summary>
+    /// Exposes static methods for importing pages into a SharePoint site.
+    /// This class cannot be inherited.
+    /// </summary>
+    /// <remarks>
+    /// All methods of the <c>PageImporter</c> class are static and can
+    /// therefore be called without creating an instance of the class.
+    /// </remarks>    
+    class PageImporter
     {
+        private PageImporter() { } // all members are static 
+
         /// <summary>
-        /// Exposes static methods for importing pages into a SharePoint site.
-        /// This class cannot be inherited.
+        /// Imports pages into the specified SharePoint site using data from
+        /// the specified input file.
         /// </summary>
-        /// <remarks>
-        /// All methods of the <c>PageImporter</c> class are static and can
-        /// therefore be called without creating an instance of the class.
-        /// </remarks>    
-        class PageImporter
+        /// <param name="siteUrl">The URL of the SharePoint site.</param>
+        /// <param name="fileName">The filename (including the path) from which
+        /// to load the data.</param>
+        public static void Import(
+            string siteUrl,
+            string fileName)
         {
-            private PageImporter() { } // all members are static 
-    
-            /// <summary>
-            /// Imports pages into the specified SharePoint site using data from
-            /// the specified input file.
-            /// </summary>
-            /// <param name="siteUrl">The URL of the SharePoint site.</param>
-            /// <param name="fileName">The filename (including the path) from which
-            /// to load the data.</param>
-            public static void Import(
-                string siteUrl,
-                string fileName)
+            DataSet data = DataSetHelper.LoadFromFile(fileName);
+
+            using (SPSite site = new SPSite(siteUrl))
             {
-                DataSet data = DataSetHelper.LoadFromFile(fileName);
-    
-                using (SPSite site = new SPSite(siteUrl))
-                {
-                    Import(site, data);
-                }
+                Import(site, data);
             }
-    
-            private static void Import(
-                SPSite site,
-                DataSet data)
+        }
+
+        private static void Import(
+            SPSite site,
+            DataSet data)
+        {
+            foreach (DataTable table in data.Tables)
             {
-                foreach (DataTable table in data.Tables)
-                {
-                    Import(site, table);
-                }
+                Import(site, table);
             }
-    
-            private static void Import(
-                SPSite site,
-                DataTable table)
+        }
+
+        private static void Import(
+            SPSite site,
+            DataTable table)
+        {
+            SPWeb web = null;
+
+            foreach (DataRow row in table.Rows)
             {
-                SPWeb web = null;
-    
-                foreach (DataRow row in table.Rows)
-                {
-                    string webUrl = (string)row["WebUrl"];
-                    string pageUrlName = (string)row["PageUrlName"];
-    
-                    try
-                    {
-                        EnsureReferenceToExpectedWeb(site, ref web, webUrl);
-    
-                        Import(web, row);
-                    }
-                    catch (ArgumentNullException ex)
-                    {
-                        Logger.LogWarning(
-                            CultureInfo.InvariantCulture,
-                            "Error importing page ({0}) into Web ({1}) - {2}.",
-                            pageUrlName,
-                            webUrl,
-                            ex.Message);
-                    }
-                    catch (FileNotFoundException ex)
-                    {
-                        Logger.LogWarning(
-                            CultureInfo.InvariantCulture,
-                            "Error importing page ({0}) into Web ({1}) - {2}.",
-                            pageUrlName,
-                            webUrl,
-                            ex.Message);
-                    }
-                }
-    
-                if (web != null)
-                {
-                    web.Dispose();
-                }
-            }
-    
-            private static void EnsureReferenceToExpectedWeb(
-                SPSite site,
-                ref SPWeb web,
-                string expectedWebUrl)
-            {
-                Debug.Assert(string.IsNullOrEmpty(expectedWebUrl) == false);
-    
-                if (web == null)
-                {
-                    web = site.OpenWeb(expectedWebUrl);
-                }
-                else if (string.Compare(
-                    web.ServerRelativeUrl,
-                    expectedWebUrl,
-                    StringComparison.OrdinalIgnoreCase) != 0)
-                {
-                    web.Dispose();
-    
-                    web = site.OpenWeb(expectedWebUrl);
-                }
-            }
-    
-            private static void Import(
-                SPWeb web,
-                DataRow row)
-            {
+                string webUrl = (string)row["WebUrl"];
                 string pageUrlName = (string)row["PageUrlName"];
-    
-                string pageLayoutUrl =
-                    "_catalogs/masterpage/" + (string)row["PageLayout"];
-    
-                string pageTitle = null;
-                if (row.IsNull("Title") == false)
+
+                try
                 {
-                    pageTitle = (string)row["Title"];
-    
-                    if (pageTitle.Length == 255)
-                    {
-                        Logger.LogWarning(
-                            CultureInfo.InvariantCulture,
-                            "The title specified for the page ({0}) may have been"
-                                + " truncated, since it is exactly 255 characters.",
-                            pageUrlName);
-                    }
+                    EnsureReferenceToExpectedWeb(site, ref web, webUrl);
+
+                    Import(web, row);
                 }
-    
-                PublishingPage page = SharePointPublishingHelper.EnsurePage(
-                    web,
-                    pageUrlName,
-                    pageTitle,
-                    pageLayoutUrl);
-    
-                bool skipPageConfiguration =
-                    CheckIfPageImportShouldBeSkipped(
-                        page);
-    
-                if (skipPageConfiguration == true)
-                {
-                    return;
-                }
-    
-                SharePointPublishingHelper.EnsurePageIsCheckedOutToMe(
-                    page);
-    
-                page.Title = pageTitle;
-    
-                foreach (DataColumn column in row.Table.Columns)
-                {
-                    string columnName = column.ColumnName;
-    
-                    if (string.Compare(
-                        columnName,
-                        "WebUrl",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        continue;
-                    }
-                    else if (string.Compare(
-                        columnName,
-                        "PageUrlName",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        continue;
-                    }
-                    else if (string.Compare(
-                        columnName,
-                        "PageLayout",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        continue;
-                    }
-                    else if (string.Compare(
-                        columnName,
-                        "Title",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                    {
-                        continue;
-                    }
-    
-                    if (row.IsNull(columnName) == false)
-                    {
-                        page.ListItem[columnName] = row[columnName];
-                    }
-                }
-    
-                page.Update();
-    
-                SharePointPublishingHelper.PublishPage(
-                    page,
-                    "Published by Fabrikam.Demo.Tools.ImportPages.PageImporter.");
-            }
-    
-            private static bool CheckIfPageImportShouldBeSkipped(
-                PublishingPage page)
-            {
-                if (SharePointPublishingHelper.IsPageApproved(page))
-                {
-                    Logger.LogInfo(
-                        CultureInfo.InvariantCulture,
-                        "Skipping import of page ({0}/{1}) because the page"
-                            + " is approved.",
-                        page.ListItem.Web.Url,
-                        page.Url);
-    
-                    return true;
-                }
-    
-                bool isPageCheckedOut =
-                    SharePointPublishingHelper.IsPageCheckedOut(
-                        page);
-    
-                bool isPageCheckedOutToMe =
-                    SharePointPublishingHelper.IsPageCheckedOutToMe(
-                        page);
-    
-                if (isPageCheckedOut == true
-                    && isPageCheckedOutToMe == false)
+                catch (ArgumentNullException ex)
                 {
                     Logger.LogWarning(
                         CultureInfo.InvariantCulture,
-                        "Skipping import of page"
-                            + " ({0}/{1}) because the page is already checked"
-                            + " out to somebody else.",
-                        page.ListItem.Web.Url,
-                        page.Url);
-    
-                    return true;
+                        "Error importing page ({0}) into Web ({1}) - {2}.",
+                        pageUrlName,
+                        webUrl,
+                        ex.Message);
                 }
-    
-                return false;
+                catch (FileNotFoundException ex)
+                {
+                    Logger.LogWarning(
+                        CultureInfo.InvariantCulture,
+                        "Error importing page ({0}) into Web ({1}) - {2}.",
+                        pageUrlName,
+                        webUrl,
+                        ex.Message);
+                }
+            }
+
+            if (web != null)
+            {
+                web.Dispose();
             }
         }
+
+        private static void EnsureReferenceToExpectedWeb(
+            SPSite site,
+            ref SPWeb web,
+            string expectedWebUrl)
+        {
+            Debug.Assert(string.IsNullOrEmpty(expectedWebUrl) == false);
+
+            if (web == null)
+            {
+                web = site.OpenWeb(expectedWebUrl);
+            }
+            else if (string.Compare(
+                web.ServerRelativeUrl,
+                expectedWebUrl,
+                StringComparison.OrdinalIgnoreCase) != 0)
+            {
+                web.Dispose();
+
+                web = site.OpenWeb(expectedWebUrl);
+            }
+        }
+
+        private static void Import(
+            SPWeb web,
+            DataRow row)
+        {
+            string pageUrlName = (string)row["PageUrlName"];
+
+            string pageLayoutUrl =
+                "_catalogs/masterpage/" + (string)row["PageLayout"];
+
+            string pageTitle = null;
+            if (row.IsNull("Title") == false)
+            {
+                pageTitle = (string)row["Title"];
+
+                if (pageTitle.Length == 255)
+                {
+                    Logger.LogWarning(
+                        CultureInfo.InvariantCulture,
+                        "The title specified for the page ({0}) may have been"
+                            + " truncated, since it is exactly 255 characters.",
+                        pageUrlName);
+                }
+            }
+
+            PublishingPage page = SharePointPublishingHelper.EnsurePage(
+                web,
+                pageUrlName,
+                pageTitle,
+                pageLayoutUrl);
+
+            bool skipPageConfiguration =
+                CheckIfPageImportShouldBeSkipped(
+                    page);
+
+            if (skipPageConfiguration == true)
+            {
+                return;
+            }
+
+            SharePointPublishingHelper.EnsurePageIsCheckedOutToMe(
+                page);
+
+            page.Title = pageTitle;
+
+            foreach (DataColumn column in row.Table.Columns)
+            {
+                string columnName = column.ColumnName;
+
+                if (string.Compare(
+                    columnName,
+                    "WebUrl",
+                    StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    continue;
+                }
+                else if (string.Compare(
+                    columnName,
+                    "PageUrlName",
+                    StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    continue;
+                }
+                else if (string.Compare(
+                    columnName,
+                    "PageLayout",
+                    StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    continue;
+                }
+                else if (string.Compare(
+                    columnName,
+                    "Title",
+                    StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    continue;
+                }
+
+                if (row.IsNull(columnName) == false)
+                {
+                    page.ListItem[columnName] = row[columnName];
+                }
+            }
+
+            page.Update();
+
+            SharePointPublishingHelper.PublishPage(
+                page,
+                "Published by Fabrikam.Demo.Tools.ImportPages.PageImporter.");
+        }
+
+        private static bool CheckIfPageImportShouldBeSkipped(
+            PublishingPage page)
+        {
+            if (SharePointPublishingHelper.IsPageApproved(page))
+            {
+                Logger.LogInfo(
+                    CultureInfo.InvariantCulture,
+                    "Skipping import of page ({0}/{1}) because the page"
+                        + " is approved.",
+                    page.ListItem.Web.Url,
+                    page.Url);
+
+                return true;
+            }
+
+            bool isPageCheckedOut =
+                SharePointPublishingHelper.IsPageCheckedOut(
+                    page);
+
+            bool isPageCheckedOutToMe =
+                SharePointPublishingHelper.IsPageCheckedOutToMe(
+                    page);
+
+            if (isPageCheckedOut == true
+                && isPageCheckedOutToMe == false)
+            {
+                Logger.LogWarning(
+                    CultureInfo.InvariantCulture,
+                    "Skipping import of page"
+                        + " ({0}/{1}) because the page is already checked"
+                        + " out to somebody else.",
+                    page.ListItem.Web.Url,
+                    page.Url);
+
+                return true;
+            }
+
+            return false;
+        }
     }
+}
+```
 
 
 

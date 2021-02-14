@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx)
 > 
@@ -26,57 +26,59 @@ The following C# code shows how to configure an expiration policy on the specifi
 
 
 
-    using Microsoft.Office.RecordsManagement.InformationPolicy;
-    using Microsoft.SharePoint;
-    ...
-            private const string expirationPolicyFeatureId =
-                "Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration";
-    
-            private static void ConfigureExpirationPolicy(
-                SPList tempFilesLibrary)
+```
+using Microsoft.Office.RecordsManagement.InformationPolicy;
+using Microsoft.SharePoint;
+...
+        private const string expirationPolicyFeatureId =
+            "Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration";
+
+        private static void ConfigureExpirationPolicy(
+            SPList tempFilesLibrary)
+        {
+            Debug.Assert(tempFilesLibrary != null);
+
+            // HACK: Refresh the SPList object in order to avoid
+            // the following error when calling Policy.CreatePolicy:
+            //
+            // "The object has been updated by another user since it was last
+            // fetched."
+            SPList tempFilesLibrary2 =
+                tempFilesLibrary.ParentWeb.Lists[tempFilesLibrary.ID];
+            
+            SPContentTypeId documentContentTypeId =
+                tempFilesLibrary2.ContentTypes.BestMatch(
+                    SPBuiltInContentTypeId.Document);
+
+            SPContentType documentContentType =
+                tempFilesLibrary2.ContentTypes[documentContentTypeId];
+
+            Debug.Assert(documentContentType != null);
+            
+            Policy policy = Policy.GetPolicy(documentContentType);
+
+            if (policy == null)
             {
-                Debug.Assert(tempFilesLibrary != null);
-    
-                // HACK: Refresh the SPList object in order to avoid
-                // the following error when calling Policy.CreatePolicy:
-                //
-                // "The object has been updated by another user since it was last
-                // fetched."
-                SPList tempFilesLibrary2 =
-                    tempFilesLibrary.ParentWeb.Lists[tempFilesLibrary.ID];
-                
-                SPContentTypeId documentContentTypeId =
-                    tempFilesLibrary2.ContentTypes.BestMatch(
-                        SPBuiltInContentTypeId.Document);
-    
-                SPContentType documentContentType =
-                    tempFilesLibrary2.ContentTypes[documentContentTypeId];
-    
-                Debug.Assert(documentContentType != null);
-                
-                Policy policy = Policy.GetPolicy(documentContentType);
-    
-                if (policy == null)
-                {
-                    Policy.CreatePolicy(documentContentType, null);
-                    policy = Policy.GetPolicy(documentContentType);
-                }
-    
-                if (policy.Items[expirationPolicyFeatureId] == null)
-                {
-                    string customData =
-    "<data>"
-        + "<formula id=\"Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration.Formula.BuiltIn\">"
-            + "<number>1</number>"
-            + "<property>Created</property>"
-            + "<period>days</period>"
-        + "</formula>"
-        + "<action type=\"action\" id=\"Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration.Action.MoveToRecycleBin\" />"
-    + "</data>";
-    
-                    policy.Items.Add(expirationPolicyFeatureId, customData);
-                }
+                Policy.CreatePolicy(documentContentType, null);
+                policy = Policy.GetPolicy(documentContentType);
             }
+
+            if (policy.Items[expirationPolicyFeatureId] == null)
+            {
+                string customData =
+"<data>"
+    + "<formula id=\"Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration.Formula.BuiltIn\">"
+        + "<number>1</number>"
+        + "<property>Created</property>"
+        + "<period>days</period>"
+    + "</formula>"
+    + "<action type=\"action\" id=\"Microsoft.Office.RecordsManagement.PolicyFeatures.Expiration.Action.MoveToRecycleBin\" />"
++ "</data>";
+
+                policy.Items.Add(expirationPolicyFeatureId, customData);
+            }
+        }
+```
 
 
 

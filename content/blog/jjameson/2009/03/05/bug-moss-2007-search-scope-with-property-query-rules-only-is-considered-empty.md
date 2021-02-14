@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx)
@@ -32,7 +32,7 @@ To hack around this bug, add a **Web Address** rule, as shown below.
 ![Workaround for search scope bug](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg)
             Figure 2: Workaround for search scope bug
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg)  
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg)
 
 
      Note that in the screenshot above, **http://foobar** is the Web application     that I want to include content from, while excluding the "Pages" libraries themselves     from the results (i.e. items where **contentclass = STS\_List\_850**).     In other words, I want individual pages within the Pages library to appear in the     search results -- just not the actual **Pages** libraries themselves     (e.g. the **All Items **view of the list).     

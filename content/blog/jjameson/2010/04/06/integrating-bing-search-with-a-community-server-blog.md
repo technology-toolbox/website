@@ -10,8 +10,8 @@ tags: ["My System"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx)
 > 
@@ -40,27 +40,29 @@ Here's the gist of it:
 > To let your visitors search your website, add the following code to your page(s): 
 > 
 > 
->     <!-- Site search from Bing-->
->     <form method="get" action="http://www.bing.com/search">
->     <input type="hidden" name="cp" value="CODE PAGE USED BY YOUR HTML PAGE" />
->     <input type="hidden" name="FORM" value="FREESS" />
->       <table bgcolor="#FFFFFF">
->         <tr>
->           <td>
->             <a href="http://www.bing.com/">
->               <img src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
->                 border="0" ALT="Bing" />
->               </a>
->           </td>
->           <td>
->             <input type="text" name="q" size="30" />
->             <input type="submit" value="Search Site" />
->             <input type="hidden" name="q1" value="site:YOUR DOMAIN NAME GOES HERE" />
->           </td>
->         </tr>
->       </table>
->     </form>
->     <!-- Site Search from Bing -->
+> ```
+> <!-- Site search from Bing-->
+> <form method="get" action="http://www.bing.com/search">
+> <input type="hidden" name="cp" value="CODE PAGE USED BY YOUR HTML PAGE" />
+> <input type="hidden" name="FORM" value="FREESS" />
+>   <table bgcolor="#FFFFFF">
+>     <tr>
+>       <td>
+>         <a href="http://www.bing.com/">
+>           <img src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
+>             border="0" ALT="Bing" />
+>           </a>
+>       </td>
+>       <td>
+>         <input type="text" name="q" size="30" />
+>         <input type="submit" value="Search Site" />
+>         <input type="hidden" name="q1" value="site:YOUR DOMAIN NAME GOES HERE" />
+>       </td>
+>     </tr>
+>   </table>
+> </form>
+> <!-- Site Search from Bing -->
+> ```
 
 
 This seems pretty simple...but, unfortunately it's a little too simple (unless your site is serving up plain ol' HTML pages).
@@ -74,59 +76,61 @@ The good news is that the code snippet provided by the Bing folks above essentia
 Note that `method="get"` is specified on the `<form>` element. From this, we know that the values specified for any `<input>` elements are expected to be passed as query string parameters. With a little massaging of the HTML (to get rid of that nasty table-based layout) and crafting up some equivalent JavaScript, I came up with the following:
 
 
-    <script language="javascript" type="text/javascript">
-        function searchKeywords_onKeyPress(e) {
-            if (e == null) {
-                e = window.event;
-            }
-    
-            var key = e.keyCode ? e.keyCode : e.which;
-    
-            if (key == 13) {
-                return false;
-            }
-    
-            return true;
+```
+<script language="javascript" type="text/javascript">
+    function searchKeywords_onKeyPress(e) {
+        if (e == null) {
+            e = window.event;
         }
-        function showSearchResults() {
-            var codePage = 1252;
-            var siteUrl = "blogs.msdn.com/jjameson";
-    
-            var element = document.getElementById("searchKeywords");
-            var keywords = element.value;
-    
-            if (keywords != null) {
-                keywords = keywords.replace(/^\s+|\s+$/g, "");
-            }
-    
-            if (keywords == null
-            || keywords.length == 0) {
-                alert("Please enter one or more words to search for.");
-                return false;
-            }
-    
-            var searchResultsUrl = "http://www.bing.com/search";
-    
-            searchResultsUrl += "?cp=" + codePage;
-            searchResultsUrl += "&FORM=FREESS";
-            searchResultsUrl += "&q=" + keywords;
-            searchResultsUrl += " site:" + siteUrl;
-    
-            window.location.href = searchResultsUrl;
+
+        var key = e.keyCode ? e.keyCode : e.which;
+
+        if (key == 13) {
             return false;
         }
-    </script>
-    <div class="siteSearch">
-        <div class="searchIntro">
-            Search this blog using <a href="http://www.bing.com/">
-            <img alt="Bing" src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
-              style="vertical-align: middle;" />
-            </a></div>
-        <input id="searchKeywords" size="24" type="text"
-          onkeypress="return searchKeywords_onKeyPress(event);" />
-        <input name="submitBingSearch" onclick="return showSearchResults();"
-          type="button" value="Search" />
-    </div>
+
+        return true;
+    }
+    function showSearchResults() {
+        var codePage = 1252;
+        var siteUrl = "blogs.msdn.com/jjameson";
+
+        var element = document.getElementById("searchKeywords");
+        var keywords = element.value;
+
+        if (keywords != null) {
+            keywords = keywords.replace(/^\s+|\s+$/g, "");
+        }
+
+        if (keywords == null
+        || keywords.length == 0) {
+            alert("Please enter one or more words to search for.");
+            return false;
+        }
+
+        var searchResultsUrl = "http://www.bing.com/search";
+
+        searchResultsUrl += "?cp=" + codePage;
+        searchResultsUrl += "&FORM=FREESS";
+        searchResultsUrl += "&q=" + keywords;
+        searchResultsUrl += " site:" + siteUrl;
+
+        window.location.href = searchResultsUrl;
+        return false;
+    }
+</script>
+<div class="siteSearch">
+    <div class="searchIntro">
+        Search this blog using <a href="http://www.bing.com/">
+        <img alt="Bing" src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
+          style="vertical-align: middle;" />
+        </a></div>
+    <input id="searchKeywords" size="24" type="text"
+      onkeypress="return searchKeywords_onKeyPress(event);" />
+    <input name="submitBingSearch" onclick="return showSearchResults();"
+      type="button" value="Search" />
+</div>
+```
 
 
 Note that a little more JavaScript is required than I would actually prefer in order to avoid handle a couple of interesting scenarios.
@@ -140,7 +144,7 @@ If you have a Community Server blog, all you need to do is copy/paste the code p
 
 > **Update**
 > 
-> Right after I published this post, I discovered that Bing does not preserve the "q1" querystring parameter when submitting additional searches. In other words, if you search for "faceted search" from the search box on my blog, then everything works as expected (i.e. the results are limited to my blog posts); however if you subsequently change the search keywords on the Bing search results page (presumably because you want to search for something else on my blog), then the site filter (originally specified with the "q1" query string parameter) is lost and therefore you get results from the entire Web. Bummer.  
->   
+> Right after I published this post, I discovered that Bing does not preserve the "q1" querystring parameter when submitting additional searches. In other words, if you search for "faceted search" from the search box on my blog, then everything works as expected (i.e. the results are limited to my blog posts); however if you subsequently change the search keywords on the Bing search results page (presumably because you want to search for something else on my blog), then the site filter (originally specified with the "q1" query string parameter) is lost and therefore you get results from the entire Web. Bummer.
+> 
 > To resolve this issue, I modified the JavaScript to simply append the site filter to the "q" query string parameter instead.
 

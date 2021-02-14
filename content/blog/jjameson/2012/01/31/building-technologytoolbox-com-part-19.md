@@ -21,7 +21,7 @@ My Subtext fork does not currently include all of the changes I've made to Subt
 
 Here are the changes that I *haven't* yet merged into my Subtext fork:
 
-- HACK: The current implementation in the HtmlHelper.ConvertToAllowedHtml 	method results in extraneous line breaks between paragraphs in comments 	(e.g. "&lt;p&gt;foo&lt;/p&gt;{newline}  
+- HACK: The current implementation in the HtmlHelper.ConvertToAllowedHtml 	method results in extraneous line breaks between paragraphs in comments 	(e.g. "&lt;p&gt;foo&lt;/p&gt;{newline}
 
 &lt;p&gt;bar&lt;/p&gt;" becomes "&lt;p&gt;foo&lt;/p&gt;&lt;br/&gt;&lt;p&gt;bar&lt;/p&gt;"). 	To avoid formatting issues, remove the &lt;br/&gt; elements added by the 	HtmlHelper.HtmlSafe method when paragraphs are separated by newline characters
 - Tweak messages displayed to blog readers

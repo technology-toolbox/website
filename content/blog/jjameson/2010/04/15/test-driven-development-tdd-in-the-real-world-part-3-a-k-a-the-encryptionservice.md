@@ -11,8 +11,8 @@ tags: ["My System", "Core Development"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx)
@@ -43,69 +43,71 @@ Now we can write a couple of very simple unit tests:
 
 
 
-    using System;
-    
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    
-    namespace Fabrikam.Demo.Security.DeveloperTests
+```
+using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Fabrikam.Demo.Security.DeveloperTests
+{
+    /// <summary>
+    /// Contains unit tests for the
+    /// <see cref="Fabrikam.Demo.Security.EncryptionService" />
+    /// class.
+    /// </summary>
+    [TestClass]
+    public class EncryptionServiceTest
     {
+        private TestContext testContextInstance;
+
         /// <summary>
-        /// Contains unit tests for the
-        /// <see cref="Fabrikam.Demo.Security.EncryptionService" />
-        /// class.
-        /// </summary>
-        [TestClass]
-        public class EncryptionServiceTest
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
         {
-            private TestContext testContextInstance;
-    
-            /// <summary>
-            ///Gets or sets the test context which provides
-            ///information about and functionality for the current test run.
-            ///</summary>
-            public TestContext TestContext
+            get
             {
-                get
-                {
-                    return testContextInstance;
-                }
-                set
-                {
-                    testContextInstance = value;
-                }
+                return testContextInstance;
             }
-    
-            /// <summary>
-            /// Validates that a simple string is encrypted successfully.
-            /// </summary>
-            [TestMethod]
-            public void Encrypt001()
+            set
             {
-                string plaintext = "foobar";
-    
-                string ciphertext = EncryptionService.Encrypt(plaintext);
-    
-                Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
-                Assert.AreNotEqual<string>(plaintext, ciphertext);
-            }
-    
-            /// <summary>
-            /// Validates that a simple string is encrypted and subsequently
-            /// decrypted successfully.
-            /// </summary>
-            [TestMethod]
-            public void Decrypt001()
-            {
-                string plaintext = "foobar";
-                string expected = plaintext;
-                string ciphertext = EncryptionService.Encrypt(plaintext);
-               
-                string actual = EncryptionService.Decrypt(ciphertext);
-    
-                Assert.AreEqual<string>(expected, actual);
+                testContextInstance = value;
             }
         }
+
+        /// <summary>
+        /// Validates that a simple string is encrypted successfully.
+        /// </summary>
+        [TestMethod]
+        public void Encrypt001()
+        {
+            string plaintext = "foobar";
+
+            string ciphertext = EncryptionService.Encrypt(plaintext);
+
+            Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
+            Assert.AreNotEqual<string>(plaintext, ciphertext);
+        }
+
+        /// <summary>
+        /// Validates that a simple string is encrypted and subsequently
+        /// decrypted successfully.
+        /// </summary>
+        [TestMethod]
+        public void Decrypt001()
+        {
+            string plaintext = "foobar";
+            string expected = plaintext;
+            string ciphertext = EncryptionService.Encrypt(plaintext);
+           
+            string actual = EncryptionService.Decrypt(ciphertext);
+
+            Assert.AreEqual<string>(expected, actual);
+        }
     }
+}
+```
 
 
 
@@ -115,36 +117,38 @@ If we attempt to build the solution at this point, we get some compilation error
 
 
 
-    namespace Fabrikam.Demo.Security
+```
+namespace Fabrikam.Demo.Security
+{
+    /// <summary>
+    /// Provides basic services for encrypting sensitive data.
+    /// </summary>
+    /// <remarks>
+    /// All methods of the <c>EncryptionService</c> class are static and can
+    /// therefore be called without creating an instance of the class.
+    /// </remarks>
+    public static class EncryptionService
     {
         /// <summary>
-        /// Provides basic services for encrypting sensitive data.
+        /// Encrypts the specified text.
         /// </summary>
-        /// <remarks>
-        /// All methods of the <c>EncryptionService</c> class are static and can
-        /// therefore be called without creating an instance of the class.
-        /// </remarks>
-        public static class EncryptionService
+        public static string Encrypt(
+            string plaintext)
         {
-            /// <summary>
-            /// Encrypts the specified text.
-            /// </summary>
-            public static string Encrypt(
-                string plaintext)
-            {
-                return plaintext;
-            }
-    
-            /// <summary>
-            /// Decrypts the specified text.
-            /// </summary>
-            public static string Decrypt(
-                string ciphertext)
-            {
-                return ciphertext;
-            }
+            return plaintext;
+        }
+
+        /// <summary>
+        /// Decrypts the specified text.
+        /// </summary>
+        public static string Decrypt(
+            string ciphertext)
+        {
+            return ciphertext;
         }
     }
+}
+```
 
 
 
@@ -158,18 +162,20 @@ Well, that certainly isn't good. Let's modify the unit test a little to ensure  
 
 
 
-    [TestMethod]
-            public void Decrypt001()
-            {
-                string plaintext = "foobar";
-                string expected = plaintext;
-                string ciphertext = EncryptionService.Encrypt(plaintext);
-               
-                string actual = EncryptionService.Decrypt(ciphertext);
-    
-                Assert.AreEqual<string>(expected, actual);
-                Assert.AreNotEqual<string>(plaintext, ciphertext);
-            }
+```
+[TestMethod]
+        public void Decrypt001()
+        {
+            string plaintext = "foobar";
+            string expected = plaintext;
+            string ciphertext = EncryptionService.Encrypt(plaintext);
+           
+            string actual = EncryptionService.Decrypt(ciphertext);
+
+            Assert.AreEqual<string>(expected, actual);
+            Assert.AreNotEqual<string>(plaintext, ciphertext);
+        }
+```
 
 
 
@@ -183,11 +189,13 @@ Perhaps you'd rather see a more meaningful message when the test fails. In that 
 
 
 
-    Assert.AreNotEqual<string>(
-                    plaintext,
-                    ciphertext,
-                    "The encrypted text (ciphertext) should not be the same as the"
-                        + " unencrypted text (plaintext).");
+```
+Assert.AreNotEqual<string>(
+                plaintext,
+                ciphertext,
+                "The encrypted text (ciphertext) should not be the same as the"
+                    + " unencrypted text (plaintext).");
+```
 
 
 
@@ -230,72 +238,74 @@ With that in mind, let's copy/paste the unit tests for the **EncryptionService*
 
 
 
-    using System;
-    
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-    
-    using Fabrikam.Demo.Security;
-    
-    namespace Fabrikam.Demo.Security.DeveloperTests
+```
+using System;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using Fabrikam.Demo.Security;
+
+namespace Fabrikam.Demo.Security.DeveloperTests
+{
+    /// <summary>
+    /// Contains unit tests for the
+    /// <see cref="Fabrikam.Demo.Security.InternalEncryptionService" />
+    /// class.
+    /// </summary>
+    [TestClass]
+    public class InternalEncryptionServiceTest
     {
+        private TestContext testContextInstance;
+
         /// <summary>
-        /// Contains unit tests for the
-        /// <see cref="Fabrikam.Demo.Security.InternalEncryptionService" />
-        /// class.
-        /// </summary>
-        [TestClass]
-        public class InternalEncryptionServiceTest
+        ///Gets or sets the test context which provides
+        ///information about and functionality for the current test run.
+        ///</summary>
+        public TestContext TestContext
         {
-            private TestContext testContextInstance;
-    
-            /// <summary>
-            ///Gets or sets the test context which provides
-            ///information about and functionality for the current test run.
-            ///</summary>
-            public TestContext TestContext
+            get
             {
-                get
-                {
-                    return testContextInstance;
-                }
-                set
-                {
-                    testContextInstance = value;
-                }
+                return testContextInstance;
             }
-    
-            /// <summary>
-            /// Validates that a simple string is encrypted successfully.
-            /// </summary>
-            [TestMethod]
-            public void Encrypt001()
+            set
             {
-                string plaintext = "foobar";
-    
-                string ciphertext = InternalEncryptionService.Encrypt(plaintext);
-    
-                Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
-                Assert.AreNotEqual<string>(plaintext, ciphertext);
-            }
-    
-            /// <summary>
-            /// Validates that a simple string is encrypted and subsequently
-            /// decrypted successfully.
-            /// </summary>
-            [TestMethod]
-            public void Decrypt001()
-            {
-                string plaintext = "foobar";
-                string expected = plaintext;
-                string ciphertext = InternalEncryptionService.Encrypt(plaintext);
-    
-                string actual = InternalEncryptionService.Decrypt(ciphertext);
-    
-                Assert.AreEqual<string>(expected, actual);
-                Assert.AreNotEqual<string>(plaintext, ciphertext);
+                testContextInstance = value;
             }
         }
+
+        /// <summary>
+        /// Validates that a simple string is encrypted successfully.
+        /// </summary>
+        [TestMethod]
+        public void Encrypt001()
+        {
+            string plaintext = "foobar";
+
+            string ciphertext = InternalEncryptionService.Encrypt(plaintext);
+
+            Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
+            Assert.AreNotEqual<string>(plaintext, ciphertext);
+        }
+
+        /// <summary>
+        /// Validates that a simple string is encrypted and subsequently
+        /// decrypted successfully.
+        /// </summary>
+        [TestMethod]
+        public void Decrypt001()
+        {
+            string plaintext = "foobar";
+            string expected = plaintext;
+            string ciphertext = InternalEncryptionService.Encrypt(plaintext);
+
+            string actual = InternalEncryptionService.Decrypt(ciphertext);
+
+            Assert.AreEqual<string>(expected, actual);
+            Assert.AreNotEqual<string>(plaintext, ciphertext);
+        }
     }
+}
+```
 
 
 
@@ -315,38 +325,40 @@ Next, copy/paste the **EncryptionService **class (i.e. EncryptionService.cs)  to
 
 
 
-    using System.Web.Security;
-    
-    namespace Fabrikam.Demo.Security
+```
+using System.Web.Security;
+
+namespace Fabrikam.Demo.Security
+{
+    /// <summary>
+    /// Provides basic services for encrypting sensitive data.
+    /// </summary>
+    /// <remarks>
+    /// This class derives from SqlMembershipProvider in order to leverage the
+    /// EncryptPassword and DecryptPassword methods.
+    /// </remarks>
+    internal class InternalEncryptionService : SqlMembershipProvider
     {
         /// <summary>
-        /// Provides basic services for encrypting sensitive data.
+        /// Encrypts the specified text.
         /// </summary>
-        /// <remarks>
-        /// This class derives from SqlMembershipProvider in order to leverage the
-        /// EncryptPassword and DecryptPassword methods.
-        /// </remarks>
-        internal class InternalEncryptionService : SqlMembershipProvider
+        public static string Encrypt(
+            string plaintext)
         {
-            /// <summary>
-            /// Encrypts the specified text.
-            /// </summary>
-            public static string Encrypt(
-                string plaintext)
-            {
-                return plaintext;
-            }
-    
-            /// <summary>
-            /// Decrypts the specified text.
-            /// </summary>
-            public static string Decrypt(
-                string ciphertext)
-            {
-                return ciphertext;
-            }
+            return plaintext;
+        }
+
+        /// <summary>
+        /// Decrypts the specified text.
+        /// </summary>
+        public static string Decrypt(
+            string ciphertext)
+        {
+            return ciphertext;
         }
     }
+}
+```
 
 
 
@@ -365,27 +377,29 @@ An alternative for this scenario -- since our class is marked as `internal`  -- 
 
 
 
-    using System.Reflection;
-    using System.Runtime.CompilerServices;
-    using System.Runtime.InteropServices;
-    
-    // Note: Shared assembly information is specified in SharedAssemblyInfo.cs
-    
-    // General Information about an assembly is controlled through the following 
-    // set of attributes. Change these attribute values to modify the information
-    // associated with an assembly.
-    [assembly: AssemblyTitle("Fabrikam.Demo.Security")]
-    [assembly: AssemblyCulture("")]
-    
-    // The following GUID is for the ID of the typelib if this project is exposed to COM
-    [assembly: Guid("7ac9b463-c89b-425a-aeae-c6cc8c318aea")]
-    
-    [assembly: InternalsVisibleTo("Fabrikam.Demo.Security.DeveloperTests, PublicKey="
-        + "00240000048000009400000006020000002400005253413100040000010001008748be47"
-            + "c45d376f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee16"
-            + "92d1f33fa16f8f7f3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e"
-            + "0b3e266ff5266292e22254b567f51c80ce404188643aa17a1378eff241ed01a36b3d"
-            + "64c127334a0ba4eec58f95f3606e73e103053006d0bf")]
+```
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// Note: Shared assembly information is specified in SharedAssemblyInfo.cs
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("Fabrikam.Demo.Security")]
+[assembly: AssemblyCulture("")]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("7ac9b463-c89b-425a-aeae-c6cc8c318aea")]
+
+[assembly: InternalsVisibleTo("Fabrikam.Demo.Security.DeveloperTests, PublicKey="
+    + "00240000048000009400000006020000002400005253413100040000010001008748be47"
+        + "c45d376f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee16"
+        + "92d1f33fa16f8f7f3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e"
+        + "0b3e266ff5266292e22254b567f51c80ce404188643aa17a1378eff241ed01a36b3d"
+        + "64c127334a0ba4eec58f95f3606e73e103053006d0bf")]
+```
 
 
 
@@ -420,16 +434,18 @@ Start by replacing the implementation of the **Encrypt** method  in the **Intern
 
 
 
-    public string Encrypt(
-                string plaintext)
-            {
-                byte[] data = Encoding.Unicode.GetBytes(plaintext);
-    
-                byte[] encryptedData = base.EncryptPassword(data);
-    
-                string ciphertext = Convert.ToBase64String(encryptedData);
-                return ciphertext;
-            }
+```
+public string Encrypt(
+            string plaintext)
+        {
+            byte[] data = Encoding.Unicode.GetBytes(plaintext);
+
+            byte[] encryptedData = base.EncryptPassword(data);
+
+            string ciphertext = Convert.ToBase64String(encryptedData);
+            return ciphertext;
+        }
+```
 
 
 
@@ -437,16 +453,18 @@ Similarly, replace the implementation of the **Decrypt** method  in the **Intern
 
 
 
-    public string Decrypt(
-                string ciphertext)
-            {
-                byte[] encryptedData = Convert.FromBase64String(ciphertext);
-    
-                byte[] decryptedData = base.DecryptPassword(encryptedData);
-    
-                string plainText = Encoding.Unicode.GetString(decryptedData);
-                return plainText;
-            }
+```
+public string Decrypt(
+            string ciphertext)
+        {
+            byte[] encryptedData = Convert.FromBase64String(ciphertext);
+
+            byte[] decryptedData = base.DecryptPassword(encryptedData);
+
+            string plainText = Encoding.Unicode.GetString(decryptedData);
+            return plainText;
+        }
+```
 
 
 
@@ -464,12 +482,14 @@ Add the following app.config file to the **Security.DeveloperTests**  project (t
 
 
 
-    <?xml version="1.0" encoding="utf-8" ?>
-    <configuration>
-      <system.web>
-        <machineKey decryptionKey="18E2D4EF487E48CD69AE82ADEB1495D40B4E437C1A4D231A" />
-      </system.web>
-    </configuration>
+```
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.web>
+    <machineKey decryptionKey="18E2D4EF487E48CD69AE82ADEB1495D40B4E437C1A4D231A" />
+  </system.web>
+</configuration>
+```
 
 
 
@@ -481,30 +501,32 @@ The next step is to get the remaining unit tests (i.e. the two for the **Encrypt
 
 
 
-    public static class EncryptionService
+```
+public static class EncryptionService
+    {
+        /// <summary>
+        /// Encrypts the specified text.
+        /// </summary>
+        public static string Encrypt(
+            string plaintext)
         {
-            /// <summary>
-            /// Encrypts the specified text.
-            /// </summary>
-            public static string Encrypt(
-                string plaintext)
-            {
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                return service.Encrypt(plaintext);
-            }
-    
-            /// <summary>
-            /// Decrypts the specified text.
-            /// </summary>
-            public static string Decrypt(
-                string ciphertext)
-            {
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                return service.Decrypt(ciphertext);
-            }
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            return service.Encrypt(plaintext);
         }
+
+        /// <summary>
+        /// Decrypts the specified text.
+        /// </summary>
+        public static string Decrypt(
+            string ciphertext)
+        {
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            return service.Decrypt(ciphertext);
+        }
+    }
+```
 
 
 
@@ -522,33 +544,35 @@ We should definitely make the code more robust by validating the parameters in  
 
 
 
-    /// <summary>
-            /// Validates that an exception is thrown when the input string is null.
-            /// </summary>
-            [TestMethod()]
-            [ExpectedException(typeof(ArgumentNullException))]
-            public void EncryptWithInvalidParameter001()
+```
+/// <summary>
+        /// Validates that an exception is thrown when the input string is null.
+        /// </summary>
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void EncryptWithInvalidParameter001()
+        {
+            const string plaintext = null;
+
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            const string expectedExceptionMessage =
+                "Value cannot be null."
+                + "\r\nParameter name: plaintext";
+
+            try
             {
-                const string plaintext = null;
-    
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                const string expectedExceptionMessage =
-                    "Value cannot be null."
-                    + "\r\nParameter name: plaintext";
-    
-                try
-                {
-                    // Prevent code analysis warning (CA1804) by not assigning
-                    // the return value to a local variable.
-                    service.Encrypt(plaintext);
-                }
-                catch (ArgumentNullException ex)
-                {
-                    Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                    throw;
-                }
+                // Prevent code analysis warning (CA1804) by not assigning
+                // the return value to a local variable.
+                service.Encrypt(plaintext);
             }
+            catch (ArgumentNullException ex)
+            {
+                Assert.AreEqual(expectedExceptionMessage, ex.Message);
+                throw;
+            }
+        }
+```
 
 
 
@@ -559,33 +583,35 @@ Add another unit test to validate that an empty string is also handled as expect
 
 
 
-    /// <summary>
-            /// Validates that an exception is thrown when the input string is empty.
-            /// </summary>
-            [TestMethod()]
-            [ExpectedException(typeof(ArgumentException))]
-            public void EncryptWithInvalidParameter002()
+```
+/// <summary>
+        /// Validates that an exception is thrown when the input string is empty.
+        /// </summary>
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void EncryptWithInvalidParameter002()
+        {
+            string plaintext = string.Empty;
+
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            const string expectedExceptionMessage =
+                "Value cannot be empty."
+                + "\r\nParameter name: plaintext";
+
+            try
             {
-                string plaintext = string.Empty;
-    
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                const string expectedExceptionMessage =
-                    "Value cannot be empty."
-                    + "\r\nParameter name: plaintext";
-    
-                try
-                {
-                    // Prevent code analysis warning (CA1804) by not assigning
-                    // the return value to a local variable.
-                    service.Encrypt(plaintext);
-                }
-                catch (ArgumentException ex)
-                {
-                    Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                    throw;
-                }
+                // Prevent code analysis warning (CA1804) by not assigning
+                // the return value to a local variable.
+                service.Encrypt(plaintext);
             }
+            catch (ArgumentException ex)
+            {
+                Assert.AreEqual(expectedExceptionMessage, ex.Message);
+                throw;
+            }
+        }
+```
 
 
 
@@ -597,21 +623,23 @@ Assuming we agree with this expected behavior for encrypting an empty string  (w
 
 
 
-    /// <summary>
-            /// Validates that an empty string is encrypted successfully.
-            /// </summary>
-            [TestMethod]
-            public void Encrypt002()
-            {
-                string plaintext = string.Empty;
-    
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                string ciphertext = service.Encrypt(plaintext);
-    
-                Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
-                Assert.AreNotEqual<string>(plaintext, ciphertext);
-            }
+```
+/// <summary>
+        /// Validates that an empty string is encrypted successfully.
+        /// </summary>
+        [TestMethod]
+        public void Encrypt002()
+        {
+            string plaintext = string.Empty;
+
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            string ciphertext = service.Encrypt(plaintext);
+
+            Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
+            Assert.AreNotEqual<string>(plaintext, ciphertext);
+        }
+```
 
 
 
@@ -629,79 +657,81 @@ Consequently we should consider making the **Encrypt **and **Decrypt **methods m
 
 
 
-    namespace Fabrikam.Demo.Security
+```
+namespace Fabrikam.Demo.Security
+{
+    /// <summary>
+    /// Provides basic services for encrypting sensitive data.
+    /// </summary>
+    /// <remarks>
+    /// All methods of the <c>EncryptionService</c> class are static and can
+    /// therefore be called without creating an instance of the class.
+    /// </remarks>
+    public static class EncryptionService
     {
         /// <summary>
-        /// Provides basic services for encrypting sensitive data.
+        /// Encrypts the specified text.
         /// </summary>
-        /// <remarks>
-        /// All methods of the <c>EncryptionService</c> class are static and can
-        /// therefore be called without creating an instance of the class.
-        /// </remarks>
-        public static class EncryptionService
+        /// <param name="plaintext">The text to encrypt.</param>
+        /// <returns>The encrypted text ("ciphertext") based on the specified
+        /// input.</returns>
+        public static string Encrypt(
+            string plaintext)
         {
-            /// <summary>
-            /// Encrypts the specified text.
-            /// </summary>
-            /// <param name="plaintext">The text to encrypt.</param>
-            /// <returns>The encrypted text ("ciphertext") based on the specified
-            /// input.</returns>
-            public static string Encrypt(
-                string plaintext)
-            {
-                return Encrypt(plaintext, null);
-            }
-    
-            /// <summary>
-            /// Encrypts the specified text, using the optional entropy (if
-            /// specified) to make the encryption more secure.
-            /// </summary>
-            /// <param name="plaintext">The text to encrypt.</param>
-            /// <param name="entropy">An additional "secret" (e.g. password "salt")
-            /// that will need to be specified when subsequently decrypting the
-            /// encrypted text.</param>
-            /// <returns>The encrypted text ("ciphertext") based on the specified
-            /// input.</returns>
-            public static string Encrypt(
-                string plaintext,
-                string entropy)
-            {
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                return service.Encrypt(plaintext, entropy);
-            }
-    
-            /// <summary>
-            /// Decrypts the specified text.
-            /// </summary>
-            /// <param name="ciphertext">The text to decrypt.</param>
-            /// <returns>The decrypted text ("plaintext") based on the specified
-            /// input.</returns>
-            public static string Decrypt(
-                string ciphertext)
-            {
-                return Decrypt(ciphertext, null);
-            }
-    
-            /// <summary>
-            /// Decrypts the specified text, using the entropy originally specified
-            /// when encrypting the data.
-            /// </summary>
-            /// <param name="ciphertext">The text to decrypt.</param>
-            /// <param name="entropy">The additional "secret" (e.g. password "salt")
-            /// previously specified when encrypting the data.</param>
-            /// <returns>The decrypted text ("plaintext") based on the specified
-            /// input.</returns>
-            public static string Decrypt(
-                string ciphertext,
-                string entropy)
-            {
-                InternalEncryptionService service = new InternalEncryptionService();
-    
-                return service.Decrypt(ciphertext, entropy);
-            }
+            return Encrypt(plaintext, null);
+        }
+
+        /// <summary>
+        /// Encrypts the specified text, using the optional entropy (if
+        /// specified) to make the encryption more secure.
+        /// </summary>
+        /// <param name="plaintext">The text to encrypt.</param>
+        /// <param name="entropy">An additional "secret" (e.g. password "salt")
+        /// that will need to be specified when subsequently decrypting the
+        /// encrypted text.</param>
+        /// <returns>The encrypted text ("ciphertext") based on the specified
+        /// input.</returns>
+        public static string Encrypt(
+            string plaintext,
+            string entropy)
+        {
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            return service.Encrypt(plaintext, entropy);
+        }
+
+        /// <summary>
+        /// Decrypts the specified text.
+        /// </summary>
+        /// <param name="ciphertext">The text to decrypt.</param>
+        /// <returns>The decrypted text ("plaintext") based on the specified
+        /// input.</returns>
+        public static string Decrypt(
+            string ciphertext)
+        {
+            return Decrypt(ciphertext, null);
+        }
+
+        /// <summary>
+        /// Decrypts the specified text, using the entropy originally specified
+        /// when encrypting the data.
+        /// </summary>
+        /// <param name="ciphertext">The text to decrypt.</param>
+        /// <param name="entropy">The additional "secret" (e.g. password "salt")
+        /// previously specified when encrypting the data.</param>
+        /// <returns>The decrypted text ("plaintext") based on the specified
+        /// input.</returns>
+        public static string Decrypt(
+            string ciphertext,
+            string entropy)
+        {
+            InternalEncryptionService service = new InternalEncryptionService();
+
+            return service.Decrypt(ciphertext, entropy);
         }
     }
+}
+```
 
 
 

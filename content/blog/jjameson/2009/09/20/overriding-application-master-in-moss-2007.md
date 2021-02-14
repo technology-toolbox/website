@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx)
 > 
@@ -36,139 +36,141 @@ In order to force pages that are hard-coded to use application.master (such as \
 Here is the code for the custom HttpHandler:
 
 
-    namespace Fabrikam.Project1.PublishingLayouts.Web.UI
+```
+namespace Fabrikam.Project1.PublishingLayouts.Web.UI
+{
+    public class ApplicationPageHandlerFactory : PageHandlerFactory
     {
-        public class ApplicationPageHandlerFactory : PageHandlerFactory
+        [EnvironmentPermission(SecurityAction.LinkDemand, Unrestricted = true)]
+        public override IHttpHandler GetHandler(
+            HttpContext context,
+            string requestType,
+            string url,
+            string pathTranslated)
         {
-            [EnvironmentPermission(SecurityAction.LinkDemand, Unrestricted = true)]
-            public override IHttpHandler GetHandler(
-                HttpContext context,
-                string requestType,
-                string url,
-                string pathTranslated)
+            IHttpHandler pageHandler = base.GetHandler(
+                context,
+                requestType,
+                url,
+                pathTranslated);
+
+            Debug.Assert(pageHandler != null, "pageHandler is null");
+            
+            Page page = pageHandler as Page;
+            Debug.Assert(page != null, "Handler is not of type Page.");
+
+            page.PreInit += new EventHandler(Page_PreInit);
+
+            return pageHandler;
+        }
+
+        private void Page_PreInit(
+            object sender,
+            EventArgs e)
+        {
+            if (SPContext.Current == null)
             {
-                IHttpHandler pageHandler = base.GetHandler(
-                    context,
-                    requestType,
-                    url,
-                    pathTranslated);
-    
-                Debug.Assert(pageHandler != null, "pageHandler is null");
-                
-                Page page = pageHandler as Page;
-                Debug.Assert(page != null, "Handler is not of type Page.");
-    
-                page.PreInit += new EventHandler(Page_PreInit);
-    
-                return pageHandler;
+                Logger.LogWarning(
+                    "ApplicationPageHandlerFactory::Page_PreInit - "
+                    + "SPContext.Current is null"
+                    + " (this is normal when deleting a site).");
+
+                return;
             }
-    
-            private void Page_PreInit(
-                object sender,
-                EventArgs e)
+
+            SPWeb web = SPContext.Current.Web;
+            
+            if (web == null)
             {
-                if (SPContext.Current == null)
-                {
-                    Logger.LogWarning(
-                        "ApplicationPageHandlerFactory::Page_PreInit - "
-                        + "SPContext.Current is null"
-                        + " (this is normal when deleting a site).");
-    
-                    return;
-                }
-    
-                SPWeb web = SPContext.Current.Web;
-                
-                if (web == null)
-                {
-                    Logger.LogWarning(
-                        "ApplicationPageHandlerFactory::Page_PreInit - "
-                        + "SPContext.Current.Web is null.");
-    
-                    return;
-                }
-    
-                Page page = (Page)sender;
-                if (page == null)
-                {
-                    Debug.Fail("sender is null.");
-    
-                    // If this actually happens in a Release build, simply log a
-                    // warning, but don't throw an exception
-                    Logger.LogWarning(
-                        "ApplicationPageHandlerFactory::Page_PreInit - "
-                        + "sender is null.");
-    
-                    return;
-                }
-    
-                bool overrideMasterPage = ShouldOverrideMasterPage(page);
-    
-                if (overrideMasterPage == false)
-                {
-                    return;
-                }
-    
-                OverrideMasterPageFromSharePointSite(web, page);
+                Logger.LogWarning(
+                    "ApplicationPageHandlerFactory::Page_PreInit - "
+                    + "SPContext.Current.Web is null.");
+
+                return;
             }
-    
-            private static void OverrideMasterPageFromSharePointSite(
-                SPWeb web,
-                Page page)
+
+            Page page = (Page)sender;
+            if (page == null)
             {
-                Debug.Assert(web != null);
-                Debug.Assert(page != null);
-    
-                if (string.IsNullOrEmpty(web.MasterUrl) == true)
-                {
-                    Debug.Fail("web.MasterUrl is null or empty.");
-    
-                    // If this actually happens in a Release build, simply log a
-                    // warning, but don't throw an exception
-                    Logger.LogWarning(
-                        CultureInfo.InvariantCulture,
-                        "ApplicationPageHandlerFactory - "
-                        + "web.MasterUrl is null or empty for {0}.",
-                        web.Url);
-    
-                    return;
-                }
-    
-                Logger.LogDebug(
+                Debug.Fail("sender is null.");
+
+                // If this actually happens in a Release build, simply log a
+                // warning, but don't throw an exception
+                Logger.LogWarning(
+                    "ApplicationPageHandlerFactory::Page_PreInit - "
+                    + "sender is null.");
+
+                return;
+            }
+
+            bool overrideMasterPage = ShouldOverrideMasterPage(page);
+
+            if (overrideMasterPage == false)
+            {
+                return;
+            }
+
+            OverrideMasterPageFromSharePointSite(web, page);
+        }
+
+        private static void OverrideMasterPageFromSharePointSite(
+            SPWeb web,
+            Page page)
+        {
+            Debug.Assert(web != null);
+            Debug.Assert(page != null);
+
+            if (string.IsNullOrEmpty(web.MasterUrl) == true)
+            {
+                Debug.Fail("web.MasterUrl is null or empty.");
+
+                // If this actually happens in a Release build, simply log a
+                // warning, but don't throw an exception
+                Logger.LogWarning(
                     CultureInfo.InvariantCulture,
-                    "Setting master page for {0} to {1}...",
-                    page.Request.Url,
-                    web.MasterUrl);
-    
-                page.MasterPageFile = web.MasterUrl;
+                    "ApplicationPageHandlerFactory - "
+                    + "web.MasterUrl is null or empty for {0}.",
+                    web.Url);
+
+                return;
             }
-    
-            private static bool ShouldOverrideMasterPage(
-                Page page)
+
+            Logger.LogDebug(
+                CultureInfo.InvariantCulture,
+                "Setting master page for {0} to {1}...",
+                page.Request.Url,
+                web.MasterUrl);
+
+            page.MasterPageFile = web.MasterUrl;
+        }
+
+        private static bool ShouldOverrideMasterPage(
+            Page page)
+        {
+            Debug.Assert(page != null);
+
+            // Note: _layouts/Help.aspx does not specify a master page
+            if (string.IsNullOrEmpty(page.MasterPageFile))
             {
-                Debug.Assert(page != null);
-    
-                // Note: _layouts/Help.aspx does not specify a master page
-                if (string.IsNullOrEmpty(page.MasterPageFile))
-                {
-                    Logger.LogDebug("Page does not specify master page file.");
-                    return false;
-                }
-    
-                // Note: _layouts/Error.aspx specifies "~/_layouts/simple.master"
-                string masterPageFile = page.MasterPageFile.ToLower(
-                    CultureInfo.InvariantCulture);
-    
-                if (masterPageFile.Contains("_layouts/application.master") == false)
-                {
-                    Logger.LogDebug("Master page file does not specify _layouts/application.master.");
-                    return false;
-                }
-    
-                return true;
+                Logger.LogDebug("Page does not specify master page file.");
+                return false;
             }
+
+            // Note: _layouts/Error.aspx specifies "~/_layouts/simple.master"
+            string masterPageFile = page.MasterPageFile.ToLower(
+                CultureInfo.InvariantCulture);
+
+            if (masterPageFile.Contains("_layouts/application.master") == false)
+            {
+                Logger.LogDebug("Master page file does not specify _layouts/application.master.");
+                return false;
+            }
+
+            return true;
         }
     }
+}
+```
 
 
 Note that the HttpHandler must hook into the PreInit phase of the page lifecycle, because ASP.NET only allows the master page to be changed up to this point. Also note that there's a little more conditional logic than you might expect in order to account for infrequent -- but nevertheless very important -- scenarios, such as deleting a site.
@@ -186,17 +188,19 @@ To configure the custom HttpHandler for application pages (a.k.a. \_layouts page
 Simply comment out the default PageHandlerFactory and add the custom ApplicationPageHandlerFactory:
 
 
-    <httpHandlers>
-          <!--
-          <add verb="*" path="*.aspx"
-            type="System.Web.UI.PageHandlerFactory, System.Web,
-              Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-          -->
-          <add verb="*" path="*.aspx"
-            type="Fabrikam.Project1.PublishingLayouts.Web.UI.ApplicationPageHandlerFactory,
-              Fabrikam.Project1.PublishingLayouts,
-              Version=1.0.0.0, Culture=neutral, PublicKeyToken=d006e8e37357742f" />
-        </httpHandlers>
+```
+<httpHandlers>
+      <!--
+      <add verb="*" path="*.aspx"
+        type="System.Web.UI.PageHandlerFactory, System.Web,
+          Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      -->
+      <add verb="*" path="*.aspx"
+        type="Fabrikam.Project1.PublishingLayouts.Web.UI.ApplicationPageHandlerFactory,
+          Fabrikam.Project1.PublishingLayouts,
+          Version=1.0.0.0, Culture=neutral, PublicKeyToken=d006e8e37357742f" />
+    </httpHandlers>
+```
 
 
 Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:

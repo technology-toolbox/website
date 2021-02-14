@@ -11,8 +11,8 @@ tags: ["SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx)
 > 

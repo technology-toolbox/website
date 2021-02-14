@@ -9,8 +9,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx)
 > 
@@ -30,54 +30,56 @@ Unfortunately, PublishingRollupImage essentially equates to an `<img>` HTML elem
 To workaround this issue, I recommend creating a separate field (column) called **PublishingRollupImageUrl** (with a display name of **Rollup Image URL**) and using an [event receiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spitemeventreceiver.aspx) to automatically set this field whenever an item is updated (by extracting the image URL from the PublishingRollupImage field).
 
 
-    public override void ItemUpdating(
-                SPItemEventProperties properties)
+```
+public override void ItemUpdating(
+            SPItemEventProperties properties)
+        {
+            SPListItem updatedPage = properties.ListItem;
+
+            // Update PublishingRollupImageUrl (a simple Text field) based on
+            // PublishingRollupImage (a Publishing Image field).
+            // Note that Publishing Image fields are not compatible with
+            // SharePoint Search (i.e. attempting to map a managed property
+            // to a Publishing Image field results in a managed property
+            // that is always empty).
+            ImageFieldValue searchImage =
+                (ImageFieldValue)updatedPage["Rollup Image"];
+
+            if (searchImage == null)
             {
-                SPListItem updatedPage = properties.ListItem;
-    
-                // Update PublishingRollupImageUrl (a simple Text field) based on
-                // PublishingRollupImage (a Publishing Image field).
-                // Note that Publishing Image fields are not compatible with
-                // SharePoint Search (i.e. attempting to map a managed property
-                // to a Publishing Image field results in a managed property
-                // that is always empty).
-                ImageFieldValue searchImage =
-                    (ImageFieldValue)updatedPage["Rollup Image"];
-    
-                if (searchImage == null)
-                {
-                    Logger.LogInfo(
-                        CultureInfo.InvariantCulture,
-                        "Setting PublishingRollupImageUrl on page ({0}/{1})"
-                            + " to null because no rollup image is specified.",
-                        updatedPage.Web.Url,
-                        updatedPage.Url);
-    
-                    updatedPage["Rollup Image URL"] = null;
-                }
-                else
-                {
-                    Logger.LogInfo(
-                        CultureInfo.InvariantCulture,
-                        "Setting PublishingRollupImageUrl on page ({0}/{1})"
-                            + " to '{2}'.",
-                        updatedPage.Web.Url,
-                        updatedPage.Url,
-                        searchImage.ImageUrl);
-    
-                    updatedPage["Rollup Image URL"] = searchImage.ImageUrl;
-                }
-    
-                try
-                {
-                    this.DisableEventFiring();
-                    updatedPage.SystemUpdate(false);
-                }
-                finally
-                {
-                    this.EnableEventFiring();
-                }
+                Logger.LogInfo(
+                    CultureInfo.InvariantCulture,
+                    "Setting PublishingRollupImageUrl on page ({0}/{1})"
+                        + " to null because no rollup image is specified.",
+                    updatedPage.Web.Url,
+                    updatedPage.Url);
+
+                updatedPage["Rollup Image URL"] = null;
             }
+            else
+            {
+                Logger.LogInfo(
+                    CultureInfo.InvariantCulture,
+                    "Setting PublishingRollupImageUrl on page ({0}/{1})"
+                        + " to '{2}'.",
+                    updatedPage.Web.Url,
+                    updatedPage.Url,
+                    searchImage.ImageUrl);
+
+                updatedPage["Rollup Image URL"] = searchImage.ImageUrl;
+            }
+
+            try
+            {
+                this.DisableEventFiring();
+                updatedPage.SystemUpdate(false);
+            }
+            finally
+            {
+                this.EnableEventFiring();
+            }
+        }
+```
 
 
 You can then create the **PublishingRollupImage** managed property, map it to **ows\_PublishingRollupImageUrl**, and subsequently display the rollup images in search results similar to the Content Query Web Part.

@@ -13,8 +13,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx)

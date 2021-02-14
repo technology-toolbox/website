@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx)
@@ -56,14 +56,16 @@ I tested three different indexes on the **AllUserData** table and  found similar
 
 
 
-    CREATE INDEX Idx_AllUserData_Tmp2
-    ON AllUserData
-    (
-          tp_DirName
-          , tp_LeafName
-          , tp_SiteId
-          , tp_Level
-    )
+```
+CREATE INDEX Idx_AllUserData_Tmp2
+ON AllUserData
+(
+      tp_DirName
+      , tp_LeafName
+      , tp_SiteId
+      , tp_Level
+)
+```
 
 
 

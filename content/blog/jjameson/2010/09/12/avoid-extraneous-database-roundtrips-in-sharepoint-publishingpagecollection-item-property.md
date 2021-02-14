@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx)
 > 
@@ -36,25 +36,27 @@ Here is the original code I started out with:
 
 
 
-    private static void AppendPages(
-                SPWeb web,
-                TextWriter writer)
+```
+private static void AppendPages(
+            SPWeb web,
+            TextWriter writer)
+        {
+            Debug.Assert(web != null);
+            Debug.Assert(writer != null);
+
+            List<string> pageUrls = GetSitePagesInNavigationOrder(web);
+
+            PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
+
+            PublishingPageCollection pages = pubWeb.GetPublishingPages();
+
+            foreach (string pageUrl in pageUrls)
             {
-                Debug.Assert(web != null);
-                Debug.Assert(writer != null);
-    
-                List<string> pageUrls = GetSitePagesInNavigationOrder(web);
-    
-                PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
-    
-                PublishingPageCollection pages = pubWeb.GetPublishingPages();
-    
-                foreach (string pageUrl in pageUrls)
-                {
-                    PublishingPage page = pages[pageUrl];
-                    AppendPage(writer, page);
-                }
+                PublishingPage page = pages[pageUrl];
+                AppendPage(writer, page);
             }
+        }
+```
 
 
 
@@ -66,7 +68,9 @@ Upon closer inspection, I found that each call to the [PublishingPageCollection.
 
 
 
-    PublishingPage page = pages[pageUrl];
+```
+PublishingPage page = pages[pageUrl];
+```
 
 
 
@@ -76,25 +80,27 @@ I found that by replacing the **PublishingPageCollection **indexer with my own (
 
 
 
-    private static PublishingPage GetPublishingPage2(
-                PublishingPageCollection pages,
-                string pageUrl)
+```
+private static PublishingPage GetPublishingPage2(
+            PublishingPageCollection pages,
+            string pageUrl)
+        {
+            Debug.Assert(pages != null);
+            Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
+
+            foreach (PublishingPage page in pages)
             {
-                Debug.Assert(pages != null);
-                Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
-    
-                foreach (PublishingPage page in pages)
+                if (page.Url == pageUrl)
                 {
-                    if (page.Url == pageUrl)
-                    {
-                        return page;
-                    }
+                    return page;
                 }
-    
-                throw new ArgumentException(
-                    "The specified page was not found in the collection.",
-                    "pageUrl");
             }
+
+            throw new ArgumentException(
+                "The specified page was not found in the collection.",
+                "pageUrl");
+        }
+```
 
 
 
@@ -106,15 +112,19 @@ For example, accessing the **[PublishingPage.Layout](http://msdn.microsoft.com/e
 
 
 
-    const string expectedPageLayout = "PageFromDocLayout.aspx";
-    
-                if (page.Layout.Name != expectedPageLayout)
-                {
+```
+const string expectedPageLayout = "PageFromDocLayout.aspx";
+
+            if (page.Layout.Name != expectedPageLayout)
+            {
+```
 
 
 
-    ...
-                }
+```
+...
+            }
+```
 
 
 
@@ -126,214 +136,216 @@ Here is the complete code sample from my proof-of-concept (in case you want to w
 
 
 
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.IO;
-    using System.Text;
-    
-    using Microsoft.SharePoint;
-    using Microsoft.SharePoint.Navigation;
-    using Microsoft.SharePoint.Publishing;
-    
-    namespace MyConsoleApplication
+```
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Text;
+
+using Microsoft.SharePoint;
+using Microsoft.SharePoint.Navigation;
+using Microsoft.SharePoint.Publishing;
+
+namespace MyConsoleApplication
+{
+    static class PublishingDemo
     {
-        static class PublishingDemo
+        static Guid publishingPageContentFieldId =
+            new Guid("{f55c4d88-1f2e-4ad9-aaa8-819af4ee7ee8}");
+
+        public static void Execute()
         {
-            static Guid publishingPageContentFieldId =
-                new Guid("{f55c4d88-1f2e-4ad9-aaa8-819af4ee7ee8}");
-    
-            public static void Execute()
+            const string siteUrl = "http://foobar";
+            const string webUrl = "/Branch-Management/Post-Orders/Acme";
+            const string documentTitle = "Post Orders";
+
+            StringBuilder buffer = new StringBuilder();
+
+            using (StringWriter writer = new StringWriter(
+                buffer,
+                CultureInfo.InvariantCulture))
             {
-                const string siteUrl = "http://foobar";
-                const string webUrl = "/Branch-Management/Post-Orders/Acme";
-                const string documentTitle = "Post Orders";
-    
-                StringBuilder buffer = new StringBuilder();
-    
-                using (StringWriter writer = new StringWriter(
-                    buffer,
-                    CultureInfo.InvariantCulture))
+                using (SPSite site = new SPSite(siteUrl))
                 {
-                    using (SPSite site = new SPSite(siteUrl))
+                    using (SPWeb web = site.OpenWeb(webUrl))
                     {
-                        using (SPWeb web = site.OpenWeb(webUrl))
-                        {
-                            AggregateSitePages(web, writer, documentTitle);
-                        }
+                        AggregateSitePages(web, writer, documentTitle);
                     }
                 }
-    
-                string aggregatedContent = buffer.ToString();
-    
-                Console.WriteLine(aggregatedContent);
             }
-    
-            private static void AggregateSitePages(
-                SPWeb web,
-                TextWriter writer,
-                string documentTitle)
+
+            string aggregatedContent = buffer.ToString();
+
+            Console.WriteLine(aggregatedContent);
+        }
+
+        private static void AggregateSitePages(
+            SPWeb web,
+            TextWriter writer,
+            string documentTitle)
+        {
+            Debug.Assert(web != null);
+            Debug.Assert(writer != null);
+
+            writer.WriteLine(
+@"<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+    'http://www.w3.org/TR/html4/loose.dtd'>");
+
+            writer.Write(
+@"<html>
+    <head>
+        <meta content='en-us' http-equiv='Content-Language' />
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+        <title>");
+
+            writer.Write(documentTitle);
+            writer.WriteLine(
+@"</title>
+    </head>
+    <body>");
+
+            AppendPages(web, writer);
+
+            writer.WriteLine(
+@"    </body>
+</html>");
+
+        }
+
+        private static void AppendPage(
+            TextWriter writer,
+            PublishingPage page)
+        {
+            Debug.Assert(writer != null);
+            Debug.Assert(page != null);
+
+            const string expectedPageLayout = "PageFromDocLayout.aspx";
+
+            if (page.Layout.Name != expectedPageLayout)
             {
-                Debug.Assert(web != null);
-                Debug.Assert(writer != null);
-    
-                writer.WriteLine(
-    @"<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
-        'http://www.w3.org/TR/html4/loose.dtd'>");
-    
-                writer.Write(
-    @"<html>
-        <head>
-            <meta content='en-us' http-equiv='Content-Language' />
-            <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
-            <title>");
-    
-                writer.Write(documentTitle);
-                writer.WriteLine(
-    @"</title>
-        </head>
-        <body>");
-    
-                AppendPages(web, writer);
-    
-                writer.WriteLine(
-    @"    </body>
-    </html>");
-    
+                string message = string.Format(
+                    CultureInfo.InvariantCulture,
+                    "The page ({0}/{1}) does not have the expected layout"
+                        + " ({2}).",
+                    page.PublishingWeb.Url,
+                    page.Url,
+                    expectedPageLayout);
+
+                throw new InvalidOperationException(message);
             }
-    
-            private static void AppendPage(
-                TextWriter writer,
-                PublishingPage page)
+
+            string pageContent = (string)page.ListItem[
+                publishingPageContentFieldId];
+
+            writer.Write("<h1>");
+            writer.Write(page.Title);
+            writer.WriteLine("</h1>");
+
+            writer.WriteLine(pageContent);
+        }
+
+        private static void AppendPages(
+            SPWeb web,
+            TextWriter writer)
+        {
+            Debug.Assert(web != null);
+            Debug.Assert(writer != null);
+
+            List<string> pageUrls = GetSitePagesInNavigationOrder(web);
+
+            PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
+
+            PublishingPageCollection pages = pubWeb.GetPublishingPages();
+
+            foreach (string pageUrl in pageUrls)
             {
-                Debug.Assert(writer != null);
-                Debug.Assert(page != null);
-    
-                const string expectedPageLayout = "PageFromDocLayout.aspx";
-    
-                if (page.Layout.Name != expectedPageLayout)
-                {
-                    string message = string.Format(
-                        CultureInfo.InvariantCulture,
-                        "The page ({0}/{1}) does not have the expected layout"
-                            + " ({2}).",
-                        page.PublishingWeb.Url,
-                        page.Url,
-                        expectedPageLayout);
-    
-                    throw new InvalidOperationException(message);
-                }
-    
-                string pageContent = (string)page.ListItem[
-                    publishingPageContentFieldId];
-    
-                writer.Write("<h1>");
-                writer.Write(page.Title);
-                writer.WriteLine("</h1>");
-    
-                writer.WriteLine(pageContent);
+                //PublishingPage page = pages[pageUrl];
+                PublishingPage page = GetPublishingPage(pages, pageUrl);
+                //PublishingPage page = GetPublishingPage2(pages, pageUrl);
+
+                AppendPage(writer, page);
             }
-    
-            private static void AppendPages(
-                SPWeb web,
-                TextWriter writer)
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Microsoft.Performance",
+            "CA1811:AvoidUncalledPrivateCode")]
+        private static PublishingPage GetPublishingPage(
+            PublishingPageCollection pages,
+            string pageUrl)
+        {
+            Debug.Assert(pages != null);
+            Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
+
+            PublishingPage page = pages[pageUrl];
+
+            if (page == null)
             {
-                Debug.Assert(web != null);
-                Debug.Assert(writer != null);
-    
-                List<string> pageUrls = GetSitePagesInNavigationOrder(web);
-    
-                PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
-    
-                PublishingPageCollection pages = pubWeb.GetPublishingPages();
-    
-                foreach (string pageUrl in pageUrls)
-                {
-                    //PublishingPage page = pages[pageUrl];
-                    PublishingPage page = GetPublishingPage(pages, pageUrl);
-                    //PublishingPage page = GetPublishingPage2(pages, pageUrl);
-    
-                    AppendPage(writer, page);
-                }
-            }
-    
-            [System.Diagnostics.CodeAnalysis.SuppressMessage(
-                "Microsoft.Performance",
-                "CA1811:AvoidUncalledPrivateCode")]
-            private static PublishingPage GetPublishingPage(
-                PublishingPageCollection pages,
-                string pageUrl)
-            {
-                Debug.Assert(pages != null);
-                Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
-    
-                PublishingPage page = pages[pageUrl];
-    
-                if (page == null)
-                {
-                    throw new ArgumentException(
-                        "The specified page was not found in the collection.",
-                        "pageUrl");
-                }
-    
-                return page;
-            }
-    
-            [System.Diagnostics.CodeAnalysis.SuppressMessage(
-                "Microsoft.Performance",
-                "CA1811:AvoidUncalledPrivateCode")]
-            private static PublishingPage GetPublishingPage2(
-                PublishingPageCollection pages,
-                string pageUrl)
-            {
-                Debug.Assert(pages != null);
-                Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
-    
-                foreach (PublishingPage page in pages)
-                {
-                    if (page.Url == pageUrl)
-                    {
-                        return page;
-                    }
-                }
-    
                 throw new ArgumentException(
                     "The specified page was not found in the collection.",
                     "pageUrl");
             }
-    
-            private static List<string> GetSitePagesInNavigationOrder(
-                SPWeb web)
+
+            return page;
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Microsoft.Performance",
+            "CA1811:AvoidUncalledPrivateCode")]
+        private static PublishingPage GetPublishingPage2(
+            PublishingPageCollection pages,
+            string pageUrl)
+        {
+            Debug.Assert(pages != null);
+            Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
+
+            foreach (PublishingPage page in pages)
             {
-                Debug.Assert(web != null);
-    
-                List<string> pageUrls = new List<string>();
-    
-                foreach (SPNavigationNode node in web.Navigation.QuickLaunch)
+                if (page.Url == pageUrl)
                 {
-                    if (node.Url.StartsWith(
-                        web.ServerRelativeUrl,
-                        StringComparison.OrdinalIgnoreCase) == false)
-                    {
-                        string message = string.Format(
-                            CultureInfo.InvariantCulture,
-                            "Invalid navigation node ({0}). Navigation for a"
-                                + " Post Orders site can only contain pages within"
-                                + " the site.",
-                            node.Title);
-    
-                        throw new InvalidOperationException(message);
-                    }
-    
-                    string pageUrl = node.Url.Substring(
-                        web.ServerRelativeUrl.Length + 1);
-    
-                    pageUrls.Add(pageUrl);
+                    return page;
                 }
-    
-                return pageUrls;
             }
+
+            throw new ArgumentException(
+                "The specified page was not found in the collection.",
+                "pageUrl");
+        }
+
+        private static List<string> GetSitePagesInNavigationOrder(
+            SPWeb web)
+        {
+            Debug.Assert(web != null);
+
+            List<string> pageUrls = new List<string>();
+
+            foreach (SPNavigationNode node in web.Navigation.QuickLaunch)
+            {
+                if (node.Url.StartsWith(
+                    web.ServerRelativeUrl,
+                    StringComparison.OrdinalIgnoreCase) == false)
+                {
+                    string message = string.Format(
+                        CultureInfo.InvariantCulture,
+                        "Invalid navigation node ({0}). Navigation for a"
+                            + " Post Orders site can only contain pages within"
+                            + " the site.",
+                        node.Title);
+
+                    throw new InvalidOperationException(message);
+                }
+
+                string pageUrl = node.Url.Substring(
+                    web.ServerRelativeUrl.Length + 1);
+
+                pageUrls.Add(pageUrl);
+            }
+
+            return pageUrls;
         }
     }
+}
+```
 

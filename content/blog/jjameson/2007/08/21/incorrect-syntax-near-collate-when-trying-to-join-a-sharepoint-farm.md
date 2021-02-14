@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx)
@@ -39,31 +39,33 @@ At this point, I was presented with the oh-so-lovely "Unhandled exception" dialo
 
 
 
-    See the end of this message for details on invoking just-in-time (JIT) debugging instead of this dialog box.
-    
-    ************** Exception Text **************
-    System.Data.SqlClient.SqlException: Incorrect syntax near 'COLLATE'. You may need to
-    set the compatibility level of the current database to a higher value to enable this
-    feature. See help for the stored procedure sp_dbcmptlevel.
-    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
-    at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
-    at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
-    at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
-    at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
-    at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
-    at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
-    at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
-    at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
-    at Microsoft.SharePoint.PostSetupConfiguration.SqlSession.ExecuteNonQuery(SqlCommand command)
-    at Microsoft.SharePoint.PostSetupConfiguration.SqlServerHelper.DatabaseTableWithColumnExists(String table, String column)
-    at Microsoft.SharePoint.PostSetupConfiguration.SqlServerHelper.GetV3WSSConfigurationDatabases()
-    at Microsoft.SharePoint.PostSetupConfiguration.ConnectConfigurationDbForm.GetDatabasesButtonClickEventHandler(Object sender, EventArgs e)
-    at System.Windows.Forms.Control.OnClick(EventArgs e)
-    at System.Windows.Forms.Button.OnClick(EventArgs e)
-    at System.Windows.Forms.Button.WndProc(Message& m)
-    at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
-    at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
-    at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+```
+See the end of this message for details on invoking just-in-time (JIT) debugging instead of this dialog box.
+
+************** Exception Text **************
+System.Data.SqlClient.SqlException: Incorrect syntax near 'COLLATE'. You may need to
+set the compatibility level of the current database to a higher value to enable this
+feature. See help for the stored procedure sp_dbcmptlevel.
+at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(DbAsyncResult result, String methodName, Boolean sendToPipe)
+at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+at Microsoft.SharePoint.PostSetupConfiguration.SqlSession.ExecuteNonQuery(SqlCommand command)
+at Microsoft.SharePoint.PostSetupConfiguration.SqlServerHelper.DatabaseTableWithColumnExists(String table, String column)
+at Microsoft.SharePoint.PostSetupConfiguration.SqlServerHelper.GetV3WSSConfigurationDatabases()
+at Microsoft.SharePoint.PostSetupConfiguration.ConnectConfigurationDbForm.GetDatabasesButtonClickEventHandler(Object sender, EventArgs e)
+at System.Windows.Forms.Control.OnClick(EventArgs e)
+at System.Windows.Forms.Button.OnClick(EventArgs e)
+at System.Windows.Forms.Button.WndProc(Message& m)
+at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+```
 
 
 

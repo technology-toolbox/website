@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "Debugging", "Web Development"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/21/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/21/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx)
 > 
@@ -30,7 +30,7 @@ I just did a quick Bing search and found the following resources (in case you wa
 <cite>Enable Worker Process Pinging for an Application Pool (IIS 7)</cite>
 [http://technet.microsoft.com/en-us/library/cc725836(WS.10).aspx](http://technet.microsoft.com/en-us/library/cc725836%28WS.10%29.aspx)
 
-  
+
 
 <cite>Error: Web site worker process has been terminated by IIS</cite>
 [http://msdn.microsoft.com/en-us/library/bb763108.aspx](http://msdn.microsoft.com/en-us/library/bb763108.aspx)

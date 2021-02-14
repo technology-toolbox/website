@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "SQL Server"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx)
 > 
@@ -54,58 +54,60 @@ Of course, when creating MOSS 2007 databases for a Production (or Test) environm
 Suppose you need to determine the default database locations through SQL (perhaps because you are scripting the process to create your databases). If you fire up SQL Server Profiler and start a new trace (the default trace options are fine), you will find that SQL Server Management Studio executes the following SQL statements when viewing the **Database Settings **page in the **Server Properties **window:
 
 
-    declare @RegPathParams sysname
-    declare @Arg sysname
-    declare @Param sysname
-    declare @MasterPath nvarchar(512)
-    declare @LogPath nvarchar(512)
-    declare @ErrorLogPath nvarchar(512)
-    declare @n int
-    
-    select @n=0
-    select @RegPathParams=N'Software\Microsoft\MSSQLServer\MSSQLServer'+'\Parameters'
-    select @Param='dummy'
-    while(not @Param is null)
-    begin
-        select @Param=null
-        select @Arg='SqlArg'+convert(nvarchar,@n)
-    
-        exec master.dbo.xp_instance_regread
-            N'HKEY_LOCAL_MACHINE',
-            @RegPathParams,
-            @Arg,
-            @Param OUTPUT
-            
-        if(@Param like '-d%')
-        begin
-            select @Param=substring(@Param, 3, 255)
-            select @MasterPath=substring(
-                @Param,
-                1,
-                len(@Param) - charindex('\', reverse(@Param)))            
-        end
-        else if(@Param like '-l%')
-        begin
-            select @Param=substring(@Param, 3, 255)
-            select @LogPath=substring(
-                @Param,
-                1,
-                len(@Param) - charindex('\', reverse(@Param)))
-        end
-        else if(@Param like '-e%')
-        begin
-            select @Param=substring(@Param, 3, 255)
-            select @ErrorLogPath=substring(
-                @Param,
-                1,
-                len(@Param) - charindex('\', reverse(@Param)))
-        end
+```
+declare @RegPathParams sysname
+declare @Arg sysname
+declare @Param sysname
+declare @MasterPath nvarchar(512)
+declare @LogPath nvarchar(512)
+declare @ErrorLogPath nvarchar(512)
+declare @n int
+
+select @n=0
+select @RegPathParams=N'Software\Microsoft\MSSQLServer\MSSQLServer'+'\Parameters'
+select @Param='dummy'
+while(not @Param is null)
+begin
+    select @Param=null
+    select @Arg='SqlArg'+convert(nvarchar,@n)
+
+    exec master.dbo.xp_instance_regread
+        N'HKEY_LOCAL_MACHINE',
+        @RegPathParams,
+        @Arg,
+        @Param OUTPUT
         
-        select @n=@n+1
+    if(@Param like '-d%')
+    begin
+        select @Param=substring(@Param, 3, 255)
+        select @MasterPath=substring(
+            @Param,
+            1,
+            len(@Param) - charindex('\', reverse(@Param)))            
     end
-                
-    print 'LogPath = ' + @LogPath
-    print 'MasterPath = ' + @MasterPath
+    else if(@Param like '-l%')
+    begin
+        select @Param=substring(@Param, 3, 255)
+        select @LogPath=substring(
+            @Param,
+            1,
+            len(@Param) - charindex('\', reverse(@Param)))
+    end
+    else if(@Param like '-e%')
+    begin
+        select @Param=substring(@Param, 3, 255)
+        select @ErrorLogPath=substring(
+            @Param,
+            1,
+            len(@Param) - charindex('\', reverse(@Param)))
+    end
+    
+    select @n=@n+1
+end
+            
+print 'LogPath = ' + @LogPath
+print 'MasterPath = ' + @MasterPath
+```
 
 
 Note that I truncated the actual SQL batch and added the `print`statements.

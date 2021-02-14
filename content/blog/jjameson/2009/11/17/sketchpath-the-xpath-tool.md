@@ -11,8 +11,8 @@ tags: ["Core Development", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx)
 > 

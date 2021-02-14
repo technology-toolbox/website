@@ -9,8 +9,8 @@ tags: ["Personal"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx)
@@ -19,9 +19,9 @@ tags: ["Personal"]
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-**From:** Jeremy Jameson           
-**Sent:** Friday, September 02, 2011 3:01 PM  
-**To:** [snip, snip]  
+**From:** Jeremy Jameson         
+**Sent:** Friday, September 02, 2011 3:01 PM
+**To:** [snip, snip]
 **Subject:** Last day with Microsoft
 
 Today is my last day with Microsoft and it is with a heavy heart that I now say         farewell to past and present teammates, coworkers, and managers.
@@ -46,6 +46,6 @@ Since I am far better with technology than I am with prose, I'll leave you with 
 > -- Norman Maclean, A River Runs Through It
 
 
-Jeremy Jameson  
+Jeremy Jameson
          [snip, snip]
 

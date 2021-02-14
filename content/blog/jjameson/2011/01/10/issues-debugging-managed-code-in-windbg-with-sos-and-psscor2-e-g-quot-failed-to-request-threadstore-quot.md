@@ -11,8 +11,8 @@ tags: ["Debugging"]
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx)
@@ -64,16 +64,18 @@ I then restarted WinDbg, attached to the IIS worker process, and ran the follow
 
 
 
-    0:023> ld mscorwks
-    Symbols loaded for mscorwks
-    0:023> .cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727
-    CLR DLL status: No load attempts
-    0:023> !threads
-    Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
-    0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 
-    1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0 
-    2 0000144c 0x7ffdd000 0x00df0000 0x00dee000 0x00db0000 0x00002000 0x0
-    ...
+```
+0:023> ld mscorwks
+Symbols loaded for mscorwks
+0:023> .cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727
+CLR DLL status: No load attempts
+0:023> !threads
+Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
+0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 
+1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0 
+2 0000144c 0x7ffdd000 0x00df0000 0x00dee000 0x00db0000 0x00002000 0x0
+...
+```
 
 
 

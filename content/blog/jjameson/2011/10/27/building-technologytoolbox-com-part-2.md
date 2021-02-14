@@ -96,18 +96,24 @@ Even better, you can easily create your own custom rule set that specifies *all*
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <RuleSet Name="TechnologyToolbox.Caelum.ruleset"
+```
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="TechnologyToolbox.Caelum.ruleset"
+```
 
 
 
-    Description="Custom rule set for the TechnologyToolbox.Caelum solution."
+```
+Description="Custom rule set for the TechnologyToolbox.Caelum solution."
+```
 
 
 
-    ToolsVersion="10.0">
-      <IncludeAll Action="Error" />
-    </RuleSet>
+```
+ToolsVersion="10.0">
+  <IncludeAll Action="Error" />
+</RuleSet>
+```
 
 
 

@@ -9,8 +9,8 @@ tags: ["SQL Server", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx)
 > 
@@ -22,51 +22,53 @@ One of the SQL scripts that I keep handy in my toolbox is **Truncate All Transac
 Here is the script:
 
 
-    DROP TABLE #CommandQueue
+```
+DROP TABLE #CommandQueue
+
+CREATE TABLE #CommandQueue
+(
+    ID INT IDENTITY ( 1, 1 )
+    , SqlStatement VARCHAR(1000)
+)
+
+INSERT INTO #CommandQueue
+(
+    SqlStatement
+)
+SELECT
+    'BACKUP LOG [' + name + '] WITH TRUNCATE_ONLY'
+FROM
+    sys.databases
+WHERE
+    name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
+
+DECLARE @id INT
+
+SELECT @id = MIN(ID)
+FROM #CommandQueue
+
+WHILE @id IS NOT NULL
+BEGIN
+    DECLARE @sqlStatement VARCHAR(1000)
     
-    CREATE TABLE #CommandQueue
-    (
-        ID INT IDENTITY ( 1, 1 )
-        , SqlStatement VARCHAR(1000)
-    )
-    
-    INSERT INTO #CommandQueue
-    (
-        SqlStatement
-    )
     SELECT
-        'BACKUP LOG [' + name + '] WITH TRUNCATE_ONLY'
+        @sqlStatement = SqlStatement
     FROM
-        sys.databases
+        #CommandQueue
     WHERE
-        name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
-    
-    DECLARE @id INT
-    
+        ID = @id
+
+    PRINT 'Executing ''' + @sqlStatement + '''...'
+
+    EXEC (@sqlStatement)
+
+    DELETE FROM #CommandQueue
+    WHERE ID = @id
+
     SELECT @id = MIN(ID)
     FROM #CommandQueue
-    
-    WHILE @id IS NOT NULL
-    BEGIN
-        DECLARE @sqlStatement VARCHAR(1000)
-        
-        SELECT
-            @sqlStatement = SqlStatement
-        FROM
-            #CommandQueue
-        WHERE
-            ID = @id
-    
-        PRINT 'Executing ''' + @sqlStatement + '''...'
-    
-        EXEC (@sqlStatement)
-    
-        DELETE FROM #CommandQueue
-        WHERE ID = @id
-    
-        SELECT @id = MIN(ID)
-        FROM #CommandQueue
-    END
+END
+```
 
 
 As you can see, there really isn't much to this script. However, what I really wanted to cover in this post is how I implemented the script, and why I think this is a good pattern for scripts that perform some operation on an arbitrary number of objects in a SQL Server database.

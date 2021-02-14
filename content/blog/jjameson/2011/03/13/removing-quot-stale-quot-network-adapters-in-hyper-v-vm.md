@@ -12,8 +12,8 @@ tags: ["My System", "Infrastructure", "Virtualization"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx)
@@ -39,14 +39,18 @@ I'm not aware of any issues by *not*deleting these network adapters,  but I stil
 Here is the process that I use to cleanup the network adapters:
 
 1. Start an administrator command prompt and then run the following two commands:
-  
-
-
-        set devmgr_show_nonpresent_devices=1
 
 
 
-        start devmgmt.msc
+    ```
+    set devmgr_show_nonpresent_devices=1
+    ```
+
+
+
+    ```
+    start devmgmt.msc
+    ```
 2. In the **Device Manager **window:
     1. Click the **View **menu and then click **Show hidden 	devices**.
     2. Expand **Network adapters**.

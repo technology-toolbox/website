@@ -9,8 +9,8 @@ tags: ["MOSS 2007", "SQL Server", "Toolbox"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx)
 > 
@@ -22,53 +22,55 @@ Here is another SQL script that I keep handy in my toolbox: **Shrink All Databas
 Here is the script:
 
 
-    DROP TABLE #CommandQueue
+```
+DROP TABLE #CommandQueue
+
+CREATE TABLE #CommandQueue
+(
+    ID INT IDENTITY ( 1, 1 )
+    , SqlStatement VARCHAR(1000)
+)
+
+INSERT INTO    #CommandQueue
+(
+    SqlStatement
+)
+SELECT
+    'USE [' + A.name + '] DBCC SHRINKFILE (N''' + B.name + ''' , 1)'
+FROM
+    sys.databases A
+    INNER JOIN sys.master_files B
+    ON A.database_id = B.database_id
+WHERE
+    A.name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
+
+DECLARE @id INT
+
+SELECT @id = MIN(ID)
+FROM #CommandQueue
+
+WHILE @id IS NOT NULL
+BEGIN
+    DECLARE @sqlStatement VARCHAR(1000)
     
-    CREATE TABLE #CommandQueue
-    (
-        ID INT IDENTITY ( 1, 1 )
-        , SqlStatement VARCHAR(1000)
-    )
-    
-    INSERT INTO    #CommandQueue
-    (
-        SqlStatement
-    )
     SELECT
-        'USE [' + A.name + '] DBCC SHRINKFILE (N''' + B.name + ''' , 1)'
+        @sqlStatement = SqlStatement
     FROM
-        sys.databases A
-        INNER JOIN sys.master_files B
-        ON A.database_id = B.database_id
+        #CommandQueue
     WHERE
-        A.name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
-    
-    DECLARE @id INT
-    
+        ID = @id
+
+    PRINT 'Executing ''' + @sqlStatement + '''...'
+
+    EXEC (@sqlStatement)
+
+    DELETE FROM #CommandQueue
+    WHERE ID = @id
+
     SELECT @id = MIN(ID)
     FROM #CommandQueue
-    
-    WHILE @id IS NOT NULL
-    BEGIN
-        DECLARE @sqlStatement VARCHAR(1000)
-        
-        SELECT
-            @sqlStatement = SqlStatement
-        FROM
-            #CommandQueue
-        WHERE
-            ID = @id
-    
-        PRINT 'Executing ''' + @sqlStatement + '''...'
-    
-        EXEC (@sqlStatement)
-    
-        DELETE FROM #CommandQueue
-        WHERE ID = @id
-    
-        SELECT @id = MIN(ID)
-        FROM #CommandQueue
-    END
+END
+```
 
 
 As you can see, this script follows the same pattern that I described in my previous post.

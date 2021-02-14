@@ -9,8 +9,8 @@ tags: ["Core Development", "TFS"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx)
@@ -44,8 +44,8 @@ Back in the days of using Visual SourceSafe (VSS) on customer projects, at the b
 >             timestamp, it definitely wasn't easy (the only way that I was ever to do it was
 >             through [the SS
 >                 command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)). Thus build labels provided a quick way of getting
->             a snapshot of the code for a particular build.  
->   
+>             a snapshot of the code for a particular build.
+> 
 > 
 >             With the concept of changesets in TFS -- and the ability to quickly get the code
 >             for a specific changeset -- build labels are obviously not as important as they

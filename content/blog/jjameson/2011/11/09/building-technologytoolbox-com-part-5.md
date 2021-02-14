@@ -94,75 +94,77 @@ The blog home page (Figure 2) displays a summary of the most recent blog posts.
 
 
 
-    <div class="hfeed">
-      <div class="hentry">
-        <h2 class="entry-title">
-          <a href="/blog/jjameson/archive/2011/11/06/feedburner-not-showing-your-latest-blog-post.aspx">
-            Feedburner not showing your latest blog post? Your feed probably
-            exceeds 512K.</a>
-        </h2>
-        <ul class="post-info">
-          <li class="published">
-            <span class="label">Published </span>
-            <span class="value">November 6, 2011</span>
-            <span class="label"> at </span>
-            <span class="value">6:00 AM</span>
-          </li>
-          <li class="vcard author">
-            by <span class="fn">Jeremy Jameson</span>
-          </li>
-          <li class="comments none">
-            <a href="/blog/jjameson/archive/2011/11/06/feedburner-not-showing-your-latest-blog-post.aspx#postComments">
-              <span class="label">Comments: </span>
-              <span class="value count">0</span>
-            </a>
-          </li>
-          <li class="categories">
-            <div class="post-categories">
-              Categories:
-              <ul>
-                <li><a rel="tag" href="/blog/jjameson/category/4.aspx">
-                  Development</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="entry-summary">
-          <p>This morning I discovered that Feedburner wasn't showing the blog post
-          I created last Thursday. No error was displayed. Rather the RSS feed
-          simply made it look like...</p>
+```
+<div class="hfeed">
+  <div class="hentry">
+    <h2 class="entry-title">
+      <a href="/blog/jjameson/archive/2011/11/06/feedburner-not-showing-your-latest-blog-post.aspx">
+        Feedburner not showing your latest blog post? Your feed probably
+        exceeds 512K.</a>
+    </h2>
+    <ul class="post-info">
+      <li class="published">
+        <span class="label">Published </span>
+        <span class="value">November 6, 2011</span>
+        <span class="label"> at </span>
+        <span class="value">6:00 AM</span>
+      </li>
+      <li class="vcard author">
+        by <span class="fn">Jeremy Jameson</span>
+      </li>
+      <li class="comments none">
+        <a href="/blog/jjameson/archive/2011/11/06/feedburner-not-showing-your-latest-blog-post.aspx#postComments">
+          <span class="label">Comments: </span>
+          <span class="value count">0</span>
+        </a>
+      </li>
+      <li class="categories">
+        <div class="post-categories">
+          Categories:
+          <ul>
+            <li><a rel="tag" href="/blog/jjameson/category/4.aspx">
+              Development</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="hentry">
-        <h2 class="entry-title">
-          <a href="/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx">
-          Building TechnologyToolbox.com, Part 4 (a.k.a. Creating a style guide and
-          color palette for a Web application)</a>
-        </h2>
-        <ul class="post-info">
-            <li class="published">...</li>
-            ...
-        </ul>
-        <div class="entry-summary">
-            <p>...</p>
-        </div>
-      </div>
-      <div class="hentry">
-        <h2 class="entry-title">
-          <a href="/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx">
-          Building TechnologyToolbox.com, Part 3 (a.k.a. Creating a static HTML
-          prototype for a website)</a>
-        </h2>
-        <ul class="post-info">
-            <li class="published">...</li>
-            ...
-        </ul>
-        <div class="entry-summary">
-            <p>...</p>
-        </div>
-      </div>
-      ...
+      </li>
+    </ul>
+    <div class="entry-summary">
+      <p>This morning I discovered that Feedburner wasn't showing the blog post
+      I created last Thursday. No error was displayed. Rather the RSS feed
+      simply made it look like...</p>
     </div>
+  </div>
+  <div class="hentry">
+    <h2 class="entry-title">
+      <a href="/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx">
+      Building TechnologyToolbox.com, Part 4 (a.k.a. Creating a style guide and
+      color palette for a Web application)</a>
+    </h2>
+    <ul class="post-info">
+        <li class="published">...</li>
+        ...
+    </ul>
+    <div class="entry-summary">
+        <p>...</p>
+    </div>
+  </div>
+  <div class="hentry">
+    <h2 class="entry-title">
+      <a href="/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx">
+      Building TechnologyToolbox.com, Part 3 (a.k.a. Creating a static HTML
+      prototype for a website)</a>
+    </h2>
+    <ul class="post-info">
+        <li class="published">...</li>
+        ...
+    </ul>
+    <div class="entry-summary">
+        <p>...</p>
+    </div>
+  </div>
+  ...
+</div>
+```
 
 
 
@@ -221,51 +223,53 @@ When viewing a specific blog post, the HTML markup is very similar to the blog 
 
 
 
-    <div id="blogPost">
-      <div class="hentry">
-        <h2 class="entry-title">
-          Feedburner not showing your latest blog post? Your feed probably exceeds
-          512K.
-        </h2>
-        <ul class="post-info">
-          <li class="published">
-            <span class="label">Published </span>
-            <span class="value">November 6, 2011</span>
-            <span class="label"> at </span>
-            <span class="value">6:00 AM</span>
-          </li>
-          <li class="vcard author">
-            by <span class="fn">Jeremy Jameson</span>
-          </li>
-          <li class="comments none">
-            <a href="#postComments">
-              <span class="label">Comments: </span>
-              <span class="value count">0</span>
-            </a>
-          </li>
-          <li class="categories">
-            <div class="post-categories">
-              Categories:
-              <ul>
-                <li><a rel="tag" href="/blog/jjameson/category/4.aspx">
-                  Development</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div class="entry-content">
-          <p>This morning I discovered that Feedburner wasn't showing
-        <a href="/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx.aspx">
-          the blog post I created last Thursday</a>.</p>
-          <p>No error was displayed. Rather the RSS feed simply made it look like
-            "<a href="/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx">
-              Part 3</a>" in my series on building TechnologyToolbox.com was the
-              last post that I created (having written it myself, I knew that
-              "Part 4" was, in fact, the latest post).</p>
-          ...
-      </div>
+```
+<div id="blogPost">
+  <div class="hentry">
+    <h2 class="entry-title">
+      Feedburner not showing your latest blog post? Your feed probably exceeds
+      512K.
+    </h2>
+    <ul class="post-info">
+      <li class="published">
+        <span class="label">Published </span>
+        <span class="value">November 6, 2011</span>
+        <span class="label"> at </span>
+        <span class="value">6:00 AM</span>
+      </li>
+      <li class="vcard author">
+        by <span class="fn">Jeremy Jameson</span>
+      </li>
+      <li class="comments none">
+        <a href="#postComments">
+          <span class="label">Comments: </span>
+          <span class="value count">0</span>
+        </a>
+      </li>
+      <li class="categories">
+        <div class="post-categories">
+          Categories:
+          <ul>
+            <li><a rel="tag" href="/blog/jjameson/category/4.aspx">
+              Development</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="entry-content">
+      <p>This morning I discovered that Feedburner wasn't showing
+    <a href="/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx.aspx">
+      the blog post I created last Thursday</a>.</p>
+      <p>No error was displayed. Rather the RSS feed simply made it look like
+        "<a href="/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx">
+          Part 3</a>" in my series on building TechnologyToolbox.com was the
+          last post that I created (having written it myself, I knew that
+          "Part 4" was, in fact, the latest post).</p>
       ...
-    </div>
+  </div>
+  ...
+</div>
+```
 
 
 

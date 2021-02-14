@@ -41,9 +41,39 @@ The problem is due to the following code in **SubtextMasterPage**:
 
 
 
-    public void InitializeControls(ISkinControlLoader controlLoader)
-            {
-                ...
+```
+public void InitializeControls(ISkinControlLoader controlLoader)
+        {
+            ...
+                    var query = Query;
+                    if(!String.IsNullOrEmpty(query))
+                    {
+                        var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
+                        if(searchResults.Any())
+                        {
+                            AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
+                        }
+                    }
+            ...
+        }
+```
+
+
+
+Since I really don't want the Subtext master page to "magically" suggest other blog posts to users (based on what they searched for using, say, Google), I updated the code as follows:
+
+
+
+```
+public void InitializeControls(ISkinControlLoader controlLoader)
+        {
+            ...
+
+                    // Bug 1053: Allow errors in
+                    // Lucene.Net.QueryParsers.QueryParser to be avoided by
+                    // disabling the full text search engine in Web.config
+                    if (FullTextSearchEngineSettings.Settings.IsEnabled == true)
+                    {
                         var query = Query;
                         if(!String.IsNullOrEmpty(query))
                         {
@@ -53,36 +83,10 @@ The problem is due to the following code in **SubtextMasterPage**:
                                 AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
                             }
                         }
-                ...
-            }
-
-
-
-Since I really don't want the Subtext master page to "magically" suggest other blog posts to users (based on what they searched for using, say, Google), I updated the code as follows:
-
-
-
-    public void InitializeControls(ISkinControlLoader controlLoader)
-            {
-                ...
-    
-                        // Bug 1053: Allow errors in
-                        // Lucene.Net.QueryParsers.QueryParser to be avoided by
-                        // disabling the full text search engine in Web.config
-                        if (FullTextSearchEngineSettings.Settings.IsEnabled == true)
-                        {
-                            var query = Query;
-                            if(!String.IsNullOrEmpty(query))
-                            {
-                                var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
-                                if(searchResults.Any())
-                                {
-                                    AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
-                                }
-                            }
-                        }
-                ...
-            }
+                    }
+            ...
+        }
+```
 
 
 
@@ -90,10 +94,12 @@ Since I really don't want the Subtext master page to "magically" suggest other 
 
 
 
-    <FullTextSearchEngineSettings
-        type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
-        <IsEnabled>false</IsEnabled>
-        ...  </FullTextSearchEngineSettings>
+```
+<FullTextSearchEngineSettings
+    type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
+    <IsEnabled>false</IsEnabled>
+    ...  </FullTextSearchEngineSettings>
+```
 
 
 
@@ -115,14 +121,16 @@ The problem is that -- at least in Subtext 2.5.2.0 -- the key and initialization
 
 
 
-    static SymmetricAlgorithm InitializeEncryptionAlgorithm()
-            {
-                SymmetricAlgorithm rijaendel = Rijndael.Create();
-                //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
-                rijaendel.GenerateKey();
-                rijaendel.GenerateIV();
-                return rijaendel;
-            }
+```
+static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+        {
+            SymmetricAlgorithm rijaendel = Rijndael.Create();
+            //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
+            rijaendel.GenerateKey();
+            rijaendel.GenerateIV();
+            return rijaendel;
+        }
+```
 
 
 
@@ -130,54 +138,56 @@ To fix this issue, I changed the code as follows:
 
 
 
-    static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+```
+static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+        {
+            SymmetricAlgorithm rijaendel = Rijndael.Create();
+
+            // To avoid numerous CryptographicException ("Padding is invalid and cannot
+            // be removed.") errors from occurring when Google crawls the site, use a
+            // static key and initialization vector for the CAPTCHA controls. If these
+            // settings are not specified, then a random key and IV are created each time
+            // the Subtext site starts up (which can cause CryptographicException errors
+            // to occur when Google requests images/services/CaptchaImage.ashx and
+            // specifies a query string that is no longer valid, because the app pool
+            // recycled between the time Google discovered the CaptchaImage.ashx
+            // reference and the time it actually initiates the request for
+            // CaptchaImage.ashx). If specified, the encryption key and IV are expected
+            // to be Base64 encoded.
+            string key = ConfigurationSettings.AppSettings["Captcha.Encryption.Key"];
+            string iv = ConfigurationSettings.AppSettings["Captcha.Encryption.IV"];
+
+            if (string.IsNullOrEmpty(key) == false)
             {
-                SymmetricAlgorithm rijaendel = Rijndael.Create();
-    
-                // To avoid numerous CryptographicException ("Padding is invalid and cannot
-                // be removed.") errors from occurring when Google crawls the site, use a
-                // static key and initialization vector for the CAPTCHA controls. If these
-                // settings are not specified, then a random key and IV are created each time
-                // the Subtext site starts up (which can cause CryptographicException errors
-                // to occur when Google requests images/services/CaptchaImage.ashx and
-                // specifies a query string that is no longer valid, because the app pool
-                // recycled between the time Google discovered the CaptchaImage.ashx
-                // reference and the time it actually initiates the request for
-                // CaptchaImage.ashx). If specified, the encryption key and IV are expected
-                // to be Base64 encoded.
-                string key = ConfigurationSettings.AppSettings["Captcha.Encryption.Key"];
-                string iv = ConfigurationSettings.AppSettings["Captcha.Encryption.IV"];
-    
-                if (string.IsNullOrEmpty(key) == false)
+                if (string.IsNullOrEmpty(iv) == true)
                 {
-                    if (string.IsNullOrEmpty(iv) == true)
-                    {
-                        throw new ConfigurationErrorsException(
-                            "Captcha.Encryption.IV application setting must be"
-                            + " specified when Captcha.Encryption.Key setting is"
-                            + " specified.");
-                    }
-    
-                    rijaendel.Key = Convert.FromBase64String(key);
-                    rijaendel.IV = Convert.FromBase64String(iv);
+                    throw new ConfigurationErrorsException(
+                        "Captcha.Encryption.IV application setting must be"
+                        + " specified when Captcha.Encryption.Key setting is"
+                        + " specified.");
                 }
-                else
-                {
-                    if (string.IsNullOrEmpty(iv) == false)
-                    {
-                        throw new ConfigurationErrorsException(
-                            "Captcha.Encryption.Key application setting must be"
-                            + " specified when Captcha.Encryption.IV setting is"
-                            + " specified.");
-                    }
-    
-                    //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
-                    rijaendel.GenerateKey();
-                    rijaendel.GenerateIV();
-                }
-    
-                return rijaendel;
+
+                rijaendel.Key = Convert.FromBase64String(key);
+                rijaendel.IV = Convert.FromBase64String(iv);
             }
+            else
+            {
+                if (string.IsNullOrEmpty(iv) == false)
+                {
+                    throw new ConfigurationErrorsException(
+                        "Captcha.Encryption.Key application setting must be"
+                        + " specified when Captcha.Encryption.IV setting is"
+                        + " specified.");
+                }
+
+                //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
+                rijaendel.GenerateKey();
+                rijaendel.GenerateIV();
+            }
+
+            return rijaendel;
+        }
+```
 
 
 
@@ -185,24 +195,26 @@ Then I generated a key and IV and specified the Base64-encoded values in my Web
 
 
 
-    <appSettings>
-        <!--
-          To avoid numerous CryptographicException ("Padding is invalid and cannot
-          be removed.") errors from occurring when Google crawls the site, use a
-          static key and initialization vector for the CAPTCHA controls. If these
-          settings are not specified, then a random key and IV are created each time
-          the Subtext site starts up (which can cause CryptographicException errors
-          to occur when Google requests images/services/CaptchaImage.ashx and
-          specifies a query string that is no longer valid, because the app pool
-          recycled between the time Google discovered the CaptchaImage.ashx
-          reference and the time it actually initiates the request for
-          CaptchaImage.ashx). If specified, the encryption key and IV are expected
-          to be Base64 encoded.
-        -->
-        <add key="Captcha.Encryption.Key" value="ppujW5AxO9oz...="/>
-        <add key="Captcha.Encryption.IV" value="eAP5g1WGujEF...=="/>
-        ...
-      </appSettings>
+```
+<appSettings>
+    <!--
+      To avoid numerous CryptographicException ("Padding is invalid and cannot
+      be removed.") errors from occurring when Google crawls the site, use a
+      static key and initialization vector for the CAPTCHA controls. If these
+      settings are not specified, then a random key and IV are created each time
+      the Subtext site starts up (which can cause CryptographicException errors
+      to occur when Google requests images/services/CaptchaImage.ashx and
+      specifies a query string that is no longer valid, because the app pool
+      recycled between the time Google discovered the CaptchaImage.ashx
+      reference and the time it actually initiates the request for
+      CaptchaImage.ashx). If specified, the encryption key and IV are expected
+      to be Base64 encoded.
+    -->
+    <add key="Captcha.Encryption.Key" value="ppujW5AxO9oz...="/>
+    <add key="Captcha.Encryption.IV" value="eAP5g1WGujEF...=="/>
+    ...
+  </appSettings>
+```
 
 
 
@@ -249,103 +261,105 @@ Here is what my version of the **GravatarService** class looks like:
 
 
 
-    public class GravatarService
+```
+public class GravatarService
+    {
+        public GravatarService(NameValueCollection settings)
+            : this(settings["GravatarUrlFormatString"],
+                settings.GetBoolean("GravatarEnabled"))
         {
-            public GravatarService(NameValueCollection settings)
-                : this(settings["GravatarUrlFormatString"],
-                    settings.GetBoolean("GravatarEnabled"))
+        }
+
+        public GravatarService(string urlFormatString, bool enabled)
+        {
+            UrlFormatString = urlFormatString;
+            Enabled = enabled;
+        }
+
+        public bool Enabled { get; private set; }
+
+        public string UrlFormatString { get; private set; }
+
+        private static string EncodeDefaultImage(
+            string defaultImage)
+        {
+            if (string.IsNullOrEmpty(defaultImage) == true)
             {
-            }
-    
-            public GravatarService(string urlFormatString, bool enabled)
-            {
-                UrlFormatString = urlFormatString;
-                Enabled = enabled;
-            }
-    
-            public bool Enabled { get; private set; }
-    
-            public string UrlFormatString { get; private set; }
-    
-            private static string EncodeDefaultImage(
-                string defaultImage)
-            {
-                if (string.IsNullOrEmpty(defaultImage) == true)
-                {
-                    return defaultImage;
-                }
-    
-                if (defaultImage == "404"
-                    || defaultImage == "identicon"
-                    || defaultImage == "mm"
-                    || defaultImage == "monsterid"
-                    || defaultImage == "retro"
-                    || defaultImage == "wavatar")
-                {
-                    return defaultImage;
-                }
-    
-                defaultImage = HttpHelper.ExpandTildePath(defaultImage);
-    
-                Uri defaultImageUrl = new Uri(
-                    defaultImage,
-                    UriKind.RelativeOrAbsolute);
-    
-                if (defaultImageUrl.IsAbsoluteUri == false)
-                {
-                    if (HttpContext.Current == null)
-                    {
-                        string message = string.Format(
-                            CultureInfo.CurrentCulture,
-                            "Unable to convert default image relative URL ({0}) to"
-                                + " corresponding absolute URL because "
-                                + " HttpContext.Current is null.",
-                                defaultImage);
-    
-                        throw new InvalidOperationException(message);
-                    }
-    
-                    defaultImageUrl = new Uri(
-                        HttpContext.Current.Request.Url,
-                        defaultImageUrl);
-                }
-    
-                defaultImage = HttpUtility.UrlEncode(
-                    defaultImageUrl.AbsoluteUri);
-    
                 return defaultImage;
             }
-    
-            public string GenerateUrl(string email)
+
+            if (defaultImage == "404"
+                || defaultImage == "identicon"
+                || defaultImage == "mm"
+                || defaultImage == "monsterid"
+                || defaultImage == "retro"
+                || defaultImage == "wavatar")
             {
-                return GenerateUrl(email, (string) null);
+                return defaultImage;
             }
-    
-            public string GenerateUrl(string email, Uri defaultImage)
+
+            defaultImage = HttpHelper.ExpandTildePath(defaultImage);
+
+            Uri defaultImageUrl = new Uri(
+                defaultImage,
+                UriKind.RelativeOrAbsolute);
+
+            if (defaultImageUrl.IsAbsoluteUri == false)
             {
-                return GenerateUrl(
-                    email,
-                    defaultImage != null ? defaultImage.ToString() : string.Empty);
+                if (HttpContext.Current == null)
+                {
+                    string message = string.Format(
+                        CultureInfo.CurrentCulture,
+                        "Unable to convert default image relative URL ({0}) to"
+                            + " corresponding absolute URL because "
+                            + " HttpContext.Current is null.",
+                            defaultImage);
+
+                    throw new InvalidOperationException(message);
+                }
+
+                defaultImageUrl = new Uri(
+                    HttpContext.Current.Request.Url,
+                    defaultImageUrl);
             }
-    
-            public string GenerateUrl(string email, string defaultImage)
-            {
-                // Even if no email address is specified, Gravatar can still be used
-                // to return an image (e.g. if default image is "mm" or the URL of an
-                // image)
-                string emailForUrl = email ?? string.Empty;
-                emailForUrl = emailForUrl.ToLowerInvariant();
-    
-                emailForUrl =
-    (FormsAuthentication.HashPasswordForStoringInConfigFile(
-        emailForUrl, "md5") ?? string.Empty).ToLowerInvariant();
-    
-                defaultImage = EncodeDefaultImage(defaultImage);
-    
-                return String.Format(CultureInfo.InvariantCulture, UrlFormatString,
-                    emailForUrl, defaultImage);
-            }
+
+            defaultImage = HttpUtility.UrlEncode(
+                defaultImageUrl.AbsoluteUri);
+
+            return defaultImage;
         }
+
+        public string GenerateUrl(string email)
+        {
+            return GenerateUrl(email, (string) null);
+        }
+
+        public string GenerateUrl(string email, Uri defaultImage)
+        {
+            return GenerateUrl(
+                email,
+                defaultImage != null ? defaultImage.ToString() : string.Empty);
+        }
+
+        public string GenerateUrl(string email, string defaultImage)
+        {
+            // Even if no email address is specified, Gravatar can still be used
+            // to return an image (e.g. if default image is "mm" or the URL of an
+            // image)
+            string emailForUrl = email ?? string.Empty;
+            emailForUrl = emailForUrl.ToLowerInvariant();
+
+            emailForUrl =
+(FormsAuthentication.HashPasswordForStoringInConfigFile(
+    emailForUrl, "md5") ?? string.Empty).ToLowerInvariant();
+
+            defaultImage = EncodeDefaultImage(defaultImage);
+
+            return String.Format(CultureInfo.InvariantCulture, UrlFormatString,
+                emailForUrl, defaultImage);
+        }
+    }
+```
 
 
 
@@ -353,59 +367,61 @@ In the **Comments **control, I modified the logic for displaying Gravatar image
 
 
 
-    protected void CommentsCreated(object sender, RepeaterItemEventArgs e)
+```
+protected void CommentsCreated(object sender, RepeaterItemEventArgs e)
+{
+    if(...)
     {
-        if(...)
+        ...
+        if(feedbackItem != null)
         {
             ...
-            if(feedbackItem != null)
+            if(_gravatarService.Enabled)
             {
-                ...
-                if(_gravatarService.Enabled)
+                var gravatarImage = e.Item.FindControl("GravatarImg") as Image;
+                if(gravatarImage != null)
                 {
-                    var gravatarImage = e.Item.FindControl("GravatarImg") as Image;
-                    if(gravatarImage != null)
+                    //This allows a host-wide setting of the default gravatar image.
+                    string defaultImage = ConfigurationManager.AppSettings["GravatarDefaultImage"];
+
+                    //This allows per-skin configuration of the default gravatar image.
+                    foreach (string attributeKey in gravatarImage.Attributes.Keys)
                     {
-                        //This allows a host-wide setting of the default gravatar image.
-                        string defaultImage = ConfigurationManager.AppSettings["GravatarDefaultImage"];
-    
-                        //This allows per-skin configuration of the default gravatar image.
-                        foreach (string attributeKey in gravatarImage.Attributes.Keys)
+                        if (string.Compare(
+                                attributeKey,
+                                "PlaceHolderImage",
+                                StringComparison.OrdinalIgnoreCase) == 0)
                         {
-                            if (string.Compare(
-                                    attributeKey,
-                                    "PlaceHolderImage",
-                                    StringComparison.OrdinalIgnoreCase) == 0)
-                            {
-                                defaultImage = gravatarImage.Attributes["PlaceHolderImage"];
-                                gravatarImage.Attributes.Remove("PlaceHolderImage");
-                                break;
-                            }
-                        }
-    
-                        gravatarImage.ImageUrl = _gravatarService.GenerateUrl(
-                            feedbackItem.Email,
-                            defaultImage);
-    
-                        // Only change the Visible property of the image to
-                        // true when an email address is specified in the
-                        // comment. This allows a skin to specify a default
-                        // Gravatar image (e.g.
-                        // PlaceHolderImage="~/Skins/TechnologyToolbox1/Images/Silhouette-1.jpg")
-                        // but also choose to hide the default image when
-                        // no email address is available to retrieve a
-                        // Gravatar (i.e. by specifying Visible="false" on
-                        // the Image control).
-                        if (string.IsNullOrEmpty(feedbackItem.Email) == false)
-                        {
-                            gravatarImage.Visible = true;
+                            defaultImage = gravatarImage.Attributes["PlaceHolderImage"];
+                            gravatarImage.Attributes.Remove("PlaceHolderImage");
+                            break;
                         }
                     }
+
+                    gravatarImage.ImageUrl = _gravatarService.GenerateUrl(
+                        feedbackItem.Email,
+                        defaultImage);
+
+                    // Only change the Visible property of the image to
+                    // true when an email address is specified in the
+                    // comment. This allows a skin to specify a default
+                    // Gravatar image (e.g.
+                    // PlaceHolderImage="~/Skins/TechnologyToolbox1/Images/Silhouette-1.jpg")
+                    // but also choose to hide the default image when
+                    // no email address is available to retrieve a
+                    // Gravatar (i.e. by specifying Visible="false" on
+                    // the Image control).
+                    if (string.IsNullOrEmpty(feedbackItem.Email) == false)
+                    {
+                        gravatarImage.Visible = true;
+                    }
                 }
-                ...
             }
+            ...
         }
     }
+}
+```
 
 
 
@@ -413,25 +429,27 @@ As noted in my comments in the code above, this allows greater flexibility in S
 
 
 
-    <div id="postComments">
-      <h3>Comments</h3>
-      ...
-      <asp:Repeater ...>
+```
+<div id="postComments">
+  <h3>Comments</h3>
+  ...
+  <asp:Repeater ...>
+    ...
+    <ItemTemplate>
+      <li ...>
         ...
-        <ItemTemplate>
-          <li ...>
-            ...
-            <div class="avatar">
-              <caelum:BorderlessImage runat="server" ID="GravatarImg"
-                AlternateText="Gravatar" Visible="False"
-                PlaceHolderImage="~/Skins/TechnologyToolbox1/Images/Silhouette-1.jpg"
-                Height="72" Width="72" /></div>
-             ...
-           </li>
-        </ItemTemplate>
-        ...
-      </asp:Repeater>
-    </div>
+        <div class="avatar">
+          <caelum:BorderlessImage runat="server" ID="GravatarImg"
+            AlternateText="Gravatar" Visible="False"
+            PlaceHolderImage="~/Skins/TechnologyToolbox1/Images/Silhouette-1.jpg"
+            Height="72" Width="72" /></div>
+         ...
+       </li>
+    </ItemTemplate>
+    ...
+  </asp:Repeater>
+</div>
+```
 
 
 
@@ -481,37 +499,39 @@ The problem is in the **OnLoad **method of the **CategoryEntryList**class. To f
 
 
 
-    protected override void OnLoad(EventArgs e)
+```
+protected override void OnLoad(EventArgs e)
+        {
+            ...
+            if(...)
             {
                 ...
-                if(...)
+                LinkCategory lc = Cacher.SingleCategory(SubtextContext);
+                ...
+                if(lc == null)
                 {
-                    ...
-                    LinkCategory lc = Cacher.SingleCategory(SubtextContext);
-                    ...
-                    if(lc == null)
-                    {
-                        // Bug 1054:
-                        // When running under Medium trust, calling
-                        // HttpHelper.SetFileNotFoundResponse() causes an
-                        // exception while attempting to read the
-                        // system.web/customErrors section of the Web.config
-                        // file ("System.Security.SecurityException: Request for the
-                        // permission of type
-                        // 'System.Configuration.ConfigurationPermission,
-                        // System.Configuration, Version=2.0.0.0, Culture=neutral,
-                        // PublicKeyToken=b03f5f7f11d50a3a' failed.").
-                        //
-                        // Therefore, just throw 404 HttpException instead.
-                        //
-                        //HttpHelper.SetFileNotFoundResponse();
-                        //return;
-    
-                        throw new HttpException(404, "Category not found.");
-                    }
-                    ...
+                    // Bug 1054:
+                    // When running under Medium trust, calling
+                    // HttpHelper.SetFileNotFoundResponse() causes an
+                    // exception while attempting to read the
+                    // system.web/customErrors section of the Web.config
+                    // file ("System.Security.SecurityException: Request for the
+                    // permission of type
+                    // 'System.Configuration.ConfigurationPermission,
+                    // System.Configuration, Version=2.0.0.0, Culture=neutral,
+                    // PublicKeyToken=b03f5f7f11d50a3a' failed.").
+                    //
+                    // Therefore, just throw 404 HttpException instead.
+                    //
+                    //HttpHelper.SetFileNotFoundResponse();
+                    //return;
+
+                    throw new HttpException(404, "Category not found.");
                 }
+                ...
             }
+        }
+```
 
 
 
@@ -538,17 +558,17 @@ The point is that I did manage to repro the issue in my own environment (by set
 Again, for the sake on not having to rehash an old topic, I'll just copy/paste my check-in comments below:
 
 
-> Fix numerous issues with pingback functionality in Subtext:  
+> Fix numerous issues with pingback functionality in Subtext:
 > 
 > 	- Error in PROD (i.e. "System.Web.HttpException: The file '/blog/jjameson/Services/Pingback.aspx' 
-> 	does not exist.")  
+> 	does not exist.")
 > 
 > 	- The "pingback" URL specified in the &lt;link&gt; head element should be 
 > 	an absolute URL (not a relative URL) according to the Pingback 1.0 specification 
-> 	(http://www.hixie.ch/specs/pingback/pingback)  
+> 	(http://www.hixie.ch/specs/pingback/pingback)
 > 
 > 	- According to the current Subtext routing functionality, the "pingback" 
-> 	URL needs to include the ID of the post (e.g. "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")  
+> 	URL needs to include the ID of the post (e.g. "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")
 > 
 > 	- Method name was misspelled (i.e. "Notifiy" --&gt; "Notify")
 

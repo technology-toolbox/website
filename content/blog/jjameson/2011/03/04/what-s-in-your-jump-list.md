@@ -11,8 +11,8 @@ tags: ["My System", "Windows Server", "SharePoint 2010", "Windows 7", "
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx)

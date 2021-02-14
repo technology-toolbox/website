@@ -10,8 +10,8 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx)
@@ -26,36 +26,38 @@ To provide the simplest repro possible, I created a sample console application t
 
 
 
-    using System;
-    
-    using Microsoft.SharePoint;
-    
-    namespace Fabrikam.Demo.PrintSharePointSiteTitle
+```
+using System;
+
+using Microsoft.SharePoint;
+
+namespace Fabrikam.Demo.PrintSharePointSiteTitle
+{
+    class Program
     {
-        class Program
+        static void Main(
+            string[] args)
         {
-            static void Main(
-                string[] args)
+            if (args.Length < 1)
             {
-                if (args.Length < 1)
-                {
-                    Console.Error.WriteLine(
-                        "Usage: PrintSharePointSiteTitle {site URL}");
-    
-                    Environment.Exit(1);
-                }
-    
-                string siteUrl = args[0];
-    
-                using (SPSite site = new SPSite(siteUrl))
-                {
-                    Console.WriteLine(
-                        "Title: {0}",
-                        site.RootWeb.Title);
-                }
+                Console.Error.WriteLine(
+                    "Usage: PrintSharePointSiteTitle {site URL}");
+
+                Environment.Exit(1);
+            }
+
+            string siteUrl = args[0];
+
+            using (SPSite site = new SPSite(siteUrl))
+            {
+                Console.WriteLine(
+                    "Title: {0}",
+                    site.RootWeb.Title);
             }
         }
     }
+}
+```
 
 
 
@@ -75,13 +77,15 @@ However, if you change the platform target to **x86 **and thus force         the
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;<kbd>PrintSharePointSiteTitle.exe http://fabrikam-local</kbd>
 
 
-    Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local
-    could not be found. Verify that you have typed the URL correctly. If the URL should
-    be serving existing content, the system administrator may need to add a new request
-    URL mapping to the intended application.
-    at Microsoft.SharePoint.SPSite..ctor(SPFarm farm, Uri requestUri, Boolean contextSite, SPUserToken userToken)
-    at Microsoft.SharePoint.SPSite..ctor(String requestUrl)
-    at Fabrikam.Demo.PrintSharePointSiteTitle.Program.Main(String[] args) in C:\NotBackedUp\Temp\PrintSharePointSiteTitle\Program.cs:line 22
+```
+Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local
+could not be found. Verify that you have typed the URL correctly. If the URL should
+be serving existing content, the system administrator may need to add a new request
+URL mapping to the intended application.
+at Microsoft.SharePoint.SPSite..ctor(SPFarm farm, Uri requestUri, Boolean contextSite, SPUserToken userToken)
+at Microsoft.SharePoint.SPSite..ctor(String requestUrl)
+at Fabrikam.Demo.PrintSharePointSiteTitle.Program.Main(String[] args) in C:\NotBackedUp\Temp\PrintSharePointSiteTitle\Program.cs:line 22
+```
 
 
 

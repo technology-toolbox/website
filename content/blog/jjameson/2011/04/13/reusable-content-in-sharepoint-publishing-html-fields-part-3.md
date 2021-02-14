@@ -11,8 +11,8 @@ tags: ["MOSS 2007", "SharePoint
 > **Note**
 > 
 > 
-> 		This post originally appeared on my MSDN blog:  
->   
+> 		This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx)
@@ -45,11 +45,13 @@ When you need to get the HTML content from a SharePoint page and SPContext.Curre
 
 
 
-    HtmlField pageContentField =
-            (HtmlField) page.Fields[FieldId.PublishingPageContent];
-    
-        string pageContent = pageContentField.GetFieldValueAsHtml(
-            page.ListItem[FieldId.PublishingPageContent]);
+```
+HtmlField pageContentField =
+        (HtmlField) page.Fields[FieldId.PublishingPageContent];
+
+    string pageContent = pageContentField.GetFieldValueAsHtml(
+        page.ListItem[FieldId.PublishingPageContent]);
+```
 
 
 
@@ -63,33 +65,35 @@ The original code looked like this:
 
 
 
-    if (pageContent.Contains("__publishingReusableFragment") == true)
+```
+if (pageContent.Contains("__publishingReusableFragment") == true)
+                {
+                    // HACK: We need to "expand" the reusable content in order
+                    // to obtain the complete HTML page content. Unfortunately,
+                    // SharePoint does not currently provide an easy way to do
+                    // this outside the context of a Web request. Therefore
+                    // just emit a warning message in the content when
+                    // SPContext.Current is null (since attempting to replace
+                    // the reusable content fragments ourselves would require
+                    // a substantial amount of custom code).
+                    if (SPContext.Current != null)
                     {
-                        // HACK: We need to "expand" the reusable content in order
-                        // to obtain the complete HTML page content. Unfortunately,
-                        // SharePoint does not currently provide an easy way to do
-                        // this outside the context of a Web request. Therefore
-                        // just emit a warning message in the content when
-                        // SPContext.Current is null (since attempting to replace
-                        // the reusable content fragments ourselves would require
-                        // a substantial amount of custom code).
-                        if (SPContext.Current != null)
-                        {
-                            HtmlField pageContentField =
-                                (HtmlField)page.Fields[FieldId.PublishingPageContent];
-    
-                            pageContent = pageContentField.GetFieldValueAsHtml(
-                                pageContent);
-                        }
-                        else
-                        {
-                            writer.WriteLine(
-    @"<p><strong>Warning:</strong> The page content contains reusable content, which
-        is not included when SPContext.Current is null. To obtain the full content
-        -- including all reusable content -- submit the request within the context
-        of a SharePoint site.</p>");
-                        }
+                        HtmlField pageContentField =
+                            (HtmlField)page.Fields[FieldId.PublishingPageContent];
+
+                        pageContent = pageContentField.GetFieldValueAsHtml(
+                            pageContent);
                     }
+                    else
+                    {
+                        writer.WriteLine(
+@"<p><strong>Warning:</strong> The page content contains reusable content, which
+    is not included when SPContext.Current is null. To obtain the full content
+    -- including all reusable content -- submit the request within the context
+    of a SharePoint site.</p>");
+                    }
+                }
+```
 
 
 
@@ -109,29 +113,31 @@ Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper*
 
 
 
-    public static string GetFieldValueAsHtml(
-                SPWeb web,
-                object value)
+```
+public static string GetFieldValueAsHtml(
+            SPWeb web,
+            object value)
+        {
+            if (web == null)
             {
-                if (web == null)
-                {
-                    throw new ArgumentNullException("web");
-                }
-    
-                string str = value as string;
-    
-                if (string.IsNullOrEmpty(str) == true)
-                {
-                    return string.Empty;
-                }
-    
-                bool canCacheResults = true;
-    
-                return ConvertStorageFormatToViewFormat(
-                    web,
-                    str,
-                    out canCacheResults);
+                throw new ArgumentNullException("web");
             }
+
+            string str = value as string;
+
+            if (string.IsNullOrEmpty(str) == true)
+            {
+                return string.Empty;
+            }
+
+            bool canCacheResults = true;
+
+            return ConvertStorageFormatToViewFormat(
+                web,
+                str,
+                out canCacheResults);
+        }
+```
 
 
 
@@ -156,47 +162,49 @@ I should point out, however, that I still prefer to use the out-of-the-box Shar
 
 
 
-    /// <summary>
-            /// Returns the value of the "Page Content" field for the specified page
-            /// in HTML format. If the field contains any "reusable content"
-            /// placeholders, they are expanded in order to return the HTML just as
-            /// it would appear directly on the page.
-            /// </summary>
-            /// <param name="page">The page to get the content for.</param>
-            /// <returns>The HTML content for the "Page Content" field.</returns>
-            public static string GetPageContentAsHtml(
-                PublishingPage page)
+```
+/// <summary>
+        /// Returns the value of the "Page Content" field for the specified page
+        /// in HTML format. If the field contains any "reusable content"
+        /// placeholders, they are expanded in order to return the HTML just as
+        /// it would appear directly on the page.
+        /// </summary>
+        /// <param name="page">The page to get the content for.</param>
+        /// <returns>The HTML content for the "Page Content" field.</returns>
+        public static string GetPageContentAsHtml(
+            PublishingPage page)
+        {
+            if (page == null)
             {
-                if (page == null)
-                {
-                    throw new ArgumentNullException("page");
-                }
-    
-                string pageContent = null;
-    
-                if (SPContext.Current != null)
-                {
-                    // In this case, the out-of-the-box SharePoint functionality
-                    // works, so use it (rather than our own hack)
-                    HtmlField pageContentField =
-                        (HtmlField) page.Fields[FieldId.PublishingPageContent];
-    
-                    pageContent = pageContentField.GetFieldValueAsHtml(
-                        page.ListItem[FieldId.PublishingPageContent]);
-    
-                }
-                else
-                {
-                    // HACK: In this case, the out-of-the-box SharePoint
-                    // functionality throws a NullReferenceException, so get the
-                    // HTML content using custom code
-                    pageContent = SharePointHtmlFieldHelper.GetFieldValueAsHtml(
-                         page.PublishingWeb.Web,
-                         page.ListItem[FieldId.PublishingPageContent]);
-                }
-    
-                return pageContent;
+                throw new ArgumentNullException("page");
             }
+
+            string pageContent = null;
+
+            if (SPContext.Current != null)
+            {
+                // In this case, the out-of-the-box SharePoint functionality
+                // works, so use it (rather than our own hack)
+                HtmlField pageContentField =
+                    (HtmlField) page.Fields[FieldId.PublishingPageContent];
+
+                pageContent = pageContentField.GetFieldValueAsHtml(
+                    page.ListItem[FieldId.PublishingPageContent]);
+
+            }
+            else
+            {
+                // HACK: In this case, the out-of-the-box SharePoint
+                // functionality throws a NullReferenceException, so get the
+                // HTML content using custom code
+                pageContent = SharePointHtmlFieldHelper.GetFieldValueAsHtml(
+                     page.PublishingWeb.Web,
+                     page.ListItem[FieldId.PublishingPageContent]);
+            }
+
+            return pageContent;
+        }
+```
 
 
 
@@ -204,61 +212,63 @@ If you download the sample solution from my previous post, you can run all the 
 
 
 
-    /// <summary>
-            /// This test simply demonstrates why the out-of-the-box
-            /// <see cref="Microsoft.SharePoint.Publishing.Fields.HtmlField.GetFieldValueAsHtml"/>
-            /// method cannot be used to "expand" reusable content when
-            /// SPContext.Current is null.
-            /// </summary>
-            [System.Diagnostics.CodeAnalysis.SuppressMessage(
-                "Microsoft.Naming",
-                "CA1707:IdentifiersShouldNotContainUnderscores")]
-            [TestMethod()]
-            [ExpectedException(typeof(NullReferenceException))]
-            public void HtmlField_GetFieldValueAsHtml_FailsWhenSPContextCurrentIsNull()
+```
+/// <summary>
+        /// This test simply demonstrates why the out-of-the-box
+        /// <see cref="Microsoft.SharePoint.Publishing.Fields.HtmlField.GetFieldValueAsHtml"/>
+        /// method cannot be used to "expand" reusable content when
+        /// SPContext.Current is null.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Microsoft.Naming",
+            "CA1707:IdentifiersShouldNotContainUnderscores")]
+        [TestMethod()]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void HtmlField_GetFieldValueAsHtml_FailsWhenSPContextCurrentIsNull()
+        {
+            string fabrikamDemoUrl = GetFabrikamDemoUrl();
+
+            const string webUrl = "/";
+            const string pageUrl = "Pages/ReusableContentSample.aspx";
+
+            // The following HTML should not appear in the "storage" format but
+            // should appear in the "view" format (in other words, when the
+            // reusable content is "expanded")
+            const string reusableContentFragment =
+                "<h2>Statement of Non-Discrimination and Affirmative Action</h2>";
+
+            using (SPSite site = new SPSite(fabrikamDemoUrl))
             {
-                string fabrikamDemoUrl = GetFabrikamDemoUrl();
-    
-                const string webUrl = "/";
-                const string pageUrl = "Pages/ReusableContentSample.aspx";
-    
-                // The following HTML should not appear in the "storage" format but
-                // should appear in the "view" format (in other words, when the
-                // reusable content is "expanded")
-                const string reusableContentFragment =
-                    "<h2>Statement of Non-Discrimination and Affirmative Action</h2>";
-    
-                using (SPSite site = new SPSite(fabrikamDemoUrl))
+                using (SPWeb web = site.OpenWeb(webUrl))
                 {
-                    using (SPWeb web = site.OpenWeb(webUrl))
-                    {
-                        PublishingPage page =
-                            SharePointPublishingHelper.FindPublishingPage(
-                                web,
-                                pageUrl);
-    
-                        string pageContent = (string)page.ListItem[
-                            FieldId.PublishingPageContent];
-    
-                        Assert.IsTrue(pageContent.Contains(
-                            "__publishingReusableFragment"));
-    
-                        Assert.IsFalse(pageContent.Contains(
-                            reusableContentFragment));
-    
-                        // Now demonstrate that HtmlField.GetFieldValueAsHtml
-                        // throws NullReferenceException when SPContext.Current is
-                        // null...
-                        Assert.IsNull(SPContext.Current);
-    
-                        HtmlField pageContentField =
-                            (HtmlField)page.Fields[FieldId.PublishingPageContent];
-    
-                        pageContentField.GetFieldValueAsHtml(
-                            pageContent);
-                    }
+                    PublishingPage page =
+                        SharePointPublishingHelper.FindPublishingPage(
+                            web,
+                            pageUrl);
+
+                    string pageContent = (string)page.ListItem[
+                        FieldId.PublishingPageContent];
+
+                    Assert.IsTrue(pageContent.Contains(
+                        "__publishingReusableFragment"));
+
+                    Assert.IsFalse(pageContent.Contains(
+                        reusableContentFragment));
+
+                    // Now demonstrate that HtmlField.GetFieldValueAsHtml
+                    // throws NullReferenceException when SPContext.Current is
+                    // null...
+                    Assert.IsNull(SPContext.Current);
+
+                    HtmlField pageContentField =
+                        (HtmlField)page.Fields[FieldId.PublishingPageContent];
+
+                    pageContentField.GetFieldValueAsHtml(
+                        pageContent);
                 }
             }
+        }
+```
 
 
 

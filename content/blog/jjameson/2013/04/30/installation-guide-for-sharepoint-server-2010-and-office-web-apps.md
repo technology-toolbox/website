@@ -199,14 +199,16 @@ To resolve the issue, remove the WSUS registry 	entries specified in [KB 	9032
 2. At the command prompt, type the following commands:		
 
 
-        net stop wuauserv
-        
-        reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
-        reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
-        reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
-        reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
-        
-        net start wuauserv
+    ```
+    net stop wuauserv
+    
+    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
+    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
+    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
+    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
+    
+    net start wuauserv
+    ```
 
 
 More information on this step is available in the following blog post:
@@ -223,14 +225,18 @@ To cleanup the network adapters:
 
 1. Click **Start**, click **All Programs**, 		click **Accessories**, right-click **Command Prompt**, 		and** **then click** Run as administrator**.
 2. At the command prompt, type the following commands:
-  
-
-
-        set devmgr_show_nonpresent_devices=1
 
 
 
-        start devmgmt.msc
+    ```
+    set devmgr_show_nonpresent_devices=1
+    ```
+
+
+
+    ```
+    start devmgmt.msc
+    ```
 3. In the **Device Manager **window:
     1. Click the **View **menu and then click **			Show hidden devices**.
     2. Expand **Network adapters**.
@@ -275,12 +281,14 @@ To create a 500 MB VHD for the SQL Server log 	files:
 2. From the Windows PowerShell command prompt, type the following commands 		(update the VM name and VHD path as necessary):		
 
 
-        $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
-            -namespace "root\virtualization"
-        
-        $vhdService.CreateDynamicVirtualHardDisk(
-            "D:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
-            500MB)
+    ```
+    $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
+        -namespace "root\virtualization"
+    
+    $vhdService.CreateDynamicVirtualHardDisk(
+        "D:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
+        500MB)
+    ```
 
 
 More information on this step is available in the following blog post:
@@ -299,8 +307,10 @@ To configure the MaxPatchCacheSize policy:
 2. At the command prompt, type the following command:		
 
 
-        reg add HKLM\Software\Policies\Microsoft\Windows\Installer 
-        			/v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+    ```
+    reg add HKLM\Software\Policies\Microsoft\Windows\Installer 
+    			/v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+    ```
 
 
 More information on this step is available in the following blog post:
@@ -390,11 +400,15 @@ To map the host name for a Web application 	to the loopback address:
 2. At the command prompt, type the following command:
 
 
-        notepad %WINDIR%\System32\Drivers\etc\hosts
+    ```
+    notepad %WINDIR%\System32\Drivers\etc\hosts
+    ```
 3. In Notepad, add a line to map the loopback address (127.0.0.1) to 		the "local" version of each host header specified in		Table 7. For example:		
 
 
-        127.0.0.1 	extranet-local.fabrikam.com
+    ```
+    127.0.0.1 	extranet-local.fabrikam.com
+    ```
 4. Save the changes to the file and close the editor.
 
 
@@ -598,51 +612,53 @@ Execute the following SQL script to change all user databases and the 	out-of-t
 
 
 
-    IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
-    
-    CREATE TABLE #CommandQueue
-    (
-        ID INT IDENTITY ( 1, 1 )
-        , SqlStatement VARCHAR(1000)
-    )
-    
-    INSERT INTO #CommandQueue
-    (
-        SqlStatement
-    )
+```
+IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
+
+CREATE TABLE #CommandQueue
+(
+    ID INT IDENTITY ( 1, 1 )
+    , SqlStatement VARCHAR(1000)
+)
+
+INSERT INTO #CommandQueue
+(
+    SqlStatement
+)
+SELECT
+    'ALTER DATABASE [' + name + '] SET RECOVERY SIMPLE'
+FROM
+    sys.databases
+WHERE
+    name NOT IN ( 'master', 'msdb', 'tempdb' )
+
+DECLARE @id INT
+
+SELECT @id = MIN(ID)
+FROM #CommandQueue
+
+WHILE @id IS NOT NULL
+BEGIN
+    DECLARE @sqlStatement VARCHAR(1000)
+
     SELECT
-        'ALTER DATABASE [' + name + '] SET RECOVERY SIMPLE'
+        @sqlStatement = SqlStatement
     FROM
-        sys.databases
+        #CommandQueue
     WHERE
-        name NOT IN ( 'master', 'msdb', 'tempdb' )
-    
-    DECLARE @id INT
-    
+        ID = @id
+
+    PRINT 'Executing ''' + @sqlStatement + '''...'
+
+    EXEC (@sqlStatement)
+
+    DELETE FROM #CommandQueue
+    WHERE ID = @id
+
     SELECT @id = MIN(ID)
     FROM #CommandQueue
-    
-    WHILE @id IS NOT NULL
-    BEGIN
-        DECLARE @sqlStatement VARCHAR(1000)
-    
-        SELECT
-            @sqlStatement = SqlStatement
-        FROM
-            #CommandQueue
-        WHERE
-            ID = @id
-    
-        PRINT 'Executing ''' + @sqlStatement + '''...'
-    
-        EXEC (@sqlStatement)
-    
-        DELETE FROM #CommandQueue
-        WHERE ID = @id
-    
-        SELECT @id = MIN(ID)
-        FROM #CommandQueue
-    END
+END
+```
 
 
 
@@ -1036,8 +1052,10 @@ To change the schedule for deleting timer job history:
 2. From the Windows PowerShell command prompt, type the following command:		
 
 
-        Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 
-        			12:00:00 and 13:00:00"
+    ```
+    Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 
+    			12:00:00 and 13:00:00"
+    ```
 3. Wait for the command to complete and verify no errors occurred during 		the process.
 
 
@@ -1101,8 +1119,10 @@ For the Test and Production environments, always designate the specific 	build 
 
 
 
-    robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 
-    		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
+```
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 
+		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
+```
 
 
 
@@ -1110,8 +1130,10 @@ For development environments, the "latest" version may be specified. 	For examp
 
 
 
-    robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 
-    		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
+```
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 
+		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
+```
 
 
 
@@ -1142,13 +1164,17 @@ To create the Web application using the PowerShell 	scripts:
 3. Type the following command:		
 
 
-        & '.\Create Web Application.ps1'
+    ```
+    & '.\Create Web Application.ps1'
+    ```
 4. If prompted for the the application pool credentials, verify the 		user name, type the password, and then click **OK**.
 5. Wait for the script to complete and verify no errors occurred during 		the process.
 6. Type the following command:		
 
 
-        & '.\Create Site Collections.ps1'
+    ```
+    & '.\Create Site Collections.ps1'
+    ```
 7. Wait for the script to complete and verify no errors occurred during 		the process.
 8. Proceed to the next section (Expand 		content database files).
 
@@ -1216,20 +1242,22 @@ The following SQL statements can be used as an alternative to setting 	the size
 
 
 
-    USE [master]
-    GO
-    ALTER DATABASE [WSS_Content_FabrikamExtranet]
-      MODIFY FILE(
-        NAME = N'WSS_Content_FabrikamExtranet'
-        , SIZE = 10240000KB
-        , FILEGROWTH = 512000KB)
-    GO
-    ALTER DATABASE [WSS_Content_FabrikamExtranet]
-    MODIFY FILE(
-        NAME = N'WSS_Content_FabrikamExtranet_log'
-        , SIZE = 409600KB
-        , MAXSIZE = 4096000KB)
-    GO
+```
+USE [master]
+GO
+ALTER DATABASE [WSS_Content_FabrikamExtranet]
+  MODIFY FILE(
+    NAME = N'WSS_Content_FabrikamExtranet'
+    , SIZE = 10240000KB
+    , FILEGROWTH = 512000KB)
+GO
+ALTER DATABASE [WSS_Content_FabrikamExtranet]
+MODIFY FILE(
+    NAME = N'WSS_Content_FabrikamExtranet_log'
+    , SIZE = 409600KB
+    , MAXSIZE = 4096000KB)
+GO
+```
 
 
 
@@ -1247,12 +1275,16 @@ To configure object cache user accounts:
 3. Type the following command:		
 
 
-        & '.\Configure Object Cache User Accounts.ps1'
+    ```
+    & '.\Configure Object Cache User Accounts.ps1'
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.
 5. Type the following command to reset Internet Information Services 		(IIS):		
 
 
-        iisreset
+    ```
+    iisreset
+    ```
 
 
 ## Configure the People Picker to support searches across one-way trust
@@ -1273,7 +1305,9 @@ To enable selection of people and groups from 	the internal Fabrikam domain:
 2. Type the following command:		
 
 
-        stsadm -o setapppassword -password {Key}
+    ```
+    stsadm -o setapppassword -password {Key}
+    ```
 
 
 
@@ -1292,9 +1326,11 @@ To enable selection of people and groups from 	the internal Fabrikam domain:
 4. On one of the front-end Web servers, type the following command:		
 
 
-        stsadm -o setproperty -pn peoplepicker-searchadforests -pv 
-        			"domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" 
-        			-url http://extranet.fabrikam.com
+    ```
+    stsadm -o setproperty -pn peoplepicker-searchadforests -pv 
+    			"domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" 
+    			-url http://extranet.fabrikam.com
+    ```
 
 
 
@@ -1348,7 +1384,9 @@ To enable anonymous access to the site using 	PowerShell:
 3. Type the following command:		
 
 
-        & '.\Enable Anonymous Acess.ps1'
+    ```
+    & '.\Enable Anonymous Acess.ps1'
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.
 5. Proceed to the next section (Configure 		claims-based authentication).
 
@@ -1396,14 +1434,18 @@ To create the database used for storing membership 	and role information:
 2. At the command prompt, type the following command:		
 
 
-        cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
+    ```
+    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
+    ```
 3. Type the following command:		
 
 
-        aspnet_regsql.exe
+    ```
+    aspnet_regsql.exe
+    ```
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, 		click **Next**.
 5. On the **Select a Setup Option **page, ensure the option 		to **Configure SQL Server for application services **is 		selected and then click **Next**.
-6. On the **Select the Server and Database **page:  
+6. On the **Select the Server and Database **page:
 
     1. In the **Server **box, type the name of the database 			server.
     2. Ensure the **Windows authentication **option is 			selected.
@@ -1498,10 +1540,12 @@ To configure the Central Administration Web.config 	file:
     1. After the end of the **/configuration/configSections			**element (i.e. `</configSections>`), 			add the following elements:			
 
 
-            <connectionStrings>
-                <add name="FabrikamDemo"
-                  connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-              </connectionStrings>
+        ```
+        <connectionStrings>
+            <add name="FabrikamDemo"
+              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+          </connectionStrings>
+        ```
 
 
 
@@ -1515,18 +1559,22 @@ To configure the Central Administration Web.config 	file:
     2. Find the **/configuration/system.web/roleManager/providers			**section and add the following elements:			
 
 
-            <add name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
+        ```
+        <add name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        ```
     3. Find the **/configuration/system.web/membership/providers			**section and add the following elements:			
 
 
-            <add name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              passwordFormat="Hashed" />
+        ```
+        <add name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          passwordFormat="Hashed" />
+        ```
 6. Save the changes to the Web.config file and close the editor.
 7. Repeat the steps above on each Web server in the farm that hosts 		the Central Administration site.
 
@@ -1546,33 +1594,35 @@ To configure the Security Token Service Web.config 	file:
 3. In the Web.config editor, add the following elements to the		`<configuration>` 		root element:		
 
 
-        <connectionStrings>
+    ```
+    <connectionStrings>
+      <add
+      name="FabrikamDemo"
+      connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+    </connectionStrings>
+    
+    <system.web>
+      <membership>
+        <providers>
           <add
-          name="FabrikamDemo"
-          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
-        
-        <system.web>
-          <membership>
-            <providers>
-              <add
-              name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              passwordFormat="Hashed" />
-            </providers>
-          </membership>
-          <roleManager>
-            <providers>
-              <add
-              name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
-            </providers>
-          </roleManager>
-        </system.web>
+          name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          passwordFormat="Hashed" />
+        </providers>
+      </membership>
+      <roleManager>
+        <providers>
+          <add
+          name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        </providers>
+      </roleManager>
+    </system.web>
+    ```
 
 
 
@@ -1602,10 +1652,12 @@ To configure the Web.config file for the Fabrikam 	Extranet Web application:
     1. After the end of the **/configuration/configSections			**element (i.e. `</configSections>`), 			add the following elements:			
 
 
-            <connectionStrings>
-                <add name="FabrikamDemo"
-                  connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-              </connectionStrings>
+        ```
+        <connectionStrings>
+            <add name="FabrikamDemo"
+              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+          </connectionStrings>
+        ```
 
 
 
@@ -1619,10 +1671,12 @@ To configure the Web.config file for the Fabrikam 	Extranet Web application:
     2. Find the **/configuration/system.web/roleManager/providers			**section and add the following elements:			
 
 
-            <add name="FabrikamSqlRoleProvider"
-              type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo" />
+        ```
+        <add name="FabrikamSqlRoleProvider"
+          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo" />
+        ```
 
 
 
@@ -1635,15 +1689,17 @@ To configure the Web.config file for the Fabrikam 	Extranet Web application:
     3. Find the **/configuration/system.web/membership/providers			**section and add the following elements:			
 
 
-            <add name="FabrikamSqlMembershipProvider"
-              type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-              applicationName="Fabrikam Demo Site"
-              connectionStringName="FabrikamDemo"
-              enablePasswordReset="true"
-              enablePasswordRetrieval="false"
-              passwordFormat="Hashed"
-              requiresQuestionAndAnswer="true"
-              requiresUniqueEmail="true" />
+        ```
+        <add name="FabrikamSqlMembershipProvider"
+          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+          applicationName="Fabrikam Demo Site"
+          connectionStringName="FabrikamDemo"
+          enablePasswordReset="true"
+          enablePasswordRetrieval="false"
+          passwordFormat="Hashed"
+          requiresQuestionAndAnswer="true"
+          requiresUniqueEmail="true" />
+        ```
 4. Save the changes to the Web.config file and close the editor.
 5. Repeat the steps above on each Web server in the farm.
 
@@ -1762,8 +1818,10 @@ To configure BLOB cache settings:
 6. In the Web.config editor, find the following line:		
 
 
-        <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
-            enabled="false" />
+    ```
+    <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
+        enabled="false" />
+    ```
 7. In this line, change the **location** attribute to 		specify a directory that has enough space to accommodate the cache size.		
 
 > **Note**
@@ -1820,7 +1878,9 @@ To configure the State Service:
 3. Type the following command:		
 
 
-        & '.\Configure State Service.ps1'
+    ```
+    & '.\Configure State Service.ps1'
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.
 
 
@@ -1840,7 +1900,9 @@ To create and configure the Search Service 	Application:
 3. Type the following command:		
 
 
-        & '.\Configure SharePoint Search.ps1'
+    ```
+    & '.\Configure SharePoint Search.ps1'
+    ```
 4. When prompted for default content access account credentials, verify 		the user name (EXTRANET\svc-index), type the password, and then click		**OK**.
 5. If prompted for the service application credentials, verify the 		user name (EXTRANET\svc-spserviceapp), type the password, and then click		**OK**.
 6. Wait for the script to complete and verify no errors occurred during 		the process.		
@@ -2005,7 +2067,9 @@ To configure the Office Web Apps cache and 	create a separate content database 
 3. Type the following command:
 
 
-        & '.\Configure Office Web Apps Cache.ps1'
+    ```
+    & '.\Configure Office Web Apps Cache.ps1'
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.		
 
 > **Note**
@@ -2025,7 +2089,9 @@ To configure the Office Web Apps cache and 	create a separate content database 
 5. Type the following command to reset Internet Information Services 		(IIS):		
 
 
-        iisreset
+    ```
+    iisreset
+    ```
 
 
 To increase the size of the database files 	for the Office Web Apps cache:
@@ -2042,20 +2108,22 @@ The following SQL statements can be used as an alternative to setting 	the size
 
 
 
-    USE [master]
-    GO
-    ALTER DATABASE [OfficeWebAppsCache]
-      MODIFY FILE(
-        NAME = N'OfficeWebAppsCache'
-        , SIZE = 10240000KB
-        , FILEGROWTH = 512000KB)
-    GO
-    ALTER DATABASE [OfficeWebAppsCache]
-      MODIFY FILE(
-        NAME = N'OfficeWebAppsCache_log'
-        , SIZE = 409600KB
-        , MAXSIZE = 4096000KB)
-    GO
+```
+USE [master]
+GO
+ALTER DATABASE [OfficeWebAppsCache]
+  MODIFY FILE(
+    NAME = N'OfficeWebAppsCache'
+    , SIZE = 10240000KB
+    , FILEGROWTH = 512000KB)
+GO
+ALTER DATABASE [OfficeWebAppsCache]
+  MODIFY FILE(
+    NAME = N'OfficeWebAppsCache_log'
+    , SIZE = 409600KB
+    , MAXSIZE = 4096000KB)
+GO
+```
 
 
 
@@ -2069,9 +2137,11 @@ To grant the Office Web Apps service account 	access to the content database:
 2. From the Windows PowerShell command prompt, type the following commands:		
 
 
-        $webApp = Get-SPWebApplication -Identity "http://extranet.fabrikam.com"
-        
-        $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
+    ```
+    $webApp = Get-SPWebApplication -Identity "http://extranet.fabrikam.com"
+    
+    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
+    ```
 
 
 # Deploy the Fabrikam Extranet solution and create partner sites
@@ -2097,7 +2167,9 @@ To add the new event source:
 3. Type the following command:
 
 
-        & '.\Add Event Log Sources.ps1'
+    ```
+    & '.\Add Event Log Sources.ps1'
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.
 5. Repeat the steps above on each SharePoint server in the farm.
 
@@ -2114,15 +2186,21 @@ To install and activate the features:
 3. Type the following command:
 
 
-        & '.\Add Solutions.ps1'
+    ```
+    & '.\Add Solutions.ps1'
+    ```
 4. Wait for the solutions to be added and then type the following command:
 
 
-        & '.\Deploy Solutions.ps1'
+    ```
+    & '.\Deploy Solutions.ps1'
+    ```
 5. Wait for the solutions to be deployed and then type the following 		command:
 
 
-        & '.\Activate Features.ps1'
+    ```
+    & '.\Activate Features.ps1'
+    ```
 6. Wait for the feature activations to complete, and then minimize 		or close the PowerShell command prompt.
 
 
@@ -2160,7 +2238,9 @@ To create the sample content:
 2. Type the following command:		
 
 
-        Fabrikam.Demo.Tools.TestConsole.exe
+    ```
+    Fabrikam.Demo.Tools.TestConsole.exe
+    ```
 3. Wait for the program to complete and verify no errors occurred during 		the process.
 
 
@@ -2180,7 +2260,9 @@ To create a site collection for a Fabrikam 	partner using the PowerShell script
 3. Run the **Create Partner Site Collection.ps1** script 		and provide the name of the partner, for example:
 
 
-        & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
+    ```
+    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
+    ```
 4. Wait for the script to complete and verify no errors occurred during 		the process.
 5. Proceed to the next section (Apply 		the “Fabrikam Partner Site” template to the top-level site).
 
@@ -2287,8 +2369,8 @@ There are a number of configuration parameters that need to be determined 		bef
 <caption><a name="Table_4_-_Diagnostic_logging">Table 4 - Diagnostic 			logging</a></caption>| Setting | Value |
 | --- | --- |
 | Enable Event Log Flood Protection  | Yes (checked) |
-| Trace Log Path  | TEST and PROD:  <br>				L:\Program Files\Microsoft Office Servers\14.0\Logs  <br>  <br>				DEV:  <br>				%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Number of days to store log files  | TEST and PROD: 14  <br>				DEV: 1 |
+| Trace Log Path  | TEST and PROD:<br>				L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>				DEV:<br>				%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+| Number of days to store log files  | TEST and PROD: 14<br>				DEV: 1 |
 | Restrict Trace Log disk space usage  | No (not checked)  |
 | Maximum storage space for Trace Logs (GB)  | N/A  |
 
@@ -2298,10 +2380,10 @@ There are a number of configuration parameters that need to be determined 		bef
 
 <caption>			<a name="Table_5_-_Web_analytics_and_health_data_collection">Table 			5 - Web analytics and health data collection</a></caption>| Setting | Value |
 | --- | --- |
-| Enable usage data collection | TEST and PROD: Yes (checked)  <br>  <br>				DEV: No (not checked)\* |
-| Log file location | TEST and PROD:  <br>				L:\Program Files\Microsoft Office Servers\14.0\Logs  <br>  <br>				DEV:  <br>				C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Maximum log file size | TEST and PROD: 5  <br>  <br>				DEV: 1 |
-| Enable health data collection | TEST and PROD: Yes (checked)  <br>  <br>				DEV: No (not checked)\* |
+| Enable usage data collection | TEST and PROD: Yes (checked)<br><br>				DEV: No (not checked)\* |
+| Log file location | TEST and PROD:<br>				L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>				DEV:<br>				C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+| Maximum log file size | TEST and PROD: 5<br><br>				DEV: 1 |
+| Enable health data collection | TEST and PROD: Yes (checked)<br><br>				DEV: No (not checked)\* |
 | Database Name | WSS\_Logging |
 
 
@@ -2371,5 +2453,5 @@ There are a number of configuration parameters that need to be determined 		bef
 | Run every  | 1 week  | 1 day  |
 | On:  | <ul>					<li>Sunday</li>				</ul> | N/A  |
 | Starting time  | 04:00 AM  | 12:00 AM  |
-| Repeat within the day  | No  | Yes  <br>				Every 30 minutes  <br>				For 1440 minutes  |
+| Repeat within the day  | No  | Yes<br>				Every 30 minutes<br>				For 1440 minutes  |
 

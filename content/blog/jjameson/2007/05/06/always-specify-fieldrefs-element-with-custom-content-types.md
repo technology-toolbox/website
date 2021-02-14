@@ -10,8 +10,8 @@ tags: ["MOSS 2007", "WSS v3"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx)
@@ -30,12 +30,14 @@ It turns out that when I "rebuilt" our ContentTypes.xml file to include all of  
 
 
 
-    <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
-        Name="Brochure"
-        Description=""
-        Group="Fabrikam Content Types"
-        Version="0">
-      </ContentType>
+```
+<ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
+    Name="Brochure"
+    Description=""
+    Group="Fabrikam Content Types"
+    Version="0">
+  </ContentType>
+```
 
 
 
@@ -43,14 +45,16 @@ instead of
 
 
 
-    <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
-        Name="Brochure"
-        Description=""
-        Group="Fabrikam Content Types"
-        Version="0">
-        <FieldRefs>
-        </FieldRefs>
-      </ContentType>
+```
+<ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
+    Name="Brochure"
+    Description=""
+    Group="Fabrikam Content Types"
+    Version="0">
+    <FieldRefs>
+    </FieldRefs>
+  </ContentType>
+```
 
 
 

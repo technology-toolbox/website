@@ -10,8 +10,8 @@ tags: ["TFS", "SharePoint 2010"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx)
 > 
@@ -36,17 +36,19 @@ Looking at the event log on the SharePoint/TFS server, I found the following err
 
 
 
-    Source: Microsoft-SharePoint Products-SharePoint Foundation
-    Event ID: 3760
-    Task Category: Database
-    Level: Critical
-    User: TECHTOOLBOX\svc-spserviceapp-tst
-    Computer: cyclops-test.corp.technologytoolbox.com
-    Description:
-    SQL Database 'WSS_Content' on SQL Server instance 'beast-test' not found. Additional error information from SQL Server is included below.
-    
-    Cannot open database "WSS_Content" requested by the login. The login failed.
-    Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
+```
+Source: Microsoft-SharePoint Products-SharePoint Foundation
+Event ID: 3760
+Task Category: Database
+Level: Critical
+User: TECHTOOLBOX\svc-spserviceapp-tst
+Computer: cyclops-test.corp.technologytoolbox.com
+Description:
+SQL Database 'WSS_Content' on SQL Server instance 'beast-test' not found. Additional error information from SQL Server is included below.
+
+Cannot open database "WSS_Content" requested by the login. The login failed.
+Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
+```
 
 
 
@@ -62,13 +64,15 @@ Consequently, I added the service account for Excel Services to the SharePoint c
 
 
 
-    Source: Microsoft-SharePoint Products-SharePoint Foundation
-    Event ID: 5586
-    Description:
-    Unknown SQL Exception 262 occurred. Additional error information from SQL Server 
-    is included below.
-    
-    CREATE TABLE permission denied in database 'WSS_Content'.
+```
+Source: Microsoft-SharePoint Products-SharePoint Foundation
+Event ID: 5586
+Description:
+Unknown SQL Exception 262 occurred. Additional error information from SQL Server 
+is included below.
+
+CREATE TABLE permission denied in database 'WSS_Content'.
+```
 
 
 
@@ -76,16 +80,18 @@ and
 
 
 
-    Source: Microsoft-SharePoint Products-SharePoint Foundation
-    Event ID: 5617
-    Description:
-    There is a compatibility range mismatch between the Web server and database 
-    "WSS_Content", and connections to the data have been blocked to due to this 
-    incompatibility. This can happen when a content database has not been upgraded 
-    to be within the compatibility range of the Web server, or if the database has 
-    been upgraded to a higher level than the web server. The Web server and the 
-    database must be upgraded to the same version and build level to return to 
-    compatibility range.
+```
+Source: Microsoft-SharePoint Products-SharePoint Foundation
+Event ID: 5617
+Description:
+There is a compatibility range mismatch between the Web server and database 
+"WSS_Content", and connections to the data have been blocked to due to this 
+incompatibility. This can happen when a content database has not been upgraded 
+to be within the compatibility range of the Web server, or if the database has 
+been upgraded to a higher level than the web server. The Web server and the 
+database must be upgraded to the same version and build level to return to 
+compatibility range.
+```
 
 
 
@@ -114,11 +120,13 @@ To add the the service account for SharePoint service applications to the underl
 > 
 > 
 > 
->     Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
->     
->     $webApp = Get-SPWebApplication "http://cyclops"
->     
->     $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
+> ```
+> Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
+> 
+> $webApp = Get-SPWebApplication "http://cyclops"
+> 
+> $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
+> ```
 > 
 > 
 > 

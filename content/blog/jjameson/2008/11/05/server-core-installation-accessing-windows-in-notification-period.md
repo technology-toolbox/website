@@ -11,8 +11,8 @@ tags: ["Windows Server", "Infrastructure"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx)
@@ -35,16 +35,16 @@ Unfortunately, I got "no love" from ROGUE when I tried to login. The screen was 
 
 After ROGUE rebooted, I noticed that I still had problems accessing it. When  I was finally able to examine the event log, I discovered the following:
 
-Log Name: Application  
-Source: Microsoft-Windows-Winlogon  
-Date: 11/5/2008 6:04:29 AM  
-Event ID: 4104  
-Task Category: None  
-Level: Information  
-Keywords: Classic  
-User: N/A  
-Computer: ROGUE.corp.technologytoolbox.com  
-Description:  
+Log Name: Application
+Source: Microsoft-Windows-Winlogon
+Date: 11/5/2008 6:04:29 AM
+Event ID: 4104
+Task Category: None
+Level: Information
+Keywords: Classic
+User: N/A
+Computer: ROGUE.corp.technologytoolbox.com
+Description:
 Accessing Windows in Notification period.
 
 Ugh...from this I determined that it must have been exactly 61 days this morning  since I rebuilt ROGUE with Windows Server 2008 (Server Core) and virtualized a couple  of other physical servers. Apparently, I neglected to perform a vital configuration  step -- specifically, setting the product key.
@@ -53,7 +53,9 @@ For a Server Core installation, you need to use the Windows Software Licensing  
 
 
 
-    slmgr.vbs -ipk <Product Key>
+```
+slmgr.vbs -ipk <Product Key>
+```
 
 
 
@@ -61,7 +63,9 @@ After changing the product key, you then need to activate Windows:
 
 
 
-    slmgr.vbs -ato
+```
+slmgr.vbs -ato
+```
 
 
 

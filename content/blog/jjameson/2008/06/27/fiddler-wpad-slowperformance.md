@@ -9,8 +9,8 @@ tags: ["Windows Vista", "Debugging"]
 
 > **Note**
 > 
-> This post originally appeared on my MSDN blog:  
->   
+> This post originally appeared on my MSDN blog:
+> 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx)
 > 

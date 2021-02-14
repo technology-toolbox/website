@@ -10,8 +10,8 @@ tags: ["SharePoint 2010", "Tugboat"]
 
 > **Note**
 > 
->             This post originally appeared on my MSDN blog:  
->   
+>             This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx)
@@ -118,39 +118,41 @@ The next step is to render the items in the list using the semantic markup previ
 
 
 
-    <h2>This Week's Specials</h2>
-    <ol class='specials group'>
-        <li class='group'>
-            <div class='special'>
-                <div class='special-img'>
-                    <a href='#'>
-                        <img src='/PublishingImages/boat.jpg' alt='coffee' />
-                        <span><strong>Fisherman&#8217;s Brew</strong>
-                            <em>$9.98 / lb.</em></span></a>
-                </div>
+```
+<h2>This Week's Specials</h2>
+<ol class='specials group'>
+    <li class='group'>
+        <div class='special'>
+            <div class='special-img'>
+                <a href='#'>
+                    <img src='/PublishingImages/boat.jpg' alt='coffee' />
+                    <span><strong>Fisherman&#8217;s Brew</strong>
+                        <em>$9.98 / lb.</em></span></a>
             </div>
-        </li>
-        <li class='group'>
-            <div class='special'>
-                <div class='special-img'>
-                    <a href='#'>
-                        <img src='/PublishingImages/ropes.jpg' alt='coffee' />
-                        <span><strong>Boathouse Bold</strong>
-                            <em>$12.50 / lb.</em></span></a>
-                </div>
+        </div>
+    </li>
+    <li class='group'>
+        <div class='special'>
+            <div class='special-img'>
+                <a href='#'>
+                    <img src='/PublishingImages/ropes.jpg' alt='coffee' />
+                    <span><strong>Boathouse Bold</strong>
+                        <em>$12.50 / lb.</em></span></a>
             </div>
-        </li>
-        <li class='group third'>
-            <div class='special'>
-                <div class='special-img'>
-                    <a href='#'>
-                        <img src='/PublishingImages/fame.jpg' alt='coffee' />
-                        <span><strong>Deadly Decaf</strong>
-                            <em>$7.49 / lb.</em></span></a>
-                </div>
+        </div>
+    </li>
+    <li class='group third'>
+        <div class='special'>
+            <div class='special-img'>
+                <a href='#'>
+                    <img src='/PublishingImages/fame.jpg' alt='coffee' />
+                    <span><strong>Deadly Decaf</strong>
+                        <em>$7.49 / lb.</em></span></a>
             </div>
-        </li>
-    </ol>
+        </div>
+    </li>
+</ol>
+```
 
 
 
@@ -168,26 +170,28 @@ Note that the **XsltListViewWebPart **provides a `<dsQueryResponse>`         XML
 
 
 
-    <dsQueryResponse ViewStyleID="" BaseViewID="1" TemplateType="100" RowLimit="30">
-      <Rows>
-        <Row ID="1"
-          PermMask="0x7fffffffffffffff"
-          Title="Fisherman&amp;#39;s Brew"
-          UnitPrice="$9.98" UnitPrice.="9.98000000000000"
-          UnitOfMeasure="/ lb."
-          Price="9.98 / lb."
-          PublishingRollupImage="&lt;img alt=&quot;&quot; src=&quot;/PublishingImages/boat.jpg&quot; style=&quot;border:px solid&quot; /&gt;" />
-        <Row ID="2"
-          PermMask="0x7fffffffffffffff"
-          Title="Boathouse Bold"
-          UnitPrice="$12.50"
-          ... />
-        <Row ID="3"
-          PermMask="0x7fffffffffffffff"
-          Title="Deadly Decaf"
-          ... />
-      </Rows>
-    </dsQueryResponse>
+```
+<dsQueryResponse ViewStyleID="" BaseViewID="1" TemplateType="100" RowLimit="30">
+  <Rows>
+    <Row ID="1"
+      PermMask="0x7fffffffffffffff"
+      Title="Fisherman&amp;#39;s Brew"
+      UnitPrice="$9.98" UnitPrice.="9.98000000000000"
+      UnitOfMeasure="/ lb."
+      Price="9.98 / lb."
+      PublishingRollupImage="&lt;img alt=&quot;&quot; src=&quot;/PublishingImages/boat.jpg&quot; style=&quot;border:px solid&quot; /&gt;" />
+    <Row ID="2"
+      PermMask="0x7fffffffffffffff"
+      Title="Boathouse Bold"
+      UnitPrice="$12.50"
+      ... />
+    <Row ID="3"
+      PermMask="0x7fffffffffffffff"
+      Title="Deadly Decaf"
+      ... />
+  </Rows>
+</dsQueryResponse>
+```
 
 
 
@@ -205,18 +209,20 @@ Since we know that we want to generate HTML from the XML document, start by spec
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-      exclude-result-prefixes="msxsl">
-    
-      <xsl:output method='html' indent='yes'/>
-    
-      <xsl:template match='dsQueryResponse'>
-        <h2>This Week's Specials</h2>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+  exclude-result-prefixes="msxsl">
+
+  <xsl:output method='html' indent='yes'/>
+
+  <xsl:template match='dsQueryResponse'>
+    <h2>This Week's Specials</h2>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 
@@ -224,27 +230,29 @@ Next, enhance the **dsQueryResponse** template to output an ordered         list
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-      exclude-result-prefixes="msxsl">
-    
-      <xsl:output method='html' indent='yes'/>
-    
-      <xsl:template match='dsQueryResponse'>
-        <h2>This Week's Specials</h2>
-        <ol class='specials group'>
-          <xsl:apply-templates select='Rows/Row'/>
-        </ol>
-      </xsl:template>
-    
-      <xsl:template match='Row'>
-        <li>
-          <xsl:value-of select='@Title'/>
-        </li>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+  exclude-result-prefixes="msxsl">
+
+  <xsl:output method='html' indent='yes'/>
+
+  <xsl:template match='dsQueryResponse'>
+    <h2>This Week's Specials</h2>
+    <ol class='specials group'>
+      <xsl:apply-templates select='Rows/Row'/>
+    </ol>
+  </xsl:template>
+
+  <xsl:template match='Row'>
+    <li>
+      <xsl:value-of select='@Title'/>
+    </li>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 
@@ -263,27 +271,29 @@ As you can see, we need to tweak the XSLT a little bit in order to render specia
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-      exclude-result-prefixes="msxsl">
-    
-      <xsl:output method='html' indent='yes'/>
-    
-      <xsl:template match='dsQueryResponse'>
-        <h2>This Week's Specials</h2>
-        <ol class='specials group'>
-          <xsl:apply-templates select='Rows/Row'/>
-        </ol>
-      </xsl:template>
-    
-      <xsl:template match='Row'>
-        <li>
-          <xsl:value-of select='@Title' disable-output-escaping='yes'/>
-        </li>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+  exclude-result-prefixes="msxsl">
+
+  <xsl:output method='html' indent='yes'/>
+
+  <xsl:template match='dsQueryResponse'>
+    <h2>This Week's Specials</h2>
+    <ol class='specials group'>
+      <xsl:apply-templates select='Rows/Row'/>
+    </ol>
+  </xsl:template>
+
+  <xsl:template match='Row'>
+    <li>
+      <xsl:value-of select='@Title' disable-output-escaping='yes'/>
+    </li>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 
@@ -291,44 +301,46 @@ Now that we have the basic implementation working, let's replace the content of 
 
 
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <xsl:stylesheet version="1.0"
-      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-      exclude-result-prefixes="msxsl">
-    
-      <xsl:output method='html' indent='yes'/>
-    
-      <xsl:template match='dsQueryResponse'>
-        <h2>This Week's Specials</h2>
-        <ol class='specials group'>
-          <xsl:apply-templates select='Rows/Row'/>
-        </ol>
-      </xsl:template>
-    
-      <xsl:template match='Row'>
-        <li class='group'>
-          <div class='special'>
-            <div class='special-img'>
-              <a href='#'>
-                <xsl:value-of select='@PublishingRollupImage'
-                    disable-output-escaping ='yes'/>
-                <xsl:text> </xsl:text>
-                <span>
-                  <strong>
-                    <xsl:value-of select='@Title' disable-output-escaping ='yes'/>
-                  </strong>
-                  <xsl:text> </xsl:text>
-                  <em>
-                    <xsl:value-of select='@Price'/>
-                  </em>
-                </span>
-              </a>
-            </div>
-          </div>
-        </li>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:msxsl="urn:schemas-microsoft-com:xslt"
+  exclude-result-prefixes="msxsl">
+
+  <xsl:output method='html' indent='yes'/>
+
+  <xsl:template match='dsQueryResponse'>
+    <h2>This Week's Specials</h2>
+    <ol class='specials group'>
+      <xsl:apply-templates select='Rows/Row'/>
+    </ol>
+  </xsl:template>
+
+  <xsl:template match='Row'>
+    <li class='group'>
+      <div class='special'>
+        <div class='special-img'>
+          <a href='#'>
+            <xsl:value-of select='@PublishingRollupImage'
+                disable-output-escaping ='yes'/>
+            <xsl:text> </xsl:text>
+            <span>
+              <strong>
+                <xsl:value-of select='@Title' disable-output-escaping ='yes'/>
+              </strong>
+              <xsl:text> </xsl:text>
+              <em>
+                <xsl:value-of select='@Price'/>
+              </em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 
@@ -351,50 +363,52 @@ Fortunately, this is very easy to achieve using a little more XSLT. Here is the 
 
 
 
-    <xsl:stylesheet version='1.0'
-        xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
-        xmlns:msxsl='urn:schemas-microsoft-com:xslt'
-        xmlns:ddwrt2='urn:frontpage:internal'
-        exclude-result-prefixes='msxsl'>
-      <xsl:output method='html' indent='yes'/>
-      <xsl:template match='dsQueryResponse'>
-        <h2>This Week's Specials</h2>
-        <ol class='specials group'>
-          <xsl:apply-templates select='Rows/Row'/>
-        </ol>
-      </xsl:template>
-    
-      <xsl:template match='Row'>
-        <li>
-          <xsl:choose>
-            <xsl:when test='position() = 3'>
-              <xsl:attribute name='class'>group third</xsl:attribute>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:attribute name='class'>group</xsl:attribute>
-            </xsl:otherwise>
-          </xsl:choose>
-          <div class='special'>
-            <div class='special-img'>
-              <a href='#'>
-                <xsl:value-of select='@PublishingRollupImage'
-                    disable-output-escaping ='yes'/>
-                <xsl:text> </xsl:text>
-                <span>
-                  <strong>
-                    <xsl:value-of select='@Title' disable-output-escaping ='yes'/>
-                  </strong>
-                  <xsl:text> </xsl:text>
-                  <em>
-                    <xsl:value-of select='@Price'/>
-                  </em>
-                </span>
-              </a>
-            </div>
-          </div>
-        </li>
-      </xsl:template>
-    </xsl:stylesheet>
+```
+<xsl:stylesheet version='1.0'
+    xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+    xmlns:msxsl='urn:schemas-microsoft-com:xslt'
+    xmlns:ddwrt2='urn:frontpage:internal'
+    exclude-result-prefixes='msxsl'>
+  <xsl:output method='html' indent='yes'/>
+  <xsl:template match='dsQueryResponse'>
+    <h2>This Week's Specials</h2>
+    <ol class='specials group'>
+      <xsl:apply-templates select='Rows/Row'/>
+    </ol>
+  </xsl:template>
+
+  <xsl:template match='Row'>
+    <li>
+      <xsl:choose>
+        <xsl:when test='position() = 3'>
+          <xsl:attribute name='class'>group third</xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name='class'>group</xsl:attribute>
+        </xsl:otherwise>
+      </xsl:choose>
+      <div class='special'>
+        <div class='special-img'>
+          <a href='#'>
+            <xsl:value-of select='@PublishingRollupImage'
+                disable-output-escaping ='yes'/>
+            <xsl:text> </xsl:text>
+            <span>
+              <strong>
+                <xsl:value-of select='@Title' disable-output-escaping ='yes'/>
+              </strong>
+              <xsl:text> </xsl:text>
+              <em>
+                <xsl:value-of select='@Price'/>
+              </em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+  </xsl:template>
+</xsl:stylesheet>
+```
 
 
 

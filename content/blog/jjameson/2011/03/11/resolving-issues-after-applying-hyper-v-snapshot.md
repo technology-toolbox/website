@@ -11,8 +11,8 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 > **Note**
 > 
 > 
-> 	This post originally appeared on my MSDN blog:  
->   
+> 	This post originally appeared on my MSDN blog:
+> 
 > 
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx)
@@ -54,13 +54,17 @@ To resolve the error after applying an old Hyper-V snapshot on a VM joined to  a
 2. Open an administrator command prompt and run the following command:
 
 
-        netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:*
+    ```
+    netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:*
+    ```
 
 
 For example:
 
 
-        netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:*
+    ```
+    netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:*
+    ```
 
 
 
