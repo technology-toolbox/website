@@ -10,18 +10,13 @@ tags: ["MOSS 2007", "Visual Studio", "TFS"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 After [upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview), my next  step was to upgrade various Visual Studio solutions to the 2010 version and ensure  they built successfully after the upgrade.
 
@@ -35,33 +30,35 @@ Consequently, when I queued up a build for my Fabrikam.Demo solution, I encounte
 
 To configure the build server to compile MOSS 2007 solutions:
 
-1. Create a folder ont the build server to contain the referenced assemblies for MOSS 2007:
+1. Create a folder ont the build server to contain the referenced assemblies
+   for MOSS 2007:
 
 **C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
-2. Copy the referenced SharePoint assemblies from another VM (which has MOSS 2007 installed) to this new folder. The list of SharePoint assemblies that you need to copy depends on the details of your solution, but typically includes:
+2. Copy the referenced SharePoint assemblies from another VM (which has MOSS
+2007 installed) to this new folder. The list of SharePoint assemblies that you
+need to copy depends on the details of your solution, but typically includes:
 
     - Microsoft.SharePoint.dll
     - Microsoft.SharePoint.Publishing.dll
     - Microsoft.SharePoint.Security.dll
     - ...
-3. Create a corresponding registry key for MSBuild to locate the reference assemblies. This is most easily accomplished by running the following from an Administrator command prompt:
 
-
-    ```
-    reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint 
-    	v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
-    ```
-
+3. Create a corresponding registry key for MSBuild to locate the reference
+   assemblies. This is most easily accomplished by running the following from an
+   Administrator command prompt:
+   
+   ```
+   reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint 
+   	v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
+   ```
 
 After completing these steps, I queued another build of my Fabrikam.Demo solution  and verified the errors caused by missing SharePoint assemblies no longer occurred.
 
-
 > **Note**
 > 
-> 
-> In addition to copying SharePoint assemblies that are directly referenced 
-> 	in your projects, you also may want to copy assemblies that are *indirectly* 
-> 	referenced, such as:
+> In addition to copying SharePoint assemblies that are directly referenced
+> in your projects, you also may want to copy assemblies that are *indirectly*
+> referenced, such as:
 > 
 > - Microsoft.HtmlTrans.Interface.dll
 > - Microsoft.Internal.Mime.dll
@@ -73,12 +70,11 @@ After completing these steps, I queued another build of my Fabrikam.Demo solutio
 > - Microsoft.SharePoint.Search.dll
 > - Microsoft.Web.Design.Server.dll
 > 
+> While not required to successfully build a SharePoint solution, copying
+> these additional assemblies will avoid warnings during the build.
 > 
-> While not required to successfully build a SharePoint solution, copying 
-> 	these additional assemblies will avoid warnings during the build.
-> 
-> If you choose to include these additional assemblies, be aware that many 
-> 	of these files will need to be copied out of the GAC on the MOSS 2007 server 
-> 	(in other words, most of them are not located in the "Program Files\Common 
-> 	Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
+> If you choose to include these additional assemblies, be aware that many
+> of these files will need to be copied out of the GAC on the MOSS 2007 server
+> (in other words, most of them are not located in the "Program Files\Common
+> Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
 

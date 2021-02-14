@@ -14,23 +14,16 @@ tags: ["My System", "TFS"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
-> 
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-
-
 > **Update (2010-12-03)**
-> 
 > 
 > If you are using gated check-ins, be sure to also read my follow-up post:
 > 
 > <cite>Bypassing a Gated Check-in in TFS 2010</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010)
-
 
 Earlier this year, I wrote a [post](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) that explains the process I use for incrementing the assembly version         with each build in Team Foundation Server. However, the process was originally developed         for TFS 2005 and as you probably know by now, the build process in TFS 2010 has         changed significantly.
 
@@ -59,8 +52,7 @@ Let's suppose that, like me, you want to keep using the assembly versioning sche
 First, it is important to have a high-level understanding of the default workflow         used in TFS 2010.
 
 ![DefaultTemplate.xaml - Overview](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS%202010%20-%20DefaultTemplate%20-%20Overview.png)
-            Figure 1: DefaultTemplate.xaml - Overview
-
+Figure 1: DefaultTemplate.xaml - Overview
 
 This "collapsed" view of the workflow illustrates the following high-level steps         of the build process:
 
@@ -69,58 +61,53 @@ This "collapsed" view of the workflow illustrates the following high-level steps
 3. Run On Agent
 4. Check In Gated Changes for CheckInShelveset Builds
 
-
 For the purposes of this post, the most interesting aspect of the build process         is the separation of the "Update Drop Location" activities from the "Run On Agent"         activities. Let's take a quick look at the details of "Update Drop Location":
 
 ![DefaultTemplate.xaml - Update Drop Location](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS%202010%20-%20Update%20Drop%20Location.png)
-            Figure 2: DefaultTemplate.xaml - Update Drop Location
-
+Figure 2: DefaultTemplate.xaml - Update Drop Location
 
 As you can see, the portion of the workflow that updates the build number does not         run on the build agent. In other words, it happens before the "Run On Agent" scope         and therefore runs on the build *controller* -- not the build *agent*         (although, in the case of the Jameson Datacenter -- and, I suspect, most TFS environments         -- there is a single build agent running on the build controller).
 
 Consequently, we are going to have to make some significant changes to the workflow         if we want to increment the assembly version using a similar process to the one         previously used for TFS 2005/2008. To understand why, let's review the high-level         steps that I use for specifying the assembly version:
 
 1. The assembly version (e.g. 1.0.0.0) is specified in the [SharedAssemblyInfo.cs file](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects) located in the same folder as the Visual Studio solution.
-            Individual Visual Studio projects reference this shared file using the concept of
-            ["linked files" in Visual Studio](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions). Note that the assembly version is not incremented
-            with each build.
+   Individual Visual Studio projects reference this shared file using the concept of
+   ["linked files" in Visual Studio](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions). Note that the assembly version is not incremented
+   with each build.
 2. The assembly file version (e.g. 1.0.51.0) is specified in the AssemblyVersionInfo.cs
-            file, which is also located in the same folder as the Visual Studio solution. Depending
-            on whether we are building off the Main branch or one of the QFE branches, either
-            the Build Number or Revision is incremented with each build. For now, let's assume
-            we are building off the Main branch, so we want to increment the Build Number portion
-            of the version number.
+   file, which is also located in the same folder as the Visual Studio solution. Depending
+   on whether we are building off the Main branch or one of the QFE branches, either
+   the Build Number or Revision is incremented with each build. For now, let's assume
+   we are building off the Main branch, so we want to increment the Build Number portion
+   of the version number.
 3. The actual process of incrementing the version is performed using the Version task
-            from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/).
-            The Version task actually uses a simple text file (e.g. AssemblyVersionInfo.txt)
-            to specify/increment the assembly version and subsequently generate the corresponding
-            C# or VB.NET file (e.g. AssemblyVersionInfo.cs).
-
+   from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/).
+   The Version task actually uses a simple text file (e.g. AssemblyVersionInfo.txt)
+   to specify/increment the assembly version and subsequently generate the corresponding
+   C# or VB.NET file (e.g. AssemblyVersionInfo.cs).
 
 Note that you don't have to use the custom Version task from the MSBuild Community         Tasks Project to increment the version number. If you'd rather write a custom workflow         activity (&aacute; la Jim Lamb's post that I referred to earlier), go right         ahead. In my case, (a) I've already installed the custom MSBuild Community Tasks         on my build server, and (b) I know how to use the Version task and I know that it         does what I need it to do. Yes, this does require that I run a little bit of "old         school" MSBuild script inside my "shiny" new Team Build workflow, but I certainly         don't have any objections with that. [The goal is to get all of the "goodness" of         the new workflow-based build process, while still leveraging the ability to increment/control         each of the four parts of the assembly version.]
 
 With that review out of the way, let's turn our attention to modifying the workflow         to automatically increment the assembly version. For the purposes of this walkthrough,         I'll be using a brand new team TFS project that I chose to name **foobar2010**.[Hopefully you can come up with a better name for your TFS project ;-)         ]
 
 First, start by branching **$/foobar2010/BuildProcessTemplates/DefaultTemplate.xaml
-        **to **$/foobar2010/BuildProcessTemplates/CustomTemplate.xaml**.         [Whenever possible, we want to isolate our customizations, and personally I prefer         Jim's recommendation of branching the OOTB workflow file rather than simply creating         a copy (as recommended on [MSDN](http://msdn.microsoft.com/en-us/library/dd647551.aspx)) -- even if I never intend to merge the changes into DefaultTemplate.xaml.]
+**to **$/foobar2010/BuildProcessTemplates/CustomTemplate.xaml**.         [Whenever possible, we want to isolate our customizations, and personally I prefer         Jim's recommendation of branching the OOTB workflow file rather than simply creating         a copy (as recommended on [MSDN](http://msdn.microsoft.com/en-us/library/dd647551.aspx)) -- even if I never intend to merge the changes into DefaultTemplate.xaml.]
 
 The next step is to move a couple of the existing workflow activities out of the         **Update Drop Location** sequence into a new sequence named **Update
-            Build Number**, as shown below.
+Build Number**, as shown below.
 
 ![CustomTemplate.xaml - Step 1](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_TFS-2010-Increment-Version-Step-1.png)
-            Figure 3: CustomTemplate.xaml - Step 1
+Figure 3: CustomTemplate.xaml - Step 1
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-1.png)
 
-
 Next, move **Update Build Number **and **Update Drop Location
-        **inside the **Run On Agent **scope, as shown below:
+**inside the **Run On Agent **scope, as shown below:
 
 ![CustomTemplate.xaml - Step 2](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_TFS-2010-Increment-Version-Step-2.png)
-            Figure 4: CustomTemplate.xaml - Step 2
+Figure 4: CustomTemplate.xaml - Step 2
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-2.png)
-
 
 Note that we need to first initialize the workspace (and hence be running on the         build agent) before updating the build number so we can access the various assembly         version files (e.g. AssemblyVersionInfo.txt and AssemblyVersionInfo.cs). Also note         that we want to ensure that the label applied to the source code in TFS matches         the build number. Consequently, the **Update Build Number **sequence         is placed *before* the activity that labels the source code.
 
@@ -131,37 +118,27 @@ To change the scope of the LabelName variable:
 1. Within the **Run On Agent **scope, expand **If CreateLabel**.
 2. Select **Create and Set Label for non-Shelveset Builds**.
 3. Click the **Variables **tab, select the **LabelName **
-            row, and in the **Scope **column, select **Create and Set Label for
-                non-Shelveset Builds.**
-
+   row, and in the **Scope **column, select **Create and Set Label for
+   non-Shelveset Builds.**
 
 In addition to the source code label, we want the drop location on the Release Server         to match the build number (e.g. \\dazzler\Builds\foobar2010\1.0.1.0). Therefore         the **Update Drop Location **sequence needs to come *after*         the **Update Build Number **sequence. [Whether the **Update Drop
-            Location **sequence comes before or after the activity that labels the         source code really doesn't matter. To me, it simply "feels better" to label the         source code as early as possible during the build process.]
+Location **sequence comes before or after the activity that labels the         source code really doesn't matter. To me, it simply "feels better" to label the         source code as early as possible during the build process.]
 
 By default, the drop location is set to:
-
-
 
 ```
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + BuildDetail.BuildNumber
 ```
 
-
-
 Personally, I don't really care which build definition was used to create a particular         build. The truth is I can infer this from the build number. If the build number         is something like 1.0.51.0, then the build was created by the "daily build" (i.e.         a build definition named "Automated Build - Main"). If the build number is something         like 1.0.51.3, then the build was created by a "QFE build" (e.g. a build definition         named "QFE Build - v1.0").
 
 More importantly, I want to make it as easy as possible for the Test and Release         Management folks to find a specific build when deploying the solution. Consequently,         remove the "extraneous" folder by updating the **Set Drop Location **         activity (inside the sequence within **If DropBuild And Build Reason is Triggered**)         so the **DropLocation **is set to:
-
-
 
 ```
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
 ```
 
-
-
 Next, set the build number using the assembly version specified in the AssemblyVersionInfo.txt         file. To do this, add a new **InvokeProcess** activity at the beginning         of the **Update Build Number for Triggered Builds** activity in the         **Update Build Number **sequence, and set the properties as follows:
-
 
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -169,21 +146,16 @@ Next, set the build number using the assembly version specified in the AssemblyV
 |                     DisplayName<br>                 |                     InvokeProcess to read AssemblyVersion from file<br>                 |
 |                     FileName<br>                 |                     "cmd.exe"<br>                 |
 
-
 All I'm doing here is using a little command-prompt "trickery" to read the contents         of a file (using the [`type`
-            command](http://en.wikipedia.org/wiki/Type_%28command%29)). The file contains a single line of text that specifies the assembly         version (e.g. "1.0.1.0" -- without the quotes). As a result, the assembly version         is subsequently available using the **stdOutput **variable of the InvokeProcess         activity.
+command](http://en.wikipedia.org/wiki/Type_%28command%29)). The file contains a single line of text that specifies the assembly         version (e.g. "1.0.1.0" -- without the quotes). As a result, the assembly version         is subsequently available using the **stdOutput **variable of the InvokeProcess         activity.
 
 Move the existing **Update Build Number** activity inside the InvokeProcess         activity (below the **stdOutput **variable box) and change the **            BuilderNumberFormat **property to **stdOutput**.
 
 While I certainly don't expect any errors to occur with the InvokeProcess activity,         it's still a good idea to ensure proper error handling in our build process. Therefore,         add a **Throw **activity (below the **errOutput **variable         box) and set the **Exception** property to:
 
-
-
 ```
 New Exception(errOutput)
 ```
-
-
 
 Thus if any error happens to occur while reading the assembly version from the specified         file, our build will immediately fail.
 
@@ -194,18 +166,14 @@ However, what would happen if we started another build? Since we haven't yet imp
 Let's modify the workflow to increment the assembly version...
 
 Just below the InvokeProcess activity added earlier (inside the **Update Build
-            Number for Triggered Builds** activity), add a new **MSBuild **         activity, and set the properties as follows:
-
+Number for Triggered Builds** activity), add a new **MSBuild **         activity, and set the properties as follows:
 
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     DisplayName<br>                 |                     Increment AssemblyVersion for next build<br>                 |
 |                     Project<br>                 |                     SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj"<br>                 |
 
-
 Next, create the actual MSBuild file to increment the assembly version (IncrementAssemblyVersion.proj):
-
-
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -264,8 +232,6 @@ Next, create the actual MSBuild file to increment the assembly version (Incremen
 </Project>
 ```
 
-
-
 If you are familiar with the MSBuild customizations described in my earlier post,         then this should seem very straightforward. In fact, to create this file, I simply         copied one of my previous TFSBuild.proj files and started removing the parts that         are no longer needed (because they are now implemented in the workflow). Hence the         "3.5" version of this MSBuild file. If you want to update it to use MSBuild 4.0,         go right ahead. Personally, I didn't see the need -- nor did I want to "tempt fate"         since I know the MSBuild Community Tasks work as expected with the older version         of MSBuild (specifically the Version task).
 
 Be aware that the MSBuild file shown above is for the Main branch. For QFE branches,         I modify two lines in the file in order increment the `RevisionType` instead of the `BuildType`         (to generate assembly numbers like 1.0.51.1, 1.0.51.2, etc.).
@@ -281,8 +247,7 @@ Copy the existing **Get Workspace **activity (the last activity in         the *
 At this point, CustomTemplate.xaml should look like the following (in order to conserve         space, only the **Update Build Number **portion is shown):
 
 ![CustomTemplate.xaml (Update Build Number) - Step 3](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-3.png)
-            Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3
-
+Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3
 
 That's it -- we're done!
 
@@ -302,7 +267,6 @@ The other concern that I've heard with regards to checking in an updated file as
 
 In case you are wondering how I configure build definitions, here are the settings         for the "daily build" as an example. If a setting is not listed in the following         table, it means the default is used.
 
-
 <caption>            Build Definition: "Automated Build - Main"</caption>|                     Section<br>                 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- | --- |
 |                     General<br>                 |                     Build definition name<br>                 |                     Automated Build - Main<br>                 |
@@ -314,4 +278,5 @@ In case you are wondering how I configure build definitions, here are the settin
 |  |                     Build process parameters:<br>                 |  |
 |  | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> | <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
 |                     Retention Policy<br>                 | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> | <br><br><br>                    Keep All<br>                 |
+
 

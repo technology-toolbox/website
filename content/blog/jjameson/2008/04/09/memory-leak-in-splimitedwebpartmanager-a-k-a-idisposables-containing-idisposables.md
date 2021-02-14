@@ -11,11 +11,9 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Back in February, Roger Lamb kicked off [his MSDN blog](http://blogs.msdn.com/rogerla) with a great post ([SharePoint 2007 and WSS 3.0 Dispose Patterns by Example](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx)). It provides numerous code samples that demonstrate memory leaks commonly produced when working with the SharePoint object model. Kudos to Roger for putting this together.
 
@@ -25,7 +23,6 @@ Jon Quist, one of my fellow MCS team members on my current project, actually dis
 
 - [Best Practices: Using Disposable Windows SharePoint Services Objects](http://msdn2.microsoft.com/en-us/library/aa973248.aspx)
 - [Best Practices: Common Coding Issues When Using the SharePoint Object Model](http://msdn2.microsoft.com/en-us/library/bb687949.aspx)
-
 
 We've known about the need to dispose `SPSite` and `SPWeb` objects since the days of WSS v2 and SPS 2003 and -- generally speaking -- our custom code wraps these instances in `using` blocks to ensure the objects are properly disposed. However, until Jon's discovery of Roger's post, both Jon and I were perplexed by the memory leaks in the content migration utilities. No matter how many times we scrutinized the content migration code, we just couldn't seem to see where we were leaking memory (and, quite honestly, it was easier to just "punt" this and simply restart the content migration process after the occasional `OutOfMemoryException` -- since the migration code is "smart enough" to skip previously migrated content).
 
@@ -37,7 +34,6 @@ This morning I did a quick search for "SPLimitedWebPartManager dispose" on Windo
 
 <cite>Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? .. of ones and zeros.. 2007-06-05.</cite>
 [http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/](http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/)
-
 
 I, for one, agree with Bryan's assessment. The memory leak is inherently in `SPLimitedWebPartManager`. While it is true that Roger's example shows one way of fixing the memory leak, the real fix -- at least in my opinion -- should be to modify `SPLimitedWebPartManager` to dispose of its resources when it, itself, is disposed. Heck, I'll even go so far as to say that all SharePoint classes should be modified to behave like this. For example, `SPSite.ParentWeb` and `SPWeb.RootWeb` should be inherently disposed by `SPSite` and `SPWeb` -- assuming the corresponding members were indeed instantiated -- instead of relying on the caller to dispose of these.
 

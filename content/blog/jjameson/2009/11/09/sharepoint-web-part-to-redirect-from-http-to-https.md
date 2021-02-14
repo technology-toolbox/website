@@ -11,16 +11,13 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-
 Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/2009/11/09/configuring-ssl-on-sharepoint-sites) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.
 
 Here is a base class that contains the core logic for detecting when a redirect from HTTP to HTTPS is required and automatically redirecting as necessary:
-
 
 ```
 using System;
@@ -179,11 +176,9 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 }
 ```
 
-
 Using this approach, users can browse the anonymous areas of your site using HTTP. However, as soon as they browse to a page that contains a Web Part that requires secure communication, they are automatically redirected from HTTP to HTTPS.
 
 Note how I use a custom application setting (`RedirectToHttpsWhenSslRequired`) to allow this feature to be turned off. The default value is `True` (meaning the feature is turned on). However, by changing the property setting to `False` in the Web.config file, the feature can be disabled as necessary for a particular environment or server (for troubleshooting purposes):
-
 
 ```
 <configuration>
@@ -206,14 +201,12 @@ Note how I use a custom application setting (`RedirectToHttpsWhenSslRequired`) t
 </configuration>
 ```
 
-
 Also note that there are several scenarios in which a redirect is avoided:
 
 - When the connection is already secure (well, duh...we obviously don't want to cause an endless redirect loop)
 - When the request URL does not specify a fully qualified domain name, but rather an intranet URL (e.g. http://fabrikam). In this scenario, user are expected to be authenticated using Windows Authentication, which does not send credentials in clear text and therefore does not require SSL.
 - In LOCAL developer environments (e.g. http://www-local.fabrikam.com) and the Development Integration environment (DEV) -- e.g. http://www-dev.fabrikam.com -- since these environments don't typically have SSL certificates installed. This is an example of why a standard [environment naming convention](/blog/jjameson/2009/06/09/environment-naming-conventions) is important.
 - When the page where the Web Part resides is being edited (because we don't want to force a redirect immediately after someone adds the Web Part to a page). This scenario is not expected to occur, since content managers will typically use the intranet URL (e.g. http://fabrikam) for creating and editing pages. However, it is covered just in case the scenario is ever encountered.
-
 
 Assuming the `IsSslRedirectRequired` method returns `true`, the Web Part redirects to an HTTPS connection while preserving all of the query string parameters specified in the original request. Note that this simple approach only supports an HTTP GET on the original request. In other words, HTTP POST requests are "not supported" (however they are not expected to occur either). This is because any form parameters specified in the body of an HTTP POST request would be dropped in the redirect.
 

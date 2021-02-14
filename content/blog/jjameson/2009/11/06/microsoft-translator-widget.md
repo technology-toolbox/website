@@ -13,11 +13,9 @@ tags: ["Web Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 This week I stumbled upon the new (and very cool) [Microsoft Translator Widget](http://www.microsofttranslator.com/Widget).
 
@@ -33,7 +31,6 @@ All you have to do to integrate this feature on your site is:
 2. Read and agree to the terms of use
 3. Click the **Generate Code **button
 4. Copy/paste a small amount of HTML into your site
-
 
 You can [read more](http://blogs.msdn.com/translation/archive/2009/03/18/announcing-the-microsoft-translator-web-page-widget.aspx) about the Microsoft Translator Widget on the [Translation team's blog](http://blogs.msdn.com/translation) if you want more details.
 

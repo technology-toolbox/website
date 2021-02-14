@@ -12,11 +12,9 @@ tags: ["Simplify", "Web Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Two years ago, I wrote a post about [upgrading to Internet Explorer 8](/blog/jjameson/2009/03/24/internet-explorer-8-upgrade). Well, in case you missed the announcement a couple of days ago, Internet Explorer 9 has been released. Woohoo!
 

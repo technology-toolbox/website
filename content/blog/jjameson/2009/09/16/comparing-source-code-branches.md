@@ -9,20 +9,15 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-
-During the more than three years I spent helping Agilent Technologies migrate  their Internet site from their legacy, proprietary platform to Microsoft Office  SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server  (TFS). Instead, we used Visual SourceSafe (VSS) in combination with a ["Work Items" 
+During the more than three years I spent helping Agilent Technologies migrate  their Internet site from their legacy, proprietary platform to Microsoft Office  SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server  (TFS). Instead, we used Visual SourceSafe (VSS) in combination with a ["Work Items"
 list in SharePoint](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2) that I've described in previous posts.
 
 While I certainly prefer TFS over VSS, sometimes you simply have to concede that  you can't have everything you would like on a customer project and move on to actually  getting the work done.
@@ -31,7 +26,8 @@ However, just because we used VSS doesn't mean we didn't follow good Software  C
 
 The particular branch that a developer uses would thus depend on whether the  changes are for the next major release or a QFE (hotfix) for the version running  in Production. For example, after deploying the [Technical Support site](http://www.chem.agilent.com/en-US/Support) (i.e.  v2.0), we began working on the "General Site" (i.e. v3.0). [Note that in Agilent's  terminology, the "General Site" essentially refers to everything outside of Technical  Support, the Literature Library, and the Online Store (i.e. the "Buy" tab).]
 
-However, since we didn't create the **v3.0** branch until shortly  before the v3.0 release, all v3 ("General Site") development was initially done  on the **Main** branch -- just like v2 (Tech Support) development was  initially done in **Main** prior to creating the **v2.0**branch.
+However, since we didn't create the **v3.0** branch until shortly  before the v3.0 release, all v3 ("General Site") development was initially done  on the **Main** branch -- just like v2 (Tech Support) development was  initially done in **Main** prior to creating the **v2.0
+**branch.
 
 This branching strategy works really well, regardless of which particular SCM  system you actually use. The key thing to remember is that all of the changes should  eventually make it into the **Main** branch (since that branch will  eventually be used to create another branch for the next major release).
 
@@ -44,8 +40,6 @@ Fortunately, long before the Agilent project, I had previously created my own  p
 In my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup),  I have two simple scripts: DiffBranches.cmd and CopyBranch.cmd.
 
 Here are the contents of DiffBranches.cmd:
-
-
 
 ```
 @echo off
@@ -69,13 +63,9 @@ call CopyBranch.cmd "%BRANCH2%" "%BRANCH2%_tmp"
 "%DIFFTOOL%" "%BRANCH1%_tmp" "%BRANCH2%_tmp"
 ```
 
-
-
 As you can see, there's not much to it. I simply make temporary copies of the  two branches (i.e. by copying the branch folder into a new folder appended with  "\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I used  WinDiff, but once I [discovered DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool), I quickly switched to using it exclusively for all of  my "diff'ing" activities.
 
 The real "magic" lies in CopyBranch.cmd:
-
-
 
 ```
 @echo off
@@ -92,24 +82,24 @@ if ("%BRANCH2%") == ("") set BRANCH2="%BRANCH1%_tmp"
 robocopy "%BRANCH1%" "%BRANCH2%" /E /MIR /XD bin obj TestResults /XF *.scc *.suo *.user *.vspscc
 ```
 
-
-
 Note that I put the word *magic* in quotes because it's really not magic  at all. When copying a source code branch, I simply use robocopy.exe and specify  the following options:
-
 
 <caption>robocoby.exe command-line options used in CopyBranch.cmd</caption>| Command-Line Option | Comments |
 | --- | --- |
 | /E | Copy subdirectories, including empty ones |
-| /MIR | Mirror the directory tree, thus ensuring that when I subsequently run 	CopyBranch.cmd, any deleted files from the original branch are removed from 	the "temporary" copy of the branch) |
-| /XD bin obj TestResults | Exclude directories matching the given names/paths, thus skipping the 	compiled output (i.e. bin and obj) as well as the test results generated 	by running unit tests from within Visual Studio |
-| /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping 	source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project 	user-specific options (i.e. \*.suo and \*.user) |
-
-
-For example, let's suppose that I've checked in some changes to the **v3.0**branch that need to be propagated to the **Main **branch.  I would open a command prompt and run the following:
-
+| /MIR | Mirror the directory tree, thus ensuring that when I subsequently run 
+	CopyBranch.cmd, any deleted files from the original branch are removed from 
+	the "temporary" copy of the branch) |
+| /XD bin obj TestResults | Exclude directories matching the given names/paths, thus skipping the 
+	compiled output (i.e. bin and obj) as well as the test results generated 
+	by running unit tests from within Visual Studio |
+| /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping 
+	source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project 
+	user-specific options (i.e. \*.suo and \*.user) |
+For example, let's suppose that I've checked in some changes to the **v3.0
+**branch that need to be propagated to the **Main **branch.  I would open a command prompt and run the following:
 
 C:\NotBackedUp\Agilent&gt;<kbd>DiffBranches.cmd v3.0 Main</kbd>
-
 
 After the two branches are copied to their respective temporary folders, DiffMerge.exe  is launched to compare the two branches. Since I exclude many of the directories  and files that are *expected* to differ between the two branches, I can quickly  view only the differences that I am interested in. I can even use DiffMerge.exe  to apply the changes interactively (checking out the files to be updated beforehand  as necessary). This greatly reduces the effort involved in manually merging changes  from one branch into another.
 

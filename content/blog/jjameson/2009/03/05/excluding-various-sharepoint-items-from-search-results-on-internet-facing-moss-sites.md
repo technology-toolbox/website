@@ -12,11 +12,9 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 When using Microsoft Office SharePoint Server (MOSS) 2007 on an Internet-facing site, you almost certainly don't want to include items like announcements, contacts, etc. in search results.
 
@@ -52,7 +50,6 @@ Here are the exclude rules that my custom `SharePointSearchHelper.EnsureScopeIsL
 - contentclass = STS\_ListItem\_Survey
 - contentclass = STS\_ListItem\_Tasks
 - contentclass = STS\_ListItem\_XMLForm
-
 
 Note that, as described in my [previous post](/blog/jjameson/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty), there's a bug in MOSS 2007 in which a search scope that contains **Property Query** rules only is not recognized as having any rules at all. Consequently, you will need to explicitly include the URL of your Web application using a **Web Address** rule.
 

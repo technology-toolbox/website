@@ -11,11 +11,9 @@ tags: ["Web Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/29/troubleshooting-layout-problems-with-safari.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/29/troubleshooting-layout-problems-with-safari.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser. Even worse, I discovered it only a day before the CEO of customer discovered it himself on his Mac! Ouch.
 
@@ -29,7 +27,6 @@ Since I didn't have access to my faithful Firebug or Internet Explorer Developer
 
 <cite>Firebug For Safari</cite>
 [http://vision-media.ca/resources/misc/firefox-for-safari](http://vision-media.ca/resources/misc/firefox-for-safari)
-
 
 Unlike many of the other search results that I looked at, this one doesn't actually discuss using Firebug in Safari (which I was reluctant to try because, from what I read, all of the CSS rules are read-only when you use Firebug with Safari). Rather, this page shows the similar set of tools that Apple provides with their browser. It also shows how to easily enable the Safari developer tools without hacking a preferences file (which I initially tried locating on my Windows VM using instructions based on a Mac, but I quickly gave up on that effort).
 

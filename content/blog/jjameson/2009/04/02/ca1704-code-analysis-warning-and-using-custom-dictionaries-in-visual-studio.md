@@ -11,18 +11,13 @@ tags: ["My System", "Core Development", "Visual Studio"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 In my [previous post](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions), I introduced the concept of linking files in Visual Studio solutions.
 
@@ -30,26 +25,21 @@ A good use of this feature is specifying a custom dictionary for your solution.
 
 Once you enable Code Analysis on your projects, you are likely to encounter warnings  similar to the following:
 
-
-> MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam' 
+> MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam'
 > in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
-
 
 If you right-click one of these warnings and then click **Show Error Help**,  you will find the following:
 
-
 > **How to Fix Violations**
 > 
-> To fix a violation of this rule, correct the spelling of the word or add the 
-> word to a custom dictionary named CustomDictionary.xml. Place the dictionary 
-> in the installation directory of the tool, the project directory, or in the 
-> directory associated with the tool under the user's profile (%USERPROFILE%\Application 
+> To fix a violation of this rule, correct the spelling of the word or add the
+> word to a custom dictionary named CustomDictionary.xml. Place the dictionary
+> in the installation directory of the tool, the project directory, or in the
+> directory associated with the tool under the user's profile (%USERPROFILE%\Application
 > Data\...).
-
 
 <cite>Identifiers should be spelled correctly</cite>
 [http://msdn.microsoft.com/en-us/library/bb264492.aspx](http://msdn.microsoft.com/en-us/library/bb264492.aspx)
-
 
 However, I don't recommend using any of these options. Here's why...
 
@@ -65,10 +55,7 @@ This is accomplished by adding a link in each project to CustomDictionary.xml  (
 
 - Build Action: **CodeAnalysisDictionary**
 
-
 Now you can simply add items to the CustomDictionary.xml for the solution, as  shown below, and eliminate those CA1704 warnings.
-
-
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -80,8 +67,6 @@ Now you can simply add items to the CustomDictionary.xml for the solution, as  s
   </Words>
 </Dictionary>
 ```
-
-
 
 Since the file is in source control, you can obviously track changes to the file  and view the history at any point in the future.
 

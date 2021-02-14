@@ -12,11 +12,9 @@ tags: ["My System", "TFS"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Have you ever lost work items in Team Foundation Server? I know I have.
 
@@ -27,37 +25,35 @@ The problem -- at least in my case -- is due to the out-of-the-box queries that 
 To understand why work items occasionally go [AWOL](http://en.wikipedia.org/wiki/Desertion), let's quickly review the default queries that are created for a "MSF Agile v5" project:
 
 - Team Queries
-    - Iteration 1
-        - Active Bugs
-        - Active Tasks
-        - Bug Triage
-        - Completed Tasks
-        - Iteration Backlog
-        - Open Issues
-        - Open Test Cases
-        - Open User Stories
-        - Resolved Bugs
-        - User Stories Delivered
-        - User Stories without Test Cases
-    - Iteration 2
-        - Iteration Backlog
-    - Iteration 3
-        - Iteration Backlog
-    - Troubleshooting
-        - Work Items With Summary Values
-    - My Bugs
-    - My Tasks
-    - My Test Cases
-    - Product Backlog
-    - Products Planning
-
+  - Iteration 1
+    - Active Bugs
+    - Active Tasks
+    - Bug Triage
+    - Completed Tasks
+    - Iteration Backlog
+    - Open Issues
+    - Open Test Cases
+    - Open User Stories
+    - Resolved Bugs
+    - User Stories Delivered
+    - User Stories without Test Cases
+  - Iteration 2
+    - Iteration Backlog
+  - Iteration 3
+    - Iteration Backlog
+  - Troubleshooting
+    - Work Items With Summary Values
+  - My Bugs
+  - My Tasks
+  - My Test Cases
+  - Product Backlog
+  - Products Planning
 
 I'm assuming you're familiar with most, if not all, of these queries. Even if you're not, it should be fairly obvious that all of the queries under **Iteration 1 **include a filter like:
 
 - **Team Project = @Project**
 - **And Iteration Path Under foobar2010\Iteration 1**
 - ...
-
 
 [Assume "foobar2010" is the name of the TFS project.]
 
@@ -67,14 +63,12 @@ Likewise, all of the "My" queries (e.g. **My Bugs**) include a filter like:
 - **And Assigned To = @Me**
 - ...
 
-
 Note that the **Product Backlog **and **Product Planning **queries include a filter like:
 
 - **Team Project = @Project**
 - **And Area Path Under @Project**
 - **And Work Item Type = User Story**
 - ...
-
 
 Now, with that rather lengthy introduction out of the way, imagine that we use Microsoft Excel to quickly add a bunch of tasks (or bugs). However, we forget (or neglect) to set the **Assigned To **and **Iteration Path **properties. What happens?
 
@@ -87,24 +81,22 @@ Now, the truth is this really isn't the fault of TFS -- after all, we were the o
 To understand how to avoid this situation, first note that I like to configure the iterations for a TFS project similar to the following:
 
 - Iteration
-    - v1.0
-        - M1
-        - M2
-        - M3
-    - v1.1
-    - vNext
-
+  - v1.0
+    - M1
+    - M2
+    - M3
+  - v1.1
+  - vNext
 
 ...or, sometimes, I'll call them "sprints" instead of "milestones" (e.g. "Sprint-1" rather than "M1"):
 
 - Iteration
-    - v1.0
-        - Sprint-1
-        - Sprint-2
-        - Sprint-3
-    - v1.1
-    - vNext
-
+  - v1.0
+    - Sprint-1
+    - Sprint-2
+    - Sprint-3
+  - v1.1
+  - vNext
 
 What you call them really doesn't matter to me. That's just a name. What *is* important, however, is that any work item that isn't assigned to a "real" iteration is considered to be invalid (because that means it's essentially fallen off the radar).
 
@@ -114,10 +106,9 @@ To avoid mistakenly "losing" work items, I like to create a new query under the 
 
 - **Team Project = @Project**
 - **And (**
-    - **And Iteration Path = foobar2010**
-    - **Or Iteration Path = foobar2010\v1.0**
+  - **And Iteration Path = foobar2010**
+  - **Or Iteration Path = foobar2010\v1.0**
 - **)**
-
 
 In case it's not immediately obvious, the "And (...)" in the filter above reflects a **Group Clause **in TFS.
 

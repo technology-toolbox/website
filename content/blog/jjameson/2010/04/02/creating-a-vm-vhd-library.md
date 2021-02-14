@@ -12,11 +12,9 @@ tags: ["My System", "Virtualization"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Last week a colleague was asking me how I manage my various VMs. More specifically, he wanted to know how I created SysPrep'ed images in order to quickly "spin up" new VMs for development, testing, or demo purposes.
 
@@ -38,13 +36,11 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
 10. Run Windows Update, install all of the latest patches, and then reboot.
 11. Run the SysPrep utility one last time (specifying the same options as before).
 
-
 At this point, you have clean images for the following configurations:
 
 - Windows Server 2008 x86 RTM (note that for Windows Server 2008, SP1 was actually included in the initial release)
 - Windows Server 2008 x86 SP2
 - Windows Server 2008 x86 SP2 with all of the latest patches
-
 
 Now you can simply create a new VM (for example, named **foobar**) and select the option to create a new VHD for the VM. However, before booting the new VM for the first time, copy **ws2008std-x86.vhd **to **foobar.vhd**, thus starting from a SysPrep'ed image of Windows Server 2008 x86 SP2 with all of the latest patches.
 
@@ -62,12 +58,10 @@ Let's fast forward to some future point in time when Windows Server 2008 SP3 is 
 4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE) **and **Shutdown **when SysPrep is done.
 5. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_SP3.vhd**.
 
-
 I should point out that your **ws2008std-x86** image isn't going to do you much good if you need to install SharePoint Server 2010 (because it is 64-bit only). Therefore, like me, you should consider creating additional VM images in your library, such as:
 
 - ws2008std-x64
 - ws2008std-r2
-
 
 In the Jameson Datacenter, I currently have an image for Win2k3EE (Windows Server 2003 Enterprise Edition), but I don't use it very often anymore. Note that most of the time, all of these "base" VMs are shutdown. I only start them when a Service Pack is released or when Windows Update exceeds my personal threshold while creating a new VM.
 

@@ -12,11 +12,9 @@ tags: ["MOSS 2007", "SQL Server"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've mentioned before the importance of using multiple "spindles" when working with large SQL Server databases.
 
@@ -33,17 +31,15 @@ For example, suppose you have the following disk configuration on your SQL Serve
 - L: (LOG01) - RAID 1+0 array for log files
 - Q: (Quorum)
 
-
 In this simplistic example, the D:, L:, and Q: drives are LUNs on the backend SAN, whereas the C: drive is DAS (Direct Attached Storage). Hopefully, the Storage team responsible for managing your SAN provides dedicated physical drives for D: and L: -- although, honestly, I've seen several enterprise organizations that don't dedicate these drives and subsequently experience performance issues later on.
 
 Given the above disk configuration, SQL Server Management Studio should be used to configure the default database locations similar to the following:
 
 - Server Properties
-    - Database Settings
-        - Default database locations
-            - Data: D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
-            - Log: L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
-
+  - Database Settings
+    - Default database locations
+      - Data: D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
+      - Log: L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
 
 You certainly don't have to use the [NotBackedUp](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder if you don't want to (that's just the standard that I've been using for years).
 
@@ -52,7 +48,6 @@ Once you've configured the default database locations, anytime you create a new 
 Of course, when creating MOSS 2007 databases for a Production (or Test) environment, you still need to resize them appropriately in order to avoid having them simply auto-grow from a very small initial size (in order to avoid fragmentation and optimize performance).
 
 Suppose you need to determine the default database locations through SQL (perhaps because you are scripting the process to create your databases). If you fire up SQL Server Profiler and start a new trace (the default trace options are fine), you will find that SQL Server Management Studio executes the following SQL statements when viewing the **Database Settings **page in the **Server Properties **window:
-
 
 ```
 declare @RegPathParams sysname
@@ -108,7 +103,6 @@ end
 print 'LogPath = ' + @LogPath
 print 'MasterPath = ' + @MasterPath
 ```
-
 
 Note that I truncated the actual SQL batch and added the `print`statements.
 

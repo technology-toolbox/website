@@ -11,11 +11,9 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/18/introducing-the-sharepointsmtphelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/18/introducing-the-sharepointsmtphelper-class.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Continuing in the spirit of my previous posts for the `SharePointPublishingHelper` class and `SharePointWebPartHelper` class, I'd like to introduce another helper class that you may find useful when building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office SharePoint Server (MOSS) 2007.
 
@@ -24,7 +22,6 @@ Consider the scenario where you need to send an e-mail message from a SharePoint
 Whatever the case, you'd like to send an e-mail message using the SMTP server configured in SharePoint Central Administration for the farm. `SharePointSmtpHelper` makes it really easy to do this.
 
 Note that there's really not much code to the `SharePointSmtpHelper` class -- thanks to the classes provided by the .NET Framework in the [System.Net.Mail](http://msdn.microsoft.com/en-us/library/system.net.mail.aspx) namespace. It may look like more code than you might expect, but that's just because of all the overloads of the `SendMessage` method that I provide.
-
 
 ```
 using System;
@@ -270,11 +267,9 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-
 Note that I use static members in order to only read the SMTP server configuration from SharePoint Central Administration one time.
 
 Assuming you just want to send a simple message using the default "From address" specified in SharePoint Central Administration, you only need a single line of code that passes three parameters:
-
 
 ```
 SharePointSmtpHelper.SendMessage(

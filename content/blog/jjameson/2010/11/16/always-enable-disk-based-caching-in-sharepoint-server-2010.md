@@ -12,17 +12,15 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In March, 2009, I wrote a [post](/blog/jjameson/2009/03/27/always-enable-disk-based-caching-in-moss-2007) that explains why **I always recommend enabling disk-based caching** in Microsoft Office SharePoint Server (MOSS) 2007.
 
 This morning a Microsoft PFE (Premier Field Engineer) reached out to me after he came across my blog post while investigating some issues at a customer site. He said that he was at some "government agency" but that's all he would say -- and probably all I want to know ;-)
 
-Anyway, he mentioned that his 10-minute SQL Server Profiler trace showed something like 56,000 calls to the `proc_FetchDocForHttpGet` stored procedure (which I suspect is how he discovered my earlier post, since it appears as the [3rd search result on bing](http://www.bing.com/search?q=proc_fetchdocforhttpget) and the [7th search result on Google](http://www.google.com/#hl=en&amp;q=proc_fetchdocforhttpget)).
+Anyway, he mentioned that his 10-minute SQL Server Profiler trace showed something like 56,000 calls to the `proc_FetchDocForHttpGet` stored procedure (which I suspect is how he discovered my earlier post, since it appears as the [3rd search result on bing](http://www.bing.com/search?q=proc_fetchdocforhttpget) and the [7th search result on Google](http://www.google.com/#hl=en&q=proc_fetchdocforhttpget)).
 
 We talked for a little bit about the effects of enabling disk-based caching, since the customer's SharePoint administrator was a little reluctant to enable it without some "data" to support it. [Note that there are *some* cons, which is something I really should have covered in a blog post by now. I'll try to get to that soon, I promise. Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) for more on this.]
 
@@ -42,8 +40,6 @@ The good news is that Profiler shows a nominal *five* database roundtrips requir
 
 While five database calls certainly *seems* reasonable for rendering a page request, the bad news is that the last three database calls resemble the following:
 
-
-
 ```
 exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
     @DocLeafName=N'controls.css', ...
@@ -54,8 +50,6 @@ exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
 exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
     @DocLeafName=N'home.jpg', ...
 ```
-
-
 
 Seriously...what is the likelihood the CSS files or image have changed since the last request for the home page? Zero. [Okay, maybe not absolute 0 -- but probably something like 6.28 x 10<sup>-9</sup>  ;-) ]
 

@@ -9,26 +9,19 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 I came across a nasty bug earlier this week in Microsoft Office SharePoint Server  (MOSS) 2007 -- especially nasty because troubleshooting it primarily involved trial  and error since there were no error messages displayed on the page, in the SharePoint  log, or in the Windows event logs. I even attached the debugger and set it to break  on all exceptions, but had no luck there either.
 
 The problem was that the document properties form no longer rendered for our  custom content types, or rather that it would only *partially* render. The  toolbar was there, as was the footer displaying the content type, version, date  created, and date modified -- just no fields whatsoever.
 
 It turns out that when I "rebuilt" our ContentTypes.xml file to include all of  our final content types, I omitted the empty `<FieldRefs>`  elements that had previously been there. For example:
-
-
 
 ```
 <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
@@ -39,11 +32,7 @@ It turns out that when I "rebuilt" our ContentTypes.xml file to include all of  
   </ContentType>
 ```
 
-
-
 instead of
-
-
 
 ```
 <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
@@ -55,8 +44,6 @@ instead of
     </FieldRefs>
   </ContentType>
 ```
-
-
 
 If you do not specify the `<FieldRefs>`  element, then your documents will not inherit any properties from the parent content  type (and the document properties form will consequently appear to be blank). Ouch.
 

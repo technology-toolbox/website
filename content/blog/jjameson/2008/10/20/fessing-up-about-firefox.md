@@ -14,13 +14,9 @@ tags: ["My System", "Web Development"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 My name is Jeremy, and I'm a Firefox user.
 
@@ -43,16 +39,14 @@ Why I use Firefox can easily be summed up in one word: *add-ons*. [Okay,        
 In the beginning, my dependency on Firefox started with [Screengrab!](https://addons.mozilla.org/en-US/firefox/addon/1146).
 
 However, over time, and especially after I got serious about Web development (such         as [dumping table-based
-            layout](http://www.stopdesign.com/articles/throwing_tables/) and eliminating [spacer
-                GIFs](http://en.wikipedia.org/wiki/Spacer_GIF) in favor of pure CSS -- &aacute; la, Douglas Bowman), I began         to rely heavily on other add-ons as well -- in particular, [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/60) and [Firebug](https://addons.mozilla.org/en-US/firefox/addon/1843).
+layout](http://www.stopdesign.com/articles/throwing_tables/) and eliminating [spacer
+GIFs](http://en.wikipedia.org/wiki/Spacer_GIF) in favor of pure CSS -- &aacute; la, Douglas Bowman), I began         to rely heavily on other add-ons as well -- in particular, [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/60) and [Firebug](https://addons.mozilla.org/en-US/firefox/addon/1843).
 
 Most recently, I have also added [YSlow](https://addons.mozilla.org/en-US/firefox/addon/5369) to my virtual Toolbox (referring to my standard set of tools that         I ensure are installed on every laptop, desktop, and VM that I develop on).
 
-###         My Essential Firefox Add-ons
+### My Essential Firefox Add-ons
 
-
-
-####                 Screengrab!
+#### Screengrab!
 
 [!\[Firefox Add-on - Screengrab!\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Screengrab.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Screengrab.png)
 
@@ -62,42 +56,36 @@ Back in the Middle Ages -- or at least before I discovered Screengrab! -- I used
 
 While this works great for certain pages, it is terrribly inefficient when you want                 to capture an entire Web page, but the page is too long to fit on screen (in other                 words, the vertical scrollbar appears in the browser). Believe it or not, I actually                 used to scroll down, <kbd>ALT+PRINT SCREEN</kbd> again, and then delicately "append"                 the new capture to the bottom of the previous capture in Paint! Needless to say,                 I didn't do this very often, because it could literally take a couple of minutes                 to repeat this process several times for single page.
 
-Then I discovered a [utility on CodeProject](http://www.codeproject.com/KB/graphics/IECapture.aspx?fid=192174&amp;df=90&amp;mpp=25&amp;noise=3&amp;sort=Position&amp;view=Quick&amp;fr=101#xx0xx) that allowed me to capture the entire Web page all                 at once. This actually worked fairly well for a while. However, I found that after                 I upgraded from IE6 to IE7, I frequently encountered the problem where the captured                 image would be entirely black.
+Then I discovered a [utility on CodeProject](http://www.codeproject.com/KB/graphics/IECapture.aspx?fid=192174&df=90&mpp=25&noise=3&sort=Position&view=Quick&fr=101#xx0xx) that allowed me to capture the entire Web page all                 at once. This actually worked fairly well for a while. However, I found that after                 I upgraded from IE6 to IE7, I frequently encountered the problem where the captured                 image would be entirely black.
 
 Shortly thereafter, I found Screengrab! and I've never since looked for anything                 else. It is extremely "lightweight" and, unlike some of the other screen capture                 utilities for Firefox, it provides just the essential features:
 
 - Capture only the visible portion of the page, the entire page, or just a selected
-                    portion
+  portion
 - Copy the image to the clipboard or save directly to a PNG file
-
 
 The only quirk that I've noticed is that I can't copy a Web page and paste it directly                 into Microsoft Office programs. Instead, I still use Paint as an "intermediary"                 -- which isn't really an issue due to the speed at which this can be accomplished                 with <kbd>CTRL+V</kbd> (to paste from Screengrab! into Paint), <kbd>CTRL+C</kbd>                 (to copy the entire selection in Paint -- thus replacing the clipboard content),                 followed by <kbd>CTRL+V</kbd> (to paste the image into Word or Powerpoint).
 
-
-
-####                 Web Developer
+#### Web Developer
 
 [!\[Firefox Add-on - Web Developer\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Web%20Developer.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Web%20Developer.png)
 
 Chris Pederick's Web Developer add-on provides a toolbar chock-full of goodies for                 Web development. Honestly, there are a lot more features in this add-on than I've                 ever even begun to use. However, I've found it very helpful simply for the following:
 
 - Quickly disabling/enabling various browser features, such as caching, JavaScript,
-                    cookies, and CSS
+  cookies, and CSS
 - Viewing and managing cookies
 - Resizing the browser window to view a page in standard sizes, such as 1024x768 or
-                    (shudder) even 800x600
+  (shudder) even 800x600
 - Outlining specific HTML elements (such as all block level elements) to quickly gain
-                    familiarity with the structure of a Web page
+  familiarity with the structure of a Web page
 - Validating HTML, CSS, and JavaScript
-
 
 A long time ago, I tried out the Internet Explorer Developer Toolbar. However, while                 it worked well with IE6, I subsequently discovered issues after I attempted to install                 it in IE7. I believe these issues have since been fixed, but honestly I haven't                 looked at in a few years.
 
 I am looking forward to the new developer tools in Internet Explorer 8 to see how                 they stack up to this add-on and Firebug.
 
-
-
-####                 Firebug
+#### Firebug
 
 [!\[Firefox Add-on - Firebug\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Firebug.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Firebug.png)
 
@@ -113,9 +101,7 @@ Get it. Learn it. Use it. Exploit it.
 
 It really is that good! You will quickly start to wonder how you ever managed without                 it.
 
-
-
-####                 YSlow
+#### YSlow
 
 [!\[Firefox Add-on - YSlow\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20YSlow.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20YSlow.png)
 
@@ -129,10 +115,7 @@ If a Web page is slow, you can then use the other features of YSlow to quickly i
 
 Kudos to the Yahoo! development team for packaging up a bunch of their internal                 tools and best practices and making them easily usable by Web developers around                 the world.
 
-
-
-
-###             Conclusion
+### Conclusion
 
 I want to emphasize again that the intent of this post is not to say that I prefer             Firefox over Internet Explorer, because, honestly, I don't.
 

@@ -11,21 +11,18 @@ tags: ["WSUS", "Infrastructure"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In [last night's post](/blog/jjameson/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account), I discussed the solution for an issue I encountered installing [KB 970892](http://support.microsoft.com/kb/970892) on one of my servers. Thankfully, this morning I confirmed the server no longer increments the **Computers with Errors** column in the daily report I receive from Windows Server Update Services (WSUS).
 
 I should also mention that in order to get my WSUS report to come up completely clean, I had to decline the the following updates:
 
 - **Description of the Windows Server Update Services 3.0 Service Pack 1 package
-**[http://support.microsoft.com/kb/948014](http://support.microsoft.com/kb/948014)
+  **[http://support.microsoft.com/kb/948014](http://support.microsoft.com/kb/948014)
 - **Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
-**[http://support.microsoft.com/kb/972493](http://support.microsoft.com/kb/972493)
-
+  **[http://support.microsoft.com/kb/972493](http://support.microsoft.com/kb/972493)
 
 To be perfectly frank, I am actually rather disappointed that there doesn't seem to be any alternative to declining these updates altogether.
 

@@ -9,22 +9,17 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 At times, it seems like developing SharePoint solutions is all I've been doing  since I joined Microsoft in 2000. While many things have certainly changed since  the old "Tahoe" days, at least one thing remains relatively the same: my recommendation  to use as much out-of-the-box (OOTB) as possible.
 
-I suppose it's more of a principle -- or design goal -- than a mere recommendation,  and it certainly applies to more than just Microsoft Office SharePoint Server (MOSS)  2007 and Windows SharePoint Services (WSS). It seems like ever since I started working  with [COTS](http://en.wikipedia.org/wiki/Commercial_off-the-shelf) solutions  back in [my PDM 
+I suppose it's more of a principle -- or design goal -- than a mere recommendation,  and it certainly applies to more than just Microsoft Office SharePoint Server (MOSS)  2007 and Windows SharePoint Services (WSS). It seems like ever since I started working  with [COTS](http://en.wikipedia.org/wiki/Commercial_off-the-shelf) solutions  back in [my PDM
 days at AT&T](/blog/jjameson/2007/03/03/who-is-this-guy),, the ideology of minimal customization has just been something  I try to apply to every project I'm involved with. As I've mentioned before, it  certainly makes those support calls go much, much faster.
 
 It is this mantra that eventually led to what I now refer to as the "DR.DADA"  approach to SharePoint development. [Note that I can't take any credit for the "DR.DADA"  moniker. That goes to a much wittier teammate of mine from my previous project.  When Ron Tielke joined my previous project, I introduced him to my Deactivate/Retract/Delete/Add/Deploy/Activate  scripts for deploying our SharePoint features and he immediately coined it "DR.DADA"  -- a name which has stuck for almost two years.]
@@ -49,25 +44,19 @@ You say your Document Cart feature needs a list to store the items in each indiv
 
 What's that? We've deployed the DocumentCart feature to Production and now we  need to add a column to the list that contains the document cart items? No problem...just  modify the FeatureConfigurator to add a column to the list upon feature activation.  Thus when we "DR.D" (deactivate/retact/delete) the old version of the DocumentCart  feature and "ADA" (add/deploy/activate) the new version of the DocumentCart feature,  the list will be updated accordingly -- in each and every environment. It's almost  like "magic" -- if we ignore the fact that some developer had to add a tiny bit  of code to the feature:
 
-
-
 ```
 SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
          SPFieldType.Text, false);
 ```
 
-
-
 Note that stsadm.exe also has the **upgradesolution** operation  -- which is certainly useful in some situations; in particular, I believe it helps  resolve issues with unghosted files in certain situations (but that should be the  subject of another post altogether). However, note that the kinds of "upgrades"  you can do with the **upgradesolution** operation are severely limited.  For example, you cannot add new files to a feature and use the **upgradesolution**  operation. For more details on the limitations of the **upgradesolution**  operation, refer to the [Upgrading a Solution](http://msdn.microsoft.com/en-us/library/aa543659.aspx)  article on MSDN.
 
 Redeploying your features may seem like overkill -- even using scripts like **Redeploy Features.cmd**, which I'll share in a follow-up post --  and the truth is sometimes it is. However, keep in mind that if you -- as the developer  -- know that you haven't changed anything but code since your last build and deployment,  then you can just GAC the updated assemblies, recycle your application pool, and  you are off to the races -- or at least you will be once your SharePoint site has  warmed up again!
 
-
 > **Note**
 > 
-> 
-> 	Refer to the following blog post for more details on the "DR.DADA" approach 
-> 	to SharePoint development: 
+> Refer to the following blog post for more details on the "DR.DADA" approach
+> to SharePoint development:
 > 
 > <cite>Sample Walkthrough of the DR.DADA Approach to SharePoint</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)

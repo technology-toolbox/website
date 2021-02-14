@@ -11,11 +11,9 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In my [previous post](/blog/jjameson/2009/09/23/configuring-managed-properties-in-moss-2007), I showed how to automatically configure managed properties in Microsoft Office SharePoint Server (MOSS) 2007 when activating a custom "Search" feature. In this post, I want to cover a subtle, yet very important, limitation in managed properties.
 
@@ -28,7 +26,6 @@ Note that this is important not only for fields that allow HTML, but also for fi
 Unfortunately, PublishingRollupImage essentially equates to an `<img>` HTML element, which is comprised entirely of markup, and therefore entirely stripped of content when crawled by SharePoint. In other words, the managed property is always null (even though the underlying pages specify a rollup image).
 
 To workaround this issue, I recommend creating a separate field (column) called **PublishingRollupImageUrl** (with a display name of **Rollup Image URL**) and using an [event receiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spitemeventreceiver.aspx) to automatically set this field whenever an item is updated (by extracting the image URL from the PublishingRollupImage field).
-
 
 ```
 public override void ItemUpdating(
@@ -80,7 +77,6 @@ public override void ItemUpdating(
             }
         }
 ```
-
 
 You can then create the **PublishingRollupImage** managed property, map it to **ows\_PublishingRollupImageUrl**, and subsequently display the rollup images in search results similar to the Content Query Web Part.
 

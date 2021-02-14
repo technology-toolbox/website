@@ -12,11 +12,9 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Last summer, I added [DiffMerge](http://www.sourcegear.com/diffmerge/) to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) and I haven't used WinDiff since.
 
@@ -32,12 +30,10 @@ To customize your TFS comparison tool in Visual Studio 2008:
 2. In the **Options** window, expand **Source Control**, select **Visual Studio Team Foundation Server**, and then click **Configure User Tools...**
 3. In the **Configure User Tools** window, click the Add... or Modify... button as necessary to configure the following:
 
-
 - Extension: **.\***
 - Operation: **Compare**
 - Command: **C:\NotBackedUp\Public\Toolbox\DiffMerge\DiffMerge.exe**
 - Arguments: **%1 %2**
-
 
 Obviously, you may need to adjust the path to **DiffMerge.exe **as necessary for your environment.
 

@@ -11,11 +11,9 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master which most people now instantly associate with SharePoint as soon as they see it. Note that when you create a new site based on the **Team Site **site template or the **Collaboration Portal** site template in MOSS 2007, your site is configured to use default.master for both site pages (e.g. default.aspx) as well as system pages (e.g. /{list}/Forms/AllItems.aspx).
 
@@ -34,7 +32,6 @@ Since we needed a solution for Agilent right away, I had to come up with a worka
 In order to force pages that are hard-coded to use application.master (such as \_layouts/viewlsts.aspx) to use the same custom master page configured through **Site Settings**, a custom HttpHandler is used to explicitly set the master page on each request for an application page.
 
 Here is the code for the custom HttpHandler:
-
 
 ```
 namespace Fabrikam.Project1.PublishingLayouts.Web.UI
@@ -172,7 +169,6 @@ namespace Fabrikam.Project1.PublishingLayouts.Web.UI
 }
 ```
 
-
 Note that the HttpHandler must hook into the PreInit phase of the page lifecycle, because ASP.NET only allows the master page to be changed up to this point. Also note that there's a little more conditional logic than you might expect in order to account for infrequent -- but nevertheless very important -- scenarios, such as deleting a site.
 
 When deleting a site, `SPContext.Current` is null (or at least it was in the original RTM build of MOSS 2007 when I originally developed this feature).
@@ -181,12 +177,9 @@ Also note that some \_layouts pages do not specify application.master -- specifi
 
 To configure the custom HttpHandler for application pages (a.k.a. \_layouts pages), modify the Web.config file in
 
-
 > %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\LAYOUTS
 
-
 Simply comment out the default PageHandlerFactory and add the custom ApplicationPageHandlerFactory:
-
 
 ```
 <httpHandlers>
@@ -202,12 +195,9 @@ Simply comment out the default PageHandlerFactory and add the custom Application
     </httpHandlers>
 ```
 
-
 Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:
 
-
 > Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master page '/\_catalogs/masterpage/default.master', verify content control's ContentPlaceHolderID attribute in the content page.
-
 
 Lastly, I want to point out that this approach only affects application pages -- not site and system pages. In other words, the code shown above in ApplicationPageHandlerFactory is not executed on every page request for your SharePoint site. It's also probably worth mentioning that in order to avoid any possibility of having Microsoft Support throw the "unsupported" trump card on you when opening a service request (i.e. SRX), you should probably temporarily revert the Web.config change above (so that the default PageHandlerFactory is used) and reproduce your problem with the default, out-of-the-box configuration.
 

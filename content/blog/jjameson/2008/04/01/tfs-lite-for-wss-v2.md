@@ -10,25 +10,18 @@ tags: ["Core Development", "WSS v2"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 > **Update (2008-04-07)**
 > 
-> ["TFS 
-> 	Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now available.
-
+> ["TFS
+> Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now available.
 
 For almost as long as I can remember (okay, not really that long -- but at least  as far back as 2003), I've been using SharePoint lists as a bug tracking tool on  almost all of the customer projects that I have been involved with. Contrary to  what you might think, many of our enterprise customers do not have effective tools  and processes in place for managing a software development project.
 
@@ -54,11 +47,11 @@ The primary goal in developing the TFS Lite template was to support a "project  
 
 Another key feature is the ability to show the status of important project deliverables  and milestones using KPI icons (green, yellow, and red).
 
-![Project Summary &quot;dashboard&quot;](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v2.jpg "Project Summary &quot;dashboard&quot;")
-	Figure 1: Project Summary "dashboard"
+![Project Summary &quot;dashboard&quot;](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v2.jpg "Project Summary \"dashboard\"")
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_TFS%20Lite%20-%20WSS%20v2.jpg) 
+    Figure 1: Project Summary "dashboard"
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_TFS%20Lite%20-%20WSS%20v2.jpg)
 
 #### Work Items List
 
@@ -66,14 +59,11 @@ The heart of the TFS Lite template is the custom **Work Items**  list, which is 
 
 For example, the **Area** field has been added to associate a work item with  different areas of the solution. Similarly, the **Iteration** field has been  added to group work items into different phases of the project.
 
-
 > **Note**
 > 
-> 
-> 	The **Area** and **Iteration** fields should be 
-> 	customized for each project to reflect the major work effort areas (e.g. 
-> 	features) and milestones.
-
+> The **Area** and **Iteration** fields should be
+> customized for each project to reflect the major work effort areas (e.g.
+> features) and milestones.
 
 In addition to modifying the columns in the default Issues list, the Work Items  list also supports several additional views (similar to the queries provided in  TFS).
 
@@ -83,13 +73,11 @@ The overall project status displayed on the dashboard is simply a Content Editor
 
 The **Project Summary** Web Part on the dashboard began as a simple List View  Web Part using the following criteria:
 
-
 > **Current** is equal to **Yes**
 > 
 > And **Exit Criteria** is equal to **Yes**
 > 
 > And **Iteration** is equal to **Project\v1.0\M0**
-
 
 Note that the **Exit Criteria** field is used to denote work items as significant  deliverables or milestones (thereby excluding less important work items from the **Project Summary**). Also note that **Iteration** is used to filter important  items that are not scheduled to be worked on until a later phase.
 
@@ -98,8 +86,6 @@ The **Project Summary** Web Part on the dashboard was developed with a "minimal 
 Note that the approach of using a DVWP instead of modifying the underlying CAML  introduces a hard-coded list ID (a GUID). Consequently the list data source will  need to be tweaked after create a new site based on this template.
 
 A minimal amount of custom XSLT was then added to display an image based on the  KPI value of each work item:
-
-
 
 ```
 <xsl:choose>
@@ -118,14 +104,11 @@ A minimal amount of custom XSLT was then added to display an image based on the 
   </xsl:choose>
 ```
 
-
-
 Note that the image paths are hard-coded to use a picture library (named "Image  Library") in the same site. An alternative would be to store these images in the  \_layout folder, however that approach would require an Administrator to deploy the  images.
 
 #### Accomplishments
 
 The **Accomplishments** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
-
 
 > **Current** is equal to **Yes**
 > 
@@ -133,33 +116,28 @@ The **Accomplishments** Web Part on the dashboard is a simple List View Web  Par
 > 
 > And **ModifiedFilter** is greater than or equal to **[Today]**
 
-
 Note that **ModifiedFilter** is a calculated column simply used to filter  out items closed more than a week ago.
 
 #### Top 10 Issues
 
 The **Top 10 Issues** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
 
-
 > **Current** is equal to **Yes**
 > 
 > And **Blocked **is equal to **Yes**
-
 
 Note that the **Blocked** field indicates there is an issue in completing  the work item.
 
 #### Priorities/Milestones
 
-The criteria for **Priorities/Milestones** Web Part is similar to the **Project 
+The criteria for **Priorities/Milestones** Web Part is similar to the **Project
 Summary** Web Part:
-
 
 > **Current** is equal to **Yes**
 > 
 > And **Exit Criteria** is equal to **Yes**
 > 
 > And **Status** is not equal to **Closed**
-
 
 Also note that grouping is used to loosely sort the major deliverables and milestones.
 

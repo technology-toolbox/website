@@ -10,18 +10,13 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 Last Saturday, another team member sent an email out to the team inquiring about  the "MOSS object disposal problem" (as he termed it).
 
@@ -33,12 +28,11 @@ The most interesting thing to come out of this email thread -- at least for me, 
 
 In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has been, well, nixed...
 
-
 > **SPSite.RootWeb Property**
 > 
-> An earlier version of this article indicated that the calling application should 
-> dispose of the SPSite.RootWeb property just before disposing of the SPSite object 
-> that is using it. This is no longer the official guidance. The dispose cleanup 
+> An earlier version of this article indicated that the calling application should
+> dispose of the SPSite.RootWeb property just before disposing of the SPSite object
+> that is using it. This is no longer the official guidance. The dispose cleanup
 > is handled automatically by the SharePoint framework.
 > 
 > ...
@@ -46,14 +40,13 @@ In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has be
 > **SPWeb.ParentWeb Property**
 > **Updated Guidance**
 > 
-> An earlier version of this article recommended that the calling application 
-> should dispose of the SPWeb.ParentWeb. This is no longer the official guidance. 
+> An earlier version of this article recommended that the calling application
+> should dispose of the SPWeb.ParentWeb. This is no longer the official guidance.
 > The dispose cleanup is handled automatically by the SharePoint framework.
 
-
-<cite>Scott Harris, et. al (2009). Best Practices: Using Disposable Windows SharePoint Services Objects 2009-03-19.</cite>
+<cite>Scott Harris, et. al (2009). Best Practices: Using Disposable Windows
+SharePoint Services Objects 2009-03-19.</cite>
 [http://msdn.microsoft.com/en-us/library/aa973248.aspx](http://msdn.microsoft.com/en-us/library/aa973248.aspx)
-
 
 Woohoo!!!!!
 
@@ -66,8 +59,6 @@ You see, this shouldn't even *be* a SharePoint issue, and thus there should  be 
 Rather, we simply need to ingrain in every .NET developer's mind that when a  class implements `IDisposable`, thou shalt call `Dispose()`  on any instances of the class. Note that this must be done by the code that ultimately  "owns" the object.
 
 For example, consider the following method from my `SharePointHelper`  class (which I've been using for years):
-
-
 
 ```
 /// <summary>
@@ -126,8 +117,6 @@ For example, consider the following method from my `SharePointHelper`  class (wh
     }
 ```
 
-
-
 As noted in the XML comments for this method, the caller is responsible for disposing  of the returned `SPWeb` -- assuming the Web was successfully found. If  the `SPWeb` was not found, then obviously `SharePointHelper`  must dispose of the (bogus) object.
 
 So getting back to the title of this post: To `Dispose` or not to `Dispose`...
@@ -137,8 +126,6 @@ The answer should be very easy, and certainly should not comprise 44 pages.
 How about one paragraph (and a code sample)?
 
 If you instantiate an object that implements `IDisposable` -- either  through the `new` operator or through a method like the sample shown  above -- then you should call `Dispose()` on that object, or, preferably  if you are a C# developer, you should wrap your object in a `using` block,  as shown below:
-
-
 
 ```
 private void ConfigureSampleContentWeb(
@@ -151,8 +138,6 @@ private void ConfigureSampleContentWeb(
         }
     }
 ```
-
-
 
 Am I making this too easy?
 

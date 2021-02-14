@@ -9,26 +9,20 @@ tags: ["Core Development"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-
-Stepping into the ["Wayback 
+Stepping into the ["Wayback
 Machine"](http://en.wikipedia.org/wiki/Wayback_Machine) for a moment, I realized that I hinted about [a problem with installing Visual Studio 2005 SP1](/blog/jjameson/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs), but I never got around to  blogging about it in more detail. Unfortunately, I just got bit by this problem  yet again this morning because I naively tried to use the vanilla Windows Update  functionality after installing SQL Server 2005 on my freshly-rebuilt Windows Server  2003 machine. [Note: SQL Server 2005 uses the Visual Studio 2005 IDE as the shell  for SQL Server Management Studio. Consequently, even though you may not have installed  Visual Studio 2005, you need to install Visual Studio 2005 SP1 after installing  SQL Server 2005. This is separate from any SQL Server service packs.]
 
 After double-clicking the "Golden Shield" (a.k.a. the Windows Update icon in  the task tray), I was quickly informed that the attempt to install Visual Studio  2005 Service Pack 1 failed...miserably.
 
 Looking at the event log, I noticed the following errors:
-
 
 > Event Type: Error
 > 
@@ -48,7 +42,7 @@ Looking at the event log, I noticed the following errors:
 > 
 > Description:
 > 
-> The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to 
+> The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to
 > an error in software restriction policy processing. The object cannot be trusted.
 > 
 > Event Type: Error
@@ -69,8 +63,8 @@ Looking at the event log, I noticed the following errors:
 > 
 > Description:
 > 
-> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU -- Error 
-> 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature 
+> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU -- Error
+> 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature
 > check. For more information about a possible resolution for this problem, see
 > [http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
 > 
@@ -92,18 +86,15 @@ Looking at the event log, I noticed the following errors:
 > 
 > Description:
 > 
-> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU - Update 
-> 'Microsoft Visual Studio 2005 Team Explorer - ENU Service Pack 1 (KB926601)' 
-> could not be installed. Error code 1603. Additional information is available 
+> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU - Update
+> 'Microsoft Visual Studio 2005 Team Explorer - ENU Service Pack 1 (KB926601)'
+> could not be installed. Error code 1603. Additional information is available
 > in the log file C:\NOTBAC~1\Temp\Volatile\VS80sp1-KB926601-X86-ENU\VS80sp1-KB926601-X86-ENU-msi.0.log.
-
 
 These errors quickly jogged my memory about the known issues with installing  Visual Studio 2005 Service Pack 1. Consequently, I proceeded to delete the 49e8e21.msp  file in my Installer folder (since I really don't like having 455MB "orphan" files  hanging out on my hard disk) and subsequently used my trusty script to install VS  2005 SP1 instead of relying on Windows Update to do this for me.
 
-Here is the script I developed a long time ago for installing VS 2005 SP1 (well,  actually, I just stole the pieces from [Heath's 
+Here is the script I developed a long time ago for installing VS 2005 SP1 (well,  actually, I just stole the pieces from [Heath's
 blog](http://blogs.msdn.com/heaths)):
-
-
 
 ```
 :: This is basically a combination of two of Heath Stewart's blog postings
@@ -133,8 +124,6 @@ del /q "CodeIdentifiers.reg" 2>nul
 
 del /q "Installer.reg" 2>nul
 ```
-
-
 
 Okay, I'll be honest, I didn't really run this script this time. Actually, I  just ran the commands up to the point of installing the actual service pack (i.e.  to tweak the software installation policy and MaxPatchCacheSize). I then double-clicked  the "Golden Shield" and, behold, the service pack was installed successfully. [Imagine  trumpets blaring at this point...it's funnier.]
 

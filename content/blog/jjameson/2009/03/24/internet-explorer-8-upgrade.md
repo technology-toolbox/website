@@ -12,13 +12,9 @@ tags: ["Web Development"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 In case you missed the announcement, [Internet Explorer 8](http://www.microsoft.com/windows/internet-explorer/default.aspx) was released last week.
 
@@ -31,7 +27,7 @@ I'll wait for IE8 to be available via Windows Update before upgrading the remain
 The upgrade from IE7 to IE8 on each of these three machines went without the slightest         glitch, and while I can't say that I'm heavily leveraging new features like Accelerators         and Web Slices (yet), I must admit that I really like the fact that IE8 is much         more Web standards compliant than any previous version of Internet Explorer.
 
 As I've [hinted
-            in the past](/blog/jjameson/2008/10/20/fessing-up-about-firefox), the death of IE6 cannot come soon enough. I'm certainly not         the only person to have this opinion. Here are just a few of the dozens of sites         dedicated to eradicating IE6:
+in the past](/blog/jjameson/2008/10/20/fessing-up-about-firefox), the death of IE6 cannot come soon enough. I'm certainly not         the only person to have this opinion. Here are just a few of the dozens of sites         dedicated to eradicating IE6:
 
 - [http://www.stoplivinginthepast.com](http://www.stoplivinginthepast.com/)
 - [http://www.bringdownie6.com](http://www.bringdownie6.com/)
@@ -40,14 +36,11 @@ As I've [hinted
 - [http://www.stopie6.org](http://www.stopie6.org/)
 - [http://www.iedeathmarch.org](http://www.iedeathmarch.org/)
 
-
 With IE8, I'm also digging the fact that tabs are grouped by color to indicate which         tabs were opened from a particular page. I have a habit of doing an Internet search         and then using <kbd>CTRL+</kbd>click to quickly open the top 3-5 results so I can         scan them for the information I am looking for. By highlighting the tabs with various         colors, it gives this scenario an improved user experience (for example, it is very         easy to quickly close tabs that I no longer want open).
 
 I've also started using some of the [IE8 Developer Tools](http://msdn.microsoft.com/en-us/library/dd565628%28VS.85%29.aspx) -- and I must say these are a vast improvement over         the previous IE Developer Toolbar. However, it's much too early to say whether you'll         be able to pry [Firefox and its various add-ons](/blog/jjameson/2008/10/20/fessing-up-about-firefox) out of my toolbox ;-)
 
-
 > **Update (2009-03-25)**
-> 
 > 
 > Yesterday I forgot to mention another vastly improved feature in IE8.
 > 

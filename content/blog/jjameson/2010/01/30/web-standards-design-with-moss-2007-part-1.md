@@ -11,11 +11,9 @@ tags: ["MOSS 2007", "WSS v3", "Web Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've mentioned before that I became somewhat of a [Web standards](http://en.wikipedia.org/wiki/Web_standards) zealot several years ago. Consequently, regardless of whether I'm building Web sites using the core ASP.NET platform or Microsoft Office SharePoint Server (MOSS) 2007, I strive to ensure that minimal, semantic HTML markup is used to render the site. I then leverage CSS rules to define the presentational aspects of the content. Note that this can sometimes seem like an epic battle between the Web developer and the underlying platform.
 
@@ -35,15 +33,11 @@ Rather than defining all of the CSS layout from scratch, I chose to utilize the 
 
 The 960 Grid System provides two variants: 12 columns and 16 columns. However, we are currently only using the 12 column layout for this site. I should also note that we are using a fixed-width design (although there are "fluid" alternatives available based on the 960 Grid System). Bear in mind that things get considerably more complex when trying to support arbitrary sizing of the browser window (which is actually something that SharePoint does very well out-of-the-box with its table-based layout).
 
-
 > **Tip**
 > 
 > If you choose to use the 960 Grid System, I also highly recommend leveraging the [960 Gridder](http://gridder.andreehansson.se) as well. This combination makes the task of creating great looking Web pages much easier (even for someone, like me, who is much more of a *developer*than a *designer*).
 
-
 To understand how the 960 Grid System is used on our SharePoint site, consider the following master page:
-
-
 
 ```
 <%@ Master Language="C#" CodeBehind="Fabrikam.master.cs" Inherits="Fabrikam.Portal.Web.UI.FabrikamMasterPage, Fabrikam.Portal.Web,
@@ -154,60 +148,40 @@ To understand how the 960 Grid System is used on our SharePoint site, consider t
 </html>
 ```
 
-
-
 This is very similar to the [minimal master page example on MSDN](http://msdn.microsoft.com/en-us/library/aa660698.aspx) -- but with some important changes. I'll cover the important similarities as well as the differences in the remainder of this post.
 
 Ignoring the differences in the page directives (which are irrelevant when discussing Web standards), the first thing you'll notice is that the master page specifies a DOCTYPE:
-
-
 
 ```
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
-
-
 You should always specify a DOCTYPE in your Web pages in order to avoid the dreaded [quirks mode](http://en.wikipedia.org/wiki/Quirks_mode) in Web browsers. Since, as I noted earlier, the markup emitted by SharePoint isn't always ideal, avoid the temptation to specify a strict DOCTYPE, such as:
-
-
 
 ```
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
-
-
 When I attended some training last summer on SharePoint 2010, I remember hearing that the new version is supposed to be compliant with XHTML strict. However, I don't know if that will actually hold true, but regardless, the current version -- as they say -- "is what it is."
 
 In the MSDN minimal master page sample, the following items immediately follow the `<html>` element:
-
-
 
 ```
 <WebPartPages:SPWebPartManager runat="server"/>
   <SharePoint:RobotsMetaTag runat="server"/>
 ```
 
-
-
 Since the `<html>` element should only contain `<head>` and `<body>` elements, the [SPWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.spwebpartmanager.aspx) control should be placed within the `<form>` element inside the `<body>` element, and the [RobotsMetaTag](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webcontrols.robotsmetatag.aspx) control should be placed within the `<head>` element (since it emits `<meta>` elements).
 
 The next important difference between the sample MSDN master page and the one shown above is with regards to the links to CSS files. The MSDN sample only specifies the following:
-
-
 
 ```
 <SharePoint:CssLink runat="server"/>
 ```
 
-
-
 My master page, however, specifies the following:
-
-
 
 ```
 <SharePoint:CssLink runat="server" />
@@ -218,8 +192,6 @@ My master page, however, specifies the following:
     <link rel="stylesheet" type="text/css"
         href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
 ```
-
-
 
 Note that the controls.css file is referenced in the out-of-the-box MOSS 2007 sample master pages (e.g. BlueBand.master) but for some reason was omitted from the MSDN sample page. I've seen some blog posts that say this CSS file should either be omitted entirely, or only rendered for content authors (by enclosing the declaration in an [AuthoringContainer](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.authoringcontainer.aspx) element). However, if you try to leverage as many OOTB SharePoint features as possible -- including the [SummaryLinkFieldControl](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.summarylinkfieldcontrol.aspx) for displaying lists of links -- then you should reference this CSS file (or be prepared to recreate numerous CSS rules that SharePoint would otherwise provide for you).
 
@@ -233,22 +205,16 @@ While you can tell that I'm not really creative when it comes to names, you can 
 
 The reason why the custom CSS file contains the "-Main" suffix is because it typically refers to other CSS files. For example, the first two lines of Fabrikam-Main.css are:
 
-
-
 ```
 @import url('Fabrikam-Basic.css');
 @import url('960.css');
 ```
-
-
 
 At the risk of stating the obvious, the 960.css file is the one that comes with the 960 Grid System (without any changes whatsoever).
 
 Depending on the need to support various browser versions, we might also need to include other CSS files (such as Fabrikam-IE.css or, Heaven forbid, Fabrikam-IE6.css). Fortunately, at least on this particular project, we have the privilege of playing the "unsupported" trump card if people complain that they don't like the way the site looks in Internet Explorer 6. Consequently, the number of CSS files is very small for this project.
 
 Here are the contents of Fabrikam-Basic.css:
-
-
 
 ```
 /* Reset styles to standardize formatting across various browsers (refer to
@@ -411,8 +377,6 @@ hr {
 }
 ```
 
-
-
 The purpose of the "basic" CSS file -- as noted in the comments at the top of the file -- is to reset the default styling that frequently varies across different Web browsers and define the core styles of various HTML elements.
 
 For the most part, these rules are based on the [YUI Reset CSS](http://developer.yahoo.com/yui/reset/). However, you can see that I had to make some minor changes in order to avoid fundamentally "breaking" SharePoint (due to the rampant table-based layout that I referred to earlier).
@@ -420,8 +384,6 @@ For the most part, these rules are based on the [YUI Reset CSS](http://developer
 It's important to understand that changes to the Fabrikam-Basic.css file are not expected to occur very frequently. Rather, as new features are added to the SharePoint site, CSS rules are added or updated in Fabrikam-Main.css.
 
 While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most people (since they are specific to one particular Web site), it is worth highlighting a few of the rules:
-
-
 
 ```
 /* =core (SharePoint core.css overrides)
@@ -466,19 +428,13 @@ While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most
 }
 ```
 
-
-
 As noted in the comments above, these CSS rules are used to override rules specified in the out-of-the-box SharePoint CSS files.
 
 Returning to the contents of the master page, the following element is used to encapsulate all of the page content:
 
-
-
 ```
 <div class="container_12">
 ```
-
-
 
 The `container_12` class refers to the 12-column template provided by the 960 Grid System.
 
@@ -490,15 +446,12 @@ This is getting to be a very long post, and there's still much I want to cover. 
 
 Don't fret, I'll cover many more details of Web standards design and SharePoint in the very near future eventually.
 
-
 > **Update (2010-12-02)**
 > 
 > Part 2 in this series in *finally* available ;-)
 > 
 > **Web Standards Design with SharePoint, Part 2**
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
-
-
 
 > **Update (2011-01-31)**
 > 

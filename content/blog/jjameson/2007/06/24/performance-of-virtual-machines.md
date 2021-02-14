@@ -12,11 +12,9 @@ tags: ["Virtualization"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Yesterday I had to rebuild our Test environment (TEST) to replace a VM (running on VMWare) with a physical server, due to very poor performance of the VM.
 
@@ -28,7 +26,7 @@ About a month ago, I pointed out that our document migration process appeared to
 
 [Side note: Months ago, we compromised on our infrastructure design where a single 100 Mbps network adapter on each of the front-end Web servers serves all traffic except for backups -- rather than having a separate "front-end" network (for Web requests) and backend network (for SQL, AD, and other "infrastructure" traffic). In other words, all network packets, regardless of whether they are HTTP requests from Web clients or TDP requests to read from or write to SQL Server, flow through a single NIC. Therefore I have long suspected that our first bottleneck would be the network.]
 
-During subsequent testing, [Windows Server 2003 Performance Advisor](http://www.microsoft.com/downloads/details.aspx?FamilyID=09115420-8c9d-46b9-a9a5-9bffcd237da2&amp;DisplayLang=en) reported a high number of TCP retransmits during the document migration. In order to troubleshoot the issue with a network engineer, we used a simple robocopy operation to examine the network throughput and found that we weren't seeing anywhere near the maximum throughput on a 100 Mbps network. We discovered that the duplex setting on the network switch was not set correctly. After correcting the setting on the switch, throughput went up dramatically.
+During subsequent testing, [Windows Server 2003 Performance Advisor](http://www.microsoft.com/downloads/details.aspx?FamilyID=09115420-8c9d-46b9-a9a5-9bffcd237da2&DisplayLang=en) reported a high number of TCP retransmits during the document migration. In order to troubleshoot the issue with a network engineer, we used a simple robocopy operation to examine the network throughput and found that we weren't seeing anywhere near the maximum throughput on a 100 Mbps network. We discovered that the duplex setting on the network switch was not set correctly. After correcting the setting on the switch, throughput went up dramatically.
 
 Therefore, on Friday when I observed the horrible throughput numbers when robocopying files in TEST, I immediately suspected that we had a network problem again. When we called the help desk to have someone look at the network utilization, they stated that the network was "fine" and suggested that the problem was due to VMWare -- not the network.
 

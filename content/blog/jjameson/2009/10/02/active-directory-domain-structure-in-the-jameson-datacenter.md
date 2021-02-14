@@ -11,18 +11,13 @@ tags: ["My System", "Infrastructure"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter), which is really just my home lab that I use for learning         new technologies and improving my skills, as well as actually completing my day-to-day         tasks on various customer projects (whenever I am actually able to work from home         instead of using my laptop at a customer site).
 
 In this post, I want to share details about how I've configured my Active Directory         domain, namely **corp.technologytoolbox.com**.
-
 
 > **Note**
 > 
@@ -32,21 +27,18 @@ In this post, I want to share details about how I've configured my Active Direct
 >             but that was already taken.) [Don't bother trying to browse to [https://www.technologytoolbox.com](https://www.technologytoolbox.com/) because, honestly, I haven't yet invested
 >             the time in actually creating the Web site -- even after almost ten years.]
 
-
 As you can see in the following figure, I've created a number of organizational         units (OUs) which you would typically find in many enterprise organizations.
 
 ![Jameson Datacenter - Active Directory domain structure](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20AD%20domain%20structure.png)
-            Figure 1: Jameson Datacenter - Active Directory domain structure
+Figure 1: Jameson Datacenter - Active Directory domain structure
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20AD%20domain%20structure.png)
-
 
 Note that I didn't really come up with this structure myself (except for the **            Admin Accounts** OU, which I believe was an ["original idea"](http://en.wikipedia.org/wiki/A_Beautiful_Mind_%28film%29) of mine -- but honestly it's been so long that I can         hardly remember). Most of this is based on the prescriptive guidance from TechNet.         You can find the latest version of this guidance in the [AD DS (Active Directory Domain Services) Design Guide](http://technet.microsoft.com/en-us/library/cc754678%28WS.10%29.aspx). [I tried to find         the original reference material that I used, but I gave up looking for it on TechNet         this morning after about 5 minutes.]
 
 As you can see, I created OUs to model organizations such as the **Development**         group, the **IT** group, and the **Sales **organization.
 
 The following table summarizes the various OUs in the domain:
-
 
 <caption>            Organizational Units in the corp.technologytoolbox.com Domain</caption>|                     Organizational Unit<br>                 |                     Description<br>                 |
 | --- | --- |
@@ -66,14 +58,10 @@ The following table summarizes the various OUs in the domain:
 |                     IT/Service Accounts<br>                 |                     Contains service accounts for the "Test" and "Production" environments (e.g. **                        Service account for SQL Server (TEST) -- TECHTOOLBOX\svc-sql-test **and<br>                    **Service account for SQL Server **-- **TECHTOOLBOX\svc-sql**)<br>                 |
 |                     IT/Users<br>                 |                     Contains user accounts for each person in the IT organization. This OU is currently<br>                    empty.<br>                 |
 |                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
-
-
-
 > **Note**
 > 
 >             The **Sales **OU contains similar OUs as **Development**.
 >             These are simply not shown in the previous table.
-
 
 Note that this domain structure, I'm able to use the Group Policy feature of Active         Directory to "effortlessly" configure new servers.
 

@@ -12,11 +12,9 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In my [previous post](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server), I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis.
 
@@ -28,7 +26,6 @@ Yes, this is going to be really painful for some developers.
 
 For example, you can say goodbye to using the overload of string.Format() that doesn't specify a CultureInfo:
 
-
 ```
 string foo = "here";
 
@@ -37,15 +34,11 @@ string foo = "here";
                 foo);
 ```
 
-
 Attempting this will now result in a broken build:
-
 
 > Error 2 CA1305 : Microsoft.Globalization : Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Program.Main(string[])' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.
 
-
 To avoid the CA1305 error, you will need to use something like this instead:
-
 
 ```
 string foo = "here";
@@ -55,7 +48,6 @@ string foo = "here";
                 "Imagine something interesting {0}.",
                 foo);
 ```
-
 
 You will also need to enable signing of all assemblies with a strong name key, and also specify various assembly level attributes (e.g. [`\[assembly: CLSCompliant(true)\]`](http://msdn.microsoft.com/en-us/library/system.clscompliantattribute.aspx)). However, if you follow the steps I've provided in a [previous post](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), this should only take you at most 1-2 minutes.
 
@@ -70,13 +62,11 @@ The following post provides some great information about which Code Analysis war
 <cite>What rules do Microsoft have turned on internally? 2007-08-09.</cite>
 [http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx](http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx)
 
-
 This article is obviously a little dated, but still very relevant over two years later.
 
 Note that you will undoubtedly need to [suppress some specific Code Analysis warnings](http://msdn.microsoft.com/en-us/library/ms244717.aspx) from time to time, and therefore you'll have to choose how to suppress the warnings (whether inline within the source, or in a GlobalSuppressions.cs file). However, I hope you'll choose to fix the underlying issue that causes the Code Analysis warning (whenever practical) instead of simply suppressing a bunch of warnings.
 
 So, in conclusion, think of the Code Analysis feature in Visual Studio as a way of *choosing* a more strict compiler. For example, back in the days when I used to program in C on Unix, the compiler wouldn't complain when I wrote something like this (even though this is obviously very wrong):
-
 
 ```
 if (i = 1)
@@ -84,7 +74,6 @@ if (i = 1)
                 ...
             }
 ```
-
 
 I was relieved when I switched to C++ and these kinds of bugs were a thing of the past. [Note that I never switch my coding style to use something like "`1 == i`" in order to avoid these errors.]
 

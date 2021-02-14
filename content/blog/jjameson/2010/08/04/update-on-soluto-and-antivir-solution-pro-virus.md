@@ -12,13 +12,11 @@ tags: [""]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-
-In my [previous post](/blog/jjameson/2010/08/01/soluto-and-antivir-solution-pro-virus), I described my encounter with the [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&amp;go=&amp;form=QBNT2) after installing [Soluto](http://www.soluto.com) ("anti-frustration software" that analyzes the boot time  of your PC).
+In my [previous post](/blog/jjameson/2010/08/01/soluto-and-antivir-solution-pro-virus), I described my encounter with the [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&go=&form=QBNT2) after installing [Soluto](http://www.soluto.com) ("anti-frustration software" that analyzes the boot time  of your PC).
 
 Roee Adler, Chief Product Officer at Soluto, assured me the virus was not transmitted via Soluto (directly or indirectly via the PC Genome service). While they are aware of [some malware disguising itself as Soluto software](http://blog.soluto.com/2010/06/safety-notice-when-downloading-soluto-avoid-file-sharing-services/), this shouldn't be an issue provided you download the Soluto installer directly from [http://www.soluto.com](http://www.soluto.com) (as I did).
 
@@ -32,8 +30,8 @@ Given my experience with Soluto over the past several days, I firmly believe thi
 
 Lastly, I wanted to include the email correspondence that I had with Roee. It's probably not all that interesting to most people, but it does demonstrate the level of pride these folks have in their product as well as the confidence they have in their development team.
 
-
-> * * *
+> ***
+> 
 > 
 > **From: **Roee Adler
 > **Sent: **Sunday, August 01, 2010 11:36 AM
@@ -46,7 +44,8 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > 
 > This contact request was sent from [MSDN Blogs](http://blogs.msdn.com/) by Roee Adler without sharing your email address.
 > 
-> * * *
+> ***
+> 
 > 
 > **From: **Jeremy Jameson
 > **Sent: **Monday, August 02, 2010 4:04 PM
@@ -67,7 +66,8 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > 
 > Jeremy
 > 
-> * * *
+> ***
+> 
 > 
 > **From: **Roee Adler
 > **Sent: **Monday, August 02, 2010 8:06 AM
@@ -90,7 +90,8 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > Soluto
 > [...]
 > 
-> * * *
+> ***
+> 
 > 
 > **From: **Jeremy Jameson
 > **Sent: **Tuesday, August 03, 2010 1:35 AM
@@ -121,7 +122,8 @@ Lastly, I wanted to include the email correspondence that I had with Roee. It's 
 > 
 > Jeremy
 > 
-> * * *
+> ***
+> 
 > 
 > **From: **Roee Adler
 > **Sent: **Tuesday, August 03, 2010 9:20 AM

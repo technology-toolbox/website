@@ -12,16 +12,13 @@ tags: ["My System"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-
 For the sake of this post, let's assume that you have a directory that contains some empty folders you want to get rid of. How the empty folders got there isn't important; all that matters is that you have some and you want to get rid of them.
 
 A few years ago, I created the following script (starting from a sample I found in the [Script Center on TechNet](http://technet.microsoft.com/en-us/scriptcenter/default.aspx)) to recursively enumerate a folder structure, identify any empty folders, and subsequently delete them.
-
 
 ```
 Option Explicit
@@ -54,7 +51,6 @@ Sub DeleteEmptyFolders(folder)
     End If    
 End Sub
 ```
-
 
 As you can see, there's really nothing complex here. Nevertheless I still find it to be a very useful script from time to time, so I thought I should share it. I used it this morning and it occurred to me that I should throw it up on the blog.
 

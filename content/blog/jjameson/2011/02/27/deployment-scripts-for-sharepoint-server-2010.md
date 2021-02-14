@@ -12,11 +12,9 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 A couple of years ago, I shared the scripts I created for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer to as the "[DR.DADA approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)."
 
@@ -32,14 +30,11 @@ Suppose we are migrating the public Internet site for Fabrikam Technologies ([ht
 - Fabrikam.Demo.Web\_WebAppConfiguration
 - Fabrikam.Demo.Web\_WebParts
 
-
 Let's start by assuming we've got a brand new SharePoint Server 2010 environment setup with "nothing" on it. In other words, we haven't yet created a Web application or deployed/activated any custom features. Therefore we first need a script to quickly create a new Web application in SharePoint.
 
 ### Create Web Application.ps1
 
 This script is used to create the Fabrikam Web application in SharePoint:
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -121,8 +116,6 @@ function Main()
 Main
 ```
 
-
-
 If you aren't familiar with the "`-EA 0`" abbreviated syntax, just realize that it's a short way of saying "`-ErrorAction SilentlyContinue`", or in other words you are telling PowerShell, "there's a chance this command may generate an error, but I'm okay with that -- just ignore it." For example, if you try to add the SharePoint PowerShell snap-in but the snap-in has already been added, then you get an error. However, in order to run the script from Windows PowerShell ISE (Integrated Shell Environment) or from a plain ol' PowerShell prompt (i.e. not the **SharePoint 2010 Management Shell **shortcut), then we need to ensure the SharePoint snap-in is loaded.
 
 The rest of the script should be pretty obvious. However, it might be worth pointing out that I explicitly add the "`-Debug:$false`" parameter to the various SharePoint cmdlets because I often set `$DebugPreference = "Continue"` in order to get debug messages from my scripts, but I don't want to see the SharePoint debug messages.
@@ -134,8 +127,6 @@ Also keep in mind that this script creates a Web application with claims authent
 ### Create Site Collections.ps1
 
 At this point, we have a brand new Web application but it doesn't contain any site collections. While the Fabrikam Internet site will likely end up having numerous site collections, let's start out by simply creating the top-level site (i.e. "/") using the **Publishing Portal **site definition.
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -186,8 +177,6 @@ function Main
 Main
 ```
 
-
-
 There's not much worth noting about this script, except perhaps to be aware that it is hard-coded to set the primary site collection administrator to the user running the script.
 
 ### Enable Anonymous Access.ps1
@@ -195,8 +184,6 @@ There's not much worth noting about this script, except perhaps to be aware that
 For an Internet-facing site, I can't think of any scenario where we wouldn't want to allow anonymous access to at least some part of the site (even for an extranet site, at a minimum, we would probably want to support a custom login page as well as some generic content, such as terms and conditions for using the site).
 
 For the Fabrikam site, most of the content will be available to anonymous users. Therefore, we use a script to avoid having to repeatedly configure anonymous access through **Site Actions **-&gt; **Site Permissions** (a.k.a. /\_layouts/user.aspx). By "repeatedly" I am referring to performing this configuration change in each environment (DEV, TEST, and PROD) or whenever a developer decides to rebuild the Web application in his or her local SharePoint environment.
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -252,8 +239,6 @@ function Main()
 Main
 ```
 
-
-
 ### Configure Object Cache User Accounts.ps1
 
 If you haven't yet discovered errors in the event log after creating Publishing sites in SharePoint Server 2010, then you probably don't even bother to look at your event logs. In that case, shame on you ;-)
@@ -263,12 +248,9 @@ If you *have* seen the errors I'm referring to, then you're probably familiar wi
 <cite>Configure object cache user accounts</cite>
 [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)
 
-
 Here's a script to get rid of those pesky errors. It assumes the Portal Super User is **{DOMAIN}\svc-sp-psu** (or perhaps some variant depending on environment, such as **{DOMAIN}\svc-sp-psu-dev**) and the Portal Super Reader is **{DOMAIN}\svc-sp-psr **(or, again, some variant of this).
 
 It takes care of adding the appropriate user policies on the Web application (**Full Control **to **{DOMAIN}\svc-sp-psu,** and **Full Read **to **{DOMAIN}\svc-sp-psr**), as well as setting the corresponding properties on the Web application -- as described in the above TechNet article. It also ensures the specified service accounts are indeed valid (via the `GetUserDisplayName` function).
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -419,21 +401,15 @@ function Main()
 Main
 ```
 
-
-
 ### Add Event Log Sources.ps1
 
 The Fabrikam solution includes a custom **SPLogger** class for writing trace messages and events. In order to write to the Windows event log with a custom source (e.g. "Fabrikam Demo Site"), you first need to create the event log source (assuming your solution is running with a least-privileged service account, and I certainly *hope*it is). Otherwise, a nasty error will occur when attempting to log an event. [If you solution is running with administrative privileges, then the custom event log source will be dynamically created as necessary -- but please don't do this. It's just plain wrong.]
 
 The following script ensures the custom event source is registered.
 
-
 > **Important**
 > 
 > This script must be run on each SharePoint server in the farm.
-
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -471,8 +447,6 @@ function Main
 Main
 ```
 
-
-
 Although this script currently adds only one custom event log source, I named it plural just in case additional sources are added in the future (so I wouldn't have to update the script name in the Installation Guide for the Fabrikam site).
 
 At this point, we have a "vanilla" Web site created and configured in SharePoint Server 2010. Now we need to run the "ADA" portion of the "DR.DADA" process in order to *Add*our custom solution (Fabrikam.Demo.Web.wsp), *Deploy* the solution to the Fabrikam Web application, and, finally, *Activate*our features.
@@ -488,10 +462,7 @@ When I searched the Internet for ***PowerShell reload assembly ***(looking for a
 <cite>PowerShell Does Not Reload Upgraded Assemblies </cite>
 [http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies](http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies)
 
-
 I found Lauri's approach to be invaluable for isolating the AppDomain that loads your assemblies, as shown in the following script.
-
-
 
 ```
 param(
@@ -560,13 +531,9 @@ function Main()
 Main
 ```
 
-
-
-
 > **Update (2011-03-02)**
 > 
 > I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
-
 
 The optional `-Debug` parameter for this script makes it easy to debug the new PowerShell instance (without requiring you to temporarily specify `$DebugPreference = "Continue"` in your PowerShell profile).
 
@@ -577,8 +544,6 @@ Note how I allow the build configuration (Debug or Release) to be specified outs
 After adding the solutions to SharePoint, we next need to deploy them to the Web application. When a solution is deployed, SharePoint extracts the contents of the CAB file -- er, I mean WSP file -- including the assembly and any files deployed to the "14 hive", and copies these to the appropriate locations (such as the Global Assembly Cache or a folder under C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14).
 
 Note that in a SharePoint farm comprised of multiple servers, this deployment must be done on each server in the farm. No, you don't execute the PowerShell script on each SharePoint server in the farm. Rather, when you run the script on *one* of the servers in the farm, SharePoint automatically creates a timer job on *each* server in the farm to deploy the solution on that server.
-
-
 
 ```
 param(
@@ -672,8 +637,6 @@ function Main(
 Main $force
 ```
 
-
-
 Also note that the script supports an optional parameter to force the solution to be deployed -- in the (hopefully) rare event you need to use that.
 
 The most interesting part about **Deploy Solutions.ps1** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM or in the Development integration environment, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow [a standard naming convention for your environments](/blog/jjameson/2009/06/09/environment-naming-conventions).
@@ -683,8 +646,6 @@ If the solution is not deployed with the "`-Local`" option, then we need to wait
 ### Wait for Solution Deployment Jobs to Finish.ps1
 
 Here's a script that allows you to wait for either specific solution deployment jobs to finish (if one or more solution names are specified as parameters to the script) or to wait for *all* solution deployment jobs to finish (if no parameters are specified when running the script).
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -771,15 +732,11 @@ function Main()
 Main $args
 ```
 
-
-
 ### Activate Features.ps1
 
 With our custom WSP deployed, we are now ready to activate the features. This is easy enough to do using the `Enable-SPFeature` cmdlet, but the following script makes this a little more robust. For example, it first determines the scope of each activated feature and then checks to see if the feature is already activated at the corresponding scope. This avoids annoying errors like "The feature ... is already activated..." that terminate the script.
 
 Also note that, like **Deploy Solutions.ps1**, the following script supports an optional parameter to force the features to be activated.
-
-
 
 ```
 param(
@@ -900,8 +857,6 @@ function Main()
 Main
 ```
 
-
-
 At this point, the Fabrikam site is fully configured and ready for testing.
 
 Now, imagine that we've fixed some bugs or modified our custom SharePoint solution (for example, to add a custom master page, or some new page layouts). Consequently, we need to "DRD" the old solution and "ADA" the new version.
@@ -911,8 +866,6 @@ Let's start by deactivating the features...
 ### Deactivate Features.ps1
 
 If you've carefully examined the **Activate Features.ps1 **script, then there's really no point in scrutinizing the following script ;-)
-
-
 
 ```
 param(
@@ -1039,13 +992,9 @@ function Main(
 Main $force
 ```
 
-
-
 ### Retract Solutions.ps1
 
 After the features are deactivated, we are ready to retract the solution from the Web application. Like the **Deploy Solutions.ps1 **script, I try to avoid SharePoint timer jobs -- if possible -- so that developers can be as productive as possible.
-
-
 
 ```
 param(
@@ -1151,13 +1100,9 @@ function Main()
 Main
 ```
 
-
-
 ### Delete Solutions.ps1
 
 Lastly, it's time to delete the old solution from the SharePoint farm...
-
-
 
 ```
 # When a solution is deleted from SharePoint, the corresponding assembly is
@@ -1197,15 +1142,11 @@ function Main()
 Main
 ```
 
-
-
 At this point, we are ready to "ADA" the updated Fabrikam.Demo.Web.wsp solution.
 
 ### Redeploy Features.ps1
 
 If, like me, you get tired of cycling through the command history (F7) to repeatedly execute the "DR.DADA" process, then you can use the following script to save a few dozen keystrokes.
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -1228,21 +1169,16 @@ function Main()
 Main
 ```
 
-
-
 This script essentially performs the same activities as the **Default **deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you'll find that I changed the **Activate On Default **property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
 
 <cite>SharePoint Features Activated by Default</cite>
 [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default)
-
 
 Consequently, I used the **Redeploy Features.ps1 **script to ensure the WebAppConfiguration feature is activated (thus ensuring my custom Sign In page for claims authentication was configured on the Web application).
 
 ### Upgrade Solutions.ps1
 
 While the "DR.DADA" process doesn't typically take very long, there are a limited number of changes that can be made to a SharePoint solution in which a simple "Upgrade Solution" will suffice. Here's a script that performs the equivalent of the old <samp>stsadm.exe -o upgradesolution</samp> command.
-
-
 
 ```
 param(
@@ -1352,19 +1288,13 @@ function Main(
 Main $force
 ```
 
-
-
-
 > **Update (2011-03-02)**
 > 
 > I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
 
-
 ### Delete Web Application.ps1
 
 On my local development VM, I often find it helpful to "nuke" the Fabrikam Web application and start over from scratch. To achieve this, I "DRD" the Fabrikam solution/features and then run the following script and start over with the **Create Web Application.ps1** script.
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -1388,8 +1318,6 @@ function Main()
 Main
 ```
 
-
-
 In fact, on several occasions I've found it to be *very* helpful to rollback my SharePoint 2010 Hyper-V VM to a snapshot that I took shortly after installing SharePoint Server 2010 and creating the farm (but before creating any Web applications or configuring any service applications). Whenever I do that, I simply need to force a "Get Latest" from TFS (since my TFS workspace isn't aware that I've rolled back my VHD to an earlier point in time), compile and package the solution, and then run the scripts described above in the following order:
 
 & '.\Create Web Application.ps1'
@@ -1402,7 +1330,6 @@ In fact, on several occasions I've found it to be *very* helpful to rollback my 
 & '.\Activate Features.ps1'
 
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm able to rebuild my development environment in a matter of minutes.
-
 
 > **Warning**
 > 

@@ -12,11 +12,9 @@ tags: [""]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 By now you've undoubtedly noticed that the MSDN blogs have been cut over to the upgraded system. Things are obviously a little unstable right now, but hopefully over the next several hours, things will calm down and we'll get back to normal.
 

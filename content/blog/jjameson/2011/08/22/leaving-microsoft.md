@@ -12,13 +12,9 @@ tags: ["Personal"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/08/22/leaving-microsoft.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/08/22/leaving-microsoft.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 Last Thursday, I informed my manager that I have decided to leave Microsoft to pursue         other opportunities.
 
@@ -45,7 +41,6 @@ I've got a lot to do over the next couple of weeks before my last day -- such as
 I started researching alternative blog services this past weekend, and I'll be sure         to update this blog once I know the new location for "Random Musings of Jeremy Jameson."
 
 Until then, you can always reach me via my LinkedIn profile:
-
 
 > [http://www.linkedin.com/in/jeremyjameson](http://www.linkedin.com/in/jeremyjameson)
 

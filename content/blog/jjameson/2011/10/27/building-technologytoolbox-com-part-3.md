@@ -25,7 +25,6 @@ One of the first things I needed to do for the new TechnologyToolbox.com site  w
 
 Using Expression Web, I created a site under the TFS workspace for the Caelum  project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders  and files corresponding to the basic structure of the website.
 
-
 <caption>Sample HTML content for the Caelum prototype</caption>| File | Description |
 | --- | --- |
 | Default.master | Default master page for the site |
@@ -35,13 +34,9 @@ Using Expression Web, I created a site under the TFS workspace for the Caelum  p
 | blog\jjameson\archive\2011\08\22\leaving-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\last-day-with-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\new-blog-location.aspx | Sample post |
-
-
 ### Default.master
 
 Here is the current content of the default master page for the static HTML prototype:
-
-
 
 ```
 <%@ Master Language="C#" %>
@@ -110,31 +105,25 @@ Here is the current content of the default master page for the static HTML proto
 </html>
 ```
 
-
-
-
 > **Note**
 > 
-> 
-> 	Rather than trying to understand all of the discrete HTML elements shown 
-> 	in this post, focus instead on the high-level structure of the various pages 
-> 	and how they fit together. I'll discuss the semantic HTML used for the Technology 
-> 	Toolbox pages in more detail in subsequent posts.
-
+> Rather than trying to understand all of the discrete HTML elements shown
+> in this post, focus instead on the high-level structure of the various pages
+> and how they fit together. I'll discuss the semantic HTML used for the Technology
+> Toolbox pages in more detail in subsequent posts.
 
 Figure 1 shows the corresponding Design view of the master page in Expression  Web (after adding the CSS rules to define the site fonts, colors, etc.).
 
 ![Caelum prototype - Default.master](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Default.master.png)
-	Figure 1: Caelum prototype - Default.master
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Default.master.png) 
+    Figure 1: Caelum prototype - Default.master
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Default.master.png)
 
 ### Default.aspx
 
-The site home page references Default.master and specifies its content using  the **MainContent **placeholder as well as the additional CSS and JavaScript  files needed to support the "slideshow" content (via the **AdditionalHeadContent**placeholder):
-
-
+The site home page references Default.master and specifies its content using  the **MainContent **placeholder as well as the additional CSS and JavaScript  files needed to support the "slideshow" content (via the **AdditionalHeadContent
+**placeholder):
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="~/Default.master" %>
@@ -326,24 +315,21 @@ The site home page references Default.master and specifies its content using  th
 </asp:Content>
 ```
 
-
-
-The following screenshot shows the home page rendered in a browser. [This screenshot  is actually from the live site -- not the static HTML prototype. However, the only  difference with the prototype version is the first item under the **Most Recent 
+The following screenshot shows the home page rendered in a browser. [This screenshot  is actually from the live site -- not the static HTML prototype. However, the only  difference with the prototype version is the first item under the **Most Recent
 Posts **section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
-	Figure 2: Technology Toolbox home page
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png) 
+    Figure 2: Technology Toolbox home page
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
 ### BlogPost.master
 
-When viewing an individual blog post, a different master page is used in order  to render common elements such as the sidebar content (e.g. **Recent Posts**and **Tags**) as well as the comment form.
+When viewing an individual blog post, a different master page is used in order  to render common elements such as the sidebar content (e.g. **Recent Posts
+**and **Tags**) as well as the comment form.
 
 BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent**) that is subsequently used to specify the content of  a specific blog post.
-
-
 
 ```
 <%@ Master Language="C#" MasterPageFile="~/Default.master"%>
@@ -642,22 +628,15 @@ BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent
 </asp:Content>
 ```
 
-
-
-
 > **Note**
 > 
-> 
-> 	Observe how the prototype uses nested master pages in order to render the 
-> 	common masthead, global navigation, and footer content from Default.master 
-> 	in addition to the content specified in BlogPost.master.
-
+> Observe how the prototype uses nested master pages in order to render the
+> common masthead, global navigation, and footer content from Default.master
+> in addition to the content specified in BlogPost.master.
 
 ### Sample blog post - new-blog-location.aspx
 
 Here is a sample blog page from the Caelum prototype (referencing BlogPost.master  and specifying the content of the post in the **PostContent **placeholder):
-
-
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="../../../../BlogPost.master" %>
@@ -725,21 +704,20 @@ Here is a sample blog page from the Caelum prototype (referencing BlogPost.maste
 </asp:Content>
 ```
 
-
-
 Figure 3 shows roughly what the corresponding page looks like when rendered in  a browser. [This screenshot is actually from the live site, but the prototype page  looks very similar and thus I didn't bother creating a separate screenshot for it.]
 
 ![Sample blog post](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png)
-	Figure 3: Sample blog post
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png) 
+    Figure 3: Sample blog post
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
 
 ### Advantages of using a static HTML prototype
 
 The primary benefit of creating a static HTML prototype is the ability to rapidly  throw together some sample HTML content and subsequently create the corresponding  CSS rules to style the pages. While you can certainly achieve the same result using  Visual Studio and your actual SharePoint or ASP.NET Web project, it is typically  much faster to do this using static HTML.
 
-Similarly, when the time comes to develop some JavaScript for the site, it is  often easier to work against a static HTML file rather than an actual page rendered  in the context of the Web application. You can see some examples of this in the  code shown above (e.g. the jQuery used to collapse the lists in the **Archives**section of the blog pages).
+Similarly, when the time comes to develop some JavaScript for the site, it is  often easier to work against a static HTML file rather than an actual page rendered  in the context of the Web application. You can see some examples of this in the  code shown above (e.g. the jQuery used to collapse the lists in the **Archives
+**section of the blog pages).
 
 ### Disadvantages of using a static HTML prototype
 

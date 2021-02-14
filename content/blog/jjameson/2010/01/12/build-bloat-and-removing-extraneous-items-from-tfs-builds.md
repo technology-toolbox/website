@@ -11,11 +11,9 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 This week I am wrapping up the third sprint (a.k.a. *iteration*or *milestone*) on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although, honestly, I wasn't involved all that much in Sprint-3, since I was on vacation for the vast majority of the iteration.
 
@@ -26,7 +24,6 @@ Here's a summary of the various builds for the iterations so far:
 - Sprint-1: 13.4 MB uncompressed (3.2 MB compressed)
 - Sprint-2: 79 MB uncompressed (18 MB compressed)
 - Sprint-3: 127 MB uncompressed (48 MB compressed)
-
 
 As you can see, while the size of the Sprint-1 build was rather paltry, the Sprint-3 build was almost 10 times larger (uncompressed). The compressed version is nearly 16 times larger.
 
@@ -53,8 +50,6 @@ Note that the build bloat is exacerbated by compiling both Debug and Release bui
 When I started investigating the build bloat issue, I quickly discovered that there were actually five copies each of AjaxControlToolkit.dll and Telerik.Web.UI.dll.
 
 To resolve the build bloat issue, I modified our TFSBuild.proj file to override the `BeforeDropBuild` target:
-
-
 
 ```
 <Target Name="BeforeDropBuild">
@@ -83,8 +78,6 @@ To resolve the build bloat issue, I modified our TFSBuild.proj file to override 
   </Target>
 ```
 
-
-
 Note that by default, any Web projects in your solution are automatically copied to the \_PublishedWebsites folder (so that you can do an XCOPY deployment of the Web sites, if you wish). However, since this solution is based on SharePoint, we obviously are not deploying the Web site in that way. Consequently, I chose to remove those folders completely.
 
 Next, I recursively delete any extraneous assemblies (either because they are included in a WSP or because we would never install them from the build).
@@ -92,7 +85,6 @@ Next, I recursively delete any extraneous assemblies (either because they are in
 After overriding the `BeforeDropBuild` target, the Sprint-3 build is now 28 MB uncompressed (17 MB compressed) -- compared to 127 MB uncompressed (48 MB compressed) before.
 
 Buh-bye, build bloat!
-
 
 > **Update (2011-03-14)**
 > 

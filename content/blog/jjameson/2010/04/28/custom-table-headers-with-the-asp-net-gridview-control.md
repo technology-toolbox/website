@@ -23,32 +23,25 @@ tags: ["Web Development"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years), I showed an example KPI dashboard for a Web application with  a table similar to the following:
-
 
 <caption>Key Performance Indicators (Detail)</caption>| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94%	![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94%
+	![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
-
 I also hinted that it took a little more work than I expected to render the custom  header for the table (i.e. the **Thresholds** label that spans the  last three columns). Note that I originally mocked up the KPI feature using a static  HTML prototype, so I knew what I wanted the underlying HTML markup to look like.  However, the trick was to generate the desired HTML using an ASP.NET control.
 
 I had originally planned on using the Telerik RadGrid control to render the KPI  detail table (since we are using it in a variety of other features on the site).  However, as I mentioned in my earlier post, I eventually gave up trying to customize  the table header on the RadGrid and instead replaced it with the out-of-the-box  GridView control in ASP.NET. [While I did find [one approach for rendering a RadGrid control with two header rows](http://www.telerik.com/community/forums/aspnet-ajax/grid/radgrid-custom-header-with-tow-rows.aspx), I also discovered  issues with that approach when using auto-generated columns.]
@@ -58,8 +51,10 @@ Note that the number of columns displayed in the KPI detail table may vary. In  
 To make the presentation layer as flexible as possible, I chose to auto-generate  the columns and rely on a couple of assumptions when rendering the table:
 
 - The first column will always contain the site names.
-- The last three columns will always contain the KPI thresholds from the most recent period. (Note that the business may decide to modify the KPI thresholds over time, but we'll always display the most recent KPI thresholds in the detail table.)
-
+- The last three columns will always contain the KPI thresholds from the most
+  recent period. (Note that the business may decide to modify the KPI thresholds
+  over time, but we'll always display the most recent KPI thresholds in the detail
+  table.)
 
 Consequently, we'll assume the underlying data source -- in this case, a simple  DataTable -- that is bound to the grid control specifies the exact columns that  we want to show in the table, and therefore we can defer to the grid control to  auto-generate the necessary columns. In the example above, the DataTable contains  the following columns:
 
@@ -71,27 +66,21 @@ Consequently, we'll assume the underlying data source -- in this case, a simple 
 - Threshold - Meets
 - Threshold - Does Not Meet
 
-
 As I usually do when building a feature, let's start with a basic implementation  and then iterate the code until we've completed the scenario.
-
 
 > **Tip**
 > 
-> 
-> 	The KPI dashboard is actually displayed in a customer portal based on Microsoft 
-> 	Office SharePoint Server (MOSS) 2007. However, my recommendation when creating 
-> 	a feature like this for a SharePoint application, is to first get it working 
-> 	in a simple ASP.NET application (using sample data), and, once it is working 
-> 	to your satisfaction, get it to render on a SharePoint site (using real 
-> 	data). If you try to do all of the development exclusively through your 
-> 	SharePoint Web application, you'll spend far more time iterating the development 
-> 	(for example, deploying updated files, GAC'ing assemblies, or recycling 
-> 	your app pool).
-
+> The KPI dashboard is actually displayed in a customer portal based on Microsoft
+> Office SharePoint Server (MOSS) 2007. However, my recommendation when creating
+> a feature like this for a SharePoint application, is to first get it working
+> in a simple ASP.NET application (using sample data), and, once it is working
+> to your satisfaction, get it to render on a SharePoint site (using real
+> data). If you try to do all of the development exclusively through your
+> SharePoint Web application, you'll spend far more time iterating the development
+> (for example, deploying updated files, GAC'ing assemblies, or recycling
+> your app pool).
 
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that encapsulates  the presentation layer for the KPI scorecard:
-
-
 
 ```
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KpiScorecard.ascx.cs"
@@ -104,11 +93,7 @@ So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that encap
 </div>
 ```
 
-
-
 In the corresponding code-behind file, we'll create some sample data (which will  eventually be retrieved from a services layer) and bind it to the GridView control:
-
-
 
 ```
 using System;
@@ -208,18 +193,19 @@ namespace Fabrikam.Demo.Web.UI.Tables
 }
 ```
 
-
-
 A couple of important points about the implementation:
 
-- Assume the actual work required to get the scorecard detail table is substantial (e.g. the real data will be retrieved from an external Web service or database). Consequently, in the `Page_Load` event handler, we check if it is the not the initial page request (i.e. `this.Page.IsPostBack == true`), in which case we rely on the GridView to restore its content from view state.
-- A simple LinkButton allows us to test the scenario where some control on the page causes a post back to the server.
-
+- Assume the actual work required to get the scorecard detail table is substantial
+  (e.g. the real data will be retrieved from an external Web service or database).
+  Consequently, in the `Page_Load` event handler, we check if it is
+  the not the initial page request (i.e. `this.Page.IsPostBack  == true`), in which case we rely on
+  the GridView to restore its content from view state.
+- A simple LinkButton allows us to test the scenario where some control on
+  the page causes a post back to the server.
 
 It turns out that rendering the GridView from view state is actually what makes  adding a custom header row interesting enough for a blog post. I'll explain why  in a moment.
 
 Running the Web application at this point renders a simple table similar to the  following:
-
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Threshold - Exceeds | Threshold - Meets | Threshold - Does Not Meet |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -228,10 +214,7 @@ Running the Web application at this point renders a simple table similar to the 
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-
 Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)** event:
-
-
 
 ```
 protected void ScorecardDetailView_RowCreated(
@@ -260,20 +243,14 @@ protected void ScorecardDetailView_RowCreated(
         }
 ```
 
-
-
-
 > **Note**
 > 
-> 
-> 	As I mentioned before, the KPI dashboard is actually displayed in a customer 
-> 	portal based on MOSS 2007. Consequently, I chose to reuse the KPI images 
-> 	that come out-of-the-box with MOSS 2007 (in case you were wondering why 
-> 	the image path refers to **\_layouts**).
-
+> As I mentioned before, the KPI dashboard is actually displayed in a customer
+> portal based on MOSS 2007. Consequently, I chose to reuse the KPI images
+> that come out-of-the-box with MOSS 2007 (in case you were wondering why
+> the image path refers to **\_layouts**).
 
 Running the Web application at this point shows the images in place of the lengthy  column headings, similar to the following:
-
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -282,10 +259,7 @@ Running the Web application at this point shows the images in place of the lengt
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-
 Now let's add a method to insert another row into the table rendered by the GridView  control:
-
-
 
 ```
 private static void AddThresholdsHeaderRow(
@@ -336,11 +310,7 @@ private static void AddThresholdsHeaderRow(
         }
 ```
 
-
-
 Of course, we obviously need to call this method, so let's modify the **UpdateScorecardDetailView **method to add the thresholds header row after  binding the GridView control:
-
-
 
 ```
 private void UpdateScorecardDetailView()
@@ -355,10 +325,7 @@ private void UpdateScorecardDetailView()
         }
 ```
 
-
-
 Running the Web application at this point shows the **Thresholds**  header above the corresponding columns, similar to the following:
-
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
@@ -369,10 +336,7 @@ Running the Web application at this point shows the **Thresholds**  header above
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-
 Looking at the HTML source, we can see the extra table row has been inserted,  and the `rowspan` and `colspan` attributes are being rendered  as expected.
-
-
 
 ```
 <table style="border-collapse: collapse"
@@ -412,14 +376,11 @@ Looking at the HTML source, we can see the extra table row has been inserted,  a
     </table>
 ```
 
-
-
 At this point, it seems like we are done, right? At least in regards to adding  a row to the table header (we obviously still need to specify CSS classes on various  table elements in order to achieve the desired styling -- however, that wasn't the  intent of this post).
 
 The problem is that there a couple of bugs in the implementation.
 
 What happens when a post back occurs on the page? Recall that I originally added  a LinkButton to test this very scenario. If you click the button (to cause a post  back), the GridView renders itself from view state, similar to the following:
-
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -428,12 +389,10 @@ What happens when a post back occurs on the page? Recall that I originally added
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-
 Notice that we no longer see the **Thresholds** header in the table.  This is because the **UpdateScorecardDetailView **method is not called  on post back, and the custom header row that we inserted before is not serialized  in view state. [The table also appears to be "corrupted" -- meaning some extraneous  cells appear on the right side of the table.]
 
-My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow**method in the PreRenderComplete phase of the page instead of from the **UpdateScorecardDetailView **method (to force the header row to be  added regardless of whether we are binding the GridView to a data source or rendering  it from view state):
-
-
+My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow
+**method in the PreRenderComplete phase of the page instead of from the **UpdateScorecardDetailView **method (to force the header row to be  added regardless of whether we are binding the GridView to a data source or rendering  it from view state):
 
 ```
 protected void Page_Load(
@@ -459,8 +418,6 @@ protected void Page_Load(
         }
 ```
 
-
-
 Upon first inspection, this appeared to work because the **Thresholds**  header is added on the initial page request, as well as upon post back. However,  there's still a problem...
 
 Take another look at the table above. What happened to the row containing the  details for the **Denver **site?
@@ -469,9 +426,8 @@ It turns out that adding a custom header row to a GridView (using the approach  
 
 To resolve this bug, we need to find a way to avoid corrupting the view state  of the GridView control, while still adding a custom header row.
 
-It turns out this is really easy. Instead of adding the header row during the  PreRenderComplete phase of the page, let's instead call the **AddThresholdsHeaderRow**method in the SaveStateComplete** **phase:
-
-
+It turns out this is really easy. Instead of adding the header row during the  PreRenderComplete phase of the page, let's instead call the **AddThresholdsHeaderRow
+**method in the SaveStateComplete** **phase:
 
 ```
 protected void Page_Load(
@@ -497,21 +453,15 @@ protected void Page_Load(
         }
 ```
 
-
-
 Here's the short summary from MSDN for the [Page.SaveStateComplete](http://msdn.microsoft.com/en-us/library/system.web.ui.page.savestatecomplete.aspx) event:
 
-
-> Occurs after the page has completed saving all view state and control state 
+> Occurs after the page has completed saving all view state and control state
 > information for the page and controls on the page.
-
 
 With this change, the KPI detail table renders as expected (with the custom **Thresholds** header row and all of the expected data) even when the  GridView is rendered from view state.
 
-
 > **Update (2011-04-21)**
 > 
-> 
-> 	I've attached a sample Visual Studio solution to make it easier to see this 
-> 	concept in action.
+> I've attached a sample Visual Studio solution to make it easier to see this
+> concept in action.
 

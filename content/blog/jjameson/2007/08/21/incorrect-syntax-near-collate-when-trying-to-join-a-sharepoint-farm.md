@@ -11,33 +11,25 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 I encountered another nasty bug this morning while rebuilding our Microsoft Office         SharePoint Server (MOSS) 2007 Development environment (DEV). Since the time I originally         created DEV, I installed SQL Server SP2 and also restored several legacy databases         to support the development of the next version ("v2") of our solution.
 
 After running the SharePoint Products and Technologies Configuration Wizard on the         SSP server to create the farm, I ran the wizard on the first front-end Web server         in order to join it to the new farm. On the second step of the configuration wizard,         I left the default option selected (**Yes, I want to connect to an existing server
-            farm**) and then clicked **Next**. On the **Specify Configuration
-                Database Settings **step, I typed the name of the SQL Server and         then clicked **Retrieve Database Names**.
+farm**) and then clicked **Next**. On the **Specify Configuration
+Database Settings **step, I typed the name of the SQL Server and         then clicked **Retrieve Database Names**.
 
 At this point, I was presented with the oh-so-lovely "Unhandled exception" dialog         displayed by the .NET Framework when something very bad happens.
 
 **Error message:**
 
-
 > Unhandled exception has occurred in your application. If you click Continue, the             application will ignore this error and attempt to continue. If you click Quit, the             application will close immediately.
 > 
 > Incorrect syntax near 'COLLATE'. You may need to set the compatibility level of             the current database to a higher value to enable this feature. See help for the             stored procedure sp\_dbcmptlevel.
 
-
 **Details:**
-
-
 
 ```
 See the end of this message for details on invoking just-in-time (JIT) debugging instead of this dialog box.
@@ -66,8 +58,6 @@ at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
 at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
 at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 ```
-
-
 
 I performed a quick search on our internal KB (which includes support incidents)         and discovered that there is a known issue when the SQL Server has a database where         the compatibility is set to 70. As I mentioned at the beginning of this post, I         had recently restored some legacy databases in order to support the migration from         the legacy systems to the new MOSS-based solution.
 

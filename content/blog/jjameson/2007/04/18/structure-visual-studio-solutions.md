@@ -12,13 +12,9 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 Over the years, I have refined how I create Visual Studio projects based on lessons         learned and new capabilities provided with each subsequent release of Visual Studio.
 
@@ -39,43 +35,41 @@ So, the whole point of initially putting the solution in the **Main **         f
 So, if you know your way around Visual Studio even just a little, you should be         able to quickly create the following shell structure:
 
 ![Solution Explorer view of Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Solution-Explorer-Step-1.JPG "Solution Explorer view of Visual Studio solution")
-            Figure 1: Solution Explorer view of Visual Studio solution
-
+Figure 1: Solution Explorer view of Visual Studio solution
 
 In Windows Explorer, the corresponding folder structure looks like this:
 
 ![Windows Explorer view of Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Windows-Explorer-Step-1.JPG "Windows Explorer view of Visual Studio solution")
-            Figure 2: Windows Explorer view of Visual Studio solution
+Figure 2: Windows Explorer view of Visual Studio solution
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Windows-Explorer-Step-1.JPG)
-
 
 A few notes...
 
 1. I like to use solution folders to "partition" the solution into manageable chunks.
-            I'm a huge fan of the "single/master" solution approach. However as the solution
-            grows larger I need way to quickly unload the majority of the projects so that we
-            can quickly build and debug just the specific features I happen to be working on
-            at the particular moment. I've worked on several projects where customers already
-            had multiple solution files in place, and the effort required to compile the entire
-            code base goes up dramatically compared to using a single solution. There are valid
-            reasons for creating multiple solutions, the most obvious being enterprise level
-            frameworks and utilities that are shared across multiple projects. As long as these
-            are fairly "baked" and seldomly change, then building (and referencing) them separately
-            (i.e.using *file* references instead of *project* references) is not an
-            issue.
+   I'm a huge fan of the "single/master" solution approach. However as the solution
+   grows larger I need way to quickly unload the majority of the projects so that we
+   can quickly build and debug just the specific features I happen to be working on
+   at the particular moment. I've worked on several projects where customers already
+   had multiple solution files in place, and the effort required to compile the entire
+   code base goes up dramatically compared to using a single solution. There are valid
+   reasons for creating multiple solutions, the most obvious being enterprise level
+   frameworks and utilities that are shared across multiple projects. As long as these
+   are fairly "baked" and seldomly change, then building (and referencing) them separately
+   (i.e.using *file* references instead of *project* references) is not an
+   issue.
 2. You typically have a set of classes that contain low-level "helper" methods used
-            by many of the other projects in your solution. The **CoreServices **
-            project gives you a place to put these. The important thing about CoreServices is
-            that is does not reference any other projects within that solution. [I didn't make
-            up the name "CoreServices" -- if memory serves, I "stole" this from Jim Newkirk
-            after browsing through the source code for NUnit a few years ago.]
+   by many of the other projects in your solution. The **CoreServices **
+   project gives you a place to put these. The important thing about CoreServices is
+   that is does not reference any other projects within that solution. [I didn't make
+   up the name "CoreServices" -- if memory serves, I "stole" this from Jim Newkirk
+   after browsing through the source code for NUnit a few years ago.]
 3. The **CoreServices.DeveloperTests **project contains all of the unit
-            tests (created by the Development team) for the **CoreServices **project.
-            While we could certainly choose to leave the project in the default **CoreServices.DeveloperTests
-            **folder created by Visual Studio (i.e. C:\NotBackedUp\Microsoft\Samples\Main\CoreServices.DeveloperTests),
-            it only takes about 30 seconds to remove the project, rename the folder from **                CoreServices.DeveloperTests **to just **DeveloperTests**
-            and then add the file again. The short reason is that I really hate to see "dots"
-            in folder names, because where do we draw the line? If you don't do this, then pretty
-            soon you start seeing 30 project folders within a single folder.
+   tests (created by the Development team) for the **CoreServices **project.
+   While we could certainly choose to leave the project in the default **CoreServices.DeveloperTests
+   **folder created by Visual Studio (i.e. C:\NotBackedUp\Microsoft\Samples\Main\CoreServices.DeveloperTests),
+   it only takes about 30 seconds to remove the project, rename the folder from **                CoreServices.DeveloperTests **to just **DeveloperTests**
+   and then add the file again. The short reason is that I really hate to see "dots"
+   in folder names, because where do we draw the line? If you don't do this, then pretty
+   soon you start seeing 30 project folders within a single folder.
 

@@ -11,11 +11,9 @@ tags: ["SharePoint 2010", "PowerShell"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In [my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010), I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell scripts that I currently use when working with SharePoint 2010. Here's another one that I deliberately excluded from the previous post.
 
@@ -30,8 +28,6 @@ So, rather than having Central Administration create a StateService\_{GUID} data
 Here's a simple script to do just that.
 
 ### Configure State Service.ps1
-
-
 
 ```
 $ErrorActionPreference = "Stop"
@@ -84,8 +80,6 @@ function Main()
 
 Main
 ```
-
-
 
 Obviously the real work here is performed by the actual SharePoint cmdlets, like `New-SPStateServiceDatabase` and `New-SPStateServiceApplication`, and while you could certainly type those PowerShell commands each time you need to configure the State Service, I find this script much more convenient.
 

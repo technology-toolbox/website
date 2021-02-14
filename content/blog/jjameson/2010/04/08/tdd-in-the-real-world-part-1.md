@@ -11,11 +11,9 @@ tags: ["Core Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Earlier today I presented a "Knowledge Transfer" session to a team of developers on my current project. If you've ever worked with consultants, you've probably experienced a "KT" session or something similar. In essence, it's just a meeting intended to cover one particular feature area of the solution and provide an opportunity for the "maintenance" team (i.e. people responsible for supporting and enhancing the solution going forward) to ask questions of the "development" team (i.e. the people who built the feature).
 
@@ -25,7 +23,7 @@ I'll be the first to admit that I wasn't exactly an early adopter of TDD (at lea
 
 I started using NUnit years ago, but sometime around 2005 I switched over to the Visual Studio tools (for obvious reasons). I recall an internal training session presented by Martin Fowler in which he explained the concept of writing the test first, ensuring it fails, and then writing the code to make the test pass.
 
-When I first started using NUnit, I kept thinking to myself: "This is great!...However, while it's really easy to do TDD when you are writing something simple like a Calculator service, it's often difficult to do it in the real world." Even after reading [Extreme Programming Adventures in C#](http://www.microsoft.com/learning/en/us/book.aspx?ID=6777&amp;locale=en-us) a few years ago -- which is a very good book, by the way -- I still find it difficult sometimes to use TDD when creating enterprise solutions with numerous external dependencies (backend databases, SharePoint, etc.).
+When I first started using NUnit, I kept thinking to myself: "This is great!...However, while it's really easy to do TDD when you are writing something simple like a Calculator service, it's often difficult to do it in the real world." Even after reading [Extreme Programming Adventures in C#](http://www.microsoft.com/learning/en/us/book.aspx?ID=6777&locale=en-us) a few years ago -- which is a very good book, by the way -- I still find it difficult sometimes to use TDD when creating enterprise solutions with numerous external dependencies (backend databases, SharePoint, etc.).
 
 It's been well over 5 years since I worked on a "pure" .NET solution; rather most of my time is spent working on solutions based on SharePoint, and much less frequently these days, BizTalk Server. I also get called in occasionally to do something spiffy with SQL Server and Analysis Services.
 

@@ -11,16 +11,12 @@ tags: ["My System", "Web Development", "TFS"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx)
-> 
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-
 In case you haven't picked it up from some of my previous posts, I became somewhat         of a "Web standards zealot" back in 2006 while creating a "community site" for a         [local organization of mental health professionals
-            and attorneys](http://www.metrodenveridc.org/) that help children and their parents through divorce. After         reading books like [The Zen of CSS Design](http://amzn.com/0321303474),         [Web Standards Solutions](http://amzn.com/1430219203), and [Bulletproof Web Design](http://amzn.com/0321509021), I realized the fundamental concept of [Web standards](http://en.wikipedia.org/wiki/Web_standards) design closely aligns with my preference of keeping things         as simple as possible. Last year, I got a copy of [Transcending CSS](http://amzn.com/0321410971) and I highly recommend this book as well for anyone responsible         for creating Web sites.
+and attorneys](http://www.metrodenveridc.org/) that help children and their parents through divorce. After         reading books like [The Zen of CSS Design](http://amzn.com/0321303474),         [Web Standards Solutions](http://amzn.com/1430219203), and [Bulletproof Web Design](http://amzn.com/0321509021), I realized the fundamental concept of [Web standards](http://en.wikipedia.org/wiki/Web_standards) design closely aligns with my preference of keeping things         as simple as possible. Last year, I got a copy of [Transcending CSS](http://amzn.com/0321410971) and I highly recommend this book as well for anyone responsible         for creating Web sites.
 
 Although it may strike people as somewhat odd, I've been using Microsoft Expression         Web for the last couple of years to manage the content for my MSDN blog. While the         underlying platform for MSDN blogs (i.e. Community Server) certainly provides rich         editing functionality, I personally prefer to have very tight control over the HTML         whenever I am creating content for the Web. There are also a few things that really         bother me about the editing functionality in Community Server (or at least the version         of Community Server that Microsoft is currently using).
 
@@ -28,15 +24,12 @@ Before finally choosing Expression Web, I looked at various other tools for auth
 
 My template simply contains a variety of markup that I commonly use when creating         blog posts, such as:
 
-
 ```
 <blockquote class="directQuote errorMessage">
     [Direct quote, error message]</blockquote>
 ```
 
-
 Whenever I need to create a new blog post, I simply copy my template (i.e. default.htm)         into the corresponding Archive\{year}\{month}\{day} folder, rename the file to something         like **sharepoint-2010-sneak-peek.aspx**, and then start replacing         the placeholder text with the corresponding content. Note that I have defined a         few custom CSS rules in Community Server to change the style of my blog content,         such as:
-
 
 ```
 .directQuote {
@@ -46,7 +39,6 @@ Whenever I need to create a new blog post, I simply copy my template (i.e. defau
     color: red;
 }
 ```
-
 
 I define these styles in a CSS file (i.e. Themes\MSDN\MSDN.css) that is referenced         by each page, thus giving me a WYSIWYG (What You See Is What You Get) experience         when authoring blog content. This is one of the biggest things lacking from the         editing functionality provided by Community Server, meaning that it doesn't apply         your custom CSS rules when previewing a blog post before publishing.
 
@@ -61,10 +53,9 @@ As part of this latest rebuild, I installed the latest version of the Microsoft 
 This morning, I finally found some time to move the "offline copy" of my MSDN content         from my Documents folder into Team Foundation Server. I simply needed to create         a new team project in TFS and then configure my workspace for source control. Once         this was done, the TFS integration features of Expression Web 3 simply just worked,         as shown below:
 
 ![Expression Web - my MSDN blog](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Expression%20Web%20-%20My%20MSDN%20Blog.png)
-            Figure 1: Expression Web - my MSDN blog
+Figure 1: Expression Web - my MSDN blog
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Expression%20Web%20-%20My%20MSDN%20Blog.png)
-
 
 Notice how items that are checked into source control have a lock icon and new items         that are pending have a "plus" icon next to them. In other words, the Folder List         in Expression Web (which essentially shows your Web site "solution") now behaves         a lot like the Solution Explorer window in Visual Studio (at least from the perspective         of source control).
 

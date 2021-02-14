@@ -10,18 +10,13 @@ tags: ["Personal"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 Ugh! I reserved my MSDN blog address in May of 2005 and almost two years later  I am sitting down to author my first blog post.
 
@@ -39,9 +34,7 @@ Command line programming quickly got old, so I soon started developing in X-Wind
 
 Whenever I am feeling nostalgic and thinking about the old days, I sometimes  do a search for:
 
-
 > **"Jeremy Jameson" widget**
-
 
 And browse through the results to see if there is any semblance of my legacy  in the deepest, darkest corners of the net.
 
@@ -51,9 +44,7 @@ Just a sec...
 
 Yep, the Motif FAQ is still out there, and somehow after all this time I still  manage to be in it:
 
-
 > [http://www.rahul.net/kenton/faqs/Motif-FAQ.html](http://www.rahul.net/kenton/faqs/Motif-FAQ.html)
-
 
 Writing Motif applications in low-level C++ code, can best be described as masochistic.  Fortunately I was able to convince my management to buy one of the really expensive  UI builders for X-Windows, namely db-UIM/X. That was certainly fun for a while.  I basically had the opportunity to develop a completely custom front-end for the  PDM system, which we affectionately called OLIVER (the Online Information Vault  for Engineering Records). Cute, huh?
 

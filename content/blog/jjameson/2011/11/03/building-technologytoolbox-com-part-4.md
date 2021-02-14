@@ -20,8 +20,6 @@ I like to think of the "Style Guide" as a form of TDD (Test Driven Development) 
 
 Here is the current content of the Style Guide for the static HTML prototype  for TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 
-
-
 ```
 <%@ Page language="C#" %>
 
@@ -457,27 +455,22 @@ Here is the current content of the Style Guide for the static HTML prototype  fo
 </asp:Content>
 ```
 
-
-
-
 > **Note**
 > 
-> 
-> 	The `color-swatch` CSS rules 
-> 	at the top of Style-Guide.aspx are not kept in the "main" cascading style 
-> 	sheet since these rules are applicable only to the Style Guide itself. Also 
-> 	note that the default master page (specified in the Web.config file) defines 
-> 	the `<link>` 
-> 	element that references the CSS file.
-
+> The `color-swatch` CSS rules
+> at the top of Style-Guide.aspx are not kept in the "main" cascading style
+> sheet since these rules are applicable only to the Style Guide itself. Also
+> note that the default master page (specified in the Web.config file) defines
+> the `<link>`
+> element that references the CSS file.
 
 Figure 1 shows the corresponding page rendered in the browser. [Note: This is  not intended to be an eye chart. Normally, I would trim images like this before  including them in a post, but in this case I wanted to be sure you could see the  page in its entirety (by clicking the **See full-sized image** link  below.)]
 
 ![Style Guide for TechnologyToolbox.com](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Style-Guide.png)
-	Figure 1: Style Guide for TechnologyToolbox.com
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Style-Guide.png) 
+    Figure 1: Style Guide for TechnologyToolbox.com
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Style-Guide.png)
 
 ### Color palette
 
@@ -488,16 +481,14 @@ I used to insert a "glossary" in the CSS (using comments) of the various hex  co
 Now I simply create a bunch of "color swatches" in the Style Guide that show  the various colors and provide descriptions for where the colors are used, as shown  below.
 
 ![Technology Toolbox color palette](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Color-Palette.png)
-	Figure 2: Technology Toolbox color palette
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Color-Palette.png) 
+    Figure 2: Technology Toolbox color palette
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Color-Palette.png)
 
 ### Sample style guide for SharePoint 2010
 
 Here is the HTML for a sample Style Guide that I developed for a SharePoint 2010  project earlier this year. I found this to be especially helpful in customizing  the appearance of the out-of-the-box styles users can specify in the SharePoint  Rich Text Editor (e.g. "Colored Heading 1") as well as the multitude of different  table formatting options (e.g. different odd/even rows).
-
-
 
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1755,8 +1746,6 @@ Here is the HTML for a sample Style Guide that I developed for a SharePoint 2010
 </body>
 </html>
 ```
-
-
 
 I typically use a "TestConsole" utility to programmatically create a Style Guide  page in a SharePoint site for development and testing purposes. This makes it very  easy to recreate the Style Guide page in new environments or after rebuilding a  SharePoint Web application in DEV and TEST.
 

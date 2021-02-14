@@ -11,11 +11,9 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've received a number of responses to my [series](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) on the problems we encountered with Microsoft Office SharePoint Server (MOSS) 2007 variations. Several people have inquired about how to disable variations without losing their content. It's actually quite simple: simply delete the variation labels. For example, if you follow my repro steps in [part 1](http://blogs.msdn.com/controlpanel/blogs/I'm%20not%20sure%20if%20adding%20labels%20corresponding%20to%20existing%20sites%20will%20be%20supported), you can subsequently delete the **ja-JP **and **en-US **variation labels, but the corresponding sites will not be deleted (i.e. you will still have **/en-US/foo **and **/ja-JP/foo **sites).
 

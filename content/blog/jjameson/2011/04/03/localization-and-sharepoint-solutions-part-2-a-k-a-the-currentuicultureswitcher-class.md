@@ -11,11 +11,9 @@ tags: ["My System", "MOSS 2007", "SharePoint 2010"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1), I mentioned how I've been involved in several SharePoint projects for large, multinational corporations including [Agilent Technologies](http://www.chem.agilent.com/) and [KPMG](http://www.kpmg.com). I also mentioned how one of the sprints last year for my current project was dedicated to creating a Spanish version of a "Client Portal" based on Microsoft Office SharePoint Server (MOSS) 2007.
 
@@ -38,8 +36,6 @@ However, what if, like me, you prefer to activate features via the command line 
 Consequently we need a way to temporarily change the CurrentUICulture -- but ensure that it gets properly reverted back to the original value regardless of whether everything works as expected or some error occurs.
 
 Enter the **CultureUICultureSwitcher** class...
-
-
 
 ```
 using System;
@@ -136,13 +132,9 @@ namespace Fabrikam.Demo.CoreServices
 }
 ```
 
-
-
 I wish I could have thought of a more creative name for this, but oh well. It seems to o convey the point of the class.
 
 Here's an example unit test that demonstrates how the class is expected to work:
-
-
 
 ```
 /// <summary>
@@ -173,11 +165,7 @@ Here's an example unit test that demonstrates how the class is expected to work:
         }
 ```
 
-
-
 Lastly, here's an excerpt from a custom "Announcements" feature that shows how the class is used to configure a localized SharePoint site:
-
-
 
 ```
 /// <summary>
@@ -219,8 +207,6 @@ Lastly, here's an excerpt from a custom "Announcements" feature that shows how t
                 parentWeb.Url);
         }
 ```
-
-
 
 I hope you find the **CurrentUICultureSwitcher **class to be useful when creating SharePoint solutions that need to support more than one language.
 

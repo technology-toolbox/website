@@ -12,11 +12,9 @@ tags: ["Personal"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I noticed this morning that the new color scheme released this past week on [MSDN](http://msdn.microsoft.com/) has made its way into our Community Server template (and thus onto my blog, since I'm currently using the default "skin").
 

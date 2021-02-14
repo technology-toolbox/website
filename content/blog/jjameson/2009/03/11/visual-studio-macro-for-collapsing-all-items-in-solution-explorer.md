@@ -12,22 +12,15 @@ tags: ["Core Development", "Visual Studio"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 Along with [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects), another  macro that I use just as much, if not more frequently, is my `CollapseAllItems()`  macro:
-
-
 
 ```
 Public Sub CollapseAllItems()
@@ -54,11 +47,7 @@ Public Sub CollapseAllItems()
 End Sub
 ```
 
-
-
 The `CollapseItem()` method is used to recursively collapse each item  in the hierarchy:
-
-
 
 ```
 Private Sub CollapseItem( _
@@ -83,18 +72,13 @@ Private Sub CollapseItem( _
 End Sub
 ```
 
-
-
-
 > **Update (2010-08-25)**
 > 
-> 
-> 	In my original post, the `If`block in **CollapseItem** was mistakenly nested inside 
-> 	the `For Each`loop. While 
-> 	this worked (I've been using it that way for years), it certainly wasn't 
-> 	optimal and, more importantly, it also was the source of some confusion 
-> 	(see Keith Robertson's comment on this post).
-
+> In my original post, the `If`block in **CollapseItem** was mistakenly nested inside
+> the `For Each`loop. While
+> this worked (I've been using it that way for years), it certainly wasn't
+> optimal and, more importantly, it also was the source of some confusion
+> (see Keith Robertson's comment on this post).
 
 While it is great that Visual Studio "synchronizes" the **Solution Explorer**  window to show the current file in the solution hierarchy, in large Visual Studio  solutions, things can get a bit bewildering at times if many of the projects are  expanded down to the level of individual files.
 

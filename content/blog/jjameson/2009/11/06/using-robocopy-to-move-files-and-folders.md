@@ -11,11 +11,9 @@ tags: ["My System", "Toolbox"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-robocopy-to-move-files-and-folders.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-robocopy-to-move-files-and-folders.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I use [Robocopy](http://technet.microsoft.com/en-us/library/cc733145%28WS.10%29.aspx) a lot, and it's been in my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) for so long that I hardly remember using anything else. I was glad to see that it is now included out-of-the-box (starting with Vista), because I typically use it instead of Windows Explorer to move or copy files, since I prefer the way it reports the progress of the lengthy file operations.
 

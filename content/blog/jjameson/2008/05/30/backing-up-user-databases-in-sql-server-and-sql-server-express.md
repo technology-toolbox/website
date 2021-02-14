@@ -13,20 +13,15 @@ tags: ["SQL Server", "WSUS", "
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 Since I appear to be on a roll with my blog this morning, I figured that I should         write one more post about SQL Server before I get back to my "day job."
 
 I typically use SQL Server Management Studio to configure and schedule database         backups, because the** Maintenance Plan Wizard** makes** **         it very quick and easy to click through a few screens and select the appropriate         options. However, on some of the servers running in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), I only have SQL Server Express         installed, not the full SQL Server product. For example, on my server that runs         Windows Server Update Services (WSUS), I use SQL Server Express as the "backend"         storage solution, because for this particular scenario, I want to keep the database         local instead of relying on a separate server. However, I still want to ensure that         I have periodic backups of the databases.
 
 In order to make this as painless as possible, I wrote the following script:
-
 
 ```
 USE [Tools]
@@ -111,27 +106,21 @@ WHILE @id IS NOT NULL BEGIN
 END
 ```
 
-
 Well, technically, it's a stored procedure, but nevertheless I still keep the script         to generate the sproc in my toolbox: **BackupUserDatabases.sql**. Notice         that I create the sproc in a separate database (I arbitrarily chose the name **            Tools**).
 
 I can then schedule full, differential, and transaction log backups using scheduled         tasks, as shown below.
 
 ![Scheduled tasks for backing up databases](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Scheduled%20Tasks%20-%20COLOSSUS.jpg)
-            Figure 1: Scheduled tasks for backing up databases
+Figure 1: Scheduled tasks for backing up databases
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Scheduled%20Tasks%20-%20COLOSSUS.jpg)
 
-
 Here is the command behind one of the scheduled tasks (you can easily deduce the         others):
-
-
 
 ```
 "C:\Program Files\Microsoft SQL Server\90\Tools\Binn\SQLCMD.EXE" -S .\SQLExpress -d Tools -Q
 "EXEC BackupUserDatabases @backupType='Full'"
 ```
-
-
 
 Lastly, note that I have a separate server periodically ROBOCOPY the backup files         off of this server to another location -- just in case the WSUS server happens to         catch on fire or some other act of God completely wipes out the local database backups         ;-)
 

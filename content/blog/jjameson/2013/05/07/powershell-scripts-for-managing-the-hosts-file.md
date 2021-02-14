@@ -8,30 +8,28 @@ tags: ["Infrastructure", "My System", "PowerShell", "SharePoint
 			2010", "Toolbox"]
 ---
 
-Around the same time I created my[PowerShell scripts for managing the MaxPatchCacheSize registry setting](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize), I also created a set of scripts to automate the process of managing hosts files.
+Around the same time I created my
+[PowerShell scripts for managing the MaxPatchCacheSize registry setting](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize),
+I also created a set of scripts to automate the process of managing hosts files.
 
-You may have noticed the Add-Hostnames.ps1 script in my[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
-
+You may have noticed the Add-Hostnames.ps1 script in my
+[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 > **Note**
 > 
-> 
-> 		In the Fabrikam Extranet solution, the "Create Web Application.ps1" 
-> 		script checks if the environment is configured to use
-> 		[http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) 
-> 		and, if it is, it then checks for name resolution for that hostname. 
-> 		If name resolution fails, the Add-Hostnames.ps1 script is used to map
-> 		**extranet-local.fabrikam.com** to the loopback address 
-> 		(127.0.0.1). That way, when people want to deploy the solution with 
-> 		as little effort as possible, they can simply run the "Rebuild Web Application.ps1" 
-> 		script and not have to worry about manually performing the steps in 
-> 		section 4.9 (DEV – Map Web application to loopback address in Hosts 
-> 		file).
-
+>       In the Fabrikam Extranet solution, the "Create Web Application.ps1" 
+>       script checks if the environment is configured to use
+>       [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) 
+>       and, if it is, it then checks for name resolution for that hostname. 
+>       If name resolution fails, the Add-Hostnames.ps1 script is used to map
+>       **extranet-local.fabrikam.com** to the loopback address 
+>       (127.0.0.1). That way, when people want to deploy the solution with 
+>       as little effort as possible, they can simply run the "Rebuild Web Application.ps1" 
+>       script and not have to worry about manually performing the steps in 
+>       section 4.9 (DEV – Map Web application to loopback address in Hosts 
+>       file).
 
 The following illustrates these scripts in action:
-
-
 
 ```
 PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-Hostnames.ps1 | sort Hostname
@@ -80,20 +78,13 @@ www-local.technologytoolbox.com                             127.0.0.1
 www-local.tugboatcoffee.com                                 127.0.0.1
 ```
 
-
-
-
 > **Note**
-> 
 > 
 > You can download these scripts from my Toolbox repository on GitHub:
 > 
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
-
 ### Get-Hostnames.ps1
-
-
 
 ```
 <#
@@ -234,11 +225,7 @@ process
 }
 ```
 
-
-
 ### Add-Hostnames.ps1
-
-
 
 ```
 <#
@@ -546,11 +533,7 @@ end
 }
 ```
 
-
-
 ### Remove-Hostnames.ps1
-
-
 
 ```
 <#

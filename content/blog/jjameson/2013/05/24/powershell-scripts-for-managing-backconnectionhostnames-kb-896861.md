@@ -8,32 +8,37 @@ tags: ["Infrastructure", "My System", "PowerShell", "SharePoint
 			2010", "Toolbox"]
 ---
 
-In[my previous post](/blog/jjameson/2013/05/08/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files. If you're a SharePoint developer, then you know that adding a hostname to the hosts file is only part of the process you need to complete whenever creating a new Web application in development environments.
+In
+[my previous post](/blog/jjameson/2013/05/08/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files.
+If you're a SharePoint developer, then you know that adding a hostname to the
+hosts file is only part of the process you need to complete whenever creating
+a new Web application in development environments.
 
-After reading my previous post, you may have immediately asked something like "What about the BackConnectionHostNames registry entry?" This, of course, assumes you don't use the "sledge hammer" approach listed in[KB 896861](http://support.microsoft.com/kb/896861) (a.k.a. "Method 2: Disable the loopback check (less-recommended method)").
+After reading my previous post, you may have immediately asked something
+like "What about the BackConnectionHostNames registry entry?" This, of course,
+assumes you don't use the "sledge hammer" approach listed in
+[KB 896861](http://support.microsoft.com/kb/896861) (a.k.a. "Method
+2: Disable the loopback check (less-recommended method)").
 
-Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
-
+Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script
+in my
+[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 > **Note**
 > 
+> In the Fabrikam Extranet solution, the "Create Web Application.ps1"
+> script checks if the environment is configured to use
+> [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com).
+> If it is, the Add-BackConnectionHostNames.ps1 script is used to add
+> <samp>extranet-local.fabrikam.com</samp> to the **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames**
+> registry key.
 > 
-> In the Fabrikam Extranet solution, the "Create Web Application.ps1" 
-> 		script checks if the environment is configured to use
-> 		[http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com). 
-> 		If it is, the Add-BackConnectionHostNames.ps1 script is used to add
-> 		<samp>extranet-local.fabrikam.com</samp> to the **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames** 
-> 		registry key.
-> 
-> That way, when people want to deploy the solution with as little 
-> 		effort as possible, they can simply run the "Rebuild Web Application.ps1" 
-> 		script and not have to worry about manually performing the steps in 
-> 		section 4.10 (Allow specific host names mapped to 127.0.0.1).
-
+> That way, when people want to deploy the solution with as little
+> effort as possible, they can simply run the "Rebuild Web Application.ps1"
+> script and not have to worry about manually performing the steps in
+> section 4.10 (Allow specific host names mapped to 127.0.0.1).
 
 The following illustrates these scripts in action:
-
-
 
 ```
 PS C:\...\Toolbox\PowerShell>.\Get-BackConnectionHostNames.ps1
@@ -50,29 +55,19 @@ eln-local.dow.com
 researchportal-local.dow.com
 ```
 
-
-
-
 > **Note**
-> 
 > 
 > You can download these scripts from my Toolbox repository on GitHub:
 > 
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
-
-
 > **Update (2013-06-04)**
 > 
-> 
-> 		I fixed a bug in the following scripts when more than one hostname is 
-> 		specified in the registry value. See my GitHub repository for details 
-> 		on the changes made to the original versions of the scripts.
-
+>       I fixed a bug in the following scripts when more than one hostname is 
+>       specified in the registry value. See my GitHub repository for details 
+>       on the changes made to the original versions of the scripts.
 
 ### Get-BackConnectionHostNames.ps1
-
-
 
 ```
 <#
@@ -114,11 +109,7 @@ If ($backConnectionHostNames -ne $null)
 }
 ```
 
-
-
 ### Add-BackConnectionHostNames.ps1
-
-
 
 ```
 <#
@@ -269,11 +260,7 @@ end
 }
 ```
 
-
-
 ### Remove-BackConnectionHostNames.ps1
-
-
 
 ```
 <#

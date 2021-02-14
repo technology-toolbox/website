@@ -13,13 +13,9 @@ tags: ["Personal"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/05/28/minor-setback.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/28/minor-setback.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 I haven't blogged in almost 8 weeks. Ouch.
 
@@ -32,10 +28,9 @@ It took two surgeries -- and a lot more metal than I'd prefer to have in my body
 In the first operation (performed the night of my accident), the surgeon attached         an "external fixator" to my shin, ankle, and foot in order to hold it all in place         for about a week in order for the swelling to go down.
 
 ![Broken tibia - external fixator](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Broken%20Tibia%20-%20External%20Fixators.jpg)
-            Figure 1: Broken tibia - external fixator
+Figure 1: Broken tibia - external fixator
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Broken%20Tibia%20-%20External%20Fixators.jpg)
-
 
 In the second operation, the surgeon removed the "external fixator" and implanted         an "internal fixator." Let's just say that you really don't want to be behind me         in the airport security screening line.
 

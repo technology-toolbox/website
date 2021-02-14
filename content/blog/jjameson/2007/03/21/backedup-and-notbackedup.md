@@ -9,24 +9,17 @@ tags: ["My System", "Toolbox"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 About four years ago, one of the partners that I was working on an engagement  with commented on how developers tend to have their own unique way of managing files,  but that mine was one of the most bizarre he had ever seen. It has been four years,  but I believe the statement [Ted](http://weblogs.asp.net/tgraham) made  was something along the lines of
 
-
 > "...and Jeremy puts all his files in only two folders"
-
 
 Well, truth be told, Ted was right -- and he would still be right if he repeated  the statement today.
 
@@ -35,19 +28,25 @@ On all of my various laptops, desktops, and servers, you will find that the only
 - BackedUp
 - NotBackedUp
 
-
 I tend to put files that I create -- or contribute to -- in the **BackedUp**  folder. Everything else I put in the **NotBackedUp** folder. Why, you  may ask, do I use this apparently over-simplistic system?
 
 I attribute the reasoning to several factors:
 
-1. I download a lot of stuff (i.e. gigabytes) , much of which I need to access frequently -- regardless of which particular computer I happen to be working on at any particular moment
-2. If I were to lose any of the files that I create -- or contribute to -- it could require several days (or actually several late nights) to recreate the material; some of the documents that I have created have several man-weeks invested in them -- I dread the mere thought of losing one of those
-3. Long before the user experience improvements in Windows Vista, I needed "instant access" to my frequently used files (in fact, I still need these shortcuts whenever I am logged into a computer or VM running Windows Server 2003)
-4. I typically "rebuild" my laptop once a year either to install a new OS (such as last November when Vista was released) or to clean out all the old garbage that, being a developer, I tend to install for one reason or another
-
+1. I download a lot of stuff (i.e. gigabytes) , much of which I need to access
+   frequently -- regardless of which particular computer I happen to be working
+   on at any particular moment
+2. If I were to lose any of the files that I create -- or contribute to --
+   it could require several days (or actually several late nights) to recreate
+   the material; some of the documents that I have created have several man-weeks
+   invested in them -- I dread the mere thought of losing one of those
+3. Long before the user experience improvements in Windows Vista, I needed
+   "instant access" to my frequently used files (in fact, I still need these shortcuts
+   whenever I am logged into a computer or VM running Windows Server 2003)
+4. I typically "rebuild" my laptop once a year either to install a new OS (such
+   as last November when Vista was released) or to clean out all the old garbage
+   that, being a developer, I tend to install for one reason or another
 
 Factor #1 is addressed by creating various folders under NotBackedUp and storing  the gigabytes of stuff that I have managed to download over the last 8 years in  various folders underneath:
-
 
 > \NotBackedUp\Builds
 > 
@@ -63,28 +62,21 @@ Factor #1 is addressed by creating various folders under NotBackedUp and storing
 > 
 > \NotBackedUp\VMs
 
-
 Factor #2 is addressed by redirecting the "My Documents" folder to
-
 
 > \BackedUp\jjameson\Documents
 
-
 ...and then setting up a simple batch file to copy everything in the BackedUp  folder to one of my home servers:
-
-
 
 ```
 robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
 ```
 
-
-
 Factor #3 is simply a matter of creating two shortcuts on my taskbar:
 
 ![Taskbar Shortcuts](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Taskbar-Shortcuts.jpg "Taskbar Shortcuts")
-	Figure 1 - Taskbar Shortcuts
 
+    Figure 1 - Taskbar Shortcuts
 
 Factor #4 (rebuilding my laptop) certainly isn't a quick ordeal (it typically  takes about 4 hours, by the time I install the OS, SQL Server, Visual Studio, copy  my gigabytes worth of downloads back from the server, etc.) but at least I don't  have to worry about accidentally losing any of my files. I just do a quick robocopy  of the BackedUp and NotBackedUp folders to one of my home servers, pop in the Windows  installation CD, and format my partition.
 

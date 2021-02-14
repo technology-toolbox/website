@@ -12,11 +12,9 @@ tags: ["My System", "PowerShell"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In a [previous post](/blog/jjameson/2009/10/09/formatting-code-for-my-blog), I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML).
 
@@ -27,12 +25,9 @@ Consequently I went looking for a secondary solution for formatting PowerShell s
 <cite>More PowerShell Syntax Highlighting</cite>
 [http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx](http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx)
 
-
 While Lee's script outputs nicely formatted script as HTML, I decided to modify his approach a little. It's not that there's really anything wrong with Lee's script. Rather, given the simplicity of parsing PowerShell scripts into various tokens, I decided that it would be preferable (and not to mention a great PowerShell exercise for me) to output semantic HTML that is subsequently formatted with CSS instead of via inline **style** attributes.
 
 Here is the updated script that I ended up with (I've also attached it to this post for easier downloading):
-
-
 
 ```
 ################################################################################
@@ -315,13 +310,9 @@ function Main
 . Main
 ```
 
-
-
 Now, all I have to do is run the Set-ClipboardScriptHtmlBlock script from within the Windows PowerShell ISE (with a different script window active) and the contents of the active script are copied to the clipboard. From there I can paste the clipboard contents into the source window of Expression Web (currently [my blog editor of choice](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server)).
 
 I then specify rules similar to the following in the custom CSS for my blog:
-
-
 
 ```
 code .attribute {
@@ -372,8 +363,6 @@ div.codeBlock pre {
    margin: 0;
 }
 ```
-
-
 
 Note that this CSS is also embedded in the generated HTML to support pasting into other applications (e.g. Microsoft Word). Also note that I generalized the class names for the CSS rules a little bit, just in case I later decide to generate semantic markup for other types of code (e.g. C#).
 

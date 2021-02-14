@@ -11,11 +11,9 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 A couple of weeks ago I was setting up Forms-Based Authentication (FBA) on my new development VM for Microsoft Office SharePoint Server (MOSS) 2007, and I spent a few hours troubleshooting why I couldn't add a custom role ("Authenticated Users") to a SharePoint site.
 
@@ -25,7 +23,6 @@ I'd also granted the following permissions in SQL Server to the service account 
 
 - **aspnet\_Membership\_BasicAccess**
 - **aspnet\_Roles\_BasicAccess**
-
 
 Like I said before, I had previously configured FBA in MOSS 2007 for a couple of previous projects, but this time, in addition to actually authenticating users (i.e. "membership"), I also needed to restrict access to certain areas of the site based on groups of FBA users (i.e. "roles").
 
@@ -41,9 +38,7 @@ Hmmm...from this I could tell that SharePoint was definitely attempting to valid
 
 That's when I found the problem, namely a `SqlException`:
 
-
 > The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists', database 'FabrikamPortal', schema 'dbo'.
-
 
 Ugh...it turns out the **aspnet\_Roles\_RoleExists **stored procedure is by default only granted EXECUTE** **permission to the **aspnet\_Roles\_ReportingAccess **database role within SQL Server. Unfortunately, SharePoint was simply "swallowing" that `SqlException`and assuming the role simply did not exist. I don't know about you, but I consider a "swallowed exception" like this to be a bug. Others may disagree, but that's my opinion.
 
@@ -54,13 +49,11 @@ The lesson learned here is that when using Forms-Based Authentication and the ou
 - **aspnet\_Roles\_BasicAccess**
 - **aspnet\_Roles\_ReportingAccess**
 
-
 The reason you should add it the **aspnet\_Membership\_ReportingAccess **database role -- in addition to the **aspnet\_Roles\_ReportingAccess** database role -- is that the sprocs that allow you to do partial matching on user names (e.g. **aspnet\_Membership\_FindUsersByName**) are by default only granted EXECUTE permission to the **aspnet\_Membership\_ReportingAccess **database role (not **aspnet\_Membership\_BasicAccess**).
 
 In other words, when I said earlier that I could add FBA users to a SharePoint group when my service account was a member of the **aspnet\_Membership\_BasicAccess** database role, that only worked because I typed in the full username -- which gets validated using the **aspnet\_Membership\_GetUserByName** sproc (which *is* granted EXECUTE permission to the **aspnet\_Membership\_BasicAccess** database role).
 
 By the way, here's some script to automatically create a user in SQL Server for the service account and add it to the necessary database roles:
-
 
 ```
 USE [FabrikamPortal]
@@ -80,7 +73,6 @@ GO
 EXEC sp_addrolemember N'aspnet_Roles_ReportingAccess', N'TECHTOOLBOX\svc-web-fabrikam-dev'
 GO
 ```
-
 
 You'll obviously need to replace the name of your ASP.NET database and service account accordingly.
 

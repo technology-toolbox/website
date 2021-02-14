@@ -10,18 +10,13 @@ tags: ["Windows Server", "Infrastructure"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 I had a rather rough start this morning.
 
@@ -35,41 +30,43 @@ Unfortunately, I got "no love" from ROGUE when I tried to login. The screen was 
 
 After ROGUE rebooted, I noticed that I still had problems accessing it. When  I was finally able to examine the event log, I discovered the following:
 
-Log Name: Application
-Source: Microsoft-Windows-Winlogon
-Date: 11/5/2008 6:04:29 AM
-Event ID: 4104
-Task Category: None
-Level: Information
-Keywords: Classic
-User: N/A
-Computer: ROGUE.corp.technologytoolbox.com
-Description:
-Accessing Windows in Notification period.
+Log Name: Application
+
+Source: Microsoft-Windows-Winlogon
+
+Date: 11/5/2008 6:04:29 AM
+
+Event ID: 4104
+
+Task Category: None
+
+Level: Information
+
+Keywords: Classic
+
+User: N/A
+
+Computer: ROGUE.corp.technologytoolbox.com
+
+Description:
+
+Accessing Windows in Notification period.
 
 Ugh...from this I determined that it must have been exactly 61 days this morning  since I rebuilt ROGUE with Windows Server 2008 (Server Core) and virtualized a couple  of other physical servers. Apparently, I neglected to perform a vital configuration  step -- specifically, setting the product key.
 
 For a Server Core installation, you need to use the Windows Software Licensing  Management Tool (slmgr.vbs) to enter the product key:
 
-
-
 ```
 slmgr.vbs -ipk <Product Key>
 ```
 
-
-
 After changing the product key, you then need to activate Windows:
-
-
 
 ```
 slmgr.vbs -ato
 ```
 
-
-
-In my opinion, the fact that the Windows Server 2008 setup does not prompt for  a product key is problematic. At least this is true for the MSDN version (which  I use to run the ["Jameson 
+In my opinion, the fact that the Windows Server 2008 setup does not prompt for  a product key is problematic. At least this is true for the MSDN version (which  I use to run the ["Jameson
 Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) -- a.k.a. my home lab). I understand that many organizations use  volume licensing (and [volume activation](http://technet.microsoft.com/en-us/library/cc303274.aspx)),  so I certainly can see why entering the product key at installation time should  be optional. I would just prefer that it wasn't skipped altogether. Also, I know  that I'm not the only one who has found it a little confusing to enter MSDN product  keys for Windows Server 2008 after installation.
 
 Anyway, enough ranting -- I need to get back to my "day job" ;-)

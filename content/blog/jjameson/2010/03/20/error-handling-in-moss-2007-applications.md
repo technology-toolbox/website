@@ -10,18 +10,13 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 In my [previous post](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications), I described the enhancements to my [original **Logger** class](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) for logging exceptions in a consistent  fashion.
 
@@ -29,17 +24,16 @@ While error handling in .NET console applications and ASP.NET Web applications  
 
 While the OOTB error handling in MOSS 2007 and WSS works well for intranet solutions,  it's not so great for Internet-facing sites.
 
-To understand why, consider a publishing site configured with **BlueBand.master**as the master page:
+To understand why, consider a publishing site configured with **BlueBand.master
+**as the master page:
 
 ![Publishing site with BlueBand master page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
-	Figure 1: Publishing site with BlueBand master page
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Publishing%20Site%20-%20BlueBand%20Master%20Page.png) 
+    Figure 1: Publishing site with BlueBand master page
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
 
 Now, similar to the example error demonstrated in my previous post, let's add  a Web Part to the home page that throws an exception:
-
-
 
 ```
 using System;
@@ -97,18 +91,17 @@ namespace Fabrikam.Demo.WebParts
 }
 ```
 
-
-
 As shown in the following screenshot, browsing to the home page now displays  the SharePoint error page.
 
 ![SharePoint error page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Error%20Page.png)
-	Figure 2: SharePoint error page
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Error%20Page.png) 
+    Figure 2: SharePoint error page
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Error%20Page.png)
 
-If this were an intranet site and we were using the OOTB **default.master**(instead of **BlueBand.master**) then the out-of-the-box SharePoint  error page would probably be acceptable for most organizations. For an Internet-facing  site, however, we almost certainly don't want to show a page with a completely different  look-and-feel -- and even worse, a page that provides a link to a "**Web Parts 
-Maintenance Page**" as well as a link to "**Troubleshoot issues with 
+If this were an intranet site and we were using the OOTB **default.master
+**(instead of **BlueBand.master**) then the out-of-the-box SharePoint  error page would probably be acceptable for most organizations. For an Internet-facing  site, however, we almost certainly don't want to show a page with a completely different  look-and-feel -- and even worse, a page that provides a link to a "**Web Parts
+Maintenance Page**" as well as a link to "**Troubleshoot issues with
 Windows SharePoint Services.**" These are completely meaningless to the general  public accessing the site.
 
 So, how can we provide a better user experience?
@@ -117,13 +110,9 @@ Well, we could certainly add try/catch blocks throughout our solution and try  t
 
 If our solution were simply built on top of ASP.NET -- instead of SharePoint  -- we could simply create an error page and use the `<customErrors>`element in the Web.config file:
 
-
-
 ```
 <customErrors defaultRedirect="/Error.aspx" mode="On" />
 ```
-
-
 
 However, that doesn't work in SharePoint applications, because SharePoint has  its own error handling infrastructure that overrides any error page specified in  the `<customErrors>`element.
 
@@ -131,24 +120,22 @@ I've seen some blog posts that advocate using a custom **HttpModule**  to overri
 
 Instead, the approach that I like to use is to hook into the **[Error](http://msdn.microsoft.com/en-us/library/system.web.ui.templatecontrol.error.aspx)** event from a custom master page. After all, if we're developing  an Internet-facing Web site, aren't we going to utilize a custom master page for  all of the pages that are visible to the general public?
 
-This way, we can display our own error page so that the general public doesn't  see messages like "Troubleshoot issues with Windows SharePoint 
+This way, we can display our own error page so that the general public doesn't  see messages like "Troubleshoot issues with Windows SharePoint
 Services."
 
 The following screenshot shows a custom error page fashioned after BlueBand.master:
 
 ![Custom SharePoint error page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Custom%20Error%20Page.png)
-	Figure 3: Custom SharePoint error page
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Custom%20Error%20Page.png) 
+    Figure 3: Custom SharePoint error page
 
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Custom%20Error%20Page.png)
 
 Notice how the details of the error are not displayed to users (which probably  wouldn't be of much help to them anyway and, more importantly, might divulge sensitive  information). Instead, the details of the exception are logged to the **Application**  event log.
 
 So how do we make this user experience a reality?
 
 First, we need to add a little bit of code to our custom master page. Specifically,  in the page **Init **event, we wire up an event handler for the page **Error **event:
-
-
 
 ```
 namespace Fabrikam.Demo.Publishing.Layouts.MasterPages
@@ -190,21 +177,17 @@ namespace Fabrikam.Demo.Publishing.Layouts.MasterPages
 }
 ```
 
-
-
 Note that I'm essentially following the approach outlined in the following KB  article:
 
-<cite>How to create custom error reporting pages in ASP.NET by using Visual C# .NET</cite>
+<cite>How to create custom error reporting pages in ASP.NET by using Visual
+C# .NET</cite>
 [http://support.microsoft.com/kb/306355](http://support.microsoft.com/kb/306355)
-
 
 In the **Page\_Error** method, I first log the exception using [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications). Then I call the **[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)** method to prevent the error from continuing  to the **Application\_Error **event handler (which would subsequently  invoke the SharePoint error handling infrastucture). Finally, I transfer the request  to a custom application page (Error.aspx) in the Layouts folder -- thus displaying  a friendly error message to the user, while still preserving the URL of the original  request (as opposed to a redirect, which would change the URL shown in the browser).
 
 Note that since Error.aspx is handling an unexpected exception, the last thing  we want is another error to occur in the error page. Consequently, I use a very  simple ASP.NET page with nothing in the code-behind. In fact, I don't even want  to [use the master page configured for my SharePoint site](/blog/jjameson/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007) -- in case the original  exception occurred as a result of some code in the master page. [I suppose you could  use a static HTML file if you are really paranoid about an exception occuring in  your error page. However, so far, I haven't found the need to do this.]
 
 Here's the sample Error.aspx file that I created to capture the screenshot shown  in Figure 3:
-
-
 
 ```
 <%@ Assembly Name="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
@@ -301,13 +284,9 @@ Here's the sample Error.aspx file that I created to capture the screenshot shown
 </html>
 ```
 
-
-
 I'm not really advocating that your custom error page be as complex as the one  I've shown here. This is just what I used in order to get the look-and-feel to be  very similar to BlueBand.master without spending a great deal of time converting  this to semantic markup.
 
 For comparison purposes, here's a much simpler custom error page based on [a Web standards design](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1):
-
-
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs"
@@ -345,21 +324,18 @@ For comparison purposes, here's a much simpler custom error page based on [a Web
 </html>
 ```
 
-
-
 Isn't that cleaner than that nasty ol' table-based layout?
 
 Anyway...
 
-Once we have our error page deployed to the Layouts folder and wired in via our  custom master page, the next step is to ensure that the call to the **Logger.LogError**method doesn't go completely unnoticed. In other words, we need to ensure  that we have a listener configured for the corresponding trace source.
+Once we have our error page deployed to the Layouts folder and wired in via our  custom master page, the next step is to ensure that the call to the **Logger.LogError
+**method doesn't go completely unnoticed. In other words, we need to ensure  that we have a listener configured for the corresponding trace source.
 
 Although I've covered some basics about configuring logging in ASP.NET applications  (and SharePoint) in a [previous post](/blog/jjameson/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint), I didn't cover how to log to the Windows event log.
 
 Let's assume that whenever an error occurs within our custom code, we want the  details to be written to the **Application **event log. Although you  might be tempted to simply use the [EventLogTraceListener](http://msdn.microsoft.com/en-us/library/system.diagnostics.eventlogtracelistener.aspx) included in the .NET Framework, there's a fundamental  problem that you might not be aware of: it doesn't work with SharePoint sites in  several very important scenarios.
 
 To demonstrate this, I'll add the following section to the Web.config file for  the **Internet **zone of my sample Fabrikam site (which I've configured  for Forms-Based Authentication and anonymous access):
-
-
 
 ```
 <system.diagnostics>
@@ -390,21 +366,14 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
   </system.diagnostics>
 ```
 
-
-
-
 > **Important**
 > 
-> 
-> 	Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the 
-> 	event log.
-
+> Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the
+> event log.
 
 With the **EventLogTraceListener** configured, as soon as I browse  to my site and trigger the unhandled exception, I'm presented with the OOTB SharePoint  error page shown in Figure 2. In other words, I've reverted back to the undesired  user experience.
 
 Enabling the call stack and disabling custom errors in the Web.config file reveals  the following error:
-
-
 
 ```
 [SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.]
@@ -432,16 +401,11 @@ Enabling the call stack and disabling custom errors in the Web.config file revea
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
 
-
-
-The problem is that the event source specified in the `initializeData` attribute (`"Fabrikam 
-Site"`) does not exist and the service account doesn't have permission  to create a new event source. You might think that you could just omit the `initializeData` attribute -- and use whatever  default is specified in the **EventLogTraceListener** -- but, alas,  that only leads to a `NullReferenceException` and a slightly different  call stack.
+The problem is that the event source specified in the `initializeData` attribute (`"Fabrikam  Site"`) does not exist and the service account doesn't have permission  to create a new event source. You might think that you could just omit the `initializeData` attribute -- and use whatever  default is specified in the **EventLogTraceListener** -- but, alas,  that only leads to a `NullReferenceException` and a slightly different  call stack.
 
 Consequently, we need to first create the event source that we want to use.
 
 Unfortunately, I'm not aware of any way to do this using OOTB functionality (e.g.  from the Event Viewer console). Fortunately, it takes only a tiny bit of custom  code to create the event source (assuming you have permissions to do so):
-
-
 
 ```
 private static string AddEventLogSource(
@@ -459,11 +423,7 @@ private static string AddEventLogSource(
         }
 ```
 
-
-
 However, even after creating the event source, you still can't use the **EventLogTraceListener** on a SharePoint site configured for Forms-Based  Authentication and anonymous access. Attempting to do so results in the following  error:
-
-
 
 ```
 [Win32Exception (0x80004005): The handle is invalid]
@@ -488,11 +448,7 @@ However, even after creating the event source, you still can't use the **EventLo
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
 
-
-
 To workaround this problem, I created a custom trace listener by essentially  snarfing the code for the **EventLogTraceListener** class and wrapping  the calls to write events with `SPSecurity.RunWithElevatedPrivileges`:
-
-
 
 ```
 using System;
@@ -1075,11 +1031,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-
-
 Now, we can simply replace **System.Diagnostics.EventLogTraceListener**  with the custom **Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener**  in the Web.config file:
-
-
 
 ```
 <system.diagnostics>
@@ -1111,8 +1063,6 @@ Now, we can simply replace **System.Diagnostics.EventLogTraceListener**  with th
   </system.diagnostics>
 ```
 
-
-
 ...and, voilà! Everything just works!
 
 Woohoo!!
@@ -1122,8 +1072,6 @@ Okay, maybe I should omit the word "just" from that statement, but oh well...
 The point is, when we now encounter an unhandled exception on any page in the  site that uses our custom master page, instead of showing the OOTB SharePoint error  page, we instead show a nicely-branded custom error page. Just as important, the  details of the exception are logged to the **Application **event log.
 
 Here's the event that I just captured from my sample Web Part:
-
-
 
 ```
 Log Name:      Application
@@ -1158,8 +1106,6 @@ Stack Trace:
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 ```
 
-
-
 I don't know about you, but I think that's pretty darn cool!
 
 Before I wrap things up for this post, I want to point out that I'm not very  fond of manually modifying configuration files. As I've stated before, this is prone  to human error and quickly becomes tedious when you have to do it over and over  again for different environments or whenever you decide to nuke your LOCAL or DEV  SharePoint Web application and recreate it (which is something I tend to do rather  frequently).
@@ -1168,44 +1114,29 @@ Consequently, I use custom StsAdm.exe commands to add the event source and enabl
 
 After deploying the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Command.wsp),  the following command must be run once on each Web server in each SharePoint environment  (e.g. LOCAL, DEV, TEST, and PROD):
 
-
-
 ```
 stsadm -o fabrikam-addeventlogsource -source "Fabrikam Site"
 ```
 
-
-
 The following command, on the other hand, only needs to be run once per environment  after creating the Web application (substituting the appropriate URL as necessary)  since the SharePoint **SPWebConfigModification** class handles the  grunt work of modifying the Web.config files for each zone and on each front-end  Web server in the farm:
-
-
 
 ```
 stsadm -o fabrikam-enablelogging -url http://fabrikam
 ```
 
-
-
-
 > **Note**
 > 
-> 
-> 	There's a known bug with the **SPWebConfigModification** class 
-> 	not removing modifications from any Web.config file except the one for the
-> 	**Default **zone. In other words, running the following command 
-> 	will not remove the trace listener configuration from the Web.config file 
-> 	for the **Internet **zone: 
-> 
-> 
+> There's a known bug with the **SPWebConfigModification** class
+> not removing modifications from any Web.config file except the one for the
+> **Default **zone. In other words, running the following command
+> will not remove the trace listener configuration from the Web.config file
+> for the **Internet **zone:
 > 
 > ```
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
 > ```
 
-
 Here is the class that implements the custom StsAdm.exe commands:
-
-
 
 ```
 using System;
@@ -1569,8 +1500,6 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
     }
 }
 ```
-
-
 
 I hope you find this post valuable when creating Internet sites with MOSS 2007.
 

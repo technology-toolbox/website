@@ -11,11 +11,9 @@ tags: ["Personal"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Earlier this week, a colleague of mine was building out his own version of the [Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter) based on a variety of posts I've written in the past. Over an IM conversation, he mentioned that some of my posts tend to run off the page -- making them difficult to read unless you can resize the browser window wide enough to accommodate the text.
 

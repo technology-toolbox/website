@@ -10,18 +10,13 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 In [my previous post](/blog/jjameson/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot), I explained how I like to create separate VHDs for data and  log files in my SharePoint development VMs. However, given the very small amount  of content that I typically load into a SharePoint development environment, these  VHDs certainly don't need to be very large.
 
@@ -42,14 +37,11 @@ This morning, I did a quick search for how to create a VHD using PowerShell and 
 <cite>Hyper-V WMI Using PowerShell Scripts -- Part 2 (VHD Creation)</cite>
 [http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx](http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx)
 
-
 [If, like me, you haven't come across that blog before, it's definitely worth  taking a look at. Taylor Brown from the Hyper-V product team shares a lot of great  tips and useful scripts.]
 
 Note that Taylor has [an improved version of his original post](http://blogs.msdn.com/b/taylorb/archive/2008/06/18/hyper-v-wmi-rich-error-messages-for-non-zero-returnvalue-no-more-32773-32768-32700.aspx) for creating VHDs using PowerShell  that decrypts the mystical return codes from WMI.
 
 In short (and with no error handling), use something like the following to create  a 200 MB VHD:
-
-
 
 ```
 $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
@@ -60,36 +52,27 @@ $vhdService.CreateDynamicVirtualHardDisk(
     200MB)
 ```
 
-
-
 Thanks, Taylor, for sharing this useful PowerShell script.
-
 
 > **Update (2011-04-14)**
 > 
+> Depending on the specific service applications that you need to configure
+> in your SharePoint 2010 development environment, 200 MB not be sufficient
+> for transaction log storage (even if you
+> [configure your SharePoint databases to use the Simple recovery model by
+> default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)). Unfortunately, I discovered that when I tried to configure
+> numerous service applications on my development VM (to match my client's
+> Production environment) I ran out of space on my L: drive.
 > 
-> Depending on the specific service applications that you need to configure 
-> 	in your SharePoint 2010 development environment, 200 MB not be sufficient 
-> 	for transaction log storage (even if you
-> 	[configure your SharePoint databases to use the Simple recovery model by 
-> 	default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)). Unfortunately, I discovered that when I tried to configure 
-> 	numerous service applications on my development VM (to match my client's 
-> 	Production environment) I ran out of space on my L: drive.
-> 
-> Instead of the 200 MB I originally thought that I could get away with, 
-> 	I now use 500 MB. So far, I haven't encountered any issues with this increased 
-> 	size.
-
+> Instead of the 200 MB I originally thought that I could get away with,
+> I now use 500 MB. So far, I haven't encountered any issues with this increased
+> size.
 
 Note that you'll probably need to change the permissions on the new VHD in order  to avoid an "Access Denied" error message after attaching the VHD to a VM:
-
-
 
 ```
 icacls foobar5_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
 ```
-
-
 
 This is described in more detail in [one of my previous posts](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
 

@@ -9,24 +9,17 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 One of the common tasks when using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) is programmatically creating and  configuring pages on a site. This often requires adding numerous Web Parts to various  zones on a page -- for example, to configure search results pages.
 
 Over the past couple of years, my teammates and I have created numerous "helper"  classes that simplify this task in Windows SharePoint Services (WSS) 3.0 and Microsoft  Office SharePoint Server (MOSS) 2007 -- including `SharePointWebPartHelper`.
-
-
 
 ```
 /// <summary>
@@ -40,13 +33,9 @@ Over the past couple of years, my teammates and I have created numerous "helper"
 public sealed class SharePointWebPartHelper
 ```
 
-
-
 `SharePointWebPartHelper` contains public methods like `EnsureWebPart`  and `FindWebPartByTitle`. As you can probably tell from the names of  these methods, this allows you to locate an existing Web Part on a page or create  one if the specified Web Part doesn't currently exist on the page.
 
 `EnsureWebPart` attempts to find a Web Part based on the specified  webPartId and if the Web Part is not found, then it uses the `CreateWebPart`  method to create a new Web Part. Here is the original implementation of the `CreateWebPart` method:
-
-
 
 ```
 private static WebPart CreateWebPart(
@@ -107,8 +96,6 @@ private static WebPart CreateWebPart(
     }
 ```
 
-
-
 Note that `SPWebPartPages` is simply an alias for the `Microsoft.SharePoint.WebPartPages`  namespace (in order to avoid "collisions" with the `System.Web.UI.WebControls.WebParts`  namespace). Also, please ignore the use of `ApplicationException` --  apparently there's still a little "code cleanup" to be done here.
 
 As I called out above, this code shows the *original* implementation of  the method. It turns out there's a very obscure bug in it, that I only discovered  within the last couple of months.
@@ -117,24 +104,17 @@ As you can probably guess from the title of this post, the problem is that `zone
 
 When adding the first, second, third, and fourth Web Parts to a zone:
 
-
-
 ```
 SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
 ```
 
-
-
 behaves as expected, meaning that (`webPart.ZoneIndex == zoneIndex`).
 
-However, when adding the fifth and sixth Web Parts to a zone, then (`webPart.ZoneIndex 
-== zoneIndex + 1`).
+However, when adding the fifth and sixth Web Parts to a zone, then (`webPart.ZoneIndex  == zoneIndex + 1`).
 
 I suspect it is due to the `SPWebPartManager.MakeSpaceForWebpart`  method (which is called from `SPLimitedWebPartManager.AddWebPart`). However,  the `SPWebPartManager.MakeSpaceForWebpart` method is obfuscated and therefore  I can't see what it is doing using Reflector.
 
 This behavior caused some Web Parts to appear in the wrong location, and therefore  I had to come up with a hack for it. Here is my updated version of the `CreateWebPart`  method:
-
-
 
 ```
 private static WebPart CreateWebPart(
@@ -223,8 +203,6 @@ private static WebPart CreateWebPart(
         return webPart;
     }
 ```
-
-
 
 I was curious to know why SharePoint behaves this way and to see if this behavior  is documented somewhere and I just missed it. Unfortunately, the e-mail I sent back  in March to an internal discussion list received no responses. So I guess this will  just have to remain a mystery.
 

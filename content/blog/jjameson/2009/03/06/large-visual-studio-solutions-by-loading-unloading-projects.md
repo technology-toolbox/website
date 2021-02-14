@@ -9,18 +9,13 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 As I noted in my [previous post](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
 
@@ -32,13 +27,14 @@ If you work with multiple Visual Studio solutions that only have a handful of  p
 
 As you start adding more and more projects to a solution, you'll inevitably discover  the following to be true:
 
-- Load time increases (i.e. the time it takes to start Visual Studio and open your solution)
-- Incremental build time increases, even when the only changes that have been made are in "leaf" projects (i.e. projects that don't reference other projects)
-
+- Load time increases (i.e. the time it takes to start Visual Studio and open
+  your solution)
+- Incremental build time increases, even when the only changes that have been
+  made are in "leaf" projects (i.e. projects that don't reference other projects)
 
 Obviously we should expect the build time to take a while whenever we make a  change in one project that is referenced by many others (e.g. [a "CoreServices" project](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) like I've described in the past).
 
-If, like me, you've grown accustomed to Test Driven Development (TDD) however,  then you know that it's essential to minimize the ["Red, Green, 
+If, like me, you've grown accustomed to Test Driven Development (TDD) however,  then you know that it's essential to minimize the ["Red, Green,
 Refactor"](http://msdn.microsoft.com/en-us/library/aa730844%28VS.80%29.aspx) cycle. If your [incremental build time requires 28 seconds](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), then your developer productivity  is going to take a hit in a big, big way.
 
 So, what can we do to mitigate these issues?
@@ -51,7 +47,7 @@ Note that the recommendation to use a single, "master" solution is nothing new. 
 
 Unfortunately, what was fundamentally missing from the original prescriptive  guidance was any mention of the feature in Visual Studio that allows you to effectively  work with a solution containing numerous projects. This has become critical in light  of the shift to TDD.
 
-If you right-click a project in Visual Studio, you'll see the **Unload 
+If you right-click a project in Visual Studio, you'll see the **Unload
 Project** option way down near the bottom of the context menu. When you unload  a project, Visual Studio completely ignores the project (and all of the items in  the project). Unloaded projects are not compiled when you press <kbd>CTRL+SHIFT+B</kbd>,  which can substantially reduce your incremental build time, thereby making you a  much more productive TDD developer! You will also find the time required to open  the solution can be greatly reduced by unloading projects.
 
 Whenever you need to change something in an unloaded project, simply right-click  the project and click **Reload Project**.

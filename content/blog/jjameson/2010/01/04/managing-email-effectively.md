@@ -12,13 +12,9 @@ tags: ["My System", "Simplify"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 First of all, Happy New Year!
 
@@ -39,10 +35,9 @@ It is also important to note that my **Inbox** folder is synchronized         to
 For reference purposes, here's what my Outlook folder looked like first thing this         morning (again, note that this is not a typical snapshot since I just returned from         a long vacation).
 
 ![Outlook folders and archive structure](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-and-archive-structure.png)
-            Figure 1: Outlook folders and archive structure
+Figure 1: Outlook folders and archive structure
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Outlook-folders-and-archive-structure.png)
-
 
 As you can see, I received literally thousands of email messages during my hiatus,         but only 66 of them stayed in my **Inbox** folder.
 
@@ -52,35 +47,30 @@ I have created folders under **Inbox** corresponding to various distribution    
 
 I configure rules within Outlook to "preprocess" messages sent either directly to         me or to DLs that I belong to.
 
-
 > **Important**
 > 
 >             The reason for using DL folders under the **Inbox **folder -- instead
 >             of having the Outlook rules route directly to the archive (.pst) files -- is to
 >             ensure the rules are processed on the Exchange server.
 >             
+> 
 > If you configure an Outlook rule to move messages to a .pst file, then obviously                 that rule can only be processed on the client (where the .pst is available). While                 that alternate approach might work for some people, anyone with a smartphone configured                 to receive email will quickly find it to be rather useless.
-
 
 I just inspected my email rules in Outlook and found that I am now up to 32 rules.         Note that most of these rules follow the same basic structure:
 
-
 > Apply this rule after the message arrives
->          sent to people or distribution list
->          move it to the specified folder
->          except if my name is in the To or Cc box
->          stop processing more rules
-
+> sent to people or distribution list
+> move it to the specified folder
+> except if my name is in the To or Cc box
+> stop processing more rules
 
 For example, I have a rule named **SharePoint 2010 discussions** configured         as follows:
 
-
 > Apply this rule after the message arrives
->          sent to SharePoint 2010 Discussion
->          move it to the SharePoint 2010 folder
->          except if my name is in the To or Cc box
->          stop processing more rules
-
+> sent to SharePoint 2010 Discussion
+> move it to the SharePoint 2010 folder
+> except if my name is in the To or Cc box
+> stop processing more rules
 
 As you can see from the previous screenshot, this rule automatically routed 1,837         messages sent to the **SharePoint 2010 Discussion** DL to the corresponding         **SharePoint 2010** folder.
 
@@ -90,40 +80,32 @@ Of the 32 rules that I currently have configured, most are for DL processing. Ho
 
 If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications **         rule as follows:
 
-
 > Apply this rule after the message arrives
->          from [xxx@microsoft.com](mailto:xxx@microsoft.com)
->          move it to the TFS Notifications folder
-
+> from [xxx@microsoft.com](mailto:xxx@microsoft.com)
+> move it to the TFS Notifications folder
 
 Note that [xxx@microsoft.com](mailto:xxx@microsoft.com) is the email         address of the TFS service account (which I've replaced for obvious reasons).
 
 Further down the list of email rules, I have one named **High Priority Items**:
 
-
 > Apply this rule after the message arrives
->          from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine
->          stop processing more rules
-
+> from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine
+> stop processing more rules
 
 While somewhat serving as a list of various managers I've had during my tenure with         Microsoft, this rule is really used to ensure that email from these individuals         doesn't mistakenly "slip through the cracks" and get processed by the very last         rule.
 
 Note that I also have a **Project Mail **rule configured for similar         purposes:
 
-
 > Apply this rule after the message arrives
->          sent to FrontierV3Dev or KPMG-COM Project Team or ...
->          stop processing more rules
-
+> sent to FrontierV3Dev or KPMG-COM Project Team or ...
+> stop processing more rules
 
 The very last rule that I have configured in Outlook is named **Low Priority Items
-        **and is configured as follows:
-
+**and is configured as follows:
 
 > Apply this rule after the message arrives
->          move it to the Low Priority Items folder
->          except if my name is in the To or Cc box
-
+> move it to the Low Priority Items folder
+> except if my name is in the To or Cc box
 
 In other words, any email message that somehow makes its way into my inbox, but         is neither processed by a previous email rule nor sent directly to me, is summarily         routed to my **Low Priority Items **folder. While I strive to catch         up on this folder every couple of days, in all honesty, it is sometimes a week or         more before I read these messages.
 
@@ -134,10 +116,9 @@ Lastly, I should also point out that another key element of my system for managi
 Here's my updated screenshot from Outlook this morning after running Thread Compressor:
 
 ![Outlook folders after running Thread Compressor](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-after-Thread-Compressor.png)
-            Figure 2: Outlook folders after running Thread Compressor
+Figure 2: Outlook folders after running Thread Compressor
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Outlook-folders-after-Thread-Compressor.png)
-
 
 Compare the numbers in this screenshot with the corresponding numbers in the previous         screenshot -- or just trust me when I say it deleted 1,758 messages -- and you'll         quickly see why I consider Thread Compressor to be an essential part of my toolbox.
 

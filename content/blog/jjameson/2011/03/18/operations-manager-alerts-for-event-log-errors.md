@@ -12,11 +12,9 @@ tags: ["My System", "Simplify", "Infrastructure"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 One of the things I like most about running System Center Operations Manager in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) is that it greatly reduces the amount of effort required to monitor numerous servers.
 
@@ -35,50 +33,48 @@ To create a rule that generates an alert whenever an error occurs in the Applica
 1. Start the **Operations Console **as a member of the Operations Manager Authors or Administrators role.
 2. In the Operations console. click the **Authoring **button.
 3. In the navigation pane:
-    1. Expand **Authoring**, and then expand **Management Pack Objects**.
-    2. Right-click **Rules**, and then click **Create a new rule... **to start the Create Rule Wizard.
+   1. Expand **Authoring**, and then expand **Management Pack Objects**.
+   2. Right-click **Rules**, and then click **Create a new rule... **to start the Create Rule Wizard.
 4. On the **Select a Rule Type **page:
-    1. Expand **Alert Generating Rules**, expand **Event Based**, and then click **NT Event Log (Alert)**.
-    2. Select the destination management from the list (**Windows Core Library - Customizations**) or click **New... **to create a management pack.
-    3. Click **Next**.
+   1. Expand **Alert Generating Rules**, expand **Event Based**, and then click **NT Event Log (Alert)**.
+   2. Select the destination management from the list (**Windows Core Library - Customizations**) or click **New... **to create a management pack.
+   3. Click **Next**.
 5. On the **Rule Name and Description **page:
-    1. In the **Rule name **box, type **Application Event Log Error**.
-    2. Optionally, type a description for the rule.
-    3. Click **Select** to select the item to target.
-    4. In the **Select Items to Target **dialog, select **Windows Computer**, and then click **OK**.
-    5. Ensure the **Rule is enabled **option is checked and then click **Next**.
+   1. In the **Rule name **box, type **Application Event Log Error**.
+   2. Optionally, type a description for the rule.
+   3. Click **Select** to select the item to target.
+   4. In the **Select Items to Target **dialog, select **Windows Computer**, and then click **OK**.
+   5. Ensure the **Rule is enabled **option is checked and then click **Next**.
 6. On the **Event Log Name **page, ensure **Log name **is set to **Application**, and then click **Next**.
 7. On the **Build Event Expression **page:
-    1. Specify the following expression: 
-
-
-        | Parameter Name | Operator | Value |
-        | --- | --- | --- |
-        | Event Level | Equals | Error |
-    2. Click **Next**.
+   1. Specify the following expression:
+      
+      | Parameter Name | Operator | Value |
+      | --- | --- | --- |
+      | Event Level | Equals | Error |
+   
+   2. Click **Next**.
 8. On the **Configure Alerts **page:
-    1. In the **Alert description **box, specify the following:
-        **Source: $Data/EventSourceName$
-Event ID: $Data/EventDisplayNumber$
-Event Category: $Data/EventCategory$
-User: $Data/UserName$
-Computer: $Data/LoggingComputer$
-Event Description: $Data/EventDescription$**
-    2. In the **Severity **option, click **Warning**.
-    3. Click **Alert suppression...** to define the handling of duplicate alerts. In the **Alert Suppression **dialog:
-        1. Click the following fields:
-            - **Event ID**
-            - **Event Source**
-            - **Logging Computer**
-            - **Event Category**
-            - **User**
-            - **Description**
-        2. Click **OK**.
-    4. Click **Create**.
-
+   1. In the **Alert description **box, specify the following:
+      **Source: $Data/EventSourceName$
+      Event ID: $Data/EventDisplayNumber$
+      Event Category: $Data/EventCategory$
+      User: $Data/UserName$
+      Computer: $Data/LoggingComputer$
+      Event Description: $Data/EventDescription$**
+   2. In the **Severity **option, click **Warning**.
+   3. Click **Alert suppression...** to define the handling of duplicate alerts. In the **Alert Suppression **dialog:
+      1. Click the following fields:
+         - **Event ID**
+         - **Event Source**
+         - **Logging Computer**
+         - **Event Category**
+         - **User**
+         - **Description**
+      2. Click **OK**.
+   4. Click **Create**.
 
 Repeat the process to create a similar alert for errors in the System event log.
-
 
 > **Important**
 > 
@@ -90,12 +86,9 @@ Repeat the process to create a similar alert for errors in the System event log.
 > 
 > **Alert description: **A rule has generated 50 alerts in the last 60 seconds. Usually, when a rule generates this many alerts, it is because the rule definition is misconfigured. Please examine the rule for errors. In order to avoid excessive load, this rule will be temporarily suspended until ...
 
-
-
 > **Note**
 > 
 > The reason why I choose to set the **Severity **to **Warning **(instead of the default -- **Critical**) is so that when an event log error generates a similar alert in one of the other management packs, I immediately focus on the "primary" alert (rather than the "duplicate" generated by the custom rule).
-
 
 In order to minimize the effort required to investigate errors in the event logs, I include details from the event in the alert. This is especially useful for quickly understanding errors on a server since it is also included in email generated by the alert.
 

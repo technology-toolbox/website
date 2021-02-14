@@ -9,18 +9,13 @@ tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 In [yesterday's post](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided a sample walkthrough of the "DR.DADA" approach  to developing solutions for Microsoft Office SharePoint Server (MOSS) 2007. However,  I intentionally left out a few things because a) that post was already getting ridiculously  long, and b) I felt these were important enough to cover separately.
 
@@ -38,44 +33,54 @@ Unfortunately, there's no user interface in Visual Studio 2008 for "Web-enabling
 
 To Web-enable your C# class library project and configure for ASP.NET debugging:
 
-1. In the **Solution Explorer **window, select the class library project.
+1. In the **Solution Explorer **window, select the class library
+   project.
 2. Right-click the project name and then click **Unload Project**.
 3. Right-click the unloaded project and then click **Edit {project name}**.
-4. Below the `<ProjectGuid>` element, add the following:
+4. Below the `<ProjectGuid>`
+   element, add the following:
 
 `<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>`
-5. Below the `<ImportProject="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` element, add the following:
+5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"  />` element, add the following:
 
-`<ImportProject="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets"Condition="" />`
-6. On the **File** menu, click **Close**. When prompted to save the file, click **Yes**.
-7. In the **Solution Explorer **window, right-click the project, and then click **Reload Project**.
-8. Wait for the project to finish loading, right-click the project name again, and click **Properties**. Notice that there is now a **Web**tab in the project settings.
-9. On the project settings **Web **tab, under the **Servers**section:
-    1. Clear the **Apply server settings to all users (store in project 	file)** checkbox (since various members of the Development team might 	use different URLs for their local SharePoint sites).
-    2. Select the **Use Custom Web Server **option, and in the	**Server Url **box, type the URL of your SharePoint site (e.g.	[http://fabweb-local](http://fabweb-local/)).
+`<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition=""  />`
+6. On the **File** menu, click **Close**. When prompted
+to save the file, click **Yes**.
+7. In the **Solution Explorer **window, right-click the project,
+and then click **Reload Project**.
+8. Wait for the project to finish loading, right-click the project name again,
+and click **Properties**. Notice that there is now a **Web
+**tab in the project settings.
+9. On the project settings **Web **tab, under the **Servers
+**section:
+1. Clear the **Apply server settings to all users (store in project
+file)** checkbox (since various members of the Development team might
+use different URLs for their local SharePoint sites).
+2. Select the **Use Custom Web Server **option, and in the
+**Server Url **box, type the URL of your SharePoint site (e.g.
+[http://fabweb-local](http://fabweb-local/)).
 10. Close the project settings window.
-11. In the **Solution Explorer **window, right-click the project, and then click **Set as StartUp Project**.
-
-
+11. In the **Solution Explorer **window, right-click the project,
+and then click **Set as StartUp Project**.
 
 > **Note**
 > 
-> 
-> 	In addition to seeing the **Web **tab in project settings, 
-> 	you will also find that adding items like ASPX pages and ASCX controls is 
-> 	much easier after "Web-enabing" your project.
-
+> In addition to seeing the **Web **tab in project settings,
+> you will also find that adding items like ASPX pages and ASCX controls is
+> much easier after "Web-enabing" your project.
 
 To ensure ASP.NET debugging is enabled on the Web site [note these instructions  are for Windows Server 2008]:
 
-1. Click **Start**, click **Administrative Tools**, and then click **Internet Information Services (IIS) Manager**.
+1. Click **Start**, click **Administrative Tools**,
+   and then click **Internet Information Services (IIS) Manager**.
 2. In the **Connections **pane, expand the computer name.
 3. Expand **Sites**.
 4. Select the Web site or application that you want to debug.
 5. Under the **ASP.NET **section, double-click **.NET Compilation**.
-6. Under the **Behavior **section, ensure the value of **Debug **is set to **True**.
-7. If necessary, click **Apply **in the **Actions**pane.
-
+6. Under the **Behavior **section, ensure the value of **
+   Debug **is set to **True**.
+7. If necessary, click **Apply **in the **Actions
+   **pane.
 
 Assuming you have deployed your solution and activated your features, your can  now set a breakpoint and press <kbd>F5</kbd> to start debugging. Woohoo!
 
@@ -83,9 +88,7 @@ Now let's suppose that you find a bug in your code and need to make a change  --
 
 As I mentioned yesterday, all you need to do is press <kbd>CTRL+SHIFT+B</kbd>  to build your solution, GAC your updated assemblies, and recycle the application  pool:
 
-
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"GAC Assemblies.cmd"</kbd>
-
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -95,15 +98,11 @@ Assembly successfully added to the cache
 Done
 ```
 
-
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"</kbd>
-
 
 ```
 "SharePoint - foobar-local80" successfully recycled
 ```
-
-
 
 You can then simply press <kbd>F5</kbd> to start debugging again. Woohoo, indeed!
 

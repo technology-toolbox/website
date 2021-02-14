@@ -11,11 +11,9 @@ tags: ["Windows Server", "Infrastructure"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've mentioned [in the past](/blog/jjameson/2009/09/14/the-jameson-datacenter) how I run a Windows Server 2003 mail server in order to use the POP3 service for basic e-mail functionality, and that I didn't have any interest in finding an alternative when I discovered POP3 is no longer available in Windows Server 2008. Well, I guess I need to start investing the effort in finding a new email service to run for demo purposes after all.
 
@@ -27,7 +25,6 @@ I also tried disabling the **Require Secure Password Authentication (SPA) for al
 
 Here's a network trace (when SPA is enabled) from my primary desktop (WOLVERINE) with Outlook 2010 installed:
 
-
 ```
 449   3.055000   BANSHEE    WOLVERINE  POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846424703@banshee.corp.technologytoolbox.com> ready.
 450   3.055000   WOLVERINE  BANSHEE    POP3   POP3:Command: CAPA 
@@ -35,11 +32,9 @@ Here's a network trace (when SPA is enabled) from my primary desktop (WOLVERINE)
 452   3.056000   WOLVERINE  BANSHEE    POP3   POP3:Command: QUIT
 ```
 
-
 Like I said, it seems that Outlook 2010 doesn't like the simple implementation of the POP3 protocol in Windows Server 2003. Specifically, if the POP3 server doesn't understand the CAPA command (to list the capabilities supported by the mail server), then Outlook 2010 doesn't even bother trying to authenticate (at least not with SPA).
 
 Here is a similar network trace from one of my VMs (FOOBAR2) that still has Outlook 2007 installed:
-
 
 ```
 2225   15.118164   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846956359@banshee.corp.technologytoolbox.com> ready.
@@ -64,13 +59,11 @@ Here is a similar network trace from one of my VMs (FOOBAR2) that still has Outl
 2433   15.819336   FOOBAR2   BANSHEE   POP3   POP3:Command: QUIT
 ```
 
-
 I suspect the problem with Outlook 2010 might be due to the fact that I'm not using SSL to connect to my POP3 service. However, unless I'm missing something obvious, I don't believe it's even possible to configure SSL on the POP3 service in Windows Server 2003. Sure, I could change the port number from the default 110 to 995, but how would I assign the certficate?
 
 I suppose this means I'll have to start looking at third-party email servers for demo purposes and learning about various mail-enabled features in other products and technologies, such as SharePoint. I really need something much more "lightweight" than Exchange to address my specific scenarios.
 
 The POP3 service in Windows Server 2003 was great for demo and training purposes -- while it lasted. I suppose another option is to simply use a different e-mail client instead of Outlook 2010, but I'm sure you can imagine why that option doesn't sound very appealing.
-
 
 > **Update (2010-04-27)**
 > 

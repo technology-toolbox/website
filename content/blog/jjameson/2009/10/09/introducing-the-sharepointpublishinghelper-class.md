@@ -12,11 +12,9 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In my [previous post](/blog/jjameson/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file), I described a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file.
 
@@ -33,9 +31,7 @@ Aside from the code to read data from the input file into a DataSet, the main wo
 - Publish a page (correctly handling page libraries that are configured for approval as well as those that are not configured for approval)
 - Delete a page by specifying the page URL name
 
-
 Here's the code for the `SharePointPublishingHelper` class:
-
 
 ```
 using System;
@@ -704,7 +700,6 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
     }
 }
 ```
-
 
 In addition to the `SharePointPublishingHelper` class, I often rely on several other custom SharePoint "helper" classes, such `SharePointListHelper` and `SharePointWebPartHelper`. These classes evolved over time by refactoring common code that was previously repeated in numerous places. In other words, as Scott Hanselman likes to say...a developer should always try to write DRY code (meaning, don't repeat yourself).
 

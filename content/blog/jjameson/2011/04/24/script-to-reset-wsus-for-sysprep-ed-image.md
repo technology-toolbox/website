@@ -14,17 +14,13 @@ tags: ["WSUS", "Infrastructure", "Virtualization", "Toolbox"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-
 Here's a useful script for those, like me, that [use SysPrep'ed images to create new virtual machines](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines) and also leverage Windows Server Update Services (WSUS) to keep machines up-to-date with the latest patches.
 
 ### Reset WSUS for SysPrep Image.cmd
-
-
 
 ```
 net stop wuauserv
@@ -38,8 +34,6 @@ net start wuauserv
 
 wuauclt.exe /resetauthorization /detectnow
 ```
-
-
 
 I keep a copy of this script in my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) and run it after creating a new VM from a SysPrep'ed image.
 

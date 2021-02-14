@@ -11,11 +11,9 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Complementing the **Work Items **list that I described in a [previous post](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), we use a blog site (creatively called the "DevBlog") in Microsoft Office SharePoint Server (MOSS) 2007 to track the work items that each member of the Development team has committed to driving to resolved status each day. For a while, I was the "keeper" of the DevBlog -- meaning every morning I would gather the targeted work items for each developer and subsequently add a blog post listing each developer and his or her committed work items. Fortunately, we've since moved towards a more autonomous model where each developer is responsible for adding his or her own work items to the daily blog post.
 
@@ -25,7 +23,6 @@ In other words, blog post versioning does not work as expected when the **Posts 
 
 - **Require content approval for submitted items? - Yes**
 - **Create a version each time you edit an item in this list? - Yes**
-
 
 Ouch.
 
@@ -38,14 +35,12 @@ By default, when you create a new site based on the **Blog **template, the **Pos
 - **Require content approval for submitted items? - Yes**
 - **Create a version each time you edit an item in this list? - No**
 
-
 It appears that for blog posts, these two settings should be treated as "mutually exclusive."
 
 If you subsequently change the list settings to the following, then you'll find that versioning actually works as expected:
 
 - **Require content approval for submitted items? - No**
 - **Create a version each time you edit an item in this list? - Yes**
-
 
 Hopefully this helps others avoid this baffling situation.
 

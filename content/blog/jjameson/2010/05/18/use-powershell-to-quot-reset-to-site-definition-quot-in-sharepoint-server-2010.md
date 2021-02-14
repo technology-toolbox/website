@@ -14,23 +14,18 @@ tags: ["TFS", "
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 In [one of my posts last month](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided the following steps to "reghost"         all of the pages in a Team Foundation Server (TFS) project site:
 
 1. Browse to the Site Settings page for the site (e.g. [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 2. On the **Site Settings** page, in the **Site Actions **
-            section, click **Reset to site definition**.
+   section, click **Reset to site definition**.
 3. On the **Reset Page to Site Definition Version** page, click the option
-            to **Reset all pages in this site to site definition version**, and
-            then click **Reset**.
-
+   to **Reset all pages in this site to site definition version**, and
+   then click **Reset**.
 
 Today, I was about to perform this process manually on several sites, but then I         decided to spend a few minutes exploring the **Reset Page to Site Definition Version**         page (e.g. [http://cyclops/sites/Demo/\_layouts/reghost.aspx](http://cyclops/sites/Demo/_layouts/reghost.aspx)).
 
@@ -39,8 +34,6 @@ That's when I discovered the **[SPWeb.RevertAllDocumentContentStreams](http://ms
 Anyway, once you know about the method, it's very easy to call it from PowerShell.
 
 Here's a little script to reset all pages in a list of sites to the site definition         version:
-
-
 
 ```
 $sitesToReset =

@@ -11,24 +11,20 @@ tags: ["MOSS 2007"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 Hmmm...how should I phrase this?
 
 It has been a very *educational* couple of weeks on my current SharePoint  project.
 
-During the rebuild of our Test environment, the SharePoint Products and Technologies  Configuration Wizard failed when it was unable to find the **%SystemRoot%\System32\drivers\etc\hosts**file. We had encountered this error during the original installation on  the SSP server in the Test environment because someone had renamed the file from **hosts **to **hosts-old**. Therefore we suspected the  same problem this time around, thinking that perhaps there was some scheduled script  or group policy that was disabling local host name resolution.
+During the rebuild of our Test environment, the SharePoint Products and Technologies  Configuration Wizard failed when it was unable to find the **%SystemRoot%\System32\drivers\etc\hosts
+**file. We had encountered this error during the original installation on  the SSP server in the Test environment because someone had renamed the file from **hosts **to **hosts-old**. Therefore we suspected the  same problem this time around, thinking that perhaps there was some scheduled script  or group policy that was disabling local host name resolution.
 
 For those of you that may not have attempted to read the status messages as they  flash by in the Configuration Wizard, step 4 changes the permissions on the hosts  file to grant the WSS\_ADMIN\_WPG group the following permissions:
 
@@ -42,10 +38,7 @@ For those of you that may not have attempted to read the status messages as they
 - Delete
 - Read Permissions
 
-
 After recreating the hosts file, I was able to successfully complete the Configuration  Wizard (because the security settings on the hosts files could now be set in step  4). However, a short time later, I noticed the following in the event log:
-
-
 
 ```
 Application Server Administration job failed for service instance
@@ -68,15 +61,11 @@ File name: 'D:\WINNT\system32\drivers\etc\HOSTS'
    at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
 ```
 
-
-
 Argh! The hosts file has disappeared again!
 
 I restored the hosts file again and set the permissions manually for the WSS\_ADMIN\_WPG  group. However I noticed that it quickly disappeared again.
 
 I then restored the hosts file (yet) again, but did not give the WSS\_ADMIN\_WPG  group permission to delete the file. This resulted in the following event log entry:
-
-
 
 ```
 Application Server Administration job failed for service instance
@@ -95,8 +84,6 @@ System.UnauthorizedAccessException: Access to the path 'D:\WINNT\system32\driver
    at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
 ```
 
-
-
 Aha! So apparently the guilty party for deleting my hosts file isn't some malicious  system administrator or group policy setting, but rather it is the Windows SharePoint  Services Timer itself!
 
 It turns out that this is a bug in MOSS 2007 (although I am still waiting for  PSS to formally acknowledge that this is a bug). Nevertheless, I am convinced that  this is a bug. Here's why:
@@ -111,7 +98,6 @@ The workaround is to grant the following permissions for the WSS\_ADMIN\_WPG on 
 - Read Extended Attributes
 - Create Files / Write Data
 - Read Permissions
-
 
 For those of you that may be wondering why SharePoint needs access to the hosts  file at all, the answer is due to one of the configuration settings that you can  specify for **Office SharePoint Server Search**.
 

@@ -11,25 +11,20 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 In the [first part](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) of this series, I explained one approach for building Web sites         in Microsoft Office SharePoint Server (MOSS) 2007 based on [Web standards](http://en.wikipedia.org/wiki/Web_standards) and the [960 Grid System](http://960.gs). I had         intended on following up with a sample solution based on a fictitious company (AdventureWorks         Bicycles -- which should be familiar to anyone using SQL Server).
 
 However, two things really started to bother me as I began developing the sample:
 
 - The sample site became increasingly complex in terms of dependencies and deployment
-            (for example, readers interested in downloading and installing the sample SharePoint
-            site would need to first install the sample AdventureWorks OLTP database).
+  (for example, readers interested in downloading and installing the sample SharePoint
+  site would need to first install the sample AdventureWorks OLTP database).
 - Since I was the "designer" of the Web site, one could argue that the design was
-            "SharePoint-friendly" to begin with (in other words, the HTML and CSS used to render
-            the pages was created in such a way that it rendered "as expected" in MOSS 2007).
-
+  "SharePoint-friendly" to begin with (in other words, the HTML and CSS used to render
+  the pages was created in such a way that it rendered "as expected" in MOSS 2007).
 
 While the first issue didn't necessarily seem like a showstopper, the more I thought         about the second issue, the less value I saw in completing the sample -- eventually         to the point where I put it on the shelf.
 
@@ -40,20 +35,19 @@ I've mentioned [before](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-an
 Note that Bulletproof Web Design (at least the first edition that I read) is largely         based on handling variable text size (which, admittedly, is something we don't have         to worry nearly as much about these days thanks to browser "zoom" features). Nevertheless,         the concepts that Dan covers are invaluable to anyone tasked with creating Web sites.
 
 This year, I picked up Dan's newest book, [Handcrafted
-            CSS : More Bulletproof Web Design](http://amzn.com/0321643380). It's a short read, but nevertheless chock-full         of great tips and techniques for creating Web sites that dazzle the eyes. If you         haven't read this one yet, do yourself a favor and order it today.
+CSS : More Bulletproof Web Design](http://amzn.com/0321643380). It's a short read, but nevertheless chock-full         of great tips and techniques for creating Web sites that dazzle the eyes. If you         haven't read this one yet, do yourself a favor and order it today.
 
 In Handcrafted CSS, Dan uses a sample site to explain various concepts and techniques.         The site for the fictitious Tugboat Coffee Company consists of only two pages, but         they are filled with lots of "bulletproof" HTML/CSS and even some "progressive enrichment"         (or, as more people call it, "[progressive
-            enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement)").
+enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement)").
 
 A few weeks ago, it occurred to me that Dan's sample site would also make a great         example for demonstrating Web standards design in SharePoint. Since it only contains         two pages, deployment should be a breeze. Furthermore, the design work was done         by actual "Web Designers" (i.e. Dan and his co-author, Ethan Marcotte) who -- and         don't take this the wrong way -- are probably completely oblivious to SharePoint.         Hmmm...perhaps a better way to say that is there's no mention of SharePoint anywhere         in Handcrafted CSS ;-)
 
 The following screenshot shows the Tugboat home page:
 
 ![Tugboat - Home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png)
-            Figure 1: Tugboat - Home page
+Figure 1: Tugboat - Home page
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
-
 
 If you haven't yet read Handcrafted CSS, please take a few moments to appreciate         Dan's elegant work -- or, heck, if you just ordered the book and simply can't wait         to see the actual site in action, head on over to [http://handcraftedcss.com](http://handcraftedcss.com) and download the sample for yourself. [Note that         I captured the screenshot above with the browser width set to 1024 pixels, so you         won't be able to experience the site's fluid layout simply by viewing the static         image above.]
 
@@ -67,7 +61,6 @@ With that in mind, the following scenario was identified for the first milestone
 
 - View Tugboat home page in SharePoint
 
-
 While I know the Tugboat Coffee Company would benefit immensely from a multitude         of SharePoint features (e.g. using a SharePoint list to store the quotes that are         shown in the "Press" section of the home page), it is typically wise to start with         a simple solution and introduce complexity over time (in other words, as our project         stakeholders gain confidence in our abilties to deliver on-time and within budget         ;-) ).
 
 In order to manage the Tugboat sample solution, I created a new project in Team         Foundation Server 2010 (using the [new Scrum template for TFS](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)) and created a bunch of work items (partly because         it's just so darn easy using Microsoft Excel and a little copy/paste). I subsequently         created a new Visual Studio solution and added my "standard" list of project items         (e.g. SharedAssemblyInfo.cs).
@@ -75,16 +68,14 @@ In order to manage the Tugboat sample solution, I created a new project in Team 
 For "Sprint 1", the Development team (which is comprised entirely of one person         -- *me*) committed to the following product backlog items:
 
 - Home page
-    - Masthead
-    - Find Location (static HTML)
-    - Weekly Specials (static HTML)
-    - News (static HTML)
-    - Drink Menu (static HTML)
-    - Reviews (static HTML) -- i.e. quotes within the "Press" section
-
+  - Masthead
+  - Find Location (static HTML)
+  - Weekly Specials (static HTML)
+  - News (static HTML)
+  - Drink Menu (static HTML)
+  - Reviews (static HTML) -- i.e. quotes within the "Press" section
 
 Here are the corresponding work items that I added to the TFS project (note that         these are in addition to the "default" work items listed in [my previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)):
-
 
 <caption>            Initial work items for the Tugboat project (partial list)</caption>|                     Work Item Type<br>                 |                     Title<br>                 |
 | --- | --- |
@@ -100,40 +91,35 @@ Here are the corresponding work items that I added to the TFS project (note that
 |                     Task<br>                 |                     Create HomeSiteConfiguration feature<br>                 |
 |                     Task<br>                 |                     Create deployment scripts for SharePoint WSPs and features<br>                 |
 |                     Task<br>                 |                     Create scripts to build/rebuild Web application<br>                 |
-
-
 The "create prototype" task was a really easy one to complete in this particular         case (since Dan and Ethan did all the work already), but an important one nonetheless.         When developing a Web site that will run in SharePoint, I almost always try to have         a static HTML prototype that I can refer to and use for quickly mocking up new features.         In general, it will be much faster to develop and refine your HTML/CSS using a tool         like Microsoft Expression Web, rather than trying to do the same on a "live" SharePoint         site (i.e. your local development VM) using SharePoint Designer.
-
 
 > **Tip**
 > 
 >             I typically check the prototype in on the Dev branch (e.g. $/Tugboat/Dev/TugboatPrototype)
 >             instead of the Main branch, since it's not technically part of the solution.
 
-
 The next task was to create the master page for the Tugboat site. I started with         the minimal master page provided on MSDN and then applied some of the changes described         in part 1 of this series, including inserting some additional ContentPlaceHolder         controls just in case I ever want to use the Tugboat master page in place of application.master.         Note that I added the master page in the Tugboat.Web.Publishing.Layouts feature         (which is very similar to the out-of-the-box PublishingLayouts feature).
 
 Then I added a Themes folder to the feature along with "Theme1" containing the CSS         files and corresponding images from the Tugboat sample site. At this point, the         Tugboat.Web.Publishing.Layouts feature looked like this:
 
 - Publishing
-    - Layouts
-        - Themes
-            - Theme1
-                - css
-                    - enriched.css
-                    - ie.css
-                    - master.css
-                    - reset.css
-                    - screen.css
-                - img
-                    - h-bg-bottom.gif
-                    - icon-toggle.gif
-                    - input-bg.gif
-                    - logo-lofi.gif
-                    - map-shadow.gif
-    - MasterPages
-        - Tugboat.master
-
+  - Layouts
+    - Themes
+      - Theme1
+        - css
+          - enriched.css
+          - ie.css
+          - master.css
+          - reset.css
+          - screen.css
+        - img
+          - h-bg-bottom.gif
+          - icon-toggle.gif
+          - input-bg.gif
+          - logo-lofi.gif
+          - map-shadow.gif
+  - MasterPages
+    - Tugboat.master
 
 Note that I only included the images in the Theme1 folder that are referenced in         the corresponding CSS files. (There are a number of other images in the Tugboat         sample site, but there are better places to put these, depending on their usage.         More on that later.)
 
@@ -150,10 +136,9 @@ Therefore I knew that I needed a Web Part zone above the PageContent field in or
 Here is a "wireframe" I put together to help visualize the various fields and Web         Parts on the Tugboat home page:
 
 ![Tugboat - Home page (wireframe)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home-Page-Layout.png)
-            Figure 2: Tugboat - Home page (wireframe)
+Figure 2: Tugboat - Home page (wireframe)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home-Page-Layout.png)
-
 
 Next, I created a custom page layout (TugboatWelcomePageLayout1.aspx) for the site.         As the name implies, I'm using the OOTB Welcome Page content type.
 
@@ -164,20 +149,17 @@ Suppose that Tugboat decides to change the home page of the site in order to add
 The following picture illustrates the various fields and Web Part zones for TugboatWelcomePageLayout1:
 
 ![TugboatWelcomePageLayout1](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-WelcomePageLayout1.png)
-            Figure 3: TugboatWelcomePageLayout1
-
+Figure 3: TugboatWelcomePageLayout1
 
 As I mentioned before, for Sprint 1, I'll just be using the PageContent field and         a couple of the Web Part zones (**Top Left Zone **and **Top Right
-            Zone**). Well, actually, in the end I'll only be using the **Top Right
-                Zone**. "Why?" you ask. Keep reading.
+Zone**). Well, actually, in the end I'll only be using the **Top Right
+Zone**. "Why?" you ask. Keep reading.
 
 Note that in order to evaluate the look-and-feel of the site within SharePoint,         I started by copying the HTML directly from the static prototype and pasting it         into SharePoint (i.e. into the PageContent field, for the main content, and the         Content Editor Web Part, for the secondary content).
 
 At that point, the SharePoint site looked very similar to Dan's original design,         but some things were a little off. For example, the font style didn't look right         and some of the text was a little larger than what it should have been. Also, the         color of the links in the **Drink Menu** section was way off.
 
 Consequently I added a new CSS file (called SharePointFixes.css) containing the         following:
-
-
 
 ```
 /* =core (SharePoint core.css overrides)
@@ -217,8 +199,6 @@ Consequently I added a new CSS file (called SharePointFixes.css) containing the 
 }
 ```
 
-
-
 I really wish the "inherit" trick worked as well in Internet Explorer as it does         in Firefox. Having to duplicate the CSS rules in SharePointFixes.css certainly isn't         ideal (it means we would need to change them in multiple places if the designers         changed their minds on which particular font the site should use).
 
 Note that I talked more about overriding SharePoint CSS rules in part 1 of this         series.
@@ -238,9 +218,8 @@ Hence I like to use one or more "\*Configuration" features whose sole purpose is
 1. Set the master page for the site (SPWeb) to Tugboat.master.
 2. Upload the various images referenced on the home page (e.g. boat.jpg) to the **            PublishingImages** library.
 3. Configure the default page for the site (i.e. change the page layout to TugboatWelcomePageLayout1,
-            set the **PageContent **field to render the main content, add the Content
-            Editor Web Part to render the secondary content, and add an instance of the FindLocationWebPart).
-
+   set the **PageContent **field to render the main content, add the Content
+   Editor Web Part to render the secondary content, and add an instance of the FindLocationWebPart).
 
 Fortunately, having done this kind of stuff many times in the past, it didn't take         very long to write that code and mark the corresponding task as "Done."
 
@@ -257,18 +236,16 @@ At that point, I thought I was done. With the jQuery script in place, the "flyou
 It worked as expected in Firefox, as shown in the following screenshot:
 
 ![&quot;Find a Location&quot; map (Firefox)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-Firefox.png)
-            Figure 4: "Find a Location" map (Firefox)
+Figure 4: "Find a Location" map (Firefox)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-Firefox.png)
-
 
 However, take a look at the following screenshot that shows the exact same HTML         rendered using IE8:
 
 ![&quot;Find a Location&quot; map (IE8)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-IE8.png)
-            Figure 5: "Find a Location" map (IE8)
+Figure 5: "Find a Location" map (IE8)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-IE8.png)
-
 
 Notice how the map completely obscures the secondary content (e.g. **Drink Menu**)?         Obviously that's not the way the designer, Dan, intended for it to work. [Note that         this doesn't happen in IE8 when viewing the static HTML site (in other words, outside         of SharePoint).]
 
@@ -281,85 +258,69 @@ For those of you that have somehow managed to make it this far, here are the ins
 To deploy the Tugboat sample site to SharePoint:
 
 1. Click **Start**, point to **All Programs**, point to **            Accessories**, and right-click **Command Prompt**, and then
-            click **Run as administrator**.
+   click **Run as administrator**.
+
 2. At the command prompt, type the following command to set the enviroment variable
-            corresponding to a local (developer) environment:
-
-
-
-    ```
-    set TUGBOAT_URL=http://tugboatcoffee-local
-    ```
-
-
-
+   corresponding to a local (developer) environment:
+   
+   ```
+   set TUGBOAT_URL=http://tugboatcoffee-local
+   ```
 
 > **Note**
 > 
 >                     While you don't have to use this URL, it is recommended for developer environments
 >                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 >                     when deploying and retracting the solution.
+
 3. Set environment variables to specify the credentials to use for the Tugboat application
-            pool:
-
-
-
-
-    ```
-    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
-    ```
-
-
-
-    ```
-    set TUGBOAT_APP_POOL_PASSWORD={password}
-    ```
-
-
-
+   pool:
+   
+   ```
+   set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+   ```
+   
+   ```
+   set TUGBOAT_APP_POOL_PASSWORD={password}
+   ```
 
 > **Important**
 > 
 >                     Be sure to specify a valid local or domain user.
+
 4. Change to the folder containing the deployment scripts:
+   
+   ```
+   cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
+   ```
 
-
-
-    ```
-    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
-    ```
 5. Type the following command:
+   
+   ```
+   "Create Web Applications.cmd"
+   ```
 
-
-
-    ```
-    "Create Web Applications.cmd"
-    ```
 6. Wait for the new Web application and corresponding site collection to be created,
-            and then type the following command:
+   and then type the following command:
+   
+   ```
+   "Add Solutions.cmd"
+   ```
 
-
-
-    ```
-    "Add Solutions.cmd"
-    ```
 7. Wait for the solution to be added and then type the following command:
+   
+   ```
+   "Deploy Solutions.cmd"
+   ```
 
-
-
-    ```
-    "Deploy Solutions.cmd"
-    ```
 8. Wait for the solution to be deployed and then type the following command:
+   
+   ```
+   "Activate Features.cmd"
+   ```
 
-
-
-    ```
-    "Activate Features.cmd"
-    ```
 9. Wait for the feature activations to complete, and then minimize or close the command
-            prompt.
-
+   prompt.
 
 That's it! You're done.
 

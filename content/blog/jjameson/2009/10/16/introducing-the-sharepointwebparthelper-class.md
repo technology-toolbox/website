@@ -12,11 +12,9 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In a previous post, I introduced the [DR.DADA approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) and how I typically use the concept of a [FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) to automatically configure one or more aspects of a SharePoint site when activating my feature.
 
@@ -26,7 +24,6 @@ For example, on my latest project, we needed a login page as well as a legal dis
 2. Populates the page content on the /Public/Pages/default.aspx page and adds an instance of a custom Login Form Web Part to the page
 3. Creates the /Public/Pages/Disclaimer.aspx page and populates its default content
 
-
 I've already introduced the `SharePointPublishingHelper` class that performs the bulk of the work in creating and configuring publishing pages. In this post, I want to cover the `SharePointWebPartHelper` class. Like the `SharePointPublishingHelper` class, the `SharePointWebPartHelper` class is simply a collection of helper methods for the SharePoint API.
 
 `SharePointWebPartHelper` makes it really easy to:
@@ -35,11 +32,9 @@ I've already introduced the `SharePointPublishingHelper` class that performs the
 - Ensure a Web Part exists on a page (creating a new Web Part as necessary)
 - Ensuring a [ContentEditorWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.contenteditorwebpart.aspx) exists on a page and that it is configured with the specified HTML content and title (as well as removing the "chrome", since -- at least in my experience -- you don't want to show this to users for this type of Web Part)
 
-
 Note that one could argue that the stuff specific to the Content Editor Web Part doesn't really belong in this class, but nevertheless that's where it ended up after refactoring the code a few years ago on the Agilent Technologies project. [Actually, I believe it originally ended up in an even more generic `SharePointHelper` class, but I've since refactored it even further into the `SharePointWebPartHelper` class.]
 
 Anyway, here's the code for the `SharePointWebPartHelper` class:
-
 
 ```
 using System;
@@ -503,11 +498,9 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-
 Most of the code in the `SharePointWebPartHelper` class is very straightforward. The most interesting hack -- er, I mean *workaround* -- in the code is to handle the scenario where the `zoneIndex` is sometimes mysteriously incremented by more than one, but you can read more about this in a [previous post](/blog/jjameson/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex) -- if you are really interested.
 
 Using the `SharePointWebPartHelper` class couldn't be easier. For a simple example, consider the scenario that I mentioned earlier about adding a Login Form Web Part to a page:
-
 
 ```
 // Configure Web Parts
@@ -540,11 +533,9 @@ Using the `SharePointWebPartHelper` class couldn't be easier. For a simple examp
             }
 ```
 
-
 Just be sure to avoid [the memory leak in SPLimitedWebPartManager](/blog/jjameson/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables), like I show in the code example above.
 
 Here's another code example where I configured a bunch of Web Parts on a search results page:
-
 
 ```
 namespace Fabrikam.Web.Search.Configuration
@@ -729,7 +720,6 @@ namespace Fabrikam.Web.Search.Configuration
     }
 }
 ```
-
 
 Even though I didn't add any comments to this (rather lengthy) method, I think you'll find it is actually very easy to understand simply by reading the method names and parameters -- or at least that's what I hope for the people that are actually maintaining this code from my previous project ;-)
 

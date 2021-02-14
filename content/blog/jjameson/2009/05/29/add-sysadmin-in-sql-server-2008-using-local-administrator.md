@@ -12,11 +12,9 @@ tags: ["SQL Server"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 A couple of months ago, I had to SysPrep a copy of one of my VMs in order to remove dependencies on my home domain (I had to work out of the Microsoft office for a couple of days because my DSL router cratered).
 
@@ -28,9 +26,7 @@ Based on my experience with SQL Server 2005, I remembered this was done as part 
 
 I tried an Internet search (using both Windows Live Search and Google) for:
 
-
 > add sysadmin SQL Server 2008
-
 
 However, neither search returned anything useful (at least not within the first two pages of results -- which is typically my threshold before I move on to a different approach to solving a problem).
 
@@ -38,7 +34,6 @@ Fortunately for me, I didn't have to wait long for a response to my inquiry to o
 
 <cite>Troubleshooting: Connecting to SQL Server When System Administrators Are Locked Out</cite>
 [http://msdn.microsoft.com/en-us/library/dd207004.aspx](http://msdn.microsoft.com/en-us/library/dd207004.aspx)
-
 
 I wish that would have come up in my search!
 

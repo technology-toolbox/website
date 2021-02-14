@@ -23,7 +23,7 @@ You are probably familiar with Microsoft code names based on places or locations
 
 One source of code names that I've used in the past are the names of constellations.
 
-Thus when it came time to name the project for creating the new TechnologyToolbox.com  site, I took a look at the [list of constellations 
+Thus when it came time to name the project for creating the new TechnologyToolbox.com  site, I took a look at the [list of constellations
 on Wikipedia](http://en.wikipedia.org/wiki/List_of_constellations). It didn't take long before I came across "[Caelum](http://en.wikipedia.org/wiki/Caelum_%28constellation%29)"  which means "the chisel" in Latin.
 
 Given the "Toolbox" portion of my company name, this sounded perfect! "Caelum"  would be the tool with which a new site is "sculpted" from nothingness into something  glorious. [Imagine trumpets blaring at this point...it's funnier.]
@@ -32,7 +32,8 @@ With that matter out of the way, I proceeded with the rest of the project setup.
 
 ### Create the project in Team Foundation Server
 
-Once I had a project name ("Caelum"), the next step was to create a corresponding  TFS project. I chose to use the **MSF for Agile Software Development v5.0**process template. Note that I use my "admin" account (**TECHTOOLBOX\jjameson-admin**)  to create TFS projects and complete other configuration changes.
+Once I had a project name ("Caelum"), the next step was to create a corresponding  TFS project. I chose to use the **MSF for Agile Software Development v5.0
+**process template. Note that I use my "admin" account (**TECHTOOLBOX\jjameson-admin**)  to create TFS projects and complete other configuration changes.
 
 Next I bulk-loaded my initial list of work items using Microsoft Excel. I've  listed these initial tasks in a [previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template), in case you are interested in what they are.
 
@@ -40,29 +41,27 @@ The first task is to configure the permissions for the TFS project and the secon
 
 ### Create initial source tree and Visual Studio solution
 
-At this point, I switched from my admin account to my regular account, created  a Visual Studio solution and a couple of projects (i.e. **CoreServices**and **CoreServices.DeveloperTests**), and subsequently checked  these in to TFS, as illustrated in the following screenshot.
+At this point, I switched from my admin account to my regular account, created  a Visual Studio solution and a couple of projects (i.e. **CoreServices
+**and **CoreServices.DeveloperTests**), and subsequently checked  these in to TFS, as illustrated in the following screenshot.
 
 ![Caelum - Initial source tree and Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Initial%20source%20tree.png)
-	Figure 1: Caelum - Initial source tree and Visual Studio solution
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Initial%20source%20tree.png) 
+    Figure 1: Caelum - Initial source tree and Visual Studio solution
 
-
+[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Initial%20source%20tree.png)
 
 > **Note**
 > 
+> I recommend creating folders like **Documents** (or "docs"
+> if you prefer that instead), **References** (or "lib"),
+> **Source** (or "src"), and **Tools** under the
+> **Main **folder.
 > 
-> I recommend creating folders like **Documents** (or "docs" 
-> 	if you prefer that instead), **References** (or "lib"),
-> 	**Source** (or "src"), and **Tools** under the
-> 	**Main **folder.
-> 
-> Shortly after checking in this changeset, I realized that I forgot to 
-> 	add a **Source** folder under **Main **and put 
-> 	the solution in there -- instead of in the **Main** folder. 
-> 	Consequently I moved the items to the correct location and checked in the 
-> 	corresponding changeset.
-
+> Shortly after checking in this changeset, I realized that I forgot to
+> add a **Source** folder under **Main **and put
+> the solution in there -- instead of in the **Main** folder.
+> Consequently I moved the items to the correct location and checked in the
+> corresponding changeset.
 
 ### Add custom dictionary to Visual Studio solution
 
@@ -70,7 +69,6 @@ Next, I added a custom dictionary to the Visual Studio solution, as described  i
 
 <cite>CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio)
-
 
 ### Generate strong name key and configure assembly signing
 
@@ -83,7 +81,6 @@ For more details about how to do this, refer to the following post:
 <cite>Linked Files in Visual Studio Solutions</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects)
 
-
 ### Create custom rule set and enable code analysis
 
 People often say "it's the little things in life..."
@@ -94,20 +91,14 @@ Fortunately, in Visual Studio 2010, the list of code analysis rules that are  en
 
 Even better, you can easily create your own custom rule set that specifies *all* code analysis rules should be enabled and any violations should be  treated as errors:
 
-
-
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="TechnologyToolbox.Caelum.ruleset"
 ```
 
-
-
 ```
 Description="Custom rule set for the TechnologyToolbox.Caelum solution."
 ```
-
-
 
 ```
 ToolsVersion="10.0">
@@ -115,19 +106,18 @@ ToolsVersion="10.0">
 </RuleSet>
 ```
 
-
-
 This is how I prefer to start out. I then disable specific rules if I find them  to be inapplicable and I can't otherwise easily disable them in GlobalSuppressions.cs.
 
 ### Add "SharedAssemblyInfo" and "AssemblyVersionInfo" files to Visual Studio solution
 
-Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs**files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
+Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs
+**files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
 
 <cite>Shared Assembly Info in Visual Studio Projects</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions)
 
+### Create custom Team Foundation Build workflow to increment the assembly version
 
-### Create custom Team Foundation Build workflow to increment the assembly version 
 with each build
 
 As described in one of my Top 10 most popular blog posts, I strongly recommend  that you increment the assembly version automatically as part of every build performed  on the Build Server (i.e. through TFS Build):
@@ -135,12 +125,10 @@ As described in one of my Top 10 most popular blog posts, I strongly recommend  
 <cite>Best Practices for .NET Assembly Versioning </cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 
-
 If you are not sure how to do this, and you are using TFS 2010, refer to the  following post for step-by-step details on how to accomplish this:
 
 <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
-
 
 ### Configure TFS check-in policies
 
@@ -149,18 +137,17 @@ With the basic setup of the project completed, I switched back to my admin accou
 <cite>Recommended Check-In Policies for Team Foundation Server</cite>
 [https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server)
 
-
 If you are wondering why I didn't configure these check-in policies earlier,  the answer is that I do it this way in order to avoid issues when enabling code  analysis on the Visual Studio projects. For example if, like me, you configure code  analysis to treat all violations as errors (instead of warnings) then your solution  won't build if you haven't yet generated a strong name key and configured assembly  signing. And if your solution doesn't build (and you've added a "Builds" check-in  policy), then you can't check-in a changeset (unless you override the warning, but  I rarely choose to do that).
 
 ### Create Web site project
 
-With a solid foundation in place, the final step was to create a new ASP.NET  Web project and add it to the solution. Note that like the **CoreServices**and **CoreServices.DeveloperTests **projects, the **Website** project includes the following linked files:
+With a solid foundation in place, the final step was to create a new ASP.NET  Web project and add it to the solution. Note that like the **CoreServices
+**and **CoreServices.DeveloperTests **projects, the **Website** project includes the following linked files:
 
 - AssemblyVersionInfo.cs
 - SharedAssemblyInfo.cs
 - CustomDictionary.xml
 - TechnologyToolbox.Caelum.snk
-
 
 Similarly, it is configured to treat all warnings as errors (under the **Build **section in the project properties) and it uses the same code  analysis rule set described earlier.
 

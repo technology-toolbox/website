@@ -9,18 +9,13 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 
 > **Note**
 > 
-> 
-> 	This post originally appeared on my MSDN blog:
-> 
-> 
+> This post originally appeared on my MSDN blog:
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx)
 > 
-> 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
-> 	ever goes away.
-
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 A common question that frequently arises both with customers and fellow consultants  is what do I recommend for logging? As experienced software developers, we know  that there are going to be errors in our solution -- as well as other important  events that we want to monitor -- and therefore we know we need a robust way of  logging these.
 
@@ -34,36 +29,42 @@ Before introducing my logging feature, it is first important to understand the  
 
 The primary goals of the logging feature are:
 
-- Provide solution components a way of logging messages of various levels (e.g. errors, warnings, information) with minimal custom code.
-- Ensure log messages can be enabled in all environments (e.g. DEV, TEST, and PROD); in other words, in both Debug and Release builds (unlike the`Debug.WriteLine` method, which relies on the DEBUG conditional compilation constant).
-- Through configuration, enable log messages to be routed to various outputs such as a text file, the Windows Event Log, or[ASP.NET tracing](http://msdn.microsoft.com/en-us/library/bb386420.aspx).
-- Ensure that different levels of log messages can be filtered and potentially routed to different outputs; for example, log all messages to the console, but only log errors and warnings to a text file.
-
+- Provide solution components a way of logging messages of various levels
+  (e.g. errors, warnings, information) with minimal custom code.
+- Ensure log messages can be enabled in all environments (e.g. DEV, TEST,
+  and PROD); in other words, in both Debug and Release builds (unlike the
+  `Debug.WriteLine` method, which relies on the DEBUG conditional compilation
+  constant).
+- Through configuration, enable log messages to be routed to various outputs
+  such as a text file, the Windows Event Log, or
+  [ASP.NET tracing](http://msdn.microsoft.com/en-us/library/bb386420.aspx).
+- Ensure that different levels of log messages can be filtered and potentially
+  routed to different outputs; for example, log all messages to the console, but
+  only log errors and warnings to a text file.
 
 Non-goals of the logging feature include:
 
-- Providing the fastest possible logging implementation; rather the performance impact of logging should be insignificant when compared with the "real" work performed by the solution components.
-- Changing logging configuration without reinitializing the solution; for example, to change the logging for an ASP.NET application, it is acceptable to restart the corresponding application pool.
-- Filtering log messages based on subsystems (or feature areas) of the solution; for example, when logging is enabled for debug messages, then log messages from all components are output.
-
+- Providing the fastest possible logging implementation; rather the performance
+  impact of logging should be insignificant when compared with the "real" work
+  performed by the solution components.
+- Changing logging configuration without reinitializing the solution; for
+  example, to change the logging for an ASP.NET application, it is acceptable
+  to restart the corresponding application pool.
+- Filtering log messages based on subsystems (or feature areas) of the solution;
+  for example, when logging is enabled for debug messages, then log messages from
+  all components are output.
 
 ### Introducing the Logger Class
 
 With the custom `Logger` class, logging a debug message is simply  a matter of calling a static method, specifying nothing more than a string containing  the message :
 
-
-
 ```
 Logger.LogDebug("Successfully loaded search results into DataSet.");
 ```
 
-
-
 This example shows how the `Logger` class achieves the primary design  goal. Note that there is no need to explicitly create objects within each class  -- or create additional classes within an assembly -- for logging purposes.
 
 Also note that the `Logger` class provides additional overloads to  easily format log messages:
-
-
 
 ```
 Logger.LogDebug(
@@ -75,11 +76,7 @@ Logger.LogDebug(
         resourceAssembly.FullName);
 ```
 
-
-
 Note that the `Logger.LogDebug` method is simply a convenient alternative  to the `Logger.Log` method:
-
-
 
 ```
 /// <summary>
@@ -94,22 +91,16 @@ Note that the `Logger.LogDebug` method is simply a convenient alternative  to th
         string message)
 ```
 
-
-
 Other methods such as `LogInfo` and `LogError` provide  similar overloads for convenience.
 
 The simplicity of the `Logger`class is made possible by the improved  tracing functionality introduced in the .NET Framework version 2.0. Specifically,  the `Logger`class is simply a "[wafer-thin](http://en.wikipedia.org/wiki/Mr_Creosote)"  wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
 
 The `Logger`class declares a singleton `TraceSource` that  is used to log all messages:
 
-
-
 ```
 private static TraceSource defaultTraceSource =
         new TraceSource("defaultTraceSource");
 ```
-
-
 
 Various listeners can then be configured to output log messages. Each type of  listener derives from [TraceListener](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelistener%28VS.80%29.aspx).
 
@@ -118,8 +109,6 @@ Note that the .NET Framework includes listeners for logging to a file, the Windo
 In my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-a-console-application), I introduce how to configure logging (starting out with a console  application).
 
 Here is the complete source for the `Logger` class:
-
-
 
 ```
 #define TRACE
@@ -336,18 +325,13 @@ namespace Fabrikam.Demo.CoreServices.Logging
 }
 ```
 
-
-
-
 > **Update 2010-03-20**
 > 
-> 
-> 	A newer version of the **Logger** class is available in the 
-> 	following post:
+> A newer version of the **Logger** class is available in the
+> following post:
 > 
 > <cite>Logging Exceptions in .NET Applications</cite>
 > [http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications)
-
 
 Note that the Logger.cs file actually includes `#define TRACE` at  the top of the file. This is because I originally wrote this class with an old version  of Visual Studio (which did not define this compilation constant by default when  creating new projects). Visual Studio 2008 projects include this in the project  options by default (for both Debug and Release configurations), so this is superfluous.
 

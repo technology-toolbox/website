@@ -12,18 +12,15 @@ tags: ["MOSS 2007", "WSS v3", "Visual Studio"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Since I seem to be on a roll this morning with blogging, I figured I might as well get one more post in before moving on to my "day job."
 
 During the process of authoring a different post earlier today, I stumbled across a bug while using the Code Metrics feature in Visual Studio 2008.
 
 After clicking the **Analyze** menu, and then clicking **Calculate Code Metrics for Solution**, I encountered errors similar to the following for several projects in the solution:
-
 
 > An error occurred while calculating code metrics for target file 'E:\NotBackedUp\...' in project ... The following error was encountered while reading module 'Microsoft.SharePoint': Could not resolve type: T ObjectModel.
 
@@ -45,7 +42,6 @@ References:
 - System.Web
 - System.Xml
 
-
 **PublicationLibrary.Workspaces.DeveloperTests** (i.e. the corresponding unit tests project)
 
 References:
@@ -56,7 +52,6 @@ References:
 - System.Data
 - System.Web
 - System.Xml
-
 
 With these references, Visual Studio is able to successfully compile both projects. However, it was only able to successfully calculate code metrics on the **PublicationLibrary.Workspaces** project; attempting to calculate code metrics on the second project yielded the aforementioned error.
 

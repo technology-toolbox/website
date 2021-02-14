@@ -12,11 +12,9 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3", "TFS"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 As I noted in my [previous post](/blog/jjameson/2009/11/18/the-copy-local-bug-in-visual-studio), I recently discovered that [my approach for building Web Solution Packages (WSPs)](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) in Microsoft Office SharePoint Server (MOSS) 2007 isn't compatible with Team Foundation Build.
 
@@ -42,22 +40,17 @@ The problem with relative paths is that Team Foundation Build uses a different f
 
 In other words, if you refer to a referenced assembly using something like:
 
-
 > ..\..\..\CoreServices\bin\%BUILD\_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
-
 
 then you will find that this works just fine when building through Visual Studio -- or even when compiling using TFSBuild.proj from the command line (a.k.a. a "Desktop Build"). However, if you then queue the build through Team Foundation Server, you'll find your build fails because the referenced assembly was actually output to a different folder.
 
 If you dive into the log file for the build, you will find that Team Foundation Build modifies the **OutDir **variable and sets it to something like:
 
-
 > C:\Users\svc-build\AppData\Local\Temp\Demo\Daily Build - Main\Binaries\Debug\
-
 
 So the trick to building WSPs with Team Foundation Build is to leverage the **OutDir **variable instead of relying on relative paths to referenced assemblies.
 
 Here is the updated DDF file based on [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
-
 
 ```
 ;
@@ -127,11 +120,9 @@ Layouts\Web\UI\WebControls\StyleDeclarations.ascx
 Layouts\MasterPages\FabrikamMinimal.master
 ```
 
-
 Note how I've replaced the BUILD\_CONFIGURATION variable with the OUT\_DIR variable. Not surprisingly, the OUT\_DIR variable in the DDF is specified similar to how BUILD\_CONFIGURATION was previously specified when calling makecab.exe. However, unlike the build configuration the OutDir variable will likely contain spaces as well as a trailing slash (which makecab.exe apparently doesn't like). Therefore we must quote the OutDir variable and append with "." if a trailing slash is found.
 
 Here is the corresponding update to the project file:
-
 
 ```
 <PropertyGroup>
@@ -147,7 +138,6 @@ Here is the corresponding update to the project file:
     <Exec Command="makecab /D OUT_DIR=$(QuotedOutDir) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;" />
   </Target>
 ```
-
 
 With these changes, the SharePoint WSP is successfully built regardless of whether it is compiled through Visual Studio, from the command line using MSBuild and the TFSBuild.proj file, or as an automated build using a Team Foundation Build server.
 

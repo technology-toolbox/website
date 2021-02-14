@@ -11,11 +11,9 @@ tags: ["SharePoint 2010", "PowerShell"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Suppose that you need to update a few SharePoint team sites to add a couple of links to the quick launch navigation. Assuming the number of sites to be updated is relatively small, then it is reasonable to manually apply the configuration changes via the **Site Settings **page on each site.
 
@@ -32,8 +30,6 @@ A few years ago, I wrote some code to manipulate the navigation elements on a te
 However, I'm still very new to the whole PowerShell thing, and I viewed this as a great "real world" opportunity to improve my skills. [As such, if you see areas for improvement in my PowerShell scripts, please don't hesitate to add a comment and let me know.]
 
 I started by writing some PowerShell script to export the quick launch navigation elements for a specific site to XML:
-
-
 
 ```
 # Exports the quick launch navigation for a SharePoint site as XML
@@ -75,11 +71,7 @@ $navigationXml = ExportQuickLaunchNavigation($web)
 $navigationXml.OuterXml
 ```
 
-
-
 Assuming the referenced site is based on the out-of-the-box Team Site template, the above PowerShell will output the following XML (without the nice formatting, of course):
-
-
 
 ```
 <QuickLaunch>
@@ -109,21 +101,18 @@ Assuming the referenced site is based on the out-of-the-box Team Site template, 
 </QuickLaunch>
 ```
 
-
-
 Note that each `<NavigationNode>`element may contain child `<NavigationNode>` elements (representing the hierarchical nature of the quick launch navigation).
 
 The above XML represents the following quick launch navigation:
 
 - Libraries
-    - Site Pages
-    - Shared Documents
+  - Site Pages
+  - Shared Documents
 - Lists
-    - Calendar
-    - Tasks
+  - Calendar
+  - Tasks
 - Discussions
-    - Team Discussion
-
+  - Team Discussion
 
 Once I had the export working, I then proceeded to work on the import process.
 
@@ -133,12 +122,9 @@ The "requirements" that I established for the import process are as follows:
 - Ensure the order of the links in the quick launch navigation matches the order specified in the XML.
 - Ignore any links in the quick launch navigation on the site that are not specified in the XML (in other words, don't delete links if there are no corresponding elements in the XML).
 
-
 The last item ensures that any custom links that might have been added to a team site are preserved.
 
 To understand how the import process should work, consider the following input XML:
-
-
 
 ```
 <QuickLaunch>
@@ -155,26 +141,21 @@ To understand how the import process should work, consider the following input X
 </QuickLaunch>
 ```
 
-
-
 Note that in this example, all of the navigation nodes are considered to be "new" (since none of them match the ones specified in the earlier output). Consequently, we should expect the quick launch navigation to resemble the following after the import completes:
 
 - My MSDN Blog
-    - My MSDN Blog - Dashboard
+  - My MSDN Blog - Dashboard
 - Team Web Access
 - Libraries
-    - Site Pages
-    - Shared Documents
+  - Site Pages
+  - Shared Documents
 - Lists
-    - Calendar
-    - Tasks
+  - Calendar
+  - Tasks
 - Discussions
-    - Team Discussion
-
+  - Team Discussion
 
 Here is the corresponding PowerShell script to import the quick launch navigation for a site:
-
-
 
 ```
 # Imports the quick launch navigation for a SharePoint site from the specified
@@ -290,8 +271,6 @@ $web = Get-SPWeb "http://foobar3/sites/Test"
 $DebugPreference = "Continue"
 ImportQuickLaunchNavigation $web $navigationXml
 ```
-
-
 
 If I wanted to add the new links after any existing navigation links, I would either need to specify the existing links in the input XML (which wouldn't require any changes to the corresponding PowerShell script) or extend the XML schema to support some sort of "position" attribute (which would add significant complexity to the script).
 

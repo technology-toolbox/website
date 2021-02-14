@@ -11,17 +11,13 @@ tags: ["MOSS 2007"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-
 For reasons completely unknown to me, the SharePoint team decided to ship Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a. *blob caching*) disabled. If you are not familiar with disk-based caching, here is a blurb from [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
 
-
 > Disk-based caching is one way in which you can achieve faster processing of content stored in a Web application database. If your Web application contains large files such as images and multimedia files, enabling disk-based caching improves page delivery time because the cache stores files on the front-end Web server, thus reducing database traffic.
-
 
 I also highly recommend becoming familiar with [the right way to clear the blob cache](http://msdn.microsoft.com/en-us/library/aa604896.aspx). [Hint: The wrong way to flush the cache is to simply delete the content within the location specified in the `<BlobCache>` configuration element. I can tell you from a personal experience a couple of years ago that this is a very bad idea, indeed -- especially on a shared environment ;-) ]
 
@@ -32,17 +28,16 @@ Consider a typical Web page on an Internet site served by MOSS 2007, containing 
 If you haven't personally seen this with your own eyes, I strongly encourage you to take a few minutes to fire up SQL Server Profiler (preferably on your local VM so you can isolate individual page requests) and start a trace with the following settings:
 
 - **General**
-    - Trace name: SharePoint Content *(or whatever you want to call it)*
+  - Trace name: SharePoint Content *(or whatever you want to call it)*
 - **Events Selection**
-    - Stored Procedures
-        - RPC:Completed
-    - TSQL
-        - SQL:BatchCompleted
-    - Column Filters
-        - DatabaseName Like {your content database} *(e.g. "WSS\_Content\_Fabrikam")*
-        - NTUserName Like {your app pool service account) *(e.g. "svc-fabrikam-dev")*
-        - TextData Not Like exec sp\_reset\_connection
-
+  - Stored Procedures
+    - RPC:Completed
+  - TSQL
+    - SQL:BatchCompleted
+  - Column Filters
+    - DatabaseName Like {your content database} *(e.g. "WSS\_Content\_Fabrikam")*
+    - NTUserName Like {your app pool service account) *(e.g. "svc-fabrikam-dev")*
+    - TextData Not Like exec sp\_reset\_connection
 
 These settings will filter out lots of "noise" -- such as requests by the SharePoint Timer jobs that continually run in the background -- and show you just the SQL traffic necessary to render pages on the site.
 
@@ -61,11 +56,9 @@ Once you enable disk-based caching, two important things happen:
 1. An HTTP header (e.g. `Cache-Control: public, max-age=86400`) is added to the response for each file type specified using the `path` attribute of the `BlobCache` element. (Note that "\_layouts" items are cached differently than, for example, items in the **Style Library**). This explicit `Cache-Control` header greatly reduces the number of HTTP requests for clients that have already downloaded the various resource files (by eliminating the 304's mentioned before).
 2. For clients that haven't yet downloaded the various resources, SharePoint does not have to call the `proc_FetchDocForHttpGet` sproc to determine whether each file has been unghosted (customized). [Note that when you enable disk-based caching, a background process polls the database to check for updates -- as observed in SQL Server Profiler.]
 
-
 I encourage you to repeat the SQL Server Profiler trace after setting `enabled="true"` in the `BlobCache` element of your Web.config files and browsing to the home page of your site. You will see the number of SQL roundtrips is greatly reduced.
 
 So, unless you just have lots of excess capacity on your SQL Server cluster (and therefore don't mind lots of extraneous database roundtrips), I hope you don't consider going live without enabling disk-based caching.
-
 
 > **Update (2009-03-28)**
 > 

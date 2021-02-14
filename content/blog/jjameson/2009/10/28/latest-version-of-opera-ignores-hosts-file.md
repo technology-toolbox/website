@@ -12,11 +12,9 @@ tags: ["Web Development"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 As I mentioned in my [previous post](/blog/jjameson/2009/10/29/troubleshooting-layout-problems-with-safari), I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser.
 

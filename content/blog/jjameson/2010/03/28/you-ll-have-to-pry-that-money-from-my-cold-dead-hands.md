@@ -13,11 +13,9 @@ tags: ["Personal"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've been using Microsoft Money for as long as I can remember.
 
@@ -37,7 +35,6 @@ The first was a series of posts comparing the most popular alternatives to Micro
 
 <cite>Replacing Microsoft Money, Part 1: Requirements. 2009-08-24.</cite>
 [http://thefinancebuff.com/2009/08/replacing-microsoft-money-part-1-requirements.html](http://thefinancebuff.com/2009/08/replacing-microsoft-money-part-1-requirements.html)
-
 
 Things start to get really interesting in Part 4 of that series. One of the comments in Part 5 led me to the [Microsoft Money Offline Weblog](http://microsoftmoneyoffline.wordpress.com/).
 

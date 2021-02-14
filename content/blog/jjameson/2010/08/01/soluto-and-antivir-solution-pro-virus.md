@@ -12,20 +12,14 @@ tags: ["Infrastructure", "Windows 7"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
-
 
 > **Update (2010-08-05)**
 > 
 >             Note that I was unable to reproduce the virus infection after installing Soluto
 >             on a different environment. I encourage you to read [my next post](/blog/jjameson/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus) instead of -- or in addition to -- this post.
-
 
 In one of the sessions I attended last week at TechReady (an internal training conference         at Microsoft), the speaker mentioned a new piece of "anti-frustration software"         called [Soluto](http://www.soluto.com) which analyzes the boot time of         your PC. It certainly sounded intriguing and I made a note to take a look at it         when I got back home from Seattle.
 
@@ -33,15 +27,14 @@ This morning I installed Soluto on my Windows 7 x64 desktop at home. Everything 
 
 Soluto reported that my boot time was 1 minute 27 seconds (showing how that timeline         was broken down loading various applications). It also recommended that I disable         the Microsoft Office Groove client as well as Adobe Acrobat Reader (both of which         seemed reasonable given that I never use Groove on this particular machine and I         rarely view PDF documents). Soluto also discovered some "unrecognized" programs         and prompted me for permission to connect to the PC Genome project to attempt to         identity them.
 
-Unfortunately, after a few minutes I discovered that my PC was infected with the         [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&amp;go=&amp;form=QBNT2). This is a particularly nasty virus because it         disguises itself as an anti-virus program, disables other security measures, and         subsequently attempts to gather personal information. For example, when I attempted         to launch Microsoft Security Essentials, I received a message stating that the program         was infected. The virus also set the proxy on Internet Explorer to 127.0.0.1:5643         (which redirected all HTTP requests through the virus, undoubtedly in an attempt         to steal personal information).
+Unfortunately, after a few minutes I discovered that my PC was infected with the         [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&go=&form=QBNT2). This is a particularly nasty virus because it         disguises itself as an anti-virus program, disables other security measures, and         subsequently attempts to gather personal information. For example, when I attempted         to launch Microsoft Security Essentials, I received a message stating that the program         was infected. The virus also set the proxy on Internet Explorer to 127.0.0.1:5643         (which redirected all HTTP requests through the virus, undoubtedly in an attempt         to steal personal information).
 
 I managed to avoid the land mines with the virus and quickly removed Soluto (which         also removed Antivir Solution Pro). I was then able to start Microsoft Security         Essentials, at which point it detected a Trojan horse on my computer (as shown in         the screenshot below).
 
 ![Microsoft Security Essentials - trojans](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Microsoft%20Security%20Essentials%20-%20trojans.png)
-            Figure 1: Microsoft Security Essentials - trojans
+Figure 1: Microsoft Security Essentials - trojans
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Microsoft%20Security%20Essentials%20-%20trojans.png)
-
 
 I am now running a "Full scan" with Microsoft Security Essentials just to be safe.
 

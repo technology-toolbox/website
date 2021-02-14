@@ -12,48 +12,41 @@ tags: ["MOSS 2007", "ISA Server"]
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 In my [previous post](/blog/jjameson/2007/06/09/virtual-server-issues), I talked about splitting our Microsoft Office SharePoint         Server (MOSS) 2007 Development environment (DEV) into multiple VMs. What I did not         mention, however, is the nasty bug in Windows Update that I encountered along the         way.
 
 Before I can explain the bug I first need to describe the environment. The following         model shows the important pieces of the environment.
 
 ![MOSS 2007 development environment](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS-2007-Development-Environment.jpg "MOSS 2007 development environment")
-            Figure 1: MOSS 2007 development environment
+Figure 1: MOSS 2007 development environment
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS-2007-Development-Environment.jpg)
-
 
 DEV is comprised of five VMs running on a single Virtual Server 2005 host:
 
 - DC1 - Active Directory domain controller for our development domain
 - SQL1 - SQL Server
 - SSP1 - MOSS 2007 Shared Services Provider (hosts Central Administration and indexes
-                content)
+  content)
 - WEB1 - MOSS 2007 Web server (hosts various Web applications and provides search
-                functionality)
+  functionality)
 - ISA1 - ISA Server
-
 
 ISA Server is used to securely publish the Web applications (in other words, it         allows us to access DEV without having to TermServ into the Virtual Server host,         launch VMRC, and browse to a site). It also acts as the gateway for the DEV VMs         so that they can access other (physical) servers outside DEV (for example, to copy         files to or from another server).
 
 Using the Virtual Server Administration Website, I created virtual networks (VLAN1         and VLAN2) to represent the "front-end" and "backend" networks for the MOSS servers.
 
 - VLAN1 is used internally within DEV for all infrastructure traffic (such as Kerberos
-                authentication and database queries).
+  authentication and database queries).
 - VLAN1 is also used to allow the various VMs to connect to the "outside world" (the
-                default gateway on the various DEV VMs is set to the IP address of ISA1 on VLAN1;
-                therefore ISA1 acts as the router between the physical network and the virtual network
-                used for the Development environment).
+  default gateway on the various DEV VMs is set to the IP address of ISA1 on VLAN1;
+  therefore ISA1 acts as the router between the physical network and the virtual network
+  used for the Development environment).
 - HTTP requests to DEV are routed through ISA1 on VLAN2 to WEB1 (for most Web applications)
-                or SSP1 (for Central Administration and the SSP administration site).
-
+  or SSP1 (for Central Administration and the SSP administration site).
 
 Also note that in my current customer's environment, you must use a proxy server         (PROXY1) in order to access the Internet. Note that PROXY1 is not an ISA Server         so I am not using the "firewall chaining" feature in ISA Server. This customer does         not use WPAD so you have to manually configure the proxy server and specify port         8088. This is where I discovered the bug in Windows Update...
 

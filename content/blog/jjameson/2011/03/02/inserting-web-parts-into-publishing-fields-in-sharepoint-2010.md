@@ -12,11 +12,9 @@ tags: ["SharePoint 2010"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In the sample SharePoint solution I provided in [one of last week's posts](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you may have noticed that when programmatically creating the custom **Sign In **page, I insert the custom Claims Login Form Web Part into the **Page Content **field.
 
@@ -27,12 +25,9 @@ The "trick" to rendering a Web Part inline with other content is to add the Web 
 <cite>Programmatically adding Web Parts to Rich Content in SharePoint 2010</cite>
 [http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/](http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/)
 
-
 Long ago, when I first started programmatically creating Publishing pages in MOSS 2007, I ended up creating a** [SharePointPublishingHelper](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class)** class. For those of you that haven't seen the original post (and don't want to take the time to read it now), you just need to understand that **SharePointPublishingHelper **is simply intended to make the process of creating, configuring, and approving Publishing pages in SharePoint as "painless" as possible.
 
 Consequently, for SharePoint Server 2010, I added the following method to **SharePointPublishingHelper**:
-
-
 
 ```
 public static void InsertWebPartIntoPageContent(
@@ -154,13 +149,9 @@ public static void InsertWebPartIntoPageContent(
         }
 ```
 
-
-
 If you rip out all of the error handling and logging, you'll see this new method is essentially the same as the code sample provided by Waldek in the post referenced above.
 
 Note that I also added an overload for the **InsertWebPartIntoPageContent** method that simply appends the Web Part to the end of the field (rather than replacing some arbitrary placeholder text):
-
-
 
 ```
 public static void InsertWebPartIntoPageContent(
@@ -176,11 +167,7 @@ public static void InsertWebPartIntoPageContent(
         }
 ```
 
-
-
 In order to create a new page and add a Web Part at a specific location within the page content, all I need to do is use a little bit of code to create the page, set the default page content, and subsequently replace the placeholder in the page content with the desired Web Part:
-
-
 
 ```
 private const string loginFormPlaceholder =
@@ -233,17 +220,11 @@ private const string loginFormPlaceholder =
         }
 ```
 
-
-
-
 > **Note**
 > 
 > The embedded CSS styles shown in the default page content above (e.g. margins, floats, and widths) are only intended for demonstration purposes. While I would have preferred to use something like the 960 Grid System instead, I was trying to minimize complexity in the original sample for the Claims Login Form Web Part.
 
-
 Note that the **ReplacePlaceholderWithLoginWebPart **method simply checks to see if the Web Part placeholder is found in the page content and, if it is, subsequently uses the **SharePointPublishingHelper.InsertWebPartIntoPageContent **method to replace it with an instance of the Web Part:
-
-
 
 ```
 private static void ReplacePlaceholderWithLoginWebPart(
@@ -274,8 +255,6 @@ private static void ReplacePlaceholderWithLoginWebPart(
             }
         }
 ```
-
-
 
 You might be wondering why I check to see if the placeholder exists in the content, rather than just assuming it will be there since it's obviously embedded in the default content specified in the code. The reason is because the Sign In page might have been modified by a content author after it was originally created and configured during activation of the feature. (This also explains the "set default content" logic as well as the code to skip the configuration of the page if it is already approved -- because we don't want to trample any customization to the page made after it was initially created.)
 

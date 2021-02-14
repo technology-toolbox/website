@@ -11,11 +11,9 @@ tags: ["Core Development", "Visual Studio"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Last week I installed Visual Studio 2010 on my primary desktop. This morning, I opened my Fabrikam.Demo solution in the new version of Visual Studio, but chose not to upgrade the target framework when prompted by Visual Studio during the solution upgrade. In other words, I chose to leave the **Target framework** project setting set to **.NET Framework 3.5** -- at least for now.
 
@@ -29,9 +27,7 @@ My first thought was "that's weird, the solution compiled without any warnings o
 
 Then I looked more closely at the error:
 
-
 > The type 'System.Web.Security.MembershipProvider' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
-
 
 Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target .NET Framework 4?
 
@@ -39,9 +35,7 @@ I then looked at the settings for the project that failed to build (Security.Dev
 
 Unfortunately, that's when I got the following warning:
 
-
 > Attempted re-targeting of the project has been canceled. You cannot change the specified .NET framework version or profile for a test project.
-
 
 After clicking the **OK** button, I noticed the project setting -- not suprisingly -- was changed back to **.NET Framework 4**.
 

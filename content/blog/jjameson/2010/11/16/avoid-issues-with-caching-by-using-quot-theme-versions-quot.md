@@ -12,11 +12,9 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In a previous [post](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) discussing Web standards design, I mentioned how I like to use "Theme" folders to organize CSS files and related images that define a specific look-and-feel for a site.
 
@@ -25,13 +23,12 @@ For example, suppose we are tasked with building the Internet site for Fabrikam 
 Suppose we choose to use the concept of a "Theme" folder as well as the [960 Grid System](http://960.gs) (as described in my previous post). Consequently, we end up with something like this:
 
 - Style Library
-    - Fabrikam
-        - Themes
-            - Theme1
-                - 960.css
-                - Fabrikam-Basic.css
-                - Fabrikam-Main.css
-
+  - Fabrikam
+    - Themes
+      - Theme1
+        - 960.css
+        - Fabrikam-Basic.css
+        - Fabrikam-Main.css
 
 As mentioned in my previous post, if we want to completely overhaul the look-and-feel of the Fabrikam site, all we need to do is create a new "Theme2" folder and add the new CSS files and images.
 
@@ -52,13 +49,12 @@ To avoid these issues with caching, I simply increment the "version" of the Them
 For example, suppose we've previously deployed the folders and files shown above to Production and now we need to add some new CSS rules to Fabrikam-Main.css. To ensure the "stale" CSS file is no longer retrieved from cache (either the local browser cache, a proxy server cache, or the SharePoint BLOB cache), we simply need to rename the **Theme1** folder to **Theme1.1**:
 
 - Style Library
-    - Fabrikam
-        - Themes
-            - Theme1.1
-                - 960.css
-                - Fabrikam-Basic.css
-                - Fabrikam-Main.css
-
+  - Fabrikam
+    - Themes
+      - Theme1.1
+        - 960.css
+        - Fabrikam-Basic.css
+        - Fabrikam-Main.css
 
 This rename is done in the source control system (not directly in the Style Library within SharePoint) and includes updating the custom Fabrikam master page(s) to refer to the **Theme1.1 **folder. When the new WSP is deployed, the Theme1.1 folder is created in the Style Library, the master page is updated, and users subsequently see the site rendered with the new CSS rules.
 
@@ -67,13 +63,12 @@ Note that this rename is done at most once per Sprint (i.e. release to Productio
 It is also worth noting that renaming the Theme folder will cause *all* files within the folder to be downloaded by clients the next time they connect to the site. Consequently, a much better alternative to the structure shown above is:
 
 - Style Library
-    - Fabrikam
-        - Themes
-            - 960.css
-            - Theme1.1
-                - Fabrikam-Basic.css
-                - Fabrikam-Main.css
-
+  - Fabrikam
+    - Themes
+      - 960.css
+      - Theme1.1
+        - Fabrikam-Basic.css
+        - Fabrikam-Main.css
 
 By moving the 960.css file up one level, we can avoid forcing users to download the same file each time the Theme folder is incremented.
 

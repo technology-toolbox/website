@@ -12,11 +12,9 @@ tags: ["TFS", "SharePoint 2010"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 In an [earlier post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview) today, I described how I recently upgraded from Team Foundation Server 2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).
 
@@ -28,13 +26,9 @@ Also note that Jon Tsao wrote a blog post a couple of months ago with the steps 
 
 I followed Jon's post to configure my environment, but I found that when I browsed to a new TFS project site, all of the Excel Web Parts displayed the following error:
 
-
 > The workbook cannot be opened.
 
-
 Looking at the event log on the SharePoint/TFS server, I found the following error occurred each time I requested the dashboard page:
-
-
 
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
@@ -50,8 +44,6 @@ Cannot open database "WSS_Content" requested by the login. The login failed.
 Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
 ```
 
-
-
 Note that in my environment, I use different service accounts for the TFS Web application and SharePoint service applications (e.g. Excel Services and the Secure Store Service). I *believe* Jon configured his environment such that the Web application and SharePoint service applications use the same service account.
 
 I say this because looking at SQL Server Management Studio, I discovered that while the service account for the app pool of the TFS Web application (TECHTOOLBOX\svc-web-tfs-test) had access to the underlying SharePoint content database (WSS\_Content), the service account for Excel Services (TECHTOOLBOX\svc-spserviceapp-tst) did not.
@@ -61,8 +53,6 @@ This explained the error that I was seeing on my test SharePoint/TFS server (CYC
 I confirmed that changing the identity of the application pool in IIS for Excel Services to be the same as the service account for Web application resolved the problem. However, my preference was to keep the discrete service accounts -- if at all possible.
 
 Consequently, I added the service account for Excel Services to the SharePoint content databases for the Web application. At first, I tried giving it "low privilege" access, but I discovered this only resulted in different errors in the event log when browsing to the dashboard page:
-
-
 
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
@@ -74,11 +64,7 @@ is included below.
 CREATE TABLE permission denied in database 'WSS_Content'.
 ```
 
-
-
 and
-
-
 
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
@@ -93,8 +79,6 @@ database must be upgraded to the same version and build level to return to
 compatibility range.
 ```
 
-
-
 While it's somewhat bewildering that Excel Services needs to create a table in the SharePoint content database, I decided to just go ahead and give the service account for Excel Services the same permissions to the content database as the service account for the Web application (which, is to say, db\_owner). [Yeah, I know, that's essentially the same as using a single service account for both the Web application and SharePoint service applications. Perhaps someday the TFS dashboards and Excel Services will "play nicely" together, even when configured with restricted access.]
 
 To add the the service account for SharePoint service applications to the underlying content databases:
@@ -105,20 +89,15 @@ To add the the service account for SharePoint service applications to the underl
 4. In **Object Explorer**, expand **Security**, and then expand **Logins**.
 5. Right-click the login corresponding to the service account used for SharePoint service applications (**TECHTOOLBOX\svc-spserviceapp**) and then click **Properties**.
 6. In the login properties dialog box,
-    1. On the **User Mapping **page, in the **Users mapped to the login** list, click the checkbox for the SharePoint content database (**WSS\_Content**), and then in the database role membership list, click the checkboxes for the following roles:
-        - **db\_owner**
-        - **public**
-    2. Repeat the previous step for any additional content databases that need to be accessed by Excel Services.
-    3. Click **OK**.
-
-
+   1. On the **User Mapping **page, in the **Users mapped to the login** list, click the checkbox for the SharePoint content database (**WSS\_Content**), and then in the database role membership list, click the checkboxes for the following roles:
+      - **db\_owner**
+      - **public**
+   2. Repeat the previous step for any additional content databases that need to be accessed by Excel Services.
+   3. Click **OK**.
 
 > **Update (2011-04-14)**
 > 
-> 
 > I should have updated this post long ago based on the comment added by "todh2" regarding granting access to the database. Instead of using SQL Server Management Studio to configure permissions on the content database for the service account, use a little PowerShell to invoke the **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx) **method:
-> 
-> 
 > 
 > ```
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -128,10 +107,7 @@ To add the the service account for SharePoint service applications to the underl
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
 > 
-> 
-> 
 > Thanks to "todh2" for pointing this out.
-
 
 Once this configuration change is made, the "workbook cannot be opened" error no longer occurs.
 

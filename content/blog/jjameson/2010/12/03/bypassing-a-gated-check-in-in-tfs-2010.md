@@ -11,11 +11,9 @@ tags: ["TFS"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 Yesterday someone contacted me about my earlier post on [Incrementing the Assembly Version for Each Build in TFS 2010](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010), because after following the steps I provided, he encountered a problem due to the fact that he had previously configured a gated check-in build that included the folder containing the AssemblyVersionInfo files.
 
@@ -30,10 +28,7 @@ To grant permission to bypass a gated check-in:
 3. In the **Select Users, Computers, or Groups **window, type the name of the service account used for TFS builds (e.g. **TECHTOOLBOX\svc-build**), and then click **OK**.
 4. In the **{Project} Security** window, in the list of permissions, for the **Override check-in validation by build **permission, click the checkbox in the **Allow **column, and then click **OK**.
 
-
 Then you simply need to modify the IncrementAssemblyVersion.proj file (described in my previous post) to specify the <samp>/bypass</samp> option with the <samp>tf.exe checkin</samp> command.
-
-
 
 ```
 <Exec
@@ -42,8 +37,6 @@ Then you simply need to modify the IncrementAssemblyVersion.proj file (described
 </Project>
 ```
 
-
-
 Once you have made these changes, the build that increments the assembly version will run without issue.
 
 For more information on gated check-ins, refer to the following:
@@ -51,9 +44,7 @@ For more information on gated check-ins, refer to the following:
 <cite>Define a Gated Check-In Build to Validate Changes</cite>
 [http://msdn.microsoft.com/en-us/library/dd787631.aspx](http://msdn.microsoft.com/en-us/library/dd787631.aspx)
 
-
 In case you are wondering how I configured the gated check-in build definition, here are the settings I used. If a setting is not listed in the following table, it means the default is used.
-
 
 <caption>Build Definition: "Gated Check-in - Main"</caption>| Section | Property | Value |
 | --- | --- | --- |
@@ -73,4 +64,5 @@ In case you are wondering how I configured the gated check-in build definition, 
 |   | Copy Outputs to Drop Folder | False |
 |   | Create Work Item on Failure | False |
 |   | Label Sources | False |
+
 

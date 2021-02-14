@@ -11,11 +11,9 @@ tags: ["TFS"]
 > 
 > This post originally appeared on my MSDN blog:
 > 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx)
 > 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
-
 
 I've been using the [new Scrum template](http://visualstudiogallery.msdn.microsoft.com/en-us/59ac03e3-df99-4776-be39-1917cbfc5d8e) for Team Foundation Server 2010 for a little over three weeks now -- not on a *real* project, admittedly, but rather on a sample project that I've been working on. [On the customer project that I've been working on for over a year now, we're "stuck" on TFS 2008 until the extranet TFS instance hosted by Microsoft is upgraded to the new version. Of course, even after TFS is upgraded, it's unlikely we would create a new project just to use the new process template, but anyway...]
 
@@ -39,7 +37,6 @@ If, however, you'd rather forego the MSF Agile workbooks, Excel reports, and das
 
 In case you are wondering what tasks I recommend starting out with on a new Scrum project, I'll include them here. Note that many of these tasks are from the original MSF Agile template and don't take more than a few minutes to complete. However, I still like to include them to serve as a "checklist" on new projects.
 
-
 <caption>Initial Tasks for a Scrum Project</caption>| Title | Description |
 | --- | --- |
 | Setup: Configure permissions for TFS project | Add team members to one of the four security groups: Builders, Contributors, Project Administrators, or Readers. To configure security, in the **Team Explorer **window, right-click the team project, point to **Team Project Settings **and then click **Group Membership**. |
@@ -56,4 +53,5 @@ In case you are wondering what tasks I recommend starting out with on a new Scru
 | Setup: Send email to users with TFS project details | Send an e-mail to team members that provides information about which Team Foundation Server they should connect to, and which team project they should use so they can get started working on the team project. |
 | Brainstorm and prioritize Product Backlog | The product backlog is a high-level list that is maintained throughout the entire project. It aggregates backlog items: broad descriptions of all potential features, prioritized as an absolute ordering by business value. It is therefore the "What" that will be built, sorted by importance. [[http://en.wikipedia.org/wiki/Scrum\_(development)](http://en.wikipedia.org/wiki/Scrum_%28development%29)] |
 | Define the Sprint Backlog (v1.0\Sprint 1) | In the "Sprint Planning Meeting" with the entire team, select what work is to be done in the sprint and prepare the Sprint Backlog that details the time it will take to do the work. |
+
 

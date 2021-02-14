@@ -12,23 +12,18 @@ tags: ["My System", "MOSS 2007", "
 > 
 >             This post originally appeared on my MSDN blog:
 > 
-> 
-> 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx)
 > 
-> 
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
-
 
 When helping customers migrate their Internet sites to Microsoft Office SharePoint         Server (MOSS) 2007, I've found it very helpful to create wireframes showing the         various fields, Web Parts, and master page content. For the last several years,         I've been doing this in Microsoft Office Visio, but you could certainly achieve         similar results with other tools, such as Expression Design.
 
 I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/20/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
 
 ![&quot;Generic&quot; page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Glycomics%20Solution).jpg)
-            Figure 1: "Generic" page
+Figure 1: "Generic" page
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Glycomics%20Solution%29.jpg)
-
 
 I then paste the screenshot into Visio.
 
@@ -41,46 +36,41 @@ To highlight these various fields, I create rectangles with corresponding text a
 We now have a "wireframe" that shows the various portions of the page with just         enough visibility of the underlying content to understand what each portion refers         to.
 
 ![&quot;Generic&quot; page (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Page%20Layout).jpg)
-            Figure 2: "Generic" page (Page Layout)
+Figure 2: "Generic" page (Page Layout)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Page%20Layout%29.jpg)
-
 
 Here is another example, based on a press release.
 
 ![Sample Press Release](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(857).jpg)
-            Figure 3: Sample Press Release
+Figure 3: Sample Press Release
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28857%29.jpg)
-
 
 Figure 4 shows the corresponding page layout.
 
 ![Press Release (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(Page%20Layout).jpg)
-            Figure 4: Press Release (Page Layout)
+Figure 4: Press Release (Page Layout)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28Page%20Layout%29.jpg)
 
-
 Note the importance of choosing good sample pages when mocking up the wireframes         for page layouts. I chose the example press release above based on the fact that         it had "additional contact" information. In other words, all press releases have         primary contact information (which I chose to map to the out-of-the-box **Contact
-            Name**, **Contact Phone**, and **Contact E-mail Address
-        **fields), but only some press releases have additional contacts -- which         may consist of one more more individuals. Rather than attempting to create separate         fields for each individual's name, phone number, and e-mail address, we chose to         simply provide a single field for greater flexibility.
+Name**, **Contact Phone**, and **Contact E-mail Address
+**fields), but only some press releases have additional contacts -- which         may consist of one more more individuals. Rather than attempting to create separate         fields for each individual's name, phone number, and e-mail address, we chose to         simply provide a single field for greater flexibility.
 
 Some pages may be comprised of both fields and Web Parts. For example, consider         the following product detail page.
 
 ![Sample product detail page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(6890N%20GC).jpg)
-            Figure 5: Sample product detail page
+Figure 5: Sample product detail page
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%286890N%20GC%29.jpg)
-
 
 In this scenario, the "Buy Zone" and "Announcements" features are both implemented         as individual Web Parts (due to the dynamic nature of this content). Figure 6 shows         the corresponding page layout, highlighting the Web Parts in a different color.
 
 ![Product Detail (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(Page%20Layout).jpg)
-            Figure 7: Product Detail (Page Layout)
+Figure 7: Product Detail (Page Layout)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%28Page%20Layout%29.jpg)
-
 
 Wireframes like these are valuable when you are trying to define the various content         types and page layouts, as well as when it comes time to document your various feature         specs. So the next time you start a SharePoint project -- or any Web development         project for that matter -- I recommend creating a **Screenshots** library         right from the start and adding artifacts like these. I also keep a copy of the         Visio file (typically named Models - Page Layouts.vsd) so I can quickly make changes         as the content types and page layouts evolve over time.
 
