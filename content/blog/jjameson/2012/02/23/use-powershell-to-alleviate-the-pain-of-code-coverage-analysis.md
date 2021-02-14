@@ -263,13 +263,13 @@ function UpdateGacAssemblyIfNecessary(
 ```
 
 > **Important**
-> 
+>
 >       This script does not currently support side-by-side versions of the 
 >       same assembly in the GAC. An exception is thrown if more than one matching 
 >       assembly is found in the GAC.
 
 > **Note**
-> 
+>
 >       I've seen a number of resources that suggest using the **[Publish.GacInstall](http://msdn.microsoft.com/en-us/library/system.enterpriseservices.internal.publish.gacinstall.aspx)**  method (in the **System.EnterpriseServices.Internal** namespace) to install an assembly in the GAC. However, I also 
 >       recall seeing an MSDN blog post that indicated this was only intended 
 >       to be used for adding COM interop assemblies and that **gacutil.exe** should be used instead. For Development environments, using

@@ -8,11 +8,11 @@ tags: ["Web Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/29/troubleshooting-layout-problems-with-safari.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/29/troubleshooting-layout-problems-with-safari.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser. Even worse, I discovered it only a day before the CEO of customer discovered it himself on his Mac! Ouch.

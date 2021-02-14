@@ -9,11 +9,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -28,7 +28,7 @@ So, now that we have a scenario describing our business requirement, the next  s
 If you've read some of my previous posts -- or if you've worked with me personally  -- then you know how much I love simplicity. As a patent clerk once said:
 
 > Everything should be as simple as possible, but not simpler.
-> 
+>
 > -- Albert Einstein
 
 If you look at the default XSL for the Search Core Results Web Part in MOSS 2007,  you will find the following:
@@ -123,7 +123,7 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
 ```
 
 > **Update (2009-08-26)**
-> 
+>
 > Note that I originally specifed the following, but it looks like this was
 > deemed to be a bug of some sort. Consequently, a patch -- released sometime
 > after I originally validated the approach -- results in the first "&lt;"

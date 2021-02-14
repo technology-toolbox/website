@@ -8,11 +8,11 @@ tags: ["Windows Server", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 [Earlier this week](/blog/jjameson/2011/03/01/script-to-clear-and-save-event-logs), I shared a script that I frequently use in my development environments to clear the event logs (for example, whenever I want to verify that one of my VMs "boots clean" -- meaning without any errors or warnings). Note that prior to clearing each of the event logs, the script first saves a copy (to C:\ with a timestamp in the filename) just in case I need to go back and look at them.

@@ -9,11 +9,11 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Here is another helper class that I developed that you may find useful when building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office SharePoint Server (MOSS) 2007.
@@ -366,6 +366,6 @@ For some good details about using **SPWebConfigModification**, refer to the foll
 [http://blogs.devhorizon.com/reza/?p=459](http://blogs.devhorizon.com/reza/?p=459)
 
 > **Update 2010-03-31**
-> 
+>
 > I enhanced the original version of **SharePointWebConfigHelper** to [wait for the Web.config modifications to finish](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish) in the **ApplyWebConfigModifications** method. If you don't want or need this fix, you can remove the reference to **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
 

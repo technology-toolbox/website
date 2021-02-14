@@ -447,7 +447,7 @@ element is used:
 ```
 
 > **Note**
-> 
+>
 >       If you'd prefer to configure these settings in IIS Manager (rather than 
 >       editing the Web.config file directly), under the **IIS** 
 >       section double-click **Error Pages** (to modify the
@@ -615,7 +615,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 ```
 
 > **Note**
-> 
+>
 >       I typically remove comments from code when pasting into blog posts. 
 >       However, I've kept all of the comments in this case so that you can 
 >       understand the details of the implementation (without having to describe 

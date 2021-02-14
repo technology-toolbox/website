@@ -10,11 +10,11 @@ tags: ["TFS", "SharePoint
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -28,7 +28,7 @@ Parts used to render the dashboards:
 
 > An error occurred while accessing application id TFS from Secure Store Service.
 > The following connections failed to refresh:
-> 
+>
 > TfsOlapReport
 
 Looking at the event logs on the server, I found the following:

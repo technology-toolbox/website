@@ -11,17 +11,17 @@ tags: ["SharePoint 2010", "Tugboat"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)** in SharePoint 2010.
 
 > **Note**
-> 
+>
 >             You can achieve similar results in Microsoft Office SharePoint Server (MOSS) 2007
 >             using the **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
 
@@ -439,7 +439,7 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
    ```
 
 > **Note**
-> 
+>
 >             Technically, you don't have to set the environment variables (and use the "-dev"
 >             accounts). However, I recommend this in order to bypass SharePoint timer jobs when
 >             deploying the WSPs.

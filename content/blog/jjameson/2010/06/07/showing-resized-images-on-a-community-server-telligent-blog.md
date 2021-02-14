@@ -9,11 +9,11 @@ tags: ["My System"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Back in Community Server 2.1 (i.e. prior to the recent upgrade of the MSDN/TechNet         blog platform), I could specify a URL like the following to show a smaller version         of an image in a blog post:
@@ -56,7 +56,7 @@ Essentially it's a matter of replacing "cfs-filesystemfile.ashx" in the URL with
 Note that you don't have to specify both height and width for the new image size.         For example, "/\_\_size/500x0" produces similar results in the above example (in other         words, the height is automatically calculated in order to preserve the aspect ratio         of the image).
 
 > **Important**
-> 
+>
 >             There appears to be a bug in Telligent Evolution 5.5 when the filename for the image
 >             contains certain characters (e.g. parentheses). For example, if you upload an image
 >             named "Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services

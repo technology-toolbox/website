@@ -8,11 +8,11 @@ tags: ["My System", "Core Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -357,7 +357,7 @@ public static DataTable GetScorecardDetailTable(
 ```
 
 > **Note**
-> 
+>
 > You might have chosen to use LINQ instead of the `foreach` loop to verify the list
 > of scorecard items all refer to the same KPI and return it. Just be sure
 > you account for scenarios such as when the KPI names specified by the scorecard
@@ -395,7 +395,7 @@ public static DataTable GetScorecardDetailTable(
 ```
 
 > **Important**
-> 
+>
 > Note that by replacing the original approach of filtering the scorecard
 > items (using a DataView) with a LINQ query expression, we've made a substantial
 > improvement in the code. For example, if we were to rename the KpiName column

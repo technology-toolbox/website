@@ -10,11 +10,11 @@ tags: ["Windows
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -31,11 +31,11 @@ of computers reporting errors. After selecting one of the failed computers,
 I discovered the following:
 
 > Windows Server 2008 Service Pack 2 Standalone x64-based Systems (KB948465)
-> 
+>
 > - English, French, German, Japanese, Spanish
-> 
+>
 > Event reported at 6/1/2009 3:02 AM:
-> 
+>
 > Installation Failure: Windows failed to install the following update
 > with error 0x80070643: Windows Server 2008 Service Pack 2 Standalone x64-based
 > Systems (KB948465) - English, French, German, Japanese, Spanish.
@@ -53,25 +53,25 @@ the problem, I decided to take a quick look at the event logs and discovered
 the following:
 
 > Log Name: System
-> 
+>
 > Source: Microsoft-Windows-Service Pack Installer
-> 
+>
 > Date: 6/1/2009 3:02:00 AM
-> 
+>
 > Event ID: 8
-> 
+>
 > Task Category: None
-> 
+>
 > Level: Error
-> 
+>
 > Keywords:
-> 
+>
 > User: SYSTEM
-> 
+>
 > Computer: dazzler.corp.technologytoolbox.com
-> 
+>
 > Description:
-> 
+>
 > Service Pack installation failed with error code 0x800f0826.
 
 Another quick search for 0x800f0826 suggested that the problem might be due

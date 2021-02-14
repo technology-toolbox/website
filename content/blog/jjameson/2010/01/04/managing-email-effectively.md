@@ -9,11 +9,11 @@ tags: ["My System", "Simplify"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 First of all, Happy New Year!
@@ -48,12 +48,12 @@ I have created folders under **Inbox** corresponding to various distribution    
 I configure rules within Outlook to "preprocess" messages sent either directly to         me or to DLs that I belong to.
 
 > **Important**
-> 
+>
 >             The reason for using DL folders under the **Inbox** folder -- instead
 >             of having the Outlook rules route directly to the archive (.pst) files -- is to
 >             ensure the rules are processed on the Exchange server.
 >             
-> 
+>
 > If you configure an Outlook rule to move messages to a .pst file, then obviously                 that rule can only be processed on the client (where the .pst is available). While                 that alternate approach might work for some people, anyone with a smartphone configured                 to receive email will quickly find it to be rather useless.
 
 I just inspected my email rules in Outlook and found that I am now up to 32 rules.         Note that most of these rules follow the same basic structure:

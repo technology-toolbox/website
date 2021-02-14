@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -29,17 +29,17 @@ The most interesting thing to come out of this email thread -- at least for me, 
 In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has been, well, nixed...
 
 > **SPSite.RootWeb Property**
-> 
+>
 > An earlier version of this article indicated that the calling application should
 > dispose of the SPSite.RootWeb property just before disposing of the SPSite object
 > that is using it. This is no longer the official guidance. The dispose cleanup
 > is handled automatically by the SharePoint framework.
-> 
+>
 > ...
-> 
+>
 > **SPWeb.ParentWeb Property**
 > **Updated Guidance**
-> 
+>
 > An earlier version of this article recommended that the calling application
 > should dispose of the SPWeb.ParentWeb. This is no longer the official guidance.
 > The dispose cleanup is handled automatically by the SharePoint framework.

@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master which most people now instantly associate with SharePoint as soon as they see it. Note that when you create a new site based on the **Team Site** site template or the **Collaboration Portal** site template in MOSS 2007, your site is configured to use default.master for both site pages (e.g. default.aspx) as well as system pages (e.g. /{list}/Forms/AllItems.aspx).

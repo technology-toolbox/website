@@ -9,11 +9,11 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -55,7 +55,7 @@ $vhdService.CreateDynamicVirtualHardDisk(
 Thanks, Taylor, for sharing this useful PowerShell script.
 
 > **Update (2011-04-14)**
-> 
+>
 > Depending on the specific service applications that you need to configure
 > in your SharePoint 2010 development environment, 200 MB not be sufficient
 > for transaction log storage (even if you
@@ -63,7 +63,7 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 > default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)). Unfortunately, I discovered that when I tried to configure
 > numerous service applications on my development VM (to match my client's
 > Production environment) I ran out of space on my L: drive.
-> 
+>
 > Instead of the 200 MB I originally thought that I could get away with,
 > I now use 500 MB. So far, I haven't encountered any issues with this increased
 > size.

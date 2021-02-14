@@ -8,11 +8,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Shortly before I headed out to the airport last Wednesday, I received the fateful         email from my customer notifying us that they have decided to abandon using the         variations feature in Microsoft Office SharePoint Server (MOSS) 2007. Note that         the original release date for our solution was October 19th -- and the decision         to cut variations from our solution would obviously require significant rework (meaning         we would not come close to hitting our original date). This was obviously a difficult         decision and required careful consideration to determine how best to move forward.
@@ -57,7 +57,7 @@ We even contemplated creating all of the possible variation labels this customer
 The fundamental problem that I have with the "by design" response is that if you         can break one feature in a product by using another feature in the product, it is         either "poor design" or "poor implementation." In defense of the SharePoint team,         I believe it is the latter and I believe it was simply due to time constraints in         the original schedule (the PM indicated they discovered this problem around the         Beta 2 timeframe). I certainly hope they have every intention of fixing this (although         it is too late for my current customer) but based on my conversation with the PM,         I don't see this happening anytime soon (it is certainly not slated for SP1).
 
 > **Update (2007-11-28)**
-> 
+>
 >             According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, it appears this will be fixed in a QFE by enabling
 >             content types on the **Pages** library in destination labels. Excellent!
 

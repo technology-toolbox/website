@@ -11,11 +11,11 @@ tags: ["Infrastructure", "Visual Studio", "TFS", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -45,12 +45,12 @@ Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home l
 While there are certainly many organizations out there that install everything  they need for TFS on a single server, I strongly recommend you "isolate" SQL Server  as much as possible in your Production environment. This makes it much easier to  monitor and troubleshoot the environment, as well as scale the solution over time  as your needs grow.
 
 > **Note**
-> 
+>
 > This recommendation really applies to most products that depend on SQL Server
 > -- not just TFS. There are a few scenarios where I consider it acceptable
 > to run SQL Server side-by-side with other products and technologies, but
 > in general, you should try to isolate it whenever practical.
-> 
+>
 > I should also point out that this is just *my* recommendation. According
 > to the TFS installation guide, a single server is recommended when you have
 > less than 500 users. On the other hand, I don't believe that official recommendation
@@ -161,15 +161,15 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 Here's something I didn't see mentioned anywhere in the TFS installation guide...
 
 > **Important**
-> 
+>
 > If you need to access TFS 2010 from a VSTS 2008 client (for example,
 > to continue to use the source control integration features in Expression
 > Web 3), you must download and install an update:
-> 
+>
 > <cite>Visual Studio Team System 2008 Service Pack 1 Forward Compatibility
 > Update for Team Foundation Server 2010 (Installer)</cite>
 > [http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d)
-> 
+>
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558)
 > for more information on the compatibility update.
 

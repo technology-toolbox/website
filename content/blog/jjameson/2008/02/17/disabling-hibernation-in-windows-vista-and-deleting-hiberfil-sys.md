@@ -8,11 +8,11 @@ tags: ["Windows Vista"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 As I described in [my previous post](/blog/jjameson/2008/02/17/an-update-on-disk-space-usage-by-windows-vista), I found myself with a paltry 320 MB of free space on a         20 GB partition after installing Windows Vista and a handful of programs (which         although I specified to install on a different partition, ended up "bloating" my         system partition to an unmanageable point).
@@ -26,9 +26,9 @@ My initial assumption was that the option to disable hibernation lies somewhere 
 Perfect...this looks like precisely the option I was looking for. Unfortunately,         when I clicked this link, it just took me back to the **Power Options**          area that I had already thoroughly explored. Figuring I had simply missed the obvious,         I proceeded to set the following options under advanced power settings:
 
 > **Sleep**
-> 
+>
 > > **Hibernate after**
-> 
+>
 > > > **On battery: Never**
 > > > 
 > > > **Plugged in: Never**

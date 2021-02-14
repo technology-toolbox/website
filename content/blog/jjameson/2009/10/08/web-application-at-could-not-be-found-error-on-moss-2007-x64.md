@@ -9,11 +9,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 I encountered a rather nasty bug last week with Microsoft Office SharePoint Server         (MOSS) 2007 when trying to run an x86 process (that utilizes the SharePoint API)         on an x64 server.

@@ -12,11 +12,11 @@ tags: ["WSUS", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Windows Update started generating errors last week on one of my servers. Specifically,         the server (JUBILEE) was encountering an error when trying to install Microsoft         .NET Framework 4:

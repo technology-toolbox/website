@@ -9,11 +9,11 @@ tags: ["Web Development"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Have you ever wanted to display data in a table but limit the size of the rows and         columns within the table?
@@ -149,7 +149,7 @@ Changing the `table-layout`to `fixed`constrains the table to the         specifi
 Next, I specify that all cells in the constrained table should truncate the text         within each cell if it is too wide to fit within the width of the column. This is         achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally,         I use the `text-overflow`CSS property to show ellipsis when text within         a cell is clipped (as well as a slight variation for the Opera browser).
 
 > **Note**
-> 
+>
 >             Support for the `text-overflow` CSS
 >             property is somewhat limited. In particular, you will find that a clipped table
 >             cell renders without the ellipsis in Firefox (at least in version 3.5.3). Oddly
@@ -268,7 +268,7 @@ namespace Fabrikam.Demo.Web.UI
 ```
 
 > **Update (2011-04-21)**
-> 
+>
 >             I've attached a sample Visual Studio solution to make it easier to see this concept
 >             in action.
 

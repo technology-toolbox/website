@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In my [previous
@@ -123,7 +123,7 @@ Items** view. However, I chose a "push" model instead of a "pull" model to      
 You also might be wondering how work items can be related to each other since I         chose not to base the new Work Items list on the Issues list. Given the change in         behavior in the WSS v3 Issues list for related items, I recommend simply adding         a section to the **Description** field name named **Related Items** and then         insert hyperlinks to other items. The primary reason for this is to avoid the performance         impact as the number of work items grows large.
 
 > **Important**
-> 
+>
 >             There appears to be a bug in WSS v3 (and MOSS 2007) where the Web Parts on the Project
 >             Summary page are not configured with the correct views after creating a new site
 >             from the attached site template. Consequently you will need to spend a few minutes
@@ -132,7 +132,7 @@ You also might be wondering how work items can be related to each other since I 
 >             the default values. Fortunately it only takes a few minutes to workaround this bug.
 
 > **Update (2008-04-08)**
-> 
+>
 >             The issue noted below by Dragan has been corrected. The fix is described in [a subsequent post](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3). However, as I originally suspected might be the case,
 >             the KPI images that I use in the project dashboard view are only available in MOSS
 >             2007. Consequently you will need to substitute your own images (or simply revert

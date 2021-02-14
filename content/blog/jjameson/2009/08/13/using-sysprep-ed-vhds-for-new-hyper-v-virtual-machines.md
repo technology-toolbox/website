@@ -9,11 +9,11 @@ tags: ["My System", "Core Development", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -32,18 +32,18 @@ In this case, I copied my ws2008-std-x64.vhd (Windows Server 2008 Standard x64  
 I then proceeded to start the DOGFOOD VM using Hyper-V Manager. Unfortunately,  I encountered the following error:
 
 > Virtual Machine Connection
-> 
+>
 > The application encountered an error while attempting to change the state of
 > 'dogfood'
-> 
+>
 > 'dogfood' failed to start.
-> 
+>
 > Microsoft Emulated IDE Controller (Instance ID {GUID}): Failed to power on with
 > Error 'General access denied error'
-> 
+>
 > IDE/ATAPI: Could not attach 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' to location
 > 0/0 of IDE Controller. Error: 'General access denied error'
-> 
+>
 > The file 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' does not have the required
 > security settings. Error: 'General access denied error'
 

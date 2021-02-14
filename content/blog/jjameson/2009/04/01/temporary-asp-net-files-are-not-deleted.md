@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Core Development", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Yesterday afternoon, I discovered that there were 64,725 items (consuming 2.41 GB) in the **C:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root** folder of my development VM for Microsoft Office SharePoint Server (MOSS) 2007. Apparently, each time I do an IISRESET or recycle an application pool, a new set of temporary files is generated but the old set is not being deleted.

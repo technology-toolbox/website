@@ -8,11 +8,11 @@ tags: ["My System", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [my previous post](/blog/jjameson/2010/12/03/recurring-tasks-in-team-foundation-server), I mentioned that one of the recurring tasks I create in         TFS each time I start a new iteration on a project is something like "Create branch         for Sprint-10" (the iteration specified in the title of the work item obviously         varies each time).
@@ -58,7 +58,7 @@ Also note that it turns out we don't really need both a "Service Pack" branch as
 In hindsight, at the end of Sprint-1, I should have created just the **ServicePack**         branch and the **RTM** branch (i.e. the equivalent of the "Standard         Branch Plan") -- but honestly, at that time I didn't really know what to expect         with regards to subsequent deployments to PROD for this particular project. Consequently,         I elected to use the branching model that provided the most flexibility (but also         the one that requires more work to merge changes from the QFE branch eventually         back to Main).
 
 > **Important**
-> 
+>
 >             Going forward, I'm going to switch from the "Advanced Branch Plan" to the "Standard
 >             Branch Plan" (since -- at least for this particular project -- we don't need both
 >             a **ServicePack** branch as well as a **QFE** branch).
@@ -75,7 +75,7 @@ Branching for a release (with the "Standard Branch Plan") is comprised of three 
    number instead of the Build (e.g. 2.0.371.1).
 
 > **Note**
-> 
+>
 >             If you are using the "Advanced Branch Plan" (as I was before), then branching for
 >             a release is comprised of *four* logical steps (because you would first branch
 >             "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you would increment
@@ -111,7 +111,7 @@ To create a new "Service Pack" branch from the "Main" branch:
       an open solution.")
 
 > **Note**
-> 
+>
 >             If it really bothers you to override check-in policy failures like the one noted
 >             above, you can certainly download the new branch to your workspace and check in
 >             the changes through Visual Studio with the solution open. However, at least in my
@@ -183,7 +183,7 @@ To increment the Revision portion of the assembly version on the "Service Pack" 
       an open solution.")
 
 > **Tip**
-> 
+>
 >             Even though it probably seems silly to many people, I always compare my changes
 >             on edited files before I click the **Check In** button -- even when
 >             making trivial changes like the one described above. It doesn't take but a few seconds,

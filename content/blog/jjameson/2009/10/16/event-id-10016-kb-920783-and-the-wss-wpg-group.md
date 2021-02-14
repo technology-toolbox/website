@@ -9,11 +9,11 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -85,40 +85,40 @@ accounts individually, it is much more effective to just grant the permission
 to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Note**
-> 
+>
 >       When creating a new Web application, SharePoint automatically adds the 
 >       corresponding service account to the local WSS\_WPG group on each SharePoint 
 >       server in your farm.
 
 > **Update (2009-10-29)**
-> 
+>
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't
 > specify the **WSS\_ADMIN\_WPG** group -- only the **
 > WSS\_WPG** group.
-> 
+>
 > Ugh...that will teach me to try to recall something like this from
 > memory. When I was writing this blog post, I mistakenly thought that
 > the service account for the SharePoint farm was added to both WSS\_ADMIN\_WPG
 > and WSS\_WPG. However, this isn't the case.
-> 
+>
 > Therefore you need to be sure to apply the steps in
 > [KB 920783](http://support.microsoft.com/kb/920783) using
 > both groups if you want to rid your event logs of these errors once
 > and for all. Again, this is assuming you are using least privilege accounts
 > -- which I certainly hope you are.
-> 
+>
 > Thanks, Matt, for pointing out my omission.
 
 > **Update (2010-05-03)**
-> 
+>
 >       If performing this step on Windows Server 2008 R2, you must first take 
 >       ownership of the corresponding registry key and grant Administrators 
 >       permissions to update the configuration.
 >       
-> 
+>
 > To take allow the configuration of the IIS WAMREG Admin Service to
 > be changed using the Component Services console:
-> 
+>
 > 1. Click the **Start** menu, type **regedit**,
 >    and then click **regedit.exe**. If prompted by
 >    **User Account Control** to allow the program to make
@@ -139,7 +139,7 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    click the checkbox to allow the group **Full Control**,
 >    and click **OK**.
 > 7. Close the Registry Editor window.
-> 
+>
 > Now that the Administrators group has sufficient permissions, follow
 > the steps in KB 920783 to make the changes to the IIS WAMREG Admin Service.
 

@@ -222,7 +222,7 @@ with an ASP.NET **Repeater** control:
 ```
 
 > **Note**
-> 
+>
 >       When writing code, I generally prefer to take little steps -- rather 
 >       than trying to do too much at once. For example, as shown above, I will 
 >       often add "TODO:" placeholders to indicate where additional work needs 
@@ -296,7 +296,7 @@ namespace TechnologyToolbox.Caelum.Website
 ```
 
 > **Important**
-> 
+>
 >       The blog path (i.e. /blog/jjameson) is currently hard-coded in this 
 >       method. While I briefly considered enhancing this to support other scenarios, 
 >       I decided against it since it currently suits my needs. If and when 

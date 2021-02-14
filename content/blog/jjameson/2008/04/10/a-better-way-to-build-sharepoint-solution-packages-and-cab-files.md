@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Up until about an hour ago, I'd been using post-build events on my Visual Studio         projects to create SharePoint solution packages (WSPs). However, while this worked         reasonably well, this method always bothered me a little because the post-build         events run every time you build, regardless of whether the underlying files have         changed or not. In other words, using post-build events is just a "brute force"         method that builds the CAB (i.e. WSP) file with no dependency checking whatsoever.
@@ -73,17 +73,17 @@ What I really wanted to specify in the `Inputs`         attribute is all of the 
 Cliff Hudson, an SDE on the Visual Studio Platform team, was kind enough to point         me in the right direction. [Thanks for the tip, Cliff.]
 
 > **Update (2008-04-14)**
-> 
+>
 > When I originally wrote this blog post last Friday, I specified the following:
-> 
+>
 > > `Inputs="@(Compile);@(None);@(Content);@(ProjectReference);"`
-> 
+>
 > However, early this morning I discovered that there are a couple of rare scenarios                 where the WSP/CAB file is not rebuilt when specifying those inputs -- even though                 the actual assembly is recompiled.
-> 
+>
 > The first scenario is due to project references. If you dive deep into Microsoft.Common.targets,                 you'll find targets like **SplitProjectReferencesByType**, **ResolveProjectReferences**,                 **ResolveVCProjectReferences**, and **ResolveReferences**.                 These handle the "expansion" of the project references to determine the actual list                 of dependent files corresponding to the project references. Not expanding the project                 references in the list of inputs for `CreateSharePointSolutionPackage`is usually benign, unless the referenced assembly is actually deployed                 within the "referencing" project. For example, if ProjectA actually builds the WSP/CAB                 file, but also includes the assembly from ProjectB, then a minor change in ProjectB                 would first rebuild ProjectB, and then ProjectA, but would not rebuild the corresponding                 WSP/CAB file.
-> 
+>
 > The second scenario that I discovered is when your project specifies embedded resources.                 Unfortunately, the project that I started with last Friday did not include embedded                 resources and consequently I did not notice that additional item group until this                 morning when I was hunting around in Microsoft.Common.targets.
-> 
+>
 > The updated inputs below ensure that the WSP/CAB is built whenever the project assembly                 is built, by replacing `@(ProjectReference)`                 with `$(OutDir)$(TargetFileName)`                 -- which also made `@(Compile)` superfluous.                 In other words, it handles scenarios where the only change is to an embedded resource                 or when a dependent assembly specified using a project reference is updated.
 
 Here is the updated MSBuild target with the correct inputs specified:

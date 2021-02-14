@@ -8,11 +8,11 @@ tags: ["SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Suppose that you need to update a few SharePoint team sites to add a couple of links to the quick launch navigation. Assuming the number of sites to be updated is relatively small, then it is reasonable to manually apply the configuration changes via the **Site Settings** page on each site.

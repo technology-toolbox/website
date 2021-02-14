@@ -11,17 +11,17 @@ tags: ["My System", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 > **Update (2010-12-03)**
-> 
+>
 > If you are using gated check-ins, be sure to also read my follow-up post:
-> 
+>
 > <cite>Bypassing a Gated Check-in in TFS 2010</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010)
 

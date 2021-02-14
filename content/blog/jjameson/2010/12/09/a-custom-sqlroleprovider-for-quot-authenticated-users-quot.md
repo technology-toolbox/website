@@ -10,11 +10,11 @@ tags: ["MOSS 2007", "Web Development", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -30,12 +30,12 @@ Shortly after we identified the root cause of the issue I mentioned earlier,  I 
 
 > **Title:** Membership in the "Authenticated Users" role should
 > be implicit
-> 
+>
 > **Description:
 > ** Administrators shouldn't have to explicitly add users to the "Authenticated
 > Users" role. Instead, membership in this role should be implicit, since anyone
 > that specifies a username/password is considered "authenticated".
-> 
+>
 > Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we
 > are currently using doesn't function this way.
 
@@ -135,7 +135,7 @@ After overriding a few more methods (e.g. **DeleteRole**), I then  swapped out t
 
 > This feature cannot be used because the default provider is not a trusted
 > provider.
-> 
+>
 > You can use this feature only when the default provider is a trusted provider.
 > If you are a server administrator, you can make a provider a trusted provider
 > by adding the provider type to the trusted providers list in the Administration.config
@@ -145,20 +145,20 @@ After overriding a few more methods (e.g. **DeleteRole**), I then  swapped out t
 I then added the following steps to the installation guide:
 
 > To add the custom role provider to the IIS Administration.config file:
-> 
+>
 > 1. Click **Start**, point to **All Programs**,
 >    point to **Accessories**, and right-click **Command Prompt**,
 >    and then click **Run as administrator**.
 > 2. At the command prompt, change to the following directory:
-> 
+>
 > **%WinDir%\system32\inetsrv\config
 > **
 > 3. Type the following command:
-> 
+>
 >     ```
 >     notepad administration.config
 >     ```
-> 
+>
 > 4. In the /configuration/system.webServer/management/trustedProviders section,
 >    add the following:
 >    
@@ -168,7 +168,7 @@ I then added the following steps to the installation guide:
 >        Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
 >        PublicKeyToken=c8cdcbca6f69701f" />
 >    ```
-> 
+>
 > 5. Save the changes to the file and close Notepad.
 
 Once I had made the custom role provider a trusted provider, I was able to verify  some basic functionality and fix a couple of bugs. For example, I discovered that  while it's okay to throw an exception in the **FindUsersInRole** method  when the "Authenticated Users" role is specified, IIS Manager doesn't like it when  you throw an exception from the **GetUsersInRole** method. If you throw  an exception in the **GetUsersInRole** method, then it prohibits the  list of roles from being displayed in IIS Manager. Consequently, I simply chose  to return an empty list of users when **GetUsersInRole** is called  for the "Authenticated Users" role.

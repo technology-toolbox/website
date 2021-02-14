@@ -87,7 +87,7 @@ not in the **blog\bin** folder (and presumably not in the GAC either),
 then any request processed by Subtext will generate an unhandled exception:
 
 > Exception type: ConfigurationErrorsException
-> 
+>
 > Exception message: Could not load file or assembly 'Elmah' or one of its
 > dependencies. The system cannot find the file specified.
 
@@ -134,7 +134,7 @@ To ensure this target is executed as part of every build, I modified the
 ```
 
 > **Note**
-> 
+>
 >       You might be tempted to use the **AfterBuild** target or 
 >       a post-build event to implement additional build steps like the ones 
 >       described in this post. However, in general, I don't recommend that 

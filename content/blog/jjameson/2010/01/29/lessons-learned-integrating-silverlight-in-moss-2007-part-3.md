@@ -10,11 +10,11 @@ tags: ["MOSS 2007", "WSS v3", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 [Yesterday](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2) I continued building upon [part 1](/blog/jjameson/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1) in a series of posts regarding the use of Silverlight in an Internet-facing         customer portal built on Microsoft Office SharePoint Server (MOSS) 2007.

@@ -9,11 +9,11 @@ tags: ["SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010), I provided the step-by-step process I use for configuring         claims-based authentication in SharePoint Server 2010.
@@ -263,7 +263,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
    - **Security Token Service**
 
 > **Note**
-> 
+>
 >                     You do not need to manually add the Web.config modifications for the "Fabrikam"
 >                     Web application because this is done automatically upon activation of a feature
 >                     (Fabrikam Demo - Web Application Configuration).
@@ -312,7 +312,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 At this point you should be able to browse to the Fabrikam site and click the **            Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
 
 > **Update (2011-02-26)**
-> 
+>
 >             There was a bug in the original version of the code sample when logging in as an
 >             FBA user over HTTPS (while attempting to determine the membership and role providers
 >             from the IIS settings). This has been fixed in the updated attachment.

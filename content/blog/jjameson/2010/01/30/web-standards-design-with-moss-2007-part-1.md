@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3", "Web Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I've mentioned before that I became somewhat of a [Web standards](http://en.wikipedia.org/wiki/Web_standards) zealot several years ago. Consequently, regardless of whether I'm building Web sites using the core ASP.NET platform or Microsoft Office SharePoint Server (MOSS) 2007, I strive to ensure that minimal, semantic HTML markup is used to render the site. I then leverage CSS rules to define the presentational aspects of the content. Note that this can sometimes seem like an epic battle between the Web developer and the underlying platform.
@@ -34,7 +34,7 @@ Rather than defining all of the CSS layout from scratch, I chose to utilize the 
 The 960 Grid System provides two variants: 12 columns and 16 columns. However, we are currently only using the 12 column layout for this site. I should also note that we are using a fixed-width design (although there are "fluid" alternatives available based on the 960 Grid System). Bear in mind that things get considerably more complex when trying to support arbitrary sizing of the browser window (which is actually something that SharePoint does very well out-of-the-box with its table-based layout).
 
 > **Tip**
-> 
+>
 > If you choose to use the 960 Grid System, I also highly recommend leveraging the [960 Gridder](http://gridder.andreehansson.se) as well. This combination makes the task of creating great looking Web pages much easier (even for someone, like me, who is much more of a *developer*than a *designer*).
 
 To understand how the 960 Grid System is used on our SharePoint site, consider the following master page:
@@ -447,16 +447,16 @@ This is getting to be a very long post, and there's still much I want to cover. 
 Don't fret, I'll cover many more details of Web standards design and SharePoint in the very near future eventually.
 
 > **Update (2010-12-02)**
-> 
+>
 > Part 2 in this series in *finally* available ;-)
-> 
+>
 > **Web Standards Design with SharePoint, Part 2**
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
 
 > **Update (2011-01-31)**
-> 
+>
 > Part 3 in this series provides a sample SharePoint master page and various page layouts based on the 960 Grid System.
-> 
+>
 > **Web Standards Design with SharePoint, Part 3**
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 

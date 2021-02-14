@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In the [first part](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) of this series, I explained one approach for building Web sites         in Microsoft Office SharePoint Server (MOSS) 2007 based on [Web standards](http://en.wikipedia.org/wiki/Web_standards) and the [960 Grid System](http://960.gs). I had         intended on following up with a sample solution based on a fictitious company (AdventureWorks         Bicycles -- which should be familiar to anyone using SQL Server).
@@ -94,7 +94,7 @@ Here are the corresponding work items that I added to the TFS project (note that
 The "create prototype" task was a really easy one to complete in this particular         case (since Dan and Ethan did all the work already), but an important one nonetheless.         When developing a Web site that will run in SharePoint, I almost always try to have         a static HTML prototype that I can refer to and use for quickly mocking up new features.         In general, it will be much faster to develop and refine your HTML/CSS using a tool         like Microsoft Expression Web, rather than trying to do the same on a "live" SharePoint         site (i.e. your local development VM) using SharePoint Designer.
 
 > **Tip**
-> 
+>
 >             I typically check the prototype in on the Dev branch (e.g. $/Tugboat/Dev/TugboatPrototype)
 >             instead of the Main branch, since it's not technically part of the solution.
 
@@ -268,7 +268,7 @@ To deploy the Tugboat sample site to SharePoint:
    ```
 
 > **Note**
-> 
+>
 >                     While you don't have to use this URL, it is recommended for developer environments
 >                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 >                     when deploying and retracting the solution.
@@ -285,7 +285,7 @@ To deploy the Tugboat sample site to SharePoint:
    ```
 
 > **Important**
-> 
+>
 >                     Be sure to specify a valid local or domain user.
 
 4. Change to the folder containing the deployment scripts:

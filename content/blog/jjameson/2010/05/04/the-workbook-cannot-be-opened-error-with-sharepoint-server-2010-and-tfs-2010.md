@@ -9,11 +9,11 @@ tags: ["TFS", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In an [earlier post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview) today, I described how I recently upgraded from Team Foundation Server 2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).
@@ -96,17 +96,17 @@ To add the the service account for SharePoint service applications to the underl
    3. Click **OK**.
 
 > **Update (2011-04-14)**
-> 
+>
 > I should have updated this post long ago based on the comment added by "todh2" regarding granting access to the database. Instead of using SQL Server Management Studio to configure permissions on the content database for the service account, use a little PowerShell to invoke the **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)** method:
-> 
+>
 > ```
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-> 
+>
 > $webApp = Get-SPWebApplication "http://cyclops"
-> 
+>
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
-> 
+>
 > Thanks to "todh2" for pointing this out.
 
 Once this configuration change is made, the "workbook cannot be opened" error no longer occurs.

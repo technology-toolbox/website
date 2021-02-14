@@ -41,9 +41,9 @@ PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-MaxPatchCacheSize.ps1
 ```
 
 > **Note**
-> 
+>
 > You can download these scripts from my Toolbox repository on GitHub:
-> 
+>
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 ### Get-MaxPatchCacheSize.ps1

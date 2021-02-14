@@ -9,11 +9,11 @@ tags: ["Core Development", "Visual Studio", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Another "hiccup" this week after [upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview)...

@@ -8,11 +8,11 @@ tags: ["My System", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/recurring-tasks-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/recurring-tasks-in-team-foundation-server.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 While the vast majority of work items created for each iteration (sprint) are unique and therefore require some planning effort beforehand, I've gotten into the habit of creating a few recurring tasks in TFS each time I start a new iteration on a project.

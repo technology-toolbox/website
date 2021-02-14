@@ -10,11 +10,11 @@ tags: ["My System", "Visual Studio", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In my [previous post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview), I provided an overview of the process of upgrading from TFS         2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).         In this post, I provide more details about the upgrade process.
@@ -169,7 +169,7 @@ Complete the deployment procedures in the following sections:
 3. Run the SharePoint Products Configuration Wizard
 
 > **Important**
-> 
+>
 >             Do not run the Farm Configuration Wizard (the TFS Web application and service applications
 >             will be configured in the following steps).
 
@@ -264,7 +264,7 @@ To fix the TaxonomyPicker.ascx file:
    and then save the file.
 
 > **Update (2011-04-14)**
-> 
+>
 >             The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010. Instead
 >             of trying to fix the assembly name, just rename the file (since it apparently isn't
 >             used by SharePoint).
@@ -274,7 +274,7 @@ To fix the TaxonomyPicker.ascx file:
 In order to avoid errors in the Windows event log (e.g. Source: SharePoint Foundation,         Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 
 > **Important**
-> 
+>
 >             This task must be completed on each SharePoint server in the farm.
 
 To rename the TaxonomyPicker.ascx file:
@@ -286,7 +286,7 @@ To rename the TaxonomyPicker.ascx file:
 and then change the filename to **TaxonomyPicker.ascx\_broken**.
 
 > **Note**
-> 
+>
 >             Changing the file extension causes the problematic file to be skipped by ASP.NET
 >             when compiling the controls in the folder.
 
@@ -547,9 +547,9 @@ To reset the home page for a TFS project site:
    then click **Reset**.
 
 > **Tip**
-> 
+>
 > If you need to do this for a number of sites, you should consider using PowerShell             instead, as described in the following blog post:
-> 
+>
 > <cite>Use PowerShell to "Reset to Site Definition" in SharePoint Server 2010</cite>
 > [https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx](/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010)
 
@@ -582,16 +582,16 @@ Browse to one of the upgraded TFS project sites to confirm the **Remaining Work*
 Note that a different error may be shown in the **Remaining Work**          Web Part:
 
 > Reporting Services Error
-> 
+>
 > ***
-> 
+>
 > 
 > An error has occurred during report processing. (rsProcessingAborted) Get Online         Help
 > Query execution failed for dataset 'DefaultIterationParam'. (rsErrorExecutingCommand)         Get Online Help
 > For more information about this error navigate to the report server on the local         server machine, or enable remote errors
-> 
+>
 > ***
-> 
+>
 > 
 > SQL Server Reporting Services
 
@@ -610,7 +610,7 @@ Figure 2: Upgraded TFS project site in SharePoint Server 2010
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Upgraded%20TFS%20project%20site.png)
 
 > **Tip**
-> 
+>
 >             To significantly improve the appearance of the upgraded TFS project home page, edit
 >             the **Remaining Work** Web Part and set the **Height** 
 >             to **600 pixels** and the **Width** to **900 pixels**.
@@ -650,12 +650,12 @@ To avoid this error, add the the second service account to the underlying conten
    3. Click **OK**.
 
 > **Update (2011-04-14)**
-> 
+>
 > ```
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-> 
+>
 > $webApp = Get-SPWebApplication "http://cyclops"
-> 
+>
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
 
@@ -669,13 +669,13 @@ the Enterprise Application Definition**), configure the Secure         Store tar
 In order to create a new TFS project, you must install either Team Explorer 2010         or Visual Studio 2010. If you want to be able to create new team projects (or browse         existing projects) directly from the TFS application server, install Team Explorer         2010.
 
 > **Important**
-> 
+>
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to continue                 to use the source control integration features in Expression Web 3), you must download                 and install an update:
-> 
+>
 > <cite>Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for
 > Team Foundation Server 2010 (Installer)</cite>
 > [http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d)
-> 
+>
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more                 information on the compatibility update.
 
 ### Connect to TFS
@@ -690,7 +690,7 @@ To verify the TFS upgrade, create a new team project in TFS (for example, a new 
 v5.0** process template.
 
 > **Note**
-> 
+>
 >             In order to create a new team project (with the default project options) using Team
 >             Explorer on a server that hosts SharePoint Server 2010 and SQL Server Reporting
 >             Services, you need to run Visual Studio as an administrator.

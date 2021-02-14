@@ -49,7 +49,7 @@ For a complete list of the IIS cmdlets, refer to the following Technet article:
 [http://technet.microsoft.com/en-us/library/ee790599.aspx](http://technet.microsoft.com/en-us/library/ee790599.aspx)
 
 > **Important**
-> 
+>
 >       If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then 
 >       you cannot use the `Add-PSSSnapin
 >       WebAdministration` command 
@@ -103,10 +103,10 @@ function RemoveWebsite(
 ```
 
 > **Note**
-> 
+>
 > There is currently a bug in the `Get-Website`
 > cmdlet, so be very careful if you choose to use it:
-> 
+>
 > <cite>Get-Website always returns full list of web sites</cite>
 > [https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites](https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites)
 
@@ -148,7 +148,7 @@ the database runs on the same server as the website in that environment.
 ```
 
 > **Tip**
-> 
+>
 >       Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)**  
 >       class from the .NET Framework is a convenient way to parse URLs in PowerShell 
 >       (for example to extract the hostname, as shown above).

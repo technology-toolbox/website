@@ -8,21 +8,21 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1), I mentioned that one of the options for creating SharePoint sites in multiple languages is to install the corresponding SharePoint language packs prior to creating the sites. This is the most common deployment scenario for localization. [An alternative localization approach that we used years ago on the Agilent Technologies project involved localizing just the pages accessed by customers -- whereas "administration" pages, such as **Site Settings**, were kept in English due to requirements from the support team.]
 
 > **Note**
-> 
+>
 > I believe the SharePoint product team expects you to install language packs prior to creating site collections that will contain localized sites. This is based on something I recall reading on TechNet.
-> 
+>
 > However, I don't believe this is a realistic expectation -- at least not in my experience. Organizations should be able to expand their existing site collections to support additional languages over time as the need arises.
-> 
+>
 > The only bug that I'm aware of when installing SharePoint language packs *after* creating the site collection (and subsequently creating localized sites) is that some items referenced by the SharePoint pages (e.g. CSS files) do not get added to the Style Library. However, you can simply upload these files yourself to workaround the issue.
 
 One of the first things you'll discover when deploying custom code to a SharePoint environment that has language packs installed is whether or not your code accesses SharePoint objects in a "language-agnostic" manner. For example, consider the following code:

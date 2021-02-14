@@ -9,11 +9,11 @@ tags: ["Web Development"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In case you missed the announcement, [Internet Explorer 8](http://www.microsoft.com/windows/internet-explorer/default.aspx) was released last week.
@@ -41,12 +41,12 @@ With IE8, I'm also digging the fact that tabs are grouped by color to indicate w
 I've also started using some of the [IE8 Developer Tools](http://msdn.microsoft.com/en-us/library/dd565628%28VS.85%29.aspx) -- and I must say these are a vast improvement over         the previous IE Developer Toolbar. However, it's much too early to say whether you'll         be able to pry [Firefox and its various add-ons](/blog/jjameson/2008/10/20/fessing-up-about-firefox) out of my toolbox ;-)
 
 > **Update (2009-03-25)**
-> 
+>
 > Yesterday I forgot to mention another vastly improved feature in IE8.
-> 
+>
 > I tend to use <kbd>CTRL+F</kbd> frequently to find a particular string on a page                 (error messages, method names, etc.). When compared with Firefox, the user experience                 of the "Find on this page" feature in versions prior to IE8 left a little to be                 desired -- to put it mildly.
-> 
+>
 > Prior to IE8, your could <kbd>CTRL+F</kbd>, start typing your search term, and then                 press <kbd>Enter</kbd> to quickly find the specified string on the page; however,                 if you decided that you wanted to search for something else, then a subsequent <kbd>                    CTRL+F</kbd> would only cause the **Find** dialog window to get                 focus, but you couldn't immediately start typing your new search term (because the                 focus would be on the **Next** button).
-> 
+>
 > Fortunately, this has been overhauled in IE8 by eliminating the **Find**                 dialog altogether and instead integrating this feature into the main window. You                 can now quickly use <kbd>CTRL+F</kbd> repeatedly to search for different terms on                 a page. IE8 even has "hit highlighting" similar to Firefox.
 

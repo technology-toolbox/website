@@ -9,11 +9,11 @@ tags: ["My System", "SQL Server", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 A little over two years ago, I wrote a post about [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1), in which I mentioned setting         the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk         space while installing the service pack). [Note that the credit for this trick really         goes to [Heath Stewart](http://blogs.msdn.com/heaths/) -- as I mentioned         in my original post.]
@@ -32,9 +32,9 @@ Then I move on to installing products based on the intended purpose of the VM.
 Here's an excerpt from the [MSDN page for MaxPatchCacheSize](http://msdn.microsoft.com/en-us/library/aa369798%28VS.85%29.aspx):
 
 > If this per-machine system policy is set to a value greater than 0, Windows Installer             saves older versions of files in a cache when a patch is applied to an application.             Caching can increase the performance of future installations that otherwise need             to obtain the old files from a original application source.
-> 
+>
 > ...
-> 
+>
 > If the value of the MaxPatchCacheSize policy is set to 0, no additional files are             saved.
 
 To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look at         the following figure, which shows the disk space usage on a freshly built Windows         Server 2008 R2 VM, after installing SQL Server 2008 and subsequently running Windows         Update to install all of the latest patches (including SQL Server 2008 Service Pack         1).
@@ -62,7 +62,7 @@ Observe that the $PatchCache$ folder isn't even visible in the disk usage view, 
 As noted on MSDN, the registry setting "does not affect files that have already         been saved." In other words, if you set MaxPatchCacheSize to 0 after installing         a bunch of products and patches, then you're pretty much stuck with the "wasted"         disk space -- unless you use something like MSIZAP to clean up the Installer files.
 
 > **Important**
-> 
+>
 >             Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare occasions
 >             where you have to do a little more work when installing new products or features.
 >     

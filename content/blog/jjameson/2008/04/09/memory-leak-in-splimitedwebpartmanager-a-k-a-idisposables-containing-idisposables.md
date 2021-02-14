@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Back in February, Roger Lamb kicked off [his MSDN blog](http://blogs.msdn.com/rogerla) with a great post ([SharePoint 2007 and WSS 3.0 Dispose Patterns by Example](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx)). It provides numerous code samples that demonstrate memory leaks commonly produced when working with the SharePoint object model. Kudos to Roger for putting this together.

@@ -9,11 +9,11 @@ tags: [""]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/25/update-on-upgrade-of-msdn-blog-platform.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/25/update-on-upgrade-of-msdn-blog-platform.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 The dust has mostly settled after the upgrade of the MSDN blog platform. Consequently, I have re-added my custom CSS rules to make my blog posts look much like they did before the upgrade.

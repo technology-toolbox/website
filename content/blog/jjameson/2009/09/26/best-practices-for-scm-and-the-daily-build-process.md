@@ -8,11 +8,11 @@ tags: ["Core Development", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In a previous post, I briefly discussed [a simple branching strategy for Team Foundation Server](/blog/jjameson/2009/02/10/branching-strategy-in-team-foundation-server) (TFS). This was somewhat         of a follow-up to another [post](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) in which I briefly referenced a great article titled [The Importance of Branching Models in SCM](http://downloads.seapine.com/pub/papers/SCMBranchingModels.pdf). If you haven't read this         article, I highly recommend it.
@@ -34,7 +34,7 @@ A much easier way of correlating a version of a particular document to a particu
 Back in the days of using Visual SourceSafe (VSS) on customer projects, at the beginning         of the build process, a label would always be applied to the project in VSS. Since         the build label was applied at the top-level project within a branch, it applied         to all files in the solution -- including the source code, setup files, and automated         tests. This ensures that the installation and tests could be repeated for any particular         build.
 
 > **Note**
-> 
+>
 >             While VSS certainly provided the ability to retrieve a project based on a particular
 >             timestamp, it definitely wasn't easy (the only way that I was ever to do it was
 >             through [the SS
@@ -79,12 +79,12 @@ The following sections describe the steps in the build process and who is respon
 All code included in a build must be checked into source control before the build         process is initiated. All checked-in code must compile and it is the responsibility         of the developer who checks in the code to ensure that the solution builds and all         files that are needed to build the solution are checked in.
 
 > **Important**
-> 
+>
 >             The source control must not be left in a broken state at any time. If a build breaks,
 >             resolving the problem becomes the highest priority.
 
 > **Tip**
-> 
+>
 >             You can use the **Builds** check-in policy for TFS to ensure the solution
 >             compiles before a developer is allowed to check-in a changeset.
 
@@ -114,7 +114,7 @@ Each member of the Development team is responsible for ensuring the following:
   be a rare occurrence).
 
 > **Tip**
-> 
+>
 >             You can use the **Testing Policy** check-in policy for TFS to ensure
 >             that specific unit tests pass before a developer is allowed to check-in a changeset.
 
@@ -172,7 +172,7 @@ When problems are discovered with the deployment of the solution, a troubleshoot
 The troubleshooting guide should capture the process and tools used for investigating         the problems with the solution and where to look for logs, events, etc. in the system.         It should also capture patterns that have been seen in the solution that point toward         a particular fault in the system.
 
 > **Tip**
-> 
+>
 >             A SharePoint site -- or even just a simple SharePoint list -- provides an excellent
 >             alternative to a Troubleshooting Guide document. Think of this site --or list --
 >             as a simple "[Knowledge Base](http://support.microsoft.com/)" for your

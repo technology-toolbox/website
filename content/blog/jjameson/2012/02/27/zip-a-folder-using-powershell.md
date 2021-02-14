@@ -91,7 +91,7 @@ However, there are a few problems with this approach:
   then an error occurs:
 
 > You cannot call a method on a null-valued expression.
-> 
+>
 >       At line:13 char:33
 >     
 >       +             

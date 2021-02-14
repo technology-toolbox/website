@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -68,7 +68,7 @@ So, when deciding whether or not to use WspBuilder, think about the tradeoffs  b
 Personally speaking -- and again, this is just my opinion here -- I prefer makecab.exe  and hand-crafted DDF files. However, this is obviously influenced by the fact that  I built lots of these on my previous project that I can reference ;-)
 
 > **Update (2009-03-31)**
-> 
+>
 > Note that I have posted an
 > [update on WSPBuilder](/blog/jjameson/2009/03/31/updated-thoughts-on-wspbuilder) based on some feedback I received from Carsten
 > Keutmann, the creator of WSPBuilder.

@@ -9,11 +9,11 @@ tags: ["My System", "Core Development", "Visual Studio"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In my [previous post](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server), I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis.

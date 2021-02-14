@@ -81,7 +81,7 @@ In the next two sections, I'll show you how this also helps expedite the process
 of converting from static HTML to ASP.NET controls and adding field validators.
 
 > **Note**
-> 
+>
 >       Although not shown in the sample HTML above, there are times when it 
 >       might be helpful to prototype "alternate flow" scenarios as well -- 
 >       for example, to demonstrate the user experience when a required field 
@@ -278,7 +278,7 @@ the contact request to one or more individuals and be done with it. This is
 the way the feature currently works on TechnologyToolbox.com.
 
 > **Note**
-> 
+>
 > Sending the contact request via SMTP isn't as "bulletproof" as, say,
 > writing the contact request to a database in real-time -- but it is
 > probably "good enough" for many organizations. Obviously if your site
@@ -286,7 +286,7 @@ the way the feature currently works on TechnologyToolbox.com.
 > should probably consider something a little more robust (such as saving
 > the contact request to a database and sending some kind of notification
 > to the appropriate people).
-> 
+>
 > The [Agilent LSCA](http://www.chem.agilent.com) site,
 > for example, uses SharePoint and InfoPath Forms Services for the "[Contact
 > Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)" feature -- complete with "routing" rules on the backend to send

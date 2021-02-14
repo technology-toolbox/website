@@ -8,11 +8,11 @@ tags: ["Windows Server", "Infrastructure"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I've mentioned [in the past](/blog/jjameson/2009/09/14/the-jameson-datacenter) how I run a Windows Server 2003 mail server in order to use the POP3 service for basic e-mail functionality, and that I didn't have any interest in finding an alternative when I discovered POP3 is no longer available in Windows Server 2008. Well, I guess I need to start investing the effort in finding a new email service to run for demo purposes after all.
@@ -66,10 +66,10 @@ I suppose this means I'll have to start looking at third-party email servers for
 The POP3 service in Windows Server 2003 was great for demo and training purposes -- while it lasted. I suppose another option is to simply use a different e-mail client instead of Outlook 2010, but I'm sure you can imagine why that option doesn't sound very appealing.
 
 > **Update (2010-04-27)**
-> 
+>
 > I started investigating alternate e-mail services this morning, but quickly discovered [there are a lot of potential candidates](http://www.emailman.com/win/servers.html) out there. [One of the simplest options](http://weblogs.asp.net/hpreishuber/archive/2008/04/30/visendo-smtp-pop3-extender-for-windows-2008-server.aspx) looked promising at first, but after reading through the multitude of comments describing various issues with it, I discovered that it doesn't appear to work with Outlook 2010 either.
-> 
+>
 > This morning, I decided to just "bite the bullet" and download Mozilla Thunderbird to see if I could use this to connect to my Windows Server 2003 POP3 service for demo and training purposes. It took less than 10 minutes to download, install, and configure my e-mail account. Note that Thunderbird automatically detected the DNS names of my POP3 and SMTP servers (which are really one and the same) just by typing in my e-mail address. The only "tricky" part was ensuring that I checked the option to **Use secure authentication** (since my POP3 service is configured to require SPA).
-> 
+>
 > I really don't like the idea of not using Outlook for demos, but unless someone can point me to a POP3 service that is free, lightweight (i.e. can run adequately in a VM with a mere 256MB of memory), and trivial to install and configure, then I'm going to stick with the Windows Server 2003 POP3 service for now.
 

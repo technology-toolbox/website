@@ -11,11 +11,11 @@ tags: ["Core Development", "Visual Studio"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -73,7 +73,7 @@ End Sub
 ```
 
 > **Update (2010-08-25)**
-> 
+>
 > In my original post, the `If`block in **CollapseItem** was mistakenly nested inside
 > the `For Each`loop. While
 > this worked (I've been using it that way for years), it certainly wasn't

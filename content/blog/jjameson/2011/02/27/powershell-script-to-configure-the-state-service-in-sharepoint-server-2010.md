@@ -8,11 +8,11 @@ tags: ["SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In [my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010), I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell scripts that I currently use when working with SharePoint 2010. Here's another one that I deliberately excluded from the previous post.

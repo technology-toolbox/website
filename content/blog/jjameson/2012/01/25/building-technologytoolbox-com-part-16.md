@@ -12,7 +12,7 @@ In case you haven't read the
 detailed in this post.
 
 > **Note**
-> 
+>
 >       Although not illustrated in the screenshots below, the custom CAPTCHA 
 >       control is also used on the Subtext blog pages to prevent bots from 
 >       adding comments to blog posts. I'll explain why this is important in 
@@ -287,12 +287,12 @@ cookie. To mitigate this risk (ever so slightly), I actually store a "super-secr
 hash of the expected value in the cookie.
 
 > **Note**
-> 
+>
 > The reason I put the words "super-secret" in quotes is because someone
 > could certainly read this post, figure out the hashing "algorithm" (at
 > present, it's almost laughable to use that word), and subsequently create
 > a hack to spam the site.
-> 
+>
 > If you do decide to do this, then a) you're a *loser*, and
 > b) I'll just quickly change the hashing code to generate some other
 > value. In hindsight, I suppose I could have encrypted the expected value
@@ -384,7 +384,7 @@ the CAPTCHA control on the blog pages, this is what I ended up with:
 ```
 
 > **Note**
-> 
+>
 >       I've kept the comments in the code block above to help readers understand 
 >       a couple of the more subtle details of the implementation.
 

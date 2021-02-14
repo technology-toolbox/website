@@ -14,11 +14,11 @@ tags: ["My System", "Core Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -160,7 +160,7 @@ Unfortunately, this isn't quite enough to successfully compile the code -- assum
 
 > error : CA1801 : Microsoft.Usage : Parameter 'input' of 'StringHelper.Truncate(string,
 > int)' is never used. Remove the parameter or use it in the method body.
-> 
+>
 > error : CA1801 : Microsoft.Usage : Parameter 'maxLength' of 'StringHelper.Truncate(string,
 > int)' is never used. Remove the parameter or use it in the method body.
 
@@ -424,7 +424,7 @@ However, suppose that instead of using the **LastIndexOf** method  to find a spa
 Well, unfortunately, all of the unit tests created so far would still pass. That's  certainly not good.
 
 > **Important**
-> 
+>
 > While you might be tempted to modify the **Truncate003** unit
 > test to specify a string with multiple spaces in it, my recommendation is
 > you resist the temptation to modify existing unit tests.

@@ -9,11 +9,11 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -55,7 +55,7 @@ For example:
     ```
 
 > **Note**
-> 
+>
 >       XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
 
 3. Logout and log back in using a domain account.

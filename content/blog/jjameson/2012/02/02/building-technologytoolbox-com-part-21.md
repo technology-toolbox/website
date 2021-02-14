@@ -213,7 +213,7 @@ padding: 3px 6px;
 ```
 
 > **Note**
-> 
+>
 >       I commented out a number of CSS rules (copied from Google's CSS file) 
 >       because I could not find instances in the HTML returned by Google where 
 >       these are used. This may depend on which features of Google Site Search 
@@ -404,7 +404,7 @@ the scripts used for Google Site Search and also contains logic to conditionally
 specify the analytics key.
 
 > **Update (2011-02-20)**
-> 
+>
 >       The code below originally specified "http://www.google.com/jsapi" which 
 >       resulted in mixed mode content when browsing the site using HTTPS. I 
 >       updated this to use a

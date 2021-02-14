@@ -9,11 +9,11 @@ tags: ["My System", "Simplify", "Core Development", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -30,7 +30,7 @@ The following figure illustrates how deployments to the Development environment 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
 
 > **Note**
-> 
+>
 > At some point since I created my Build and Deployment slide in PowerPoint
 > years ago, I started naming the folder **\_latest** instead
 > of **Latest** (so that, by default, it appears above all of

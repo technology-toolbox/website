@@ -8,11 +8,11 @@ tags: ["Windows Vista", "Debugging"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I needed to look at some low-level HTTP traffic this morning, so I fired up [Fiddler](http://www.fiddlertool.com/) -- my tool of choice for this kind of thing. Unfortunately, I found that as soon as I enabled Fiddler, my browsing experience slowed to a crawl. Page requests that previously completed in 1-2 seconds were subsequently taking 30-40 seconds. Ugh!

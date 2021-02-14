@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -364,7 +364,7 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 ```
 
 > **Important**
-> 
+>
 > Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the
 > event log.
 
@@ -1122,13 +1122,13 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 ```
 
 > **Note**
-> 
+>
 > There's a known bug with the **SPWebConfigModification** class
 > not removing modifications from any Web.config file except the one for the
 > **Default** zone. In other words, running the following command
 > will not remove the trace listener configuration from the Web.config file
 > for the **Internet** zone:
-> 
+>
 > ```
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
 > ```

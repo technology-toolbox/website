@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 I encountered another nasty bug this morning while rebuilding our Microsoft Office         SharePoint Server (MOSS) 2007 Development environment (DEV). Since the time I originally         created DEV, I installed SQL Server SP2 and also restored several legacy databases         to support the development of the next version ("v2") of our solution.
@@ -26,7 +26,7 @@ At this point, I was presented with the oh-so-lovely "Unhandled exception" dialo
 **Error message:**
 
 > Unhandled exception has occurred in your application. If you click Continue, the             application will ignore this error and attempt to continue. If you click Quit, the             application will close immediately.
-> 
+>
 > Incorrect syntax near 'COLLATE'. You may need to set the compatibility level of             the current database to a higher value to enable this feature. See help for the             stored procedure sp\_dbcmptlevel.
 
 **Details:**

@@ -9,11 +9,11 @@ tags: ["Core Development", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 As I mentioned in my [previous post](/blog/jjameson/2009/11/07/using-password-minder-to-manage-your-passwords), this week I incorporated Password Minder into my "Toolbox"         Visual Studio solution that is scheduled to build daily through Team Foundation         Server (TFS).
@@ -56,33 +56,33 @@ Could not resolve VC project reference "..\NativeHelpers\NativeHelpers.vcproj".<
 That's when I discovered the following from the release notes for the SDK:
 
 > #### 5.1.1 VCBuild fails to compile or upgrade projects
-> 
+>
 > In order for VCBuild to run properly, vcprojectengine.dll needs to be registered.             If vcprojectengine.dll is not registered, VCBuild.exe will fail with errors such             as:
-> 
+>
 > On compile: <samp>warning MSB3422: Failed to retrieve VC project information through
 > the VC project engine object model. System error code: 127.</samp>
-> 
+>
 > On upgrade: <samp>Failed to upgrade project file 'foo.vcproj'. Please make sure the
 > file exists and is not write-protected.</samp>
-> 
+>
 > To workaround this issue, vcprojectengine.dll must be manually registered.             From a Windows SDK command line window (as administrator in Vista:
-> 
+>
 > On an X86 machine, run:
-> 
+>
 > ```
 > cd %mssdk%\VC\bin
 > ```
-> 
+>
 > ```
 > regsvr32 vcprojectengine.dll
 > ```
-> 
+>
 > On an X64 machine, run:
-> 
+>
 > ```
 > cd %mssdk%\VC\bin\X64
 > ```
-> 
+>
 > ```
 > regsvr32 vcprojectengine.dll
 > ```

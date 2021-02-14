@@ -8,11 +8,11 @@ tags: ["Windows Vista", "Windows Server", "Infrastructure"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In yesterday's [post](/blog/jjameson/2009/06/01/errors-installing-windows-server-2008-sp2), I noted the errors I encountered when trying to install Windows Server 2008 Service Pack 2 (SP2) due to "insufficient" disk space. I ended up having to expand numerous VHDs (one for each of my VMs running Windows Server 2008 x64) in order to have roughly 5 GB of free space to allow SP2 to install.

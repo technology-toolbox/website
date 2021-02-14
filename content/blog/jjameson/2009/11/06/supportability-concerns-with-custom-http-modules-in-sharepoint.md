@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/supportability-concerns-with-custom-http-modules-in-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/supportability-concerns-with-custom-http-modules-in-sharepoint.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -51,10 +51,10 @@ How can I say this with such conviction? Well, yesterday I came across the
 following on MSDN:
 
 > #### Support Details
-> 
+>
 > A HTTP module assembly can be installed in the Web application's \bin
 > directory or in the global assembly cache.
-> 
+>
 > Because an HTTP module is always called as part of the page processing
 > pipeline, a poorly designed or faulty module can have a detrimental effect
 > on performance or perceived stability of the environment. Thoroughly test

@@ -9,11 +9,11 @@ tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 It occurred to me this morning that while I previously shared some details on [how I manage my MSDN blog](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server), I've never shared my method for formatting code for the Web.
@@ -100,7 +100,7 @@ I also wanted to eliminate extraneous `<span>` tags for the default color (i.e. 
 Note that -- at least to this point -- I haven't made any attempt to generate 100% semantic markup (by converting the `style`attributes to corresponding CSS class names), because I think it would be somewhat brittle (i.e. dependent on the default color options in Visual Studio) and, honestly, not worth the effort.
 
 > **Update (2010-04-27)**
-> 
+>
 > After upgrading to Visual Studio 2010, I discovered that "\par" tags in the RTF were not being converted to new lines in David's original code (because Visual Studio 2008 didn't emit "\par" tags in the RTF, but rather "\r\n"). Consequently I updated the code below to work with Visual Studio 2010 (similar to the changes described in [David's updated post from last December](http://blogs.msdn.com/delay/archive/2009/12/20/blogging-code-samples-stays-easy-update-to-free-convertclipboardrtftohtmltext-tool-and-source-code-for-visual-studio-2010.aspx)).
 
 Here's the updated code that I now use for my Rtf2Html.exe utility:

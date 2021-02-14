@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.

@@ -8,11 +8,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -97,7 +97,7 @@ replaceOnKeyPress();
 ```
 
 > **Important**
-> 
+>
 > While this hack was verified to fix the problem in Firefox, it is somewhat
 > brittle due to the need to specify the unique identifier in the script (see
 > my comments in the server-side comment above).

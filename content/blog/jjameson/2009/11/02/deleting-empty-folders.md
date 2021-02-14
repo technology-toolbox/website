@@ -9,11 +9,11 @@ tags: ["My System"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 For the sake of this post, let's assume that you have a directory that contains some empty folders you want to get rid of. How the empty folders got there isn't important; all that matters is that you have some and you want to get rid of them.

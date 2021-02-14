@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 The primary goal for the current sprint on the project I'm working on is to localize the client portal previously developed for the United States so that it can be used by other regions around the world -- initially Spain, Mexico, Argentina, and a few Latin American countries. In other words, the bulk of the effort for this iteration involves extracting the English strings embedded throughout the solution into resource files.
@@ -46,6 +46,6 @@ For my current project, we are using the Spanish language packs for SharePoint a
 Therefore *most* of the localization infrastructure is provided for us out-of-the-box. As I mentioned before, I'll cover what isn't provided in a separate post.
 
 > **Update (2011-04-04)**
-> 
+>
 > [Part 2 in this series](/blog/jjameson/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class) is now available.
 

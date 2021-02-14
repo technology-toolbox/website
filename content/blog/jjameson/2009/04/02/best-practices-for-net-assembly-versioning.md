@@ -9,11 +9,11 @@ tags: ["My System", "Core Development", "Visual Studio"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Whenever a new .NET assembly project is created in Visual Studio, a file named AssemblyInfo         is created that contains attributes used to define the version of the assembly during         compilation.
@@ -49,7 +49,7 @@ The [AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/syste
 The file version should be isolated in its own file (e.g. AssemblyVersionInfo.cs)         to easily automate the process of incrementing it with every build. This file can         then be "linked into" each project in the solution, thus ensuring all of the various         assemblies in the solution share the same file version for a particular build.
 
 > **Update (2010-04-22)**
-> 
+>
 >             In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) (assuming you are using
 >             Team Foundation Server).
 

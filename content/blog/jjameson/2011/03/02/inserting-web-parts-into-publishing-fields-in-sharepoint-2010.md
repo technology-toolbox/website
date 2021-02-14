@@ -9,11 +9,11 @@ tags: ["SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In the sample SharePoint solution I provided in [one of last week's posts](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you may have noticed that when programmatically creating the custom **Sign In** page, I insert the custom Claims Login Form Web Part into the **Page Content** field.
@@ -221,7 +221,7 @@ private const string loginFormPlaceholder =
 ```
 
 > **Note**
-> 
+>
 > The embedded CSS styles shown in the default page content above (e.g. margins, floats, and widths) are only intended for demonstration purposes. While I would have preferred to use something like the 960 Grid System instead, I was trying to minimize complexity in the original sample for the Claims Login Form Web Part.
 
 Note that the **ReplacePlaceholderWithLoginWebPart** method simply checks to see if the Web Part placeholder is found in the page content and, if it is, subsequently uses the **SharePointPublishingHelper.InsertWebPartIntoPageContent** method to replace it with an instance of the Web Part:

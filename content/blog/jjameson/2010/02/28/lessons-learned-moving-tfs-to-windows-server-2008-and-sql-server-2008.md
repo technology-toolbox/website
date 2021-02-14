@@ -9,11 +9,11 @@ tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TF
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -301,7 +301,7 @@ This was necessary to avoid the following error:
 
 > System.InvalidOperationException: Client found response content type of '',
 > but expected 'text/xml'.
-> 
+>
 > The request failed with an empty response.
 
 I was then able to quickly upload the reports for each of my 13 TFS projects  (in about 3-4 minutes).

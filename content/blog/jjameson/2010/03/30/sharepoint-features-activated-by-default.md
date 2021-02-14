@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Here's something interesting I discovered only recently about Microsoft Office SharePoint Server (MOSS) 2007 -- even though I've been working with the product for years...
@@ -30,7 +30,7 @@ A little research yesterday revealed that this behavior is documented on MSDN:
 Here's the description for the **ActivateOnDefault** attribute of the **Feature** element:
 
 > Optional **Boolean**. **TRUE** if the Feature is activated by default during installation or when a Web application is created; **FALSE** if the Feature is not activated. This attribute equals **TRUE** by default. The **ActivateOnDefault** attribute does not apply to site collection (**Site**) or Web site (**Web**) scoped Features.
-> 
+>
 > In general, **Farm**-scoped Features become activated during installation, and when a new Web application is created, all installed **Web application**-scoped Features in it become activated.
 
 From now on, whenever I create a feature scoped to **WebApplication**, I'll be sure to specify the **ActivateOnDefault** attribute and set it to **FALSE** to avoid having my features "mysteriously" activated on Web applications that I don't intend them to be.

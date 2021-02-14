@@ -8,11 +8,11 @@ tags: ["My System", "MOSS 2007", "SQL Server", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 A little more than three years ago, I blogged about [the default recovery model for various SharePoint databases](/blog/jjameson/2008/01/18/default-recovery-models-for-sharepoint-databases). In that post, I described how I would often toggle the SQL Server databases in SharePoint development environments from the default Full recovery model to Simple before migrating content.

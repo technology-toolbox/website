@@ -10,11 +10,11 @@ tags: ["Infrastructure", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -60,7 +60,7 @@ When the Excel Services Application is created, a default trusted location is  a
 Use the following procedure to change the default trusted location to support  HTTPS.
 
 > **Important**
-> 
+>
 > Skip this section for environments that are not configured with SSL certificates
 > (e.g. development environments).
 
@@ -81,7 +81,7 @@ of HTTP:
    and then click **OK**.
 
 > **Note**
-> 
+>
 >       Since users of the Fabrikam extranet site are automatically redirected 
 >       from http:// to https:// during sign in (via the
 >       [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)), it is not expected that Excel Services 
@@ -96,12 +96,12 @@ By default, when you install Office Web Apps, the cache available to render docu
 It is recommended to isolate the content database used for the Office Web Apps  cache, so that cached files do not contribute to size of the "main" content database(s)  for the Web application. Also note that anytime you create a new SharePoint content  database, it is recommended to expand the initial database files (at least in a  production environment).
 
 > **Important**
-> 
+>
 > You must start a new instance of the SharePoint 2010 Management Shell
 > after installing the Office Web Apps in order to use the new PowerShell
 > cmdlets (e.g.
 > [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
-> 
+>
 > Also note that you may need to wait a few minutes (after installing Office
 > Web Apps or rebuilding the Web application) before performing the following
 > procedure (for the SharePoint timer job to configure the cache on the site

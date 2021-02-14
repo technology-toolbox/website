@@ -41,9 +41,9 @@ from %Path% (Remove-PathFolders.ps1). However, I honestly haven't found much
 use for that last one. I created it primarily for the sake of completeness.
 
 > **Note**
-> 
+>
 > You can download these scripts from my Toolbox repository on GitHub:
-> 
+>
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 ### Get-PathFolders.ps1

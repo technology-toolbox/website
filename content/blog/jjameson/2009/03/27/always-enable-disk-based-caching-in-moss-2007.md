@@ -8,11 +8,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 For reasons completely unknown to me, the SharePoint team decided to ship Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a. *blob caching*) disabled. If you are not familiar with disk-based caching, here is a blurb from [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
@@ -61,6 +61,6 @@ I encourage you to repeat the SQL Server Profiler trace after setting `enabled="
 So, unless you just have lots of excess capacity on your SQL Server cluster (and therefore don't mind lots of extraneous database roundtrips), I hope you don't consider going live without enabling disk-based caching.
 
 > **Update (2009-03-28)**
-> 
+>
 > It occurred to me this morning that my previous statement about always enabling disk-based caching could be misconstrued. If you don't want to enable disk-based caching on your local VM to expedite your development activities (e.g. to avoid having to repeatedly clear your browser cache to see changes to CSS files), that's perfectly fine. Just make sure you enable disk-based caching on your Test and Production environments.
 

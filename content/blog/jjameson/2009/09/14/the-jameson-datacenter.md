@@ -8,11 +8,11 @@ tags: ["My System", "Infrastructure", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Back in a [post](/blog/jjameson/2008/02/17/an-update-on-disk-space-usage-by-windows-vista) from February 2008, I first referred to the "Jameson Datacenter" while         discussing one of the servers running in my basement. Since then I've referenced         my home lab about a dozen times in different posts but never provided significant         details about the various servers and corresponding configuration.

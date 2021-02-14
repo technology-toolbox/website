@@ -9,11 +9,11 @@ tags: ["Windows Server", "Infrastructure"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 [Sorry the blog has been relatively silent this month -- but, on the other hand,         I did manage to make time for a vacation to Arizona this month (Sedona, Grand Canyon,         and then Scottsdale). It was a little hot, but a wonderful trip nonetheless.]
@@ -21,23 +21,23 @@ tags: ["Windows Server", "Infrastructure"]
 Here's an email that I sent last month regarding an issue I discovered after upgrading         one of my servers to Windows Server 2008 R2:
 
 > ***
-> 
+>
 > 
 > **From:** Jeremy Jameson
 > **Sent:** Friday, May 21, 2010 11:00 AM
 > **To:** [...]
 > **Subject:** Windows Server Backup: "Select Items to Recover" does             not show backed up files
-> 
+>
 > On a server running Windows Server 2008 R2, I have completed a backup with the following             options:
-> 
+>
 > - Backup items: Selected files (C:\BackedUp\)
 > - Files excluded: None
 > - Advanced option: VSS Copy Backup
 > - Backup destinations: Local Disk (D:) -- using the **Back up to a volume**
 >   option
-> 
+>
 > According to the backup log file, all of the files in the specified location are             successfully backed up:
-> 
+>
 > Backed up C:\
 > Backed up C:\BackedUp\
 > ...
@@ -51,30 +51,30 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 > Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\
 > Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\CLR Security             Config\
 > ...
-> 
+>
 > However, when I try to recover the files, it appears as if the files were not backed             up, as shown in the screenshot below.
-> 
+>
 > ![Windows Server Backup-Recovery Wizard - bug](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Windows%20Server%20Backup%20-%20Recovery%20Wizard%20Bug.png)
 > [(See full-sized image)](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Windows%20Server%20Backup%20-%20Recovery%20Wizard%20Bug.png)
-> 
+>
 > Note that the Recovery Wizard doesn't show any files or folders under the C:\BackedUp\Profiles\jjameson             folder (even though the backup log lists the files and folders in this location).
-> 
+>
 > Also note that I am using my **TECHTOOLBOX\jjameson-admin** account             -- which is a Domain Admin account -- to perform the backup and restore operations.             I also added it to the **Backup Operators** group on the server (even             though this seems superfluous).
-> 
+>
 > The permissions on the C:\BackedUp\Profiles\jjameson folder are as follows:
-> 
+>
 > - SYSTEM -- Full Control
 > - TECHTOOLBOX\jjameson -- Full Control (note that this is not my TECHTOOLBOX\jjameson-admin
 >   account)
-> 
+>
 > It seems like the Recovery Wizard doesn't honor the "security override" feature             of the **Backup Operators** group. I don't recall having any issues             with these permissions when this server was running Windows Server 2003 and I was             using NTBackup.
-> 
+>
 > Doesn't this seem like a bug (since the files can be backed up, but they cannot             be recovered)?
-> 
+>
 > Jeremy Jameson
 > **Microsoft Consulting Services**
 > ...
-> 
+>
 > ***
 
 

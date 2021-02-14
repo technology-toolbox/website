@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -65,7 +65,7 @@ host. However, when I attached the SQL Server ISO image to the new VM, I encount
 the following error:
 
 > setup.exe - Bad Image
-> 
+>
 > The application or DLL D:\SQL Server x86\Servers\Setup\setupex.dll is not
 > a valid Windows image. Please check this against your installation disk.
 
@@ -79,7 +79,7 @@ the SharePoint Configuration Wizard). On both VMs, I got the following error
 when starting the setup:
 
 > Visual Studio 2005 Setup
-> 
+>
 > An unknown error occured while copying files to your temporary folder. Setup
 > will now exit.
 

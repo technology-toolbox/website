@@ -9,11 +9,11 @@ tags: ["My System", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In a [previous post](/blog/jjameson/2009/10/09/formatting-code-for-my-blog), I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML).

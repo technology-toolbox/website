@@ -10,11 +10,11 @@ tags: ["Windows
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -101,9 +101,9 @@ According to the corresponding
 [KB article](http://support.microsoft.com/kb/950050):
 
 > **Update for Windows Server 2008 (KB950050)**
-> 
+>
 > This 32-bit update package includes the release version of the following:
-> 
+>
 > - The Hyper-V Manager console
 > - The Virtual Machine Connection tool for x86-based editions of Windows
 >   Server 2008

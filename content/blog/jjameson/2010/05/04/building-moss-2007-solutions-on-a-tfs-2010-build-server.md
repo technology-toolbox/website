@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "Visual Studio", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -55,11 +55,11 @@ need to copy depends on the details of your solution, but typically includes:
 After completing these steps, I queued another build of my Fabrikam.Demo solution  and verified the errors caused by missing SharePoint assemblies no longer occurred.
 
 > **Note**
-> 
+>
 > In addition to copying SharePoint assemblies that are directly referenced
 > in your projects, you also may want to copy assemblies that are *indirectly*
 > referenced, such as:
-> 
+>
 > - Microsoft.HtmlTrans.Interface.dll
 > - Microsoft.Internal.Mime.dll
 > - Microsoft.Office.Server.dll
@@ -69,10 +69,10 @@ After completing these steps, I queued another build of my Fabrikam.Demo solutio
 > - Microsoft.SharePoint.Library.dll
 > - Microsoft.SharePoint.Search.dll
 > - Microsoft.Web.Design.Server.dll
-> 
+>
 > While not required to successfully build a SharePoint solution, copying
 > these additional assemblies will avoid warnings during the build.
-> 
+>
 > If you choose to include these additional assemblies, be aware that many
 > of these files will need to be copied out of the GAC on the MOSS 2007 server
 > (in other words, most of them are not located in the "Program Files\Common

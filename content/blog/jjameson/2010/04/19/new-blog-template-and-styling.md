@@ -8,11 +8,11 @@ tags: ["Personal"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Last Thursday, I mentioned a problem that would occasionally occur with the [formatting on my blog posts](/blog/jjameson/2010/04/15/blog-post-formatting-issues) (but only when viewing the default page -- listing the most recent posts -- and not when viewing individual posts). Tonight I thought I should spend a little more effort trying to resolve the issue.

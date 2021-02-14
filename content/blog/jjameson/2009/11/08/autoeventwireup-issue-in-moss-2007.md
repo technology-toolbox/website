@@ -10,11 +10,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I [recently promised](/blog/jjameson/2009/11/02/analyzing-my-msdn-blog) to finish this blog post that has been sitting in "unpublished" status since June 2008, so here it is...

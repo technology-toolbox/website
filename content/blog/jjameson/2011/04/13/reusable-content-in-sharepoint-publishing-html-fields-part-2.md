@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -273,7 +273,7 @@ The corresponding "view format" is shown below:
 ```
 
 > **Note**
-> 
+>
 > I have no idea why the out-of-the-box **Byline** and
 > **Quote** reusable content items in SharePoint 2010 specify
 > **Automatic Update** = **Yes**. I can see the
@@ -467,7 +467,7 @@ Rather than simply listing the code for inserting reusable content into a page  
 ```
 
 > **Note**
-> 
+>
 > Initially, I added the code for inserting reusable content into a page to
 > the **SharePointPublishingHelper** class. However, I ended
 > up refactoring this code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new class in more detail in part 3 of
@@ -543,7 +543,7 @@ Here are the instructions to deploy the sample to your own SharePoint environmen
    ```
 
 > **Note**
-> 
+>
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.

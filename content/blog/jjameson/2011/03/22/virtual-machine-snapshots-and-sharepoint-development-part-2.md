@@ -9,11 +9,11 @@ tags: ["My System", "MOSS 2007", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [part 1](/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1) of this post, I introduced the way I use VM snapshots to allow me         to quickly rollback my SharePoint development VMs to key points in time. For example,         I can quickly revert to a "baseline SharePoint Server 2010 configuration" in which         no Web applications have been created (besides Central Administration) and the only         service application that has been configured is [Usage and Health Data Collection](http://technet.microsoft.com/en-us/library/ee663480.aspx).
@@ -108,7 +108,7 @@ Of course, this emphasizes the importance of being able to deploy your SharePoin
 It's also worth repeating the following warning from my previous post:
 
 > **Warning**
-> 
+>
 >             If, like me, you decide to use Hyper-V snapshots in your SharePoint development
 >             environment, then make darn sure you've checked in any pending changes to TFS (or
 >             at least shelved your changes) before you apply a snapshot. [Note that when applying

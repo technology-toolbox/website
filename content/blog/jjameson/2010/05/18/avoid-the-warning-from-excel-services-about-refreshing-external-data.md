@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "TFS", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In my post earlier this month on [upgrading to Team Foundation Server (TFS) 2010 and SharePoint Server 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I forgot to include the steps to change the **Warn on Refresh** setting of the trusted file location for the Excel Services Application.
@@ -21,9 +21,9 @@ In my post earlier this month on [upgrading to Team Foundation Server (TFS) 2010
 If you leave this value set to the default (i.e. **Yes**), then you'll be greeted with the following message for each Excel Web Part on a TFS dashboard page:
 
 > This workbook contains one or more queries that refresh external data. A malicious user can design a query to access confidential information and distribute it to other users or perform other harmful actions.
-> 
+>
 > If you trust the source of this workbook, click Yes to enable queries to external data in this workbook. If you are not sure, click No so that changes are not applied to your workbook.
-> 
+>
 > Do you want to enable queries to external data in this workbook?
 
 To avoid warnings before refreshing external data in Excel Services:

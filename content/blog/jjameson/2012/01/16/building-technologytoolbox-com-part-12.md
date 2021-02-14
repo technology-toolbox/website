@@ -115,7 +115,7 @@ as a simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 (to group by month and count the number of rows for each month).
 
 > **Tip**
-> 
+>
 >       If you are working with LINQ these days, and you haven't already discovered
 >       [LINQPad](http://www.linqpad.net/), I highly recommend checking 
 >       it out. It makes it much quicker to iteratively build LINQ queries like 
@@ -268,13 +268,13 @@ private static string GetMonthName(
 ```
 
 > **Note**
-> 
+>
 > As I've noted before, there are some assumptions in this code that
 > I currently consider to be "good enough" (such as the hardcoded path
 > to the blog -- i.e.  "/blog/jjameson/archive"). If the time comes
 > when this code needs to support other scenarios, then -- and probably
 > *only* then -- I'll put the effort into making it more robust.
-> 
+>
 > Also note that there *may* be a way to combine the **
 > GetMonthName** logic into the actual LINQ query, but I couldn't
 > find one. Keep in mind that the results need to be ordered chronologically

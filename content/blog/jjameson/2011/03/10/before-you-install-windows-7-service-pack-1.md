@@ -10,11 +10,11 @@ tags: ["Windows Server", "Infrastructure", "Windows 7"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 ...make darn sure you have already installed the [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en) (if you want to use them, of course).
@@ -31,11 +31,11 @@ Of course, this is clearly documented on the download page:
 [http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en)
 
 > ...
-> 
+>
 > **\*\*Remote Server Administration Tools for Windows 7 can be installed ONLY on computers that are running the Enterprise, Professional, or Ultimate editions of Windows 7. This software CANNOT BE INSTALLED on computers that are running Windows 7 with Service Pack 1 (SP1). To run Remote Server Administration Tools for Windows 7 on a computer on which you want to run Windows 7 with SP1, first install Remote Server Administration Tools, and then upgrade to Service Pack 1.\*\***
-> 
+>
 > ...
-> 
+>
 > This software is not supported on computers that are running Windows 7 with Service Pack 1 (SP1). If your computer is running Windows 7 with SP1, and you try to install Remote Server Administration Tools for Windows 7, the following error message is displayed: "The update is not applicable to your computer." This limitation is by design, and is documented in the [Windows 7 with SP1 Deployment Guide](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-83fe-46e9-96d8-027ae59ddc11).
 
 Then again, if you downloaded RSAT for Windows 7 a long time ago (like I did back in 2009), then you probably missed this announcement. Apparently I *really* should have read the Windows 7 SP1 Deployment Guide before rebuilding my desktop. Ah...so much to read, so little time.

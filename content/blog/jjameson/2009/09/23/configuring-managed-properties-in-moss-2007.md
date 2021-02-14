@@ -8,11 +8,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 As I've noted in a [previous post](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I typically use feature receivers in Microsoft Office SharePoint Server (MOSS) 2007 to automatically configure a "bunch of stuff" that would otherwise be very tedious to perform repeatedly for different environments (e.g. DEV, TEST, and PROD) and whenever I rebuild my local development VM. For example, when you activate one of my "Search" features, I typically create the Search Center, create/configure the various search results pages with a number of different Web Parts, and also programmatically configure managed properties.

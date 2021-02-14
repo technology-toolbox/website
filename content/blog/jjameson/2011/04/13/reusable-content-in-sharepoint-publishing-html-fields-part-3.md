@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "SharePoint
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -205,7 +205,7 @@ that I'm essentially just following the original implementation in **HtmlEditorI
 SPWeb parameter to access the **Reusable Content** list.
 
 > **Important**
-> 
+>
 >       Also note that, unlike the original **HtmlEditorInternal** 
 >       implementation, I don't leverage any caching when fetching **Reusable 
 >       Content** list items. Consequently, you should be wary of using 
@@ -328,7 +328,7 @@ I can scrap my custom code and go with the out-of-the-box SharePoint code instea
 ;-)
 
 > **Note**
-> 
+>
 >       You must be running Visual Studio 2010 Service Pack 1 in order to run 
 >       my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments 
 >       like the one I described in a

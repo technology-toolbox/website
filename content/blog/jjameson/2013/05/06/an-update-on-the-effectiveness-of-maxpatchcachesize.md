@@ -69,30 +69,30 @@ words, something like the MaxPatchCacheSize registry setting -- except something
 that actually works as intended ;-)
 
 > **Note**
-> 
+>
 > The development VM that I captured the above screenshot from has the
 > following software installed:
-> 
+>
 > - Windows 7 (64-bit)
-> 
+>
 > - Microsoft Visual Studio 2008
-> 
+>
 > - Microsoft Visual Studio 2008 Team Explorer
-> 
+>
 > - Microsoft Visual Studio 2008 SP1
-> 
+>
 > - Microsoft Visual Studio 2010
-> 
+>
 > - Microsoft Visual Studio 2010 SP1
-> 
+>
 > - Microsoft Team Foundation Server Power Tools December 2011
-> 
+>
 > - Microsoft Visual Studio 2012
-> 
+>
 > - Microsoft Visual Studio 2012 Update 2
-> 
+>
 > - Microsoft SQL Server 2012 with SP1
-> 
+>
 > - WiX Toolset v3.7
 >   
 >       I don't typically install more than one version of Visual Studio in 

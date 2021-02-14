@@ -8,11 +8,11 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -35,7 +35,7 @@ As you might be aware by now, I'm also a big fan of scenario-based development. 
 > site for Fabrikam Technologies. Consequently Doug needs to get his local development
 > environment created and configured as quickly as possible in order to start
 > being a productive team member.
-> 
+>
 > After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008
 > and Visual Studio 2008. He then installs MOSS 2007 and subsequently creates
 > a new SharePoint "farm" (which in this case is comprised only of his single
@@ -119,7 +119,7 @@ set FABRIKAM_BUILD_CONFIGURATION=Debug
 While we would obviously never want to deploy Debug builds to the Production  environment (only Release builds), we almost always deploy Debug builds to LOCAL  and DEV environments (in order to make it easier to troubleshoot issues). Since  the deployment scripts default to Release builds, Doug needs to set the **FABRIKAM\_BUILD\_CONFIGURATION** environment variable to **Debug**.
 
 > **Note**
-> 
+>
 > **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL**
 > would typically be set using system environment variables as illustrated
 > in the following figure. That way, the variables would only need to be set
@@ -611,7 +611,7 @@ Assuming you have a MOSS 2007 development environment, you should be able to  do
 While it might sound like there's a lot of custom code here, I just checked Visual  Studio and it reports there are less than 500 lines of code in the solution. Note  that this doesn't include the various scripts (in case you consider those to be  "code"). Also note that about half of the code is for the custom STSADM commands  for extending the Web application and enabling FBA.
 
 > **Tip**
-> 
+>
 > If you haven't seen Gary Lapointe's custom STSADM commands already, I encourage
 > you to take a look at them. You can find them on his blog:
 > [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The

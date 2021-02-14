@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "SQL Server"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -34,7 +34,7 @@ From SQL Server 2005 Books Online:
 > and how they are restored. Sometimes, however, a backup must be taken for a
 > special purpose that should not affect the overall backup and restore procedures
 > for the database.
-> 
+>
 > A data backup is normally a base backup for one or more differential backups
 > taken after it. Microsoft SQL Server 2005 introduces support for creating copy-only
 > backups, which do not affect the normal sequence of backups. Therefore, unlike

@@ -10,11 +10,11 @@ tags: ["SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -91,14 +91,14 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 
 > Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
 > has subsites.
-> 
+>
 > At line:1 char:13
-> 
+>
 > + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false
-> 
+>
 > + CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb)
 >   [Remove-SPWeb], SPException
-> 
+>
 > + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
 In order to delete a site that has subsites using PowerShell, we simply need  to convert the C# code shown above into a corresponding PowerShell function, as  shown below:

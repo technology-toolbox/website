@@ -8,11 +8,11 @@ tags: ["Windows Vista", "Windows Server", "Infrastructure", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 About a year ago, I wrote a post about [saving huge amounts of disk space by slipstreaming service packs](/blog/jjameson/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs). Having         just been through an [ordeal](/blog/jjameson/2009/06/01/errors-installing-windows-server-2008-sp2) installing Windows Server 2008 SP2, I thought it would be worthwhile         to provide an update (since that original post refers to disk space usage with Windows         Server 2003).

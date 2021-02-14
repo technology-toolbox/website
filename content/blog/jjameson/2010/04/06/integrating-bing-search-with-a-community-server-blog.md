@@ -9,11 +9,11 @@ tags: ["My System"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In [one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
@@ -25,7 +25,7 @@ Note that, as I've mentioned before, MSDN (and TechNet) blogs are currently powe
 Yesterday I discovered that sometime last fall, the MSDN folks replaced the Community Server search functionality with Bing search. If you click the **Search** link on this page, you'll see what I mean. Unfortunately, when you use that search page, you get results from all MSDN blogs even though you may want to see the results from, say, just my blog.
 
 > **Update (2009-04-20)**
-> 
+>
 > After [switching my blog from the **default** Community Server template](/blog/jjameson/2010/04/19/new-blog-template-and-styling) to the **Simple - right sidebar** template, I discovered that the MSDN team had already updated that template to replace the default "Search All Blogs" functionality with the "Search This Blog" functionality that one would expect (with a much nicer user experience, I might add). Consequently I removed my custom search box. Apparently, I should have abandoned the default CS template a long time ago ;-)
 
 After digging around a little in the [Bing Developer Center](http://www.bing.com/developers), I found some [instructions for adding a basic search box to search just your website](http://help.live.com/help.aspx?project=WL_Webmasters&querytype=keyword&query=hcraescisab&mkt=en-us).
@@ -33,7 +33,7 @@ After digging around a little in the [Bing Developer Center](http://www.bing.com
 Here's the gist of it:
 
 > To let your visitors search your website, add the following code to your page(s):
-> 
+>
 > ```
 > <!-- Site search from Bing-->
 > <form method="get" action="http://www.bing.com/search">
@@ -133,8 +133,8 @@ The second scenario is where someone doesn't specify any search keywords and ins
 If you have a Community Server blog, all you need to do is copy/paste the code provided above into the **News** field on the **Title, Description, and News** page, change the value of the **siteUrl** variable accordingly, and then click **Save**. Then you -- or anyone browsing your blog -- will be able to search your posts without having to specify a site filter each time.
 
 > **Update**
-> 
+>
 > Right after I published this post, I discovered that Bing does not preserve the "q1" querystring parameter when submitting additional searches. In other words, if you search for "faceted search" from the search box on my blog, then everything works as expected (i.e. the results are limited to my blog posts); however if you subsequently change the search keywords on the Bing search results page (presumably because you want to search for something else on my blog), then the site filter (originally specified with the "q1" query string parameter) is lost and therefore you get results from the entire Web. Bummer.
-> 
+>
 > To resolve this issue, I modified the JavaScript to simply append the site filter to the "q" query string parameter instead.
 

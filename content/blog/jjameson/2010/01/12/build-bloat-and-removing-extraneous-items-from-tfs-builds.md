@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 This week I am wrapping up the third sprint (a.k.a. *iteration*or *milestone*) on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although, honestly, I wasn't involved all that much in Sprint-3, since I was on vacation for the vast majority of the iteration.
@@ -87,6 +87,6 @@ After overriding the `BeforeDropBuild` target, the Sprint-3 build is now 28 MB u
 Buh-bye, build bloat!
 
 > **Update (2011-03-14)**
-> 
+>
 > Refer to [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects) for an update on this technique that works with TFS 2010 builds that don't use the UpgradeTemplate.xaml build process template.
 

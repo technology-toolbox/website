@@ -8,11 +8,11 @@ tags: ["My System", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I started using [Password Minder](http://msdn.microsoft.com/en-us/magazine/cc163958.aspx) almost immediately after reading about it in the July 2004 edition of MSDN Magazine. I don't know about you, but trying to remember all of my various passwords for dozens of Web sites, numerous network accounts, VMs, etc. is really quite a nightmare. [I'm actually a little embarrassed to say that on more than one occasion I've had to hack one of my VMs in order to reset the password for a domain admin. This process definitely isn't for the faint of heart, but it was better than having to rebuild [my FABRIKAM domain](/blog/jjameson/2009/09/14/the-jameson-datacenter)from scratch.]
@@ -32,7 +32,7 @@ First, it didn't like the fact that my Documents folder is redirected to a serve
 Consequently, I encountered the following error when trying to save my password file:
 
 > Failed to save the password file. Here are the gory details:
-> 
+>
 > GetVolumeInformation failed:
 > The filename, directory name, or volume label syntax is incorrect.
 

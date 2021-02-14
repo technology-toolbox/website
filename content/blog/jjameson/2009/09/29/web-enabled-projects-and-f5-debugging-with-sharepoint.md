@@ -8,11 +8,11 @@ tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -62,7 +62,7 @@ use different URLs for their local SharePoint sites).
 and then click **Set as StartUp Project**.
 
 > **Note**
-> 
+>
 > In addition to seeing the **Web** tab in project settings,
 > you will also find that adding items like ASPX pages and ASCX controls is
 > much easier after "Web-enabing" your project.

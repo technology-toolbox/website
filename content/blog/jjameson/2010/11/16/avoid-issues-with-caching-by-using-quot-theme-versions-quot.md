@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In a previous [post](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) discussing Web standards design, I mentioned how I like to use "Theme" folders to organize CSS files and related images that define a specific look-and-feel for a site.

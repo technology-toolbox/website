@@ -106,7 +106,7 @@ Here is the current content of the default master page for the static HTML proto
 ```
 
 > **Note**
-> 
+>
 > Rather than trying to understand all of the discrete HTML elements shown
 > in this post, focus instead on the high-level structure of the various pages
 > and how they fit together. I'll discuss the semantic HTML used for the Technology
@@ -627,7 +627,7 @@ BlogPost.master defines a new **ContentPlaceHolder** control (i.e. **PostContent
 ```
 
 > **Note**
-> 
+>
 > Observe how the prototype uses nested master pages in order to render the
 > common masthead, global navigation, and footer content from Default.master
 > in addition to the content specified in BlogPost.master.

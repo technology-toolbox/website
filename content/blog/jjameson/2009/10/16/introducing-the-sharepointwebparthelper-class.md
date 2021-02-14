@@ -9,11 +9,11 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In a previous post, I introduced the [DR.DADA approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) and how I typically use the concept of a [FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) to automatically configure one or more aspects of a SharePoint site when activating my feature.

@@ -8,11 +8,11 @@ tags: ["Core Development", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 While attending TechReady (an internal Microsoft training conference) last week,         I learned a lot -- not only about future versions of our products, but also numerous         tips and tricks for current versions. One of the most valuable insights I gained         was from a session on branching in Team Foundation Server (TFS). If you've read         my [previous post on structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions), then you know that         I'm a proponent of branching from the start in order to easily support parallel         development and periodically stabilizing for a release.

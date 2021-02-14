@@ -9,11 +9,11 @@ tags: ["Visual Studio", "TFS", "SharePoint
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -48,7 +48,7 @@ assemblies to the GAC on the build server:
 > **Copy the SharePoint Tool Assemblies and Files to the GAC
 > ** The following assemblies must be copied to the GAC of the build
 > system:
-> 
+>
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.dll
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
@@ -114,7 +114,7 @@ the future, but for now, these are sufficient to compile my current solutions
 without any warnings.
 
 > **Update (2011-03-14)**
-> 
+>
 >       I also recommend you remove extraneous SharePoint assemblies from your 
 >       build output, as described in
 >       [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects).

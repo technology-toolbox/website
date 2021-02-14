@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -54,10 +54,10 @@ Note that stsadm.exe also has the **upgradesolution** operation  -- which is cer
 Redeploying your features may seem like overkill -- even using scripts like **Redeploy Features.cmd**, which I'll share in a follow-up post --  and the truth is sometimes it is. However, keep in mind that if you -- as the developer  -- know that you haven't changed anything but code since your last build and deployment,  then you can just GAC the updated assemblies, recycle your application pool, and  you are off to the races -- or at least you will be once your SharePoint site has  warmed up again!
 
 > **Note**
-> 
+>
 > Refer to the following blog post for more details on the "DR.DADA" approach
 > to SharePoint development:
-> 
+>
 > <cite>Sample Walkthrough of the DR.DADA Approach to SharePoint</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
 

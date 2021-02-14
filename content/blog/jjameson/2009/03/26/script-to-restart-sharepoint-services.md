@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Since my [previous post](/blog/jjameson/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size) introduced one of my SharePoint Toolbox scripts, I thought I should share another one that is more applicable to a broader audience.

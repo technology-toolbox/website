@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -60,32 +60,32 @@ Once you remove the add-in, close all instances of Internet Explorer, and restar
 IE, the seamless redirect works as expected.
 
 > **Update (2010-01-15)**
-> 
+>
 > This is a known bug:
-> 
+>
 > **You cannot view a forms-based authentication Windows SharePoint
 > Services 3.0 site if you have Office Live Update 1.2 for Microsoft Office
 > Live Workspace installed
 > ** [http://support.microsoft.com/kb/972535](http://support.microsoft.com/kb/972535)
-> 
+>
 > According to the KB article, it is fixed in the June 2009 Cumulative
 > Update (CU). From my experience, it also appears to be fixed by installing
 > the 1.4 of the Microsoft Office Live Add-in.
-> 
+>
 > Note that I tried reinstalling the Office Live Add-in on my VM to
 > try to repro the error again prior to installing the June 2009 CU. Unfortunately,
 > I couldn't find the 1.3 version available for download anymore from
 > microsoft.com (the download page is no longer available). When I downloaded
 > and installed the 1.4 version, I was unable to repro the error when
 > browsing locally from my VM.
-> 
+>
 > I subsequently downloaded the June 2009 CU and proceeded to install
 > it on my local VM (since I could still test with the 1.3 version of
 > the Office Live Add-in from my laptop). Unfortunately, I could only
 > install the WSS part of this CU -- not the MOSS part. (The MOSS patch
 > is giving me the dreaded "expected version of the product was not found
 > on the system" error.)
-> 
+>
 > However, even with just the WSS portion of the June 2009 CU, I am
 > no longer seeing the error when browsing to my local VM from my laptop.
 

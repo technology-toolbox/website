@@ -9,11 +9,11 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 A couple of years ago, I shared the scripts I created for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer to as the "[DR.DADA approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)."
@@ -408,7 +408,7 @@ The Fabrikam solution includes a custom **SPLogger** class for writing trace mes
 The following script ensures the custom event source is registered.
 
 > **Important**
-> 
+>
 > This script must be run on each SharePoint server in the farm.
 
 ```
@@ -532,7 +532,7 @@ Main
 ```
 
 > **Update (2011-03-02)**
-> 
+>
 > I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
 
 The optional `-Debug` parameter for this script makes it easy to debug the new PowerShell instance (without requiring you to temporarily specify `$DebugPreference = "Continue"` in your PowerShell profile).
@@ -1289,7 +1289,7 @@ Main $force
 ```
 
 > **Update (2011-03-02)**
-> 
+>
 > I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
 
 ### Delete Web Application.ps1
@@ -1332,6 +1332,6 @@ In fact, on several occasions I've found it to be *very* helpful to rollback my 
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm able to rebuild my development environment in a matter of minutes.
 
 > **Warning**
-> 
+>
 > If, like me, you decide to use Hyper-V snapshots in your SharePoint development environment, then make darn sure you've checked in any pending changes to TFS (or at least shelved your changes) before you apply a snapshot. [Note that when applying an earlier snapshot, I don't typically take a new snapshot before reverting to the earlier point in time. In other words, I treat my SharePoint development VM as "volatile" -- or "disposable" (if you prefer that term instead).]
 

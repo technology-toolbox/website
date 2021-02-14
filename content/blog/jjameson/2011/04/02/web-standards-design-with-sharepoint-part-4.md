@@ -9,11 +9,11 @@ tags: ["SharePoint 2010", "Tugboat"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [part 2](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2) of this series, I provided a sample Microsoft Office SharePoint Server         (MOSS) 2007 solution based on Dan Cederholm's [Tugboat sample site](http://www.handcraftedcss.com/) (from his most recent book, [Handcrafted CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
@@ -321,7 +321,7 @@ ManageSubwebs, ManageWeb, ViewUsageData ">
 ```
 
 > **Important**
-> 
+>
 >             I originally specified `ViewFormPages`
 >             in the list of permissions, but discovered anonymous users have this permission
 >             by default in SharePoint 2010. I swear this wasn't the case in MOSS 2007 (due to
@@ -410,7 +410,7 @@ div.more-btn a:link, div.more-btn a:visited {
 ```
 
 > **Note**
-> 
+>
 >             I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">`element but then realized I couldn't easily fix the color of the "News Archives"
 >             button.
 
@@ -487,7 +487,7 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
    ```
 
 > **Note**
-> 
+>
 >             Technically, you don't have to set the environment variables (and use the "-dev"
 >             accounts). However, I recommend this in order to bypass SharePoint timer jobs when
 >             deploying the WSPs.

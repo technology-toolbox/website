@@ -8,11 +8,11 @@ tags: ["TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 I've been using the [new Scrum template](http://visualstudiogallery.msdn.microsoft.com/en-us/59ac03e3-df99-4776-be39-1917cbfc5d8e) for Team Foundation Server 2010 for a little over three weeks now -- not on a *real* project, admittedly, but rather on a sample project that I've been working on. [On the customer project that I've been working on for over a year now, we're "stuck" on TFS 2008 until the extranet TFS instance hosted by Microsoft is upgraded to the new version. Of course, even after TFS is upgraded, it's unlikely we would create a new project just to use the new process template, but anyway...]

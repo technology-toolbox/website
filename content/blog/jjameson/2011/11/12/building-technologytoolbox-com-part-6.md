@@ -40,7 +40,7 @@ to how I used the "PRIME" API a few years ago on the Agilent project to import
 content into SharePoint.
 
 > **Note**
-> 
+>
 >       If your new platform supports some kind of import functionality, then 
 >       much of the "heavy lifting" involved in migrating content has already 
 >       been done. You just need to figure out how to export content from the 
@@ -175,14 +175,14 @@ private static void EnsureOfflineFile(
 ```
 
 > **Important**
-> 
+>
 > When migrating content from one system to another, I strive to minimize
 > the load on the source system -- in this case, by downloading the files
 > one time from the MSDN blog site. While I could certainly download these
 > pages each time the program runs, this would put an unnecessary load
 > on the MSDN site (and also significantly slow down the process of developing
 > the content migration utility).
-> 
+>
 > Note that this is just one way of minimizing the impact of migrating
 > content. Another common approach that I've used in the past is to initially
 > run the content migration against the DEV environment and later on against
@@ -366,7 +366,7 @@ and add these to the BlogML document.
 ```
 
 > **Tip**
-> 
+>
 >       Parsing with the Html Agility Pack works very well when the source HTML 
 >       is dynamically generated using a template mechanism (like ASP.NET or 
 >       PHP) because the structure is very consistent. Handcrafted HTML, on 
@@ -794,18 +794,18 @@ just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/Sgml
 ```
 
 > **Important**
-> 
+>
 > This is probably a good place to stop and point out an essential
 > concept when writing migration tools like this -- as well as similar
 > kinds of "throw away" code.
-> 
+>
 > Keep in mind the ultimate goal of this utility is to run it *one
 > time*(after all of the development and testing effort is completed,
 > of course). In other words, when I'm writing utilities like this, I
 > try not to focus on writing highly maintainable code. Hence you don't
 > see any significant error handling, parameter validation, boundary checking,
 > etc.
-> 
+>
 > The goal is to complete the code as quickly as possible -- ensuring
 > that it is "good enough" to do its job but doesn't necessarily demonstrate
 > best coding practices. For example, I don't bother enabling *all*
@@ -815,7 +815,7 @@ just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/Sgml
 > control, but that's primarily as a benefit during development so I can
 > easily rollback unwanted changes (and occasionally to go back at some
 > point in the future and review the code for reference purposes).
-> 
+>
 > If this utility was something I expected to be maintained going forward,
 > I would have spent more time trying to figure out why I couldn't get
 > the Html Agility Pack to fix the malformed HTML.
@@ -967,7 +967,7 @@ mapping, illustrated below:
 | WSS v3 | SharePoint |
 | WSUS | Infrastructure |
 > **Note**
-> 
+>
 >       Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific 
 >       content (e.g. **Infrastructure** or **Development**), 
 >       I decided not to use these tags for mapping (and instead rely on categories 
@@ -1056,7 +1056,7 @@ private static void FillPostCategories(
 ```
 
 > **Tip**
-> 
+>
 >       Depending on the complexity of your taxonomy, you may need a more robust 
 >       mapping implementation than the one I've shown here. For example, on 
 >       the Agilent project, I created an Excel workbook with a separate worksheet 
@@ -1293,13 +1293,13 @@ returned from Telligent, I wrote the code to decompress it (since the response
 is GZIP'ed) and parse the comments.
 
 > **Tip**
-> 
+>
 >       You can easily inspect/copy HTTP requests and responses using Fiddler, 
 >       the **Network** tab in the Internet Explorer 9 developer 
 >       tools, or with Firefox and the Firebug add-on.
 
 > **Important**
-> 
+>
 >       The cookie shown in the code above is only valid for a limited time. 
 >       Consequently I needed to periodically get a new cookie and paste it 
 >       into the code during the time I was developing this migration utility.

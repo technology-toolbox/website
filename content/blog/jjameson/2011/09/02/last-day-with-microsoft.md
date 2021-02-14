@@ -8,11 +8,11 @@ tags: ["Personal"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 **From:** Jeremy Jameson  
@@ -35,9 +35,9 @@ Sometimes when I rise out of bed much too early in the morning (such as today) a
 Since I am far better with technology than I am with prose, I'll leave you with         the following to express how much I appreciate our time together and sincerely hope         our paths cross again...
 
 > Eventually, all things merge into one, and a river runs through it. The river was             cut by the world's great flood and runs over rocks from the basement of time. On             some of the rocks are timeless raindrops. Under the rocks are the words, and some             of the words are theirs.
-> 
+>
 > I am haunted by waters.
-> 
+>
 > -- Norman Maclean, A River Runs Through It
 
 Jeremy Jameson

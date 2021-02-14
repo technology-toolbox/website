@@ -9,11 +9,11 @@ tags: ["My System", "Virtualization"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Last week a colleague was asking me how I manage my various VMs. More specifically, he wanted to know how I created SysPrep'ed images in order to quickly "spin up" new VMs for development, testing, or demo purposes.

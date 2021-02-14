@@ -10,11 +10,11 @@ tags: ["My System", "Core Development", "TFS"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -33,15 +33,15 @@ Here was my response:
 > a pre-build event, I definitely don't recommend it. Doing so would cause the
 > version to increment each and every time \*any\* member of the Development team
 > builds the solution.
-> 
+>
 > I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs
 > file, but there are definitely better ways to accomplish the desired outcome.
-> 
+>
 > Rather, I recommend incrementing the AssemblyFileVersionAttribute as part
 > of your automated build process. In other words, each time an "official" build
 > is created on the Build Server, the AssemblyVersionInfo.cs file is automatically
 > checked out from source control, incremented, and checked back in.
-> 
+>
 > Obviously, the actual implementation of this process will vary depending
 > on your particular toolset. For example, if you are using Team Foundation Server,
 > you can setup a custom task that increments the AssemblyFileVersionAttribute
@@ -55,10 +55,10 @@ Well, I probably should have blogged long ago about the specific process that  I
 Note that this implementation has some specifics to Team Foundation Server, but  I imagine you could tweak this fairly easily if you are using some other configuration  management system and build process.
 
 > **Update (2010-11-29)**
-> 
+>
 > This post was originally created for TFS 2005/2008. Refer to the following
 > if you are using TFS 2010:
-> 
+>
 > <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
 
@@ -93,13 +93,13 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 ```
 
 > **Update (2010-05-05)**
-> 
+>
 > Note that the path to the TFS command-line utility
 > [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
-> 
+>
 > To use the same technique on a TFS 2010 build server, specify the following
 > instead:
-> 
+>
 > ```
 > <PropertyGroup>
 >     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>

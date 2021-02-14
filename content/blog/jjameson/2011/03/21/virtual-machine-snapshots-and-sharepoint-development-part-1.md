@@ -11,11 +11,11 @@ tags: ["My System", "MOSS 2007", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In a comment I made last week on [one of my earlier posts](/blog/jjameson/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid), I mentioned how a few months ago I started using         Hyper-V snapshots so I can quickly rollback my SharePoint development VMs to key         points in time.

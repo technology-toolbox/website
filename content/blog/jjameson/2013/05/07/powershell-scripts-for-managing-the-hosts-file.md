@@ -16,7 +16,7 @@ You may have noticed the Add-Hostnames.ps1 script in my
 [sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 > **Note**
-> 
+>
 >       In the Fabrikam Extranet solution, the "Create Web Application.ps1" 
 >       script checks if the environment is configured to use
 >       [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) 
@@ -79,9 +79,9 @@ www-local.tugboatcoffee.com                                 127.0.0.1
 ```
 
 > **Note**
-> 
+>
 > You can download these scripts from my Toolbox repository on GitHub:
-> 
+>
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 ### Get-Hostnames.ps1

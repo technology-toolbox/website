@@ -9,11 +9,11 @@ tags: ["My System", "Simplify", "Windows
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -63,7 +63,7 @@ net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 ```
 
 > **Note**
-> 
+>
 >       Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its 
 >       predecessor -- Microsoft Operations Manager (MOM) -- and thus had already 
 >       created a service account named **svc-mom-action**.

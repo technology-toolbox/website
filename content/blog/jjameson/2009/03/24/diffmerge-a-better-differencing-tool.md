@@ -9,11 +9,11 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Last summer, I added [DiffMerge](http://www.sourcegear.com/diffmerge/) to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) and I haven't used WinDiff since.

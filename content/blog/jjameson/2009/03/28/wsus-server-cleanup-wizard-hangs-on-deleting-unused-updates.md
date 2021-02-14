@@ -8,11 +8,11 @@ tags: ["WSUS", "Infrastructure"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -64,7 +64,7 @@ step, I was able to verify (via the progress bar) that it was in fact progressin
 I let it run to completion and observed the following results when it was finished:
 
 > Unused updates deleted 3082
-> 
+>
 > Unused update revisions deleted: 5448
 
 I then ran the **Server Cleanup Wizard** again, but this time

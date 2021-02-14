@@ -24,7 +24,7 @@ Posts** section, you'll notice the CSS `background` property is set to:
     url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px transparent
 
 > **Note**
-> 
+>
 >       You could also use the IE Developer Tools to inspect the element in 
 >       order to view the corresponding CSS rule, but I prefer the experience 
 >       in Firebug instead (since, unlike IE, Firebug actually shows you the 
@@ -87,7 +87,7 @@ Aaron Barker explains more about this technique in the following blog post:
 [http://www.aaronbarker.net/2010/07/diagonal-sprites/](http://www.aaronbarker.net/2010/07/diagonal-sprites/)
 
 > **Important**
-> 
+>
 >       Not all of the CSS sprites used on the Technology Toolbox site use the 
 >       diagonal layout. For example, the "radio button" images used in the 
 >       "slider" control (i.e. to the right of the **SharePoint Architecture 

@@ -144,7 +144,7 @@ as the basis for the **Most Popular Posts** section:
 ```
 
 > **Note**
-> 
+>
 >       Based on the appearance of the list items shown in Figure 1, you might 
 >       think the **Most Popular Posts** section is rendered using 
 >       an *uunordered* list (since there are no numbers next to the 
@@ -190,7 +190,7 @@ and **FooterTemplate**:
 ```
 
 > **Note**
-> 
+>
 >       Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl` 
 >       method came from (or what it does).
 

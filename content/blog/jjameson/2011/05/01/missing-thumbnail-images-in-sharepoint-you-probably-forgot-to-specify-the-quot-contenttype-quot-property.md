@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 During the process of creating [my previous post](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6), I discovered the thumbnail images were not rendering as expected for the custom images that I added to the out-of-the-box SharePoint /PublishingImages picture library (via a feature).

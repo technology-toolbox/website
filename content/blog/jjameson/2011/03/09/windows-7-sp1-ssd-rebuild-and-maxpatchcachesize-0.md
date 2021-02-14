@@ -9,11 +9,11 @@ tags: ["My System", "Windows 7"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 I spent a few hours last night (and another hour this morning) rebuilding my Windows         7 desktop that I use as my primary workstation (WOLVERINE).
@@ -37,7 +37,7 @@ Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)
 In case anyone is interested in how I recommend building out a workstation, here         are the details.
 
 > **Update (2011-03-11)**
-> 
+>
 >             I've updated the following to reflect a few omissions in my original post (such
 >             as installing the Remote Server Administration Tools for Windows 7 *before*
 >             installing SP1).
@@ -47,7 +47,7 @@ Start by installing Windows 7. When prompted to create a new user, specify a use
 I then immediately installed the [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en).
 
 > **Warning**
-> 
+>
 >             If you plan on using the Remote Server Administration Tools for Windows 7, then
 >             now is the time to install them. Otherwise [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1) -- at
 >             least not until the updated version is released.

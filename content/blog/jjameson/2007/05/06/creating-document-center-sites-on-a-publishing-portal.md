@@ -9,11 +9,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Here is another issue I discovered long ago, but haven't blogged about yet. Shame         on me.
@@ -23,7 +23,7 @@ When kicking off my current project back in December, I was convinced that a Doc
 Here is the excerpt from the email I sent back in December to one of our internal         DLs:
 
 > Even if you enable the Document Center template on a "Publishing with Workflow"             site, it still does not show up when you attempt to create a subsite.
-> 
+>
 > What is really strange is that I when also enable the Records Center template, then             I have the option to create a Records Center when creating a subsite. So there either             must be some restrictions on where a Document Center can be used or else this is             a bug -- and a nasty bug at that, considering a single document repository is one             of the core features that my customer needs for their externally facing (i.e. Publishing             with Workflow) site.
 
 It turns out that it is a bug, but a very minor bug and one that is easy to workaround.         After a little experimentation, I discovered that the **Page Layout and Site Template

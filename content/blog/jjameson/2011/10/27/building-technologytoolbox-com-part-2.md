@@ -49,12 +49,12 @@ At this point, I switched from my admin account to my regular account, created  
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Initial%20source%20tree.png)
 
 > **Note**
-> 
+>
 > I recommend creating folders like **Documents** (or "docs"
 > if you prefer that instead), **References** (or "lib"),
 > **Source** (or "src"), and **Tools** under the
 > **Main** folder.
-> 
+>
 > Shortly after checking in this changeset, I realized that I forgot to
 > add a **Source** folder under **Main** and put
 > the solution in there -- instead of in the **Main** folder.

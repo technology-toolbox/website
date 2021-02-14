@@ -10,11 +10,11 @@ tags: ["My System", "Core Development", "Visual Studio"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -31,7 +31,7 @@ Once you enable Code Analysis on your projects, you are likely to encounter warn
 If you right-click one of these warnings and then click **Show Error Help**,  you will find the following:
 
 > **How to Fix Violations**
-> 
+>
 > To fix a violation of this rule, correct the spelling of the word or add the
 > word to a custom dictionary named CustomDictionary.xml. Place the dictionary
 > in the installation directory of the tool, the project directory, or in the

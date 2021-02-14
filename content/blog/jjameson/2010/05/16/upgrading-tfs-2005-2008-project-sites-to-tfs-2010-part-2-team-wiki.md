@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In [part 1 of this series](/blog/jjameson/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features), I showed how you can add new Team Foundation Server (TFS) 2010 dashboard functionality to project sites originally created in TFS 2008 (or TFS 2005).

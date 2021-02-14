@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Complementing the **Work Items** list that I described in a [previous post](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), we use a blog site (creatively called the "DevBlog") in Microsoft Office SharePoint Server (MOSS) 2007 to track the work items that each member of the Development team has committed to driving to resolved status each day. For a while, I was the "keeper" of the DevBlog -- meaning every morning I would gather the targeted work items for each developer and subsequently add a blog post listing each developer and his or her committed work items. Fortunately, we've since moved towards a more autonomous model where each developer is responsible for adding his or her own work items to the daily blog post.

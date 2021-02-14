@@ -205,7 +205,7 @@ used in the Development environment corresponding to EXTRANET\svc-sharepoint
 in Production.
 
 > **Note**
-> 
+>
 >       	Fabrikam has established an "extranet" Active Directory domain which 
 >       	is used to host the SharePoint farms for the Test and Production 
 >       	environments. In order to allow Fabrikam employees to authenticate 
@@ -346,7 +346,7 @@ Figure
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Development%20VM.png)
 
 > **Note**
-> 
+>
 >       	Even if the VM host currently has only one physical disk (e.g. a 
 >       	developer's laptop), it is still recommended to create multiple 
 >       	VHD files. This greatly simplifies the process of distributing the 
@@ -425,7 +425,7 @@ After completing the installation of Windows Server 2008, configure the
 server to be a member of the extranet domain (EXTRANET).
 
 > **Note**
-> 
+>
 >       	Development environments do not have access to the extranet domain 
 >       	and therefore need to be joined to a different domain, such as FABRIKAM.
 
@@ -536,7 +536,7 @@ designed to help prevent reflection attacks. However this feature is problematic
 when using host names mapped to 127.0.0.1 on local development machines.
 
 > **Note**
-> 
+>
 >       	This problem was originally encountered only in local development 
 >       	environments (where the host names are mapped to the loopback address). 
 >       	However, it was later encountered in other environments after patches 
@@ -569,9 +569,9 @@ loopback address:
 > Table 7. For example:
 
 > <samp>extranet.fabrikam.com</samp>
-> 
+>
 > **Note**
-> 
+>
 >       		Be sure to specify the host header corresponding to the environment. 
 >       		For example, specify <samp>extranet-local.fabrikam.com</samp> 
 >       		for local development environments.
@@ -623,7 +623,7 @@ To install Visual Studio 2010:
 ## DEV - Install Team Explorer (Team Foundation Client)
 
 > **Note**
-> 
+>
 >       	Depending on which edition of Visual Studio 2010 was installed in 
 >       	the previous step, Team Explorer may already be installed.
 
@@ -668,7 +668,7 @@ For development environments, use the following steps to install the
 2008).
 
 > **Important**
-> 
+>
 >       	For the Test and Production environments, refer to the SQL Server 
 >       	Installation Guide to install SQL Server on the dedicated server 
 >       	or cluster.
@@ -676,7 +676,7 @@ For development environments, use the following steps to install the
 SQL Server 2008 setup requires .NET Framework 3.5 to be installed.
 
 > **Note**
-> 
+>
 >       	SQL Server 2008 R2 checks for the .NET Framework dependency and 
 >       	can enable the .NET Framework Core role as part of the setup process. 
 >       	Also note that if Windows PowerShell Integrated Scripting Environment 
@@ -887,7 +887,7 @@ To run the preparation tool:
    and then click **Next**.
 
 > **Note**
-> 
+>
 >       		The preparation tool may have to restart the server to complete 
 >       		the installation of some of the prerequisites. The installer 
 >       		will continue to run after the server is restarted, and no manual 
@@ -899,17 +899,17 @@ To run the preparation tool:
 6. Restart the server to complete the installation of the prerequisites.
 
 > **Note**
-> 
+>
 > After you complete the Microsoft SharePoint Products Preparation
 > Tool, you must install
 > [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917)
 > and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server after installing these hotfixes.
-> 
+>
 > When installing these hotfixes on Windows Server 2008 R2,
 > you may be notified that these updates are not applicable.
 
 > **Note**
-> 
+>
 >       		If the error message <q class="directQuote errorMessage">"Loading 
 >       		this assembly would produce a different grant set from other 
 >       		instances. (Exception from HRESULT: 0x80131401)"</q> is displayed 
@@ -933,17 +933,17 @@ User Impersonation</cite>
 [http://code.msdn.microsoft.com/KB979917](http://code.msdn.microsoft.com/KB979917)
 
 > **Important**
-> 
+>
 >       	This hotfix is included in Windows Server 2008 R2 Service Pack 1.
 
 > **Note**
-> 
+>
 >       	In the list of files to download, there is no option corresponding 
 >       	to Windows Server 2008 (only Windows Vista and Windows 7). For Windows 
 >       	Server 2008 or Windows Server 2008 R2, download and install the 
 >       	Windows 7 x64 version:
 >       	
-> 
+>
 > > **Windows6.1-KB979917-x64.msu (Win7)**
 
 Be sure to install the update on each SharePoint server in the farm.
@@ -980,7 +980,7 @@ To install SharePoint Server 2010:
    now** checkbox, and then click **Close**.
 
 > **Note**
-> 
+>
 >       		For consistency of approach, it is recommended that you do not 
 >       		run the configuration wizard until SharePoint Server has been 
 >       		installed on all application and front-end Web servers that 
@@ -994,7 +994,7 @@ the configuration database, installing services, and creating the Central
 Administration Web site.
 
 > **Important**
-> 
+>
 >       	Run the SharePoint Products Configuration Wizard on the server that 
 >       	will host the Central Administration Web site before you run the 
 >       	wizard on the other servers in the farm.
@@ -1041,7 +1041,7 @@ the farm:
      - Nonalphabetic characters (such as !, $, #, %)
 
 > **Note**
-> 
+>
 >       		Although a passphrase is similar to a password, it is usually 
 >       		longer to enhance security. It is used to encrypt credentials 
 >       		of accounts that are registered in SharePoint Server 2010. For 
@@ -1066,7 +1066,7 @@ the farm:
 11. The Central Administration Web site will open in a new browser window.
 
 > **Note**
-> 
+>
 >       		If you are prompted for your user name and password, you need 
 >       		to add the SharePoint Central Administration site to the
 >       		**Local intranet** zone and configure the default 
@@ -1144,11 +1144,11 @@ IIS WAMREG admin Service, as described in
 [KB 920783](http://support.microsoft.com/kb/920783).
 
 > **Important**
-> 
+>
 >       	This task must be completed on each SharePoint server in the farm.
 
 > **Note**
-> 
+>
 >       	If performing this step on Windows Server 2008 R2, you must first 
 >       	take ownership of the corresponding registry key and grant administrators 
 >       	permissions to update the configuration.
@@ -1221,7 +1221,7 @@ Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx
 file.
 
 > **Important**
-> 
+>
 >       	This task must be completed on each SharePoint server in the farm.
 
 To rename the TaxonomyPicker.ascx file:
@@ -1236,7 +1236,7 @@ To rename the TaxonomyPicker.ascx file:
 > click **Yes**.
 
 > **Note**
-> 
+>
 >       	Changing the file extension causes the problematic file to be skipped 
 >       	by ASP.NET when compiling the controls in the folder.
 
@@ -1276,7 +1276,7 @@ features, the service account must first be registered as a managed account
 in Central Administration.
 
 > **Note**
-> 
+>
 >       	If using the installation scripts, instead of Central Administration, 
 >       	in later sections of this document to create and configure the Web 
 >       	application and other service applications, then you may skip this 
@@ -1352,7 +1352,7 @@ Install SharePoint Server 2010 Service Pack 1 on each server in the farm:
 [http://www.microsoft.com/en-us/download/details.aspx?id=26623](http://www.microsoft.com/en-us/download/details.aspx?id=26623)
 
 > **Note**
-> 
+>
 >       	To save time, it is recommended that you do not run the configuration 
 >       	wizard after installing the service pack. Wait until the cumulative 
 >       	update is installed (as described in the next section) to complete 
@@ -1434,7 +1434,7 @@ from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Ma
 ## Create the Web application and initial site collections
 
 > **Important**
-> 
+>
 >       	Prior to creating the Fabrikam Extranet Web application (and the 
 >       	associated content database), it is strongly recommended that SQL 
 >       	Server first be configured to create database files and transaction 
@@ -1565,7 +1565,7 @@ files for content databases are created with initial sizes of 25 MB and
 expected to grow significantly, performance would be severely impacted.
 
 > **Note**
-> 
+>
 >       	Skip this section for development environments configured with small 
 >       	VHD files.
 
@@ -1647,7 +1647,7 @@ Use this procedure to enable selection of users and groups on the Fabrikam
 Extranet from the internal domain (FABRIKAM).
 
 > **Note**
-> 
+>
 >       	A one-way trust relationship has been established from the extranet 
 >       	domain (EXTRANET) to the internal domain (FABRIKAM).
 
@@ -1665,11 +1665,11 @@ the internal Fabrikam domain:
    ```
 
 > **Note**
-> 
+>
 > The key specified above can be any string. It is used to
 > encrypt the password specified in the following procedure when
 > storing the credentials in the database.
-> 
+>
 > This key is used to encrypt the password for the account
 > used to access the forest or domain. The encryption string must
 > be the same for every server in the farm.
@@ -1683,7 +1683,7 @@ the internal Fabrikam domain:
     ```
 
 > **Note**
-> 
+>
 >       		The usernames and passwords must not contain commas. After you 
 >       		run this command, users can select users and groups from the 
 >       		listed forests and domains from any front-end Web server in 
@@ -1775,9 +1775,9 @@ the site permissions page:
     authentication
 
 > **Note**
-> 
+>
 > The Fabrikam Extranet solution:
-> 
+>
 > - Leverages the internal AD domain (FABRIKAM) for employees
 > - Uses the extranet AD domain (EXTRANET) primarily for service
 >   accounts and group policies for servers in the TEST and PROD
@@ -1873,7 +1873,7 @@ database:
    - **aspnet\_Roles\_ReportingAccess**
 
 > **Important**
-> 
+>
 >       	Database access must be granted to both the service account used 
 >       	for the Web application and the SharePoint farm account. If the 
 >       	SharePoint farm account does not have access to the database, the 
@@ -1881,7 +1881,7 @@ database:
 >       	be unable to validate the credentials.
 
 > **Note**
-> 
+>
 >       	The reason the database roles are different between the two service 
 >       	accounts is because the SharePoint farm account only needs permissions 
 >       	to validate credentials and determine role membership, whereas the 
@@ -1899,7 +1899,7 @@ it is necessary to modify the Web.config files for the following sites:
 - Fabrikam Extranet ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 
 > **Important**
-> 
+>
 >       	These configuration changes must be completed on each SharePoint 
 >       	server in the farm.
 
@@ -1918,7 +1918,7 @@ file:
    the directories for the selected Web application listed.
 
 > **Important**
-> 
+>
 >       		Before you make changes to the Web.config file, make a copy 
 >       		of it by using a different name (for example, "Web - Copy.config"), 
 >       		so that if a mistake is made in the file, you can delete it 
@@ -1927,7 +1927,7 @@ file:
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
-> 
+>
 >       		If you see a dialog box that says that Windows cannot open the 
 >       		file, click **Select the program from a list**, 
 >       		and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then 
@@ -1945,7 +1945,7 @@ file:
       ```
 
 > **Important**
-> 
+>
 >       			Be sure to replace the **{databaseServer}** 
 >       			placeholder in the connection string with the name of the 
 >       			database server.
@@ -1984,7 +1984,7 @@ file:
    Web Services** site, right-click the **SecurityTokenServiceApplication** subsite, and then click **Explore**.
 
 > **Important**
-> 
+>
 >       		Before you make changes to the Web.config file, make a copy 
 >       		of it by using a different name (for example, "Web - Copy.config"), 
 >       		so that if a mistake is made in the file, you can delete it 
@@ -2027,7 +2027,7 @@ file:
    ```
 
 > **Important**
-> 
+>
 >       		Be sure to replace the **{databaseServer}** placeholder 
 >       		in the connection string with the name of the database server.
 
@@ -2043,7 +2043,7 @@ Extranet Web application:
    click **Explore**.
 
 > **Important**
-> 
+>
 >       		Before you make changes to the Web.config file, make a copy 
 >       		of it by using a different name (for example, "Web - Copy.config"), 
 >       		so that if a mistake is made in the file, you can delete it 
@@ -2062,7 +2062,7 @@ Extranet Web application:
       ```
 
 > **Important**
-> 
+>
 >       			Be sure to replace the **{databaseServer}** 
 >       			placeholder in the connection string with the name of the 
 >       			database server.
@@ -2079,7 +2079,7 @@ Extranet Web application:
         ```
 
 > **Warning**
-> 
+>
 >       			Do not overwrite any existing entries in this Web.config 
 >       			file.
 
@@ -2170,9 +2170,9 @@ To login to the website using Windows authentication:
    domain credentials).
 
 > **Note**
-> 
+>
 > This is discussed in more detail in the following blog post:
-> 
+>
 > <cite>Be "In the Zone" to Avoid Entering Credentials</cite>
 > [https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 > 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
@@ -2196,7 +2196,7 @@ Use the following procedure to configure disk-based cache settings for
 a Web application.
 
 > **Important**
-> 
+>
 >       	The following steps must be performed on each front-end Web server 
 >       	in the farm and for each Web.config file used by the Web application 
 >       	(i.e. the default Web.config as well as the Web.config for each 
@@ -2204,7 +2204,7 @@ a Web application.
 >       	**Default** zone).
 
 > **Note**
-> 
+>
 >       	Disk-based caching does not need to be enabled in development environments. 
 >       	However it should always be enabled in both TEST and PROD.
 
@@ -2222,7 +2222,7 @@ To configure BLOB cache settings:
    opens, with the directories for the selected Web application listed.
 
 > **Important**
-> 
+>
 >       		Before you make changes to the Web.config file, make a copy 
 >       		of it by using a different name (for example, “Web - Copy.config”), 
 >       		so that if a mistake is made in the file, you can delete it 
@@ -2231,7 +2231,7 @@ To configure BLOB cache settings:
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
-> 
+>
 >       		If you see a dialog box that says that Windows cannot open the 
 >       		file, click **Select the program from a list**, 
 >       		and then click **OK**. In the **Open With** 
@@ -2254,7 +2254,7 @@ To configure BLOB cache settings:
    specify a directory that has enough space to accommodate the cache size.
 
 > **Note**
-> 
+>
 >       		It is strongly recommended to specify a directory that is not 
 >       		on the same drive as where either the server operating system 
 >       		swap files or server log files are stored.
@@ -2268,7 +2268,7 @@ To configure BLOB cache settings:
    The size is expressed in gigabytes (GB), and 10 GB is the default.
 
 > **Important**
-> 
+>
 >       		It is recommended that you not set the cache size smaller than 
 >       		10 GB. When you set the cache size, make sure to specify a number 
 >       		large enough to provide a buffer at least 20 percent bigger 
@@ -2373,7 +2373,7 @@ Application:
    the process.
 
 > **Note**
-> 
+>
 >       		It may take several minutes to create and configure the Search 
 >       		Service Application.
 
@@ -2420,7 +2420,7 @@ In this section, the Office Web Apps are installed from the installation
 source.
 
 > **Important**
-> 
+>
 >       	This task must be completed on each SharePoint server in the farm.
 
 To install Office Web Apps:
@@ -2442,7 +2442,7 @@ To install Office Web Apps:
    now** checkbox, and then click **Close**.
 
 > **Note**
-> 
+>
 >       		For consistency of approach, it is recommended that you do not 
 >       		run the configuration wizard until Office Web Apps has been 
 >       		installed on all application and front-end Web servers in the 
@@ -2456,7 +2456,7 @@ In this task the Office Web Apps services are registered on the SharePoint
 server.
 
 > **Important**
-> 
+>
 >       	This task must be completed on each SharePoint server in the farm.
 
 To run PSConfig to register the services:
@@ -2533,7 +2533,7 @@ Use the following procedure to change the default trusted location to
 support HTTPS.
 
 > **Important**
-> 
+>
 >       	Skip this section for environments that are not configured with 
 >       	SSL certificates (e.g. development environments).
 
@@ -2553,7 +2553,7 @@ trusted location for HTTPS instead of HTTP:
    **Address** from **http://** to **https://** and then click **OK**.
 
 > **Note**
-> 
+>
 >       		Since users are automatically redirected from http:// to https:// 
 >       		during sign in, it is not expected that Excel Services will 
 >       		be used over HTTP (only HTTPS). If it is necessary to support 
@@ -2577,7 +2577,7 @@ create a separate content database for caching:
    to the computer, click **Yes**.
 
 > **Important**
-> 
+>
 >       		You must start a new instance of the SharePoint 2010 Management 
 >       		Shell after installing Office Web Apps in order for the new 
 >       		PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
@@ -2597,15 +2597,15 @@ create a separate content database for caching:
    the process.
 
 > **Note**
-> 
+>
 >       		The cache site collection is created via a SharePoint timer 
 >       		job. Consequently you may encounter the following error (depending 
 >       		on how quickly the installation steps are performed):
 >       		
-> 
+>
 > > Set-SPOfficeWebAppsCache : Specified web application doesn't
 > > exist or doesn't have a cache site collection.
-> 
+>
 >       		If this error occurs, wait a few minutes and then run the script 
 >       		again.
 
@@ -2691,7 +2691,7 @@ the **Fabrikam Demo Site** event source must be created by
 an administrator.
 
 > **Important**
-> 
+>
 >       	This task must be completed on each SharePoint server in the farm.
 
 To add the new event source:
@@ -2776,17 +2776,17 @@ To create the sample content:
    Console" utility.
 
 > **Note**
-> 
+>
 >       		If deploying a build copied from the release server (i.e. DAZZLER), 
 >       		use the following path:
 >       		
-> 
+>
 > > **{build version}\{Debug|Release}**
-> 
+>
 >       		If deploying a build to a local development environment from 
 >       		a TFS workspace, use the following path:
 >       		
-> 
+>
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 > > 2. Type the following command:
 

@@ -9,11 +9,11 @@ tags: ["MOSS 2007", "TFS", "SharePoint
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -70,12 +70,12 @@ command:
 ```
 
 > **Note**
-> 
+>
 > You must run the **File.BatchNewTeamProject** command
 > directly on the TFS/SharePoint Server (which means you must have previously
 > installed Team Explorer or Visual Studio on the server) -- not from
 > a remote client with Visual Studio.
-> 
+>
 > If you attempt to run it from a remote client, you'll get an error
 > that suggests you specified an invalid value for the SharePoint Web
 > application (i.e. the `<ProjectSiteWebApplication>`element). Apparently, this command ultimately invokes
@@ -197,14 +197,14 @@ After the feature finished activating, I once again browsed to my project
 site -- and this time was quite happy to find the dashboards had been created.
 
 > **Important**
-> 
+>
 > Even though the dashboards have been created, you still have some
 > work to do (assuming you want the dashboards and new TFS Web Parts to
 > show accurate information). This is due to the fact that the **
 > Scenario** work item type was renamed to **User Story**
 > in MSF Agile v5, and consequently, the queries specified in some of
 > the dashboard Web Parts and Excel reports need to be updated accordingly.
-> 
+>
 > I'll cover these configuration changes in a separate post.
 
 Note that when you create a new project site in TFS 2010 using the MSF Agile

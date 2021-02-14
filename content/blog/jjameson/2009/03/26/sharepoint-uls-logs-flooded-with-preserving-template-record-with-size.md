@@ -10,11 +10,11 @@ tags: ["MOSS 2007", "WSS v3", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 I was digging through my blog dashboard this morning and I came across this post         that I started back in January but apparently never got it past "draft mode." I         figured it was time to finish it off.
@@ -62,6 +62,6 @@ Not exactly what I would call "elegant", but as I've repeatedly said before, I l
 Another useful tip that I wanted to pass along is effectively viewing very large         text files (for example, to determine exactly *why* SharePoint is creating         1.3GB of log messages on a daily basis). While you can certainly *try*opening         a 30-50MB file in Notepad, I certainly don't recommend it. Personally, I keep a         copy of [LtfViewr4U](http://search.live.com/results.aspx?q=LtfViewr4U)         in my Toolbox for just such an occasion.
 
 > **Update (2009-06-02)**
-> 
+>
 >             As noted in the comments, this issue appears to be fixed in the [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for Windows SharePoint Services.
 

@@ -12,17 +12,17 @@ tags: ["TFS", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
 > **Update (2010-05-20)**
-> 
+>
 > I made some changes to correct a few issues and also to include the final
 > version of the XML input file that I used to update my TFS project sites.
 
@@ -262,17 +262,17 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 ```
 
 > **Important**
-> 
+>
 > After a navigation node has been deleted, you need to refresh the SPWeb
 > object to avoid errors like the following:
-> 
+>
 > > An error occurred while enumerating through a collection: Cannot complete
 > > this action.
-> 
+>
 > To refresh the SPWeb object (and consequently the associated SPNavigationNodeCollection),
 > simply call the `Get-SPWeb` cmdlet
 > again:
-> 
+>
 > `$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"`
 
 Now we can import the quick launch navigation from the XML into the project site:

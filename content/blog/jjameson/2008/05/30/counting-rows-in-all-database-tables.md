@@ -9,11 +9,11 @@ tags: ["SQL Server", "Toolbox"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Here is yet another of the SQL scripts that I like to keep handy in my toolbox: **Count Records in All Tables.sql**

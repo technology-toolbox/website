@@ -9,11 +9,11 @@ tags: ["WSUS"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Last week I discovered that many of my servers were no longer updating successfully         from my intranet Windows Server Update Services (WSUS) server. Looking in WindowsUpdate.log         file, I noticed errors similar to the following:

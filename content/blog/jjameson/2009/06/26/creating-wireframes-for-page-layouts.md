@@ -9,11 +9,11 @@ tags: ["My System", "MOSS 2007", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 When helping customers migrate their Internet sites to Microsoft Office SharePoint         Server (MOSS) 2007, I've found it very helpful to create wireframes showing the         various fields, Web Parts, and master page content. For the last several years,         I've been doing this in Microsoft Office Visio, but you could certainly achieve         similar results with other tools, such as Expression Design.

@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In one of the sprints last year for my current project, I built a custom "document         publishing" system based on the Web Content Management (WCM) features in Microsoft         Office SharePoint Server (MOSS) 2007. My client was looking to replace a legacy         system used to create Microsoft Word documents that are essentially "standard operating         procedures" for their employees (or "SOPs" as we called them many years ago when         I worked at Gambro Healthcare).
@@ -57,7 +57,7 @@ list)
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-missing-content.png)
 
 > **Important**
-> 
+>
 >             By default, the **Reusable Content** list is configured for content
 >             approval. Consequently when you add list items (either programmatically or through
 >             the site), the **Approval Status** defaults to **Pending**.

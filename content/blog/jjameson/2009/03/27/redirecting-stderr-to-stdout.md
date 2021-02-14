@@ -9,11 +9,11 @@ tags: ["Core Development", "Windows Vista", "Windows Server"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.

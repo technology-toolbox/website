@@ -8,11 +8,11 @@ tags: ["Core Development"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 This post provides a high-level walkthrough of the build and deployment process         that I typically recommend on projects that I am involved with. It includes a series         of illustrations that capture key concepts at various points in time. Specific parts         of the process -- such as the [development and build environments](/blog/jjameson/2009/09/25/development-and-build-environments), [versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning), and [source control](/blog/jjameson/2009/09/26/best-practices-for-scm-and-the-daily-build-process) -- have already been covered in previous posts.
@@ -73,7 +73,7 @@ Note that in Figure 3, the automated installation process actually installs vers
 Note that the process illustrated in Figure 3 does not require any manual intervention         and can therefore be performed on a scheduled basis (&agrave; la, the "daily         build") or ad hoc, simply by executing the scheduled task as desired. Each subsequent         build includes the source code changes checked-in to the source control system --         thus incorporating new features and bug fixes -- and is automatically installed         into the DEV environment -- thus providing visibility to all team members on the         progress of development. This is particularly useful for the Test team (in order         to create test cases).
 
 > **Note**
-> 
+>
 >             The daily build provides a "heartbeat" of the development effort that can be monitored
 >             regularly by all team members -- not just the Development team.
 

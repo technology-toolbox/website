@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/2009/11/09/configuring-ssl-on-sharepoint-sites) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.

@@ -9,11 +9,11 @@ tags: ["My System", "Core Development", "Visual Studio", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 A couple of years ago, I wrote a post introducing my system for [structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions). However, I apparently forgot to post         a follow-up providing additional details, such as configuring assembly versioning         and what I like to call "shared assembly information."

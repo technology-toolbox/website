@@ -38,7 +38,7 @@ Year's Eve sort of ways):
 [http://nuget.codeplex.com/discussions/247827](http://nuget.codeplex.com/discussions/247827)
 
 > **Warning**
-> 
+>
 >       Click the link above at your own peril.
 
 Since Microsoft recommends signing assemblies as a best practice (there's

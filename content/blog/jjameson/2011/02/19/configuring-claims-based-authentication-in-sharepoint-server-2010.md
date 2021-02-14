@@ -10,11 +10,11 @@ tags: ["My System", "SharePoint
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -133,14 +133,14 @@ In this step, the database for storing ASP.NET membership and role information  
    - **aspnet\_Roles\_ReportingAccess**
 
 > **Important**
-> 
+>
 > Database access must be granted to both the service account used for the
 > Fabrikam Web application and the SharePoint farm account. If the SharePoint
 > farm account does not have access to the database, the Security Token Service
 > used for claims-based authentication will be unable to validate the credentials.
 
 > **Note**
-> 
+>
 > The reason the database roles are different between the two service accounts
 > is because the SharePoint farm account only needs permissions to validate
 > credentials and determine role membership, whereas the Fabrikam Web application
@@ -336,7 +336,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
    for the selected Web application listed.
 
 > **Important**
-> 
+>
 >       Before you make changes to the Web.config file, make a copy of it by 
 >       using a different name (for example, "Web - Copy.config"), so that if 
 >       a mistake is made in the file, you can delete it and use the original 
@@ -345,7 +345,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
-> 
+>
 >       If you see a dialog box that says that Windows cannot open the file, 
 >       click **Select the program from a list**, and then click
 >       **OK**. In the **Open With** dialog box, click
@@ -364,7 +364,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
       ```
 
 > **Important**
-> 
+>
 >       	Be sure to replace the **{databaseServer}** placeholder 
 >       	in the connection string with the name of the database server.
 
@@ -433,7 +433,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
    ```
 
 > **Important**
-> 
+>
 >       Be sure to replace the **{databaseServer}** placeholder 
 >       in the connection string with the name of the database server.
 
@@ -458,7 +458,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
       ```
 
 > **Important**
-> 
+>
 >       	Be sure to replace the **{databaseServer}** placeholder 
 >       	in the connection string with the name of the database server.
 
@@ -474,7 +474,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
         ```
 
 > **Warning**
-> 
+>
 >       	Do not overwrite any existing entries in this Web.config file.
 
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
@@ -545,9 +545,9 @@ The final step is to validate the Web application works as expected when using  
    order to seamlessly authenticate with the current domain credentials).
 
 > **Note**
-> 
+>
 > This is discussed in more detail in the following blog post:
-> 
+>
 > <cite>Be "In the Zone" to Avoid Entering Credentials</cite>
 > [http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 > 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)

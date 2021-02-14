@@ -10,11 +10,11 @@ tags: ["My System", "Windows Server", "SharePoint 2010", "Windows 7", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Nearly three years ago, I wrote a post that described the [BackedUp and NotBackedUp](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folders I use on almost every computer I ever log         on to (my laptop, desktop, a handful of servers, and more than a dozen VMs).

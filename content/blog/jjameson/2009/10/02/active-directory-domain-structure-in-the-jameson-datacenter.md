@@ -8,11 +8,11 @@ tags: ["My System", "Infrastructure"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter), which is really just my home lab that I use for learning         new technologies and improving my skills, as well as actually completing my day-to-day         tasks on various customer projects (whenever I am actually able to work from home         instead of using my laptop at a customer site).
@@ -20,7 +20,7 @@ In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/
 In this post, I want to share details about how I've configured my Active Directory         domain, namely **corp.technologytoolbox.com**.
 
 > **Note**
-> 
+>
 >             Technology Toolbox is just a name I came up with about ten years ago before joining
 >             Microsoft. At the time, I was considering starting my own company and therefore
 >             went looking for an available domain name. (I would have preferred techtoolbox.com,
@@ -59,7 +59,7 @@ The following table summarizes the various OUs in the domain:
 |                     IT/Users<br>                 |                     Contains user accounts for each person in the IT organization. This OU is currently<br>                    empty.<br>                 |
 |                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
 > **Note**
-> 
+>
 >             The **Sales** OU contains similar OUs as **Development**.
 >             These are simply not shown in the previous table.
 

@@ -9,11 +9,11 @@ tags: ["My System", "Personal", "
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 This morning I was doing some cleanup of my documents folder and I stumbled across         a rather old Visio document that showed the beginnings of what I now refer to as         the ["Jameson
@@ -24,7 +24,7 @@ Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home l
 <q class="directQuote">Lately it occurs to me: What a long, strange trip it's been.</q>
 
 > **Update**
-> 
+>
 >                     Doh! You would think a guy with a Master of Science degree in Mechanical Engineering
 >                     could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading
 >                     before clicking that **Publish** button ;-)

@@ -8,11 +8,11 @@ tags: ["Web Development"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 The "Announcements" feature that I developed for a customer about a year ago uses         a modal popup window to display content to users. The solution leverages the [AJAX Control Toolkit](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/Default.aspx) to render the modal popups -- specifically the **ModalPopupExtender**         class.
@@ -27,7 +27,7 @@ To encapsulate the functionality for rendering modal popup windows, the "Announc
 The framework essentially consists of the **ModalPopupWebPart** abstract         base class which is primarily responsible for rendering the **ModalPanel**         (i.e. a `<div>` element that serves as the container for content         to display in the modal popup window), the **Title Bar**, and link         buttons (**OK** and **Cancel**) to dismiss the popup window.
 
 > **Note**
-> 
+>
 >             Web Parts that derive from **ModalPopupWebPart** are responsible for
 >             displaying the main content of the popup window. This is typically done by overriding
 >             the [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx) method to add controls to the **ModalPanel**.

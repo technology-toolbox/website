@@ -456,7 +456,7 @@ Here is the current content of the Style Guide for the static HTML prototype  fo
 ```
 
 > **Note**
-> 
+>
 > The `color-swatch` CSS rules
 > at the top of Style-Guide.aspx are not kept in the "main" cascading style
 > sheet since these rules are applicable only to the Style Guide itself. Also

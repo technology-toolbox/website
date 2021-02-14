@@ -9,11 +9,11 @@ tags: ["MOSS 2007"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) and [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) of this series, I talked about some major issues with the variations         feature in Microsoft Office SharePoint Server (MOSS) 2007 that caused my current         customer to abandon using them on their new Internet site.
@@ -32,7 +32,7 @@ I have not previously covered this last problem in the previous posts. If you ma
 If you are using variations, and you happen to notice your OWSTimer.exe process         consuming 1.5 GB of memory (like we did), then problem #3 is likely the culprit.         Fortunately, the variations memory leak that causes this has already been fixed         in a QFE (and, I believe, is scheduled to be included in MOSS 2007 Service Pack         1). Based on the SRX (service request) that I read, it appears this can be obtained         earlier through the normal QFE process. However, we never pursued obtaining the         patch and installing it in our environment.
 
 > **Update (2007-11-28)**
-> 
+>
 >             According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, only part of this bug is fixed in SP1. You'll
 >             need a post-SP1 QFE to completely resolve the out-of-memory issue.
 

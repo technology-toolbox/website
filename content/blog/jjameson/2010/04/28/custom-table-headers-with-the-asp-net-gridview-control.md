@@ -22,11 +22,11 @@ tags: ["Web Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -69,7 +69,7 @@ Consequently, we'll assume the underlying data source -- in this case, a simple 
 As I usually do when building a feature, let's start with a basic implementation  and then iterate the code until we've completed the scenario.
 
 > **Tip**
-> 
+>
 > The KPI dashboard is actually displayed in a customer portal based on Microsoft
 > Office SharePoint Server (MOSS) 2007. However, my recommendation when creating
 > a feature like this for a SharePoint application, is to first get it working
@@ -244,7 +244,7 @@ protected void ScorecardDetailView_RowCreated(
 ```
 
 > **Note**
-> 
+>
 > As I mentioned before, the KPI dashboard is actually displayed in a customer
 > portal based on MOSS 2007. Consequently, I chose to reuse the KPI images
 > that come out-of-the-box with MOSS 2007 (in case you were wondering why
@@ -459,7 +459,7 @@ Here's the short summary from MSDN for the [Page.SaveStateComplete](http://msdn.
 With this change, the KPI detail table renders as expected (with the custom **Thresholds** header row and all of the expected data) even when the  GridView is rendered from view state.
 
 > **Update (2011-04-21)**
-> 
+>
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
 

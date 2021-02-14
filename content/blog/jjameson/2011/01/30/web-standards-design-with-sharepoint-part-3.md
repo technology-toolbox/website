@@ -12,11 +12,11 @@ tags: ["MOSS 2007", "Web Development"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
@@ -58,7 +58,7 @@ Figure 3: Home page with custom master page and page layout (linked CSS files di
 Second, the default page layout does not expose either of the Summary Links fields         defined on the **Welcome Page** content type. Consequently, a Web Part         (i.e. "News") is used to render the links at the bottom of the page.
 
 > **Note**
-> 
+>
 >             You should always try to use the Summary Links fields (from the underlying content
 >             type) instead of Summary Links Web Parts whenever possible -- since this provides
 >             the ability to track the changes to the links over time. (In other words, changes
@@ -90,7 +90,7 @@ To deploy the Fabrikam Demo to SharePoint:
    ```
 
 > **Note**
-> 
+>
 >                     While you don't have to use this URL, it is recommended for developer environments
 >                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 >                     when deploying and retracting the solution.
@@ -107,7 +107,7 @@ To deploy the Fabrikam Demo to SharePoint:
    ```
 
 > **Important**
-> 
+>
 >                     Be sure to specify a valid local or domain user.
 
 4. Change to the folder containing the deployment scripts:
@@ -149,7 +149,7 @@ That's it! (During feature activation, I automatically set the master page on th
 You are now ready to browse to the Fabrikam intranet site and review the master         page and page layouts leveraging the 960 Grid System.
 
 > **Tip**
-> 
+>
 >             Once you have the site running in your environment, click **Sample Link 1**
 >             and **Sample Link 2** on the home page to view a couple of test pages
 >             that are created to demonstrate other custom page layouts.

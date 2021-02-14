@@ -32,7 +32,7 @@ the jQuery file (as a result of browsing to another site that references the
 same resource).
 
 > **Note**
-> 
+>
 >       Originally, I thought I needed to reference a local jQuery file during 
 >       development in order to get Intellisense while writing JavaScript (i.e. 
 >       by referencing a jQuery script residing side-by-side with a corresponding 
@@ -186,7 +186,7 @@ when any of the CSS files are updated. (Refer to
 [one of my previous posts](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) if you want to read more about this technique.)
 
 > **Note**
-> 
+>
 >       If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**  method with the `<script>` 
 >       elements but not the `<link>` 
 >       elements, it's simply because it doesn't work otherwise (despite the 

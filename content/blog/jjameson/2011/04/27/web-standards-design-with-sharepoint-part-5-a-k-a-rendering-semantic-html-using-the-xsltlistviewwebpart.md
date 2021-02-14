@@ -9,11 +9,11 @@ tags: ["SharePoint 2010", "Tugboat"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In [part 4 of this series](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4), I provided a sample SharePoint Server 2010 solution         solution based on Dan Cederholm's [Tugboat sample
@@ -76,14 +76,14 @@ Here's a breakdown of the custom SharePoint list:
   - **Modified By** (Person or Group)
 
 > **Important**
-> 
+>
 >             Even though the **Unit Price** column is defined using the **Currency** type and specifies a **Currency format** of **$123,456.00
 >                 (United States)**, you must specify the **DOLLAR** function
 >             in the formula for the calculated column. Otherwise, the values in the **Price**
 >             column would not appear as expected (e.g. "12.5 / lb.").
 
 > **Note**
-> 
+>
 >             I chose to name the list "Specials" instead of "Weekly Specials" for a reason. If
 >             this were a real world solution, then there would be a significant chance the business
 >             rules would change over time (for example to show "Today's Specials" or "This Month's
@@ -170,7 +170,7 @@ Note that the **XsltListViewWebPart** provides a `<dsQueryResponse>`         XML
 ```
 
 > **Tip**
-> 
+>
 >             To view the "raw" XML document, insert the [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform) into the **&lt;xsl&gt;** element of
 >             the **XsltListViewWebPart**, save the page, and then browse to the
 >             page in Internet Explorer.
@@ -369,6 +369,6 @@ There are also some "bugs" in this new solution. For example, what happens if th
 Stay tuned...
 
 > **Update (2011-05-02)**
-> 
+>
 >             The [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6) is now available.
 

@@ -34,11 +34,11 @@ a more elegant solution:
 > Actually, we should simply use a
 > [protocol
 > relative URL/network path reference](http://paulirish.com/2010/the-protocol-relative-url/).
-> 
+>
 > For example:
-> 
+>
 >       src="//ajax.googleapis.com/..."
-> 
+>
 > That removes the need do use &lt;%= %&gt; blocks here and is cleaner.
 
 I responded that I didn't even know that was possible (before reading Phil's

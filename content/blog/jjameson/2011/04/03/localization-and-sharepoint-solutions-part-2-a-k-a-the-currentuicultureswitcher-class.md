@@ -8,11 +8,11 @@ tags: ["My System", "MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 In [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1), I mentioned how I've been involved in several SharePoint projects for large, multinational corporations including [Agilent Technologies](http://www.chem.agilent.com/) and [KPMG](http://www.kpmg.com). I also mentioned how one of the sprints last year for my current project was dedicated to creating a Spanish version of a "Client Portal" based on Microsoft Office SharePoint Server (MOSS) 2007.

@@ -27,7 +27,7 @@ Rather than attaching the Excel worksheet to this post, I'll simply copy
 the content into a table.
 
 > **Warning - Internet Explorer Users**
-> 
+>
 > While publishing this post, I discovered the following table looks
 > really ugly in IE9 (since the width is not properly constrained to the
 > content area). I spent no less than 20 minutes trying to force IE to
@@ -35,7 +35,7 @@ the content into a table.
 > a **width** attribute to the table and even explicitly
 > specifying column widths using a **colgroup** element.
 > However, none of those hacks worked.
-> 
+>
 > While I would normally invest more effort trying to find a workaround
 > for this bug in IE, I've got more important things to do this morning.
 > If you are using IE and you find the following table difficult to read,
@@ -59,7 +59,7 @@ the content into a table.
 | RenderX XEP | [http://www.renderx.com](http://www.renderx.com/) | $4,400.00 per CPU core | "written in Java" (http://www.renderx.com/tools/xep.html) |
 | XSL:FO + Apache FOP | [http://xmlgraphics.apache.org/fop](http://xmlgraphics.apache.org/fop) | Free | FOP is Java-based |
 > **Note**
-> 
+>
 >       The pricing shown above has likely changed in the time since I gathered 
 >       the data, and there may very well be additional products available today 
 >       that I did not come across during my research.

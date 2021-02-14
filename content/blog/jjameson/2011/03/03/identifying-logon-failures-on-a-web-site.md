@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "Infrastructure", "SharePoint 2010"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Several years ago, while working on the "Frontier" project at [Agilent Technologies](http://chem.agilent.com), I encountered a scenario where I needed to quickly identify logon failures on the site. The Agilent site was (and I believe still is) based on Microsoft Office SharePoint Server (MOSS) 2007, and used Forms-Based Authentication with a slightly custom version of the [ActiveDirectoryMembershipProvider](http://msdn.microsoft.com/en-us/library/system.web.security.activedirectorymembershipprovider%28v=VS.80%29.aspx) (in order to lookup users by email address, instead of forcing customers and partners to remember their usernames in the Agilent extranet domain).
@@ -28,11 +28,11 @@ The first script lists all logon failures for a particular server (i.e. one of t
 These scripts are based on a sample I found in the [Script Center on TechNet](http://technet.microsoft.com/en-us/scriptcenter/default.aspx) for querying the event log. You should be able to easily modify them to search for other events (and subsequently parse data from).
 
 > **Note**
-> 
+>
 > While I originally created these scripts for a solution based on MOSS 2007, you should be able to use them for any site based on ASP.NET. For example, this morning I verified the scripts still work as expected with [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010) and configured with claims-based authentication.
 
 > **Important**
-> 
+>
 > You should obviously apply discretion when deciding when (and how often) to run these scripts against a Production envionment. With a little bit of effort, however, you could modify the scripts to work against saved event logs copied to another environment for analysis.
 
 ### ListLogonFailureEventsForServer.vbs

@@ -9,11 +9,11 @@ tags: ["My System", "Core Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
@@ -279,7 +279,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 ```
 
 > **Note**
-> 
+>
 > When doing TDD, we typically want to work in very small increments (i.e.
 > get our existing tests to pass before adding more complexity). However,
 > in this case, it makes sense to add a couple more failing unit tests (as
@@ -380,7 +380,7 @@ Public key token is 786f58ca4a6e3f60</samp>
 With the **InternalsVisibleToAttribute** specifed, the solution  builds and we now have four failing unit tests (instead of just the two that we  had before).
 
 > **Tip**
-> 
+>
 > If you tend to run your unit tests in Visual Studio using the **Test
 > List Editor** (like I do) then I recommend adding the **Full
 > Class Name** column to the view (in order to resolve any ambiguity
@@ -670,7 +670,7 @@ I should also add some unit tests to verify that data encrypted with some entrop
 Note that some changes might be needed to the previously developed unit tests  -- depending on how the code is modified. For example, is the `entropy`  parameter optional in the methods on the **InternalEncryptionService**  class as well? If no, then we'll need to update the old unit tests to pass in `null` for the `entropy` parameter.
 
 > **Important**
-> 
+>
 > Whenever you are changing existing unit tests (for the purposes of refactoring
 > or other reasons), be careful not to mistakenly change the intent of the
 > unit test -- unless, of course, the unit test fails because of an *expected*

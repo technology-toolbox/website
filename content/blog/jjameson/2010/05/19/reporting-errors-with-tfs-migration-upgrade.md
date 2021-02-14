@@ -8,11 +8,11 @@ tags: ["SQL Server", "TFS"]
 ---
 
 > **Note**
-> 
+>
 >       This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
 > blog ever goes away.
@@ -42,10 +42,10 @@ resemble the following:
 > ---&gt; System.Data.SqlClient.SqlException: The EXECUTE permission was denied
 > on the object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema
 > 'sys'.
-> 
+>
 > at Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String
 > Report, Boolean CacheReport, ExpirationDefinition Expiration)
-> 
+>
 > at Microsoft.ReportingServices.WebServer.ReportingService2005.SetCacheOptions(String
 > Report, Boolean CacheReport, ExpirationDefinition Expiration)
 
@@ -53,25 +53,25 @@ After the upgrade, when attempting to create a new TFS project (which adds
 new reports to Reporting Services), you may see the following:
 
 > **TF301777: Team Project Creation Failed**
-> 
+>
 > New Team Project Wizard encountered the following error and could not
 > continue.
-> 
+>
 > **Error**
-> 
+>
 > The Project Creation Wizard encountered an error
 > while creating reports to the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
-> 
+>
 > **Explanation**
-> 
+>
 > The Project Creation Wizard encountered a problem while creating reports
 > on the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
 > The reason for the failure cannot be determined at this time. Because the
 > operation failed, the wizard was not able to finish creating the SQL Server
 > Reporting Services site.
-> 
+>
 > **User Action**
-> 
+>
 > Contact the administrator for the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx
 > to confirm that the SQL Server Reporting Services server is running and
 > you have sufficient privileges to create a project. Your user account on
@@ -151,7 +151,7 @@ failed during the TFS upgrade process). Otherwise, the Web Parts that render
 reports will continue to show errors similar to the following:
 
 > **Reporting Services Error**
-> 
+>
 > The item '/TfsReports/DefaultCollection/AdventureWorks/Remaining
 > Work' cannot be found. (rsItemNotFound)
 
@@ -181,7 +181,7 @@ While this successfully uploaded the missing reports (e.g. /TfsReports/DefaultCo
 Work), it only led to a different error.
 
 > **Reporting Services Error**
-> 
+>
 > Default value or value provided for the report parameter
 > 'IterationParam' is not a valid value. (rsInvalidReportParameter)
 

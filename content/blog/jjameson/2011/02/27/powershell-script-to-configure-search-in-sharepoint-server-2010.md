@@ -9,11 +9,11 @@ tags: ["SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 This morning I thought I'd share one more very useful PowerShell script for SharePoint Server 2010.
@@ -41,7 +41,7 @@ The following table lists the service accounts that I recommend when configuring
 | {DOMAIN}\svc-index | Service account for indexing content  | Provides read-only access to any content that needs to be indexed (and thus included in search results) |
 | {DOMAIN}\svc-spserviceapp | Service account for SharePoint service applications  | Used as the application pool identity for SharePoint service applications  |
 > **Note**
-> 
+>
 > For each service account listed in the table above, corresponding "-dev" and "-test" service accounts need to be created for the Development and Test environments. This allows the Development and Test teams to install and configure their environments without knowing the passwords for the Production environment.
 
 Note that the following script is based on my fictitious Fabrikam sample solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to automatically override the service account names for development and test environments.

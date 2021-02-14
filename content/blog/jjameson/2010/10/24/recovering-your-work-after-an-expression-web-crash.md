@@ -9,11 +9,11 @@ tags: ["Debugging", "Web Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx)
-> 
+>
 > Since
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.

@@ -9,11 +9,11 @@ tags: ["My System", "Core Development"]
 ---
 
 > **Note**
-> 
+>
 > This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Do you remember the good ol' days before the **ApplicationException** class in the .NET Framework became "[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure do.
@@ -157,6 +157,6 @@ try
 Note that it is generally a bad idea to catch instances of the **Exception** class. In this particular instance the code snippet is from a "delayed load" event for an ASP.NET **UpdatePanel**. In order to populate the list of sites on the page (in other words, "bind the site list") a call is made to a remote application using single sign-on (SSO) credentials configured for the current user. In order to gracefully handle errors during the AJAX partial page update, I catch instances of **RecoverableException** for error conditions that can be resolved by a user (for example, when the SSO credentials have not been configured for the user) and **Exception** for other errors (for example, when attempting to retrieve the list of sites from the remote application generates an unexpected error).
 
 > **Note**
-> 
+>
 > A more elegant way of handling errors during asynchronous postbacks is to use the **[ScriptManager.AsyncPostBackError](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.asyncpostbackerror.aspx)** event. I'll cover that in a separate post.
 

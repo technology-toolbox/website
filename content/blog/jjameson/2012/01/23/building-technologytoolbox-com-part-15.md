@@ -47,7 +47,7 @@ trying to hack the site (e.g. "Could not decrypt the authentication cookie.")
 which I generally consider to just be "noise."
 
 > **Note**
-> 
+>
 >       Sometimes it is important to investigate the attempts to hack your site, 
 >       but -- assuming you actually want to accomplish something useful with 
 >       your time -- you typically have to chock these up to a fact of life 
@@ -253,14 +253,14 @@ configuration without editing the file directly). However, it was a simple worka
 to a rather annoying error -- allowing me to redirect my efforts elsewhere.
 
 > **Important**
-> 
+>
 > Since the Googlebot will likely have added "bad" CAPTCHA images to
 > its index (i.e. images based on a random key and IV), it may take several
 > months before you stop seeing this error. The good news is that Google
 > will eventually "give up" and remove the old CAPTCHA URLs from the index.
 > The new CAPTCHA image URLs (based on the fixed key and IV specified
 > in Web.config) will no longer generate the errors.
-> 
+>
 > In my case, these errors stopped occurring around the middle of December
 > (and I switched to a fixed key and IV in early October).
 
@@ -597,7 +597,7 @@ protected override void OnLoad(EventArgs e)
 ```
 
 > **Important**
-> 
+>
 >       There are a few other places in the Subtext solution where the 
 >       **HttpHelper.SetFileNotFoundResponse** method is called 
 >       (and should probably be updated as well to avoid issues when running 
@@ -627,17 +627,17 @@ Again, for the sake on not having to rehash an old topic, I'll just copy/paste
 my check-in comments below:
 
 > Fix numerous issues with pingback functionality in Subtext:
-> 
+>
 > - Error in PROD (i.e. "System.Web.HttpException: The file '/blog/jjameson/Services/Pingback.aspx'
 >   does not exist.")
-> 
+>
 > - The "pingback" URL specified in the &lt;link&gt; head element should be
 >   an absolute URL (not a relative URL) according to the Pingback 1.0 specification
 >   (http://www.hixie.ch/specs/pingback/pingback)
-> 
+>
 > - According to the current Subtext routing functionality, the "pingback"
 >   URL needs to include the ID of the post (e.g. "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")
-> 
+>
 > - Method name was misspelled (i.e. "Notifiy" --&gt; "Notify")
 
 Then again, perhaps Pingback functionality and correct spelling (even in
@@ -657,7 +657,7 @@ Ah yes, the dreaded **NullReferenceException**. A surefire indicator
 of insufficient "boundary checking" somewhere in the code.
 
 > **Note**
-> 
+>
 >       In case you are new to .NET development, you should never experience 
 >       a **NullReferenceException**. **ArgumentNullException**? 
 >       Yes, those are "good" (sort of)...a **NullReferenceException** 
@@ -765,11 +765,11 @@ Looks like more pathetic hacking attempts.
 weed out the hacking "noise."
 
 > **Update (2012-02-28)**
-> 
+>
 >       Refer to the following post for more information on configuring ELMAH 
 >       filters:
 >       
-> 
+>
 > <cite>Filter ELMAH email messages to avoid getting spammed by hackers</cite>
 > [https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx](/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers)
 

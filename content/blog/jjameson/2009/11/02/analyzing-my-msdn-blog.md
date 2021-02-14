@@ -9,11 +9,11 @@ tags: ["Personal"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 According to my blog dashboard, this will be post #150 for my MSDN blog. So this         morning I thought I would do something a little different by providing some analysis         on my blog.
@@ -38,7 +38,7 @@ The following post provides a good explanation of the difference between "Views"
 Here's the gist of it:
 
 > Generally speaking, "Views" is the number of times somone viewed a post on the web             via a browser, and "AggViews" is the number of times someone viewed the post via             the RSS and Atom feeds.
-> 
+>
 > More specifically, the web view count is only updated in the EntryView control.             This is displayed when you are viewing a single post. If you are viewing a list             of posts, such as on the blog home page, the view counts of the posts are not updated.
 
 Based on the second paragraph, the numbers shown above are not entirely accurate         (specifically, they are less than the actual values) but my gut tells me they are         reasonably close. In other words, while some people may simply browse to [http://blogs.msdn.com/jjameson](http://blogs.msdn.com/jjameson) and start reading without ever clicking through         on an individual post, I don't think this is a large number.

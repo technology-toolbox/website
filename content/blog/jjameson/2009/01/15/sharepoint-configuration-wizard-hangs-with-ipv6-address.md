@@ -8,11 +8,11 @@ tags: ["MOSS 2007", "WSS v3"]
 ---
 
 > **Note**
-> 
+>
 >             This post originally appeared on my MSDN blog:
-> 
+>
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx)
-> 
+>
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 I came back from a nice long vacation only to find that my local development VM         for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By "corrupted",         I mean to say there were lots of errors in the event log about the SharePoint\_Config         database being "out of whack." Okay, I'm paraphrasing this a little, but you get         the point.
@@ -136,9 +136,9 @@ Approximate round trip times in milli-seconds:
 After restarting the Config Wizard, I was relieved to see that a random port was         quickly found (which, of course, I always override anyway to use a consistent port         across various environments -- LOCAL, DEV, TEST, and PROD). I was even more pleased         to see SharePoint Central Administration come up on my pristine Windows Server 2008         VM.
 
 > **Update (2008-01-19)**
-> 
+>
 > Note that after aliasing my local VM name to the loopback address (127.0.0.1), I             had to use the workaround in [KB 896861](http://support.microsoft.com/kb/896861) in order to resolve "access denied" errors when indexing content:
-> 
+>
 > > Access is denied. Check that the Default Content Access Account has access to this
 > > content, or add a crawl rule to crawl this content. (The item was deleted because
 > > it was either not found or the crawler was denied access to it.)
