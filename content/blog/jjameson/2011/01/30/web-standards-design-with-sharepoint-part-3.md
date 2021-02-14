@@ -17,17 +17,17 @@ tags: ["MOSS 2007", "Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft Office SharePoint Server (MOSS) 2007:
+Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
 
 1. <cite>"The Media Guy"</cite>
 
-> Great article.. was very helpful. I used 960.gs for my master page as well and all is good. I am now creating a 3 column page layout . I need a grid\_3 (left), grid\_6 (middle), and a grid\_3 (right). I would like these all to be blank web part zones. I started off with the "Blank web part page" as a template but it is using nested Tables and really hard to look at. Do you have any advice for a starting a page layout based on 960.gs?
+> Great article.. was very helpful. I used 960.gs for my master page as well and all                     is good. I am now creating a 3 column page layout . I need a grid\_3 (left), grid\_6                     (middle), and a grid\_3 (right). I would like these all to be blank web part zones.                     I started off with the "Blank web part page" as a template but it is using nested                     Tables and really hard to look at. Do you have any advice for a starting a page                     layout based on 960.gs?
 
-Rather than trying to explain to "The Media Guy" how to create a page layout based on the [960 Grid System](http://960.gs/), this weekend I revisited the sample I started creating last year as a follow-up to my original post. However, to keep things as simple as possible -- while still demonstrating valuable, "real world" concepts -- I updated the master page and page layouts for "Fabrikam Technologies" based on the out-of-the-box Collaboration Portal site definition (which has a fair amount of content populated by default). [Originally, my Web standards demo site was based on the Internet site for the fictitious "Adventure Works" bicycle company.]
+Rather than trying to explain to "The Media Guy" how to create a page layout based         on the [960 Grid System](http://960.gs/), this weekend I revisited the         sample I started creating last year as a follow-up to my original post. However,         to keep things as simple as possible -- while still demonstrating valuable, "real         world" concepts -- I updated the master page and page layouts for "Fabrikam Technologies"         based on the out-of-the-box Collaboration Portal site definition (which has a fair         amount of content populated by default). [Originally, my Web standards demo site         was based on the Internet site for the fictitious "Adventure Works" bicycle company.]
 
-If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with the following:
+If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with the         following:
 
 ![Home page for &quot;Collaboration Portal&quot; (a.k.a. a &quot;starter site hierarchy for an intranet divisional portal&quot;)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DefaultMaster_DefaultPageLayout.png)
 Figure 1: Home page for "Collaboration Portal" (a.k.a. a "starter site hierarchy
@@ -35,27 +35,27 @@ for an intranet divisional portal")
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DefaultMaster_DefaultPageLayout.png)
 
-Let's suppose that Fabrikam Technologies wants to deploy SharePoint for their corporate intranet, but they want to brand the site with their corporate logo, font, and color scheme. Furthermore, the folks at Fabrikam really want us -- at least as much as possible -- to use all the goodness of Web standards design (in other words, CSS-based layout instead of that nasty ol' table-based layout from years ago).
+Let's suppose that Fabrikam Technologies wants to deploy SharePoint for their corporate         intranet, but they want to brand the site with their corporate logo, font, and color         scheme. Furthermore, the folks at Fabrikam really want us -- at least as much as         possible -- to use all the goodness of Web standards design (in other words, CSS-based         layout instead of that nasty ol' table-based layout from years ago).
 
-As I described in my original post -- and also demonstrated in [part 2 of this series](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2) (although not using the 960 Grid System in that example) -- you can certainly design SharePoint sites using Web standards (even though table-based layout is rampant in the out-of-the-box SharePoint controls, master pages, and page layouts).
+As I described in my original post -- and also demonstrated in [part 2 of this series](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2) (although not using the 960 Grid System in that example)         -- you can certainly design SharePoint sites using Web standards (even though table-based         layout is rampant in the out-of-the-box SharePoint controls, master pages, and page         layouts).
 
-Here's a screenshot showing the home page using the custom Fabrikam master page and page layout:
+Here's a screenshot showing the home page using the custom Fabrikam master page         and page layout:
 
 ![Home page with custom master page and page layout](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout.png)
 Figure 2: Home page with custom master page and page layout
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout.png)
 
-Note that the actual page content is identical in the two figures above -- I've simply "re-skinned" the site to look substantially different from the default SharePoint look-and-feel. Also note that there are two fundamental problems with the out-of-the-box page content.
+Note that the actual page content is identical in the two figures above -- I've         simply "re-skinned" the site to look substantially different from the default SharePoint         look-and-feel. Also note that there are two fundamental problems with the out-of-the-box         page content.
 
-First, in the **Page Content **field, the default content is far from "semantic HTML" and contains numerous nested tables (to achieve the two-column layout). This is easily seen in the following screenshot, in which I've disabled the linked style sheets:
+First, in the **Page Content **field, the default content is far from         "semantic HTML" and contains numerous nested tables (to achieve the two-column layout).         This is easily seen in the following screenshot, in which I've disabled the linked         style sheets:
 
 ![Home page with custom master page and page layout (linked CSS files disabled)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout2.png)
 Figure 3: Home page with custom master page and page layout (linked CSS files disabled)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout2.png)
 
-Second, the default page layout does not expose either of the Summary Links fields defined on the **Welcome Page** content type. Consequently, a Web Part (i.e. "News") is used to render the links at the bottom of the page.
+Second, the default page layout does not expose either of the Summary Links fields         defined on the **Welcome Page** content type. Consequently, a Web Part         (i.e. "News") is used to render the links at the bottom of the page.
 
 > **Note**
 > 
@@ -65,9 +65,9 @@ Second, the default page layout does not expose either of the Summary Links fiel
 >             to Web Part properties are not shown in the **Version History** for
 >             a page, whereas changes to a Summary Links field are shown.)
 
-To mitigate these issues, I chose to tweak the default content for the home page (to replace the **Page Content **with semantic HTML -- while still preserving the two-column layout within the field -- and to replace the "News" Web Part with corresponding Summary Links).
+To mitigate these issues, I chose to tweak the default content for the home page         (to replace the **Page Content **with semantic HTML -- while still         preserving the two-column layout within the field -- and to replace the "News" Web         Part with corresponding Summary Links).
 
-The following figure shows the end result (note that I overlayed the grid using the [960 Gridder](http://gridder.andreehansson.se/) for illustrative purposes):
+The following figure shows the end result (note that I overlayed the grid using         the [960 Gridder](http://gridder.andreehansson.se/) for illustrative         purposes):
 
 ![Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-CustomLayout.png)
 Figure 4: Home page with custom master page and page layout (semantic HTML and Summary
@@ -75,7 +75,7 @@ Links field instead of Web Part)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-CustomLayout.png)
 
-Here are the instructions to deploy the Fabrikam Demo sample to your own SharePoint environment. First, download the attachment and unzip the files. Then you simply need to run a few commands from an Administrator command prompt. [As I've warned in the past, you should obviously inspect my scripts before blindly running them with administrative privileges, but honestly, there's nothing malicious in there.]
+Here are the instructions to deploy the Fabrikam Demo sample to your own SharePoint         environment. First, download the attachment and unzip the files. Then you simply         need to run a few commands from an Administrator command prompt. [As I've warned         in the past, you should obviously inspect my scripts before blindly running them         with administrative privileges, but honestly, there's nothing malicious in there.]
 
 To deploy the Fabrikam Demo to SharePoint:
 
@@ -144,9 +144,9 @@ To deploy the Fabrikam Demo to SharePoint:
 9. Wait for the feature activations to complete, and then minimize or close the command
    prompt.
 
-That's it! (During feature activation, I automatically set the master page on the site, change the page layout of the home page, and update the corresponding content.)
+That's it! (During feature activation, I automatically set the master page on the         site, change the page layout of the home page, and update the corresponding content.)
 
-You are now ready to browse to the Fabrikam intranet site and review the master page and page layouts leveraging the 960 Grid System.
+You are now ready to browse to the Fabrikam intranet site and review the master         page and page layouts leveraging the 960 Grid System.
 
 > **Tip**
 > 

@@ -51,7 +51,7 @@ exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
     @DocLeafName=N'home.jpg', ...
 ```
 
-Seriously...what is the likelihood the CSS files or image have changed since the last request for the home page? Zero. [Okay, maybe not absolute 0 -- but probably something like 6.28 x 10<sup>-9</sup> ;-) ]
+Seriously...what is the likelihood the CSS files or image have changed since the last request for the home page? Zero. [Okay, maybe not absolute 0 -- but probably something like 6.28 x 10<sup>-9</sup>  ;-) ]
 
 After changing the `<BlobCache>` **enabled** attribute from "false" to "true" in my Web.config file, I confirmed that subsequent requests for the home page only require two database roundtrips. Woohoo!
 

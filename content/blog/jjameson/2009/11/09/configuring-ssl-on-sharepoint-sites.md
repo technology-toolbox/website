@@ -14,13 +14,32 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
+> blog ever goes away.
 
-If you are using Basic Authentication or Forms-Based Authentication (FBA) with Microsoft Office SharePoint Server (MOSS) 2007 -- or any Web site, for that matter -- then you must configure secure communication (HTTPS) using SSL certificates.
+If you are using Basic Authentication or Forms-Based Authentication (FBA)
+with Microsoft Office SharePoint Server (MOSS) 2007 -- or any Web site, for
+that matter -- then you must configure secure communication (HTTPS) using SSL
+certificates.
 
-However, you probably didn't select to enable SSL when you originally created your Web application (after all, you most likely don't want to use Basic Auth or FBA exclusively, but rather only for users accessing the site externally). If you followed the process I recommend for customers deploying MOSS solutions, you created the Web application using an intranet URL (e.g. [http://fabrikam](http://fabrikam/)) and subsequently extended the Web application to the **Internet** zone (e.g. [http://www.fabrikam.com](http://www.fabrikam.com/)) or **Extranet** zone (e.g. [http://extranet.fabrikam.com](http://extranet.fabrikam.com/)) -- utilizing the SharePoint alternate access mappings feature.
+However, you probably didn't select to enable SSL when you originally created
+your Web application (after all, you most likely don't want to use Basic Auth
+or FBA exclusively, but rather only for users accessing the site externally).
+If you followed the process I recommend for customers deploying MOSS solutions,
+you created the Web application using an intranet URL (e.g.
+[http://fabrikam](http://fabrikam/)) and subsequently
+extended the Web application to the **Internet** zone (e.g.
+[http://www.fabrikam.com](http://www.fabrikam.com/))
+or **Extranet** zone (e.g.
+[http://extranet.fabrikam.com](http://extranet.fabrikam.com/))
+-- utilizing the SharePoint alternate access mappings feature.
 
-Now that you need to enable secure communication, you might once again consider extending the Web application -- say to the **Custom** zone -- and select the option to use SSL (e.g. [https://www.fabrikam.com](https://www.fabrikam.com/)). After all, this is the recommendation in the following TechNet article:
+Now that you need to enable secure communication, you might once again consider
+extending the Web application -- say to the **Custom** zone --
+and select the option to use SSL (e.g.
+[https://www.fabrikam.com](https://www.fabrikam.com/)).
+After all, this is the recommendation in the following TechNet article:
 
 <cite>Update a Web application URL and IIS bindings (Windows SharePoint
 Services). (Updated 2009-04-23).</cite>
@@ -32,11 +51,27 @@ Specifically, here is the text that I am referring to:
 > hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site,
 > each assigned to its own alternate access mapping zone and URLs.
 
-Wait a minute...let me see if I've got this right...you want me to extend my Web application -- thereby creating yet another copy of my Web.config files -- just to enable SSL? That doesn't seem like a good idea.
+Wait a minute...let me see if I've got this right...you want me to extend
+my Web application -- thereby creating yet another copy of my Web.config files
+-- just to enable SSL? That doesn't seem like a good idea.
 
-After all, managing the multitude of Web.config files across multiple Web application and Web servers in a farm seems to be one of the most challenging aspects for the Release Management and Operations teams (at least in my experience during the past several years). [I can't tell you how many times I've compared Web.config files during the process of troubleshooting various issues and found discrepancies due to manual changes not getting applied consistently. Sure, the risk of this is drastically reduced if you leverage the [`SPWebConfigModification`](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx) infrastructure, but there are still rare occasions when a little manual "tweaking" is necessary -- and these often lead to inconsistent Web.config files.]
+After all, managing the multitude of Web.config files across multiple Web
+application and Web servers in a farm seems to be one of the most challenging
+aspects for the Release Management and Operations teams (at least in my experience
+during the past several years). [I can't tell you how many times I've compared
+Web.config files during the process of troubleshooting various issues and found
+discrepancies due to manual changes not getting applied consistently. Sure,
+the risk of this is drastically reduced if you leverage the
+[`SPWebConfigModification`](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx) infrastructure, but there are still
+rare occasions when a little manual "tweaking" is necessary -- and these often
+lead to inconsistent Web.config files.]
 
-Therefore, one of my goals with any SharePoint solution is to minimize the number of Web.config files that are used. It seems reasonable to expect two different Web.config files to be used for a site that uses Windows Authentication internally and Forms Authentication externally, since this is configured using the `<authentication>` element.
+Therefore, one of my goals with any SharePoint solution is to minimize the
+number of Web.config files that are used. It seems reasonable to expect two
+different Web.config files to be used for a site that uses Windows Authentication
+internally and Forms Authentication externally, since this is configured using
+the `<authentication>`
+element.
 
 For example, in the **Default** zone you probably want to specify:
 
@@ -44,7 +79,8 @@ For example, in the **Default** zone you probably want to specify:
 <authentication mode="Windows" />
 ```
 
-Whereas in the **Internet** zone you instead need something like this:
+Whereas in the **Internet** zone you instead need something
+like this:
 
 ```
 <authentication mode="Forms">
@@ -52,9 +88,15 @@ Whereas in the **Internet** zone you instead need something like this:
     </authentication>
 ```
 
-Okay, so if we want to avoid creating a new Web application -- and the corresponding Web.config file(s) -- how can we support both HTTP and HTTPS on the same Web application? It turns out to be rather simple.
+Okay, so if we want to avoid creating a new Web application -- and the corresponding
+Web.config file(s) -- how can we support both HTTP and HTTPS on the same Web
+application? It turns out to be rather simple.
 
-For a starting point, let's assume you've just created your Web application using the default (i.e. intranet) URL -- say, [http://fabrikam](http://fabrikam/) -- which uses Windows Authentication. This is the site that your content authors will use to manage the site.
+For a starting point, let's assume you've just created your Web application
+using the default (i.e. intranet) URL -- say,
+[http://fabrikam](http://fabrikam/) -- which uses
+Windows Authentication. This is the site that your content authors will use
+to manage the site.
 
 The first step is to create an alternate access mapping (AAM).
 
@@ -86,7 +128,10 @@ To configure an alternate access mapping:
       **dropdown list, select **Internet**.
    5. Click **OK**.
 
-The next step is to install your SSL certificate on the site. Once you've procured your certificate and installed it through Internet Information Services (IIS) Manager, you then need to add a public URL in SharePoint for HTTPS and add an HTTPS binding in IIS.
+The next step is to install your SSL certificate on the site. Once you've
+procured your certificate and installed it through Internet Information Services
+(IIS) Manager, you then need to add a public URL in SharePoint for HTTPS and
+add an HTTPS binding in IIS.
 
 To add a public URL to HTTPS:
 
@@ -125,7 +170,18 @@ To add an HTTPS binding to the site in IIS:
    3. Click **OK**.
    4. In the **Site Bindings **window, click **Close**.
 
-At this point, your SharePoint site supports Windows Authentication both internally (via [http://fabrikam](http://fabrikam/)) and externally (via [http://www.fabrikam.com](http://www.fabrikam.com/) and [https://www.fabrikam.com](https://www.fabrikam.com/)). The final steps are to enable anonymous access and configure Forms Authentication.
+At this point, your SharePoint site supports Windows Authentication both
+internally (via [http://fabrikam](http://fabrikam/))
+and externally (via [http://www.fabrikam.com](http://www.fabrikam.com/)
+and [https://www.fabrikam.com](https://www.fabrikam.com/)).
+The final steps are to enable anonymous access and configure Forms Authentication.
 
-Note that after configuring Forms Authentication, users will not automatically be redirected from HTTP to HTTPS for the login page. To achieve this user experience, I've used a couple of techniques in the past that are based on the same fundmental concept. The first technique utilized code on the login page to automatically detect HTTP connections and redirect to HTTPS. The second technique was essentially the same logic, but rather than utilizing code embedded in the login page, it is encapsulated in a Login Form Web Part. I'll discuss this redirect code in a follow-up post.
+Note that after configuring Forms Authentication, users will not automatically
+be redirected from HTTP to HTTPS for the login page. To achieve this user experience,
+I've used a couple of techniques in the past that are based on the same fundmental
+concept. The first technique utilized code on the login page to automatically
+detect HTTP connections and redirect to HTTPS. The second technique was essentially
+the same logic, but rather than utilizing code embedded in the login page, it
+is encapsulated in a Login Form Web Part. I'll discuss this redirect code in
+a follow-up post.
 

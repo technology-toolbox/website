@@ -14,15 +14,17 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-In my [previous post](/blog/jjameson/2009/09/20/overriding-application-master-in-moss-2007), I showed how you can override the hard-coded "application.master" in Microsoft Office SharePoint Server (MOSS) 2007 application pages (e.g. /Library/\_layouts/viewlsts.aspx).
+In my [previous post](/blog/jjameson/2009/09/20/overriding-application-master-in-moss-2007), I showed how you can override the hard-coded "application.master"  in Microsoft Office SharePoint Server (MOSS) 2007 application pages (e.g. /Library/\_layouts/viewlsts.aspx).
 
-Note that for custom application pages (i.e. those ASP.NET pages that you create to run under the context of a SharePoint site) you don't need a custom HttpHandler in order to "inherit" the master page from the current `SPWeb`.
+Note that for custom application pages (i.e. those ASP.NET pages that you create  to run under the context of a SharePoint site) you don't need a custom HttpHandler  in order to "inherit" the master page from the current `SPWeb`.
 
-All you need to do is simply set the master page during the PreInit phase of the ASP.NET page lifecycle.
+All you need to do is simply set the master page during the PreInit phase of  the ASP.NET page lifecycle.
 
-This is precisely what I developed my custom `SharePointPage` base class for:
+This is precisely what I developed my custom `SharePointPage` base  class for:
 
 ```
 /// <summary>
@@ -64,7 +66,7 @@ This is precisely what I developed my custom `SharePointPage` base class for:
     }
 ```
 
-To see a real-world example of this in action, simply browse to [one of the "publication summary" pages](http://www.chem.agilent.com/en-US/Search/Library/_layouts/Agilent/PublicationSummary.aspx?whid=37419&liid=204) on the Agilent Technologies [LSCA site](http://www.chem.agilent.com/) (try searching for **6850**, filtering the search results to **Library**, and then clicking one of the search results). Note that the `PublicationSummary` page class inherits from the `SharePointPage` base class.
+To see a real-world example of this in action, simply browse to [one of the "publication summary" pages](http://www.chem.agilent.com/en-US/Search/Library/_layouts/Agilent/PublicationSummary.aspx?whid=37419&liid=204) on the Agilent Technologies [LSCA site](http://www.chem.agilent.com/) (try searching for **6850**, filtering the search results to **Library**, and then  clicking one of the search results). Note that the `PublicationSummary`  page class inherits from the `SharePointPage` base class.
 
 ```
 public partial class PublicationSummary : SharePointPage,
@@ -74,5 +76,5 @@ public partial class PublicationSummary : SharePointPage,
     }
 ```
 
-For the sake of this post, ignore the `IView` interface. That is used for something else entirely (i.e. a simple Model-View-Controller framework) that perhaps one day I'll get around to covering as well.
+For the sake of this post, ignore the `IView` interface. That is used  for something else entirely (i.e. a simple Model-View-Controller framework) that  perhaps one day I'll get around to covering as well.
 

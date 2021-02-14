@@ -13,9 +13,9 @@ tags: ["SQL Server", "Infrastructure"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-For a little over a month, Windows Update was failing on one of the servers in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab). Specifically, [KB 970892](http://support.microsoft.com/kb/970892) simply would not install on JUBILEE -- my Systems Center Operations Manager (SCOM) 2007 VM, that I use to monitor a number of physical and virtual machines.
+For a little over a month, Windows Update was failing on one of the servers in the         ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)         (a.k.a. my home lab). Specifically, [KB 970892](http://support.microsoft.com/kb/970892) simply would not install on JUBILEE -- my Systems Center Operations         Manager (SCOM) 2007 VM, that I use to monitor a number of physical and virtual machines.
 
 Here's the first event I found regarding this error:
 
@@ -64,13 +64,13 @@ Computer: jubilee.corp.technologytoolbox.com<br>
 Description:<br>
 Report Server (MSSQLSERVER) cannot connect to the report server database.</samp>
 
-Since I have Windows Update configured to automatically download and install updates every morning, the patch attempted to install each day -- but failed each and every time.
+Since I have Windows Update configured to automatically download and install updates         every morning, the patch attempted to install each day -- but failed each and every         time.
 
-I have to admit that I've spent a fair amount of time troubleshooting this error over the past month, but since it wasn't a blocking issue -- just a particularly irritating annoyance -- I kept putting it off. [Honestly, I rarely look at the SCOM reports and instead rely mostly on email notifications and the Operations Manager Console.]
+I have to admit that I've spent a fair amount of time troubleshooting this error         over the past month, but since it wasn't a blocking issue -- just a particularly         irritating annoyance -- I kept putting it off. [Honestly, I rarely look at the SCOM         reports and instead rely mostly on email notifications and the Operations Manager         Console.]
 
-Fortunately, I finally managed to determine the root cause tonight and resolve the issue.
+Fortunately, I finally managed to determine the root cause tonight and resolve the         issue.
 
-After downloading and installing the standalone patch installation, I discovered the following in the installation log:
+After downloading and installing the standalone patch installation, I discovered         the following in the installation log:
 
 ```
 MSI (s) (F0:54) [21:09:49:565]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIAC31.tmp, Entrypoint: Do_RSSetSharePointExclusionPath
@@ -89,10 +89,10 @@ Function Name: Do_RSSetSharePointExclusionPath
 Source Line Number: 914
 ```
 
-As noted in [KB 917826](http://support.microsoft.com/kb/917826), there appears to be a known issue when Reporting Services is configured to run using a domain account. For JUBILEE, the **ReportServer **application pool was configured to run as **TECHTOOLBOX\svc-mom-das **(the SCOM data access service account). After changing the app pool to run as **NetworkService
+As noted in [KB 917826](http://support.microsoft.com/kb/917826), there         appears to be a known issue when Reporting Services is configured to run using a         domain account. For JUBILEE, the **ReportServer **application pool         was configured to run as **TECHTOOLBOX\svc-mom-das **(the SCOM data         access service account). After changing the app pool to run as **NetworkService
 **instead, I ran the standalone install of KB 970892 and it completed successfully.
 
-I then changed the app pool identity back to TECHTOOLBOX\svc-mom-das (since that appears to be how SCOM 2007 wants it configured) and verified that a couple of reports run successfully. Woohoo!
+I then changed the app pool identity back to TECHTOOLBOX\svc-mom-das (since that         appears to be how SCOM 2007 wants it configured) and verified that a couple of reports         run successfully. Woohoo!
 
-I'm crossing my fingers that tomorrow morning, Windows Update detects that KB 970892 is installed and no errors occur.
+I'm crossing my fingers that tomorrow morning, Windows Update detects that KB 970892         is installed and no errors occur.
 

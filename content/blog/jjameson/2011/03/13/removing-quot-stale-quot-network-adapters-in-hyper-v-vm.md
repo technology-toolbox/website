@@ -15,17 +15,19 @@ tags: ["My System", "Infrastructure", "Virtualization"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-Each time I create (or recreate) a virtual machine in Hyper-V using [one of my SysPrep'ed images](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines), I usually end up having to do a quick Internet search for:
+Each time I create (or recreate) a virtual machine in Hyper-V using [one of my SysPrep'ed images](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines), I usually end up having to do a quick Internet  search for:
 
 > device manager show hidden devices
 
-I'm a little embarrassed to say that I simply can't remember the environment variable that I need to set in order to remove what I call "stale" network adapters in Device Manager.
+I'm a little embarrassed to say that I simply can't remember the environment  variable that I need to set in order to remove what I call "stale" network adapters  in Device Manager.
 
-Note that if you don't properly export/import a VM in Hyper-V (and instead simply copy VHDs around like I often do), then you'll end up with a network adapter named something like ""Microsoft Virtual Machine Bus Network Adapter #2" (and a hidden network adapter named "Microsoft Virtual Machine Bus Network Adapter").
+Note that if you don't properly export/import a VM in Hyper-V (and instead simply  copy VHDs around like I often do), then you'll end up with a network adapter named  something like ""Microsoft Virtual Machine Bus Network Adapter #2" (and a hidden  network adapter named "Microsoft Virtual Machine Bus Network Adapter").
 
-I'm not aware of any issues by *not*deleting these network adapters, but I still like to clean them up anyway.
+I'm not aware of any issues by *not*deleting these network adapters,  but I still like to clean them up anyway.
 
 Here is the process that I use to cleanup the network adapters:
 
@@ -56,9 +58,9 @@ Here is the process that I use to cleanup the network adapters:
       Scan for hardware changes**. (This will recreate the default adapter
       named "Microsoft Virtual Machine Bus Network Adapter".)
 
-You should now have exactly one VM Bus network adapter (and one Microsoft ISATAP Adapter).
+You should now have exactly one VM Bus network adapter (and one Microsoft ISATAP  Adapter).
 
-Also, just in case it's not completely obvious, you should do this cleanup before configuring any network settings like DNS servers or a static IP address.
+Also, just in case it's not completely obvious, you should do this cleanup before  configuring any network settings like DNS servers or a static IP address.
 
-Perhaps if the environment variable was <var>devmgmt_show_hidden_devices</var> (instead of <var>devmgr_show_nonpresent_devices</var>) then I could actually remember it ;-)
+Perhaps if the environment variable was <var>devmgmt_show_hidden_devices</var>  (instead of <var>devmgr_show_nonpresent_devices</var>) then I could actually remember  it ;-)
 

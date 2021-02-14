@@ -20,7 +20,7 @@ A couple of years ago, I wrote a post about [issues I encountered deploying Wind
 
 This morning I encountered similar issues when attempting to install Windows Server 2008 R2 SP1 (which I recently approved on my WSUS server). Apparently the disk space requirements have gone up -- again. Significantly.
 
-On the development VM (FOOBAR5) that failed to install the Service Pack, I had 5.5 GB of free space before downloading the 903 MB file from my WSUS server.
+On the development VM (FOOBAR5) that failed to install the Service Pack,  I had 5.5 GB of free space before downloading the 903 MB file from my WSUS server.
 
 Evidently I need 7.4 GB of free space in order to install this latest Service Pack:
 

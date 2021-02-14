@@ -14,13 +14,15 @@ tags: ["Simplify", "Core Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-In my previous post, I introduced my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging). As promised, this post introduces how to configure logging (based on a simple console application).
+In my previous post, I introduced my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging). As promised, this post introduces  how to configure logging (based on a simple console application).
 
 As noted in my previous post, one or more [trace listeners](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelistener%28VS.80%29.aspx) can be configured for a particular [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx).
 
-To understand the configuration of various trace listeners, consider the following console application:
+To understand the configuration of various trace listeners, consider the following  console application:
 
 ```
 using System;
@@ -137,7 +139,7 @@ namespace Fabrikam.Demo.AdminConsole
 }
 ```
 
-Running this program without configuring any trace listeners results in the following output to the console:
+Running this program without configuring any trace listeners results in the following  output to the console:
 
 ```
 The square root of 0 is 0.000.
@@ -149,7 +151,7 @@ The square root of 4 is 2.000.
 
 Notice that none of the log messages are displayed in the console output.
 
-However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx) before running the program, then we can easily view all of the log messages.
+However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx)  before running the program, then we can easily view all of the log messages.
 
 ![DebugView (a.k.a. Dbgview.exe)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_DebugView.png)
 
@@ -157,7 +159,7 @@ However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_DebugView.png)
 
-To show the log messages in the console, we simply need to configure a listener. For a console application, this is done using the application configuration file (which is located in the folder with the application executable and has the name of the application with the ".config" file name extension added).
+To show the log messages in the console, we simply need to configure a listener.  For a console application, this is done using the application configuration file  (which is located in the folder with the application executable and has the name  of the application with the ".config" file name extension added).
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -206,9 +208,9 @@ defaultTraceSource Information: 0 : Successfully completed processing.
 defaultTraceSource Information: 0 : Program complete.
 ```
 
-Notice that [System.Diagnostics.ConsoleTraceListener](http://msdn.microsoft.com/en-us/library/system.diagnostics.consoletracelistener.aspx) outputs the name of the TraceSource (which in this case is "defaultTraceSource") as well as the event Id (which, for my simple `Logger` class is always 0). It can also be configured to show other fields, such as thread Id.
+Notice that [System.Diagnostics.ConsoleTraceListener](http://msdn.microsoft.com/en-us/library/system.diagnostics.consoletracelistener.aspx) outputs the name of the TraceSource  (which in this case is "defaultTraceSource") as well as the event Id (which, for  my simple `Logger` class is always 0). It can also be configured to show  other fields, such as thread Id.
 
-A [TraceSwitch](http://msdn.microsoft.com/en-us/library/system.diagnostics.traceswitch.aspx) can also be configured to control tracing and debug output. For example, the following configuration specifies that the trace source should ignore low-level debugging and information messages, and only show warning and error messages.
+A [TraceSwitch](http://msdn.microsoft.com/en-us/library/system.diagnostics.traceswitch.aspx) can also be configured to control tracing and debug output. For  example, the following configuration specifies that the trace source should ignore  low-level debugging and information messages, and only show warning and error messages.
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -264,9 +266,9 @@ The square root of 3 is 1.732.
 The square root of 4 is 2.000.
 ```
 
-With just a little more configuration, we can specify that we want all log messages to go to the console (for example, so the person running the utility can easily monitor the progress of some long-running operation) but only output information, warning, and error messages to a file (possibly for later review).
+With just a little more configuration, we can specify that we want all log messages  to go to the console (for example, so the person running the utility can easily  monitor the progress of some long-running operation) but only output information,  warning, and error messages to a file (possibly for later review).
 
-In the following configuration, note the new `logFileTraceListener` and the corresponding `<filter>` element used to limit the file output to level `"Information"` (and above -- which includes warning and error messages).
+In the following configuration, note the new `logFileTraceListener` and the corresponding `<filter>`  element used to limit the file output to level `"Information"`  (and above -- which includes warning and error messages).
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -336,7 +338,7 @@ defaultTraceSource Information: 0 : Program complete.
     DateTime=2009-06-18T16:57:54.4828429Z
 ```
 
-Unfortunately the TextWriterTraceListener class appends the timestamp onto a separate line, but you can easily substitute a custom listener that formats results like the following, if necessary:
+Unfortunately the TextWriterTraceListener class appends the timestamp onto a  separate line, but you can easily substitute a custom listener that formats results  like the following, if necessary:
 
 ```
 2009-06-18T17:17:43 Information: AdminConsole.exe
@@ -613,7 +615,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 }
 ```
 
-Depending on your specific needs, you could modify the `WriteHeader` and `WriteFooter` methods to output additional fields on the same line as the log message. (In my scenario, I only needed to support the [TraceOptions.DateTime](http://msdn.microsoft.com/en-us/library/a10k7w6c.aspx) option.)
+Depending on your specific needs, you could modify the `WriteHeader`  and `WriteFooter` methods to output additional fields on the same line  as the log message. (In my scenario, I only needed to support the [TraceOptions.DateTime](http://msdn.microsoft.com/en-us/library/a10k7w6c.aspx)  option.)
 
 In my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint), I discuss logging to the ASP.NET tracing feature.
 

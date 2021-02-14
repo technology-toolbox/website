@@ -14,13 +14,13 @@ tags: ["Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-Have you ever wanted to display data in a table but limit the size of the rows and columns within the table?
+Have you ever wanted to display data in a table but limit the size of the rows and         columns within the table?
 
-For example, consider the classic master/detail view that we often find in software applications, in which items are shown in a summary table and each row provides a link to allow users to see more detail about the item.
+For example, consider the classic master/detail view that we often find in software         applications, in which items are shown in a summary table and each row provides         a link to allow users to see more detail about the item.
 
-However, unlike the typical master/detail scenario, you need to limit the amount of real estate consumed on the page by the summary table. In addition, if text within a column is too long to fit within the constrained area, you want to show the full text when the mouse cursor hovers over the cell.
+However, unlike the typical master/detail scenario, you need to limit the amount         of real estate consumed on the page by the summary table. In addition, if text within         a column is too long to fit within the constrained area, you want to show the full         text when the mouse cursor hovers over the cell.
 
 The following figure illustrates the desired end result:
 
@@ -144,9 +144,9 @@ table.constrainedTable td {
 }
 ```
 
-Changing the `table-layout`to `fixed`constrains the table to the specified width. Since I don't specify a width for the `notesColumn`it consumes the remaining width of the table.
+Changing the `table-layout`to `fixed`constrains the table to the         specified width. Since I don't specify a width for the `notesColumn`it consumes the remaining width of the table.
 
-Next, I specify that all cells in the constrained table should truncate the text within each cell if it is too wide to fit within the width of the column. This is achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally, I use the `text-overflow`CSS property to show ellipsis when text within a cell is clipped (as well as a slight variation for the Opera browser).
+Next, I specify that all cells in the constrained table should truncate the text         within each cell if it is too wide to fit within the width of the column. This is         achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally,         I use the `text-overflow`CSS property to show ellipsis when text within         a cell is clipped (as well as a slight variation for the Opera browser).
 
 > **Note**
 > 
@@ -156,9 +156,9 @@ Next, I specify that all cells in the constrained table should truncate the text
 >             enough, this appears to have been supported in Internet Explorer since version 6.
 >             In addition to Internet Explorer and Opera, this also appears as expected in Safari.
 
-Also note that constraining table cells using CSS does not automatically display the tooltip with the complete text. For that, you are on your own.
+Also note that constraining table cells using CSS does not automatically display         the tooltip with the complete text. For that, you are on your own.
 
-When using an ASP.NET GridView control, I recommend using the [RowDataBound](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowdatabound.aspx) event in order to set the [ToolTip](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tooltip.aspx) property of the table cell. Just be sure to decode the contents of the cell to avoid having it encoded twice:
+When using an ASP.NET GridView control, I recommend using the [RowDataBound](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowdatabound.aspx) event in order to set the [ToolTip](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tooltip.aspx) property of the table cell. Just be sure to decode the contents         of the cell to avoid having it encoded twice:
 
 ```
 protected void ConstrainedGrid_RowDataBound(
@@ -174,9 +174,9 @@ protected void ConstrainedGrid_RowDataBound(
         }
 ```
 
-This is somewhat of a "brute force" approach since it makes no attempt to determine if the text will be truncated, but rather sets the ToolTip (in other words, the title attribute on the HTML element) for every cell. However, the simplicity of this approach -- and the resulting user experience -- far outweighs any extraneous markup (at least in my opinion).
+This is somewhat of a "brute force" approach since it makes no attempt to determine         if the text will be truncated, but rather sets the ToolTip (in other words, the         title attribute on the HTML element) for every cell. However, the simplicity of         this approach -- and the resulting user experience -- far outweighs any extraneous         markup (at least in my opinion).
 
-Be aware that this simple approach for setting the ToolTip property doesn't support columns generated from a [HyperLinkField](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.hyperlinkfield.aspx), in which case `cell.Text` is empty (because the cell contains child controls, not simple text). In other words, it's a good thing my demo doesn't specify very long site names that don't fit within the 140 pixel width column constraint ;-)
+Be aware that this simple approach for setting the ToolTip property doesn't support         columns generated from a [HyperLinkField](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.hyperlinkfield.aspx), in which case `cell.Text` is empty (because the         cell contains child controls, not simple text). In other words, it's a good thing         my demo doesn't specify very long site names that don't fit within the 140 pixel         width column constraint ;-)
 
 Here is the complete code-behind for my sample ASP.NET page so you can run it yourself:
 

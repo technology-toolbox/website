@@ -15,7 +15,9 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that
+> blog ever goes away.
 
 > **Update 2009-11-18**
 > 
@@ -26,50 +28,128 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > <cite>Building SharePoint WSPs with Team Foundation Build</cite>
 > [http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build)
 
-In a previous post, I introduced [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through an actual implementation of a feature -- well, actually two features -- using DR.DADA (Deactivate, Retract, Delete, Add, Deploy, and Activate).
+In a previous post, I introduced
+[the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through
+an actual implementation of a feature -- well, actually two features -- using
+DR.DADA (Deactivate, Retract, Delete, Add, Deploy, and Activate).
 
-If you've worked with me in the past, you know that I am a huge fan of using scenario-based development. So for the purposes of this post, let's use a scenario to drive the development of our features:
+If you've worked with me in the past, you know that I am a huge fan of using
+scenario-based development. So for the purposes of this post, let's use a scenario
+to drive the development of our features:
 
-> Fabrikam Technologies [my favorite fictitious manufacturing company] has hired us to customize the look-and-feel of their corporate intranet site ([http://fabweb](http://fabweb/)), which is currently running on Microsoft Office SharePoint Server (MOSS) 2007. While Fabrikam has done some customization of the site using SharePoint Designer, they have found it to be very tedious to make the changes in their Development environment (DEV), subsequently copy the changes to their Test environment (TEST) for review and approval, and finally apply the changes to their Production environment (PROD) once the changes are approved. Instead, they want us to create a [SharePoint
+> Fabrikam Technologies [my favorite fictitious manufacturing company]
+> has hired us to customize the look-and-feel of their corporate intranet
+> site ([http://fabweb](http://fabweb/)), which is currently running
+> on Microsoft Office SharePoint Server (MOSS) 2007. While Fabrikam has done
+> some customization of the site using SharePoint Designer, they have found
+> it to be very tedious to make the changes in their Development environment
+> (DEV), subsequently copy the changes to their Test environment (TEST) for
+> review and approval, and finally apply the changes to their Production environment
+> (PROD) once the changes are approved. Instead, they want us to create a
+> [SharePoint
 > "feature"](http://msdn.microsoft.com/en-us/library/ms460318.aspx) that greatly simplifies the deployment of their site customizations.
 
-If you've ever customized the look-and-feel of a SharePoint site, you probably already know about simple changes like selecting a different master page, changing the site logo, and perhaps applying a theme. However, sooner or later, the amount of customization leads to creating your own master page (and, more than likely, your own page layouts as well).
+If you've ever customized the look-and-feel of a SharePoint site, you probably
+already know about simple changes like selecting a different master page, changing
+the site logo, and perhaps applying a theme. However, sooner or later, the amount
+of customization leads to creating your own master page (and, more than likely,
+your own page layouts as well).
 
-Note that creating your own master page is highly recommended over customizing one of the out-of-the-box master pages (e.g. default.master). You can certainly use one of the out-of-the-box master pages as a baseline to start from when creating your own master page, but it's just not a good idea to modify the out-of-the-box stuff when other alternatives are readily available.
+Note that creating your own master page is highly recommended over customizing
+one of the out-of-the-box master pages (e.g. default.master). You can certainly
+use one of the out-of-the-box master pages as a baseline to start from when
+creating your own master page, but it's just not a good idea to modify the out-of-the-box
+stuff when other alternatives are readily available.
 
-For the purposes of this post -- er, I mean, for the Fabrikam intranet scenario -- I'll create a new SharePoint Web Solution Package (WSP) that contains a couple of features. The first feature contains the master page and associated resources (e.g. CSS files), while the second feature simply applies the custom master page to a site. [Note: Applying a custom master page is really easy using the **Master page **link under the **Look and Feel **section of **Site Settings**. However, for the purposes of showing how one WSP can (and often should) contain multiple features, I am going to apply the custom master page by activating a second feature.]
+For the purposes of this post -- er, I mean, for the Fabrikam intranet scenario
+-- I'll create a new SharePoint Web Solution Package (WSP) that contains a couple
+of features. The first feature contains the master page and associated resources
+(e.g. CSS files), while the second feature simply applies the custom master
+page to a site. [Note: Applying a custom master page is really easy using the
+**Master page **link under the **Look and Feel **section
+of **Site Settings**. However, for the purposes of showing how
+one WSP can (and often should) contain multiple features, I am going to apply
+the custom master page by activating a second feature.]
 
-Thinking ahead a little in the Fabrikam scenario, rather than naming our solution (and corresponding features) something like **Fabrikam.Demo.MasterPage**, let's use a more generic moniker that conveys the intent that the solution/features may eventually contain other publishing resources (for example, page layouts). As such, let's call our solution **Fabrikam.Demo.Publishing **and our corresponding features **Fabrikam.Demo.Publishing.Layouts** and **Fabrikam.Demo.Publishing.DefaultSiteConfiguration**. [In the time it has taken me to come up with this sample scenario, I've decided to not only apply the custom master page via the second feature, but also to automatically set the site logo, instead of making an administrator update it manually via the **Title, description, and icon **link in **Site Settings**. Sure, one could argue this is "scope creep" since Fabrikam didn't explicitly ask for this in the scenario, but, hey, sometimes you really want to impress the customer, especially if it can be done with something that requires almost no effort ;-) ]
+Thinking ahead a little in the Fabrikam scenario, rather than naming our
+solution (and corresponding features) something like **Fabrikam.Demo.MasterPage**,
+let's use a more generic moniker that conveys the intent that the solution/features
+may eventually contain other publishing resources (for example, page layouts).
+As such, let's call our solution **Fabrikam.Demo.Publishing **and
+our corresponding features **Fabrikam.Demo.Publishing.Layouts**
+and **Fabrikam.Demo.Publishing.DefaultSiteConfiguration**. [In
+the time it has taken me to come up with this sample scenario, I've decided
+to not only apply the custom master page via the second feature, but also to
+automatically set the site logo, instead of making an administrator update it
+manually via the **Title, description, and icon **link in
+**Site Settings**. Sure, one could argue this is "scope creep"
+since Fabrikam didn't explicitly ask for this in the scenario, but, hey, sometimes
+you really want to impress the customer, especially if it can be done with something
+that requires almost no effort ;-) ]
 
 ### Creating the Visual Studio Solution
 
-The first step is to create a Visual Studio solution. Again, rather than making a solution specifically for the **Fabrikam.Demo.Publishing
-**SharePoint solution, let's keep it more general in case other projects are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**. If you've seen my post on [structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) or my later post on [shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), then you know my first step is to build out a "shell" that looks like the following:
+The first step is to create a Visual Studio solution. Again, rather than
+making a solution specifically for the **Fabrikam.Demo.Publishing
+**SharePoint solution, let's keep it more general in case other projects
+are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**.
+If you've seen my post on
+[structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) or my later post on
+[shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), then you know my first step
+is to build out a "shell" that looks like the following:
 
 ![Visual Studio solution before adding SharePoint features](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%201.png)
 
     	Figure 1: Visual Studio solution before adding SharePoint features
 
-Next, I create a new Visual Studio solution folder called **Publishing** and then add a new **Class Library **project named **Publishing.csproj
-**(in [C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)). [Note that the Visual Studio solution folder simply helps "partition" the solution and makes it really easy in the future to [load and unload multiple projects](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need to add a **Publishing.DeveloperTests **project for unit tests corresponding to code in **Publishing.csproj**).]
+Next, I create a new Visual Studio solution folder called **Publishing**
+and then add a new **Class Library **project named **Publishing.csproj
+**(in
+[C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)).
+[Note that the Visual Studio solution folder simply helps "partition" the solution
+and makes it really easy in the future to
+[load and unload multiple projects](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need
+to add a **Publishing.DeveloperTests **project for unit tests corresponding
+to code in **Publishing.csproj**).]
 
-Since I didn't create the project with the fully qualified name (in order to conserve precious space within the Visual Studio **Solution Explorer
-**window), I then update the project properties to change the assembly name and default namespace to **Fabrikam.Demo.Publishing**. I also delete the default **Class1.cs **file (which gets created with every **Class Library **project), add some [linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the assembly, configure shared assembly information for the new project (as described in my previous posts), and add some assembly references (e.g. to the **
-CoreServices** project as well as to the System.Web and Microsoft.SharePoint assemblies).
+Since I didn't create the project with the fully qualified name (in order
+to conserve precious space within the Visual Studio **Solution Explorer
+**window), I then update the project properties to change the assembly
+name and default namespace to **Fabrikam.Demo.Publishing**. I also
+delete the default **Class1.cs **file (which gets created with
+every **Class Library **project), add some
+[linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the
+assembly, configure shared assembly information for the new project (as described
+in my previous posts), and add some assembly references (e.g. to the **
+CoreServices** project as well as to the System.Web and Microsoft.SharePoint
+assemblies).
 
-To ensure the solution delivered to Fabrikam adheres to development best practices, I also update the project properties for both the Debug and Release configurations to:
+To ensure the solution delivered to Fabrikam adheres to development best
+practices, I also update the project properties for both the Debug and Release
+configurations to:
 
 - Enable code analysis
 - Treat all warnings as errors
 - Generate XML documentation files
 - Set the base address for the assembly
 
-Next, I create a couple of folders named **Layouts **and **DefaultSiteConfiguration **-- corresponding for each feature -- as well as a **DeploymentFiles **folder for files and scripts related to the deployment of our features (in other words, the files needed to create our WSP as well as some scripts that save us from having to type lengthy stsadm.exe commands whenever deploying our solution).
+Next, I create a couple of folders named **Layouts **and
+**DefaultSiteConfiguration **-- corresponding for each feature
+-- as well as a **DeploymentFiles **folder for files and scripts
+related to the deployment of our features (in other words, the files needed
+to create our WSP as well as some scripts that save us from having to type lengthy
+stsadm.exe commands whenever deploying our solution).
 
-Within the **Layouts** folder, I then create some additional folders to contain the various files in the **Fabrikam.Demo.Publishing.Layouts** feature. Likewise, within the **DefaultSiteConfiguration **folder, I add some corresponding folders for the **Fabrikam.Demo.Publishing.DefaultSiteConfiguration
+Within the **Layouts** folder, I then create some additional
+folders to contain the various files in the **Fabrikam.Demo.Publishing.Layouts**
+feature. Likewise, within the **DefaultSiteConfiguration **folder,
+I add some corresponding folders for the **Fabrikam.Demo.Publishing.DefaultSiteConfiguration
 **feature.
 
-I then start adding feature.xml files, master pages, images, CSS files, etc. into the appropriate locations for each feature. Once I have these files in place, I then add the files used to build the WSP -- as well as the actual scripts to deploy the solution -- into the **DeploymentFiles **folder.
+I then start adding feature.xml files, master pages, images, CSS files, etc.
+into the appropriate locations for each feature. Once I have these files in
+place, I then add the files used to build the WSP -- as well as the actual scripts
+to deploy the solution -- into the **DeploymentFiles **folder.
 
 After that's all done, the Visual Studio solution looks like the following:
 
@@ -82,7 +162,8 @@ After that's all done, the Visual Studio solution looks like the following:
 
 ### Files for Creating SharePoint Web Solution Package (WSP)
 
-Assuming you've developed custom SharePoint WSPs before, the contents of **manifest.xml **should be very familiar:
+Assuming you've developed custom SharePoint WSPs before, the contents of
+**manifest.xml **should be very familiar:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -122,7 +203,8 @@ Assuming you've developed custom SharePoint WSPs before, the contents of **manif
 </Solution>
 ```
 
-The contents of the WSP (i.e. files and folder structure) are defined in **wsp\_structure.ddf**:
+The contents of the WSP (i.e. files and folder structure) are defined in
+**wsp\_structure.ddf**:
 
 ```
 ;
@@ -194,9 +276,16 @@ Fabrikam.Demo.Publishing.dll
 ..\..\Layouts\MasterPages\FabrikamMinimal.master
 ```
 
-The most interesting aspect of this DDF is that we want to deploy the corresponding Debug or Release build of **Fabrikam.Demo.CoreServices.dll** as part of our WSP. The best way I found to do this is to specify the BUILD\_CONFIGURATION variable when calling makecab.exe.
+The most interesting aspect of this DDF is that we want to deploy the corresponding
+Debug or Release build of **Fabrikam.Demo.CoreServices.dll** as
+part of our WSP. The best way I found to do this is to specify the BUILD\_CONFIGURATION
+variable when calling makecab.exe.
 
-Next, I unload **Publishing.csproj** and edit the MSBuild file directly in order to create the SharePoint solution package (WSP). As noted in an [earlier blog post](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files), this is simply a matter of adding a custom build target that invokes makecab.exe and adding this new target as a dependency of the build:
+Next, I unload **Publishing.csproj** and edit the MSBuild file
+directly in order to create the SharePoint solution package (WSP). As noted
+in an
+[earlier blog post](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files), this is simply a matter of adding a custom build target
+that invokes makecab.exe and adding this new target as a dependency of the build:
 
 ```
 <PropertyGroup>
@@ -216,15 +305,24 @@ Next, I unload **Publishing.csproj** and edit the MSBuild file directly in order
   </Target>
 ```
 
-The next step is to build and deploy the solution. I start by pressing <kbd>CTRL+SHIFT+B</kbd> to compile the solution and create the corresponding WSP.
+The next step is to build and deploy the solution. I start by pressing
+<kbd>CTRL+SHIFT+B</kbd> to compile the solution and create the corresponding
+WSP.
 
 ### Installing the Solution and Activating the Features
 
 Finally, it's time to run the "ADA" portion of "DR.DADA"...
 
 Since I'm running Windows Server 2008, I first use the **Run as administrator
-**option on a **Visual Studio 2008 Command Prompt**. Then I set two environment variables: one that specifies the URL of the Fabrikam intranet site on my local development VM and the other that specifies to add the Debug build of my solution. (Normally I would set these once in the Environment Variables dialog box so that I never need to set them again on this development environment, but I set them explicitly here for the purposes of explaining the variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts
-**folder and then **Add Solution.cmd**, followed by **Deploy Solution.cmd**, and then finally **Activate Features.cmd**.
+**option on a **Visual Studio 2008 Command Prompt**. Then
+I set two environment variables: one that specifies the URL of the Fabrikam
+intranet site on my local development VM and the other that specifies to add
+the Debug build of my solution. (Normally I would set these once in the Environment
+Variables dialog box so that I never need to set them again on this development
+environment, but I set them explicitly here for the purposes of explaining the
+variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts
+**folder and then **Add Solution.cmd**, followed by
+**Deploy Solution.cmd**, and then finally **Activate Features.cmd**.
 
 ```
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
@@ -313,7 +411,13 @@ echo Done
 ::
 ```
 
-Note how I allow certain variables (i.e. SPDIR and FABRIKAM\_BUILD\_CONFIGURATION) to be defined outside of the script. This is useful, for example, to deploy either Debug or Release builds depending on the environment. For example, in the Production environment, we always want to deploy Release builds -- not Debug builds. Whereas in development environments, we always want to install the Debug Builds. (Whether we install Debug or Release builds to the Test environment depends on where we are at in the release cycle.)
+Note how I allow certain variables (i.e. SPDIR and FABRIKAM\_BUILD\_CONFIGURATION)
+to be defined outside of the script. This is useful, for example, to deploy
+either Debug or Release builds depending on the environment. For example, in
+the Production environment, we always want to deploy Release builds -- not Debug
+builds. Whereas in development environments, we always want to install the Debug
+Builds. (Whether we install Debug or Release builds to the Test environment
+depends on where we are at in the release cycle.)
 
 > **Tip**
 > 
@@ -321,7 +425,11 @@ Note how I allow certain variables (i.e. SPDIR and FABRIKAM\_BUILD\_CONFIGURATIO
 >       -- but allowing overrides for other environments -- minimizes the risk 
 >       of "accidents" when deploying to PROD.
 
-Also note that the error handling certainly isn't what I'd call "robust" but I've found no reason to change this after working with these scripts for several years now. It's definitely expected that somebody is watching the scripts while they run (or at least logging the output and subsequently checking the logs for any errors).
+Also note that the error handling certainly isn't what I'd call "robust"
+but I've found no reason to change this after working with these scripts for
+several years now. It's definitely expected that somebody is watching the scripts
+while they run (or at least logging the output and subsequently checking the
+logs for any errors).
 
 Here are the contents of **Deploy Solution.cmd**:
 
@@ -369,7 +477,15 @@ echo Done
 ::
 ```
 
-The most interesting part about **Deploy Solution.cmd** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow [a standard naming convention for your environments](/blog/jjameson/2009/06/09/environment-naming-conventions). Also note that the URL of the SharePoint site can be specified either through an environment variable or as a parameter to the script (which is occasionally useful for troubleshooting purposes -- for example, to quickly deploy to a "vanilla" SharePoint site).
+The most interesting part about **Deploy Solution.cmd** is the
+fact that I try to avoid using a SharePoint Timer job to deploy the solution
+if at all possible. In other words, on my local development VM, there's no need
+to schedule the deployment through the SharePoint Timer infrastructure since
+it's just a single server environment. This is another great reason to follow
+[a standard naming convention for your environments](/blog/jjameson/2009/06/09/environment-naming-conventions). Also note that the URL
+of the SharePoint site can be specified either through an environment variable
+or as a parameter to the script (which is occasionally useful for troubleshooting
+purposes -- for example, to quickly deploy to a "vanilla" SharePoint site).
 
 > **Tip**
 > 
@@ -419,11 +535,15 @@ echo Done
 ::
 ```
 
-Nothing all that interesting about this script, except of course that the order of activating features is important (in this particular case) and once again the URL of the SharePoint site can be specified either using an environment variable or as a parameter to the script.
+Nothing all that interesting about this script, except of course that the
+order of activating features is important (in this particular case) and once
+again the URL of the SharePoint site can be specified either using an environment
+variable or as a parameter to the script.
 
 ### Deactivating the Features and Removing the Solution
 
-Removing the solution is simply a matter of calling **Deactivate Features.cmd**, followed by **Retract Solution.cmd**, and then finally **
+Removing the solution is simply a matter of calling **Deactivate Features.cmd**,
+followed by **Retract Solution.cmd**, and then finally **
 Delete Solution.cmd**.
 
 Here are the contents of **Deactivate Features.cmd**:
@@ -548,7 +668,13 @@ echo Done
 ### Deploying an Updated Master Page
 
 Suppose that after deploying the **Fabrikam.Demo.Publishing
-**solution, I need to make a change to the master page. All I need to do is make the update to FabrikamMinimal.master, rebuild the Visual Studio solution (which will create an updated WSP containing the changes to the master page), and then "DR.DADA" the features. Note that while I could certainly run each script individually, I find it much easier to utilize another script -- namely **Redeploy Features.cmd** -- which is simply a "wrapper" for the six scripts described previously.
+**solution, I need to make a change to the master page. All I need to
+do is make the update to FabrikamMinimal.master, rebuild the Visual Studio solution
+(which will create an updated WSP containing the changes to the master page),
+and then "DR.DADA" the features. Note that while I could certainly run each
+script individually, I find it much easier to utilize another script -- namely
+**Redeploy Features.cmd** -- which is simply a "wrapper" for the
+six scripts described previously.
 
 ```
 @echo off
@@ -618,7 +744,8 @@ Call :LogMessage "Done"
 ::
 ```
 
-I also added a minimal logging "function" that allows me to quickly see the duration of each portion of the "DR.DADA" process.
+I also added a minimal logging "function" that allows me to quickly see the
+duration of each portion of the "DR.DADA" process.
 
 > **Tip**
 > 
@@ -627,9 +754,14 @@ I also added a minimal logging "function" that allows me to quickly see the dura
 
 ### Deploying Updated Code
 
-Now suppose that we have discovered a bug in the code-behind for our master page. In other words, we need to deploy updated code -- but not any changes to files deployed to the SPDIR folder (%ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12).
+Now suppose that we have discovered a bug in the code-behind for our master
+page. In other words, we need to deploy updated code -- but not any changes
+to files deployed to the SPDIR folder (%ProgramFiles%\Common Files\Microsoft
+Shared\Web Server Extensions\12).
 
-While we could certainly use **Redeploy Features.cmd** (or even `Redeploy Solution.cmd -quick`) it's definitely not the most efficient way to accomplish our goal. Enter **GAC Assemblies.cmd**:
+While we could certainly use **Redeploy Features.cmd** (or even
+`Redeploy Solution.cmd -quick`) it's definitely not the most efficient
+way to accomplish our goal. Enter **GAC Assemblies.cmd**:
 
 ```
 @echo off
@@ -664,11 +796,13 @@ echo Done
 ::
 ```
 
-Note that **GAC Assemblies.cmd **updates all assemblies contained in the SharePoint WSP. This allows us, for example, to fix a bug in **
+Note that **GAC Assemblies.cmd **updates all assemblies contained
+in the SharePoint WSP. This allows us, for example, to fix a bug in **
 Fabrikam.Demo.CoreServices.dll** and still use the **GAC Assemblies.cmd
 **script to quickly deploy the code change.
 
-Also note that you need to recycle the application pool for your SharePoint site after updating the assemblies in the GAC:
+Also note that you need to recycle the application pool for your SharePoint
+site after updating the assemblies in the GAC:
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"GAC
 Assemblies.cmd"</kbd>
@@ -690,13 +824,31 @@ recycle apppool "SharePoint - foobar-local80"</kbd>
 
 ### Wrapping It Up
 
-At this point, we are ready to check-in all of the files, mark our scenario as **Resolved** in Team Foundation Server to indicate that it is ready for testing, and either kick-off a build or wait for the next daily build to compile our solution and copy it to the Release Server. The Test team can then copy the files from the Release Server and then use the "DR.DADA" scripts to install the new SharePoint features in the Fabrikam Test environment. Woohoo!
+At this point, we are ready to check-in all of the files, mark our scenario
+as **Resolved** in Team Foundation Server to indicate that it is
+ready for testing, and either kick-off a build or wait for the next daily build
+to compile our solution and copy it to the Release Server. The Test team can
+then copy the files from the Release Server and then use the "DR.DADA" scripts
+to install the new SharePoint features in the Fabrikam Test environment. Woohoo!
 
-So there you have it..."DR.DADA" in all its detail. I've been meaning to blog the details of this for a few years now, and I'm glad to finally get it off my plate after all this time.
+So there you have it..."DR.DADA" in all its detail. I've been meaning to
+blog the details of this for a few years now, and I'm glad to finally get it
+off my plate after all this time.
 
-Note that if Fabrikam approached us with another scenario that we decided to implement in a different WSP, we could quickly copy the files from the **Publishing **project and only have to make minimal changes to get the new WSP built and deployed.
+Note that if Fabrikam approached us with another scenario that we decided
+to implement in a different WSP, we could quickly copy the files from the
+**Publishing **project and only have to make minimal changes to
+get the new WSP built and deployed.
 
-Before finishing off this post, I also want to ensure that you are aware of the "command history" feature in Microsoft Windows. To rerun a command, simply press <kbd>F7</kbd> in a command window. A popup window shows the list of commands you've executed -- allowing you to quickly run a previous command without having to type it in again. You might already have been using the "up arrow" to essentially do the same thing, but I've found pressing <kbd>F7</kbd> -- and then scrolling to the command I want -- to be a little more convenient. Unlike using the "up arrow" to repeat a command, selecting one after using F7 won't re-add it to the command history.
+Before finishing off this post, I also want to ensure that you are aware
+of the "command history" feature in Microsoft Windows. To rerun a command, simply
+press <kbd>F7</kbd> in a command window. A popup window shows the list of commands
+you've executed -- allowing you to quickly run a previous command without having
+to type it in again. You might already have been using the "up arrow" to essentially
+do the same thing, but I've found pressing <kbd>F7</kbd> -- and then scrolling
+to the command I want -- to be a little more convenient. Unlike using the "up
+arrow" to repeat a command, selecting one after using F7 won't re-add it to
+the command history.
 
 ![Command history](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%203.png)
 

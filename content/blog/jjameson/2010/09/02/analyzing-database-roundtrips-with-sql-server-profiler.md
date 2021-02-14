@@ -28,7 +28,7 @@ My general rule of thumb is the time required for each of the following operatio
 
 Consequently, if a Web application typically require dozens of roundtrips to the database in order to render a page (and that page is frequently accessed by users), then scalability could certainly be a challenge.
 
-However, trying to identify each database operation simply by looking at the code is often a futile exercise. This is especially true when building upon frameworks and APIs -- such as object-relational mappers or the SharePoint object model -- particularly when you consider things like "lazy loading."
+However, trying to identify each database operation  simply by looking at the code is often a futile exercise. This is especially true when building upon frameworks and APIs -- such as object-relational mappers or the SharePoint object model -- particularly when you consider things like "lazy loading."
 
 Instead, I prefer to go straight to the source when identifying the number of database roundtrips. Using SQL Server Profiler, you can quickly -- and reliably -- determine the level of "chattiness" between your application and the backend database.
 

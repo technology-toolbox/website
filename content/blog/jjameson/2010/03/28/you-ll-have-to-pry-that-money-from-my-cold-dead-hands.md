@@ -42,5 +42,5 @@ If, like me, you are struggling with the mere thought of losing Microsoft Money,
 
 For all I know, the majority of the population currently using Microsoft Money might very well be quite satisfied switching to Quicken. Personally, I doubt I'll be making that transition any time soon.
 
-[Although it applies to each and every post you read on my blog, it's probably worth explicitly mentioning again that the opinions expressed herein are obviously my own and do not reflect those of my employer ;-) ]
+[Although it applies to each and every post you read on my blog, it's probably worth explicitly mentioning again that the opinions expressed herein are obviously my own and do not reflect those of my employer ;-)  ]
 

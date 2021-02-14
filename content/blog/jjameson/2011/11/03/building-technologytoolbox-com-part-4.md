@@ -10,15 +10,15 @@ tags: ["SharePoint
 		2010", "Web Development"]
 ---
 
-In [my previous post](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3), I described how I typically create a "static HTML prototype" for an ASP.NET or SharePoint Web application. By working directly in HTML at the beginning (rather than starting with ASP.NET controls or Web Parts), I can rapidly define the structure of the content (using semantic HTML) and subsequently create the corresponding CSS rules to style the pages.
+In [my previous post](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3), I described how I typically create a "static HTML prototype"  for an ASP.NET or SharePoint Web application. By working directly in HTML at the  beginning (rather than starting with ASP.NET controls or Web Parts), I can rapidly  define the structure of the content (using semantic HTML) and subsequently create  the corresponding CSS rules to style the pages.
 
-As part of the prototype, I like to include a "Style Guide" page that contains a variety of HTML elements -- including the specific `id` and `class` attributes -- that will eventually be used in the live website.
+As part of the prototype, I like to include a "Style Guide" page that contains  a variety of HTML elements -- including the specific `id` and `class` attributes -- that will eventually  be used in the live website.
 
-I like to think of the "Style Guide" as a form of TDD (Test Driven Development) for the cascading style sheet, because you start out with some plain looking content (i.e. semantic HTML) and then add CSS rules to get it to render as expected in the browser. Then when someone encounters a UI bug (in other words, when something doesn't appear quite right) you subsequently tweak the Style Guide to reproduce the issue and then update the CSS to resolve the bug.
+I like to think of the "Style Guide" as a form of TDD (Test Driven Development)  for the cascading style sheet, because you start out with some plain looking content  (i.e. semantic HTML) and then add CSS rules to get it to render as expected in the  browser. Then when someone encounters a UI bug (in other words, when something doesn't  appear quite right) you subsequently tweak the Style Guide to reproduce the issue  and then update the CSS to resolve the bug.
 
 ### Style-Guide.aspx
 
-Here is the current content of the Style Guide for the static HTML prototype for TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
+Here is the current content of the Style Guide for the static HTML prototype  for TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 
 ```
 <%@ Page language="C#" %>
@@ -464,7 +464,7 @@ Here is the current content of the Style Guide for the static HTML prototype for
 > the `<link>`
 > element that references the CSS file.
 
-Figure 1 shows the corresponding page rendered in the browser. [Note: This is not intended to be an eye chart. Normally, I would trim images like this before including them in a post, but in this case I wanted to be sure you could see the page in its entirety (by clicking the **See full-sized image** link below.)]
+Figure 1 shows the corresponding page rendered in the browser. [Note: This is  not intended to be an eye chart. Normally, I would trim images like this before  including them in a post, but in this case I wanted to be sure you could see the  page in its entirety (by clicking the **See full-sized image** link  below.)]
 
 ![Style Guide for TechnologyToolbox.com](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Style-Guide.png)
 
@@ -474,11 +474,11 @@ Figure 1 shows the corresponding page rendered in the browser. [Note: This is no
 
 ### Color palette
 
-Another benefit of a Style Guide is the ability to quickly find a color from the "approved" color palette for the website.
+Another benefit of a Style Guide is the ability to quickly find a color from  the "approved" color palette for the website.
 
-I used to insert a "glossary" in the CSS (using comments) of the various hex color codes specified in CSS rules so I could identify different colors later on when adding new CSS rules. However, adequately describing the various colors gets to be somewhat challenging and nebulous (e.g. "Securitas dark gray" vs. "Securitas medium gray").
+I used to insert a "glossary" in the CSS (using comments) of the various hex  color codes specified in CSS rules so I could identify different colors later on  when adding new CSS rules. However, adequately describing the various colors gets  to be somewhat challenging and nebulous (e.g. "Securitas dark gray" vs. "Securitas  medium gray").
 
-Now I simply create a bunch of "color swatches" in the Style Guide that show the various colors and provide descriptions for where the colors are used, as shown below.
+Now I simply create a bunch of "color swatches" in the Style Guide that show  the various colors and provide descriptions for where the colors are used, as shown  below.
 
 ![Technology Toolbox color palette](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Color-Palette.png)
 
@@ -488,7 +488,7 @@ Now I simply create a bunch of "color swatches" in the Style Guide that show the
 
 ### Sample style guide for SharePoint 2010
 
-Here is the HTML for a sample Style Guide that I developed for a SharePoint 2010 project earlier this year. I found this to be especially helpful in customizing the appearance of the out-of-the-box styles users can specify in the SharePoint Rich Text Editor (e.g. "Colored Heading 1") as well as the multitude of different table formatting options (e.g. different odd/even rows).
+Here is the HTML for a sample Style Guide that I developed for a SharePoint 2010  project earlier this year. I found this to be especially helpful in customizing  the appearance of the out-of-the-box styles users can specify in the SharePoint  Rich Text Editor (e.g. "Colored Heading 1") as well as the multitude of different  table formatting options (e.g. different odd/even rows).
 
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1747,5 +1747,5 @@ Here is the HTML for a sample Style Guide that I developed for a SharePoint 2010
 </html>
 ```
 
-I typically use a "TestConsole" utility to programmatically create a Style Guide page in a SharePoint site for development and testing purposes. This makes it very easy to recreate the Style Guide page in new environments or after rebuilding a SharePoint Web application in DEV and TEST.
+I typically use a "TestConsole" utility to programmatically create a Style Guide  page in a SharePoint site for development and testing purposes. This makes it very  easy to recreate the Style Guide page in new environments or after rebuilding a  SharePoint Web application in DEV and TEST.
 

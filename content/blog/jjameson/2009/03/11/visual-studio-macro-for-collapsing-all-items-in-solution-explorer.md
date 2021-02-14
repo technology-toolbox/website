@@ -16,9 +16,11 @@ tags: ["Core Development", "Visual Studio"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
-Along with [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects), another macro that I use just as much, if not more frequently, is my `CollapseAllItems()` macro:
+Along with [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects), another  macro that I use just as much, if not more frequently, is my `CollapseAllItems()`  macro:
 
 ```
 Public Sub CollapseAllItems()
@@ -45,7 +47,7 @@ Public Sub CollapseAllItems()
 End Sub
 ```
 
-The `CollapseItem()` method is used to recursively collapse each item in the hierarchy:
+The `CollapseItem()` method is used to recursively collapse each item  in the hierarchy:
 
 ```
 Private Sub CollapseItem( _
@@ -78,7 +80,7 @@ End Sub
 > optimal and, more importantly, it also was the source of some confusion
 > (see Keith Robertson's comment on this post).
 
-While it is great that Visual Studio "synchronizes" the **Solution Explorer** window to show the current file in the solution hierarchy, in large Visual Studio solutions, things can get a bit bewildering at times if many of the projects are expanded down to the level of individual files.
+While it is great that Visual Studio "synchronizes" the **Solution Explorer**  window to show the current file in the solution hierarchy, in large Visual Studio  solutions, things can get a bit bewildering at times if many of the projects are  expanded down to the level of individual files.
 
-Perhaps in a future version of Visual Studio, we'll have the ability to right-click the solution in **Solution Explorer** and then click something like **Collapse All**. Until then, I don't see me giving up my dependency on this macro anytime soon.
+Perhaps in a future version of Visual Studio, we'll have the ability to right-click  the solution in **Solution Explorer** and then click something like **Collapse All**. Until then, I don't see me giving up my dependency  on this macro anytime soon.
 

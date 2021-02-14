@@ -8,21 +8,34 @@ tags: ["Web Development"]
 ---
 
 In [yesterday's
-post](../02/building-technologytoolbox-com-part-21.aspx), I described how I integrated Google Site Search into the Technology Toolbox website. This post provides a similar walkthrough for implementing [Google Analytics](http://www.google.com/analytics/).
+post](../02/building-technologytoolbox-com-part-21.aspx), I described how I integrated Google Site Search into the Technology
+Toolbox website. This post provides a similar walkthrough for implementing
+[Google Analytics](http://www.google.com/analytics/).
 
 ### Step 1: Sign up for Google Analytics
 
-Unlike the options for integrating Google search into your website, there is *only* a free version of Google Analytics. All you need in order to sign up is a Google Account -- and chances are fairly high you already have one of those.
+Unlike the options for integrating Google search into your website, there
+is *only* a free version of Google Analytics. All you need in order to
+sign up is a Google Account -- and chances are fairly high you already have
+one of those.
 
-Once you have signed up, Google assigns you a unique "tracking code" -- or what I typically refer to as the "analytics key." For example, the analytics key for Technology Toolbox is UA-25915894-1.
+Once you have signed up, Google assigns you a unique "tracking code" -- or
+what I typically refer to as the "analytics key." For example, the analytics
+key for Technology Toolbox is UA-25915894-1.
 
-Don't worry, there's nothing secret about these keys; you can view them on any site using Google Analytics simply by viewing the HTML source for the page.
+Don't worry, there's nothing secret about these keys; you can view them on
+any site using Google Analytics simply by viewing the HTML source for the page.
 
 ### Step 2: Adding the tracking code
 
-After obtaining a tracking code -- er, I mean, analytics key -- I added the snippet of JavaScript provided by Google that records a little bit of information for each page request. In the early days of Web analytics, this was often accomplished using Web beacons (e.g. a clear or 1x1 pixel GIF image), but now products like Google Analytics and Omniture use script.
+After obtaining a tracking code -- er, I mean, analytics key -- I added the
+snippet of JavaScript provided by Google that records a little bit of information
+for each page request. In the early days of Web analytics, this was often accomplished
+using Web beacons (e.g. a clear or 1x1 pixel GIF image), but now products like
+Google Analytics and Omniture use script.
 
-I decided early on that I wanted a way to easily disable the Google Analytics script for a couple of reasons:
+I decided early on that I wanted a way to easily disable the Google Analytics
+script for a couple of reasons:
 
 - When developing new features or fixing bugs, I do not want the page
   views to be recorded to Google. This data is meaningless and I don't see
@@ -34,10 +47,13 @@ I decided early on that I wanted a way to easily disable the Google Analytics sc
   but it still seems like a good idea to be able to quickly disable the Google
   script just in case a problem is discovered in the future.
 
-To satisfy this design goal, I created a new [application
-setting](http://msdn.microsoft.com/en-us/library/cftf714c.aspx) named **EnableAnalytics** with a default value of **False**.
+To satisfy this design goal, I created a new
+[application
+setting](http://msdn.microsoft.com/en-us/library/cftf714c.aspx) named **EnableAnalytics** with a default value of
+**False**.
 
-Next I added an ASP.NET control named **AnalyticsScript **to encapsulate the logic to conditionally render the Google script:
+Next I added an ASP.NET control named **AnalyticsScript **to
+encapsulate the logic to conditionally render the Google script:
 
 ```
 using System;
@@ -106,13 +122,19 @@ Then I added the new control to the master page:
 ...
 ```
 
-At this point, I changed the **EnableAnalytics **setting in the Web.config file and verified that everything worked as expected. It was close, but not quite right...
+At this point, I changed the **EnableAnalytics **setting in
+the Web.config file and verified that everything worked as expected. It was
+close, but not quite right...
 
 ### Step 3: From WebControl to Control
 
-When I examined the source of the page at this point, I noticed the `<script>` element was wrapped in a `<span>` element. Oops.
+When I examined the source of the page at this point, I noticed the `<script>`
+element was wrapped in a `<span>`
+element. Oops.
 
-To resolve this, I changed the class to inherit from **Control** (rather than **WebControl**) and renamed the **RenderContents** method to **Render**.
+To resolve this, I changed the class to inherit from **Control**
+(rather than **WebControl**) and renamed the **RenderContents**
+method to **Render**.
 
 > **Note**
 > 
@@ -121,13 +143,17 @@ To resolve this, I changed the class to inherit from **Control** (rather than **
 >       **RenderEndTag **methods. In a followup post I will explain 
 >       why I used a different approach for this scenario.
 
-At this point, the script rendered as expected -- provided I remembered to change the **EnableAnalytics** setting in Web.config to **
+At this point, the script rendered as expected -- provided I remembered to
+change the **EnableAnalytics** setting in Web.config to **
 True** (i.e. for environments other than my local development environment).
 
 ### Step 4: Enable analytics by default
 
-Thinking that it would be preferable to enable analytics by default in DEV, TEST, and PROD -- but still disable it in local development environments -- I changed the default value for **EnableAnalytics **to **
-True **and added another application setting to specify a "filter" as an additional check for determining whether or not to emit the analytics script:
+Thinking that it would be preferable to enable analytics by default in DEV,
+TEST, and PROD -- but still disable it in local development environments --
+I changed the default value for **EnableAnalytics **to **
+True **and added another application setting to specify a "filter" as
+an additional check for determining whether or not to emit the analytics script:
 
 ```
 <configuration>
@@ -146,7 +172,8 @@ True **and added another application setting to specify a "filter" as an additio
 </configuration>
 ```
 
-I then updated the **AnalyticsScript** control to compare the URL of the current request with the filter specified in configuration:
+I then updated the **AnalyticsScript** control to compare the
+URL of the current request with the filter specified in configuration:
 
 ```
 protected override void OnLoad(
@@ -169,7 +196,8 @@ protected override void OnLoad(
         }
 ```
 
-At this point, I also removed the hard-coded analytics key by adding another application setting in Web.config:
+At this point, I also removed the hard-coded analytics key by adding another
+application setting in Web.config:
 
 ```
 <configuration>
@@ -185,19 +213,33 @@ At this point, I also removed the hard-coded analytics key by adding another app
 </configuration>
 ```
 
-After verifying the functionality in DEV (www-dev.technologytoolbox.com) and TEST (www-test.technologytoolbox.com), I deployed the new build to Production and started seeing results in the Google Analytics dashboard the next day.
+After verifying the functionality in DEV (www-dev.technologytoolbox.com)
+and TEST (www-test.technologytoolbox.com), I deployed the new build to Production
+and started seeing results in the Google Analytics dashboard the next day.
 
 ### Step 5: Improve the solution for DEV and TEST
 
-Even though the data captured from the development and test environments was very small -- and thus would not skew the "real" data over time -- I was still a little concerned with this "junk" data being included in the analytics reports.
+Even though the data captured from the development and test environments
+was very small -- and thus would not skew the "real" data over time -- I was
+still a little concerned with this "junk" data being included in the analytics
+reports.
 
 > **Note**
 > 
-> While researching how other people handled this issue with development and test environments, I noticed a number of folks recommending that you filter the reports based on the domain name. For example, for Technology Toolbox, I could filter out non-Production data by only looking at the www.technologytoolbox.com domain name (e.g. exclude www-dev.technologytoolbox.com and www-test.technologytoolbox.com).
+> While researching how other people handled this issue with development
+> and test environments, I noticed a number of folks recommending that
+> you filter the reports based on the domain name. For example, for Technology
+> Toolbox, I could filter out non-Production data by only looking at the
+> www.technologytoolbox.com domain name (e.g. exclude www-dev.technologytoolbox.com
+> and www-test.technologytoolbox.com).
 > 
-> I experimented with that approach a little but quickly dismissed it due to the enormous effort this would require to customize each of the default reports provided by Google.
+> I experimented with that approach a little but quickly dismissed
+> it due to the enormous effort this would require to customize each of
+> the default reports provided by Google.
 
-That is when it occurred to me that rather than using a single tracking code for all environments, I could just as easily use different codes for each environment, as illustrated in Figure 1.
+That is when it occurred to me that rather than using a single tracking code
+for all environments, I could just as easily use different codes for each environment,
+as illustrated in Figure 1.
 
 ![Google Analytics (Account Home)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Analytics-Account-Home.png)
 
@@ -205,7 +247,8 @@ That is when it occurred to me that rather than using a single tracking code for
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Analytics-Account-Home.png)
 
-After some refactoring and performance optimization, here is the updated implementation of the **AnalyticsScript **class:
+After some refactoring and performance optimization, here is the updated
+implementation of the **AnalyticsScript **class:
 
 ```
 using System;
@@ -282,7 +325,10 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 }
 ```
 
-The new **AnalyticsHelper **class contains some of the code originally added to the **AnalyticsScript **control. The original code has also been enhanced to support different analytics keys for DEV, TEST, and PROD:
+The new **AnalyticsHelper **class contains some of the code
+originally added to the **AnalyticsScript **control. The original
+code has also been enhanced to support different analytics keys for DEV,
+TEST, and PROD:
 
 ```
 using System;
@@ -400,7 +446,10 @@ namespace TechnologyToolbox.Caelum.Website
 }
 ```
 
-The implementation still supports the ability to override the analytics key by specifying a value in the Web.config file (for example, if I wanted to record metrics for some other environment). In my Web.config files, however, the **AnalyticsKey **setting is left empty:
+The implementation still supports the ability to override the analytics
+key by specifying a value in the Web.config file (for example, if I wanted
+to record metrics for some other environment). In my Web.config files, however,
+the **AnalyticsKey **setting is left empty:
 
 ```
 <configuration>
@@ -422,5 +471,8 @@ The implementation still supports the ability to override the analytics key by s
 </configuration>
 ```
 
-An alternative would be to store a mapping of domain names and analytics keys in Web.config (instead of hard-coding the values for DEV, TEST, and PROD). Personally, I don't believe this is worth the additional effort to implement.
+An alternative would be to store a mapping of domain names and analytics
+keys in Web.config (instead of hard-coding the values for DEV, TEST, and
+PROD). Personally, I don't believe this is worth the additional effort to
+implement.
 

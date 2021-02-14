@@ -41,5 +41,5 @@ To remove a downloaded program file (e.g. an ActiveX control) on Windows 7 with 
 3. In the **Manage Add-ons** window, in the **Show: **dropdown list, click **Downloaded controls**, right-click the item that you want to remove, and then click **More Information**.
 4. In the **More Information **window, click **Remove**. If necessary, enter the credentials for an administrator on the computer, and then click **Yes **to remove the downloaded program file.
 
-These steps should also work for Windows Vista as well (although I haven't tried them) -- but, honestly, does anyone even care about Windows Vista anymore? ;-)
+These steps should also work for Windows Vista as well (although I haven't tried them) -- but, honestly, does anyone even care about Windows Vista anymore?  ;-)
 

@@ -15,44 +15,62 @@ tags: ["My System", "Core Development", "TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
+> ever goes away.
 
 Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and made the following statement:
 
-> The [AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part of the build process.
+> The
+> [AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part
+> of the build process.
 
-In the comments for that post, someone asked exactly what I meant by that -- specifically if I used something in the pre-build event to increment the assembly version.
+In the comments for that post, someone asked exactly what I meant by that --  specifically if I used something in the pre-build event to increment the assembly  version.
 
 Here was my response:
 
-> While you certainly \*could\* increment the AssemblyFileVersionAttribute in a pre-build event, I definitely don't recommend it. Doing so would cause the version to increment each and every time \*any\* member of the Development team builds the solution.
+> While you certainly \*could\* increment the AssemblyFileVersionAttribute in
+> a pre-build event, I definitely don't recommend it. Doing so would cause the
+> version to increment each and every time \*any\* member of the Development team
+> builds the solution.
 > 
-> I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs file, but there are definitely better ways to accomplish the desired outcome.
+> I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs
+> file, but there are definitely better ways to accomplish the desired outcome.
 > 
-> Rather, I recommend incrementing the AssemblyFileVersionAttribute as part of your automated build process. In other words, each time an "official" build is created on the Build Server, the AssemblyVersionInfo.cs file is automatically checked out from source control, incremented, and checked back in.
+> Rather, I recommend incrementing the AssemblyFileVersionAttribute as part
+> of your automated build process. In other words, each time an "official" build
+> is created on the Build Server, the AssemblyVersionInfo.cs file is automatically
+> checked out from source control, incremented, and checked back in.
 > 
-> Obviously, the actual implementation of this process will vary depending on your particular toolset. For example, if you are using Team Foundation Server, you can setup a custom task that increments the AssemblyFileVersionAttribute as part of the build. Several people have already blogged about the details of this for TFS. If you just bing "TFS increment build" you should get some good hits within the first page of search results. In particular, make sure you read Buck Hodges blog entry if you are using continuous integration.
+> Obviously, the actual implementation of this process will vary depending
+> on your particular toolset. For example, if you are using Team Foundation Server,
+> you can setup a custom task that increments the AssemblyFileVersionAttribute
+> as part of the build. Several people have already blogged about the details
+> of this for TFS. If you just bing "TFS increment build" you should get some
+> good hits within the first page of search results. In particular, make sure
+> you read Buck Hodges blog entry if you are using continuous integration.
 
-Well, I probably should have blogged long ago about the specific process that I use for incrementing the assembly version, but you know what they say: "better late than never" ;-)
+Well, I probably should have blogged long ago about the specific process that  I use for incrementing the assembly version, but you know what they say: "better  late than never" ;-)
 
-Note that this implementation has some specifics to Team Foundation Server, but I imagine you could tweak this fairly easily if you are using some other configuration management system and build process.
+Note that this implementation has some specifics to Team Foundation Server, but  I imagine you could tweak this fairly easily if you are using some other configuration  management system and build process.
 
 > **Update (2010-11-29)**
 > 
-> This post was originally created for TFS 2005/2008. Refer to the following if you are using TFS 2010:
+> This post was originally created for TFS 2005/2008. Refer to the following
+> if you are using TFS 2010:
 > 
 > <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
 
-Unfortunately, there's no out-of-the-box task in the current version of MSBuild that increments an assembly version. However, you can write your own with just a few lines of code (there are a number of samples out there if you search for them), or -- as I prefer -- you can just use the one from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). [There are quite a few other custom tasks in this package that you may find useful in addition to the Version task that I cover in this post.]
+Unfortunately, there's no out-of-the-box task in the current version of MSBuild  that increments an assembly version. However, you can write your own with just a  few lines of code (there are a number of samples out there if you search for them),  or -- as I prefer -- you can just use the one from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). [There  are quite a few other custom tasks in this package that you may find useful in addition  to the Version task that I cover in this post.]
 
-After downloading and installing the custom tasks, import them into your TFSBuild.proj file by adding the following line just below the `<Project>` element:
+After downloading and installing the custom tasks, import them into your TFSBuild.proj  file by adding the following line just below the `<Project>`  element:
 
 ```
 <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
 ```
 
-Note that there may be times when we want to build the solution without incrementing the assembly version; for example, to test changes to TFSBuild.proj on a local development environment (as opposed to checking in the changes and "testing" the changes on the build server). Therefore, let's allow a custom property to be specified that will skip the process of incrementing the assembly version. Inside the `<PropertyGroup>`element, add the following:
+Note that there may be times when we want to build the solution without incrementing  the assembly version; for example, to test changes to TFSBuild.proj on a local development  environment (as opposed to checking in the changes and "testing" the changes on  the build server). Therefore, let's allow a custom property to be specified that  will skip the process of incrementing the assembly version. Inside the `<PropertyGroup>`element, add the following:
 
 ```
 <!-- Set this property to true to build without incrementing the assembly version. -->
@@ -66,7 +84,7 @@ Here is an example of specifying this property as a command-line option:
 msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
 ```
 
-Next, add a property so that we can use the TFS command-line utility to checkout the assembly version files and subsequently check them back in:
+Next, add a property so that we can use the TFS command-line utility to checkout  the assembly version files and subsequently check them back in:
 
 ```
 <PropertyGroup>
@@ -76,9 +94,11 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 
 > **Update (2010-05-05)**
 > 
-> Note that the path to the TFS command-line utility [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
+> Note that the path to the TFS command-line utility
+> [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
 > 
-> To use the same technique on a TFS 2010 build server, specify the following instead:
+> To use the same technique on a TFS 2010 build server, specify the following
+> instead:
 > 
 > ```
 > <PropertyGroup>
@@ -86,18 +106,18 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 >   </PropertyGroup>
 > ```
 
-One of the things that I've struggled with in the past is that "Desktop Builds" and "Team Builds" behave quite differently in certain areas. For example, when performing a Desktop Build (i.e. running msbuild on TFSBuild.proj from a command prompt), the **SolutionRoot **and **BuildProjectFolderPath **properties for my sample Fabrikam solution are set as follows:
+One of the things that I've struggled with in the past is that "Desktop Builds"  and "Team Builds" behave quite differently in certain areas. For example, when performing  a Desktop Build (i.e. running msbuild on TFSBuild.proj from a command prompt), the **SolutionRoot **and **BuildProjectFolderPath **properties  for my sample Fabrikam solution are set as follows:
 
 - **SolutionRoot:** C:\NotBackedUp\Fabrikam\Demo
 - **BuildProjectFolderPath:** C:\NotBackedUp\Fabrikam\Demo\Main\Source
 
-However, when performing a Team Build (i.e. when a build is queued or scheduled on a build server), the properties are set as follows:
+However, when performing a Team Build (i.e. when a build is queued or scheduled  on a build server), the properties are set as follows:
 
 - **SolutionRoot:** C:\Users\svc-build\AppData\Local\Temp\Demo\Automated
   Build - Main\Sources
 - **BuildProjectFolderPath:** $/Demo/Main/Source
 
-Consequently, define a new property (**SolutionWorkingDirectory**) and condititionally set it to the expected location:
+Consequently, define a new property (**SolutionWorkingDirectory**)  and condititionally set it to the expected location:
 
 ```
 <!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
@@ -126,7 +146,7 @@ Consequently, define a new property (**SolutionWorkingDirectory**) and condititi
   </PropertyGroup>
 ```
 
-Next, override the **AfterGet **target to checkout the version files from TFS, and subsequently update the assembly version:
+Next, override the **AfterGet **target to checkout the version files  from TFS, and subsequently update the assembly version:
 
 ```
 <Target Name="AfterGet">
@@ -135,7 +155,7 @@ Next, override the **AfterGet **target to checkout the version files from TFS, a
   </Target>
 ```
 
-Here is the custom target to checkout the version files. Note that this target is skipped if the **SkipIncrementAssemblyVersion **property is set to true.
+Here is the custom target to checkout the version files. Note that this target  is skipped if the **SkipIncrementAssemblyVersion **property is set  to true.
 
 ```
 <Target Name="CheckOutVersionFilesFromSourceControl"
@@ -153,13 +173,13 @@ Here is the custom target to checkout the version files. Note that this target i
   </Target>
 ```
 
-Note that AssemblyVersionInfo.txt is just a simple text file used by the custom Version task from the MSBuild Community Tasks Project and only contains a simple version string. For example:
+Note that AssemblyVersionInfo.txt is just a simple text file used by the custom  Version task from the MSBuild Community Tasks Project and only contains a simple  version string. For example:
 
 ```
 1.0.38.0
 ```
 
-The AssemblyVersionInfo.cs file is generated by the custom Version task. For example:
+The AssemblyVersionInfo.cs file is generated by the custom Version task. For  example:
 
 ```
 //------------------------------------------------------------------------------
@@ -180,7 +200,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.38.0")]
 ```
 
-Here is the custom target to update the version files in TFS. Like the `CheckOutVersionFilesFromSourceControl` target, the `UpdateVersionFilesInSourceControl` target is skipped if the **SkipIncrementAssemblyVersion **property is set to true.
+Here is the custom target to update the version files in TFS. Like the `CheckOutVersionFilesFromSourceControl`  target, the `UpdateVersionFilesInSourceControl`  target is skipped if the **SkipIncrementAssemblyVersion **property  is set to true.
 
 ```
 <Target Name="UpdateVersionFilesInSourceControl"
@@ -211,9 +231,9 @@ Here is the custom target to update the version files in TFS. Like the `CheckOut
   </Target>
 ```
 
-Note that for a Team Build, we need to copy the AssemblyVersionInfo.txt file from the BuildType folder into the solution folder. This allows the same process to be used for Desktop Builds and Team Builds. Also note that `$(NoCICheckinComment)` is specified when checking in the files from the build (as I mentioned in my earlier comment, see Buck Hodges' [blog post](http://blogs.msdn.com/buckh/archive/2007/07/27/tfs-2008-how-to-check-in-without-triggering-a-build-when-using-continuous-integration.aspx) for more details on this).
+Note that for a Team Build, we need to copy the AssemblyVersionInfo.txt file  from the BuildType folder into the solution folder. This allows the same process  to be used for Desktop Builds and Team Builds. Also note that `$(NoCICheckinComment)` is specified when  checking in the files from the build (as I mentioned in my earlier comment, see  Buck Hodges' [blog post](http://blogs.msdn.com/buckh/archive/2007/07/27/tfs-2008-how-to-check-in-without-triggering-a-build-when-using-continuous-integration.aspx) for more details on this).
 
-Finally, use the **BuildNumberOverrideTarget **and a custom target to actually increment the assembly version using the custom Version task and set the **BuildNumber **property accordingly. Note that if **SkipIncrementAssemblyVersion** is set to true, the assembly version is not incremented and the **BuildNumber
+Finally, use the **BuildNumberOverrideTarget **and a custom target  to actually increment the assembly version using the custom Version task and set  the **BuildNumber **property accordingly. Note that if **SkipIncrementAssemblyVersion**  is set to true, the assembly version is not incremented and the **BuildNumber
 **property is set to whatever is currently specified in AssemblyVersionInfo.txt.
 
 ```
@@ -254,9 +274,9 @@ Finally, use the **BuildNumberOverrideTarget **and a custom target to actually i
   </Target>
 ```
 
-Note that in the example above, the `BuildType` attribute on the `<Version>` element is set to `"Increment"` when the assembly version should be incremented (thus generating build numbers like 1.0.37.0, 1.0.38.0, etc.). This is what I recommend for the **Main **branch.
+Note that in the example above, the `BuildType`  attribute on the `<Version>`  element is set to `"Increment"` when  the assembly version should be incremented (thus generating build numbers like 1.0.37.0,  1.0.38.0, etc.). This is what I recommend for the **Main **branch.
 
-For the **QFE **branch, I recommend changing the `BuildType` attribute to `"None"`and the `RevisionType`attribute to `"Increment"` (to generate build numbers like 1.0.38.1, 1.0.38.2, etc.).
+For the **QFE **branch, I recommend changing the `BuildType` attribute to `"None"`and the `RevisionType`attribute  to `"Increment"` (to generate build  numbers like 1.0.38.1, 1.0.38.2, etc.).
 
 Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
 

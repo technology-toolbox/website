@@ -13,20 +13,20 @@ tags: ["Core Development", "TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-While attending TechReady (an internal Microsoft training conference) last week, I learned a lot -- not only about future versions of our products, but also numerous tips and tricks for current versions. One of the most valuable insights I gained was from a session on branching in Team Foundation Server (TFS). If you've read my [previous post on structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions), then you know that I'm a proponent of branching from the start in order to easily support parallel development and periodically stabilizing for a release.
+While attending TechReady (an internal Microsoft training conference) last week,         I learned a lot -- not only about future versions of our products, but also numerous         tips and tricks for current versions. One of the most valuable insights I gained         was from a session on branching in Team Foundation Server (TFS). If you've read         my [previous post on structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions), then you know that         I'm a proponent of branching from the start in order to easily support parallel         development and periodically stabilizing for a release.
 
 I had previously read the [TFS Branching
-Guidance on CodePlex](http://www.codeplex.com/BranchingGuidance), although I admit it has been a rather long time. Nevertheless, I still understood the commonly used **Main**, **Dev**, and **Release **branches. However, I discovered during the session last week that I had a fundamental misunderstanding about *baseless merges* in TFS. Prior to last week, I thought a baseless merge occurred when the source and target do not share any ancestry in the branching tree. In other words, I thought that as long as the target resides on a branch that can be traced through some lineage to the source branch, then TFS has sufficient "knowledge" (i.e. algorithms) to merge changes from the source to the target.
+Guidance on CodePlex](http://www.codeplex.com/BranchingGuidance), although I admit it has been a rather long time. Nevertheless,         I still understood the commonly used **Main**, **Dev**,         and **Release **branches. However, I discovered during the session         last week that I had a fundamental misunderstanding about *baseless merges*         in TFS. Prior to last week, I thought a baseless merge occurred when the source         and target do not share any ancestry in the branching         tree. In other words, I thought that as long as the target resides on a branch that         can be traced through some lineage to the source branch, then TFS has sufficient         "knowledge" (i.e. algorithms) to merge changes from the source to the target.
 
-As I stated before, this was a misunderstanding on my part. When I asked a question about trying to delay the branching for stabilization for as long as possible, the presenters of the session -- [James Pickell](http://blogs.msdn.com/jampick) and [Mario Rodriguez](http://blogs.msdn.com/mrod) -- pointed out that a baseless merge occurs whenever the target is not in a "first level" branch from the source. In other words, you can automerge from parent-to-child (or child-to-parent), but you cannot automerge from grandchild-to-grandparent.
+As I stated before, this was a misunderstanding on my part. When I asked a question         about trying to delay the branching for stabilization for as long as possible, the         presenters of the session -- [James Pickell](http://blogs.msdn.com/jampick)         and [Mario Rodriguez](http://blogs.msdn.com/mrod) -- pointed out that         a baseless merge occurs whenever the target is not in a "first level" branch from         the source. In other words, you can automerge from parent-to-child (or child-to-parent),         but you cannot automerge from grandchild-to-grandparent.
 
 So, what does all of the mean in practical terms?
 
 It all comes down to how -- and when -- you actually branch your code.
 
-In the interest of not reinventing the wheel, allow me to pilfer one of the images from the [updated TFS Branching
+In the interest of not reinventing the wheel, allow me to pilfer one of the images         from the [updated TFS Branching
 Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 
 ![Basic branch plan](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Basic.png)
@@ -34,9 +34,9 @@ Figure 1: Basic branch plan
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Branch-Plan-Basic.png)
 
-Note that this is a basic branch plan, but it is sufficient to demonstrate the concept. You may very well have a more complex branching strategy (e.g. a large organization like Microsoft in order to support "feature teams"). However, the essential pattern still applies.
+Note that this is a basic branch plan, but it is sufficient to demonstrate the concept.         You may very well have a more complex branching strategy (e.g. a large organization         like Microsoft in order to support "feature teams"). However, the essential pattern         still applies.
 
-The question that I asked during the session was essentially why not postpone branching for as long as possible? In other words, why not branch **Release** first, and then branch for hotfixes and service packs as necessary? In my mind, this alternative approach reduces the merge effort by only branching at the point in time when we actually need a branch (e.g. to stabilize for a release). At some later point in time after the release when we actually need a hotfix or service pack branch, then we'll create it from the **Release** branch. In response to my question, Mario termed this "reactive branching" -- which seems like a very good way to describe it. To help visualize the difference, I mocked up the following figure.
+The question that I asked during the session was essentially why not postpone branching         for as long as possible? In other words, why not branch **Release**         first, and then branch for hotfixes and service packs as necessary? In my mind,         this alternative approach reduces the merge effort by only branching at the point         in time when we actually need a branch (e.g. to stabilize for a release). At some         later point in time after the release when we actually need a hotfix or service         pack branch, then we'll create it from the **Release** branch. In response         to my question, Mario termed this "reactive branching" -- which seems like a very         good way to describe it. To help visualize the difference, I mocked up the following         figure.
 
 ![&quot;Reactive&quot; branch plan](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Problematic.png)
 Figure 2: "Reactive" branch plan
@@ -63,9 +63,9 @@ There are a couple of significant problems with reactive branching:
   branching strategy shown in Figure 1.
 
 So, in summary, while it may seem a little backwards to create your **Service
-Pack **branch before your **Release **branch, there are compelling reasons to do so. As for me, I now consider my "reactive branching" strategy to be a thing of the past.
+Pack **branch before your **Release **branch, there are         compelling reasons to do so. As for me, I now consider my "reactive branching" strategy         to be a thing of the past.
 
 Thanks to James and Mario for setting me straight!
 
-By the way, if you haven't read the branching guidance created by the VSTS Rangers, I highly recommend it. Very good stuff.
+By the way, if you haven't read the branching guidance created by the VSTS Rangers,         I highly recommend it. Very good stuff.
 

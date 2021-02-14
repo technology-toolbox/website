@@ -7,23 +7,23 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-Regardless of the platform a website will eventually run on (e.g. ASP.NET or SharePoint), I typically recommend creating a static HTML prototype to demonstrate key features, illustrate various design alternatives (e.g. different page layouts, color schemes, etc.), and gather feedback from Product Management.
+Regardless of the platform a website will eventually run on (e.g. ASP.NET or  SharePoint), I typically recommend creating a static HTML prototype to demonstrate  key features, illustrate various design alternatives (e.g. different page layouts,  color schemes, etc.), and gather feedback from Product Management.
 
-Using a tool like Expression Web to create a mockup of site pages can substantially reduce the amount of time spent developing ASP.NET and SharePoint applications.
+Using a tool like Expression Web to create a mockup of site pages can substantially  reduce the amount of time spent developing ASP.NET and SharePoint applications.
 
 ### What does "static" really mean?
 
-The important thing to realize about what I call the "static HTML prototype" is that while it may include things like JavaScript and ASP.NET master pages, it shouldn't have any dependencies on external data (i.e. all of the content displayed in the prototype is "static" or constant) and it shouldn't support any "real" functionality like logging in to the site. You can definitely mock up a login form -- if this is an important feature that you want to gather feedback on -- but the prototype shouldn't actually authenticate a user when someone fills out the login form.
+The important thing to realize about what I call the "static HTML prototype"  is that while it may include things like JavaScript and ASP.NET master pages, it  shouldn't have any dependencies on external data (i.e. all of the content displayed  in the prototype is "static" or constant) and it shouldn't support any "real" functionality  like logging in to the site. You can definitely mock up a login form -- if this  is an important feature that you want to gather feedback on -- but the prototype  shouldn't actually authenticate a user when someone fills out the login form.
 
-Whether you choose to leverage ASP.NET master pages in the HTML prototype is essentially a tradeoff between how easy you want it to be to "run" your prototype vs. how easy you want to be able to change the common HTML markup shared across multiple pages (e.g. the masthead and global navigation).
+Whether you choose to leverage ASP.NET master pages in the HTML prototype is  essentially a tradeoff between how easy you want it to be to "run" your prototype  vs. how easy you want to be able to change the common HTML markup shared across  multiple pages (e.g. the masthead and global navigation).
 
-I've been known to zip up static HTML prototypes and embed the compressed file in a Microsoft Word document (or attach the file to an email message) and send to key stakeholders who subsequently unzip and view the prototype on their own laptops. Obviously if you are using ASP.NET master pages in your HTML prototype (rather than plain HTML files), this signficantly changes the prerequisites for running the prototype. Depending on the target audience -- and how you choose to have them access the prototype -- using ASP.NET master pages may or may not be a viable option.
+I've been known to zip up static HTML prototypes and embed the compressed file  in a Microsoft Word document (or attach the file to an email message) and send to  key stakeholders who subsequently unzip and view the prototype on their own laptops.  Obviously if you are using ASP.NET master pages in your HTML prototype (rather than  plain HTML files), this signficantly changes the prerequisites for running the prototype.  Depending on the target audience -- and how you choose to have them access the prototype  -- using ASP.NET master pages may or may not be a viable option.
 
 ### Introducing the "Caelum" prototype
 
-One of the first things I needed to do for the new TechnologyToolbox.com site was design the various blog pages (e.g. the blog home page, a typical summary page with all posts for a particular tag, the layout for an individual post, etc.).
+One of the first things I needed to do for the new TechnologyToolbox.com site  was design the various blog pages (e.g. the blog home page, a typical summary page  with all posts for a particular tag, the layout for an individual post, etc.).
 
-Using Expression Web, I created a site under the TFS workspace for the Caelum project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders and files corresponding to the basic structure of the website.
+Using Expression Web, I created a site under the TFS workspace for the Caelum  project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders  and files corresponding to the basic structure of the website.
 
 <caption>Sample HTML content for the Caelum prototype</caption>| File | Description |
 | --- | --- |
@@ -112,7 +112,7 @@ Here is the current content of the default master page for the static HTML proto
 > and how they fit together. I'll discuss the semantic HTML used for the Technology
 > Toolbox pages in more detail in subsequent posts.
 
-Figure 1 shows the corresponding Design view of the master page in Expression Web (after adding the CSS rules to define the site fonts, colors, etc.).
+Figure 1 shows the corresponding Design view of the master page in Expression  Web (after adding the CSS rules to define the site fonts, colors, etc.).
 
 ![Caelum prototype - Default.master](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Default.master.png)
 
@@ -122,7 +122,7 @@ Figure 1 shows the corresponding Design view of the master page in Expression We
 
 ### Default.aspx
 
-The site home page references Default.master and specifies its content using the **MainContent **placeholder as well as the additional CSS and JavaScript files needed to support the "slideshow" content (via the **AdditionalHeadContent
+The site home page references Default.master and specifies its content using  the **MainContent **placeholder as well as the additional CSS and JavaScript  files needed to support the "slideshow" content (via the **AdditionalHeadContent
 **placeholder):
 
 ```
@@ -315,8 +315,8 @@ The site home page references Default.master and specifies its content using the
 </asp:Content>
 ```
 
-The following screenshot shows the home page rendered in a browser. [This screenshot is actually from the live site -- not the static HTML prototype. However, the only difference with the prototype version is the first item under the **Most Recent
-Posts **section. Hence I didn't bother capturing a different screenshot from the HTML prototype.]
+The following screenshot shows the home page rendered in a browser. [This screenshot  is actually from the live site -- not the static HTML prototype. However, the only  difference with the prototype version is the first item under the **Most Recent
+Posts **section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
 
@@ -326,10 +326,10 @@ Posts **section. Hence I didn't bother capturing a different screenshot from the
 
 ### BlogPost.master
 
-When viewing an individual blog post, a different master page is used in order to render common elements such as the sidebar content (e.g. **Recent Posts
+When viewing an individual blog post, a different master page is used in order  to render common elements such as the sidebar content (e.g. **Recent Posts
 **and **Tags**) as well as the comment form.
 
-BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent**) that is subsequently used to specify the content of a specific blog post.
+BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent**) that is subsequently used to specify the content of  a specific blog post.
 
 ```
 <%@ Master Language="C#" MasterPageFile="~/Default.master"%>
@@ -636,7 +636,7 @@ BlogPost.master defines a new **ContentPlaceHolder **control (i.e. **PostContent
 
 ### Sample blog post - new-blog-location.aspx
 
-Here is a sample blog page from the Caelum prototype (referencing BlogPost.master and specifying the content of the post in the **PostContent **placeholder):
+Here is a sample blog page from the Caelum prototype (referencing BlogPost.master  and specifying the content of the post in the **PostContent **placeholder):
 
 ```
 <%@ Page Title="" Language="C#" MasterPageFile="../../../../BlogPost.master" %>
@@ -704,7 +704,7 @@ Here is a sample blog page from the Caelum prototype (referencing BlogPost.maste
 </asp:Content>
 ```
 
-Figure 3 shows roughly what the corresponding page looks like when rendered in a browser. [This screenshot is actually from the live site, but the prototype page looks very similar and thus I didn't bother creating a separate screenshot for it.]
+Figure 3 shows roughly what the corresponding page looks like when rendered in  a browser. [This screenshot is actually from the live site, but the prototype page  looks very similar and thus I didn't bother creating a separate screenshot for it.]
 
 ![Sample blog post](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png)
 
@@ -714,16 +714,16 @@ Figure 3 shows roughly what the corresponding page looks like when rendered in a
 
 ### Advantages of using a static HTML prototype
 
-The primary benefit of creating a static HTML prototype is the ability to rapidly throw together some sample HTML content and subsequently create the corresponding CSS rules to style the pages. While you can certainly achieve the same result using Visual Studio and your actual SharePoint or ASP.NET Web project, it is typically much faster to do this using static HTML.
+The primary benefit of creating a static HTML prototype is the ability to rapidly  throw together some sample HTML content and subsequently create the corresponding  CSS rules to style the pages. While you can certainly achieve the same result using  Visual Studio and your actual SharePoint or ASP.NET Web project, it is typically  much faster to do this using static HTML.
 
-Similarly, when the time comes to develop some JavaScript for the site, it is often easier to work against a static HTML file rather than an actual page rendered in the context of the Web application. You can see some examples of this in the code shown above (e.g. the jQuery used to collapse the lists in the **Archives
+Similarly, when the time comes to develop some JavaScript for the site, it is  often easier to work against a static HTML file rather than an actual page rendered  in the context of the Web application. You can see some examples of this in the  code shown above (e.g. the jQuery used to collapse the lists in the **Archives
 **section of the blog pages).
 
 ### Disadvantages of using a static HTML prototype
 
-Using a prototype doesn't come without penalty. The biggest drawback is that you have to be diligent about keeping the protoype in sync with the corresponding ASP.NET or SharePoint solution. If you decide to change the structure of the HTML emitted by your ASP.NET code or SharePoint Web Parts, you need to update the prototype accordingly. However, this is all the more reason to really think about the HTML your are producing and ensure that is is semantic and well-structured from the start.
+Using a prototype doesn't come without penalty. The biggest drawback is that  you have to be diligent about keeping the protoype in sync with the corresponding  ASP.NET or SharePoint solution. If you decide to change the structure of the HTML  emitted by your ASP.NET code or SharePoint Web Parts, you need to update the prototype  accordingly. However, this is all the more reason to really think about the HTML  your are producing and ensure that is is semantic and well-structured from the start.
 
-Likewise, whenever you tweak your CSS, you typically end up making the change in two different files (e.g. $/Caelum/Dev/CaelumPrototype/Themes/Theme-1.0/Main.css and $/Caelum/Main/Source/Website/Themes/Theme-1.0/Main.css).
+Likewise, whenever you tweak your CSS, you typically end up making the change  in two different files (e.g. $/Caelum/Dev/CaelumPrototype/Themes/Theme-1.0/Main.css  and $/Caelum/Main/Source/Website/Themes/Theme-1.0/Main.css).
 
-The reality is that once the HTML for a particular feature is "baked", I rarely have the need to change it. As for keeping the CSS files in sync, this actually ends up being very easy -- since I structure the prototype and ASP.NET Web application the same, the CSS files end up being identical. Thus I can simply copy/paste the entire content of a CSS file from one location to another immediately before I check-in a change.
+The reality is that once the HTML for a particular feature is "baked", I rarely  have the need to change it. As for keeping the CSS files in sync, this actually  ends up being very easy -- since I structure the prototype and ASP.NET Web application  the same, the CSS files end up being identical. Thus I can simply copy/paste the  entire content of a CSS file from one location to another immediately before I check-in  a change.
 
