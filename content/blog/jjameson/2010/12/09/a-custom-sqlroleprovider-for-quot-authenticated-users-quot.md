@@ -173,7 +173,9 @@ I then added the following steps to the installation guide:
 > **
 > 3. Type the following command:  
 > 
-> <kbd>notepad administration.config</kbd>
+> 
+> 
+>         notepad administration.config
 > 4. In the /configuration/system.webServer/management/trustedProviders section, 
 > 	add the following:  
 > 

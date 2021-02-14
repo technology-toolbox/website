@@ -25,7 +25,13 @@ tags: ["MOSS 2007", "WSS v3"]
 
 For a couple of months now, I have been using the following command to add myself  to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from a different  server:
 
-<kbd>stsadm.exe -o addpermissionpolicy -url<a href="http://foobar/sites/Migration">http://foobar/sites/Migration</a> -userlogin {DOMAIN\username} -permissionlevel "Full Control"</kbd>
+
+
+    stsadm.exe -o addpermissionpolicy -url
+    http://foobar/sites/Migration -userlogin 
+    {DOMAIN\username} -permissionlevel "Full Control"
+
+
 
 This site is backed up from our Test environment (where the business users specify  the data) which happens to reside in a different domain. Consequently when the site  is restored, even the user restoring the site does not have permission to access  the site (that is, until running the above command).
 
@@ -33,7 +39,13 @@ Earlier today, I was helping another developer on our team debug a permissions  
 
 I initially suggested the following command:
 
-<kbd>stsadm.exe -o addpermissionpolicy -url<a href="http://foobar/sites/Migration">http://foobar/sites/Migration</a> -userlogin "NT AUTHORITY\Authenticated Users" -permissionlevel "Read"</kbd>
+
+
+    stsadm.exe -o addpermissionpolicy -url
+    http://foobar/sites/Migration -userlogin 
+    "NT AUTHORITY\Authenticated Users" -permissionlevel "Read"
+
+
 
 However, we quickly discovered that "Read" wasn't quite right. After spending  no less than 10 minutes unsuccessfully trying variations -- such as "Read-only"  and "read only" -- and searching the Web for the documented list of available policies,  I ended up telling my colleague to just "punt" and use the UI instead.
 
@@ -61,5 +73,9 @@ The output is as follows:
 
 Therefore the command that I should have suggested to my colleague is:
 
-<kbd>stsadm.exe -o addpermissionpolicy -url<a href="http://foobar/sites/Migration">http://foobar/sites/Migration</a> -userlogin "NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"</kbd>
+
+
+    stsadm.exe -o addpermissionpolicy -url
+    http://foobar/sites/Migration -userlogin 
+    "NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
 

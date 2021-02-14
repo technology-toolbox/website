@@ -187,7 +187,9 @@ for caching:
         Main
 3. Wait for the script to complete and verify that no errors occurred during the process.
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
-<kbd>iisreset</kbd>
+
+
+        iisreset
 
 
 #### To increase the size of the database files for the Office Web Apps cache:

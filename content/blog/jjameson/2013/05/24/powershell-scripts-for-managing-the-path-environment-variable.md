@@ -22,7 +22,13 @@ Adding a folder to the Path environment variable is pretty basic stuff and it p
 
 Nevertheless, I prefer to use a PowerShell script to complete this task in a fraction of that time:
 
-<kbd>C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program 	Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget 	"Machine"</kbd>
+
+
+    C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program 
+    	Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget 
+    	"Machine"
+
+
 
 In addition to the script to add folders to the Path environment variable (Add-PathFolders.ps1), my Toolbox folder also contains a corresponding script to get the folders in %Path% (Get-PathFolders.ps1) as well as remove folders from %Path% (Remove-PathFolders.ps1). However, I honestly haven't found much use for that last one. I created it primarily for the sake of completeness.
 

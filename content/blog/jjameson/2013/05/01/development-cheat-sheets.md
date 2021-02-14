@@ -23,37 +23,104 @@ Essentially all I need to do after starting one of my SharePoint development VM
 1. Open Visual Studio and “Get Latest” on the solution
 2. Package the "CoreServices.SharePoint" and “Web” projects (in other words, 	build the WSPs for the two SharePoint projects in this particular solution)
 3. Start an instance of PowerShell then copy/paste the first four lines 	from my OneNote page:	
-<kbd>Add-PSSnapin Microsoft.SharePoint.PowerShell</kbd>  
-<kbd>cd "C:\NotBackedUp\Fabrikam\Demo\Main\Source\Deployment Files\Scripts"</kbd>  
-<kbd>cls</kbd>  
-<kbd>&amp; '.\Redeploy Features.ps1'</kbd>
+  
+  
+  
+  
+
+
+        Add-PSSnapin Microsoft.SharePoint.PowerShell
+
+
+
+        cd "C:\NotBackedUp\Fabrikam\Demo\Main\Source\Deployment Files\Scripts"
+
+
+
+        cls
+
+
+
+        & '.\Redeploy Features.ps1'
 
 
 Note that the “Redeploy Features.ps1” script is essentially the same actions that are performed when you right-click the "CoreServices.SharePoint" and “Web” projects in Visual Studio and click **Deploy**.
 
 When I have only made minor changes to one or more files (either code or an existing ASPX or ASCX file) then I typically just run the “Upgrade Solutions.ps1” script, since this shaves precious time off the iterative development process:
 
-<kbd>cls</kbd>  
-<kbd>&amp; '.\Upgrade Solutions.ps1'</kbd>  
+  
+  
+
+
+    cls
+
+
+
+    & '.\Upgrade Solutions.ps1'
+
 
 
 If, for whatever reason, I want to run the individual scripts invoked by the “Redeploy Features.ps1” script, then I have a series of commands in my OneNote page to “DRDADA” the solutions/features:
 
-<kbd>cls</kbd>  
-<kbd>&amp; '.\Deactivate Features.ps1'</kbd>  
-<kbd>&amp; '.\Retract Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Delete Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Add Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Deploy Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Activate Features.ps1'</kbd>  
+  
+  
+  
+  
+  
+  
+  
+
+
+    cls
+
+
+
+    & '.\Deactivate Features.ps1'
+
+
+
+    & '.\Retract Solutions.ps1'
+
+
+
+    & '.\Delete Solutions.ps1'
+
+
+
+    & '.\Add Solutions.ps1'
+
+
+
+    & '.\Deploy Solutions.ps1'
+
+
+
+    & '.\Activate Features.ps1'
+
 
 
 Note that when you run the “Create Site Collections.ps1” script in the Fabrikam solution, it creates the root site collection in the Web application (if it doesn't already exist). Therefore if I've made some changes to the site collection that I quickly want to discard, I can run the Remove-SPSite cmdlet, followed by “Create Site Collections.ps1” and “Redeploy Features.ps1” in order to quickly get back to a “known good” state:
 
-<kbd>cls</kbd>  
-<kbd>Remove-SPSite http://fabrikam-local/ -Confirm:$false</kbd>  
-<kbd>&amp; '.\Create Site Collections.ps1'</kbd>  
-<kbd>&amp; '.\Redeploy Features.ps1'</kbd>  
+  
+  
+  
+  
+
+
+    cls
+
+
+
+    Remove-SPSite http://fabrikam-local/ -Confirm:$false
+
+
+
+    & '.\Create Site Collections.ps1'
+
+
+
+    & '.\Redeploy Features.ps1'
+
 
 
 
@@ -68,10 +135,26 @@ Note that when you run the “Create Site Collections.ps1” script in the Fabri
 
 Lastly, if I need to build (or rebuild) my environment and just want the absolute least amount of human effort (by sacrificing a little more “wait” time), I can run the “Rebuild Web Application.ps1” script and then run the "Test Console" utility to populate some sample content. In my SharePoint development VMs, this process typically takes about two minutes:
 
-<kbd>cls</kbd>  
-<kbd>&amp; '.\Rebuild Web Application.ps1' -Confirm:$false</kbd>  
-<kbd>pushd ..\..\Tools\TestConsole\bin\Debug</kbd>  
-<kbd>.\Fabrikam.Demo.Tools.TestConsole.exe</kbd>  
+  
+  
+  
+  
+
+
+    cls
+
+
+
+    & '.\Rebuild Web Application.ps1' -Confirm:$false
+
+
+
+    pushd ..\..\Tools\TestConsole\bin\Debug
+
+
+
+    .\Fabrikam.Demo.Tools.TestConsole.exe
+
 
 
 I should also mention how I create different pages in OneNote for each branch in TFS that I frequently work on. For example, the following figure shows the cheat sheet for the **SharePointExtranet** branch that I created for the code sample included in[yesterday's post](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).

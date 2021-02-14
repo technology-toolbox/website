@@ -122,8 +122,12 @@ I can then schedule full, differential, and transaction log backups using schedu
 
 Here is the command behind one of the scheduled tasks (you can easily deduce the         others):
 
-<kbd>"C:\Program Files\Microsoft SQL Server\90\Tools\Binn\SQLCMD.EXE" -S .\SQLExpress -d Tools -Q
-"EXEC BackupUserDatabases @backupType='Full'"</kbd>
+
+
+    "C:\Program Files\Microsoft SQL Server\90\Tools\Binn\SQLCMD.EXE" -S .\SQLExpress -d Tools -Q
+    "EXEC BackupUserDatabases @backupType='Full'"
+
+
 
 Lastly, note that I have a separate server periodically ROBOCOPY the backup files         off of this server to another location -- just in case the WSUS server happens to         catch on fire or some other act of God completely wipes out the local database backups         ;-)
 

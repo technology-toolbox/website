@@ -56,7 +56,12 @@ After installing SQL Server 2008 SP1 and restoring my TFS databases, I found  th
 
 Note that I didn't attempt to restore the **TfsWarehouse** Analysis  Services (OLAP) database from a backup, but rather rebuilt it using the [**SetupWarehouse**utility](http://msdn.microsoft.com/en-us/library/ms400783.aspx), as prescribed in the aforementioned KB article:
 
-<kbd>SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml -a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080</kbd>
+
+
+    SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml 
+    -a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
+
+
 
 This command completed successfully. However, when I attempted to process the **TfsWarehouse **OLAP database, I encountered an error that stated  the service account that I had configured for Analysis Services (TECHTOOLBOX\svc-sql-as)  could not login to the **TfsWarehouse **relational database.
 

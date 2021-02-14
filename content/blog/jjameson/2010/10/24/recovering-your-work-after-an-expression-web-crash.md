@@ -90,23 +90,39 @@ From the specific details related to my crash instance, I discovered that Expres
 
 Therefore, the first thing I did (after setting up my symbol path again -- **SRV\*C:\NotBackedUp\Symbols\*http://msdl.microsoft.com/download/symbols**)  was to load the SOS extensions used for debugging managed code:
 
-<kbd>.loadby sos clr</kbd>
+
+
+    .loadby sos clr
+
+
 
 Hoping that my "lost" work (i.e. the HTML content) was stored somewhere in memory  as a managed string, I decided to go looking for all of the "large" strings in the  process at the time of the crash:
 
-<kbd>!dumpheap -strings -min 500</kbd>
+
+
+    !dumpheap -strings -min 500
+
+
 
 My assumption (or at least what I was hoping) was that the HTML I was looking  to recover was stored somewhere -- perhaps even "chunked" -- in a 500 byte string  (or strings -- plural). Unfortunately, after a quick scan of the 88 objects returned  from my dump file failed to produce anything that looked even remotely like my HTML  content, I had to go a little deeper.
 
 I then scanned the entire memory process for a phrase (i.e. "Agilent solution")  that I knew existed in the content I had written:
 
-<kbd>s -u 0 L?0xffffffff "Agilent solution"</kbd>
+
+
+    s -u 0 L?0xffffffff "Agilent solution"
+
+
 
 If you are not an expert with WinDbg -- don't worry, neither am I -- you just  need to know that this command is used to search the entire 32-bit memory address  space (i.e. 0x00000000 to 0xFFFFFFFF) for Unicode strings that contain the specified  characters.
 
 In my case, this returned several hundred results. However, I got lucky (which  was quite nice in light of this morning's events) because I "hit the jackpot" with  the first address returned:
 
-<kbd>du /c 100 0f6dfa22</kbd>
+
+
+    du /c 100 0f6dfa22
+
+
 
 For those not familiar with WinDbg, this command is simply "dumping as Unicode"  the memory address (0x0f6dfa22), specifying a width of 100 columns (simply to make  the content easier to read).
 
@@ -123,7 +139,11 @@ Here's the output from this command:
 
 Since this looked to be exactly what I was looking for, I opened the **Memory** window, typed in the address (0x0f6dfa22), and then clicked the **Previous** and **Next** button a few times to locate  the beginning and end of my content. Once I knew the "bounds" of my content, I then  dumped the entire content...
 
-<kbd>du /c 100 0f6de52a 0f6e0434</kbd>
+
+
+    du /c 100 0f6de52a 0f6e0434
+
+
 
 ...and copied it to the clipboard. SHAZAM! No need to recall my content from  my memory (which is far from "[photographic](http://en.wikipedia.org/wiki/Eidetic_memory)").  Woohoo!
 
@@ -133,7 +153,12 @@ At this point, you might be asking something like "What if you didn't get lucky 
 
 The answer -- thankfully -- is "no." You can just loop through all of the memory  locations and dump each one:
 
-<kbd>.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo ********}</kbd>
+
+
+    .foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo 
+    ********}
+
+
 
 This command assigns each memory address to a variable ("addr") and subsequently  runs the "dump Unicode" command on each address. It's going to generate a lot of  output, but hopefully you can find what you are looking for fairly quickly simply  by scanning the strings.
 

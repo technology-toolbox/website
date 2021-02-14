@@ -56,18 +56,66 @@ For the purposes of this post, we'll focus on the last part of this scenario  --
 
 When doing scenario-based development, I often like to start with the end user  experience and then figure out the steps to make that user experience a reality.  In this case, let's say that after getting the Fabrikam solution from TFS and building  the solution, Doug opens a command prompt and runs the following commands:
 
-<kbd>set FABRIKAM_DEMO_URL=http://fabrikam-local</kbd>  
-<kbd>set FABRIKAM_BUILD_CONFIGURATION=Debug</kbd>  
-<kbd>set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}</kbd>  
-<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts</kbd>  
-<kbd>"Add Solution.cmd"</kbd>  
-<kbd>"Deploy Solution.cmd"</kbd>  
-<kbd>cd ..\..\..\..\DeploymentFiles\Scripts</kbd>  
-<kbd>"Create Web Applications.cmd"</kbd>  
-<kbd>cd ..\..\Web\DeploymentFiles\Scripts</kbd>  
-<kbd>"Add Solution.cmd"</kbd>  
-<kbd>"Deploy Solution.cmd"</kbd>  
-<kbd>"Activate Features.cmd"</kbd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+    set FABRIKAM_DEMO_URL=http://fabrikam-local
+
+
+
+    set FABRIKAM_BUILD_CONFIGURATION=Debug
+
+
+
+    set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+
+
+
+    cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+
+
+
+    "Add Solution.cmd"
+
+
+
+    "Deploy Solution.cmd"
+
+
+
+    cd ..\..\..\..\DeploymentFiles\Scripts
+
+
+
+    "Create Web Applications.cmd"
+
+
+
+    cd ..\..\Web\DeploymentFiles\Scripts
+
+
+
+    "Add Solution.cmd"
+
+
+
+    "Deploy Solution.cmd"
+
+
+
+    "Activate Features.cmd"
+
+
 
 After these twelve steps are complete, Doug is able to browse to [http://www-local.fabrikam.com](http://www-local.fabrikam.com/) and view  the home page of the site as an anonymous user.
 
@@ -75,14 +123,22 @@ It seems pretty straightforward, doesn't it? Let's dive into the details, step-b
 
 ### Step 1 - Set FABRIKAM\_DEMO\_URL environment variable
 
-<kbd>set FABRIKAM_DEMO_URL=http://fabrikam-local</kbd>
+
+
+    set FABRIKAM_DEMO_URL=http://fabrikam-local
+
+
 
 By default, the scripts for deploying the Fabrikam solution install **Release**  builds to **[http://fabrikam](http://fabrikam/)**. However,  the scripts use environment variables to specify parameters that, well, *vary 
 by environment* -- such as the default URL for the Fabrikam site. Following  the [recommended naming conventions](/blog/jjameson/2009/06/09/environment-naming-conventions), Doug uses [**http://fabrikam-local**](http://fabrikam-local/) for the site on his local VM and therefore  sets the **FABRIKAM\_DEMO\_URL** environment variable accordingly.
 
 ### Step 2 - Set FABRIKAM\_BUILD\_CONFIGURATION environment variable
 
-<kbd>set FABRIKAM_BUILD_CONFIGURATION=Debug</kbd>
+
+
+    set FABRIKAM_BUILD_CONFIGURATION=Debug
+
+
 
 While we would obviously never want to deploy Debug builds to the Production  environment (only Release builds), we almost always deploy Debug builds to LOCAL  and DEV environments (in order to make it easier to troubleshoot issues). Since  the deployment scripts default to Release builds, Doug needs to set the **FABRIKAM\_BUILD\_CONFIGURATION **environment variable to **Debug**.
 
@@ -101,7 +157,11 @@ While we would obviously never want to deploy Debug builds to the Production  en
 
 ### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable
 
-<kbd>set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}</kbd>
+
+
+    set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+
+
 
 When creating the Web application for the Fabrikam site, a new application pool  is created as necessary using the corresponding service account (e.g. %USERDOMAIN%\svc-web-fabrikam  or %USERDOMAIN%\svc-web-fabrikam-dev). The **FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD**  environment variable is used to avoid specifying the actual password for the service  account in the script that creates the Web application.
 
@@ -122,13 +182,21 @@ In order to use the custom STSADM commands for the Fabrikam solution, the corres
 
 ### Step 5 - Add the solution for the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Commands.wsp)
 
-<kbd>"Add Solution.cmd"</kbd>
+
+
+    "Add Solution.cmd"
+
+
 
 While it's certainly possible to invoke the STSADM utility directly in order  to add a WSP to a SharePoint farm, I recommend using a standard set of ["DR.DADA" scripts](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) to make this easier and less prone to human error.
 
 ### Step 6 - Deploy Fabrikam.Demo.StsAdm.Commands.wsp
 
-<kbd>"Deploy Solution.cmd"</kbd>
+
+
+    "Deploy Solution.cmd"
+
+
 
 After the WSP containing the custom STSADM commands has been deployed, it is  now possible to extend a Web application to a different IIS Web site from the command-line  and enable FBA on the site (instead of having to do these two things via SharePoint  Central Administration).
 
@@ -136,13 +204,21 @@ Note that at this point in the process, all that Doug has done is prepare his  e
 
 ### Step 7 - Change to the top-level deployment scripts folder
 
-<kbd>cd ..\..\..\..\DeploymentFiles\Scripts</kbd>
+
+
+    cd ..\..\..\..\DeploymentFiles\Scripts
+
+
 
 The Fabrikam solution is organized hierarchically by feature areas and WSPs.  In addition to the scripts used to deploy each WSP (like the ones shown in steps  5 and 6), there are also deployments scripts scoped to the entire solution. One  of these is used to create the Fabrikam Web applications.
 
 ### Step 8 - Create the Fabrikam Web applications
 
-<kbd>"Create Web Applications.cmd"</kbd>
+
+
+    "Create Web Applications.cmd"
+
+
 
 This script performs the following:
 
@@ -159,25 +235,41 @@ Administration** &gt; **Application Management** &gt; **Authentication Providers
 ### Step 9 - Change to the deployment scripts folder for the custom Fabrikam Web 
 solution
 
-<kbd>cd ..\..\Web\DeploymentFiles\Scripts</kbd>
+
+
+    cd ..\..\Web\DeploymentFiles\Scripts
+
+
 
 Additional configuration of the Fabrikam site -- such as enabling anonymous access  and adding the various FBA Web.config entries -- is performed using a custom SharePoint  feature (**Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**).  This feature is part of **Fabrikam.Demo.Web.wsp** -- which is deployed  using the scripts in the **Web\DeploymentFiles\Scripts **folder.
 
 ### Step 10 - Add the custom Fabrikam Web solution (Fabrikam.Demo.Web.wsp)
 
-<kbd>"Add Solution.cmd"</kbd>
+
+
+    "Add Solution.cmd"
+
+
 
 Similar to step 5, a script is used to add **Fabrikam.Demo.Web.wsp**  to the SharePoint farm.
 
 ### Step 11 - Deploy Fabrikam.Demo.Web.wsp
 
-<kbd>"Deploy Solution.cmd"</kbd>
+
+
+    "Deploy Solution.cmd"
+
+
 
 After the WSP is added to the farm, it must be deployed before the features can  be activated.
 
 ### Step 12 - Activate the features in the Fabrikam Web solution
 
-<kbd>"Activate Features.cmd"</kbd>
+
+
+    "Activate Features.cmd"
+
+
 
 As mentioned in step 9, the process of configuring FBA on the Fabrikam site is  performed using a custom feature (**Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**).  Activating this feature on the Web application performs the following:
 
@@ -597,10 +689,26 @@ Once you've done this, you should be able to add a user (using the IIS 7 console
 
 To remove (or prepare to rebuild) the Fabrikam Web application, run the following:
 
-<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts</kbd>  
-<kbd>"Delete Web Applications.cmd"</kbd>  
-<kbd>"Retract Solutions.cmd"</kbd>  
-<kbd>"Delete Solutions.cmd"</kbd>
+  
+  
+  
+
+
+    cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
+
+
+
+    "Delete Web Applications.cmd"
+
+
+
+    "Retract Solutions.cmd"
+
+
+
+    "Delete Solutions.cmd"
+
+
 
 The STSADM utility will complain a little while retracting the solutions (since  the Web application was deleted prior to retracting **Fabrikam.Demo.Web.wsp**),  but don't worry, it all gets cleaned up regardless of the warnings.
 

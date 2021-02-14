@@ -493,16 +493,55 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
             deployment scripts (e.g. C:\NotBackedUp\Tugboat\Dev\Lab2\Source\DeploymentFiles\Scripts),
             and run the following commands:  
 
-<kbd>$env:TUGBOAT_URL = "<a href="http://tugboatcoffee-local">http://tugboatcoffee-local</a>"</kbd>  
-<kbd>$env:TUGBOAT_BUILD_CONFIGURATION = "Debug"</kbd>  
-<kbd>&amp; '.\Add Event Log Sources.ps1'</kbd>  
-<kbd>&amp; '.\Create Web Application.ps1'</kbd>  
-<kbd>&amp; '.\Configure Object Cache User Accounts.ps1'</kbd>  
-<kbd>&amp; '.\Create Site Collections.ps1'</kbd>  
-<kbd>&amp; '.\Enable Anonymous Access.ps1'</kbd>  
-<kbd>&amp; '.\Add Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Deploy Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Activate Features.ps1'</kbd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+        $env:TUGBOAT_URL = "http://tugboatcoffee-local"
+
+
+
+        $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
+
+
+
+        & '.\Add Event Log Sources.ps1'
+
+
+
+        & '.\Create Web Application.ps1'
+
+
+
+        & '.\Configure Object Cache User Accounts.ps1'
+
+
+
+        & '.\Create Site Collections.ps1'
+
+
+
+        & '.\Enable Anonymous Access.ps1'
+
+
+
+        & '.\Add Solutions.ps1'
+
+
+
+        & '.\Deploy Solutions.ps1'
+
+
+
+        & '.\Activate Features.ps1'
 
 
 

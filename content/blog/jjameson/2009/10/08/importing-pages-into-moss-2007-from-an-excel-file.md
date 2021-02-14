@@ -54,11 +54,19 @@ In other words, importing pages from Excel in an x64 environment requires a two-
 
 To convert an Excel file to a DataSet XML file:
 
-<kbd>ConvertToDataSet.exe Sample.xslx</kbd>
+
+
+    ConvertToDataSet.exe Sample.xslx
+
+
 
 To import pages from the generated DataSet XML file:
 
-<kbd>ImportPages.exe <a href="http://fabrikam/">http://fabrikam</a> Sample.xml</kbd>
+
+
+    ImportPages.exe http://fabrikam Sample.xml
+
+
 
 Here is the code for the ConvertToDataSet.exe utility:
 

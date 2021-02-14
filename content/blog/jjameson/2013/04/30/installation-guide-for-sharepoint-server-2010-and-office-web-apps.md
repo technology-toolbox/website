@@ -223,8 +223,14 @@ To cleanup the network adapters:
 
 1. Click **Start**, click **All Programs**, 		click **Accessories**, right-click **Command Prompt**, 		and** **then click** Run as administrator**.
 2. At the command prompt, type the following commands:
-<kbd>set devmgr_show_nonpresent_devices=1</kbd>  
-<kbd>start devmgmt.msc</kbd>
+  
+
+
+        set devmgr_show_nonpresent_devices=1
+
+
+
+        start devmgmt.msc
 3. In the **Device Manager **window:
     1. Click the **View **menu and then click **			Show hidden devices**.
     2. Expand **Network adapters**.
@@ -291,7 +297,10 @@ To configure the MaxPatchCacheSize policy:
 
 1. Click **Start**, click **All Programs**, 		click **Accessories**, right-click **Command Prompt**, 		and** **then click** Run as administrator**.
 2. At the command prompt, type the following command:		
-<kbd>reg add HKLM\Software\Policies\Microsoft\Windows\Installer 			/v MaxPatchCacheSize /t REG_DWORD /d 0 /f</kbd>
+
+
+        reg add HKLM\Software\Policies\Microsoft\Windows\Installer 
+        			/v MaxPatchCacheSize /t REG_DWORD /d 0 /f
 
 
 More information on this step is available in the following blog post:
@@ -379,7 +388,9 @@ To map the host name for a Web application 	to the loopback address:
 
 1. Click **Start**, click **All Programs**, 		click **Accessories**, right-click **Command Prompt**, 		and** **then click** Run as administrator**.
 2. At the command prompt, type the following command:
-<kbd>notepad %WINDIR%\System32\Drivers\etc\hosts</kbd>
+
+
+        notepad %WINDIR%\System32\Drivers\etc\hosts
 3. In Notepad, add a line to map the loopback address (127.0.0.1) to 		the "local" version of each host header specified in		Table 7. For example:		
 
 
@@ -1023,7 +1034,10 @@ To change the schedule for deleting timer job history:
 
 1. On the **Start** menu, click **All Programs**, 		click **Microsoft SharePoint 2010 Products**, right-click		**SharePoint 2010 Management Shell**, and then click		**Run as administrator**. If prompted by User Account Control 		to allow the program to make changes to the computer, click **		Yes**.
 2. From the Windows PowerShell command prompt, type the following command:		
-<kbd>Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 			12:00:00 and 13:00:00"</kbd>
+
+
+        Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 
+        			12:00:00 and 13:00:00"
 3. Wait for the command to complete and verify no errors occurred during 		the process.
 
 
@@ -1085,11 +1099,21 @@ Copy the Fabrikam Extranet build from the release server (e.g.	[\\DAZZLER\Build
 
 For the Test and Production environments, always designate the specific 	build to be deployed. For example:
 
-<kbd>robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR</kbd>
+
+
+    robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 
+    		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
+
+
 
 For development environments, the "latest" version may be specified. 	For example:
 
-<kbd>robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR</kbd>
+
+
+    robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 
+    		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
+
+
 
 Developers may alternately choose to deploy to local environments directly 	from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Main).
 
@@ -1247,7 +1271,11 @@ To enable selection of people and groups from 	the internal Fabrikam domain:
 
 1. Click **Start**, click **All Programs**, 		click **Accessories**, right-click **Command Prompt**, 		and** **then click** Run as administrator**.
 2. Type the following command:		
-<kbd>stsadm -o setapppassword -password <em>{Key}</em></kbd>
+
+
+        stsadm -o setapppassword -password {Key}
+
+
 
 
 > **Note**
@@ -1262,7 +1290,13 @@ To enable selection of people and groups from 	the internal Fabrikam domain:
 > 				be the same for every server in the farm.
 3. Repeat the steps above on each Web server in the farm.
 4. On one of the front-end Web servers, type the following command:		
-<kbd>stsadm -o setproperty -pn peoplepicker-searchadforests -pv 			"domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,<em>{password}</em>;domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,<em>{password}</em>" 			-url http://extranet.fabrikam.com</kbd> 
+
+
+        stsadm -o setproperty -pn peoplepicker-searchadforests -pv 
+        			"domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" 
+        			-url http://extranet.fabrikam.com
+
+
 
 
 > **Note**
@@ -1360,9 +1394,13 @@ To create the database used for storing membership 	and role information:
 
 1. Click **Start**, point to **All Programs**, 		click **Accessories**, and right-click **Command 		Prompt**, and then click **Run as administrator**.
 2. At the command prompt, type the following command:		
-<kbd>cd %WinDir%\Microsoft.NET\Framework\v2.0.50727</kbd>
+
+
+        cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
 3. Type the following command:		
-<kbd>aspnet_regsql.exe</kbd>
+
+
+        aspnet_regsql.exe
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, 		click **Next**.
 5. On the **Select a Setup Option **page, ensure the option 		to **Configure SQL Server for application services **is 		selected and then click **Next**.
 6. On the **Select the Server and Database **page:  
@@ -2120,7 +2158,9 @@ To create the sample content:
 > 
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 2. Type the following command:		
-<kbd>Fabrikam.Demo.Tools.TestConsole.exe</kbd>
+
+
+        Fabrikam.Demo.Tools.TestConsole.exe
 3. Wait for the program to complete and verify no errors occurred during 		the process.
 
 

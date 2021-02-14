@@ -27,7 +27,11 @@ I've also mentioned in various posts that I make heavy use of virtualization in 
 
 As such, one of the first things that I typically do when building out a new VM         is to run the following from a command prompt:
 
-<kbd>            reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f</kbd>
+
+
+    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+
+
 
 Then I move on to installing products based on the intended purpose of the VM.
 

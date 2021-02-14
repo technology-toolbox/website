@@ -39,8 +39,14 @@ I'm not aware of any issues by *not*deleting these network adapters,  but I stil
 Here is the process that I use to cleanup the network adapters:
 
 1. Start an administrator command prompt and then run the following two commands:
-<kbd>set devmgr_show_nonpresent_devices=1</kbd>  
-<kbd>start devmgmt.msc</kbd>
+  
+
+
+        set devmgr_show_nonpresent_devices=1
+
+
+
+        start devmgmt.msc
 2. In the **Device Manager **window:
     1. Click the **View **menu and then click **Show hidden 	devices**.
     2. Expand **Network adapters**.

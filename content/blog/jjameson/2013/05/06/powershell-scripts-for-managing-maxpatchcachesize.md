@@ -13,7 +13,12 @@ While the effectiveness of this registry setting has unfortunately diminished o
 
 Even though it's easy to configure this by copying and pasting the following into a command prompt...
 
-<kbd>reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize 	/t REG_DWORD /d 0 /f</kbd>
+
+
+    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize 
+    	/t REG_DWORD /d 0 /f
+
+
 
 ...sometime last year I decided to create a pair of PowerShell scripts to make this even easier. I keep these scripts in my[Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) (which is a folder I keep synchronized across the multitude of servers and workstations that I use).
 

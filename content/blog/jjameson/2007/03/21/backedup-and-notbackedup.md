@@ -72,7 +72,11 @@ Factor #2 is addressed by redirecting the "My Documents" folder to
 
 ...and then setting up a simple batch file to copy everything in the BackedUp  folder to one of my home servers:
 
-<kbd>robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E</kbd>
+
+
+    robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
+
+
 
 Factor #3 is simply a matter of creating two shortcuts on my taskbar:
 

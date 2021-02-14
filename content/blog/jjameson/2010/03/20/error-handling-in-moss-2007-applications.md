@@ -1144,11 +1144,19 @@ Consequently, I use custom StsAdm.exe commands to add the event source and enabl
 
 After deploying the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Command.wsp),  the following command must be run once on each Web server in each SharePoint environment  (e.g. LOCAL, DEV, TEST, and PROD):
 
-<kbd>stsadm -o fabrikam-addeventlogsource -source "Fabrikam Site"</kbd>
+
+
+    stsadm -o fabrikam-addeventlogsource -source "Fabrikam Site"
+
+
 
 The following command, on the other hand, only needs to be run once per environment  after creating the Web application (substituting the appropriate URL as necessary)  since the SharePoint **SPWebConfigModification** class handles the  grunt work of modifying the Web.config files for each zone and on each front-end  Web server in the farm:
 
-<kbd>stsadm -o fabrikam-enablelogging -url http://fabrikam</kbd>
+
+
+    stsadm -o fabrikam-enablelogging -url http://fabrikam
+
+
 
 
 > **Note**
@@ -1160,7 +1168,9 @@ The following command, on the other hand, only needs to be run once per environm
 > 	will not remove the trace listener configuration from the Web.config file 
 > 	for the **Internet **zone: 
 > 
-> <kbd>stsadm -o fabrikam-disablelogging -url http://fabrikam</kbd>
+> 
+> 
+>     stsadm -o fabrikam-disablelogging -url http://fabrikam
 
 
 Here is the class that implements the custom StsAdm.exe commands:

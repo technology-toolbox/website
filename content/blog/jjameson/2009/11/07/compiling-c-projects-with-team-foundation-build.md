@@ -74,13 +74,27 @@ That's when I discovered the following from the release notes for the SDK:
 > 
 > On an X86 machine, run:
 > 
-> <kbd>cd %mssdk%\VC\bin</kbd>  
-> <kbd>regsvr32 vcprojectengine.dll</kbd>
+>   
+> 
+> 
+>     cd %mssdk%\VC\bin
+> 
+> 
+> 
+>     regsvr32 vcprojectengine.dll
+> 
+> 
 > 
 > On an X64 machine, run:
 > 
-> <kbd>cd %mssdk%\VC\bin\X64</kbd>  
-> <kbd>regsvr32 vcprojectengine.dll</kbd>
+>   
+> 
+> 
+>     cd %mssdk%\VC\bin\X64
+> 
+> 
+> 
+>     regsvr32 vcprojectengine.dll
 
 
 Unfortunately, these instructions aren't quite right -- or at least they didn't         work verbatim in my environment. The workaround stated above makes you think there's         an environment variable (`%mssdk%`) that refers to the path where the         SDK is installed. However, this wasn't configured on DAZZLER.

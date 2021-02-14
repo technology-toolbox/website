@@ -298,7 +298,9 @@ To fix the TaxonomyPicker.ascx file:
                 click **Run as administrator**.
 2. At the command prompt, type the following command:
                 
-<kbd>                        notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"</kbd>
+
+
+        notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
 3. In Notepad, in the assembly specified in the **Control **directive,
                 replace the **"&#44;**" (without the quotes) with a comma (',')
                 and then save the file.
@@ -545,8 +547,12 @@ To attach the SharePoint content database by using Windows Powershell:
             this computer, click **Yes**.
 2. At the Windows PowerShell command prompt, type the following command:
             
-<kbd>                    Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt;
-                    -WebApplication &lt;URL&gt; [-Updateuserexperience]</kbd>
+
+
+        Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName>
+                            -WebApplication <URL> [-Updateuserexperience]
+
+
 
             Where:  
 
@@ -564,8 +570,10 @@ To attach the SharePoint content database by using Windows Powershell:
 
             For example:
             
-<kbd>                    Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication
-                    http://cyclops -Updateuserexperience</kbd>
+
+
+        Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication
+                            http://cyclops -Updateuserexperience
 
 
 More information on attaching SharePoint content databases is provided in the following         TechNet article:

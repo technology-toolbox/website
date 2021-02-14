@@ -27,7 +27,11 @@ Yesterday I replied to an email from a teammate in which I incorrectly stated  t
 
 I would have sworn the last time I tried something like the following in Windows  Server 2003 (a couple of years ago), I got an error message:
 
-<kbd>"Redeploy Features.cmd" &gt; tmp.log 2&gt;&amp;1</kbd>
+
+
+    "Redeploy Features.cmd" > tmp.log 2>&1
+
+
 
 Fortunately another teammate on the thread, [Prashant Nayak](http://blogs.msdn.com/pnayak), experimented with this  and confirmed that it actually *does* work. Thanks, Prashant, for setting  the record straight!
 

@@ -96,7 +96,11 @@ Note that there may be times when we want to build the solution without incremen
 
 Here is an example of specifying this property as a command-line option:
 
-<kbd>msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true</kbd>
+
+
+    msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
+
+
 
 Next, add a property so that we can use the TFS command-line utility to checkout  the assembly version files and subsequently check them back in:
 

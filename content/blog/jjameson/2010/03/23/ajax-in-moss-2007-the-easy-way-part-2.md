@@ -108,9 +108,21 @@ However, notice that the sample Web Part inherits from my custom **AjaxWebPart**
 
 After changing the base class and building the solution, the following commands  are used to update the assembly in the GAC and recycle the application pool for  the Fabrikam site:
 
-<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts</kbd>  
-<kbd>"GAC Assemblies.cmd"</kbd>  
-<kbd>C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"</kbd>
+  
+  
+
+
+    cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
+
+
+
+    "GAC Assemblies.cmd"
+
+
+
+    C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
+
+
 
 Attempting to browse to the home page of the site now results in an error. After  tweaking the Web.config file to set `<SafeMode
 CallStack="true" 

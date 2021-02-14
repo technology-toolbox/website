@@ -447,9 +447,19 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
             deployment scripts (e.g. C:\NotBackedUp\Tugboat\Main\Source\DeploymentFiles\Scripts),
             and run the following commands:  
 
-<kbd>$env:TUGBOAT_URL = "<a href="http://tugboatcoffee-local">http://tugboatcoffee-local</a>"</kbd>  
-<kbd>$env:TUGBOAT_BUILD_CONFIGURATION = "Debug"</kbd>  
-<kbd>&amp; '.\Rebuild Web Application.ps1'</kbd>
+  
+  
+
+
+        $env:TUGBOAT_URL = "http://tugboatcoffee-local"
+
+
+
+        $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
+
+
+
+        & '.\Rebuild Web Application.ps1'
 
 
 

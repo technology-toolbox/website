@@ -163,18 +163,66 @@ Note that since the **SPWebConfigModification **class adds the changes  to the W
 If you download the attached code, build it, and run the following commands,  you can subsequently add the sample AJAX Web Part (**Fabrikam Sample AJAX 
 Update**) to the home page:
 
-<kbd>set FABRIKAM_DEMO_URL=http://fabrikam-local</kbd>  
-<kbd>set FABRIKAM_BUILD_CONFIGURATION=Debug</kbd>  
-<kbd>set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}</kbd>  
-<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts</kbd>  
-<kbd>"Add Solution.cmd"</kbd>  
-<kbd>"Deploy Solution.cmd"</kbd>  
-<kbd>cd ..\..\..\..\DeploymentFiles\Scripts</kbd>  
-<kbd>"Create Web Applications.cmd"</kbd>  
-<kbd>cd ..\..\Web\DeploymentFiles\Scripts</kbd>  
-<kbd>"Add Solution.cmd"</kbd>  
-<kbd>"Deploy Solution.cmd"</kbd>  
-<kbd>"Activate Features.cmd"</kbd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+    set FABRIKAM_DEMO_URL=http://fabrikam-local
+
+
+
+    set FABRIKAM_BUILD_CONFIGURATION=Debug
+
+
+
+    set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+
+
+
+    cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+
+
+
+    "Add Solution.cmd"
+
+
+
+    "Deploy Solution.cmd"
+
+
+
+    cd ..\..\..\..\DeploymentFiles\Scripts
+
+
+
+    "Create Web Applications.cmd"
+
+
+
+    cd ..\..\Web\DeploymentFiles\Scripts
+
+
+
+    "Add Solution.cmd"
+
+
+
+    "Deploy Solution.cmd"
+
+
+
+    "Activate Features.cmd"
+
+
 
 
 > **Important**

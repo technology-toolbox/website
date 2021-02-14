@@ -36,7 +36,11 @@ Unfortunately, when we attempted to deploy our database to our Test environment,
 
 Fortunately, it didn't take long to find [Gert's recommendation](http://social.msdn.microsoft.com/Forums/en-US/vstsdb/thread/32725cf6-74c1-4b5a-9057-b909ae8a2517) to add the following registry key:
 
-<kbd>reg add HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\9.0</kbd>
+
+
+    reg add HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\9.0
+
+
 
 The error occurred since Visual Studio has never been installed on the SQL Server         in TEST (unlike our local development VMs).
 

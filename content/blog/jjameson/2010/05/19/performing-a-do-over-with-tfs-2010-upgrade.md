@@ -30,8 +30,16 @@ If you need to perform the upgrade again (and you don't have the luxury of apply
 
 First, use the Team Foundation Server Configuration Tool to unconfigure components  on the server:
 
-<kbd>cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"</kbd>  
-<kbd>TfsConfig.exe setup /uninstall:All</kbd>
+  
+
+
+    cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
+
+
+
+    TfsConfig.exe setup /uninstall:All
+
+
 
 Next, remove the SharePoint content database (e.g. WSS\_Content\_TFS) containing  the upgraded TFS project sites:
 
@@ -69,7 +77,12 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
 
 1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click**SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by **User Account Control**to allow the program to make changes to this computer, click**Yes**.
 2. At the Windows PowerShell command prompt, type the following command:
-<kbd>Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt; 	-WebApplication &lt;URL&gt; [-Updateuserexperience]</kbd>
+
+
+        Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> 
+        	-WebApplication <URL> [-Updateuserexperience]
+
+
 Where:  
 
     - <var>&lt;DatabaseName&gt;</var> is the name of the database you want 	to upgrade.
@@ -79,7 +92,10 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
 
   
 For example:
-<kbd>Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV 	-WebApplication http://cyclops-dev -Updateuserexperience</kbd>
+
+
+        Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV 
+        	-WebApplication http://cyclops-dev -Updateuserexperience
 
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and  click **Configure Installed Features**.

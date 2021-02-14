@@ -24,8 +24,16 @@ Sometime last year, I discovered there's an easier way to do this, assuming you
 
 From a Visual Studio command prompt, simply use the <kbd>tfpt scorch</kbd> command. For example:
 
-<kbd>cd "\NotBackedUp\Dow\Collaboration\ELN HD"</kbd>  
-<kbd>tfpt scorch Main /r</kbd>
+  
+
+
+    cd "\NotBackedUp\Dow\Collaboration\ELN HD"
+
+
+
+    tfpt scorch Main /r
+
+
 
 Note that <kbd>/r</kbd> is short for <kbd>/recursive</kbd>.
 
@@ -39,9 +47,21 @@ In that case, you can combine the <kbd>tf.exe</kbd> utility with PowerShell to 
 
 I start by invoking PowerShell from a Visual Studio command prompt, changing to the root folder for the project, and then storing the output from the<kbd>tf dir</kbd> command in a variable:
 
-<kbd>PowerShell</kbd>  
-<kbd>cd C:\NotBackedUp\Dow\Collaboration</kbd>  
-<kbd>$output = tf dir</kbd>
+  
+  
+
+
+    PowerShell
+
+
+
+    cd C:\NotBackedUp\Dow\Collaboration
+
+
+
+    $output = tf dir
+
+
 
 At this point, the `$output` variable contains something like:
 
@@ -68,7 +88,11 @@ At this point, the `$output` variable contains something like:
 
 From this, I can parse the folder names in the team project. Note that I don't want the first line or the last few lines. No problem...
 
-<kbd>$tfFolders = $output[1..($output.Length - 3)]</kbd>
+
+
+    $tfFolders = $output[1..($output.Length - 3)]
+
+
 
 Now the `$tfFolders` variable contains something like:
 
@@ -92,35 +116,107 @@ Now the `$tfFolders` variable contains something like:
 
 With this, I can quickly run as command to cloak all of the folders. However, notice the dollar signs at the beginning of each line. I'll need to trim those off when passing each folder to the <kbd>tf workfold /cloak</kbd> command:
 
-<kbd>$tfFolders | foreach { tf workfold /cloak $_.Substring(1) }</kbd>
+
+
+    $tfFolders | foreach { tf workfold /cloak $_.Substring(1) }
+
+
 
 Now suppose that I want to build the **CoreServices **project. Consequently I need to uncloak that folder and get the latest version from TFS. However, in this particular case, the **CoreServices** folder contains a number of branches (e.g. multiple "lab" development branches under the**Dev** folder, the **Main **branch, and multiple release branches under the **Release **folder).
 
 Here are the commands to only get the **Main **branch:
 
-<kbd>tf workfold /decloak CoreServices</kbd>  
-<kbd>tf workfold /cloak CoreServices/Dev</kbd>  
-<kbd>tf workfold /cloak CoreServices/Release</kbd>  
-<kbd>tf get CoreServices /recursive</kbd>
+  
+  
+  
+
+
+    tf workfold /decloak CoreServices
+
+
+
+    tf workfold /cloak CoreServices/Dev
+
+
+
+    tf workfold /cloak CoreServices/Release
+
+
+
+    tf get CoreServices /recursive
+
+
 
 At this point, my workspace contains an exact copy of the **Main**branch -- and only the **Main **branch -- for the**CoreServices **project.
 
 Since I probably also want to build the latest version of the ELN and Research Portal solutions, I can use similar commands for those folders:
 
-<kbd>tf workfold /decloak "ELN HD"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/Business Data Connectivity Models"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/Dev"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/POC Code"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/Release"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/Security"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/Storyboarding"</kbd>  
-<kbd>tf workfold /cloak "ELN HD/UserInterface"</kbd>  
-<kbd>tf get "ELN HD" /recursive</kbd>  
   
-<kbd>tf workfold /decloak "ResearchPortal"</kbd>  
-<kbd>tf workfold /cloak "ResearchPortal/Dev"</kbd>  
-<kbd>tf workfold /cloak "ResearchPortal/Release"</kbd>  
-<kbd>tf get "ResearchPortal" /recursive</kbd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+    tf workfold /decloak "ELN HD"
+
+
+
+    tf workfold /cloak "ELN HD/Business Data Connectivity Models"
+
+
+
+    tf workfold /cloak "ELN HD/Dev"
+
+
+
+    tf workfold /cloak "ELN HD/POC Code"
+
+
+
+    tf workfold /cloak "ELN HD/Release"
+
+
+
+    tf workfold /cloak "ELN HD/Security"
+
+
+
+    tf workfold /cloak "ELN HD/Storyboarding"
+
+
+
+    tf workfold /cloak "ELN HD/UserInterface"
+
+
+
+    tf get "ELN HD" /recursive
+
+
+
+    tf workfold /decloak "ResearchPortal"
+
+
+
+    tf workfold /cloak "ResearchPortal/Dev"
+
+
+
+    tf workfold /cloak "ResearchPortal/Release"
+
+
+
+    tf get "ResearchPortal" /recursive
+
+
 
 Note that the **ELN HD **folder contains a number of "prototype" folders that probably should have been moved under the Dev folder by now...but you get the point.
 

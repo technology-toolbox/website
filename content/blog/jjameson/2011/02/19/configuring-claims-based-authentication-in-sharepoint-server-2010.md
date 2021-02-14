@@ -73,9 +73,13 @@ In this step, the database for storing ASP.NET membership and role information  
 
 1. Click **Start**, point to **All Programs**, click**Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
 2. At the command prompt, type the following command:
-<kbd>cd %WinDir%\Microsoft.NET\Framework\v2.0.50727</kbd>
+
+
+        cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
 3. Type the following command:
-<kbd>aspnet_regsql.exe</kbd>
+
+
+        aspnet_regsql.exe
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click **Next**.
 5. On the **Select a Setup Option **page, ensure the option to**Configure SQL Server for application services **is selected and then click **Next**.
 6. On the **Select the Server and Database **page:  

@@ -26,11 +26,20 @@ Several weeks ago, I converted our deployment process to use SharePoint solution
 
 I noted in a previous post that we have created a PublishingLayouts feature containing  our custom master pages, images, and stylesheets -- similar in structure to the  feature provided in Microsoft Office SharePoint Server (MOSS) 2007. Creating the  WSP file was quite straightforward, as was adding it to the solution store, using  the following command:
 
-<kbd>stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp</kbd>
+
+
+    stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
+
+
 
 However, as soon as I tried to deploy the solution using the following command:
 
-<kbd>stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url	<a href="http://foobar/">http://foobar/</a> -local</kbd>
+
+
+    stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url
+    	http://foobar/ -local
+
+
 
 I encountered the following error:
 
@@ -41,7 +50,11 @@ I encountered the following error:
 
 I must have spent 30 minutes trying to figure out why this command did not work  (because it worked just fine for other features that I had converted to deploy with  WSPs). It turns out that I needed to omit the <kbd>url</kbd> parameter:
 
-<kbd>stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local</kbd>
+
+
+    stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
+
+
 
 The reason why the PublishingLayouts solution would not deploy with the <kbd>url</kbd> parameter is because, unlike the other features, there was  no assembly generated for the PublishingLayouts (since it was pure content).
 

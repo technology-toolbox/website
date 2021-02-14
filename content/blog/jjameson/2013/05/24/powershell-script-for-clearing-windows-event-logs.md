@@ -13,7 +13,11 @@ While that script (Clear Event Logs.vbs) is still in my Toolbox, I can't rememb
 
 For example, after running:
 
-<kbd>cscript "Clear Event Logs.vbs"</kbd>
+
+
+    cscript "Clear Event Logs.vbs"
+
+
 
 ...I would still see lots of warnings in the **Administrative Events** view from **TerminalServices-PnPDevices**.
 
@@ -21,11 +25,19 @@ Consequently I switched over to using PowerShell to clear *all* the event logs 
 
 I started out by simply typing the following in a PowerShell window:
 
-<kbd>wevtutil el | % { wevtutil cl $_ }</kbd>
+
+
+    wevtutil el | % { wevtutil cl $_ }
+
+
 
 However, typing that command even once every few days quickly grew tiresome, so I wrapped it up in a script in my Toolbox. Now I simply run the following to clear the event logs on a development VM:
 
-<kbd>C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1</kbd>
+
+
+    C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
+
+
 
 
 > **Important**

@@ -514,16 +514,54 @@ Here are the instructions to deploy the sample to your own SharePoint environmen
 2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click**SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Fabrikam\Demo\Dev\SharePointReusableContent\Source\DeploymentFiles\Scripts), and run the following commands:  
 
-<kbd>$env:FABRIKAM_DEMO_URL = "<a href="http://tugboatcoffee-local">http://fabrikam-local</a>"</kbd>  
-<kbd>$env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"</kbd>  
-<kbd>&amp; '.\Add Event Log Sources.ps1'</kbd>  
-<kbd>&amp; '.\Create Web Application.ps1'</kbd>  
-<kbd>&amp; '.\Configure Object Cache User Accounts.ps1'</kbd>  
-<kbd>&amp; '.\Create Site Collections.ps1'</kbd>  
-<kbd>&amp; '.\Enable Anonymous Access.ps1'</kbd>  
-<kbd>&amp; '.\Add Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Deploy Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Activate Features.ps1'</kbd>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+        $env:FABRIKAM_DEMO_URL = "http://fabrikam-local"
+
+
+
+        $env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"
+
+
+
+        & '.\Add Event Log Sources.ps1'
+
+
+
+        & '.\Create Web Application.ps1'
+
+
+
+        & '.\Configure Object Cache User Accounts.ps1'
+
+
+
+        & '.\Create Site Collections.ps1'
+
+
+
+        & '.\Enable Anonymous Access.ps1'
+
+
+
+        & '.\Add Solutions.ps1'
+
+
+
+        & '.\Deploy Solutions.ps1'
+
+
+
+        & '.\Activate Features.ps1'
 
 
 

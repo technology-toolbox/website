@@ -292,14 +292,44 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
             deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
             and run the following scripts:  
 
-<kbd>&amp; '.\Create Web Application.ps1'</kbd>  
-<kbd>&amp; '.\Create Site Collections.ps1'</kbd>  
-<kbd>&amp; '.\Enable Anonymous Access.ps1'</kbd>  
-<kbd>&amp; '.\Configure Object Cache User Accounts.ps1'</kbd>  
-<kbd>&amp; '.\Add Event Log Sources.ps1'</kbd>  
-<kbd>&amp; '.\Add Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Deploy Solutions.ps1'</kbd>  
-<kbd>&amp; '.\Activate Features.ps1'</kbd>
+  
+  
+  
+  
+  
+  
+  
+
+
+        & '.\Create Web Application.ps1'
+
+
+
+        & '.\Create Site Collections.ps1'
+
+
+
+        & '.\Enable Anonymous Access.ps1'
+
+
+
+        & '.\Configure Object Cache User Accounts.ps1'
+
+
+
+        & '.\Add Event Log Sources.ps1'
+
+
+
+        & '.\Add Solutions.ps1'
+
+
+
+        & '.\Deploy Solutions.ps1'
+
+
+
+        & '.\Activate Features.ps1'
 
 
 At this point you should be able to browse to the Fabrikam site and click the **            Sign In **link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo **database         (refer to **Step 6 **in my previous post for instructions on how to         do this).
