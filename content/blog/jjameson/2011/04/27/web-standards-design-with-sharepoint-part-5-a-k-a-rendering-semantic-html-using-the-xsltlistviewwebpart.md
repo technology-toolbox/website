@@ -17,10 +17,10 @@ tags: ["SharePoint 2010", "Tugboat"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In [part 4 of this series](/blog/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx), I provided a sample SharePoint Server 2010 solution         solution based on Dan Cederholm's [Tugboat sample
+In [part 4 of this series](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4), I provided a sample SharePoint Server 2010 solution         solution based on Dan Cederholm's [Tugboat sample
             site](http://www.handcraftedcss.com/) (from his most recent book, [Handcrafted
                 CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
 
@@ -194,7 +194,7 @@ Note that the **XsltListViewWebPart **provides a `<dsQueryResponse>`         XML
 
 > **Tip**
 > 
->             To view the "raw" XML document, insert the [XSLT identity transform](/blog/jjameson/archive/2009/03/25/xslt-identity-transform.aspx) into the **&lt;xsl&gt;** element of
+>             To view the "raw" XML document, insert the [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform) into the **&lt;xsl&gt;** element of
 >             the **XsltListViewWebPart**, save the page, and then browse to the
 >             page in Internet Explorer.
 
@@ -411,5 +411,5 @@ Stay tuned...
 
 > **Update (2011-05-02)**
 > 
->             The [next post in this series](/blog/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx) is now available.
+>             The [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6) is now available.
 

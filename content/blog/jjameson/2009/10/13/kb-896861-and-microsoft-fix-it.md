@@ -14,10 +14,10 @@ tags: ["MOSS 2007", "Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-A couple of days ago, I rebuilt one of my development VMs for Microsoft Office SharePoint Server (MOSS) 2007. As I've noted in a [previous post](/blog/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx), I've found that I need to apply one of the registry hacks described in the following KnowledgeBase article:
+A couple of days ago, I rebuilt one of my development VMs for Microsoft Office SharePoint Server (MOSS) 2007. As I've noted in a [previous post](/blog/jjameson/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008), I've found that I need to apply one of the registry hacks described in the following KnowledgeBase article:
 
 <cite>You receive error 401.1 when you browse a Web site that uses Integrated Authentication and is hosted on IIS 5.1 or a later version</cite>
 [http://support.microsoft.com/kb/896861](http://support.microsoft.com/kb/896861)

@@ -8,7 +8,7 @@ tags: ["Core
 			Development", "Visual Studio", "Web Development"]
 ---
 
-In[last night's post](/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx), I described how I spent some time this past weekend configuring an ELMAH filter to avoid getting spammed with email messages as a result of failed attempts to hack the TechnologyToolbox.com website.
+In[last night's post](/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers), I described how I spent some time this past weekend configuring an ELMAH filter to avoid getting spammed with email messages as a result of failed attempts to hack the TechnologyToolbox.com website.
 
 I also noted how I took a short detour during the process to write some unit tests when my JavaScript filter did not work as expected.
 

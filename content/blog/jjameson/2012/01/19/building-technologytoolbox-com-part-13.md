@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2012/01/16/building-technologytoolbox-com-part-12.aspx), I showed how jQuery and a CSS sprite are used to render the expandable list under the **Archives **section on the various blog pages of the Technology Toolbox site. However, I intentionally omitted details about referencing the jQuery scripts and CSS. In this post, I'll show how to serve minified versions of JavaScript and CSS files in Production environments (PROD) and uncompressed versions in Development environments (DEV).
+In[my previous post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12), I showed how jQuery and a CSS sprite are used to render the expandable list under the **Archives **section on the various blog pages of the Technology Toolbox site. However, I intentionally omitted details about referencing the jQuery scripts and CSS. In this post, I'll show how to serve minified versions of JavaScript and CSS files in Production environments (PROD) and uncompressed versions in Development environments (DEV).
 
 When you create a new **ASP.NET Web Application** in Visual Studio 2010, the **Scripts** folder contains the following files by default:
 
@@ -126,7 +126,7 @@ We can leverage this fact to conditionally include different versions of the jQ
 
 
 
-Assuming you use Debug builds in DEV (and[LOCAL](/blog/jjameson/archive/2009/09/25/development-and-build-environments.aspx)) and Release builds in PROD, you now have a much nicer debugging experience while still serving up minified jQuery script on your live site. Also note that Intellisense works as expected during development, which I *believe* is a result of having the jQuery files in the **Scripts** folder (even though the ASPX or master page isn't actually referencing these versions).
+Assuming you use Debug builds in DEV (and[LOCAL](/blog/jjameson/2009/09/25/development-and-build-environments)) and Release builds in PROD, you now have a much nicer debugging experience while still serving up minified jQuery script on your live site. Also note that Intellisense works as expected during development, which I *believe* is a result of having the jQuery files in the **Scripts** folder (even though the ASPX or master page isn't actually referencing these versions).
 
 This technique obviously works with your own script files -- and CSS files as well. For example, you might end up with something like this:
 
@@ -160,7 +160,7 @@ This technique obviously works with your own script files -- and CSS files as w
 
 
 
-Note that on the Technology Toolbox site, the Main.css file imports other CSS files (such as Basic.css, which includes various "reset" rules as well as basic formatting of HTML elements). When the CSS files are minified, they are combined into a single CSS file (e.g. Theme-1.0.5.min.css). This eliminates extraneous HTTP requests, while also making it easier to mitigate caching issues when any of the CSS files are updated. (Refer to[one of my previous posts](/blog/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx) if you want to read more about this technique.)
+Note that on the Technology Toolbox site, the Main.css file imports other CSS files (such as Basic.css, which includes various "reset" rules as well as basic formatting of HTML elements). When the CSS files are minified, they are combined into a single CSS file (e.g. Theme-1.0.5.min.css). This eliminates extraneous HTTP requests, while also making it easier to mitigate caching issues when any of the CSS files are updated. (Refer to[one of my previous posts](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) if you want to read more about this technique.)
 
 
 > **Note**

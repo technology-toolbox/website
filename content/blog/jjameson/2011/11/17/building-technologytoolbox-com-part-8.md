@@ -9,7 +9,7 @@ tags: ["My System", "PowerShell", "Subtext", "Web Development"]
 
 In this post, I describe the PowerShell script used to rebuild the Development and Test environments for TechnologyToolbox.com. From a high-level perspective, the script deletes the IIS website (if it exists), creates a new website (including the corresponding application pool), and then copies the files for the main site as well as the Subtext files for the /blog application.
 
-You may recall the following illustration from the post I wrote[introducing TechnologyToolbox.com](/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx). This shows how the Caelum and Subtext Visual Studio solutions are merged together during the deployment process.
+You may recall the following illustration from the post I wrote[introducing TechnologyToolbox.com](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com). This shows how the Caelum and Subtext Visual Studio solutions are merged together during the deployment process.
 
 ![Solution architecture](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg)
 		Figure 1: Solution architecture
@@ -105,11 +105,11 @@ For a complete list of the IIS cmdlets, refer to the following Technet article:
 > [https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites](https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites)
 
 
-If you are wondering why I specify "``r`n`" at the end of each `Write-Host` command, I'll explain that in [a separate post](/blog/jjameson/archive/2011/11/19/tips-tricks-for-running-powershell-scripts-as-scheduled-tasks.aspx).
+If you are wondering why I specify "``r`n`" at the end of each `Write-Host` command, I'll explain that in [a separate post](/blog/jjameson/2011/11/19/tips-tricks-for-running-powershell-scripts-as-scheduled-tasks).
 
 ### Step 3 - Create and configure the application pool
 
-Like the Production environment, the website runs in a dedicated application pool in DEV and TEST. Note that in the Test environment, the app pool must be configured to run as **NetworkService** in order to access the database on a different server (as I noted in[my previous post](/blog/jjameson/archive/2011/11/14/building-technologytoolbox-com-part-7.aspx)). The default app pool identity can be used in DEV since the database runs on the same server as the website in that environment.
+Like the Production environment, the website runs in a dedicated application pool in DEV and TEST. Note that in the Test environment, the app pool must be configured to run as **NetworkService** in order to access the database on a different server (as I noted in[my previous post](/blog/jjameson/2011/11/14/building-technologytoolbox-com-part-7)). The default app pool identity can be used in DEV since the database runs on the same server as the website in that environment.
 
 
 
@@ -188,7 +188,7 @@ The Subtext solution is deployed by copying files from the Release server (DAZZ
 For more details on the build process, refer to one of my posts from a couple of years ago:
 
 <cite>Build and Deployment Overview</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](/blog/jjameson/2009/09/26/build-and-deployment-overview)
 
 
 ### Step 7 - Configure permissions on Subtext App\_Data folder
@@ -235,7 +235,7 @@ For example, as I've noted in the past, I typically recommend deploying Debug b
 
 I also don't like the idea of deploying something to Production that hasn't previously been validated in the Test environment -- which is why I shudder when I see customers create build configurations specific to each environment.
 
-For these reasons, I create configuration files as necessary for each environment (e.g. Web.TEST.config) and store these in source control. It takes a little more discipline to keep these files in-sync, but using a tool like[DiffMerge](/blog/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx) makes this rather easy.
+For these reasons, I create configuration files as necessary for each environment (e.g. Web.TEST.config) and store these in source control. It takes a little more discipline to keep these files in-sync, but using a tool like[DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool) makes this rather easy.
 
 
 

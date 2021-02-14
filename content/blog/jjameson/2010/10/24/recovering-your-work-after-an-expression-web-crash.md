@@ -19,7 +19,7 @@ tags: ["Debugging", "Web Development"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -29,7 +29,7 @@ I'm not sure why I'm repeatedly encountering issues with the latest version of  
 
 Perhaps the source of my woes is not the TFS integration at all, but rather something  to do with the fact that I use a non-trivial ASP.NET master page when creating/editing  pages. I guess it really doesn't matter -- I just want it to stop crashing regardless.
 
-As I noted in a [previous post](/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx), I've been using Expression Web for a number of years to manage  content on my MSDN blog. While I'm obviously a little irritated this morning with  the tool, overall I'm still satisfied with my method of creating and editing HTML  content. It sure beats using the Web-based editing features in the Telligent Community  platform. [That's not meant to bash the Telligent functionality; for many people  -- heck, perhaps thousands and thousands of folks out there -- the "WYSIWYG" editors  provided by Telligent are probably more than sufficient to address their needs.  I simply prefer much tighter control over the HTML content...but, alas, I digress.]
+As I noted in a [previous post](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server), I've been using Expression Web for a number of years to manage  content on my MSDN blog. While I'm obviously a little irritated this morning with  the tool, overall I'm still satisfied with my method of creating and editing HTML  content. It sure beats using the Web-based editing features in the Telligent Community  platform. [That's not meant to bash the Telligent functionality; for many people  -- heck, perhaps thousands and thousands of folks out there -- the "WYSIWYG" editors  provided by Telligent are probably more than sufficient to address their needs.  I simply prefer much tighter control over the HTML content...but, alas, I digress.]
 
 [Ugh...the application just crashed again on me (second time this morning). Thankfully  I had just pressed <kbd>CTRL+S</kbd> about a minute ago -- so the "damage" wasn't nearly as  bad as it was earlier this morning.]
 
@@ -141,5 +141,5 @@ Lastly, I want to stress that this isn't meant to be a "tool" for frequent use. 
 
 [I should also add that Expression Web crashed four times during the process  of writing this post. I think I'll reach out the Expression Web team and see if  I can get them to take a look at my mini-dump file. Hopefully they'll be able to  identify the root problem and develop a QFE (a.k.a. "hotfix"). I'll add an update  to this post if they do.]
 
-Later today, I'll try to finish up [the blog post I originally wanted to publish today](/blog/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx).
+Later today, I'll try to finish up [the blog post I originally wanted to publish today](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1).
 

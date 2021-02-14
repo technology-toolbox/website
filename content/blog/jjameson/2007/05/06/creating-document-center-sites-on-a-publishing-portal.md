@@ -17,7 +17,7 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Here is another issue I discovered long ago, but haven't blogged about yet. Shame         on me.

@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Simplify", "Web Development"]
 ---
 
-A few weeks ago I added[some bug fixes for the Subtext blog engine](/blog/jjameson/archive/2012/01/31/building-technologytoolbox-com-part-19.aspx) to GitHub. One of the bugs was related to mixed mode content:
+A few weeks ago I added[some bug fixes for the Subtext blog engine](/blog/jjameson/2012/01/31/building-technologytoolbox-com-part-19) to GitHub. One of the bugs was related to mixed mode content:
 
 <cite>jQuery references need to specify "https://" (not "http://") when 	browsing Subtext pages using HTTPS</cite>
 [http://github.com/Haacked/Subtext/issues/18](http://github.com/Haacked/Subtext/issues/18)
@@ -72,5 +72,5 @@ Here are some good resources for understanding more about protocol-relative URL
 - [Using Protocol Relative URLs to Switch between HTTP and HTTPS](http://blog.httpwatch.com/2010/02/10/using-protocol-relative-urls-to-switch-between-http-and-https/)
 
 
-Apparently there are some known issues in Internet Explorer 6 with protocol-relative URLs (no surprise there). However, I honestly couldn't care less about IE6 these days. Especially since I occasionally struggle with issues in IE9 that don't occur in Firefox and Chrome -- such as the one pointed out in[my previous post](/blog/jjameson/archive/2012/02/19/html-to-pdf-converters.aspx).
+Apparently there are some known issues in Internet Explorer 6 with protocol-relative URLs (no surprise there). However, I honestly couldn't care less about IE6 these days. Especially since I occasionally struggle with issues in IE9 that don't occur in Firefox and Chrome -- such as the one pointed out in[my previous post](/blog/jjameson/2012/02/19/html-to-pdf-converters).
 

@@ -19,7 +19,7 @@ tags: ["My System", "TFS"]
 > [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 
@@ -29,14 +29,14 @@ tags: ["My System", "TFS"]
 > If you are using gated check-ins, be sure to also read my follow-up post:
 > 
 > <cite>Bypassing a Gated Check-in in TFS 2010</cite>
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](/blog/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx)
+> [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010)
 
 
-Earlier this year, I wrote a [post](/blog/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx) that explains the process I use for incrementing the assembly version         with each build in Team Foundation Server. However, the process was originally developed         for TFS 2005 and as you probably know by now, the build process in TFS 2010 has         changed significantly.
+Earlier this year, I wrote a [post](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) that explains the process I use for incrementing the assembly version         with each build in Team Foundation Server. However, the process was originally developed         for TFS 2005 and as you probably know by now, the build process in TFS 2010 has         changed significantly.
 
 In TFS 2005 and 2008, the build process was defined entirely in MSBuild (i.e. TFSBuild.proj),         whereas in TFS 2010 the bulk of the build process is based on Windows Workflow Foundation.         TFS 2010 uses the workflow defined in DefaultTemplate.xaml for new projects created         in TFS 2010, but uses the UpgradeTemplate.xaml workflow for TFS projects upgraded         from a previous version.
 
-The process I explained before generally works with TFS 2010 when using the UpgradeTemplate.xaml         workflow (since that workflow is essentially just a wrapper around the legacy TFSBuild.proj         file). In fact, I've been using that process (with a few tweaks) for several TFS         projects since upgrading the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) to TFS 2010 last May.
+The process I explained before generally works with TFS 2010 when using the UpgradeTemplate.xaml         workflow (since that workflow is essentially just a wrapper around the legacy TFSBuild.proj         file). In fact, I've been using that process (with a few tweaks) for several TFS         projects since upgrading the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) to TFS 2010 last May.
 
 Nevertheless, I've been wanting to dive into the "standard" TFS 2010 build process         workflow (i.e. DefaultTemplate.xaml) and determine a better way (going forward)         to automatically increment the assembly version with each build.
 
@@ -44,13 +44,13 @@ Note that depending on your specific requirements, there may already be a soluti
 
 For example, Jim Lamb wrote a [post](http://blogs.msdn.com/b/jimlamb/archive/2010/02/12/how-to-create-a-custom-workflow-activity-for-tfs-build-2010.aspx) back in February that describes how to create a custom workflow activity         to achieve build numbers like "2009.11.18.1" -- and if this versioning scheme works         for you, then great (you can stop reading this post and go read Jim's post instead)!         Personally, I'm not a fan of date-based versioning schemes -- primarily because         an assembly version like 2009.11.18.1 tells me nothing more than when the build         was compiled. In other words, is this particular version a major release, a minor         release, or perhaps just a patch? Looking just at the version number, I have no         idea.
 
-Also, as noted in Jim's post, John Robbins wrote a [post](http://www.wintellect.com/CS/blogs/jrobbins/archive/2009/11/09/tfs-2010-build-number-and-assembly-file-versions-completely-in-sync-with-only-msbuild-4-0.aspx) about synchronizing the TFS build number with the assembly version.         John's approach uses a versioning scheme that is similar -- if not identical --         to the one used by the Visual Studio team, in which the [Major Version](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx) and [Minor Version](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx) are fixed (e.g. 10.0), the [Build Number](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx) is computed automatically from the current date, and         the [Revision](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx) is incremented for each build on a particular day.
+Also, as noted in Jim's post, John Robbins wrote a [post](http://www.wintellect.com/CS/blogs/jrobbins/archive/2009/11/09/tfs-2010-build-number-and-assembly-file-versions-completely-in-sync-with-only-msbuild-4-0.aspx) about synchronizing the TFS build number with the assembly version.         John's approach uses a versioning scheme that is similar -- if not identical --         to the one used by the Visual Studio team, in which the [Major Version](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and [Minor Version](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) are fixed (e.g. 10.0), the [Build Number](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) is computed automatically from the current date, and         the [Revision](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) is incremented for each build on a particular day.
 
 While I like John's approach to assembly versioning (especially since it doesn't         require anything to be installed on the build server), I still prefer to be able         to control all four portions of the assembly version. Maybe it's just because I'm         a "control freak" or perhaps it's simply because I've been doing it a certain way         for the last ten years and it's hard to teach this old dog new tricks ;-)
 
 As I've mentioned before, I increment the Build Number portion of the assembly version         with each build on the "Main" branch, whereas I increment the Revision portion of         the assembly version with each build on the "QFE" branch (for patches).
 
-If this seems a little fuzzy, consider the project that I've been working on for         a little over a year now. Our first build (off the Main branch) was 1.0.1.0. The         second build was 1.0.2.0, and the third build was 1.0.3.0. By the time we were nearing         the end of Sprint-3, we were up to build 1.0.51.0. However shortly before the Sprint-3         release to Production (or shortly after -- it's been so long that I honestly can't         remember which) we needed to fix a couple of issues. Consequently, we checked in         those code changes on the QFE branch. Looking at [the **Builds** list that I maintain on the SharePoint team site](/blog/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx),         it appears that 1.0.51.3 was the last build for Sprint-3.
+If this seems a little fuzzy, consider the project that I've been working on for         a little over a year now. Our first build (off the Main branch) was 1.0.1.0. The         second build was 1.0.2.0, and the third build was 1.0.3.0. By the time we were nearing         the end of Sprint-3, we were up to build 1.0.51.0. However shortly before the Sprint-3         release to Production (or shortly after -- it's been so long that I honestly can't         remember which) we needed to fix a couple of issues. Consequently, we checked in         those code changes on the QFE branch. Looking at [the **Builds** list that I maintain on the SharePoint team site](/blog/jjameson/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site),         it appears that 1.0.51.3 was the last build for Sprint-3.
 
 While I can't tell which iteration or milestone build 1.0.51.3 corresponds to (simply         by looking at the assembly version), I can tell that it was a QFE/hotfix for the         1.0.51.0 release. From this, I can infer that the number of code changes between         the 1.0.51.0 build and the 1.0.51.3 build are minimal. Contrast this with assembly         versions where the Build Number portion is based on a date and the Revision is incremented         based on the number of builds performed on that particular day. I can certainly         see advantages and disadvantages to each approach.
 
@@ -80,9 +80,9 @@ As you can see, the portion of the workflow that updates the build number does n
 
 Consequently, we are going to have to make some significant changes to the workflow         if we want to increment the assembly version using a similar process to the one         previously used for TFS 2005/2008. To understand why, let's review the high-level         steps that I use for specifying the assembly version:
 
-1. The assembly version (e.g. 1.0.0.0) is specified in the [SharedAssemblyInfo.cs file](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx) located in the same folder as the Visual Studio solution.
+1. The assembly version (e.g. 1.0.0.0) is specified in the [SharedAssemblyInfo.cs file](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects) located in the same folder as the Visual Studio solution.
             Individual Visual Studio projects reference this shared file using the concept of
-            ["linked files" in Visual Studio](/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx). Note that the assembly version is not incremented
+            ["linked files" in Visual Studio](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions). Note that the assembly version is not incremented
             with each build.
 2. The assembly file version (e.g. 1.0.51.0) is specified in the AssemblyVersionInfo.cs
             file, which is also located in the same folder as the Visual Studio solution. Depending

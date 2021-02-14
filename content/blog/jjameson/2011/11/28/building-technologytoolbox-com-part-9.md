@@ -9,7 +9,7 @@ tags: ["Core
 			Development", "Subtext", "My System", "Web Development"]
 ---
 
-In[a previous post](/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx), I mentioned how the new Technology Toolbox home page highlights the most recent blog posts, as shown below.
+In[a previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), I mentioned how the new Technology Toolbox home page highlights the most recent blog posts, as shown below.
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
 		Figure 1: Technology Toolbox home page
@@ -70,7 +70,7 @@ Once I had the minimal "plumbing" necessary to retrieve the list of recent post
 
 ### RecentPosts.ascx
 
-As noted in[part 5 of this series](/blog/jjameson/archive/2011/11/09/building-technologytoolbox-com-part-5.aspx), the Technology Toolbox site currently uses the[hAtom 0.1 microformat](http://microformats.org/wiki/hatom) to render semantic HTML for blog posts.
+As noted in[part 5 of this series](/blog/jjameson/2011/11/09/building-technologytoolbox-com-part-5), the Technology Toolbox site currently uses the[hAtom 0.1 microformat](http://microformats.org/wiki/hatom) to render semantic HTML for blog posts.
 
 Here is the HTML structure for the **Most Recent Posts** section on the site home page (corresponding to the screenshot in Figure 1):
 
@@ -146,7 +146,7 @@ Here is the HTML structure for the **Most Recent Posts** section on the site ho
 
 
 
-Once I have defined the semantic markup for a feature (usually via[a static HTML prototype](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx)), I typically copy the sample HTML into a user control and then start replacing the sample content with ASP.NET controls to render the dynamic content.
+Once I have defined the semantic markup for a feature (usually via[a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)), I typically copy the sample HTML into a user control and then start replacing the sample content with ASP.NET controls to render the dynamic content.
 
 For the **Most Recent Posts **section on the site home page, I added a new user control to the project (**RecentPosts.ascx**), copied the sample HTML above into the user control, and then added an instance of the control to the site home page.
 

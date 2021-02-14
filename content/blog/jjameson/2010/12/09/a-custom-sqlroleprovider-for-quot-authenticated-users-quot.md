@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "Web Development", "SharePoint
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 

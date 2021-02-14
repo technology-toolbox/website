@@ -27,7 +27,7 @@ Once you've provided Google with a few parameters (such as the domain names to 
 
 ### Step 2: Create the search results page
 
-Next, I added a new page (Search.aspx) to the[static HTML prototype](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx) for TechnologyToolbox.com. Then I copied the HTML, JavaScript, and CSS provided by Google into the page.
+Next, I added a new page (Search.aspx) to the[static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3) for TechnologyToolbox.com. Then I copied the HTML, JavaScript, and CSS provided by Google into the page.
 
 At that point, the search page looked like Figure 1.
 
@@ -262,7 +262,7 @@ At this point, I copied the code from the prototype (created in Expression Web)
 
 While the basic functionality worked as expected at this point, there were a few areas for improving the user experience.
 
-First, rather than having to click the search icon, users should be able to simply press <kbd>Enter</kbd> after typing one or more search terms. [This obviously needs to work in all the major browsers, so I obviously didn't want to mimic the[functionality in MOSS 2007](/blog/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx).]
+First, rather than having to click the search icon, users should be able to simply press <kbd>Enter</kbd> after typing one or more search terms. [This obviously needs to work in all the major browsers, so I obviously didn't want to mimic the[functionality in MOSS 2007](/blog/jjameson/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox).]
 
 Second, to help draw attention to the search box, it should contain "Search..." by default, but when somebody clicks in the box the default text should be removed.
 
@@ -368,7 +368,7 @@ After some refactoring, I ended up with an ASP.NET control that encapsulates th
 > 		The code below originally specified "http://www.google.com/jsapi" which 
 > 		resulted in mixed mode content when browsing the site using HTTPS. I 
 > 		updated this to use a
-> 		[protocol-relative URL](/blog/jjameson/archive/2012/02/20/use-protocol-relative-urls-to-avoid-mixed-mode-content.aspx) instead ("//www.google.com/jsapi").
+> 		[protocol-relative URL](/blog/jjameson/2012/02/20/use-protocol-relative-urls-to-avoid-mixed-mode-content) instead ("//www.google.com/jsapi").
 
 
 
@@ -512,5 +512,5 @@ Here is the complete source for Search.aspx:
 
 
 
-I will describe the process of implementing Google Analytics in[my next post](/blog/jjameson/archive/2012/02/03/building-technologytoolbox-com-part-22.aspx).
+I will describe the process of implementing Google Analytics in[my next post](/blog/jjameson/2012/02/03/building-technologytoolbox-com-part-22).
 

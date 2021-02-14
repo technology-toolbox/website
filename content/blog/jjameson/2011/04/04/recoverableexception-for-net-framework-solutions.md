@@ -15,7 +15,7 @@ tags: ["My System", "Core Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Do you remember the good ol' days before the **ApplicationException** class in the .NET Framework became "[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure do.

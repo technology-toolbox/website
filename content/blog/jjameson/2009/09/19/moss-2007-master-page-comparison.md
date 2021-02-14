@@ -16,7 +16,7 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 This morning I came across an old (June 2007) Excel spreadsheet that I created back         when I was working on the Agilent Technologies project. The spreadsheet lists the         various placeholder elements in both application.master and default.master for Microsoft         Office SharePoint Server (MOSS) 2007.
@@ -80,5 +80,5 @@ I found the differences between the two master pages very interesting, as well a
 
 What I learned from this analysis was that by creating a master page with all of         the placeholder elements specified in both application.master and default.master,         I would ensure that my custom master page would work for site pages, system pages,         and application pages.
 
-I'll cover the topic of using a custom master page for application pages in a [separate post](/blog/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx).
+I'll cover the topic of using a custom master page for application pages in a [separate post](/blog/jjameson/2009/09/20/overriding-application-master-in-moss-2007).
 

@@ -18,7 +18,7 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -107,7 +107,7 @@ Various listeners can then be configured to output log messages. Each type of  l
 
 Note that the .NET Framework includes listeners for logging to a file, the Windows  Event Log, as well as ASP.NET tracing. Consequently, with just a little bit of custom  code (i.e. the `Logger` class) combined with all the "goodness" baked  into the core .NET Framework, we have a logging feature that meets all of the established  goals.
 
-In my [next post](/blog/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx), I introduce how to configure logging (starting out with a console  application).
+In my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-a-console-application), I introduce how to configure logging (starting out with a console  application).
 
 Here is the complete source for the `Logger` class:
 
@@ -336,7 +336,7 @@ Here is the complete source for the `Logger` class:
 > 	following post:
 > 
 > <cite>Logging Exceptions in .NET Applications</cite>
-> [http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](/blog/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx)
+> [http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications)
 
 
 Note that the Logger.cs file actually includes `#define TRACE` at  the top of the file. This is because I originally wrote this class with an old version  of Visual Studio (which did not define this compilation constant by default when  creating new projects). Visual Studio 2008 projects include this in the project  options by default (for both Debug and Release configurations), so this is superfluous.

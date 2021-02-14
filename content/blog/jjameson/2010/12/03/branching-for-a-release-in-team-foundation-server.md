@@ -16,10 +16,10 @@ tags: ["My System", "TFS"]
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In [my previous post](/blog/jjameson/archive/2010/12/03/recurring-tasks-in-team-foundation-server.aspx), I mentioned that one of the recurring tasks I create in         TFS each time I start a new iteration on a project is something like "Create branch         for Sprint-10" (the iteration specified in the title of the work item obviously         varies each time).
+In [my previous post](/blog/jjameson/2010/12/03/recurring-tasks-in-team-foundation-server), I mentioned that one of the recurring tasks I create in         TFS each time I start a new iteration on a project is something like "Create branch         for Sprint-10" (the iteration specified in the title of the work item obviously         varies each time).
 
 This work item serves a couple of purposes:
 
@@ -162,7 +162,7 @@ To create the "RTM" branch from the new "Service Pack" branch:
                 an open solution.")
 
 
-To increment the Revision portion of the assembly version on the "Service Pack"         branch (note that this assumes you are using the process I described in an earlier         post for [incrementing the assembly version for each build](/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)):
+To increment the Revision portion of the assembly version on the "Service Pack"         branch (note that this assumes you are using the process I described in an earlier         post for [incrementing the assembly version for each build](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)):
 
 1. In **Source Control Explorer**, in the new "Service Pack" branch, right-click
             the **IncrementAssemblyVersion.proj **or **TFSBuild.proj **

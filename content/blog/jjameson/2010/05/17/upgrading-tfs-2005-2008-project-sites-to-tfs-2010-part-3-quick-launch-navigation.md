@@ -22,7 +22,7 @@ tags: ["TFS", "SharePoint
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -34,7 +34,7 @@ tags: ["TFS", "SharePoint
 > 	version of the XML input file that I used to update my TFS project sites.
 
 
-In my [previous post](/blog/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx), I showed how you can use PowerShell to export the quick launch  navigation from a SharePoint site to XML and subsequently add, update, and reorder  navigation nodes by modifying the XML accordingly. In this post, I'll demonstrate  a practical application of that process.
+In my [previous post](/blog/jjameson/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell), I showed how you can use PowerShell to export the quick launch  navigation from a SharePoint site to XML and subsequently add, update, and reorder  navigation nodes by modifying the XML accordingly. In this post, I'll demonstrate  a practical application of that process.
 
 Project sites created using the MSF Agile v4.2 process template in Team Foundation  Server (TFS) 2008 have the following quick launch navigation:
 

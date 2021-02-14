@@ -17,7 +17,7 @@ tags: ["Windows Server", "Infrastructure"]
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 [Sorry the blog has been relatively silent this month -- but, on the other hand,         I did manage to make time for a vacation to Arizona this month (Sedona, Grand Canyon,         and then Scottsdale). It was a little hot, but a wonderful trip nonetheless.]
@@ -87,7 +87,7 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 
 Unfortunately, I never received a single response to my inquiry. Fortunately, my         initial suspicion was correct and I was able to resolve the issue a few days later         with a minor change to the NTFS permissions.
 
-Note that in a previous blog post, I described [how I (used to) backup files in the "Jameson Datacenter"](/blog/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx) (a.k.a. my home         lab). However, I had to abandon that approach after upgrading to Windows Server         2008 (since NTBackup is no longer supported for backing up files). [Note that although         NTBackup isn't included in Windows Server 2008, you can download it separately,         but the new version only supports restore operations (not backup operations).]
+Note that in a previous blog post, I described [how I (used to) backup files in the "Jameson Datacenter"](/blog/jjameson/2009/11/09/a-simple-backup-solution) (a.k.a. my home         lab). However, I had to abandon that approach after upgrading to Windows Server         2008 (since NTBackup is no longer supported for backing up files). [Note that although         NTBackup isn't included in Windows Server 2008, you can download it separately,         but the new version only supports restore operations (not backup operations).]
 
 Also note that the Windows Server Backup feature is substantially improved in Windows         Server 2008 R2 -- which is actually one of the reasons why I put off upgrading my         server (BEAST) for so long. If, like me, you tried using Windows Server Backup in         Windows Server 2008 but found it to be severely lacking in functionality, I encourage         you to take a look at the improvements made in Windows Server 2008 R2. While I still         miss NTBackup (mostly because I was very familiar with it), I'm starting to like         Windows Server Backup more and more as time goes on.
 

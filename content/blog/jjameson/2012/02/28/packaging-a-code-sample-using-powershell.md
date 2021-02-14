@@ -7,7 +7,7 @@ categories: ["Development"]
 tags: ["PowerShell", "TFS"]
 ---
 
-In[my post from earlier this morning](/blog/jjameson/archive/2012/02/28/zip-a-folder-using-powershell.aspx), I mentioned how I now use PowerShell to package code samples for my blog to avoid accidentally including "junk" in the zip files (e.g. temporary object folders created during the build).
+In[my post from earlier this morning](/blog/jjameson/2012/02/28/zip-a-folder-using-powershell), I mentioned how I now use PowerShell to package code samples for my blog to avoid accidentally including "junk" in the zip files (e.g. temporary object folders created during the build).
 
 Here is the script in hopes that it may help other developers out there.
 

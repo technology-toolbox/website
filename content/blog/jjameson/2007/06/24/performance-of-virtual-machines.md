@@ -15,7 +15,7 @@ tags: ["Virtualization"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Yesterday I had to rebuild our Test environment (TEST) to replace a VM (running on VMWare) with a physical server, due to very poor performance of the VM.
@@ -38,7 +38,7 @@ Prior to the horrible throughput numbers I experienced on Friday when copying fi
 
 I have seen many VM environments where organizations use a high-end server with 4 or 8 state-of-the-art processors and "gobs" of memory and subsequently assume that they can run 4 or more VMs on this one server without a problem. However, as noted earlier, CPU and memory represent only half of the resources that can ultimately become a bottleneck. In my experience, most VMs bottleneck first on disk I/O.
 
-Don't spend all of your money on multi-core processors and RAM, then skimp on a single 300 GB drive (even though this is more than large enough for the VMs). If you do, I can almost guarantee that your VM users will quickly complain about performance. When you start looking into the issue, you'll find that the disk queue length has "gone through the roof." [I noted in a [previous post](/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx) that while I am at the customer site (i.e. when I can't use the server in my basement) I run my local Microsoft Office SharePoint Server (MOSS) 2007 development VM on an external 7200 RPM USB drive to achieve acceptable performance.]
+Don't spend all of your money on multi-core processors and RAM, then skimp on a single 300 GB drive (even though this is more than large enough for the VMs). If you do, I can almost guarantee that your VM users will quickly complain about performance. When you start looking into the issue, you'll find that the disk queue length has "gone through the roof." [I noted in a [previous post](/blog/jjameson/2007/06/09/virtual-server-issues) that while I am at the customer site (i.e. when I can't use the server in my basement) I run my local Microsoft Office SharePoint Server (MOSS) 2007 development VM on an external 7200 RPM USB drive to achieve acceptable performance.]
 
 Furthermore, let's suppose that you do spec your disk configuration like the server in my basement (4x 300 GB SATA2 drives in a RAID 10 configuration). You still need to keep in mind that, depending on the number and speed of the NICs on the host server, performance may bottleneck on the network before CPU and memory become an issue.
 

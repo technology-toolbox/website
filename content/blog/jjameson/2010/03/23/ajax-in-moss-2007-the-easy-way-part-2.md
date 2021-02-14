@@ -21,11 +21,11 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx), I showed how you can quickly create an AJAX-enabled Web application  in Microsoft Office SharePoint Server (MOSS) 2007.
+In my [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I showed how you can quickly create an AJAX-enabled Web application  in Microsoft Office SharePoint Server (MOSS) 2007.
 
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 

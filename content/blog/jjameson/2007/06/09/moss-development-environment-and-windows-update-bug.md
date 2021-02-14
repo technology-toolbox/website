@@ -17,10 +17,10 @@ tags: ["MOSS 2007", "ISA Server"]
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx), I talked about splitting our Microsoft Office SharePoint         Server (MOSS) 2007 Development environment (DEV) into multiple VMs. What I did not         mention, however, is the nasty bug in Windows Update that I encountered along the         way.
+In my [previous post](/blog/jjameson/2007/06/09/virtual-server-issues), I talked about splitting our Microsoft Office SharePoint         Server (MOSS) 2007 Development environment (DEV) into multiple VMs. What I did not         mention, however, is the nasty bug in Windows Update that I encountered along the         way.
 
 Before I can explain the bug I first need to describe the environment. The following         model shows the important pieces of the environment.
 

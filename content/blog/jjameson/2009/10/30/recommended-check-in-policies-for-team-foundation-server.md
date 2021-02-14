@@ -14,7 +14,7 @@ tags: ["My System", "Core Development", "TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 I love using Team Foundation Server (TFS). There's just an amazing amount of "goodness" for software development that comes out-of-the-box; and there's even more available from Microsoft and other sources in the form of add-ons (many of which are free).
@@ -45,7 +45,7 @@ The Code Analysis policy can definitely cause a little heartburn for your Develo
 
 The Testing Policy is not one that I consider essential for all projects. For projects in which you have a good set of Build Verification Tests (BVTs) that give you a signficant amount of code coverage and don't take very long to execute, then enabling this policy just makes sense. However, keep in mind that you should definitely be running BVTs as part of your automated build, so if these tests require a substantial amount of time to execute (for example, they require signficant setup or teardown), then forcing developers to run these tests before every check-in could definitely impede their productivity.
 
-Of course, you can always separate your tests into "quick tests" and "long running tests" like I've mentioned in a previous [post](/blog/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx), and consequently only require the "quick tests" to be executed before check-in.
+Of course, you can always separate your tests into "quick tests" and "long running tests" like I've mentioned in a previous [post](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too), and consequently only require the "quick tests" to be executed before check-in.
 
 If you are fortunate enough to be using TFS on your project, I hope you are reaping the benefits of check-in policies.
 

@@ -17,11 +17,11 @@ tags: ["My System", "Virtualization"]
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 I've mentioned before how I run two Hyper-V servers in the "[Jameson
-            Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx)" (each one hosting a variety of different VMs).
+            Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (each one hosting a variety of different VMs).
 
 On the rare occasion that a patch comes out on Windows Update that affects Windows         Server 2008 Server Core edition (such as earlier this week), I typically need to         schedule a reboot of the Hyper-V servers. (From what I recall, most patches affecting         Server Core seem to require a reboot -- which makes me glad they don't come out         very often.)
 

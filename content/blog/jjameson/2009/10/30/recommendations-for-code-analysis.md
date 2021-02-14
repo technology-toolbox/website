@@ -15,10 +15,10 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx), I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis.
+In my [previous post](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server), I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis.
 
 If you are ever find yourself "starting from a clean slate" on a software development project, I hope you take advantage of the opportunity to not only enable Code Analysis, but also to treat all Code Analysis warnings as errors. That's right, go ahead and check all of those boxes (for both **Debug **and **Release **configurations, of course) so that whenever potential issues are reported by Code Analysis, it stops developers dead in their tracks and considers the build to be broken.
 
@@ -53,7 +53,7 @@ To avoid the CA1305 error, you will need to use something like this instead:
                     foo);
 
 
-You will also need to enable signing of all assemblies with a strong name key, and also specify various assembly level attributes (e.g. [`\[assembly: CLSCompliant(true)\]`](http://msdn.microsoft.com/en-us/library/system.clscompliantattribute.aspx)). However, if you follow the steps I've provided in a [previous post](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx), this should only take you at most 1-2 minutes.
+You will also need to enable signing of all assemblies with a strong name key, and also specify various assembly level attributes (e.g. [`\[assembly: CLSCompliant(true)\]`](http://msdn.microsoft.com/en-us/library/system.clscompliantattribute.aspx)). However, if you follow the steps I've provided in a [previous post](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), this should only take you at most 1-2 minutes.
 
 Like I said before, this will probably cause some heartburn in the beginning, but trust me, developers will quickly get used to it and the code they write will be much better as a result.
 

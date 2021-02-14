@@ -17,17 +17,17 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In [part 1](/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx) and [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx) of this series, I talked about some major issues with the variations         feature in Microsoft Office SharePoint Server (MOSS) 2007 that caused my current         customer to abandon using them on their new Internet site.
+In [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) and [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) of this series, I talked about some major issues with the variations         feature in Microsoft Office SharePoint Server (MOSS) 2007 that caused my current         customer to abandon using them on their new Internet site.
 
 Here is a brief summary of the three major issues we encountered with variations         prior to deployment:
 
 1. Incompatibility of out-of-the-box (OOTB) content types and variations (refer to
-            [part 1](/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx) for more details)
+            [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) for more details)
 2. Page propagation slows down dramatically as the number of pages grows (refer to
-            [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx) for more details)
+            [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) for more details)
 3. Attempting to create a new variation label after creating a large number of sites
             and pages results in an out-of-memory error on the server
 
@@ -53,8 +53,8 @@ Ultimately, though, I believe the bulk of the decision fell on performance, or m
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28before%29.jpg)
 
 
-Notice how the time required to propagate each page increases substantially as the         number of pages increases. As I pointed out in [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx), I believe this is due to the use of the **Relationships List
-        **(stored in the **AllUserData** table) in combination with         the content deployment API. Also notice how the time required to propagate each         page dropped substantially after adding the index described in [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx). Lastly, notice how long it took to propagate 2074 pages before the         index, compared with the remaining 959 pages after the index was added.
+Notice how the time required to propagate each page increases substantially as the         number of pages increases. As I pointed out in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), I believe this is due to the use of the **Relationships List
+        **(stored in the **AllUserData** table) in combination with         the content deployment API. Also notice how the time required to propagate each         page dropped substantially after adding the index described in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2). Lastly, notice how long it took to propagate 2074 pages before the         index, compared with the remaining 959 pages after the index was added.
 
 The following graph "zooms in" on the time period after the index was added.
 
@@ -66,9 +66,9 @@ The following graph "zooms in" on the time period after the index was added.
 
 It seems like it took SQL Server a little while to optimize based on the new index,         but it levels out around 40 seconds per page. Compared with the 10-minute propagations         before the new index on **AllUserData**, this seems fantastic. However,         that is only a relative comparison.
 
-The problem is that, as I described in [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx), we are currently on "v2" of our solution -- which has about 3,700         pages (of which, about 3,200 are FAQs). However, the "v3" solution is going to have         about 20,000 more pages. Consequently, even at an optimistic 40 seconds per variation         page propagation, we were forecasting about 9-1/2 days for migrating the pages from         the legacy system (20,000 pages x 40 seconds/page / 60 seconds/minute / 60 minutes/hour         / 24 hours/day). However, we really don't know the accuracy of that estimate without         additional testing.
+The problem is that, as I described in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), we are currently on "v2" of our solution -- which has about 3,700         pages (of which, about 3,200 are FAQs). However, the "v3" solution is going to have         about 20,000 more pages. Consequently, even at an optimistic 40 seconds per variation         page propagation, we were forecasting about 9-1/2 days for migrating the pages from         the legacy system (20,000 pages x 40 seconds/page / 60 seconds/minute / 60 minutes/hour         / 24 hours/day). However, we really don't know the accuracy of that estimate without         additional testing.
 
-The bottom line is that, even with the index I proposed in [part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx), the content deployment (a.k.a. PRIME) API used by the variations         feature to propagate pages incurs signficant overhead.
+The bottom line is that, even with the index I proposed in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), the content deployment (a.k.a. PRIME) API used by the variations         feature to propagate pages incurs signficant overhead.
 
 As a comparison, I believe our last FAQ migration (without variations) completed         in about 4 hours for 16,000 pages (3,200 pages x 5 languages). Note, however, that         in order to achieve this throughput, we had to forego all of the value-add of the         variations feature, such as automatically creating a new FAQ on the **ja-JP**,         **ko-KR**, **zh-CN**, and **zh-TW **sites         (in preparation for translation), when the corresponding FAQ is approved on the         **en-US** site.
 

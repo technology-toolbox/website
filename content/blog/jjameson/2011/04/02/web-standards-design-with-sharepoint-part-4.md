@@ -17,10 +17,10 @@ tags: ["SharePoint 2010", "Tugboat"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In [part 2](/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx) of this series, I provided a sample Microsoft Office SharePoint Server         (MOSS) 2007 solution based on Dan Cederholm's [Tugboat sample site](http://www.handcraftedcss.com/) (from his most recent book, [Handcrafted CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
+In [part 2](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2) of this series, I provided a sample Microsoft Office SharePoint Server         (MOSS) 2007 solution based on Dan Cederholm's [Tugboat sample site](http://www.handcraftedcss.com/) (from his most recent book, [Handcrafted CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
 
 Ever since then, I've been meaning to upgrade my sample to SharePoint Server 2010,         but too many other priorities preempted that effort -- until now.
 

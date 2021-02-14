@@ -17,10 +17,10 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In a [previous post](/blog/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx), I hinted at some issues that I recently encountered after         switching from Windows Server 2003 to Windows Server 2008 on my primary development         VM for Microsoft Office SharePoint Server (MOSS) 2007.
+In a [previous post](/blog/jjameson/2009/01/23/error-installing-moss-2007-december-cumulative-update), I hinted at some issues that I recently encountered after         switching from Windows Server 2003 to Windows Server 2008 on my primary development         VM for Microsoft Office SharePoint Server (MOSS) 2007.
 
 To make this a little more fun, let's start with a pop quiz for the SharePoint experts         out there.
 
@@ -86,7 +86,7 @@ This might very well be documented somewhere on TechNet, but at this point I am 
 
 > **Update (2009-03-12)**
 > 
->             Also note the following blurb from my [earlier post](/blog/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx) (duplicated here since it took me more than 20 seconds to find
+>             Also note the following blurb from my [earlier post](/blog/jjameson/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address) (duplicated here since it took me more than 20 seconds to find
 >             it when the issue came up during a team discussion)...
 >             
 > Note that after aliasing my local VM name to the loopback address (127.0.0.1), I                 had to use the workaround in [KB 896861](http://support.microsoft.com/kb/896861)                 in order to resolve "access denied" errors when indexing content:
@@ -100,7 +100,7 @@ This might very well be documented somewhere on TechNet, but at this point I am 
 
 > **Update (2009-04-01)**
 > 
->             Also see my post describing the issue where the [**Temporary ASP.NET Files folder** is not being cleaned up](/blog/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx)
+>             Also see my post describing the issue where the [**Temporary ASP.NET Files folder** is not being cleaned up](/blog/jjameson/2009/04/01/temporary-asp-net-files-are-not-deleted)
 >             on my Windows Server 2008 development VM. I don't recall ever encountering this
 >             problem before when using Windows Server 2003.
 

@@ -16,10 +16,10 @@ tags: ["My System", "Infrastructure"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx), which is really just my home lab that I use for learning         new technologies and improving my skills, as well as actually completing my day-to-day         tasks on various customer projects (whenever I am actually able to work from home         instead of using my laptop at a customer site).
+In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter), which is really just my home lab that I use for learning         new technologies and improving my skills, as well as actually completing my day-to-day         tasks on various customer projects (whenever I am actually able to work from home         instead of using my laptop at a customer site).
 
 In this post, I want to share details about how I've configured my Active Directory         domain, namely **corp.technologytoolbox.com**.
 
@@ -77,7 +77,7 @@ The following table summarizes the various OUs in the domain:
 
 Note that this domain structure, I'm able to use the Group Policy feature of Active         Directory to "effortlessly" configure new servers.
 
-For example, this morning I created a new development VM (FOOBAR3) from a [SysPrep'ed VHD](/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx) file. After joining the new VM to the domain, I then moved         FOOBAR3 to the **Development/Resources/Servers** OU. After the VM rebooted         (which is required when you join a domain), it was automatically configured with         numerous settings, including Windows Update (i.e. to update from my WSUS server         -- COLOSSUS) and also to grant the **TECHTOOLBOX\Development Admins**         group administrative access (of which **TECHTOOLBOX\jjameson **is a         member). I was then able to quickly log in with my regular account and start installing         SQL Server 2008 (which finished before I actually completed this post). Now it's         time to install Visual Studio 2008...
+For example, this morning I created a new development VM (FOOBAR3) from a [SysPrep'ed VHD](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines) file. After joining the new VM to the domain, I then moved         FOOBAR3 to the **Development/Resources/Servers** OU. After the VM rebooted         (which is required when you join a domain), it was automatically configured with         numerous settings, including Windows Update (i.e. to update from my WSUS server         -- COLOSSUS) and also to grant the **TECHTOOLBOX\Development Admins**         group administrative access (of which **TECHTOOLBOX\jjameson **is a         member). I was then able to quickly log in with my regular account and start installing         SQL Server 2008 (which finished before I actually completed this post). Now it's         time to install Visual Studio 2008...
 
 I'll cover my group policy configuration in a separate post.
 

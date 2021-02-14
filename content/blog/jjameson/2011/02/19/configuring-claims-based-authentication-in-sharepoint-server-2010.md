@@ -20,7 +20,7 @@ tags: ["My System", "SharePoint
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -32,7 +32,7 @@ Note that the following TechNet article provides *some*of the steps for  configu
 [http://technet.microsoft.com/en-us/library/ee806890.aspx](http://technet.microsoft.com/en-us/library/ee806890.aspx)
 
 
-I had originally intended this post to simply serve as a precursor to [my next post](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx), but during the process of writing this post, I realized that there  are many pieces lacking from the TechNet article. For example, if you use the current  PowerShell script provided in the above TechNet article, you end up with a Web application  that doesn't support Search (because it does not enable both Windows authentication  as well as Forms-Based Authentication).
+I had originally intended this post to simply serve as a precursor to [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), but during the process of writing this post, I realized that there  are many pieces lacking from the TechNet article. For example, if you use the current  PowerShell script provided in the above TechNet article, you end up with a Web application  that doesn't support Search (because it does not enable both Windows authentication  as well as Forms-Based Authentication).
 
 In this post, I'll share a "real world" process for creating and configuring  a Web application in SharePoint Server 2010 using claims-based authentication.
 
@@ -483,7 +483,7 @@ The final step is to validate the Web application works as expected when using  
 > This is discussed in more detail in the following blog post:
 > 
 > <cite>Be "In the Zone" to Avoid Entering Credentials</cite>
-> [http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx)
+> [http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com) and click **Sign In**.
 3. On the **Sign In **page, in the dropdown list, click**Windows Authentication**.
 4. Verify the home page is displayed and the **Sign In **link has been replaced with the "Welcome" menu.
@@ -491,5 +491,5 @@ The final step is to validate the Web application works as expected when using  
 
 ### What's next?
 
-In [my next post](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx), I explain how to create a custom Web Part that can be used to  provide a "branded" login page (instead of the generic "Sign In" page provided out-of-the-box  in SharePoint Server 2010).
+In [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), I explain how to create a custom Web Part that can be used to  provide a "branded" login page (instead of the generic "Sign In" page provided out-of-the-box  in SharePoint Server 2010).
 

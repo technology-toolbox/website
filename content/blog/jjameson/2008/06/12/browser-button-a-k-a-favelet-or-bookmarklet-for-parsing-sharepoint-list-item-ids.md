@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "WSS v3", "
 > [http://blogs.msdn.com/b/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 This morning I received an email from a customer inquiring about making it easier         for users to determine the unique identifier for each document in a library. Typically,         users don't really care about this "List Item ID" for a document, but there are         scenarios where this is useful (or perhaps even required).

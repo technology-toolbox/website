@@ -15,10 +15,10 @@ tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-It occurred to me this morning that while I previously shared some details on [how I manage my MSDN blog](/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx), I've never shared my method for formatting code for the Web.
+It occurred to me this morning that while I previously shared some details on [how I manage my MSDN blog](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server), I've never shared my method for formatting code for the Web.
 
 Actually, calling it "my method" is definitely a bit of a stretch. I certainly didn't come up with the approach but rather refined someone else's approach (and code) to suit my needs. The original credit goes to [David Anson](http://blogs.msdn.com/delay).
 
@@ -376,5 +376,5 @@ Here's the updated code that I now use for my Rtf2Html.exe utility:
 
 I suppose I could have kept the ConvertClipboardRtfToHtmlText moniker that David originally had, but for some reason I decided to abbreviate it. In hindsight, I'm really not sure why I didn't keep the name, but oh well...
 
-Whenever I need a code sample in a blog post, I simply copy the code in Visual Studio, double-click Rtf2Html.exe in my [Toolbox](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx), and then paste into Expression Web. It's still a three-step process, but not one that takes more than three or four seconds, and more importantly, it now produces much better HTML markup than the hack I used to use with Microsoft Word.
+Whenever I need a code sample in a blog post, I simply copy the code in Visual Studio, double-click Rtf2Html.exe in my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup), and then paste into Expression Web. It's still a three-step process, but not one that takes more than three or four seconds, and more importantly, it now produces much better HTML markup than the hack I used to use with Microsoft Word.
 

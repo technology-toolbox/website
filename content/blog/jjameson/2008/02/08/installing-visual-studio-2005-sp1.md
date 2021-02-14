@@ -18,12 +18,12 @@ tags: ["Core Development"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 Stepping into the ["Wayback 
-Machine"](http://en.wikipedia.org/wiki/Wayback_Machine) for a moment, I realized that I hinted about [a problem with installing Visual Studio 2005 SP1](/blog/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx), but I never got around to  blogging about it in more detail. Unfortunately, I just got bit by this problem  yet again this morning because I naively tried to use the vanilla Windows Update  functionality after installing SQL Server 2005 on my freshly-rebuilt Windows Server  2003 machine. [Note: SQL Server 2005 uses the Visual Studio 2005 IDE as the shell  for SQL Server Management Studio. Consequently, even though you may not have installed  Visual Studio 2005, you need to install Visual Studio 2005 SP1 after installing  SQL Server 2005. This is separate from any SQL Server service packs.]
+Machine"](http://en.wikipedia.org/wiki/Wayback_Machine) for a moment, I realized that I hinted about [a problem with installing Visual Studio 2005 SP1](/blog/jjameson/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs), but I never got around to  blogging about it in more detail. Unfortunately, I just got bit by this problem  yet again this morning because I naively tried to use the vanilla Windows Update  functionality after installing SQL Server 2005 on my freshly-rebuilt Windows Server  2003 machine. [Note: SQL Server 2005 uses the Visual Studio 2005 IDE as the shell  for SQL Server Management Studio. Consequently, even though you may not have installed  Visual Studio 2005, you need to install Visual Studio 2005 SP1 after installing  SQL Server 2005. This is separate from any SQL Server service packs.]
 
 After double-clicking the "Golden Shield" (a.k.a. the Windows Update icon in  the task tray), I was quickly informed that the attempt to install Visual Studio  2005 Service Pack 1 failed...miserably.
 

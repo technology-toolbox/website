@@ -18,18 +18,18 @@ tags: ["Windows Server", "Windows 7", "Toolbox"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-As I was writing [my first post earlier this morning](/blog/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx), I wondered if I had previously shared the  script I use to quickly clear the event logs on a server (but saving them first  -- just in case I need to go back and retrieve something from the "archive").
+As I was writing [my first post earlier this morning](/blog/jjameson/2011/03/01/script-to-restart-sharepoint-2010-services), I wondered if I had previously shared the  script I use to quickly clear the event logs on a server (but saving them first  -- just in case I need to go back and retrieve something from the "archive").
 
 I did a quick search on my blog and didn't see anything, so I figured that I  should create a quick post to share this with others who might find it useful. If  memory serves, the following script was something I put together based on various  samples from the TechNet Script Center.
 
 Note that I typically use this script only in development environments. I discovered  a few years ago that Operations Manager doesn't like it when I clear the event logs  on "Production" servers in the "[Jameson 
-Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx)" (a.k.a. my home lab). It's not that anything really bad happens,  but rather the Operations Manager agent detects the event logs have been cleared  and subsequently generates a warning. In other words, it's probably not considered  a best practice to clear your event logs on a server that is actively being monitored  by something like Operations Manager.
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab). It's not that anything really bad happens,  but rather the Operations Manager agent detects the event logs have been cleared  and subsequently generates a warning. In other words, it's probably not considered  a best practice to clear your event logs on a server that is actively being monitored  by something like Operations Manager.
 
-Here is the script from my [Toolbox](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)  folder (\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs):
+Here is the script from my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup)  folder (\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs):
 
 
 

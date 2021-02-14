@@ -16,7 +16,7 @@ tags: ["My System", "Web Development", "TFS"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 In case you haven't picked it up from some of my previous posts, I became somewhat         of a "Web standards zealot" back in 2006 while creating a "community site" for a         [local organization of mental health professionals
@@ -50,7 +50,7 @@ Once I have finished writing a blog post in Expression Web, I simply copy the HT
 
 I freely admit this approach takes a little longer than simply authoring posts directly         on the site, but I believe it is well worth it. Even more so, now that my blog is         stored in Team Foundation Server (TFS)...
 
-Back in August while I was in Redmond for SharePoint 2010 Training, I took the opportunity         of being on the Microsoft campus to rebuild my laptop with Windows 7. Prior to that         rebuild, I had been running Windows Server 2008 on my laptop so that I could utilize         Hyper-V regardless of whether I was working at a customer site or from home (with         access to the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) and all of my various VMs).
+Back in August while I was in Redmond for SharePoint 2010 Training, I took the opportunity         of being on the Microsoft campus to rebuild my laptop with Windows 7. Prior to that         rebuild, I had been running Windows Server 2008 on my laptop so that I could utilize         Hyper-V regardless of whether I was working at a customer site or from home (with         access to the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) and all of my various VMs).
 
 As part of this latest rebuild, I installed the latest version of the Microsoft         Expression suite. One of the new features I discovered in Expression Web 3 is the         ability to integrate with Team Foundation Server for source control. Note that this         integration isn't completely out-of-the-box (i.e. you have to download a [QFE](http://code.msdn.microsoft.com/KB967483) to enable it).
 

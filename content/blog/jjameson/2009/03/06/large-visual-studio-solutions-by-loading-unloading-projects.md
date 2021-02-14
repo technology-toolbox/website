@@ -18,11 +18,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-As I noted in my [previous post](/blog/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
+As I noted in my [previous post](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
 
 On my previous project, we had 52 projects in our solution. On my current project,  there are 30.
 
@@ -36,10 +36,10 @@ As you start adding more and more projects to a solution, you'll inevitably disc
 - Incremental build time increases, even when the only changes that have been made are in "leaf" projects (i.e. projects that don't reference other projects)
 
 
-Obviously we should expect the build time to take a while whenever we make a  change in one project that is referenced by many others (e.g. [a "CoreServices" project](/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx) like I've described in the past).
+Obviously we should expect the build time to take a while whenever we make a  change in one project that is referenced by many others (e.g. [a "CoreServices" project](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) like I've described in the past).
 
 If, like me, you've grown accustomed to Test Driven Development (TDD) however,  then you know that it's essential to minimize the ["Red, Green, 
-Refactor"](http://msdn.microsoft.com/en-us/library/aa730844%28VS.80%29.aspx) cycle. If your [incremental build time requires 28 seconds](/blog/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx), then your developer productivity  is going to take a hit in a big, big way.
+Refactor"](http://msdn.microsoft.com/en-us/library/aa730844%28VS.80%29.aspx) cycle. If your [incremental build time requires 28 seconds](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), then your developer productivity  is going to take a hit in a big, big way.
 
 So, what can we do to mitigate these issues?
 
@@ -56,7 +56,7 @@ Project** option way down near the bottom of the context menu. When you unload  
 
 Whenever you need to change something in an unloaded project, simply right-click  the project and click **Reload Project**.
 
-Unloading a project is also useful whenever you need to edit the MSBuild file  -- for example, to [rebuild a CAB or WSP whenever a dependency changes](/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx).
+Unloading a project is also useful whenever you need to edit the MSBuild file  -- for example, to [rebuild a CAB or WSP whenever a dependency changes](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files).
 
 An important thing to understand about loading and unloading projects is that  the settings are stored in the solutions options (.suo) file which is specific to  each developer and should never be stored in source control. In other words, if  I unload a project in my workspace, this has no effect on other team members. Removing  a project, on the other hand, changes the solution file (.sln) itself and therefore  impacts other members of the development team.
 
@@ -64,7 +64,7 @@ Note that you can quickly unload or reload multiple projects at a time by using 
 
 Also note that you can use Visual Studio macros to quickly unload or reload all  of the projects in a solution with a single click (well, actually a double-click,  but you get the point).
 
-I'll share the macros that I developed and have been using for years in [a separate post](/blog/jjameson/archive/2009/03/11/visual-studio-macros-for-unloading-reloading-projects.aspx).
+I'll share the macros that I developed and have been using for years in [a separate post](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects).
 
 There is one caveat that you should be aware of when unloading projects. Visual  Studio warns you when you attempt to unload projects with pending changes in source  control. Generally speaking, you want to avoid proceeding whenever Visual Studio  displays the warning for this scenario.
 

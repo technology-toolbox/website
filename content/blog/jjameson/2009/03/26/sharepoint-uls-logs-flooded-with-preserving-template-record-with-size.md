@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "WSS v3", "
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 I was digging through my blog dashboard this morning and I came across this post         that I started back in January but apparently never got it past "draft mode." I         figured it was time to finish it off.
@@ -45,7 +45,7 @@ In other words, assuming you aren't trying to run your Production SharePoint env
 
 The better news is that the "Preserving template record with size..." issue has         been duly noted by the product team (in other words, a bug has been created) and         it appears the logging level for this event will be changed in "O14" (i.e. the next         version of SharePoint) to avoid incessantly spewing this message with the default         logging settings.
 
-As for addressing my daily "log purging" needs, I simply created the following script         and dropped it in my SharePoint [Toolbox](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx) folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Delete SharePoint         Logs.cmd):
+As for addressing my daily "log purging" needs, I simply created the following script         and dropped it in my SharePoint [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Delete SharePoint         Logs.cmd):
 
 
 

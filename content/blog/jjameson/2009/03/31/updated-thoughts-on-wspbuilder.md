@@ -19,11 +19,11 @@ tags: ["MOSS 2007"]
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-Several weeks ago, I wrote a post titled "[Why I'm Not a Fan of WSPBuilder](/blog/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx)." Shortly thereafter, I received a message from Carsten Keutmann, the creator of WSPBuilder.
+Several weeks ago, I wrote a post titled "[Why I'm Not a Fan of WSPBuilder](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder)." Shortly thereafter, I received a message from Carsten Keutmann, the creator of WSPBuilder.
 
 Here is the "almost" unabridged version of the email exchange (headers and signatures removed):
 
@@ -107,13 +107,13 @@ It turns out that the very long build times I noted in my earlier post are real
 
 To verify this, I had planned on performing an experiment in which I would eliminate the custom SharePoint.WSPBuilder.targets file and replace the four separate MSBuild projects in our solution (used to build the corresponding WSPs) with simple `<Exec>` tasks that invoke WspBuilder.exe to create the manifest files and corresponding WSPs.
 
-In other words, I wanted to check the incremental build times when invoking WspBuilder.exe in the same[manner that I used to invoke makecab.exe](/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx) on my previous project.
+In other words, I wanted to check the incremental build times when invoking WspBuilder.exe in the same[manner that I used to invoke makecab.exe](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files) on my previous project.
 
 Unfortunately, after digging into this for a half hour, I realized this was going to take considerable time and effort. While it sounds like a relatively simple exercise, the reality is that the way our current solution is structured, one WSP actually packages multiple features. In other words, part of the "magic" performed by the custom SharePoint.WSPBuilder.targets file is to perform a "deep copy" of, for example, the "12" folders in multiple feature projects into a temporary folder. WSPBuilder is subsequently invoked in that temporary folder to create a combined manifest and package items into the WSP.
 
 Conceptually, however, I do believe that if you choose to use WSPBuilder, then you should integrate it into your solution as a separate task in your project file (which simply uses an `<Exec>` task to invoke WspBuilder.exe with the various command-line options necessary to create your manifest and build the WSP).
 
-Refer to my original post for more details on how to do this:[A Better Way to Build SharePoint Solution Packages (and CAB Files)](/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx). Just substitute the use of makecab.exe with WspBuilder.exe and make the corresponding changes as necessary.
+Refer to my original post for more details on how to do this:[A Better Way to Build SharePoint Solution Packages (and CAB Files)](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files). Just substitute the use of makecab.exe with WspBuilder.exe and make the corresponding changes as necessary.
 
 While Keutmann may think "it doesn't make sense that you would build the WSP package every time that you rebuild your code" and instead prefer to use the WSPBuilder Extensions for Visual Studio, personally I like to keep things simple and therefore I would much rather have <kbd>CTRL+SHIFT+B</kbd> build everything that needs to be built -- acknowledging that, like Keutmann, I bypass deploying the updated solution (and instead just GAC the updated assemblies) if I know that all that has changed is code and not, for example, master pages or page layouts (i.e. ASPX files).
 

@@ -14,10 +14,10 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.
+Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/2009/11/09/configuring-ssl-on-sharepoint-sites) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.
 
 Here is a base class that contains the core logic for detecting when a redirect from HTTP to HTTPS is required and automatically redirecting as necessary:
 
@@ -207,7 +207,7 @@ Also note that there are several scenarios in which a redirect is avoided:
 
 - When the connection is already secure (well, duh...we obviously don't want to cause an endless redirect loop)
 - When the request URL does not specify a fully qualified domain name, but rather an intranet URL (e.g. http://fabrikam). In this scenario, user are expected to be authenticated using Windows Authentication, which does not send credentials in clear text and therefore does not require SSL.
-- In LOCAL developer environments (e.g. http://www-local.fabrikam.com) and the Development Integration environment (DEV) -- e.g. http://www-dev.fabrikam.com -- since these environments don't typically have SSL certificates installed. This is an example of why a standard [environment naming convention](/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx) is important.
+- In LOCAL developer environments (e.g. http://www-local.fabrikam.com) and the Development Integration environment (DEV) -- e.g. http://www-dev.fabrikam.com -- since these environments don't typically have SSL certificates installed. This is an example of why a standard [environment naming convention](/blog/jjameson/2009/06/09/environment-naming-conventions) is important.
 - When the page where the Web Part resides is being edited (because we don't want to force a redirect immediately after someone adds the Web Part to a page). This scenario is not expected to occur, since content managers will typically use the intranet URL (e.g. http://fabrikam) for creating and editing pages. However, it is covered just in case the scenario is ever encountered.
 
 

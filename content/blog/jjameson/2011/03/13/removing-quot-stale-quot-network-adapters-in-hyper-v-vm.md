@@ -20,11 +20,11 @@ tags: ["My System", "Infrastructure", "Virtualization"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-Each time I create (or recreate) a virtual machine in Hyper-V using [one of my SysPrep'ed images](/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx), I usually end up having to do a quick Internet  search for:
+Each time I create (or recreate) a virtual machine in Hyper-V using [one of my SysPrep'ed images](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines), I usually end up having to do a quick Internet  search for:
 
 
 > device manager show hidden devices

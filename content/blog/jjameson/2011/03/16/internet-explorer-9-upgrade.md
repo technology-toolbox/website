@@ -15,10 +15,10 @@ tags: ["Simplify", "Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-Two years ago, I wrote a post about [upgrading to Internet Explorer 8](/blog/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx). Well, in case you missed the announcement a couple of days ago, Internet Explorer 9 has been released. Woohoo!
+Two years ago, I wrote a post about [upgrading to Internet Explorer 8](/blog/jjameson/2009/03/24/internet-explorer-8-upgrade). Well, in case you missed the announcement a couple of days ago, Internet Explorer 9 has been released. Woohoo!
 
 It's been a long time coming, but I believe the wait has been well worth it.
 

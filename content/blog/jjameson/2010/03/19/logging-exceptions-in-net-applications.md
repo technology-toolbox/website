@@ -19,10 +19,10 @@ tags: ["My System", "Simplify", "
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-Last summer I wrote a post introducing [my simple, but highly effective approach to logging](/blog/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx) -- including a **Logger
+Last summer I wrote a post introducing [my simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) -- including a **Logger
             **class that is really just a thin wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
 
 A few months ago, I enhanced the **Logger **class to log exceptions         in a consistent fashion.
@@ -510,7 +510,7 @@ Here is the complete source for the updated **Logger **class:
 
 
 
-In a [follow-up post](/blog/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx), I'll cover how to handle errors in SharePoint Web applications         without necessarily adding a bunch or try/catch blocks, while still avoiding the         out-of-the-box SharePoint error page (which doesn't look very good on an Internet-facing         site).
+In a [follow-up post](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), I'll cover how to handle errors in SharePoint Web applications         without necessarily adding a bunch or try/catch blocks, while still avoiding the         out-of-the-box SharePoint error page (which doesn't look very good on an Internet-facing         site).
 
 
 > **Update (2011-01-31)**

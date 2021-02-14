@@ -19,7 +19,7 @@ tags: ["Core Development", "WSS v2"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -27,7 +27,7 @@ tags: ["Core Development", "WSS v2"]
 > **Update (2008-04-07)**
 > 
 > ["TFS 
-> 	Lite" for WSS v3](/blog/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx) is now available.
+> 	Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now available.
 
 
 For almost as long as I can remember (okay, not really that long -- but at least  as far back as 2003), I've been using SharePoint lists as a bug tracking tool on  almost all of the customer projects that I have been involved with. Contrary to  what you might think, many of our enterprise customers do not have effective tools  and processes in place for managing a software development project.

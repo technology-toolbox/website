@@ -7,11 +7,11 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-As I described in[a previous post](/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx), TechnologyToolbox.com currently uses ELMAH to log errors that occur on the website. In[a follow-up post](/blog/jjameson/archive/2012/01/23/building-technologytoolbox-com-part-15.aspx) I also discussed some of the errors that have occurred since the website went live last year -- many of which result from failed attempts by hackers.
+As I described in[a previous post](/blog/jjameson/2012/01/22/building-technologytoolbox-com-part-14), TechnologyToolbox.com currently uses ELMAH to log errors that occur on the website. In[a follow-up post](/blog/jjameson/2012/01/23/building-technologytoolbox-com-part-15) I also discussed some of the errors that have occurred since the website went live last year -- many of which result from failed attempts by hackers.
 
 Last Friday I received 23 email messages from ELMAH because the scoundrel with IP address96.31.39.146 apparently had nothing better to do with his or her time thantry to manipulate the ASP.NET view state (apparently via some automated tool, based on the number of errors in such as short amount of time).
 
-Even though I previously configured[Outlook rules](/blog/jjameson/archive/2010/01/04/managing-email-effectively.aspx) to automatically move these messages out of my inbox, I was tired of seeing these messages altogether. So this past weekend, I decided to add a filter to ELMAH to avoid sending messages when an error occurs as a result of a known hack attempt.
+Even though I previously configured[Outlook rules](/blog/jjameson/2010/01/04/managing-email-effectively) to automatically move these messages out of my inbox, I was tired of seeing these messages altogether. So this past weekend, I decided to add a filter to ELMAH to avoid sending messages when an error occurs as a result of a known hack attempt.
 
 
 > **Note**
@@ -243,7 +243,7 @@ Issue 277 became somewhat of a moot point last weekend because once I discovered
 
 
 
-However, while initially testing this new approach, I found that I still received email messages that should have been blocked by the filter. Thinking that I must have translated my filter incorrectly (from the various XML elements to the JScript expression), I took a little detour and spent about a half hour creating some unit tests for ELMAH (which I will share in[a separate post](/blog/jjameson/archive/2012/02/29/unit-tests-for-filtering-errors-in-elmah.aspx)).
+However, while initially testing this new approach, I found that I still received email messages that should have been blocked by the filter. Thinking that I must have translated my filter incorrectly (from the various XML elements to the JScript expression), I took a little detour and spent about a half hour creating some unit tests for ELMAH (which I will share in[a separate post](/blog/jjameson/2012/02/29/unit-tests-for-filtering-errors-in-elmah)).
 
 The problem, as it turns out, was due to the fact that I ran my initial tests with the JavaScript filter under Full trust. When I ran the tests in Medium trust, the JavaScript filter worked as expected.
 

@@ -14,10 +14,10 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In the [part 1 of this series](/blog/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx), I described how to enable the dashboard functionality in Team Foundation Server (TFS) 2010 on project sites upgraded from TFS 2005/2008 (i.e. sites originally created with the MSF Agile v4.x process templates). I noted that it wasn't quite as simple as activating a feature on the SharePoint site because some of the TFS Web Parts on the new dashboards specify the new **User Story** work item type introduced in the MSF Agile v5 process template, instead of the old **Scenario** work item type.
+In the [part 1 of this series](/blog/jjameson/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features), I described how to enable the dashboard functionality in Team Foundation Server (TFS) 2010 on project sites upgraded from TFS 2005/2008 (i.e. sites originally created with the MSF Agile v4.x process templates). I noted that it wasn't quite as simple as activating a feature on the SharePoint site because some of the TFS Web Parts on the new dashboards specify the new **User Story** work item type introduced in the MSF Agile v5 process template, instead of the old **Scenario** work item type.
 
 [Honestly, I'm not sure why the TFS team felt compelled to change the name of the work items. My preference would have been to keep the original work item type and extend it as necessary (e.g. to add a "Story Points" field) -- if for no other reason than to avoid having to update numerous Web Parts and Excel reports on upgraded TFS project sites. Obviously the TFS product group didn't ask for my opinion on the matter ;-)
 
@@ -89,7 +89,7 @@ Consequently, for upgraded project sites we need to update the Web Part query to
 
 
 
-If you've done much SharePoint development, or if you've seen my [previous post on the **SharePointWebPartManager** class](/blog/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx), then you are likely familiar with programmatically manipulating Web Parts using the **[SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)** class.
+If you've done much SharePoint development, or if you've seen my [previous post on the **SharePointWebPartManager** class](/blog/jjameson/2009/10/17/introducing-the-sharepointwebparthelper-class), then you are likely familiar with programmatically manipulating Web Parts using the **[SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)** class.
 
 Before listing the PowerShell script that will update the query on the **Project Work Items **Web Part, it is important to note that the Web Part is actually displayed on each of the dashboard pages:
 

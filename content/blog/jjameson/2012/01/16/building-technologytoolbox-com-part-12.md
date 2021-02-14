@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2012/01/15/building-technologytoolbox-com-part-11.aspx), I briefly mentioned how I use a CSS sprite and jQuery to render the expandable list under the **Archives **section on the various blog pages of the Technology Toolbox site.
+In[my previous post](/blog/jjameson/2012/01/15/building-technologytoolbox-com-part-11), I briefly mentioned how I use a CSS sprite and jQuery to render the expandable list under the **Archives **section on the various blog pages of the Technology Toolbox site.
 
 ![Blog home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png)
 		Figure 1: Blog home page
@@ -19,7 +19,7 @@ One of my "love/hate" features on[my old MSDN blog](http://blogs.msdn.com/jjame
 
 Consequently, when it came time to create my new blog, I knew I wanted to provide similar functionality but "minimize" the archive list by default and allow users to "drill into" the list if they choose to.
 
-If you look "under the covers" at one of the pages on my new blog, you can see how I started out by defining some semantic markup for the **Archives**section[using a static HTML prototype](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx):
+If you look "under the covers" at one of the pages on my new blog, you can see how I started out by defining some semantic markup for the **Archives**section[using a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3):
 
 
 

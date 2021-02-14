@@ -19,7 +19,7 @@ tags: ["Simplify", "WCF"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -66,13 +66,13 @@ I have to admit, I was completely dumbfounded by this statement. An MSDN article
 What's that old movie quote about "dogs and cats living together" and "mass hysteria"?  According to my calendar, it's definitely still March -- so no April Fool's joke  here.
 
 So, seriously, what gives? We are using "using" statements throughout our solution.  In my mind, this is a best practice. Heck, I even blogged once about how I'm still  waiting for that [Utopian FxCop rule that barks at you whenever an object that implements IDisposable 
-is not wrapped in a `using` block](/blog/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx).
+is not wrapped in a `using` block](/blog/jjameson/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question).
 
 That's when it occurred to me: "Here we go again..."
 
 It seems -- at least in my mind -- that there's a bug in [System.ServiceModel.ClientBase](http://msdn.microsoft.com/en-us/library/ms576141.aspx),  and instead of admitting it's a bug and fixing the fundamental problem (which I  know can be painful), some "prescriptive guidance" is put out on MSDN on how to  workaround the bug.
 
-Honestly, I can't see how this is any different than not properly freeing memory  in [IDisposables containing IDisposables](/blog/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx) and instead forcing the caller to cleanup  the memory.
+Honestly, I can't see how this is any different than not properly freeing memory  in [IDisposables containing IDisposables](/blog/jjameson/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables) and instead forcing the caller to cleanup  the memory.
 
 The problem -- at least in my opinion -- is that the **Dispose**  method in **ClientBase** is currently implemented as follows:
 

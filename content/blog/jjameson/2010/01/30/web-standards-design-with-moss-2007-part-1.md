@@ -14,7 +14,7 @@ tags: ["MOSS 2007", "WSS v3", "Web Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 I've mentioned before that I became somewhat of a [Web standards](http://en.wikipedia.org/wiki/Web_standards) zealot several years ago. Consequently, regardless of whether I'm building Web sites using the core ASP.NET platform or Microsoft Office SharePoint Server (MOSS) 2007, I strive to ensure that minimal, semantic HTML markup is used to render the site. I then leverage CSS rules to define the presentational aspects of the content. Note that this can sometimes seem like an epic battle between the Web developer and the underlying platform.
@@ -464,7 +464,7 @@ The `container_12` class refers to the 12-column template provided by the 960 Gr
 
 Next comes the masthead, which contains the company logo, "welcome" area, and page editing toolbar (i.e. `<PublishingConsole:Console runat="server" />`). The main content for the page (i.e. `<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />`) comes after the masthead.
 
-Finally, the master page includes a hidden panel that encapsulates all of the various content placeholders that are required by SharePoint, but should not be rendered on the page. As you can see, there are a number of placeholders in MOSS 2007 that are unfortunately used strictly for presentational markup (e.g. `PlaceHolderNavSpacer`and `PlaceHolderBodyLeftBorder`). When implementing a site based on Web standards, you should avoid these like the H1N1 virus. [For more information on the content placeholders specified in MOSS 2007, refer to my previous blog post ([MOSS 2007 Master Page Comparison](/blog/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx)).]
+Finally, the master page includes a hidden panel that encapsulates all of the various content placeholders that are required by SharePoint, but should not be rendered on the page. As you can see, there are a number of placeholders in MOSS 2007 that are unfortunately used strictly for presentational markup (e.g. `PlaceHolderNavSpacer`and `PlaceHolderBodyLeftBorder`). When implementing a site based on Web standards, you should avoid these like the H1N1 virus. [For more information on the content placeholders specified in MOSS 2007, refer to my previous blog post ([MOSS 2007 Master Page Comparison](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)).]
 
 This is getting to be a very long post, and there's still much I want to cover. Therefore, I'll tack "Part 1" onto the title, publish it, and get on with more fun things on a Saturday afternoon.
 
@@ -476,7 +476,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint 
 > Part 2 in this series in *finally* available ;-)  
 >   
 > **Web Standards Design with SharePoint, Part 2**  
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
+> [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
 
 
 
@@ -485,5 +485,5 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint 
 > Part 3 in this series provides a sample SharePoint master page and various page layouts based on the 960 Grid System.  
 >   
 > **Web Standards Design with SharePoint, Part 3**  
-> [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
+> [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 

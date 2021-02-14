@@ -16,14 +16,14 @@ tags: ["Windows Server", "Infrastructure", "Windows 7"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 ...make darn sure you have already installed the [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&amp;displaylang=en) (if you want to use them, of course).
 
 Otherwise, like me, you'll likely resort to nuking your desktop and starting over.
 
-Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx) while installing a new solid-state drive (SSD). Unfortunately, I later discovered that if you install Windows 7 SP1 before installing the current RSAT package, then you're essentially screwed.
+Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0) while installing a new solid-state drive (SSD). Unfortunately, I later discovered that if you install Windows 7 SP1 before installing the current RSAT package, then you're essentially screwed.
 
 If you attempt to install the current RSAT release after installing Windows 7 SP1, then you'll be greeted with a not-so-friendly message that the update not applicable to your computer.
 

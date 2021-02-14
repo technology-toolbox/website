@@ -9,11 +9,11 @@ tags: ["Web Development"]
 
 Software is never perfect. Errors *will* occur in your code. Don't fret, they occur in my code, too. There are nasty little errors in everyone's code -- idly biding their time until they can spring out and aggravate your users.
 
-Some errors might be expected, such as HTTP 404 errors when someone mistypes a URL -- or when hackers maliciously try to find vulnerabilities in your application. Other errors might be completely unexpected (e.g. "What do you mean[the database transaction log is full](/blog/jjameson/archive/2007/05/06/no-error-displayed-when-database-update-fails.aspx)? Isn't someone supposed to be monitoring that?").
+Some errors might be expected, such as HTTP 404 errors when someone mistypes a URL -- or when hackers maliciously try to find vulnerabilities in your application. Other errors might be completely unexpected (e.g. "What do you mean[the database transaction log is full](/blog/jjameson/2007/05/06/no-error-displayed-when-database-update-fails)? Isn't someone supposed to be monitoring that?").
 
 Many errors are avoidable, but you will inevitably encounter some situations where the best thing your site can do is cough up a decent "[mea maxima culpa](http://en.wikipedia.org/wiki/Mea_culpa)" message and try to avoid showing users the infamous Yellow Page of Death.
 
-Last year, I blogged my recommendations for[error handling in SharePoint applications](/blog/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx), but what if you aren't using SharePoint? What if you working in plain ol' ASP.NET-land?
+Last year, I blogged my recommendations for[error handling in SharePoint applications](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), but what if you aren't using SharePoint? What if you working in plain ol' ASP.NET-land?
 
 In that case, you might already have specified a custom error page in the Web.config file and considered it done -- but are you sure that all the bases are covered?
 
@@ -100,7 +100,7 @@ If the volume of traffic on your site is relatively low, you might consider con
 
 
 
-You might prefer some other notification mechanism, such as[configuring an alert in Operations Manager whenever an error is written to the Event Log](/blog/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx). The point is, you either need to use some form of "push notification" whenever an error occurs (preferably) or else be very diligent about periodically reviewing the logs to check for errors (which likely won't happen as time goes on).
+You might prefer some other notification mechanism, such as[configuring an alert in Operations Manager whenever an error is written to the Event Log](/blog/jjameson/2011/03/18/operations-manager-alerts-for-event-log-errors). The point is, you either need to use some form of "push notification" whenever an error occurs (preferably) or else be very diligent about periodically reviewing the logs to check for errors (which likely won't happen as time goes on).
 
 With the logging functionality out of the way, let's turn our attention to improving the user experience by adding a custom error page.
 

@@ -20,11 +20,11 @@ tags: ["SharePoint
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx), I often find myself deleting sites  (in DEV and TEST environments) and subsequently re-activating features or running  some migration utility to recreate the site hierarchy.
+When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I often find myself deleting sites  (in DEV and TEST environments) and subsequently re-activating features or running  some migration utility to recreate the site hierarchy.
 
 In fact, a few years ago this became such a common task on the Agilent Technologies  project that I wrote a simple "DeleteWeb" program to overcome the fact that <samp>stsadm.exe -o deleteweb</samp> doesn't work on sites that have subsites.
 

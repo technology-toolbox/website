@@ -10,7 +10,7 @@ tags: ["SharePoint
 		2010", "Web Development"]
 ---
 
-In [my previous post](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx), I described how I typically create a "static HTML prototype"  for an ASP.NET or SharePoint Web application. By working directly in HTML at the  beginning (rather than starting with ASP.NET controls or Web Parts), I can rapidly  define the structure of the content (using semantic HTML) and subsequently create  the corresponding CSS rules to style the pages.
+In [my previous post](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3), I described how I typically create a "static HTML prototype"  for an ASP.NET or SharePoint Web application. By working directly in HTML at the  beginning (rather than starting with ASP.NET controls or Web Parts), I can rapidly  define the structure of the content (using semantic HTML) and subsequently create  the corresponding CSS rules to style the pages.
 
 As part of the prototype, I like to include a "Style Guide" page that contains  a variety of HTML elements -- including the specific `id` and `class` attributes -- that will eventually  be used in the live website.
 

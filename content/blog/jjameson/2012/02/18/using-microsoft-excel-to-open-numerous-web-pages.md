@@ -7,7 +7,7 @@ categories: ["My System"]
 tags: ["My System", "Web Development"]
 ---
 
-I've been meaning to cleanup my Windows desktop for months. So this morning when I noticed[another addition to my desktop](/blog/jjameson/archive/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop.aspx), I thought "no time like the present."
+I've been meaning to cleanup my Windows desktop for months. So this morning when I noticed[another addition to my desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop), I thought "no time like the present."
 
 While I'm not one for adding dozens of shortcuts to my desktop, I have a bad habit of creating shortcuts for "to-do" items. For example, when I have an idea to blog about some topic or useful tip, I sometimes create an item on my desktop to remind me to create a post.
 

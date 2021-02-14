@@ -18,11 +18,11 @@ tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-In [yesterday's post](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx), I provided a sample walkthrough of the "DR.DADA" approach  to developing solutions for Microsoft Office SharePoint Server (MOSS) 2007. However,  I intentionally left out a few things because a) that post was already getting ridiculously  long, and b) I felt these were important enough to cover separately.
+In [yesterday's post](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided a sample walkthrough of the "DR.DADA" approach  to developing solutions for Microsoft Office SharePoint Server (MOSS) 2007. However,  I intentionally left out a few things because a) that post was already getting ridiculously  long, and b) I felt these were important enough to cover separately.
 
 One of the incorrect statements I've heard a few times over the last couple of  years is that you can't do "<kbd>F5</kbd> debugging" when working with SharePoint.  Well, I suppose that in the strictest sense, this is a true statement -- assuming  you don't go crazy with post-build events (for example, to deploy your updated WSP,  re-GAC your assemblies, and recycle the application pool). Instead, most developers  -- including myself back in the early days of MOSS 2007 -- start debugging by attaching  to the IIS worker process (i.e. w3wp.exe).
 
@@ -30,7 +30,7 @@ However, when you have multiple instances of w3wp.exe (for example you are runni
 
 Don't fret...attaching to the right worker process to debug your SharePoint code *can* be very easy.
 
-Suppose you've created a **Class Library** project in Visual Studio  for your feature, which includes things like a master page with code-behind, custom  Web Parts, event receivers, or perhaps even a feature receiver or two -- and now  you actually need to debug that code. [Note that there's actually a much [easier way to debug your feature receivers](/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx), but for the purposes of this post,  suppose you actually want to debug activating a feature through **Site Settings**.]
+Suppose you've created a **Class Library** project in Visual Studio  for your feature, which includes things like a master page with code-behind, custom  Web Parts, event receivers, or perhaps even a feature receiver or two -- and now  you actually need to debug that code. [Note that there's actually a much [easier way to debug your feature receivers](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator), but for the purposes of this post,  suppose you actually want to debug activating a feature through **Site Settings**.]
 
 First, you need to "Web-enable" your class library project. [I'm not sure if  "Web-enabling" is actually the official name for this -- in fact, I doubt it. However,  that's what I've been calling it for a few years now and it seems to describe the  concept to most people I tell this to.]
 

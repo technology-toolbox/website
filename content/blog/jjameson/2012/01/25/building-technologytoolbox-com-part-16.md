@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]
 ---
 
-In case you haven't read the[introductory post for this series](/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx), here is an overview of the CAPTCHA feature detailed in this post.
+In case you haven't read the[introductory post for this series](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), here is an overview of the CAPTCHA feature detailed in this post.
 
 
 > **Note**

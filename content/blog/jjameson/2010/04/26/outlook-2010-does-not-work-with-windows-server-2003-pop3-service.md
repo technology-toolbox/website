@@ -14,10 +14,10 @@ tags: ["Windows Server", "Infrastructure"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-I've mentioned [in the past](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) how I run a Windows Server 2003 mail server in order to use the POP3 service for basic e-mail functionality, and that I didn't have any interest in finding an alternative when I discovered POP3 is no longer available in Windows Server 2008. Well, I guess I need to start investing the effort in finding a new email service to run for demo purposes after all.
+I've mentioned [in the past](/blog/jjameson/2009/09/14/the-jameson-datacenter) how I run a Windows Server 2003 mail server in order to use the POP3 service for basic e-mail functionality, and that I didn't have any interest in finding an alternative when I discovered POP3 is no longer available in Windows Server 2008. Well, I guess I need to start investing the effort in finding a new email service to run for demo purposes after all.
 
 After installing Office 2010 recently on my home desktop, I discovered that Outlook 2010 apparently considers the simple implementation of the POP3 protocol in Windows Server 2003 to be obsolete, because after upgrading from Outlook 2007, I can no longer connect to my mail server (BANSHEE) and receive email messages.
 

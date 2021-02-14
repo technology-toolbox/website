@@ -20,10 +20,10 @@ tags: ["MOSS 2007", "Web Development"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
+Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
 
 1. <cite>"The Media Guy"</cite>
 
@@ -43,7 +43,7 @@ If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with t
 
 Let's suppose that Fabrikam Technologies wants to deploy SharePoint for their corporate         intranet, but they want to brand the site with their corporate logo, font, and color         scheme. Furthermore, the folks at Fabrikam really want us -- at least as much as         possible -- to use all the goodness of Web standards design (in other words, CSS-based         layout instead of that nasty ol' table-based layout from years ago).
 
-As I described in my original post -- and also demonstrated in [part 2 of this series](/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx) (although not using the 960 Grid System in that example)         -- you can certainly design SharePoint sites using Web standards (even though table-based         layout is rampant in the out-of-the-box SharePoint controls, master pages, and page         layouts).
+As I described in my original post -- and also demonstrated in [part 2 of this series](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2) (although not using the 960 Grid System in that example)         -- you can certainly design SharePoint sites using Web standards (even though table-based         layout is rampant in the out-of-the-box SharePoint controls, master pages, and page         layouts).
 
 Here's a screenshot showing the home page using the custom Fabrikam master page         and page layout:
 

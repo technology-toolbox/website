@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server"]
 ---
 
-A couple of years ago, I shared the[script I created to quickly clear the event logs on a server](/blog/jjameson/archive/2011/03/01/script-to-clear-and-save-event-logs.aspx) (but saving them first -- just in case I need to go back and retrieve something from the "archive").
+A couple of years ago, I shared the[script I created to quickly clear the event logs on a server](/blog/jjameson/2011/03/01/script-to-clear-and-save-event-logs) (but saving them first -- just in case I need to go back and retrieve something from the "archive").
 
 While that script (Clear Event Logs.vbs) is still in my Toolbox, I can't remember the last time I used it. This is largely due to the fact that I primarily use **Server Manager** → **Diagnostics** →**Event Viewer** → **Custom Views** →**Administrative Events** to quickly check on the health of my development VMs, and with the introduction of the **Applications and Services Logs** in Windows Server 2008, running that script doesn't always clear everything in that view.
 

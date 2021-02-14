@@ -14,7 +14,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master which most people now instantly associate with SharePoint as soon as they see it. Note that when you create a new site based on the **Team Site **site template or the **Collaboration Portal** site template in MOSS 2007, your site is configured to use default.master for both site pages (e.g. default.aspx) as well as system pages (e.g. /{list}/Forms/AllItems.aspx).
@@ -199,7 +199,7 @@ Simply comment out the default PageHandlerFactory and add the custom Application
         </httpHandlers>
 
 
-Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx)). Otherwise, you'll encounter an error similar to the following:
+Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:
 
 
 > Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master page '/\_catalogs/masterpage/default.master', verify content control's ContentPlaceHolderID attribute in the content page.

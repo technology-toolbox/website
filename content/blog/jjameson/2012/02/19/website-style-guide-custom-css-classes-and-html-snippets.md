@@ -7,7 +7,7 @@ categories: ["My System"]
 tags: ["My System", "Subtext", "Web Development"]
 ---
 
-Time to get rid of another couple of[shortcuts on my Windows desktop](/blog/jjameson/archive/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop.aspx) that have been parked there far too long:
+Time to get rid of another couple of[shortcuts on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that have been parked there far too long:
 
 - **MDC style guide - MDC**  
 [http://developer.mozilla.org/Project:En/MDC\_style\_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)
@@ -23,11 +23,11 @@ When I stumbled upon these pages a few years ago, I immediately thought of that
 
 I doubt the Mozilla folks were the first to fomalize their style guide and CSS rules into a "document" like this, but kudos to them anyway for sharing their work with the rest of us.
 
-It inspired me to start creating style guides for websites and Web applications that I work on. You can see an example in[one of my previous posts](/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx). In retrospect, I should have referenced these sources in that post but, well, I somehow forgot. Lo siento.
+It inspired me to start creating style guides for websites and Web applications that I work on. You can see an example in[one of my previous posts](/blog/jjameson/2011/11/03/building-technologytoolbox-com-part-4). In retrospect, I should have referenced these sources in that post but, well, I somehow forgot. Lo siento.
 
 In the Template.aspx page that I use for creating new blog posts, I include sample HTML blocks that demonstrate the custom CSS classes used throughout my blog posts. These HTML blocks are very similar to those shown in the style guide from my earlier post, so no sense repeating them here.
 
-To quickly insert commonly used HTML fragments into blog posts (including custom CSS classes), I created some custom snippets in Expression Web. Yes,[I still use Expression Web for authoring blog posts](/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx) rather than using the rich HTML editor in Subtext.
+To quickly insert commonly used HTML fragments into blog posts (including custom CSS classes), I created some custom snippets in Expression Web. Yes,[I still use Expression Web for authoring blog posts](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server) rather than using the rich HTML editor in Subtext.
 
 One reason for this is that I'd much rather have a[WYSIWYG](http://en.wikipedia.org/wiki/Wysiwyg) experience when writing content for the Web. I also discovered that the version of the HTML editor in Subtext 2.5 royally screws up preformatted content (i.e. `<pre>` elements) -- which my blog tends to have a lot of. Consequently I ended up disabling that feature entirely. Note that this is not[Phil](http://www.haacked.com)'s fault -- he simply used one of the freely available rich HTML editors. Oh, and if it makes you feel any better, I found that Visual Studio 2010 also screws up `<pre>` content :-(
 

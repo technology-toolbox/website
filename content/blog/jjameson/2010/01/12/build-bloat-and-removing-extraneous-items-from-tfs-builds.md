@@ -14,7 +14,7 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 This week I am wrapping up the third sprint (a.k.a. *iteration*or *milestone*) on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although, honestly, I wasn't involved all that much in Sprint-3, since I was on vacation for the vast majority of the iteration.
@@ -44,7 +44,7 @@ As I noted at the beginning of this post, this is a MOSS 2007 project. Consequen
 
 One solution to the problem of build bloat would be to simply remove the referenced assemblies and deploy those separately. However, I really don't like the idea of breaking the nice encapsulation of deploying a WSP and having the corresponding referenced assemblies automatically deployed as well. Sure, one could argue that deploying third-party controls like the AJAX Control Toolkit and the Telerik controls should be done similar to the .NET Framework itself (i.e. independent of our custom code), but my preference is to simplify the deployment -- from a Release Management perspective -- as much as possible.
 
-In addition, it is also important to note that the build bloat isn't caused entirely by the UI control assemblies. As I've [noted in the past](/blog/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx), SharePoint has a bad habit of copying extraneous assemblies into your project.
+In addition, it is also important to note that the build bloat isn't caused entirely by the UI control assemblies. As I've [noted in the past](/blog/jjameson/2009/03/30/extraneous-sharepoint-assemblies), SharePoint has a bad habit of copying extraneous assemblies into your project.
 
 In this particular case, Microsoft.Office.Server.Search.dll and Microsoft.SharePoint.Server.Search.dll are now included in each build -- even though we really don't want them to be (since we would never install or update these files as part of our deployment process for our solution).
 
@@ -94,5 +94,5 @@ Buh-bye, build bloat!
 
 > **Update (2011-03-14)**
 > 
-> Refer to [one of my later posts](/blog/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx) for an update on this technique that works with TFS 2010 builds that don't use the UpgradeTemplate.xaml build process template.
+> Refer to [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects) for an update on this technique that works with TFS 2010 builds that don't use the UpgradeTemplate.xaml build process template.
 

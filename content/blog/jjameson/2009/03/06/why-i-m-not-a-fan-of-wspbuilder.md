@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -59,7 +59,7 @@ From the data in this table, we can clearly see that something is amiss. The  sm
 
 As I told my new teammates shortly after joining the project, WspBuilder doesn't  have the "smarts" to determine that no work needs to be done when nothing has changed  in any of the items included in a WSP (i.e. there is no need to rebuild the WSP  when you press <kbd>CTRL+SHIFT+B</kbd> and then <kbd>CTRL+SHIFT+B</kbd> again immediately  after the previous build completed). This is effectively the same as using post-build  events in Visual Studio to invoke makecab.exe to package the WSP.
 
-As I pointed out about a year ago, there is actually a much [better way of building WSPs (and CAB files)](/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx) by avoiding post-build events and  leveraging true dependency checking in MSBuild.
+As I pointed out about a year ago, there is actually a much [better way of building WSPs (and CAB files)](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files) by avoiding post-build events and  leveraging true dependency checking in MSBuild.
 
 Note that the purpose of this post is not to bash WspBuilder or say that WspBuilder  should be abandoned around the world. Honestly, prior to joining this team, I had  only read about WspBuilder -- I'd never actually used it before. I love the fact  that it takes the grunt work out of creating and maintaining a Diamond Definition  File (DDF) to define the structure of your CAB file, er, I mean *WSP*.
 
@@ -69,7 +69,7 @@ Up until a few weeks ago, they were also excluding the WspBuilder projects from 
 
 We have since configured the **Debug** configuration to package  the WSPs -- thus avoiding the need for developers to routinely toggle the build  configuration. As a result of this, the time it takes to build the **Debug**  configuration increased substantially (and hence the purpose of this post).
 
-Are there ways of mitigating the lengthy build times caused by using WspBuilder  without giving up <kbd>CTRL+SHIFT+B</kbd> and building individual projects? Absolutely!  It relies on using an apparently little-known feature in Visual Studio that has  been around since (at least) the Visual C++ 4.0 days: loading and unloading projects.  I cover this in [a separate post](/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx).
+Are there ways of mitigating the lengthy build times caused by using WspBuilder  without giving up <kbd>CTRL+SHIFT+B</kbd> and building individual projects? Absolutely!  It relies on using an apparently little-known feature in Visual Studio that has  been around since (at least) the Visual C++ 4.0 days: loading and unloading projects.  I cover this in [a separate post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects).
 
 So, when deciding whether or not to use WspBuilder, think about the tradeoffs  between creating and managing the DDF files yourself (which, honestly, is rather  easy once you have a pattern to copy/paste from) versus structuring your SharePoint  projects so that WspBuilder can automatically detect the files and structure when  building the WSP.
 
@@ -80,6 +80,6 @@ Personally speaking -- and again, this is just my opinion here -- I prefer makec
 > 
 > 
 > 	Note that I have posted an
-> 	[update on WSPBuilder](/blog/jjameson/archive/2009/03/31/updated-thoughts-on-wspbuilder.aspx) based on some feedback I received from Carsten 
+> 	[update on WSPBuilder](/blog/jjameson/2009/03/31/updated-thoughts-on-wspbuilder) based on some feedback I received from Carsten 
 > 	Keutmann, the creator of WSPBuilder.
 

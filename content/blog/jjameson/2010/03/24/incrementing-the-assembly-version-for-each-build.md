@@ -20,11 +20,11 @@ tags: ["My System", "Core Development", "TFS"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx) and made the following statement:
+Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and made the following statement:
 
 
 > The
@@ -71,7 +71,7 @@ Note that this implementation has some specifics to Team Foundation Server, but 
 > 	if you are using TFS 2010:
 > 
 > <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
-> [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
+> [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
 
 
 Unfortunately, there's no out-of-the-box task in the current version of MSBuild  that increments an assembly version. However, you can write your own with just a  few lines of code (there are a number of samples out there if you search for them),  or -- as I prefer -- you can just use the one from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). [There  are quite a few other custom tasks in this package that you may find useful in addition  to the Version task that I cover in this post.]
@@ -113,7 +113,7 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 > 
 > 
 > Note that the path to the TFS command-line utility
-> 	[has changed for a TFS 2010 build server](/blog/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx).
+> 	[has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
 > 
 > To use the same technique on a TFS 2010 build server, specify the following 
 > 	instead:
@@ -311,5 +311,5 @@ Note that in the example above, the `BuildType`  attribute on the `<Version>`  e
 
 For the **QFE **branch, I recommend changing the `BuildType` attribute to `"None"`and the `RevisionType`attribute  to `"Increment"` (to generate build  numbers like 1.0.38.1, 1.0.38.2, etc.).
 
-Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx).
+Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
 

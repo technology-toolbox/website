@@ -17,10 +17,10 @@ tags: ["MOSS 2007", "SharePoint 2010", "Tugboat"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/03/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/03/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-In [yesterday's post](/blog/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx), I provided a custom SharePoint Server 2010 solution based         on Dan Cederholm's sample site for the fictitious Tugboat Coffee company (from his         book [Handcrafted CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
+In [yesterday's post](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4), I provided a custom SharePoint Server 2010 solution based         on Dan Cederholm's sample site for the fictitious Tugboat Coffee company (from his         book [Handcrafted CSS : More Bulletproof Web Design](http://amzn.com/0321643380)).
 
 Since I had originally "ported" the Tugboat site to Microsoft Office SharePoint         Server (MOSS) 2007, most of the effort in getting the site into SharePoint 2010         was related to upgrading the custom Tugboat master page to support the SharePoint         ribbon. You can read more about that in my previous post.
 
@@ -39,11 +39,11 @@ Here are the highlights from my experience upgrading the Tugboat project.
 
 Unless you've been living under a rock up to this point, I'm sure you know by now         that StsAdm.exe is no longer "in vogue." Instead you should be using PowerShell         whenever possible for configuring your SharePoint sites and deploying your solutions.
 
-You can read more about my "DR.DADA" PowerShell scripts in a [previous blog post](/blog/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx).
+You can read more about my "DR.DADA" PowerShell scripts in a [previous blog post](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010).
 
 ###         Logging custom messages and events to ULS
 
-Prior to SharePoint Server 2010, I wasn't a big fan of the SharePoint Unified Logging         System. Sure, it was great for helping Microsoft Support diagnose problems in your         environment, but aside from that it seemed the only purpose of ULS was to "spew"         an unholy amount of [garbage](/blog/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx) to your hard disk until it managed to completely consume all remaining         free space on the disk. Fortunately, after a number of patches and service packs,         ULS finally managed to "contain itself" and at least stop writing until the very         last byte on disk was gone.
+Prior to SharePoint Server 2010, I wasn't a big fan of the SharePoint Unified Logging         System. Sure, it was great for helping Microsoft Support diagnose problems in your         environment, but aside from that it seemed the only purpose of ULS was to "spew"         an unholy amount of [garbage](/blog/jjameson/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size) to your hard disk until it managed to completely consume all remaining         free space on the disk. Fortunately, after a number of patches and service packs,         ULS finally managed to "contain itself" and at least stop writing until the very         last byte on disk was gone.
 
 Also, before [ULS Viewer](http://archive.msdn.microsoft.com/ULSViewer)         came along, trying to extract useful information from the ULS logs was typically         a painful process. Before adding ULS Viewer to my toolbox, I did use LogParser for         a while -- which at least made the task of "diving into the ULS logs" somewhat tolerable         -- but I still dreaded the times when things broke and I had to try to figure out         why.
 
@@ -64,18 +64,18 @@ I think my biggest gripe is that by default when you <kbd>CTRL+Shift+B</kbd> to 
 
 ###         "DefaultFeatureReceiver is dead, FeatureConfigurator is not"
 
-Several years ago, I explained why I like to [separate the bulk of the code for custom **SPFeatureReceiver **classes](/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx).         As you can see from the mapping above, you no longer need to create a **DefaultFeatureReceiver
+Several years ago, I explained why I like to [separate the bulk of the code for custom **SPFeatureReceiver **classes](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).         As you can see from the mapping above, you no longer need to create a **DefaultFeatureReceiver
         **class -- the SharePoint features in VS2010 will easily create an equivalent         for you with a couple of clicks of the mouse.
 
 Whether or not you choose to "refactor" the build of your feature configuration         code into a separate class is really up to you. Personally, I still find separate         "FeatureConfigurator" classes easier to debug.
 
 ###         "Theme1" incremented to "Theme1.1"
 
-In the [first part of my "Web standards design with SharePoint" series](/blog/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx), I explained         how I like to use "Theme" folders to organize CSS files and related images that         define a specific look-and-feel for a site. In a later post, I described how to         [avoid issues with caching by using "theme versions."](/blog/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx)
+In the [first part of my "Web standards design with SharePoint" series](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1), I explained         how I like to use "Theme" folders to organize CSS files and related images that         define a specific look-and-feel for a site. In a later post, I described how to         [avoid issues with caching by using "theme versions."](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot)
 
-Assume for the moment that Tugboat was a real site running on MOSS 2007. In that         case, we definitely would have [enabled disk-based caching](/blog/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx) (i.e. the BlobCache) to ensure SharePoint scaled         to support the thousands of coffee addicts visiting the site.
+Assume for the moment that Tugboat was a real site running on MOSS 2007. In that         case, we definitely would have [enabled disk-based caching](/blog/jjameson/2009/03/27/always-enable-disk-based-caching-in-moss-2007) (i.e. the BlobCache) to ensure SharePoint scaled         to support the thousands of coffee addicts visiting the site.
 
-As described in [yesterday's post](/blog/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx), during the process of upgrading the solution to SharePoint         2010, I had to make a few tweaks to the CSS files in order to resolve some issues         specific to the new version of SharePoint.
+As described in [yesterday's post](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4), during the process of upgrading the solution to SharePoint         2010, I had to make a few tweaks to the CSS files in order to resolve some issues         specific to the new version of SharePoint.
 
 Consequently, in order to force the updated CSS files to be downloaded the next         time customers visited the upgraded site, I simply renamed the folder and updated         the corresponding references throughout the solution. This is one of those areas         where the SharePoint tooling in Visual Studio 2010 isn't quite "perfect." While         it does update some of the attributes in the Elements.xml file (specifically, the         **Path **attributes), it doesn't make all of the necessary changes         (e.g. the **Url **attributes are not updated). This might be a result         of my tweaking of the Elements.xml file (for example, to add **Type="GhostableInLibrary"**         to each &lt;File&gt; element), but it seems like this should be taken care of automatically.
 

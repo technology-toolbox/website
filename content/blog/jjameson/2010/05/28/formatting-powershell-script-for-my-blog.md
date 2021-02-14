@@ -15,10 +15,10 @@ tags: ["My System", "PowerShell"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In a [previous post](/blog/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx), I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML).
+In a [previous post](/blog/jjameson/2009/10/09/formatting-code-for-my-blog), I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML).
 
 I recently started doing some significant work with PowerShell and therefore I wanted to have a similar method of formatting PowerShell scripts for various blog posts. Note that the approach I currently use for other code snippets wouldn't work very well with PowerShell scripts, primarily because Visual Studio doesn't currently provide syntax highlighting for PowerShell scripts.
 
@@ -315,7 +315,7 @@ Here is the updated script that I ended up with (I've also attached it to this p
 
 
 
-Now, all I have to do is run the Set-ClipboardScriptHtmlBlock script from within the Windows PowerShell ISE (with a different script window active) and the contents of the active script are copied to the clipboard. From there I can paste the clipboard contents into the source window of Expression Web (currently [my blog editor of choice](/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx)).
+Now, all I have to do is run the Set-ClipboardScriptHtmlBlock script from within the Windows PowerShell ISE (with a different script window active) and the contents of the active script are copied to the clipboard. From there I can paste the clipboard contents into the source window of Expression Web (currently [my blog editor of choice](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server)).
 
 I then specify rules similar to the following in the custom CSS for my blog:
 

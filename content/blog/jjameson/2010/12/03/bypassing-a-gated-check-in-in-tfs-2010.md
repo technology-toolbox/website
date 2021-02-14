@@ -14,10 +14,10 @@ tags: ["TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-Yesterday someone contacted me about my earlier post on [Incrementing the Assembly Version for Each Build in TFS 2010](/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx), because after following the steps I provided, he encountered a problem due to the fact that he had previously configured a gated check-in build that included the folder containing the AssemblyVersionInfo files.
+Yesterday someone contacted me about my earlier post on [Incrementing the Assembly Version for Each Build in TFS 2010](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010), because after following the steps I provided, he encountered a problem due to the fact that he had previously configured a gated check-in build that included the folder containing the AssemblyVersionInfo files.
 
 The problem is that after you create a gated check-in build definition, the <samp>tf.exe checkin</samp> command does not actually check-in your changes, but rather shelves your changes until the gated check-in validates the changeset (at which point, the files are checked in on your behalf). In this case, the <samp>tf.exe checkin</samp> command does not return 0 and the original build (that was attempting to check-in the AssemblyVersionInfo files) consequently fails.
 

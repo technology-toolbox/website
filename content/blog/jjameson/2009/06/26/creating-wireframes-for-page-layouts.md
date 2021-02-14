@@ -17,12 +17,12 @@ tags: ["My System", "MOSS 2007", "
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 When helping customers migrate their Internet sites to Microsoft Office SharePoint         Server (MOSS) 2007, I've found it very helpful to create wireframes showing the         various fields, Web Parts, and master page content. For the last several years,         I've been doing this in Microsoft Office Visio, but you could certainly achieve         similar results with other tools, such as Expression Design.
 
-I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
+I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/20/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
 
 ![&quot;Generic&quot; page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Glycomics%20Solution).jpg)
             Figure 1: "Generic" page

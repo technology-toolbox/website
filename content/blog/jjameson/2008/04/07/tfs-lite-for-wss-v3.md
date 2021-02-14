@@ -16,11 +16,11 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 In my [previous
-            post](/blog/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx), I introduced my "TFS Lite" SharePoint site template that I've been         using for years as a simple scenario/task/bug/risk/milestone tracking "application"         with various projects and customers. In today's post, I'll discuss some of the important         changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as         the fact that *all* SharePoint lists now support versioning, not just the **Issues**         list, as was the case in WSS v2 and SharePoint Portal Server (SPS) 2003.
+            post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2), I introduced my "TFS Lite" SharePoint site template that I've been         using for years as a simple scenario/task/bug/risk/milestone tracking "application"         with various projects and customers. In today's post, I'll discuss some of the important         changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as         the fact that *all* SharePoint lists now support versioning, not just the **Issues**         list, as was the case in WSS v2 and SharePoint Portal Server (SPS) 2003.
 
 As I noted in the earlier post, the Work Items list at the heart of TFS Lite was         originally based on the Issues list in order to maintain a history as items are         modified. When you are dealing with sensitive items like bugs and risks, a simple         snapshot of the latest item simply won't do. You need traceability to determine         who said what and when. Granted, there are times when I wish I could "undo" or "rollback"         a change to a list item -- for example, when I enter comments on a bug like "Fixed         in 3.0.220.0" but neglect to change the **Status** to **Resolved**. However,         dealing with goofs like that just comes with the territory when you need a detailed         audit history of every change to an item.
 
@@ -109,7 +109,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 <small>* Change the filter as necessary to match the current iteration.</small>
 11. (Optional) Modify the **Project Summary **Web Part to display an image corresponding
             to the designated KPI value (using SharePoint Designer and a tiny bit of XSLT as
-            described in my [previous post](/blog/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx)).
+            described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 12. In the **Links **list, add a link to the **Project Summary **page.
 
 
@@ -142,7 +142,7 @@ You also might be wondering how work items can be related to each other since I 
 
 > **Update (2008-04-08)**
 > 
->             The issue noted below by Dragan has been corrected. The fix is described in [a subsequent post](/blog/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx). However, as I originally suspected might be the case,
+>             The issue noted below by Dragan has been corrected. The fix is described in [a subsequent post](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3). However, as I originally suspected might be the case,
 >             the KPI images that I use in the project dashboard view are only available in MOSS
 >             2007. Consequently you will need to substitute your own images (or simply revert
 >             to displaying the status as text).

@@ -15,7 +15,7 @@ tags: ["SharePoint 2010", "PowerShell"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 This morning I thought I'd share one more very useful PowerShell script for SharePoint Server 2010.

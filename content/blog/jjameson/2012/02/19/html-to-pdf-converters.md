@@ -9,9 +9,9 @@ tags: ["MOSS 2007", "SharePoint
 			2010", "Web Development"]
 ---
 
-Here is one more quick post this morning so I can get rid of yet another[item on my Windows desktop](/blog/jjameson/archive/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop.aspx) that I should have deleted a long time ago -- this time a small Excel worksheet that I created back in late 2010. [Wow, where does the time go?]
+Here is one more quick post this morning so I can get rid of yet another[item on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that I should have deleted a long time ago -- this time a small Excel worksheet that I created back in late 2010. [Wow, where does the time go?]
 
-I mentioned in[a previous post](/blog/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx) how I created a custom "document publishing" system for a client based on the Web Content Management features in SharePoint, which included an "Export to PDF" feature.
+I mentioned in[a previous post](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3) how I created a custom "document publishing" system for a client based on the Web Content Management features in SharePoint, which included an "Export to PDF" feature.
 
 While researching HTML-to-PDF converters, I created an Excel worksheet to capture some notes about various products, pricing, etc. This formed the basis for providing my recommendation to the client (Securitas).
 

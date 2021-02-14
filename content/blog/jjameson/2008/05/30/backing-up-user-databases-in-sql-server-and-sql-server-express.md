@@ -18,12 +18,12 @@ tags: ["SQL Server", "WSUS", "
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Since I appear to be on a roll with my blog this morning, I figured that I should         write one more post about SQL Server before I get back to my "day job."
 
-I typically use SQL Server Management Studio to configure and schedule database         backups, because the** Maintenance Plan Wizard** makes** **         it very quick and easy to click through a few screens and select the appropriate         options. However, on some of the servers running in the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) (a.k.a. my basement), I only have SQL Server Express         installed, not the full SQL Server product. For example, on my server that runs         Windows Server Update Services (WSUS), I use SQL Server Express as the "backend"         storage solution, because for this particular scenario, I want to keep the database         local instead of relying on a separate server. However, I still want to ensure that         I have periodic backups of the databases.
+I typically use SQL Server Management Studio to configure and schedule database         backups, because the** Maintenance Plan Wizard** makes** **         it very quick and easy to click through a few screens and select the appropriate         options. However, on some of the servers running in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), I only have SQL Server Express         installed, not the full SQL Server product. For example, on my server that runs         Windows Server Update Services (WSUS), I use SQL Server Express as the "backend"         storage solution, because for this particular scenario, I want to keep the database         local instead of relying on a separate server. However, I still want to ensure that         I have periodic backups of the databases.
 
 In order to make this as painless as possible, I wrote the following script:
 

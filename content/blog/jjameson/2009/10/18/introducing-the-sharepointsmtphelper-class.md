@@ -14,7 +14,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/18/introducing-the-sharepointsmtphelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/18/introducing-the-sharepointsmtphelper-class.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Continuing in the spirit of my previous posts for the `SharePointPublishingHelper` class and `SharePointWebPartHelper` class, I'd like to introduce another helper class that you may find useful when building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office SharePoint Server (MOSS) 2007.

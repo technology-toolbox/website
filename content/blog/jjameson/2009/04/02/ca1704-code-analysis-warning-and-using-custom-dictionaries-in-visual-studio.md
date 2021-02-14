@@ -20,11 +20,11 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx), I introduced the concept of linking files in Visual Studio solutions.
+In my [previous post](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions), I introduced the concept of linking files in Visual Studio solutions.
 
 A good use of this feature is specifying a custom dictionary for your solution.
 

@@ -20,7 +20,7 @@ Often I want to ensure that my TFS workspace matches the exact state of the sol
 3. Uncloaking the solution folder in Source Control Explorer
 
 
-Sometime last year, I discovered there's an easier way to do this, assuming you have installed the TFS Power Tools -- which I certainly hope you have (if, for no other reason, than to[leverage additional check-in policies](/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx)).
+Sometime last year, I discovered there's an easier way to do this, assuming you have installed the TFS Power Tools -- which I certainly hope you have (if, for no other reason, than to[leverage additional check-in policies](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server)).
 
 From a Visual Studio command prompt, simply use the <kbd>tfpt scorch</kbd> command. For example:
 

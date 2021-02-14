@@ -15,7 +15,7 @@ tags: ["MOSS 2007", "SQL Server"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 I've mentioned before the importance of using multiple "spindles" when working with large SQL Server databases.
@@ -45,7 +45,7 @@ Given the above disk configuration, SQL Server Management Studio should be used 
             - Log: L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
 
 
-You certainly don't have to use the [NotBackedUp](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx) folder if you don't want to (that's just the standard that I've been using for years).
+You certainly don't have to use the [NotBackedUp](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder if you don't want to (that's just the standard that I've been using for years).
 
 Once you've configured the default database locations, anytime you create a new database -- for example, when you create a new Web application or content database in Microsoft Office SharePoint Server (MOSS) 2007 -- the data and log files will be placed on the desired drives (i.e. D: and L:, respectively).
 

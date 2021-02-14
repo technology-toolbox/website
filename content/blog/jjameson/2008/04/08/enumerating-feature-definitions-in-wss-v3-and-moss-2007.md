@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -103,7 +103,7 @@ Note that there is no real "magic" in generating this list -- just a little code
 
 
 If you are wondering why you would ever need this kind of information, refer  to my next post ([Creating 
-a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx)).
+a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)).
 
 Here is the list in case you don't want to download the attached file:
 

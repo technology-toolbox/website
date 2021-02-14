@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Subtext"]
 ---
 
-In[last night's post](/blog/jjameson/archive/2012/01/30/building-technologytoolbox-com-part-18.aspx), I mentioned how I recently created an account on GitHub, primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine.
+In[last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18), I mentioned how I recently created an account on GitHub, primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine.
 
 In addition to the trivial bug fix that I mentioned before, I have merged a number of other changes that I previously made to my private build of Subtext.
 

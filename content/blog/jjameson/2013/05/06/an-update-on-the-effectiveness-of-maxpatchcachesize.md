@@ -8,7 +8,7 @@ categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "My System", "Virtualization", "Visual Studio"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize.aspx), I shared a couple of PowerShell scripts that I wrote for quickly setting and verifying the MaxPatchCacheSize registry setting. I also stated that this registry setting has, unfortunately, become less effective over the years since[my original post on this subject](/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx).
+In[my previous post](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize), I shared a couple of PowerShell scripts that I wrote for quickly setting and verifying the MaxPatchCacheSize registry setting. I also stated that this registry setting has, unfortunately, become less effective over the years since[my original post on this subject](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0).
 
 For example, here's what the disk usage looks like on one of my development VMs:
 

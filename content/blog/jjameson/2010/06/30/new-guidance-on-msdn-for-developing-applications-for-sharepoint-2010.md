@@ -18,7 +18,7 @@ tags: ["SharePoint 2010"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/new-guidance-on-msdn-for-developing-applications-for-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/new-guidance-on-msdn-for-developing-applications-for-sharepoint-2010.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 A bunch of new content related to SharePoint 2010 application development was released yesterday.

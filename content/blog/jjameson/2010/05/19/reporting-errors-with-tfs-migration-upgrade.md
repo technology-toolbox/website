@@ -18,7 +18,7 @@ tags: ["SQL Server", "TFS"]
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
@@ -183,7 +183,7 @@ While this successfully uploaded the missing reports (e.g. /TfsReports/DefaultCo
 
 I rebuilt the TFS warehouse and Analysis Services databases to try to resolve this error, but that didn't help.
 
-Consequently, I "rolled back" my TFS upgrade and performed the upgrade again using the process described in[my previous blog post](/blog/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx). After granting permissions to the RSExecRole, the TFS upgrade completed without any issues (i.e. the warnings reported during the initial TFS upgrade no longer occurred).
+Consequently, I "rolled back" my TFS upgrade and performed the upgrade again using the process described in[my previous blog post](/blog/jjameson/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade). After granting permissions to the RSExecRole, the TFS upgrade completed without any issues (i.e. the warnings reported during the initial TFS upgrade no longer occurred).
 
 After waiting for the cube to be processed, the reports on the TFS project sites appeared as expected.
 

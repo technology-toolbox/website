@@ -16,7 +16,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 SharePoint 2010 is coming!

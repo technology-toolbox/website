@@ -8,7 +8,7 @@ tags: ["Core
 			Development", "Subtext"]
 ---
 
-In[last night's post](/blog/jjameson/archive/2012/01/30/building-technologytoolbox-com-part-18.aspx), I mentioned how I recently created an account on GitHub (primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine).
+In[last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18), I mentioned how I recently created an account on GitHub (primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine).
 
 I also mentioned a couple of issues that I encountered with Git -- specifically losing my SSH key (after logging out and subsequently logging back in) and the fact that[the first commit in my Subtext fork](https://github.com/jeremy-jameson/Subtext/commit/462934a87bd12649582f334545d3586b3c9f93a2) shows "unknown" (instead of my name).
 

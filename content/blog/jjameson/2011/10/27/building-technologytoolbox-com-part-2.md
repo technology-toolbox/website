@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["My System", "TFS", "Visual Studio", "Web Development"]
 ---
 
-Once I settled on [using Subtext](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx) as the blogging solution for the Technology Toolbox site, I turned  my attention to working on the other areas of the site (as well as developing the  custom blog skin to make the pages rendered by Subtext appear seamless with the  other pages on the site).
+Once I settled on [using Subtext](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1) as the blogging solution for the Technology Toolbox site, I turned  my attention to working on the other areas of the site (as well as developing the  custom blog skin to make the pages rendered by Subtext appear seamless with the  other pages on the site).
 
 However, I first needed to come up with a project name.
 
@@ -34,7 +34,7 @@ With that matter out of the way, I proceeded with the rest of the project setup.
 
 Once I had a project name ("Caelum"), the next step was to create a corresponding  TFS project. I chose to use the **MSF for Agile Software Development v5.0**process template. Note that I use my "admin" account (**TECHTOOLBOX\jjameson-admin**)  to create TFS projects and complete other configuration changes.
 
-Next I bulk-loaded my initial list of work items using Microsoft Excel. I've  listed these initial tasks in a [previous post](/blog/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx), in case you are interested in what they are.
+Next I bulk-loaded my initial list of work items using Microsoft Excel. I've  listed these initial tasks in a [previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template), in case you are interested in what they are.
 
 The first task is to configure the permissions for the TFS project and the second  task is to configure permissions on the team project portal. Thus I went through  and quickly granted access to my "regular" account (**TECHTOOLBOX\jjameson**)  via a domain group (**TECHTOOLBOX\All Developers**).
 
@@ -69,7 +69,7 @@ At this point, I switched from my admin account to my regular account, created  
 Next, I added a custom dictionary to the Visual Studio solution, as described  in one of my earlier blog posts:
 
 <cite>CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio)
 
 
 ### Generate strong name key and configure assembly signing
@@ -81,7 +81,7 @@ For the Caelum solution, I created a single key file, added it to the solution  
 For more details about how to do this, refer to the following post:
 
 <cite>Linked Files in Visual Studio Solutions</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects)
 
 
 ### Create custom rule set and enable code analysis
@@ -118,7 +118,7 @@ This is how I prefer to start out. I then disable specific rules if I find them 
 Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs**files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
 
 <cite>Shared Assembly Info in Visual Studio Projects</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions)
 
 
 ### Create custom Team Foundation Build workflow to increment the assembly version 
@@ -127,13 +127,13 @@ with each build
 As described in one of my Top 10 most popular blog posts, I strongly recommend  that you increment the assembly version automatically as part of every build performed  on the Build Server (i.e. through TFS Build):
 
 <cite>Best Practices for .NET Assembly Versioning </cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 
 
 If you are not sure how to do this, and you are using TFS 2010, refer to the  following post for step-by-step details on how to accomplish this:
 
 <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
 
 
 ### Configure TFS check-in policies
@@ -141,7 +141,7 @@ If you are not sure how to do this, and you are using TFS 2010, refer to the  fo
 With the basic setup of the project completed, I switched back to my admin account  and configured a number of TFS check-in policies on the project, as described in  the following post:
 
 <cite>Recommended Check-In Policies for Team Foundation Server</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server)
 
 
 If you are wondering why I didn't configure these check-in policies earlier,  the answer is that I do it this way in order to avoid issues when enabling code  analysis on the Visual Studio projects. For example if, like me, you configure code  analysis to treat all violations as errors (instead of warnings) then your solution  won't build if you haven't yet generated a strong name key and configured assembly  signing. And if your solution doesn't build (and you've added a "Builds" check-in  policy), then you can't check-in a changeset (unless you override the warning, but  I rarely choose to do that).

@@ -15,10 +15,10 @@ tags: ["My System"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In [one of yesterday's posts](/blog/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
+In [one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
 
 This morning it occurred to me that I could integrate this into my MSDN blog with relatively little effort.
 
@@ -29,7 +29,7 @@ Yesterday I discovered that sometime last fall, the MSDN folks replaced the Comm
 
 > **Update (2009-04-20)**
 > 
-> After [switching my blog from the **default** Community Server template](/blog/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx) to the **Simple - right sidebar** template, I discovered that the MSDN team had already updated that template to replace the default "Search All Blogs" functionality with the "Search This Blog" functionality that one would expect (with a much nicer user experience, I might add). Consequently I removed my custom search box. Apparently, I should have abandoned the default CS template a long time ago ;-)
+> After [switching my blog from the **default** Community Server template](/blog/jjameson/2010/04/19/new-blog-template-and-styling) to the **Simple - right sidebar** template, I discovered that the MSDN team had already updated that template to replace the default "Search All Blogs" functionality with the "Search This Blog" functionality that one would expect (with a much nicer user experience, I might add). Consequently I removed my custom search box. Apparently, I should have abandoned the default CS template a long time ago ;-)
 
 
 After digging around a little in the [Bing Developer Center](http://www.bing.com/developers), I found some [instructions for adding a basic search box to search just your website](http://help.live.com/help.aspx?project=WL_Webmasters&amp;querytype=keyword&amp;query=hcraescisab&amp;mkt=en-us).

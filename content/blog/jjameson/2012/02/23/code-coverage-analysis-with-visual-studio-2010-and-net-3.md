@@ -13,9 +13,9 @@ Sometimes I wish I didn't develop in the world of SharePoint. Whenever I have t
 
 In my experience doing .NET development with Visual Studio, things typically*just work*. When doing SharePoint development, on the other hand, things often behave, well, let's just say *erratically*.
 
-For example, back in the days when I worked primarily in Visual Studio 2008 and Microsoft Office SharePoint Server (MOSS) 2007, I discovered an[issue when running unit tests on a 64-bit VM](/blog/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx). Fortunately I was able to workaround that bug.
+For example, back in the days when I worked primarily in Visual Studio 2008 and Microsoft Office SharePoint Server (MOSS) 2007, I discovered an[issue when running unit tests on a 64-bit VM](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64). Fortunately I was able to workaround that bug.
 
-Thanks to a couple of poor decisions by Microsoft product teams (specifically, targeting SharePoint 2010 to .NET 3.5 x64 only, and[restricting test projects in Visual Studio 2010 to .NET Framework 4](/blog/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx)), it wasn't until Visual Studio 2010 Service Pack 1 that you could actually run unit tests against SharePoint 2010 solutions.
+Thanks to a couple of poor decisions by Microsoft product teams (specifically, targeting SharePoint 2010 to .NET 3.5 x64 only, and[restricting test projects in Visual Studio 2010 to .NET Framework 4](/blog/jjameson/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4)), it wasn't until Visual Studio 2010 Service Pack 1 that you could actually run unit tests against SharePoint 2010 solutions.
 
 However, even after getting back the ability to run tests in Visual Studio against custom code written for SharePoint solutions, I noticed that some things still didn't work. For example, code coverage analysis is trivial to enable in Visual Studio, so there is really no reason not to periodically review how much code your tests are covering, right?
 
@@ -42,5 +42,5 @@ Fortunately, there is a way to perform code coverage analysis when working with
 [http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx](http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx)
 
 
-In[my next post](/blog/jjameson/archive/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis.aspx), I'll share the PowerShell script that I created to make this additional work relatively painless. First I need to get my daughter off to school (we are on delayed start this morning due to 6 more inches of snow -- woohoo!).
+In[my next post](/blog/jjameson/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis), I'll share the PowerShell script that I created to make this additional work relatively painless. First I need to get my daughter off to school (we are on delayed start this morning due to 6 more inches of snow -- woohoo!).
 

@@ -15,7 +15,7 @@ tags: ["MOSS 2007", "WSS v3", "Visual Studio"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Since I seem to be on a roll this morning with blogging, I figured I might as well get one more post in before moving on to my "day job."

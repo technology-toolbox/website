@@ -16,10 +16,10 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS) 2007 project -- or if you've read my [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx) -- then you've probably seen the following comment:
+If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS) 2007 project -- or if you've read my [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) -- then you've probably seen the following comment:
 
 
 > Note: Referenced assemblies must be specified with a path corresponding to the build configuration. If the path is not specified to the referenced assembly, then the build works fine as long as the referenced assembly is not in the GAC.
@@ -51,5 +51,5 @@ At this point, you might be wondering why do I bring this up after all this time
 
 However, there's one fundamental problem that I only recently discovered back in early October: you can't use Team Foundation Build to build the WSP when specifying relative paths to assemblies in the DDF file.
 
-I'll cover this in [my next post](/blog/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx).
+I'll cover this in [my next post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build).
 

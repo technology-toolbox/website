@@ -19,15 +19,15 @@ tags: ["MOSS 2007", "SharePoint
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-In[part 2 of this series](/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx), I explained how to programmatically add a new**Reusable Content **list item and subsequently add it to a Publishing HTML field on a page. I also provided a complete sample for SharePoint 2010 that demonstrates how this can be accomplished with minimal effort (thanks to some nitfy helper classes).
+In[part 2 of this series](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2), I explained how to programmatically add a new**Reusable Content **list item and subsequently add it to a Publishing HTML field on a page. I also provided a complete sample for SharePoint 2010 that demonstrates how this can be accomplished with minimal effort (thanks to some nitfy helper classes).
 
 However, depending on your specific business requirements, *creating* a SharePoint page that leverages reusable content may only be half the battle. What if you need to get that content out of SharePoint?
 
-For example, in[part 1 of this series](/blog/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx), I mentioned how I previously built a custom "document publishing" system based on the WCM features in SharePoint. In the first sprint of that effort, one of the core scenarios was exporting a SharePoint site (typically containing about a hundred pages of content) to a PDF file. We call this the "Export to PDF" feature. In the current sprint, I've been working on an enhancement to export the documents to an external system (so clients can view a copy of the content stored in that other system). We call this the "Export to {external system}" feature. [I've substituted the name of the actual system with a placeholder to protect the innocent ;-) ]
+For example, in[part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I mentioned how I previously built a custom "document publishing" system based on the WCM features in SharePoint. In the first sprint of that effort, one of the core scenarios was exporting a SharePoint site (typically containing about a hundred pages of content) to a PDF file. We call this the "Export to PDF" feature. In the current sprint, I've been working on an enhancement to export the documents to an external system (so clients can view a copy of the content stored in that other system). We call this the "Export to {external system}" feature. [I've substituted the name of the actual system with a placeholder to protect the innocent ;-) ]
 
 The "Export to PDF" feature was originally built with very little code. [You may recall that I previously stated this solution had to be delivered to Production in four weeks.]
 
@@ -271,5 +271,5 @@ If this unit test ever starts failing, I'll know there's a good chance that I c
 > 		You must be running Visual Studio 2010 Service Pack 1 in order to run 
 > 		my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments 
 > 		like the one I described in a
-> 		[post from a couple of years ago](/blog/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx)).
+> 		[post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
 

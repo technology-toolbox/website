@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["My System", "PowerShell"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2011/11/17/building-technologytoolbox-com-part-8.aspx), I described the PowerShell script used to rebuild the Development environment for TechnologyToolbox.com on a daily basis. This post explains the subtleties of running the script -- or, more generally, *any* PowerShell script -- using the Windows Task Scheduler.
+In[my previous post](/blog/jjameson/2011/11/17/building-technologytoolbox-com-part-8), I described the PowerShell script used to rebuild the Development environment for TechnologyToolbox.com on a daily basis. This post explains the subtleties of running the script -- or, more generally, *any* PowerShell script -- using the Windows Task Scheduler.
 
 ### Understanding the issues
 
@@ -216,7 +216,7 @@ Here is the sample command file from my previous post (Rebuild Website.cmd):
 
 Notice the use of `$LASTEXITCODE` and `EXIT %ERRORLEVEL%` in order to "bubble up" any non-zero return code from PowerShell to the**Last Run Result **column in Task Scheduler. In other words, when an error occurs while running the PowerShell script, we don't want the scheduled task to report "<samp>The operation completed successfully. (0x0)</samp>"; rather it should indicate that something bad happpened (which would trigger us to examine the corresponding log file to investigate the issue).
 
-I also use "`2>&1`" to redirect `stderr` to`stdout` to ensure error messages are written to the log file as well as the normal output. This is a trick I covered in[a previous blog post](/blog/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx).
+I also use "`2>&1`" to redirect `stderr` to`stdout` to ensure error messages are written to the log file as well as the normal output. This is a trick I covered in[a previous blog post](/blog/jjameson/2009/03/27/redirecting-stderr-to-stdout).
 
 
 > **Important**

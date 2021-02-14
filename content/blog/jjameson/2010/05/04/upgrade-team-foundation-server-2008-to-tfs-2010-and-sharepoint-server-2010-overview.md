@@ -21,7 +21,7 @@ tags: ["Infrastructure", "Visual Studio", "TFS", "SharePoint
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -29,7 +29,7 @@ This past weekend, I upgraded my Team Foundation Server (TFS) 2008 environment  
 
 ### Why the SharePoint upgrade?
 
-The TFS project sites previously ran on Windows SharePoint Services 3.0 (WSS  v3) -- not Microsoft Office SharePoint Server (MOSS) 2007 -- and, in fact, most  of them were originally created with TFS 2005 and WSS v2. [Refer to [one of my previous posts](/blog/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx) for more details on the somewhat painful experience  I had upgrading my TFS environment from WSS v2 to WSS v3 (which was really my own  fault).]
+The TFS project sites previously ran on Windows SharePoint Services 3.0 (WSS  v3) -- not Microsoft Office SharePoint Server (MOSS) 2007 -- and, in fact, most  of them were originally created with TFS 2005 and WSS v2. [Refer to [one of my previous posts](/blog/jjameson/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008) for more details on the somewhat painful experience  I had upgrading my TFS environment from WSS v2 to WSS v3 (which was really my own  fault).]
 
 In the past, I have generally recommended MOSS 2007 over WSS -- due to the numerous  additional features and capabilities of MOSS 2007 over WSS -- but when it came to  TFS, I didn't see any compelling reasons for using MOSS 2007 for the TFS project  sites (unless you simply wanted to leverage an existing SharePoint farm for your  TFS projects).
 
@@ -45,7 +45,7 @@ Using the [pre-upgrade
 checker for SharePoint Server 2010](http://technet.microsoft.com/en-us/library/cc262231%28office.14%29.aspx) and the [Test-SPContentDatabase](http://technet.microsoft.com/en-us/library/ff607941%28office.14%29.aspx)  cmdlet, I confirmed my TFS project sites did not present any issues with upgrading  to the latest version of SharePoint. Fortunately, the TFS product team did not create  a custom site definition for project sites, but rather used the out-of-the-box Team  Site with a little bit of customization (e.g. custom Web Parts and document libraries)  -- which means the upgrade process to SharePoint Server 2010 is relatively simple.
 
 Note that in the "[Jameson 
-Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx)" (a.k.a. my home lab), I use a dual server configuration for TFS  -- an application-tier server and a separate database server. The "data tier" only  runs SQL Server (Database Engine and Analysis Services), while the "application  tier" runs the other services (i.e. TFS, WSS, and Reporting Services).
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab), I use a dual server configuration for TFS  -- an application-tier server and a separate database server. The "data tier" only  runs SQL Server (Database Engine and Analysis Services), while the "application  tier" runs the other services (i.e. TFS, WSS, and Reporting Services).
 
 While there are certainly many organizations out there that install everything  they need for TFS on a single server, I strongly recommend you "isolate" SQL Server  as much as possible in your Production environment. This makes it much easier to  monitor and troubleshoot the environment, as well as scale the solution over time  as your needs grow.
 
@@ -73,7 +73,7 @@ As I've mentioned before, in the "Jameson Datacenter", BEAST is my "Production" 
 In general, I followed the TFS installation guide to perform a "migration" upgrade  of TFS. However, there were a few steps that didn't go exactly as planned, as well  as a few "shortcuts" to reduce the time and effort required for the upgrade.
 
 Here is the checklist I used from the TFS installation guide (**In-Place 
-or Migration Upgrade of Team Foundation Server on One or More Servers**),  along with my comments for each task. Note that in my [next post](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx), I'll provide the detailed steps for installing TFS 2010 (and SharePoint  Server 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
+or Migration Upgrade of Team Foundation Server on One or More Servers**),  along with my comments for each task. Note that in my [next post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I'll provide the detailed steps for installing TFS 2010 (and SharePoint  Server 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
 
 
 <caption>Preparation</caption>| Task | Comments |
@@ -89,7 +89,7 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 | Prepare Portal Server. | Note that I had previously upgraded my TFS instance from WSS v2 to WSS 	v3.<br><br>To upgrade my TFS projects to SharePoint Server 2010, I performed a "clean 	install" and then attached the content database with the existing TFS project 	sites.<br><br>(more detail provided in my next blog post) |
 | Team Foundation Server Administrator Fills out Worksheet. | In my environment, the "TFS Administrator" and the "SharePoint Administrator" 	are one and the same (i.e. me).<br><br>Refer to the "planning" section in my next blog post for specific details 	on my environment. |
 | Install and provision SharePoint Products. | I installed SharePoint Server 2010 using the following TechNet article 	as a guide:<br><br><cite>Deploy a single server with SQL Server (SharePoint Server 2010)</cite><br>[http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx](http://technet.microsoft.com/en-us/library/cc262243%28office.14%29.aspx)<br><br><br>(more detail provided in my next blog post) |
-| Configure Microsoft Office SharePoint Server 2007. | Jon Tsao has written a helpful blog post with details on how to configure 	SharePoint Server 2010 for TFS dashboards:<br><br><cite>Configuring SharePoint Server 2010 for Dashboard Compatibility 		with TFS 2010</cite><br>[http://blogs.msdn.com/team\_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx](http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx)<br><br><br>It's a little out-of-date (due to changes in SharePoint Server 2010 RTM 	from Beta 2), but once I found the links to configure Excel Services and 	the Secure Store Service, I was able to complete the configuration.<br><br>Unfortunately, my configuration is a little different from the configuration 	Jon used and subsequently revealed (what I believe to be) a bug in SharePoint 	Server 2010 with Excel Services. Refer to the following post for more details:<br><br><cite>"The workbook cannot be opened" Error with SharePoint Server 2010 		(and TFS 2010)</cite><br>[http://blogs.msdn.com/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](/blog/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx)<br> |
+| Configure Microsoft Office SharePoint Server 2007. | Jon Tsao has written a helpful blog post with details on how to configure 	SharePoint Server 2010 for TFS dashboards:<br><br><cite>Configuring SharePoint Server 2010 for Dashboard Compatibility 		with TFS 2010</cite><br>[http://blogs.msdn.com/team\_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx](http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx)<br><br><br>It's a little out-of-date (due to changes in SharePoint Server 2010 RTM 	from Beta 2), but once I found the links to configure Excel Services and 	the Secure Store Service, I was able to complete the configuration.<br><br>Unfortunately, my configuration is a little different from the configuration 	Jon used and subsequently revealed (what I believe to be) a bug in SharePoint 	Server 2010 with Excel Services. Refer to the following post for more details:<br><br><cite>"The workbook cannot be opened" Error with SharePoint Server 2010 		(and TFS 2010)</cite><br>[http://blogs.msdn.com/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010)<br> |
 | Install and Configure Extensions. | I skipped this step because in my environment SharePoint Server 2010 	is installed on the same server as TFS. |
 | Administrator for SharePoint Products Fills out Worksheet. | Refer to the "planning" section in next blog post for specific details 	on my environment. |
 | Verify local SharePoint Products. | As instructed in the installation guide, I added the TFS service account 	to the SharePoint Farm Administrators group. |
@@ -135,5 +135,5 @@ I also chose to just "bite the bullet" and install the full Visual Studio 2010  
 
 ### Details for Upgrade Process
 
-As mentioned throughout this post, I'll provide details about the installation,  configuration, and upgrade of TFS 2010 and SharePoint Server 2010 in my [next blog post](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx).
+As mentioned throughout this post, I'll provide details about the installation,  configuration, and upgrade of TFS 2010 and SharePoint Server 2010 in my [next blog post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 

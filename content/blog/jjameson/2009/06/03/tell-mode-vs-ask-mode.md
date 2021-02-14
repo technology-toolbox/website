@@ -20,7 +20,7 @@ tags: ["My System", "Core
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
@@ -150,7 +150,7 @@ I'll warn you...this is a rather long post and not one I'm expecting many peopl
 > * * *
 
 
-Note that I have replaced the project code name with *[Project]* in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a["Work Items" list](/blog/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx) on a secured team site we used for the project (which obviously you wouldn't have access to -- unless you just happen to be one of my cohorts on the project).
+Note that I have replaced the project code name with *[Project]* in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2) on a secured team site we used for the project (which obviously you wouldn't have access to -- unless you just happen to be one of my cohorts on the project).
 
 I have included slightly "scrubbed" versions of a couple of the bugs below, in case you are interested in seeing examples. If you don't understand all of the acronyms, terms, and technical details...don't worry, you're not supposed to -- unless you actually were a member of this project ;-)
 

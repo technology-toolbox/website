@@ -16,10 +16,10 @@ tags: ["Core Development"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-This post provides a high-level walkthrough of the build and deployment process         that I typically recommend on projects that I am involved with. It includes a series         of illustrations that capture key concepts at various points in time. Specific parts         of the process -- such as the [development and build environments](/blog/jjameson/archive/2009/09/25/development-and-build-environments.aspx), [versioning](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx), and [source control](/blog/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx) -- have already been covered in previous posts.
+This post provides a high-level walkthrough of the build and deployment process         that I typically recommend on projects that I am involved with. It includes a series         of illustrations that capture key concepts at various points in time. Specific parts         of the process -- such as the [development and build environments](/blog/jjameson/2009/09/25/development-and-build-environments), [versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning), and [source control](/blog/jjameson/2009/09/26/best-practices-for-scm-and-the-daily-build-process) -- have already been covered in previous posts.
 
 The following figure illustrates the initial build and deployment of the solution.
 

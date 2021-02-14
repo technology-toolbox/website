@@ -17,7 +17,7 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 I encountered a rather nasty bug last week with Microsoft Office SharePoint Server         (MOSS) 2007 when trying to run an x86 process (that utilizes the SharePoint API)         on an x64 server.
@@ -91,7 +91,7 @@ At this point, you're probably thinking something like "Jeremy, why would you po
 
 There are at least a couple of scenarios that I'm aware of:
 
-- First, you might want to run some Visual Studio [unit tests that access a live SharePoint site](/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx). These unit tests work great when
+- First, you might want to run some Visual Studio [unit tests that access a live SharePoint site](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator). These unit tests work great when
             you are developing on an x86 MOSS 2007 VM. However, they "blow chunks" on an x64
             development VM. [Oh, and please don't get me started on the whole "mocking" topic
             for unit testing SharePoint. That could get me going for hours -- and I really do
@@ -103,5 +103,5 @@ There are at least a couple of scenarios that I'm aware of:
             in the farm.
 
 
-It's the latter scenario in which I first encountered this bug. However, rather         than going into the details here, I want to cover the ImportPages.exe utility in         a [separate post](/blog/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx).
+It's the latter scenario in which I first encountered this bug. However, rather         than going into the details here, I want to cover the ImportPages.exe utility in         a [separate post](/blog/jjameson/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file).
 

@@ -20,11 +20,11 @@ tags: ["Windows
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-As I mentioned in my[previous post](/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx), last month I built out a new virtual environment using Hyper-V on Server Core. Since you can't run MMC -- and therefore Hyper-V Manager -- on Server Core, you need to use remote administration to manage the VMs.
+As I mentioned in my[previous post](/blog/jjameson/2008/07/07/copy-paste-gotchas-with-server-core), last month I built out a new virtual environment using Hyper-V on Server Core. Since you can't run MMC -- and therefore Hyper-V Manager -- on Server Core, you need to use remote administration to manage the VMs.
 
 John Howard's[blog series on Hyper-V Remote Management](http://blogs.technet.com/jhoward/archive/2008/03/28/part-1-hyper-v-remote-management-you-do-not-have-the-requested-permission-to-complete-this-task-contact-the-administrator-of-the-authorization-policy-for-the-computer-computername.aspx) is by far the definitive source for getting Hyper-V up and running on Server Core. It provides an excellent step-by-step guide for enabling remote administration, opening various firewall ports, configuring DCOM permissions (if you don't want to use admin accounts), etc. If you haven't yet at least scanned John's posts, I highly recommend doing so before embarking on the Hyper-V on Server Core path.
 

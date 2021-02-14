@@ -14,10 +14,10 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In [part 1 of this series](/blog/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx), I mentioned that one of the options for creating SharePoint sites in multiple languages is to install the corresponding SharePoint language packs prior to creating the sites. This is the most common deployment scenario for localization. [An alternative localization approach that we used years ago on the Agilent Technologies project involved localizing just the pages accessed by customers -- whereas "administration" pages, such as **Site Settings**, were kept in English due to requirements from the support team.]
+In [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1), I mentioned that one of the options for creating SharePoint sites in multiple languages is to install the corresponding SharePoint language packs prior to creating the sites. This is the most common deployment scenario for localization. [An alternative localization approach that we used years ago on the Agilent Technologies project involved localizing just the pages accessed by customers -- whereas "administration" pages, such as **Site Settings**, were kept in English due to requirements from the support team.]
 
 
 > **Note**

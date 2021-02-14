@@ -20,7 +20,7 @@ tags: ["WSUS", "
 > [http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Windows Update started generating errors last week on one of my servers. Specifically,         the server (JUBILEE) was encountering an error when trying to install Microsoft         .NET Framework 4:
@@ -41,7 +41,7 @@ Windows Update started generating errors last week on one of my servers. Specifi
 
 
 
-Note that all of the other servers and workstations in the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) installed .NET Framework 4 without incident, so I was         a little baffled why this particular server was failing.
+Note that all of the other servers and workstations in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) installed .NET Framework 4 without incident, so I was         a little baffled why this particular server was failing.
 
 Rather than troubleshooting the error using the steps described in [KB 958052](http://support.microsoft.com/kb/958052) (as I've done in the past when encountering error 0x80070643 with         Windows Update), I decided it would be quicker and easier to try installing it using         the [.NET Framework 4 standalone installer](http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7).
 

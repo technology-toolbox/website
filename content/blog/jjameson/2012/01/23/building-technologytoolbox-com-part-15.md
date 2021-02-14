@@ -7,11 +7,11 @@ categories: ["Development", "My System"]
 tags: ["Subtext"]
 ---
 
-I've been running my new blog on Subtext for almost 4 months and overall I'm very satisfied with it. However, as I mentioned in a[previous post](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx), I encountered some issues with Subtext that required a few tweaks here and there.
+I've been running my new blog on Subtext for almost 4 months and overall I'm very satisfied with it. However, as I mentioned in a[previous post](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1), I encountered some issues with Subtext that required a few tweaks here and there.
 
 Some of the changes I made to Subtext were necessary to get the blog pages to render as I wanted them to ("enhancements" if you will), while other changes were required to mitigate errors on the site (i.e. "bug fixes"). In this post, I'll describe the latter, since these will be of greater interest to a broader audience.
 
-As I mentioned in[yesterday's post](/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx), ELMAH is used to log errors on the Technology Toolbox site and I've configured it to send an email whenever an unhandled exception occurs on the site. Consequently I've received somewhere in the neighborhood of 500 messages in the past few months as a result of errors on the site. [Thankfully these email messages are organized automatically into various folders, courtesy of[rules I have configured in Outlook](/blog/jjameson/archive/2010/01/04/managing-email-effectively.aspx).]
+As I mentioned in[yesterday's post](/blog/jjameson/2012/01/22/building-technologytoolbox-com-part-14), ELMAH is used to log errors on the Technology Toolbox site and I've configured it to send an email whenever an unhandled exception occurs on the site. Consequently I've received somewhere in the neighborhood of 500 messages in the past few months as a result of errors on the site. [Thankfully these email messages are organized automatically into various folders, courtesy of[rules I have configured in Outlook](/blog/jjameson/2010/01/04/managing-email-effectively).]
 
 A few of these errors are my fault (in other words, they occurred either in code that I developed or due to configuration issues) but the vast majority result from issues in the Subtext blog engine. It's also worth emphasizing that many of the errors are duplicates of the same issue (e.g. the IdenticonHandler.ashx error that I describe below) and many of them are caused by people trying to hack the site.
 
@@ -438,13 +438,13 @@ As noted in my comments in the code above, this allows greater flexibility in S
 The following post shows an example of comments that specify email addresses (both with and without a corresponding Gravatar):
 
 
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx)
+> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1)
 
 
 The following post shows an example where users added comments but did not specify their email addresses:
 
 
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
+> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)
 
 
 Without the code changes in Subtext that I show above, your site can't address both scenarios. Then again, maybe you aren't quite as "nitpicky" as I am ;-)
@@ -465,7 +465,7 @@ Woohoo! I love bugs that take less than an hour to resolve.
 
 Here's another error that only occurs when running Subtext in a **Medium** trust configuration.
 
-As I mentioned in a[previous post](/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx), I was initially hesitant about having both "tags" and "categories" for blog posts (since [my old MSDN blog](http://blogs.msdn.com/b/jjameson) only used tags). Therefore I started out only using categories (in other words, when migrating posts from my MSDN blog, each tag in Telligent was converted to a category in Subtext). Shortly thereafter, I decided it would be better to use *both* categories and tags in Subtext. Consequently I ended up deleting the categories I had previously created and starting over with a much smaller number. [Tags from Telligent were essentially migrated one-for-one to tags in Subtext. The original tags were also used to determine a higher level "grouping" which became the categories in Subtext.]
+As I mentioned in a[previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), I was initially hesitant about having both "tags" and "categories" for blog posts (since [my old MSDN blog](http://blogs.msdn.com/b/jjameson) only used tags). Therefore I started out only using categories (in other words, when migrating posts from my MSDN blog, each tag in Telligent was converted to a category in Subtext). Shortly thereafter, I decided it would be better to use *both* categories and tags in Subtext. Consequently I ended up deleting the categories I had previously created and starting over with a much smaller number. [Tags from Telligent were essentially migrated one-for-one to tags in Subtext. The original tags were also used to determine a higher level "grouping" which became the categories in Subtext.]
 
 However, the original categories had already been discovered by Google. Consequently, when someone -- or the Googlebot itself -- attempted to view one of the deleted categories (e.g. https://www.technologytoolbox.com/blog/jjameson/category/19.aspx) an error would occur.
 
@@ -622,7 +622,7 @@ See, this is exactly why Microsoft doesn't support directly querying SharePoint 
 
 I'm not sure what happened on January 11. All I know is that I wasn't running any kind of bulk update at that time. I'll keep an eye out for future instances of this error.
 
-**Recommendation: **Before running any kind of utility in Production, ensure you run it in the Test environment (that was recently["refreshed" from Production](/blog/jjameson/archive/2011/11/14/building-technologytoolbox-com-part-7.aspx)) and monitor locks in SQL Server while testing.
+**Recommendation: **Before running any kind of utility in Production, ensure you run it in the Test environment (that was recently["refreshed" from Production](/blog/jjameson/2011/11/14/building-technologytoolbox-com-part-7)) and monitor locks in SQL Server while testing.
 
 ### System.Web.HttpException: This is an invalid script resource request.
 
@@ -648,7 +648,7 @@ Looks like more pathetic hacking attempts.
 > 		filters:
 > 		
 > <cite>Filter ELMAH email messages to avoid getting spammed by hackers</cite>
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx](/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx)
+> [https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx](/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers)
 
 
 ### System.Web.HttpException: A public action method 'RecordAggregatorView' could not be found...

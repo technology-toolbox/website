@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "Toolbox"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -35,7 +35,7 @@ The "extraneous" files that I've seen copied are:
 
 While I can't provide an explanation for why the **Copy Local**  property is ignored for these assemblies, I can provide you with a script to recursively  remove these files from your Visual Studio project structure.
 
-Sometime last year, I created the following script and dropped it in my SharePoint [Toolbox](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)  folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\DeleteExtraneousSharePointAssemblies.vbs):
+Sometime last year, I created the following script and dropped it in my SharePoint [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup)  folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\DeleteExtraneousSharePointAssemblies.vbs):
 
 
 

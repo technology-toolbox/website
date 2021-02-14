@@ -11,7 +11,7 @@ In this post, I'll show you how I quickly restore the Production database for T
 
 ### Introduction
 
-In[my previous post](/blog/jjameson/archive/2011/11/13/building-technologytoolbox-com-part-6.aspx), I explained how I migrated blog posts from[my old MSDN blog](http://blogs.msdn.com/b/jjameson/) to Subtext. While developing the migration utility, I ran the migration process countless times on one of my development VMs (or what I typically refer to as "LOCAL"). Then, once the migration tool was nearing completion, I began running it in the Development integration environment (DEV). For final validation purposes, I ran the migration tool in the Test environment (TEST) a few times while I worked out the remaining bugs and issues. Eventually I performed the migration process one last time in the Production environment (PROD).
+In[my previous post](/blog/jjameson/2011/11/13/building-technologytoolbox-com-part-6), I explained how I migrated blog posts from[my old MSDN blog](http://blogs.msdn.com/b/jjameson/) to Subtext. While developing the migration utility, I ran the migration process countless times on one of my development VMs (or what I typically refer to as "LOCAL"). Then, once the migration tool was nearing completion, I began running it in the Development integration environment (DEV). For final validation purposes, I ran the migration tool in the Test environment (TEST) a few times while I worked out the remaining bugs and issues. Eventually I performed the migration process one last time in the Production environment (PROD).
 
 From that point on, the multiple environments gradually became more and more out-of-sync. For example, adding new blog posts or editing existing blog posts in PROD meant the corresponding changes would not be reflected in DEV and TEST.
 
@@ -29,7 +29,7 @@ The Production environment for TechnologyToolbox.com is currently hosted by [Wi
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg) 
 
 
-While I generally prefer to use Windows Authentication with SQL Server -- for reasons I described in[a post from way back in 2007](/blog/jjameson/archive/2007/03/23/sql-server-authentication-modes.aspx) -- this is neither supported (nor desired) in the hosted scenario. If the reasons for this are not immediately clear, I'll explain why in the following sections.
+While I generally prefer to use Windows Authentication with SQL Server -- for reasons I described in[a post from way back in 2007](/blog/jjameson/2007/03/23/sql-server-authentication-modes) -- this is neither supported (nor desired) in the hosted scenario. If the reasons for this are not immediately clear, I'll explain why in the following sections.
 
 ### Refreshing the TEST database for TechnologyToolbox.com
 

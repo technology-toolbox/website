@@ -17,7 +17,7 @@ tags: ["My System", "Core Development", "Visual Studio"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Whenever a new .NET assembly project is created in Visual Studio, a file named AssemblyInfo         is created that contains attributes used to define the version of the assembly during         compilation.
@@ -42,7 +42,7 @@ Assembly versions consist of four different parts ({Major Version}.{Minor Versio
             Incremented for QFEs (a.k.a. "hotfixes" or patches) to builds released into the
             Production environment (PROD). This is set to zero for the initial release of any
             major/minor version of the solution.</dd></dl>
-As a general guideline, it is best to use the same version number for all assemblies         compiled as part of the solution. This is easily accomplished using [linked files in Visual Studio solutions](/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx).
+As a general guideline, it is best to use the same version number for all assemblies         compiled as part of the solution. This is easily accomplished using [linked files in Visual Studio solutions](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions).
 
 When building the solution, there are two version numbers that need to be considered:         the file version number and the .NET assembly version number.
 
@@ -55,7 +55,7 @@ The file version should be isolated in its own file (e.g. AssemblyVersionInfo.cs
 
 > **Update (2010-04-22)**
 > 
->             In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx) (assuming you are using
+>             In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) (assuming you are using
 >             Team Foundation Server).
 
 
@@ -65,7 +65,7 @@ The [AssemblyVersionAttribute](http://msdn.microsoft.com/en-us/library/system.re
 
 Assembly versions are incremented manually when branching the code for a release         (to the PROD environment).
 
-The assembly version number should be specified in a "shared assembly info" file         (e.g. [SharedAssemblyInfo.cs](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx)), thus ensuring that all of the various assemblies         in the solution have the same assembly version.
+The assembly version number should be specified in a "shared assembly info" file         (e.g. [SharedAssemblyInfo.cs](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects)), thus ensuring that all of the various assemblies         in the solution have the same assembly version.
 
 By default, the **Product version** shown in the file properties window         is the same as the value specified for **AssemblyFileVersionAttribute**.         Setting [AssemblyInformationalVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyinformationalversionattribute%28VS.71%29.aspx) to be the same as **AssemblyVersionAttribute**         ensures the **Product version** shown in the file properties window         matches the **Version **displayed in the [GAC shell extension](http://msdn.microsoft.com/en-us/library/34149zk3.aspx).
 

@@ -15,10 +15,10 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In [my previous post](/blog/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx), I explained how I analyze database roundtrips using SQL Server Profiler in order to identify potential performance issues.
+In [my previous post](/blog/jjameson/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler), I explained how I analyze database roundtrips using SQL Server Profiler in order to identify potential performance issues.
 
 While working on some proof-of-concept code for my current project, I found the [PublishingPageCollection.Item(String)](http://msdn.microsoft.com/en-us/library/ms543758%28v=office.12%29.aspx) property in Microsoft Office SharePoint Server 2007 can result in a large number of extraneous database roundtrips. If you're not familiar with this property, it is simply used to to retrieve a page by its Web-relative URL.
 

@@ -20,7 +20,7 @@ tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
@@ -40,7 +40,7 @@ It turns out that 73 MB in each build folder was consumed by multiple copies of
 - etc.
 
 
-In other words, it's essentially the same[problem I blogged about over a year ago](/blog/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx) -- with a slight twist.
+In other words, it's essentially the same[problem I blogged about over a year ago](/blog/jjameson/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds) -- with a slight twist.
 
 In my earlier post, I described adding a `BeforeDropBuild` target to the TFSBuild.proj file in order to remove extraneous assemblies from the build. However, since I'm now using TFS 2010 build (and not using the UpgradeTemplate.xaml build process template), the TFSBuild.proj is no longer used. Hence a `BeforeDropBuild`target no longer does the trick.
 

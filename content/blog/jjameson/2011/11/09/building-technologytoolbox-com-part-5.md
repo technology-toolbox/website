@@ -86,7 +86,7 @@ Consequently, shortly after deciding not to use my MSDN blog as a reference, I 
 > 		</cite>
 
 
-Excellent! Now all I had to do was mockup a few sample blog pages in[my static HTML prototype](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx) and subsequently create a custom Subtext skin to render the same HTML for the live site.
+Excellent! Now all I had to do was mockup a few sample blog pages in[my static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3) and subsequently create a custom Subtext skin to render the same HTML for the live site.
 
 ### HTML markup for blog home page
 

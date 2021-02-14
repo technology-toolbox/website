@@ -19,7 +19,7 @@ tags: ["Windows Server", "Infrastructure"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -58,7 +58,7 @@ After changing the product key, you then need to activate Windows:
 <kbd>slmgr.vbs -ato</kbd>
 
 In my opinion, the fact that the Windows Server 2008 setup does not prompt for  a product key is problematic. At least this is true for the MSDN version (which  I use to run the ["Jameson 
-Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) -- a.k.a. my home lab). I understand that many organizations use  volume licensing (and [volume activation](http://technet.microsoft.com/en-us/library/cc303274.aspx)),  so I certainly can see why entering the product key at installation time should  be optional. I would just prefer that it wasn't skipped altogether. Also, I know  that I'm not the only one who has found it a little confusing to enter MSDN product  keys for Windows Server 2008 after installation.
+Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) -- a.k.a. my home lab). I understand that many organizations use  volume licensing (and [volume activation](http://technet.microsoft.com/en-us/library/cc303274.aspx)),  so I certainly can see why entering the product key at installation time should  be optional. I would just prefer that it wasn't skipped altogether. Also, I know  that I'm not the only one who has found it a little confusing to enter MSDN product  keys for Windows Server 2008 after installation.
 
 Anyway, enough ranting -- I need to get back to my "day job" ;-)
 

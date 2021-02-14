@@ -18,10 +18,10 @@ tags: ["Personal"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/09/02/new-blog-location-http-www-technologytoolbox-com-blog-jjameson.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/09/02/new-blog-location-http-www-technologytoolbox-com-blog-jjameson.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-As I mentioned in my [previous post](/blog/jjameson/archive/2011/08/22/leaving-microsoft.aspx), today is my last day with Microsoft.
+As I mentioned in my [previous post](/blog/jjameson/2011/08/22/leaving-microsoft), today is my last day with Microsoft.
 
 I still have a lot of work to do in setting up my new website, but at this point,         I've completed enough to continue blogging the "Random Musings of Jeremy Jameson":
 

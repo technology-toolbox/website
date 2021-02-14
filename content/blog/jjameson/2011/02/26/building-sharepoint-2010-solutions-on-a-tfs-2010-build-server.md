@@ -19,11 +19,11 @@ tags: ["Visual Studio", "TFS", "SharePoint
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-Last year I wrote a post about[building Microsoft Office SharePoint Server (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server](/blog/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx), which talked about copying various SharePoint assemblies to a "Reference Assemblies" folder and adding a corresponding registry key for MSBuild to locate the assemblies.
+Last year I wrote a post about[building Microsoft Office SharePoint Server (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server](/blog/jjameson/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server), which talked about copying various SharePoint assemblies to a "Reference Assemblies" folder and adding a corresponding registry key for MSBuild to locate the assemblies.
 
 It's nice to see that a similar process has already been covered on MSDN for SharePoint 2010:
 
@@ -114,5 +114,5 @@ I may need to copy additional SharePoint assemblies to my build server in the f
 > 
 > 		I also recommend you remove extraneous SharePoint assemblies from your 
 > 		build output, as described in
-> 		[one of my later posts](/blog/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx).
+> 		[one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects).
 

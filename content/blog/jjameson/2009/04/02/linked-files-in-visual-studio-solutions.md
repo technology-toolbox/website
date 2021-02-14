@@ -17,10 +17,10 @@ tags: ["My System", "Core Development", "Visual Studio", "
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-A couple of years ago, I wrote a post introducing my system for [structuring Visual Studio solutions](/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx). However, I apparently forgot to post         a follow-up providing additional details, such as configuring assembly versioning         and what I like to call "shared assembly information."
+A couple of years ago, I wrote a post introducing my system for [structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions). However, I apparently forgot to post         a follow-up providing additional details, such as configuring assembly versioning         and what I like to call "shared assembly information."
 
 Before I can cover these details, I need to first ensure that you are familiar with         the concept of linking files in Visual Studio solutions, why this is a powerful         feature, and when to use it.
 
@@ -74,9 +74,9 @@ Note that **AssemblyVersionInfo.cs**, **CustomDictionary.xml**,         **Fabrik
 
 With this foundation in place, I'll explain some other recommended best practices         over a series of follow-up posts, including:
 
-- [Using custom dictionaries in Visual Studio](/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
-- [Shared assembly info in Visual Studio projects](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx)
-- [Best practices for .NET assembly versioning](/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
+- [Using custom dictionaries in Visual Studio](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio)
+- [Shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects)
+- [Best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 
 
 Stay tuned!

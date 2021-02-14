@@ -19,15 +19,15 @@ tags: ["MOSS 2007", "Visual Studio", "TFS"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-After [upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx), my next  step was to upgrade various Visual Studio solutions to the 2010 version and ensure  they built successfully after the upgrade.
+After [upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview), my next  step was to upgrade various Visual Studio solutions to the 2010 version and ensure  they built successfully after the upgrade.
 
 Note that during the upgrade, I chose to rebuild the VM (DAZZLER) in my environment  that runs the Team Foundation Build Service. In other words, after backing up the  VM (and robocopying the Builds folder to a temporary location on a different server),  I shutdown DAZZLER and overwrote the VHD file with my SysPrep'ed image of Windows  Server 2008 R2.
 
-Upon starting the VM again -- and completing the "mini-setup" -- I joined the  machine to the domain and proceeded to install the 2010 version of Team Foundation  Build Service (as detailed in [one of yesterday's posts](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx)). Then I installed Visual Studio 2010 on the build  server.
+Upon starting the VM again -- and completing the "mini-setup" -- I joined the  machine to the domain and proceeded to install the 2010 version of Team Foundation  Build Service (as detailed in [one of yesterday's posts](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)). Then I installed Visual Studio 2010 on the build  server.
 
 However, after the rebuild, I forgot to configure the environment to build a  solution for Microsoft Office SharePoint Server (MOSS) 2007. (A long time ago, I  had copied the SharePoint assemblies to DAZZLER in order to compile MOSS 2007 solutions.)
 

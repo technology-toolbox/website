@@ -19,18 +19,18 @@ tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TF
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 I've been a bad blogger this month.
 
-Almost a month ago, I wrote a post about [using Web standards with Microsoft Office SharePoint Server (MOSS) 2007](/blog/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx), but  I noted that there would be more to come on that subject in the near future. Well,  almost a full month has passed and I still haven't posted "part 2" yet. Sorry about  that.
+Almost a month ago, I wrote a post about [using Web standards with Microsoft Office SharePoint Server (MOSS) 2007](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1), but  I noted that there would be more to come on that subject in the near future. Well,  almost a full month has passed and I still haven't posted "part 2" yet. Sorry about  that.
 
 As I sat down to write the next post in that series, I decided to take it in  a different direction in order to make it more valuable to SharePoint developers.  Let's just say that I've been working hard on the series and I hope to have the  subsequent posts published by next weekend.
 
 In the meantime, I wanted to share some lessons learned while performing an upgrade  in [the Jameson 
-Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx).
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter).
 
 A couple of weeks ago, I started receiving notifications (from Systems Center  Operations Manager) regarding disk errors on my primary SQL Server computer (BEAST).  The situation deteriorated and I soon found that one of the four drives in my RAID  1+0 array was offline. After a short sigh of relief that I hadn't lost any of my  data, I added the drive back to the array and initiated a rebuild of the mirror.  I also ordered a new drive to replace my backup drive and thus have a spare in case  the problematic drive failed again.
 
@@ -46,7 +46,7 @@ Note that the article is for TFS 2005, but based on my knowledge of the differen
 
 Also note that what I was trying to achieve with the rebuild was certainly "within  the spirit" of this KB article, but wasn't strictly inline with what it prescribes.  In other words, my goal was to take my TFS instance down while I rebuilt the backend  data tier (using the same hardware but with the latest version of Windows Server  and SQL Server). After restoring the backend SQL Server databases, I expected to  be able to start up my TFS instance again without issue. I quickly discovered that  expectation would not be met (at least not without a lot more work than I originally  anticipated).
 
-After ensuring that I had full backups of all SQL Server databases (as well as  a backup of my [BackedUp](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)  folder) on BEAST, I proceeded to rebuild the server with Windows Server 2008 R2.  Note that I didn't find anything that stated TFS 2008 is supported on Windows Server  2008 R2 -- but then again, I didn't find anything that stated it wasn't supported  on R2, either. It's not the kind of risk that I would recommend to a customer, but  this is just my home lab after all.
+After ensuring that I had full backups of all SQL Server databases (as well as  a backup of my [BackedUp](/blog/jjameson/2007/03/22/backedup-and-notbackedup)  folder) on BEAST, I proceeded to rebuild the server with Windows Server 2008 R2.  Note that I didn't find anything that stated TFS 2008 is supported on Windows Server  2008 R2 -- but then again, I didn't find anything that stated it wasn't supported  on R2, either. It's not the kind of risk that I would recommend to a customer, but  this is just my home lab after all.
 
 I was less concerned with upgrading the version of SQL Server during the rebuild  process, because in my experience the SQL Server team has done a great job in the  area of restoring databases from one version to another.
 

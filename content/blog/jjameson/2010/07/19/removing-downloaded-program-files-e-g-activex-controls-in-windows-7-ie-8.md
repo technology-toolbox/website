@@ -14,7 +14,7 @@ tags: ["Windows Server", "Web Development", "Windows 7"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 In the latest sprint on my current project, we are adding yet another major feature to a customer service portal -- specifically, the ability to view live video feeds from security cameras. The vendor this particular customer has selected for providing the camera functionality utilizes several ActiveX controls to implement video feeds. Consequently, one of the processes that we need for this sprint is the ability to remove the ActiveX controls (for example, to test newer versions of the components, or to demonstrate the user experience the first time someone launches the new "remote monitoring" feature in the portal).

@@ -44,7 +44,7 @@ What is more important is that the site should behave nicely regardless 	of whe
 
 That got me thinking...what would happen if visitors attempted to access 	other areas of the site without specifying "www." -- in particular the blog 	pages served up by Subtext? After all, in the Subtext **Host Admin** 	page, the **Host **field is explicitly set to **www.technologytoolbox.com** 	(and, at that point, I had not configured any aliases).
 
-I did end up configuring Subtext to support both www.technologytoolbox.com 	and technologytoolbox.com (just to be safe) but I figured I should go one 	step further and actually coerce requests for http://technologytoolbox.com 	to be redirected to https://www.technologytoolbox.com. This becomes especially 	important when using an SSL certificate (for example, when	[automatically redirecting from HTTP to HTTPS for a login form](/blog/jjameson/archive/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https.aspx)).
+I did end up configuring Subtext to support both www.technologytoolbox.com 	and technologytoolbox.com (just to be safe) but I figured I should go one 	step further and actually coerce requests for http://technologytoolbox.com 	to be redirected to https://www.technologytoolbox.com. This becomes especially 	important when using an SSL certificate (for example, when	[automatically redirecting from HTTP to HTTPS for a login form](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)).
 
 Fortunately the [URL 	Rewrite](http://www.iis.net/download/URLRewrite) module for IIS makes this rather easy. After some quick research, 	I used IIS Manager to configure the website to redirect requests for	**technologytoolbox.com/...** to **www.technologytoolbox.com/...**
 

@@ -15,7 +15,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Here's something interesting I discovered only recently about Microsoft Office SharePoint Server (MOSS) 2007 -- even though I've been working with the product for years...

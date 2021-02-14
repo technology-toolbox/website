@@ -17,14 +17,14 @@ tags: ["Infrastructure", "Windows 7"]
 > [http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 
 > **Update (2010-08-05)**
 > 
 >             Note that I was unable to reproduce the virus infection after installing Soluto
->             on a different environment. I encourage you to read [my next post](/blog/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx) instead of -- or in addition to -- this post.
+>             on a different environment. I encourage you to read [my next post](/blog/jjameson/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus) instead of -- or in addition to -- this post.
 
 
 In one of the sessions I attended last week at TechReady (an internal training conference         at Microsoft), the speaker mentioned a new piece of "anti-frustration software"         called [Soluto](http://www.soluto.com) which analyzes the boot time of         your PC. It certainly sounded intriguing and I made a note to take a look at it         when I got back home from Seattle.

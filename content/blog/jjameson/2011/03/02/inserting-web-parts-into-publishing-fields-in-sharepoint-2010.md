@@ -15,10 +15,10 @@ tags: ["SharePoint 2010"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In the sample SharePoint solution I provided in [one of last week's posts](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx), you may have noticed that when programmatically creating the custom **Sign In **page, I insert the custom Claims Login Form Web Part into the **Page Content **field.
+In the sample SharePoint solution I provided in [one of last week's posts](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you may have noticed that when programmatically creating the custom **Sign In **page, I insert the custom Claims Login Form Web Part into the **Page Content **field.
 
 In Microsoft Office SharePoint Server (MOSS) 2007, you could only add Web Parts to predetermined zones on the page. However, in SharePoint 2010, you can add a Web Part directly to page content fields. This is huge, because inserting Web Parts "inline" anywhere you want within the main content of the page greatly reduces the number of page layouts that you need to create (simply to achieve different combinations of static HTML content and dynamic content rendered by one or more Web Parts).
 
@@ -28,7 +28,7 @@ The "trick" to rendering a Web Part inline with other content is to add the Web 
 [http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/](http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/)
 
 
-Long ago, when I first started programmatically creating Publishing pages in MOSS 2007, I ended up creating a** [SharePointPublishingHelper](/blog/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx)** class. For those of you that haven't seen the original post (and don't want to take the time to read it now), you just need to understand that **SharePointPublishingHelper **is simply intended to make the process of creating, configuring, and approving Publishing pages in SharePoint as "painless" as possible.
+Long ago, when I first started programmatically creating Publishing pages in MOSS 2007, I ended up creating a** [SharePointPublishingHelper](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class)** class. For those of you that haven't seen the original post (and don't want to take the time to read it now), you just need to understand that **SharePointPublishingHelper **is simply intended to make the process of creating, configuring, and approving Publishing pages in SharePoint as "painless" as possible.
 
 Consequently, for SharePoint Server 2010, I added the following method to **SharePointPublishingHelper**:
 

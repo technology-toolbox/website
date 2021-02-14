@@ -14,10 +14,10 @@ tags: ["My System", "Core Development"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-A few years ago I developed a class (**SharePointSearchUrlBuilder**) for working with SharePoint Search URLs. The class is used to easily build or parse the various query string parameters used by SharePoint Search (e.g. keywords, search scope, additional query terms, etc.) and serves as the foundation for the [faceted search](/blog/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx) solution I first built for Agilent Technologies.
+A few years ago I developed a class (**SharePointSearchUrlBuilder**) for working with SharePoint Search URLs. The class is used to easily build or parse the various query string parameters used by SharePoint Search (e.g. keywords, search scope, additional query terms, etc.) and serves as the foundation for the [faceted search](/blog/jjameson/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue) solution I first built for Agilent Technologies.
 
 A common scenario in faceted search is to start with a search results URL and subsequently manipulate it in a multitude of ways to generate links to related search results.
 

@@ -20,7 +20,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
@@ -33,10 +33,10 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > 		DDF file and corresponding modifications to the project file: 
 > 
 > <cite>Building SharePoint WSPs with Team Foundation Build</cite>
-> [http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](/blog/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx)
+> [http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build)
 
 
-In a previous post, I introduced[the "DR.DADA" approach to SharePoint development](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx). This post walks you through an actual implementation of a feature -- well, actually two features -- using DR.DADA (Deactivate, Retract, Delete, Add, Deploy, and Activate).
+In a previous post, I introduced[the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through an actual implementation of a feature -- well, actually two features -- using DR.DADA (Deactivate, Retract, Delete, Add, Deploy, and Activate).
 
 If you've worked with me in the past, you know that I am a huge fan of using scenario-based development. So for the purposes of this post, let's use a scenario to drive the development of our features:
 
@@ -64,15 +64,15 @@ Thinking ahead a little in the Fabrikam scenario, rather than naming our soluti
 
 ### Creating the Visual Studio Solution
 
-The first step is to create a Visual Studio solution. Again, rather than making a solution specifically for the **Fabrikam.Demo.Publishing**SharePoint solution, let's keep it more general in case other projects are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**. If you've seen my post on[structuring Visual Studio solutions](/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx) or my later post on[shared assembly info in Visual Studio projects](/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx), then you know my first step is to build out a "shell" that looks like the following:
+The first step is to create a Visual Studio solution. Again, rather than making a solution specifically for the **Fabrikam.Demo.Publishing**SharePoint solution, let's keep it more general in case other projects are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**. If you've seen my post on[structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) or my later post on[shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), then you know my first step is to build out a "shell" that looks like the following:
 
 ![Visual Studio solution before adding SharePoint features](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%201.png)
 		Figure 1: Visual Studio solution before adding SharePoint features
 
 
-Next, I create a new Visual Studio solution folder called **Publishing** and then add a new **Class Library **project named **Publishing.csproj**(in[C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)). [Note that the Visual Studio solution folder simply helps "partition" the solution and makes it really easy in the future to[load and unload multiple projects](/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx) at once (for example, if we later need to add a **Publishing.DeveloperTests **project for unit tests corresponding to code in **Publishing.csproj**).]
+Next, I create a new Visual Studio solution folder called **Publishing** and then add a new **Class Library **project named **Publishing.csproj**(in[C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)). [Note that the Visual Studio solution folder simply helps "partition" the solution and makes it really easy in the future to[load and unload multiple projects](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need to add a **Publishing.DeveloperTests **project for unit tests corresponding to code in **Publishing.csproj**).]
 
-Since I didn't create the project with the fully qualified name (in order to conserve precious space within the Visual Studio **Solution Explorer**window), I then update the project properties to change the assembly name and default namespace to **Fabrikam.Demo.Publishing**. I also delete the default **Class1.cs **file (which gets created with every **Class Library **project), add some[linked files](/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx) to the project, configure a strong name key file to sign the assembly, configure shared assembly information for the new project (as described in my previous posts), and add some assembly references (e.g. to the **CoreServices** project as well as to the System.Web and Microsoft.SharePoint assemblies).
+Since I didn't create the project with the fully qualified name (in order to conserve precious space within the Visual Studio **Solution Explorer**window), I then update the project properties to change the assembly name and default namespace to **Fabrikam.Demo.Publishing**. I also delete the default **Class1.cs **file (which gets created with every **Class Library **project), add some[linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the assembly, configure shared assembly information for the new project (as described in my previous posts), and add some assembly references (e.g. to the **CoreServices** project as well as to the System.Web and Microsoft.SharePoint assemblies).
 
 To ensure the solution delivered to Fabrikam adheres to development best practices, I also update the project properties for both the Debug and Release configurations to:
 
@@ -216,7 +216,7 @@ The contents of the WSP (i.e. files and folder structure) are defined in**wsp\_
 
 The most interesting aspect of this DDF is that we want to deploy the corresponding Debug or Release build of **Fabrikam.Demo.CoreServices.dll** as part of our WSP. The best way I found to do this is to specify the BUILD\_CONFIGURATION variable when calling makecab.exe.
 
-Next, I unload **Publishing.csproj** and edit the MSBuild file directly in order to create the SharePoint solution package (WSP). As noted in an[earlier blog post](/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx), this is simply a matter of adding a custom build target that invokes makecab.exe and adding this new target as a dependency of the build:
+Next, I unload **Publishing.csproj** and edit the MSBuild file directly in order to create the SharePoint solution package (WSP). As noted in an[earlier blog post](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files), this is simply a matter of adding a custom build target that invokes makecab.exe and adding this new target as a dependency of the build:
 
 
 
@@ -398,7 +398,7 @@ Here are the contents of **Deploy Solution.cmd**:
 
 
 
-The most interesting part about **Deploy Solution.cmd** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow[a standard naming convention for your environments](/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx). Also note that the URL of the SharePoint site can be specified either through an environment variable or as a parameter to the script (which is occasionally useful for troubleshooting purposes -- for example, to quickly deploy to a "vanilla" SharePoint site).
+The most interesting part about **Deploy Solution.cmd** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow[a standard naming convention for your environments](/blog/jjameson/2009/06/09/environment-naming-conventions). Also note that the URL of the SharePoint site can be specified either through an environment variable or as a parameter to the script (which is occasionally useful for troubleshooting purposes -- for example, to quickly deploy to a "vanilla" SharePoint site).
 
 
 > **Tip**

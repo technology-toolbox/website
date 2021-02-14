@@ -15,10 +15,10 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx), I described a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file.
+In my [previous post](/blog/jjameson/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file), I described a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file.
 
 Aside from the code to read data from the input file into a DataSet, the main work is performed by the `SharePointPublishingHelper` class (which was written long before the ImportPages.exe utility). This class is simply a collection of helper methods for the SharePoint publishing API.
 

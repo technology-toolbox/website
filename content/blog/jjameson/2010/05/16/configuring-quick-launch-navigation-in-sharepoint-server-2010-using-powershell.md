@@ -14,7 +14,7 @@ tags: ["SharePoint 2010", "PowerShell"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Suppose that you need to update a few SharePoint team sites to add a couple of links to the quick launch navigation. Assuming the number of sites to be updated is relatively small, then it is reasonable to manually apply the configuration changes via the **Site Settings **page on each site.
@@ -25,7 +25,7 @@ In the past -- i.e. when working with Microsoft Office SharePoint Server (MOSS) 
 
 Now, with SharePoint Server 2010, we have an entirely new option for automating configuration changes like this -- namely PowerShell. [True, if you want to do some of the "heavy lifting" yourself, you can also use PowerShell with MOSS 2007.]
 
-I've recently written a [series of posts about upgrading from Team Foundation Server (TFS) 2008 to to TFS 2010](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx) -- including some details about [upgrading the project sites hosted in SharePoint](/blog/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx). During this process, I decided that I'd update my "legacy" TFS project sites to have the same quick launch navigation as new project sites created in TFS 2010 with the MSF Agile v5 process template.
+I've recently written a [series of posts about upgrading from Team Foundation Server (TFS) 2008 to to TFS 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview) -- including some details about [upgrading the project sites hosted in SharePoint](/blog/jjameson/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features). During this process, I decided that I'd update my "legacy" TFS project sites to have the same quick launch navigation as new project sites created in TFS 2010 with the MSF Agile v5 process template.
 
 A few years ago, I wrote some code to manipulate the navigation elements on a team site when a custom feature was activated. Consequently, I was already familiar with the portion of the SharePoint object model that I needed to use in order to modify the quick launch navigation.
 
@@ -287,5 +287,5 @@ Here is the corresponding PowerShell script to import the quick launch navigatio
 
 If I wanted to add the new links after any existing navigation links, I would either need to specify the existing links in the input XML (which wouldn't require any changes to the corresponding PowerShell script) or extend the XML schema to support some sort of "position" attribute (which would add significant complexity to the script).
 
-In my [next post](/blog/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx), I'll show how you can use PowerShell to update the quick launch navigation for TFS 2005/2008 project sites upgraded to TFS 2010.
+In my [next post](/blog/jjameson/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation), I'll show how you can use PowerShell to update the quick launch navigation for TFS 2005/2008 project sites upgraded to TFS 2010.
 

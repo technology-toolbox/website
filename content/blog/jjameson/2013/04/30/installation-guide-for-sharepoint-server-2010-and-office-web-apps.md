@@ -9,7 +9,7 @@ tags: ["My System", "SharePoint
 			2010"]
 ---
 
-This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps. As noted in[my previous post](/blog/jjameson/archive/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments.aspx), much of this content is included on TechNet (in fact, a good portion of this installation guide has roots in the TechNet documentation for Microsoft Office SharePoint Server 2007). However, this guide augments the SharePoint 2010 TechNet documentation with corrections and additional content to fix omissions. It also includes details specific to a particular environment (e.g. service account names and database sizes).
+This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps. As noted in[my previous post](/blog/jjameson/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact, a good portion of this installation guide has roots in the TechNet documentation for Microsoft Office SharePoint Server 2007). However, this guide augments the SharePoint 2010 TechNet documentation with corrections and additional content to fix omissions. It also includes details specific to a particular environment (e.g. service account names and database sizes).
 
 For the sake of understanding the context of this installation guide, imagine being tasked with deploying a new extranet solution for Fabrikam Technologies (my favorite fictitious manufacturing company). The extranet solution needs to be available as soon as possible and thus various capabilities will be released over a series of short sprints (or *iterations*, if you prefer that term instead). The scope for the first sprint is limited to the following:
 
@@ -184,9 +184,9 @@ You must properly install Windows Server 2008 R2 (or the 64-bit edition 	of Win
 Whenever possible, it is strongly recommended to start from a Sysprep'ed 	image to save significant time. For information on creating and using Sysprep'ed 	images for virtual machines, refer to the following blog posts:
 
 - <cite>Creating a VM/VHD Library </cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](/blog/jjameson/2010/04/02/creating-a-vm-vhd-library)
 - <cite>Using Sysprep'ed VHDs for New Hyper-V Virtual Machines			</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx](/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines)
 
 
 ### Reset WSUS configuration
@@ -212,7 +212,7 @@ To resolve the issue, remove the WSUS registry 	entries specified in [KB 	9032
 More information on this step is available in the following blog post:
 
 <cite>Script to Reset WSUS for Sysprep'ed Image </cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx](/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx](/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image)
 
 
 ### Remove "stale" network adapters
@@ -236,7 +236,7 @@ To cleanup the network adapters:
 More information on this step is available in the following blog post:
 
 <cite>Removing "Stale" Network Adapters in Hyper-V VM</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx](/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx](/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm)
 
 
 ## DEV - Configure VM storage
@@ -280,7 +280,7 @@ To create a 500 MB VHD for the SQL Server log 	files:
 More information on this step is available in the following blog post:
 
 <cite>Creating Small VHDs (&lt; 1GB) for Hyper-V</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v)
 
 
 ## Set MaxPatchCacheSize to 0 (Optional)
@@ -297,7 +297,7 @@ To configure the MaxPatchCacheSize policy:
 More information on this step is available in the following blog post:
 
 <cite>Save Significant Disk Space by Setting MaxPatchCacheSize to 0</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0)
 
 
 ## Disable Internet Protocol version 6 (TCP/IPv6)
@@ -638,7 +638,7 @@ Execute the following SQL script to change all user databases and the 	out-of-t
 More information on this step is available in the following blog post:
 
 <cite>Using the Simple Recovery Model for SharePoint Development Environments</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx](/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)
 
 
 ## DEV - Install Microsoft Office 2010
@@ -862,7 +862,7 @@ To add the Central Administration site to the 	Local intranet zone:
 More information on this step is available in the following blog post:
 
 <cite>Be "In the Zone" to Avoid Entering Credentials</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 
 
 ## Add the URL for the extranet website to the Local intranet zone
@@ -928,7 +928,7 @@ To configure permissions for the IIS WAMREG 	Admin Service:
 More information on this step is available in the following blog post:
 
 <cite>Event ID 10016, KB 920783, and the WSS_WPG Group</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx](/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx](/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group)
 
 
 ## Rename TaxonomyPicker.ascx
@@ -1074,9 +1074,9 @@ To allow the ability to quickly rollback the development environment 	to a "cle
 More information about using VM snapshots for SharePoint development 	is available in the following blog posts:
 
 - <cite>Virtual Machine Snapshots and SharePoint Development, Part 			1</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx](/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx](/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1)
 - <cite>Virtual Machine Snapshots and SharePoint Development, Part 			2</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx](/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx](/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2)
 
 
 ## Copy Fabrikam Extranet build to SharePoint server
@@ -1660,7 +1660,7 @@ To login to the website using Windows authentication:
 > This is discussed in more detail in the following blog post:
 > 
 > <cite>Be "In the Zone" to Avoid Entering Credentials</cite>
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx)
+> [https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials)
 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) 		and click **Sign In**.
 3. On the **Sign In **page, in the dropdown list, click		**Windows Authentication**.
 4. Verify the home page is displayed and the **Sign In		**link has been replaced with the "Welcome" menu.
@@ -1673,7 +1673,7 @@ By default, the disk-based BLOB cache is off, but it is strongly recommended 	t
 This is discussed in more detail in the following blog post:
 
 <cite>Always Enable Disk-Based Caching in SharePoint Server 2010</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx)
+[https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010)
 
 
 Use the following procedure to configure disk-based cache settings for 	a Web application.

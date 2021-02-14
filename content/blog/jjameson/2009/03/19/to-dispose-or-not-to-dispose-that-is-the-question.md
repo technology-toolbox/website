@@ -19,7 +19,7 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
@@ -27,7 +27,7 @@ Last Saturday, another team member sent an email out to the team inquiring about
 
 Essentially, he was asking if anytime he referenced the `ParentWeb`  property on an object, whether or not he needed to call `Dispose` on `ParentWeb`.
 
-When I read his message, and the various responses from other team members, it  brought back fond memories of memory leaks I've seen in the past -- which eventually  led to my ["IDisposables Containing IDisposables" post](/blog/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx).
+When I read his message, and the various responses from other team members, it  brought back fond memories of memory leaks I've seen in the past -- which eventually  led to my ["IDisposables Containing IDisposables" post](/blog/jjameson/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables).
 
 The most interesting thing to come out of this email thread -- at least for me,  personally -- is the awareness that the prescriptive guidance on MSDN for disposing  SharePoint objects has recently been updated (one in January 2009 and the other  in March 2009).
 
@@ -154,9 +154,9 @@ Am I making this too easy?
 
 Let me know your thoughts.
 
-Although I didn't receive a single comment on my ["IDisposables Containing IDisposables" post](/blog/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx), I have to wonder if lots of people  out there aren't silently agreeing with this concept. There were certainly some  comments to [Roger's post](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx) that said effectively the same thing.
+Although I didn't receive a single comment on my ["IDisposables Containing IDisposables" post](/blog/jjameson/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables), I have to wonder if lots of people  out there aren't silently agreeing with this concept. There were certainly some  comments to [Roger's post](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx) that said effectively the same thing.
 
-I completely understand that all software has bugs (heck, just read [my previous post](/blog/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx) if you want to see a rather embarrassing personal example of  one of my own) and that it takes time to fix bugs. However, we should always strive  to make the code we write the best -- and simplest -- that it can possibly be.
+I completely understand that all software has bugs (heck, just read [my previous post](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) if you want to see a rather embarrassing personal example of  one of my own) and that it takes time to fix bugs. However, we should always strive  to make the code we write the best -- and simplest -- that it can possibly be.
 
 Now, if we could just get that all-encompassing FxCop rule for ensuring that  all `IDisposable` objects are wrapped in `using` blocks...  ;-)
 

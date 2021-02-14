@@ -11,7 +11,7 @@ In this post, I explain the iterative approach used to create the[Contact](/Con
 
 ### Step 1: Prototype
 
-In[part 3](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx) of this series, I described my recommendation to create a static HTML prototype when doing virtually any kind of Web development (ASP.NET, SharePoint, etc.). While this slightly delays the start of writing the "real" code, in my experience I have found this to save considerable time overall.  Using an HTML prototype, you can very quickly mock up various design alternatives, rapidly iterate on the overall look-and-feel, and develop/refine the user experience (for example, demonstrate features using client-side scripting such as jQuery).
+In[part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3) of this series, I described my recommendation to create a static HTML prototype when doing virtually any kind of Web development (ASP.NET, SharePoint, etc.). While this slightly delays the start of writing the "real" code, in my experience I have found this to save considerable time overall.  Using an HTML prototype, you can very quickly mock up various design alternatives, rapidly iterate on the overall look-and-feel, and develop/refine the user experience (for example, demonstrate features using client-side scripting such as jQuery).
 
 Here is the HTML I created for the Contact form:
 
@@ -425,7 +425,7 @@ Another quick round of testing at this point verified the enhancements function 
 
 ### Step 7: Add CAPTCHA control to help prevent spam
 
-In a[previous post](/blog/jjameson/archive/2012/01/25/building-technologytoolbox-com-part-16.aspx), I described the custom CAPTCHA control developed for the Technology Toolbox site to support both the Contact form as well as the form used to add comments on blog posts managed by Subtext.
+In a[previous post](/blog/jjameson/2012/01/25/building-technologytoolbox-com-part-16), I described the custom CAPTCHA control developed for the Technology Toolbox site to support both the Contact form as well as the form used to add comments on blog posts managed by Subtext.
 
 In hindsight, I suppose I should have written this post first, followed by the other post detailing the CAPTCHA control. However, there's a reason this blog is called the "*Random* Musings of Jeremy Jameson" ;-)
 

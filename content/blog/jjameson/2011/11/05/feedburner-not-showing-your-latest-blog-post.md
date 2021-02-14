@@ -7,9 +7,9 @@ categories: ["Development"]
 tags: ["Subtext"]
 ---
 
-This morning I discovered that Feedburner wasn't showing[the blog post I created last Thursday](/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx).
+This morning I discovered that Feedburner wasn't showing[the blog post I created last Thursday](/blog/jjameson/2011/11/03/building-technologytoolbox-com-part-4).
 
-No error was displayed. Rather the RSS feed simply made it look like "[Part 3](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx)" in my series on building TechnologyToolbox.com was the last post that I created (having written it myself, I knew that "Part 4" was, in fact, the latest post).
+No error was displayed. Rather the RSS feed simply made it look like "[Part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)" in my series on building TechnologyToolbox.com was the last post that I created (having written it myself, I knew that "Part 4" was, in fact, the latest post).
 
 I quickly discovered the following in the "Troubleshootize" page on the[Google Feedburner](http://feedburner.google.com) site:
 

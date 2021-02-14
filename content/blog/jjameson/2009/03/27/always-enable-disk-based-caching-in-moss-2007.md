@@ -14,7 +14,7 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 For reasons completely unknown to me, the SharePoint team decided to ship Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a. *blob caching*) disabled. If you are not familiar with disk-based caching, here is a blurb from [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
@@ -48,7 +48,7 @@ These settings will filter out lots of "noise" -- such as requests by the ShareP
 
 With the trace running, browse to the home page of your site, and then go back and clear the trace window. Next, close your browser, restart it, and then browse once again to the home page of your site. Now look at the number of events captured in SQL Server Profiler. Astonishing, isn't it? Also keep in mind that this is for a "warmed up" SharePoint site. If you really want to be in shock, try clearing your trace, resetting your SharePoint application pool, and then browsing to the home page of your site to see the number of SQL requests from a "cold start."
 
-[Note: The reason I instructed you to restart your Web browser rather than simply clicking the **Refresh** button is to avoid forcing the browser to check for updated GIFs, JPEGs, CSS files, etc. For more on this, refer to the [excellent article about HTTP performance and caching](http://msdn.microsoft.com/en-us/library/bb250442%28VS.85%29.aspx) by Eric Lawrence. I highly recommend reading this if you haven't already. It also introduces you to [Fiddler](http://www.fiddlertool.com) -- an essential tool that I mentioned in a [previous post](/blog/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx).]
+[Note: The reason I instructed you to restart your Web browser rather than simply clicking the **Refresh** button is to avoid forcing the browser to check for updated GIFs, JPEGs, CSS files, etc. For more on this, refer to the [excellent article about HTTP performance and caching](http://msdn.microsoft.com/en-us/library/bb250442%28VS.85%29.aspx) by Eric Lawrence. I highly recommend reading this if you haven't already. It also introduces you to [Fiddler](http://www.fiddlertool.com) -- an essential tool that I mentioned in a [previous post](/blog/jjameson/2008/06/27/fiddler-wpad-slowperformance).]
 
 If you scan through the SQL events in the trace, you will see lots of calls to the `proc_FetchDocForHttpGet` stored procedure, including one for each image (and CSS file) stored in the **Style Library**.
 

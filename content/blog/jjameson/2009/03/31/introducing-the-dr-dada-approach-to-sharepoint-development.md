@@ -18,14 +18,14 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 At times, it seems like developing SharePoint solutions is all I've been doing  since I joined Microsoft in 2000. While many things have certainly changed since  the old "Tahoe" days, at least one thing remains relatively the same: my recommendation  to use as much out-of-the-box (OOTB) as possible.
 
 I suppose it's more of a principle -- or design goal -- than a mere recommendation,  and it certainly applies to more than just Microsoft Office SharePoint Server (MOSS)  2007 and Windows SharePoint Services (WSS). It seems like ever since I started working  with [COTS](http://en.wikipedia.org/wiki/Commercial_off-the-shelf) solutions  back in [my PDM 
-days at AT&T](/blog/jjameson/archive/2007/03/03/who-is-this-guy.aspx),, the ideology of minimal customization has just been something  I try to apply to every project I'm involved with. As I've mentioned before, it  certainly makes those support calls go much, much faster.
+days at AT&T](/blog/jjameson/2007/03/03/who-is-this-guy),, the ideology of minimal customization has just been something  I try to apply to every project I'm involved with. As I've mentioned before, it  certainly makes those support calls go much, much faster.
 
 It is this mantra that eventually led to what I now refer to as the "DR.DADA"  approach to SharePoint development. [Note that I can't take any credit for the "DR.DADA"  moniker. That goes to a much wittier teammate of mine from my previous project.  When Ron Tielke joined my previous project, I introduced him to my Deactivate/Retract/Delete/Add/Deploy/Activate  scripts for deploying our SharePoint features and he immediately coined it "DR.DADA"  -- a name which has stuck for almost two years.]
 
@@ -45,7 +45,7 @@ For example, suppose you want to add a column to a list that has been instantiat
 
 Abandoning custom site definitions and VseWSS, I instead guided our team down  the path of doing all of our customization through thin features and, yep, you guessed  it...code.
 
-You say your Document Cart feature needs a list to store the items in each individual's  cart? No problem, just modify the [FeatureConfigurator](/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx) for the Fabrikam.Project1.DocumentCart feature to programmatically  create and configure the list upon feature activation.
+You say your Document Cart feature needs a list to store the items in each individual's  cart? No problem, just modify the [FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) for the Fabrikam.Project1.DocumentCart feature to programmatically  create and configure the list upon feature activation.
 
 What's that? We've deployed the DocumentCart feature to Production and now we  need to add a column to the list that contains the document cart items? No problem...just  modify the FeatureConfigurator to add a column to the list upon feature activation.  Thus when we "DR.D" (deactivate/retact/delete) the old version of the DocumentCart  feature and "ADA" (add/deploy/activate) the new version of the DocumentCart feature,  the list will be updated accordingly -- in each and every environment. It's almost  like "magic" -- if we ignore the fact that some developer had to add a tiny bit  of code to the feature:
 
@@ -68,5 +68,5 @@ Redeploying your features may seem like overkill -- even using scripts like **Re
 > 	to SharePoint development: 
 > 
 > <cite>Sample Walkthrough of the DR.DADA Approach to SharePoint</cite>
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx)
+> [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
 

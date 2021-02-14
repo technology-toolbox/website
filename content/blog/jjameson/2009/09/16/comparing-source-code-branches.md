@@ -18,16 +18,16 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 During the more than three years I spent helping Agilent Technologies migrate  their Internet site from their legacy, proprietary platform to Microsoft Office  SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server  (TFS). Instead, we used Visual SourceSafe (VSS) in combination with a ["Work Items" 
-list in SharePoint](/blog/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx) that I've described in previous posts.
+list in SharePoint](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2) that I've described in previous posts.
 
 While I certainly prefer TFS over VSS, sometimes you simply have to concede that  you can't have everything you would like on a customer project and move on to actually  getting the work done.
 
-However, just because we used VSS doesn't mean we didn't follow good Software  Configuration Management (SCM) principles. For example, as I've [described in the past](/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx), I insist on using branching right from the start. Thus  when I setup the Visual Studio solution for the Agilent project, I created a **Main** branch and subsequently created branches for the various releases  (e.g. **v1.0**, **v2.0**, and **v3.0**).
+However, just because we used VSS doesn't mean we didn't follow good Software  Configuration Management (SCM) principles. For example, as I've [described in the past](/blog/jjameson/2007/04/18/structure-visual-studio-solutions), I insist on using branching right from the start. Thus  when I setup the Visual Studio solution for the Agilent project, I created a **Main** branch and subsequently created branches for the various releases  (e.g. **v1.0**, **v2.0**, and **v3.0**).
 
 The particular branch that a developer uses would thus depend on whether the  changes are for the next major release or a QFE (hotfix) for the version running  in Production. For example, after deploying the [Technical Support site](http://www.chem.agilent.com/en-US/Support) (i.e.  v2.0), we began working on the "General Site" (i.e. v3.0). [Note that in Agilent's  terminology, the "General Site" essentially refers to everything outside of Technical  Support, the Literature Library, and the Online Store (i.e. the "Buy" tab).]
 
@@ -41,7 +41,7 @@ Personally speaking, I've never felt comfortable using the out-of-the-box mergin
 
 Fortunately, long before the Agilent project, I had previously created my own  process that takes a great deal of the "pain" out of manually merging source code.  Here is what I came up with.
 
-In my [Toolbox](/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx),  I have two simple scripts: DiffBranches.cmd and CopyBranch.cmd.
+In my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup),  I have two simple scripts: DiffBranches.cmd and CopyBranch.cmd.
 
 Here are the contents of DiffBranches.cmd:
 
@@ -69,7 +69,7 @@ Here are the contents of DiffBranches.cmd:
 
 
 
-As you can see, there's not much to it. I simply make temporary copies of the  two branches (i.e. by copying the branch folder into a new folder appended with  "\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I used  WinDiff, but once I [discovered DiffMerge](/blog/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx), I quickly switched to using it exclusively for all of  my "diff'ing" activities.
+As you can see, there's not much to it. I simply make temporary copies of the  two branches (i.e. by copying the branch folder into a new folder appended with  "\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I used  WinDiff, but once I [discovered DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool), I quickly switched to using it exclusively for all of  my "diff'ing" activities.
 
 The real "magic" lies in CopyBranch.cmd:
 

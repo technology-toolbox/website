@@ -19,11 +19,11 @@ tags: ["Simplify", "Core Development"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-In my previous post, I introduced my [simple, but highly effective approach to logging](/blog/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx). As promised, this post introduces  how to configure logging (based on a simple console application).
+In my previous post, I introduced my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging). As promised, this post introduces  how to configure logging (based on a simple console application).
 
 As noted in my previous post, one or more [trace listeners](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracelistener%28VS.80%29.aspx) can be configured for a particular [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx).
 
@@ -642,5 +642,5 @@ When I wrote the `Logger` class a few years ago, I also wrote a `SimpleTraceList
 
 Depending on your specific needs, you could modify the `WriteHeader`  and `WriteFooter` methods to output additional fields on the same line  as the log message. (In my scenario, I only needed to support the [TraceOptions.DateTime](http://msdn.microsoft.com/en-us/library/a10k7w6c.aspx)  option.)
 
-In my [next post](/blog/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx), I discuss logging to the ASP.NET tracing feature.
+In my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint), I discuss logging to the ASP.NET tracing feature.
 

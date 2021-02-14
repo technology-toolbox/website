@@ -16,10 +16,10 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-I [recently promised](/blog/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx) to finish this blog post that has been sitting in "unpublished" status since June 2008, so here it is...
+I [recently promised](/blog/jjameson/2009/11/02/analyzing-my-msdn-blog) to finish this blog post that has been sitting in "unpublished" status since June 2008, so here it is...
 
 Have you ever encountered the following error in Microsoft Office SharePoint Server (MOSS) 2007?
 
@@ -33,7 +33,7 @@ The problem occurs when you have a custom master page which includes code and th
 
 I have to admit that I was completely stumped when I first encountered this error a few years ago while working on the Agilent Technologies project. I eventually tracked down the root cause to be unghosted pages, but we were not using SharePoint Designer to create or customize our master pages, so I couldn't understand why we would occasionally encounter this error.
 
-My speculation is that when the feature/solution containing the custom master page is deactivated, retracted, and deleted (as part of the ["DR.DADA" process](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx)), SharePoint has some "smarts" within it that essentially equates to:
+My speculation is that when the feature/solution containing the custom master page is deactivated, retracted, and deleted (as part of the ["DR.DADA" process](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development)), SharePoint has some "smarts" within it that essentially equates to:
 
 - Hey, this master page (or page layout) is currently in use so removing it could really break the site.
 - Therefore, I'd better make a copy of it and store it in the database (i.e. unghost it).

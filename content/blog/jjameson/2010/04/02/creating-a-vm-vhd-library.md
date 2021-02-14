@@ -15,7 +15,7 @@ tags: ["My System", "Virtualization"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 Last week a colleague was asking me how I manage my various VMs. More specifically, he wanted to know how I created SysPrep'ed images in order to quickly "spin up" new VMs for development, testing, or demo purposes.
@@ -31,7 +31,7 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
 3. After the OS is installed, run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE) **and **Shutdown **when SysPrep is done. [Note that for Windows Server 2003 you had to copy the SysPrep folder from a CAB file on the installation media (or download it from microsoft.com), but thankfully this extra step is no longer necessary in Windows Server 2008.]
 4. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_RTM.vhd**.
 5. Boot the VM, go through the Mini-Setup process and once again name the server **ws2008std-x86**.
-6. Next, install SP2 for Windows Server 2008. Then run the Windows Component Clean Tool (COMPCLN.exe) to [reclaim some disk space after installing SP2](/blog/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx) and reboot the VM.
+6. Next, install SP2 for Windows Server 2008. Then run the Windows Component Clean Tool (COMPCLN.exe) to [reclaim some disk space after installing SP2](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2) and reboot the VM.
 7. Run the SysPrep utility again and specify the same options as before.
 8. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_SP2.vhd**.
 9. Boot the VM again and go through the Mini-Setup process (once again naming the server **ws2008std-x86**).
@@ -54,7 +54,7 @@ In other words, the "snapshots" of the VHD file allow you to quickly go back to 
 
 Suppose that some time goes by and you find that it takes longer than you would like to install the latest patches from Windows Update whenever you create a new VM. To resolve this issue, simply boot the **ws2008std-x86 **VM, run Windows Update, reboot, and then run SysPrep again. The next time you create a new VM starting from a copy of **ws2008std-x86.vhd**, you won't have to wait long at all for Windows Update to finish.
 
-Let's fast forward to some future point in time when Windows Server 2008 SP3 is released. Here is what I will do in the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) (a.k.a. my home lab) at that point:
+Let's fast forward to some future point in time when Windows Server 2008 SP3 is released. Here is what I will do in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) at that point:
 
 1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86\_RTM.vhd** (thereby "purging" the baseline VM image of all of the patches and updates).
 2. Boot the VM, go through the Mini-Setup process and name the server **ws2008std-x86**.
@@ -73,5 +73,5 @@ In the Jameson Datacenter, I currently have an image for Win2k3EE (Windows Serve
 
 There are a couple of details that I should point out with regards to using this process with Hyper-V. This is because Hyper-V isn't quite as "friendly" as Virtual PC when it comes to copying a VM (or VHD).
 
-The first issue is related to permissions on the VHD file, which I've already covered in a [previous post](/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx). The second is that you will likely end up with extra network connections (e.g. **Local Area Connection 2**). As long as you are using DHCP, these extraneous network connections shouldn't cause any issues. However, if you want to remove them simply follow the steps detailed in [KB 269155](http://support.microsoft.com/kb/269155) (**Method 1**).
+The first issue is related to permissions on the VHD file, which I've already covered in a [previous post](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines). The second is that you will likely end up with extra network connections (e.g. **Local Area Connection 2**). As long as you are using DHCP, these extraneous network connections shouldn't cause any issues. However, if you want to remove them simply follow the steps detailed in [KB 269155](http://support.microsoft.com/kb/269155) (**Method 1**).
 

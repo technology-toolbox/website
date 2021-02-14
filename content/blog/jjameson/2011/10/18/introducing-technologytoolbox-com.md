@@ -19,7 +19,7 @@ The following screenshot shows the current home page for Technology Toolbox.
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png) 
 
 
-As I detailed in a [previous post](/blog/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx), I find it very helpful to create wireframes that illustrate blocks  of content, navigation elements, and other site features. These often start out  as simple "grey box" diagrams (as described in Andy Clarke's excellent [Transcending CSS](http://www.transcendingcss.com/) book and Jason Santa  Maria's [original 
+As I detailed in a [previous post](/blog/jjameson/2009/06/26/creating-wireframes-for-page-layouts), I find it very helpful to create wireframes that illustrate blocks  of content, navigation elements, and other site features. These often start out  as simple "grey box" diagrams (as described in Andy Clarke's excellent [Transcending CSS](http://www.transcendingcss.com/) book and Jason Santa  Maria's [original 
 blog post](http://v3.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php)). However, I often update them after the static design is complete  (in other words, after some sample HTML, CSS, and images are sufficiently "baked"  and ready to serve as a reference for the visual design).
 
 Here is the corresponding page layout for the site home page.
@@ -80,7 +80,7 @@ The **Services** page for the site is shown in Figure 3 below. This  represents 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services.png) 
 
 
-Note that I still like to use the [960 Grid System](http://960.gs)  to layout Web content -- something I first discussed in a blog post about [Web Standards Design in MOSS 2007](/blog/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx). The following screenshot shows how the primary  content spans 7 columns and the secondary content spans the remaining 5 columns  (since I chose the 12 column layout option).
+Note that I still like to use the [960 Grid System](http://960.gs)  to layout Web content -- something I first discussed in a blog post about [Web Standards Design in MOSS 2007](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1). The following screenshot shows how the primary  content spans 7 columns and the secondary content spans the remaining 5 columns  (since I chose the 12 column layout option).
 
 ![Services page (with grid)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Services-with-Grid.png)
 	Figure 4: Services page (with grid)

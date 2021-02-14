@@ -8,7 +8,7 @@ tags: ["Core
 			Development", "My System", "Subtext", "Web Development"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx), I shared the inner workings of the **Most Recent Posts **section on the Technology Toolbox home page. In this post, I'll show you how I built on that foundation to generate the content for the**Most Popular Posts** section.
+In[my previous post](/blog/jjameson/2011/11/28/building-technologytoolbox-com-part-9), I shared the inner workings of the **Most Recent Posts **section on the Technology Toolbox home page. In this post, I'll show you how I built on that foundation to generate the content for the**Most Popular Posts** section.
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
 		Figure 1: Technology Toolbox home page
@@ -117,7 +117,7 @@ One of the primary goals in developing the Technology Toolbox site is ensuring 
 > 		corresponding rankings (i.e. 1-10).
 
 
-As noted in my previous post, I typically define the semantic markup for a feature using[a static HTML prototype](/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx). Then I copy the sample HTML into a user control and start replacing the sample content with ASP.NET controls to render the dynamic content.
+As noted in my previous post, I typically define the semantic markup for a feature using[a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3). Then I copy the sample HTML into a user control and start replacing the sample content with ASP.NET controls to render the dynamic content.
 
 For the **Most Popular Posts **section on the site home page, I added a new user control to the project (**PopularPosts.ascx**), copied the sample HTML above into the user control, and then added an instance of the control to the site home page.
 

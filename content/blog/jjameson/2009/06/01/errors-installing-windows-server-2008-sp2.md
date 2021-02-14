@@ -20,11 +20,11 @@ tags: ["Windows
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Windows Vista SP2 on my local WSUS (Windows Server Update Services) server. My expectation was that the various physical and virtual machines in the["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) would subsequently install the update around 3:00 AM the following morning.
+Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Windows Vista SP2 on my local WSUS (Windows Server Update Services) server. My expectation was that the various physical and virtual machines in the["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) would subsequently install the update around 3:00 AM the following morning.
 
 Unfortunately when I examined the WSUS console this morning, I found a number of computers reporting errors. After selecting one of the failed computers, I discovered the following:
 

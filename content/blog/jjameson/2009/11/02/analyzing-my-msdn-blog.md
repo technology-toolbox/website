@@ -17,7 +17,7 @@ tags: ["Personal"]
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 According to my blog dashboard, this will be post #150 for my MSDN blog. So this         morning I thought I would do something a little different by providing some analysis         on my blog.
@@ -78,16 +78,16 @@ Let's start with the top 10 posts:
 
 <caption>            Table 2: Top 10 Blog Posts</caption>|                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
-|                     1<br>                 | [Issues Deploying SharePoint Solution Packages](/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx) |                     14,445<br>                 |
-|                     2<br>                 | [The Case of the Disappearing Hosts File](/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx) |                     13,029<br>                 |
-|                     3<br>                 | [Dumping MOSS 2007 Variations - Part 1](/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx) |                     9,417<br>                 |
-|                     4<br>                 | ["Error Creating Control" when using Microsoft Office SharePoint Designer 2007](/blog/jjameson/archive/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx) |                     7,525<br>                 |
-|                     5<br>                 | [Virtual Server<br>                        Issues and Recommendations for MOSS Virtual Environments](/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx) |                     6,908<br>                 |
-|                     6<br>                 | [Dumping MOSS 2007 Variations - Part 2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx) |                     6,813<br>                 |
-|                     7<br>                 | [Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx) |                     5,753<br>                 |
-|                     8<br>                 | [Scope Dependencies for SharePoint Features](/blog/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx) |                     5,607<br>                 |
-|                     9<br>                 | [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx) |                     5,307<br>                 |
-|                     10<br>                 | [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx) |                     5,199<br>                 |
+|                     1<br>                 | [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages) |                     14,445<br>                 |
+|                     2<br>                 | [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file) |                     13,029<br>                 |
+|                     3<br>                 | [Dumping MOSS 2007 Variations - Part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) |                     9,417<br>                 |
+|                     4<br>                 | ["Error Creating Control" when using Microsoft Office SharePoint Designer 2007](/blog/jjameson/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007) |                     7,525<br>                 |
+|                     5<br>                 | [Virtual Server<br>                        Issues and Recommendations for MOSS Virtual Environments](/blog/jjameson/2007/06/09/virtual-server-issues) |                     6,908<br>                 |
+|                     6<br>                 | [Dumping MOSS 2007 Variations - Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) |                     6,813<br>                 |
+|                     7<br>                 | [Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3) |                     5,753<br>                 |
+|                     8<br>                 | [Scope Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features) |                     5,607<br>                 |
+|                     9<br>                 | [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/2007/06/09/moss-development-environment-and-windows-update-bug) |                     5,307<br>                 |
+|                     10<br>                 | [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1) |                     5,199<br>                 |
 
 
 Hmmm...nine of the top 10 posts are related to SharePoint. No big surprises there         ;-)
@@ -99,19 +99,19 @@ What about the bottom 10 posts?
 | --- | --- | --- |
 |                     151<br>                 |                     Adventures in Upgrading TFS<br>                 |                     0<br>                 |
 |                     150<br>                 |                     AutoEventWireup Issue in MOSS 2007<br>                 |                     0<br>                 |
-|                     149<br>                 | [ArgumentNullException with Optional PublishingPage.Description Property  <br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx) |                     678<br>                 |
-|                     148<br>                 | [Eliminate MBSA Warnings Using Default Security Settings Policy](/blog/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx) |                     679<br>                 |
-|                     147<br>                 | [Constraining<br>                        Tables with CSS](/blog/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx) |                     728<br>                 |
-|                     146<br>                 | [DataNavigateUrlFormatString Does Not Allow "javascript:"](/blog/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx) |                     773<br>                 |
-|                     145<br>                 | [Add Rooler to Your Web Development Toolbox](/blog/jjameson/archive/2009/10/21/add-rooler-to-your-web-development-toolbox.aspx) |                     826<br>                 |
-|                     144<br>                 | [New MSDN<br>                        Theme on My Blog](/blog/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx) |                     841<br>                 |
-|                     143<br>                 | [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx) |                     849<br>                 |
-|                     142<br>                 | [Latest Version of Opera Ignores Hosts File](/blog/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx) |                     850<br>                 |
+|                     149<br>                 | [ArgumentNullException with Optional PublishingPage.Description Property  <br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) |                     678<br>                 |
+|                     148<br>                 | [Eliminate MBSA Warnings Using Default Security Settings Policy](/blog/jjameson/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy) |                     679<br>                 |
+|                     147<br>                 | [Constraining<br>                        Tables with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css) |                     728<br>                 |
+|                     146<br>                 | [DataNavigateUrlFormatString Does Not Allow "javascript:"](/blog/jjameson/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript) |                     773<br>                 |
+|                     145<br>                 | [Add Rooler to Your Web Development Toolbox](/blog/jjameson/2009/10/21/add-rooler-to-your-web-development-toolbox) |                     826<br>                 |
+|                     144<br>                 | [New MSDN<br>                        Theme on My Blog](/blog/jjameson/2009/10/21/new-msdn-theme-on-my-blog) |                     841<br>                 |
+|                     143<br>                 | [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/2009/10/14/kb-896861-and-microsoft-fix-it) |                     849<br>                 |
+|                     142<br>                 | [Latest Version of Opera Ignores Hosts File](/blog/jjameson/2009/10/29/latest-version-of-opera-ignores-hosts-file) |                     850<br>                 |
 
 
 I suppose that I really should have thrown out the first two items because these         posts are not published.
 
-The **Adventures in Upgrading TFS** post was something I started back         in March 2008 when I ran into a couple of snags upgrading the instance of Team Foundation         Server 2005 in the ["Jameson Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) to TFS 2008. I thought I would eventually get around         to finishing that post, but apparently not. Perhaps some other morning...however,         I'm not sure it would help very many people after all this time. I certainly hope         most organizations running TFS have upgraded by now.
+The **Adventures in Upgrading TFS** post was something I started back         in March 2008 when I ran into a couple of snags upgrading the instance of Team Foundation         Server 2005 in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) to TFS 2008. I thought I would eventually get around         to finishing that post, but apparently not. Perhaps some other morning...however,         I'm not sure it would help very many people after all this time. I certainly hope         most organizations running TFS have upgraded by now.
 
 The **AutoEventWireUp Issue in MOSS 2007** post is something I really         should finish. I started it back in June 2008 but somehow it fell off my plate.         Stay tuned...I'll try to get to that this week. No, I won't "try" -- I will get         to that this week. I promise.
 
@@ -149,12 +149,12 @@ I can tell you that I'll be taking quite a bit of vacation again this year in De
 
 I read one of Scott Hanselman's posts a while ago that talked about calculating         your PPM (Posts Per Month) -- or was it BPM? I can't remember. Anyway, it seems         like I could definitely be a little more consistent throughout the year. Trying         to maintain a steady rhythm when it comes to blogging is always a challenge when         you consider how much else there is to do on any given day.
 
-The last area that I want to cover in this post is with regards to Internet search         results -- which I briefly mentioned earlier. In other words, while it is interesting         that blog posts like [Issues Deploying SharePoint Solution Packages](/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx) and [The Case of the Disappearing Hosts File](/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx) are at the top of the list,         what I find more interesting is *why* they appear at the top of the list.
+The last area that I want to cover in this post is with regards to Internet search         results -- which I briefly mentioned earlier. In other words, while it is interesting         that blog posts like [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages) and [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file) are at the top of the list,         what I find more interesting is *why* they appear at the top of the list.
 
 Let's start with the most popular post. Drilling down on the 12,246 views in the         Community Server dashboard (which does not include "AggViews") to see the list of         referrals, I encountered the largest HTML table I've ever seen on a page (over 5,500         rows). After a couple of attempts, I managed to copy all of the data into my Excel         workbook and then sort by **Hits **descending.
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
 
-<caption>            Table 4: Top referrals by URL for post - <a href="/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx">
+<caption>            Table 4: Top referrals by URL for post - <a href="/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages">
                 Issues Deploying SharePoint Solution Packages</a></caption>|                     URL<br>                 |                     Hits<br>                 |                     Last Date<br>                 |
 | --- | --- | --- |
 | [http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx](http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx) |                     83<br>                 |                     Oct 12 2009, 01:58 AM<br>                 |
@@ -175,7 +175,7 @@ However, adding up the numbers for the top 10 referrals accounts for less than 5
 Breaking down the referrals by domain name, I found the following:
 
 
-<caption>            Table 5: Top referrals by domain for post - <a href="/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx">
+<caption>            Table 5: Top referrals by domain for post - <a href="/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages">
                 Issues Deploying SharePoint Solution Packages</a></caption>|                     Domain<br>                 |                     Hits<br>                 |
 | --- | --- |
 |                     google.com<br>                 |                     3,893<br>                 |
@@ -195,7 +195,7 @@ Note that the post was created back in June 2007, which helps explain why you se
 To help me get a better feel for the Google vs. Microsoft ratio, I grouped the results         into categories and subcategories.
 
 ![Referrals by category for post - Issues Deploying SharePoint Solution Packages](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_MSDN%20blog%20-%20Referrals%20by%20Category.png)
-            Figure 4: Referrals by category for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx)
+            Figure 4: Referrals by category for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Referrals%20by%20Category.png)
 

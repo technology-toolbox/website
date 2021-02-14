@@ -24,19 +24,19 @@ tags: ["My System", "Core Development"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 In [part 
-1 of this post](/blog/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx), I provided my high-level thoughts on doing Test Driven Development  (TDD) in the real world, but I didn't get around to walking through an actual sample.
+1 of this post](/blog/jjameson/2010/04/08/tdd-in-the-real-world-part-1), I provided my high-level thoughts on doing Test Driven Development  (TDD) in the real world, but I didn't get around to walking through an actual sample.
 
 To start off simple (but still real world), let's imagine we have a scenario  where we need to truncate a string to a limited number of characters for display  or output purposes. However, instead of just chopping off the string at the specified  number of characters, we want to apply a little "intelligence" -- such as trying  to break on complete words, and adding an ellipsis (...) to the end.
 
 For example, if we pass in <samp>"Some really long string with lots of characters"</samp>  and specify to truncate the string to 15 characters, then we should get back <samp>"Some really..."</samp>.
 
 [Note that if you are trying to conserve real estate on a Web page, there is  actually [a 
-much better way of doing this with CSS](/blog/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx), so please don't think of this scenario  in that context.]
+much better way of doing this with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css), so please don't think of this scenario  in that context.]
 
 Applying the principles of TDD, we know we should:
 
@@ -146,7 +146,7 @@ From this we can write another unit test right away:
 
 
 
-If this unit test doesn't make sense, take a look at my previous post on [testing for expected exceptions in Visual Studio](/blog/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx).
+If this unit test doesn't make sense, take a look at my previous post on [testing for expected exceptions in Visual Studio](/blog/jjameson/2007/03/22/testing-for-expected-exceptions-with-visual-studio).
 
 At this point, it seems like a good point to advance from TDD step 1 ("Write  the unit tests first") to step 2 ("Add the minimal amount of code necessary to get  the unit tests to compile").
 
@@ -167,7 +167,7 @@ In order to get the unit tests to compile, we need to stub out the **StringHelpe
 
 
 
-Unfortunately, this isn't quite enough to successfully compile the code -- assuming  you've enabled code analysis on the project (which is [something I always recommend doing](/blog/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx)) -- due to the following errors:
+Unfortunately, this isn't quite enough to successfully compile the code -- assuming  you've enabled code analysis on the project (which is [something I always recommend doing](/blog/jjameson/2009/10/31/recommendations-for-code-analysis)) -- due to the following errors:
 
 
 > error : CA1801 : Microsoft.Usage : Parameter 'input' of 'StringHelper.Truncate(string, 
@@ -494,5 +494,5 @@ Hopefully this simple example shows you how TDD causes you to think differently 
 
 Just remember that there will almost always be bugs in the code you (or I) write  -- but whether or not these bugs manifest themselves and negatively impact your  solution is a different matter.
 
-In my [next post](/blog/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx), I'll discuss an example of using TDD for a scenario that is considerably  more complex than simply truncating a string.
+In my [next post](/blog/jjameson/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice), I'll discuss an example of using TDD for a scenario that is considerably  more complex than simply truncating a string.
 

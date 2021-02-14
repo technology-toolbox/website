@@ -17,13 +17,13 @@ tags: ["My System", "Infrastructure"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
-Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx) while installing a new solid-state drive         (SSD).
+Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0) while installing a new solid-state drive         (SSD).
 
 This morning, I thought I would share some performance numbers that I gathered from         the various disk configurations that I currently have running in the "[Jameson
-            Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx)" (a.k.a. my home lab).
+            Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab).
 
 Note that prior to installing the SSD in my desktop, I previously used a Western         Digital 74 GB "VelociRaptor" drive as the primary disk in my desktop. In case you         are not familiar with the "Raptor" drives, the key characteristic is the increased         speed of the drive -- specifically 10,000 RPM. [A 74 GB hard drive is obviously         rather puny these days, but keep in mind that I paid a premium for this drive ($189)         back in 2005.]
 

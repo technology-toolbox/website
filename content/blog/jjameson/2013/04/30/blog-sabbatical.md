@@ -7,7 +7,7 @@ categories: ["Personal"]
 tags: ["Personal"]
 ---
 
-Yesterday morning, I finally finished[the blog post I started over a year ago](/blog/jjameson/archive/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx). Obviously I wasn't working on that post all that time (although I think I spent more time on that post than perhaps any other -- with the possible exception of my series of posts on "[Dumping MOSS 2007 Variations](/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx)").
+Yesterday morning, I finally finished[the blog post I started over a year ago](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps). Obviously I wasn't working on that post all that time (although I think I spent more time on that post than perhaps any other -- with the possible exception of my series of posts on "[Dumping MOSS 2007 Variations](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1)").
 
 This morning I was pleasantly surprised to see there are still some 89 people subscribed to my blog (according to FeedBurner). Yeah, I know, 89 is a pretty pathetic number -- but, hey, I suppose I should be happy to still have *that many* after "going dark" for over a year.
 

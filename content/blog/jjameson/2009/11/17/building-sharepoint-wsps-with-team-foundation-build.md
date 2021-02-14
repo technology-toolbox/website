@@ -15,20 +15,20 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3", "TFS"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-As I noted in my [previous post](/blog/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx), I recently discovered that [my approach for building Web Solution Packages (WSPs)](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx) in Microsoft Office SharePoint Server (MOSS) 2007 isn't compatible with Team Foundation Build.
+As I noted in my [previous post](/blog/jjameson/2009/11/18/the-copy-local-bug-in-visual-studio), I recently discovered that [my approach for building Web Solution Packages (WSPs)](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) in Microsoft Office SharePoint Server (MOSS) 2007 isn't compatible with Team Foundation Build.
 
-I'm actually a little embarrassed to say this, but when I created the original ["DR.DADA" approach for MOSS 2007](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx) development back on the Agilent Technologies project, we were using Visual SourceSafe -- not Team Foundation Server (TFS) -- and a "manual" build process.
+I'm actually a little embarrassed to say this, but when I created the original ["DR.DADA" approach for MOSS 2007](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) development back on the Agilent Technologies project, we were using Visual SourceSafe -- not Team Foundation Server (TFS) -- and a "manual" build process.
 
 I'd used VSS and automated builds on other projects before (using NAnt), but never got around to automating our MOSS 2007 builds on the Agilent project because, honestly, there were just too many other higher priority items. Besides, each build only required a couple of minutes of actual human effort because most of the build was scripted.
 
-Still, an automated daily build (and deployment to DEV) is a [really, really good thing to have](/blog/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx).
+Still, an automated daily build (and deployment to DEV) is a [really, really good thing to have](/blog/jjameson/2009/09/26/best-practices-for-scm-and-the-daily-build-process).
 
 I've been fortunate to be on a few projects since then that have leveraged TFS.
 
-However, up until about a month ago, I hadn't used Team Foundation Build (outside of the [Jameson Datacenter](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx), of course) due to the fact that we are leveraging the extranet TFS instance hosted by Microsoft.
+However, up until about a month ago, I hadn't used Team Foundation Build (outside of the [Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter), of course) due to the fact that we are leveraging the extranet TFS instance hosted by Microsoft.
 
 Note that Microsoft IT makes it very easy for us to provision new TFS projects on either the extranet or one of several internal TFS instances. Configuring builds using Team Foundation Build on one of the intranet TFS instances is very easy (from what I hear), but I strongly prefer working off the extranet TFS instance because then I don't have to VPN into CorpNet in order to have access to source control.
 
@@ -56,7 +56,7 @@ If you dive into the log file for the build, you will find that Team Foundation 
 
 So the trick to building WSPs with Team Foundation Build is to leverage the **OutDir **variable instead of relying on relative paths to referenced assemblies.
 
-Here is the updated DDF file based on [my earlier sample](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx):
+Here is the updated DDF file based on [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
 
 
     ;

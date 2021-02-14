@@ -19,12 +19,12 @@ tags: ["MOSS 2007", "WSS v3"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 Shortly after publishing my previous post covering ["TFS Lite" 
-for WSS v3](/blog/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
+for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
 
 
 > The template you have chosen is invalid or cannot be found.
@@ -153,7 +153,7 @@ Using WinDiff to compare the manifest file from the TFS Lite site template with 
 
 
 
-Note that I've annotated the features with comments noting the feature name (using  the spreadsheet provided in [my previous post](/blog/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx)) and highlighted the differences in a similar fashion to WinDiff  -- the "left-only" features (i.e. those only found  in the "vanilla" Team Site template created in WSS v3) in red and the "right-only" features (i.e. those only found  in the TFS Lite site template created in MOSS 2007) in yellow.
+Note that I've annotated the features with comments noting the feature name (using  the spreadsheet provided in [my previous post](/blog/jjameson/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007)) and highlighted the differences in a similar fashion to WinDiff  -- the "left-only" features (i.e. those only found  in the "vanilla" Team Site template created in WSS v3) in red and the "right-only" features (i.e. those only found  in the TFS Lite site template created in MOSS 2007) in yellow.
 
 Note that simply deactivating all of the site collection features in MOSS 2007  does not make the corresponding site template compatible with WSS v3. However, once  I modified the manifest.xml to remove the MOSS 2007-specific features, recreated  the CAB file, and changed the file extension back to .stp, I was able to successfully  create a site in WSS v3 based on the site template. Woohoo!
 

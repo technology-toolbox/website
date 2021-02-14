@@ -17,7 +17,7 @@ tags: ["My System", "Windows 7"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 I spent a few hours last night (and another hour this morning) rebuilding my Windows         7 desktop that I use as my primary workstation (WOLVERINE).
@@ -27,9 +27,9 @@ In case you haven't heard, [Service Pack 1 for Windows 7 and Windows Server 2008
 I've been running an SSD in my Microsoft laptop for a while now and I must say the         difference is amazing. If you are a developer running a laptop without an SSD then,         believe me, I feel your pain. *Especially* if you are a SharePoint developer         running on a laptop without an SSD. Been there...done that...won't ever do it again.
 
 These days, I do 99% of my development work using a number of Hyper-V VMs running         in the ["Jameson
-            Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) (a.k.a. my home lab) and -- at least in my opinion -- this is         the only way to go. Well, okay, maybe not the *only* way, but it certainly         eliminates any sensation of not "firing on all cylinders" in terms of productivity.
+            Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) and -- at least in my opinion -- this is         the only way to go. Well, okay, maybe not the *only* way, but it certainly         eliminates any sensation of not "firing on all cylinders" in terms of productivity.
 
-I've mentioned in a previous post about [using MaxPatchCacheSize to save signficant disk space](/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx). When I first rebuilt         my laptop with an 80 GB SSD, I didn't set MaxPatchCacheSize to 0 and consequently         ended up wasting several gigabytes of "expensive storage" in the \Windows\Installer\$PatchCache$         folder (remember, this is SSD storage that I'm talking about here). I've since rebuilt         my laptop and ensured that I applied this setting immediately after installing the         operating system.
+I've mentioned in a previous post about [using MaxPatchCacheSize to save signficant disk space](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0). When I first rebuilt         my laptop with an 80 GB SSD, I didn't set MaxPatchCacheSize to 0 and consequently         ended up wasting several gigabytes of "expensive storage" in the \Windows\Installer\$PatchCache$         folder (remember, this is SSD storage that I'm talking about here). I've since rebuilt         my laptop and ensured that I applied this setting immediately after installing the         operating system.
 
 So when it came time last night to rebuild my desktop with a shiny new SSD, I immediately         set MaxPatchCacheSize to 0 after installing Windows 7. As you can see from the following         screenshot, this doesn't eliminate all of the space consumed by the \Windows\Installer         folder. On my desktop, the Installer folder still consumes about 2 GB of space (which         certainly seems like a waste, in my opinion, but oh well). However, at least I can         take some satisfaction in knowing that it could be much worse (i.e. by not constraining         the patch cache).
 
@@ -57,7 +57,7 @@ I then immediately installed the [Remote Server Administration Tools for Windows
 > **Warning**
 > 
 >             If you plan on using the Remote Server Administration Tools for Windows 7, then
->             now is the time to install them. Otherwise [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx) -- at
+>             now is the time to install them. Otherwise [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1) -- at
 >             least not until the updated version is released.
 
 
@@ -89,7 +89,7 @@ I then proceeded to install the following:
             Console (so I can easily manage the various servers in the "Jameson Datacenter"
             from my Windows 7 desktop)
 12. **Mozilla Thunderbird (**if you are wondering why I use this in addition
-            to Microsoft Outlook, then apparently you haven't seen [one of my other posts](/blog/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx))
+            to Microsoft Outlook, then apparently you haven't seen [one of my other posts](/blog/jjameson/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service))
 13. **FeedDemon**
 14. Useful development and debugging "stuff":
     1. **Debugging Tools for Windows (x86)**
@@ -107,7 +107,7 @@ I then proceeded to install the following:
             lazy -- to get it to work with roaming profiles, thereby forcing me to install the
             old 8.1.x version)
 17. Personal "stuff":
-    1. **Microsoft Money **(yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx)...not now...probably not ever)
+    1. **Microsoft Money **(yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not now...probably not ever)
     2. **ActivePython 2.7.1.3 (64-bit) **-- for running PocketSense (Python)
                 scripts in order to download quotes and credit card statements into Money via OFX
     3. **Windows Live Essentials -- **primarily for Windows Live Photo Gallery

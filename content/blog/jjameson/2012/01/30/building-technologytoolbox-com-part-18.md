@@ -7,7 +7,7 @@ categories: ["Development"]
 tags: ["Subtext"]
 ---
 
-In[one of last week's posts](/blog/jjameson/archive/2012/01/23/building-technologytoolbox-com-part-15.aspx), I detailed a number of errors that I have encountered since switching my blog over to Subtext when I left Microsoft almost 4 months ago. In that post, I also described a few of the bug fixes that I made in the Subtext code in order to mitigate some errors.
+In[one of last week's posts](/blog/jjameson/2012/01/23/building-technologytoolbox-com-part-15), I detailed a number of errors that I have encountered since switching my blog over to Subtext when I left Microsoft almost 4 months ago. In that post, I also described a few of the bug fixes that I made in the Subtext code in order to mitigate some errors.
 
 Before any of those changes, however, I made a very simple change to Subtext 2.5 in order to work out the processes for debugging and subsequent build/deployment. [Since the Technology Toolbox site is built using a Visual Studio 2010 solution and the Subtext 2.5 solution is built using a Visual Studio 2008 solution, this isn't quite as straightforward as you might think. It certainly isn't rocket science, but it's not quite as easy as pressing F5 either.]
 

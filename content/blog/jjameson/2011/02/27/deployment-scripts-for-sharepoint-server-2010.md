@@ -15,16 +15,16 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-A couple of years ago, I shared the scripts I created for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer to as the "[DR.DADA approach to SharePoint](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx)."
+A couple of years ago, I shared the scripts I created for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer to as the "[DR.DADA approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)."
 
 Well, I probably should have done this long before, but this week I finally got around to upgrading my MOSS 2007 batch files (a.k.a. "deployment scripts") to SharePoint Server 2010 and PowerShell.
 
 This morning, I thought it would be helpful to share these scripts for those of you working with the "latest and greatest" in the world of SharePoint.
 
-Note that you can download the complete set of scripts I refer to in this article via the attachment to a [post I wrote earlier this week](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx). Even if you aren't (yet) interested in claims authentication in SharePoint 2010, I think you'll still find the previous post valuable for understanding how your development team can quickly build (or rebuild) a custom Web application based on SharePoint 2010.
+Note that you can download the complete set of scripts I refer to in this article via the attachment to a [post I wrote earlier this week](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010). Even if you aren't (yet) interested in claims authentication in SharePoint 2010, I think you'll still find the previous post valuable for understanding how your development team can quickly build (or rebuild) a custom Web application based on SharePoint 2010.
 
 Suppose we are migrating the public Internet site for Fabrikam Technologies ([http://www.fabrikam.com](http://www.fabrikam.com)) to SharePoint Server 2010. We know that we'll need some customization and therefore we've created a custom SharePoint solution (Fabrikam.Demo.Web.wsp) that includes the following features:
 
@@ -662,7 +662,7 @@ Note that in a SharePoint farm comprised of multiple servers, this deployment mu
 
 Also note that the script supports an optional parameter to force the solution to be deployed -- in the (hopefully) rare event you need to use that.
 
-The most interesting part about **Deploy Solutions.ps1** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM or in the Development integration environment, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow [a standard naming convention for your environments](/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx).
+The most interesting part about **Deploy Solutions.ps1** is the fact that I try to avoid using a SharePoint Timer job to deploy the solution if at all possible. In other words, on my local development VM or in the Development integration environment, there's no need to schedule the deployment through the SharePoint Timer infrastructure since it's just a single server environment. This is another great reason to follow [a standard naming convention for your environments](/blog/jjameson/2009/06/09/environment-naming-conventions).
 
 If the solution is not deployed with the "`-Local`" option, then we need to wait for the solution deployment job to finish before we can activate the features. Back in the MOSS 2007 days, I used `stsadm.exe -o execadmsvcjobs` to wait for the timer job to finish before continuing. However, since the StsAdm.exe utility is considered "pass&eacute;" in SharePoint 2010, I now use a PowerShell script instead.
 
@@ -1204,10 +1204,10 @@ If, like me, you get tired of cycling through the command history (F7) to repeat
 
 
 
-This script essentially performs the same activities as the **Default **deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx), you'll find that I changed the **Activate On Default **property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
+This script essentially performs the same activities as the **Default **deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you'll find that I changed the **Activate On Default **property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
 
 <cite>SharePoint Features Activated by Default</cite>
-[http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](/blog/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx)
+[http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default)
 
 
 Consequently, I used the **Redeploy Features.ps1 **script to ensure the WebAppConfiguration feature is activated (thus ensuring my custom Sign In page for claims authentication was configured on the Web application).

@@ -19,11 +19,11 @@ tags: ["MOSS 2007", "TFS", "SharePoint
 > 
 > 
 > Since
-> 		[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that 
+> 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that 
 > 		blog ever goes away.
 
 
-In[one of last week's posts](/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx), I provided details on upgrading from Team Foundation Server 2008 to TFS 2010, including some information about updating your TFS project sites. I also provided a reference to the following MSDN article for more information:
+In[one of last week's posts](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided details on upgrading from Team Foundation Server 2008 to TFS 2010, including some information about updating your TFS project sites. I also provided a reference to the following MSDN article for more information:
 
 <cite>Updating an Upgraded Team Project to Access New Features</cite>
 [http://msdn.microsoft.com/en-us/library/ff432837.aspx](http://msdn.microsoft.com/en-us/library/ff432837.aspx)
@@ -130,7 +130,7 @@ Similarly, if you look at the corresponding site collection features (click**Si
 | Visual Studio Team Foundation Server Web Part Collection  | Collection of web parts to display various information from a Team 		Foundation Server instance.  | TswaWebParts  | cce226d2-d7b9-44fb-b5be-a1ccf91cbd90  |
 
 
-After poking around a little bit in the SharePoint feature files installed by TFS 2010 and looking at the corresponding feature assembly using Reflector, it quickly became apparent that the TFS product team approaches SharePoint development in much the same way that I do (i.e. by activating features on a site to install and configure new functionality). It's something I like to refer to as[the "DR.DADA" approach to SharePoint](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx) -- as opposed to[the SharePoint guidance on MSDN](http://msdn.microsoft.com/en-us/library/dd203468.aspx), which suggests using things like custom site definitions (shudder) to implement your customizations.
+After poking around a little bit in the SharePoint feature files installed by TFS 2010 and looking at the corresponding feature assembly using Reflector, it quickly became apparent that the TFS product team approaches SharePoint development in much the same way that I do (i.e. by activating features on a site to install and configure new functionality). It's something I like to refer to as[the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) -- as opposed to[the SharePoint guidance on MSDN](http://msdn.microsoft.com/en-us/library/dd203468.aspx), which suggests using things like custom site definitions (shudder) to implement your customizations.
 
 If you take a quick look at the feature activation code, you'll see that the dashboard features incrementally install a list of features (e.g. TeamCollab, TswaWebParts, TfsDashboardContentTypes, ...) until you get the level of functionality you desire (for example, minimal dashboard functionality or the full blown dashboards with Excel reporting -- assuming you are running Microsft Office SharePoint Server (MOSS) 2007 or SharePoint Server 2010).
 

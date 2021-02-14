@@ -19,11 +19,11 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3", "Web Development"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
-This post continues on the original post for my [simple, but highly effective approach to logging](/blog/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx) and the follow-up post which  introduced [configuring logging for console applications](/blog/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx).
+This post continues on the original post for my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) and the follow-up post which  introduced [configuring logging for console applications](/blog/jjameson/2009/06/18/configuring-logging-in-a-console-application).
 
 Obviously not all solutions are simple console-based applications. With ASP.NET  Web services and applications -- including Microsoft Office SharePoint Server (MOSS)  and Windows SharePoint Services (WSS) -- you can still view log messages from the `Logger` class very easily on a per-request basis.
 
@@ -86,5 +86,5 @@ Locate the request that you want to view log messages for and click the correspo
 
 Notice that the [WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) even formatted the warning message in red. How cool is  that?! [For all you SharePoint developers out there, compare this with "diving"  into the ULS logs to find an error or warning for a particular page request!]
 
-Be aware that the Web.config file you use for SharePoint applications varies  depending on whether you want to view log messages for a content page or for an  application (i.e. \_layouts) page. This is covered in my [next post](/blog/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx).
+Be aware that the Web.config file you use for SharePoint applications varies  depending on whether you want to view log messages for a content page or for an  application (i.e. \_layouts) page. This is covered in my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-sharepoint-application-pages).
 

@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "Silverlight"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
 The November 2008 edition of MSDN magazine contained the following article:
@@ -32,7 +32,7 @@ We've been using Silverlight on my current project for almost four months now, a
 
 It's also worth noting that I didn't develop the original Silverlight application we are using on the site, but I've made a number of changes to it in order to resolve a few issues and improve the overall implementation.
 
-Before diving into the issues and improvements, it is helpful to first understand the structure of the solution. If you've seen [my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx) (or if you've worked with me on any SharePoint projects), then the following solution structure should seem very familiar:
+Before diving into the issues and improvements, it is helpful to first understand the structure of the solution. If you've seen [my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) (or if you've worked with me on any SharePoint projects), then the following solution structure should seem very familiar:
 
 - Fabrikam.Portal.sln
     - Fabrikam.Portal.CoreServices.csproj
@@ -113,7 +113,7 @@ While everything appeared to work as expected, there was a fundamental problem w
 
 While it probably isn't the worst thing to include a **Debug **version of an assembly in a **Release **build, it's definitely not a best practice. However, more importantly, changing the output path in order to copy the XAP file into the expected location is not compatible with Team Foundation Build.
 
-As I noted in a [previous post](/blog/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx):
+As I noted in a [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
 
 > The problem with relative paths is that Team Foundation Build uses a different folder structure when compiling your projects.
@@ -148,5 +148,5 @@ I can see that this post is already turning out to be much longer than I origina
 
 Note that in the time since I originally started working with Silverlight and SharePoint, I've found other resources in addition to the MSDN article, such as the [Silverlight Blueprint for SharePoint](http://msdn.microsoft.com/en-us/sharepoint/cc303301.aspx). However, from what I've seen so far (which, honestly, is just a cursory examination) most of these still seem to lack much depth.
 
-Stay tuned and I promise I'll cover some [more of the "juicy stuff"](/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx) ;-)
+Stay tuned and I promise I'll cover some [more of the "juicy stuff"](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2) ;-)
 

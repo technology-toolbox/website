@@ -16,7 +16,7 @@ tags: ["MOSS 2007"]
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Shortly before I headed out to the airport last Wednesday, I received the fateful         email from my customer notifying us that they have decided to abandon using the         variations feature in Microsoft Office SharePoint Server (MOSS) 2007. Note that         the original release date for our solution was October 19th -- and the decision         to cut variations from our solution would obviously require significant rework (meaning         we would not come close to hitting our original date). This was obviously a difficult         decision and required careful consideration to determine how best to move forward.
@@ -110,5 +110,5 @@ Here are the repro steps to break the variations feature using no custom code an
 
 
 [[Part
-            2](/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx) in this series is now available.]
+            2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this series is now available.]
 

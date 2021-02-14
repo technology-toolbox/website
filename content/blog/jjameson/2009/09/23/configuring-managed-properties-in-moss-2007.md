@@ -14,10 +14,10 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-As I've noted in a [previous post](/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx), I typically use feature receivers in Microsoft Office SharePoint Server (MOSS) 2007 to automatically configure a "bunch of stuff" that would otherwise be very tedious to perform repeatedly for different environments (e.g. DEV, TEST, and PROD) and whenever I rebuild my local development VM. For example, when you activate one of my "Search" features, I typically create the Search Center, create/configure the various search results pages with a number of different Web Parts, and also programmatically configure managed properties.
+As I've noted in a [previous post](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I typically use feature receivers in Microsoft Office SharePoint Server (MOSS) 2007 to automatically configure a "bunch of stuff" that would otherwise be very tedious to perform repeatedly for different environments (e.g. DEV, TEST, and PROD) and whenever I rebuild my local development VM. For example, when you activate one of my "Search" features, I typically create the Search Center, create/configure the various search results pages with a number of different Web Parts, and also programmatically configure managed properties.
 
 For this post, I want to focus on the managed properties. In case you are not familiar with crawled properties and managed properties in MOSS 2007, let me start by providing a little background.
 
@@ -30,7 +30,7 @@ When SharePoint indexes content:
 5. If any *managed properties*are mapped to the crawled properties, then the property values are stuffed into the SSP Search database (i.e. what used be called the "property store" in SharePoint Portal Server 2003) for each piece of content.
 
 
-While SharePoint comes with about 110+ managed properties OOTB, customers typically add new ones -- especially when providing any sort of [faceted search](/blog/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx) feature.
+While SharePoint comes with about 110+ managed properties OOTB, customers typically add new ones -- especially when providing any sort of [faceted search](/blog/jjameson/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue) feature.
 
 So, for example, suppose we want to filter search results on **Product**. First we must define a managed property.
 
@@ -48,7 +48,7 @@ Hence, you need to ensure that a piece of content has all custom properties spec
 
 I often refer to this as "the chicken and the egg" problem with SharePoint managed properties. That's certainly not the official name for this issue, but it seems to help people understand why the managed properties are not mapped after activating the custom Search feature in a freshly rebuilt SharePoint environment.
 
-The "magic" behind automatically configuring managed properties upon feature activation is really not magic at all. It simply uses my "[FeatureConfigurator](/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx) framework" (and even calling this a framework is definitely a stretch) with a little bit of help from my SharePointSearchHelper class:
+The "magic" behind automatically configuring managed properties upon feature activation is really not magic at all. It simply uses my "[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) framework" (and even calling this a framework is definitely a stretch) with a little bit of help from my SharePointSearchHelper class:
 
 
     namespace Fabrikam.Project1.Search.Configuration

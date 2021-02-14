@@ -15,10 +15,10 @@ tags: ["Personal"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-[Yesterday's post](/blog/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx) got me thinking about something.
+[Yesterday's post](/blog/jjameson/2009/10/24/the-original-jameson-datacenter) got me thinking about something.
 
 Do you find yourself occasionally typing one word when you are actually thinking of a different word that sounds the same? A faint recollection from one or more of my English classes long ago suggested that these words are called *homonyms*. However, a quick search just now on Wikipedia indicates these are actually [*homophones*](http://en.wikipedia.org/wiki/Homophone).
 

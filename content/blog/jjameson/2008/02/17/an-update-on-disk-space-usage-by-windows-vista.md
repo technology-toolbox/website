@@ -19,7 +19,7 @@ tags: ["Windows Vista"]
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 Today I rebuilt my laptop to allow me to dual boot between Windows Server 2008 and         Windows Vista. To enable this configuration, I created the following partions on         my hard drive:
@@ -58,7 +58,7 @@ I then proceeded to install the following:
 Note: During each setup, I changed the drive letter from C: to E: in order to place         the bulk of the program files on the large 53 GB partition -- not the "small" 20         GB partition.
 
 I then configured Vista to use my WSUS (Windows Server Update Services) server in         the ["Jameson
-            Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) (a.k.a. my basement), so that patches only need to be copied         over my LAN -- not downloaded from the Internet each time.
+            Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), so that patches only need to be copied         over my LAN -- not downloaded from the Internet each time.
 
 Windows Update then proceeded to install the following:
 

@@ -10,7 +10,7 @@ tags: ["Core
 			2010", "Visual Studio"]
 ---
 
-In[my post from earlier today](/blog/jjameson/archive/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx), I noted how the code coverage analysis feature in Visual Studio 2010 is so easy to configure there's really no excuse not to use it -- provided your test projects target .NET Framework 4. However if, like me, you need to target .NET 3.5 (e.g. when developing for SharePoint 2010), then the instructions in the Visual Studio documentation for[configuring code coverage](http://msdn.microsoft.com/en-us/library/dd504821.aspx) simply don't work.
+In[my post from earlier today](/blog/jjameson/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3), I noted how the code coverage analysis feature in Visual Studio 2010 is so easy to configure there's really no excuse not to use it -- provided your test projects target .NET Framework 4. However if, like me, you need to target .NET 3.5 (e.g. when developing for SharePoint 2010), then the instructions in the Visual Studio documentation for[configuring code coverage](http://msdn.microsoft.com/en-us/library/dd504821.aspx) simply don't work.
 
 Instead of using the Code Coverage data diagnostic adapter within the Visual Studio IDE, you need to instrument your .NET 3.5 assemblies "manually" using[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx), and subsequently start/stop the code coverage profiler using[VSPerfCmd](http://msdn.microsoft.com/en-us/library/ms182403.aspx).
 

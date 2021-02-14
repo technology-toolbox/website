@@ -19,12 +19,12 @@ tags: ["My System", "Core Development", "Virtualization"]
 > 
 > 
 > Since
-> 	[I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog 
+> 	[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog 
 > 	ever goes away.
 
 
 As noted in my [previous 
-post](/blog/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx), I spent 7 days in "alpha" training last week for SharePoint 2010.
+post](/blog/jjameson/2009/08/13/sharepoint-2010-sneak-peek), I spent 7 days in "alpha" training last week for SharePoint 2010.
 
 Consequently, one of my goals for this week was to update my "dogfood" VM with  the CTP build of SharePoint Server 2010, so that I can continue building on the  foundation of what I learned last week and dive deeper into the new features of  the product.
 
@@ -84,5 +84,5 @@ Note that the GUID varies with each VM, so you'll need to tweak this accordingly
 Also note that you may need to use the VM settings to remove the VHD from the  IDE controller and subsequently re-add it (in other words, it looks like Hyper-V  does not recognize that the file permissions have been updated in the background).
 
 It takes about 10 minutes to copy the SysPrep'ed VHD, which is obviously much,  much faster than the time it takes to install Windows Server 2008 from scratch (especially  when you take patching into account). Overall, it takes me about 25-30 minutes to  spin up a new Windows Server 2008 VM, which includes joining it to my Active Directory  domain and getting all of the latest patches applied using Windows Server Update  Services (which, in the ["Jameson 
-Datacenter"](/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx) is enforced through Group Policy).
+Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) is enforced through Group Policy).
 

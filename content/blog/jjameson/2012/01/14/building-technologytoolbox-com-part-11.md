@@ -7,7 +7,7 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-In[my previous post](/blog/jjameson/archive/2012/01/06/building-technologytoolbox-com-part-10.aspx), I briefly mentioned how the **Most Popular Posts** section on the Technology Toolbox home page uses a CSS sprite to render the arrow image next to each list item.
+In[my previous post](/blog/jjameson/2012/01/06/building-technologytoolbox-com-part-10), I briefly mentioned how the **Most Popular Posts** section on the Technology Toolbox home page uses a CSS sprite to render the arrow image next to each list item.
 
 ![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
 		Figure 1: Technology Toolbox home page
@@ -125,5 +125,5 @@ To accomplish this, I use a little jQuery to toggle the visibility of the neste
 
 If separate image files are used for the "plus" and "minus" icons, users experience a subtle flashing effect the first time they expand one of the years (because the "minus" icon has to be downloaded). By using a CSS sprite instead, the user experience is improved (albeit a slight improvement) because the "minus" icon has already been downloaded. Simply tweaking the x and y positions toggles which icon is displayed.
 
-I'll explain more about the jQuery expandable list used to render the**Archives **section in a separate [post](/blog/jjameson/archive/2012/01/16/building-technologytoolbox-com-part-12.aspx).
+I'll explain more about the jQuery expandable list used to render the**Archives **section in a separate [post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12).
 

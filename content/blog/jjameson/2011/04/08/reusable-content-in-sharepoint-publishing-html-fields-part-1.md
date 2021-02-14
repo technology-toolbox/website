@@ -16,7 +16,7 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx)
 > 
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 
 In one of the sprints last year for my current project, I built a custom "document         publishing" system based on the Web Content Management (WCM) features in Microsoft         Office SharePoint Server (MOSS) 2007. My client was looking to replace a legacy         system used to create Microsoft Word documents that are essentially "standard operating         procedures" for their employees (or "SOPs" as we called them many years ago when         I worked at Gambro Healthcare).
@@ -76,8 +76,8 @@ For example, consider the following screenshot that shows the same page as Figur
 
 Note that this post was primarily intended to introduce a scenario for using the         reusable content feature in SharePoint.
 
-In [my next post](/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx), I'll show you how to programmatically add **Reusable Content
+In [my next post](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2), I'll show you how to programmatically add **Reusable Content
             **list items (which is very helpful when deploying to multiple environments,         such as DEV, TEST, and PROD).
 
-In [part 3 of this series](/blog/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx), I'll show you how to "expand" the reusable content         placeholders within, for example, the Page Content field (essentially just two lines         of code), as well as some of the "gotchas" with the out-of-the-box solution (including         a workaround).
+In [part 3 of this series](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3), I'll show you how to "expand" the reusable content         placeholders within, for example, the Page Content field (essentially just two lines         of code), as well as some of the "gotchas" with the out-of-the-box solution (including         a workaround).
 

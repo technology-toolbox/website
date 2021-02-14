@@ -14,10 +14,10 @@ tags: ["MOSS 2007"]
 > 
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx)
 > 
-> Since [I no longer work for Microsoft](/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx), I have copied it here in case that blog ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 
-In my [previous post](/blog/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx), I showed how to automatically configure managed properties in Microsoft Office SharePoint Server (MOSS) 2007 when activating a custom "Search" feature. In this post, I want to cover a subtle, yet very important, limitation in managed properties.
+In my [previous post](/blog/jjameson/2009/09/23/configuring-managed-properties-in-moss-2007), I showed how to automatically configure managed properties in Microsoft Office SharePoint Server (MOSS) 2007 when activating a custom "Search" feature. In this post, I want to cover a subtle, yet very important, limitation in managed properties.
 
 Suppose that you have created a custom field (column) called **Abstract** that allows users to specify formatting (i.e. HTML markup). Furthermore, suppose that you want to display **Abstract **for each search result, instead of, say, the HitHighlightedSummary. Therefore, you create a new **Abstract **managed property, map it to **ows\_Abstract**, and subsequently perform a full crawl to populate the new managed property. You then modify the properties of the Search Core Results Web Part to include **Abstract **in the list of columns returned in search results and also modify the XSLT to display the value of **Abstract** instead of HitHighlightedSummary.
 
