@@ -102,7 +102,7 @@ function RemoveWebsite(
 > There is currently a bug in the `Get-Website`
 > cmdlet, so be very careful if you choose to use it:
 >
->       {{< reference    title="Get-Website always returns full list of web sites"    linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
+> {{< reference    title="Get-Website always returns full list of web sites"    linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
 
 If you are wondering why I specify "``r`n`"
 at the end of each `Write-Host` command,

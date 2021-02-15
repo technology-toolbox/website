@@ -152,13 +152,13 @@ to: Install SQL Server 2008**), install SQL Server 2008 (Database         Engine
 
 In order to install SharePoint Server 2010, you must also install SQL Server 2008         SP1 CU2 (or later):
 
-    {{< reference    title="Cumulative update package 2 for SQL Server 2008 Service Pack 1"    linkHref="http://support.microsoft.com/kb/970315" >}}
+{{< reference    title="Cumulative update package 2 for SQL Server 2008 Service Pack 1"    linkHref="http://support.microsoft.com/kb/970315" >}}
 
 ### Install SharePoint Server 2010
 
 Using the configuration steps provided in the following TechNet article, install         SharePoint Server 2010 using the installation parameters specified in [Table 3](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
-    {{< reference    title="Deploy a single server with SQL Server (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx" >}}
+{{< reference    title="Deploy a single server with SQL Server (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx" >}}
 
 Complete the deployment procedures in the following sections:
 
@@ -174,7 +174,7 @@ Complete the deployment procedures in the following sections:
 
 Adding the Central Administration site to the **Local intranet** zone         (and using the default settings for this zone) enables single sign-on when accessing         the site. This is discussed in more detail in the following blog post:
 
-    {{< reference    title="Be \"In the Zone\" to Avoid Entering Credentials"    linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+{{< reference    title="Be \"In the Zone\" to Avoid Entering Credentials"    linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 #### Add the SharePoint bin folder to the PATH environment variable
 
@@ -221,13 +221,13 @@ To add the SharePoint administrators group to the database role, on the database
 
 Using the configuration steps provided in the following TechNet article, configure         the outgoing e-mail settings for SharePoint using the values specified in [Table 4](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
-    {{< reference    title="Configure outgoing e-mail (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc263462(office.14).aspx" >}}
+{{< reference    title="Configure outgoing e-mail (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc263462(office.14).aspx" >}}
 
 #### Create SharePoint Web application
 
 Using the configuration steps provided in the following TechNet article, create         a new Web application using the configuration settings specified in [Table 5](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
-    {{< reference    title="Create a Web application (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc261875(office.14).aspx" >}}
+{{< reference    title="Create a Web application (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc261875(office.14).aspx" >}}
 
 Note that the **SharePoint Central Administration v4** Web application         listed in [Table 5](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) was already created by the SharePoint Products Configuration Wizard.
 
@@ -235,7 +235,7 @@ Note that the **SharePoint Central Administration v4** Web application         l
 
 In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant the         **WSS\_ADMIN\_WPG** and **WSS\_WPG** group appropriate permissions         on the IIS WAMREG admin Service, as described in [KB 920783](http://support.microsoft.com/kb/920783). This is discussed in more detail in the following blog post:
 
-    {{< reference    title="Event ID 10016, KB 920783, and the WSS%5FWPG Group"    linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference    title="Event ID 10016, KB 920783, and the WSS%5FWPG Group"    linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
 
@@ -301,7 +301,7 @@ If performing a new installation of TFS 2010 (not upgrading from a previous vers
 
 The steps for configurating SharePoint Server 2010 for TFS dashboards are provided         in following blog post:
 
-    {{< reference    title="Configuring SharePoint Server 2010 for Dashboard Compatibility with TFS 2010"    linkHref="http://blogs.msdn.com/team%5Ffoundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx" >}}
+{{< reference    title="Configuring SharePoint Server 2010 for Dashboard Compatibility with TFS 2010"    linkHref="http://blogs.msdn.com/team%5Ffoundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx" >}}
 
 Note that the blog post is based on the Beta 2 version of SharePoint Server 2010         and there were a few changes in the RTM version.
 
@@ -502,7 +502,7 @@ To attach the SharePoint content database by using Windows Powershell:
 
 More information on attaching SharePoint content databases is provided in the following         TechNet article:
 
-    {{< reference    title="Attach databases and upgrade to SharePoint Server 2010"    linkHref="http://technet.microsoft.com/en-us/library/cc263299(office.14).aspx" >}}
+{{< reference    title="Attach databases and upgrade to SharePoint Server 2010"    linkHref="http://technet.microsoft.com/en-us/library/cc263299(office.14).aspx" >}}
 
 Note that if you browse to a TFS project site at this point, an error is displayed         on the home page in the **Remaining Work** Web Part, as shown below.         This occurs because the TFS extensions for SharePoint have not been installed yet.
 
@@ -539,7 +539,7 @@ To reset the home page for a TFS project site:
 >
 > If you need to do this for a number of sites, you should consider using PowerShell             instead, as described in the following blog post:
 >
->             {{< reference    title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010"    linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
+> {{< reference    title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010"    linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
 
 To remove obolete links from the top link bar of a TFS project site:
 
@@ -587,7 +587,7 @@ This error typically occurs when the TFS data warehouse (i.e. the OLAP cube) has
 
 Refer to the following blog post for some helpful reports that display details about         TFS warehouse jobs:
 
-    {{< reference    title="TFS2010: Warehouse and Job Service Administrator Reports"    linkHref="http://blogs.msdn.com/granth/archive/2010/02/07/tfs2010-warehouse-and-job-status-reports.aspx" >}}
+{{< reference    title="TFS2010: Warehouse and Job Service Administrator Reports"    linkHref="http://blogs.msdn.com/granth/archive/2010/02/07/tfs2010-warehouse-and-job-status-reports.aspx" >}}
 
 Once the warehouse database has been updated, an upgraded TFS project site should         appear similar to the following:
 
@@ -605,13 +605,13 @@ title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 
 For more information on updating a team project, refer to the following MSDN article:
 
-    {{< reference    title="Updating an Upgraded Team Project to Access New Features"    linkHref="http://msdn.microsoft.com/en-us/library/ff432837.aspx" >}}
+{{< reference    title="Updating an Upgraded Team Project to Access New Features"    linkHref="http://msdn.microsoft.com/en-us/library/ff432837.aspx" >}}
 
 #### Add service account for SharePoint service applications to content databases
 
 There appears to be a bug in SharePoint Server 2010 when the service account for         the Web application is different from the service account for the service applications         (e.g. Excel Calculation Services and the Secure Store Service). This is discussed         in more detail in the following blog post:
 
-    {{< reference    title="\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)"    linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx" >}}
+{{< reference    title="\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)"    linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx" >}}
 
 To avoid this error, add the the second service account to the underlying content         databases. On the database server:
 
@@ -658,7 +658,7 @@ In order to create a new TFS project, you must install either Team Explorer 2010
 >
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to continue                 to use the source control integration features in Expression Web 3), you must download                 and install an update:
 >
->             {{< reference    title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)"    linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
+> {{< reference    title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)"    linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
 >
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more                 information on the compatibility update.
 
@@ -679,13 +679,13 @@ v5.0** process template.
 
 For more information on creating a new TFS project, refer to the following:
 
-    {{< reference    title="Create a Team Project"    linkHref="http://msdn.microsoft.com/en-us/library/ms181477.aspx" >}}
+{{< reference    title="Create a Team Project"    linkHref="http://msdn.microsoft.com/en-us/library/ms181477.aspx" >}}
 
 ### Install TFS Power Tools
 
 To enable additional check-in policies and other access additional tools (TFS 2010         Best Practices Analyzer), download and install the new version of the Visual Studio         Power Tools for TFS 2010:
 
-    {{< reference    title="Visual Studio Power Tools"    linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
+{{< reference    title="Visual Studio Power Tools"    linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
 
 ### Install Team Foundation Build
 

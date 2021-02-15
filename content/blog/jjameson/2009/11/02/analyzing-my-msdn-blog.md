@@ -32,7 +32,7 @@ Note that **Combined Views** is something I defined and is simply the         su
 
 The following post provides a good explanation of the difference between "Views"         and "AggViews" in Community Server.
 
-    {{< reference    title="Eriksson, J-O (2006). Views statistics of your blog. 2006-07-24."    linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-of-your-blog.aspx" >}}
+{{< reference    title="Eriksson, J-O (2006). Views statistics of your blog. 2006-07-24."    linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-of-your-blog.aspx" >}}
 
 Here's the gist of it:
 

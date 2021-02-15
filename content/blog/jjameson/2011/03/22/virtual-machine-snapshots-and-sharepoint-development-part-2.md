@@ -36,7 +36,7 @@ Before WS2008 R2, Hyper-V snapshot data files were not created side-by-side with
 
 The other reason you'll want to be sure to run WS2008 R2 on the Hyper-V host --         and this is really one of the most important improvements to understand about the         Hyper-V R2 release -- is the fact that disk performance is substantially improved         in WS 2008 R2. If you haven't at least skimmed the following white paper, I recommend         taking a look at it:
 
-    {{< reference    title="Virtual Hard Disk Performance - Windows Server 2008 / Windows Server 2008 R2 / Windows 7"    linkHref="http://download.microsoft.com/download/0/7/7/0778C0BB-5281-4390-92CD-EC138A18F2F9/WS08%5FR2%5FVHD%5FPerformance%5FWhitePaper.docx" >}}
+{{< reference    title="Virtual Hard Disk Performance - Windows Server 2008 / Windows Server 2008 R2 / Windows 7"    linkHref="http://download.microsoft.com/download/0/7/7/0778C0BB-5281-4390-92CD-EC138A18F2F9/WS08%5FR2%5FVHD%5FPerformance%5FWhitePaper.docx" >}}
 
 In my experience, [VM performance is typically throttled by I/O](/blog/jjameson/2007/06/24/performance-of-virtual-machines) -- rather than CPU, memory,         or network resources. Sure, there are exceptions to this, but generally speaking,         slow VMs -- that otherwise appear healthy in terms of CPU and memory usage -- are         usually caused by disk contention on the underlying physical disks.
 

@@ -34,7 +34,7 @@ Now, please don't misunderstand -- I most certainly am not claiming that the Jam
 
 For those of you that may not have seen the original Google server farm, I did a         quick search this morning and managed to find the following:
 
-    {{< reference    title="Google Stanford Hardware"    linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
+{{< reference    title="Google Stanford Hardware"    linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
 
 If you haven't seen this, take a quick peek. It will surely bring a smile -- if         not a burst of laughter.
 

@@ -54,7 +54,7 @@ In "step 1" I swapped out the out-of-the-box nightandday.master with Tugboat.mas
 
 You might be wondering why I chose this approach rather than trying to upgrade the         previous version of Tugboat.master that I developed for MOSS 2007, perhaps following         something like this MSDN article as a guide:
 
-    {{< reference    title="Upgrading an Existing Master Page to the SharePoint Foundation Master Page"    linkHref="http://msdn.microsoft.com/en-us/library/ee539981.aspx" >}}
+{{< reference    title="Upgrading an Existing Master Page to the SharePoint Foundation Master Page"    linkHref="http://msdn.microsoft.com/en-us/library/ee539981.aspx" >}}
 
 The reason is, quite frankly, I simply haven't had good experience in the past when         trying something like that. It seems like one or more nasty bugs inevitably appears         due to some missing piece in the upgrade process. For example, I noticed a number         of community comments have been added to the above MSDN article about missing pieces         (for example, one of the comments states there is a subtle but rather nasty issue         when your master page is missing the `<div id="MSO_ContentDiv">`         element).
 
