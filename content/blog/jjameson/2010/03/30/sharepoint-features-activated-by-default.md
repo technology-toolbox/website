@@ -24,8 +24,7 @@ Actually, the same holds for **Farm**-level features as well (which actually mak
 
 A little research yesterday revealed that this behavior is documented on MSDN:
 
-<cite>Feature Element (Feature)</cite>
-[http://msdn.microsoft.com/en-us/library/ms436075.aspx](http://msdn.microsoft.com/en-us/library/ms436075.aspx)
+{{< reference    title="Feature Element (Feature)"    linkHref="http://msdn.microsoft.com/en-us/library/ms436075.aspx" >}}
 
 Here's the description for the **ActivateOnDefault** attribute of the **Feature** element:
 

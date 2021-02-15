@@ -22,8 +22,7 @@ I recently started doing some significant work with PowerShell and therefore I w
 
 Consequently I went looking for a secondary solution for formatting PowerShell scripts. A little searching on the Internet quickly led to a blog post by Lee Holmes:
 
-<cite>More PowerShell Syntax Highlighting</cite>
-[http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx](http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx)
+{{< reference    title="More PowerShell Syntax Highlighting"    linkHref="http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx" >}}
 
 While Lee's script outputs nicely formatted script as HTML, I decided to modify his approach a little. It's not that there's really anything wrong with Lee's script. Rather, given the simplicity of parsing PowerShell scripts into various tokens, I decided that it would be preferable (and not to mention a great PowerShell exercise for me) to output semantic HTML that is subsequently formatted with CSS instead of via inline **style** attributes.
 

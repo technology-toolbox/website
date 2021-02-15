@@ -57,8 +57,7 @@ installing Visual Studio 2012.
 Unfortunately, it seems like this is just the way it's going to be from now
 on -- at least according to Heath Stewart from Microsoft:
 
-<cite>How Visual Studio 2012 Avoids Prompts for Source</cite>
-[http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx](http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx)
+{{< reference    title="How Visual Studio 2012 Avoids Prompts for Source"    linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
 
 Heath, if you're reading this, then sorry, but I think Microsoft's decision
 to force this bloat on us is, um, stupid. Okay, maybe *shortsighted*

@@ -38,8 +38,7 @@ If you right-click one of these warnings and then click **Show Error Help**,  yo
 > directory associated with the tool under the user's profile (%USERPROFILE%\Application
 > Data\...).
 
-<cite>Identifiers should be spelled correctly</cite>
-[http://msdn.microsoft.com/en-us/library/bb264492.aspx](http://msdn.microsoft.com/en-us/library/bb264492.aspx)
+{{< reference    title="Identifiers should be spelled correctly"    linkHref="http://msdn.microsoft.com/en-us/library/bb264492.aspx" >}}
 
 However, I don't recommend using any of these options. Here's why...
 

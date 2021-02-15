@@ -21,8 +21,7 @@ While you might think that simply deleting the temporary files in Internet Explo
 
 Also note the following KB article is effectively worthless these days even though it includes a section for "Internet Explorer 4.x or Later (All Platforms)":
 
-<cite>How to Remove an ActiveX Control in Windows</cite>
-[http://support.microsoft.com/kb/154850](http://support.microsoft.com/kb/154850)
+{{< reference    title="How to Remove an ActiveX Control in Windows"    linkHref="http://support.microsoft.com/kb/154850" >}}
 
 [On a side note, I strongly recommend you think twice before using the phrase "or later" when referring to software. Think about it...it is highly unlikely that something you say about your current version of software will apply to all subsequent versions of that software.]
 

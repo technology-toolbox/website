@@ -24,9 +24,7 @@ the process of migrating content to the Production environment) that there are
 some additional restrictions that are not currently listed in the following
 KB article:
 
-<cite>Information about the characters that you cannot use in sites, folders,
-and files in SharePoint Portal Server 2003 or in SharePoint Server 2007</cite>
-[http://support.microsoft.com/default.aspx?scid=kb;en-us;905231](http://support.microsoft.com/default.aspx?scid=kb;en-us;905231)
+{{< reference    title="Information about the characters that you cannot use in sites, folders, and files in SharePoint Portal Server 2003 or in SharePoint Server 2007"    linkHref="http://support.microsoft.com/default.aspx?scid=kb;en-us;905231" >}}
 
 It turns out that the restrictions noted in this KB article are incomplete.
 

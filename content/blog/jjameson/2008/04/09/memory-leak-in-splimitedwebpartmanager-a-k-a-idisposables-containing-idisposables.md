@@ -32,8 +32,7 @@ You see, the problem is that neither of the whitepapers noted above make any men
 
 This morning I did a quick search for "SPLimitedWebPartManager dispose" on Windows Live, and found the following:
 
-<cite>Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? .. of ones and zeros.. 2007-06-05.</cite>
-[http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/](http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/)
+{{< reference    title="Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? .. of ones and zeros.. 2007-06-05."    linkHref="http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/" >}}
 
 I, for one, agree with Bryan's assessment. The memory leak is inherently in `SPLimitedWebPartManager`. While it is true that Roger's example shows one way of fixing the memory leak, the real fix -- at least in my opinion -- should be to modify `SPLimitedWebPartManager` to dispose of its resources when it, itself, is disposed. Heck, I'll even go so far as to say that all SharePoint classes should be modified to behave like this. For example, `SPSite.ParentWeb` and `SPWeb.RootWeb` should be inherently disposed by `SPSite` and `SPWeb` -- assuming the corresponding members were indeed instantiated -- instead of relying on the caller to dispose of these.
 

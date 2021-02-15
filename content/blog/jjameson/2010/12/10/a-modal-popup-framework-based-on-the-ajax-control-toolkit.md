@@ -19,8 +19,7 @@ The "Announcements" feature that I developed for a customer about a year ago use
 
 Refer to the following site for more information on the **ModalPopupExtender**         class, including a sample page that demonstrates a popup window:
 
-<cite>ModalPopup Demonstration</cite>
-[http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)
+    {{< reference    title="ModalPopup Demonstration"    linkHref="http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx" >}}
 
 To encapsulate the functionality for rendering modal popup windows, the "Announcements"         feature builds upon a lightweight "Modal Popup Framework." [Admittedly, calling         this a "framework" is a little bit of a stretch.]
 

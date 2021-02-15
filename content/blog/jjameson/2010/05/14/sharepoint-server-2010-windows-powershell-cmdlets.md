@@ -19,6 +19,5 @@ tags: ["SharePoint 2010", "PowerShell"]
 
 Another essential resource for those (like me) upgrading from Microsoft Office SharePoint Server (MOSS) 2007 to SharePoint Server 2010:
 
-<cite>Index of SharePoint Server 2010 Windows PowerShell cmdlets</cite>
-[http://technet.microsoft.com/en-us/library/ff678226(office.14).aspx](http://technet.microsoft.com/en-us/library/ff678226%28office.14%29.aspx)
+{{< reference    title="Index of SharePoint Server 2010 Windows PowerShell cmdlets"    linkHref="http://technet.microsoft.com/en-us/library/ff678226(office.14).aspx" >}}
 

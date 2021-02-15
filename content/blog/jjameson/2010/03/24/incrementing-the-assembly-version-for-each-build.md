@@ -59,8 +59,7 @@ Note that this implementation has some specifics to Team Foundation Server, but 
 > This post was originally created for TFS 2005/2008. Refer to the following
 > if you are using TFS 2010:
 >
-> <cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
-> [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
+> {{< reference    title="Incrementing the Assembly Version for Each Build in TFS 2010"    linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010"    linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
 
 Unfortunately, there's no out-of-the-box task in the current version of MSBuild  that increments an assembly version. However, you can write your own with just a  few lines of code (there are a number of samples out there if you search for them),  or -- as I prefer -- you can just use the one from the [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). [There  are quite a few other custom tasks in this package that you may find useful in addition  to the Version task that I cover in this post.]
 

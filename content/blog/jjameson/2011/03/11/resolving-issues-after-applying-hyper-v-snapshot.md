@@ -24,14 +24,11 @@ This morning I rolled back one of my development VMs to a snapshot I created  ab
 
 I did a quick Internet search for this error and found the following KB article:
 
-<cite>Trust Relationship Between Workstation and Domain Fails</cite>
-[http://support.microsoft.com/kb/162797](http://support.microsoft.com/kb/162797)
+{{< reference    title="Trust Relationship Between Workstation and Domain Fails"    linkHref="http://support.microsoft.com/kb/162797" >}}
 
 While you *could* follow the instructions in KB 162797 to resolve this  error (removing the computer from the domain and then adding it back), there's a  much easier way to resolve the error:
 
-<cite>How to use Netdom.exe to reset machine account passwords of a Windows
-Server domain controller</cite>
-[http://support.microsoft.com/kb/325850](http://support.microsoft.com/kb/325850)
+{{< reference    title="How to use Netdom.exe to reset machine account passwords of a Windows Server domain controller"    linkHref="http://support.microsoft.com/kb/325850" >}}
 
 Don't be put off by the title of this KB article. You just need to read a little  bit into it:
 

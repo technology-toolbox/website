@@ -449,15 +449,20 @@ At this point you should be able to modify your hosts file accordingly and brows
 
 Here are some additional resources that you may find helpful for rendering SharePoint         list items using the **XsltListViewWebPart**.
 
-<cite>XsltListViewWebPart and Custom List Views</cite>
-[http://msdn.microsoft.com/en-us/library/ff806162.aspx](http://msdn.microsoft.com/en-us/library/ff806162.aspx)
-
-<cite>Overview of XSLT List View Rendering System</cite>
-[http://msdn.microsoft.com/en-us/library/ff604024.aspx](http://msdn.microsoft.com/en-us/library/ff604024.aspx)
-
-<cite>Examples of Input and Result Node Trees in XSLT Transformations</cite>
-[http://msdn.microsoft.com/en-us/library/ff602042.aspx](http://msdn.microsoft.com/en-us/library/ff602042.aspx)
-
-<cite>How to: Customize the Rendering of a Field on a List View</cite>
-[http://msdn.microsoft.com/en-us/library/ff606773.aspx](http://msdn.microsoft.com/en-us/library/ff606773.aspx)
+    {{< reference    title="XsltListViewWebPart and Custom List Views"    linkHref="http://msdn.microsoft.com/en-us/library/ff806162.aspx" >}}
+    
+    
+    
+    
+    {{< reference    title="Overview of XSLT List View Rendering System"    linkHref="http://msdn.microsoft.com/en-us/library/ff604024.aspx" >}}
+    
+    
+    
+    
+    {{< reference    title="Examples of Input and Result Node Trees in XSLT Transformations"    linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
+    
+    
+    
+    
+    {{< reference    title="How to: Customize the Rendering of a Field on a List View"    linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
 

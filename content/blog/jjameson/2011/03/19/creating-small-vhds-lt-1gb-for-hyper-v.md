@@ -34,8 +34,7 @@ When creating a new VHD using Hyper-V Manager, the minimum size for a VHD is  1 
 
 This morning, I did a quick search for how to create a VHD using PowerShell and  discovered the following post:
 
-<cite>Hyper-V WMI Using PowerShell Scripts -- Part 2 (VHD Creation)</cite>
-[http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx](http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx)
+{{< reference    title="Hyper-V WMI Using PowerShell Scripts -- Part 2 (VHD Creation)"    linkHref="http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx" >}}
 
 [If, like me, you haven't come across that blog before, it's definitely worth  taking a look at. Taylor Brown from the Hyper-V product team shares a lot of great  tips and useful scripts.]
 

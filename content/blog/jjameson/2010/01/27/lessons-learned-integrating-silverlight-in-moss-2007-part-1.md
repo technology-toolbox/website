@@ -20,8 +20,7 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "Silverlight"]
 
 The November 2008 edition of MSDN magazine contained the following article:
 
-<cite>Light Up SharePoint With Silverlight 2 Web Parts</cite>
-[http://msdn.microsoft.com/en-us/magazine/dd148643.aspx](http://msdn.microsoft.com/en-us/magazine/dd148643.aspx)
+{{< reference    title="Light Up SharePoint With Silverlight 2 Web Parts"    linkHref="http://msdn.microsoft.com/en-us/magazine/dd148643.aspx" >}}
 
 While the article provides a good introduction to integrating a Silverlight application into a SharePoint site, it definitely left me wanting more.
 

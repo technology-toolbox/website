@@ -25,8 +25,7 @@ However, this week I discovered that a page that looks good in Internet Explorer
 
 Since I didn't have access to my faithful Firebug or Internet Explorer Developer Tools, I was initially stumped on troubleshooting the problem. However, a little bit of searching uncovered the following gem:
 
-<cite>Firebug For Safari</cite>
-[http://vision-media.ca/resources/misc/firefox-for-safari](http://vision-media.ca/resources/misc/firefox-for-safari)
+{{< reference    title="Firebug For Safari"    linkHref="http://vision-media.ca/resources/misc/firefox-for-safari" >}}
 
 Unlike many of the other search results that I looked at, this one doesn't actually discuss using Firebug in Safari (which I was reluctant to try because, from what I read, all of the CSS rules are read-only when you use Firebug with Safari). Rather, this page shows the similar set of tools that Apple provides with their browser. It also shows how to easily enable the Safari developer tools without hacking a preferences file (which I initially tried locating on my Windows VM using instructions based on a Mac, but I quickly gave up on that effort).
 

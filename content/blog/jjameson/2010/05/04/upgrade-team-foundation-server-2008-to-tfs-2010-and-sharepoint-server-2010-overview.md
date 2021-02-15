@@ -118,15 +118,16 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 	are one and the same (i.e. me).<br><br>Refer to the "planning" section in my next blog post for specific details 
 	on my environment. |
 | Install and provision SharePoint Products. | I installed SharePoint Server 2010 using the following TechNet article 
-	as a guide:<br><br><cite>Deploy a single server with SQL Server (SharePoint Server 2010)</cite><br>[http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx](http://technet.microsoft.com/en-us/library/cc262243%28office.14%29.aspx)<br><br><br>(more detail provided in my next blog post) |
+	as a guide:<br><br><br><br>
+	{{< reference    title="Deploy a single server with SQL Server (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx" >}}<br><br>(more detail provided in my next blog post) |
 | Configure Microsoft Office SharePoint Server 2007. | Jon Tsao has written a helpful blog post with details on how to configure 
-	SharePoint Server 2010 for TFS dashboards:<br><br><cite>Configuring SharePoint Server 2010 for Dashboard Compatibility 
-		with TFS 2010</cite><br>[http://blogs.msdn.com/team\_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx](http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx)<br><br><br>It's a little out-of-date (due to changes in SharePoint Server 2010 RTM 
+	SharePoint Server 2010 for TFS dashboards:<br><br><br><br>
+	{{< reference    title="Configuring SharePoint Server 2010 for Dashboard Compatibility with TFS 2010"    linkHref="http://blogs.msdn.com/team%5Ffoundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx" >}}<br><br>It's a little out-of-date (due to changes in SharePoint Server 2010 RTM 
 	from Beta 2), but once I found the links to configure Excel Services and 
 	the Secure Store Service, I was able to complete the configuration.<br><br>Unfortunately, my configuration is a little different from the configuration 
 	Jon used and subsequently revealed (what I believe to be) a bug in SharePoint 
-	Server 2010 with Excel Services. Refer to the following post for more details:<br><br><cite>"The workbook cannot be opened" Error with SharePoint Server 2010 
-		(and TFS 2010)</cite><br>[http://blogs.msdn.com/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx](/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010)<br> |
+	Server 2010 with Excel Services. Refer to the following post for more details:<br><br><br><br>
+	{{< reference    title="\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)"    linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010"    linkText="http://blogs.msdn.com/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx" >}} |
 | Install and Configure Extensions. | I skipped this step because in my environment SharePoint Server 2010 
 	is installed on the same server as TFS. |
 | Administrator for SharePoint Products Fills out Worksheet. | Refer to the "planning" section in next blog post for specific details 
@@ -165,9 +166,7 @@ Here's something I didn't see mentioned anywhere in the TFS installation guide..
 > to continue to use the source control integration features in Expression
 > Web 3), you must download and install an update:
 >
-> <cite>Visual Studio Team System 2008 Service Pack 1 Forward Compatibility
-> Update for Team Foundation Server 2010 (Installer)</cite>
-> [http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d)
+> {{< reference    title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)"    linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
 >
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558)
 > for more information on the compatibility update.

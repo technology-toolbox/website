@@ -24,8 +24,7 @@ Server 2008 to TFS 2010, including some information about updating your TFS
 project sites. I also provided a reference to the following MSDN article for
 more information:
 
-<cite>Updating an Upgraded Team Project to Access New Features</cite>
-[http://msdn.microsoft.com/en-us/library/ff432837.aspx](http://msdn.microsoft.com/en-us/library/ff432837.aspx)
+{{< reference    title="Updating an Upgraded Team Project to Access New Features"    linkHref="http://msdn.microsoft.com/en-us/library/ff432837.aspx" >}}
 
 By following the above MSDN documentation, I successfully added a Product
 Backlog workbook as well as an Iteration Backlog workbook. [Note that I used
@@ -39,8 +38,7 @@ to my existing project sites.
 The steps to do this are documented in the following MSDN article (which
 is part of the documentation set referenced above):
 
-<cite>Adding Dashboards and Reports to Upgraded Team Projects</cite>
-[http://msdn.microsoft.com/en-us/library/ff462695(v=VS.100).aspx](http://msdn.microsoft.com/en-us/library/ff462695%28v=VS.100%29.aspx)
+{{< reference    title="Adding Dashboards and Reports to Upgraded Team Projects"    linkHref="http://msdn.microsoft.com/en-us/library/ff462695(v=VS.100).aspx" >}}
 
 However, there's a problem with the steps described in this article...
 

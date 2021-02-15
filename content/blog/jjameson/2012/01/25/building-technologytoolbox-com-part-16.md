@@ -62,8 +62,7 @@ CAPTCHA implementation.
 The foundation for the CAPTCHA control used on TechnologyToolbox.com is based
 on a jQuery plugin created by Boban Karišik:
 
-<cite>s3Capcha jQuery plugin</cite>
-[http://www.serie3.info/s3capcha/](http://www.serie3.info/s3capcha/)
+{{< reference    title="s3Capcha jQuery plugin"    linkHref="http://www.serie3.info/s3capcha/" >}}
 
 s3Capcha is simple, yet elegant, and free for commercial use (provided you
 agree to preserve the copyright notice in the script file). The only drawback
@@ -72,8 +71,7 @@ on PHP.
 
 Fortunately, Mahdi Yousefi created an ASP.NET version based on Boban's code:
 
-<cite>Creating an ASP.NET captcha using jQuery and s3capcha</cite>
-[http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap](http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap)
+{{< reference    title="Creating an ASP.NET captcha using jQuery and s3capcha"    linkHref="http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap" >}}
 
 I discovered a few issues in Mahdi's code and ended up making some significant
 changes for the Technology Toolbox website.

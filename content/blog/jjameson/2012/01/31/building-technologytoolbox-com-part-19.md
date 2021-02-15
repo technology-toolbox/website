@@ -20,8 +20,7 @@ Phil's repo, but I certainly hope so. Here is a list of the issues that I create
 (in most of these, you will see a corresponding change in my private fork of
 Subtext):
 
-<cite>Subtext issues created by me</cite>
-[https://github.com/Haacked/Subtext/issues/created\_by/jeremy-jameson](http://github.com/Haacked/Subtext/issues/created_by/jeremy-jameson)
+{{< reference    title="Subtext issues created by me"    linkHref="http://github.com/Haacked/Subtext/issues/created%5Fby/jeremy-jameson"    linkText="https://github.com/Haacked/Subtext/issues/created%5Fby/jeremy-jameson" >}}
 
 My Subtext fork does not currently include all of the changes I've made to
 Subtext for TechnologyToolbox.com, but it is close.

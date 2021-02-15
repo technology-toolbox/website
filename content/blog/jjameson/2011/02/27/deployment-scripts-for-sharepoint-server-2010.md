@@ -245,8 +245,7 @@ If you haven't yet discovered errors in the event log after creating Publishing 
 
 If you *have* seen the errors I'm referring to, then you're probably familiar with the following TechNet article:
 
-<cite>Configure object cache user accounts</cite>
-[http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)
+{{< reference    title="Configure object cache user accounts"    linkHref="http://technet.microsoft.com/en-us/library/ff758656.aspx" >}}
 
 Here's a script to get rid of those pesky errors. It assumes the Portal Super User is **{DOMAIN}\svc-sp-psu** (or perhaps some variant depending on environment, such as **{DOMAIN}\svc-sp-psu-dev**) and the Portal Super Reader is **{DOMAIN}\svc-sp-psr** (or, again, some variant of this).
 
@@ -459,8 +458,7 @@ If you've been developing with SharePoint 2010 for any signficant period of time
 
 When I searched the Internet for ***PowerShell reload assembly***(looking for an easy way to unload a specific assembly), I discovered the following blog post:
 
-<cite>PowerShell Does Not Reload Upgraded Assemblies </cite>
-[http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies](http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies)
+{{< reference    title="PowerShell Does Not Reload Upgraded Assemblies"    linkHref="http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies" >}}
 
 I found Lauri's approach to be invaluable for isolating the AppDomain that loads your assemblies, as shown in the following script.
 
@@ -1171,8 +1169,7 @@ Main
 
 This script essentially performs the same activities as the **Default** deployment configuration for a SharePoint project in Visual Studio. Consequently, I don't expect this to be used all that much during the development process. I've still found this useful, however, for some scenarios. For example, in the sample SharePoint solution I provided in [my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), you'll find that I changed the **Activate On Default** property of the "WebAppConfiguration" feature to **False**. For the reasons why I did this, refer to the following post (that was originally written for MOSS 2007 but still applies to SharePoint 2010):
 
-<cite>SharePoint Features Activated by Default</cite>
-[http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx](/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default)
+{{< reference    title="SharePoint Features Activated by Default"    linkHref="/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default"    linkText="http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx" >}}
 
 Consequently, I used the **Redeploy Features.ps1** script to ensure the WebAppConfiguration feature is activated (thus ensuring my custom Sign In page for claims authentication was configured on the Web application).
 

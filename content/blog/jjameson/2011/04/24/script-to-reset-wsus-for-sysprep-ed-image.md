@@ -39,6 +39,5 @@ I keep a copy of this script in my [Toolbox](/blog/jjameson/2007/03/22/backedup-
 
 If you are not sure why this is helpful, refer to the following KB article:
 
-<cite>A Windows 2000-based, Windows Server 2003-based, or Windows XP-based computer that was set up by using a Windows 2000, Windows Server 2003, or Windows XP image does not appear in the WSUS console</cite>
-[http://support.microsoft.com/kb/903262/en-us](http://support.microsoft.com/kb/903262/en-us)
+{{< reference    title="A Windows 2000-based, Windows Server 2003-based, or Windows XP-based computer that was set up by using a Windows 2000, Windows Server 2003, or Windows XP image does not appear in the WSUS console"    linkHref="http://support.microsoft.com/kb/903262/en-us" >}}
 

@@ -33,8 +33,7 @@ This morning, I was doing some research again about what I should do when Money 
 
 The first was a series of posts comparing the most popular alternatives to Microsoft Money:
 
-<cite>Replacing Microsoft Money, Part 1: Requirements. 2009-08-24.</cite>
-[http://thefinancebuff.com/2009/08/replacing-microsoft-money-part-1-requirements.html](http://thefinancebuff.com/2009/08/replacing-microsoft-money-part-1-requirements.html)
+{{< reference    title="Replacing Microsoft Money, Part 1: Requirements. 2009-08-24."    linkHref="http://thefinancebuff.com/2009/08/replacing-microsoft-money-part-1-requirements.html" >}}
 
 Things start to get really interesting in Part 4 of that series. One of the comments in Part 5 led me to the [Microsoft Money Offline Weblog](http://microsoftmoneyoffline.wordpress.com/).
 

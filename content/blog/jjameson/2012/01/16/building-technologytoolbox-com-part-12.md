@@ -294,8 +294,7 @@ and allow users to expand them as desired.
 I did a quick Internet search for some existing jQuery that I could use instead
 of writing my own and I quickly discovered the following:
 
-<cite>Simple jQuery Expand/Collapse Unordered Lists</cite>
-[http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists](http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists)
+{{< reference    title="Simple jQuery Expand/Collapse Unordered Lists"    linkHref="http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists" >}}
 
 Consequently, I downloaded the plugin and added it to my static HTML prototype
 in order try it out and verify everything worked as expected.

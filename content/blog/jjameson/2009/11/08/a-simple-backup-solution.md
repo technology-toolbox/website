@@ -106,8 +106,7 @@ Also note that the service account that I use for backups (TECHTOOLBOX\svc-backu
 
 Consequently there's a known issue with running batch files using scheduled tasks due to out-of-the-box security restrictions on cmd.exe:
 
-<cite>"Access is denied" error message when you run a batch job on a Windows Server 2003-based computer</cite>
-[http://support.microsoft.com/kb/867466](http://support.microsoft.com/kb/867466)
+{{< reference    title="\"Access is denied\" error message when you run a batch job on a Windows Server 2003-based computer"    linkHref="http://support.microsoft.com/kb/867466" >}}
 
 Lastly, note that I am doing a simple disk-to-disk backup on my servers, so if there's a fire in the Jameson Datacenter (i.e. my basement) and I lose these servers completely then I'm going to be "hurtin' for certain." However should there ever be a fire in my basement (Heaven forbid), I'm going to be worried about a lot more than just restoring my data from backup. Note that I keep copies of the *really* important stuff (e.g. digital photos and home videos of my family) on DVDs at my parents' house.
 

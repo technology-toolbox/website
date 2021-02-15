@@ -34,8 +34,7 @@ name the assembly)](http://code.google.com/p/elmah/issues/detail?id=109). Shortl
 which, quite honestly, made my head hurt (in one of those morning after New
 Year's Eve sort of ways):
 
-<cite>The assembly strong naming conundrum </cite>
-[http://nuget.codeplex.com/discussions/247827](http://nuget.codeplex.com/discussions/247827)
+{{< reference    title="The assembly strong naming conundrum"    linkHref="http://nuget.codeplex.com/discussions/247827" >}}
 
 > **Warning**
 >

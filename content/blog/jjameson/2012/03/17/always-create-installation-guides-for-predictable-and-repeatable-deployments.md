@@ -44,8 +44,7 @@ Note that much of the content in the installation guides that I provide is
 included on TechNet. For example, the following section of TechNet provides
 step-by-step procedures for installing SharePoint Server 2010 in various scenarios:
 
-<cite>Deployment scenarios (SharePoint Server 2010)</cite>
-[http://technet.microsoft.com/en-us/library/cc303424.aspx](http://technet.microsoft.com/en-us/library/cc303424.aspx)
+{{< reference    title="Deployment scenarios (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/cc303424.aspx" >}}
 
 Consequently you might be tempted to simply reference a few dozen TechNet
 URLs in your installation guide and call it done. However I strongly recommend

@@ -67,8 +67,7 @@ title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
 
 Next, I added a custom dictionary to the Visual Studio solution, as described  in one of my earlier blog posts:
 
-<cite>CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio)
+{{< reference    title="CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio"    linkHref="/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx" >}}
 
 ### Generate strong name key and configure assembly signing
 
@@ -78,8 +77,7 @@ For the Caelum solution, I created a single key file, added it to the solution  
 
 For more details about how to do this, refer to the following post:
 
-<cite>Linked Files in Visual Studio Solutions</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects)
+{{< reference    title="Linked Files in Visual Studio Solutions"    linkHref="/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx" >}}
 
 ### Create custom rule set and enable code analysis
 
@@ -112,8 +110,7 @@ This is how I prefer to start out. I then disable specific rules if I find them 
 
 Next I created **SharedAssemblyInfo.cs** and **AssemblyVersionInfo.cs** files and added these to the Visual Studio solution and projects. You can  read more about these files in the following post:
 
-<cite>Shared Assembly Info in Visual Studio Projects</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions)
+{{< reference    title="Shared Assembly Info in Visual Studio Projects"    linkHref="/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx" >}}
 
 ### Create custom Team Foundation Build workflow to increment the assembly version
 
@@ -121,20 +118,17 @@ with each build
 
 As described in one of my Top 10 most popular blog posts, I strongly recommend  that you increment the assembly version automatically as part of every build performed  on the Build Server (i.e. through TFS Build):
 
-<cite>Best Practices for .NET Assembly Versioning </cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
+{{< reference    title="Best Practices for .NET Assembly Versioning"    linkHref="/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx" >}}
 
 If you are not sure how to do this, and you are using TFS 2010, refer to the  following post for step-by-step details on how to accomplish this:
 
-<cite>Incrementing the Assembly Version for Each Build in TFS 2010</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)
+{{< reference    title="Incrementing the Assembly Version for Each Build in TFS 2010"    linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
 
 ### Configure TFS check-in policies
 
 With the basic setup of the project completed, I switched back to my admin account  and configured a number of TFS check-in policies on the project, as described in  the following post:
 
-<cite>Recommended Check-In Policies for Team Foundation Server</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server)
+{{< reference    title="Recommended Check-In Policies for Team Foundation Server"    linkHref="/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx" >}}
 
 If you are wondering why I didn't configure these check-in policies earlier,  the answer is that I do it this way in order to avoid issues when enabling code  analysis on the Visual Studio projects. For example if, like me, you configure code  analysis to treat all violations as errors (instead of warnings) then your solution  won't build if you haven't yet generated a strong name key and configured assembly  signing. And if your solution doesn't build (and you've added a "Builds" check-in  policy), then you can't check-in a changeset (unless you override the warning, but  I rarely choose to do that).
 

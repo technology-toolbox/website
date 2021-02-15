@@ -41,9 +41,7 @@ and select the option to use SSL (e.g.
 [https://www.fabrikam.com](https://www.fabrikam.com/)).
 After all, this is the recommendation in the following TechNet article:
 
-<cite>Update a Web application URL and IIS bindings (Windows SharePoint
-Services). (Updated 2009-04-23).</cite>
-[http://technet.microsoft.com/en-us/library/cc298636.aspx](http://technet.microsoft.com/en-us/library/cc298636.aspx)
+{{< reference    title="Update a Web application URL and IIS bindings (Windows SharePoint Services). (Updated 2009-04-23)."    linkHref="http://technet.microsoft.com/en-us/library/cc298636.aspx" >}}
 
 Specifically, here is the text that I am referring to:
 

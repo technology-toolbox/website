@@ -52,8 +52,7 @@ version of Internet Explorer.
 Fortunately, Ranjiv Sharma -- one of my colleagues on the project -- discovered
 the following blog post:
 
-<cite>403 Forbidden and Forms Authentication with MOSS. 2009-05-21.</cite>
-[http://vettekerry.wordpress.com/2009/05/21/403-forbidden-and-forms-authentication-with-moss/](http://vettekerry.wordpress.com/2009/05/21/403-forbidden-and-forms-authentication-with-moss/)
+{{< reference    title="403 Forbidden and Forms Authentication with MOSS. 2009-05-21."    linkHref="http://vettekerry.wordpress.com/2009/05/21/403-forbidden-and-forms-authentication-with-moss/" >}}
 
 It turns out the problem is caused by the Microsoft Office Live Add-in 1.3.
 Once you remove the add-in, close all instances of Internet Explorer, and restart

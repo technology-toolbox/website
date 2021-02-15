@@ -41,8 +41,7 @@ After a [quick Internet search](http://www.bing.com/search?q=Dispose+%22cannot+b
 
 There are a number of blog posts that describe the issue as well as various hacks  around the problem. However, the following MSDN article is the one that really captured  my attention:
 
-<cite>Avoiding Problems with the Using Statement</cite>
-[http://msdn.microsoft.com/en-us/library/aa355056.aspx](http://msdn.microsoft.com/en-us/library/aa355056.aspx)
+{{< reference    title="Avoiding Problems with the Using Statement"    linkHref="http://msdn.microsoft.com/en-us/library/aa355056.aspx" >}}
 
 Here's the first sentence from that article:
 

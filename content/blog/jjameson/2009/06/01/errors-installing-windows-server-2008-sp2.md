@@ -42,9 +42,7 @@ I discovered the following:
 
 A quick search for 0x80070643 led to the following KB article:
 
-<cite>You receive error code 0x80070643 or error code 0x643 when you use
-the Windows Update or Microsoft Update Web sites to install updates</cite>
-[http://support.microsoft.com/kb/958052](http://support.microsoft.com/kb/958052)
+{{< reference    title="You receive error code 0x80070643 or error code 0x643 when you use the Windows Update or Microsoft Update Web sites to install updates"    linkHref="http://support.microsoft.com/kb/958052" >}}
 
 Unfortunately, this error code indicates "generic errors that basically state
 that an error was encountered by Windows Installer." Rather than immediately
@@ -81,8 +79,7 @@ to install Windows Server 2008 SP2!
 
 Then I came across the following:
 
-<cite>Windows Server 2008 SP2 Deployment Guide</cite>
-[http://technet.microsoft.com/en-us/library/dd351467(WS.10).aspx](http://technet.microsoft.com/en-us/library/dd351467%28WS.10%29.aspx)
+{{< reference    title="Windows Server 2008 SP2 Deployment Guide"    linkHref="http://technet.microsoft.com/en-us/library/dd351467(WS.10).aspx" >}}
 
 Here are the disk space requirements according to the deployment guide:
 

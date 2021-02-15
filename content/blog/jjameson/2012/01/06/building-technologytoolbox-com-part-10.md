@@ -100,9 +100,7 @@ most popular). That sproc is used to render the **Top Posts** section
 on the Subtext dashboard page, and I *believe* the formula is based on
 the following blog post:
 
-<cite>Rahien, Ayende (2007). Calculating most popular posts with SubText.
-2007-03-09.</cite>
-[http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext](http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext)
+{{< reference    title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09."    linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
 
 I chose not to use the existing sproc for a couple of reasons:
 

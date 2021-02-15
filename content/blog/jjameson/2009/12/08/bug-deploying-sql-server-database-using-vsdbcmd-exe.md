@@ -18,8 +18,7 @@ tags: ["SQL Server", "Visual Studio"]
 
 Yesterday we encountered a bug while trying to deploy a new SQL Server database         from a Visual Studio database project using the VSDBCMD.EXE utility, following the         prescriptive guidance on MSDN:
 
-<cite>How to: Prepare a Database for Deployment From a Command Prompt by Using VSDBCMD</cite>
-[http://msdn.microsoft.com/en-us/library/dd193258.aspx](http://msdn.microsoft.com/en-us/library/dd193258.aspx)
+    {{< reference    title="How to: Prepare a Database for Deployment From a Command Prompt by Using VSDBCMD"    linkHref="http://msdn.microsoft.com/en-us/library/dd193258.aspx" >}}
 
 According to this MSDN article, all you need to do is copy some files to the server         running Microsoft SQL Server, and then run the VSDBCMD.EXE utility (specifying your         .dbschema or .deploymanifest file).
 
@@ -43,6 +42,5 @@ It certainly would be nice if the above MSDN article were updated to note the bu
 
 You will also find instructions to add the registry key -- as well as an explanation         for why you more than likely already have Microsoft.SqlServer.BatchParser.dll installed         on your SQL Server -- in the following blog post:
 
-<cite>Deploying your Database Project without VSTSDB installed. 2009-02-21</cite>
-[http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx](http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx)
+    {{< reference    title="Deploying your Database Project without VSTSDB installed. 2009-02-21"    linkHref="http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx" >}}
 

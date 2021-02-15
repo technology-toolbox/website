@@ -57,7 +57,5 @@ Redeploying your features may seem like overkill -- even using scripts like **Re
 >
 > Refer to the following blog post for more details on the "DR.DADA" approach to SharePoint development:
 >
-> <cite>Sample Walkthrough of the DR.DADA Approach to SharePoint</cite>
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
+> {{< reference    title="Sample Walkthrough of the DR.DADA Approach to SharePoint"    linkHref="/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint"    linkText="http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx" >}}
 

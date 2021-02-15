@@ -63,8 +63,7 @@ Let's tackle these one at a time...
 
 If you look at some of the example CSS sprites in the following article...
 
-<cite>CSS Sprites: What They Are, Why They’re Cool, and How To Use Them</cite>
-[http://css-tricks.com/css-sprites/](http://css-tricks.com/css-sprites/)
+{{< reference    title="CSS Sprites: What They Are, Why They’re Cool, and How To Use Them"    linkHref="http://css-tricks.com/css-sprites/" >}}
 
 ...you will notice some sites "munge" a bunch of different images (of various
 sizes) into a single CSS sprite, whereas I have chosen to only combine the "list
@@ -83,8 +82,7 @@ confuse users).
 
 Aaron Barker explains more about this technique in the following blog post:
 
-<cite>Diagonal CSS Sprites</cite>
-[http://www.aaronbarker.net/2010/07/diagonal-sprites/](http://www.aaronbarker.net/2010/07/diagonal-sprites/)
+{{< reference    title="Diagonal CSS Sprites"    linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 
 > **Important**
 >

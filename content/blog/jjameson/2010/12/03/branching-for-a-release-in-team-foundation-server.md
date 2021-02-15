@@ -48,8 +48,7 @@ First, I should briefly explain the structure of the TFS project (which I'll sim
 
 In general, this structure follows the "Advanced Branch Plan" specified in the TFS         Branching Guide that was put together by the ALM Rangers. If you haven't seen the         latest version (for TFS 2010), I definitely recommend taking a look at it:
 
-<cite>Visual Studio TFS Branching Guide 2010 </cite>
-[http://tfsbranchingguideiii.codeplex.com/](http://tfsbranchingguideiii.codeplex.com/)
+    {{< reference    title="Visual Studio TFS Branching Guide 2010"    linkHref="http://tfsbranchingguideiii.codeplex.com/" >}}
 
 Note that for "Sprint-10" we are actually deploying "v2.0" of the portal (a "major"         upgrade to support regional deployments in other countries, i.e. Argentina, Mexico,         and Spain). Therefore, I need to branch $/FabrikamPortal/Main to $/FabrikamPortal/Release/v2.0/Sprint-10.         [Honestly, I sort of wish we referred to the current iteration as "v2.0\Sprint-1"         from the beginning of the sprint, but that's not the way it worked out. Hence, I'm         sticking with the "Sprint-10" moniker for the time being.]
 

@@ -33,8 +33,7 @@ When I received the new hard drive, I decided it was probably a good time to  re
 
 Prior to initiating the rebuild, I found the following article on MSDN:
 
-<cite>TFS 2005: How to: Move Your Data Tier to another computer</cite>
-[http://support.microsoft.com/kb/955601](http://support.microsoft.com/kb/955601)
+{{< reference    title="TFS 2005: How to: Move Your Data Tier to another computer"    linkHref="http://support.microsoft.com/kb/955601" >}}
 
 Note that the article is for TFS 2005, but based on my knowledge of the differences  between TFS 2005 and TFS 2008, it seemed reasonable that the steps would be very  similar, if not completely identical.
 
@@ -71,9 +70,7 @@ At that point, I decided to try a different approach.
 
 Rather than simply rebuilding the data tier, I decided to rebuild the entire  TFS instance (i.e. data tier and application tier) by following the steps in the  following MSDN article:
 
-<cite>How to: Move Your Team Foundation Server from One Hardware Configuration
-to Another</cite>
-[http://msdn.microsoft.com/en-us/library/ms404869(VS.80).aspx](http://msdn.microsoft.com/en-us/library/ms404869%28VS.80%29.aspx)
+{{< reference    title="How to: Move Your Team Foundation Server from One Hardware Configuration to Another"    linkHref="http://msdn.microsoft.com/en-us/library/ms404869(VS.80).aspx" >}}
 
 Well, you can probably imagine what happened...
 
@@ -270,8 +267,7 @@ Downloading the process template and subsequently uploading the RDL files appear
 
 Fortunately, I found the following KB article:
 
-<cite>How to recover the default reports in TFS 2008</cite>
-[http://support.microsoft.com/kb/2003577](http://support.microsoft.com/kb/2003577)
+{{< reference    title="How to recover the default reports in TFS 2008"    linkHref="http://support.microsoft.com/kb/2003577" >}}
 
 Unfortunately, the tool referenced in this KB article (TFSUploadReports.exe)  was originally built for upgrading from TFS 2005 Beta 3 to TFS 2005 RTM. Consequently,  it references version 8.0.0.0 of the various Microsoft.TeamFoundation assemblies  (and my freshly rebuilt TFS server only has version 9.0.0.0 of these assemblies).  I first attempted to use [assembly
 binding redirection](http://msdn.microsoft.com/en-us/library/2fc472t2%28VS.80%29.aspx) (to force the old utility to use the new assembly versions).  I succeeded in redirecting the three assemblies that I thought would suffice, but  then encountered additional errors and therefore quickly gave up on that effort  (before attempting to dive into Fusion logging).

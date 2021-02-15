@@ -47,8 +47,7 @@ available after importing the IIS Module into the PowerShell instance).
 
 For a complete list of the IIS cmdlets, refer to the following Technet article:
 
-<cite>Web Server (IIS) Administration Cmdlets in Windows PowerShell</cite>
-[http://technet.microsoft.com/en-us/library/ee790599.aspx](http://technet.microsoft.com/en-us/library/ee790599.aspx)
+{{< reference    title="Web Server (IIS) Administration Cmdlets in Windows PowerShell"    linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
 
 > **Important**
 >
@@ -103,8 +102,7 @@ function RemoveWebsite(
 > There is currently a bug in the `Get-Website`
 > cmdlet, so be very careful if you choose to use it:
 >
-> <cite>Get-Website always returns full list of web sites</cite>
-> [https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites](https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites)
+>       {{< reference    title="Get-Website always returns full list of web sites"    linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
 
 If you are wondering why I specify "``r`n`"
 at the end of each `Write-Host` command,
@@ -188,8 +186,7 @@ Write-Host "Copying Subtext website content...`r`n"
 For more details on the build process, refer to one of my posts from a couple
 of years ago:
 
-<cite>Build and Deployment Overview</cite>
-[https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](/blog/jjameson/2009/09/26/build-and-deployment-overview)
+{{< reference    title="Build and Deployment Overview"    linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
 
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 

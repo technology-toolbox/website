@@ -82,8 +82,7 @@ PM&gt; <kbd>Install-Package elmah</kbd>
 
 Refer to the following resource for more information on the ELMAH NuGet package:
 
-<cite>NuGet Gallery - ELMAH</cite>
-[http://nuget.org/packages/elmah](http://nuget.org/packages/elmah)
+{{< reference    title="NuGet Gallery - ELMAH"    linkHref="http://nuget.org/packages/elmah" >}}
 
 Note that there are a number of different "flavors" of ELMAH NuGet packages
 available (depending on how your want to log errors). For example, refer to

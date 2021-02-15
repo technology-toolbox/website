@@ -30,9 +30,7 @@ Fortunately,
 [using an alternate search engine](http://www.google.com/search?q=Hyper-V+guest+determine+host&hl=en), I was able to quickly find the following
 (on the first page of search results):
 
-<cite>Forsyth, Scott (2009). Hyper-V - getting host information from the
-guest VM. 2009-10-08.</cite>
-[http://weblogs.asp.net/owscott/archive/2009/10/08/hyper-v-getting-host-information-from-the-guest-vm.aspx](http://weblogs.asp.net/owscott/archive/2009/10/08/hyper-v-getting-host-information-from-the-guest-vm.aspx)
+{{< reference    title="Forsyth, Scott (2009). Hyper-V - getting host information from the guest VM. 2009-10-08."    linkHref="http://weblogs.asp.net/owscott/archive/2009/10/08/hyper-v-getting-host-information-from-the-guest-vm.aspx" >}}
 
 Thanks, Scott, for sharing this tip!
 

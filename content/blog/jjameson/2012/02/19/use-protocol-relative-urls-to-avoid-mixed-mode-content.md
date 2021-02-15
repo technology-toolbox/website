@@ -11,9 +11,7 @@ A few weeks ago I added
 [some bug fixes for the Subtext blog engine](/blog/jjameson/2012/01/31/building-technologytoolbox-com-part-19) to GitHub. One of the bugs was
 related to mixed mode content:
 
-<cite>jQuery references need to specify "https://" (not "http://") when
-browsing Subtext pages using HTTPS</cite>
-[http://github.com/Haacked/Subtext/issues/18](http://github.com/Haacked/Subtext/issues/18)
+{{< reference    title="jQuery references need to specify \"https://\" (not \"http://\") when browsing Subtext pages using HTTPS"    linkHref="http://github.com/Haacked/Subtext/issues/18" >}}
 
 My initial fix for this issue was to change references like:
 

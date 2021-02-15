@@ -136,8 +136,7 @@ End time: 20111119062551
 While this resembles the expected output, it's definitely not very easy to
 read. This is a known issue:
 
-<cite>How to get Notepad to honor Start-Transcript line breaks</cite>
-[http://social.technet.microsoft.com/Forums/en-US/ITCG/thread/e4784b39-ed97-4c6c-bc82-372be94e8c01/](http://social.technet.microsoft.com/Forums/en-US/ITCG/thread/e4784b39-ed97-4c6c-bc82-372be94e8c01/)
+{{< reference    title="How to get Notepad to honor Start-Transcript line breaks"    linkHref="http://social.technet.microsoft.com/Forums/en-US/ITCG/thread/e4784b39-ed97-4c6c-bc82-372be94e8c01/" >}}
 
 Some people suggest either adding "``r`n`"
 to the end of every `Write-Host` statement
@@ -171,8 +170,7 @@ lines and nicely indented like how it appears when running interactively).
 While I could probably live with the exception message formatting issue,
 there's a much larger issue with the **Start-Transcript** cmdlet:
 
-<cite>Unable to capture ALL session output into a transcript</cite>
-[https://connect.microsoft.com/PowerShell/feedback/details/315875/unable-to-capture-all-session-output-into-a-transcript](https://connect.microsoft.com/PowerShell/feedback/details/315875/unable-to-capture-all-session-output-into-a-transcript)
+{{< reference    title="Unable to capture ALL session output into a transcript"    linkHref="https://connect.microsoft.com/PowerShell/feedback/details/315875/unable-to-capture-all-session-output-into-a-transcript" >}}
 
 Once I discovered this, I decided that while **Start-Transcript** seems like a good idea, it's not quite yet ready for primetime.
 
@@ -234,9 +232,7 @@ well as the normal output. This is a trick I covered in
 > server). Consequently, I encountered a bug in PowerShell that is described
 > in the following blog post:
 >
-> <cite>Workaround: The OS handle's position is not what FileStream
-> expected</cite>
-> [http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/](http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/)
+>       {{< reference    title="Workaround: The OS handle's position is not what FileStream expected"    linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
 >
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 

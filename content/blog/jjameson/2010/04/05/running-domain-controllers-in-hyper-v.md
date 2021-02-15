@@ -20,8 +20,7 @@ In a [previous post](/blog/jjameson/2008/11/05/server-core-installation-accessin
 
 If you choose to virtualize one or more DCs in your environment, make sure you are aware of the considerations, risks, and recommendations detailed in the following TechNet guide:
 
-<cite>Running Domain Controllers in Hyper-V</cite>
-[http://technet.microsoft.com/en-us/library/dd363553(WS.10).aspx](http://technet.microsoft.com/en-us/library/dd363553%28WS.10%29.aspx)
+{{< reference    title="Running Domain Controllers in Hyper-V"    linkHref="http://technet.microsoft.com/en-us/library/dd363553(WS.10).aspx" >}}
 
 This appears to be the most recent version of the document that I used when setting up my environment.
 
