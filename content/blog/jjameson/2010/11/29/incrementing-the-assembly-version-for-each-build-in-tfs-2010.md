@@ -234,7 +234,7 @@ If you are familiar with the MSBuild customizations described in my earlier post
 
 Be aware that the MSBuild file shown above is for the Main branch. For QFE branches,         I modify two lines in the file in order increment the `RevisionType` instead of the `BuildType`         (to generate assembly numbers like 1.0.51.1, 1.0.51.2, etc.).
 
-Note that the **DisplayName** specified earlier for the new MSBuild         activity is "Increment AssemblyVersion for *next*build" (as opposed to something         like "Increment AssemblyVersion for *this*build"). This is an important         point to understand and warrants further explanation.
+Note that the **DisplayName** specified earlier for the new MSBuild         activity is "Increment AssemblyVersion for *next* build" (as opposed to something         like "Increment AssemblyVersion for *this* build"). This is an important         point to understand and warrants further explanation.
 
 When TFS 2010 starts a build, it uses a specific changeset to identify what version         of the source code to get and compile. If, for example, a scheduled build starts         at 5:00:00 AM on Tuesday, but one of the developers (say, Jeremy) happens to be         working very early that morning and checks in code at 5:00:03 AM (3 seconds after         the build started), then Jeremy's changes are *not* included in the build.         In other words, we don't want any changesets included in the build after the changeset         specified for the build (i.e. the **GetVersion** that is specified         as an argument when starting the build).
 

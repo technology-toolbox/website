@@ -119,7 +119,7 @@ Subtext does a fair amount of caching, but it does so in a way that I consider  
 
 Subtext is definitely not as "polished" as BlogEngine.NET or Orchard from a UI  perspective (and to be honest, you can tell that [Phil](http://haacked.com/)  doesn't place a great deal of value on the look-and-feel of the blog admin pages).  Nevertheless, the core functionality appears to be very solid.
 
-Are there bugs in Subtext? Sure...there are bugs in *every*piece of software  out there.
+Are there bugs in Subtext? Sure...there are bugs in *every* piece of software  out there.
 
 Did I encounter any issues with Subtext while implementing it on TechnologyToolbox.com?  Well, yes, as a matter of fact I did.
 

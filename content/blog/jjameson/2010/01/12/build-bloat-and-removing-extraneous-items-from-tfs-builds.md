@@ -15,7 +15,7 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-This week I am wrapping up the third sprint (a.k.a. *iteration*or *milestone*) on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although, honestly, I wasn't involved all that much in Sprint-3, since I was on vacation for the vast majority of the iteration.
+This week I am wrapping up the third sprint (a.k.a. *iteration* or *milestone*) on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although, honestly, I wasn't involved all that much in Sprint-3, since I was on vacation for the vast majority of the iteration.
 
 One of the surprises that I discovered upon my return was that the size of our builds had increased substantially since the previous iteration.
 

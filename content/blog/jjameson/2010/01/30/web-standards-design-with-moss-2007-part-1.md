@@ -35,7 +35,7 @@ The 960 Grid System provides two variants: 12 columns and 16 columns. However, w
 
 > **Tip**
 >
-> If you choose to use the 960 Grid System, I also highly recommend leveraging the [960 Gridder](http://gridder.andreehansson.se) as well. This combination makes the task of creating great looking Web pages much easier (even for someone, like me, who is much more of a *developer*than a *designer*).
+> If you choose to use the 960 Grid System, I also highly recommend leveraging the [960 Gridder](http://gridder.andreehansson.se) as well. This combination makes the task of creating great looking Web pages much easier (even for someone, like me, who is much more of a *developer* than a *designer*).
 
 To understand how the 960 Grid System is used on our SharePoint site, consider the following master page:
 

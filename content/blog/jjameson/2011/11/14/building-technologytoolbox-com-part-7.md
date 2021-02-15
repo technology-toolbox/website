@@ -78,7 +78,7 @@ Toolbox database. Similarly, it would allow the Technology Toolbox Web applicati
 to access the databases for other companies. To avoid this vulnerability, SQL
 Server Authentication is the only option available in the Production environment.
 
-In TEST, however, *Windows Authentication*is used between the Web
+In TEST, however, *Windows Authentication* is used between the Web
 tier and the data tier. In order to allow the Web application to communicate
 with the remote SQL Server database, the app pool in TEST is configured to run
 as **NetworkService**. In addition, the machine account for the

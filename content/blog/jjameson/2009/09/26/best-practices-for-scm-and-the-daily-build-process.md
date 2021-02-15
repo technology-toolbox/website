@@ -19,7 +19,7 @@ In a previous post, I briefly discussed [a simple branching strategy for Team Fo
 
 However, while branching is certainly an important aspect of Software Configuration         Management (SCM) -- and perhaps one of the most important aspects -- it's certainly         not the only one that warrants discussion. In this post, I want to cover some other         best practices for SCM as well as the daily build process.
 
-For example, if you are using TFS, you know that each TFS project typically has         a source control repository as well as a project team site in SharePoint (a.k.a.         the "Project Portal"). You also probably know that all SharePoint document libraries         can be configured to support versioning similar to TFS source control, and thus         allow you to, for example, view an old version of an installation guide stored on         the Project Portal. However, just because you *can* do this doesn't mean         that it is *recommended*as a best practice*.*
+For example, if you are using TFS, you know that each TFS project typically has         a source control repository as well as a project team site in SharePoint (a.k.a.         the "Project Portal"). You also probably know that all SharePoint document libraries         can be configured to support versioning similar to TFS source control, and thus         allow you to, for example, view an old version of an installation guide stored on         the Project Portal. However, just because you *can* do this doesn't mean         that it is *recommended* as a best practice*.*
 
 Note that I'm not saying you should not store any documents on the Project Portal,         nor am I saying that you should never enable versioning on document libraries in         the Project Portal.
 

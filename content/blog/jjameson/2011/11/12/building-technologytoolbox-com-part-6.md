@@ -792,7 +792,7 @@ just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/Sgml
 > kinds of "throw away" code.
 >
 > Keep in mind the ultimate goal of this utility is to run it *one
-> time*(after all of the development and testing effort is completed,
+> time* (after all of the development and testing effort is completed,
 > of course). In other words, when I'm writing utilities like this, I
 > try not to focus on writing highly maintainable code. Hence you don't
 > see any significant error handling, parameter validation, boundary checking,
@@ -814,7 +814,7 @@ just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/Sgml
 
 #### Migrating tags and categories
 
-I've mentioned before how Subtext supports both *tags* and *categories*for blog posts. At first, I didn't really see the need for having two separate
+I've mentioned before how Subtext supports both *tags* and *categories* for blog posts. At first, I didn't really see the need for having two separate
 taxonomies (especially since my MSDN blog only supported tags), but the more
 I thought about it, the more I started to like the distinction.
 

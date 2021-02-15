@@ -24,7 +24,7 @@ I have to admit, doing this much administration from the command line really  br
 
 I'll summarize some great resources I've found for working with Server Core and  Hyper-V in a separate post sometime soon, but for now I wanted to share this little  gotcha to save you the few minutes of frustration I spent trying to figure out what  I was doing wrong.
 
-Since I needed to reconfigure the disks on the server, I opened the Disk Management  MMC console on my Windows Vista laptop and connected to the server -- or, rather  I should say that I *tried*to connect to the server. Instead of connecting,  I was greeted with the following error:
+Since I needed to reconfigure the disks on the server, I opened the Disk Management  MMC console on my Windows Vista laptop and connected to the server -- or, rather  I should say that I *tried* to connect to the server. Instead of connecting,  I was greeted with the following error:
 
 > Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
 > This can happen if the remote computer does not support VDS, or if a connection

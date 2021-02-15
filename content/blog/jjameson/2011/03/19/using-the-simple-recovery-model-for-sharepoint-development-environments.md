@@ -17,7 +17,7 @@ tags: ["My System", "MOSS 2007", "SQL Server", "SharePoint 2010"]
 
 A little more than three years ago, I blogged about [the default recovery model for various SharePoint databases](/blog/jjameson/2008/01/18/default-recovery-models-for-sharepoint-databases). In that post, I described how I would often toggle the SQL Server databases in SharePoint development environments from the default Full recovery model to Simple before migrating content.
 
-Since you typically don't care about potential data loss in SharePoint development VMs -- and consequently never bother to configure scheduled database backups -- you might as well *always*use the Simple recovery model for *all*of your development databases. This alleviates the need to periodically backup your transaction logs and also allows you to [use a very small VHD](/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v) for the database log files.
+Since you typically don't care about potential data loss in SharePoint development VMs -- and consequently never bother to configure scheduled database backups -- you might as well *always* use the Simple recovery model for *all* of your development databases. This alleviates the need to periodically backup your transaction logs and also allows you to [use a very small VHD](/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v) for the database log files.
 
 Here's a short SQL script that changes all user databases and the out-of-the-box **model** database to use the Simple recovery model:
 

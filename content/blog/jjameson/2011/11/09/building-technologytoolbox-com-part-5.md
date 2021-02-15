@@ -68,7 +68,7 @@ microformat.
 ### hAtom 0.1 microformat
 
 Another very useful tip that I picked up from reading Transcending CSS is
-using *microformats*as a way of -- as Andy puts it -- <q>"squeezing
+using *microformats* as a way of -- as Andy puts it -- <q>"squeezing
 new meaning from XHTML."</q>
 
 Consequently, shortly after deciding not to use my MSDN blog as a reference,

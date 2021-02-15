@@ -403,7 +403,7 @@ Main
 
 ### Add Event Log Sources.ps1
 
-The Fabrikam solution includes a custom **SPLogger** class for writing trace messages and events. In order to write to the Windows event log with a custom source (e.g. "Fabrikam Demo Site"), you first need to create the event log source (assuming your solution is running with a least-privileged service account, and I certainly *hope*it is). Otherwise, a nasty error will occur when attempting to log an event. [If you solution is running with administrative privileges, then the custom event log source will be dynamically created as necessary -- but please don't do this. It's just plain wrong.]
+The Fabrikam solution includes a custom **SPLogger** class for writing trace messages and events. In order to write to the Windows event log with a custom source (e.g. "Fabrikam Demo Site"), you first need to create the event log source (assuming your solution is running with a least-privileged service account, and I certainly *hope* it is). Otherwise, a nasty error will occur when attempting to log an event. [If you solution is running with administrative privileges, then the custom event log source will be dynamically created as necessary -- but please don't do this. It's just plain wrong.]
 
 The following script ensures the custom event source is registered.
 
@@ -449,7 +449,7 @@ Main
 
 Although this script currently adds only one custom event log source, I named it plural just in case additional sources are added in the future (so I wouldn't have to update the script name in the Installation Guide for the Fabrikam site).
 
-At this point, we have a "vanilla" Web site created and configured in SharePoint Server 2010. Now we need to run the "ADA" portion of the "DR.DADA" process in order to *Add*our custom solution (Fabrikam.Demo.Web.wsp), *Deploy* the solution to the Fabrikam Web application, and, finally, *Activate*our features.
+At this point, we have a "vanilla" Web site created and configured in SharePoint Server 2010. Now we need to run the "ADA" portion of the "DR.DADA" process in order to *Add* our custom solution (Fabrikam.Demo.Web.wsp), *Deploy* the solution to the Fabrikam Web application, and, finally, *Activate* our features.
 
 ### Add Solutions.ps1
 

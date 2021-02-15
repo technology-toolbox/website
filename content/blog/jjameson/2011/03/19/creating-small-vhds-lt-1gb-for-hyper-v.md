@@ -20,7 +20,7 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 
 In [my previous post](/blog/jjameson/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot), I explained how I like to create separate VHDs for data and  log files in my SharePoint development VMs. However, given the very small amount  of content that I typically load into a SharePoint development environment, these  VHDs certainly don't need to be very large.
 
-In the past, I've typically created data and log VHDs using sizes like 5 GB and  1 GB, respectively. However, as I was thinking about this when writing my previous  post, these admittedly arbitrary numbers seem a little ridiciulous. Am I ever really  going to load *5 GB*of sample content into a local development VM? Not bloody  likely.
+In the past, I've typically created data and log VHDs using sizes like 5 GB and  1 GB, respectively. However, as I was thinking about this when writing my previous  post, these admittedly arbitrary numbers seem a little ridiciulous. Am I ever really  going to load *5 GB* of sample content into a local development VM? Not bloody  likely.
 
 The more I think about it, a 1 GB VHD for data sounds like it should be plenty.  Even if I did somehow manage to approach that capacity, I could always expand the  VHD to 2 GB (ensuring I delete any snapshots first, of course) -- since this is  now very easy to do in Windows Server 2008. [Unlike back in the days of Windows  Server 2003, with Windows Server 2008 you no longer need a third-party tool like  Partition Magic simply to expand a volume.]
 

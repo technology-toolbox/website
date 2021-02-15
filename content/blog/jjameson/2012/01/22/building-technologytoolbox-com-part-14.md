@@ -195,7 +195,7 @@ not a good thing -- so you should always specify `redirectMode="ResponseRewrite"
 ```
 
 With this configuration, the original request URL is preserved and there's
-*at least a chance*that clicking "refresh" will resolve the issue.
+*at least a chance* that clicking "refresh" will resolve the issue.
 
 However, there's still a big problem...
 

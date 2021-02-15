@@ -46,7 +46,7 @@ than forcing myself to configure this on all of my existing servers as well
 on new servers and VMs that I will undoubtedly add in the future, I decided
 to apply this change using Group Policy instead.
 
-However, in this scenario, I don't want to *restrict*the members
+However, in this scenario, I don't want to *restrict* the members
 of the **Performance Monitor Users** group on each monitored server.
 Rather I simply want to ensure that the SCOM service account is a member of
 this group *in addition to any other members*.

@@ -59,7 +59,7 @@ Thus whenever I am greeted with the low disk space notification message, I simpl
 
 Not exactly what I would call "elegant", but as I've repeatedly said before, I like         to keep things simple.
 
-Another useful tip that I wanted to pass along is effectively viewing very large         text files (for example, to determine exactly *why* SharePoint is creating         1.3GB of log messages on a daily basis). While you can certainly *try*opening         a 30-50MB file in Notepad, I certainly don't recommend it. Personally, I keep a         copy of [LtfViewr4U](http://search.live.com/results.aspx?q=LtfViewr4U)         in my Toolbox for just such an occasion.
+Another useful tip that I wanted to pass along is effectively viewing very large         text files (for example, to determine exactly *why* SharePoint is creating         1.3GB of log messages on a daily basis). While you can certainly *try* opening         a 30-50MB file in Notepad, I certainly don't recommend it. Personally, I keep a         copy of [LtfViewr4U](http://search.live.com/results.aspx?q=LtfViewr4U)         in my Toolbox for just such an occasion.
 
 > **Update (2009-06-02)**
 >

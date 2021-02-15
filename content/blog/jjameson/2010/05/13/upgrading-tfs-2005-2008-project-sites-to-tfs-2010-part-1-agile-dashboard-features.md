@@ -112,7 +112,7 @@ command again, after making the following change to my input file:
 
 I noticed that the process ran for considerably longer (i.e. it took several
 seconds before the word "Ready" appeared in the status bar) so I was really
-hoping -- okay, actually *expecting*-- to see some dashboards when I
+hoping -- okay, actually *expecting* -- to see some dashboards when I
 browsed to my project site...
 
 ...but, no, they weren't there after all.

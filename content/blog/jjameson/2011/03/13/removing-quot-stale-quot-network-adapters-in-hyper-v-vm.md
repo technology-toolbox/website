@@ -27,7 +27,7 @@ I'm a little embarrassed to say that I simply can't remember the environment  va
 
 Note that if you don't properly export/import a VM in Hyper-V (and instead simply  copy VHDs around like I often do), then you'll end up with a network adapter named  something like ""Microsoft Virtual Machine Bus Network Adapter #2" (and a hidden  network adapter named "Microsoft Virtual Machine Bus Network Adapter").
 
-I'm not aware of any issues by *not*deleting these network adapters,  but I still like to clean them up anyway.
+I'm not aware of any issues by *not* deleting these network adapters,  but I still like to clean them up anyway.
 
 Here is the process that I use to cleanup the network adapters:
 

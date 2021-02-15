@@ -150,7 +150,7 @@ exception when something goes wrong.
 
 Secondly, there's a subtle bug in Mahdi's code: it is not thread-safe. Note
 that **Message** is defined as a `static` member. Consequently
-it is *possible*that more than one thread could attempt to initialize
+it is *possible* that more than one thread could attempt to initialize
 the configuration via the **LoadConfig** method. Is it *probable*?
 No, but I still prefer to see it "done right" -- especially in solutions that
 I work on.

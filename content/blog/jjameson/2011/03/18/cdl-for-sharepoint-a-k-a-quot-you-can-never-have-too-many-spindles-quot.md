@@ -17,7 +17,7 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "SharePoint 2010"]
 
 In the United States, "CDL" typically refers to a Commercial Driver's License -- but since I don't drive trucks for a living, I use the acronym for something entirely different. To me, these three letters correspond to the minimum number of drives I like to see on any server running SharePoint Server 2010 -- or its predecessor, Microsoft Office SharePoint Server 2007.
 
-In other words, I think *all*SharePoint servers -- yes, even your development VMs -- should have a C: drive, a D: drive, and an L: drive.
+In other words, I think *all* SharePoint servers -- yes, even your development VMs -- should have a C: drive, a D: drive, and an L: drive.
 
 In general, the C: drive is used for operating system files, program files, the paging file, and the IIS logs. The D: drive (which I typically label "Data01") and L: drive ("Log01") are used differently depending on the environment.
 
