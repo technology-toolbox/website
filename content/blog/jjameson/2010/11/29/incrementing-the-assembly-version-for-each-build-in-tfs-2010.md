@@ -130,7 +130,7 @@ BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + Bu
 
 Personally, I don't really care which build definition was used to create a particular         build. The truth is I can infer this from the build number. If the build number         is something like 1.0.51.0, then the build was created by the "daily build" (i.e.         a build definition named "Automated Build - Main"). If the build number is something         like 1.0.51.3, then the build was created by a "QFE build" (e.g. a build definition         named "QFE Build - v1.0").
 
-More importantly, I want to make it as easy as possible for the Test and Release         Management folks to find a specific build when deploying the solution. Consequently,         remove the "extraneous" folder by updating the **Set Drop Location**          activity (inside the sequence within **If DropBuild And Build Reason is Triggered**)         so the **DropLocation** is set to:
+More importantly, I want to make it as easy as possible for the Test and Release         Management folks to find a specific build when deploying the solution. Consequently,         remove the "extraneous" folder by updating the **Set Drop Location**         activity (inside the sequence within **If DropBuild And Build Reason is Triggered**)         so the **DropLocation** is set to:
 
 ```
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
@@ -164,7 +164,7 @@ However, what would happen if we started another build? Since we haven't yet imp
 Let's modify the workflow to increment the assembly version...
 
 Just below the InvokeProcess activity added earlier (inside the **Update Build
-Number for Triggered Builds** activity), add a new **MSBuild**          activity, and set the properties as follows:
+Number for Triggered Builds** activity), add a new **MSBuild**         activity, and set the properties as follows:
 
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |

@@ -25,7 +25,7 @@ After migrating the roughly 300 posts from my MSDN blog (running on the Telligen
 
 Note that the default configuration of BlogEngine.NET does not require a SQL  Server database. Instead blog posts are stored as individual XML files and accessed  through a provider that encapsulates the underlying storage mechanism.
 
-Suspecting the XML storage implementation to be the source of the performance  problem, I spent a few minutes creating a SQL Server database and switching from  the **XmlBlogProvider** to the **[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**   -- and subsequently migrated my historical content into the database. I fully expected  this to resolve the scalability issue I discovered shortly before.
+Suspecting the XML storage implementation to be the source of the performance  problem, I spent a few minutes creating a SQL Server database and switching from  the **XmlBlogProvider** to the **[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**  -- and subsequently migrated my historical content into the database. I fully expected  this to resolve the scalability issue I discovered shortly before.
 
 Unfortunately it did not.
 

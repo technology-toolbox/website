@@ -25,7 +25,7 @@ When I heard about this requirement, I immediately thought of the Reusable Conte
 Content** list). The document authors are only responsible for specifying         information about the managers designated to handle complaints (in other words,         the content that varies with each document).
 
 Note that the **Reusable Content** list item has the **Automatic
-Update** field set to **Yes**, as shown below. This is the         key to "centrally managing" the content. [Also note that in this particular solution,         the document authors have read-only access to the **Reusable Content**          list.]
+Update** field set to **Yes**, as shown below. This is the         key to "centrally managing" the content. [Also note that in this particular solution,         the document authors have read-only access to the **Reusable Content**         list.]
 
 ![Reusable Content list](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content-List.png)
 Figure 1: Reusable Content list

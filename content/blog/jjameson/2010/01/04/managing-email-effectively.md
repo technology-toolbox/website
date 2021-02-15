@@ -71,11 +71,11 @@ For example, I have a rule named **SharePoint 2010 discussions** configured     
 
 As you can see from the previous screenshot, this rule automatically routed 1,837         messages sent to the **SharePoint 2010 Discussion** DL to the corresponding         **SharePoint 2010** folder.
 
-I include the exception where my name is in the To or Cc box in order to ensure         that any responses to messages that I send to a DL remain in the **Inbox**          folder (since I am likely looking for help or providing assistance to someone else         and therefore want to view the responses as soon as possible).
+I include the exception where my name is in the To or Cc box in order to ensure         that any responses to messages that I send to a DL remain in the **Inbox**         folder (since I am likely looking for help or providing assistance to someone else         and therefore want to view the responses as soon as possible).
 
 Of the 32 rules that I currently have configured, most are for DL processing. However,         there are a couple of interesting variants.
 
-If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications**          rule as follows:
+If you use Visual Studio Team Foundation Server (TFS) then you probably know that         you can subscribe to alerts -- such as when somebody checks in a changeset for a         project. I find these alerts to be helpful at times (to quickly scan and review         team progress) but obviously I don't want them clogging my inbox (or making my smartphone         "chirp" incessantly). Consequently I configured my **TFS Notifications**         rule as follows:
 
 > Apply this rule after the message arrives
 > from [xxx@microsoft.com](mailto:xxx@microsoft.com)

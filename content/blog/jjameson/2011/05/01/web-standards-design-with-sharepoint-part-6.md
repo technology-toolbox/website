@@ -82,7 +82,7 @@ While we *could* modify the XSLT to only render the first three items from      
 
 Let's suppose that in addition to restricting the number of weekly specials displayed         on the home page (to three items), we also want to show the most recent items first.
 
-To achieve the two goals, start by creating a new view on the **Specials**          list using the following parameters:
+To achieve the two goals, start by creating a new view on the **Specials**         list using the following parameters:
 
 - Name: **Most Recent Specials**
 - Web address of this view: **MostRecent**
@@ -107,7 +107,7 @@ the home page as expected
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List-XsltListViewWebPart.png)
 
-Now that we have the **XsltListViewWebPart** rendering the desired         HTML, we can turn our attention to automatically creating the **Specials**          list (as well as the custom view), populating the list with default items, and adding         an instance of the **XsltListViewWebPart** to the home page.
+Now that we have the **XsltListViewWebPart** rendering the desired         HTML, we can turn our attention to automatically creating the **Specials**         list (as well as the custom view), populating the list with default items, and adding         an instance of the **XsltListViewWebPart** to the home page.
 
 ## Creating the Custom List
 

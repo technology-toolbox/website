@@ -132,7 +132,7 @@ than a user control) since the HTML that needs to be emitted is relatively simpl
 
 Since I prefer to develop iteratively (moving rapidly in a series of small
 steps), I started by setting the CSS class for the control and overriding the
-**[TagKey](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tagkey.aspx)**  property (since it defaults to `<span>`
+**[TagKey](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tagkey.aspx)** property (since it defaults to `<span>`
 -- and I want this control to emit a `<div>` instead). I also
 added the "Archives" heading as well as a **Literal** control to
 serve as a placeholder for the list(s) that will be generated from the query
@@ -411,7 +411,7 @@ Thanks to the great head start provided by Kent's code, I was able to complete
 the expand/collapse feature in less than an hour.
 
 After adding the script to the **PostArchiveList** control (and
-adding a **[PartialCachingAttribute](http://msdn.microsoft.com/en-us/library/system.web.ui.partialcachingattribute.aspx)**  to improve performance by minimizing the
+adding a **[PartialCachingAttribute](http://msdn.microsoft.com/en-us/library/system.web.ui.partialcachingattribute.aspx)** to improve performance by minimizing the
 number of database calls), I ended up with the following:
 
 ```

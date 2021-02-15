@@ -301,7 +301,7 @@ Notice that the default role provider is set to `AspNetWindowsTokenRoleProvider,
 
 #### SharePointWebConfigHelper.ApplyWebConfigModifications
 
-After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)**  via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**  class), we then must apply them in order  to actually make the changes to the configuration files.
+After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class), we then must apply them in order  to actually make the changes to the configuration files.
 
 #### EnableAnonymousAccessOnRootWeb
 

@@ -132,7 +132,7 @@ attribute), allows the styling to be controlled via CSS. For example:
 
 In addition to required fields, you may need to add other types of validators
 (for example, to ensure a valid email address is specified). Be sure to add
-a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)**  control as well.
+a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)** control as well.
 
 At this point, the markup for the Contact form looked like this:
 

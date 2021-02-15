@@ -143,7 +143,7 @@ private static void ExportSummaryPages(
 ```
 
 The **EnsureOfflineFile** method simply checks to see if the
-specified file exists and, if not, uses the **[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)**  class in the .NET Framework to download it (but first
+specified file exists and, if not, uses the **[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)** class in the .NET Framework to download it (but first
 ensuring the specified destination folder exists -- since the
 [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx)
 method won't automatically create any necessary folders):

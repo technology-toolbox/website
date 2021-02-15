@@ -30,7 +30,7 @@ I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)
 
-Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**  class in ASP.NET AJAX, the sample Web Part should be mostly  self-explanatory:
+Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)** class in ASP.NET AJAX, the sample Web Part should be mostly  self-explanatory:
 
 ```
 using System;
@@ -113,7 +113,7 @@ Attempting to browse to the home page of the site now results in an error. After
 > a ScriptManager on the page. The ScriptManager must appear before any controls
 > that need it.
 
-This is no real surprise, since BlueBand.master doesn't declare an instance of  the ASP.NET **[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)**  (which is required for providing the ASP.NET AJAX script  files on any AJAX-enabled page). Mike Ammerlaan covers this in [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3) that I referenced in yesterday's post.
+This is no real surprise, since BlueBand.master doesn't declare an instance of  the ASP.NET **[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)** (which is required for providing the ASP.NET AJAX script  files on any AJAX-enabled page). Mike Ammerlaan covers this in [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3) that I referenced in yesterday's post.
 
 While we *could* modify BlueBand.master to declare a **ScriptManager**,  an alternative is to instead use a little bit of code in the **CreateChildControls** method of the Web Part to dynamically create one, if necessary:
 
@@ -138,7 +138,7 @@ Mike's post also describes adding the following startup script in order to enabl
 
 In my experience, the UpdatePanels seem to work just fine without this startup  script, but there are scenarios where out-of-the-box SharePoint functionality is  broken after enabling AJAX if you don't add this startup script. For example, the **Edit Page** button in the page editing toolbar sometimes stops working.  It doesn't seem to happen all the time, but when it does, it's obviously very frustrating.
 
-I've also seen the following error when using the **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)**  from the AJAX Control Toolkit on a SharePoint site:
+I've also seen the following error when using the **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)** from the AJAX Control Toolkit on a SharePoint site:
 
 > Extender Controls may not be Registered before PreRender
 

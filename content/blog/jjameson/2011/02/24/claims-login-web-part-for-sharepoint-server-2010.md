@@ -181,7 +181,7 @@ Note that, thanks to the OOTB ASP.NET **[Login](http://msdn.microsoft.com/en-us/
 
 The implementation above actually works as expected -- well, up to a point.
 
-The problem is that when you click the out-of-the-box **Sign Out**          link anytime after authenticating via the custom Web Part, a rather nasty unhandled         exception occurs:
+The problem is that when you click the out-of-the-box **Sign Out**         link anytime after authenticating via the custom Web Part, a rather nasty unhandled         exception occurs:
 
 ```
 [ArgumentException: Exception of type 'System.ArgumentException' was thrown.
@@ -215,7 +215,7 @@ However, when I logged in using the Claims Login Form Web Part, I found that the
 
 When I then clicked **Sign Out**, I noticed that while the "FedAuth"         cookie was removed from the subsequent request, the ".ASPXAUTH" cookie was not.         In other words, the presence of an ".ASPXAUTH" cookie (without a "FedAuth" cookie)         causes SharePoint Server 2010 to "blow chunks."
 
-To remedy the issue, I moved the code in the **LoginForm\_LoggedIn**          event handler into the **LoginForm\_Authenticate** event handler. Since         the user is redirected upon successful login, this prevents the ASP.NET **Login** control from generating the ".ASPXAUTH" cookie. With this change, the OOTB         **Sign Out** link started working as expected.
+To remedy the issue, I moved the code in the **LoginForm\_LoggedIn**         event handler into the **LoginForm\_Authenticate** event handler. Since         the user is redirected upon successful login, this prevents the ASP.NET **Login** control from generating the ".ASPXAUTH" cookie. With this change, the OOTB         **Sign Out** link started working as expected.
 
 I then moved on to making the Claims Login Form Web Part more robust by adding the         following features:
 

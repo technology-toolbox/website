@@ -143,7 +143,7 @@ the database runs on the same server as the website in that environment.
 
 > **Tip**
 >
-> Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)**  class from the .NET Framework is a convenient way to parse URLs in PowerShell (for example to extract the hostname, as shown above).
+> Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** class from the .NET Framework is a convenient way to parse URLs in PowerShell (for example to extract the hostname, as shown above).
 
 ### Step 4 - Create website folder under Inetpub\wwwroot
 
@@ -192,7 +192,7 @@ of years ago:
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 
 Subtext requires read/write access to the App\_Data folder, so I use the
-**[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**  
+**[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**
 utility to configure the NTFS permissions:
 
 ```

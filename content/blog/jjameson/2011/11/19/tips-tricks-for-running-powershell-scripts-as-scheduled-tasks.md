@@ -98,13 +98,13 @@ information other than the fact that PowerShell.exe exited with return code
 We need to be able to inspect a log file containing all of the output from
 the script.
 
-Like me, you might try using the **[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**  
+Like me, you might try using the **[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**
 cmdlet to create a log file:
 
 ```
 $ErrorActionPreference = "Stop"
 
-Start-Transcript-Path"$env:TEMP\Temp.log"   
+Start-Transcript-Path"$env:TEMP\Temp.log"
 Write-Host "Changing to TEMP folder..."
 ...
 Write-Host "Success"

@@ -575,7 +575,7 @@ Tool**), upgrade TFS using the parameters specified in [Table 8](/blog/jjameson/
 
 Browse to one of the upgraded TFS project sites to confirm the **Remaining Work**         Web Part on the home page renders as expected (now that the TFS extensions for SharePoint         have been installed).
 
-Note that a different error may be shown in the **Remaining Work**          Web Part:
+Note that a different error may be shown in the **Remaining Work**         Web Part:
 
 > Reporting Services Error
 >
@@ -607,7 +607,7 @@ Figure 2: Upgraded TFS project site in SharePoint Server 2010
 
 > **Tip**
 >
-> To significantly improve the appearance of the upgraded TFS project home page, edit the **Remaining Work** Web Part and set the **Height**  to **600 pixels** and the **Width** to **900 pixels**.
+> To significantly improve the appearance of the upgraded TFS project home page, edit the **Remaining Work** Web Part and set the **Height** to **600 pixels** and the **Width** to **900 pixels**.
 
 For more information on updating a team project, refer to the following MSDN article:
 

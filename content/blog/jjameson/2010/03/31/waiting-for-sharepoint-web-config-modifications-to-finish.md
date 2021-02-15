@@ -37,7 +37,7 @@ This week, I had some time to tackle the problem so I modified my local developm
 When there are multiple front-end Web servers in the SharePoint farm, we need  to wait for the timer job that performs the Web.config modifications to complete  before continuing. Otherwise, the "configuration modification
 operation is already running" error may occur when applying Web.config changes  from two different features in rapid succession.
 
-To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**  class in the **ApplyWebConfigModifications**  method:
+To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class in the **ApplyWebConfigModifications**  method:
 
 ```
 if (webApp.Farm.TimerService.Instances.Count > 1)

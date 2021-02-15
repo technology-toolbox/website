@@ -188,7 +188,7 @@ Now let's focus on getting our unit tests to pass.
 
 As I mentioned before, the most difficult part of encrypting data is managing  the keys used to encrypt and decrypt the data. For this scenario, I mentioned that  the goal is to provide a mechanism for securely storing SSO credentials for a Web  application.
 
-If you are familiar with ASP.NET, you are probably aware that you can configure  the [**SqlMembershipProvider**](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.aspx) to store passwords either in clear, encrypted,  or hashed form. Here is some corresponding text from the MSDN page for **[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)**  property:
+If you are familiar with ASP.NET, you are probably aware that you can configure  the [**SqlMembershipProvider**](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.aspx) to store passwords either in clear, encrypted,  or hashed form. Here is some corresponding text from the MSDN page for **[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)** property:
 
 > Encrypted and Hashed passwords are encrypted or hashed by default based on information
 > supplied in the
@@ -197,7 +197,7 @@ If you are familiar with ASP.NET, you are probably aware that you can configure 
 
 If other words, if you encrypt passwords using the **SqlMembershipProvider**,  it uses a symmetric-key algorithm based on the machineKey element in Web.config.  Assuming you implement the necessary security around your Web.config files, this  mitigates the difficulty in managing the key necessary to encrypt and decrypt data.
 
-The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)** method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)**  method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
+The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)** method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)** method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
 
 Note, however, that the **EncryptPassword** and **DecryptPassword**  methods are `protected` (not `public`). Consequently, without  reverting to some unsupported or poorly performing hack (e.g. using reflection to  call the protected methods), we need to inherit from the **SqlMembershipProvider**  class in order to use this functionality.
 
@@ -328,7 +328,7 @@ This makes sense because **InternalEncryptionService** is marked  as internal, y
 
 Note that if you create your unit tests using some built-in features of Visual  Studio, it will automatically create "wrapper" classes that you can use in unit  testing scenarios like this. However, since I tend to just create unit tests via  code (often via copy/paste like I explained above), I don't typically rely on these  wrapper classes.
 
-An alternative for this scenario -- since our class is marked as `internal`  -- is to add an **[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)**  to the AssemblyInfo.cs file for the **Security** project (which creates the **Fabrikam.Demo.Security**  assembly):
+An alternative for this scenario -- since our class is marked as `internal`  -- is to add an **[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)** to the AssemblyInfo.cs file for the **Security** project (which creates the **Fabrikam.Demo.Security**  assembly):
 
 ```
 using System.Reflection;
@@ -569,7 +569,7 @@ Assuming we agree with this expected behavior for encrypting an empty string  (w
 
 Even though this test might not appear to add any value (since it passes without  making any changes to the code), in my opinion it is valuable because it helps others  developers (or even me, at some later point in time) quickly understand the expected  behavior of the code simply by reading through the unit tests. It also ensures that  we don't accidentally change the behavior (based on the assumption that an empty  string should be encrypted successfully).
 
-Next we should add similar unit tests to ensure the **Decrypt**  method handles null and empty input values as expected. Finally, make the necessary  code changes to get the new unit tests to pass and check-in the updated code.
+Next we should add similar unit tests to ensure the **Decrypt** method handles null and empty input values as expected. Finally, make the necessary  code changes to get the new unit tests to pass and check-in the updated code.
 
 So at this point, are we done? Well, sort of.
 

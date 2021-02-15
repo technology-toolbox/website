@@ -42,7 +42,7 @@ Whenever I need to create a new blog post, I simply copy my template (i.e. defau
 
 I define these styles in a CSS file (i.e. Themes\MSDN\MSDN.css) that is referenced         by each page, thus giving me a WYSIWYG (What You See Is What You Get) experience         when authoring blog content. This is one of the biggest things lacking from the         editing functionality provided by Community Server, meaning that it doesn't apply         your custom CSS rules when previewing a blog post before publishing.
 
-Once I have finished writing a blog post in Expression Web, I simply copy the HTML         within the `<body>` element, browse to my MSDN blog, click the         **Write a Blog Post** link, click the **Edit HTML Source**          toolbar button in the Community Server Control Panel, and then paste my content         into the HTML source view.
+Once I have finished writing a blog post in Expression Web, I simply copy the HTML         within the `<body>` element, browse to my MSDN blog, click the         **Write a Blog Post** link, click the **Edit HTML Source**         toolbar button in the Community Server Control Panel, and then paste my content         into the HTML source view.
 
 I freely admit this approach takes a little longer than simply authoring posts directly         on the site, but I believe it is well worth it. Even more so, now that my blog is         stored in Team Foundation Server (TFS)...
 

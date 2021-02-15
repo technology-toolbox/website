@@ -38,9 +38,9 @@ Depending on the size of the fictitious Tugboat Coffee company, we might choose 
 
 Let's start by designing the custom SharePoint list used to specify the data for         the weekly specials.
 
-My decision to use the **Title** and **Rollup Image**          columns should be relatively straightforward. When you create a custom list in SharePoint,         you get a **Title** column by default (so it just makes sense to use         that for the name of the product). Similarly, the **Publishing Image**          column type (used for the **Rollup Image** column) provides the best         user experience for selecting an image from the SharePoint site (as opposed to creating         a custom column using the **Hyperlink or Picture** column type).
+My decision to use the **Title** and **Rollup Image**         columns should be relatively straightforward. When you create a custom list in SharePoint,         you get a **Title** column by default (so it just makes sense to use         that for the name of the product). Similarly, the **Publishing Image**         column type (used for the **Rollup Image** column) provides the best         user experience for selecting an image from the SharePoint site (as opposed to creating         a custom column using the **Hyperlink or Picture** column type).
 
-However, we need to think a little bit about the **Price** column.         We could certainly choose to add a custom column using the **Single line of text** column type, which would contain values like "$9.98 / lb." However, besides         putting an unnecessary burden on the people maintaining the data in the list --         because they would need to explicitly type in the currency symbol and unit of measure         when adding new items to the list -- using a **Single line of text**          column type for the price wouldn't really be leveraging the full power of SharePoint.         It would also allow for mistakes like:
+However, we need to think a little bit about the **Price** column.         We could certainly choose to add a custom column using the **Single line of text** column type, which would contain values like "$9.98 / lb." However, besides         putting an unnecessary burden on the people maintaining the data in the list --         because they would need to explicitly type in the currency symbol and unit of measure         when adding new items to the list -- using a **Single line of text**         column type for the price wouldn't really be leveraging the full power of SharePoint.         It would also allow for mistakes like:
 
 - "9.98 / lb." (no currency symbol)
 - "$9.98" (missing " / lb." from the price)
@@ -49,7 +49,7 @@ However, we need to think a little bit about the **Price** column.         We co
 - "$9.98 / lb" (missing period on the abbreviation)
 - "$9.98 / bl." (yikes, what is a "bl."?!)
 
-Therefore, let's instead break the price into two parts: **Unit Price**          and **Unit of Measure**. We can then use a calculated column for **            Price (**in order to concatenate the values specified in the other two         columns).
+Therefore, let's instead break the price into two parts: **Unit Price**         and **Unit of Measure**. We can then use a calculated column for **            Price (**in order to concatenate the values specified in the other two         columns).
 
 <caption>            Data for "This Week's Specials"</caption>|                     Title<br>                 |                     Unit Price<br>                 |                     Unit of Measure<br>                 |                     Price<br>                 |                     Rollup Image<br>                 |
 | --- | --- | --- | --- | --- |

@@ -183,7 +183,7 @@ when any of the CSS files are updated. (Refer to
 
 > **Note**
 >
-> If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**  method with the `<script>` elements but not the `<link>` elements, it's simply because it doesn't work otherwise (despite the presence of the `runat="server"` attribute in the `<head>` element).
+> If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)** method with the `<script>` elements but not the `<link>` elements, it's simply because it doesn't work otherwise (despite the presence of the `runat="server"` attribute in the `<head>` element).
 
 Using the technique I have presented thus far works just fine in most scenarios,
 but there are a couple of potential issues (depending on your specific circumstances):

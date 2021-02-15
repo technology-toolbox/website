@@ -168,7 +168,7 @@ In order to log exceptions, I added two new overloads for the **LogError**      
         }
 ```
 
-Note that the stack trace is generated using the **AppendExceptionDetail**          helper method.
+Note that the stack trace is generated using the **AppendExceptionDetail**         helper method.
 
 This makes it really easy to log exceptions in ASP.NET Web applications -- including         solutions built on Microsoft Office SharePoint Server (MOSS) 2007 and Windows SharePoint         Services -- as well as other types of .NET applications (e.g. console applications).
 

@@ -328,7 +328,7 @@ to the **BlogHelper.GetEntryUrl** method:
                                 (DateTime) Eval("DateSyndicated"))) %>'>
                           <span class="label">Comments: </span>
                           <span class="value count">{TODO: 0}</span>
-                        </asp:HyperLink>                     </li>
+                        </asp:HyperLink>                    </li>
                 </ul>
                 ...
             </div>

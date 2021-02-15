@@ -23,7 +23,7 @@ My initial assumption was that the option to disable hibernation lies somewhere 
 
 > **Turn hibernation on or off**
 
-Perfect...this looks like precisely the option I was looking for. Unfortunately,         when I clicked this link, it just took me back to the **Power Options**          area that I had already thoroughly explored. Figuring I had simply missed the obvious,         I proceeded to set the following options under advanced power settings:
+Perfect...this looks like precisely the option I was looking for. Unfortunately,         when I clicked this link, it just took me back to the **Power Options**         area that I had already thoroughly explored. Figuring I had simply missed the obvious,         I proceeded to set the following options under advanced power settings:
 
 > **Sleep**
 >

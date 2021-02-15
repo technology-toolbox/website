@@ -32,7 +32,7 @@ Version 3.0</cite>
 
 However, if you look at the comments on the previous MSDN article, it appears  that the prescriptive guidance isn't always easy to follow and implement. I'll be  the first to admit that copying and pasting lots of "configuration goo" can be problematic.
 
-Using my custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**  class, it's pretty easy to add the slew of  Web.config modifications that are required to get ASP.NET AJAX working on a SharePoint  site.
+Using my custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class, it's pretty easy to add the slew of  Web.config modifications that are required to get ASP.NET AJAX working on a SharePoint  site.
 
 Since I didn't necessarily want to limit this configuration to a SharePoint feature,  I placed the bulk of the code in the **SharePointAjaxHelper** class.  Consequently, enabling AJAX is simply a matter of calling the following method:
 
@@ -48,7 +48,7 @@ SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
 
 Note that due to the bug in the **SPWebConfigModification** infrastructure  that I've mentioned before, SharePoint only removes the modifications from the Web.config  file for the default zone (not, for example, the Internet zone). However, it's probably  not a big deal in this particular case because what's the likelihood that you will  start using AJAX and then later on decide to stop using it? Probably "next to zilch"  would be my guess.
 
-Since it's just one line of code, I don't even bother with a separate **[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)**  class for the **Fabrikam.Demo.Web.AjaxConfiguration** feature. Instead, I just stuff the code directly into the class that inherits  from **[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)** :
+Since it's just one line of code, I don't even bother with a separate **[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)** class for the **Fabrikam.Demo.Web.AjaxConfiguration** feature. Instead, I just stuff the code directly into the class that inherits  from **[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)** :
 
 ```
 using System;

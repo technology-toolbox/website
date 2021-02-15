@@ -37,7 +37,7 @@ If you are using variations, and you happen to notice your OWSTimer.exe process 
 
 As I have mentioned before, the decision to abandon variations was not an easy one         to make and it is not possible to point to one particular problem as the proverbial         "straw."
 
-Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**          site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
+Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**         site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
 
 ![Elapsed Time for Variation Page Propagation](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(before).jpg "Elapsed Time for Variation Page Propagation")
 Figure 1: Elapsed Time for Variation Page Propagation

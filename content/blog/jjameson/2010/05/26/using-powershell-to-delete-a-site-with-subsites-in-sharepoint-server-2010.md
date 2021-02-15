@@ -81,7 +81,7 @@ namespace DeleteWeb
 
 I was hoping that SharePoint Server 2010 would address this scenario out-of-the-box,  but that doesn't appear to be the case.
 
-Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test))  that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo)  and [http://foobar/Test/bar](http://foobar/Test/bar)). If you attempt  to use the **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)**   cmdlet in SharePoint Server 2010 to delete the site...
+Suppose that you have a site (e.g. [http://foobar/Test](http://foobar/Test))  that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo)  and [http://foobar/Test/bar](http://foobar/Test/bar)). If you attempt  to use the **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)**  cmdlet in SharePoint Server 2010 to delete the site...
 
 ```
 Remove-SPWeb "http://foobar/Test" -Confirm:$false

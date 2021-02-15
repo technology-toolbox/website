@@ -64,7 +64,7 @@ Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-win2k3ee-base%20%28SP2%20slipstreamed%29.jpg)
 
-Comparing this with the previous snapshot from the SP1 slipstreamed version (prior         to updating with SP2), you can see that the size of the **Windows**          folder is only slightly larger. Comparing this with the previous snapshot from the         SP1 slipstreamed version after installing SP2 shows a remarkable difference. No         longer do we need an additional 1.7 GB of "stuff" in the **Windows**         folder just to ensure that we have all the latest patches.
+Comparing this with the previous snapshot from the SP1 slipstreamed version (prior         to updating with SP2), you can see that the size of the **Windows**         folder is only slightly larger. Comparing this with the previous snapshot from the         SP1 slipstreamed version after installing SP2 shows a remarkable difference. No         longer do we need an additional 1.7 GB of "stuff" in the **Windows**         folder just to ensure that we have all the latest patches.
 
 Note that there are some caveats with starting from a slipstreamed version of the         OS. The most notable is that you have to be sure to carry around a copy of the slipstreamed         Windows Server 2003 SP2 CD. Otherwise, when you go to build a new VM (which takes         about 15-20 minutes) and subsequently add specific features, such as IIS, you will         get prompted for the Windows Server 2003 SP2 CD. At this point, if you try just         using one of the "vanilla" DVDs from MSDN, it won't work.
 

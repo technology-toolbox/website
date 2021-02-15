@@ -206,7 +206,7 @@ Running the Web application at this point renders a simple table similar to the 
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
-Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**  event:
+Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)** event:
 
 ```
 protected void ScorecardDetailView_RowCreated(

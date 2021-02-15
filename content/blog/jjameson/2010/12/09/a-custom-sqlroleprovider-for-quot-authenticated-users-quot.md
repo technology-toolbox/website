@@ -19,7 +19,7 @@ tags: ["MOSS 2007", "Web Development", "SharePoint
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-Prior to the recent "v2" release on my current project, we had been using the  ASP.NET **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)**  to manage the various roles used by the Web site.
+Prior to the recent "v2" release on my current project, we had been using the  ASP.NET **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)** to manage the various roles used by the Web site.
 
 Over a month ago, someone contacted me about an issue he was encountering with  a specific user. The problem turned out to be caused by the fact that the user was  not added to the **Authenticated Users** role.
 
