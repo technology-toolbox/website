@@ -11,7 +11,7 @@ tags: ["My System", "Visual Studio", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx)
 >
@@ -170,8 +170,7 @@ Complete the deployment procedures in the following sections:
 
 > **Important**
 >
->             Do not run the Farm Configuration Wizard (the TFS Web application and service applications
->             will be configured in the following steps).
+> Do not run the Farm Configuration Wizard (the TFS Web application and service applications will be configured in the following steps).
 
 #### Add SharePoint Central Administration to the Local intranet zone
 
@@ -265,9 +264,7 @@ To fix the TaxonomyPicker.ascx file:
 
 > **Update (2011-04-14)**
 >
->             The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010. Instead
->             of trying to fix the assembly name, just rename the file (since it apparently isn't
->             used by SharePoint).
+> The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010. Instead of trying to fix the assembly name, just rename the file (since it apparently isn't used by SharePoint).
 
 ### Rename TaxonomyPicker.ascx
 
@@ -275,7 +272,7 @@ In order to avoid errors in the Windows event log (e.g. Source: SharePoint Found
 
 > **Important**
 >
->             This task must be completed on each SharePoint server in the farm.
+> This task must be completed on each SharePoint server in the farm.
 
 To rename the TaxonomyPicker.ascx file:
 
@@ -287,8 +284,7 @@ and then change the filename to **TaxonomyPicker.ascx\_broken**.
 
 > **Note**
 >
->             Changing the file extension causes the problematic file to be skipped by ASP.NET
->             when compiling the controls in the folder.
+> Changing the file extension causes the problematic file to be skipped by ASP.NET when compiling the controls in the folder.
 
 ### Install SQL Server 2008 Reporting Services
 
@@ -611,9 +607,7 @@ Figure 2: Upgraded TFS project site in SharePoint Server 2010
 
 > **Tip**
 >
->             To significantly improve the appearance of the upgraded TFS project home page, edit
->             the **Remaining Work** Web Part and set the **Height** 
->             to **600 pixels** and the **Width** to **900 pixels**.
+> To significantly improve the appearance of the upgraded TFS project home page, edit the **Remaining Work** Web Part and set the **Height**  to **600 pixels** and the **Width** to **900 pixels**.
 
 For more information on updating a team project, refer to the following MSDN article:
 
@@ -691,9 +685,7 @@ v5.0** process template.
 
 > **Note**
 >
->             In order to create a new team project (with the default project options) using Team
->             Explorer on a server that hosts SharePoint Server 2010 and SQL Server Reporting
->             Services, you need to run Visual Studio as an administrator.
+> In order to create a new team project (with the default project options) using Team Explorer on a server that hosts SharePoint Server 2010 and SQL Server Reporting Services, you need to run Visual Studio as an administrator.
 
 For more information on creating a new TFS project, refer to the following:
 

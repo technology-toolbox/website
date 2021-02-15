@@ -308,14 +308,7 @@ of `<div  id="blogHome">`).
 
 > **Tip**
 >
->       I like to specify unique "container" elements like this for all pages 
->       in a Web application (e.g. `<div 
->       id="companyHome">`). 
->       Even though you typically want CSS rules to be very generic (and thus 
->       apply to all pages), there may be times when you need to tweak the formatting 
->       of some element on a particular page (or set of pages). If each ASP.NET 
->       file specifies a unique "container" element, customizing the formatting 
->       for specific pages is very easy.
+> I like to specify unique "container" elements like this for all pages in a Web application (e.g. `<div  id="companyHome">`). Even though you typically want CSS rules to be very generic (and thus apply to all pages), there may be times when you need to tweak the formatting of some element on a particular page (or set of pages). If each ASP.NET file specifies a unique "container" element, customizing the formatting for specific pages is very easy.
 
 ### Resist the urge to change your HTML
 

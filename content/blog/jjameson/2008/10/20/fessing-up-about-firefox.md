@@ -12,7 +12,7 @@ tags: ["My System", "Web Development"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx)
 >

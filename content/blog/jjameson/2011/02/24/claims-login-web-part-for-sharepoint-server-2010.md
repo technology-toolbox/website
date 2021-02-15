@@ -10,7 +10,7 @@ tags: ["SharePoint 2010"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
 >
@@ -264,56 +264,64 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 
 > **Note**
 >
->                     You do not need to manually add the Web.config modifications for the "Fabrikam"
->                     Web application because this is done automatically upon activation of a feature
->                     (Fabrikam Demo - Web Application Configuration).
+> You do not need to manually add the Web.config modifications for the "Fabrikam" Web application because this is done automatically upon activation of a feature (Fabrikam Demo - Web Application Configuration).
+> 4. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
+> Shell**, and then click **Run as administrator**. If prompted
+> by User Account Control to allow the program to make changes to the computer, click
+> **Yes**.
+> 5. From the Windows PowerShell command prompt, change to the directory containing the
+> deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
+> and run the following scripts:
 
-4. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
-   Shell**, and then click **Run as administrator**. If prompted
-   by User Account Control to allow the program to make changes to the computer, click
-   **Yes**.
-
-5. From the Windows PowerShell command prompt, change to the directory containing the
-   deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
-   and run the following scripts:
-   
-   ```
-   & '.\Create Web Application.ps1'
-   ```
-   
-   ```
-   & '.\Create Site Collections.ps1'
-   ```
-   
-   ```
-   & '.\Enable Anonymous Access.ps1'
-   ```
-   
-   ```
-   & '.\Configure Object Cache User Accounts.ps1'
-   ```
-   
-   ```
-   & '.\Add Event Log Sources.ps1'
-   ```
-   
-   ```
-   & '.\Add Solutions.ps1'
-   ```
-   
-   ```
-   & '.\Deploy Solutions.ps1'
-   ```
-   
-   ```
-   & '.\Activate Features.ps1'
-   ```
+    ```
+    & '.\Create Web Application.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Create Site Collections.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Enable Anonymous Access.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Configure Object Cache User Accounts.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Add Event Log Sources.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Add Solutions.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Deploy Solutions.ps1'
+    ```
+    
+    
+    
+    ```
+    & '.\Activate Features.ps1'
+    ```
 
 At this point you should be able to browse to the Fabrikam site and click the **            Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
 
 > **Update (2011-02-26)**
 >
->             There was a bug in the original version of the code sample when logging in as an
->             FBA user over HTTPS (while attempting to determine the membership and role providers
->             from the IIS settings). This has been fixed in the updated attachment.
+> There was a bug in the original version of the code sample when logging in as an FBA user over HTTPS (while attempting to determine the membership and role providers from the IIS settings). This has been fixed in the updated attachment.
 

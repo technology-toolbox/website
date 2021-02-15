@@ -9,7 +9,7 @@ tags: ["Web Development"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx)
 >
@@ -28,9 +28,7 @@ The framework essentially consists of the **ModalPopupWebPart** abstract        
 
 > **Note**
 >
->             Web Parts that derive from **ModalPopupWebPart** are responsible for
->             displaying the main content of the popup window. This is typically done by overriding
->             the [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx) method to add controls to the **ModalPanel**.
+> Web Parts that derive from **ModalPopupWebPart** are responsible for displaying the main content of the popup window. This is typically done by overriding the [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx) method to add controls to the **ModalPanel**.
 
 The following figure illustrates the various UI elements of a modal popup window.
 

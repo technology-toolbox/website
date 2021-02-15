@@ -13,10 +13,7 @@ detailed in this post.
 
 > **Note**
 >
->       Although not illustrated in the screenshots below, the custom CAPTCHA 
->       control is also used on the Subtext blog pages to prevent bots from 
->       adding comments to blog posts. I'll explain why this is important in 
->       a moment.
+> Although not illustrated in the screenshots below, the custom CAPTCHA control is also used on the Subtext blog pages to prevent bots from adding comments to blog posts. I'll explain why this is important in a moment.
 
 ### Overview
 
@@ -385,8 +382,7 @@ the CAPTCHA control on the blog pages, this is what I ended up with:
 
 > **Note**
 >
->       I've kept the comments in the code block above to help readers understand 
->       a couple of the more subtle details of the implementation.
+> I've kept the comments in the code block above to help readers understand a couple of the more subtle details of the implementation.
 
 #### Captcha.ascx.cs
 

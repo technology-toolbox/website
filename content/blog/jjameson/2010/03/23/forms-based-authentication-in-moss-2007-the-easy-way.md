@@ -120,10 +120,7 @@ While we would obviously never want to deploy Debug builds to the Production  en
 
 > **Note**
 >
-> **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL**
-> would typically be set using system environment variables as illustrated
-> in the following figure. That way, the variables would only need to be set
-> once per environment.
+> **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically be set using system environment variables as illustrated in the following figure. That way, the variables would only need to be set once per environment.
 
 ![Setting environment variables](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Environment%20Variables.png)
 
@@ -612,11 +609,7 @@ While it might sound like there's a lot of custom code here, I just checked Visu
 
 > **Tip**
 >
-> If you haven't seen Gary Lapointe's custom STSADM commands already, I encourage
-> you to take a look at them. You can find them on his blog:
-> [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The
-> custom STSADM commands used in the Fabrikam solution for extending (and
-> unextending) the Web application were originally based on Gary's code.
+> If you haven't seen Gary Lapointe's custom STSADM commands already, I encourage you to take a look at them. You can find them on his blog: [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The custom STSADM commands used in the Fabrikam solution for extending (and unextending) the Web application were originally based on Gary's code.
 
 I should also point out that I explicitly left out the detailed steps for creating  the service account used by the app pool as well as the **FabrikamDemo** database (since these are expected to be one-time operations for each environment).  Use [aspnet\_regsql.exe](http://msdn.microsoft.com/en-us/library/ms229862%28VS.80%29.aspx)  to create the membership database and then use SQL Server Management Studio to add  the Fabrikam service account (e.g. %USERDOMAIN%\svc-web-fabrikam-dev) to the following  database roles in the **FabrikamDemo** database:
 

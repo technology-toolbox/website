@@ -9,7 +9,7 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx)
 >
@@ -58,11 +58,7 @@ list)
 
 > **Important**
 >
->             By default, the **Reusable Content** list is configured for content
->             approval. Consequently when you add list items (either programmatically or through
->             the site), the **Approval Status** defaults to **Pending**.
->             In order for users with limited access to see the content as expected, a published
->             version of the **Reusable Content** list item must be available.
+> By default, the **Reusable Content** list is configured for content approval. Consequently when you add list items (either programmatically or through the site), the **Approval Status** defaults to **Pending**. In order for users with limited access to see the content as expected, a published version of the **Reusable Content** list item must be available.
 
 Note that this post was primarily intended to introduce a scenario for using the         reusable content feature in SharePoint.
 

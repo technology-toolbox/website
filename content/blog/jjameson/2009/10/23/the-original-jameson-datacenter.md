@@ -10,7 +10,7 @@ tags: ["My System", "Personal", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx)
 >
@@ -25,13 +25,10 @@ Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home l
 
 > **Update**
 >
->                     Doh! You would think a guy with a Master of Science degree in Mechanical Engineering
->                     could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading
->                     before clicking that **Publish** button ;-)
-
-2. An article I read about a year ago describing the origin of Google that also included
-   some photos of the original Google infrastructure in the Stanford University computer
-   lab.
+> Doh! You would think a guy with a Master of Science degree in Mechanical Engineering could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading before clicking that **Publish** button ;-)
+> 2. An article I read about a year ago describing the origin of Google that also included
+> some photos of the original Google infrastructure in the Stanford University computer
+> lab.
 
 Now, please don't misunderstand -- I most certainly am not claiming that the Jameson         Datacenter will ever amount to even the most miniscule fraction of what Google grew         into in less than a decade. All I'm saying is that in the incredible way the neurons         are wired together in the human brain, things that we see very often trigger distant         memories with amazing clarity.
 

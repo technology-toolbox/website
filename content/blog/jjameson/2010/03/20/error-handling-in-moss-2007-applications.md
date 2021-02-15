@@ -365,8 +365,7 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 
 > **Important**
 >
-> Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the
-> event log.
+> Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the event log.
 
 With the **EventLogTraceListener** configured, as soon as I browse  to my site and trigger the unhandled exception, I'm presented with the OOTB SharePoint  error page shown in Figure 2. In other words, I've reverted back to the undesired  user experience.
 
@@ -1123,15 +1122,9 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 
 > **Note**
 >
-> There's a known bug with the **SPWebConfigModification** class
-> not removing modifications from any Web.config file except the one for the
-> **Default** zone. In other words, running the following command
-> will not remove the trace listener configuration from the Web.config file
-> for the **Internet** zone:
+> There's a known bug with the **SPWebConfigModification** class not removing modifications from any Web.config file except the one for the **Default** zone. In other words, running the following command will not remove the trace listener configuration from the Web.config file for the **Internet** zone:
 >
-> ```
-> stsadm -o fabrikam-disablelogging -url http://fabrikam
-> ```
+> <kbd>stsadm -o fabrikam-disablelogging -url http://fabrikam</kbd>
 
 Here is the class that implements the custom StsAdm.exe commands:
 

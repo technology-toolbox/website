@@ -9,7 +9,7 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
 >
@@ -95,8 +95,7 @@ The "create prototype" task was a really easy one to complete in this particular
 
 > **Tip**
 >
->             I typically check the prototype in on the Dev branch (e.g. $/Tugboat/Dev/TugboatPrototype)
->             instead of the Main branch, since it's not technically part of the solution.
+> I typically check the prototype in on the Dev branch (e.g. $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not technically part of the solution.
 
 The next task was to create the master page for the Tugboat site. I started with         the minimal master page provided on MSDN and then applied some of the changes described         in part 1 of this series, including inserting some additional ContentPlaceHolder         controls just in case I ever want to use the Tugboat master page in place of application.master.         Note that I added the master page in the Tugboat.Web.Publishing.Layouts feature         (which is very similar to the out-of-the-box PublishingLayouts feature).
 
@@ -269,30 +268,28 @@ To deploy the Tugboat sample site to SharePoint:
 
 > **Note**
 >
->                     While you don't have to use this URL, it is recommended for developer environments
->                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure
->                     when deploying and retracting the solution.
+> While you don't have to use this URL, it is recommended for developer environments because it causes the deployment scripts to bypass the SharePoint timer infrastructure when deploying and retracting the solution.
+> 3. Set environment variables to specify the credentials to use for the Tugboat application
+> pool:
 
-3. Set environment variables to specify the credentials to use for the Tugboat application
-   pool:
-   
-   ```
-   set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
-   ```
-   
-   ```
-   set TUGBOAT_APP_POOL_PASSWORD={password}
-   ```
+    ```
+    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+    ```
+    
+    
+    
+    ```
+    set TUGBOAT_APP_POOL_PASSWORD={password}
+    ```
 
 > **Important**
 >
->                     Be sure to specify a valid local or domain user.
+> Be sure to specify a valid local or domain user.
+> 4. Change to the folder containing the deployment scripts:
 
-4. Change to the folder containing the deployment scripts:
-   
-   ```
-   cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
-   ```
+    ```
+    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
+    ```
 
 5. Type the following command:
    

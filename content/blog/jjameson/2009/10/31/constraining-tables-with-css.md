@@ -10,7 +10,7 @@ tags: ["Web Development"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx)
 >
@@ -150,11 +150,7 @@ Next, I specify that all cells in the constrained table should truncate the text
 
 > **Note**
 >
->             Support for the `text-overflow` CSS
->             property is somewhat limited. In particular, you will find that a clipped table
->             cell renders without the ellipsis in Firefox (at least in version 3.5.3). Oddly
->             enough, this appears to have been supported in Internet Explorer since version 6.
->             In addition to Internet Explorer and Opera, this also appears as expected in Safari.
+> Support for the `text-overflow` CSS property is somewhat limited. In particular, you will find that a clipped table cell renders without the ellipsis in Firefox (at least in version 3.5.3). Oddly enough, this appears to have been supported in Internet Explorer since version 6. In addition to Internet Explorer and Opera, this also appears as expected in Safari.
 
 Also note that constraining table cells using CSS does not automatically display         the tooltip with the complete text. For that, you are on your own.
 
@@ -269,6 +265,5 @@ namespace Fabrikam.Demo.Web.UI
 
 > **Update (2011-04-21)**
 >
->             I've attached a sample Visual Studio solution to make it easier to see this concept
->             in action.
+> I've attached a sample Visual Studio solution to make it easier to see this concept in action.
 

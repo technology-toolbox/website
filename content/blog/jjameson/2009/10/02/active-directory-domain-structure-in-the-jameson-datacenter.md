@@ -9,7 +9,7 @@ tags: ["My System", "Infrastructure"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx)
 >
@@ -21,11 +21,7 @@ In this post, I want to share details about how I've configured my Active Direct
 
 > **Note**
 >
->             Technology Toolbox is just a name I came up with about ten years ago before joining
->             Microsoft. At the time, I was considering starting my own company and therefore
->             went looking for an available domain name. (I would have preferred techtoolbox.com,
->             but that was already taken.) [Don't bother trying to browse to [https://www.technologytoolbox.com](https://www.technologytoolbox.com/) because, honestly, I haven't yet invested
->             the time in actually creating the Web site -- even after almost ten years.]
+> Technology Toolbox is just a name I came up with about ten years ago before joining Microsoft. At the time, I was considering starting my own company and therefore went looking for an available domain name. (I would have preferred techtoolbox.com, but that was already taken.) [Don't bother trying to browse to [https://www.technologytoolbox.com](https://www.technologytoolbox.com/) because, honestly, I haven't yet invested the time in actually creating the Web site -- even after almost ten years.]
 
 As you can see in the following figure, I've created a number of organizational         units (OUs) which you would typically find in many enterprise organizations.
 
@@ -60,8 +56,7 @@ The following table summarizes the various OUs in the domain:
 |                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
 > **Note**
 >
->             The **Sales** OU contains similar OUs as **Development**.
->             These are simply not shown in the previous table.
+> The **Sales** OU contains similar OUs as **Development**. These are simply not shown in the previous table.
 
 Note that this domain structure, I'm able to use the Group Policy feature of Active         Directory to "effortlessly" configure new servers.
 

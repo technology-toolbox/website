@@ -39,7 +39,7 @@ Year's Eve sort of ways):
 
 > **Warning**
 >
->       Click the link above at your own peril.
+> Click the link above at your own peril.
 
 Since Microsoft recommends signing assemblies as a best practice (there's
 even an FxCop rule for it), I've been signing .NET assemblies for as long as

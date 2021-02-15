@@ -10,7 +10,7 @@ tags: ["SQL Server", "Visual Studio"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx)
 >
@@ -39,9 +39,7 @@ It certainly would be nice if the above MSDN article were updated to note the bu
 
 > **Note**
 >
->             As pointed out in a comment by Ramkumar Perumal, Microsoft.SqlServer.BatchParser.dll
->             does not exist in any of the specified folders. This should also be reflected in
->             the MSDN article.
+> As pointed out in a comment by Ramkumar Perumal, Microsoft.SqlServer.BatchParser.dll does not exist in any of the specified folders. This should also be reflected in the MSDN article.
 
 You will also find instructions to add the registry key -- as well as an explanation         for why you more than likely already have Microsoft.SqlServer.BatchParser.dll installed         on your SQL Server -- in the following blog post:
 

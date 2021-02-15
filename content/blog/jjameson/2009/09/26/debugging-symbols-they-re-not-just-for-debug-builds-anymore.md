@@ -10,7 +10,7 @@ tags: ["Core Development", "Debugging"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx)
 >
@@ -33,7 +33,7 @@ In the process of reviewing my old document, I came across the following:
 >
 > > **Important**
 > > 
-> >                 Do not include Debug symbols in the Release configuration of the setup projects.
+> > Do not include Debug symbols in the Release configuration of the setup projects.
 
 When I read this, I actually let out an audible laugh (okay, I suppose it was more         of a chuckle). It must have been the old C++ developer in me that originally put         this in the Development Plan (thinking you should never provide PDB files in your         Release builds because it makes it all too easy for an outsider to understand your         code).
 
@@ -49,8 +49,7 @@ In other words, the Development Plan should say:
 
 > **Important**
 >
->             Always include Debug symbols in the Release configuration of the setup projects
->             -- or, preferably, make them available from a symbol server.
+> Always include Debug symbols in the Release configuration of the setup projects -- or, preferably, make them available from a symbol server.
 
 Regarding John's book...I strongly recommend this book to anyone who considers himself         or herself a "serious developer." It is chock full of great tips and recommendations         for developing .NET solutions.
 

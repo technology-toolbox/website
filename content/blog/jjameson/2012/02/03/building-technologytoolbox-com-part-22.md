@@ -138,10 +138,7 @@ method to **Render**.
 
 > **Note**
 >
->       I've used other techniques in the past to eliminate extraneous markup 
->       -- specifically overriding the **RenderBeginTag** and
->       **RenderEndTag** methods. In a followup post I will explain 
->       why I used a different approach for this scenario.
+> I've used other techniques in the past to eliminate extraneous markup -- specifically overriding the **RenderBeginTag** and **RenderEndTag** methods. In a followup post I will explain why I used a different approach for this scenario.
 
 At this point, the script rendered as expected -- provided I remembered to
 change the **EnableAnalytics** setting in Web.config to **

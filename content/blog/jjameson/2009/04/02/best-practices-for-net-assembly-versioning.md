@@ -10,7 +10,7 @@ tags: ["My System", "Core Development", "Visual Studio"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
 >
@@ -50,8 +50,7 @@ The file version should be isolated in its own file (e.g. AssemblyVersionInfo.cs
 
 > **Update (2010-04-22)**
 >
->             In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) (assuming you are using
->             Team Foundation Server).
+> In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) (assuming you are using Team Foundation Server).
 
 ### Assembly Version
 

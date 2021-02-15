@@ -11,7 +11,7 @@ tags: ["MOSS 2007", "WSS v3", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx)
 >
@@ -63,5 +63,5 @@ Another useful tip that I wanted to pass along is effectively viewing very large
 
 > **Update (2009-06-02)**
 >
->             As noted in the comments, this issue appears to be fixed in the [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for Windows SharePoint Services.
+> As noted in the comments, this issue appears to be fixed in the [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for Windows SharePoint Services.
 

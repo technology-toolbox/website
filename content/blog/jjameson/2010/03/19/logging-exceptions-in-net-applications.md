@@ -12,7 +12,7 @@ tags: ["My System", "Simplify", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx)
 >
@@ -501,6 +501,5 @@ In a [follow-up post](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-appl
 
 > **Update (2011-01-31)**
 >
->             I've attached a sample Visual Studio solution that demonstrates the **Logger**
->             class.
+> I've attached a sample Visual Studio solution that demonstrates the **Logger** class.
 

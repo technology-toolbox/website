@@ -10,7 +10,7 @@ tags: ["My System"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx)
 >
@@ -57,11 +57,5 @@ Note that you don't have to specify both height and width for the new image size
 
 > **Important**
 >
->             There appears to be a bug in Telligent Evolution 5.5 when the filename for the image
->             contains certain characters (e.g. parentheses). For example, if you upload an image
->             named "Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services
->             error).png"and then attempt to dynamically resize it using the resized-image.ashx
->             handler, you will find it simply doesn't work. Fortunately if you rename the image
->             to remove the parentheses (and subsequently upload the renamed file), then the image
->             resizer works as expected.
+> There appears to be a bug in Telligent Evolution 5.5 when the filename for the image contains certain characters (e.g. parentheses). For example, if you upload an image named "Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error).png"and then attempt to dynamically resize it using the resized-image.ashx handler, you will find it simply doesn't work. Fortunately if you rename the image to remove the parentheses (and subsequently upload the renamed file), then the image resizer works as expected.
 

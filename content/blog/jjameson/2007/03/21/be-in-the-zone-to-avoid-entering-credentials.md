@@ -9,7 +9,7 @@ tags: ["My System"]
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx)
 >

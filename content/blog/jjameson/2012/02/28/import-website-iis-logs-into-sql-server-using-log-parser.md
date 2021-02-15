@@ -88,13 +88,7 @@ files for subsequent analysis.
 
 > **Note**
 >
->       In the past, I've worked on several "clickstream data warehousing" projects 
->       where we performed this kind of import as the first step in the ETL 
->       process (prior to transforming the data into a star schema and building 
->       OLAP cubes against them). This simple **WebsiteLog** table 
->       is certainly not meant to serve as a replacement for a more sophisticated 
->       analytics solution. Rather I'm sharing it here for those wishing to 
->       do "quick and dirty" analysis of their data.
+> In the past, I've worked on several "clickstream data warehousing" projects where we performed this kind of import as the first step in the ETL process (prior to transforming the data into a star schema and building OLAP cubes against them). This simple **WebsiteLog** table is certainly not meant to serve as a replacement for a more sophisticated analytics solution. Rather I'm sharing it here for those wishing to do "quick and dirty" analysis of their data.
 
 ### Import Website Log Files.ps1
 
@@ -215,10 +209,7 @@ Main
 
 > **Note**
 >
->       The script assumes you have installed Log Parser to the default location 
->       (on a 64-bit environment). You'll also need to update the log file path 
->       and connection string (unless you just happen to have a SQL Server named
->       **BEAST** and a database named **CaelumDW**).
+> The script assumes you have installed Log Parser to the default location (on a 64-bit environment). You'll also need to update the log file path and connection string (unless you just happen to have a SQL Server named **BEAST** and a database named **CaelumDW**).
 
 After running the script, you should see something like this:
 

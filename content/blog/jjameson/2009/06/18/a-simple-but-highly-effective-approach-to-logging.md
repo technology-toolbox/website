@@ -327,10 +327,10 @@ namespace Fabrikam.Demo.CoreServices.Logging
 
 > **Update 2010-03-20**
 >
-> A newer version of the **Logger** class is available in the
-> following post:
+> A newer version of the **Logger** class is available in the following post:
 >
 > <cite>Logging Exceptions in .NET Applications</cite>
+>
 > [http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications)
 
 Note that the Logger.cs file actually includes `#define TRACE` at  the top of the file. This is because I originally wrote this class with an old version  of Visual Studio (which did not define this compilation constant by default when  creating new projects). Visual Studio 2008 projects include this in the project  options by default (for both Debug and Release configurations), so this is superfluous.

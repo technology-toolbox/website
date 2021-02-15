@@ -280,12 +280,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 
 > **Note**
 >
-> When doing TDD, we typically want to work in very small increments (i.e.
-> get our existing tests to pass before adding more complexity). However,
-> in this case, it makes sense to add a couple more failing unit tests (as
-> well as another class) because our goal is to implement the **Encrypt**
-> and **Decrypt** methods with as little work (i.e. custom code)
-> as possible.
+> When doing TDD, we typically want to work in very small increments (i.e. get our existing tests to pass before adding more complexity). However, in this case, it makes sense to add a couple more failing unit tests (as well as another class) because our goal is to implement the **Encrypt** and **Decrypt** methods with as little work (i.e. custom code) as possible.
 
 Next, copy/paste the **EncryptionService** class (i.e. EncryptionService.cs)  to create the **InternalEncryptionService** class and make the necessary  changes to inherit from **SqlMembershipProvider** (note that you'll  need to add references to System.Configuration and System.Web):
 
@@ -383,12 +378,9 @@ With the **InternalsVisibleToAttribute** specifed, the solution  builds and we n
 >
 > If you tend to run your unit tests in Visual Studio using the **Test
 > List Editor** (like I do) then I recommend adding the **Full
-> Class Name** column to the view (in order to resolve any ambiguity
-> between unit tests and easily identify the class where the unit test is
-> implemented). You should also consider adding this column to the **
+> Class Name** column to the view (in order to resolve any ambiguity between unit tests and easily identify the class where the unit test is implemented). You should also consider adding this column to the **
 > Test Results** window. [Personally, I find the **Full Class
-> Name** column to be much more valuable than the **Project**
-> column that gets added by default.]
+> Name** column to be much more valuable than the **Project** column that gets added by default.]
 
 Now let's focus on getting the two unit tests for the **InternalEncryptionService**  class to pass.
 
@@ -671,10 +663,7 @@ Note that some changes might be needed to the previously developed unit tests  -
 
 > **Important**
 >
-> Whenever you are changing existing unit tests (for the purposes of refactoring
-> or other reasons), be careful not to mistakenly change the intent of the
-> unit test -- unless, of course, the unit test fails because of an *expected*
-> change in behavior of the underlying code.
+> Whenever you are changing existing unit tests (for the purposes of refactoring or other reasons), be careful not to mistakenly change the intent of the unit test -- unless, of course, the unit test fails because of an *expected* change in behavior of the underlying code.
 
 Given the length of this post, I'll leave the rest of the work on the encryption  service as an exercise for the reader ;-)
 
