@@ -91,8 +91,7 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > **Update (2009-10-29)**
 >
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't
-> specify the **WSS\_ADMIN\_WPG** group -- only the **
-> WSS\_WPG** group.
+> specify the **WSS\_ADMIN\_WPG** group -- only the **WSS\_WPG** group.
 >
 > Ugh...that will teach me to try to recall something like this from
 > memory. When I was writing this blog post, I mistakenly thought that

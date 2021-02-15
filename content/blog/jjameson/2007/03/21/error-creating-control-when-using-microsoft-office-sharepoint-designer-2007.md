@@ -43,8 +43,8 @@ Figure 1: SharePoint Designer - "Error Creating Control"
 5. In the **Security Adjustment Wizard**, ensure **Make changes
    to this computer** is selected and then click **Next**.
 6. Select **Local Intranet**, in the **Choose the level of trust
-   for assemblies from this zone** section, click and drag the slider to **                Full Trust**, and then click **Next**.
-7. Confirm the setting in the **Summary of changes** and then click **            Finish**.
+   for assemblies from this zone** section, click and drag the slider to **Full Trust**, and then click **Next**.
+7. Confirm the setting in the **Summary of changes** and then click **Finish**.
 
 Restart SharePoint Designer and you should be "good-to-go."
 

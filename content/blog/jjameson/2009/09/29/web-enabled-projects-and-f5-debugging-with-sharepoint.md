@@ -73,8 +73,7 @@ To ensure ASP.NET debugging is enabled on the Web site [note these instructions 
 3. Expand **Sites**.
 4. Select the Web site or application that you want to debug.
 5. Under the **ASP.NET** section, double-click **.NET Compilation**.
-6. Under the **Behavior** section, ensure the value of **
-   Debug** is set to **True**.
+6. Under the **Behavior** section, ensure the value of **Debug** is set to **True**.
 7. If necessary, click **Apply** in the **Actions** pane.
 
 Assuming you have deployed your solution and activated your features, your can  now set a breakpoint and press <kbd>F5</kbd> to start debugging. Woohoo!

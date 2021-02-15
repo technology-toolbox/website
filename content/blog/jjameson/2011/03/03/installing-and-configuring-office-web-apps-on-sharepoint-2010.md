@@ -75,8 +75,7 @@ of HTTP:
    **Trusted File Locations**.
 4. On the **Excel Services Application Trusted File Locations** page, click the default trusted file location (**http://**)
    to edit the corresponding settings.
-5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **
-   Address** from **http://** to **https://**
+5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://**
    and then click **OK**.
 
 > **Note**

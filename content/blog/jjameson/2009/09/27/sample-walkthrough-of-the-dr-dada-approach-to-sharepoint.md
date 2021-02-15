@@ -116,8 +116,7 @@ delete the default **Class1.cs** file (which gets created with
 every **Class Library** project), add some
 [linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the
 assembly, configure shared assembly information for the new project (as described
-in my previous posts), and add some assembly references (e.g. to the **
-CoreServices** project as well as to the System.Web and Microsoft.SharePoint
+in my previous posts), and add some assembly references (e.g. to the **CoreServices** project as well as to the System.Web and Microsoft.SharePoint
 assemblies).
 
 To ensure the solution delivered to Fabrikam adheres to development best
@@ -528,8 +527,7 @@ variable or as a parameter to the script.
 ### Deactivating the Features and Removing the Solution
 
 Removing the solution is simply a matter of calling **Deactivate Features.cmd**,
-followed by **Retract Solution.cmd**, and then finally **
-Delete Solution.cmd**.
+followed by **Retract Solution.cmd**, and then finally **Delete Solution.cmd**.
 
 Here are the contents of **Deactivate Features.cmd**:
 
@@ -780,8 +778,7 @@ echo Done
 ```
 
 Note that **GAC Assemblies.cmd** updates all assemblies contained
-in the SharePoint WSP. This allows us, for example, to fix a bug in **
-Fabrikam.Demo.CoreServices.dll** and still use the **GAC Assemblies.cmd** script to quickly deploy the code change.
+in the SharePoint WSP. This allows us, for example, to fix a bug in **Fabrikam.Demo.CoreServices.dll** and still use the **GAC Assemblies.cmd** script to quickly deploy the code change.
 
 Also note that you need to recycle the application pool for your SharePoint
 site after updating the assemblies in the GAC:

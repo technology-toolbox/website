@@ -40,7 +40,7 @@ I also mentioned that the user control originally contained the following code:
 
 In addition to the two problems with this code that I covered in my previous post,         I mentioned there was another issue with the original declaration of the `<object>` element for the Silverlight control.
 
-Here's a partial screenshot of the home page of the portal, after clicking the **            Site Actions** menu and then clicking **Edit Page**.
+Here's a partial screenshot of the home page of the portal, after clicking the **Site Actions** menu and then clicking **Edit Page**.
 
 ![No menus open](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20No%20menu%20open.png)
 Figure 1: No menus open

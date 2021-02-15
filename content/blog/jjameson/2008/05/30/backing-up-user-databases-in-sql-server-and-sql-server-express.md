@@ -19,7 +19,7 @@ tags: ["SQL Server", "WSUS", "
 
 Since I appear to be on a roll with my blog this morning, I figured that I should         write one more post about SQL Server before I get back to my "day job."
 
-I typically use SQL Server Management Studio to configure and schedule database         backups, because the** Maintenance Plan Wizard** makes         it very quick and easy to click through a few screens and select the appropriate         options. However, on some of the servers running in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), I only have SQL Server Express         installed, not the full SQL Server product. For example, on my server that runs         Windows Server Update Services (WSUS), I use SQL Server Express as the "backend"         storage solution, because for this particular scenario, I want to keep the database         local instead of relying on a separate server. However, I still want to ensure that         I have periodic backups of the databases.
+I typically use SQL Server Management Studio to configure and schedule database         backups, because the **Maintenance Plan Wizard** makes          it very quick and easy to click through a few screens and select the appropriate         options. However, on some of the servers running in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), I only have SQL Server Express         installed, not the full SQL Server product. For example, on my server that runs         Windows Server Update Services (WSUS), I use SQL Server Express as the "backend"         storage solution, because for this particular scenario, I want to keep the database         local instead of relying on a separate server. However, I still want to ensure that         I have periodic backups of the databases.
 
 In order to make this as painless as possible, I wrote the following script:
 
@@ -106,7 +106,7 @@ WHILE @id IS NOT NULL BEGIN
 END
 ```
 
-Well, technically, it's a stored procedure, but nevertheless I still keep the script         to generate the sproc in my toolbox: **BackupUserDatabases.sql**. Notice         that I create the sproc in a separate database (I arbitrarily chose the name **            Tools**).
+Well, technically, it's a stored procedure, but nevertheless I still keep the script         to generate the sproc in my toolbox: **BackupUserDatabases.sql**. Notice         that I create the sproc in a separate database (I arbitrarily chose the name **Tools**).
 
 I can then schedule full, differential, and transaction log backups using scheduled         tasks, as shown below.
 

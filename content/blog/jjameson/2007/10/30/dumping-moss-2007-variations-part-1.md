@@ -27,11 +27,11 @@ We first encountered this problem about four weeks ago when we noticed that page
    because their Content Types do not match.
 2. Object reference not set to an instance of an object.
 
-The first error is due to the fact that MOSS 2007 does not automatically change         the content type of the variation page to match the source page and instead simply         throws an error. As the error message clearly states, the pages are not "paired         up" (which I infer to mean that there is no corresponding entry in the hidden **            Relationships List**) and therefore no updates are propagated to the         variation site (e.g. "ja-JP") when changes are made to a page on the source site         (in our case, "en-US"). [Make note of the hidden **Relationships List**         -- it becomes important in part 2 of this series.]
+The first error is due to the fact that MOSS 2007 does not automatically change         the content type of the variation page to match the source page and instead simply         throws an error. As the error message clearly states, the pages are not "paired         up" (which I infer to mean that there is no corresponding entry in the hidden **Relationships List**) and therefore no updates are propagated to the         variation site (e.g. "ja-JP") when changes are made to a page on the source site         (in our case, "en-US"). [Make note of the hidden **Relationships List**         -- it becomes important in part 2 of this series.]
 
 To be honest, we "punted" the errors in the second category above (i.e. those caused         by some mysterious NullReferenceException), since there weren't very many and we         had more important problems to investigate. Besides, we could always come back to         that later if we found it still occurred in subsequent builds of our solution.
 
-The fundamental problem is that we change the content type (and page layout) of         the default pages in order to display the hierarchy of Frequently Asked Questions         (FAQs) next to a list of the FAQs for the currently selected site within the hierarchy.         This is cleverly done using a custom page layout that one of my fellow MCS team         members, Ron Tielke, developed that contains an ASP.NET menu control on the left         and a Content Query Web Part on the right. In other words, the content type of **            default.aspx** starts out as **Welcome Page** (since we         are using the OOTB **Publishing with Workflow** site definition), but         we change it to **FAQ Node Page** (a custom content type that we have         defined which derives from **Page** -- just like **Welcome Page**).         Consequently, users can drill down into the FAQ sites and view FAQs within a particular         category.
+The fundamental problem is that we change the content type (and page layout) of         the default pages in order to display the hierarchy of Frequently Asked Questions         (FAQs) next to a list of the FAQs for the currently selected site within the hierarchy.         This is cleverly done using a custom page layout that one of my fellow MCS team         members, Ron Tielke, developed that contains an ASP.NET menu control on the left         and a Content Query Web Part on the right. In other words, the content type of **default.aspx** starts out as **Welcome Page** (since we         are using the OOTB **Publishing with Workflow** site definition), but         we change it to **FAQ Node Page** (a custom content type that we have         defined which derives from **Page** -- just like **Welcome Page**).         Consequently, users can drill down into the FAQ sites and view FAQs within a particular         category.
 
 Once we understood the nature of the error, we believed that we could circumvent         the problem with custom content types by waiting until after the variation sites         and pages are propagated (and "paired up") before changing the content type. In         fact, this worked...for a while.
 
@@ -48,7 +48,7 @@ To avoid the "Content Types do not match" problem, we modified our content migra
 
 Last week, I had a conversation with the Program Manager who spec'ed the Variations         feature and he was quick to trump what I consider to be a SharePoint bug with the         "by design" card. He cited the fact that there are many things not handled by the         variations feature, such as lists, document libraries, etc.
 
-I am fine with those limitations (in part because I had read about them months ago         when researching the variations feature so I knew to set some expectations with         the customer on what variations will and will not do). Acknowledging that MOSS 2007         variations is all about Web Content Management (WCM), it is perfectly reasonable         that the propagation only include the **Pages** library (or the **            Paginas** library, as we discovered during our testing of the SharePoint         language packs -- but that's a funny story that deserves a post of its own, some         other time perhaps).
+I am fine with those limitations (in part because I had read about them months ago         when researching the variations feature so I knew to set some expectations with         the customer on what variations will and will not do). Acknowledging that MOSS 2007         variations is all about Web Content Management (WCM), it is perfectly reasonable         that the propagation only include the **Pages** library (or the **Paginas** library, as we discovered during our testing of the SharePoint         language packs -- but that's a funny story that deserves a post of its own, some         other time perhaps).
 
 As I mentioned earlier, our workaround (i.e. modifying our content migration tools)         worked for a while, however we discovered just how "brittle" our solution was when         we attempted to create a new variation label. Yep, you guessed it...lots of errors         about "failed to pair up pages ... and ... because their Content Types         do not match."
 
@@ -69,33 +69,25 @@ Here are the repro steps to break the variations feature using no custom code an
 4. Create a new variation label with the following:
 
 **Label Name: en-US
-
-                Display Name: English (United States)
-    
-                Locale: English (United States)
-    
-                Source Variation: Yes
-    
-                Publishing site template: Publishing Site with Workflow
-
+Display Name: English (United States)
+Locale: English (United States)
+Source Variation: Yes
+Publishing site template: Publishing Site with Workflow
 **
 5. Create the variation hierarchies (to create the **/en-US** site)
 6. Create a new site under the variation source site (**/en-US/foo**)
 7. Change the content type of the default page in the new site (**/en-US/foo/default.aspx**)
 from **Welcome Page** to **Article Page**. Note that in
-order to change the content type of the page, you need to view the underlying **                Pages** library (use **Site Actions** --&gt; **View All Site
+order to change the content type of the page, you need to view the underlying **Pages** library (use **Site Actions** --&gt; **View All Site
 Content**) and then edit the properties on the page.
 8. Change the page layout to **Article page with summary links** and approve
 the page.
 9. Create a new variation label with the following:
 
 **Label Name: ja-JP
-
-                Display Name: Japanese
-    
-                Locale: Japanese**
-
-10. Create the variation hierarchies (to create the **/ja-JP** and **            /ja-JP/foo** sites)
+Display Name: Japanese
+Locale: Japanese**
+10. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo** sites)
 11. View the variation logs and notice the failure with the following error:
 
 > The variation system failed to pair up pages http://foobar/en-US/foo/Pages/default.aspx                 and /ja-JP/foo/Pages/default.aspx because their Content Types do not match.

@@ -26,7 +26,7 @@ Like many of you out there, I receive a lot of email on a daily basis. Now imagi
 
 As a consultant, I find the key to effectively managing my inbox is separating the         important messages from the lower priority items. For example, email specific to         the particular project I am working on at any given time is definitely at the top         of the "important" list, whereas the numerous messages that I receive simply by         being a member of a DL (distribution list) are lower priority.
 
-Most of you are probably already using the **E-mail Rules** feature         in Outlook to help manage your inboxes. If not, then open Outlook, and on the **            Tools** menu, click **Rules and Alerts**.
+Most of you are probably already using the **E-mail Rules** feature         in Outlook to help manage your inboxes. If not, then open Outlook, and on the **Tools** menu, click **Rules and Alerts**.
 
 This post details the rules that I use for ensuring my Outlook **Inbox**         folder only contains the really good stuff (and how everything else gets shuffled         off to a different location).
 

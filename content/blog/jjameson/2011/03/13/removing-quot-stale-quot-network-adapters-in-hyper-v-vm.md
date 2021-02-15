@@ -51,8 +51,7 @@ Here is the process that I use to cleanup the network adapters:
    4. If you notice any extra **Microsoft ISATAP Adapter** items,
       then uninstall those as well. (I occasionally see these, but it doesn't
       happen all the time like the duplicate VM Bus network adapters.)
-   5. Right-click **Network adapters** and then click **
-      Scan for hardware changes**. (This will recreate the default adapter
+   5. Right-click **Network adapters** and then click **Scan for hardware changes**. (This will recreate the default adapter
       named "Microsoft Virtual Machine Bus Network Adapter".)
 
 You should now have exactly one VM Bus network adapter (and one Microsoft ISATAP  Adapter).

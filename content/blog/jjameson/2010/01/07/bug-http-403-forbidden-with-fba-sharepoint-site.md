@@ -66,7 +66,7 @@ IE, the seamless redirect works as expected.
 > **You cannot view a forms-based authentication Windows SharePoint
 > Services 3.0 site if you have Office Live Update 1.2 for Microsoft Office
 > Live Workspace installed
-> ** [http://support.microsoft.com/kb/972535](http://support.microsoft.com/kb/972535)
+> **[http://support.microsoft.com/kb/972535](http://support.microsoft.com/kb/972535)
 >
 > According to the KB article, it is fixed in the June 2009 Cumulative
 > Update (CU). From my experience, it also appears to be fixed by installing

@@ -73,8 +73,7 @@ minimal white space between them). In other words, imagine the "minus" icon
 were directly below the "dashed arrow" icon used in the **Most Popular
 Posts** section.
 
-Consequently, in cases where the list item spans two lines (e.g. **
-Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010)**)
+Consequently, in cases where the list item spans two lines (e.g. **Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010)**)
 the "minus" icon would appear below the "dashed arrow" icon (which would definitely
 confuse users).
 

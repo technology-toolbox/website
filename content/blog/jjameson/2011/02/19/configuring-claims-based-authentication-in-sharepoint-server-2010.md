@@ -104,8 +104,7 @@ In this step, the database for storing ASP.NET membership and role information  
 
 #### To add the service accounts to the membership/role database:
 
-1. On a computer with SQL Server management tools installed, click **
-   Start**, point to **All Programs**, click **Microsoft
+1. On a computer with SQL Server management tools installed, click **Start**, point to **All Programs**, click **Microsoft
    SQL Server 2008**, and then click **SQL Server Management Studio**.
    The **Connect to Server** dialog box opens.
 2. In the **Server type** list, click **Database Engine**.
@@ -478,8 +477,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
    default provider is not a trusted provider, click **OK**.
 3. In the **Actions** pane, click **Set Default Provider...**
 4. In the **Edit .NET Users Settings** dialog box, note that the
-   default provider configured in SharePoint Server 2010 is "i". In the **
-   Default Provider** list, click **FabrikamSqlMembershipProvider**,
+   default provider configured in SharePoint Server 2010 is "i". In the **Default Provider** list, click **FabrikamSqlMembershipProvider**,
    and then click **OK**.
 5. In the **Actions** pane, click **Add...**
 6. When prompted with an error stating the default .NET Roles provider does

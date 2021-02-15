@@ -229,7 +229,7 @@ I then moved on to making the Claims Login Form Web Part more robust by adding t
 - Disable the form fields and validator controls when the page is in edit mode (so
   that content authors don't have to enter "bogus" credentials in order to save changes
   to the page)
-- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)** to automatically redirect from HTTP to HTTPS (except
+- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)**to automatically redirect from HTTP to HTTPS (except
   in development environments, of course)
 - Show a warning when the connection is not secure (i.e. in development environments
   or when the SSL redirect has been explicitly disabled via the Web.config file)
@@ -265,7 +265,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 > **Note**
 >
 > You do not need to manually add the Web.config modifications for the "Fabrikam" Web application because this is done automatically upon activation of a feature (Fabrikam Demo - Web Application Configuration).
-> 4. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
+> 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
 > Shell**, and then click **Run as administrator**. If prompted
 > by User Account Control to allow the program to make changes to the computer, click
 > **Yes**.
@@ -284,7 +284,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
     & '.\Activate Features.ps1'
     ```
 
-At this point you should be able to browse to the Fabrikam site and click the **            Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
+At this point you should be able to browse to the Fabrikam site and click the **Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
 
 > **Update (2011-02-26)**
 >

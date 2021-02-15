@@ -259,7 +259,7 @@ entries specified in [KB
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
-   and then click** Run as administrator**.
+   and then click **Run as administrator**.
 
 2. At the command prompt, type the following commands:
    
@@ -289,7 +289,7 @@ To cleanup the network adapters:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
-   and then click** Run as administrator**.
+   and then click **Run as administrator**.
 
 2. At the command prompt, type the following commands:
    
@@ -300,8 +300,7 @@ To cleanup the network adapters:
 
 3. In the **Device Manager**window:
    
-   1. Click the **View** menu and then click **
-      Show hidden devices**.
+   1. Click the **View** menu and then click **Show hidden devices**.
    2. Expand **Network adapters**.
    3. Right-click each network adapter that begins with **Microsoft
       Virtual Machine Bus Network Adapter** (e.g. "Microsoft Virtual
@@ -377,7 +376,7 @@ To configure the MaxPatchCacheSize policy:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
-   and then click** Run as administrator**.
+   and then click **Run as administrator**.
 
 2. At the command prompt, type the following command:
    
@@ -462,20 +461,17 @@ to track installations:
    and connect to the domain that you want to use.
 3. In the console tree, expand the connection, expand the domain name,
    and then click **CN=System**.
-4. In the **Actions** pane, under the **CN=System** heading, click **More Actions**, click **
-   New**, and then click **Object...**
+4. In the **Actions** pane, under the **CN=System** heading, click **More Actions**, click **New**, and then click **Object...**
 5. In the **Create Object**dialog box:
    1. In the **Select a class** list, click **container** and then click **Next**.
    2. In the **Value** box, type **Microsoft SharePoint
-      Products** as the container name, and then click **
-      Next**.
+      Products** as the container name, and then click **Next**.
    3. Click **Finish**.
 6. Double-click **CN=System** to view the items below
    it.
 7. Right click the new container (**CN=Microsoft SharePoint Products**),
    and then click **Properties**.
-8. In the **CN=Microsoft SharePoint Products Properties** window, on the **Security** tab, click **
-   Advanced**.
+8. In the **CN=Microsoft SharePoint Products Properties** window, on the **Security** tab, click **Advanced**.
 9. In the **Advanced Security Settings for Microsoft SharePoint
    Products** window, on the **Permissions** tab, in
    the **Permission entries** list, click **Authenticated
@@ -497,7 +493,7 @@ to the loopback address:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
-   and then click** Run as administrator**.
+   and then click **Run as administrator**.
 
 2. At the command prompt, type the following command:
    
@@ -583,7 +579,7 @@ Environment (ISE):
 To install Visual Studio 2010:
 
 1. Start the Visual Studio 2010 installation.
-2. On the** Welcome to the Microsoft Visual Studio 2010 installation
+2. On the **Welcome to the Microsoft Visual Studio 2010 installation
    wizard**, click **Next**.
 3. Review the licensing agreement. If you accept the terms and conditions,
    select **I have read and accept the license terms**, and
@@ -688,8 +684,7 @@ To install SQL Server:
 5. Review the licensing agreement. If you accept the terms and conditions,
    select **I accept the license terms**, and then click
    **Next**.
-6. On the **Setup Support Files** step, click **
-   Install**. Wait for the support files to be installed.
+6. On the **Setup Support Files** step, click **Install**. Wait for the support files to be installed.
 7. On the **Setup Support Rules** step, ensure no failures
    or warnings were detected (except for a warning regarding **Windows
    Firewall**) and then click **Next**.
@@ -1095,8 +1090,7 @@ To grant Administrators permissions to update
 the configuration in Windows Server 2008 R2:
 
 1. Click the **Start** menu, type **regedit**,
-   and then click **regedit.exe**. If prompted by **
-   User Account Control** to allow the program to make changes to
+   and then click **regedit.exe**. If prompted by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
 2. In the **Registry Editor** window, search for "61738644-F196-11D0-9953-00C04FD919C1"
    to find:
@@ -1168,8 +1162,7 @@ To rename the TaxonomyPicker.ascx file:
 
 > **C:\Program Files\Common Files\Microsoft Shared\Web Server
 > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
-> 2. Right-click **TaxonomyPicker.ascx**, click **
-> Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
+> 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
 > When prompted to confirm that you want to change the file name extension,
 > click **Yes**.
 
@@ -1265,8 +1258,7 @@ To change the schedule for deleting timer job history:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 
 2. From the Windows PowerShell command prompt, type the following command:
    
@@ -1426,7 +1418,7 @@ Central Administration:
    1. In the **Authentication** section, click
       **Claims Based Authentication**.
    2. In the **IIS Web Site**section:
-      1. Click** Create a new IIS web site**.
+      1. Click **Create a new IIS web site**.
       2. In the **Port** and **Host Header**
          boxes, type the corresponding values for the **Fabrikam
          Extranet** Web application specified in
@@ -1584,7 +1576,7 @@ the internal Fabrikam domain:
 
 1. Click **Start**, click **All Programs**,
    click **Accessories**, right-click **Command Prompt**,
-   and then click** Run as administrator**.
+   and then click **Run as administrator**.
 
 2. Type the following command:
    
@@ -1650,8 +1642,7 @@ To add an HTTPS binding to the site in IIS:
    2. In the **SSL Certificate:** dropdown, select the
       certificate corresponding to the site (e.g. extranet.fabrikam.com).
    3. Click **OK**.
-   4. In the **Site Bindings** window, click **
-      Close**.
+   4. In the **Site Bindings** window, click **Close**.
 
 ## Enable anonymous access to the site
 
@@ -1761,8 +1752,7 @@ and role information:
       server.
    2. Ensure the **Windows authentication** option is
       selected.
-   3. In the **Database** dropdown list, type **
-      FabrikamDemo**.
+   3. In the **Database** dropdown list, type **FabrikamDemo**.
    4. Click **Next**.
 
 7. On the **Confirm Your Settings** page, verify the settings,
@@ -2008,8 +1998,7 @@ To create a user for the Fabrikam Extranet:
       the appropriate values in the **User Name**,
       **E-mail**, **Password**, **Confirm
       Password**, **Question**, and **Answer** boxes, and then click **Next**.
-   2. On the **.NET User Roles** page, click **
-      Finish**.
+   2. On the **.NET User Roles** page, click **Finish**.
 8. In the **Actions** pane, click **Set Default
    Provider...**
 9. In the **Edit .NET Users Settings** dialog box, in
@@ -2209,8 +2198,7 @@ Application:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 2. From the Windows PowerShell command prompt, change to the following
    directory:
 
@@ -2244,29 +2232,25 @@ To configure the crawl schedules:
 
 1. On the Central Administration home page, in the **Application
    Management** section, click **Manage service applications**.
-2. On the **Service Applications** tab, click **
-   Search Service Application** (where the **Type**
+2. On the **Service Applications** tab, click **Search Service Application** (where the **Type**
    column is **Search Service Application**).
 3. On the **Search Administration** page, in the
    **Crawling** section, click **Content Sources**.
 4. On the **Manage Content Sources** page, click
    **Local SharePoint sites** to edit the
    content source.
-5. On the **Edit Content Source** page, in the **
-   Crawl Schedules** section, under **Full Crawl**,
+5. On the **Edit Content Source** page, in the **Crawl Schedules** section, under **Full Crawl**,
    click **Create schedule**.
 6. On the **Manage Schedules** page, configure the type
    of schedule and the schedule settings specified in
    Table 11, and then click
    **OK**.
-7. On the **Edit Content Source** page, in the **
-   Crawl Schedules** section, under **Incremental Crawl**,
+7. On the **Edit Content Source** page, in the **Crawl Schedules** section, under **Incremental Crawl**,
    click **Create schedule**.
 8. On the **Manage Schedules** page, configure the type
    of schedule and the schedule settings specified in Table 11, and then
    click **OK**.
-9. On the **Edit Content Source** page, in the **
-   Start Full Crawl** section, click the **Start full crawl
+9. On the **Edit Content Source** page, in the **Start Full Crawl** section, click the **Start full crawl
    of this content source** checkbox.
 10. Click **OK**.
 
@@ -2342,8 +2326,7 @@ Administration:
 
 1. On the Central Administration home page, under **System Settings**,
    click **Manage services on server**.
-2. On the **Services on server** page, in the **
-   Server** control, select a server, and then start **Excel
+2. On the **Services on server** page, in the **Server** control, select a server, and then start **Excel
    Calculation Services**, **PowerPoint Service**,
    and **Word Viewing Service**. Repeat this step for each
    SharePoint server in the farm.
@@ -2365,8 +2348,7 @@ To create the service applications and proxies:
       **PowerPoint Service Application**, and **Word
       Viewing Service**.
    3. Click **Next**.
-5. When prompted to create a new top-level Web site, click **
-   Skip**.
+5. When prompted to create a new top-level Web site, click **Skip**.
 6. On the **Configure your SharePoint Farm** completion
    page, click **Finish**.
 
@@ -2395,8 +2377,7 @@ trusted location for HTTPS instead of HTTP:
 
 1. On the Central Administration home page, in the **Application
    Management** section, click **Manage service applications**.
-2. On the **Service Applications** tab, click **
-   Excel Services Application** (where the **Type**
+2. On the **Service Applications** tab, click **Excel Services Application** (where the **Type**
    column is **Excel Services Application Web Service Application**).
 3. On the **Manage Excel Services Application** page,
    click **Trusted File Locations**.
@@ -2508,8 +2489,7 @@ access to the content database:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 
 2. From the Windows PowerShell command prompt, type the following commands:
    
@@ -2541,8 +2521,7 @@ To add the new event source:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 2. From the Windows PowerShell command prompt, change to the following
    directory:
 
@@ -2566,8 +2545,7 @@ To install and activate the features:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 2. From the Windows PowerShell command prompt, change to the following
    directory:
 
@@ -2652,8 +2630,7 @@ partner using the PowerShell script:
    click **Microsoft SharePoint 2010 Products**, right-click
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
-   to allow the program to make changes to the computer, click **
-   Yes**.
+   to allow the program to make changes to the computer, click **Yes**.
 2. From the Windows PowerShell command prompt, change to the following
    directory:
 

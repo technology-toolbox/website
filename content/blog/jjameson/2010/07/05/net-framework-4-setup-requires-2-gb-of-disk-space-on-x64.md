@@ -47,7 +47,7 @@ Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements
 Of course, had I actually read the **System Requirements** section         of the [.NET Framework Download
 page](http://www.microsoft.com/net/Download.aspx) beforehand, I would have known that the minimum disk space required         by the .NET Framework 4 is much higher than I thought (for x64, the stated minimum         is 2 GB -- slightly higher than the 1863 MB threshold enforced by the setup program).
 
-Once I freed up the necessary disk space on the server, I was able to click **            Refresh** and then click **Next** to proceed with the install         (which completed without issue).
+Once I freed up the necessary disk space on the server, I was able to click **Refresh** and then click **Next** to proceed with the install         (which completed without issue).
 
 It still seems a little shocking that nearly 2 GB of disk space can be subsequently         consumed after installing a 48.1 MB download, but I did, in fact, end up with a         mere 107 MB of free space after installing .NET Framework 4 on this server (that         is, until I expanded the corresponding VHD file for the VM).
 

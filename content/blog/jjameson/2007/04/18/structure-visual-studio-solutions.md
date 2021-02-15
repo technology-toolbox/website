@@ -67,7 +67,7 @@ A few notes...
 3. The **CoreServices.DeveloperTests** project contains all of the unit
    tests (created by the Development team) for the **CoreServices** project.
    While we could certainly choose to leave the project in the default **CoreServices.DeveloperTests** folder created by Visual Studio (i.e. C:\NotBackedUp\Microsoft\Samples\Main\CoreServices.DeveloperTests),
-   it only takes about 30 seconds to remove the project, rename the folder from **                CoreServices.DeveloperTests** to just **DeveloperTests**
+   it only takes about 30 seconds to remove the project, rename the folder from **CoreServices.DeveloperTests** to just **DeveloperTests**
    and then add the file again. The short reason is that I really hate to see "dots"
    in folder names, because where do we draw the line? If you don't do this, then pretty
    soon you start seeing 30 project folders within a single folder.

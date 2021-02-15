@@ -57,7 +57,7 @@ There are a couple of significant problems with reactive branching:
   labels can be manipulated and therefore may not be sufficiently "bulletproof" to
   meet your requirements.
 - We could still use reactive branching, but avoid merging through **Release**
-  by renaming a branch (e.g. the **Release** branch is renamed to **                Service Pack**, and a new **Release** branch is created
+  by renaming a branch (e.g. the **Release** branch is renamed to **Service Pack**, and a new **Release** branch is created
   and "locked down" from a permissions perspective). However, this requires significantly
   more work with each release -- work that can be avoided altogether by using the
   branching strategy shown in Figure 1.

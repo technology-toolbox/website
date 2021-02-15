@@ -22,8 +22,7 @@ a few minutes creating a blog post about them just in case.
 
 As I mentioned before, I created these unit tests to validate my custom JavaScript
 error filter (in other words, the content of the `errorFilter/test/jscript/expression`
-element in Web.config). In ELMAH, this filter is implemented in the **
-JScriptAssertion** class.
+element in Web.config). In ELMAH, this filter is implemented in the **JScriptAssertion** class.
 
 However, I didn't start by creating a unit test for **JScriptAssertion**.
 Rather, as I typically do when approaching a problem, I started with a simpler

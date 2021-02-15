@@ -20,8 +20,7 @@ the following:
 
 Adding a folder to the Path environment variable is pretty basic stuff and
 it probably doesn't take more than 30 seconds to click through **Control
-Panel** → **System and Security** → **
-System** → **Advanced system settings** →
+Panel** → **System and Security** → **System** → **Advanced system settings** →
 **Environment Variables** (or one of the equivalent shortcuts)
 and add this to %Path%.
 

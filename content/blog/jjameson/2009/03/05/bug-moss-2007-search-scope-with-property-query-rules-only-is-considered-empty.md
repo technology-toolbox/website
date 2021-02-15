@@ -15,7 +15,7 @@ tags: ["MOSS 2007"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In Microsoft Office SharePoint Server (MOSS) 2007 version 12.0.0.6335 (i.e. the         December 2008 CU), there appears to be a bug where a scope that only contains **            Property Query** rules is not recognized as having any rules at all (i.e.         empty) and therefore is not compiled.
+In Microsoft Office SharePoint Server (MOSS) 2007 version 12.0.0.6335 (i.e. the         December 2008 CU), there appears to be a bug where a scope that only contains **Property Query** rules is not recognized as having any rules at all (i.e.         empty) and therefore is not compiled.
 
 ![Search scope bug in MOSS 2007 December 2008 CU](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS%202007%20Search%20Scope%20bug.jpg)
 Figure 1: Search scope bug in MOSS 2007 December 2008 CU

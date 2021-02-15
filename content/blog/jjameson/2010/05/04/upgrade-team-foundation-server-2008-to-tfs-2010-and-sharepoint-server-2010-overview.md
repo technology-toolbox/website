@@ -139,8 +139,7 @@ or Migration Upgrade of Team Foundation Server on One or More Servers**),  along
 | Restore your data. | When restoring data from the Production environment to the Test environment 
 	to perform a test of the upgrade process, I used SQL Server Management Studio 
 	to add permissions for the corresponding test accounts.<br><br>For example, I added **TECHTOOLBOX\svc-tfs-test** to the 
-	corresponding TFS databases and gave it the same permissions as **
-	TECHTOOLBOX\svc-tfs**. Similarly, I added **TECHTOOLBOX\CYCLOPS-TEST$** 
+	corresponding TFS databases and gave it the same permissions as **TECHTOOLBOX\svc-tfs**. Similarly, I added **TECHTOOLBOX\CYCLOPS-TEST$** 
 	and give it the same permissions as **TECHTOOLBOX\CYCLOPS$** 
 	(to grant acceess to services configured to run as **NT AUTHORITY\NETWORK 
 	SERVICE**).<br><br>I used the SharePoint **Mount-SPContentDatabase** cmdlet 

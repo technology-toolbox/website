@@ -78,8 +78,7 @@ the "investigation" phase after switching to Ask Mode.
 > as we transition from Tell Mode to Ask Mode, there is a noticeable shift
 > in focus.
 >
-> During Tell Mode, work items are often immediately triaged as **
-> Approved**, or work items triaged as **Investigate**
+> During Tell Mode, work items are often immediately triaged as **Approved**, or work items triaged as **Investigate**
 > are often just fixed without further review. This is no longer the case
 > once we enter Ask Mode.
 >
@@ -233,7 +232,7 @@ to -- unless you actually were a member of this project ;-)
 > value to allow 1000 results. (1 hour).
 >
 > **Release Management** **
-> ** Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
+> **Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
 > (1 hour)
 >
 > **Test**

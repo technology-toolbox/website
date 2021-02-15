@@ -112,7 +112,7 @@ Personally, I'm not a big fan of implicit lazy loading like this in public APIs 
 
 If I eliminate the code that validates the page layout matches the expected value, the number of database roundtrips is reduced to 53.
 
-Here is the complete code sample from my proof-of-concept (in case you want to walk through it on your own). You simply need to create a new C# console application in Visual Studio, add a few references (**Microsoft.SharePoint**, **Microsoft.SharePoint.Publishing**, and** Microsoft.SharePoint.Security** ), and then call **PublishingDemo.Execute** in the main class (after substituting the URLs for your environment, of course).
+Here is the complete code sample from my proof-of-concept (in case you want to walk through it on your own). You simply need to create a new C# console application in Visual Studio, add a few references (**Microsoft.SharePoint**, **Microsoft.SharePoint.Publishing**, and **Microsoft.SharePoint.Security** ), and then call **PublishingDemo.Execute** in the main class (after substituting the URLs for your environment, of course).
 
 ```
 using System;

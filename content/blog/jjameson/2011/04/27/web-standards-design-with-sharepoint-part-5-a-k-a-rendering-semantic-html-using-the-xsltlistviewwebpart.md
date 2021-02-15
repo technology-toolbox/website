@@ -49,7 +49,7 @@ However, we need to think a little bit about the **Price** column.         We co
 - "$9.98 / lb" (missing period on the abbreviation)
 - "$9.98 / bl." (yikes, what is a "bl."?!)
 
-Therefore, let's instead break the price into two parts: **Unit Price**         and **Unit of Measure**. We can then use a calculated column for **            Price (**in order to concatenate the values specified in the other two         columns).
+Therefore, let's instead break the price into two parts: **Unit Price**         and **Unit of Measure**. We can then use a calculated column for **Price (**in order to concatenate the values specified in the other two         columns).
 
 <caption>            Data for "This Week's Specials"</caption>|                     Title<br>                 |                     Unit Price<br>                 |                     Unit of Measure<br>                 |                     Price<br>                 |                     Rollup Image<br>                 |
 | --- | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ Therefore, let's instead break the price into two parts: **Unit Price**         
 Here's a breakdown of the custom SharePoint list:
 
 - Name: **Specials**
-- Description:** Items in this list appear in the "This Week's Specials" section
+- Description: **Items in this list appear in the "This Week's Specials" section
   of the site home page.**
 - Columns:
   - **Title** (Single line of text, Required)
@@ -133,7 +133,7 @@ Start SharePoint Designer 2010 and open the site containing the **Specials**    
 
 Click the new page to view the settings for the page. In the **Customization** section, click **Edit file**.
 
-In the page editor, in the **Insert** tab on the ribbon, click **            Data View** and then click **Specials** to insert a new         Web Part. Select the List View Web Part, click the **Design** tab on         the ribbon, click **Customize XSLT**, and then click **Customize
+In the page editor, in the **Insert** tab on the ribbon, click **Data View** and then click **Specials** to insert a new         Web Part. Select the List View Web Part, click the **Design** tab on         the ribbon, click **Customize XSLT**, and then click **Customize
 Entire View**.
 
 Switch to the **Code** view for the page and locate the `<WebPartPages:XsltListViewWebPart>` element. Right-click the         `<xsl:stylehsheet>` element within the `<xsl>`         element for the Web Part, click **Select Tag**, and then delete the         default XSL stylesheet.
@@ -301,7 +301,7 @@ Obviously the image URLs are invalid (outside the context of the SharePoint site
 
 However, there is still one minor discrepancy between the dynamic HTML generated         using the above XSLT and the original static HTML created by Dan. The problem is         that the third list item needs to have an additional CSS class name specified (in         other words, for the last item in the list we need to render `<li class="group third">` instead of `<li class="group">`).
 
-Fortunately, this is very easy to achieve using a little more XSLT. Here is the         final version of the XSL stylesheet that I developed to render items in the **            Specials** list to match the original HTML specified by the Web designer         (Dan):
+Fortunately, this is very easy to achieve using a little more XSLT. Here is the         final version of the XSL stylesheet that I developed to render items in the **Specials** list to match the original HTML specified by the Web designer         (Dan):
 
 ```
 <xsl:stylesheet version='1.0'

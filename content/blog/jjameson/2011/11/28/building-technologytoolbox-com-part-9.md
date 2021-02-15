@@ -320,15 +320,14 @@ to the **BlogHelper.GetEntryUrl** method:
                         ...
                     </li>
                     <li class="comments none">
-                        <asp:HyperLink runat="server"
-                          NavigateUrl='<%# string.Format(
+                        <asp:HyperLink runat="server" NavigateUrl='<%# string.Format(
                             "{0}#postComments",
                             BlogHelper.GetEntryUrl(
                                 (string) Eval("EntryName"),
                                 (DateTime) Eval("DateSyndicated"))) %>'>
                           <span class="label">Comments: </span>
                           <span class="value count">{TODO: 0}</span>
-                        </asp:HyperLink>                    </li>
+                        </asp:HyperLink>                     </li>
                 </ul>
                 ...
             </div>

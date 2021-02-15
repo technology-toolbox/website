@@ -202,7 +202,7 @@ To add the SharePoint administrators group to the local WSS\_ADMIN\_WPG group, o
 
 To add the SharePoint administrators group to the database role, on the database         server:
 
-1. Click **Start**, point to **All Programs**, point to **            Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
+1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
    The **Connect to Server** dialog box opens.
 2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the configuration database, and then click
@@ -211,7 +211,7 @@ To add the SharePoint administrators group to the database role, on the database
    expand **Logins**.
 5. If the SharePoint administrators group does not exist, right-click **Logins**
    and click **New login**. If the SharePoint administrator group already
-   has a corresponding login for SQL Server, right-click the login and then click **                Properties**.
+   has a corresponding login for SQL Server, right-click the login and then click **Properties**.
 6. In the login properties dialog box:
    1. On the **General** page, in the **Login name** box, type
       the name of the SharePoint administrators group from [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) using the form {DOMAIN}\{group name}.
@@ -249,7 +249,7 @@ In order to avoid errors in the Windows event log (e.g. Source: SharePoint Found
 
 To fix the TaxonomyPicker.ascx file:
 
-1. Click **Start**, point to **All Programs**, point to **                Accessories**, and right-click **Command Prompt**, and then
+1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then
    click **Run as administrator**.
 
 2. At the command prompt, type the following command:
@@ -394,7 +394,7 @@ If necessary, restore the TFS and SharePoint databases from the backups taken at
 
 To connect to the existing ReportServer and ReportServerTempDB databases on the         TFS database server:
 
-1. Click **Start**, point to **All Programs**, point to **            Microsoft SQL Server 2008**, point to **Configuration Tools**,
+1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, point to **Configuration Tools**,
    and click **Reporting Services Configuration Manager**. If prompted
    by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
@@ -402,7 +402,7 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 3. In the **Server Name** box, ensure the TFS application server is specified.
    In **Report Server Instance**, ensure the correct instance is specified.
    Click **Connect**.
-4. On the **Reporting Services Configuration Manager** page, click **            Start** if the Report Service status reads **Stopped**.
+4. On the **Reporting Services Configuration Manager** page, click **Start** if the Report Service status reads **Stopped**.
 5. In the navigation bar, click **Web Service URL**.
 6. On the **Web Service URL** page, click **Apply** to accept
    the default values in the **Virtual Directory**, **IP Address**,
@@ -413,7 +413,7 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 10. On the **Action** page of the wizard, click **Choose an existing
     report server database**, and click **Next**.
 11. On the **Database Server** page of the wizard, type the name of the
-    TFS database server (BEAST) in **Server Name**, and then click **                Test Connection**. Confirm the test connection succeeded by clicking
+    TFS database server (BEAST) in **Server Name**, and then click **Test Connection**. Confirm the test connection succeeded by clicking
     **OK**, and then click **Next.**
 12. On the **Database** page of the wizard, in the **Report Server
     Database** dropdown list, select **ReportServer**, and then
@@ -440,7 +440,7 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 22. The **Restore Encryption Key** window appears.
 23. Locate the encryption key backup file created previously, type the corresponding
     password, and then click **OK**.
-24. In the **Reporting Services Configuration Manager**, click **            Exit**.
+24. In the **Reporting Services Configuration Manager**, click **Exit**.
 
 #### Verify the Reporting Services configuration
 
@@ -474,7 +474,7 @@ Attach the content database with the existing TFS project sites (from the previo
 
 To attach the SharePoint content database by using Windows Powershell:
 
-1. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
    Shell**, and then click **Run as administrator**. If prompted
    by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
@@ -623,7 +623,7 @@ There appears to be a bug in SharePoint Server 2010 when the service account for
 
 To avoid this error, add the the second service account to the underlying content         databases. On the database server:
 
-1. Click **Start**, point to **All Programs**, point to **                Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
+1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
    The **Connect to Server** dialog box opens.
 2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the SharePoint content databases, and then
@@ -631,7 +631,7 @@ To avoid this error, add the the second service account to the underlying conten
 4. In **Object Explorer**, expand **Security**, and then
    expand **Logins**.
 5. Right-click the login corresponding to the service account used for SharePoint service
-   applications (**TECHTOOLBOX\svc-spserviceapp**) and then click **                    Properties**.
+   applications (**TECHTOOLBOX\svc-spserviceapp**) and then click **Properties**.
 6. In the login properties dialog box,
    1. On the **User Mapping** page, in the **Users mapped to the login**
       list, click the checkbox for the SharePoint content database (**WSS\_Content**),

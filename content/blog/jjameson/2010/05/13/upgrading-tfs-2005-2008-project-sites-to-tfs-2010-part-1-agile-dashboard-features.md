@@ -200,8 +200,7 @@ site -- and this time was quite happy to find the dashboards had been created.
 >
 > Even though the dashboards have been created, you still have some
 > work to do (assuming you want the dashboards and new TFS Web Parts to
-> show accurate information). This is due to the fact that the **
-> Scenario** work item type was renamed to **User Story**
+> show accurate information). This is due to the fact that the **Scenario** work item type was renamed to **User Story**
 > in MSF Agile v5, and consequently, the queries specified in some of
 > the dashboard Web Parts and Excel reports need to be updated accordingly.
 >

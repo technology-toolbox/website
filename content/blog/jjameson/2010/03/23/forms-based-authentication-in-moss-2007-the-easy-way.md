@@ -376,7 +376,7 @@ Here's the relevant code from the **SharePointWebHelper** class:
 
 #### ConfigureSqlRoleProviderJob
 
-Currently, the **SPWebConfigModification** class doesn't provide  a way to make Web.config changes for a specific zone. Consequently, the default  role provider can't be set to two different values in the Web.config files using  the** SPWebConfigModification** class.
+Currently, the **SPWebConfigModification** class doesn't provide  a way to make Web.config changes for a specific zone. Consequently, the default  role provider can't be set to two different values in the Web.config files using  the **SPWebConfigModification** class.
 
 Instead, I created a custom SharePoint timer job that reads the Web.config file  for the Internet zone and updates the default role provider if it is not currently  set to `FabrikamSqlRoleProvider`.  The custom timer is created upon activation of the FBA configuration feature (and  removed when the feature is deactivated). I scheduled the timer job to run every  two minutes (which seems reasonable given the minimal amount of work performed by  the timer job).
 

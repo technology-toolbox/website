@@ -18,7 +18,7 @@ tags: ["SharePoint 2010", "Tugboat"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)** in SharePoint 2010.
+In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)**in SharePoint 2010.
 
 > **Note**
 >
@@ -113,7 +113,7 @@ Now that we have the **XsltListViewWebPart** rendering the desired         HTML,
 
 While you could create the **Specials** list via a feature using CAML,         I prefer to create custom SharePoint lists using code instead. The reason is because         business requirements invariably change over time and I find it much easier to start         out with code since it seems almost inevitable that you'll be programmatically manipulating         SharePoint lists anyway.
 
-Here's the code I wrote to create automatically create and configure the new **            Specials** list:
+Here's the code I wrote to create automatically create and configure the new **Specials** list:
 
 ```
 private static void ConfigureSpecialsList(
@@ -416,7 +416,7 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
      Control access to Web applications
 
-2. On the **Start** menu, click **All Programs**, click **            Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
+2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
    Shell**, and then click **Run as administrator**. If prompted
    by User Account Control to allow the program to make changes to the computer, click
    **Yes**.

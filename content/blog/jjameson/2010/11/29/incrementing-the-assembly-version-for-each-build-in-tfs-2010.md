@@ -147,7 +147,7 @@ Next, set the build number using the assembly version specified in the AssemblyV
 All I'm doing here is using a little command-prompt "trickery" to read the contents         of a file (using the [`type`
 command](http://en.wikipedia.org/wiki/Type_%28command%29)). The file contains a single line of text that specifies the assembly         version (e.g. "1.0.1.0" -- without the quotes). As a result, the assembly version         is subsequently available using the **stdOutput** variable of the InvokeProcess         activity.
 
-Move the existing **Update Build Number** activity inside the InvokeProcess         activity (below the **stdOutput** variable box) and change the **            BuilderNumberFormat** property to **stdOutput**.
+Move the existing **Update Build Number** activity inside the InvokeProcess         activity (below the **stdOutput** variable box) and change the **BuilderNumberFormat** property to **stdOutput**.
 
 While I certainly don't expect any errors to occur with the InvokeProcess activity,         it's still a good idea to ensure proper error handling in our build process. Therefore,         add a **Throw** activity (below the **errOutput** variable         box) and set the **Exception** property to:
 

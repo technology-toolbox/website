@@ -32,7 +32,7 @@ Shortly after we identified the root cause of the issue I mentioned earlier,  I 
 > be implicit
 >
 > **Description:
-> ** Administrators shouldn't have to explicitly add users to the "Authenticated
+> **Administrators shouldn't have to explicitly add users to the "Authenticated
 > Users" role. Instead, membership in this role should be implicit, since anyone
 > that specifies a username/password is considered "authenticated".
 >

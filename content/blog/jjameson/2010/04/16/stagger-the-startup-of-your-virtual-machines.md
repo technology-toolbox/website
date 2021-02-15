@@ -37,7 +37,7 @@ Even though I spread the six VMs running on ROGUE across two RAID 1 arrays (to h
 All of the VMs that run on ROGUE are configured with the following setting:
 
 - **Automatic Start Action**
-  - What do you want this virtual machine to do when the physical computer starts? **                    Always start this virtual machine automatically**
+  - What do you want this virtual machine to do when the physical computer starts? **Always start this virtual machine automatically**
 
 In the **Startup delay** field, I specify the different values for         each VM.
 

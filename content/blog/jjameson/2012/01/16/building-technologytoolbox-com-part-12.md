@@ -272,8 +272,7 @@ private static string GetMonthName(
 > when this code needs to support other scenarios, then -- and probably
 > *only* then -- I'll put the effort into making it more robust.
 >
-> Also note that there *may* be a way to combine the **
-> GetMonthName** logic into the actual LINQ query, but I couldn't
+> Also note that there *may* be a way to combine the **GetMonthName** logic into the actual LINQ query, but I couldn't
 > find one. Keep in mind that the results need to be ordered chronologically
 > in reverse order (for example, for each year the "November" results
 > need to come before "January" results).

@@ -43,7 +43,7 @@ A little post mortem analysis further revealed the following event on COLOSSUS:
 > Description:
 > Product: Microsoft Windows Server Update Services 3.0 -- Removal completed successfully.
 
-Ah, yes...now it was all coming back to me. On the morning of March 22nd, I decided         to install WSUS Service Pack 1 (SP1). Since I did not encounter any errors during         the install, it appears that WSUS SP1 is the likely culprit for the missing **            SelfUpdate** virtual directory.
+Ah, yes...now it was all coming back to me. On the morning of March 22nd, I decided         to install WSUS Service Pack 1 (SP1). Since I did not encounter any errors during         the install, it appears that WSUS SP1 is the likely culprit for the missing **SelfUpdate** virtual directory.
 
 Perhaps this only happens when you have WSUS installed on a non-standard port or         when you have SharePoint installed on the WSUS server. As you can see in the excerpt         from WindowsUpdate.log above, I am using port 8530 for the WSUS Web site. This is         because COLOSSUS is currently running both WSUS and MOSS 2007.
 

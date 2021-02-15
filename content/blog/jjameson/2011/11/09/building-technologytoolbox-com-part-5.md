@@ -85,7 +85,7 @@ That is when I discovered the hAtom 0.1 microformat:
 >
 > - hfeed (**`hfeed`**). optional.
 >   - **`feed category`**. optional. keywords or phrases,
->     using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")** .
+>     using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 >   - hentry (**`hentry`**).
 >     - **`entry-title`**. required. text.
 >     - **`entry-content`**. optional (see field description).
@@ -95,11 +95,11 @@ That is when I discovered the hAtom 0.1 microformat:
 >       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern"). [\*]
 >     - **`published`**. optional using
 >       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
->     - **`author`**. required using **[hCard](http://microformats.org/wiki/hcard "hcard")** .
+>     - **`author`**. required using **[hCard](http://microformats.org/wiki/hcard "hcard")**.
 >       [\*]
 >     - **`bookmark`** (permalink). optional, using
->       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")** .
->     - tags. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")** .
+>       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+>     - tags. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 >
 > <cite>-- <a href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
 > </cite>

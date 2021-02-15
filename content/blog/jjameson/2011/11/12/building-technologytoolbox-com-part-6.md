@@ -908,8 +908,7 @@ private static string[] GetPostTags(
         }
 ```
 
-I created the **GetNewTag** method (called from the **
-AppendBlogPostTags** method above) when I realized I should have used
+I created the **GetNewTag** method (called from the **AppendBlogPostTags** method above) when I realized I should have used
 a different tag on my MSDN blog (i.e. **SharePoint 2010** -- instead
 of **SharePoint Server 2010**):
 

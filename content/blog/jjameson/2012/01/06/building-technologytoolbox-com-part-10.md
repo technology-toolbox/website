@@ -45,8 +45,7 @@ I completed the following steps to update the entity model:
    click **Update Model from Database...**
 3. In the **Update Wizard**window:
    1. If necessary, on the **Choose Your Data Connection**
-      step, ensure the Subtext database is selected and then click **
-      Next**.
+      step, ensure the Subtext database is selected and then click **Next**.
    2. On the **Choose Your Database Objects** step, in the
       **Add** tab, expand **Tables**, click the
       check box for **subtext\_EntryViewCount** (and **subtext\_Content**

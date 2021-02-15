@@ -75,7 +75,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 
 To deploy the Fabrikam Demo to SharePoint:
 
-1. Click **Start**, point to **All Programs**, point to **            Accessories**, and right-click **Command Prompt**, and then
+1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then
    click **Run as administrator**.
 
 2. At the command prompt, type the following command to set the enviroment variable

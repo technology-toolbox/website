@@ -312,7 +312,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 ```
 
 Note that the .NET Framework doesn't currently include an "**HtmlScript**"
-control (similar to the **[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)** ) control. Consequently it takes a tiny bit more code to
+control (similar to the **[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)**) control. Consequently it takes a tiny bit more code to
 render as expected.
 
 ### JQueryReference Control

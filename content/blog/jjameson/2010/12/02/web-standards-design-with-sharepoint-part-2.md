@@ -215,7 +215,7 @@ I mentioned earlier how I simply copied the HTML for the home page and pasted it
 Hence I like to use one or more "\*Configuration" features whose sole purpose is         to configure a SharePoint site exactly the way we want it. For the Tugboat site,         the HomeSiteConfiguration feature is used to:
 
 1. Set the master page for the site (SPWeb) to Tugboat.master.
-2. Upload the various images referenced on the home page (e.g. boat.jpg) to the **            PublishingImages** library.
+2. Upload the various images referenced on the home page (e.g. boat.jpg) to the **PublishingImages** library.
 3. Configure the default page for the site (i.e. change the page layout to TugboatWelcomePageLayout1,
    set the **PageContent** field to render the main content, add the Content
    Editor Web Part to render the secondary content, and add an instance of the FindLocationWebPart).
@@ -256,7 +256,7 @@ For those of you that have somehow managed to make it this far, here are the ins
 
 To deploy the Tugboat sample site to SharePoint:
 
-1. Click **Start**, point to **All Programs**, point to **            Accessories**, and right-click **Command Prompt**, and then
+1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then
    click **Run as administrator**.
 
 2. At the command prompt, type the following command to set the enviroment variable

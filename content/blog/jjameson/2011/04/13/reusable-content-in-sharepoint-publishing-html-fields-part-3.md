@@ -85,7 +85,7 @@ HtmlField pageContentField =
 ```
 
 If you look at this method with Reflector, you'll see that most of the work
-is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx)** class.
+is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx)**class.
 
 If SPContext.Current is null, then a NullReferenceException is thrown in
 the **[HtmlEditorInternal.ConvertStorageFormatToViewFormat](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal_members%28v=office.12%29.aspx)** method (due

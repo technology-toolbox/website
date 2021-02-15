@@ -19,8 +19,7 @@ tags: ["My System", "Simplify", "Windows
 > blog ever goes away.
 
 In
-[Part 1 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-1), I explained the Group Policy object (named **
-Development - Restricted Groups Policy**) that I use for enforcing group
+[Part 1 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-1), I explained the Group Policy object (named **Development - Restricted Groups Policy**) that I use for enforcing group
 membership on a specific set of servers. As a follow-up to that post, I also
 want to cover an alternate method of managing group membership.
 

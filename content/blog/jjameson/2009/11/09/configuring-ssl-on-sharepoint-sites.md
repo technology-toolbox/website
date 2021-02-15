@@ -104,8 +104,7 @@ To configure an alternate access mapping:
 
 1. On the SharePoint Central Administration home page, click the
    **Application Management** tab on the top link bar.
-2. On the **Application Management** page, in the **
-   SharePoint Web Application Management** section, click **Create
+2. On the **Application Management** page, in the **SharePoint Web Application Management** section, click **Create
    or extend Web application**.
 3. On the **Create or Extend Web Application** page, in the
    **Adding a SharePoint Web Application** section, click
