@@ -1,6 +1,6 @@
 ---
 title: "Creating a static HTML prototype for a website (a.k.a. Building TechnologyToolbox.com, part 3)"
-date: 2011-10-27T10:59:07+08:00
+date: 2011-10-27T10:59:07-07:00
 excerpt: "Regardless of the platform a website will eventually run on (e.g. ASP.NET or SharePoint), I typically recommend creating a static HTML prototype to demonstrate key features, illustrate various design alternatives (e.g. different page layouts, color schemes, etc.), and gather feedback..."
 draft: true
 categories: ["Development", "My System"]

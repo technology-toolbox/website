@@ -1,6 +1,6 @@
 ---
 title: "Automated Deployments to DEV from the Latest Build Folder"
-date: 2010-04-07T01:36:00+08:00
+date: 2010-04-07T01:36:00-07:00
 excerpt: "Last month I wrote a post detailing how to increment the assembly version for each build . However, incrementing the assembing version is only part of my recommended build and deployment process . 
  The following figure illustrates how deployments to..."
 draft: true

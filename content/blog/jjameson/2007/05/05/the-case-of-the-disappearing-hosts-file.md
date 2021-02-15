@@ -1,6 +1,6 @@
 ---
 title: "The Case of the Disappearing Hosts File"
-date: 2007-05-05T03:18:00+08:00
+date: 2007-05-05T03:18:00-07:00
 excerpt: "Hmmm...how should I phrase this? 
  It has been a very educational couple of weeks on my current SharePoint project. 
  During the rebuild of our Test environment, the SharePoint Products and Technologies Configuration Wizard failed when it was unable..."

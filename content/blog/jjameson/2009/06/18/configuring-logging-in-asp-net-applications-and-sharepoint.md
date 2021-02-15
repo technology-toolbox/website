@@ -1,6 +1,6 @@
 ---
 title: "Configuring Logging in ASP.NET Applications (and SharePoint)"
-date: 2009-06-18T14:38:00+08:00
+date: 2009-06-18T14:38:00-07:00
 excerpt: "This post continues on the original post for my simple, but highly effective approach to logging and the follow-up post which introduced configuring logging for console applications . 
  Obviously not all solutions are simple console-based applications..."
 draft: true

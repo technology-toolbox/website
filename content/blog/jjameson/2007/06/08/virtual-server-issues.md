@@ -1,6 +1,6 @@
 ---
 title: "Virtual Server Issues and Recommendations for MOSS Virtual Environments"
-date: 2007-06-08T22:42:00+08:00
+date: 2007-06-08T22:42:00-07:00
 excerpt: "One of the tasks that I completed this week was splitting our Development environment (DEV) into multiple VMs -- one SQL Server VM, one Microsoft Office SharePoint Server (MOSS) 2007 VM for the SSP, and another MOSS 2007 VM for the front-end Web server..."
 draft: true
 categories: ["SharePoint", "Infrastructure"]

@@ -1,6 +1,6 @@
 ---
 title: "KB 896861 and \"Microsoft Fix it\""
-date: 2009-10-13T22:25:00+08:00
+date: 2009-10-13T22:25:00-07:00
 excerpt: "A couple of days ago, I rebuilt one of my development VMs for Microsoft Office SharePoint Server (MOSS) 2007. As I've noted in a previous post , I've found that I need to apply one of the registry hacks described in the following KnowledgeBase article..."
 draft: true
 categories: ["SharePoint", "Development"]

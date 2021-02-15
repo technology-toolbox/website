@@ -1,6 +1,6 @@
 ---
 title: "Shrinking All Database Files in SQL Server"
-date: 2008-05-30T02:50:00+08:00
+date: 2008-05-30T02:50:00-07:00
 excerpt: "Here is another SQL script that I keep handy in my toolbox: Shrink All Database Files.sql . Unlike the script that I shared in my previous post that simply truncated all transaction logs to free up disk space, this script is suitable for running in a..."
 draft: true
 categories: ["SharePoint", "My System"]

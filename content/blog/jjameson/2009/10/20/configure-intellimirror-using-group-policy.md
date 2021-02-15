@@ -1,6 +1,6 @@
 ---
 title: "Configure IntelliMirror Using Group Policy"
-date: 2009-10-20T22:57:00+08:00
+date: 2009-10-20T22:57:00-07:00
 excerpt: "Yet another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a. my home lab) is one to automatically configure roaming profiles and redirect the Desktop and Documents folders to a server(a.k.a. \"IntelliMirror\"). 
  Even though I don't have..."
 draft: true

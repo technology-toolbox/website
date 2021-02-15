@@ -1,6 +1,6 @@
 ---
 title: "Visual Studio Macro for Collapsing All Items in Solution Explorer"
-date: 2009-03-11T03:18:00+08:00
+date: 2009-03-11T03:18:00-07:00
 excerpt: "Along with my Visual Studio macros for unloading/reloading projects in a solution , another macro that I use just as much, if not more frequently, is my CollapseAllItems() macro: 
  
  Public Sub CollapseAllItems()

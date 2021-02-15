@@ -1,6 +1,6 @@
 ---
 title: "Development and Build Environments"
-date: 2009-09-25T01:57:00+08:00
+date: 2009-09-25T01:57:00-07:00
 excerpt: "In a previous post , I briefly touched on the \"DEV-TEST-PROD\" triad of environments that I typically recommend (at a minimum) for every organization doing any form of software development. 
  This post describes, in greater detail, the various environments..."
 draft: true

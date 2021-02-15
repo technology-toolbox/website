@@ -1,6 +1,6 @@
 ---
 title: "Introducing the SharePointSmtpHelper Class"
-date: 2009-10-18T00:29:00+08:00
+date: 2009-10-18T00:29:00-07:00
 excerpt: "Continuing in the spirit of my previous posts for the SharePointPublishingHelper class and SharePointWebPartHelper class, I'd like to introduce another helper class that you may find useful when building solutions for Windows SharePoint Services (WSS..."
 draft: true
 categories: ["My System", "SharePoint"]

@@ -1,6 +1,6 @@
 ---
 title: "Introducing the SharePointWebConfigHelper Class"
-date: 2010-03-23T02:26:00+08:00
+date: 2010-03-23T02:26:00-07:00
 excerpt: "Here is another helper class that I developed that you may find useful when building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office SharePoint Server (MOSS) 2007. 
  If you use the SPWebConfigModification class to add or modify..."
 draft: true

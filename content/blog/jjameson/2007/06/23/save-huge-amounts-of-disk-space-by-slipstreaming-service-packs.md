@@ -1,6 +1,6 @@
 ---
 title: "Save HUGE Amounts of Disk Space by Slipstreaming Service Packs"
-date: 2007-06-23T01:12:00+08:00
+date: 2007-06-23T01:12:00-07:00
 excerpt: "This is a little embarrassing, but I captured numerous screenshots back in April while rebuilding my SharePoint development VM, but I never got around to writing a blog post to actually share this information with anyone. Well, it's long overdue, but..."
 draft: true
 categories: ["My System", "SharePoint", "Development", "Infrastructure"]

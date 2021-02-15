@@ -1,6 +1,6 @@
 ---
 title: "Reusable Content in SharePoint Publishing HTML Fields, Part 1"
-date: 2011-04-08T00:59:00+08:00
+date: 2011-04-08T00:59:00-07:00
 excerpt: "In one of the sprints last year for my current project, I built a custom \"document publishing\" system based on the Web Content Management (WCM) features in Microsoft Office SharePoint Server (MOSS) 2007. My client was looking to replace a legacy system..."
 draft: true
 categories: ["SharePoint"]

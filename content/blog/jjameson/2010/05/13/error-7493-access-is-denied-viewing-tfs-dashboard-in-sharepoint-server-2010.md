@@ -1,6 +1,6 @@
 ---
 title: "Error 7493 (\"Access is denied\") Viewing TFS Dashboard in SharePoint Server 2010"
-date: 2010-05-13T06:43:00+08:00
+date: 2010-05-13T06:43:00-07:00
 excerpt: "Earlier this morning I was upgrading some of my Team Foundation Server (TFS) project sites (many of which were originally created with TFS 2005) in order to showcase the new dashboard features in TFS 2010. 
  While doing so, I encountered the following..."
 draft: true

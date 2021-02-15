@@ -1,6 +1,6 @@
 ---
 title: "Disable Pinging of Your Application Pool Worker Process in IIS"
-date: 2010-04-20T22:18:00+08:00
+date: 2010-04-20T22:18:00-07:00
 excerpt: "Yesterday I was doing another \"Knowledge Transfer\" session and before I started walking through some code in a debugging session, I took a brief detour to show the team how I recommend disabling the \"ping\" functionality in IIS for your application pool..."
 draft: true
 categories: ["SharePoint", "Development"]

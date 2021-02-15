@@ -1,6 +1,6 @@
 ---
 title: "Installing Visual Studio 2005 Service Pack 1"
-date: 2008-02-08T01:12:00+08:00
+date: 2008-02-08T01:12:00-07:00
 excerpt: "Stepping into the \"Wayback Machine\" for a moment, I realized that I hinted about a problem with installing Visual Studio 2005 SP1 , but I never got around to blogging about it in more detail. Unfortunately, I just got bit by this problem yet again this..."
 draft: true
 categories: ["Development"]

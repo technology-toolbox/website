@@ -1,6 +1,6 @@
 ---
 title: "Importing Pages into MOSS 2007 from an Excel File"
-date: 2009-10-08T02:54:00+08:00
+date: 2009-10-08T02:54:00-07:00
 excerpt: "In my previous post , I briefly introduced the concept of a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file. This can be very useful for Development and Test environments (where you frequently rebuild..."
 draft: true
 categories: ["SharePoint"]

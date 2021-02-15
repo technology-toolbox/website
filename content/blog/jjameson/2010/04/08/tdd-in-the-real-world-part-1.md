@@ -1,6 +1,6 @@
 ---
 title: "TDD in the Real World, Part 1"
-date: 2010-04-08T13:40:00+08:00
+date: 2010-04-08T13:40:00-07:00
 excerpt: "Earlier today I presented a \"Knowledge Transfer\" session to a team of developers on my current project. If you've ever worked with consultants, you've probably experienced a \"KT\" session or something similar. In essence, it's just a meeting intended to..."
 draft: true
 categories: ["Development"]

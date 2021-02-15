@@ -1,6 +1,6 @@
 ---
 title: "Soluto and Antivir Solution Pro Virus"
-date: 2010-08-01T00:26:00+08:00
+date: 2010-08-01T00:26:00-07:00
 excerpt: "In one of the sessions I attended last week at TechReady (an internal training conference at Microsoft), the speaker mentioned a new piece of \"anti-frustration software\" called Soluto which analyzes the boot time  of your PC. It certainly sounded intriguing and I made a note to take a look at it when I got back home from Seattle.
 This morning I  installed Soluto on my Windows 7 x64 desktop at home. Everything seemed great...at first...."
 draft: true

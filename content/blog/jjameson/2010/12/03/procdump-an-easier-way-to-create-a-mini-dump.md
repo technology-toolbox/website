@@ -1,6 +1,6 @@
 ---
 title: "ProcDump - An Easier Way to Create a Mini-Dump"
-date: 2010-12-03T21:49:00+08:00
+date: 2010-12-03T21:49:00-07:00
 excerpt: "In a previous post , I mentioned an issue I've been having with Expression Web 4 crashing on me. In that post, I mentioned a few ways that you can create a mini-dump for a process (e.g. with Visual Studio, WinDbg, or ADPlus). 
  A couple of weeks ago..."
 draft: true

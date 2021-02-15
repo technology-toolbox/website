@@ -1,6 +1,6 @@
 ---
 title: "Web Standards Design with SharePoint, Part 3"
-date: 2011-01-30T13:29:00+08:00
+date: 2011-01-30T13:29:00-07:00
 excerpt: "Last week I received the following comment on a blog post I wrote last year regarding Web standards design with Microsoft Office SharePoint Server (MOSS) 2007: 
  
  \"The Media Guy\" 

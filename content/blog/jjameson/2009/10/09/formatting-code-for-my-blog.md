@@ -1,6 +1,6 @@
 ---
 title: "Formatting Code for My Blog"
-date: 2009-10-09T00:46:00+08:00
+date: 2009-10-09T00:46:00-07:00
 excerpt: "It occurred to me this morning that while I previously shared some details on how I manage my MSDN blog , I've never shared my method for formatting code for the Web. 
  Actually, calling it \"my method\" is definitely a bit of a stretch. I certainly didn..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Git/GitHub issues"
-date: 2012-01-30T23:35:45+08:00
+date: 2012-01-30T23:35:45-07:00
 excerpt: "Follow along as I share my struggles using GitHub and the Git version control system."
 draft: true
 categories: ["Development"]

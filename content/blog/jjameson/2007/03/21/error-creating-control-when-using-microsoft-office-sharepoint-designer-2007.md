@@ -1,6 +1,6 @@
 ---
 title: "\"Error Creating Control\" when using Microsoft Office SharePoint Designer 2007"
-date: 2007-03-21T23:57:00+08:00
+date: 2007-03-21T23:57:00-07:00
 excerpt: "If, like me, you happen to encounter the following user experience when attempting to edit a master page... 
  
  Figure 1: SharePoint Designer - \"Error Creating Control\" 

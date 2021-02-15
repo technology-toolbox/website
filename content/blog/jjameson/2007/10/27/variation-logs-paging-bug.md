@@ -1,6 +1,6 @@
 ---
 title: "Variation Logs Paging Bug"
-date: 2007-10-27T02:01:00+08:00
+date: 2007-10-27T02:01:00-07:00
 excerpt: "It's embarrassing how my blog posts rapidly died off after this past June. However it's even more embarrassing to disclose the paging bug when viewing the Variation Logs page in Microsoft Office SharePoint Server (MOSS) 2007. 
  [By the way, my intent..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Blog Post Formatting Issues"
-date: 2010-04-15T05:16:00+08:00
+date: 2010-04-15T05:16:00-07:00
 excerpt: "Earlier this week, a colleague of mine was building out his own version of the Jameson Datacenter based on a variety of posts I've written in the past. Over an IM conversation, he mentioned that some of my posts tend to run off the page -- making them..."
 draft: true
 categories: ["Personal"]

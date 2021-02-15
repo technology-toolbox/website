@@ -1,6 +1,6 @@
 ---
 title: "Add Rooler to Your Web Development Toolbox"
-date: 2009-10-20T20:19:00+08:00
+date: 2009-10-20T20:19:00-07:00
 excerpt: "This past May, one of my colleagues notified me of a new tool called \"Rooler\" that allows you to easily measure anything displayed on your screen. 
  I definitely consider this tool a \"must have\" for anyone out there doing Web development. While tools..."
 draft: true

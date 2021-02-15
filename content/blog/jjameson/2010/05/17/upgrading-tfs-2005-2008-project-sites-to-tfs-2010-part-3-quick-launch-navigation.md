@@ -1,6 +1,6 @@
 ---
 title: "Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 3 - Quick Launch Navigation"
-date: 2010-05-17T12:49:00+08:00
+date: 2010-05-17T12:49:00-07:00
 excerpt: "Update (2010-05-20) 
  I made some changes to correct a few issues and also to include the final version of the XML input file that I used to update my TFS project sites. 
  

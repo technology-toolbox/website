@@ -1,7 +1,7 @@
 ---
 title: "HTML-to-PDF converters"
-date: 2012-02-19T03:25:09+08:00
-lastmod: 2012-02-19T03:37:46+08:00
+date: 2012-02-19T03:25:09-07:00
+lastmod: 2012-02-19T03:37:46-07:00
 excerpt: "Looking for a solution to convert from HTML to PDF? Here is a list of the products I discovered during my research as well as the results of the head-to-head competition."
 draft: true
 categories: ["Development", "My System", "SharePoint"]

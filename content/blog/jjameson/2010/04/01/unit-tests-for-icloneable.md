@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests for ICloneable"
-date: 2010-04-01T00:43:00+08:00
+date: 2010-04-01T00:43:00-07:00
 excerpt: "A few years ago I developed a class ( SharePointSearchUrlBuilder ) for working with SharePoint Search URLs. The class is used to easily build or parse the various query string parameters used by SharePoint Search (e.g. keywords, search scope, additional..."
 draft: true
 categories: ["My System", "Development"]

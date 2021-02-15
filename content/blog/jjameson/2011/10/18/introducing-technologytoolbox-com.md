@@ -1,6 +1,6 @@
 ---
 title: "Introducing TechnologyToolbox.com"
-date: 2011-10-18T04:51:49+08:00
+date: 2011-10-18T04:51:49-07:00
 excerpt: "In this inaugural post for my new blog location, I'll introduce various features of the new Technology Toolbox website and provide a high-level overview of the underlying architecture. Subsequent posts will cover different aspects of the site in greater detail."
 draft: true
 categories: ["Development"]

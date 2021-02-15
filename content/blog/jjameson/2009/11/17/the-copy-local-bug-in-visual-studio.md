@@ -1,6 +1,6 @@
 ---
 title: "The \"Copy Local\" Bug in Visual Studio"
-date: 2009-11-17T21:21:00+08:00
+date: 2009-11-17T21:21:00-07:00
 excerpt: "If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS) 2007 project -- or if you've read my Sample Walkthrough of the DR.DADA Approach to SharePoint -- then you've probably seen the following comment: 
  
  Note: Referenced assemblies..."

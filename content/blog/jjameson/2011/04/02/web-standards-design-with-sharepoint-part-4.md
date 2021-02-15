@@ -1,6 +1,6 @@
 ---
 title: "Web Standards Design with SharePoint, Part 4"
-date: 2011-04-02T04:06:00+08:00
+date: 2011-04-02T04:06:00-07:00
 excerpt: "In part 2 of this series, I provided a sample Microsoft Office SharePoint Server (MOSS) 2007 solution based on Dan Cederholm's Tugboat sample site (from his most recent book, Handcrafted CSS : More Bulletproof Web Design ). 
  Ever since then, I've been..."
 draft: true

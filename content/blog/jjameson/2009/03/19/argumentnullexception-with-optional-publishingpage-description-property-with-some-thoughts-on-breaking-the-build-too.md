@@ -1,6 +1,6 @@
 ---
 title: "ArgumentNullException with Optional PublishingPage.Description Property (with some thoughts on breaking the build, too)"
-date: 2009-03-19T01:06:00+08:00
+date: 2009-03-19T01:06:00-07:00
 excerpt: "Yesterday morning I broke the build. 
  Ouch. 
  Technically speaking, the changes that I checked in did not break the build, per se, but rather my changes caused a nasty ArgumentNullException while redeploying our SharePoint site. 

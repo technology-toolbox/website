@@ -1,6 +1,6 @@
 ---
 title: "Managing Group Membership via Group Policy - Part 1"
-date: 2009-10-14T21:45:00+08:00
+date: 2009-10-14T21:45:00-07:00
 excerpt: "In yesterday's post I covered one of the Group Policy objects that I use in the \"Jameson Datacenter\" (a.k.a. my home lab), specifically one that automatically enables Remote Desktop (Terminal Services) whenever I add a new server to my Active Directory..."
 draft: true
 categories: ["My System", "Infrastructure"]

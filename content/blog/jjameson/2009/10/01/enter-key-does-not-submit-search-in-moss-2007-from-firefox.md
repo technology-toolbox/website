@@ -1,6 +1,6 @@
 ---
 title: "Enter Key Does Not Submit Search in MOSS 2007 from Firefox"
-date: 2009-10-01T01:58:00+08:00
+date: 2009-10-01T01:58:00-07:00
 excerpt: "One issue that has \"bitten\" me on more than one occasion is the fact that the SearchBoxEx control in Microsoft Office SharePoint Server (MOSS) 2007 does not work consistently across different browsers. Specifically, I am referring to the issue where pressing..."
 draft: true
 categories: ["SharePoint"]

@@ -1,6 +1,6 @@
 ---
 title: "Event ID 10016, KB 920783, and the WSS_WPG Group"
-date: 2009-10-16T21:33:00+08:00
+date: 2009-10-16T21:33:00-07:00
 excerpt: "If you've ever deployed Windows SharePoint Services (WSS) v3 or Microsoft Office SharePoint Server (MOSS) 2007 in a least privilege configuration, you have undoubtedly encountered errors similar to the following in your Windows event log: 
  The application..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "SharePoint 2010 Sneak Peek"
-date: 2009-08-13T03:43:00+08:00
+date: 2009-08-13T03:43:00-07:00
 excerpt: "SharePoint 2010 is coming! 
  Last week, I spent 7 days in \"alpha\" training for SharePoint 2010 up in Redmond. Needless to say, it was a very long week packed full of great information on what's new in the next version. 
  Note that we have been explicitly..."

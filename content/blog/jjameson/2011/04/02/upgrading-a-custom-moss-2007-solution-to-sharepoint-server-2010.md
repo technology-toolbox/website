@@ -1,6 +1,6 @@
 ---
 title: "Upgrading a Custom MOSS 2007 Solution to SharePoint Server 2010"
-date: 2011-04-02T22:59:00+08:00
+date: 2011-04-02T22:59:00-07:00
 excerpt: "In yesterday's post , I provided a custom SharePoint Server 2010 solution based on Dan Cederholm's sample site for the fictitious Tugboat Coffee company (from his book Handcrafted CSS : More Bulletproof Web Design ). 
  Since I had originally \"ported..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Last Day with Microsoft"
-date: 2011-09-02T08:43:00+08:00
+date: 2011-09-02T08:43:00-07:00
 excerpt: "Today is my last day with Microsoft and it is with a heavy heart that I now say farewell to past and present teammates, coworkers, and managers..."
 draft: true
 categories: ["Personal"]

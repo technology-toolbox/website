@@ -1,6 +1,6 @@
 ---
 title: "Is AutoCorrect making me stupid or just plain lazy?"
-date: 2009-10-25T01:03:00+08:00
+date: 2009-10-25T01:03:00-07:00
 excerpt: "Yesterday's post got me thinking about something. 
  Do you find yourself occasionally typing one word when you are actually thinking of a different word that sounds the same? A faint recollection from one or more of my English classes long ago suggested..."
 draft: true

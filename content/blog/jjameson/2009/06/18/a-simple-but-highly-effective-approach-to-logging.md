@@ -1,6 +1,6 @@
 ---
 title: "A Simple, but Highly Effective Approach to Logging"
-date: 2009-06-18T10:01:00+08:00
+date: 2009-06-18T10:01:00-07:00
 excerpt: "A common question that frequently arises both with customers and fellow consultants is what do I recommend for logging? As experienced software developers, we know that there are going to be errors in our solution -- as well as other important events..."
 draft: true
 categories: ["My System", "SharePoint", "Development"]

@@ -1,7 +1,7 @@
 ---
 title: "Installation Guide for SharePoint Server 2010 and Office Web Apps"
-date: 2013-04-30T03:12:32+08:00
-lastmod: 2013-04-30T03:23:52+08:00
+date: 2013-04-30T03:12:32-07:00
+lastmod: 2013-04-30T03:23:52-07:00
 excerpt: "This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps."
 draft: true
 categories: ["My System", "SharePoint"]

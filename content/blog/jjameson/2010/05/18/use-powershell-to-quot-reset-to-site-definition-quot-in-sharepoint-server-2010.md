@@ -1,6 +1,6 @@
 ---
 title: "Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010"
-date: 2010-05-18T13:29:00+08:00
+date: 2010-05-18T13:29:00-07:00
 excerpt: "In one of my posts last month , I provided the following steps to \"reghost\" all of the pages in a Team Foundation Server (TFS) project site: 
  
  Browse to the Site Settings page for the site (e.g. http://cyclops/sites/Demo/_layouts/settings.aspx )...."

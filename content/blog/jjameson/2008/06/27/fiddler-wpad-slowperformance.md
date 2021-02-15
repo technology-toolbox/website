@@ -1,6 +1,6 @@
 ---
 title: "Fiddler + WPAD - VPN = SlowPerformance"
-date: 2008-06-27T05:57:00+08:00
+date: 2008-06-27T05:57:00-07:00
 excerpt: "I needed to look at some low-level HTTP traffic this morning, so I fired up Fiddler -- my tool of choice for this kind of thing. Unfortunately, I found that as soon as I enabled Fiddler, my browsing experience slowed to a crawl. Page requests that previously..."
 draft: true
 categories: ["Infrastructure", "Development"]

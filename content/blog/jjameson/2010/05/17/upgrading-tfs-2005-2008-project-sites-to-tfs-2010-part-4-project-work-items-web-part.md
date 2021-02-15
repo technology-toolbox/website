@@ -1,6 +1,6 @@
 ---
 title: "Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 4 - Project Work Items Web Part"
-date: 2010-05-17T09:31:00+08:00
+date: 2010-05-17T09:31:00-07:00
 excerpt: "In the part 1 of this series , I described how to enable the dashboard functionality in Team Foundation Server (TFS) 2010 on project sites upgraded from TFS 2005/2008 (i.e. sites originally created with the MSF Agile v4.x process templates). I noted that..."
 draft: true
 categories: ["Development", "SharePoint"]

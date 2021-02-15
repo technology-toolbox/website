@@ -1,6 +1,6 @@
 ---
 title: "Browser Button (a.k.a. Favelet or Bookmarklet) for Parsing SharePoint List Item IDs"
-date: 2008-06-12T02:06:00+08:00
+date: 2008-06-12T02:06:00-07:00
 excerpt: "This morning I received an email from a customer inquiring about making it easier for users to determine the unique identifier for each document in a library. Typically, users don't really care about this \"List Item ID\" for a document, but there are scenarios..."
 draft: true
 categories: ["SharePoint"]

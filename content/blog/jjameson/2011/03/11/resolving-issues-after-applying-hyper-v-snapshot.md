@@ -1,6 +1,6 @@
 ---
 title: "Resolving Issues After Applying Hyper-V Snapshot"
-date: 2011-03-11T21:04:00+08:00
+date: 2011-03-11T21:04:00-07:00
 excerpt: "This morning I rolled back one of my development VMs to a snapshot I created about a month ago. When I subsequently tried to login with my domain credentials, I encountered the following error: 
  The trust relationship between this workstation and the..."
 draft: true

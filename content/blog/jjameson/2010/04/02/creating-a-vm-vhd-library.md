@@ -1,6 +1,6 @@
 ---
 title: "Creating a VM/VHD Library"
-date: 2010-04-02T01:37:00+08:00
+date: 2010-04-02T01:37:00-07:00
 excerpt: "Last week a colleague was asking me how I manage my various VMs. More specifically, he wanted to know how I created SysPrep'ed images in order to quickly \"spin up\" new VMs for development, testing, or demo purposes. 
  Note that I like to keep my environments..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Deployment Scripts for SharePoint Server 2010"
-date: 2011-02-27T01:19:00+08:00
+date: 2011-02-27T01:19:00-07:00
 excerpt: "A couple of years ago, I shared the scripts I created for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer to as the \" DR.DADA approach to SharePoint .\" 
  Well, I probably should have done this long..."
 draft: true

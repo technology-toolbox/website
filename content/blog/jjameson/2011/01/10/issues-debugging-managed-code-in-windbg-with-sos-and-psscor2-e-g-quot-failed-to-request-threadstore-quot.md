@@ -1,6 +1,6 @@
 ---
 title: "Issues Debugging Managed Code in WinDbg with SOS and PSSCOR2 (e.g. \"Failed to request ThreadStore\")"
-date: 2011-01-10T22:42:00+08:00
+date: 2011-01-10T22:42:00-07:00
 excerpt: "Yesterday I found myself back in \"WinDbg-land\" after a long, long time (since 99% of my debugging is performed in development environments using Visual Studio). 
  However, I couldn't get the managed code debugging to work in WinDbg. I initially tried..."
 draft: true

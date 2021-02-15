@@ -1,6 +1,6 @@
 ---
 title: "Removing \"Stale\" Network Adapters in Hyper-V VM"
-date: 2011-03-13T22:13:00+08:00
+date: 2011-03-13T22:13:00-07:00
 excerpt: "Each time I create (or recreate) a virtual machine in Hyper-V using one of my SysPrep'ed images , I usually end up having to do a quick Internet search for: 
  device manager show hidden devices 
  I'm a little embarrassed to say that I simply can't remember..."

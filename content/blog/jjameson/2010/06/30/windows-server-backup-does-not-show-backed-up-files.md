@@ -1,6 +1,6 @@
 ---
 title: "Windows Server Backup Does Not Show Backed Up Files"
-date: 2010-06-30T08:50:00+08:00
+date: 2010-06-30T08:50:00-07:00
 excerpt: "[Sorry the blog has been relatively silent this month -- but, on the other hand, I did manage to make time for a vacation to Arizona this month (Sedona, Grand Canyon, and then Scottsdale). It was a little hot, but a wonderful trip nonetheless.] 
  Here..."
 draft: true

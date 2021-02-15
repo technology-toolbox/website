@@ -1,6 +1,6 @@
 ---
 title: "Web Standards Design with SharePoint, Part 5 (a.k.a. Rendering Semantic HTML Using the XsltListViewWebPart)"
-date: 2011-04-27T01:33:00+08:00
+date: 2011-04-27T01:33:00-07:00
 excerpt: "In part 4 of this series , I provided a sample SharePoint Server 2010 solution solution based on Dan Cederholm's Tugboat sample site (from his most recent book, Handcrafted CSS : More Bulletproof Web Design ). 
  In that sample, however, all of the content..."
 draft: true

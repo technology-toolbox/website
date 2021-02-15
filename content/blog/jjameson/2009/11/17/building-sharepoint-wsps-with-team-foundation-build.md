@@ -1,6 +1,6 @@
 ---
 title: "Building SharePoint WSPs with Team Foundation Build"
-date: 2009-11-17T22:45:00+08:00
+date: 2009-11-17T22:45:00-07:00
 excerpt: "As I noted in my previous post , I recently discovered that my approach for building Web Solution Packages (WSPs) in Microsoft Office SharePoint Server (MOSS) 2007 isn't compatible with Team Foundation Build. 
  I'm actually a little embarrassed to say..."
 draft: true

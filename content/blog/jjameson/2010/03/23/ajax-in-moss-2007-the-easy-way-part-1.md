@@ -1,6 +1,6 @@
 ---
 title: "AJAX in MOSS 2007 -- The Easy Way, Part 1"
-date: 2010-03-23T10:42:00+08:00
+date: 2010-03-23T10:42:00-07:00
 excerpt: "In my previous post , I showed how you can quickly create a Web application in Microsoft Office SharePoint Server (MOSS) 2007 and configure it for anonymous access and Forms-Based Authentication. 
  Let's suppose that instead of configuring FBA and anonymous..."
 draft: true

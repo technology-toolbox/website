@@ -1,6 +1,6 @@
 ---
 title: "Stop putting shortcuts on my Windows desktop!"
-date: 2012-02-18T22:56:10+08:00
+date: 2012-02-18T22:56:10-07:00
 excerpt: "It is 2012 and there are still software applications that insist on creating shortcuts on your Windows desktop. Pathetic."
 draft: true
 categories: ["My System"]

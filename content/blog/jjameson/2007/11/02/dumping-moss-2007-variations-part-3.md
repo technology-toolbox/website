@@ -1,6 +1,6 @@
 ---
 title: "Dumping MOSS 2007 Variations - Part 3"
-date: 2007-11-02T02:53:00+08:00
+date: 2007-11-02T02:53:00-07:00
 excerpt: "In part 1 and part 2 of this series, I talked about some major issues with the variations feature in Microsoft Office SharePoint Server (MOSS) 2007 that caused my current customer to abandon using them on their new Internet site. 
  Here is a brief summary..."
 draft: true

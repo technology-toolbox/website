@@ -1,6 +1,6 @@
 ---
 title: "Stagger the Startup of Your Virtual Machines"
-date: 2010-04-16T22:50:00+08:00
+date: 2010-04-16T22:50:00-07:00
 excerpt: "I've mentioned before how I run two Hyper-V servers in the \" Jameson Datacenter \" (each one hosting a variety of different VMs). 
  On the rare occasion that a patch comes out on Windows Update that affects Windows Server 2008 Server Core edition (such..."
 draft: true

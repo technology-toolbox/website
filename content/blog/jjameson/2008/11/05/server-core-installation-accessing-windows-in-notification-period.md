@@ -1,6 +1,6 @@
 ---
 title: "Server Core Installation - \"Accessing Windows in Notification period\""
-date: 2008-11-05T02:41:00+08:00
+date: 2008-11-05T02:41:00-07:00
 excerpt: "I had a rather rough start this morning. 
  When I attempted to boot up my primary workstation and login, I kept encountering a problem loading my roaming profile. I could login to Vista, but my desktop was blank and I kept getting prompted to enter my..."
 draft: true

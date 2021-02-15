@@ -1,6 +1,6 @@
 ---
 title: "Avoiding Problems with the Using Statement and WCF Service Proxies"
-date: 2010-03-18T03:08:00+08:00
+date: 2010-03-18T03:08:00-07:00
 excerpt: "I encountered a rather nasty issue yesterday on my current project -- a customer portal built on Microsoft Office SharePoint Server (MOSS) 2007 that integrates with multiple external systems via Web services. 
  The database indexes for one of the external..."
 draft: true

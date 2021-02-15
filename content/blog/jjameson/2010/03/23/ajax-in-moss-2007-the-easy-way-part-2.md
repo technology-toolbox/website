@@ -1,6 +1,6 @@
 ---
 title: "AJAX in MOSS 2007 -- The Easy Way, Part 2"
-date: 2010-03-23T22:36:00+08:00
+date: 2010-03-23T22:36:00-07:00
 excerpt: "In my previous post , I showed how you can quickly create an AJAX-enabled Web application in Microsoft Office SharePoint Server (MOSS) 2007. 
  I also provided a sample AJAX Web Part, illustrated in the following screenshot: 
  

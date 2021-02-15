@@ -1,6 +1,6 @@
 ---
 title: "The Original \"Jameson Datacenter\""
-date: 2009-10-23T23:18:00+08:00
+date: 2009-10-23T23:18:00-07:00
 excerpt: "This morning I was doing some cleanup of my documents folder and I stumbled across a rather old Visio document that showed the beginnings of what I now refer to as the \"Jameson Datacenter\" (a.k.a. my home lab). For some geeky reason, seeing this again..."
 draft: true
 categories: ["My System", "Personal", "Infrastructure"]

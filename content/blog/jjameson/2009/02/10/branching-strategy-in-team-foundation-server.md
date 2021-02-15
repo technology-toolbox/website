@@ -1,6 +1,6 @@
 ---
 title: "Branching Strategy in Team Foundation Server"
-date: 2009-02-10T06:34:00+08:00
+date: 2009-02-10T06:34:00-07:00
 excerpt: "While attending TechReady (an internal Microsoft training conference) last week, I learned a lot -- not only about future versions of our products, but also numerous tips and tricks for current versions. One of the most valuable insights I gained was..."
 draft: true
 categories: ["Development"]

@@ -1,6 +1,6 @@
 ---
 title: "Implementing Google Analytics (a.k.a. Building TechnologyToolbox.com, part 22)"
-date: 2012-02-03T02:40:38+08:00
+date: 2012-02-03T02:40:38-07:00
 excerpt: "In yesterday's post, I described how I integrated Google Site Search into the Technology Toolbox website. This post provides a similar walkthrough for implementing Google Analytics."
 draft: true
 categories: ["Development", "My System"]

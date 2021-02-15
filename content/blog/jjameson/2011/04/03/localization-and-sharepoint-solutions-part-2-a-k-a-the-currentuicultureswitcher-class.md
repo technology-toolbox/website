@@ -1,6 +1,6 @@
 ---
 title: "Localization and SharePoint Solutions, Part 2 (a.k.a. the CurrentUICultureSwitcher class)"
-date: 2011-04-03T22:33:00+08:00
+date: 2011-04-03T22:33:00-07:00
 excerpt: "In part 1 of this series , I mentioned how I've been involved in several SharePoint projects for large, multinational corporations including Agilent Technologies and KPMG . I also mentioned how one of the sprints last year for my current project was dedicated..."
 draft: true
 categories: ["My System", "SharePoint"]

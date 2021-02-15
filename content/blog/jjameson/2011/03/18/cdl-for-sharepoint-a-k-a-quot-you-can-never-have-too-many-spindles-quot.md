@@ -1,6 +1,6 @@
 ---
 title: "CDL for SharePoint (a.k.a. \"You can never have too many spindles\")"
-date: 2011-03-18T22:55:00+08:00
+date: 2011-03-18T22:55:00-07:00
 excerpt: "In the United States, \"CDL\" typically refers to a Commercial Driver's License -- but since I don't drive trucks for a living, I use the acronym for something entirely different. To me, these three letters correspond to the minimum number of drives I like..."
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]

@@ -1,6 +1,6 @@
 ---
 title: "Errors Installing Windows Server 2008 SP2"
-date: 2009-06-01T03:14:00+08:00
+date: 2009-06-01T03:14:00-07:00
 excerpt: "Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Windows Vista SP2 on my local WSUS (Windows Server Update Services) server. My expectation was that the various physical and virtual machines in the \"Jameson Datacenter\" would subsequently..."
 draft: true
 categories: ["Infrastructure"]

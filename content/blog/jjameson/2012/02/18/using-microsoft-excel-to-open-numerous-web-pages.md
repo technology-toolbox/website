@@ -1,6 +1,6 @@
 ---
 title: "Using Microsoft Excel to open numerous Web pages"
-date: 2012-02-18T23:44:52+08:00
+date: 2012-02-18T23:44:52-07:00
 excerpt: "Think you can just add a HYPERLINK column in Excel and easily open dozens of Web pages at a time? Think again."
 draft: true
 categories: ["My System"]

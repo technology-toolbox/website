@@ -1,6 +1,6 @@
 ---
 title: "Leaving Microsoft"
-date: 2011-08-22T00:03:00+08:00
+date: 2011-08-22T00:03:00-07:00
 excerpt: "Last Thursday, I informed my manager that I have decided to leave Microsoft to pursue other opportunities. 
  My last day will be September 2nd -- just a few days shy of my 11 year anniversary date with the company (my first day was September 5, 2000..."
 draft: true

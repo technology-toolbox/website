@@ -1,6 +1,6 @@
 ---
 title: "A Modal Popup Framework Based on the AJAX Control Toolkit"
-date: 2010-12-10T02:40:00+08:00
+date: 2010-12-10T02:40:00-07:00
 excerpt: "The \"Announcements\" feature that I developed for a customer about a year ago uses a modal popup window to display content to users. The solution leverages the AJAX Control Toolkit to render the modal popups &ndash; specifically the ModalPopupExtender..."
 draft: true
 categories: ["Development"]

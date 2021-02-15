@@ -1,6 +1,6 @@
 ---
 title: "Before you install Windows 7 Service Pack 1..."
-date: 2011-03-10T22:00:00+08:00
+date: 2011-03-10T22:00:00-07:00
 excerpt: "...make darn sure you have already installed the Remote Server Administration Tools for Windows 7 (if you want to use them, of course). 
  Otherwise, like me, you'll likely resort to nuking your desktop and starting over. 
  Earlier this week, I posted..."

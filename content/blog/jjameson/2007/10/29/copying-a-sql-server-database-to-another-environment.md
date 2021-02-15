@@ -1,6 +1,6 @@
 ---
 title: "Copying a SQL Server Database to Another Environment"
-date: 2007-10-29T02:03:00+08:00
+date: 2007-10-29T02:03:00-07:00
 excerpt: "A couple of weeks ago I was troubleshooting a performance problem with the variations feature in Microsoft Office SharePoint Server (MOSS) 2007 and I needed to copy the content database to another environment for further analysis and testing. An easy..."
 draft: true
 categories: ["SharePoint"]

@@ -1,6 +1,6 @@
 ---
 title: "Script to Restart SharePoint Services"
-date: 2009-03-26T02:33:00+08:00
+date: 2009-03-26T02:33:00-07:00
 excerpt: "Since my previous post introduced one of my SharePoint Toolbox scripts, I thought I should share another one that is more applicable to a broader audience. 
  As I've noted in the past , memory leaks are certainly not uncommon in the world of SharePoint..."
 draft: true

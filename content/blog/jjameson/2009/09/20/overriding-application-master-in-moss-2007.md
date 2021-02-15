@@ -1,6 +1,6 @@
 ---
 title: "Overriding Application.master in MOSS 2007"
-date: 2009-09-20T03:35:00+08:00
+date: 2009-09-20T03:35:00-07:00
 excerpt: "Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of out-of-the-box master pages. Many are provided primarily as samples (e.g. BlueBand.master) and serve as a starting point for creating your own master page. There's also default.master..."
 draft: true
 categories: ["SharePoint"]

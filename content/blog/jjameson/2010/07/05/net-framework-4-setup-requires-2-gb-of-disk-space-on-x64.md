@@ -1,6 +1,6 @@
 ---
 title: ".NET Framework 4 Setup Requires ~2 GB of Disk Space on x64"
-date: 2010-07-05T22:26:00+08:00
+date: 2010-07-05T22:26:00-07:00
 excerpt: "Windows Update started generating errors last week on one of my servers. Specifically, the server (JUBILEE) was encountering an error when trying to install Microsoft .NET Framework 4: 
  
  Log Name: System

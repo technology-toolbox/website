@@ -1,6 +1,6 @@
 ---
 title: "MOSS Development Environment and a Windows Update Bug"
-date: 2007-06-09T00:38:00+08:00
+date: 2007-06-09T00:38:00-07:00
 excerpt: "In my previous post , I talked about splitting our Microsoft Office SharePoint Server (MOSS) 2007 Development environment (DEV) into multiple VMs. What I did not mention, however, is the nasty bug in Windows Update that I encountered along the way. 
 ..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Using Password Minder to Manage Your Passwords"
-date: 2009-11-06T23:18:00+08:00
+date: 2009-11-06T23:18:00-07:00
 excerpt: "I started using Password Minder almost immediately after reading about it in the July 2004 edition of MSDN Magazine. I don't know about you, but trying to remember all of my various passwords for dozens of Web sites, numerous network accounts, VMs, etc..."
 draft: true
 categories: ["My System"]

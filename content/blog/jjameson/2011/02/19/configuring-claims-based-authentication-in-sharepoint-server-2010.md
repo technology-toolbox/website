@@ -1,6 +1,6 @@
 ---
 title: "Configuring Claims-Based Authentication in SharePoint Server 2010"
-date: 2011-02-19T06:06:00+08:00
+date: 2011-02-19T06:06:00-07:00
 excerpt: "I thought it would be helpful to share my step-by-step procedures for manually configuring claims-based authentication in SharePoint Server 2010 using an \"ASP.NET database\" and corresponding membership and role providers. 
  Note that the following TechNet..."
 draft: true

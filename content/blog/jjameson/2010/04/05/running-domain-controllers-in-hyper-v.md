@@ -1,6 +1,6 @@
 ---
 title: "Running Domain Controllers in Hyper-V"
-date: 2010-04-05T09:29:00+08:00
+date: 2010-04-05T09:29:00-07:00
 excerpt: "In a previous post , I noted how the \" Jameson Datacenter \" (a.k.a. my home lab) currently runs two domain controllers (DCs) on a couple of VMs. 
  If you choose to virtualize one or more DCs in your environment, make sure you are aware of the considerations..."
 draft: true

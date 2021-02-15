@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Script for Clearing Windows Event Logs"
-date: 2013-05-24T23:01:34+08:00
+date: 2013-05-24T23:01:34-07:00
 excerpt: "Sure, you can just type \"wevtutil el | % { wevtutil cl $_ }\" whenever you feel like it, but how fun is that?!"
 draft: true
 categories: ["Development", "My System"]

@@ -1,6 +1,6 @@
 ---
 title: "Supporting both \"domain.com\" and \"www.domain.com\" (a.k.a. Building TechnologyToolbox.com, part 23)"
-date: 2012-02-03T09:38:06+08:00
+date: 2012-02-03T09:38:06-07:00
 excerpt: "Can visitors browse your website using \"domain.com\" as well as \"www.domain.com\"? Is this documented in your test spec? It should be -- as I found out...the hard way."
 draft: true
 categories: ["Development", "My System"]

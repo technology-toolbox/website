@@ -1,6 +1,6 @@
 ---
 title: "Recommendations for Code Analysis"
-date: 2009-10-30T23:44:00+08:00
+date: 2009-10-30T23:44:00-07:00
 excerpt: "In my previous post , I briefly mentioned the Code Analysis feature of Visual Studio in the context of using check-in policies with Team Foundation Server (TFS). However, there's a lot more to talk about with regards to using Code Analysis. 
  If you..."
 draft: true

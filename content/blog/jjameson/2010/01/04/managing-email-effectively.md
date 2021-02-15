@@ -1,6 +1,6 @@
 ---
 title: "Managing Email Effectively"
-date: 2010-01-04T00:10:00+08:00
+date: 2010-01-04T00:10:00-07:00
 excerpt: "First of all, Happy New Year! 
  This morning I'm back from a not-so-relaxing four weeks off -- although I have to admit, there's something quite nice about putting technology aside for a few weeks and laying travertine and building cabinets instead ..."
 draft: true

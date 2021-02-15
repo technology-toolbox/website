@@ -1,6 +1,6 @@
 ---
 title: "Truncating All Transaction Logs in SQL Server"
-date: 2008-05-30T02:32:00+08:00
+date: 2008-05-30T02:32:00-07:00
 excerpt: "One of the SQL scripts that I keep handy in my toolbox is Truncate All Transaction Logs.sql . While I would never recommend running this script in a Production environment (PROD), I find it to be very helpful for periodically freeing up disk space in..."
 draft: true
 categories: ["My System"]

@@ -1,6 +1,6 @@
 ---
 title: "DataNavigateUrlFormatString Does Not Allow \"javascript:\""
-date: 2009-10-26T00:49:00+08:00
+date: 2009-10-26T00:49:00-07:00
 excerpt: "I encountered an interesting bug last Friday with the ASP.NET HyperLinkField control. To understand the scenario, think of the typical \"view detail\" feature when showing summary data in a table. In other words, you want to provide users the ability to..."
 draft: true
 categories: ["Development"]

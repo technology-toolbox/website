@@ -1,6 +1,6 @@
 ---
 title: "Be Careful Using PublishingWeb.GetPagesListName()"
-date: 2009-05-28T02:52:00+08:00
+date: 2009-05-28T02:52:00-07:00
 excerpt: "A couple of years ago when we began evaluating Language Packs for Microsoft Office SharePoint Server (MOSS) 2007, we discovered that after installing certain Language Packs, the \"Pages\" library may be localized -- including both the list name as well..."
 draft: true
 categories: ["SharePoint"]

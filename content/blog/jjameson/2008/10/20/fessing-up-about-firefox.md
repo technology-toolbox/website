@@ -1,6 +1,6 @@
 ---
 title: "Fessing Up About Firefox"
-date: 2008-10-20T02:27:00+08:00
+date: 2008-10-20T02:27:00-07:00
 excerpt: "My name is Jeremy, and I'm a Firefox user. 
  There, I've said it. 
  I know, I know...what am I thinking, a Microsoft employee telling the world that Internet Explorer isn't the end all, be all browser for everyone?! 

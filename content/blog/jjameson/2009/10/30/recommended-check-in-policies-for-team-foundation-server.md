@@ -1,6 +1,6 @@
 ---
 title: "Recommended Check-In Policies for Team Foundation Server"
-date: 2009-10-30T22:14:00+08:00
+date: 2009-10-30T22:14:00-07:00
 excerpt: "I love using Team Foundation Server (TFS). There's just an amazing amount of \"goodness\" for software development that comes out-of-the-box; and there's even more available from Microsoft and other sources in the form of add-ons (many of which are free..."
 draft: true
 categories: ["My System", "Development"]

@@ -1,6 +1,6 @@
 ---
 title: "Claims Login Web Part for SharePoint Server 2010"
-date: 2011-02-24T22:43:00+08:00
+date: 2011-02-24T22:43:00-07:00
 excerpt: "In my previous post , I provided the step-by-step process I use for configuring claims-based authentication in SharePoint Server 2010. 
  If you follow those steps, then when you browse to the home page of the site and click Sign In , you'll be redirected..."
 draft: true

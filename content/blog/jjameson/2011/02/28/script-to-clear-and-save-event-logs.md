@@ -1,6 +1,6 @@
 ---
 title: "Script to Clear (and Save) Event Logs"
-date: 2011-02-28T22:37:00+08:00
+date: 2011-02-28T22:37:00-07:00
 excerpt: "As I was writing my first post earlier this morning , I wondered if I had previously shared the script I use to quickly clear the event logs on a server (but saving them first -- just in case I need to go back and retrieve something from the \"archive..."
 draft: true
 categories: ["Infrastructure", "My System"]

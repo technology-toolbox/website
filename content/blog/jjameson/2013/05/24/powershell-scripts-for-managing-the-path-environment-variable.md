@@ -1,7 +1,7 @@
 ---
 title: "PowerShell Scripts for Managing the Path Environment Variable"
-date: 2013-05-24T21:57:40+08:00
-lastmod: 2013-05-24T21:57:54+08:00
+date: 2013-05-24T21:57:40-07:00
+lastmod: 2013-05-24T21:57:54-07:00
 excerpt: "Even though it doesn't take long to add a folder to %Path% by clicking through Windows, I prefer to do this using a little PowerShell instead."
 draft: true
 categories: ["Development", "Infrastructure", "My System", "SharePoint"]

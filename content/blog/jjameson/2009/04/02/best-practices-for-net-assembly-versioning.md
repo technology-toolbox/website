@@ -1,6 +1,6 @@
 ---
 title: "Best Practices for .NET Assembly Versioning"
-date: 2009-04-02T22:59:00+08:00
+date: 2009-04-02T22:59:00-07:00
 excerpt: "Whenever a new .NET assembly project is created in Visual Studio, a file named AssemblyInfo is created that contains attributes used to define the version of the assembly during compilation. 
  Using assembly versions effectively enables various team..."
 draft: true

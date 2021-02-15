@@ -1,6 +1,6 @@
 ---
 title: "\"TFS Lite\" for WSS v3"
-date: 2008-04-07T05:08:00+08:00
+date: 2008-04-07T05:08:00-07:00
 excerpt: "In my previous post , I introduced my \"TFS Lite\" SharePoint site template that I've been using for years as a simple scenario/task/bug/risk/milestone tracking \"application\" with various projects and customers. In today's post, I'll discuss some of the..."
 draft: true
 categories: ["SharePoint", "Development"]

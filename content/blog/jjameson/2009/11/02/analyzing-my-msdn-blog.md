@@ -1,6 +1,6 @@
 ---
 title: "Analyzing My MSDN Blog"
-date: 2009-11-02T00:42:00+08:00
+date: 2009-11-02T00:42:00-07:00
 excerpt: "According to my blog dashboard, this will be post #150 for my MSDN blog. So this morning I thought I would do something a little different by providing some analysis on my blog. 
  I extracted the data from Community Server into an Excel spreadsheet so..."
 draft: true

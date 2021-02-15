@@ -1,6 +1,6 @@
 ---
 title: "Configuring Logging in a Console Application"
-date: 2009-06-18T13:50:00+08:00
+date: 2009-06-18T13:50:00-07:00
 excerpt: "In my previous post, I introduced my simple, but highly effective approach to logging . As promised, this post introduces how to configure logging (based on a simple console application). 
  As noted in my previous post, one or more trace listeners can..."
 draft: true

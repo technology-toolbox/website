@@ -1,6 +1,6 @@
 ---
 title: "\"Failed to configure propagation share.\" Error Configuring Office SharePoint Server Search"
-date: 2007-06-26T00:37:00+08:00
+date: 2007-06-26T00:37:00-07:00
 excerpt: "Last weekend I had to rebuild our Test environment for Microsoft Office SharePoint Server (MOSS) 2007 to replace a VM with a physical server (for performance reasons ). During the rebuild, I encountered the following error when starting Office SharePoint..."
 draft: true
 categories: ["SharePoint"]

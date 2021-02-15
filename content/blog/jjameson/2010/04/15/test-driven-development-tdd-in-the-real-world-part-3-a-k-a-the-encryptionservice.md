@@ -1,6 +1,6 @@
 ---
 title: "Test-Driven Development (TDD) in the Real World, Part 3 (a.k.a. the EncryptionService)"
-date: 2010-04-15T04:22:00+08:00
+date: 2010-04-15T04:22:00-07:00
 excerpt: "In my previous post , I provided a walkthrough of Test-Driven Development (TDD), based on a very simple scenario (truncating a string to a specific number of characters). In this post, I'll provide another example using a more complex scenario. 
  Suppose..."
 draft: true

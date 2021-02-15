@@ -1,6 +1,6 @@
 ---
 title: "Updated Thoughts on WSPBuilder"
-date: 2009-03-31T01:55:00+08:00
+date: 2009-03-31T01:55:00-07:00
 excerpt: "Several weeks ago, I wrote a post titled \" Why I'm Not a Fan of WSPBuilder .\" Shortly thereafter, I received a message from Carsten Keutmann, the creator of WSPBuilder. 
  Here is the \"almost\" unabridged version of the email exchange (headers and signatures..."
 draft: true

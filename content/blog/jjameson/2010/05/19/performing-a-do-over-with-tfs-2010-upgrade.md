@@ -1,6 +1,6 @@
 ---
 title: "Performing a \"Do Over\" with TFS 2010 Upgrade"
-date: 2010-05-19T21:23:00+08:00
+date: 2010-05-19T21:23:00-07:00
 excerpt: "Regardless of whether you call it a \"mulligan\", a \"do over\", or whatever, the fact is you may encounter errors during your upgrade to Team Foundation Server (TFS) 2010 -- hopefully in your Development or Test environment first, not when upgrading your..."
 draft: true
 categories: ["Development"]

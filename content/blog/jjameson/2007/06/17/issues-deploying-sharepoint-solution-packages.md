@@ -1,6 +1,6 @@
 ---
 title: "Issues Deploying SharePoint Solution Packages"
-date: 2007-06-17T01:44:00+08:00
+date: 2007-06-17T01:44:00-07:00
 excerpt: "Several weeks ago, I converted our deployment process to use SharePoint solution packages instead of the batch scripts that we had been using in our Development environment. One of the issues that I discovered along the way is that SharePoint is rather..."
 draft: true
 categories: ["SharePoint"]

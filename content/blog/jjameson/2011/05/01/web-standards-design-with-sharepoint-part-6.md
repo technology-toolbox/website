@@ -1,6 +1,6 @@
 ---
 title: "Web Standards Design with SharePoint, Part 6"
-date: 2011-05-01T22:28:00+08:00
+date: 2011-05-01T22:28:00-07:00
 excerpt: "In part 5 of this series , I showed how you can render semantic HTML for SharePoint list items (instead of the out-of-the-box table layout) using the new XsltListViewWebPart in SharePoint 2010. 
  
  Note 

@@ -1,6 +1,6 @@
 ---
 title: "Versioning Blog Posts in WSS v3 and MOSS 2007"
-date: 2008-04-23T04:07:00+08:00
+date: 2008-04-23T04:07:00-07:00
 excerpt: "Complementing the Work Items list that I described in a previous post , we use a blog site (creatively called the \"DevBlog\") in Microsoft Office SharePoint Server (MOSS) 2007 to track the work items that each member of the Development team has committed..."
 draft: true
 categories: ["SharePoint"]

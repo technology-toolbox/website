@@ -1,6 +1,6 @@
 ---
 title: "\"Development Cheat Sheets\""
-date: 2013-05-01T01:00:45+08:00
+date: 2013-05-01T01:00:45-07:00
 excerpt: "In this post, I explain how I like to use Microsoft OneNote to manage what I call \"development cheat sheets\" -- which are especially useful when developing SharePoint solutions."
 draft: true
 categories: ["Development", "My System", "SharePoint"]

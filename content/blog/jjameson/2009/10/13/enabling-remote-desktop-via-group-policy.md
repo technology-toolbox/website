@@ -1,6 +1,6 @@
 ---
 title: "Enabling Remote Desktop via Group Policy"
-date: 2009-10-13T22:53:00+08:00
+date: 2009-10-13T22:53:00-07:00
 excerpt: "In a previous post, I provided some details on the \"Jameson Datacenter\" (a.k.a. my home lab). In a follow-up post, I also discussed the Active Directory domain structure and mentioned how I use the Group Policy feature of Active Directory to \"effortlessly..."
 draft: true
 categories: ["My System", "Infrastructure"]

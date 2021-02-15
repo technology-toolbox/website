@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Script to Configure the State Service in SharePoint Server 2010"
-date: 2011-02-27T07:24:00+08:00
+date: 2011-02-27T07:24:00-07:00
 excerpt: "In my first post today , I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't all of the PowerShell scripts that I currently use when working with SharePoint 2010. Here..."
 draft: true
 categories: ["SharePoint"]

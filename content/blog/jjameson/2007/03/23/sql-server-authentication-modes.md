@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Authentication Modes"
-date: 2007-03-23T01:12:00+08:00
+date: 2007-03-23T01:12:00-07:00
 excerpt: "A fellow consultant here in Denver sent out a message yesterday inquiring about formal recommendations regarding the use of Windows Authentication vs. SQL Authentication. It seems that quite a few customers out there ponder these choices for a variety..."
 draft: true
 categories: [""]

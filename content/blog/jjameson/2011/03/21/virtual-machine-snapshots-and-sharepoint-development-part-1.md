@@ -1,6 +1,6 @@
 ---
 title: "Virtual Machine Snapshots and SharePoint Development, Part 1"
-date: 2011-03-21T22:53:00+08:00
+date: 2011-03-21T22:53:00-07:00
 excerpt: "In a comment I made last week on one of my earlier posts , I mentioned how a few months ago I started using Hyper-V snapshots so I can quickly rollback my SharePoint development VMs to key points in time. 
  The following screenshot shows the snapshots..."
 draft: true

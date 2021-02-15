@@ -1,6 +1,6 @@
 ---
 title: "You'll Have to Pry That Money from My Cold Dead Hands"
-date: 2010-03-28T01:26:00+08:00
+date: 2010-03-28T01:26:00-07:00
 excerpt: "I've been using Microsoft Money for as long as I can remember. 
  Well, actually I can remember using Quicken at some point before switching to Money. Heck, I even remember tracking my finances in an Excel workbook before that. 
  I just checked my Money..."

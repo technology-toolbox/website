@@ -1,6 +1,6 @@
 ---
 title: "Removing Downloaded Program Files (e.g. ActiveX Controls) in Windows 7/IE 8"
-date: 2010-07-19T09:13:00+08:00
+date: 2010-07-19T09:13:00-07:00
 excerpt: "In the latest sprint on my current project, we are adding yet another major feature to a customer service portal -- specifically, the ability to view live video feeds from security cameras. The vendor this particular customer has selected for providing..."
 draft: true
 categories: ["Infrastructure", "Development"]

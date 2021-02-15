@@ -1,6 +1,6 @@
 ---
 title: "SPLimitedWebPartManager.AddWebPart Mysteriously Increments zoneIndex"
-date: 2009-06-05T02:08:00+08:00
+date: 2009-06-05T02:08:00-07:00
 excerpt: "One of the common tasks when using the \"DR.DADA\" approach to SharePoint development is programmatically creating and configuring pages on a site. This often requires adding numerous Web Parts to various zones on a page -- for example, to configure search..."
 draft: true
 categories: ["SharePoint"]

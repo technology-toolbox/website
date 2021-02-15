@@ -1,6 +1,6 @@
 ---
 title: "Team-Based Development in Microsoft Office SharePoint Server 2007"
-date: 2007-04-24T01:56:00+08:00
+date: 2007-04-24T01:56:00-07:00
 excerpt: "Eric Charran has posted an article on MSDN with some great pointers on developing SharePoint solutions in a team environment: 
  
  http://msdn2.microsoft.com/en-us/library/bb428899.aspx 

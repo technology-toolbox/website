@@ -1,6 +1,6 @@
 ---
 title: "Compiling C++ Projects with Team Foundation Build"
-date: 2009-11-07T01:24:00+08:00
+date: 2009-11-07T01:24:00-07:00
 excerpt: "As I mentioned in my previous post , this week I incorporated Password Minder into my \"Toolbox\" Visual Studio solution that is scheduled to build daily through Team Foundation Server (TFS). 
  It's not that I really need daily builds of Password Minder;..."
 draft: true

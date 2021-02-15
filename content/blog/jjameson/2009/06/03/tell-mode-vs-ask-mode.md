@@ -1,6 +1,6 @@
 ---
 title: "Tell Mode vs. Ask Mode"
-date: 2009-06-03T13:11:00+08:00
+date: 2009-06-03T13:11:00-07:00
 excerpt: "The project I am currently working on is nearing the end. Last week we reached our \"Feature Complete\" milestone and now we have formally transitioned into the \"Stabilizing\" phase. 
  In a couple of team meetings this week, I mentioned the concepts of..."
 draft: true

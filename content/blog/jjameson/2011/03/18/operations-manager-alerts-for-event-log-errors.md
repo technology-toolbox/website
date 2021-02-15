@@ -1,6 +1,6 @@
 ---
 title: "Operations Manager Alerts for Event Log Errors"
-date: 2011-03-18T00:14:00+08:00
+date: 2011-03-18T00:14:00-07:00
 excerpt: "One of the things I like most about running System Center Operations Manager in the \"Jameson Datacenter\" (a.k.a. my home lab) is that it greatly reduces the amount of effort required to monitor numerous servers. 
  For example, in my environment I am..."
 draft: true

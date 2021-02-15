@@ -1,6 +1,6 @@
 ---
 title: "The \"Jameson Datacenter\""
-date: 2009-09-14T01:53:00+08:00
+date: 2009-09-14T01:53:00-07:00
 excerpt: "Back in a post from February 2008, I first referred to the \"Jameson Datacenter\" while discussing one of the servers running in my basement. Since then I've referenced my home lab about a dozen times in different posts but never provided significant details..."
 draft: true
 categories: ["My System", "Infrastructure"]

@@ -1,7 +1,7 @@
 ---
 title: "An Update on the Effectiveness of MaxPatchCacheSize"
-date: 2013-05-06T23:22:03+08:00
-lastmod: 2013-05-06T23:25:31+08:00
+date: 2013-05-06T23:22:03-07:00
+lastmod: 2013-05-06T23:25:31-07:00
 excerpt: "Wondering where all the precious free space in your SSD went? Well, here are a few possibilities."
 draft: true
 categories: ["Infrastructure", "My System"]

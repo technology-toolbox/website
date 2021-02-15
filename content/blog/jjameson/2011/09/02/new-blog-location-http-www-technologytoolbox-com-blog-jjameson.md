@@ -1,6 +1,6 @@
 ---
 title: "New Blog Location - http://www.technologytoolbox.com/blog/jjameson"
-date: 2011-09-02T06:59:00+08:00
+date: 2011-09-02T06:59:00-07:00
 excerpt: "As I mentioned in my previous post , today is my last day with Microsoft. 
  I still have a lot of work to do in setting up my new website, but at this point, I've completed enough to continue blogging the \"Random Musings of Jeremy Jameson\": 
  http:..."

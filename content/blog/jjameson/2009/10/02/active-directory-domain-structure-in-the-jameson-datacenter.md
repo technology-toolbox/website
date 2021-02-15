@@ -1,6 +1,6 @@
 ---
 title: "Active Directory Domain Structure in the \"Jameson Datacenter\""
-date: 2009-10-02T01:50:00+08:00
+date: 2009-10-02T01:50:00-07:00
 excerpt: "In a previous post, I provided some details on the \"Jameson Datacenter\" , which is really just my home lab that I use for learning new technologies and improving my skills, as well as actually completing my day-to-day tasks on various customer projects..."
 draft: true
 categories: ["My System", "Infrastructure"]

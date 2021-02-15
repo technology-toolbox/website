@@ -1,6 +1,6 @@
 ---
 title: "What's in your Jump List?"
-date: 2011-03-04T21:05:00+08:00
+date: 2011-03-04T21:05:00-07:00
 excerpt: "Nearly three years ago, I wrote a post that described the BackedUp and NotBackedUp folders I use on almost every computer I ever log on to (my laptop, desktop, a handful of servers, and more than a dozen VMs). 
  I also showed how I created taskbar shortcuts..."
 draft: true

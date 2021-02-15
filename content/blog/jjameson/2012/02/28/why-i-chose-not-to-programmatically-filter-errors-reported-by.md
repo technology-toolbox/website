@@ -1,6 +1,6 @@
 ---
 title: "Why I chose not to programmatically filter errors reported by ELMAH"
-date: 2012-02-28T22:24:38+08:00
+date: 2012-02-28T22:24:38-07:00
 excerpt: "If you think that programmatically filtering errors in ELMAH is as easy as specifying filters in Web.config, you might be in for a surprise."
 draft: true
 categories: ["Development"]

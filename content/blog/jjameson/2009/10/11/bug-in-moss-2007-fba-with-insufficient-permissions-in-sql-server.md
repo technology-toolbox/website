@@ -1,6 +1,6 @@
 ---
 title: "Bug in MOSS 2007 FBA with Insufficient Permissions in SQL Server"
-date: 2009-10-11T23:58:00+08:00
+date: 2009-10-11T23:58:00-07:00
 excerpt: "A couple of weeks ago I was setting up Forms-Based Authentication (FBA) on my new development VM for Microsoft Office SharePoint Server (MOSS) 2007, and I spent a few hours troubleshooting why I couldn't add a custom role (\"Authenticated Users\") to a..."
 draft: true
 categories: ["SharePoint"]

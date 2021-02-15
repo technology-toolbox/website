@@ -1,6 +1,6 @@
 ---
 title: "Windows 7 SP1/SSD Rebuild (and MaxPatchCacheSize = 0)"
-date: 2011-03-09T01:34:00+08:00
+date: 2011-03-09T01:34:00-07:00
 excerpt: "I spent a few hours last night (and another hour this morning) rebuilding my Windows 7 desktop that I use as my primary workstation (WOLVERINE). 
  In case you haven't heard, Service Pack 1 for Windows 7 and Windows Server 2008 R2 was released a few weeks..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "A Simple Backup Solution"
-date: 2009-11-08T22:44:00+08:00
+date: 2009-11-08T22:44:00-07:00
 excerpt: "As I've mentioned before, I don't spend much money or time maintaining the \"Jameson Datacenter\" (a.k.a. my home lab). However, that doesn't mean that I treat my infrastructure lightly. 
  In previous posts, I've covered many of the Group Policy objects..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "WSUS Server Cleanup Wizard Hangs on \"Deleting unused updates...\""
-date: 2009-03-28T01:20:00+08:00
+date: 2009-03-28T01:20:00-07:00
 excerpt: "While cleaning off my Desktop this morning, I came across a file that I created back in December capturing my notes from a problem I was having with Windows Server Update Services (WSUS). Evidently I intended to blog about the issue, but apparently this..."
 draft: true
 categories: ["Infrastructure"]

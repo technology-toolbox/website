@@ -1,6 +1,6 @@
 ---
 title: "Localization and SharePoint Solutions, Part 1"
-date: 2010-10-24T22:09:00+08:00
+date: 2010-10-24T22:09:00-07:00
 excerpt: "The primary goal for the current sprint on the project I'm working on is to localize the client portal previously developed for the United States so that it can be used by other regions around the world -- initially Spain, Mexico, Argentina, and a few..."
 draft: true
 categories: ["SharePoint"]

@@ -1,6 +1,6 @@
 ---
 title: "Using Robocopy to Move Files and Folders"
-date: 2009-11-06T22:46:00+08:00
+date: 2009-11-06T22:46:00-07:00
 excerpt: "I use Robocopy a lot, and it's been in my Toolbox for so long that I hardly remember using anything else. I was glad to see that it is now included out-of-the-box (starting with Vista), because I typically use it instead of Windows Explorer to move or..."
 draft: true
 categories: ["My System"]

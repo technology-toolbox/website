@@ -1,6 +1,6 @@
 ---
 title: "Analyzing Database Roundtrips with SQL Server Profiler"
-date: 2010-09-02T22:50:00+08:00
+date: 2010-09-02T22:50:00-07:00
 excerpt: "One of the \"good habits\" I've developed over the years while creating applications is scrutinizing the interaction between logical or physical tiers. Given the nature of solutions that I'm typically involved with, this often involves examining how many..."
 draft: true
 categories: ["My System"]

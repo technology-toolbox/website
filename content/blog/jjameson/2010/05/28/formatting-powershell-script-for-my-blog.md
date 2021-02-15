@@ -1,6 +1,6 @@
 ---
 title: "Formatting PowerShell Script for My Blog"
-date: 2010-05-28T02:31:00+08:00
+date: 2010-05-28T02:31:00-07:00
 excerpt: "In a previous post , I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML). 
  I recently started doing..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Always Specify <FieldRefs> Element with Custom Content Types"
-date: 2007-05-06T00:57:00+08:00
+date: 2007-05-06T00:57:00-07:00
 excerpt: "I came across a nasty bug earlier this week in Microsoft Office SharePoint Server (MOSS) 2007 -- especially nasty because troubleshooting it primarily involved trial and error since there were no error messages displayed on the page, in the SharePoint..."
 draft: true
 categories: ["SharePoint"]

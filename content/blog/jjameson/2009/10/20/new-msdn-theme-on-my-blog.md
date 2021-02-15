@@ -1,6 +1,6 @@
 ---
 title: "New MSDN Theme on My Blog"
-date: 2009-10-20T21:12:00+08:00
+date: 2009-10-20T21:12:00-07:00
 excerpt: "I noticed this morning that the new color scheme released this past week on MSDN has made its way into our Community Server template (and thus onto my blog, since I'm currently using the default \"skin\"). 
  I'm still not sure how I feel about the combination..."
 draft: true

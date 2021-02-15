@@ -1,6 +1,6 @@
 ---
 title: "Error Installing KB 970892 When Reporting Services Configured with Domain Account"
-date: 2009-12-07T14:11:00+08:00
+date: 2009-12-07T14:11:00-07:00
 excerpt: "For a little over a month, Windows Update was failing on one of the servers in the \"Jameson Datacenter\" (a.k.a. my home lab). Specifically, KB 970892 simply would not install on JUBILEE -- my Systems Center Operations Manager (SCOM) 2007 VM, that I use..."
 draft: true
 categories: ["Infrastructure"]

@@ -1,6 +1,6 @@
 ---
 title: "Recommended ISO Tools"
-date: 2010-07-24T22:38:00+08:00
+date: 2010-07-24T22:38:00-07:00
 excerpt: "I added a new item to my Toolbox this weekend -- LC ISO Creator . It's not fancy, or even supported, but it is free and it appears to do what it is supposed to without issue, specifically creating an ISO image from an existing CD-ROM or DVD-ROM. There..."
 draft: true
 categories: ["My System", "Infrastructure"]

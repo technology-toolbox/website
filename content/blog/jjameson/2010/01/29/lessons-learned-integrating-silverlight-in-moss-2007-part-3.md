@@ -1,6 +1,6 @@
 ---
 title: "Lessons Learned Integrating Silverlight in MOSS 2007, Part 3"
-date: 2010-01-29T23:20:00+08:00
+date: 2010-01-29T23:20:00-07:00
 excerpt: "Yesterday I continued building upon part 1 in a series of posts regarding the use of Silverlight in an Internet-facing customer portal built on Microsoft Office SharePoint Server (MOSS) 2007. 
  As I mentioned in the previous posts, the Silverlight application..."
 draft: true

@@ -1,6 +1,6 @@
 ---
 title: "Reusable Content in SharePoint Publishing HTML Fields, Part 2"
-date: 2011-04-13T12:06:00+08:00
+date: 2011-04-13T12:06:00-07:00
 excerpt: "In my previous post , I introduced a scenario for using the \"Reusable Content\" feature in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In this post, I show you how to programmatically add Reusable Content list items (which..."
 draft: true
 categories: ["SharePoint"]

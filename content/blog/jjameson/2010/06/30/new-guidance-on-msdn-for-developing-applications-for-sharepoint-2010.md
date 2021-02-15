@@ -1,6 +1,6 @@
 ---
 title: "New Guidance on MSDN for Developing Applications for SharePoint 2010"
-date: 2010-06-30T07:33:00+08:00
+date: 2010-06-30T07:33:00-07:00
 excerpt: "A bunch of new content related to SharePoint 2010 application development was released yesterday. 
  You can browse the content online via MSDN: 
  Developing Applications for SharePoint 2010 

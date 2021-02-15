@@ -1,6 +1,6 @@
 ---
 title: "My first bug fix for Subtext now available on GitHub (a.k.a. Building TechnologyToolbox.com, part 18)"
-date: 2012-01-30T13:31:04+08:00
+date: 2012-01-30T13:31:04-07:00
 excerpt: "I finally got around to investigating all the hubbub with GitHub. I even submitted my first \"official\" bug fix for the Subtext blog engine. I'm sure it will get easier, but this experience was valuable for me, if for no other reason than making me appreciate how much I love Team Foundation Server."
 draft: true
 categories: ["Development"]

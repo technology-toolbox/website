@@ -1,6 +1,6 @@
 ---
 title: "Error Installing MOSS 2007 December Cumulative Update"
-date: 2009-01-23T11:43:00+08:00
+date: 2009-01-23T11:43:00-07:00
 excerpt: "Earlier this week I built a new Microsoft Office SharePoint Server (MOSS) 2007 development VM using a fresh install of Windows Server 2008, SQL Server 2008, and Visual Studio 2008. The process wasn't quite as smooth as I had hoped. 
  One of the issues..."
 draft: true

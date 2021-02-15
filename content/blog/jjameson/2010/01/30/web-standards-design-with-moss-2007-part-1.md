@@ -1,6 +1,6 @@
 ---
 title: "Web Standards Design with MOSS 2007, Part 1"
-date: 2010-01-30T06:00:00+08:00
+date: 2010-01-30T06:00:00-07:00
 excerpt: "I've mentioned before that I became somewhat of a Web standards zealot several years ago. Consequently, regardless of whether I'm building Web sites using the core ASP.NET platform or Microsoft Office SharePoint Server (MOSS) 2007, I strive to ensure..."
 draft: true
 categories: ["SharePoint", "Development"]
