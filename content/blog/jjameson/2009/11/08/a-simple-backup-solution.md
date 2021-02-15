@@ -89,11 +89,14 @@ Also note that the [type of backup](http://technet.microsoft.com/en-us/library/c
 
 Here are the scheduled backups on one of my servers (BEAST):
 
-<caption>Scheduled Backups on BEAST</caption>| Name | Schedule |
+**Scheduled Backups on BEAST**
+
+| Name | Schedule |
 | --- | --- |
 | Daily Backup | At 12:00 PM every day |
 | Differential Backup | At 12:30 AM every day |
 | Full Backup | At 1:00 AM every Sun of every week |
+
 The **Daily Backup** task is configured as follows:
 
 - **Run:** C:\BackedUp\Backup.cmd daily &gt;&gt; Backup.log

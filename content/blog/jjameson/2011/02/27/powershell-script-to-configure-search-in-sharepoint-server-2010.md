@@ -34,11 +34,14 @@ The other thing I noticed about the scripts that I came across -- and the primar
 
 The following table lists the service accounts that I recommend when configuring Search in SharePoint Server 2010:
 
-<caption>Service accounts related to Search in SharePoint Server 2010</caption>| User logon name | Full name | Description |
+**Service accounts related to Search in SharePoint Server 2010**
+
+| User logon name | Full name | Description |
 | --- | --- | --- |
 | {DOMAIN}\svc-sharepoint | Service account for SharePoint farm  | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the SharePoint 2010 Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
 | {DOMAIN}\svc-index | Service account for indexing content  | Provides read-only access to any content that needs to be indexed (and thus included in search results) |
 | {DOMAIN}\svc-spserviceapp | Service account for SharePoint service applications  | Used as the application pool identity for SharePoint service applications  |
+
 > **Note**
 >
 > For each service account listed in the table above, corresponding "-dev" and "-test" service accounts need to be created for the Development and Test environments. This allows the Development and Test teams to install and configure their environments without knowing the passwords for the Production environment.

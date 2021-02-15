@@ -930,7 +930,9 @@ private static string GetNewTag(
 In order to populate the list of categories for each post, I created a simple
 mapping, illustrated below:
 
-<caption>Tag-to-Category Mapping</caption>| Tag | Category |
+**Tag-to-Category Mapping**
+
+| Tag | Category |
 | --- | --- |
 | Core Development | Development |
 | Debugging | Development |
@@ -957,6 +959,7 @@ mapping, illustrated below:
 | WSS v2 | SharePoint |
 | WSS v3 | SharePoint |
 | WSUS | Infrastructure |
+
 > **Note**
 >
 > Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific content (e.g. **Infrastructure** or **Development**), I decided not to use these tags for mapping (and instead rely on categories being derived from other tags on the same post).

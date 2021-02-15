@@ -54,11 +54,14 @@ However, we need to think a little bit about the **Price** column.         We co
 
 Therefore, let's instead break the price into two parts: **Unit Price**         and **Unit of Measure**. We can then use a calculated column for **Price (**in order to concatenate the values specified in the other two         columns).
 
-<caption>            Data for "This Week's Specials"</caption>|                     Title<br>                 |                     Unit Price<br>                 |                     Unit of Measure<br>                 |                     Price<br>                 |                     Rollup Image<br>                 |
+**Data for "This Week's Specials"**
+
+|                     Title<br>                 |                     Unit Price<br>                 |                     Unit of Measure<br>                 |                     Price<br>                 |                     Rollup Image<br>                 |
 | --- | --- | --- | --- | --- |
 |                     Fisherman's Brew<br>                 |                     $9.98<br>                 |                     / lb.<br>                 |                     $9.98 / lb.<br>                 |                     /PublishingImages/boat.jpg<br>                 |
 |                     Boathouse Bold<br>                 |                     $12.50<br>                 |                     / lb.<br>                 |                     $12.50 / lb.<br>                 |                     /PublishingImages/ropes.jpg<br>                 |
 |                     Deadly Decaf<br>                 |                     $7.49<br>                 |                     / lb.<br>                 |                     $7.49 / lb.<br>                 |                     /PublishingImages/fame.jpg<br>                 |
+
 Here's a breakdown of the custom SharePoint list:
 
 - Name: **Specials**

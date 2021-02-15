@@ -100,7 +100,9 @@ a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/cre
 
 Here is the list in case you don't want to download the attached file:
 
-<caption>MOSS 2007 Feature Definitions</caption>| Feature Id | Display Name | Scope | Solution |
+**MOSS 2007 Feature Definitions**
+
+| Feature Id | Display Name | Scope | Solution |
 | --- | --- | --- | --- |
 | 99ee0928-7342-4739-865d-35b61ea4eaf0 | BDCAdminUILinks | Farm | Microsoft.Office.Excel.Server |
 | cdfa39c6-6413-4508-bccf-bf30368472b3 | DataConnectionLibraryStapling | Farm | Microsoft.Office.Excel.Server |
@@ -237,5 +239,4 @@ Here is the list in case you don't want to download the attached file:
 | 00bfea71-4ea5-48d4-a4ad-305cf7030140 | WorkflowHistoryList | Web |  |
 | 00bfea71-2d77-4a75-9fca-76516689e21a | workflowProcessList | Web |  |
 | 00bfea71-1e1d-4562-b56a-f05371bb0115 | XmlFormLibrary | Web |  |
-
 

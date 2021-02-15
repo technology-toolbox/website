@@ -35,13 +35,16 @@ In the following procedures, assume that we are configuring the public Internet 
 
 The relevant service accounts for claims-based authentication are listed in the  following table.
 
-<caption><a name="Table-1">Table 1 - Service Accounts</a></caption>| User Logon Name | Full Name | Description |
+**Table 1 - Service Accounts**
+
+| User Logon Name | Full Name | Description |
 | --- | --- | --- |
-| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration 
-	database. It also acts as the application pool identity account for the 
-	Central Administration site, as well as the application pool for the Security 
-	Token Service application.  |
+| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration
+database. It also acts as the application pool identity account for the
+Central Administration site, as well as the application pool for the Security
+Token Service application.  |
 | EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam Web application |
+
 [Assume that Fabrikam has established an "extranet" Active Directory domain which  will be used to host the SharePoint farm. In order to allow Fabrikam employees to  authenticate with their internal domain (FABRIKAM) credentials, a one-way trust  is established from the EXTRANET domain to the FABRIKAM domain.]
 
 Configuring claims-based authentication using a SQL Server database consists  of the following high-level steps:

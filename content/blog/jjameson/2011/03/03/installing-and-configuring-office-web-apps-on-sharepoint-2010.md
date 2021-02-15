@@ -40,13 +40,16 @@ Assume we have created a new Web application, [configured it for claims-based au
 
 The relevant service accounts for the Fabrikam extranet site are listed in the  following table.
 
-<caption>Table 1 - Service Accounts</caption>| User Logon Name | Full Name | Description |
+**Table 1 - Service Accounts**
+
+| User Logon Name | Full Name | Description |
 | --- | --- | --- |
-| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration 
-	database. |
+| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration
+database. |
 | EXTRANET\svc-spserviceapp | Service account for SharePoint service applications  | Used as the application pool identity for SharePoint service applications
-	 |
+|
 | EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam extranet Web application |
+
 In order to resolve a few issues with the deployment and ensure it conforms to  recommended best practices, we need to perform some additional configuration steps.
 
 ### Configure Excel Services Application trusted location
@@ -188,19 +191,26 @@ for caching:
 #### To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
+
 2. In the **Object Explorer**, expand the **Databases** folder.
+
 3. Right-click the **OfficeWebAppsCache** database and then click
    **Properties**.
+
 4. In the **Database Properties** dialog, in the **Select
    a page** area on the left, click **Files**.
+
 5. Using the settings specified in the following table, specify the new values
    for **Initial Size** and **Autogrowth**.
+   **Table 2 - Initial data and log file sizes**
+   
+   | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
+   | --- | --- | --- | --- | --- | --- |
+   | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted gerowth |
+   |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
 
-<caption>Table 2 - Initial data and log file sizes</caption>    | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
-    | --- | --- | --- | --- | --- | --- |
-    | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted gerowth |
-    |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
 6. Click **OK**.
+
 The following SQL statements can be used as an alternative to setting the sizes  through the Database Properties dialog:
 
 ```

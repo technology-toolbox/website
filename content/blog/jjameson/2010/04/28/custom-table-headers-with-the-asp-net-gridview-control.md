@@ -33,15 +33,18 @@ tags: ["Web Development"]
 
 In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years), I showed an example KPI dashboard for a Web application with  a table similar to the following:
 
-<caption>Key Performance Indicators (Detail)</caption>| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
+**Key Performance Indicators (Detail)**
+
+| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas | 94%
-	![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
 I also hinted that it took a little more work than I expected to render the custom  header for the table (i.e. the **Thresholds** label that spans the  last three columns). Note that I originally mocked up the KPI feature using a static  HTML prototype, so I knew what I wanted the underlying HTML markup to look like.  However, the trick was to generate the desired HTML using an ASP.NET control.
 
 I had originally planned on using the Telerik RadGrid control to render the KPI  detail table (since we are using it in a variety of other features on the site).  However, as I mentioned in my earlier post, I eventually gave up trying to customize  the table header on the RadGrid and instead replaced it with the out-of-the-box  GridView control in ASP.NET. [While I did find [one approach for rendering a RadGrid control with two header rows](http://www.telerik.com/community/forums/aspnet-ajax/grid/radgrid-custom-header-with-tow-rows.aspx), I also discovered  issues with that approach when using auto-generated columns.]

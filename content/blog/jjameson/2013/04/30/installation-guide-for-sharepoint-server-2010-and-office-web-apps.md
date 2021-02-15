@@ -73,22 +73,25 @@ environment (DEV) and local development VMs.
 To help you locate and interpret information easily, this document uses
 the following style conventions and terminology.
 
-<caption>Table 1: Style conventions</caption>| Element | Meaning |
+**Table 1: Style conventions**
+
+| Element | Meaning |
 | --- | --- |
-| ALL CAPITALS | Acronyms, Active Directory domain names, server names, names 
-			of certain commands, and keys on the keyboard. |
-| **Bold** | Menus and menu commands, command buttons; tab and dialog box 
-			titles and options; command-line commands, options, and portions 
-			of syntax that must be typed exactly as shown. |
-| Initial Capitals | Names of applications, programs, paths (folders and filenames), 
-			and named windows. |
-| *Italic* | Information that you provide, terms that are being introduced, 
-			and book titles. |
+| ALL CAPITALS | Acronyms, Active Directory domain names, server names, names
+of certain commands, and keys on the keyboard. |
+| **Bold** | Menus and menu commands, command buttons; tab and dialog box
+titles and options; command-line commands, options, and portions
+of syntax that must be typed exactly as shown. |
+| Initial Capitals | Names of applications, programs, paths (folders and filenames),
+and named windows. |
+| *Italic* | Information that you provide, terms that are being introduced,
+and book titles. |
 | Monospace | Examples, sample command lines, program code, and program output. |
-| "DEV -" prefix | Indicates a step that should only be performed in the Development 
-			integration environment (DEV) and local development VMs. Specifically, 
-			these sections are skipped when deploying to the Test and Production 
-			environments. |
+| "DEV -" prefix | Indicates a step that should only be performed in the Development
+integration environment (DEV) and local development VMs. Specifically,
+these sections are skipped when deploying to the Test and Production
+environments. |
+
 # Overview of the installation process
 
 The process for installing the Fabrikam Extranet is divided into the
@@ -2737,116 +2740,141 @@ There are a number of configuration parameters that need to be determined
 before installing the Fabrikam Extranet solution. The various parameters
 and configuration settings are listed in the following tables.
 
-<caption><a name="Table_2_-_Service_accounts">Table 2 - Service 
-			accounts</a></caption>| User logon name | Full name | SharePoint managed account | Description |
+**Table 2 - Service
+accounts**
+
+| User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
 | EXTRANET\svc-sql  | Service account for SQL Server  | No  | Used to run SQL Server and cluster services  |
 | EXTRANET\svc-sql-agent  | Service account for SQL Server Agent  | No  | Used to run SQL Server Agent  |
-| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the 
-				SharePoint configuration database. It also acts as the application 
-				pool identity account for the SharePoint Central Administration 
-				application pool, and it is the account under which the Windows 
-				SharePoint Services Timer service runs. The SharePoint Products 
-				Configuration Wizard adds this account to the SQL Server
-				**dbcreator** and **securityadmin** 
-				server roles.<br><br>The farm service account must be a domain user account, but 
-				it does not need to be a member of any specific security group 
-				on the servers in the farm. It is recommended to follow the 
-				principle of least privilege and specify a user account that 
-				is not a member of the Administrators group on any of the servers 
-				in the farm. |
-| EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation 
-				2010 Search and SharePoint Server 2010 Search)  |
-| EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be 
-				indexed (and thus included in search results)  |
-| EXTRANET\svc-spserviceapp  | Service account for SharePoint service applications  | Yes  | Used as the application pool identity for SharePoint service 
-				applications  |
-| EXTRANET\svc-web-fabrikam  | Service account for Fabrikam Web application  | Yes  | Used as the application pool identity for the new Fabrikam 
-				Extranet website  |
-| FABRIKAM\svc-web-fabrikam  | Service account for Fabrikam Web application  | No  | Proxy account used to enable internal Fabrikam users and 
-				groups to be selected using the People Picker in the SharePoint 
-				extranet farm. The username and password must not contain commas. |
-| EXTRANET\svc-sp-psr  | Service account for SharePoint "Portal Super Reader" | No  | Object cache user account with Full Read access to Web applications 
-				([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
-| EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access 
-				to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
-<caption><a name="Table_3_-_Installation_file_locations">Table 3 
-			- Installation file locations</a></caption>| Setting | Value |
+| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the
+SharePoint configuration database. It also acts as the application
+pool identity account for the SharePoint Central Administration
+application pool, and it is the account under which the Windows
+SharePoint Services Timer service runs. The SharePoint Products
+Configuration Wizard adds this account to the SQL Server
+**dbcreator** and **securityadmin**
+server roles.<br><br>The farm service account must be a domain user account, but
+it does not need to be a member of any specific security group
+on the servers in the farm. It is recommended to follow the
+principle of least privilege and specify a user account that
+is not a member of the Administrators group on any of the servers
+in the farm. |
+| EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation
+2010 Search and SharePoint Server 2010 Search)  |
+| EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be
+indexed (and thus included in search results)  |
+| EXTRANET\svc-spserviceapp  | Service account for SharePoint service applications  | Yes  | Used as the application pool identity for SharePoint service
+applications  |
+| EXTRANET\svc-web-fabrikam  | Service account for Fabrikam Web application  | Yes  | Used as the application pool identity for the new Fabrikam
+Extranet website  |
+| FABRIKAM\svc-web-fabrikam  | Service account for Fabrikam Web application  | No  | Proxy account used to enable internal Fabrikam users and
+groups to be selected using the People Picker in the SharePoint
+extranet farm. The username and password must not contain commas. |
+| EXTRANET\svc-sp-psr  | Service account for SharePoint "Portal Super Reader" | No  | Object cache user account with Full Read access to Web applications
+([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+| EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access
+to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+
+**Table 3
+- Installation file locations**
+
+| Setting | Value |
 | --- | --- |
 | Installation path  | C:\Program Files\Microsoft Office Servers  |
 | Search index files  | D:\Program Files\Microsoft Office Servers\14.0\Data  |
-<caption><a name="Table_4_-_Diagnostic_logging">Table 4 - Diagnostic 
-			logging</a></caption>| Setting | Value |
+
+**Table 4 - Diagnostic
+logging**
+
+| Setting | Value |
 | --- | --- |
 | Enable Event Log Flood Protection  | Yes (checked) |
 | Trace Log Path  | TEST and PROD:<br>
-				L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>
-				DEV:<br>
-				%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>
+DEV:<br>
+%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
 | Number of days to store log files  | TEST and PROD: 14<br>
-				DEV: 1 |
+DEV: 1 |
 | Restrict Trace Log disk space usage  | No (not checked)  |
 | Maximum storage space for Trace Logs (GB)  | N/A  |
-<caption>
-			<a name="Table_5_-_Web_analytics_and_health_data_collection">Table 
-			5 - Web analytics and health data collection</a></caption>| Setting | Value |
+
+**Table
+5 - Web analytics and health data collection**
+
+| Setting | Value |
 | --- | --- |
 | Enable usage data collection | TEST and PROD: Yes (checked)<br><br>
-				DEV: No (not checked)\* |
+DEV: No (not checked)\* |
 | Log file location | TEST and PROD:<br>
-				L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>
-				DEV:<br>
-				C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>
+DEV:<br>
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
 | Maximum log file size | TEST and PROD: 5<br><br>
-				DEV: 1 |
+DEV: 1 |
 | Enable health data collection | TEST and PROD: Yes (checked)<br><br>
-				DEV: No (not checked)\* |
+DEV: No (not checked)\* |
 | Database Name | WSS\_Logging |
+
     			\* - In development environments, the WSS\_Logging database can 
     			quickly consume all available space on a small VHD. Therefore 
     			enabling usage data collection and health data collection is
     			*not* recommended in these environments.
 
-<caption><a name="Table_6_-_Outgoing_e-mail_settings">Table 6 - 
-			Outgoing e-mail settings</a></caption>| Setting | Value for PROD | Value for TEST | Value for DEV |
+**Table 6 -
+Outgoing e-mail settings**
+
+| Setting | Value for PROD | Value for TEST | Value for DEV |
 | --- | --- | --- | --- |
 | Outbound SMTP server  | smtp.extranet.fabrikam.com  | smtp.extranet.fabrikam.com | smtp.fabrikam.com  |
 | From address  | svc-sharepoint@fabrikam.com  | svc-sharepoint-test@fabrikam.com  | svc-sharepoint-dev@fabrikam.com  |
 | Reply-to address  | no-reply@fabrikam.com  | no-reply@fabrikam.com  | no-reply@fabrikam.com  |
 | Character set  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  |
-<caption><a name="Table_7_-_Web_applications">Table 7 - Web applications</a></caption>| Application | Port | Host Header | Allow Anonymous | Application Pool | Web Application Database Name |
+
+**Table 7 - Web applications**
+
+| Application | Port | Host Header | Allow Anonymous | Application Pool | Web Application Database Name |
 | --- | --- | --- | --- | --- | --- |
 | Name | Service Account |
 | --- | --- |
 | SharePoint Central Administration v4  | 22812  | (blank)  | No  |  | EXTRANET\svc-sharepoint  | SharePoint\_AdminContent\_{GUID}  |
 | Fabrikam Extranet | 80  | extranet.fabrikam.com  | Yes  | SharePoint – extranet.fabrikam.com80  | EXTRANET\svc-web-fabrikam  | WSS\_Content\_FabrikamExtranet  |
-<caption><a name="Table_8_-_Site_collections">Table 8 - Site collections</a></caption>| Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
+
+**Table 8 - Site collections**
+
+| Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | http://extranet.fabrikam.com  | Fabrikam Extranet  | (blank)  | /  | Publishing: Publishing Portal  | FABRIKAM\jjameson  | FABRIKAM\smasters | No Quota  |
-<caption><a name="Table_9_-_Initial_data_and_log_file_sizes">Table 
-			9 - Initial data and log file sizes</a></caption>| Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
+
+**Table
+9 - Initial data and log file sizes**
+
+| Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
 | WSS\_Content\_FabrikamExtranet | WSS\_Content\_FabrikamExtranet | Data  | PRIMARY  | 10,000  | By 500 MB, unrestricted growth  |
 |  | WSS\_Content\_FabrikamExtranet\_Log  | Log  | Not Applicable  | 400  | By 10 percent, restricted growth: 4,000 MB  |
 | OfficeWebAppsCache  | OfficeWebAppsCache  | Data  | PRIMARY  | 10,000  | By 500 MB, unrestricted growth  |
 |  | OfficeWebAppsCache\_Log  | Log  | Not Applicable  | 400  | By 10 percent, restricted growth: 4,000 MB  |
-<caption>
-			<a name="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement">
-			Table 10 - SharePoint groups and permissions used for entitlement</a></caption>| SharePoint Group | Members | Permissions |
+
+**Table 10 - SharePoint groups and permissions used for entitlement**
+
+| SharePoint Group | Members | Permissions |
 | --- | --- | --- |
 | Approvers | FABRIKAM\Extranet Approvers | Approve  |
 | Fabrikam Extranet Members | FABRIKAM\Extranet Authors  | Contribute  |
-<caption><a name="Table_11_-_Search_schedules">Table 11 - Search 
-			schedules</a></caption>| Setting | Full | Incremental |
+
+**Table 11 - Search
+schedules**
+
+| Setting | Full | Incremental |
 | --- | --- | --- |
 | Type  | Weekly  | Daily  |
 | Run every  | 1 week  | 1 day  |
 | On:  | <ul>
-					<li>Sunday</li>
-				</ul> | N/A  |
+<li>Sunday</li>
+</ul> | N/A  |
 | Starting time  | 04:00 AM  | 12:00 AM  |
 | Repeat within the day  | No  | Yes<br>
-				Every 30 minutes<br>
-				For 1440 minutes  |
-
+Every 30 minutes<br>
+For 1440 minutes  |
 

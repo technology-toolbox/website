@@ -37,7 +37,9 @@ If, however, you'd rather forego the MSF Agile workbooks, Excel reports, and das
 
 In case you are wondering what tasks I recommend starting out with on a new Scrum project, I'll include them here. Note that many of these tasks are from the original MSF Agile template and don't take more than a few minutes to complete. However, I still like to include them to serve as a "checklist" on new projects.
 
-<caption>Initial Tasks for a Scrum Project</caption>| Title | Description |
+**Initial Tasks for a Scrum Project**
+
+| Title | Description |
 | --- | --- |
 | Setup: Configure permissions for TFS project | Add team members to one of the four security groups: Builders, Contributors, Project Administrators, or Readers. To configure security, in the **Team Explorer** window, right-click the team project, point to **Team Project Settings** and then click **Group Membership**. |
 | Setup: Configure permissions on team project portal | Add team members to one of the five permission levels: Full Control, Design, Contribute, Read, or View Only. To configure security on the SharePoint team site, open the project portal, click **Site Actions**, and then click **Site Permissions**. |
@@ -53,5 +55,4 @@ In case you are wondering what tasks I recommend starting out with on a new Scru
 | Setup: Send email to users with TFS project details | Send an e-mail to team members that provides information about which Team Foundation Server they should connect to, and which team project they should use so they can get started working on the team project. |
 | Brainstorm and prioritize Product Backlog | The product backlog is a high-level list that is maintained throughout the entire project. It aggregates backlog items: broad descriptions of all potential features, prioritized as an absolute ordering by business value. It is therefore the "What" that will be built, sorted by importance. [[http://en.wikipedia.org/wiki/Scrum\_(development)](http://en.wikipedia.org/wiki/Scrum_%28development%29)] |
 | Define the Sprint Backlog (v1.0\Sprint 1) | In the "Sprint Planning Meeting" with the entire team, select what work is to be done in the sprint and prepare the Sprint Backlog that details the time it will take to do the work. |
-
 

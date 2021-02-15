@@ -29,7 +29,9 @@ Shortly before or after a release to the Production environment (i.e. whenever t
 
 For example, here are the contents of the list for my current project:
 
-<caption>Builds</caption>| Title | Version |
+**Builds**
+
+| Title | Version |
 | --- | --- |
 | Sprint-1 | 1.0.7.0 |
 | Sprint-2 | 1.0.41.0 |
@@ -40,6 +42,7 @@ For example, here are the contents of the list for my current project:
 | Sprint-7 | 1.0.237.0 |
 | Sprint-8 | 1.0.270.0 |
 | Sprint-9 | 1.0.295.5 |
+
 This list makes it very easy for anyone with access to the team site to determine which build was associated with a particular release.
 
 I suppose that I could spend a few seconds renaming the Title column to something like Milestone or Iteration, but honestly I don't bother (at least not anymore).

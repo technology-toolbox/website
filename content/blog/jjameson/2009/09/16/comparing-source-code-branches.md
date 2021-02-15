@@ -83,18 +83,21 @@ robocopy "%BRANCH1%" "%BRANCH2%" /E /MIR /XD bin obj TestResults /XF *.scc *.suo
 
 Note that I put the word *magic* in quotes because it's really not magic  at all. When copying a source code branch, I simply use robocopy.exe and specify  the following options:
 
-<caption>robocoby.exe command-line options used in CopyBranch.cmd</caption>| Command-Line Option | Comments |
+**robocoby.exe command-line options used in CopyBranch.cmd**
+
+| Command-Line Option | Comments |
 | --- | --- |
 | /E | Copy subdirectories, including empty ones |
-| /MIR | Mirror the directory tree, thus ensuring that when I subsequently run 
-	CopyBranch.cmd, any deleted files from the original branch are removed from 
-	the "temporary" copy of the branch) |
-| /XD bin obj TestResults | Exclude directories matching the given names/paths, thus skipping the 
-	compiled output (i.e. bin and obj) as well as the test results generated 
-	by running unit tests from within Visual Studio |
-| /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping 
-	source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project 
-	user-specific options (i.e. \*.suo and \*.user) |
+| /MIR | Mirror the directory tree, thus ensuring that when I subsequently run
+CopyBranch.cmd, any deleted files from the original branch are removed from
+the "temporary" copy of the branch) |
+| /XD bin obj TestResults | Exclude directories matching the given names/paths, thus skipping the
+compiled output (i.e. bin and obj) as well as the test results generated
+by running unit tests from within Visual Studio |
+| /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping
+source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project
+user-specific options (i.e. \*.suo and \*.user) |
+
 For example, let's suppose that I've checked in some changes to the **v3.0** branch that need to be propagated to the **Main** branch.  I would open a command prompt and run the following:
 
 C:\NotBackedUp\Agilent&gt;<kbd>DiffBranches.cmd v3.0 Main</kbd>

@@ -70,11 +70,14 @@ The problem is that we don't know at design-time what the columns in the summary
 
 To help visualize this, consider the following example summary view for a KPI  scorecard:
 
-<caption>Key Performance Indicators (Summary)</caption>| KPI | 2009 Q3 | 2009 Q4 | 2010 Q1 |
+**Key Performance Indicators (Summary)**
+
+| KPI | 2009 Q3 | 2009 Q4 | 2010 Q1 |
 | --- | --- | --- | --- |
 | Cycle Time | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | Utilization | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) |
 | Rejection Rate |  | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) |
+
 While this example shows three periods of data, there might be cases where fewer  columns are displayed (and perhaps other scenarios where more columns are displayed).  The point is, the presentation layer should simply display whatever the service  layer returns as the "summary table" based on the specified scorecard data (applying  any presentational aspects as necessary -- such as replacing KPI status values with  corresponding `<img>` elements).
 
 When the user selects a KPI in the summary view, we want to display more information  in a detail view on the right side of the page. Consequently, we add another method  to the **ScorecardService** class:
@@ -90,15 +93,18 @@ public static DataTable GetScorecardDetailTable(
 
 Similar to the **GetScorecardSummaryTable** method, the **GetScorecardDetailTable** method returns a generic DataTable that will subsequently  be rendered by the presentation tier (i.e. the ASP.NET user control). Perhaps something  like this:
 
-<caption>Key Performance Indicators (Detail)</caption>| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
+**Key Performance Indicators (Detail)**
+
+| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas | 94%
-	![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
 Assuming you are proficient in ADO.NET, it shouldn't take you very long to implement  the **GetScorecardSummaryTable** and **GetScorecardDetailTable**  methods. [In fact, if you are like me, you'll probably spend more time working on  the ASCX control, for example to get the "Thresholds" label to appear above the  corresponding columns in the detail table. (I eventually punted the Telerik RadGrid  control I originally intended to use and ended up replacing it with a simple GridView  control, just so I could easily add a second header row with the corresponding `rowspan` and `colspan` attributes.)]
 
 So far, we've addressed the following basic scenarios:

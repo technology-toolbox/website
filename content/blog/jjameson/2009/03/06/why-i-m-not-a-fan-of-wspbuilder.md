@@ -43,10 +43,13 @@ However, simply for the sake of comparison, consider that the solution with 30  
 
 To summarize:
 
-<caption>Comparison of Visual Studio Solution Build Times</caption>| Visual Studio Solution | Number of Projects | Lines of Code | Number of WSPs | Incremental Build Time |
+**Comparison of Visual Studio Solution Build Times**
+
+| Visual Studio Solution | Number of Projects | Lines of Code | Number of WSPs | Incremental Build Time |
 | --- | --- | --- | --- | --- |
 | Solution1 | 30 | 23,110 | 4 | 00:01:52 |
 | Solution2 | 52 | 38,905 | 17 | 00:00:28 |
+
 From the data in this table, we can clearly see that something is amiss. The  smaller solution (i.e. with 40% less code and 1/4 as many WSPs) takes almost four  times longer to incrementally build! Ouch.
 
 As I told my new teammates shortly after joining the project, WspBuilder doesn't  have the "smarts" to determine that no work needs to be done when nothing has changed  in any of the items included in a WSP (i.e. there is no need to rebuild the WSP  when you press <kbd>CTRL+SHIFT+B</kbd> and then <kbd>CTRL+SHIFT+B</kbd> again immediately  after the previous build completed). This is effectively the same as using post-build  events in Visual Studio to invoke makecab.exe to package the WSP.

@@ -27,7 +27,9 @@ The process below assumes the TFS environment is comprised of at least two serve
 
 There are a number of configuration parameters that need to be determined before         installing Team Foundation Server 2010 and SharePoint Server 2010. The various parameters         and configuration settings for my environment are listed in the following tables.
 
-<caption>            <a name="tfs-upgrade-Table1">Table 1 - Service Accounts</a></caption>|                     User Logon Name<br>                 |                     Full Name<br>                 |                     Description<br>                 |
+**Table 1 - Service Accounts**
+
+|                     User Logon Name<br>                 |                     Full Name<br>                 |                     Description<br>                 |
 | --- | --- | --- |
 |                     TECHTOOLBOX\svc-build<br>                 |                     Service account for software builds<br>                 |                     Used for the Team Foundation Build Service<br>                 |
 |                     TECHTOOLBOX\svc-sharepoint<br>                 |                     Service account for SharePoint<br>                 |                     Database access account used by SharePoint to connect to the configuration database<br>                    (a.k.a. the SharePoint "farm account")<br>                 |
@@ -37,42 +39,63 @@ There are a number of configuration parameters that need to be determined before
 |                     TECHTOOLBOX\svc-tfs<br>                 |                     Service account for Team Foundation Server<br>                 |  |
 |                     TECHTOOLBOX\svc-tfsreports<br>                 |                     Service account for TFS reporting<br>                 |  |
 |                     TECHTOOLBOX\svc-web-tfs<br>                 |                     Service account for Team Foundation Server Web site<br>                 |                     Used for the application pool for the SharePoint Web application for TFS project<br>                    sites<br>                 |
-<caption>            <a name="tfs-upgrade-Table2">Table 2 - Domain Groups</a></caption>|                     Domain<br>                 |                     Group Name<br>                 |                     Group Scope<br>                 |                     Group Type<br>                 |                     Description<br>                 |
+
+**Table 2 - Domain Groups**
+
+|                     Domain<br>                 |                     Group Name<br>                 |                     Group Scope<br>                 |                     Group Type<br>                 |                     Description<br>                 |
 | --- | --- | --- | --- | --- |
 |                     TECHTOOLBOX<br>                 |                     SharePoint Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
 |                     TECHTOOLBOX<br>                 |                     SQL Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
 |                     TECHTOOLBOX<br>                 |                     Team Foundation Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
-<caption>            <a name="tfs-upgrade-Table3">Table 3 - SharePoint Server 2010 Installation Parameters</a></caption>|                     Parameter<br>                 |                     Value<br>                 |
+
+**Table 3 - SharePoint Server 2010 Installation Parameters**
+
+|                     Parameter<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     SharePoint configuration database server<br>                 |                     beast<br>                 |
 |                     SharePoint configuration database name<br>                 |                     SharePoint\_Config<br>                 |
 |                     SharePoint Central Administration port number<br>                 |                     22812<br>                 |
 |                     SharePoint Central Administration authentication provider<br>                 |                     NTLM<br>                 |
-<caption>            <a name="tfs-upgrade-Table4">Table 4 - Outgoing E-Mail Settings</a></caption>|                     Setting<br>                 |                     Value<br>                 |
+
+**Table 4 - Outgoing E-Mail Settings**
+
+|                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Outbound SMTP server<br>                 |                     smtp.technologytoolbox.com<br>                 |
 |                     From address<br>                 |                     svc-sharepoint@technologytoolbox.com<br>                 |
 |                     Reply-to address<br>                 |                     no-reply@technologytoolbox.com<br>                 |
 |                     Character set<br>                 |                     65001 (Unicode UTF-8)<br>                 |
-<caption>            <a name="tfs-upgrade-Table5">Table 5 - SharePoint Web Applications</a></caption>|                     Name<br>                 |                     Port<br>                 |                     Host Header<br>                 |                     Allow Anonymous<br>                 |                     URL<br>                 |                     App Pool Service Account<br>                 |                     Database Name(s)<br>                 |
+
+**Table 5 - SharePoint Web Applications**
+
+|                     Name<br>                 |                     Port<br>                 |                     Host Header<br>                 |                     Allow Anonymous<br>                 |                     URL<br>                 |                     App Pool Service Account<br>                 |                     Database Name(s)<br>                 |
 | --- | --- | --- | --- | --- | --- | --- |
 |                     SharePoint Central Administration v4<br>                 |                     22812<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops:22812/<br>                 |                     TECHTOOLBOX\svc-sharepoint<br>                 |                     SharePoint\_AdminContent\_{GUID}<br>                 |
 |                     SharePoint - 80<br>                 |                     80<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops/<br>                 |                     TECHTOOLBOX\svc-web-tfs<br>                 | <ul>                        <li>WSS_Content</li><br>                        <li>WSS_Content_TFS (attached to Web application to restore existing TFS project sites)</li><br>                    </ul> |
-<caption>            <a name="tfs-upgrade-Table6">Table 6 - Reporting Services Configuration Settings</a></caption>|                     Setting<br>                 |                     Value<br>                 |
+
+**Table 6 - Reporting Services Configuration Settings**
+
+|                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Instance Configuration<br>                 |                     Default instance (MSSQLSERVER)<br>                 |
 |                     Service Account<br>                 |                     NT AUTHORITY\NETWORK SERVICE<br>                 |
 |                     SMTP Settings - Sender Address<br>                 |                     svc-tfsreports@technologytoolbox.com<br>                 |
 |                     SMTP Settings - SMTP Server<br>                 |                     smtp.technologytoolbox.com<br>                 |
-<caption>            <a name="tfs-upgrade-Table7">Table 7 - Secure Store Target Application Settings for
-                TFS Dashboards</a></caption>|                     Setting<br>                 |                     Value<br>                 |
+
+**Table 7 - Secure Store Target Application Settings for
+TFS Dashboards**
+
+|                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Target Application ID<br>                 |                     TFS<br>                 |
 |                     Display Name<br>                 |                     Team Foundation Server<br>                 |
 |                     Contact E-mail<br>                 |                     jjameson@technologytoolbox.com<br>                 |
 |                     Target Application Type<br>                 |                     Group<br>                 |
 |                     Members<br>                 |                     TECHTOOLBOX\All Developers<br>                 |
-<caption>            <a name="tfs-upgrade-Table8">Table 8 - TFS Configuration Settings</a></caption>|                     Setting<br>                 |                     Value<br>                 |
+
+**Table 8 - TFS Configuration Settings**
+
+|                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Databases - SQL Server Instance<br>                 |                     BEAST<br>                 |
 |                     Databases - Configuration database to upgrade<br>                 |                     TfsIntegration<br>                 |
@@ -93,13 +116,17 @@ There are a number of configuration parameters that need to be determined before
 |                     SharePoint Products - Settings - Administration URL<br>                 | [http://cyclops:22812/](http://cyclops:22812/) |
 |                     Project Collection - Name for the new collection<br>                 |                     DefaultCollection<br>                 |
 |                     Project Collection - Description<br>                 |                     Project(s) upgraded from previous Team Foundation Server<br>                 |
-<caption>            <a name="tfs-upgrade-Table9">Table 9 - Team Foundation Build Configuration Settings</a></caption>|                     Setting<br>                 |                     Value<br>                 |
+
+**Table 9 - Team Foundation Build Configuration Settings**
+
+|                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Team Foundation Build Server<br>                 |                     DAZZLER<br>                 |
 |                     Project Collection - Team project collection to configure build services for<br>                 |                     http://cyclops:8080/tfs/DefaultCollection<br>                 |
 |                     Build Services - Number of build agents to run on this build machine<br>                 |                     1<br>                 |
 |                     Settings - Run Team Foundation Build Service as<br>                 |                     TECHTOOLBOX\svc-build<br>                 |
 |                     Settings - Accept connections from Team Foundation Server on<br>                 |                     Default port 9191<br>                 |
+
 ### Deploy and Configure the Server Infrastructure
 
 #### Install Windows Server 2008 R2

@@ -45,7 +45,9 @@ For more information on gated check-ins, refer to the following:
 
 In case you are wondering how I configured the gated check-in build definition, here are the settings I used. If a setting is not listed in the following table, it means the default is used.
 
-<caption>Build Definition: "Gated Check-in - Main"</caption>| Section | Property | Value |
+**Build Definition: "Gated Check-in - Main"**
+
+| Section | Property | Value |
 | --- | --- | --- |
 | General | Build definition name | Gated Check-in - Main |
 | Trigger | Gated Check-in - accept check-ins only if the submitted changes merge and build successfully | (selected) |
@@ -54,6 +56,7 @@ In case you are wondering how I configured the gated check-in build definition, 
 | Process | Build process template: | DefaultTemplate.xaml |
 |   | Build process parameters: |   |
 |   | Items to Build<ul><li>Solutions/Projects</li>
+
 <li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li>
 <li>Release - Any CPU</li></ul> |
 |   | Clean Workspace | False |

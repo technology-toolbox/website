@@ -80,7 +80,9 @@ For "Sprint 1", the Development team (which is comprised entirely of one person 
 
 Here are the corresponding work items that I added to the TFS project (note that         these are in addition to the "default" work items listed in [my previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)):
 
-<caption>            Initial work items for the Tugboat project (partial list)</caption>|                     Work Item Type<br>                 |                     Title<br>                 |
+**Initial work items for the Tugboat project (partial list)**
+
+|                     Work Item Type<br>                 |                     Title<br>                 |
 | --- | --- |
 |                     Product Backlog Item<br>                 |                     Home page<br>                 |
 |                     Product Backlog Item<br>                 |                     Masthead<br>                 |
@@ -94,6 +96,7 @@ Here are the corresponding work items that I added to the TFS project (note that
 |                     Task<br>                 |                     Create HomeSiteConfiguration feature<br>                 |
 |                     Task<br>                 |                     Create deployment scripts for SharePoint WSPs and features<br>                 |
 |                     Task<br>                 |                     Create scripts to build/rebuild Web application<br>                 |
+
 The "create prototype" task was a really easy one to complete in this particular         case (since Dan and Ethan did all the work already), but an important one nonetheless.         When developing a Web site that will run in SharePoint, I almost always try to have         a static HTML prototype that I can refer to and use for quickly mocking up new features.         In general, it will be much faster to develop and refine your HTML/CSS using a tool         like Microsoft Expression Web, rather than trying to do the same on a "live" SharePoint         site (i.e. your local development VM) using SharePoint Designer.
 
 > **Tip**

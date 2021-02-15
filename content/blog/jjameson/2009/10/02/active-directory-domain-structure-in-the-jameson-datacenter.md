@@ -39,7 +39,9 @@ As you can see, I created OUs to model organizations such as the **Development**
 
 The following table summarizes the various OUs in the domain:
 
-<caption>            Organizational Units in the corp.technologytoolbox.com Domain</caption>|                     Organizational Unit<br>                 |                     Description<br>                 |
+**Organizational Units in the corp.technologytoolbox.com Domain**
+
+|                     Organizational Unit<br>                 |                     Description<br>                 |
 | --- | --- |
 |                     Development<br>                 |                     Represents the "Development" group within Technology Toolbox (which really just<br>                    means me, since my wife doesn't do any development and my 3-1/2 year old daughter<br>                    isn't quite ready for .NET yet)<br>                 |
 |                     Development/Groups<br>                 |                     Contains the groups within the Development organization (such as **TECHTOOLBOX\All<br>                        Developers** and **TECHTOOLBOX\Development Admins**). Delegated<br>                    administration is used to allow developers to create and manage their own groups.<br>                 |
@@ -57,6 +59,7 @@ The following table summarizes the various OUs in the domain:
 |                     IT/Service Accounts<br>                 |                     Contains service accounts for the "Test" and "Production" environments (e.g. **Service account for SQL Server (TEST) -- TECHTOOLBOX\svc-sql-test** and<br>                    **Service account for SQL Server** -- **TECHTOOLBOX\svc-sql**)<br>                 |
 |                     IT/Users<br>                 |                     Contains user accounts for each person in the IT organization. This OU is currently<br>                    empty.<br>                 |
 |                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
+
 > **Note**
 >
 > The **Sales** OU contains similar OUs as **Development**. These are simply not shown in the previous table.

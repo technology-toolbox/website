@@ -22,12 +22,15 @@ I extracted the data from Community Server into an Excel spreadsheet so I could 
 
 Here's a quick summary of my initial analysis:
 
-<caption>            Table 1: MSDN Blog Usage Analysis</caption>|                     Metric<br>                 |                     Views<br>                 |                     AggViews<br>                 |                     Comments<br>                 |                     Combined Views<br>                 |
+**Table 1: MSDN Blog Usage Analysis**
+
+|                     Metric<br>                 |                     Views<br>                 |                     AggViews<br>                 |                     Comments<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- | --- | --- |
 |                     Total<br>                 |                     205,142<br>                 |                     139,377<br>                 |                     209<br>                 |                     344,519<br>                 |
 |                     Maximum<br>                 |                     12,240<br>                 |                     2,855<br>                 |                     13<br>                 |                     14,445<br>                 |
 |                     Minimum<br>                 |                     196<br>                 |                     306<br>                 |                     0<br>                 |                     678<br>                 |
 |                     Average<br>                 |                     1,359<br>                 |                     923<br>                 |                     1.4<br>                 |                     2,282<br>                 |
+
 Note that **Combined Views** is something I defined and is simply the         sum of **Views** and **AggViews**.
 
 The following post provides a good explanation of the difference between "Views"         and "AggViews" in Community Server.
@@ -66,7 +69,9 @@ Looking at the chart above, one of the first things I was interested in identify
 
 Let's start with the top 10 posts:
 
-<caption>            Table 2: Top 10 Blog Posts</caption>|                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
+**Table 2: Top 10 Blog Posts**
+
+|                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
 |                     1<br>                 | [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages) |                     14,445<br>                 |
 |                     2<br>                 | [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file) |                     13,029<br>                 |
@@ -78,11 +83,14 @@ Let's start with the top 10 posts:
 |                     8<br>                 | [Scope Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features) |                     5,607<br>                 |
 |                     9<br>                 | [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/2007/06/09/moss-development-environment-and-windows-update-bug) |                     5,307<br>                 |
 |                     10<br>                 | [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1) |                     5,199<br>                 |
+
 Hmmm...nine of the top 10 posts are related to SharePoint. No big surprises there         ;-)
 
 What about the bottom 10 posts?
 
-<caption>            Table 3: Bottom 10 Blog Posts</caption>|                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
+**Table 3: Bottom 10 Blog Posts**
+
+|                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
 |                     151<br>                 |                     Adventures in Upgrading TFS<br>                 |                     0<br>                 |
 |                     150<br>                 |                     AutoEventWireup Issue in MOSS 2007<br>                 |                     0<br>                 |
@@ -94,6 +102,7 @@ What about the bottom 10 posts?
 |                     144<br>                 | [New MSDN<br>                        Theme on My Blog](/blog/jjameson/2009/10/21/new-msdn-theme-on-my-blog) |                     841<br>                 |
 |                     143<br>                 | [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/2009/10/14/kb-896861-and-microsoft-fix-it) |                     849<br>                 |
 |                     142<br>                 | [Latest Version of Opera Ignores Hosts File](/blog/jjameson/2009/10/29/latest-version-of-opera-ignores-hosts-file) |                     850<br>                 |
+
 I suppose that I really should have thrown out the first two items because these         posts are not published.
 
 The **Adventures in Upgrading TFS** post was something I started back         in March 2008 when I ran into a couple of snags upgrading the instance of Team Foundation         Server 2005 in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) to TFS 2008. I thought I would eventually get around         to finishing that post, but apparently not. Perhaps some other morning...however,         I'm not sure it would help very many people after all this time. I certainly hope         most organizations running TFS have upgraded by now.
@@ -143,26 +152,29 @@ The last area that I want to cover in this post is with regards to Internet sear
 Let's start with the most popular post. Drilling down on the 12,246 views in the         Community Server dashboard (which does not include "AggViews") to see the list of         referrals, I encountered the largest HTML table I've ever seen on a page (over 5,500         rows). After a couple of attempts, I managed to copy all of the data into my Excel         workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
-<caption>            Table 4: Top referrals by URL for post - <a href="/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages">
-                Issues Deploying SharePoint Solution Packages</a></caption>|                     URL<br>                 |                     Hits<br>                 |                     Last Date<br>                 |
+**Table 4: Top referrals by URL for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)**
+
+|                     URL<br>                 |                     Hits<br>                 |                     Last Date<br>                 |
 | --- | --- | --- |
 | [http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx](http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx) |                     83<br>                 |                     Oct 12 2009, 01:58 AM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-us:official&amp;client=firefox-a) |                     76<br>                 |                     Oct 12 2009, 10:02 AM<br>                 |
+| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     76<br>                 |                     Oct 12 2009, 10:02 AM<br>                 |
 | [http://stevepietrek.com/2007/06/17/links-6172007/](http://stevepietrek.com/2007/06/17/links-6172007/) |                     69<br>                 |                     Oct 28 2009, 02:41 AM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-us:official&amp;client=firefox-a) |                     45<br>                 |                     May 04 2009, 03:04 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&amp;rls=com.microsoft:en-us&amp;ie=utf-8&amp;oe=utf-8&amp;startindex=&amp;startpage=1) |                     44<br>                 |                     Oct 28 2009, 02:03 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-us:official&amp;client=firefox-a) |                     42<br>                 |                     Oct 30 2009, 03:18 PM<br>                 |
-| [http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications](http://google.com/search?hl=en&amp;q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications) |                     37<br>                 |                     Feb 04 2009, 04:07 PM<br>                 |
-| [http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=](http://google.co.uk/search?hl=en&amp;q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&amp;meta=) |                     35<br>                 |                     Oct 27 2009, 08:10 AM<br>                 |
-| [http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application](http://google.com/search?hl=en&amp;q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application) |                     34<br>                 |                     Oct 27 2009, 11:56 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-us:official&amp;client=firefox-a) |                     33<br>                 |                     Nov 01 2009, 06:57 PM<br>                 |
+| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     45<br>                 |                     May 04 2009, 03:04 PM<br>                 |
+| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1) |                     44<br>                 |                     Oct 28 2009, 02:03 PM<br>                 |
+| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     42<br>                 |                     Oct 30 2009, 03:18 PM<br>                 |
+| [http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications](http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications) |                     37<br>                 |                     Feb 04 2009, 04:07 PM<br>                 |
+| [http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=](http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=) |                     35<br>                 |                     Oct 27 2009, 08:10 AM<br>                 |
+| [http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application](http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application) |                     34<br>                 |                     Oct 27 2009, 11:56 PM<br>                 |
+| [http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     33<br>                 |                     Nov 01 2009, 06:57 PM<br>                 |
 | [http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde](http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde) |                     32<br>                 |                     Oct 17 2009, 03:41 PM<br>                 |
+
 However, adding up the numbers for the top 10 referrals accounts for less than 5%         of the 12,246 views for this post. Upon further inspection, I found that only 8,400         of the 12,200 views actually have referral data.
 
 Breaking down the referrals by domain name, I found the following:
 
-<caption>            Table 5: Top referrals by domain for post - <a href="/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages">
-                Issues Deploying SharePoint Solution Packages</a></caption>|                     Domain<br>                 |                     Hits<br>                 |
+**Table 5: Top referrals by domain for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)**
+
+|                     Domain<br>                 |                     Hits<br>                 |
 | --- | --- |
 |                     google.com<br>                 |                     3,893<br>                 |
 |                     google.co.uk<br>                 |                     628<br>                 |
@@ -174,6 +186,7 @@ Breaking down the referrals by domain name, I found the following:
 |                     search.live.com<br>                 |                     129<br>                 |
 |                     google.fr<br>                 |                     125<br>                 |
 |                     decatec.it<br>                 |                     99<br>                 |
+
 Note that the post was created back in June 2007, which helps explain why you see         **search.live.com** instead of **bing.com** in the top         10 list.
 
 To help me get a better feel for the Google vs. Microsoft ratio, I grouped the results         into categories and subcategories.

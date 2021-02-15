@@ -25,7 +25,9 @@ I put this together back when I was trying to figure out how to create a single 
 
 Rather than make you open a spreadsheet attachment, I'll just copy the contents         into a simple table:
 
-<caption>            MOSS 2007 Master Page Comparison</caption>|                     Placeholder<br>                 |                     application.master<br>                 |                     default.master<br>                 |
+**MOSS 2007 Master Page Comparison**
+
+|                     Placeholder<br>                 |                     application.master<br>                 |                     default.master<br>                 |
 | --- | --- | --- |
 |                     PlaceHolderPageTitle<br>                 |                     X<br>                 |                     X<br>                 |
 |                     PlaceHolderAdditionalPageHead<br>                 |                     X<br>                 |                     X<br>                 |
@@ -62,6 +64,7 @@ Rather than make you open a spreadsheet attachment, I'll just copy the contents 
 |                     PlaceHolderBodyRightMargin<br>                 |                     X<br>                 |                     X<br>                 |
 |                     PlaceHolderFormDigest<br>                 |                     X<br>                 |                     X<br>                 |
 |                     PlaceHolderUtilityContent<br>                 |                     X<br>                 |                     X<br>                 |
+
             \* - The placeholder is tacked onto the end of the page
     
             \*\* - &lt;PlaceHolder&gt; element (not &lt;asp:ContentPlaceHolder&gt;)

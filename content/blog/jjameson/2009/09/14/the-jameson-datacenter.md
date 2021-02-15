@@ -55,7 +55,9 @@ It's pretty amazing what a few hundred dollars will get you on newegg these days
 
 The following table provides more detail on the various servers:
 
-<caption>            Server Configurations</caption>|                     Server<br>                 |                     Role(s)<br>                 |                     Operating System<br>                 |                     Domain<br>                 |
+**Server Configurations**
+
+|                     Server<br>                 |                     Role(s)<br>                 |                     Operating System<br>                 |                     Domain<br>                 |
 | --- | --- | --- | --- |
 |                     BANSHEE<br>                 |                     E-mail server (POP3 and SMTP)<br>                 |                     Windows Server 2003 Standard x64 Edition with Service Pack 2<br>                 |                     TECHTOOLBOX<br>                 |
 |                     BEAST<br>                 |                     Database server (SQL Server 2005)<br>                 |                     Windows Server 2003 Enterprise x64 Edition with Service Pack 2<br>                 |                     TECHTOOLBOX<br>                 |
@@ -70,6 +72,7 @@ The following table provides more detail on the various servers:
 |                     ROGUE<br>                 |                     Hyper-V server<br>                 |                     Windows Server 2008 Standard x64 Edition (core installation) with Service Pack 2<br>                 |                     TECHTOOLBOX<br>                 |
 |                     XAVIER1<br>                 |                     Domain controller for corp.technologytoolbox.com<br>                 |                     Windows Server 2008 Enterprise x64 Edition (full installation) with Service Pack<br>                    2<br>                 |                     TECHTOOLBOX<br>                 |
 |                     XAVIER2<br>                 |                     Domain controller for corp.technologytoolbox.com<br>                 |                     Windows Server 2008 Enterprise x64 Edition (full installation) with Service Pack<br>                    2<br>                 |                     TECHTOOLBOX<br>                 |
+
 Note that I use two different Active Directory domains (really two different forests):
 
 - **corp.fabrikam.com (FABRIKAM) -** I use this domain for development

@@ -83,23 +83,26 @@ Then I came across the following:
 
 Here are the disk space requirements according to the deployment guide:
 
-<caption>Disk Space Requirements for Windows Server 2008 SP2</caption>| Installation method | Approximate disk space requirements |
+**Disk Space Requirements for Windows Server 2008 SP2**
+
+| Installation method | Approximate disk space requirements |
 | --- | --- |
 | Stand-alone installation | <ul>
-			<li>x86-based: 1.8 GB to 2.9 GB</li>
-			<li>x64-based: 3.2 GB to 4.9 GB</li>
-			<li>ia64-based: 2.9 GB to 3.2 GB </li>
-		</ul> |
+<li>x86-based: 1.8 GB to 2.9 GB</li>
+<li>x64-based: 3.2 GB to 4.9 GB</li>
+<li>ia64-based: 2.9 GB to 3.2 GB </li>
+</ul> |
 | Windows Update | <ul>
-			<li>x86-based: 350 MB</li>
-			<li>x64-based: 600 MB</li>
-			<li>ia64-based: 2.25 GB </li>
-		</ul> |
+<li>x86-based: 350 MB</li>
+<li>x64-based: 600 MB</li>
+<li>ia64-based: 2.25 GB </li>
+</ul> |
 | Integrated installation | <ul>
-			<li>x86-based: 9 GB</li>
-			<li>x64-based: 12 GB</li>
-			<li>ia64-based: 13 GB</li>
-		</ul> |
+<li>x86-based: 9 GB</li>
+<li>x64-based: 12 GB</li>
+<li>ia64-based: 13 GB</li>
+</ul> |
+
 Crikey! According to this table, DAZZLER needs up to 4.9 GB of free space
 in order to install the Service Pack (since it is an x64 VM). Wow!
 

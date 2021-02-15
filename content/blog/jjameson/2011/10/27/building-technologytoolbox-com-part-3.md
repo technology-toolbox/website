@@ -25,7 +25,9 @@ One of the first things I needed to do for the new TechnologyToolbox.com site  w
 
 Using Expression Web, I created a site under the TFS workspace for the Caelum  project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders  and files corresponding to the basic structure of the website.
 
-<caption>Sample HTML content for the Caelum prototype</caption>| File | Description |
+**Sample HTML content for the Caelum prototype**
+
+| File | Description |
 | --- | --- |
 | Default.master | Default master page for the site |
 | Default.aspx | Site home page |
@@ -34,6 +36,7 @@ Using Expression Web, I created a site under the TFS workspace for the Caelum  p
 | blog\jjameson\archive\2011\08\22\leaving-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\last-day-with-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\new-blog-location.aspx | Sample post |
+
 ### Default.master
 
 Here is the current content of the default master page for the static HTML prototype:
