@@ -37,17 +37,8 @@ VMs is:
    
    ```
    Add-PSSnapin Microsoft.SharePoint.PowerShell
-   ```
-   
-   ```
    cd "C:\NotBackedUp\Fabrikam\Demo\Main\Source\Deployment Files\Scripts"
-   ```
-   
-   ```
    cls
-   ```
-   
-   ```
    & '.\Redeploy Features.ps1'
    ```
 
@@ -61,9 +52,6 @@ script, since this shaves precious time off the iterative development process:
 
 ```
 cls
-```
-
-```
 & '.\Upgrade Solutions.ps1'
 ```
 
@@ -73,29 +61,11 @@ page to “DRDADA” the solutions/features:
 
 ```
 cls
-```
-
-```
 & '.\Deactivate Features.ps1'
-```
-
-```
 & '.\Retract Solutions.ps1'
-```
-
-```
 & '.\Delete Solutions.ps1'
-```
-
-```
 & '.\Add Solutions.ps1'
-```
-
-```
 & '.\Deploy Solutions.ps1'
-```
-
-```
 & '.\Activate Features.ps1'
 ```
 
@@ -108,17 +78,8 @@ get back to a “known good” state:
 
 ```
 cls
-```
-
-```
 Remove-SPSite http://fabrikam-local/ -Confirm:$false
-```
-
-```
 & '.\Create Site Collections.ps1'
-```
-
-```
 & '.\Redeploy Features.ps1'
 ```
 
@@ -137,17 +98,8 @@ process typically takes about two minutes:
 
 ```
 cls
-```
-
-```
 & '.\Rebuild Web Application.ps1' -Confirm:$false
-```
-
-```
 pushd ..\..\Tools\TestConsole\bin\Debug
-```
-
-```
 .\Fabrikam.Demo.Tools.TestConsole.exe
 ```
 

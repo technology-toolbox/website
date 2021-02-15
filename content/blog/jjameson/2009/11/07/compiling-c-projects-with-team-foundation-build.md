@@ -71,9 +71,6 @@ That's when I discovered the following from the release notes for the SDK:
 >
 > ```
 > cd %mssdk%\VC\bin
-> ```
->
-> ```
 > regsvr32 vcprojectengine.dll
 > ```
 >
@@ -81,9 +78,6 @@ That's when I discovered the following from the release notes for the SDK:
 >
 > ```
 > cd %mssdk%\VC\bin\X64
-> ```
->
-> ```
 > regsvr32 vcprojectengine.dll
 > ```
 

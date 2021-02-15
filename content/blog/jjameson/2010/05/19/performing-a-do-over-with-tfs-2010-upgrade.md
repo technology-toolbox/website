@@ -27,9 +27,6 @@ First, use the Team Foundation Server Configuration Tool to unconfigure componen
 
 ```
 cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
-```
-
-```
 TfsConfig.exe setup /uninstall:All
 ```
 

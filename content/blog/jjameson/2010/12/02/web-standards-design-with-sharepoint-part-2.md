@@ -274,11 +274,6 @@ To deploy the Tugboat sample site to SharePoint:
 
     ```
     set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
-    ```
-    
-    
-    
-    ```
     set TUGBOAT_APP_POOL_PASSWORD={password}
     ```
 

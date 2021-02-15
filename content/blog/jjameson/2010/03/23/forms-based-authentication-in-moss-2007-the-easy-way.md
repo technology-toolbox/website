@@ -51,49 +51,16 @@ When doing scenario-based development, I often like to start with the end user  
 
 ```
 set FABRIKAM_DEMO_URL=http://fabrikam-local
-```
-
-```
 set FABRIKAM_BUILD_CONFIGURATION=Debug
-```
-
-```
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
-```
-
-```
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
-```
-
-```
 "Add Solution.cmd"
-```
-
-```
 "Deploy Solution.cmd"
-```
-
-```
 cd ..\..\..\..\DeploymentFiles\Scripts
-```
-
-```
 "Create Web Applications.cmd"
-```
-
-```
 cd ..\..\Web\DeploymentFiles\Scripts
-```
-
-```
 "Add Solution.cmd"
-```
-
-```
 "Deploy Solution.cmd"
-```
-
-```
 "Activate Features.cmd"
 ```
 
@@ -624,17 +591,8 @@ To remove (or prepare to rebuild) the Fabrikam Web application, run the followin
 
 ```
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
-```
-
-```
 "Delete Web Applications.cmd"
-```
-
-```
 "Retract Solutions.cmd"
-```
-
-```
 "Delete Solutions.cmd"
 ```
 

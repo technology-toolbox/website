@@ -275,47 +275,12 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 
     ```
     & '.\Create Web Application.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Create Site Collections.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Enable Anonymous Access.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Configure Object Cache User Accounts.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Add Event Log Sources.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Add Solutions.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Deploy Solutions.ps1'
-    ```
-    
-    
-    
-    ```
     & '.\Activate Features.ps1'
     ```
 

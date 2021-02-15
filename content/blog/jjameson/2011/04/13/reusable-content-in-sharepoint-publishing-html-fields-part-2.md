@@ -498,41 +498,14 @@ Here are the instructions to deploy the sample to your own SharePoint environmen
    
    ```
    $env:FABRIKAM_DEMO_URL = "http://fabrikam-local"
-   ```
-   
-   ```
    $env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"
-   ```
-   
-   ```
    & '.\Add Event Log Sources.ps1'
-   ```
-   
-   ```
    & '.\Create Web Application.ps1'
-   ```
-   
-   ```
    & '.\Configure Object Cache User Accounts.ps1'
-   ```
-   
-   ```
    & '.\Create Site Collections.ps1'
-   ```
-   
-   ```
    & '.\Enable Anonymous Access.ps1'
-   ```
-   
-   ```
    & '.\Add Solutions.ps1'
-   ```
-   
-   ```
    & '.\Deploy Solutions.ps1'
-   ```
-   
-   ```
    & '.\Activate Features.ps1'
    ```
 

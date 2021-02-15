@@ -103,13 +103,7 @@ After changing the base class and building the solution, the following commands 
 
 ```
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
-```
-
-```
 "GAC Assemblies.cmd"
-```
-
-```
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
 ```
 

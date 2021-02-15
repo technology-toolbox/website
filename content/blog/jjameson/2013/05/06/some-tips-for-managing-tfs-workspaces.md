@@ -40,9 +40,6 @@ command. For example:
 
 ```
 cd "\NotBackedUp\Dow\Collaboration\ELN HD"
-```
-
-```
 tfpt scorch Main /r
 ```
 
@@ -70,13 +67,7 @@ to the root folder for the project, and then storing the output from the
 
 ```
 PowerShell
-```
-
-```
 cd C:\NotBackedUp\Dow\Collaboration
-```
-
-```
 $output = tf dir
 ```
 
@@ -147,17 +138,8 @@ Here are the commands to only get the **Main** branch:
 
 ```
 tf workfold /decloak CoreServices
-```
-
-```
 tf workfold /cloak CoreServices/Dev
-```
-
-```
 tf workfold /cloak CoreServices/Release
-```
-
-```
 tf get CoreServices /recursive
 ```
 
@@ -169,53 +151,17 @@ Portal solutions, I can use similar commands for those folders:
 
 ```
 tf workfold /decloak "ELN HD"
-```
-
-```
 tf workfold /cloak "ELN HD/Business Data Connectivity Models"
-```
-
-```
 tf workfold /cloak "ELN HD/Dev"
-```
-
-```
 tf workfold /cloak "ELN HD/POC Code"
-```
-
-```
 tf workfold /cloak "ELN HD/Release"
-```
-
-```
 tf workfold /cloak "ELN HD/Security"
-```
-
-```
 tf workfold /cloak "ELN HD/Storyboarding"
-```
-
-```
 tf workfold /cloak "ELN HD/UserInterface"
-```
-
-```
 tf get "ELN HD" /recursive
-```
-
-```
 tf workfold /decloak "ResearchPortal"
-```
-
-```
 tf workfold /cloak "ResearchPortal/Dev"
-```
-
-```
 tf workfold /cloak "ResearchPortal/Release"
-```
-
-```
 tf get "ResearchPortal" /recursive
 ```
 

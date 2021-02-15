@@ -444,41 +444,14 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
    
    ```
    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
-   ```
-   
-   ```
    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
-   ```
-   
-   ```
    & '.\Add Event Log Sources.ps1'
-   ```
-   
-   ```
    & '.\Create Web Application.ps1'
-   ```
-   
-   ```
    & '.\Configure Object Cache User Accounts.ps1'
-   ```
-   
-   ```
    & '.\Create Site Collections.ps1'
-   ```
-   
-   ```
    & '.\Enable Anonymous Access.ps1'
-   ```
-   
-   ```
    & '.\Add Solutions.ps1'
-   ```
-   
-   ```
    & '.\Deploy Solutions.ps1'
-   ```
-   
-   ```
    & '.\Activate Features.ps1'
    ```
 

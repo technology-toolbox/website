@@ -93,11 +93,6 @@ To deploy the Fabrikam Demo to SharePoint:
 
     ```
     set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
-    ```
-    
-    
-    
-    ```
     set FABRIKAM_APP_POOL_PASSWORD={password}
     ```
 
