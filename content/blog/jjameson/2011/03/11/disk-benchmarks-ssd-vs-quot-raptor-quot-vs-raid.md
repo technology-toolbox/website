@@ -35,8 +35,11 @@ To summarize, here's the current storage configuration for my desktop (WOLVERINE
 
 Here's a pivot chart that I put together that shows the performance characteristics         of each of these drives.
 
-![Disk performance on WOLVERINE](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Benchmarks%20-%20WOLVERINE.png)
-Figure 1: Disk performance on WOLVERINE
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Benchmarks%20-%20WOLVERINE.png"
+alt="Disk performance on WOLVERINE"
+height="404"    width="600"
+title="Figure 1: Disk performance on WOLVERINE" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20WOLVERINE.png)
 
@@ -48,8 +51,11 @@ Even though the SSD is signficantly faster than my RAID 0 configuration with res
 
 To understand why I wouldn't recommend an SSD for most scenarios, take a look at         the following chart which shows the performance of the SSD on my desktop (WOLVERINE)         compared with other hard drives running on various servers.
 
-![Disk performance (various computers)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Benchmarks%20-%20Baseline.png)
-Figure 2: Disk performance (various computers)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Benchmarks%20-%20Baseline.png"
+alt="Disk performance (various computers)"
+height="600"    width="518"
+title="Figure 2: Disk performance (various computers)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20Baseline.png)
 

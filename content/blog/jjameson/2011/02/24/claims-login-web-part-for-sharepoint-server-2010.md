@@ -20,20 +20,29 @@ In [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authent
 
 If you follow those steps, then when you browse to the home page of the site and         click **Sign In**, you'll be redirected to the out-of-the-box login         page (/\_login/default.aspx) shown in Figure 1. Note that since the Web application         is configured to support both Forms-Based Authentication (FBA) and Windows authentication,         the login page requires you to specify the type of credentials to use to logon to         the SharePoint site.
 
-![Default login page in SharePoint Server 2010 (/_login/default.aspx)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-1.png)
-Figure 1: Default login page in SharePoint Server 2010 (/\_login/default.aspx)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSharePoint-2010-OOTB-Sign-In-Page-1.png"
+alt="Default login page in SharePoint Server 2010 (/%5Flogin/default.aspx)"
+height="250"    width="600"
+title="Figure 1: Default login page in SharePoint Server 2010 (/%5Flogin/default.aspx)" >}}
 
 If you click **Forms Authentication** in the dropdown list, you are         redirected to the default login form (/\_forms/default.aspx), shown in Figure 2.
 
-![Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-2.png)
-Figure 2: Default form for FBA in SharePoint Server 2010 (/\_forms/default.aspx)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSharePoint-2010-OOTB-Sign-In-Page-2.png"
+alt="Default form for FBA in SharePoint Server 2010 (/%5Fforms/default.aspx)"
+height="250"    width="600"
+title="Figure 2: Default form for FBA in SharePoint Server 2010 (/%5Fforms/default.aspx)" >}}
 
 Note that if you click **Windows Authentication** in the dropdown list,         you are presented with the login dialog provided by the Web browser (or, if you         are logged into a workstation with domain credentials, and you are using Internet         Explorer -- and you've added the site to your **Local intranet** zone         -- then instead you are [transparently authenticated](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials) with the site).
 
 While the sign-in experience shown in the preceeding screenshots is great for prototypes         and proofs-of-concept (for example, to demonstrate why claims-based authentication         in SharePoint 2010 is much better than FBA in Microsoft Office SharePoint Server         2007), it obviously isn't going to be sufficient for real world solutions. Instead         we need a "branded" login page like the one shown in Figure 3.
 
-![Custom login page in SharePoint Server 2010](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint-2010-Custom-Sign-In-Page.png)
-Figure 3: Custom login page in SharePoint Server 2010
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint-2010-Custom-Sign-In-Page.png"
+alt="Custom login page in SharePoint Server 2010"
+height="342"    width="600"
+title="Figure 3: Custom login page in SharePoint Server 2010" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-Custom-Sign-In-Page.png)
 

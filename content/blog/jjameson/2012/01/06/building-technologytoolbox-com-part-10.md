@@ -14,9 +14,11 @@ Posts** section on the Technology Toolbox home page. In this post, I'll
 show you how I built on that foundation to generate the content for the
 **Most Popular Posts** section.
 
-![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
-
-    	Figure 1: Technology Toolbox home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+alt="Technology Toolbox home page"
+height="600"    width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
@@ -24,9 +26,11 @@ Similar to the **Most Recent Posts** section, the **Most
 Popular Posts** section is generated using an ASP.NET user control, as
 illustrated in the corresponding page layout.
 
-![Technology Toolbox home page (page layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png)
-
-    	Figure 2: Technology Toolbox home page (page layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
+alt="Technology Toolbox home page (page layout)"
+height="600"    width="536"
+title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
 
@@ -64,9 +68,11 @@ I completed the following steps to update the entity model:
 
 At this point, the model should resemble the following:
 
-![Entity Data Model](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Entity-Model-Caelum-Step-2.png)
-
-    	Figure 3: Entity Data Model
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FEntity-Model-Caelum-Step-2.png"
+alt="Entity Data Model"
+height="400"    width="431"
+title="Figure 3: Entity Data Model" >}}
 
 With the updated model, the following LINQ query can be used to retrieve
 the top 10 most popular blog posts:

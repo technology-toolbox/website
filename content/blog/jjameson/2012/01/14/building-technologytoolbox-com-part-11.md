@@ -12,9 +12,11 @@ In
 section on the Technology Toolbox home page uses a CSS sprite to render the
 arrow image next to each list item.
 
-![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
-
-    	Figure 1: Technology Toolbox home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+alt="Technology Toolbox home page"
+height="600"    width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
@@ -30,9 +32,11 @@ Posts** section, you'll notice the CSS `background` property is set to:
 The "list item sprite" image is actually a 400x400 composite of multiple
 icons used throughout the site.
 
-![list-item-sprites-1.0.png](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-item-sprites-1.0.png)
-
-    	Figure 2: list-item-sprite-1.0.png
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5Flist-item-sprites-1.0.png"
+alt="list-item-sprites-1.0.png"
+height="400"    width="400"
+title="Figure 2: list-item-sprite-1.0.png" >}}
 
 Notice that the "dashed arrow" icon used in the **Most Popular Posts** section is actually the fifth image in the set (starting from the lower-left
 corner). This explains the negative offsets specified in the CSS rule (specifically,
@@ -115,9 +119,11 @@ quickly determine where to place the icons within the overall image. [If you
 click to enlarge the image, you can probably count the 50x50 pixels used for
 each cell in the grid -- or you can simply take my word for it :-) ]
 
-![List items sprite (Expression Design)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_list-items-sprite-design.png)
-
-    	Figure 3: List items sprite (Expression Design)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5Flist-items-sprite-design.png"
+alt="List items sprite (Expression Design)"
+height="377"    width="600"
+title="Figure 3: List items sprite (Expression Design)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-items-sprite-design.png)
 
@@ -152,9 +158,11 @@ include this section?]
 Take a look at the **Archives** section displayed on the various
 blog pages in the site, such as the one shown in Figure 4.
 
-![Blog home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png)
-
-    	Figure 4: Blog home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
+alt="Blog home page"
+height="600"    width="374"
+title="Figure 4: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
 

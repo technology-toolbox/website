@@ -24,9 +24,11 @@ Before sharing some of my most frequently used macros, however, I wanted to firs
 
 Take a look at the following **Output** window from Visual Studio.  Notice how there is an item in the **Show output from** dropdown list  titled **Macros** (a.k.a. "the macro output pane").
 
-![Macro output pane](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Macro%20Output%20Pane.png)
-
-    Figure 1: Macro output pane
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FMacro%20Output%20Pane.png"
+alt="Macro output pane"
+height="239"    width="600"
+title="Figure 1: Macro output pane" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Macro%20Output%20Pane.png)
 

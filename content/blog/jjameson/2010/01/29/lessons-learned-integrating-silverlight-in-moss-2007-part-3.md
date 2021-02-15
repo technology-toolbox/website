@@ -42,15 +42,21 @@ In addition to the two problems with this code that I covered in my previous pos
 
 Here's a partial screenshot of the home page of the portal, after clicking the **Site Actions** menu and then clicking **Edit Page**.
 
-![No menus open](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20No%20menu%20open.png)
-Figure 1: No menus open
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSilverlight%20-%20No%20menu%20open.png"
+alt="No menus open"
+height="300"    width="447"
+title="Figure 1: No menus open" >}}
 
 While the above screenshot doesn't illustrate any problem, the caption gives you         a hint as to what's coming next.
 
 The following screenshot shows what happens when you click the **Page**         menu.
 
-![Page menu items obscured by Silverlight control](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20Obscured%20menu.png)
-Figure 2: Page menu items obscured by Silverlight control
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSilverlight%20-%20Obscured%20menu.png"
+alt="Page menu items obscured by Silverlight control"
+height="300"    width="447"
+title="Figure 2: Page menu items obscured by Silverlight control" >}}
 
 Good luck trying to click the **Delete Page**, **Add Web Parts**,         and **Modify Web Parts** menu items!
 
@@ -58,8 +64,11 @@ Note that menu items on the **Workflow** and **Tools**         menus are similar
 
 Fortunately, once I discovered this problem, it didn't take long to find a solution.         The trick is to set the [Windowless](http://msdn.microsoft.com/en-us/library/cc838156%28VS.95%29.aspx) property to **true** in the `<object>`         element, as illustrated in the following screenshot:
 
-![Page menu items no longer obscured by windowless Silverlight control](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Silverlight%20-%20Unobscured%20menu%20(windowless).png)
-Figure 3: Page menu items no longer obscured by windowless Silverlight control
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSilverlight%20-%20Unobscured%20menu%20(windowless).png"
+alt="Page menu items no longer obscured by windowless Silverlight control"
+height="300"    width="447"
+title="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}
 
 Here's a comment from Karl Erickson on his blog post entitled "[Limitations
 of Windowless mode for Silverlight](http://blogs.msdn.com/silverlight_sdk/archive/2008/11/12/limitations-of-windowless-mode-for-silverlight.aspx)":

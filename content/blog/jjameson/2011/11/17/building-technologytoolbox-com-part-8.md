@@ -17,9 +17,11 @@ You may recall the following illustration from the post I wrote
 [introducing TechnologyToolbox.com](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com). This shows how the Caelum and Subtext
 Visual Studio solutions are merged together during the deployment process.
 
-![Solution architecture](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg)
-
-    	Figure 1: Solution architecture
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+alt="Solution architecture"
+height="520"    width="600"
+title="Figure 1: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
 
@@ -438,9 +440,11 @@ As shown in the following figure, I recommend performing automated deployments
 to DEV on a daily basis (or more frequently depending on where you are in the
 release cycle).
 
-![Automated build and deployment](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_3%20-%20Automated%20build%20and%20deployment.png)
-
-    	Figure 2: Automated build and deployment
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F3%20-%20Automated%20build%20and%20deployment.png"
+alt="Automated build and deployment"
+height="343"    width="600"
+title="Figure 2: Automated build and deployment" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_3%20-%20Automated%20build%20and%20deployment.png)
 
@@ -464,9 +468,11 @@ While the DEV environment is automatically rebuilt (at least) once per day,
 deployments to the Test environment occur much less often -- for example, when
 a beta version of the solution is ready.
 
-![&quot;Manual&quot; deployment to TEST](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
-
-    	Figure 4: "Manual" deployment to TEST
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
+alt="\"Manual\" deployment to TEST"
+height="343"    width="600"
+title="Figure 4: \"Manual\" deployment to TEST" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
 

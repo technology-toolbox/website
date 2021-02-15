@@ -52,8 +52,11 @@ As part of this latest rebuild, I installed the latest version of the Microsoft 
 
 This morning, I finally found some time to move the "offline copy" of my MSDN content         from my Documents folder into Team Foundation Server. I simply needed to create         a new team project in TFS and then configure my workspace for source control. Once         this was done, the TFS integration features of Expression Web 3 simply just worked,         as shown below:
 
-![Expression Web - my MSDN blog](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Expression%20Web%20-%20My%20MSDN%20Blog.png)
-Figure 1: Expression Web - my MSDN blog
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FExpression%20Web%20-%20My%20MSDN%20Blog.png"
+alt="Expression Web - my MSDN blog"
+height="499"    width="600"
+title="Figure 1: Expression Web - my MSDN blog" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Expression%20Web%20-%20My%20MSDN%20Blog.png)
 

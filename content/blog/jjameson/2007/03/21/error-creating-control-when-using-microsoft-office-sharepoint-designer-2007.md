@@ -22,8 +22,11 @@ tags: ["MOSS 2007", "WSS v3"]
 
 If, like me, you happen to encounter the following user experience when attempting         to edit a master page...
 
-![SharePoint Designer - &quot;Error Creating Control&quot;](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint-Designer-Error-Creating-Control.png "SharePoint Designer - \"Error Creating Control\"")
-Figure 1: SharePoint Designer - "Error Creating Control"
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint-Designer-Error-Creating-Control.png"
+alt="SharePoint Designer - \"Error Creating Control\""
+height="305"    width="600"
+title="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-Designer-Error-Creating-Control.png)
 

@@ -21,9 +21,11 @@ In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets
 
 Here is the example typed DataSet I introduced in the previous post.
 
-![Typed DataSet example (ScorecardData)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Typed%20DataSet%20example%20(ScorecardData).png)
-
-    Figure 1: Typed DataSet example (ScorecardData)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTyped%20DataSet%20example%20(ScorecardData).png"
+alt="Typed DataSet example (ScorecardData)"
+height="330"    width="600"
+title="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Typed%20DataSet%20example%20%28ScorecardData%29.png)
 

@@ -26,9 +26,11 @@ While the OOTB error handling in MOSS 2007 and WSS works well for intranet solut
 
 To understand why, consider a publishing site configured with **BlueBand.master** as the master page:
 
-![Publishing site with BlueBand master page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
-
-    Figure 1: Publishing site with BlueBand master page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FPublishing%20Site%20-%20BlueBand%20Master%20Page.png"
+alt="Publishing site with BlueBand master page"
+height="353"    width="600"
+title="Figure 1: Publishing site with BlueBand master page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
 
@@ -92,9 +94,11 @@ namespace Fabrikam.Demo.WebParts
 
 As shown in the following screenshot, browsing to the home page now displays  the SharePoint error page.
 
-![SharePoint error page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Error%20Page.png)
-
-    Figure 2: SharePoint error page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint%20Error%20Page.png"
+alt="SharePoint error page"
+height="366"    width="600"
+title="Figure 2: SharePoint error page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Error%20Page.png)
 
@@ -123,9 +127,11 @@ Services."
 
 The following screenshot shows a custom error page fashioned after BlueBand.master:
 
-![Custom SharePoint error page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Custom%20Error%20Page.png)
-
-    Figure 3: Custom SharePoint error page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FCustom%20Error%20Page.png"
+alt="Custom SharePoint error page"
+height="162"    width="600"
+title="Figure 3: Custom SharePoint error page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Custom%20Error%20Page.png)
 

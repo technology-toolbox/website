@@ -20,8 +20,11 @@ In my [previous post](/blog/jjameson/2007/06/09/virtual-server-issues), I talked
 
 Before I can explain the bug I first need to describe the environment. The following         model shows the important pieces of the environment.
 
-![MOSS 2007 development environment](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS-2007-Development-Environment.jpg "MOSS 2007 development environment")
-Figure 1: MOSS 2007 development environment
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS-2007-Development-Environment.jpg"
+alt="MOSS 2007 development environment"
+height="456"    width="600"
+title="Figure 1: MOSS 2007 development environment" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS-2007-Development-Environment.jpg)
 

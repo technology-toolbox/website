@@ -24,9 +24,11 @@ Another practical application of linked files is what I refer to as "shared asse
 
 To implement this, create a file in the solution folder named SharedAssemblyInfo.cs  and then add a link in each project to SharedAssemblyInfo.cs. You can also move  the linked SharedAssemblyInfo.cs into the Properties folder so that it sits side-by-side  with the AssemblyInfo.cs that is specific to each project in the solution, as shown  below.
 
-![Linked SharedAssemblyInfo.cs files in a Visual Studio solution](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Linked%20Files%20in%20Visual%20Studio%20Solutions.JPG)
-
-    Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FLinked%20Files%20in%20Visual%20Studio%20Solutions.JPG"
+alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution"
+height="577"    width="372"
+title="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution" >}}
 
 I recommend placing the following assembly attributes in SharedAssemblyInfo.cs  (and, of course, removing them as necessary from the project-specific AssemblyInfo.cs  files):
 

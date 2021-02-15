@@ -41,8 +41,11 @@ Rather than troubleshooting the error using the steps described in [KB 958052](h
 
 Shortly after starting the setup, I observed the following:
 
-![Microsoft .NET Framework 4 Setup - disk space requirements](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Microsoft%20.NET%20Framework%204%20Setup%20Requirements.png)
-Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/o%5FMicrosoft%20.NET%20Framework%204%20Setup%20Requirements.png"
+alt="Microsoft .NET Framework 4 Setup - disk space requirements"
+height="470"    width="503"
+title="Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements" >}}
 
 Of course, had I actually read the **System Requirements** section         of the [.NET Framework Download
 page](http://www.microsoft.com/net/Download.aspx) beforehand, I would have known that the minimum disk space required         by the .NET Framework 4 is much higher than I thought (for x64, the stated minimum         is 2 GB -- slightly higher than the 1863 MB threshold enforced by the setup program).

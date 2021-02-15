@@ -46,9 +46,11 @@ by [WinHost](http://www.winhost.com), as shown in the following figure.
 Separate servers are used for database services (i.e. SQL Server) and the Web
 tier.
 
-![Infrastructure](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Technology-Toolbox-Infrastructure.jpg)
-
-    	Figure 1: Infrastructure
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FTechnology-Toolbox-Infrastructure.jpg"
+alt="Infrastructure"
+height="399"    width="600"
+title="Figure 1: Infrastructure" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg)
 

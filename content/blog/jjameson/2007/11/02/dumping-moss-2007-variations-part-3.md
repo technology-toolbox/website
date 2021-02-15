@@ -39,8 +39,11 @@ As I have mentioned before, the decision to abandon variations was not an easy o
 
 Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**         site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
 
-![Elapsed Time for Variation Page Propagation](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(before).jpg "Elapsed Time for Variation Page Propagation")
-Figure 1: Elapsed Time for Variation Page Propagation
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FVariation-Page-Propagation%20(before).jpg"
+alt="Elapsed Time for Variation Page Propagation"
+height="436"    width="600"
+title="Figure 1: Elapsed Time for Variation Page Propagation" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28before%29.jpg)
 
@@ -48,8 +51,11 @@ Notice how the time required to propagate each page increases substantially as t
 
 The following graph "zooms in" on the time period after the index was added.
 
-![Elapsed Time for Variation Page Propagation with New AllUserData Index](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(after).jpg "Variation Page Propagation with New AllUserData Index")
-Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FVariation-Page-Propagation%20(after).jpg"
+alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
+height="436"    width="600"
+title="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28after%29.jpg)
 

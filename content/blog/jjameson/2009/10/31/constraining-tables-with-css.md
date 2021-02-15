@@ -24,8 +24,11 @@ However, unlike the typical master/detail scenario, you need to limit the amount
 
 The following figure illustrates the desired end result:
 
-![Constrained table](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Constrained%20Table.png)
-Figure 1: Constrained table
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FConstrained%20Table.png"
+alt="Constrained table"
+height="166"    width="559"
+title="Figure 1: Constrained table" >}}
 
 Here is the sample ASP.NET page that I created this morning to demonstrate this:
 

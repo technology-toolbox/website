@@ -13,9 +13,11 @@ In
 [a previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), I mentioned how the new Technology Toolbox home page highlights
 the most recent blog posts, as shown below.
 
-![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
-
-    	Figure 1: Technology Toolbox home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+alt="Technology Toolbox home page"
+height="600"    width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
@@ -23,9 +25,11 @@ The content rendered in the **Most Recent Posts** section is
 generated using an ASP.NET user control, as illustrated in the corresponding
 page layout.
 
-![Technology Toolbox home page (page layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png)
-
-    	Figure 2: Technology Toolbox home page (page layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
+alt="Technology Toolbox home page (page layout)"
+height="600"    width="536"
+title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
 
@@ -35,9 +39,11 @@ process. Requests for URLs under **/blog** are handled by Subtext.
 All other requests (such as the Technology Toolbox home page) are handled by
 the "Caelum" solution.
 
-![Solution architecture](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg)
-
-    	Figure 3: Solution architecture
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+alt="Solution architecture"
+height="520"    width="600"
+title="Figure 3: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
 

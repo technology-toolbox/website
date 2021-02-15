@@ -23,9 +23,11 @@ recommended build and deployment process](/blog/jjameson/2009/09/26/build-and-de
 
 The following figure illustrates how deployments to the Development environment  (DEV) are automated using the "latest" folder from the Builds share on the Release  Server.
 
-![Automated deployment to DEV using the &quot;latest&quot; folder](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
-
-    Figure 1: Automated deployment to DEV using the "latest" folder
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
+alt="Automated deployment to DEV using the \"latest\" folder"
+height="343"    width="600"
+title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
 

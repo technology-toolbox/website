@@ -20,8 +20,11 @@ When helping customers migrate their Internet sites to Microsoft Office SharePoi
 
 I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/20/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
 
-![&quot;Generic&quot; page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Glycomics%20Solution).jpg)
-Figure 1: "Generic" page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Generic%20(Glycomics%20Solution).jpg"
+alt="\"Generic\" page"
+height="477"    width="600"
+title="Figure 1: \"Generic\" page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Glycomics%20Solution%29.jpg)
 
@@ -35,22 +38,31 @@ To highlight these various fields, I create rectangles with corresponding text a
 
 We now have a "wireframe" that shows the various portions of the page with just         enough visibility of the underlying content to understand what each portion refers         to.
 
-![&quot;Generic&quot; page (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Page%20Layout).jpg)
-Figure 2: "Generic" page (Page Layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Generic%20(Page%20Layout).jpg"
+alt="\"Generic\" page (Page Layout)"
+height="489"    width="600"
+title="Figure 2: \"Generic\" page (Page Layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Page%20Layout%29.jpg)
 
 Here is another example, based on a press release.
 
-![Sample Press Release](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(857).jpg)
-Figure 3: Sample Press Release
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Press%20Release%20(857).jpg"
+alt="Sample Press Release"
+height="600"    width="478"
+title="Figure 3: Sample Press Release" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28857%29.jpg)
 
 Figure 4 shows the corresponding page layout.
 
-![Press Release (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(Page%20Layout).jpg)
-Figure 4: Press Release (Page Layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Press%20Release%20(Page%20Layout).jpg"
+alt="Press Release (Page Layout)"
+height="600"    width="461"
+title="Figure 4: Press Release (Page Layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28Page%20Layout%29.jpg)
 
@@ -59,15 +71,21 @@ Name**, **Contact Phone**, and **Contact E-mail Address** fields), but only some
 
 Some pages may be comprised of both fields and Web Parts. For example, consider         the following product detail page.
 
-![Sample product detail page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(6890N%20GC).jpg)
-Figure 5: Sample product detail page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Product%20Detail%20(6890N%20GC).jpg"
+alt="Sample product detail page"
+height="600"    width="545"
+title="Figure 5: Sample product detail page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%286890N%20GC%29.jpg)
 
 In this scenario, the "Buy Zone" and "Announcements" features are both implemented         as individual Web Parts (due to the dynamic nature of this content). Figure 6 shows         the corresponding page layout, highlighting the Web Parts in a different color.
 
-![Product Detail (Page Layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(Page%20Layout).jpg)
-Figure 7: Product Detail (Page Layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGeneral%20Site%20-%20Product%20Detail%20(Page%20Layout).jpg"
+alt="Product Detail (Page Layout)"
+height="600"    width="533"
+title="Figure 7: Product Detail (Page Layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%28Page%20Layout%29.jpg)
 

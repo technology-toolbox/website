@@ -25,8 +25,11 @@ In this post, I want to share details about how I've configured my Active Direct
 
 As you can see in the following figure, I've created a number of organizational         units (OUs) which you would typically find in many enterprise organizations.
 
-![Jameson Datacenter - Active Directory domain structure](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20AD%20domain%20structure.png)
-Figure 1: Jameson Datacenter - Active Directory domain structure
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%20AD%20domain%20structure.png"
+alt="Jameson Datacenter - Active Directory domain structure"
+height="600"    width="302"
+title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20AD%20domain%20structure.png)
 

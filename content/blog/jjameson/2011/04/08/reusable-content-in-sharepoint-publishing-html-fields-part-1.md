@@ -27,22 +27,31 @@ Content** list). The document authors are only responsible for specifying       
 Note that the **Reusable Content** list item has the **Automatic
 Update** field set to **Yes**, as shown below. This is the         key to "centrally managing" the content. [Also note that in this particular solution,         the document authors have read-only access to the **Reusable Content**         list.]
 
-![Reusable Content list](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content-List.png)
-Figure 1: Reusable Content list
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-List.png"
+alt="Reusable Content list"
+height="600"    width="463"
+title="Figure 1: Reusable Content list" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-List.png)
 
 The following screenshot shows a sample page from one of the sites used to create         a document. As you can see, the HTML content from the list item above has been inserted         as expected into the page. [Note that I didn't bother to fill in the section at         the bottom of the page on my test site, so please ignore the highlighted text.]
 
-![Reusable Content in &quot;view&quot; mode](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content.png)
-Figure 2: Reusable Content in "view" mode
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content.png"
+alt="Reusable Content in \"view\" mode"
+height="511"    width="600"
+title="Figure 2: Reusable Content in \"view\" mode" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content.png)
 
 Note that when the document author is editing the page, SharePoint marks the reusable         content section as read-only, as shown below.
 
-![Reusable Content in &quot;edit&quot; mode](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content-edit-mode.png)
-Figure 3: Reusable Content in "edit" mode
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-edit-mode.png"
+alt="Reusable Content in \"edit\" mode"
+height="423"    width="600"
+title="Figure 3: Reusable Content in \"edit\" mode" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-edit-mode.png)
 
@@ -50,9 +59,11 @@ One of the more interesting issues that I encountered when using the reusable co
 
 For example, consider the following screenshot that shows the same page as Figure         3. However, the following screenshot was taken *prior* to approving the list         item shown in Figure 1 above.
 
-![Page with missing content (due to &quot;Pending&quot; status in Reusable Content list)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Reusable-Content-missing-content.png)
-Figure 4: Page with missing content (due to "Pending" status in Reusable Content
-list)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-missing-content.png"
+alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
+height="211"    width="600"
+title="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-missing-content.png)
 

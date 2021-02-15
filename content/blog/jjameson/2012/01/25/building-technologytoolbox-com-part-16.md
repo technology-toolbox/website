@@ -21,9 +21,11 @@ The Technology Toolbox website provides an online form prospective clients
 can use regarding potential projects and other contact requests, as shown in
 Figure 1.
 
-![Contact form with custom CAPTCHA control](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact.png)
-
-    	Figure 1: Contact form with custom CAPTCHA control
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact.png"
+alt="Contact form with custom CAPTCHA control"
+height="600"    width="592"
+title="Figure 1: Contact form with custom CAPTCHA control" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact.png)
 
@@ -40,9 +42,11 @@ When the incorrect image is selected (or no image is selected) in the CAPTCHA
 control, an error appears in the validation summary, similar to when required
 fields are missing.
 
-![Contact form CAPTCHA validation error](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-CAPTCHA.png)
-
-    	Figure 2: Contact form CAPTCHA validation error
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-CAPTCHA.png"
+alt="Contact form CAPTCHA validation error"
+height="600"    width="534"
+title="Figure 2: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-CAPTCHA.png)
 

@@ -29,9 +29,11 @@ Rather than trying to explain to "The Media Guy" how to create a page layout bas
 
 If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with the         following:
 
-![Home page for &quot;Collaboration Portal&quot; (a.k.a. a &quot;starter site hierarchy for an intranet divisional portal&quot;)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DefaultMaster_DefaultPageLayout.png)
-Figure 1: Home page for "Collaboration Portal" (a.k.a. a "starter site hierarchy
-for an intranet divisional portal")
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDefaultMaster%5FDefaultPageLayout.png"
+alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")"
+height="284"    width="600"
+title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DefaultMaster_DefaultPageLayout.png)
 
@@ -41,8 +43,11 @@ As I described in my original post -- and also demonstrated in [part 2 of this s
 
 Here's a screenshot showing the home page using the custom Fabrikam master page         and page layout:
 
-![Home page with custom master page and page layout](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout.png)
-Figure 2: Home page with custom master page and page layout
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikamDefaultMaster-DefaultLayout.png"
+alt="Home page with custom master page and page layout"
+height="299"    width="600"
+title="Figure 2: Home page with custom master page and page layout" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout.png)
 
@@ -50,8 +55,11 @@ Note that the actual page content is identical in the two figures above -- I've 
 
 First, in the **Page Content** field, the default content is far from         "semantic HTML" and contains numerous nested tables (to achieve the two-column layout).         This is easily seen in the following screenshot, in which I've disabled the linked         style sheets:
 
-![Home page with custom master page and page layout (linked CSS files disabled)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout2.png)
-Figure 3: Home page with custom master page and page layout (linked CSS files disabled)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikamDefaultMaster-DefaultLayout2.png"
+alt="Home page with custom master page and page layout (linked CSS files disabled)"
+height="434"    width="600"
+title="Figure 3: Home page with custom master page and page layout (linked CSS files disabled)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout2.png)
 
@@ -65,9 +73,11 @@ To mitigate these issues, I chose to tweak the default content for the home page
 
 The following figure shows the end result (note that I overlayed the grid using         the [960 Gridder](http://gridder.andreehansson.se/) for illustrative         purposes):
 
-![Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-CustomLayout.png)
-Figure 4: Home page with custom master page and page layout (semantic HTML and Summary
-Links field instead of Web Part)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikamDefaultMaster-CustomLayout.png"
+alt="Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)"
+height="361"    width="600"
+title="Figure 4: Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-CustomLayout.png)
 

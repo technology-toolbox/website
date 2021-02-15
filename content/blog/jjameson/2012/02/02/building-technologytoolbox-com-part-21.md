@@ -61,9 +61,11 @@ JavaScript, and CSS provided by Google into the page.
 
 At that point, the search page looked like Figure 1.
 
-![Google Site Search (with borders)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-1.png)
-
-    	Figure 1: Google Site Search (with borders)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-1.png"
+alt="Google Site Search (with borders)"
+height="600"    width="296"
+title="Figure 1: Google Site Search (with borders)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-1.png)
 
@@ -86,9 +88,11 @@ to override the table styles on the Search page:
 
 As you can see in the following screenshot, this improves things considerably.
 
-![Google Site Search (without borders)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-2.png)
-
-    	Figure 2: Google Site Search (without borders)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-2.png"
+alt="Google Site Search (without borders)"
+height="600"    width="328"
+title="Figure 2: Google Site Search (without borders)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-2.png)
 
@@ -218,9 +222,11 @@ padding: 3px 6px;
 
 Figure 3 shows the corresponding results.
 
-![Google Site Search (final)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-3.png)
-
-    	Figure 3: Google Site Search (final)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-3.png"
+alt="Google Site Search (final)"
+height="600"    width="381"
+title="Figure 3: Google Site Search (final)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-3.png)
 

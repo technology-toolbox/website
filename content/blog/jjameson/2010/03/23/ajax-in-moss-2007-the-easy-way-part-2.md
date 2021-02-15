@@ -24,9 +24,11 @@ In my [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-p
 
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
-![AJAX in SharePoint](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_AJAX%20in%20SharePoint.png)
-
-    Figure 1: AJAX in SharePoint
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FAJAX%20in%20SharePoint.png"
+alt="AJAX in SharePoint"
+height="417"    width="600"
+title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)
 

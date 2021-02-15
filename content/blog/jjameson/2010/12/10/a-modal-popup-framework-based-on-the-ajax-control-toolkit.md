@@ -32,8 +32,11 @@ The framework essentially consists of the **ModalPopupWebPart** abstract        
 
 The following figure illustrates the various UI elements of a modal popup window.
 
-![Elements of a modal popup window](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Elements.png)
-Figure 1: Elements of a modal popup window
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FModal-Popup-Window-Elements.png"
+alt="Elements of a modal popup window"
+height="241"    width="600"
+title="Figure 1: Elements of a modal popup window" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Modal-Popup-Window-Elements.png)
 
@@ -97,8 +100,11 @@ modalPanelContent.Height = new Unit(100);
 
 &hellip;it is possible to constrain the height of the modal popup window and         show a scrollbar as necessary. This is illustrated in the following figure.
 
-![Constraining the height of content displayed in a modal popup window](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Constrained-Height.png)
-Figure 2: Constraining the height of content displayed in a modal popup window
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FModal-Popup-Window-Constrained-Height.png"
+alt="Constraining the height of content displayed in a modal popup window"
+height="190"    width="460"
+title="Figure 2: Constraining the height of content displayed in a modal popup window" >}}
 
 In addition to creating various user interface elements for modal popup windows,         the **ModalPopupWebPart** also converts client-side events (e.g. clicking         the **OK** link button) into server-side events. Note that this postback         occurs asynchronously in order to preserve the "AJAX" experience by avoiding a refresh         of the entire page. The **ModalPopupWebPart** base class also allows         the labels of the **OK** and **Cancel** link buttons to         be changed by derived classes, as well as the ability to hide either of the link         buttons.
 

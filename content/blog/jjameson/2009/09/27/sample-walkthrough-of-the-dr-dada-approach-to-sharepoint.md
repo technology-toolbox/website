@@ -96,9 +96,11 @@ If you've seen my post on
 [shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), then you know my first step
 is to build out a "shell" that looks like the following:
 
-![Visual Studio solution before adding SharePoint features](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%201.png)
-
-    	Figure 1: Visual Studio solution before adding SharePoint features
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FDR.DADA%20-%201.png"
+alt="Visual Studio solution before adding SharePoint features"
+height="178"    width="355"
+title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
 
 Next, I create a new Visual Studio solution folder called **Publishing**
 and then add a new **Class Library** project named **Publishing.csproj** (in
@@ -147,10 +149,11 @@ to deploy the solution -- into the **DeploymentFiles** folder.
 
 After that's all done, the Visual Studio solution looks like the following:
 
-![Visual Studio solution after adding SharePoint features and deployment files](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%202.png)
-
-    	Figure 2: Visual Studio solution after adding SharePoint features and 
-    	deployment files
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%202.png"
+alt="Visual Studio solution after adding SharePoint features and deployment files"
+height="600"    width="183"
+title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%202.png)
 
@@ -829,9 +832,11 @@ to the command I want -- to be a little more convenient. Unlike using the "up
 arrow" to repeat a command, selecting one after using F7 won't re-add it to
 the command history.
 
-![Command history](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%203.png)
-
-    	Figure 3: Command history
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%203.png"
+alt="Command history"
+height="205"    width="600"
+title="Figure 3: Command history" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%203.png)
 

@@ -26,8 +26,11 @@ In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-s
 
 For those of you that haven't yet read my previous post, the goal was to take a         SharePoint list like the one shown below...
 
-![Specials list](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List.png)
-Figure 1: Specials list
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List.png"
+alt="Specials list"
+height="474"    width="600"
+title="Figure 1: Specials list" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List.png)
 
@@ -73,8 +76,11 @@ After replacing the static HTML for the weekly specials section with an **XsltLi
 
 However, as I mentioned at the end of my previous post, there's a problem. What         happens if the number of items in the list is greater than the expected number?         The following screenshot shows the updated home page content after adding a fourth         item to the **Specials** list.
 
-![Too many items in the weekly specials section](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Too-Many-Specials.png)
-Figure 2: Too many items in the weekly specials section
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Too-Many-Specials.png"
+alt="Too many items in the weekly specials section"
+height="411"    width="600"
+title="Figure 2: Too many items in the weekly specials section" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Too-Many-Specials.png)
 
@@ -101,9 +107,11 @@ To achieve the two goals, start by creating a new view on the **Specials**      
 
 Once we change the **XsltListViewWebPart** on the home page to use         the **Most Recent Specials** view, the weekly specials section renders         as expected regardless of the number of items in the **Specials** list.
 
-![Using the &quot;Most Recent Specials&quot; view (instead of &quot;All Items&quot;) renders the home page as expected](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List-XsltListViewWebPart.png)
-Figure 3: Using the "Most Recent Specials" view (instead of "All Items") renders
-the home page as expected
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List-XsltListViewWebPart.png"
+alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
+height="324"    width="600"
+title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List-XsltListViewWebPart.png)
 

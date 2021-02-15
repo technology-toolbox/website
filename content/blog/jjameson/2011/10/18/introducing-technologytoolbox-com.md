@@ -13,9 +13,11 @@ In this inaugural post for my new blog location, I'll introduce various features
 
 The following screenshot shows the current home page for Technology Toolbox.
 
-![Technology Toolbox home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png)
-
-    Figure 1: Technology Toolbox home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+alt="Technology Toolbox home page"
+height="600"    width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
 
@@ -24,9 +26,11 @@ blog post](http://v3.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php)
 
 Here is the corresponding page layout for the site home page.
 
-![Technology Toolbox home page (page layout)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png)
-
-    Figure 2: Technology Toolbox home page (page layout)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
+alt="Technology Toolbox home page (page layout)"
+height="600"    width="536"
+title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
 
@@ -73,17 +77,21 @@ The standard copyright notice appears at the bottom of all pages -- along with  
 
 The **Services** page for the site is shown in Figure 3 below. This  represents a typical "content" page in which the "primary content" consists of text  with various headings and other markup, while the "secondary content" is comprised  of a related illustration (typically obtained from [iStockphoto](http://www.istockphoto.com) -- my image provider of choice).
 
-![Services page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Services.png)
-
-    Figure 3: Services page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Services.png"
+alt="Services page"
+height="494"    width="600"
+title="Figure 3: Services page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services.png)
 
 Note that I still like to use the [960 Grid System](http://960.gs)  to layout Web content -- something I first discussed in a blog post about [Web Standards Design in MOSS 2007](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1). The following screenshot shows how the primary  content spans 7 columns and the secondary content spans the remaining 5 columns  (since I chose the 12 column layout option).
 
-![Services page (with grid)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Services-with-Grid.png)
-
-    Figure 4: Services page (with grid)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Services-with-Grid.png"
+alt="Services page (with grid)"
+height="495"    width="600"
+title="Figure 4: Services page (with grid)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services-with-Grid.png)
 
@@ -97,17 +105,21 @@ The "Company Overview" page is very similar to the **Services**  page shown abov
 
 The site provides an online form prospective clients can use regarding potential  projects and other contact requests, as shown in Figure 5.
 
-![Contact form](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact.png)
-
-    Figure 5: Contact form
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact.png"
+alt="Contact form"
+height="600"    width="592"
+title="Figure 5: Contact form" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact.png)
 
 As shown below, validators are used to ensure the required fields are specified  when submitting the form. Also note how required fields have a light yellow background  color (that changes to white when the field has the focus).
 
-![Contact form validation errors](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-validation.png)
-
-    Figure 6: Contact form validation errors
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-validation.png"
+alt="Contact form validation errors"
+height="600"    width="505"
+title="Figure 6: Contact form validation errors" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-validation.png)
 
@@ -115,9 +127,11 @@ To ensure responses are generated by a person -- rather than annoying spam submi
 
 When the incorrect image is selected (or no image is selected) in the CAPTCHA  control, an error appears in the validation summary, similar to when required fields  are missing.
 
-![Contact form CAPTCHA validation error](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-CAPTCHA.png)
-
-    Figure 7: Contact form CAPTCHA validation error
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-CAPTCHA.png"
+alt="Contact form CAPTCHA validation error"
+height="600"    width="534"
+title="Figure 7: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-CAPTCHA.png)
 
@@ -127,9 +141,11 @@ While the simple image-recognition CAPTCHA is arguably not as "strong" as a dist
 
 My new blog is currently powered by [Subtext](http://subtextproject.com)  -- or rather my own (slightly modified) version of Subtext 2.5 -- in combination  with a custom blog skin that leverages the same "theme" (i.e. CSS files and associated  images) as the other parts of the site. I discovered some issues with the current  release of Subtext that required some tweaks in order to render the blog pages in  the desired structure and format (for example, to show the **Archives**  section at the bottom of the "secondary content" using expandable lists of links  grouped by year).
 
-![Blog home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png)
-
-    Figure 8: Blog home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
+alt="Blog home page"
+height="600"    width="374"
+title="Figure 8: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
 
@@ -137,9 +153,11 @@ The primary content on the blog home page is, not surprisingly, the most recent 
 
 Figure 9 shows a typical blog post. The secondary content is similar to that  shown on the blog home page, but also contains a **Recent Posts** section.  The thought behind this is that people often find blog posts through search sites  like Google or Bing, so when they browse directly to an individual post, we should  try to "hook" them into reading other posts during the same visit. [The **Recent Posts** section is not shown on the blog home page, since this would  be redundant with the items shown in the primary content area on that page.]
 
-![Sample blog post](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png)
-
-    Figure 9: Sample blog post
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Post.png"
+alt="Sample blog post"
+height="600"    width="398"
+title="Figure 9: Sample blog post" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
 
@@ -166,9 +184,11 @@ Upon switching to Subtext, I thought about using ASP.NET MVC across the entire  
 
 Figure 10 illustrates how the two solutions are merged together during the deployment  process. The **blog** folder is configured as a separate application  in IIS. It contains the Subtext solution and a few updated/additional files from  the "Caelum" solution -- such as the site map file and the custom blog skin.
 
-![Solution architecture](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg)
-
-    Figure 10: Solution architecture
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+alt="Solution architecture"
+height="520"    width="600"
+title="Figure 10: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
 
@@ -176,9 +196,11 @@ Figure 10 illustrates how the two solutions are merged together during the deplo
 
 The production environment for TechnologyToolbox.com is currently hosted by [WinHost](http://www.winhost.com), as shown in the following figure.  Separate servers are used for database services (i.e. SQL Server) and the Web tier.
 
-![Infrastructure](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Technology-Toolbox-Infrastructure.jpg)
-
-    Figure 11: Infrastructure
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FTechnology-Toolbox-Infrastructure.jpg"
+alt="Infrastructure"
+height="399"    width="600"
+title="Figure 11: Infrastructure" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg)
 

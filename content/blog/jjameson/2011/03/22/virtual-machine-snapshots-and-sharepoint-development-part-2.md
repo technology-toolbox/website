@@ -68,8 +68,11 @@ With the prerequisites out of the way, let's move on to my recommendations for e
 
 As a quick review, the following screenshot shows the snapshots for my primary SharePoint         Server 2010 development VM (FOOBAR5):
 
-![FOOBAR5 snapshots](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR5%20Snapshots.png)
-Figure 1: FOOBAR5 snapshots
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFOOBAR5%20Snapshots.png"
+alt="FOOBAR5 snapshots"
+height="383"    width="600"
+title="Figure 1: FOOBAR5 snapshots" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR5%20Snapshots.png)
 
@@ -121,8 +124,11 @@ The other scenario where snapshots provide tremendous value is when deploying fr
 
 To understand this process, examine the snapshots shown below for one of my Microsoft         Office SharePoint Server 2007 development VMs (FOOBAR2):
 
-![FOOBAR2 snapshots](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR2%20Snapshots.png)
-Figure 2: FOOBAR2 snapshots
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFOOBAR2%20Snapshots.png"
+alt="FOOBAR2 snapshots"
+height="372"    width="600"
+title="Figure 2: FOOBAR2 snapshots" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR2%20Snapshots.png)
 

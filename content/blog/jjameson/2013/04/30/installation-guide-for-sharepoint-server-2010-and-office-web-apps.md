@@ -328,9 +328,11 @@ the VHD files across multiple physical disks on the host, as illustrated
 in Figure 1,
 to reduce I/O contention.
 
-![Figure 1: SharePoint development VM configuration](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Development%20VM.png)
-Figure
-1: SharePoint development VM configuration
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint%20Development%20VM.png"
+alt="Figure 1: SharePoint development VM configuration"
+height="317"    width="600"
+title="Figure 1: SharePoint development VM configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Development%20VM.png)
 
@@ -1312,9 +1314,11 @@ For example, Figure
 FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
 
-![Setting environment variables](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Environment-Variables-Fabrikam-Extranet.png)
-Figure 2: Setting
-environment variables
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FEnvironment-Variables-Fabrikam-Extranet.png"
+alt="Setting environment variables"
+height="436"    width="394"
+title="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
 
@@ -2013,9 +2017,11 @@ been created based on the Publishing Portal template.
 
 The site should resemble the following:
 
-[!\[Default home page for “Publishing Portal” site in SharePoint Server 2010\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_SharePoint-Server-2010-Publishing-Portal.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_SharePoint-Server-2010-Publishing-Portal.png)
-Figure 3: Default home page for “Publishing Portal” site in SharePoint
-Server 2010
+[{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FSharePoint-Server-2010-Publishing-Portal.png"
+alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
+height="374"    width="600"
+title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_SharePoint-Server-2010-Publishing-Portal.png)
 
 Although the site does not yet have the Fabrikam branding or any custom
 code deployed, it is still possible to validate the basic functionality
@@ -2577,9 +2583,11 @@ At this point, the home page of the Fabrikam Extranet site should resemble
 the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 **Reusable Content Sample** links).
 
-![Fabrikam Extranet home page](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Fabrikam%20Extranet%20-%20home%20page.png)
-Figure 4: Fabrikam
-Extranet home page
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikam%20Extranet%20-%20home%20page.png"
+alt="Fabrikam Extranet home page"
+height="277"    width="600"
+title="Figure 4: Fabrikam Extranet home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Fabrikam%20Extranet%20-%20home%20page.png)
 

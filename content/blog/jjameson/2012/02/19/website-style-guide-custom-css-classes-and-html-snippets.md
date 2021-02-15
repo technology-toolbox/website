@@ -56,9 +56,11 @@ included in the Template.aspx file.
 
 Here is a screenshot that illustrates the snippets I've created.
 
-![Snippets in Expression Web](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Expression%20Web%20-%20My%20Technology%20Toolbox%20Blog.png)
-
-    	Figure 1: Snippets in Expression Web
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FExpression%20Web%20-%20My%20Technology%20Toolbox%20Blog.png"
+alt="Snippets in Expression Web"
+height="325"    width="600"
+title="Figure 1: Snippets in Expression Web" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Expression%20Web%20-%20My%20Technology%20Toolbox%20Blog.png)
 

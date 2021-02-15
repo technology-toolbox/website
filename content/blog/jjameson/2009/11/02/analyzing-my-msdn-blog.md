@@ -53,8 +53,11 @@ It's nice to know that the effort I put into writing blog posts are considered h
 
 Here's a chart showing the combined views for each blog post that I've created so         far.
 
-![Combined views for each blog post](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_MSDN%20blog%20-%20Combined%20Views.png)
-Figure 1: Combined views for each blog post
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Combined%20Views.png"
+alt="Combined views for each blog post"
+height="266"    width="600"
+title="Figure 1: Combined views for each blog post" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Combined%20Views.png)
 
@@ -106,8 +109,11 @@ Since it's just so incredibly easy to do in Excel, I decided to see how my autho
 
 Let's start with the total number of posts by year:
 
-![Blog posts created by year](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_MSDN%20blog%20-%20Total%20Posts%20by%20Year.png)
-Figure 2: Blog posts created by year
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Total%20Posts%20by%20Year.png"
+alt="Blog posts created by year"
+height="311"    width="600"
+title="Figure 2: Blog posts created by year" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Total%20Posts%20by%20Year.png)
 
@@ -115,8 +121,11 @@ Hmmm...apparently 2008 wasn't a very good year for me from a blogging perspectiv
 
 Let's look at the total number of posts by month:
 
-![Blog posts created by month](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_MSDN%20blog%20-%20Total%20Posts%20by%20Month.png)
-Figure 3: Blog posts created by month
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Total%20Posts%20by%20Month.png"
+alt="Blog posts created by month"
+height="330"    width="600"
+title="Figure 3: Blog posts created by month" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Total%20Posts%20by%20Month.png)
 
@@ -170,8 +179,11 @@ Note that the post was created back in June 2007, which helps explain why you se
 
 To help me get a better feel for the Google vs. Microsoft ratio, I grouped the results         into categories and subcategories.
 
-![Referrals by category for post - Issues Deploying SharePoint Solution Packages](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_MSDN%20blog%20-%20Referrals%20by%20Category.png)
-Figure 4: Referrals by category for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)
+{{< figure
+src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Referrals%20by%20Category.png"
+alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages"
+height="387"    width="600"
+title="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Referrals%20by%20Category.png)
 
