@@ -153,7 +153,11 @@ contains a mix of secured and unsecured content. In other words, the status
 bar shows a small lock icon with a bright red warning symbol, along with the
 following tooltip:
 
-> Warning: Contains unauthenticated content
+{{< blockquote "font-italic" >}}
+
+    Warning: Contains unauthenticated content
+
+{{< /blockquote >}}
 
 To avoid this issue in Firefox, you might be tempted to simply change the
 image source to specify
@@ -161,7 +165,11 @@ image source to specify
 However, if (like we did) you fire up Fiddler and request this URL, you will
 find the response to be an HTTP 302 (redirect) with the following header:
 
-> Location: http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
+{{< blockquote "font-italic" >}}
+
+    Location: http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
+
+{{< /blockquote >}}
 
 In other words, while the initial request for the image is HTTPS, the subsequent
 request will be HTTP. [Don't ask me to explain or make any sense of why go.microsoft.com

@@ -107,7 +107,11 @@ While it probably isn't the worst thing to include a **Debug** version of an ass
 
 As I noted in a [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
-> The problem with relative paths is that Team Foundation Build uses a different folder structure when compiling your projects.
+{{< blockquote "font-italic" >}}
+
+The problem with relative paths is that Team Foundation Build uses a different folder structure when compiling your projects.
+
+{{< /blockquote >}}
 
 In other words, whenever you find yourself about to specify ".." in the output path inside Visual Studio for a project, stop what you're doing, think about my blog posts, take a deep breath, and find another solution to the problem you are trying to solve.
 

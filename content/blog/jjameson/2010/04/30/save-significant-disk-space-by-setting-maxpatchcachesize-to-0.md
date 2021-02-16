@@ -31,11 +31,15 @@ Then I move on to installing products based on the intended purpose of the VM.
 
 Here's an excerpt from the [MSDN page for MaxPatchCacheSize](http://msdn.microsoft.com/en-us/library/aa369798%28VS.85%29.aspx):
 
-> If this per-machine system policy is set to a value greater than 0, Windows Installer             saves older versions of files in a cache when a patch is applied to an application.             Caching can increase the performance of future installations that otherwise need             to obtain the old files from a original application source.
->
-> ...
->
-> If the value of the MaxPatchCacheSize policy is set to 0, no additional files are             saved.
+{{< blockquote "font-italic" >}}
+
+If this per-machine system policy is set to a value greater than 0, Windows Installer             saves older versions of files in a cache when a patch is applied to an application.             Caching can increase the performance of future installations that otherwise need             to obtain the old files from a original application source.
+
+...
+
+If the value of the MaxPatchCacheSize policy is set to 0, no additional files are             saved.
+
+{{< /blockquote >}}
 
 To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look at         the following figure, which shows the disk space usage on a freshly built Windows         Server 2008 R2 VM, after installing SQL Server 2008 and subsequently running Windows         Update to install all of the latest patches (including SQL Server 2008 Service Pack         1).
 

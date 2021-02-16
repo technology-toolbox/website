@@ -445,8 +445,12 @@ protected void Page_Load(
 
 Here's the short summary from MSDN for the [Page.SaveStateComplete](http://msdn.microsoft.com/en-us/library/system.web.ui.page.savestatecomplete.aspx) event:
 
-> Occurs after the page has completed saving all view state and control state
-> information for the page and controls on the page.
+{{< blockquote "font-italic" >}}
+
+Occurs after the page has completed saving all view state and control state
+information for the page and controls on the page.
+
+{{< /blockquote >}}
 
 With this change, the KPI detail table renders as expected (with the custom **Thresholds** header row and all of the expected data) even when the  GridView is rendered from view state.
 

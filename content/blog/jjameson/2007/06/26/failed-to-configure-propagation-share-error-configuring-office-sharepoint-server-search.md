@@ -17,7 +17,11 @@ tags: ["MOSS 2007"]
 
 Last weekend I had to rebuild our Test environment for Microsoft Office SharePoint Server (MOSS) 2007 to replace a VM with a physical server (for [performance reasons](http://blogs.msdn.com/jameson/archive/2007/06/24/performance-of-virtual-machines.aspx)). During the rebuild, I encountered the following error when starting Office SharePoint Server Search on the SSP server:
 
-> Failed to configure propagation share.
+{{< blockquote "font-italic text-danger" >}}
+
+Failed to configure propagation share.
+
+{{< /blockquote >}}
 
 Be aware that the code for configuring the share is not exactly robust -- meaning, if the share already exists then you'll get this error (even if the existing share is configured exactly as it needs to be). To avoid the error, I deleted the existing shares on the two front-end Web servers (previously configured during the original build of the Test environment).
 

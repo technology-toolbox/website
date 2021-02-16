@@ -111,9 +111,13 @@ C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-lo
 
 Attempting to browse to the home page of the site now results in an error. After  tweaking the Web.config file to set `<SafeMode CallStack="true"  ...>` and `<customErrors mode="Off"  />`, the details of the error are revealed:
 
-> System.InvalidOperationException: The control with ID 'updatePanel' requires
-> a ScriptManager on the page. The ScriptManager must appear before any controls
-> that need it.
+{{< blockquote "font-italic text-danger" >}}
+
+System.InvalidOperationException: The control with ID 'updatePanel' requires
+a ScriptManager on the page. The ScriptManager must appear before any controls
+that need it.
+
+{{< /blockquote >}}
 
 This is no real surprise, since BlueBand.master doesn't declare an instance of  the ASP.NET **[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)** (which is required for providing the ASP.NET AJAX script  files on any AJAX-enabled page). Mike Ammerlaan covers this in [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3) that I referenced in yesterday's post.
 
@@ -142,7 +146,11 @@ In my experience, the UpdatePanels seem to work just fine without this startup  
 
 I've also seen the following error when using the **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)** from the AJAX Control Toolkit on a SharePoint site:
 
-> Extender Controls may not be Registered before PreRender
+{{< blockquote "font-italic text-danger" >}}
+
+Extender Controls may not be Registered before PreRender
+
+{{< /blockquote >}}
 
 To avoid this error, you have to force the child controls to be created during  the Init phase of the page lifecycle.
 

@@ -32,53 +32,61 @@ During the upgrade, a warning occurs indicating the reports could not be
 successfully upgraded. The log file contains warnings for each TFS project that
 resemble the following:
 
-> [Warning] Failed to upgrade Reporting settings for project AdventureWorks:
-> TF30225: Error uploading report 'Work Item with Tasks': System.Web.Services.Protocols.SoapException:
-> An error occurred within the report server database. This may be due to
-> a connection failure, timeout or low disk condition within the database.
-> ---&gt; Microsoft.ReportingServices.Diagnostics.Utilities.ReportServerStorageException:
-> An error occurred within the report server database. This may be due to
-> a connection failure, timeout or low disk condition within the database.
-> ---&gt; System.Data.SqlClient.SqlException: The EXECUTE permission was denied
-> on the object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema
-> 'sys'.
->
-> at Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String
-> Report, Boolean CacheReport, ExpirationDefinition Expiration)
->
-> at Microsoft.ReportingServices.WebServer.ReportingService2005.SetCacheOptions(String
-> Report, Boolean CacheReport, ExpirationDefinition Expiration)
+{{< blockquote "font-italic" >}}
+
+[Warning] Failed to upgrade Reporting settings for project AdventureWorks:
+TF30225: Error uploading report 'Work Item with Tasks': System.Web.Services.Protocols.SoapException:
+An error occurred within the report server database. This may be due to
+a connection failure, timeout or low disk condition within the database.
+---&gt; Microsoft.ReportingServices.Diagnostics.Utilities.ReportServerStorageException:
+An error occurred within the report server database. This may be due to
+a connection failure, timeout or low disk condition within the database.
+---&gt; System.Data.SqlClient.SqlException: The EXECUTE permission was denied
+on the object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema
+'sys'.
+
+    at Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String 
+    Report, Boolean CacheReport, ExpirationDefinition Expiration)
+    
+    at Microsoft.ReportingServices.WebServer.ReportingService2005.SetCacheOptions(String 
+    Report, Boolean CacheReport, ExpirationDefinition Expiration)
+
+{{< /blockquote >}}
 
 After the upgrade, when attempting to create a new TFS project (which adds
 new reports to Reporting Services), you may see the following:
 
-> **TF301777: Team Project Creation Failed**
->
-> New Team Project Wizard encountered the following error and could not
-> continue.
->
-> **Error**
->
-> The Project Creation Wizard encountered an error
-> while creating reports to the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
->
-> **Explanation**
->
-> The Project Creation Wizard encountered a problem while creating reports
-> on the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
-> The reason for the failure cannot be determined at this time. Because the
-> operation failed, the wizard was not able to finish creating the SQL Server
-> Reporting Services site.
->
-> **User Action**
->
-> Contact the administrator for the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx
-> to confirm that the SQL Server Reporting Services server is running and
-> you have sufficient privileges to create a project. Your user account on
-> SQL Server Reporting Services must have Content Manager permission to create
-> a new project. Also, you might find additional helpful information in the
-> project creation log. The log shows each action taken by the wizard at the
-> time of the failure and may include additional details about the error.
+{{< blockquote "font-italic" >}}
+
+**TF301777: Team Project Creation Failed**
+
+New Team Project Wizard encountered the following error and could not
+continue.
+
+**Error**
+
+The Project Creation Wizard encountered an error
+while creating reports to the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
+
+**Explanation**
+
+The Project Creation Wizard encountered a problem while creating reports
+on the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx.
+The reason for the failure cannot be determined at this time. Because the
+operation failed, the wizard was not able to finish creating the SQL Server
+Reporting Services site.
+
+**User Action**
+
+Contact the administrator for the SQL Server Reporting Services on http://cyclops-dev/ReportServer/ReportService2005.asmx
+to confirm that the SQL Server Reporting Services server is running and
+you have sufficient privileges to create a project. Your user account on
+SQL Server Reporting Services must have Content Manager permission to create
+a new project. Also, you might find additional helpful information in the
+project creation log. The log shows each action taken by the wizard at the
+time of the failure and may include additional details about the error.
+
+{{< /blockquote >}}
 
 The problem occurs if you restore the ReportServerDB and ReportServerTempDB
 databases without first configuring SQL Server Reporting Services in the new
@@ -99,8 +107,12 @@ Manager:
 
 An error similar to the following should be displayed:
 
-> EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database
-> 'mssqlsystemresource', schema 'sys'
+{{< blockquote "font-italic text-danger" >}}
+
+    EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database 
+    'mssqlsystemresource', schema 'sys'
+
+{{< /blockquote >}}
 
 Fortunately, once you've confirmed the root cause of the issue, resolving
 it is simply a matter of granting the necessary permissions by running the following
@@ -150,10 +162,14 @@ need to complete the upgrade of the reports for existing TFS projects (which
 failed during the TFS upgrade process). Otherwise, the Web Parts that render
 reports will continue to show errors similar to the following:
 
-> **Reporting Services Error**
->
-> The item '/TfsReports/DefaultCollection/AdventureWorks/Remaining
-> Work' cannot be found. (rsItemNotFound)
+{{< blockquote "font-italic" >}}
+
+**Reporting Services Error**
+
+The item '/TfsReports/DefaultCollection/AdventureWorks/Remaining
+Work' cannot be found. (rsItemNotFound)
+
+{{< /blockquote >}}
 
 I initially attempted to fix this issue using the File.BatchNewTeamProject
 command in Visual Studio, with the following XML input file:
@@ -179,10 +195,14 @@ This process is described in more detail in the following MSDN article:
 While this successfully uploaded the missing reports (e.g. /TfsReports/DefaultCollection/AdventureWorks/Remaining
 Work), it only led to a different error.
 
-> **Reporting Services Error**
->
-> Default value or value provided for the report parameter
-> 'IterationParam' is not a valid value. (rsInvalidReportParameter)
+{{< blockquote "font-italic" >}}
+
+**Reporting Services Error**
+
+Default value or value provided for the report parameter
+'IterationParam' is not a valid value. (rsInvalidReportParameter)
+
+{{< /blockquote >}}
 
 I rebuilt the TFS warehouse and Analysis Services databases to try to resolve
 this error, but that didn't help.

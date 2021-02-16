@@ -24,7 +24,11 @@ According to this MSDN article, all you need to do is copy some files to the ser
 
 Unfortunately, when we attempted to deploy our database to our Test environment,         we encountered a `NullReferenceException`:
 
-> Object reference not set to an instance of an object.
+{{< blockquote "font-italic text-danger" >}}
+
+        Object reference not set to an instance of an object.
+
+{{< /blockquote >}}
 
 Fortunately, it didn't take long to find [Gert's recommendation](http://social.msdn.microsoft.com/Forums/en-US/vstsdb/thread/32725cf6-74c1-4b5a-9057-b909ae8a2517) to add the following registry key:
 

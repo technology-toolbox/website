@@ -265,8 +265,12 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 > After a navigation node has been deleted, you need to refresh the SPWeb
 > object to avoid errors like the following:
 >
-> > An error occurred while enumerating through a collection: Cannot complete
-> > this action.
+> {{< blockquote "font-italic text-danger" >}}
+>
+>       An error occurred while enumerating through a collection: Cannot complete 
+>       this action.
+>
+> {{< /blockquote >}}
 >
 > To refresh the SPWeb object (and consequently the associated SPNavigationNodeCollection),
 > simply call the `Get-SPWeb` cmdlet

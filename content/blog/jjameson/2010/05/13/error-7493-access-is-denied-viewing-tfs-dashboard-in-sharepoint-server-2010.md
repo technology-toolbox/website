@@ -26,10 +26,14 @@ to showcase the new dashboard features in TFS 2010.
 While doing so, I encountered the following error in the various Excel Web
 Parts used to render the dashboards:
 
-> An error occurred while accessing application id TFS from Secure Store Service.
-> The following connections failed to refresh:
->
-> TfsOlapReport
+{{< blockquote "font-italic text-danger" >}}
+
+An error occurred while accessing application id TFS from Secure Store Service.
+The following connections failed to refresh:
+
+TfsOlapReport
+
+{{< /blockquote >}}
 
 Looking at the event logs on the server, I found the following:
 

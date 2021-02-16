@@ -21,5 +21,9 @@ This is an update to the beta version that was released last December. It "provi
 
 Here's the overview from the [download page](http://www.microsoft.com/downloads/details.aspx?FamilyID=83A80A0F-0906-4D7D-98E1-3DD6F58FF059&displaylang=en):
 
-> The SharePoint 2010 Developer Training Kit provides developers with deep guidance on how to develop for SharePoint 2010. Through PowerPoint decks, Hands-On Labs, Source Code, and Instructor-Led Videos, the developer kit walks you through an array of important developer topics--including Developer Roadmap, Visual Studio tooling, Workflow, Business Connectivity Services, and much, much more.
+{{< blockquote "font-italic" >}}
+
+The SharePoint 2010 Developer Training Kit provides developers with deep guidance on how to develop for SharePoint 2010. Through PowerPoint decks, Hands-On Labs, Source Code, and Instructor-Led Videos, the developer kit walks you through an array of important developer topics--including Developer Roadmap, Visual Studio tooling, Workflow, Business Connectivity Services, and much, much more.
+
+{{< /blockquote >}}
 

@@ -197,7 +197,11 @@ Simply comment out the default PageHandlerFactory and add the custom Application
 
 Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:
 
-> Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master page '/\_catalogs/masterpage/default.master', verify content control's ContentPlaceHolderID attribute in the content page.
+{{< blockquote "font-italic text-danger" >}}
+
+Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master page '/\_catalogs/masterpage/default.master', verify content control's ContentPlaceHolderID attribute in the content page.
+
+{{< /blockquote >}}
 
 Lastly, I want to point out that this approach only affects application pages -- not site and system pages. In other words, the code shown above in ApplicationPageHandlerFactory is not executed on every page request for your SharePoint site. It's also probably worth mentioning that in order to avoid any possibility of having Microsoft Support throw the "unsupported" trump card on you when opening a service request (i.e. SRX), you should probably temporarily revert the Web.config change above (so that the default PageHandlerFactory is used) and reproduce your problem with the default, out-of-the-box configuration.
 

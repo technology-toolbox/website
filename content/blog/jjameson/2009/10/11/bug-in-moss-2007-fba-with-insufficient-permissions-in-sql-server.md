@@ -38,7 +38,11 @@ Hmmm...from this I could tell that SharePoint was definitely attempting to valid
 
 That's when I found the problem, namely a `SqlException`:
 
-> The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists', database 'FabrikamPortal', schema 'dbo'.
+{{< blockquote "font-italic text-danger" >}}
+
+The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists', database 'FabrikamPortal', schema 'dbo'.
+
+{{< /blockquote >}}
 
 Ugh...it turns out the **aspnet\_Roles\_RoleExists** stored procedure is by default only granted EXECUTE permission to the **aspnet\_Roles\_ReportingAccess** database role within SQL Server. Unfortunately, SharePoint was simply "swallowing" that `SqlException`and assuming the role simply did not exist. I don't know about you, but I consider a "swallowed exception" like this to be a bug. Others may disagree, but that's my opinion.
 

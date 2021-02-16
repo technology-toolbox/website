@@ -21,7 +21,11 @@ I [recently promised](/blog/jjameson/2009/11/02/analyzing-my-msdn-blog) to finis
 
 Have you ever encountered the following error in Microsoft Office SharePoint Server (MOSS) 2007?
 
-> An error occurred during the processing of . The attribute 'autoeventwireup' is not allowed in this page.
+{{< blockquote "font-italic text-danger" >}}
+
+An error occurred during the processing of . The attribute 'autoeventwireup' is not allowed in this page.
+
+{{< /blockquote >}}
 
 I just [searched for this](http://www.bing.com/search?q=SharePoint+%22AutoEventWireup+is+not+allowed%22&form=QBRE&qs=n) using Bing and it seems like I'm not the only one who has ever experienced this issue. However, glancing through a few of the top search results, I didn't see any solutions to the error.
 
@@ -67,7 +71,11 @@ In other words, the solution to the problem would seem to be simply be a matter 
 
 Unfortunately -- at least in my experience -- this doesn't work. It only leads to other errors, such as:
 
-> The event handler 'OnPreRender' is not allowed in this page.
+{{< blockquote "font-italic text-danger" >}}
+
+The event handler 'OnPreRender' is not allowed in this page.
+
+{{< /blockquote >}}
 
 The above error occurs when the master page contains something like the following:
 
@@ -81,7 +89,11 @@ The above error occurs when the master page contains something like the followin
 
 I attempted to resolve this by converting the `BreadcrumbSiteMapPath_OnPreRender` event handler to a method and invoking the method from the `Page_PreRender` event handler instead. However, that only led to yet another error:
 
-> Code blocks are not allowed in this file.
+{{< blockquote "font-italic text-danger" >}}
+
+Code blocks are not allowed in this file.
+
+{{< /blockquote >}}
 
 Sensing a very deep "rat hole" at this point, I decided it wasn't worth pursuing this issue any further.
 

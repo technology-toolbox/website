@@ -26,7 +26,11 @@ Also note that Jon Tsao wrote a blog post a couple of months ago with the steps 
 
 I followed Jon's post to configure my environment, but I found that when I browsed to a new TFS project site, all of the Excel Web Parts displayed the following error:
 
-> The workbook cannot be opened.
+{{< blockquote "font-italic text-danger" >}}
+
+The workbook cannot be opened.
+
+{{< /blockquote >}}
 
 Looking at the event log on the SharePoint/TFS server, I found the following error occurred each time I requested the dashboard page:
 

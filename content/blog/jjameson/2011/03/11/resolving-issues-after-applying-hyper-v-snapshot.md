@@ -20,7 +20,11 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 
 This morning I rolled back one of my development VMs to a snapshot I created  about a month ago. When I subsequently tried to login with my domain credentials,  I encountered the following error:
 
-> The trust relationship between this workstation and the primary domain failed.
+{{< blockquote "font-italic text-danger" >}}
+
+The trust relationship between this workstation and the primary domain failed.
+
+{{< /blockquote >}}
 
 I did a quick Internet search for this error and found the following KB article:
 
@@ -32,8 +36,12 @@ While you *could* follow the instructions in KB 162797 to resolve this  error (r
 
 Don't be put off by the title of this KB article. You just need to read a little  bit into it:
 
-> [...] This procedure is most frequently used on domain controllers, but also
-> applies to any Windows machine account.
+{{< blockquote "font-italic" >}}
+
+[...] This procedure is most frequently used on domain controllers, but also
+applies to any Windows machine account.
+
+{{< /blockquote >}}
 
 To resolve the error after applying an old Hyper-V snapshot on a VM joined to  a domain:
 

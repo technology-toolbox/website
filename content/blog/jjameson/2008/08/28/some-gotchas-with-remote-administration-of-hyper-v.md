@@ -52,7 +52,11 @@ member of DOMAIN2 -- and there is no trust relationship between DOMAIN1 and DOMA
 to the RPC server. Also note that in this scenario Disk Management pukes as
 well with the infamous error message:
 
-> RPC server is unavailable
+{{< blockquote "font-italic text-danger" >}}
+
+    RPC server is unavailable
+
+{{< /blockquote >}}
 
 To picture this scenario, imagine you have a Hyper-V server joined to your
 internal domain, but now I come along and try to use Hyper-V Manager from my

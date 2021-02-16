@@ -45,7 +45,11 @@ I then ran the WSUS **Server Cleanup Wizard** as I had attempted
 As with my previous attempts, the cleanup appeared to hang on the following
 step:
 
-> Deleting unused updates...
+{{< blockquote "font-italic" >}}
+
+    Deleting unused updates...
+
+{{< /blockquote >}}
 
 I decided that I should try to show a little more patience than I had in
 the past and consequently let it run for over 24 hours (thinking it might eventually

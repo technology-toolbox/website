@@ -25,18 +25,26 @@ A good use of this feature is specifying a custom dictionary for your solution.
 
 Once you enable Code Analysis on your projects, you are likely to encounter warnings  similar to the following:
 
-> MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam'
-> in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
+{{< blockquote "font-italic" >}}
+
+MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam'
+in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
+
+{{< /blockquote >}}
 
 If you right-click one of these warnings and then click **Show Error Help**,  you will find the following:
 
-> **How to Fix Violations**
->
-> To fix a violation of this rule, correct the spelling of the word or add the
-> word to a custom dictionary named CustomDictionary.xml. Place the dictionary
-> in the installation directory of the tool, the project directory, or in the
-> directory associated with the tool under the user's profile (%USERPROFILE%\Application
-> Data\...).
+{{< blockquote "font-italic" >}}
+
+**How to Fix Violations**
+
+To fix a violation of this rule, correct the spelling of the word or add the
+word to a custom dictionary named CustomDictionary.xml. Place the dictionary
+in the installation directory of the tool, the project directory, or in the
+directory associated with the tool under the user's profile (%USERPROFILE%\Application
+Data\...).
+
+{{< /blockquote >}}
 
 {{< reference title="Identifiers should be spelled correctly" linkHref="http://msdn.microsoft.com/en-us/library/bb264492.aspx" >}}
 

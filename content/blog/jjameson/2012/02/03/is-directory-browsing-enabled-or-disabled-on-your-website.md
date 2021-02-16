@@ -21,7 +21,11 @@ about developing a "tough skin" ;-)]
 After a quick search for "WinHost directory browsing" I quickly discovered
 this is actually documented on the WinHost site:
 
-> ... By default, directory browsing is enabled.
+{{< blockquote "font-italic" >}}
+
+    ... By default, directory browsing is enabled.
+
+{{< /blockquote >}}
 
 {{< reference title="WinHost Support Portal - Can I control directory browsing on my site?" linkHref="http://support.winhost.com/KB/a590/can-i-control-directory-browsing-on-my-site.aspx" >}}
 

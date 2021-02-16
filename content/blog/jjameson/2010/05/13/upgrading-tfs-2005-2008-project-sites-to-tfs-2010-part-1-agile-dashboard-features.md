@@ -85,9 +85,13 @@ file, I noticed that it didn't run for very long (i.e. the word "Ready" appeared
 almost immediately in the status bar in Visual Studio). Looking at the corresponding
 AdventureWorks.log file, I discovered the following:
 
-> Exception Message: TF30270: The following team project site cannot be created
-> because it already exists: AdventureWorks. Either specify another location
-> for the team project site, or specify a different name for the team project.
+{{< blockquote "font-italic text-danger" >}}
+
+    Exception Message: TF30270: The following team project site cannot be created 
+    because it already exists: AdventureWorks. Either specify another location 
+    for the team project site, or specify a different name for the team project.
+
+{{< /blockquote >}}
 
 Well, yeah, of course the team project site already exists -- that's why
 I'm trying to upgrade it with the new TFS 2010 features! Isn't that why I specified

@@ -64,10 +64,14 @@ problems related to Virtual Server. In order to install SQL Server and MOSS
 host. However, when I attached the SQL Server ISO image to the new VM, I encountered
 the following error:
 
-> setup.exe - Bad Image
->
-> The application or DLL D:\SQL Server x86\Servers\Setup\setupex.dll is not
-> a valid Windows image. Please check this against your installation disk.
+{{< blockquote "font-italic text-danger" >}}
+
+setup.exe - Bad Image
+
+The application or DLL D:\SQL Server x86\Servers\Setup\setupex.dll is not
+a valid Windows image. Please check this against your installation disk.
+
+{{< /blockquote >}}
 
 Assuming that I had somehow downloaded a corrupt ISO image from MSDN, I went
 ahead and downloaded it again. However, even with the freshly downloaded ISO,
@@ -78,16 +82,24 @@ Web server VM (figuring I could deal with the SQL issue later before running
 the SharePoint Configuration Wizard). On both VMs, I got the following error
 when starting the setup:
 
-> Visual Studio 2005 Setup
->
-> An unknown error occured while copying files to your temporary folder. Setup
-> will now exit.
+{{< blockquote "font-italic text-danger" >}}
+
+Visual Studio 2005 Setup
+
+An unknown error occured while copying files to your temporary folder. Setup
+will now exit.
+
+{{< /blockquote >}}
 
 The last thing that I could think of was to copy the files from the "CD"
 (i.e. the mounted ISO file) to the local VHD. I opened a command prompt and
 started robocopying files, but I soon got the following error:
 
-> Error Performing Inpage Operation
+{{< blockquote "font-italic text-danger" >}}
+
+    Error Performing Inpage Operation
+
+{{< /blockquote >}}
 
 And, no, KB [141117](http://support.microsoft.com/kb/141117) was
 not any help.

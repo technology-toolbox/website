@@ -90,14 +90,18 @@ However, there are a few problems with this approach:
 - If you try to operate on the folder instead (e.g. "`dir Fabrikam | Add-Zip Fabrikam.zip`")
   then an error occurs:
 
-> You cannot call a method on a null-valued expression.
->
->       At line:13 char:33
->     
->       +             
->       $zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)
->     
->       ...
+{{< blockquote "font-italic text-danger" >}}
+
+    	You cannot call a method on a null-valued expression.
+    
+    	At line:13 char:33
+    
+    	+             
+    	$zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)
+    
+    	...
+
+{{< /blockquote >}}
 
 - Relying exclusively on a 500 ms delay (to wait for the asynchronous
   **CopyHere** operation to complete) seems a little "dicey"

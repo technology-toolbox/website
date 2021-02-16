@@ -56,8 +56,12 @@ In order to resolve a few issues with the deployment and ensure it conforms to  
 
 When the Excel Services Application is created, a default trusted location is  automatically configured (**http://**) for all content on the SharePoint  farm. This default trusted location enables any file to be loaded from the SharePoint  farm into Excel Services. However, this default trusted location does not support  HTTPS (https://) and therefore results in the following error when attempting to  access an Excel workbook using a secured connection:
 
-> This workbook cannot be opened because it is not stored in an Excel Services
-> Application trusted location.
+{{< blockquote "font-italic text-danger" >}}
+
+This workbook cannot be opened because it is not stored in an Excel Services
+Application trusted location.
+
+{{< /blockquote >}}
 
 Use the following procedure to change the default trusted location to support  HTTPS.
 

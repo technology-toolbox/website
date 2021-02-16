@@ -39,9 +39,13 @@ The following post provides a good explanation of the difference between "Views"
 
 Here's the gist of it:
 
-> Generally speaking, "Views" is the number of times somone viewed a post on the web             via a browser, and "AggViews" is the number of times someone viewed the post via             the RSS and Atom feeds.
->
-> More specifically, the web view count is only updated in the EntryView control.             This is displayed when you are viewing a single post. If you are viewing a list             of posts, such as on the blog home page, the view counts of the posts are not updated.
+{{< blockquote "font-italic" >}}
+
+Generally speaking, "Views" is the number of times somone viewed a post on the web             via a browser, and "AggViews" is the number of times someone viewed the post via             the RSS and Atom feeds.
+
+More specifically, the web view count is only updated in the EntryView control.             This is displayed when you are viewing a single post. If you are viewing a list             of posts, such as on the blog home page, the view counts of the posts are not updated.
+
+{{< /blockquote >}}
 
 Based on the second paragraph, the numbers shown above are not entirely accurate         (specifically, they are less than the actual values) but my gut tells me they are         reasonably close. In other words, while some people may simply browse to [http://blogs.msdn.com/jjameson](http://blogs.msdn.com/jjameson) and start reading without ever clicking through         on an individual post, I don't think this is a large number.
 

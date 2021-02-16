@@ -27,7 +27,11 @@ My first thought was "that's weird, the solution compiled without any warnings o
 
 Then I looked more closely at the error:
 
-> The type 'System.Web.Security.MembershipProvider' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+{{< blockquote "font-italic text-danger" >}}
+
+The type 'System.Web.Security.MembershipProvider' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+
+{{< /blockquote >}}
 
 Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target .NET Framework 4?
 
@@ -35,7 +39,11 @@ I then looked at the settings for the project that failed to build (Security.Dev
 
 Unfortunately, that's when I got the following warning:
 
-> Attempted re-targeting of the project has been canceled. You cannot change the specified .NET framework version or profile for a test project.
+{{< blockquote "font-italic" >}}
+
+Attempted re-targeting of the project has been canceled. You cannot change the specified .NET framework version or profile for a test project.
+
+{{< /blockquote >}}
 
 After clicking the **OK** button, I noticed the project setting -- not suprisingly -- was changed back to **.NET Framework 4**.
 

@@ -18,7 +18,11 @@ tags: ["MOSS 2007"]
 
 Yesterday I received the following question from someone regarding Microsoft Office SharePoint Server (MOSS) 2007 content type IDs:
 
-> I need to add another page type [that] inherits from the article page. How do you find the GUID of the article page to add it to the solution?
+{{< blockquote "font-italic" >}}
+
+I need to add another page type [that] inherits from the article page. How do you find the GUID of the article page to add it to the solution?
+
+{{< /blockquote >}}
 
 Here's the easiest way I know to find the content type ID:
 

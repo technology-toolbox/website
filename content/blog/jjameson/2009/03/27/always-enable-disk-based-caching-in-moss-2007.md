@@ -17,7 +17,11 @@ tags: ["MOSS 2007"]
 
 For reasons completely unknown to me, the SharePoint team decided to ship Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a. *blob caching*) disabled. If you are not familiar with disk-based caching, here is a blurb from [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
 
-> Disk-based caching is one way in which you can achieve faster processing of content stored in a Web application database. If your Web application contains large files such as images and multimedia files, enabling disk-based caching improves page delivery time because the cache stores files on the front-end Web server, thus reducing database traffic.
+{{< blockquote "font-italic" >}}
+
+Disk-based caching is one way in which you can achieve faster processing of content stored in a Web application database. If your Web application contains large files such as images and multimedia files, enabling disk-based caching improves page delivery time because the cache stores files on the front-end Web server, thus reducing database traffic.
+
+{{< /blockquote >}}
 
 I also highly recommend becoming familiar with [the right way to clear the blob cache](http://msdn.microsoft.com/en-us/library/aa604896.aspx). [Hint: The wrong way to flush the cache is to simply delete the content within the location specified in the `<BlobCache>` configuration element. I can tell you from a personal experience a couple of years ago that this is a very bad idea, indeed -- especially on a shared environment ;-) ]
 

@@ -45,9 +45,13 @@ After all, this is the recommendation in the following TechNet article:
 
 Specifically, here is the text that I am referring to:
 
-> We do not recommend reusing the same IIS Web site for your HTTP and SSL
-> hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site,
-> each assigned to its own alternate access mapping zone and URLs.
+{{< blockquote "font-italic" >}}
+
+    We do not recommend reusing the same IIS Web site for your HTTP and SSL 
+    hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site, 
+    each assigned to its own alternate access mapping zone and URLs.
+
+{{< /blockquote >}}
 
 Wait a minute...let me see if I've got this right...you want me to extend
 my Web application -- thereby creating yet another copy of my Web.config files

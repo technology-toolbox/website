@@ -24,8 +24,12 @@ The day after I got back from Redmond, I powered up the servers, but then realiz
 
 When I attempted to start the VMs using Hyper-V Manager from my Windows 7 desktop,  I encountered the following error shortly after seeing the "Connecting to Virtual  Machine Management service..." message:
 
-> Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC service
-> is running.
+{{< blockquote "font-italic text-danger" >}}
+
+Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC service
+is running.
+
+{{< /blockquote >}}
 
 Well, the RPC service was definitely running, but since both DCs were powered  down, Hyper-V Manager had no way of authenticating me in order to access the remote  servers (note that I got the same error message when trying to access ROGUE).
 

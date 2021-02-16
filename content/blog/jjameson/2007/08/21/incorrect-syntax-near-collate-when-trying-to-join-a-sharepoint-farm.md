@@ -25,9 +25,13 @@ At this point, I was presented with the oh-so-lovely "Unhandled exception" dialo
 
 **Error message:**
 
-> Unhandled exception has occurred in your application. If you click Continue, the             application will ignore this error and attempt to continue. If you click Quit, the             application will close immediately.
->
-> Incorrect syntax near 'COLLATE'. You may need to set the compatibility level of             the current database to a higher value to enable this feature. See help for the             stored procedure sp\_dbcmptlevel.
+{{< blockquote "font-italic text-danger" >}}
+
+Unhandled exception has occurred in your application. If you click Continue, the             application will ignore this error and attempt to continue. If you click Quit, the             application will close immediately.
+
+Incorrect syntax near 'COLLATE'. You may need to set the compatibility level of             the current database to a higher value to enable this feature. See help for the             stored procedure sp\_dbcmptlevel.
+
+{{< /blockquote >}}
 
 **Details:**
 

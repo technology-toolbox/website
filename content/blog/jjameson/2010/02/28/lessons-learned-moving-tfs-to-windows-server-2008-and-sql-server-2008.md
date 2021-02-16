@@ -229,24 +229,36 @@ At this point, I confirmed that the TFS data warehouse could be successfully  up
 
 You might be wondering why I chose to use a domain account in the first place.  It's my understanding that this is a best practice (and I believe it's required  when configuring a cluster) and it's the way I've always done it. It was definitely  the way BEAST was configured prior to this TFS rebuild. Note that the TFS install  guide says to:
 
-> type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**
-> in **Account Name** for every service.
+{{< blockquote "font-italic" >}}
+
+type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**
+in **Account Name** for every service.
+
+{{< /blockquote >}}
 
 Thus I thought that I *should*be able to use a domain  account for Analysis Services.
 
 As a sanity check, I also found the following in [SQL Server 2008
 books online](http://msdn.microsoft.com/en-us/library/ms174905.aspx):
 
-> You can choose to run an instance of Microsoft SQL Server Analysis Services
-> in the security context of many different accounts. However, we recommend that
-> you use a domain or local user account as the logon account for Analysis Services.
+{{< blockquote "font-italic" >}}
+
+You can choose to run an instance of Microsoft SQL Server Analysis Services
+in the security context of many different accounts. However, we recommend that
+you use a domain or local user account as the logon account for Analysis Services.
+
+{{< /blockquote >}}
 
 Continuing the process of validating my new installation of TFS, I created a  new test project (based on the MSF Agile template) and confirmed that I could view  the reports from the Team Explorer window in Visual Studio. I also confirmed that  I could browse to the project team site (i.e. the SharePoint site).
 
 Note that after all this work, I was really only at the beginning of the overall  process. More specifically, I had just completed the following step:
 
-> 1. Install Team Foundation Server in the new environment and make sure it is
->    operational. For detailed instructions...
+{{< blockquote "font-italic" >}}
+
+1. Install Team Foundation Server in the new environment and make sure it is
+   operational. For detailed instructions...
+
+{{< /blockquote >}}
 
 I continued following the MSDN article and restored my database backups (except  for the **ReportServer** and **ReportServerTempDB** databases  -- but I'll get to that in a moment).
 
@@ -294,10 +306,14 @@ private static void CreateReportServerProxy()
 
 This was necessary to avoid the following error:
 
-> System.InvalidOperationException: Client found response content type of '',
-> but expected 'text/xml'.
->
-> The request failed with an empty response.
+{{< blockquote "font-italic text-danger" >}}
+
+System.InvalidOperationException: Client found response content type of '',
+but expected 'text/xml'.
+
+The request failed with an empty response.
+
+{{< /blockquote >}}
 
 I was then able to quickly upload the reports for each of my 13 TFS projects  (in about 3-4 minutes).
 

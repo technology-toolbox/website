@@ -90,7 +90,11 @@ Locale: Japanese**
 10. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo** sites)
 11. View the variation logs and notice the failure with the following error:
 
-> The variation system failed to pair up pages http://foobar/en-US/foo/Pages/default.aspx                 and /ja-JP/foo/Pages/default.aspx because their Content Types do not match.
+{{< blockquote "font-italic text-danger" >}}
+
+The variation system failed to pair up pages http://foobar/en-US/foo/Pages/default.aspx                 and /ja-JP/foo/Pages/default.aspx because their Content Types do not match.
+
+{{< /blockquote >}}
 
 [[Part
 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this series is now available.]

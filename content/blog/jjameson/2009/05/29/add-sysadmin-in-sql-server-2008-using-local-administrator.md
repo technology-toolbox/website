@@ -26,7 +26,11 @@ Based on my experience with SQL Server 2005, I remembered this was done as part 
 
 I tried an Internet search (using both Windows Live Search and Google) for:
 
-> add sysadmin SQL Server 2008
+{{< blockquote "font-italic" >}}
+
+add sysadmin SQL Server 2008
+
+{{< /blockquote >}}
 
 However, neither search returned anything useful (at least not within the first two pages of results -- which is typically my threshold before I move on to a different approach to solving a problem).
 

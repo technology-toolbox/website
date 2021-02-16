@@ -19,7 +19,11 @@ tags: ["MOSS 2007", "WSS v3"]
 
 Apparently you cannot delete a site containing a large amount of content in Microsoft  Office SharePoint Server (MOSS) 2007. Last week I deleted -- or rather, attempted  to delete -- a Document Center site in our Test environment in order to recreate  it (to fix some bugs in our document migration process). Unfortunately, the deleteweb.aspx  page timed out and left the database in an inconsistent state -- attempts to browse  to the site ([http://server/Archive/Library](http://server/Archive/Library))  returned HTTP 400 - Bad Request. The "deleted" site showed up in the list of site  collections in Central Administration (although you could not select it in order  to delete it) but it did not show up in "`stsadm -o enumsites`". Attempts  to recreate the site (upon activation of one of our custom features) also failed  with the following error:
 
-> The system cannot find the path specified. (Exception from HRESULT: 0x80070003)
+{{< blockquote "font-italic text-danger" >}}
+
+The system cannot find the path specified. (Exception from HRESULT: 0x80070003)
+
+{{< /blockquote >}}
 
 Something similar happened last month on my initial deployment to TEST (I pressed {{< kbd key="CTRL+C" >}} while activating one of the features that creates sites and ended  up corrupting the database). At that time I simply deleted the Web application and  recreated it.
 

@@ -31,21 +31,25 @@ In this case, I copied my ws2008-std-x64.vhd (Windows Server 2008 Standard x64  
 
 I then proceeded to start the DOGFOOD VM using Hyper-V Manager. Unfortunately,  I encountered the following error:
 
-> Virtual Machine Connection
->
-> The application encountered an error while attempting to change the state of
-> 'dogfood'
->
-> 'dogfood' failed to start.
->
-> Microsoft Emulated IDE Controller (Instance ID {GUID}): Failed to power on with
-> Error 'General access denied error'
->
-> IDE/ATAPI: Could not attach 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' to location
-> 0/0 of IDE Controller. Error: 'General access denied error'
->
-> The file 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' does not have the required
-> security settings. Error: 'General access denied error'
+{{< blockquote "font-italic text-danger" >}}
+
+Virtual Machine Connection
+
+The application encountered an error while attempting to change the state of
+'dogfood'
+
+'dogfood' failed to start.
+
+Microsoft Emulated IDE Controller (Instance ID {GUID}): Failed to power on with
+Error 'General access denied error'
+
+IDE/ATAPI: Could not attach 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' to location
+0/0 of IDE Controller. Error: 'General access denied error'
+
+The file 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' does not have the required
+security settings. Error: 'General access denied error'
+
+{{< /blockquote >}}
 
 Using the cacls.exe utility, I examined the permissions specified for a VHD used  by one of the other VMs that was already running on the same server. I found the  following:
 

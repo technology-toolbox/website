@@ -33,15 +33,19 @@ Upon troubleshooting the problem, I discovered that the **SelfUpdate**         v
 
 A little post mortem analysis further revealed the following event on COLOSSUS:
 
-> Event Type: Information
-> Event Source: MsiInstaller
-> Event Category: None
-> Event ID: 11724
-> Date: 3/22/2008
-> Time: 7:17:29 AM
-> Computer: COLOSSUS
-> Description:
-> Product: Microsoft Windows Server Update Services 3.0 -- Removal completed successfully.
+{{< blockquote "font-italic" >}}
+
+Event Type: Information
+Event Source: MsiInstaller
+Event Category: None
+Event ID: 11724
+Date: 3/22/2008
+Time: 7:17:29 AM
+Computer: COLOSSUS
+Description:
+Product: Microsoft Windows Server Update Services 3.0 -- Removal completed successfully.
+
+{{< /blockquote >}}
 
 Ah, yes...now it was all coming back to me. On the morning of March 22nd, I decided         to install WSUS Service Pack 1 (SP1). Since I did not encounter any errors during         the install, it appears that WSUS SP1 is the likely culprit for the missing **SelfUpdate** virtual directory.
 

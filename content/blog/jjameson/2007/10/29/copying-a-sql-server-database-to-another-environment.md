@@ -30,16 +30,20 @@ WITH NOFORMAT, NOINIT
 
 From SQL Server 2005 Books Online:
 
-> Taking a backup normally changes the database, in turn affecting other backups
-> and how they are restored. Sometimes, however, a backup must be taken for a
-> special purpose that should not affect the overall backup and restore procedures
-> for the database.
->
-> A data backup is normally a base backup for one or more differential backups
-> taken after it. Microsoft SQL Server 2005 introduces support for creating copy-only
-> backups, which do not affect the normal sequence of backups. Therefore, unlike
-> other backups, a copy-only backup does not impact the overall backup and restore
-> procedures for the database.
+{{< blockquote "font-italic" >}}
+
+Taking a backup normally changes the database, in turn affecting other backups
+and how they are restored. Sometimes, however, a backup must be taken for a
+special purpose that should not affect the overall backup and restore procedures
+for the database.
+
+A data backup is normally a base backup for one or more differential backups
+taken after it. Microsoft SQL Server 2005 introduces support for creating copy-only
+backups, which do not affect the normal sequence of backups. Therefore, unlike
+other backups, a copy-only backup does not impact the overall backup and restore
+procedures for the database.
+
+{{< /blockquote >}}
 
 In other words, by using the **COPY\_ONLY** option I avoided screwing  up the scheduled differential backups on the database.
 
@@ -58,7 +62,11 @@ However, there are a couple of issues with this approach:
 
 The second problem was puzzling to me. After specifying my backup file, when  I attempted to change to the **Options** page, I encountered the following  error:
 
-> You must select a restore source.
+{{< blockquote "font-italic text-danger" >}}
+
+You must select a restore source.
+
+{{< /blockquote >}}
 
 When I first encountered this problem, I thought I had a corrupt backup file.  However, by once again reverting to SQL instead of the UI, I was able to verify  the backup was, in fact, valid:
 

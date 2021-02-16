@@ -107,9 +107,13 @@ messages sent by ELMAH typically specify one of the following:
 These are actually the "inner" exceptions. If you look at the details for
 the error, you'll see the following:
 
-> System.Web.HttpException: The state information is invalid for this page
-> and might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid
-> viewstate.
+{{< blockquote "font-italic text-danger" >}}
+
+    System.Web.HttpException: The state information is invalid for this page 
+    and might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid 
+    viewstate.
+
+{{< /blockquote >}}
 
 To suppress these messages, we can simply expand the ELMAH filter a little
 bit:

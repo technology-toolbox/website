@@ -23,11 +23,15 @@ Office SharePoint Server (MOSS) 2007 in a least privilege configuration, you
 have undoubtedly encountered errors similar to the following in your Windows
 event log:
 
-> The application-specific permission settings do not grant Local Activation
-> permission for the COM Server application with CLSID {61738644-F196-11D0-9953-00C04FD919C1}
-> to the user TECHTOOLBOX\svc-sharepoint-dev SID (S-1-5-21-3914637029-2275272621-3670275343-1145)
-> from address LocalHost (Using LRPC). This security permission can be modified
-> using the Component Services administrative tool.
+{{< blockquote "font-italic text-danger" >}}
+
+    The application-specific permission settings do not grant Local Activation 
+    permission for the COM Server application with CLSID {61738644-F196-11D0-9953-00C04FD919C1} 
+    to the user TECHTOOLBOX\svc-sharepoint-dev SID (S-1-5-21-3914637029-2275272621-3670275343-1145) 
+    from address LocalHost (Using LRPC). This security permission can be modified 
+    using the Component Services administrative tool.
+
+{{< /blockquote >}}
 
 Specifically, I am referring to Event ID 10016 and 10017.
 
@@ -63,8 +67,12 @@ However, I see two problems with KB 920783:
   10016" or "Microsoft Office SharePoint Server 10016". Right?
 - Second, and much more important, the KB article instructs you to:
 
-> "type the domain user account that you specified as the Windows SharePoint
-> Services 3.0 service account"
+{{< blockquote "font-italic" >}}
+
+    "type the domain user account that you specified as the Windows SharePoint 
+    Services 3.0 service account"
+
+{{< /blockquote >}}
 
 I definitely don't recommend doing that -- unless you just like making more
 work for yourself than necessary. Instead, you should specify the local

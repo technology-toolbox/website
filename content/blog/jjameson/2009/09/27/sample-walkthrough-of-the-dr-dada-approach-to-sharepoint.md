@@ -34,17 +34,21 @@ If you've worked with me in the past, you know that I am a huge fan of using
 scenario-based development. So for the purposes of this post, let's use a scenario
 to drive the development of our features:
 
-> Fabrikam Technologies [my favorite fictitious manufacturing company]
-> has hired us to customize the look-and-feel of their corporate intranet
-> site ([http://fabweb](http://fabweb/)), which is currently running
-> on Microsoft Office SharePoint Server (MOSS) 2007. While Fabrikam has done
-> some customization of the site using SharePoint Designer, they have found
-> it to be very tedious to make the changes in their Development environment
-> (DEV), subsequently copy the changes to their Test environment (TEST) for
-> review and approval, and finally apply the changes to their Production environment
-> (PROD) once the changes are approved. Instead, they want us to create a
-> [SharePoint
-> "feature"](http://msdn.microsoft.com/en-us/library/ms460318.aspx) that greatly simplifies the deployment of their site customizations.
+{{< blockquote "font-italic" >}}
+
+Fabrikam Technologies [my favorite fictitious manufacturing company]
+has hired us to customize the look-and-feel of their corporate intranet
+site ([http://fabweb](http://fabweb/)), which is currently running
+on Microsoft Office SharePoint Server (MOSS) 2007. While Fabrikam has done
+some customization of the site using SharePoint Designer, they have found
+it to be very tedious to make the changes in their Development environment
+(DEV), subsequently copy the changes to their Test environment (TEST) for
+review and approval, and finally apply the changes to their Production environment
+(PROD) once the changes are approved. Instead, they want us to create a
+[SharePoint
+"feature"](http://msdn.microsoft.com/en-us/library/ms460318.aspx) that greatly simplifies the deployment of their site customizations.
+
+{{< /blockquote >}}
 
 If you've ever customized the look-and-feel of a SharePoint site, you probably
 already know about simple changes like selecting a different master page, changing

@@ -21,34 +21,42 @@ tags: ["My System", "Core Development", "TFS"]
 
 Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and made the following statement:
 
-> The
-> [AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part
-> of the build process.
+{{< blockquote "font-italic" >}}
+
+The
+[AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part
+of the build process.
+
+{{< /blockquote >}}
 
 In the comments for that post, someone asked exactly what I meant by that --  specifically if I used something in the pre-build event to increment the assembly  version.
 
 Here was my response:
 
-> While you certainly \*could\* increment the AssemblyFileVersionAttribute in
-> a pre-build event, I definitely don't recommend it. Doing so would cause the
-> version to increment each and every time \*any\* member of the Development team
-> builds the solution.
->
-> I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs
-> file, but there are definitely better ways to accomplish the desired outcome.
->
-> Rather, I recommend incrementing the AssemblyFileVersionAttribute as part
-> of your automated build process. In other words, each time an "official" build
-> is created on the Build Server, the AssemblyVersionInfo.cs file is automatically
-> checked out from source control, incremented, and checked back in.
->
-> Obviously, the actual implementation of this process will vary depending
-> on your particular toolset. For example, if you are using Team Foundation Server,
-> you can setup a custom task that increments the AssemblyFileVersionAttribute
-> as part of the build. Several people have already blogged about the details
-> of this for TFS. If you just bing "TFS increment build" you should get some
-> good hits within the first page of search results. In particular, make sure
-> you read Buck Hodges blog entry if you are using continuous integration.
+{{< blockquote "font-italic" >}}
+
+While you certainly \*could\* increment the AssemblyFileVersionAttribute in
+a pre-build event, I definitely don't recommend it. Doing so would cause the
+version to increment each and every time \*any\* member of the Development team
+builds the solution.
+
+I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs
+file, but there are definitely better ways to accomplish the desired outcome.
+
+Rather, I recommend incrementing the AssemblyFileVersionAttribute as part
+of your automated build process. In other words, each time an "official" build
+is created on the Build Server, the AssemblyVersionInfo.cs file is automatically
+checked out from source control, incremented, and checked back in.
+
+Obviously, the actual implementation of this process will vary depending
+on your particular toolset. For example, if you are using Team Foundation Server,
+you can setup a custom task that increments the AssemblyFileVersionAttribute
+as part of the build. Several people have already blogged about the details
+of this for TFS. If you just bing "TFS increment build" you should get some
+good hits within the first page of search results. In particular, make sure
+you read Buck Hodges blog entry if you are using continuous integration.
+
+{{< /blockquote >}}
 
 Well, I probably should have blogged long ago about the specific process that  I use for incrementing the assembly version, but you know what they say: "better  late than never" ;-)
 

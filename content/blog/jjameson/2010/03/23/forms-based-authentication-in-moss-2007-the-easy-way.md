@@ -31,19 +31,23 @@ For [LOCAL and DEV environments](/blog/jjameson/2009/09/25/development-and-build
 
 As you might be aware by now, I'm also a big fan of scenario-based development.  Therefore, let's use the following scenario to drive the the remainder of this post:
 
-> Doug has recently joined the team responsible for developing the Internet
-> site for Fabrikam Technologies. Consequently Doug needs to get his local development
-> environment created and configured as quickly as possible in order to start
-> being a productive team member.
->
-> After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008
-> and Visual Studio 2008. He then installs MOSS 2007 and subsequently creates
-> a new SharePoint "farm" (which in this case is comprised only of his single
-> VM) and a corresponding Shared Services Provider (SSP). Doug then gets the latest
-> version of the Fabrikam solution from Team Foundation Server and builds the
-> solution. Finally, he creates a new Web application (http://fabrikam-local)
-> that is extended to the Internet zone (http://www-local.fabrikam.com) and configured
-> for anonymous access and Forms-Based Authentication.
+{{< blockquote "font-italic" >}}
+
+Doug has recently joined the team responsible for developing the Internet
+site for Fabrikam Technologies. Consequently Doug needs to get his local development
+environment created and configured as quickly as possible in order to start
+being a productive team member.
+
+After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008
+and Visual Studio 2008. He then installs MOSS 2007 and subsequently creates
+a new SharePoint "farm" (which in this case is comprised only of his single
+VM) and a corresponding Shared Services Provider (SSP). Doug then gets the latest
+version of the Fabrikam solution from Team Foundation Server and builds the
+solution. Finally, he creates a new Web application (http://fabrikam-local)
+that is extended to the Internet zone (http://www-local.fabrikam.com) and configured
+for anonymous access and Forms-Based Authentication.
+
+{{< /blockquote >}}
 
 For the purposes of this post, we'll focus on the last part of this scenario  -- specifically, making it quick and easy for Doug to create a local instance of  the Fabrikam site and ensure it is configured as expected.
 

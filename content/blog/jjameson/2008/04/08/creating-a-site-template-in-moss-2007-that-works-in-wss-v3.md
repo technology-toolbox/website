@@ -21,7 +21,11 @@ tags: ["MOSS 2007", "WSS v3"]
 Shortly after publishing my previous post covering ["TFS Lite"
 for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
 
-> The template you have chosen is invalid or cannot be found.
+{{< blockquote "font-italic text-danger" >}}
+
+The template you have chosen is invalid or cannot be found.
+
+{{< /blockquote >}}
 
 Ouch.
 

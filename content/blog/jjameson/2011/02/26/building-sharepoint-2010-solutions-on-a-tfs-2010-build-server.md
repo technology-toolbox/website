@@ -44,14 +44,18 @@ should be:
 Second, the MSDN article instructs you to copy several Visual Studio SharePoint
 assemblies to the GAC on the build server:
 
-> **Copy the SharePoint Tool Assemblies and Files to the GAC
-> **The following assemblies must be copied to the GAC of the build
-> system:
->
-> - Microsoft.VisualStudio.SharePoint.Designers.Models.dll
-> - Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
-> - Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
->   Microsoft.VisualStudio.SharePoint.dll
+{{< blockquote "font-italic" >}}
+
+**Copy the SharePoint Tool Assemblies and Files to the GAC
+**The following assemblies must be copied to the GAC of the build
+system:
+
+- Microsoft.VisualStudio.SharePoint.Designers.Models.dll
+- Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
+- Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
+  Microsoft.VisualStudio.SharePoint.dll
+
+{{< /blockquote >}}
 
 Since I chose to install Visual Studio 2010 on my build server (DAZZLER),
 then I shouldn't have to install *any* additional Visual Studio assemblies
@@ -66,11 +70,15 @@ solutions with TFS 2010, you'll probably want to copy more assemblies than those
 that are directly referenced in you project -- in order to avoid code analysis
 warnings, like the following:
 
-> CA0060 : The indirectly-referenced assembly 'Microsoft.SharePoint.Client.ServerRuntime,
-> Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could
-> not be found. This assembly is not required for analysis, however, analysis
-> results could be incomplete. This assembly was referenced by: C:\Program
-> Files\Reference Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
+{{< blockquote "font-italic" >}}
+
+    CA0060 : The indirectly-referenced assembly 'Microsoft.SharePoint.Client.ServerRuntime, 
+    Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could 
+    not be found. This assembly is not required for analysis, however, analysis 
+    results could be incomplete. This assembly was referenced by: C:\Program 
+    Files\Reference Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
+
+{{< /blockquote >}}
 
 Here are the assemblies that I ended up copying from FOOBAR5 (which has SharePoint
 Server 2010 installed) to DAZZLER (which does not have SharePoint Server 2010

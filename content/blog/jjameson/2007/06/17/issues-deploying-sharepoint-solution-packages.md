@@ -33,8 +33,12 @@ stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://f
 
 I encountered the following error:
 
-> This solution contains no resources scoped for a Web application and cannot
-> be deployed to a particular Web application.
+{{< blockquote "font-italic text-danger" >}}
+
+This solution contains no resources scoped for a Web application and cannot
+be deployed to a particular Web application.
+
+{{< /blockquote >}}
 
 I must have spent 30 minutes trying to figure out why this command did not work  (because it worked just fine for other features that I had converted to deploy with  WSPs). It turns out that I needed to omit the `url` parameter:
 
@@ -46,15 +50,23 @@ The reason why the PublishingLayouts solution would not deploy with the `url` pa
 
 I also encountered the following error when trying to deploy our custom Workflows  feature:
 
-> Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
-> This feature could not be installed.
+{{< blockquote "font-italic text-danger" >}}
+
+Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
+This feature could not be installed.
+
+{{< /blockquote >}}
 
 I found that I had to omit the `url` parameter for this solution  as well.
 
 I then decided to try omitting the `url` parameter when deploying  all of the other solutions. Without the `url` parameter, I was able  to deploy 7 of our 9 features. The remaining two produced the following error:
 
-> This solution contains resources scoped for a Web application and must be deployed
-> to one or more Web applications.
+{{< blockquote "font-italic text-danger" >}}
+
+This solution contains resources scoped for a Web application and must be deployed
+to one or more Web applications.
+
+{{< /blockquote >}}
 
 For these two features, I *had* to specify the `url` parameter  when invoking stsadm.exe, because the manifest.xml file for the WSP specifies a `<SafeControl>` element. When  deploying these two solutions, SharePoint needs to know which Web.config file to  merge the `<SafeControl>` elements  into, and therefore the `url` parameter must be specified.
 

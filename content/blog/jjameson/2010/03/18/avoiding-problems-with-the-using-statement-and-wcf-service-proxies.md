@@ -32,8 +32,12 @@ Being good Web developers, we also try to hide the details about errors from  en
 
 Shortly after starting to troubleshoot the problem, I discovered the following  error in the event log:
 
-> The communication object, System.ServiceModel.Channels.ServiceChannel, cannot
-> be used for communication because it is in the Faulted state.
+{{< blockquote "font-italic text-danger" >}}
+
+The communication object, System.ServiceModel.Channels.ServiceChannel, cannot
+be used for communication because it is in the Faulted state.
+
+{{< /blockquote >}}
 
 I also noticed from the stack trace that the error occurred while calling the **Dispose** method of the Web service proxy class.
 
@@ -45,8 +49,12 @@ There are a number of blog posts that describe the issue as well as various hack
 
 Here's the first sentence from that article:
 
-> This sample demonstrates how you should not use the C# "using" statement to
-> automatically clean up resources when using a typed client.
+{{< blockquote "font-italic" >}}
+
+This sample demonstrates how you should not use the C# "using" statement to
+automatically clean up resources when using a typed client.
+
+{{< /blockquote >}}
 
 Huh?
 

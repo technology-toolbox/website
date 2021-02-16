@@ -27,9 +27,13 @@ So, now that we have a scenario describing our business requirement, the next  s
 
 If you've read some of my previous posts -- or if you've worked with me personally  -- then you know how much I love simplicity. As a patent clerk once said:
 
-> Everything should be as simple as possible, but not simpler.
->
-> -- Albert Einstein
+{{< blockquote "font-italic" >}}
+
+Everything should be as simple as possible, but not simpler.
+
+    -- Albert Einstein
+
+{{< /blockquote >}}
 
 If you look at the default XSL for the Search Core Results Web Part in MOSS 2007,  you will find the following:
 

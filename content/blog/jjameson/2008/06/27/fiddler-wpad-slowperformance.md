@@ -25,7 +25,11 @@ Also note that I had to right-click **Microsoft Network Monitor 3.1** and click 
 
 So, a couple of minutes later, sure enough, there it was right in my capture:
 
-> DNS: QueryId = 0x18FC, QUERY (Standard query), Query  for  wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
+{{< blockquote "font-italic" >}}
+
+DNS: QueryId = 0x18FC, QUERY (Standard query), Query  for  wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
+
+{{< /blockquote >}}
 
 As soon as I saw the old "Web Proxy Auto Detect" I immediately became suspicious that this was the culprit. I then closed Fiddler and modified my Internet Explorer options to clear the **Automatically detect settings** checkbox.
 

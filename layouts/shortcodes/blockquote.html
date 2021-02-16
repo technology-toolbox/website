@@ -1,0 +1,4 @@
+{{ $class := .Get "class" | default (.Get 0) }}
+<blockquote {{ with $class }}class="{{.}}"{{ end }}>
+{{ .Inner | markdownify }}
+</blockquote>

@@ -2337,8 +2337,12 @@ However, this default trusted location does not support HTTPS (https://)
 and therefore results in the following error when attempting to access an
 Excel workbook on a secured connection:
 
-> This workbook cannot be opened because it is not stored in an Excel
-> Services Application trusted location.
+{{< blockquote "font-italic text-danger" >}}
+
+    	This workbook cannot be opened because it is not stored in an Excel 
+    	Services Application trusted location.
+
+{{< /blockquote >}}
 
 Use the following procedure to change the default trusted location to
 support HTTPS.
@@ -2402,9 +2406,13 @@ create a separate content database for caching:
 >
 > The cache site collection is created via a SharePoint timer job. Consequently you may encounter the following error (depending on how quickly the installation steps are performed):
 >
-> > Set-SPOfficeWebAppsCache : Specified web application doesn't
-> > exist or doesn't have a cache site collection.
+> {{< blockquote "font-italic text-danger" >}}
 >
+>       			Set-SPOfficeWebAppsCache : Specified web application doesn't 
+>       			exist or doesn't have a cache site collection.
+>       		
+>
+> {{< /blockquote >}}
 > If this error occurs, wait a few minutes and then run the script again.
 > 5. Type the following command to reset Internet Information Services
 > (IIS):

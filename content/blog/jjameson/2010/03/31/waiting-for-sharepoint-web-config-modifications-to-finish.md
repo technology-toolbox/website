@@ -24,7 +24,11 @@ In the solution we use a variety of different features to configure different  a
 
 One of the problems that I encountered during the first deployment to the Production  environment (PROD) is that when [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), the following error occurred sporadically:
 
-> A web configuration modification operation is already running.
+{{< blockquote "font-italic text-danger" >}}
+
+A web configuration modification operation is already running.
+
+{{< /blockquote >}}
 
 As a workaround, I simply activated the remaining features manually (initially  by directly invoking <samp>stsadm.exe -o activatefeature</samp>, but later by making  a temporary copy of the script and removing the features that had already been successfully  activated). Note that the error only occurred in PROD (at least in the beginning)  and therefore we didn't consider it a high priority to fix.
 

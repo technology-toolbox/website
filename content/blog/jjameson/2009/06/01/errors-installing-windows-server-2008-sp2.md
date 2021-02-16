@@ -30,15 +30,18 @@ Unfortunately when I examined the WSUS console this morning, I found a number
 of computers reporting errors. After selecting one of the failed computers,
 I discovered the following:
 
-> Windows Server 2008 Service Pack 2 Standalone x64-based Systems (KB948465)
->
-> - English, French, German, Japanese, Spanish
->
-> Event reported at 6/1/2009 3:02 AM:
->
-> Installation Failure: Windows failed to install the following update
-> with error 0x80070643: Windows Server 2008 Service Pack 2 Standalone x64-based
-> Systems (KB948465) - English, French, German, Japanese, Spanish.
+{{< blockquote "font-italic" >}}
+
+Windows Server 2008 Service Pack 2 Standalone x64-based Systems (KB948465)
+- English, French, German, Japanese, Spanish
+
+Event reported at 6/1/2009 3:02 AM:
+
+Installation Failure: Windows failed to install the following update
+with error 0x80070643: Windows Server 2008 Service Pack 2 Standalone x64-based
+Systems (KB948465) - English, French, German, Japanese, Spanish.
+
+{{< /blockquote >}}
 
 A quick search for 0x80070643 led to the following KB article:
 
@@ -50,27 +53,31 @@ following the steps in the KB article to enable logging and try to reproduce
 the problem, I decided to take a quick look at the event logs and discovered
 the following:
 
-> Log Name: System
->
-> Source: Microsoft-Windows-Service Pack Installer
->
-> Date: 6/1/2009 3:02:00 AM
->
-> Event ID: 8
->
-> Task Category: None
->
-> Level: Error
->
-> Keywords:
->
-> User: SYSTEM
->
-> Computer: dazzler.corp.technologytoolbox.com
->
-> Description:
->
-> Service Pack installation failed with error code 0x800f0826.
+{{< blockquote "font-italic" >}}
+
+Log Name: System
+
+    Source: Microsoft-Windows-Service Pack Installer
+    
+    Date: 6/1/2009 3:02:00 AM
+    
+    Event ID: 8
+    
+    Task Category: None
+    
+    Level: Error
+    
+    Keywords: 
+    
+    User: SYSTEM
+    
+    Computer: dazzler.corp.technologytoolbox.com
+    
+    Description:
+    
+    Service Pack installation failed with error code 0x800f0826.
+
+{{< /blockquote >}}
 
 Another quick search for 0x800f0826 suggested that the problem might be due
 to insufficient disk space. However, I checked the free space on DAZZLER and

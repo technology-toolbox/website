@@ -31,10 +31,14 @@ First, it didn't like the fact that my Documents folder is redirected to a serve
 
 Consequently, I encountered the following error when trying to save my password file:
 
-> Failed to save the password file. Here are the gory details:
->
-> GetVolumeInformation failed:
-> The filename, directory name, or volume label syntax is incorrect.
+{{< blockquote "font-italic text-danger" >}}
+
+Failed to save the password file. Here are the gory details:
+
+GetVolumeInformation failed:
+The filename, directory name, or volume label syntax is incorrect.
+
+{{< /blockquote >}}
 
 I discovered that I could avoid this error by clearing the **Let Password Minder control the DACL** checkbox in the **Password Minder Options** dialog window.
 
@@ -56,7 +60,11 @@ The third problem (which I didn't encounter until a few years later) was that Pa
 
 Note that the original project settings specified **Platform target: Any CPU** and thus pwm.exe would generate a [`BadImageFormatException`](http://msdn.microsoft.com/en-us/library/system.badimageformatexception.aspx) when trying to load the 32-bit NativeHelpers.dll.
 
-> Could not load file or assembly 'NativeHelpers, Version=1.5.0.4, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+{{< blockquote "font-italic text-danger" >}}
+
+Could not load file or assembly 'NativeHelpers, Version=1.5.0.4, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+
+{{< /blockquote >}}
 
 This was easy enough to fix simply by setting **Platform target** to **x86** and then recompiling.
 
