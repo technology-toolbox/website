@@ -62,7 +62,8 @@ Here's a chart showing the combined views for each blog post that I've created s
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Combined%20Views.png"
 alt="Combined views for each blog post"
-height="266" width="600"
+height="266"
+width="600"
 title="Figure 1: Combined views for each blog post" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Combined%20Views.png)
@@ -124,7 +125,8 @@ Let's start with the total number of posts by year:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Total%20Posts%20by%20Year.png"
 alt="Blog posts created by year"
-height="311" width="600"
+height="311"
+width="600"
 title="Figure 2: Blog posts created by year" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Total%20Posts%20by%20Year.png)
@@ -136,7 +138,8 @@ Let's look at the total number of posts by month:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Total%20Posts%20by%20Month.png"
 alt="Blog posts created by month"
-height="330" width="600"
+height="330"
+width="600"
 title="Figure 3: Blog posts created by month" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Total%20Posts%20by%20Month.png)
@@ -198,7 +201,8 @@ To help me get a better feel for the Google vs. Microsoft ratio, I grouped the r
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FMSDN%20blog%20-%20Referrals%20by%20Category.png"
 alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages"
-height="387" width="600"
+height="387"
+width="600"
 title="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_MSDN%20blog%20-%20Referrals%20by%20Category.png)

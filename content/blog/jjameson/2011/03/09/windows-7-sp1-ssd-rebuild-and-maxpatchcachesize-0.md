@@ -32,7 +32,8 @@ So when it came time last night to rebuild my desktop with a shiny new SSD, I im
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Usage%20-%20WOLVERINE%20-%20Baseline.png"
 alt="Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)"
-height="507" width="600"
+height="507"
+width="600"
 title="Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage%20-%20WOLVERINE%20-%20Baseline.png)

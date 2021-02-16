@@ -27,7 +27,8 @@ Studio 2010 and the "Subtext" solution in Visual Studio 2008).
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture for TechnologyToolbox.com"
-height="520" width="600"
+height="520"
+width="600"
 title="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)

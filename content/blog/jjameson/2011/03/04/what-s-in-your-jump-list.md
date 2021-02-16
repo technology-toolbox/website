@@ -24,7 +24,8 @@ I also showed how I created taskbar shortcuts to quickly access my NotBackedUp a
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/o%5FTaskbar-Shortcuts.jpg"
 alt="Taskbar shortcuts (Windows Vista)"
-height="96" width="301"
+height="96"
+width="301"
 title="Figure 1 - Taskbar shortcuts (Windows Vista)" >}}
 
 I have long since upgraded from Windows Vista to Windows 7, so now I use the Windows         Explorer Jump List to quickly access my most frequently used folders.
@@ -32,7 +33,8 @@ I have long since upgraded from Windows Vista to Windows 7, so now I use the Win
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/o%5FMy%20Windows%20Explorer%20Jump%20List%20-%20Win7.png"
 alt="My Windows Explorer Jump List (Windows 7)"
-height="283" width="360"
+height="283"
+width="360"
 title="Figure 2 - My Windows Explorer Jump List (Windows 7)" >}}
 
 Note that Windows Server 2008 R2 also includes the Jump Lists feature. Consequently,         when I log on to one of my servers (for example, my SharePoint Server 2010 development         VM) I can use the same Jump List items to quickly access various folders -- thanks         to the fact that I use roaming profiles in the the "[Jameson
@@ -41,7 +43,8 @@ Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home l
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/o%5FMy%20Windows%20Explorer%20Jump%20List%20-%20WS2008R2.png"
 alt="My Windows Explorer Jump List (Windows Server 2008 R2)"
-height="298" width="333"
+height="298"
+width="333"
 title="Figure 3 - My Windows Explorer Jump List (Windows Server 2008 R2)" >}}
 
 This should explain the "14" folder shown in the above screenshots. If you're a         SharePoint developer, I'm sure you know where this shortcut leads to and why I have         it in my Jump List ;-)

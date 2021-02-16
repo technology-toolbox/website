@@ -326,7 +326,8 @@ to reduce I/O contention.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint%20Development%20VM.png"
 alt="Figure 1: SharePoint development VM configuration"
-height="317" width="600"
+height="317"
+width="600"
 title="Figure 1: SharePoint development VM configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Development%20VM.png)
@@ -1296,7 +1297,8 @@ FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FEnvironment-Variables-Fabrikam-Extranet.png"
 alt="Setting environment variables"
-height="436" width="394"
+height="436"
+width="394"
 title="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
@@ -1991,7 +1993,8 @@ The site should resemble the following:
 [{{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FSharePoint-Server-2010-Publishing-Portal.png"
 alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
-height="374" width="600"
+height="374"
+width="600"
 title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_SharePoint-Server-2010-Publishing-Portal.png)
 
 Although the site does not yet have the Fabrikam branding or any custom
@@ -2560,7 +2563,8 @@ the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikam%20Extranet%20-%20home%20page.png"
 alt="Fabrikam Extranet home page"
-height="277" width="600"
+height="277"
+width="600"
 title="Figure 4: Fabrikam Extranet home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Fabrikam%20Extranet%20-%20home%20page.png)

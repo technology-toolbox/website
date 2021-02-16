@@ -20,7 +20,8 @@ In Microsoft Office SharePoint Server (MOSS) 2007 version 12.0.0.6335 (i.e. the 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS%202007%20Search%20Scope%20bug.jpg"
 alt="Search scope bug in MOSS 2007 December 2008 CU"
-height="424" width="600"
+height="424"
+width="600"
 title="Figure 1: Search scope bug in MOSS 2007 December 2008 CU" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS%202007%20Search%20Scope%20bug.jpg)
@@ -30,7 +31,8 @@ To hack around this bug, add a **Web Address** rule, as shown below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg"
 alt="Workaround for search scope bug"
-height="425" width="600"
+height="425"
+width="600"
 title="Figure 2: Workaround for search scope bug" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg)

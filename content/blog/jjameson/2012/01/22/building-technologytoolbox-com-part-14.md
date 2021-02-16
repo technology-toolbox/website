@@ -161,7 +161,8 @@ site, then you'll see something similar to the screenshot below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Error-Generic.png"
 alt="Custom error page (Generic.aspx)"
-height="295" width="600"
+height="295"
+width="600"
 title="Figure 1: Custom error page (Generic.aspx)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Error-Generic.png)
@@ -387,7 +388,8 @@ the out-of-the-box IIS "404" error page (404.htm) shown below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FIIS-404.png"
 alt="IIS - default 404 page (404.htm)"
-height="110" width="600"
+height="110"
+width="600"
 title="Figure 2: IIS - default 404 page (404.htm)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_IIS-404.png)
@@ -413,7 +415,8 @@ like the one shown below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Error-404.png"
 alt="HTTP 404 error page (404.aspx)"
-height="295" width="600"
+height="295"
+width="600"
 title="Figure 3: HTTP 404 error page (404.aspx)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Error-404.png)

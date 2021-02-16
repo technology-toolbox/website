@@ -25,7 +25,8 @@ However, I also took the time to migrate the previous Visual Studio 2008 solutio
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Solution-Upgrade.jpg"
 alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
-height="1472" width="499"
+height="1472"
+width="499"
 title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Solution-Upgrade.jpg)

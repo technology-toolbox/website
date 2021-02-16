@@ -186,7 +186,8 @@ The following screenshot shows what the site looks like after creating the Web  
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FAJAX%20in%20SharePoint.png"
 alt="AJAX in SharePoint"
-height="417" width="600"
+height="417"
+width="600"
 title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)

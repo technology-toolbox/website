@@ -117,7 +117,8 @@ Figure 1 shows the corresponding Design view of the master page in Expression  W
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FCaelum%20-%20Default.master.png"
 alt="Caelum prototype - Default.master"
-height="142" width="600"
+height="142"
+width="600"
 title="Figure 1: Caelum prototype - Default.master" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Default.master.png)
@@ -322,7 +323,8 @@ Posts** section. Hence I didn't bother capturing a different screenshot from  th
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
-height="600" width="538"
+height="600"
+width="538"
 title="Figure 2: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
@@ -709,7 +711,8 @@ Figure 3 shows roughly what the corresponding page looks like when rendered in  
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Post.png"
 alt="Sample blog post"
-height="600" width="398"
+height="600"
+width="398"
 title="Figure 3: Sample blog post" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)

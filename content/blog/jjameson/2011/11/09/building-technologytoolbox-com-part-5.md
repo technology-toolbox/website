@@ -20,7 +20,8 @@ viewing my MSDN blog home page with CSS disabled.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FMSDN%20blog%20home%20-%20CSS%20disabled.png"
 alt="My MSDN blog home - CSS disabled"
-height="600" width="328"
+height="600"
+width="328"
 title="Figure 1: My MSDN blog home - CSS disabled" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_MSDN%20blog%20home%20-%20CSS%20disabled.png)
@@ -58,7 +59,8 @@ page:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home-CSS-disabled.png"
 alt="Technology Toolbox blog home page - CSS disabled"
-height="600" width="362"
+height="600"
+width="362"
 title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home-CSS-disabled.png)
@@ -254,7 +256,8 @@ no comments (i.e. `<li  class="comments none">`).
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
 alt="Blog home page"
-height="600" width="374"
+height="600"
+width="374"
 title="Figure 3: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)

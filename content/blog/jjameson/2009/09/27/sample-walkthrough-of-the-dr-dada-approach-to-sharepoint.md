@@ -101,7 +101,8 @@ is to build out a "shell" that looks like the following:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FDR.DADA%20-%201.png"
 alt="Visual Studio solution before adding SharePoint features"
-height="178" width="355"
+height="178"
+width="355"
 title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
 
 Next, I create a new Visual Studio solution folder called **Publishing**
@@ -154,7 +155,8 @@ After that's all done, the Visual Studio solution looks like the following:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%202.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
-height="600" width="183"
+height="600"
+width="183"
 title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%202.png)
@@ -832,7 +834,8 @@ the command history.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%203.png"
 alt="Command history"
-height="205" width="600"
+height="205"
+width="600"
 title="Figure 3: Command history" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%203.png)

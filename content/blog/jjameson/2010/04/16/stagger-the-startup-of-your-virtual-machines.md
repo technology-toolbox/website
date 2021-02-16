@@ -28,7 +28,8 @@ Here's a screenshot that I captured this morning to illustrate what I'm talking 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FHyper-V%20Staggered%20Start.png"
 alt="Hyper-V staggered start"
-height="310" width="600"
+height="310"
+width="600"
 title="Figure 1: Hyper-V staggered start" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Hyper-V%20Staggered%20Start.png)

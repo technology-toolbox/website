@@ -21,7 +21,8 @@ VMs:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Usage%20-%20FOOBAR7%20-%20Baseline.png"
 alt="Disk usage"
-height="460" width="600"
+height="460"
+width="600"
 title="Figure 1:" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage%20-%20FOOBAR7%20-%20Baseline.png)

@@ -30,7 +30,8 @@ In the first operation (performed the night of my accident), the surgeon attache
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FBroken%20Tibia%20-%20External%20Fixators.jpg"
 alt="Broken tibia - external fixator"
-height="450" width="600"
+height="450"
+width="600"
 title="Figure 1: Broken tibia - external fixator" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Broken%20Tibia%20-%20External%20Fixators.jpg)

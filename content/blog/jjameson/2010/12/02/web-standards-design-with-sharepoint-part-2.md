@@ -47,7 +47,8 @@ The following screenshot shows the Tugboat home page:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home.png"
 alt="Tugboat - Home page"
-height="600" width="296"
+height="600"
+width="296"
 title="Figure 1: Tugboat - Home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
@@ -143,7 +144,8 @@ Here is a "wireframe" I put together to help visualize the various fields and We
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home-Page-Layout.png"
 alt="Tugboat - Home page (wireframe)"
-height="600" width="296"
+height="600"
+width="296"
 title="Figure 2: Tugboat - Home page (wireframe)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home-Page-Layout.png)
@@ -159,7 +161,8 @@ The following picture illustrates the various fields and Web Part zones for Tugb
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-WelcomePageLayout1.png"
 alt="TugboatWelcomePageLayout1"
-height="285" width="600"
+height="285"
+width="600"
 title="Figure 3: TugboatWelcomePageLayout1" >}}
 
 As I mentioned before, for Sprint 1, I'll just be using the PageContent field and         a couple of the Web Part zones (**Top Left Zone** and **Top Right
@@ -249,7 +252,8 @@ It worked as expected in Firefox, as shown in the following screenshot:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Map-Firefox.png"
 alt="\"Find a Location\" map (Firefox)"
-height="600" width="595"
+height="600"
+width="595"
 title="Figure 4: \"Find a Location\" map (Firefox)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-Firefox.png)
@@ -259,7 +263,8 @@ However, take a look at the following screenshot that shows the exact same HTML 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Map-IE8.png"
 alt="\"Find a Location\" map (IE8)"
-height="598" width="600"
+height="598"
+width="600"
 title="Figure 5: \"Find a Location\" map (IE8)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-IE8.png)

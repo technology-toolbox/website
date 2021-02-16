@@ -156,7 +156,8 @@ However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FDebugView.png"
 alt="DebugView (a.k.a. Dbgview.exe)"
-height="190" width="600"
+height="190"
+width="600"
 title="Figure 1: DebugView (a.k.a. Dbgview.exe)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_DebugView.png)

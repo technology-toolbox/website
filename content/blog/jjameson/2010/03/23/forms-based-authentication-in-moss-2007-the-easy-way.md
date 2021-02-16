@@ -96,7 +96,8 @@ While we would obviously never want to deploy Debug builds to the Production  en
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FEnvironment%20Variables.png"
 alt="Setting environment variables"
-height="436" width="394"
+height="436"
+width="394"
 title="Figure 1: Setting environment variables" >}}
 
 ### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable

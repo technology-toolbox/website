@@ -38,7 +38,8 @@ Here's a pivot chart that I put together that shows the performance characterist
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Benchmarks%20-%20WOLVERINE.png"
 alt="Disk performance on WOLVERINE"
-height="404" width="600"
+height="404"
+width="600"
 title="Figure 1: Disk performance on WOLVERINE" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20WOLVERINE.png)
@@ -54,7 +55,8 @@ To understand why I wouldn't recommend an SSD for most scenarios, take a look at
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Benchmarks%20-%20Baseline.png"
 alt="Disk performance (various computers)"
-height="600" width="518"
+height="600"
+width="518"
 title="Figure 2: Disk performance (various computers)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20Baseline.png)

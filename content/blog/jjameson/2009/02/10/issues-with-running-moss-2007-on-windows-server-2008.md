@@ -25,7 +25,8 @@ What's wrong with this picture?
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS2007-WS2008-Operations(non-Admin).jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008"
-height="436" width="600"
+height="436"
+width="600"
 title="Figure 1: MOSS 2007 Central Administration - Operations on Windows Server 2008" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS2007-WS2008-Operations%28non-Admin%29.jpg)
@@ -45,7 +46,8 @@ No? Okay, how about if I make this really easy by zooming in on the area where y
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FMOSS2007-WS2008-Operations(non-Admin)-closeup.jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)"
-height="225" width="414"
+height="225"
+width="414"
 title="Figure 2: MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)" >}}
 
 See anything missing?
@@ -64,7 +66,8 @@ You will then find all of the expected links under the **Topology and Services**
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS2007-WS2008-Operations(Admin).jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)"
-height="463" width="600"
+height="463"
+width="600"
 title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS2007-WS2008-Operations%28Admin%29.jpg)

@@ -32,7 +32,8 @@ Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FBranch-Plan-Basic.png"
 alt="Basic branch plan"
-height="260" width="600"
+height="260"
+width="600"
 title="Figure 1: Basic branch plan" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Branch-Plan-Basic.png)
@@ -44,7 +45,8 @@ The question that I asked during the session was essentially why not postpone br
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FBranch-Plan-Problematic.png"
 alt="\"Reactive\" branch plan"
-height="260" width="600"
+height="260"
+width="600"
 title="Figure 2: \"Reactive\" branch plan" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Branch-Plan-Problematic.png)

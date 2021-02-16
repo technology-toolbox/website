@@ -69,7 +69,8 @@ As a quick review, the following screenshot shows the snapshots for my primary S
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFOOBAR5%20Snapshots.png"
 alt="FOOBAR5 snapshots"
-height="383" width="600"
+height="383"
+width="600"
 title="Figure 1: FOOBAR5 snapshots" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR5%20Snapshots.png)
@@ -125,7 +126,8 @@ To understand this process, examine the snapshots shown below for one of my Micr
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFOOBAR2%20Snapshots.png"
 alt="FOOBAR2 snapshots"
-height="372" width="600"
+height="372"
+width="600"
 title="Figure 2: FOOBAR2 snapshots" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR2%20Snapshots.png)

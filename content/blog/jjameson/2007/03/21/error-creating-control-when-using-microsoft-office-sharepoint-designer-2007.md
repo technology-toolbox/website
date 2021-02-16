@@ -25,7 +25,8 @@ If, like me, you happen to encounter the following user experience when attempti
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint-Designer-Error-Creating-Control.png"
 alt="SharePoint Designer - \"Error Creating Control\""
-height="305" width="600"
+height="305"
+width="600"
 title="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-Designer-Error-Creating-Control.png)

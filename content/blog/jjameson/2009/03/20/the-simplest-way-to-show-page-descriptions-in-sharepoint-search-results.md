@@ -90,7 +90,8 @@ The problem is that **ows\_Description** does not correspond to [Microsoft.Share
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FMOSS%202007%20Publishing%20Content%20Type%20Hierarchy.png"
 alt="MOSS 2007 Publishing - content type hierarchy"
-height="597" width="568"
+height="597"
+width="568"
 title="Figure 1: MOSS 2007 Publishing - content type hierarchy" >}}
 
 Note that **Description** is inherited from the **System Page**  content type. Here is the definition for that content type:

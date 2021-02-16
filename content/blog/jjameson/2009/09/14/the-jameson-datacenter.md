@@ -26,7 +26,8 @@ The following figure shows the physical architecture of the various computers an
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%202009-09-13.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture"
-height="493" width="600"
+height="493"
+width="600"
 title="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%202009-09-13.jpg)
@@ -39,7 +40,8 @@ of virtualization](/blog/jjameson/tags/Virtualization/default.aspx). Notice that
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%20Logical%20(2009-09-13).jpg"
 alt="The \"Jameson Datacenter\" - logical architecture"
-height="370" width="600"
+height="370"
+width="600"
 title="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20Logical%20%282009-09-13%29.jpg)
@@ -120,7 +122,8 @@ The following figure provides more detail on the hardware configuration of the v
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%20Hardware%20(2009-09-13).jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration"
-height="454" width="600"
+height="454"
+width="600"
 title="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20Hardware%20%282009-09-13%29.jpg)

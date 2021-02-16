@@ -113,7 +113,8 @@ I can then schedule full, differential, and transaction log backups using schedu
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FScheduled%20Tasks%20-%20COLOSSUS.jpg"
 alt="Scheduled tasks for backing up databases"
-height="119" width="600"
+height="119"
+width="600"
 title="Figure 1: Scheduled tasks for backing up databases" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Scheduled%20Tasks%20-%20COLOSSUS.jpg)
