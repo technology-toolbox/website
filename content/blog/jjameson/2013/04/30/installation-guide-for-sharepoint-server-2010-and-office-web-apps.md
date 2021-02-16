@@ -377,8 +377,7 @@ To configure the MaxPatchCacheSize policy:
 2. At the command prompt, type the following command:
    
    ```
-   reg add HKLM\Software\Policies\Microsoft\Windows\Installer 
-   			/v MaxPatchCacheSize /t REG_DWORD /d 0 /f
+   reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
    ```
 
 More information on this step is available in the following blog post:
@@ -1249,8 +1248,7 @@ To change the schedule for deleting timer job history:
 2. From the Windows PowerShell command prompt, type the following command:
    
    ```
-   Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 
-   			12:00:00 and 13:00:00"
+   Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 12:00:00 and 13:00:00"
    ```
 
 3. Wait for the command to complete and verify no errors occurred during
@@ -1323,16 +1321,14 @@ For the Test and Production environments, always designate the specific
 build to be deployed. For example:
 
 ```
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 
-		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
 ```
 
 For development environments, the "latest" version may be specified.
 For example:
 
 ```
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest 
-		C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
 ```
 
 Developers may alternately choose to deploy to local environments directly
@@ -1578,9 +1574,7 @@ the internal Fabrikam domain:
 > 4. On one of the front-end Web servers, type the following command:
 
     ```
-    stsadm -o setproperty -pn peoplepicker-searchadforests -pv 
-    			"domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" 
-    			-url http://extranet.fabrikam.com
+    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
     ```
 
 > **Note**

@@ -28,9 +28,7 @@ Nevertheless, I prefer to use a PowerShell script to complete this task in
 a fraction of that time:
 
 ```
-C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program 
-	Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget 
-	"Machine"
+C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget "Machine"
 ```
 
 In addition to the script to add folders to the Path environment variable

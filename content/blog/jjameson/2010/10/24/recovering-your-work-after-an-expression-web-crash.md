@@ -135,8 +135,7 @@ At this point, you might be asking something like "What if you didn't get lucky 
 The answer -- thankfully -- is "no." You can just loop through all of the memory  locations and dump each one:
 
 ```
-.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo 
-********}
+.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo ********}
 ```
 
 This command assigns each memory address to a variable ("addr") and subsequently  runs the "dump Unicode" command on each address. It's going to generate a lot of  output, but hopefully you can find what you are looking for fairly quickly simply  by scanning the strings.

@@ -501,8 +501,7 @@ To attach the SharePoint content database by using Windows Powershell:
 2. At the Windows PowerShell command prompt, type the following command:
    
    ```
-   Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName>
-                       -WebApplication <URL> [-Updateuserexperience]
+   Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> -WebApplication <URL> [-Updateuserexperience]
    ```
    
             Where:
@@ -523,8 +522,7 @@ To attach the SharePoint content database by using Windows Powershell:
            For example:
    
    ```
-   Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication
-                       http://cyclops -Updateuserexperience
+   Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication http://cyclops -Updateuserexperience
    ```
 
 More information on attaching SharePoint content databases is provided in the following         TechNet article:

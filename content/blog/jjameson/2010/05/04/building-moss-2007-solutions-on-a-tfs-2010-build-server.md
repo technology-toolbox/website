@@ -48,8 +48,7 @@ need to copy depends on the details of your solution, but typically includes:
    Administrator command prompt:
    
    ```
-   reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint 
-   	v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
+   reg add "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
    ```
 
 After completing these steps, I queued another build of my Fabrikam.Demo solution  and verified the errors caused by missing SharePoint assemblies no longer occurred.

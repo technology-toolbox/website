@@ -21,8 +21,7 @@ Even though it's easy to configure this by copying and pasting the following
 into a command prompt...
 
 ```
-reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize 
-	/t REG_DWORD /d 0 /f
+reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
 ```
 
 ...sometime last year I decided to create a pair of PowerShell scripts to

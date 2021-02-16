@@ -28,8 +28,7 @@ stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
 However, as soon as I tried to deploy the solution using the following command:
 
 ```
-stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url
-	http://foobar/ -local
+stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://foobar/ -local
 ```
 
 I encountered the following error:
