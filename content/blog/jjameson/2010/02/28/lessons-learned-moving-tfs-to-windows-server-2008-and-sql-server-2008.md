@@ -243,9 +243,7 @@ books online](http://msdn.microsoft.com/en-us/library/ms174905.aspx):
 
 {{< blockquote "font-italic" >}}
 
-You can choose to run an instance of Microsoft SQL Server Analysis Services
-in the security context of many different accounts. However, we recommend that
-you use a domain or local user account as the logon account for Analysis Services.
+You can choose to run an instance of Microsoft SQL Server Analysis Services in the security context of many different accounts. However, we recommend that you use a domain or local user account as the logon account for Analysis Services.
 
 {{< /blockquote >}}
 
@@ -255,8 +253,7 @@ Note that after all this work, I was really only at the beginning of the overall
 
 {{< blockquote "font-italic" >}}
 
-1. Install Team Foundation Server in the new environment and make sure it is
-   operational. For detailed instructions...
+1. Install Team Foundation Server in the new environment and make sure it is operational. For detailed instructions...
 
 {{< /blockquote >}}
 

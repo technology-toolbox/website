@@ -469,8 +469,7 @@ You may encounter the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-        The feature: "Scale-out deployment" is not supported in this edition of Reporting
-        Services. (rsOperationNotSupported)
+The feature: "Scale-out deployment" is not supported in this edition of Reporting Services. (rsOperationNotSupported)
 
 {{< /blockquote >}}
 

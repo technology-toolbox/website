@@ -447,8 +447,7 @@ Here's the short summary from MSDN for the [Page.SaveStateComplete](http://msdn.
 
 {{< blockquote "font-italic" >}}
 
-Occurs after the page has completed saving all view state and control state
-information for the page and controls on the page.
+Occurs after the page has completed saving all view state and control state information for the page and controls on the page.
 
 {{< /blockquote >}}
 

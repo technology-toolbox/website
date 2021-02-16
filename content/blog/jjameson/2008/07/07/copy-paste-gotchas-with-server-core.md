@@ -28,9 +28,7 @@ Since I needed to reconfigure the disks on the server, I opened the Disk Managem
 
 {{< blockquote "font-italic text-danger" >}}
 
-Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
-This can happen if the remote computer does not support VDS, or if a connection
-cannot be established because it was blocked by Windows Firewall.
+Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT. This can happen if the remote computer does not support VDS, or if a connection cannot be established because it was blocked by Windows Firewall.
 
 {{< /blockquote >}}
 

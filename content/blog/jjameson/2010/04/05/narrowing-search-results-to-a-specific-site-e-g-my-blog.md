@@ -31,7 +31,7 @@ as the corresponding property filter:
 
 {{< blockquote "font-italic" >}}
 
-    faceted search site:blogs.msdn.com/jjameson
+faceted search site:blogs.msdn.com/jjameson
 
 {{< /blockquote >}}
 

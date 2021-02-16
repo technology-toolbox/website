@@ -21,7 +21,7 @@ Guinness commercials](http://www.youtube.com/watch?v=3DPKf7y1F-Q):
 
 {{< blockquote "font-italic" >}}
 
-    Brilliant!
+Brilliant!
 
 {{< /blockquote >}}
 

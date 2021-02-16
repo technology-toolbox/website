@@ -23,7 +23,7 @@ this is actually documented on the WinHost site:
 
 {{< blockquote "font-italic" >}}
 
-    ... By default, directory browsing is enabled.
+... By default, directory browsing is enabled.
 
 {{< /blockquote >}}
 

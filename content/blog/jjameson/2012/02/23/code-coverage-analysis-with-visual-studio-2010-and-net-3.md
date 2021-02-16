@@ -51,9 +51,7 @@ inside Visual Studio. This resulted in the following message from Visual Studio:
 
 {{< blockquote "font-italic" >}}
 
-    Debugging tests running on a remote computer or with code coverage enabled 
-    is not supported. The tests will be run under the debugger locally and without 
-    code coverage enabled.
+Debugging tests running on a remote computer or with code coverage enabled is not supported. The tests will be run under the debugger locally and without code coverage enabled.
 
 {{< /blockquote >}}
 
@@ -64,8 +62,7 @@ button in the **Test Results** window, I see the following:
 
 {{< blockquote "font-italic" >}}
 
-    Cannot find any coverage data (.coverage or .coveragexml) files. Check test 
-    run details for possible errors.
+Cannot find any coverage data (.coverage or .coveragexml) files. Check test run details for possible errors.
 
 {{< /blockquote >}}
 

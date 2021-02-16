@@ -97,7 +97,7 @@ started robocopying files, but I soon got the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    Error Performing Inpage Operation
+Error Performing Inpage Operation
 
 {{< /blockquote >}}
 

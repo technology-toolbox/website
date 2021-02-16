@@ -54,7 +54,7 @@ well with the infamous error message:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    RPC server is unavailable
+RPC server is unavailable
 
 {{< /blockquote >}}
 

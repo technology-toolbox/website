@@ -72,11 +72,7 @@ warnings, like the following:
 
 {{< blockquote "font-italic" >}}
 
-    CA0060 : The indirectly-referenced assembly 'Microsoft.SharePoint.Client.ServerRuntime, 
-    Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could 
-    not be found. This assembly is not required for analysis, however, analysis 
-    results could be incomplete. This assembly was referenced by: C:\Program 
-    Files\Reference Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
+CA0060 : The indirectly-referenced assembly 'Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could not be found. This assembly is not required for analysis, however, analysis results could be incomplete. This assembly was referenced by: C:\Program Files\Reference Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
 
 {{< /blockquote >}}
 

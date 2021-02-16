@@ -87,9 +87,7 @@ AdventureWorks.log file, I discovered the following:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    Exception Message: TF30270: The following team project site cannot be created 
-    because it already exists: AdventureWorks. Either specify another location 
-    for the team project site, or specify a different name for the team project.
+Exception Message: TF30270: The following team project site cannot be created because it already exists: AdventureWorks. Either specify another location for the team project site, or specify a different name for the team project.
 
 {{< /blockquote >}}
 

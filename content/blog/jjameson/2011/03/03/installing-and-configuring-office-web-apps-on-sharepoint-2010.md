@@ -58,8 +58,7 @@ When the Excel Services Application is created, a default trusted location is  a
 
 {{< blockquote "font-italic text-danger" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services
-Application trusted location.
+This workbook cannot be opened because it is not stored in an Excel Services Application trusted location.
 
 {{< /blockquote >}}
 

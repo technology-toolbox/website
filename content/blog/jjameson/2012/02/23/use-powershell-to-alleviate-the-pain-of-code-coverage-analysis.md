@@ -100,8 +100,7 @@ against a signed assembly, the following warning is emitted:
 
 {{< blockquote "font-italic" >}}
 
-    Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly 
-    named assembly. It will need to be re-signed before it can be executed.
+Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly named assembly. It will need to be re-signed before it can be executed.
 
 {{< /blockquote >}}
 

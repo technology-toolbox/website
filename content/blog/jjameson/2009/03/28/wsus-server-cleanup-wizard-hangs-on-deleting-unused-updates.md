@@ -47,7 +47,7 @@ step:
 
 {{< blockquote "font-italic" >}}
 
-    Deleting unused updates...
+Deleting unused updates...
 
 {{< /blockquote >}}
 

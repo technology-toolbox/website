@@ -47,9 +47,7 @@ Specifically, here is the text that I am referring to:
 
 {{< blockquote "font-italic" >}}
 
-    We do not recommend reusing the same IIS Web site for your HTTP and SSL 
-    hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site, 
-    each assigned to its own alternate access mapping zone and URLs.
+We do not recommend reusing the same IIS Web site for your HTTP and SSL hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site, each assigned to its own alternate access mapping zone and URLs.
 
 {{< /blockquote >}}
 

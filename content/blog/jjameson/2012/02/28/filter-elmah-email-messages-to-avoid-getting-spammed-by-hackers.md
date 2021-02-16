@@ -109,9 +109,7 @@ the error, you'll see the following:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    System.Web.HttpException: The state information is invalid for this page 
-    and might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid 
-    viewstate.
+System.Web.HttpException: The state information is invalid for this page and might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.
 
 {{< /blockquote >}}
 

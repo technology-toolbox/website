@@ -27,8 +27,7 @@ Once you enable Code Analysis on your projects, you are likely to encounter warn
 
 {{< blockquote "font-italic" >}}
 
-MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam'
-in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
+MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam' in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
 
 {{< /blockquote >}}
 

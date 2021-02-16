@@ -26,7 +26,7 @@ Unfortunately, when we attempted to deploy our database to our Test environment,
 
 {{< blockquote "font-italic text-danger" >}}
 
-        Object reference not set to an instance of an object.
+Object reference not set to an instance of an object.
 
 {{< /blockquote >}}
 

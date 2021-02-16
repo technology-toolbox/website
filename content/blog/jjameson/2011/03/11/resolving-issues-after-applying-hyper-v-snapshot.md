@@ -38,8 +38,7 @@ Don't be put off by the title of this KB article. You just need to read a little
 
 {{< blockquote "font-italic" >}}
 
-[...] This procedure is most frequently used on domain controllers, but also
-applies to any Windows machine account.
+[...] This procedure is most frequently used on domain controllers, but also applies to any Windows machine account.
 
 {{< /blockquote >}}
 

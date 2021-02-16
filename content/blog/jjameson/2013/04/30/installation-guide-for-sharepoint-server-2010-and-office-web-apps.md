@@ -2339,8 +2339,7 @@ Excel workbook on a secured connection:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    	This workbook cannot be opened because it is not stored in an Excel 
-    	Services Application trusted location.
+This workbook cannot be opened because it is not stored in an Excel Services Application trusted location.
 
 {{< /blockquote >}}
 
@@ -2408,9 +2407,7 @@ create a separate content database for caching:
 >
 > {{< blockquote "font-italic text-danger" >}}
 >
->       			Set-SPOfficeWebAppsCache : Specified web application doesn't 
->       			exist or doesn't have a cache site collection.
->       		
+> Set-SPOfficeWebAppsCache : Specified web application doesn't exist or doesn't have a cache site collection.
 >
 > {{< /blockquote >}}
 > If this error occurs, wait a few minutes and then run the script again.

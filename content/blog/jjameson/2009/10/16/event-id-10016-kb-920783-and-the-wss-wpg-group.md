@@ -25,11 +25,7 @@ event log:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    The application-specific permission settings do not grant Local Activation 
-    permission for the COM Server application with CLSID {61738644-F196-11D0-9953-00C04FD919C1} 
-    to the user TECHTOOLBOX\svc-sharepoint-dev SID (S-1-5-21-3914637029-2275272621-3670275343-1145) 
-    from address LocalHost (Using LRPC). This security permission can be modified 
-    using the Component Services administrative tool.
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID {61738644-F196-11D0-9953-00C04FD919C1} to the user TECHTOOLBOX\svc-sharepoint-dev SID (S-1-5-21-3914637029-2275272621-3670275343-1145) from address LocalHost (Using LRPC). This security permission can be modified using the Component Services administrative tool.
 
 {{< /blockquote >}}
 
@@ -69,8 +65,7 @@ However, I see two problems with KB 920783:
 
 {{< blockquote "font-italic" >}}
 
-    "type the domain user account that you specified as the Windows SharePoint 
-    Services 3.0 service account"
+"type the domain user account that you specified as the Windows SharePoint Services 3.0 service account"
 
 {{< /blockquote >}}
 

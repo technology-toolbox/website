@@ -54,8 +54,7 @@ However, when I attempted to connect to Hyper-V Manager to my Hyper-V servers,  
 
 {{< blockquote "font-italic text-danger" >}}
 
-Access denied. Unable to establish communication
-between 'ROGUE' and 'WOLVERINE'.
+Access denied. Unable to establish communication between 'ROGUE' and 'WOLVERINE'.
 
 {{< /blockquote >}}
 

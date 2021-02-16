@@ -113,9 +113,7 @@ Attempting to browse to the home page of the site now results in an error. After
 
 {{< blockquote "font-italic text-danger" >}}
 
-System.InvalidOperationException: The control with ID 'updatePanel' requires
-a ScriptManager on the page. The ScriptManager must appear before any controls
-that need it.
+System.InvalidOperationException: The control with ID 'updatePanel' requires a ScriptManager on the page. The ScriptManager must appear before any controls that need it.
 
 {{< /blockquote >}}
 

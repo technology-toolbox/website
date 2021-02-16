@@ -69,22 +69,7 @@ excerpt from an email I originally sent back on 2008-08-20:
 
 {{< blockquote "font-italic" >}}
 
-    I believe the primary reason why the load on the Search database is extremely 
-    high is due to the changes in MOSS 2007 with regards to the "property store" 
-    (i.e. the database used to perform property searches, as opposed to "full 
-    text searching" against the content index). In SPS 2003 the property store 
-    was implemented as a local "Jet" database on each query server and thus 
-    the load incurred when performing property searches was distributed amongst 
-    the various query servers in the farm. However, in MOSS 2007, a couple of 
-    key changes were made. First, the property store was moved to SQL Server 
-    (i.e. the Search database) and therefore the load is now delegated from 
-    the query servers back to a single database server. Second, the manner in 
-    which MOSS 2007 filters its results using the property store uses some, 
-    shall we say, "interesting" queries (something along the lines of "SELECT 
-    TOP 2000 ... FROM MSSDocProps ..." in which the "2000" number varies depending 
-    on how many search results are requested). Judging from [SRX for another 
-    customer], it appears that our "official response" to this problem is to 
-    offload the Search database to another SQL Server farm.
+I believe the primary reason why the load on the Search database is extremely high is due to the changes in MOSS 2007 with regards to the "property store" (i.e. the database used to perform property searches, as opposed to "full text searching" against the content index). In SPS 2003 the property store was implemented as a local "Jet" database on each query server and thus the load incurred when performing property searches was distributed amongst the various query servers in the farm. However, in MOSS 2007, a couple of key changes were made. First, the property store was moved to SQL Server (i.e. the Search database) and therefore the load is now delegated from the query servers back to a single database server. Second, the manner in which MOSS 2007 filters its results using the property store uses some, shall we say, "interesting" queries (something along the lines of "SELECT TOP 2000 ... FROM MSSDocProps ..." in which the "2000" number varies depending on how many search results are requested). Judging from [SRX for another customer], it appears that our "official response" to this problem is to offload the Search database to another SQL Server farm.
 
 {{< /blockquote >}}
 

@@ -26,8 +26,7 @@ When I attempted to start the VMs using Hyper-V Manager from my Windows 7 deskto
 
 {{< blockquote "font-italic text-danger" >}}
 
-Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC service
-is running.
+Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC service is running.
 
 {{< /blockquote >}}
 

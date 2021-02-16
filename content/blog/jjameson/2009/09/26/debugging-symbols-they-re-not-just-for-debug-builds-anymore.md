@@ -26,8 +26,7 @@ In the process of reviewing my old document, I came across the following:
 
 ### Installation
 
-        ...
-        
+...
 
 #### Debug Symbols
 
@@ -49,7 +48,7 @@ However, including debugging symbols (i.e. PDB files) in Release builds certainl
 
 ### Build All Builds with Debugging Symbols
 
-        ...build all builds, including release builds, with full debugging symbols. [...]
+...build all builds, including release builds, with full debugging symbols. [...]
 
 {{< /blockquote >}}
 

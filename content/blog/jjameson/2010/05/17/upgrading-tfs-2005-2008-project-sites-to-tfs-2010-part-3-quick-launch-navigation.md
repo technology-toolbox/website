@@ -267,8 +267,7 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 >
 > {{< blockquote "font-italic text-danger" >}}
 >
->       An error occurred while enumerating through a collection: Cannot complete 
->       this action.
+> An error occurred while enumerating through a collection: Cannot complete this action.
 >
 > {{< /blockquote >}}
 >

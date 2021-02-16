@@ -34,8 +34,7 @@ Shortly after starting to troubleshoot the problem, I discovered the following  
 
 {{< blockquote "font-italic text-danger" >}}
 
-The communication object, System.ServiceModel.Channels.ServiceChannel, cannot
-be used for communication because it is in the Faulted state.
+The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
 
 {{< /blockquote >}}
 
@@ -51,8 +50,7 @@ Here's the first sentence from that article:
 
 {{< blockquote "font-italic" >}}
 
-This sample demonstrates how you should not use the C# "using" statement to
-automatically clean up resources when using a typed client.
+This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.
 
 {{< /blockquote >}}
 

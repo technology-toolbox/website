@@ -109,8 +109,7 @@ An error similar to the following should be displayed:
 
 {{< blockquote "font-italic text-danger" >}}
 
-    EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database 
-    'mssqlsystemresource', schema 'sys'
+EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema 'sys'
 
 {{< /blockquote >}}
 

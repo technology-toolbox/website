@@ -81,7 +81,7 @@ in the following message in the **Last Run Result** column:
 
 {{< blockquote "font-italic" >}}
 
-    The operation completed successfully. (0x0)
+The operation completed successfully. (0x0)
 
 {{< /blockquote >}}
 
@@ -93,7 +93,7 @@ the **Last Run Result** column displays:
 
 {{< blockquote "font-italic" >}}
 
-    (0x1)
+(0x1)
 
 {{< /blockquote >}}
 
