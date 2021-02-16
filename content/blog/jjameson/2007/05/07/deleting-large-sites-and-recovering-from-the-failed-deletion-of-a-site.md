@@ -25,7 +25,7 @@ The system cannot find the path specified. (Exception from HRESULT: 0x80070003)
 
 {{< /blockquote >}}
 
-Something similar happened last month on my initial deployment to TEST (I pressed {{< kbd key="CTRL+C" >}} while activating one of the features that creates sites and ended  up corrupting the database). At that time I simply deleted the Web application and  recreated it.
+Something similar happened last month on my initial deployment to TEST (I pressed {{< kbd "CTRL+C" >}} while activating one of the features that creates sites and ended  up corrupting the database). At that time I simply deleted the Web application and  recreated it.
 
 We are planning on rebuilding our Test environment at least once sometime during  the next couple of weeks. However, I did not want to perform a rebuild last week  since it would interrupt the Test team (i.e. the /Archive/Library site is only a  fraction of the feature set we were currently testing and we have several hundred  gigabytes of content in other site collections to support the testing of those features).  I was prepared to delete the entire Web application but only as a last resort.
 

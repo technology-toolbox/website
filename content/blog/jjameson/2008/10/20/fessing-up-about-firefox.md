@@ -52,9 +52,9 @@ Most recently, I have also added [YSlow](https://addons.mozilla.org/en-US/firefo
 
 When creating feature specs, or other documentation, I often embed screenshots of                 Web pages.
 
-Back in the Middle Ages -- or at least before I discovered Screengrab! -- I used                 to use {{< kbd key="ALT+PRINT SCREEN" >}} to get a an image of the page into Microsoft                 Paint, where I would then trim it as necessary and subsequently copy/paste into                 a document.
+Back in the Middle Ages -- or at least before I discovered Screengrab! -- I used                 to use {{< kbd "ALT+PRINT SCREEN" >}} to get a an image of the page into Microsoft                 Paint, where I would then trim it as necessary and subsequently copy/paste into                 a document.
 
-While this works great for certain pages, it is terrribly inefficient when you want                 to capture an entire Web page, but the page is too long to fit on screen (in other                 words, the vertical scrollbar appears in the browser). Believe it or not, I actually                 used to scroll down, {{< kbd key="ALT+PRINT SCREEN" >}} again, and then delicately "append"                 the new capture to the bottom of the previous capture in Paint! Needless to say,                 I didn't do this very often, because it could literally take a couple of minutes                 to repeat this process several times for single page.
+While this works great for certain pages, it is terrribly inefficient when you want                 to capture an entire Web page, but the page is too long to fit on screen (in other                 words, the vertical scrollbar appears in the browser). Believe it or not, I actually                 used to scroll down, {{< kbd "ALT+PRINT SCREEN" >}} again, and then delicately "append"                 the new capture to the bottom of the previous capture in Paint! Needless to say,                 I didn't do this very often, because it could literally take a couple of minutes                 to repeat this process several times for single page.
 
 Then I discovered a [utility on CodeProject](http://www.codeproject.com/KB/graphics/IECapture.aspx?fid=192174&df=90&mpp=25&noise=3&sort=Position&view=Quick&fr=101#xx0xx) that allowed me to capture the entire Web page all                 at once. This actually worked fairly well for a while. However, I found that after                 I upgraded from IE6 to IE7, I frequently encountered the problem where the captured                 image would be entirely black.
 
@@ -64,7 +64,7 @@ Shortly thereafter, I found Screengrab! and I've never since looked for anything
   portion
 - Copy the image to the clipboard or save directly to a PNG file
 
-The only quirk that I've noticed is that I can't copy a Web page and paste it directly                 into Microsoft Office programs. Instead, I still use Paint as an "intermediary"                 -- which isn't really an issue due to the speed at which this can be accomplished                 with {{< kbd key="CTRL+V" >}} (to paste from Screengrab! into Paint), {{< kbd key="CTRL+C" >}}                 (to copy the entire selection in Paint -- thus replacing the clipboard content),                 followed by {{< kbd key="CTRL+V" >}} (to paste the image into Word or Powerpoint).
+The only quirk that I've noticed is that I can't copy a Web page and paste it directly                 into Microsoft Office programs. Instead, I still use Paint as an "intermediary"                 -- which isn't really an issue due to the speed at which this can be accomplished                 with {{< kbd "CTRL+V" >}} (to paste from Screengrab! into Paint), {{< kbd "CTRL+C" >}}                 (to copy the entire selection in Paint -- thus replacing the clipboard content),                 followed by {{< kbd "CTRL+V" >}} (to paste the image into Word or Powerpoint).
 
 #### Web Developer
 

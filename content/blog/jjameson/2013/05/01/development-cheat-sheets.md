@@ -10,7 +10,7 @@ tags: ["My System", "SharePoint
 
 I like to use Microsoft OneNote to manage a number of what I call "development
 cheat sheets." These come in very handy when doing SharePoint development, because
--- at least in my experience -- this is rarely as simple as pressing {{< kbd key="F5" >}}
+-- at least in my experience -- this is rarely as simple as pressing {{< kbd "F5" >}}
 after making some changes in Visual Studio. I know that's what the SharePoint/Visual
 Studio guys would like it to be, but I personally find it faster (and more reliable)
 to use my "DRDADA" PowerShell deployment scripts.

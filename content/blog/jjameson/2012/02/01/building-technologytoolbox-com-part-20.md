@@ -98,7 +98,7 @@ you, I've never bothered to look for them. Doing this conversion manually doesn'
 take very long and it is a good opportunity to "double-check my work."
 
 Be sure to convert attributes as well (such as changing `class` to `CssClass`). Once the conversion is
-complete, I typically do a quick {{< kbd key="F5" >}} to verify the form renders as
+complete, I typically do a quick {{< kbd "F5" >}} to verify the form renders as
 expected.
 
 For the sake of brevity, I won't include the ASP.NET markup at this point
@@ -265,7 +265,7 @@ protected void SubmitButton_Click(
         }
 ```
 
-Some quick {{< kbd key="F5" >}} testing to ensure everything worked as expected
+Some quick {{< kbd "F5" >}} testing to ensure everything worked as expected
 and I was ready for the next step.
 
 ### Step 5: Send email message

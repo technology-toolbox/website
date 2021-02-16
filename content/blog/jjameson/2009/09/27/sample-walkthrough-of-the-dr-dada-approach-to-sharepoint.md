@@ -305,7 +305,7 @@ that invokes makecab.exe and adding this new target as a dependency of the build
 ```
 
 The next step is to build and deploy the solution. I start by pressing
-{{< kbd key="CTRL+SHIFT+B" >}} to compile the solution and create the corresponding
+{{< kbd "CTRL+SHIFT+B" >}} to compile the solution and create the corresponding
 WSP.
 
 ### Installing the Solution and Activating the Features
@@ -821,10 +821,10 @@ get the new WSP built and deployed.
 
 Before finishing off this post, I also want to ensure that you are aware
 of the "command history" feature in Microsoft Windows. To rerun a command, simply
-press {{< kbd key="F7" >}} in a command window. A popup window shows the list of commands
+press {{< kbd "F7" >}} in a command window. A popup window shows the list of commands
 you've executed -- allowing you to quickly run a previous command without having
 to type it in again. You might already have been using the "up arrow" to essentially
-do the same thing, but I've found pressing {{< kbd key="F7" >}} -- and then scrolling
+do the same thing, but I've found pressing {{< kbd "F7" >}} -- and then scrolling
 to the command I want -- to be a little more convenient. Unlike using the "up
 arrow" to repeat a command, selecting one after using F7 won't re-add it to
 the command history.

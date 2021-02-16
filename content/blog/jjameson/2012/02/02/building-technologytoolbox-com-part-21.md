@@ -298,7 +298,7 @@ While the basic functionality worked as expected at this point, there were
 a few areas for improving the user experience.
 
 First, rather than having to click the search icon, users should be able
-to simply press {{< kbd key="Enter" >}} after typing one or more search terms. [This
+to simply press {{< kbd "Enter" >}} after typing one or more search terms. [This
 obviously needs to work in all the major browsers, so I obviously didn't want
 to mimic the
 [functionality in MOSS 2007](/blog/jjameson/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox).]
@@ -354,7 +354,7 @@ function configureSearchBox(searchBox)
 ```
 
 Third, the search feature should prevent users from submitting a search when
-no keywords are specified (i.e. the user presses {{< kbd key="Enter" >}} without typing
+no keywords are specified (i.e. the user presses {{< kbd "Enter" >}} without typing
 one or more terms) and when the search box contains the default text (i.e. the
 user clicks the search icon without first typing one or more terms). This is
 similar to the out-of-the-box behavior of SharePoint Search.

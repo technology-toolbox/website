@@ -532,7 +532,7 @@ loopback address:
 > 3. Right-click **MSV1\_0**, point to **New**,
 > and then click **Multi-String Value**.
 > 4. Type **BackConnectionHostNames**, and then press
-> {{< kbd key="ENTER" >}}.
+> {{< kbd "ENTER" >}}.
 > 5. Right-click **BackConnectionHostNames**, and then click
 > **Modify**.
 > 6. In the **Value data** box, type the host header corresponding

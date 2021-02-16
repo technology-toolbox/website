@@ -48,7 +48,7 @@ At this point, however, note that I haven't really improved the situation at all
 </Target>
 ```
 
-This worked (meaning, pressing {{< kbd key="Ctrl+Shift+B" >}} repeatedly resulted in essentially         no work for Visual Studio) but obviously it only checks for an updated DDF file         when deciding whether or not to build the target -- which is fundamentally incorrect         since the DDF may specify essentially any file in the project to include in the         solution package.
+This worked (meaning, pressing {{< kbd "Ctrl+Shift+B" >}} repeatedly resulted in essentially         no work for Visual Studio) but obviously it only checks for an updated DDF file         when deciding whether or not to build the target -- which is fundamentally incorrect         since the DDF may specify essentially any file in the project to include in the         solution package.
 
 What I really wanted to specify in the `Inputs`         attribute is all of the items in the project, since any of them may be included         in the DDF and consequently in the SharePoint solution package. In other words,         I wanted to specify all of the following:
 
