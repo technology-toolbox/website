@@ -357,8 +357,7 @@ using System.Runtime.InteropServices;
 To extract the public key from the assembly, use the "-Tp" option on the [Strong Name
 tool (Sn.exe)](http://msdn.microsoft.com/en-us/library/k5b5tt23%28VS.80%29.aspx), as demonstrated below:
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;<kbd>sn
--Tp Fabrikam.Demo.Security.DeveloperTests.dll</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;`sn -Tp Fabrikam.Demo.Security.DeveloperTests.dll`
 
 <samp>Microsoft (R) .NET Framework Strong Name Utility Version 3.5.30729.1<br>
 Copyright (c) Microsoft Corporation. All rights reserved.<br>

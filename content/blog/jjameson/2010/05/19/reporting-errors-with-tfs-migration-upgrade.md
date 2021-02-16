@@ -174,7 +174,7 @@ command in Visual Studio, with the following XML input file:
 
 This process is described in more detail in the following MSDN article:
 
-{{< reference    title="Adding Dashboards and Reports to Upgraded Team Projects"    linkHref="http://msdn.microsoft.com/en-us/library/ff462695(v=VS.100).aspx" >}}
+{{< reference title="Adding Dashboards and Reports to Upgraded Team Projects" linkHref="http://msdn.microsoft.com/en-us/library/ff462695(v=VS.100).aspx" >}}
 
 While this successfully uploaded the missing reports (e.g. /TfsReports/DefaultCollection/AdventureWorks/Remaining
 Work), it only led to a different error.

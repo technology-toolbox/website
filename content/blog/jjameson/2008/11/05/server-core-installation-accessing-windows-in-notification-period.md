@@ -26,7 +26,7 @@ Using my KVM switch, I toggled over to the BEAST console and logged in. I notice
 
 I then tried to switch over to my other server running Hyper-V (ROGUE), which  hosts my domain controller -- or actually, I should say domain controllers, since  I recently built out a second DC when I virtualized my original domain controller  (XAVIER). In other words, ROGUE is now running XAVIER1 and XAVIER2 -- two Windows  Server 2008 VMs with the **Active Directory Domain Services** role  enabled.
 
-Unfortunately, I got "no love" from ROGUE when I tried to login. The screen was  blank and no amount of <kbd>CTRL+ALT+DELETE</kbd> combinations could resuscitate  it. I then checked the physical server to ensure the it hadn't somehow been turned  off. Unfortunately, the "lights were on, but nobody was home", so I forced a hard  reboot. (I really hate doing that -- especially on a Hyper-V server running 5 VMs.  Oh well, desperate times call for...well, you know the rest.
+Unfortunately, I got "no love" from ROGUE when I tried to login. The screen was  blank and no amount of {{< kbd key="CTRL+ALT+DELETE" >}} combinations could resuscitate  it. I then checked the physical server to ensure the it hadn't somehow been turned  off. Unfortunately, the "lights were on, but nobody was home", so I forced a hard  reboot. (I really hate doing that -- especially on a Hyper-V server running 5 VMs.  Oh well, desperate times call for...well, you know the rest.
 
 After ROGUE rebooted, I noticed that I still had problems accessing it. When  I was finally able to examine the event log, I discovered the following:
 

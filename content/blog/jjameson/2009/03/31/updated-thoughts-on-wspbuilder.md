@@ -29,7 +29,7 @@ signatures removed):
 
 > I would like to know that you are not talking about the STSDEV project,
 > but it is really the WSPBuilder project. Because the WSPBuilder do not
-> build the WSP package on the <kbd>CTRL+SHIFT+B</kbd> command, however
+> build the WSP package on the {{< kbd key="CTRL+SHIFT+B" >}} command, however
 > the STSDEV does.
 >
 > Please check up on this and let me know, furthermore I'll be happy
@@ -40,13 +40,13 @@ signatures removed):
 > and WSPBuilder\_x86 (which contain executables, a config file, and a
 > couple of other assemblies).
 >
-> The WSP packages are built whenever I build the solution (<kbd>CTRL+SHIFT+B</kbd>)
+> The WSP packages are built whenever I build the solution ({{< kbd key="CTRL+SHIFT+B" >}})
 > via MSBuild project files (including a common SharePoint.WSPBuilder.targets).
 > Is this not the typical way people use WSPBuilder?
 > 3. <cite>Keutmann</cite>
 
 > The standard installation of WSPBuilder Extensions for Visual Studio
-> do not build the WSP package when building the project (<kbd>CTRL-SHIFT-B</kbd>).
+> do not build the WSP package when building the project (`CTRL-SHIFT-B`).
 > Normally you have to build the WSP package by using the menu "Tools
 > -&gt; WSPBuilder -&gt; Build WSP" command. (If you do not have this
 > menu, then you do not have the Extensions installed.)
@@ -139,7 +139,7 @@ changes as necessary.
 While Keutmann may think "it doesn't make sense that you would build the
 WSP package every time that you rebuild your code" and instead prefer to use
 the WSPBuilder Extensions for Visual Studio, personally I like to keep things
-simple and therefore I would much rather have <kbd>CTRL+SHIFT+B</kbd> build
+simple and therefore I would much rather have {{< kbd key="CTRL+SHIFT+B" >}} build
 everything that needs to be built -- acknowledging that, like Keutmann, I bypass
 deploying the updated solution (and instead just GAC the updated assemblies)
 if I know that all that has changed is code and not, for example, master pages

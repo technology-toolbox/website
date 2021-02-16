@@ -16,7 +16,7 @@ The following screenshot shows the current home page for Technology Toolbox.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
-height="600"    width="538"
+height="600" width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
@@ -29,7 +29,7 @@ Here is the corresponding page layout for the site home page.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
 alt="Technology Toolbox home page (page layout)"
-height="600"    width="536"
+height="600" width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
@@ -80,7 +80,7 @@ The **Services** page for the site is shown in Figure 3 below. This  represents 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Services.png"
 alt="Services page"
-height="494"    width="600"
+height="494" width="600"
 title="Figure 3: Services page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services.png)
@@ -90,7 +90,7 @@ Note that I still like to use the [960 Grid System](http://960.gs)  to layout We
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Services-with-Grid.png"
 alt="Services page (with grid)"
-height="495"    width="600"
+height="495" width="600"
 title="Figure 4: Services page (with grid)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services-with-Grid.png)
@@ -108,7 +108,7 @@ The site provides an online form prospective clients can use regarding potential
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact.png"
 alt="Contact form"
-height="600"    width="592"
+height="600" width="592"
 title="Figure 5: Contact form" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact.png)
@@ -118,7 +118,7 @@ As shown below, validators are used to ensure the required fields are specified 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-validation.png"
 alt="Contact form validation errors"
-height="600"    width="505"
+height="600" width="505"
 title="Figure 6: Contact form validation errors" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-validation.png)
@@ -130,7 +130,7 @@ When the incorrect image is selected (or no image is selected) in the CAPTCHA  c
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-CAPTCHA.png"
 alt="Contact form CAPTCHA validation error"
-height="600"    width="534"
+height="600" width="534"
 title="Figure 7: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-CAPTCHA.png)
@@ -144,7 +144,7 @@ My new blog is currently powered by [Subtext](http://subtextproject.com)  -- or 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
 alt="Blog home page"
-height="600"    width="374"
+height="600" width="374"
 title="Figure 8: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
@@ -156,7 +156,7 @@ Figure 9 shows a typical blog post. The secondary content is similar to that  sh
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Post.png"
 alt="Sample blog post"
-height="600"    width="398"
+height="600" width="398"
 title="Figure 9: Sample blog post" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
@@ -187,7 +187,7 @@ Figure 10 illustrates how the two solutions are merged together during the deplo
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture"
-height="520"    width="600"
+height="520" width="600"
 title="Figure 10: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
@@ -199,7 +199,7 @@ The production environment for TechnologyToolbox.com is currently hosted by [Win
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FTechnology-Toolbox-Infrastructure.jpg"
 alt="Infrastructure"
-height="399"    width="600"
+height="399" width="600"
 title="Figure 11: Infrastructure" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg)

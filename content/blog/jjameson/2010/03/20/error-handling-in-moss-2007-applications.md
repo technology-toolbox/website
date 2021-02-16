@@ -29,7 +29,7 @@ To understand why, consider a publishing site configured with **BlueBand.master*
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FPublishing%20Site%20-%20BlueBand%20Master%20Page.png"
 alt="Publishing site with BlueBand master page"
-height="353"    width="600"
+height="353" width="600"
 title="Figure 1: Publishing site with BlueBand master page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
@@ -97,7 +97,7 @@ As shown in the following screenshot, browsing to the home page now displays  th
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint%20Error%20Page.png"
 alt="SharePoint error page"
-height="366"    width="600"
+height="366" width="600"
 title="Figure 2: SharePoint error page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Error%20Page.png)
@@ -130,7 +130,7 @@ The following screenshot shows a custom error page fashioned after BlueBand.mast
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FCustom%20Error%20Page.png"
 alt="Custom SharePoint error page"
-height="162"    width="600"
+height="162" width="600"
 title="Figure 3: Custom SharePoint error page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Custom%20Error%20Page.png)
@@ -183,7 +183,7 @@ namespace Fabrikam.Demo.Publishing.Layouts.MasterPages
 
 Note that I'm essentially following the approach outlined in the following KB  article:
 
-{{< reference    title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET"    linkHref="http://support.microsoft.com/kb/306355" >}}
+{{< reference title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET" linkHref="http://support.microsoft.com/kb/306355" >}}
 
 In the **Page\_Error** method, I first log the exception using [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications). Then I call the **[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)** method to prevent the error from continuing  to the **Application\_Error** event handler (which would subsequently  invoke the SharePoint error handling infrastucture). Finally, I transfer the request  to a custom application page (Error.aspx) in the Layouts folder -- thus displaying  a friendly error message to the user, while still preserving the URL of the original  request (as opposed to a redirect, which would change the URL shown in the browser).
 
@@ -1128,7 +1128,7 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 >
 > There's a known bug with the **SPWebConfigModification** class not removing modifications from any Web.config file except the one for the **Default** zone. In other words, running the following command will not remove the trace listener configuration from the Web.config file for the **Internet** zone:
 >
-> <kbd>stsadm -o fabrikam-disablelogging -url http://fabrikam</kbd>
+> `stsadm -o fabrikam-disablelogging -url http://fabrikam`
 
 Here is the class that implements the custom StsAdm.exe commands:
 

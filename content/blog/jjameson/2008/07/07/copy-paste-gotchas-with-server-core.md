@@ -45,7 +45,7 @@ It turns out that the quotes around <samp>Remote Volume Management</samp> were  
 
 Once I edited the command line to replace the quotation marks, the command completed  with the expected results:
 
-C:\&gt;<kbd>netsh advfirewall firewall set rule group="Remote Volume Management" new enable=yes</kbd>
+C:\&gt;`netsh advfirewall firewall set rule group="Remote Volume Management" new enable=yes`
 
 ```
 Updated 3 rule(s).

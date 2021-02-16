@@ -24,7 +24,7 @@ Figure 1.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact.png"
 alt="Contact form with custom CAPTCHA control"
-height="600"    width="592"
+height="600" width="592"
 title="Figure 1: Contact form with custom CAPTCHA control" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact.png)
@@ -45,7 +45,7 @@ fields are missing.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-CAPTCHA.png"
 alt="Contact form CAPTCHA validation error"
-height="600"    width="534"
+height="600" width="534"
 title="Figure 2: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-CAPTCHA.png)
@@ -62,7 +62,7 @@ CAPTCHA implementation.
 The foundation for the CAPTCHA control used on TechnologyToolbox.com is based
 on a jQuery plugin created by Boban Karišik:
 
-{{< reference    title="s3Capcha jQuery plugin"    linkHref="http://www.serie3.info/s3capcha/" >}}
+{{< reference title="s3Capcha jQuery plugin" linkHref="http://www.serie3.info/s3capcha/" >}}
 
 s3Capcha is simple, yet elegant, and free for commercial use (provided you
 agree to preserve the copyright notice in the script file). The only drawback
@@ -71,7 +71,7 @@ on PHP.
 
 Fortunately, Mahdi Yousefi created an ASP.NET version based on Boban's code:
 
-{{< reference    title="Creating an ASP.NET captcha using jQuery and s3capcha"    linkHref="http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap" >}}
+{{< reference title="Creating an ASP.NET captcha using jQuery and s3capcha" linkHref="http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap" >}}
 
 I discovered a few issues in Mahdi's code and ended up making some significant
 changes for the Technology Toolbox website.

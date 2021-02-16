@@ -19,9 +19,9 @@ tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]
 
 In [yesterday's post](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided a sample walkthrough of the "DR.DADA" approach  to developing solutions for Microsoft Office SharePoint Server (MOSS) 2007. However,  I intentionally left out a few things because a) that post was already getting ridiculously  long, and b) I felt these were important enough to cover separately.
 
-One of the incorrect statements I've heard a few times over the last couple of  years is that you can't do "<kbd>F5</kbd> debugging" when working with SharePoint.  Well, I suppose that in the strictest sense, this is a true statement -- assuming  you don't go crazy with post-build events (for example, to deploy your updated WSP,  re-GAC your assemblies, and recycle the application pool). Instead, most developers  -- including myself back in the early days of MOSS 2007 -- start debugging by attaching  to the IIS worker process (i.e. w3wp.exe).
+One of the incorrect statements I've heard a few times over the last couple of  years is that you can't do "{{< kbd key="F5" >}} debugging" when working with SharePoint.  Well, I suppose that in the strictest sense, this is a true statement -- assuming  you don't go crazy with post-build events (for example, to deploy your updated WSP,  re-GAC your assemblies, and recycle the application pool). Instead, most developers  -- including myself back in the early days of MOSS 2007 -- start debugging by attaching  to the IIS worker process (i.e. w3wp.exe).
 
-However, when you have multiple instances of w3wp.exe (for example you are running  a couple of SharePoint Web applications in addition to Central Administration) it  can be tedious attaching to the right worker process. [In other words, the old keystroke  combination many of us grew accustomed to back in the days of working on a single  ASP.NET Web appliction -- specifically, pressing <kbd>CTRL+SHIFT+P</kbd> (to bring  up the **Attach To Process** dialog box), pressing <kbd>W</kbd> (to  scroll the list of processes down to w3wp.exe), followed by two quick presses of  the <kbd>Enter</kbd> key -- doesn't work anymore because we might attach to the  wrong worker process. Even worse, we might not be able to quickly tell which w3wp.exe  instance to attach to without expanding the **User Name** column --  or even worse still, having to use <samp>iisapp.vbs</samp> (in Windows Server 2003)  or <kbd>C:\Windows\System32\inetsrv\appcmd.exe list apppool</kbd> (in Windows  Server 2008) to determine which process to attach to.]
+However, when you have multiple instances of w3wp.exe (for example you are running  a couple of SharePoint Web applications in addition to Central Administration) it  can be tedious attaching to the right worker process. [In other words, the old keystroke  combination many of us grew accustomed to back in the days of working on a single  ASP.NET Web appliction -- specifically, pressing {{< kbd key="CTRL+SHIFT+P" >}} (to bring  up the **Attach To Process** dialog box), pressing {{< kbd key="W" >}} (to  scroll the list of processes down to w3wp.exe), followed by two quick presses of  the {{< kbd key="Enter" >}} key -- doesn't work anymore because we might attach to the  wrong worker process. Even worse, we might not be able to quickly tell which w3wp.exe  instance to attach to without expanding the **User Name** column --  or even worse still, having to use <samp>iisapp.vbs</samp> (in Windows Server 2003)  or `C:\Windows\System32\inetsrv\appcmd.exe list apppool` (in Windows  Server 2008) to determine which process to attach to.]
 
 Don't fret...attaching to the right worker process to debug your SharePoint code *can* be very easy.
 
@@ -76,13 +76,13 @@ To ensure ASP.NET debugging is enabled on the Web site [note these instructions 
 6. Under the **Behavior** section, ensure the value of **Debug** is set to **True**.
 7. If necessary, click **Apply** in the **Actions** pane.
 
-Assuming you have deployed your solution and activated your features, your can  now set a breakpoint and press <kbd>F5</kbd> to start debugging. Woohoo!
+Assuming you have deployed your solution and activated your features, your can  now set a breakpoint and press {{< kbd key="F5" >}} to start debugging. Woohoo!
 
 Now let's suppose that you find a bug in your code and need to make a change  -- but only to the code. In other words, you haven't modified any of your files  deployed to %ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12.
 
-As I mentioned yesterday, all you need to do is press <kbd>CTRL+SHIFT+B</kbd>  to build your solution, GAC your updated assemblies, and recycle the application  pool:
+As I mentioned yesterday, all you need to do is press {{< kbd key="CTRL+SHIFT+B" >}}  to build your solution, GAC your updated assemblies, and recycle the application  pool:
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"GAC Assemblies.cmd"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"GAC Assemblies.cmd"`
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -92,13 +92,13 @@ Assembly successfully added to the cache
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"`
 
 ```
 "SharePoint - foobar-local80" successfully recycled
 ```
 
-You can then simply press <kbd>F5</kbd> to start debugging again. Woohoo, indeed!
+You can then simply press {{< kbd key="F5" >}} to start debugging again. Woohoo, indeed!
 
 I hope this makes you a happier and more productive SharePoint developer.
 

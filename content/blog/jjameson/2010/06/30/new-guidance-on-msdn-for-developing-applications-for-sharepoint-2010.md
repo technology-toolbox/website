@@ -23,9 +23,9 @@ A bunch of new content related to SharePoint 2010 application development was re
 
 You can browse the content online via MSDN:
 
-{{< reference    title="Developing Applications for SharePoint 2010"    linkHref="http://msdn.microsoft.com/en-us/library/ff770300.aspx" >}}
+{{< reference title="Developing Applications for SharePoint 2010" linkHref="http://msdn.microsoft.com/en-us/library/ff770300.aspx" >}}
 
 You can also download the guidance (including sample source code) from the Microsoft Download Center:
 
-{{< reference    title="Developing Applications for SharePoint 2010"    linkHref="http://www.microsoft.com/downloads/details.aspx?FamilyID=64b55569-2168-4545-8b7c-f185b2cf967d" >}}
+{{< reference title="Developing Applications for SharePoint 2010" linkHref="http://www.microsoft.com/downloads/details.aspx?FamilyID=64b55569-2168-4545-8b7c-f185b2cf967d" >}}
 

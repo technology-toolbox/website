@@ -66,7 +66,7 @@ with Visual Studio 2010 and projects that target .NET Framework 3.5 (e.g. ShareP
 2010 solutions). However, you have to resort to some command-line tools, as
 described in the following post:
 
-{{< reference    title="Manually Configure and Run code Coverage"    linkHref="http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx" >}}
+{{< reference title="Manually Configure and Run code Coverage" linkHref="http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx" >}}
 
 In
 [my next post](/blog/jjameson/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis), I'll share the PowerShell script that I created to make this

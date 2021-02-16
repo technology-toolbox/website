@@ -11,7 +11,7 @@ This morning I noticed a new shortcut for iTunes on my Windows desktop (as
 a result of installing a patch from Apple yesterday).
 
 After a fleeting moment of irritation, I selected the icon, pressed the
-<kbd>Delete</kbd> key, and subsequently entered my administrator credentials
+{{< kbd key="Delete" >}} key, and subsequently entered my administrator credentials
 to purge the shortcut once again. (I'm sure I deleted this shortcut before when
 I originally installed iTunes back in December.)
 

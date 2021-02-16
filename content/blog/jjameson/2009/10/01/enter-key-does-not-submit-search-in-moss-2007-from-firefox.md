@@ -17,15 +17,15 @@ tags: ["MOSS 2007"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-One issue that has "bitten" me on more than one occasion is the fact that the [SearchBoxEx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.portal.webcontrols.searchboxex.aspx) control in Microsoft Office SharePoint Server (MOSS) 2007 does not  work consistently across different browsers. Specifically, I am referring to the  issue where pressing the <kbd>Enter</kbd> key in Mozilla Firefox does not initiate  the search but rather just refreshes the current page. The workaround is to have  Firefox users always click the "Go Search" button to submit the search terms and  view search results.
+One issue that has "bitten" me on more than one occasion is the fact that the [SearchBoxEx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.portal.webcontrols.searchboxex.aspx) control in Microsoft Office SharePoint Server (MOSS) 2007 does not  work consistently across different browsers. Specifically, I am referring to the  issue where pressing the {{< kbd key="Enter" >}} key in Mozilla Firefox does not initiate  the search but rather just refreshes the current page. The workaround is to have  Firefox users always click the "Go Search" button to submit the search terms and  view search results.
 
 I first encountered this issue several years ago on my first MOSS 2007 project,  but I was able to convince the customer that we did not need to fix it at the time  given the workaround I note above (and also considering the fact that Firefox wasn't  nearly as popular back then as it is today).
 
-When this issue came up again for a different customer this past summer, I did  some more research into the underlying issue. I found a service request (i.e. support  case) for another customer that encountered this problem. According to this SR,  the official response from Microsoft Support (i.e. CSS) is that for MOSS 2007, Firefox  is a "Level 2" browser (from a support and functionality perspective). In light  of this -- combined with the workaround of clicking the **Go Search** image button (instead of pressing the <kbd>Enter</kbd> key) -- the SR stated  that there are no plans to address this issue.
+When this issue came up again for a different customer this past summer, I did  some more research into the underlying issue. I found a service request (i.e. support  case) for another customer that encountered this problem. According to this SR,  the official response from Microsoft Support (i.e. CSS) is that for MOSS 2007, Firefox  is a "Level 2" browser (from a support and functionality perspective). In light  of this -- combined with the workaround of clicking the **Go Search** image button (instead of pressing the {{< kbd key="Enter" >}} key) -- the SR stated  that there are no plans to address this issue.
 
 I spent a few hours that day investigating the bug myself as well as some various  hacks to circumvent the issue that I found when searching the Internet.
 
-I discovered the fundamental problem is due to the way that SharePoint cancels  the form submission -- or in the case of Firefox, does *not* cancel the form  submission -- when the <kbd>Enter</kbd> key is pressed in the search box.
+I discovered the fundamental problem is due to the way that SharePoint cancels  the form submission -- or in the case of Firefox, does *not* cancel the form  submission -- when the {{< kbd key="Enter" >}} key is pressed in the search box.
 
 Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web Server  Extensions\12\TEMPLATE\LAYOUTS\1033\Search.js:
 

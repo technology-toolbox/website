@@ -29,7 +29,7 @@ Here is what my Vista partition looked like immediately after the baseline insta
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20usage%20-%20Vista%20Ultimate%20x64%20(baseline).jpg"
 alt="Disk usage on Windows Vista Ultimate x64 (baseline)"
-height="600"    width="537"
+height="600" width="537"
 title="Figure 1: Disk usage on Windows Vista Ultimate x64 (baseline)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20usage%20-%20Vista%20Ultimate%20x64%20%28baseline%29.jpg)
@@ -73,7 +73,7 @@ After rebooting a couple of times, my Vista partition looks like this:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20usage%20-%20Vista%20with%20SP1%20and%20products.jpg"
 alt="Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression"
-height="600"    width="532"
+height="600" width="532"
 title="Figure 2: Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20usage%20-%20Vista%20with%20SP1%20and%20products.jpg)

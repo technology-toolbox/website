@@ -55,7 +55,7 @@ This morning, I finally found some time to move the "offline copy" of my MSDN co
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FExpression%20Web%20-%20My%20MSDN%20Blog.png"
 alt="Expression Web - my MSDN blog"
-height="499"    width="600"
+height="499" width="600"
 title="Figure 1: Expression Web - my MSDN blog" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Expression%20Web%20-%20My%20MSDN%20Blog.png)

@@ -24,7 +24,7 @@ On the development VM (FOOBAR5) that failed to install the Service Pack,  I had 
 
 Evidently I need 7.4 GB of free space in order to install this latest Service Pack:
 
-{{< reference    title="Documentation for Windows 7 and Windows Server 2008 R2 Service Pack 1 (KB976932)"    linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-83fe-46e9-96d8-027ae59ddc11&displaylang=en" >}}
+{{< reference title="Documentation for Windows 7 and Windows Server 2008 R2 Service Pack 1 (KB976932)" linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-83fe-46e9-96d8-027ae59ddc11&displaylang=en" >}}
 
 Maybe it's time to head over to [newegg](http://www.newegg.com) and see if those terabyte drives are still on sale ;-)
 

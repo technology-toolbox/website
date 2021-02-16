@@ -197,7 +197,7 @@ running in Full trust, but does not work in Medium trust.
 
 I created ELMAH issue 277 to track this bug:
 
-{{< reference    title="errorFilter does not work in Medium trust configuration (SecurityException - \"Request for the permission of type 'System.Security.Permissions.ReflectionPermission...' failed\")"    linkHref="http://code.google.com/p/elmah/issues/detail?id=277" >}}
+{{< reference title="errorFilter does not work in Medium trust configuration (SecurityException - \"Request for the permission of type 'System.Security.Permissions.ReflectionPermission...' failed\")" linkHref="http://code.google.com/p/elmah/issues/detail?id=277" >}}
 
 You can read the details by following the link above, if you are interested,
 but here is the gist of it:
@@ -294,7 +294,7 @@ In other words, I discovered another issue that only occurred in Full trust
 
 I created ELMAH issue 278 to track this bug:
 
-{{< reference    title="JScript error filter does not work in Full trust configuration (when using FilterSourceType.Name)"    linkHref="http://code.google.com/p/elmah/issues/detail?id=278" >}}
+{{< reference title="JScript error filter does not work in Full trust configuration (when using FilterSourceType.Name)" linkHref="http://code.google.com/p/elmah/issues/detail?id=278" >}}
 
 You can read the details by following the link above, if you are interested,
 but here is the gist of it:

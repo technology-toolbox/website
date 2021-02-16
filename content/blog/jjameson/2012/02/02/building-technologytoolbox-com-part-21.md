@@ -64,7 +64,7 @@ At that point, the search page looked like Figure 1.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-1.png"
 alt="Google Site Search (with borders)"
-height="600"    width="296"
+height="600" width="296"
 title="Figure 1: Google Site Search (with borders)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-1.png)
@@ -91,7 +91,7 @@ As you can see in the following screenshot, this improves things considerably.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-2.png"
 alt="Google Site Search (without borders)"
-height="600"    width="328"
+height="600" width="328"
 title="Figure 2: Google Site Search (without borders)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-2.png)
@@ -225,7 +225,7 @@ Figure 3 shows the corresponding results.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-3.png"
 alt="Google Site Search (final)"
-height="600"    width="381"
+height="600" width="381"
 title="Figure 3: Google Site Search (final)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-3.png)
@@ -298,7 +298,7 @@ While the basic functionality worked as expected at this point, there were
 a few areas for improving the user experience.
 
 First, rather than having to click the search icon, users should be able
-to simply press <kbd>Enter</kbd> after typing one or more search terms. [This
+to simply press {{< kbd key="Enter" >}} after typing one or more search terms. [This
 obviously needs to work in all the major browsers, so I obviously didn't want
 to mimic the
 [functionality in MOSS 2007](/blog/jjameson/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox).]
@@ -354,7 +354,7 @@ function configureSearchBox(searchBox)
 ```
 
 Third, the search feature should prevent users from submitting a search when
-no keywords are specified (i.e. the user presses <kbd>Enter</kbd> without typing
+no keywords are specified (i.e. the user presses {{< kbd key="Enter" >}} without typing
 one or more terms) and when the search box contains the default text (i.e. the
 user clicks the search icon without first typing one or more terms). This is
 similar to the out-of-the-box behavior of SharePoint Search.

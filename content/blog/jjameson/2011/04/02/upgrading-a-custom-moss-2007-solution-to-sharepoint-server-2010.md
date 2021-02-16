@@ -25,7 +25,7 @@ However, I also took the time to migrate the previous Visual Studio 2008 solutio
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Solution-Upgrade.jpg"
 alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
-height="1472"    width="499"
+height="1472" width="499"
 title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Solution-Upgrade.jpg)
@@ -56,7 +56,7 @@ I've mentioned in the past that, even after tools like WSPBuilder came along, I 
 
 However, I must say that I've really grown fond of the new SharePoint tooling support         in Visual Studio 2010. It's not perfect -- get over it, no software is ever perfect         -- and I still find myself having to frequently tweak the XML that is automatically         generated as a result of adding a file to the solution. However it's still a huge         step forward in terms of SharePoint developer productivity.
 
-I think my biggest gripe is that by default when you <kbd>CTRL+Shift+B</kbd> to         build the Visual Studio solution, SharePoint projects don't automatically update         the WSP. In my experience, the time required to rebuild the WSP is short enough         that I'd prefer the "Package" option to be the default. I suppose I really should         just modify the project file to set the **IsPackaging** variable.
+I think my biggest gripe is that by default when you {{< kbd key="CTRL+Shift+B" >}} to         build the Visual Studio solution, SharePoint projects don't automatically update         the WSP. In my experience, the time required to rebuild the WSP is short enough         that I'd prefer the "Package" option to be the default. I suppose I really should         just modify the project file to set the **IsPackaging** variable.
 
 ### "DefaultFeatureReceiver is dead, FeatureConfigurator is not"
 

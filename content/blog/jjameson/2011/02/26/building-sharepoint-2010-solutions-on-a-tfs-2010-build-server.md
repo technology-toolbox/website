@@ -27,7 +27,7 @@ registry key for MSBuild to locate the assemblies.
 It's nice to see that a similar process has already been covered on MSDN
 for SharePoint 2010:
 
-{{< reference    title="How to Build SharePoint Projects with TFS Team Build"    linkHref="http://msdn.microsoft.com/en-us/library/ff622991.aspx" >}}
+{{< reference title="How to Build SharePoint Projects with TFS Team Build" linkHref="http://msdn.microsoft.com/en-us/library/ff622991.aspx" >}}
 
 However, there are few things I noticed about this MSDN article.
 

@@ -34,7 +34,7 @@ Converting this simple "makecab" command to an MSBuild target is easy -- just us
 </Target>
 ```
 
-The only hiccup that tripped me up a little is the fact that I had to set the `WorkingDirectory` attribute to avoid         having to make any changes to the paths specified in the DDF file (since they were         previously specified using relative paths compatible with running <kbd>makecab.exe</kbd>         in the post-build event). Also, getting it to work without the `WorkingDirectory` attribute would have changed the location of         the generated CAB -- er, I mean WSP -- file, which is not what I wanted anyway.
+The only hiccup that tripped me up a little is the fact that I had to set the `WorkingDirectory` attribute to avoid         having to make any changes to the paths specified in the DDF file (since they were         previously specified using relative paths compatible with running `makecab.exe`         in the post-build event). Also, getting it to work without the `WorkingDirectory` attribute would have changed the location of         the generated CAB -- er, I mean WSP -- file, which is not what I wanted anyway.
 
 At this point, however, note that I haven't really improved the situation at all         (i.e. the CAB/WSP file is created each time you build). To achieve the desired goal         (i.e. building the CAB/WSP file only when necessary), you need to specify `Inputs` and `Outputs`         on the `Target`. I then tested the         following to verify that I was on the right track:
 
@@ -48,7 +48,7 @@ At this point, however, note that I haven't really improved the situation at all
 </Target>
 ```
 
-This worked (meaning, pressing <kbd>Ctrl+Shift+B</kbd> repeatedly resulted in essentially         no work for Visual Studio) but obviously it only checks for an updated DDF file         when deciding whether or not to build the target -- which is fundamentally incorrect         since the DDF may specify essentially any file in the project to include in the         solution package.
+This worked (meaning, pressing {{< kbd key="Ctrl+Shift+B" >}} repeatedly resulted in essentially         no work for Visual Studio) but obviously it only checks for an updated DDF file         when deciding whether or not to build the target -- which is fundamentally incorrect         since the DDF may specify essentially any file in the project to include in the         solution package.
 
 What I really wanted to specify in the `Inputs`         attribute is all of the items in the project, since any of them may be included         in the DDF and consequently in the SharePoint solution package. In other words,         I wanted to specify all of the following:
 
@@ -119,5 +119,5 @@ The second option seems a little more elegant than the first, and hence is what 
 </PropertyGroup>
 ```
 
-Building SharePoint solution packages by modifying the MSBuild targets certainly         isn't a new concept. It has been over a year since I first read Andrew Connell's         [blog post](http://www.andrewconnell.com/blog/articles/UsingVisualStudioAndMsBuildToCreateWssSolutions.aspx) on this. However, there were a couple of things that bothered         me about Andrew's approach; the most important being that I didn't see any compelling         reasons to switch from using post-build events. With true dependency checking to         avoid superfluous calls to <kbd>makecab.exe</kbd>, this is obviously no longer the         case.
+Building SharePoint solution packages by modifying the MSBuild targets certainly         isn't a new concept. It has been over a year since I first read Andrew Connell's         [blog post](http://www.andrewconnell.com/blog/articles/UsingVisualStudioAndMsBuildToCreateWssSolutions.aspx) on this. However, there were a couple of things that bothered         me about Andrew's approach; the most important being that I didn't see any compelling         reasons to switch from using post-build events. With true dependency checking to         avoid superfluous calls to `makecab.exe`, this is obviously no longer the         case.
 

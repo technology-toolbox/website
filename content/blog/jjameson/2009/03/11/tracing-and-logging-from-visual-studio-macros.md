@@ -27,7 +27,7 @@ Take a look at the following **Output** window from Visual Studio.  Notice how t
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FMacro%20Output%20Pane.png"
 alt="Macro output pane"
-height="239"    width="600"
+height="239" width="600"
 title="Figure 1: Macro output pane" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Macro%20Output%20Pane.png)

@@ -22,7 +22,7 @@ tags: ["My System", "TFS"]
 >
 > If you are using gated check-ins, be sure to also read my follow-up post:
 >
-> {{< reference    title="Bypassing a Gated Check-in in TFS 2010"    linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010"    linkText="http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx" >}}
+> {{< reference title="Bypassing a Gated Check-in in TFS 2010" linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" linkText="http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx" >}}
 
 Earlier this year, I wrote a [post](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) that explains the process I use for incrementing the assembly version         with each build in Team Foundation Server. However, the process was originally developed         for TFS 2005 and as you probably know by now, the build process in TFS 2010 has         changed significantly.
 
@@ -53,7 +53,7 @@ First, it is important to have a high-level understanding of the default workflo
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS%202010%20-%20DefaultTemplate%20-%20Overview.png"
 alt="DefaultTemplate.xaml - Overview"
-height="431"    width="232"
+height="431" width="232"
 title="Figure 1: DefaultTemplate.xaml - Overview" >}}
 
 This "collapsed" view of the workflow illustrates the following high-level steps         of the build process:
@@ -68,7 +68,7 @@ For the purposes of this post, the most interesting aspect of the build process 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS%202010%20-%20Update%20Drop%20Location.png"
 alt="DefaultTemplate.xaml - Update Drop Location"
-height="464"    width="254"
+height="464" width="254"
 title="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
 
 As you can see, the portion of the workflow that updates the build number does not         run on the build agent. In other words, it happens before the "Run On Agent" scope         and therefore runs on the build *controller* -- not the build *agent*         (although, in the case of the Jameson Datacenter -- and, I suspect, most TFS environments         -- there is a single build agent running on the build controller).
@@ -103,7 +103,7 @@ Build Number**, as shown below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTFS-2010-Increment-Version-Step-1.png"
 alt="CustomTemplate.xaml - Step 1"
-height="600"    width="225"
+height="600" width="225"
 title="Figure 3: CustomTemplate.xaml - Step 1" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-1.png)
@@ -113,7 +113,7 @@ Next, move **Update Build Number** and **Update Drop Location** inside the **Run
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTFS-2010-Increment-Version-Step-2.png"
 alt="CustomTemplate.xaml - Step 2"
-height="600"    width="166"
+height="600" width="166"
 title="Figure 4: CustomTemplate.xaml - Step 2" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-2.png)
@@ -258,7 +258,7 @@ At this point, CustomTemplate.xaml should look like the following (in order to c
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS-2010-Increment-Version-Step-3.png"
 alt="CustomTemplate.xaml (Update Build Number) - Step 3"
-height="586"    width="292"
+height="586" width="292"
 title="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}
 
 That's it -- we're done!

@@ -23,7 +23,7 @@ I thought it would be helpful to share my step-by-step procedures for manually  
 
 Note that the following TechNet article provides *some* of the steps for  configuring claims-based authentication in SharePoint Server 2010 (using the LDAP  provider instead of the ASP.NET SQL providers):
 
-{{< reference    title="Configure forms-based authentication for a claims-based Web application (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/ee806890.aspx" >}}
+{{< reference title="Configure forms-based authentication for a claims-based Web application (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/ee806890.aspx" >}}
 
 I had originally intended this post to simply serve as a precursor to [my next post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010), but during the process of writing this post, I realized that there  are many pieces lacking from the TechNet article. For example, if you use the current  PowerShell script provided in the above TechNet article, you end up with a Web application  that doesn't support Search (because it does not enable both Windows authentication  as well as Forms-Based Authentication).
 
@@ -519,7 +519,7 @@ The final step is to validate the Web application works as expected when using  
 >
 > This is discussed in more detail in the following blog post:
 >
-> {{< reference    title="Be \"In the Zone\" to Avoid Entering Credentials"    linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"    linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 > 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
 > and click **Sign In**.
 > 3. On the **Sign In** page, in the dropdown list, click

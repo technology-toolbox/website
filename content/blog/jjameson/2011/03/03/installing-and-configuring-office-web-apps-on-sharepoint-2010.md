@@ -23,7 +23,7 @@ In the current sprint of the project I'm working on, we are deploying Office  We
 
 While creating the installation guide for this sprint, I used the following TechNet  article as a reference for the section on installing and configuring Office Web  Apps:
 
-{{< reference    title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"    linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
+{{< reference title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)" linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
 
 While the above article includes *most* of the steps you need to perform  when deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking  a few important pieces (at least based upon my experience):
 

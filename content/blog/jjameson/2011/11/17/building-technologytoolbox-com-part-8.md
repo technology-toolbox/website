@@ -20,7 +20,7 @@ Visual Studio solutions are merged together during the deployment process.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture"
-height="520"    width="600"
+height="520" width="600"
 title="Figure 1: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
@@ -47,7 +47,7 @@ available after importing the IIS Module into the PowerShell instance).
 
 For a complete list of the IIS cmdlets, refer to the following Technet article:
 
-{{< reference    title="Web Server (IIS) Administration Cmdlets in Windows PowerShell"    linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
+{{< reference title="Web Server (IIS) Administration Cmdlets in Windows PowerShell" linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
 
 > **Important**
 >
@@ -102,7 +102,7 @@ function RemoveWebsite(
 > There is currently a bug in the `Get-Website`
 > cmdlet, so be very careful if you choose to use it:
 >
-> {{< reference    title="Get-Website always returns full list of web sites"    linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
+> {{< reference title="Get-Website always returns full list of web sites" linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
 
 If you are wondering why I specify "``r`n`"
 at the end of each `Write-Host` command,
@@ -186,7 +186,7 @@ Write-Host "Copying Subtext website content...`r`n"
 For more details on the build process, refer to one of my posts from a couple
 of years ago:
 
-{{< reference    title="Build and Deployment Overview"    linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
+{{< reference title="Build and Deployment Overview" linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
 
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 
@@ -440,7 +440,7 @@ release cycle).
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F3%20-%20Automated%20build%20and%20deployment.png"
 alt="Automated build and deployment"
-height="343"    width="600"
+height="343" width="600"
 title="Figure 2: Automated build and deployment" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_3%20-%20Automated%20build%20and%20deployment.png)
@@ -468,7 +468,7 @@ a beta version of the solution is ready.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
 alt="\"Manual\" deployment to TEST"
-height="343"    width="600"
+height="343" width="600"
 title="Figure 4: \"Manual\" deployment to TEST" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)

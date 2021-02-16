@@ -29,7 +29,7 @@ In case you aren't yet familiar with the Tugboat sample site, the following scre
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home.png"
 alt="Tugboat - Home page"
-height="600"    width="296"
+height="600" width="296"
 title="Figure 1: Tugboat - Home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
@@ -95,7 +95,7 @@ Assuming you are proficient in SharePoint, within a matter of a few minutes you 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List.png"
 alt="Specials list"
-height="474"    width="600"
+height="474" width="600"
 title="Figure 2: Specials list" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List.png)

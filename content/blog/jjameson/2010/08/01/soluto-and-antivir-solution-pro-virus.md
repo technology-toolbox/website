@@ -33,7 +33,7 @@ I managed to avoid the land mines with the virus and quickly removed Soluto (whi
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FMicrosoft%20Security%20Essentials%20-%20trojans.png"
 alt="Microsoft Security Essentials - trojans"
-height="420"    width="600"
+height="420" width="600"
 title="Figure 1: Microsoft Security Essentials - trojans" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Microsoft%20Security%20Essentials%20-%20trojans.png)

@@ -15,7 +15,7 @@ the various blog pages of the Technology Toolbox site.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
 alt="Blog home page"
-height="600"    width="374"
+height="600" width="374"
 title="Figure 1: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
@@ -84,7 +84,7 @@ Model for accessing data from Subtext.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FEntity-Model-Caelum-Step-2.png"
 alt="Entity Data Model"
-height="400"    width="431"
+height="400" width="431"
 title="Figure 2: Entity Data Model" >}}
 
 Consequently I spent a few minutes translating the SQL query in my head for
@@ -125,7 +125,7 @@ as a simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FLINQPad.png"
 alt="LINQPad"
-height="600"    width="564"
+height="600" width="564"
 title="Figure 3: LINQPad" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_LINQPad.png)
@@ -294,7 +294,7 @@ and allow users to expand them as desired.
 I did a quick Internet search for some existing jQuery that I could use instead
 of writing my own and I quickly discovered the following:
 
-{{< reference    title="Simple jQuery Expand/Collapse Unordered Lists"    linkHref="http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists" >}}
+{{< reference title="Simple jQuery Expand/Collapse Unordered Lists" linkHref="http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists" >}}
 
 Consequently, I downloaded the plugin and added it to my static HTML prototype
 in order try it out and verify everything worked as expected.
@@ -390,7 +390,7 @@ icon next to the list item.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5Flist-item-sprites-1.0.png"
 alt="list-item-sprites-1.0.png"
-height="400"    width="400"
+height="400" width="400"
 title="Figure 4: list-item-sprite-1.0.png" >}}
 
 As I noted in my previous post, if separate image files are used for the

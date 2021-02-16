@@ -25,9 +25,9 @@ Consequently, one of the first things I try to remember to do after creating a n
 
 I just did a quick Bing search and found the following resources (in case you want more info or detailed steps):
 
-{{< reference    title="Enable Worker Process Pinging for an Application Pool (IIS 7)"    linkHref="http://technet.microsoft.com/en-us/library/cc725836(WS.10).aspx" >}}
+{{< reference title="Enable Worker Process Pinging for an Application Pool (IIS 7)" linkHref="http://technet.microsoft.com/en-us/library/cc725836(WS.10).aspx" >}}
 
-{{< reference    title="Error: Web site worker process has been terminated by IIS"    linkHref="http://msdn.microsoft.com/en-us/library/bb763108.aspx" >}}
+{{< reference title="Error: Web site worker process has been terminated by IIS" linkHref="http://msdn.microsoft.com/en-us/library/bb763108.aspx" >}}
 
 Happy debugging!
 

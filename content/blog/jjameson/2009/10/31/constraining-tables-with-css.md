@@ -27,7 +27,7 @@ The following figure illustrates the desired end result:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FConstrained%20Table.png"
 alt="Constrained table"
-height="166"    width="559"
+height="166" width="559"
 title="Figure 1: Constrained table" >}}
 
 Here is the sample ASP.NET page that I created this morning to demonstrate this:

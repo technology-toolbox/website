@@ -59,7 +59,7 @@ Well, as with all software bugs, it all comes down to *triage*. You obviously ca
 
 The following post provides some great information about which Code Analysis warnings to focus your attention on first:
 
-{{< reference    title="What rules do Microsoft have turned on internally? 2007-08-09."    linkHref="http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx" >}}
+{{< reference title="What rules do Microsoft have turned on internally? 2007-08-09." linkHref="http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx" >}}
 
 This article is obviously a little dated, but still very relevant over two years later.
 

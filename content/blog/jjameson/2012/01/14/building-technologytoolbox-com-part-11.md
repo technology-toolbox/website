@@ -15,7 +15,7 @@ arrow image next to each list item.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
-height="600"    width="538"
+height="600" width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
@@ -35,7 +35,7 @@ icons used throughout the site.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5Flist-item-sprites-1.0.png"
 alt="list-item-sprites-1.0.png"
-height="400"    width="400"
+height="400" width="400"
 title="Figure 2: list-item-sprite-1.0.png" >}}
 
 Notice that the "dashed arrow" icon used in the **Most Popular Posts** section is actually the fifth image in the set (starting from the lower-left
@@ -63,7 +63,7 @@ Let's tackle these one at a time...
 
 If you look at some of the example CSS sprites in the following article...
 
-{{< reference    title="CSS Sprites: What They Are, Why They’re Cool, and How To Use Them"    linkHref="http://css-tricks.com/css-sprites/" >}}
+{{< reference title="CSS Sprites: What They Are, Why They’re Cool, and How To Use Them" linkHref="http://css-tricks.com/css-sprites/" >}}
 
 ...you will notice some sites "munge" a bunch of different images (of various
 sizes) into a single CSS sprite, whereas I have chosen to only combine the "list
@@ -82,7 +82,7 @@ confuse users).
 
 Aaron Barker explains more about this technique in the following blog post:
 
-{{< reference    title="Diagonal CSS Sprites"    linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
+{{< reference title="Diagonal CSS Sprites" linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 
 > **Important**
 >
@@ -120,7 +120,7 @@ each cell in the grid -- or you can simply take my word for it :-) ]
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5Flist-items-sprite-design.png"
 alt="List items sprite (Expression Design)"
-height="377"    width="600"
+height="377" width="600"
 title="Figure 3: List items sprite (Expression Design)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-items-sprite-design.png)
@@ -159,7 +159,7 @@ blog pages in the site, such as the one shown in Figure 4.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
 alt="Blog home page"
-height="600"    width="374"
+height="600" width="374"
 title="Figure 4: Blog home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)

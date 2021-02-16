@@ -22,7 +22,7 @@ In Microsoft Office SharePoint Server (MOSS) 2007, you could only add Web Parts 
 
 The "trick" to rendering a Web Part inline with other content is to add the Web Part to a special "hidden" zone ("wpz") and then insert a "placeholder" &lt;div&gt; element where you want the Web Part to appear within the HTML content. The following post does a great job of explaining what's happening behind the scenes when you insert a Web Part into the "Rich Content" content field on a page:
 
-{{< reference    title="Programmatically adding Web Parts to Rich Content in SharePoint 2010"    linkHref="http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/" >}}
+{{< reference title="Programmatically adding Web Parts to Rich Content in SharePoint 2010" linkHref="http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/" >}}
 
 Long ago, when I first started programmatically creating Publishing pages in MOSS 2007, I ended up creating a **[SharePointPublishingHelper](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class)** class. For those of you that haven't seen the original post (and don't want to take the time to read it now), you just need to understand that **SharePointPublishingHelper** is simply intended to make the process of creating, configuring, and approving Publishing pages in SharePoint as "painless" as possible.
 

@@ -31,5 +31,5 @@ Note that you can also retrieve the content type ID directly from the feature XM
 
 For more information on content type IDs in MOSS 2007, refer to the following MSDN article:
 
-{{< reference    title="Content Type IDs"    linkHref="http://msdn.microsoft.com/en-us/library/aa543822.aspx" >}}
+{{< reference title="Content Type IDs" linkHref="http://msdn.microsoft.com/en-us/library/aa543822.aspx" >}}
 

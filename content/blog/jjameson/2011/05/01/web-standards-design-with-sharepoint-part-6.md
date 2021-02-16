@@ -29,7 +29,7 @@ For those of you that haven't yet read my previous post, the goal was to take a 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List.png"
 alt="Specials list"
-height="474"    width="600"
+height="474" width="600"
 title="Figure 1: Specials list" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List.png)
@@ -79,7 +79,7 @@ However, as I mentioned at the end of my previous post, there's a problem. What 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Too-Many-Specials.png"
 alt="Too many items in the weekly specials section"
-height="411"    width="600"
+height="411" width="600"
 title="Figure 2: Too many items in the weekly specials section" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Too-Many-Specials.png)
@@ -110,7 +110,7 @@ Once we change the **XsltListViewWebPart** on the home page to use         the *
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List-XsltListViewWebPart.png"
 alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
-height="324"    width="600"
+height="324" width="600"
 title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List-XsltListViewWebPart.png)
@@ -449,11 +449,11 @@ At this point you should be able to modify your hosts file accordingly and brows
 
 Here are some additional resources that you may find helpful for rendering SharePoint         list items using the **XsltListViewWebPart**.
 
-{{< reference    title="XsltListViewWebPart and Custom List Views"    linkHref="http://msdn.microsoft.com/en-us/library/ff806162.aspx" >}}
+{{< reference title="XsltListViewWebPart and Custom List Views" linkHref="http://msdn.microsoft.com/en-us/library/ff806162.aspx" >}}
 
-{{< reference    title="Overview of XSLT List View Rendering System"    linkHref="http://msdn.microsoft.com/en-us/library/ff604024.aspx" >}}
+{{< reference title="Overview of XSLT List View Rendering System" linkHref="http://msdn.microsoft.com/en-us/library/ff604024.aspx" >}}
 
-{{< reference    title="Examples of Input and Result Node Trees in XSLT Transformations"    linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
+{{< reference title="Examples of Input and Result Node Trees in XSLT Transformations" linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
 
-{{< reference    title="How to: Customize the Rendering of a Field on a List View"    linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
+{{< reference title="How to: Customize the Rendering of a Field on a List View" linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
 

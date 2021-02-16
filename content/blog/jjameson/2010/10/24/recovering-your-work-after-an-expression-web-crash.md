@@ -26,7 +26,7 @@ Perhaps the source of my woes is not the TFS integration at all, but rather some
 
 As I noted in a [previous post](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server), I've been using Expression Web for a number of years to manage  content on my MSDN blog. While I'm obviously a little irritated this morning with  the tool, overall I'm still satisfied with my method of creating and editing HTML  content. It sure beats using the Web-based editing features in the Telligent Community  platform. [That's not meant to bash the Telligent functionality; for many people  -- heck, perhaps thousands and thousands of folks out there -- the "WYSIWYG" editors  provided by Telligent are probably more than sufficient to address their needs.  I simply prefer much tighter control over the HTML content...but, alas, I digress.]
 
-[Ugh...the application just crashed again on me (second time this morning). Thankfully  I had just pressed <kbd>CTRL+S</kbd> about a minute ago -- so the "damage" wasn't nearly as  bad as it was earlier this morning.]
+[Ugh...the application just crashed again on me (second time this morning). Thankfully  I had just pressed {{< kbd key="CTRL+S" >}} about a minute ago -- so the "damage" wasn't nearly as  bad as it was earlier this morning.]
 
 A few hours ago I was authoring a new blog post (not this one -- a different  one that hopefully more people will find valuable than this one) and after about  45 minutes of typing, revising, and typing some more, Expression Web suddenly crashed:
 
@@ -113,7 +113,7 @@ For those not familiar with WinDbg, this command is simply "dumping as Unicode" 
 
 Here's the output from this command:
 
-0:000&gt; <kbd>du /c 100 0f6dfa22</kbd>
+0:000&gt; `du /c 100 0f6dfa22`
 
 ```
 0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "

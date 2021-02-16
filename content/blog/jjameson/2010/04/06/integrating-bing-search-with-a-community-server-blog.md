@@ -126,7 +126,7 @@ Note that `method="get"` is specified on the `<form>` element. From this, we kno
 
 Note that a little more JavaScript is required than I would actually prefer in order to avoid handle a couple of interesting scenarios.
 
-The first scenario is where a user presses the <kbd>Enter</kbd> key instead of clicking the **Search** button. Depending on the browser, pressing the <kbd>Enter</kbd> key in a form element may submit the form. However, since the Bing search feature is bypassing the form submission (and just redirecting directly to the search results page), we don't want to postback to the server. Otherwise, we would simply refresh the current page (and lose any search keywords specified by the user).
+The first scenario is where a user presses the {{< kbd key="Enter" >}} key instead of clicking the **Search** button. Depending on the browser, pressing the {{< kbd key="Enter" >}} key in a form element may submit the form. However, since the Bing search feature is bypassing the form submission (and just redirecting directly to the search results page), we don't want to postback to the server. Otherwise, we would simply refresh the current page (and lose any search keywords specified by the user).
 
 The second scenario is where someone doesn't specify any search keywords and instead just clicks the **Search** button. This is because if you don't specify any query terms (i.e. the "q" query string parameter), then you simply get redirected to [http://www.bing.com](http://www.bing.com/) (which would thoroughly confuse most people -- including myself).
 

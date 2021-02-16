@@ -35,7 +35,7 @@ you have installed the TFS Power Tools -- which I certainly hope you have (if,
 for no other reason, than to
 [leverage additional check-in policies](/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server)).
 
-From a Visual Studio command prompt, simply use the <kbd>tfpt scorch</kbd>
+From a Visual Studio command prompt, simply use the `tfpt scorch`
 command. For example:
 
 ```
@@ -43,7 +43,7 @@ cd "\NotBackedUp\Dow\Collaboration\ELN HD"
 tfpt scorch Main /r
 ```
 
-Note that <kbd>/r</kbd> is short for <kbd>/recursive</kbd>.
+Note that `/r` is short for `/recursive`.
 
 You'll be prompted to confirm the changes to the workspace (assuming it doesn't
 exactly match the items in source control).
@@ -56,14 +56,14 @@ source code structure in TFS (e.g. Dev branches, Release branches, extraneous
 folders I don't want to sync, etc.), it can take a while to click through the
 context menu in Source Control Explorer to cloak/uncloak various folders.
 
-In that case, you can combine the <kbd>tf.exe</kbd> utility with PowerShell
+In that case, you can combine the `tf.exe` utility with PowerShell
 to make this a breeze. For example, suppose I've been working on various Dev
 or Release branches in the Dow Collaboration team project and now I want to
 clean up my local workspace (in other words, I only need the Main branch).
 
 I start by invoking PowerShell from a Visual Studio command prompt, changing
 to the root folder for the project, and then storing the output from the
-<kbd>tf dir</kbd> command in a variable:
+`tf dir` command in a variable:
 
 ```
 PowerShell
@@ -121,7 +121,7 @@ $SharePointCustomBuildWorkflow
 
 With this, I can quickly run as command to cloak all of the folders. However,
 notice the dollar signs at the beginning of each line. I'll need to trim those
-off when passing each folder to the <kbd>tf workfold /cloak</kbd> command:
+off when passing each folder to the `tf workfold /cloak` command:
 
 ```
 $tfFolders | foreach { tf workfold /cloak $_.Substring(1) }

@@ -34,7 +34,7 @@ Now, please don't misunderstand -- I most certainly am not claiming that the Jam
 
 For those of you that may not have seen the original Google server farm, I did a         quick search this morning and managed to find the following:
 
-{{< reference    title="Google Stanford Hardware"    linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
+{{< reference title="Google Stanford Hardware" linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
 
 If you haven't seen this, take a quick peek. It will surely bring a smile -- if         not a burst of laughter.
 
@@ -45,7 +45,7 @@ Here's the physical architecture of what I now refer to as the "Old Jameson Data
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20System%20Architecture.png"
 alt="Old Jameson Datacenter - Physical Architecture"
-height="460"    width="600"
+height="460" width="600"
 title="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20System%20Architecture.png)
@@ -59,7 +59,7 @@ Notice that I use to run a back-to-back firewall configuration with a perimeter 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png"
 alt="Old Jameson Datacenter - TCP/IP Configuration"
-height="471"    width="600"
+height="471" width="600"
 title="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png)
@@ -73,7 +73,7 @@ Anyway, here's the DNS and DHCP configuration for the original farm:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20DNS%20Configuration.png"
 alt="Old Jameson Datacenter - DNS/DHCP Configuration"
-height="186"    width="600"
+height="186" width="600"
 title="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20DNS%20Configuration.png)
@@ -85,7 +85,7 @@ Perhaps the most laughable aspect of the Old Jameson Datacenter -- at least when
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20Disk%20Configuration.png"
 alt="Old Jameson Datacenter - Disk Configuration"
-height="475"    width="600"
+height="475" width="600"
 title="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20Disk%20Configuration.png)

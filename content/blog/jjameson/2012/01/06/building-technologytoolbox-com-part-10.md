@@ -17,7 +17,7 @@ show you how I built on that foundation to generate the content for the
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
-height="600"    width="538"
+height="600" width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
@@ -29,7 +29,7 @@ illustrated in the corresponding page layout.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
 alt="Technology Toolbox home page (page layout)"
-height="600"    width="536"
+height="600" width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
@@ -71,7 +71,7 @@ At this point, the model should resemble the following:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FEntity-Model-Caelum-Step-2.png"
 alt="Entity Data Model"
-height="400"    width="431"
+height="400" width="431"
 title="Figure 3: Entity Data Model" >}}
 
 With the updated model, the following LINQ query can be used to retrieve
@@ -100,7 +100,7 @@ most popular). That sproc is used to render the **Top Posts** section
 on the Subtext dashboard page, and I *believe* the formula is based on
 the following blog post:
 
-{{< reference    title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09."    linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
+{{< reference title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09." linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
 
 I chose not to use the existing sproc for a couple of reasons:
 

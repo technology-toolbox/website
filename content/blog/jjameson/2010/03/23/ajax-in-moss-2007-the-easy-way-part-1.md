@@ -26,7 +26,7 @@ Similar to the **Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**  feat
 
 Mike Ammerlaan's post from a couple of years ago introduced the concept of [integrating ASP.NET AJAX with SharePoint](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3). The detailed configuration steps eventually  made their way onto MSDN as well:
 
-{{< reference    title="Installing ASP.NET 2.0 AJAX Extensions 1.0 in Windows SharePoint Services Version 3.0"    linkHref="http://msdn.microsoft.com/en-us/library/bb861898.aspx" >}}
+{{< reference title="Installing ASP.NET 2.0 AJAX Extensions 1.0 in Windows SharePoint Services Version 3.0" linkHref="http://msdn.microsoft.com/en-us/library/bb861898.aspx" >}}
 
 However, if you look at the comments on the previous MSDN article, it appears  that the prescriptive guidance isn't always easy to follow and implement. I'll be  the first to admit that copying and pasting lots of "configuration goo" can be problematic.
 
@@ -135,7 +135,7 @@ namespace Fabrikam.Demo.Web.AjaxConfiguration
 
 I also created custom STSADM commands to enable and disable AJAX. For example,  after deploying the **Fabrikam.Demo.StsAdm.Commands.wsp**, the following  command can be used to enable AJAX:
 
-<kbd>stsadm -o fabrikam-enableajax</kbd>
+`stsadm -o fabrikam-enableajax`
 
 ```
 Adds the necessary configuration changes to enable AJAX on a web application.
@@ -186,7 +186,7 @@ The following screenshot shows what the site looks like after creating the Web  
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FAJAX%20in%20SharePoint.png"
 alt="AJAX in SharePoint"
-height="417"    width="600"
+height="417" width="600"
 title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)

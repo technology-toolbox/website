@@ -22,7 +22,7 @@ The following figure illustrates the initial build and deployment of the solutio
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F1%20-%20Initial%20build%20and%20deployment.png"
 alt="Initial build and deployment of the solution"
-height="259"    width="600"
+height="259" width="600"
 title="Figure 1: Initial build and deployment of the solution" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_1%20-%20Initial%20build%20and%20deployment.png)
@@ -59,7 +59,7 @@ Figure 2 shows a subsequent build of the solution.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F2%20-%20Subsequent%20build%20and%20deployment.png"
 alt="Subsequent build and deployment (with draft of installation guide)"
-height="271"    width="600"
+height="271" width="600"
 title="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_2%20-%20Subsequent%20build%20and%20deployment.png)
@@ -71,7 +71,7 @@ While this deployment process is functional -- in that a new build of the soluti
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F3%20-%20Automated%20build%20and%20deployment.png"
 alt="Automated build and deployment (with install scripts and updated installation guide)"
-height="343"    width="600"
+height="343" width="600"
 title="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_3%20-%20Automated%20build%20and%20deployment.png)
@@ -89,7 +89,7 @@ As this cycle repeats (as more features are implemented in the solution), the Te
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
 alt="Installing the Beta 1 version to TEST"
-height="343"    width="600"
+height="343" width="600"
 title="Figure 4: Installing the Beta 1 version to TEST" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
@@ -115,7 +115,7 @@ Just as the daily build process (illustrated in Figure 3) is repeated throughout
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F5%20-%20Installing%20the%20RC1%20version%20to%20TEST.png"
 alt="Installing the RC1 version to TEST"
-height="351"    width="600"
+height="351" width="600"
 title="Figure 5: Installing the RC1 version to TEST" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_5%20-%20Installing%20the%20RC1%20version%20to%20TEST.png)
@@ -125,7 +125,7 @@ Note that if issues are discovered with the RC1 build, it may be necessary to pr
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F6%20-%20Installing%20the%20RC2%20version%20to%20TEST.png"
 alt="Installing the RC2 version to TEST"
-height="351"    width="600"
+height="351" width="600"
 title="Figure 6: Installing the RC2 version to TEST" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_6%20-%20Installing%20the%20RC2%20version%20to%20TEST.png)
@@ -135,7 +135,7 @@ Assume that the second release candidate (version **1.0.379.0** in         Figur
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F7%20-%20Installing%20the%20V1.0%20release%20to%20PROD.png"
 alt="Installing the V1.0 release to PROD"
-height="350"    width="600"
+height="350" width="600"
 title="Figure 7: Installing the V1.0 release to PROD" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_7%20-%20Installing%20the%20V1.0%20release%20to%20PROD.png)

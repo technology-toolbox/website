@@ -22,7 +22,7 @@ This morning I discovered that when you upgrade a managed C++ project from Visua
 
 Note that you can force a managed C++ project to continue to target one of the older versions of the .NET Framework, as described in the following:
 
-{{< reference    title="Visual Studio 2010 C++ Project Upgrade Guide"    linkHref="http://blogs.msdn.com/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx" >}}
+{{< reference title="Visual Studio 2010 C++ Project Upgrade Guide" linkHref="http://blogs.msdn.com/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx" >}}
 
 However, you'll need to have Visual Studio 2008 installed on your build server -- or, presumably, you could choose to install the Microsoft Windows SDK for Windows Server 2008 and .NET Framework 3.5 instead (as I described in [one of my blog posts last year](/blog/jjameson/2009/11/07/compiling-c-projects-with-team-foundation-build)).
 

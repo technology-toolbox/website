@@ -16,7 +16,7 @@ the most recent blog posts, as shown below.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
-height="600"    width="538"
+height="600" width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
@@ -28,7 +28,7 @@ page layout.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
 alt="Technology Toolbox home page (page layout)"
-height="600"    width="536"
+height="600" width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
@@ -42,7 +42,7 @@ the "Caelum" solution.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture"
-height="520"    width="600"
+height="520" width="600"
 title="Figure 3: Solution architecture" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)

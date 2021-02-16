@@ -30,7 +30,7 @@ Update** field set to **Yes**, as shown below. This is the         key to "centr
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-List.png"
 alt="Reusable Content list"
-height="600"    width="463"
+height="600" width="463"
 title="Figure 1: Reusable Content list" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-List.png)
@@ -40,7 +40,7 @@ The following screenshot shows a sample page from one of the sites used to creat
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content.png"
 alt="Reusable Content in \"view\" mode"
-height="511"    width="600"
+height="511" width="600"
 title="Figure 2: Reusable Content in \"view\" mode" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content.png)
@@ -50,7 +50,7 @@ Note that when the document author is editing the page, SharePoint marks the reu
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-edit-mode.png"
 alt="Reusable Content in \"edit\" mode"
-height="423"    width="600"
+height="423" width="600"
 title="Figure 3: Reusable Content in \"edit\" mode" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-edit-mode.png)
@@ -62,7 +62,7 @@ For example, consider the following screenshot that shows the same page as Figur
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FReusable-Content-missing-content.png"
 alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
-height="211"    width="600"
+height="211" width="600"
 title="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Reusable-Content-missing-content.png)

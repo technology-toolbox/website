@@ -45,7 +45,7 @@ Here's a partial screenshot of the home page of the portal, after clicking the *
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSilverlight%20-%20No%20menu%20open.png"
 alt="No menus open"
-height="300"    width="447"
+height="300" width="447"
 title="Figure 1: No menus open" >}}
 
 While the above screenshot doesn't illustrate any problem, the caption gives you         a hint as to what's coming next.
@@ -55,7 +55,7 @@ The following screenshot shows what happens when you click the **Page**         
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FSilverlight%20-%20Obscured%20menu.png"
 alt="Page menu items obscured by Silverlight control"
-height="300"    width="447"
+height="300" width="447"
 title="Figure 2: Page menu items obscured by Silverlight control" >}}
 
 Good luck trying to click the **Delete Page**, **Add Web Parts**,         and **Modify Web Parts** menu items!
@@ -67,7 +67,7 @@ Fortunately, once I discovered this problem, it didn't take long to find a solut
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSilverlight%20-%20Unobscured%20menu%20(windowless).png"
 alt="Page menu items no longer obscured by windowless Silverlight control"
-height="300"    width="447"
+height="300" width="447"
 title="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}
 
 Here's a comment from Karl Erickson on his blog post entitled "[Limitations

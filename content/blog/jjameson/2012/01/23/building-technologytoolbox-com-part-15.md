@@ -755,7 +755,7 @@ weed out the hacking "noise."
 >
 > Refer to the following post for more information on configuring ELMAH filters:
 >
-> {{< reference    title="Filter ELMAH email messages to avoid getting spammed by hackers"    linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
+> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
 
 ### System.Web.HttpException: A public action method 'RecordAggregatorView'
 

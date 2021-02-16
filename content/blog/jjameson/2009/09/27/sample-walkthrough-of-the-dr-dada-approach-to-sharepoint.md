@@ -23,7 +23,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > I discovered that using relative paths in the DDF file is not compatible with Team Foundation Build. Refer to the following post for the updated DDF file and corresponding modifications to the project file:
 >
-> {{< reference    title="Building SharePoint WSPs with Team Foundation Build"    linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build"    linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
+> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
 
 In a previous post, I introduced
 [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through
@@ -97,7 +97,7 @@ is to build out a "shell" that looks like the following:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FDR.DADA%20-%201.png"
 alt="Visual Studio solution before adding SharePoint features"
-height="178"    width="355"
+height="178" width="355"
 title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
 
 Next, I create a new Visual Studio solution folder called **Publishing**
@@ -150,7 +150,7 @@ After that's all done, the Visual Studio solution looks like the following:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%202.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
-height="600"    width="183"
+height="600" width="183"
 title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%202.png)
@@ -301,7 +301,7 @@ that invokes makecab.exe and adding this new target as a dependency of the build
 ```
 
 The next step is to build and deploy the solution. I start by pressing
-<kbd>CTRL+SHIFT+B</kbd> to compile the solution and create the corresponding
+{{< kbd key="CTRL+SHIFT+B" >}} to compile the solution and create the corresponding
 WSP.
 
 ### Installing the Solution and Activating the Features
@@ -321,14 +321,13 @@ variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder 
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 ```
 
-C:\Windows\system32&gt;<kbd>set FABRIKAM_FABWEB_URL=http://fabweb-local</kbd>
+C:\Windows\system32&gt;`set FABRIKAM_FABWEB_URL=http://fabweb-local`
 
-C:\Windows\system32&gt;<kbd>set FABRIKAM_BUILD_CONFIGURATION=Debug</kbd>
+C:\Windows\system32&gt;`set FABRIKAM_BUILD_CONFIGURATION=Debug`
 
-C:\Windows\system32&gt;<kbd>cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts</kbd>
+C:\Windows\system32&gt;`cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts`
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Add
-Solution.cmd"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Add Solution.cmd"`
 
 ```
 Adding Fabrikam.Demo.Publishing (Debug)...
@@ -338,8 +337,7 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Deploy
-Solution.cmd"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Deploy Solution.cmd"`
 
 ```
 Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
@@ -349,8 +347,7 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"Activate
-Features.cmd"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Activate Features.cmd"`
 
 ```
 Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
@@ -784,8 +781,7 @@ in the SharePoint WSP. This allows us, for example, to fix a bug in **Fabrikam.D
 Also note that you need to recycle the application pool for your SharePoint
 site after updating the assemblies in the GAC:
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>"GAC
-Assemblies.cmd"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"GAC Assemblies.cmd"`
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -795,8 +791,7 @@ Assembly successfully added to the cache
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;<kbd>C:\Windows\System32\inetsrv\appcmd.exe
-recycle apppool "SharePoint - foobar-local80"</kbd>
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"`
 
 ```
 "SharePoint - foobar-local80" successfully recycled
@@ -822,10 +817,10 @@ get the new WSP built and deployed.
 
 Before finishing off this post, I also want to ensure that you are aware
 of the "command history" feature in Microsoft Windows. To rerun a command, simply
-press <kbd>F7</kbd> in a command window. A popup window shows the list of commands
+press {{< kbd key="F7" >}} in a command window. A popup window shows the list of commands
 you've executed -- allowing you to quickly run a previous command without having
 to type it in again. You might already have been using the "up arrow" to essentially
-do the same thing, but I've found pressing <kbd>F7</kbd> -- and then scrolling
+do the same thing, but I've found pressing {{< kbd key="F7" >}} -- and then scrolling
 to the command I want -- to be a little more convenient. Unlike using the "up
 arrow" to repeat a command, selecting one after using F7 won't re-add it to
 the command history.
@@ -833,7 +828,7 @@ the command history.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%203.png"
 alt="Command history"
-height="205"    width="600"
+height="205" width="600"
 title="Figure 3: Command history" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%203.png)

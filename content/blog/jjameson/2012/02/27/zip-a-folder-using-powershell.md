@@ -112,7 +112,7 @@ to work just fine -- most of the time.
 As I mentioned before, the **CopyHere** method runs asynchronously.
 When the **CopyHere** operation is running, a dialog is displayed
 with a **Cancel** button -- and if you click this by mistake (or
-press <kbd>Enter</kbd> when the dialog box has the focus) then, well, let's
+press {{< kbd key="Enter" >}} when the dialog box has the focus) then, well, let's
 just say that you aren't on the "Happy Path" anymore.
 
 To make this process more robust, I decided to use a different approach --

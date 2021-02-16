@@ -26,7 +26,7 @@ Apparently -- quite some time ago -- John scripted the various configuration  st
 
 Note that in my environment, both the client and server are in the same domain.  Therefore, following the "10-second guide" for HVRemote, I created a firewall rule  to allow Microsoft Management Console:
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;<kbd>cscript hvremote.wsf /mmc:enable</kbd>
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;`cscript hvremote.wsf /mmc:enable`
 
 <samp>
 Microsoft (R) Windows Script Host Version 5.8<br>
@@ -57,8 +57,7 @@ However, when I attempted to connect to Hyper-V Manager to my Hyper-V servers,  
 
 In addition to enabling the firewall rule, I found that I also needed to allow  Anonymous Logon remote DCOM access:
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;<kbd>cscript hvremote.wsf /mode:client
-/anondcom:grant</kbd>
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;`cscript hvremote.wsf /mode:client /anondcom:grant`
 
 <samp>
 Microsoft (R) Windows Script Host Version 5.8<br>

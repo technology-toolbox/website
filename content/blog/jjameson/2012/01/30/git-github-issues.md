@@ -31,7 +31,7 @@ denied (publickey)" error message. Argh!
 After nuking my key files, generating a new key, copying the new public key
 into my GitHub account settings, and then setting the various configuration
 variables once again (e.g. <var>user.name</var> and <var>user.email</var>),
-I verified that I could once again successfully "<kbd>ssh -T git@github.com</kbd>".
+I verified that I could once again successfully "`ssh -T git@github.com`".
 
 Unfortunately, when I started Visual Studio and opened the Subtext solution,
 I noticed that none of the items in Solution Explorer showed any source control
@@ -56,7 +56,7 @@ should share something else. What is wrong with the following screenshot?
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGit%20-%20Pending%20changes%20-%20yes%20or%20no.png"
 alt="Git - pending changes - yes or no?"
-height="350"    width="600"
+height="350" width="600"
 title="Figure 1: Git - pending changes - yes or no?" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Git%20-%20Pending%20changes%20-%20yes%20or%20no.png)
@@ -70,7 +70,7 @@ Or, are there no pending changes, as indicated by the empty list in the
 the **Refresh** button -- in case you think that might be the issue.]
 
 The correct answer seems to be "this is a bug in the Git Source Control Provider
-for Visual Studio." I say this based on the output from "<kbd>git status</kbd>":
+for Visual Studio." I say this based on the output from "`git status`":
 
 ```
 $ cd /c/NotBackedUp/Subtext/

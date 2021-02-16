@@ -65,8 +65,8 @@ environment (DEV) and local development VMs.
 - Vision/Scope – Fabrikam Extranet
 - Infrastructure Model - Fabrikam Extranet
 - SQL Server Installation Guide - Fabrikam Extranet
-- {{< reference    title="Deployment scenario: Multiple servers for a three-tier farm (SharePoint Server 2010)"    linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx" >}}
-- {{< reference    title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"    linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx" >}}
+- {{< reference title="Deployment scenario: Multiple servers for a three-tier farm (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx" >}}
+- {{< reference title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)" linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx" >}}
 
 ## Document conventions
 
@@ -242,8 +242,8 @@ Whenever possible, it is strongly recommended to start from a Sysprep'ed
 image to save significant time. For information on creating and using Sysprep'ed
 images for virtual machines, refer to the following blog posts:
 
-- {{< reference    title="Creating a VM/VHD Library"    linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
-- {{< reference    title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines"    linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
+- {{< reference title="Creating a VM/VHD Library" linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
+- {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines" linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
 
 ### Reset WSUS configuration
 
@@ -273,7 +273,7 @@ entries specified in [KB
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Script to Reset WSUS for Sysprep'ed Image"    linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
+{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
 
 ### Remove "stale" network adapters
 
@@ -311,7 +311,7 @@ To cleanup the network adapters:
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Removing \"Stale\" Network Adapters in Hyper-V VM"    linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
+{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
 
 ## DEV - Configure VM storage
 
@@ -326,7 +326,7 @@ to reduce I/O contention.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FSharePoint%20Development%20VM.png"
 alt="Figure 1: SharePoint development VM configuration"
-height="317"    width="600"
+height="317" width="600"
 title="Figure 1: SharePoint development VM configuration" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Development%20VM.png)
@@ -361,7 +361,7 @@ files:
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Creating Small VHDs (&lt; 1GB) for Hyper-V"    linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
+{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
@@ -383,7 +383,7 @@ To configure the MaxPatchCacheSize policy:
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0"    linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx" >}}
+{{< reference title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0" linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx" >}}
 
 ## Disable Internet Protocol version 6 (TCP/IPv6)
 
@@ -533,7 +533,7 @@ loopback address:
 > 3. Right-click **MSV1\_0**, point to **New**,
 > and then click **Multi-String Value**.
 > 4. Type **BackConnectionHostNames**, and then press
-> <kbd>ENTER</kbd>.
+> {{< kbd key="ENTER" >}}.
 > 5. Right-click **BackConnectionHostNames**, and then click
 > **Modify**.
 > 6. In the **Value data** box, type the host header corresponding
@@ -621,14 +621,14 @@ To install Team Explorer:
 Install Visual Studio SP1 using Windows Update or by downloading and
 running the installer from the following location:
 
-{{< reference    title="Microsoft Visual Studio 2010 Service Pack 1 (Installer)"    linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691" >}}
+{{< reference title="Microsoft Visual Studio 2010 Service Pack 1 (Installer)" linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691" >}}
 
 ## DEV – Install TFS Power Tools
 
 In order to leverage additional check-in policies, install the TFS Power
 Tools (using the default options):
 
-{{< reference    title="Visual Studio Power Tools"    linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
+{{< reference title="Visual Studio Power Tools" linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
 
 ## Install SQL Server 2008
 
@@ -731,8 +731,8 @@ Install SQL Server 2008 R2 Service Pack 2 or SQL Server 2008 Service
 Pack 3 using Windows Update or by downloading it from one the following
 locations:
 
-- {{< reference    title="Microsoft® SQL Server® 2008 R2 Service Pack 2"    linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=30437" >}}
-- {{< reference    title="SQL Server 2008 Service Pack 3"    linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594" >}}
+- {{< reference title="Microsoft® SQL Server® 2008 R2 Service Pack 2" linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=30437" >}}
+- {{< reference title="SQL Server 2008 Service Pack 3" linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594" >}}
 
 ## DEV - Change databases to Simple recovery model
 
@@ -794,7 +794,7 @@ END
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Using the Simple Recovery Model for SharePoint Development Environments"    linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
+{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
 
 ## DEV - Install Microsoft Office 2010
 
@@ -877,7 +877,7 @@ server in the farm.
 
 Download and install the update from the following location:
 
-{{< reference    title="KB979917 - QFE for Sharepoint issues - Perf Counter fix & User Impersonation"    linkHref="http://code.msdn.microsoft.com/KB979917" >}}
+{{< reference title="KB979917 - QFE for Sharepoint issues - Perf Counter fix & User Impersonation" linkHref="http://code.msdn.microsoft.com/KB979917" >}}
 
 > **Important**
 >
@@ -1042,7 +1042,7 @@ Local intranet zone:
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Be \"In the Zone\" to Avoid Entering Credentials"    linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 ## Add the URL for the extranet website to the Local intranet zone
 
@@ -1130,7 +1130,7 @@ Admin Service:
 
 More information on this step is available in the following blog post:
 
-{{< reference    title="Event ID 10016, KB 920783, and the WSS%5FWPG Group"    linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS%5FWPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ## Rename TaxonomyPicker.ascx
 
@@ -1260,7 +1260,7 @@ To change the schedule for deleting timer job history:
 
 Install SharePoint Server 2010 Service Pack 1 on each server in the farm:
 
-{{< reference    title="Service Pack 1 for Microsoft SharePoint Server 2010 (KB2460045)"    linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=26623" >}}
+{{< reference title="Service Pack 1 for Microsoft SharePoint Server 2010 (KB2460045)" linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=26623" >}}
 
 > **Note**
 >
@@ -1273,7 +1273,7 @@ Install SharePoint Server 2010 Service Pack 1 on each server in the farm:
 
 Install the SharePoint Server 2010 cumulative update for August 2012:
 
-{{< reference    title="Description of the SharePoint Server 2010 cumulative update package (SharePoint server-package): August 28, 2012"    linkHref="http://support.microsoft.com/kb/2687353" >}}
+{{< reference title="Description of the SharePoint Server 2010 cumulative update package (SharePoint server-package): August 28, 2012" linkHref="http://support.microsoft.com/kb/2687353" >}}
 
 After installing the update on each server in the farm, run the SharePoint
 Products and Technologies Configuration Wizard (PSConfigUI.exe) to upgrade
@@ -1298,7 +1298,7 @@ FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FEnvironment-Variables-Fabrikam-Extranet.png"
 alt="Setting environment variables"
-height="436"    width="394"
+height="436" width="394"
 title="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
@@ -1310,8 +1310,8 @@ Name the snapshot **Baseline SharePoint Server 2010 configuration**.
 More information about using VM snapshots for SharePoint development
 is available in the following blog posts:
 
-- {{< reference    title="Virtual Machine Snapshots and SharePoint Development, Part 1"    linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
-- {{< reference    title="Virtual Machine Snapshots and SharePoint Development, Part 2"    linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
+- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 1" linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
+- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 2" linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
@@ -1997,7 +1997,7 @@ The site should resemble the following:
 [{{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FSharePoint-Server-2010-Publishing-Portal.png"
 alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
-height="374"    width="600"
+height="374" width="600"
 title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_SharePoint-Server-2010-Publishing-Portal.png)
 
 Although the site does not yet have the Fabrikam branding or any custom
@@ -2027,7 +2027,7 @@ To login to the website using Windows authentication:
 >
 > This is discussed in more detail in the following blog post:
 >
-> {{< reference    title="Be \"In the Zone\" to Avoid Entering Credentials"    linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 > 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 > and click **Sign In**.
 > 3. On the **Sign In** page, in the dropdown list, click
@@ -2042,7 +2042,7 @@ roundtrips for each and every page request on your site.
 
 This is discussed in more detail in the following blog post:
 
-{{< reference    title="Always Enable Disk-Based Caching in SharePoint Server 2010"    linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010"    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx" >}}
+{{< reference title="Always Enable Disk-Based Caching in SharePoint Server 2010" linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx" >}}
 
 Use the following procedure to configure disk-based cache settings for
 a Web application.
@@ -2561,7 +2561,7 @@ the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFabrikam%20Extranet%20-%20home%20page.png"
 alt="Fabrikam Extranet home page"
-height="277"    width="600"
+height="277" width="600"
 title="Figure 4: Fabrikam Extranet home page" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Fabrikam%20Extranet%20-%20home%20page.png)

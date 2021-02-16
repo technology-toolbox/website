@@ -68,7 +68,7 @@ Unfortunately, I quickly discovered a couple of issues with Orchard that left  m
 
 The first is what appears to be a rather obvious bug that is described in a question  posted on Stack Overflow:
 
-{{< reference    title="How can I set the permissions for blogs in Orchard CMS?"    linkHref="http://stackoverflow.com/questions/6941720/how-can-i-set-the-permissions-for-blogs-in-orchard-cms" >}}
+{{< reference title="How can I set the permissions for blogs in Orchard CMS?" linkHref="http://stackoverflow.com/questions/6941720/how-can-i-set-the-permissions-for-blogs-in-orchard-cms" >}}
 
 The second issue is related to the fundamental architecture of Orchard. When  I used SQL Server Profiler to inspect the database calls for one of my sample blog  pages (as described in [one of my previous posts](/blog/jjameson/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler)), I observed over 40 separate round-trips to the database  just to render a *single* page. [Note that I am going off memory here from  a couple of months ago, so I could be wrong about the number -- but I seem to recall  something in the neighborhood of 42-44 round-trips to SQL Server.]
 
@@ -86,11 +86,11 @@ Umbraco is relatively easy to install and configure, but I discovered some issue
 
 In this configuration, I encountered an error similar to the one described in  the following issue:
 
-{{< reference    title="Error after installing blog"    linkHref="http://blog4umbraco.codeplex.com/workitem/6895" >}}
+{{< reference title="Error after installing blog" linkHref="http://blog4umbraco.codeplex.com/workitem/6895" >}}
 
 Fortunately, a little digging around led to the corresponding fix:
 
-{{< reference    title="xslt assumes Blog is in root"    linkHref="http://blog4umbraco.codeplex.com/workitem/6783" >}}
+{{< reference title="xslt assumes Blog is in root" linkHref="http://blog4umbraco.codeplex.com/workitem/6783" >}}
 
 However, the more I looked at Umbraco, the more I felt like it was too complex  for what I was looking for. The more I dug into Umbraco, the more I thought about  how much time I would need to invest in learning yet another CMS solution. Since  SharePoint is one of my core competencies, I honestly don't see myself recommending  Umbraco over SharePoint for the size of companies that I tend to work with.
 

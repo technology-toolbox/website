@@ -36,5 +36,5 @@ To avoid warnings before refreshing external data in Excel Services:
 
 Note that if you are using Microsoft Office SharePoint Server (MOSS) 2007, the configuration steps will be slightly different (the setting is changed through the SSP admin page). Refer to the following for more information:
 
-{{< reference    title="Manage Excel Services trusted file locations"    linkHref="http://technet.microsoft.com/en-us/library/cc263009(office.12).aspx" >}}
+{{< reference title="Manage Excel Services trusted file locations" linkHref="http://technet.microsoft.com/en-us/library/cc263009(office.12).aspx" >}}
 

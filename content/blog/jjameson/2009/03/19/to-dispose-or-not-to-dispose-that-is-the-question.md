@@ -44,7 +44,7 @@ In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has be
 > should dispose of the SPWeb.ParentWeb. This is no longer the official guidance.
 > The dispose cleanup is handled automatically by the SharePoint framework.
 
-{{< reference    title="Scott Harris, et. al (2009). Best Practices: Using Disposable Windows SharePoint Services Objects 2009-03-19."    linkHref="http://msdn.microsoft.com/en-us/library/aa973248.aspx" >}}
+{{< reference title="Scott Harris, et. al (2009). Best Practices: Using Disposable Windows SharePoint Services Objects 2009-03-19." linkHref="http://msdn.microsoft.com/en-us/library/aa973248.aspx" >}}
 
 Woohoo!!!!!
 

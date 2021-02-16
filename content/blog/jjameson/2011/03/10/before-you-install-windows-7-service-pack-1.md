@@ -27,7 +27,7 @@ If you attempt to install the current RSAT release after installing Windows 7 SP
 
 Of course, this is clearly documented on the download page:
 
-{{< reference    title="Remote Server Administration Tools for Windows 7"    linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en" >}}
+{{< reference title="Remote Server Administration Tools for Windows 7" linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en" >}}
 
 > ...
 >

@@ -21,7 +21,7 @@ VMs:
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Usage%20-%20FOOBAR7%20-%20Baseline.png"
 alt="Disk usage"
-height="460"    width="600"
+height="460" width="600"
 title="Figure 1:" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage%20-%20FOOBAR7%20-%20Baseline.png)
@@ -57,7 +57,7 @@ installing Visual Studio 2012.
 Unfortunately, it seems like this is just the way it's going to be from now
 on -- at least according to Heath Stewart from Microsoft:
 
-{{< reference    title="How Visual Studio 2012 Avoids Prompts for Source"    linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
+{{< reference title="How Visual Studio 2012 Avoids Prompts for Source" linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
 
 Heath, if you're reading this, then sorry, but I think Microsoft's decision
 to force this bloat on us is, um, stupid. Okay, maybe *shortsighted*

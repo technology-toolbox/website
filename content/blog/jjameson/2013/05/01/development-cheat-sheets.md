@@ -10,7 +10,7 @@ tags: ["My System", "SharePoint
 
 I like to use Microsoft OneNote to manage a number of what I call "development
 cheat sheets." These come in very handy when doing SharePoint development, because
--- at least in my experience -- this is rarely as simple as pressing <kbd>F5</kbd>
+-- at least in my experience -- this is rarely as simple as pressing {{< kbd key="F5" >}}
 after making some changes in Visual Studio. I know that's what the SharePoint/Visual
 Studio guys would like it to be, but I personally find it faster (and more reliable)
 to use my "DRDADA" PowerShell deployment scripts.
@@ -21,7 +21,7 @@ my Fabrikam Demo solution.
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Fabrikam-Demo-Main-branch.png"
 alt="Development cheat sheet - Fabrikam Demo - Main branch"
-height="393"    width="600"
+height="393" width="600"
 title="Figure 1: Development \"cheat sheet\" - Fabrikam Demo - Main branch" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Development-cheat-sheet-Fabrikam-Demo-Main-branch.png)
@@ -114,7 +114,7 @@ for the code sample included in
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
-height="524"    width="600"
+height="524" width="600"
 title="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch.png)
@@ -145,7 +145,7 @@ upgrading) the ELN solutions (WSPs).
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Dow-ELN-Main-branch.png"
 alt="Development cheat sheet - Dow ELN - Main branch"
-height="461"    width="600"
+height="461" width="600"
 title="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Development-cheat-sheet-Dow-ELN-Main-branch.png)
