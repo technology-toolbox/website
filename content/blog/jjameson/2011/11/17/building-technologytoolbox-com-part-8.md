@@ -482,8 +482,8 @@ is scripted. The only thing that needs to be done is to open a PowerShell window
 above.:
 
 ```
-PS C:\> cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'
-PS C:\NotBackedUp\...\Scripts> & '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9
+PS C:\> {{< kbd "cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'" >}}
+PS C:\NotBackedUp\...\Scripts> {{< kbd "& '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9" >}}
 ```
 
 Note that when running the script in TEST, the Caelum and Subtext versions

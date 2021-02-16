@@ -41,16 +41,16 @@ in my
 The following illustrates these scripts in action:
 
 ```
-PS C:\...\Toolbox\PowerShell>.\Get-BackConnectionHostNames.ps1
+PS C:\...\Toolbox\PowerShell>{{< kbd ".\Get-BackConnectionHostNames.ps1" >}}
 eln-local.dow.com
 researchportal-local.dow.com
-PS C:\...\Toolbox\PowerShell>.\Add-BackConnectionHostNames.ps1 extranet-local.fabrikam.com
-PS C:\NotBackedUp\...\Toolbox\PowerShell>.\Get-BackConnectionHostNames.ps1
+PS C:\...\Toolbox\PowerShell>{{< kbd ".\Add-BackConnectionHostNames.ps1 extranet-local.fabrikam.com" >}}
+PS C:\NotBackedUp\...\Toolbox\PowerShell>{{< kbd ".\Get-BackConnectionHostNames.ps1" >}}
 eln-local.dow.com
 extranet-local.fabrikam.com
 researchportal-local.dow.com
-PS C:\...\Toolbox\PowerShell>.\Remove-BackConnectionHostNames.ps1 extranet-local.fabrikam.com
-PS C:\NotBackedUp\...\Toolbox\PowerShell>.\Get-BackConnectionHostNames.ps1
+PS C:\...\Toolbox\PowerShell>{{< kbd ".\Remove-BackConnectionHostNames.ps1 extranet-local.fabrikam.com" >}}
+PS C:\NotBackedUp\...\Toolbox\PowerShell>{{< kbd ".\Get-BackConnectionHostNames.ps1" >}}
 eln-local.dow.com
 researchportal-local.dow.com
 ```

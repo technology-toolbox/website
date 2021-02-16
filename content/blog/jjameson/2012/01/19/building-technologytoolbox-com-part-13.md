@@ -44,7 +44,7 @@ very quickly download and add the 1.7.1 versions of the jQuery files to your
 project simply by running the following command in the
 [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console):
 
-PM&gt; `Install-Package jQuery`
+PM&gt; {{< kbd "Install-Package jQuery" >}}
 
 Refer to the following resource for more information on the jQuery
 NuGet package:

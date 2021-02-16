@@ -1131,7 +1131,7 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 >
 > There's a known bug with the **SPWebConfigModification** class not removing modifications from any Web.config file except the one for the **Default** zone. In other words, running the following command will not remove the trace listener configuration from the Web.config file for the **Internet** zone:
 >
-> `stsadm -o fabrikam-disablelogging -url http://fabrikam`
+> {{< kbd "stsadm -o fabrikam-disablelogging -url http://fabrikam" >}}
 
 Here is the class that implements the custom StsAdm.exe commands:
 

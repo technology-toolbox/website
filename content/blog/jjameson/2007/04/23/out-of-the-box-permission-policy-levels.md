@@ -36,7 +36,7 @@ stsadm.exe -o addpermissionpolicy -url http://foobar/sites/Migration -userlogin 
 
 However, we quickly discovered that "Read" wasn't quite right. After spending  no less than 10 minutes unsuccessfully trying variations -- such as "Read-only"  and "read only" -- and searching the Web for the documented list of available policies,  I ended up telling my colleague to just "punt" and use the UI instead.
 
-Revisiting the issue a few hours later, I just spent a couple of minutes cranking  out a console application to help me understand the available options for the `permissionlevel` parameter:
+Revisiting the issue a few hours later, I just spent a couple of minutes cranking  out a console application to help me understand the available options for the {{< kbd "permissionlevel" >}} parameter:
 
 ```
 static void Main(string[] args)

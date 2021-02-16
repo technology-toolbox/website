@@ -96,7 +96,7 @@ Hmmm...that's odd. I've never seen SharePoint struggle to find a random default 
 
 It turns out the Config Wizard was choking on the IPv6 address returned for the         hostname of the VM:
 
-C:\Users\jjameson&gt;`ping dmx-foobar2`
+C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
 ```
 Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
@@ -112,13 +112,13 @@ Approximate round trip times in milli-seconds:
 ```
 
 I first tried disabling IPv6 in the properties of each network connection (meaning         the LAN connection and the VPN connection), by clearing the checkbox for **Internet
-Protocol Version 6 (TCP/IPv6**). However, I found that pinging the machine         name resulted in the same (IPv6) address. Using `ipconfig /all`, I found         this was set on one of the "pseudo interfaces" that are new in Vista and Windows         Server 2008 -- specifically, the **Teredo Tunneling Pseudo-Interface**.
+Protocol Version 6 (TCP/IPv6**). However, I found that pinging the machine         name resulted in the same (IPv6) address. Using {{< kbd "ipconfig /all" >}}, I found         this was set on one of the "pseudo interfaces" that are new in Vista and Windows         Server 2008 -- specifically, the **Teredo Tunneling Pseudo-Interface**.
 
 Rather than blowing the rest of my afternoon trying to [disable IPv6 in Windows Server 2008 through registry hacks](http://www.microsoft.com/technet/network/ipv6/ipv6faq.mspx), I chose instead         to simply hardcode the hostname to 127.0.0.1 in the %SystemRoot%\System32\drivers\etc\hosts         file.
 
 Once I did this, I confirmed that the hostname of the VM resolved to an IPv4 address:
 
-C:\Users\jjameson&gt;`ping dmx-foobar2`
+C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
 ```
 Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:

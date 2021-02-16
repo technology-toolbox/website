@@ -24,7 +24,7 @@ One of the issues I encountered occurs when you attempt to go straight from a  s
 
 Since the December CU includes the July IU, I thought this would be okay. Unfortunately  an `SPUpgradeException` occurs during the "build-to-build" upgrade:
 
-C:\NotBackedUp\Temp&gt;`psconfig -cmd upgrade -inplace b2b -wait`
+C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd upgrade -inplace b2b -wait" >}}
 
 <samp>Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000<br>
 <br>
@@ -73,7 +73,7 @@ Upon cracking open the upgrade log file, I found the following:
 
 Notice that it is complaining about a feature not being installed on the farm.  This feature ('2b1e4cbf-b5ba-48a4-926a-37100ad77dee') is actually the new "S2SearchAdmin"  interface included in the July IU that substantially improves the Search Administration  pages. Assuming you didn't install the July IU separately (which on this brand new  VM, I had not), you need to explicitly install the new features first:
 
-C:\NotBackedUp\Temp&gt;`psconfig -cmd installfeatures`
+C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd installfeatures" >}}
 
 <samp>Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000<br>
 <br>
@@ -138,7 +138,7 @@ Configuration of the SharePoint Products and Technologies has succeeded.<br>
 
 Once the new features are installed, the upgrade goes without a hitch:
 
-C:\NotBackedUp\Temp&gt;`psconfig -cmd upgrade -inplace b2b -wait`
+C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd upgrade -inplace b2b -wait" >}}
 
 <samp>Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000<br>
 <br>

@@ -33,9 +33,9 @@ that I use).
 The following illustrates these scripts in action:
 
 ```
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Set-MaxPatchCacheSize.ps1 0
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Set-MaxPatchCacheSize.ps1 0" >}}
 Successfully set MaxPatchCacheSize to 0.
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-MaxPatchCacheSize.ps1
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-MaxPatchCacheSize.ps1" >}}
 0
 ```
 

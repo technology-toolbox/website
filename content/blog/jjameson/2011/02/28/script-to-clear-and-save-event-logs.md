@@ -123,7 +123,7 @@ End Function
 
 Note that you want to ensure you invoke the script using cscript.exe -- not wscript.exe  -- as shown below:
 
-C:\&gt;`cscript "\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs"`
+C:\&gt;{{< kbd "cscript \"\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs\"" >}}
 
 <samp>Microsoft (R) Windows Script Host Version 5.8<br>
 Copyright (C) Microsoft Corporation. All rights reserved.<br>

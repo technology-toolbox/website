@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-Apparently you cannot delete a site containing a large amount of content in Microsoft  Office SharePoint Server (MOSS) 2007. Last week I deleted -- or rather, attempted  to delete -- a Document Center site in our Test environment in order to recreate  it (to fix some bugs in our document migration process). Unfortunately, the deleteweb.aspx  page timed out and left the database in an inconsistent state -- attempts to browse  to the site ([http://server/Archive/Library](http://server/Archive/Library))  returned HTTP 400 - Bad Request. The "deleted" site showed up in the list of site  collections in Central Administration (although you could not select it in order  to delete it) but it did not show up in "`stsadm -o enumsites`". Attempts  to recreate the site (upon activation of one of our custom features) also failed  with the following error:
+Apparently you cannot delete a site containing a large amount of content in Microsoft  Office SharePoint Server (MOSS) 2007. Last week I deleted -- or rather, attempted  to delete -- a Document Center site in our Test environment in order to recreate  it (to fix some bugs in our document migration process). Unfortunately, the deleteweb.aspx  page timed out and left the database in an inconsistent state -- attempts to browse  to the site ([http://server/Archive/Library](http://server/Archive/Library))  returned HTTP 400 - Bad Request. The "deleted" site showed up in the list of site  collections in Central Administration (although you could not select it in order  to delete it) but it did not show up in "{{< kbd "stsadm -o enumsites" >}}". Attempts  to recreate the site (upon activation of one of our custom features) also failed  with the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
@@ -43,7 +43,7 @@ So...lessons learned:
 
 - Do not use the Web application to delete a large site (e.g. a Document Center
   with lots of content) since it could timeout and leave your SharePoint databases
-  in an inconsistent state; use "`stsadm.exe -o deletesite`" or "`stsadm.exe -o deleteweb`" instead
+  in an inconsistent state; use "{{< kbd "stsadm.exe -o deletesite" >}}" or "{{< kbd "stsadm.exe -o deleteweb" >}}" instead
 - Not all data for a particular Web application is stored in the content database
   (e.g. WSS\_Content); a small amount of data about the site is also stored in
   SharePoint\_Config

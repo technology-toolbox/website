@@ -80,11 +80,11 @@ I then restarted WinDbg, attached to the IIS worker process, and ran the
 following:
 
 ```
-0:023> ld mscorwks
+0:023> {{< kbd "ld mscorwks" >}}
 Symbols loaded for mscorwks
-0:023> .cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727
+0:023> {{< kbd ".cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727" >}}
 CLR DLL status: No load attempts
-0:023> !threads
+0:023> {{< kbd "!threads" >}}
 Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
 0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 
 1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0 

@@ -40,10 +40,10 @@ Assuming you have installed the PowerShell Community Extensions, you could
 simply execute the following in Windows PowerShell:
 
 ```
-PS C:\Users\jjameson> Import-Module Pscx
-PS C:\Users\jjameson> cd C:\NotBackedUp
+PS C:\Users\jjameson> {{< kbd "Import-Module Pscx" >}}
+PS C:\Users\jjameson> {{< kbd "cd C:\NotBackedUp" >}}
 C:\NotBackedUp
-PS C:\NotBackedUp> Write-Zip Fabrikam -OutputPath Fabrikam.zip -IncludeEmptyDirectories
+PS C:\NotBackedUp> {{< kbd "Write-Zip Fabrikam -OutputPath Fabrikam.zip -IncludeEmptyDirectories" >}}
 
 Mode           LastWriteTime       Length Name
 ----           -------------       ------ ----
@@ -332,8 +332,8 @@ function CountZipItemsRecursive(
 The final step is to use these functions to create the zip file:
 
 ```
-PS C:\NotBackedUp> $directory = Get-Item "C:\NotBackedUp\Fabrikam"
-PS C:\NotBackedUp> ZipFolder $directory
+PS C:\NotBackedUp> {{< kbd "$directory = Get-Item \"C:\NotBackedUp\Fabrikam\"" >}}
+PS C:\NotBackedUp> {{< kbd "ZipFolder $directory" >}}
 Creating zip file for folder (C:\NotBackedUp\Fabrikam)...
 
 Waiting for zip operation to finish..............

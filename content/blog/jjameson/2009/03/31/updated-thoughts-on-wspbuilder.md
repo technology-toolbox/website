@@ -53,7 +53,7 @@ Is this not the typical way people use WSPBuilder?
 {{< blockquote "font-italic" >}}
 
 The standard installation of WSPBuilder Extensions for Visual Studio
-do not build the WSP package when building the project (`CTRL-SHIFT-B`).
+do not build the WSP package when building the project ({{< kbd "CTRL-SHIFT-B" >}}).
 Normally you have to build the WSP package by using the menu "Tools
 -&gt; WSPBuilder -&gt; Build WSP" command. (If you do not have this
 menu, then you do not have the Extensions installed.)

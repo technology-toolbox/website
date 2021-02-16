@@ -26,7 +26,7 @@ Apparently -- quite some time ago -- John scripted the various configuration  st
 
 Note that in my environment, both the client and server are in the same domain.  Therefore, following the "10-second guide" for HVRemote, I created a firewall rule  to allow Microsoft Management Console:
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;`cscript hvremote.wsf /mmc:enable`
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mmc:enable" >}}
 
 <samp>
 Microsoft (R) Windows Script Host Version 5.8<br>
@@ -60,7 +60,7 @@ Access denied. Unable to establish communication between 'ROGUE' and 'WOLVERINE'
 
 In addition to enabling the firewall rule, I found that I also needed to allow  Anonymous Logon remote DCOM access:
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;`cscript hvremote.wsf /mode:client /anondcom:grant`
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mode:client /anondcom:grant" >}}
 
 <samp>
 Microsoft (R) Windows Script Host Version 5.8<br>

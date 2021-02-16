@@ -113,7 +113,7 @@ For those not familiar with WinDbg, this command is simply "dumping as Unicode" 
 
 Here's the output from this command:
 
-0:000&gt; `du /c 100 0f6dfa22`
+0:000&gt; {{< kbd "du /c 100 0f6dfa22" >}}
 
 ```
 0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "

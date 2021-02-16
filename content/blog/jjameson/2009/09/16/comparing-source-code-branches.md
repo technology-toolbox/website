@@ -100,7 +100,7 @@ user-specific options (i.e. \*.suo and \*.user) |
 
 For example, let's suppose that I've checked in some changes to the **v3.0** branch that need to be propagated to the **Main** branch.  I would open a command prompt and run the following:
 
-C:\NotBackedUp\Agilent&gt;`DiffBranches.cmd v3.0 Main`
+C:\NotBackedUp\Agilent&gt;{{< kbd "DiffBranches.cmd v3.0 Main" >}}
 
 After the two branches are copied to their respective temporary folders, DiffMerge.exe  is launched to compare the two branches. Since I exclude many of the directories  and files that are *expected* to differ between the two branches, I can quickly  view only the differences that I am interested in. I can even use DiffMerge.exe  to apply the changes interactively (checking out the files to be updated beforehand  as necessary). This greatly reduces the effort involved in manually merging changes  from one branch into another.
 

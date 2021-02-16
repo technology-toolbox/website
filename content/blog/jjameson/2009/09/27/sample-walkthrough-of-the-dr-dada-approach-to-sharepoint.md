@@ -327,13 +327,13 @@ variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder 
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 ```
 
-C:\Windows\system32&gt;`set FABRIKAM_FABWEB_URL=http://fabweb-local`
+C:\Windows\system32&gt;{{< kbd "set FABRIKAM%5FFABWEB%5FURL=http://fabweb-local" >}}
 
-C:\Windows\system32&gt;`set FABRIKAM_BUILD_CONFIGURATION=Debug`
+C:\Windows\system32&gt;{{< kbd "set FABRIKAM%5FBUILD%5FCONFIGURATION=Debug" >}}
 
-C:\Windows\system32&gt;`cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts`
+C:\Windows\system32&gt;{{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts" >}}
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Add Solution.cmd"`
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Add Solution.cmd\"" >}}
 
 ```
 Adding Fabrikam.Demo.Publishing (Debug)...
@@ -343,7 +343,7 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Deploy Solution.cmd"`
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solution.cmd\"" >}}
 
 ```
 Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
@@ -353,7 +353,7 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"Activate Features.cmd"`
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Features.cmd\"" >}}
 
 ```
 Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
@@ -787,7 +787,7 @@ in the SharePoint WSP. This allows us, for example, to fix a bug in **Fabrikam.D
 Also note that you need to recycle the application pool for your SharePoint
 site after updating the assemblies in the GAC:
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`"GAC Assemblies.cmd"`
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -797,7 +797,7 @@ Assembly successfully added to the cache
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;`C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"`
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
 
 ```
 "SharePoint - foobar-local80" successfully recycled

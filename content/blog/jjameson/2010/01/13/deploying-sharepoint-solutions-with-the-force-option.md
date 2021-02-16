@@ -34,7 +34,7 @@ What's all this nonsense about forcing the deployment to "circumvent errors"?  Y
 
 To understand the reason for specifying the "-force" option, consider the following  example where the deployment failed:
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;`"Deploy Solutions.cmd"`
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
 
 <samp>
 23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...<br>
@@ -71,13 +71,13 @@ Also note that the specified WSP was actually deployed, which means the features
 
 Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION environment  variable and then redeploy the solutions:
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;`set FORCE_OPTION=-force`
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "set FORCE%5FOPTION=-force" >}}
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;`"Retract Solutions.cmd"`
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Retract Solutions.cmd\"" >}}
 
 ...
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;`"Deploy Solutions.cmd"`
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
 
 ...
 

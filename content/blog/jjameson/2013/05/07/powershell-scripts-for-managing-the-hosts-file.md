@@ -32,7 +32,7 @@ You may have noticed the Add-Hostnames.ps1 script in my
 The following illustrates these scripts in action:
 
 ```
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-Hostnames.ps1 | sort Hostname
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-Hostnames.ps1 | sort Hostname" >}}
 
 Hostname                                                    IpAddress
 --------                                                    ---------
@@ -46,8 +46,8 @@ www-local.technologytoolbox.com                             127.0.0.1
 www-local.tugboatcoffee.com                                 127.0.0.1
 
 
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Add-Hostnames.ps1 192.168.10.119 foobar
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-Hostnames.ps1 | sort Hostname
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Add-Hostnames.ps1 192.168.10.119 foobar" >}}
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-Hostnames.ps1 | sort Hostname" >}}
 
 
 Hostname                                                    IpAddress
@@ -63,8 +63,8 @@ www-local.technologytoolbox.com                             127.0.0.1
 www-local.tugboatcoffee.com                                 127.0.0.1
 
 
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Remove-Hostnames.ps1 foobar
-PS C:\NotBackedUp\Toolbox\PowerShell>.\Get-Hostnames.ps1 | sort Hostname
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Remove-Hostnames.ps1 foobar" >}}
+PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-Hostnames.ps1 | sort Hostname" >}}
 
 Hostname                                                    IpAddress
 --------                                                    ---------

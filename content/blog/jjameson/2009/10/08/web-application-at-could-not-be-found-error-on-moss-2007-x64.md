@@ -56,14 +56,14 @@ namespace Fabrikam.Demo.PrintSharePointSiteTitle
 Note that by default, Visual Studio projects set the platform target to **Any
 CPU**. Thus when you run this program on an x64 server, the process runs         natively in 64-bit and everything works as expected:
 
-C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;`PrintSharePointSiteTitle.exe http://fabrikam-local`
+C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
 <samp>Title: Fabrikam
 </samp>
 
 However, if you change the platform target to **x86** and thus force         the process to run in 32-bit then things don't go well:
 
-C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;`PrintSharePointSiteTitle.exe http://fabrikam-local`
+C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
 ```
 Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local
