@@ -1,1 +1,3 @@
-{{ $keys := .Get 0 | safeHTML }}<kbd>{{ $keys }}</kbd>
+{{ range $param := .Params }}
+<kbd>{{ $param }}</kbd>
+{{ end }}
