@@ -481,9 +481,9 @@ To resolve this error, remove the duplicate server using one of the following me
   the duplicate server instance and then click **Remove Server**.
 - Use the [rskeymgmt
   utility](http://msdn.microsoft.com/en-us/library/ms162822.aspx) to identify and remove the duplicate server (by first specifying the
-  <samp>                -l</samp>
+  {{< kbd "-l" >}}
   command-line option, and then specifying the
-  <samp>                -r</samp>
+  {{< kbd "-r" >}}
   command-line option, as described in the first comment on the following MSDN article:
   [Moving the Report Server
   Databases to Another Computer](http://msdn.microsoft.com/en-us/library/ms156421.aspx)).
@@ -509,16 +509,16 @@ To attach the SharePoint content database by using Windows Powershell:
    
             Where:
    
-   - <samp>                        &lt;DatabaseName&gt;</samp>
+   - <var>&lt;DatabaseName&gt;</var>
      is the name of the database you want to upgrade.
    
-   - <samp>                        &lt;ServerName&gt;</samp>
+   - <var>&lt;ServerName&gt;</var>
      is server on which the database is stored.
    
-   - <samp>                        &lt;URL&gt;</samp>
+   - <var>&lt;URL&gt;</var>
      is the URL for the Web application that will host the sites.
    
-   - <samp>                        -Updateuserexperienc</samp>e specifies to update the sites with the new SharePoint
+   - **-Updateuserexperience** specifies to update the sites with the new SharePoint
      user experience (part of Visual Upgrade). If you omit this parameter, the sites
      retain the old user experience after upgrade.
      

@@ -72,7 +72,7 @@ title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS2007-WS2008-Operations%28Admin%29.jpg)
 
-This certainly isn't the only time you'll need to run as administrator when using         MOSS 2007 on Windows Server 2008. Actually, you'll find yourself doing this *a lot*.         For example, in order to run         <samp>            stsadm.exe</samp>, you'll need to first start a command prompt as administrator.
+This certainly isn't the only time you'll need to run as administrator when using         MOSS 2007 on Windows Server 2008. Actually, you'll find yourself doing this *a lot*.         For example, in order to run         {{< kbd "stsadm.exe" >}}, you'll need to first start a command prompt as administrator.
 
 I suppose that, technically speaking, you might be able to disable User Account         Control altogether -- but a) I didn't bother to check if this works, and b) I certainly         don't recommend it.
 

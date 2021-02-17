@@ -52,8 +52,7 @@ Once I edited the command line to replace the quotation marks, the command compl
 
 C:\&gt;{{< kbd "netsh advfirewall firewall set rule group=\"Remote Volume Management\" new enable=yes" >}}
 
-```
-Updated 3 rule(s).
-Ok.
-```
+<samp><br>
+Updated 3 rule(s).<br>
+Ok.</samp>
 

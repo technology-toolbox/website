@@ -58,8 +58,9 @@ CPU**. Thus when you run this program on an x64 server, the process runs        
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
-<samp>Title: Fabrikam
-</samp>
+```
+{{< sample-output "Title: Fabrikam" >}}
+```
 
 However, if you change the platform target to **x86** and thus force         the process to run in 32-bit then things don't go well:
 
