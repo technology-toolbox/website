@@ -2,6 +2,7 @@
 title: "Always Enable Disk-Based Caching in MOSS 2007"
 date: 2009-03-27T02:36:00-07:00
 excerpt: "For reasons completely unknown to me, the SharePoint team decided to ship Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a. blob caching ) disabled. If you are not familiar with disk-based caching, here is a blurb from Microsoft..."
+aliases: ["/blog/jjameson/archive/2009/03/26/always-enable-disk-based-caching-in-moss-2007.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

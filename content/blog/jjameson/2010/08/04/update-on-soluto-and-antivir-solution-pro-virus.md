@@ -3,6 +3,7 @@ title: "Update on Soluto and Antivir Solution Pro Virus"
 date: 2010-08-04T22:26:00-07:00
 excerpt: "In my previous post , I described my encounter with the Antivir Solution Pro virus after installing Soluto (\"anti-frustration software\" that analyzes the boot time of your PC). 
  Roee Adler, Chief Product Officer at Soluto, assured me the virus was not..."
+aliases: ["/blog/jjameson/archive/2010/08/04/update-on-soluto-and-antivir-solution-pro-virus.aspx"]
 draft: true
 categories: [""]
 tags: [""]

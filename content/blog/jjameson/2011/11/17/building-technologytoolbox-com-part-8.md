@@ -2,6 +2,7 @@
 title: "PowerShell script to deploy/rebuild an ASP.NET Web application (a.k.a. Building TechnologyToolbox.com, part 8)"
 date: 2011-11-17T01:51:12-07:00
 excerpt: "In this post, I describe the PowerShell script used to rebuild the Development and Test environments for TechnologyToolbox.com. From a high-level perspective, the script deletes the IIS website (if it exists), creates a new website (including the corresponding application pool), and then copies the files for the main site as well as the Subtext files for the /blog application..."
+aliases: ["/blog/jjameson/archive/2011/11/16/building-technologytoolbox-com-part-8.aspx"]
 draft: true
 categories: ["Development", "My System"]
 tags: ["My System", "PowerShell", "Subtext", "Web Development"]

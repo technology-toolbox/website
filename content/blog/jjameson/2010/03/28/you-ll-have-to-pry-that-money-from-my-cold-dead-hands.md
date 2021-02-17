@@ -4,6 +4,7 @@ date: 2010-03-28T01:26:00-07:00
 excerpt: "I've been using Microsoft Money for as long as I can remember. 
  Well, actually I can remember using Quicken at some point before switching to Money. Heck, I even remember tracking my finances in an Excel workbook before that. 
  I just checked my Money..."
+aliases: ["/blog/jjameson/archive/2010/03/27/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx"]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

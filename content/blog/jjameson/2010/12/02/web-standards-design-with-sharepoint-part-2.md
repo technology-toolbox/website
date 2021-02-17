@@ -2,6 +2,7 @@
 title: "Web Standards Design with SharePoint, Part 2"
 date: 2010-12-02T09:21:00-07:00
 excerpt: "In the first part of this series, I explained one approach for building Web sites in Microsoft Office SharePoint Server (MOSS) 2007 based on Web standards and the 960 Grid System . I had intended on following up with a sample solution based on a fictitious..."
+aliases: ["/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "Tugboat"]

@@ -3,6 +3,7 @@ title: "Environment Naming Conventions"
 date: 2009-06-09T12:42:00-07:00
 excerpt: "One of the challenges I see in organizations that I work with is the lack of naming conventions for various environments -- or sometimes naming conventions that provide little or no value. 
  For about the last ten years, I've been a strong proponent..."
+aliases: ["/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development", "Infrastructure"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core 

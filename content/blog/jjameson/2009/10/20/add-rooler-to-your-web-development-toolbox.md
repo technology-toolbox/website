@@ -3,6 +3,7 @@ title: "Add Rooler to Your Web Development Toolbox"
 date: 2009-10-20T20:19:00-07:00
 excerpt: "This past May, one of my colleagues notified me of a new tool called \"Rooler\" that allows you to easily measure anything displayed on your screen. 
  I definitely consider this tool a \"must have\" for anyone out there doing Web development. While tools..."
+aliases: ["/blog/jjameson/archive/2009/10/20/add-rooler-to-your-web-development-toolbox.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development", "Toolbox"]

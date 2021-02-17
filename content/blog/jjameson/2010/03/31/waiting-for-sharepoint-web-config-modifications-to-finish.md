@@ -3,6 +3,7 @@ title: "Waiting for SharePoint Web.config Modifications to Finish"
 date: 2010-03-31T02:38:00-07:00
 excerpt: "This week I finally got around to fixing a bug that would occasionally occur when deploying our solution based on Microsoft Office SharePoint Server (MOSS) 2007. 
  In the solution we use a variety of different features to configure different aspects..."
+aliases: ["/blog/jjameson/archive/2010/03/30/waiting-for-sharepoint-web-config-modifications-to-finish.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]

@@ -5,6 +5,7 @@ excerpt: "In my previous post , I showed how you can quickly create an AJAX-enab
  I also provided a sample AJAX Web Part, illustrated in the following screenshot: 
  
  Figure 1: AJAX in SharePoint..."
+aliases: ["/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-2.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]

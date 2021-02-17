@@ -5,6 +5,7 @@ excerpt: "In part 5 of this series , I showed how you can render semantic HTML f
  
  Note 
  You can achieve similar results in Microsoft..."
+aliases: ["/blog/jjameson/archive/2011/05/01/web-standards-design-with-sharepoint-part-6.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]

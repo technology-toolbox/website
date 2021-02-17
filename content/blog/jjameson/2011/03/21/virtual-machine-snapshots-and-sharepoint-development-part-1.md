@@ -3,6 +3,7 @@ title: "Virtual Machine Snapshots and SharePoint Development, Part 1"
 date: 2011-03-21T22:53:00-07:00
 excerpt: "In a comment I made last week on one of my earlier posts , I mentioned how a few months ago I started using Hyper-V snapshots so I can quickly rollback my SharePoint development VMs to key points in time. 
  The following screenshot shows the snapshots..."
+aliases: ["/blog/jjameson/archive/2011/03/21/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "

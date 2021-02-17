@@ -3,6 +3,7 @@ title: "Integrating Bing Search with a Community Server Blog"
 date: 2010-04-06T02:50:00-07:00
 excerpt: "In one of yesterday's posts , I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog). 
  This morning it occurred to me that I could integrate this into my..."
+aliases: ["/blog/jjameson/archive/2010/04/05/integrating-bing-search-with-a-community-server-blog.aspx"]
 draft: true
 categories: ["My System"]
 tags: ["My System"]

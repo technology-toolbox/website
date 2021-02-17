@@ -2,6 +2,7 @@
 title: "Unit tests for filtering errors in ELMAH"
 date: 2012-02-28T21:42:33-07:00
 excerpt: "In my previous post, I briefly mentioned the unit tests I created while trying to figure out why my ELMAH filter was not working as expected. Well, here they are for your enjoyment (or idle curiosity)."
+aliases: ["/blog/jjameson/archive/2012/02/28/unit-tests-for-filtering-errors-in-elmah.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core 

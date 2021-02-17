@@ -3,6 +3,7 @@ title: "\"Build Bloat\", Part 2 (a.k.a. Removing Extraneous Items from SharePoin
 date: 2011-03-14T00:54:00-07:00
 excerpt: "Last week I received a \"Logical Disk Free Space is low\" alert from Operations Manager for my TFS 2010 build server (DAZZLER). 
  After a few minutes investigating the issue, I discovered that my \"Builds\" folder was consuming a little over 2 GB of storage..."
+aliases: ["/blog/jjameson/archive/2011/03/13/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 

@@ -2,6 +2,7 @@
 title: "PowerShell Scripts for Managing MaxPatchCacheSize"
 date: 2013-05-06T22:25:04-07:00
 excerpt: "Here's a pair of PowerShell scripts for quickly setting and verifying the MaxPatchCacheSize registry setting."
+aliases: ["/blog/jjameson/archive/2013/05/06/powershell-scripts-for-managing-maxpatchcachesize.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "PowerShell", "Toolbox"]

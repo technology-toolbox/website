@@ -2,6 +2,7 @@
 title: "Be \"In the Zone\" to Avoid Entering Credentials"
 date: 2007-03-21T22:50:00-07:00
 excerpt: "Since I tend to work on server products such as Microsoft Office SharePoint Server 2007, I frequently see developers and other team members that I work with constantly entering their credentials when browsing to some Web page on a server. While this experience..."
+aliases: ["/blog/jjameson/archive/2007/03/21/be-in-the-zone-to-avoid-entering-credentials.aspx"]
 draft: true
 categories: ["My System"]
 tags: ["My System"]

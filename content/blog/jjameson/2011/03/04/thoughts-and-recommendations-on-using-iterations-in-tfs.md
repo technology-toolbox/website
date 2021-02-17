@@ -3,6 +3,7 @@ title: "Thoughts and Recommendations on Using Iterations in TFS"
 date: 2011-03-04T23:34:00-07:00
 excerpt: "Have you ever lost work items in Team Foundation Server? I know I have. 
  Well, let me clarify that...it's not that I actually lost work items due to some bug in TFS or failure on the database server. Rather -- and I'm a little embarrassed to admit this..."
+aliases: ["/blog/jjameson/archive/2011/03/04/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]

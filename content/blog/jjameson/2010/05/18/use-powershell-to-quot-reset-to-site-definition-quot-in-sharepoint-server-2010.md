@@ -4,6 +4,7 @@ date: 2010-05-18T13:29:00-07:00
 excerpt: "In one of my posts last month , I provided the following steps to \"reghost\" all of the pages in a Team Foundation Server (TFS) project site: 
  
  Browse to the Site Settings page for the site (e.g. http://cyclops/sites/Demo/_layouts/settings.aspx )...."
+aliases: ["/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "

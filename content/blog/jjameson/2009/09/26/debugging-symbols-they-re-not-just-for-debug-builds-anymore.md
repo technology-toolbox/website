@@ -3,6 +3,7 @@ title: "Debugging Symbols -- They're Not Just for Debug Builds Anymore"
 date: 2009-09-26T02:20:00-07:00
 excerpt: "I started another new project this week. 
  Typically one of the first tasks on any new development project is to create a Development Plan that provides consistent guidelines and processes for the Development team. On this new project, another Microsoft..."
+aliases: ["/blog/jjameson/archive/2009/09/25/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Debugging"]

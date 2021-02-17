@@ -3,6 +3,7 @@ title: "Testing for Expected Exceptions with Visual Studio"
 date: 2007-03-22T01:28:00-07:00
 excerpt: "Since I seem to be on a roll blogging this morning, I thought I'd see if I could get one more in before my baby girl wakes up to have breakfast with \"Da-da.\" 
  When transitioning a couple of years ago from using NUnit to Visual Studio 2005, I noticed..."
+aliases: ["/blog/jjameson/archive/2007/03/21/testing-for-expected-exceptions-with-visual-studio.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

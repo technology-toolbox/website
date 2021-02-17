@@ -3,6 +3,7 @@ title: "Who is this guy?"
 date: 2007-03-03T06:20:00-07:00
 excerpt: "Ugh! I reserved my MSDN blog address in May of 2005 and almost two years later I am sitting down to author my first blog post. 
  I joined Microsoft in September of 2000 after a series of interesting experiences in the telecommunications and healthcare..."
+aliases: ["/blog/jjameson/archive/2007/03/02/who-is-this-guy.aspx"]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

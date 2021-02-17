@@ -3,6 +3,7 @@ title: "An Update on the Effectiveness of MaxPatchCacheSize"
 date: 2013-05-06T23:22:03-07:00
 lastmod: 2013-05-06T23:25:31-07:00
 excerpt: "Wondering where all the precious free space in your SSD went? Well, here are a few possibilities."
+aliases: ["/blog/jjameson/archive/2013/05/06/an-update-on-the-effectiveness-of-maxpatchcachesize.aspx"]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "My System", "Virtualization", "Visual Studio"]

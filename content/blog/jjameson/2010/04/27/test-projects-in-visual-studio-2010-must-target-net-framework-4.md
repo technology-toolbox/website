@@ -2,6 +2,7 @@
 title: "Test Projects in Visual Studio 2010 Must Target .NET Framework 4"
 date: 2010-04-27T22:01:00-07:00
 excerpt: "Last week I installed Visual Studio 2010 on my primary desktop. This morning, I opened my Fabrikam.Demo solution in the new version of Visual Studio, but chose not to upgrade the target framework when prompted by Visual Studio during the solution upgrade..."
+aliases: ["/blog/jjameson/archive/2010/04/27/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]

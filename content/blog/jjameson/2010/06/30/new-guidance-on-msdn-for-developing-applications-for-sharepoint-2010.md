@@ -6,6 +6,7 @@ excerpt: "A bunch of new content related to SharePoint 2010 application developm
  Developing Applications for SharePoint 2010 
  http://msdn.microsoft.com/en-us/library/ff770300.aspx 
 ..."
+aliases: ["/blog/jjameson/archive/2010/06/30/new-guidance-on-msdn-for-developing-applications-for-sharepoint-2010.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]

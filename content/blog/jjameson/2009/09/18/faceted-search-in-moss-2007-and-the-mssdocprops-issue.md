@@ -2,6 +2,7 @@
 title: "Faceted Search in MOSS 2007 and the MSSDocProps Issue"
 date: 2009-09-18T02:34:00-07:00
 excerpt: "Many customers deploying Microsoft Office SharePoint Server (MOSS) 2007 often have a requirement to provide some kind of \"faceted search\" feature that allows users to quickly and easily narrow their search results. Before I ever knew the commonly accepted..."
+aliases: ["/blog/jjameson/archive/2009/09/17/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx"]
 draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Infrastructure"]

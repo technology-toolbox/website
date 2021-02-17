@@ -3,6 +3,7 @@ title: "Avoid Extraneous Database Roundtrips in SharePoint PublishingPageCollect
 date: 2010-09-12T00:38:00-07:00
 excerpt: "In my previous post , I explained how I analyze database roundtrips using SQL Server Profiler in order to identify potential performance issues. 
  While working on some proof-of-concept code for my current project, I found the PublishingPageCollection..."
+aliases: ["/blog/jjameson/archive/2010/09/11/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

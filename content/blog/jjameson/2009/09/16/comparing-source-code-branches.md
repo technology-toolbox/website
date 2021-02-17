@@ -2,6 +2,7 @@
 title: "Comparing Source Code Branches"
 date: 2009-09-16T01:54:00-07:00
 excerpt: "During the more than three years I spent helping Agilent Technologies migrate their Internet site from their legacy, proprietary platform to Microsoft Office SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server (TFS). Instead..."
+aliases: ["/blog/jjameson/archive/2009/09/15/comparing-source-code-branches.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]

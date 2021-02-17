@@ -2,6 +2,7 @@
 title: "New Blog Template and Styling"
 date: 2010-04-19T14:25:00-07:00
 excerpt: "Last Thursday, I mentioned a problem that would occasionally occur with the formatting on my blog posts (but only when viewing the default page -- listing the most recent posts -- and not when viewing individual posts). Tonight I thought I should spend..."
+aliases: ["/blog/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx"]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

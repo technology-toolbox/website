@@ -7,6 +7,7 @@ excerpt: "If, like me, you happen to encounter the following user experience whe
  See full-sized image. 
  ...then follow these steps to resolve the issue: 
 ..."
+aliases: ["/blog/jjameson/archive/2007/03/21/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

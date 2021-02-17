@@ -4,6 +4,7 @@ date: 2009-11-06T22:05:00-07:00
 excerpt: "This week I stumbled upon the new (and very cool) Microsoft Translator Widget . 
  Actually, this isn't really new (apparently it has been available for over six months now) but it was certainly new to me. 
  A colleague of mine on a previous project..."
+aliases: ["/blog/jjameson/archive/2009/11/06/microsoft-translator-widget.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

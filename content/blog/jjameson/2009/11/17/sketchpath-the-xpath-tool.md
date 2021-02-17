@@ -4,6 +4,7 @@ date: 2009-11-17T20:40:00-07:00
 excerpt: "I added another tool to my Toolbox yesterday: SketchPath. 
  The SketchPath site labels it as \"The XPath Tool\" but I'd say it more like \" The XPath Tool.\" 
  I've seen a few other tools for quickly building and testing XPath expressions against an XML..."
+aliases: ["/blog/jjameson/archive/2009/11/17/sketchpath-the-xpath-tool.aspx"]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "Toolbox"]

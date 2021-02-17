@@ -2,6 +2,7 @@
 title: "Script to Save Event Logs"
 date: 2011-03-03T22:35:00-07:00
 excerpt: "Earlier this week , I shared a script that I frequently use in my development environments to clear the event logs (for example, whenever I want to verify that one of my VMs \"boots clean\" -- meaning without any errors or warnings). Note that prior to..."
+aliases: ["/blog/jjameson/archive/2011/03/03/script-to-save-event-logs.aspx"]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Windows Server", "Toolbox"]

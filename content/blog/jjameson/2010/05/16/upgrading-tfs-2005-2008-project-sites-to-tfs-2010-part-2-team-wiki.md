@@ -3,6 +3,7 @@ title: "Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 2 - Team Wiki"
 date: 2010-05-16T23:41:00-07:00
 excerpt: "In part 1 of this series , I showed how you can add new Team Foundation Server (TFS) 2010 dashboard functionality to project sites originally created in TFS 2008 (or TFS 2005). 
  Another feature that you might want to add to upgraded project sites is..."
+aliases: ["/blog/jjameson/archive/2010/05/16/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "TFS", "SharePoint 2010", "PowerShell"]

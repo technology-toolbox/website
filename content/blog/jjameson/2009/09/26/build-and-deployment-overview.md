@@ -2,6 +2,7 @@
 title: "Build and Deployment Overview"
 date: 2009-09-26T02:40:00-07:00
 excerpt: "This post provides a high-level walkthrough of the build and deployment process that I typically recommend on projects that I am involved with. It includes a series of illustrations that capture key concepts at various points in time. Specific parts of..."
+aliases: ["/blog/jjameson/archive/2009/09/25/build-and-deployment-overview.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

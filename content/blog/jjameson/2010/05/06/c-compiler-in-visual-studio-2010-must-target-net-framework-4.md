@@ -3,6 +3,7 @@ title: "C++ Compiler in Visual Studio 2010 Must Target .NET Framework 4"
 date: 2010-05-06T23:38:00-07:00
 excerpt: "Another \"hiccup\" this week after upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010 ... 
  This morning I discovered that when you upgrade a managed C++ project from Visual Studio 2008 to Visual Studio 2010, the project is updated..."
+aliases: ["/blog/jjameson/archive/2010/05/06/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "TFS"]

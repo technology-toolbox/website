@@ -2,6 +2,7 @@
 title: "PowerShell Scripts for Managing BackConnectionHostNames (KB 896861)"
 date: 2013-05-24T07:34:01-07:00
 excerpt: "Here's a set of scripts to make it easier to view the items in the \"BackConnectionHostNames\" registry key, as well as add and remove hostnames."
+aliases: ["/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-backconnectionhostnames-kb-896861.aspx"]
 draft: true
 categories: ["Development", "Infrastructure", "My System", "SharePoint"]
 tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 

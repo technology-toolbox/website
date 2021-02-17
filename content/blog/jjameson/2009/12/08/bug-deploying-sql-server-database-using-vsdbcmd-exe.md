@@ -3,6 +3,7 @@ title: "Bug Deploying SQL Server Database Using VSDBCMD.EXE"
 date: 2009-12-08T23:32:00-07:00
 excerpt: "Yesterday we encountered a bug while trying to deploy a new SQL Server database from a Visual Studio database project using the VSDBCMD.EXE utility, following the prescriptive guidance on MSDN: 
  How to: Prepare a Database for Deployment From a Command..."
+aliases: ["/blog/jjameson/archive/2009/12/08/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["SQL Server", "Visual Studio"]

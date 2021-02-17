@@ -3,6 +3,7 @@ title: "Copy/Paste Gotchas with Server Core"
 date: 2008-07-07T07:11:00-07:00
 excerpt: "I'm building out a new virtualized environment using Windows Server 2008 and Hyper-V. In order to maximize performance and follow recommended best practices, I am using Server Core as the host OS. 
  I have to admit, doing this much administration from..."
+aliases: ["/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx"]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]
@@ -56,9 +57,7 @@ C:\&gt;{{< kbd "netsh advfirewall firewall set rule group=\"Remote Volume Manage
 
 {{< sample-block >}}
 
-\
-Updated 3 rule(s).\
-Ok.
+\ Updated 3 rule(s).\ Ok.
 
 {{< /sample-block >}}
 

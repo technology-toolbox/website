@@ -2,6 +2,7 @@
 title: "Introducing the \"DR.DADA\" Approach to SharePoint Development"
 date: 2009-03-31T03:16:00-07:00
 excerpt: "At times, it seems like developing SharePoint solutions is all I've been doing since I joined Microsoft in 2000. While many things have certainly changed since the old \"Tahoe\" days, at least one thing remains relatively the same: my recommendation to..."
+aliases: ["/blog/jjameson/archive/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

@@ -3,6 +3,7 @@ title: "Finding the Content Type ID in MOSS 2007"
 date: 2009-09-29T23:45:00-07:00
 excerpt: "Yesterday I received the following question from someone regarding Microsoft Office SharePoint Server (MOSS) 2007 content type IDs: 
  I need to add another page type [that] inherits from the article page. How do you find the GUID of the article page..."
+aliases: ["/blog/jjameson/archive/2009/09/29/finding-the-content-type-id-in-moss-2007.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

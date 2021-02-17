@@ -3,6 +3,7 @@ title: "Introducing the SharePointPublishingHelper Class"
 date: 2009-10-09T01:19:00-07:00
 excerpt: "In my previous post , I described a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file. 
  Aside from the code to read data from the input file into a DataSet, the main work is performed by the SharePointPublishingHelper..."
+aliases: ["/blog/jjameson/archive/2009/10/08/introducing-the-sharepointpublishinghelper-class.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

@@ -4,6 +4,7 @@ date: 2009-05-28T01:55:00-07:00
 excerpt: "I haven't blogged in almost 8 weeks. Ouch. 
  However, I like to think I have a good excuse -- at least for a good portion of that time. 
  On April 17, 2009, I broke my left leg in 6 places skiing one of my favorite runs at Mary Jane called \"Outhouse..."
+aliases: ["/blog/jjameson/archive/2009/05/27/minor-setback.aspx"]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

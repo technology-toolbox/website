@@ -2,6 +2,7 @@
 title: "Linked Files in Visual Studio Solutions"
 date: 2009-04-02T02:20:00-07:00
 excerpt: "A couple of years ago, I wrote a post introducing my system for structuring Visual Studio solutions . However, I apparently forgot to post a follow-up providing additional details, such as configuring assembly versioning and what I like to call \"shared..."
+aliases: ["/blog/jjameson/archive/2009/04/01/linked-files-in-visual-studio-solutions.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "

@@ -5,6 +5,7 @@ excerpt: "The November 2008 edition of MSDN magazine contained the following art
  Light Up SharePoint With Silverlight 2 Web Parts 
  http://msdn.microsoft.com/en-us/magazine/dd148643.aspx 
  While the article provides a good introduction to integrating..."
+aliases: ["/blog/jjameson/archive/2010/01/27/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "TFS", "Silverlight"]

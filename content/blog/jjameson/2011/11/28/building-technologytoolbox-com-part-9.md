@@ -3,6 +3,7 @@ title: "Using the Entity Framework and LINQ to list the most recent posts from S
 date: 2011-11-28T09:22:16-07:00
 excerpt: "In a previous post, I mentioned how the new Technology Toolbox home page highlights 
 the most recent blog posts from Subtext. In this post, I'll show you how easy this feature was to develop -- thanks to the Entity Framework and LINQ."
+aliases: ["/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx"]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core 

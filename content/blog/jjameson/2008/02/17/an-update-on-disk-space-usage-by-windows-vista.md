@@ -5,6 +5,7 @@ excerpt: "Today I rebuilt my laptop to allow me to dual boot between Windows Ser
  
  20 GB - Windows Server 2008 x64 
  20 GB - Windows Vista Ultimate..."
+aliases: ["/blog/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx"]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista"]

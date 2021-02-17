@@ -2,6 +2,7 @@
 title: "Temporary ASP.NET Files Are Not Deleted"
 date: 2009-04-01T01:14:00-07:00
 excerpt: "Yesterday afternoon, I discovered that there were 64,725 items (consuming 2.41 GB) in the C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\Temporary ASP.NET Files\\root folder of my development VM for Microsoft Office SharePoint Server (MOSS) 2007. Apparently..."
+aliases: ["/blog/jjameson/archive/2009/03/31/temporary-asp-net-files-are-not-deleted.aspx"]
 draft: true
 categories: ["SharePoint", "Development", "My System"]
 tags: ["MOSS 2007", "Core Development", "Toolbox"]

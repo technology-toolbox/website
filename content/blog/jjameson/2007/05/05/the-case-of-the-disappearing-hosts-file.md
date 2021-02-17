@@ -4,6 +4,7 @@ date: 2007-05-05T03:18:00-07:00
 excerpt: "Hmmm...how should I phrase this? 
  It has been a very educational couple of weeks on my current SharePoint project. 
  During the rebuild of our Test environment, the SharePoint Products and Technologies Configuration Wizard failed when it was unable..."
+aliases: ["/blog/jjameson/archive/2007/05/04/the-case-of-the-disappearing-hosts-file.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

@@ -5,6 +5,7 @@ excerpt: "Update (2010-05-20)
  I made some changes to correct a few issues and also to include the final version of the XML input file that I used to update my TFS project sites. 
  
  In my previous post , I showed how you can use PowerShell to export the quick..."
+aliases: ["/blog/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 

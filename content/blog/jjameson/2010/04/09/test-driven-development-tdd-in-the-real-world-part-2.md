@@ -8,6 +8,7 @@ To start off simple (but still real world), let&#39;s imagine we have a scenario
 a string to a limited number of characters for display or output purposes. However, 
 instead of just chopping off the string at the specified number of characters, we 
 want to apply a little &quot;intell"
+aliases: ["/blog/jjameson/archive/2010/04/08/test-driven-development-tdd-in-the-real-world-part-2.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
