@@ -116,7 +116,7 @@ Note that this password only needs to be set when creating (or recreating) the  
 {{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts" >}}
 ```
 
-While the STSADM utility in WSS v3 provides an operation to create a new Web  application (specifically, <samp>stsadm.exe -o extendvs</samp>), it does not provide  the ability to extend a Web application to a different IIS Web site (for example,  to create a site for the Internet zone). Fortunately, it's not very difficult to [extend the STSADM
+While the STSADM utility in WSS v3 provides an operation to create a new Web  application (specifically, {{< kbd "stsadm.exe -o extendvs" >}}), it does not provide  the ability to extend a Web application to a different IIS Web site (for example,  to create a site for the Internet zone). Fortunately, it's not very difficult to [extend the STSADM
 utility](http://msdn.microsoft.com/en-us/library/bb417382.aspx) and create your own custom commands.
 
 In order to use the custom STSADM commands for the Fabrikam solution, the corresponding  WSP must first be added and deployed.

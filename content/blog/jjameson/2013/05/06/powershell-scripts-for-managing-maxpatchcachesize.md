@@ -34,9 +34,9 @@ The following illustrates these scripts in action:
 
 ```
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Set-MaxPatchCacheSize.ps1 0" >}}
-Successfully set MaxPatchCacheSize to 0.
+{{< sample-output "Successfully set MaxPatchCacheSize to 0." >}}
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-MaxPatchCacheSize.ps1" >}}
-0
+{{< sample-output "0" >}}
 ```
 
 > **Note**

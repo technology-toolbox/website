@@ -83,7 +83,7 @@ If you've seen any of my scripts before, then you'll quickly notice the typical 
 2009-11-09 12:31 AM - Successfully completed backup.
 ```
 
-I use similar token parsing of the output from the **[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)** and [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx) system commands to generate the name of the backup file (e.g. <samp>Backup-differential-2009-11-09-12-30-AM.bkf</samp>).
+I use similar token parsing of the output from the **[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)** and [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx) system commands to generate the name of the backup file (e.g. {{< sample-output "Backup-differential-2009-11-09-12-30-AM.bkf" >}}).
 
 Also note that the [type of backup](http://technet.microsoft.com/en-us/library/cc784306%28WS.10%29.aspx) (e.g. **normal** or **differential**) can be specified as a parameter when running the batch file. This is really powerful for scheduling different types of backups on various schedules.
 

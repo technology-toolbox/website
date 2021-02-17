@@ -23,7 +23,7 @@ If you've been using Windows SharePoint Services (WSS) v3 or Microsoft Office Sh
 
 However, there are still some scenarios where the ULS logs can grow very quickly         and while ULS eventually exerts some sense of self-restraint, it does manage to         dump gigabytes of relatively useless information on your hard drive in a relatively         short period of time.
 
-Such is the case with my current MOSS 2007 development VM. Most every morning, I         am greeted with the low disk space notification due to hundreds of thousands of         "<samp>Preserving template record with size...</samp>" messages being generated         over the course of the previous 24 hours, as shown in the following log excerpt:
+Such is the case with my current MOSS 2007 development VM. Most every morning, I         am greeted with the low disk space notification due to hundreds of thousands of         "{{< sample-output "Preserving template record with size..." >}}" messages being generated         over the course of the previous 24 hours, as shown in the following log excerpt:
 
 ```
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 3301, use count 7, key ...

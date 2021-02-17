@@ -28,11 +28,11 @@ remotely helpful.
 For example, when I ran the "!threads" command, WinDbg simply reported the
 following:
 
-<samp>Failed to request ThreadStore</samp>
+{{< sample-output "Failed to request ThreadStore" >}}
 
 Similarly, when I ran "!eeheap", the following message was displayed:
 
-<samp>Unable to get system domain info</samp>
+{{< sample-output "Unable to get system domain info" >}}
 
 I have to admit, I was completely stumped. My initial research on the "Failed
 to request ThreadStore" error suggested that this problem occurs when the symbols
@@ -64,7 +64,7 @@ a 32-bit environment). Therefore it didn't seem like this was the issue either.
 Per Sukesh's second suggestion, I ran the ".cordll" command, which reported
 the following:
 
-<samp>CLR DLL status: No load attempts</samp>
+{{< sample-output "CLR DLL status: No load attempts" >}}
 
 Note that I had never used this command before.
 
@@ -81,9 +81,9 @@ following:
 
 ```
 0:023> {{< kbd "ld mscorwks" >}}
-Symbols loaded for mscorwks
+{{< sample-output "Symbols loaded for mscorwks" >}}
 0:023> {{< kbd ".cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727" >}}
-CLR DLL status: No load attempts
+{{< sample-output "CLR DLL status: No load attempts" >}}
 0:023> {{< kbd "!threads" >}}
 Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
 0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 

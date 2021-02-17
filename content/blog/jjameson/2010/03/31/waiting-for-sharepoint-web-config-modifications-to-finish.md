@@ -30,7 +30,7 @@ A web configuration modification operation is already running.
 
 {{< /blockquote >}}
 
-As a workaround, I simply activated the remaining features manually (initially  by directly invoking <samp>stsadm.exe -o activatefeature</samp>, but later by making  a temporary copy of the script and removing the features that had already been successfully  activated). Note that the error only occurred in PROD (at least in the beginning)  and therefore we didn't consider it a high priority to fix.
+As a workaround, I simply activated the remaining features manually (initially  by directly invoking {{< kbd "stsadm.exe -o activatefeature" >}}, but later by making  a temporary copy of the script and removing the features that had already been successfully  activated). Note that the error only occurred in PROD (at least in the beginning)  and therefore we didn't consider it a high priority to fix.
 
 Months went by and each time the solution was deployed to PROD, the workaround  would be used whenever the error occurred.
 

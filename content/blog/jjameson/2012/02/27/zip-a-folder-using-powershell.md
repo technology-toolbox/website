@@ -42,7 +42,7 @@ simply execute the following in Windows PowerShell:
 ```
 PS C:\Users\jjameson> {{< kbd "Import-Module Pscx" >}}
 PS C:\Users\jjameson> {{< kbd "cd C:\NotBackedUp" >}}
-C:\NotBackedUp
+{{< sample-output "C:\NotBackedUp" >}}
 PS C:\NotBackedUp> {{< kbd "Write-Zip Fabrikam -OutputPath Fabrikam.zip -IncludeEmptyDirectories" >}}
 
 Mode           LastWriteTime       Length Name
@@ -334,12 +334,12 @@ The final step is to use these functions to create the zip file:
 ```
 PS C:\NotBackedUp> {{< kbd "$directory = Get-Item \"C:\NotBackedUp\Fabrikam\"" >}}
 PS C:\NotBackedUp> {{< kbd "ZipFolder $directory" >}}
-Creating zip file for folder (C:\NotBackedUp\Fabrikam)...
+{{< sample-output "Creating zip file for folder (C:\NotBackedUp\Fabrikam)..." >}}
 
-Waiting for zip operation to finish..............
-Counting items in zip file (C:\NotBackedUp\Fabrikam.zip)...
-840 items in zip file (C:\NotBackedUp\Fabrikam.zip).
-Successfully created zip file for folder (C:\NotBackedUp\Fabrikam).
+{{< sample-output "Waiting for zip operation to finish.............." >}}
+{{< sample-output "Counting items in zip file (C:\NotBackedUp\Fabrikam.zip)..." >}}
+{{< sample-output "840 items in zip file (C:\NotBackedUp\Fabrikam.zip)." >}}
+{{< sample-output "Successfully created zip file for folder (C:\NotBackedUp\Fabrikam)." >}}
 ```
 
 Here is the PowerShell script in its entirety.

@@ -17,7 +17,7 @@ tags: ["TFS"]
 
 Yesterday someone contacted me about my earlier post on [Incrementing the Assembly Version for Each Build in TFS 2010](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010), because after following the steps I provided, he encountered a problem due to the fact that he had previously configured a gated check-in build that included the folder containing the AssemblyVersionInfo files.
 
-The problem is that after you create a gated check-in build definition, the <samp>tf.exe checkin</samp> command does not actually check-in your changes, but rather shelves your changes until the gated check-in validates the changeset (at which point, the files are checked in on your behalf). In this case, the <samp>tf.exe checkin</samp> command does not return 0 and the original build (that was attempting to check-in the AssemblyVersionInfo files) consequently fails.
+The problem is that after you create a gated check-in build definition, the {{< kbd "tf.exe checkin" >}} command does not actually check-in your changes, but rather shelves your changes until the gated check-in validates the changeset (at which point, the files are checked in on your behalf). In this case, the {{< kbd "tf.exe checkin" >}} command does not return 0 and the original build (that was attempting to check-in the AssemblyVersionInfo files) consequently fails.
 
 Fortunately, the Visual Studio folks have provided a way to bypass gated check-ins (provided a user has been granted permission to do so). Therefore, to avoid the issue when incrementing the assembly version for each build, you first need to grant the appropriate permission to the serice account used to perform your builds.
 
@@ -28,7 +28,7 @@ To grant permission to bypass a gated check-in:
 3. In the **Select Users, Computers, or Groups** window, type the name of the service account used for TFS builds (e.g. **TECHTOOLBOX\svc-build**), and then click **OK**.
 4. In the **{Project} Security** window, in the list of permissions, for the **Override check-in validation by build** permission, click the checkbox in the **Allow** column, and then click **OK**.
 
-Then you simply need to modify the IncrementAssemblyVersion.proj file (described in my previous post) to specify the <samp>/bypass</samp> option with the <samp>tf.exe checkin</samp> command.
+Then you simply need to modify the IncrementAssemblyVersion.proj file (described in my previous post) to specify the {{< kbd "/bypass" >}} option with the {{< kbd "tf.exe checkin" >}} command.
 
 ```
 <Exec

@@ -1175,7 +1175,7 @@ Consequently, I used the **Redeploy Features.ps1** script to ensure the WebAppCo
 
 ### Upgrade Solutions.ps1
 
-While the "DR.DADA" process doesn't typically take very long, there are a limited number of changes that can be made to a SharePoint solution in which a simple "Upgrade Solution" will suffice. Here's a script that performs the equivalent of the old <samp>stsadm.exe -o upgradesolution</samp> command.
+While the "DR.DADA" process doesn't typically take very long, there are a limited number of changes that can be made to a SharePoint solution in which a simple "Upgrade Solution" will suffice. Here's a script that performs the equivalent of the old {{< kbd "stsadm.exe -o upgradesolution" >}} command.
 
 ```
 param(

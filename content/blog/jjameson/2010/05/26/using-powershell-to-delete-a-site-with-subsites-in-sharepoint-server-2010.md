@@ -21,7 +21,7 @@ tags: ["SharePoint
 
 When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I often find myself deleting sites  (in DEV and TEST environments) and subsequently re-activating features or running  some migration utility to recreate the site hierarchy.
 
-In fact, a few years ago this became such a common task on the Agilent Technologies  project that I wrote a simple "DeleteWeb" program to overcome the fact that <samp>stsadm.exe -o deleteweb</samp> doesn't work on sites that have subsites.
+In fact, a few years ago this became such a common task on the Agilent Technologies  project that I wrote a simple "DeleteWeb" program to overcome the fact that {{< kbd "stsadm.exe -o deleteweb" >}} doesn't work on sites that have subsites.
 
 Note that there really wasn't much to the DeleteWeb program. Almost all of the  work was performed by the **DeleteHelper** class:
 
