@@ -23,7 +23,7 @@ In a comment I made last week on [one of my earlier posts](/blog/jjameson/2011/0
 The following screenshot shows the snapshots for my primary SharePoint Server 2010         development VM (FOOBAR5):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FFOOBAR5%20Snapshots.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR5%20Snapshots.png"
 alt="FOOBAR5 snapshots"
 height="383"
 width="600"

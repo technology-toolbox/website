@@ -25,7 +25,7 @@ distinct Visual Studio solutions (specifically the "Caelum" solution in Visual
 Studio 2010 and the "Subtext" solution in Visual Studio 2008).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture for TechnologyToolbox.com"
 height="520"
 width="600"

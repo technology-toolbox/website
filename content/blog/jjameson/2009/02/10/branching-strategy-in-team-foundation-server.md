@@ -30,7 +30,7 @@ In the interest of not reinventing the wheel, allow me to pilfer one of the imag
 Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FBranch-Plan-Basic.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Basic.png"
 alt="Basic branch plan"
 height="260"
 width="600"
@@ -43,7 +43,7 @@ Note that this is a basic branch plan, but it is sufficient to demonstrate the c
 The question that I asked during the session was essentially why not postpone branching         for as long as possible? In other words, why not branch **Release**         first, and then branch for hotfixes and service packs as necessary? In my mind,         this alternative approach reduces the merge effort by only branching at the point         in time when we actually need a branch (e.g. to stabilize for a release). At some         later point in time after the release when we actually need a hotfix or service         pack branch, then we'll create it from the **Release** branch. In response         to my question, Mario termed this "reactive branching" -- which seems like a very         good way to describe it. To help visualize the difference, I mocked up the following         figure.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FBranch-Plan-Problematic.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Problematic.png"
 alt="\"Reactive\" branch plan"
 height="260"
 width="600"

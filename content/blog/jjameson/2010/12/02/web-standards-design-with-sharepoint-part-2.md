@@ -45,7 +45,7 @@ A few weeks ago, it occurred to me that Dan's sample site would also make a grea
 The following screenshot shows the Tugboat home page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png"
 alt="Tugboat - Home page"
 height="600"
 width="296"
@@ -142,7 +142,7 @@ Therefore I knew that I needed a Web Part zone above the PageContent field in or
 Here is a "wireframe" I put together to help visualize the various fields and Web         Parts on the Tugboat home page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home-Page-Layout.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home-Page-Layout.png"
 alt="Tugboat - Home page (wireframe)"
 height="600"
 width="296"
@@ -159,7 +159,7 @@ Suppose that Tugboat decides to change the home page of the site in order to add
 The following picture illustrates the various fields and Web Part zones for TugboatWelcomePageLayout1:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-WelcomePageLayout1.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-WelcomePageLayout1.png"
 alt="TugboatWelcomePageLayout1"
 height="285"
 width="600"
@@ -250,7 +250,7 @@ At that point, I thought I was done. With the jQuery script in place, the "flyou
 It worked as expected in Firefox, as shown in the following screenshot:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Map-Firefox.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-Firefox.png"
 alt="\"Find a Location\" map (Firefox)"
 height="600"
 width="595"
@@ -261,7 +261,7 @@ title="Figure 4: \"Find a Location\" map (Firefox)" >}}
 However, take a look at the following screenshot that shows the exact same HTML         rendered using IE8:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Map-IE8.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-IE8.png"
 alt="\"Find a Location\" map (IE8)"
 height="598"
 width="600"

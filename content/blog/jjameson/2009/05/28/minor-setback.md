@@ -28,7 +28,7 @@ It took two surgeries -- and a lot more metal than I'd prefer to have in my body
 In the first operation (performed the night of my accident), the surgeon attached         an "external fixator" to my shin, ankle, and foot in order to hold it all in place         for about a week in order for the swelling to go down.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FBroken%20Tibia%20-%20External%20Fixators.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Broken%20Tibia%20-%20External%20Fixators.jpg"
 alt="Broken tibia - external fixator"
 height="450"
 width="600"

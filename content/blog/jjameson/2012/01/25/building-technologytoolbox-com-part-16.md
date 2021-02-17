@@ -22,7 +22,7 @@ can use regarding potential projects and other contact requests, as shown in
 Figure 1.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact.png"
 alt="Contact form with custom CAPTCHA control"
 height="600"
 width="592"
@@ -44,7 +44,7 @@ control, an error appears in the validation summary, similar to when required
 fields are missing.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Contact-CAPTCHA.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-CAPTCHA.png"
 alt="Contact form CAPTCHA validation error"
 height="600"
 width="534"

@@ -462,7 +462,7 @@ Here is the current content of the Style Guide for the static HTML prototype  fo
 Figure 1 shows the corresponding page rendered in the browser. [Note: This is  not intended to be an eye chart. Normally, I would trim images like this before  including them in a post, but in this case I wanted to be sure you could see the  page in its entirety (by clicking the **See full-sized image** link  below.)]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Style-Guide.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Style-Guide.png"
 alt="Style Guide for TechnologyToolbox.com"
 height="600"
 width="110"
@@ -479,7 +479,7 @@ I used to insert a "glossary" in the CSS (using comments) of the various hex  co
 Now I simply create a bunch of "color swatches" in the Style Guide that show  the various colors and provide descriptions for where the colors are used, as shown  below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Color-Palette.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Color-Palette.png"
 alt="Technology Toolbox color palette"
 height="600"
 width="518"

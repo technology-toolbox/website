@@ -62,7 +62,7 @@ JavaScript, and CSS provided by Google into the page.
 At that point, the search page looked like Figure 1.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-1.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-1.png"
 alt="Google Site Search (with borders)"
 height="600"
 width="296"
@@ -90,7 +90,7 @@ to override the table styles on the Search page:
 As you can see in the following screenshot, this improves things considerably.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-2.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-2.png"
 alt="Google Site Search (without borders)"
 height="600"
 width="328"
@@ -225,7 +225,7 @@ padding: 3px 6px;
 Figure 3 shows the corresponding results.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Site-Search-3.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-3.png"
 alt="Google Site Search (final)"
 height="600"
 width="381"

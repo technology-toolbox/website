@@ -154,7 +154,7 @@ Notice that none of the log messages are displayed in the console output.
 However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx)  before running the program, then we can easily view all of the log messages.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FDebugView.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_DebugView.png"
 alt="DebugView (a.k.a. Dbgview.exe)"
 height="190"
 width="600"

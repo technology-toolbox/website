@@ -26,7 +26,7 @@ I used the "[Yellow
 Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)" provided by ASP.NET as a reference for logging the details         of the exception. Here's a screenshot from a sample that I whipped up this morning:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FASP.NET%20Yellow%20Page%20of%20Death.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_ASP.NET%20Yellow%20Page%20of%20Death.png"
 alt="ASP.NET error page"
 height="295"
 width="600"

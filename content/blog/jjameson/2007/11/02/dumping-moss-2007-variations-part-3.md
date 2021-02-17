@@ -40,7 +40,7 @@ As I have mentioned before, the decision to abandon variations was not an easy o
 Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**         site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FVariation-Page-Propagation%20(before).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(before).jpg"
 alt="Elapsed Time for Variation Page Propagation"
 height="436"
 width="600"
@@ -53,7 +53,7 @@ Notice how the time required to propagate each page increases substantially as t
 The following graph "zooms in" on the time period after the index was added.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FVariation-Page-Propagation%20(after).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(after).jpg"
 alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
 height="436"
 width="600"

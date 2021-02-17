@@ -262,7 +262,7 @@ Note that the **SharePoint Central Administration v4** Web application         l
 
 In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant the         **WSS\_ADMIN\_WPG** and **WSS\_WPG** group appropriate permissions         on the IIS WAMREG admin Service, as described in [KB 920783](http://support.microsoft.com/kb/920783). This is discussed in more detail in the following blog post:
 
-{{< reference title="Event ID 10016, KB 920783, and the WSS%5FWPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
 
@@ -328,7 +328,7 @@ If performing a new installation of TFS 2010 (not upgrading from a previous vers
 
 The steps for configurating SharePoint Server 2010 for TFS dashboards are provided         in following blog post:
 
-{{< reference title="Configuring SharePoint Server 2010 for Dashboard Compatibility with TFS 2010" linkHref="http://blogs.msdn.com/team%5Ffoundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx" >}}
+{{< reference title="Configuring SharePoint Server 2010 for Dashboard Compatibility with TFS 2010" linkHref="http://blogs.msdn.com/team_foundation/archive/2010/03/06/configuring-sharepoint-server-2010-beta-for-dashboard-compatibility-with-tfs-2010-beta2-rc.aspx" >}}
 
 Note that the blog post is based on the Beta 2 version of SharePoint Server 2010         and there were a few changes in the RTM version.
 
@@ -535,7 +535,7 @@ More information on attaching SharePoint content databases is provided in the fo
 Note that if you browse to a TFS project site at this point, an error is displayed         on the home page in the **Remaining Work** Web Part, as shown below.         This occurs because the TFS extensions for SharePoint have not been installed yet.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FUpgraded%20TFS%20project%20site%20with%20RS%20error.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Upgraded%20TFS%20project%20site%20with%20RS%20error.png"
 alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)"
 height="481"
 width="600"
@@ -625,7 +625,7 @@ Refer to the following blog post for some helpful reports that display details a
 Once the warehouse database has been updated, an upgraded TFS project site should         appear similar to the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FUpgraded%20TFS%20project%20site.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Upgraded%20TFS%20project%20site.png"
 alt="Upgraded TFS project site in SharePoint Server 2010"
 height="600"
 width="445"

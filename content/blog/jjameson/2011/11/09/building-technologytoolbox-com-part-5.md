@@ -18,7 +18,7 @@ old MSDN blog](http://blogs.msdn.com/b/jjameson/) as a reference. However, I qui
 viewing my MSDN blog home page with CSS disabled.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FMSDN%20blog%20home%20-%20CSS%20disabled.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_MSDN%20blog%20home%20-%20CSS%20disabled.png"
 alt="My MSDN blog home - CSS disabled"
 height="600"
 width="328"
@@ -57,7 +57,7 @@ Compare Figure 1 with the corresponding "naked" version of my new blog home
 page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home-CSS-disabled.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home-CSS-disabled.png"
 alt="Technology Toolbox blog home page - CSS disabled"
 height="600"
 width="362"
@@ -254,7 +254,7 @@ an additional class to the list item to indicate that a particular post has
 no comments (i.e. `<li  class="comments none">`).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
 alt="Blog home page"
 height="600"
 width="374"

@@ -27,7 +27,7 @@ Today I rebuilt my laptop to allow me to dual boot between Windows Server 2008 a
 Here is what my Vista partition looked like immediately after the baseline installation         (no patches):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20usage%20-%20Vista%20Ultimate%20x64%20(baseline).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20usage%20-%20Vista%20Ultimate%20x64%20(baseline).jpg"
 alt="Disk usage on Windows Vista Ultimate x64 (baseline)"
 height="600"
 width="537"
@@ -72,7 +72,7 @@ Windows Update then proceeded to install the following:
 After rebooting a couple of times, my Vista partition looks like this:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20usage%20-%20Vista%20with%20SP1%20and%20products.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20usage%20-%20Vista%20with%20SP1%20and%20products.jpg"
 alt="Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression"
 height="600"
 width="532"

@@ -30,7 +30,7 @@ I also love the way typed DataSets can be somewhat complex -- in terms of the bu
 For example, consider the typed DataSet shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTyped%20DataSet%20example%20(ScorecardData).png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Typed%20DataSet%20example%20(ScorecardData).png"
 alt="Typed DataSet example (ScorecardData)"
 height="330"
 width="600"

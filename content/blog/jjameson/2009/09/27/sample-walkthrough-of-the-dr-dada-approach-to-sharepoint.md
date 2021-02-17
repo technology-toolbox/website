@@ -99,7 +99,7 @@ If you've seen my post on
 is to build out a "shell" that looks like the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FDR.DADA%20-%201.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%201.png"
 alt="Visual Studio solution before adding SharePoint features"
 height="178"
 width="355"
@@ -153,7 +153,7 @@ to deploy the solution -- into the **DeploymentFiles** folder.
 After that's all done, the Visual Studio solution looks like the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%202.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%202.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
 height="600"
 width="183"
@@ -327,9 +327,9 @@ variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder 
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 ```
 
-C:\Windows\system32&gt;{{< kbd "set FABRIKAM%5FFABWEB%5FURL=http://fabweb-local" >}}
+C:\Windows\system32&gt;{{< kbd "set FABRIKAM_FABWEB_URL=http://fabweb-local" >}}
 
-C:\Windows\system32&gt;{{< kbd "set FABRIKAM%5FBUILD%5FCONFIGURATION=Debug" >}}
+C:\Windows\system32&gt;{{< kbd "set FABRIKAM_BUILD_CONFIGURATION=Debug" >}}
 
 C:\Windows\system32&gt;{{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts" >}}
 
@@ -832,7 +832,7 @@ arrow" to repeat a command, selecting one after using F7 won't re-add it to
 the command history.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FDR.DADA%20-%203.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%203.png"
 alt="Command history"
 height="205"
 width="600"

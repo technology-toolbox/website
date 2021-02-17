@@ -35,7 +35,7 @@ It is also important to note that my **Inbox** folder is synchronized         to
 For reference purposes, here's what my Outlook folder looked like first thing this         morning (again, note that this is not a typical snapshot since I just returned from         a long vacation).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FOutlook-folders-and-archive-structure.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-and-archive-structure.png"
 alt="Outlook folders and archive structure"
 height="600"
 width="297"
@@ -140,7 +140,7 @@ Lastly, I should also point out that another key element of my system for managi
 Here's my updated screenshot from Outlook this morning after running Thread Compressor:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/15/r%5FOutlook-folders-after-Thread-Compressor.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-after-Thread-Compressor.png"
 alt="Outlook folders after running Thread Compressor"
 height="600"
 width="297"

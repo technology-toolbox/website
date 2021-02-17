@@ -18,7 +18,7 @@ tags: ["MOSS 2007"]
 In Microsoft Office SharePoint Server (MOSS) 2007 version 12.0.0.6335 (i.e. the         December 2008 CU), there appears to be a bug where a scope that only contains **Property Query** rules is not recognized as having any rules at all (i.e.         empty) and therefore is not compiled.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS%202007%20Search%20Scope%20bug.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS%202007%20Search%20Scope%20bug.jpg"
 alt="Search scope bug in MOSS 2007 December 2008 CU"
 height="424"
 width="600"
@@ -29,7 +29,7 @@ title="Figure 1: Search scope bug in MOSS 2007 December 2008 CU" >}}
 To hack around this bug, add a **Web Address** rule, as shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS%202007%20Search%20Scope%20bug%20-%20workaround.jpg"
 alt="Workaround for search scope bug"
 height="425"
 width="600"

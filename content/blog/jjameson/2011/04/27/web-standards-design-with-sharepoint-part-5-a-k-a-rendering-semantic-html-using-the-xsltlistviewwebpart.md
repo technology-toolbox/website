@@ -27,7 +27,7 @@ In this post, I'll show you how to take a small part of the home page (specifica
 In case you aren't yet familiar with the Tugboat sample site, the following screenshot         shows the site home page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png"
 alt="Tugboat - Home page"
 height="600"
 width="296"
@@ -94,7 +94,7 @@ Here's a breakdown of the custom SharePoint list:
 Assuming you are proficient in SharePoint, within a matter of a few minutes you         should be able to create the list and populate the sample data shown in the following         screenshot.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTugboat-Specials-List.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List.png"
 alt="Specials list"
 height="474"
 width="600"

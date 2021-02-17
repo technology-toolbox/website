@@ -19,7 +19,7 @@ The following figure shows an example cheat sheet for the Main branch of
 my Fabrikam Demo solution.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Fabrikam-Demo-Main-branch.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Development-cheat-sheet-Fabrikam-Demo-Main-branch.png"
 alt="Development cheat sheet - Fabrikam Demo - Main branch"
 height="393"
 width="600"
@@ -113,7 +113,7 @@ for the code sample included in
 [yesterday's post](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
 height="524"
 width="600"
@@ -145,7 +145,7 @@ it is necessary to restart the SharePoint Timer service after redeploying (or
 upgrading) the ELN solutions (WSPs).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FDevelopment-cheat-sheet-Dow-ELN-Main-branch.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Development-cheat-sheet-Dow-ELN-Main-branch.png"
 alt="Development cheat sheet - Dow ELN - Main branch"
 height="461"
 width="600"

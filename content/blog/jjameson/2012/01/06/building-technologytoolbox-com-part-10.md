@@ -15,7 +15,7 @@ show you how I built on that foundation to generate the content for the
 **Most Popular Posts** section.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
@@ -28,7 +28,7 @@ Popular Posts** section is generated using an ASP.NET user control, as
 illustrated in the corresponding page layout.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png"
 alt="Technology Toolbox home page (page layout)"
 height="600"
 width="536"
@@ -71,7 +71,7 @@ I completed the following steps to update the entity model:
 At this point, the model should resemble the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FEntity-Model-Caelum-Step-2.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Entity-Model-Caelum-Step-2.png"
 alt="Entity Data Model"
 height="400"
 width="431"

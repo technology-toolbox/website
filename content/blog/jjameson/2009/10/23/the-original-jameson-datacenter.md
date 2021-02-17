@@ -43,7 +43,7 @@ After enjoying the nostalgia for a moment, I almost deleted the Visio diagram an
 Here's the physical architecture of what I now refer to as the "Old Jameson Datacenter":
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20System%20Architecture.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20System%20Architecture.png"
 alt="Old Jameson Datacenter - Physical Architecture"
 height="460"
 width="600"
@@ -58,7 +58,7 @@ From the previous figure, you can start to see why I've consolidated these serve
 Notice that I use to run a back-to-back firewall configuration with a perimeter         network (a.k.a. DMZ):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png"
 alt="Old Jameson Datacenter - TCP/IP Configuration"
 height="471"
 width="600"
@@ -73,7 +73,7 @@ The naming convention was such that the names corresponding to [X-Men](http://en
 Anyway, here's the DNS and DHCP configuration for the original farm:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20DNS%20Configuration.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20DNS%20Configuration.png"
 alt="Old Jameson Datacenter - DNS/DHCP Configuration"
 height="186"
 width="600"
@@ -86,7 +86,7 @@ There's nothing really too interesting about that, I suppose.
 Perhaps the most laughable aspect of the Old Jameson Datacenter -- at least when         compared to today -- was the storage infrastructure:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FOld%20Jameson%20Datacenter%20-%20Disk%20Configuration.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20Disk%20Configuration.png"
 alt="Old Jameson Datacenter - Disk Configuration"
 height="475"
 width="600"

@@ -13,7 +13,7 @@ to render the expandable list under the **Archives** section on
 the various blog pages of the Technology Toolbox site.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
 alt="Blog home page"
 height="600"
 width="374"
@@ -83,7 +83,7 @@ point in the development timeline I had already created an ADO.NET Entity Data
 Model for accessing data from Subtext.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FEntity-Model-Caelum-Step-2.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Entity-Model-Caelum-Step-2.png"
 alt="Entity Data Model"
 height="400"
 width="431"
@@ -125,7 +125,7 @@ as a simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 > If you are working with LINQ these days, and you haven't already discovered [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It makes it much quicker to iteratively build LINQ queries like the one shown above.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FLINQPad.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_LINQPad.png"
 alt="LINQPad"
 height="600"
 width="564"
@@ -391,7 +391,7 @@ was clicked and use a corresponding CSS sprite to show the "plus" or "minus"
 icon next to the list item.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5Flist-item-sprites-1.0.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-item-sprites-1.0.png"
 alt="list-item-sprites-1.0.png"
 height="400"
 width="400"

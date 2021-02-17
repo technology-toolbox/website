@@ -18,7 +18,7 @@ You may recall the following illustration from the post I wrote
 Visual Studio solutions are merged together during the deployment process.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture"
 height="520"
 width="600"
@@ -439,7 +439,7 @@ to DEV on a daily basis (or more frequently depending on where you are in the
 release cycle).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F3%20-%20Automated%20build%20and%20deployment.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_3%20-%20Automated%20build%20and%20deployment.png"
 alt="Automated build and deployment"
 height="343"
 width="600"
@@ -468,7 +468,7 @@ deployments to the Test environment occur much less often -- for example, when
 a beta version of the solution is ready.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5F4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
 alt="\"Manual\" deployment to TEST"
 height="343"
 width="600"

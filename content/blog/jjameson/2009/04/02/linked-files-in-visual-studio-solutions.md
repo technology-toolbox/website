@@ -36,7 +36,7 @@ As Link**, however, you simply reference the file in-place. [Don't worry,       
 To illustrate this concept, I quickly built out a "demo" solution, as shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FLinked%20Files%20in%20Visual%20Studio%20Solutions.JPG"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Linked%20Files%20in%20Visual%20Studio%20Solutions.JPG"
 alt="Linked files in a Visual Studio solution"
 height="577"
 width="372"

@@ -32,7 +32,7 @@ The framework essentially consists of the **ModalPopupWebPart** abstract        
 The following figure illustrates the various UI elements of a modal popup window.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FModal-Popup-Window-Elements.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Elements.png"
 alt="Elements of a modal popup window"
 height="241"
 width="600"
@@ -101,7 +101,7 @@ modalPanelContent.Height = new Unit(100);
 &hellip;it is possible to constrain the height of the modal popup window and         show a scrollbar as necessary. This is illustrated in the following figure.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FModal-Popup-Window-Constrained-Height.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Constrained-Height.png"
 alt="Constraining the height of content displayed in a modal popup window"
 height="190"
 width="460"

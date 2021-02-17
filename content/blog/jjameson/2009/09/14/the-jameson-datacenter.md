@@ -24,7 +24,7 @@ The purpose of this post is to share those details and explain some of the reaso
 The following figure shows the physical architecture of the various computers and         network devices that comprise the "Jameson Datacenter":
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%202009-09-13.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%202009-09-13.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture"
 height="493"
 width="600"
@@ -38,7 +38,7 @@ If you've followed this blog for any significant length of time, you already kno
 of virtualization](/blog/jjameson/tags/Virtualization/default.aspx). Notice that I dedicate two servers specifically to running         Hyper-V virtual machines (VMs). The following figure illustrates the various servers         (both logical and physical) that typically run 24x7 in my lab:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%20Logical%20(2009-09-13).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20Logical%20(2009-09-13).jpg"
 alt="The \"Jameson Datacenter\" - logical architecture"
 height="370"
 width="600"
@@ -120,7 +120,7 @@ It's also worth pointing out that while the three physical servers are running x
 The following figure provides more detail on the hardware configuration of the various         servers:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FJameson%20Datacenter%20-%20Hardware%20(2009-09-13).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20Hardware%20(2009-09-13).jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration"
 height="454"
 width="600"

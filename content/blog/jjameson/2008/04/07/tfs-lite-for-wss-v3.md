@@ -111,7 +111,7 @@ described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 12. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FTFS%20Lite%20-%20WSS%20v3.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v3.jpg"
 alt="Project Summary \"dashboard\""
 height="363"
 width="600"

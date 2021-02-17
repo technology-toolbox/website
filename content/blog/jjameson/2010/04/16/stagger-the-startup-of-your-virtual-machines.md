@@ -26,7 +26,7 @@ While rebooting one of the servers this morning, I was reminded how I had previo
 Here's a screenshot that I captured this morning to illustrate what I'm talking         about:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FHyper-V%20Staggered%20Start.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Hyper-V%20Staggered%20Start.png"
 alt="Hyper-V staggered start"
 height="310"
 width="600"

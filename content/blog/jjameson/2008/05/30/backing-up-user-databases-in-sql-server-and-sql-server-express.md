@@ -111,7 +111,7 @@ Well, technically, it's a stored procedure, but nevertheless I still keep the sc
 I can then schedule full, differential, and transaction log backups using scheduled         tasks, as shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/10/r%5FScheduled%20Tasks%20-%20COLOSSUS.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Scheduled%20Tasks%20-%20COLOSSUS.jpg"
 alt="Scheduled tasks for backing up databases"
 height="119"
 width="600"

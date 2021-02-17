@@ -237,7 +237,7 @@ for all environments, I could just as easily use different codes for each enviro
 as illustrated in Figure 1.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FGoogle-Analytics-Account-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Analytics-Account-Home.png"
 alt="Google Analytics (Account Home)"
 height="340"
 width="600"

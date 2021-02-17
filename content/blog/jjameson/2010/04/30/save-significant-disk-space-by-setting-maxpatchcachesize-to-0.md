@@ -44,7 +44,7 @@ If the value of the MaxPatchCacheSize policy is set to 0, no additional files ar
 To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look at         the following figure, which shows the disk space usage on a freshly built Windows         Server 2008 R2 VM, after installing SQL Server 2008 and subsequently running Windows         Update to install all of the latest patches (including SQL Server 2008 Service Pack         1).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FDisk%20Usage-WS2008-R2%20(with%20SQL%202008%20SP1).png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-WS2008-R2%20(with%20SQL%202008%20SP1).png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)"
 height="426"
 width="600"
@@ -59,7 +59,7 @@ I've mentioned before that a gigabyte or two isn't all that much when your physi
 The following figure shows the disk space usage for a similar configuration (i.e.         a freshly built Windows Server 2008 R2 VM with SQL Server 2008 SP1), but this time         with MaxPatchCacheSize set to 0 prior to starting the installation of SQL Server.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/8/r%5FAfter%20restricting%20MaxPatchCacheSize.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_After%20restricting%20MaxPatchCacheSize.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)"
 height="493"
 width="600"

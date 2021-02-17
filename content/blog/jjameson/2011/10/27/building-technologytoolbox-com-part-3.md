@@ -115,7 +115,7 @@ Here is the current content of the default master page for the static HTML proto
 Figure 1 shows the corresponding Design view of the master page in Expression  Web (after adding the CSS rules to define the site fonts, colors, etc.).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FCaelum%20-%20Default.master.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Default.master.png"
 alt="Caelum prototype - Default.master"
 height="142"
 width="600"
@@ -321,7 +321,7 @@ The following screenshot shows the home page rendered in a browser. [This screen
 Posts** section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
@@ -709,7 +709,7 @@ Here is a sample blog page from the Caelum prototype (referencing BlogPost.maste
 Figure 3 shows roughly what the corresponding page looks like when rendered in  a browser. [This screenshot is actually from the live site, but the prototype page  looks very similar and thus I didn't bother creating a separate screenshot for it.]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Post.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png"
 alt="Sample blog post"
 height="600"
 width="398"

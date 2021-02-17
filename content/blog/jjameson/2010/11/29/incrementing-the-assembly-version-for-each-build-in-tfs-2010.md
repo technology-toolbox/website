@@ -51,7 +51,7 @@ Let's suppose that, like me, you want to keep using the assembly versioning sche
 First, it is important to have a high-level understanding of the default workflow         used in TFS 2010.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS%202010%20-%20DefaultTemplate%20-%20Overview.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS%202010%20-%20DefaultTemplate%20-%20Overview.png"
 alt="DefaultTemplate.xaml - Overview"
 height="431"
 width="232"
@@ -67,7 +67,7 @@ This "collapsed" view of the workflow illustrates the following high-level steps
 For the purposes of this post, the most interesting aspect of the build process         is the separation of the "Update Drop Location" activities from the "Run On Agent"         activities. Let's take a quick look at the details of "Update Drop Location":
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS%202010%20-%20Update%20Drop%20Location.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS%202010%20-%20Update%20Drop%20Location.png"
 alt="DefaultTemplate.xaml - Update Drop Location"
 height="464"
 width="254"
@@ -103,7 +103,7 @@ The next step is to move a couple of the existing workflow activities out of the
 Build Number**, as shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTFS-2010-Increment-Version-Step-1.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_TFS-2010-Increment-Version-Step-1.png"
 alt="CustomTemplate.xaml - Step 1"
 height="600"
 width="225"
@@ -114,7 +114,7 @@ title="Figure 3: CustomTemplate.xaml - Step 1" >}}
 Next, move **Update Build Number** and **Update Drop Location** inside the **Run On Agent** scope, as shown below:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTFS-2010-Increment-Version-Step-2.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_TFS-2010-Increment-Version-Step-2.png"
 alt="CustomTemplate.xaml - Step 2"
 height="600"
 width="166"
@@ -260,7 +260,7 @@ Copy the existing **Get Workspace** activity (the last activity in         the *
 At this point, CustomTemplate.xaml should look like the following (in order to conserve         space, only the **Update Build Number** portion is shown):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5FTFS-2010-Increment-Version-Step-3.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_TFS-2010-Increment-Version-Step-3.png"
 alt="CustomTemplate.xaml (Update Build Number) - Step 3"
 height="586"
 width="292"

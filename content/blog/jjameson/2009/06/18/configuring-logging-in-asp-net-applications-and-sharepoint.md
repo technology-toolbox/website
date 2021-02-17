@@ -62,7 +62,7 @@ Be sure to set the `requestLimit`  high enough to enable access to the page trac
 Once configured, browse to the page on the site. Then modify the URL to browse  to Trace.axd (e.g. [http://fabrikam-local/Trace.axd](http://fabrikam-local/Trace.axd))  to display the Trace Viewer.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FASP.NET%20Trace%20Viewer.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_ASP.NET%20Trace%20Viewer.png"
 alt="ASP.NET Trace Viewer"
 height="267"
 width="600"
@@ -73,7 +73,7 @@ title="Figure 1: ASP.NET Trace Viewer" >}}
 Locate the request that you want to view log messages for and click the corresponding **View Details** link.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FASP.NET%20Trace%20Sample.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_ASP.NET%20Trace%20Sample.png"
 alt="ASP.NET Trace Viewer - Request Details"
 height="600"
 width="474"

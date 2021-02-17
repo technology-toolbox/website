@@ -23,7 +23,7 @@ To make this a little more fun, let's start with a pop quiz for the SharePoint e
 What's wrong with this picture?
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS2007-WS2008-Operations(non-Admin).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS2007-WS2008-Operations(non-Admin).jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008"
 height="436"
 width="600"
@@ -44,7 +44,7 @@ See it now?
 No? Okay, how about if I make this really easy by zooming in on the area where you         should be focusing your attention.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/o%5FMOSS2007-WS2008-Operations(non-Admin)-closeup.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS2007-WS2008-Operations(non-Admin)-closeup.jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)"
 height="225"
 width="414"
@@ -64,7 +64,7 @@ It turns out that you need to run Internet Explorer as an administrator whenever
 You will then find all of the expected links under the **Topology and Services** section.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/9/r%5FMOSS2007-WS2008-Operations(Admin).jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS2007-WS2008-Operations(Admin).jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)"
 height="463"
 width="600"

@@ -13,7 +13,7 @@ section on the Technology Toolbox home page uses a CSS sprite to render the
 arrow image next to each list item.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
@@ -34,7 +34,7 @@ The "list item sprite" image is actually a 400x400 composite of multiple
 icons used throughout the site.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/o%5Flist-item-sprites-1.0.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-item-sprites-1.0.png"
 alt="list-item-sprites-1.0.png"
 height="400"
 width="400"
@@ -120,7 +120,7 @@ click to enlarge the image, you can probably count the 50x50 pixels used for
 each cell in the grid -- or you can simply take my word for it :-) ]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5Flist-items-sprite-design.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_list-items-sprite-design.png"
 alt="List items sprite (Expression Design)"
 height="377"
 width="600"
@@ -160,7 +160,7 @@ Take a look at the **Archives** section displayed on the various
 blog pages in the site, such as the one shown in Figure 4.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Blog-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
 alt="Blog home page"
 height="600"
 width="374"

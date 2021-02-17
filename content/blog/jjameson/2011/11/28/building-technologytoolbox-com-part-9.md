@@ -14,7 +14,7 @@ In
 the most recent blog posts, as shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home.png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
@@ -27,7 +27,7 @@ generated using an ASP.NET user control, as illustrated in the corresponding
 page layout.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Home%20(Page%20Layout).png"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png"
 alt="Technology Toolbox home page (page layout)"
 height="600"
 width="536"
@@ -42,7 +42,7 @@ All other requests (such as the Technology Toolbox home page) are handled by
 the "Caelum" solution.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www%5Ftechnologytoolbox%5Fcom/blog/jjameson/7/r%5FTechnology-Toolbox-Solution-Architecture.jpg"
+src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg"
 alt="Solution architecture"
 height="520"
 width="600"
