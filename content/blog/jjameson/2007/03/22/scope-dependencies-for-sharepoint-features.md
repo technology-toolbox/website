@@ -50,7 +50,7 @@ Originally, I had both features scoped to **Site** and setup a dependency  from 
 
 I later realized that the **Publication Library** feature would be better scoped  to **WebApplication** instead of **Site** (perhaps I'll blog about the reasons for this  at another time), so I deactivated and uninstalled the feature, made a quick change  to the Feature.xml file to change the scope, and then attempted to install and activate  the updated feature. Unfortunately things did not go quite as smoothly as I had  expected...
 
-{{< console-block >}}
+{{< console-block class="small" >}}
 
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Feature.cmd\"" >}}
 
@@ -69,7 +69,7 @@ higher than 'WebApplication'.
 
 Ouch...okay, no problem, I guess I'll just change the **Publication Content Types** feature to be scoped to **WebApplication** as well (instead of  **Site**). Another quick  deactivate, uninstall, XML file tweak, deploy, install, activate (I say "quick"  only because of the scripts that we have to simplify the deployment) and...
 
-{{< console-block >}}
+{{< console-block class="small" >}}
 
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationContentTypes\DeploymentFiles\Scripts&gt;{{< kbd "\"Install Feature.cmd\"" >}}
 

@@ -1,3 +1,5 @@
-<div class="consoleBlock text-monospace">
+{{ $class := "consoleBlock text-monospace" }}
+{{ with .Get "class" }}{{ $class = print $class " " . }}{{ end }}
+<div class="{{ $class }}">
     {{ .Inner | markdownify }}
 </div>
