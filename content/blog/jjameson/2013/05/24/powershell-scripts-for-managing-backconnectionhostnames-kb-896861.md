@@ -30,7 +30,7 @@ in my
 > script checks if the environment is configured to use
 > [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com).
 > If it is, the Add-BackConnectionHostNames.ps1 script is used to add
-> <samp>extranet-local.fabrikam.com</samp> to the **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames**
+> **extranet-local.fabrikam.com** to the **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames**
 > registry key.
 >
 > That way, when people want to deploy the solution with as little

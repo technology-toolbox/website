@@ -540,12 +540,12 @@ loopback address:
 > to each Web application specified in
 > Table 7. For example:
 
-> <samp>extranet.fabrikam.com</samp>
+> {{< kbd "extranet.fabrikam.com" >}}
 >
 > **Note**
 >
 >       		Be sure to specify the host header corresponding to the environment. 
->       		For example, specify <samp>extranet-local.fabrikam.com</samp> 
+>       		For example, specify {{< kbd "extranet-local.fabrikam.com" >}} 
 >       		for local development environments.
 
 7. Quit Registry Editor, and then restart the IIS Admin Service.

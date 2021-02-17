@@ -46,7 +46,7 @@ Group cannot be specified along with other identification conditions.
 
 {{< /blockquote >}}
 
-It turns out that the quotes around <samp>Remote Volume Management</samp> were  "corrupted", meaning they were converted to the angled quotes that tend to break  things in very bizarre ways. The really frustrating part is that the command prompt  makes the angled quotes appear just like regular quotes.
+It turns out that the quotes around {{< kbd "Remote Volume Management" >}} were  "corrupted", meaning they were converted to the angled quotes that tend to break  things in very bizarre ways. The really frustrating part is that the command prompt  makes the angled quotes appear just like regular quotes.
 
 Once I edited the command line to replace the quotation marks, the command completed  with the expected results:
 

@@ -35,11 +35,11 @@ First, the path for the registry key on 64-bit systems is incorrect (although
 you should be able to easily figure out what the correct path is, once you are
 navigating down through the registry). For the record:
 
-<samp>HKEY_LOCAL_SYSTEM\SOFTWARE\Microsoft\Wow6432Node\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint14]@="&lt;AssemblyFolderLocation&gt;"</samp>
+`HKEY_LOCAL_SYSTEM\SOFTWARE\Microsoft\Wow6432Node\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint14]@="<AssemblyFolderLocation>"`
 
 should be:
 
-<samp>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint14]@="&lt;AssemblyFolderLocation&gt;"</samp>
+`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint14]@="<AssemblyFolderLocation>"`
 
 Second, the MSDN article instructs you to copy several Visual Studio SharePoint
 assemblies to the GAC on the build server:

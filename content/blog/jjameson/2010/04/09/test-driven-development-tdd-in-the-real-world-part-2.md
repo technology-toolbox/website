@@ -28,7 +28,7 @@ In [part
 
 To start off simple (but still real world), let's imagine we have a scenario  where we need to truncate a string to a limited number of characters for display  or output purposes. However, instead of just chopping off the string at the specified  number of characters, we want to apply a little "intelligence" -- such as trying  to break on complete words, and adding an ellipsis (...) to the end.
 
-For example, if we pass in <samp>"Some really long string with lots of characters"</samp>  and specify to truncate the string to 15 characters, then we should get back <samp>"Some really..."</samp>.
+For example, if we pass in `"Some really long string with lots of characters"`  and specify to truncate the string to 15 characters, then we should get back <samp>"Some really..."</samp>.
 
 [Note that if you are trying to conserve real estate on a Web page, there is  actually [a
 much better way of doing this with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css), so please don't think of this scenario  in that context.]
