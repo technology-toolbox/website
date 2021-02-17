@@ -1,0 +1,3 @@
+{{ $class := "consoleBlock text-monospace" }}
+{{ with .Get "class" }}{{ $class = print $class " " . }}{{ end }}
+<div class="{{ $class }}">
