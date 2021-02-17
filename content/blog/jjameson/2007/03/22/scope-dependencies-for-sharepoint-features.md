@@ -50,23 +50,43 @@ Originally, I had both features scoped to **Site** and setup a dependency  from 
 
 I later realized that the **Publication Library** feature would be better scoped  to **WebApplication** instead of **Site** (perhaps I'll blog about the reasons for this  at another time), so I deactivated and uninstalled the feature, made a quick change  to the Feature.xml file to change the scope, and then attempted to install and activate  the updated feature. Unfortunately things did not go quite as smoothly as I had  expected...
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Feature.cmd\"" >}}
 
-<samp>Activating Fabrikam.Project1.PublicationLibrary on url - http://project1-local<br>
-<br>
+{{< sample-block >}}
+
+Activating Fabrikam.Project1.PublicationLibrary on url - http://project1-local\
+
+\
+
 Dependency feature 'Fabrikam.Project1.PublicationContentTypes' (id: 9f5c14f1-cf58-47c7-bbba-da9a8637deab)
 is not properly scoped for feature 'Fabrikam.Project1.PublicationLibrary' (id:
 49b204d0-7e35-4460-a691-a7d481c463b4). Its scope 'Site' must be equal to or
-higher than 'WebApplication'.</samp>
+higher than 'WebApplication'.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 Ouch...okay, no problem, I guess I'll just change the **Publication Content Types** feature to be scoped to **WebApplication** as well (instead of  **Site**). Another quick  deactivate, uninstall, XML file tweak, deploy, install, activate (I say "quick"  only because of the scripts that we have to simplify the deployment) and...
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Project1\Main\PublicationContentTypes\DeploymentFiles\Scripts&gt;{{< kbd "\"Install Feature.cmd\"" >}}
 
-<samp>Installing Fabrikam.Project1.PublicationContentTypes<br>
-<br>
+{{< sample-block >}}
+
+Installing Fabrikam.Project1.PublicationContentTypes\
+
+\
+
 Elements of type 'Field' are not supported at the 'WebApplication' scope. This
-feature could not be installed.</samp>
+feature could not be installed.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 Ugh...
 

@@ -78,7 +78,11 @@ your solution in a matter of seconds (literally). All you need to do is run
 the following command in the
 [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console):
 
+{{< console-block-start >}}
+
 PM&gt; {{< kbd "Install-Package elmah" >}}
+
+{{< console-block-end >}}
 
 Refer to the following resource for more information on the ELMAH NuGet package:
 

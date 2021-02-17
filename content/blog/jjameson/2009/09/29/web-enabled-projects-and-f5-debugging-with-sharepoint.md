@@ -82,6 +82,8 @@ Now let's suppose that you find a bug in your code and need to make a change  --
 
 As I mentioned yesterday, all you need to do is press {{< kbd "CTRL+SHIFT+B" >}}  to build your solution, GAC your updated assemblies, and recycle the application  pool:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
 ```
@@ -97,6 +99,8 @@ C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{
 ```
 {{< sample-output "\"SharePoint - foobar-local80\" successfully recycled" >}}
 ```
+
+{{< console-block-end >}}
 
 You can then simply press {{< kbd "F5" >}} to start debugging again. Woohoo, indeed!
 

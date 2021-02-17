@@ -135,6 +135,8 @@ namespace Fabrikam.Demo.Web.AjaxConfiguration
 
 I also created custom STSADM commands to enable and disable AJAX. For example,  after deploying the **Fabrikam.Demo.StsAdm.Commands.wsp**, the following  command can be used to enable AJAX:
 
+{{< console-block-start >}}
+
 {{< kbd "stsadm -o fabrikam-enableajax" >}}
 
 ```
@@ -142,6 +144,8 @@ Adds the necessary configuration changes to enable AJAX on a web application.
 
        -url <url of the Web application to enable AJAX on>
 ```
+
+{{< console-block-end >}}
 
 Note that since the **SPWebConfigModification** class adds the changes  to the Web.config file for each zone, there's no need to run this command multiple  times with different URLs for the same Web application (e.g. default zone and Internet  zone). You can just run it once and "forget about it."
 

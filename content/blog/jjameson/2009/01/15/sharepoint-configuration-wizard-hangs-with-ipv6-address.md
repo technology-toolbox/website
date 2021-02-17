@@ -96,6 +96,8 @@ Hmmm...that's odd. I've never seen SharePoint struggle to find a random default 
 
 It turns out the Config Wizard was choking on the IPv6 address returned for the         hostname of the VM:
 
+{{< console-block-start >}}
+
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
 ```
@@ -111,12 +113,16 @@ Approximate round trip times in milli-seconds:
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
 ```
 
+{{< console-block-end >}}
+
 I first tried disabling IPv6 in the properties of each network connection (meaning         the LAN connection and the VPN connection), by clearing the checkbox for **Internet
 Protocol Version 6 (TCP/IPv6**). However, I found that pinging the machine         name resulted in the same (IPv6) address. Using {{< kbd "ipconfig /all" >}}, I found         this was set on one of the "pseudo interfaces" that are new in Vista and Windows         Server 2008 -- specifically, the **Teredo Tunneling Pseudo-Interface**.
 
 Rather than blowing the rest of my afternoon trying to [disable IPv6 in Windows Server 2008 through registry hacks](http://www.microsoft.com/technet/network/ipv6/ipv6faq.mspx), I chose instead         to simply hardcode the hostname to 127.0.0.1 in the %SystemRoot%\System32\drivers\etc\hosts         file.
 
 Once I did this, I confirmed that the hostname of the VM resolved to an IPv4 address:
+
+{{< console-block-start >}}
 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
@@ -132,6 +138,8 @@ Ping statistics for 127.0.0.1:
 Approximate round trip times in milli-seconds:
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
 ```
+
+{{< console-block-end >}}
 
 After restarting the Config Wizard, I was relieved to see that a random port was         quickly found (which, of course, I always override anyway to use a consistent port         across various environments -- LOCAL, DEV, TEST, and PROD). I was even more pleased         to see SharePoint Central Administration come up on my pristine Windows Server 2008         VM.
 

@@ -50,9 +50,17 @@ It turns out that the quotes around {{< kbd "Remote Volume Management" >}} were 
 
 Once I edited the command line to replace the quotation marks, the command completed  with the expected results:
 
+{{< console-block-start >}}
+
 C:\&gt;{{< kbd "netsh advfirewall firewall set rule group=\"Remote Volume Management\" new enable=yes" >}}
 
-<samp><br>
-Updated 3 rule(s).<br>
-Ok.</samp>
+{{< sample-block >}}
+
+\
+Updated 3 rule(s).\
+Ok.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 

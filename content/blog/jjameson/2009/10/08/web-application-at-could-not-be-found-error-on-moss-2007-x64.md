@@ -56,13 +56,19 @@ namespace Fabrikam.Demo.PrintSharePointSiteTitle
 Note that by default, Visual Studio projects set the platform target to **Any
 CPU**. Thus when you run this program on an x64 server, the process runs         natively in 64-bit and everything works as expected:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
 ```
 {{< sample-output "Title: Fabrikam" >}}
 ```
 
+{{< console-block-end >}}
+
 However, if you change the platform target to **x86** and thus force         the process to run in 32-bit then things don't go well:
+
+{{< console-block-start >}}
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
@@ -75,6 +81,8 @@ at Microsoft.SharePoint.SPSite..ctor(SPFarm farm, Uri requestUri, Boolean contex
 at Microsoft.SharePoint.SPSite..ctor(String requestUrl)
 at Fabrikam.Demo.PrintSharePointSiteTitle.Program.Main(String[] args) in C:\NotBackedUp\Temp\PrintSharePointSiteTitle\Program.cs:line 22
 ```
+
+{{< console-block-end >}}
 
 I could certainly understand getting a [`BadImageFormatException`](http://msdn.microsoft.com/en-us/library/system.badimageformatexception.aspx) in this scenario (in other words, if         the platform target for Microsoft.SharePoint.dll was set to x64, then you shouldn't         expect to be able to load it from a 32-bit process). Instead I get a "bogus" `FileNotFoundException`         suggesting my Web application doesn't exist.
 

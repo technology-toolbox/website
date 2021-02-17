@@ -123,21 +123,41 @@ End Function
 
 Note that you want to ensure you invoke the script using cscript.exe -- not wscript.exe  -- as shown below:
 
+{{< console-block-start >}}
+
 C:\&gt;{{< kbd "cscript \"\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs\"" >}}
 
-<samp>Microsoft (R) Windows Script Host Version 5.8<br>
-Copyright (C) Microsoft Corporation. All rights reserved.<br>
-<br>
-Clearing event logs on localhost...<br>
-Clearing 'Application' event log on localhost...<br>
-Clearing 'HardwareEvents' event log on localhost...<br>
-Clearing 'Internet Explorer' event log on localhost...<br>
-Clearing 'Key Management Service' event log on localhost...<br>
-Clearing 'OAlerts' event log on localhost...<br>
-Clearing 'Security' event log on localhost...<br>
-Clearing 'System' event log on localhost...<br>
-Clearing 'Windows PowerShell' event log on localhost...<br>
-Done</samp>
+{{< sample-block >}}
+
+Microsoft (R) Windows Script Host Version 5.8\
+
+Copyright (C) Microsoft Corporation. All rights reserved.\
+
+\
+
+Clearing event logs on localhost...\
+
+Clearing 'Application' event log on localhost...\
+
+Clearing 'HardwareEvents' event log on localhost...\
+
+Clearing 'Internet Explorer' event log on localhost...\
+
+Clearing 'Key Management Service' event log on localhost...\
+
+Clearing 'OAlerts' event log on localhost...\
+
+Clearing 'Security' event log on localhost...\
+
+Clearing 'System' event log on localhost...\
+
+Clearing 'Windows PowerShell' event log on localhost...\
+
+Done
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 Also note that it's very easy to clear the event logs on a remote machine (assuming  you have the necessary permissions and firewall ports open), simply by specifying  the server name as a parameter to the script. If it's not readily apparent from  the script above, the event logs are saved to the root of the C: drive with a corresponding  timestamp (for example, Application\_20110301\_0559.evt) and subsequently cleared.
 

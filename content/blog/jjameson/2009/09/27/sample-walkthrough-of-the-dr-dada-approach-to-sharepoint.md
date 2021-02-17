@@ -323,6 +323,8 @@ environment, but I set them explicitly here for the purposes of explaining the
 variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder and then **Add Solution.cmd**, followed by
 **Deploy Solution.cmd**, and then finally **Activate Features.cmd**.
 
+{{< console-block-start >}}
+
 ```
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 ```
@@ -366,6 +368,8 @@ Operation completed successfully.
 
 Done
 ```
+
+{{< console-block-end >}}
 
 > **Tip**
 >
@@ -787,6 +791,8 @@ in the SharePoint WSP. This allows us, for example, to fix a bug in **Fabrikam.D
 Also note that you need to recycle the application pool for your SharePoint
 site after updating the assemblies in the GAC:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
 ```
@@ -802,6 +808,8 @@ C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{
 ```
 "SharePoint - foobar-local80" successfully recycled
 ```
+
+{{< console-block-end >}}
 
 ### Wrapping It Up
 

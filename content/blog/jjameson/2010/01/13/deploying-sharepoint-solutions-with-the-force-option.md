@@ -34,29 +34,46 @@ What's all this nonsense about forcing the deployment to "circumvent errors"?  Y
 
 To understand the reason for specifying the "-force" option, consider the following  example where the deployment failed:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
 
-<samp>
-23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...<br>
-<br>
-Deploying Fabrikam.Portal.StsAdm.Commands...<br>
-<br>
-Timer job successfully created.<br>
-<br>
-Executing .<br>
-Operation completed successfully.<br>
-<br>
-Done<br>
-23:46 - Deploying solution: Fabrikam.Portal.Web...<br>
-Deploying Fabrikam.Portal.Web on <a href="http://fabrikam-test/">http://fabrikam-test</a>...<br>
-<br>
-Timer job successfully created.<br>
-<br>
-Executing .<br>
-Executing solution-deployment-fabrikam.portal.web.wsp-0.<br>
-The solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully, 
-but could not be properly cleaned up. This job may execute again on this server.<br>
-Operation completed successfully.</samp>
+{{< sample-block >}}
+
+23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...\
+
+\
+
+Deploying Fabrikam.Portal.StsAdm.Commands...\
+\
+Timer job successfully created.\
+\
+Executing .\
+
+Operation completed successfully.\
+\
+Done\
+
+23:46 - Deploying solution: Fabrikam.Portal.Web...\
+
+Deploying Fabrikam.Portal.Web on [http://fabrikam-test](http://fabrikam-test/)...\
+\
+Timer job successfully created.\
+\
+
+Executing .\
+
+Executing solution-deployment-fabrikam.portal.web.wsp-0.\
+
+The solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully,
+but could not be properly cleaned up. This job may execute again on this server.\
+
+Operation completed successfully.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
+
 Note that the top-level Deploy Solutions.cmd script simply calls each Deploy  Solution.cmd script for the various WSPs. For this particular project, we have a  number of custom StsAdm.exe commands, in addition to a "Portal.Web" solution that  contains all of our various features.
 
 You might be wondering why this failed, since the output clearly states "Operation  completed successfully" for both WSPs.
@@ -71,6 +88,8 @@ Also note that the specified WSP was actually deployed, which means the features
 
 Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION environment  variable and then redeploy the solutions:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "set FORCE_OPTION=-force" >}}
 
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Retract Solutions.cmd\"" >}}
@@ -80,6 +99,8 @@ C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kb
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
 
 ...
+
+{{< console-block-end >}}
 
 Fortunately, when the "-force" option is specified, even if the deployment timer  job isn't properly cleaned up -- in other words, it isn't deleted -- no error occurs  when the solution is deployed the second time, and the **Status** column  on the **Solution Management** page shows **Deployed**.
 

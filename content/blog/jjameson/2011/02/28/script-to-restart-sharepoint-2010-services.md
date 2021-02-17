@@ -70,16 +70,36 @@ Note that I still use a `pause` statement so that I can optionally  perform othe
 
 Also note that, depending on your SharePoint configuration, you may see messages  about not being able to stop or start various services. For example, I only have  SharePoint Server Search currently running in my environment (not SharePoint Foundation  Search). Consequently, when I run the script above, I see the following messages  when stopping the services:
 
-<samp>The SharePoint Foundation Search V4 service is not started.<br>
-<br>
-More help is available by typing NET HELPMSG 3521.</samp>
+{{< console-block-start >}}
+
+{{< sample-block >}}
+
+The SharePoint Foundation Search V4 service is not started.\
+
+\
+
+More help is available by typing NET HELPMSG 3521.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 ...and the corresponding message when starting the services:
 
-<samp>System error 1058 has occurred.<br>
-<br>
+{{< console-block-start >}}
+
+{{< sample-block >}}
+
+System error 1058 has occurred.\
+
+\
+
 The service cannot be started, either because it is disabled or because it has
-no enabled devices associated with it.</samp>
+no enabled devices associated with it.
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 I suppose the "hip" thing to do would be to upgrade this simple batch file to  a PowerShell script and then implement the "smarts" to determine whether the services  are actually configured or not (and consequently ignore ones that aren't). Honestly,  I just can't justify the effort in doing that given the nature of this script.
 

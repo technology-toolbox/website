@@ -370,19 +370,37 @@ using System.Runtime.InteropServices;
 To extract the public key from the assembly, use the "-Tp" option on the [Strong Name
 tool (Sn.exe)](http://msdn.microsoft.com/en-us/library/k5b5tt23%28VS.80%29.aspx), as demonstrated below:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;{{< kbd "sn -Tp Fabrikam.Demo.Security.DeveloperTests.dll" >}}
 
-<samp>Microsoft (R) .NET Framework Strong Name Utility Version 3.5.30729.1<br>
-Copyright (c) Microsoft Corporation. All rights reserved.<br>
-<br>
-Public key is<br>
-00240000048000009400000006020000002400005253413100040000010001008748be47c45d37<br>
-6f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee1692d1f33fa16f8f7f<br>
-3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e0b3e266ff5266292e22254b567<br>
-f51c80ce404188643aa17a1378eff241ed01a36b3d64c127334a0ba4eec58f95f3606e73e10305<br>
-3006d0bf<br>
-<br>
-Public key token is 786f58ca4a6e3f60</samp>
+{{< sample-block >}}
+
+Microsoft (R) .NET Framework Strong Name Utility Version 3.5.30729.1\
+
+Copyright (c) Microsoft Corporation. All rights reserved.\
+
+\
+
+Public key is\
+
+00240000048000009400000006020000002400005253413100040000010001008748be47c45d37\
+
+6f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee1692d1f33fa16f8f7f\
+
+3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e0b3e266ff5266292e22254b567\
+
+f51c80ce404188643aa17a1378eff241ed01a36b3d64c127334a0ba4eec58f95f3606e73e10305\
+
+3006d0bf\
+
+\
+
+Public key token is 786f58ca4a6e3f60
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 With the **InternalsVisibleToAttribute** specifed, the solution  builds and we now have four failing unit tests (instead of just the two that we  had before).
 

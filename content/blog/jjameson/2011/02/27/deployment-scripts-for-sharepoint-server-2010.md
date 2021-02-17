@@ -1317,6 +1317,8 @@ Main
 
 In fact, on several occasions I've found it to be *very* helpful to rollback my SharePoint 2010 Hyper-V VM to a snapshot that I took shortly after installing SharePoint Server 2010 and creating the farm (but before creating any Web applications or configuring any service applications). Whenever I do that, I simply need to force a "Get Latest" from TFS (since my TFS workspace isn't aware that I've rolled back my VHD to an earlier point in time), compile and package the solution, and then run the scripts described above in the following order:
 
+{{< console-block-start >}}
+
 & '.\Create Web Application.ps1'
 & '.\Create Site Collections.ps1'
 & '.\Enable Anonymous Access.ps1'
@@ -1325,6 +1327,8 @@ In fact, on several occasions I've found it to be *very* helpful to rollback my 
 & '.\Add Solutions.ps1'
 & '.\Deploy Solutions.ps1'
 & '.\Activate Features.ps1'
+
+{{< console-block-end >}}
 
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm able to rebuild my development environment in a matter of minutes.
 

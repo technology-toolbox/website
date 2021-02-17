@@ -26,30 +26,58 @@ Apparently -- quite some time ago -- John scripted the various configuration  st
 
 Note that in my environment, both the client and server are in the same domain.  Therefore, following the "10-second guide" for HVRemote, I created a firewall rule  to allow Microsoft Management Console:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mmc:enable" >}}
 
-<samp>
-Microsoft (R) Windows Script Host Version 5.8<br>
-Copyright (C) Microsoft Corporation. All rights reserved.<br>
-<br>
-<br>
-Hyper-V Remote Management Configuration &amp; Checkup Utility<br>
-John Howard, Hyper-V Team, Microsoft Corporation.<br>
-http://blogs.technet.com/jhoward<br>
-Version 0.7 7th August 2009<br>
-<br>
-INFO: Computername is WOLVERINE<br>
-INFO: Computer is in domain corp.technologytoolbox.com<br>
-INFO: Current user is TECHTOOLBOX\jjameson-admin<br>
-INFO: Assuming /mode:client as the Hyper-V role is not installed<br>
-INFO: Build 7600.16385.amd64fre.win7_rtm.090713-1255<br>
-INFO: Detected Windows 7/Windows Server 2008 R2 OS<br>
-INFO: Remote Server Administration Tools are installed<br>
-INFO: Hyper-V Tools Windows feature is enabled<br>
-INFO: No TCP rule was found<br>
-INFO: No UDP rule was found<br>
-INFO: MMC Firewall exception changes OK.<br>
-INFO: Are running the latest version</samp>
+{{< sample-block >}}
+
+Microsoft (R) Windows Script Host Version 5.8\
+
+Copyright (C) Microsoft Corporation. All rights reserved.\
+
+\
+
+\
+
+Hyper-V Remote Management Configuration & Checkup Utility\
+
+John Howard, Hyper-V Team, Microsoft Corporation.\
+
+http://blogs.technet.com/jhoward\
+
+Version 0.7 7th August 2009\
+
+\
+
+INFO: Computername is WOLVERINE\
+
+INFO: Computer is in domain corp.technologytoolbox.com\
+
+INFO: Current user is TECHTOOLBOX\jjameson-admin\
+
+INFO: Assuming /mode:client as the Hyper-V role is not installed\
+
+INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
+
+INFO: Detected Windows 7/Windows Server 2008 R2 OS\
+
+INFO: Remote Server Administration Tools are installed\
+
+INFO: Hyper-V Tools Windows feature is enabled\
+
+INFO: No TCP rule was found\
+
+INFO: No UDP rule was found\
+
+INFO: MMC Firewall exception changes OK.\
+
+INFO: Are running the latest version
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
+
 However, when I attempted to connect to Hyper-V Manager to my Hyper-V servers,  I encountered errors similar to the following:
 
 {{< blockquote "font-italic text-danger" >}}
@@ -60,31 +88,60 @@ Access denied. Unable to establish communication between 'ROGUE' and 'WOLVERINE'
 
 In addition to enabling the firewall rule, I found that I also needed to allow  Anonymous Logon remote DCOM access:
 
+{{< console-block-start >}}
+
 C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mode:client /anondcom:grant" >}}
 
-<samp>
-Microsoft (R) Windows Script Host Version 5.8<br>
-Copyright (C) Microsoft Corporation. All rights reserved.<br>
-<br>
-<br>
-Hyper-V Remote Management Configuration &amp; Checkup Utility<br>
-John Howard, Hyper-V Team, Microsoft Corporation.<br>
-http://blogs.technet.com/jhoward<br>
-Version 0.7 7th August 2009<br>
-<br>
-INFO: Computername is WOLVERINE<br>
-INFO: Computer is in domain corp.technologytoolbox.com<br>
-INFO: Current user is TECHTOOLBOX\jjameson-admin<br>
-INFO: Build 7600.16385.amd64fre.win7_rtm.090713-1255<br>
-INFO: Detected Windows 7/Windows Server 2008 R2 OS<br>
-INFO: Remote Server Administration Tools are installed<br>
-INFO: Hyper-V Tools Windows feature is enabled<br>
-<br>
-INFO: Obtaining current Machine Access Restriction...<br>
-INFO: Examining security descriptor<br>
-INFO Granted Remote DCOM Access to Anonymous Logon<br>
-WARN: See documentation for security implications<br>
-INFO: Are running the latest version</samp>
+{{< sample-block >}}
+
+Microsoft (R) Windows Script Host Version 5.8\
+
+Copyright (C) Microsoft Corporation. All rights reserved.\
+
+\
+
+\
+
+Hyper-V Remote Management Configuration & Checkup Utility\
+
+John Howard, Hyper-V Team, Microsoft Corporation.\
+
+http://blogs.technet.com/jhoward\
+
+Version 0.7 7th August 2009\
+
+\
+
+INFO: Computername is WOLVERINE\
+
+INFO: Computer is in domain corp.technologytoolbox.com\
+
+INFO: Current user is TECHTOOLBOX\jjameson-admin\
+
+INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
+
+INFO: Detected Windows 7/Windows Server 2008 R2 OS\
+
+INFO: Remote Server Administration Tools are installed\
+
+INFO: Hyper-V Tools Windows feature is enabled\
+
+\
+
+INFO: Obtaining current Machine Access Restriction...\
+
+INFO: Examining security descriptor\
+
+INFO Granted Remote DCOM Access to Anonymous Logon\
+
+WARN: See documentation for security implications\
+
+INFO: Are running the latest version
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
+
 After both of these changes were made, I found that I could once again perform  remote administration using Hyper-V Manager.
 
 Kudos to John for simplifying the necessary configuration steps!

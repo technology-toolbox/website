@@ -28,11 +28,19 @@ remotely helpful.
 For example, when I ran the "!threads" command, WinDbg simply reported the
 following:
 
+{{< console-block-start >}}
+
 {{< sample-output "Failed to request ThreadStore" >}}
+
+{{< console-block-end >}}
 
 Similarly, when I ran "!eeheap", the following message was displayed:
 
+{{< console-block-start >}}
+
 {{< sample-output "Unable to get system domain info" >}}
+
+{{< console-block-end >}}
 
 I have to admit, I was completely stumped. My initial research on the "Failed
 to request ThreadStore" error suggested that this problem occurs when the symbols
@@ -64,7 +72,11 @@ a 32-bit environment). Therefore it didn't seem like this was the issue either.
 Per Sukesh's second suggestion, I ran the ".cordll" command, which reported
 the following:
 
+{{< console-block-start >}}
+
 {{< sample-output "CLR DLL status: No load attempts" >}}
+
+{{< console-block-end >}}
 
 Note that I had never used this command before.
 

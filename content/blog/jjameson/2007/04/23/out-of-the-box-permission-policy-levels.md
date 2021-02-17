@@ -54,10 +54,21 @@ static void Main(string[] args)
 
 The output is as follows:
 
-<samp>Full Control<br>
-Full Read<br>
-Deny Write<br>
-Deny All</samp>
+{{< console-block-start >}}
+
+{{< sample-block >}}
+
+Full Control\
+
+Full Read\
+
+Deny Write\
+
+Deny All
+
+{{< /sample-block >}}
+
+{{< console-block-end >}}
 
 Therefore the command that I should have suggested to my colleague is:
 

@@ -113,12 +113,16 @@ For those not familiar with WinDbg, this command is simply "dumping as Unicode" 
 
 Here's the output from this command:
 
+{{< console-block-start >}}
+
 0:000&gt; {{< kbd "du /c 100 0f6dfa22" >}}
 
 ```
 0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "
 0f6dfc22  "the "out-of-the-box" .	localization functionality.</p>.	<p>The "out-of-the-box" localization that I'm re"
 ```
+
+{{< console-block-end >}}
 
 Since this looked to be exactly what I was looking for, I opened the **Memory** window, typed in the address (0x0f6dfa22), and then clicked the **Previous** and **Next** button a few times to locate  the beginning and end of my content. Once I knew the "bounds" of my content, I then  dumped the entire content...
 

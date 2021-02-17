@@ -61,11 +61,21 @@ That's when I discovered the following from the release notes for the SDK:
 
 In order for VCBuild to run properly, vcprojectengine.dll needs to be registered.             If vcprojectengine.dll is not registered, VCBuild.exe will fail with errors such             as:
 
-On compile: <samp>warning MSB3422: Failed to retrieve VC project information through
-the VC project engine object model. System error code: 127.</samp>
+On compile:
 
-On upgrade: <samp>Failed to upgrade project file 'foo.vcproj'. Please make sure the
-file exists and is not write-protected.</samp>
+{{< sample-block >}}
+
+warning MSB3422: Failed to retrieve VC project information through                 the VC project engine object model. System error code: 127.
+
+{{< /sample-block >}}
+
+On upgrade:
+
+{{< sample-block >}}
+
+Failed to upgrade project file 'foo.vcproj'. Please make sure the                 file exists and is not write-protected.
+
+{{< /sample-block >}}
 
 To workaround this issue, vcprojectengine.dll must be manually registered.             From a Windows SDK command line window (as administrator in Vista:
 
