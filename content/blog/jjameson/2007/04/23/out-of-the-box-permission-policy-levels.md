@@ -59,11 +59,8 @@ The output is as follows:
 {{< sample-block >}}
 
 Full Control\
-
 Full Read\
-
 Deny Write\
-
 Deny All
 
 {{< /sample-block >}}

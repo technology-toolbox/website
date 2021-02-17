@@ -75,9 +75,7 @@ Also note that, depending on your SharePoint configuration, you may see messages
 {{< sample-block >}}
 
 The SharePoint Foundation Search V4 service is not started.\
-
 \
-
 More help is available by typing NET HELPMSG 3521.
 
 {{< /sample-block >}}
@@ -91,9 +89,7 @@ More help is available by typing NET HELPMSG 3521.
 {{< sample-block >}}
 
 System error 1058 has occurred.\
-
 \
-
 The service cannot be started, either because it is disabled or because it has
 no enabled devices associated with it.
 

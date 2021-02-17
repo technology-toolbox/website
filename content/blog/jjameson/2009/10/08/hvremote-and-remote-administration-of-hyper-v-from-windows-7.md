@@ -33,45 +33,25 @@ C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mmc:ena
 {{< sample-block >}}
 
 Microsoft (R) Windows Script Host Version 5.8\
-
 Copyright (C) Microsoft Corporation. All rights reserved.\
-
 \
-
 \
-
 Hyper-V Remote Management Configuration & Checkup Utility\
-
 John Howard, Hyper-V Team, Microsoft Corporation.\
-
 http://blogs.technet.com/jhoward\
-
 Version 0.7 7th August 2009\
-
 \
-
 INFO: Computername is WOLVERINE\
-
 INFO: Computer is in domain corp.technologytoolbox.com\
-
 INFO: Current user is TECHTOOLBOX\jjameson-admin\
-
 INFO: Assuming /mode:client as the Hyper-V role is not installed\
-
 INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
-
 INFO: Detected Windows 7/Windows Server 2008 R2 OS\
-
 INFO: Remote Server Administration Tools are installed\
-
 INFO: Hyper-V Tools Windows feature is enabled\
-
 INFO: No TCP rule was found\
-
 INFO: No UDP rule was found\
-
 INFO: MMC Firewall exception changes OK.\
-
 INFO: Are running the latest version
 
 {{< /sample-block >}}
@@ -95,47 +75,26 @@ C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mode:cl
 {{< sample-block >}}
 
 Microsoft (R) Windows Script Host Version 5.8\
-
 Copyright (C) Microsoft Corporation. All rights reserved.\
-
 \
-
 \
-
 Hyper-V Remote Management Configuration & Checkup Utility\
-
 John Howard, Hyper-V Team, Microsoft Corporation.\
-
 http://blogs.technet.com/jhoward\
-
 Version 0.7 7th August 2009\
-
 \
-
 INFO: Computername is WOLVERINE\
-
 INFO: Computer is in domain corp.technologytoolbox.com\
-
 INFO: Current user is TECHTOOLBOX\jjameson-admin\
-
 INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
-
 INFO: Detected Windows 7/Windows Server 2008 R2 OS\
-
 INFO: Remote Server Administration Tools are installed\
-
 INFO: Hyper-V Tools Windows feature is enabled\
-
 \
-
 INFO: Obtaining current Machine Access Restriction...\
-
 INFO: Examining security descriptor\
-
 INFO Granted Remote DCOM Access to Anonymous Logon\
-
 WARN: See documentation for security implications\
-
 INFO: Are running the latest version
 
 {{< /sample-block >}}
