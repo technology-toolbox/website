@@ -3,7 +3,7 @@ title: "Deploying SharePoint Solutions with the \"-force\" Option"
 date: 2010-01-13T00:19:00-07:00
 excerpt: "In a previous post , I provided sample \"DR.DADA\" scripts that I use for deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007. 
  If you've read that post, you might recall seeing the following lines in, for example, the Deploy Solutions..."
-aliases: ["/blog/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx"]
+aliases: ["/blog/jjameson/archive/2010/01/12/deploying-sharepoint-solutions-with-the-force-option.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

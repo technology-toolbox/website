@@ -2,7 +2,7 @@
 title: "Unit Tests for ICloneable"
 date: 2010-04-01T00:43:00-07:00
 excerpt: "A few years ago I developed a class ( SharePointSearchUrlBuilder ) for working with SharePoint Search URLs. The class is used to easily build or parse the various query string parameters used by SharePoint Search (e.g. keywords, search scope, additional..."
-aliases: ["/blog/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx"]
+aliases: ["/blog/jjameson/archive/2010/03/31/unit-tests-for-icloneable.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

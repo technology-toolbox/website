@@ -3,7 +3,7 @@ title: "Inserting Web Parts into Publishing Fields in SharePoint 2010"
 date: 2011-03-02T01:25:00-07:00
 excerpt: "In the sample SharePoint solution I provided in one of last week's posts , you may have noticed that when programmatically creating the custom Sign In page, I insert the custom Claims Login Form Web Part into the Page Content field. 
  In Microsoft Office..."
-aliases: ["/blog/jjameson/archive/2011/03/02/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/01/inserting-web-parts-into-publishing-fields-in-sharepoint-2010.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]

@@ -2,7 +2,7 @@
 title: "Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 1 - Agile Dashboard Features"
 date: 2010-05-13T21:57:00-07:00
 excerpt: "In one of last week's posts , I provided details on upgrading from Team Foundation Server 2008 to TFS 2010, including some information about updating your TFS project sites. I also provided a reference to the following MSDN article for more information..."
-aliases: ["/blog/jjameson/archive/2010/05/13/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx"]
+aliases: ["/blog/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "TFS", "SharePoint 

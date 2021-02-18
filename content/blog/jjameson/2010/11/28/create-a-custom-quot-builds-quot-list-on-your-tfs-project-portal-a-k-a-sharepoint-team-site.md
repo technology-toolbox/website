@@ -3,7 +3,7 @@ title: "Create a Custom \"Builds\" List on Your TFS Project Portal (a.k.a. Share
 date: 2010-11-28T23:11:00-07:00
 excerpt: "One of \"tweaks\" that I commonly make to the SharePoint team site created for each project in Team Foundation Server is to create a custom list to track the important builds for the project (typically corresponding to each milestone or iteration). 
  There..."
-aliases: ["/blog/jjameson/archive/2010/11/28/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx"]
+aliases: ["/blog/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]

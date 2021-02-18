@@ -2,7 +2,7 @@
 title: "No HTML Markup in MOSS 2007 Managed Properties"
 date: 2009-09-23T02:35:00-07:00
 excerpt: "In my previous post , I showed how to automatically configure managed properties in Microsoft Office SharePoint Server (MOSS) 2007 when activating a custom \"Search\" feature. In this post, I want to cover a subtle, yet very important, limitation in managed..."
-aliases: ["/blog/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx"]
+aliases: ["/blog/jjameson/archive/2009/09/22/no-html-markup-in-moss-2007-managed-properties.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

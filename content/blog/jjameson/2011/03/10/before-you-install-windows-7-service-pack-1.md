@@ -4,7 +4,7 @@ date: 2011-03-10T22:00:00-07:00
 excerpt: "...make darn sure you have already installed the Remote Server Administration Tools for Windows 7 (if you want to use them, of course). 
  Otherwise, like me, you'll likely resort to nuking your desktop and starting over. 
  Earlier this week, I posted..."
-aliases: ["/blog/jjameson/archive/2011/03/10/before-you-install-windows-7-service-pack-1.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx"]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Windows 7"]

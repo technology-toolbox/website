@@ -2,7 +2,7 @@
 title: "Virtual Machine Snapshots and SharePoint Development, Part 2"
 date: 2011-03-22T23:51:00-07:00
 excerpt: "In part 1 of this post, I introduced the way I use VM snapshots to allow me to quickly rollback my SharePoint development VMs to key points in time. For example, I can quickly revert to a \"baseline SharePoint Server 2010 configuration\" in which no Web..."
-aliases: ["/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "

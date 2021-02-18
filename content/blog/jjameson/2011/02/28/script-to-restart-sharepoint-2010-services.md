@@ -3,7 +3,7 @@ title: "Script to Restart SharePoint 2010 Services"
 date: 2011-02-28T21:43:00-07:00
 excerpt: "A couple of years ago, I shared a script ( Restart SharePoint Services.cmd ) for restarting the various services in Microsoft Office SharePoint Server (MOSS) 2007. 
  I've since created a new version of the script for use with SharePoint Server 2010...."
-aliases: ["/blog/jjameson/archive/2011/02/28/script-to-restart-sharepoint-2010-services.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx"]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["SharePoint 

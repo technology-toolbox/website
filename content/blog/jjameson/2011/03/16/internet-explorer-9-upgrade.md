@@ -3,7 +3,7 @@ title: "Internet Explorer 9 Upgrade"
 date: 2011-03-16T00:23:00-07:00
 excerpt: "Two years ago, I wrote a post about upgrading to Internet Explorer 8 . Well, in case you missed the announcement a couple of days ago, Internet Explorer 9 has been released. Woohoo! 
  It's been a long time coming, but I believe the wait has been well..."
-aliases: ["/blog/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/15/internet-explorer-9-upgrade.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "Web Development"]

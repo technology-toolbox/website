@@ -3,7 +3,7 @@ title: "Logging Exceptions in .NET Applications"
 date: 2010-03-19T23:08:00-07:00
 excerpt: "Last summer I wrote a post introducing my simple, but highly effective approach to logging -- including a Logger class that is really just a thin wrapper around the System.Diagnostics.TraceSource class. 
  A few months ago, I enhanced the Logger class..."
-aliases: ["/blog/jjameson/archive/2010/03/19/logging-exceptions-in-net-applications.aspx"]
+aliases: ["/blog/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "
