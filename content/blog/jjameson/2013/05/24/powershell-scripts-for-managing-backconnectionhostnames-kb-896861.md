@@ -10,7 +10,7 @@ tags: ["Infrastructure", "My System", "PowerShell", "SharePoint
 ---
 
 In
-[my previous post](/blog/jjameson/2013/05/08/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files.
+[my previous post](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files.
 If you're a SharePoint developer, then you know that adding a hostname to the
 hosts file is only part of the process you need to complete whenever creating
 a new Web application in development environments.
@@ -23,7 +23,7 @@ assumes you don't use the "sledge hammer" approach listed in
 
 Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script
 in my
-[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
+[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 > **Note**
 >

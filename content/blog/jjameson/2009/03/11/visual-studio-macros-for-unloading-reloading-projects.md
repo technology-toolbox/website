@@ -18,7 +18,7 @@ tags: ["Core Development", "Visual Studio"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-As promised in a [post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) last week, here are the macros that I use to quickly unload or reload dozens  of projects in a large Visual Studio solution. Hmmm, perhaps *effortlessly*  is a better word choice -- considering I might need to wait 30 seconds or so for  all of the projects to unload or reload.
+As promised in a [post](/blog/jjameson/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects) last week, here are the macros that I use to quickly unload or reload dozens  of projects in a large Visual Studio solution. Hmmm, perhaps *effortlessly*  is a better word choice -- considering I might need to wait 30 seconds or so for  all of the projects to unload or reload.
 
 Here is my `UnloadAllProjects()` macro:
 
@@ -112,7 +112,7 @@ A few interesting notes...
   when subsequently attempting to unload it again -- I ended up punting this and
   instead simply wrapping the "unload" operation in a try/catch block.
 - The `WriteOutput()` method is provided in
-  [a previous post](/blog/jjameson/2009/03/11/tracing-and-logging-from-visual-studio-macros).
+  [a previous post](/blog/jjameson/2009/03/10/tracing-and-logging-from-visual-studio-macros).
 
 If you take the above code and essentially search-and-replace "unload" with "reload"  then you will end up with my macro to reload all projects within the solution:
 

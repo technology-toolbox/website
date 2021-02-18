@@ -17,7 +17,7 @@ tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Yet another Group Policy object that I use in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) is one to automatically configure roaming profiles and redirect the Desktop and Documents folders to a server(a.k.a. "IntelliMirror").
+Yet another Group Policy object that I use in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab) is one to automatically configure roaming profiles and redirect the Desktop and Documents folders to a server(a.k.a. "IntelliMirror").
 
 Even though I don't have many users in my Active Directory domain -- it's not like I have eight kids, just one -- I still want to keep user data centrally managed on a server that I backup regularly. Besides, I find it really frustrating to have some items on your desktop on one computer, but a different set of desktop items on another computer (or VM).
 

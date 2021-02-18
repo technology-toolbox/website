@@ -31,7 +31,7 @@ a SharePoint page that leverages reusable content may only be half the battle.
 What if you need to get that content out of SharePoint?
 
 For example, in
-[part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I mentioned how I previously built a custom "document
+[part 1 of this series](/blog/jjameson/2011/04/07/reusable-content-in-sharepoint-publishing-html-fields-part-1), I mentioned how I previously built a custom "document
 publishing" system based on the WCM features in SharePoint. In the first sprint
 of that effort, one of the core scenarios was exporting a SharePoint site (typically
 containing about a hundred pages of content) to a PDF file. We call this the
@@ -327,5 +327,5 @@ I can scrap my custom code and go with the out-of-the-box SharePoint code instea
 
 > **Note**
 >
-> You must be running Visual Studio 2010 Service Pack 1 in order to run my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like the one I described in a [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
+> You must be running Visual Studio 2010 Service Pack 1 in order to run my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like the one I described in a [post from a couple of years ago](/blog/jjameson/2009/10/07/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
 

@@ -9,7 +9,7 @@ tags: ["My System", "PowerShell"]
 ---
 
 In
-[my previous post](/blog/jjameson/2011/11/17/building-technologytoolbox-com-part-8), I described the PowerShell script used to rebuild the
+[my previous post](/blog/jjameson/2011/11/16/building-technologytoolbox-com-part-8), I described the PowerShell script used to rebuild the
 Development environment for TechnologyToolbox.com on a daily basis. This post
 explains the subtleties of running the script -- or, more generally, *any*
 PowerShell script -- using the Windows Task Scheduler.
@@ -230,7 +230,7 @@ the corresponding log file to investigate the issue).
 I also use "`2>&1`" to redirect `stderr` to
 `stdout` to ensure error messages are written to the log file as
 well as the normal output. This is a trick I covered in
-[a previous blog post](/blog/jjameson/2009/03/27/redirecting-stderr-to-stdout).
+[a previous blog post](/blog/jjameson/2009/03/26/redirecting-stderr-to-stdout).
 
 > **Important**
 >

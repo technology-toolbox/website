@@ -22,7 +22,7 @@ tags: ["Windows Server", "Infrastructure", "Windows 7"]
 
 Otherwise, like me, you'll likely resort to nuking your desktop and starting over.
 
-Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0) while installing a new solid-state drive (SSD). Unfortunately, I later discovered that if you install Windows 7 SP1 before installing the current RSAT package, then you're essentially screwed.
+Earlier this week, I posted about [how I rebuilt my Windows 7 desktop](/blog/jjameson/2011/03/08/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0) while installing a new solid-state drive (SSD). Unfortunately, I later discovered that if you install Windows 7 SP1 before installing the current RSAT package, then you're essentially screwed.
 
 If you attempt to install the current RSAT release after installing Windows 7 SP1, then you'll be greeted with a not-so-friendly message that the update not applicable to your computer.
 

@@ -17,7 +17,7 @@ tags: ["My System", "Simplify", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-One of the things I like most about running System Center Operations Manager in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) is that it greatly reduces the amount of effort required to monitor numerous servers.
+One of the things I like most about running System Center Operations Manager in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab) is that it greatly reduces the amount of effort required to monitor numerous servers.
 
 For example, in my environment I am currently monitoring 10 servers 24x7. To some infrastructure folks out there, this might seem like a laughable number -- but keep in mind that my primary role is development, not infrastructure.
 

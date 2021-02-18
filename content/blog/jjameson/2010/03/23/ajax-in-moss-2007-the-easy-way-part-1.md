@@ -19,7 +19,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In my [previous post](/blog/jjameson/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way), I showed how you can quickly create a Web application in Microsoft  Office SharePoint Server (MOSS) 2007 and configure it for anonymous access and Forms-Based  Authentication.
+In my [previous post](/blog/jjameson/2010/03/22/forms-based-authentication-in-moss-2007-the-easy-way), I showed how you can quickly create a Web application in Microsoft  Office SharePoint Server (MOSS) 2007 and configure it for anonymous access and Forms-Based  Authentication.
 
 Let's suppose that instead of configuring FBA and anonymous access, you want  to configure AJAX on your Web application instead.
 
@@ -31,7 +31,7 @@ Mike Ammerlaan's post from a couple of years ago introduced the concept of [inte
 
 However, if you look at the comments on the previous MSDN article, it appears  that the prescriptive guidance isn't always easy to follow and implement. I'll be  the first to admit that copying and pasting lots of "configuration goo" can be problematic.
 
-Using my custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class, it's pretty easy to add the slew of  Web.config modifications that are required to get ASP.NET AJAX working on a SharePoint  site.
+Using my custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/22/introducing-the-sharepointwebconfighelper-class)** class, it's pretty easy to add the slew of  Web.config modifications that are required to get ASP.NET AJAX working on a SharePoint  site.
 
 Since I didn't necessarily want to limit this configuration to a SharePoint feature,  I placed the bulk of the code in the **SharePointAjaxHelper** class.  Consequently, enabling AJAX is simply a matter of calling the following method:
 
@@ -47,7 +47,7 @@ SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
 
 Note that due to the bug in the **SPWebConfigModification** infrastructure  that I've mentioned before, SharePoint only removes the modifications from the Web.config  file for the default zone (not, for example, the Internet zone). However, it's probably  not a big deal in this particular case because what's the likelihood that you will  start using AJAX and then later on decide to stop using it? Probably "next to zilch"  would be my guess.
 
-Since it's just one line of code, I don't even bother with a separate **[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)** class for the **Fabrikam.Demo.Web.AjaxConfiguration** feature. Instead, I just stuff the code directly into the class that inherits  from **[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)**:
+Since it's just one line of code, I don't even bother with a separate **[FeatureConfigurator](/blog/jjameson/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)** class for the **Fabrikam.Demo.Web.AjaxConfiguration** feature. Instead, I just stuff the code directly into the class that inherits  from **[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)**:
 
 ```
 using System;

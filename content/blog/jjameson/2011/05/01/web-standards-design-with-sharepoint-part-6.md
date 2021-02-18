@@ -19,7 +19,7 @@ tags: ["SharePoint 2010", "Tugboat"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)**in SharePoint 2010.
+In [part 5 of this series](/blog/jjameson/2011/04/26/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart), I showed how you can render semantic HTML for SharePoint         list items (instead of the out-of-the-box table layout) using the new **[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)**in SharePoint 2010.
 
 > **Note**
 >

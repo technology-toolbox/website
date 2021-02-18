@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In March, 2009, I wrote a [post](/blog/jjameson/2009/03/27/always-enable-disk-based-caching-in-moss-2007) that explains why **I always recommend enabling disk-based caching** in Microsoft Office SharePoint Server (MOSS) 2007.
+In March, 2009, I wrote a [post](/blog/jjameson/2009/03/26/always-enable-disk-based-caching-in-moss-2007) that explains why **I always recommend enabling disk-based caching** in Microsoft Office SharePoint Server (MOSS) 2007.
 
 This morning a Microsoft PFE (Premier Field Engineer) reached out to me after he came across my blog post while investigating some issues at a customer site. He said that he was at some "government agency" but that's all he would say -- and probably all I want to know ;-)
 

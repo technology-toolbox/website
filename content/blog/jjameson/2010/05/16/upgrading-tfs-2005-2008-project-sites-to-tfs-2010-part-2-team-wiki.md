@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "SharePoint 2010", "PowerShell"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In [part 1 of this series](/blog/jjameson/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features), I showed how you can add new Team Foundation Server (TFS) 2010 dashboard functionality to project sites originally created in TFS 2008 (or TFS 2005).
+In [part 1 of this series](/blog/jjameson/2010/05/13/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features), I showed how you can add new Team Foundation Server (TFS) 2010 dashboard functionality to project sites originally created in TFS 2008 (or TFS 2005).
 
 Another feature that you might want to add to upgraded project sites is a "Team Wiki" library. Wikis provide a great way to quickly share information about various aspects of your project on the site.
 

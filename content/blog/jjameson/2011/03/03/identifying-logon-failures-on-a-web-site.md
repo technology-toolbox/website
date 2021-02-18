@@ -34,7 +34,7 @@ These scripts are based on a sample I found in the [Script Center on TechNet](ht
 
 > **Note**
 >
-> While I originally created these scripts for a solution based on MOSS 2007, you should be able to use them for any site based on ASP.NET. For example, this morning I verified the scripts still work as expected with [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010) and configured with claims-based authentication.
+> While I originally created these scripts for a solution based on MOSS 2007, you should be able to use them for any site based on ASP.NET. For example, this morning I verified the scripts still work as expected with [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/24/claims-login-web-part-for-sharepoint-server-2010) and configured with claims-based authentication.
 
 > **Important**
 >

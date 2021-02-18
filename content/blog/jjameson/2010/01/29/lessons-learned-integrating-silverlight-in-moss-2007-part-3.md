@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "WSS v3", "
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-[Yesterday](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2) I continued building upon [part 1](/blog/jjameson/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1) in a series of posts regarding the use of Silverlight in an Internet-facing         customer portal built on Microsoft Office SharePoint Server (MOSS) 2007.
+[Yesterday](/blog/jjameson/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-2) I continued building upon [part 1](/blog/jjameson/2010/01/27/lessons-learned-integrating-silverlight-in-moss-2007-part-1) in a series of posts regarding the use of Silverlight in an Internet-facing         customer portal built on Microsoft Office SharePoint Server (MOSS) 2007.
 
 As I mentioned in the previous posts, the Silverlight application is hosted inside         of the SharePoint site by a user control (**ServiceWheel.ascx**) which         itself is hosted within a generic *User Control Web Part* (similar to [SmartPart for SharePoint](http://www.codeplex.com/smartpart)).
 

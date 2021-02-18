@@ -41,5 +41,5 @@ Regardless of what you call it, here is what I periodically use to view the raw 
 
 The deprecated `<xmp>` element is simply used to render the  raw XML as text, not as HTML-formatted elements (I don't recommend using this element  in any "permanent" fashion).
 
-Save the stylesheet above in your [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup)  as **IdentityTransform-Formatted.xslt** and you'll never have to recall  it from memory or search the Web for it again.
+Save the stylesheet above in your [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup)  as **IdentityTransform-Formatted.xslt** and you'll never have to recall  it from memory or search the Web for it again.
 

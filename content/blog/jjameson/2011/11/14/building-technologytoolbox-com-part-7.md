@@ -14,7 +14,7 @@ for TechnologyToolbox.com to the corresponding Development and Test environments
 ### Introduction
 
 In
-[my previous post](/blog/jjameson/2011/11/13/building-technologytoolbox-com-part-6), I explained how I migrated blog posts from
+[my previous post](/blog/jjameson/2011/11/12/building-technologytoolbox-com-part-6), I explained how I migrated blog posts from
 [my old MSDN blog](http://blogs.msdn.com/b/jjameson/) to Subtext.
 While developing the migration utility, I ran the migration process countless
 times on one of my development VMs (or what I typically refer to as "LOCAL").
@@ -58,7 +58,7 @@ title="Figure 1: Infrastructure" >}}
 
 While I generally prefer to use Windows Authentication with SQL Server --
 for reasons I described in
-[a post from way back in 2007](/blog/jjameson/2007/03/23/sql-server-authentication-modes) -- this is neither supported (nor desired)
+[a post from way back in 2007](/blog/jjameson/2007/03/22/sql-server-authentication-modes) -- this is neither supported (nor desired)
 in the hosted scenario. If the reasons for this are not immediately clear, I'll
 explain why in the following sections.
 

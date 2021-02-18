@@ -9,7 +9,7 @@ tags: ["Subtext", "Web Development"]
 ---
 
 In
-[my previous post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12), I showed how jQuery and a CSS sprite are used to render
+[my previous post](/blog/jjameson/2012/01/15/building-technologytoolbox-com-part-12), I showed how jQuery and a CSS sprite are used to render
 the expandable list under the **Archives** section on the various
 blog pages of the Technology Toolbox site. However, I intentionally omitted
 details about referencing the jQuery scripts and CSS. In this post, I'll show
@@ -140,7 +140,7 @@ the jQuery file for Debug and Release builds, as follows:
 ```
 
 Assuming you use Debug builds in DEV (and
-[LOCAL](/blog/jjameson/2009/09/25/development-and-build-environments)) and Release builds in PROD, you now have a much nicer debugging experience
+[LOCAL](/blog/jjameson/2009/09/24/development-and-build-environments)) and Release builds in PROD, you now have a much nicer debugging experience
 while still serving up minified jQuery script on your live site. Also note that
 Intellisense works as expected during development, which I *believe*
 is a result of having the jQuery files in the **Scripts** folder

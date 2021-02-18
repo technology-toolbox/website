@@ -16,7 +16,7 @@ tags: ["SQL Server", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-For a little over a month, Windows Update was failing on one of the servers in the         ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)         (a.k.a. my home lab). Specifically, [KB 970892](http://support.microsoft.com/kb/970892) simply would not install on JUBILEE -- my Systems Center Operations         Manager (SCOM) 2007 VM, that I use to monitor a number of physical and virtual machines.
+For a little over a month, Windows Update was failing on one of the servers in the         ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter)         (a.k.a. my home lab). Specifically, [KB 970892](http://support.microsoft.com/kb/970892) simply would not install on JUBILEE -- my Systems Center Operations         Manager (SCOM) 2007 VM, that I use to monitor a number of physical and virtual machines.
 
 Here's the first event I found regarding this error:
 

@@ -20,7 +20,7 @@ tags: ["My System", "Simplify", "Windows
 > blog ever goes away.
 
 In
-[Part 1 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-1), I explained the Group Policy object (named **Development - Restricted Groups Policy**) that I use for enforcing group
+[Part 1 of this post](/blog/jjameson/2009/10/14/managing-group-membership-via-group-policy-part-1), I explained the Group Policy object (named **Development - Restricted Groups Policy**) that I use for enforcing group
 membership on a specific set of servers. As a follow-up to that post, I also
 want to cover an alternate method of managing group membership.
 
@@ -36,7 +36,7 @@ For example, consider the fact that I use
 [Systems Center Operations Manager (SCOM)](http://www.microsoft.com/systemcenter/operationsmanager/en/us/default.aspx) in order to monitor the various
 physical and virtual servers in the the
 ["Jameson
-Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab). One of the things I learned while deploying
+Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab). One of the things I learned while deploying
 SCOM is that it is, um, *challenging* to deploy it in a least privilege
 configuration -- or at least for someone who primarily considers himself an
 AppDev (Application Development) flavor of Microsoft consultant.

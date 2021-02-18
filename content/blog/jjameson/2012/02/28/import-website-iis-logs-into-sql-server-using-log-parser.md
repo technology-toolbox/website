@@ -14,7 +14,7 @@ have come from specific IP addresses (such as those suspected of attempting
 to hack the site).
 
 As I described in
-[a previous post](/blog/jjameson/2012/02/03/building-technologytoolbox-com-part-22), TechnologyToolbox.com currently uses Google Analytics to
+[a previous post](/blog/jjameson/2012/02/02/building-technologytoolbox-com-part-22), TechnologyToolbox.com currently uses Google Analytics to
 provide numerous metrics and track trends. However, Google Analytics doesn't
 always provide the answer you are looking for. In fact, if an HTTP request results
 in an error (typically as a result of a failed hack attempt), then the Google

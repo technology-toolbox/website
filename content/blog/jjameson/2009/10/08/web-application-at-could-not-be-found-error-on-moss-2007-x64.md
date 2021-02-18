@@ -91,7 +91,7 @@ At this point, you're probably thinking something like "Jeremy, why would you po
 
 There are at least a couple of scenarios that I'm aware of:
 
-- First, you might want to run some Visual Studio [unit tests that access a live SharePoint site](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator). These unit tests work great when
+- First, you might want to run some Visual Studio [unit tests that access a live SharePoint site](/blog/jjameson/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator). These unit tests work great when
   you are developing on an x86 MOSS 2007 VM. However, they "blow chunks" on an x64
   development VM. [Oh, and please don't get me started on the whole "mocking" topic
   for unit testing SharePoint. That could get me going for hours -- and I really do

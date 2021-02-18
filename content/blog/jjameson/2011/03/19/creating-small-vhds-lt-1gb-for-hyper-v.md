@@ -19,7 +19,7 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In [my previous post](/blog/jjameson/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot), I explained how I like to create separate VHDs for data and  log files in my SharePoint development VMs. However, given the very small amount  of content that I typically load into a SharePoint development environment, these  VHDs certainly don't need to be very large.
+In [my previous post](/blog/jjameson/2011/03/18/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot), I explained how I like to create separate VHDs for data and  log files in my SharePoint development VMs. However, given the very small amount  of content that I typically load into a SharePoint development environment, these  VHDs certainly don't need to be very large.
 
 In the past, I've typically created data and log VHDs using sizes like 5 GB and  1 GB, respectively. However, as I was thinking about this when writing my previous  post, these admittedly arbitrary numbers seem a little ridiciulous. Am I ever really  going to load *5 GB* of sample content into a local development VM? Not bloody  likely.
 
@@ -74,5 +74,5 @@ Note that you'll probably need to change the permissions on the new VHD in order
 icacls foobar5_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
 ```
 
-This is described in more detail in [one of my previous posts](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
+This is described in more detail in [one of my previous posts](/blog/jjameson/2009/08/12/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
 

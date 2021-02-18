@@ -9,7 +9,7 @@ tags: ["PowerShell", "TFS"]
 ---
 
 In
-[my post from earlier this morning](/blog/jjameson/2012/02/28/zip-a-folder-using-powershell), I mentioned how I now use PowerShell
+[my post from earlier this morning](/blog/jjameson/2012/02/27/zip-a-folder-using-powershell), I mentioned how I now use PowerShell
 to package code samples for my blog to avoid accidentally including "junk" in
 the zip files (e.g. temporary object folders created during the build).
 

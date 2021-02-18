@@ -464,7 +464,7 @@ as expected.
 ### Step 7: Add CAPTCHA control to help prevent spam
 
 In a
-[previous post](/blog/jjameson/2012/01/25/building-technologytoolbox-com-part-16), I described the custom CAPTCHA control developed for the
+[previous post](/blog/jjameson/2012/01/24/building-technologytoolbox-com-part-16), I described the custom CAPTCHA control developed for the
 Technology Toolbox site to support both the Contact form as well as the form
 used to add comments on blog posts managed by Subtext.
 

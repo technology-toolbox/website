@@ -19,7 +19,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In a [previous post](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided sample "DR.DADA" scripts that I use for deploying  solutions based on Microsoft Office SharePoint Server (MOSS) 2007.
+In a [previous post](/blog/jjameson/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided sample "DR.DADA" scripts that I use for deploying  solutions based on Microsoft Office SharePoint Server (MOSS) 2007.
 
 If you've read that post, you might recall seeing the following lines in, for  example, the Deploy Solutions.cmd script:
 

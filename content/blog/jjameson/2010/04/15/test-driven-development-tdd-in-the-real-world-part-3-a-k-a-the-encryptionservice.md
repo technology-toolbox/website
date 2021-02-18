@@ -19,7 +19,7 @@ tags: ["My System", "Core Development"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In my [previous post](/blog/jjameson/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2), I provided a walkthrough of Test-Driven Development (TDD), based  on a very simple scenario (truncating a string to a specific number of characters).  In this post, I'll provide another example using a more complex scenario.
+In my [previous post](/blog/jjameson/2010/04/08/test-driven-development-tdd-in-the-real-world-part-2), I provided a walkthrough of Test-Driven Development (TDD), based  on a very simple scenario (truncating a string to a specific number of characters).  In this post, I'll provide another example using a more complex scenario.
 
 Suppose that we are developing a Web application and we need to encrypt some  sensitive data, such as credentials used to access an external system. In other  words, we need our Web application to support single-sign on (SSO) in order to access  or display data from another system, and we want to store the SSO credentials in  encrypted form. [Let's assume we're not going to leverage the Transparent Data Encryption  (TDE) features in SQL Server for this particular scenario, which could potentially  eliminate the need for us to encrypt and decrypt the data ourselves.]
 
@@ -31,7 +31,7 @@ However, in my experience, the most difficult part of encrypting data is managin
 
 Let's start by writing a couple of unit tests. However, before we do that we  first need to decide where to put the unit tests. Start by creating a new C# **Class Library** project called **Security**, then create  a corresponding project using the C# **Test Project** template called **Security.DeveloperTests**.
 
-At this point, I also recommend changing the default namespaces and assembly  names to something more meaningful, like **Fabrikam.Demo.Security**,  as well as configuring several other options such as enabling code analysis and  treating all warnings as errors (including both compilation warnings as well as  code analysis warnings). I also recommend [configuring shared assembly information](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects) and signing the assemblies with a strong  name key.
+At this point, I also recommend changing the default namespaces and assembly  names to something more meaningful, like **Fabrikam.Demo.Security**,  as well as configuring several other options such as enabling code analysis and  treating all warnings as errors (including both compilation warnings as well as  code analysis warnings). I also recommend [configuring shared assembly information](/blog/jjameson/2009/04/02/shared-assembly-info-in-visual-studio-projects) and signing the assemblies with a strong  name key.
 
 The second thing we need to do is decide on a class name for the **Encrypt** and **Decrypt** methods. How about **EncryptionService**?
 

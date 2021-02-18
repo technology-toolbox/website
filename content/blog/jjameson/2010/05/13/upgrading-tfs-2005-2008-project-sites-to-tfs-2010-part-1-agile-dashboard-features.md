@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "TFS", "SharePoint
 > blog ever goes away.
 
 In
-[one of last week's posts](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided details on upgrading from Team Foundation
+[one of last week's posts](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided details on upgrading from Team Foundation
 Server 2008 to TFS 2010, including some information about updating your TFS
 project sites. I also provided a reference to the following MSDN article for
 more information:
@@ -169,7 +169,7 @@ by TFS 2010 and looking at the corresponding feature assembly using Reflector,
 it quickly became apparent that the TFS product team approaches SharePoint development
 in much the same way that I do (i.e. by activating features on a site to install
 and configure new functionality). It's something I like to refer to as
-[the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) -- as opposed to
+[the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development) -- as opposed to
 [the SharePoint
 guidance on MSDN](http://msdn.microsoft.com/en-us/library/dd203468.aspx), which suggests using things like custom site definitions
 (shudder) to implement your customizations.

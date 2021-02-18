@@ -17,7 +17,7 @@ tags: ["My System", "Windows Server", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-As I've mentioned before, I don't spend much money or time maintaining the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab). However, that doesn't mean that I treat my infrastructure lightly.
+As I've mentioned before, I don't spend much money or time maintaining the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab). However, that doesn't mean that I treat my infrastructure lightly.
 
 In previous posts, I've covered many of the Group Policy objects that I use to minimize the maintenance effort associated with running more than a dozen servers (mostly virtual). In this post, I'll provide the details on how I backup these servers.
 

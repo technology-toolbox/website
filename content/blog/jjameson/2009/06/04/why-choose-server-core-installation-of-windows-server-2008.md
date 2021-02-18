@@ -72,7 +72,7 @@ You will find page after page of results similar to the following:
 Seeing all these results is refreshing when I think back on the challenges
 I had to overcome when building out my first Hyper-V server using the Server
 Core installation, such as
-[configuring remote administration of Hyper-V](/blog/jjameson/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v), or whenever I need to view
+[configuring remote administration of Hyper-V](/blog/jjameson/2008/08/27/some-gotchas-with-remote-administration-of-hyper-v), or whenever I need to view
 PerfMon data on a Server Core machine (which is trivial on a "Full" installation,
 but not quite so easy on a Server Core installation).
 

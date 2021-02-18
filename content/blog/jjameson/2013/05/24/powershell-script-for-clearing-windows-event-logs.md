@@ -9,7 +9,7 @@ tags: ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server
 ---
 
 A couple of years ago, I shared the
-[script I created to quickly clear the event logs on a server](/blog/jjameson/2011/03/01/script-to-clear-and-save-event-logs) (but saving
+[script I created to quickly clear the event logs on a server](/blog/jjameson/2011/02/28/script-to-clear-and-save-event-logs) (but saving
 them first -- just in case I need to go back and retrieve something from the
 "archive").
 

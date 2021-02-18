@@ -16,7 +16,7 @@ tags: ["Core Development", "TFS"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In a previous post, I briefly discussed [a simple branching strategy for Team Foundation Server](/blog/jjameson/2009/02/10/branching-strategy-in-team-foundation-server) (TFS). This was somewhat         of a follow-up to another [post](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) in which I briefly referenced a great article titled [The Importance of Branching Models in SCM](http://downloads.seapine.com/pub/papers/SCMBranchingModels.pdf). If you haven't read this         article, I highly recommend it.
+In a previous post, I briefly discussed [a simple branching strategy for Team Foundation Server](/blog/jjameson/2009/02/09/branching-strategy-in-team-foundation-server) (TFS). This was somewhat         of a follow-up to another [post](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) in which I briefly referenced a great article titled [The Importance of Branching Models in SCM](http://downloads.seapine.com/pub/papers/SCMBranchingModels.pdf). If you haven't read this         article, I highly recommend it.
 
 However, while branching is certainly an important aspect of Software Configuration         Management (SCM) -- and perhaps one of the most important aspects -- it's certainly         not the only one that warrants discussion. In this post, I want to cover some other         best practices for SCM as well as the daily build process.
 
@@ -115,12 +115,12 @@ If any of the above conditions cannot be met, the code should not be checked int
 
 The automated build process should:
 
-1. Automatically increment the Build Number or Revision portion of the [assembly version](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) (depending on which branch is being built)
+1. Automatically increment the Build Number or Revision portion of the [assembly version](/blog/jjameson/2009/04/02/best-practices-for-net-assembly-versioning) (depending on which branch is being built)
 2. Apply a build label (if appropriate)
 3. Retrieve the code from the source control system
 4. Compile the solution
 5. Run any associated unit tests
-6. Copy the build to the [Release Server](/blog/jjameson/2009/09/25/development-and-build-environments)
+6. Copy the build to the [Release Server](/blog/jjameson/2009/09/24/development-and-build-environments)
 
 If an error occurs during the build -- including execution of the unit tests --         the entire process stops. In this event, an email detailing the error should be         mailed to the appropriate distribution list. Once the error is fixed, the build         can be restarted. Note that the build/revision number should be incremented for         the restarted build.
 

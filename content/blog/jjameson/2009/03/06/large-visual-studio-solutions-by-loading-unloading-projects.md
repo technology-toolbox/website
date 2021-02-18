@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-As I noted in my [previous post](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
+As I noted in my [previous post](/blog/jjameson/2009/03/05/why-i-m-not-a-fan-of-wspbuilder), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
 
 On my previous project, we had 52 projects in our solution. On my current project,  there are 30.
 
@@ -36,7 +36,7 @@ As you start adding more and more projects to a solution, you'll inevitably disc
 Obviously we should expect the build time to take a while whenever we make a  change in one project that is referenced by many others (e.g. [a "CoreServices" project](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) like I've described in the past).
 
 If, like me, you've grown accustomed to Test Driven Development (TDD) however,  then you know that it's essential to minimize the ["Red, Green,
-Refactor"](http://msdn.microsoft.com/en-us/library/aa730844%28VS.80%29.aspx) cycle. If your [incremental build time requires 28 seconds](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), then your developer productivity  is going to take a hit in a big, big way.
+Refactor"](http://msdn.microsoft.com/en-us/library/aa730844%28VS.80%29.aspx) cycle. If your [incremental build time requires 28 seconds](/blog/jjameson/2009/03/05/why-i-m-not-a-fan-of-wspbuilder), then your developer productivity  is going to take a hit in a big, big way.
 
 So, what can we do to mitigate these issues?
 

@@ -42,7 +42,7 @@ As I noted at the beginning of this post, this is a MOSS 2007 project. Consequen
 
 One solution to the problem of build bloat would be to simply remove the referenced assemblies and deploy those separately. However, I really don't like the idea of breaking the nice encapsulation of deploying a WSP and having the corresponding referenced assemblies automatically deployed as well. Sure, one could argue that deploying third-party controls like the AJAX Control Toolkit and the Telerik controls should be done similar to the .NET Framework itself (i.e. independent of our custom code), but my preference is to simplify the deployment -- from a Release Management perspective -- as much as possible.
 
-In addition, it is also important to note that the build bloat isn't caused entirely by the UI control assemblies. As I've [noted in the past](/blog/jjameson/2009/03/30/extraneous-sharepoint-assemblies), SharePoint has a bad habit of copying extraneous assemblies into your project.
+In addition, it is also important to note that the build bloat isn't caused entirely by the UI control assemblies. As I've [noted in the past](/blog/jjameson/2009/03/29/extraneous-sharepoint-assemblies), SharePoint has a bad habit of copying extraneous assemblies into your project.
 
 In this particular case, Microsoft.Office.Server.Search.dll and Microsoft.SharePoint.Server.Search.dll are now included in each build -- even though we really don't want them to be (since we would never install or update these files as part of our deployment process for our solution).
 

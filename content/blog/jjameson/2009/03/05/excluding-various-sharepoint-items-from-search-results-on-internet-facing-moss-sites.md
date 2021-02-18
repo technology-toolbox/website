@@ -52,5 +52,5 @@ Here are the exclude rules that my custom `SharePointSearchHelper.EnsureScopeIsL
 - contentclass = STS\_ListItem\_Tasks
 - contentclass = STS\_ListItem\_XMLForm
 
-Note that, as described in my [previous post](/blog/jjameson/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty), there's a bug in MOSS 2007 in which a search scope that contains **Property Query** rules only is not recognized as having any rules at all. Consequently, you will need to explicitly include the URL of your Web application using a **Web Address** rule.
+Note that, as described in my [previous post](/blog/jjameson/2009/03/04/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty), there's a bug in MOSS 2007 in which a search scope that contains **Property Query** rules only is not recognized as having any rules at all. Consequently, you will need to explicitly include the URL of your Web application using a **Web Address** rule.
 

@@ -21,11 +21,11 @@ tags: ["SharePoint
 > ever goes away.
 
 A couple of years ago, I shared a script ([Restart
-SharePoint Services.cmd](/blog/jjameson/2009/03/26/script-to-restart-sharepoint-services)) for restarting the various services in Microsoft Office  SharePoint Server (MOSS) 2007.
+SharePoint Services.cmd](/blog/jjameson/2009/03/25/script-to-restart-sharepoint-services)) for restarting the various services in Microsoft Office  SharePoint Server (MOSS) 2007.
 
 I've since created a new version of the script for use with SharePoint Server  2010. As I mentioned in my previous post, this is primarily intended to be used  in development environments whenever you want to simulate a reboot of the server  (because this is much faster than actually rebooting). While I certainly hope the  memory leaks that often plagued MOSS 2007 solutions are a thing of the past, I still  find occasions where I want to quickly stop the various SharePoint services and  then restart them.
 
-To do this, I made a copy of the previous script in my SharePoint [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup)  folder, and updated the various service names for SharePoint 2010 (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Restart  SharePoint 2010 Services.cmd):
+To do this, I made a copy of the previous script in my SharePoint [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup)  folder, and updated the various service names for SharePoint 2010 (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Restart  SharePoint 2010 Services.cmd):
 
 ```
 @echo off

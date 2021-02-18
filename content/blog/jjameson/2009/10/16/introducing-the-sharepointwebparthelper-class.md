@@ -17,7 +17,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In a previous post, I introduced the [DR.DADA approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development) and how I typically use the concept of a [FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) to automatically configure one or more aspects of a SharePoint site when activating my feature.
+In a previous post, I introduced the [DR.DADA approach to SharePoint development](/blog/jjameson/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development) and how I typically use the concept of a [FeatureConfigurator](/blog/jjameson/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) to automatically configure one or more aspects of a SharePoint site when activating my feature.
 
 For example, on my latest project, we needed a login page as well as a legal disclaimer page for a customer service portal based on Microsoft Office SharePoint Server (MOSS) 2007. Thus I created a "PublicSiteConfiguration" feature that, upon activation:
 
@@ -499,7 +499,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-Most of the code in the `SharePointWebPartHelper` class is very straightforward. The most interesting hack -- er, I mean *workaround* -- in the code is to handle the scenario where the `zoneIndex` is sometimes mysteriously incremented by more than one, but you can read more about this in a [previous post](/blog/jjameson/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex) -- if you are really interested.
+Most of the code in the `SharePointWebPartHelper` class is very straightforward. The most interesting hack -- er, I mean *workaround* -- in the code is to handle the scenario where the `zoneIndex` is sometimes mysteriously incremented by more than one, but you can read more about this in a [previous post](/blog/jjameson/2009/06/04/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex) -- if you are really interested.
 
 Using the `SharePointWebPartHelper` class couldn't be easier. For a simple example, consider the scenario that I mentioned earlier about adding a Login Form Web Part to a page:
 

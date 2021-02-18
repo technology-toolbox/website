@@ -27,7 +27,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
 
 In a previous post, I introduced
-[the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through
+[the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development). This post walks you through
 an actual implementation of a feature -- well, actually two features -- using
 DR.DADA (Deactivate, Retract, Delete, Add, Deploy, and Activate).
 
@@ -96,7 +96,7 @@ making a solution specifically for the **Fabrikam.Demo.Publishing** SharePoint s
 are added later on. Let's name our Visual Studio solution **Fabrikam.Demo.sln**.
 If you've seen my post on
 [structuring Visual Studio solutions](/blog/jjameson/2007/04/18/structure-visual-studio-solutions) or my later post on
-[shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects), then you know my first step
+[shared assembly info in Visual Studio projects](/blog/jjameson/2009/04/02/shared-assembly-info-in-visual-studio-projects), then you know my first step
 is to build out a "shell" that looks like the following:
 
 {{< figure
@@ -111,7 +111,7 @@ and then add a new **Class Library** project named **Publishing.csproj** (in
 [C:\NotBackedUp\Fabrikam\Main\Source\Publishing](file:///C:/NotBackedUp/Fabrikam/Main/Source/Publishing)).
 [Note that the Visual Studio solution folder simply helps "partition" the solution
 and makes it really easy in the future to
-[load and unload multiple projects](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need
+[load and unload multiple projects](/blog/jjameson/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects) at once (for example, if we later need
 to add a **Publishing.DeveloperTests** project for unit tests corresponding
 to code in **Publishing.csproj**).]
 
@@ -120,7 +120,7 @@ to conserve precious space within the Visual Studio **Solution Explorer** window
 name and default namespace to **Fabrikam.Demo.Publishing**. I also
 delete the default **Class1.cs** file (which gets created with
 every **Class Library** project), add some
-[linked files](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the
+[linked files](/blog/jjameson/2009/04/01/linked-files-in-visual-studio-solutions) to the project, configure a strong name key file to sign the
 assembly, configure shared assembly information for the new project (as described
 in my previous posts), and add some assembly references (e.g. to the **CoreServices** project as well as to the System.Web and Microsoft.SharePoint
 assemblies).

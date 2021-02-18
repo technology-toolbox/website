@@ -9,7 +9,7 @@ tags: ["Web Development"]
 ---
 
 As I described in
-[a previous post](/blog/jjameson/2012/01/22/building-technologytoolbox-com-part-14), TechnologyToolbox.com currently uses ELMAH to log errors
+[a previous post](/blog/jjameson/2012/01/21/building-technologytoolbox-com-part-14), TechnologyToolbox.com currently uses ELMAH to log errors
 that occur on the website. In
 [a follow-up post](/blog/jjameson/2012/01/23/building-technologytoolbox-com-part-15) I also discussed some of the errors that have occurred
 since the website went live last year -- many of which result from failed attempts
@@ -25,7 +25,7 @@ on the number of errors in such as short amount of time).
 
 Even though
 I previously configured
-[Outlook rules](/blog/jjameson/2010/01/04/managing-email-effectively) to automatically move these messages out of my inbox, I was
+[Outlook rules](/blog/jjameson/2010/01/03/managing-email-effectively) to automatically move these messages out of my inbox, I was
 tired of seeing these messages altogether. So this past weekend, I decided
 to add a filter to ELMAH to avoid sending messages when an error occurs as a
 result of a known hack attempt.

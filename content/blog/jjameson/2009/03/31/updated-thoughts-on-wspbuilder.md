@@ -20,7 +20,7 @@ tags: ["MOSS 2007"]
 > blog ever goes away.
 
 Several weeks ago, I wrote a post titled "[Why
-I'm Not a Fan of WSPBuilder](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder)." Shortly thereafter, I received a message from
+I'm Not a Fan of WSPBuilder](/blog/jjameson/2009/03/05/why-i-m-not-a-fan-of-wspbuilder)." Shortly thereafter, I received a message from
 Carsten Keutmann, the creator of WSPBuilder.
 
 Here is the "almost" unabridged version of the email exchange (headers and

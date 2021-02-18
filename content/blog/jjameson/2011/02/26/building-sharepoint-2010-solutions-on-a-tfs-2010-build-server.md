@@ -21,7 +21,7 @@ tags: ["Visual Studio", "TFS", "SharePoint
 
 Last year I wrote a post about
 [building Microsoft Office SharePoint Server (MOSS) 2007 solutions on a Team
-Foundation Server (TFS) 2010 build server](/blog/jjameson/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server), which talked about copying various
+Foundation Server (TFS) 2010 build server](/blog/jjameson/2010/05/04/building-moss-2007-solutions-on-a-tfs-2010-build-server), which talked about copying various
 SharePoint assemblies to a "Reference Assemblies" folder and adding a corresponding
 registry key for MSBuild to locate the assemblies.
 

@@ -196,7 +196,7 @@ Simply comment out the default PageHandlerFactory and add the custom Application
     </httpHandlers>
 ```
 
-Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:
+Be aware that if you use the approach shown here -- specifically, setting the master page for an application page based on the current site context -- then you must use a custom master page that includes all of the placeholders included in both default.master and application.master (as noted in my [previous post](/blog/jjameson/2009/09/18/moss-2007-master-page-comparison)). Otherwise, you'll encounter an error similar to the following:
 
 {{< blockquote "font-italic text-danger" >}}
 

@@ -19,11 +19,11 @@ tags: ["MOSS 2007", "SharePoint
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In [my previous post](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I introduced a scenario for using the "Reusable Content" feature  in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In  this post, I show you how to programmatically add **Reusable Content** list items (which is very helpful when deploying to multiple environments,  such as DEV, TEST, and PROD) as well as how to insert reusable content into a Publishing  HTML field on a page (e.g. the **Page Content** field). I also provide  a complete code sample for SharePoint 2010 that demonstrates the key concepts discussed  in this series.
+In [my previous post](/blog/jjameson/2011/04/07/reusable-content-in-sharepoint-publishing-html-fields-part-1), I introduced a scenario for using the "Reusable Content" feature  in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In  this post, I show you how to programmatically add **Reusable Content** list items (which is very helpful when deploying to multiple environments,  such as DEV, TEST, and PROD) as well as how to insert reusable content into a Publishing  HTML field on a page (e.g. the **Page Content** field). I also provide  a complete code sample for SharePoint 2010 that demonstrates the key concepts discussed  in this series.
 
 ### Adding a new Reusable Content list item
 
-Since reusable content in SharePoint is enabled by the Publishing features, I  chose to enhance the **SharePointPublishingHelper** class -- which  I introduced in a [previous post](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class) -- to provide a new method for ensuring some piece of reusable  content has been configured.
+Since reusable content in SharePoint is enabled by the Publishing features, I  chose to enhance the **SharePointPublishingHelper** class -- which  I introduced in a [previous post](/blog/jjameson/2009/10/08/introducing-the-sharepointpublishinghelper-class) -- to provide a new method for ensuring some piece of reusable  content has been configured.
 
 In case you are not familiar with the "ensure" logic that I tend to implement  in various SharePoint helper classes, in essence the code performs any necessary  actions to achieve some condition (for example, ensure a specific page exists --  by creating a new page if one doesn't already exist). The key design principle in  the "ensure" logic is to avoid trampling any manual changes that may have been made  to SharePoint by content authors and administrators.
 
@@ -52,7 +52,7 @@ SPListItem reusableContent =
 
 If the specified **Reusable Content** list item already exists (found  by matching on the **Title** field), then the existing list item is  returned. Otherwise, a new list item is added (with the specified field values)  and subsequently returned. Note that we don't want to overwrite the content in the  list item because someone may have updated the copyright content (e.g. "Copyright&copy;  2011 Fabrikam Technologies - All Rights Reserved").
 
-Also note that the **Reusable Content** list is configured for approval  by default, and -- as I mentioned in [part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1) -- "bad things" happen when a page includes a reference  to reusable content that has not been approved. Consequently, the **EnsureReusableContentItem** method also takes care of approving the list item (if it does not have  at least one approved version):
+Also note that the **Reusable Content** list is configured for approval  by default, and -- as I mentioned in [part 1 of this series](/blog/jjameson/2011/04/07/reusable-content-in-sharepoint-publishing-html-fields-part-1) -- "bad things" happen when a page includes a reference  to reusable content that has not been approved. Consequently, the **EnsureReusableContentItem** method also takes care of approving the list item (if it does not have  at least one approved version):
 
 ```
 public static SPListItem EnsureReusableContentItem(

@@ -40,7 +40,7 @@ In other words, assuming you aren't trying to run your Production SharePoint env
 
 The better news is that the "Preserving template record with size..." issue has         been duly noted by the product team (in other words, a bug has been created) and         it appears the logging level for this event will be changed in "O14" (i.e. the next         version of SharePoint) to avoid incessantly spewing this message with the default         logging settings.
 
-As for addressing my daily "log purging" needs, I simply created the following script         and dropped it in my SharePoint [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Delete SharePoint         Logs.cmd):
+As for addressing my daily "log purging" needs, I simply created the following script         and dropped it in my SharePoint [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup) folder (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Delete SharePoint         Logs.cmd):
 
 ```
 @echo off

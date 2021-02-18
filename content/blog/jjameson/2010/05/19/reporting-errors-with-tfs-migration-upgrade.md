@@ -209,7 +209,7 @@ this error, but that didn't help.
 
 Consequently, I "rolled back" my TFS upgrade and performed the upgrade again
 using the process described in
-[my previous blog post](/blog/jjameson/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade). After granting permissions to the RSExecRole, the
+[my previous blog post](/blog/jjameson/2010/05/19/performing-a-do-over-with-tfs-2010-upgrade). After granting permissions to the RSExecRole, the
 TFS upgrade completed without any issues (i.e. the warnings reported during
 the initial TFS upgrade no longer occurred).
 

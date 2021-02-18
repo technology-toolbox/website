@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In a previous [post](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) discussing Web standards design, I mentioned how I like to use "Theme" folders to organize CSS files and related images that define a specific look-and-feel for a site.
+In a previous [post](/blog/jjameson/2010/01/29/web-standards-design-with-moss-2007-part-1) discussing Web standards design, I mentioned how I like to use "Theme" folders to organize CSS files and related images that define a specific look-and-feel for a site.
 
 For example, suppose we are tasked with building the Internet site for Fabrikam Technologies and we are leveraging SharePoint Server (2007 or 2010 doesn't matter -- the concepts I'll cover in this post apply to both). Note that for SharePoint solutions, we want to store CSS files (and, ideally, any images referenced in the CSS files) under the **Style Library** for the site collection.
 

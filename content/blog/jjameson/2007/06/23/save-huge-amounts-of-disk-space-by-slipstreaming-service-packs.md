@@ -35,7 +35,7 @@ title="Figure 1: Disk usage on VM before rebuild" >}}
 
 [See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage-foobar.jpg)
 
-So, out of the 16 GB available, my [**NotBackedUp**](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder consumed a small fraction, the **Program
+So, out of the 16 GB available, my [**NotBackedUp**](/blog/jjameson/2007/03/21/backedup-and-notbackedup) folder consumed a small fraction, the **Program
 Files** folder consumed a little under 6 GB, and the **Windows**         folder accounted for a whopping 9 GB! Huh? Hey, wait a minute, what's going on here?!         Surely there must be a mistake.
 
 Looking at the results a little closer, you can see that in the **Windows**         folder, the **Installer**, **ServicePackFiles**, and **SoftwareDistribution** folders consume roughly 5 GB of space. On a typical         desktop computer with 100, 200, or even 300 GB hard drives, this doesn't seem all         that bad. However, when working with VMs (often configured with 16 GB drives), this         is huge! Especially when you consider that I currently have 21 VMs on my server         at home (I typically only have a couple running at any given time).

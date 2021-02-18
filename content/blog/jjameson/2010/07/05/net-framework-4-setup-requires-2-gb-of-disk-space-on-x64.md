@@ -36,7 +36,7 @@ Description:
 Installation Failure: Windows failed to install the following update with error 0x80070643: Microsoft .NET Framework 4 for Windows Server 2008 x64-based Systems (KB982671).
 ```
 
-Note that all of the other servers and workstations in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) installed .NET Framework 4 without incident, so I was         a little baffled why this particular server was failing.
+Note that all of the other servers and workstations in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) installed .NET Framework 4 without incident, so I was         a little baffled why this particular server was failing.
 
 Rather than troubleshooting the error using the steps described in [KB 958052](http://support.microsoft.com/kb/958052) (as I've done in the past when encountering error 0x80070643 with         Windows Update), I decided it would be quicker and easier to try installing it using         the [.NET Framework 4 standalone installer](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=0a391abd-25c1-4fc0-919f-b21f31ab88b7).
 

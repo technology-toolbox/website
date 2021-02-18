@@ -9,7 +9,7 @@ tags: ["Web Development"]
 ---
 
 In
-[my previous post](/blog/jjameson/2012/01/06/building-technologytoolbox-com-part-10), I briefly mentioned how the **Most Popular Posts**
+[my previous post](/blog/jjameson/2012/01/05/building-technologytoolbox-com-part-10), I briefly mentioned how the **Most Popular Posts**
 section on the Technology Toolbox home page uses a CSS sprite to render the
 arrow image next to each list item.
 

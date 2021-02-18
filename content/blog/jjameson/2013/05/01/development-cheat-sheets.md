@@ -111,7 +111,7 @@ I should also mention how I create different pages in OneNote for each branch
 in TFS that I frequently work on. For example, the following figure shows the
 cheat sheet for the **SharePointExtranet** branch that I created
 for the code sample included in
-[yesterday's post](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
+[yesterday's post](/blog/jjameson/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/r_Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch.png"

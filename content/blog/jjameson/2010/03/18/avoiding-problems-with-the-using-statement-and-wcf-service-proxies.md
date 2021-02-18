@@ -62,7 +62,7 @@ I have to admit, I was completely dumbfounded by this statement. An MSDN article
 What's that old movie quote about "dogs and cats living together" and "mass hysteria"?  According to my calendar, it's definitely still March -- so no April Fool's joke  here.
 
 So, seriously, what gives? We are using "using" statements throughout our solution.  In my mind, this is a best practice. Heck, I even blogged once about how I'm still  waiting for that [Utopian FxCop rule that barks at you whenever an object that implements IDisposable
-is not wrapped in a `using` block](/blog/jjameson/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question).
+is not wrapped in a `using` block](/blog/jjameson/2009/03/18/to-dispose-or-not-to-dispose-that-is-the-question).
 
 That's when it occurred to me: "Here we go again..."
 

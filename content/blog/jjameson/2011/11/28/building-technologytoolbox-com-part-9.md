@@ -11,7 +11,7 @@ tags: ["Core
 ---
 
 In
-[a previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), I mentioned how the new Technology Toolbox home page highlights
+[a previous post](/blog/jjameson/2011/10/17/introducing-technologytoolbox-com), I mentioned how the new Technology Toolbox home page highlights
 the most recent blog posts, as shown below.
 
 {{< figure
@@ -107,7 +107,7 @@ posts from the Subtext database, I turned my attention to displaying the results
 ### RecentPosts.ascx
 
 As noted in
-[part 5 of this series](/blog/jjameson/2011/11/09/building-technologytoolbox-com-part-5), the Technology Toolbox site currently uses the
+[part 5 of this series](/blog/jjameson/2011/11/08/building-technologytoolbox-com-part-5), the Technology Toolbox site currently uses the
 [hAtom 0.1 microformat](http://microformats.org/wiki/hatom) to render
 semantic HTML for blog posts.
 

@@ -12,7 +12,7 @@ tags: ["My System", "SharePoint
 
 This post provides a sample installation guide for an extranet platform based
 on SharePoint Server 2010 and Office Web Apps. As noted in
-[my previous post](/blog/jjameson/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact,
+[my previous post](/blog/jjameson/2012/03/17/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact,
 a good portion of this installation guide has roots in the TechNet documentation
 for Microsoft Office SharePoint Server 2007). However, this guide augments the
 SharePoint 2010 TechNet documentation with corrections and additional content
@@ -243,8 +243,8 @@ Whenever possible, it is strongly recommended to start from a Sysprep'ed
 image to save significant time. For information on creating and using Sysprep'ed
 images for virtual machines, refer to the following blog posts:
 
-- {{< reference title="Creating a VM/VHD Library" linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
-- {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines" linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
+- {{< reference title="Creating a VM/VHD Library" linkHref="/blog/jjameson/2010/04/01/creating-a-vm-vhd-library" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
+- {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines" linkHref="/blog/jjameson/2009/08/12/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
 
 ### Reset WSUS configuration
 
@@ -274,7 +274,7 @@ entries specified in [KB
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
+{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/24/script-to-reset-wsus-for-sysprep-ed-image" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
 
 ### Remove "stale" network adapters
 
@@ -312,7 +312,7 @@ To cleanup the network adapters:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
+{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/13/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
 
 ## DEV - Configure VM storage
 
@@ -363,7 +363,7 @@ files:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
+{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/18/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
@@ -795,7 +795,7 @@ END
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
+{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/18/using-the-simple-recovery-model-for-sharepoint-development-environments" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
 
 ## DEV - Install Microsoft Office 2010
 
@@ -1043,7 +1043,7 @@ Local intranet zone:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/21/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 ## Add the URL for the extranet website to the Local intranet zone
 
@@ -1131,7 +1131,7 @@ Admin Service:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/16/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ## Rename TaxonomyPicker.ascx
 
@@ -1311,8 +1311,8 @@ Name the snapshot **Baseline SharePoint Server 2010 configuration**.
 More information about using VM snapshots for SharePoint development
 is available in the following blog posts:
 
-- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 1" linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
-- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 2" linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
+- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 1" linkHref="/blog/jjameson/2011/03/21/virtual-machine-snapshots-and-sharepoint-development-part-1" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
+- {{< reference title="Virtual Machine Snapshots and SharePoint Development, Part 2" linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
@@ -2025,7 +2025,7 @@ To login to the website using Windows authentication:
 >
 > This is discussed in more detail in the following blog post:
 >
-> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/21/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 > 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 > and click **Sign In**.
 > 3. On the **Sign In** page, in the dropdown list, click

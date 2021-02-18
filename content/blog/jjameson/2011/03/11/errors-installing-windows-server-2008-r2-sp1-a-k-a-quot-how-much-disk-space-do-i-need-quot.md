@@ -17,7 +17,7 @@ tags: ["Windows Server", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-A couple of years ago, I wrote a post about [issues I encountered deploying Windows Server 2008 Service Pack 2](/blog/jjameson/2009/06/01/errors-installing-windows-server-2008-sp2) due to insufficient disk space on various VMs in the the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab).
+A couple of years ago, I wrote a post about [issues I encountered deploying Windows Server 2008 Service Pack 2](/blog/jjameson/2009/05/31/errors-installing-windows-server-2008-sp2) due to insufficient disk space on various VMs in the the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab).
 
 This morning I encountered similar issues when attempting to install Windows Server 2008 R2 SP1 (which I recently approved on my WSUS server). Apparently the disk space requirements have gone up -- again. Significantly.
 

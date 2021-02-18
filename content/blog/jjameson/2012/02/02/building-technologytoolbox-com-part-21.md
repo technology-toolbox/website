@@ -305,7 +305,7 @@ First, rather than having to click the search icon, users should be able
 to simply press {{< kbd "Enter" >}} after typing one or more search terms. [This
 obviously needs to work in all the major browsers, so I obviously didn't want
 to mimic the
-[functionality in MOSS 2007](/blog/jjameson/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox).]
+[functionality in MOSS 2007](/blog/jjameson/2009/09/30/enter-key-does-not-submit-search-in-moss-2007-from-firefox).]
 
 Second, to help draw attention to the search box, it should contain "Search..."
 by default, but when somebody clicks in the box the default text should be removed.

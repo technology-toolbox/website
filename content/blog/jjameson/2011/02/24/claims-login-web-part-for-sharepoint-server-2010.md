@@ -17,7 +17,7 @@ tags: ["SharePoint 2010"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010), I provided the step-by-step process I use for configuring         claims-based authentication in SharePoint Server 2010.
+In [my previous post](/blog/jjameson/2011/02/18/configuring-claims-based-authentication-in-sharepoint-server-2010), I provided the step-by-step process I use for configuring         claims-based authentication in SharePoint Server 2010.
 
 If you follow those steps, then when you browse to the home page of the site and         click **Sign In**, you'll be redirected to the out-of-the-box login         page (/\_login/default.aspx) shown in Figure 1. Note that since the Web application         is configured to support both Forms-Based Authentication (FBA) and Windows authentication,         the login page requires you to specify the type of credentials to use to logon to         the SharePoint site.
 
@@ -37,7 +37,7 @@ height="250"
 width="600"
 title="Figure 2: Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)" >}}
 
-Note that if you click **Windows Authentication** in the dropdown list,         you are presented with the login dialog provided by the Web browser (or, if you         are logged into a workstation with domain credentials, and you are using Internet         Explorer -- and you've added the site to your **Local intranet** zone         -- then instead you are [transparently authenticated](/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials) with the site).
+Note that if you click **Windows Authentication** in the dropdown list,         you are presented with the login dialog provided by the Web browser (or, if you         are logged into a workstation with domain credentials, and you are using Internet         Explorer -- and you've added the site to your **Local intranet** zone         -- then instead you are [transparently authenticated](/blog/jjameson/2007/03/21/be-in-the-zone-to-avoid-entering-credentials) with the site).
 
 While the sign-in experience shown in the preceeding screenshots is great for prototypes         and proofs-of-concept (for example, to demonstrate why claims-based authentication         in SharePoint 2010 is much better than FBA in Microsoft Office SharePoint Server         2007), it obviously isn't going to be sufficient for real world solutions. Instead         we need a "branded" login page like the one shown in Figure 3.
 
@@ -242,7 +242,7 @@ I then moved on to making the Claims Login Form Web Part more robust by adding t
 - Disable the form fields and validator controls when the page is in edit mode (so
   that content authors don't have to enter "bogus" credentials in order to save changes
   to the page)
-- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)**to automatically redirect from HTTP to HTTPS (except
+- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/09/sharepoint-web-part-to-redirect-from-http-to-https)**to automatically redirect from HTTP to HTTPS (except
   in development environments, of course)
 - Show a warning when the connection is not secure (i.e. in development environments
   or when the SSL redirect has been explicitly disabled via the Web.config file)
@@ -267,7 +267,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
      Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full
      Control access to Web applications
-2. Complete the procedures detailed in **Step 1** from [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010) to create and configure the **FabrikamDemo** database
+2. Complete the procedures detailed in **Step 1** from [my previous post](/blog/jjameson/2011/02/18/configuring-claims-based-authentication-in-sharepoint-server-2010) to create and configure the **FabrikamDemo** database
    (i.e. the ASP.NET membership/role database).
 3. Complete the procedures detailed in **Step 5**from my previous post
    to add the Web.config modifications for claims-based authentication to the following

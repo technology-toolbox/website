@@ -148,7 +148,7 @@ Let me know your thoughts.
 
 Although I didn't receive a single comment on my ["IDisposables Containing IDisposables" post](/blog/jjameson/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables), I have to wonder if lots of people  out there aren't silently agreeing with this concept. There were certainly some  comments to [Roger's post](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx) that said effectively the same thing.
 
-I completely understand that all software has bugs (heck, just read [my previous post](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) if you want to see a rather embarrassing personal example of  one of my own) and that it takes time to fix bugs. However, we should always strive  to make the code we write the best -- and simplest -- that it can possibly be.
+I completely understand that all software has bugs (heck, just read [my previous post](/blog/jjameson/2009/03/18/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) if you want to see a rather embarrassing personal example of  one of my own) and that it takes time to fix bugs. However, we should always strive  to make the code we write the best -- and simplest -- that it can possibly be.
 
 Now, if we could just get that all-encompassing FxCop rule for ensuring that  all `IDisposable` objects are wrapped in `using` blocks...  ;-)
 

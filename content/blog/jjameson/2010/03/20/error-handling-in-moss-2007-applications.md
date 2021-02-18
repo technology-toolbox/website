@@ -19,7 +19,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In my [previous post](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications), I described the enhancements to my [original **Logger** class](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) for logging exceptions in a consistent  fashion.
+In my [previous post](/blog/jjameson/2010/03/19/logging-exceptions-in-net-applications), I described the enhancements to my [original **Logger** class](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) for logging exceptions in a consistent  fashion.
 
 While error handling in .NET console applications and ASP.NET Web applications  is fairly straightforward, things get quite a bit more complicated when dealing  with solutions built with Microsoft Office SharePoint Server (MOSS) 2007 and Windows  SharePoint Services. This is because SharePoint comes out-of-the-box with its own  custom error handling infrastructure (although it is based on the core functionality  provided by ASP.NET).
 
@@ -189,9 +189,9 @@ Note that I'm essentially following the approach outlined in the following KB  a
 
 {{< reference title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET" linkHref="http://support.microsoft.com/kb/306355" >}}
 
-In the **Page\_Error** method, I first log the exception using [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications). Then I call the **[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)** method to prevent the error from continuing  to the **Application\_Error** event handler (which would subsequently  invoke the SharePoint error handling infrastucture). Finally, I transfer the request  to a custom application page (Error.aspx) in the Layouts folder -- thus displaying  a friendly error message to the user, while still preserving the URL of the original  request (as opposed to a redirect, which would change the URL shown in the browser).
+In the **Page\_Error** method, I first log the exception using [my custom **Logger** class](/blog/jjameson/2010/03/19/logging-exceptions-in-net-applications). Then I call the **[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)** method to prevent the error from continuing  to the **Application\_Error** event handler (which would subsequently  invoke the SharePoint error handling infrastucture). Finally, I transfer the request  to a custom application page (Error.aspx) in the Layouts folder -- thus displaying  a friendly error message to the user, while still preserving the URL of the original  request (as opposed to a redirect, which would change the URL shown in the browser).
 
-Note that since Error.aspx is handling an unexpected exception, the last thing  we want is another error to occur in the error page. Consequently, I use a very  simple ASP.NET page with nothing in the code-behind. In fact, I don't even want  to [use the master page configured for my SharePoint site](/blog/jjameson/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007) -- in case the original  exception occurred as a result of some code in the master page. [I suppose you could  use a static HTML file if you are really paranoid about an exception occuring in  your error page. However, so far, I haven't found the need to do this.]
+Note that since Error.aspx is handling an unexpected exception, the last thing  we want is another error to occur in the error page. Consequently, I use a very  simple ASP.NET page with nothing in the code-behind. In fact, I don't even want  to [use the master page configured for my SharePoint site](/blog/jjameson/2009/09/19/inheriting-the-master-page-from-the-current-site-context-in-moss-2007) -- in case the original  exception occurred as a result of some code in the master page. [I suppose you could  use a static HTML file if you are really paranoid about an exception occuring in  your error page. However, so far, I haven't found the need to do this.]
 
 Here's the sample Error.aspx file that I created to capture the screenshot shown  in Figure 3:
 
@@ -292,7 +292,7 @@ Here's the sample Error.aspx file that I created to capture the screenshot shown
 
 I'm not really advocating that your custom error page be as complex as the one  I've shown here. This is just what I used in order to get the look-and-feel to be  very similar to BlueBand.master without spending a great deal of time converting  this to semantic markup.
 
-For comparison purposes, here's a much simpler custom error page based on [a Web standards design](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1):
+For comparison purposes, here's a much simpler custom error page based on [a Web standards design](/blog/jjameson/2010/01/29/web-standards-design-with-moss-2007-part-1):
 
 ```
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs"

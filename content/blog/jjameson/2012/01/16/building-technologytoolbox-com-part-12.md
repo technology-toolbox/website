@@ -9,7 +9,7 @@ tags: ["Subtext", "Web Development"]
 ---
 
 In
-[my previous post](/blog/jjameson/2012/01/15/building-technologytoolbox-com-part-11), I briefly mentioned how I use a CSS sprite and jQuery
+[my previous post](/blog/jjameson/2012/01/14/building-technologytoolbox-com-part-11), I briefly mentioned how I use a CSS sprite and jQuery
 to render the expandable list under the **Archives** section on
 the various blog pages of the Technology Toolbox site.
 
