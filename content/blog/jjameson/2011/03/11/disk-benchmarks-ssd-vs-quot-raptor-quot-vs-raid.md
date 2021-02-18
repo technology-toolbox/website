@@ -3,7 +3,7 @@ title: "Disk Benchmarks: SSD vs. \"Raptor\" vs. RAID"
 date: 2011-03-11T01:00:00-07:00
 excerpt: "Earlier this week, I posted about how I rebuilt my Windows 7 desktop while installing a new solid-state drive (SSD). 
  This morning, I thought I would share some performance numbers that I gathered from the various disk configurations that I currently..."
-aliases: ["/blog/jjameson/archive/2011/03/10/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure"]

@@ -3,7 +3,7 @@ title: "Installation Guide for SharePoint Server 2010 and Office Web Apps"
 date: 2013-04-30T03:12:32-07:00
 lastmod: 2013-04-30T03:23:52-07:00
 excerpt: "This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps."
-aliases: ["/blog/jjameson/archive/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx"]
+aliases: ["/blog/jjameson/archive/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 

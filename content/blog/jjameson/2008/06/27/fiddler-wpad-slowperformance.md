@@ -2,7 +2,7 @@
 title: "Fiddler + WPAD - VPN = SlowPerformance"
 date: 2008-06-27T05:57:00-07:00
 excerpt: "I needed to look at some low-level HTTP traffic this morning, so I fired up Fiddler -- my tool of choice for this kind of thing. Unfortunately, I found that as soon as I enabled Fiddler, my browsing experience slowed to a crawl. Page requests that previously..."
-aliases: ["/blog/jjameson/archive/2008/06/26/fiddler-wpad-slowperformance.aspx"]
+aliases: ["/blog/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx"]
 draft: true
 categories: ["Infrastructure", "Development"]
 tags: ["Windows Vista", "Debugging"]

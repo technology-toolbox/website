@@ -5,7 +5,7 @@ excerpt: "Eric Charran has posted an article on MSDN with some great pointers on
  
  http://msdn2.microsoft.com/en-us/library/bb428899.aspx 
  This is an interesting read and well worth the time spent. Overall..."
-aliases: ["/blog/jjameson/archive/2007/04/23/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx"]
+aliases: ["/blog/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

@@ -3,7 +3,7 @@ title: "Windows 7 SP1/SSD Rebuild (and MaxPatchCacheSize = 0)"
 date: 2011-03-09T01:34:00-07:00
 excerpt: "I spent a few hours last night (and another hour this morning) rebuilding my Windows 7 desktop that I use as my primary workstation (WOLVERINE). 
  In case you haven't heard, Service Pack 1 for Windows 7 and Windows Server 2008 R2 was released a few weeks..."
-aliases: ["/blog/jjameson/archive/2011/03/08/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows 7"]

@@ -5,7 +5,7 @@ excerpt: "My name is Jeremy, and I'm a Firefox user.
  There, I've said it. 
  I know, I know...what am I thinking, a Microsoft employee telling the world that Internet Explorer isn't the end all, be all browser for everyone?! 
  Well, first let me clarify a little..."
-aliases: ["/blog/jjameson/archive/2008/10/19/fessing-up-about-firefox.aspx"]
+aliases: ["/blog/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development"]

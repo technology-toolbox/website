@@ -2,7 +2,7 @@
 title: "Large Visual Studio Solutions and Loading/Unloading Projects"
 date: 2009-03-06T03:03:00-07:00
 excerpt: "As I noted in my previous post , I typically work with \"large\" Visual Studio solutions. Note that I put this in quotes, because the definition of \"large\" will likely vary widely based on your individual experience. Note that I'm not referring to \"large..."
-aliases: ["/blog/jjameson/archive/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects.aspx"]
+aliases: ["/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]

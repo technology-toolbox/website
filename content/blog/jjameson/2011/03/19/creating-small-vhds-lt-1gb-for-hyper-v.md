@@ -2,7 +2,7 @@
 title: "Creating Small VHDs (< 1GB) for Hyper-V"
 date: 2011-03-19T00:37:00-07:00
 excerpt: "In my previous post , I explained how I like to create separate VHDs for data and log files in my SharePoint development VMs. However, given the very small amount of content that I typically load into a SharePoint development environment, these VHDs certainly..."
-aliases: ["/blog/jjameson/archive/2011/03/18/creating-small-vhds-lt-1gb-for-hyper-v.aspx"]
+aliases: ["/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint 

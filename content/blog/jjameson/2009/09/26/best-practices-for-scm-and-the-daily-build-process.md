@@ -2,7 +2,7 @@
 title: "Best Practices for SCM and the Daily Build Process"
 date: 2009-09-26T05:12:00-07:00
 excerpt: "In a previous post, I briefly discussed a simple branching strategy for Team Foundation Server (TFS). This was somewhat of a follow-up to another post in which I briefly referenced a great article titled The Importance of Branching Models in SCM . If..."
-aliases: ["/blog/jjameson/archive/2009/09/25/best-practices-for-scm-and-the-daily-build-process.aspx"]
+aliases: ["/blog/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]

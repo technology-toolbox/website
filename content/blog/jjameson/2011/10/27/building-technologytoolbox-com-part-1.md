@@ -2,7 +2,7 @@
 title: "Why was Subtext selected for TechnologyToolbox.com? (a.k.a. Building TechnologyToolbox.com, part 1)"
 date: 2011-10-27T02:53:14-07:00
 excerpt: "In my previous post, I mentioned how my new blog is currently powered by Subtext -- or rather my own (slightly modified) version of Subtext 2.5. I also noted that Subtext wasn't my first choice when selecting a blogging solution..."
-aliases: ["/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-1.aspx"]
+aliases: ["/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Subtext", "Web Development"]

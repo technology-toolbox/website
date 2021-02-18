@@ -3,7 +3,7 @@ title: "To Dispose or not to Dispose -- that is the question"
 date: 2009-03-19T02:26:00-07:00
 excerpt: "Last Saturday, another team member sent an email out to the team inquiring about the \"MOSS object disposal problem\" (as he termed it). 
  Essentially, he was asking if anytime he referenced the ParentWeb property on an object, whether or not he needed..."
-aliases: ["/blog/jjameson/archive/2009/03/18/to-dispose-or-not-to-dispose-that-is-the-question.aspx"]
+aliases: ["/blog/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]

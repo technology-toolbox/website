@@ -16,7 +16,7 @@ excerpt: "In my previous post , I showed an example KPI dashboard for a Web appl
  Duncan 
  93% 
  95% ..."
-aliases: ["/blog/jjameson/archive/2010/04/27/custom-table-headers-with-the-asp-net-gridview-control.aspx"]
+aliases: ["/blog/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

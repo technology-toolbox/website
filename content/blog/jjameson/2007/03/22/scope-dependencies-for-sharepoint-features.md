@@ -3,7 +3,7 @@ title: "Scope Dependencies for SharePoint Features"
 date: 2007-03-22T00:17:00-07:00
 excerpt: "While integrating various SharePoint features last week, I discovered some of the details around the dependency rules when trying to associate one feature to another. 
  In our solution, we have created a feature for specifying custom fields (i.e. columns..."
-aliases: ["/blog/jjameson/archive/2007/03/21/scope-dependencies-for-sharepoint-features.aspx"]
+aliases: ["/blog/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

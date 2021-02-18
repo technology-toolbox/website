@@ -4,7 +4,7 @@ date: 2010-05-04T01:45:00-07:00
 excerpt: "This past weekend, I upgraded my Team Foundation Server (TFS) 2008 environment to TFS 2010. I also upgraded the TFS project sites to SharePoint Server 2010. 
  Why the SharePoint upgrade? 
  The TFS project sites previously ran on Windows SharePoint Services..."
-aliases: ["/blog/jjameson/archive/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx"]
+aliases: ["/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx"]
 draft: true
 categories: ["Infrastructure", "Development", "SharePoint"]
 tags: ["Infrastructure", "Visual Studio", "TFS", "SharePoint 

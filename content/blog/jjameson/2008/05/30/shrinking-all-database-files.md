@@ -2,7 +2,7 @@
 title: "Shrinking All Database Files in SQL Server"
 date: 2008-05-30T02:50:00-07:00
 excerpt: "Here is another SQL script that I keep handy in my toolbox: Shrink All Database Files.sql . Unlike the script that I shared in my previous post that simply truncated all transaction logs to free up disk space, this script is suitable for running in a..."
-aliases: ["/blog/jjameson/archive/2008/05/29/shrinking-all-database-files.aspx"]
+aliases: ["/blog/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx"]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "SQL Server", "Toolbox"]
