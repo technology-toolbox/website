@@ -9,7 +9,7 @@ tags: ["Subtext", "Web Development"]
 ---
 
 In case you haven't read the
-[introductory post for this series](/blog/jjameson/2011/10/17/introducing-technologytoolbox-com), here is an overview of the CAPTCHA feature
+[introductory post for this series](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), here is an overview of the CAPTCHA feature
 detailed in this post.
 
 > **Note**

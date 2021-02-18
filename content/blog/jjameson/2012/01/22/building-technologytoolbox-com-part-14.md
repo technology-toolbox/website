@@ -16,7 +16,7 @@ users.
 Some errors might be expected, such as HTTP 404 errors when someone mistypes
 a URL -- or when hackers maliciously try to find vulnerabilities in your application.
 Other errors might be completely unexpected (e.g. "What do you mean
-[the database transaction log is full](/blog/jjameson/2007/05/05/no-error-displayed-when-database-update-fails)? Isn't someone supposed to be monitoring
+[the database transaction log is full](/blog/jjameson/2007/05/06/no-error-displayed-when-database-update-fails)? Isn't someone supposed to be monitoring
 that?").
 
 Many errors are avoidable, but you will inevitably encounter some situations
@@ -150,7 +150,7 @@ configuring ELMAH to send you an email whenever something bad happens:
 
 You might prefer some other notification mechanism, such as
 [configuring an alert in Operations Manager whenever an error is written to the
-Event Log](/blog/jjameson/2011/03/17/operations-manager-alerts-for-event-log-errors). The point is, you either need to use some form of "push notification"
+Event Log](/blog/jjameson/2011/03/18/operations-manager-alerts-for-event-log-errors). The point is, you either need to use some form of "push notification"
 whenever an error occurs (preferably) or else be very diligent about periodically
 reviewing the logs to check for errors (which likely won't happen as time goes
 on).

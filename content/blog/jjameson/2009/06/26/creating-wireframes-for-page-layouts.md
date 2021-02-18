@@ -19,7 +19,7 @@ tags: ["My System", "MOSS 2007", "
 
 When helping customers migrate their Internet sites to Microsoft Office SharePoint         Server (MOSS) 2007, I've found it very helpful to create wireframes showing the         various fields, Web Parts, and master page content. For the last several years,         I've been doing this in Microsoft Office Visio, but you could certainly achieve         similar results with other tools, such as Expression Design.
 
-I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/19/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
+I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/20/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Glycomics%20Solution).jpg"

@@ -19,9 +19,9 @@ tags: ["Core Development", "Debugging", "Toolbox"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-In a previous [post](/blog/jjameson/2010/10/23/recovering-your-work-after-an-expression-web-crash), I mentioned an issue I've been having with Expression Web 4 crashing on  me. In that post, I mentioned a few ways that you can create a mini-dump for a process  (e.g. with Visual Studio, WinDbg, or ADPlus).
+In a previous [post](/blog/jjameson/2010/10/24/recovering-your-work-after-an-expression-web-crash), I mentioned an issue I've been having with Expression Web 4 crashing on  me. In that post, I mentioned a few ways that you can create a mini-dump for a process  (e.g. with Visual Studio, WinDbg, or ADPlus).
 
-A couple of weeks ago, one of the developers on the Expression Web team enlightened  me regarding a new Sysinternals tool called [ProcDump](http://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)  that makes this even easier. I've since made ProcDump a permanent addition to my [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup).
+A couple of weeks ago, one of the developers on the Expression Web team enlightened  me regarding a new Sysinternals tool called [ProcDump](http://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)  that makes this even easier. I've since made ProcDump a permanent addition to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup).
 
 Here's a little script that I keep on my desktop that shows how to write a mini-dump  when an unhandled exception occurs in Expression Web:
 

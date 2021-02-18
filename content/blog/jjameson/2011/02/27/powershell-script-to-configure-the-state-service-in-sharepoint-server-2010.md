@@ -16,7 +16,7 @@ tags: ["SharePoint 2010", "PowerShell"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In [my first post today](/blog/jjameson/2011/02/26/deployment-scripts-for-sharepoint-server-2010), I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell scripts that I currently use when working with SharePoint 2010. Here's another one that I deliberately excluded from the previous post.
+In [my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010), I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell scripts that I currently use when working with SharePoint 2010. Here's another one that I deliberately excluded from the previous post.
 
 Note that in any "real world" deployment of SharePoint Server 2010, you're going to want to configure the State Service (or else you won't be able to use any features that depend on InfoPath Forms Services -- including the out-of-the-box approval workflow).
 

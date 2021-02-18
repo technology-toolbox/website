@@ -17,7 +17,7 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Last summer, I added [DiffMerge](http://www.sourcegear.com/diffmerge/) to my [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup) and I haven't used WinDiff since.
+Last summer, I added [DiffMerge](http://www.sourcegear.com/diffmerge/) to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) and I haven't used WinDiff since.
 
 DiffMerge can do everything WinDiff can, plus a whole lot more -- like intra-line highlighting, merging, and comparing files using configurable rulesets (although you'll likely never need any more than those that come "out-of-the-box" with DiffMerge).
 

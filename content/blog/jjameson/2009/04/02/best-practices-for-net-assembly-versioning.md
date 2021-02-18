@@ -40,7 +40,7 @@ Assembly versions consist of four different parts ({Major Version}.{Minor Versio
             Incremented for QFEs (a.k.a. "hotfixes" or patches) to builds released into the
             Production environment (PROD). This is set to zero for the initial release of any
             major/minor version of the solution.</dd></dl>
-As a general guideline, it is best to use the same version number for all assemblies         compiled as part of the solution. This is easily accomplished using [linked files in Visual Studio solutions](/blog/jjameson/2009/04/01/linked-files-in-visual-studio-solutions).
+As a general guideline, it is best to use the same version number for all assemblies         compiled as part of the solution. This is easily accomplished using [linked files in Visual Studio solutions](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions).
 When building the solution, there are two version numbers that need to be considered:         the file version number and the .NET assembly version number.
 
 ### File Version

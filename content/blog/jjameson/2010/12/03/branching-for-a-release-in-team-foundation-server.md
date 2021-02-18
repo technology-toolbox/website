@@ -16,7 +16,7 @@ tags: ["My System", "TFS"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In [my previous post](/blog/jjameson/2010/12/02/recurring-tasks-in-team-foundation-server), I mentioned that one of the recurring tasks I create in         TFS each time I start a new iteration on a project is something like "Create branch         for Sprint-10" (the iteration specified in the title of the work item obviously         varies each time).
+In [my previous post](/blog/jjameson/2010/12/03/recurring-tasks-in-team-foundation-server), I mentioned that one of the recurring tasks I create in         TFS each time I start a new iteration on a project is something like "Create branch         for Sprint-10" (the iteration specified in the title of the work item obviously         varies each time).
 
 This work item serves a couple of purposes:
 

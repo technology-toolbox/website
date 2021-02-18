@@ -17,7 +17,7 @@ tags: ["TFS", "SharePoint 2010"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In an [earlier post](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview) today, I described how I recently upgraded from Team Foundation Server 2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).
+In an [earlier post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview) today, I described how I recently upgraded from Team Foundation Server 2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).
 
 While most of the upgrade went fairly smooth, during the process I discovered (what I believe to be) a bug in SharePoint Server 2010 with Excel Services.
 

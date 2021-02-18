@@ -29,7 +29,7 @@ We've been using Silverlight on my current project for almost four months now, a
 
 It's also worth noting that I didn't develop the original Silverlight application we are using on the site, but I've made a number of changes to it in order to resolve a few issues and improve the overall implementation.
 
-Before diving into the issues and improvements, it is helpful to first understand the structure of the solution. If you've seen [my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) (or if you've worked with me on any SharePoint projects), then the following solution structure should seem very familiar:
+Before diving into the issues and improvements, it is helpful to first understand the structure of the solution. If you've seen [my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) (or if you've worked with me on any SharePoint projects), then the following solution structure should seem very familiar:
 
 - Fabrikam.Portal.sln
   - Fabrikam.Portal.CoreServices.csproj
@@ -106,7 +106,7 @@ While everything appeared to work as expected, there was a fundamental problem w
 
 While it probably isn't the worst thing to include a **Debug** version of an assembly in a **Release** build, it's definitely not a best practice. However, more importantly, changing the output path in order to copy the XAP file into the expected location is not compatible with Team Foundation Build.
 
-As I noted in a [previous post](/blog/jjameson/2009/11/17/building-sharepoint-wsps-with-team-foundation-build):
+As I noted in a [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
 {{< blockquote "font-italic" >}}
 

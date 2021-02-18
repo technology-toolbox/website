@@ -25,7 +25,7 @@ This past weekend, I upgraded my Team Foundation Server (TFS) 2008 environment  
 
 ### Why the SharePoint upgrade?
 
-The TFS project sites previously ran on Windows SharePoint Services 3.0 (WSS  v3) -- not Microsoft Office SharePoint Server (MOSS) 2007 -- and, in fact, most  of them were originally created with TFS 2005 and WSS v2. [Refer to [one of my previous posts](/blog/jjameson/2010/02/27/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008) for more details on the somewhat painful experience  I had upgrading my TFS environment from WSS v2 to WSS v3 (which was really my own  fault).]
+The TFS project sites previously ran on Windows SharePoint Services 3.0 (WSS  v3) -- not Microsoft Office SharePoint Server (MOSS) 2007 -- and, in fact, most  of them were originally created with TFS 2005 and WSS v2. [Refer to [one of my previous posts](/blog/jjameson/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008) for more details on the somewhat painful experience  I had upgrading my TFS environment from WSS v2 to WSS v3 (which was really my own  fault).]
 
 In the past, I have generally recommended MOSS 2007 over WSS -- due to the numerous  additional features and capabilities of MOSS 2007 over WSS -- but when it came to  TFS, I didn't see any compelling reasons for using MOSS 2007 for the TFS project  sites (unless you simply wanted to leverage an existing SharePoint farm for your  TFS projects).
 
@@ -41,7 +41,7 @@ Using the [pre-upgrade
 checker for SharePoint Server 2010](http://technet.microsoft.com/en-us/library/cc262231%28office.14%29.aspx) and the [Test-SPContentDatabase](http://technet.microsoft.com/en-us/library/ff607941%28office.14%29.aspx)  cmdlet, I confirmed my TFS project sites did not present any issues with upgrading  to the latest version of SharePoint. Fortunately, the TFS product team did not create  a custom site definition for project sites, but rather used the out-of-the-box Team  Site with a little bit of customization (e.g. custom Web Parts and document libraries)  -- which means the upgrade process to SharePoint Server 2010 is relatively simple.
 
 Note that in the "[Jameson
-Datacenter](/blog/jjameson/2009/09/13/the-jameson-datacenter)" (a.k.a. my home lab), I use a dual server configuration for TFS  -- an application-tier server and a separate database server. The "data tier" only  runs SQL Server (Database Engine and Analysis Services), while the "application  tier" runs the other services (i.e. TFS, WSS, and Reporting Services).
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab), I use a dual server configuration for TFS  -- an application-tier server and a separate database server. The "data tier" only  runs SQL Server (Database Engine and Analysis Services), while the "application  tier" runs the other services (i.e. TFS, WSS, and Reporting Services).
 
 While there are certainly many organizations out there that install everything  they need for TFS on a single server, I strongly recommend you "isolate" SQL Server  as much as possible in your Production environment. This makes it much easier to  monitor and troubleshoot the environment, as well as scale the solution over time  as your needs grow.
 

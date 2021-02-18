@@ -16,7 +16,7 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In the [first part](/blog/jjameson/2010/01/29/web-standards-design-with-moss-2007-part-1) of this series, I explained one approach for building Web sites         in Microsoft Office SharePoint Server (MOSS) 2007 based on [Web standards](http://en.wikipedia.org/wiki/Web_standards) and the [960 Grid System](http://960.gs). I had         intended on following up with a sample solution based on a fictitious company (AdventureWorks         Bicycles -- which should be familiar to anyone using SQL Server).
+In the [first part](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) of this series, I explained one approach for building Web sites         in Microsoft Office SharePoint Server (MOSS) 2007 based on [Web standards](http://en.wikipedia.org/wiki/Web_standards) and the [960 Grid System](http://960.gs). I had         intended on following up with a sample solution based on a fictitious company (AdventureWorks         Bicycles -- which should be familiar to anyone using SQL Server).
 
 However, two things really started to bother me as I began developing the sample:
 
@@ -31,7 +31,7 @@ While the first issue didn't necessarily seem like a showstopper, the more I tho
 
 Fast forward nearly ten months later...
 
-I've mentioned [before](/blog/jjameson/2009/09/11/expression-web-my-msdn-blog-and-now-team-foundation-server) that Dan Cederholm's [Web Standards Solutions](http://amzn.com/1430219203)         and [Bulletproof Web Design](http://amzn.com/0321509021) were two of         the books I read a few years ago when learning about Web standards design. If you         haven't yet read these books, I highly recommend them. (Note that newer editions         are available than the ones I read.)
+I've mentioned [before](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server) that Dan Cederholm's [Web Standards Solutions](http://amzn.com/1430219203)         and [Bulletproof Web Design](http://amzn.com/0321509021) were two of         the books I read a few years ago when learning about Web standards design. If you         haven't yet read these books, I highly recommend them. (Note that newer editions         are available than the ones I read.)
 
 Note that Bulletproof Web Design (at least the first edition that I read) is largely         based on handling variable text size (which, admittedly, is something we don't have         to worry nearly as much about these days thanks to browser "zoom" features). Nevertheless,         the concepts that Dan covers are invaluable to anyone tasked with creating Web sites.
 
@@ -68,7 +68,7 @@ With that in mind, the following scenario was identified for the first milestone
 
 While I know the Tugboat Coffee Company would benefit immensely from a multitude         of SharePoint features (e.g. using a SharePoint list to store the quotes that are         shown in the "Press" section of the home page), it is typically wise to start with         a simple solution and introduce complexity over time (in other words, as our project         stakeholders gain confidence in our abilties to deliver on-time and within budget         ;-) ).
 
-In order to manage the Tugboat sample solution, I created a new project in Team         Foundation Server 2010 (using the [new Scrum template for TFS](/blog/jjameson/2010/12/01/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)) and created a bunch of work items (partly because         it's just so darn easy using Microsoft Excel and a little copy/paste). I subsequently         created a new Visual Studio solution and added my "standard" list of project items         (e.g. SharedAssemblyInfo.cs).
+In order to manage the Tugboat sample solution, I created a new project in Team         Foundation Server 2010 (using the [new Scrum template for TFS](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)) and created a bunch of work items (partly because         it's just so darn easy using Microsoft Excel and a little copy/paste). I subsequently         created a new Visual Studio solution and added my "standard" list of project items         (e.g. SharedAssemblyInfo.cs).
 
 For "Sprint 1", the Development team (which is comprised entirely of one person         -- *me*) committed to the following product backlog items:
 
@@ -80,7 +80,7 @@ For "Sprint 1", the Development team (which is comprised entirely of one person 
   - Drink Menu (static HTML)
   - Reviews (static HTML) -- i.e. quotes within the "Press" section
 
-Here are the corresponding work items that I added to the TFS project (note that         these are in addition to the "default" work items listed in [my previous post](/blog/jjameson/2010/12/01/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)):
+Here are the corresponding work items that I added to the TFS project (note that         these are in addition to the "default" work items listed in [my previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)):
 
 **Initial work items for the Tugboat project (partial list)**
 

@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "WSS v3", "Silverlight"]
 > blog ever goes away.
 
 This is a continuation of
-[yesterday's post](/blog/jjameson/2010/01/27/lessons-learned-integrating-silverlight-in-moss-2007-part-1) detailing some lessons learned while integrating a Silverlight
+[yesterday's post](/blog/jjameson/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1) detailing some lessons learned while integrating a Silverlight
 application into an Internet-facing customer service portal built on Microsoft
 Office SharePoint Server (MOSS) 2007.
 
@@ -58,7 +58,7 @@ to make a change to the Silverlight application -- for example, to fix a bug
 or implement an enhancement.
 
 Regardless of whether or not you enable the BlobCache in SharePoint (and
-[you should always enable it](/blog/jjameson/2009/03/26/always-enable-disk-based-caching-in-moss-2007) on your TEST and PROD environments), content
+[you should always enable it](/blog/jjameson/2009/03/27/always-enable-disk-based-caching-in-moss-2007) on your TEST and PROD environments), content
 served from \_layouts includes a **Cache-Control** HTTP header that
 specifies the content should be cached by the client (**max-age=31536000**).
 Using IIS Manager, you can verify that SharePoint enables the setting on

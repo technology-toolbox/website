@@ -12,7 +12,7 @@ tags: ["Core
 ---
 
 In
-[my post from earlier today](/blog/jjameson/2012/02/22/code-coverage-analysis-with-visual-studio-2010-and-net-3), I noted how the code coverage analysis feature
+[my post from earlier today](/blog/jjameson/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3), I noted how the code coverage analysis feature
 in Visual Studio 2010 is so easy to configure there's really no excuse not to
 use it -- provided your test projects target .NET Framework 4. However if, like
 me, you need to target .NET 3.5 (e.g. when developing for SharePoint 2010),

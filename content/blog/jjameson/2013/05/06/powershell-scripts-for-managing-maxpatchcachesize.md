@@ -11,7 +11,7 @@ tags: ["My System", "PowerShell", "Toolbox"]
 Several years ago I wrote a post about
 [saving signficant disk space by setting MaxPatchCacheSize to 0](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0). More recently,
 you may have read my sample
-[Installation Guide for SharePoint Server 2010 and Office Web Apps](/blog/jjameson/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps), in which
+[Installation Guide for SharePoint Server 2010 and Office Web Apps](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps), in which
 case you noticed this is included there as well (section 4.3).
 
 While the effectiveness of this registry setting has unfortunately diminished
@@ -27,7 +27,7 @@ reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize 
 
 ...sometime last year I decided to create a pair of PowerShell scripts to
 make this even easier. I keep these scripts in my
-[Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup)
+[Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup)
 (which is a folder I keep synchronized across the multitude of servers and workstations
 that I use).
 

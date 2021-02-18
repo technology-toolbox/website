@@ -25,7 +25,7 @@ I recommend a naming convention that utilizes the company name and the project (
 
 For the purposes of this blog post, I'll use **Microsoft.Samples**.
 
-Now that we have a solution name, we need a place to create the solution. How about         **C:\NotBackedUp\Microsoft\Samples\Main**? Okay, that seems fairly         straightforward, although the **NotBackedUp** part seems a little quirky.         (You can read my other [post](/blog/jjameson/2007/03/21/backedup-and-notbackedup) if you really care to understand this moniker.)
+Now that we have a solution name, we need a place to create the solution. How about         **C:\NotBackedUp\Microsoft\Samples\Main**? Okay, that seems fairly         straightforward, although the **NotBackedUp** part seems a little quirky.         (You can read my other [post](/blog/jjameson/2007/03/22/backedup-and-notbackedup) if you really care to understand this moniker.)
 
 Oh yeah, and where did **Main** come from?
 

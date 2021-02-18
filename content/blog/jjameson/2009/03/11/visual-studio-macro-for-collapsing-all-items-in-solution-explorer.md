@@ -21,7 +21,7 @@ tags: ["Core Development", "Visual Studio"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-Along with [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/10/visual-studio-macros-for-unloading-reloading-projects), another  macro that I use just as much, if not more frequently, is my `CollapseAllItems()`  macro:
+Along with [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects), another  macro that I use just as much, if not more frequently, is my `CollapseAllItems()`  macro:
 
 ```
 Public Sub CollapseAllItems()

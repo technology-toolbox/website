@@ -19,8 +19,8 @@ tags: ["My System", "Simplify", "Core Development", "TFS"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-Last month I wrote a post detailing [how to increment the assembly version for each build](/blog/jjameson/2010/03/24/incrementing-the-assembly-version-for-each-build). However, incrementing  the assembing version is only part of [my
-recommended build and deployment process](/blog/jjameson/2009/09/25/build-and-deployment-overview).
+Last month I wrote a post detailing [how to increment the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build). However, incrementing  the assembing version is only part of [my
+recommended build and deployment process](/blog/jjameson/2009/09/26/build-and-deployment-overview).
 
 The following figure illustrates how deployments to the Development environment  (DEV) are automated using the "latest" folder from the Builds share on the Release  Server.
 

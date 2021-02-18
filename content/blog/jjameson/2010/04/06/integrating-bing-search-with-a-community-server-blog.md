@@ -17,7 +17,7 @@ tags: ["My System"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In [one of yesterday's posts](/blog/jjameson/2010/04/04/narrowing-search-results-to-a-specific-site-e-g-my-blog), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
+In [one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
 
 This morning it occurred to me that I could integrate this into my MSDN blog with relatively little effort.
 

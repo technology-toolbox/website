@@ -16,7 +16,7 @@ tags: ["Personal"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Earlier this week, a colleague of mine was building out his own version of the [Jameson Datacenter](/blog/jjameson/2009/09/13/the-jameson-datacenter) based on a variety of posts I've written in the past. Over an IM conversation, he mentioned that some of my posts tend to run off the page -- making them difficult to read unless you can resize the browser window wide enough to accommodate the text.
+Earlier this week, a colleague of mine was building out his own version of the [Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter) based on a variety of posts I've written in the past. Over an IM conversation, he mentioned that some of my posts tend to run off the page -- making them difficult to read unless you can resize the browser window wide enough to accommodate the text.
 
 I told him that I was aware of the issue, but that I had only seen it when viewing multiple posts at a time. I mentioned that it seemed to be an issue with the structure of the HTML emitted by the Community Server template that doesn't always "play nicely" with `<pre>` elements (which I tend to use somewhat heavily). The issue is caused by very long lines of preformatted text.
 

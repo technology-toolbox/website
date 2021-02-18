@@ -520,7 +520,7 @@ The final step is to validate the Web application works as expected when using  
 >
 > This is discussed in more detail in the following blog post:
 >
-> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/21/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 > 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
 > and click **Sign In**.
 > 3. On the **Sign In** page, in the dropdown list, click

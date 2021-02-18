@@ -10,7 +10,7 @@ tags: ["Infrastructure", "My System", "Virtualization", "Visual Studio"]
 ---
 
 In
-[my previous post](/blog/jjameson/2013/05/06/powershell-scripts-for-managing-maxpatchcachesize), I shared a couple of PowerShell scripts that I wrote for
+[my previous post](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize), I shared a couple of PowerShell scripts that I wrote for
 quickly setting and verifying the MaxPatchCacheSize registry setting. I also
 stated that this registry setting has, unfortunately, become less effective
 over the years since

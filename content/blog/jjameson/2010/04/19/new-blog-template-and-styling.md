@@ -16,7 +16,7 @@ tags: ["Personal"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Last Thursday, I mentioned a problem that would occasionally occur with the [formatting on my blog posts](/blog/jjameson/2010/04/14/blog-post-formatting-issues) (but only when viewing the default page -- listing the most recent posts -- and not when viewing individual posts). Tonight I thought I should spend a little more effort trying to resolve the issue.
+Last Thursday, I mentioned a problem that would occasionally occur with the [formatting on my blog posts](/blog/jjameson/2010/04/15/blog-post-formatting-issues) (but only when viewing the default page -- listing the most recent posts -- and not when viewing individual posts). Tonight I thought I should spend a little more effort trying to resolve the issue.
 
 However, rather than trying to come up with a CSS hack to avoid the problem with viewing multiple posts (when one of the posts contains a long line of preformatted text), I decided instead to see if the problem was specific to the Community Server template that I was using.
 

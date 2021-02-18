@@ -16,13 +16,13 @@ tags: ["Windows Vista", "Windows Server", "Infrastructure", "Virtualization"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-About a year ago, I wrote a post about [saving huge amounts of disk space by slipstreaming service packs](/blog/jjameson/2007/06/22/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs). Having         just been through an [ordeal](/blog/jjameson/2009/05/31/errors-installing-windows-server-2008-sp2) installing Windows Server 2008 SP2, I thought it would be worthwhile         to provide an update (since that original post refers to disk space usage with Windows         Server 2003).
+About a year ago, I wrote a post about [saving huge amounts of disk space by slipstreaming service packs](/blog/jjameson/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs). Having         just been through an [ordeal](/blog/jjameson/2009/06/01/errors-installing-windows-server-2008-sp2) installing Windows Server 2008 SP2, I thought it would be worthwhile         to provide an update (since that original post refers to disk space usage with Windows         Server 2003).
 
 Note that since my original post, I have switched from using Virtual Server in favor         of Hyper-V. Among other things, this allows me to run x64 virtual machines (VMs).         Many months ago, I consolidated numerous physical machines onto a couple of "Server         Core" machines running Hyper-V. In that time, I've also switched to running Windows         Vista x64 on my primary desktop and Windows Server 2008 x64 on my laptop.
 
 One of the things that I've noticed is that x64 versions of the operating system         tend to use more disk space than their corresponding x86 equivalents. In particular,         the "side-by-side" folder (WinSxS) is typically significantly larger on x64 installations.         The storage differences are negligible on my physical machines, but on VMs I make         a deliberate effort to "clamp down" the size of the VHDs. This can save me considerable         time when copying VHDs from one server to another or from an internal hard drive         to an external hard drive whenever I need to take one or more of them "on the road"         with me.
 
-Minimizing VHD sizes also allows me to cram more VMs onto my 100 GB external drive         [I know, these days this isn't very big from a capacity perspective, but at least         it's 7200 RPM (a [must](/blog/jjameson/2007/06/23/performance-of-virtual-machines) for running VMs) and it isn't nearly as bulky as my larger drive enclosure.         It also doesn't require a separate power supply either.]
+Minimizing VHD sizes also allows me to cram more VMs onto my 100 GB external drive         [I know, these days this isn't very big from a capacity perspective, but at least         it's 7200 RPM (a [must](/blog/jjameson/2007/06/24/performance-of-virtual-machines) for running VMs) and it isn't nearly as bulky as my larger drive enclosure.         It also doesn't require a separate power supply either.]
 
 Here is a baseline of the disk space usage on a Windows Server 2008 Standard x64         VM:
 
@@ -50,7 +50,7 @@ title="Figure 2: Disk usage on Windows Server 2008 x64 VM (after installing SP2)
 
 Observe that the Windows folder now consumes a little over 10 GB of storage. Ouch...3         GB for a service pack. That seems a little, um, *irritating* -- for VMs,         anyway. Obviously for physical machines with 100+ GB hard drives, the additional         space is trivial.
 
-I then ran the Windows Component Clean tool (COMPCLN.exe) as described in my [previous post](/blog/jjameson/2009/06/01/reclaiming-disk-space-after-installing-service-pack-2), which reclaimed approximately 900 MB of space.
+I then ran the Windows Component Clean tool (COMPCLN.exe) as described in my [previous post](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2), which reclaimed approximately 900 MB of space.
 
 {{< figure
 src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-WS2008-x64%20(WS2008%20SP2%20-%20compcln).png"

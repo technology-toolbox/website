@@ -17,7 +17,7 @@ tags: ["Web Development"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-As I mentioned in my [previous post](/blog/jjameson/2009/10/28/troubleshooting-layout-problems-with-safari), I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser.
+As I mentioned in my [previous post](/blog/jjameson/2009/10/29/troubleshooting-layout-problems-with-safari), I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser.
 
 Since I couldn't repro the issue in Internet Explorer or Firefox, I decided to see if Opera exhibited the same problem as Safari. Consequently, I downloaded and installed the latest version of Opera (note that I've rebuilt both my desktop and development VM since the last time I used Opera).
 

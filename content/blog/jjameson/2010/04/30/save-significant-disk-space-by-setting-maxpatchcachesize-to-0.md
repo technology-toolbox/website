@@ -17,10 +17,10 @@ tags: ["My System", "SQL Server", "
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-A little over two years ago, I wrote a post about [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/07/installing-visual-studio-2005-sp1), in which I mentioned setting         the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk         space while installing the service pack). [Note that the credit for this trick really         goes to [Heath Stewart](http://blogs.msdn.com/heaths/) -- as I mentioned         in my original post.]
+A little over two years ago, I wrote a post about [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1), in which I mentioned setting         the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk         space while installing the service pack). [Note that the credit for this trick really         goes to [Heath Stewart](http://blogs.msdn.com/heaths/) -- as I mentioned         in my original post.]
 
 I've also mentioned in various posts that I make heavy use of virtualization in         the "[Jameson
-Datacenter](/blog/jjameson/2009/09/13/the-jameson-datacenter)" (a.k.a. my home lab) and that I prefer to keep my VHDs reasonably         small. This is especially valuable when, for example, I need to copy a VM from one         of my home servers and take it "on the road" with me to a customer site.
+Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab) and that I prefer to keep my VHDs reasonably         small. This is especially valuable when, for example, I need to copy a VM from one         of my home servers and take it "on the road" with me to a customer site.
 
 As such, one of the first things that I typically do when building out a new VM         is to run the following from a command prompt:
 

@@ -10,11 +10,11 @@ tags: ["Infrastructure", "My System", "PowerShell", "SharePoint
 ---
 
 Around the same time I created my
-[PowerShell scripts for managing the MaxPatchCacheSize registry setting](/blog/jjameson/2013/05/06/powershell-scripts-for-managing-maxpatchcachesize),
+[PowerShell scripts for managing the MaxPatchCacheSize registry setting](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize),
 I also created a set of scripts to automate the process of managing hosts files.
 
 You may have noticed the Add-Hostnames.ps1 script in my
-[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
+[sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
 > **Note**
 >

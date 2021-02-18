@@ -24,7 +24,7 @@ In case you haven't heard, [Service Pack 1 for Windows 7 and Windows Server 2008
 I've been running an SSD in my Microsoft laptop for a while now and I must say the         difference is amazing. If you are a developer running a laptop without an SSD then,         believe me, I feel your pain. *Especially* if you are a SharePoint developer         running on a laptop without an SSD. Been there...done that...won't ever do it again.
 
 These days, I do 99% of my development work using a number of Hyper-V VMs running         in the ["Jameson
-Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab) and -- at least in my opinion -- this is         the only way to go. Well, okay, maybe not the *only* way, but it certainly         eliminates any sensation of not "firing on all cylinders" in terms of productivity.
+Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) and -- at least in my opinion -- this is         the only way to go. Well, okay, maybe not the *only* way, but it certainly         eliminates any sensation of not "firing on all cylinders" in terms of productivity.
 
 I've mentioned in a previous post about [using MaxPatchCacheSize to save signficant disk space](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0). When I first rebuilt         my laptop with an 80 GB SSD, I didn't set MaxPatchCacheSize to 0 and consequently         ended up wasting several gigabytes of "expensive storage" in the \Windows\Installer\$PatchCache$         folder (remember, this is SSD storage that I'm talking about here). I've since rebuilt         my laptop and ensured that I applied this setting immediately after installing the         operating system.
 
@@ -81,7 +81,7 @@ I then proceeded to install the following:
     Console (so I can easily manage the various servers in the "Jameson Datacenter"
     from my Windows 7 desktop)
 12. **Mozilla Thunderbird (**if you are wondering why I use this in addition
-    to Microsoft Outlook, then apparently you haven't seen [one of my other posts](/blog/jjameson/2010/04/25/outlook-2010-does-not-work-with-windows-server-2003-pop3-service))
+    to Microsoft Outlook, then apparently you haven't seen [one of my other posts](/blog/jjameson/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service))
 13. **FeedDemon**
 14. Useful development and debugging "stuff":
     1. **Debugging Tools for Windows (x86)**
@@ -99,7 +99,7 @@ I then proceeded to install the following:
     lazy -- to get it to work with roaming profiles, thereby forcing me to install the
     old 8.1.x version)
 17. Personal "stuff":
-    1. **Microsoft Money** (yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/2010/03/27/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not now...probably not ever)
+    1. **Microsoft Money** (yes, the "sunset" edition -- but [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not now...probably not ever)
     2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
        scripts in order to download quotes and credit card statements into Money via OFX
     3. **Windows Live Essentials --** primarily for Windows Live Photo Gallery

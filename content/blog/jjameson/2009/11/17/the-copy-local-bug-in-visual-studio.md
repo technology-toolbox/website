@@ -18,7 +18,7 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS) 2007 project -- or if you've read my [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) -- then you've probably seen the following comment:
+If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS) 2007 project -- or if you've read my [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) -- then you've probably seen the following comment:
 
 {{< blockquote "font-italic" >}}
 

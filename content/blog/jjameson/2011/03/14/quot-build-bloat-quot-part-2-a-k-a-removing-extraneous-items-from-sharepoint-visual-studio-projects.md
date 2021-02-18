@@ -48,7 +48,7 @@ of SharePoint assemblies, such as:
 - etc.
 
 In other words, it's essentially the same
-[problem I blogged about over a year ago](/blog/jjameson/2010/01/11/build-bloat-and-removing-extraneous-items-from-tfs-builds) -- with a slight twist.
+[problem I blogged about over a year ago](/blog/jjameson/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds) -- with a slight twist.
 
 In my earlier post, I described adding a `BeforeDropBuild` target to the TFSBuild.proj
 file in order to remove extraneous assemblies from the build. However, since

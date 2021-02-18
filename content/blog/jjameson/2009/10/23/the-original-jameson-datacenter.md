@@ -18,7 +18,7 @@ tags: ["My System", "Personal", "
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 This morning I was doing some cleanup of my documents folder and I stumbled across         a rather old Visio document that showed the beginnings of what I now refer to as         the ["Jameson
-Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab). For some geeky reason, seeing this again         brought a smile to my face and a sense of nostalgia. It also caused me to recall         two things:
+Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab). For some geeky reason, seeing this again         brought a smile to my face and a sense of nostalgia. It also caused me to recall         two things:
 
 1. That old Greatful Dead song "Truckin'" -- specifically the line
 

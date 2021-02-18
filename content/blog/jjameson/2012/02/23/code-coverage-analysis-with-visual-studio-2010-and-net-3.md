@@ -20,12 +20,12 @@ often behave, well, let's just say *erratically*.
 
 For example, back in the days when I worked primarily in Visual Studio 2008
 and Microsoft Office SharePoint Server (MOSS) 2007, I discovered an
-[issue when running unit tests on a 64-bit VM](/blog/jjameson/2009/10/07/web-application-at-could-not-be-found-error-on-moss-2007-x64). Fortunately I was able to
+[issue when running unit tests on a 64-bit VM](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64). Fortunately I was able to
 workaround that bug.
 
 Thanks to a couple of poor decisions by Microsoft product teams (specifically,
 targeting SharePoint 2010 to .NET 3.5 x64 only, and
-[restricting test projects in Visual Studio 2010 to .NET Framework 4](/blog/jjameson/2010/04/27/test-projects-in-visual-studio-2010-must-target-net-framework-4)), it
+[restricting test projects in Visual Studio 2010 to .NET Framework 4](/blog/jjameson/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4)), it
 wasn't until Visual Studio 2010 Service Pack 1 that you could actually run unit
 tests against SharePoint 2010 solutions.
 

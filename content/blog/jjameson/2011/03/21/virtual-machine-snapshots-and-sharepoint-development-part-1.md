@@ -19,7 +19,7 @@ tags: ["My System", "MOSS 2007", "
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In a comment I made last week on [one of my earlier posts](/blog/jjameson/2011/03/10/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid), I mentioned how a few months ago I started using         Hyper-V snapshots so I can quickly rollback my SharePoint development VMs to key         points in time.
+In a comment I made last week on [one of my earlier posts](/blog/jjameson/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid), I mentioned how a few months ago I started using         Hyper-V snapshots so I can quickly rollback my SharePoint development VMs to key         points in time.
 
 The following screenshot shows the snapshots for my primary SharePoint Server 2010         development VM (FOOBAR5):
 
@@ -80,7 +80,7 @@ In case it's not immediately obvious, the sections prefixed with "DEV" are perfo
 
 As you can imagine, it takes a couple of hours (or more, depending on how quickly         you can "fly" through the installation guide) to reach the point where "Snapshot         1" was taken. The goal, however, is not to optimize that part of the process --         since it is expected to be done very rarely (compared with other "rebuild" processes).
 
-Now consider "Snapshot 2" which was taken after following the steps in [one of my previous posts](/blog/jjameson/2011/02/24/claims-login-web-part-for-sharepoint-server-2010) to create and configure a sample Web application         using claims authentication (including a custom login form). "Snapshot 2" was created         yesterday morning at 7:19:27 AM. In other words, it took me about 20 minutes to:
+Now consider "Snapshot 2" which was taken after following the steps in [one of my previous posts](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010) to create and configure a sample Web application         using claims authentication (including a custom login form). "Snapshot 2" was created         yesterday morning at 7:19:27 AM. In other words, it took me about 20 minutes to:
 
 1. Create the ASP.NET membership database
 2. Configure claims authentication for Central Administration and the Security Token

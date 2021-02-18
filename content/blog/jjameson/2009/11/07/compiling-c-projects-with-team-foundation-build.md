@@ -17,7 +17,7 @@ tags: ["Core Development", "TFS"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-As I mentioned in my [previous post](/blog/jjameson/2009/11/06/using-password-minder-to-manage-your-passwords), this week I incorporated Password Minder into my "Toolbox"         Visual Studio solution that is scheduled to build daily through Team Foundation         Server (TFS).
+As I mentioned in my [previous post](/blog/jjameson/2009/11/07/using-password-minder-to-manage-your-passwords), this week I incorporated Password Minder into my "Toolbox"         Visual Studio solution that is scheduled to build daily through Team Foundation         Server (TFS).
 
 It's not that I really need daily builds of Password Minder; rather it's just been         something on my "TO DO" list for a long time and I finally got around to doing it.         Unfortunately, it wasn't without issue.
 
@@ -40,7 +40,7 @@ is not installed, either 1) install the Microsoft Windows SDK for Windows Server
 
 That certainly is one of the best error messages I've seen in a long time. It told         me exactly what I needed to do to fix the problem. Well, almost...
 
-Note that DAZZLER (a VM in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) that is my dedicated build server) does not have the         full installation of Visual Studio 2008. Rather it only has the Team Foundation         Build install. In keeping with best practices, I try to keep the build server as         "clean" as possible. That means no Visual Studio, no SharePoint, etc.
+Note that DAZZLER (a VM in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) that is my dedicated build server) does not have the         full installation of Visual Studio 2008. Rather it only has the Team Foundation         Build install. In keeping with best practices, I try to keep the build server as         "clean" as possible. That means no Visual Studio, no SharePoint, etc.
 
 Following option #1 from the log file, I proceeded to install the Microsoft Windows         SDK for Windows Server 2008 and .NET Framework 3.5 -- but, of course, I didn't bother         to review the ReadMe file that comes with it (at least not at first).
 

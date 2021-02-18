@@ -15,7 +15,7 @@ the corresponding application pool), and then copies the files for the main
 site as well as the Subtext files for the /blog application.
 
 You may recall the following illustration from the post I wrote
-[introducing TechnologyToolbox.com](/blog/jjameson/2011/10/17/introducing-technologytoolbox-com). This shows how the Caelum and Subtext
+[introducing TechnologyToolbox.com](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com). This shows how the Caelum and Subtext
 Visual Studio solutions are merged together during the deployment process.
 
 {{< figure
@@ -188,7 +188,7 @@ Write-Host "Copying Subtext website content...`r`n"
 For more details on the build process, refer to one of my posts from a couple
 of years ago:
 
-{{< reference title="Build and Deployment Overview" linkHref="/blog/jjameson/2009/09/25/build-and-deployment-overview" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
+{{< reference title="Build and Deployment Overview" linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
 
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 
@@ -248,7 +248,7 @@ when I see customers create build configurations specific to each environment.
 For these reasons, I create configuration files as necessary for each environment
 (e.g. Web.TEST.config) and store these in source control. It takes a little
 more discipline to keep these files in-sync, but using a tool like
-[DiffMerge](/blog/jjameson/2009/03/23/diffmerge-a-better-differencing-tool) makes this rather easy.
+[DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool) makes this rather easy.
 
 ```
 If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")

@@ -16,7 +16,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/2009/11/08/configuring-ssl-on-sharepoint-sites) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.
+Yesterday, I detailed the [steps I recommend for configuring SSL](/blog/jjameson/2009/11/09/configuring-ssl-on-sharepoint-sites) on sites built on Microsoft Office SharePoint Server (MOSS) 2007. I also mentioned that users won't automatically be redirected from HTTP to HTTPS, and how I've previously used a little bit of code to automatically perform this redirection.
 
 Here is a base class that contains the core logic for detecting when a redirect from HTTP to HTTPS is required and automatically redirecting as necessary:
 

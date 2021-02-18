@@ -28,7 +28,7 @@ How long would it take *you* to create a new SharePoint Web application  (http:/
 
 If you have a well documented Installation Guide -- not unlike the ones I've  created for various clients ;-) -- then you should be able to go through all of  these steps in about 15 minutes. However, you're definitely going to be moving through  the steps fairly quickly, so you had better be careful not to make any mistakes  or omit any steps. This also assumes that you copy/paste the Web.config modifications  for the membership and role providers, because I doubt many people -- if anyone  -- could type those in from scratch in that amount of time.
 
-For [LOCAL and DEV environments](/blog/jjameson/2009/09/24/development-and-build-environments), I like to be able to rebuild the Web applications  quickly and with relatively little effort. Consequently, I tend to automate as much  as I can using scripts, custom STSADM commands, and custom SharePoint features (deployed  via Web Solution Packages -- WSPs).
+For [LOCAL and DEV environments](/blog/jjameson/2009/09/25/development-and-build-environments), I like to be able to rebuild the Web applications  quickly and with relatively little effort. Consequently, I tend to automate as much  as I can using scripts, custom STSADM commands, and custom SharePoint features (deployed  via Web Solution Packages -- WSPs).
 
 As you might be aware by now, I'm also a big fan of scenario-based development.  Therefore, let's use the following scenario to drive the the remainder of this post:
 
@@ -128,7 +128,7 @@ In order to use the custom STSADM commands for the Fabrikam solution, the corres
 "Add Solution.cmd"
 ```
 
-While it's certainly possible to invoke the STSADM utility directly in order  to add a WSP to a SharePoint farm, I recommend using a standard set of ["DR.DADA" scripts](/blog/jjameson/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) to make this easier and less prone to human error.
+While it's certainly possible to invoke the STSADM utility directly in order  to add a WSP to a SharePoint farm, I recommend using a standard set of ["DR.DADA" scripts](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) to make this easier and less prone to human error.
 
 ### Step 6 - Deploy Fabrikam.Demo.StsAdm.Commands.wsp
 
@@ -309,7 +309,7 @@ Notice that the default role provider is set to `AspNetWindowsTokenRoleProvider,
 
 #### SharePointWebConfigHelper.ApplyWebConfigModifications
 
-After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/22/introducing-the-sharepointwebconfighelper-class)** class), we then must apply them in order  to actually make the changes to the configuration files.
+After "queuing up" our Web.config modifications (using **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** via the custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class), we then must apply them in order  to actually make the changes to the configuration files.
 
 #### EnableAnonymousAccessOnRootWeb
 

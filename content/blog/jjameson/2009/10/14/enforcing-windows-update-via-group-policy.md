@@ -16,7 +16,7 @@ tags: ["My System", "Simplify", "WSUS", "Windows Server", "Infrastructure"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Another Group Policy object that I use in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab) is one to automatically configure Windows Update on all computers in the domain. This ensures that each server or workstation downloads updates from COLOSSUS (one of my VMs that is running Windows Server Update Services) rather than having each computer download, for example, a [577 MB service pack](http://www.microsoft.com/downloads/details.aspx?FamilyID=656c9d4a-55ec-4972-a0d7-b1a6fedf51a7&displaylang=en) directly from the Internet. It also ensures that only the updates that I have approved through WSUS are applied.
+Another Group Policy object that I use in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) is one to automatically configure Windows Update on all computers in the domain. This ensures that each server or workstation downloads updates from COLOSSUS (one of my VMs that is running Windows Server Update Services) rather than having each computer download, for example, a [577 MB service pack](http://www.microsoft.com/downloads/details.aspx?FamilyID=656c9d4a-55ec-4972-a0d7-b1a6fedf51a7&displaylang=en) directly from the Internet. It also ensures that only the updates that I have approved through WSUS are applied.
 
 To automatically configure Windows Update in the "Jameson Datacenter", I have defined a Group Policy (named **Default Windows Update Policy**) with the following settings:
 
@@ -37,5 +37,5 @@ To automatically configure Windows Update in the "Jameson Datacenter", I have de
 
 By linking this Group Policy to the entire domain (i.e. **corp.technologytoolbox.com**) Windows Update is automatically configured as soon as new computers are joined to the domain and rebooted.
 
-This enables me to spin up new VMs with very little effort. More importantly, it takes less than a half hour to get a new Windows Server 2008 VM with all the latest patches (since I start from a [SysPrep'ed VHD](/blog/jjameson/2009/08/12/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines) with Windows Server 2008 Service Pack 2).
+This enables me to spin up new VMs with very little effort. More importantly, it takes less than a half hour to get a new Windows Server 2008 VM with all the latest patches (since I start from a [SysPrep'ed VHD](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines) with Windows Server 2008 Service Pack 2).
 

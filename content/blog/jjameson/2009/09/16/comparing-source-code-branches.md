@@ -19,7 +19,7 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 > ever goes away.
 
 During the more than three years I spent helping Agilent Technologies migrate  their Internet site from their legacy, proprietary platform to Microsoft Office  SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server  (TFS). Instead, we used Visual SourceSafe (VSS) in combination with a ["Work Items"
-list in SharePoint](/blog/jjameson/2008/03/31/tfs-lite-for-wss-v2) that I've described in previous posts.
+list in SharePoint](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2) that I've described in previous posts.
 
 While I certainly prefer TFS over VSS, sometimes you simply have to concede that  you can't have everything you would like on a customer project and move on to actually  getting the work done.
 
@@ -37,7 +37,7 @@ Personally speaking, I've never felt comfortable using the out-of-the-box mergin
 
 Fortunately, long before the Agilent project, I had previously created my own  process that takes a great deal of the "pain" out of manually merging source code.  Here is what I came up with.
 
-In my [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup),  I have two simple scripts: DiffBranches.cmd and CopyBranch.cmd.
+In my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup),  I have two simple scripts: DiffBranches.cmd and CopyBranch.cmd.
 
 Here are the contents of DiffBranches.cmd:
 
@@ -63,7 +63,7 @@ call CopyBranch.cmd "%BRANCH2%" "%BRANCH2%_tmp"
 "%DIFFTOOL%" "%BRANCH1%_tmp" "%BRANCH2%_tmp"
 ```
 
-As you can see, there's not much to it. I simply make temporary copies of the  two branches (i.e. by copying the branch folder into a new folder appended with  "\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I used  WinDiff, but once I [discovered DiffMerge](/blog/jjameson/2009/03/23/diffmerge-a-better-differencing-tool), I quickly switched to using it exclusively for all of  my "diff'ing" activities.
+As you can see, there's not much to it. I simply make temporary copies of the  two branches (i.e. by copying the branch folder into a new folder appended with  "\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I used  WinDiff, but once I [discovered DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool), I quickly switched to using it exclusively for all of  my "diff'ing" activities.
 
 The real "magic" lies in CopyBranch.cmd:
 

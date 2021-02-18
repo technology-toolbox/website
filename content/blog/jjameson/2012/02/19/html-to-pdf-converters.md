@@ -11,12 +11,12 @@ tags: ["MOSS 2007", "SharePoint
 ---
 
 Here is one more quick post this morning so I can get rid of yet another
-[item on my Windows desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop) that I should have deleted a long time ago --
+[item on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that I should have deleted a long time ago --
 this time a small Excel worksheet that I created back in late 2010. [Wow, where
 does the time go?]
 
 I mentioned in
-[a previous post](/blog/jjameson/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-3) how I created a custom "document publishing" system for
+[a previous post](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3) how I created a custom "document publishing" system for
 a client based on the Web Content Management features in SharePoint, which included
 an "Export to PDF" feature.
 

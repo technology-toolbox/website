@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
 In my [previous
-post](/blog/jjameson/2008/03/31/tfs-lite-for-wss-v2), I introduced my "TFS Lite" SharePoint site template that I've been         using for years as a simple scenario/task/bug/risk/milestone tracking "application"         with various projects and customers. In today's post, I'll discuss some of the important         changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as         the fact that *all* SharePoint lists now support versioning, not just the **Issues**         list, as was the case in WSS v2 and SharePoint Portal Server (SPS) 2003.
+post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2), I introduced my "TFS Lite" SharePoint site template that I've been         using for years as a simple scenario/task/bug/risk/milestone tracking "application"         with various projects and customers. In today's post, I'll discuss some of the important         changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as         the fact that *all* SharePoint lists now support versioning, not just the **Issues**         list, as was the case in WSS v2 and SharePoint Portal Server (SPS) 2003.
 
 As I noted in the earlier post, the Work Items list at the heart of TFS Lite was         originally based on the Issues list in order to maintain a history as items are         modified. When you are dealing with sensitive items like bugs and risks, a simple         snapshot of the latest item simply won't do. You need traceability to determine         who said what and when. Granted, there are times when I wish I could "undo" or "rollback"         a change to a list item -- for example, when I enter comments on a bug like "Fixed         in 3.0.220.0" but neglect to change the **Status** to **Resolved**. However,         dealing with goofs like that just comes with the territory when you need a detailed         audit history of every change to an item.
 
@@ -108,7 +108,7 @@ iteration for completing work items.</small>
 <small>* Change the filter as necessary to match the current iteration.</small>
 11. (Optional) Modify the **Project Summary** Web Part to display an image corresponding
 to the designated KPI value (using SharePoint Designer and a tiny bit of XSLT as
-described in my [previous post](/blog/jjameson/2008/03/31/tfs-lite-for-wss-v2)).
+described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 12. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure

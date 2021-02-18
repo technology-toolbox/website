@@ -17,7 +17,7 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-During the process of creating [my previous post](/blog/jjameson/2011/05/01/web-standards-design-with-sharepoint-part-6), I discovered the thumbnail images were not rendering as expected for the custom images that I added to the out-of-the-box SharePoint /PublishingImages picture library (via a feature).
+During the process of creating [my previous post](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6), I discovered the thumbnail images were not rendering as expected for the custom images that I added to the out-of-the-box SharePoint /PublishingImages picture library (via a feature).
 
 Here is the content of my original Elements.xml file (used to add the images to the library):
 

@@ -18,7 +18,7 @@ tags: ["My System", "Visual Studio", "
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In my [previous post](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview), I provided an overview of the process of upgrading from TFS         2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).         In this post, I provide more details about the upgrade process.
+In my [previous post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview), I provided an overview of the process of upgrading from TFS         2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint Server 2010).         In this post, I provide more details about the upgrade process.
 
 Note that if you are not upgrading, but rather installing a new instance of TFS         2010 and SharePoint Server 2010, you can still follow the installation steps below         (supplementing steps from the TFS installation guide where appropriate).
 
@@ -144,14 +144,14 @@ To create the necessary service accounts for SharePoint Server 2010 and TFS 2010
 3. On the **Action** menu, point to **New**, and then click
    **User**.
 4. In the **New Object - User**dialog:
-   1. Enter the information from [Table 1](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+   1. Enter the information from [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **Next**.
    3. Clear the **User must change password** at next logon check box.
    4. Select the **User cannot change password** check box.
    5. Select the **Password never expires** check box.
    6. Click **Next**.
    7. Click **Finish**.
-5. Repeat steps 3 and 4 to create the remaining service accounts listed in [Table 1](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+5. Repeat steps 3 and 4 to create the remaining service accounts listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 
 #### Create domain groups
 
@@ -163,9 +163,9 @@ To create the domain groups for SharePoint Server 2010 and TFS 2010:
 3. On the **Action** menu, point to **New**, and then click
    **Group**.
 4. In the **New Object - Group**dialog:
-   1. Enter the information from [Table 2](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+   1. Enter the information from [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **OK**.
-5. Repeat steps 3 and 4 to create the remaining groups listed in [Table 2](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+5. Repeat steps 3 and 4 to create the remaining groups listed in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 6. Add the appropriate users to each domain group created in this step.
 7. Close the **Active Directory Users and Computers** console.
 
@@ -184,7 +184,7 @@ In order to install SharePoint Server 2010, you must also install SQL Server 200
 
 ### Install SharePoint Server 2010
 
-Using the configuration steps provided in the following TechNet article, install         SharePoint Server 2010 using the installation parameters specified in [Table 3](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
+Using the configuration steps provided in the following TechNet article, install         SharePoint Server 2010 using the installation parameters specified in [Table 3](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
 {{< reference title="Deploy a single server with SQL Server (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/cc262243(office.14).aspx" >}}
 
@@ -202,7 +202,7 @@ Complete the deployment procedures in the following sections:
 
 Adding the Central Administration site to the **Local intranet** zone         (and using the default settings for this zone) enables single sign-on when accessing         the site. This is discussed in more detail in the following blog post:
 
-{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/21/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 #### Add the SharePoint bin folder to the PATH environment variable
 
@@ -222,7 +222,7 @@ To add the SharePoint administrators group to the local WSS\_ADMIN\_WPG group, o
    **Properties**.
 4. In the **WSS\_ADMIN\_WPG Properties** dialog box, click **Add**.
 5. In the Select Users, Computers, Service Accounts or Groups dialog box, type the
-   name of the SharePoint administrators group specified in [Table 2](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), click **Check Names**, and then click **OK**.
+   name of the SharePoint administrators group specified in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), click **Check Names**, and then click **OK**.
 6. Click **OK** to save the changes to the group.
 
 To add the SharePoint administrators group to the database role, on the database         server:
@@ -239,7 +239,7 @@ To add the SharePoint administrators group to the database role, on the database
    has a corresponding login for SQL Server, right-click the login and then click **Properties**.
 6. In the login properties dialog box:
    1. On the **General** page, in the **Login name** box, type
-      the name of the SharePoint administrators group from [Table 2](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) using the form {DOMAIN}\{group name}.
+      the name of the SharePoint administrators group from [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) using the form {DOMAIN}\{group name}.
    2. On the **User Mapping** page, in the **Users mapped to the login**
       list, click the checkbox next to the SharePoint configuration database (from Table
       3), and then in the database role membership list, click the checkbox for **SharePoint\_Shell\_Access**.
@@ -247,23 +247,23 @@ To add the SharePoint administrators group to the database role, on the database
 
 #### Configure mail services
 
-Using the configuration steps provided in the following TechNet article, configure         the outgoing e-mail settings for SharePoint using the values specified in [Table 4](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
+Using the configuration steps provided in the following TechNet article, configure         the outgoing e-mail settings for SharePoint using the values specified in [Table 4](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
 {{< reference title="Configure outgoing e-mail (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/cc263462(office.14).aspx" >}}
 
 #### Create SharePoint Web application
 
-Using the configuration steps provided in the following TechNet article, create         a new Web application using the configuration settings specified in [Table 5](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
+Using the configuration steps provided in the following TechNet article, create         a new Web application using the configuration settings specified in [Table 5](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010):
 
 {{< reference title="Create a Web application (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/cc261875(office.14).aspx" >}}
 
-Note that the **SharePoint Central Administration v4** Web application         listed in [Table 5](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) was already created by the SharePoint Products Configuration Wizard.
+Note that the **SharePoint Central Administration v4** Web application         listed in [Table 5](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) was already created by the SharePoint Products Configuration Wizard.
 
 #### Grant DCOM permissions on IIS WAMREG admin Service
 
 In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant the         **WSS\_ADMIN\_WPG** and **WSS\_WPG** group appropriate permissions         on the IIS WAMREG admin Service, as described in [KB 920783](http://support.microsoft.com/kb/920783). This is discussed in more detail in the following blog post:
 
-{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/16/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
 
@@ -313,7 +313,7 @@ and then change the filename to **TaxonomyPicker.ascx\_broken**.
 #### Install Reporting Services on the TFS application server
 
 Using the configuration steps provided in the TFS installation guide (**How
-to: Install SQL Server 2008**), install Reporting Services on         the TFS application server (CYCLOPS) using the configuration settings specified         in [Table 6](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+to: Install SQL Server 2008**), install Reporting Services on         the TFS application server (CYCLOPS) using the configuration settings specified         in [Table 6](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 
 #### Install SQL Server 2008 Service Pack 1 on the TFS application server
 
@@ -342,7 +342,7 @@ To start the Excel Calculation Services and Secure Store Service in SharePoint S
    1. Click **Start the Wizard**.
    2. In the **Service Account** section, ensure the option to **Create
       a new managed account** is selected, in the **User name** box,
-      type the service account for SharePoint service applications listed in [Table 1](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and type the corresponding password in the **Password**
+      type the service account for SharePoint service applications listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and type the corresponding password in the **Password**
       box. In the **Services** section, clear the checkboxes for all of the
       services except **Excel Services Application** and **Secure Store
       Service**. Click **Next**.
@@ -377,21 +377,21 @@ To configure the Secure Store Service for TFS dashboards:
       box, and then click **OK**.
 4. In the **Manage Target Applications** group, click **New**.
 5. On the **Create New Secure Store Target Application** page, enter the
-   target application settings from [Table 7](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) and then click **Next**.
+   target application settings from [Table 7](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010) and then click **Next**.
 6. On the **Specify credential fields for your Secure Store Target Application**
    page, click **Next** to accept the default fields (**Windows User
    Name** and **Windows Password**).
 7. On the **Specify the membership settings** page, in the **Target
    Application Administrators** field, add the TFS administrators group specified
-   in [Table 2](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). In the **Members** field, enter the group(s) from
-   [Table 7](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). Click **OK** to complete configuring the target application.
+   in [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). In the **Members** field, enter the group(s) from
+   [Table 7](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010). Click **OK** to complete configuring the target application.
 
 To set credentials for the TFS target application:
 
 1. On the **TFS** target application, point to the target application
    identifier, click the arrow that appears, and then, in the menu, click **Set credentials**.
 2. On the **Set Credentials for Secure Store Target Application (Group)**
-   page, enter the credentials for the service account for TFS reporting from [Table 1](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and click **OK**.
+   page, enter the credentials for the service account for TFS reporting from [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and click **OK**.
 
 ### Add TFS service account to SharePoint Farm Administrators group
 
@@ -401,7 +401,7 @@ To add the TFS service account to the SharePoint Farm Administrators group:
    section, click **Manage the farm administrators group**.
 2. On the **People and Groups - Farm Administrators** page, in the toolbar,
    on the **New** menu, click **Add Users**.
-3. In the **Grant Permissions** dialog box, in the **Users/Groups** box, type the TFS service account listed in [Table 1](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), clear the **Send welcome e-mail to the new users** checkbox,
+3. In the **Grant Permissions** dialog box, in the **Users/Groups** box, type the TFS service account listed in [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), clear the **Send welcome e-mail to the new users** checkbox,
    and click **OK**.
 
 ### Restore Data
@@ -453,7 +453,7 @@ To connect to the existing ReportServer and ReportServerTempDB databases on the 
 18. In the navigation bar for **Reporting Services Configuration Manager**,
     click **E-mail Settings**.
 19. On the **E-mail Settings** page, enter the configuration settings from
-    [Table 6](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and then click **Apply**.
+    [Table 6](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), and then click **Apply**.
 20. In the navigation bar for **Reporting Services Configuration Manager**,
     click **Encryption Keys**.
 21. On the **Encryption Keys** page, click **Restore**.
@@ -591,7 +591,7 @@ to: Install Team Foundation Server**), install TFS on the application         se
 
 Using the steps provided in the TFS installation guide (**How
 to: Upgrade Team Foundation Server Using the Team Foundation Server Configuration
-Tool**), upgrade TFS using the parameters specified in [Table 8](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+Tool**), upgrade TFS using the parameters specified in [Table 8](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 
 ### Verify upgraded TFS project sites
 
@@ -683,7 +683,7 @@ To avoid this error, add the the second service account to the underlying conten
 #### Configure enterprise application definition for TFS dashboards
 
 Using the configuration steps provided in the TFS installation guide (**Configure
-the Enterprise Application Definition**), configure the Secure         Store target application for TFS dashboards using the **Target Application ID**         specified in [Table 7](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+the Enterprise Application Definition**), configure the Secure         Store target application for TFS dashboards using the **Target Application ID**         specified in [Table 7](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 
 ### Install Team Explorer 2010 or Visual Studio 2010
 
@@ -725,5 +725,5 @@ To enable additional check-in policies and other access additional tools (TFS 20
 ### Install Team Foundation Build
 
 Using the steps provided in the TFS installation guide (**How to: Install Team
-Foundation Build Service**), install the Team Foundation Build Service         on the build server (DAZZLER) using the parameters specified in [Table 9](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+Foundation Build Service**), install the Team Foundation Build Service         on the build server (DAZZLER) using the parameters specified in [Table 9](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
 

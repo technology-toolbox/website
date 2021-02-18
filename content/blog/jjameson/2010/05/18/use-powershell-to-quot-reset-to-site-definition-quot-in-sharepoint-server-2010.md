@@ -19,7 +19,7 @@ tags: ["TFS", "
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-In [one of my posts last month](/blog/jjameson/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided the following steps to "reghost"         all of the pages in a Team Foundation Server (TFS) project site:
+In [one of my posts last month](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I provided the following steps to "reghost"         all of the pages in a Team Foundation Server (TFS) project site:
 
 1. Browse to the Site Settings page for the site (e.g. [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 2. On the **Site Settings** page, in the **Site Actions**

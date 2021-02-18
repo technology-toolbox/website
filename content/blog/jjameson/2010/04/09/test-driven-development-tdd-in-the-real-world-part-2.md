@@ -32,7 +32,7 @@ To start off simple (but still real world), let's imagine we have a scenario  wh
 For example, if we pass in `"Some really long string with lots of characters"`  and specify to truncate the string to 15 characters, then we should get back {{< sample-output "\"Some really...\"" >}}.
 
 [Note that if you are trying to conserve real estate on a Web page, there is  actually [a
-much better way of doing this with CSS](/blog/jjameson/2009/10/31/constraining-tables-with-css), so please don't think of this scenario  in that context.]
+much better way of doing this with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css), so please don't think of this scenario  in that context.]
 
 Applying the principles of TDD, we know we should:
 
@@ -138,7 +138,7 @@ From this we can write another unit test right away:
         }
 ```
 
-If this unit test doesn't make sense, take a look at my previous post on [testing for expected exceptions in Visual Studio](/blog/jjameson/2007/03/21/testing-for-expected-exceptions-with-visual-studio).
+If this unit test doesn't make sense, take a look at my previous post on [testing for expected exceptions in Visual Studio](/blog/jjameson/2007/03/22/testing-for-expected-exceptions-with-visual-studio).
 
 At this point, it seems like a good point to advance from TDD step 1 ("Write  the unit tests first") to step 2 ("Add the minimal amount of code necessary to get  the unit tests to compile").
 
@@ -157,7 +157,7 @@ public static class StringHelper
 }
 ```
 
-Unfortunately, this isn't quite enough to successfully compile the code -- assuming  you've enabled code analysis on the project (which is [something I always recommend doing](/blog/jjameson/2009/10/30/recommendations-for-code-analysis)) -- due to the following errors:
+Unfortunately, this isn't quite enough to successfully compile the code -- assuming  you've enabled code analysis on the project (which is [something I always recommend doing](/blog/jjameson/2009/10/31/recommendations-for-code-analysis)) -- due to the following errors:
 
 {{< blockquote "font-italic text-danger" >}}
 

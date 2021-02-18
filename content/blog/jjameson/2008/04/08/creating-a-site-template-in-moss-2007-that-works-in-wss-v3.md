@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "WSS v3"]
 > ever goes away.
 
 Shortly after publishing my previous post covering ["TFS Lite"
-for WSS v3](/blog/jjameson/2008/04/06/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
+for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
 
 {{< blockquote "font-italic text-danger" >}}
 

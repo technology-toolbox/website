@@ -20,7 +20,7 @@ tags: ["MOSS 2007", "Web Development"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/29/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
+Last week I received the following comment on [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1) regarding Web standards design with Microsoft         Office SharePoint Server (MOSS) 2007:
 
 1. <cite>"The Media Guy"</cite>
    {{< blockquote "font-italic" >}}

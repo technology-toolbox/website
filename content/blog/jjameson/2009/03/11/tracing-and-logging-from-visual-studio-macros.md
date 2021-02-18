@@ -19,7 +19,7 @@ tags: ["Core Development", "Visual Studio"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-As I mentioned in a [post](/blog/jjameson/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects) last week, I often use macros in Visual Studio to automate development  tasks.
+As I mentioned in a [post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) last week, I often use macros in Visual Studio to automate development  tasks.
 
 Before sharing some of my most frequently used macros, however, I wanted to first  introduce the method I use to trace events and log messages while running various  macros.
 

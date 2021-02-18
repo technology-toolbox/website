@@ -23,7 +23,7 @@ This week I finally got around to fixing a bug that would occasionally occur  wh
 
 In the solution we use a variety of different features to configure different  aspects of the site (for example, creating a /Public site and configuring the default  page for that site with a login Web Part as well as some initial content). We also  use features to add Web.config elements, such as those required for configuring  Forms-Based Authentication and integrating with various Web services.
 
-One of the problems that I encountered during the first deployment to the Production  environment (PROD) is that when [activating the features through a script](/blog/jjameson/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), the following error occurred sporadically:
+One of the problems that I encountered during the first deployment to the Production  environment (PROD) is that when [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), the following error occurred sporadically:
 
 {{< blockquote "font-italic text-danger" >}}
 
@@ -42,7 +42,7 @@ This week, I had some time to tackle the problem so I modified my local developm
 When there are multiple front-end Web servers in the SharePoint farm, we need  to wait for the timer job that performs the Web.config modifications to complete  before continuing. Otherwise, the "configuration modification
 operation is already running" error may occur when applying Web.config changes  from two different features in rapid succession.
 
-To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/22/introducing-the-sharepointwebconfighelper-class)**class in the **ApplyWebConfigModifications**  method:
+To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**class in the **ApplyWebConfigModifications**  method:
 
 ```
 if (webApp.Farm.TimerService.Instances.Count > 1)

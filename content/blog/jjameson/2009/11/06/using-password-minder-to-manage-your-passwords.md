@@ -16,13 +16,13 @@ tags: ["My System", "Toolbox"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-I started using [Password Minder](http://msdn.microsoft.com/en-us/magazine/cc163958.aspx) almost immediately after reading about it in the July 2004 edition of MSDN Magazine. I don't know about you, but trying to remember all of my various passwords for dozens of Web sites, numerous network accounts, VMs, etc. is really quite a nightmare. [I'm actually a little embarrassed to say that on more than one occasion I've had to hack one of my VMs in order to reset the password for a domain admin. This process definitely isn't for the faint of heart, but it was better than having to rebuild [my FABRIKAM domain](/blog/jjameson/2009/09/13/the-jameson-datacenter)from scratch.]
+I started using [Password Minder](http://msdn.microsoft.com/en-us/magazine/cc163958.aspx) almost immediately after reading about it in the July 2004 edition of MSDN Magazine. I don't know about you, but trying to remember all of my various passwords for dozens of Web sites, numerous network accounts, VMs, etc. is really quite a nightmare. [I'm actually a little embarrassed to say that on more than one occasion I've had to hack one of my VMs in order to reset the password for a domain admin. This process definitely isn't for the faint of heart, but it was better than having to rebuild [my FABRIKAM domain](/blog/jjameson/2009/09/14/the-jameson-datacenter)from scratch.]
 
 Instead I tend to use no more than three or four passwords that I can remember (and change every couple of months) and a whole bunch of randomly generated passwords that I rely on Password Minder to store securely.
 
-Note that all of the service accounts used in the ["Jameson Datacenter"](/blog/jjameson/2009/09/13/the-jameson-datacenter) (a.k.a. my home lab) use random 20 character passwords.
+Note that all of the service accounts used in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab) use random 20 character passwords.
 
-Hence, why I added Password Minder to my [Toolbox](/blog/jjameson/2007/03/21/backedup-and-notbackedup) years ago. [Thanks to Keith Brown for sharing this wonderful utility, as well as take the time to write about the internals of how it works.]
+Hence, why I added Password Minder to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) years ago. [Thanks to Keith Brown for sharing this wonderful utility, as well as take the time to write about the internals of how it works.]
 
 However, there were a few problems I had with the original Password Minder.
 

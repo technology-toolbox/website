@@ -18,7 +18,7 @@ tags: ["Personal"]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
 
-As I mentioned in my [previous post](/blog/jjameson/2011/08/21/leaving-microsoft), today is my last day with Microsoft.
+As I mentioned in my [previous post](/blog/jjameson/2011/08/22/leaving-microsoft), today is my last day with Microsoft.
 
 I still have a lot of work to do in setting up my new website, but at this point,         I've completed enough to continue blogging the "Random Musings of Jeremy Jameson":
 

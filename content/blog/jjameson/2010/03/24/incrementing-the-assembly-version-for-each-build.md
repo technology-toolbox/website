@@ -20,7 +20,7 @@ tags: ["My System", "Core Development", "TFS"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
 > ever goes away.
 
-Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/02/best-practices-for-net-assembly-versioning) and made the following statement:
+Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and made the following statement:
 
 {{< blockquote "font-italic" >}}
 
@@ -285,5 +285,5 @@ Note that in the example above, the `BuildType`  attribute on the `<Version>`  e
 
 For the **QFE** branch, I recommend changing the `BuildType` attribute to `"None"`and the `RevisionType`attribute  to `"Increment"` (to generate build  numbers like 1.0.38.1, 1.0.38.2, etc.).
 
-Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/02/shared-assembly-info-in-visual-studio-projects).
+Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
 

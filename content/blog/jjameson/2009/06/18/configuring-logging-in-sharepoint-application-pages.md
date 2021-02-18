@@ -25,5 +25,5 @@ Note that SharePoint application (i.e. \_layouts) pages are served from a differ
 
 Also be sure to enable tracing using the `<trace>` element within `<system.web>` in that Web.config file, as shown in my previous post.
 
-Now you can easily view log messages from a feature receiver that uses the custom `Logger` class regardless of whether the feature is "activated" via **Site Settings**, through stsadm.exe, or from within [Visual Studio via a unit test](/blog/jjameson/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).
+Now you can easily view log messages from a feature receiver that uses the custom `Logger` class regardless of whether the feature is "activated" via **Site Settings**, through stsadm.exe, or from within [Visual Studio via a unit test](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).
 

@@ -9,7 +9,7 @@ tags: ["My System", "Subtext", "Web Development"]
 ---
 
 Time to get rid of another couple of
-[shortcuts on my Windows desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop) that have been parked there far too long:
+[shortcuts on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that have been parked there far too long:
 
 - **MDC style guide - MDC**
   [http://developer.mozilla.org/Project:En/MDC\_style\_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)
@@ -42,7 +42,7 @@ from my earlier post, so no sense repeating them here.
 
 To quickly insert commonly used HTML fragments into blog posts (including
 custom CSS classes), I created some custom snippets in Expression Web. Yes,
-[I still use Expression Web for authoring blog posts](/blog/jjameson/2009/09/11/expression-web-my-msdn-blog-and-now-team-foundation-server) rather than using the
+[I still use Expression Web for authoring blog posts](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server) rather than using the
 rich HTML editor in Subtext.
 
 One reason for this is that I'd much rather have a

@@ -9,9 +9,9 @@ tags: ["Subtext", "TFS", "Visual Studio", "Web Development"]
 ---
 
 Okay, so I've recommended
-[using ELMAH for error handling](/blog/jjameson/2012/01/21/building-technologytoolbox-com-part-14) in your ASP.NET Web applications and also
+[using ELMAH for error handling](/blog/jjameson/2012/01/22/building-technologytoolbox-com-part-14) in your ASP.NET Web applications and also
 showed you a
-[CAPTCHA control](/blog/jjameson/2012/01/24/building-technologytoolbox-com-part-16) that you can use with the Subtext blog engine as well as
+[CAPTCHA control](/blog/jjameson/2012/01/25/building-technologytoolbox-com-part-16) that you can use with the Subtext blog engine as well as
 plain ol' ASP.NET apps.
 
 Now, suppose you want to use ELMAH and/or the CAPTCHA control in both an
@@ -21,7 +21,7 @@ of a website (e.g. "/" and "/Services") and uses Subtext to serve up other parts
 (e.g. URLs under "/blog").
 
 For example, I've
-[shown before](/blog/jjameson/2011/10/17/introducing-technologytoolbox-com) how the Technology Toolbox website is actually built from two
+[shown before](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com) how the Technology Toolbox website is actually built from two
 distinct Visual Studio solutions (specifically the "Caelum" solution in Visual
 Studio 2010 and the "Subtext" solution in Visual Studio 2008).
 
