@@ -3,6 +3,9 @@
 {{ $htmlTable := .Inner | markdownify }}
 {{ $old := "<table>" }}
 {{ $new := printf "<table class=\"%s\">" $class }}
+{{ with .Get "caption" }}
+    {{ $new = print $new "<caption>" . "</caption>" }}
+{{ end }}
 {{ $htmlTable := replace $htmlTable $old $new }}
 {{ $htmlTable := replace $htmlTable "<thead>" "<thead class=\"thead-dark\">" }}
 {{ $htmlTable | safeHTML }}

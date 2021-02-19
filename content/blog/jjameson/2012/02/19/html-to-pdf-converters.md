@@ -43,9 +43,7 @@ the content into a table.
 > may I suggest using a better
 > different browser (e.g. Firefox)?
 
-**HTML-to-PDF Converters**
-
-{{< table class="small" >}}
+{{< table class="small" caption="HTML-to-PDF Converters" >}}
 | Product | URL | Pricing | Comments |
 | --- | --- | --- | --- |
 | Adlib Software EXPRESS | [http://www.adlibsoftware.com](http://www.adlibsoftware.com/) | Priced by server, starting at $20-24k | Uses Amyuni libraries (according to Gabor Fari); extensive SharePoint
