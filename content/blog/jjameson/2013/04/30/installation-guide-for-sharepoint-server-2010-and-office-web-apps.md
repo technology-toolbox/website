@@ -1,9 +1,9 @@
 ---
 title: "Installation Guide for SharePoint Server 2010 and Office Web Apps"
-date: 2013-04-30T03:12:32-07:00
-lastmod: 2013-04-30T03:23:52-07:00
+date: 2013-04-30T03:12:32-06:00
+lastmod: 2013-04-30T03:23:52-06:00
 excerpt: "This post provides a sample installation guide for an extranet platform based on SharePoint Server 2010 and Office Web Apps."
-aliases: ["/blog/jjameson/archive/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx"]
+aliases: ["/blog/jjameson/archive/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx", "/blog/jjameson/archive/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 
@@ -12,7 +12,7 @@ tags: ["My System", "SharePoint
 
 This post provides a sample installation guide for an extranet platform based
 on SharePoint Server 2010 and Office Web Apps. As noted in
-[my previous post](/blog/jjameson/2012/03/18/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact,
+[my previous post](/blog/jjameson/2012/03/17/always-create-installation-guides-for-predictable-and-repeatable-deployments), much of this content is included on TechNet (in fact,
 a good portion of this installation guide has roots in the TechNet documentation
 for Microsoft Office SharePoint Server 2007). However, this guide augments the
 SharePoint 2010 TechNet documentation with corrections and additional content

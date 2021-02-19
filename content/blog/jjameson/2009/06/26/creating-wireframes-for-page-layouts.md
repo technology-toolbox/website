@@ -1,8 +1,8 @@
 ---
 title: "Creating Wireframes for Page Layouts"
-date: 2009-06-26T02:34:00-07:00
+date: 2009-06-26T08:34:00-06:00
 excerpt: "When helping customers migrate their Internet sites to Microsoft Office SharePoint Server (MOSS) 2007, I've found it very helpful to create wireframes showing the various fields, Web Parts, and master page content. For the last several years, I've been..."
-aliases: ["/blog/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx"]
+aliases: ["/blog/jjameson/archive/2009/06/25/creating-wireframes-for-page-layouts.aspx", "/blog/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "

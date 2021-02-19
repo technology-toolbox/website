@@ -1,6 +1,6 @@
 ---
 title: "Copy/Paste Gotchas with Server Core"
-date: 2008-07-07T07:11:00-07:00
+date: 2008-07-07T13:11:00-06:00
 excerpt: "I'm building out a new virtualized environment using Windows Server 2008 and Hyper-V. In order to maximize performance and follow recommended best practices, I am using Server Core as the host OS. 
  I have to admit, doing this much administration from..."
 aliases: ["/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx"]

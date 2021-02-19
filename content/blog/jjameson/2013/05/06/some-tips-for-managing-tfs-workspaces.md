@@ -1,6 +1,6 @@
 ---
 title: "Some Tips for Managing TFS Workspaces"
-date: 2013-05-06T12:51:05-07:00
+date: 2013-05-06T12:51:05-06:00
 excerpt: "Are you familiar with the \"tfpt scorch\" command? Have you ever used PowerShell to quickly cloak/uncloak folders in your TFS workspaces? If not, here are a couple of tips that could save you a little time."
 aliases: ["/blog/jjameson/archive/2013/05/06/some-tips-for-managing-tfs-workspaces.aspx"]
 draft: true

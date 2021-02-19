@@ -1,7 +1,7 @@
 ---
 title: "An Update on the Effectiveness of MaxPatchCacheSize"
-date: 2013-05-06T23:22:03-07:00
-lastmod: 2013-05-06T23:25:31-07:00
+date: 2013-05-06T23:22:03-06:00
+lastmod: 2013-05-06T23:25:31-06:00
 excerpt: "Wondering where all the precious free space in your SSD went? Well, here are a few possibilities."
 aliases: ["/blog/jjameson/archive/2013/05/06/an-update-on-the-effectiveness-of-maxpatchcachesize.aspx"]
 draft: true
@@ -10,7 +10,7 @@ tags: ["Infrastructure", "My System", "Virtualization", "Visual Studio"]
 ---
 
 In
-[my previous post](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-maxpatchcachesize), I shared a couple of PowerShell scripts that I wrote for
+[my previous post](/blog/jjameson/2013/05/06/powershell-scripts-for-managing-maxpatchcachesize), I shared a couple of PowerShell scripts that I wrote for
 quickly setting and verifying the MaxPatchCacheSize registry setting. I also
 stated that this registry setting has, unfortunately, become less effective
 over the years since

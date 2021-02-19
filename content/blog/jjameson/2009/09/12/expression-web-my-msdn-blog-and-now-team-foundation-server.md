@@ -1,8 +1,8 @@
 ---
 title: "Expression Web, My MSDN Blog, and (Now) Team Foundation Server"
-date: 2009-09-12T03:17:00-07:00
+date: 2009-09-12T09:17:00-06:00
 excerpt: "In case you haven't picked it up from some of my previous posts, I became somewhat of a \"Web standards zealot\" back in 2006 while creating a \"community site\" for a local organization of mental health professionals and attorneys that help children and..."
-aliases: ["/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx"]
+aliases: ["/blog/jjameson/archive/2009/09/11/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx", "/blog/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development", "TFS"]

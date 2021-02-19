@@ -2,14 +2,14 @@
 title: "Website style guide, custom CSS classes, and HTML snippets"
 date: 2012-02-19T02:17:03-07:00
 excerpt: "If, like me, you use Expression Web to author HTML content, then I hope you take advantage of the \"Snippets\" feature."
-aliases: ["/blog/jjameson/archive/2012/02/19/website-style-guide-custom-css-classes-and-html-snippets.aspx"]
+aliases: ["/blog/jjameson/archive/2012/02/18/website-style-guide-custom-css-classes-and-html-snippets.aspx", "/blog/jjameson/archive/2012/02/19/website-style-guide-custom-css-classes-and-html-snippets.aspx"]
 draft: true
 categories: ["My System"]
 tags: ["My System", "Subtext", "Web Development"]
 ---
 
 Time to get rid of another couple of
-[shortcuts on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that have been parked there far too long:
+[shortcuts on my Windows desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop) that have been parked there far too long:
 
 - **MDC style guide - MDC**
   [http://developer.mozilla.org/Project:En/MDC\_style\_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)

@@ -1,8 +1,8 @@
 ---
 title: "\"Web-Enabled\" Projects and F5 Debugging with SharePoint"
-date: 2009-09-29T03:07:00-07:00
+date: 2009-09-29T09:07:00-06:00
 excerpt: "In yesterday's post , I provided a sample walkthrough of the \"DR.DADA\" approach to developing solutions for Microsoft Office SharePoint Server (MOSS) 2007. However, I intentionally left out a few things because a) that post was already getting ridiculously..."
-aliases: ["/blog/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx"]
+aliases: ["/blog/jjameson/archive/2009/09/28/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx", "/blog/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]

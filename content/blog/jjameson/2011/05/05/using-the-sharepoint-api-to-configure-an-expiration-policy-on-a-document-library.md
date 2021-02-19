@@ -1,9 +1,9 @@
 ---
 title: "Using the SharePoint API to Configure an Expiration Policy on a Document Library"
-date: 2011-05-05T00:58:00-07:00
+date: 2011-05-05T06:58:00-06:00
 excerpt: "While it typically takes less than a minute or two to configure an expiration policy on a SharePoint document library, there may still be reasons why you want to do this using the SharePoint object model instead. 
  For example, suppose I have a \"Temporary..."
-aliases: ["/blog/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx"]
+aliases: ["/blog/jjameson/archive/2011/05/04/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx", "/blog/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

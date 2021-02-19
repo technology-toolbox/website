@@ -1,6 +1,6 @@
 ---
 title: "PowerShell Scripts for Managing BackConnectionHostNames (KB 896861)"
-date: 2013-05-24T07:34:01-07:00
+date: 2013-05-24T07:34:01-06:00
 excerpt: "Here's a set of scripts to make it easier to view the items in the \"BackConnectionHostNames\" registry key, as well as add and remove hostnames."
 aliases: ["/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-backconnectionhostnames-kb-896861.aspx"]
 draft: true
@@ -10,7 +10,7 @@ tags: ["Infrastructure", "My System", "PowerShell", "SharePoint
 ---
 
 In
-[my previous post](/blog/jjameson/2013/05/08/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files.
+[my previous post](/blog/jjameson/2013/05/07/powershell-scripts-for-managing-the-hosts-file), I shared some PowerShell scripts for managing hosts files.
 If you're a SharePoint developer, then you know that adding a hostname to the
 hosts file is only part of the process you need to complete whenever creating
 a new Web application in development environments.

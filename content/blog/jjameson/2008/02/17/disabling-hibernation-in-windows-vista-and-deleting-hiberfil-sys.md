@@ -1,6 +1,6 @@
 ---
 title: "Disabling Hibernation in Windows Vista (and Deleting Hiberfil.sys)"
-date: 2008-02-17T14:33:00-07:00
+date: 2008-02-17T21:33:00-07:00
 excerpt: "As I described in my previous post , I found myself with a paltry 320 MB of free space on a 20 GB partition after installing Windows Vista and a handful of programs (which although I specified to install on a different partition, ended up \"bloating\" my..."
 aliases: ["/blog/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx"]
 draft: true

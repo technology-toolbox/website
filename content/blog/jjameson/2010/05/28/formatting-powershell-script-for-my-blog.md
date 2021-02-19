@@ -1,9 +1,9 @@
 ---
 title: "Formatting PowerShell Script for My Blog"
-date: 2010-05-28T02:31:00-07:00
+date: 2010-05-28T08:31:00-06:00
 excerpt: "In a previous post , I described how I format code for my blog (i.e. by copying it from Visual Studio or SQL Server Management Studio and then running a simple console application to convert the RTF clipboard text to HTML). 
  I recently started doing..."
-aliases: ["/blog/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx"]
+aliases: ["/blog/jjameson/archive/2010/05/27/formatting-powershell-script-for-my-blog.aspx", "/blog/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx"]
 draft: true
 categories: ["My System"]
 tags: ["My System", "PowerShell"]

@@ -14,7 +14,7 @@ for TechnologyToolbox.com to the corresponding Development and Test environments
 ### Introduction
 
 In
-[my previous post](/blog/jjameson/2011/11/13/building-technologytoolbox-com-part-6), I explained how I migrated blog posts from
+[my previous post](/blog/jjameson/2011/11/12/building-technologytoolbox-com-part-6), I explained how I migrated blog posts from
 [my old MSDN blog](http://blogs.msdn.com/b/jjameson/) to Subtext.
 While developing the migration utility, I ran the migration process countless
 times on one of my development VMs (or what I typically refer to as "LOCAL").

@@ -1,8 +1,8 @@
 ---
 title: "SPLimitedWebPartManager.AddWebPart Mysteriously Increments zoneIndex"
-date: 2009-06-05T02:08:00-07:00
+date: 2009-06-05T08:08:00-06:00
 excerpt: "One of the common tasks when using the \"DR.DADA\" approach to SharePoint development is programmatically creating and configuring pages on a site. This often requires adding numerous Web Parts to various zones on a page -- for example, to configure search..."
-aliases: ["/blog/jjameson/archive/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex.aspx"]
+aliases: ["/blog/jjameson/archive/2009/06/04/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex.aspx", "/blog/jjameson/archive/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

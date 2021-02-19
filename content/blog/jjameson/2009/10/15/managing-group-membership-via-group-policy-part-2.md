@@ -1,8 +1,8 @@
 ---
 title: "Managing Group Membership via Group Policy - Part 2"
-date: 2009-10-14T23:04:00-07:00
+date: 2009-10-15T05:04:00-06:00
 excerpt: "In Part 1 of this post , I explained the Group Policy object (named Development - Restricted Groups Policy ) that I use for enforcing group membership on a specific set of servers. As a follow-up to that post, I also want to cover an alternate method..."
-aliases: ["/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx"]
+aliases: ["/blog/jjameson/archive/2009/10/14/managing-group-membership-via-group-policy-part-2.aspx", "/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows 

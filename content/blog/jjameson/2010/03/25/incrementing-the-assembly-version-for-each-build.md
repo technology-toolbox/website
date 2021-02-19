@@ -1,10 +1,10 @@
 ---
 title: "Incrementing the Assembly Version for Each Build"
-date: 2010-03-24T22:59:00-07:00
+date: 2010-03-25T04:59:00-06:00
 excerpt: "Last summer I wrote a post about best practices for .NET assembly versioning and made the following statement: 
  The AssemblyFileVersionAttribute should be incremented automatically as part of the build process. 
  In the comments for that post, someone..."
-aliases: ["/blog/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx"]
+aliases: ["/blog/jjameson/archive/2010/03/24/incrementing-the-assembly-version-for-each-build.aspx", "/blog/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx"]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "TFS"]

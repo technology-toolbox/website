@@ -1,8 +1,8 @@
 ---
 title: "Installing Visual Studio 2005 Service Pack 1"
-date: 2008-02-08T01:12:00-07:00
+date: 2008-02-08T08:12:00-07:00
 excerpt: "Stepping into the \"Wayback Machine\" for a moment, I realized that I hinted about a problem with installing Visual Studio 2005 SP1 , but I never got around to blogging about it in more detail. Unfortunately, I just got bit by this problem yet again this..."
-aliases: ["/blog/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx"]
+aliases: ["/blog/jjameson/archive/2008/02/07/installing-visual-studio-2005-sp1.aspx", "/blog/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx"]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

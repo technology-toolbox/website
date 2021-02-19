@@ -2,7 +2,7 @@
 title: "Best practices for error handling in ASP.NET Web applications (a.k.a. Building TechnologyToolbox.com, part 14)"
 date: 2012-01-22T03:15:57-07:00
 excerpt: "So, you've created a custom error page, enabled the &lt;customErrors&gt; element in the Web.config file, and considered it done -- but are you sure that all the bases are covered?"
-aliases: ["/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx"]
+aliases: ["/blog/jjameson/archive/2012/01/21/building-technologytoolbox-com-part-14.aspx", "/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx"]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

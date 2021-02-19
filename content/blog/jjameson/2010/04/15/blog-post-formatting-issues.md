@@ -1,8 +1,8 @@
 ---
 title: "Blog Post Formatting Issues"
-date: 2010-04-15T05:16:00-07:00
+date: 2010-04-15T11:16:00-06:00
 excerpt: "Earlier this week, a colleague of mine was building out his own version of the Jameson Datacenter based on a variety of posts I've written in the past. Over an IM conversation, he mentioned that some of my posts tend to run off the page -- making them..."
-aliases: ["/blog/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx"]
+aliases: ["/blog/jjameson/archive/2010/04/14/blog-post-formatting-issues.aspx", "/blog/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx"]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

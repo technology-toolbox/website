@@ -1,8 +1,8 @@
 ---
 title: "Configuring Managed Properties in MOSS 2007"
-date: 2009-09-23T01:09:00-07:00
+date: 2009-09-23T07:09:00-06:00
 excerpt: "As I've noted in a previous post , I typically use feature receivers in Microsoft Office SharePoint Server (MOSS) 2007 to automatically configure a \"bunch of stuff\" that would otherwise be very tedious to perform repeatedly for different environments..."
-aliases: ["/blog/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx"]
+aliases: ["/blog/jjameson/archive/2009/09/22/configuring-managed-properties-in-moss-2007.aspx", "/blog/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx"]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

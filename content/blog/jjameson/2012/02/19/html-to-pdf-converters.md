@@ -3,7 +3,7 @@ title: "HTML-to-PDF converters"
 date: 2012-02-19T03:25:09-07:00
 lastmod: 2012-02-19T03:37:46-07:00
 excerpt: "Looking for a solution to convert from HTML to PDF? Here is a list of the products I discovered during my research as well as the results of the head-to-head competition."
-aliases: ["/blog/jjameson/archive/2012/02/19/html-to-pdf-converters.aspx"]
+aliases: ["/blog/jjameson/archive/2012/02/18/html-to-pdf-converters.aspx", "/blog/jjameson/archive/2012/02/19/html-to-pdf-converters.aspx"]
 draft: true
 categories: ["Development", "My System", "SharePoint"]
 tags: ["MOSS 2007", "SharePoint 
@@ -11,7 +11,7 @@ tags: ["MOSS 2007", "SharePoint
 ---
 
 Here is one more quick post this morning so I can get rid of yet another
-[item on my Windows desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop) that I should have deleted a long time ago --
+[item on my Windows desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop) that I should have deleted a long time ago --
 this time a small Excel worksheet that I created back in late 2010. [Wow, where
 does the time go?]
 

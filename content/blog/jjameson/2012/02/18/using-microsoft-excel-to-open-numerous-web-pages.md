@@ -10,7 +10,7 @@ tags: ["My System", "Web Development"]
 
 I've been meaning to cleanup my Windows desktop for months. So this
 morning when I noticed
-[another addition to my desktop](/blog/jjameson/2012/02/19/stop-putting-shortcuts-on-my-windows-desktop), I thought "no time like the present."
+[another addition to my desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop), I thought "no time like the present."
 
 While I'm not one for adding dozens of shortcuts to my desktop, I have a
 bad habit of creating shortcuts for "to-do" items. For example, when I have

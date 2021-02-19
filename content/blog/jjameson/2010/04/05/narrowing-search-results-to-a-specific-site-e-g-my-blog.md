@@ -1,10 +1,10 @@
 ---
 title: "Narrowing Search Results to a Specific Site (e.g. My Blog)"
-date: 2010-04-05T05:58:00-07:00
+date: 2010-04-05T11:58:00-06:00
 excerpt: "A colleague asked me today if there was a way to search my blog for something specific. 
  In my response, I pointed out that you can narrow your search results from Bing to a specific site. 
  For example, suppose you were looking for a blog post that..."
-aliases: ["/blog/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx"]
+aliases: ["/blog/jjameson/archive/2010/04/04/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx", "/blog/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "Simplify", "MOSS 2007"]
