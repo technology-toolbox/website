@@ -86,18 +86,18 @@ Here are the corresponding work items that I added to the TFS project (note that
 
 |                     Work Item Type<br>                 |                     Title<br>                 |
 | --- | --- |
-|                     Product Backlog Item<br>                 |                     Home page<br>                 |
-|                     Product Backlog Item<br>                 |                     Masthead<br>                 |
-|                     Product Backlog Item<br>                 |                     Find Location (static HTML)<br>                 |
-|                     Product Backlog Item<br>                 |                     Weekly Specials (static HTML)<br>                 |
-|                     Product Backlog Item<br>                 |                     News (static HTML)<br>                 |
-|                     Product Backlog Item<br>                 |                     Drink Menu (static HTML)<br>                 |
-|                     Product Backlog Item<br>                 |                     Reviews (static HTML)<br>                 |
-|                     Task<br>                 |                     Create static HTML prototype for Web site<br>                 |
-|                     Task<br>                 |                     Create minimal master page and basic look-and-feel<br>                 |
-|                     Task<br>                 |                     Create HomeSiteConfiguration feature<br>                 |
-|                     Task<br>                 |                     Create deployment scripts for SharePoint WSPs and features<br>                 |
-|                     Task<br>                 |                     Create scripts to build/rebuild Web application<br>                 |
+|  Product Backlog Item  |  Home page  |
+|  Product Backlog Item  |  Masthead  |
+|  Product Backlog Item  |  Find Location (static HTML)  |
+|  Product Backlog Item  |  Weekly Specials (static HTML)  |
+|  Product Backlog Item  |  News (static HTML)  |
+|  Product Backlog Item  |  Drink Menu (static HTML)  |
+|  Product Backlog Item  |  Reviews (static HTML)  |
+|  Task  |  Create static HTML prototype for Web site  |
+|  Task  |  Create minimal master page and basic look-and-feel  |
+|  Task  |  Create HomeSiteConfiguration feature  |
+|  Task  |  Create deployment scripts for SharePoint WSPs and features  |
+|  Task  |  Create scripts to build/rebuild Web application  |
 
 {{< /table >}}
 

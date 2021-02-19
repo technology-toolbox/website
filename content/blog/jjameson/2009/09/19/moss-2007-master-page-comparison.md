@@ -30,41 +30,41 @@ Rather than make you open a spreadsheet attachment, I'll just copy the contents 
 
 |                     Placeholder<br>                 |                     application.master<br>                 |                     default.master<br>                 |
 | --- | --- | --- |
-|                     PlaceHolderPageTitle<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderAdditionalPageHead<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderGlobalNavigation<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderGlobalNavigationSiteMap<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderSiteName<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderSearchArea<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderTopNavBar<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderHorizontalNav<br>                 |  |                     X<br>                 |
-|                     WSSDesignConsole<br>                 |                     X<br>                 |                     X<br>                 |
-|                     SPNavigation<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderPageImage<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderTitleLeftBorder<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderTitleAreaClass<br>                 |                     X<br>                 |                     X\*<br>                 |
-|                     PlaceHolderTitleBreadcrumb<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderPageTitleInTitleArea<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderMiniConsole<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderTitleRightMargin<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderTitleAreaSeparator<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderLeftNavBarDataSource<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderCalendarNavigator<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderLeftNavBarTop<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderLeftNavBar<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderLeftActions<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderNavSpacer<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderLeftNavBarBorder<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderBodyLeftBorder<br>                 |                     X<br>                 |                     X<br>                 |
-|                     MSO\_ContentDiv\*\*<br>                 |  |                     X<br>                 |
-|                     PlaceHolderBodyAreaClass<br>                 |                     X<br>                 |                     X\*<br>                 |
-|                     PlaceHolderPageDescriptionRowAttr<br>                 |                     X<br>                 |  |
-|                     PlaceHolderPageDescription<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderPageDescriptionRowAttr2<br>                 |                     X<br>                 |  |
-|                     PlaceHolderMain<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderBodyRightMargin<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderFormDigest<br>                 |                     X<br>                 |                     X<br>                 |
-|                     PlaceHolderUtilityContent<br>                 |                     X<br>                 |                     X<br>                 |
+|  PlaceHolderPageTitle  |  X  |  X  |
+|  PlaceHolderAdditionalPageHead  |  X  |  X  |
+|  PlaceHolderGlobalNavigation  |  X  |  X  |
+|  PlaceHolderGlobalNavigationSiteMap  |  X  |  X  |
+|  PlaceHolderSiteName  |  X  |  X  |
+|  PlaceHolderSearchArea  |  X  |  X  |
+|  PlaceHolderTopNavBar  |  X  |  X  |
+|  PlaceHolderHorizontalNav  |   |  X  |
+|  WSSDesignConsole  |  X  |  X  |
+|  SPNavigation  |  X  |  X  |
+|  PlaceHolderPageImage  |  X  |  X  |
+|  PlaceHolderTitleLeftBorder  |  X  |  X  |
+|  PlaceHolderTitleAreaClass  |  X  |  X\*  |
+|  PlaceHolderTitleBreadcrumb  |  X  |  X  |
+|  PlaceHolderPageTitleInTitleArea  |  X  |  X  |
+|  PlaceHolderMiniConsole  |  X  |  X  |
+|  PlaceHolderTitleRightMargin  |  X  |  X  |
+|  PlaceHolderTitleAreaSeparator  |  X  |  X  |
+|  PlaceHolderLeftNavBarDataSource  |  X  |  X  |
+|  PlaceHolderCalendarNavigator  |  X  |  X  |
+|  PlaceHolderLeftNavBarTop  |  X  |  X  |
+|  PlaceHolderLeftNavBar  |  X  |  X  |
+|  PlaceHolderLeftActions  |  X  |  X  |
+|  PlaceHolderNavSpacer  |  X  |  X  |
+|  PlaceHolderLeftNavBarBorder  |  X  |  X  |
+|  PlaceHolderBodyLeftBorder  |  X  |  X  |
+|  MSO\_ContentDiv\*\*  |   |  X  |
+|  PlaceHolderBodyAreaClass  |  X  |  X\*  |
+|  PlaceHolderPageDescriptionRowAttr  |  X  |   |
+|  PlaceHolderPageDescription  |  X  |  X  |
+|  PlaceHolderPageDescriptionRowAttr2  |  X  |   |
+|  PlaceHolderMain  |  X  |  X  |
+|  PlaceHolderBodyRightMargin  |  X  |  X  |
+|  PlaceHolderFormDigest  |  X  |  X  |
+|  PlaceHolderUtilityContent  |  X  |  X  |
 
 {{< /table >}}
 

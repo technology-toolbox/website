@@ -78,20 +78,12 @@ the following style conventions and terminology.
 
 | Element | Meaning |
 | --- | --- |
-| ALL CAPITALS | Acronyms, Active Directory domain names, server names, names
-of certain commands, and keys on the keyboard. |
-| **Bold** | Menus and menu commands, command buttons; tab and dialog box
-titles and options; command-line commands, options, and portions
-of syntax that must be typed exactly as shown. |
-| Initial Capitals | Names of applications, programs, paths (folders and filenames),
-and named windows. |
-| *Italic* | Information that you provide, terms that are being introduced,
-and book titles. |
+| ALL CAPITALS | Acronyms, Active Directory domain names, server names, names of certain commands, and keys on the keyboard. |
+| **Bold** | Menus and menu commands, command buttons; tab and dialog box titles and options; command-line commands, options, and portions of syntax that must be typed exactly as shown. |
+| Initial Capitals | Names of applications, programs, paths (folders and filenames), and named windows. |
+| *Italic* | Information that you provide, terms that are being introduced, and book titles. |
 | Monospace | Examples, sample command lines, program code, and program output. |
-| "DEV -" prefix | Indicates a step that should only be performed in the Development
-integration environment (DEV) and local development VMs. Specifically,
-these sections are skipped when deploying to the Test and Production
-environments. |
+| "DEV -" prefix | Indicates a step that should only be performed in the Development integration environment (DEV) and local development VMs. Specifically, these sections are skipped when deploying to the Test and Production environments. |
 
 {{< /table >}}
 
@@ -2752,34 +2744,26 @@ and configuration settings are listed in the following tables.
 | --- | --- | --- | --- |
 | EXTRANET\svc-sql  | Service account for SQL Server  | No  | Used to run SQL Server and cluster services  |
 | EXTRANET\svc-sql-agent  | Service account for SQL Server Agent  | No  | Used to run SQL Server Agent  |
-| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the
+| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  |  The server farm account is used to create and access the
 SharePoint configuration database. It also acts as the application
 pool identity account for the SharePoint Central Administration
 application pool, and it is the account under which the Windows
 SharePoint Services Timer service runs. The SharePoint Products
 Configuration Wizard adds this account to the SQL Server
 **dbcreator** and **securityadmin**
-server roles.<br><br>The farm service account must be a domain user account, but
+server roles.<br> <br>The farm service account must be a domain user account, but
 it does not need to be a member of any specific security group
 on the servers in the farm. It is recommended to follow the
 principle of least privilege and specify a user account that
 is not a member of the Administrators group on any of the servers
-in the farm. |
-| EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation
-2010 Search and SharePoint Server 2010 Search)  |
-| EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be
-indexed (and thus included in search results)  |
-| EXTRANET\svc-spserviceapp  | Service account for SharePoint service applications  | Yes  | Used as the application pool identity for SharePoint service
-applications  |
-| EXTRANET\svc-web-fabrikam  | Service account for Fabrikam Web application  | Yes  | Used as the application pool identity for the new Fabrikam
-Extranet website  |
-| FABRIKAM\svc-web-fabrikam  | Service account for Fabrikam Web application  | No  | Proxy account used to enable internal Fabrikam users and
-groups to be selected using the People Picker in the SharePoint
-extranet farm. The username and password must not contain commas. |
-| EXTRANET\svc-sp-psr  | Service account for SharePoint "Portal Super Reader" | No  | Object cache user account with Full Read access to Web applications
-([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
-| EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access
-to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+in the farm.  |
+| EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation 2010 Search and SharePoint Server 2010 Search)  |
+| EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be indexed (and thus included in search results)  |
+| EXTRANET\svc-spserviceapp  | Service account for SharePoint service applications  | Yes  | Used as the application pool identity for SharePoint service applications  |
+| EXTRANET\svc-web-fabrikam  | Service account for Fabrikam Web application  | Yes  | Used as the application pool identity for the new Fabrikam Extranet website  |
+| FABRIKAM\svc-web-fabrikam  | Service account for Fabrikam Web application  | No  | Proxy account used to enable internal Fabrikam users and groups to be selected using the People Picker in the SharePoint extranet farm. The username and password must not contain commas. |
+| EXTRANET\svc-sp-psr  | Service account for SharePoint "Portal Super Reader" | No  | Object cache user account with Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+| EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
 
 {{< /table >}}
 

@@ -60,9 +60,9 @@ Therefore, let's instead break the price into two parts: **Unit Price**         
 
 |                     Title<br>                 |                     Unit Price<br>                 |                     Unit of Measure<br>                 |                     Price<br>                 |                     Rollup Image<br>                 |
 | --- | --- | --- | --- | --- |
-|                     Fisherman's Brew<br>                 |                     $9.98<br>                 |                     / lb.<br>                 |                     $9.98 / lb.<br>                 |                     /PublishingImages/boat.jpg<br>                 |
-|                     Boathouse Bold<br>                 |                     $12.50<br>                 |                     / lb.<br>                 |                     $12.50 / lb.<br>                 |                     /PublishingImages/ropes.jpg<br>                 |
-|                     Deadly Decaf<br>                 |                     $7.49<br>                 |                     / lb.<br>                 |                     $7.49 / lb.<br>                 |                     /PublishingImages/fame.jpg<br>                 |
+|  Fisherman's Brew  |  $9.98  |  / lb.  |  $9.98 / lb.  |  /PublishingImages/boat.jpg  |
+|  Boathouse Bold  |  $12.50  |  / lb.  |  $12.50 / lb.  |  /PublishingImages/ropes.jpg  |
+|  Deadly Decaf  |  $7.49  |  / lb.  |  $7.49 / lb.  |  /PublishingImages/fame.jpg  |
 
 {{< /table >}}
 

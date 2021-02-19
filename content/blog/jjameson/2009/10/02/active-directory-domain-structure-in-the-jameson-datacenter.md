@@ -45,22 +45,22 @@ The following table summarizes the various OUs in the domain:
 
 |                     Organizational Unit<br>                 |                     Description<br>                 |
 | --- | --- |
-|                     Development<br>                 |                     Represents the "Development" group within Technology Toolbox (which really just<br>                    means me, since my wife doesn't do any development and my 3-1/2 year old daughter<br>                    isn't quite ready for .NET yet)<br>                 |
-|                     Development/Groups<br>                 |                     Contains the groups within the Development organization (such as **TECHTOOLBOX\All<br>                        Developers** and **TECHTOOLBOX\Development Admins**). Delegated<br>                    administration is used to allow developers to create and manage their own groups.<br>                 |
-|                     Development/Resources<br>                 |                     Container for various resource OUs<br>                 |
-|                     Development/Resources/Servers<br>                 |                     Contains servers for the Development environment (e.g. **DOGFOOD**,<br>                    **FOOBAR**, and **FOOBAR2**)<br>                 |
-|                     Development/Resources/Workstations<br>                 |                     Contains individual developer workstations (e.g. **NIGHTCRAWLER** and<br>                    **WOLVERINE**).<br>                 |
-|                     Development/Service Accounts<br>                 |                     Contains service accounts for the Development environment (e.g. **Service account<br>                        for SQL Server (DEV)** -- **TECHTOOLBOX\svc-sql-dev**)<br>                 |
-|                     Development/Users<br>                 |                     Contains user accounts for each person in the Development organization (e.g. **TECHTOOLBOX\jjameson**)<br>                 |
-|                     IT<br>                 |                     Represents the corporate "IT" group (which is really just my alter ego -- **TECHTOOLBOX\jjameson-admin**)<br>                    that assumes all responsibility for managing the "Production" environment at Technology<br>                    Toolbox<br>                 |
-|                     IT/Admin Accounts<br>                 |                     Contains all user accounts that are members of the **Domain Admins**<br>                    group. Note that all of these accounts are suffixed with "-admin" in order to easily<br>                    distinguish them, as well as provide alternate "elevated privilege" accounts (e.g.<br>                    **TECHTOOLBOX\jjameson-admin**) corresponding to low-privilege accounts<br>                    (e.g. **TECHTOOLBOX\jjameson**)<br>                 |
-|                     IT/Groups<br>                 |                     Contains the groups specific to the IT organization.<br>                 |
-|                     IT/Resources<br>                 |                     Container for various resource OUs<br>                 |
-|                     IT/Resources/Servers<br>                 |                     Contains servers for the "Test" and "Production" environments. Currently this include<br>                    **BANSHEE**, **BEAST**, **COLOSSUS**, **CYCLOPS**, **DAZZLER**, **ICEMAN**, **JUBILEE**,<br>                    and **ROGUE**.<br>                 |
-|                     IT/Resources/Workstations<br>                 |                     Contains individual workstations for the IT organization. This OU is currently empty.<br>                 |
-|                     IT/Service Accounts<br>                 |                     Contains service accounts for the "Test" and "Production" environments (e.g. **Service account for SQL Server (TEST) -- TECHTOOLBOX\svc-sql-test** and<br>                    **Service account for SQL Server** -- **TECHTOOLBOX\svc-sql**)<br>                 |
-|                     IT/Users<br>                 |                     Contains user accounts for each person in the IT organization. This OU is currently<br>                    empty.<br>                 |
-|                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
+|  Development  |  Represents the "Development" group within Technology Toolbox (which really just means me, since my wife doesn't do any development and my 3-1/2 year old daughter isn't quite ready for .NET yet)  |
+|  Development/Groups  |  Contains the groups within the Development organization (such as **TECHTOOLBOX\All<br>                        Developers** and **TECHTOOLBOX\Development Admins**). Delegated administration is used to allow developers to create and manage their own groups.  |
+|  Development/Resources  |  Container for various resource OUs  |
+|  Development/Resources/Servers  |  Contains servers for the Development environment (e.g. **DOGFOOD**, **FOOBAR**, and **FOOBAR2**)  |
+|  Development/Resources/Workstations  |  Contains individual developer workstations (e.g. **NIGHTCRAWLER** and **WOLVERINE**).  |
+|  Development/Service Accounts  |  Contains service accounts for the Development environment (e.g. **Service account<br>                        for SQL Server (DEV)** -- **TECHTOOLBOX\svc-sql-dev**)  |
+|  Development/Users  |  Contains user accounts for each person in the Development organization (e.g. **TECHTOOLBOX\jjameson**)  |
+|  IT  |  Represents the corporate "IT" group (which is really just my alter ego -- **TECHTOOLBOX\jjameson-admin**) that assumes all responsibility for managing the "Production" environment at Technology Toolbox  |
+|  IT/Admin Accounts  |  Contains all user accounts that are members of the **Domain Admins** group. Note that all of these accounts are suffixed with "-admin" in order to easily distinguish them, as well as provide alternate "elevated privilege" accounts (e.g. **TECHTOOLBOX\jjameson-admin**) corresponding to low-privilege accounts (e.g. **TECHTOOLBOX\jjameson**)  |
+|  IT/Groups  |  Contains the groups specific to the IT organization.  |
+|  IT/Resources  |  Container for various resource OUs  |
+|  IT/Resources/Servers  |  Contains servers for the "Test" and "Production" environments. Currently this include **BANSHEE**, **BEAST**, **COLOSSUS**, **CYCLOPS**, **DAZZLER**, **ICEMAN**, **JUBILEE**, and **ROGUE**.  |
+|  IT/Resources/Workstations  |  Contains individual workstations for the IT organization. This OU is currently empty.  |
+|  IT/Service Accounts  |  Contains service accounts for the "Test" and "Production" environments (e.g. **Service account for SQL Server (TEST) -- TECHTOOLBOX\svc-sql-test** and **Service account for SQL Server** -- **TECHTOOLBOX\svc-sql**)  |
+|  IT/Users  |  Contains user accounts for each person in the IT organization. This OU is currently empty.  |
+|  Sales  |  Represents the Sales organization within Technology Toolbox. I created this OU primarily for testing (for example, to verify whether I've configured the permissions correctly on a SharePoint site).  |
 
 {{< /table >}}
 

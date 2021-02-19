@@ -41,8 +41,7 @@ In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets
 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94%
-![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% ![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 

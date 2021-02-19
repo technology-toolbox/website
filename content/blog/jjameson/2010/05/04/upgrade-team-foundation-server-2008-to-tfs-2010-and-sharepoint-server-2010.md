@@ -32,14 +32,14 @@ There are a number of configuration parameters that need to be determined before
 
 |                     User Logon Name<br>                 |                     Full Name<br>                 |                     Description<br>                 |
 | --- | --- | --- |
-|                     TECHTOOLBOX\svc-build<br>                 |                     Service account for software builds<br>                 |                     Used for the Team Foundation Build Service<br>                 |
-|                     TECHTOOLBOX\svc-sharepoint<br>                 |                     Service account for SharePoint<br>                 |                     Database access account used by SharePoint to connect to the configuration database<br>                    (a.k.a. the SharePoint "farm account")<br>                 |
-|                     TECHTOOLBOX\svc-spserviceapp<br>                 |                     Service account for SharePoint service applications<br>                 |                     In SharePoint Server 2010, it is recommended to use a different account for running<br>                    service applications (i.e. not the SharePoint "farm account")<br>                 |
-|                     TECHTOOLBOX\svc-sql<br>                 |                     Service account for SQL Server<br>                 |  |
-|                     TECHTOOLBOX\svc-sql-agent<br>                 |                     Service account for SQL Server Agent<br>                 |  |
-|                     TECHTOOLBOX\svc-tfs<br>                 |                     Service account for Team Foundation Server<br>                 |  |
-|                     TECHTOOLBOX\svc-tfsreports<br>                 |                     Service account for TFS reporting<br>                 |  |
-|                     TECHTOOLBOX\svc-web-tfs<br>                 |                     Service account for Team Foundation Server Web site<br>                 |                     Used for the application pool for the SharePoint Web application for TFS project<br>                    sites<br>                 |
+|  TECHTOOLBOX\svc-build  |  Service account for software builds  |  Used for the Team Foundation Build Service  |
+|  TECHTOOLBOX\svc-sharepoint  |  Service account for SharePoint  |  Database access account used by SharePoint to connect to the configuration database (a.k.a. the SharePoint "farm account")  |
+|  TECHTOOLBOX\svc-spserviceapp  |  Service account for SharePoint service applications  |  In SharePoint Server 2010, it is recommended to use a different account for running service applications (i.e. not the SharePoint "farm account")  |
+|  TECHTOOLBOX\svc-sql  |  Service account for SQL Server  |   |
+|  TECHTOOLBOX\svc-sql-agent  |  Service account for SQL Server Agent  |   |
+|  TECHTOOLBOX\svc-tfs  |  Service account for Team Foundation Server  |   |
+|  TECHTOOLBOX\svc-tfsreports  |  Service account for TFS reporting  |   |
+|  TECHTOOLBOX\svc-web-tfs  |  Service account for Team Foundation Server Web site  |  Used for the application pool for the SharePoint Web application for TFS project sites  |
 
 {{< /table >}}
 
@@ -47,9 +47,9 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Domain<br>                 |                     Group Name<br>                 |                     Group Scope<br>                 |                     Group Type<br>                 |                     Description<br>                 |
 | --- | --- | --- | --- | --- |
-|                     TECHTOOLBOX<br>                 |                     SharePoint Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
-|                     TECHTOOLBOX<br>                 |                     SQL Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
-|                     TECHTOOLBOX<br>                 |                     Team Foundation Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
+|  TECHTOOLBOX  |  SharePoint Administrators  |  Global  |  Security  |   |
+|  TECHTOOLBOX  |  SQL Server Administrators  |  Global  |  Security  |   |
+|  TECHTOOLBOX  |  Team Foundation Server Administrators  |  Global  |  Security  |   |
 
 {{< /table >}}
 
@@ -57,10 +57,10 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Parameter<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     SharePoint configuration database server<br>                 |                     beast<br>                 |
-|                     SharePoint configuration database name<br>                 |                     SharePoint\_Config<br>                 |
-|                     SharePoint Central Administration port number<br>                 |                     22812<br>                 |
-|                     SharePoint Central Administration authentication provider<br>                 |                     NTLM<br>                 |
+|  SharePoint configuration database server  |  beast  |
+|  SharePoint configuration database name  |  SharePoint\_Config  |
+|  SharePoint Central Administration port number  |  22812  |
+|  SharePoint Central Administration authentication provider  |  NTLM  |
 
 {{< /table >}}
 
@@ -68,10 +68,10 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Outbound SMTP server<br>                 |                     smtp.technologytoolbox.com<br>                 |
-|                     From address<br>                 |                     svc-sharepoint@technologytoolbox.com<br>                 |
-|                     Reply-to address<br>                 |                     no-reply@technologytoolbox.com<br>                 |
-|                     Character set<br>                 |                     65001 (Unicode UTF-8)<br>                 |
+|  Outbound SMTP server  |  smtp.technologytoolbox.com  |
+|  From address  |  svc-sharepoint@technologytoolbox.com  |
+|  Reply-to address  |  no-reply@technologytoolbox.com  |
+|  Character set  |  65001 (Unicode UTF-8)  |
 
 {{< /table >}}
 
@@ -79,8 +79,8 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Name<br>                 |                     Port<br>                 |                     Host Header<br>                 |                     Allow Anonymous<br>                 |                     URL<br>                 |                     App Pool Service Account<br>                 |                     Database Name(s)<br>                 |
 | --- | --- | --- | --- | --- | --- | --- |
-|                     SharePoint Central Administration v4<br>                 |                     22812<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops:22812/<br>                 |                     TECHTOOLBOX\svc-sharepoint<br>                 |                     SharePoint\_AdminContent\_{GUID}<br>                 |
-|                     SharePoint - 80<br>                 |                     80<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops/<br>                 |                     TECHTOOLBOX\svc-web-tfs<br>                 | <ul>                        <li>WSS_Content</li><br>                        <li>WSS_Content_TFS (attached to Web application to restore existing TFS project sites)</li><br>                    </ul> |
+|  SharePoint Central Administration v4  |  22812  |  (none)  |  No  |  http://cyclops:22812/  |  TECHTOOLBOX\svc-sharepoint  |  SharePoint\_AdminContent\_{GUID}  |
+|  SharePoint - 80  |  80  |  (none)  |  No  |  http://cyclops/  |  TECHTOOLBOX\svc-web-tfs  | <ul>                        <li>WSS_Content</li><br>                        <li>WSS_Content_TFS (attached to Web application to restore existing TFS project sites)</li><br>                    </ul> |
 
 {{< /table >}}
 
@@ -88,10 +88,10 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Instance Configuration<br>                 |                     Default instance (MSSQLSERVER)<br>                 |
-|                     Service Account<br>                 |                     NT AUTHORITY\NETWORK SERVICE<br>                 |
-|                     SMTP Settings - Sender Address<br>                 |                     svc-tfsreports@technologytoolbox.com<br>                 |
-|                     SMTP Settings - SMTP Server<br>                 |                     smtp.technologytoolbox.com<br>                 |
+|  Instance Configuration  |  Default instance (MSSQLSERVER)  |
+|  Service Account  |  NT AUTHORITY\NETWORK SERVICE  |
+|  SMTP Settings - Sender Address  |  svc-tfsreports@technologytoolbox.com  |
+|  SMTP Settings - SMTP Server  |  smtp.technologytoolbox.com  |
 
 {{< /table >}}
 
@@ -99,11 +99,11 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Target Application ID<br>                 |                     TFS<br>                 |
-|                     Display Name<br>                 |                     Team Foundation Server<br>                 |
-|                     Contact E-mail<br>                 |                     jjameson@technologytoolbox.com<br>                 |
-|                     Target Application Type<br>                 |                     Group<br>                 |
-|                     Members<br>                 |                     TECHTOOLBOX\All Developers<br>                 |
+|  Target Application ID  |  TFS  |
+|  Display Name  |  Team Foundation Server  |
+|  Contact E-mail  |  jjameson@technologytoolbox.com  |
+|  Target Application Type  |  Group  |
+|  Members  |  TECHTOOLBOX\All Developers  |
 
 {{< /table >}}
 
@@ -111,25 +111,25 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Databases - SQL Server Instance<br>                 |                     BEAST<br>                 |
-|                     Databases - Configuration database to upgrade<br>                 |                     TfsIntegration<br>                 |
-|                     Account - Service Account - Account Name<br>                 |                     TECHTOOLBOX\svc-tfs<br>                 |
-|                     Account - Authentication Method<br>                 |                     NTLM<br>                 |
-|                     Application Tier - Web Site Name<br>                 |                     Team Foundation Server<br>                 |
-|                     Application Tier - Port<br>                 |                     8080<br>                 |
-|                     Application Tier - IIS Virtual Directory<br>                 |                     tfs<br>                 |
-|                     Reporting - Cofiguration Reporting for use with Team Foudnation Serve<br>                 |                     (checked)<br>                 |
-|                     Reporting - Reporting Services - Reporting Services Instance<br>                 |                     cyclops<br>                 |
-|                     Reporting - Reporting Services - Report Server URL<br>                 | [http://CYCLOPS:80/ReportServer](http://CYCLOPS:80/ReportServer) |
-|                     Reporting - Reporting Services - Report Manager URL<br>                 | [http://CYCLOPS:80/Reports](http://CYCLOPS:80/Reports) |
-|                     Reporting - Analysis Services - SQL Server Analysis Services Instance<br>                 |                     BEAST<br>                 |
-|                     Reporting - Report Reader Account - Use a different account than the Team Foundation<br>                    Server service account for the report reader account<br>                 |                     (checked)<br>                 |
-|                     Reporting - Report Reader Account - Account Name<br>                 |                     TECHTOOLBOX\svc-tfsreports<br>                 |
-|                     SharePoint Products - Configuration SharePoint for use with Team Foundation Server<br>                 |                     (checked)<br>                 |
-|                     SharePoint Products - Settings - Site URL<br>                 | [http://cyclops/sites](http://cyclops/sites) |
-|                     SharePoint Products - Settings - Administration URL<br>                 | [http://cyclops:22812/](http://cyclops:22812/) |
-|                     Project Collection - Name for the new collection<br>                 |                     DefaultCollection<br>                 |
-|                     Project Collection - Description<br>                 |                     Project(s) upgraded from previous Team Foundation Server<br>                 |
+|  Databases - SQL Server Instance  |  BEAST  |
+|  Databases - Configuration database to upgrade  |  TfsIntegration  |
+|  Account - Service Account - Account Name  |  TECHTOOLBOX\svc-tfs  |
+|  Account - Authentication Method  |  NTLM  |
+|  Application Tier - Web Site Name  |  Team Foundation Server  |
+|  Application Tier - Port  |  8080  |
+|  Application Tier - IIS Virtual Directory  |  tfs  |
+|  Reporting - Cofiguration Reporting for use with Team Foudnation Serve  |  (checked)  |
+|  Reporting - Reporting Services - Reporting Services Instance  |  cyclops  |
+|  Reporting - Reporting Services - Report Server URL  |  [http://CYCLOPS:80/ReportServer](http://CYCLOPS:80/ReportServer)  |
+|  Reporting - Reporting Services - Report Manager URL  |  [http://CYCLOPS:80/Reports](http://CYCLOPS:80/Reports)  |
+|  Reporting - Analysis Services - SQL Server Analysis Services Instance  |  BEAST  |
+|  Reporting - Report Reader Account - Use a different account than the Team Foundation Server service account for the report reader account  |  (checked)  |
+|  Reporting - Report Reader Account - Account Name  |  TECHTOOLBOX\svc-tfsreports  |
+|  SharePoint Products - Configuration SharePoint for use with Team Foundation Server  |  (checked)  |
+|  SharePoint Products - Settings - Site URL  |  [http://cyclops/sites](http://cyclops/sites)  |
+|  SharePoint Products - Settings - Administration URL  |  [http://cyclops:22812/](http://cyclops:22812/)  |
+|  Project Collection - Name for the new collection  |  DefaultCollection  |
+|  Project Collection - Description  |  Project(s) upgraded from previous Team Foundation Server  |
 
 {{< /table >}}
 
@@ -137,11 +137,11 @@ There are a number of configuration parameters that need to be determined before
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Team Foundation Build Server<br>                 |                     DAZZLER<br>                 |
-|                     Project Collection - Team project collection to configure build services for<br>                 |                     http://cyclops:8080/tfs/DefaultCollection<br>                 |
-|                     Build Services - Number of build agents to run on this build machine<br>                 |                     1<br>                 |
-|                     Settings - Run Team Foundation Build Service as<br>                 |                     TECHTOOLBOX\svc-build<br>                 |
-|                     Settings - Accept connections from Team Foundation Server on<br>                 |                     Default port 9191<br>                 |
+|  Team Foundation Build Server  |  DAZZLER  |
+|  Project Collection - Team project collection to configure build services for  |  http://cyclops:8080/tfs/DefaultCollection  |
+|  Build Services - Number of build agents to run on this build machine  |  1  |
+|  Settings - Run Team Foundation Build Service as  |  TECHTOOLBOX\svc-build  |
+|  Settings - Accept connections from Team Foundation Server on  |  Default port 9191  |
 
 {{< /table >}}
 

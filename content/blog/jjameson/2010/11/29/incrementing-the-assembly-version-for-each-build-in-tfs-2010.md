@@ -158,9 +158,9 @@ Next, set the build number using the assembly version specified in the AssemblyV
 
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     Arguments<br>                 |                     "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt"""<br>                 |
-|                     DisplayName<br>                 |                     InvokeProcess to read AssemblyVersion from file<br>                 |
-|                     FileName<br>                 |                     "cmd.exe"<br>                 |
+|  Arguments  |  "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt"""  |
+|  DisplayName  |  InvokeProcess to read AssemblyVersion from file  |
+|  FileName  |  "cmd.exe"  |
 
 {{< /table >}}
 
@@ -190,8 +190,8 @@ Number for Triggered Builds** activity), add a new **MSBuild**         activity,
 
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
-|                     DisplayName<br>                 |                     Increment AssemblyVersion for next build<br>                 |
-|                     Project<br>                 |                     SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj"<br>                 |
+|  DisplayName  |  Increment AssemblyVersion for next build  |
+|  Project  |  SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj"  |
 
 {{< /table >}}
 
@@ -297,15 +297,15 @@ In case you are wondering how I configure build definitions, here are the settin
 
 |                     Section<br>                 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- | --- |
-|                     General<br>                 |                     Build definition name<br>                 |                     Automated Build - Main<br>                 |
-|                     Trigger<br>                 | Schedule - build every week on the following days<ul>                        <li>Monday</li><br>                        <li>Tuesday</li><br>                        <li>Wednesday</li><br>                        <li>Thursday</li><br>                        <li>Friday</li><br>                        <li>Saturday</li><br>                        <li>Sunday</li><br>                    </ul> |                     (selected)<br>                 |
-|  |                     Queue the build on the build controller at:<br>                 |                     4:45 AM<br>                 |
-|                     Workspace<br>                 |                     Source Control Folder<br><br>                    Build Agent Folder<br>                 |                     $/foobar2010/Main<br><br>                    $(SourceDir)<br>                 |
-|                     Build Defaults<br>                 |                     Copy build output to the following drop folder (UNC path, such as \\server\share):<br>                 |                     \\dazzler\Builds\foobar2010<br>                 |
-|                     Process<br>                 |                     Build process template:<br>                 |                     CustomTemplate.xaml<br>                 |
-|  |                     Build process parameters:<br>                 |  |
-|  | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> | <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
-|                     Retention Policy<br>                 | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> | <br><br><br>                    Keep All<br>                 |
+|  General  |  Build definition name  |  Automated Build - Main  |
+|  Trigger  | Schedule - build every week on the following days<ul>                        <li>Monday</li><br>                        <li>Tuesday</li><br>                        <li>Wednesday</li><br>                        <li>Thursday</li><br>                        <li>Friday</li><br>                        <li>Saturday</li><br>                        <li>Sunday</li><br>                    </ul> |  (selected)  |
+|   |  Queue the build on the build controller at:  |  4:45 AM  |
+|  Workspace  |                     Source Control Folder<br><br>                    Build Agent Folder<br>                 |                     $/foobar2010/Main<br><br>                    $(SourceDir)<br>                 |
+|  Build Defaults  |  Copy build output to the following drop folder (UNC path, such as \\server\share):  |  \\dazzler\Builds\foobar2010  |
+|  Process  |  Build process template:  |  CustomTemplate.xaml  |
+|   |  Build process parameters:  |   |
+|   | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> | <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
+|  Retention Policy  | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> | <br><br><br>                    Keep All<br>                 |
 
 {{< /table >}}
 

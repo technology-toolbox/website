@@ -133,20 +133,10 @@ site features**), you will notice the following features are activated:
 
 | Display Name  | Description  | Name  | Id  |
 | --- | --- | --- | --- |
-| Agile Dashboards  | Activate if the team project does not have reporting enabled and
-the project was created using the MSF for Agile Software Development
-v5.0 process template.  | TfsDashboardAgileNoWh  | f25ef169-2fe5-4717-9ba3-7dc1ecd6e514  |
-| Agile Dashboards with Basic Reporting  | Activate if the team project has reporting enabled, but you do not
-have Excel Services enabled to render Excel reports. Activate this feature
-for projects created using the MSF for Agile Software Development v5.0
-process template.  | TfsDashboardAgileWss  | ced2ceba-43ac-4535-946a-70605e721d37  |
-| Agile Dashboards with Excel Reporting  | Activate if the team project has reporting enabled and is using
-a supported edition of Microsoft Office SharePoint Server 2007 or Microsoft
-SharePoint Server 2010 with Excel Services. Activate this feature for
-projects created using the MSF for Agile Software Development v5.0 process
-template.  | TfsDashboardAgileMoss  | 0d953ee4-b77d-485b-a43c-f5fbb9367207  |
-| Team Collaboration Lists  | Provides team collaboration capabilities for a site by making standard
-lists, such as document libraries and issues, available.  | TeamCollab  | 00bfea71-4ea5-48d4-a4ad-7ea5c011abe5  |
+| Agile Dashboards  | Activate if the team project does not have reporting enabled and the project was created using the MSF for Agile Software Development v5.0 process template.  | TfsDashboardAgileNoWh  | f25ef169-2fe5-4717-9ba3-7dc1ecd6e514  |
+| Agile Dashboards with Basic Reporting  | Activate if the team project has reporting enabled, but you do not have Excel Services enabled to render Excel reports. Activate this feature for projects created using the MSF for Agile Software Development v5.0 process template.  | TfsDashboardAgileWss  | ced2ceba-43ac-4535-946a-70605e721d37  |
+| Agile Dashboards with Excel Reporting  | Activate if the team project has reporting enabled and is using a supported edition of Microsoft Office SharePoint Server 2007 or Microsoft SharePoint Server 2010 with Excel Services. Activate this feature for projects created using the MSF for Agile Software Development v5.0 process template.  | TfsDashboardAgileMoss  | 0d953ee4-b77d-485b-a43c-f5fbb9367207  |
+| Team Collaboration Lists  | Provides team collaboration capabilities for a site by making standard lists, such as document libraries and issues, available.  | TeamCollab  | 00bfea71-4ea5-48d4-a4ad-7ea5c011abe5  |
 
 {{< /table >}}
 
@@ -163,8 +153,7 @@ feature is activated:
 
 | Display Name  | Description  | Name  | Id  |
 | --- | --- | --- | --- |
-| Visual Studio Team Foundation Server Web Part Collection  | Collection of web parts to display various information from a Team
-Foundation Server instance.  | TswaWebParts  | cce226d2-d7b9-44fb-b5be-a1ccf91cbd90  |
+| Visual Studio Team Foundation Server Web Part Collection  | Collection of web parts to display various information from a Team Foundation Server instance.  | TswaWebParts  | cce226d2-d7b9-44fb-b5be-a1ccf91cbd90  |
 
 {{< /table >}}
 

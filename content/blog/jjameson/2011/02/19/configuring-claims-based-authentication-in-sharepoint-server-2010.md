@@ -40,10 +40,7 @@ The relevant service accounts for claims-based authentication are listed in the 
 
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |
-| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration
-database. It also acts as the application pool identity account for the
-Central Administration site, as well as the application pool for the Security
-Token Service application.  |
+| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the Central Administration site, as well as the application pool for the Security Token Service application.  |
 | EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam Web application |
 
 {{< /table >}}

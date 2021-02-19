@@ -27,10 +27,10 @@ Here's a quick summary of my initial analysis:
 
 |                     Metric<br>                 |                     Views<br>                 |                     AggViews<br>                 |                     Comments<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- | --- | --- |
-|                     Total<br>                 |                     205,142<br>                 |                     139,377<br>                 |                     209<br>                 |                     344,519<br>                 |
-|                     Maximum<br>                 |                     12,240<br>                 |                     2,855<br>                 |                     13<br>                 |                     14,445<br>                 |
-|                     Minimum<br>                 |                     196<br>                 |                     306<br>                 |                     0<br>                 |                     678<br>                 |
-|                     Average<br>                 |                     1,359<br>                 |                     923<br>                 |                     1.4<br>                 |                     2,282<br>                 |
+|  Total  |  205,142  |  139,377  |  209  |  344,519  |
+|  Maximum  |  12,240  |  2,855  |  13  |  14,445  |
+|  Minimum  |  196  |  306  |  0  |  678  |
+|  Average  |  1,359  |  923  |  1.4  |  2,282  |
 
 {{< /table >}}
 
@@ -81,16 +81,16 @@ Let's start with the top 10 posts:
 
 |                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
-|                     1<br>                 | [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages) |                     14,445<br>                 |
-|                     2<br>                 | [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file) |                     13,029<br>                 |
-|                     3<br>                 | [Dumping MOSS 2007 Variations - Part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) |                     9,417<br>                 |
-|                     4<br>                 | ["Error Creating Control" when using Microsoft Office SharePoint Designer 2007](/blog/jjameson/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007) |                     7,525<br>                 |
-|                     5<br>                 | [Virtual Server<br>                        Issues and Recommendations for MOSS Virtual Environments](/blog/jjameson/2007/06/09/virtual-server-issues) |                     6,908<br>                 |
-|                     6<br>                 | [Dumping MOSS 2007 Variations - Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) |                     6,813<br>                 |
-|                     7<br>                 | [Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3) |                     5,753<br>                 |
-|                     8<br>                 | [Scope Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features) |                     5,607<br>                 |
-|                     9<br>                 | [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/2007/06/09/moss-development-environment-and-windows-update-bug) |                     5,307<br>                 |
-|                     10<br>                 | [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1) |                     5,199<br>                 |
+|  1  |  [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)  |  14,445  |
+|  2  |  [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file)  |  13,029  |
+|  3  |  [Dumping MOSS 2007 Variations - Part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1)  |  9,417  |
+|  4  |  ["Error Creating Control" when using Microsoft Office SharePoint Designer 2007](/blog/jjameson/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007)  |  7,525  |
+|  5  |  [Virtual Server<br>                        Issues and Recommendations for MOSS Virtual Environments](/blog/jjameson/2007/06/09/virtual-server-issues)  |  6,908  |
+|  6  |  [Dumping MOSS 2007 Variations - Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2)  |  6,813  |
+|  7  |  [Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)  |  5,753  |
+|  8  |  [Scope Dependencies for SharePoint Features](/blog/jjameson/2007/03/22/scope-dependencies-for-sharepoint-features)  |  5,607  |
+|  9  |  [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/2007/06/09/moss-development-environment-and-windows-update-bug)  |  5,307  |
+|  10  |  [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1)  |  5,199  |
 
 {{< /table >}}
 
@@ -102,16 +102,16 @@ What about the bottom 10 posts?
 
 |                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
-|                     151<br>                 |                     Adventures in Upgrading TFS<br>                 |                     0<br>                 |
-|                     150<br>                 |                     AutoEventWireup Issue in MOSS 2007<br>                 |                     0<br>                 |
-|                     149<br>                 | [ArgumentNullException with Optional PublishingPage.Description Property<br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) |                     678<br>                 |
-|                     148<br>                 | [Eliminate MBSA Warnings Using Default Security Settings Policy](/blog/jjameson/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy) |                     679<br>                 |
-|                     147<br>                 | [Constraining<br>                        Tables with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css) |                     728<br>                 |
-|                     146<br>                 | [DataNavigateUrlFormatString Does Not Allow "javascript:"](/blog/jjameson/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript) |                     773<br>                 |
-|                     145<br>                 | [Add Rooler to Your Web Development Toolbox](/blog/jjameson/2009/10/21/add-rooler-to-your-web-development-toolbox) |                     826<br>                 |
-|                     144<br>                 | [New MSDN<br>                        Theme on My Blog](/blog/jjameson/2009/10/21/new-msdn-theme-on-my-blog) |                     841<br>                 |
-|                     143<br>                 | [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/2009/10/14/kb-896861-and-microsoft-fix-it) |                     849<br>                 |
-|                     142<br>                 | [Latest Version of Opera Ignores Hosts File](/blog/jjameson/2009/10/29/latest-version-of-opera-ignores-hosts-file) |                     850<br>                 |
+|  151  |  Adventures in Upgrading TFS  |  0  |
+|  150  |  AutoEventWireup Issue in MOSS 2007  |  0  |
+|  149  | [ArgumentNullException with Optional PublishingPage.Description Property<br>                        (with some thoughts on breaking the build, too)](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too) |  678  |
+|  148  |  [Eliminate MBSA Warnings Using Default Security Settings Policy](/blog/jjameson/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy)  |  679  |
+|  147  |  [Constraining<br>                        Tables with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css)  |  728  |
+|  146  |  [DataNavigateUrlFormatString Does Not Allow "javascript:"](/blog/jjameson/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript)  |  773  |
+|  145  |  [Add Rooler to Your Web Development Toolbox](/blog/jjameson/2009/10/21/add-rooler-to-your-web-development-toolbox)  |  826  |
+|  144  |  [New MSDN<br>                        Theme on My Blog](/blog/jjameson/2009/10/21/new-msdn-theme-on-my-blog)  |  841  |
+|  143  |  [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/2009/10/14/kb-896861-and-microsoft-fix-it)  |  849  |
+|  142  |  [Latest Version of Opera Ignores Hosts File](/blog/jjameson/2009/10/29/latest-version-of-opera-ignores-hosts-file)  |  850  |
 
 {{< /table >}}
 
@@ -170,17 +170,17 @@ Let's start with the most popular post. Drilling down on the 12,246 views in the
 
 |                     URL<br>                 |                     Hits<br>                 |                     Last Date<br>                 |
 | --- | --- | --- |
-| [http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx](http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx) |                     83<br>                 |                     Oct 12 2009, 01:58 AM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     76<br>                 |                     Oct 12 2009, 10:02 AM<br>                 |
-| [http://stevepietrek.com/2007/06/17/links-6172007/](http://stevepietrek.com/2007/06/17/links-6172007/) |                     69<br>                 |                     Oct 28 2009, 02:41 AM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     45<br>                 |                     May 04 2009, 03:04 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1) |                     44<br>                 |                     Oct 28 2009, 02:03 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     42<br>                 |                     Oct 30 2009, 03:18 PM<br>                 |
-| [http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications](http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications) |                     37<br>                 |                     Feb 04 2009, 04:07 PM<br>                 |
-| [http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=](http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=) |                     35<br>                 |                     Oct 27 2009, 08:10 AM<br>                 |
-| [http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application](http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application) |                     34<br>                 |                     Oct 27 2009, 11:56 PM<br>                 |
-| [http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     33<br>                 |                     Nov 01 2009, 06:57 PM<br>                 |
-| [http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde](http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde) |                     32<br>                 |                     Oct 17 2009, 03:41 PM<br>                 |
+|  [http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx](http://decatec.it/blogs/2007/06/18/sharepoint+deployment+tecniques.aspx)  |  83  |  Oct 12 2009, 01:58 AM  |
+|  [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a)  |  76  |  Oct 12 2009, 10:02 AM  |
+|  [http://stevepietrek.com/2007/06/17/links-6172007/](http://stevepietrek.com/2007/06/17/links-6172007/)  |  69  |  Oct 28 2009, 02:41 AM  |
+|  [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a)  |  45  |  May 04 2009, 03:04 PM  |
+|  [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&rls=com.microsoft:en-us&ie=utf-8&oe=utf-8&startindex=&startpage=1)  |  44  |  Oct 28 2009, 02:03 PM  |
+|  [http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deploy&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a)  |  42  |  Oct 30 2009, 03:18 PM  |
+|  [http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications](http://google.com/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications)  |  37  |  Feb 04 2009, 04:07 PM  |
+|  [http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=](http://google.co.uk/search?hl=en&q=this+solution+contains+resources+scoped+for+a+web+application+and+must+be+deployed+to+one+or+more+web+applications.&meta=)  |  35  |  Oct 27 2009, 08:10 AM  |
+|  [http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application](http://google.com/search?hl=en&q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application)  |  34  |  Oct 27 2009, 11:56 PM  |
+|  [http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a)  |  33  |  Nov 01 2009, 06:57 PM  |
+|  [http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde](http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde)  |  32  |  Oct 17 2009, 03:41 PM  |
 
 {{< /table >}}
 
@@ -192,16 +192,16 @@ Breaking down the referrals by domain name, I found the following:
 
 |                     Domain<br>                 |                     Hits<br>                 |
 | --- | --- |
-|                     google.com<br>                 |                     3,893<br>                 |
-|                     google.co.uk<br>                 |                     628<br>                 |
-|                     google.co.in<br>                 |                     519<br>                 |
-|                     google.com.au<br>                 |                     310<br>                 |
-|                     google.ca<br>                 |                     288<br>                 |
-|                     google.nl<br>                 |                     211<br>                 |
-|                     google.de<br>                 |                     198<br>                 |
-|                     search.live.com<br>                 |                     129<br>                 |
-|                     google.fr<br>                 |                     125<br>                 |
-|                     decatec.it<br>                 |                     99<br>                 |
+|  google.com  |  3,893  |
+|  google.co.uk  |  628  |
+|  google.co.in  |  519  |
+|  google.com.au  |  310  |
+|  google.ca  |  288  |
+|  google.nl  |  211  |
+|  google.de  |  198  |
+|  search.live.com  |  129  |
+|  google.fr  |  125  |
+|  decatec.it  |  99  |
 
 {{< /table >}}
 

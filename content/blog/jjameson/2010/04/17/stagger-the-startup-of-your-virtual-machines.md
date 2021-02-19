@@ -50,12 +50,12 @@ In the **Startup delay** field, I specify the different values for         each 
 
 |                     Virtual Machine<br>                 |                     Startup Delay [sec]<br>                 |
 | --- | --- |
-|                     XAVIER1<br>                 |                     0<br>                 |
-|                     BANSHEE<br>                 |                     60<br>                 |
-|                     CYCLOPS<br>                 |                     120<br>                 |
-|                     DAZZLER<br>                 |                     180<br>                 |
-|                     DOGFOOD<br>                 |                     240<br>                 |
-|                     JUBILEE<br>                 |                     300<br>                 |
+|  XAVIER1  |  0  |
+|  BANSHEE  |  60  |
+|  CYCLOPS  |  120  |
+|  DAZZLER  |  180  |
+|  DOGFOOD  |  240  |
+|  JUBILEE  |  300  |
 
 {{< /table >}}
 

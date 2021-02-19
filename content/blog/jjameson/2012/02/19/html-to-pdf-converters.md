@@ -47,18 +47,12 @@ the content into a table.
 
 | Product | URL | Pricing | Comments |
 | --- | --- | --- | --- |
-| Adlib Software EXPRESS | [http://www.adlibsoftware.com](http://www.adlibsoftware.com/) | Priced by server, starting at $20-24k | Uses Amyuni libraries (according to Gabor Fari); extensive SharePoint
-integration (for document conversion); major focus on life sciences
-and other industries with strict regulatory requirements |
+| Adlib Software EXPRESS | [http://www.adlibsoftware.com](http://www.adlibsoftware.com/) | Priced by server, starting at $20-24k | Uses Amyuni libraries (according to Gabor Fari); extensive SharePoint integration (for document conversion); major focus on life sciences and other industries with strict regulatory requirements |
 | Altsoft Xml2PDF | [http://www.alt-soft.com](http://www.alt-soft.com/) | Professional - $2,099 (includes 1 year maintenance); $550/yr maintenance | Built on .NET platform; company based in Belgium |
-| Amyuni PDF Converter | [http://www.amyuni.com](http://www.amyuni.com/) | $459 per developer; $689 per application; $399/yr maintenance | Conversion appears to be through "print to PDF" (even for server
-applications -- e.g. "lock"/"unlock") |
-| Antenna House Formatter v5 | [http://www.antennahouse.com](http://www.antennahouse.com/) | Server - $5,000 for first CPU, $4,000 each additional proc; $3,000
-Developer license | Company Web site looks very elementary |
-| Ibex PDF Creator | [http://www.xmlpdf.com](http://www.xmlpdf.com/) | $999 per developer (includes 1 year maintenance); $350/yr maintenance | "Team licensing" available for groups of ten or more developers;
-separate .NET and Java versions |
-| Prince XML | [http://www.princexml.com](http://www.princexml.com/) | $3,800 per server; $950/yr maintenance | Current version is 7.1 (May 2010); original 1.0 version released
-in April 2003; support appears to be through email only |
+| Amyuni PDF Converter | [http://www.amyuni.com](http://www.amyuni.com/) | $459 per developer; $689 per application; $399/yr maintenance | Conversion appears to be through "print to PDF" (even for server applications -- e.g. "lock"/"unlock") |
+| Antenna House Formatter v5 | [http://www.antennahouse.com](http://www.antennahouse.com/) | Server - $5,000 for first CPU, $4,000 each additional proc; $3,000 Developer license | Company Web site looks very elementary |
+| Ibex PDF Creator | [http://www.xmlpdf.com](http://www.xmlpdf.com/) | $999 per developer (includes 1 year maintenance); $350/yr maintenance | "Team licensing" available for groups of ten or more developers; separate .NET and Java versions |
+| Prince XML | [http://www.princexml.com](http://www.princexml.com/) | $3,800 per server; $950/yr maintenance | Current version is 7.1 (May 2010); original 1.0 version released in April 2003; support appears to be through email only |
 | RenderX XEP | [http://www.renderx.com](http://www.renderx.com/) | $4,400.00 per CPU core | "written in Java" (http://www.renderx.com/tools/xep.html) |
 | XSL:FO + Apache FOP | [http://xmlgraphics.apache.org/fop](http://xmlgraphics.apache.org/fop) | Free | FOP is Java-based |
 
