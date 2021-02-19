@@ -88,6 +88,8 @@ While it's somewhat bewildering that Excel Services needs to create a table in t
 
 To add the the service account for SharePoint service applications to the underlying content databases:
 
+{{< deleted-block >}}
+
 1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**. The **Connect to Server** dialog box opens.
 2. In the **Server type** list, click **Database Engine**.
 3. Type the name of the server which hosts the SharePoint content databases, and then click **Connect**.
@@ -99,6 +101,8 @@ To add the the service account for SharePoint service applications to the underl
       - **public**
    2. Repeat the previous step for any additional content databases that need to be accessed by Excel Services.
    3. Click **OK**.
+
+{{< /deleted-block >}}
 
 > **Update (2011-04-14)**
 >

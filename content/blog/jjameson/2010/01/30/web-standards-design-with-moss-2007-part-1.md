@@ -445,7 +445,7 @@ Finally, the master page includes a hidden panel that encapsulates all of the va
 
 This is getting to be a very long post, and there's still much I want to cover. Therefore, I'll tack "Part 1" onto the title, publish it, and get on with more fun things on a Saturday afternoon.
 
-Don't fret, I'll cover many more details of Web standards design and SharePoint in the very near future eventually.
+Don't fret, I'll cover many more details of Web standards design and SharePoint ~~in the very near future~~ eventually.
 
 > **Update (2010-12-02)**
 >
