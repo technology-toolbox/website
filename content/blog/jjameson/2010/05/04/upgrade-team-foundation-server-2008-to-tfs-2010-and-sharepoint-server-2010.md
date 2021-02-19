@@ -282,6 +282,8 @@ In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant t
 
 {{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
+{{< deleted-block >}}
+
 ### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
 
 In order to avoid errors in the Windows event log (e.g. Source: SharePoint Foundation,             Event ID: 7043), edit the TaxonomyPicker.ascx file to fix the assembly specified             in the Control directive.
@@ -300,6 +302,8 @@ To fix the TaxonomyPicker.ascx file:
 3. In Notepad, in the assembly specified in the **Control** directive,
    replace the **"&#44;**" (without the quotes) with a comma (',')
    and then save the file.
+
+{{< /deleted-block >}}
 
 > **Update (2011-04-14)**
 >
@@ -665,7 +669,9 @@ There appears to be a bug in SharePoint Server 2010 when the service account for
 
 {{< reference title="\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)" linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx" >}}
 
-To avoid this error, add the the second service account to the underlying content         databases. On the database server:
+To avoid this error, add the the second service account to the underlying content         databases. ~~On the database server:~~
+
+{{< deleted-block >}}
 
 1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
    The **Connect to Server** dialog box opens.
@@ -686,6 +692,8 @@ To avoid this error, add the the second service account to the underlying conten
    2. Repeat the previous step for any additional content databases that need to be accessed
       by Excel Services (**WSS\_Content\_TFS**).
    3. Click **OK**.
+
+{{< /deleted-block >}}
 
 > **Update (2011-04-14)**
 >

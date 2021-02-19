@@ -40,7 +40,7 @@ the content into a table.
 > While I would normally invest more effort trying to find a workaround
 > for this bug in IE, I've got more important things to do this morning.
 > If you are using IE and you find the following table difficult to read,
-> may I suggest using a better
+> may I suggest using a ~~better~~
 > different browser (e.g. Firefox)?
 
 {{< table class="small" caption="HTML-to-PDF Converters" >}}

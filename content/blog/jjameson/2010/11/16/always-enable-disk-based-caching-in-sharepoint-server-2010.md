@@ -23,7 +23,7 @@ This morning a Microsoft PFE (Premier Field Engineer) reached out to me after he
 
 Anyway, he mentioned that his 10-minute SQL Server Profiler trace showed something like 56,000 calls to the `proc_FetchDocForHttpGet` stored procedure (which I suspect is how he discovered my earlier post, since it appears as the [3rd search result on bing](http://www.bing.com/search?q=proc_fetchdocforhttpget) and the [7th search result on Google](http://www.google.com/#hl=en&q=proc_fetchdocforhttpget)).
 
-We talked for a little bit about the effects of enabling disk-based caching, since the customer's SharePoint administrator was a little reluctant to enable it without some "data" to support it. [Note that there are *some* cons, which is something I really should have covered in a blog post by now. I'll try to get to that soon, I promise. Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) for more on this.]
+We talked for a little bit about the effects of enabling disk-based caching, since the customer's SharePoint administrator was a little reluctant to enable it without some "data" to support it. [Note that there are *some* cons, which is something I really should have covered in a blog post by now. ~~I'll try to get to that soon, I promise.~~ Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) for more on this.]
 
 I told the PFE to do some quick analysis on his Profiler trace to see how many of those `proc_FetchDocForHttpGet` calls were for resource files (e.g. cascading style sheets, images, etc.) -- in other words, items ideally suited for caching (as compared to "real" documents, such as PDF or Word docs).
 
@@ -60,7 +60,7 @@ So, why then should we burden SQL Server with these extraneous requests? The ans
 
 However, this leads to an important question: What if my CSS files or images *do* change and I need to ensure that users get the updated versions? Well, as I hinted earlier in this post, that's a topic for a later time.
 
-Don't worry, you won't have to wait very long. [Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) for an easy way of ensuring users do not view your site using "stale" CSS files and images as a result of caching.]
+~~Don't worry, you won't have to wait very long.~~ [Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot) for an easy way of ensuring users do not view your site using "stale" CSS files and images as a result of caching.]
 
 Lastly, I should note that MOSS 2007 requires 15 database roundtrips to render the home page for a site based on the Publishing Portal template (yes, this is even after the site is "warmed" up). If you look at the calls to `proc_FetchDocForHttpGet`, you'll find a number of additional CSS files and images.
 

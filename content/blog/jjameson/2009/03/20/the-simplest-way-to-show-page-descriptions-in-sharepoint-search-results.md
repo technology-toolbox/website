@@ -140,7 +140,11 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
     FieldName='Comments' runat='server'/>" />
 ```
 
+{{< deleted-block >}}
+
 While the color syntax highlighting may  lead you to think this will just emit the raw server tags, I can assure you it works  (inserting the page description -- assuming the page specifies one).
+
+{{< /deleted-block >}}
 
 Once you have this specified in your master page, start a full crawl, modify  your XSL to give preference to **description** over **hithighlightedsummary**  (or to show them both), and you'll be all set!
 
