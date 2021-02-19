@@ -45,7 +45,7 @@ the content into a table.
 
 **HTML-to-PDF Converters**
 
-{{< table "table" >}}
+{{< table class="small" >}}
 | Product | URL | Pricing | Comments |
 | --- | --- | --- | --- |
 | Adlib Software EXPRESS | [http://www.adlibsoftware.com](http://www.adlibsoftware.com/) | Priced by server, starting at $20-24k | Uses Amyuni libraries (according to Gabor Fari); extensive SharePoint
