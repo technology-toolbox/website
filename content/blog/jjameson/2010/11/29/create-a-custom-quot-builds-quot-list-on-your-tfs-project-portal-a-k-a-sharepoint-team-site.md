@@ -30,7 +30,7 @@ Shortly before or after a release to the Production environment (i.e. whenever t
 
 For example, here are the contents of the list for my current project:
 
-**Builds**
+{{< table class="small" caption="Builds" >}}
 
 | Title | Version |
 | --- | --- |
@@ -43,6 +43,8 @@ For example, here are the contents of the list for my current project:
 | Sprint-7 | 1.0.237.0 |
 | Sprint-8 | 1.0.270.0 |
 | Sprint-9 | 1.0.295.5 |
+
+{{< /table >}}
 
 This list makes it very easy for anyone with access to the team site to determine which build was associated with a particular release.
 

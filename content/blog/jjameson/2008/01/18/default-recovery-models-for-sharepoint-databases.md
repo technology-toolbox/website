@@ -28,6 +28,8 @@ Anyway, back to the default recovery models...
 
 From our freshly rebuilt DEV SharePoint environment, here are the databases and  the various default recovery models:
 
+{{< table class="small" >}}
+
 | Database Name | Default Recovery Model |
 | --- | --- |
 | SharePoint\_AdminContent\_{GUID} | Full |
@@ -37,6 +39,8 @@ From our freshly rebuilt DEV SharePoint environment, here are the databases and 
 | WSS\_Content | Full |
 | WSS\_Content\_{SSP name} | Full |
 | WSS\_Search\_{server name} | Simple |
+
+{{< /table >}}
 
 Well, there you have it. Like I warned you at the outset, it's not very "juicy",  but at least I can refer back here from time to time as my memory fades.
 

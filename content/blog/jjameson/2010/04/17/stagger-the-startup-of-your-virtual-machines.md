@@ -46,7 +46,7 @@ All of the VMs that run on ROGUE are configured with the following setting:
 
 In the **Startup delay** field, I specify the different values for         each VM.
 
-**Automatic Start Settings**
+{{< table class="small" caption="Automatic Start Settings" >}}
 
 |                     Virtual Machine<br>                 |                     Startup Delay [sec]<br>                 |
 | --- | --- |
@@ -56,6 +56,8 @@ In the **Startup delay** field, I specify the different values for         each 
 |                     DAZZLER<br>                 |                     180<br>                 |
 |                     DOGFOOD<br>                 |                     240<br>                 |
 |                     JUBILEE<br>                 |                     300<br>                 |
+
+{{< /table >}}
 
 In my environment, 60 seconds appears to be a sufficient in most cases. Honestly,         it's probably not enough to cover a "cold" boot of each VM (after a power outage)         but it still gives each VM time to load up most of the way before the next VM starts         accessing the disk.
 

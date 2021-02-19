@@ -34,7 +34,7 @@ tags: ["Web Development"]
 
 In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years), I showed an example KPI dashboard for a Web application with  a table similar to the following:
 
-**Key Performance Indicators (Detail)**
+{{< table class="small" caption="Key Performance Indicators (Detail)" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
@@ -45,6 +45,8 @@ In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets
 ![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
+{{< /table >}}
 
 I also hinted that it took a little more work than I expected to render the custom  header for the table (i.e. the **Thresholds** label that spans the  last three columns). Note that I originally mocked up the KPI feature using a static  HTML prototype, so I knew what I wanted the underlying HTML markup to look like.  However, the trick was to generate the desired HTML using an ASP.NET control.
 
@@ -203,12 +205,16 @@ It turns out that rendering the GridView from view state is actually what makes 
 
 Running the Web application at this point renders a simple table similar to the  following:
 
+{{< table class="small" >}}
+
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Threshold - Exceeds | Threshold - Meets | Threshold - Does Not Meet |
 | --- | --- | --- | --- | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
+{{< /table >}}
 
 Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)** event:
 
@@ -245,12 +251,16 @@ protected void ScorecardDetailView_RowCreated(
 
 Running the Web application at this point shows the images in place of the lengthy  column headings, similar to the following:
 
+{{< table class="small" >}}
+
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
+{{< /table >}}
 
 Now let's add a method to insert another row into the table rendered by the GridView  control:
 
@@ -320,6 +330,8 @@ private void UpdateScorecardDetailView()
 
 Running the Web application at this point shows the **Thresholds**  header above the corresponding columns, similar to the following:
 
+{{< table class="small" >}}
+
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
@@ -328,6 +340,8 @@ Running the Web application at this point shows the **Thresholds**  header above
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
+{{< /table >}}
 
 Looking at the HTML source, we can see the extra table row has been inserted,  and the `rowspan` and `colspan` attributes are being rendered  as expected.
 
@@ -375,12 +389,16 @@ The problem is that there a couple of bugs in the implementation.
 
 What happens when a post back occurs on the page? Recall that I originally added  a LinkButton to test this very scenario. If you click the button (to cause a post  back), the GridView renders itself from view state, similar to the following:
 
+{{< table class="small" >}}
+
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
+
+{{< /table >}}
 
 Notice that we no longer see the **Thresholds** header in the table.  This is because the **UpdateScorecardDetailView** method is not called  on post back, and the custom header row that we inserted before is not serialized  in view state. [The table also appears to be "corrupted" -- meaning some extraneous  cells appear on the right side of the table.]
 

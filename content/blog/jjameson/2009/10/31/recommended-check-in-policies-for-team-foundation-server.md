@@ -22,7 +22,7 @@ From a source control perspective, one of my favorite features is check-in polic
 
 The check-in policies that I prefer to have configured on all TFS projects are listed in the following table.
 
-**Recommended TFS Check-In Policies**
+{{< table class="small" caption="Recommended TFS Check-In Policies" >}}
 
 | Policy Type | Description |
 | --- | --- |
@@ -31,6 +31,8 @@ The check-in policies that I prefer to have configured on all TFS projects are l
 | Changeset Comments Policy | Reminds users to add meaningful comments to their check-ins. |
 | Code Analysis | This policy requires that Code Analysis is run with a defined set of rules before check-in. |
 | Testing Policy | Ensures that tests from specific test lists are successfully executed before checking in. |
+
+{{< /table >}}
 
 The first two check-in policies are virtually painless and can be applied to any existing project at any time. These policies ship with Visual Studio Team System 2008, and assuming your developers have good software development discipline already, there's absolutely no reason not to enable these policies.
 

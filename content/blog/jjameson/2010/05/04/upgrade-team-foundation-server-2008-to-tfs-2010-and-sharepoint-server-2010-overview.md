@@ -68,7 +68,7 @@ In general, I followed the TFS installation guide to perform a "migration" upgra
 Here is the checklist I used from the TFS installation guide (**In-Place
 or Migration Upgrade of Team Foundation Server on One or More Servers**),  along with my comments for each task. Note that in my [next post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010), I'll provide the detailed steps for installing TFS 2010 (and SharePoint  Server 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
 
-**Preparation**
+{{< table class="small" caption="Preparation" >}}
 
 | Task | Comments |
 | --- | --- |
@@ -151,7 +151,9 @@ to attach the content database containing the TFS project sites and discovered
 a few issues with the upgraded TFS sites (more detail provided in my next
 blog post). |
 
-**Team Foundation Server Upgrade**
+{{< /table >}}
+
+{{< table class="small" caption="Team Foundation Server Upgrade" >}}
 
 | Task | Comments |
 | --- | --- |
@@ -162,6 +164,8 @@ on the same server as TFS. |
 | Final configuration of Microsoft Office SharePoint Server 2007.  | In addition to configuring the enterprise application definition, I also
 had to add the service account used for Excel Services to the SharePoint
 content databases for the TFS Web application.<br><br>This is described in more detail in my next two blog posts. |
+
+{{< /table >}}
 
 ### Upgrading VSTS 2008 Clients for TFS 2010
 

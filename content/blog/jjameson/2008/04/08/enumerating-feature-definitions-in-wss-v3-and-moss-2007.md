@@ -101,7 +101,7 @@ a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/cre
 
 Here is the list in case you don't want to download the attached file:
 
-**MOSS 2007 Feature Definitions**
+{{< table class="small" caption="MOSS 2007 Feature Definitions" >}}
 
 | Feature Id | Display Name | Scope | Solution |
 | --- | --- | --- | --- |
@@ -240,4 +240,6 @@ Here is the list in case you don't want to download the attached file:
 | 00bfea71-4ea5-48d4-a4ad-305cf7030140 | WorkflowHistoryList | Web |  |
 | 00bfea71-2d77-4a75-9fca-76516689e21a | workflowProcessList | Web |  |
 | 00bfea71-1e1d-4562-b56a-f05371bb0115 | XmlFormLibrary | Web |  |
+
+{{< /table >}}
 

@@ -49,31 +49,34 @@ To create a rule that generates an alert whenever an error occurs in the Applica
 6. On the **Event Log Name** page, ensure **Log name** is set to **Application**, and then click **Next**.
 7. On the **Build Event Expression**page:
    1. Specify the following expression:
-      
-      | Parameter Name | Operator | Value |
-      | --- | --- | --- |
-      | Event Level | Equals | Error |
-   
-   2. Click **Next**.
+
+{{< table class="small" >}}
+
+        | Parameter Name | Operator | Value |
+        | --- | --- | --- |
+        | Event Level | Equals | Error |
+
+{{< /table >}}
+2. Click **Next**.
 8. On the **Configure Alerts**page:
-   1. In the **Alert description** box, specify the following:
-      **Source: $Data/EventSourceName$
-      Event ID: $Data/EventDisplayNumber$
-      Event Category: $Data/EventCategory$
-      User: $Data/UserName$
-      Computer: $Data/LoggingComputer$
-      Event Description: $Data/EventDescription$**
-   2. In the **Severity** option, click **Warning**.
-   3. Click **Alert suppression...** to define the handling of duplicate alerts. In the **Alert Suppression**dialog:
-      1. Click the following fields:
-         - **Event ID**
-         - **Event Source**
-         - **Logging Computer**
-         - **Event Category**
-         - **User**
-         - **Description**
-      2. Click **OK**.
-   4. Click **Create**.
+1. In the **Alert description** box, specify the following:
+**Source: $Data/EventSourceName$
+Event ID: $Data/EventDisplayNumber$
+Event Category: $Data/EventCategory$
+User: $Data/UserName$
+Computer: $Data/LoggingComputer$
+Event Description: $Data/EventDescription$**
+2. In the **Severity** option, click **Warning**.
+3. Click **Alert suppression...** to define the handling of duplicate alerts. In the **Alert Suppression**dialog:
+1. Click the following fields:
+- **Event ID**
+- **Event Source**
+- **Logging Computer**
+- **Event Category**
+- **User**
+- **Description**
+2. Click **OK**.
+4. Click **Create**.
 
 Repeat the process to create a similar alert for errors in the System event log.
 

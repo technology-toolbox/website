@@ -23,7 +23,7 @@ I extracted the data from Community Server into an Excel spreadsheet so I could 
 
 Here's a quick summary of my initial analysis:
 
-**Table 1: MSDN Blog Usage Analysis**
+{{< table class="small" caption="Table 1: MSDN Blog Usage Analysis" >}}
 
 |                     Metric<br>                 |                     Views<br>                 |                     AggViews<br>                 |                     Comments<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- | --- | --- |
@@ -31,6 +31,8 @@ Here's a quick summary of my initial analysis:
 |                     Maximum<br>                 |                     12,240<br>                 |                     2,855<br>                 |                     13<br>                 |                     14,445<br>                 |
 |                     Minimum<br>                 |                     196<br>                 |                     306<br>                 |                     0<br>                 |                     678<br>                 |
 |                     Average<br>                 |                     1,359<br>                 |                     923<br>                 |                     1.4<br>                 |                     2,282<br>                 |
+
+{{< /table >}}
 
 Note that **Combined Views** is something I defined and is simply the         sum of **Views** and **AggViews**.
 
@@ -75,7 +77,7 @@ Looking at the chart above, one of the first things I was interested in identify
 
 Let's start with the top 10 posts:
 
-**Table 2: Top 10 Blog Posts**
+{{< table class="small" caption="Table 2: Top 10 Blog Posts" >}}
 
 |                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
@@ -90,11 +92,13 @@ Let's start with the top 10 posts:
 |                     9<br>                 | [MOSS Development Environment and a Windows Update Bug](/blog/jjameson/2007/06/09/moss-development-environment-and-windows-update-bug) |                     5,307<br>                 |
 |                     10<br>                 | [Installing<br>                        Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1) |                     5,199<br>                 |
 
+{{< /table >}}
+
 Hmmm...nine of the top 10 posts are related to SharePoint. No big surprises there         ;-)
 
 What about the bottom 10 posts?
 
-**Table 3: Bottom 10 Blog Posts**
+{{< table class="small" caption="Table 3: Bottom 10 Blog Posts" >}}
 
 |                     Rank<br>                 |                     Post<br>                 |                     Combined Views<br>                 |
 | --- | --- | --- |
@@ -108,6 +112,8 @@ What about the bottom 10 posts?
 |                     144<br>                 | [New MSDN<br>                        Theme on My Blog](/blog/jjameson/2009/10/21/new-msdn-theme-on-my-blog) |                     841<br>                 |
 |                     143<br>                 | [KB 896861<br>                        and "Microsoft Fix it"](/blog/jjameson/2009/10/14/kb-896861-and-microsoft-fix-it) |                     849<br>                 |
 |                     142<br>                 | [Latest Version of Opera Ignores Hosts File](/blog/jjameson/2009/10/29/latest-version-of-opera-ignores-hosts-file) |                     850<br>                 |
+
+{{< /table >}}
 
 I suppose that I really should have thrown out the first two items because these         posts are not published.
 
@@ -160,7 +166,7 @@ The last area that I want to cover in this post is with regards to Internet sear
 Let's start with the most popular post. Drilling down on the 12,246 views in the         Community Server dashboard (which does not include "AggViews") to see the list of         referrals, I encountered the largest HTML table I've ever seen on a page (over 5,500         rows). After a couple of attempts, I managed to copy all of the data into my Excel         workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
-**Table 4: Top referrals by URL for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)**
+{{< table class="small" caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
 
 |                     URL<br>                 |                     Hits<br>                 |                     Last Date<br>                 |
 | --- | --- | --- |
@@ -176,11 +182,13 @@ Let's start with the most popular post. Drilling down on the 12,246 views in the
 | [http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a](http://google.com/search?q=this+solution+contains+no+resources+scoped+for+a+web+application+and+cannot+be+deployed+to+a+particular+web+application&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-us:official&client=firefox-a) |                     33<br>                 |                     Nov 01 2009, 06:57 PM<br>                 |
 | [http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde](http://social.technet.microsoft.com/forums/en-us/sharepointadmin/thread/0881326b-7cb6-4198-9bac-7df6eaed9dde) |                     32<br>                 |                     Oct 17 2009, 03:41 PM<br>                 |
 
+{{< /table >}}
+
 However, adding up the numbers for the top 10 referrals accounts for less than 5%         of the 12,246 views for this post. Upon further inspection, I found that only 8,400         of the 12,200 views actually have referral data.
 
 Breaking down the referrals by domain name, I found the following:
 
-**Table 5: Top referrals by domain for post - [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)**
+{{< table class="small" caption="Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages" >}}
 
 |                     Domain<br>                 |                     Hits<br>                 |
 | --- | --- |
@@ -194,6 +202,8 @@ Breaking down the referrals by domain name, I found the following:
 |                     search.live.com<br>                 |                     129<br>                 |
 |                     google.fr<br>                 |                     125<br>                 |
 |                     decatec.it<br>                 |                     99<br>                 |
+
+{{< /table >}}
 
 Note that the post was created back in June 2007, which helps explain why you see         **search.live.com** instead of **bing.com** in the top         10 list.
 

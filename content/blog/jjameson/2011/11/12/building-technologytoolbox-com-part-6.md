@@ -931,7 +931,7 @@ private static string GetNewTag(
 In order to populate the list of categories for each post, I created a simple
 mapping, illustrated below:
 
-**Tag-to-Category Mapping**
+{{< table class="small" caption="Tag-to-Category Mapping" >}}
 
 | Tag | Category |
 | --- | --- |
@@ -960,6 +960,8 @@ mapping, illustrated below:
 | WSS v2 | SharePoint |
 | WSS v3 | SharePoint |
 | WSUS | Infrastructure |
+
+{{< /table >}}
 
 > **Note**
 >

@@ -84,7 +84,7 @@ robocopy "%BRANCH1%" "%BRANCH2%" /E /MIR /XD bin obj TestResults /XF *.scc *.suo
 
 Note that I put the word *magic* in quotes because it's really not magic  at all. When copying a source code branch, I simply use robocopy.exe and specify  the following options:
 
-**robocoby.exe command-line options used in CopyBranch.cmd**
+{{< table class="small" caption="robocoby.exe command-line options used in CopyBranch.cmd" >}}
 
 | Command-Line Option | Comments |
 | --- | --- |
@@ -98,6 +98,8 @@ by running unit tests from within Visual Studio |
 | /XF \*.scc \*.suo \*.user \*.vspscc  | Exclude files matching the given names/paths/wildcards, thus skipping
 source code control files (\*.scc and \*.vspscc), and Visual Studio solution/project
 user-specific options (i.e. \*.suo and \*.user) |
+
+{{< /table >}}
 
 For example, let's suppose that I've checked in some changes to the **v3.0** branch that need to be propagated to the **Main** branch.  I would open a command prompt and run the following:
 

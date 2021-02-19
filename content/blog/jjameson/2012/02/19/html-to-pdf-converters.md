@@ -44,6 +44,7 @@ the content into a table.
 > different browser (e.g. Firefox)?
 
 {{< table class="small" caption="HTML-to-PDF Converters" >}}
+
 | Product | URL | Pricing | Comments |
 | --- | --- | --- | --- |
 | Adlib Software EXPRESS | [http://www.adlibsoftware.com](http://www.adlibsoftware.com/) | Priced by server, starting at $20-24k | Uses Amyuni libraries (according to Gabor Fari); extensive SharePoint
@@ -60,6 +61,7 @@ separate .NET and Java versions |
 in April 2003; support appears to be through email only |
 | RenderX XEP | [http://www.renderx.com](http://www.renderx.com/) | $4,400.00 per CPU core | "written in Java" (http://www.renderx.com/tools/xep.html) |
 | XSL:FO + Apache FOP | [http://xmlgraphics.apache.org/fop](http://xmlgraphics.apache.org/fop) | Free | FOP is Java-based |
+
 {{< /table >}}
 
 > **Note**

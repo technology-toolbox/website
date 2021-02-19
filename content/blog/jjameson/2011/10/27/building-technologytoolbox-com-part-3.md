@@ -26,7 +26,7 @@ One of the first things I needed to do for the new TechnologyToolbox.com site  w
 
 Using Expression Web, I created a site under the TFS workspace for the Caelum  project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders  and files corresponding to the basic structure of the website.
 
-**Sample HTML content for the Caelum prototype**
+{{< table class="small" caption="Sample HTML content for the Caelum prototype" >}}
 
 | File | Description |
 | --- | --- |
@@ -37,6 +37,8 @@ Using Expression Web, I created a site under the TFS workspace for the Caelum  p
 | blog\jjameson\archive\2011\08\22\leaving-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\last-day-with-microsoft.aspx | Sample post |
 | blog\jjameson\archive\2011\09\02\new-blog-location.aspx | Sample post |
+
+{{< /table >}}
 
 ### Default.master
 

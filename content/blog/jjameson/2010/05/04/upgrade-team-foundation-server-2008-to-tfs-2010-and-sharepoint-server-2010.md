@@ -28,7 +28,7 @@ The process below assumes the TFS environment is comprised of at least two serve
 
 There are a number of configuration parameters that need to be determined before         installing Team Foundation Server 2010 and SharePoint Server 2010. The various parameters         and configuration settings for my environment are listed in the following tables.
 
-**Table 1 - Service Accounts**
+{{< table class="small" caption="Table 1 - Service Accounts" >}}
 
 |                     User Logon Name<br>                 |                     Full Name<br>                 |                     Description<br>                 |
 | --- | --- | --- |
@@ -41,7 +41,9 @@ There are a number of configuration parameters that need to be determined before
 |                     TECHTOOLBOX\svc-tfsreports<br>                 |                     Service account for TFS reporting<br>                 |  |
 |                     TECHTOOLBOX\svc-web-tfs<br>                 |                     Service account for Team Foundation Server Web site<br>                 |                     Used for the application pool for the SharePoint Web application for TFS project<br>                    sites<br>                 |
 
-**Table 2 - Domain Groups**
+{{< /table >}}
+
+{{< table class="small" caption="Table 2 - Domain Groups" >}}
 
 |                     Domain<br>                 |                     Group Name<br>                 |                     Group Scope<br>                 |                     Group Type<br>                 |                     Description<br>                 |
 | --- | --- | --- | --- | --- |
@@ -49,7 +51,9 @@ There are a number of configuration parameters that need to be determined before
 |                     TECHTOOLBOX<br>                 |                     SQL Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
 |                     TECHTOOLBOX<br>                 |                     Team Foundation Server Administrators<br>                 |                     Global<br>                 |                     Security<br>                 |  |
 
-**Table 3 - SharePoint Server 2010 Installation Parameters**
+{{< /table >}}
+
+{{< table class="small" caption="Table 3 - SharePoint Server 2010 Installation Parameters" >}}
 
 |                     Parameter<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -58,7 +62,9 @@ There are a number of configuration parameters that need to be determined before
 |                     SharePoint Central Administration port number<br>                 |                     22812<br>                 |
 |                     SharePoint Central Administration authentication provider<br>                 |                     NTLM<br>                 |
 
-**Table 4 - Outgoing E-Mail Settings**
+{{< /table >}}
+
+{{< table class="small" caption="Table 4 - Outgoing E-Mail Settings" >}}
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -67,14 +73,18 @@ There are a number of configuration parameters that need to be determined before
 |                     Reply-to address<br>                 |                     no-reply@technologytoolbox.com<br>                 |
 |                     Character set<br>                 |                     65001 (Unicode UTF-8)<br>                 |
 
-**Table 5 - SharePoint Web Applications**
+{{< /table >}}
+
+{{< table class="small" caption="Table 5 - SharePoint Web Applications" >}}
 
 |                     Name<br>                 |                     Port<br>                 |                     Host Header<br>                 |                     Allow Anonymous<br>                 |                     URL<br>                 |                     App Pool Service Account<br>                 |                     Database Name(s)<br>                 |
 | --- | --- | --- | --- | --- | --- | --- |
 |                     SharePoint Central Administration v4<br>                 |                     22812<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops:22812/<br>                 |                     TECHTOOLBOX\svc-sharepoint<br>                 |                     SharePoint\_AdminContent\_{GUID}<br>                 |
 |                     SharePoint - 80<br>                 |                     80<br>                 |                     (none)<br>                 |                     No<br>                 |                     http://cyclops/<br>                 |                     TECHTOOLBOX\svc-web-tfs<br>                 | <ul>                        <li>WSS_Content</li><br>                        <li>WSS_Content_TFS (attached to Web application to restore existing TFS project sites)</li><br>                    </ul> |
 
-**Table 6 - Reporting Services Configuration Settings**
+{{< /table >}}
+
+{{< table class="small" caption="Table 6 - Reporting Services Configuration Settings" >}}
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -83,8 +93,9 @@ There are a number of configuration parameters that need to be determined before
 |                     SMTP Settings - Sender Address<br>                 |                     svc-tfsreports@technologytoolbox.com<br>                 |
 |                     SMTP Settings - SMTP Server<br>                 |                     smtp.technologytoolbox.com<br>                 |
 
-**Table 7 - Secure Store Target Application Settings for
-TFS Dashboards**
+{{< /table >}}
+
+{{< table class="small" caption="Table 7 - Secure Store Target Application Settings for TFS Dashboards" >}}
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -94,7 +105,9 @@ TFS Dashboards**
 |                     Target Application Type<br>                 |                     Group<br>                 |
 |                     Members<br>                 |                     TECHTOOLBOX\All Developers<br>                 |
 
-**Table 8 - TFS Configuration Settings**
+{{< /table >}}
+
+{{< table class="small" caption="Table 8 - TFS Configuration Settings" >}}
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -118,7 +131,9 @@ TFS Dashboards**
 |                     Project Collection - Name for the new collection<br>                 |                     DefaultCollection<br>                 |
 |                     Project Collection - Description<br>                 |                     Project(s) upgraded from previous Team Foundation Server<br>                 |
 
-**Table 9 - Team Foundation Build Configuration Settings**
+{{< /table >}}
+
+{{< table class="small" caption="Table 9 - Team Foundation Build Configuration Settings" >}}
 
 |                     Setting<br>                 |                     Value<br>                 |
 | --- | --- |
@@ -127,6 +142,8 @@ TFS Dashboards**
 |                     Build Services - Number of build agents to run on this build machine<br>                 |                     1<br>                 |
 |                     Settings - Run Team Foundation Build Service as<br>                 |                     TECHTOOLBOX\svc-build<br>                 |
 |                     Settings - Accept connections from Team Foundation Server on<br>                 |                     Default port 9191<br>                 |
+
+{{< /table >}}
 
 ### Deploy and Configure the Server Infrastructure
 

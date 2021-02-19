@@ -74,7 +74,7 @@ environment (DEV) and local development VMs.
 To help you locate and interpret information easily, this document uses
 the following style conventions and terminology.
 
-**Table 1: Style conventions**
+{{< table class="small" caption="Table 1: Style conventions" >}}
 
 | Element | Meaning |
 | --- | --- |
@@ -92,6 +92,8 @@ and book titles. |
 integration environment (DEV) and local development VMs. Specifically,
 these sections are skipped when deploying to the Test and Production
 environments. |
+
+{{< /table >}}
 
 # Overview of the installation process
 
@@ -2744,8 +2746,7 @@ There are a number of configuration parameters that need to be determined
 before installing the Fabrikam Extranet solution. The various parameters
 and configuration settings are listed in the following tables.
 
-**Table 2 - Service
-accounts**
+{{< table class="small" caption="Table 2 - Service accounts" >}}
 
 | User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
@@ -2780,16 +2781,18 @@ extranet farm. The username and password must not contain commas. |
 | EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access
 to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
 
-**Table 3
-- Installation file locations**
+{{< /table >}}
+
+{{< table class="small" caption="Table 3 - Installation file locations" >}}
 
 | Setting | Value |
 | --- | --- |
 | Installation path  | C:\Program Files\Microsoft Office Servers  |
 | Search index files  | D:\Program Files\Microsoft Office Servers\14.0\Data  |
 
-**Table 4 - Diagnostic
-logging**
+{{< /table >}}
+
+{{< table class="small" caption="Table 4 - Diagnostic logging" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2803,8 +2806,9 @@ DEV: 1 |
 | Restrict Trace Log disk space usage  | No (not checked)  |
 | Maximum storage space for Trace Logs (GB)  | N/A  |
 
-**Table
-5 - Web analytics and health data collection**
+{{< /table >}}
+
+{{< table class="small" caption="Table 5 - Web analytics and health data collection" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2820,13 +2824,14 @@ DEV: 1 |
 DEV: No (not checked)\* |
 | Database Name | WSS\_Logging |
 
+{{< /table >}}
+
     			\* - In development environments, the WSS\_Logging database can 
     			quickly consume all available space on a small VHD. Therefore 
     			enabling usage data collection and health data collection is
     			*not* recommended in these environments.
 
-**Table 6 -
-Outgoing e-mail settings**
+{{< table class="small" caption="Table 6 - Outgoing e-mail settings" >}}
 
 | Setting | Value for PROD | Value for TEST | Value for DEV |
 | --- | --- | --- | --- |
@@ -2835,7 +2840,9 @@ Outgoing e-mail settings**
 | Reply-to address  | no-reply@fabrikam.com  | no-reply@fabrikam.com  | no-reply@fabrikam.com  |
 | Character set  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  |
 
-**Table 7 - Web applications**
+{{< /table >}}
+
+{{< table class="small" caption="Table 7 - Web applications" >}}
 
 | Application | Port | Host Header | Allow Anonymous | Application Pool | Web Application Database Name |
 | --- | --- | --- | --- | --- | --- |
@@ -2844,14 +2851,17 @@ Outgoing e-mail settings**
 | SharePoint Central Administration v4  | 22812  | (blank)  | No  |  | EXTRANET\svc-sharepoint  | SharePoint\_AdminContent\_{GUID}  |
 | Fabrikam Extranet | 80  | extranet.fabrikam.com  | Yes  | SharePoint – extranet.fabrikam.com80  | EXTRANET\svc-web-fabrikam  | WSS\_Content\_FabrikamExtranet  |
 
-**Table 8 - Site collections**
+{{< /table >}}
+
+{{< table class="small" caption="Table 8 - Site collections" >}}
 
 | Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | http://extranet.fabrikam.com  | Fabrikam Extranet  | (blank)  | /  | Publishing: Publishing Portal  | FABRIKAM\jjameson  | FABRIKAM\smasters | No Quota  |
 
-**Table
-9 - Initial data and log file sizes**
+{{< /table >}}
+
+{{< table class="small" caption="Table 9 - Initial data and log file sizes" >}}
 
 | Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
@@ -2860,15 +2870,22 @@ Outgoing e-mail settings**
 | OfficeWebAppsCache  | OfficeWebAppsCache  | Data  | PRIMARY  | 10,000  | By 500 MB, unrestricted growth  |
 |  | OfficeWebAppsCache\_Log  | Log  | Not Applicable  | 400  | By 10 percent, restricted growth: 4,000 MB  |
 
-**Table 10 - SharePoint groups and permissions used for entitlement**
+{{< /table >}}
+
+{{< table class="small" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
 
 | SharePoint Group | Members | Permissions |
 | --- | --- | --- |
 | Approvers | FABRIKAM\Extranet Approvers | Approve  |
 | Fabrikam Extranet Members | FABRIKAM\Extranet Authors  | Contribute  |
 
-**Table 11 - Search
-schedules**
+{{< /table >}}
+
+{{< table class="small" >}}
+
+{{< /table >}}
+
+{{< table class="small" caption="Table 11 - Search schedules" >}}
 
 | Setting | Full | Incremental |
 | --- | --- | --- |
@@ -2881,4 +2898,6 @@ schedules**
 | Repeat within the day  | No  | Yes<br>
 Every 30 minutes<br>
 For 1440 minutes  |
+
+{{< /table >}}
 

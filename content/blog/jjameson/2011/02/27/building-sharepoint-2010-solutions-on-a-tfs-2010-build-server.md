@@ -81,7 +81,7 @@ Here are the assemblies that I ended up copying from FOOBAR5 (which has SharePoi
 Server 2010 installed) to DAZZLER (which does not have SharePoint Server 2010
 installed):
 
-**Reference Assemblies for Building SharePoint 2010 Projects**
+{{< table class="small" caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
 
 | Assembly | Source Location on SharePoint 2010 Server |
 | --- | --- |
@@ -106,6 +106,8 @@ installed):
 | Microsoft.Web.Administration.dll | GAC\_MSIL |
 | Microsoft.Web.CommandUI.dll | ISAPI |
 | Microsoft.Web.Design.Server.dll | GAC\_MSIL |
+
+{{< /table >}}
 
 In case it's not immediately obvious, "ISAPI" in the above table means:
 

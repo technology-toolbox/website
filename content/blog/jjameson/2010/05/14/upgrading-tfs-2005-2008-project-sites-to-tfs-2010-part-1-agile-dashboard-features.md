@@ -129,7 +129,7 @@ If you look at the site features for a new project site created with the
 MSF Agile v5 template TFS 2010 (click **Site Settings**, then in the **Site Actions** section, click **Manage
 site features**), you will notice the following features are activated:
 
-**Site (Web) Features**
+{{< table class="small" caption="Site (Web) Features" >}}
 
 | Display Name  | Description  | Name  | Id  |
 | --- | --- | --- | --- |
@@ -148,6 +148,8 @@ template.  | TfsDashboardAgileMoss  | 0d953ee4-b77d-485b-a43c-f5fbb9367207  |
 | Team Collaboration Lists  | Provides team collaboration capabilities for a site by making standard
 lists, such as document libraries and issues, available.  | TeamCollab  | 00bfea71-4ea5-48d4-a4ad-7ea5c011abe5  |
 
+{{< /table >}}
+
 Note that there are other activated features (e.g. **Offline Synchronization
 for External Lists**), but from a TFS perspective -- and the purposes
 of this post -- only the four features listed above are of interest.
@@ -157,12 +159,14 @@ Similarly, if you look at the corresponding site collection features (click
 click **Site collection features**), you will notice the following
 feature is activated:
 
-**Site Collection Features**
+{{< table class="small" caption="Site Collection Features" >}}
 
 | Display Name  | Description  | Name  | Id  |
 | --- | --- | --- | --- |
 | Visual Studio Team Foundation Server Web Part Collection  | Collection of web parts to display various information from a Team
 Foundation Server instance.  | TswaWebParts  | cce226d2-d7b9-44fb-b5be-a1ccf91cbd90  |
+
+{{< /table >}}
 
 After poking around a little bit in the SharePoint feature files installed
 by TFS 2010 and looking at the corresponding feature assembly using Reflector,

@@ -154,11 +154,15 @@ BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
 
 Next, set the build number using the assembly version specified in the AssemblyVersionInfo.txt         file. To do this, add a new **InvokeProcess** activity at the beginning         of the **Update Build Number for Triggered Builds** activity in the         **Update Build Number** sequence, and set the properties as follows:
 
+{{< table class="small" >}}
+
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     Arguments<br>                 |                     "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt"""<br>                 |
 |                     DisplayName<br>                 |                     InvokeProcess to read AssemblyVersion from file<br>                 |
 |                     FileName<br>                 |                     "cmd.exe"<br>                 |
+
+{{< /table >}}
 
 All I'm doing here is using a little command-prompt "trickery" to read the contents         of a file (using the [`type`
 command](http://en.wikipedia.org/wiki/Type_%28command%29)). The file contains a single line of text that specifies the assembly         version (e.g. "1.0.1.0" -- without the quotes). As a result, the assembly version         is subsequently available using the **stdOutput** variable of the InvokeProcess         activity.
@@ -182,10 +186,14 @@ Let's modify the workflow to increment the assembly version...
 Just below the InvokeProcess activity added earlier (inside the **Update Build
 Number for Triggered Builds** activity), add a new **MSBuild**         activity, and set the properties as follows:
 
+{{< table class="small" >}}
+
 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- |
 |                     DisplayName<br>                 |                     Increment AssemblyVersion for next build<br>                 |
 |                     Project<br>                 |                     SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj"<br>                 |
+
+{{< /table >}}
 
 Next, create the actual MSBuild file to increment the assembly version (IncrementAssemblyVersion.proj):
 
@@ -285,7 +293,7 @@ The other concern that I've heard with regards to checking in an updated file as
 
 In case you are wondering how I configure build definitions, here are the settings         for the "daily build" as an example. If a setting is not listed in the following         table, it means the default is used.
 
-**Build Definition: "Automated Build - Main"**
+{{< table class="small" caption="Build Definition: \"Automated Build - Main\"" >}}
 
 |                     Section<br>                 |                     Property<br>                 |                     Value<br>                 |
 | --- | --- | --- |
@@ -298,4 +306,6 @@ In case you are wondering how I configure build definitions, here are the settin
 |  |                     Build process parameters:<br>                 |  |
 |  | Items to Build<ul>                        <li>Solutions/Projects</li><br>                        <li>Configurations</li><br>                    </ul> | <br><ul>                        <li>$/foobar2010/Main/Source/foobar.sln</li><br>                        <li>Debug - Any CPU<br><br>                            Release - Any CPU</li><br>                    </ul> |
 |                     Retention Policy<br>                 | Triggered and Manual<ul>                        <li>Succeeded<ul><br>                                <li>Retention Policy</li><br>                            </ul><br>                        </li><br>                    </ul> | <br><br><br>                    Keep All<br>                 |
+
+{{< /table >}}
 

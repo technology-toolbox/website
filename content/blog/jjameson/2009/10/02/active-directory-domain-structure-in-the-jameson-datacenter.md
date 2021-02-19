@@ -41,7 +41,7 @@ As you can see, I created OUs to model organizations such as the **Development**
 
 The following table summarizes the various OUs in the domain:
 
-**Organizational Units in the corp.technologytoolbox.com Domain**
+{{< table class="small" caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
 
 |                     Organizational Unit<br>                 |                     Description<br>                 |
 | --- | --- |
@@ -61,6 +61,8 @@ The following table summarizes the various OUs in the domain:
 |                     IT/Service Accounts<br>                 |                     Contains service accounts for the "Test" and "Production" environments (e.g. **Service account for SQL Server (TEST) -- TECHTOOLBOX\svc-sql-test** and<br>                    **Service account for SQL Server** -- **TECHTOOLBOX\svc-sql**)<br>                 |
 |                     IT/Users<br>                 |                     Contains user accounts for each person in the IT organization. This OU is currently<br>                    empty.<br>                 |
 |                     Sales<br>                 |                     Represents the Sales organization within Technology Toolbox. I created this OU primarily<br>                    for testing (for example, to verify whether I've configured the permissions correctly<br>                    on a SharePoint site).<br>                 |
+
+{{< /table >}}
 
 > **Note**
 >
