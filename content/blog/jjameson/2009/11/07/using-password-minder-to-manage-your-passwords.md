@@ -35,7 +35,6 @@ Consequently, I encountered the following error when trying to save my password 
 {{< blockquote "font-italic text-danger" >}}
 
 Failed to save the password file. Here are the gory details:
-
 GetVolumeInformation failed:
 The filename, directory name, or volume label syntax is incorrect.
 
