@@ -26,6 +26,8 @@ I also tried disabling the **Require Secure Password Authentication (SPA) for al
 
 Here's a network trace (when SPA is enabled) from my primary desktop (WOLVERINE) with Outlook 2010 installed:
 
+{{< log-excerpt >}}
+
 ```
 449   3.055000   BANSHEE    WOLVERINE  POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846424703@banshee.corp.technologytoolbox.com> ready.
 450   3.055000   WOLVERINE  BANSHEE    POP3   POP3:Command: CAPA 
@@ -33,9 +35,13 @@ Here's a network trace (when SPA is enabled) from my primary desktop (WOLVERINE)
 452   3.056000   WOLVERINE  BANSHEE    POP3   POP3:Command: QUIT
 ```
 
+{{< /log-excerpt >}}
+
 Like I said, it seems that Outlook 2010 doesn't like the simple implementation of the POP3 protocol in Windows Server 2003. Specifically, if the POP3 server doesn't understand the CAPA command (to list the capabilities supported by the mail server), then Outlook 2010 doesn't even bother trying to authenticate (at least not with SPA).
 
 Here is a similar network trace from one of my VMs (FOOBAR2) that still has Outlook 2007 installed:
+
+{{< log-excerpt >}}
 
 ```
 2225   15.118164   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846956359@banshee.corp.technologytoolbox.com> ready.
@@ -59,6 +65,8 @@ Here is a similar network trace from one of my VMs (FOOBAR2) that still has Outl
 2375   15.775390   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Message marked as deleted
 2433   15.819336   FOOBAR2   BANSHEE   POP3   POP3:Command: QUIT
 ```
+
+{{< /log-excerpt >}}
 
 I suspect the problem with Outlook 2010 might be due to the fact that I'm not using SSL to connect to my POP3 service. However, unless I'm missing something obvious, I don't believe it's even possible to configure SSL on the POP3 service in Windows Server 2003. Sure, I could change the port number from the default 110 to 995, but how would I assign the certficate?
 

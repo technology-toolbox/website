@@ -70,6 +70,8 @@ and the application event log.\
 
 Upon cracking open the upgrade log file, I found the following:
 
+{{< log-excerpt >}}
+
 ```
 [SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating site-collection-scoped features...
 [SPWebTemplateSequence] [DEBUG] [1/19/2009 6:35:31 AM]: Template OSRV#0: Activating feature 2b1e4cbf-b5ba-48a4-926a-37100ad77dee in site collection with URL "http://ssp-public-local/ssp/admin", force=False.
@@ -78,6 +80,8 @@ Upon cracking open the upgrade log file, I found the following:
    at Microsoft.SharePoint.SPFeatureCollection.Add(Guid featureId, Boolean force)
    at Microsoft.SharePoint.Upgrade.SPWebTemplateSequence.ActivateSiteFeatures(List`1 lstsiteidToUpgrade, List`1& lstsiteidExceptions, List`1& lstwebinfoExceptions)
 ```
+
+{{< /log-excerpt >}}
 
 Notice that it is complaining about a feature not being installed on the farm.  This feature ('2b1e4cbf-b5ba-48a4-926a-37100ad77dee') is actually the new "S2SearchAdmin"  interface included in the July IU that substantially improves the Search Administration  pages. Assuming you didn't install the July IU separately (which on this brand new  VM, I had not), you need to explicitly install the new features first:
 

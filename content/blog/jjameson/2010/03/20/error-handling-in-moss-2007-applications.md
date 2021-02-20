@@ -379,6 +379,8 @@ With the **EventLogTraceListener** configured, as soon as I browse  to my site a
 
 Enabling the call stack and disabling custom errors in the Web.config file reveals  the following error:
 
+{{< log-excerpt >}}
+
 ```
 [SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.]
    System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly) +665
@@ -405,6 +407,8 @@ Enabling the call stack and disabling custom errors in the Web.config file revea
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
 
+{{< /log-excerpt >}}
+
 The problem is that the event source specified in the `initializeData` attribute (`"Fabrikam  Site"`) does not exist and the service account doesn't have permission  to create a new event source. You might think that you could just omit the `initializeData` attribute -- and use whatever  default is specified in the **EventLogTraceListener** -- but, alas,  that only leads to a `NullReferenceException` and a slightly different  call stack.
 
 Consequently, we need to first create the event source that we want to use.
@@ -429,6 +433,8 @@ private static string AddEventLogSource(
 
 However, even after creating the event source, you still can't use the **EventLogTraceListener** on a SharePoint site configured for Forms-Based  Authentication and anonymous access. Attempting to do so results in the following  error:
 
+{{< log-excerpt >}}
+
 ```
 [Win32Exception (0x80004005): The handle is invalid]
    System.Diagnostics.EventLog.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName) +517
@@ -451,6 +457,8 @@ However, even after creating the event source, you still can't use the **EventLo
    System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
+
+{{< /log-excerpt >}}
 
 To workaround this problem, I created a custom trace listener by essentially  snarfing the code for the **EventLogTraceListener** class and wrapping  the calls to write events with `SPSecurity.RunWithElevatedPrivileges`:
 
@@ -1077,6 +1085,8 @@ The point is, when we now encounter an unhandled exception on any page in the  s
 
 Here's the event that I just captured from my sample Web Part:
 
+{{< log-excerpt >}}
+
 ```
 Log Name:      Application
 Source:        Fabrikam Site
@@ -1109,6 +1119,8 @@ Stack Trace:
    at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 ```
+
+{{< /log-excerpt >}}
 
 I don't know about you, but I think that's pretty darn cool!
 

@@ -22,6 +22,8 @@ tags: ["WSUS", "
 
 Windows Update started generating errors last week on one of my servers. Specifically,         the server (JUBILEE) was encountering an error when trying to install Microsoft         .NET Framework 4:
 
+{{< log-excerpt >}}
+
 ```
 Log Name:      System
 Source:        Microsoft-Windows-WindowsUpdateClient
@@ -35,6 +37,8 @@ Computer:      jubilee.corp.technologytoolbox.com
 Description:
 Installation Failure: Windows failed to install the following update with error 0x80070643: Microsoft .NET Framework 4 for Windows Server 2008 x64-based Systems (KB982671).
 ```
+
+{{< /log-excerpt >}}
 
 Note that all of the other servers and workstations in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) installed .NET Framework 4 without incident, so I was         a little baffled why this particular server was failing.
 

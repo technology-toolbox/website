@@ -35,6 +35,8 @@ The workbook cannot be opened.
 
 Looking at the event log on the SharePoint/TFS server, I found the following error occurred each time I requested the dashboard page:
 
+{{< log-excerpt >}}
+
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 3760
@@ -49,6 +51,8 @@ Cannot open database "WSS_Content" requested by the login. The login failed.
 Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
 ```
 
+{{< /log-excerpt >}}
+
 Note that in my environment, I use different service accounts for the TFS Web application and SharePoint service applications (e.g. Excel Services and the Secure Store Service). I *believe* Jon configured his environment such that the Web application and SharePoint service applications use the same service account.
 
 I say this because looking at SQL Server Management Studio, I discovered that while the service account for the app pool of the TFS Web application (TECHTOOLBOX\svc-web-tfs-test) had access to the underlying SharePoint content database (WSS\_Content), the service account for Excel Services (TECHTOOLBOX\svc-spserviceapp-tst) did not.
@@ -58,6 +62,8 @@ This explained the error that I was seeing on my test SharePoint/TFS server (CYC
 I confirmed that changing the identity of the application pool in IIS for Excel Services to be the same as the service account for Web application resolved the problem. However, my preference was to keep the discrete service accounts -- if at all possible.
 
 Consequently, I added the service account for Excel Services to the SharePoint content databases for the Web application. At first, I tried giving it "low privilege" access, but I discovered this only resulted in different errors in the event log when browsing to the dashboard page:
+
+{{< log-excerpt >}}
 
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
@@ -69,7 +75,11 @@ is included below.
 CREATE TABLE permission denied in database 'WSS_Content'.
 ```
 
+{{< /log-excerpt >}}
+
 and
+
+{{< log-excerpt >}}
 
 ```
 Source: Microsoft-SharePoint Products-SharePoint Foundation
@@ -83,6 +93,8 @@ been upgraded to a higher level than the web server. The Web server and the
 database must be upgraded to the same version and build level to return to 
 compatibility range.
 ```
+
+{{< /log-excerpt >}}
 
 While it's somewhat bewildering that Excel Services needs to create a table in the SharePoint content database, I decided to just go ahead and give the service account for Excel Services the same permissions to the content database as the service account for the Web application (which, is to say, db\_owner). [Yeah, I know, that's essentially the same as using a single service account for both the Web application and SharePoint service applications. Perhaps someday the TFS dashboards and Excel Services will "play nicely" together, even when configured with restricted access.]
 

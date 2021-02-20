@@ -77,12 +77,16 @@ echo Warning! One or more errors detected.
 
 If you've seen any of my scripts before, then you'll quickly notice the typical `LogMessage` "function" that I use to write messages prefixed with a timestamp. For example here's the output from the log for this morning's backup:
 
+{{< log-excerpt >}}
+
 ```
 2009-11-09 12:30 AM - Starting backup...
 2009-11-09 12:30 AM - BACKUP_TYPE: differential
 2009-11-09 12:30 AM - BACKUP_FILE: D:\NotBackedUp\Backups\Backup-differential-2009-11-09-12-30-AM.bkf
 2009-11-09 12:31 AM - Successfully completed backup.
 ```
+
+{{< /log-excerpt >}}
 
 I use similar token parsing of the output from the **[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)** and [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx) system commands to generate the name of the backup file (e.g. {{< sample-output "Backup-differential-2009-11-09-12-30-AM.bkf" >}}).
 

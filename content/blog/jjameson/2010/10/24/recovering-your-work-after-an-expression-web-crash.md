@@ -31,6 +31,8 @@ As I noted in a [previous post](/blog/jjameson/2009/09/12/expression-web-my-msdn
 
 A few hours ago I was authoring a new blog post (not this one -- a different  one that hopefully more people will find valuable than this one) and after about  45 minutes of typing, revising, and typing some more, Expression Web suddenly crashed:
 
+{{< log-excerpt >}}
+
 ```
 Problem signature:
   Problem Event Name:	BEX
@@ -50,6 +52,8 @@ Problem signature:
   Additional Information 3:	0a9e
   Additional Information 4:	0a9e372d3b4ad19135b953a78882e789
 ```
+
+{{< /log-excerpt >}}
 
 At first, I was horrified. Almost an hour's worth of work down the drain!
 

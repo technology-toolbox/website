@@ -20,6 +20,8 @@ For a little over a month, Windows Update was failing on one of the servers in t
 
 Here's the first event I found regarding this error:
 
+{{< log-excerpt >}}
+
 <samp>            Log Name: Application<br>
 Source: MsiInstaller<br>
 Date: 10/27/2009 3:03:49 AM<br>
@@ -34,7 +36,11 @@ Product: Microsoft SQL Server 2005 Reporting Services (64-bit) -- Error 29528. T
 setup has encountered an unexpected error while Setting reporting service and share
 point exclusion path. The error is: Fatal error during installation.</samp>
 
+{{< /log-excerpt >}}
+
 This was quickly followed by another error in the event log:
+
+{{< log-excerpt >}}
 
 <samp>            Log Name: Application<br>
 Source: MsiInstaller<br>
@@ -51,7 +57,11 @@ for SQL Server Reporting Services 2005 (64-bit) ENU (KB970892)' could not be ins
 Error code 1603. Additional information is available in the log file C:\Program
 Files\Microsoft SQL Server\90\Setup Bootstrap\LOG\Hotfix\RS9_Hotfix_KB970892_sqlrun_rs.msp.log.</samp>
 
+{{< /log-excerpt >}}
+
 Shortly thereafter, I started seeing the following error once every minute:
+
+{{< log-excerpt >}}
 
 <samp>            Log Name: Application<br>
 Source: Report Server (MSSQLSERVER)<br>
@@ -65,6 +75,8 @@ Computer: jubilee.corp.technologytoolbox.com<br>
 Description:<br>
 Report Server (MSSQLSERVER) cannot connect to the report server database.</samp>
 
+{{< /log-excerpt >}}
+
 Since I have Windows Update configured to automatically download and install updates         every morning, the patch attempted to install each day -- but failed each and every         time.
 
 I have to admit that I've spent a fair amount of time troubleshooting this error         over the past month, but since it wasn't a blocking issue -- just a particularly         irritating annoyance -- I kept putting it off. [Honestly, I rarely look at the SCOM         reports and instead rely mostly on email notifications and the Operations Manager         Console.]
@@ -72,6 +84,8 @@ I have to admit that I've spent a fair amount of time troubleshooting this error
 Fortunately, I finally managed to determine the root cause tonight and resolve the         issue.
 
 After downloading and installing the standalone patch installation, I discovered         the following in the installation log:
+
+{{< log-excerpt >}}
 
 ```
 MSI (s) (F0:54) [21:09:49:565]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIAC31.tmp, Entrypoint: Do_RSSetSharePointExclusionPath
@@ -89,6 +103,8 @@ Compiler Timestamp: Mon Nov 17 17:05:40 2008
 Function Name: Do_RSSetSharePointExclusionPath
 Source Line Number: 914
 ```
+
+{{< /log-excerpt >}}
 
 As noted in [KB 917826](http://support.microsoft.com/kb/917826), there         appears to be a known issue when Reporting Services is configured to run using a         domain account. For JUBILEE, the **ReportServer** application pool         was configured to run as **TECHTOOLBOX\svc-mom-das** (the SCOM data         access service account). After changing the app pool to run as **NetworkService** instead, I ran the standalone install of KB 970892 and it completed successfully.
 

@@ -330,6 +330,8 @@ In the following configuration, note the new `logFileTraceListener` and the corr
 
 This produces a file named AdminConsole.log with the following content:
 
+{{< log-excerpt >}}
+
 ```
 defaultTraceSource Information: 0 : AdminConsole.exe
     DateTime=2009-06-18T16:57:54.4488429Z
@@ -342,7 +344,11 @@ defaultTraceSource Information: 0 : Program complete.
     DateTime=2009-06-18T16:57:54.4828429Z
 ```
 
+{{< /log-excerpt >}}
+
 Unfortunately the TextWriterTraceListener class appends the timestamp onto a  separate line, but you can easily substitute a custom listener that formats results  like the following, if necessary:
+
+{{< log-excerpt >}}
 
 ```
 2009-06-18T17:17:43 Information: AdminConsole.exe
@@ -351,6 +357,8 @@ Parameter name: d).
 2009-06-18T17:17:43 Information: Successfully completed processing.
 2009-06-18T17:17:43 Information: Program complete.
 ```
+
+{{< /log-excerpt >}}
 
 When I wrote the `Logger` class a few years ago, I also wrote a `SimpleTraceListener` class to do just this:
 

@@ -27,6 +27,8 @@ Thus when I added the Password Minder projects to my "Toolbox" solution, I woke 
 
 Clicking the build log referenced in the e-mail message, I quickly discovered the         following:
 
+{{< log-excerpt >}}
+
 <samp>            Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5, Version=3.5.0.0,
 Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a". Task "VCBuild"<br>
 Locating vcbuild.exe: not found at "c:\Program Files (x86)\Microsoft Visual Studio
@@ -38,6 +40,8 @@ C:\Users\svc-build\AppData\Local\Temp\Toolbox\Automated Build - Main\Sources\Sou
 is not installed, either 1) install the Microsoft Windows SDK for Windows Server
 2008 and .NET Framework 3.5, or 2) install Microsoft Visual Studio 2008.</samp>
 
+{{< /log-excerpt >}}
+
 That certainly is one of the best error messages I've seen in a long time. It told         me exactly what I needed to do to fix the problem. Well, almost...
 
 Note that DAZZLER (a VM in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) that is my dedicated build server) does not have the         full installation of Visual Studio 2008. Rather it only has the Team Foundation         Build install. In keeping with best practices, I try to keep the build server as         "clean" as possible. That means no Visual Studio, no SharePoint, etc.
@@ -46,6 +50,8 @@ Following option #1 from the log file, I proceeded to install the Microsoft Wind
 
 Consequently, I was greeted with the following error on the next build attempt:
 
+{{< log-excerpt >}}
+
 <samp>            c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets : warning MSB3428:
 Could not load the Visual C++ component "VCProjectEngine.dll". To fix this, 1) install
 the Microsoft Windows SDK for Windows Server 2008 and .NET Framework 3.5, 2) install
@@ -53,6 +59,8 @@ Microsoft Visual Studio 2008 or 3) add the location of the component to the syst
 path if it is installed elsewhere. System error code: 126.<br>
 c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets : warning MSB3425:
 Could not resolve VC project reference "..\NativeHelpers\NativeHelpers.vcproj".</samp>
+
+{{< /log-excerpt >}}
 
 That's when I discovered the following from the release notes for the SDK:
 

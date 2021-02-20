@@ -19,6 +19,8 @@ tags: ["WSUS"]
 
 Last week I discovered that many of my servers were no longer updating successfully         from my intranet Windows Server Update Services (WSUS) server. Looking in WindowsUpdate.log         file, I noticed errors similar to the following:
 
+{{< log-excerpt >}}
+
 ```
 2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: SendRequestToServerForFileInformation failed with 0x80190194
 2008-03-22 18:53:24:377 808 ba0 Misc WARNING: WinHttp: ShouldFileBeDownloaded failed with 0x80190194
@@ -29,6 +31,8 @@ Last week I discovered that many of my servers were no longer updating successfu
 2008-03-22 18:53:24:377 808 ba0 Agent * WARNING: Skipping scan, self-update check returned 0x80244019
 2008-03-22 18:53:25:002 808 ba0 Agent * WARNING: Exit code = 0x80244019
 ```
+
+{{< /log-excerpt >}}
 
 Upon troubleshooting the problem, I discovered that the **SelfUpdate**         virtual directory was not configured on my WSUS server (i.e. the server named COLOSSUS).         To resolve the issue, I used IIS Manager to create the **SelfUpdate**         virtual directory (using the local path **C:\Program Files\Update Services\Selfupdate**).         I then used {{< kbd "wuauclt /detectnow" >}} to force an update on one of my servers         to confirm that this resolved the issue.
 

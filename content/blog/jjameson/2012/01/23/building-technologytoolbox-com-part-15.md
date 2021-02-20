@@ -141,8 +141,12 @@ typically occurred dozens of times per day. The inner exception reported by
 ELMAH turns out to be a little misleading. When you look at the next exception
 up the stack, the underlying problem is revealed:
 
-    Subtext.Web.Controls.Captcha.CaptchaExpiredException: Captcha image expired, 
-    probably due to recompile making the key out of synch.
+{{< log-excerpt >}}
+
+Subtext.Web.Controls.Captcha.CaptchaExpiredException: Captcha image expired,
+probably due to recompile making the key out of synch.
+
+{{< /log-excerpt >}}
 
 The CAPTCHA control included in Subtext wreaks havoc on your site if the
 Googlebot discovers a CAPTCHA image, adds it to its index, and subsequently

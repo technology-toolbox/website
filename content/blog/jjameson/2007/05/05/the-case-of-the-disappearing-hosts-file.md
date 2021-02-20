@@ -40,6 +40,8 @@ For those of you that may not have attempted to read the status messages as they
 
 After recreating the hosts file, I was able to successfully complete the Configuration  Wizard (because the security settings on the hosts files could now be set in step  4). However, a short time later, I noticed the following in the event log:
 
+{{< log-excerpt >}}
+
 ```
 Application Server Administration job failed for service instance
  Microsoft.Office.Server.Search.Administration.SearchServiceInstance (...).
@@ -61,11 +63,15 @@ File name: 'D:\WINNT\system32\drivers\etc\HOSTS'
    at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
 ```
 
+{{< /log-excerpt >}}
+
 Argh! The hosts file has disappeared again!
 
 I restored the hosts file again and set the permissions manually for the WSS\_ADMIN\_WPG  group. However I noticed that it quickly disappeared again.
 
 I then restored the hosts file (yet) again, but did not give the WSS\_ADMIN\_WPG  group permission to delete the file. This resulted in the following event log entry:
+
+{{< log-excerpt >}}
 
 ```
 Application Server Administration job failed for service instance
@@ -83,6 +89,8 @@ System.UnauthorizedAccessException: Access to the path 'D:\WINNT\system32\driver
    at Microsoft.Office.Server.Search.Administration.SearchServiceInstance.Synchronize()
    at Microsoft.Office.Server.Administration.ApplicationServerJob.ProvisionLocalSharedServiceInstances(...)
 ```
+
+{{< /log-excerpt >}}
 
 Aha! So apparently the guilty party for deleting my hosts file isn't some malicious  system administrator or group policy setting, but rather it is the Windows SharePoint  Services Timer itself!
 

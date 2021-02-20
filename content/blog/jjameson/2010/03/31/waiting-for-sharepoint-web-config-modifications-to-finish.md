@@ -246,6 +246,8 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 
 When applying Web.config changes through a feature, messages similar to the following  are logged:
 
+{{< log-excerpt >}}
+
 ```
 Verbose: Applying Web.config modifications to Web application (SharePoint - fabrikam-test80)... 
 Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently idle. Waiting for the job to finish... 
@@ -258,6 +260,8 @@ Verbose: The timer job (Windows SharePoint Services Web.Config Update) is not de
 Information: Waited 15 seconds for the one-time job (Windows SharePoint Services Web.Config Update) to finish. 
 Information: Successfully applied Web.config modifications to Web application (SharePoint - fabrikam-test80).
 ```
+
+{{< /log-excerpt >}}
 
 In this particular instance, it took 15 seconds for the Web.config changes to  be applied and the corresponding one-time SharePoint timer job to be cleaned up.  However, this trace was captured from a VM in my home lab. I suspect PROD will actually  be significantly faster.
 

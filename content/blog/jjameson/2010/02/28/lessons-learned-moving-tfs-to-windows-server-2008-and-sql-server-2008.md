@@ -87,12 +87,10 @@ Keywords: Classic\
 User: N/A\
 Computer: cyclops.corp.technologytoolbox.com\
 Description:\
-TF53010: The following error has occurred in a Team Foundation component or 
-extension:\
+TF53010: The following error has occurred in a Team Foundation component or extension:\
 Machine: CYCLOPS\
 Application Domain: /LM/W3SVC/453528946/ROOT/Warehouse-2-129116740741730815\
-Assembly: Microsoft.TeamFoundation.Warehouse, Version=9.0.0.0, Culture=neutral, 
-PublicKeyToken=b03f5f7f11d50a3a; v2.0.50727\
+Assembly: Microsoft.TeamFoundation.Warehouse, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a; v2.0.50727\
 Process Details:\
 Process Name: w3wp\
 Process Id: 2660\
@@ -103,40 +101,21 @@ Detailed Message: Create OLAP failed\
 Exception Message: Internal error: The operation terminated unsuccessfully.\
 Internal error: The operation terminated unsuccessfully.\
 ...\
-OLE DB error: OLE DB or ODBC error: Login failed for user 'TECHTOOLBOX\svc-sql-as'.; 
-42000.\
-Errors in the high-level relational engine. A connection could not be made to 
-the data source with the DataSourceID of 'TfsWarehouseDataSource', Name of 'TfsWarehouseDataSource'.\
-Errors in the OLAP storage engine: An error occurred while the dimension, with 
-the ID of 'File', Name of 'File' was being processed.\
-Errors in the OLAP storage engine: An error occurred while the 'File Extension' 
-attribute of the 'File' dimension from the 'TfsWarehouse' database was being 
-processed.\
+OLE DB error: OLE DB or ODBC error: Login failed for user 'TECHTOOLBOX\svc-sql-as'.; 42000.\
+Errors in the high-level relational engine. A connection could not be made to the data source with the DataSourceID of 'TfsWarehouseDataSource', Name of 'TfsWarehouseDataSource'.\
+Errors in the OLAP storage engine: An error occurred while the dimension, with the ID of 'File', Name of 'File' was being processed.\
+Errors in the OLAP storage engine: An error occurred while the 'File Extension' attribute of the 'File' dimension from the 'TfsWarehouse' database was being processed.\
 ...\
 (type OperationException)\
 \
-Exception Stack Trace: at Microsoft.AnalysisServices.AnalysisServicesClient.SendExecuteAndReadResponse(ImpactDetailCollection 
-impacts, Boolean expectEmptyResults, Boolean throwIfError)\
-at Microsoft.AnalysisServices.AnalysisServicesClient.Process(IMajorObject obj, 
-ProcessType type, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation 
-writebackOption, ImpactDetailCollection impact)\
-at Microsoft.AnalysisServices.Server.Process(IMajorObject obj, ProcessType processType, 
-Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, 
-XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean 
-analyzeImpactOnly)\
-at Microsoft.AnalysisServices.Server.SendProcess(IMajorObject obj, ProcessType 
-processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation 
-writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, 
-Boolean analyzeImpactOnly)\
-at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType, 
-ErrorConfiguration errorConfiguration, XmlaWarningCollection warnings)\
+Exception Stack Trace: at Microsoft.AnalysisServices.AnalysisServicesClient.SendExecuteAndReadResponse(ImpactDetailCollection impacts, Boolean expectEmptyResults, Boolean throwIfError)\
+at Microsoft.AnalysisServices.AnalysisServicesClient.Process(IMajorObject obj, ProcessType type, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, ImpactDetailCollection impact)\
+at Microsoft.AnalysisServices.Server.Process(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)\
+at Microsoft.AnalysisServices.Server.SendProcess(IMajorObject obj, ProcessType processType, Binding source, ErrorConfiguration errorConfig, WriteBackTableCreation writebackOption, XmlaWarningCollection warnings, ImpactDetailCollection impactResult, Boolean analyzeImpactOnly)\
+at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType, ErrorConfiguration errorConfiguration, XmlaWarningCollection warnings)\
 at Microsoft.AnalysisServices.ProcessableMajorObject.Process(ProcessType processType)\
-at Microsoft.TeamFoundation.Warehouse.OlapCreator.ProcessOlapNoTransaction(Boolean 
-schemaUpdated, UpdateStatusStore updateStatus, Server server, SqlTransaction 
-transaction)\
-at Microsoft.TeamFoundation.Warehouse.OlapCreator.CreateOlap(WarehouseConfig 
-whConf, String accessUser, String[] dataReaderAccounts, Boolean dropDB, Boolean 
-processCube)
+at Microsoft.TeamFoundation.Warehouse.OlapCreator.ProcessOlapNoTransaction(Boolean schemaUpdated, UpdateStatusStore updateStatus, Server server, SqlTransaction transaction)\
+at Microsoft.TeamFoundation.Warehouse.OlapCreator.CreateOlap(WarehouseConfig whConf, String accessUser, String[] dataReaderAccounts, Boolean dropDB, Boolean processCube)
 
 {{< /log-excerpt >}}
 
@@ -153,8 +132,7 @@ Keywords: Classic\
 User: N/A\
 Computer: beast.corp.technologytoolbox.com\
 Description:\
-Error during OLE DB operation. Error Code = 0xC1060000, External Code = 0x80040E4D: 
-Login failed for user 'TECHTOOLBOX\svc-sql-as'. 42000.
+Error during OLE DB operation. Error Code = 0xC1060000, External Code = 0x80040E4D: Login failed for user 'TECHTOOLBOX\svc-sql-as'. 42000.
 
 {{< /log-excerpt >}}
 
@@ -177,9 +155,7 @@ Keywords: Classic,Audit Failure\
 User: TECHTOOLBOX\svc-sql-as\
 Computer: beast.corp.technologytoolbox.com\
 Description:\
-Login failed for user 'TECHTOOLBOX\svc-sql-as'. Reason: Token-based server access 
-validation failed with an infrastructure error. Check for previous errors. [CLIENT: 
-192.168.0.101]
+Login failed for user 'TECHTOOLBOX\svc-sql-as'. Reason: Token-based server access validation failed with an infrastructure error. Check for previous errors. [CLIENT: 192.168.0.101]
 
 {{< /log-excerpt >}}
 

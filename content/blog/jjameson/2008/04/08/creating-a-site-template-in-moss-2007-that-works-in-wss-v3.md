@@ -36,6 +36,8 @@ To investigate the issue, I "spun up" a new VM based on my SysPrep'ed image of  
 
 Digging into the SharePoint logs I noticed the following:
 
+{{< log-excerpt >}}
+
 ```
 04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".	 
 04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
@@ -45,6 +47,8 @@ Digging into the SharePoint logs I noticed the following:
 04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test", error The template you have chosen is invalid or cannot be found. 0x81071e44
 04/08/2008 ... The template you have chosen is invalid or cannot be found.
 ```
+
+{{< /log-excerpt >}}
 
 At this point, the problem seemed fairly obvious: the error occurred while trying  to activate site-scoped features on the new site. Well, duh, that makes sense. I  must have had one or more MOSS 2007-specific features enabled on the site collection  that I used when originally creating the site template. Since these features are  not available in WSS v3, an error occurs.
 

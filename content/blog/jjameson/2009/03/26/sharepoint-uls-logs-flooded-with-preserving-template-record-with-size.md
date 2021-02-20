@@ -26,6 +26,8 @@ However, there are still some scenarios where the ULS logs can grow very quickly
 
 Such is the case with my current MOSS 2007 development VM. Most every morning, I         am greeted with the low disk space notification due to hundreds of thousands of         "{{< sample-output "Preserving template record with size..." >}}" messages being generated         over the course of the previous 24 hours, as shown in the following log excerpt:
 
+{{< log-excerpt >}}
+
 ```
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 3301, use count 7, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 2225, use count 59, key ...
@@ -33,6 +35,8 @@ Such is the case with my current MOSS 2007 development VM. Most every morning, I
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5731, use count 1, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5732, use count 1, key ...
 ```
+
+{{< /log-excerpt >}}
 
 The good news is that the "Preserving template record with size..." issue only seems         to occur when system resources are fairly tight; for example, on my VM with 2GB         of RAM, running Visual Studio 2008, MOSS 2007, and SQL Server 2008 (even though         I constrain SQL to 512MB of memory).
 
