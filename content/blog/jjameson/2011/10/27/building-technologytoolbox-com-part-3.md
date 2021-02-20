@@ -118,13 +118,13 @@ Here is the current content of the default master page for the static HTML proto
 Figure 1 shows the corresponding Design view of the master page in Expression  Web (after adding the CSS rules to define the site fonts, colors, etc.).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Default.master.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-600x142.png"
 alt="Caelum prototype - Default.master"
 height="142"
 width="600"
 title="Figure 1: Caelum prototype - Default.master" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Default.master.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-1021x241.png)
 
 ### Default.aspx
 
@@ -324,13 +324,13 @@ The following screenshot shows the home page rendered in a browser. [This screen
 Posts** section. Hence I didn't bother capturing a different screenshot from  the HTML prototype.]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
 title="Figure 2: Technology Toolbox home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 ### BlogPost.master
 
@@ -712,13 +712,13 @@ Here is a sample blog page from the Caelum prototype (referencing BlogPost.maste
 Figure 3 shows roughly what the corresponding page looks like when rendered in  a browser. [This screenshot is actually from the live site, but the prototype page  looks very similar and thus I didn't bother creating a separate screenshot for it.]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post"
 height="600"
 width="398"
 title="Figure 3: Sample blog post" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 
 ### Advantages of using a static HTML prototype
 

@@ -28,13 +28,13 @@ In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-s
 For those of you that haven't yet read my previous post, the goal was to take a         SharePoint list like the one shown below...
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
 alt="Specials list"
 height="474"
 width="600"
 title="Figure 1: Specials list" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
 ...and subsequently render the list items as an HTML ordered list:
 
@@ -79,13 +79,13 @@ After replacing the static HTML for the weekly specials section with an **XsltLi
 However, as I mentioned at the end of my previous post, there's a problem. What         happens if the number of items in the list is greater than the expected number?         The following screenshot shows the updated home page content after adding a fourth         item to the **Specials** list.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Too-Many-Specials.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png"
 alt="Too many items in the weekly specials section"
 height="411"
 width="600"
 title="Figure 2: Too many items in the weekly specials section" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Too-Many-Specials.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-1006x689.png)
 
 While we *could* modify the XSLT to only render the first three items from         the SharePoint list, this really isn't the best implementation choice. A better         way of limiting the number of list items rendered in the weekly specials section         is to use a custom view on the underlying list (instead of rendering items based         on the default **All Items** view).
 
@@ -111,13 +111,13 @@ To achieve the two goals, start by creating a new view on the **Specials**      
 Once we change the **XsltListViewWebPart** on the home page to use         the **Most Recent Specials** view, the weekly specials section renders         as expected regardless of the number of items in the **Specials** list.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List-XsltListViewWebPart.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
 alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
 height="324"
 width="600"
 title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List-XsltListViewWebPart.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-1006x544.png)
 
 Now that we have the **XsltListViewWebPart** rendering the desired         HTML, we can turn our attention to automatically creating the **Specials**         list (as well as the custom view), populating the list with default items, and adding         an instance of the **XsltListViewWebPart** to the home page.
 

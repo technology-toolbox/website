@@ -32,7 +32,7 @@ title="Figure 1 - Taskbar shortcuts (Windows Vista)" >}}
 I have long since upgraded from Windows Vista to Windows 7, so now I use the Windows         Explorer Jump List to quickly access my most frequently used folders.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_My%20Windows%20Explorer%20Jump%20List%20-%20Win7.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-Win7-360x283.png"
 alt="My Windows Explorer Jump List (Windows 7)"
 height="283"
 width="360"
@@ -42,7 +42,7 @@ Note that Windows Server 2008 R2 also includes the Jump Lists feature. Consequen
 Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home lab).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_My%20Windows%20Explorer%20Jump%20List%20-%20WS2008R2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-WS2008R2-333x298.png"
 alt="My Windows Explorer Jump List (Windows Server 2008 R2)"
 height="298"
 width="333"

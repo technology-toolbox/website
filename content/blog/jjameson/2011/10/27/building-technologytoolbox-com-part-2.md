@@ -44,13 +44,13 @@ The first task is to configure the permissions for the TFS project and the secon
 At this point, I switched from my admin account to my regular account, created  a Visual Studio solution and a couple of projects (i.e. **CoreServices** and **CoreServices.DeveloperTests**), and subsequently checked  these in to TFS, as illustrated in the following screenshot.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Caelum%20-%20Initial%20source%20tree.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-600x420.png"
 alt="Caelum - Initial source tree and Visual Studio solution"
 height="420"
 width="600"
 title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Caelum%20-%20Initial%20source%20tree.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-789x552.png)
 
 > **Note**
 >

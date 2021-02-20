@@ -100,7 +100,7 @@ If you've seen my post on
 is to build out a "shell" that looks like the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%201.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png"
 alt="Visual Studio solution before adding SharePoint features"
 height="178"
 width="355"
@@ -154,13 +154,13 @@ to deploy the solution -- into the **DeploymentFiles** folder.
 After that's all done, the Visual Studio solution looks like the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%202.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
 height="600"
 width="183"
 title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%202.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 
 ### Files for Creating SharePoint Web Solution Package (WSP)
 
@@ -841,11 +841,11 @@ arrow" to repeat a command, selecting one after using F7 won't re-add it to
 the command history.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DR.DADA%20-%203.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png"
 alt="Command history"
 height="205"
 width="600"
 title="Figure 3: Command history" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DR.DADA%20-%203.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
 

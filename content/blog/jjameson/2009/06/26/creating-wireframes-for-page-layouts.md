@@ -22,13 +22,13 @@ When helping customers migrate their Internet sites to Microsoft Office SharePoi
 I start by taking a series of screenshots of the existing Web site using [Screengrab!](/blog/jjameson/2008/10/20/fessing-up-about-firefox) (which makes it very easy to capture entire Web pages). For         example, here is a screenshot of a "Generic" page on the [Agilent Technologies - LSCA](http://www.chem.agilent.com) site that I captured a couple of years ago.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Glycomics%20Solution).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-(Glycomics-Solution)-600x477.jpg"
 alt="\"Generic\" page"
 height="477"
 width="600"
 title="Figure 1: \"Generic\" page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Glycomics%20Solution%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-%28Glycomics-Solution%29-939x747.jpg)
 
 I then paste the screenshot into Visio.
 
@@ -41,35 +41,35 @@ To highlight these various fields, I create rectangles with corresponding text a
 We now have a "wireframe" that shows the various portions of the page with just         enough visibility of the underlying content to understand what each portion refers         to.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Generic%20(Page%20Layout).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-(Page-Layout)-600x489.jpg"
 alt="\"Generic\" page (Page Layout)"
 height="489"
 width="600"
 title="Figure 2: \"Generic\" page (Page Layout)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Generic%20%28Page%20Layout%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-%28Page-Layout%29-770x627.jpg)
 
 Here is another example, based on a press release.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(857).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-(857)-478x600.jpg"
 alt="Sample Press Release"
 height="600"
 width="478"
 title="Figure 3: Sample Press Release" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28857%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-%28857%29-939x1178.jpg)
 
 Figure 4 shows the corresponding page layout.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Press%20Release%20(Page%20Layout).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-(Page-Layout)-461x600.jpg"
 alt="Press Release (Page Layout)"
 height="600"
 width="461"
 title="Figure 4: Press Release (Page Layout)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Press%20Release%20%28Page%20Layout%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-%28Page-Layout%29-770x1002.jpg)
 
 Note the importance of choosing good sample pages when mocking up the wireframes         for page layouts. I chose the example press release above based on the fact that         it had "additional contact" information. In other words, all press releases have         primary contact information (which I chose to map to the out-of-the-box **Contact
 Name**, **Contact Phone**, and **Contact E-mail Address** fields), but only some press releases have additional contacts -- which         may consist of one more more individuals. Rather than attempting to create separate         fields for each individual's name, phone number, and e-mail address, we chose to         simply provide a single field for greater flexibility.
@@ -77,24 +77,24 @@ Name**, **Contact Phone**, and **Contact E-mail Address** fields), but only some
 Some pages may be comprised of both fields and Web Parts. For example, consider         the following product detail page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(6890N%20GC).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-(6890N-GC)-545x600.jpg"
 alt="Sample product detail page"
 height="600"
 width="545"
 title="Figure 5: Sample product detail page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%286890N%20GC%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-%286890N-GC%29-940x1034.jpg)
 
 In this scenario, the "Buy Zone" and "Announcements" features are both implemented         as individual Web Parts (due to the dynamic nature of this content). Figure 6 shows         the corresponding page layout, highlighting the Web Parts in a different color.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_General%20Site%20-%20Product%20Detail%20(Page%20Layout).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-(Page-Layout)-533x600.jpg"
 alt="Product Detail (Page Layout)"
 height="600"
 width="533"
 title="Figure 7: Product Detail (Page Layout)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_General%20Site%20-%20Product%20Detail%20%28Page%20Layout%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-%28Page-Layout%29-770x866.jpg)
 
 Wireframes like these are valuable when you are trying to define the various content         types and page layouts, as well as when it comes time to document your various feature         specs. So the next time you start a SharePoint project -- or any Web development         project for that matter -- I recommend creating a **Screenshots** library         right from the start and adding artifacts like these. I also keep a copy of the         Visio file (typically named Models - Page Layouts.vsd) so I can quickly make changes         as the content types and page layouts evolve over time.
 

@@ -164,13 +164,13 @@ If you happen to encounter an unexpected error on the Technology Toolbox
 site, then you'll see something similar to the screenshot below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Error-Generic.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
 alt="Custom error page (Generic.aspx)"
 height="295"
 width="600"
 title="Figure 1: Custom error page (Generic.aspx)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Error-Generic.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-1006x494.png)
 
 You've probably created a similar error page before and "wired it up" in
 the Web.config file using something like the following:
@@ -391,13 +391,13 @@ If you were to click the link in my email at this point, then you'd see the
 the out-of-the-box IIS "404" error page (404.htm) shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_IIS-404.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png"
 alt="IIS - default 404 page (404.htm)"
 height="110"
 width="600"
 title="Figure 2: IIS - default 404 page (404.htm)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_IIS-404.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-1006x185.png)
 
 You might have expected the custom error page shown in Figure 1 to appear
 (based on the `<customErrors>`
@@ -418,13 +418,13 @@ In either case, it would be better to show users a custom 404 error page,
 like the one shown below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Error-404.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
 alt="HTTP 404 error page (404.aspx)"
 height="295"
 width="600"
 title="Figure 3: HTTP 404 error page (404.aspx)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Error-404.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-1006x494.png)
 
 To accomplish this, we simply need to create another ASP.NET page (e.g. 404.aspx)
 and configure it to be used in the two scenarios described earlier.

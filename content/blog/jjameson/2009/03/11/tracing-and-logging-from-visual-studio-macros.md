@@ -26,13 +26,13 @@ Before sharing some of my most frequently used macros, however, I wanted to firs
 Take a look at the following **Output** window from Visual Studio.  Notice how there is an item in the **Show output from** dropdown list  titled **Macros** (a.k.a. "the macro output pane").
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Macro%20Output%20Pane.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Macro-Output-Pane-600x239.png"
 alt="Macro output pane"
 height="239"
 width="600"
 title="Figure 1: Macro output pane" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Macro%20Output%20Pane.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Macro-Output-Pane-686x273.png)
 
 Chances are that when you look at your Visual Studio environment, you won't see  this item. So, why does it appear in my environment?
 

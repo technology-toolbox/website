@@ -55,13 +55,13 @@ However, since I'm apparently in a ranting mood this morning, I thought I
 should share something else. What is wrong with the following screenshot?
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Git%20-%20Pending%20changes%20-%20yes%20or%20no.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-600x350.png"
 alt="Git - pending changes - yes or no?"
 height="350"
 width="600"
 title="Figure 1: Git - pending changes - yes or no?" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Git%20-%20Pending%20changes%20-%20yes%20or%20no.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-1113x650.png)
 
 So, which is it?
 

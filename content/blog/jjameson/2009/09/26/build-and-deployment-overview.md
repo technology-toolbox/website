@@ -21,13 +21,13 @@ This post provides a high-level walkthrough of the build and deployment process 
 The following figure illustrates the initial build and deployment of the solution.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_1%20-%20Initial%20build%20and%20deployment.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/1-Initial-build-and-deployment-600x259.png"
 alt="Initial build and deployment of the solution"
 height="259"
 width="600"
 title="Figure 1: Initial build and deployment of the solution" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_1%20-%20Initial%20build%20and%20deployment.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/1-Initial-build-and-deployment-1210x523.png)
 
 Note the following key steps (corresponding to the various arrows in Figure 1):
 
@@ -59,26 +59,26 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
 Figure 2 shows a subsequent build of the solution.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_2%20-%20Subsequent%20build%20and%20deployment.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-600x271.png"
 alt="Subsequent build and deployment (with draft of installation guide)"
 height="271"
 width="600"
 title="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_2%20-%20Subsequent%20build%20and%20deployment.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-829x375.png)
 
 The steps performed in the initial build (illustrated in Figure 1) are repeated         in this subsequent build. The key difference illustrated in Figure 2 is the inclusion         of the installation guide (which documents the manual steps performed by the Development         team during the initial deployment). The new build (in this example, **1.0.2.0**)         is then deployed to the DEV environment by following the installation guide.
 
 While this deployment process is functional -- in that a new build of the solution         is successfully deployed to the DEV environment -- it requires too much manual effort         to sustain the process. Figure 3 shows yet another subsequent build in which the         manual installation to DEV has been replaced by an automated process.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_3%20-%20Automated%20build%20and%20deployment.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment (with install scripts and updated installation guide)"
 height="343"
 width="600"
 title="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_3%20-%20Automated%20build%20and%20deployment.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
 Note that in Figure 3, the automated installation process actually installs version         1.0.3.0 but installs it from the Latest folder on the Release Server. At the point         in time represented in Figure 3, the contents of the **Latest** and         **1.0.3.0** folders are identical. Using this mirrored structure greatly         simplifies the automated installs of the latest build into the DEV environment.         Also note that the build illustrated in Figure 3 includes install scripts, in addition         to the build output (i.e. compiled code) and the installation guide (which has been         updated to specify the install scripts to be used for installing the solution).         These install scripts are a key piece of the automated installation process -- and         subsequent "manual" installs into other environments (as described below).
 
@@ -91,13 +91,13 @@ Note that the process illustrated in Figure 3 does not require any manual interv
 As this cycle repeats (as more features are implemented in the solution), the Test         team -- in conjunction with the Development team -- identifies a specific build         of the solution to promote to the TEST environment. This is illustrated in Figure         4.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="Installing the Beta 1 version to TEST"
 height="343"
 width="600"
 title="Figure 4: Installing the Beta 1 version to TEST" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_4%20-%20Installing%20the%20Beta%201%20version%20to%20TEST.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 
 Note the following key concepts illustrated in the previous figure:
 
@@ -118,35 +118,35 @@ Note the following key concepts illustrated in the previous figure:
 Just as the daily build process (illustrated in Figure 3) is repeated throughout         the development process, the promotion of selected builds to TEST is also periodically         repeated, albeit much less frequently. This is illustrated in Figure 5 with the         first "release candidate" of the solution.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_5%20-%20Installing%20the%20RC1%20version%20to%20TEST.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-600x351.png"
 alt="Installing the RC1 version to TEST"
 height="351"
 width="600"
 title="Figure 5: Installing the RC1 version to TEST" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_5%20-%20Installing%20the%20RC1%20version%20to%20TEST.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-1382x809.png)
 
 Note that if issues are discovered with the RC1 build, it may be necessary to promote         yet another build to the TEST environment, as illustrated in Figure 6.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_6%20-%20Installing%20the%20RC2%20version%20to%20TEST.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-600x351.png"
 alt="Installing the RC2 version to TEST"
 height="351"
 width="600"
 title="Figure 6: Installing the RC2 version to TEST" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_6%20-%20Installing%20the%20RC2%20version%20to%20TEST.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-1381x808.png)
 
 Assume that the second release candidate (version **1.0.379.0** in         Figure 6) passes all of the test cases. The final step is to install the solution         into the production environment, as illustrated in Figure 7.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_7%20-%20Installing%20the%20V1.0%20release%20to%20PROD.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-600x350.png"
 alt="Installing the V1.0 release to PROD"
 height="350"
 width="600"
 title="Figure 7: Installing the V1.0 release to PROD" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_7%20-%20Installing%20the%20V1.0%20release%20to%20PROD.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-1382x807.png)
 
 Note the following key concepts illustrated in the previous figure:
 

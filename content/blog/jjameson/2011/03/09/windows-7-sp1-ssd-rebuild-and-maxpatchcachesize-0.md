@@ -31,13 +31,13 @@ I've mentioned in a previous post about [using MaxPatchCacheSize to save signfic
 So when it came time last night to rebuild my desktop with a shiny new SSD, I immediately         set MaxPatchCacheSize to 0 after installing Windows 7. As you can see from the following         screenshot, this doesn't eliminate all of the space consumed by the \Windows\Installer         folder. On my desktop, the Installer folder still consumes about 2 GB of space (which         certainly seems like a waste, in my opinion, but oh well). However, at least I can         take some satisfaction in knowing that it could be much worse (i.e. by not constraining         the patch cache).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage%20-%20WOLVERINE%20-%20Baseline.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-600x507.png"
 alt="Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)"
 height="507"
 width="600"
 title="Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage%20-%20WOLVERINE%20-%20Baseline.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-927x784.png)
 
 In case anyone is interested in how I recommend building out a workstation, here         are the details.
 

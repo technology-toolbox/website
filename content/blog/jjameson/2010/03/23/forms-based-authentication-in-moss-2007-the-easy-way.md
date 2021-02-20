@@ -95,7 +95,7 @@ While we would obviously never want to deploy Debug builds to the Production  en
 > **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically be set using system environment variables as illustrated in the following figure. That way, the variables would only need to be set once per environment.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Environment%20Variables.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png"
 alt="Setting environment variables"
 height="436"
 width="394"

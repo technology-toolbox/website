@@ -28,13 +28,13 @@ In this post, I'll show you how to take a small part of the home page (specifica
 In case you aren't yet familiar with the Tugboat sample site, the following screenshot         shows the site home page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
 When I put on my "SharePoint Architect" hat and look at the content in the **This
 Week's Specials** section, I see a SharePoint list with columns like         **Title** (e.g. "Fisherman's Brew"), **Price** (e.g. "$9.98         / lb."), and **Rollup Image** (e.g. "/PublishingImages/boat.jpg").
@@ -97,13 +97,13 @@ Here's a breakdown of the custom SharePoint list:
 Assuming you are proficient in SharePoint, within a matter of a few minutes you         should be able to create the list and populate the sample data shown in the following         screenshot.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Specials-List.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
 alt="Specials list"
 height="474"
 width="600"
 title="Figure 2: Specials list" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Specials-List.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
 The next step is to render the items in the list using the semantic markup previously         specified using static HTML. In other words, instead of rendering the SharePoint         list items in a table, we need to render them using an ordered list (along with         the corresponding CSS class names):
 

@@ -37,13 +37,13 @@ To summarize, here's the current storage configuration for my desktop (WOLVERINE
 Here's a pivot chart that I put together that shows the performance characteristics         of each of these drives.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Benchmarks%20-%20WOLVERINE.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-600x404.png"
 alt="Disk performance on WOLVERINE"
 height="404"
 width="600"
 title="Figure 1: Disk performance on WOLVERINE" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20WOLVERINE.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-823x554.png)
 
 The chart above clearly illustrates why performance is such as relative term when         talking about hardware. While the speed of the Raptor drive was quite impressive         back when I bought it, it's almost laughable now when compared to what you can spend         approximately $200 on these days (in terms of storage).
 
@@ -54,13 +54,13 @@ Even though the SSD is signficantly faster than my RAID 0 configuration with res
 To understand why I wouldn't recommend an SSD for most scenarios, take a look at         the following chart which shows the performance of the SSD on my desktop (WOLVERINE)         compared with other hard drives running on various servers.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Benchmarks%20-%20Baseline.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-518x600.png"
 alt="Disk performance (various computers)"
 height="600"
 width="518"
 title="Figure 2: Disk performance (various computers)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Benchmarks%20-%20Baseline.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-823x954.png)
 
 In my mind, the RAID 10 configuration on BEAST is still the "sweet spot" in terms         of performance, reliability, and cost. Keep in mind that you can probably put together         a 1 TB RAID 10 configuration today at a lower cost than I spent on my 320 GB array         many years ago. Heck, I bet you could probably put together a 600 GB RAID 10 array         for about the same price as the SSD. [Of course, it's going to consume significantly         more energy than an SSD, but that's a price I'm willing to pay.]
 

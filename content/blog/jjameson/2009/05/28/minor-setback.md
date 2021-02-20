@@ -29,13 +29,13 @@ It took two surgeries -- and a lot more metal than I'd prefer to have in my body
 In the first operation (performed the night of my accident), the surgeon attached         an "external fixator" to my shin, ankle, and foot in order to hold it all in place         for about a week in order for the swelling to go down.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Broken%20Tibia%20-%20External%20Fixators.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-600x450.jpg"
 alt="Broken tibia - external fixator"
 height="450"
 width="600"
 title="Figure 1: Broken tibia - external fixator" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Broken%20Tibia%20-%20External%20Fixators.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-1024x768.jpg)
 
 In the second operation, the surgeon removed the "external fixator" and implanted         an "internal fixator." Let's just say that you really don't want to be behind me         in the airport security screening line.
 

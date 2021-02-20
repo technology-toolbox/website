@@ -47,7 +47,7 @@ Rather than troubleshooting the error using the steps described in [KB 958052](h
 Shortly after starting the setup, I observed the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Microsoft%20.NET%20Framework%204%20Setup%20Requirements.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-.NET-Framework-4-Setup-Requirements-503x470.png"
 alt="Microsoft .NET Framework 4 Setup - disk space requirements"
 height="470"
 width="503"

@@ -23,13 +23,13 @@ In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets
 Here is the example typed DataSet I introduced in the previous post.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Typed%20DataSet%20example%20(ScorecardData).png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
 alt="Typed DataSet example (ScorecardData)"
 height="330"
 width="600"
 title="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Typed%20DataSet%20example%20%28ScorecardData%29.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 
 Suppose that we need to display KPI scorecard information in a Web application.  How should we go about leveraging the typed DataSet?
 
@@ -76,9 +76,9 @@ To help visualize this, consider the following example summary view for a KPI  s
 
 | KPI | 2009 Q3 | 2009 Q4 | 2010 Q1 |
 | --- | --- | --- | --- |
-| Cycle Time |  ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) |  ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) |  ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
-| Utilization |  ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) |  ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |  ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) |
-| Rejection Rate |  |  ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |  ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) |
+| Cycle Time |  ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) |  ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) |  ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
+| Utilization |  ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) |  ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |  ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) |
+| Rejection Rate |  |  ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |  ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) |
 
 {{< /table >}}
 
@@ -101,10 +101,10 @@ Similar to the **GetScorecardSummaryTable** method, the **GetScorecardDetailTabl
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
-| ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
+| ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% ![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 

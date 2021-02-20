@@ -319,13 +319,13 @@ in Figure 1,
 to reduce I/O contention.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Development%20VM.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png"
 alt="Figure 1: SharePoint development VM configuration"
 height="317"
 width="600"
 title="Figure 1: SharePoint development VM configuration" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Development%20VM.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
 
 > **Note**
 >
@@ -1290,7 +1290,7 @@ FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Environment-Variables-Fabrikam-Extranet.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png"
 alt="Setting environment variables"
 height="436"
 width="394"
@@ -1986,11 +1986,11 @@ been created based on the Publishing Portal template.
 The site should resemble the following:
 
 [{{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_SharePoint-Server-2010-Publishing-Portal.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
 alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
 height="374"
 width="600"
-title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_SharePoint-Server-2010-Publishing-Portal.png)
+title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom
 code deployed, it is still possible to validate the basic functionality
@@ -2556,13 +2556,13 @@ the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 **Reusable Content Sample** links).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Fabrikam%20Extranet%20-%20home%20page.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png"
 alt="Fabrikam Extranet home page"
 height="277"
 width="600"
 title="Figure 4: Fabrikam Extranet home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Fabrikam%20Extranet%20-%20home%20page.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
 
 ## Configure sample content (optional)
 

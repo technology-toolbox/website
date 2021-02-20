@@ -46,13 +46,13 @@ A few weeks ago, it occurred to me that Dan's sample site would also make a grea
 The following screenshot shows the Tugboat home page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
 If you haven't yet read Handcrafted CSS, please take a few moments to appreciate         Dan's elegant work -- or, heck, if you just ordered the book and simply can't wait         to see the actual site in action, head on over to [http://handcraftedcss.com](http://handcraftedcss.com) and download the sample for yourself. [Note that         I captured the screenshot above with the browser width set to 1024 pixels, so you         won't be able to experience the site's fluid layout simply by viewing the static         image above.]
 
@@ -145,13 +145,13 @@ Therefore I knew that I needed a Web Part zone above the PageContent field in or
 Here is a "wireframe" I put together to help visualize the various fields and Web         Parts on the Tugboat home page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home-Page-Layout.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-296x600.png"
 alt="Tugboat - Home page (wireframe)"
 height="600"
 width="296"
 title="Figure 2: Tugboat - Home page (wireframe)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home-Page-Layout.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-723x1464.png)
 
 Next, I created a custom page layout (TugboatWelcomePageLayout1.aspx) for the site.         As the name implies, I'm using the OOTB Welcome Page content type.
 
@@ -162,7 +162,7 @@ Suppose that Tugboat decides to change the home page of the site in order to add
 The following picture illustrates the various fields and Web Part zones for TugboatWelcomePageLayout1:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-WelcomePageLayout1.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-WelcomePageLayout1-600x285.png"
 alt="TugboatWelcomePageLayout1"
 height="285"
 width="600"
@@ -253,24 +253,24 @@ At that point, I thought I was done. With the jQuery script in place, the "flyou
 It worked as expected in Firefox, as shown in the following screenshot:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-Firefox.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-595x600.png"
 alt="\"Find a Location\" map (Firefox)"
 height="600"
 width="595"
 title="Figure 4: \"Find a Location\" map (Firefox)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-Firefox.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-1017x1025.png)
 
 However, take a look at the following screenshot that shows the exact same HTML         rendered using IE8:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Map-IE8.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-600x598.png"
 alt="\"Find a Location\" map (IE8)"
 height="598"
 width="600"
 title="Figure 5: \"Find a Location\" map (IE8)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Map-IE8.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-1024x1020.png)
 
 Notice how the map completely obscures the secondary content (e.g. **Drink Menu**)?         Obviously that's not the way the designer, Dan, intended for it to work. [Note that         this doesn't happen in IE8 when viewing the static HTML site (in other words, outside         of SharePoint).]
 

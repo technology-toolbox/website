@@ -49,7 +49,7 @@ Most recently, I have also added [YSlow](https://addons.mozilla.org/en-US/firefo
 
 #### Screengrab!
 
-[!\[Firefox Add-on - Screengrab!\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Screengrab.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Screengrab.png)
+[!\[Firefox Add-on - Screengrab!\](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-801x738.png)
 
 When creating feature specs, or other documentation, I often embed screenshots of                 Web pages.
 
@@ -69,7 +69,7 @@ The only quirk that I've noticed is that I can't copy a Web page and paste it di
 
 #### Web Developer
 
-[!\[Firefox Add-on - Web Developer\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Web%20Developer.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Web%20Developer.png)
+[!\[Firefox Add-on - Web Developer\](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-801x738.png)
 
 Chris Pederick's Web Developer add-on provides a toolbar chock-full of goodies for                 Web development. Honestly, there are a lot more features in this add-on than I've                 ever even begun to use. However, I've found it very helpful simply for the following:
 
@@ -88,7 +88,7 @@ I am looking forward to the new developer tools in Internet Explorer 8 to see ho
 
 #### Firebug
 
-[!\[Firefox Add-on - Firebug\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20Firebug.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20Firebug.png)
+[!\[Firefox Add-on - Firebug\](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-801x738.png)
 
 Compared to anything I had ever seen before or since (including the Web Developer                 toolbars for Firefox and Internet Explorer), Firebug takes Web development to a                 whole new level.
 
@@ -104,7 +104,7 @@ It really is that good! You will quickly start to wonder how you ever managed wi
 
 #### YSlow
 
-[!\[Firefox Add-on - YSlow\](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Firefox%20-%20YSlow.png)](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Firefox%20-%20YSlow.png)
+[!\[Firefox Add-on - YSlow\](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-286x380.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-843x1119.png)
 
 As I mentioned earlier, I only recently added YSlow to my list of "must have" add-ons.
 

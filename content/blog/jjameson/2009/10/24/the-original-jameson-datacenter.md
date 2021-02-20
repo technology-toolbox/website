@@ -44,13 +44,13 @@ After enjoying the nostalgia for a moment, I almost deleted the Visio diagram an
 Here's the physical architecture of what I now refer to as the "Old Jameson Datacenter":
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20System%20Architecture.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-600x460.png"
 alt="Old Jameson Datacenter - Physical Architecture"
 height="460"
 width="600"
 title="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20System%20Architecture.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-987x757.png)
 
 Apparently the last time I updated this Visio diagram, I still hadn't decided what         to do with all of the Dell servers I had procured through various channels (primarily         the Dell Outlet and ebay). Hence the Dell PowerEdge 4300 with the "??" next to it.         As I mentioned in my original post on the Jameson Datacenter, this server was the         original BEAST (which is now my "Production" database server). However, it has since         been replaced with a home-built server.
 
@@ -59,13 +59,13 @@ From the previous figure, you can start to see why I've consolidated these serve
 Notice that I use to run a back-to-back firewall configuration with a perimeter         network (a.k.a. DMZ):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-600x471.png"
 alt="Old Jameson Datacenter - TCP/IP Configuration"
 height="471"
 width="600"
 title="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20TCP-IP%20Configuration.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-960x754.png)
 
 This is because I had one server with a public (static) IP address and therefore         ran a couple of Web sites on the old "ICEMAN" server -- hence the name "ICEMAN",         because it was my "IIS" server. Get it? Yeah, I know...more geekiness.
 
@@ -74,26 +74,26 @@ The naming convention was such that the names corresponding to [X-Men](http://en
 Anyway, here's the DNS and DHCP configuration for the original farm:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20DNS%20Configuration.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-600x186.png"
 alt="Old Jameson Datacenter - DNS/DHCP Configuration"
 height="186"
 width="600"
 title="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20DNS%20Configuration.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-794x246.png)
 
 There's nothing really too interesting about that, I suppose.
 
 Perhaps the most laughable aspect of the Old Jameson Datacenter -- at least when         compared to today -- was the storage infrastructure:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Old%20Jameson%20Datacenter%20-%20Disk%20Configuration.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-600x475.png"
 alt="Old Jameson Datacenter - Disk Configuration"
 height="475"
 width="600"
 title="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Old%20Jameson%20Datacenter%20-%20Disk%20Configuration.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-697x552.png)
 
 I can still remember when I thought the 18 GB of RAID1 and 72 GB of RAID5 on that         Dell 4300 was [fashizzle](http://www.urbandictionary.com/define.php?term=fashizzle)         ;-) [Of course, that was long before I was even aware of the term "fashizzle", but         you get my point.]
 

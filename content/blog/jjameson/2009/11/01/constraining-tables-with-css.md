@@ -27,7 +27,7 @@ However, unlike the typical master/detail scenario, you need to limit the amount
 The following figure illustrates the desired end result:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Constrained%20Table.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Constrained-Table-559x166.png"
 alt="Constrained table"
 height="166"
 width="559"

@@ -557,13 +557,13 @@ More information on attaching SharePoint content databases is provided in the fo
 Note that if you browse to a TFS project site at this point, an error is displayed         on the home page in the **Remaining Work** Web Part, as shown below.         This occurs because the TFS extensions for SharePoint have not been installed yet.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Upgraded%20TFS%20project%20site%20with%20RS%20error.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-600x481.png"
 alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)"
 height="481"
 width="600"
 title="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Upgraded%20TFS%20project%20site%20with%20RS%20error.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-988x792.png)
 
 There are also a couple of other issues with the upgraded TFS project site:
 
@@ -647,13 +647,13 @@ Refer to the following blog post for some helpful reports that display details a
 Once the warehouse database has been updated, an upgraded TFS project site should         appear similar to the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Upgraded%20TFS%20project%20site.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-445x600.png"
 alt="Upgraded TFS project site in SharePoint Server 2010"
 height="600"
 width="445"
 title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Upgraded%20TFS%20project%20site.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-987x1332.png)
 
 > **Tip**
 >

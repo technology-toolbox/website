@@ -48,13 +48,13 @@ Separate servers are used for database services (i.e. SQL Server) and the Web
 tier.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Technology-Toolbox-Infrastructure.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure"
 height="399"
 width="600"
 title="Figure 1: Infrastructure" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
 While I generally prefer to use Windows Authentication with SQL Server --
 for reasons I described in

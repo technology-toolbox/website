@@ -28,13 +28,13 @@ While the OOTB error handling in MOSS 2007 and WSS works well for intranet solut
 To understand why, consider a publishing site configured with **BlueBand.master** as the master page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Publishing%20Site%20-%20BlueBand%20Master%20Page.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
 alt="Publishing site with BlueBand master page"
 height="353"
 width="600"
 title="Figure 1: Publishing site with BlueBand master page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Publishing%20Site%20-%20BlueBand%20Master%20Page.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-1007x593.png)
 
 Now, similar to the example error demonstrated in my previous post, let's add  a Web Part to the home page that throws an exception:
 
@@ -97,13 +97,13 @@ namespace Fabrikam.Demo.WebParts
 As shown in the following screenshot, browsing to the home page now displays  the SharePoint error page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint%20Error%20Page.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
 alt="SharePoint error page"
 height="366"
 width="600"
 title="Figure 2: SharePoint error page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint%20Error%20Page.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-1024x624.png)
 
 If this were an intranet site and we were using the OOTB **default.master** (instead of **BlueBand.master**) then the out-of-the-box SharePoint  error page would probably be acceptable for most organizations. For an Internet-facing  site, however, we almost certainly don't want to show a page with a completely different  look-and-feel -- and even worse, a page that provides a link to a "**Web Parts
 Maintenance Page**" as well as a link to "**Troubleshoot issues with
@@ -131,13 +131,13 @@ Services."
 The following screenshot shows a custom error page fashioned after BlueBand.master:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Custom%20Error%20Page.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
 alt="Custom SharePoint error page"
 height="162"
 width="600"
 title="Figure 3: Custom SharePoint error page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Custom%20Error%20Page.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-1024x276.png)
 
 Notice how the details of the error are not displayed to users (which probably  wouldn't be of much help to them anyway and, more importantly, might divulge sensitive  information). Instead, the details of the exception are logged to the **Application**  event log.
 

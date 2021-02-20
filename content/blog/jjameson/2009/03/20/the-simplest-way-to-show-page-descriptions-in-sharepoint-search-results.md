@@ -89,7 +89,7 @@ Surely one of these is the one we want...how about **ows\_Description**?  That s
 The problem is that **ows\_Description** does not correspond to [Microsoft.SharePoint.Publishing.PublishingPage.Description](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.description.aspx). This is counterintuitive,  so let's start by looking at the out-of-the-box content type hierarchy:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS%202007%20Publishing%20Content%20Type%20Hierarchy.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Publishing-Content-Type-Hierarchy-568x597.png"
 alt="MOSS 2007 Publishing - content type hierarchy"
 height="597"
 width="568"

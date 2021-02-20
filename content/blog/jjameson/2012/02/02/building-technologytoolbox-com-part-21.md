@@ -63,13 +63,13 @@ JavaScript, and CSS provided by Google into the page.
 At that point, the search page looked like Figure 1.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-1.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-1-296x600.png"
 alt="Google Site Search (with borders)"
 height="600"
 width="296"
 title="Figure 1: Google Site Search (with borders)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-1.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-1-989x2006.png)
 
 The hideous black borders are a result of the fact that Google Site Search
 uses table-based layout all over the place (and I just happened to have defined
@@ -91,13 +91,13 @@ to override the table styles on the Search page:
 As you can see in the following screenshot, this improves things considerably.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-2-328x600.png"
 alt="Google Site Search (without borders)"
 height="600"
 width="328"
 title="Figure 2: Google Site Search (without borders)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-2.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-2-989x1810.png)
 
 However, the search results still have the "look-and-feel" of Google -- not
 Technology Toolbox. I began resolving the styling issues by removing the link
@@ -226,13 +226,13 @@ padding: 3px 6px;
 Figure 3 shows the corresponding results.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Site-Search-3.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-3-381x600.png"
 alt="Google Site Search (final)"
 height="600"
 width="381"
 title="Figure 3: Google Site Search (final)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Site-Search-3.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-3-989x1556.png)
 
 At this point, the styling of search results appeared consistent with the
 rest of the website. However, I later discovered scenarios not covered by the

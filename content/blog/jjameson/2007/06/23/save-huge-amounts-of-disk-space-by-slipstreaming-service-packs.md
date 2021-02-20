@@ -27,13 +27,13 @@ To figure out why, gradually over time, my VM managed to consume nearly all of t
 The following screenshot shows the breakdown of the VHD content:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-foobar.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-600x492.jpg"
 alt="Disk usage on VM before rebuild"
 height="492"
 width="600"
 title="Figure 1: Disk usage on VM before rebuild" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage-foobar.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-775x635.jpg)
 
 So, out of the 16 GB available, my [**NotBackedUp**](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder consumed a small fraction, the **Program
 Files** folder consumed a little under 6 GB, and the **Windows**         folder accounted for a whopping 9 GB! Huh? Hey, wait a minute, what's going on here?!         Surely there must be a mistake.
@@ -45,13 +45,13 @@ Since this is a development VM that I can rebuild in a matter of hours, I went a
 Immediately after booting up with this new "clean" VHD, I captured the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-win2k3ee-base%20(SP1%20slipstream).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP1-slipstream)-600x419.jpg"
 alt="Disk usage on VM with Windows Server 2003 SP1 slipstreamed"
 height="419"
 width="600"
 title="Figure 2: Disk usage on VM with Windows Server 2003 SP1 slipstreamed" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage-win2k3ee-base%20%28SP1%20slipstream%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP1-slipstream%29-768x536.jpg)
 
 Ahhhh...that looks much better. The **Windows** folder consumed a mere         1.3 GB of the 16 GB VHD. Excellent...or so I thought.
 
@@ -60,26 +60,26 @@ Like any responsible computing citizen, I then proceeded to use Windows Update t
 Before beginning those installs however, I thought I would take capture the hard         drive usage one more time. Here is what I saw:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-win2k3ee-base%20(after%20SP2%20install).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(after-SP2-install)-600x418.jpg"
 alt="Disk usage on VM after installing Windows Server 2003 SP2"
 height="418"
 width="600"
 title="Figure 3: Disk usage on VM after installing Windows Server 2003 SP2" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage-win2k3ee-base%20%28after%20SP2%20install%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28after-SP2-install%29-768x535.jpg)
 
 You've got be to kidding! Just by installing Windows Server 2003 SP2 and a handful         of other critical patches, the **Windows** folder grew from 1.3 GB         to over 3 GB! That's ridiculous (again speaking from a VM perspective -- on a desktop         with hundreds of gigabytes of available space, I would not quibble over the additional         1.7 GB needed by Windows).
 
 So, I decided to "refresh" my SysPrep'ed image of Windows Server 2003 by rebuilding         it from a slipstreamed Windows Server 2003 SP2 (I use [nLite](http://www.nliteos.com/), by the way, which works great IMHO). Here are the results after booting         up with the new VHD:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-win2k3ee-base%20(SP2%20slipstreamed).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP2-slipstreamed)-600x419.jpg"
 alt="Disk usage on VM with Windows Server 2003 SP2 slipstreamed"
 height="419"
 width="600"
 title="Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage-win2k3ee-base%20%28SP2%20slipstreamed%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP2-slipstreamed%29-600x419.jpg)
 
 Comparing this with the previous snapshot from the SP1 slipstreamed version (prior         to updating with SP2), you can see that the size of the **Windows**         folder is only slightly larger. Comparing this with the previous snapshot from the         SP1 slipstreamed version after installing SP2 shows a remarkable difference. No         longer do we need an additional 1.7 GB of "stuff" in the **Windows**         folder just to ensure that we have all the latest patches.
 

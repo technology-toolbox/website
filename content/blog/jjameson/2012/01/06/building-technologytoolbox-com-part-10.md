@@ -16,26 +16,26 @@ show you how I built on that foundation to generate the content for the
 **Most Popular Posts** section.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 Similar to the **Most Recent Posts** section, the **Most
 Popular Posts** section is generated using an ASP.NET user control, as
 illustrated in the corresponding page layout.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)"
 height="600"
 width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
 Note that in the Subtext database, blog posts are stored in the **subtext\_Content**
 table and the statistics about the number of views for each blog post are stored
@@ -72,7 +72,7 @@ I completed the following steps to update the entity model:
 At this point, the model should resemble the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Entity-Model-Caelum-Step-2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model"
 height="400"
 width="431"

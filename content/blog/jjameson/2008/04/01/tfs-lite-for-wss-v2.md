@@ -49,13 +49,13 @@ The primary goal in developing the TFS Lite template was to support a "project  
 Another key feature is the ability to show the status of important project deliverables  and milestones using KPI icons (green, yellow, and red).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v2.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-600x452.jpg"
 alt="Project Summary \"dashboard\""
 height="452"
 width="600"
 title="Figure 1: Project Summary \"dashboard\"" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_TFS%20Lite%20-%20WSS%20v2.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-788x594.jpg)
 
 #### Work Items List
 

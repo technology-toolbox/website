@@ -26,13 +26,13 @@ In this post, I'll walk you through the process I used to upgrade the Tugboat ma
 As a quick review, the following screenshot shows the Tugboat home page. If you         haven't yet picked up a copy of Handcrafted CSS -- or read my earlier post on the         MOSS 2007 Tugboat solution -- then take a moment to familiarize yourself with the         content.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
 The first step was to get the actual content for the home page into SharePoint 2010.         To achieve this, I created a new site based on the **Publishing Portal** template         and uploaded the home page images (e.g. boat.jpg) to the **Site Collection Images** library.
 
@@ -43,13 +43,13 @@ Next, I upgraded the "Find Location" Web Part used to render the form at the top
 At this point, the Tugboat home page in SharePoint 2010 looked like the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-1.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-600x542.png"
 alt="Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)"
 height="542"
 width="600"
 title="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-1.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-1008x911.png)
 
 This obviously has a long way to go before it looks like the final result shown         in Figure 1. Let's take it one step at a time...
 
@@ -74,13 +74,13 @@ After="corev4.css" runat="server"/>
 Here are the results after step 2:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-2-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 2)"
 height="357"
 width="600"
 title="Figure 3: Tugboat home page in SharePoint 2010 (step 2)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-2.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-2-1008x599.png)
 
 Wow! What a difference the "right" CSS makes. As you can see, the main content for         the Tugboat home page is now very close to how it should look (i.e. Figure 1). However,         by removing the link to nightandday.master, the masthead obviously looks terrible.         If you squint really hard, you should be able to still see the Welcome control (i.e.         the **Sign In** link) as well as the help button.
 
@@ -144,13 +144,13 @@ Note that since I decided to remove the Search box for the sake of simplifying t
 Here are the results after step 3:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-3.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 3)"
 height="357"
 width="600"
 title="Figure 4: Tugboat home page in SharePoint 2010 (step 3)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-3.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-1008x599.png)
 
 After simply rearranging some content, it's now much easier to see the **Sign In** link.
 
@@ -159,13 +159,13 @@ You might be wondering why I decided to place the "top row elements" inside the 
 At first, everything seemed to work just fine (from an anonymous user's perspective).         However, when I viewed the site as an authenticated user and then clicked **Show Ribbon** from the **Site Actions** menu, I saw the following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-3-bad.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)"
 height="368"
 width="600"
 title="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-3-bad.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-1005x617.png)
 
 Notice how the **Browse**, **Page**, and **Publish** tabs do not render         correctly. When I moved them into the `<div id="s4-searcharea">`         element, I noticed the ribbon tabs rendered as expected for authorized users. Remember         what I said earlier about "subtle" bugs?!
 
@@ -211,13 +211,13 @@ The next step is get rid of the OOTB `<div class="s4-notdlg top-row">` content (
 Here are the results after step 4:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-4.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-4-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 4)"
 height="357"
 width="600"
 title="Figure 6: Tugboat home page in SharePoint 2010 (step 4)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-4.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-4-1008x599.png)
 
 Yes, eventually we will want the global navigation to be dynamically generated from         the SharePoint site structure, but for the purposes of what I'm calling "Sprint-2"         of the Tugboat project, static HTML is a good starting point.
 
@@ -250,13 +250,13 @@ This is simply a matter of removing a few elements (specifically `<div id="s4-ti
 Here are the results after step 5:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-5.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 5)"
 height="357"
 width="600"
 title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-5.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-1008x599.png)
 
 Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv">`element to add the `<div class="group" id="wrap">`element expected         by the Tugboat CSS files as well as the page footer:
 
@@ -279,13 +279,13 @@ As with the previous MOSS 2007 version of the Tugboat sample, I renamed the ID o
 Here are the results after step 6:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-6.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-6-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 6)"
 height="357"
 width="600"
 title="Figure 8: Tugboat home page in SharePoint 2010 (step 6)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-6.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-6-1008x599.png)
 
 Ah...now we're getting close. The image of the coffee cup no longer overlaps the         masthead and we have the expected margin on the right side of the page. Now let's         fix the left margin.
 
@@ -303,13 +303,13 @@ This is easy to change by adding a little CSS to the custom SharePointFixes.css 
 Here are the results after step 7:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-7.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-7-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 7)"
 height="357"
 width="600"
 title="Figure 9: Tugboat home page in SharePoint 2010 (step 7)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-7.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-7-1008x599.png)
 
 Now that we've got the main area of the page matching the HTML prototype created         by the designers, let's turn our attention to hiding the ribbon content (in other         words, the dark blue band at the top of the page) for anonymous users.
 
@@ -319,26 +319,26 @@ If you search the Internet for something like **SharePoint
 Someone suggested wrapping the **SPRibbon** control in the **&lt;LoggedInTemplate&gt;**         of an ASP.NET **LoginView** control. This certainly sounds like a logical choice         and indeed it does work in the "anonymous user scenario" as shown below:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-8.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)"
 height="357"
 width="600"
 title="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-8.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-1008x599.png)
 
 Yes, we still see the dark blue band, but notice that the breadcrumb control and         **Sign In** link are no longer visible. However, there's a problem.
 
 Take a look at the following screenshot taken for an authenticated user after clicking         **Show Ribbon** on the **Site Actions** menu:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-8-bad.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-600x367.png"
 alt="Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)"
 height="367"
 width="600"
 title="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-8-bad.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-1007x616.png)
 
 Do you see the problem? [Hint: Imagine you want to view the properties of the page.]
 
@@ -368,13 +368,13 @@ ManageSubwebs, ManageWeb, ViewUsageData ">
 With this approach, the ribbon renders as expected for both anonymous users (Figure         10) and authenticated users (Figure 12).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-8-good.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")"
 height="368"
 width="600"
 title="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-8-good.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-1007x617.png)
 
 Well, okay, it's not quite "as expected" for anonymous users. We still need to get         rid of the dark blue band at the top of the page when viewing the site as an anonymous         user. The problem is the SharePoint "ribbon system" is hard-coded to set a specific         height for the `<div id="s4-ribbonrow">` element.
 
@@ -401,13 +401,13 @@ In this case, using a **LoginView** control (and `<AnonymousTemplate>`)         
 Here are the results after step 9:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Step-9.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-9-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 9)"
 height="357"
 width="600"
 title="Figure 13: Tugboat home page in SharePoint 2010 (step 9)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Step-9.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-9-1008x599.png)
 
 Woohoo! We're now seeing the Tugboat home page rendered by SharePoint 2010 with         near pixel-by-pixel similarity with the HTML prototype created by the designers.         [If you open both the SharePoint site and the HTML prototype in two different tabs         and then quickly toggle between them, you'll notice very minor differences.]
 
@@ -416,13 +416,13 @@ There's just one more issue to fix. [I know, I know..."How long must this post g
 Take a look at the following screenshot, which shows the ribbon "in action" (in         other words, as viewed by an authorized user):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-SharePoint-2010-Bold-Links.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)"
 height="357"
 width="600"
 title="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-SharePoint-2010-Bold-Links.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-1008x599.png)
 
 The ribbon looks a little "angry" if you ask me. In other words, "What's with all         the bold links?!"
 

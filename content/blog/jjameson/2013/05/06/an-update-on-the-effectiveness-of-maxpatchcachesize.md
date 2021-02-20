@@ -20,13 +20,13 @@ For example, here's what the disk usage looks like on one of my development
 VMs:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Disk%20Usage%20-%20FOOBAR7%20-%20Baseline.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png"
 alt="Disk usage"
 height="460"
 width="600"
 title="Figure 1:" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Disk%20Usage%20-%20FOOBAR7%20-%20Baseline.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-991x760.png)
 
 Note that the \Windows\Installer folder is consuming almost 5.5 GB of space
 on the VHD -- despite the fact that I set MaxPatchCacheSize to 0 immediately

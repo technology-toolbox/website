@@ -41,26 +41,26 @@ As I have mentioned before, the decision to abandon variations was not an easy o
 Ultimately, though, I believe the bulk of the decision fell on performance, or more         accurately, the lack thereof. Take a look at the following graph, which shows the         elapsed time required to propagate each FAQ page from the source **en-US**         site to the four variation sites (**ja-JP**, **ko-KR**,         **zh-CN**, and **zh-TW**).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(before).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(before)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation"
 height="436"
 width="600"
 title="Figure 1: Elapsed Time for Variation Page Propagation" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28before%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28before%29-704x512.jpg)
 
 Notice how the time required to propagate each page increases substantially as the         number of pages increases. As I pointed out in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2), I believe this is due to the use of the **Relationships List** (stored in the **AllUserData** table) in combination with         the content deployment API. Also notice how the time required to propagate each         page dropped substantially after adding the index described in [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2). Lastly, notice how long it took to propagate 2074 pages before the         index, compared with the remaining 959 pages after the index was added.
 
 The following graph "zooms in" on the time period after the index was added.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Variation-Page-Propagation%20(after).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(after)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
 height="436"
 width="600"
 title="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Variation-Page-Propagation%20%28after%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28after%29-670x487.jpg)
 
 It seems like it took SQL Server a little while to optimize based on the new index,         but it levels out around 40 seconds per page. Compared with the 10-minute propagations         before the new index on **AllUserData**, this seems fantastic. However,         that is only a relative comparison.
 

@@ -25,13 +25,13 @@ The purpose of this post is to share those details and explain some of the reaso
 The following figure shows the physical architecture of the various computers and         network devices that comprise the "Jameson Datacenter":
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%202009-09-13.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture"
 height="493"
 width="600"
 title="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%202009-09-13.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
 
 Note that I'm not suggesting development teams require a Windows Media Center or         an Xbox 360 (which doubles as a Media Center Extender) -- I merely included those         for the sake of completeness. [Although, personally, I believe that if you provide         your developers a relaxed environment where they can blow off some steam for an         hour or so, you shouldn't be surprised if productivity actually increases dramatically,         contrary to what you might predict ;-)]
 
@@ -39,13 +39,13 @@ If you've followed this blog for any significant length of time, you already kno
 of virtualization](/blog/jjameson/tags/Virtualization/default.aspx). Notice that I dedicate two servers specifically to running         Hyper-V virtual machines (VMs). The following figure illustrates the various servers         (both logical and physical) that typically run 24x7 in my lab:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20Logical%20(2009-09-13).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
 alt="The \"Jameson Datacenter\" - logical architecture"
 height="370"
 width="600"
 title="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20Logical%20%282009-09-13%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
 
 I should also point out that these aren't true enterprise servers -- meaning that         they don't have redundant power supplies, remote management cards, etc. These are         simply "home built" servers that I put together from components typically purchased         through [newegg](http://www.newegg.com/).
 
@@ -123,13 +123,13 @@ It's also worth pointing out that while the three physical servers are running x
 The following figure provides more detail on the hardware configuration of the various         servers:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20Hardware%20(2009-09-13).jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration"
 height="454"
 width="600"
 title="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20Hardware%20%282009-09-13%29.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
 
 Since BEAST is essentially my "production" SQL Server instance, I chose to configure         all four disks in a RAID 10 (1+0) configuration. Ideally, I'd throw another four         drives into that server -- or heck, even eight drives if the case would actually         hold that many -- in order to separate my data I/O from my transaction log I/O,         but, alas, the motherboard on BEAST only has four SATA II connectors. I suppose         I might get faster throughput if I actually split the four disks into two RAID 1         arrays, but honestly, I doubt I really need it. If I planned on using my home lab         for performance testing, this might be worthwhile, but since I rarely stress this         SQL Server, I'm not going to bother. As you can see from the dual proc/2 GB configuration,         one of these days I should probably throw another $260.89 at it (or perhaps even         less) in order to replace the motherboard, CPU, and RAM in order to make BEAST look         more like ROGUE.
 

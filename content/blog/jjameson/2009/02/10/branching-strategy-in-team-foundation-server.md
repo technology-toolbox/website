@@ -31,26 +31,26 @@ In the interest of not reinventing the wheel, allow me to pilfer one of the imag
 Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Basic.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-600x260.png"
 alt="Basic branch plan"
 height="260"
 width="600"
 title="Figure 1: Basic branch plan" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Branch-Plan-Basic.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-820x356.png)
 
 Note that this is a basic branch plan, but it is sufficient to demonstrate the concept.         You may very well have a more complex branching strategy (e.g. a large organization         like Microsoft in order to support "feature teams"). However, the essential pattern         still applies.
 
 The question that I asked during the session was essentially why not postpone branching         for as long as possible? In other words, why not branch **Release**         first, and then branch for hotfixes and service packs as necessary? In my mind,         this alternative approach reduces the merge effort by only branching at the point         in time when we actually need a branch (e.g. to stabilize for a release). At some         later point in time after the release when we actually need a hotfix or service         pack branch, then we'll create it from the **Release** branch. In response         to my question, Mario termed this "reactive branching" -- which seems like a very         good way to describe it. To help visualize the difference, I mocked up the following         figure.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Branch-Plan-Problematic.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-600x260.png"
 alt="\"Reactive\" branch plan"
 height="260"
 width="600"
 title="Figure 2: \"Reactive\" branch plan" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Branch-Plan-Problematic.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-820x356.png)
 
 There are a couple of significant problems with reactive branching:
 

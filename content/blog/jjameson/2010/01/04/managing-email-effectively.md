@@ -36,13 +36,13 @@ It is also important to note that my **Inbox** folder is synchronized         to
 For reference purposes, here's what my Outlook folder looked like first thing this         morning (again, note that this is not a typical snapshot since I just returned from         a long vacation).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-and-archive-structure.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-297x600.png"
 alt="Outlook folders and archive structure"
 height="600"
 width="297"
 title="Figure 1: Outlook folders and archive structure" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Outlook-folders-and-archive-structure.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-334x675.png)
 
 As you can see, I received literally thousands of email messages during my hiatus,         but only 66 of them stayed in my **Inbox** folder.
 
@@ -141,13 +141,13 @@ Lastly, I should also point out that another key element of my system for managi
 Here's my updated screenshot from Outlook this morning after running Thread Compressor:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/15/r_Outlook-folders-after-Thread-Compressor.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-297x600.png"
 alt="Outlook folders after running Thread Compressor"
 height="600"
 width="297"
 title="Figure 2: Outlook folders after running Thread Compressor" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/15/o_Outlook-folders-after-Thread-Compressor.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-334x675.png)
 
 Compare the numbers in this screenshot with the corresponding numbers in the previous         screenshot -- or just trust me when I say it deleted 1,758 messages -- and you'll         quickly see why I consider Thread Compressor to be an essential part of my toolbox.
 

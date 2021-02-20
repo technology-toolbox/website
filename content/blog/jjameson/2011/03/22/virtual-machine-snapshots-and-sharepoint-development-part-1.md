@@ -24,13 +24,13 @@ In a comment I made last week on [one of my earlier posts](/blog/jjameson/2011/0
 The following screenshot shows the snapshots for my primary SharePoint Server 2010         development VM (FOOBAR5):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR5%20Snapshots.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots"
 height="383"
 width="600"
 title="Figure 1: FOOBAR5 snapshots" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR5%20Snapshots.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
 For the sake of explaining these various snapshots, let me relabel them in this         post as follows:
 

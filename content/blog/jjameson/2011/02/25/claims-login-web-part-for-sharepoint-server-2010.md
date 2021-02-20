@@ -22,7 +22,7 @@ In [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authent
 If you follow those steps, then when you browse to the home page of the site and         click **Sign In**, you'll be redirected to the out-of-the-box login         page (/\_login/default.aspx) shown in Figure 1. Note that since the Web application         is configured to support both Forms-Based Authentication (FBA) and Windows authentication,         the login page requires you to specify the type of credentials to use to logon to         the SharePoint site.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-1.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-1-600x250.png"
 alt="Default login page in SharePoint Server 2010 (/_login/default.aspx)"
 height="250"
 width="600"
@@ -31,7 +31,7 @@ title="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.a
 If you click **Forms Authentication** in the dropdown list, you are         redirected to the default login form (/\_forms/default.aspx), shown in Figure 2.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-OOTB-Sign-In-Page-2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
 alt="Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)"
 height="250"
 width="600"
@@ -42,13 +42,13 @@ Note that if you click **Windows Authentication** in the dropdown list,         
 While the sign-in experience shown in the preceeding screenshots is great for prototypes         and proofs-of-concept (for example, to demonstrate why claims-based authentication         in SharePoint 2010 is much better than FBA in Microsoft Office SharePoint Server         2007), it obviously isn't going to be sufficient for real world solutions. Instead         we need a "branded" login page like the one shown in Figure 3.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_SharePoint-2010-Custom-Sign-In-Page.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-600x342.png"
 alt="Custom login page in SharePoint Server 2010"
 height="342"
 width="600"
 title="Figure 3: Custom login page in SharePoint Server 2010" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_SharePoint-2010-Custom-Sign-In-Page.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-1012x576.png)
 
 Note that I didn't expend significant effort trying to get the custom login page         to look great. Rather I wanted to focus on the core functionality. There's definitely         signficant room for improvement in the look-and-feel area (for example, using a         custom page layout to get rid of the left navigation (i.e. **Press Releases**)         that we probably wouldn't want to show on a real site. [Also note that I didn't         even bother to replace the default "Adventure Works" in the masthead with "Fabrikam".]
 

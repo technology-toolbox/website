@@ -19,13 +19,13 @@ old MSDN blog](http://blogs.msdn.com/b/jjameson/) as a reference. However, I qui
 viewing my MSDN blog home page with CSS disabled.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_MSDN%20blog%20home%20-%20CSS%20disabled.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
 alt="My MSDN blog home - CSS disabled"
 height="600"
 width="328"
 title="Figure 1: My MSDN blog home - CSS disabled" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_MSDN%20blog%20home%20-%20CSS%20disabled.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
 
 One of the most important concepts I learned a few years ago while reading
 [Transcending CSS](http://www.transcendingcss.com/) is that your
@@ -58,13 +58,13 @@ Compare Figure 1 with the corresponding "naked" version of my new blog home
 page:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home-CSS-disabled.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
 alt="Technology Toolbox blog home page - CSS disabled"
 height="600"
 width="362"
 title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home-CSS-disabled.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
 
 Notice how much easier it is to identify the different sections of the page
 -- thanks to the use of HTML heading elements (which were almost nonexistent
@@ -255,13 +255,13 @@ an additional class to the list item to indicate that a particular post has
 no comments (i.e. `<li  class="comments none">`).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
 height="600"
 width="374"
 title="Figure 3: Blog home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 ### HTML markup for individual blog post
 

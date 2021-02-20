@@ -44,7 +44,7 @@ In addition to the two problems with this code that I covered in my previous pos
 Here's a partial screenshot of the home page of the portal, after clicking the **Site Actions** menu and then clicking **Edit Page**.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20No%20menu%20open.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-No-menu-open-447x300.png"
 alt="No menus open"
 height="300"
 width="447"
@@ -55,7 +55,7 @@ While the above screenshot doesn't illustrate any problem, the caption gives you
 The following screenshot shows what happens when you click the **Page**         menu.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Silverlight%20-%20Obscured%20menu.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Obscured-menu-447x300.png"
 alt="Page menu items obscured by Silverlight control"
 height="300"
 width="447"
@@ -68,7 +68,7 @@ Note that menu items on the **Workflow** and **Tools**         menus are similar
 Fortunately, once I discovered this problem, it didn't take long to find a solution.         The trick is to set the [Windowless](http://msdn.microsoft.com/en-us/library/cc838156%28VS.95%29.aspx) property to **true** in the `<object>`         element, as illustrated in the following screenshot:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Silverlight%20-%20Unobscured%20menu%20(windowless).png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Unobscured-menu-(windowless)-447x300.png"
 alt="Page menu items no longer obscured by windowless Silverlight control"
 height="300"
 width="447"

@@ -68,13 +68,13 @@ With the prerequisites out of the way, let's move on to my recommendations for e
 As a quick review, the following screenshot shows the snapshots for my primary SharePoint         Server 2010 development VM (FOOBAR5):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR5%20Snapshots.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots"
 height="383"
 width="600"
 title="Figure 1: FOOBAR5 snapshots" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR5%20Snapshots.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
 For the sake of explaining more about these snapshots, I'll relabel them again in         this post as follows:
 
@@ -125,13 +125,13 @@ The other scenario where snapshots provide tremendous value is when deploying fr
 To understand this process, examine the snapshots shown below for one of my Microsoft         Office SharePoint Server 2007 development VMs (FOOBAR2):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FOOBAR2%20Snapshots.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
 alt="FOOBAR2 snapshots"
 height="372"
 width="600"
 title="Figure 2: FOOBAR2 snapshots" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FOOBAR2%20Snapshots.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
 
 On my current project, we are working on Sprint-12 which includes some enhancements         to the "Client Portal". The previous release of the solution was Sprint-10. [If         you are wondering what happened to Sprint-11, then take another look at Figure 1         above -- which shows how we devoted that iteration to setting up a new SharePoint         Server 2010 collaboration platform.]
 

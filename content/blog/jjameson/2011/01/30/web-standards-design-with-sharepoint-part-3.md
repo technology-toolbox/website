@@ -34,13 +34,13 @@ Rather than trying to explain to "The Media Guy" how to create a page layout bas
 If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with the         following:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_DefaultMaster_DefaultPageLayout.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-600x284.png"
 alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")"
 height="284"
 width="600"
 title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_DefaultMaster_DefaultPageLayout.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-1064x504.png)
 
 Let's suppose that Fabrikam Technologies wants to deploy SharePoint for their corporate         intranet, but they want to brand the site with their corporate logo, font, and color         scheme. Furthermore, the folks at Fabrikam really want us -- at least as much as         possible -- to use all the goodness of Web standards design (in other words, CSS-based         layout instead of that nasty ol' table-based layout from years ago).
 
@@ -49,26 +49,26 @@ As I described in my original post -- and also demonstrated in [part 2 of this s
 Here's a screenshot showing the home page using the custom Fabrikam master page         and page layout:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-600x299.png"
 alt="Home page with custom master page and page layout"
 height="299"
 width="600"
 title="Figure 2: Home page with custom master page and page layout" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-1062x530.png)
 
 Note that the actual page content is identical in the two figures above -- I've         simply "re-skinned" the site to look substantially different from the default SharePoint         look-and-feel. Also note that there are two fundamental problems with the out-of-the-box         page content.
 
 First, in the **Page Content** field, the default content is far from         "semantic HTML" and contains numerous nested tables (to achieve the two-column layout).         This is easily seen in the following screenshot, in which I've disabled the linked         style sheets:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-DefaultLayout2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-600x434.png"
 alt="Home page with custom master page and page layout (linked CSS files disabled)"
 height="434"
 width="600"
 title="Figure 3: Home page with custom master page and page layout (linked CSS files disabled)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-DefaultLayout2.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-1045x756.png)
 
 Second, the default page layout does not expose either of the Summary Links fields         defined on the **Welcome Page** content type. Consequently, a Web Part         (i.e. "News") is used to render the links at the bottom of the page.
 
@@ -81,13 +81,13 @@ To mitigate these issues, I chose to tweak the default content for the home page
 The following figure shows the end result (note that I overlayed the grid using         the [960 Gridder](http://gridder.andreehansson.se/) for illustrative         purposes):
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_FabrikamDefaultMaster-CustomLayout.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-600x361.png"
 alt="Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)"
 height="361"
 width="600"
 title="Figure 4: Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_FabrikamDefaultMaster-CustomLayout.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-1045x628.png)
 
 Here are the instructions to deploy the Fabrikam Demo sample to your own SharePoint         environment. First, download the attachment and unzip the files. Then you simply         need to run a few commands from an Administrator command prompt. [As I've warned         in the past, you should obviously inspect my scripts before blindly running them         with administrative privileges, but honestly, there's nothing malicious in there.]
 

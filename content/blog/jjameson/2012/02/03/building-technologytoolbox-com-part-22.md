@@ -238,13 +238,13 @@ for all environments, I could just as easily use different codes for each enviro
 as illustrated in Figure 1.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Google-Analytics-Account-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png"
 alt="Google Analytics (Account Home)"
 height="340"
 width="600"
 title="Figure 1: Google Analytics (Account Home)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Google-Analytics-Account-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
 
 After some refactoring and performance optimization, here is the updated
 implementation of the **AnalyticsScript** class:

@@ -14,13 +14,13 @@ to render the expandable list under the **Archives** section on
 the various blog pages of the Technology Toolbox site.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
 height="600"
 width="374"
 title="Figure 1: Blog home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 One of my "love/hate" features on
 [my old MSDN blog](http://blogs.msdn.com/jjameson/) was the "Archive"
@@ -84,7 +84,7 @@ point in the development timeline I had already created an ADO.NET Entity Data
 Model for accessing data from Subtext.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Entity-Model-Caelum-Step-2.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model"
 height="400"
 width="431"
@@ -126,13 +126,13 @@ as a simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 > If you are working with LINQ these days, and you haven't already discovered [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It makes it much quicker to iteratively build LINQ queries like the one shown above.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_LINQPad.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
 alt="LINQPad"
 height="600"
 width="564"
 title="Figure 3: LINQPad" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_LINQPad.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-821x873.png)
 
 ### PostArchiveList Control
 
@@ -392,7 +392,7 @@ was clicked and use a corresponding CSS sprite to show the "plus" or "minus"
 icon next to the list item.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_list-item-sprites-1.0.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png"
 height="400"
 width="400"

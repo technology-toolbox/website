@@ -27,13 +27,13 @@ In this post, I want to share details about how I've configured my Active Direct
 As you can see in the following figure, I've created a number of organizational         units (OUs) which you would typically find in many enterprise organizations.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Jameson%20Datacenter%20-%20AD%20domain%20structure.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-302x600.png"
 alt="Jameson Datacenter - Active Directory domain structure"
 height="600"
 width="302"
 title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Jameson%20Datacenter%20-%20AD%20domain%20structure.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-305x605.png)
 
 Note that I didn't really come up with this structure myself (except for the **Admin Accounts** OU, which I believe was an ["original idea"](http://en.wikipedia.org/wiki/A_Beautiful_Mind_%28film%29) of mine -- but honestly it's been so long that I can         hardly remember). Most of this is based on the prescriptive guidance from TechNet.         You can find the latest version of this guidance in the [AD DS (Active Directory Domain Services) Design Guide](http://technet.microsoft.com/en-us/library/cc754678%28WS.10%29.aspx). [I tried to find         the original reference material that I used, but I gave up looking for it on TechNet         this morning after about 5 minutes.]
 

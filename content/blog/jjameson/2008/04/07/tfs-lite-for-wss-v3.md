@@ -116,13 +116,13 @@ described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 12. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_TFS%20Lite%20-%20WSS%20v3.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
 alt="Project Summary \"dashboard\""
 height="363"
 width="600"
 title="Figure 1: Project Summary \"dashboard\"" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_TFS%20Lite%20-%20WSS%20v3.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
 
 You might be wondering why I chose to base the Work Items list on Tasks instead         of just creating a custom list from scratch. Aside from the fact that the Tasks         list saves me from having to create a few columns, the real reason is to automatically         e-mail team members when a work item is assigned to them. If you simply create a         custom list and add an **Assigned To** column, you'll find that the option to         **Send e-mail when ownership is assigned?** is conspicuously absent from the         **Advanced Settings** page for the list.
 

@@ -63,24 +63,24 @@ Be sure to set the `requestLimit`  high enough to enable access to the page trac
 Once configured, browse to the page on the site. Then modify the URL to browse  to Trace.axd (e.g. [http://fabrikam-local/Trace.axd](http://fabrikam-local/Trace.axd))  to display the Trace Viewer.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_ASP.NET%20Trace%20Viewer.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
 alt="ASP.NET Trace Viewer"
 height="267"
 width="600"
 title="Figure 1: ASP.NET Trace Viewer" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_ASP.NET%20Trace%20Viewer.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-705x314.png)
 
 Locate the request that you want to view log messages for and click the corresponding **View Details** link.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_ASP.NET%20Trace%20Sample.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
 alt="ASP.NET Trace Viewer - Request Details"
 height="600"
 width="474"
 title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_ASP.NET%20Trace%20Sample.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-736x931.png)
 
 Notice that the [WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) even formatted the warning message in red. How cool is  that?! [For all you SharePoint developers out there, compare this with "diving"  into the ULS logs to find an error or warning for a particular page request!]
 

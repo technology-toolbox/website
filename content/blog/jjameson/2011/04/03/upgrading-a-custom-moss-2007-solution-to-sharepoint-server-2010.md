@@ -24,13 +24,13 @@ Since I had originally "ported" the Tugboat site to Microsoft Office SharePoint 
 However, I also took the time to migrate the previous Visual Studio 2008 solution         to Visual Studio 2010 in a way that leverages the new SharePoint development features         in VS2010 as much as possible. The following figure illustrates the old and new         solutions as well as the key mappings between the two.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_Tugboat-Solution-Upgrade.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-499x1472.jpg"
 alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
 height="1472"
 width="499"
 title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_Tugboat-Solution-Upgrade.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-768x2262.jpg)
 
 Here are the highlights from my experience upgrading the Tugboat project.
 

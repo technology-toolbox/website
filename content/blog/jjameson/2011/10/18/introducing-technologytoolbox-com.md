@@ -15,13 +15,13 @@ In this inaugural post for my new blog location, I'll introduce various features
 The following screenshot shows the current home page for Technology Toolbox.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 As I detailed in a [previous post](/blog/jjameson/2009/06/26/creating-wireframes-for-page-layouts), I find it very helpful to create wireframes that illustrate blocks  of content, navigation elements, and other site features. These often start out  as simple "grey box" diagrams (as described in Andy Clarke's excellent [Transcending CSS](http://www.transcendingcss.com/) book and Jason Santa  Maria's [original
 blog post](http://v3.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php)). However, I often update them after the static design is complete  (in other words, after some sample HTML, CSS, and images are sufficiently "baked"  and ready to serve as a reference for the visual design).
@@ -29,13 +29,13 @@ blog post](http://v3.jasonsantamaria.com/archive/2004/05/24/grey_box_method.php)
 Here is the corresponding page layout for the site home page.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Home%20(Page%20Layout).png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)"
 height="600"
 width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Home%20%28Page%20Layout%29.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
 #### Branding
 
@@ -81,24 +81,24 @@ The standard copyright notice appears at the bottom of all pages -- along with  
 The **Services** page for the site is shown in Figure 3 below. This  represents a typical "content" page in which the "primary content" consists of text  with various headings and other markup, while the "secondary content" is comprised  of a related illustration (typically obtained from [iStockphoto](http://www.istockphoto.com) -- my image provider of choice).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Services.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
 alt="Services page"
 height="494"
 width="600"
 title="Figure 3: Services page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-1058x871.png)
 
 Note that I still like to use the [960 Grid System](http://960.gs)  to layout Web content -- something I first discussed in a blog post about [Web Standards Design in MOSS 2007](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1). The following screenshot shows how the primary  content spans 7 columns and the secondary content spans the remaining 5 columns  (since I chose the 12 column layout option).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Services-with-Grid.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
 alt="Services page (with grid)"
 height="495"
 width="600"
 title="Figure 4: Services page (with grid)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Services-with-Grid.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-1058x872.png)
 
 In order to minimize the amount of CSS for the site, I chose to extract only  those rules from the 960 Grid System that are currently being used and subsequently  embed those in the "main" CSS file for the TechnologyToolbox.com. This way I don't  have the entire 960.css file linked as a separate style sheet (or the entire file  embedded in my own style sheet). I'll talk more about CSS optimization in a separate  post.
 
@@ -111,37 +111,37 @@ The "Company Overview" page is very similar to the **Services**  page shown abov
 The site provides an online form prospective clients can use regarding potential  projects and other contact requests, as shown in Figure 5.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form"
 height="600"
 width="592"
 title="Figure 5: Contact form" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
 
 As shown below, validators are used to ensure the required fields are specified  when submitting the form. Also note how required fields have a light yellow background  color (that changes to white when the field has the focus).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-validation.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
 alt="Contact form validation errors"
 height="600"
 width="505"
 title="Figure 6: Contact form validation errors" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-validation.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-1058x1258.png)
 
 To ensure responses are generated by a person -- rather than annoying spam submitted  by some worthless "bot" -- the form includes a CAPTCHA control that requires the  correct image to be selected in order to successfully submit the form. Personally,  I prefer this type of challenge-response (i.e. "image-recognition CAPTCHAs") over  the "distorted text" approach that has become common on many websites today. I often  find it frustrating and time consuming to decipher a random string of characters  that have been mashed together along with a wavy line running through the middle.
 
 When the incorrect image is selected (or no image is selected) in the CAPTCHA  control, an error appears in the validation summary, similar to when required fields  are missing.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Contact-CAPTCHA.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error"
 height="600"
 width="534"
 title="Figure 7: Contact form CAPTCHA validation error" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Contact-CAPTCHA.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
 
 While the simple image-recognition CAPTCHA is arguably not as "strong" as a distorted  text CAPTCHA (depending, of course, on how much you choose to distort the text),  I think it is sufficient to prevent bots from submitting spam -- at least for now.  I can always make it more robust with a little bit of tweaking if I discover that  someone has written code specifically to hack this particular CAPTCHA implementation.
 
@@ -150,26 +150,26 @@ While the simple image-recognition CAPTCHA is arguably not as "strong" as a dist
 My new blog is currently powered by [Subtext](http://subtextproject.com)  -- or rather my own (slightly modified) version of Subtext 2.5 -- in combination  with a custom blog skin that leverages the same "theme" (i.e. CSS files and associated  images) as the other parts of the site. I discovered some issues with the current  release of Subtext that required some tweaks in order to render the blog pages in  the desired structure and format (for example, to show the **Archives**  section at the bottom of the "secondary content" using expandable lists of links  grouped by year).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Home.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
 height="600"
 width="374"
 title="Figure 8: Blog home page" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Home.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 The primary content on the blog home page is, not surprisingly, the most recent  list of posts (sorted in descending order). The secondary content provides links  for the blog RSS feed, quickly finding blog posts by tags or categories (note that  Subtext supports these concepts differently), and browsing through the historical  archive of posts.
 
 Figure 9 shows a typical blog post. The secondary content is similar to that  shown on the blog home page, but also contains a **Recent Posts** section.  The thought behind this is that people often find blog posts through search sites  like Google or Bing, so when they browse directly to an individual post, we should  try to "hook" them into reading other posts during the same visit. [The **Recent Posts** section is not shown on the blog home page, since this would  be redundant with the items shown in the primary content area on that page.]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Blog-Post.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post"
 height="600"
 width="398"
 title="Figure 9: Sample blog post" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Blog-Post.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 
 Note that the form for adding a comment to a blog post uses the same custom CAPTCHA  control described previously for the **Contact** form. Getting this  to work as expected was another reason why I had to modify the Subtext solution  for the Technology Toolbox site. Again, I'll cover this in more detail in a subsequent  post.
 
@@ -195,26 +195,26 @@ Upon switching to Subtext, I thought about using ASP.NET MVC across the entire  
 Figure 10 illustrates how the two solutions are merged together during the deployment  process. The **blog** folder is configured as a separate application  in IIS. It contains the Subtext solution and a few updated/additional files from  the "Caelum" solution -- such as the site map file and the custom blog skin.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture"
 height="520"
 width="600"
 title="Figure 10: Solution architecture" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 ### Physical Architecture
 
 The production environment for TechnologyToolbox.com is currently hosted by [WinHost](http://www.winhost.com), as shown in the following figure.  Separate servers are used for database services (i.e. SQL Server) and the Web tier.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Technology-Toolbox-Infrastructure.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure"
 height="399"
 width="600"
 title="Figure 11: Infrastructure" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Technology-Toolbox-Infrastructure.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
 In addition to Production, separate Development and Test environments are used  to validate releases before deploying to the "live" environment. DEV is automatically  rebuilt at least once a day, whereas TEST is updated "manually" as release candidate  builds become available.
 

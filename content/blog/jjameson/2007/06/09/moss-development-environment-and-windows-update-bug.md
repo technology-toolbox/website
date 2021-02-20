@@ -22,13 +22,13 @@ In my [previous post](/blog/jjameson/2007/06/09/virtual-server-issues), I talked
 Before I can explain the bug I first need to describe the environment. The following         model shows the important pieces of the environment.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_MOSS-2007-Development-Environment.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-600x456.jpg"
 alt="MOSS 2007 development environment"
 height="456"
 width="600"
 title="Figure 1: MOSS 2007 development environment" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_MOSS-2007-Development-Environment.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-785x596.jpg)
 
 DEV is comprised of five VMs running on a single Virtual Server 2005 host:
 

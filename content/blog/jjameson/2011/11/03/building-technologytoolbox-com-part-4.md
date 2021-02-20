@@ -463,13 +463,13 @@ Here is the current content of the Style Guide for the static HTML prototype  fo
 Figure 1 shows the corresponding page rendered in the browser. [Note: This is  not intended to be an eye chart. Normally, I would trim images like this before  including them in a post, but in this case I wanted to be sure you could see the  page in its entirety (by clicking the **See full-sized image** link  below.)]
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Style-Guide.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-110x600.png"
 alt="Style Guide for TechnologyToolbox.com"
 height="600"
 width="110"
 title="Figure 1: Style Guide for TechnologyToolbox.com" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Style-Guide.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-989x5388.png)
 
 ### Color palette
 
@@ -480,13 +480,13 @@ I used to insert a "glossary" in the CSS (using comments) of the various hex  co
 Now I simply create a bunch of "color swatches" in the Style Guide that show  the various colors and provide descriptions for where the colors are used, as shown  below.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Color-Palette.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-518x600.png"
 alt="Technology Toolbox color palette"
 height="600"
 width="518"
 title="Figure 2: Technology Toolbox color palette" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Color-Palette.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-556x644.png)
 
 ### Sample style guide for SharePoint 2010
 

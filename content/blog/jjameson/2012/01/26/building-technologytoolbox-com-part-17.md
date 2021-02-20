@@ -26,13 +26,13 @@ distinct Visual Studio solutions (specifically the "Caelum" solution in Visual
 Studio 2010 and the "Subtext" solution in Visual Studio 2008).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Technology-Toolbox-Solution-Architecture.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture for TechnologyToolbox.com"
 height="520"
 width="600"
 title="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Technology-Toolbox-Solution-Architecture.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 Note that the Caelum website is a "classic" ASP.NET Web application, while
 Subtext is an ASP.NET MVC application. During the deployment process, the two

@@ -33,13 +33,13 @@ The framework essentially consists of the **ModalPopupWebPart** abstract        
 The following figure illustrates the various UI elements of a modal popup window.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Elements.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png"
 alt="Elements of a modal popup window"
 height="241"
 width="600"
 title="Figure 1: Elements of a modal popup window" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Modal-Popup-Window-Elements.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-649x261.png)
 
 As noted previously, the **ModalPopupWebPart** base class does not         specify the main content to render in the popup window; nor does it specify the         dimensions (width and height) of the popup window. Instead, Web Parts that derive         from **ModalPopupWebPart** specify the content (and, optionally, the         width and height of the main content).
 
@@ -102,7 +102,7 @@ modalPanelContent.Height = new Unit(100);
 &hellip;it is possible to constrain the height of the modal popup window and         show a scrollbar as necessary. This is illustrated in the following figure.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Modal-Popup-Window-Constrained-Height.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
 alt="Constraining the height of content displayed in a modal popup window"
 height="190"
 width="460"

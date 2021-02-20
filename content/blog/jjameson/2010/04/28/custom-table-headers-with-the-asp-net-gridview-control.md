@@ -38,10 +38,10 @@ In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
-| ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
+| ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% ![(Different KPI Thresholds)](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Kpi_ShowProblems.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -252,7 +252,7 @@ Running the Web application at this point shows the images in place of the lengt
 
 {{< table class="small" >}}
 
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
+| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
@@ -333,7 +333,7 @@ Running the Web application at this point shows the **Thresholds**  header above
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
-| ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
+| ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
@@ -390,7 +390,7 @@ What happens when a post back occurs on the page? Recall that I originally added
 
 {{< table class="small" >}}
 
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-0.gif) | ![Meets](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-1.gif) | ![Does Not Meet](https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_kpidefault-2.gif) |
+| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |

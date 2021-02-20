@@ -32,13 +32,13 @@ Unfortunately, after a few minutes I discovered that my PC was infected with the
 I managed to avoid the land mines with the virus and quickly removed Soluto (which         also removed Antivir Solution Pro). I was then able to start Microsoft Security         Essentials, at which point it detected a Trojan horse on my computer (as shown in         the screenshot below).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Microsoft%20Security%20Essentials%20-%20trojans.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-600x420.png"
 alt="Microsoft Security Essentials - trojans"
 height="420"
 width="600"
 title="Figure 1: Microsoft Security Essentials - trojans" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Microsoft%20Security%20Essentials%20-%20trojans.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-800x560.png)
 
 I am now running a "Full scan" with Microsoft Security Essentials just to be safe.
 

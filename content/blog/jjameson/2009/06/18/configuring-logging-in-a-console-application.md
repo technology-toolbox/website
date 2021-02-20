@@ -155,13 +155,13 @@ Notice that none of the log messages are displayed in the console output.
 However, if we start [DebugView](http://technet.microsoft.com/en-us/sysinternals/bb896647.aspx)  before running the program, then we can easily view all of the log messages.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_DebugView.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/DebugView-600x190.png"
 alt="DebugView (a.k.a. Dbgview.exe)"
 height="190"
 width="600"
 title="Figure 1: DebugView (a.k.a. Dbgview.exe)" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_DebugView.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/DebugView-946x300.png)
 
 To show the log messages in the console, we simply need to configure a listener.  For a console application, this is done using the application configuration file  (which is located in the folder with the application executable and has the name  of the application with the ".config" file name extension added).
 

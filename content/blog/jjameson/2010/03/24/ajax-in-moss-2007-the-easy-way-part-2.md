@@ -26,13 +26,13 @@ In my [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-p
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_AJAX%20in%20SharePoint.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
 alt="AJAX in SharePoint"
 height="417"
 width="600"
 title="Figure 1: AJAX in SharePoint" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
 Assuming you are familiar with the **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)** class in ASP.NET AJAX, the sample Web Part should be mostly  self-explanatory:
 

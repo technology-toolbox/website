@@ -36,7 +36,7 @@ So, the whole point of initially putting the solution in the **Main**         fo
 So, if you know your way around Visual Studio even just a little, you should be         able to quickly create the following shell structure:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Solution-Explorer-Step-1.JPG"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Solution-Explorer-Step-1-314x452.JPG"
 alt="Solution Explorer view of Visual Studio solution"
 height="452"
 width="314"
@@ -45,13 +45,13 @@ title="Figure 1: Solution Explorer view of Visual Studio solution" >}}
 In Windows Explorer, the corresponding folder structure looks like this:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/7/r_Windows-Explorer-Step-1.JPG"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-600x379.JPG"
 alt="Windows Explorer view of Visual Studio solution"
 height="379"
 width="600"
 title="Figure 2: Windows Explorer view of Visual Studio solution" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/7/o_Windows-Explorer-Step-1.JPG)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-767x485.JPG)
 
 A few notes...
 

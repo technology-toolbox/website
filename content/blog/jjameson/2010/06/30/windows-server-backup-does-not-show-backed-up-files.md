@@ -55,9 +55,9 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 >
 > However, when I try to recover the files, it appears as if the files were not backed             up, as shown in the screenshot below.
 >
-> {{< figure src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/8/r_Windows%20Server%20Backup%20-%20Recovery%20Wizard%20Bug.png" alt="Windows Server Backup-Recovery Wizard - bug" height="465" width="600" >}}
+> {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-600x465.png" alt="Windows Server Backup-Recovery Wizard - bug" height="465" width="600" >}}
 >
-> [(See full-sized image)](/blog/images/www_technologytoolbox_com/blog/jjameson/8/o_Windows%20Server%20Backup%20-%20Recovery%20Wizard%20Bug.png)
+> [(See full-sized image)](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-756x586.png)
 >
 > Note that the Recovery Wizard doesn't show any files or folders under the C:\BackedUp\Profiles\jjameson             folder (even though the backup log lists the files and folders in this location).
 >

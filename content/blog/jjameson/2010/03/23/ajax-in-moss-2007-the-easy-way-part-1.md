@@ -189,13 +189,13 @@ cd ..\..\Web\DeploymentFiles\Scripts
 The following screenshot shows what the site looks like after creating the Web  application, fixing the master page, and adding the sample Web Part. Note that this  sample isn't configured for FBA and anonymous access (since I was trying to pare  down the samples as much as possible).
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/9/r_AJAX%20in%20SharePoint.png"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
 alt="AJAX in SharePoint"
 height="417"
 width="600"
 title="Figure 1: AJAX in SharePoint" >}}
 
-[See full-sized image.](/blog/images/www_technologytoolbox_com/blog/jjameson/9/o_AJAX%20in%20SharePoint.png)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
 Here's the current implementation of **SharePointAjaxHelper** (in  case you don't want to bother downloading the attachment in order to view the code):
 
