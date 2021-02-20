@@ -76,7 +76,7 @@ robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
 Factor #3 is simply a matter of creating two shortcuts on my taskbar:
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Taskbar-Shortcuts.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
 alt="Taskbar Shortcuts"
 height="96"
 width="301"

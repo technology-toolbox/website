@@ -23,7 +23,7 @@ Nearly three years ago, I wrote a post that described the [BackedUp and NotBacke
 I also showed how I created taskbar shortcuts to quickly access my NotBackedUp and         Toolbox folders.
 
 {{< figure
-src="https://www.technologytoolbox.com/blog/images/www_technologytoolbox_com/blog/jjameson/10/o_Taskbar-Shortcuts.jpg"
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
 alt="Taskbar shortcuts (Windows Vista)"
 height="96"
 width="301"
