@@ -2,3 +2,6 @@ baseURL = "https://www.technologytoolbox.com/"
 languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
+
+[permalinks]
+  categories = "/blog/jjameson/category/:title/"
