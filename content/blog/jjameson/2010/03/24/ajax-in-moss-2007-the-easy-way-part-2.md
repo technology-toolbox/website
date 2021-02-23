@@ -111,7 +111,7 @@ cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
 ```
 
-Attempting to browse to the home page of the site now results in an error. After  tweaking the Web.config file to set `<SafeMode CallStack="true"  ...>` and `<customErrors mode="Off"  />`, the details of the error are revealed:
+Attempting to browse to the home page of the site now results in an error. After  tweaking the Web.config file to set `<SafeMode CallStack="true" ...>` and `<customErrors mode="Off" />`, the details of the error are revealed:
 
 {{< blockquote "font-italic text-danger" >}}
 

@@ -1126,7 +1126,7 @@ I don't know about you, but I think that's pretty darn cool!
 
 Before I wrap things up for this post, I want to point out that I'm not very  fond of manually modifying configuration files. As I've stated before, this is prone  to human error and quickly becomes tedious when you have to do it over and over  again for different environments or whenever you decide to nuke your LOCAL or DEV  SharePoint Web application and recreate it (which is something I tend to do rather  frequently).
 
-Consequently, I use custom StsAdm.exe commands to add the event source and enable  logging to the event log via the`<system.diagnostics>`  configuration elements shown above.
+Consequently, I use custom StsAdm.exe commands to add the event source and enable  logging to the event log via the `<system.diagnostics>`  configuration elements shown above.
 
 After deploying the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Command.wsp),  the following command must be run once on each Web server in each SharePoint environment  (e.g. LOCAL, DEV, TEST, and PROD):
 

@@ -224,7 +224,7 @@ binding redirection](http://msdn.microsoft.com/en-us/library/2fc472t2%28VS.80%29
 Instead I fired up Reflector on TFSUploadReports.exe and observed that it really  wasn't doing anything too complex -- essentially just reading the report configuration  file and then uploading the RDL files using the [SOAP interface for
 SQL Server Reporting Services](http://msdn.microsoft.com/en-us/library/ms154052.aspx).
 
-Putting aside any concerns about copyright infringement or licensing issues for  this specific scenario, I copied the code from Reflector into a new console application  project in Visual Studio, added a Web Reference to [http://cyclops/ReportServer/ReportService2005.asmx?wsdl](http://cyclops/ReportServer/ReportService2005.asmx?wsdl),  and made a few tweaks to get the code to compile (e.g. changing `ReportingService`references to `ReportingService2005`). After a little  debugging, I discovered that I also had to change the URL of the Web service proxy:
+Putting aside any concerns about copyright infringement or licensing issues for  this specific scenario, I copied the code from Reflector into a new console application  project in Visual Studio, added a Web Reference to [http://cyclops/ReportServer/ReportService2005.asmx?wsdl](http://cyclops/ReportServer/ReportService2005.asmx?wsdl),  and made a few tweaks to get the code to compile (e.g. changing `ReportingService` references to `ReportingService2005`). After a little  debugging, I discovered that I also had to change the URL of the Web service proxy:
 
 ```
 private static void CreateReportServerProxy()

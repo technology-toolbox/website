@@ -53,13 +53,13 @@ In other words, it's essentially the same
 In my earlier post, I described adding a `BeforeDropBuild` target to the TFSBuild.proj
 file in order to remove extraneous assemblies from the build. However, since
 I'm now using TFS 2010 build (and not using the UpgradeTemplate.xaml build process
-template), the TFSBuild.proj is no longer used. Hence a `BeforeDropBuild`target no longer
+template), the TFSBuild.proj is no longer used. Hence a `BeforeDropBuild` target no longer
 does the trick.
 
 Fortunately, the solution is very easy. I simply copied the target that I
 created previously and pasted it into the individual Visual Studio project files
-(renaming the target in the process). Instead of hooking into `BeforeDropBuild`(which is meaningless
-when compiling Visual Studio projects), I now hook into the `AfterBuild`target.
+(renaming the target in the process). Instead of hooking into `BeforeDropBuild` (which is meaningless
+when compiling Visual Studio projects), I now hook into the `AfterBuild` target.
 
 I think this makes more sense with an example.
 

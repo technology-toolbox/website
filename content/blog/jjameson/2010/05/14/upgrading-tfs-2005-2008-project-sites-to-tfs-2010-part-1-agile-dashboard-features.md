@@ -77,7 +77,7 @@ command:
 >
 > If you attempt to run it from a remote client, you'll get an error
 > that suggests you specified an invalid value for the SharePoint Web
-> application (i.e. the `<ProjectSiteWebApplication>`element). Apparently, this command ultimately invokes
+> application (i.e. the `<ProjectSiteWebApplication>` element). Apparently, this command ultimately invokes
 > the SharePoint object model and therefore cannot find the SharePoint
 > Web application if you try to run it remotely.
 

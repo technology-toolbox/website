@@ -205,14 +205,14 @@ element with `class="entry-title"`.
 
 Similar to the [first
 example for the hAtom microformat](http://microformats.org/wiki/hatom-examples), I use an unordered list to display the
-post metadata (`<ul  class="post-info">`). The
+post metadata (`<ul class="post-info">`). The
 corresponding list items then specify the various `class` attributes according to the
-hAtom schema (e.g. `<li  class="published">`).
+hAtom schema (e.g. `<li class="published">`).
 
 > **Note**
 >
 > At this point, I have deliberately deviated from the
-> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern") for the publication date (i.e. `<li  class="published">`)
+> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern") for the publication date (i.e. `<li class="published">`)
 > due to the known accessibility issues with the Datetime Design Pattern
 > (i.e. using an `<abbr>`
 > element to represent the date/time with the `title` attribute containing
@@ -222,10 +222,10 @@ hAtom schema (e.g. `<li  class="published">`).
 > [Value Class
 > Pattern](http://microformats.org/wiki/value-class-pattern).
 
-The post summaries are rendered as paragraphs inside `<div  class="entry-summary">`
+The post summaries are rendered as paragraphs inside `<div class="entry-summary">`
 elements.
 
-By adding the `<span  class="label">`elements
+By adding the `<span class="label">` elements
 to various pieces of text, I can easily hide some portions of the content via
 CSS. For example, notice how the first blog post in Figure 2 shows the following:
 
@@ -252,7 +252,7 @@ Figure 3 notice how the **Last Day with Microsoft** post includes
 an icon and the corresponding number of comments on the same line as the publication
 date, whereas the first post in the list does not. This is accomplished by adding
 an additional class to the list item to indicate that a particular post has
-no comments (i.e. `<li  class="comments none">`).
+no comments (i.e. `<li class="comments none">`).
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
@@ -266,8 +266,8 @@ title="Figure 3: Blog home page" >}}
 ### HTML markup for individual blog post
 
 When viewing a specific blog post, the HTML markup is very similar to the
-blog home page. The primary difference is that the `<div  class="entry-summary">`
-element is replaced by the `<div  class="entry-content">`
+blog home page. The primary difference is that the `<div class="entry-summary">`
+element is replaced by the `<div class="entry-content">`
 element.
 
 ```
@@ -321,8 +321,8 @@ element.
 The "trick" to formatting the same HTML differently when viewing individual
 blog posts (for example, to show the time portion of the publication date) is
 to specify a different "container" element than the blog home page (e.g.
-`<div  id="blogPost">` instead
-of `<div  id="blogHome">`).
+`<div id="blogPost">` instead
+of `<div id="blogHome">`).
 
 > **Tip**
 >

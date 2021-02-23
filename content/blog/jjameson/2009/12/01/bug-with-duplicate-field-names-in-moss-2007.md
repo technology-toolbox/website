@@ -188,7 +188,7 @@ Lastly, note that the OOTB fieldswss.xml also contains the following:
     </Field>
 ```
 
-Unfortunately, this field definition doesn't specify `Format="DateOnly"`either -- otherwise I would have just used it instead.
+Unfortunately, this field definition doesn't specify `Format="DateOnly"` either -- otherwise I would have just used it instead.
 
 Thus I reverted back to using my original AnnouncementStartDate and AnnouncementEndDate custom fields. It's not ideal, but it works.
 

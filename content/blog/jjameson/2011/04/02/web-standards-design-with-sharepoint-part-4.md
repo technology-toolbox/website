@@ -229,7 +229,7 @@ At this point, we at least have a site that isn't "hard on the eyes" or potentia
 
 Now let's get rid of the **Tugboat Coffee**, **Home**, and **Press Releases** content on the left side of the page.
 
-This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">`         , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" />`and `<div id="s4-leftpanel">`)         and consequently adding some more hidden `ContentPlaceHolder`controls at the bottom of the page:
+This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">`         , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" />` and `<div id="s4-leftpanel">`)         and consequently adding some more hidden `ContentPlaceHolder`controls at the bottom of the page:
 
 ```
 <asp:Panel Visible="false" runat="server">
@@ -258,7 +258,7 @@ title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-1008x599.png)
 
-Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv">`element to add the `<div class="group" id="wrap">`element expected         by the Tugboat CSS files as well as the page footer:
+Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv">` element to add the `<div class="group" id="wrap">` element expected         by the Tugboat CSS files as well as the page footer:
 
 ```
 <div class="s4-ca main-container" id="MSO_ContentDiv" runat="server">
@@ -442,7 +442,7 @@ a:link, a:visited {
 }
 ```
 
-As you can see, I simply qualified Dan's CSS rules a little bit in order to style         only those links that reside in the `<div class="s4-ca main-container">`element. However, this change "broke" one of the other CSS         rules in the Tugboat solution (specifically the color of the "News Archives" button).         Therefore, we need one more tweak to master.css:
+As you can see, I simply qualified Dan's CSS rules a little bit in order to style         only those links that reside in the `<div class="s4-ca main-container">` element. However, this change "broke" one of the other CSS         rules in the Tugboat solution (specifically the color of the "News Archives" button).         Therefore, we need one more tweak to master.css:
 
 ```
 /*

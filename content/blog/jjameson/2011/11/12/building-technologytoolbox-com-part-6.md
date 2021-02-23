@@ -531,7 +531,7 @@ truth" with the corresponding value to the business.]
 
 Next I add a note to each migrated post (indicating that it originally appeared
 on my MSDN blog and then proceed to parsing the main "body" of the post (specified
-in the `<div  class="post-content user-defined-markup">`
+in the `<div class="post-content user-defined-markup">`
 element).
 
 #### Transforming blog post content

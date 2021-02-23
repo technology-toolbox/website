@@ -53,7 +53,7 @@ In HTML markup, this is expressed as:
 }</code></pre></div>
 ```
 
-The `<div class='codeBlock'>`element is used to constrain lengthy code blocks (i.e. show a vertical scrollbar when necessary) and also format code with a background color and border.
+The `<div class='codeBlock'>` element is used to constrain lengthy code blocks (i.e. show a vertical scrollbar when necessary) and also format code with a background color and border.
 
 Note that in the stricted sense, this isn't 100% semantic markup because the `<span>` tags are used to apply presentational styles, namely the various font colors. Truly semantic markup for code would specify something more like this:
 
@@ -98,7 +98,7 @@ However, there were a couple of "fixes" that I found I needed:
 
 I also wanted to eliminate extraneous `<span>` tags for the default color (i.e. black).
 
-Note that -- at least to this point -- I haven't made any attempt to generate 100% semantic markup (by converting the `style`attributes to corresponding CSS class names), because I think it would be somewhat brittle (i.e. dependent on the default color options in Visual Studio) and, honestly, not worth the effort.
+Note that -- at least to this point -- I haven't made any attempt to generate 100% semantic markup (by converting the `style` attributes to corresponding CSS class names), because I think it would be somewhat brittle (i.e. dependent on the default color options in Visual Studio) and, honestly, not worth the effort.
 
 > **Update (2010-04-27)**
 >

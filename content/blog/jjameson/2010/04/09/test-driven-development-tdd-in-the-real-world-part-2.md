@@ -93,7 +93,7 @@ From this foundation, let's start with the following unit tests:
         }
 ```
 
-You might have written the first unit test slightly different -- perhaps using  the `Assert.IsNull` method instead,  but it doesn't really matter (at least not to me), or perhaps you don't use `const`as aggressively as I do.  [I think that must be the ol' C++ developer in me that likes to easily catch myself  doing something "stupid" in code.]
+You might have written the first unit test slightly different -- perhaps using  the `Assert.IsNull` method instead,  but it doesn't really matter (at least not to me), or perhaps you don't use `const` as aggressively as I do.  [I think that must be the ol' C++ developer in me that likes to easily catch myself  doing something "stupid" in code.]
 
 You also might tend to name your unit tests with something more meaningful than `Truncate001` and `Truncate002`. Personally, most of the time  I don't like to expend the effort to figure out what to name my test methods.
 
@@ -183,7 +183,7 @@ public static string Truncate(
         }
 ```
 
-Note that for `public`methods,  I really don't like to see `Debug.Assert`being used to validate the parameters (on the other hand, this is actually  what I prefer to be used in `private`methods). We'll fix that in a minute.
+Note that for `public` methods,  I really don't like to see `Debug.Assert` being used to validate the parameters (on the other hand, this is actually  what I prefer to be used in `private` methods). We'll fix that in a minute.
 
 However, we still encounter one more error when trying to compile the DeveloperTests  project:
 

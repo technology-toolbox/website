@@ -102,7 +102,7 @@ Assuming the referenced site is based on the out-of-the-box Team Site template, 
 </QuickLaunch>
 ```
 
-Note that each `<NavigationNode>`element may contain child `<NavigationNode>` elements (representing the hierarchical nature of the quick launch navigation).
+Note that each `<NavigationNode>` element may contain child `<NavigationNode>` elements (representing the hierarchical nature of the quick launch navigation).
 
 The above XML represents the following quick launch navigation:
 

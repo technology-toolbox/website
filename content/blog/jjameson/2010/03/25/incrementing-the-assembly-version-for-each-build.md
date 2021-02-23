@@ -78,7 +78,7 @@ After downloading and installing the custom tasks, import them into your TFSBuil
 <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
 ```
 
-Note that there may be times when we want to build the solution without incrementing  the assembly version; for example, to test changes to TFSBuild.proj on a local development  environment (as opposed to checking in the changes and "testing" the changes on  the build server). Therefore, let's allow a custom property to be specified that  will skip the process of incrementing the assembly version. Inside the `<PropertyGroup>`element, add the following:
+Note that there may be times when we want to build the solution without incrementing  the assembly version; for example, to test changes to TFSBuild.proj on a local development  environment (as opposed to checking in the changes and "testing" the changes on  the build server). Therefore, let's allow a custom property to be specified that  will skip the process of incrementing the assembly version. Inside the `<PropertyGroup>` element, add the following:
 
 ```
 <!-- Set this property to true to build without incrementing the assembly version. -->
@@ -285,7 +285,7 @@ Finally, use the **BuildNumberOverrideTarget** and a custom target  to actually 
 
 Note that in the example above, the `BuildType`  attribute on the `<Version>`  element is set to `"Increment"` when  the assembly version should be incremented (thus generating build numbers like 1.0.37.0,  1.0.38.0, etc.). This is what I recommend for the **Main** branch.
 
-For the **QFE** branch, I recommend changing the `BuildType` attribute to `"None"`and the `RevisionType`attribute  to `"Increment"` (to generate build  numbers like 1.0.38.1, 1.0.38.2, etc.).
+For the **QFE** branch, I recommend changing the `BuildType` attribute to `"None"` and the `RevisionType` attribute  to `"Increment"` (to generate build  numbers like 1.0.38.1, 1.0.38.2, etc.).
 
 Refer to one of my previous posts more information on [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
 

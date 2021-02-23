@@ -194,7 +194,7 @@ I added a new user control to the project (**RecentPosts.ascx**),
 copied the sample HTML above into the user control, and then added an instance
 of the control to the site home page.
 
-Next I replaced the static `<div  class="hentry">` elements
+Next I replaced the static `<div class="hentry">` elements
 with an ASP.NET **Repeater** control:
 
 ```

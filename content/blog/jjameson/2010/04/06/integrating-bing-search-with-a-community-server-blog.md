@@ -65,7 +65,7 @@ To let your visitors search your website, add the following code to your page(s)
 
 This seems pretty simple...but, unfortunately it's a little too simple (unless your site is serving up plain ol' HTML pages).
 
-The problem is that pages served up by Community Server (or any ASP.NET application for that matter) already have a `<form>` element -- which usually spans the entire page. Consequently, if you simply copy/paste the HTML content above, you will end up with nested `<form>` elements. [While some browsers might be able to successfully handle nested `<form>`elements, it's definitely not valid HTML and therefore I don't recommend even attempting it.]
+The problem is that pages served up by Community Server (or any ASP.NET application for that matter) already have a `<form>` element -- which usually spans the entire page. Consequently, if you simply copy/paste the HTML content above, you will end up with nested `<form>` elements. [While some browsers might be able to successfully handle nested `<form>` elements, it's definitely not valid HTML and therefore I don't recommend even attempting it.]
 
 Instead, we need to substitute *equivalent* functionality without relying on a separate `<form>` element.
 

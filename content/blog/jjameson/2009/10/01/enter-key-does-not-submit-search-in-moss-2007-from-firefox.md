@@ -32,7 +32,7 @@ Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web Serve
 
 `try {if(null  != event) event.returnValue = false;} catch (err) {}`
 
-Instead of returning `false`--  and subsequently cascading this return value to the `OnKeyPress` event  handler (which would subsequently return `false`  to cancel the form submission) -- SharePoint sets `event.returnValue`  to `false` in order to cancel the  form submission. While this works fine for Internet Explorer -- and apparently Safari  as well -- it does not work for Firefox. In fact, I discovered that `event`  is undefined at this point when running under Firefox. Since the form submission  is not canceled in Firefox, there is a "race condition" between the form submission  caused by the `Enter` key being pressed and the redirect to the search  results page (i.e. line 606 of Search.js):
+Instead of returning `false` --  and subsequently cascading this return value to the `OnKeyPress` event  handler (which would subsequently return `false`  to cancel the form submission) -- SharePoint sets `event.returnValue`  to `false` in order to cancel the  form submission. While this works fine for Internet Explorer -- and apparently Safari  as well -- it does not work for Firefox. In fact, I discovered that `event`  is undefined at this point when running under Firefox. Since the form submission  is not canceled in Firefox, there is a "race condition" between the form submission  caused by the `Enter` key being pressed and the redirect to the search  results page (i.e. line 606 of Search.js):
 
 `window.location = Url + sch;`
 

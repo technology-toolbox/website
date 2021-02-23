@@ -262,7 +262,7 @@ The **AddAuthenticationWebConfigModifications** method adds the  following eleme
     </authentication>
 ```
 
-Note that SharePoint automatically sets the `mode` attribute correctly in the two Web.config  files for the Web application; in other words, `mode="Windows"`  in the Web.config file for the default zone (e.g. [http://fabrikam-local](http://fabrikam-local/)) and `mode="Forms"`  in the Web.config file for the Internet zone (e.g. [http://www-local.fabrikam.com](http://www-local.fabrikam.com/)). Consequently,  we only need to add the `<forms  />` element -- and, fortunately, there's no harm in specifying the `<forms  />` element even when `mode="Windows"`.
+Note that SharePoint automatically sets the `mode` attribute correctly in the two Web.config  files for the Web application; in other words, `mode="Windows"`  in the Web.config file for the default zone (e.g. [http://fabrikam-local](http://fabrikam-local/)) and `mode="Forms"`  in the Web.config file for the Internet zone (e.g. [http://www-local.fabrikam.com](http://www-local.fabrikam.com/)). Consequently,  we only need to add the `<forms />` element -- and, fortunately, there's no harm in specifying the `<forms />` element even when `mode="Windows"`.
 
 #### AddMembershipWebConfigModifications
 
@@ -305,7 +305,7 @@ The **AddRoleManagerWebConfigModifications** method adds the following  elements
     </roleManager>
 ```
 
-Notice that the default role provider is set to `AspNetWindowsTokenRoleProvider,`because  this is required when accessing the site via the intranet URL using Windows Authentication.  Also note that the collection of role providers is not cleared, but rather the default `AspNetSqlRoleProvider` is explicitly  removed instead. In other words, we want to use either `AspNetWindowsTokenRoleProvider` (for the  default/intranet URL) or `FabrikamSqlRoleProvider`  (for the Internet zone). More on the `FabrikamSqlRoleProvider`  in a moment...
+Notice that the default role provider is set to `AspNetWindowsTokenRoleProvider,` because  this is required when accessing the site via the intranet URL using Windows Authentication.  Also note that the collection of role providers is not cleared, but rather the default `AspNetSqlRoleProvider` is explicitly  removed instead. In other words, we want to use either `AspNetWindowsTokenRoleProvider` (for the  default/intranet URL) or `FabrikamSqlRoleProvider`  (for the Internet zone). More on the `FabrikamSqlRoleProvider`  in a moment...
 
 #### SharePointWebConfigHelper.ApplyWebConfigModifications
 

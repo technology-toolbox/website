@@ -129,7 +129,7 @@ I mentioned before that there were two problems with the original HTML
 tag shown above. Actually there are more than two, but for the sake of keeping
 this post reasonably short, I'll only cover two of them here.
 
-The second problem is a rather obscure issue in the `<img>`element:
+The second problem is a rather obscure issue in the `<img>` element:
 
 ```
 <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
