@@ -11,7 +11,7 @@ tags: ["MOSS 2007", "SharePoint
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>       This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx)
 >
@@ -207,8 +207,11 @@ SPWeb parameter to access the **Reusable Content** list.
 
 > **Important**
 >
-> Also note that, unlike the original **HtmlEditorInternal** implementation, I don't leverage any caching when fetching **Reusable
-> Content** list items. Consequently, you should be wary of using this implementation in very high volume scenarios. For the purposes of my current project, performance has proved to be more than adequate.
+>       Also note that, unlike the original **HtmlEditorInternal** 
+>       implementation, I don't leverage any caching when fetching **Reusable 
+>       Content** list items. Consequently, you should be wary of using 
+>       this implementation in very high volume scenarios. For the purposes 
+>       of my current project, performance has proved to be more than adequate.
 
 I should point out, however, that I still prefer to use the out-of-the-box
 SharePoint code whenever possible, which is why I provide a wrapper method in
@@ -327,5 +330,8 @@ I can scrap my custom code and go with the out-of-the-box SharePoint code instea
 
 > **Note**
 >
-> You must be running Visual Studio 2010 Service Pack 1 in order to run my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like the one I described in a [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
+>       You must be running Visual Studio 2010 Service Pack 1 in order to run 
+>       my SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments 
+>       like the one I described in a
+>       [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
 

@@ -10,7 +10,7 @@ tags: ["Core Development"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx)
 >
@@ -86,7 +86,7 @@ Note that the process illustrated in Figure 3 does not require any manual interv
 
 > **Note**
 >
-> The daily build provides a "heartbeat" of the development effort that can be monitored regularly by all team members -- not just the Development team.
+> The daily build provides a "heartbeat" of the development effort that can be monitored             regularly by all team members -- not just the Development team.
 
 As this cycle repeats (as more features are implemented in the solution), the Test         team -- in conjunction with the Development team -- identifies a specific build         of the solution to promote to the TEST environment. This is illustrated in Figure         4.
 

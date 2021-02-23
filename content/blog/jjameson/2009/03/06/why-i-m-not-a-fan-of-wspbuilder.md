@@ -73,5 +73,7 @@ Personally speaking -- and again, this is just my opinion here -- I prefer makec
 
 > **Update (2009-03-31)**
 >
-> Note that I have posted an [update on WSPBuilder](/blog/jjameson/2009/03/31/updated-thoughts-on-wspbuilder) based on some feedback I received from Carsten Keutmann, the creator of WSPBuilder.
+> Note that I have posted an
+> [update on WSPBuilder](/blog/jjameson/2009/03/31/updated-thoughts-on-wspbuilder) based on some feedback I received from Carsten
+> Keutmann, the creator of WSPBuilder.
 

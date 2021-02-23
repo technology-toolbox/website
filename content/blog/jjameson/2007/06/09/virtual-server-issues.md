@@ -10,7 +10,7 @@ tags: ["MOSS 2007", "Virtualization"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>       This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx)
 >

@@ -11,7 +11,7 @@ tags: ["SharePoint 2010", "Tugboat"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx)
 >
@@ -374,7 +374,10 @@ ManageSubwebs, ManageWeb, ViewUsageData ">
 
 > **Important**
 >
-> I originally specified `ViewFormPages` in the list of permissions, but discovered anonymous users have this permission by default in SharePoint 2010. I swear this wasn't the case in MOSS 2007 (due to the "form lockdown" feature).
+>             I originally specified `ViewFormPages`
+>             in the list of permissions, but discovered anonymous users have this permission
+>             by default in SharePoint 2010. I swear this wasn't the case in MOSS 2007 (due to
+>             the "form lockdown" feature).
 
 With this approach, the ribbon renders as expected for both anonymous users (Figure         10) and authenticated users (Figure 12).
 
@@ -474,7 +477,8 @@ div.more-btn a:link, div.more-btn a:visited {
 
 > **Note**
 >
-> I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">`element but then realized I couldn't easily fix the color of the "News Archives" button.
+>             I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">`element but then realized I couldn't easily fix the color of the "News Archives"
+>             button.
 
 The only other tweak that I made to the Tugboat master page was to move the page         status bar above the masthead. In my opinion, this provides a better user experience         for content authors.
 
@@ -523,7 +527,7 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
 
 > **Note**
 >
-> Technically, you don't have to set the environment variables (and use the "-dev" accounts). However, I recommend this in order to bypass SharePoint timer jobs when deploying the WSPs.
+> Technically, you don't have to set the environment variables (and use the "-dev"             accounts). However, I recommend this in order to bypass SharePoint timer jobs when             deploying the WSPs.
 
 At this point you should be able to modify your hosts file accordingly and browse         to either [http://www-local.tugboatcoffee.com](http://www-local.tugboatcoffee.com)         (to view the site as an anonymous user) or [http://tugboatcoffee-local](http://tugboatcoffee-local)         (to view the site as an administrator).
 

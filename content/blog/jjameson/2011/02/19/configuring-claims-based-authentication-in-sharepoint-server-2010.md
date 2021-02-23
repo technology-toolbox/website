@@ -134,11 +134,18 @@ In this step, the database for storing ASP.NET membership and role information  
 
 > **Important**
 >
-> Database access must be granted to both the service account used for the Fabrikam Web application and the SharePoint farm account. If the SharePoint farm account does not have access to the database, the Security Token Service used for claims-based authentication will be unable to validate the credentials.
+> Database access must be granted to both the service account used for the
+> Fabrikam Web application and the SharePoint farm account. If the SharePoint
+> farm account does not have access to the database, the Security Token Service
+> used for claims-based authentication will be unable to validate the credentials.
 
 > **Note**
 >
-> The reason the database roles are different between the two service accounts is because the SharePoint farm account only needs permissions to validate credentials and determine role membership, whereas the Fabrikam Web application service account needs additional permissions in order to support other scenarios for the Fabrikam site (e.g. "Change Password" and "Reset Password").
+> The reason the database roles are different between the two service accounts
+> is because the SharePoint farm account only needs permissions to validate
+> credentials and determine role membership, whereas the Fabrikam Web application
+> service account needs additional permissions in order to support other scenarios
+> for the Fabrikam site (e.g. "Change Password" and "Reset Password").
 
 ### Step 2 - Create the Fabrikam Web application and initial site collection
 
@@ -330,29 +337,40 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, "Web - Copy.config"), so that if a mistake is made in the file, you can delete it and use the original file.
+> Before you make changes to the Web.config file, make a copy of it by
+> using a different name (for example, "Web - Copy.config"), so that if
+> a mistake is made in the file, you can delete it and use the original
+> file.
 > 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
 >
-> If you see a dialog box that says that Windows cannot open the file, click **Select the program from a list**, and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then click **OK**.
-> 5. In the Web.config editor:
-> 1. After the end of the **/configuration/configSections**
-> element (i.e. `</configSections>`),
-> add the following elements:
+>       If you see a dialog box that says that Windows cannot open the file, 
+>       click **Select the program from a list**, and then click
+>       **OK**. In the **Open With** dialog box, click
+>       **Notepad**, and then click **OK**.
 
-        ```
-        <connectionStrings>
-            <add name="FabrikamDemo"
-              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-          </connectionStrings>
-        ```
+5. In the Web.config editor:
+   1. After the end of the **/configuration/configSections**
+      element (i.e. `</configSections>`),
+      add the following elements:
+      
+      ```
+      <connectionStrings>
+          <add name="FabrikamDemo"
+            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+        </connectionStrings>
+      ```
 
 > **Important**
 >
-> Be sure to replace the **{databaseServer}** placeholder in the connection string with the name of the database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+>       	Be sure to replace the **{databaseServer}** placeholder 
+>       	in the connection string with the name of the database server.
 
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -415,8 +433,10 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 > **Important**
 >
-> Be sure to replace the **{databaseServer}** placeholder in the connection string with the name of the database server.
-> 4. Save the changes to the Web.config file and close the editor.
+>       Be sure to replace the **{databaseServer}** placeholder 
+>       in the connection string with the name of the database server.
+
+4. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Web.config file for the Fabrikam Web application:
 
@@ -438,9 +458,13 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 > **Important**
 >
-> Be sure to replace the **{databaseServer}** placeholder in the connection string with the name of the database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+>       	Be sure to replace the **{databaseServer}** placeholder 
+>       	in the connection string with the name of the database server.
 
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"

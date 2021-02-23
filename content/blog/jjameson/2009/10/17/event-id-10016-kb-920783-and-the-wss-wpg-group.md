@@ -11,7 +11,7 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>       This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx)
 >
@@ -90,7 +90,9 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Note**
 >
-> When creating a new Web application, SharePoint automatically adds the corresponding service account to the local WSS\_WPG group on each SharePoint server in your farm.
+> When creating a new Web application, SharePoint automatically adds the
+> corresponding service account to the local WSS\_WPG group on each SharePoint
+> server in your farm.
 
 > **Update (2009-10-29)**
 >
@@ -112,7 +114,10 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Update (2010-05-03)**
 >
-> If performing this step on Windows Server 2008 R2, you must first take ownership of the corresponding registry key and grant Administrators permissions to update the configuration.
+>       If performing this step on Windows Server 2008 R2, you must first take 
+>       ownership of the corresponding registry key and grant Administrators 
+>       permissions to update the configuration.
+>       
 >
 > To take allow the configuration of the IIS WAMREG Admin Service to
 > be changed using the Component Services console:

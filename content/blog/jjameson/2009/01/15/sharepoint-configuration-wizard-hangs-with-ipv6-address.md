@@ -10,7 +10,7 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx)
 >

@@ -11,7 +11,7 @@ tags: ["Core Development", "Debugging"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx)
 >
@@ -57,7 +57,7 @@ In other words, the Development Plan should say:
 
 > **Important**
 >
-> Always include Debug symbols in the Release configuration of the setup projects -- or, preferably, make them available from a symbol server.
+> Always include Debug symbols in the Release configuration of the setup projects             -- or, preferably, make them available from a symbol server.
 
 Regarding John's book...I strongly recommend this book to anyone who considers himself         or herself a "serious developer." It is chock full of great tips and recommendations         for developing .NET solutions.
 

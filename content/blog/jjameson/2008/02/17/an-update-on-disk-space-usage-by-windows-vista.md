@@ -13,7 +13,7 @@ tags: ["Windows Vista"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx)
 >

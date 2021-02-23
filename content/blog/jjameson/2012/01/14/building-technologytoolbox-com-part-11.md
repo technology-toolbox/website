@@ -30,7 +30,10 @@ Posts** section, you'll notice the CSS `background` property is set to:
 
 > **Note**
 >
-> You could also use the IE Developer Tools to inspect the element in order to view the corresponding CSS rule, but I prefer the experience in Firebug instead (since, unlike IE, Firebug actually shows you the image in a tooltip when you hover over the URL in the CSS rule).
+> You could also use the IE Developer Tools to inspect the element in
+> order to view the corresponding CSS rule, but I prefer the experience
+> in Firebug instead (since, unlike IE, Firebug actually shows you the
+> image in a tooltip when you hover over the URL in the CSS rule).
 
 The "list item sprite" image is actually a 400x400 composite of multiple
 icons used throughout the site.
@@ -91,8 +94,12 @@ Aaron Barker explains more about this technique in the following blog post:
 
 > **Important**
 >
-> Not all of the CSS sprites used on the Technology Toolbox site use the diagonal layout. For example, the "radio button" images used in the "slider" control (i.e. to the right of the **SharePoint Architecture
-> and Development** heading in Figure 1) are rendered using a 22x40 sprite. In this case, there's no need to avoid potential issues due to a variable height of the element the CSS rule applies to.
+>       Not all of the CSS sprites used on the Technology Toolbox site use the 
+>       diagonal layout. For example, the "radio button" images used in the 
+>       "slider" control (i.e. to the right of the **SharePoint Architecture 
+>       and Development** heading in Figure 1) are rendered using a 22x40 
+>       sprite. In this case, there's no need to avoid potential issues due 
+>       to a variable height of the element the CSS rule applies to.
 
 ### Why is there all that white space between the icons?
 

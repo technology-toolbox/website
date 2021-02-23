@@ -11,7 +11,7 @@ tags: ["MOSS 2007", "WSS v3", "
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx)
 >

@@ -24,7 +24,8 @@ tags: ["TFS", "SharePoint
 
 > **Update (2010-05-20)**
 >
-> I made some changes to correct a few issues and also to include the final version of the XML input file that I used to update my TFS project sites.
+> I made some changes to correct a few issues and also to include the final
+> version of the XML input file that I used to update my TFS project sites.
 
 In my [previous post](/blog/jjameson/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell), I showed how you can use PowerShell to export the quick launch  navigation from a SharePoint site to XML and subsequently add, update, and reorder  navigation nodes by modifying the XML accordingly. In this post, I'll demonstrate  a practical application of that process.
 

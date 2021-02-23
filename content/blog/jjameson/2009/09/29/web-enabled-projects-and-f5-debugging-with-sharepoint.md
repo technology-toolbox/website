@@ -64,7 +64,9 @@ and then click **Set as StartUp Project**.
 
 > **Note**
 >
-> In addition to seeing the **Web** tab in project settings, you will also find that adding items like ASPX pages and ASCX controls is much easier after "Web-enabing" your project.
+> In addition to seeing the **Web** tab in project settings,
+> you will also find that adding items like ASPX pages and ASCX controls is
+> much easier after "Web-enabing" your project.
 
 To ensure ASP.NET debugging is enabled on the Web site [note these instructions  are for Windows Server 2008]:
 

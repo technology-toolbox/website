@@ -12,7 +12,7 @@ tags: ["Windows
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>       This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx)
 >

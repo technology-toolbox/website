@@ -11,7 +11,7 @@ tags: ["MOSS 2007"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/11/02/dumping-moss-2007-variations-part-3.aspx)
 >
@@ -34,7 +34,8 @@ If you are using variations, and you happen to notice your OWSTimer.exe process 
 
 > **Update (2007-11-28)**
 >
-> According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, only part of this bug is fixed in SP1. You'll need a post-SP1 QFE to completely resolve the out-of-memory issue.
+>             According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, only part of this bug is fixed in SP1. You'll
+>             need a post-SP1 QFE to completely resolve the out-of-memory issue.
 
 As I have mentioned before, the decision to abandon variations was not an easy one         to make and it is not possible to point to one particular problem as the proverbial         "straw."
 

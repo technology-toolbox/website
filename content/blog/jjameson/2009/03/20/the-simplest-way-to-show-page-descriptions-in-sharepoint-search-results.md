@@ -132,7 +132,11 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
 
 > **Update (2009-08-26)**
 >
-> Note that I originally specifed the following, but it looks like this was deemed to be a bug of some sort. Consequently, a patch -- released sometime after I originally validated the approach -- results in the first "&lt;" character being escaped, thus it *does* emit the raw server tags (well, almost).
+> Note that I originally specifed the following, but it looks like this was
+> deemed to be a bug of some sort. Consequently, a patch -- released sometime
+> after I originally validated the approach -- results in the first "&lt;"
+> character being escaped, thus it *does* emit the raw server tags
+> (well, almost).
 
 ```
 <meta name="description"        

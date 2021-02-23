@@ -60,7 +60,9 @@ the content into a table.
 
 > **Note**
 >
-> The pricing shown above has likely changed in the time since I gathered the data, and there may very well be additional products available today that I did not come across during my research.
+> The pricing shown above has likely changed in the time since I gathered
+> the data, and there may very well be additional products available today
+> that I did not come across during my research.
 
 My intent for this post is not to provide an exhaustive list of the current
 options for converting HTML to PDF. Rather I simply wanted to share the information

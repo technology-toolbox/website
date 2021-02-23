@@ -458,7 +458,12 @@ Here is the current content of the Style Guide for the static HTML prototype  fo
 
 > **Note**
 >
-> The `color-swatch` CSS rules at the top of Style-Guide.aspx are not kept in the "main" cascading style sheet since these rules are applicable only to the Style Guide itself. Also note that the default master page (specified in the Web.config file) defines the `<link>` element that references the CSS file.
+> The `color-swatch` CSS rules
+> at the top of Style-Guide.aspx are not kept in the "main" cascading style
+> sheet since these rules are applicable only to the Style Guide itself. Also
+> note that the default master page (specified in the Web.config file) defines
+> the `<link>`
+> element that references the CSS file.
 
 Figure 1 shows the corresponding page rendered in the browser. [Note: This is  not intended to be an eye chart. Normally, I would trim images like this before  including them in a post, but in this case I wanted to be sure you could see the  page in its entirety (by clicking the **See full-sized image** link  below.)]
 

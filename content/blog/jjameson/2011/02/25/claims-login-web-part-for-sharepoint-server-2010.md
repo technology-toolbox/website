@@ -11,7 +11,7 @@ tags: ["SharePoint 2010"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
 >
@@ -284,7 +284,7 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 
 > **Note**
 >
-> You do not need to manually add the Web.config modifications for the "Fabrikam" Web application because this is done automatically upon activation of a feature (Fabrikam Demo - Web Application Configuration).
+> You do not need to manually add the Web.config modifications for the "Fabrikam"                     Web application because this is done automatically upon activation of a feature                     (Fabrikam Demo - Web Application Configuration).
 > 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
 > Shell**, and then click **Run as administrator**. If prompted
 > by User Account Control to allow the program to make changes to the computer, click
@@ -308,5 +308,5 @@ At this point you should be able to browse to the Fabrikam site and click the **
 
 > **Update (2011-02-26)**
 >
-> There was a bug in the original version of the code sample when logging in as an FBA user over HTTPS (while attempting to determine the membership and role providers from the IIS settings). This has been fixed in the updated attachment.
+> There was a bug in the original version of the code sample when logging in as an             FBA user over HTTPS (while attempting to determine the membership and role providers             from the IIS settings). This has been fixed in the updated attachment.
 

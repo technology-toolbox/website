@@ -66,7 +66,9 @@ For example, the **Area** field has been added to associate a work item with  di
 
 > **Note**
 >
-> The **Area** and **Iteration** fields should be customized for each project to reflect the major work effort areas (e.g. features) and milestones.
+> The **Area** and **Iteration** fields should be
+> customized for each project to reflect the major work effort areas (e.g.
+> features) and milestones.
 
 In addition to modifying the columns in the default Issues list, the Work Items  list also supports several additional views (similar to the queries provided in  TFS).
 

@@ -12,7 +12,7 @@ tags: ["MOSS 2007", "WSS v3", "
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx)
 >

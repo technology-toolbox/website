@@ -11,7 +11,7 @@ tags: ["Windows Server", "Infrastructure"]
 
 > **Note**
 >
-> This post originally appeared on my MSDN blog:
+>             This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx)
 >
@@ -55,7 +55,12 @@ Here's an email that I sent last month regarding an issue I discovered after upg
 >
 > However, when I try to recover the files, it appears as if the files were not backed             up, as shown in the screenshot below.
 >
-> {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-600x465.png" alt="Windows Server Backup-Recovery Wizard - bug" class="screenshot" height="465" width="600" >}}
+> {{< figure
+> src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-600x465.png"
+> alt="Windows Server Backup-Recovery Wizard - bug"
+> class="screenshot"
+> height="465"
+> width="600" >}}
 >
 > [(See full-sized image)](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-756x586.png)
 >

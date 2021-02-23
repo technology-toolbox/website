@@ -53,7 +53,13 @@ For a complete list of the IIS cmdlets, refer to the following Technet article:
 
 > **Important**
 >
-> If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then you cannot use the `Add-PSSSnapin WebAdministration` command specified in the above TechNet article. Instead you need to use `Import-Module WebAdministration` -- as shown below.
+>       If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then 
+>       you cannot use the `Add-PSSSnapin
+>       WebAdministration` command 
+>       specified in the above TechNet article. Instead you need to use
+>       `Import-Module
+>       WebAdministration` -- as 
+>       shown below.
 
 ```
 ...
@@ -145,7 +151,9 @@ the database runs on the same server as the website in that environment.
 
 > **Tip**
 >
-> Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** class from the .NET Framework is a convenient way to parse URLs in PowerShell (for example to extract the hostname, as shown above).
+>       Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** 
+>       class from the .NET Framework is a convenient way to parse URLs in PowerShell 
+>       (for example to extract the hostname, as shown above).
 
 ### Step 4 - Create website folder under Inetpub\wwwroot
 
