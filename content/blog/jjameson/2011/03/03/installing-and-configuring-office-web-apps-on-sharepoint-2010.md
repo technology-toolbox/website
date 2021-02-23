@@ -94,8 +94,6 @@ of HTTP:
 > HTTP and HTTPS, then a separate trusted file location will need to be
 > configured.
 
-    {{< reverse-markdown-hack >}}
-
 ### Configure the Office Web Apps cache
 
 By default, when you install Office Web Apps, the cache available to render documents  is 100 GB and the cache expiration period is 30 days. The cached content for Office  Web Apps is stored in a SharePoint content database.

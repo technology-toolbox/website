@@ -288,8 +288,6 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 > Web application because this is done automatically upon activation of a feature
 > (Fabrikam Demo - Web Application Configuration).
 
-    {{< reverse-markdown-hack >}}
-
 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
    Shell**, and then click **Run as administrator**. If prompted
    by User Account Control to allow the program to make changes to the computer, click

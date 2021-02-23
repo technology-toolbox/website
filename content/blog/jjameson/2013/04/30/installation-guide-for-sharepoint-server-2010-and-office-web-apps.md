@@ -543,8 +543,6 @@ loopback address:
 
 > **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
 
-    {{< reverse-markdown-hack >}}
-
 3. Right-click **MSV1\_0**, point to **New**,
    and then click **Multi-String Value**.
 4. Type **BackConnectionHostNames**, and then press
@@ -562,8 +560,6 @@ loopback address:
 >       		Be sure to specify the host header corresponding to the environment. 
 >       		For example, specify {{< kbd "extranet-local.fabrikam.com" >}} 
 >       		for local development environments.
-
-    {{< reverse-markdown-hack >}}
 
 7. Quit Registry Editor, and then restart the IIS Admin Service.
 
@@ -877,8 +873,6 @@ To run the preparation tool:
 > intervention is required. However, you will have to log back
 > on to the server.
 
-    {{< reverse-markdown-hack >}}
-
 5. On the **Installation Complete** page, click
    **Finish**.
 6. Restart the server to complete the installation of the prerequisites.
@@ -893,8 +887,6 @@ To run the preparation tool:
 > When installing these hotfixes on Windows Server 2008 R2,
 > you may be notified that these updates are not applicable.
 
-    {{< reverse-markdown-hack >}}
-
 > **Note**
 >
 > If the error message <q class="directQuote errorMessage">"Loading
@@ -905,8 +897,6 @@ To run the preparation tool:
 > Server 2010, you must install
 > [KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358).
 > You must restart the computer after you apply this hotfix.
-
-    {{< reverse-markdown-hack >}}
 
 ## Install security update for Web applications using claims authentication
 
@@ -972,8 +962,6 @@ To install SharePoint Server 2010:
 > installed on all application and front-end Web servers that
 > will participate in the server farm.
 
-    {{< reverse-markdown-hack >}}
-
 ## Create and configure the farm
 
 To create and configure the farm, you run the SharePoint Products Configuration
@@ -1038,8 +1026,6 @@ the farm:
 > wizard. Ensure that you remember the passphrase, because you
 > must use it each time you add a server to the farm.
 
-    {{< reverse-markdown-hack >}}
-
 7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
    1. Select the **Specify port number** checkbox and
       type the port number specified in
@@ -1066,8 +1052,6 @@ the farm:
 > SharePoint Central Administration to the Local intranet zone).
 > In order to complete the steps in this section, type your username
 > and password to access Central Administration.
-
-    {{< reverse-markdown-hack >}}
 
 12. In the **Help Make SharePoint Better** window, click
     the desired option and then click **OK**.
@@ -1155,8 +1139,6 @@ the configuration in Windows Server 2008 R2:
 
 > HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
 
-    {{< reverse-markdown-hack >}}
-
 3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}**
    key and then click **Permissions**.
 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
@@ -1222,8 +1204,6 @@ To rename the TaxonomyPicker.ascx file:
 
 > **C:\Program Files\Common Files\Microsoft Shared\Web Server
 > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
-
-    {{< reverse-markdown-hack >}}
 
 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
    When prompted to confirm that you want to change the file name extension,
@@ -1455,8 +1435,6 @@ scripts:
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
 
-    {{< reverse-markdown-hack >}}
-
 3. Type the following command:
    
    ```
@@ -1622,8 +1600,6 @@ To configure object cache user accounts:
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
 
-    {{< reverse-markdown-hack >}}
-
 3. Type the following command:
    
    ```
@@ -1673,8 +1649,6 @@ the internal Fabrikam domain:
 > used to access the forest or domain. The encryption string must
 > be the same for every server in the farm.
 
-    {{< reverse-markdown-hack >}}
-
 3. Repeat the steps above on each Web server in the farm.
 
 4. On one of the front-end Web servers, type the following command:
@@ -1689,8 +1663,6 @@ the internal Fabrikam domain:
 > run this command, users can select users and groups from the
 > listed forests and domains from any front-end Web server in
 > the farm.
-
-    {{< reverse-markdown-hack >}}
 
 ## Configure SSL on the Internet zone
 
@@ -1750,8 +1722,6 @@ PowerShell:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-
-    {{< reverse-markdown-hack >}}
 
 3. Type the following command:
    
@@ -1929,8 +1899,6 @@ file:
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
 
-    {{< reverse-markdown-hack >}}
-
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
@@ -1939,8 +1907,6 @@ file:
 > file, click **Select the program from a list**,
 > and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then
 > click **OK**.
-
-    {{< reverse-markdown-hack >}}
 
 5. In the Web.config editor:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
@@ -1959,7 +1925,6 @@ file:
 > placeholder in the connection string with the name of the
 > database server.
 
-        {{< reverse-markdown-hack >}}
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     		
     
@@ -1999,8 +1964,6 @@ file:
 > of it by using a different name (for example, "Web - Copy.config"),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-
-    {{< reverse-markdown-hack >}}
 
 2. Double-click the **Web.config** file to open the file.
 
@@ -2043,8 +2006,6 @@ file:
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
 
-    {{< reverse-markdown-hack >}}
-
 4. Save the changes to the Web.config file and close the editor.
 5. Repeat the steps above on each Web server in the farm.
 
@@ -2062,8 +2023,6 @@ Extranet Web application:
 > of it by using a different name (for example, "Web - Copy.config"),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-
-    {{< reverse-markdown-hack >}}
 
 2. Double-click the **Web.config** file to open the file.
 3. In the Web.config editor:
@@ -2083,7 +2042,6 @@ Extranet Web application:
 > placeholder in the connection string with the name of the
 > database server.
 
-        {{< reverse-markdown-hack >}}
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     		
     
@@ -2100,7 +2058,6 @@ Extranet Web application:
 > Do not overwrite any existing entries in this Web.config
 > file.
 
-        {{< reverse-markdown-hack >}}
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     		
     
@@ -2196,8 +2153,6 @@ To login to the website using Windows authentication:
 >
 > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
-    {{< reverse-markdown-hack >}}
-
 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
    and click **Sign In**.
 3. On the **Sign In** page, in the dropdown list, click
@@ -2250,8 +2205,6 @@ To configure BLOB cache settings:
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
 
-    {{< reverse-markdown-hack >}}
-
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
@@ -2261,8 +2214,6 @@ To configure BLOB cache settings:
 > and then click **OK**. In the **Open With**
 > dialog box, click **Notepad**, and then click
 > **OK**.
-
-    {{< reverse-markdown-hack >}}
 
 5. If the Windows dialog box appears, select **Select a program
    from a list of installed programs**, and then click **OK**.
@@ -2285,8 +2236,6 @@ To configure BLOB cache settings:
 > on the same drive as where either the server operating system
 > swap files or server log files are stored.
 
-    {{< reverse-markdown-hack >}}
-
 8. To add or remove file types from the list of file types to be cached,
    for the **path** attribute, modify the regular expression
    to include or remove the appropriate file extension. If you add file
@@ -2302,8 +2251,6 @@ To configure BLOB cache settings:
 > large enough to provide a buffer at least 20 percent bigger
 > than the estimated size of the content that will be stored in
 > the cache.
-
-    {{< reverse-markdown-hack >}}
 
 10. To enable the BLOB cache, change the **enabled** attribute
     to **true**.
@@ -2356,8 +2303,6 @@ To configure the State Service:
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
 
-    {{< reverse-markdown-hack >}}
-
 3. Type the following command:
    
    ```
@@ -2390,8 +2335,6 @@ Application:
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
 
-    {{< reverse-markdown-hack >}}
-
 3. Type the following command:
    
    ```
@@ -2413,8 +2356,6 @@ Application:
 >
 > It may take several minutes to create and configure the Search
 > Service Application.
-
-    {{< reverse-markdown-hack >}}
 
 ## Configure the search crawl schedules
 
@@ -2482,8 +2423,6 @@ To install Office Web Apps:
 > run the configuration wizard until Office Web Apps has been
 > installed on all application and front-end Web servers in the
 > farm.
-
-    {{< reverse-markdown-hack >}}
 
 7. Repeat the steps above on each SharePoint server in the farm.
 
@@ -2597,8 +2536,6 @@ trusted location for HTTPS instead of HTTP:
 > both HTTP and HTTPS, then a separate trusted file location will
 > need to be configured.
 
-    {{< reverse-markdown-hack >}}
-
 ## Configure the Office Web Apps cache
 
 By default, when you install Office Web Apps, the cache available to
@@ -2621,15 +2558,11 @@ create a separate content database for caching:
 > Shell after installing Office Web Apps in order for the new
 > PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
 
-    {{< reverse-markdown-hack >}}
-
 2. From the Windows PowerShell command prompt, change to the following
    directory:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-
-    {{< reverse-markdown-hack >}}
 
 3. Type the following command:
    
@@ -2654,8 +2587,6 @@ create a separate content database for caching:
 >
 >       		If this error occurs, wait a few minutes and then run the script 
 >       		again.
-
-    {{< reverse-markdown-hack >}}
 
 5. Type the following command to reset Internet Information Services
    (IIS):
@@ -2754,8 +2685,6 @@ To add the new event source:
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
 
-    {{< reverse-markdown-hack >}}
-
 3. Type the following command:
    
    ```
@@ -2781,8 +2710,6 @@ To install and activate the features:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-
-    {{< reverse-markdown-hack >}}
 
 3. Type the following command:
    
@@ -2845,8 +2772,6 @@ To create the sample content:
 >
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 
-    {{< reverse-markdown-hack >}}
-
 2. Type the following command:
    
    ```
@@ -2876,8 +2801,6 @@ partner using the PowerShell script:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-
-    {{< reverse-markdown-hack >}}
 
 3. Run the **Create Partner Site Collection.ps1** script
    and provide the name of the partner, for example:

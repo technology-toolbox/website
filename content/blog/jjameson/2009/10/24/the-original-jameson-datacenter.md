@@ -30,8 +30,6 @@ Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home l
 > could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading
 > before clicking that **Publish** button ;-)
 
-    {{< reverse-markdown-hack >}}
-
 2. An article I read about a year ago describing the origin of Google that also included
    some photos of the original Google infrastructure in the Stanford University computer
    lab.

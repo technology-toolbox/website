@@ -342,8 +342,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > a mistake is made in the file, you can delete it and use the original
 > file.
 
-    {{< reverse-markdown-hack >}}
-
 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
@@ -352,8 +350,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > click **Select the program from a list**, and then click
 > **OK**. In the **Open With** dialog box, click
 > **Notepad**, and then click **OK**.
-
-    {{< reverse-markdown-hack >}}
 
 5. In the Web.config editor:
    1. After the end of the **/configuration/configSections**
@@ -372,7 +368,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
 
-        {{< reverse-markdown-hack >}}
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
@@ -442,8 +437,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
 
-    {{< reverse-markdown-hack >}}
-
 4. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Web.config file for the Fabrikam Web application:
@@ -469,7 +462,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
 
-        {{< reverse-markdown-hack >}}
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
@@ -485,7 +477,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 >
 > Do not overwrite any existing entries in this Web.config file.
 
-        {{< reverse-markdown-hack >}}
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     
     
@@ -557,8 +548,6 @@ The final step is to validate the Web application works as expected when using  
 > This is discussed in more detail in the following blog post:
 >
 > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
-
-    {{< reverse-markdown-hack >}}
 
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.
