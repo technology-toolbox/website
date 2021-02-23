@@ -94,9 +94,9 @@ Note that the `Logger.LogDebug` method is simply a convenient alternative  to th
 
 Other methods such as `LogInfo` and `LogError` provide  similar overloads for convenience.
 
-The simplicity of the `Logger`class is made possible by the improved  tracing functionality introduced in the .NET Framework version 2.0. Specifically,  the `Logger`class is simply a "[wafer-thin](http://en.wikipedia.org/wiki/Mr_Creosote)"  wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
+The simplicity of the `Logger` class is made possible by the improved  tracing functionality introduced in the .NET Framework version 2.0. Specifically,  the `Logger` class is simply a "[wafer-thin](http://en.wikipedia.org/wiki/Mr_Creosote)"  wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
 
-The `Logger`class declares a singleton `TraceSource` that  is used to log all messages:
+The `Logger` class declares a singleton `TraceSource` that  is used to log all messages:
 
 ```
 private static TraceSource defaultTraceSource =

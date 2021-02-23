@@ -45,7 +45,7 @@ The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists', dat
 
 {{< /blockquote >}}
 
-Ugh...it turns out the **aspnet\_Roles\_RoleExists** stored procedure is by default only granted EXECUTE permission to the **aspnet\_Roles\_ReportingAccess** database role within SQL Server. Unfortunately, SharePoint was simply "swallowing" that `SqlException`and assuming the role simply did not exist. I don't know about you, but I consider a "swallowed exception" like this to be a bug. Others may disagree, but that's my opinion.
+Ugh...it turns out the **aspnet\_Roles\_RoleExists** stored procedure is by default only granted EXECUTE permission to the **aspnet\_Roles\_ReportingAccess** database role within SQL Server. Unfortunately, SharePoint was simply "swallowing" that `SqlException` and assuming the role simply did not exist. I don't know about you, but I consider a "swallowed exception" like this to be a bug. Others may disagree, but that's my opinion.
 
 The lesson learned here is that when using Forms-Based Authentication and the out-of-the-box ASP.NET membership and role providers, your service account needs to be added to the following database roles in your ASP.NET database:
 
