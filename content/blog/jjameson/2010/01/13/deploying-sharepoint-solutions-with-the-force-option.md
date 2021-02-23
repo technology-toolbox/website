@@ -27,9 +27,12 @@ If you've read that post, you might recall seeing the following lines in, for  e
 
 The FORCE\_OPTION environment variable is subsequently included in the line that  invokes StsAdm.exe:
 
-```
-%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url %FABRIKAM_PORTAL_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
-```
+{{< console-block-start >}}
+
+%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION\_NAME%.wsp" -url
+%FABRIKAM\_PORTAL\_URL% %DEPLOY\_METHOD% -allowGacDeployment %FORCE\_OPTION%
+
+{{< console-block-end >}}
 
 What's all this nonsense about forcing the deployment to "circumvent errors"?  Yes, it's admittedly a hack (although for some reason when I originally created  these scripts years ago, I didn't label it as such in the comment).
 

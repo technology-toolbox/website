@@ -70,9 +70,11 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 
 Note that you'll probably need to change the permissions on the new VHD in order  to avoid an "Access Denied" error message after attaching the VHD to a VM:
 
-```
-icacls foobar5_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
-```
+{{< console-block-start >}}
+
+icacls foobar5\_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
+
+{{< console-block-end >}}
 
 This is described in more detail in [one of my previous posts](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
 

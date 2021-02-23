@@ -24,9 +24,11 @@ Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a. my home l
 
 As such, one of the first things that I typically do when building out a new VM         is to run the following from a command prompt:
 
-```
-reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
-```
+{{< console-block-start >}}
+
+reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG\_DWORD /d 0 /f
+
+{{< console-block-end >}}
 
 Then I move on to installing products based on the intended purpose of the VM.
 

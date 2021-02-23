@@ -46,18 +46,21 @@ Don't be put off by the title of this KB article. You just need to read a little
 To resolve the error after applying an old Hyper-V snapshot on a VM joined to  a domain:
 
 1. Login to the VM using a local administrator account.
-
 2. Open an administrator command prompt and run the following command:
-   
-   ```
-   netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:*
-   ```
+
+{{< console-block-start >}}
+
+netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:\*
+
+{{< console-block-end >}}
 
 For example:
 
-    ```
-    netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:*
-    ```
+{{< console-block-start >}}
+
+netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
+
+{{< console-block-end >}}
 
 > **Note**
 >

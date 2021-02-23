@@ -71,12 +71,14 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
    **SharePoint 2010 Management Shell**, and then click **Run
    as administrator**. If prompted by **User Account Control** to allow the program to make changes to this computer, click
    **Yes**.
-
 2. At the Windows PowerShell command prompt, type the following command:
-   
-   ```
-   Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> -WebApplication <URL> [-Updateuserexperience]
-   ```
+
+{{< console-block-start >}}
+
+Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt;
+-WebApplication &lt;URL&gt; [-Updateuserexperience]
+
+{{< console-block-end >}}
 
 Where:
 
@@ -91,9 +93,12 @@ Where:
 
 For example:
 
-    ```
-    Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV -WebApplication http://cyclops-dev -Updateuserexperience
-    ```
+{{< console-block-start >}}
+
+Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
+-WebApplication http://cyclops-dev -Updateuserexperience
+
+{{< console-block-end >}}
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and  click **Configure Installed Features**.
 

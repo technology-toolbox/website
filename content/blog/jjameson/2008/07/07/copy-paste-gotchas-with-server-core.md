@@ -35,9 +35,12 @@ Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT. T
 
 A quick Windows Live Search for ["Disk Management could not start Virtual Disk Service"](http://search.live.com/results.aspx?q=%22Disk+Management+could+not+start+Virtual+Disk+Service%22&form=QBRE) led me straight to [LaNae Wade's post](http://blogs.technet.com/askds/archive/2008/06/05/how-to-enable-remote-administration-of-server-core-via-mmc-using-netsh.aspx) on enabling remote administration of Server Core. I then copied  the command line for enabling the firewall rules for the Disk Management MMC snap-in  and pasted it into my RDP session to the server:
 
-```
-netsh advfirewall firewall set rule group="Remote Volume Management" new enable=yes
-```
+{{< console-block-start >}}
+
+netsh advfirewall firewall set rule group="Remote Volume Management" new
+enable=yes
+
+{{< console-block-end >}}
 
 Unfortunately, the response wasn't exactly what I expected:
 

@@ -1317,16 +1317,22 @@ version}](file://DAZZLER/Builds/Fabrikam/Demo)) to the SharePoint server running
 For the Test and Production environments, always designate the specific
 build to be deployed. For example:
 
-```
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
-```
+{{< console-block-start >}}
+
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0
+C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
+
+{{< console-block-end >}}
 
 For development environments, the "latest" version may be specified.
 For example:
 
-```
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
-```
+{{< console-block-start >}}
+
+robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
+C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\_latest /E /MIR
+
+{{< console-block-end >}}
 
 Developers may alternately choose to deploy to local environments directly
 from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Main).
@@ -2590,12 +2596,13 @@ To create the sample content:
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 > > 2. Type the following command:
 
-    ```
-    Fabrikam.Demo.Tools.TestConsole.exe
-    ```
+{{< console-block-start >}}
 
+Fabrikam.Demo.Tools.TestConsole.exe
+
+{{< console-block-end >}}
 3. Wait for the program to complete and verify no errors occurred during
-   the process.
+the process.
 
 ## Create and configure a partner site
 

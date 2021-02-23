@@ -21,9 +21,12 @@ a new VM created from a SysPrep'ed image.
 Even though it's easy to configure this by copying and pasting the following
 into a command prompt...
 
-```
-reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
-```
+{{< console-block-start >}}
+
+reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize
+/t REG\_DWORD /d 0 /f
+
+{{< console-block-end >}}
 
 ...sometime last year I decided to create a pair of PowerShell scripts to
 make this even easier. I keep these scripts in my

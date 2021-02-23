@@ -156,19 +156,20 @@ I then added the following steps to the installation guide:
 > **
 > 3. Type the following command:
 >
->     ```
->     notepad administration.config
->     ```
+> {{< console-block-start >}}
 >
+> notepad administration.config
+>
+> {{< console-block-end >}}
 > 4. In the /configuration/system.webServer/management/trustedProviders section,
->    add the following:
->    
->    ```
->    <add
->      type="Fabrikam.Portal.Web.Security.FabrikamSqlRoleProvider,
->        Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
->        PublicKeyToken=c8cdcbca6f69701f" />
->    ```
+> add the following:
+>
+>     ```
+>     <add
+>       type="Fabrikam.Portal.Web.Security.FabrikamSqlRoleProvider,
+>         Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
+>         PublicKeyToken=c8cdcbca6f69701f" />
+>     ```
 >
 > 5. Save the changes to the file and close Notepad.
 

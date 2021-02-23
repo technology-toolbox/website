@@ -292,16 +292,16 @@ To fix the TaxonomyPicker.ascx file:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then
    click **Run as administrator**.
-
 2. At the command prompt, type the following command:
-   
-   ```
-   notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
-   ```
 
+{{< console-block-start >}}
+
+notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
+
+{{< console-block-end >}}
 3. In Notepad, in the assembly specified in the **Control** directive,
-   replace the **"&#44;**" (without the quotes) with a comma (',')
-   and then save the file.
+replace the **"&#44;**" (without the quotes) with a comma (',')
+and then save the file.
 
 {{< /deleted-block >}}
 
@@ -522,33 +522,36 @@ To attach the SharePoint content database by using Windows Powershell:
    Shell**, and then click **Run as administrator**. If prompted
    by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
-
 2. At the Windows PowerShell command prompt, type the following command:
-   
-   ```
-   Mount-SPContentDatabase -Name <DatabaseName> -DatabaseServer <ServerName> -WebApplication <URL> [-Updateuserexperience]
-   ```
-   
+
+{{< console-block-start >}}
+
+Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt;                     -WebApplication &lt;URL&gt; [-Updateuserexperience]
+
+{{< console-block-end >}}
+
             Where:
-   
-   - <var>&lt;DatabaseName&gt;</var>
-     is the name of the database you want to upgrade.
-   
-   - <var>&lt;ServerName&gt;</var>
-     is server on which the database is stored.
-   
-   - <var>&lt;URL&gt;</var>
-     is the URL for the Web application that will host the sites.
-   
-   - **-Updateuserexperience** specifies to update the sites with the new SharePoint
-     user experience (part of Visual Upgrade). If you omit this parameter, the sites
-     retain the old user experience after upgrade.
-     
-           For example:
-   
-   ```
-   Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST -WebApplication http://cyclops -Updateuserexperience
-   ```
+    
+    - <var>&lt;DatabaseName&gt;</var>
+                    is the name of the database you want to upgrade.
+    - <var>&lt;ServerName&gt;</var>
+                    is server on which the database is stored.
+    - <var>&lt;URL&gt;</var>
+                    is the URL for the Web application that will host the sites.
+    - **-Updateuserexperience** specifies to update the sites with the new SharePoint
+                    user experience (part of Visual Upgrade). If you omit this parameter, the sites
+                    retain the old user experience after upgrade.
+    
+    
+    
+            For example:
+                
+
+{{< console-block-start >}}
+
+Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer BEAST -WebApplication                     http://cyclops -Updateuserexperience
+
+{{< console-block-end >}}
 
 More information on attaching SharePoint content databases is provided in the following         TechNet article:
 

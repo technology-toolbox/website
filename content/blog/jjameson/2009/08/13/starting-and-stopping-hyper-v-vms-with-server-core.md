@@ -40,7 +40,9 @@ from MSDN](http://msdn.microsoft.com/en-us/library/cc723874%28VS.85%29.aspx) to 
 
 Now, whenever I am unable to manage my Hyper-V servers remotely, I can use something  like the following to start one of the VMs:
 
-```
+{{< console-block-start >}}
+
 cscript \NotBackedUp\Public\Toolbox\Scripts\ManageVM.vbs XAVIER1 start
-```
+
+{{< console-block-end >}}
 

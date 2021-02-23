@@ -97,9 +97,11 @@ $SharePointCustomBuildWorkflow
 From this, I can parse the folder names in the team project. Note that I
 don't want the first line or the last few lines. No problem...
 
-```
+{{< console-block-start >}}
+
 $tfFolders = $output[1..($output.Length - 3)]
-```
+
+{{< console-block-end >}}
 
 Now the `$tfFolders` variable contains
 something like:
@@ -124,9 +126,11 @@ With this, I can quickly run as command to cloak all of the folders. However,
 notice the dollar signs at the beginning of each line. I'll need to trim those
 off when passing each folder to the {{< kbd "tf workfold /cloak" >}} command:
 
-```
-$tfFolders | foreach { tf workfold /cloak $_.Substring(1) }
-```
+{{< console-block-start >}}
+
+$tfFolders | foreach { tf workfold /cloak $\_.Substring(1) }
+
+{{< console-block-end >}}
 
 Now suppose that I want to build the **CoreServices** project.
 Consequently I need to uncloak that folder and get the latest version from TFS.
