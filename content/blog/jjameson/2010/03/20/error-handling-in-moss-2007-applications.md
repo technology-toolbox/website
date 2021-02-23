@@ -376,7 +376,7 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 
 > **Important**
 >
-> Notice that I use an `EventTypeFilter`to avoid writing debug (a.k.a. "verbose") messages to the
+> Notice that I use an `EventTypeFilter` to avoid writing debug (a.k.a. "verbose") messages to the
 > event log.
 
 With the **EventLogTraceListener** configured, as soon as I browse  to my site and trigger the unhandled exception, I'm presented with the OOTB SharePoint  error page shown in Figure 2. In other words, I've reverted back to the undesired  user experience.

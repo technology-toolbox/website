@@ -477,7 +477,7 @@ div.more-btn a:link, div.more-btn a:visited {
 
 > **Note**
 >
-> I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">`element but then realized I couldn't easily fix the color of the "News Archives"
+> I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">` element but then realized I couldn't easily fix the color of the "News Archives"
 > button.
 
 The only other tweak that I made to the Tugboat master page was to move the page         status bar above the masthead. In my opinion, this provides a better user experience         for content authors.
