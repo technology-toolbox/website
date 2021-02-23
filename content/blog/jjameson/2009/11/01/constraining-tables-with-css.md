@@ -275,5 +275,5 @@ namespace Fabrikam.Demo.Web.UI
 
 > **Update (2011-04-21)**
 >
-> I've attached a sample Visual Studio solution to make it easier to see this concept in action.
+> I've attached a sample Visual Studio solution to make it easier to see this concept             in action.
 

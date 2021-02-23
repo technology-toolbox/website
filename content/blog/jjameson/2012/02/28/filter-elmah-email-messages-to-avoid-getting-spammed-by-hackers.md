@@ -32,7 +32,11 @@ result of a known hack attempt.
 
 > **Note**
 >
-> TechnologyToolbox.com is configured to log errors to both email and SQL Server. I still believe it is important to track all errors on the site (for example, to keep tabs on the frequency of hack attempts). However I'm okay with not getting notified via email whenever, for example, someone attempts to hack the ASP.NET view state.
+> TechnologyToolbox.com is configured to log errors to both email and
+> SQL Server. I still believe it is important to track all errors on the
+> site (for example, to keep tabs on the frequency of hack attempts).
+> However I'm okay with not getting notified via email whenever, for example,
+> someone attempts to hack the ASP.NET view state.
 
 It turned out to be a very educational experience for me because I ended
 up diving into the ELMAH source code in order to investigate some issues. I

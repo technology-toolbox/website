@@ -409,7 +409,14 @@ public static DataTable GetScorecardDetailTable(
 
 > **Important**
 >
-> Note that by replacing the original approach of filtering the scorecard items (using a DataView) with a LINQ query expression, we've made a substantial improvement in the code. For example, if we were to rename the KpiName column in the typed DataSet without making the corresponding change to the filtering code, we would get a compile-time error instead of a run-time error. When using the original DataView approach, a similar mistake would not be caught at compile-time (because the column name is embedded in the RowFilter string value).
+> Note that by replacing the original approach of filtering the scorecard
+> items (using a DataView) with a LINQ query expression, we've made a substantial
+> improvement in the code. For example, if we were to rename the KpiName column
+> in the typed DataSet without making the corresponding change to the filtering
+> code, we would get a compile-time error instead of a run-time error. When
+> using the original DataView approach, a similar mistake would not be caught
+> at compile-time (because the column name is embedded in the RowFilter string
+> value).
 
 Let's wrap this up with a few key points:
 

@@ -632,7 +632,10 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 
 > **Note**
 >
-> I typically remove comments from code when pasting into blog posts. However, I've kept all of the comments in this case so that you can understand the details of the implementation (without having to describe them separately).
+> I typically remove comments from code when pasting into blog posts.
+> However, I've kept all of the comments in this case so that you can
+> understand the details of the implementation (without having to describe
+> them separately).
 
 ### Other Errors
 

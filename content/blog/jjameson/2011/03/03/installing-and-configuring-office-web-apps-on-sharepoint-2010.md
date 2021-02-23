@@ -67,7 +67,8 @@ Use the following procedure to change the default trusted location to support  H
 
 > **Important**
 >
-> Skip this section for environments that are not configured with SSL certificates (e.g. development environments).
+> Skip this section for environments that are not configured with SSL certificates
+> (e.g. development environments).
 
 #### To configure the Excel Services Application trusted location for HTTPS instead
 

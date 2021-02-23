@@ -112,7 +112,7 @@ To create a new "Service Pack" branch from the "Main" branch:
 
 > **Note**
 >
-> If it really bothers you to override check-in policy failures like the one noted above, you can certainly download the new branch to your workspace and check in the changes through Visual Studio with the solution open. However, at least in my mind, this isn't worth the extra time it requires when simply branching the code for a release.
+> If it really bothers you to override check-in policy failures like the one noted             above, you can certainly download the new branch to your workspace and check in             the changes through Visual Studio with the solution open. However, at least in my             mind, this isn't worth the extra time it requires when simply branching the code             for a release.
 
 To create the "RTM" branch from the new "Service Pack" branch:
 

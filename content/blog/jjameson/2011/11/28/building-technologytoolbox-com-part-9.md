@@ -235,7 +235,11 @@ with an ASP.NET **Repeater** control:
 
 > **Note**
 >
-> When writing code, I generally prefer to take little steps -- rather than trying to do too much at once. For example, as shown above, I will often add "TODO:" placeholders to indicate where additional work needs to be done in order to replace sample content (such as generating the URL to a blog post).
+> When writing code, I generally prefer to take little steps -- rather
+> than trying to do too much at once. For example, as shown above, I will
+> often add "TODO:" placeholders to indicate where additional work needs
+> to be done in order to replace sample content (such as generating the
+> URL to a blog post).
 
 In the corresponding code-behind for the user control, I added code to retrieve
 the list of recent posts and bind the results to the **Repeater** control:
@@ -305,7 +309,11 @@ namespace TechnologyToolbox.Caelum.Website
 
 > **Important**
 >
-> The blog path (i.e. /blog/jjameson) is currently hard-coded in this method. While I briefly considered enhancing this to support other scenarios, I decided against it since it currently suits my needs. If and when I ever need to support other blogs on the Technology Toolbox site, I will obviously need to revisit this piece of code.
+> The blog path (i.e. /blog/jjameson) is currently hard-coded in this
+> method. While I briefly considered enhancing this to support other scenarios,
+> I decided against it since it currently suits my needs. If and when
+> I ever need to support other blogs on the Technology Toolbox site, I
+> will obviously need to revisit this piece of code.
 
 Then I replaced the placeholders for the post URL with corresponding calls
 to the **BlogHelper.GetEntryUrl** method:

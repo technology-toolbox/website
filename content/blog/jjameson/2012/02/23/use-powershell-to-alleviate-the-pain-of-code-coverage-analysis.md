@@ -268,7 +268,9 @@ function UpdateGacAssemblyIfNecessary(
 
 > **Important**
 >
-> This script does not currently support side-by-side versions of the same assembly in the GAC. An exception is thrown if more than one matching assembly is found in the GAC.
+> This script does not currently support side-by-side versions of the
+> same assembly in the GAC. An exception is thrown if more than one matching
+> assembly is found in the GAC.
 
 > **Note**
 >

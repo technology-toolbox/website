@@ -83,7 +83,10 @@ of converting from static HTML to ASP.NET controls and adding field validators.
 
 > **Note**
 >
-> Although not shown in the sample HTML above, there are times when it might be helpful to prototype "alternate flow" scenarios as well -- for example, to demonstrate the user experience when a required field is not specified.
+> Although not shown in the sample HTML above, there are times when it
+> might be helpful to prototype "alternate flow" scenarios as well --
+> for example, to demonstrate the user experience when a required field
+> is not specified.
 
 ### Step 2: From static HTML to ASP.NET
 

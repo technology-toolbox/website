@@ -201,7 +201,14 @@ in Production.
 
 > **Note**
 >
-> Fabrikam has established an "extranet" Active Directory domain which is used to host the SharePoint farms for the Test and Production environments. In order to allow Fabrikam employees to authenticate with their internal domain (FABRIKAM) credentials, a one-way trust was configured from the EXTRANET domain to the FABRIKAM domain. To simplify the setup of the Development integration environment and local development VMs, the development servers are joined to the FABRIKAM domain.
+> Fabrikam has established an "extranet" Active Directory domain which
+> is used to host the SharePoint farms for the Test and Production
+> environments. In order to allow Fabrikam employees to authenticate
+> with their internal domain (FABRIKAM) credentials, a one-way trust
+> was configured from the EXTRANET domain to the FABRIKAM domain.
+> To simplify the setup of the Development integration environment
+> and local development VMs, the development servers are joined to
+> the FABRIKAM domain.
 
 In order to distinguish sites on local development VMs, the “-local”
 suffix is used. For example,
@@ -330,7 +337,10 @@ title="Figure 1: SharePoint development VM configuration" >}}
 
 > **Note**
 >
-> Even if the VM host currently has only one physical disk (e.g. a developer's laptop), it is still recommended to create multiple VHD files. This greatly simplifies the process of distributing the I/O in the future when another physical drive is available.
+> Even if the VM host currently has only one physical disk (e.g. a
+> developer's laptop), it is still recommended to create multiple
+> VHD files. This greatly simplifies the process of distributing the
+> I/O in the future when another physical drive is available.
 
 Since the amount of content in development environments is expected to
 be fairly small, consider creating "data" and "log" VHDs of 1 GB and 500
@@ -403,7 +413,8 @@ server to be a member of the extranet domain (EXTRANET).
 
 > **Note**
 >
-> Development environments do not have access to the extranet domain and therefore need to be joined to a different domain, such as FABRIKAM.
+> Development environments do not have access to the extranet domain
+> and therefore need to be joined to a different domain, such as FABRIKAM.
 
 ## Install latest service pack and updates
 
@@ -510,7 +521,12 @@ when using host names mapped to 127.0.0.1 on local development machines.
 
 > **Note**
 >
-> This problem was originally encountered only in local development environments (where the host names are mapped to the loopback address). However, it was later encountered in other environments after patches were installed from Windows Update. Consequently, you may need to perform the following configuration steps if HTTP 401.1 errors occur when accessing the site locally on the server (regardless of environment).
+> This problem was originally encountered only in local development
+> environments (where the host names are mapped to the loopback address).
+> However, it was later encountered in other environments after patches
+> were installed from Windows Update. Consequently, you may need to
+> perform the following configuration steps if HTTP 401.1 errors occur
+> when accessing the site locally on the server (regardless of environment).
 
 More details about this issue can be found in
 [KB 896861](http://support.microsoft.com/kb/896861).
@@ -592,7 +608,8 @@ To install Visual Studio 2010:
 
 > **Note**
 >
-> Depending on which edition of Visual Studio 2010 was installed in the previous step, Team Explorer may already be installed.
+> Depending on which edition of Visual Studio 2010 was installed in
+> the previous step, Team Explorer may already be installed.
 
 To install Team Explorer:
 
@@ -634,13 +651,19 @@ For development environments, use the following steps to install the
 
 > **Important**
 >
-> For the Test and Production environments, refer to the SQL Server Installation Guide to install SQL Server on the dedicated server or cluster.
+> For the Test and Production environments, refer to the SQL Server
+> Installation Guide to install SQL Server on the dedicated server
+> or cluster.
 
 SQL Server 2008 setup requires .NET Framework 3.5 to be installed.
 
 > **Note**
 >
-> SQL Server 2008 R2 checks for the .NET Framework dependency and can enable the .NET Framework Core role as part of the setup process. Also note that if Windows PowerShell Integrated Scripting Environment (ISE) was installed earlier then .NET Framework 3.5 has already been installed since it is a dependency of that feature.
+> SQL Server 2008 R2 checks for the .NET Framework dependency and
+> can enable the .NET Framework Core role as part of the setup process.
+> Also note that if Windows PowerShell Integrated Scripting Environment
+> (ISE) was installed earlier then .NET Framework 3.5 has already
+> been installed since it is a dependency of that feature.
 
 To install .NET Framework 3.5 on Windows Server
 2008:
@@ -843,7 +866,11 @@ To run the preparation tool:
 
 > **Note**
 >
-> The preparation tool may have to restart the server to complete the installation of some of the prerequisites. The installer will continue to run after the server is restarted, and no manual intervention is required. However, you will have to log back on to the server.
+> The preparation tool may have to restart the server to complete
+> the installation of some of the prerequisites. The installer
+> will continue to run after the server is restarted, and no manual
+> intervention is required. However, you will have to log back
+> on to the server.
 > 5. On the **Installation Complete** page, click
 > **Finish**.
 > 6. Restart the server to complete the installation of the prerequisites.
@@ -929,7 +956,10 @@ To install SharePoint Server 2010:
 
 > **Note**
 >
-> For consistency of approach, it is recommended that you do not run the configuration wizard until SharePoint Server has been installed on all application and front-end Web servers that will participate in the server farm.
+> For consistency of approach, it is recommended that you do not
+> run the configuration wizard until SharePoint Server has been
+> installed on all application and front-end Web servers that
+> will participate in the server farm.
 
 ## Create and configure the farm
 
@@ -940,7 +970,9 @@ Administration Web site.
 
 > **Important**
 >
-> Run the SharePoint Products Configuration Wizard on the server that will host the Central Administration Web site before you run the wizard on the other servers in the farm.
+> Run the SharePoint Products Configuration Wizard on the server that
+> will host the Central Administration Web site before you run the
+> wizard on the other servers in the farm.
 
 To run the configuration wizard and configure
 the farm:
@@ -985,7 +1017,13 @@ the farm:
 
 > **Note**
 >
-> Although a passphrase is similar to a password, it is usually longer to enhance security. It is used to encrypt credentials of accounts that are registered in SharePoint Server 2010. For example, the SharePoint Server 2010 system account that you provide when you run the SharePoint Products Configuration Wizard wizard. Ensure that you remember the passphrase, because you must use it each time you add a server to the farm.
+> Although a passphrase is similar to a password, it is usually
+> longer to enhance security. It is used to encrypt credentials
+> of accounts that are registered in SharePoint Server 2010. For
+> example, the SharePoint Server 2010 system account that you
+> provide when you run the SharePoint Products Configuration Wizard
+> wizard. Ensure that you remember the passphrase, because you
+> must use it each time you add a server to the farm.
 > 7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
 > 1. Select the **Specify port number** checkbox and
 > type the port number specified in
@@ -1084,7 +1122,9 @@ IIS WAMREG admin Service, as described in
 
 > **Note**
 >
-> If performing this step on Windows Server 2008 R2, you must first take ownership of the corresponding registry key and grant administrators permissions to update the configuration.
+> If performing this step on Windows Server 2008 R2, you must first
+> take ownership of the corresponding registry key and grant administrators
+> permissions to update the configuration.
 
 To grant Administrators permissions to update
 the configuration in Windows Server 2008 R2:
@@ -1167,7 +1207,8 @@ To rename the TaxonomyPicker.ascx file:
 
 > **Note**
 >
-> Changing the file extension causes the problematic file to be skipped by ASP.NET when compiling the controls in the folder.
+> Changing the file extension causes the problematic file to be skipped
+> by ASP.NET when compiling the controls in the folder.
 
 ## Configure diagnostic logging and usage and health data collection
 
@@ -1206,7 +1247,10 @@ in Central Administration.
 
 > **Note**
 >
-> If using the installation scripts, instead of Central Administration, in later sections of this document to create and configure the Web application and other service applications, then you may skip this step and instead specify the credentials when running the scripts.
+> If using the installation scripts, instead of Central Administration,
+> in later sections of this document to create and configure the Web
+> application and other service applications, then you may skip this
+> step and instead specify the credentials when running the scripts.
 
 To configure service accounts:
 
@@ -1360,7 +1404,11 @@ from a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Ma
 
 > **Important**
 >
-> Prior to creating the Fabrikam Extranet Web application (and the associated content database), it is strongly recommended that SQL Server first be configured to create database files and transaction log files in the desired locations. This eliminates the need to move the data and/or log files after the databases have been created.
+> Prior to creating the Fabrikam Extranet Web application (and the
+> associated content database), it is strongly recommended that SQL
+> Server first be configured to create database files and transaction
+> log files in the desired locations. This eliminates the need to
+> move the data and/or log files after the databases have been created.
 
 The Web application and initial site collections can either be created
 using PowerShell scripts or through Central Administration. Using the PowerShell
@@ -1487,7 +1535,8 @@ expected to grow significantly, performance would be severely impacted.
 
 > **Note**
 >
-> Skip this section for development environments configured with small VHD files.
+> Skip this section for development environments configured with small
+> VHD files.
 
 To increase the size of the database files:
 
@@ -1568,7 +1617,8 @@ Extranet from the internal domain (FABRIKAM).
 
 > **Note**
 >
-> A one-way trust relationship has been established from the extranet domain (EXTRANET) to the internal domain (FABRIKAM).
+> A one-way trust relationship has been established from the extranet
+> domain (EXTRANET) to the internal domain (FABRIKAM).
 
 To enable selection of people and groups from
 the internal Fabrikam domain:
@@ -1601,7 +1651,10 @@ the internal Fabrikam domain:
 
 > **Note**
 >
-> The usernames and passwords must not contain commas. After you run this command, users can select users and groups from the listed forests and domains from any front-end Web server in the farm.
+> The usernames and passwords must not contain commas. After you
+> run this command, users can select users and groups from the
+> listed forests and domains from any front-end Web server in
+> the farm.
 
 ## Configure SSL on the Internet zone
 
@@ -1786,11 +1839,20 @@ database:
 
 > **Important**
 >
-> Database access must be granted to both the service account used for the Web application and the SharePoint farm account. If the SharePoint farm account does not have access to the database, the Security Token Service used for claims-based authentication will be unable to validate the credentials.
+> Database access must be granted to both the service account used
+> for the Web application and the SharePoint farm account. If the
+> SharePoint farm account does not have access to the database, the
+> Security Token Service used for claims-based authentication will
+> be unable to validate the credentials.
 
 > **Note**
 >
-> The reason the database roles are different between the two service accounts is because the SharePoint farm account only needs permissions to validate credentials and determine role membership, whereas the Web application service account needs additional permissions in order to support other scenarios (e.g. "Change Password" and "Reset Password").
+> The reason the database roles are different between the two service
+> accounts is because the SharePoint farm account only needs permissions
+> to validate credentials and determine role membership, whereas the
+> Web application service account needs additional permissions in
+> order to support other scenarios (e.g. "Change Password" and "Reset
+> Password").
 
 ### Add Web.config modifications for claims-based authentication
 
@@ -1803,7 +1865,8 @@ it is necessary to modify the Web.config files for the following sites:
 
 > **Important**
 >
-> These configuration changes must be completed on each SharePoint server in the farm.
+> These configuration changes must be completed on each SharePoint
+> server in the farm.
 
 To configure the Central Administration Web.config
 file:
@@ -1821,7 +1884,10 @@ file:
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, "Web - Copy.config"), so that if a mistake is made in the file, you can delete it and use the original file.
+> Before you make changes to the Web.config file, make a copy
+> of it by using a different name (for example, "Web - Copy.config"),
+> so that if a mistake is made in the file, you can delete it
+> and use the original file.
 > 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
@@ -1883,7 +1949,10 @@ file:
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, "Web - Copy.config"), so that if a mistake is made in the file, you can delete it and use the original file.
+> Before you make changes to the Web.config file, make a copy
+> of it by using a different name (for example, "Web - Copy.config"),
+> so that if a mistake is made in the file, you can delete it
+> and use the original file.
 > 2. Double-click the **Web.config** file to open the file.
 > 3. In the Web.config editor, add the following elements to the
 > `<configuration>`
@@ -1937,7 +2006,10 @@ Extranet Web application:
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, "Web - Copy.config"), so that if a mistake is made in the file, you can delete it and use the original file.
+> Before you make changes to the Web.config file, make a copy
+> of it by using a different name (for example, "Web - Copy.config"),
+> so that if a mistake is made in the file, you can delete it
+> and use the original file.
 > 2. Double-click the **Web.config** file to open the file.
 > 3. In the Web.config editor:
 > 1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
@@ -1969,7 +2041,8 @@ Extranet Web application:
 
 > **Warning**
 >
-> Do not overwrite any existing entries in this Web.config file.
+> Do not overwrite any existing entries in this Web.config
+> file.
 > 3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
         ```
@@ -2091,7 +2164,8 @@ a Web application.
 
 > **Note**
 >
-> Disk-based caching does not need to be enabled in development environments. However it should always be enabled in both TEST and PROD.
+> Disk-based caching does not need to be enabled in development environments.
+> However it should always be enabled in both TEST and PROD.
 
 To configure BLOB cache settings:
 
@@ -2108,7 +2182,10 @@ To configure BLOB cache settings:
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, “Web - Copy.config”), so that if a mistake is made in the file, you can delete it and use the original file.
+> Before you make changes to the Web.config file, make a copy
+> of it by using a different name (for example, “Web - Copy.config”),
+> so that if a mistake is made in the file, you can delete it
+> and use the original file.
 > 4. Double-click the **Web.config** file to open the file.
 
 > **Note**
@@ -2136,7 +2213,9 @@ To configure BLOB cache settings:
 
 > **Note**
 >
-> It is strongly recommended to specify a directory that is not on the same drive as where either the server operating system swap files or server log files are stored.
+> It is strongly recommended to specify a directory that is not
+> on the same drive as where either the server operating system
+> swap files or server log files are stored.
 > 8. To add or remove file types from the list of file types to be cached,
 > for the **path** attribute, modify the regular expression
 > to include or remove the appropriate file extension. If you add file
@@ -2147,7 +2226,11 @@ To configure BLOB cache settings:
 
 > **Important**
 >
-> It is recommended that you not set the cache size smaller than 10 GB. When you set the cache size, make sure to specify a number large enough to provide a buffer at least 20 percent bigger than the estimated size of the content that will be stored in the cache.
+> It is recommended that you not set the cache size smaller than
+> 10 GB. When you set the cache size, make sure to specify a number
+> large enough to provide a buffer at least 20 percent bigger
+> than the estimated size of the content that will be stored in
+> the cache.
 > 10. To enable the BLOB cache, change the **enabled** attribute
 > to **true**.
 > 11. Save the file, and then close it.
@@ -2246,7 +2329,8 @@ Application:
 
 > **Note**
 >
-> It may take several minutes to create and configure the Search Service Application.
+> It may take several minutes to create and configure the Search
+> Service Application.
 
 ## Configure the search crawl schedules
 
@@ -2310,7 +2394,10 @@ To install Office Web Apps:
 
 > **Note**
 >
-> For consistency of approach, it is recommended that you do not run the configuration wizard until Office Web Apps has been installed on all application and front-end Web servers in the farm.
+> For consistency of approach, it is recommended that you do not
+> run the configuration wizard until Office Web Apps has been
+> installed on all application and front-end Web servers in the
+> farm.
 > 7. Repeat the steps above on each SharePoint server in the farm.
 
 ## Run PSConfig to register Office Web Apps services
@@ -2398,7 +2485,8 @@ support HTTPS.
 
 > **Important**
 >
-> Skip this section for environments that are not configured with SSL certificates (e.g. development environments).
+> Skip this section for environments that are not configured with
+> SSL certificates (e.g. development environments).
 
 To configure the Excel Services Application
 trusted location for HTTPS instead of HTTP:
@@ -2416,7 +2504,11 @@ trusted location for HTTPS instead of HTTP:
 
 > **Note**
 >
-> Since users are automatically redirected from http:// to https:// during sign in, it is not expected that Excel Services will be used over HTTP (only HTTPS). If it is necessary to support both HTTP and HTTPS, then a separate trusted file location will need to be configured.
+> Since users are automatically redirected from http:// to https://
+> during sign in, it is not expected that Excel Services will
+> be used over HTTP (only HTTPS). If it is necessary to support
+> both HTTP and HTTPS, then a separate trusted file location will
+> need to be configured.
 
 ## Configure the Office Web Apps cache
 

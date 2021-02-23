@@ -223,7 +223,10 @@ padding: 3px 6px;
 
 > **Note**
 >
-> I commented out a number of CSS rules (copied from Google's CSS file) because I could not find instances in the HTML returned by Google where these are used. This may depend on which features of Google Site Search you choose to implement.
+> I commented out a number of CSS rules (copied from Google's CSS file)
+> because I could not find instances in the HTML returned by Google where
+> these are used. This may depend on which features of Google Site Search
+> you choose to implement.
 
 Figure 3 shows the corresponding results.
 
