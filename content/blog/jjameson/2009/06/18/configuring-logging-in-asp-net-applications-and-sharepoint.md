@@ -65,6 +65,7 @@ Once configured, browse to the page on the site. Then modify the URL to browse  
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
 alt="ASP.NET Trace Viewer"
+class="screenshot"
 height="267"
 width="600"
 title="Figure 1: ASP.NET Trace Viewer" >}}
@@ -76,6 +77,7 @@ Locate the request that you want to view log messages for and click the correspo
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
 alt="ASP.NET Trace Viewer - Request Details"
+class="screenshot"
 height="600"
 width="474"
 title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}

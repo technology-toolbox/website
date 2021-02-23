@@ -46,6 +46,7 @@ Here's a partial screenshot of the home page of the portal, after clicking the *
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-No-menu-open-447x300.png"
 alt="No menus open"
+class="screenshot"
 height="300"
 width="447"
 title="Figure 1: No menus open" >}}
@@ -57,6 +58,7 @@ The following screenshot shows what happens when you click the **Page**         
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Obscured-menu-447x300.png"
 alt="Page menu items obscured by Silverlight control"
+class="screenshot"
 height="300"
 width="447"
 title="Figure 2: Page menu items obscured by Silverlight control" >}}
@@ -70,6 +72,7 @@ Fortunately, once I discovered this problem, it didn't take long to find a solut
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Unobscured-menu-(windowless)-447x300.png"
 alt="Page menu items no longer obscured by windowless Silverlight control"
+class="screenshot"
 height="300"
 width="447"
 title="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}

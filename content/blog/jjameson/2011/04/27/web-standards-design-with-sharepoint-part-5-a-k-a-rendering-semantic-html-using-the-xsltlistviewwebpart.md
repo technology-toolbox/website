@@ -30,6 +30,7 @@ In case you aren't yet familiar with the Tugboat sample site, the following scre
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
+class="screenshot"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
@@ -99,10 +100,10 @@ Assuming you are proficient in SharePoint, within a matter of a few minutes you 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
 alt="Specials list"
+class="screenshot"
 height="474"
 width="600"
-title="Figure 2: Specials list"
-class="screenshot" >}}
+title="Figure 2: Specials list" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 

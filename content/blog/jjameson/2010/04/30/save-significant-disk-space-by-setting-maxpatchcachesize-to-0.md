@@ -49,6 +49,7 @@ To understand the value of setting MaxPatchCacheSize to 0 on a VM, take a look a
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-(with-SQL-2008-SP1)-600x426.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)"
+class="screenshot"
 height="426"
 width="600"
 title="Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)" >}}
@@ -64,6 +65,7 @@ The following figure shows the disk space usage for a similar configuration (i.e
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/After-restricting-MaxPatchCacheSize-600x493.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)"
+class="screenshot"
 height="493"
 width="600"
 title="Figure 2: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)" >}}

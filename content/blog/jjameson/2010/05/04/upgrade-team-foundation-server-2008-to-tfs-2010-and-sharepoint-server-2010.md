@@ -562,6 +562,7 @@ Note that if you browse to a TFS project site at this point, an error is display
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-600x481.png"
 alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)"
+class="screenshot"
 height="481"
 width="600"
 title="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)" >}}
@@ -652,6 +653,7 @@ Once the warehouse database has been updated, an upgraded TFS project site shoul
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-445x600.png"
 alt="Upgraded TFS project site in SharePoint Server 2010"
+class="screenshot"
 height="600"
 width="445"
 title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}

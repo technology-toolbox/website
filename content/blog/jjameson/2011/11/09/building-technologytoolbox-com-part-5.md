@@ -21,6 +21,7 @@ viewing my MSDN blog home page with CSS disabled.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
 alt="My MSDN blog home - CSS disabled"
+class="screenshot"
 height="600"
 width="328"
 title="Figure 1: My MSDN blog home - CSS disabled" >}}
@@ -60,6 +61,7 @@ page:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
 alt="Technology Toolbox blog home page - CSS disabled"
+class="screenshot"
 height="600"
 width="362"
 title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
@@ -257,6 +259,7 @@ no comments (i.e. `<li class="comments none">`).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
+class="screenshot"
 height="600"
 width="374"
 title="Figure 3: Blog home page" >}}

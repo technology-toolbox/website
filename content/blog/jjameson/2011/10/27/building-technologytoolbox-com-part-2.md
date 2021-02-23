@@ -46,6 +46,7 @@ At this point, I switched from my admin account to my regular account, created  
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-600x420.png"
 alt="Caelum - Initial source tree and Visual Studio solution"
+class="screenshot"
 height="420"
 width="600"
 title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}

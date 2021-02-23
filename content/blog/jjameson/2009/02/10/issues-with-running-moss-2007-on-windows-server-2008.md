@@ -26,6 +26,7 @@ What's wrong with this picture?
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-600x436.jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008"
+class="screenshot"
 height="436"
 width="600"
 title="Figure 1: MOSS 2007 Central Administration - Operations on Windows Server 2008" >}}
@@ -47,6 +48,7 @@ No? Okay, how about if I make this really easy by zooming in on the area where y
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-closeup-414x225.jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)"
+class="screenshot"
 height="225"
 width="414"
 title="Figure 2: MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)" >}}
@@ -67,6 +69,7 @@ You will then find all of the expected links under the **Topology and Services**
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(Admin)-600x463.jpg"
 alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)"
+class="screenshot"
 height="463"
 width="600"
 title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)" >}}

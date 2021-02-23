@@ -28,6 +28,7 @@ To implement this, create a file in the solution folder named SharedAssemblyInfo
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
 alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution"
+class="screenshot"
 height="577"
 width="372"
 title="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution" >}}

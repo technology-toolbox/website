@@ -120,6 +120,7 @@ Figure 1 shows the corresponding Design view of the master page in Expression  W
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-600x142.png"
 alt="Caelum prototype - Default.master"
+class="screenshot"
 height="142"
 width="600"
 title="Figure 1: Caelum prototype - Default.master" >}}
@@ -326,6 +327,7 @@ Posts** section. Hence I didn't bother capturing a different screenshot from  th
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
+class="screenshot"
 height="600"
 width="538"
 title="Figure 2: Technology Toolbox home page" >}}
@@ -714,6 +716,7 @@ Figure 3 shows roughly what the corresponding page looks like when rendered in  
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post"
+class="screenshot"
 height="600"
 width="398"
 title="Figure 3: Sample blog post" >}}

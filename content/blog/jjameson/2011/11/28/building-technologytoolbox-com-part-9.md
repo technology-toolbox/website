@@ -17,6 +17,7 @@ the most recent blog posts, as shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
+class="screenshot"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
@@ -30,6 +31,7 @@ page layout.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)"
+class="screenshot"
 height="600"
 width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}

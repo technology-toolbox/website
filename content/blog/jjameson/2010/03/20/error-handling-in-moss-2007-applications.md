@@ -30,6 +30,7 @@ To understand why, consider a publishing site configured with **BlueBand.master*
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
 alt="Publishing site with BlueBand master page"
+class="screenshot"
 height="353"
 width="600"
 title="Figure 1: Publishing site with BlueBand master page" >}}
@@ -99,6 +100,7 @@ As shown in the following screenshot, browsing to the home page now displays  th
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
 alt="SharePoint error page"
+class="screenshot"
 height="366"
 width="600"
 title="Figure 2: SharePoint error page" >}}
@@ -133,6 +135,7 @@ The following screenshot shows a custom error page fashioned after BlueBand.mast
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
 alt="Custom SharePoint error page"
+class="screenshot"
 height="162"
 width="600"
 title="Figure 3: Custom SharePoint error page" >}}

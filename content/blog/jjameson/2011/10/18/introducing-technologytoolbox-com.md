@@ -17,6 +17,7 @@ The following screenshot shows the current home page for Technology Toolbox.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
+class="screenshot"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
@@ -31,6 +32,7 @@ Here is the corresponding page layout for the site home page.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)"
+class="screenshot"
 height="600"
 width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
@@ -83,6 +85,7 @@ The **Services** page for the site is shown in Figure 3 below. This  represents 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
 alt="Services page"
+class="screenshot"
 height="494"
 width="600"
 title="Figure 3: Services page" >}}
@@ -94,6 +97,7 @@ Note that I still like to use the [960 Grid System](http://960.gs)  to layout We
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
 alt="Services page (with grid)"
+class="screenshot"
 height="495"
 width="600"
 title="Figure 4: Services page (with grid)" >}}
@@ -113,6 +117,7 @@ The site provides an online form prospective clients can use regarding potential
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form"
+class="screenshot"
 height="600"
 width="592"
 title="Figure 5: Contact form" >}}
@@ -124,6 +129,7 @@ As shown below, validators are used to ensure the required fields are specified 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
 alt="Contact form validation errors"
+class="screenshot"
 height="600"
 width="505"
 title="Figure 6: Contact form validation errors" >}}
@@ -137,6 +143,7 @@ When the incorrect image is selected (or no image is selected) in the CAPTCHA  c
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error"
+class="screenshot"
 height="600"
 width="534"
 title="Figure 7: Contact form CAPTCHA validation error" >}}
@@ -152,6 +159,7 @@ My new blog is currently powered by [Subtext](http://subtextproject.com)  -- or 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
+class="screenshot"
 height="600"
 width="374"
 title="Figure 8: Blog home page" >}}
@@ -165,6 +173,7 @@ Figure 9 shows a typical blog post. The secondary content is similar to that  sh
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post"
+class="screenshot"
 height="600"
 width="398"
 title="Figure 9: Sample blog post" >}}

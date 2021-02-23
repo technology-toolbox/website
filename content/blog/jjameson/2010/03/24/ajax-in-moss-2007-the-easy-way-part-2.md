@@ -28,6 +28,7 @@ I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
 alt="AJAX in SharePoint"
+class="screenshot"
 height="417"
 width="600"
 title="Figure 1: AJAX in SharePoint" >}}

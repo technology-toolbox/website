@@ -16,6 +16,7 @@ arrow image next to each list item.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
+class="screenshot"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
@@ -37,6 +38,7 @@ icons used throughout the site.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png"
+class="screenshot"
 height="400"
 width="400"
 title="Figure 2: list-item-sprite-1.0.png" >}}
@@ -123,6 +125,7 @@ each cell in the grid -- or you can simply take my word for it :-) ]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png"
 alt="List items sprite (Expression Design)"
+class="screenshot"
 height="377"
 width="600"
 title="Figure 3: List items sprite (Expression Design)" >}}
@@ -163,6 +166,7 @@ blog pages in the site, such as the one shown in Figure 4.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
+class="screenshot"
 height="600"
 width="374"
 title="Figure 4: Blog home page" >}}

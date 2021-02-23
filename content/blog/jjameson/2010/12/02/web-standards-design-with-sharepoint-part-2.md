@@ -48,6 +48,7 @@ The following screenshot shows the Tugboat home page:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
+class="screenshot"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
@@ -147,6 +148,7 @@ Here is a "wireframe" I put together to help visualize the various fields and We
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-296x600.png"
 alt="Tugboat - Home page (wireframe)"
+class="screenshot"
 height="600"
 width="296"
 title="Figure 2: Tugboat - Home page (wireframe)" >}}
@@ -255,6 +257,7 @@ It worked as expected in Firefox, as shown in the following screenshot:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-595x600.png"
 alt="\"Find a Location\" map (Firefox)"
+class="screenshot"
 height="600"
 width="595"
 title="Figure 4: \"Find a Location\" map (Firefox)" >}}
@@ -266,6 +269,7 @@ However, take a look at the following screenshot that shows the exact same HTML 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-600x598.png"
 alt="\"Find a Location\" map (IE8)"
+class="screenshot"
 height="598"
 width="600"
 title="Figure 5: \"Find a Location\" map (IE8)" >}}

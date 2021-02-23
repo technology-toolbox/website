@@ -465,6 +465,7 @@ Figure 1 shows the corresponding page rendered in the browser. [Note: This is  n
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-110x600.png"
 alt="Style Guide for TechnologyToolbox.com"
+class="screenshot"
 height="600"
 width="110"
 title="Figure 1: Style Guide for TechnologyToolbox.com" >}}
@@ -482,6 +483,7 @@ Now I simply create a bunch of "color swatches" in the Style Guide that show  th
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-518x600.png"
 alt="Technology Toolbox color palette"
+class="screenshot"
 height="600"
 width="518"
 title="Figure 2: Technology Toolbox color palette" >}}

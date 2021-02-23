@@ -51,6 +51,7 @@ Another key feature is the ability to show the status of important project deliv
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-600x452.jpg"
 alt="Project Summary \"dashboard\""
+class="screenshot"
 height="452"
 width="600"
 title="Figure 1: Project Summary \"dashboard\"" >}}

@@ -29,6 +29,7 @@ As you can see in the following figure, I've created a number of organizational 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-302x600.png"
 alt="Jameson Datacenter - Active Directory domain structure"
+class="screenshot"
 height="600"
 width="302"
 title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}

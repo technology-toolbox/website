@@ -166,6 +166,7 @@ site, then you'll see something similar to the screenshot below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
 alt="Custom error page (Generic.aspx)"
+class="screenshot"
 height="295"
 width="600"
 title="Figure 1: Custom error page (Generic.aspx)" >}}
@@ -393,6 +394,7 @@ the out-of-the-box IIS "404" error page (404.htm) shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png"
 alt="IIS - default 404 page (404.htm)"
+class="screenshot"
 height="110"
 width="600"
 title="Figure 2: IIS - default 404 page (404.htm)" >}}
@@ -420,6 +422,7 @@ like the one shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
 alt="HTTP 404 error page (404.aspx)"
+class="screenshot"
 height="295"
 width="600"
 title="Figure 3: HTTP 404 error page (404.aspx)" >}}

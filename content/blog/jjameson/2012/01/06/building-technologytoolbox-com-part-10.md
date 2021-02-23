@@ -18,6 +18,7 @@ show you how I built on that foundation to generate the content for the
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page"
+class="screenshot"
 height="600"
 width="538"
 title="Figure 1: Technology Toolbox home page" >}}
@@ -31,6 +32,7 @@ illustrated in the corresponding page layout.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)"
+class="screenshot"
 height="600"
 width="536"
 title="Figure 2: Technology Toolbox home page (page layout)" >}}
@@ -74,6 +76,7 @@ At this point, the model should resemble the following:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model"
+class="screenshot"
 height="400"
 width="431"
 title="Figure 3: Entity Data Model" >}}

@@ -28,6 +28,7 @@ As a quick review, the following screenshot shows the Tugboat home page. If you 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page"
+class="screenshot"
 height="600"
 width="296"
 title="Figure 1: Tugboat - Home page" >}}
@@ -45,6 +46,7 @@ At this point, the Tugboat home page in SharePoint 2010 looked like the followin
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-600x542.png"
 alt="Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)"
+class="screenshot"
 height="542"
 width="600"
 title="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)" >}}
@@ -76,6 +78,7 @@ Here are the results after step 2:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-2-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 2)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 3: Tugboat home page in SharePoint 2010 (step 2)" >}}
@@ -146,6 +149,7 @@ Here are the results after step 3:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 3)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 4: Tugboat home page in SharePoint 2010 (step 3)" >}}
@@ -161,6 +165,7 @@ At first, everything seemed to work just fine (from an anonymous user's perspect
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)"
+class="screenshot"
 height="368"
 width="600"
 title="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
@@ -213,6 +218,7 @@ Here are the results after step 4:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-4-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 4)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 6: Tugboat home page in SharePoint 2010 (step 4)" >}}
@@ -252,6 +258,7 @@ Here are the results after step 5:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 5)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
@@ -281,6 +288,7 @@ Here are the results after step 6:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-6-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 6)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 8: Tugboat home page in SharePoint 2010 (step 6)" >}}
@@ -305,6 +313,7 @@ Here are the results after step 7:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-7-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 7)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 9: Tugboat home page in SharePoint 2010 (step 7)" >}}
@@ -321,6 +330,7 @@ Someone suggested wrapping the **SPRibbon** control in the **&lt;LoggedInTemplat
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)" >}}
@@ -334,6 +344,7 @@ Take a look at the following screenshot taken for an authenticated user after cl
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-600x367.png"
 alt="Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)"
+class="screenshot"
 height="367"
 width="600"
 title="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)" >}}
@@ -370,6 +381,7 @@ With this approach, the ribbon renders as expected for both anonymous users (Fig
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")"
+class="screenshot"
 height="368"
 width="600"
 title="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")" >}}
@@ -403,6 +415,7 @@ Here are the results after step 9:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-9-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 9)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 13: Tugboat home page in SharePoint 2010 (step 9)" >}}
@@ -418,6 +431,7 @@ Take a look at the following screenshot, which shows the ribbon "in action" (in 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)"
+class="screenshot"
 height="357"
 width="600"
 title="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)" >}}

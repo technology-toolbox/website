@@ -31,6 +31,7 @@ Update** field set to **Yes**, as shown below. This is the         key to "centr
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-List-463x600.png"
 alt="Reusable Content list"
+class="screenshot"
 height="600"
 width="463"
 title="Figure 1: Reusable Content list" >}}
@@ -42,6 +43,7 @@ The following screenshot shows a sample page from one of the sites used to creat
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-600x511.png"
 alt="Reusable Content in \"view\" mode"
+class="screenshot"
 height="511"
 width="600"
 title="Figure 2: Reusable Content in \"view\" mode" >}}
@@ -53,6 +55,7 @@ Note that when the document author is editing the page, SharePoint marks the reu
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-600x423.png"
 alt="Reusable Content in \"edit\" mode"
+class="screenshot"
 height="423"
 width="600"
 title="Figure 3: Reusable Content in \"edit\" mode" >}}
@@ -66,6 +69,7 @@ For example, consider the following screenshot that shows the same page as Figur
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-600x211.png"
 alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
+class="screenshot"
 height="211"
 width="600"
 title="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}

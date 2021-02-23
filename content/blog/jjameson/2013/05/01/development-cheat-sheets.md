@@ -22,6 +22,7 @@ my Fabrikam Demo solution.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-600x393.png"
 alt="Development cheat sheet - Fabrikam Demo - Main branch"
+class="screenshot"
 height="393"
 width="600"
 title="Figure 1: Development \"cheat sheet\" - Fabrikam Demo - Main branch" >}}
@@ -116,6 +117,7 @@ for the code sample included in
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-600x524.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
+class="screenshot"
 height="524"
 width="600"
 title="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
@@ -148,6 +150,7 @@ upgrading) the ELN solutions (WSPs).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-600x461.png"
 alt="Development cheat sheet - Dow ELN - Main branch"
+class="screenshot"
 height="461"
 width="600"
 title="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}

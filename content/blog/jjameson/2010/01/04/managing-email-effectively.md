@@ -38,6 +38,7 @@ For reference purposes, here's what my Outlook folder looked like first thing th
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-297x600.png"
 alt="Outlook folders and archive structure"
+class="screenshot"
 height="600"
 width="297"
 title="Figure 1: Outlook folders and archive structure" >}}
@@ -143,6 +144,7 @@ Here's my updated screenshot from Outlook this morning after running Thread Comp
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-297x600.png"
 alt="Outlook folders after running Thread Compressor"
+class="screenshot"
 height="600"
 width="297"
 title="Figure 2: Outlook folders after running Thread Compressor" >}}

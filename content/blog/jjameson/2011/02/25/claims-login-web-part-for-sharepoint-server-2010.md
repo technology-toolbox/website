@@ -24,6 +24,7 @@ If you follow those steps, then when you browse to the home page of the site and
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-1-600x250.png"
 alt="Default login page in SharePoint Server 2010 (/_login/default.aspx)"
+class="screenshot"
 height="250"
 width="600"
 title="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.aspx)" >}}
@@ -33,6 +34,7 @@ If you click **Forms Authentication** in the dropdown list, you are         redi
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
 alt="Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)"
+class="screenshot"
 height="250"
 width="600"
 title="Figure 2: Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)" >}}
@@ -44,6 +46,7 @@ While the sign-in experience shown in the preceeding screenshots is great for pr
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-600x342.png"
 alt="Custom login page in SharePoint Server 2010"
+class="screenshot"
 height="342"
 width="600"
 title="Figure 3: Custom login page in SharePoint Server 2010" >}}

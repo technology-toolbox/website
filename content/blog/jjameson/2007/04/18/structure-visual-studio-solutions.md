@@ -38,6 +38,7 @@ So, if you know your way around Visual Studio even just a little, you should be 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Solution-Explorer-Step-1-314x452.JPG"
 alt="Solution Explorer view of Visual Studio solution"
+class="screenshot"
 height="452"
 width="314"
 title="Figure 1: Solution Explorer view of Visual Studio solution" >}}
@@ -47,6 +48,7 @@ In Windows Explorer, the corresponding folder structure looks like this:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-600x379.JPG"
 alt="Windows Explorer view of Visual Studio solution"
+class="screenshot"
 height="379"
 width="600"
 title="Figure 2: Windows Explorer view of Visual Studio solution" >}}

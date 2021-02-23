@@ -29,6 +29,7 @@ Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)" prov
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
 alt="ASP.NET error page"
+class="screenshot"
 height="295"
 width="600"
 title="Figure 1: ASP.NET error page" >}}

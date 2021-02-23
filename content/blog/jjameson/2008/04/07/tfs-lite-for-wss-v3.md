@@ -118,6 +118,7 @@ described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
 alt="Project Summary \"dashboard\""
+class="screenshot"
 height="363"
 width="600"
 title="Figure 1: Project Summary \"dashboard\"" >}}

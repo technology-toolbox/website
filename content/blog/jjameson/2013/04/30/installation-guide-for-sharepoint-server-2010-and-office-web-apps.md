@@ -321,6 +321,7 @@ to reduce I/O contention.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png"
 alt="Figure 1: SharePoint development VM configuration"
+class="screenshot"
 height="317"
 width="600"
 title="Figure 1: SharePoint development VM configuration" >}}
@@ -1292,6 +1293,7 @@ FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png"
 alt="Setting environment variables"
+class="screenshot"
 height="436"
 width="394"
 title="Figure 2: Setting environment variables" >}}
@@ -1994,6 +1996,7 @@ The site should resemble the following:
 [{{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
 alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
+class="screenshot"
 height="374"
 width="600"
 title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
@@ -2564,6 +2567,7 @@ the screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png"
 alt="Fabrikam Extranet home page"
+class="screenshot"
 height="277"
 width="600"
 title="Figure 4: Fabrikam Extranet home page" >}}

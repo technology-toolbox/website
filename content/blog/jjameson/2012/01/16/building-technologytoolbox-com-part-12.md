@@ -16,6 +16,7 @@ the various blog pages of the Technology Toolbox site.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page"
+class="screenshot"
 height="600"
 width="374"
 title="Figure 1: Blog home page" >}}
@@ -86,6 +87,7 @@ Model for accessing data from Subtext.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model"
+class="screenshot"
 height="400"
 width="431"
 title="Figure 2: Entity Data Model" >}}
@@ -128,6 +130,7 @@ as a simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
 alt="LINQPad"
+class="screenshot"
 height="600"
 width="564"
 title="Figure 3: LINQPad" >}}
@@ -394,6 +397,7 @@ icon next to the list item.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png"
+class="screenshot"
 height="400"
 width="400"
 title="Figure 4: list-item-sprite-1.0.png" >}}

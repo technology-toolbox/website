@@ -70,6 +70,7 @@ As a quick review, the following screenshot shows the snapshots for my primary S
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots"
+class="screenshot"
 height="383"
 width="600"
 title="Figure 1: FOOBAR5 snapshots" >}}
@@ -127,6 +128,7 @@ To understand this process, examine the snapshots shown below for one of my Micr
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
 alt="FOOBAR2 snapshots"
+class="screenshot"
 height="372"
 width="600"
 title="Figure 2: FOOBAR2 snapshots" >}}
