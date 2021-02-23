@@ -527,7 +527,9 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
 
 > **Note**
 >
-> Technically, you don't have to set the environment variables (and use the "-dev"             accounts). However, I recommend this in order to bypass SharePoint timer jobs when             deploying the WSPs.
+> Technically, you don't have to set the environment variables (and use the "-dev"
+> accounts). However, I recommend this in order to bypass SharePoint timer jobs when
+> deploying the WSPs.
 
 At this point you should be able to modify your hosts file accordingly and browse         to either [http://www-local.tugboatcoffee.com](http://www-local.tugboatcoffee.com)         (to view the site as an anonymous user) or [http://tugboatcoffee-local](http://tugboatcoffee-local)         (to view the site as an administrator).
 

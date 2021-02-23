@@ -80,7 +80,8 @@ All code included in a build must be checked into source control before the buil
 
 > **Important**
 >
-> The source control must not be left in a broken state at any time. If a build breaks,             resolving the problem becomes the highest priority.
+> The source control must not be left in a broken state at any time. If a build breaks,
+> resolving the problem becomes the highest priority.
 
 > **Tip**
 >

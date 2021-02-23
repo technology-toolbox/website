@@ -213,7 +213,8 @@ Complete the deployment procedures in the following sections:
 
 > **Important**
 >
-> Do not run the Farm Configuration Wizard (the TFS Web application and service applications             will be configured in the following steps).
+> Do not run the Farm Configuration Wizard (the TFS Web application and service applications
+> will be configured in the following steps).
 
 #### Add SharePoint Central Administration to the Local intranet zone
 
@@ -307,7 +308,9 @@ and then save the file.
 
 > **Update (2011-04-14)**
 >
-> The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010. Instead             of trying to fix the assembly name, just rename the file (since it apparently isn't             used by SharePoint).
+> The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010. Instead
+> of trying to fix the assembly name, just rename the file (since it apparently isn't
+> used by SharePoint).
 
 ### Rename TaxonomyPicker.ascx
 
@@ -327,7 +330,8 @@ and then change the filename to **TaxonomyPicker.ascx\_broken**.
 
 > **Note**
 >
-> Changing the file extension causes the problematic file to be skipped by ASP.NET             when compiling the controls in the folder.
+> Changing the file extension causes the problematic file to be skipped by ASP.NET
+> when compiling the controls in the folder.
 
 ### Install SQL Server 2008 Reporting Services
 

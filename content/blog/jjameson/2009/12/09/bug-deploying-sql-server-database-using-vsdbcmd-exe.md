@@ -45,7 +45,9 @@ It certainly would be nice if the above MSDN article were updated to note the bu
 
 > **Note**
 >
-> As pointed out in a comment by Ramkumar Perumal, Microsoft.SqlServer.BatchParser.dll             does not exist in any of the specified folders. This should also be reflected in             the MSDN article.
+> As pointed out in a comment by Ramkumar Perumal, Microsoft.SqlServer.BatchParser.dll
+> does not exist in any of the specified folders. This should also be reflected in
+> the MSDN article.
 
 You will also find instructions to add the registry key -- as well as an explanation         for why you more than likely already have Microsoft.SqlServer.BatchParser.dll installed         on your SQL Server -- in the following blog post:
 
