@@ -12,7 +12,7 @@ tags: ["My System", "Visual Studio", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx)
 >
@@ -662,9 +662,9 @@ title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 
 > **Tip**
 >
->             To significantly improve the appearance of the upgraded TFS project home page, edit
->             the **Remaining Work** Web Part and set the **Height**
->             to **600 pixels** and the **Width** to **900 pixels**.
+> To significantly improve the appearance of the upgraded TFS project home page, edit
+> the **Remaining Work** Web Part and set the **Height**
+> to **600 pixels** and the **Width** to **900 pixels**.
 
 For more information on updating a team project, refer to the following MSDN article:
 
@@ -742,9 +742,9 @@ v5.0** process template.
 
 > **Note**
 >
->             In order to create a new team project (with the default project options) using Team
->             Explorer on a server that hosts SharePoint Server 2010 and SQL Server Reporting
->             Services, you need to run Visual Studio as an administrator.
+> In order to create a new team project (with the default project options) using Team
+> Explorer on a server that hosts SharePoint Server 2010 and SQL Server Reporting
+> Services, you need to run Visual Studio as an administrator.
 
 For more information on creating a new TFS project, refer to the following:
 

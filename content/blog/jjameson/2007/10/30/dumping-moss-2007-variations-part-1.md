@@ -10,7 +10,7 @@ tags: ["MOSS 2007"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx)
 >
@@ -59,8 +59,8 @@ The fundamental problem that I have with the "by design" response is that if you
 
 > **Update (2007-11-28)**
 >
->             According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, it appears this will be fixed in a QFE by enabling
->             content types on the **Pages** library in destination labels. Excellent!
+> According to a [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx) by Stefan Goßner, it appears this will be fixed in a QFE by enabling
+> content types on the **Pages** library in destination labels. Excellent!
 
 Here are the repro steps to break the variations feature using no custom code and         no custom content types:
 

@@ -887,14 +887,14 @@ To run the preparation tool:
 
 > **Note**
 >
->       		If the error message <q class="directQuote errorMessage">"Loading 
->       		this assembly would produce a different grant set from other 
->       		instances. (Exception from HRESULT: 0x80131401)"</q> is displayed 
->       		when you start the IIS worker process (w3wp.exe), another service, 
->       		or a managed application on a server that is also running SharePoint 
->       		Server 2010, you must install
->       		[KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358). 
->       		You must restart the computer after you apply this hotfix.
+> If the error message <q class="directQuote errorMessage">"Loading
+> this assembly would produce a different grant set from other
+> instances. (Exception from HRESULT: 0x80131401)"</q> is displayed
+> when you start the IIS worker process (w3wp.exe), another service,
+> or a managed application on a server that is also running SharePoint
+> Server 2010, you must install
+> [KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358).
+> You must restart the computer after you apply this hotfix.
 
 ## Install security update for Web applications using claims authentication
 
@@ -913,11 +913,10 @@ Download and install the update from the following location:
 
 > **Note**
 >
->       	In the list of files to download, there is no option corresponding 
->       	to Windows Server 2008 (only Windows Vista and Windows 7). For Windows 
->       	Server 2008 or Windows Server 2008 R2, download and install the 
->       	Windows 7 x64 version:
->       	
+> In the list of files to download, there is no option corresponding
+> to Windows Server 2008 (only Windows Vista and Windows 7). For Windows
+> Server 2008 or Windows Server 2008 R2, download and install the
+> Windows 7 x64 version:
 >
 > > **Windows6.1-KB979917-x64.msu (Win7)**
 
@@ -1041,20 +1040,19 @@ the farm:
 
 > **Note**
 >
->       		If you are prompted for your user name and password, you need 
->       		to add the SharePoint Central Administration site to the
->       		**Local intranet** zone and configure the default 
->       		settings for this zone in Internet Explorer. Instructions for 
->       		configuring these settings are provided in a following section 
->       		(Add 
->       		SharePoint Central Administration to the Local intranet zone). 
->       		In order to complete the steps in this section, type your username 
->       		and password to access Central Administration.
-
-12. In the **Help Make SharePoint Better** window, click
-    the desired option and then click **OK**.
-13. On the **Configure your SharePoint farm** page, click
-    **Cancel** (since the services will be configured manually).
+> If you are prompted for your user name and password, you need
+> to add the SharePoint Central Administration site to the
+> **Local intranet** zone and configure the default
+> settings for this zone in Internet Explorer. Instructions for
+> configuring these settings are provided in a following section
+> (Add
+> SharePoint Central Administration to the Local intranet zone).
+> In order to complete the steps in this section, type your username
+> and password to access Central Administration.
+> 12. In the **Help Make SharePoint Better** window, click
+> the desired option and then click **OK**.
+> 13. On the **Configure your SharePoint farm** page, click
+> **Cancel** (since the services will be configured manually).
 
 ## Add Web servers to the farm
 
@@ -1892,32 +1890,28 @@ file:
 
 > **Note**
 >
->       		If you see a dialog box that says that Windows cannot open the 
->       		file, click **Select the program from a list**, 
->       		and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then 
->       		click **OK**.
+> If you see a dialog box that says that Windows cannot open the
+> file, click **Select the program from a list**,
+> and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then
+> click **OK**.
+> 5. In the Web.config editor:
+> 1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
+> add the following elements:
 
-5. In the Web.config editor:
-   1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
-      add the following elements:
-      
-      ```
-      <connectionStrings>
-          <add name="FabrikamDemo"
-            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
-      ```
+        ```
+        <connectionStrings>
+            <add name="FabrikamDemo"
+              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+          </connectionStrings>
+        ```
 
 > **Important**
 >
->       			Be sure to replace the **{databaseServer}** 
->       			placeholder in the connection string with the name of the 
->       			database server.
+> Be sure to replace the **{databaseServer}**
+> placeholder in the connection string with the name of the
+> database server.
+> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    		
-    
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -1990,11 +1984,10 @@ file:
 
 > **Important**
 >
->       		Be sure to replace the **{databaseServer}** placeholder 
->       		in the connection string with the name of the database server.
-
-4. Save the changes to the Web.config file and close the editor.
-5. Repeat the steps above on each Web server in the farm.
+> Be sure to replace the **{databaseServer}** placeholder
+> in the connection string with the name of the database server.
+> 4. Save the changes to the Web.config file and close the editor.
+> 5. Repeat the steps above on each Web server in the farm.
 
 To configure the Web.config file for the Fabrikam
 Extranet Web application:
@@ -2024,14 +2017,11 @@ Extranet Web application:
 
 > **Important**
 >
->       			Be sure to replace the **{databaseServer}** 
->       			placeholder in the connection string with the name of the 
->       			database server.
+> Be sure to replace the **{databaseServer}**
+> placeholder in the connection string with the name of the
+> database server.
+> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    		
-    
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -2156,11 +2146,11 @@ a Web application.
 
 > **Important**
 >
->       	The following steps must be performed on each front-end Web server 
->       	in the farm and for each Web.config file used by the Web application 
->       	(i.e. the default Web.config as well as the Web.config for each 
->       	Web application configured as an Alternate Access Mapping for the
->       	**Default** zone).
+> The following steps must be performed on each front-end Web server
+> in the farm and for each Web.config file used by the Web application
+> (i.e. the default Web.config as well as the Web.config for each
+> Web application configured as an Alternate Access Mapping for the
+> **Default** zone).
 
 > **Note**
 >
@@ -2190,23 +2180,21 @@ To configure BLOB cache settings:
 
 > **Note**
 >
->       		If you see a dialog box that says that Windows cannot open the 
->       		file, click **Select the program from a list**, 
->       		and then click **OK**. In the **Open With** 
->       		dialog box, click **Notepad**, and then click
->       		**OK**.
+> If you see a dialog box that says that Windows cannot open the
+> file, click **Select the program from a list**,
+> and then click **OK**. In the **Open With**
+> dialog box, click **Notepad**, and then click
+> **OK**.
+> 5. If the Windows dialog box appears, select **Select a program
+> from a list of installed programs**, and then click **OK**.
+> In the **Open With** dialog box, click **Notepad**,
+> and then click **OK**.
+> 6. In the Web.config editor, find the following line:
 
-5. If the Windows dialog box appears, select **Select a program
-   from a list of installed programs**, and then click **OK**.
-   In the **Open With** dialog box, click **Notepad**,
-   and then click **OK**.
-
-6. In the Web.config editor, find the following line:
-   
-   ```
-   <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
-       enabled="false" />
-   ```
+    ```
+    <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
+        enabled="false" />
+    ```
 
 7. In this line, change the **location** attribute to
    specify a directory that has enough space to accommodate the cache size.
@@ -2528,12 +2516,11 @@ create a separate content database for caching:
 
 > **Important**
 >
->       		You must start a new instance of the SharePoint 2010 Management 
->       		Shell after installing Office Web Apps in order for the new 
->       		PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
-
-2. From the Windows PowerShell command prompt, change to the following
-   directory:
+> You must start a new instance of the SharePoint 2010 Management
+> Shell after installing Office Web Apps in order for the new
+> PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
+> 2. From the Windows PowerShell command prompt, change to the following
+> directory:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
@@ -2548,10 +2535,9 @@ create a separate content database for caching:
 
 > **Note**
 >
->       		The cache site collection is created via a SharePoint timer 
->       		job. Consequently you may encounter the following error (depending 
->       		on how quickly the installation steps are performed):
->       		
+> The cache site collection is created via a SharePoint timer
+> job. Consequently you may encounter the following error (depending
+> on how quickly the installation steps are performed):
 >
 > {{< blockquote "font-italic text-danger" >}}
 >

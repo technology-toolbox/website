@@ -10,7 +10,7 @@ tags: ["MOSS 2007"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx)
 >

@@ -11,7 +11,7 @@ tags: ["SQL Server", "Visual Studio"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx)
 >

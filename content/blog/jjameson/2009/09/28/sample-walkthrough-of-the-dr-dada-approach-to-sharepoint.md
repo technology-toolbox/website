@@ -12,7 +12,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx)
 >
@@ -494,10 +494,9 @@ purposes -- for example, to quickly deploy to a "vanilla" SharePoint site).
 
 > **Tip**
 >
->       If you do have to use a SharePoint timer job, use `stsadm.exe -o 
->       execadmsvcjobs` to wait for the timer job to finish before continuing 
->       (as shown in the script above when `DEPLOY_METHOD` is
->       `-immediate` instead of `-local`).
+> If you do have to use a SharePoint timer job, use `stsadm.exe -o  execadmsvcjobs` to wait for the timer job to finish before continuing
+> (as shown in the script above when `DEPLOY_METHOD` is
+> `-immediate` instead of `-local`).
 
 Here are the contents of **Activate Features.cmd**:
 
@@ -752,8 +751,8 @@ duration of each portion of the "DR.DADA" process.
 
 > **Tip**
 >
->       If there is no need to deactivate/(re)activate your features when redeploying, 
->       use `Redeploy Solution.cmd -quick` to streamline the process.
+> If there is no need to deactivate/(re)activate your features when redeploying,
+> use `Redeploy Solution.cmd -quick` to streamline the process.
 
 ### Deploying Updated Code
 

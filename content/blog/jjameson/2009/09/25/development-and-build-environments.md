@@ -11,7 +11,7 @@ tags: ["My System", "Core Development"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx)
 >
@@ -110,12 +110,12 @@ The shared folder on the Release Server should be protected by ACLs to ensure th
 
 > **Important**
 >
->             The Test and Release Management teams should only install the solution from the
->             Release Server (or, preferrably, a CD or DVD containing the files from the Release
->             Server). Furthermore, only explicit build folders should be used by the Test and
->             Release Management teams. In other words, the **Latest** folder should
->             only be used for automated installs into the DEV environment -- it should not be
->             used for installations in the TEST or PROD environments.
+> The Test and Release Management teams should only install the solution from the
+> Release Server (or, preferrably, a CD or DVD containing the files from the Release
+> Server). Furthermore, only explicit build folders should be used by the Test and
+> Release Management teams. In other words, the **Latest** folder should
+> only be used for automated installs into the DEV environment -- it should not be
+> used for installations in the TEST or PROD environments.
 
 ### Test Environment
 

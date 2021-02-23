@@ -11,7 +11,7 @@ tags: ["My System", "Simplify"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx)
 >
@@ -55,10 +55,9 @@ I configure rules within Outlook to "preprocess" messages sent either directly t
 
 > **Important**
 >
->             The reason for using DL folders under the **Inbox** folder -- instead
->             of having the Outlook rules route directly to the archive (.pst) files -- is to
->             ensure the rules are processed on the Exchange server.
->             
+> The reason for using DL folders under the **Inbox** folder -- instead
+> of having the Outlook rules route directly to the archive (.pst) files -- is to
+> ensure the rules are processed on the Exchange server.
 >
 > If you configure an Outlook rule to move messages to a .pst file, then obviously                 that rule can only be processed on the client (where the .pst is available). While                 that alternate approach might work for some people, anyone with a smartphone configured                 to receive email will quickly find it to be rather useless.
 

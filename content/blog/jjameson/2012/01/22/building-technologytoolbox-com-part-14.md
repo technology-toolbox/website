@@ -464,13 +464,13 @@ element is used:
 
 > **Note**
 >
->       If you'd prefer to configure these settings in IIS Manager (rather than 
->       editing the Web.config file directly), under the **IIS** 
->       section double-click **Error Pages** (to modify the
->       `<httpErrors>` 
->       element) or under the **ASP.NET** section double-click
->       **.NET Error Pages**. (to modify the `<customErrors>` 
->       element).
+> If you'd prefer to configure these settings in IIS Manager (rather than
+> editing the Web.config file directly), under the **IIS**
+> section double-click **Error Pages** (to modify the
+> `<httpErrors>`
+> element) or under the **ASP.NET** section double-click
+> **.NET Error Pages**. (to modify the `<customErrors>`
+> element).
 
 You may have noticed from Figure 3 that I prefer to show the server-relative
 URL of the request in the error message. This helps draw the user's attention

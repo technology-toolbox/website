@@ -10,7 +10,7 @@ tags: ["My System", "TFS"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx)
 >
@@ -59,9 +59,9 @@ In hindsight, at the end of Sprint-1, I should have created just the **ServicePa
 
 > **Important**
 >
->             Going forward, I'm going to switch from the "Advanced Branch Plan" to the "Standard
->             Branch Plan" (since -- at least for this particular project -- we don't need both
->             a **ServicePack** branch as well as a **QFE** branch).
+> Going forward, I'm going to switch from the "Advanced Branch Plan" to the "Standard
+> Branch Plan" (since -- at least for this particular project -- we don't need both
+> a **ServicePack** branch as well as a **QFE** branch).
 
 Note that build 2.0.371.0 is the version that has been approved for this release.         When branching code for a release, I always branch from **Main** using         a specific changeset or label (corresponding to the version approved for release).         By branching from a specific changeset or label, it doesn't really matter when you         create the branch. In other words, you don't have to worry about whether any changes         have been checked in on **Main** after the build that is considered         "golden." Also note that you will likely decide to branch for a release before the         final version has been determined (so that some members of the Development team         can keep working on **Main** while others focus on fixing bugs in the         release branch).
 
@@ -76,11 +76,11 @@ Branching for a release (with the "Standard Branch Plan") is comprised of three 
 
 > **Note**
 >
->             If you are using the "Advanced Branch Plan" (as I was before), then branching for
->             a release is comprised of *four* logical steps (because you would first branch
->             "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you would increment
->             the Revision portion of the assembly number on the "QFE" branch instead of the "Service
->             Pack" branch.
+> If you are using the "Advanced Branch Plan" (as I was before), then branching for
+> a release is comprised of *four* logical steps (because you would first branch
+> "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you would increment
+> the Revision portion of the assembly number on the "QFE" branch instead of the "Service
+> Pack" branch.
 
 To create a new "Service Pack" branch from the "Main" branch:
 
@@ -180,8 +180,8 @@ To increment the Revision portion of the assembly version on the "Service Pack" 
 
 > **Tip**
 >
->             Even though it probably seems silly to many people, I always compare my changes
->             on edited files before I click the **Check In** button -- even when
->             making trivial changes like the one described above. It doesn't take but a few seconds,
->             and it helps ensure I don't accidentally check in some unexpected changes.
+> Even though it probably seems silly to many people, I always compare my changes
+> on edited files before I click the **Check In** button -- even when
+> making trivial changes like the one described above. It doesn't take but a few seconds,
+> and it helps ensure I don't accidentally check in some unexpected changes.
 

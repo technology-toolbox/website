@@ -11,7 +11,7 @@ tags: ["MOSS 2007"]
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/31/updated-thoughts-on-wspbuilder.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/31/updated-thoughts-on-wspbuilder.aspx)
 >

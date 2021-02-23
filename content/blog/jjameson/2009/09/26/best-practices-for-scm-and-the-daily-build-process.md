@@ -10,7 +10,7 @@ tags: ["Core Development", "TFS"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx)
 >
@@ -36,13 +36,12 @@ Back in the days of using Visual SourceSafe (VSS) on customer projects, at the b
 
 > **Note**
 >
->             While VSS certainly provided the ability to retrieve a project based on a particular
->             timestamp, it definitely wasn't easy (the only way that I was ever to do it was
->             through [the SS
->                 command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)). Thus build labels provided a quick way of getting
->             a snapshot of the code for a particular build.
->     
->     
+> While VSS certainly provided the ability to retrieve a project based on a particular
+> timestamp, it definitely wasn't easy (the only way that I was ever to do it was
+> through [the SS
+> command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)). Thus build labels provided a quick way of getting
+> a snapshot of the code for a particular build.
+>
 >             With the concept of changesets in TFS -- and the ability to quickly get the code
 >             for a specific changeset -- build labels are obviously not as important as they
 >             were in VSS. However, regardless of which particular source control system you are
@@ -85,8 +84,8 @@ All code included in a build must be checked into source control before the buil
 
 > **Tip**
 >
->             You can use the **Builds** check-in policy for TFS to ensure the solution
->             compiles before a developer is allowed to check-in a changeset.
+> You can use the **Builds** check-in policy for TFS to ensure the solution
+> compiles before a developer is allowed to check-in a changeset.
 
 Each member of the Development team is responsible for ensuring the following:
 
@@ -115,8 +114,8 @@ Each member of the Development team is responsible for ensuring the following:
 
 > **Tip**
 >
->             You can use the **Testing Policy** check-in policy for TFS to ensure
->             that specific unit tests pass before a developer is allowed to check-in a changeset.
+> You can use the **Testing Policy** check-in policy for TFS to ensure
+> that specific unit tests pass before a developer is allowed to check-in a changeset.
 
 If any of the above conditions cannot be met, the code should not be checked into         source control.
 
@@ -173,8 +172,8 @@ The troubleshooting guide should capture the process and tools used for investig
 
 > **Tip**
 >
->             A SharePoint site -- or even just a simple SharePoint list -- provides an excellent
->             alternative to a Troubleshooting Guide document. Think of this site --or list --
->             as a simple "[Knowledge Base](http://support.microsoft.com/)" for your
->             solution.
+> A SharePoint site -- or even just a simple SharePoint list -- provides an excellent
+> alternative to a Troubleshooting Guide document. Think of this site --or list --
+> as a simple "[Knowledge Base](http://support.microsoft.com/)" for your
+> solution.
 

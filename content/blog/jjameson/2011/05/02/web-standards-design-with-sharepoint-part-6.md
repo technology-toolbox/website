@@ -13,7 +13,7 @@ tags: ["SharePoint 2010", "Tugboat"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx)
 >
@@ -23,8 +23,8 @@ In [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-s
 
 > **Note**
 >
->             You can achieve similar results in Microsoft Office SharePoint Server (MOSS) 2007
->             using the **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
+> You can achieve similar results in Microsoft Office SharePoint Server (MOSS) 2007
+> using the **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
 
 For those of you that haven't yet read my previous post, the goal was to take a         SharePoint list like the one shown below...
 

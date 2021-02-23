@@ -155,14 +155,14 @@ as the basis for the **Most Popular Posts** section:
 
 > **Note**
 >
->       Based on the appearance of the list items shown in Figure 1, you might 
->       think the **Most Popular Posts** section is rendered using 
->       an *uunordered* list (since there are no numbers next to the 
->       list items). However, that is simply the result of a custom "sprite" 
->       image (to render the arrows) and a little CSS. I'll cover that detail 
->       in a separate post. Rest assured, if you look at the page "naked" (i.e. 
->       with CSS disabled), you will see the list of popular posts with the 
->       corresponding rankings (i.e. 1-10).
+> Based on the appearance of the list items shown in Figure 1, you might
+> think the **Most Popular Posts** section is rendered using
+> an *uunordered* list (since there are no numbers next to the
+> list items). However, that is simply the result of a custom "sprite"
+> image (to render the arrows) and a little CSS. I'll cover that detail
+> in a separate post. Rest assured, if you look at the page "naked" (i.e.
+> with CSS disabled), you will see the list of popular posts with the
+> corresponding rankings (i.e. 1-10).
 
 As noted in my previous post, I typically define the semantic markup for
 a feature using
@@ -201,8 +201,8 @@ and **FooterTemplate**:
 
 > **Note**
 >
->       Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl` 
->       method came from (or what it does).
+> Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl`
+> method came from (or what it does).
 
 In the corresponding code-behind for the user control, I added code to retrieve
 the top 10 most popular posts and bind the results to the **Repeater** control:

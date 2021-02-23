@@ -11,7 +11,7 @@ tags: ["My System", "Core Development", "Visual Studio"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx)
 >

@@ -10,7 +10,7 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
 >

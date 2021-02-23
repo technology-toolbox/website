@@ -10,7 +10,7 @@ tags: ["MOSS 2007", "Infrastructure"]
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx)
 >

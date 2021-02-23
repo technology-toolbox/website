@@ -11,7 +11,7 @@ tags: ["My System", "Infrastructure"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx)
 >

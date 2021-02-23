@@ -10,7 +10,7 @@ tags: ["SQL Server", "Infrastructure"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx)
 >

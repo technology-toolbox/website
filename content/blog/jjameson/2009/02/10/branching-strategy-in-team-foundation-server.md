@@ -10,7 +10,7 @@ tags: ["Core Development", "TFS"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx)
 >

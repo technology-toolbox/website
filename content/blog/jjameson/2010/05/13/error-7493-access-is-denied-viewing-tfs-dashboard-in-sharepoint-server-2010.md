@@ -12,7 +12,7 @@ tags: ["TFS", "SharePoint
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx)
 >

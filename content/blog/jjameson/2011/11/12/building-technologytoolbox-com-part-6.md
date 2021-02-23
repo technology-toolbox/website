@@ -973,10 +973,10 @@ mapping, illustrated below:
 
 > **Note**
 >
->       Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific 
->       content (e.g. **Infrastructure** or **Development**), 
->       I decided not to use these tags for mapping (and instead rely on categories 
->       being derived from other tags on the same post).
+> Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific
+> content (e.g. **Infrastructure** or **Development**),
+> I decided not to use these tags for mapping (and instead rely on categories
+> being derived from other tags on the same post).
 
 This mapping is implemented in the **MapTagToCategory** method,
 which is called from the **FillPostCategories** method:
@@ -1299,9 +1299,9 @@ is GZIP'ed) and parse the comments.
 
 > **Tip**
 >
->       You can easily inspect/copy HTTP requests and responses using Fiddler, 
->       the **Network** tab in the Internet Explorer 9 developer 
->       tools, or with Firefox and the Firebug add-on.
+> You can easily inspect/copy HTTP requests and responses using Fiddler,
+> the **Network** tab in the Internet Explorer 9 developer
+> tools, or with Firefox and the Firebug add-on.
 
 > **Important**
 >

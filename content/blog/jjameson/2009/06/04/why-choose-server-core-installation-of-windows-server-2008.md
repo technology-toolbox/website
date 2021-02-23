@@ -12,7 +12,7 @@ tags: ["Simplify", "Windows
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx)
 >

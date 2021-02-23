@@ -11,7 +11,7 @@ tags: ["MOSS 2007", "WSS v3"]
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx)
 >

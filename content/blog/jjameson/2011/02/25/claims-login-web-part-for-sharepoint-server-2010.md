@@ -11,7 +11,7 @@ tags: ["SharePoint 2010"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
 >

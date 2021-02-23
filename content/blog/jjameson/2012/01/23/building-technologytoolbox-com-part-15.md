@@ -601,12 +601,12 @@ protected override void OnLoad(EventArgs e)
 
 > **Important**
 >
->       There are a few other places in the Subtext solution where the 
->       **HttpHelper.SetFileNotFoundResponse** method is called 
->       (and should probably be updated as well to avoid issues when running 
->       in **Medium** trust). However, at present, I haven't bothered 
->       to change those (since I am trying to minimize the number of changes 
->       that I make to my Subtext branch).
+> There are a few other places in the Subtext solution where the
+> **HttpHelper.SetFileNotFoundResponse** method is called
+> (and should probably be updated as well to avoid issues when running
+> in **Medium** trust). However, at present, I haven't bothered
+> to change those (since I am trying to minimize the number of changes
+> that I make to my Subtext branch).
 
 ### System.Web.HttpException: The file '/blog/jjameson/Services/Pingback.aspx'
 
@@ -658,10 +658,10 @@ of insufficient "boundary checking" somewhere in the code.
 
 > **Note**
 >
->       In case you are new to .NET development, you should never experience 
->       a **NullReferenceException**. **ArgumentNullException**? 
->       Yes, those are "good" (sort of)...a **NullReferenceException** 
->       is definitely indicative of "bad" code.
+> In case you are new to .NET development, you should never experience
+> a **NullReferenceException**. **ArgumentNullException**?
+> Yes, those are "good" (sort of)...a **NullReferenceException**
+> is definitely indicative of "bad" code.
 
 Honestly, this one hasn't occurred very often (only 16 times to date) --
 and 10 of these occurred back-to-back over a period of 14 seconds back on December
@@ -766,9 +766,8 @@ weed out the hacking "noise."
 
 > **Update (2012-02-28)**
 >
->       Refer to the following post for more information on configuring ELMAH 
->       filters:
->       
+> Refer to the following post for more information on configuring ELMAH
+> filters:
 >
 > {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
 

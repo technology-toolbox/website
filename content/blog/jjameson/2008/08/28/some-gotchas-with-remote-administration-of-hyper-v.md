@@ -12,7 +12,7 @@ tags: ["Windows
 
 > **Note**
 >
->       This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx)
 >

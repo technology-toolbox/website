@@ -12,7 +12,7 @@ tags: ["SQL Server", "WSUS", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx)
 >

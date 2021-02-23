@@ -12,7 +12,7 @@ tags: ["My System", "Core Development"]
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years.aspx)
 >

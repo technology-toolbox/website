@@ -418,10 +418,10 @@ specify the analytics key.
 
 > **Update (2011-02-20)**
 >
->       The code below originally specified "http://www.google.com/jsapi" which 
->       resulted in mixed mode content when browsing the site using HTTPS. I 
->       updated this to use a
->       [protocol-relative URL](/blog/jjameson/2012/02/20/use-protocol-relative-urls-to-avoid-mixed-mode-content) instead ("//www.google.com/jsapi").
+> The code below originally specified "http://www.google.com/jsapi" which
+> resulted in mixed mode content when browsing the site using HTTPS. I
+> updated this to use a
+> [protocol-relative URL](/blog/jjameson/2012/02/20/use-protocol-relative-urls-to-avoid-mixed-mode-content) instead ("//www.google.com/jsapi").
 
 ```
 using System;

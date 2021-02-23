@@ -11,7 +11,7 @@ tags: ["My System", "SQL Server", "
 
 > **Note**
 >
->             This post originally appeared on my MSDN blog:
+> This post originally appeared on my MSDN blog:
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
 >
@@ -78,10 +78,9 @@ As noted on MSDN, the registry setting "does not affect files that have already 
 
 > **Important**
 >
->             Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare occasions
->             where you have to do a little more work when installing new products or features.
->     
->     
+> Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare occasions
+> where you have to do a little more work when installing new products or features.
+>
 >             For example, while testing my upgrade from TFS 2008 to TFS 2010 on a new set of
 >             VMs, I first installed SharePoint Server 2010 on one of the VMs. Then I subsequently
 >             needed to install Reporting Services on the same VM (for the TFS reports). Since
