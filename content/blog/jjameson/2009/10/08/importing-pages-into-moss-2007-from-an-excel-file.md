@@ -51,11 +51,9 @@ In other words, importing pages from Excel in an x64 environment requires a two-
 
 To convert an Excel file to a DataSet XML file:
 
-{{< console-block-start >}}
-
+```
 ConvertToDataSet.exe Sample.xslx
-
-{{< console-block-end >}}
+```
 
 To import pages from the generated DataSet XML file:
 

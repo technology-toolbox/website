@@ -187,12 +187,10 @@ for caching:
 
 4. Reset Internet Information Services (IIS) in order for the change to take
    effect:
-
-{{< console-block-start >}}
-
-iisreset
-
-{{< console-block-end >}}
+   
+   ```
+   iisreset
+   ```
 
 #### To increase the size of the database files for the Office Web Apps cache:
 

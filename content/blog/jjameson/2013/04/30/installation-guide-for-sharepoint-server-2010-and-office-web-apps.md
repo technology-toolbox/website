@@ -2596,13 +2596,12 @@ To create the sample content:
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 > > 2. Type the following command:
 
-{{< console-block-start >}}
+    ```
+    Fabrikam.Demo.Tools.TestConsole.exe
+    ```
 
-Fabrikam.Demo.Tools.TestConsole.exe
-
-{{< console-block-end >}}
 3. Wait for the program to complete and verify no errors occurred during
-the process.
+   the process.
 
 ## Create and configure a partner site
 

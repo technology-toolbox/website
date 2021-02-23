@@ -97,11 +97,9 @@ $SharePointCustomBuildWorkflow
 From this, I can parse the folder names in the team project. Note that I
 don't want the first line or the last few lines. No problem...
 
-{{< console-block-start >}}
-
+```
 $tfFolders = $output[1..($output.Length - 3)]
-
-{{< console-block-end >}}
+```
 
 Now the `$tfFolders` variable contains
 something like:

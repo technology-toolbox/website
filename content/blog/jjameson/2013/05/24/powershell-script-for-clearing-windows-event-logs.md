@@ -24,11 +24,9 @@ everything in that view.
 
 For example, after running:
 
-{{< console-block-start >}}
-
+```
 cscript "Clear Event Logs.vbs"
-
-{{< console-block-end >}}
+```
 
 ...I would still see lots of warnings in the **Administrative Events**
 view from **TerminalServices-PnPDevices**.
@@ -39,11 +37,9 @@ and System).
 
 I started out by simply typing the following in a PowerShell window:
 
-{{< console-block-start >}}
-
-wevtutil el | % { wevtutil cl $\_ }
-
-{{< console-block-end >}}
+```
+wevtutil el | % { wevtutil cl $_ }
+```
 
 However, typing that command even once every few days quickly grew tiresome,
 so I wrapped it up in a script in my Toolbox. Now I simply run the following

@@ -284,14 +284,13 @@ To deploy the Tugboat sample site to SharePoint:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then
    click **Run as administrator**.
+
 2. At the command prompt, type the following command to set the enviroment variable
    corresponding to a local (developer) environment:
-
-{{< console-block-start >}}
-
-set TUGBOAT\_URL=http://tugboatcoffee-local
-
-{{< console-block-end >}}
+   
+   ```
+   set TUGBOAT_URL=http://tugboatcoffee-local
+   ```
 
 > **Note**
 >
@@ -309,42 +308,37 @@ set TUGBOAT\_URL=http://tugboatcoffee-local
 > Be sure to specify a valid local or domain user.
 > 4. Change to the folder containing the deployment scripts:
 
-{{< console-block-start >}}
+    ```
+    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
+    ```
 
-cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
-
-{{< console-block-end >}}
 5. Type the following command:
+   
+   ```
+   "Create Web Applications.cmd"
+   ```
 
-{{< console-block-start >}}
-
-"Create Web Applications.cmd"
-
-{{< console-block-end >}}
 6. Wait for the new Web application and corresponding site collection to be created,
-and then type the following command:
+   and then type the following command:
+   
+   ```
+   "Add Solutions.cmd"
+   ```
 
-{{< console-block-start >}}
-
-"Add Solutions.cmd"
-
-{{< console-block-end >}}
 7. Wait for the solution to be added and then type the following command:
+   
+   ```
+   "Deploy Solutions.cmd"
+   ```
 
-{{< console-block-start >}}
-
-"Deploy Solutions.cmd"
-
-{{< console-block-end >}}
 8. Wait for the solution to be deployed and then type the following command:
+   
+   ```
+   "Activate Features.cmd"
+   ```
 
-{{< console-block-start >}}
-
-"Activate Features.cmd"
-
-{{< console-block-end >}}
 9. Wait for the feature activations to complete, and then minimize or close the command
-prompt.
+   prompt.
 
 That's it! You're done.
 
