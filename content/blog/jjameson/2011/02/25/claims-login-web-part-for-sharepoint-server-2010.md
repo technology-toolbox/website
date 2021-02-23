@@ -55,7 +55,7 @@ Note that I didn't expend significant effort trying to get the custom login page
 However, the user experience is already substantially improved by eliminating the         dropdown list of available authentication types. Instead, we assume that most users         of the site will be customers or partners that login using FBA. Fabrikam employees         simply need to click the **Fabrikam Employee Sign In** link in order         to authenticate with their Windows (i.e. domain) credentials.
 
 Now, if all we wanted was to replace the out-of-the-box login pages with the custom         page shown in Figure 3, there are plenty of references out there already that show         you how to do this. [Just search the Internet for something like ***SharePoint
-claims custom login page***and you'll find lots of examples that         essentially demonstrate the same concept.]
+claims custom login page*** and you'll find lots of examples that         essentially demonstrate the same concept.]
 
 However, rather than replacing the OOTB sign-in experience with a custom application         page, I wanted instead to create a custom Claims Login Form Web Part. Why, you ask?         Well, imagine that we need to change the Terms and Conditions shown in the sample         above or we want to add some other content to the page.
 
@@ -246,7 +246,7 @@ I then moved on to making the Claims Login Form Web Part more robust by adding t
 - Disable the form fields and validator controls when the page is in edit mode (so
   that content authors don't have to enter "bogus" credentials in order to save changes
   to the page)
-- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)**to automatically redirect from HTTP to HTTPS (except
+- Inheriting from my custom **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)** to automatically redirect from HTTP to HTTPS (except
   in development environments, of course)
 - Show a warning when the connection is not secure (i.e. in development environments
   or when the SSL redirect has been explicitly disabled via the Web.config file)

@@ -208,7 +208,7 @@ element in your configuration.
 
 If other words, if you encrypt passwords using the **SqlMembershipProvider**,  it uses a symmetric-key algorithm based on the machineKey element in Web.config.  Assuming you implement the necessary security around your Web.config files, this  mitigates the difficulty in managing the key necessary to encrypt and decrypt data.
 
-The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)**method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)** method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
+The actual implementation for encrypting a password is provided by the **[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)** method. Similarly, decrypting a password is provided by the **[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)** method. Thus with very little effort, we can implement  the necessary functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
 
 Note, however, that the **EncryptPassword** and **DecryptPassword**  methods are `protected` (not `public`). Consequently, without  reverting to some unsupported or poorly performing hack (e.g. using reflection to  call the protected methods), we need to inherit from the **SqlMembershipProvider**  class in order to use this functionality.
 

@@ -70,10 +70,15 @@ Here are the repro steps to break the variations feature using no custom code an
 4. Create a new variation label with the following:
 
 **Label Name: en-US
-Display Name: English (United States)
-Locale: English (United States)
-Source Variation: Yes
-Publishing site template: Publishing Site with Workflow
+
+                Display Name: English (United States)
+    
+                Locale: English (United States)
+    
+                Source Variation: Yes
+    
+                Publishing site template: Publishing Site with Workflow
+
 **
 5. Create the variation hierarchies (to create the **/en-US** site)
 6. Create a new site under the variation source site (**/en-US/foo**)
@@ -86,8 +91,11 @@ the page.
 9. Create a new variation label with the following:
 
 **Label Name: ja-JP
-Display Name: Japanese
-Locale: Japanese**
+
+                Display Name: Japanese
+    
+                Locale: Japanese**
+
 10. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo** sites)
 11. View the variation logs and notice the failure with the following error:
 

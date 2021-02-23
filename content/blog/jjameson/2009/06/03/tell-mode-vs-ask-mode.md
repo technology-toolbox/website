@@ -233,7 +233,7 @@ to -- unless you actually were a member of this project ;-)
 > value to allow 1000 results. (1 hour).
 >
 > **Release Management** **
-> **Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
+> ** Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM
 > (1 hour)
 >
 > **Test**

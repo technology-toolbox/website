@@ -61,7 +61,7 @@ The most important aspect of the "Export to PDF" feature -- with regards
 to reusable content -- is that it runs within the context of a SharePoint HTTP
 request. In other words, when **SPContext.Current** is not null.
 During that original sprint, I discovered that it is actually quite trivial
-to "expand" the reusable content placeholders in Publishing HTML fields *when* ***SPContext.Current****is not null*.
+to "expand" the reusable content placeholders in Publishing HTML fields *when* ***SPContext.Current*** *is not null*.
 On the other hand, when **SPContext.Current** *is* null,
 it takes a fair amount of custom code to retrieve the same content. More on
 that in a moment.
@@ -86,7 +86,7 @@ HtmlField pageContentField =
 ```
 
 If you look at this method with Reflector, you'll see that most of the work
-is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx)**class.
+is actually done by the **[HtmlEditorInternal](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal%28v=office.12%29.aspx)** class.
 
 If SPContext.Current is null, then a NullReferenceException is thrown in
 the **[HtmlEditorInternal.ConvertStorageFormatToViewFormat](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.internal.webcontrols.htmleditorinternal_members%28v=office.12%29.aspx)** method (due

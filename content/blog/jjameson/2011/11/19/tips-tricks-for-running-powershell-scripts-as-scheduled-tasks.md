@@ -113,7 +113,7 @@ cmdlet to create a log file:
 ```
 $ErrorActionPreference = "Stop"
 
-Start-Transcript-Path"$env:TEMP\Temp.log"
+Start-Transcript -Path "$env:TEMP\Temp.log"
 Write-Host "Changing to TEMP folder..."
 ...
 Write-Host "Success"
