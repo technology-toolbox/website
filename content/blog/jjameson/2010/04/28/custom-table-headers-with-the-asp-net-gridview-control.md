@@ -75,15 +75,7 @@ As I usually do when building a feature, let's start with a basic implementation
 
 > **Tip**
 >
-> The KPI dashboard is actually displayed in a customer portal based on Microsoft
-> Office SharePoint Server (MOSS) 2007. However, my recommendation when creating
-> a feature like this for a SharePoint application, is to first get it working
-> in a simple ASP.NET application (using sample data), and, once it is working
-> to your satisfaction, get it to render on a SharePoint site (using real
-> data). If you try to do all of the development exclusively through your
-> SharePoint Web application, you'll spend far more time iterating the development
-> (for example, deploying updated files, GAC'ing assemblies, or recycling
-> your app pool).
+> The KPI dashboard is actually displayed in a customer portal based on Microsoft Office SharePoint Server (MOSS) 2007. However, my recommendation when creating a feature like this for a SharePoint application, is to first get it working in a simple ASP.NET application (using sample data), and, once it is working to your satisfaction, get it to render on a SharePoint site (using real data). If you try to do all of the development exclusively through your SharePoint Web application, you'll spend far more time iterating the development (for example, deploying updated files, GAC'ing assemblies, or recycling your app pool).
 
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that encapsulates  the presentation layer for the KPI scorecard:
 
@@ -484,6 +476,5 @@ With this change, the KPI detail table renders as expected (with the custom **Th
 
 > **Update (2011-04-21)**
 >
-> I've attached a sample Visual Studio solution to make it easier to see this
-> concept in action.
+> I've attached a sample Visual Studio solution to make it easier to see this concept in action.
 

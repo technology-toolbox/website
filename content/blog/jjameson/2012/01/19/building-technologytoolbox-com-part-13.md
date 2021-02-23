@@ -34,11 +34,7 @@ same resource).
 
 > **Note**
 >
-> Originally, I thought I needed to reference a local jQuery file during
-> development in order to get Intellisense while writing JavaScript (i.e.
-> by referencing a jQuery script residing side-by-side with a corresponding
-> "vsdoc" file). However, that turned out not to be true. More on that
-> in a moment.
+> Originally, I thought I needed to reference a local jQuery file during development in order to get Intellisense while writing JavaScript (i.e. by referencing a jQuery script residing side-by-side with a corresponding "vsdoc" file). However, that turned out not to be true. More on that in a moment.
 
 Also note that version 1.4.1 of jQuery is rather "long in the tooth" these
 days -- considering it was released in early 2010. The current release (at the

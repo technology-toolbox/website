@@ -49,12 +49,7 @@ which I generally consider to just be "noise."
 
 > **Note**
 >
-> Sometimes it is important to investigate the attempts to hack your site,
-> but -- assuming you actually want to accomplish something useful with
-> your time -- you typically have to chock these up to a fact of life
-> when hosting a site on the Internet. Make sure the code you write is
-> secure, and don't be suprised when you see evidence that hackers are
-> trying to find ways to torment you.
+> Sometimes it is important to investigate the attempts to hack your site, but -- assuming you actually want to accomplish something useful with your time -- you typically have to chock these up to a fact of life when hosting a site on the Internet. Make sure the code you write is secure, and don't be suprised when you see evidence that hackers are trying to find ways to torment you.
 
 The errors below are not listed in the order in which they occurred (or fixed).
 Rather, the list is loosely ordered by the frequency of occurence and severity

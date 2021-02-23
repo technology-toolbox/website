@@ -30,10 +30,7 @@ Posts** section, you'll notice the CSS `background` property is set to:
 
 > **Note**
 >
-> You could also use the IE Developer Tools to inspect the element in
-> order to view the corresponding CSS rule, but I prefer the experience
-> in Firebug instead (since, unlike IE, Firebug actually shows you the
-> image in a tooltip when you hover over the URL in the CSS rule).
+> You could also use the IE Developer Tools to inspect the element in order to view the corresponding CSS rule, but I prefer the experience in Firebug instead (since, unlike IE, Firebug actually shows you the image in a tooltip when you hover over the URL in the CSS rule).
 
 The "list item sprite" image is actually a 400x400 composite of multiple
 icons used throughout the site.

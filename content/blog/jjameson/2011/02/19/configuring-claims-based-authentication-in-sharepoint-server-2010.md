@@ -134,18 +134,11 @@ In this step, the database for storing ASP.NET membership and role information  
 
 > **Important**
 >
-> Database access must be granted to both the service account used for the
-> Fabrikam Web application and the SharePoint farm account. If the SharePoint
-> farm account does not have access to the database, the Security Token Service
-> used for claims-based authentication will be unable to validate the credentials.
+> Database access must be granted to both the service account used for the Fabrikam Web application and the SharePoint farm account. If the SharePoint farm account does not have access to the database, the Security Token Service used for claims-based authentication will be unable to validate the credentials.
 
 > **Note**
 >
-> The reason the database roles are different between the two service accounts
-> is because the SharePoint farm account only needs permissions to validate
-> credentials and determine role membership, whereas the Fabrikam Web application
-> service account needs additional permissions in order to support other scenarios
-> for the Fabrikam site (e.g. "Change Password" and "Reset Password").
+> The reason the database roles are different between the two service accounts is because the SharePoint farm account only needs permissions to validate credentials and determine role membership, whereas the Fabrikam Web application service account needs additional permissions in order to support other scenarios for the Fabrikam site (e.g. "Change Password" and "Reset Password").
 
 ### Step 2 - Create the Fabrikam Web application and initial site collection
 
@@ -337,10 +330,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 > **Important**
 >
-> Before you make changes to the Web.config file, make a copy of it by
-> using a different name (for example, "Web - Copy.config"), so that if
-> a mistake is made in the file, you can delete it and use the original
-> file.
+> Before you make changes to the Web.config file, make a copy of it by using a different name (for example, "Web - Copy.config"), so that if a mistake is made in the file, you can delete it and use the original file.
 > 4. Double-click the **Web.config** file to open the file.
 
 > **Note**

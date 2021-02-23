@@ -42,11 +42,7 @@ content into SharePoint.
 
 > **Note**
 >
-> If your new platform supports some kind of import functionality, then
-> much of the "heavy lifting" involved in migrating content has already
-> been done. You just need to figure out how to export content from the
-> source system into the "schema" expected by the import feature of the
-> destination system.
+> If your new platform supports some kind of import functionality, then much of the "heavy lifting" involved in migrating content has already been done. You just need to figure out how to export content from the source system into the "schema" expected by the import feature of the destination system.
 
 Here is the overall approach I used to migrate my content from Telligent
 to Subtext:
@@ -368,11 +364,7 @@ and add these to the BlogML document.
 
 > **Tip**
 >
-> Parsing with the Html Agility Pack works very well when the source HTML
-> is dynamically generated using a template mechanism (like ASP.NET or
-> PHP) because the structure is very consistent. Handcrafted HTML, on
-> the other hand, would likely prove very difficult -- or downright impossible
-> -- to parse in a reliable manner.
+> Parsing with the Html Agility Pack works very well when the source HTML is dynamically generated using a template mechanism (like ASP.NET or PHP) because the structure is very consistent. Handcrafted HTML, on the other hand, would likely prove very difficult -- or downright impossible -- to parse in a reliable manner.
 
 ### Step 4: Download each blog post and parse the HTML
 
@@ -1062,13 +1054,7 @@ private static void FillPostCategories(
 
 > **Tip**
 >
-> Depending on the complexity of your taxonomy, you may need a more robust
-> mapping implementation than the one I've shown here. For example, on
-> the Agilent project, I created an Excel workbook with a separate worksheet
-> for each property that needed to be mapped during the migration. These
-> worksheets were subsequently "scrubbed" by one of the Agilent team members
-> and then loaded into SharePoint lists that served as "dynamic lookup
-> tables" during the content migration process.
+> Depending on the complexity of your taxonomy, you may need a more robust mapping implementation than the one I've shown here. For example, on the Agilent project, I created an Excel workbook with a separate worksheet for each property that needed to be mapped during the migration. These worksheets were subsequently "scrubbed" by one of the Agilent team members and then loaded into SharePoint lists that served as "dynamic lookup tables" during the content migration process.
 
 ### Step 5: Export the comments for each post
 
@@ -1305,9 +1291,7 @@ is GZIP'ed) and parse the comments.
 
 > **Important**
 >
-> The cookie shown in the code above is only valid for a limited time.
-> Consequently I needed to periodically get a new cookie and paste it
-> into the code during the time I was developing this migration utility.
+> The cookie shown in the code above is only valid for a limited time. Consequently I needed to periodically get a new cookie and paste it into the code during the time I was developing this migration utility.
 
 ### Step 6: Save the BlogML document to an XML file
 

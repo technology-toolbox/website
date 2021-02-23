@@ -95,7 +95,7 @@ Here's a breakdown of the custom SharePoint list:
 
 > **Note**
 >
-> I chose to name the list "Specials" instead of "Weekly Specials" for a reason. If             this were a real world solution, then there would be a significant chance the business             rules would change over time (for example to show "Today's Specials" or "This Month's             Specials"). By simply naming the list "Specials", we can avoid tightly coupling             the implementation to the current business rules.
+> I chose to name the list "Specials" instead of "Weekly Specials" for a reason. If this were a real world solution, then there would be a significant chance the business rules would change over time (for example to show "Today's Specials" or "This Month's Specials"). By simply naming the list "Specials", we can avoid tightly coupling the implementation to the current business rules.
 
 Assuming you are proficient in SharePoint, within a matter of a few minutes you         should be able to create the list and populate the sample data shown in the following         screenshot.
 

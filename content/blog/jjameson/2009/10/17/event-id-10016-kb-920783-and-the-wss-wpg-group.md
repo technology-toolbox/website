@@ -90,9 +90,7 @@ to the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Note**
 >
-> When creating a new Web application, SharePoint automatically adds the
-> corresponding service account to the local WSS\_WPG group on each SharePoint
-> server in your farm.
+> When creating a new Web application, SharePoint automatically adds the corresponding service account to the local WSS\_WPG group on each SharePoint server in your farm.
 
 > **Update (2009-10-29)**
 >

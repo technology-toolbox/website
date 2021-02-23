@@ -113,7 +113,7 @@ To deploy the Fabrikam Demo to SharePoint:
 
 > **Note**
 >
-> While you don't have to use this URL, it is recommended for developer environments                     because it causes the deployment scripts to bypass the SharePoint timer infrastructure                     when deploying and retracting the solution.
+> While you don't have to use this URL, it is recommended for developer environments because it causes the deployment scripts to bypass the SharePoint timer infrastructure when deploying and retracting the solution.
 > 3. Set environment variables to specify the credentials to use for the Fabrikam application
 > pool:
 
