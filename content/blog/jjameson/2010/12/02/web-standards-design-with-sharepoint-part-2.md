@@ -302,22 +302,28 @@ To deploy the Tugboat sample site to SharePoint:
 > While you don't have to use this URL, it is recommended for developer environments
 > because it causes the deployment scripts to bypass the SharePoint timer infrastructure
 > when deploying and retracting the solution.
-> 3. Set environment variables to specify the credentials to use for the Tugboat application
-> pool:
 
-    ```
-    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
-    set TUGBOAT_APP_POOL_PASSWORD={password}
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Set environment variables to specify the credentials to use for the Tugboat application
+   pool:
+   
+   ```
+   set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+   set TUGBOAT_APP_POOL_PASSWORD={password}
+   ```
 
 > **Important**
 >
 > Be sure to specify a valid local or domain user.
-> 4. Change to the folder containing the deployment scripts:
 
-    ```
-    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
-    ```
+    {{< reverse-markdown-hack >}}
+
+4. Change to the folder containing the deployment scripts:
+   
+   ```
+   cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
+   ```
 
 5. Type the following command:
    

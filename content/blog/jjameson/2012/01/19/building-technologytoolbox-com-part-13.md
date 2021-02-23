@@ -213,6 +213,8 @@ but there are a couple of potential issues (depending on your specific circumsta
 > The Controls collection cannot be modified because the control contains
 > code blocks (i.e. &lt;% ... %&gt;).
 
+    {{< reverse-markdown-hack >}}
+
 To avoid these issues, I created a few server controls to render the
 `<script>`
 and `<link>`

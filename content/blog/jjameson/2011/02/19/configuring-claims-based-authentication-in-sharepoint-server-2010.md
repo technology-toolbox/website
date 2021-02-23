@@ -341,7 +341,10 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > using a different name (for example, "Web - Copy.config"), so that if
 > a mistake is made in the file, you can delete it and use the original
 > file.
-> 4. Double-click the **Web.config** file to open the file.
+
+    {{< reverse-markdown-hack >}}
+
+4. Double-click the **Web.config** file to open the file.
 
 > **Note**
 >
@@ -349,24 +352,31 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > click **Select the program from a list**, and then click
 > **OK**. In the **Open With** dialog box, click
 > **Notepad**, and then click **OK**.
-> 5. In the Web.config editor:
-> 1. After the end of the **/configuration/configSections**
-> element (i.e. `</configSections>`),
-> add the following elements:
 
-        ```
-        <connectionStrings>
-            <add name="FabrikamDemo"
-              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-          </connectionStrings>
-        ```
+    {{< reverse-markdown-hack >}}
+
+5. In the Web.config editor:
+   1. After the end of the **/configuration/configSections**
+      element (i.e. `</configSections>`),
+      add the following elements:
+      
+      ```
+      <connectionStrings>
+          <add name="FabrikamDemo"
+            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+        </connectionStrings>
+      ```
 
 > **Important**
 >
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -431,7 +441,10 @@ In order to complete the configuration of claims-based authentication, it is  ne
 >
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
-> 4. Save the changes to the Web.config file and close the editor.
+
+    {{< reverse-markdown-hack >}}
+
+4. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Web.config file for the Fabrikam Web application:
 
@@ -455,8 +468,12 @@ In order to complete the configuration of claims-based authentication, it is  ne
 >
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -467,8 +484,12 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > **Warning**
 >
 > Do not overwrite any existing entries in this Web.config file.
-> 3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+    
+    
+    
         ```
         <add name="FabrikamSqlMembershipProvider"
           type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -536,12 +557,15 @@ The final step is to validate the Web application works as expected when using  
 > This is discussed in more detail in the following blog post:
 >
 > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
-> 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
-> and click **Sign In**.
-> 3. On the **Sign In** page, in the dropdown list, click
-> **Windows Authentication**.
-> 4. Verify the home page is displayed and the **Sign In** link
-> has been replaced with the "Welcome" menu.
+
+    {{< reverse-markdown-hack >}}
+
+2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
+   and click **Sign In**.
+3. On the **Sign In** page, in the dropdown list, click
+   **Windows Authentication**.
+4. Verify the home page is displayed and the **Sign In** link
+   has been replaced with the "Welcome" menu.
 
 ### What's next?
 

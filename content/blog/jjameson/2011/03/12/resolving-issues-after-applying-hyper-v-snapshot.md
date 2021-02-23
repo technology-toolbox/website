@@ -65,7 +65,10 @@ netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
 > **Note**
 >
 > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
-> 3. Logout and log back in using a domain account.
+
+    {{< reverse-markdown-hack >}}
+
+3. Logout and log back in using a domain account.
 
 Note that this issue doesn't always occur when rolling back a snapshot. It depends  on how old the snapshot is (specifically whether or not the machine account password  has changed in the domain since the snapshot was taken).
 

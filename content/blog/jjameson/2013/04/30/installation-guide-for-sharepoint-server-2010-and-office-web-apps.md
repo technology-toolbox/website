@@ -542,15 +542,18 @@ loopback address:
    key:
 
 > **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
-> 3. Right-click **MSV1\_0**, point to **New**,
-> and then click **Multi-String Value**.
-> 4. Type **BackConnectionHostNames**, and then press
-> {{< kbd "ENTER" >}}.
-> 5. Right-click **BackConnectionHostNames**, and then click
-> **Modify**.
-> 6. In the **Value data** box, type the host header corresponding
-> to each Web application specified in
-> Table 7. For example:
+
+    {{< reverse-markdown-hack >}}
+
+3. Right-click **MSV1\_0**, point to **New**,
+   and then click **Multi-String Value**.
+4. Type **BackConnectionHostNames**, and then press
+   {{< kbd "ENTER" >}}.
+5. Right-click **BackConnectionHostNames**, and then click
+   **Modify**.
+6. In the **Value data** box, type the host header corresponding
+   to each Web application specified in
+   Table 7. For example:
 
 > {{< kbd "extranet.fabrikam.com" >}}
 >
@@ -559,6 +562,8 @@ loopback address:
 >       		Be sure to specify the host header corresponding to the environment. 
 >       		For example, specify {{< kbd "extranet-local.fabrikam.com" >}} 
 >       		for local development environments.
+
+    {{< reverse-markdown-hack >}}
 
 7. Quit Registry Editor, and then restart the IIS Admin Service.
 
@@ -871,9 +876,12 @@ To run the preparation tool:
 > will continue to run after the server is restarted, and no manual
 > intervention is required. However, you will have to log back
 > on to the server.
-> 5. On the **Installation Complete** page, click
-> **Finish**.
-> 6. Restart the server to complete the installation of the prerequisites.
+
+    {{< reverse-markdown-hack >}}
+
+5. On the **Installation Complete** page, click
+   **Finish**.
+6. Restart the server to complete the installation of the prerequisites.
 
 > **Note**
 >
@@ -885,6 +893,8 @@ To run the preparation tool:
 > When installing these hotfixes on Windows Server 2008 R2,
 > you may be notified that these updates are not applicable.
 
+    {{< reverse-markdown-hack >}}
+
 > **Note**
 >
 > If the error message <q class="directQuote errorMessage">"Loading
@@ -895,6 +905,8 @@ To run the preparation tool:
 > Server 2010, you must install
 > [KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358).
 > You must restart the computer after you apply this hotfix.
+
+    {{< reverse-markdown-hack >}}
 
 ## Install security update for Web applications using claims authentication
 
@@ -960,6 +972,8 @@ To install SharePoint Server 2010:
 > installed on all application and front-end Web servers that
 > will participate in the server farm.
 
+    {{< reverse-markdown-hack >}}
+
 ## Create and configure the farm
 
 To create and configure the farm, you run the SharePoint Products Configuration
@@ -1023,20 +1037,23 @@ the farm:
 > provide when you run the SharePoint Products Configuration Wizard
 > wizard. Ensure that you remember the passphrase, because you
 > must use it each time you add a server to the farm.
-> 7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
-> 1. Select the **Specify port number** checkbox and
-> type the port number specified in
-> Table 7.
-> 2. In the **Configure Security Settings** section,
-> ensure NTLM is selected.
-> 3. Click **Next**.
-> 8. On the **Completing the SharePoint Products Configuration
-> Wizard** page, verify the configuration settings, and then click
-> **Next**.
-> 9. Wait for the product configuration to complete.
-> 10. On the **Configuration Successful** page, click
-> **Finish**.
-> 11. The Central Administration Web site will open in a new browser window.
+
+    {{< reverse-markdown-hack >}}
+
+7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
+   1. Select the **Specify port number** checkbox and
+      type the port number specified in
+      Table 7.
+   2. In the **Configure Security Settings** section,
+      ensure NTLM is selected.
+   3. Click **Next**.
+8. On the **Completing the SharePoint Products Configuration
+   Wizard** page, verify the configuration settings, and then click
+   **Next**.
+9. Wait for the product configuration to complete.
+10. On the **Configuration Successful** page, click
+    **Finish**.
+11. The Central Administration Web site will open in a new browser window.
 
 > **Note**
 >
@@ -1049,10 +1066,13 @@ the farm:
 > SharePoint Central Administration to the Local intranet zone).
 > In order to complete the steps in this section, type your username
 > and password to access Central Administration.
-> 12. In the **Help Make SharePoint Better** window, click
-> the desired option and then click **OK**.
-> 13. On the **Configure your SharePoint farm** page, click
-> **Cancel** (since the services will be configured manually).
+
+    {{< reverse-markdown-hack >}}
+
+12. In the **Help Make SharePoint Better** window, click
+    the desired option and then click **OK**.
+13. On the **Configure your SharePoint farm** page, click
+    **Cancel** (since the services will be configured manually).
 
 ## Add Web servers to the farm
 
@@ -1134,20 +1154,23 @@ the configuration in Windows Server 2008 R2:
    to find:
 
 > HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
-> 3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}**
-> key and then click **Permissions**.
-> 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
-> dialog box, click **Advanced**.
-> 5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
-> 1. Click the **Owner** tab.
-> 2. In the **Change owner to** list, click the
-> **Administrators** group.
-> 3. Click **OK**.
-> 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
-> dialog box, click the **Administrators** group, then click
-> the checkbox to allow the group **Full Control**, and click
-> **OK**.
-> 7. Close the Registry Editor window.
+
+    {{< reverse-markdown-hack >}}
+
+3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}**
+   key and then click **Permissions**.
+4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
+   dialog box, click **Advanced**.
+5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
+   1. Click the **Owner** tab.
+   2. In the **Change owner to** list, click the
+      **Administrators** group.
+   3. Click **OK**.
+6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
+   dialog box, click the **Administrators** group, then click
+   the checkbox to allow the group **Full Control**, and click
+   **OK**.
+7. Close the Registry Editor window.
 
 To configure permissions for the IIS WAMREG
 Admin Service:
@@ -1199,9 +1222,12 @@ To rename the TaxonomyPicker.ascx file:
 
 > **C:\Program Files\Common Files\Microsoft Shared\Web Server
 > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
-> 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
-> When prompted to confirm that you want to change the file name extension,
-> click **Yes**.
+
+    {{< reverse-markdown-hack >}}
+
+2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
+   When prompted to confirm that you want to change the file name extension,
+   click **Yes**.
 
 > **Note**
 >
@@ -1428,11 +1454,14 @@ scripts:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Create Web Application.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Create Web Application.ps1'
+   ```
 
 4. If prompted for the the application pool credentials, verify the
    user name, type the password, and then click **OK**.
@@ -1592,11 +1621,14 @@ To configure object cache user accounts:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Configure Object Cache User Accounts.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Configure Object Cache User Accounts.ps1'
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
@@ -1640,12 +1672,16 @@ the internal Fabrikam domain:
 > This key is used to encrypt the password for the account
 > used to access the forest or domain. The encryption string must
 > be the same for every server in the farm.
-> 3. Repeat the steps above on each Web server in the farm.
-> 4. On one of the front-end Web servers, type the following command:
 
-    ```
-    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Repeat the steps above on each Web server in the farm.
+
+4. On one of the front-end Web servers, type the following command:
+   
+   ```
+   stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
+   ```
 
 > **Note**
 >
@@ -1653,6 +1689,8 @@ the internal Fabrikam domain:
 > run this command, users can select users and groups from the
 > listed forests and domains from any front-end Web server in
 > the farm.
+
+    {{< reverse-markdown-hack >}}
 
 ## Configure SSL on the Internet zone
 
@@ -1712,14 +1750,18 @@ PowerShell:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Enable Anonymous Acess.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Enable Anonymous Acess.ps1'
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
+
 5. Proceed to the next section (Configure
    claims-based authentication).
 
@@ -1886,7 +1928,10 @@ file:
 > of it by using a different name (for example, "Web - Copy.config"),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-> 4. Double-click the **Web.config** file to open the file.
+
+    {{< reverse-markdown-hack >}}
+
+4. Double-click the **Web.config** file to open the file.
 
 > **Note**
 >
@@ -1894,24 +1939,31 @@ file:
 > file, click **Select the program from a list**,
 > and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then
 > click **OK**.
-> 5. In the Web.config editor:
-> 1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
-> add the following elements:
 
-        ```
-        <connectionStrings>
-            <add name="FabrikamDemo"
-              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-          </connectionStrings>
-        ```
+    {{< reverse-markdown-hack >}}
+
+5. In the Web.config editor:
+   1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
+      add the following elements:
+      
+      ```
+      <connectionStrings>
+          <add name="FabrikamDemo"
+            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+        </connectionStrings>
+      ```
 
 > **Important**
 >
 > Be sure to replace the **{databaseServer}**
 > placeholder in the connection string with the name of the
 > database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    		
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -1947,47 +1999,54 @@ file:
 > of it by using a different name (for example, "Web - Copy.config"),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-> 2. Double-click the **Web.config** file to open the file.
-> 3. In the Web.config editor, add the following elements to the
-> `<configuration>`
-> root element:
 
-    ```
-    <connectionStrings>
-      <add
-      name="FabrikamDemo"
-      connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-    </connectionStrings>
-    
-    <system.web>
-      <membership>
-        <providers>
-          <add
-          name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo"
-          passwordFormat="Hashed" />
-        </providers>
-      </membership>
-      <roleManager>
-        <providers>
-          <add
-          name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo" />
-        </providers>
-      </roleManager>
-    </system.web>
-    ```
+    {{< reverse-markdown-hack >}}
+
+2. Double-click the **Web.config** file to open the file.
+
+3. In the Web.config editor, add the following elements to the
+   `<configuration>`
+   root element:
+   
+   ```
+   <connectionStrings>
+     <add
+     name="FabrikamDemo"
+     connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+   </connectionStrings>
+   
+   <system.web>
+     <membership>
+       <providers>
+         <add
+         name="FabrikamSqlMembershipProvider"
+         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+         applicationName="Fabrikam Demo Site"
+         connectionStringName="FabrikamDemo"
+         passwordFormat="Hashed" />
+       </providers>
+     </membership>
+     <roleManager>
+       <providers>
+         <add
+         name="FabrikamSqlRoleProvider"
+         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+         applicationName="Fabrikam Demo Site"
+         connectionStringName="FabrikamDemo" />
+       </providers>
+     </roleManager>
+   </system.web>
+   ```
 
 > **Important**
 >
 > Be sure to replace the **{databaseServer}** placeholder
 > in the connection string with the name of the database server.
-> 4. Save the changes to the Web.config file and close the editor.
-> 5. Repeat the steps above on each Web server in the farm.
+
+    {{< reverse-markdown-hack >}}
+
+4. Save the changes to the Web.config file and close the editor.
+5. Repeat the steps above on each Web server in the farm.
 
 To configure the Web.config file for the Fabrikam
 Extranet Web application:
@@ -2003,25 +2062,32 @@ Extranet Web application:
 > of it by using a different name (for example, "Web - Copy.config"),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-> 2. Double-click the **Web.config** file to open the file.
-> 3. In the Web.config editor:
-> 1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
-> add the following elements:
 
-        ```
-        <connectionStrings>
-            <add name="FabrikamDemo"
-              connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-          </connectionStrings>
-        ```
+    {{< reverse-markdown-hack >}}
+
+2. Double-click the **Web.config** file to open the file.
+3. In the Web.config editor:
+   1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
+      add the following elements:
+      
+      ```
+      <connectionStrings>
+          <add name="FabrikamDemo"
+            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+        </connectionStrings>
+      ```
 
 > **Important**
 >
 > Be sure to replace the **{databaseServer}**
 > placeholder in the connection string with the name of the
 > database server.
-> 2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+    		
+    
+    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -2033,8 +2099,12 @@ Extranet Web application:
 >
 > Do not overwrite any existing entries in this Web.config
 > file.
-> 3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
+        {{< reverse-markdown-hack >}}
+    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+    		
+    
+    
         ```
         <add name="FabrikamSqlMembershipProvider"
           type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -2125,11 +2195,14 @@ To login to the website using Windows authentication:
 > This is discussed in more detail in the following blog post:
 >
 > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
-> 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
-> and click **Sign In**.
-> 3. On the **Sign In** page, in the dropdown list, click
-> **Windows Authentication**.
-> 4. Verify the home page is displayed and the **Sign In** link has been replaced with the "Welcome" menu.
+
+    {{< reverse-markdown-hack >}}
+
+2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
+   and click **Sign In**.
+3. On the **Sign In** page, in the dropdown list, click
+   **Windows Authentication**.
+4. Verify the home page is displayed and the **Sign In** link has been replaced with the "Welcome" menu.
 
 ## Enable disk-based caching for the Web application
 
@@ -2176,7 +2249,10 @@ To configure BLOB cache settings:
 > of it by using a different name (for example, “Web - Copy.config”),
 > so that if a mistake is made in the file, you can delete it
 > and use the original file.
-> 4. Double-click the **Web.config** file to open the file.
+
+    {{< reverse-markdown-hack >}}
+
+4. Double-click the **Web.config** file to open the file.
 
 > **Note**
 >
@@ -2185,16 +2261,20 @@ To configure BLOB cache settings:
 > and then click **OK**. In the **Open With**
 > dialog box, click **Notepad**, and then click
 > **OK**.
-> 5. If the Windows dialog box appears, select **Select a program
-> from a list of installed programs**, and then click **OK**.
-> In the **Open With** dialog box, click **Notepad**,
-> and then click **OK**.
-> 6. In the Web.config editor, find the following line:
 
-    ```
-    <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
-        enabled="false" />
-    ```
+    {{< reverse-markdown-hack >}}
+
+5. If the Windows dialog box appears, select **Select a program
+   from a list of installed programs**, and then click **OK**.
+   In the **Open With** dialog box, click **Notepad**,
+   and then click **OK**.
+
+6. In the Web.config editor, find the following line:
+   
+   ```
+   <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
+       enabled="false" />
+   ```
 
 7. In this line, change the **location** attribute to
    specify a directory that has enough space to accommodate the cache size.
@@ -2204,13 +2284,16 @@ To configure BLOB cache settings:
 > It is strongly recommended to specify a directory that is not
 > on the same drive as where either the server operating system
 > swap files or server log files are stored.
-> 8. To add or remove file types from the list of file types to be cached,
-> for the **path** attribute, modify the regular expression
-> to include or remove the appropriate file extension. If you add file
-> extensions, make sure to separate each file type with a pipe (|), as
-> shown above.
-> 9. To change the size of the cache, type a new number for **maxSize**.
-> The size is expressed in gigabytes (GB), and 10 GB is the default.
+
+    {{< reverse-markdown-hack >}}
+
+8. To add or remove file types from the list of file types to be cached,
+   for the **path** attribute, modify the regular expression
+   to include or remove the appropriate file extension. If you add file
+   extensions, make sure to separate each file type with a pipe (|), as
+   shown above.
+9. To change the size of the cache, type a new number for **maxSize**.
+   The size is expressed in gigabytes (GB), and 10 GB is the default.
 
 > **Important**
 >
@@ -2219,9 +2302,12 @@ To configure BLOB cache settings:
 > large enough to provide a buffer at least 20 percent bigger
 > than the estimated size of the content that will be stored in
 > the cache.
-> 10. To enable the BLOB cache, change the **enabled** attribute
-> to **true**.
-> 11. Save the file, and then close it.
+
+    {{< reverse-markdown-hack >}}
+
+10. To enable the BLOB cache, change the **enabled** attribute
+    to **true**.
+11. Save the file, and then close it.
 
 ## Configure SharePoint groups
 
@@ -2269,11 +2355,14 @@ To configure the State Service:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Configure State Service.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Configure State Service.ps1'
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
@@ -2300,18 +2389,23 @@ Application:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Configure SharePoint Search.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Configure SharePoint Search.ps1'
+   ```
 
 4. When prompted for default content access account credentials, verify
    the user name (EXTRANET\svc-index), type the password, and then click
    **OK**.
+
 5. If prompted for the service application credentials, verify the
    user name (EXTRANET\svc-spserviceapp), type the password, and then click
    **OK**.
+
 6. Wait for the script to complete and verify no errors occurred during
    the process.
 
@@ -2319,6 +2413,8 @@ Application:
 >
 > It may take several minutes to create and configure the Search
 > Service Application.
+
+    {{< reverse-markdown-hack >}}
 
 ## Configure the search crawl schedules
 
@@ -2386,7 +2482,10 @@ To install Office Web Apps:
 > run the configuration wizard until Office Web Apps has been
 > installed on all application and front-end Web servers in the
 > farm.
-> 7. Repeat the steps above on each SharePoint server in the farm.
+
+    {{< reverse-markdown-hack >}}
+
+7. Repeat the steps above on each SharePoint server in the farm.
 
 ## Run PSConfig to register Office Web Apps services
 
@@ -2498,6 +2597,8 @@ trusted location for HTTPS instead of HTTP:
 > both HTTP and HTTPS, then a separate trusted file location will
 > need to be configured.
 
+    {{< reverse-markdown-hack >}}
+
 ## Configure the Office Web Apps cache
 
 By default, when you install Office Web Apps, the cache available to
@@ -2519,16 +2620,22 @@ create a separate content database for caching:
 > You must start a new instance of the SharePoint 2010 Management
 > Shell after installing Office Web Apps in order for the new
 > PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
-> 2. From the Windows PowerShell command prompt, change to the following
-> directory:
+
+    {{< reverse-markdown-hack >}}
+
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Configure Office Web Apps Cache.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Configure Office Web Apps Cache.ps1'
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
@@ -2547,6 +2654,8 @@ create a separate content database for caching:
 >
 >       		If this error occurs, wait a few minutes and then run the script 
 >       		again.
+
+    {{< reverse-markdown-hack >}}
 
 5. Type the following command to reset Internet Information Services
    (IIS):
@@ -2644,14 +2753,18 @@ To add the new event source:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Add Event Log Sources.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Add Event Log Sources.ps1'
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
+
 5. Repeat the steps above on each SharePoint server in the farm.
 
 ## Install Fabrikam SharePoint solutions and activate the features
@@ -2668,11 +2781,14 @@ To install and activate the features:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Type the following command:
 
-    ```
-    & '.\Add Solutions.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Type the following command:
+   
+   ```
+   & '.\Add Solutions.ps1'
+   ```
 
 4. Wait for the solutions to be added and then type the following command:
    
@@ -2728,11 +2844,14 @@ To create the sample content:
 >       		
 >
 > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
-> > 2. Type the following command:
 
-    ```
-    Fabrikam.Demo.Tools.TestConsole.exe
-    ```
+    {{< reverse-markdown-hack >}}
+
+2. Type the following command:
+   
+   ```
+   Fabrikam.Demo.Tools.TestConsole.exe
+   ```
 
 3. Wait for the program to complete and verify no errors occurred during
    the process.
@@ -2757,15 +2876,19 @@ partner using the PowerShell script:
 
 > **{build version or branch folder}\[Source]\Deployment
 > Files\Scripts**
-> 3. Run the **Create Partner Site Collection.ps1** script
-> and provide the name of the partner, for example:
 
-    ```
-    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
-    ```
+    {{< reverse-markdown-hack >}}
+
+3. Run the **Create Partner Site Collection.ps1** script
+   and provide the name of the partner, for example:
+   
+   ```
+   & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
+   ```
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
+
 5. Proceed to the next section (Apply
    the “Fabrikam Partner Site” template to the top-level site).
 

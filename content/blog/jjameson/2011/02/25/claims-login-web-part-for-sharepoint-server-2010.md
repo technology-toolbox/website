@@ -287,24 +287,28 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 > You do not need to manually add the Web.config modifications for the "Fabrikam"
 > Web application because this is done automatically upon activation of a feature
 > (Fabrikam Demo - Web Application Configuration).
-> 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
-> Shell**, and then click **Run as administrator**. If prompted
-> by User Account Control to allow the program to make changes to the computer, click
-> **Yes**.
-> 5. From the Windows PowerShell command prompt, change to the directory containing the
-> deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
-> and run the following scripts:
 
-    ```
-    & '.\Create Web Application.ps1'
-    & '.\Create Site Collections.ps1'
-    & '.\Enable Anonymous Access.ps1'
-    & '.\Configure Object Cache User Accounts.ps1'
-    & '.\Add Event Log Sources.ps1'
-    & '.\Add Solutions.ps1'
-    & '.\Deploy Solutions.ps1'
-    & '.\Activate Features.ps1'
-    ```
+    {{< reverse-markdown-hack >}}
+
+4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
+   Shell**, and then click **Run as administrator**. If prompted
+   by User Account Control to allow the program to make changes to the computer, click
+   **Yes**.
+
+5. From the Windows PowerShell command prompt, change to the directory containing the
+   deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts),
+   and run the following scripts:
+   
+   ```
+   & '.\Create Web Application.ps1'
+   & '.\Create Site Collections.ps1'
+   & '.\Enable Anonymous Access.ps1'
+   & '.\Configure Object Cache User Accounts.ps1'
+   & '.\Add Event Log Sources.ps1'
+   & '.\Add Solutions.ps1'
+   & '.\Deploy Solutions.ps1'
+   & '.\Activate Features.ps1'
+   ```
 
 At this point you should be able to browse to the Fabrikam site and click the **Sign In** link to view the Claims Login Form Web Part. In order to actually         login, you'll need to first add a user to the **FabrikamDemo** database         (refer to **Step 6** in my previous post for instructions on how to         do this).
 
