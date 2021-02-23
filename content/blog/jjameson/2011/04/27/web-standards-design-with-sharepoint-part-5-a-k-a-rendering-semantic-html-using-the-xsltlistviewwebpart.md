@@ -101,7 +101,8 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboa
 alt="Specials list"
 height="474"
 width="600"
-title="Figure 2: Specials list" >}}
+title="Figure 2: Specials list"
+class="screenshot" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
