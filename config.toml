@@ -3,5 +3,25 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
+[menu]
+
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "company"
+    name = "Company"
+    url = "/company"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/jjameson"
+    weight = 30
+
 [permalinks]
   categories = "/blog/jjameson/category/:title/"
