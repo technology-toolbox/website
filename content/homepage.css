@@ -13,6 +13,22 @@
   right: 0;
   padding: 0.5rem 1rem 0 1rem;
   text-align: left;
+  /*
+    HACK: Specifying a z-index of 10 *should* allow the link ("button") in the
+    carousel caption to be clicked -- since the "carousel-control-next" has a
+    z-index of 1). However, it is not currently working, so set "bottom" on the
+    carousel controls as a workaround.
+  */
+  /* z-index: 10; */
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  /*
+    HACK: Set "bottom" on the carousel controls as a workaround for the z-index
+    issue with links in the caption.
+  */
+  bottom: 25%;
 }
 
 .carousel-indicators {
