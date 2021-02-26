@@ -6,7 +6,7 @@
   margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 940px;
+  max-width: 1094px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -24,14 +24,14 @@
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 380px;
+  height: 427px;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  max-height: 380px;
+  max-height: 427px;
 }
 
 /* MARKETING CONTENT
