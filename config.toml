@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
+[markup]
+  [markup.highlight]
+    style = "monokailight"
+
 [menu]
 
   [[menu.main]]
