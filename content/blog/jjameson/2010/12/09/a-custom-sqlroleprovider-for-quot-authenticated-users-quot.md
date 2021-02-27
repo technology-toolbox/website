@@ -6,8 +6,7 @@ excerpt: "Prior to the recent \"v2\" release on my current project, we had been 
 aliases: ["/blog/jjameson/archive/2010/12/08/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx", "/blog/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
-tags: ["MOSS 2007", "Web Development", "SharePoint 
-		2010"]
+tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 ---
 
 > **Note**

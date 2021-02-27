@@ -6,9 +6,7 @@ excerpt: "This PowerShell script makes it much easier to perform code coverage a
 aliases: ["/blog/jjameson/archive/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["Core 
-			Development", "MOSS 2007", "PowerShell", "SharePoint 
-			2010", "Visual Studio"]
+tags: ["Core Development", "MOSS 2007", "PowerShell", "SharePoint 2010", "Visual Studio"]
 ---
 
 In

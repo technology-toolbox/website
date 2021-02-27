@@ -5,8 +5,7 @@ excerpt: "In my previous post, I shared the inner workings of the \"Most Recent 
 aliases: ["/blog/jjameson/archive/2012/01/05/building-technologytoolbox-com-part-10.aspx", "/blog/jjameson/archive/2012/01/06/building-technologytoolbox-com-part-10.aspx"]
 draft: true
 categories: ["Development", "My System"]
-tags: ["Core 
-			Development", "My System", "Subtext", "Web Development"]
+tags: ["Core Development", "My System", "Subtext", "Web Development"]
 ---
 
 In

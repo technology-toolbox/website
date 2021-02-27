@@ -5,8 +5,7 @@ excerpt: "In my previous post , I introduced a scenario for using the \"Reusable
 aliases: ["/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx"]
 draft: true
 categories: ["SharePoint"]
-tags: ["MOSS 2007", "SharePoint 
-		2010"]
+tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**

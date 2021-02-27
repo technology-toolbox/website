@@ -5,8 +5,7 @@ excerpt: "In Part 1 of this post , I explained the Group Policy object (named De
 aliases: ["/blog/jjameson/archive/2009/10/14/managing-group-membership-via-group-policy-part-2.aspx", "/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-2.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
-tags: ["My System", "Simplify", "Windows 
-			Server", "Infrastructure"]
+tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]
 ---
 
 > **Note**

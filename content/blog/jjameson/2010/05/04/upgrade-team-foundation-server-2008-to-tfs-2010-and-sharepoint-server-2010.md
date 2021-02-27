@@ -6,8 +6,7 @@ excerpt: "In my previous post , I provided an overview of the process of upgradi
 aliases: ["/blog/jjameson/archive/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["My System", "Development", "SharePoint"]
-tags: ["My System", "Visual Studio", "
-                    TFS", "SharePoint 2010"]
+tags: ["My System", "Visual Studio", "TFS", "SharePoint 2010"]
 ---
 
 > **Note**

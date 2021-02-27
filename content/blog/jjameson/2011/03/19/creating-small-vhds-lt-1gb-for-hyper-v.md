@@ -5,8 +5,7 @@ excerpt: "In my previous post , I explained how I like to create separate VHDs f
 aliases: ["/blog/jjameson/archive/2011/03/18/creating-small-vhds-lt-1gb-for-hyper-v.aspx", "/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
-tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint 
-		2010"]
+tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint 2010"]
 ---
 
 > **Note**

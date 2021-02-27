@@ -5,8 +5,7 @@ excerpt: "Here's a set of scripts to make it easier to view the items in the \"B
 aliases: ["/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-backconnectionhostnames-kb-896861.aspx"]
 draft: true
 categories: ["Development", "Infrastructure", "My System", "SharePoint"]
-tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 
-			2010", "Toolbox"]
+tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]
 ---
 
 In

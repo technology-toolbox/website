@@ -6,8 +6,7 @@ excerpt: "Last week I received a \"Logical Disk Free Space is low\" alert from O
 aliases: ["/blog/jjameson/archive/2011/03/13/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx", "/blog/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
-tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 
-			2010"]
+tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 2010"]
 ---
 
 > **Note**

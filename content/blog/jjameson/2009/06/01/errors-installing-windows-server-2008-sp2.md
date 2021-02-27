@@ -5,9 +5,7 @@ excerpt: "Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Wind
 aliases: ["/blog/jjameson/archive/2009/05/31/errors-installing-windows-server-2008-sp2.aspx", "/blog/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx"]
 draft: true
 categories: ["Infrastructure"]
-tags: ["Windows 
-			Vista", "WSUS", "Windows 
-			Server", "Infrastructure"]
+tags: ["Windows Vista", "WSUS", "Windows Server", "Infrastructure"]
 ---
 
 > **Note**

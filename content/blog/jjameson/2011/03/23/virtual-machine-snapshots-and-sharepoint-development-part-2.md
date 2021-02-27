@@ -5,8 +5,7 @@ excerpt: "In part 1 of this post, I introduced the way I use VM snapshots to all
 aliases: ["/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx", "/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
-tags: ["My System", "MOSS 2007", "
-                    Windows Server", "Virtualization", "SharePoint 2010"]
+tags: ["My System", "MOSS 2007", "Windows Server", "Virtualization", "SharePoint 2010"]
 ---
 
 > **Note**

@@ -5,9 +5,7 @@ excerpt: "This is a little embarrassing, but I captured numerous screenshots bac
 aliases: ["/blog/jjameson/archive/2007/06/22/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx", "/blog/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development", "Infrastructure"]
-tags: ["Simplify", "MOSS 2007", "
-                    Core Development", "
-                        Virtualization"]
+tags: ["Simplify", "MOSS 2007", "Core Development", "Virtualization"]
 ---
 
 > **Note**

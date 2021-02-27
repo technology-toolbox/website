@@ -6,8 +6,7 @@ excerpt: "I thought it would be helpful to share my step-by-step procedures for 
 aliases: ["/blog/jjameson/archive/2011/02/18/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]
-tags: ["My System", "SharePoint 
-		2010", "PowerShell"]
+tags: ["My System", "SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**

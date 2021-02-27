@@ -6,8 +6,7 @@ the most recent blog posts from Subtext. In this post, I'll show you how easy th
 aliases: ["/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx"]
 draft: true
 categories: ["Development", "My System"]
-tags: ["Core 
-			Development", "Subtext", "My System", "Web Development"]
+tags: ["Core Development", "Subtext", "My System", "Web Development"]
 ---
 
 In

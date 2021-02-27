@@ -7,8 +7,7 @@ excerpt: "In one of my posts last month , I provided the following steps to \"re
 aliases: ["/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["TFS", "
-                SharePoint 2010", "PowerShell"]
+tags: ["TFS", "SharePoint 2010", "PowerShell"]
 ---
 
 > **Note**

@@ -6,8 +6,7 @@ excerpt: "Since I appear to be on a roll with my blog this morning, I figured th
 aliases: ["/blog/jjameson/archive/2008/05/29/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx", "/blog/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx"]
 draft: true
 categories: ["Infrastructure", "My System"]
-tags: ["SQL Server", "WSUS", "
-                    Toolbox"]
+tags: ["SQL Server", "WSUS", "Toolbox"]
 ---
 
 > **Note**

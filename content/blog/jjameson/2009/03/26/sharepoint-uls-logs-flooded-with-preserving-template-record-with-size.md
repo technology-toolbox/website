@@ -6,8 +6,7 @@ excerpt: "I was digging through my blog dashboard this morning and I came across
 aliases: ["/blog/jjameson/archive/2009/03/25/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx", "/blog/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx"]
 draft: true
 categories: ["SharePoint", "My System"]
-tags: ["MOSS 2007", "WSS v3", "
-                    Toolbox"]
+tags: ["MOSS 2007", "WSS v3", "Toolbox"]
 ---
 
 > **Note**

@@ -6,8 +6,7 @@ excerpt: "Even though it doesn't take long to add a folder to %Path% by clicking
 aliases: ["/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-the-path-environment-variable.aspx"]
 draft: true
 categories: ["Development", "Infrastructure", "My System", "SharePoint"]
-tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 
-			2010", "Toolbox"]
+tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]
 ---
 
 Section 5.8 in my sample

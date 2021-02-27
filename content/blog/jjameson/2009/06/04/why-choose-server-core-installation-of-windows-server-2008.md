@@ -6,8 +6,7 @@ excerpt: "If you ever find yourself looking for reasons or evidence why you shou
 aliases: ["/blog/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]
-tags: ["Simplify", "Windows 
-			Server", "Infrastructure", "Virtualization"]
+tags: ["Simplify", "Windows Server", "Infrastructure", "Virtualization"]
 ---
 
 > **Note**

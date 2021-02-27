@@ -6,9 +6,7 @@ excerpt: "In a comment I made last week on one of my earlier posts , I mentioned
 aliases: ["/blog/jjameson/archive/2011/03/21/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx", "/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
-tags: ["My System", "MOSS 2007", "
-                    Virtualization", "SharePoint
-                        2010"]
+tags: ["My System", "MOSS 2007", "Virtualization", "SharePoint 2010"]
 ---
 
 > **Note**

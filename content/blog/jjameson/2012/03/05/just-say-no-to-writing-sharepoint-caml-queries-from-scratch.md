@@ -5,8 +5,7 @@ excerpt: "Do you use the U2U CAML Query Builder instead of writing CAML queries 
 aliases: ["/blog/jjameson/archive/2012/03/05/just-say-no-to-writing-sharepoint-caml-queries-from-scratch.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["MOSS 2007", "SharePoint 
-			2010", "WSS v3"]
+tags: ["MOSS 2007", "SharePoint 2010", "WSS v3"]
 ---
 
 In yesterday's Scrum for the project I started last Thursday, a brief discussion

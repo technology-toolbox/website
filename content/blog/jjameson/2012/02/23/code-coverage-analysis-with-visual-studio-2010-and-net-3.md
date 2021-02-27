@@ -5,9 +5,7 @@ excerpt: "It takes a little more work than expected, but you actually can \"have
 aliases: ["/blog/jjameson/archive/2012/02/22/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx", "/blog/jjameson/archive/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["Core 
-			Development", "MOSS 2007", "SharePoint 
-			2010", "Visual Studio"]
+tags: ["Core Development", "MOSS 2007", "SharePoint 2010", "Visual Studio"]
 ---
 
 Sometimes I wish I didn't develop in the world of SharePoint. Whenever I

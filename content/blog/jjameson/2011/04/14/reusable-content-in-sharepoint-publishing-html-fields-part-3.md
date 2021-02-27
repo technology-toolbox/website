@@ -5,8 +5,7 @@ excerpt: "In part 2 of this series , I explained how to programmatically add a n
 aliases: ["/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx", "/blog/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx"]
 draft: true
 categories: ["SharePoint"]
-tags: ["MOSS 2007", "SharePoint 
-			2010"]
+tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 > **Note**

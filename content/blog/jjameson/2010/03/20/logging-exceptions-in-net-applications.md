@@ -6,9 +6,7 @@ excerpt: "Last summer I wrote a post introducing my simple, but highly effective
 aliases: ["/blog/jjameson/archive/2010/03/19/logging-exceptions-in-net-applications.aspx", "/blog/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
-tags: ["My System", "Simplify", "
-                    MOSS 2007", "Core
-                        Development", "WSS v3"]
+tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 ---
 
 > **Note**

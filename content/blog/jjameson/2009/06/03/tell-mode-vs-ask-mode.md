@@ -6,8 +6,7 @@ excerpt: "The project I am currently working on is nearing the end. Last week we
 aliases: ["/blog/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx"]
 draft: true
 categories: ["My System", "Development"]
-tags: ["My System", "Core 
-			Development"]
+tags: ["My System", "Core Development"]
 ---
 
 > **Note**

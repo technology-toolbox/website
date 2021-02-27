@@ -7,8 +7,7 @@ beginning, I can rapidly define the structure of the content and subsequently cr
 aliases: ["/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx"]
 draft: true
 categories: ["My System", "Development"]
-tags: ["SharePoint 
-		2010", "Web Development"]
+tags: ["SharePoint 2010", "Web Development"]
 ---
 
 In [my previous post](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3), I described how I typically create a "static HTML prototype"  for an ASP.NET or SharePoint Web application. By working directly in HTML at the  beginning (rather than starting with ASP.NET controls or Web Parts), I can rapidly  define the structure of the content (using semantic HTML) and subsequently create  the corresponding CSS rules to style the pages.

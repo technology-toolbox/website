@@ -5,8 +5,7 @@ excerpt: "Follow along as I share my struggles using GitHub and the Git version 
 aliases: ["/blog/jjameson/archive/2012/01/30/git-github-issues.aspx"]
 draft: true
 categories: ["Development"]
-tags: ["Core 
-			Development", "Subtext"]
+tags: ["Core Development", "Subtext"]
 ---
 
 In

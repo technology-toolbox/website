@@ -6,8 +6,7 @@ excerpt: "In the current sprint of the project I'm working on, we are deploying 
 aliases: ["/blog/jjameson/archive/2011/03/02/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx", "/blog/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx"]
 draft: true
 categories: ["Infrastructure", "SharePoint"]
-tags: ["Infrastructure", "SharePoint 
-		2010"]
+tags: ["Infrastructure", "SharePoint 2010"]
 ---
 
 > **Note**

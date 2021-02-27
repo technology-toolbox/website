@@ -5,8 +5,7 @@ excerpt: "If you think that programmatically filtering errors in ELMAH is as eas
 aliases: ["/blog/jjameson/archive/2012/02/28/why-i-chose-not-to-programmatically-filter-errors-reported-by.aspx"]
 draft: true
 categories: ["Development"]
-tags: ["Core 
-			Development", "Web Development"]
+tags: ["Core Development", "Web Development"]
 ---
 
 If you've been following along for the last couple of posts related to ELMAH

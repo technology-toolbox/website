@@ -5,8 +5,7 @@ excerpt: "Intellisense isn't helpful when the underlying XML documentation in th
 aliases: ["/blog/jjameson/archive/2012/02/10/be-careful-when-using-the-sharepoint-publishingpage-url-property.aspx", "/blog/jjameson/archive/2012/02/11/be-careful-when-using-the-sharepoint-publishingpage-url-property.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["MOSS 2007", "SharePoint 
-			2010"]
+tags: ["MOSS 2007", "SharePoint 2010"]
 ---
 
 Intellisense in Visual Studio is only as good as the underlying XML documentation

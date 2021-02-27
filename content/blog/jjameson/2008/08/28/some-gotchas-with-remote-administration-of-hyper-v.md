@@ -6,8 +6,7 @@ excerpt: "As I mentioned in my previous post , last month I built out a new virt
 aliases: ["/blog/jjameson/archive/2008/08/27/some-gotchas-with-remote-administration-of-hyper-v.aspx", "/blog/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx"]
 draft: true
 categories: ["Infrastructure"]
-tags: ["Windows 
-			Server", "Infrastructure", "Virtualization"]
+tags: ["Windows Server", "Infrastructure", "Virtualization"]
 ---
 
 > **Note**

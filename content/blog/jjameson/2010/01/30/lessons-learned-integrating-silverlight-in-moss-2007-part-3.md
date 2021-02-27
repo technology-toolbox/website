@@ -6,8 +6,7 @@ excerpt: "Yesterday I continued building upon part 1 in a series of posts regard
 aliases: ["/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx", "/blog/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]
-tags: ["MOSS 2007", "WSS v3", "
-                    Silverlight"]
+tags: ["MOSS 2007", "WSS v3", "Silverlight"]
 ---
 
 > **Note**

@@ -5,8 +5,7 @@ excerpt: "Last year I wrote a post about building Microsoft Office SharePoint Se
 aliases: ["/blog/jjameson/archive/2011/02/26/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx", "/blog/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]
-tags: ["Visual Studio", "TFS", "SharePoint 
-			2010"]
+tags: ["Visual Studio", "TFS", "SharePoint 2010"]
 ---
 
 > **Note**

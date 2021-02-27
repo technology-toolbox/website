@@ -5,8 +5,7 @@ excerpt: "Here's a set of scripts to make it easier to view the hostname mapping
 aliases: ["/blog/jjameson/archive/2013/05/07/powershell-scripts-for-managing-the-hosts-file.aspx"]
 draft: true
 categories: ["Infrastructure", "My System", "SharePoint", "Development"]
-tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 
-			2010", "Toolbox"]
+tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]
 ---
 
 Around the same time I created my

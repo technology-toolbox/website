@@ -5,8 +5,7 @@ excerpt: "A little over two years ago, I wrote a post about installing Visual St
 aliases: ["/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"]
 draft: true
 categories: ["My System", "Infrastructure", "Development"]
-tags: ["My System", "SQL Server", "
-                    Windows Server", "Infrastructure", "Virtualization", "Visual Studio"]
+tags: ["My System", "SQL Server", "Windows Server", "Infrastructure", "Virtualization", "Visual Studio"]
 ---
 
 > **Note**

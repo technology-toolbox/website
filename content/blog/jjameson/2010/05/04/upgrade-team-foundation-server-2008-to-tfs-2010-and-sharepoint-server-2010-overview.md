@@ -7,8 +7,7 @@ excerpt: "This past weekend, I upgraded my Team Foundation Server (TFS) 2008 env
 aliases: ["/blog/jjameson/archive/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx", "/blog/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010-overview.aspx"]
 draft: true
 categories: ["Infrastructure", "Development", "SharePoint"]
-tags: ["Infrastructure", "Visual Studio", "TFS", "SharePoint 
-		2010"]
+tags: ["Infrastructure", "Visual Studio", "TFS", "SharePoint 2010"]
 ---
 
 > **Note**

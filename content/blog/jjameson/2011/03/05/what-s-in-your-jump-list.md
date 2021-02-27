@@ -6,8 +6,7 @@ excerpt: "Nearly three years ago, I wrote a post that described the BackedUp and
 aliases: ["/blog/jjameson/archive/2011/03/04/what-s-in-your-jump-list.aspx", "/blog/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx"]
 draft: true
 categories: ["My System", "Infrastructure", "SharePoint"]
-tags: ["My System", "Windows Server", "SharePoint 2010", "Windows 7", "
-                            Toolbox"]
+tags: ["My System", "Windows Server", "SharePoint 2010", "Windows 7", "Toolbox"]
 ---
 
 > **Note**
