@@ -139,7 +139,7 @@ Some of you may be thinking you need some custom MetaTag WebControl to do this  
 > (well, almost).
 
 ```
-<meta name="description"        
+<meta name="description"
     content="<SharePoint:FieldValue
     FieldName='Comments' runat='server'/>" />
 ```

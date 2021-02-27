@@ -182,7 +182,7 @@ In this step, the Web application and initial site collection are created.
        $appPoolCredential = Get-Credential $appPoolUserName
    
        $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential
-   } 
+   }
    
    $windowsAuthProvider = New-SPAuthenticationProvider
    $formsAuthProvider = New-SPAuthenticationProvider `

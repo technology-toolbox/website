@@ -57,11 +57,11 @@ function ConfigureStateService(
         -Debug:$false -EA 0
 
     If ($serviceApp -ne $null)
-    {        
+    {
         Write-Host "The State Service has already been configured."
         return
     }
-    
+
     $database = New-SPStateServiceDatabase -Name $stateServiceDatabaseName `
         -Debug:$false
     $serviceApp = New-SPStateServiceApplication -Name $stateServiceName `

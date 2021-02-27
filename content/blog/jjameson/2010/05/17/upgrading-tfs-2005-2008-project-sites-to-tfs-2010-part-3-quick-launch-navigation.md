@@ -91,7 +91,7 @@ function AddNavigationElement(
     $url = $navigationNode.Url.Replace(
         $web.ServerRelativeUrl,
         "(`$web.ServerRelativeUrl)")
-        
+
     $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
 
     $parentElement.AppendChild($navElement) > $null
@@ -180,7 +180,7 @@ Before we can import the navigation nodes, we need to tweak the XML slightly  to
 However, for consistency with new TFS 2010 project sites (in terms of navigation),  we'll keep the title of the quick launch navigation node as "Calendar" and simply  refer to the **Calendar** view of the **Event** list:
 
 ```
-<NavigationNode     
+<NavigationNode
       title="Calendar"
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
 ```
@@ -229,7 +229,7 @@ function DeleteNavigationNode(
             {
                 Write-Debug ("Deleting navigation node" `
                     + " ($($tmpNode.Title) - $($tmpNode.Url))...")
-                    
+
                 $tmpNode.Delete()
             }
         }
@@ -237,7 +237,7 @@ function DeleteNavigationNode(
         {
             Write-Debug ("Deleting navigation node" `
                 + " ($($node.Title) - $($node.Url))...")
-                
+
             $node.Delete()
         }
     }
@@ -290,7 +290,7 @@ function EnsureNavigationNode(
     [string] $url)
 {
     Write-Debug "Ensuring navigation node ($title - $url)..."
-        
+
     [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
         $nodes | Where-Object {$_.Url -eq $url}
 
@@ -334,7 +334,7 @@ function ImportNavigationNodes(
         $url = $url.Replace(
             "(`$web.ServerRelativeUrl)",
             $web.ServerRelativeUrl)
-        
+
         [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
             EnsureNavigationNode $nodes $title $url
 
@@ -362,7 +362,7 @@ function ImportQuickLaunchNavigation(
     [xml] $navigationXml)
 {
     Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
-    
+
     $nodes = $web.Navigation.QuickLaunch
 
     $navElements = $navigationXml.SelectNodes(
@@ -434,10 +434,10 @@ $sitesToUpgrade |
 
         $DebugPreference = "Continue"
         DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
-        
+
         $DebugPreference = "SilentlyContinue"
         $web = Get-SPWeb $_
-        
+
         $DebugPreference = "Continue"
         ImportQuickLaunchNavigation $web $navigationXml
     }

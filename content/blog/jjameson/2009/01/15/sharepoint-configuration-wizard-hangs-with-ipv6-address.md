@@ -56,7 +56,7 @@ I discovered the following (the interesting stuff starts about halfway down):
 01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsRightVersionOfIis
 01/15/2009 13:55:07  1  INF                        Entering function ServiceHelper.Start
 01/15/2009 13:55:07  1  INF                          Trying to start service W3SVC and waiting 120 sec to do so
-01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do 
+01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do
 01/15/2009 13:55:07  1  INF                          starting service W3SVC (it may already be started)
 01/15/2009 13:55:07  1  INF                        Leaving function ServiceHelper.Start
 01/15/2009 13:55:07  1  INF                      Leaving function TaskCommon.EnsureIIs

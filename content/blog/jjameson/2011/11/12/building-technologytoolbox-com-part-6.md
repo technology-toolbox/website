@@ -76,7 +76,7 @@ folder.
 static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
-            
+
             const string summaryFolder =
                 @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
 
@@ -228,7 +228,7 @@ static void Main(string[] args)
                 "CommentModeration",
                 "Disabled");
 
-            blog.ExtendedProperties.Add(item);            
+            blog.ExtendedProperties.Add(item);
         }
 ```
 
@@ -309,7 +309,7 @@ private static void ExportPostSummaries(
                     Debug.Assert(postHeading != null);
 
                     post.Title = HttpUtility.HtmlDecode(postHeading.InnerText);
-                    
+
                     HtmlNode postLink = postHeading.SelectSingleNode("a");
                     Debug.Assert(postHeading != null);
 
@@ -499,7 +499,7 @@ private static void FillPostDetail(
 
             buffer.Append("</div>");
             buffer.Append("</blockquote>");
-            
+
             HtmlNode postContent = document.DocumentNode.SelectSingleNode(
                     "//div[@class='post-content user-defined-markup']");
 
@@ -1011,7 +1011,7 @@ private static void FillPostCategories(
                 }
             }
         }
-        
+
         private static string MapTagToCategory(
             string tag)
         {
@@ -1268,7 +1268,7 @@ private static string GetFeedbackHtmlForPost(
                 feedbackHtml = feedbackHtml.Replace(@"\/", "/");
                 feedbackHtml = feedbackHtml.Replace(@"\'", "'");
                 feedbackHtml = feedbackHtml.Replace("&#39;", "'");
-                                
+
                 feedbackHtml = feedbackHtml.Replace(
                     @"\r\n",
                     Environment.NewLine);

@@ -109,23 +109,23 @@ function ExtractLogFiles(
 {
     If ([string]::IsNullOrEmpty($httpLogPath) -eq $true)
     {
-        Throw "The log path must be specified."    
+        Throw "The log path must be specified."
     }
-    
+
     [string] $httpLogArchive = $httpLogPath + "\Archive"
-    
+
     If ((Test-Path $httpLogArchive) -eq $false)
     {
         Write-Host "Creating archive folder for compressed log files..."
         New-Item -ItemType directory -Path $httpLogArchive | Out-Null
     }
-    
+
     Write-Host "Extracting compressed log files..."
-    
+
     Get-ChildItem $httpLogPath -Filter "*.zip" |
         ForEach-Object {
             Expand-Archive $_ -OutputPath $httpLogPath
-            
+
             Move-Item $_.FullName $httpLogArchive
         }
 }
@@ -135,7 +135,7 @@ function ImportLogFiles(
 {
     If ([string]::IsNullOrEmpty($httpLogPath) -eq $true)
     {
-        Throw "The log path must be specified."    
+        Throw "The log path must be specified."
     }
 
     [string] $logParser = "${env:ProgramFiles(x86)}" `
@@ -169,19 +169,19 @@ function ImportLogFiles(
             + ", time-taken AS TimeTaken" `
         + " INTO WebsiteLog" `
         + " FROM $httpLogPath\*.log"
-        
+
     [string] $connectionString = "Driver={SQL Server Native Client 10.0};" `
         + "Server=BEAST;Database=CaelumDW;Trusted_Connection=yes;"
-    
+
     [string[]] $parameters = @()
-    
+
     $parameters += $query
     $parameters += "-i:W3C"
     $parameters += "-o:SQL"
     $parameters += "-oConnString:$connectionString"
-    
+
     Write-Debug "Parameters: $parameters"
-    
+
     Write-Host "Importing log files to database..."
     & $logParser $parameters
 }
@@ -191,13 +191,13 @@ function RemoveLogFiles(
 {
     If ([string]::IsNullOrEmpty($httpLogPath) -eq $true)
     {
-        Throw "The log path must be specified."    
+        Throw "The log path must be specified."
     }
-    
-    Write-Host "Removing log files..."    
+
+    Write-Host "Removing log files..."
     Remove-Item ($httpLogPath + "\*.log")
 }
-    
+
 function Main
 {
     [string] $httpLogPath = "C:\inetpub\wwwroot\www.technologytoolbox.com\httplog"
@@ -205,9 +205,9 @@ function Main
     ExtractLogFiles $httpLogPath
 
     ImportLogFiles $httpLogPath
-    
+
     RemoveLogFiles $httpLogPath
-        
+
     Write-Host -Fore Green "Successfully imported log files."
 }
 

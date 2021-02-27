@@ -77,17 +77,17 @@ namespace Fabrikam.Demo.AdminConsole
 
             string commandLine = commandLineBuilder.ToString();
             Logger.LogInfo(commandLine);
-        }        
+        }
 
         private static void Process()
         {
             Logger.LogDebug("Starting processing...");
-            
+
             // Simulate the processing of a work item queue.
             for (int i = -1; i <= 4; i++)
             {
                 ProcessWorkItem(i);
-            }            
+            }
 
             Logger.LogInfo("Successfully completed processing.");
         }
@@ -374,7 +374,7 @@ using System.Security.Permissions;
 namespace Fabrikam.Demo.CoreServices.Logging
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     [HostProtection(SecurityAction.LinkDemand, Synchronization = true)]
     public class SimpleTraceListener : TextWriterTraceListener

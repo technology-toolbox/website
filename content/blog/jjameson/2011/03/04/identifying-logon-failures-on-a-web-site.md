@@ -48,7 +48,7 @@ This script searches the specified server's Application event log for ASP.NET lo
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
-    WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")    
+    WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")
     WScript.Quit(1)
 End If
 
@@ -109,7 +109,7 @@ This script searches the Application event logs for each server in the farm look
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
-    WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")    
+    WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")
     WScript.Quit(1)
 End If
 

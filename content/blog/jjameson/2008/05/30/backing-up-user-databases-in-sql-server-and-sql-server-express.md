@@ -61,9 +61,9 @@ DECLARE @databases TABLE
 )
 
 INSERT INTO
-    @databases 
+    @databases
     SELECT name
-    FROM master.dbo.sysdatabases 
+    FROM master.dbo.sysdatabases
     WHERE name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
 
 DECLARE @id TINYINT

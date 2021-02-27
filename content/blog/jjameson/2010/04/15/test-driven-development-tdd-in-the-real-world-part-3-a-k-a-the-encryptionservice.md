@@ -94,7 +94,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
             string plaintext = "foobar";
             string expected = plaintext;
             string ciphertext = EncryptionService.Encrypt(plaintext);
-           
+
             string actual = EncryptionService.Decrypt(ciphertext);
 
             Assert.AreEqual<string>(expected, actual);
@@ -155,7 +155,7 @@ Well, that certainly isn't good. Let's modify the unit test a little to ensure  
             string plaintext = "foobar";
             string expected = plaintext;
             string ciphertext = EncryptionService.Encrypt(plaintext);
-           
+
             string actual = EncryptionService.Decrypt(ciphertext);
 
             Assert.AreEqual<string>(expected, actual);
@@ -356,7 +356,7 @@ using System.Runtime.InteropServices;
 
 // Note: Shared assembly information is specified in SharedAssemblyInfo.cs
 
-// General Information about an assembly is controlled through the following 
+// General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Fabrikam.Demo.Security")]

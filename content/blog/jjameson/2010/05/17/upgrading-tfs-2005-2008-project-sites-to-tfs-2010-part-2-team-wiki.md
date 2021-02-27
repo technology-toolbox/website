@@ -38,14 +38,14 @@ function AddWikiLibrary(
     $libraryDescription)
 {
     Write-Debug "Adding wiki library ($libraryName) to site ($($web.Url))..."
-                    
+
     $listId = $web.Lists.Add(
         $name,
         $description,
         [Microsoft.SharePoint.SPListTemplateType]::WebPageLibrary)
-    
+
     $wikiLibrary = $web.Lists[$listId]
-    
+
     $null = [Microsoft.SharePoint.Utilities.SPUtility]::AddDefaultWikiContent(
         $wikiLibrary)
 }

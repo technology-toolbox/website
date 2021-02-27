@@ -71,7 +71,7 @@ Next we need to instrument each assembly in the list:
 ```
 $assembliesToInstrument |
         ForEach-Object {
-            InstrumentAssembly $_            
+            InstrumentAssembly $_
         }
 ```
 
@@ -113,7 +113,7 @@ to use the Strong Name Tool (Sn.exe):
 $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
-            
+
             SignAssembly $_
         }
 ```
@@ -129,7 +129,7 @@ function SignAssembly(
 {
     [string] $sn = "${env:ProgramFiles(x86)}" `
         + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
-        
+
     & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
 }
 ```
@@ -172,7 +172,7 @@ function GetAssemblyFolders(
     [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
 {
     [string[]] $folders = @()
-    
+
     $assemblyPaths |
         ForEach-Object {
             [string] $folder = (Get-Item $_).DirectoryName
@@ -192,7 +192,7 @@ destination folders:
 $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
-            
+
             SignAssembly $_
 
             CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
@@ -204,7 +204,7 @@ instrumented assembly to each destination "bin" older:
 
 ```
 function CopyInstrumentedAssemblyToTestBinFolders(
-    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),
     [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
 {
     $testBinFolders |
@@ -222,7 +222,7 @@ in the GAC as well:
 $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
-            
+
             SignAssembly $_
 
             CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
@@ -248,7 +248,7 @@ function UpdateGacAssemblyIfNecessary(
     [string] $numberOfItemsInGac = & $gacutil -l $baseName |
         Select-String "^Number of items =" |
             ForEach { $_.Line.Split("=")[1].Trim() }
-            
+
     If ($numberOfItemsInGac -eq "0")
     {
         Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
@@ -324,7 +324,7 @@ order for the SharePoint tests to work), a test settings file must be specified:
         ForEach-Object {
             ...
         }
-    
+
     ToggleCodeCoverageProfiling $true
 
     RunTests $testAssemblies $testSettingsPath
@@ -349,7 +349,7 @@ function RunTests(
         ForEach-Object {
             $parameters += ('/testcontainer:"' + $_ + '"')
         }
-    
+
     If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
     {
         $parameters += ('/testsettings:' + $testSettingsPath)
@@ -379,7 +379,7 @@ Here is the script in its entirety.
 $ErrorActionPreference = "Stop"
 
 function CopyInstrumentedAssemblyToTestBinFolders(
-    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),    
+    [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),
     [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
 {
     $testBinFolders |
@@ -395,7 +395,7 @@ function GetAssemblyFolders(
     [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
 {
     [string[]] $folders = @()
-    
+
     $assemblyPaths |
         ForEach-Object {
             [string] $folder = (Get-Item $_).DirectoryName
@@ -428,7 +428,7 @@ function RunTests(
         ForEach-Object {
             $parameters += ('/testcontainer:"' + $_ + '"')
         }
-    
+
     If ([string]::IsNullOrEmpty($testSettingsPath) -eq $false)
     {
         $parameters += ('/testsettings:' + $testSettingsPath)
@@ -445,7 +445,7 @@ function SignAssembly(
 
     [string] $sn = "${env:ProgramFiles(x86)}" `
         + "\Microsoft SDKs\Windows\v7.0A\Bin\NETFX 4.0 Tools\sn.exe"
-        
+
     & $sn -q -Ra "$assemblyPath" Fabrikam.Demo.snk
 }
 
@@ -482,7 +482,7 @@ function UpdateGacAssemblyIfNecessary(
     [string] $numberOfItemsInGac = & $gacutil -l $baseName |
         Select-String "^Number of items =" |
             ForEach { $_.Line.Split("=")[1].Trim() }
-            
+
     If ($numberOfItemsInGac -eq "0")
     {
         Write-Debug ("The assembly (" + $baseName + ") was not found in the GAC.")
@@ -509,7 +509,7 @@ function Main
         ("CoreServices\SharePoint\bin\Debug" `
             + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
     )
-    
+
     [string[]] $testAssemblies =
     @(
         ("CoreServices\DeveloperTests\bin\Debug" `
@@ -523,14 +523,14 @@ function Main
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
-            
+
             SignAssembly $_
 
             CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
 
             UpdateGacAssemblyIfNecessary $_
         }
-    
+
     ToggleCodeCoverageProfiling $true
 
     RunTests $testAssemblies $testSettingsPath

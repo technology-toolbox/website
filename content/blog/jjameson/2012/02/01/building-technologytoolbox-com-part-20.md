@@ -439,7 +439,7 @@ private void SendContactRequestEmail()
         string mailFrom = Settings.Default.ContactFormMailFromAddress;
         string[] mailTo = Settings.Default.ContactFormMailToAddress.Split(
             new char[] { ';' });
-            
+
         using (MailMessage mailMessage = new MailMessage(
             mailFrom,
             mailTo[0],

@@ -155,10 +155,10 @@ private static void ConfigureSpecialsList(
                 true);
 
             StringCollection unitOfMeasureChoices = new StringCollection();
-            
+
             const string defaultUnitOfMeasureChoice = "/ lb.";
             unitOfMeasureChoices.Add(defaultUnitOfMeasureChoice);
-            
+
             unitOfMeasureChoices.Add("ea.");
 
             SPFieldChoice unitOfMeasureField =
@@ -231,7 +231,7 @@ private static void ConfigureViewsForSpecialsList(
             SharePointViewHelper.EnsureViewFields(
                 allItems,
                 fields);
-            
+
             // Configure "Most Recent Specials" view
             SPView mostRecentSpecials = SharePointViewHelper.EnsureView(
                 list,
@@ -359,7 +359,7 @@ private static void ConfigureHomeSiteDefaultPage(
                 page,
                 "Published by Tugboat.Web.HomeSiteConfiguration"
                     + " feature.");
-            
+
         }
 ```
 

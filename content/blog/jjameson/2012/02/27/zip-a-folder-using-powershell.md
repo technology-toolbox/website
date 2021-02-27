@@ -68,14 +68,14 @@ param([string]$zipfilename)
 if(-not (test-path($zipfilename)))
 {
 	set-content $zipfilename ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
-	(dir $zipfilename).IsReadOnly = $false	
+	(dir $zipfilename).IsReadOnly = $false
 }
 
 $shellApplication = new-object -com shell.application
 $zipPackage = $shellApplication.NameSpace($zipfilename)
 
-foreach($file in $input) 
-{ 
+foreach($file in $input)
+{
             $zipPackage.CopyHere($file.FullName)
             Start-sleep -milliseconds 500
 }
@@ -134,11 +134,11 @@ directory):
 function ZipFolder(
     [IO.DirectoryInfo] $directory)
 {
-    ...    
+    ...
     [IO.DirectoryInfo] $parentDir = $directory.Parent
-    
+
     [string] $zipFileName
-    
+
     If ($parentDir.FullName.EndsWith("\") -eq $true)
     {
         # e.g. $parentDir = "C:\"
@@ -148,24 +148,24 @@ function ZipFolder(
     {
         $zipFileName = $parentDir.FullName + "\" + $directory.Name + ".zip"
     }
-    
+
     ...
-    
+
     Set-Content $zipFileName ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
-        
+
     $shellApp = New-Object -ComObject Shell.Application
     $zipFile = $shellApp.NameSpace($zipFileName)
 
     ...
-    
+
     [int] $expectedCount = (Get-ChildItem $directory -Force -Recurse).Count
     $expectedCount += 1 # account for the top-level folder
-    
+
     $zipFile.CopyHere($directory.FullName)
 
     # wait for CopyHere operation to complete
     WaitForZipOperationToFinish $zipFile $expectedCount
-    
+
     ...}
 ```
 
@@ -178,23 +178,23 @@ function WaitForZipOperationToFinish(
     [int] $expectedNumberOfItemsInZipFile)
 {
     ...
-    
+
     Write-Host -NoNewLine "Waiting for zip operation to finish..."
     Start-Sleep -Milliseconds 100 # ensure zip operation had time to start
-    
+
     [int] $waitTime = 0
     [int] $maxWaitTime = 60 * 1000 # [milliseconds]
     while($waitTime -lt $maxWaitTime)
     {
         [int] $waitInterval = GetWaitInterval($waitTime)
-                
+
         Write-Host -NoNewLine "."
         Start-Sleep -Milliseconds $waitInterval
         $waitTime += $waitInterval
 
-        ...        
+        ...
         [bool] $isFileLocked = IsFileLocked($zipFile.Self.Path)
-        
+
         If ($isFileLocked -eq $true)
         {
             Write-Debug "Zip file is locked by another process."
@@ -205,16 +205,16 @@ function WaitForZipOperationToFinish(
             Break
         }
     }
-    
-    Write-Host                           
-    
+
+    Write-Host
+
     If ($waitTime -ge $maxWaitTime)
     {
         Throw "Timeout exceeded waiting for zip operation"
     }
-    
+
     [int] $count = CountZipItems($zipFile)
-    
+
     If ($count -eq $expectedNumberOfItemsInZipFile)
     {
         Write-Debug "The zip operation completed succesfully."
@@ -262,11 +262,11 @@ function IsFileLocked(
     [string] $path)
 {
     ...
-    
+
     [bool] $isFileLocked = $true
 
     $file = $null
-    
+
     Try
     {
         $file = [IO.File]::Open(
@@ -274,7 +274,7 @@ function IsFileLocked(
             [IO.FileMode]::Open,
             [IO.FileAccess]::Read,
             [IO.FileShare]::None)
-            
+
         $isFileLocked = $false
     }
     Catch [IO.IOException]
@@ -292,7 +292,7 @@ function IsFileLocked(
             $file.Close()
         }
     }
-    
+
     return $isFileLocked
 }
 ```
@@ -304,28 +304,28 @@ count the total number of files and folders in a zip file:
 function CountZipItems(
     [__ComObject] $zipFile)
 {
-    ...    
+    ...
     [int] $count = CountZipItemsRecursive($zipFile)
-    ...    
+    ...
     return $count
 }
 
 function CountZipItemsRecursive(
     [__ComObject] $parent)
 {
-    ...  
+    ...
     [int] $count = 0
 
     $parent.Items() |
         ForEach-Object {
             $count += 1
-            
+
             If ($_.IsFolder -eq $true)
             {
                 $count += CountZipItemsRecursive($_.GetFolder)
             }
         }
-    
+
     return $count
 }
 ```
@@ -355,14 +355,14 @@ function CountZipItems(
     {
         Throw "Value cannot be null: zipFile"
     }
-    
+
     Write-Host ("Counting items in zip file (" + $zipFile.Self.Path + ")...")
-    
+
     [int] $count = CountZipItemsRecursive($zipFile)
 
     Write-Host ($count.ToString() + " items in zip file (" `
         + $zipFile.Self.Path + ").")
-    
+
     return $count
 }
 
@@ -373,19 +373,19 @@ function CountZipItemsRecursive(
     {
         Throw "Value cannot be null: parent"
     }
-    
+
     [int] $count = 0
 
     $parent.Items() |
         ForEach-Object {
             $count += 1
-            
+
             If ($_.IsFolder -eq $true)
             {
                 $count += CountZipItemsRecursive($_.GetFolder)
             }
         }
-    
+
     return $count
 }
 
@@ -396,18 +396,18 @@ function IsFileLocked(
     {
         Throw "The path must be specified."
     }
-    
+
     [bool] $fileExists = Test-Path $path
-    
+
     If ($fileExists -eq $false)
     {
         Throw "File does not exist (" + $path + ")"
     }
-    
+
     [bool] $isFileLocked = $true
 
     $file = $null
-    
+
     Try
     {
         $file = [IO.File]::Open(
@@ -415,7 +415,7 @@ function IsFileLocked(
             [IO.FileMode]::Open,
             [IO.FileAccess]::Read,
             [IO.FileShare]::None)
-            
+
         $isFileLocked = $false
     }
     Catch [IO.IOException]
@@ -433,10 +433,10 @@ function IsFileLocked(
             $file.Close()
         }
     }
-    
+
     return $isFileLocked
 }
-    
+
 function GetWaitInterval(
     [int] $waitTime)
 {
@@ -466,24 +466,24 @@ function WaitForZipOperationToFinish(
     {
         Throw "The expected number of items in the zip file must be specified."
     }
-    
+
     Write-Host -NoNewLine "Waiting for zip operation to finish..."
     Start-Sleep -Milliseconds 100 # ensure zip operation had time to start
-    
+
     [int] $waitTime = 0
     [int] $maxWaitTime = 60 * 1000 # [milliseconds]
     while($waitTime -lt $maxWaitTime)
     {
         [int] $waitInterval = GetWaitInterval($waitTime)
-                
+
         Write-Host -NoNewLine "."
         Start-Sleep -Milliseconds $waitInterval
         $waitTime += $waitInterval
 
         Write-Debug ("Wait time: " + $waitTime / 1000 + " seconds")
-        
+
         [bool] $isFileLocked = IsFileLocked($zipFile.Self.Path)
-        
+
         If ($isFileLocked -eq $true)
         {
             Write-Debug "Zip file is locked by another process."
@@ -494,16 +494,16 @@ function WaitForZipOperationToFinish(
             Break
         }
     }
-    
-    Write-Host                           
-    
+
+    Write-Host
+
     If ($waitTime -ge $maxWaitTime)
     {
         Throw "Timeout exceeded waiting for zip operation"
     }
-    
+
     [int] $count = CountZipItems($zipFile)
-    
+
     If ($count -eq $expectedNumberOfItemsInZipFile)
     {
         Write-Debug "The zip operation completed succesfully."
@@ -526,13 +526,13 @@ function ZipFolder(
     {
         Throw "Value cannot be null: directory"
     }
-    
+
     Write-Host ("Creating zip file for folder (" + $directory.FullName + ")...")
-    
+
     [IO.DirectoryInfo] $parentDir = $directory.Parent
-    
+
     [string] $zipFileName
-    
+
     If ($parentDir.FullName.EndsWith("\") -eq $true)
     {
         # e.g. $parentDir = "C:\"
@@ -542,14 +542,14 @@ function ZipFolder(
     {
         $zipFileName = $parentDir.FullName + "\" + $directory.Name + ".zip"
     }
-    
+
     If (Test-Path $zipFileName)
     {
         Throw "Zip file already exists ($zipFileName)."
     }
-    
+
     Set-Content $zipFileName ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
-        
+
     $shellApp = New-Object -ComObject Shell.Application
     $zipFile = $shellApp.NameSpace($zipFileName)
 
@@ -557,15 +557,15 @@ function ZipFolder(
     {
         Throw "Failed to get zip file object."
     }
-    
+
     [int] $expectedCount = (Get-ChildItem $directory -Force -Recurse).Count
     $expectedCount += 1 # account for the top-level folder
-    
+
     $zipFile.CopyHere($directory.FullName)
 
     # wait for CopyHere operation to complete
     WaitForZipOperationToFinish $zipFile $expectedCount
-    
+
     Write-Host -Fore Green ("Successfully created zip file for folder (" `
         + $directory.FullName + ").")
 }

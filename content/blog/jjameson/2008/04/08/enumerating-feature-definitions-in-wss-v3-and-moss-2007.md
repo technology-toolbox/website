@@ -35,10 +35,10 @@ namespace EnumFeatureDefs
         private static readonly Guid excelServerSolutionId =
             new Guid("{7ed6cd55-b479-4eb7-a529-e99a24c10bd3}");
 
-        static void Main(            
+        static void Main(
             string[] args)
         {
-            Uri url = new Uri("http://foobar/sites/TfsLite");            
+            Uri url = new Uri("http://foobar/sites/TfsLite");
 
             SPWebApplication webApp = SPWebApplication.Lookup(url);
 

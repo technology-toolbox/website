@@ -30,7 +30,7 @@ Over the past couple of years, my teammates and I have created numerous "helper"
 /// <remarks>
 /// All methods of the <b>SharePointWebPartHelper</b> class are static and
 /// can therefore be called without creating an instance of the class.
-/// </remarks>    
+/// </remarks>
 public sealed class SharePointWebPartHelper
 ```
 
@@ -84,9 +84,9 @@ private static WebPart CreateWebPart(
         }
 
         webPart.ID = webPartId;
-        wpm.AddWebPart(webPart, zoneId, zoneIndex);        
+        wpm.AddWebPart(webPart, zoneId, zoneIndex);
         zoneIndex++;
-        
+
         Logger.LogDebug(
             CultureInfo.InvariantCulture,
             "Successfully created Web Part ({0}) on page ({1}).",
@@ -194,7 +194,7 @@ private static WebPart CreateWebPart(
 
         Debug.Assert(webPart.ZoneIndex == zoneIndex);
         zoneIndex++;
-        
+
         Logger.LogDebug(
             CultureInfo.InvariantCulture,
             "Successfully created Web Part ({0}) on page ({1}).",

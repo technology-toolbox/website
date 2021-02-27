@@ -62,7 +62,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
             HttpContextWrapper contextWrapper = new HttpContextWrapper(context);
 
             bool forceRedirect = IsSslRedirectRequired(contextWrapper);
-            
+
             if (forceRedirect == false)
             {
                 return;
@@ -161,7 +161,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
                 if (formMode == SPControlMode.Edit
                     || formMode == SPControlMode.New)
                 {
-                    // Never redirect when editing a page                
+                    // Never redirect when editing a page
                     Logger.LogDebug(
                         CultureInfo.InvariantCulture,
                         "SslRequiredWebPart - SSL redirect is not required"

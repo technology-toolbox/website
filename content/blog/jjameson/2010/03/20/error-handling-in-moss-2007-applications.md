@@ -232,7 +232,7 @@ Here's the sample Error.aspx file that I created to capture the screenshot shown
                 <table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
                     <tr>
                         <td colspan="2" class="authoringRegion">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -258,7 +258,7 @@ Here's the sample Error.aspx file that I created to capture the screenshot shown
                                 </tr>
                                 <tr class="topNavContainer">
                                     <td>
-                                         
+
                                     </td>
                                 </tr>
                             </table>
@@ -1441,7 +1441,7 @@ namespace Fabrikam.Demo.StsAdm.Commands
         }
 
         #endregion
-        
+
         private static void AddLoggingWebConfigModifications(
             SPWebApplication webApp)
         {

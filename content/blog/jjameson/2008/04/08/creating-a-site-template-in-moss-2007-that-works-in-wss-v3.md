@@ -39,7 +39,7 @@ Digging into the SharePoint logs I noticed the following:
 {{< log-excerpt >}}
 
 ```
-04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".	 
+04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".
 04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
 04/08/2008 ... Marking web-scoped features active from manifest at URL "http://wss-dev/Test"
 04/08/2008 ... Failed to mark site-scoped features active in site 'http://wss-dev/Test'.

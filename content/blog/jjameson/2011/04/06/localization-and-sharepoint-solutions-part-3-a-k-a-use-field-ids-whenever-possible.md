@@ -69,7 +69,7 @@ ImageFieldValue pageImage =
                 pageImage.ImageUrl = defaultImageUrl;
                 page.ListItem["Page Image"] = pageImage;
                 page.Update();
-                
+
                 ...
 ```
 

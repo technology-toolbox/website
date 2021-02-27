@@ -94,7 +94,7 @@ function Main()
 
         $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential `
             -Debug:$false
-    } 
+    }
 
     $windowsAuthProvider = New-SPAuthenticationProvider -Debug:$false
     $formsAuthProvider = New-SPAuthenticationProvider `
@@ -207,7 +207,7 @@ function EnableAnonymousAccess(
     {
         Write-Host `
             "Anonymous access is already enabled on the site ($($web.Url))."
-            
+
         return;
     }
 
@@ -218,7 +218,7 @@ function EnableAnonymousAccess(
 
     $web.AnonymousPermMask64 = $anonymousPermissionMask;
     $web.Update();
-    
+
     Write-Host -Fore Green `
         "Successfully enabled anonymous access on site ($($web.Url))."
 }
@@ -289,21 +289,21 @@ function GetUserDisplayName(
 
     $userNameParts = $userName.Split("\")
     $samAccountName = $userNameParts[1]
-    
+
     $filter = "(&(objectCategory=User)(samAccountName=$samAccountName))"
 
     $searcher = New-Object System.DirectoryServices.DirectorySearcher
     $searcher.Filter = $filter
 
     $path = $searcher.FindOne()
-    
+
     If ($path -eq $null)
     {
         Throw "User not found ($userName)."
     }
-    
+
     $user = $path.GetDirectoryEntry()
-    
+
     Write-Debug "Found display name for user ($($user.DisplayName))."
     return $user.DisplayName
 }
@@ -316,7 +316,7 @@ function SetWebAppProperty(
 {
     Write-Debug ("Setting property ($propertyName) on Web application" `
         + " ($($webApp.Url)...")
-        
+
     If ($webApp.Properties[$propertyName] -eq $propertyValue)
     {
         Write-Debug ("The Web application property ($propertyName) is already set" `
@@ -324,15 +324,15 @@ function SetWebAppProperty(
 
         return;
     }
-    
+
     $webApp.Properties[$propertyName] = $propertyValue
     $webApp.Update()
-    
+
     Write-Debug ("Successfully set property ($propertyName) on Web" `
         + " application ($($webApp.Url)) to '$propertyValue'.")
-    
+
 }
-    
+
 function SetWebAppUserPolicy(
     [Microsoft.SharePoint.Administration.SPWebApplication] $webApp =
         $(Throw "Value cannot be null: webApp"),
@@ -341,27 +341,27 @@ function SetWebAppUserPolicy(
 {
     Write-Debug ("Setting policy ($permissions) for user" `
         + " ($userName) on Web application ($($webApp.Url))...")
-    
+
     [Microsoft.SharePoint.Administration.SPPolicyRole] $policyRole =
         $webApp.PolicyRoles | where {$_.Name -eq $permissions}
-        
+
     if ($policyRole -eq $null)
     {
         Throw "Invalid permissions ($permissions)."
     }
 
     $userDisplayName = GetUserDisplayName $userName
-    
+
     [Microsoft.SharePoint.Administration.SPPolicyCollection] $policies =
         $webApp.Policies
 
     [Microsoft.SharePoint.Administration.SPPolicy] $policy = $policies.Add(
         $userName,
         $userDisplayName)
-    
+
     $policy.PolicyRoleBindings.Add($policyRole)
     $webApp.Update()
-    
+
     Write-Debug ("Successfully added policy ($permissions) for user" `
         + " ($userName) to Web application ($($webApp.Url))...")
 }
@@ -423,7 +423,7 @@ Function AddEventLogSource(
     {
         Throw "The name of the event source is required."
     }
-    
+
     $sourceExists = [System.Diagnostics.EventLog]::SourceExists($source)
     If ($sourceExists -eq $true)
     {
@@ -432,9 +432,9 @@ Function AddEventLogSource(
     Else
     {
         Write-Host "Creating event source ($source)..."
-        
+
         [System.Diagnostics.EventLog]::CreateEventSource($source, "Application")
-        
+
         Write-Host -Fore Green "Successfully created event source ($source)."
     }
 }
@@ -517,7 +517,7 @@ function Main()
     # For desktop builds, the WSP is created in the
     # ..\..\Web\bin\{Debug|Release} folder.
     # However, with Team Foundation Build, the WSP is created in the
-    # $(BinariesRoot)\{Debug|Release} folder.    
+    # $(BinariesRoot)\{Debug|Release} folder.
     $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
     If ((Test-Path $solutionFile) -eq $false)
     {
@@ -561,7 +561,7 @@ param(
 # (http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies).
 If (-not $runInThisAppDomain)
 {
-    Write-Host -Fore Yellow "Invoking script in a new app domain"    
+    Write-Host -Fore Yellow "Invoking script in a new app domain"
     PowerShell.exe -Command $MyInvocation.Line -RunInThisAppDomain
     return
 }
@@ -571,7 +571,7 @@ If ($debug -eq $true)
 {
     $DebugPreference = "Continue"
 }
-    
+
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -584,12 +584,12 @@ function DeploySolution(
 {
     Write-Host ("Deploying solution ($solutionName) to Web application" `
         + " ($webAppUrl)...")
-    
+
     If ($force -eq $true)
     {
         Write-Debug "The solution deployment will be forced."
     }
-    
+
     If ($local -eq $true)
     {
         Write-Debug ("The solution will be deployed locally (bypassing" `
@@ -657,13 +657,13 @@ function WaitForSharePointTimerJobToFinish([Microsoft.SharePoint.Administration.
     {
         return
     }
-    
+
     $jobName = $job.Name
-    
+
     Write-Host -NoNewLine ("Waiting for SharePoint timer job ($jobName) to" `
         + " finish...")
-    
-    While ((Get-SPTimerJob $jobName -Debug:$false) -ne $null) 
+
+    While ((Get-SPTimerJob $jobName -Debug:$false) -ne $null)
     {
         Write-Host -NoNewLine "."
         Start-Sleep -Seconds 5
@@ -689,17 +689,17 @@ function WaitForSolutionDeploymentJobsToFinish([string] $solutionName)
 
         $jobNameFilter = "*solution-deployment*$solutionName*"
     }
-    
+
     Write-Debug "jobNameFilter: $jobNameFilter"
-    
+
     $jobs = Get-SPTimerJob -Debug:$false  | Where { $_.Name -like $jobNameFilter }
-    
+
     If ($jobs -eq $null)
     {
         Write-Debug "No solution deployment jobs found"
         return
     }
-    
+
     If ($jobs -is [Array])
     {
         Foreach ($job in $jobs)
@@ -722,7 +722,7 @@ function Main()
     Else
     {
         Foreach ($solutionName in $args)
-        {            
+        {
             WaitForSolutionDeploymentJobsToFinish $solutionName
         }
     }
@@ -910,8 +910,8 @@ function DeactivateFeature(
     {
         Write-Debug "The feature deactivation will be forced."
     }
-    
-    $feature = Get-SPFeature $featureName -Debug:$false -EA 0 
+
+    $feature = Get-SPFeature $featureName -Debug:$false -EA 0
 
     If ($feature -eq $null)
     {
@@ -928,15 +928,15 @@ function DeactivateFeature(
             Write-Host "The feature ($featureName) is not activated on the farm."
             return
         }
-        
+
         Write-Host "Deactivating farm feature ($featureName)..."
-        
+
         Disable-SPFeature $featureName -Force:([bool]::Parse($force)) `
             -Confirm:$false -Debug:$false
-        
+
         Write-Host -Fore Green ("Successfully deactivated farm feature" `
             + " ($featureName).")
-        
+
         return
     }
     ElseIf ($feature.Scope -eq `
@@ -966,7 +966,7 @@ function DeactivateFeature(
 
     Disable-SPFeature $featureName -Url $siteUrl -Force:([bool]::Parse($force)) `
         -Confirm:$false -Debug:$false
-    	
+
     Write-Host -Fore Green ("Successfully deactivated feature ($featureName) on" `
         + " site ($siteUrl).")
 }
@@ -1039,7 +1039,7 @@ function RetractSolution(
         Write-Debug ("The solution will be retracted locally (bypassing" `
             + " SharePoint timer job).")
     }
-    
+
     $webApp = Get-SPWebApplication $webAppUrl -Debug:$false
 
     $solution = Get-SPSolution $solutionName -Debug:$false -EA 0
@@ -1049,18 +1049,18 @@ function RetractSolution(
         Write-Warning "The specified solution ($solutionName) was not found."
         return
     }
-    
+
     $deployedWebApp = $solution.DeployedWebApplications |
-        Where { $_.Url -eq $webApp.Url }    
-    
+        Where { $_.Url -eq $webApp.Url }
+
     If ($deployedWebApp -eq $null)
     {
         Write-Host ("The solution ($solutionName) is not deployed to the" `
             + " specified Web application ($webAppUrl).")
 
-        return;    
+        return;
     }
-    
+
     Uninstall-SPSolution $solutionName -WebApplication $webAppUrl `
     	-Local:([bool]::Parse($local)) -Confirm:$false -Debug:$false
 
@@ -1134,7 +1134,7 @@ function DeleteSolution(
 function Main()
 {
     Write-Host "Deleting solutions..."
-    
+
     DeleteSolution "Fabrikam.Demo.Web.wsp"
 }
 
@@ -1216,32 +1216,32 @@ function UpgradeSolution(
     [bool] $local)
 {
     Write-Host "Upgrading solution ($solutionPath)..."
-    
+
     If ($force -eq $true)
     {
         Write-Debug "The solution upgrade will be forced."
     }
-    
+
     If ($local -eq $true)
     {
         Write-Debug ("The solution will be upgraded locally (bypassing" `
             + " SharePoint timer job).")
     }
-    
+
     $literalPath = Resolve-Path $solutionPath
     $solutionFile = Get-Item $literalPath
-    
+
     Update-SPSolution $solutionFile.Name -LiteralPath $literalPath -GACDeployment `
         -Force:([bool]::Parse($force)) -Local:([bool]::Parse($local)) `
         -Debug:$false > $null
-        
+
     # If the deployment was performed using a SharePoint timer job, then wait
     # for the timer job to finish
     If ($local -eq $false)
     {
     	. '.\Wait for Solution Deployment Jobs to Finish.ps1' $solutionFile.Name
     }
-    
+
     Write-Host -Fore Green "Successfully upgraded solution ($solutionPath)."
 }
 
@@ -1273,7 +1273,7 @@ function Main(
     # For desktop builds, the WSP is created in the
     # ..\..\Web\bin\{Debug|Release} folder.
     # However, with Team Foundation Build, the WSP is created in the
-    # $(BinariesRoot)\{Debug|Release} folder.    
+    # $(BinariesRoot)\{Debug|Release} folder.
     $solutionFile = "..\..\Web\bin\$buildConfiguration\Fabrikam.Demo.Web.wsp"
     If ((Test-Path $solutionFile) -eq $false)
     {

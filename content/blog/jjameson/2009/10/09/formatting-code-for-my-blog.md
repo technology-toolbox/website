@@ -299,7 +299,7 @@ namespace ConvertClipboardRtfToHtmlText
                         }
                         i++;
                     }
-                    
+
                     // Trim any trailing empty lines
                     while ((2 <= sb.Length)
                         && ('\r' == sb[sb.Length - 2])

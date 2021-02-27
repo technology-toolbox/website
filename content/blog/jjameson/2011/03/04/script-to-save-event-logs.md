@@ -75,7 +75,7 @@ Private Sub SaveEventLog(strComputer, strEventLogName)
             & GetFormattedTimestamp() & ".evt"
 
         errBackupLog = objLogFile.BackupEventLog(backupFilename)
-        If errBackupLog <> 0 Then        
+        If errBackupLog <> 0 Then
             WScript.Echo "The " & strEventLogName & " event log on " _
                 & strComputer & " could not be backed up."
         End If

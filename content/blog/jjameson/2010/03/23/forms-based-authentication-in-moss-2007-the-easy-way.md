@@ -230,7 +230,7 @@ string databaseServer = webApp.ContentDatabases[0].Server;
          SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
 
          EnableAnonymousAccessOnRootWeb(webApp);
-            
+
          ConfigureSqlRoleProviderJob.Register(webApp);
 ```
 
@@ -466,7 +466,7 @@ namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
             }
 
             SPIisSettings iisSettings = webApp.IisSettings[SPUrlZone.Internet];
-            
+
             // HACK: It would be preferable to simply check the value of
             // iisSettings.RoleManager for the expected value. However, this
             // property was not always found to be consistent with the value
@@ -503,7 +503,7 @@ namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
 
             roleManagerSection.DefaultProvider = "FabrikamSqlRoleProvider";
             config.Save();
-            
+
             Logger.LogInfo(
                 "Successfully set default role provider for the Internet zone"
                     + " to FabrikamSqlRoleProvider.");

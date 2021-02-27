@@ -39,7 +39,7 @@ public static void InsertWebPartIntoPageContent(
             if (webPart == null)
             {
                 throw new ArgumentNullException("webPart");
-            }            
+            }
             else if (page == null)
             {
                 throw new ArgumentNullException("page");
@@ -71,7 +71,7 @@ public static void InsertWebPartIntoPageContent(
 
                 throw new InvalidOperationException(message);
             }
-            
+
             if (string.IsNullOrEmpty(webPart.ID) == true
                 || webPart.ID.StartsWith(
                     "g_",
@@ -195,7 +195,7 @@ private const string loginFormPlaceholder =
                     "Sign In",
                     bodyOnlyLayoutUrl);
 
-            ...		
+            ...
             SharePointPublishingHelper.SetDefaultPageContent(
                 page,
                 defaultSignInPageContent);

@@ -138,8 +138,8 @@ Running the scheduled task now produces the following in the Temp.log file
 **********************
 Windows PowerShell Transcript Start
 Start time: 20111119062551
-Username  : TECHTOOLBOX\jjameson 
-Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1) 
+Username  : TECHTOOLBOX\jjameson
+Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1)
 **********************
 Transcript started, output file is C:\Users\jjameson\AppData\Local\Temp\Temp.log
 Changing to TEMP folder...Creating file...New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.At C:\Temp.ps1:9 char:9+ New-Item <<<<  Temp.txt -Type File -Value "foobar"    + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand **********************

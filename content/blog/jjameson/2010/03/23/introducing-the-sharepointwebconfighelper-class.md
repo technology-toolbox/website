@@ -256,7 +256,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                 // continuing. Otherwise, we may encounter the following error
                 // (e.g. when applying Web.config changes from two different
                 // features in rapid succession):
-                // 
+                //
                 // "A web configuration modification operation is already
                 // running."
                 //

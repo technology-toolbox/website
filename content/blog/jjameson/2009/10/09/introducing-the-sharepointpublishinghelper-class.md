@@ -95,7 +95,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                 web.Url);
 
             PublishingPage page = FindPublishingPage(web, pageUrlName);
-            
+
             if (page == null)
             {
                 Logger.LogDebug(
@@ -110,7 +110,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
             {
                 string absolutePageUrl =
                         page.ListItem.Web.Url + '/' + page.Url;
-                
+
                 Logger.LogDebug(
                     CultureInfo.InvariantCulture,
                     "Deleting page: {0}...",
@@ -318,15 +318,15 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 
             PublishingSite site = new PublishingSite(page.PublishingWeb.Web.Site);
             PageLayout layout = site.PageLayouts[pageLayoutUrl];
-            
+
             SPContentTypeId contentTypeId = layout.AssociatedContentType.Id;
-            
+
             // HACK: The content type associated with each "Pages" library
             // actually gets a unique ContentTypeId (it is appended with a
             // unique identifier for the list -- thus inheriting from the
             // content type associated with the page layout).
             SPContentType pageContentType = null;
-            
+
             foreach (SPContentType listContentType in
                 page.PublishingWeb.PagesList.ContentTypes)
             {
@@ -336,7 +336,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                     break;
                 }
             }
-            
+
             if (pageContentType == null)
             {
                 string message = string.Format(
@@ -382,7 +382,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                     "The page ({0}/{1}) is already configured with the"
                         + " specified content type and page layout ({2}).",
                     page.ListItem.Web.Url,
-                    page.Url,                    
+                    page.Url,
                     pageLayoutUrl);
             }
         }

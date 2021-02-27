@@ -25,7 +25,7 @@ A few years ago, I created the following script (starting from a sample I found 
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
-    WScript.Echo("Usage: cscript DeleteEmptyFolders.vbs {path}")    
+    WScript.Echo("Usage: cscript DeleteEmptyFolders.vbs {path}")
     WScript.Quit(1)
 End If
 
@@ -45,11 +45,11 @@ Sub DeleteEmptyFolders(folder)
     For Each subfolder in folder.SubFolders
         DeleteEmptyFolders subfolder
     Next
-    
+
     If folder.SubFolders.Count = 0 And folder.Files.Count = 0 Then
         WScript.Echo folder.Path & " is empty"
         fso.DeleteFolder folder.Path
-    End If    
+    End If
 End Sub
 ```
 

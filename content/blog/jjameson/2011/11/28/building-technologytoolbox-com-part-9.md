@@ -200,7 +200,7 @@ with an ASP.NET **Repeater** control:
 
 ```
 <div class="hfeed posts-recent">
-    <h2>Most Recent Posts</h2>    
+    <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
         <ItemTemplate>
             <div class="hentry">

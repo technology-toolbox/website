@@ -449,7 +449,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
             writer.WriteLineNoTabs(
                 "<div id='cse' style='width: 100%;'>Loading</div>");
-            
+
             writer.WriteLineNoTabs(
                 "<script src='//www.google.com/jsapi'"
                     + " type='text/javascript'></script>");

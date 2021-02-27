@@ -46,15 +46,15 @@ Here is the updated script that I ended up with (I've also attached it to this p
 # formatting via CSS.
 #
 ################################################################################
- 
+
 [CmdletBinding()]
 param($path)
- 
+
 function Get-ScriptName
 {
     $myInvocation.ScriptName
 }
- 
+
 if($path -and ([Threading.Thread]::CurrentThread.ApartmentState -ne "STA"))
 {
     PowerShell -NoProfile -STA -File (Get-ScriptName) $path
@@ -81,7 +81,7 @@ $cssClassMappings = @{
     'String' = 'string'
     'Type' = 'userType'
     'Unknown' = $null
-    'Variable' = 'variable'    
+    'Variable' = 'variable'
 }
 
 $styles = "<style type='text/css'>
@@ -133,10 +133,10 @@ div.codeBlock pre, div.logExcerpt pre {
  margin: 0;
 }
 </style>"
- 
+
 Add-Type -Assembly System.Web
 Add-Type -Assembly PresentationCore
- 
+
 # Generate an HTML span and append it to HTML string builder
 $currentLine = 1
 function Append-HtmlSpan ($block, $tokenType)
@@ -147,38 +147,38 @@ function Append-HtmlSpan ($block, $tokenType)
         {
             $null = $codeBuilder.Append('`')
         }
-        
+
         $null = $codeBuilder.Append("`r`n")
         $SCRIPT:currentLine++
     }
     else
     {
         $block = [System.Web.HttpUtility]::HtmlEncode($block)
-        
+
         if($tokenType -eq 'String')
         {
             $lines = $block -split "`r`n"
             $block = ""
- 
+
             $multipleLines = $false
             foreach($line in $lines)
             {
                 if($multipleLines)
                 {
                     $block += "`r`n"
-                    
+
                     $SCRIPT:currentLine++
                 }
- 
+
                 $newText = $line.TrimStart()
-                $newText = " " * ($line.Length - $newText.Length) + $newText                    
+                $newText = " " * ($line.Length - $newText.Length) + $newText
                 $block += $newText
                 $multipleLines = $true
             }
         }
-        
+
         $cssClass = $cssClassMappings[$tokenType]
-        
+
         If ($cssClass -ne $null)
         {
             $null = $codeBuilder.Append(
@@ -217,7 +217,7 @@ __HTML__
 "@
 
     $header = $header.Replace("__STYLES__", $styles)
- 
+
     $startFragment = $header.IndexOf("<!--StartFragment-->") +
         "<!--StartFragment-->".Length + 2
     $endFragment = $header.IndexOf("<!--EndFragment-->") +
@@ -235,17 +235,17 @@ __HTML__
     $header = $header -replace "StartSelection:0000000000",
         ("StartSelection:{0:0000000000}" -f $startFragment)
     $header = $header -replace "EndSelection:0000000000",
-        ("EndSelection:{0:0000000000}" -f $endFragment)    
+        ("EndSelection:{0:0000000000}" -f $endFragment)
     $header = $header.Replace("__HTML__", $html)
-    
+
     Write-Verbose $header
     $header
 }
- 
+
 function Main
 {
     $text = $null
-    
+
     if($path)
     {
         $text = (Get-Content $path) -join "`r`n"
@@ -257,21 +257,21 @@ function Main
             Write-Error 'No script is available for copying.'
             return
         }
-        
+
         $text = $psise.CurrentFile.Editor.Text
     }
- 
+
     trap { break }
- 
+
     # Do syntax parsing.
     $errors = $null
     $tokens = [system.management.automation.psparser]::Tokenize($text,
         [ref] $errors)
- 
+
     # Initialize HTML builder.
     $codeBuilder = new-object system.text.stringbuilder
     $SCRIPT:currentLine++
-    
+
     # Iterate over the tokens and set the colors appropriately.
     $position = 0
     foreach ($token in $tokens)
@@ -282,31 +282,31 @@ function Main
             $tokenType = 'Unknown'
             Append-HtmlSpan $block $tokenType
         }
-        
+
         $block = $text.Substring($token.Start, $token.Length)
         $tokenType = $token.Type.ToString()
         Append-HtmlSpan $block $tokenType
-        
+
         $position = $token.Start + $token.Length
     }
- 
+
     # Copy console screen buffer contents to clipboard in two formats -
     # text and HTML.
     $code = $codeBuilder.ToString()
-    
+
     $codeBlock =
         "<div class='codeBlock'><pre><code>" + $code + "</code></pre></div>"
-    
+
     $html = GetHtmlClipboardFormat($codeBlock)
-        
+
     $dataObject = New-Object Windows.DataObject
     $dataObject.SetText([string]$codeBlock, [Windows.TextDataFormat]"UnicodeText")
-    
+
     $dataObject.SetText([string]$html, [Windows.TextDataFormat]"Html")
- 
+
     [Windows.Clipboard]::SetDataObject($dataObject, $true)
 }
- 
+
 . Main
 ```
 

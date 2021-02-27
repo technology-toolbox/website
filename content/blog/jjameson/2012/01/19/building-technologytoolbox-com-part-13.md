@@ -284,7 +284,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
         {
             this.Attributes.Add("type", "text/javascript");
         }
-        
+
         public string SourceFile { get; set; }
         public string DebugSourceFile { get; set; }
 
@@ -388,7 +388,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
                     this.Page.Request.IsSecureConnection ? "https" : "http",
                     this.Version);
             }
-                
+
             base.OnPreRender(e);
         }
     }

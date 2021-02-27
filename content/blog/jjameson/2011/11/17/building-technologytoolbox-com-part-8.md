@@ -332,7 +332,7 @@ function Main(
     }
 
     $siteUrl = [System.Uri] $env:CAELUM_URL
-    
+
     Write-Debug "Absolute URL: $($siteUrl.AbsoluteUri)"
 
     If (($($siteUrl.AbsoluteUri) -eq "http://www-local.technologytoolbox.com/") `
@@ -343,7 +343,7 @@ function Main(
             Write-Host "Defaulting to latest build for Caelum...`r`n"
             $caelumVersion = "_latest"
         }
-        
+
         If ([string]::IsNullOrEmpty($subtextVersion) -eq $true)
         {
             Write-Host "Defaulting to latest build for Subtext...`r`n"

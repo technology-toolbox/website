@@ -45,7 +45,7 @@ In short (and with no error handling), use something like the following to creat
 ```
 $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
     -namespace "root\virtualization"
-    
+
 $vhdService.CreateDynamicVirtualHardDisk(
     "C:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
     200MB)

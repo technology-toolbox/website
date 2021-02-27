@@ -29,13 +29,13 @@ My initial attempt was to specify something like :
     AutoGenerateColumns="False"
     ...>
     ...
-    <Columns>        
+    <Columns>
         <asp:HyperLinkField DataNavigateUrlFields="Id"
            DataNavigateUrlFormatString="javascript:ShowItemDetail({0})"
            DataTextField="CreateTime"
            DataTextFormatString="{0:ddd MMM dd HH:mm}"
            HeaderStyle-CssClass="dateColumn"
-           HeaderText="Date" />  
+           HeaderText="Date" />
        ...
     </Columns>
 </asp:GridView>
@@ -89,9 +89,9 @@ Or, if you are really paranoid about the performance impact of using reflection 
       <%-- HACK: Ideally, we would just use an asp:HyperLinkField,
       but there's a bug when specifying "javascript:" in the
       DataNavigateUrlFormatString:
-        
+
       https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=102300
-        
+
       As a workaround, use a TemplateField instead.
       --%>
       <asp:TemplateField>

@@ -100,14 +100,14 @@ To understand how the 960 Grid System is used on our SharePoint site, consider t
                     Generally speaking, style attributes should be avoided in
                     HTML. Styling should instead be applied exclusively through
                     CSS.
-                   
+
                     However the SharePoint SiteActionMenu control emits HTML
                     similar to the following:
-                   
+
                         <table height="100%" class="ms-siteaction" ...>
                             ...
                         </table>
-                   
+
                     When CSS is disabled, the height of the SiteActionMenu is
                     ridiculous (which makes it more difficult to troubleshoot
                     other styling issues). Consequently, limit the height of the
@@ -390,7 +390,7 @@ While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most
 /* =core (SharePoint core.css overrides)
 ------------------------------------------------------------------------------*/
 .ms-pagebreadcrumb {
-    border: 0;    
+    border: 0;
 }
 .ms-pagebreadcrumb a {
     background-color: inherit;

@@ -179,7 +179,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
     internal sealed class CaptchaConfiguration
     {
         public const string CaptchaKey = "s3capcha";
-                
+
         public string Message { get; private set; }
         public string IconFolder { get; private set; }
         public string IconFileExtension { get; private set; }
@@ -426,7 +426,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
                 {
                     string formValue =
                         Request.Form[CaptchaConfiguration.CaptchaKey];
-                    
+
                     int numericValue = 0;
 
                     bool success = int.TryParse(
@@ -457,7 +457,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
         private void BindCaptchaControl()
         {
             string basePath = ResolveClientUrl("~/Controls/Captcha");
-            
+
             List<int> values = new List<int>();
             for (int i = 0; i < config.IconNames.Count; i++)
             {
@@ -502,14 +502,14 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
                     config.Width,
                     config.Height);
             }
-            
+
             buffer.Append("<div style=\"clear:left\"></div></div>");
 
             CaptchaPlaceholder.Text = buffer.ToString();
 
             HttpCookie cookie = new HttpCookie(CaptchaConfiguration.CaptchaKey);
             cookie.Value = GetHashedCaptchaValue(randomValues[randomIndex]);
-            
+
             Response.SetCookie(cookie);
         }
 
@@ -553,7 +553,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
 
             return output;
         }
-        
+
         protected void ValidateCaptchaControl(
             object source,
             ServerValidateEventArgs e)

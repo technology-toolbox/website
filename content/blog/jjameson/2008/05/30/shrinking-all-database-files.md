@@ -50,7 +50,7 @@ FROM #CommandQueue
 WHILE @id IS NOT NULL
 BEGIN
     DECLARE @sqlStatement VARCHAR(1000)
-    
+
     SELECT
         @sqlStatement = SqlStatement
     FROM
