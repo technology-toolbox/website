@@ -34,7 +34,7 @@ The primary goals of the logging feature are:
   (e.g. errors, warnings, information) with minimal custom code.
 - Ensure log messages can be enabled in all environments (e.g. DEV, TEST,
   and PROD); in other words, in both Debug and Release builds (unlike the
-  `Debug.WriteLine` method, which relies on the DEBUG conditional compilation
+  ` Debug.WriteLine` method, which relies on the DEBUG conditional compilation
   constant).
 - Through configuration, enable log messages to be routed to various outputs
   such as a text file, the Windows Event Log, or

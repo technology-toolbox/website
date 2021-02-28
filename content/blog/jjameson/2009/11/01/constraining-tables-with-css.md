@@ -152,7 +152,7 @@ table.constrainedTable td {
 
 Changing the `table-layout` to `fixed` constrains the table to the         specified width. Since I don't specify a width for the `notesColumn` it consumes the remaining width of the table.
 
-Next, I specify that all cells in the constrained table should truncate the text         within each cell if it is too wide to fit within the width of the column. This is         achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally,         I use the `text-overflow` CSS property to show ellipsis when text within         a cell is clipped (as well as a slight variation for the Opera browser).
+Next, I specify that all cells in the constrained table should truncate the text         within each cell if it is too wide to fit within the width of the column. This is         achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally,         I use the ` text-overflow` CSS property to show ellipsis when text within         a cell is clipped (as well as a slight variation for the Opera browser).
 
 > **Note**
 >

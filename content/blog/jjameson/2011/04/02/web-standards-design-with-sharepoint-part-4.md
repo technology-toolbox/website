@@ -135,7 +135,7 @@ align="absmiddle" border="0" runat="server" />
 </div>
 ```
 
-Note that since I decided to remove the Search box for the sake of simplifying this         sample, I had to add a corresponding `ContentPlaceHolder` control to the hidden `Panel` near the bottom         of the page:
+Note that since I decided to remove the Search box for the sake of simplifying this         sample, I had to add a corresponding `ContentPlaceHolder `control to the hidden `Panel `near the bottom         of the page:
 
 ```
 <asp:Panel Visible="false" runat="server">
@@ -229,13 +229,13 @@ Yes, eventually we will want the global navigation to be dynamically generated f
 
 If you are wondering why I moved the masthead into the `<div id="s4-workspace">` element, it's because         I chose to maintain the scrolling behavior of the Tugboat site for anonymous users.         [I actually created an alternate master page to demonstrate different scrolling         behavior (essentially fixing the masthead in place even when scrolling down the         page). I might get around to covering that in a different blog post.]
 
-You might also have noticed that I made a few minor tweaks to the HTML provided         by the designer (specifically making the Tugboat logo link to the home page and         wrapping the global navigation in the `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation">` control). These changes make the master page content         more "SharePoint-like" without sacrificing the clean, semantic HTML and Web standards         layout.
+You might also have noticed that I made a few minor tweaks to the HTML provided         by the designer (specifically making the Tugboat logo link to the home page and         wrapping the global navigation in the `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation"> `control). These changes make the master page content         more "SharePoint-like" without sacrificing the clean, semantic HTML and Web standards         layout.
 
 At this point, we at least have a site that isn't "hard on the eyes" or potentially         offensive to our client (since we are no longer showing the "white-on-light" Adventure         Works logo at the top of the Tugboat site).
 
 Now let's get rid of the **Tugboat Coffee**, **Home**, and **Press Releases** content on the left side of the page.
 
-This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">`         , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" />` and `<div id="s4-leftpanel">`)         and consequently adding some more hidden `ContentPlaceHolder` controls at the bottom of the page:
+This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">`         , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" /> ` and `<div id="s4-leftpanel">`)         and consequently adding some more hidden `ContentPlaceHolder `controls at the bottom of the page:
 
 ```
 <asp:Panel Visible="false" runat="server">
@@ -477,7 +477,7 @@ div.more-btn a:link, div.more-btn a:visited {
 
 > **Note**
 >
-> I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap">` element but then realized I couldn't easily fix the color of the "News Archives"
+> I originally attempted to fix the "bold ribbon links" bug by qualifying on the `<div id="wrap"> ` element but then realized I couldn't easily fix the color of the "News Archives"
 > button.
 
 The only other tweak that I made to the Tugboat master page was to move the page         status bar above the masthead. In my opinion, this provides a better user experience         for content authors.

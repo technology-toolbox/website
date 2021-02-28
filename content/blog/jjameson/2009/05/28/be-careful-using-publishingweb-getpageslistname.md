@@ -22,7 +22,7 @@ A couple of years ago when we began evaluating Language Packs for Microsoft Offi
 
 For example, after installing the Spanish Language Pack, if you had any code  that referred to something like "/en-US/Products/Pages/default.aspx" then you would  soon find that your code could break when referring to the equivalent page on a  localized site. For example, on a Spanish site, the equivalent URL would be "/es-ES/Products/*Paginas*/default.aspx"  (assuming you chose not to translate "Products" when creating the Spanish site).
 
-Fortunately, the SharePoint API provides the `PublishingWeb.GetPagesListName` method. In the following code sample,  note how I use this method to avoid hard-coding the name of the **Pages** library:
+Fortunately, the SharePoint API provides the ` PublishingWeb.GetPagesListName` method. In the following code sample,  note how I use this method to avoid hard-coding the name of the **Pages** library:
 
 ```
         private static string GetDefaultSearchResultsPageUrl(
@@ -62,7 +62,7 @@ public SPList this [string strListName] { get; }
 
 This appeared to work during his unit testing and so he checked in his changes.  The problem is that this doesn't work in all cases (meaning for all Language Packs).
 
-If you look at the documentation for the `PublishingWeb.GetPagesListName` method, you will see that it states the  method returns the "*URL* name of the pages list" (emphasis mine) -- which,  in most cases, is the same as the "name of the pages list."
+If you look at the documentation for the ` PublishingWeb.GetPagesListName` method, you will see that it states the  method returns the "*URL* name of the pages list" (emphasis mine) -- which,  in most cases, is the same as the "name of the pages list."
 
 Unfortunately, for certain Language Packs the "URL name" is different from the  list "name." For example, in Chinese the URL name is "Pages" but the list name is  "页面".
 

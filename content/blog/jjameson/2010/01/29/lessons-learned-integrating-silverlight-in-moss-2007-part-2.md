@@ -72,7 +72,7 @@ HTTP 304 (Not Modified) response. Likewise, you really don't want them requestin
 your Silverlight XAP file on every request.
 
 Fortunately, there's an easy way to specify the *version*of a file in the URL using the (rather poorly documented)
-`SPUtility.MakeBrowserCacheSafeLayoutsUrl` method. This method actually
+` SPUtility.MakeBrowserCacheSafeLayoutsUrl` method. This method actually
 specifies a hash of the file -- not a version -- but you get the point. This
 is covered in more detail in
 [one of Stefan Goßner's blog posts](http://blogs.technet.com/stefan_gossner/archive/2009/04/08/how-to-create-a-browser-cache-save-url-to-a-javascript-or-css-file-in-sharepoint.aspx).
@@ -191,7 +191,7 @@ locally on our SharePoint servers (deployed via **Fabrikam.Portal.Web.wsp**):
     </object>
 ```
 
-In hindsight, I suppose for consistency we could have used the `SPUtility.MakeBrowserCacheSafeLayoutsUrl` method for the "Get Microsoft
+In hindsight, I suppose for consistency we could have used the ` SPUtility.MakeBrowserCacheSafeLayoutsUrl` method for the "Get Microsoft
 Silverlight" image, but honestly, I don't think there is sufficient justification
 in this scenario.
 

@@ -165,7 +165,7 @@ we first need to get the list of folders containing the test assemblies:
     $testBinFolders = GetAssemblyFolders($testAssemblies)
 ```
 
-The `GetAssemblyFolders` function is straightforward:
+The `GetAssemblyFolders `function is straightforward:
 
 ```
 function GetAssemblyFolders(
