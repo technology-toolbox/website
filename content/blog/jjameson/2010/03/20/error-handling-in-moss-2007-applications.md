@@ -115,13 +115,13 @@ So, how can we provide a better user experience?
 
 Well, we could certainly add try/catch blocks throughout our solution and try  to handle various exceptions in our custom code as gracefully as possible. However,  that's problematic and it is unlikely to handle all of the possible scenarios.
 
-If our solution were simply built on top of ASP.NET -- instead of SharePoint  -- we could simply create an error page and use the `<customErrors>`element in the Web.config file:
+If our solution were simply built on top of ASP.NET -- instead of SharePoint  -- we could simply create an error page and use the `<customErrors>` element in the Web.config file:
 
 ```
     <customErrors defaultRedirect="/Error.aspx" mode="On" />
 ```
 
-However, that doesn't work in SharePoint applications, because SharePoint has  its own error handling infrastructure that overrides any error page specified in  the `<customErrors>`element.
+However, that doesn't work in SharePoint applications, because SharePoint has  its own error handling infrastructure that overrides any error page specified in  the `<customErrors>` element.
 
 I've seen some blog posts that advocate using a custom **HttpModule**  to override the OOTB error handling in SharePoint. While that certainly works, I'm  not a fan of that approach, because it feels like using a 3-lb. sledge hammer to  assemble a fine piece of furniture (meaning that you can make it work, but you might  very well break something in the process).
 
