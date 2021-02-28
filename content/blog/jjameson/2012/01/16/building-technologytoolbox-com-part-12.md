@@ -97,7 +97,7 @@ grouping posts by year/month into the equivalent LINQ query against the data
 model. This is what I ended up:
 
 ```
-var q = from entry in context.Entries
+    var q = from entry in context.Entries
             group entry by entry.DateSyndicated.Value.Year
                 into YearGroups
             orderby YearGroups.Key descending
@@ -205,7 +205,7 @@ I added the code to generate the series of nested lists for each year/month
 in the query results:
 
 ```
-protected override void OnPreRender(
+        protected override void OnPreRender(
             EventArgs e)
         {
             base.OnPreRender(e);
@@ -271,7 +271,7 @@ protected override void OnPreRender(
 The **GetMonthName** method is, as expected, rather trivial:
 
 ```
-private static string GetMonthName(
+        private static string GetMonthName(
             int month)
         {
             DateTime date = new DateTime(2011, month, 1);

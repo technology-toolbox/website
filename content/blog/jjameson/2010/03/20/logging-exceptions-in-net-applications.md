@@ -91,7 +91,7 @@ This makes perfect sense when you think about it because when you start investig
 In order to log exceptions, I added two new overloads for the **LogError**         method:
 
 ```
-/// <summary>
+        /// <summary>
         /// Logs the specified exception to the trace listeners.
         /// </summary>
         /// <param name="ex">The exception to log.</param>

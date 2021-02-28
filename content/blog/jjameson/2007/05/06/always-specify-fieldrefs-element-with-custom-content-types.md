@@ -25,7 +25,7 @@ The problem was that the document properties form no longer rendered for our  cu
 It turns out that when I "rebuilt" our ContentTypes.xml file to include all of  our final content types, I omitted the empty `<FieldRefs>`  elements that had previously been there. For example:
 
 ```
-<ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
+  <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
     Name="Brochure"
     Description=""
     Group="Fabrikam Content Types"
@@ -36,7 +36,7 @@ It turns out that when I "rebuilt" our ContentTypes.xml file to include all of  
 instead of
 
 ```
-<ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
+  <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
     Name="Brochure"
     Description=""
     Group="Fabrikam Content Types"

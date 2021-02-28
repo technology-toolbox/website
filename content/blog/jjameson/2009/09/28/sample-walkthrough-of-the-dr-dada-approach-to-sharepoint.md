@@ -294,7 +294,7 @@ in an
 that invokes makecab.exe and adding this new target as a dependency of the build:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);
       CreateSharePointSolutionPackage
@@ -332,6 +332,7 @@ variables.) Next, I change to the **Publishing\DeploymentFiles\Scripts** folder 
 
 ```
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
+
 ```
 
 C:\Windows\system32&gt;{{< kbd "set FABRIKAM_FABWEB_URL=http://fabweb-local" >}}

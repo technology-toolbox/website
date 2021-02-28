@@ -204,7 +204,8 @@ and then running the scheduled task results in the following Temp.log file:
 {{< log-excerpt >}}
 
 ```
-Directory: C:\Users\jjameson\AppData\Local\Temp
+
+    Directory: C:\Users\jjameson\AppData\Local\Temp
 
 
 Mode                LastWriteTime     Length Name

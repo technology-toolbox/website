@@ -98,11 +98,11 @@ Even better, you can easily create your own custom rule set that specifies *all*
 ```
 
 ```
-Description="Custom rule set for the TechnologyToolbox.Caelum solution."
+  Description="Custom rule set for the TechnologyToolbox.Caelum solution."
 ```
 
 ```
-ToolsVersion="10.0">
+  ToolsVersion="10.0">
   <IncludeAll Action="Error" />
 </RuleSet>
 ```

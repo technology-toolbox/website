@@ -175,7 +175,7 @@ I then updated the **AnalyticsScript** control to compare the
 URL of the current request with the filter specified in configuration:
 
 ```
-protected override void OnLoad(
+        protected override void OnLoad(
             EventArgs e)
         {
             base.OnLoad(e);

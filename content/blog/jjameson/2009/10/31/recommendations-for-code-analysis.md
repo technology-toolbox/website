@@ -28,7 +28,7 @@ Yes, this is going to be really painful for some developers.
 For example, you can say goodbye to using the overload of string.Format() that doesn't specify a CultureInfo:
 
 ```
-string foo = "here";
+            string foo = "here";
 
             string logMessage = string.Format(
                 "Imagine something interesting {0}.",
@@ -46,7 +46,7 @@ Error 2 CA1305 : Microsoft.Globalization : Because the behavior of 'string.Forma
 To avoid the CA1305 error, you will need to use something like this instead:
 
 ```
-string foo = "here";
+            string foo = "here";
 
             string logMessage = string.Format(
                 CultureInfo.InvariantCulture,
@@ -73,7 +73,7 @@ Note that you will undoubtedly need to [suppress some specific Code Analysis war
 So, in conclusion, think of the Code Analysis feature in Visual Studio as a way of *choosing* a more strict compiler. For example, back in the days when I used to program in C on Unix, the compiler wouldn't complain when I wrote something like this (even though this is obviously very wrong):
 
 ```
-if (i = 1)
+            if (i = 1)
             {
                 ...
             }

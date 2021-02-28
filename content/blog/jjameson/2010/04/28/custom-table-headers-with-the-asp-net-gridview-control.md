@@ -226,7 +226,7 @@ Running the Web application at this point renders a simple table similar to the 
 Let's start customizing the header by replacing the lengthy column headings for  the KPI thresholds with corresponding icons. This is easily achieved using a little  bit of code in the **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)** event:
 
 ```
-protected void ScorecardDetailView_RowCreated(
+        protected void ScorecardDetailView_RowCreated(
             object sender,
             GridViewRowEventArgs e)
         {
@@ -275,7 +275,7 @@ Running the Web application at this point shows the images in place of the lengt
 Now let's add a method to insert another row into the table rendered by the GridView  control:
 
 ```
-private static void AddThresholdsHeaderRow(
+        private static void AddThresholdsHeaderRow(
             GridView scorecardDetailView)
         {
             Debug.Assert(scorecardDetailView != null);
@@ -326,7 +326,7 @@ private static void AddThresholdsHeaderRow(
 Of course, we obviously need to call this method, so let's modify the **UpdateScorecardDetailView** method to add the thresholds header row after  binding the GridView control:
 
 ```
-private void UpdateScorecardDetailView()
+        private void UpdateScorecardDetailView()
         {
             using (DataTable detailTable = GetScorecardDetailTable())
             {
@@ -356,7 +356,7 @@ Running the Web application at this point shows the **Thresholds**  header above
 Looking at the HTML source, we can see the extra table row has been inserted,  and the `rowspan` and `colspan` attributes are being rendered  as expected.
 
 ```
-<table style="border-collapse: collapse"
+    <table style="border-collapse: collapse"
         id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
         cellspacing="0">
         <tbody>
@@ -415,7 +415,7 @@ Notice that we no longer see the **Thresholds** header in the table.  This is be
 My initial attempt at fixing this bug was to call the **AddThresholdsHeaderRow** method in the PreRenderComplete phase of the page instead of from the **UpdateScorecardDetailView** method (to force the header row to be  added regardless of whether we are binding the GridView to a data source or rendering  it from view state):
 
 ```
-protected void Page_Load(
+        protected void Page_Load(
             object sender,
             EventArgs e)
         {
@@ -449,7 +449,7 @@ To resolve this bug, we need to find a way to avoid corrupting the view state  o
 It turns out this is really easy. Instead of adding the header row during the  PreRenderComplete phase of the page, let's instead call the **AddThresholdsHeaderRow** method in the SaveStateComplete phase:
 
 ```
-protected void Page_Load(
+        protected void Page_Load(
                     object sender,
                     EventArgs e)
         {

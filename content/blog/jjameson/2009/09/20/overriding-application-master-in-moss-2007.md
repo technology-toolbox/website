@@ -183,7 +183,7 @@ To configure the custom HttpHandler for application pages (a.k.a. \_layouts page
 Simply comment out the default PageHandlerFactory and add the custom ApplicationPageHandlerFactory:
 
 ```
-<httpHandlers>
+    <httpHandlers>
       <!--
       <add verb="*" path="*.aspx"
         type="System.Web.UI.PageHandlerFactory, System.Web,

@@ -75,13 +75,13 @@ Unfortunately, there's no out-of-the-box task in the current version of MSBuild 
 After downloading and installing the custom tasks, import them into your TFSBuild.proj  file by adding the following line just below the `<Project>`  element:
 
 ```
-<Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
 ```
 
 Note that there may be times when we want to build the solution without incrementing  the assembly version; for example, to test changes to TFSBuild.proj on a local development  environment (as opposed to checking in the changes and "testing" the changes on  the build server). Therefore, let's allow a custom property to be specified that  will skip the process of incrementing the assembly version. Inside the `<PropertyGroup>` element, add the following:
 
 ```
-<!-- Set this property to true to build without incrementing the assembly version. -->
+    <!-- Set this property to true to build without incrementing the assembly version. -->
     <SkipIncrementAssemblyVersion
       Condition=" '$(SkipIncrementAssemblyVersion)' == '' " >false</SkipIncrementAssemblyVersion>
 ```
@@ -97,7 +97,7 @@ msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
 Next, add a property so that we can use the TFS command-line utility to checkout  the assembly version files and subsequently check them back in:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
   </PropertyGroup>
 ```
@@ -111,7 +111,7 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 > instead:
 >
 > ```
-> <PropertyGroup>
+>   <PropertyGroup>
 >     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
 >   </PropertyGroup>
 > ```
@@ -130,7 +130,7 @@ However, when performing a Team Build (i.e. when a build is queued or scheduled 
 Consequently, define a new property (**SolutionWorkingDirectory**)  and condititionally set it to the expected location:
 
 ```
-<!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
+  <!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
   significantly between desktop builds and builds started using Team
   Foundation Build (in other words, builds queued on TFS build agents).
 
@@ -159,7 +159,7 @@ Consequently, define a new property (**SolutionWorkingDirectory**)  and conditit
 Next, override the **AfterGet** target to checkout the version files  from TFS, and subsequently update the assembly version:
 
 ```
-<Target Name="AfterGet">
+  <Target Name="AfterGet">
     <CallTarget Targets="CheckOutVersionFilesFromSourceControl"/>
     <CallTarget Targets="UpdateVersionFilesInSourceControl"/>
   </Target>
@@ -168,7 +168,7 @@ Next, override the **AfterGet** target to checkout the version files  from TFS, 
 Here is the custom target to checkout the version files. Note that this target  is skipped if the **SkipIncrementAssemblyVersion** property is set  to true.
 
 ```
-<Target Name="CheckOutVersionFilesFromSourceControl"
+  <Target Name="CheckOutVersionFilesFromSourceControl"
     Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
     <Message Importance="high"
       Text="Checking out version files from source control..." />
@@ -213,7 +213,7 @@ using System.Runtime.InteropServices;
 Here is the custom target to update the version files in TFS. Like the `CheckOutVersionFilesFromSourceControl`  target, the `UpdateVersionFilesInSourceControl`  target is skipped if the **SkipIncrementAssemblyVersion** property  is set to true.
 
 ```
-<Target Name="UpdateVersionFilesInSourceControl"
+  <Target Name="UpdateVersionFilesInSourceControl"
     Condition=" '$(SkipIncrementAssemblyVersion)' != 'true' ">
     <Message Importance="high"
       Text="Updating version files in source control..." />
@@ -246,7 +246,7 @@ Note that for a Team Build, we need to copy the AssemblyVersionInfo.txt file  fr
 Finally, use the **BuildNumberOverrideTarget** and a custom target  to actually increment the assembly version using the custom Version task and set  the **BuildNumber** property accordingly. Note that if **SkipIncrementAssemblyVersion**  is set to true, the assembly version is not incremented and the **BuildNumber** property is set to whatever is currently specified in AssemblyVersionInfo.txt.
 
 ```
-<Target Name="BuildNumberOverrideTarget">
+  <Target Name="BuildNumberOverrideTarget">
     <CallTarget Targets="SetBuildNumber"/>
   </Target>
 

@@ -28,7 +28,7 @@ All you need to do is simply set the master page during the PreInit phase of  th
 This is precisely what I developed my custom `SharePointPage` base  class for:
 
 ```
-/// <summary>
+    /// <summary>
     /// Base class for ASP.NET pages that run under the context of a SharePoint
     /// site (e.g. /en-US/Search/Library/_layouts/PublicationSummary.aspx).
     /// </summary>
@@ -70,7 +70,7 @@ This is precisely what I developed my custom `SharePointPage` base  class for:
 To see a real-world example of this in action, simply browse to [one of the "publication summary" pages](http://www.chem.agilent.com/en-US/Search/Library/_layouts/Agilent/PublicationSummary.aspx?whid=37419&liid=204) on the Agilent Technologies [LSCA site](http://www.chem.agilent.com/) (try searching for **6850**, filtering the search results to **Library**, and then  clicking one of the search results). Note that the `PublicationSummary`  page class inherits from the `SharePointPage` base class.
 
 ```
-public partial class PublicationSummary : SharePointPage,
+    public partial class PublicationSummary : SharePointPage,
         IView<PrimaryDocumentData.PrimaryDocumentRow>
     {
         ...

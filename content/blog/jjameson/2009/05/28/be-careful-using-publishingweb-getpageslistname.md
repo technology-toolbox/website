@@ -25,7 +25,7 @@ For example, after installing the Spanish Language Pack, if you had any code  th
 Fortunately, the SharePoint API provides the `PublishingWeb.GetPagesListName` method. In the following code sample,  note how I use this method to avoid hard-coding the name of the **Pages** library:
 
 ```
-private static string GetDefaultSearchResultsPageUrl(
+        private static string GetDefaultSearchResultsPageUrl(
             SPWeb searchWeb)
         {
             Debug.Assert(searchWeb != null);

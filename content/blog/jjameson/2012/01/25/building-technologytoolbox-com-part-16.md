@@ -113,7 +113,7 @@ image. For example, here is the configuration file currently used for Technology
 In Mahdi's code, the configuration file is read using the **LoadConfig** method in his **s3capcha** helper class:
 
 ```
-private static bool LoadConfig()
+    private static bool LoadConfig()
     {
         string FilePath = "~/s3capcha/config.xml";
         FilePath = HttpContext.Current.Server.MapPath(FilePath);
@@ -130,7 +130,7 @@ private static bool LoadConfig()
 HTML for the CAPTCHA control:
 
 ```
-public static string GetHtmlCodes(string PathTo, out int SessionValue)
+    public static string GetHtmlCodes(string PathTo, out int SessionValue)
     {
         bool HasValue = false;
         if (string.IsNullOrEmpty(Message))
@@ -268,7 +268,7 @@ Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
 
 ```
-CaptchaConfiguration.Instance.Message
+    CaptchaConfiguration.Instance.Message
 ```
 
 The other issue that I found with Mahdi's implementation is that it doesn't

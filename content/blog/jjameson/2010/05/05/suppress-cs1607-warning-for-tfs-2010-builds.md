@@ -41,7 +41,7 @@ Consequently, I created a new platform (x86) and changed the solution to compile
 I even tried changing one of the "problem" assemblies to specify a fully-qualified assembly name (including the processor architecture), like this...
 
 ```
-<Reference Include="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, ProcessorArchitecture=x86" />
+    <Reference Include="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, ProcessorArchitecture=x86" />
 ```
 
 ...but that didn't work either.
@@ -49,13 +49,13 @@ I even tried changing one of the "problem" assemblies to specify a fully-qualifi
 I ended resolving the issue by keeping **Treat warnings as errors** set to **All**, but adding the following to the project file:
 
 ```
-<WarningsNotAsErrors>1607</WarningsNotAsErrors>
+    <WarningsNotAsErrors>1607</WarningsNotAsErrors>
 ```
 
 I pasted this immediately below the following elements (for the Debug|x86 and Release|x86 configurations):
 
 ```
-<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 ```
 
 Note that Visual Studio complains a little that `<WarningsNotAsErrors>` is not an expected element according the schema, but I can assure this is, in fact, a [valid option for the C# compiler](http://msdn.microsoft.com/en-us/library/microsoft.build.tasks.csc.warningsnotaserrors.aspx), and the project subsequently builds just fine.

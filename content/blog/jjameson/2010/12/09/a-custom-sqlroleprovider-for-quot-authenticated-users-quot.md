@@ -46,7 +46,7 @@ Fortunately, the ASP.NET **SqlRoleProvider** is not marked as `sealed` and there
 I started by overriding the **RoleExists** method:
 
 ```
-public override bool RoleExists(
+        public override bool RoleExists(
             string roleName)
         {
             if (string.Compare(
@@ -66,7 +66,7 @@ As you can see, this simply checks if the "Authenticated Users" role was specifi
 Next, I proceeded to override the **IsUserInRole** method:
 
 ```
-public override bool IsUserInRole(
+        public override bool IsUserInRole(
             string username,
             string roleName)
         {
@@ -89,7 +89,7 @@ The reality is that the **IsUserInRole** method will never get called  with an i
 I then moved on to something slightly more challenging - implementing the **GetRolesForUser** method:
 
 ```
-public override string[] GetRolesForUser(
+        public override string[] GetRolesForUser(
             string username)
         {
             string[] sqlRoles = base.GetRolesForUser(username);
@@ -105,7 +105,7 @@ As you can see, I'm simply augmenting the list of roles specified for the user  
 As I mentioned before, we were previously using the **SqlRoleProvider**  and thus the **Authenticated Users** role had already been added to  the database. Even though I added a section to the v2.0 installation guide to explicitly  delete the **Authenticated Users** role prior to upgrading, I still  thought it wise to avoid "blindly" adding the **Authenticated Users**  role to the list of roles returned from the database (potentially adding a duplicate).  Consequently, in the helper method I check to see if the role is already specified  before prepending it to the list:
 
 ```
-private static string[] AddAuthenticatedUsersRole(
+        private static string[] AddAuthenticatedUsersRole(
             string[] sqlRoles)
         {
             Debug.Assert(sqlRoles != null);

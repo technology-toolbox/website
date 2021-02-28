@@ -36,7 +36,7 @@ I also mentioned that the user control originally contained the following
 code:
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="100%" height="100%">
         <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
         <param name="onError" value="onSilverlightError" />
@@ -82,7 +82,7 @@ XAP file, I modified the user control that hosts the Silverlight application
 as follows:
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="380px" height="410px" onFocus="this.style.outline='none';">
         <param name="source" value="<%= serviceWheelPackageUrl %>" />
         ...
@@ -93,7 +93,7 @@ The `serviceWheelPackageUrl` variable is defined and set in the
 code-behind for the ASCX file:
 
 ```
-public partial class ServiceWheel : System.Web.UI.UserControl
+    public partial class ServiceWheel : System.Web.UI.UserControl
     {
         protected string serviceWheelPackageUrl;
 
@@ -132,7 +132,7 @@ this post reasonably short, I'll only cover two of them here.
 The second problem is a rather obscure issue in the `<img>` element:
 
 ```
-<a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
             <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
                 style="border-style: none" />
         </a>
@@ -181,7 +181,7 @@ warnings in Firefox), we decided to simply host the InstallSilverlight.png image
 locally on our SharePoint servers (deployed via **Fabrikam.Portal.Web.wsp**):
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="380px" height="410px" onFocus="this.style.outline='none';">
         ...
         <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">

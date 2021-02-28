@@ -118,7 +118,7 @@ Well, we could certainly add try/catch blocks throughout our solution and try  t
 If our solution were simply built on top of ASP.NET -- instead of SharePoint  -- we could simply create an error page and use the `<customErrors>`element in the Web.config file:
 
 ```
-<customErrors defaultRedirect="/Error.aspx" mode="On" />
+    <customErrors defaultRedirect="/Error.aspx" mode="On" />
 ```
 
 However, that doesn't work in SharePoint applications, because SharePoint has  its own error handling infrastructure that overrides any error page specified in  the `<customErrors>`element.
@@ -346,7 +346,7 @@ Let's assume that whenever an error occurs within our custom code, we want the  
 To demonstrate this, I'll add the following section to the Web.config file for  the **Internet** zone of my sample Fabrikam site (which I've configured  for Forms-Based Authentication and anonymous access):
 
 ```
-<system.diagnostics>
+  <system.diagnostics>
     <sources>
       <source name="defaultTraceSource" switchName="allTraceLevel">
         <listeners>
@@ -420,7 +420,7 @@ Consequently, we need to first create the event source that we want to use.
 Unfortunately, I'm not aware of any way to do this using OOTB functionality (e.g.  from the Event Viewer console). Fortunately, it takes only a tiny bit of custom  code to create the event source (assuming you have permissions to do so):
 
 ```
-private static string AddEventLogSource(
+        private static string AddEventLogSource(
             string source)
         {
             Debug.Assert(string.IsNullOrEmpty(source) == false);
@@ -1050,7 +1050,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 Now, we can simply replace **System.Diagnostics.EventLogTraceListener**  with the custom **Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener**  in the Web.config file:
 
 ```
-<system.diagnostics>
+  <system.diagnostics>
     <sources>
       <source name="defaultTraceSource" switchName="allTraceLevel">
         <listeners>

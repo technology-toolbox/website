@@ -180,7 +180,7 @@ Before we can import the navigation nodes, we need to tweak the XML slightly  to
 However, for consistency with new TFS 2010 project sites (in terms of navigation),  we'll keep the title of the quick launch navigation node as "Calendar" and simply  refer to the **Calendar** view of the **Event** list:
 
 ```
-<NavigationNode
+    <NavigationNode
       title="Calendar"
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
 ```
@@ -188,7 +188,7 @@ However, for consistency with new TFS 2010 project sites (in terms of navigation
 We also need to add nodes for the existing document libraries (e.g. **Development**)  under the new **Libraries** heading:
 
 ```
-<NavigationNode
+    <NavigationNode
       title="Development"
       url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
     <NavigationNode

@@ -219,7 +219,7 @@ As mentioned in step 9, the process of configuring FBA on the Fabrikam site is  
 Or, for those of you that prefer to read code instead...
 
 ```
-string databaseServer = webApp.ContentDatabases[0].Server;
+         string databaseServer = webApp.ContentDatabases[0].Server;
          AddConnectionStringWebConfigModifications(webApp, databaseServer);
 
          AddAuthenticationWebConfigModifications(webApp);
@@ -243,7 +243,7 @@ Let's peek under the covers of each these helper methods...
 The **AddConnectionStringWebConfigModifications** method adds the  following elements to the Web.config files:
 
 ```
-<connectionStrings>
+  <connectionStrings>
     <add name="FabrikamDemo"
       connectionString="Server={databaseServer};
 Database=FabrikamDemo;
@@ -258,7 +258,7 @@ The **FabrikamDemo** database contains the tables and stored procedures  used by
 The **AddAuthenticationWebConfigModifications** method adds the  following elements to the Web.config files:
 
 ```
-<authentication mode="{Windows|Forms}">
+    <authentication mode="{Windows|Forms}">
       <forms
         defaultUrl="/"
         timeout="60" />
@@ -272,7 +272,7 @@ Note that SharePoint automatically sets the `mode` attribute correctly in the tw
 The **AddMembershipWebConfigModifications** method adds the following  elements to the Web.config files:
 
 ```
-<membership defaultProvider="FabrikamSqlMembershipProvider">
+    <membership defaultProvider="FabrikamSqlMembershipProvider">
       <providers>
         <clear />
         <add name="FabrikamSqlMembershipProvider"
@@ -296,7 +296,7 @@ Note that the collection of membership providers is cleared in the Web.config  f
 The **AddRoleManagerWebConfigModifications** method adds the following  elements to the Web.config files:
 
 ```
-<roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
+    <roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
       <providers>
         <remove name="AspNetSqlRoleProvider" />
         <add name="FabrikamSqlRoleProvider"
@@ -319,7 +319,7 @@ After "queuing up" our Web.config modifications (using **[SPWebConfigModificatio
 Most of the work in enabling anonymous access on the top-level site is performed  using a method in the custom **SharePointWebHelper** class. However,  first we must get the root **SPWeb** from the **SPWebApplication**:
 
 ```
-internal static void EnableAnonymousAccessOnRootWeb(
+        internal static void EnableAnonymousAccessOnRootWeb(
             SPWebApplication webApp)
         {
             Debug.Assert(webApp != null);
@@ -334,7 +334,7 @@ internal static void EnableAnonymousAccessOnRootWeb(
 Here's the relevant code from the **SharePointWebHelper** class:
 
 ```
-/// <summary>
+        /// <summary>
         /// Ensures anonymous access is enabled on the specified site.
         /// </summary>
         /// <param name="web">The site on which anonymous access should be

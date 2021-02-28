@@ -77,7 +77,7 @@ then you can simply use the
 [HtmlField.GetFieldValueAsHtml](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fields.htmlfield.getfieldvalueashtml.aspx) method, as shown below:
 
 ```
-HtmlField pageContentField =
+    HtmlField pageContentField =
         (HtmlField) page.Fields[FieldId.PublishingPageContent];
 
     string pageContent = pageContentField.GetFieldValueAsHtml(
@@ -100,7 +100,7 @@ services underlying the presentation layer.]
 The original code looked like this:
 
 ```
-if (pageContent.Contains("__publishingReusableFragment") == true)
+                if (pageContent.Contains("__publishingReusableFragment") == true)
                 {
                     // HACK: We need to "expand" the reusable content in order
                     // to obtain the complete HTML page content. Unfortunately,
@@ -161,7 +161,7 @@ Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper**
 field:
 
 ```
-public static string GetFieldValueAsHtml(
+        public static string GetFieldValueAsHtml(
             SPWeb web,
             object value)
         {
@@ -218,7 +218,7 @@ the **SharePointPublishingHelper** class that determines whether
 or not it is "safe" to use the **HtmlField.GetFieldValueAsHtml** method:
 
 ```
-/// <summary>
+        /// <summary>
         /// Returns the value of the "Page Content" field for the specified page
         /// in HTML format. If the field contains any "reusable content"
         /// placeholders, they are expanded in order to return the HTML just as
@@ -266,7 +266,7 @@ the various unit tests to verify things are working as expected, including the
 following unit test, which demonstrates why you can't use the **HtmlField.GetFieldValueAsHtml** method when SPContext.Current is null:
 
 ```
-/// <summary>
+        /// <summary>
         /// This test simply demonstrates why the out-of-the-box
         /// <see cref="Microsoft.SharePoint.Publishing.Fields.HtmlField.GetFieldValueAsHtml"/>
         /// method cannot be used to "expand" reusable content when

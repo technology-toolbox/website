@@ -1912,7 +1912,7 @@ file:
       add the following elements:
       
       ```
-      <connectionStrings>
+        <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
@@ -2029,7 +2029,7 @@ Extranet Web application:
       add the following elements:
       
       ```
-      <connectionStrings>
+        <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>

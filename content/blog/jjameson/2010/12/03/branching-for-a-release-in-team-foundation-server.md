@@ -160,7 +160,7 @@ To increment the Revision portion of the assembly version on the "Service Pack" 
    as shown below:
    
    ```
-   <Version
+       <Version
          VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
          BuildType="None"
          RevisionType="Increment">

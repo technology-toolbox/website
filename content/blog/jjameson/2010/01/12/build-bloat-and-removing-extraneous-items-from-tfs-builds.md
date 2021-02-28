@@ -53,7 +53,7 @@ When I started investigating the build bloat issue, I quickly discovered that th
 To resolve the build bloat issue, I modified our TFSBuild.proj file to override the `BeforeDropBuild` target:
 
 ```
-<Target Name="BeforeDropBuild">
+  <Target Name="BeforeDropBuild">
     <Message Importance="high"
       Text="Removing extraneous files from the build..." />
 

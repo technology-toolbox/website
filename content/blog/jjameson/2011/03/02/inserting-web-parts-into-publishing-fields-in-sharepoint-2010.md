@@ -30,7 +30,7 @@ Long ago, when I first started programmatically creating Publishing pages in MOS
 Consequently, for SharePoint Server 2010, I added the following method to **SharePointPublishingHelper**:
 
 ```
-public static void InsertWebPartIntoPageContent(
+        public static void InsertWebPartIntoPageContent(
             Part webPart,
             PublishingPage page,
             Guid fieldId,
@@ -154,7 +154,7 @@ If you rip out all of the error handling and logging, you'll see this new method
 Note that I also added an overload for the **InsertWebPartIntoPageContent** method that simply appends the Web Part to the end of the field (rather than replacing some arbitrary placeholder text):
 
 ```
-public static void InsertWebPartIntoPageContent(
+        public static void InsertWebPartIntoPageContent(
             Part webPart,
             PublishingPage page,
             Guid fieldId)
@@ -170,7 +170,7 @@ public static void InsertWebPartIntoPageContent(
 In order to create a new page and add a Web Part at a specific location within the page content, all I need to do is use a little bit of code to create the page, set the default page content, and subsequently replace the placeholder in the page content with the desired Web Part:
 
 ```
-private const string loginFormPlaceholder =
+        private const string loginFormPlaceholder =
             "{TODO: Insert Claims Login Form Web Part here}";
 
         // TODO: Replace embedded CSS layout with custom SharePoint page layout
@@ -227,7 +227,7 @@ private const string loginFormPlaceholder =
 Note that the **ReplacePlaceholderWithLoginWebPart** method simply checks to see if the Web Part placeholder is found in the page content and, if it is, subsequently uses the **SharePointPublishingHelper.InsertWebPartIntoPageContent** method to replace it with an instance of the Web Part:
 
 ```
-private static void ReplacePlaceholderWithLoginWebPart(
+        private static void ReplacePlaceholderWithLoginWebPart(
             PublishingPage page,
             SPWebPartPages.SPLimitedWebPartManager wpm)
         {

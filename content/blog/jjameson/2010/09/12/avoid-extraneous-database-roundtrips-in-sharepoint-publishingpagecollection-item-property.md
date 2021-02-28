@@ -34,7 +34,7 @@ Since I expect to aggregate all of the pages within the site, I use the **[Publi
 Here is the original code I started out with:
 
 ```
-private static void AppendPages(
+        private static void AppendPages(
             SPWeb web,
             TextWriter writer)
         {
@@ -62,7 +62,7 @@ After configuring a trace in SQL Server Profiler (as described in my previous po
 Upon closer inspection, I found that each call to the [PublishingPageCollection.Item(String)](http://msdn.microsoft.com/en-us/library/ms543758%28v=office.12%29.aspx) property resulted in several database calls. Specifically, the following statement results in **four** calls to SQL Server:
 
 ```
-PublishingPage page = pages[pageUrl];
+                PublishingPage page = pages[pageUrl];
 ```
 
 Consequently, I refactored the code a little to see if I could significantly reduce the 432 database roundtrips.
@@ -70,7 +70,7 @@ Consequently, I refactored the code a little to see if I could significantly red
 I found that by replacing the **PublishingPageCollection** indexer with my own (albeit crude) indexer, I could eliminate roughly 200 database roundtrips (from 432 to 244):
 
 ```
-private static PublishingPage GetPublishingPage2(
+        private static PublishingPage GetPublishingPage2(
             PublishingPageCollection pages,
             string pageUrl)
         {
@@ -98,14 +98,14 @@ By the way, if 244 database roundtrips still seems excessive to you, I have to s
 For example, accessing the **[PublishingPage.Layout](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.layout.aspx)** property, as shown below, actually results in two database roundtrips:
 
 ```
-const string expectedPageLayout = "PageFromDocLayout.aspx";
+            const string expectedPageLayout = "PageFromDocLayout.aspx";
 
             if (page.Layout.Name != expectedPageLayout)
             {
 ```
 
 ```
-...
+                ...
             }
 ```
 

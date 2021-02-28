@@ -63,7 +63,7 @@ One of the first issues that I discovered in the Silverlight piece was the way t
 Originally, the user control contained the following code:
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="100%" height="100%">
         <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
         <param name="onError" value="onSilverlightError" />
@@ -94,7 +94,7 @@ The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include 
 ...and the manifest.xml file was updated to deploy the XAP file from the WSP:
 
 ```
-<TemplateFiles>
+  <TemplateFiles>
     ...
     <TemplateFile Location="Layouts\Fabrikam\Wheel.xap" />
   </TemplateFiles>
@@ -123,7 +123,7 @@ In order to resolve the issues around integrating the Silverlight XAP file into 
 - Modified the **Fabrikam.Portal.Web** project (by unloading the project and then editing the MSBuild file directly) to include the following:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <!-- Add the file extension for Silverlight application packages (.xap) to
     the list of extensions that reference resolution considers when looking for
     files related to resolved references (i.e. project references). This ensures

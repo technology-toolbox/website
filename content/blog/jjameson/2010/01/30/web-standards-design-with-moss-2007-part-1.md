@@ -170,7 +170,7 @@ When I attended some training last summer on SharePoint 2010, I remember hearing
 In the MSDN minimal master page sample, the following items immediately follow the `<html>` element:
 
 ```
-<WebPartPages:SPWebPartManager runat="server"/>
+  <WebPartPages:SPWebPartManager runat="server"/>
   <SharePoint:RobotsMetaTag runat="server"/>
 ```
 
@@ -179,13 +179,13 @@ Since the `<html>` element should only contain `<head>` and `<body>` elements, t
 The next important difference between the sample MSDN master page and the one shown above is with regards to the links to CSS files. The MSDN sample only specifies the following:
 
 ```
-<SharePoint:CssLink runat="server"/>
+    <SharePoint:CssLink runat="server"/>
 ```
 
 My master page, however, specifies the following:
 
 ```
-<SharePoint:CssLink runat="server" />
+    <SharePoint:CssLink runat="server" />
     <!--Styles used for positioning, font and spacing definitions-->
     <SharePoint:CssRegistration
         runat="server"
@@ -434,7 +434,7 @@ As noted in the comments above, these CSS rules are used to override rules speci
 Returning to the contents of the master page, the following element is used to encapsulate all of the page content:
 
 ```
-<div class="container_12">
+    <div class="container_12">
 ```
 
 The `container_12` class refers to the 12-column template provided by the 960 Grid System.

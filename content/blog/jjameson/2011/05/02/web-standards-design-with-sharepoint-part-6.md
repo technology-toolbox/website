@@ -132,7 +132,7 @@ While you could create the **Specials** list via a feature using CAML,         I
 Here's the code I wrote to create automatically create and configure the new **Specials** list:
 
 ```
-private static void ConfigureSpecialsList(
+        private static void ConfigureSpecialsList(
             SPWeb web)
         {
             Debug.Assert(web != null);
@@ -213,7 +213,7 @@ private static void ConfigureSpecialsList(
 Note that I use a separate method to configure the default views for the new list:
 
 ```
-private static void ConfigureViewsForSpecialsList(
+        private static void ConfigureViewsForSpecialsList(
             SPList list,
             string[] fields)
         {
@@ -262,7 +262,7 @@ private static void ConfigureViewsForSpecialsList(
 I populate the default list items using a couple of other helper methods (but only         if the list is empty upon activation of the feature -- in order to avoid adding         duplicate items to the list):
 
 ```
-private static void CreateDefaultItemsInSpecialsList(
+        private static void CreateDefaultItemsInSpecialsList(
             SPList list)
         {
             Debug.Assert(list != null);
@@ -324,13 +324,13 @@ There are certainly other ways to avoid adding duplicate items to a list, but th
 In order to add the new **XsltListViewWebPart** to the home page, I         modified the existing **ConfigureHomeSiteDefaultPage** method that         I created previously:
 
 ```
-private static void ConfigureHomeSiteDefaultPage(
+        private static void ConfigureHomeSiteDefaultPage(
             SPWeb homeWeb)
         {
 ```
 
 ```
-...
+            ...
 
             // Configure Web Parts
             SPWebPartPages.SPLimitedWebPartManager wpm =
@@ -366,7 +366,7 @@ private static void ConfigureHomeSiteDefaultPage(
 The new **ConfigureSpecialsWebPart** method is shown below:
 
 ```
-private static void ConfigureSpecialsWebPart(
+        private static void ConfigureSpecialsWebPart(
             SPWebPartPages.SPLimitedWebPartManager wpm,
             string zoneId,
             ref int zoneIndex)

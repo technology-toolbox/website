@@ -36,13 +36,13 @@ Using my custom **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introduc
 Since I didn't necessarily want to limit this configuration to a SharePoint feature,  I placed the bulk of the code in the **SharePointAjaxHelper** class.  Consequently, enabling AJAX is simply a matter of calling the following method:
 
 ```
-SharePointAjaxHelper.AddAjaxWebConfigModifications(webApp);
+    SharePointAjaxHelper.AddAjaxWebConfigModifications(webApp);
 ```
 
 Likewise, disabling AJAX is simply a matter of calling the following method:
 
 ```
-SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
+    SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
 ```
 
 Note that due to the bug in the **SPWebConfigModification** infrastructure  that I've mentioned before, SharePoint only removes the modifications from the Web.config  file for the default zone (not, for example, the Internet zone). However, it's probably  not a big deal in this particular case because what's the likelihood that you will  start using AJAX and then later on decide to stop using it? Probably "next to zilch"  would be my guess.
@@ -141,7 +141,7 @@ I also created custom STSADM commands to enable and disable AJAX. For example,  
 {{< kbd "stsadm -o fabrikam-enableajax" >}}
 
 ```
-Adds the necessary configuration changes to enable AJAX on a web application.
+	Adds the necessary configuration changes to enable AJAX on a web application.
 
        -url <url of the Web application to enable AJAX on>
 ```

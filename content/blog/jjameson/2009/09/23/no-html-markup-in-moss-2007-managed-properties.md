@@ -29,7 +29,7 @@ Unfortunately, PublishingRollupImage essentially equates to an `<img>` HTML elem
 To workaround this issue, I recommend creating a separate field (column) called **PublishingRollupImageUrl** (with a display name of **Rollup Image URL**) and using an [event receiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spitemeventreceiver.aspx) to automatically set this field whenever an item is updated (by extracting the image URL from the PublishingRollupImage field).
 
 ```
-public override void ItemUpdating(
+        public override void ItemUpdating(
             SPItemEventProperties properties)
         {
             SPListItem updatedPage = properties.ListItem;

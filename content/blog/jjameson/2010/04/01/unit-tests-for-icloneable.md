@@ -35,7 +35,7 @@ In my mind, a cloned object should *always* be a deep copy. A shallow copy would
 To ensure a class implements the **Clone** method as I expect, I first create a simple unit test that clones an object and then verifies that all of the members are still equal:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an object is cloned as expected.
         /// </summary>
         [TestMethod()]
@@ -81,7 +81,7 @@ To ensure a class implements the **Clone** method as I expect, I first create a 
 Next, I create a unit test that clones an object, subsequently changes the original object, and then verifies that the cloned object is not modified:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that a deep copy is made when an object is cloned.
         /// </summary>
         [TestMethod()]
@@ -136,7 +136,7 @@ Note that the second unit test makes the calls to `Assert.AreNotSame` superfluou
 I also try to make sure that I explicitly document that a deep copy is made when cloning an object, as shown in the following example for the **SharePointSearchUrlBuilder** class:
 
 ```
-/// <summary>
+        /// <summary>
         /// Creates a new object that is a deep copy of the current instance.
         /// </summary>
         /// <returns>A new object that is a deep copy of this instance.</returns>

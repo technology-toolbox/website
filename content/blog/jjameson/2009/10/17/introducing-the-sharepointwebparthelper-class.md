@@ -504,7 +504,7 @@ Most of the code in the `SharePointWebPartHelper` class is very straightforward.
 Using the `SharePointWebPartHelper` class couldn't be easier. For a simple example, consider the scenario that I mentioned earlier about adding a Login Form Web Part to a page:
 
 ```
-// Configure Web Parts
+            // Configure Web Parts
             SPWebPartPages.SPLimitedWebPartManager wpm =
                 publicWeb.GetLimitedWebPartManager(
                     page.Url,

@@ -24,7 +24,7 @@ As I mentioned in the previous posts, the Silverlight application is hosted insi
 I also mentioned that the user control originally contained the following code:
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="100%" height="100%">
         <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
         <param name="onError" value="onSilverlightError" />
@@ -88,7 +88,7 @@ Windowless mode is the only way to create user interfaces that blend HTML and Si
 The latest version of the markup in the user control that hosts our Silverlight         application is shown below:
 
 ```
-<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="380px" height="410px" onFocus="this.style.outline='none';">
         <param name="source" value="<%= serviceWheelPackageUrl %>" />
         <param name="onError" value="onSilverlightError" />

@@ -84,7 +84,7 @@ With the updated model, the following LINQ query can be used to retrieve
 the top 10 most popular blog posts:
 
 ```
-using (CaelumEntities context = new CaelumEntities())
+        using (CaelumEntities context = new CaelumEntities())
         {
             var q = (from entry in context.Entries
                     join views in context.EntryViewCounts

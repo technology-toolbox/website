@@ -356,7 +356,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
       add the following elements:
       
       ```
-      <connectionStrings>
+        <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
@@ -450,7 +450,7 @@ In order to complete the configuration of claims-based authentication, it is  ne
       add the following elements:
       
       ```
-      <connectionStrings>
+        <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>

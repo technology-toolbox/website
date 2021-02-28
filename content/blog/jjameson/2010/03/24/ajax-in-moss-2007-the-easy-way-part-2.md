@@ -125,7 +125,7 @@ This is no real surprise, since BlueBand.master doesn't declare an instance of  
 While we *could* modify BlueBand.master to declare a **ScriptManager**,  an alternative is to instead use a little bit of code in the **CreateChildControls** method of the Web Part to dynamically create one, if necessary:
 
 ```
-if (ScriptManager.GetCurrent(this.Page) == null)
+            if (ScriptManager.GetCurrent(this.Page) == null)
             {
                 ScriptManager scriptHandler = new ScriptManager();
                 scriptHandler.ID = "scriptHandler";

@@ -60,7 +60,7 @@ Non-goals of the logging feature include:
 With the custom `Logger` class, logging a debug message is simply  a matter of calling a static method, specifying nothing more than a string containing  the message :
 
 ```
-Logger.LogDebug("Successfully loaded search results into DataSet.");
+    Logger.LogDebug("Successfully loaded search results into DataSet.");
 ```
 
 This example shows how the `Logger` class achieves the primary design  goal. Note that there is no need to explicitly create objects within each class  -- or create additional classes within an assembly -- for logging purposes.
@@ -68,7 +68,7 @@ This example shows how the `Logger` class achieves the primary design  goal. Not
 Also note that the `Logger` class provides additional overloads to  easily format log messages:
 
 ```
-Logger.LogDebug(
+    Logger.LogDebug(
         CultureInfo.InvariantCulture,
         "Successfully loaded embedded resource ({0})"
             + " ({1:n0} bytes) from assembly ({2}).",
@@ -80,7 +80,7 @@ Logger.LogDebug(
 Note that the `Logger.LogDebug` method is simply a convenient alternative  to the `Logger.Log` method:
 
 ```
-/// <summary>
+    /// <summary>
     /// Logs an event to the trace listeners using the specified
     /// event type and message.
     /// </summary>
@@ -99,7 +99,7 @@ The simplicity of the `Logger` class is made possible by the improved  tracing f
 The `Logger` class declares a singleton `TraceSource` that  is used to log all messages:
 
 ```
-private static TraceSource defaultTraceSource =
+    private static TraceSource defaultTraceSource =
         new TraceSource("defaultTraceSource");
 ```
 

@@ -106,6 +106,7 @@ It turns out the Config Wizard was choking on the IPv6 address returned for the 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
 ```
+
 Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
 Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
 Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
@@ -132,6 +133,7 @@ Once I did this, I confirmed that the hostname of the VM resolved to an IPv4 add
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
 ```
+
 Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:
 Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
 Reply from 127.0.0.1: bytes=32 time<1ms TTL=128

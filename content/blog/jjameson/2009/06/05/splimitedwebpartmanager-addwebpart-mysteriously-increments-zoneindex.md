@@ -39,7 +39,7 @@ public sealed class SharePointWebPartHelper
 `EnsureWebPart` attempts to find a Web Part based on the specified  webPartId and if the Web Part is not found, then it uses the `CreateWebPart`  method to create a new Web Part. Here is the original implementation of the `CreateWebPart` method:
 
 ```
-private static WebPart CreateWebPart(
+    private static WebPart CreateWebPart(
         SPWebPartPages.SPLimitedWebPartManager wpm,
         string webPartId,
         string webPartFilename,
@@ -106,7 +106,7 @@ As you can probably guess from the title of this post, the problem is that `zone
 When adding the first, second, third, and fourth Web Parts to a zone:
 
 ```
-SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
+    SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
 ```
 
 behaves as expected, meaning that (`webPart.ZoneIndex == zoneIndex`).
@@ -118,7 +118,7 @@ I suspect it is due to the `SPWebPartManager.MakeSpaceForWebpart`  method (which
 This behavior caused some Web Parts to appear in the wrong location, and therefore  I had to come up with a hack for it. Here is my updated version of the `CreateWebPart`  method:
 
 ```
-private static WebPart CreateWebPart(
+    private static WebPart CreateWebPart(
         SPWebPartPages.SPLimitedWebPartManager wpm,
         string webPartId,
         string webPartFilename,

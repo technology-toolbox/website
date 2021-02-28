@@ -40,7 +40,7 @@ We obviously want to keep the presentation layer as thin as possible (to make  i
 Consequently, we create a class called **ScorecardService** and  add a method to return a DataSet given a list of client sites (i.e. an array of  site IDs -- where each site ID is a `string`):
 
 ```
-public static class ScorecardService
+    public static class ScorecardService
     {
         public static ScorecardData GetScorecardData(
             string[] sites)
@@ -55,7 +55,7 @@ Note that the presentation layer simply needs to know a list of sites to specify
 As I mentioned before, suppose we want to show a summary view on the left side  of the page, perhaps with a list of KPI names along with rollup status values across  all sites for various time periods. Rather than aggregating the scorecard data in  the presentation layer, we can instead add another method to the **ScorecardService** class:
 
 ```
-public static DataTable GetScorecardSummaryTable(
+        public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
             ...
@@ -87,7 +87,7 @@ While this example shows three periods of data, there might be cases where fewer
 When the user selects a KPI in the summary view, we want to display more information  in a detail view on the right side of the page. Consequently, we add another method  to the **ScorecardService** class:
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)
         {
@@ -129,7 +129,7 @@ Note that the generic DataTable returned from the **GetScorecardSummaryTable**  
 To address this new scenario, we could just add a <var>selectedClientSiteId</var>  parameter to **GetScorecardSummaryTable** that, if specified (i.e.  is not null or empty), is subsequently used to limit the rows that are added to  the summary table. In other words, we could refactor the **GetScorecardSummaryTable**  method to add an overload, as follows:
 
 ```
-public static DataTable GetScorecardSummaryTable(
+        public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
             return GetScorecardSummaryTable(data, null);
@@ -164,7 +164,7 @@ Note that the most generic way of specifying a list of scorecard items is `IEnum
 In order to preserve the existing functionality -- and thus avoid having to change  any existing unit tests -- we keep the original method, but simply have it call  the new overload (passing in all rows from the **ScorecardItem** table):
 
 ```
-public static DataTable GetScorecardSummaryTable(
+        public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
             if (data == null)
@@ -187,7 +187,7 @@ This turns out to be incredibly powerful because, in the presentation layer,  we
 In the user control (KpiScorecard.ascx), all we need to do is retrieve the scorecard  data by providing a list of sites (in other words, get an instance of the **ScorecardData** DataSet), and subsequently determine which items  to show:
 
 ```
-private void UpdateScorecardSummaryView()
+        private void UpdateScorecardSummaryView()
         {
             Debug.Assert(scorecardData != null);
 
@@ -205,7 +205,7 @@ private void UpdateScorecardSummaryView()
 For the sake of simplicity, assume that we currently only need to support the  ability to filter by site. The **GetScorecardItemsToShowInKpiSummary**  method in the KpiScorecard.ascx file is implemented as follows:
 
 ```
-private IEnumerable<ScorecardData.ScorecardItemRow>
+        private IEnumerable<ScorecardData.ScorecardItemRow>
             GetScorecardItemsToShowInKpiSummary()
         {
             Debug.Assert(scorecardData != null);
@@ -235,7 +235,7 @@ Note that when refactoring code to add overloads that accept an `IEnumerable` pa
 For example, suppose the original **GetScorecardDetailTable** method  used a DataView to filter the **ScorecardItems** table on the specified  KPI name:
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)
         {
@@ -279,7 +279,7 @@ Note that this implementation inherently enforces the rule that all scorecard  i
 We could simply add an overload that accepts an `IEnumerable` parameter in addition  to the original <var>selectedKpiName</var> parameter:
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems,
             string selectedKpiName)
         {
@@ -292,7 +292,7 @@ Note that with this approach, we would need to filter the list of scorecard item
 To avoid this issue altogether, we can instead choose to eliminate the <var>selectedKpiName</var> parameter altogether on the method overload that  takes an `IEnumerable` parameter (and assume instead that all of the scorecard items  refer to the same KPI). Note that we need to add some code to validate the new assumption:
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
         {
             if (scorecardItems == null)
@@ -327,7 +327,7 @@ public static DataTable GetScorecardDetailTable(
 To reduce the amount of code in the method (and make it easier to understand  and maintain), we should refactor the code that enforces the assumption into a separate  method:
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
         {
             if (scorecardItems == null)
@@ -379,7 +379,7 @@ public static DataTable GetScorecardDetailTable(
 The original version of the **GetScorecardDetailTable** then simply  needs to filter the scorecard items based on the specified KPI name (which is really  easy using a LINQ query expression) and defer the rest of the work to the new overload  of the method (shown above):
 
 ```
-public static DataTable GetScorecardDetailTable(
+        public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)
         {

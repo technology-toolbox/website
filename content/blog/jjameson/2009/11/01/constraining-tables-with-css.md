@@ -167,7 +167,7 @@ Also note that constraining table cells using CSS does not automatically display
 When using an ASP.NET GridView control, I recommend using the [RowDataBound](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowdatabound.aspx) event in order to set the [ToolTip](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webcontrol.tooltip.aspx) property of the table cell. Just be sure to decode the contents         of the cell to avoid having it encoded twice:
 
 ```
-protected void ConstrainedGrid_RowDataBound(
+        protected void ConstrainedGrid_RowDataBound(
             object sender,
             GridViewRowEventArgs e)
         {

@@ -46,7 +46,7 @@ You say your Document Cart feature needs a list to store the items in each indiv
 What's that? We've deployed the DocumentCart feature to Production and now we  need to add a column to the list that contains the document cart items? No problem...just  modify the FeatureConfigurator to add a column to the list upon feature activation.  Thus when we "DR.D" (deactivate/retact/delete) the old version of the DocumentCart  feature and "ADA" (add/deploy/activate) the new version of the DocumentCart feature,  the list will be updated accordingly -- in each and every environment. It's almost  like "magic" -- if we ignore the fact that some developer had to add a tiny bit  of code to the feature:
 
 ```
-SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
+      SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
          SPFieldType.Text, false);
 ```
 

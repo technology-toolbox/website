@@ -132,7 +132,7 @@ namespace Fabrikam.Demo.CoreServices
 The following code snippet shows an example of catching "expected" and "unexpected" exceptions and handling the scenarios accordingly:
 
 ```
-try
+            try
             {
                 BindSiteList();
 

@@ -27,7 +27,7 @@ rapidly iterate on the overall look-and-feel, and develop/refine the user experi
 Here is the HTML I created for the Contact form:
 
 ```
-<p>
+  <p>
     Fill out the contact form below and you will receive a response within one
     business day. You may also send email directly to
     <a href="mailto:info@technologytoolbox.com">info@technologytoolbox.com</a>.</p>
@@ -141,7 +141,7 @@ a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.we
 At this point, the markup for the Contact form looked like this:
 
 ```
-<p>
+  <p>
     Fill out the contact form below and you will receive a response within one business
     day. You may also send email directly to <a href="mailto:info@technologytoolbox.com">
       info@technologytoolbox.com</a>.</p>
@@ -231,7 +231,7 @@ inside an ASP.NET **Panel** control (i.e. a `<div>`
 element) and added a second panel with the confirmation message:
 
 ```
-<asp:Panel runat="server" ID="contactForm">
+  <asp:Panel runat="server" ID="contactForm">
     <p>
       Fill out the contact form below ...</p>
     <fieldset>
@@ -253,7 +253,7 @@ Then it was simply a matter of associating a little bit of code with the
 and show the second panel:
 
 ```
-protected void SubmitButton_Click(
+        protected void SubmitButton_Click(
             object sender,
             EventArgs e)
         {
@@ -298,7 +298,7 @@ I replaced the "TODO" comment shown above with a call to a new method that sends
 the email:
 
 ```
-private void SendContactRequestEmail()
+        private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
 
@@ -324,7 +324,7 @@ after a little refactoring. Here is the **BuildEmailMessageBody**
 method:
 
 ```
-private string BuildEmailMessageBody()
+        private string BuildEmailMessageBody()
         {
             StringBuilder buffer = new StringBuilder();
 
@@ -396,7 +396,7 @@ properties:
 ...and updated the code accordingly:
 
 ```
-private void SendContactRequestEmail()
+        private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
 
@@ -432,7 +432,7 @@ a distribution list)? To support that scenario, the **ContactFormMailToAddress**
 Note that this requires a few tweaks to the code used to send the email:
 
 ```
-private void SendContactRequestEmail()
+    private void SendContactRequestEmail()
     {
         string body = BuildEmailMessageBody();
 
@@ -519,7 +519,7 @@ To accomplish this, I created a simple method to configure the form fields
 based on the currently selected option for **Preferred Contact Method**:
 
 ```
-private void ConfigureFormFields()
+        private void ConfigureFormFields()
         {
             switch (preferredContactMethod.Text)
             {
@@ -551,7 +551,7 @@ To ensure the fields are initially configured as expected, I call the
 **ConfigureFormFields** method when the page is first requested:
 
 ```
-protected void Page_Load(
+        protected void Page_Load(
             object sender,
             EventArgs e)
         {
@@ -566,7 +566,7 @@ Then I modified the **RadioButtonList** to automatically postback
 when the selected item is changed:
 
 ```
-<asp:RadioButtonList runat="server" ID="preferredContactMethod"
+  <asp:RadioButtonList runat="server" ID="preferredContactMethod"
     CssClass="radio-list" RepeatDirection="Horizontal"
     AutoPostBack="true"
     OnSelectedIndexChanged="PreferredContactMethod_SelectedIndexChanged">
@@ -578,7 +578,7 @@ when the selected item is changed:
 ...and subsequently call the **ConfigureFormFields** method:
 
 ```
-protected void PreferredContactMethod_SelectedIndexChanged(
+        protected void PreferredContactMethod_SelectedIndexChanged(
             object sender,
             EventArgs e)
         {
@@ -608,7 +608,7 @@ The third item is important. For example, for step "9.2" you might start
 by adding an **UpdatePanel** around all of the form fields:
 
 ```
-<asp:Panel runat="server" ID="contactForm">
+        <asp:Panel runat="server" ID="contactForm">
           <asp:UpdatePanel runat="server">
             <ContentTemplate>
               <p>
@@ -627,7 +627,7 @@ are updated by the AJAX postback. Consequently, it is much more efficient to
 enclose only those controls in the **UpdatePanel**:
 
 ```
-<asp:Panel runat="server" ID="contactForm">
+        <asp:Panel runat="server" ID="contactForm">
           <p>
             Fill out the contact form below...</p>
           <fieldset>

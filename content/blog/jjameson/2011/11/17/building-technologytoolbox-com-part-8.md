@@ -158,7 +158,7 @@ the database runs on the same server as the website in that environment.
 Prior to creating the IIS website, the corresponding folder must be created:
 
 ```
-$sitePath = "C:\inetpub\wwwroot\" + $siteName
+    $sitePath = "C:\inetpub\wwwroot\" + $siteName
 
     Write-Host "Creating website folder ($sitePath)...`r`n"
     New-Item -Type Directory -Path $sitePath > $null
@@ -171,7 +171,7 @@ Next, the `New-Website` cmdlet is
 used to create the website in IIS:
 
 ```
-Write-Host "Creating website ($sitePath)...`r`n"
+    Write-Host "Creating website ($sitePath)...`r`n"
     New-Website -Name $siteName -HostHeader $siteName `
         -PhysicalPath $sitePath -ApplicationPool $siteName > $null
 
@@ -186,7 +186,7 @@ or "2.5.2.9") to install as well as the build configuration (i.e. "Debug" or
 "Release").
 
 ```
-Write-Host "Copying Subtext website content...`r`n"
+    Write-Host "Copying Subtext website content...`r`n"
     Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
     Write-Host "Successfully copied Subtext website content.`r`n"
 ```
@@ -203,7 +203,7 @@ Subtext requires read/write access to the App\_Data folder, so I use the
 utility to configure the NTFS permissions:
 
 ```
-Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
+    Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
     icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
     Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
 ```
@@ -217,7 +217,7 @@ clicking **Convert to Application**. In PowerShell, this is accomplished
 using the `New-WebApplication` command:
 
 ```
-Write-Host "Creating new application for blog site...`r`n"
+    Write-Host "Creating new application for blog site...`r`n"
     New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
     Write-Host "Successfully created new application for blog site.`r`n"
 ```
@@ -229,7 +229,7 @@ the Release server. As with the deployment of the Subtext solution, variables
 are used to specify the version to deploy as well as the build configuration.
 
 ```
-Write-Host "Copying Caelum website content...`r`n"
+    Write-Host "Copying Caelum website content...`r`n"
     Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
     Write-Host "Successfully copied Caelum website content.`r`n"
 ```
@@ -257,7 +257,7 @@ more discipline to keep these files in-sync, but using a tool like
 [DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool) makes this rather easy.
 
 ```
-If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
     {
         Write-Host "Overwriting Web.config files...`r`n"
         Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force

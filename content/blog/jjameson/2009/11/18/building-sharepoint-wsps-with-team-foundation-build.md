@@ -126,7 +126,7 @@ Note how I've replaced the BUILD\_CONFIGURATION variable with the OUT\_DIR varia
 Here is the corresponding update to the project file:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);
       CreateSharePointSolutionPackage

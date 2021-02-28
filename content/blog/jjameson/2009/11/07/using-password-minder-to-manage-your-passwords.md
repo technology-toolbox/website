@@ -47,13 +47,13 @@ The next problem that I encountered was Password Minder throwing up on me (in ot
 Thus I made a small change to line 381 of CryptMaster.cs. The original code was:
 
 ```
-if (null == record.EncryptedUserId) {
+            if (null == record.EncryptedUserId) {
 ```
 
 I changed this to:
 
 ```
-if (string.IsNullOrEmpty(record.EncryptedUserId) == true) {
+            if (string.IsNullOrEmpty(record.EncryptedUserId) == true) {
 ```
 
 The third problem (which I didn't encounter until a few years later) was that Password Minder wouldn't run on my Windows Vista x64 desktop.

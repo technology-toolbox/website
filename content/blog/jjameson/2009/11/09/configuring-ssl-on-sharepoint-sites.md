@@ -77,14 +77,14 @@ element.
 For example, in the **Default** zone you probably want to specify:
 
 ```
-<authentication mode="Windows" />
+    <authentication mode="Windows" />
 ```
 
 Whereas in the **Internet** zone you instead need something
 like this:
 
 ```
-<authentication mode="Forms">
+    <authentication mode="Forms">
       <forms loginUrl="/Public/Pages/default.aspx" defaultUrl="/" />
     </authentication>
 ```

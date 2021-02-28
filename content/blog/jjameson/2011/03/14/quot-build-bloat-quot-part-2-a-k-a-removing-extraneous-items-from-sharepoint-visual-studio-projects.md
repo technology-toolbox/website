@@ -66,7 +66,7 @@ Here's the corresponding pieces from my updated Web.csproj file for the Tugboat
 SharePoint sample:
 
 ```
-<Target Name="AfterBuild">
+  <Target Name="AfterBuild">
     <CallTarget Targets="RemoveExtraneousFilesFromBuild" />
   </Target>
   <Target Name="RemoveExtraneousFilesFromBuild">

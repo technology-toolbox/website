@@ -90,7 +90,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 Note that by specifying the height of the **modalPanelContent** element:
 
 ```
-modalPanelContent.Height = new Unit(100);
+            modalPanelContent.Height = new Unit(100);
 ```
 
 &hellip;and specifying a corresponding CSS rule:
@@ -115,7 +115,7 @@ In addition to creating various user interface elements for modal popup windows,
 For example, it might be desireable to hide the **Cancel** link button         and change the text of the **OK** button to be "Close" instead. When         the user clicks the "Close" button, the derived Web Part can specify a server-side         event handler (or simply override the **OnModalPopupOk** method) to         perform some action.
 
 ```
-protected override void OnModalPopupOk(
+        protected override void OnModalPopupOk(
             EventArgs e)
         {
             Debug.WriteLine("SamplePopupWebPart::OnModalPopupOk()");

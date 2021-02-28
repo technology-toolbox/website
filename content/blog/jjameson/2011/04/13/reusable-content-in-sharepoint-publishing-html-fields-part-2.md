@@ -31,7 +31,7 @@ When it comes to adding a piece of reusable content, this "ensure" logic means  
 For example, consider the following method of **SharePointPublishingHelper**:
 
 ```
-public static SPListItem EnsureReusableContentItem(
+        public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
             bool automaticUpdate,
@@ -41,7 +41,7 @@ public static SPListItem EnsureReusableContentItem(
 Imagine that you run the following code upon activation of a feature:
 
 ```
-SPListItem reusableContent =
+            SPListItem reusableContent =
                 SharePointPublishingHelper.EnsureReusableContentItem(
                     web.Site,
                     "Copyright",
@@ -54,7 +54,7 @@ If the specified **Reusable Content** list item already exists (found  by matchi
 Also note that the **Reusable Content** list is configured for approval  by default, and -- as I mentioned in [part 1 of this series](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1) -- "bad things" happen when a page includes a reference  to reusable content that has not been approved. Consequently, the **EnsureReusableContentItem** method also takes care of approving the list item (if it does not have  at least one approved version):
 
 ```
-public static SPListItem EnsureReusableContentItem(
+        public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
             bool automaticUpdate,
@@ -233,7 +233,7 @@ First it is important to understand how reusable content is implemented in Share
 Here is a sample of the HTML content in "storage format":
 
 ```
-<div id="__publishingReusableFragmentIdSection">
+    <div id="__publishingReusableFragmentIdSection">
         <a href="/ReusableContent/1_.000">a</a>
         <a href="/ReusableContent/3_.000">a</a>
     </div>
@@ -252,7 +252,7 @@ Here is a sample of the HTML content in "storage format":
 The corresponding "view format" is shown below:
 
 ```
-<p>
+    <p>
         Here is some reusable content...</p>
     <p>
         <span class="ms-rtestate-read  ms-reusableTextView"
@@ -284,7 +284,7 @@ Look again at the sample "storage format" HTML above. Notice how the reusable  c
 In other words, if you were to swap the order of the &lt;a&gt; elements in the  "header"...
 
 ```
-<div id="__publishingReusableFragmentIdSection">
+    <div id="__publishingReusableFragmentIdSection">
         <a href="/ReusableContent/3_.000">a</a>
         <a href="/ReusableContent/1_.000">a</a>
     </div>
@@ -294,7 +294,7 @@ In other words, if you were to swap the order of the &lt;a&gt; elements in the  
 ...then the order of the reusable content in the corresponding "view format"  would be reversed, as shown below:
 
 ```
-<p>
+    <p>
         Here is some reusable content...</p>
     <p>
         <span class="ms-rtestate-read  ms-reusableTextView"
@@ -317,7 +317,7 @@ In other words, if you were to swap the order of the &lt;a&gt; elements in the  
 This actually makes the code for inserting reusable content into Publishing HTML  fields significantly more complex than it would be if the "storage format" specified  something like the following instead:
 
 ```
-<div id="__publishingReusableFragmentIdSection" />
+    <div id="__publishingReusableFragmentIdSection" />
     <p>
         Here is some reusable content...</p>
     <p>
@@ -337,7 +337,7 @@ This actually makes the code for inserting reusable content into Publishing HTML
 Rather than simply listing the code for inserting reusable content into a page  (which you can easily access in the attached sample solution), start by reviewing  some of the unit tests that I created when developing the **InsertReusableContentIntoHtmlField** method:
 
 ```
-/// <summary>
+        /// <summary>
         /// Basic test for appending reusable content to an HTML field.
         /// </summary>
         [TestMethod()]

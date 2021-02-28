@@ -76,7 +76,7 @@ Toolbox currently uses Google Site Search).
 The problem is due to the following code in **SubtextMasterPage**:
 
 ```
-public void InitializeControls(ISkinControlLoader controlLoader)
+        public void InitializeControls(ISkinControlLoader controlLoader)
         {
             ...
                     var query = Query;
@@ -97,7 +97,7 @@ other blog posts to users (based on what they searched for using, say, Google),
 I updated the code as follows:
 
 ```
-public void InitializeControls(ISkinControlLoader controlLoader)
+        public void InitializeControls(ISkinControlLoader controlLoader)
         {
             ...
 
@@ -124,7 +124,7 @@ public void InitializeControls(ISkinControlLoader controlLoader)
 file:
 
 ```
-<FullTextSearchEngineSettings
+  <FullTextSearchEngineSettings
     type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
     <IsEnabled>false</IsEnabled>
     ...  </FullTextSearchEngineSettings>
@@ -165,7 +165,7 @@ is at some point there was intent to generate these values once per environment.
 At least that is what I inferred from the following comment:
 
 ```
-static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+        static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
             //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
@@ -178,7 +178,7 @@ static SymmetricAlgorithm InitializeEncryptionAlgorithm()
 To fix this issue, I changed the code as follows:
 
 ```
-static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+        static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
 
@@ -232,7 +232,7 @@ Then I generated a key and IV and specified the Base64-encoded values in
 my Web.config file:
 
 ```
-<appSettings>
+  <appSettings>
     <!--
       To avoid numerous CryptographicException ("Padding is invalid and cannot
       be removed.") errors from occurring when Google crawls the site, use a
@@ -307,7 +307,7 @@ Here is what my version of the **GravatarService** class looks
 like:
 
 ```
-public class GravatarService
+    public class GravatarService
     {
         public GravatarService(NameValueCollection settings)
             : this(settings["GravatarUrlFormatString"],
@@ -566,7 +566,7 @@ actually throws a **SecurityException**:
 The problem is in the **OnLoad** method of the **CategoryEntryList** class. To fix this bug, I changed it to the following:
 
 ```
-protected override void OnLoad(EventArgs e)
+        protected override void OnLoad(EventArgs e)
         {
             ...
             if(...)

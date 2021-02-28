@@ -22,7 +22,7 @@ Here is another helper class that I developed that you may find useful when buil
 If you use the **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** class to add or modify Web.config files, you might have code that looks something like this:
 
 ```
-private static void AddAuthenticationWebConfigModifications(
+        private static void AddAuthenticationWebConfigModifications(
             SPWebApplication webApp)
         {
             Debug.Assert(webApp != null);
@@ -83,7 +83,7 @@ There is quite a bit of repetitive code in the sample above and therefore it loo
 Personally, I find the following equivalent to be much more readable:
 
 ```
-private static void AddAuthenticationWebConfigModifications(
+        private static void AddAuthenticationWebConfigModifications(
             SPWebApplication webApp)
         {
             Debug.Assert(webApp != null);

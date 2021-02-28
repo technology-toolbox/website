@@ -61,7 +61,7 @@ Since, like me, you probably don't want to be bothered by a message whenever
 someone attempts this hack, you could configure an ELMAH filter as follows:
 
 ```
-<elmah>
+  <elmah>
     ...
     <errorFilter>
       <test>
@@ -82,7 +82,7 @@ Consequently we need to tweak the error filter a little bit (by adding an
 element and checking if the current "filter source" is the **ErrorMailModule**):
 
 ```
-<errorFilter>
+    <errorFilter>
       <test>
         <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
         <and>
@@ -122,7 +122,7 @@ To suppress these messages, we can simply expand the ELMAH filter a little
 bit:
 
 ```
-<errorFilter>
+    <errorFilter>
       <test>
         <or>
           <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
@@ -157,7 +157,7 @@ The following errors are typically indicative of these hack attempts:
 Consequently we might as well add these to the ELMAH filter:
 
 ```
-<errorFilter>
+    <errorFilter>
       <test>
         <or>
           <!-- Do not send email notification when hackers attempt something
@@ -221,14 +221,14 @@ James Driscoll pointed out that you can avoid the issue in some cases, for
 example, by changing:
 
 ```
-<equal binding="FilterSourceType.Name" value="ErrorMailModule"
+  <equal binding="FilterSourceType.Name" value="ErrorMailModule"
     type="String" />
 ```
 
 to:
 
 ```
-<is-type binding="FilterSource" type="Elmah.ErrorMailModule" />
+  <is-type binding="FilterSource" type="Elmah.ErrorMailModule" />
 ```
 
 However, that may not be viable for all scenarios (such as comparing the
@@ -252,7 +252,7 @@ the bug, I quickly turned my attention to finding a workaround. Consequently,
 I converted my filter configuration to use JavaScript instead:
 
 ```
-<errorFilter>
+    <errorFilter>
       <test>
         <jscript>
           <expression>

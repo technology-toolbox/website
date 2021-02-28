@@ -266,7 +266,7 @@ I started out by adding the following HTML to the master page in the static
 HTML prototype:
 
 ```
-<div id="siteSearch">
+  <div id="siteSearch">
     <h2>
       Search</h2>
     <input type="text" id="searchKeywords" /><input type="image" alt="Search"
@@ -281,7 +281,7 @@ Next, I added a little JavaScript to redirect to the search results page
 (Search.aspx) when the search icon is clicked:
 
 ```
-<div id="siteSearch">
+  <div id="siteSearch">
     <h2>
       Search</h2>
     <input type="text" id="searchKeywords" />
@@ -319,7 +319,7 @@ by default, but when somebody clicks in the box the default text should be remov
 These two behaviors are easy to implement using jQuery:
 
 ```
-<div id="siteSearch">
+    <div id="siteSearch">
       <h2>
         Search</h2>
       <input type="text" id="searchKeywords" />

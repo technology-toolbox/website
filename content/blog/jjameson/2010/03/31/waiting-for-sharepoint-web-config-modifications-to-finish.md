@@ -45,7 +45,7 @@ operation is already running" error may occur when applying Web.config changes  
 To avoid the error, I added a little bit of code to the **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)** class in the **ApplyWebConfigModifications**  method:
 
 ```
-if (webApp.Farm.TimerService.Instances.Count > 1)
+            if (webApp.Farm.TimerService.Instances.Count > 1)
             {
                 // HACK:
                 //

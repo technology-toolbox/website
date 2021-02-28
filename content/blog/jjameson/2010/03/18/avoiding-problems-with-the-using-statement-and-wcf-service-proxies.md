@@ -73,7 +73,7 @@ Honestly, I can't see how this is any different than not properly freeing memory
 The problem -- at least in my opinion -- is that the **Dispose**  method in **ClientBase** is currently implemented as follows:
 
 ```
-void IDisposable.Dispose()
+        void IDisposable.Dispose()
         {
             this.Close();
         }
@@ -82,7 +82,7 @@ void IDisposable.Dispose()
 However, as noted in the above MSDN article (and corresponding code sample),  this can cause problems when the C# "using" statement is used on the WCF service  proxy:
 
 ```
-using (CalculatorClient client = new CalculatorClient())
+        using (CalculatorClient client = new CalculatorClient())
         {
             // Call Divide and catch the associated Exception.  This throws because the
             // server aborts the channel before returning a reply.
@@ -114,7 +114,7 @@ catch TimeoutExceptions and CommunicationExceptions](http://msdn.microsoft.com/e
 Wouldn't it be great if ClientBase actually implemented the **Dispose**  method as follows?
 
 ```
-void IDisposable.Dispose()
+        void IDisposable.Dispose()
         {
             if (this.State == CommunicationState.Faulted)
             {

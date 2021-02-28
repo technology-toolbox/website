@@ -26,7 +26,7 @@ Obviously not all solutions are simple console-based applications. With ASP.NET 
 Note that the [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) can be specified in Web.config to enable logging  to the ASP.NET tracing feature:
 
 ```
-<system.diagnostics>
+  <system.diagnostics>
     <sources>
       <source name="defaultTraceSource" switchName="allTraceLevel">
         <listeners>
@@ -53,7 +53,7 @@ Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
 Also note that ASP.NET tracing must be enabled using the `<trace>`  element within `<system.web>`:
 
 ```
-<system.web>
+  <system.web>
     <trace enabled="true" pageOutput="false" requestLimit="50" localOnly="true" />
   </system.web>
 ```

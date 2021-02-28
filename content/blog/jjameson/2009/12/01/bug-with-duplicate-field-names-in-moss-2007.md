@@ -113,7 +113,7 @@ After rebuilding my Web application, adding and deploying the updated WSP, and a
 Since there were no errors deploying the WSP or activating the feature, I was rather baffled by the issue. Then I discovered that by renaming AnnouncementStartDate to StartDate, I introduced a duplicate field name. Note the following field definition from the OOTB fieldswss.xml file:
 
 ```
-<Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}"
+    <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}"
         Name="StartDate"
         SourceID="http://schemas.microsoft.com/sharepoint/v3"
         StaticName="StartDate"
@@ -155,7 +155,7 @@ In other words, I updated my ContentTypes.xml file to the following:
 Unfortunately, I then discovered that the OOTB EndDate field does not parallel the definition of the OOTB StartDate field:
 
 ```
-<Field ID="{2684F9F2-54BE-429f-BA06-76754FC056BF}"
+    <Field ID="{2684F9F2-54BE-429f-BA06-76754FC056BF}"
         Name="EndDate"
         Type="DateTime"
         DisplayName="$Resources:core,End_Time;"
@@ -176,7 +176,7 @@ Notice that with EndDate, `Format="DateTime"` whereas with StartDate, `Format="D
 Lastly, note that the OOTB fieldswss.xml also contains the following:
 
 ```
-<Field ID="{8A121252-85A9-443d-8217-A1B57020FADF}"
+    <Field ID="{8A121252-85A9-443d-8217-A1B57020FADF}"
         Name="_EndDate"
         Group="$Resources:Base_Columns"
         Type="DateTime"

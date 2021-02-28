@@ -39,7 +39,7 @@ Everything should be as simple as possible, but not simpler.
 If you look at the default XSL for the Search Core Results Web Part in MOSS 2007,  you will find the following:
 
 ```
-<div class="srch-Description">
+    <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="hithighlightedsummary[. != '']">
           <xsl:call-template name="HitHighlighting">
@@ -56,7 +56,7 @@ If you look at the default XSL for the Search Core Results Web Part in MOSS 2007
 Well, that certainly makes this a trivial exercise...all I need to do is reverse  the order so that if **description** is specified, then it takes precedence  over **hithighlightedsummary**, right?
 
 ```
-<div class="srch-Description">
+    <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="description[. != '']">
           <xsl:value-of select="description"/>

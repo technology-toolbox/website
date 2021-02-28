@@ -40,7 +40,7 @@ Chances are that when you look at your Visual Studio environment, you won't see 
 The macro output pane is actually created on-the-fly, as necessary, whenever  I run one of my macros that implements tracing (i.e. writes output). This is done  via the `GetMacroOutputPane()` function, as shown below.
 
 ```
-Private Function GetMacroOutputPane() As OutputWindowPane
+    Private Function GetMacroOutputPane() As OutputWindowPane
         Dim ow As OutputWindow = _
             DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
 
@@ -61,7 +61,7 @@ Pretty simple, eh? If the macro output pane exists, then use it; otherwise add  
 In order to simplify writing output messages -- as well as timestamp each message  as it is written -- I use the `WriteOutput()` method
 
 ```
-Private Sub WriteOutput( _
+    Private Sub WriteOutput( _
         ByVal s As String)
 
         Dim buffer As StringBuilder = New StringBuilder

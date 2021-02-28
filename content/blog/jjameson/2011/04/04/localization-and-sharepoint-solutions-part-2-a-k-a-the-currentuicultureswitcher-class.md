@@ -138,7 +138,7 @@ I wish I could have thought of a more creative name for this, but oh well. It se
 Here's an example unit test that demonstrates how the class is expected to work:
 
 ```
-/// <summary>
+        /// <summary>
         /// Basic test for CurrentUICultureSwitcher.
         /// </summary>
         [TestMethod()]
@@ -169,7 +169,7 @@ Here's an example unit test that demonstrates how the class is expected to work:
 Lastly, here's an excerpt from a custom "Announcements" feature that shows how the class is used to configure a localized SharePoint site:
 
 ```
-/// <summary>
+        /// <summary>
         /// Creates and configures the "Announcements" site under the specified
         /// Web.
         /// </summary>

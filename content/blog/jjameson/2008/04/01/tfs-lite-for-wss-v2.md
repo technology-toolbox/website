@@ -93,7 +93,7 @@ Note that the approach of using a DVWP instead of modifying the underlying CAML 
 A minimal amount of custom XSLT was then added to display an image based on the  KPI value of each work item:
 
 ```
-<xsl:choose>
+  <xsl:choose>
     <xsl:when test="@KPI='Green'">
       <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />
     </xsl:when>

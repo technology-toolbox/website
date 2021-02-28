@@ -273,7 +273,7 @@ Note that I use static members in order to only read the SMTP server configurati
 Assuming you just want to send a simple message using the default "From address" specified in SharePoint Central Administration, you only need a single line of code that passes three parameters:
 
 ```
-SharePointSmtpHelper.SendMessage(
+            SharePointSmtpHelper.SendMessage(
                 "jeremy_jameson@fabrikam.com",
                 "Test message",
                 "Testing the SharePointSmtpHelper class");

@@ -119,7 +119,7 @@ To copy these files into the corresponding folders in the **blog** application, 
 editing the **Website.csproj** file):
 
 ```
-<Target Name="CopySharedFilesToBlogApplication">
+  <Target Name="CopySharedFilesToBlogApplication">
     <Message Importance="high"
       Text="TODO: Copy CAPTCHA control and other shared files to blog folder..." />
   </Target>
@@ -129,7 +129,7 @@ To ensure this target is executed as part of every build, I modified the
 **BuildDependsOn** property by adding a new **PropertyGroup**:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);
       CopySharedFilesToBlogApplication
@@ -152,7 +152,7 @@ To specify the list of files needed by the CAPTCHA control, I defined a new
 **ItemGroup**:
 
 ```
-<ItemGroup>
+  <ItemGroup>
     <CaptchaFile Include="Controls\Captcha\Captcha.ascx" />
     <CaptchaFile Include="Controls\Captcha\config.xml" />
     <CaptchaFile Include="Controls\Captcha\Scripts\s3Capcha.js" />
@@ -165,7 +165,7 @@ the corresponding locations under the **blog** folder (in other
 words, by preserving the relative path of each file that is copied):
 
 ```
-<Target Name="CopySharedFilesToBlogApplication">
+  <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="@(CaptchaFile)"
       DestinationFolder="blog\%(CaptchaFile.RelativeDir)" />
@@ -179,7 +179,7 @@ and `"blog\bin"` as the destination
 folder:
 
 ```
-<Target Name="CopySharedFilesToBlogApplication">
+  <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="$(OutDir)$(TargetFileName);"
       DestinationFolder="blog\bin" />
@@ -191,7 +191,7 @@ referenced in the **Website** project), I added one more
 **Copy** task:
 
 ```
-<Target Name="CopySharedFilesToBlogApplication">
+  <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
       DestinationFiles="@(ReferenceCopyLocalPaths->'blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
@@ -201,7 +201,7 @@ referenced in the **Website** project), I added one more
 Here is the completed target:
 
 ```
-<Target Name="CopySharedFilesToBlogApplication">
+  <Target Name="CopySharedFilesToBlogApplication">
     <Message Importance="high"
       Text="Copying CAPTCHA control and other shared files to blog folder..." />
     <Copy SourceFiles="@(CaptchaFile)"
@@ -227,7 +227,7 @@ one, except that it uses the `$(WebProjectOutputDir)`
 variable to copy the files to the **\_PublishedWebsites** folder:
 
 ```
-<!--
+  <!--
     The following target is used to copy the shared files to the
     _PublishedWebsites\{app}\blog folder (when building the solution using Team
     Build)
@@ -249,7 +249,7 @@ To integrate this target into the TFS build process, I hook into the
 **\_CopyWebApplication** target:
 
 ```
-<PropertyGroup>
+  <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);
       CopySharedFilesToBlogApplication

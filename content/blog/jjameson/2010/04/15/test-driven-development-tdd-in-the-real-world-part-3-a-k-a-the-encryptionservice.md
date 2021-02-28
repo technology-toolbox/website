@@ -149,7 +149,7 @@ The **Decrypt001** unit test actually passes -- even though we aren't  really en
 Well, that certainly isn't good. Let's modify the unit test a little to ensure  that it fails based on the current implementation:
 
 ```
-[TestMethod]
+        [TestMethod]
         public void Decrypt001()
         {
             string plaintext = "foobar";
@@ -174,7 +174,7 @@ Assert.AreNotEqual failed. Expected any value except:&lt;foobar&gt;. Actual:&lt;
 Perhaps you'd rather see a more meaningful message when the test fails. In that  case, you can specify the optional `message` parameter when using one  of the methods on the **Assert** class:
 
 ```
-Assert.AreNotEqual<string>(
+            Assert.AreNotEqual<string>(
                 plaintext,
                 ciphertext,
                 "The encrypted text (ciphertext) should not be the same as the"
@@ -415,7 +415,7 @@ Now let's focus on getting the two unit tests for the **InternalEncryptionServic
 Start by replacing the implementation of the **Encrypt** method  in the **InternalEncryptionService** class:
 
 ```
-public string Encrypt(
+        public string Encrypt(
             string plaintext)
         {
             byte[] data = Encoding.Unicode.GetBytes(plaintext);
@@ -430,7 +430,7 @@ public string Encrypt(
 Similarly, replace the implementation of the **Decrypt** method  in the **InternalEncryptionService** class:
 
 ```
-public string Decrypt(
+        public string Decrypt(
             string ciphertext)
         {
             byte[] encryptedData = Convert.FromBase64String(ciphertext);
@@ -470,7 +470,7 @@ Voila! The two unit tests for the **InternalEncryptionService**  class are now "
 The next step is to get the remaining unit tests (i.e. the two for the **EncryptionService** class) to pass. As noted before, this is simply  a matter of delegating the work performed by the **EncryptionService** class to the corresponding methods in the **InternalEncryptionService** class:
 
 ```
-public static class EncryptionService
+    public static class EncryptionService
     {
         /// <summary>
         /// Encrypts the specified text.
@@ -509,7 +509,7 @@ In the code examples provided so far, did you notice how little error handling  
 We should definitely make the code more robust by validating the parameters in  the **InternalEncryptionService** class -- but if we're doing TDD,  then we should try to remember to write the unit test first (ensuring that it fails  before implementing the necessary work to make it pass). For example, add the following  unit test to InternalEncryptionServiceTest.cs:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an exception is thrown when the input string is null.
         /// </summary>
         [TestMethod()]
@@ -544,7 +544,7 @@ a String.\r\nParameter name: s") does not match the expected message.
 Add another unit test to validate that an empty string is also handled as expected  (since it shouldn't take more than 30 seconds or so to copy/paste and make the necessary  changes):
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an exception is thrown when the input string is empty.
         /// </summary>
         [TestMethod()]
@@ -580,7 +580,7 @@ According to the ASP.NET team, the answer is "yes" (based on the implementation 
 Assuming we agree with this expected behavior for encrypting an empty string  (which seems reasonable), then it makes sense to replace the **EncryptWithInvalidParameter002**  test with a different test:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an empty string is encrypted successfully.
         /// </summary>
         [TestMethod]

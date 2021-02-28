@@ -85,7 +85,7 @@ These changes make the LINQ queries much easier to read. For example, the
 following LINQ query can be used to retrieve the three most recent blog posts:
 
 ```
-using (CaelumEntities context = new CaelumEntities())
+    using (CaelumEntities context = new CaelumEntities())
     {
         var q = (from entry in context.Entries
                  orderby entry.DateSyndicated descending

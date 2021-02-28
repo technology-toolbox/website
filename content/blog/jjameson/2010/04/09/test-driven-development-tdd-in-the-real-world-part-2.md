@@ -62,7 +62,7 @@ More often than not, when a parameter is null, you simply throw an **ArgumentNul
 From this foundation, let's start with the following unit tests:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that a null input string returns null.
         /// </summary>
         [TestMethod()]
@@ -112,7 +112,7 @@ In order to validate the maximum length parameter, let's assume that it must  be
 From this we can write another unit test right away:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an exception is thrown when maxLength is less than 4.
         /// </summary>
         [TestMethod()]
@@ -145,7 +145,7 @@ At this point, it seems like a good point to advance from TDD step 1 ("Write  th
 In order to get the unit tests to compile, we need to stub out the **StringHelper.Truncate** method:
 
 ```
-public static class StringHelper
+    public static class StringHelper
     {
         public static string Truncate(
             string input,
@@ -172,7 +172,7 @@ int)' is never used. Remove the parameter or use it in the method body.
 To resolve these errors, let's add a little more code to the **Truncate** method:
 
 ```
-public static string Truncate(
+        public static string Truncate(
             string input,
             int maxLength)
         {
@@ -196,7 +196,7 @@ error : CA1804 : Microsoft.Performance : 'StringHelperTest.TruncateInvalidParame
 To resolve this error, we need to tweak the unit test a little bit (to remove  the variable used to store the truncated string):
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an exception is thrown when maxLength is less than 4.
         /// </summary>
         [TestMethod()]
@@ -231,7 +231,7 @@ When the tests are run, we get a couple of debug assertion failures, but if we  
 Now let's move on to TDD step 4 ("Write the code to make the unit tests pass").  Let's replace the debug assertions with code that actually does what we need it  to do:
 
 ```
-public static string Truncate(
+        public static string Truncate(
             string input,
             int maxLength)
         {
@@ -258,7 +258,7 @@ However, we're obviously not done because the **Truncate** method  clearly still
 Let's add another unit test by copying and pasting **Truncate001** and modifying it accordingly:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an input string with a space is truncated as
         /// expected.
         /// </summary>
@@ -278,7 +278,7 @@ Let's add another unit test by copying and pasting **Truncate001** and modifying
 Running the tests confirms that **Truncate003** fails as expected  (since at this point, we are just returning `"TODO:"`  from the **Truncate** method). Let's add a little bit of code to find  the last space in the input string and truncate accordingly:
 
 ```
-public static string Truncate(
+        public static string Truncate(
             string input,
             int maxLength)
         {
@@ -311,7 +311,7 @@ Specifically, the code doesn't look like it will handle the scenario where the  
 Let's add another test case to see what happens in this scenario:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that an input string without a space is truncated as
         /// expected.
         /// </summary>
@@ -333,7 +333,7 @@ Sure enough, this unit test fails -- and not in a good way (meaning our call  to
 Let's add a check inside the **Truncate** method to handle the scenario  where we fail to find a space in the input string:
 
 ```
-public static string Truncate(
+        public static string Truncate(
             string input,
             int maxLength)
         {
@@ -369,7 +369,7 @@ Hold on a minute...
 Let's test the boundaries a little by adding yet another unit test:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that the input string is not truncated when maxLength is
         /// sufficiently large.
         /// </summary>
@@ -391,7 +391,7 @@ Sure enough, this new test fails, because the string is truncated and the ellips
 Consequently, we need to add a little more code to the **Truncate** method:
 
 ```
-public static string Truncate(
+        public static string Truncate(
             string input,
             int maxLength)
         {
@@ -441,7 +441,7 @@ The reason for this is that when familiarizing myself with code that I didn't  w
 Consequently, let's add one last test case for the **StringHelper.Truncate** method:
 
 ```
-/// <summary>
+        /// <summary>
         /// Validates that the input string is truncated as expected.
         /// </summary>
         [TestMethod()]

@@ -138,7 +138,7 @@ If the volume of traffic on your site is relatively low, you might consider
 configuring ELMAH to send you an email whenever something bad happens:
 
 ```
-<elmah>
+  <elmah>
     <errorMail
       from="no-reply@technologytoolbox.com"
       to="web-support@technologytoolbox.com"
@@ -177,7 +177,7 @@ You've probably created a similar error page before and "wired it up" in
 the Web.config file using something like the following:
 
 ```
-<system.web>
+  <system.web>
     ...
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
     ...
@@ -198,7 +198,7 @@ to refresh the page all day long and nothing would ever change. That's certainly
 not a good thing -- so you should always specify `redirectMode="ResponseRewrite"`:
 
 ```
-<customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
+    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
       redirectMode="ResponseRewrite" />
 ```
 
@@ -217,7 +217,7 @@ Consequently, you should add a little code to set the status code to indicate
 something went wrong:
 
 ```
-protected void Page_Load(
+        protected void Page_Load(
                object sender,
                EventArgs e)
         {
@@ -437,7 +437,7 @@ not correspond to a managed handler), the `<httpErrors>`
 element is used:
 
 ```
-<system.webServer>
+  <system.webServer>
     <httpErrors>
       <remove statusCode="404" subStatusCode="-1" />
       <error statusCode="404" prefixLanguageFilePath=""
@@ -452,7 +452,7 @@ page), the `<customErrors>`
 element is used:
 
 ```
-<system.web>
+  <system.web>
     ...
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
       redirectMode="ResponseRewrite">

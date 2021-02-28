@@ -12,7 +12,7 @@ You may have noticed the following code in
 [my post from earlier today](building-technologytoolbox-com-part-22.aspx):
 
 ```
-...
+                ...
                 else if (string.Compare(
                     request.Url.Host,
                     "technologytoolbox.com",
@@ -94,7 +94,7 @@ Here are the corresponding configuration elements added by the
 **Canonical domain name** SEO template in URL Rewrite 2.0:
 
 ```
-<rewrite>
+    <rewrite>
       <rules>
         <rule name="CanonicalHostNameRule1">
           <match url="(.*)" />

@@ -227,7 +227,7 @@ SQL Server Reporting Services](http://msdn.microsoft.com/en-us/library/ms154052.
 Putting aside any concerns about copyright infringement or licensing issues for  this specific scenario, I copied the code from Reflector into a new console application  project in Visual Studio, added a Web Reference to [http://cyclops/ReportServer/ReportService2005.asmx?wsdl](http://cyclops/ReportServer/ReportService2005.asmx?wsdl),  and made a few tweaks to get the code to compile (e.g. changing `ReportingService` references to `ReportingService2005`). After a little  debugging, I discovered that I also had to change the URL of the Web service proxy:
 
 ```
-private static void CreateReportServerProxy()
+        private static void CreateReportServerProxy()
         {
             string reportsServerUrl = GetReportsServerUrl();
             new Uri(reportsServerUrl);

@@ -73,7 +73,7 @@ of code to download the monthly summary pages from my MSDN blog to a temporary
 folder.
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
 
@@ -97,7 +97,7 @@ months in the last 4 years and download the corresponding Web page to an offline
 file.
 
 ```
-private static void ExportSummaryPages(
+        private static void ExportSummaryPages(
             Uri oldBlogBaseUrl,
             string summaryFolder)
         {
@@ -154,7 +154,7 @@ ensuring the specified destination folder exists -- since the
 method won't automatically create any necessary folders):
 
 ```
-private static void EnsureOfflineFile(
+        private static void EnsureOfflineFile(
             Uri url,
             string offlineFilename)
         {
@@ -200,7 +200,7 @@ research for migrating my blog I discovered
 to create the corresponding XML file with substantially less coding on my part.
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
             ...
 
@@ -236,7 +236,7 @@ Note that by the time I had written this code, I had already exported a sample
 BlogML file from Subtext and observed the following in the XML file:
 
 ```
-<extended-properties>
+  <extended-properties>
     <property name="CommentModeration" value="Disabled" />
   </extended-properties>
 ```
@@ -251,7 +251,7 @@ and add a limited amount of information for each post into the **BlogMLBlog**
 instance.
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
             ...
 
@@ -275,7 +275,7 @@ for the corresponding month, and then parses the HTML using an instance of the
 **HtmlDocument** class from the Html Agility Pack.
 
 ```
-private static void ExportPostSummaries(
+        private static void ExportPostSummaries(
             BlogMLBlog blog,
             string summaryFolder)
         {
@@ -383,7 +383,7 @@ populate the full content for each post as well as set some additional metadata
 the **ExportPosts** method.
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
             Uri newBlogBaseUrl = new Uri(
@@ -410,7 +410,7 @@ first step is to download an offline copy of the post using the **EnsureOfflineF
 method shown above.
 
 ```
-private static void ExportPosts(
+        private static void ExportPosts(
             BlogMLBlog blog,
             string postsFolder,
             Uri oldBlogBaseUrl,
@@ -456,7 +456,7 @@ private static void ExportPosts(
 **FillPostDetail** is where things start to get more interesting...
 
 ```
-private static void FillPostDetail(
+        private static void FillPostDetail(
             BlogMLBlog blog,
             BlogMLPost post,
             string postFile,
@@ -560,7 +560,7 @@ As its name implies, the **TransformOriginalPostContent** method
   I frequently copy text from documents I've written when creating blog posts
 
 ```
-private static string TransformOriginalPostContent(
+        private static string TransformOriginalPostContent(
             HtmlNode postContent,
             Uri originalPostUrl,
             Uri newBlogBaseUrl)
@@ -607,7 +607,7 @@ Removing unwanted attributes in the HTML turns out to be rather trivial,
 thanks to the powerful XPath query capabilities of the Html Agility Pack:
 
 ```
-private static void RemoveUnwantedAttributes(
+        private static void RemoveUnwantedAttributes(
             HtmlNode postContent,
             string attributeName)
         {
@@ -630,7 +630,7 @@ Link translation is also relatively easy thanks to the **HtmlNode.Descendants** 
 very similar to the old URLs:
 
 ```
-private static void TranslateLinksToOtherBlogPosts(
+        private static void TranslateLinksToOtherBlogPosts(
             HtmlNode postContent,
             Uri newBlogBaseUrl)
         {
@@ -695,7 +695,7 @@ this extensively in the past. Note that **HtmlCleaner** is really
 just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
 ```
-/// <summary>
+    /// <summary>
     /// Utility class for ensuring HTML is well-formed.
     /// </summary>
     internal static class HtmlCleaner
@@ -855,7 +855,7 @@ new tags when creating or updating a post).
 Here is the helper method that adds the tags to each post:
 
 ```
-private static void AppendBlogPostTags(
+        private static void AppendBlogPostTags(
             HtmlDocument document,
             StringBuilder buffer)
         {
@@ -893,7 +893,7 @@ functionality of **HtmlDocument** to extract the list of tags from
 the offline post file:
 
 ```
-private static string[] GetPostTags(
+        private static string[] GetPostTags(
             HtmlDocument document)
         {
             HtmlNode postTagsSection = document.DocumentNode.SelectSingleNode(
@@ -922,7 +922,7 @@ a different tag on my MSDN blog (i.e. **SharePoint 2010** -- instead
 of **SharePoint Server 2010**):
 
 ```
-private static string GetNewTag(
+        private static string GetNewTag(
             string oldTag)
         {
             switch (oldTag)
@@ -982,7 +982,7 @@ This mapping is implemented in the **MapTagToCategory** method,
 which is called from the **FillPostCategories** method:
 
 ```
-private static void FillPostCategories(
+        private static void FillPostCategories(
             BlogMLBlog blog,
             BlogMLPost post,
             HtmlDocument document)
@@ -1092,7 +1092,7 @@ what essentially amounts to a "replay hack." Like the previous steps, let's
 start with a quick look at the updates to `Main`...
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson");
 
@@ -1117,7 +1117,7 @@ post comments to an offline file, and then processes the offline file to load
 the comments into the BlogML document:
 
 ```
-private static void ExportComments(
+        private static void ExportComments(
             BlogMLBlog blog,
             string commentsFolder,
             Uri oldBlogBaseUrl)
@@ -1163,7 +1163,7 @@ file exists for the specified post (meaning the comments have already been downl
 and, if not, attempts to download any comments:
 
 ```
-private static void ExportPostComments(
+        private static void ExportPostComments(
             Uri originalPostUrl,
             string commentsFilename)
         {
@@ -1199,7 +1199,7 @@ The **GetFeedbackHtmlForPost** method is where the "magic" happens
 for Web scraping the fake Ajax request used to retrieve the comments:
 
 ```
-private static string GetFeedbackHtmlForPost(
+        private static string GetFeedbackHtmlForPost(
             Uri postUrl)
         {
             WebClient client = new WebClient();
@@ -1316,7 +1316,7 @@ all of the blog posts (including the categories, tags, and comments for each
 post) and is ready to be written to a file.
 
 ```
-static void Main(string[] args)
+        static void Main(string[] args)
         {
 
             ...
@@ -1333,7 +1333,7 @@ static void Main(string[] args)
 The **SaveBlogML** method is very simple...
 
 ```
-private static void SaveBlogML(
+        private static void SaveBlogML(
             BlogMLBlog blog,
             string filename)
         {

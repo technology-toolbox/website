@@ -81,7 +81,7 @@ The event handler 'OnPreRender' is not allowed in this page.
 The above error occurs when the master page contains something like the following:
 
 ```
-<asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
+            <asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
                 SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
                 RenderCurrentNodeAsLink="true"
                 SkipLinkText=""
