@@ -60,7 +60,9 @@ To create a rule that generates an alert whenever an error occurs in the Applica
 2. Click **Next**.
 8. On the **Configure Alerts**page:
 1. In the **Alert description** box, specify the following:
-**Source: $Data/EventSourceName$
+
+        **Source: $Data/EventSourceName$
+
 Event ID: $Data/EventDisplayNumber$
 Event Category: $Data/EventCategory$
 User: $Data/UserName$

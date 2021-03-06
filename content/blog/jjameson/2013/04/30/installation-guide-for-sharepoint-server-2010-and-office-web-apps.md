@@ -1006,6 +1006,7 @@ the farm:
 
 6. On the **Specify Farm Security Settings** page, type
    a passphrase, and then click **Next**.
+   
    Ensure that the passphrase meets the following criteria:
    
    - Contains at least eight characters

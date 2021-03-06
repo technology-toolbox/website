@@ -548,7 +548,7 @@ Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerNam
     
     
             For example:
-                
+            
 
 {{< console-block-start >}}
 
