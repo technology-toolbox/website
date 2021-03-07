@@ -16,9 +16,7 @@ tags: ["My System", "Core Development", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions), I introduced the concept of linking files in Visual Studio solutions.
 
@@ -37,12 +35,7 @@ If you right-click one of these warnings and then click **Show Error Help**,  yo
 {{< blockquote "font-italic" >}}
 
 **How to Fix Violations**
-
-To fix a violation of this rule, correct the spelling of the word or add the
-word to a custom dictionary named CustomDictionary.xml. Place the dictionary
-in the installation directory of the tool, the project directory, or in the
-directory associated with the tool under the user's profile (%USERPROFILE%\Application
-Data\...).
+To fix a violation of this rule, correct the spelling of the word or add the  	word to a custom dictionary named CustomDictionary.xml. Place the dictionary  	in the installation directory of the tool, the project directory, or in the  	directory associated with the tool under the user's profile (%USERPROFILE%\Application  	Data\...).
 
 {{< /blockquote >}}
 

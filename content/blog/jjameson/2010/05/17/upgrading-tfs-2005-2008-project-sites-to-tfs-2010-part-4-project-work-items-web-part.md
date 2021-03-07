@@ -57,7 +57,8 @@ WHERE
     [System.TeamProject] = @project
     AND
     (
-        [System.WorkItemType] <> 'Issue'OR [System.WorkItemType] <> 'Shared Steps'
+        [System.WorkItemType] <> 'Issue'
+	OR [System.WorkItemType] <> 'Shared Steps'
     )
 )
 ORDER BY [System.Id]

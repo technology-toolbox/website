@@ -276,7 +276,7 @@ Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv
     <div id="pageFooter">
       Copyright &copy; 2009.  Tugboat Coffee is a ficticious demonstration,
       handcrafted by <a href="http://simplebits.com/">SimpleBits</a>.
-</div> <!-- /pageFooter -->
+	</div> <!-- /pageFooter -->
   </div>
 </div>
 ```

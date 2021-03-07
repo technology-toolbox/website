@@ -512,7 +512,9 @@ function Main()
     If ($buildConfiguration -eq $null)
     {
         $buildConfiguration = "Release"
-    }Write-Debug "buildConfiguration: $buildConfiguration"
+    }
+
+	Write-Debug "buildConfiguration: $buildConfiguration"
 
     # For desktop builds, the WSP is created in the
     # ..\..\Web\bin\{Debug|Release} folder.
@@ -651,7 +653,8 @@ $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
 
-function WaitForSharePointTimerJobToFinish([Microsoft.SharePoint.Administration.SPJobDefinition] $job)
+function WaitForSharePointTimerJobToFinish(
+	[Microsoft.SharePoint.Administration.SPJobDefinition] $job)
 {
     If ($job -eq $null)
     {
@@ -668,12 +671,14 @@ function WaitForSharePointTimerJobToFinish([Microsoft.SharePoint.Administration.
         Write-Host -NoNewLine "."
         Start-Sleep -Seconds 5
     }
-    Write-Host
+
+	Write-Host
 
     Write-Host "The SharePoint timer job ($jobName) has finished."
 }
 
-function WaitForSolutionDeploymentJobsToFinish([string] $solutionName)
+function WaitForSolutionDeploymentJobsToFinish(
+	[string] $solutionName)
 {
     Write-Debug "solutionName: $solutionName"
 
@@ -985,7 +990,8 @@ function Main(
     $siteUrl = $webAppUrl + "/"
 
     DeactivateFeature "Fabrikam.Demo.Web_HomeSiteConfiguration" $siteUrl $force
-    DeactivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $forceDeactivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
+    DeactivateFeature "Fabrikam.Demo.Web_WebParts" $siteUrl $force
+	DeactivateFeature "Fabrikam.Demo.Web_WebAppConfiguration" $siteUrl $force
 }
 
 Main $force
@@ -1268,7 +1274,9 @@ function Main(
     If ($buildConfiguration -eq $null)
     {
         $buildConfiguration = "Release"
-    }Write-Debug "buildConfiguration: $buildConfiguration"
+    }
+
+	Write-Debug "buildConfiguration: $buildConfiguration"
 
     # For desktop builds, the WSP is created in the
     # ..\..\Web\bin\{Debug|Release} folder.

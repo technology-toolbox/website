@@ -14,9 +14,7 @@ tags: ["TFS"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Regardless of whether you call it a "mulligan", a "do over", or whatever, the  fact is you may encounter errors during your upgrade to Team Foundation Server (TFS)  2010 -- hopefully in your Development or Test environment first, not when upgrading  your Production environment -- and consequently you want to start over and perform  the upgrade again.
 
@@ -75,28 +73,26 @@ To attach the content database in SharePoint Server 2010 by using Windows Powers
 
 {{< console-block-start >}}
 
-Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt;
--WebApplication &lt;URL&gt; [-Updateuserexperience]
+Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer &lt;ServerName&gt;  		-WebApplication &lt;URL&gt; [-Updateuserexperience]
 
 {{< console-block-end >}}
 
-Where:
-
+    Where:
+    
     - <var>&lt;DatabaseName&gt;</var> is the name of the database you want 
-    to upgrade.
+    	to upgrade.
     - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
     - <var>&lt;URL&gt;</var> is the URL for the Web application that will 
-    host the sites.
+    	host the sites.
     - <var>-Updateuserexperience</var> specifies to update the sites with 
-    the new SharePoint user experience (part of Visual Upgrade). If you omit 
-    this parameter, the sites retain the old user experience after upgrade.
-
-For example:
+    	the new SharePoint user experience (part of Visual Upgrade). If you omit 
+    	this parameter, the sites retain the old user experience after upgrade.
+    
+    For example:
 
 {{< console-block-start >}}
 
-Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
--WebApplication http://cyclops-dev -Updateuserexperience
+Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV  		-WebApplication http://cyclops-dev -Updateuserexperience
 
 {{< console-block-end >}}
 

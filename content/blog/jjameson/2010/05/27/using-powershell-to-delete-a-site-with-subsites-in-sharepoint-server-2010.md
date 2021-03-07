@@ -15,9 +15,7 @@ tags: ["SharePoint 2010", "PowerShell"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 When using the ["DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I often find myself deleting sites  (in DEV and TEST environments) and subsequently re-activating features or running  some migration utility to recreate the site hierarchy.
 
@@ -91,16 +89,10 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 
 {{< blockquote "font-italic text-danger" >}}
 
-Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
-has subsites.
-
+Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that  	has subsites.
 At line:1 char:13
-
 + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false
-
-+ CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb)
-  [Remove-SPWeb], SPException
-
++ CategoryInfo : InvalidData: (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb)  	[Remove-SPWeb], SPException
 + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
 {{< /blockquote >}}

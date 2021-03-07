@@ -8,37 +8,17 @@ categories: ["Development", "Infrastructure"]
 tags: ["PowerShell"]
 ---
 
-After creating the code sample for my previous post, I realized the original
-zip file I provided contained quite a bit of "junk" (e.g. temporary object folders
-created during the build, a copy of one of the SharePoint assemblies in the
-"bin" folder, etc.). I've since updated the attachment on that post to reduce
-the size from 850 KB to a mere 134 KB.
+After creating the code sample for my previous post, I realized the original  	zip file I provided contained quite a bit of "junk" (e.g. temporary object folders  	created during the build, a copy of one of the SharePoint assemblies in the  	"bin" folder, etc.). I've since updated the attachment on that post to reduce  	the size from 850 KB to a mere 134 KB.
 
-However, there's a strong possibility this will happen again in the future
-with some other post, if I don't take the time to either document the process
-of "trimming the fat" before creating a zip file for a code sample or automate
-the process via PowerShell.
+However, there's a strong possibility this will happen again in the future  	with some other post, if I don't take the time to either document the process  	of "trimming the fat" before creating a zip file for a code sample or automate  	the process via PowerShell.
 
-Since I estimated the script would take only slightly longer to create than
-the documentation -- and also save considerable time over the long run -- I
-decided to go with the PowerShell option.
+Since I estimated the script would take only slightly longer to create than  	the documentation -- and also save considerable time over the long run -- I  	decided to go with the PowerShell option.
 
-I already assembled some PowerShell for a similar scenario last year (in
-order to quickly transfer the SharePoint solution that I was working on between
-environments). From the research I did back then, I recall there being a couple
-of approaches to creating a zip file in PowerShell. One is to use the
-[PowerShell Community Extensions](http://pscx.codeplex.com/) (or
-some other third-party solution), and the other is to combine out-of-the-box
-PowerShell with some scriptable COM objects from the Windows Shell (specifically
-the
-[**Shell**](http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094.aspx) and
-[**Folder**](http://msdn.microsoft.com/en-us/library/windows/desktop/bb787868.aspx) objects).
+I already assembled some PowerShell for a similar scenario last year (in  	order to quickly transfer the SharePoint solution that I was working on between  	environments). From the research I did back then, I recall there being a couple  	of approaches to creating a zip file in PowerShell. One is to use the 	[PowerShell Community Extensions](http://pscx.codeplex.com/) (or  	some other third-party solution), and the other is to combine out-of-the-box  	PowerShell with some scriptable COM objects from the Windows Shell (specifically  	the 	[**Shell**](http://msdn.microsoft.com/en-us/library/windows/desktop/bb774094.aspx) and 	[**Folder**](http://msdn.microsoft.com/en-us/library/windows/desktop/bb787868.aspx) objects).
 
-Imagine you have a folder (e.g. C:\NotBackedUp\Fabrikam) that you want to
-compress into a zip file (e.g. C:\NotBackedUp\Fabrikam.zip).
+Imagine you have a folder (e.g. C:\NotBackedUp\Fabrikam) that you want to  	compress into a zip file (e.g. C:\NotBackedUp\Fabrikam.zip).
 
-Assuming you have installed the PowerShell Community Extensions, you could
-simply execute the following in Windows PowerShell:
+Assuming you have installed the PowerShell Community Extensions, you could  	simply execute the following in Windows PowerShell:
 
 ```
 PS C:\Users\jjameson> {{< kbd "Import-Module Pscx" >}}
@@ -51,34 +31,29 @@ Mode           LastWriteTime       Length Name
 -a---     2/28/2012  5:00 AM      7698443 Fabrikam.zip
 ```
 
-However, what if you don't have the PowerShell Community Extensions installed
-(and, for whatever reason, you can't or don't want to install them)? In that
-case, it takes a little more work.
+However, what if you don't have the PowerShell Community Extensions installed  	(and, for whatever reason, you can't or don't want to install them)? In that  	case, it takes a little more work.
 
-If you Google "PowerShell zip files" you'll quickly discover a number of
-resources that show how to create a zip file using the **Set-Content** cmdlet, followed by the use of the **[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)** method on the **Folder** shell object. For
-example,
-[David Aiken's blog post](http://blogs.msdn.com/b/daiken/archive/2007/02/12/compress-files-with-windows-powershell-then-package-a-windows-vista-sidebar-gadget.aspx) shows the following:
+If you Google "PowerShell zip files" you'll quickly discover a number of  	resources that show how to create a zip file using the **Set-Content** cmdlet, followed by the use of the **[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)** method on the **Folder** shell object. For  	example, 	[David Aiken's blog post](http://blogs.msdn.com/b/daiken/archive/2007/02/12/compress-files-with-windows-powershell-then-package-a-windows-vista-sidebar-gadget.aspx) shows the following:
 
 ```
 function Add-Zip
 {
-param([string]$zipfilename)
+	param([string]$zipfilename)
 
-if(-not (test-path($zipfilename)))
-{
-	set-content $zipfilename ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
-	(dir $zipfilename).IsReadOnly = $false
-}
+	if(-not (test-path($zipfilename)))
+	{
+		set-content $zipfilename ("PK" + [char]5 + [char]6 + ("$([char]0)" * 18))
+		(dir $zipfilename).IsReadOnly = $false
+	}
 
-$shellApplication = new-object -com shell.application
-$zipPackage = $shellApplication.NameSpace($zipfilename)
+	$shellApplication = new-object -com shell.application
+	$zipPackage = $shellApplication.NameSpace($zipfilename)
 
-foreach($file in $input)
-{
+	foreach($file in $input)
+	{
             $zipPackage.CopyHere($file.FullName)
             Start-sleep -milliseconds 500
-}
+	}
 }
 ```
 
@@ -106,29 +81,13 @@ At line:13 char:33
   **CopyHere** operation to complete) seems a little "dicey"
   to me. In other words, how do you know the zip operation completed successfully?
 
-A different approach is to place the call to **Start-Sleep**
-inside a loop that checks the number of items in the zip file against the expected
-number (as shown in
-[another blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html)). This is the approach I used last year and it seemed
-to work just fine -- most of the time.
+A different approach is to place the call to **Start-Sleep**  	inside a loop that checks the number of items in the zip file against the expected  	number (as shown in 	[another blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html)). This is the approach I used last year and it seemed  	to work just fine -- most of the time.
 
-As I mentioned before, the **CopyHere** method runs asynchronously.
-When the **CopyHere** operation is running, a dialog is displayed
-with a **Cancel** button -- and if you click this by mistake (or
-press {{< kbd "Enter" >}} when the dialog box has the focus) then, well, let's
-just say that you aren't on the "Happy Path" anymore.
+As I mentioned before, the **CopyHere** method runs asynchronously.  	When the **CopyHere** operation is running, a dialog is displayed  	with a **Cancel** button -- and if you click this by mistake (or  	press {{< kbd "Enter" >}} when the dialog box has the focus) then, well, let's  	just say that you aren't on the "Happy Path" anymore.
 
-To make this process more robust, I decided to use a different approach --
-specifically, counting all of the files and folders in the zip file and comparing
-it to the expected number. The approach shown in the
-[other blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html) I referred to before only counts the items in the "root"
-of the zip file (which, honestly, does seem to work reliably -- even when you
-click the **Cancel** button during the **CopyHere** operation). However, I wanted a higher degree of confidence that wasn't
-based on the assumption that cancelling the **CopyHere** operation
-is treated as a "transaction."
+To make this process more robust, I decided to use a different approach --  	specifically, counting all of the files and folders in the zip file and comparing  	it to the expected number. The approach shown in the 	[other blog post](http://mysticdotnet.blogspot.com/2010/04/compression-with-powershell.html) I referred to before only counts the items in the "root"  	of the zip file (which, honestly, does seem to work reliably -- even when you  	click the **Cancel** button during the **CopyHere** operation). However, I wanted a higher degree of confidence that wasn't  	based on the assumption that cancelling the **CopyHere** operation  	is treated as a "transaction."
 
-First, we need a function to create a zip file for a specific folder (a.k.a.
-directory):
+First, we need a function to create a zip file for a specific folder (a.k.a.  	directory):
 
 ```
 function ZipFolder(
@@ -169,8 +128,7 @@ function ZipFolder(
     ...}
 ```
 
-The `WaitForZipOperationToFinish`
-function is where the "magic" happens:
+The `WaitForZipOperationToFinish`  	function is where the "magic" happens:
 
 ```
 function WaitForZipOperationToFinish(
@@ -231,9 +189,7 @@ function WaitForZipOperationToFinish(
 }
 ```
 
-I use a variable "wait interval" to account for scenarios ranging from very
-small folders to relatively large folders (but still assuming the zip operation
-should complete in less than 60 seconds):
+I use a variable "wait interval" to account for scenarios ranging from very  	small folders to relatively large folders (but still assuming the zip operation  	should complete in less than 60 seconds):
 
 ```
 function GetWaitInterval(
@@ -254,8 +210,7 @@ function GetWaitInterval(
 }
 ```
 
-To determine if the **CopyHere** operation is running, I check
-to see if the zip file can be locked exclusively:
+To determine if the **CopyHere** operation is running, I check  	to see if the zip file can be locked exclusively:
 
 ```
 function IsFileLocked(
@@ -297,8 +252,7 @@ function IsFileLocked(
 }
 ```
 
-Once the zip file is no longer locked by the zip operation, it is time to
-count the total number of files and folders in a zip file:
+Once the zip file is no longer locked by the zip operation, it is time to  	count the total number of files and folders in a zip file:
 
 ```
 function CountZipItems(

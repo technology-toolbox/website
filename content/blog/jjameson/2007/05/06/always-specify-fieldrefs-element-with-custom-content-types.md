@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 I came across a nasty bug earlier this week in Microsoft Office SharePoint Server  (MOSS) 2007 -- especially nasty because troubleshooting it primarily involved trial  and error since there were no error messages displayed on the page, in the SharePoint  log, or in the Windows event logs. I even attached the debugger and set it to break  on all exceptions, but had no luck there either.
 

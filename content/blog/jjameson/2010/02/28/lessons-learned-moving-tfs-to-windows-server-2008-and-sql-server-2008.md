@@ -15,9 +15,7 @@ tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TF
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 I've been a bad blogger this month.
 
@@ -52,8 +50,7 @@ Note that I didn't attempt to restore the **TfsWarehouse** Analysis  Services (O
 
 {{< console-block-start >}}
 
-SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml
--a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
+SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml  	-a TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
 
 {{< console-block-end >}}
 
@@ -172,8 +169,7 @@ You might be wondering why I chose to use a domain account in the first place.  
 
 {{< blockquote "font-italic" >}}
 
-type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**
-in **Account Name** for every service.
+type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**  	in **Account Name** for every service.
 
 {{< /blockquote >}}
 
@@ -246,9 +242,7 @@ This was necessary to avoid the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-System.InvalidOperationException: Client found response content type of '',
-but expected 'text/xml'.
-
+System.InvalidOperationException: Client found response content type of '',  	but expected 'text/xml'.
 The request failed with an empty response.
 
 {{< /blockquote >}}

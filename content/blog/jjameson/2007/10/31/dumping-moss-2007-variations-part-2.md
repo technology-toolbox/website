@@ -14,9 +14,7 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) of this series, I talked about my current customer's decision to abandon  the use of the variations feature in Microsoft Office SharePoint Server (MOSS) 2007  after we encountered several major issues prior to deployment. The first issue that  I described is the incompatibility of out-of-the-box (OOTB) content types and variations.  Refer to the previous post for a simple set of repro steps to break the variations  feature by changing the content type of pages.
 
@@ -63,12 +61,8 @@ ON AllUserData
 
 A couple of things to note about the index:
 
-- The naming convention implies that this is not intended to be final manifestation
-  of this fix (you cannot add an index -- or make any other changes -- to
-  your SharePoint database unless it has been approved by PSS, unless you
-  don't object to falling under the "unsupported" moniker)
-- Since **tp\_DirName** specifies a server relative URL, this
-  was chosen as the first column in the index -- rather than **tp\_SiteId**.
+- The naming convention implies that this is not intended to be final manifestation  		of this fix (you cannot add an index -- or make any other changes -- to  		your SharePoint database unless it has been approved by PSS, unless you  		don't object to falling under the "unsupported" moniker)
+- Since **tp\_DirName** specifies a server relative URL, this  		was chosen as the first column in the index -- rather than **tp\_SiteId**.
 - In environments where the content database only contains a single site collection
   (such as ours), including **tp\_SiteId** provides essentially
   no value (i.e. it does not influence the selectivity of the index)

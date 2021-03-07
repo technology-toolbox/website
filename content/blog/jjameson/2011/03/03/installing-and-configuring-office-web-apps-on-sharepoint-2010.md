@@ -15,9 +15,7 @@ tags: ["Infrastructure", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In the current sprint of the project I'm working on, we are deploying Office  Web Apps to support an enterprise collaboration platform based on SharePoint Server  2010.
 
@@ -105,15 +103,9 @@ It is recommended to isolate the content database used for the Office Web Apps  
 
 > **Important**
 >
-> You must start a new instance of the SharePoint 2010 Management Shell
-> after installing the Office Web Apps in order to use the new PowerShell
-> cmdlets (e.g.
-> [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
+> You must start a new instance of the SharePoint 2010 Management Shell  		after installing the Office Web Apps in order to use the new PowerShell  		cmdlets (e.g. 		[Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
 >
-> Also note that you may need to wait a few minutes (after installing Office
-> Web Apps or rebuilding the Web application) before performing the following
-> procedure (for the SharePoint timer job to configure the cache on the site
-> collection before moving it to a separate content database).
+> Also note that you may need to wait a few minutes (after installing Office  		Web Apps or rebuilding the Web application) before performing the following  		procedure (for the SharePoint timer job to configure the cache on the site  		collection before moving it to a separate content database).
 
 The following procedures are used to reduce the Office Web Apps cache size to  30 GB, move the cache to a new content database, and expand the corresponding database  files.
 

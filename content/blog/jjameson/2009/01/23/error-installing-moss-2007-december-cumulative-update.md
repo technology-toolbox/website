@@ -15,9 +15,7 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Earlier this week I built a new Microsoft Office SharePoint Server (MOSS) 2007  development VM using a fresh install of Windows Server 2008, SQL Server 2008, and  Visual Studio 2008. The process wasn't quite as smooth as I had hoped.
 
@@ -31,38 +29,7 @@ C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd upgrade -inplace b2b -wait" >}}
 
 {{< sample-block >}}
 
-Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\
-\
-Performing configuration task 1 of 4\
-Initializing SharePoint Products and Technologies upgrade...\
-\
-Successfully initialized SharePoint Products and Technologies upgrade.\
-\
-Performing configuration task 2 of 4\
-Initiating the upgrade sequence...\
-\
-Successfully initiated the upgrade sequence.\
-\
-Performing configuration task 3 of 4\
-Upgrading SharePoint Products and Technologies...\
-\
-Failed to upgrade SharePoint Products and Technologies.\
-\
-An exception of type Microsoft.SharePoint.Upgrade.SPUpgradeException was thrown.
-Additional exception information: Upgrade completed with errors. Review the
-upgrade.log file located in C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Logs\Upgrade.log. The number of errors and warnings is
-listed at the end of the upgrade log file.\
-\
-Total number of configuration settings run: 3\
-Total number of successful configuration settings: 2\
-Total number of unsuccessful configuration settings: 1\
-Successfully stopped the configuration of SharePoint Products and Technologies.\
-Configuration of SharePoint Products and Technologies failed. Configuration
-must be performed before you use SharePoint Products and Technologies. For further
-details, see the diagnostic log located at C:\Program Files\Common Files\Microsoft
-Shared\Web Server Extensions\12\LOGS\PSCDiagnostics\_1\_19\_2009\_6\_33\_30\_5\_252811372.log
-and the application event log.\
+Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\ 	\ 	Performing configuration task 1 of 4\ 	Initializing SharePoint Products and Technologies upgrade...\ 	\ 	Successfully initialized SharePoint Products and Technologies upgrade.\ 	\ 	Performing configuration task 2 of 4\ 	Initiating the upgrade sequence...\ 	\ 	Successfully initiated the upgrade sequence.\ 	\ 	Performing configuration task 3 of 4\ 	Upgrading SharePoint Products and Technologies...\ 	\ 	Failed to upgrade SharePoint Products and Technologies.\ 	\ 	An exception of type Microsoft.SharePoint.Upgrade.SPUpgradeException was thrown.  	Additional exception information: Upgrade completed with errors. Review the  	upgrade.log file located in C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Logs\Upgrade.log. The number of errors and warnings is  	listed at the end of the upgrade log file.\ 	\ 	Total number of configuration settings run: 3\ 	Total number of successful configuration settings: 2\ 	Total number of unsuccessful configuration settings: 1\ 	Successfully stopped the configuration of SharePoint Products and Technologies.\ 	Configuration of SharePoint Products and Technologies failed. Configuration  	must be performed before you use SharePoint Products and Technologies. For further  	details, see the diagnostic log located at C:\Program Files\Common Files\Microsoft  	Shared\Web Server Extensions\12\LOGS\PSCDiagnostics\_1\_19\_2009\_6\_33\_30\_5\_252811372.log  	and the application event log.\
 
 {{< /sample-block >}}
 
@@ -91,65 +58,7 @@ C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd installfeatures" >}}
 
 {{< sample-block >}}
 
-Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\
-\
-Performing configuration task 1 of 5\
-Initializing SharePoint Products and Technologies upgrade...\
-\
-Successfully initialized SharePoint Products and Technologies upgrade.\
-\
-Performing configuration task 2 of 5\
-Initiating the upgrade sequence...\
-\
-Successfully initiated the upgrade sequence.\
-\
-Performing configuration task 3 of 5\
-Registering SharePoint features...\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\ExpirationWorkflow\Feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\ReviewWorkflows\Feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\S2BaseSiteStapling\feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\S2SearchAdmin\feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\S2SiteAdmin\feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\SearchServerWizardFeature\Feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\SignaturesWorkflow\Feature.xml.\
-\
-Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web
-Server Extensions\12\Template\Features\TranslationWorkflow\Feature.xml.\
-\
-Feature installation has determined that there are no new features that require
-installation.\
-\
-Successfully registered SharePoint features.\
-\
-Performing configuration task 4 of 5\
-Upgrading SharePoint Products and Technologies...\
-\
-Successfully upgraded SharePoint Products and Technologies.\
-\
-Performing configuration task 5 of 5\
-Finalizing the SharePoint Products and Technologies configuration...\
-\
-Successfully completed the SharePoint Products and Technologies configuration.\
-\
-Total number of configuration settings run: 5\
-Total number of successful configuration settings: 5\
-Total number of unsuccessful configuration settings: 0\
-Successfully stopped the configuration of SharePoint Products and Technologies.\
-Configuration of the SharePoint Products and Technologies has succeeded.\
+Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\ 	\ 	Performing configuration task 1 of 5\ 	Initializing SharePoint Products and Technologies upgrade...\ 	\ 	Successfully initialized SharePoint Products and Technologies upgrade.\ 	\ 	Performing configuration task 2 of 5\ 	Initiating the upgrade sequence...\ 	\ 	Successfully initiated the upgrade sequence.\ 	\ 	Performing configuration task 3 of 5\ 	Registering SharePoint features...\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\ExpirationWorkflow\Feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\ReviewWorkflows\Feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\S2BaseSiteStapling\feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\S2SearchAdmin\feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\S2SiteAdmin\feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\SearchServerWizardFeature\Feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\SignaturesWorkflow\Feature.xml.\ 	\ 	Successfully installed feature C:\Program Files\Common Files\Microsoft Shared\Web  	Server Extensions\12\Template\Features\TranslationWorkflow\Feature.xml.\ 	\ 	Feature installation has determined that there are no new features that require  	installation.\ 	\ 	Successfully registered SharePoint features.\ 	\ 	Performing configuration task 4 of 5\ 	Upgrading SharePoint Products and Technologies...\ 	\ 	Successfully upgraded SharePoint Products and Technologies.\ 	\ 	Performing configuration task 5 of 5\ 	Finalizing the SharePoint Products and Technologies configuration...\ 	\ 	Successfully completed the SharePoint Products and Technologies configuration.\ 	\ 	Total number of configuration settings run: 5\ 	Total number of successful configuration settings: 5\ 	Total number of unsuccessful configuration settings: 0\ 	Successfully stopped the configuration of SharePoint Products and Technologies.\ 	Configuration of the SharePoint Products and Technologies has succeeded.\
 
 {{< /sample-block >}}
 
@@ -163,33 +72,7 @@ C:\NotBackedUp\Temp&gt;{{< kbd "psconfig -cmd upgrade -inplace b2b -wait" >}}
 
 {{< sample-block >}}
 
-Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\
-\
-Performing configuration task 1 of 4\
-Initializing SharePoint Products and Technologies upgrade...\
-\
-Successfully initialized SharePoint Products and Technologies upgrade.\
-\
-Performing configuration task 2 of 4\
-Initiating the upgrade sequence...\
-\
-Successfully initiated the upgrade sequence.\
-\
-Performing configuration task 3 of 4\
-Upgrading SharePoint Products and Technologies...\
-\
-Successfully upgraded SharePoint Products and Technologies.\
-\
-Performing configuration task 4 of 4\
-Finalizing the SharePoint Products and Technologies configuration...\
-\
-Successfully completed the SharePoint Products and Technologies configuration.\
-\
-Total number of configuration settings run: 4\
-Total number of successful configuration settings: 4\
-Total number of unsuccessful configuration settings: 0\
-Successfully stopped the configuration of SharePoint Products and Technologies.\
-Configuration of the SharePoint Products and Technologies has succeeded.
+Copyright (C) Microsoft Corporation 2005. All rights reserved.ion 12.0.6300.5000\ 	\ 	Performing configuration task 1 of 4\ 	Initializing SharePoint Products and Technologies upgrade...\ 	\ 	Successfully initialized SharePoint Products and Technologies upgrade.\ 	\ 	Performing configuration task 2 of 4\ 	Initiating the upgrade sequence...\ 	\ 	Successfully initiated the upgrade sequence.\ 	\ 	Performing configuration task 3 of 4\ 	Upgrading SharePoint Products and Technologies...\ 	\ 	Successfully upgraded SharePoint Products and Technologies.\ 	\ 	Performing configuration task 4 of 4\ 	Finalizing the SharePoint Products and Technologies configuration...\ 	\ 	Successfully completed the SharePoint Products and Technologies configuration.\ 	\ 	Total number of configuration settings run: 4\ 	Total number of successful configuration settings: 4\ 	Total number of unsuccessful configuration settings: 0\ 	Successfully stopped the configuration of SharePoint Products and Technologies.\ 	Configuration of the SharePoint Products and Technologies has succeeded.
 
 {{< /sample-block >}}
 

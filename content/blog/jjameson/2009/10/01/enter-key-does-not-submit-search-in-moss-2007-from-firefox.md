@@ -14,9 +14,7 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 One issue that has "bitten" me on more than one occasion is the fact that the [SearchBoxEx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.portal.webcontrols.searchboxex.aspx) control in Microsoft Office SharePoint Server (MOSS) 2007 does not  work consistently across different browsers. Specifically, I am referring to the  issue where pressing the {{< kbd "Enter" >}} key in Mozilla Firefox does not initiate  the search but rather just refreshes the current page. The workaround is to have  Firefox users always click the "Go Search" button to submit the search terms and  view search results.
 

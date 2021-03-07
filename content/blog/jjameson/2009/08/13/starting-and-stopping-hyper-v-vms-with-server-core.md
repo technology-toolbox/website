@@ -14,9 +14,7 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Last week before heading out to the airport for my SharePoint 2010 training,  I powered down the ["Jameson
 Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (i.e. the four computers running in my home office). Since I would  be gone for almost 8 full days, it didn't make sense to waste the electricity just  so my SQL Server could periodically send email messages to me about backups being  completed successfully throughout the day. [Note that my wife uses only the Media  Center in the family room and her laptop to fulfill all of her computing needs (primarily  sending and receiving email, as well as surfing Facebook) and my daughter is too  young to use any computer by herself.]

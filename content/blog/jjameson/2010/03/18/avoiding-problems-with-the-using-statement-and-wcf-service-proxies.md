@@ -15,9 +15,7 @@ tags: ["Simplify", "WCF"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 I encountered a rather nasty issue yesterday on my current project -- a customer  portal built on Microsoft Office SharePoint Server (MOSS) 2007 that integrates with  multiple external systems via Web services.
 

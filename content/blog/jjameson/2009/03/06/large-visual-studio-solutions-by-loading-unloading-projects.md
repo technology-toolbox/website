@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 As I noted in my [previous post](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), I typically work with "large" Visual Studio solutions. Note that  I put this in quotes, because the definition of "large" will likely vary widely  based on your individual experience. Note that I'm not referring to "large" like  the source for the .NET Framework itself, but rather "large" like most enterprise  customers that I typically engage with. If you want a number, then let's say somewhere  in the range of 50-75 projects in a single Visual Studio solution.
 

@@ -15,9 +15,7 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 As I mentioned in a [previous post](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too), some customers prefer to show page descriptions in search results  instead of the `HitHighlightedSummary` rendered by default in Microsoft  Office SharePoint Server (MOSS) 2007.
 
@@ -31,8 +29,7 @@ If you've read some of my previous posts -- or if you've worked with me personal
 {{< blockquote "font-italic" >}}
 
 Everything should be as simple as possible, but not simpler.
-
-    -- Albert Einstein
+-- Albert Einstein
 
 {{< /blockquote >}}
 

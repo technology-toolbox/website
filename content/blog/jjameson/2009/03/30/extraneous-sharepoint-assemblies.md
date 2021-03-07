@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 If you develop solutions for Microsoft Office SharePoint Server (MOSS) 2007,  you may notice that certain SharePoint assemblies always get copied to your Visual  Studio project output folder even though these referenced assemblies are configured  with **Copy Local** = **False**. Since these assemblies  should always refer to the ones installed by MOSS 2007 on the destination environment,  you obviously don't want to deploy these as part of your solution.
 

@@ -107,7 +107,7 @@ Fortunately, that's when I discovered Subtext.
 > that you're going to write your own blogging engine, then Subtext is for
 > you.
 >
-> - [http://subtextproject.com](http://subtextproject.com)
+>       - [http://subtextproject.com](http://subtextproject.com)
 
 When I read these words, I got goose bumps. Okay...not really...but they certainly  did resonate with me based on my recent experience.
 

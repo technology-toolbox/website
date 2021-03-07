@@ -15,9 +15,7 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 I'm building out a new virtualized environment using Windows Server 2008 and  Hyper-V. In order to maximize performance and follow recommended best practices,  I am using Server Core as the host OS.
 
@@ -37,8 +35,7 @@ A quick Windows Live Search for ["Disk Management could not start Virtual Disk S
 
 {{< console-block-start >}}
 
-netsh advfirewall firewall set rule group="Remote Volume Management" new
-enable=yes
+netsh advfirewall firewall set rule group="Remote Volume Management" new  	enable=yes
 
 {{< console-block-end >}}
 

@@ -14,9 +14,7 @@ tags: ["Windows Server", "Windows 7", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/01/script-to-clear-and-save-event-logs.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/01/script-to-clear-and-save-event-logs.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 As I was writing [my first post earlier this morning](/blog/jjameson/2011/03/01/script-to-restart-sharepoint-2010-services), I wondered if I had previously shared the  script I use to quickly clear the event logs on a server (but saving them first  -- just in case I need to go back and retrieve something from the "archive").
 
@@ -130,19 +128,7 @@ C:\&gt;{{< kbd "cscript \"\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.v
 
 {{< sample-block >}}
 
-Microsoft (R) Windows Script Host Version 5.8\
-Copyright (C) Microsoft Corporation. All rights reserved.\
-\
-Clearing event logs on localhost...\
-Clearing 'Application' event log on localhost...\
-Clearing 'HardwareEvents' event log on localhost...\
-Clearing 'Internet Explorer' event log on localhost...\
-Clearing 'Key Management Service' event log on localhost...\
-Clearing 'OAlerts' event log on localhost...\
-Clearing 'Security' event log on localhost...\
-Clearing 'System' event log on localhost...\
-Clearing 'Windows PowerShell' event log on localhost...\
-Done
+Microsoft (R) Windows Script Host Version 5.8\ 	Copyright (C) Microsoft Corporation. All rights reserved.\ 	\ 	Clearing event logs on localhost...\ 	Clearing 'Application' event log on localhost...\ 	Clearing 'HardwareEvents' event log on localhost...\ 	Clearing 'Internet Explorer' event log on localhost...\ 	Clearing 'Key Management Service' event log on localhost...\ 	Clearing 'OAlerts' event log on localhost...\ 	Clearing 'Security' event log on localhost...\ 	Clearing 'System' event log on localhost...\ 	Clearing 'Windows PowerShell' event log on localhost...\ 	Done
 
 {{< /sample-block >}}
 

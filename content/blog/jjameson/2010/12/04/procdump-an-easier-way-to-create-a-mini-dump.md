@@ -15,9 +15,7 @@ tags: ["Core Development", "Debugging", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/04/procdump-an-easier-way-to-create-a-mini-dump.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/04/procdump-an-easier-way-to-create-a-mini-dump.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In a previous [post](/blog/jjameson/2010/10/24/recovering-your-work-after-an-expression-web-crash), I mentioned an issue I've been having with Expression Web 4 crashing on  me. In that post, I mentioned a few ways that you can create a mini-dump for a process  (e.g. with Visual Studio, WinDbg, or ADPlus).
 

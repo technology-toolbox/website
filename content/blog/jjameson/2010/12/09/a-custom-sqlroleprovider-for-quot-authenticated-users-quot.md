@@ -15,9 +15,7 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Prior to the recent "v2" release on my current project, we had been using the  ASP.NET **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)** to manage the various roles used by the Web site.
 
@@ -28,16 +26,12 @@ Users** to restrict access to specific content. Unfortunately, if you want  to d
 
 Shortly after we identified the root cause of the issue I mentioned earlier,  I created a work item in Team Foundation Server to come up with a solution for avoiding  this issue in the future:
 
-> **Title:** Membership in the "Authenticated Users" role should
-> be implicit
+> **Title:** Membership in the "Authenticated Users" role should  	be implicit
 >
 > **Description:
-> ** Administrators shouldn't have to explicitly add users to the "Authenticated
-> Users" role. Instead, membership in this role should be implicit, since anyone
-> that specifies a username/password is considered "authenticated".
+> ** Administrators shouldn't have to explicitly add users to the "Authenticated  	Users" role. Instead, membership in this role should be implicit, since anyone  	that specifies a username/password is considered "authenticated".
 >
-> Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we
-> are currently using doesn't function this way.
+> Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we  	are currently using doesn't function this way.
 
 In the "v2" solution, I created a custom role provider that automatically manages  the **Authenticated Users** role (in other words, administrators do  not need to create the role in the underlying database or explicitly add users to  the role).
 
@@ -133,14 +127,9 @@ As I mentioned before, we were previously using the **SqlRoleProvider**  and thu
 
 After overriding a few more methods (e.g. **DeleteRole**), I then  swapped out the **SqlRoleProvider** with the custom role provider.  That's when I encountered the following error in IIS Manager (after clicking **.NET Roles**):
 
-> This feature cannot be used because the default provider is not a trusted
-> provider.
+> This feature cannot be used because the default provider is not a trusted  	provider.
 >
-> You can use this feature only when the default provider is a trusted provider.
-> If you are a server administrator, you can make a provider a trusted provider
-> by adding the provider type to the trusted providers list in the Administration.config
-> file. The provider has to be strongly typed and added to the GAC (Global Assembly
-> Cache).
+> You can use this feature only when the default provider is a trusted provider.  	If you are a server administrator, you can make a provider a trusted provider  	by adding the provider type to the trusted providers list in the Administration.config  	file. The provider has to be strongly typed and added to the GAC (Global Assembly  	Cache).
 
 I then added the following steps to the installation guide:
 

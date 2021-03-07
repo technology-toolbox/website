@@ -14,9 +14,7 @@ tags: ["My System", "Core Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years), I extolled my love of typed DataSets in .NET because they are  not only quick to design and update, but also very easy to understand. Essentially,  if you can read an entity-relationship model (&agrave; la ERwin or a Visio database  diagram) -- which I suspect nearly all developers can -- then you can discern quite  a bit of information from a typed DataSet.
 

@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "SQL Server"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 A couple of weeks ago I was troubleshooting a performance problem with the variations  feature in Microsoft Office SharePoint Server (MOSS) 2007 and I needed to copy the  content database to another environment for further analysis and testing. An easy  (an unobtrusive) way to "snapshot" a database and copy it to another environment  is to create a backup with the **COPY\_ONLY** option:
 
@@ -33,16 +31,9 @@ From SQL Server 2005 Books Online:
 
 {{< blockquote "font-italic" >}}
 
-Taking a backup normally changes the database, in turn affecting other backups
-and how they are restored. Sometimes, however, a backup must be taken for a
-special purpose that should not affect the overall backup and restore procedures
-for the database.
+Taking a backup normally changes the database, in turn affecting other backups  	and how they are restored. Sometimes, however, a backup must be taken for a  	special purpose that should not affect the overall backup and restore procedures  	for the database.
 
-A data backup is normally a base backup for one or more differential backups
-taken after it. Microsoft SQL Server 2005 introduces support for creating copy-only
-backups, which do not affect the normal sequence of backups. Therefore, unlike
-other backups, a copy-only backup does not impact the overall backup and restore
-procedures for the database.
+A data backup is normally a base backup for one or more differential backups  	taken after it. Microsoft SQL Server 2005 introduces support for creating copy-only  	backups, which do not affect the normal sequence of backups. Therefore, unlike  	other backups, a copy-only backup does not impact the overall backup and restore  	procedures for the database.
 
 {{< /blockquote >}}
 

@@ -15,9 +15,7 @@ tags: ["SharePoint 2010", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 A couple of years ago, I shared a script ([Restart
 SharePoint Services.cmd](/blog/jjameson/2009/03/26/script-to-restart-sharepoint-services)) for restarting the various services in Microsoft Office  SharePoint Server (MOSS) 2007.
@@ -74,9 +72,7 @@ Also note that, depending on your SharePoint configuration, you may see messages
 
 {{< sample-block >}}
 
-The SharePoint Foundation Search V4 service is not started.\
-\
-More help is available by typing NET HELPMSG 3521.
+The SharePoint Foundation Search V4 service is not started.\ 	\ 	More help is available by typing NET HELPMSG 3521.
 
 {{< /sample-block >}}
 
@@ -88,10 +84,7 @@ More help is available by typing NET HELPMSG 3521.
 
 {{< sample-block >}}
 
-System error 1058 has occurred.\
-\
-The service cannot be started, either because it is disabled or because it has
-no enabled devices associated with it.
+System error 1058 has occurred.\ 	\ 	The service cannot be started, either because it is disabled or because it has  	no enabled devices associated with it.
 
 {{< /sample-block >}}
 

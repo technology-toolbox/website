@@ -15,17 +15,13 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 For a couple of months now, I have been using the following command to add myself  to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from a different  server:
 
 {{< console-block-start >}}
 
-stsadm.exe -o addpermissionpolicy -url
-[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin
-{DOMAIN\username} -permissionlevel "Full Control"
+stsadm.exe -o addpermissionpolicy -url 	[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin  	{DOMAIN\username} -permissionlevel "Full Control"
 
 {{< console-block-end >}}
 
@@ -37,9 +33,7 @@ I initially suggested the following command:
 
 {{< console-block-start >}}
 
-stsadm.exe -o addpermissionpolicy -url
-[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin
-"NT AUTHORITY\Authenticated Users" -permissionlevel "Read"
+stsadm.exe -o addpermissionpolicy -url 	[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin  	"NT AUTHORITY\Authenticated Users" -permissionlevel "Read"
 
 {{< console-block-end >}}
 
@@ -67,10 +61,7 @@ The output is as follows:
 
 {{< sample-block >}}
 
-Full Control\
-Full Read\
-Deny Write\
-Deny All
+Full Control\ 	Full Read\ 	Deny Write\ 	Deny All
 
 {{< /sample-block >}}
 
@@ -80,9 +71,7 @@ Therefore the command that I should have suggested to my colleague is:
 
 {{< console-block-start >}}
 
-stsadm.exe -o addpermissionpolicy -url
-[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin
-"NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
+stsadm.exe -o addpermissionpolicy -url 	[http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin  	"NT AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
 
 {{< console-block-end >}}
 

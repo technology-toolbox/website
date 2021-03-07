@@ -15,9 +15,7 @@ tags: ["Core Development", "WSS v2"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 > **Update (2008-04-07)**
 >
@@ -79,9 +77,7 @@ The overall project status displayed on the dashboard is simply a Content Editor
 The **Project Summary** Web Part on the dashboard began as a simple List View  Web Part using the following criteria:
 
 > **Current** is equal to **Yes**
->
 > And **Exit Criteria** is equal to **Yes**
->
 > And **Iteration** is equal to **Project\v1.0\M0**
 
 Note that the **Exit Criteria** field is used to denote work items as significant  deliverables or milestones (thereby excluding less important work items from the **Project Summary**). Also note that **Iteration** is used to filter important  items that are not scheduled to be worked on until a later phase.
@@ -116,9 +112,7 @@ Note that the image paths are hard-coded to use a picture library (named "Image 
 The **Accomplishments** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
 
 > **Current** is equal to **Yes**
->
 > And **Status** is equal to **Closed**
->
 > And **ModifiedFilter** is greater than or equal to **[Today]**
 
 Note that **ModifiedFilter** is a calculated column simply used to filter  out items closed more than a week ago.
@@ -128,7 +122,6 @@ Note that **ModifiedFilter** is a calculated column simply used to filter  out i
 The **Top 10 Issues** Web Part on the dashboard is a simple List View Web  Part using the following criteria:
 
 > **Current** is equal to **Yes**
->
 > And **Blocked** is equal to **Yes**
 
 Note that the **Blocked** field indicates there is an issue in completing  the work item.
@@ -139,9 +132,7 @@ The criteria for **Priorities/Milestones** Web Part is similar to the **Project
 Summary** Web Part:
 
 > **Current** is equal to **Yes**
->
 > And **Exit Criteria** is equal to **Yes**
->
 > And **Status** is not equal to **Closed**
 
 Also note that grouping is used to loosely sort the major deliverables and milestones.

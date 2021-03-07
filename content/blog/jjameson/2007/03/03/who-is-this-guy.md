@@ -15,9 +15,7 @@ tags: ["Personal"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Ugh! I reserved my MSDN blog address in May of 2005 and almost two years later  I am sitting down to author my first blog post.
 

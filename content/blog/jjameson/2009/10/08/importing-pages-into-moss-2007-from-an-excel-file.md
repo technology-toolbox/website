@@ -14,9 +14,7 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64), I briefly introduced the concept of a utility to import pages  into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file. This  can be very useful for Development and Test environments (where you frequently rebuild  the sites during the development process), as well as when migrating legacy Web  sites to a Production environment -- or whenever a "quick and dirty" process is  deemed sufficient for the business needs.
 

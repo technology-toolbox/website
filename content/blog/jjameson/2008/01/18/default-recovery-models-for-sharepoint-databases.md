@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Okay, I haven't blogged in over 7 weeks -- but hey, I was on vacation for 3 of  them -- and I must warn you upfront that this post isn't exactly a "zinger" filled  with juicy tidbits, recommendations, or workarounds. Rather, I simply can't seem  to remember what Microsoft Office SharePoint Server (MOSS) 2007 sets the recovery  model to for the various databases it creates. Most of the time you don't really  care -- but around 1:00 AM this morning I had just wrapped up completely rebuilding  our Development environment (DEV) to cleanup the "junk" that tends to accumulate  over time as various developers work on their respective features and deploy and  configure them in an integrated environment. Now it's time to start migrating some  content into the freshly created sites. However, before I start running the content  migration utilities...
 

@@ -9,23 +9,12 @@ categories: ["Development", "SharePoint"]
 tags: ["Core Development", "MOSS 2007", "PowerShell", "SharePoint 2010", "Visual Studio"]
 ---
 
-In
-[my post from earlier today](/blog/jjameson/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3), I noted how the code coverage analysis feature
-in Visual Studio 2010 is so easy to configure there's really no excuse not to
-use it -- provided your test projects target .NET Framework 4. However if, like
-me, you need to target .NET 3.5 (e.g. when developing for SharePoint 2010),
-then the instructions in the Visual Studio documentation for
-[configuring
+In 	[my post from earlier today](/blog/jjameson/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3), I noted how the code coverage analysis feature  	in Visual Studio 2010 is so easy to configure there's really no excuse not to  	use it -- provided your test projects target .NET Framework 4. However if, like  	me, you need to target .NET 3.5 (e.g. when developing for SharePoint 2010),  	then the instructions in the Visual Studio documentation for 	[configuring
 code coverage](http://msdn.microsoft.com/en-us/library/dd504821.aspx) simply don't work.
 
-Instead of using the Code Coverage data diagnostic adapter within the Visual
-Studio IDE, you need to instrument your .NET 3.5 assemblies "manually" using
-[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx),
-and subsequently start/stop the code coverage profiler using
-[VSPerfCmd](http://msdn.microsoft.com/en-us/library/ms182403.aspx).
+Instead of using the Code Coverage data diagnostic adapter within the Visual  	Studio IDE, you need to instrument your .NET 3.5 assemblies "manually" using 	[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx),  	and subsequently start/stop the code coverage profiler using 	[VSPerfCmd](http://msdn.microsoft.com/en-us/library/ms182403.aspx).
 
-To make this process relatively painless, I created a PowerShell script to
-perform the following:
+To make this process relatively painless, I created a PowerShell script to  	perform the following:
 
 1. Instrument the assemblies that will be analyzed for code coverage
 2. Re-sign the assemblies (since the process of instrumenting an assembly
@@ -39,12 +28,9 @@ perform the following:
 
 ### Step 1: Instrument the assemblies
 
-The first step in using code coverage with Visual Studio 2010 and .NET 3.5
-projects is to instrument the assemblies using
-[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx).
+The first step in using code coverage with Visual Studio 2010 and .NET 3.5  	projects is to instrument the assemblies using 	[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx).
 
-Let's start by defining a list of the assemblies that will be analyzed for
-code coverage:
+Let's start by defining a list of the assemblies that will be analyzed for  	code coverage:
 
 ```
     [string[]] $assembliesToInstrument =
@@ -55,16 +41,12 @@ code coverage:
     )
 ```
 
-For the sake of understanding the example in this post, imagine Fabrikam
-has a Visual Studio solution containing two projects:
+For the sake of understanding the example in this post, imagine Fabrikam  	has a Visual Studio solution containing two projects:
 
 - CoreServices
 - CoreServices.SharePoint
 
-The Fabrikam.Demo.CoreServices assembly contains shared code used throughout
-the solution (such as the **StringHelper** class). The Fabrikam.Demo.CoreServices.SharePoint
-assembly contains common code used when developing SharePoint solutions (such
-as the **SharePointSecurityHelper** class).
+The Fabrikam.Demo.CoreServices assembly contains shared code used throughout  	the solution (such as the **StringHelper** class). The Fabrikam.Demo.CoreServices.SharePoint  	assembly contains common code used when developing SharePoint solutions (such  	as the **SharePointSecurityHelper** class).
 
 Next we need to instrument each assembly in the list:
 
@@ -75,10 +57,7 @@ Next we need to instrument each assembly in the list:
         }
 ```
 
-The `InstrumentAssembly`
-function simply executes
-[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)
-on the specified assembly:
+The `InstrumentAssembly`  	function simply executes 	[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)  	on the specified assembly:
 
 ```
 function InstrumentAssembly(
@@ -93,9 +72,7 @@ function InstrumentAssembly(
 
 ### Step 2: Re-sign the assemblies
 
-When you run
-[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)
-against a signed assembly, the following warning is emitted:
+When you run 	[VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)  	against a signed assembly, the following warning is emitted:
 
 {{< blockquote "font-italic" >}}
 
@@ -103,11 +80,9 @@ Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly name
 
 {{< /blockquote >}}
 
-This is why the **Code Coverage Detail** dialog in Visual Studio
-allows you to specify a **Re-signing key file**.
+This is why the **Code Coverage Detail** dialog in Visual Studio  	allows you to specify a **Re-signing key file**.
 
-To re-sign the instrumented assembly from the PowerShell script, we need
-to use the Strong Name Tool (Sn.exe):
+To re-sign the instrumented assembly from the PowerShell script, we need  	to use the Strong Name Tool (Sn.exe):
 
 ```
     $assembliesToInstrument |
@@ -118,10 +93,7 @@ to use the Strong Name Tool (Sn.exe):
         }
 ```
 
-The `SignAssembly` function
-simply executes
-[Sn.exe](http://msdn.microsoft.com/en-us/library/k5b5tt23.aspx) on
-the instrumented assembly:
+The `SignAssembly` function  	simply executes 	[Sn.exe](http://msdn.microsoft.com/en-us/library/k5b5tt23.aspx) on  	the instrumented assembly:
 
 ```
 function SignAssembly(
@@ -136,12 +108,9 @@ function SignAssembly(
 
 ### Step 3: "Deploy" the instrumented assemblies
 
-To ensure the instrumented assemblies are used when running the corresponding
-tests, the modified assemblies need to be copied to the "bin" folders for the
-test projects.
+To ensure the instrumented assemblies are used when running the corresponding  	tests, the modified assemblies need to be copied to the "bin" folders for the  	test projects.
 
-Let's start by defining the list of assemblies containing the unit/integration
-tests. For this example, assume that each project has a corresponding test project:
+Let's start by defining the list of assemblies containing the unit/integration  	tests. For this example, assume that each project has a corresponding test project:
 
 - CoreServices.DeveloperTests
 - CoreServices.Sharepoint.DeveloperTests
@@ -158,8 +127,7 @@ The corresponding array variable in PowerShell is:
     )
 ```
 
-To copy the instrumented assemblies into the "bin" folders for the test projects,
-we first need to get the list of folders containing the test assemblies:
+To copy the instrumented assemblies into the "bin" folders for the test projects,  	we first need to get the list of folders containing the test assemblies:
 
 ```
     $testBinFolders = GetAssemblyFolders($testAssemblies)
@@ -184,9 +152,7 @@ function GetAssemblyFolders(
 }
 ```
 
-With the list of instrumented assemblies and the list of folders containing
-the test assemblies, the next step is to copy the modified assemblies to the
-destination folders:
+With the list of instrumented assemblies and the list of folders containing  	the test assemblies, the next step is to copy the modified assemblies to the  	destination folders:
 
 ```
     $assembliesToInstrument |
@@ -199,8 +165,7 @@ destination folders:
         }
 ```
 
-The function simply uses the **Copy-Item** cmdlet to copy the
-instrumented assembly to each destination "bin" older:
+The function simply uses the **Copy-Item** cmdlet to copy the  	instrumented assembly to each destination "bin" older:
 
 ```
 function CopyInstrumentedAssemblyToTestBinFolders(
@@ -214,9 +179,7 @@ function CopyInstrumentedAssemblyToTestBinFolders(
 }
 ```
 
-Also note that if the assemblies are deployed to the global assembly cache
-(e.g. for a SharePoint feature receiver), then we need to update the assembly
-in the GAC as well:
+Also note that if the assemblies are deployed to the global assembly cache  	(e.g. for a SharePoint feature receiver), then we need to update the assembly  	in the GAC as well:
 
 ```
     $assembliesToInstrument |
@@ -231,10 +194,7 @@ in the GAC as well:
         }
 ```
 
-The `UpdateGacAssemblyIfNecessary`
-function uses **gacutil.exe** to check if the assembly is already
-in the GAC (in which case it is replaced with the instrumented assembly). If
-the assembly is not already in the GAC, then no action is performed.
+The `UpdateGacAssemblyIfNecessary`  	function uses **gacutil.exe** to check if the assembly is already  	in the GAC (in which case it is replaced with the instrumented assembly). If  	the assembly is not already in the GAC, then no action is performed.
 
 ```
 function UpdateGacAssemblyIfNecessary(
@@ -281,8 +241,7 @@ function UpdateGacAssemblyIfNecessary(
 
 ### Step 4: Start the code coverage profiler
 
-After a little refactoring in the script, I ended up with a function used
-to start (and stop) the code coverage profiler:
+After a little refactoring in the script, I ended up with a function used  	to start (and stop) the code coverage profiler:
 
 ```
 function ToggleCodeCoverageProfiling(
@@ -302,8 +261,7 @@ function ToggleCodeCoverageProfiling(
 }
 ```
 
-To start the code coverage profiler, simply call the function and pass
-`$true`:
+To start the code coverage profiler, simply call the function and pass 	`$true`:
 
 ```
     ToggleCodeCoverageProfiling $true
@@ -311,9 +269,7 @@ To start the code coverage profiler, simply call the function and pass
 
 ### Step 5: Run the unit/integration tests
 
-With the code coverage profiler running, the next step is to run the unit/integration
-tests. Note that in order to force the tests to run in a 64-bit process (in
-order for the SharePoint tests to work), a test settings file must be specified:
+With the code coverage profiler running, the next step is to run the unit/integration  	tests. Note that in order to force the tests to run in a 64-bit process (in  	order for the SharePoint tests to work), a test settings file must be specified:
 
 ```
     [string] $testSettingsPath = "LocalTestRun.testrunconfig"
@@ -330,10 +286,7 @@ order for the SharePoint tests to work), a test settings file must be specified:
     RunTests $testAssemblies $testSettingsPath
 ```
 
-In order to consolidate the results from multiple test projects, I execute
-**mstest.exe** only once and specify all of the test assemblies
-using separate **/testcontainer** parameters (one for each test
-assembly):
+In order to consolidate the results from multiple test projects, I execute 	**mstest.exe** only once and specify all of the test assemblies  	using separate **/testcontainer** parameters (one for each test  	assembly):
 
 ```
 function RunTests(
@@ -361,15 +314,13 @@ function RunTests(
 
 ### Step 6: Stop the code coverage profiler
 
-Once the unit/integration tests have completed, the final step is to stop
-the code coverage profiler:
+Once the unit/integration tests have completed, the final step is to stop  	the code coverage profiler:
 
 ```
     ToggleCodeCoverageProfiling $false
 ```
 
-At this point, opening the code coverage file (Fabrikam.Demo.coverage) in
-Visual Studio displays the results of the analysis.
+At this point, opening the code coverage file (Fabrikam.Demo.coverage) in  	Visual Studio displays the results of the analysis.
 
 Here is the script in its entirety.
 
@@ -543,14 +494,7 @@ Main
 
 ### Sample Visual Studio solution
 
-I have attached a sample Visual Studio 2010 solution that contains a couple
-of assemblies that target .NET Framework 3.5 (one "generic" assembly and another
-that contains some SharePoint-specific code) as well as corresponding unit/integration
-tests. You should be able to extract the files, create an "[http://fabrikam-local](http://fabrikam-local)"
-Web application in SharePoint 2010 (or use the FABRIKAM\_DEMO\_URL environment
-variable to point to one of your existing Web applications), and then run the
-PowerShell script from the **Source** folder to perform code coverage
-analysis:
+I have attached a sample Visual Studio 2010 solution that contains a couple  	of assemblies that target .NET Framework 3.5 (one "generic" assembly and another  	that contains some SharePoint-specific code) as well as corresponding unit/integration  	tests. You should be able to extract the files, create an "[http://fabrikam-local](http://fabrikam-local)"  	Web application in SharePoint 2010 (or use the FABRIKAM\_DEMO\_URL environment  	variable to point to one of your existing Web applications), and then run the  	PowerShell script from the **Source** folder to perform code coverage  	analysis:
 
 ```
 & '.\Run Developer Tests with Code Coverage.ps1'

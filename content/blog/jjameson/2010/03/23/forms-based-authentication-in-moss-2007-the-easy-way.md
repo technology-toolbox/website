@@ -14,9 +14,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In [one of Saturday's posts](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), I demonstrated how to implement a custom error page  on an Internet site powered by Microsoft Office SharePoint Server (MOSS) 2007. For  that post I captured various screenshots and sample code from one of my local development  VMs using a freshly rebuilt Web application for Fabrikam Technologies (my favorite  fictitious manufacturing company).
 
@@ -34,19 +32,9 @@ As you might be aware by now, I'm also a big fan of scenario-based development. 
 
 {{< blockquote "font-italic" >}}
 
-Doug has recently joined the team responsible for developing the Internet
-site for Fabrikam Technologies. Consequently Doug needs to get his local development
-environment created and configured as quickly as possible in order to start
-being a productive team member.
+Doug has recently joined the team responsible for developing the Internet  	site for Fabrikam Technologies. Consequently Doug needs to get his local development  	environment created and configured as quickly as possible in order to start  	being a productive team member.
 
-After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008
-and Visual Studio 2008. He then installs MOSS 2007 and subsequently creates
-a new SharePoint "farm" (which in this case is comprised only of his single
-VM) and a corresponding Shared Services Provider (SSP). Doug then gets the latest
-version of the Fabrikam solution from Team Foundation Server and builds the
-solution. Finally, he creates a new Web application (http://fabrikam-local)
-that is extended to the Internet zone (http://www-local.fabrikam.com) and configured
-for anonymous access and Forms-Based Authentication.
+After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008  	and Visual Studio 2008. He then installs MOSS 2007 and subsequently creates  	a new SharePoint "farm" (which in this case is comprised only of his single  	VM) and a corresponding Shared Services Provider (SSP). Doug then gets the latest  	version of the Fabrikam solution from Team Foundation Server and builds the  	solution. Finally, he creates a new Web application (http://fabrikam-local)  	that is extended to the Internet zone (http://www-local.fabrikam.com) and configured  	for anonymous access and Forms-Based Authentication.
 
 {{< /blockquote >}}
 

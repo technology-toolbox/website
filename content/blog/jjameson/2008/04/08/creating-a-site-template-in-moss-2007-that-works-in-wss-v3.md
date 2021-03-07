@@ -15,9 +15,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Shortly after publishing my previous post covering ["TFS Lite"
 for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:

@@ -16,17 +16,13 @@ tags: ["My System", "Core Development", "TFS"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Last summer I wrote a post about [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning) and made the following statement:
 
 {{< blockquote "font-italic" >}}
 
-The
-[AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part
-of the build process.
+The 	[AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx) should be incremented automatically as part  	of the build process.
 
 {{< /blockquote >}}
 
@@ -36,26 +32,13 @@ Here was my response:
 
 {{< blockquote "font-italic" >}}
 
-While you certainly \*could\* increment the AssemblyFileVersionAttribute in
-a pre-build event, I definitely don't recommend it. Doing so would cause the
-version to increment each and every time \*any\* member of the Development team
-builds the solution.
+While you certainly \*could\* increment the AssemblyFileVersionAttribute in  	a pre-build event, I definitely don't recommend it. Doing so would cause the  	version to increment each and every time \*any\* member of the Development team  	builds the solution.
 
-I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs
-file, but there are definitely better ways to accomplish the desired outcome.
+I suppose you could simply tell developers not to check-in the updated AssemblyVersionInfo.cs  	file, but there are definitely better ways to accomplish the desired outcome.
 
-Rather, I recommend incrementing the AssemblyFileVersionAttribute as part
-of your automated build process. In other words, each time an "official" build
-is created on the Build Server, the AssemblyVersionInfo.cs file is automatically
-checked out from source control, incremented, and checked back in.
+Rather, I recommend incrementing the AssemblyFileVersionAttribute as part  	of your automated build process. In other words, each time an "official" build  	is created on the Build Server, the AssemblyVersionInfo.cs file is automatically  	checked out from source control, incremented, and checked back in.
 
-Obviously, the actual implementation of this process will vary depending
-on your particular toolset. For example, if you are using Team Foundation Server,
-you can setup a custom task that increments the AssemblyFileVersionAttribute
-as part of the build. Several people have already blogged about the details
-of this for TFS. If you just bing "TFS increment build" you should get some
-good hits within the first page of search results. In particular, make sure
-you read Buck Hodges blog entry if you are using continuous integration.
+Obviously, the actual implementation of this process will vary depending  	on your particular toolset. For example, if you are using Team Foundation Server,  	you can setup a custom task that increments the AssemblyFileVersionAttribute  	as part of the build. Several people have already blogged about the details  	of this for TFS. If you just bing "TFS increment build" you should get some  	good hits within the first page of search results. In particular, make sure  	you read Buck Hodges blog entry if you are using continuous integration.
 
 {{< /blockquote >}}
 
@@ -65,8 +48,7 @@ Note that this implementation has some specifics to Team Foundation Server, but 
 
 > **Update (2010-11-29)**
 >
-> This post was originally created for TFS 2005/2008. Refer to the following
-> if you are using TFS 2010:
+> This post was originally created for TFS 2005/2008. Refer to the following  		if you are using TFS 2010:
 >
 > {{< reference title="Incrementing the Assembly Version for Each Build in TFS 2010" linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
 
@@ -104,11 +86,9 @@ Next, add a property so that we can use the TFS command-line utility to checkout
 
 > **Update (2010-05-05)**
 >
-> Note that the path to the TFS command-line utility
-> [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
+> Note that the path to the TFS command-line utility 		[has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
 >
-> To use the same technique on a TFS 2010 build server, specify the following
-> instead:
+> To use the same technique on a TFS 2010 build server, specify the following  		instead:
 >
 > ```
 >   <PropertyGroup>

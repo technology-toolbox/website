@@ -14,9 +14,7 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Last Sunday, I rebuilt my desktop ([WOLVERINE](/blog/jjameson/2009/09/14/the-jameson-datacenter))  with the RTM build of Windows 7 Ultimate (x64). Previously, I'd been running the  RC1 bits and I figured it was about time I got around to "upgrading" to the RTM  version. [I say "upgrading" because -- at least it in my experience -- it is typically  better in the long run to simply reformat the hard drive and start over when installing  a newer version of the operating system. Obviously I don't always stick to this  principle. For example, I've upgraded some of my "Production" VMs from Windows Server  2003 to Windows Server 2008. However, I've seen a few bugs in my time that only  occur in upgraded environments and therefore try to avoid these whenever possible.]
 
@@ -33,27 +31,7 @@ C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mmc:ena
 
 {{< sample-block >}}
 
-Microsoft (R) Windows Script Host Version 5.8\
-Copyright (C) Microsoft Corporation. All rights reserved.\
-\
-\
-Hyper-V Remote Management Configuration & Checkup Utility\
-John Howard, Hyper-V Team, Microsoft Corporation.\
-http://blogs.technet.com/jhoward\
-Version 0.7 7th August 2009\
-\
-INFO: Computername is WOLVERINE\
-INFO: Computer is in domain corp.technologytoolbox.com\
-INFO: Current user is TECHTOOLBOX\jjameson-admin\
-INFO: Assuming /mode:client as the Hyper-V role is not installed\
-INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
-INFO: Detected Windows 7/Windows Server 2008 R2 OS\
-INFO: Remote Server Administration Tools are installed\
-INFO: Hyper-V Tools Windows feature is enabled\
-INFO: No TCP rule was found\
-INFO: No UDP rule was found\
-INFO: MMC Firewall exception changes OK.\
-INFO: Are running the latest version
+Microsoft (R) Windows Script Host Version 5.8\ 	Copyright (C) Microsoft Corporation. All rights reserved.\ 	\ 	\ 	Hyper-V Remote Management Configuration & Checkup Utility\ 	John Howard, Hyper-V Team, Microsoft Corporation.\ 	http://blogs.technet.com/jhoward\ 	Version 0.7 7th August 2009\ 	\ 	INFO: Computername is WOLVERINE\ 	INFO: Computer is in domain corp.technologytoolbox.com\ 	INFO: Current user is TECHTOOLBOX\jjameson-admin\ 	INFO: Assuming /mode:client as the Hyper-V role is not installed\ 	INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\ 	INFO: Detected Windows 7/Windows Server 2008 R2 OS\ 	INFO: Remote Server Administration Tools are installed\ 	INFO: Hyper-V Tools Windows feature is enabled\ 	INFO: No TCP rule was found\ 	INFO: No UDP rule was found\ 	INFO: MMC Firewall exception changes OK.\ 	INFO: Are running the latest version
 
 {{< /sample-block >}}
 
@@ -75,28 +53,7 @@ C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mode:cl
 
 {{< sample-block >}}
 
-Microsoft (R) Windows Script Host Version 5.8\
-Copyright (C) Microsoft Corporation. All rights reserved.\
-\
-\
-Hyper-V Remote Management Configuration & Checkup Utility\
-John Howard, Hyper-V Team, Microsoft Corporation.\
-http://blogs.technet.com/jhoward\
-Version 0.7 7th August 2009\
-\
-INFO: Computername is WOLVERINE\
-INFO: Computer is in domain corp.technologytoolbox.com\
-INFO: Current user is TECHTOOLBOX\jjameson-admin\
-INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
-INFO: Detected Windows 7/Windows Server 2008 R2 OS\
-INFO: Remote Server Administration Tools are installed\
-INFO: Hyper-V Tools Windows feature is enabled\
-\
-INFO: Obtaining current Machine Access Restriction...\
-INFO: Examining security descriptor\
-INFO Granted Remote DCOM Access to Anonymous Logon\
-WARN: See documentation for security implications\
-INFO: Are running the latest version
+Microsoft (R) Windows Script Host Version 5.8\ 	Copyright (C) Microsoft Corporation. All rights reserved.\ 	\ 	\ 	Hyper-V Remote Management Configuration & Checkup Utility\ 	John Howard, Hyper-V Team, Microsoft Corporation.\ 	http://blogs.technet.com/jhoward\ 	Version 0.7 7th August 2009\ 	\ 	INFO: Computername is WOLVERINE\ 	INFO: Computer is in domain corp.technologytoolbox.com\ 	INFO: Current user is TECHTOOLBOX\jjameson-admin\ 	INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\ 	INFO: Detected Windows 7/Windows Server 2008 R2 OS\ 	INFO: Remote Server Administration Tools are installed\ 	INFO: Hyper-V Tools Windows feature is enabled\ 	\ 	INFO: Obtaining current Machine Access Restriction...\ 	INFO: Examining security descriptor\ 	INFO Granted Remote DCOM Access to Anonymous Logon\ 	WARN: See documentation for security implications\ 	INFO: Are running the latest version
 
 {{< /sample-block >}}
 

@@ -14,9 +14,7 @@ tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 During the more than three years I spent helping Agilent Technologies migrate  their Internet site from their legacy, proprietary platform to Microsoft Office  SharePoint Server (MOSS) 2007, we unfortunately never used Team Foundation Server  (TFS). Instead, we used Visual SourceSafe (VSS) in combination with a ["Work Items"
 list in SharePoint](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2) that I've described in previous posts.

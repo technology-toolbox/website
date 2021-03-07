@@ -15,9 +15,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In a [previous post](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint), I provided sample "DR.DADA" scripts that I use for deploying  solutions based on Microsoft Office SharePoint Server (MOSS) 2007.
 
@@ -29,8 +27,7 @@ The FORCE\_OPTION environment variable is subsequently included in the line that
 
 {{< console-block-start >}}
 
-%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION\_NAME%.wsp" -url
-%FABRIKAM\_PORTAL\_URL% %DEPLOY\_METHOD% -allowGacDeployment %FORCE\_OPTION%
+%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION\_NAME%.wsp" -url  	%FABRIKAM\_PORTAL\_URL% %DEPLOY\_METHOD% -allowGacDeployment %FORCE\_OPTION%
 
 {{< console-block-end >}}
 
@@ -44,17 +41,7 @@ C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kb
 
 {{< sample-block >}}
 
-23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...\
-\
-Deploying Fabrikam.Portal.StsAdm.Commands...\ \ Timer job successfully created.\ \ Executing .\
-Operation completed successfully.\ \ Done\
-23:46 - Deploying solution: Fabrikam.Portal.Web...\
-Deploying Fabrikam.Portal.Web on [http://fabrikam-test](http://fabrikam-test/)...\ \ Timer job successfully created.\ \
-Executing .\
-Executing solution-deployment-fabrikam.portal.web.wsp-0.\
-The solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully,
-but could not be properly cleaned up. This job may execute again on this server.\
-Operation completed successfully.
+23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...\ 	\ 	Deploying Fabrikam.Portal.StsAdm.Commands...\ \ Timer job successfully created.\ \ Executing .\ 	Operation completed successfully.\ \ Done\ 	23:46 - Deploying solution: Fabrikam.Portal.Web...\ 	Deploying Fabrikam.Portal.Web on [http://fabrikam-test](http://fabrikam-test/)...\ \ Timer job successfully created.\ \ 	Executing .\ 	Executing solution-deployment-fabrikam.portal.web.wsp-0.\ 	The solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully,  	but could not be properly cleaned up. This job may execute again on this server.\ 	Operation completed successfully.
 
 {{< /sample-block >}}
 
@@ -77,13 +64,9 @@ Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION envir
 {{< console-block-start >}}
 
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "set FORCE_OPTION=-force" >}}
-
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Retract Solutions.cmd\"" >}}
-
 ...
-
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
-
 ...
 
 {{< console-block-end >}}

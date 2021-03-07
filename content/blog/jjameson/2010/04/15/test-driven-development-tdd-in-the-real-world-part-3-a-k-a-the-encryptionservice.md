@@ -15,9 +15,7 @@ tags: ["My System", "Core Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2), I provided a walkthrough of Test-Driven Development (TDD), based  on a very simple scenario (truncating a string to a specific number of characters).  In this post, I'll provide another example using a more complex scenario.
 
@@ -199,10 +197,7 @@ If you are familiar with ASP.NET, you are probably aware that you can configure 
 
 {{< blockquote "font-italic" >}}
 
-Encrypted and Hashed passwords are encrypted or hashed by default based on information
-supplied in the
-[machineKey](http://msdn.microsoft.com/en-us/library/w8h3skw9.aspx)
-element in your configuration.
+Encrypted and Hashed passwords are encrypted or hashed by default based on information  	supplied in the 	[machineKey](http://msdn.microsoft.com/en-us/library/w8h3skw9.aspx)  	element in your configuration.
 
 {{< /blockquote >}}
 
@@ -382,17 +377,7 @@ C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;{{
 
 {{< sample-block >}}
 
-Microsoft (R) .NET Framework Strong Name Utility Version 3.5.30729.1\
-Copyright (c) Microsoft Corporation. All rights reserved.\
-\
-Public key is\
-00240000048000009400000006020000002400005253413100040000010001008748be47c45d37\
-6f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee1692d1f33fa16f8f7f\
-3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e0b3e266ff5266292e22254b567\
-f51c80ce404188643aa17a1378eff241ed01a36b3d64c127334a0ba4eec58f95f3606e73e10305\
-3006d0bf\
-\
-Public key token is 786f58ca4a6e3f60
+Microsoft (R) .NET Framework Strong Name Utility Version 3.5.30729.1\ 	Copyright (c) Microsoft Corporation. All rights reserved.\ 	\ 	Public key is\ 	00240000048000009400000006020000002400005253413100040000010001008748be47c45d37\ 	6f413042b18521c05affcfdfcbf7d73c7273acdf5cd1a056bc4d460dceee1692d1f33fa16f8f7f\ 	3afd6c75552e8bfaa1ebe6fabf8f7923d48697bba4e22c8fad0e0b3e266ff5266292e22254b567\ 	f51c80ce404188643aa17a1378eff241ed01a36b3d64c127334a0ba4eec58f95f3606e73e10305\ 	3006d0bf\ 	\ 	Public key token is 786f58ca4a6e3f60
 
 {{< /sample-block >}}
 

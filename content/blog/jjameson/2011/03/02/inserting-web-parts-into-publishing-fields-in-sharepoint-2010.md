@@ -175,12 +175,16 @@ In order to create a new page and add a Web Part at a specific location within t
 
         // TODO: Replace embedded CSS layout with custom SharePoint page layout
         private const string defaultSignInPageContent =
-@"<div class='container_12' style='margin: auto; width: 800px'><div class='loginForm'
+@"<div class='container_12' style='margin: auto; width: 800px'>
+	<div class='loginForm'
         style='width: 240px; display: inline; float: left; margin-right: 10px'>
-" + loginFormPlaceholder + @"</div>
+" + loginFormPlaceholder + @"
+	</div>
 </div>
 <div class='termsAndConditions'
-    style='width: 460px; display: inline; float: left; margin-right: 10px'><h2>Terms and Conditions</h2><p class='ms-rteElement-P'>Lorem ipsum dolor sit amet...</p>
+    style='width: 460px; display: inline; float: left; margin-right: 10px'>
+	<h2>Terms and Conditions</h2>
+	<p class='ms-rteElement-P'>Lorem ipsum dolor sit amet...</p>
 </div>";
 
         private static void ConfigureSignInPage(
@@ -196,6 +200,7 @@ In order to create a new page and add a Web Part at a specific location within t
                     bodyOnlyLayoutUrl);
 
             ...
+
             SharePointPublishingHelper.SetDefaultPageContent(
                 page,
                 defaultSignInPageContent);

@@ -8,76 +8,36 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-Software is never perfect. Errors *will* occur in your code. Don't
-fret, they occur in my code, too. There are nasty little errors in everyone's
-code -- idly biding their time until they can spring out and aggravate your
-users.
+Software is never perfect. Errors *will* occur in your code. Don't  	fret, they occur in my code, too. There are nasty little errors in everyone's  	code -- idly biding their time until they can spring out and aggravate your  	users.
 
-Some errors might be expected, such as HTTP 404 errors when someone mistypes
-a URL -- or when hackers maliciously try to find vulnerabilities in your application.
-Other errors might be completely unexpected (e.g. "What do you mean
-[the database transaction log is full](/blog/jjameson/2007/05/06/no-error-displayed-when-database-update-fails)? Isn't someone supposed to be monitoring
-that?").
+Some errors might be expected, such as HTTP 404 errors when someone mistypes  	a URL -- or when hackers maliciously try to find vulnerabilities in your application.  	Other errors might be completely unexpected (e.g. "What do you mean 	[the database transaction log is full](/blog/jjameson/2007/05/06/no-error-displayed-when-database-update-fails)? Isn't someone supposed to be monitoring  	that?").
 
-Many errors are avoidable, but you will inevitably encounter some situations
-where the best thing your site can do is cough up a decent "[mea
-maxima culpa](http://en.wikipedia.org/wiki/Mea_culpa)" message and try to avoid showing users the infamous Yellow
-Page of Death.
+Many errors are avoidable, but you will inevitably encounter some situations  	where the best thing your site can do is cough up a decent "[mea
+maxima culpa](http://en.wikipedia.org/wiki/Mea_culpa)" message and try to avoid showing users the infamous Yellow  	Page of Death.
 
-Last year, I blogged my recommendations for
-[error handling in SharePoint applications](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), but what if you aren't using
-SharePoint? What if you working in plain ol' ASP.NET-land?
+Last year, I blogged my recommendations for 	[error handling in SharePoint applications](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), but what if you aren't using  	SharePoint? What if you working in plain ol' ASP.NET-land?
 
-In that case, you might already have specified a custom error page in the
-Web.config file and considered it done -- but are you sure that all the bases
-are covered?
+In that case, you might already have specified a custom error page in the  	Web.config file and considered it done -- but are you sure that all the bases  	are covered?
 
 Let's examine a few scenarios...
 
 ### Unhandled Exceptions
 
-Unless you are writing sample code to demonstrate something as simple as
-basic calculator functions, you can't possibly expect your code to gracefully
-handle the multitude of exceptions that might occur at runtime. Therefore, the
-fewer `try`/`catch` blocks you add to your code, the better.
+Unless you are writing sample code to demonstrate something as simple as  	basic calculator functions, you can't possibly expect your code to gracefully  	handle the multitude of exceptions that might occur at runtime. Therefore, the  	fewer `try`/`catch` blocks you add to your code, the better.
 
-Instead you should only catch an exception when you are absolutely sure you
-can do something useful. If you have `catch` blocks in your code
-that do nothing more than log the exception and then re-throw it up the call
-stack, then...well, I'll just say it, your code *blows*.
+Instead you should only catch an exception when you are absolutely sure you  	can do something useful. If you have `catch` blocks in your code  	that do nothing more than log the exception and then re-throw it up the call  	stack, then...well, I'll just say it, your code *blows*.
 
-Okay, maybe that's a little harsh, but you wouldn't believe how often I've
-seen this in the past. Even worse, though, are `catch` blocks that
-"swallow" the exceptions. If you think there's even a remote chance you might
-have these in your solution, then you should stop reading this post *immediately*
-and instead go do a search in Visual Studio for the word "catch" and scan through
-the results one-by-one.
+Okay, maybe that's a little harsh, but you wouldn't believe how often I've  	seen this in the past. Even worse, though, are `catch` blocks that  	"swallow" the exceptions. If you think there's even a remote chance you might  	have these in your solution, then you should stop reading this post *immediately*  	and instead go do a search in Visual Studio for the word "catch" and scan through  	the results one-by-one.
 
-I'm certainly not saying that you should never use `try`/`catch`
-blocks in your code. There are times when these are very useful. For example,
-when developing a Web Part (regardless of whether it be for ASP.NET or SharePoint),
-should an unexpected exception in the Web Part cause the entire page to "blow
-chunks" or should an error message prominently appear in place of the Web Part
-instead? I typically prefer the latter behavior, because it makes the troubleshooting
-go much faster and is arguably less aggravating for users (depending, of course,
-on the specific circumstances).
+I'm certainly not saying that you should never use `try`/`catch`  	blocks in your code. There are times when these are very useful. For example,  	when developing a Web Part (regardless of whether it be for ASP.NET or SharePoint),  	should an unexpected exception in the Web Part cause the entire page to "blow  	chunks" or should an error message prominently appear in place of the Web Part  	instead? I typically prefer the latter behavior, because it makes the troubleshooting  	go much faster and is arguably less aggravating for users (depending, of course,  	on the specific circumstances).
 
-So if your code makes minimal use of `try`/`catch`
-blocks and, as I've already said, errors will inevitably occur in your application,
-then how should you "handle" these exceptions?
+So if your code makes minimal use of `try`/`catch`  	blocks and, as I've already said, errors will inevitably occur in your application,  	then how should you "handle" these exceptions?
 
-The first step is to use something like ELMAH. If you are more familiar with
-SharePoint development and you haven't heard of ELMAH, just think of it as an
-error handling stack for ASP.NET that is similar to what you get out-of-the-box
-with SharePoint.
+The first step is to use something like ELMAH. If you are more familiar with  	SharePoint development and you haven't heard of ELMAH, just think of it as an  	error handling stack for ASP.NET that is similar to what you get out-of-the-box  	with SharePoint.
 
-If, like me, you've used ELMAH in the past, then you know it takes a little
-effort to integrate it into your solution. Or, rather it used to...
+If, like me, you've used ELMAH in the past, then you know it takes a little  	effort to integrate it into your solution. Or, rather it used to...
 
-Thanks to [NuGet](http://nuget.org/), you can now add ELMAH to
-your solution in a matter of seconds (literally). All you need to do is run
-the following command in the
-[Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console):
+Thanks to [NuGet](http://nuget.org/), you can now add ELMAH to  	your solution in a matter of seconds (literally). All you need to do is run  	the following command in the 	[Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console):
 
 {{< console-block-start >}}
 
@@ -89,14 +49,9 @@ Refer to the following resource for more information on the ELMAH NuGet package:
 
 {{< reference title="NuGet Gallery - ELMAH" linkHref="http://nuget.org/packages/elmah" >}}
 
-Note that there are a number of different "flavors" of ELMAH NuGet packages
-available (depending on how your want to log errors). For example, refer to
-one of Scott Hanselman's posts for more detail on using
-[ELMAH with SQL Server Compact Edition](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx).
+Note that there are a number of different "flavors" of ELMAH NuGet packages  	available (depending on how your want to log errors). For example, refer to  	one of Scott Hanselman's posts for more detail on using 	[ELMAH with SQL Server Compact Edition](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx).
 
-With ELMAH in place, most of the "heavy lifting" has already been performed
-for you. To see what happens when an unhandled exception occurs in your ASP.NET
-application, you could add an "error simulator" to your site (e.g. SimulateError.ashx):
+With ELMAH in place, most of the "heavy lifting" has already been performed  	for you. To see what happens when an unhandled exception occurs in your ASP.NET  	application, you could add an "error simulator" to your site (e.g. SimulateError.ashx):
 
 ```
 using System;
@@ -128,14 +83,9 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 }
 ```
 
-Browsing to the "error simulator" triggers an unhandled exception and subsequently
-the ASP.NET Yellow Page of Death. However, something interesting happened in
-between. ELMAH logged the details of the error. Depending on how you configure
-ELMAH to log messages, you can use a variety of methods to review and investigate
-errors.
+Browsing to the "error simulator" triggers an unhandled exception and subsequently  	the ASP.NET Yellow Page of Death. However, something interesting happened in  	between. ELMAH logged the details of the error. Depending on how you configure  	ELMAH to log messages, you can use a variety of methods to review and investigate  	errors.
 
-If the volume of traffic on your site is relatively low, you might consider
-configuring ELMAH to send you an email whenever something bad happens:
+If the volume of traffic on your site is relatively low, you might consider  	configuring ELMAH to send you an email whenever something bad happens:
 
 ```
   <elmah>
@@ -148,20 +98,14 @@ configuring ELMAH to send you an email whenever something bad happens:
   </elmah>
 ```
 
-You might prefer some other notification mechanism, such as
-[configuring an alert in Operations Manager whenever an error is written to the
-Event Log](/blog/jjameson/2011/03/18/operations-manager-alerts-for-event-log-errors). The point is, you either need to use some form of "push notification"
-whenever an error occurs (preferably) or else be very diligent about periodically
-reviewing the logs to check for errors (which likely won't happen as time goes
-on).
+You might prefer some other notification mechanism, such as 	[configuring an alert in Operations Manager whenever an error is written to the
+Event Log](/blog/jjameson/2011/03/18/operations-manager-alerts-for-event-log-errors). The point is, you either need to use some form of "push notification"  	whenever an error occurs (preferably) or else be very diligent about periodically  	reviewing the logs to check for errors (which likely won't happen as time goes  	on).
 
-With the logging functionality out of the way, let's turn our attention to
-improving the user experience by adding a custom error page.
+With the logging functionality out of the way, let's turn our attention to  	improving the user experience by adding a custom error page.
 
 ### Custom Error Page
 
-If you happen to encounter an unexpected error on the Technology Toolbox
-site, then you'll see something similar to the screenshot below.
+If you happen to encounter an unexpected error on the Technology Toolbox  	site, then you'll see something similar to the screenshot below.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
@@ -173,8 +117,7 @@ title="Figure 1: Custom error page (Generic.aspx)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-1006x494.png)
 
-You've probably created a similar error page before and "wired it up" in
-the Web.config file using something like the following:
+You've probably created a similar error page before and "wired it up" in  	the Web.config file using something like the following:
 
 ```
   <system.web>
@@ -184,37 +127,24 @@ the Web.config file using something like the following:
   </system.web>
 ```
 
-Note that if you don't specify the `redirectMode`
-attribute, it defaults to **[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)**, which causes the URL to change to something like
-the following:
+Note that if you don't specify the `redirectMode`  	attribute, it defaults to **[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)**, which causes the URL to change to something like  	the following:
 
 > http://.../Errors/Generic.aspx?aspxerrorpath=...
 
-Consequently if users attempt to refresh the page, they are simply requesting
-the error page again (in this case, "Generic.aspx") -- not the original URL
-that caused the error. In other words, if the original problem was caused by
-some transient condition, with this configuration users could keep clicking
-to refresh the page all day long and nothing would ever change. That's certainly
-not a good thing -- so you should always specify `redirectMode="ResponseRewrite"`:
+Consequently if users attempt to refresh the page, they are simply requesting  	the error page again (in this case, "Generic.aspx") -- not the original URL  	that caused the error. In other words, if the original problem was caused by  	some transient condition, with this configuration users could keep clicking  	to refresh the page all day long and nothing would ever change. That's certainly  	not a good thing -- so you should always specify `redirectMode="ResponseRewrite"`:
 
 ```
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
       redirectMode="ResponseRewrite" />
 ```
 
-With this configuration, the original request URL is preserved and there's
-*at least a chance* that clicking "refresh" will resolve the issue.
+With this configuration, the original request URL is preserved and there's 	*at least a chance* that clicking "refresh" will resolve the issue.
 
 However, there's still a big problem...
 
-If your custom error page is simply an ASP.NET page with no code-behind,
-then the HTTP response specifies a status code of 200 ("OK"). In other words,
-while users will know that something is wrong, search engines crawling your
-site will assume the error page content is what you *intended* to serve
-for the specified URL.
+If your custom error page is simply an ASP.NET page with no code-behind,  	then the HTTP response specifies a status code of 200 ("OK"). In other words,  	while users will know that something is wrong, search engines crawling your  	site will assume the error page content is what you *intended* to serve  	for the specified URL.
 
-Consequently, you should add a little code to set the status code to indicate
-something went wrong:
+Consequently, you should add a little code to set the status code to indicate  	something went wrong:
 
 ```
         protected void Page_Load(
@@ -235,30 +165,15 @@ something went wrong:
             }
 ```
 
-Note that this code attempts to preserve the status code of the underlying
-**HttpException** (if one occurred). Setting the status code to
-indicate an error (e.g. 500) allows search engines to determine the content
-in the response should not be added to the search index.
+Note that this code attempts to preserve the status code of the underlying 	**HttpException** (if one occurred). Setting the status code to  	indicate an error (e.g. 500) allows search engines to determine the content  	in the response should not be added to the search index.
 
-For the Technology Toolbox site, the error page shown in Figure 1 is actually
-rendered by two items: **Generic.aspx** and **Error.master**.
+For the Technology Toolbox site, the error page shown in Figure 1 is actually  	rendered by two items: **Generic.aspx** and **Error.master**.
 
-The reason for using a different master page is to minimize the potential
-for another error to occur during the process of handling the original error.
+The reason for using a different master page is to minimize the potential  	for another error to occur during the process of handling the original error.
 
-If this doesn't make sense, consider what could happen if the master page
-used by Generic.aspx has a dependency on a database (for example, to render
-the global navigation at the top of the page) and for some reason SQL Server
-is unavailable. In that scenario, another exception would occur while trying
-to render the custom error page. [As an aside, I believe this is precisely why
-SharePoint makes you specify a static HTML page in the error handling configuration.]
+If this doesn't make sense, consider what could happen if the master page  	used by Generic.aspx has a dependency on a database (for example, to render  	the global navigation at the top of the page) and for some reason SQL Server  	is unavailable. In that scenario, another exception would occur while trying  	to render the custom error page. [As an aside, I believe this is precisely why  	SharePoint makes you specify a static HTML page in the error handling configuration.]
 
-For the Technology Toolbox site, most of the implementation resides in the
-master page (in other words, the content page is simply a "shell"). To understand
-why, refer to the next section (HTTP 404 Errors).
-The master page provides just enough HTML to indicate that something went wrong,
-along with links back to the home page (via the company logo) or to submit additional
-information (via the "Contact" form).
+For the Technology Toolbox site, most of the implementation resides in the  	master page (in other words, the content page is simply a "shell"). To understand  	why, refer to the next section (HTTP 404 Errors).  	The master page provides just enough HTML to indicate that something went wrong,  	along with links back to the home page (via the company logo) or to submit additional  	information (via the "Contact" form).
 
 #### Generic.aspx
 
@@ -370,26 +285,17 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 }
 ```
 
-At this point, we've managed to avoid the Yellow Page of Death and instead
-display a "branded" error page with a generic error message (all the while logging
-the details of the underlying error).
+At this point, we've managed to avoid the Yellow Page of Death and instead  	display a "branded" error page with a generic error message (all the while logging  	the details of the underlying error).
 
-However, what happens if someone mistypes a URL -- or when evil people maliciously
-hack the URL looking for vulnerabilities? [Trust me, these people are out there...and
-they apparently have nothing better to do with their time than sit there and
-try adding things like "/user/CreateUser.aspx" to a URL on your site. (Yes,
-this is a real example from my own logs. Shame on you -- whoever you are at
-IP 96.31.35.33!)]
+However, what happens if someone mistypes a URL -- or when evil people maliciously  	hack the URL looking for vulnerabilities? [Trust me, these people are out there...and  	they apparently have nothing better to do with their time than sit there and  	try adding things like "/user/CreateUser.aspx" to a URL on your site. (Yes,  	this is a real example from my own logs. Shame on you -- whoever you are at  	IP 96.31.35.33!)]
 
 ### HTTP 404 Errors
 
-Imagine that I send you an email and refer you to my blog, but I mistakenly
-type "bog" instead of "blog":
+Imagine that I send you an email and refer you to my blog, but I mistakenly  	type "bog" instead of "blog":
 
 > https://www.technologytoolbox.com/bog/jjameson
 
-If you were to click the link in my email at this point, then you'd see the
-the out-of-the-box IIS "404" error page (404.htm) shown below.
+If you were to click the link in my email at this point, then you'd see the  	the out-of-the-box IIS "404" error page (404.htm) shown below.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png"
@@ -401,23 +307,15 @@ title="Figure 2: IIS - default 404 page (404.htm)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-1006x185.png)
 
-You might have expected the custom error page shown in Figure 1 to appear
-(based on the `<customErrors>`
-element shown above). However, in this scenario, the URL doesn't specify a path
-that maps to a managed handler in IIS.
+You might have expected the custom error page shown in Figure 1 to appear  	(based on the `<customErrors>`  	element shown above). However, in this scenario, the URL doesn't specify a path  	that maps to a managed handler in IIS.
 
-On the other hand, if you try browsing to a non-existent ASP.NET page, such
-as:
+On the other hand, if you try browsing to a non-existent ASP.NET page, such  	as:
 
 > https://www.technologytoolbox.com/foobar.aspx
 
-...then you *do* see the error page shown in Figure 1 (and if you
-use Firebug or the IE Developer Tools to inspect the response, you would see
-that it specifies a status code of 404 -- courtesy of the code above that gets
-the status code from the original **HttpException**).
+...then you *do* see the error page shown in Figure 1 (and if you  	use Firebug or the IE Developer Tools to inspect the response, you would see  	that it specifies a status code of 404 -- courtesy of the code above that gets  	the status code from the original **HttpException**).
 
-In either case, it would be better to show users a custom 404 error page,
-like the one shown below.
+In either case, it would be better to show users a custom 404 error page,  	like the one shown below.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
@@ -429,12 +327,9 @@ title="Figure 3: HTTP 404 error page (404.aspx)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-1006x494.png)
 
-To accomplish this, we simply need to create another ASP.NET page (e.g. 404.aspx)
-and configure it to be used in the two scenarios described earlier.
+To accomplish this, we simply need to create another ASP.NET page (e.g. 404.aspx)  	and configure it to be used in the two scenarios described earlier.
 
-For the first scenario (i.e. when the request specifies a path that does
-not correspond to a managed handler), the `<httpErrors>`
-element is used:
+For the first scenario (i.e. when the request specifies a path that does  	not correspond to a managed handler), the `<httpErrors>`  	element is used:
 
 ```
   <system.webServer>
@@ -447,9 +342,7 @@ element is used:
   </system.webServer>
 ```
 
-For the second scenario (e.g. when the request specifies a non-existent ASPX
-page), the `<customErrors>`
-element is used:
+For the second scenario (e.g. when the request specifies a non-existent ASPX  	page), the `<customErrors>`  	element is used:
 
 ```
   <system.web>
@@ -472,9 +365,7 @@ element is used:
 > **.NET Error Pages**. (to modify the `<customErrors>`
 > element).
 
-You may have noticed from Figure 3 that I prefer to show the server-relative
-URL of the request in the error message. This helps draw the user's attention
-to what was specified (in case he or she simply mistyped part of the URL).
+You may have noticed from Figure 3 that I prefer to show the server-relative  	URL of the request in the error message. This helps draw the user's attention  	to what was specified (in case he or she simply mistyped part of the URL).
 
 #### 404.aspx
 
@@ -639,26 +530,11 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 
 ### Other Errors
 
-The vast majority of errors in your site will be HTTP 500 -- as a result
-of unhandled exceptions in code (either due to poor coding techniques or unexpected
-scenarios) followed by HTTP 404 errors. That is, of course, unless some hackers
-decide to launch a denial-of-service attack on your site -- in which case you
-might see a very large volume of 404 errors, 400 (Bad Request), 413 (Request
-Entity Too Large), or perhaps even some HTTP 503 (Service Unavailable) errors.
+The vast majority of errors in your site will be HTTP 500 -- as a result  	of unhandled exceptions in code (either due to poor coding techniques or unexpected  	scenarios) followed by HTTP 404 errors. That is, of course, unless some hackers  	decide to launch a denial-of-service attack on your site -- in which case you  	might see a very large volume of 404 errors, 400 (Bad Request), 413 (Request  	Entity Too Large), or perhaps even some HTTP 503 (Service Unavailable) errors.
 
-However, barring a DoS attack, you've probably covered 99% of the errors
-that might occur on your site using the pieces I've covered thus far.
+However, barring a DoS attack, you've probably covered 99% of the errors  	that might occur on your site using the pieces I've covered thus far.
 
-Keep in mind that authentication and authorization errors in an ASP.NET application
-will redirect to your login page by default (via an HTTP 302 response) rather
-than generating an HTTP 401 (Unauthorized) error.
+Keep in mind that authentication and authorization errors in an ASP.NET application  	will redirect to your login page by default (via an HTTP 302 response) rather  	than generating an HTTP 401 (Unauthorized) error.
 
-However, you might want to consider adding a custom 403 (Forbidden) error
-page to handle the scenario where someone attempts to "browse a directory listing."
-For example, suppose you create a folder in your application -- such as "/Dashboards"
--- that, for whatever reason, doesn't contain a Default.aspx page. Assuming
-you haven't enabled Directory Browsing in IIS, then if someone hacks the URL
-to browse to /Dashboards then IIS would show its default 403 error page (similar
-to Figure 2). With very little work, you could create your own 403 error page
-and "wire it up" via the Web.config file.
+However, you might want to consider adding a custom 403 (Forbidden) error  	page to handle the scenario where someone attempts to "browse a directory listing."  	For example, suppose you create a folder in your application -- such as "/Dashboards"  	-- that, for whatever reason, doesn't contain a Default.aspx page. Assuming  	you haven't enabled Directory Browsing in IIS, then if someone hacks the URL  	to browse to /Dashboards then IIS would show its default 403 error page (similar  	to Figure 2). With very little work, you could create your own 403 error page  	and "wire it up" via the Web.config file.
 

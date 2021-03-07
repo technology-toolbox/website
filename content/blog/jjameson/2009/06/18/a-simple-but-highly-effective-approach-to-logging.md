@@ -14,9 +14,7 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 A common question that frequently arises both with customers and fellow consultants  is what do I recommend for logging? As experienced software developers, we know  that there are going to be errors in our solution -- as well as other important  events that we want to monitor -- and therefore we know we need a robust way of  logging these.
 

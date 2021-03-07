@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Several weeks ago, I converted our deployment process to use SharePoint solution  packages instead of the batch scripts that we had been using in our Development  environment. One of the issues that I discovered along the way is that SharePoint  is rather finicky when it comes to running the stsadm.exe command to deploy your  solution package.
 

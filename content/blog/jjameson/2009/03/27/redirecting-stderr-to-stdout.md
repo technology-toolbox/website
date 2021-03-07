@@ -15,9 +15,7 @@ tags: ["Core Development", "Windows Vista", "Windows Server"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 Yesterday I replied to an email from a teammate in which I incorrectly stated  that you can't redirect `stderr` to `stdout` in DOS -- er,  I mean a *command window* in Microsoft Windows.
 

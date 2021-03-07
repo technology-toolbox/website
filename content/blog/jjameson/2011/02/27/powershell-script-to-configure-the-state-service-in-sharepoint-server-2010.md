@@ -64,11 +64,14 @@ function ConfigureStateService(
 
     $database = New-SPStateServiceDatabase -Name $stateServiceDatabaseName `
         -Debug:$false
+
     $serviceApp = New-SPStateServiceApplication -Name $stateServiceName `
         -Database $database -Debug:$false
+
     New-SPStateServiceApplicationProxy -ServiceApplication $serviceApp `
         -Name $stateServiceName -DefaultProxyGroup -Debug:$false > $null
-Write-Host -Fore Green "Successfully configured the State Service."
+
+	Write-Host -Fore Green "Successfully configured the State Service."
 }
 
 function Main()

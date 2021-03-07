@@ -28,9 +28,7 @@ tags: ["Web Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years), I showed an example KPI dashboard for a Web application with  a table similar to the following:
 

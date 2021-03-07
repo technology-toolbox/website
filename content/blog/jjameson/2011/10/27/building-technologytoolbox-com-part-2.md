@@ -55,16 +55,9 @@ title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
 
 > **Note**
 >
-> I recommend creating folders like **Documents** (or "docs"
-> if you prefer that instead), **References** (or "lib"),
-> **Source** (or "src"), and **Tools** under the
-> **Main** folder.
+> I recommend creating folders like **Documents** (or "docs"  		if you prefer that instead), **References** (or "lib"), 		**Source** (or "src"), and **Tools** under the 		**Main** folder.
 >
-> Shortly after checking in this changeset, I realized that I forgot to
-> add a **Source** folder under **Main** and put
-> the solution in there -- instead of in the **Main** folder.
-> Consequently I moved the items to the correct location and checked in the
-> corresponding changeset.
+> Shortly after checking in this changeset, I realized that I forgot to  		add a **Source** folder under **Main** and put  		the solution in there -- instead of in the **Main** folder.  		Consequently I moved the items to the correct location and checked in the  		corresponding changeset.
 
 ### Add custom dictionary to Visual Studio solution
 

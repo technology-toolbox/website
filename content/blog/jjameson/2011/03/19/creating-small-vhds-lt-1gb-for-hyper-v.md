@@ -14,9 +14,7 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In [my previous post](/blog/jjameson/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot), I explained how I like to create separate VHDs for data and  log files in my SharePoint development VMs. However, given the very small amount  of content that I typically load into a SharePoint development environment, these  VHDs certainly don't need to be very large.
 
@@ -55,17 +53,10 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 
 > **Update (2011-04-14)**
 >
-> Depending on the specific service applications that you need to configure
-> in your SharePoint 2010 development environment, 200 MB not be sufficient
-> for transaction log storage (even if you
-> [configure your SharePoint databases to use the Simple recovery model by
-> default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)). Unfortunately, I discovered that when I tried to configure
-> numerous service applications on my development VM (to match my client's
-> Production environment) I ran out of space on my L: drive.
+> Depending on the specific service applications that you need to configure  		in your SharePoint 2010 development environment, 200 MB not be sufficient  		for transaction log storage (even if you 		[configure your SharePoint databases to use the Simple recovery model by
+> default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)). Unfortunately, I discovered that when I tried to configure  		numerous service applications on my development VM (to match my client's  		Production environment) I ran out of space on my L: drive.
 >
-> Instead of the 200 MB I originally thought that I could get away with,
-> I now use 500 MB. So far, I haven't encountered any issues with this increased
-> size.
+> Instead of the 200 MB I originally thought that I could get away with,  		I now use 500 MB. So far, I haven't encountered any issues with this increased  		size.
 
 Note that you'll probably need to change the permissions on the new VHD in order  to avoid an "Access Denied" error message after attaching the VHD to a VM:
 

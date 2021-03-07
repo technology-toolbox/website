@@ -15,9 +15,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In my [previous post](/blog/jjameson/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way), I showed how you can quickly create a Web application in Microsoft  Office SharePoint Server (MOSS) 2007 and configure it for anonymous access and Forms-Based  Authentication.
 
@@ -170,21 +168,11 @@ cd ..\..\Web\DeploymentFiles\Scripts
 
 > **Important**
 >
-> There is a bug in several of the out-of-the-box master pages in MOSS 2007
-> (including **BlueBand.master**) that prevent AJAX from working
-> correctly. The asynchronous postback is triggered and processed on the server,
-> but the response is never reflected in the corresponding **UpdatePanel**.
-> The problem is that the `<WebPartPages:SPWebPartManager>`
-> is declared outside of the `<form>`
-> element.
+> There is a bug in several of the out-of-the-box master pages in MOSS 2007  		(including **BlueBand.master**) that prevent AJAX from working  		correctly. The asynchronous postback is triggered and processed on the server,  		but the response is never reflected in the corresponding **UpdatePanel**.  		The problem is that the `<WebPartPages:SPWebPartManager>`  		is declared outside of the `<form>`  		element.
 >
-> To fix this, you can edit the master page (e.g. using SharePoint Designer)
-> and move `<WebPartPages:SPWebPartManager>`
-> inside the `<form>`
-> element -- or simply change the site to use **default.master**.
+> To fix this, you can edit the master page (e.g. using SharePoint Designer)  	and move `<WebPartPages:SPWebPartManager>`  	inside the `<form>`  	element -- or simply change the site to use **default.master**.
 >
-> Yvan Duhamel has more detail in
-> [his post about this issue](http://blogs.msdn.com/yvan_duhamel/archive/2009/05/19/ajax-postbacks-not-working-with-any-masterpage-other-than-default-master.aspx), if you are interested.
+> Yvan Duhamel has more detail in 	[his post about this issue](http://blogs.msdn.com/yvan_duhamel/archive/2009/05/19/ajax-postbacks-not-working-with-any-masterpage-other-than-default-master.aspx), if you are interested.
 
 The following screenshot shows what the site looks like after creating the Web  application, fixing the master page, and adding the sample Web Part. Note that this  sample isn't configured for FBA and anonymous access (since I was trying to pare  down the samples as much as possible).
 

@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 At times, it seems like developing SharePoint solutions is all I've been doing  since I joined Microsoft in 2000. While many things have certainly changed since  the old "Tahoe" days, at least one thing remains relatively the same: my recommendation  to use as much out-of-the-box (OOTB) as possible.
 

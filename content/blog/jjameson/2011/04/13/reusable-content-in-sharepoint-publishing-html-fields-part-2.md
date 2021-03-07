@@ -14,9 +14,7 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx)
 >
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog
-> ever goes away.
+> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
 
 In [my previous post](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1), I introduced a scenario for using the "Reusable Content" feature  in Microsoft Office SharePoint Server (MOSS) 2007 and SharePoint Server 2010. In  this post, I show you how to programmatically add **Reusable Content** list items (which is very helpful when deploying to multiple environments,  such as DEV, TEST, and PROD) as well as how to insert reusable content into a Publishing  HTML field on a page (e.g. the **Page Content** field). I also provide  a complete code sample for SharePoint 2010 that demonstrates the key concepts discussed  in this series.
 
