@@ -537,28 +537,32 @@ loopback address:
    **regedit**, and then click **OK**. If prompted
    by User Account Control to allow the program to make changes to the
    computer, click **Yes**.
+
 2. In Registry Editor, locate and then click the following registry
    key:
-
-> **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
+   
+   > **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
 
 3. Right-click **MSV1\_0**, point to **New**,
    and then click **Multi-String Value**.
+
 4. Type **BackConnectionHostNames**, and then press
    {{< kbd "ENTER" >}}.
+
 5. Right-click **BackConnectionHostNames**, and then click
    **Modify**.
+
 6. In the **Value data** box, type the host header corresponding
    to each Web application specified in
    Table 7. For example:
-
-> {{< kbd "extranet.fabrikam.com" >}}
->
-> **Note**
->
->       		Be sure to specify the host header corresponding to the environment. 
->       		For example, specify {{< kbd "extranet-local.fabrikam.com" >}} 
->       		for local development environments.
+   
+   > {{< kbd "extranet.fabrikam.com" >}}
+   > 
+   > **Note**
+   > 
+   >       		Be sure to specify the host header corresponding to the environment. 
+   >       		For example, specify {{< kbd "extranet-local.fabrikam.com" >}} 
+   >       		for local development environments.
 
 7. Quit Registry Editor, and then restart the IIS Admin Service.
 
@@ -855,47 +859,51 @@ To run the preparation tool:
 
 1. From the SharePoint Server 2010 installation location, double-click
    the appropriate executable file.
+
 2. Click **Install software prerequisites** on the splash
    screen. If prompted by User Account Control to allow the program to
    make changes to the computer, click **Yes**.
+
 3. On the **Welcome to the Microsoft® SharePoint® 2010
    Products Preparation Tool** page, click **Next**.
+
 4. Review the licensing agreement. If you accept the terms and conditions,
    select **I accept the terms of the License Agreement(s)**,
    and then click **Next**.
-
-> **Note**
->
-> The preparation tool may have to restart the server to complete
-> the installation of some of the prerequisites. The installer
-> will continue to run after the server is restarted, and no manual
-> intervention is required. However, you will have to log back
-> on to the server.
+   
+   > **Note**
+   > 
+   > The preparation tool may have to restart the server to complete
+   > the installation of some of the prerequisites. The installer
+   > will continue to run after the server is restarted, and no manual
+   > intervention is required. However, you will have to log back
+   > on to the server.
 
 5. On the **Installation Complete** page, click
    **Finish**.
+
 6. Restart the server to complete the installation of the prerequisites.
-
-> **Note**
->
-> After you complete the Microsoft SharePoint Products Preparation
-> Tool, you must install
-> [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917)
-> and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server after installing these hotfixes.
->
-> When installing these hotfixes on Windows Server 2008 R2,
-> you may be notified that these updates are not applicable.
-
-> **Note**
->
-> If the error message <q class="directQuote errorMessage">"Loading
-> this assembly would produce a different grant set from other
-> instances. (Exception from HRESULT: 0x80131401)"</q> is displayed
-> when you start the IIS worker process (w3wp.exe), another service,
-> or a managed application on a server that is also running SharePoint
-> Server 2010, you must install
-> [KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358).
-> You must restart the computer after you apply this hotfix.
+   
+   > **Note**
+   > 
+   > After you complete the Microsoft SharePoint Products Preparation
+   > Tool, you must install
+   > [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917)
+   > and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server after installing these hotfixes.
+   > 
+   > When installing these hotfixes on Windows Server 2008 R2,
+   > you may be notified that these updates are not applicable.
+   
+   > **Note**
+   > 
+   > If the error message <q class="directQuote errorMessage">"Loading
+   > this assembly would produce a different grant set from other
+   > instances. (Exception from HRESULT: 0x80131401)"</q> is displayed
+   > when you start the IIS worker process (w3wp.exe), another service,
+   > or a managed application on a server that is also running SharePoint
+   > Server 2010, you must install
+   > [KB 963676](http://go.microsoft.com/fwlink/?LinkId=151358).
+   > You must restart the computer after you apply this hotfix.
 
 ## Install security update for Web applications using claims authentication
 
@@ -933,33 +941,41 @@ To install SharePoint Server 2010:
 1. If the SharePoint installation splash screen is not already showing,
    from the SharePoint Server 2010 installation location, double-click
    the appropriate executable file.
+
 2. Click **Install SharePoint Server** on the splash screen.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
+
 3. On the **Enter your Product Key** page, type the corresponding
    SharePoint Server 2010 Enterprise CAL product key, and then click
    **Continue**.
+
 4. Review the licensing agreement. If you accept the terms and conditions,
    select **I accept the terms of this agreement**, and then
    click **Continue**.
+
 5. On the **Choose the installation you want** page, click
    **Server Farm**.
+
 6. On the **Server Type** tab, click **Complete**.
+
 7. On the **File Location** tab, change the installation
    and search index paths according to
    Table 3, and then
    click **Install Now**.
+
 8. Wait for the installation to finish.
+
 9. On the **Run Configuration Wizard** page, clear the
    **Run the SharePoint Products and Technologies Configuration Wizard
    now** checkbox, and then click **Close**.
-
-> **Note**
->
-> For consistency of approach, it is recommended that you do not
-> run the configuration wizard until SharePoint Server has been
-> installed on all application and front-end Web servers that
-> will participate in the server farm.
+   
+   > **Note**
+   > 
+   > For consistency of approach, it is recommended that you do not
+   > run the configuration wizard until SharePoint Server has been
+   > installed on all application and front-end Web servers that
+   > will participate in the server farm.
 
 ## Create and configure the farm
 
@@ -1015,46 +1031,52 @@ the farm:
      - English lowercase characters (from a through z)
      - Numerals (from 0 through 9)
      - Nonalphabetic characters (such as !, $, #, %)
-
-> **Note**
->
-> Although a passphrase is similar to a password, it is usually
-> longer to enhance security. It is used to encrypt credentials
-> of accounts that are registered in SharePoint Server 2010. For
-> example, the SharePoint Server 2010 system account that you
-> provide when you run the SharePoint Products Configuration Wizard
-> wizard. Ensure that you remember the passphrase, because you
-> must use it each time you add a server to the farm.
+   
+   > **Note**
+   > 
+   > Although a passphrase is similar to a password, it is usually
+   > longer to enhance security. It is used to encrypt credentials
+   > of accounts that are registered in SharePoint Server 2010. For
+   > example, the SharePoint Server 2010 system account that you
+   > provide when you run the SharePoint Products Configuration Wizard
+   > wizard. Ensure that you remember the passphrase, because you
+   > must use it each time you add a server to the farm.
 
 7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
+   
    1. Select the **Specify port number** checkbox and
       type the port number specified in
       Table 7.
    2. In the **Configure Security Settings** section,
       ensure NTLM is selected.
    3. Click **Next**.
+
 8. On the **Completing the SharePoint Products Configuration
    Wizard** page, verify the configuration settings, and then click
    **Next**.
+
 9. Wait for the product configuration to complete.
+
 10. On the **Configuration Successful** page, click
     **Finish**.
-11. The Central Administration Web site will open in a new browser window.
 
-> **Note**
->
-> If you are prompted for your user name and password, you need
-> to add the SharePoint Central Administration site to the
-> **Local intranet** zone and configure the default
-> settings for this zone in Internet Explorer. Instructions for
-> configuring these settings are provided in a following section
-> (Add
-> SharePoint Central Administration to the Local intranet zone).
-> In order to complete the steps in this section, type your username
-> and password to access Central Administration.
+11. The Central Administration Web site will open in a new browser window.
+    
+    > **Note**
+    > 
+    > If you are prompted for your user name and password, you need
+    > to add the SharePoint Central Administration site to the
+    > **Local intranet** zone and configure the default
+    > settings for this zone in Internet Explorer. Instructions for
+    > configuring these settings are provided in a following section
+    > (Add
+    > SharePoint Central Administration to the Local intranet zone).
+    > In order to complete the steps in this section, type your username
+    > and password to access Central Administration.
 
 12. In the **Help Make SharePoint Better** window, click
     the desired option and then click **OK**.
+
 13. On the **Configure your SharePoint farm** page, click
     **Cancel** (since the services will be configured manually).
 
@@ -1134,24 +1156,30 @@ the configuration in Windows Server 2008 R2:
 1. Click the **Start** menu, type **regedit**,
    and then click **regedit.exe**. If prompted by **User Account Control** to allow the program to make changes to
    this computer, click **Yes**.
+
 2. In the **Registry Editor** window, search for "61738644-F196-11D0-9953-00C04FD919C1"
    to find:
-
-> HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
+   
+   > HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
 
 3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}**
    key and then click **Permissions**.
+
 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
    dialog box, click **Advanced**.
+
 5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
+   
    1. Click the **Owner** tab.
    2. In the **Change owner to** list, click the
       **Administrators** group.
    3. Click **OK**.
+
 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}**
    dialog box, click the **Administrators** group, then click
    the checkbox to allow the group **Full Control**, and click
    **OK**.
+
 7. Close the Registry Editor window.
 
 To configure permissions for the IIS WAMREG
@@ -1201,9 +1229,9 @@ file.
 To rename the TaxonomyPicker.ascx file:
 
 1. Open Windows Explorer and browse to the following folder:
-
-> **C:\Program Files\Common Files\Microsoft Shared\Web Server
-> Extensions\14\TEMPLATE\CONTROLTEMPLATES**
+   
+   > **C:\Program Files\Common Files\Microsoft Shared\Web Server
+   > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 
 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**.
    When prompted to confirm that you want to change the file name extension,
@@ -1429,11 +1457,12 @@ scripts:
    2010 Management Shell**, and then click **Run as administrator**.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -1594,11 +1623,12 @@ To configure object cache user accounts:
    2010 Management Shell**, and then click **Run as administrator**.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -1638,16 +1668,16 @@ the internal Fabrikam domain:
    ```
    stsadm -o setapppassword -password {Key}
    ```
-
-> **Note**
->
-> The key specified above can be any string. It is used to
-> encrypt the password specified in the following procedure when
-> storing the credentials in the database.
->
-> This key is used to encrypt the password for the account
-> used to access the forest or domain. The encryption string must
-> be the same for every server in the farm.
+   
+   > **Note**
+   > 
+   > The key specified above can be any string. It is used to
+   > encrypt the password specified in the following procedure when
+   > storing the credentials in the database.
+   > 
+   > This key is used to encrypt the password for the account
+   > used to access the forest or domain. The encryption string must
+   > be the same for every server in the farm.
 
 3. Repeat the steps above on each Web server in the farm.
 
@@ -1656,13 +1686,13 @@ the internal Fabrikam domain:
    ```
    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
    ```
-
-> **Note**
->
-> The usernames and passwords must not contain commas. After you
-> run this command, users can select users and groups from the
-> listed forests and domains from any front-end Web server in
-> the farm.
+   
+   > **Note**
+   > 
+   > The usernames and passwords must not contain commas. After you
+   > run this command, users can select users and groups from the
+   > listed forests and domains from any front-end Web server in
+   > the farm.
 
 ## Configure SSL on the Internet zone
 
@@ -1717,11 +1747,12 @@ PowerShell:
    2010 Management Shell**, and then click **Run as administrator**.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -1883,32 +1914,35 @@ file:
 
 1. Click **Start**, point to **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
+
 2. In **Internet Information Services (IIS) Manager**,
    in the **Connections** pane, click the plus sign (+) next
    to the server name that contains the Web application, and then click
    the plus sign next to **Sites** to view the Web applications
    that have been created.
+
 3. Right-click **SharePoint Central Administration v4**,
    and then click **Explore**. Windows Explorer opens, with
    the directories for the selected Web application listed.
-
-> **Important**
->
-> Before you make changes to the Web.config file, make a copy
-> of it by using a different name (for example, "Web - Copy.config"),
-> so that if a mistake is made in the file, you can delete it
-> and use the original file.
+   
+   > **Important**
+   > 
+   > Before you make changes to the Web.config file, make a copy
+   > of it by using a different name (for example, "Web - Copy.config"),
+   > so that if a mistake is made in the file, you can delete it
+   > and use the original file.
 
 4. Double-click the **Web.config** file to open the file.
-
-> **Note**
->
-> If you see a dialog box that says that Windows cannot open the
-> file, click **Select the program from a list**,
-> and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then
-> click **OK**.
+   
+   > **Note**
+   > 
+   > If you see a dialog box that says that Windows cannot open the
+   > file, click **Select the program from a list**,
+   > and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then
+   > click **OK**.
 
 5. In the Web.config editor:
+   
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
       add the following elements:
       
@@ -1918,34 +1952,34 @@ file:
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}**
-> placeholder in the connection string with the name of the
-> database server.
-
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    		
-    
-        ```
-        <add name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo" />
-        ```
-    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    		
-    
-        ```
-        <add name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo"
-          passwordFormat="Hashed" />
-        ```
+      
+      > **Important**
+      > 
+      > Be sure to replace the **{databaseServer}**
+      > placeholder in the connection string with the name of the
+      > database server.
+   
+   2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlRoleProvider"
+        type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo" />
+      ```
+   
+   3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo"
+        passwordFormat="Hashed" />
+      ```
 
 6. Save the changes to the Web.config file and close the editor.
+
 7. Repeat the steps above on each Web server in the farm that hosts
    the Central Administration site.
 
@@ -1955,13 +1989,13 @@ file:
 1. In **Internet Information Services (IIS) Manager**,
    in the **Connections** pane, expand the **SharePoint
    Web Services** site, right-click the **SecurityTokenServiceApplication** subsite, and then click **Explore**.
-
-> **Important**
->
-> Before you make changes to the Web.config file, make a copy
-> of it by using a different name (for example, "Web - Copy.config"),
-> so that if a mistake is made in the file, you can delete it
-> and use the original file.
+   
+   > **Important**
+   > 
+   > Before you make changes to the Web.config file, make a copy
+   > of it by using a different name (for example, "Web - Copy.config"),
+   > so that if a mistake is made in the file, you can delete it
+   > and use the original file.
 
 2. Double-click the **Web.config** file to open the file.
 
@@ -1998,13 +2032,14 @@ file:
      </roleManager>
    </system.web>
    ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}** placeholder
-> in the connection string with the name of the database server.
+   
+   > **Important**
+   > 
+   > Be sure to replace the **{databaseServer}** placeholder
+   > in the connection string with the name of the database server.
 
 4. Save the changes to the Web.config file and close the editor.
+
 5. Repeat the steps above on each Web server in the farm.
 
 To configure the Web.config file for the Fabrikam
@@ -2014,16 +2049,18 @@ Extranet Web application:
    in the **Connections** pane, right-click the Web application
    (e.g. **SharePoint - extranet.fabrikam.com80**), and then
    click **Explore**.
-
-> **Important**
->
-> Before you make changes to the Web.config file, make a copy
-> of it by using a different name (for example, "Web - Copy.config"),
-> so that if a mistake is made in the file, you can delete it
-> and use the original file.
+   
+   > **Important**
+   > 
+   > Before you make changes to the Web.config file, make a copy
+   > of it by using a different name (for example, "Web - Copy.config"),
+   > so that if a mistake is made in the file, you can delete it
+   > and use the original file.
 
 2. Double-click the **Web.config** file to open the file.
+
 3. In the Web.config editor:
+   
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`),
       add the following elements:
       
@@ -2033,44 +2070,43 @@ Extranet Web application:
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}**
-> placeholder in the connection string with the name of the
-> database server.
-
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    		
-    
-        ```
-        <add name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo" />
-        ```
-
-> **Warning**
->
-> Do not overwrite any existing entries in this Web.config
-> file.
-
-    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    		
-    
-        ```
-        <add name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo"
-          enablePasswordReset="true"
-          enablePasswordRetrieval="false"
-          passwordFormat="Hashed"
-          requiresQuestionAndAnswer="true"
-          requiresUniqueEmail="true" />
-        ```
+      
+      > **Important**
+      > 
+      > Be sure to replace the **{databaseServer}**
+      > placeholder in the connection string with the name of the
+      > database server.
+   
+   2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlRoleProvider"
+        type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo" />
+      ```
+      
+      > **Warning**
+      > 
+      > Do not overwrite any existing entries in this Web.config
+      > file.
+   
+   3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo"
+        enablePasswordReset="true"
+        enablePasswordRetrieval="false"
+        passwordFormat="Hashed"
+        requiresQuestionAndAnswer="true"
+        requiresUniqueEmail="true" />
+      ```
 
 4. Save the changes to the Web.config file and close the editor.
+
 5. Repeat the steps above on each Web server in the farm.
 
 ### Create a user in the database using IIS Manager
@@ -2142,17 +2178,19 @@ To login to the website using Windows authentication:
 
 1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order to seamlessly authenticate with the current
    domain credentials).
-
-> **Note**
->
-> This is discussed in more detail in the following blog post:
->
-> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+   
+   > **Note**
+   > 
+   > This is discussed in more detail in the following blog post:
+   > 
+   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
    and click **Sign In**.
+
 3. On the **Sign In** page, in the dropdown list, click
    **Windows Authentication**.
+
 4. Verify the home page is displayed and the **Sign In** link has been replaced with the "Welcome" menu.
 
 ## Enable disk-based caching for the Web application
@@ -2185,31 +2223,33 @@ To configure BLOB cache settings:
 
 1. Click **Start**, point to **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
+
 2. In **Internet Information Services (IIS) Manager**,
    in the **Connections** pane, click the plus sign (+) next
    to the server name that contains the Web application, and then click
    the plus sign next to **Sites** to view the Web applications
    that have been created.
+
 3. Right-click the name of the Web application to configure the disk-based
    cache for, and then click **Explore**. Windows Explorer
    opens, with the directories for the selected Web application listed.
-
-> **Important**
->
-> Before you make changes to the Web.config file, make a copy
-> of it by using a different name (for example, “Web - Copy.config”),
-> so that if a mistake is made in the file, you can delete it
-> and use the original file.
+   
+   > **Important**
+   > 
+   > Before you make changes to the Web.config file, make a copy
+   > of it by using a different name (for example, “Web - Copy.config”),
+   > so that if a mistake is made in the file, you can delete it
+   > and use the original file.
 
 4. Double-click the **Web.config** file to open the file.
-
-> **Note**
->
-> If you see a dialog box that says that Windows cannot open the
-> file, click **Select the program from a list**,
-> and then click **OK**. In the **Open With**
-> dialog box, click **Notepad**, and then click
-> **OK**.
+   
+   > **Note**
+   > 
+   > If you see a dialog box that says that Windows cannot open the
+   > file, click **Select the program from a list**,
+   > and then click **OK**. In the **Open With**
+   > dialog box, click **Notepad**, and then click
+   > **OK**.
 
 5. If the Windows dialog box appears, select **Select a program
    from a list of installed programs**, and then click **OK**.
@@ -2225,31 +2265,33 @@ To configure BLOB cache settings:
 
 7. In this line, change the **location** attribute to
    specify a directory that has enough space to accommodate the cache size.
-
-> **Note**
->
-> It is strongly recommended to specify a directory that is not
-> on the same drive as where either the server operating system
-> swap files or server log files are stored.
+   
+   > **Note**
+   > 
+   > It is strongly recommended to specify a directory that is not
+   > on the same drive as where either the server operating system
+   > swap files or server log files are stored.
 
 8. To add or remove file types from the list of file types to be cached,
    for the **path** attribute, modify the regular expression
    to include or remove the appropriate file extension. If you add file
    extensions, make sure to separate each file type with a pipe (|), as
    shown above.
+
 9. To change the size of the cache, type a new number for **maxSize**.
    The size is expressed in gigabytes (GB), and 10 GB is the default.
-
-> **Important**
->
-> It is recommended that you not set the cache size smaller than
-> 10 GB. When you set the cache size, make sure to specify a number
-> large enough to provide a buffer at least 20 percent bigger
-> than the estimated size of the content that will be stored in
-> the cache.
+   
+   > **Important**
+   > 
+   > It is recommended that you not set the cache size smaller than
+   > 10 GB. When you set the cache size, make sure to specify a number
+   > large enough to provide a buffer at least 20 percent bigger
+   > than the estimated size of the content that will be stored in
+   > the cache.
 
 10. To enable the BLOB cache, change the **enabled** attribute
     to **true**.
+
 11. Save the file, and then close it.
 
 ## Configure SharePoint groups
@@ -2293,11 +2335,12 @@ To configure the State Service:
    2010 Management Shell**, and then click **Run as administrator**.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -2325,11 +2368,12 @@ Application:
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
    to allow the program to make changes to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -2347,11 +2391,11 @@ Application:
 
 6. Wait for the script to complete and verify no errors occurred during
    the process.
-
-> **Note**
->
-> It may take several minutes to create and configure the Search
-> Service Application.
+   
+   > **Note**
+   > 
+   > It may take several minutes to create and configure the Search
+   > Service Application.
 
 ## Configure the search crawl schedules
 
@@ -2399,26 +2443,31 @@ To install Office Web Apps:
 
 1. From the Office Web Apps installation location, double-click the
    appropriate executable file.
+
 2. On the **Enter your Product Key** page, enter the corresponding
    product key, and then click **Continue**.
+
 3. Review the licensing agreement. If you accept the terms and conditions,
    select **I accept the terms of this agreement**, and then
    click **Continue**.
+
 4. On the **Choose a file location** tab, change the path
    for the search index files as specified in
    Table 3, and then
    click **Install Now**.
+
 5. Wait for the installation to finish.
+
 6. On the **Run Configuration Wizard** page, clear the
    **Run the SharePoint Products and Technologies Configuration Wizard
    now** checkbox, and then click **Close**.
-
-> **Note**
->
-> For consistency of approach, it is recommended that you do not
-> run the configuration wizard until Office Web Apps has been
-> installed on all application and front-end Web servers in the
-> farm.
+   
+   > **Note**
+   > 
+   > For consistency of approach, it is recommended that you do not
+   > run the configuration wizard until Office Web Apps has been
+   > installed on all application and front-end Web servers in the
+   > farm.
 
 7. Repeat the steps above on each SharePoint server in the farm.
 
@@ -2515,22 +2564,26 @@ trusted location for HTTPS instead of HTTP:
 
 1. On the Central Administration home page, in the **Application
    Management** section, click **Manage service applications**.
+
 2. On the **Service Applications** tab, click **Excel Services Application** (where the **Type**
    column is **Excel Services Application Web Service Application**).
+
 3. On the **Manage Excel Services Application** page,
    click **Trusted File Locations**.
+
 4. On the **Excel Services Application Trusted File Locations** page, click the default trusted file location (**http://**)
    to edit the corresponding settings.
+
 5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the
    **Address** from **http://** to **https://** and then click **OK**.
-
-> **Note**
->
-> Since users are automatically redirected from http:// to https://
-> during sign in, it is not expected that Excel Services will
-> be used over HTTP (only HTTPS). If it is necessary to support
-> both HTTP and HTTPS, then a separate trusted file location will
-> need to be configured.
+   
+   > **Note**
+   > 
+   > Since users are automatically redirected from http:// to https://
+   > during sign in, it is not expected that Excel Services will
+   > be used over HTTP (only HTTPS). If it is necessary to support
+   > both HTTP and HTTPS, then a separate trusted file location will
+   > need to be configured.
 
 ## Configure the Office Web Apps cache
 
@@ -2547,18 +2600,18 @@ create a separate content database for caching:
    2010 Management Shell**, and then click **Run as administrator**.
    If prompted by User Account Control to allow the program to make changes
    to the computer, click **Yes**.
-
-> **Important**
->
-> You must start a new instance of the SharePoint 2010 Management
-> Shell after installing Office Web Apps in order for the new
-> PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
+   
+   > **Important**
+   > 
+   > You must start a new instance of the SharePoint 2010 Management
+   > Shell after installing Office Web Apps in order for the new
+   > PowerShell cmdlets to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
 
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -2568,21 +2621,21 @@ create a separate content database for caching:
 
 4. Wait for the script to complete and verify no errors occurred during
    the process.
-
-> **Note**
->
-> The cache site collection is created via a SharePoint timer
-> job. Consequently you may encounter the following error (depending
-> on how quickly the installation steps are performed):
->
-> {{< blockquote "font-italic text-danger" >}}
->
-> Set-SPOfficeWebAppsCache : Specified web application doesn't exist or doesn't have a cache site collection.
->
-> {{< /blockquote >}}
->
->       		If this error occurs, wait a few minutes and then run the script 
->       		again.
+   
+   > **Note**
+   > 
+   > The cache site collection is created via a SharePoint timer
+   > job. Consequently you may encounter the following error (depending
+   > on how quickly the installation steps are performed):
+   > 
+   > {{< blockquote "font-italic text-danger" >}}
+   > 
+   > Set-SPOfficeWebAppsCache : Specified web application doesn't exist or doesn't have a cache site collection.
+   > 
+   > {{< /blockquote >}}
+   > 
+   >       		If this error occurs, wait a few minutes and then run the script 
+   >       		again.
 
 5. Type the following command to reset Internet Information Services
    (IIS):
@@ -2675,11 +2728,12 @@ To add the new event source:
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
    to allow the program to make changes to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -2701,11 +2755,12 @@ To install and activate the features:
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
    to allow the program to make changes to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Type the following command:
    
@@ -2753,20 +2808,21 @@ To create the sample content:
 
 1. From a command prompt, change to the directory containing the "Test
    Console" utility.
-
-> **Note**
->
->       		If deploying a build copied from the release server (i.e. DAZZLER), 
->       		use the following path:
->       		
->
-> > **{build version}\{Debug|Release}**
->
->       		If deploying a build to a local development environment from 
->       		a TFS workspace, use the following path:
->       		
->
-> > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
+   
+   > **Note**
+   > 
+   >       		If deploying a build copied from the release server (i.e. DAZZLER), 
+   >       		use the following path:
+   >       		
+   >     
+   >     > **{build version}\{Debug|Release}**
+   >     
+   >     
+   >       		If deploying a build to a local development environment from 
+   >       		a TFS workspace, use the following path:
+   >       		
+   >     
+   >     > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 
 2. Type the following command:
    
@@ -2792,11 +2848,12 @@ partner using the PowerShell script:
    **SharePoint 2010 Management Shell**, and then click
    **Run as administrator**. If prompted by User Account Control
    to allow the program to make changes to the computer, click **Yes**.
+
 2. From the Windows PowerShell command prompt, change to the following
    directory:
-
-> **{build version or branch folder}\[Source]\Deployment
-> Files\Scripts**
+   
+   > **{build version or branch folder}\[Source]\Deployment
+   > Files\Scripts**
 
 3. Run the **Create Partner Site Collection.ps1** script
    and provide the name of the partner, for example:

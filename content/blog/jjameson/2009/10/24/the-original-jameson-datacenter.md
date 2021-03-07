@@ -23,11 +23,11 @@ Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home l
 
 <q class="directQuote">Lately it occurs to me: What a long, strange trip it's been.</q>
 
-> **Update**
->
-> Doh! You would think a guy with a Master of Science degree in Mechanical Engineering
-> could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading
-> before clicking that **Publish** button ;-)
+    > **Update**
+    > 
+    > Doh! You would think a guy with a Master of Science degree in Mechanical Engineering
+    >                     could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading
+    >                     before clicking that **Publish** button ;-)
 
 2. An article I read about a year ago describing the origin of Google that also included
    some photos of the original Google infrastructure in the Stanford University computer

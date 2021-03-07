@@ -268,25 +268,29 @@ Here are the instructions to deploy the Fabrikam Demo sample to your own SharePo
 #### To deploy the Fabrikam Demo for claims authentication to SharePoint:
 
 1. Create three service accounts for the Fabrikam Demo Site:
+   
    - **{DOMAIN}\svc-web-fabrikam** - used as the application pool identity
      for the new Fabrikam Web site
    - **{DOMAIN}\svc-sp-psr** - object cache user account providing Full
      Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full
      Control access to Web applications
+
 2. Complete the procedures detailed in **Step 1** from [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010) to create and configure the **FabrikamDemo** database
    (i.e. the ASP.NET membership/role database).
+
 3. Complete the procedures detailed in **Step 5**from my previous post
    to add the Web.config modifications for claims-based authentication to the following
    sites:
+   
    - **SharePoint Central Administration v4**
    - **Security Token Service**
-
-> **Note**
->
-> You do not need to manually add the Web.config modifications for the "Fabrikam"
-> Web application because this is done automatically upon activation of a feature
-> (Fabrikam Demo - Web Application Configuration).
+   
+   > **Note**
+   > 
+   > You do not need to manually add the Web.config modifications for the "Fabrikam"
+   > Web application because this is done automatically upon activation of a feature
+   > (Fabrikam Demo - Web Application Configuration).
 
 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management
    Shell**, and then click **Run as administrator**. If prompted

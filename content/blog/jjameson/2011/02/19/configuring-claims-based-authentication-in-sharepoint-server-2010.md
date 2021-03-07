@@ -326,31 +326,34 @@ In order to complete the configuration of claims-based authentication, it is  ne
 
 1. Click **Start**, point to **Administrative Tools**,
    and then click **Internet Information Services (IIS) Manager**.
+
 2. In **Internet Information Services (IIS) Manager**, in the
    **Connections** pane, click the plus sign (+) next to the server
    name that contains the Web application, and then click the plus sign next to
    **Sites** to view the Web applications that have been created.
+
 3. Right-click **SharePoint Central Administration v4**, and then
    click **Explore**. Windows Explorer opens, with the directories
    for the selected Web application listed.
-
-> **Important**
->
-> Before you make changes to the Web.config file, make a copy of it by
-> using a different name (for example, "Web - Copy.config"), so that if
-> a mistake is made in the file, you can delete it and use the original
-> file.
+   
+   > **Important**
+   > 
+   > Before you make changes to the Web.config file, make a copy of it by
+   > using a different name (for example, "Web - Copy.config"), so that if
+   > a mistake is made in the file, you can delete it and use the original
+   > file.
 
 4. Double-click the **Web.config** file to open the file.
-
-> **Note**
->
-> If you see a dialog box that says that Windows cannot open the file,
-> click **Select the program from a list**, and then click
-> **OK**. In the **Open With** dialog box, click
-> **Notepad**, and then click **OK**.
+   
+   > **Note**
+   > 
+   > If you see a dialog box that says that Windows cannot open the file,
+   > click **Select the program from a list**, and then click
+   > **OK**. In the **Open With** dialog box, click
+   > **Notepad**, and then click **OK**.
 
 5. In the Web.config editor:
+   
    1. After the end of the **/configuration/configSections**
       element (i.e. `</configSections>`),
       add the following elements:
@@ -361,31 +364,30 @@ In order to complete the configuration of claims-based authentication, it is  ne
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}** placeholder
-> in the connection string with the name of the database server.
-
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    
-    
-        ```
-        <add name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo" />
-        ```
-    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    
-    
-        ```
-        <add name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo"
-          passwordFormat="Hashed" />
-        ```
+      
+      > **Important**
+      > 
+      > Be sure to replace the **{databaseServer}** placeholder
+      > in the connection string with the name of the database server.
+   
+   2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlRoleProvider"
+        type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo" />
+      ```
+   
+   3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo"
+        passwordFormat="Hashed" />
+      ```
 
 6. Save the changes to the Web.config file and close the editor.
 
@@ -428,11 +430,11 @@ In order to complete the configuration of claims-based authentication, it is  ne
      </roleManager>
    </system.web>
    ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}** placeholder
-> in the connection string with the name of the database server.
+   
+   > **Important**
+   > 
+   > Be sure to replace the **{databaseServer}** placeholder
+   > in the connection string with the name of the database server.
 
 4. Save the changes to the Web.config file and close the editor.
 
@@ -453,41 +455,38 @@ In order to complete the configuration of claims-based authentication, it is  ne
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-
-> **Important**
->
-> Be sure to replace the **{databaseServer}** placeholder
-> in the connection string with the name of the database server.
-
-    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-    
-    
-        ```
-        <add name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo" />
-        ```
-
-> **Warning**
->
-> Do not overwrite any existing entries in this Web.config file.
-
-    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    
-    
-        ```
-        <add name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Demo Site"
-          connectionStringName="FabrikamDemo"
-          enablePasswordReset="true"
-          enablePasswordRetrieval="false"
-          passwordFormat="Hashed"
-          requiresQuestionAndAnswer="true"
-          requiresUniqueEmail="true" />
-        ```
-
+      
+      > **Important**
+      > 
+      > Be sure to replace the **{databaseServer}** placeholder
+      > in the connection string with the name of the database server.
+   
+   2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlRoleProvider"
+        type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo" />
+      ```
+      
+      > **Warning**
+      > 
+      > Do not overwrite any existing entries in this Web.config file.
+   
+   3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
+      
+      ```
+      <add name="FabrikamSqlMembershipProvider"
+        type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+        applicationName="Fabrikam Demo Site"
+        connectionStringName="FabrikamDemo"
+        enablePasswordReset="true"
+        enablePasswordRetrieval="false"
+        passwordFormat="Hashed"
+        requiresQuestionAndAnswer="true"
+        requiresUniqueEmail="true" />
+      ```
 4. Save the changes to the Web.config file and close the editor.
 
 ### Step 6 - Create a user in the database using IIS Manager
@@ -537,17 +536,19 @@ The final step is to validate the Web application works as expected when using  
 
 1. Add the Fabrikam Web site to the **Local intranet** zone (in
    order to seamlessly authenticate with the current domain credentials).
-
-> **Note**
->
-> This is discussed in more detail in the following blog post:
->
-> {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+   
+   > **Note**
+   > 
+   > This is discussed in more detail in the following blog post:
+   > 
+   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.
+
 3. On the **Sign In** page, in the dropdown list, click
    **Windows Authentication**.
+
 4. Verify the home page is displayed and the **Sign In** link
    has been replaced with the "Welcome" menu.
 

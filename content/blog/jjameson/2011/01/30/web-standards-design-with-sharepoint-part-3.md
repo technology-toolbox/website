@@ -110,12 +110,12 @@ To deploy the Fabrikam Demo to SharePoint:
    ```
    set FABRIKAM_INTRANET_URL=http://fabweb-local
    ```
-
-> **Note**
->
-> While you don't have to use this URL, it is recommended for developer environments
-> because it causes the deployment scripts to bypass the SharePoint timer infrastructure
-> when deploying and retracting the solution.
+   
+   > **Note**
+   > 
+   > While you don't have to use this URL, it is recommended for developer environments
+   > because it causes the deployment scripts to bypass the SharePoint timer infrastructure
+   > when deploying and retracting the solution.
 
 3. Set environment variables to specify the credentials to use for the Fabrikam application
    pool:
@@ -124,10 +124,10 @@ To deploy the Fabrikam Demo to SharePoint:
    set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
    set FABRIKAM_APP_POOL_PASSWORD={password}
    ```
-
-> **Important**
->
-> Be sure to specify a valid local or domain user.
+   
+   > **Important**
+   > 
+   > Be sure to specify a valid local or domain user.
 
 4. Change to the folder containing the deployment scripts:
 

@@ -62,9 +62,9 @@ netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
 
 {{< console-block-end >}}
 
-> **Note**
->
-> XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
+    > **Note**
+    > 
+    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
 
 3. Logout and log back in using a domain account.
 
