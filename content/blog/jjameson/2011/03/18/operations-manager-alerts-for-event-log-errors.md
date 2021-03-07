@@ -49,12 +49,11 @@ To create a rule that generates an alert whenever an error occurs in the Applica
 6. On the **Event Log Name** page, ensure **Log name** is set to **Application**, and then click **Next**.
 7. On the **Build Event Expression**page:
    1. Specify the following expression:
-
-{{< table class="small" >}}
-
-        | Parameter Name | Operator | Value |
-        | --- | --- | --- |
-        | Event Level | Equals | Error |
+      {{< table class="small" >}}
+      
+      | Parameter Name | Operator | Value |
+      | --- | --- | --- |
+      | Event Level | Equals | Error |
 
 {{< /table >}}
 2. Click **Next**.

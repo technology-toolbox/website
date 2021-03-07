@@ -32,7 +32,7 @@ For example, suppose that, like me, you use custom SharePoint features to config
 
 If you always activate the features through **Site Settings** (i.e. by browsing to the admin pages of the site), then everything works as expected (because `Thread.CurrentThread.CurrentUICulture` is set to right locale based on the context of the current SharePoint site).
 
-However, what if, like me, you prefer to activate features via the command line instead (e.g. using PowerShell of StsAdm.exe)? In that case,  `Thread.CurrentThread.CurrentUICulture` is always going to be set to your operating system language/region ("en-US" in my case). That obviously isn't going to retrieve the Spanish text when configuring a SharePoint site created in the Spanish language.
+However, what if, like me, you prefer to activate features via the command line instead (e.g. using PowerShell of StsAdm.exe)? In that case, `Thread.CurrentThread.CurrentUICulture` is always going to be set to your operating system language/region ("en-US" in my case). That obviously isn't going to retrieve the Spanish text when configuring a SharePoint site created in the Spanish language.
 
 Consequently we need a way to temporarily change the CurrentUICulture -- but ensure that it gets properly reverted back to the original value regardless of whether everything works as expected or some error occurs.
 

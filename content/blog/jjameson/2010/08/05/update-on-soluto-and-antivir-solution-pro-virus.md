@@ -17,7 +17,7 @@ tags: [""]
 >
 > Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-In my [previous post](/blog/jjameson/2010/08/01/soluto-and-antivir-solution-pro-virus), I described my encounter with the [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&go=&form=QBNT2) after installing [Soluto](http://www.soluto.com) ("anti-frustration software" that analyzes the boot time  of your PC).
+In my [previous post](/blog/jjameson/2010/08/01/soluto-and-antivir-solution-pro-virus), I described my encounter with the [Antivir Solution Pro virus](http://www.bing.com/news/search?q=antivir+solution+pro&go=&form=QBNT2) after installing [Soluto](http://www.soluto.com) ("anti-frustration software" that analyzes the boot time of your PC).
 
 Roee Adler, Chief Product Officer at Soluto, assured me the virus was not transmitted via Soluto (directly or indirectly via the PC Genome service). While they are aware of [some malware disguising itself as Soluto software](http://blog.soluto.com/2010/06/safety-notice-when-downloading-soluto-avoid-file-sharing-services/), this shouldn't be an issue provided you download the Soluto installer directly from [http://www.soluto.com](http://www.soluto.com) (as I did).
 

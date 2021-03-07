@@ -56,10 +56,7 @@ In case you are wondering how I configured the gated check-in build definition, 
 | Build Defaults | This build copies output files to a drop folder | (not selected) |
 | Process | Build process template: | DefaultTemplate.xaml |
 |   | Build process parameters: |   |
-|   | Items to Build<ul><li>Solutions/Projects</li>
-
-<li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li>
-<li>Release - Any CPU</li></ul> |
+|   | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li><li>Release - Any CPU</li></ul> |
 |   | Clean Workspace | False |
 |   | Perform Code Analysis | Never |
 |   | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> | <br>False |
@@ -67,5 +64,6 @@ In case you are wondering how I configured the gated check-in build definition, 
 |   | Copy Outputs to Drop Folder | False |
 |   | Create Work Item on Failure | False |
 |   | Label Sources | False |
+
 {{< /table >}}
 

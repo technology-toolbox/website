@@ -15,10 +15,9 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx)
 >
-> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Shortly after publishing my previous post covering ["TFS Lite"
-for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS  v3 using the site template that I originally provided resulted in the following  error:
+Shortly after publishing my previous post covering ["TFS Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3), Dragan Panjkov noted that attempting to create a new site in WSS v3 using the site template that I originally provided resulted in the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
@@ -28,9 +27,9 @@ The template you have chosen is invalid or cannot be found.
 
 Ouch.
 
-Okay, time to fess up. You see, I didn't really create the template using WSS  v3. Rather, I created it on one of my MOSS 2007 VMs and simply *assumed*  it would work with WSS v3. What is it they say about assumptions again? Never mind,  don't answer that.
+Okay, time to fess up. You see, I didn't really create the template using WSS v3. Rather, I created it on one of my MOSS 2007 VMs and simply *assumed* it would work with WSS v3. What is it they say about assumptions again? Never mind, don't answer that.
 
-To investigate the issue, I "spun up" a new VM based on my SysPrep'ed image of  Windows Server 2003 SP2, joined the new VM to my domain, ran {{< kbd "wuauclt /detectnow" >}}  a couple of times to install the 40 or so hotfixes that have been released for Windows  Server 2003 since SP2, and then installed WSS with SP1. Sure enough, about an hour  after discovering the error reported by Dragan, I was able to repro the problem.  [Thank goodness for Virtual Server, SysPrep, slipstreamed service packs, and a local  intranet location of Windows Update!]
+To investigate the issue, I "spun up" a new VM based on my SysPrep'ed image of Windows Server 2003 SP2, joined the new VM to my domain, ran {{< kbd "wuauclt /detectnow" >}} a couple of times to install the 40 or so hotfixes that have been released for Windows Server 2003 since SP2, and then installed WSS with SP1. Sure enough, about an hour after discovering the error reported by Dragan, I was able to repro the problem. [Thank goodness for Virtual Server, SysPrep, slipstreamed service packs, and a local intranet location of Windows Update!]
 
 Digging into the SharePoint logs I noticed the following:
 
@@ -48,9 +47,9 @@ Digging into the SharePoint logs I noticed the following:
 
 {{< /log-excerpt >}}
 
-At this point, the problem seemed fairly obvious: the error occurred while trying  to activate site-scoped features on the new site. Well, duh, that makes sense. I  must have had one or more MOSS 2007-specific features enabled on the site collection  that I used when originally creating the site template. Since these features are  not available in WSS v3, an error occurs.
+At this point, the problem seemed fairly obvious: the error occurred while trying to activate site-scoped features on the new site. Well, duh, that makes sense. I must have had one or more MOSS 2007-specific features enabled on the site collection that I used when originally creating the site template. Since these features are not available in WSS v3, an error occurs.
 
-I then deactivated all of the following features on the site collection and saved  the site as a template again:
+I then deactivated all of the following features on the site collection and saved the site as a template again:
 
 - Collect Signatures Workflow
 - Disposition Approval Workflow
@@ -61,11 +60,11 @@ I then deactivated all of the following features on the site collection and save
 - Three-state workflow
 - Translation Management Workflow
 
-Unfortunately, after copying the updated STP file from my MOSS 2007 VM to my  WSS v3 VM, I encountered the same problem when trying to create a site from the  template. Ugh.
+Unfortunately, after copying the updated STP file from my MOSS 2007 VM to my WSS v3 VM, I encountered the same problem when trying to create a site from the template. Ugh.
 
-Convinced that the problem was still due to a feature specific to MOSS 2007 (i.e.  not available in WSS v3), I then created a "vanilla" Team Site template using the  WSS v3 VM and subsequently compared the manifest files from the two templates to  see if I could identify which feature was breaking the site creation process. [If  you are not aware of the structure of an STP file, it is essentially a CAB file  with an embedded XML manifest file. All you need to do is rename the STP file to  have a .cab file extension and then extract the manifest.xml to examine the contents.]
+Convinced that the problem was still due to a feature specific to MOSS 2007 (i.e. not available in WSS v3), I then created a "vanilla" Team Site template using the WSS v3 VM and subsequently compared the manifest files from the two templates to see if I could identify which feature was breaking the site creation process. [If you are not aware of the structure of an STP file, it is essentially a CAB file with an embedded XML manifest file. All you need to do is rename the STP file to have a .cab file extension and then extract the manifest.xml to examine the contents.]
 
-Using WinDiff to compare the manifest file from the TFS Lite site template with  the "vanilla" Team Site template, I observed the following differences:
+Using WinDiff to compare the manifest file from the TFS Lite site template with the "vanilla" Team Site template, I observed the following differences:
 
 ```
 <SiteFeatures>
@@ -148,7 +147,7 @@ Using WinDiff to compare the manifest file from the TFS Lite site template with 
 </WebFeatures>
 ```
 
-Note that I've annotated the features with comments noting the feature name (using  the spreadsheet provided in [my previous post](/blog/jjameson/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007)) and highlighted the differences in a similar fashion to WinDiff  -- the "left-only" features (i.e. those only found  in the "vanilla" Team Site template created in WSS v3) in red and the "right-only" features (i.e. those only found  in the TFS Lite site template created in MOSS 2007) in yellow.
+Note that I've annotated the features with comments noting the feature name (using the spreadsheet provided in [my previous post](/blog/jjameson/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007)) and highlighted the differences in a similar fashion to WinDiff -- the "left-only" features (i.e. those only found in the "vanilla" Team Site template created in WSS v3) in red and the "right-only" features (i.e. those only found in the TFS Lite site template created in MOSS 2007) in yellow.
 
-Note that simply deactivating all of the site collection features in MOSS 2007  does not make the corresponding site template compatible with WSS v3. However, once  I modified the manifest.xml to remove the MOSS 2007-specific features, recreated  the CAB file, and changed the file extension back to .stp, I was able to successfully  create a site in WSS v3 based on the site template. Woohoo!
+Note that simply deactivating all of the site collection features in MOSS 2007 does not make the corresponding site template compatible with WSS v3. However, once I modified the manifest.xml to remove the MOSS 2007-specific features, recreated the CAB file, and changed the file extension back to .stp, I was able to successfully create a site in WSS v3 based on the site template. Woohoo!
 

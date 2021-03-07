@@ -15,13 +15,13 @@ tags: ["Core Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx)
 >
-> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-Since I seem to be on a roll blogging this morning, I thought I'd see if I could  get one more in before my baby girl wakes up to have breakfast with "Da-da."
+Since I seem to be on a roll blogging this morning, I thought I'd see if I could get one more in before my baby girl wakes up to have breakfast with "Da-da."
 
-When transitioning a couple of years ago from using NUnit to Visual Studio 2005,  I noticed that the ExpectedExceptionAttribute didn't quite do what I expected (no  pun intended) based on my experience with NUnit.
+When transitioning a couple of years ago from using NUnit to Visual Studio 2005, I noticed that the ExpectedExceptionAttribute didn't quite do what I expected (no pun intended) based on my experience with NUnit.
 
-With NUnit, you could specify the expected message text of the exception and  NUnit would transparently perform an assertion on the actual message. In Visual  Studio 2005, I found the following "pattern" useful for mimicking the familiar behavior  of NUnit:
+With NUnit, you could specify the expected message text of the exception and NUnit would transparently perform an assertion on the actual message. In Visual Studio 2005, I found the following "pattern" useful for mimicking the familiar behavior of NUnit:
 
 ```
 [TestMethod()]
@@ -46,5 +46,5 @@ public void FindByWhidWithInvalidWhid()
 }
 ```
 
-The internal try/catch block validates the expected message, whereas the `ExpectedException` attribute on the method delegates  the remaining work to the Visual Studio test manager (i.e. showing green vs. red  for each test).
+The internal try/catch block validates the expected message, whereas the `ExpectedException` attribute on the method delegates the remaining work to the Visual Studio test manager (i.e. showing green vs. red for each test).
 

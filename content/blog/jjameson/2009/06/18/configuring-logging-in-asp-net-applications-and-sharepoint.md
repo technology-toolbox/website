@@ -15,13 +15,13 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3", "Web Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx)
 >
-> Since 		[I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog  		ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
-This post continues on the original post for my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) and the follow-up post which  introduced [configuring logging for console applications](/blog/jjameson/2009/06/18/configuring-logging-in-a-console-application).
+This post continues on the original post for my [simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) and the follow-up post which introduced [configuring logging for console applications](/blog/jjameson/2009/06/18/configuring-logging-in-a-console-application).
 
-Obviously not all solutions are simple console-based applications. With ASP.NET  Web services and applications -- including Microsoft Office SharePoint Server (MOSS)  and Windows SharePoint Services (WSS) -- you can still view log messages from the `Logger` class very easily on a per-request basis.
+Obviously not all solutions are simple console-based applications. With ASP.NET Web services and applications -- including Microsoft Office SharePoint Server (MOSS) and Windows SharePoint Services (WSS) -- you can still view log messages from the `Logger` class very easily on a per-request basis.
 
-Note that the [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) can be specified in Web.config to enable logging  to the ASP.NET tracing feature:
+Note that the [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) can be specified in Web.config to enable logging to the ASP.NET tracing feature:
 
 ```
   <system.diagnostics>
@@ -48,7 +48,7 @@ Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
   </system.diagnostics>
 ```
 
-Also note that ASP.NET tracing must be enabled using the `<trace>`  element within `<system.web>`:
+Also note that ASP.NET tracing must be enabled using the `<trace>` element within `<system.web>`:
 
 ```
   <system.web>
@@ -56,33 +56,21 @@ Also note that ASP.NET tracing must be enabled using the `<trace>`  element with
   </system.web>
 ```
 
-Be sure to set the `requestLimit`  high enough to enable access to the page trace you are interested in, but also be  aware that you can easily clear the captured traces and then browse to the page  of interest again.
+Be sure to set the `requestLimit` high enough to enable access to the page trace you are interested in, but also be aware that you can easily clear the captured traces and then browse to the page of interest again.
 
-Once configured, browse to the page on the site. Then modify the URL to browse  to Trace.axd (e.g. [http://fabrikam-local/Trace.axd](http://fabrikam-local/Trace.axd))  to display the Trace Viewer.
+Once configured, browse to the page on the site. Then modify the URL to browse to Trace.axd (e.g. [http://fabrikam-local/Trace.axd](http://fabrikam-local/Trace.axd)) to display the Trace Viewer.
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
-alt="ASP.NET Trace Viewer"
-class="screenshot"
-height="267"
-width="600"
-title="Figure 1: ASP.NET Trace Viewer" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png" alt="ASP.NET Trace Viewer" class="screenshot" height="267" width="600" title="Figure 1: ASP.NET Trace Viewer" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-705x314.png)
 
 Locate the request that you want to view log messages for and click the corresponding **View Details** link.
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
-alt="ASP.NET Trace Viewer - Request Details"
-class="screenshot"
-height="600"
-width="474"
-title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png" alt="ASP.NET Trace Viewer - Request Details" class="screenshot" height="600" width="474" title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-736x931.png)
 
-Notice that the [WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) even formatted the warning message in red. How cool is  that?! [For all you SharePoint developers out there, compare this with "diving"  into the ULS logs to find an error or warning for a particular page request!]
+Notice that the [WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx) even formatted the warning message in red. How cool is that?! [For all you SharePoint developers out there, compare this with "diving" into the ULS logs to find an error or warning for a particular page request!]
 
-Be aware that the Web.config file you use for SharePoint applications varies  depending on whether you want to view log messages for a content page or for an  application (i.e. \_layouts) page. This is covered in my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-sharepoint-application-pages).
+Be aware that the Web.config file you use for SharePoint applications varies depending on whether you want to view log messages for a content page or for an application (i.e. \_layouts) page. This is covered in my [next post](/blog/jjameson/2009/06/18/configuring-logging-in-sharepoint-application-pages).
 

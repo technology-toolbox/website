@@ -15,26 +15,19 @@ tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog                 ever goes away.
+> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
 
 Last summer I wrote a post introducing [my simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging) -- including a **Logger** class that is really just a thin wrapper around the [System.Diagnostics.TraceSource](http://msdn.microsoft.com/en-us/library/system.diagnostics.tracesource%28VS.80%29.aspx) class.
 
-A few months ago, I enhanced the **Logger** class to log exceptions         in a consistent fashion.
+A few months ago, I enhanced the **Logger** class to log exceptions in a consistent fashion.
 
-I used the "[Yellow
-Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)" provided by ASP.NET as a reference for logging the details         of the exception. Here's a screenshot from a sample that I whipped up this morning:
+I used the "[Yellow Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)" provided by ASP.NET as a reference for logging the details of the exception. Here's a screenshot from a sample that I whipped up this morning:
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
-alt="ASP.NET error page"
-class="screenshot"
-height="295"
-width="600"
-title="Figure 1: ASP.NET error page" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png" alt="ASP.NET error page" class="screenshot" height="295" width="600" title="Figure 1: ASP.NET error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-1301x639.png)
 
-The corresponding code-behind from the page that I used to generate the above screenshot         is listed below:
+The corresponding code-behind from the page that I used to generate the above screenshot is listed below:
 
 ```
 using System;
@@ -81,14 +74,12 @@ namespace Fabrikam.Demo.Web.UI.Logging
 
 A couple of interesting notes about the ASP.NET error page:
 
-- The error message displayed at the top of the page is actually from the innermost
-  exception (i.e. the "base" exception).
-- The stack trace shows the details for the actual exception that occurred as well
-  as any inner exceptions.
+- The error message displayed at the top of the page is actually from the innermost exception (i.e. the "base" exception).
+- The stack trace shows the details for the actual exception that occurred as well as any inner exceptions.
 
-This makes perfect sense when you think about it because when you start investigating         an error, it's best to begin with the crux of the problem. In other words, for this         example, it's much better start off with the             "Attempted to divide by zero" message from the **DivideByZeroException**,         rather than the "Something bad happened"         message from the **InvalidOperationExeption**.
+This makes perfect sense when you think about it because when you start investigating an error, it's best to begin with the crux of the problem. In other words, for this example, it's much better start off with the  "Attempted to divide by zero" message from the **DivideByZeroException**, rather than the "Something bad happened" message from the **InvalidOperationExeption**.
 
-In order to log exceptions, I added two new overloads for the **LogError**         method:
+In order to log exceptions, I added two new overloads for the **LogError** method:
 
 ```
         /// <summary>
@@ -172,9 +163,9 @@ In order to log exceptions, I added two new overloads for the **LogError**      
         }
 ```
 
-Note that the stack trace is generated using the **AppendExceptionDetail**         helper method.
+Note that the stack trace is generated using the **AppendExceptionDetail** helper method.
 
-This makes it really easy to log exceptions in ASP.NET Web applications -- including         solutions built on Microsoft Office SharePoint Server (MOSS) 2007 and Windows SharePoint         Services -- as well as other types of .NET applications (e.g. console applications).
+This makes it really easy to log exceptions in ASP.NET Web applications -- including solutions built on Microsoft Office SharePoint Server (MOSS) 2007 and Windows SharePoint Services -- as well as other types of .NET applications (e.g. console applications).
 
 Here is the complete source for the updated **Logger** class:
 
@@ -501,10 +492,9 @@ namespace Fabrikam.Demo.CoreServices.Logging
 }
 ```
 
-In a [follow-up post](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), I'll cover how to handle errors in SharePoint Web applications         without necessarily adding a bunch or try/catch blocks, while still avoiding the         out-of-the-box SharePoint error page (which doesn't look very good on an Internet-facing         site).
+In a [follow-up post](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications), I'll cover how to handle errors in SharePoint Web applications without necessarily adding a bunch or try/catch blocks, while still avoiding the out-of-the-box SharePoint error page (which doesn't look very good on an Internet-facing site).
 
 > **Update (2011-01-31)**
 >
-> I've attached a sample Visual Studio solution that demonstrates the **Logger**
-> class.
+> I've attached a sample Visual Studio solution that demonstrates the **Logger** class.
 

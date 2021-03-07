@@ -8,11 +8,11 @@ categories: ["Development"]
 tags: ["PowerShell", "TFS"]
 ---
 
-In 	[my post from earlier this morning](/blog/jjameson/2012/02/27/zip-a-folder-using-powershell), I mentioned how I now use PowerShell  	to package code samples for my blog to avoid accidentally including "junk" in  	the zip files (e.g. temporary object folders created during the build).
+In [my post from earlier this morning](/blog/jjameson/2012/02/27/zip-a-folder-using-powershell), I mentioned how I now use PowerShell to package code samples for my blog to avoid accidentally including "junk" in the zip files (e.g. temporary object folders created during the build).
 
 Here is the script in hopes that it may help other developers out there.
 
-Note that this script assumes the code sample is stored in Team Foundation  	Server, so it first cleans the working folder, then performs a "get latest version"  	on the specified folder, builds the solution, removes some extraneous items  	(e.g. "obj" folders), and finally packages the folder into a zip file.
+Note that this script assumes the code sample is stored in Team Foundation Server, so it first cleans the working folder, then performs a "get latest version" on the specified folder, builds the solution, removes some extraneous items (e.g. "obj" folders), and finally packages the folder into a zip file.
 
 ### PackageCodeSample.ps1
 
@@ -140,7 +140,7 @@ function PackageCodeSample(
 }
 ```
 
-To package a code sample, first ensure the resulting zip file does not exist,  	and then simply call the `PackageCodeSample`  	function, specifying the path to the code to package:
+To package a code sample, first ensure the resulting zip file does not exist, and then simply call the `PackageCodeSample` function, specifying the path to the code to package:
 
 ```
 Remove-Item "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage.zip"
@@ -150,6 +150,5 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 
 > **Note**
 >
-> This script uses the [PowerShell
-> Community Extensions](http://pscx.codeplex.com/) to create the zip file. If you can't or don't  			want to install PSCX, refer to my previous post for a way to create  			a zip file using out-of-the-box PowerShell and some scriptable COM objects  			from the Windows Shell.
+> This script uses the [PowerShell Community Extensions](http://pscx.codeplex.com/) to create the zip file. If you can't or don't want to install PSCX, refer to my previous post for a way to create a zip file using out-of-the-box PowerShell and some scriptable COM objects from the Windows Shell.
 
