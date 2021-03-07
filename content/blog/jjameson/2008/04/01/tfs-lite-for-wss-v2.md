@@ -128,8 +128,7 @@ Note that the **Blocked** field indicates there is an issue in completing  the w
 
 #### Priorities/Milestones
 
-The criteria for **Priorities/Milestones** Web Part is similar to the **Project
-Summary** Web Part:
+The criteria for **Priorities/Milestones** Web Part is similar to the **Project Summary** Web Part:
 
 > **Current** is equal to **Yes**
 > And **Exit Criteria** is equal to **Yes**

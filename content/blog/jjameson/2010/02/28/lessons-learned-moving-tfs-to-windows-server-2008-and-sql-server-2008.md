@@ -173,7 +173,7 @@ type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE**  	in **Acc
 
 {{< /blockquote >}}
 
-Thus I thought that I *should*be able to use a domain  account for Analysis Services.
+Thus I thought that I *should *be able to use a domain  account for Analysis Services.
 
 As a sanity check, I also found the following in [SQL Server 2008
 books online](http://msdn.microsoft.com/en-us/library/ms174905.aspx):

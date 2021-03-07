@@ -133,8 +133,8 @@ I have included slightly "scrubbed" versions of a couple of the bugs below,  	in
 >
 > Modify SetSortParameters in SearchModule.inc to set the sort expression  		used in ESI (strSortExpression) and to override the default max results  		value to allow 1000 results. (1 hour).
 >
-> **Release Management** **
-> ** Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM  		(1 hour)
+> **Release Management**
+> Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM  		(1 hour)
 >
 > **Test**
 > Retest ESI Chromatogram searches through legacy General Site (2 hours)

@@ -457,7 +457,7 @@ Let's start with a script to add the solution (note that additional solutions ma
 
 If you've been developing with SharePoint 2010 for any signficant period of time, then you might have encountered issues due to "stale" assemblies being used for event receivers (unless perhaps you simply do all of your "DR.DADA" operations through Visual Studio and never through PowerShell). This is because your assemblies are actually loaded into the PowerShell process during various deployment operations (for example, when you invoke the `Add-SPSolution` cmdlet). I discovered this issue the "hard way" -- in other words, by attaching WinDbg to my PowerShell command prompt.
 
-When I searched the Internet for ***PowerShell reload assembly***(looking for an easy way to unload a specific assembly), I discovered the following blog post:
+When I searched the Internet for ***PowerShell reload assembly** *(looking for an easy way to unload a specific assembly), I discovered the following blog post:
 
 {{< reference title="PowerShell Does Not Reload Upgraded Assemblies" linkHref="http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-upgraded-assemblies" >}}
 

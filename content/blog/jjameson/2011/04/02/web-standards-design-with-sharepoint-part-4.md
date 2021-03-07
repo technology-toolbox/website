@@ -322,8 +322,7 @@ title="Figure 9: Tugboat home page in SharePoint 2010 (step 7)" >}}
 
 Now that we've got the main area of the page matching the HTML prototype created         by the designers, let's turn our attention to hiding the ribbon content (in other         words, the dark blue band at the top of the page) for anonymous users.
 
-If you search the Internet for something like **SharePoint
-2010 hide ribbon anonymous**, you'll find a number of different recommendations.
+If you search the Internet for something like **SharePoint 2010 hide ribbon anonymous**, you'll find a number of different recommendations.
 
 Someone suggested wrapping the **SPRibbon** control in the **&lt;LoggedInTemplate&gt;**         of an ASP.NET **LoginView** control. This certainly sounds like a logical choice         and indeed it does work in the "anonymous user scenario" as shown below:
 
@@ -503,8 +502,7 @@ Here are the instructions to deploy the Tugboat sample to your own SharePoint en
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full Control
      access to Web applications
 
-2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
-   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click **Yes**.
 

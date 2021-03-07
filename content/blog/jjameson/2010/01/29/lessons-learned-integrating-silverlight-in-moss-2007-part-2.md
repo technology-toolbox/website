@@ -46,7 +46,7 @@ Regardless of whether or not you enable the BlobCache in SharePoint (and 	[you s
 
 This is actually a very good thing. For example, you certainly wouldn't want  	clients attempting to download the out-of-the-box SharePoint core.js file on  	each and every page request -- even if all the Web server does is send a small  	HTTP 304 (Not Modified) response. Likewise, you really don't want them requesting  	your Silverlight XAP file on every request.
 
-Fortunately, there's an easy way to specify the *version*of a file in the URL using the (rather poorly documented) 	` SPUtility.MakeBrowserCacheSafeLayoutsUrl` method. This method actually  	specifies a hash of the file -- not a version -- but you get the point. This  	is covered in more detail in 	[one of Stefan Goßner's blog posts](http://blogs.technet.com/stefan_gossner/archive/2009/04/08/how-to-create-a-browser-cache-save-url-to-a-javascript-or-css-file-in-sharepoint.aspx).
+Fortunately, there's an easy way to specify the *version *of a file in the URL using the (rather poorly documented) 	` SPUtility.MakeBrowserCacheSafeLayoutsUrl` method. This method actually  	specifies a hash of the file -- not a version -- but you get the point. This  	is covered in more detail in 	[one of Stefan Goßner's blog posts](http://blogs.technet.com/stefan_gossner/archive/2009/04/08/how-to-create-a-browser-cache-save-url-to-a-javascript-or-css-file-in-sharepoint.aspx).
 
 To ensure that clients always have the latest version of the Silverlight  	XAP file, I modified the user control that hosts the Silverlight application  	as follows:
 
