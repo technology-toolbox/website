@@ -8,11 +8,21 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-In this post, I explain the iterative approach used to create the [Contact](/Contact/default.aspx) form for the Technology Toolbox website. Through a sequence of 9 discrete steps, I describe my typical development process from initial concept to what I call "feature complete."
+In this post, I explain the iterative approach used to create the
+[Contact](/Contact/default.aspx) form for the Technology Toolbox website.
+Through a sequence of 9 discrete steps, I describe my typical development
+process from initial concept to what I call "feature complete."
 
 ### Step 1: Prototype
 
-In [part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3) of this series, I described my recommendation to create a static HTML prototype when doing virtually any kind of Web development (ASP.NET, SharePoint, etc.). While this slightly delays the start of writing the "real" code, in my experience I have found this to save considerable time overall. Using an HTML prototype, you can very quickly mock up various design alternatives, rapidly iterate on the overall look-and-feel, and develop/refine the user experience (for example, demonstrate features using client-side scripting such as jQuery).
+In [part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3) of
+this series, I described my recommendation to create a static HTML prototype
+when doing virtually any kind of Web development (ASP.NET, SharePoint, etc.).
+While this slightly delays the start of writing the "real" code, in my
+experience I have found this to save considerable time overall. Using an HTML
+prototype, you can very quickly mock up various design alternatives, rapidly
+iterate on the overall look-and-feel, and develop/refine the user experience
+(for example, demonstrate features using client-side scripting such as jQuery).
 
 Here is the HTML I created for the Contact form:
 
@@ -63,7 +73,13 @@ Here is the HTML I created for the Contact form:
   </div>
 ```
 
-Notice that in addition to specifying `id` attributes on the various input elements (in order to associate the corresponding labels), I also specified `class="required"` on the mandatory fields, as well as `maxlength` attributes on the various text fields. This little bit of additional work in creating the markup goes a long way in terms of prototyping the user experience. In the next two sections, I'll show you how this also helps expedite the process of converting from static HTML to ASP.NET controls and adding field validators.
+Notice that in addition to specifying `id` attributes on the various input
+elements (in order to associate the corresponding labels), I also specified
+`class="required"` on the mandatory fields, as well as `maxlength` attributes on
+the various text fields. This little bit of additional work in creating the
+markup goes a long way in terms of prototyping the user experience. In the next
+two sections, I'll show you how this also helps expedite the process of
+converting from static HTML to ASP.NET controls and adding field validators.
 
 > **Note**
 >
@@ -71,17 +87,28 @@ Notice that in addition to specifying `id` attributes on the various input eleme
 
 ### Step 2: From static HTML to ASP.NET
 
-With the HTML prototype complete (and presumably approved by Product Management at this point), the next step was to "make it real" by converting the various HTML elements into their corresponding ASP.NET controls. For example, `<label>` elements became `<asp:Label>` elements, `<input type="text">` elements became `<asp:TextBox>` elements, etc.
+With the HTML prototype complete (and presumably approved by Product Management
+at this point), the next step was to "make it real" by converting the various
+HTML elements into their corresponding ASP.NET controls. For example, `<label>`
+elements became `<asp:Label>` elements, `<input type="text">` elements became
+`<asp:TextBox>` elements, etc.
 
-While there may very well be tools out there that do this conversion for you, I've never bothered to look for them. Doing this conversion manually doesn't take very long and it is a good opportunity to "double-check my work."
+While there may very well be tools out there that do this conversion for you,
+I've never bothered to look for them. Doing this conversion manually doesn't
+take very long and it is a good opportunity to "double-check my work."
 
-Be sure to convert attributes as well (such as changing `class` to `CssClass`). Once the conversion is complete, I typically do a quick {{< kbd "F5" >}} to verify the form renders as expected.
+Be sure to convert attributes as well (such as changing `class` to `CssClass`).
+Once the conversion is complete, I typically do a quick {{< kbd "F5" >}} to
+verify the form renders as expected.
 
-For the sake of brevity, I won't include the ASP.NET markup at this point since I'm sure you can imagine what it would look like.
+For the sake of brevity, I won't include the ASP.NET markup at this point since
+I'm sure you can imagine what it would look like.
 
 ### Step 3: Add field validators
 
-The next step is to add field validators. For example, I added an `<asp:RequiredFieldValidator>` element for each control with `CssClass="required"`.
+The next step is to add field validators. For example, I added an
+`<asp:RequiredFieldValidator>` element for each control with
+`CssClass="required"`.
 
 This is how I typically markup a field validator:
 
@@ -91,7 +118,8 @@ This is how I typically markup a field validator:
   Text="(required)" CssClass="validator required" ForeColor="" />
 ```
 
-Specifying the `CssClass` attribute (and overriding the `ForeColor` attribute), allows the styling to be controlled via CSS. For example:
+Specifying the `CssClass` attribute (and overriding the `ForeColor` attribute),
+allows the styling to be controlled via CSS. For example:
 
 ```
 .validator {
@@ -102,7 +130,10 @@ Specifying the `CssClass` attribute (and overriding the `ForeColor` attribute), 
 }
 ```
 
-In addition to required fields, you may need to add other types of validators (for example, to ensure a valid email address is specified). Be sure to add a **[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)** control as well.
+In addition to required fields, you may need to add other types of validators
+(for example, to ensure a valid email address is specified). Be sure to add a **
+[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)**
+control as well.
 
 At this point, the markup for the Contact form looked like this:
 
@@ -182,13 +213,19 @@ At this point, the markup for the Contact form looked like this:
 
 ### Step 4: Display confirmation message
 
-At this point the form is complete from a visual perspective, but it doesn't actually do anything when you click the **Submit** button.
+At this point the form is complete from a visual perspective, but it doesn't
+actually do anything when you click the **Submit** button.
 
-Rather than immediately getting into the details of storing or transmitting the contact information, I started out by looking at the overall user experience.
+Rather than immediately getting into the details of storing or transmitting the
+contact information, I started out by looking at the overall user experience.
 
-Typically, when you submit a form on a website, you expect some kind of acknowledgement. In this particular case, the Technology Toolbox website simply hides the form and displays a few words of gratitude in its place.
+Typically, when you submit a form on a website, you expect some kind of
+acknowledgement. In this particular case, the Technology Toolbox website simply
+hides the form and displays a few words of gratitude in its place.
 
-To implement this functionality, I simply wrapped the markup shown above inside an ASP.NET **Panel** control (i.e. a `<div>` element) and added a second panel with the confirmation message:
+To implement this functionality, I simply wrapped the markup shown above inside
+an ASP.NET **Panel** control (i.e. a `<div>` element) and added a second panel
+with the confirmation message:
 
 ```
   <asp:Panel runat="server" ID="contactForm">
@@ -208,7 +245,9 @@ To implement this functionality, I simply wrapped the markup shown above inside 
   </asp:Panel>
 ```
 
-Then it was simply a matter of associating a little bit of code with the "click" event of the **Submit** button to hide the first panel and show the second panel:
+Then it was simply a matter of associating a little bit of code with the "click"
+event of the **Submit** button to hide the first panel and show the second
+panel:
 
 ```
         protected void SubmitButton_Click(
@@ -227,19 +266,33 @@ Then it was simply a matter of associating a little bit of code with the "click"
         }
 ```
 
-Some quick {{< kbd "F5" >}} testing to ensure everything worked as expected and I was ready for the next step.
+Some quick {{< kbd "F5" >}} testing to ensure everything worked as expected and
+I was ready for the next step.
 
 ### Step 5: Send email message
 
-Depending on the size of your organization, you may be able to simply email the contact request to one or more individuals and be done with it. This is the way the feature currently works on TechnologyToolbox.com.
+Depending on the size of your organization, you may be able to simply email the
+contact request to one or more individuals and be done with it. This is the way
+the feature currently works on TechnologyToolbox.com.
 
 > **Note**
 >
-> Sending the contact request via SMTP isn't as "bulletproof" as, say, writing the contact request to a database in real-time -- but it is probably "good enough" for many organizations. Obviously if your site is fielding dozens or hundreds of contact requests per day, then you should probably consider something a little more robust (such as saving the contact request to a database and sending some kind of notification to the appropriate people).
+> Sending the contact request via SMTP isn't as "bulletproof" as, say, writing the
+> contact request to a database in real-time -- but it is probably "good enough"
+> for many organizations. Obviously if your site is fielding dozens or hundreds of
+> contact requests per day, then you should probably consider something a little
+> more robust (such as saving the contact request to a database and sending some
+> kind of notification to the appropriate people).
 >
-> The [Agilent LSCA](http://www.chem.agilent.com) site, for example, uses SharePoint and InfoPath Forms Services for the "[Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)" feature -- complete with "routing" rules on the backend to send the request to the appropriate people.
+> The [Agilent LSCA](http://www.chem.agilent.com) site, for example, uses
+> SharePoint and InfoPath Forms Services for the "
+> [Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)"
+> feature -- complete with "routing" rules on the backend to send the request to
+> the appropriate people.
 
-To implement the basic functionality for sending the email from TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to a new method that sends the email:
+To implement the basic functionality for sending the email from
+TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to
+a new method that sends the email:
 
 ```
         private void SendContactRequestEmail()
@@ -262,7 +315,9 @@ To implement the basic functionality for sending the email from TechnologyToolbo
         }
 ```
 
-Thanks to built-in functionality in the .NET Framework, it doesn't require much code at all. Note that what you see above is the end result at this point after a little refactoring. Here is the **BuildEmailMessageBody** method:
+Thanks to built-in functionality in the .NET Framework, it doesn't require much
+code at all. Note that what you see above is the end result at this point after
+a little refactoring. Here is the **BuildEmailMessageBody** method:
 
 ```
         private string BuildEmailMessageBody()
@@ -302,17 +357,33 @@ Thanks to built-in functionality in the .NET Framework, it doesn't require much 
         }
 ```
 
-Testing the solution at this point revealed some issues. Specifically, sending an email from the development environment (internal) to the SMTP server provided by WinHost required some additional configuration.
+Testing the solution at this point revealed some issues. Specifically, sending
+an email from the development environment (internal) to the SMTP server provided
+by WinHost required some additional configuration.
 
-The first problem was that the ISP provider I use for my home office blocks outbound SMTP by default (to prevent spam). However, by specifying a different port in Web.config, email messages can be successfully sent from Development and Test environments to the Production SMTP server.
+The first problem was that the ISP provider I use for my home office blocks
+outbound SMTP by default (to prevent spam). However, by specifying a different
+port in Web.config, email messages can be successfully sent from Development and
+Test environments to the Production SMTP server.
 
-The second problem I discovered was the email address I originally specified (info@technologytoolbox.com) is configured for [greylisting](http://en.wikipedia.org/wiki/Greylisting). After creating an email alias (with greylisting disabled) -- and modifying the code to send to that alias instead -- I was able to verify that email messages from the Contact form were received as expected.
+The second problem I discovered was the email address I originally specified
+(info@technologytoolbox.com) is configured for
+[greylisting](http://en.wikipedia.org/wiki/Greylisting). After creating an email
+alias (with greylisting disabled) -- and modifying the code to send to that
+alias instead -- I was able to verify that email messages from the Contact form
+were received as expected.
 
 ### Step 6: Make the email settings configurable
 
-Hard-coded values (such as the email addresses shown above) are typically a bad thing. Therefore the next step was to refactor the email addresses into corresponding settings in Web.config.
+Hard-coded values (such as the email addresses shown above) are typically a bad
+thing. Therefore the next step was to refactor the email addresses into
+corresponding settings in Web.config.
 
-Personally, I prefer to use the [application settings](http://msdn.microsoft.com/en-us/library/cftf714c.aspx) introduced in Visual Studio 2005 (rather than the **appSettings** element included in the original version of the .NET Framework). Consequently, I created a couple of items under the **Settings** tab on the project properties:
+Personally, I prefer to use the
+[application settings](http://msdn.microsoft.com/en-us/library/cftf714c.aspx)
+introduced in Visual Studio 2005 (rather than the **appSettings** element
+included in the original version of the .NET Framework). Consequently, I created
+a couple of items under the **Settings** tab on the project properties:
 
 - ContactFormMailFromAddress
 - ContactFormMailToAddress
@@ -331,9 +402,14 @@ Personally, I prefer to use the [application settings](http://msdn.microsoft.com
         }
 ```
 
-With those changes, the email addresses can be updated as needed in the Web.config file.
+With those changes, the email addresses can be updated as needed in the
+Web.config file.
 
-At this point, I started thinking about ways to "break" the solution. For example, what if instead of specifying a single "To" email address, we need to specify multiple recipients (and, for whatever reason, we don't want to use a distribution list)? To support that scenario, the **ContactFormMailToAddress** would contain a semicolon-delimited list of email addresses. For example:
+At this point, I started thinking about ways to "break" the solution. For
+example, what if instead of specifying a single "To" email address, we need to
+specify multiple recipients (and, for whatever reason, we don't want to use a
+distribution list)? To support that scenario, the **ContactFormMailToAddress**
+would contain a semicolon-delimited list of email addresses. For example:
 
 ```
 <configuration>
@@ -381,29 +457,63 @@ Note that this requires a few tweaks to the code used to send the email:
     }
 ```
 
-Another quick round of testing at this point verified the enhancements function as expected.
+Another quick round of testing at this point verified the enhancements function
+as expected.
 
 ### Step 7: Add CAPTCHA control to help prevent spam
 
-In a [previous post](/blog/jjameson/2012/01/25/building-technologytoolbox-com-part-16), I described the custom CAPTCHA control developed for the Technology Toolbox site to support both the Contact form as well as the form used to add comments on blog posts managed by Subtext.
+In a
+[previous post](/blog/jjameson/2012/01/25/building-technologytoolbox-com-part-16),
+I described the custom CAPTCHA control developed for the Technology Toolbox site
+to support both the Contact form as well as the form used to add comments on
+blog posts managed by Subtext.
 
-In hindsight, I suppose I should have written this post first, followed by the other post detailing the CAPTCHA control. However, there's a reason this blog is called the "*Random* Musings of Jeremy Jameson" ;-)
+In hindsight, I suppose I should have written this post first, followed by the
+other post detailing the CAPTCHA control. However, there's a reason this blog is
+called the "*Random* Musings of Jeremy Jameson" ;-)
 
-No point in repeating what I've already covered before. If you want to know the details of the CAPTCHA control, take a break and go read that post. Then come back when you are ready.
+No point in repeating what I've already covered before. If you want to know the
+details of the CAPTCHA control, take a break and go read that post. Then come
+back when you are ready.
 
 ### Step 8: Enhanced field validators
 
-At this point, the feature was nearly complete. Prospective clients could submit a request using the Contact form, which subsequently sends an email to one or more recipients specified in Web.config. The form also prevents spam from being submitted via an image-recognition CAPTCHA that is easy-to-use for people, yet sufficiently difficult to prevent spamming bots. [In the time since TechnologyToolbox.com went live nearly five months ago, I've received about a dozen emails generated via the Contact form, but none of them have been from bots.]
+At this point, the feature was nearly complete. Prospective clients could submit
+a request using the Contact form, which subsequently sends an email to one or
+more recipients specified in Web.config. The form also prevents spam from being
+submitted via an image-recognition CAPTCHA that is easy-to-use for people, yet
+sufficiently difficult to prevent spamming bots. [In the time since
+TechnologyToolbox.com went live nearly five months ago, I've received about a
+dozen emails generated via the Contact form, but none of them have been from
+bots.]
 
-However, at this point, there was still a minor issue with the form regarding the **Preferred Contact Method** and corresponding **Email Address** and **Telephone** fields. Up to this point, I had not made either of these fields mandatory, based on the reasoning that some people may want to specify *only* their email addresses, while others may want to specify *only* their telephone numbers.
+However, at this point, there was still a minor issue with the form regarding
+the **Preferred Contact Method** and corresponding **Email Address** and
+**Telephone** fields. Up to this point, I had not made either of these fields
+mandatory, based on the reasoning that some people may want to specify *only*
+their email addresses, while others may want to specify *only* their telephone
+numbers.
 
-Yet, if you tell me that your "preferred contact method" is **Telephone**, but mistakenly forget to provide a telephone number, then that's really not a good thing. Likewise, if you say you prefer an email response but don't specify an email address, then I really can't honor your wishes.
+Yet, if you tell me that your "preferred contact method" is **Telephone**, but
+mistakenly forget to provide a telephone number, then that's really not a good
+thing. Likewise, if you say you prefer an email response but don't specify an
+email address, then I really can't honor your wishes.
 
-To avoid these scenarios, I added a couple more **RequiredFieldValidator** controls to the form (one for the **Email Address** field and the other for the **Telephone** field). I also changed the default option for **Preferred Contact Method** to **Telephone**. [I don't know about you, but I'd much rather start a business relationship with a live conversation rather than exchanging emails. Email is a wonderful tool, but it also tends to slow things down a little and -- on rare occasions -- can result in misunderstandings (or too much "reading between the lines").]
+To avoid these scenarios, I added a couple more **RequiredFieldValidator**
+controls to the form (one for the **Email Address** field and the other for the
+**Telephone** field). I also changed the default option for **Preferred Contact
+Method** to **Telephone**. [I don't know about you, but I'd much rather start a
+business relationship with a live conversation rather than exchanging emails.
+Email is a wonderful tool, but it also tends to slow things down a little and --
+on rare occasions -- can result in misunderstandings (or too much "reading
+between the lines").]
 
-The key to adding these validators is enabling/disabling them so that, for example, a telephone number does not need to be specified when people indicate they wish to be contacted via email.
+The key to adding these validators is enabling/disabling them so that, for
+example, a telephone number does not need to be specified when people indicate
+they wish to be contacted via email.
 
-To accomplish this, I created a simple method to configure the form fields based on the currently selected option for **Preferred Contact Method**:
+To accomplish this, I created a simple method to configure the form fields based
+on the currently selected option for **Preferred Contact Method**:
 
 ```
         private void ConfigureFormFields()
@@ -434,7 +544,8 @@ To accomplish this, I created a simple method to configure the form fields based
         }
 ```
 
-To ensure the fields are initially configured as expected, I call the **ConfigureFormFields** method when the page is first requested:
+To ensure the fields are initially configured as expected, I call the
+**ConfigureFormFields** method when the page is first requested:
 
 ```
         protected void Page_Load(
@@ -448,7 +559,8 @@ To ensure the fields are initially configured as expected, I call the **Configur
         }
 ```
 
-Then I modified the **RadioButtonList** to automatically postback when the selected item is changed:
+Then I modified the **RadioButtonList** to automatically postback when the
+selected item is changed:
 
 ```
   <asp:RadioButtonList runat="server" ID="preferredContactMethod"
@@ -471,13 +583,18 @@ Then I modified the **RadioButtonList** to automatically postback when the selec
         }
 ```
 
-Another quick round of testing to verify the enhancements functioned as expected, followed by another check-in of the updated code.
+Another quick round of testing to verify the enhancements functioned as
+expected, followed by another check-in of the updated code.
 
 ### Step 9: Use AJAX to improve the user experience
 
 Okay, *almost* done...
 
-While all of the functionality was complete at this point, there was still a little room for improvement. Rather than doing a full postback whenever the **Preferred Contact Method** is changed, I added an **UpdatePanel** to perform a partial page update instead. In other words, I sprinkled a little AJAX onto the Contact form once it was almost completely "baked."
+While all of the functionality was complete at this point, there was still a
+little room for improvement. Rather than doing a full postback whenever the
+**Preferred Contact Method** is changed, I added an **UpdatePanel** to perform a
+partial page update instead. In other words, I sprinkled a little AJAX onto the
+Contact form once it was almost completely "baked."
 
 Generally speaking, this is how I approach AJAX-enabling a feature:
 
@@ -485,7 +602,8 @@ Generally speaking, this is how I approach AJAX-enabling a feature:
 2. Refine the solution to improve the user experience (by adding AJAX)
 3. Optimize for performance
 
-The third item is important. For example, for step "9.2" you might start by adding an **UpdatePanel** around all of the form fields:
+The third item is important. For example, for step "9.2" you might start by
+adding an **UpdatePanel** around all of the form fields:
 
 ```
         <asp:Panel runat="server" ID="contactForm">
@@ -502,7 +620,10 @@ The third item is important. For example, for step "9.2" you might start by addi
         </asp:Panel>
 ```
 
-However, in this particular scenario, only the **Email Address** and **Telephone** fields (and corresponding validators) are updated by the AJAX postback. Consequently, it is much more efficient to enclose only those controls in the **UpdatePanel**:
+However, in this particular scenario, only the **Email Address** and
+**Telephone** fields (and corresponding validators) are updated by the AJAX
+postback. Consequently, it is much more efficient to enclose only those controls
+in the **UpdatePanel**:
 
 ```
         <asp:Panel runat="server" ID="contactForm">
@@ -539,5 +660,7 @@ However, in this particular scenario, only the **Email Address** and **Telephone
         ...
 ```
 
-You can see this for yourself by inspecting the AJAX postback using the **Network** tab in the Internet Explorer Developer Tools or via the **Net** panel in Firebug/Firefox.
+You can see this for yourself by inspecting the AJAX postback using the
+**Network** tab in the Internet Explorer Developer Tools or via the **Net**
+panel in Firebug/Firefox.
 

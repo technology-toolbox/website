@@ -15,17 +15,41 @@ tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-It occurred to me this morning that while I previously shared some details on [how I manage my MSDN blog](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server), I've never shared my method for formatting code for the Web.
+It occurred to me this morning that while I previously shared some details on
+[how I manage my MSDN blog](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server),
+I've never shared my method for formatting code for the Web.
 
-Actually, calling it "my method" is definitely a bit of a stretch. I certainly didn't come up with the approach but rather refined someone else's approach (and code) to suit my needs. The original credit goes to [David Anson](http://blogs.msdn.com/delay).
+Actually, calling it "my method" is definitely a bit of a stretch. I certainly
+didn't come up with the approach but rather refined someone else's approach (and
+code) to suit my needs. The original credit goes to
+[David Anson](http://blogs.msdn.com/delay).
 
-Prior to adopting David's approach, I previously copied code from Visual Studio, pasted it into Microsoft Word, then copied it again in Microsoft Word, and finally pasted into Expression Web. While this achieved the desired end result -- meaning, formatted code with color syntax highlighting -- it definitely was a little kludgey. First, the four-step process -- while not excessively tedious -- was definitely less than desirable, because it often meant I had to fire up Word for the sole purpose of formatting code (note that copy/paste from Visual Studio into Expression Web does not preserve the formatting). Second -- and more importantly -- the resulting HTML markup was just "crap" (sorry, I can't think of a more eloquent way to put that right now).
+Prior to adopting David's approach, I previously copied code from Visual Studio,
+pasted it into Microsoft Word, then copied it again in Microsoft Word, and
+finally pasted into Expression Web. While this achieved the desired end result
+-- meaning, formatted code with color syntax highlighting -- it definitely was a
+little kludgey. First, the four-step process -- while not excessively tedious --
+was definitely less than desirable, because it often meant I had to fire up Word
+for the sole purpose of formatting code (note that copy/paste from Visual Studio
+into Expression Web does not preserve the formatting). Second -- and more
+importantly -- the resulting HTML markup was just "crap" (sorry, I can't think
+of a more eloquent way to put that right now).
 
-When I started looking at approaches for improving the formatting of code for my blog, I found that there were numerous "solutions" out there. However, I knew what I really wanted was something that would produce a minimal amount of HTML markup (or at least a lot less HTML than Microsoft Word) and, preferably, something that generated semantic markup as well -- or at least *reasonably* semantic markup.
+When I started looking at approaches for improving the formatting of code for my
+blog, I found that there were numerous "solutions" out there. However, I knew
+what I really wanted was something that would produce a minimal amount of HTML
+markup (or at least a lot less HTML than Microsoft Word) and, preferably,
+something that generated semantic markup as well -- or at least *reasonably*
+semantic markup.
 
-What I mean by semantic markup is that code should be wrapped in a `<code>` tag -- as well as a `<pre>` tag (in order to correctly display line breaks, indenting, etc.). To understand what I mean by semantic markup for code, consider the following example:
+What I mean by semantic markup is that code should be wrapped in a `<code>` tag
+-- as well as a `<pre>` tag (in order to correctly display line breaks,
+indenting, etc.). To understand what I mean by semantic markup for code,
+consider the following example:
 
 ```
 using System;
@@ -53,9 +77,13 @@ In HTML markup, this is expressed as:
 }</code></pre></div>
 ```
 
-The `<div class='codeBlock'>` element is used to constrain lengthy code blocks (i.e. show a vertical scrollbar when necessary) and also format code with a background color and border.
+The `<div class='codeBlock'>` element is used to constrain lengthy code blocks
+(i.e. show a vertical scrollbar when necessary) and also format code with a
+background color and border.
 
-Note that in the stricted sense, this isn't 100% semantic markup because the `<span>` tags are used to apply presentational styles, namely the various font colors. Truly semantic markup for code would specify something more like this:
+Note that in the stricted sense, this isn't 100% semantic markup because the
+`<span>` tags are used to apply presentational styles, namely the various font
+colors. Truly semantic markup for code would specify something more like this:
 
 ```
 <div class='codeBlock'><pre><code><span class='keyword'>using</span> System;
@@ -89,16 +117,22 @@ code .userType
 
 Anyway, getting back to the real topic for this post...
 
-I really liked David's approach since a) it was simple (meaning I didn't need to spend much time understanding his code sample), and b) it leveraged Visual Studio to handle the bulk of the formatting work.
+I really liked David's approach since a) it was simple (meaning I didn't need to
+spend much time understanding his code sample), and b) it leveraged Visual
+Studio to handle the bulk of the formatting work.
 
 However, there were a couple of "fixes" that I found I needed:
 
 - David's original code sample produced errors when I used it from SQL Server Management Studio 2005 (note that SQL Server Management Studio uses the Visual Studio "shell", so one should expect this to work)
 - David's code sample only inserted a `<pre>` tag (and not the corresponding `<code>` and `<div class="codeBlock">` tags that I also wanted)
 
-I also wanted to eliminate extraneous `<span>` tags for the default color (i.e. black).
+I also wanted to eliminate extraneous `<span>` tags for the default color (i.e.
+black).
 
-Note that -- at least to this point -- I haven't made any attempt to generate 100% semantic markup (by converting the `style` attributes to corresponding CSS class names), because I think it would be somewhat brittle (i.e. dependent on the default color options in Visual Studio) and, honestly, not worth the effort.
+Note that -- at least to this point -- I haven't made any attempt to generate
+100% semantic markup (by converting the `style` attributes to corresponding CSS
+class names), because I think it would be somewhat brittle (i.e. dependent on
+the default color options in Visual Studio) and, honestly, not worth the effort.
 
 > **Update (2010-04-27)**
 >
@@ -370,7 +404,14 @@ namespace ConvertClipboardRtfToHtmlText
 }
 ```
 
-I suppose I could have kept the ConvertClipboardRtfToHtmlText moniker that David originally had, but for some reason I decided to abbreviate it. In hindsight, I'm really not sure why I didn't keep the name, but oh well...
+I suppose I could have kept the ConvertClipboardRtfToHtmlText moniker that David
+originally had, but for some reason I decided to abbreviate it. In hindsight,
+I'm really not sure why I didn't keep the name, but oh well...
 
-Whenever I need a code sample in a blog post, I simply copy the code in Visual Studio, double-click Rtf2Html.exe in my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup), and then paste into Expression Web. It's still a three-step process, but not one that takes more than three or four seconds, and more importantly, it now produces much better HTML markup than the hack I used to use with Microsoft Word.
+Whenever I need a code sample in a blog post, I simply copy the code in Visual
+Studio, double-click Rtf2Html.exe in my
+[Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup), and then paste
+into Expression Web. It's still a three-step process, but not one that takes
+more than three or four seconds, and more importantly, it now produces much
+better HTML markup than the hack I used to use with Microsoft Word.
 

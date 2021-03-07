@@ -15,11 +15,18 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Here is another helper class that I developed that you may find useful when building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office SharePoint Server (MOSS) 2007.
+Here is another helper class that I developed that you may find useful when
+building solutions for Windows SharePoint Services (WSS) v3 and Microsoft Office
+SharePoint Server (MOSS) 2007.
 
-If you use the **[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)** class to add or modify Web.config files, you might have code that looks something like this:
+If you use the **
+[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)**
+class to add or modify Web.config files, you might have code that looks
+something like this:
 
 ```
         private static void AddAuthenticationWebConfigModifications(
@@ -78,7 +85,8 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureAttribute;
         }
 ```
 
-There is quite a bit of repetitive code in the sample above and therefore it looks like a good candidate for refactoring.
+There is quite a bit of repetitive code in the sample above and therefore it
+looks like a good candidate for refactoring.
 
 Personally, I find the following equivalent to be much more readable:
 
@@ -114,7 +122,9 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureAttribute,
         }
 ```
 
-Notice that the code for instantiating new instances of the **SPWebConfigModification** class is now performed by the custom **SharePointWebConfigHelper** class:
+Notice that the code for instantiating new instances of the
+**SPWebConfigModification** class is now performed by the custom
+**SharePointWebConfigHelper** class:
 
 ```
 using System;
@@ -357,11 +367,17 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 }
 ```
 
-The helper class also provides methods to apply and remove the Web.config modifications. However, be aware that there is currently a bug in the **SPWebConfigModification** infrastructure in which Web.config modifications are only removed from the Web.config file for the default zone (not, for example, the Internet zone).
+The helper class also provides methods to apply and remove the Web.config
+modifications. However, be aware that there is currently a bug in the
+**SPWebConfigModification** infrastructure in which Web.config modifications are
+only removed from the Web.config file for the default zone (not, for example,
+the Internet zone).
 
-Be sure to specify a unique "owner" of your Web.config modifications, such as the namespace of the class that adds them.
+Be sure to specify a unique "owner" of your Web.config modifications, such as
+the namespace of the class that adds them.
 
-For some good details about using **SPWebConfigModification**, refer to the following:
+For some good details about using **SPWebConfigModification**, refer to the
+following:
 
 {{< reference title="Alirezaei, Reza (2008). SPWebConfigModification's Top 6 Issues. 2008-01-05." linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 

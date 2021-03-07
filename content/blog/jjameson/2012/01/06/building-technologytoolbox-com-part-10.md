@@ -8,19 +8,29 @@ categories: ["Development", "My System"]
 tags: ["Core Development", "My System", "Subtext", "Web Development"]
 ---
 
-In [my previous post](/blog/jjameson/2011/11/28/building-technologytoolbox-com-part-9), I shared the inner workings of the **Most Recent Posts** section on the Technology Toolbox home page. In this post, I'll show you how I built on that foundation to generate the content for the **Most Popular Posts** section.
+In
+[my previous post](/blog/jjameson/2011/11/28/building-technologytoolbox-com-part-9),
+I shared the inner workings of the **Most Recent Posts** section on the
+Technology Toolbox home page. In this post, I'll show you how I built on that
+foundation to generate the content for the **Most Popular Posts** section.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png" alt="Technology Toolbox home page" class="screenshot" height="600" width="538" title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
-Similar to the **Most Recent Posts** section, the **Most Popular Posts** section is generated using an ASP.NET user control, as illustrated in the corresponding page layout.
+Similar to the **Most Recent Posts** section, the **Most Popular Posts** section
+is generated using an ASP.NET user control, as illustrated in the corresponding
+page layout.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png" alt="Technology Toolbox home page (page layout)" class="screenshot" height="600" width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
-Note that in the Subtext database, blog posts are stored in the **subtext\_Content** table and the statistics about the number of views for each blog post are stored in the **subtext\_EntryViewCount** table. Therefore, the first step in developing the **Most Popular Posts** feature for the home page was to expand the entity model.
+Note that in the Subtext database, blog posts are stored in the
+**subtext\_Content** table and the statistics about the number of views for each
+blog post are stored in the **subtext\_EntryViewCount** table. Therefore, the
+first step in developing the **Most Popular Posts** feature for the home page
+was to expand the entity model.
 
 ### Updating the Data Access Layer
 
@@ -42,7 +52,8 @@ At this point, the model should resemble the following:
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png" alt="Entity Data Model" class="screenshot" height="400" width="431" title="Figure 3: Entity Data Model" >}}
 
-With the updated model, the following LINQ query can be used to retrieve the top 10 most popular blog posts:
+With the updated model, the following LINQ query can be used to retrieve the top
+10 most popular blog posts:
 
 ```
         using (CaelumEntities context = new CaelumEntities())
@@ -57,7 +68,15 @@ With the updated model, the following LINQ query can be used to retrieve the top
         }
 ```
 
-In Subtext, **WebCount** represents the number of times a blog post has been viewed through the website, and **AggCount** represents "aggregated" views (e.g. posts viewed by RSS subscribers). Note that I chose to assign "weighting" factors to Web views vs. RSS views. This is similar to the formula used in the out-of-the-box **subtext\_GetPopularPosts** stored procedure (although, unlike that sproc, I chose *not* to include the number of post comments when determining which posts are the most popular). That sproc is used to render the **Top Posts** section on the Subtext dashboard page, and I *believe* the formula is based on the following blog post:
+In Subtext, **WebCount** represents the number of times a blog post has been
+viewed through the website, and **AggCount** represents "aggregated" views (e.g.
+posts viewed by RSS subscribers). Note that I chose to assign "weighting"
+factors to Web views vs. RSS views. This is similar to the formula used in the
+out-of-the-box **subtext\_GetPopularPosts** stored procedure (although, unlike
+that sproc, I chose *not* to include the number of post comments when
+determining which posts are the most popular). That sproc is used to render the
+**Top Posts** section on the Subtext dashboard page, and I *believe* the formula
+is based on the following blog post:
 
 {{< reference title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09." linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
 
@@ -66,11 +85,15 @@ I chose not to use the existing sproc for a couple of reasons:
 1. I'm not sure I like the idea of determining the popularity of blog posts based on the number of comments for each post. While this wouldn't necessarily "skew" the results significantly, it's more a matter of principle (especially considering the fact that some of my posts have tens of thousands of hits but the most comments I currently have on a single post is 15). The reality is that when you start getting blog posts with tens of thousands of hits (due to high rankings in Google search results), the influence of **AggCount** and number of comments becomes insignificant.
 2. Since I had already created the **Most Recent Posts** user control using the Entity Framework and a simple LINQ query, I wanted to keep the implementation of the **Most Popular Posts** user control similar (to minimize development time and simplify maintenance of the code going forward).
 
-Once I had the updated "plumbing" necessary to retrieve the list of most popular posts from the Subtext database, I turned my attention to displaying the results.
+Once I had the updated "plumbing" necessary to retrieve the list of most popular
+posts from the Subtext database, I turned my attention to displaying the
+results.
 
 ### PopularPosts.ascx
 
-One of the primary goals in developing the Technology Toolbox site is ensuring that semantic HTML is used to render the content. As such, I chose an ordered list (`<ol>`) as the basis for the **Most Popular Posts** section:
+One of the primary goals in developing the Technology Toolbox site is ensuring
+that semantic HTML is used to render the content. As such, I chose an ordered
+list (`<ol>`) as the basis for the **Most Popular Posts** section:
 
 ```
 <div class="posts-most-popular">
@@ -93,11 +116,19 @@ One of the primary goals in developing the Technology Toolbox site is ensuring t
 >
 > Based on the appearance of the list items shown in Figure 1, you might think the **Most Popular Posts** section is rendered using an *uunordered* list (since there are no numbers next to the list items). However, that is simply the result of a custom "sprite" image (to render the arrows) and a little CSS. I'll cover that detail in a separate post. Rest assured, if you look at the page "naked" (i.e. with CSS disabled), you will see the list of popular posts with the corresponding rankings (i.e. 1-10).
 
-As noted in my previous post, I typically define the semantic markup for a feature using [a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3). Then I copy the sample HTML into a user control and start replacing the sample content with ASP.NET controls to render the dynamic content.
+As noted in my previous post, I typically define the semantic markup for a
+feature using
+[a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3).
+Then I copy the sample HTML into a user control and start replacing the sample
+content with ASP.NET controls to render the dynamic content.
 
-For the **Most Popular Posts** section on the site home page, I added a new user control to the project (**PopularPosts.ascx**), copied the sample HTML above into the user control, and then added an instance of the control to the site home page.
+For the **Most Popular Posts** section on the site home page, I added a new user
+control to the project (**PopularPosts.ascx**), copied the sample HTML above
+into the user control, and then added an instance of the control to the site
+home page.
 
-In order to render an ordered list, I use an ASP.NET **Repeater** control, with a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
+In order to render an ordered list, I use an ASP.NET **Repeater** control, with
+a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 
 ```
 <div class="posts-most-popular">
@@ -124,7 +155,8 @@ In order to render an ordered list, I use an ASP.NET **Repeater** control, with 
 >
 > Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl` method came from (or what it does).
 
-In the corresponding code-behind for the user control, I added code to retrieve the top 10 most popular posts and bind the results to the **Repeater** control:
+In the corresponding code-behind for the user control, I added code to retrieve
+the top 10 most popular posts and bind the results to the **Repeater** control:
 
 ```
 using System;
@@ -160,15 +192,24 @@ As my five-year-old daughter likes to say, "easy peasey, lemon squeezy!"
 
 At this point, I ran a quick test to ensure the user control worked as expected.
 
-With the feature "functionally" complete, I turned my attention to performance tuning.
+With the feature "functionally" complete, I turned my attention to performance
+tuning.
 
-As with the control used to render the **Most Recent Posts** ssection, I added a cache directive to the new user control (PopularPosts.ascx) and specified a duration of one hour (3600 seconds):
+As with the control used to render the **Most Recent Posts** ssection, I added a
+cache directive to the new user control (PopularPosts.ascx) and specified a
+duration of one hour (3600 seconds):
 
 ```
 <%@ OutputCache Duration="3600" VaryByParam="None" %>
 ```
 
-This greatly reduces the number of roundtrips to SQL Server when users browse to the home page of the site. Since I don't expect the list of popular posts to change very often, I chose a much longer cache duration than RecentPosts.ascx. (I could have chosen an even higher cache time -- such as 24 hours -- but, honestly, I didn't see the need to go that high. Executing the above LINQ query once per hour seems very reasonable, and I typically start with "gut feel" and then make adjustments as necessary after running some load tests.)
+This greatly reduces the number of roundtrips to SQL Server when users browse to
+the home page of the site. Since I don't expect the list of popular posts to
+change very often, I chose a much longer cache duration than RecentPosts.ascx.
+(I could have chosen an even higher cache time -- such as 24 hours -- but,
+honestly, I didn't see the need to go that high. Executing the above LINQ query
+once per hour seems very reasonable, and I typically start with "gut feel" and
+then make adjustments as necessary after running some load tests.)
 
 Here is the complete source for PopularPosts.ascx:
 

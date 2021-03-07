@@ -16,11 +16,15 @@ tags: ["SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-This is an update to the beta version that was released last December. It "provides developers with advanced guidance on how to develop for SharePoint."
+This is an update to the beta version that was released last December. It
+"provides developers with advanced guidance on how to develop for SharePoint."
 
-Here's the overview from the [download page](http://www.microsoft.com/downloads/details.aspx?FamilyID=83A80A0F-0906-4D7D-98E1-3DD6F58FF059&displaylang=en):
+Here's the overview from the
+[download page](http://www.microsoft.com/downloads/details.aspx?FamilyID=83A80A0F-0906-4D7D-98E1-3DD6F58FF059&displaylang=en):
 
 {{< blockquote "font-italic" >}}
 

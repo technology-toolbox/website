@@ -9,40 +9,62 @@ categories: ["Development", "My System"]
 tags: ["Core Development", "Subtext", "My System", "Web Development"]
 ---
 
-In [a previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com), I mentioned how the new Technology Toolbox home page highlights the most recent blog posts, as shown below.
+In
+[a previous post](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com),
+I mentioned how the new Technology Toolbox home page highlights the most recent
+blog posts, as shown below.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png" alt="Technology Toolbox home page" class="screenshot" height="600" width="538" title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
-The content rendered in the **Most Recent Posts** section is generated using an ASP.NET user control, as illustrated in the corresponding page layout.
+The content rendered in the **Most Recent Posts** section is generated using an
+ASP.NET user control, as illustrated in the corresponding page layout.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png" alt="Technology Toolbox home page (page layout)" class="screenshot" height="600" width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
-In that post, I also showed how the Technology Toolbox site is comprised of two Visual Studio solutions that are merged together during the deployment process. Requests for URLs under **/blog** are handled by Subtext. All other requests (such as the Technology Toolbox home page) are handled by the "Caelum" solution.
+In that post, I also showed how the Technology Toolbox site is comprised of two
+Visual Studio solutions that are merged together during the deployment process.
+Requests for URLs under **/blog** are handled by Subtext. All other requests
+(such as the Technology Toolbox home page) are handled by the "Caelum" solution.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg" alt="Solution architecture" height="520" width="600" title="Figure 3: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
-Let's start with the data access layer and work our way up to the presentation layer (i.e. the ASP.NET user control).
+Let's start with the data access layer and work our way up to the presentation
+layer (i.e. the ASP.NET user control).
 
 ### Data Access Layer
 
-Accessing information stored in databases from .NET applications has always been fairly easy -- thanks to .NET Framework classes like DataSet, DataReader, etc. However, in recent years it became even easier with the introduction of the Entity Framework.
+Accessing information stored in databases from .NET applications has always been
+fairly easy -- thanks to .NET Framework classes like DataSet, DataReader, etc.
+However, in recent years it became even easier with the introduction of the
+Entity Framework.
 
-While Subtext already has a data access layer, I chose to create a new DAL in the Caelum solution in order to leverage the Entity Framework. I'm typically not a fan of duplicating functionality like this, but in this case it seemed logical -- especially when you consider how easy it is to get started with the Entity Framework and how little custom code it subsequently requires to read or update data.
+While Subtext already has a data access layer, I chose to create a new DAL in
+the Caelum solution in order to leverage the Entity Framework. I'm typically not
+a fan of duplicating functionality like this, but in this case it seemed logical
+-- especially when you consider how easy it is to get started with the Entity
+Framework and how little custom code it subsequently requires to read or update
+data.
 
-To create the new DAL, I added a new C# library project (**Data.csproj**) to the solution in order to isolate the DAL in a separate assembly (**TechnologyToolbox.Caelum.Data.dll**). Then I added a new **ADO.NET Entity Data Model** to the project (**Caelum.edmx**).
+To create the new DAL, I added a new C# library project (**Data.csproj**) to the
+solution in order to isolate the DAL in a separate assembly
+(**TechnologyToolbox.Caelum.Data.dll**). Then I added a new **ADO.NET Entity
+Data Model** to the project (**Caelum.edmx**).
 
-Since Subtext stores blog posts in the **subtext\_Content** table, I added that table to the model. Next I updated the properties to change the entity names as follows:
+Since Subtext stores blog posts in the **subtext\_Content** table, I added that
+table to the model. Next I updated the properties to change the entity names as
+follows:
 
 - **Entity Set Name:** Entries
 - **Name:** Entry
 
-These changes make the LINQ queries much easier to read. For example, the following LINQ query can be used to retrieve the three most recent blog posts:
+These changes make the LINQ queries much easier to read. For example, the
+following LINQ query can be used to retrieve the three most recent blog posts:
 
 ```
     using (CaelumEntities context = new CaelumEntities())
@@ -55,15 +77,25 @@ These changes make the LINQ queries much easier to read. For example, the follow
     }
 ```
 
-Note that **DateSyndicated** represents the date/time a blog post was published, so ordering the results by this property (in descending order) and then using the [**Take()**](http://msdn.microsoft.com/en-us/library/bb503062.aspx) method (to limit the results to three) yields the desired items for the **Most Recent Posts** section.
+Note that **DateSyndicated** represents the date/time a blog post was published,
+so ordering the results by this property (in descending order) and then using
+the [**Take()**](http://msdn.microsoft.com/en-us/library/bb503062.aspx) method
+(to limit the results to three) yields the desired items for the **Most Recent
+Posts** section.
 
-Once I had the minimal "plumbing" necessary to retrieve the list of recent posts from the Subtext database, I turned my attention to displaying the results.
+Once I had the minimal "plumbing" necessary to retrieve the list of recent posts
+from the Subtext database, I turned my attention to displaying the results.
 
 ### RecentPosts.ascx
 
-As noted in [part 5 of this series](/blog/jjameson/2011/11/09/building-technologytoolbox-com-part-5), the Technology Toolbox site currently uses the [hAtom 0.1 microformat](http://microformats.org/wiki/hatom) to render semantic HTML for blog posts.
+As noted in
+[part 5 of this series](/blog/jjameson/2011/11/09/building-technologytoolbox-com-part-5),
+the Technology Toolbox site currently uses the
+[hAtom 0.1 microformat](http://microformats.org/wiki/hatom) to render semantic
+HTML for blog posts.
 
-Here is the HTML structure for the **Most Recent Posts** section on the site home page (corresponding to the screenshot in Figure 1):
+Here is the HTML structure for the **Most Recent Posts** section on the site
+home page (corresponding to the screenshot in Figure 1):
 
 ```
 <div class="hfeed posts-recent">
@@ -135,11 +167,18 @@ Here is the HTML structure for the **Most Recent Posts** section on the site hom
 </div>
 ```
 
-Once I have defined the semantic markup for a feature (usually via [a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)), I typically copy the sample HTML into a user control and then start replacing the sample content with ASP.NET controls to render the dynamic content.
+Once I have defined the semantic markup for a feature (usually via
+[a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)),
+I typically copy the sample HTML into a user control and then start replacing
+the sample content with ASP.NET controls to render the dynamic content.
 
-For the **Most Recent Posts** section on the site home page, I added a new user control to the project (**RecentPosts.ascx**), copied the sample HTML above into the user control, and then added an instance of the control to the site home page.
+For the **Most Recent Posts** section on the site home page, I added a new user
+control to the project (**RecentPosts.ascx**), copied the sample HTML above into
+the user control, and then added an instance of the control to the site home
+page.
 
-Next I replaced the static `<div class="hentry">` elements with an ASP.NET **Repeater** control:
+Next I replaced the static `<div class="hentry">` elements with an ASP.NET
+**Repeater** control:
 
 ```
 <div class="hfeed posts-recent">
@@ -179,7 +218,8 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET **Rep
 >
 > When writing code, I generally prefer to take little steps -- rather than trying to do too much at once. For example, as shown above, I will often add "TODO:" placeholders to indicate where additional work needs to be done in order to replace sample content (such as generating the URL to a blog post).
 
-In the corresponding code-behind for the user control, I added code to retrieve the list of recent posts and bind the results to the **Repeater** control:
+In the corresponding code-behind for the user control, I added code to retrieve
+the list of recent posts and bind the results to the **Repeater** control:
 
 ```
 using System;
@@ -211,7 +251,10 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
 At this point, I ran a quick test to ensure this worked as expected.
 
-In order to generate the URL for a specific blog post, I created a simple "helper" class with a method that generates the server-relative URL of a blog post (for example, "/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"):
+In order to generate the URL for a specific blog post, I created a simple
+"helper" class with a method that generates the server-relative URL of a blog
+post (for example,
+"/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"):
 
 ```
 namespace TechnologyToolbox.Caelum.Website
@@ -246,7 +289,8 @@ namespace TechnologyToolbox.Caelum.Website
 >
 > The blog path (i.e. /blog/jjameson) is currently hard-coded in this method. While I briefly considered enhancing this to support other scenarios, I decided against it since it currently suits my needs. If and when I ever need to support other blogs on the Technology Toolbox site, I will obviously need to revisit this piece of code.
 
-Then I replaced the placeholders for the post URL with corresponding calls to the **BlogHelper.GetEntryUrl** method:
+Then I replaced the placeholders for the post URL with corresponding calls to
+the **BlogHelper.GetEntryUrl** method:
 
 ```
 <div class="hfeed posts-recent">
@@ -286,7 +330,10 @@ Then I replaced the placeholders for the post URL with corresponding calls to th
 </div>
 ```
 
-After running another quick test to verify the URLs are generated correctly, I replaced the sample date/time values for each post with the actual values specified in **DateSyndicated**. This is simply a matter of formatting the **DateTime** value as shown below:
+After running another quick test to verify the URLs are generated correctly, I
+replaced the sample date/time values for each post with the actual values
+specified in **DateSyndicated**. This is simply a matter of formatting the
+**DateTime** value as shown below:
 
 ```
 <div class="hfeed posts-recent">
@@ -312,7 +359,12 @@ After running another quick test to verify the URLs are generated correctly, I r
 </div>
 ```
 
-At this point, the feature was almost complete. The only thing left to do was to replace the placeholder for the number of comments and conditionally add the `class="none"` attribute value to the `<li class="comments">` element. In other words, when there are no comments for a post, the markup should be `<li class="comments none">`, but when there is at least one comment the markup should be `<li class="comments">`. This makes it very easy to show or hide the comments icon (and corresponding link) using CSS.
+At this point, the feature was almost complete. The only thing left to do was to
+replace the placeholder for the number of comments and conditionally add the
+`class="none"` attribute value to the `<li class="comments">` element. In other
+words, when there are no comments for a post, the markup should be `<li class="comments none">`, but when there is at least one comment the markup
+should be `<li class="comments">`. This makes it very easy to show or hide the
+comments icon (and corresponding link) using CSS.
 
 ```
 <div class="hfeed posts-recent">
@@ -350,9 +402,12 @@ At this point, the feature was almost complete. The only thing left to do was to
 </div>
 ```
 
-After replacing the last "TODO:" placeholder and running a few more tests to verify the feature was complete, I turned my attention to performance tuning.
+After replacing the last "TODO:" placeholder and running a few more tests to
+verify the feature was complete, I turned my attention to performance tuning.
 
-In order to greatly reduce the number of roundtrips to SQL Server, I added a cache directive to the user control and specified a duration of five minutes (300 seconds):
+In order to greatly reduce the number of roundtrips to SQL Server, I added a
+cache directive to the user control and specified a duration of five minutes
+(300 seconds):
 
 ```
 <%@ OutputCache Duration="300" VaryByParam="None" %>

@@ -14,17 +14,39 @@ tags: ["SharePoint 2010", "PowerShell"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In [my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010), I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell scripts that I currently use when working with SharePoint 2010. Here's another one that I deliberately excluded from the previous post.
+In
+[my first post today](/blog/jjameson/2011/02/27/deployment-scripts-for-sharepoint-server-2010),
+I provided a number of scripts for deploying custom solutions and features in
+SharePoint Server 2010. However, those certainly weren't *all* of the PowerShell
+scripts that I currently use when working with SharePoint 2010. Here's another
+one that I deliberately excluded from the previous post.
 
-Note that in any "real world" deployment of SharePoint Server 2010, you're going to want to configure the State Service (or else you won't be able to use any features that depend on InfoPath Forms Services -- including the out-of-the-box approval workflow).
+Note that in any "real world" deployment of SharePoint Server 2010, you're going
+to want to configure the State Service (or else you won't be able to use any
+features that depend on InfoPath Forms Services -- including the out-of-the-box
+approval workflow).
 
-While you are certainly welcome to use Central Administration and/or the Farm Configuration Wizard to configure the **State Service** service application, personally I don't recommend it. Why not? Simple...you end up with one of those nasty database names with a GUID in it.
+While you are certainly welcome to use Central Administration and/or the Farm
+Configuration Wizard to configure the **State Service** service application,
+personally I don't recommend it. Why not? Simple...you end up with one of those
+nasty database names with a GUID in it.
 
-It's not that I put heroic effort into avoiding database names with GUIDs in them. After all, if you follow the instructions in one of the installation guides I've written for various SharePoint projects, then you'll find that PSConfig.exe creates the SharePoint\_AdminContent\_{GUID} database for Central Administration. Personally, that one doesn't bother me (much) -- probably because the amount of SQL traffic to that database is negligible. However, I can't say the same for the numerous other SharePoint databases.
+It's not that I put heroic effort into avoiding database names with GUIDs in
+them. After all, if you follow the instructions in one of the installation
+guides I've written for various SharePoint projects, then you'll find that
+PSConfig.exe creates the SharePoint\_AdminContent\_{GUID} database for Central
+Administration. Personally, that one doesn't bother me (much) -- probably
+because the amount of SQL traffic to that database is negligible. However, I
+can't say the same for the numerous other SharePoint databases.
 
-So, rather than having Central Administration create a StateService\_{GUID} database, why not use a little bit of PowerShell instead? Plus, this saves you a few clicks whenever you build out a new environment -- or rebuild an existing (typically development) environment.
+So, rather than having Central Administration create a StateService\_{GUID}
+database, why not use a little bit of PowerShell instead? Plus, this saves you a
+few clicks whenever you build out a new environment -- or rebuild an existing
+(typically development) environment.
 
 Here's a simple script to do just that.
 
@@ -85,9 +107,20 @@ function Main()
 Main
 ```
 
-Obviously the real work here is performed by the actual SharePoint cmdlets, like `New-SPStateServiceDatabase` and `New-SPStateServiceApplication`, and while you could certainly type those PowerShell commands each time you need to configure the State Service, I find this script much more convenient.
+Obviously the real work here is performed by the actual SharePoint cmdlets, like
+`New-SPStateServiceDatabase` and `New-SPStateServiceApplication`, and while you
+could certainly type those PowerShell commands each time you need to configure
+the State Service, I find this script much more convenient.
 
-Thanks to [Todd Carter](http://www.todd-carter.com/) for providing the core PowerShell commands used in the script above. While apparently the "[wizard likes his GUIDs](http://todd-carter.com/post/2010/04/26/The-Wizard-Likes-His-GUIDs.aspx)"...Jeremy most certainly does not (at least not when it comes to database names).
+Thanks to [Todd Carter](http://www.todd-carter.com/) for providing the core
+PowerShell commands used in the script above. While apparently the "
+[wizard likes his GUIDs](http://todd-carter.com/post/2010/04/26/The-Wizard-Likes-His-GUIDs.aspx)"...Jeremy
+most certainly does not (at least not when it comes to database names).
 
-Seriously, why doesn't SharePoint use a database name like "StateService" by default -- but if it determines that the desired database name is already in use, then -- and only then -- it appends a GUID in order to avoid a naming collision? I'm guessing 99.999% of the time there is only going to be one StateService database per SharePoint farm. [If you think I'm wrong, please tell me, because apparently I'm missing something.]
+Seriously, why doesn't SharePoint use a database name like "StateService" by
+default -- but if it determines that the desired database name is already in
+use, then -- and only then -- it appends a GUID in order to avoid a naming
+collision? I'm guessing 99.999% of the time there is only going to be one
+StateService database per SharePoint farm. [If you think I'm wrong, please tell
+me, because apparently I'm missing something.]
 

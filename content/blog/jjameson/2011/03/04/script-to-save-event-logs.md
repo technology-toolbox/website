@@ -14,15 +14,33 @@ tags: ["Windows Server", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-[Earlier this week](/blog/jjameson/2011/03/01/script-to-clear-and-save-event-logs), I shared a script that I frequently use in my development environments to clear the event logs (for example, whenever I want to verify that one of my VMs "boots clean" -- meaning without any errors or warnings). Note that prior to clearing each of the event logs, the script first saves a copy (to C:\ with a timestamp in the filename) just in case I need to go back and look at them.
+[Earlier this week](/blog/jjameson/2011/03/01/script-to-clear-and-save-event-logs),
+I shared a script that I frequently use in my development environments to clear
+the event logs (for example, whenever I want to verify that one of my VMs "boots
+clean" -- meaning without any errors or warnings). Note that prior to clearing
+each of the event logs, the script first saves a copy (to C:\ with a timestamp
+in the filename) just in case I need to go back and look at them.
 
-While you could easily modify the original script I provided in order to save -- but not clear -- the event logs, as I was writing [my previous post this morning](/blog/jjameson/2011/03/04/identifying-logon-failures-on-a-web-site), I thought it would be helpful to share a different script in which I have already done just that.
+While you could easily modify the original script I provided in order to save --
+but not clear -- the event logs, as I was writing
+[my previous post this morning](/blog/jjameson/2011/03/04/identifying-logon-failures-on-a-web-site),
+I thought it would be helpful to share a different script in which I have
+already done just that.
 
-Here is the script that I occasionally use whenever I need to analyze event logs from a Production environment. I typically ask one of the members of the Operations team to run the script for me (for each of the servers that I need to analyze) and subsequently copy the saved copies of the event logs to some location that I actually have access to. [I don't typically have -- nor want -- access to the Production environments on projects I'm involved with.]
+Here is the script that I occasionally use whenever I need to analyze event logs
+from a Production environment. I typically ask one of the members of the
+Operations team to run the script for me (for each of the servers that I need to
+analyze) and subsequently copy the saved copies of the event logs to some
+location that I actually have access to. [I don't typically have -- nor want --
+access to the Production environments on projects I'm involved with.]
 
-Note that I am typically only interested in the Application and System logs. If you want to save copies of other event logs, you'll need to tweak the script below.
+Note that I am typically only interested in the Application and System logs. If
+you want to save copies of other event logs, you'll need to tweak the script
+below.
 
 ### Save Event Logs.vbs
 

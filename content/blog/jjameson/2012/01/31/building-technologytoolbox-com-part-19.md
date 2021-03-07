@@ -8,15 +8,24 @@ categories: ["Development", "My System"]
 tags: ["Subtext"]
 ---
 
-In [last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18), I mentioned how I recently created an account on GitHub, primarily so I can contribute the various bug fixes and enhancements that I've made to the Subtext blog engine.
+In
+[last night's post](/blog/jjameson/2012/01/30/building-technologytoolbox-com-part-18),
+I mentioned how I recently created an account on GitHub, primarily so I can
+contribute the various bug fixes and enhancements that I've made to the Subtext
+blog engine.
 
-In addition to the trivial bug fix that I mentioned before, I have merged a number of other changes that I previously made to my private build of Subtext.
+In addition to the trivial bug fix that I mentioned before, I have merged a
+number of other changes that I previously made to my private build of Subtext.
 
-I'm not sure whether all or any of these changes will find their way into Phil's repo, but I certainly hope so. Here is a list of the issues that I created (in most of these, you will see a corresponding change in my private fork of Subtext):
+I'm not sure whether all or any of these changes will find their way into Phil's
+repo, but I certainly hope so. Here is a list of the issues that I created (in
+most of these, you will see a corresponding change in my private fork of
+Subtext):
 
 {{< reference title="Subtext issues created by me" linkHref="http://github.com/Haacked/Subtext/issues/created_by/jeremy-jameson" linkText="https://github.com/Haacked/Subtext/issues/created_by/jeremy-jameson" >}}
 
-My Subtext fork does not currently include all of the changes I've made to Subtext for TechnologyToolbox.com, but it is close.
+My Subtext fork does not currently include all of the changes I've made to
+Subtext for TechnologyToolbox.com, but it is close.
 
 Here are the changes that I *haven't* yet merged into my Subtext fork:
 
@@ -31,9 +40,12 @@ Here are the changes that I *haven't* yet merged into my Subtext fork:
 - HACK: Add an extra catch block to avoid a large number of test failures (due to expected exceptions not being caught when running unit tests under MbUnit)
 - Only change the Visible property of the Gravatar image to true when an email address is specified in the comment. This allows a skin to specify a default Gravatar image (e.g. PlaceHolderImage="~/Skins/TechnologyToolbox1/Images/Silhouette-1.jpg") but also choose to hide the default image when no email address is available to retrieve a Gravatar (i.e. by specifying Visible="false" on the Image control)
 
-Honestly, I'm not sure whether these changes would be valuable to others. While these were all necessary for the TechnologyToolbox.com site, some of them might be too specific for other sites (especially the ones marked "HACK").
+Honestly, I'm not sure whether these changes would be valuable to others. While
+these were all necessary for the TechnologyToolbox.com site, some of them might
+be too specific for other sites (especially the ones marked "HACK").
 
-If you have an interest in one or more of the above fixes, let me know and we can see about getting them merged into my Subtext fork.
+If you have an interest in one or more of the above fixes, let me know and we
+can see about getting them merged into my Subtext fork.
 
 Enjoy!
 

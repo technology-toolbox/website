@@ -17,23 +17,33 @@ tags: ["Windows Vista"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Today I rebuilt my laptop to allow me to dual boot between Windows Server 2008 and Windows Vista. To enable this configuration, I created the following partions on my hard drive:
+Today I rebuilt my laptop to allow me to dual boot between Windows Server 2008
+and Windows Vista. To enable this configuration, I created the following
+partions on my hard drive:
 
 - 20 GB - Windows Server 2008 x64
 - 20 GB - Windows Vista Ultimate x64
 - 53.2 GB - Program Files and Data
 
-Here is what my Vista partition looked like immediately after the baseline installation (no patches):
+Here is what my Vista partition looked like immediately after the baseline
+installation (no patches):
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-Ultimate-x64-(baseline)-537x600.jpg" alt="Disk usage on Windows Vista Ultimate x64 (baseline)" class="screenshot" height="600" width="537" title="Figure 1: Disk usage on Windows Vista Ultimate x64 (baseline)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-Ultimate-x64-%28baseline%29-840x939.jpg)
 
-From this, you can see that about 10 GB of the 20 GB partition is needed to install Windows Vista Ultimate x64.
+From this, you can see that about 10 GB of the 20 GB partition is needed to
+install Windows Vista Ultimate x64.
 
-In order to free up some substantial disk space, I dialed the paging file down from the default (around 5 GB) to an initial size of 200 MB with a maximum size of 512 MB. I have 4 GB of RAM on this laptop -- so in my mind, if I start needing more than 500 MB of swap space, something is horribly wrong and it's probably time for a reboot anyway.
+In order to free up some substantial disk space, I dialed the paging file down
+from the default (around 5 GB) to an initial size of 200 MB with a maximum size
+of 512 MB. I have 4 GB of RAM on this laptop -- so in my mind, if I start
+needing more than 500 MB of swap space, something is horribly wrong and it's
+probably time for a reboot anyway.
 
 I then proceeded to install the following:
 
@@ -46,9 +56,14 @@ I then proceeded to install the following:
 - Microsoft Expression Blend
 - Microsoft Expression Web
 
-Note: During each setup, I changed the drive letter from C: to E: in order to place the bulk of the program files on the large 53 GB partition -- not the "small" 20 GB partition.
+Note: During each setup, I changed the drive letter from C: to E: in order to
+place the bulk of the program files on the large 53 GB partition -- not the
+"small" 20 GB partition.
 
-I then configured Vista to use my WSUS (Windows Server Update Services) server in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my basement), so that patches only need to be copied over my LAN -- not downloaded from the Internet each time.
+I then configured Vista to use my WSUS (Windows Server Update Services) server
+in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)
+(a.k.a. my basement), so that patches only need to be copied over my LAN -- not
+downloaded from the Internet each time.
 
 Windows Update then proceeded to install the following:
 
@@ -66,11 +81,22 @@ After rebooting a couple of times, my Vista partition looks like this:
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-with-SP1-and-products-784x885.jpg)
 
-If you look closely, you'll notice that I only have 320 MB of the 20 GB free. Ouch.
+If you look closely, you'll notice that I only have 320 MB of the 20 GB free.
+Ouch.
 
-When I started the rebuild today, I thought 20 GB would be sufficient, but now I am wishing I had used two 25 GB partitions instead of two 20 GB partitions.
+When I started the rebuild today, I thought 20 GB would be sufficient, but now I
+am wishing I had used two 25 GB partitions instead of two 20 GB partitions.
 
-While I actually contemplated "nuking" the machine again and starting out with larger system partitions, I am going to try getting by with this configuration for a little while. However, I don't have any expectations of running with a mere 300 MB of free space. Instead, I am going to completely disable hibernation, thereby freeing up an additional 3.5 GB of disk space (by deleting the hiberfil.sys).
+While I actually contemplated "nuking" the machine again and starting out with
+larger system partitions, I am going to try getting by with this configuration
+for a little while. However, I don't have any expectations of running with a
+mere 300 MB of free space. Instead, I am going to completely disable
+hibernation, thereby freeing up an additional 3.5 GB of disk space (by deleting
+the hiberfil.sys).
 
-Unfortunately, disabling hibernation (and deleting the associated hiberfil.sys file) wasn't very straightforward in Vista. Actually, this was really the driving factor behind this post and the one that follows (I don't expect many people to find graphical depcitions of disk space usage to be all that interesting).
+Unfortunately, disabling hibernation (and deleting the associated hiberfil.sys
+file) wasn't very straightforward in Vista. Actually, this was really the
+driving factor behind this post and the one that follows (I don't expect many
+people to find graphical depcitions of disk space usage to be all that
+interesting).
 

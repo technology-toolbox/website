@@ -16,15 +16,26 @@ tags: ["Core Development", "Toolbox"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-I added another tool to my [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) yesterday: SketchPath.
+I added another tool to my
+[Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) yesterday:
+SketchPath.
 
-The [SketchPath site](http://www.sketchpath.com/) labels it as "The XPath Tool" but I'd say it more like "*The* XPath Tool."
+The [SketchPath site](http://www.sketchpath.com/) labels it as "The XPath Tool"
+but I'd say it more like "*The* XPath Tool."
 
-I've seen a few other tools for quickly building and testing XPath expressions against an XML document, but they pale in comparison to SketchPath. There are a number of online tools that unquestionably require less effort to get started with, but you'll likely find them very limiting as well.
+I've seen a few other tools for quickly building and testing XPath expressions
+against an XML document, but they pale in comparison to SketchPath. There are a
+number of online tools that unquestionably require less effort to get started
+with, but you'll likely find them very limiting as well.
 
-I know I'm not the only one who thinks SketchPath rocks. Scott Hanselman included it in his [2009 Ultimate Developer and Power Users Tool List for Windows](http://www.hanselman.com/blog/ScottHanselmans2009UltimateDeveloperAndPowerUsersToolListForWindows.aspx).
+I know I'm not the only one who thinks SketchPath rocks. Scott Hanselman
+included it in his
+[2009 Ultimate Developer and Power Users Tool List for Windows](http://www.hanselman.com/blog/ScottHanselmans2009UltimateDeveloperAndPowerUsersToolListForWindows.aspx).
 
-If you do any significant amount of work with XML, I recommend you download SketchPath today.
+If you do any significant amount of work with XML, I recommend you download
+SketchPath today.
 

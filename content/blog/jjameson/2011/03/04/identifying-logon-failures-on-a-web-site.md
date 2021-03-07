@@ -14,11 +14,22 @@ tags: ["MOSS 2007", "Infrastructure", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Several years ago, while working on the "Frontier" project at [Agilent Technologies](http://chem.agilent.com), I encountered a scenario where I needed to quickly identify logon failures on the site. The Agilent site was (and I believe still is) based on Microsoft Office SharePoint Server (MOSS) 2007, and used Forms-Based Authentication with a slightly custom version of the [ActiveDirectoryMembershipProvider](http://msdn.microsoft.com/en-us/library/system.web.security.activedirectorymembershipprovider%28v=VS.80%29.aspx) (in order to lookup users by email address, instead of forcing customers and partners to remember their usernames in the Agilent extranet domain).
+Several years ago, while working on the "Frontier" project at
+[Agilent Technologies](http://chem.agilent.com), I encountered a scenario where
+I needed to quickly identify logon failures on the site. The Agilent site was
+(and I believe still is) based on Microsoft Office SharePoint Server (MOSS)
+2007, and used Forms-Based Authentication with a slightly custom version of the
+[ActiveDirectoryMembershipProvider](http://msdn.microsoft.com/en-us/library/system.web.security.activedirectorymembershipprovider%28v=VS.80%29.aspx)
+(in order to lookup users by email address, instead of forcing customers and
+partners to remember their usernames in the Agilent extranet domain).
 
-Whenever a user failed to authenticate, I noticed that ASP.NET wrote a message to the Application event log on the Web server (Event ID: 1315) in which the Description contained the phrase:
+Whenever a user failed to authenticate, I noticed that ASP.NET wrote a message
+to the Application event log on the Web server (Event ID: 1315) in which the
+Description contained the phrase:
 
 {{< blockquote "font-italic" >}}
 
@@ -26,11 +37,19 @@ Membership credential verification failed.
 
 {{< /blockquote >}}
 
-In order to help the Operations team diagnose these logon failures, I created a couple of scripts that simply query the event log based on the Event ID and Description.
+In order to help the Operations team diagnose these logon failures, I created a
+couple of scripts that simply query the event log based on the Event ID and
+Description.
 
-The first script lists all logon failures for a particular server (i.e. one of the Web servers in the farm), while the second script looks for logon failures for a particular user (across all Web servers in the farm, which -- at least back then -- happened to be two servers: WCOSLSC0 and WCOSLSC9).
+The first script lists all logon failures for a particular server (i.e. one of
+the Web servers in the farm), while the second script looks for logon failures
+for a particular user (across all Web servers in the farm, which -- at least
+back then -- happened to be two servers: WCOSLSC0 and WCOSLSC9).
 
-These scripts are based on a sample I found in the [Script Center on TechNet](http://technet.microsoft.com/en-us/scriptcenter/default.aspx) for querying the event log. You should be able to easily modify them to search for other events (and subsequently parse data from).
+These scripts are based on a sample I found in the
+[Script Center on TechNet](http://technet.microsoft.com/en-us/scriptcenter/default.aspx)
+for querying the event log. You should be able to easily modify them to search
+for other events (and subsequently parse data from).
 
 > **Note**
 >
@@ -42,7 +61,9 @@ These scripts are based on a sample I found in the [Script Center on TechNet](ht
 
 ### ListLogonFailureEventsForServer.vbs
 
-This script searches the specified server's Application event log for ASP.NET logon failure events and subsequently parses the username from any events that are found:
+This script searches the specified server's Application event log for ASP.NET
+logon failure events and subsequently parses the username from any events that
+are found:
 
 ```
 Option Explicit
@@ -103,7 +124,8 @@ End Sub
 
 ### ListLogonFailureEventsForUser.vbs
 
-This script searches the Application event logs for each server in the farm looking for ASP.NET logon failure events for the specified username:
+This script searches the Application event logs for each server in the farm
+looking for ASP.NET logon failure events for the specified username:
 
 ```
 Option Explicit

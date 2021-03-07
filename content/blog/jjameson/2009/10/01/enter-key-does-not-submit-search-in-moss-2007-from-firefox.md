@@ -14,35 +14,81 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-One issue that has "bitten" me on more than one occasion is the fact that the [SearchBoxEx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.portal.webcontrols.searchboxex.aspx) control in Microsoft Office SharePoint Server (MOSS) 2007 does not work consistently across different browsers. Specifically, I am referring to the issue where pressing the {{< kbd "Enter" >}} key in Mozilla Firefox does not initiate the search but rather just refreshes the current page. The workaround is to have Firefox users always click the "Go Search" button to submit the search terms and view search results.
+One issue that has "bitten" me on more than one occasion is the fact that the
+[SearchBoxEx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.portal.webcontrols.searchboxex.aspx)
+control in Microsoft Office SharePoint Server (MOSS) 2007 does not work
+consistently across different browsers. Specifically, I am referring to the
+issue where pressing the {{< kbd "Enter" >}} key in Mozilla Firefox does not
+initiate the search but rather just refreshes the current page. The workaround
+is to have Firefox users always click the "Go Search" button to submit the
+search terms and view search results.
 
-I first encountered this issue several years ago on my first MOSS 2007 project, but I was able to convince the customer that we did not need to fix it at the time given the workaround I note above (and also considering the fact that Firefox wasn't nearly as popular back then as it is today).
+I first encountered this issue several years ago on my first MOSS 2007 project,
+but I was able to convince the customer that we did not need to fix it at the
+time given the workaround I note above (and also considering the fact that
+Firefox wasn't nearly as popular back then as it is today).
 
-When this issue came up again for a different customer this past summer, I did some more research into the underlying issue. I found a service request (i.e. support case) for another customer that encountered this problem. According to this SR, the official response from Microsoft Support (i.e. CSS) is that for MOSS 2007, Firefox is a "Level 2" browser (from a support and functionality perspective). In light of this -- combined with the workaround of clicking the **Go Search** image button (instead of pressing the {{< kbd "Enter" >}} key) -- the SR stated that there are no plans to address this issue.
+When this issue came up again for a different customer this past summer, I did
+some more research into the underlying issue. I found a service request (i.e.
+support case) for another customer that encountered this problem. According to
+this SR, the official response from Microsoft Support (i.e. CSS) is that for
+MOSS 2007, Firefox is a "Level 2" browser (from a support and functionality
+perspective). In light of this -- combined with the workaround of clicking the
+**Go Search** image button (instead of pressing the {{< kbd "Enter" >}} key) --
+the SR stated that there are no plans to address this issue.
 
-I spent a few hours that day investigating the bug myself as well as some various hacks to circumvent the issue that I found when searching the Internet.
+I spent a few hours that day investigating the bug myself as well as some
+various hacks to circumvent the issue that I found when searching the Internet.
 
-I discovered the fundamental problem is due to the way that SharePoint cancels the form submission -- or in the case of Firefox, does *not* cancel the form submission -- when the {{< kbd "Enter" >}} key is pressed in the search box.
+I discovered the fundamental problem is due to the way that SharePoint cancels
+the form submission -- or in the case of Firefox, does *not* cancel the form
+submission -- when the {{< kbd "Enter" >}} key is pressed in the search box.
 
-Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\LAYOUTS\1033\Search.js:
+Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web
+Server Extensions\12\TEMPLATE\LAYOUTS\1033\Search.js:
 
 `try {if(null != event) event.returnValue = false;} catch (err) {}`
 
-Instead of returning `false` -- and subsequently cascading this return value to the `OnKeyPress` event handler (which would subsequently return `false` to cancel the form submission) -- SharePoint sets `event.returnValue` to `false` in order to cancel the form submission. While this works fine for Internet Explorer -- and apparently Safari as well -- it does not work for Firefox. In fact, I discovered that `event` is undefined at this point when running under Firefox. Since the form submission is not canceled in Firefox, there is a "race condition" between the form submission caused by the `Enter` key being pressed and the redirect to the search results page (i.e. line 606 of Search.js):
+Instead of returning `false` -- and subsequently cascading this return value to
+the `OnKeyPress` event handler (which would subsequently return `false` to
+cancel the form submission) -- SharePoint sets `event.returnValue` to `false` in
+order to cancel the form submission. While this works fine for Internet Explorer
+-- and apparently Safari as well -- it does not work for Firefox. In fact, I
+discovered that `event` is undefined at this point when running under Firefox.
+Since the form submission is not canceled in Firefox, there is a "race
+condition" between the form submission caused by the `Enter` key being pressed
+and the redirect to the search results page (i.e. line 606 of Search.js):
 
 `window.location = Url + sch;`
 
-If we had access to the `event` object in the `GoSearch` function when browsing with Firefox, we could use the W3C standard `preventDefault()` method to cancel the default action (i.e. the form submission). Unfortunately, the `event` is not passed as a parameter to the `GoSearch` function. We also do not have the ability to customize the JavaScript function generated by the SearchBoxEx control that handles the `OnKeyPress` event (which should return `false` if the `GoSearch` function attempts to redirect to the search results page).
+If we had access to the `event` object in the `GoSearch` function when browsing
+with Firefox, we could use the W3C standard `preventDefault()` method to cancel
+the default action (i.e. the form submission). Unfortunately, the `event` is not
+passed as a parameter to the `GoSearch` function. We also do not have the
+ability to customize the JavaScript function generated by the SearchBoxEx
+control that handles the `OnKeyPress` event (which should return `false` if the
+`GoSearch` function attempts to redirect to the search results page).
 
-Since fixing the fundamental bug in Search.js did not appear to a viable option, I looked at some other suggested fixes for this bug.
+Since fixing the fundamental bug in Search.js did not appear to a viable option,
+I looked at some other suggested fixes for this bug.
 
-Simply adding two "dummy" input elements (as described in [http://stevenng.net/2008/09/09/is-the-enter-key-not-working-for-sharepoint-search](http://stevenng.net/2008/09/09/is-the-enter-key-not-working-for-sharepoint-search)) did not work for my customer's solution. I speculated that perhaps the structure of their custom master page was missing other elements necessary to make this work.
+Simply adding two "dummy" input elements (as described in
+[http://stevenng.net/2008/09/09/is-the-enter-key-not-working-for-sharepoint-search](http://stevenng.net/2008/09/09/is-the-enter-key-not-working-for-sharepoint-search))
+did not work for my customer's solution. I speculated that perhaps the structure
+of their custom master page was missing other elements necessary to make this
+work.
 
-I then tried replacing the `onKeyPress` event as suggested in [http://social.msdn.microsoft.com/Forums/en-US/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3](http://social.msdn.microsoft.com/Forums/en-US/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3) and [http://blog.marktharris.com/2008/09/searchboxex-firefox-and-enter-key.html](http://blog.marktharris.com/2008/09/searchboxex-firefox-and-enter-key.html).
+I then tried replacing the `onKeyPress` event as suggested in
+[http://social.msdn.microsoft.com/Forums/en-US/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3](http://social.msdn.microsoft.com/Forums/en-US/sharepointecm/thread/87574c13-91d6-48fe-8346-01e77e0094b3)
+and
+[http://blog.marktharris.com/2008/09/searchboxex-firefox-and-enter-key.html](http://blog.marktharris.com/2008/09/searchboxex-firefox-and-enter-key.html).
 
-Here is the script that I found would need to be added to the custom master page:
+Here is the script that I found would need to be added to the custom master
+page:
 
 ```
 <%--
@@ -99,7 +145,14 @@ replaceOnKeyPress();
 >
 > While this hack was verified to fix the problem in Firefox, it is somewhat brittle due to the need to specify the unique identifier in the script (see my comments in the server-side comment above).
 
-Given that this problem only occurs in Firefox (as noted earlier, I was unable to repro in Safari), we were once again "lucky" enough to convince the customer not to fix this.
+Given that this problem only occurs in Firefox (as noted earlier, I was unable
+to repro in Safari), we were once again "lucky" enough to convince the customer
+not to fix this.
 
-As noted in my earlier comments, the "official" response from Microsoft Support for this bug appears to be "won't fix" (at least based on the comments that I read in the aforementioned support case -- specifically that for MOSS 2007, Firefox is considered a "Level 2" browser from a support perspective). However, if you decide you need a workaround for this bug for Firefox users, you might consider this an acceptable solution.
+As noted in my earlier comments, the "official" response from Microsoft Support
+for this bug appears to be "won't fix" (at least based on the comments that I
+read in the aforementioned support case -- specifically that for MOSS 2007,
+Firefox is considered a "Level 2" browser from a support perspective). However,
+if you decide you need a workaround for this bug for Firefox users, you might
+consider this an acceptable solution.
 

@@ -15,21 +15,35 @@ tags: ["My System"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In [one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog), I showed how you can easily filter the search results from Bing -- and other search engines -- to only show results from a specific site (e.g. my blog).
+In
+[one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog),
+I showed how you can easily filter the search results from Bing -- and other
+search engines -- to only show results from a specific site (e.g. my blog).
 
-This morning it occurred to me that I could integrate this into my MSDN blog with relatively little effort.
+This morning it occurred to me that I could integrate this into my MSDN blog
+with relatively little effort.
 
-Note that, as I've mentioned before, MSDN (and TechNet) blogs are currently powered by [Community Server](http://en.wikipedia.org/wiki/Community_Server). Consequently, the search options available to us are limited.
+Note that, as I've mentioned before, MSDN (and TechNet) blogs are currently
+powered by [Community Server](http://en.wikipedia.org/wiki/Community_Server).
+Consequently, the search options available to us are limited.
 
-Yesterday I discovered that sometime last fall, the MSDN folks replaced the Community Server search functionality with Bing search. If you click the **Search** link on this page, you'll see what I mean. Unfortunately, when you use that search page, you get results from all MSDN blogs even though you may want to see the results from, say, just my blog.
+Yesterday I discovered that sometime last fall, the MSDN folks replaced the
+Community Server search functionality with Bing search. If you click the
+**Search** link on this page, you'll see what I mean. Unfortunately, when you
+use that search page, you get results from all MSDN blogs even though you may
+want to see the results from, say, just my blog.
 
 > **Update (2009-04-20)**
 >
 > After [switching my blog from the **default** Community Server template](/blog/jjameson/2010/04/19/new-blog-template-and-styling) to the **Simple - right sidebar** template, I discovered that the MSDN team had already updated that template to replace the default "Search All Blogs" functionality with the "Search This Blog" functionality that one would expect (with a much nicer user experience, I might add). Consequently I removed my custom search box. Apparently, I should have abandoned the default CS template a long time ago ;-)
 
-After digging around a little in the [Bing Developer Center](http://www.bing.com/developers), I found some [instructions for adding a basic search box to search just your website](http://help.live.com/help.aspx?project=WL_Webmasters&querytype=keyword&query=hcraescisab&mkt=en-us).
+After digging around a little in the
+[Bing Developer Center](http://www.bing.com/developers), I found some
+[instructions for adding a basic search box to search just your website](http://help.live.com/help.aspx?project=WL_Webmasters&querytype=keyword&query=hcraescisab&mkt=en-us).
 
 Here's the gist of it:
 
@@ -63,15 +77,30 @@ To let your visitors search your website, add the following code to your page(s)
 
 {{< /blockquote >}}
 
-This seems pretty simple...but, unfortunately it's a little too simple (unless your site is serving up plain ol' HTML pages).
+This seems pretty simple...but, unfortunately it's a little too simple (unless
+your site is serving up plain ol' HTML pages).
 
-The problem is that pages served up by Community Server (or any ASP.NET application for that matter) already have a `<form>` element -- which usually spans the entire page. Consequently, if you simply copy/paste the HTML content above, you will end up with nested `<form>` elements. [While some browsers might be able to successfully handle nested `<form>` elements, it's definitely not valid HTML and therefore I don't recommend even attempting it.]
+The problem is that pages served up by Community Server (or any ASP.NET
+application for that matter) already have a `<form>` element -- which usually
+spans the entire page. Consequently, if you simply copy/paste the HTML content
+above, you will end up with nested `<form>` elements. [While some browsers might
+be able to successfully handle nested `<form>` elements, it's definitely not
+valid HTML and therefore I don't recommend even attempting it.]
 
-Instead, we need to substitute *equivalent* functionality without relying on a separate `<form>` element.
+Instead, we need to substitute *equivalent* functionality without relying on a
+separate `<form>` element.
 
-The good news is that the code snippet provided by the Bing folks above essentially defines a *contract* with the search service. [In other words, I'm assuming the Bing team isn't going to change the parameters that need to be specified, because that would break all of the sites that followed their simple instructions for adding a basic search box.]
+The good news is that the code snippet provided by the Bing folks above
+essentially defines a *contract* with the search service. [In other words, I'm
+assuming the Bing team isn't going to change the parameters that need to be
+specified, because that would break all of the sites that followed their simple
+instructions for adding a basic search box.]
 
-Note that `method="get"` is specified on the `<form>` element. From this, we know that the values specified for any `<input>` elements are expected to be passed as query string parameters. With a little massaging of the HTML (to get rid of that nasty table-based layout) and crafting up some equivalent JavaScript, I came up with the following:
+Note that `method="get"` is specified on the `<form>` element. From this, we
+know that the values specified for any `<input>` elements are expected to be
+passed as query string parameters. With a little massaging of the HTML (to get
+rid of that nasty table-based layout) and crafting up some equivalent
+JavaScript, I came up with the following:
 
 ```
 <script language="javascript" type="text/javascript">
@@ -129,13 +158,28 @@ Note that `method="get"` is specified on the `<form>` element. From this, we kno
 </div>
 ```
 
-Note that a little more JavaScript is required than I would actually prefer in order to avoid handle a couple of interesting scenarios.
+Note that a little more JavaScript is required than I would actually prefer in
+order to avoid handle a couple of interesting scenarios.
 
-The first scenario is where a user presses the {{< kbd "Enter" >}} key instead of clicking the **Search** button. Depending on the browser, pressing the {{< kbd "Enter" >}} key in a form element may submit the form. However, since the Bing search feature is bypassing the form submission (and just redirecting directly to the search results page), we don't want to postback to the server. Otherwise, we would simply refresh the current page (and lose any search keywords specified by the user).
+The first scenario is where a user presses the {{< kbd "Enter" >}} key instead
+of clicking the **Search** button. Depending on the browser, pressing the {{<
+kbd "Enter" >}} key in a form element may submit the form. However, since the
+Bing search feature is bypassing the form submission (and just redirecting
+directly to the search results page), we don't want to postback to the server.
+Otherwise, we would simply refresh the current page (and lose any search
+keywords specified by the user).
 
-The second scenario is where someone doesn't specify any search keywords and instead just clicks the **Search** button. This is because if you don't specify any query terms (i.e. the "q" query string parameter), then you simply get redirected to [http://www.bing.com](http://www.bing.com/) (which would thoroughly confuse most people -- including myself).
+The second scenario is where someone doesn't specify any search keywords and
+instead just clicks the **Search** button. This is because if you don't specify
+any query terms (i.e. the "q" query string parameter), then you simply get
+redirected to [http://www.bing.com](http://www.bing.com/) (which would
+thoroughly confuse most people -- including myself).
 
-If you have a Community Server blog, all you need to do is copy/paste the code provided above into the **News** field on the **Title, Description, and News** page, change the value of the **siteUrl** variable accordingly, and then click **Save**. Then you -- or anyone browsing your blog -- will be able to search your posts without having to specify a site filter each time.
+If you have a Community Server blog, all you need to do is copy/paste the code
+provided above into the **News** field on the **Title, Description, and News**
+page, change the value of the **siteUrl** variable accordingly, and then click
+**Save**. Then you -- or anyone browsing your blog -- will be able to search
+your posts without having to specify a site filter each time.
 
 > **Update**
 >

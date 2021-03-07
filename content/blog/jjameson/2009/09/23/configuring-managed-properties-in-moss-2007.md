@@ -14,11 +14,23 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-As I've noted in a [previous post](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development), I typically use feature receivers in Microsoft Office SharePoint Server (MOSS) 2007 to automatically configure a "bunch of stuff" that would otherwise be very tedious to perform repeatedly for different environments (e.g. DEV, TEST, and PROD) and whenever I rebuild my local development VM. For example, when you activate one of my "Search" features, I typically create the Search Center, create/configure the various search results pages with a number of different Web Parts, and also programmatically configure managed properties.
+As I've noted in a
+[previous post](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development),
+I typically use feature receivers in Microsoft Office SharePoint Server (MOSS)
+2007 to automatically configure a "bunch of stuff" that would otherwise be very
+tedious to perform repeatedly for different environments (e.g. DEV, TEST, and
+PROD) and whenever I rebuild my local development VM. For example, when you
+activate one of my "Search" features, I typically create the Search Center,
+create/configure the various search results pages with a number of different Web
+Parts, and also programmatically configure managed properties.
 
-For this post, I want to focus on the managed properties. In case you are not familiar with crawled properties and managed properties in MOSS 2007, let me start by providing a little background.
+For this post, I want to focus on the managed properties. In case you are not
+familiar with crawled properties and managed properties in MOSS 2007, let me
+start by providing a little background.
 
 When SharePoint indexes content:
 
@@ -28,25 +40,57 @@ When SharePoint indexes content:
 4. For custom columns in SharePoint list items and documents (e.g. **Product**), the crawled properties are discovered and placed in the Office category (e.g. **ows\_Product**). [If memory serves, "ows" refers to "Office Web Server" (the original moniker for what ultimately became "SharePoint Products and Technologies") -- if that helps you remember this any easier.]
 5. If any *managed properties* are mapped to the crawled properties, then the property values are stuffed into the SSP Search database (i.e. what used be called the "property store" in SharePoint Portal Server 2003) for each piece of content.
 
-While SharePoint comes with about 110+ managed properties OOTB, customers typically add new ones -- especially when providing any sort of [faceted search](/blog/jjameson/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue) feature.
+While SharePoint comes with about 110+ managed properties OOTB, customers
+typically add new ones -- especially when providing any sort of
+[faceted search](/blog/jjameson/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue)
+feature.
 
-So, for example, suppose we want to filter search results on **Product**. First we must define a managed property.
+So, for example, suppose we want to filter search results on **Product**. First
+we must define a managed property.
 
-Once you define a managed property, you must map it to a crawled property (otherwise the managed property values would always be empty). After configuring managed properties, you must perform a full crawl in order to populate the properties.
+Once you define a managed property, you must map it to a crawled property
+(otherwise the managed property values would always be empty). After configuring
+managed properties, you must perform a full crawl in order to populate the
+properties.
 
-The problem is that you cannot map a managed property to a crawled property until SharePoint actually knows about the crawled property.
+The problem is that you cannot map a managed property to a crawled property
+until SharePoint actually knows about the crawled property.
 
-In other words, if you start with a clean MOSS environment and then add a **Product** managed property, you will find that you cannot map it to **ows\_Product** because SharePoint doesn't yet know about that crawled property.
+In other words, if you start with a clean MOSS environment and then add a
+**Product** managed property, you will find that you cannot map it to
+**ows\_Product** because SharePoint doesn't yet know about that crawled
+property.
 
-In order for it to recognize the crawled property, it must first have indexed a piece of content with a value specified in the **Product** field (column). Then SharePoint will create a crawled property (as mentioned earlier).
+In order for it to recognize the crawled property, it must first have indexed a
+piece of content with a value specified in the **Product** field (column). Then
+SharePoint will create a crawled property (as mentioned earlier).
 
-I also mentioned earlier that upon activation of my Search features, I automatically configure managed properties (and map them to the corresponding crawled properties). Assuming the crawled properties are defined (i.e. content has previously been crawled with those properties), then all is well. However, if the specified crawled property does not exist, then SharePoint silently ignores the attempt to map the managed property to the (non-existent) crawled property.
+I also mentioned earlier that upon activation of my Search features, I
+automatically configure managed properties (and map them to the corresponding
+crawled properties). Assuming the crawled properties are defined (i.e. content
+has previously been crawled with those properties), then all is well. However,
+if the specified crawled property does not exist, then SharePoint silently
+ignores the attempt to map the managed property to the (non-existent) crawled
+property.
 
-Hence, you need to ensure that a piece of content has all custom properties specified, then perform a full crawl (to recognize all of the crawled properties), and then finally deactivate and reactivate my custom Search feature to successfully map the managed properties to the crawled properties. Then you must run another full crawl (in order to actually populate the managed properties).
+Hence, you need to ensure that a piece of content has all custom properties
+specified, then perform a full crawl (to recognize all of the crawled
+properties), and then finally deactivate and reactivate my custom Search feature
+to successfully map the managed properties to the crawled properties. Then you
+must run another full crawl (in order to actually populate the managed
+properties).
 
-I often refer to this as "the chicken and the egg" problem with SharePoint managed properties. That's certainly not the official name for this issue, but it seems to help people understand why the managed properties are not mapped after activating the custom Search feature in a freshly rebuilt SharePoint environment.
+I often refer to this as "the chicken and the egg" problem with SharePoint
+managed properties. That's certainly not the official name for this issue, but
+it seems to help people understand why the managed properties are not mapped
+after activating the custom Search feature in a freshly rebuilt SharePoint
+environment.
 
-The "magic" behind automatically configuring managed properties upon feature activation is really not magic at all. It simply uses my "[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator) framework" (and even calling this a framework is definitely a stretch) with a little bit of help from my SharePointSearchHelper class:
+The "magic" behind automatically configuring managed properties upon feature
+activation is really not magic at all. It simply uses my "
+[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)
+framework" (and even calling this a framework is definitely a stretch) with a
+little bit of help from my SharePointSearchHelper class:
 
 ```
 namespace Fabrikam.Project1.Search.Configuration

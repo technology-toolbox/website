@@ -17,19 +17,31 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "Silverlight"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
 The November 2008 edition of MSDN magazine contained the following article:
 
 {{< reference title="Light Up SharePoint With Silverlight 2 Web Parts" linkHref="http://msdn.microsoft.com/en-us/magazine/dd148643.aspx" >}}
 
-While the article provides a good introduction to integrating a Silverlight application into a SharePoint site, it definitely left me wanting more.
+While the article provides a good introduction to integrating a Silverlight
+application into a SharePoint site, it definitely left me wanting more.
 
-We've been using Silverlight on my current project for almost four months now, and we've definitely learned a few things *the hard way* when it comes to Silverlight and SharePoint. Note that this is an Internet-facing customer service portal built on Microsoft Office SharePoint Server (MOSS) 2007.
+We've been using Silverlight on my current project for almost four months now,
+and we've definitely learned a few things *the hard way* when it comes to
+Silverlight and SharePoint. Note that this is an Internet-facing customer
+service portal built on Microsoft Office SharePoint Server (MOSS) 2007.
 
-It's also worth noting that I didn't develop the original Silverlight application we are using on the site, but I've made a number of changes to it in order to resolve a few issues and improve the overall implementation.
+It's also worth noting that I didn't develop the original Silverlight
+application we are using on the site, but I've made a number of changes to it in
+order to resolve a few issues and improve the overall implementation.
 
-Before diving into the issues and improvements, it is helpful to first understand the structure of the solution. If you've seen [my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint) (or if you've worked with me on any SharePoint projects), then the following solution structure should seem very familiar:
+Before diving into the issues and improvements, it is helpful to first
+understand the structure of the solution. If you've seen
+[my walkthrough of the "DR.DADA" approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
+(or if you've worked with me on any SharePoint projects), then the following
+solution structure should seem very familiar:
 
 - Fabrikam.Portal.sln
   - Fabrikam.Portal.CoreServices.csproj
@@ -39,11 +51,18 @@ Before diving into the issues and improvements, it is helpful to first understan
   - Fabrikam.Portal.Web.ServiceWheel.csproj
   - Fabrikam.Portal.Web.ServiceWheel.Test.csproj
 
-For the sake of brevity, I've intentionally omitted a number of other projects in the solution that are not relevant to this post.
+For the sake of brevity, I've intentionally omitted a number of other projects
+in the solution that are not relevant to this post.
 
-The **Fabrikam.Portal.CoreServices** project is where we put code for core services, such as logging.
+The **Fabrikam.Portal.CoreServices** project is where we put code for core
+services, such as logging.
 
-The **Fabrikam.Portal.Web** project contains the bulk of our solution and is comprised of various SharePoint features. For example, we have a feature for publishing layouts (including master pages and page layouts), another feature for our custom Web Parts, an Announcements feature, etc. This project contains a folder structure that mimics the hierarchy under %ProgramFiles%\Common Files\Microsoft Shared\web server extensions:
+The **Fabrikam.Portal.Web** project contains the bulk of our solution and is
+comprised of various SharePoint features. For example, we have a feature for
+publishing layouts (including master pages and page layouts), another feature
+for our custom Web Parts, an Announcements feature, etc. This project contains a
+folder structure that mimics the hierarchy under %ProgramFiles%\Common
+Files\Microsoft Shared\web server extensions:
 
 - 12
   - TEMPLATE
@@ -52,13 +71,25 @@ The **Fabrikam.Portal.Web** project contains the bulk of our solution and is com
     - ...
     - LAYOUTS
 
-The **Fabrikam.Portal.Web.ServiceWheel** project is the Silverlight application that provides a rather slick menu of the various features provided by the portal, while also promoting value differentiation and branding for the company.
+The **Fabrikam.Portal.Web.ServiceWheel** project is the Silverlight application
+that provides a rather slick menu of the various features provided by the
+portal, while also promoting value differentiation and branding for the company.
 
-The **Fabrikam.Portal.Web.ServiceWheel.Test** project is a simple ASP.NET application that allows developers to quickly and easily debug the Silverlight application outside of the SharePoint site. Making changes to the Silverlight application itself is much faster if you don't have to deploy it to your SharePoint site to debug or see the results of your changes.
+The **Fabrikam.Portal.Web.ServiceWheel.Test** project is a simple ASP.NET
+application that allows developers to quickly and easily debug the Silverlight
+application outside of the SharePoint site. Making changes to the Silverlight
+application itself is much faster if you don't have to deploy it to your
+SharePoint site to debug or see the results of your changes.
 
-Note that the output of the **Fabrikam.Portal.Web.ServiceWheel** project is an XAP file, which is subsequently deployed via the WSP file generated by the **Fabrikam.Portal.Web** project. The Silverlight application is hosted inside of the SharePoint site by a user control (**ServiceWheel.ascx**) which itself is hosted within a generic *User Control Web Part* (similar to [SmartPart for SharePoint](http://www.codeplex.com/smartpart)).
+Note that the output of the **Fabrikam.Portal.Web.ServiceWheel** project is an
+XAP file, which is subsequently deployed via the WSP file generated by the
+**Fabrikam.Portal.Web** project. The Silverlight application is hosted inside of
+the SharePoint site by a user control (**ServiceWheel.ascx**) which itself is
+hosted within a generic *User Control Web Part* (similar to
+[SmartPart for SharePoint](http://www.codeplex.com/smartpart)).
 
-One of the first issues that I discovered in the Silverlight piece was the way the original developer integrated the XAP file into the WSP file.
+One of the first issues that I discovered in the Silverlight piece was the way
+the original developer integrated the XAP file into the WSP file.
 
 Originally, the user control contained the following code:
 
@@ -77,13 +108,19 @@ Originally, the user control contained the following code:
     </object>
 ```
 
-Notice that the XAP file is deployed to the \_layouts folder -- and in accordance with best practices -- placed under a new folder corresponding to the company name (to isolate it from the Microsoft files installed by SharePoint). So far, so good.
+Notice that the XAP file is deployed to the \_layouts folder -- and in
+accordance with best practices -- placed under a new folder corresponding to the
+company name (to isolate it from the Microsoft files installed by SharePoint).
+So far, so good.
 
-In order to make the XAP file available to the project that creates the WSP, the Silverlight developer simply changed the output path in the **Fabrikam.Portal.Web.ServiceWheel** project to be:
+In order to make the XAP file available to the project that creates the WSP, the
+Silverlight developer simply changed the output path in the
+**Fabrikam.Portal.Web.ServiceWheel** project to be:
 
 > ..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\
 
-The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include the XAP file...
+The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include
+the XAP file...
 
 ```
 .Set DestinationDir=Layouts\Fabrikam
@@ -100,13 +137,27 @@ The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include 
   </TemplateFiles>
 ```
 
-Note that the developer also had to manually configure the build order to ensure the Silverlight project gets compiled before the **Fabrikam.Portal.Web** project -- or else the build could potentially break (if the XAP file was not found in the expected location because it had never been built before) or, even worse, the WSP could include an old version of the XAP file.
+Note that the developer also had to manually configure the build order to ensure
+the Silverlight project gets compiled before the **Fabrikam.Portal.Web** project
+-- or else the build could potentially break (if the XAP file was not found in
+the expected location because it had never been built before) or, even worse,
+the WSP could include an old version of the XAP file.
 
-While everything appeared to work as expected, there was a fundamental problem with this approach. The developer only changed the output path for the **Debug** configuration of the **Fabrikam.Portal.Web.ServiceWheel** project. In other words, when it came time to create our **Release** builds, the build would either break (if the **Debug** build hadn't copied the XAP file to the expected location yet) or the Release build would include the **Debug** build of the XAP file in the **Release** build of the WSP.
+While everything appeared to work as expected, there was a fundamental problem
+with this approach. The developer only changed the output path for the **Debug**
+configuration of the **Fabrikam.Portal.Web.ServiceWheel** project. In other
+words, when it came time to create our **Release** builds, the build would
+either break (if the **Debug** build hadn't copied the XAP file to the expected
+location yet) or the Release build would include the **Debug** build of the XAP
+file in the **Release** build of the WSP.
 
-While it probably isn't the worst thing to include a **Debug** version of an assembly in a **Release** build, it's definitely not a best practice. However, more importantly, changing the output path in order to copy the XAP file into the expected location is not compatible with Team Foundation Build.
+While it probably isn't the worst thing to include a **Debug** version of an
+assembly in a **Release** build, it's definitely not a best practice. However,
+more importantly, changing the output path in order to copy the XAP file into
+the expected location is not compatible with Team Foundation Build.
 
-As I noted in a [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
+As I noted in a
+[previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
 {{< blockquote "font-italic" >}}
 
@@ -114,9 +165,13 @@ The problem with relative paths is that Team Foundation Build uses a different f
 
 {{< /blockquote >}}
 
-In other words, whenever you find yourself about to specify ".." in the output path inside Visual Studio for a project, stop what you're doing, think about my blog posts, take a deep breath, and find another solution to the problem you are trying to solve.
+In other words, whenever you find yourself about to specify ".." in the output
+path inside Visual Studio for a project, stop what you're doing, think about my
+blog posts, take a deep breath, and find another solution to the problem you are
+trying to solve.
 
-In order to resolve the issues around integrating the Silverlight XAP file into the WSP, I made the following changes:
+In order to resolve the issues around integrating the Silverlight XAP file into
+the WSP, I made the following changes:
 
 - Reverted the output path for the **Debug** configuration of the **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e. **Bin\Debug** instead of **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
 - Added a reference from the **Fabrikam.Portal.Web** project to the **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not explicitly required by the code within the **Fabrikam.Portal.Web** project, there really is a dependency between the two projects. Establishing this reference ensures the projects are built in the correct order (without having to manually tweak the build order of the projects in the solution).
@@ -136,11 +191,23 @@ In order to resolve the issues around integrating the Silverlight XAP file into 
   </PropertyGroup>
 ```
 
-This -- along with the project reference mentioned above -- ensures that the WSP generated by the **Fabrikam.Portal.Web** project is recompiled, even if the only thing that changed since the last build is something the Silverlight project.
+This -- along with the project reference mentioned above -- ensures that the WSP
+generated by the **Fabrikam.Portal.Web** project is recompiled, even if the only
+thing that changed since the last build is something the Silverlight project.
 
-I can see that this post is already turning out to be much longer than I originally anticipated, so I'm going to append "Part 1" to the title and detail some of the other gotchas I've found with Silverlight and SharePoint in a subsequent post.
+I can see that this post is already turning out to be much longer than I
+originally anticipated, so I'm going to append "Part 1" to the title and detail
+some of the other gotchas I've found with Silverlight and SharePoint in a
+subsequent post.
 
-Note that in the time since I originally started working with Silverlight and SharePoint, I've found other resources in addition to the MSDN article, such as the [Silverlight Blueprint for SharePoint](http://msdn.microsoft.com/en-us/sharepoint/cc303301.aspx). However, from what I've seen so far (which, honestly, is just a cursory examination) most of these still seem to lack much depth.
+Note that in the time since I originally started working with Silverlight and
+SharePoint, I've found other resources in addition to the MSDN article, such as
+the
+[Silverlight Blueprint for SharePoint](http://msdn.microsoft.com/en-us/sharepoint/cc303301.aspx).
+However, from what I've seen so far (which, honestly, is just a cursory
+examination) most of these still seem to lack much depth.
 
-Stay tuned and I promise I'll cover some [more of the "juicy stuff"](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2) ;-)
+Stay tuned and I promise I'll cover some
+[more of the "juicy stuff"](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2)
+;-)
 

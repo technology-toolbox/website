@@ -14,9 +14,16 @@ tags: ["Core Development", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macros-for-unloading-reloading-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macros-for-unloading-reloading-projects.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-As promised in a [post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects) last week, here are the macros that I use to quickly unload or reload dozens of projects in a large Visual Studio solution. Hmmm, perhaps *effortlessly* is a better word choice -- considering I might need to wait 30 seconds or so for all of the projects to unload or reload.
+As promised in a
+[post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects)
+last week, here are the macros that I use to quickly unload or reload dozens of
+projects in a large Visual Studio solution. Hmmm, perhaps *effortlessly* is a
+better word choice -- considering I might need to wait 30 seconds or so for all
+of the projects to unload or reload.
 
 Here is my `UnloadAllProjects()` macro:
 
@@ -66,7 +73,8 @@ Public Sub UnloadAllProjects()
 End Sub
 ```
 
-The actual work of unloading a project is delegated to the `UnloadProject()` method:
+The actual work of unloading a project is delegated to the `UnloadProject()`
+method:
 
 ```
 Private Sub UnloadProject( _
@@ -104,7 +112,9 @@ A few interesting notes...
 - While I tried to find a way to determine if a particular project (or projects within a solution folder) are already unloaded -- and thus avoid a COM exception when subsequently attempting to unload it again -- I ended up punting this and instead simply wrapping the "unload" operation in a try/catch block.
 - The `WriteOutput()` method is provided in [a previous post](/blog/jjameson/2009/03/11/tracing-and-logging-from-visual-studio-macros).
 
-If you take the above code and essentially search-and-replace "unload" with "reload" then you will end up with my macro to reload all projects within the solution:
+If you take the above code and essentially search-and-replace "unload" with
+"reload" then you will end up with my macro to reload all projects within the
+solution:
 
 ```
 Public Sub ReloadAllProjects()
@@ -178,9 +188,20 @@ Private Sub ReloadProject( _
 End Sub
 ```
 
-Like I mentioned earlier, unloading or reloading all of the projects within a solution is not exactly an instantaneous operation. However, when you consider the incremental build time saved by unloading all of the projects in a large solution except for the few you are working on at any given time, you definitely come out far ahead in the end. You'll be amazed at how much more productive you can be when your solution containing 50+ projects incrementally builds in just a few seconds when all but a handful of the projects are unloaded.
+Like I mentioned earlier, unloading or reloading all of the projects within a
+solution is not exactly an instantaneous operation. However, when you consider
+the incremental build time saved by unloading all of the projects in a large
+solution except for the few you are working on at any given time, you definitely
+come out far ahead in the end. You'll be amazed at how much more productive you
+can be when your solution containing 50+ projects incrementally builds in just a
+few seconds when all but a handful of the projects are unloaded.
 
 I hope you find these macros as helpful as I have over the years.
 
-Perhaps in a future version of Visual Studio, we'll have the ability to right-click the solution in **Solution Explorer** and then click something like **Unload Projects in Solution** (similar to the **Unload Projects in Solution Folder** option that is currently available -- but only for solution folders, not the solution itself). Until then, I don't see me giving up my dependency on these macros anytime soon.
+Perhaps in a future version of Visual Studio, we'll have the ability to
+right-click the solution in **Solution Explorer** and then click something like
+**Unload Projects in Solution** (similar to the **Unload Projects in Solution
+Folder** option that is currently available -- but only for solution folders,
+not the solution itself). Until then, I don't see me giving up my dependency on
+these macros anytime soon.
 

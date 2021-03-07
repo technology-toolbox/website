@@ -14,25 +14,57 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-I came back from a nice long vacation only to find that my local development VM for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By "corrupted", I mean to say there were lots of errors in the event log about the SharePoint\_Config database being "out of whack." Okay, I'm paraphrasing this a little, but you get the point.
+I came back from a nice long vacation only to find that my local development VM
+for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
+"corrupted", I mean to say there were lots of errors in the event log about the
+SharePoint\_Config database being "out of whack." Okay, I'm paraphrasing this a
+little, but you get the point.
 
-The corruption may very well have been caused by the fact that back in December I swapped out my last remaining Virtual Server 2005 box with a new Hyper-V box, and perhaps I didn't quite keep the 5 VHDs for this VM in sync as I shuffled them around from external/internal disks and from server to server. [The Hyper-V server is a new Windows Server 2008 build on a box that was previously serving as the Windows Vista Media Center in my family room. So I had to swap some drives around, tweak the BIOS in order to enable Hyper-V, and lots of other not-so-fun stuff just to get back in business.]
+The corruption may very well have been caused by the fact that back in December
+I swapped out my last remaining Virtual Server 2005 box with a new Hyper-V box,
+and perhaps I didn't quite keep the 5 VHDs for this VM in sync as I shuffled
+them around from external/internal disks and from server to server. [The Hyper-V
+server is a new Windows Server 2008 build on a box that was previously serving
+as the Windows Vista Media Center in my family room. So I had to swap some
+drives around, tweak the BIOS in order to enable Hyper-V, and lots of other
+not-so-fun stuff just to get back in business.]
 
-Regardless of how the corruption occurred, I decided that, rather than attempting to troubleshoot and resolve the corruption, I'd simply build up a new VM and start fresh. [In the world of software development, this is a very good thing to do from time to time.]
+Regardless of how the corruption occurred, I decided that, rather than
+attempting to troubleshoot and resolve the corruption, I'd simply build up a new
+VM and start fresh. [In the world of software development, this is a very good
+thing to do from time to time.]
 
-Starting with a fresh Windows Server 2008 (x86) VM, I proceeded to install SQL Server 2008 and MOSS 2007. Everything was going smooth until I got to the **Specify Configuration Database Settings** step in the SharePoint Products and Technologies Configuration Wizard (psconfigui.exe). As soon as I entered the database server (i.e. the name of the VM itself, since SQL is running locally), followed by the username/password for the database access account, and then clicked **Next**, the Config Wizard went off into La-La Land (in other words, it hung).
+Starting with a fresh Windows Server 2008 (x86) VM, I proceeded to install SQL
+Server 2008 and MOSS 2007. Everything was going smooth until I got to the
+**Specify Configuration Database Settings** step in the SharePoint Products and
+Technologies Configuration Wizard (psconfigui.exe). As soon as I entered the
+database server (i.e. the name of the VM itself, since SQL is running locally),
+followed by the username/password for the database access account, and then
+clicked **Next**, the Config Wizard went off into La-La Land (in other words, it
+hung).
 
-Having done dozens of SharePoint installs previously, this baffled me. I'd never encountered a problem getting to the next step in the wizard, in which you specify the port number and security settings for the Central Administration Web Application. In fact, the next step in the wizard is usually displayed in a second or two.
+Having done dozens of SharePoint installs previously, this baffled me. I'd never
+encountered a problem getting to the next step in the wizard, in which you
+specify the port number and security settings for the Central Administration Web
+Application. In fact, the next step in the wizard is usually displayed in a
+second or two.
 
-After waiting over 10 minutes for some miracle that never came, I killed the Config Wizard, and then restarted it.
+After waiting over 10 minutes for some miracle that never came, I killed the
+Config Wizard, and then restarted it.
 
 You know what's coming...don't you?!
 
 It hung again.
 
-Hmmm...maybe my VM was having trouble communicating with the domain controller to verify the credentials that I specified for the database access account. To rule this out, I started up a command prompt and used runas.exe to confirm the username/password against the domain controller. Sure enough that worked just fine.
+Hmmm...maybe my VM was having trouble communicating with the domain controller
+to verify the credentials that I specified for the database access account. To
+rule this out, I started up a command prompt and used runas.exe to confirm the
+username/password against the domain controller. Sure enough that worked just
+fine.
 
 I then turned my attention to the log files generated by the Config Wizard.
 
@@ -96,9 +128,12 @@ System.Net.Sockets.SocketException: A connection attempt failed because the conn
 
 {{< /log-excerpt >}}
 
-Hmmm...that's odd. I've never seen SharePoint struggle to find a random default to stuff into the **Specify port number** box when configuring SharePoint Central Administration.
+Hmmm...that's odd. I've never seen SharePoint struggle to find a random default
+to stuff into the **Specify port number** box when configuring SharePoint
+Central Administration.
 
-It turns out the Config Wizard was choking on the IPv6 address returned for the hostname of the VM:
+It turns out the Config Wizard was choking on the IPv6 address returned for the
+hostname of the VM:
 
 {{< console-block-start >}}
 
@@ -120,11 +155,21 @@ Approximate round trip times in milli-seconds:
 
 {{< console-block-end >}}
 
-I first tried disabling IPv6 in the properties of each network connection (meaning the LAN connection and the VPN connection), by clearing the checkbox for **Internet Protocol Version 6 (TCP/IPv6**). However, I found that pinging the machine name resulted in the same (IPv6) address. Using {{< kbd "ipconfig /all" >}}, I found this was set on one of the "pseudo interfaces" that are new in Vista and Windows Server 2008 -- specifically, the **Teredo Tunneling Pseudo-Interface**.
+I first tried disabling IPv6 in the properties of each network connection
+(meaning the LAN connection and the VPN connection), by clearing the checkbox
+for **Internet Protocol Version 6 (TCP/IPv6**). However, I found that pinging
+the machine name resulted in the same (IPv6) address. Using {{< kbd "ipconfig
+/all" >}}, I found this was set on one of the "pseudo interfaces" that are new
+in Vista and Windows Server 2008 -- specifically, the **Teredo Tunneling
+Pseudo-Interface**.
 
-Rather than blowing the rest of my afternoon trying to [disable IPv6 in Windows Server 2008 through registry hacks](http://www.microsoft.com/technet/network/ipv6/ipv6faq.mspx), I chose instead to simply hardcode the hostname to 127.0.0.1 in the %SystemRoot%\System32\drivers\etc\hosts file.
+Rather than blowing the rest of my afternoon trying to
+[disable IPv6 in Windows Server 2008 through registry hacks](http://www.microsoft.com/technet/network/ipv6/ipv6faq.mspx),
+I chose instead to simply hardcode the hostname to 127.0.0.1 in the
+%SystemRoot%\System32\drivers\etc\hosts file.
 
-Once I did this, I confirmed that the hostname of the VM resolved to an IPv4 address:
+Once I did this, I confirmed that the hostname of the VM resolved to an IPv4
+address:
 
 {{< console-block-start >}}
 
@@ -146,11 +191,17 @@ Approximate round trip times in milli-seconds:
 
 {{< console-block-end >}}
 
-After restarting the Config Wizard, I was relieved to see that a random port was quickly found (which, of course, I always override anyway to use a consistent port across various environments -- LOCAL, DEV, TEST, and PROD). I was even more pleased to see SharePoint Central Administration come up on my pristine Windows Server 2008 VM.
+After restarting the Config Wizard, I was relieved to see that a random port was
+quickly found (which, of course, I always override anyway to use a consistent
+port across various environments -- LOCAL, DEV, TEST, and PROD). I was even more
+pleased to see SharePoint Central Administration come up on my pristine Windows
+Server 2008 VM.
 
 > **Update (2008-01-19)**
 >
-> Note that after aliasing my local VM name to the loopback address (127.0.0.1), I had to use the workaround in [KB 896861](http://support.microsoft.com/kb/896861) in order to resolve "access denied" errors when indexing content:
+> Note that after aliasing my local VM name to the loopback address (127.0.0.1), I
+> had to use the workaround in [KB 896861](http://support.microsoft.com/kb/896861)
+> in order to resolve "access denied" errors when indexing content:
 >
 > > Access is denied. Check that the Default Content Access Account has access to this content, or add a crawl rule to crawl this content. (The item was deleted because it was either not found or the crawler was denied access to it.)
 

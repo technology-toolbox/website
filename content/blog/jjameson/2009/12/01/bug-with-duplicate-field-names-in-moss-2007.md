@@ -14,9 +14,14 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/12/01/bug-with-duplicate-field-names-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/01/bug-with-duplicate-field-names-in-moss-2007.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-I encountered a rather nasty bug in Microsoft Office SharePoint Server (MOSS) 2007 yesterday that occurs when a custom field (i.e. site column) has the same name as an existing field. Note that this issue will also occur in Windows SharePoint Services (WSS) v3.
+I encountered a rather nasty bug in Microsoft Office SharePoint Server (MOSS)
+2007 yesterday that occurs when a custom field (i.e. site column) has the same
+name as an existing field. Note that this issue will also occur in Windows
+SharePoint Services (WSS) v3.
 
 I initially created the following Fields.xml file:
 
@@ -65,9 +70,15 @@ Next, I created the ContentTypes.xml file:
 
 Then I created a page layout for the new Announcement Page content type.
 
-After building and deploying the corresponding WSP -- and activating the feature -- I verified that I could create a new Announcement Page and specify field values, including Announcement Start Date and Announcement End Date. Consequently I checked in my changes to TFS.
+After building and deploying the corresponding WSP -- and activating the feature
+-- I verified that I could create a new Announcement Page and specify field
+values, including Announcement Start Date and Announcement End Date.
+Consequently I checked in my changes to TFS.
 
-At that point, I started thinking that perhaps AnnouncementStartDate should simply be StartDate and AnnouncementEndDate should simply be EndDate (thinking that we might want to use these fields for more than just announcements at some point in the future). Consequently, I changed the Fields.xml file as follows:
+At that point, I started thinking that perhaps AnnouncementStartDate should
+simply be StartDate and AnnouncementEndDate should simply be EndDate (thinking
+that we might want to use these fields for more than just announcements at some
+point in the future). Consequently, I changed the Fields.xml file as follows:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -108,9 +119,14 @@ I propagated the changes to the ContentTypes.xml file:
 </Elements>
 ```
 
-After rebuilding my Web application, adding and deploying the updated WSP, and activating the feature, I discovered that the Announcement Page content type did not have the Start Date and End Date fields.
+After rebuilding my Web application, adding and deploying the updated WSP, and
+activating the feature, I discovered that the Announcement Page content type did
+not have the Start Date and End Date fields.
 
-Since there were no errors deploying the WSP or activating the feature, I was rather baffled by the issue. Then I discovered that by renaming AnnouncementStartDate to StartDate, I introduced a duplicate field name. Note the following field definition from the OOTB fieldswss.xml file:
+Since there were no errors deploying the WSP or activating the feature, I was
+rather baffled by the issue. Then I discovered that by renaming
+AnnouncementStartDate to StartDate, I introduced a duplicate field name. Note
+the following field definition from the OOTB fieldswss.xml file:
 
 ```
     <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}"
@@ -127,11 +143,25 @@ Since there were no errors deploying the WSP or activating the feature, I was ra
 
 Similarly, my custom EndDate field conflicted with the OOTB EndDate field.
 
-My memory might be incorrect, but I vaguely recall getting an error a few years ago when trying to define a second field with the same name as an existing field. Obviously that was long before MOSS 2007 Service Pack 2 (which I am currently running) so it's possible the behavior has changed. [Honestly, while I *could* try to repro this using the MOSS 2007 RTM version, I'm not going to bother. It would take me about an hour to build out a vanilla MOSS 2007 RTM environment, and that is far longer than I am willing to invest in this issue. It's also possible that I am simply remembering a slightly different issue -- perhaps a duplicate content type name.]
+My memory might be incorrect, but I vaguely recall getting an error a few years
+ago when trying to define a second field with the same name as an existing
+field. Obviously that was long before MOSS 2007 Service Pack 2 (which I am
+currently running) so it's possible the behavior has changed. [Honestly, while I
+*could* try to repro this using the MOSS 2007 RTM version, I'm not going to
+bother. It would take me about an hour to build out a vanilla MOSS 2007 RTM
+environment, and that is far longer than I am willing to invest in this issue.
+It's also possible that I am simply remembering a slightly different issue --
+perhaps a duplicate content type name.]
 
-Regardless of whether this is a new problem, or has been around since the original MOSS 2007 release isn't the point. What is important is that you get no warnings or errors when your custom feature mistakenly attempts to define new StartDate and EndDate fields.
+Regardless of whether this is a new problem, or has been around since the
+original MOSS 2007 release isn't the point. What is important is that you get no
+warnings or errors when your custom feature mistakenly attempts to define new
+StartDate and EndDate fields.
 
-Once I identified the crux of the issue, I decided to simply rip out my custom StartDate and EndDate fields and instead use the OOTB fields. After all, as my old mantra goes, always try to use something out-of-the-box instead of customization whenever possible.
+Once I identified the crux of the issue, I decided to simply rip out my custom
+StartDate and EndDate fields and instead use the OOTB fields. After all, as my
+old mantra goes, always try to use something out-of-the-box instead of
+customization whenever possible.
 
 In other words, I updated my ContentTypes.xml file to the following:
 
@@ -152,7 +182,8 @@ In other words, I updated my ContentTypes.xml file to the following:
 </Elements>
 ```
 
-Unfortunately, I then discovered that the OOTB EndDate field does not parallel the definition of the OOTB StartDate field:
+Unfortunately, I then discovered that the OOTB EndDate field does not parallel
+the definition of the OOTB StartDate field:
 
 ```
     <Field ID="{2684F9F2-54BE-429f-BA06-76754FC056BF}"
@@ -171,7 +202,9 @@ Unfortunately, I then discovered that the OOTB EndDate field does not parallel t
     </Field>
 ```
 
-Notice that with EndDate, `Format="DateTime"` whereas with StartDate, `Format="DateOnly"`. Also note that the display name (in English - U.S.) is "End Time" -- instead of the expected "End Date". So much for consistency ;-)
+Notice that with EndDate, `Format="DateTime"` whereas with StartDate,
+`Format="DateOnly"`. Also note that the display name (in English - U.S.) is "End
+Time" -- instead of the expected "End Date". So much for consistency ;-)
 
 Lastly, note that the OOTB fieldswss.xml also contains the following:
 
@@ -188,7 +221,9 @@ Lastly, note that the OOTB fieldswss.xml also contains the following:
     </Field>
 ```
 
-Unfortunately, this field definition doesn't specify `Format="DateOnly"` either -- otherwise I would have just used it instead.
+Unfortunately, this field definition doesn't specify `Format="DateOnly"` either
+-- otherwise I would have just used it instead.
 
-Thus I reverted back to using my original AnnouncementStartDate and AnnouncementEndDate custom fields. It's not ideal, but it works.
+Thus I reverted back to using my original AnnouncementStartDate and
+AnnouncementEndDate custom fields. It's not ideal, but it works.
 

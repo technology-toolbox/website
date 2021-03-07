@@ -8,17 +8,41 @@ categories: ["Development", "Infrastructure"]
 tags: ["Infrastructure", "PowerShell", "SQL Server", "Toolbox", "Web Development"]
 ---
 
-This past weekend, while researching some errors reported on the TechnologyToolbox.com website, I wanted to analyze the IIS logs -- for example, to see how many requests have come from specific IP addresses (such as those suspected of attempting to hack the site).
+This past weekend, while researching some errors reported on the
+TechnologyToolbox.com website, I wanted to analyze the IIS logs -- for example,
+to see how many requests have come from specific IP addresses (such as those
+suspected of attempting to hack the site).
 
-As I described in [a previous post](/blog/jjameson/2012/02/03/building-technologytoolbox-com-part-22), TechnologyToolbox.com currently uses Google Analytics to provide numerous metrics and track trends. However, Google Analytics doesn't always provide the answer you are looking for. In fact, if an HTTP request results in an error (typically as a result of a failed hack attempt), then the Google Analytics script may never called and the request won't even be logged in that system (depending on the specific error and how the website is configured to handle errors).
+As I described in
+[a previous post](/blog/jjameson/2012/02/03/building-technologytoolbox-com-part-22),
+TechnologyToolbox.com currently uses Google Analytics to provide numerous
+metrics and track trends. However, Google Analytics doesn't always provide the
+answer you are looking for. In fact, if an HTTP request results in an error
+(typically as a result of a failed hack attempt), then the Google Analytics
+script may never called and the request won't even be logged in that system
+(depending on the specific error and how the website is configured to handle
+errors).
 
-Fortunately, when I setup the TechnologyToolbox.com website at WinHost, I turned on the option to make the raw IIS logs available. Consequently, there's a hidden folder (only available via FTP and only by the website owner) in which WinHost dumps a zip file each day containing the raw IIS log file from the previous day.
+Fortunately, when I setup the TechnologyToolbox.com website at WinHost, I turned
+on the option to make the raw IIS logs available. Consequently, there's a hidden
+folder (only available via FTP and only by the website owner) in which WinHost
+dumps a zip file each day containing the raw IIS log file from the previous day.
 
-I've used [Microsoft Log Parser](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=24659) to analyze IIS log files in the past (on client projects). For quick, ad hoc analysis of a small amount of data, executing queries directly against the log file via the command line is tolerable.
+I've used
+[Microsoft Log Parser](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=24659)
+to analyze IIS log files in the past (on client projects). For quick, ad hoc
+analysis of a small amount of data, executing queries directly against the log
+file via the command line is tolerable.
 
-However, if you are going to repeatedly perform a number of queries against, say, a few hundred thousand log entries, then it is worth the effort to first import this data into a database.
+However, if you are going to repeatedly perform a number of queries against,
+say, a few hundred thousand log entries, then it is worth the effort to first
+import this data into a database.
 
-Note that Log Parser includes an option to automatically create a table in a specified database and subsequently import the data from the log files. However, I prefer to create the table beforehand -- in order to tweak the column names, combine the "date" and "time" fields into a single DATETIME column, and add some "NOT NULL" constraints.
+Note that Log Parser includes an option to automatically create a table in a
+specified database and subsequently import the data from the log files. However,
+I prefer to create the table beforehand -- in order to tweak the column names,
+combine the "date" and "time" fields into a single DATETIME column, and add some
+"NOT NULL" constraints.
 
 Here is the script I use to create the table in SQL Server:
 
@@ -51,13 +75,15 @@ CREATE TABLE dbo.WebsiteLog
 )
 ```
 
-To import the TechnologyToolbox.com log files into a SQL Server database (CaelumDW), I whipped up a PowerShell script to automatically:
+To import the TechnologyToolbox.com log files into a SQL Server database
+(CaelumDW), I whipped up a PowerShell script to automatically:
 
 1. Extract (a.k.a. unzip) the log files in the /httplog folder (which I periodically FTP from the Production environment) and subsequently move the zip files to the /httplog/Archive folder.
 2. Import the log files using the LogParser utility.
 3. Remove the log files from the /httplog folder (to avoid inserting duplicate data the next time the script is run).
 
-Here is the script in hopes it helps others who wish to import their log files for subsequent analysis.
+Here is the script in hopes it helps others who wish to import their log files
+for subsequent analysis.
 
 > **Note**
 >

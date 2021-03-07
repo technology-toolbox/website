@@ -15,17 +15,42 @@ tags: ["My System", "Core Development"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Do you remember the good ol' days before the **ApplicationException** class in the .NET Framework became "[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure do.
+Do you remember the good ol' days before the **ApplicationException** class in
+the .NET Framework became "
+[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure do.
 
-If you were to look at .NET code that I wrote years ago, you'd probably see **ApplicationException** being used all over the place. After all, this seemed like a great way to differentiate between "expected" errors in your code (e.g. a violation of some business rule) vs. truly "unexpected" errors (e.g. an invalid parameter passed to a method).
+If you were to look at .NET code that I wrote years ago, you'd probably see
+**ApplicationException** being used all over the place. After all, this seemed
+like a great way to differentiate between "expected" errors in your code (e.g. a
+violation of some business rule) vs. truly "unexpected" errors (e.g. an invalid
+parameter passed to a method).
 
-Since we didn't expect instances of **ApplicationException** to be thrown by the .NET Framework itself, it seemed like a good idea to use **ApplicationException** as a way to determine which errors should be caught and shown to end users (i.e. "handled gracefully") vs. errors for which there's rarely any point in catching. For example, what is a user really going to do when you tell them "Object reference not set to an instance of an object?" Besides, of course, to curse your application under their breath or, even worse, openly vent their frustration to everyone within shouting distance.
+Since we didn't expect instances of **ApplicationException** to be thrown by the
+.NET Framework itself, it seemed like a good idea to use
+**ApplicationException** as a way to determine which errors should be caught and
+shown to end users (i.e. "handled gracefully") vs. errors for which there's
+rarely any point in catching. For example, what is a user really going to do
+when you tell them "Object reference not set to an instance of an object?"
+Besides, of course, to curse your application under their breath or, even worse,
+openly vent their frustration to everyone within shouting distance.
 
-Since we shouldn't be using **ApplicationException** anymore, we need some other way of distinguishing different types of errors. Personally, I recommend throwing a custom **RecoverableException** (or an exception that derives from **RecoverableException**) in scenarios where the user -- or an administrator -- can take some action in order to resolve the error. In other words, somebody -- besides a developer -- should be able to understand what the error means and consequently do *something* in order to recover from the error. Note that the "something" might simply be a matter of waiting a short period and trying the operation again (for example, when a remote Web service returns a "server too busy" error).
+Since we shouldn't be using **ApplicationException** anymore, we need some other
+way of distinguishing different types of errors. Personally, I recommend
+throwing a custom **RecoverableException** (or an exception that derives from
+**RecoverableException**) in scenarios where the user -- or an administrator --
+can take some action in order to resolve the error. In other words, somebody --
+besides a developer -- should be able to understand what the error means and
+consequently do *something* in order to recover from the error. Note that the
+"something" might simply be a matter of waiting a short period and trying the
+operation again (for example, when a remote Web service returns a "server too
+busy" error).
 
-Here's an example implementation of a custom exception class to support these scenarios:
+Here's an example implementation of a custom exception class to support these
+scenarios:
 
 ```
 using System;
@@ -128,7 +153,8 @@ namespace Fabrikam.Demo.CoreServices
 }
 ```
 
-The following code snippet shows an example of catching "expected" and "unexpected" exceptions and handling the scenarios accordingly:
+The following code snippet shows an example of catching "expected" and
+"unexpected" exceptions and handling the scenarios accordingly:
 
 ```
             try
@@ -154,7 +180,17 @@ The following code snippet shows an example of catching "expected" and "unexpect
             }
 ```
 
-Note that it is generally a bad idea to catch instances of the **Exception** class. In this particular instance the code snippet is from a "delayed load" event for an ASP.NET **UpdatePanel**. In order to populate the list of sites on the page (in other words, "bind the site list") a call is made to a remote application using single sign-on (SSO) credentials configured for the current user. In order to gracefully handle errors during the AJAX partial page update, I catch instances of **RecoverableException** for error conditions that can be resolved by a user (for example, when the SSO credentials have not been configured for the user) and **Exception** for other errors (for example, when attempting to retrieve the list of sites from the remote application generates an unexpected error).
+Note that it is generally a bad idea to catch instances of the **Exception**
+class. In this particular instance the code snippet is from a "delayed load"
+event for an ASP.NET **UpdatePanel**. In order to populate the list of sites on
+the page (in other words, "bind the site list") a call is made to a remote
+application using single sign-on (SSO) credentials configured for the current
+user. In order to gracefully handle errors during the AJAX partial page update,
+I catch instances of **RecoverableException** for error conditions that can be
+resolved by a user (for example, when the SSO credentials have not been
+configured for the user) and **Exception** for other errors (for example, when
+attempting to retrieve the list of sites from the remote application generates
+an unexpected error).
 
 > **Note**
 >

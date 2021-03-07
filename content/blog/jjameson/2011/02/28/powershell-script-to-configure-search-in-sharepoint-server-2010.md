@@ -15,31 +15,56 @@ tags: ["SharePoint 2010", "PowerShell"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-This morning I thought I'd share one more very useful PowerShell script for SharePoint Server 2010.
+This morning I thought I'd share one more very useful PowerShell script for
+SharePoint Server 2010.
 
-When using Central Administration and/or the Farm Configuration Wizard to create and configure the Search Service Application, the resulting databases are named Search\_Service\_Application\_DB\_{GUID}, Search\_Service\_Application\_CrawlDB\_{GUID}, and Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
+When using Central Administration and/or the Farm Configuration Wizard to create
+and configure the Search Service Application, the resulting databases are named
+Search\_Service\_Application\_DB\_{GUID},
+Search\_Service\_Application\_CrawlDB\_{GUID}, and
+Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
 
-Personally, I'm not a fan of these lengthy database names. While the "\_{GUID}" naming convention might be great for supporting multitenancy deployments (that's the only reason I can think of why SharePoint does this by default), I'd much rather see database names like SearchService, SearchService\_CrawlStore, and SearchService\_PropertyStore. [Actually, in all honesty, I'd much rather see SharePoint use far fewer distinct databases and instead leverage database schemas to segregate the various functional areas (or at least provide the option to do this) -- but that's obviously just wishful thinking.]
+Personally, I'm not a fan of these lengthy database names. While the "\_{GUID}"
+naming convention might be great for supporting multitenancy deployments (that's
+the only reason I can think of why SharePoint does this by default), I'd much
+rather see database names like SearchService, SearchService\_CrawlStore, and
+SearchService\_PropertyStore. [Actually, in all honesty, I'd much rather see
+SharePoint use far fewer distinct databases and instead leverage database
+schemas to segregate the various functional areas (or at least provide the
+option to do this) -- but that's obviously just wishful thinking.]
 
-In order to avoid the lengthy database names containing GUIDs, I recommend that you create and configure the Search Service Application using PowerShell.
+In order to avoid the lengthy database names containing GUIDs, I recommend that
+you create and configure the Search Service Application using PowerShell.
 
-When researching how to do this, I found a number of sample scripts that show how to configure Search in SharePoint Server 2010 using PowerShell and they all seemed to follow the same general approach, including creating new query and search topologies and then deleting the original search/query topologies that are created by default.
+When researching how to do this, I found a number of sample scripts that show
+how to configure Search in SharePoint Server 2010 using PowerShell and they all
+seemed to follow the same general approach, including creating new query and
+search topologies and then deleting the original search/query topologies that
+are created by default.
 
-The following post does a great job of explaining the fundamental problem that occurs when configuring Search using PowerShell and why the "create new topologies/delete original topologies" process is necessary:
+The following post does a great job of explaining the fundamental problem that
+occurs when configuring Search using PowerShell and why the "create new
+topologies/delete original topologies" process is necessary:
 
 {{< reference title="SharePoint 2010 Configuring Search Service Application using PowerShell" linkHref="http://blogs.msdn.com/b/russmax/archive/2009/10/20/sharepoint-2010-configuring-search-service-application-using-powershell.aspx" >}}
 
-The other thing I noticed about the scripts that I came across -- and the primary reason why I'm sharing my own version -- is they appear to be missing one key piece: setting the default content access account to some service account other than the SharePoint farm account.
+The other thing I noticed about the scripts that I came across -- and the
+primary reason why I'm sharing my own version -- is they appear to be missing
+one key piece: setting the default content access account to some service
+account other than the SharePoint farm account.
 
-The following table lists the service accounts that I recommend when configuring Search in SharePoint Server 2010:
+The following table lists the service accounts that I recommend when configuring
+Search in SharePoint Server 2010:
 
 {{< table class="small" caption="Service accounts related to Search in SharePoint Server 2010" >}}
 
 | User logon name | Full name | Description |
 | --- | --- | --- |
-| {DOMAIN}\svc-sharepoint | Service account for SharePoint farm  | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the SharePoint 2010 Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
+| {DOMAIN}\svc-sharepoint | Service account for SharePoint farm  | The server farm account is used to create and access the SharePoint<br>configuration database. It also acts as the application pool identity account<br>for the SharePoint Central Administration application pool, and it is the<br>account under which the SharePoint 2010 Timer service runs. The SharePoint<br>Products Configuration Wizard adds this account to the SQL Server **dbcreator**<br>and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to<br>be a member of any specific security group on the servers in the farm. It is<br>recommended to follow the principle of least privilege and specify a user<br>account that is not a member of the Administrators group on any of the servers<br>in the farm. |
 | {DOMAIN}\svc-index | Service account for indexing content  | Provides read-only access to any content that needs to be indexed (and thus included in search results) |
 | {DOMAIN}\svc-spserviceapp | Service account for SharePoint service applications  | Used as the application pool identity for SharePoint service applications  |
 
@@ -49,7 +74,10 @@ The following table lists the service accounts that I recommend when configuring
 >
 > For each service account listed in the table above, corresponding "-dev" and "-test" service accounts need to be created for the Development and Test environments. This allows the Development and Test teams to install and configure their environments without knowing the passwords for the Production environment.
 
-Note that the following script is based on my fictitious Fabrikam sample solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to automatically override the service account names for development and test environments.
+Note that the following script is based on my fictitious Fabrikam sample
+solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to
+automatically override the service account names for development and test
+environments.
 
 ### Configure SharePoint Search.ps1
 

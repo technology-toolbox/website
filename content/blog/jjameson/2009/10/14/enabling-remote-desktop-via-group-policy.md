@@ -14,11 +14,19 @@ tags: ["My System", "Windows Server", "Infrastructure"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In a previous post, I provided some details on the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a. my home lab). In a follow-up post, I also discussed the [Active Directory domain structure](/blog/jjameson/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter) and mentioned how I use the Group Policy feature of Active Directory to "effortlessly" configure new servers.
+In a previous post, I provided some details on the
+["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
+my home lab). In a follow-up post, I also discussed the
+[Active Directory domain structure](/blog/jjameson/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter)
+and mentioned how I use the Group Policy feature of Active Directory to
+"effortlessly" configure new servers.
 
-For example, I have defined a Group Policy (named **Enable Terminal Services Policy**) with the following settings:
+For example, I have defined a Group Policy (named **Enable Terminal Services
+Policy**) with the following settings:
 
 - **Computer Configuration**
   - **Policies**
@@ -36,7 +44,11 @@ For example, I have defined a Group Policy (named **Enable Terminal Services Pol
             - **Connections**
               - **Allow users to connect remotely using Terminal Services: Enabled**
 
-By linking this Group Policy to the appropriate OUs (e.g. **Development/Resources/Servers**) I do not have to manually enable Remote Desktop connections on each new server (e.g. a new SharePoint development VM). Instead this is automatically configured as soon as I join a server to the domain and reboot.
+By linking this Group Policy to the appropriate OUs (e.g.
+**Development/Resources/Servers**) I do not have to manually enable Remote
+Desktop connections on each new server (e.g. a new SharePoint development VM).
+Instead this is automatically configured as soon as I join a server to the
+domain and reboot.
 
 I'll cover some of the other Group Policy objects in subsequent posts.
 

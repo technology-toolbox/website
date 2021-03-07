@@ -16,9 +16,12 @@ tags: ["SharePoint 2010", "PowerShell"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/05/14/sharepoint-server-2010-windows-powershell-cmdlets.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/14/sharepoint-server-2010-windows-powershell-cmdlets.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Another essential resource for those (like me) upgrading from Microsoft Office SharePoint Server (MOSS) 2007 to SharePoint Server 2010:
+Another essential resource for those (like me) upgrading from Microsoft Office
+SharePoint Server (MOSS) 2007 to SharePoint Server 2010:
 
 {{< reference title="Index of SharePoint Server 2010 Windows PowerShell cmdlets" linkHref="http://technet.microsoft.com/en-us/library/ff678226(office.14).aspx" >}}
 

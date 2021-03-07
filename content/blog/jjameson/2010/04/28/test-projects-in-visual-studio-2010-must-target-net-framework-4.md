@@ -14,17 +14,28 @@ tags: ["Core Development", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Last week I installed Visual Studio 2010 on my primary desktop. This morning, I opened my Fabrikam.Demo solution in the new version of Visual Studio, but chose not to upgrade the target framework when prompted by Visual Studio during the solution upgrade. In other words, I chose to leave the **Target framework** project setting set to **.NET Framework 3.5** -- at least for now.
+Last week I installed Visual Studio 2010 on my primary desktop. This morning, I
+opened my Fabrikam.Demo solution in the new version of Visual Studio, but chose
+not to upgrade the target framework when prompted by Visual Studio during the
+solution upgrade. In other words, I chose to leave the **Target framework**
+project setting set to **.NET Framework 3.5** -- at least for now.
 
-There's no doubt I'll eventually upgrade my demo solution to .NET Framework 4, but in the short term, I imagine that I'll still be working primarily with the older version of the .NET Framework, especially since I don't believe SharePoint is going to support .NET Framework 4 anytime soon.
+There's no doubt I'll eventually upgrade my demo solution to .NET Framework 4,
+but in the short term, I imagine that I'll still be working primarily with the
+older version of the .NET Framework, especially since I don't believe SharePoint
+is going to support .NET Framework 4 anytime soon.
 
-After viewing the conversion log and verifying that no errors or warnings occurred during the upgrade process, I then proceeded to rebuild the solution.
+After viewing the conversion log and verifying that no errors or warnings
+occurred during the upgrade process, I then proceeded to rebuild the solution.
 
 I was surprised to see that the build failed.
 
-My first thought was "that's weird, the solution compiled without any warnings or errors last week when I built it using Visual Studio 2008."
+My first thought was "that's weird, the solution compiled without any warnings
+or errors last week when I built it using Visual Studio 2008."
 
 Then I looked more closely at the error:
 
@@ -34,9 +45,13 @@ The type 'System.Web.Security.MembershipProvider' is defined in an assembly that
 
 {{< /blockquote >}}
 
-Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target .NET Framework 4?
+Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target
+.NET Framework 4?
 
-I then looked at the settings for the project that failed to build (Security.DeveloperTests) and confirmed that, yes, the **Target framework** setting had indeed been changed to **.NET Framework 4**. Hmmm...must have just been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
+I then looked at the settings for the project that failed to build
+(Security.DeveloperTests) and confirmed that, yes, the **Target framework**
+setting had indeed been changed to **.NET Framework 4**. Hmmm...must have just
+been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
 
 Unfortunately, that's when I got the following warning:
 
@@ -46,9 +61,15 @@ Attempted re-targeting of the project has been canceled. You cannot change the s
 
 {{< /blockquote >}}
 
-After clicking the **OK** button, I noticed the project setting -- not suprisingly -- was changed back to **.NET Framework 4**.
+After clicking the **OK** button, I noticed the project setting -- not
+suprisingly -- was changed back to **.NET Framework 4**.
 
-After adding the reference in the Security.DeveloperTests project to the new System.Web.ApplicationServices assembly, my solution compiled without error (and all of the unit tests passed).
+After adding the reference in the Security.DeveloperTests project to the new
+System.Web.ApplicationServices assembly, my solution compiled without error (and
+all of the unit tests passed).
 
-While I don't anticipate there to be any issues with this project setting for test projects, I would feel more comfortable if you could truly target an older version of the .NET Framework using Visual Studio 2010 (meaning, across all project types that you could create in Visual Studio 2008).
+While I don't anticipate there to be any issues with this project setting for
+test projects, I would feel more comfortable if you could truly target an older
+version of the .NET Framework using Visual Studio 2010 (meaning, across all
+project types that you could create in Visual Studio 2008).
 

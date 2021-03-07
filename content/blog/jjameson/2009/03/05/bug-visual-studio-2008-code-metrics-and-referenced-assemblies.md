@@ -15,13 +15,19 @@ tags: ["MOSS 2007", "WSS v3", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Since I seem to be on a roll this morning with blogging, I figured I might as well get one more post in before moving on to my "day job."
+Since I seem to be on a roll this morning with blogging, I figured I might as
+well get one more post in before moving on to my "day job."
 
-During the process of authoring a different post earlier today, I stumbled across a bug while using the Code Metrics feature in Visual Studio 2008.
+During the process of authoring a different post earlier today, I stumbled
+across a bug while using the Code Metrics feature in Visual Studio 2008.
 
-After clicking the **Analyze** menu, and then clicking **Calculate Code Metrics for Solution**, I encountered errors similar to the following for several projects in the solution:
+After clicking the **Analyze** menu, and then clicking **Calculate Code Metrics
+for Solution**, I encountered errors similar to the following for several
+projects in the solution:
 
 {{< blockquote "font-italic text-danger" >}}
 
@@ -29,7 +35,9 @@ An error occurred while calculating code metrics for target file 'E:\NotBackedUp
 
 {{< /blockquote >}}
 (Don't ask me what the '' character is supposed to mean -- I just copied and pasted this directly from Visual Studio.)
-It turns out that this is a known bug in Visual Studio 2008 due to the default setting that allows dependant assemblies to be used in a project without explicitly referencing them.
+It turns out that this is a known bug in Visual Studio 2008 due to the default
+setting that allows dependant assemblies to be used in a project without
+explicitly referencing them.
 
 The workaround is to explicitly add the dependant assemblies to the project.
 
@@ -46,7 +54,8 @@ References:
 - System.Web
 - System.Xml
 
-**PublicationLibrary.Workspaces.DeveloperTests** (i.e. the corresponding unit tests project)
+**PublicationLibrary.Workspaces.DeveloperTests** (i.e. the corresponding unit
+tests project)
 
 References:
 
@@ -57,7 +66,12 @@ References:
 - System.Web
 - System.Xml
 
-With these references, Visual Studio is able to successfully compile both projects. However, it was only able to successfully calculate code metrics on the **PublicationLibrary.Workspaces** project; attempting to calculate code metrics on the second project yielded the aforementioned error.
+With these references, Visual Studio is able to successfully compile both
+projects. However, it was only able to successfully calculate code metrics on
+the **PublicationLibrary.Workspaces** project; attempting to calculate code
+metrics on the second project yielded the aforementioned error.
 
-After explicitly referencing **Microsoft.SharePoint.Security** in the **PublicationLibrary.Workspaces.DeveloperTests** project, the error went away and I could view the code metrics for both projects.
+After explicitly referencing **Microsoft.SharePoint.Security** in the
+**PublicationLibrary.Workspaces.DeveloperTests** project, the error went away
+and I could view the code metrics for both projects.
 

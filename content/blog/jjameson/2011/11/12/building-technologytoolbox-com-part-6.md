@@ -9,21 +9,44 @@ categories: ["Development", "My System"]
 tags: ["My System", "Subtext", "Web Development"]
 ---
 
-While I don't expect many people will need to migrate blog posts from Telligent to Subtext, I do believe it is valuable to provide a walkthrough of how I typically approach a "content migration scenario" -- since I frequently encounter this kind of requirement when working with enterprise customers.
+While I don't expect many people will need to migrate blog posts from Telligent
+to Subtext, I do believe it is valuable to provide a walkthrough of how I
+typically approach a "content migration scenario" -- since I frequently
+encounter this kind of requirement when working with enterprise customers.
 
-For example, a big part of the [Agilent Technologies](http://chem.agilent.com/) project I worked on a few years ago involved migrating their legacy Internet site from a proprietary ASP application to Microsoft Office SharePoint Server 2007. Consequently, we ended up creating a number of custom migration utilities to export content from the old system and subsequently import it into SharePoint.
+For example, a big part of the [Agilent Technologies](http://chem.agilent.com/)
+project I worked on a few years ago involved migrating their legacy Internet
+site from a proprietary ASP application to Microsoft Office SharePoint Server
+2007. Consequently, we ended up creating a number of custom migration utilities
+to export content from the old system and subsequently import it into
+SharePoint.
 
-When setting up my new blog on TechnologyToolbox.com, I knew that I wanted to copy all of the posts from [my old MSDN blog](http://blogs.msdn.com/b/jjameson/), including the corresponding tags and comments. However, as you can imagine, when I decided to leave Microsoft I obviously couldn't ask for a backup of the Telligent database in order to extract my blog post content and corresponding comments.
+When setting up my new blog on TechnologyToolbox.com, I knew that I wanted to
+copy all of the posts from
+[my old MSDN blog](http://blogs.msdn.com/b/jjameson/), including the
+corresponding tags and comments. However, as you can imagine, when I decided to
+leave Microsoft I obviously couldn't ask for a backup of the Telligent database
+in order to extract my blog post content and corresponding comments.
 
-Therefore I knew I would have to do some "[Web scraping](http://en.wikipedia.org/wiki/Web_scraping)" if I wanted to ensure the preservation of all the blog posts I spent countless hours creating in years past.
+Therefore I knew I would have to do some "
+[Web scraping](http://en.wikipedia.org/wiki/Web_scraping)" if I wanted to ensure
+the preservation of all the blog posts I spent countless hours creating in years
+past.
 
-One of the great features in Subtext is the ability to import blog posts using [BlogML](http://en.wikipedia.org/wiki/BlogML) (including categories, tags, and comments). Therefore I knew the migration effort would primarily involve exporting content from the old platform (Telligent) into the structure (BlogML) supported by the new platform (Subtext). Conceptually, this is very similar to how I used the "PRIME" API a few years ago on the Agilent project to import content into SharePoint.
+One of the great features in Subtext is the ability to import blog posts using
+[BlogML](http://en.wikipedia.org/wiki/BlogML) (including categories, tags, and
+comments). Therefore I knew the migration effort would primarily involve
+exporting content from the old platform (Telligent) into the structure (BlogML)
+supported by the new platform (Subtext). Conceptually, this is very similar to
+how I used the "PRIME" API a few years ago on the Agilent project to import
+content into SharePoint.
 
 > **Note**
 >
 > If your new platform supports some kind of import functionality, then much of the "heavy lifting" involved in migrating content has already been done. You just need to figure out how to export content from the source system into the "schema" expected by the import feature of the destination system.
 
-Here is the overall approach I used to migrate my content from Telligent to Subtext:
+Here is the overall approach I used to migrate my content from Telligent to
+Subtext:
 
 1. Download the monthly summary pages to a temporary cache (e.g. [http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx) → C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html).
 2. Create a new BlogML "document" (using [BlogML .NET](http://blogml.codeplex.com/)).
@@ -35,7 +58,8 @@ Here is the overall approach I used to migrate my content from Telligent to Subt
 
 ### Step 1: Download the monthly summary pages
 
-I started by creating a C# console application and adding a small amount of code to download the monthly summary pages from my MSDN blog to a temporary folder.
+I started by creating a C# console application and adding a small amount of code
+to download the monthly summary pages from my MSDN blog to a temporary folder.
 
 ```
         static void Main(string[] args)
@@ -49,9 +73,17 @@ I started by creating a C# console application and adding a small amount of code
         }
 ```
 
-Note that Telligent allows you to view the list of posts for a particular month by browsing to a URL of the form "archive/{year}/{month}.aspx" (e.g. [http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx)). [Subtext also provides similar functionality (as do most other blogging solutions out there, I imagine). However, unlike Telligent, in Subtext the <var>{month}</var> portion of the URL must be specified using the two-digit format.]
+Note that Telligent allows you to view the list of posts for a particular month
+by browsing to a URL of the form "archive/{year}/{month}.aspx" (e.g.
+[http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx)).
+[Subtext also provides similar functionality (as do most other blogging
+solutions out there, I imagine). However, unlike Telligent, in Subtext the
+<var>{month}</var> portion of the URL must be specified using the two-digit
+format.]
 
-Since I authored my first blog post back in 2007, I created a couple of `for` loops to iterate over all months in the last 4 years and download the corresponding Web page to an offline file.
+Since I authored my first blog post back in 2007, I created a couple of `for`
+loops to iterate over all months in the last 4 years and download the
+corresponding Web page to an offline file.
 
 ```
         private static void ExportSummaryPages(
@@ -104,7 +136,13 @@ Since I authored my first blog post back in 2007, I created a couple of `for` lo
         }
 ```
 
-The **EnsureOfflineFile** method simply checks to see if the specified file exists and, if not, uses the **[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)** class in the .NET Framework to download it (but first ensuring the specified destination folder exists -- since the [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx) method won't automatically create any necessary folders):
+The **EnsureOfflineFile** method simply checks to see if the specified file
+exists and, if not, uses the **
+[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)**
+class in the .NET Framework to download it (but first ensuring the specified
+destination folder exists -- since the
+[**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx) method
+won't automatically create any necessary folders):
 
 ```
         private static void EnsureOfflineFile(
@@ -130,13 +168,27 @@ The **EnsureOfflineFile** method simply checks to see if the specified file exis
 
 > **Important**
 >
-> When migrating content from one system to another, I strive to minimize the load on the source system -- in this case, by downloading the files one time from the MSDN blog site. While I could certainly download these pages each time the program runs, this would put an unnecessary load on the MSDN site (and also significantly slow down the process of developing the content migration utility).
+> When migrating content from one system to another, I strive to minimize the load
+> on the source system -- in this case, by downloading the files one time from the
+> MSDN blog site. While I could certainly download these pages each time the
+> program runs, this would put an unnecessary load on the MSDN site (and also
+> significantly slow down the process of developing the content migration
+> utility).
 >
-> Note that this is just one way of minimizing the impact of migrating content. Another common approach that I've used in the past is to initially run the content migration against the DEV environment and later on against the TEST environment for validation and verification purposes. The final content migration is subsequently performed against the PROD environment one time only (ideally).
+> Note that this is just one way of minimizing the impact of migrating content.
+> Another common approach that I've used in the past is to initially run the
+> content migration against the DEV environment and later on against the TEST
+> environment for validation and verification purposes. The final content
+> migration is subsequently performed against the PROD environment one time only
+> (ideally).
 
 ### Step 2: Create a new BlogML document
 
-While I could have chosen to "handcraft" a BlogML file using something like **XmlTextWriter** or **XmlDocument**, during my initial research for migrating my blog I discovered [BlogML .NET](http://blogml.codeplex.com/), which makes it very easy to create the corresponding XML file with substantially less coding on my part.
+While I could have chosen to "handcraft" a BlogML file using something like
+**XmlTextWriter** or **XmlDocument**, during my initial research for migrating
+my blog I discovered [BlogML .NET](http://blogml.codeplex.com/), which makes it
+very easy to create the corresponding XML file with substantially less coding on
+my part.
 
 ```
         static void Main(string[] args)
@@ -171,7 +223,8 @@ While I could have chosen to "handcraft" a BlogML file using something like **Xm
         }
 ```
 
-Note that by the time I had written this code, I had already exported a sample BlogML file from Subtext and observed the following in the XML file:
+Note that by the time I had written this code, I had already exported a sample
+BlogML file from Subtext and observed the following in the XML file:
 
 ```
   <extended-properties>
@@ -179,11 +232,14 @@ Note that by the time I had written this code, I had already exported a sample B
   </extended-properties>
 ```
 
-To ensure this appeared in the file generated from my migration utility, I added code to explicitly specify this extended property.
+To ensure this appeared in the file generated from my migration utility, I added
+code to explicitly specify this extended property.
 
 ### Step 3: Load the summary for each post into the BlogML document
 
-The next step is to iterate through the offline archive files for each month and add a limited amount of information for each post into the **BlogMLBlog** instance.
+The next step is to iterate through the offline archive files for each month and
+add a limited amount of information for each post into the **BlogMLBlog**
+instance.
 
 ```
         static void Main(string[] args)
@@ -203,7 +259,11 @@ The next step is to iterate through the offline archive files for each month and
         }
 ```
 
-**ExportPostSummaries** enumerates each HTML file in the "summary folder" (e.g. C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html), looks for a specific string (`"No blog posts have yet been created"`) to see if, in fact, there are any posts for the corresponding month, and then parses the HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
+**ExportPostSummaries** enumerates each HTML file in the "summary folder" (e.g.
+C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html),
+looks for a specific string (`"No blog posts have yet been created"`) to see if,
+in fact, there are any posts for the corresponding month, and then parses the
+HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
 
 ```
         private static void ExportPostSummaries(
@@ -265,7 +325,12 @@ The next step is to iterate through the offline archive files for each month and
         }
 ```
 
-Even if you haven't used the Html Agility Pack before (which is something I highly recommend if you ever encounter the need to parse HTML), it should be relatively easy to understand the parsing logic in the **ExportPostSummaries** method. Here is a sample HTML fragment that shows the "interesting" elements that are used to extract the post title and excerpt (i.e. summary) and add these to the BlogML document.
+Even if you haven't used the Html Agility Pack before (which is something I
+highly recommend if you ever encounter the need to parse HTML), it should be
+relatively easy to understand the parsing logic in the **ExportPostSummaries**
+method. Here is a sample HTML fragment that shows the "interesting" elements
+that are used to extract the post title and excerpt (i.e. summary) and add these
+to the BlogML document.
 
 ```
 <div class="abbreviated-post">
@@ -299,7 +364,11 @@ Even if you haven't used the Html Agility Pack before (which is something I high
 
 ### Step 4: Download each blog post and parse the HTML
 
-At this point, the instance of **BlogMLBlog** contains about 300 posts, but only the title and excerpt of each post. The next step is to populate the full content for each post as well as set some additional metadata (e.g. the date each post was published). This functionality is implemented in the **ExportPosts** method.
+At this point, the instance of **BlogMLBlog** contains about 300 posts, but only
+the title and excerpt of each post. The next step is to populate the full
+content for each post as well as set some additional metadata (e.g. the date
+each post was published). This functionality is implemented in the
+**ExportPosts** method.
 
 ```
         static void Main(string[] args)
@@ -323,7 +392,10 @@ At this point, the instance of **BlogMLBlog** contains about 300 posts, but only
         }
 ```
 
-Having previously populated the BlogML document, it is now simply a matter of iterating the collection of posts and processing each one individually. The first step is to download an offline copy of the post using the **EnsureOfflineFile** method shown above.
+Having previously populated the BlogML document, it is now simply a matter of
+iterating the collection of posts and processing each one individually. The
+first step is to download an offline copy of the post using the
+**EnsureOfflineFile** method shown above.
 
 ```
         private static void ExportPosts(
@@ -442,13 +514,25 @@ Having previously populated the BlogML document, it is now simply a matter of it
         }
 ```
 
-Since I want to ensure my blog posts are XHTML-compliant, I set a couple of options on the corresponding **HtmlDocument** used for parsing. I then parse the date the post was published and use it for both the "created" date as well as the "modified" date. This is a slight deviation from reality since I updated some posts after they were originally published as well as the fact that I didn't always publish posts on the same day I originally created them -- but these are insignificant issues in this scenario. [On other migration projects I have worked on, preserving timestamps was deemed an essential requirement. Be sure to weigh the development effort involved in trying to preserve the "absolute truth" with the corresponding value to the business.]
+Since I want to ensure my blog posts are XHTML-compliant, I set a couple of
+options on the corresponding **HtmlDocument** used for parsing. I then parse the
+date the post was published and use it for both the "created" date as well as
+the "modified" date. This is a slight deviation from reality since I updated
+some posts after they were originally published as well as the fact that I
+didn't always publish posts on the same day I originally created them -- but
+these are insignificant issues in this scenario. [On other migration projects I
+have worked on, preserving timestamps was deemed an essential requirement. Be
+sure to weigh the development effort involved in trying to preserve the
+"absolute truth" with the corresponding value to the business.]
 
-Next I add a note to each migrated post (indicating that it originally appeared on my MSDN blog and then proceed to parsing the main "body" of the post (specified in the `<div class="post-content user-defined-markup">` element).
+Next I add a note to each migrated post (indicating that it originally appeared
+on my MSDN blog and then proceed to parsing the main "body" of the post
+(specified in the `<div class="post-content user-defined-markup">` element).
 
 #### Transforming blog post content
 
-As its name implies, the **TransformOriginalPostContent** method "massages" the content of each post in order to:
+As its name implies, the **TransformOriginalPostContent** method "massages" the
+content of each post in order to:
 
 - Remove "junk" added by the Telligent WYSIWYG HTML editor that I don't want, such as `mce_href` attributes (especially since these attributes break XHTML-compliance)
 - Update links within a blog post to other posts on my blog (since I obviously want to keep visitors on my new site rather than having them get redirected over to my old MSDN blog)
@@ -499,7 +583,8 @@ As its name implies, the **TransformOriginalPostContent** method "massages" the 
         }
 ```
 
-Removing unwanted attributes in the HTML turns out to be rather trivial, thanks to the powerful XPath query capabilities of the Html Agility Pack:
+Removing unwanted attributes in the HTML turns out to be rather trivial, thanks
+to the powerful XPath query capabilities of the Html Agility Pack:
 
 ```
         private static void RemoveUnwantedAttributes(
@@ -521,7 +606,9 @@ Removing unwanted attributes in the HTML turns out to be rather trivial, thanks 
         }
 ```
 
-Link translation is also relatively easy thanks to the **HtmlNode.Descendants** method and the fact that the URLs for each post on my new blog are very similar to the old URLs:
+Link translation is also relatively easy thanks to the **HtmlNode.Descendants**
+method and the fact that the URLs for each post on my new blog are very similar
+to the old URLs:
 
 ```
         private static void TranslateLinksToOtherBlogPosts(
@@ -575,11 +662,18 @@ Link translation is also relatively easy thanks to the **HtmlNode.Descendants** 
         }
 ```
 
-On the Agilent project, for example, link translation was much more involved. We ended up using a database to provide "lookup" functionality to translate URLs from the legacy system to the new URLs within SharePoint.
+On the Agilent project, for example, link translation was much more involved. We
+ended up using a database to provide "lookup" functionality to translate URLs
+from the legacy system to the new URLs within SharePoint.
 
-Note that I originally tried using only the Html Agility Pack to ensure the post content is well-formed. However, I found some instances in my blog posts where the **HtmlDocument** class did not fix mismatched tags.
+Note that I originally tried using only the Html Agility Pack to ensure the post
+content is well-formed. However, I found some instances in my blog posts where
+the **HtmlDocument** class did not fix mismatched tags.
 
-Rather than attempting to debug somebody else's code, I decided to "punt" and just use my **HtmlCleaner** class instead -- since I've used this extensively in the past. Note that **HtmlCleaner** is really just a thin wrapper around **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
+Rather than attempting to debug somebody else's code, I decided to "punt" and
+just use my **HtmlCleaner** class instead -- since I've used this extensively in
+the past. Note that **HtmlCleaner** is really just a thin wrapper around **
+[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
 ```
     /// <summary>
@@ -683,17 +777,35 @@ Rather than attempting to debug somebody else's code, I decided to "punt" and ju
 
 > **Important**
 >
-> This is probably a good place to stop and point out an essential concept when writing migration tools like this -- as well as similar kinds of "throw away" code.
+> This is probably a good place to stop and point out an essential concept when
+> writing migration tools like this -- as well as similar kinds of "throw away"
+> code.
 >
-> Keep in mind the ultimate goal of this utility is to run it *one time* (after all of the development and testing effort is completed, of course). In other words, when I'm writing utilities like this, I try not to focus on writing highly maintainable code. Hence you don't see any significant error handling, parameter validation, boundary checking, etc.
+> Keep in mind the ultimate goal of this utility is to run it *one time* (after
+> all of the development and testing effort is completed, of course). In other
+> words, when I'm writing utilities like this, I try not to focus on writing
+> highly maintainable code. Hence you don't see any significant error handling,
+> parameter validation, boundary checking, etc.
 >
-> The goal is to complete the code as quickly as possible -- ensuring that it is "good enough" to do its job but doesn't necessarily demonstrate best coding practices. For example, I don't bother enabling *all* code analysis rules on "throw away" code like this (which is typically one of the first things I do after creating a new project in Visual Studio). Mind you, I definitely add these kinds of utilities to source control, but that's primarily as a benefit during development so I can easily rollback unwanted changes (and occasionally to go back at some point in the future and review the code for reference purposes).
+> The goal is to complete the code as quickly as possible -- ensuring that it is
+> "good enough" to do its job but doesn't necessarily demonstrate best coding
+> practices. For example, I don't bother enabling *all* code analysis rules on
+> "throw away" code like this (which is typically one of the first things I do
+> after creating a new project in Visual Studio). Mind you, I definitely add these
+> kinds of utilities to source control, but that's primarily as a benefit during
+> development so I can easily rollback unwanted changes (and occasionally to go
+> back at some point in the future and review the code for reference purposes).
 >
-> If this utility was something I expected to be maintained going forward, I would have spent more time trying to figure out why I couldn't get the Html Agility Pack to fix the malformed HTML.
+> If this utility was something I expected to be maintained going forward, I would
+> have spent more time trying to figure out why I couldn't get the Html Agility
+> Pack to fix the malformed HTML.
 
 #### Migrating tags and categories
 
-I've mentioned before how Subtext supports both *tags* and *categories* for blog posts. At first, I didn't really see the need for having two separate taxonomies (especially since my MSDN blog only supported tags), but the more I thought about it, the more I started to like the distinction.
+I've mentioned before how Subtext supports both *tags* and *categories* for blog
+posts. At first, I didn't really see the need for having two separate taxonomies
+(especially since my MSDN blog only supported tags), but the more I thought
+about it, the more I started to like the distinction.
 
 In the end, I settled on about a half dozen categories:
 
@@ -703,9 +815,21 @@ In the end, I settled on about a half dozen categories:
 - Personal
 - SharePoint
 
-I debated for a little while about whether or not to create a category for **SharePoint** -- since that seemed to suggest creating categories for other Microsoft products as well (e.g. Visual Studio) and thus would eventually lead to large number of categories that closely paralleled the tags on my content. I eventually decided that SharePoint-related posts constitute a significant ratio of my content and therefore decided to keep it. This may change in the future, but it's what I'm currently using.
+I debated for a little while about whether or not to create a category for
+**SharePoint** -- since that seemed to suggest creating categories for other
+Microsoft products as well (e.g. Visual Studio) and thus would eventually lead
+to large number of categories that closely paralleled the tags on my content. I
+eventually decided that SharePoint-related posts constitute a significant ratio
+of my content and therefore decided to keep it. This may change in the future,
+but it's what I'm currently using.
 
-My intent is that posts are typically associated with one or two categories (e.g. **SharePoint** + **Development**) and tags are used to further refine categories (e.g. **MOSS 2007** vs. **SharePoint 2010**). The important thing to realize about tags and categories in Subtext is that categories are implemented as a highly structured taxonomy (meaning you have to explicitly define the list of available categories) whereas tags are much more of a "folksonomy" (meaning you can dynamically "create" new tags when creating or updating a post).
+My intent is that posts are typically associated with one or two categories
+(e.g. **SharePoint** + **Development**) and tags are used to further refine
+categories (e.g. **MOSS 2007** vs. **SharePoint 2010**). The important thing to
+realize about tags and categories in Subtext is that categories are implemented
+as a highly structured taxonomy (meaning you have to explicitly define the list
+of available categories) whereas tags are much more of a "folksonomy" (meaning
+you can dynamically "create" new tags when creating or updating a post).
 
 Here is the helper method that adds the tags to each post:
 
@@ -743,7 +867,8 @@ Here is the helper method that adds the tags to each post:
         }
 ```
 
-The **GetPostTags** method simply uses the now familiar parsing functionality of **HtmlDocument** to extract the list of tags from the offline post file:
+The **GetPostTags** method simply uses the now familiar parsing functionality of
+**HtmlDocument** to extract the list of tags from the offline post file:
 
 ```
         private static string[] GetPostTags(
@@ -770,7 +895,9 @@ The **GetPostTags** method simply uses the now familiar parsing functionality of
         }
 ```
 
-I created the **GetNewTag** method (called from the **AppendBlogPostTags** method above) when I realized I should have used a different tag on my MSDN blog (i.e. **SharePoint 2010** -- instead of **SharePoint Server 2010**):
+I created the **GetNewTag** method (called from the **AppendBlogPostTags**
+method above) when I realized I should have used a different tag on my MSDN blog
+(i.e. **SharePoint 2010** -- instead of **SharePoint Server 2010**):
 
 ```
         private static string GetNewTag(
@@ -787,7 +914,8 @@ I created the **GetNewTag** method (called from the **AppendBlogPostTags** metho
         }
 ```
 
-In order to populate the list of categories for each post, I created a simple mapping, illustrated below:
+In order to populate the list of categories for each post, I created a simple
+mapping, illustrated below:
 
 {{< table class="small" caption="Tag-to-Category Mapping" >}}
 
@@ -825,7 +953,8 @@ In order to populate the list of categories for each post, I created a simple ma
 >
 > Since posts tagged with **PowerShell** or **SQL Server** could fall into different categories depending on their specific content (e.g. **Infrastructure** or **Development**), I decided not to use these tags for mapping (and instead rely on categories being derived from other tags on the same post).
 
-This mapping is implemented in the **MapTagToCategory** method, which is called from the **FillPostCategories** method:
+This mapping is implemented in the **MapTagToCategory** method, which is called
+from the **FillPostCategories** method:
 
 ```
         private static void FillPostCategories(
@@ -912,13 +1041,24 @@ This mapping is implemented in the **MapTagToCategory** method, which is called 
 
 ### Step 5: Export the comments for each post
 
-Migrating the post comments was a bit trickier than I originally anticipated. This is because -- contrary to what I expected -- the comments are not included in the offline file for each post.
+Migrating the post comments was a bit trickier than I originally anticipated.
+This is because -- contrary to what I expected -- the comments are not included
+in the offline file for each post.
 
-I discovered the MSDN blogs (and perhaps all blogs based on the Telligent platform) load the comments asynchronously (i.e. using Ajax). In other words, when you request an individual blog post, some JavaScript runs that requests the comments for the post and subsequently injects these into the HTML.
+I discovered the MSDN blogs (and perhaps all blogs based on the Telligent
+platform) load the comments asynchronously (i.e. using Ajax). In other words,
+when you request an individual blog post, some JavaScript runs that requests the
+comments for the post and subsequently injects these into the HTML.
 
-Fortunately, after a couple of hours of tinkering I figured out how to "Web scrape" the Ajax request that loads the comments for a particular post. Unfortunately it is not as simple as issuing an HTTP GET or POST with a couple of parameters. If you don't get the HTTP headers right, then Telligent simply "barfs on you" (meaning it returns an error).
+Fortunately, after a couple of hours of tinkering I figured out how to "Web
+scrape" the Ajax request that loads the comments for a particular post.
+Unfortunately it is not as simple as issuing an HTTP GET or POST with a couple
+of parameters. If you don't get the HTTP headers right, then Telligent simply
+"barfs on you" (meaning it returns an error).
 
-In order to spoof the Ajax requests to download blog comments, I implemented what essentially amounts to a "replay hack." Like the previous steps, let's start with a quick look at the updates to `Main`...
+In order to spoof the Ajax requests to download blog comments, I implemented
+what essentially amounts to a "replay hack." Like the previous steps, let's
+start with a quick look at the updates to `Main`...
 
 ```
         static void Main(string[] args)
@@ -940,7 +1080,10 @@ In order to spoof the Ajax requests to download blog comments, I implemented wha
         }
 ```
 
-Similar to **ExportPosts**, the **ExportComments** method iterates the collection of posts, calls another method to export the post comments to an offline file, and then processes the offline file to load the comments into the BlogML document:
+Similar to **ExportPosts**, the **ExportComments** method iterates the
+collection of posts, calls another method to export the post comments to an
+offline file, and then processes the offline file to load the comments into the
+BlogML document:
 
 ```
         private static void ExportComments(
@@ -984,7 +1127,9 @@ Similar to **ExportPosts**, the **ExportComments** method iterates the collectio
         }
 ```
 
-**ExportPostComments** checks to see if an offline comments file exists for the specified post (meaning the comments have already been downloaded) and, if not, attempts to download any comments:
+**ExportPostComments** checks to see if an offline comments file exists for the
+specified post (meaning the comments have already been downloaded) and, if not,
+attempts to download any comments:
 
 ```
         private static void ExportPostComments(
@@ -1019,7 +1164,8 @@ Similar to **ExportPosts**, the **ExportComments** method iterates the collectio
         }
 ```
 
-The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web scraping the fake Ajax request used to retrieve the comments:
+The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web
+scraping the fake Ajax request used to retrieve the comments:
 
 ```
         private static string GetFeedbackHtmlForPost(
@@ -1113,7 +1259,11 @@ The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web scrap
         }
 ```
 
-To create this method, I used Fiddler to inspect the Ajax request triggered when viewing an individual blog post. I then copied the HTTP headers from that sample request and pasted them into the code. Once I had a valid response being returned from Telligent, I wrote the code to decompress it (since the response is GZIP'ed) and parse the comments.
+To create this method, I used Fiddler to inspect the Ajax request triggered when
+viewing an individual blog post. I then copied the HTTP headers from that sample
+request and pasted them into the code. Once I had a valid response being
+returned from Telligent, I wrote the code to decompress it (since the response
+is GZIP'ed) and parse the comments.
 
 > **Tip**
 >
@@ -1125,7 +1275,9 @@ To create this method, I used Fiddler to inspect the Ajax request triggered when
 
 ### Step 6: Save the BlogML document to an XML file
 
-After running the migration utility at this point, the BlogML document contains all of the blog posts (including the categories, tags, and comments for each post) and is ready to be written to a file.
+After running the migration utility at this point, the BlogML document contains
+all of the blog posts (including the categories, tags, and comments for each
+post) and is ready to be written to a file.
 
 ```
         static void Main(string[] args)
@@ -1160,18 +1312,30 @@ The **SaveBlogML** method is very simple...
         }
 ```
 
-...however -- much to my surprise -- BlogML .NET doesn't actually include all of the functionality to write an instance of **BlogMLBlog** to an XML file. Instead, it provides you a base class (**BlogMLWriterBase**) that you need to derive from (and implement the abstract **InternalWriteBlog** method).
+...however -- much to my surprise -- BlogML .NET doesn't actually include all of
+the functionality to write an instance of **BlogMLBlog** to an XML file.
+Instead, it provides you a base class (**BlogMLWriterBase**) that you need to
+derive from (and implement the abstract **InternalWriteBlog** method).
 
-Fortunately, this wasn't an issue since I was able to copy the **BlogMLWriter** class from the Subtext source code and make a couple of tweaks to make it work for my migration tool.
+Fortunately, this wasn't an issue since I was able to copy the **BlogMLWriter**
+class from the Subtext source code and make a couple of tweaks to make it work
+for my migration tool.
 
 ### Step 7: Import the BlogML file
 
-With the 5 MB XML file generated by my **ExportMsdnBlog** utility, I was almost ready to import the BlogML file into Subtext for the final time. However, I discovered a couple of issues during my testing:
+With the 5 MB XML file generated by my **ExportMsdnBlog** utility, I was almost
+ready to import the BlogML file into Subtext for the final time. However, I
+discovered a couple of issues during my testing:
 
 1. When importing a blog post comment containing multiple paragraphs, extra line breaks appeared in the Subtext comment. I ended up modifying Subtext to avoid this issue. [I'll describe this change in a different post.]
 2. When exporting blog posts from my MSDN blog, recall that I used the monthly summary pages to get the list of posts. These summary pages do not list the posts in the order they were published, but rather in reverse order (in other words, showing the more recent posts first). When importing the posts, my preference was to add them in the order in which they would have been if I had actually created them originally in Subtext (a minor nitpick for sure, but still one I preferred to avoid if it didn't require significant effort).
 
-To resolve this second issue, I simply needed to sort the `<post>` elements in the BlogML file by the `date-created` attribute. To do this, I created an XSLT file in Visual Studio and added a custom template for the `<posts>` elements (i.e. the container for the `<post>` elements). I also needed to specify the XML namespace in order to get this to work as expected (since the BlogML file specifies a default namespace):
+To resolve this second issue, I simply needed to sort the `<post>` elements in
+the BlogML file by the `date-created` attribute. To do this, I created an XSLT
+file in Visual Studio and added a custom template for the `<posts>` elements
+(i.e. the container for the `<post>` elements). I also needed to specify the XML
+namespace in order to get this to work as expected (since the BlogML file
+specifies a default namespace):
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -1198,20 +1362,40 @@ To resolve this second issue, I simply needed to sort the `<post>` elements in t
 </xsl:stylesheet>
 ```
 
-In hindsight, I suppose another alternative would have been to customize the **WritePosts** method of the **BlogMLWriter** class to use LINQ to select the objects from the **PostCollection** in a specific order (instead of the simple `foreach` loop currently specified in that method). If this was something I expected to use on an ongoing basis, that would have been a preferable approach. However, sorting the file using XSLT was good enough for a "one-off" scenario.
+In hindsight, I suppose another alternative would have been to customize the
+**WritePosts** method of the **BlogMLWriter** class to use LINQ to select the
+objects from the **PostCollection** in a specific order (instead of the simple
+`foreach` loop currently specified in that method). If this was something I
+expected to use on an ongoing basis, that would have been a preferable approach.
+However, sorting the file using XSLT was good enough for a "one-off" scenario.
 
-At this point I rebuilt my Subtext database (to get a fresh instance with no data whatsoever), recreated my blog using the Subtext admin functionality (which fortunately goes very quickly), and imported the BlogML file. A few minutes later, I verified that all 300+ blog posts were successfully migrated.
+At this point I rebuilt my Subtext database (to get a fresh instance with no
+data whatsoever), recreated my blog using the Subtext admin functionality (which
+fortunately goes very quickly), and imported the BlogML file. A few minutes
+later, I verified that all 300+ blog posts were successfully migrated.
 
 ### What about images and attachments?
 
-The astute reader may be wondering about the images and attachments included in my original MSDN blog posts. In other words, I haven't mentioned anything about how my utility migrates these files from Telligent. That is because it doesn't.
+The astute reader may be wondering about the images and attachments included in
+my original MSDN blog posts. In other words, I haven't mentioned anything about
+how my utility migrates these files from Telligent. That is because it doesn't.
 
-Instead I chose to migrate my blog images and attachments manually, for a couple of reasons:
+Instead I chose to migrate my blog images and attachments manually, for a couple
+of reasons:
 
 1. The number of attachments included in my blog posts was rather low (and thus I estimated it would take substantially less time to migrate these manually than trying to automate it through code).
 2. The way images are stored in Subtext is fundamentally very different from the way they are stored in Telligent. In particular, the way the resized images are created and stored is something I didn't even want to attempt to automate through my own code. If you've followed my blog for a while, then you have probably noticed that I prefer to show images at reduced sizes within the context of a post and provide links to view the corresponding full-sized images (a trick I picked up years ago from the Microsoft Technet site).
 
-To help expedite this manual migration process, I did end up using the Html Agility Pack to quickly generate the list of posts containing images. That way I didn't have to review each and every one of the 300+ migrated posts when looking for images to migrate.
+To help expedite this manual migration process, I did end up using the Html
+Agility Pack to quickly generate the list of posts containing images. That way I
+didn't have to review each and every one of the 300+ migrated posts when looking
+for images to migrate.
 
-This is the final point I want to make regarding these kinds of content migration scenarios. While it would be nice to achieve 100% automated migration from one system to another, it is almost certainly not worth the effort (and time) required to do this through code. Of course, this depends largely on how much content you are migrating and how long the "manual" portion of the migration will take. Always keep in mind the concept of "business value" when writing migration code like this.
+This is the final point I want to make regarding these kinds of content
+migration scenarios. While it would be nice to achieve 100% automated migration
+from one system to another, it is almost certainly not worth the effort (and
+time) required to do this through code. Of course, this depends largely on how
+much content you are migrating and how long the "manual" portion of the
+migration will take. Always keep in mind the concept of "business value" when
+writing migration code like this.
 

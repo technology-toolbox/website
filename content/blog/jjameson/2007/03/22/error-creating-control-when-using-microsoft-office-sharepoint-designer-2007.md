@@ -19,9 +19,12 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-If, like me, you happen to encounter the following user experience when attempting to edit a master page...
+If, like me, you happen to encounter the following user experience when
+attempting to edit a master page...
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Designer-Error-Creating-Control-600x305.png" alt="SharePoint Designer - \"Error Creating Control\"" class="screenshot" height="305" width="600" title="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
 

@@ -15,9 +15,12 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/09/30/finding-the-content-type-id-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/30/finding-the-content-type-id-in-moss-2007.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Yesterday I received the following question from someone regarding Microsoft Office SharePoint Server (MOSS) 2007 content type IDs:
+Yesterday I received the following question from someone regarding Microsoft
+Office SharePoint Server (MOSS) 2007 content type IDs:
 
 {{< blockquote "font-italic" >}}
 
@@ -32,9 +35,13 @@ Here's the easiest way I know to find the content type ID:
 3. On the **Site Content Type Gallery** page, click the content type that you need to find the unique identifier for, such as **Article page**.
 4. On the **Site Content Type: {content type name}** page, copy the value of the **ctype** query string parameter. For example, the content type ID for **Article page** is 0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D.
 
-Note that you can also retrieve the content type ID directly from the feature XML file (e.g. %ProgramFiles%\Common Files\microsoft shared\Web Server Extensions\12\TEMPLATE\FEATURES\PublishingResources\PublishingContentTypes.xml). However, I think the first approach is faster.
+Note that you can also retrieve the content type ID directly from the feature
+XML file (e.g. %ProgramFiles%\Common Files\microsoft shared\Web Server
+Extensions\12\TEMPLATE\FEATURES\PublishingResources\PublishingContentTypes.xml).
+However, I think the first approach is faster.
 
-For more information on content type IDs in MOSS 2007, refer to the following MSDN article:
+For more information on content type IDs in MOSS 2007, refer to the following
+MSDN article:
 
 {{< reference title="Content Type IDs" linkHref="http://msdn.microsoft.com/en-us/library/aa543822.aspx" >}}
 

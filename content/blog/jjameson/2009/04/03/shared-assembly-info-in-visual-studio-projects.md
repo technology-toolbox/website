@@ -15,17 +15,32 @@ tags: ["My System", "Core Development", "Visual Studio"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-Yesterday I introduced the concept of [linked files in Visual Studio solutions](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions) with a follow-up on my recommendation for [configuring a custom dictionary](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio) to eliminate CA1704 code analysis warnings.
+Yesterday I introduced the concept of
+[linked files in Visual Studio solutions](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions)
+with a follow-up on my recommendation for
+[configuring a custom dictionary](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio)
+to eliminate CA1704 code analysis warnings.
 
-Another practical application of linked files is what I refer to as "shared assembly info" -- referring to the assembly attributes that should be the same across all projects in the solution, such as [AssemblyCompanyAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblycompanyattribute.aspx).
+Another practical application of linked files is what I refer to as "shared
+assembly info" -- referring to the assembly attributes that should be the same
+across all projects in the solution, such as
+[AssemblyCompanyAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblycompanyattribute.aspx).
 
-To implement this, create a file in the solution folder named SharedAssemblyInfo.cs and then add a link in each project to SharedAssemblyInfo.cs. You can also move the linked SharedAssemblyInfo.cs into the Properties folder so that it sits side-by-side with the AssemblyInfo.cs that is specific to each project in the solution, as shown below.
+To implement this, create a file in the solution folder named
+SharedAssemblyInfo.cs and then add a link in each project to
+SharedAssemblyInfo.cs. You can also move the linked SharedAssemblyInfo.cs into
+the Properties folder so that it sits side-by-side with the AssemblyInfo.cs that
+is specific to each project in the solution, as shown below.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG" alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution" class="screenshot" height="577" width="372" title="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution" >}}
 
-I recommend placing the following assembly attributes in SharedAssemblyInfo.cs (and, of course, removing them as necessary from the project-specific AssemblyInfo.cs files):
+I recommend placing the following assembly attributes in SharedAssemblyInfo.cs
+(and, of course, removing them as necessary from the project-specific
+AssemblyInfo.cs files):
 
 - AssemblyCompany
 - AssemblyProduct
@@ -95,7 +110,12 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyInformationalVersion("1.0.0.0")] // a.k.a. "Product version"
 ```
 
-Note how the [AssemblyConfigurationAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyconfigurationattribute.aspx) and [AssemblyDescriptionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblydescriptionattribute.aspx) are set based on conditional compilation constants (in order to easily distinguish Debug and Release builds).
+Note how the
+[AssemblyConfigurationAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyconfigurationattribute.aspx)
+and
+[AssemblyDescriptionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblydescriptionattribute.aspx)
+are set based on conditional compilation constants (in order to easily
+distinguish Debug and Release builds).
 
 Here is a sample AssemblyInfo.cs file:
 
@@ -115,5 +135,7 @@ using System.Runtime.InteropServices;
 [assembly: Guid("88d50bdd-34bc-414a-98d6-6fefe701d41b")]
 ```
 
-In my [next post](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning), I'll discuss assembly versioning in more detail.
+In my
+[next post](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning),
+I'll discuss assembly versioning in more detail.
 

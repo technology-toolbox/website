@@ -15,27 +15,43 @@ tags: ["Infrastructure", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In the current sprint of the project I'm working on, we are deploying Office Web Apps to support an enterprise collaboration platform based on SharePoint Server 2010.
+In the current sprint of the project I'm working on, we are deploying Office Web
+Apps to support an enterprise collaboration platform based on SharePoint Server
+2010.
 
-While creating the installation guide for this sprint, I used the following TechNet article as a reference for the section on installing and configuring Office Web Apps:
+While creating the installation guide for this sprint, I used the following
+TechNet article as a reference for the section on installing and configuring
+Office Web Apps:
 
 {{< reference title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)" linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
 
-While the above article includes *most* of the steps you need to perform when deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking a few important pieces (at least based upon my experience):
+While the above article includes *most* of the steps you need to perform when
+deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking a
+few important pieces (at least based upon my experience):
 
 - Configure Excel Services Application trusted location (if you are using both HTTP and HTTPS)
 - Configure the Office Web Apps cache
 - Grant access to the Web application content database for Office Web Apps
 
-These steps are performed after completing the deployment steps in the above TechNet article.
+These steps are performed after completing the deployment steps in the above
+TechNet article.
 
-For the remainder of this post, imagine that we are installing Office Web Apps on the extranet site for Fabrikam Technologies (http://extranet.fabrikam.com) and we want to provide the ability for Fabrikam employees and its partners to collaborate on documents created in Microsoft Word, Excel, and PowerPoint.
+For the remainder of this post, imagine that we are installing Office Web Apps
+on the extranet site for Fabrikam Technologies (http://extranet.fabrikam.com)
+and we want to provide the ability for Fabrikam employees and its partners to
+collaborate on documents created in Microsoft Word, Excel, and PowerPoint.
 
-Assume we have created a new Web application, [configured it for claims-based authentication](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010), and deployed Office Web Apps by following the steps in the aforementioned TechNet article.
+Assume we have created a new Web application,
+[configured it for claims-based authentication](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010),
+and deployed Office Web Apps by following the steps in the aforementioned
+TechNet article.
 
-The relevant service accounts for the Fabrikam extranet site are listed in the following table.
+The relevant service accounts for the Fabrikam extranet site are listed in the
+following table.
 
 {{< table class="small" caption="Table 1 - Service Accounts" >}}
 
@@ -47,11 +63,18 @@ The relevant service accounts for the Fabrikam extranet site are listed in the f
 
 {{< /table >}}
 
-In order to resolve a few issues with the deployment and ensure it conforms to recommended best practices, we need to perform some additional configuration steps.
+In order to resolve a few issues with the deployment and ensure it conforms to
+recommended best practices, we need to perform some additional configuration
+steps.
 
 ### Configure Excel Services Application trusted location
 
-When the Excel Services Application is created, a default trusted location is automatically configured (**http://**) for all content on the SharePoint farm. This default trusted location enables any file to be loaded from the SharePoint farm into Excel Services. However, this default trusted location does not support HTTPS (https://) and therefore results in the following error when attempting to access an Excel workbook using a secured connection:
+When the Excel Services Application is created, a default trusted location is
+automatically configured (**http://**) for all content on the SharePoint farm.
+This default trusted location enables any file to be loaded from the SharePoint
+farm into Excel Services. However, this default trusted location does not
+support HTTPS (https://) and therefore results in the following error when
+attempting to access an Excel workbook using a secured connection:
 
 {{< blockquote "font-italic text-danger" >}}
 
@@ -59,7 +82,8 @@ This workbook cannot be opened because it is not stored in an Excel Services App
 
 {{< /blockquote >}}
 
-Use the following procedure to change the default trusted location to support HTTPS.
+Use the following procedure to change the default trusted location to support
+HTTPS.
 
 > **Important**
 >
@@ -83,17 +107,30 @@ Use the following procedure to change the default trusted location to support HT
 
 ### Configure the Office Web Apps cache
 
-By default, when you install Office Web Apps, the cache available to render documents is 100 GB and the cache expiration period is 30 days. The cached content for Office Web Apps is stored in a SharePoint content database.
+By default, when you install Office Web Apps, the cache available to render
+documents is 100 GB and the cache expiration period is 30 days. The cached
+content for Office Web Apps is stored in a SharePoint content database.
 
-It is recommended to isolate the content database used for the Office Web Apps cache, so that cached files do not contribute to size of the "main" content database(s) for the Web application. Also note that anytime you create a new SharePoint content database, it is recommended to expand the initial database files (at least in a production environment).
+It is recommended to isolate the content database used for the Office Web Apps
+cache, so that cached files do not contribute to size of the "main" content
+database(s) for the Web application. Also note that anytime you create a new
+SharePoint content database, it is recommended to expand the initial database
+files (at least in a production environment).
 
 > **Important**
 >
-> You must start a new instance of the SharePoint 2010 Management Shell after installing the Office Web Apps in order to use the new PowerShell cmdlets (e.g. [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
+> You must start a new instance of the SharePoint 2010 Management Shell after
+> installing the Office Web Apps in order to use the new PowerShell cmdlets (e.g.
+> [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
 >
-> Also note that you may need to wait a few minutes (after installing Office Web Apps or rebuilding the Web application) before performing the following procedure (for the SharePoint timer job to configure the cache on the site collection before moving it to a separate content database).
+> Also note that you may need to wait a few minutes (after installing Office Web
+> Apps or rebuilding the Web application) before performing the following
+> procedure (for the SharePoint timer job to configure the cache on the site
+> collection before moving it to a separate content database).
 
-The following procedures are used to reduce the Office Web Apps cache size to 30 GB, move the cache to a new content database, and expand the corresponding database files.
+The following procedures are used to reduce the Office Web Apps cache size to 30
+GB, move the cache to a new content database, and expand the corresponding
+database files.
 
 #### To configure the Office Web Apps cache and create a separate content database for caching:
 
@@ -192,7 +229,8 @@ The following procedures are used to reduce the Office Web Apps cache size to 30
 {{< /table >}}
 6. Click **OK**.
 
-The following SQL statements can be used as an alternative to setting the sizes through the Database Properties dialog:
+The following SQL statements can be used as an alternative to setting the sizes
+through the Database Properties dialog:
 
 ```
 USE [master]
@@ -213,7 +251,10 @@ GO
 
 ### Grant access to the Web application content database for Office Web Apps
 
-Since the service account used to run the Office Web Apps service applications is different from the account used to run the application pool for the Web application, it is necessary to explicitly grant access to all of the content databases used by the Web application.
+Since the service account used to run the Office Web Apps service applications
+is different from the account used to run the application pool for the Web
+application, it is necessary to explicitly grant access to all of the content
+databases used by the Web application.
 
 #### To grant the Office Web Apps service account access to the content databases:
 

@@ -14,30 +14,59 @@ tags: ["MOSS 2007"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In my [previous post](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64), I briefly introduced the concept of a utility to import pages into Microsoft Office SharePoint Server (MOSS) 2007 from an Excel input file. This can be very useful for Development and Test environments (where you frequently rebuild the sites during the development process), as well as when migrating legacy Web sites to a Production environment -- or whenever a "quick and dirty" process is deemed sufficient for the business needs.
+In my
+[previous post](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64),
+I briefly introduced the concept of a utility to import pages into Microsoft
+Office SharePoint Server (MOSS) 2007 from an Excel input file. This can be very
+useful for Development and Test environments (where you frequently rebuild the
+sites during the development process), as well as when migrating legacy Web
+sites to a Production environment -- or whenever a "quick and dirty" process is
+deemed sufficient for the business needs.
 
-I've done a number of MOSS 2007 migration projects over the last several years and developed a number of tools to migrate content into SharePoint. About a month ago, I utilized some existing code I had previously written to import pages from a simple Excel workbook -- rather than some other data source, such as a legacy database. The Excel workbook simply contains one or more worksheets, where each worksheet represents a particular group of pages with similar columns/fields. Each worksheet must have the following columns:
+I've done a number of MOSS 2007 migration projects over the last several years
+and developed a number of tools to migrate content into SharePoint. About a
+month ago, I utilized some existing code I had previously written to import
+pages from a simple Excel workbook -- rather than some other data source, such
+as a legacy database. The Excel workbook simply contains one or more worksheets,
+where each worksheet represents a particular group of pages with similar
+columns/fields. Each worksheet must have the following columns:
 
 - **WebUrl**
 - **PageUrlName**
 - **PageLayout**
 - **Title**
 
-Additional columns (such as **Page Content**) can also be specified -- including custom columns for content types that are not included out-of-the-box with MOSS 2007.
+Additional columns (such as **Page Content**) can also be specified -- including
+custom columns for content types that are not included out-of-the-box with MOSS
+2007.
 
-Note that I am not advocating installing the full Microsoft Office suite -- or even just Excel -- on your SharePoint servers just for the sake of importing a few hundred (or perhaps a few thousand) pages into your site. Rather, you would simply need to install the following on one of the servers in your farm:
+Note that I am not advocating installing the full Microsoft Office suite -- or
+even just Excel -- on your SharePoint servers just for the sake of importing a
+few hundred (or perhaps a few thousand) pages into your site. Rather, you would
+simply need to install the following on one of the servers in your farm:
 
 {{< reference title="2007 Office System Driver: Data Connectivity Components" linkHref="http://www.microsoft.com/downloads/details.aspx?familyid=7554F536-8C28-4598-9B72-EF94E038C891&displaylang=en" >}}
 
-Preferably, you would install this only on a backend "job/index" server that isn't servicing any user requests directly and then run the ImportPages.exe utility on that server -- or at least, that's what I thought originally.
+Preferably, you would install this only on a backend "job/index" server that
+isn't servicing any user requests directly and then run the ImportPages.exe
+utility on that server -- or at least, that's what I thought originally.
 
-The problem is that in order to utilize the currently available OLEDB providers (which are 32-bit), you have to force the process to run as 32-bit (by setting the platform target to **x86**). However, as noted in my previous post, you can't utilize the SharePoint API from a 32-bit process running on an x64 environment. Quite the paradox indeed.
+The problem is that in order to utilize the currently available OLEDB providers
+(which are 32-bit), you have to force the process to run as 32-bit (by setting
+the platform target to **x86**). However, as noted in my previous post, you
+can't utilize the SharePoint API from a 32-bit process running on an x64
+environment. Quite the paradox indeed.
 
-The solution that I came up with is to enhance the ImportPages.exe utility to support an Excel input file as well as a simple XML file that contains a serialized DataSet.
+The solution that I came up with is to enhance the ImportPages.exe utility to
+support an Excel input file as well as a simple XML file that contains a
+serialized DataSet.
 
-In other words, importing pages from Excel in an x64 environment requires a two-step process:
+In other words, importing pages from Excel in an x64 environment requires a
+two-step process:
 
 1. Convert the Excel input file into a simple XML file that contains a serialized DataSet. Note that this can be done on any environment (i.e. it does not necessarily have to be done on one of the SharePoint servers). In other words, you could have someone create the Excel input file on his or her laptop and then convert it to a DataSet XML file.
 2. Import the pages from the DataSet XML file. Note that this step must be performed on one of the SharePoint servers in the farm.
@@ -129,7 +158,8 @@ namespace Fabrikam.Demo.Tools.ConvertToDataSet
 }
 ```
 
-Note that the bulk of the code has been refactored into my `DataSetHelper` class:
+Note that the bulk of the code has been refactored into my `DataSetHelper`
+class:
 
 ```
 using System;
@@ -309,7 +339,8 @@ namespace Fabrikam.Demo.CoreServices
 }
 ```
 
-Similarly, the bulk of the code for the ImportPages.exe utility has been refactored into the `PageImporter` and `SharePointPublishingHelper` classes.
+Similarly, the bulk of the code for the ImportPages.exe utility has been
+refactored into the `PageImporter` and `SharePointPublishingHelper` classes.
 
 Here's the code for the `PageImporter` class:
 
@@ -568,5 +599,6 @@ namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
 }
 ```
 
-I'll cover the details of the `SharePointPublishingHelper` class in a [separate post](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class).
+I'll cover the details of the `SharePointPublishingHelper` class in a
+[separate post](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class).
 

@@ -14,11 +14,21 @@ tags: ["MOSS 2007", "WSS v3"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-There might be occasions where you need to "decode" the feature GUID in Windows SharePoint Services (WSS) v3 or Microsoft Office SharePoint Server (MOSS) 2007. For these (admittedly rare) situations, I have attached an Excel spreadsheet containing the out-of-the-box feature definitions from one of my MOSS 2007 Service Pack 1 (SP1) VMs.
+There might be occasions where you need to "decode" the feature GUID in Windows
+SharePoint Services (WSS) v3 or Microsoft Office SharePoint Server (MOSS) 2007.
+For these (admittedly rare) situations, I have attached an Excel spreadsheet
+containing the out-of-the-box feature definitions from one of my MOSS 2007
+Service Pack 1 (SP1) VMs.
 
-Note that there is no real "magic" in generating this list -- just a little code to enumerate the `SPFeatureDefinitionCollection` on the `SPFarm` object. However, you'll notice in the following code sample that a little effort is required to convert the GUID for a solution into the corresponding solution name (handling "hidden" solutions, such as Microsoft.Office.Excel.Server):
+Note that there is no real "magic" in generating this list -- just a little code
+to enumerate the `SPFeatureDefinitionCollection` on the `SPFarm` object.
+However, you'll notice in the following code sample that a little effort is
+required to convert the GUID for a solution into the corresponding solution name
+(handling "hidden" solutions, such as Microsoft.Office.Excel.Server):
 
 ```
 using System;
@@ -94,7 +104,9 @@ namespace EnumFeatureDefs
 }
 ```
 
-If you are wondering why you would ever need this kind of information, refer to my next post ([Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)).
+If you are wondering why you would ever need this kind of information, refer to
+my next post (
+[Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)).
 
 Here is the list in case you don't want to download the attached file:
 

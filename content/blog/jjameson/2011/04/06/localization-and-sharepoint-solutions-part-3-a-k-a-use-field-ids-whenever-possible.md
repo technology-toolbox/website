@@ -14,19 +14,40 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 >
 > [http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx)
 >
-> Since [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft), I have copied it here in case that blog ever goes away.
+> Since
+> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
+> I have copied it here in case that blog ever goes away.
 
-In [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1), I mentioned that one of the options for creating SharePoint sites in multiple languages is to install the corresponding SharePoint language packs prior to creating the sites. This is the most common deployment scenario for localization. [An alternative localization approach that we used years ago on the Agilent Technologies project involved localizing just the pages accessed by customers -- whereas "administration" pages, such as **Site Settings**, were kept in English due to requirements from the support team.]
+In
+[part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1),
+I mentioned that one of the options for creating SharePoint sites in multiple
+languages is to install the corresponding SharePoint language packs prior to
+creating the sites. This is the most common deployment scenario for
+localization. [An alternative localization approach that we used years ago on
+the Agilent Technologies project involved localizing just the pages accessed by
+customers -- whereas "administration" pages, such as **Site Settings**, were
+kept in English due to requirements from the support team.]
 
 > **Note**
 >
-> I believe the SharePoint product team expects you to install language packs prior to creating site collections that will contain localized sites. This is based on something I recall reading on TechNet.
+> I believe the SharePoint product team expects you to install language packs
+> prior to creating site collections that will contain localized sites. This is
+> based on something I recall reading on TechNet.
 >
-> However, I don't believe this is a realistic expectation -- at least not in my experience. Organizations should be able to expand their existing site collections to support additional languages over time as the need arises.
+> However, I don't believe this is a realistic expectation -- at least not in my
+> experience. Organizations should be able to expand their existing site
+> collections to support additional languages over time as the need arises.
 >
-> The only bug that I'm aware of when installing SharePoint language packs *after* creating the site collection (and subsequently creating localized sites) is that some items referenced by the SharePoint pages (e.g. CSS files) do not get added to the Style Library. However, you can simply upload these files yourself to workaround the issue.
+> The only bug that I'm aware of when installing SharePoint language packs *after*
+> creating the site collection (and subsequently creating localized sites) is that
+> some items referenced by the SharePoint pages (e.g. CSS files) do not get added
+> to the Style Library. However, you can simply upload these files yourself to
+> workaround the issue.
 
-One of the first things you'll discover when deploying custom code to a SharePoint environment that has language packs installed is whether or not your code accesses SharePoint objects in a "language-agnostic" manner. For example, consider the following code:
+One of the first things you'll discover when deploying custom code to a
+SharePoint environment that has language packs installed is whether or not your
+code accesses SharePoint objects in a "language-agnostic" manner. For example,
+consider the following code:
 
 ```
     SPListItem oListItem = ...
@@ -39,9 +60,16 @@ One of the first things you'll discover when deploying custom code to a SharePoi
     oListItem.Update();
 ```
 
-You might very well have code like this in your solution today and it has been running fine for years. However, let's suppose that your solution now attempts to perform the same operation on a SharePoint site created in the Spanish language. In this case, the code above will fail because the display name of the "Title" field is now localized in Spanish.
+You might very well have code like this in your solution today and it has been
+running fine for years. However, let's suppose that your solution now attempts
+to perform the same operation on a SharePoint site created in the Spanish
+language. In this case, the code above will fail because the display name of the
+"Title" field is now localized in Spanish.
 
-Fortunately, SharePoint has long provided the **[SPBuiltInFieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbuiltinfieldid%28v=office.12%29.aspx)** class that makes it easy to reference out-of-the-box fields regardless of the language of the SharePoint site containing the list item:
+Fortunately, SharePoint has long provided the **
+[SPBuiltInFieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbuiltinfieldid%28v=office.12%29.aspx)**
+class that makes it easy to reference out-of-the-box fields regardless of the
+language of the SharePoint site containing the list item:
 
 ```
     SPListItem oListItem = ...
@@ -51,9 +79,13 @@ Fortunately, SharePoint has long provided the **[SPBuiltInFieldId](http://msdn.m
     oListItem.Update();
 ```
 
-[Unfortunately, much of the sample code on MSDN does not show the use of **SPBuiltInFieldId** when referencing "built-in" fields. For example, just this morning I pulled the first code sample above from [http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem(v=office.12).aspx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem%28v=office.12%29.aspx). Is it any wonder that we SharePoint developers wrote "bad code" from the start ;-)]
+[Unfortunately, much of the sample code on MSDN does not show the use of **SPBuiltInFieldId** when referencing "built-in" fields. For example, just this morning I pulled the first code sample above from [http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem(v=office.12).aspx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem%28v=office.12%29.aspx).
+Is it any wonder that we SharePoint developers wrote "bad code" from the start
+;-)]
 
-Since I tend to work with large enterprise customers deploying Internet-facing sites with SharePoint, I work a lot with Publishing sites. Consequently, some time ago I wrote the following code:
+Since I tend to work with large enterprise customers deploying Internet-facing
+sites with SharePoint, I work a lot with Publishing sites. Consequently, some
+time ago I wrote the following code:
 
 ```
             ImageFieldValue pageImage =
@@ -73,7 +105,11 @@ Since I tend to work with large enterprise customers deploying Internet-facing s
                 ...
 ```
 
-This code subseqeuntly broke when running against localized SharePoint sites. Similar to the **SPBuiltInFieldId** class, the SharePoint Publishing infrastructure provides the **[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)** class for identifying fields like "Page Image":
+This code subseqeuntly broke when running against localized SharePoint sites.
+Similar to the **SPBuiltInFieldId** class, the SharePoint Publishing
+infrastructure provides the **
+[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)**
+class for identifying fields like "Page Image":
 
 ```
             ImageFieldValue pageImage =
@@ -92,9 +128,12 @@ This code subseqeuntly broke when running against localized SharePoint sites. Si
                 ...
 ```
 
-[Personally, I would have preferred this to be `PublishingFieldId.PageImage` instead, but it is what it is.]
+[Personally, I would have preferred this to be `PublishingFieldId.PageImage`
+instead, but it is what it is.]
 
-When creating your own content types and custom fields, I recommend following a similar pattern and providing a class that defines the field IDs that can subsequently be referenced in code. For example:
+When creating your own content types and custom fields, I recommend following a
+similar pattern and providing a class that defines the field IDs that can
+subsequently be referenced in code. For example:
 
 ```
 using System;
@@ -136,7 +175,8 @@ namespace Fabrikam.Demo.Web
 }
 ```
 
-The class above provides a convenient way of accessing custom fields defined in the following Elements.xml file:
+The class above provides a convenient way of accessing custom fields defined in
+the following Elements.xml file:
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>

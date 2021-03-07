@@ -9,25 +9,41 @@ categories: ["Development", "Infrastructure", "My System", "SharePoint"]
 tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]
 ---
 
-Section 5.8 in my sample [Installation Guide for SharePoint Server 2010 and Office Web Apps](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps) states the following:
+Section 5.8 in my sample
+[Installation Guide for SharePoint Server 2010 and Office Web Apps](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps)
+states the following:
 
 {{< blockquote "font-italic" >}}
 
-On each SharePoint server in the farm, append **C:\Program Files\Common Files\Microsoft Shared\web server extensions\14\BIN** to the **Path** environment variable (in order to run stsadm.exe from various folder locations without having to specify the full path).
+On each SharePoint server in the farm, append **C:\Program Files\Common
+Files\Microsoft Shared\web server extensions\14\BIN** to the **Path**
+environment variable (in order to run stsadm.exe from various folder locations
+without having to specify the full path).
 
 {{< /blockquote >}}
 
-Adding a folder to the Path environment variable is pretty basic stuff and it probably doesn't take more than 30 seconds to click through **Control Panel** → **System and Security** → **System** → **Advanced system settings** → **Environment Variables** (or one of the equivalent shortcuts) and add this to %Path%.
+Adding a folder to the Path environment variable is pretty basic stuff and it
+probably doesn't take more than 30 seconds to click through **Control Panel** →
+**System and Security** → **System** → **Advanced system settings** →
+**Environment Variables** (or one of the equivalent shortcuts) and add this to
+%Path%.
 
-Nevertheless, I prefer to use a PowerShell script to complete this task in a fraction of that time:
+Nevertheless, I prefer to use a PowerShell script to complete this task in a
+fraction of that time:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program Files\Common Files\Microsoft Shared\web server extensions\14\BIN" -EnvironmentVariableTarget "Machine"
+C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program
+Files\Common Files\Microsoft Shared\web server extensions\14\BIN"
+-EnvironmentVariableTarget "Machine"
 
 {{< console-block-end >}}
 
-In addition to the script to add folders to the Path environment variable (Add-PathFolders.ps1), my Toolbox folder also contains a corresponding script to get the folders in %Path% (Get-PathFolders.ps1) as well as remove folders from %Path% (Remove-PathFolders.ps1). However, I honestly haven't found much use for that last one. I created it primarily for the sake of completeness.
+In addition to the script to add folders to the Path environment variable
+(Add-PathFolders.ps1), my Toolbox folder also contains a corresponding script to
+get the folders in %Path% (Get-PathFolders.ps1) as well as remove folders from
+%Path% (Remove-PathFolders.ps1). However, I honestly haven't found much use for
+that last one. I created it primarily for the sake of completeness.
 
 > **Note**
 >

@@ -8,15 +8,20 @@ categories: ["Development", "SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010", "WSS v3"]
 ---
 
-In yesterday's Scrum for the project I started last Thursday, a brief discussion came up around writing SharePoint CAML queries.
+In yesterday's Scrum for the project I started last Thursday, a brief discussion
+came up around writing SharePoint CAML queries.
 
-One of the developers mentioned creating a view, adding "placeholders" for filter parameters, and then copying the CAML for the view into your code.
+One of the developers mentioned creating a view, adding "placeholders" for
+filter parameters, and then copying the CAML for the view into your code.
 
-I asked if anyone had ever used the U2U CAML Query Builder, but apparently they had never come across this before.
+I asked if anyone had ever used the U2U CAML Query Builder, but apparently they
+had never come across this before.
 
-I've been using it since the old MOSS 2007 days, and I still use it today with SharePoint 2010. It is far easier than trying to handcraft CAML queries.
+I've been using it since the old MOSS 2007 days, and I still use it today with
+SharePoint 2010. It is far easier than trying to handcraft CAML queries.
 
-Here is the link to this wonderful tool, in case you haven't come across it either:
+Here is the link to this wonderful tool, in case you haven't come across it
+either:
 
 {{< reference title="U2U CAML Query Builder for SharePoint 2003 and SharePoint 2007 (Windows Version)" linkHref="http://www.u2u.net/Tools/wincamlquerybuilder/CamlQueryBuilder.aspx" >}}
 
