@@ -370,7 +370,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -378,7 +377,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
           connectionStringName="FabrikamDemo" />
         ```
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    
     
     
         ```
@@ -464,7 +462,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     
     
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -477,7 +474,6 @@ In order to complete the configuration of claims-based authentication, it is  ne
 > Do not overwrite any existing entries in this Web.config file.
 
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-    
     
     
         ```

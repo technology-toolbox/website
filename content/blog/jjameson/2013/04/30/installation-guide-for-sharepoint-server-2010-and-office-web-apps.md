@@ -1928,7 +1928,6 @@ file:
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     		
     
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -1937,7 +1936,6 @@ file:
         ```
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     		
-    
     
         ```
         <add name="FabrikamSqlMembershipProvider"
@@ -2045,7 +2043,6 @@ Extranet Web application:
     2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
     		
     
-    
         ```
         <add name="FabrikamSqlRoleProvider"
           type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -2060,7 +2057,6 @@ Extranet Web application:
 
     3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
     		
-    
     
         ```
         <add name="FabrikamSqlMembershipProvider"

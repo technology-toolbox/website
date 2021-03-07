@@ -98,7 +98,6 @@ namespace Fabrikam.Demo.CoreServices
         {
         }
 
-
         #region ISerializable Members
 
         /// <summary>

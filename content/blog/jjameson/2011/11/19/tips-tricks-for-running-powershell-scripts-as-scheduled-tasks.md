@@ -41,16 +41,13 @@ PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
 
-
     Directory: C:\Users\jjameson\AppData\Local\Temp
-
 
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a---        11/19/2011   5:37 AM          6 Temp.txt
 Copying file...
 Success
-
 
 PS C:\Users\jjameson\AppData\Local\Temp>
 ```
@@ -206,7 +203,6 @@ and then running the scheduled task results in the following Temp.log file:
 ```
 
     Directory: C:\Users\jjameson\AppData\Local\Temp
-
 
 Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----

@@ -122,7 +122,6 @@ namespace Fabrikam.Demo.AdminConsole
                     "d");
             }
 
-
             Logger.LogDebug(
                 CultureInfo.InvariantCulture,
                 "Computing square root of {0}...",

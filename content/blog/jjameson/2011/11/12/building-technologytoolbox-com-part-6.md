@@ -1264,7 +1264,6 @@ for Web scraping the fake Ajax request used to retrieve the comments:
                     index1,
                     index2 - index1);
 
-
                 feedbackHtml = feedbackHtml.Replace(@"\/", "/");
                 feedbackHtml = feedbackHtml.Replace(@"\'", "'");
                 feedbackHtml = feedbackHtml.Replace("&#39;", "'");
