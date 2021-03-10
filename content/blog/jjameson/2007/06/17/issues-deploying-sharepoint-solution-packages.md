@@ -56,9 +56,9 @@ with WSPs). It turns out that I needed to omit the {{< kbd "url" >}} parameter:
 stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
 ```
 
-The reason why the PublishingLayouts solution would not deploy with the
-{{< kbd "url" >}} parameter is because, unlike the other features, there was no
-assembly generated for the PublishingLayouts (since it was pure content).
+The reason why the PublishingLayouts solution would not deploy with the {{< kbd
+"url" >}} parameter is because, unlike the other features, there was no assembly
+generated for the PublishingLayouts (since it was pure content).
 
 I also encountered the following error when trying to deploy our custom
 Workflows feature:

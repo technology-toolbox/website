@@ -111,8 +111,8 @@ I use similar token parsing of the output from the **
 [date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)**
 and
 [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx)
-system commands to generate the name of the backup file (e.g.
-{{< sample-output "Backup-differential-2009-11-09-12-30-AM.bkf" >}}).
+system commands to generate the name of the backup file (e.g. {{< sample-output
+"Backup-differential-2009-11-09-12-30-AM.bkf" >}}).
 
 Also note that the
 [type of backup](http://technet.microsoft.com/en-us/library/cc784306%28WS.10%29.aspx)

@@ -81,7 +81,8 @@ completed with the expected results:
 
 {{< console-block-start >}}
 
-C:\&gt;{{< kbd "netsh advfirewall firewall set rule group=\"Remote Volume Management\" new enable=yes" >}}
+C:\&gt;{{< kbd
+"netsh advfirewall firewall set rule group=\"Remote Volume Management\" new enable=yes" >}}
 
 {{< sample-block >}}
 

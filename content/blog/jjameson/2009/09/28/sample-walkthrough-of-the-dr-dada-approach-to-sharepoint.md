@@ -301,9 +301,8 @@ and adding this new target as a dependency of the build:
   </Target>
 ```
 
-The next step is to build and deploy the solution. I start by pressing
-{{< kbd "CTRL+SHIFT+B" >}} to compile the solution and create the corresponding
-WSP.
+The next step is to build and deploy the solution. I start by pressing {{< kbd
+"CTRL+SHIFT+B" >}} to compile the solution and create the corresponding WSP.
 
 ### Installing the Solution and Activating the Features
 
@@ -327,17 +326,17 @@ Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 
 ```
 
-C:\Windows\system32&gt;{{< kbd "set FABRIKAM_FABWEB_URL=http://fabweb-local"
+C:\Windows\system32&gt;{{< kbd
+"set FABRIKAM_FABWEB_URL=http://fabweb-local" >}}
 
-> }}
+C:\Windows\system32&gt;{{< kbd
+"set FABRIKAM_BUILD_CONFIGURATION=Debug" >}}
 
-C:\Windows\system32&gt;{{< kbd "set FABRIKAM_BUILD_CONFIGURATION=Debug"
+C:\Windows\system32&gt;{{< kbd
+"cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts" >}}
 
-> }}
-
-C:\Windows\system32&gt;{{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts" >}}
-
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Add Solution.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd "\"Add Solution.cmd\"" >}}
 
 ```
 Adding Fabrikam.Demo.Publishing (Debug)...
@@ -347,7 +346,8 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solution.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd "\"Deploy Solution.cmd\"" >}}
 
 ```
 Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
@@ -357,7 +357,8 @@ Operation completed successfully.
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Features.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd "\"Activate Features.cmd\"" >}}
 
 ```
 Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
@@ -797,7 +798,8 @@ after updating the assemblies in the GAC:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd "\"GAC Assemblies.cmd\"" >}}
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -807,7 +809,9 @@ Assembly successfully added to the cache
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd
+"C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
 
 ```
 "SharePoint - foobar-local80" successfully recycled

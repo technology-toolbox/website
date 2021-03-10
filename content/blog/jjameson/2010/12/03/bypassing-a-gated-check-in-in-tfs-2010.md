@@ -24,13 +24,12 @@ because after following the steps I provided, he encountered a problem due to
 the fact that he had previously configured a gated check-in build that included
 the folder containing the AssemblyVersionInfo files.
 
-The problem is that after you create a gated check-in build definition, the
-{{< kbd "tf.exe checkin" >}} command does not actually check-in your changes,
-but rather shelves your changes until the gated check-in validates the changeset
-(at which point, the files are checked in on your behalf). In this case, the
-{{< kbd "tf.exe checkin" >}} command does not return 0 and the original build
-(that was attempting to check-in the AssemblyVersionInfo files) consequently
-fails.
+The problem is that after you create a gated check-in build definition, the {{<
+kbd "tf.exe checkin" >}} command does not actually check-in your changes, but
+rather shelves your changes until the gated check-in validates the changeset (at
+which point, the files are checked in on your behalf). In this case, the {{< kbd
+"tf.exe checkin" >}} command does not return 0 and the original build (that was
+attempting to check-in the AssemblyVersionInfo files) consequently fails.
 
 Fortunately, the Visual Studio folks have provided a way to bypass gated
 check-ins (provided a user has been granted permission to do so). Therefore, to
@@ -46,8 +45,8 @@ To grant permission to bypass a gated check-in:
 4. In the **{Project} Security** window, in the list of permissions, for the **Override check-in validation by build** permission, click the checkbox in the **Allow** column, and then click **OK**.
 
 Then you simply need to modify the IncrementAssemblyVersion.proj file (described
-in my previous post) to specify the {{< kbd "/bypass" >}} option with the
-{{< kbd "tf.exe checkin" >}} command.
+in my previous post) to specify the {{< kbd "/bypass" >}} option with the {{<
+kbd "tf.exe checkin" >}} command.
 
 ```
 <Exec

@@ -45,10 +45,10 @@ pressing {{< kbd "W" >}} (to scroll the list of processes down to w3wp.exe),
 followed by two quick presses of the {{< kbd "Enter" >}} key -- doesn't work
 anymore because we might attach to the wrong worker process. Even worse, we
 might not be able to quickly tell which w3wp.exe instance to attach to without
-expanding the **User Name** column -- or even worse still, having to use
-{{< kbd "iisapp.vbs" >}} (in Windows Server 2003) or
-{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe list apppool" >}} (in Windows
-Server 2008) to determine which process to attach to.]
+expanding the **User Name** column -- or even worse still, having to use {{< kbd
+"iisapp.vbs" >}} (in Windows Server 2003) or {{< kbd
+"C:\Windows\System32\inetsrv\appcmd.exe list apppool" >}} (in Windows Server
+2008) to determine which process to attach to.]
 
 Don't fret...attaching to the right worker process to debug your SharePoint code
 *can* be very easy.
@@ -119,7 +119,8 @@ pool:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd "\"GAC Assemblies.cmd\"" >}}
 
 ```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
@@ -129,7 +130,9 @@ Assembly successfully added to the cache
 Done
 ```
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{<
+kbd
+"C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
 
 ```
 {{< sample-output "\"SharePoint - foobar-local80\" successfully recycled" >}}

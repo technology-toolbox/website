@@ -88,11 +88,10 @@ critical in light of the shift to TDD.
 If you right-click a project in Visual Studio, you'll see the **Unload Project**
 option way down near the bottom of the context menu. When you unload a project,
 Visual Studio completely ignores the project (and all of the items in the
-project). Unloaded projects are not compiled when you press
-{{< kbd "CTRL+SHIFT+B" >}}, which can substantially reduce your incremental
-build time, thereby making you a much more productive TDD developer! You will
-also find the time required to open the solution can be greatly reduced by
-unloading projects.
+project). Unloaded projects are not compiled when you press {{< kbd
+"CTRL+SHIFT+B" >}}, which can substantially reduce your incremental build time,
+thereby making you a much more productive TDD developer! You will also find the
+time required to open the solution can be greatly reduced by unloading projects.
 
 Whenever you need to change something in an unloaded project, simply right-click
 the project and click **Reload Project**.

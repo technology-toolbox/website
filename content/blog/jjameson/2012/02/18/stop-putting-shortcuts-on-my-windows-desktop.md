@@ -11,10 +11,10 @@ tags: ["My System", "Windows 7"]
 This morning I noticed a new shortcut for iTunes on my Windows desktop (as a
 result of installing a patch from Apple yesterday).
 
-After a fleeting moment of irritation, I selected the icon, pressed the
-{{< kbd "Delete" >}} key, and subsequently entered my administrator credentials
-to purge the shortcut once again. (I'm sure I deleted this shortcut before when
-I originally installed iTunes back in December.)
+After a fleeting moment of irritation, I selected the icon, pressed the {{< kbd
+"Delete" >}} key, and subsequently entered my administrator credentials to purge
+the shortcut once again. (I'm sure I deleted this shortcut before when I
+originally installed iTunes back in December.)
 
 I don't think I am alone in feeling irritated when applications like iTunes,
 Adobe Reader, et al. automatically drop icons onto my desktop.

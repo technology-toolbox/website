@@ -63,8 +63,8 @@ Release branches in the Dow Collaboration team project and now I want to clean
 up my local workspace (in other words, I only need the Main branch).
 
 I start by invoking PowerShell from a Visual Studio command prompt, changing to
-the root folder for the project, and then storing the output from the
-{{< kbd "tf dir" >}} command in a variable:
+the root folder for the project, and then storing the output from the {{< kbd
+"tf dir" >}} command in a variable:
 
 ```
 PowerShell

@@ -210,9 +210,9 @@ Mode                LastWriteTime     Length Name
 
 {{< /log-excerpt >}}
 
-Notice the log file doesn't show the `Write-Host` output (e.g.
-"{{< sample-output "Changing to TEMP folder..." >}}") -- which would make it
-much more difficult to troubleshoot an error (or bug) in a lengthy script.
+Notice the log file doesn't show the `Write-Host` output (e.g. "{{<
+sample-output "Changing to TEMP folder..." >}}") -- which would make it much
+more difficult to troubleshoot an error (or bug) in a lengthy script.
 
 ### Use a command file to start PowerShell script and create log file
 
@@ -230,10 +230,10 @@ EXIT %ERRORLEVEL%
 Notice the use of `$LASTEXITCODE` and `EXIT %ERRORLEVEL%` in order to "bubble
 up" any non-zero return code from PowerShell to the **Last Run Result** column
 in Task Scheduler. In other words, when an error occurs while running the
-PowerShell script, we don't want the scheduled task to report
-"{{< sample-output "The operation completed successfully. (0x0)" >}}"; rather it
-should indicate that something bad happpened (which would trigger us to examine
-the corresponding log file to investigate the issue).
+PowerShell script, we don't want the scheduled task to report "{{< sample-output
+"The operation completed successfully. (0x0)" >}}"; rather it should indicate
+that something bad happpened (which would trigger us to examine the
+corresponding log file to investigate the issue).
 
 I also use "`2>&1`" to redirect `stderr` to `stdout` to ensure error messages
 are written to the log file as well as the normal output. This is a trick I
@@ -264,9 +264,8 @@ The properties for the corresponding scheduled task are as follows:
     - **Start in:** C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts
 
 Here is a sample log file (as viewed in Notepad), which shows the `Write-Host`
-messages as well as other output (e.g.
-"{{< sample-output "processed file: C:\inetpub\wwwroot\..." >}}" from
-icacls.exe):
+messages as well as other output (e.g. "{{< sample-output
+"processed file: C:\inetpub\wwwroot\..." >}}" from icacls.exe):
 
 {{< log-excerpt >}}
 

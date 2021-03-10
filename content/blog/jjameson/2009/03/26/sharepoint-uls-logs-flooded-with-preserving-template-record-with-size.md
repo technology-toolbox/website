@@ -91,10 +91,10 @@ del /q "%LogFolder%\*.log"
 ```
 
 Thus whenever I am greeted with the low disk space notification message, I
-simply open up my Toolbox, double-click this script, and then press
-{{< kbd "Enter" >}} to quickly purge my log files. Once I do this, I see that
-the free space on my C: drive goes from 100-200MB of free space to around 1.4GB
-of free space.
+simply open up my Toolbox, double-click this script, and then press {{< kbd
+"Enter" >}} to quickly purge my log files. Once I do this, I see that the free
+space on my C: drive goes from 100-200MB of free space to around 1.4GB of free
+space.
 
 Not exactly what I would call "elegant", but as I've repeatedly said before, I
 like to keep things simple.
