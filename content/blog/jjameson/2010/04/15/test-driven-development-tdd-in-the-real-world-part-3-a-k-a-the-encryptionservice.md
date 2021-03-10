@@ -474,8 +474,7 @@ as demonstrated below:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;{{<
-kbd "sn -Tp Fabrikam.Demo.Security.DeveloperTests.dll" >}}
+C:\NotBackedUp\Fabrikam\Demo\Main\Source\Security\DeveloperTests\bin\Debug&gt;{{< kbd "sn -Tp Fabrikam.Demo.Security.DeveloperTests.dll" >}}
 
 {{< sample-block >}}
 

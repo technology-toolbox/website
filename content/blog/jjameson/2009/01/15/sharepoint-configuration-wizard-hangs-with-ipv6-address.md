@@ -158,10 +158,10 @@ Approximate round trip times in milli-seconds:
 I first tried disabling IPv6 in the properties of each network connection
 (meaning the LAN connection and the VPN connection), by clearing the checkbox
 for **Internet Protocol Version 6 (TCP/IPv6**). However, I found that pinging
-the machine name resulted in the same (IPv6) address. Using {{< kbd "ipconfig
-/all" >}}, I found this was set on one of the "pseudo interfaces" that are new
-in Vista and Windows Server 2008 -- specifically, the **Teredo Tunneling
-Pseudo-Interface**.
+the machine name resulted in the same (IPv6) address. Using
+{{< kbd "ipconfig /all" >}}, I found this was set on one of the "pseudo
+interfaces" that are new in Vista and Windows Server 2008 -- specifically, the
+**Teredo Tunneling Pseudo-Interface**.
 
 Rather than blowing the rest of my afternoon trying to
 [disable IPv6 in Windows Server 2008 through registry hacks](http://www.microsoft.com/technet/network/ipv6/ipv6faq.mspx),

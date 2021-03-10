@@ -45,11 +45,10 @@ It's definitely WSPBuilder. The solution contains folders for WSPBuilder\_x64
 and WSPBuilder\_x86 (which contain executables, a config file, and a couple of
 other assemblies).
 
-The WSP packages are built whenever I build the solution ({{< kbd "CTRL+SHIFT+B"
-
-> }}) via MSBuild project files (including a common
-> SharePoint.WSPBuilder.targets). Is this not the typical way people use
-> WSPBuilder?
+The WSP packages are built whenever I build the solution
+({{< kbd "CTRL+SHIFT+B" >}}) via MSBuild project files (including a common
+SharePoint.WSPBuilder.targets). Is this not the typical way people use
+WSPBuilder?
 
 {{< /blockquote >}}
 3. <cite>Keutmann</cite>

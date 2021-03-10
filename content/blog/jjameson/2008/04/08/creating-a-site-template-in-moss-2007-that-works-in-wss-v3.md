@@ -38,12 +38,13 @@ would work with WSS v3. What is it they say about assumptions again? Never mind,
 don't answer that.
 
 To investigate the issue, I "spun up" a new VM based on my SysPrep'ed image of
-Windows Server 2003 SP2, joined the new VM to my domain, ran {{< kbd "wuauclt
-/detectnow" >}} a couple of times to install the 40 or so hotfixes that have
-been released for Windows Server 2003 since SP2, and then installed WSS with
-SP1. Sure enough, about an hour after discovering the error reported by Dragan,
-I was able to repro the problem. [Thank goodness for Virtual Server, SysPrep,
-slipstreamed service packs, and a local intranet location of Windows Update!]
+Windows Server 2003 SP2, joined the new VM to my domain, ran
+{{< kbd "wuauclt /detectnow" >}} a couple of times to install the 40 or so
+hotfixes that have been released for Windows Server 2003 since SP2, and then
+installed WSS with SP1. Sure enough, about an hour after discovering the error
+reported by Dragan, I was able to repro the problem. [Thank goodness for Virtual
+Server, SysPrep, slipstreamed service packs, and a local intranet location of
+Windows Update!]
 
 Digging into the SharePoint logs I noticed the following:
 

@@ -162,9 +162,9 @@ Note that a little more JavaScript is required than I would actually prefer in
 order to avoid handle a couple of interesting scenarios.
 
 The first scenario is where a user presses the {{< kbd "Enter" >}} key instead
-of clicking the **Search** button. Depending on the browser, pressing the {{<
-kbd "Enter" >}} key in a form element may submit the form. However, since the
-Bing search feature is bypassing the form submission (and just redirecting
+of clicking the **Search** button. Depending on the browser, pressing the
+{{< kbd "Enter" >}} key in a form element may submit the form. However, since
+the Bing search feature is bypassing the form submission (and just redirecting
 directly to the search results page), we don't want to postback to the server.
 Otherwise, we would simply refresh the current page (and lose any search
 keywords specified by the user).

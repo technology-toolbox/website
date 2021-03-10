@@ -36,8 +36,8 @@ specified number of characters, we want to apply a little "intelligence" -- such
 as trying to break on complete words, and adding an ellipsis (...) to the end.
 
 For example, if we pass in `"Some really long string with lots of characters"`
-and specify to truncate the string to 15 characters, then we should get back {{<
-sample-output "\"Some really...\"" >}}.
+and specify to truncate the string to 15 characters, then we should get back
+{{< sample-output "\"Some really...\"" >}}.
 
 [Note that if you are trying to conserve real estate on a Web page, there is actually [a much better way of doing this with CSS](/blog/jjameson/2009/11/01/constraining-tables-with-css),
 so please don't think of this scenario in that context.]

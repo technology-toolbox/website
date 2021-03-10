@@ -68,9 +68,8 @@ changes, as indicated by the empty list in the **Git Pending Changes** window?
 might be the issue.]
 
 The correct answer seems to be "this is a bug in the Git Source Control Provider
-for Visual Studio." I say this based on the output from "{{< kbd "git status"
-
-> }}":
+for Visual Studio." I say this based on the output from
+"{{< kbd "git status" >}}":
 
 ```
 $ {{< kbd "cd /c/NotBackedUp/Subtext/" >}}

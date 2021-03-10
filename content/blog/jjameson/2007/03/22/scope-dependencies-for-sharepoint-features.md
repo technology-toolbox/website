@@ -70,8 +70,7 @@ as smoothly as I had expected...
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Activate Feature.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Feature.cmd\"" >}}
 
 {{< sample-block >}}
 
@@ -94,8 +93,7 @@ deployment) and...
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Project1\Main\PublicationContentTypes\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Install Feature.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Project1\Main\PublicationContentTypes\DeploymentFiles\Scripts&gt;{{< kbd "\"Install Feature.cmd\"" >}}
 
 {{< sample-block >}}
 

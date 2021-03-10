@@ -56,19 +56,19 @@ Using a simple [stopwatch utility](http://www.online-stopwatch.com), I just
 timed the build for the new solution after adding a comment to a unit test. I
 chose this scenario because there are no dependencies on the unit test project
 (and thus you would expect the incremental build time to be very short). On the
-contrary, the build took *1 minute 52 seconds* from the time I pressed {{< kbd
-"CTRL+SHIFT+B" >}} to the time I received the {{< sample-output "\"Build: 30
-succeeded or up-to-date, 0 failed, 0 skipped\"" >}} message in the **Output**
-window.
+contrary, the build took *1 minute 52 seconds* from the time I pressed
+{{< kbd "CTRL+SHIFT+B" >}} to the time I received the
+{{< sample-output "\"Build: 30 succeeded or up-to-date, 0 failed, 0 skipped\"" >}}
+message in the **Output** window.
 
 For comparison purposes, I fired up the solution from my previous project and
 performed a similar test (i.e. timing the build after adding a comment to a unit
 test). For this solution, the build took a mere *28 seconds* from the time I
-pressed {{< kbd "CTRL+SHIFT+B" >}} to the time I received the {{< sample-output
-"\"Build: 51 succeeded, 0 failed, 1 up-to-date, 0 skipped\"" >}} message in the
-**Output** window. While I'd certainly like it if this were even less than 28
-seconds, I'm also trying to be realistic in light of the thousands of files that
-comprise the solution.
+pressed {{< kbd "CTRL+SHIFT+B" >}} to the time I received the
+{{< sample-output "\"Build: 51 succeeded, 0 failed, 1 up-to-date, 0 skipped\"" >}}
+message in the **Output** window. While I'd certainly like it if this were even
+less than 28 seconds, I'm also trying to be realistic in light of the thousands
+of files that comprise the solution.
 
 Now, I'll be the first to admit that this is somewhat of an
 ["apples to oranges"](http://en.wikipedia.org/wiki/Apples_to_oranges)
@@ -102,10 +102,10 @@ four times longer to incrementally build! Ouch.
 As I told my new teammates shortly after joining the project, WspBuilder doesn't
 have the "smarts" to determine that no work needs to be done when nothing has
 changed in any of the items included in a WSP (i.e. there is no need to rebuild
-the WSP when you press {{< kbd "CTRL+SHIFT+B" >}} and then {{< kbd
-"CTRL+SHIFT+B" >}} again immediately after the previous build completed). This
-is effectively the same as using post-build events in Visual Studio to invoke
-makecab.exe to package the WSP.
+the WSP when you press {{< kbd "CTRL+SHIFT+B" >}} and then
+{{< kbd "CTRL+SHIFT+B" >}} again immediately after the previous build
+completed). This is effectively the same as using post-build events in Visual
+Studio to invoke makecab.exe to package the WSP.
 
 As I pointed out about a year ago, there is actually a much
 [better way of building WSPs (and CAB files)](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files)
@@ -121,12 +121,11 @@ mean *WSP*.
 
 However, offloading this effort from the development team comes at a very steep
 price for larger solutions (i.e. lengthy build times). In speaking with other
-team members about this, most of them said they avoided {{< kbd "CTRL+SHIFT+B"
-
-> }} and instead would right-click on a specific project and then click **Build**
-> in order to avoid having to wait for the whole solution to build. They would
-> then manually copy files to the GAC and/or the "SPDir12" folder
-> (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12).
+team members about this, most of them said they avoided
+{{< kbd "CTRL+SHIFT+B" >}} and instead would right-click on a specific project
+and then click **Build** in order to avoid having to wait for the whole solution
+to build. They would then manually copy files to the GAC and/or the "SPDir12"
+folder (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12).
 
 Up until a few weeks ago, they were also excluding the WspBuilder projects from
 the **Debug** configuration (to minimize build times). However, I found this to

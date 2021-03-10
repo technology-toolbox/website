@@ -53,8 +53,7 @@ rule to allow Microsoft Management Console:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf
-/mmc:enable" >}}
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mmc:enable" >}}
 
 {{< sample-block >}}
 
@@ -89,8 +88,7 @@ Anonymous Logon remote DCOM access:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf
-/mode:client /anondcom:grant" >}}
+C:\NotBackedUp\Public\Toolbox\HVRemote&gt;{{< kbd "cscript hvremote.wsf /mode:client /anondcom:grant" >}}
 
 {{< sample-block >}}
 

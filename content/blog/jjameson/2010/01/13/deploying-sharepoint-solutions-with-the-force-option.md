@@ -48,8 +48,7 @@ following example where the deployment failed:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Deploy Solutions.cmd\"" >}}
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
 
 {{< sample-block >}}
 
@@ -99,14 +98,13 @@ environment variable and then redeploy the solutions:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "set FORCE_OPTION=-force" >}}
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Retract Solutions.cmd\"" >}}
-...
-C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Deploy Solutions.cmd\"" >}}
-...
+C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "set FORCE_OPTION=-force"
+
+> }}
+> C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Retract Solutions.cmd\"" >}}
+> ...
+> C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solutions.cmd\"" >}}
+> ...
 
 {{< console-block-end >}}
 
