@@ -79,7 +79,10 @@ End Sub
 
 > **Update (2010-08-25)**
 >
-> In my original post, the `If` block in **CollapseItem** was mistakenly nested inside the `For Each` loop. While this worked (I've been using it that way for years), it certainly wasn't optimal and, more importantly, it also was the source of some confusion (see Keith Robertson's comment on this post).
+> In my original post, the `If` block in **CollapseItem** was mistakenly nested
+> inside the `For Each` loop. While this worked (I've been using it that way for
+> years), it certainly wasn't optimal and, more importantly, it also was the
+> source of some confusion (see Keith Robertson's comment on this post).
 
 While it is great that Visual Studio "synchronizes" the **Solution Explorer**
 window to show the current file in the solution hierarchy, in large Visual

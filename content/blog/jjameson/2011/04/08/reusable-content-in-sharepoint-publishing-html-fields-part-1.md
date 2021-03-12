@@ -87,7 +87,11 @@ list item shown in Figure 1 above.
 
 > **Important**
 >
-> By default, the **Reusable Content** list is configured for content approval. Consequently when you add list items (either programmatically or through the site), the **Approval Status** defaults to **Pending**. In order for users with limited access to see the content as expected, a published version of the **Reusable Content** list item must be available.
+> By default, the **Reusable Content** list is configured for content approval.
+> Consequently when you add list items (either programmatically or through the
+> site), the **Approval Status** defaults to **Pending**. In order for users
+> with limited access to see the content as expected, a published version of the
+> **Reusable Content** list item must be available.
 
 Note that this post was primarily intended to introduce a scenario for using the
 reusable content feature in SharePoint.

@@ -136,7 +136,12 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 
 > **Update (2010-04-27)**
 >
-> After upgrading to Visual Studio 2010, I discovered that "\par" tags in the RTF were not being converted to new lines in David's original code (because Visual Studio 2008 didn't emit "\par" tags in the RTF, but rather "\r\n"). Consequently I updated the code below to work with Visual Studio 2010 (similar to the changes described in [David's updated post from last December](http://blogs.msdn.com/delay/archive/2009/12/20/blogging-code-samples-stays-easy-update-to-free-convertclipboardrtftohtmltext-tool-and-source-code-for-visual-studio-2010.aspx)).
+> After upgrading to Visual Studio 2010, I discovered that "\par" tags in the
+> RTF were not being converted to new lines in David's original code (because
+> Visual Studio 2008 didn't emit "\par" tags in the RTF, but rather "\r\n").
+> Consequently I updated the code below to work with Visual Studio 2010 (similar
+> to the changes described in
+> [David's updated post from last December](http://blogs.msdn.com/delay/archive/2009/12/20/blogging-code-samples-stays-easy-update-to-free-convertclipboardrtftohtmltext-tool-and-source-code-for-visual-studio-2010.aspx)).
 
 Here's the updated code that I now use for my Rtf2Html.exe utility:
 

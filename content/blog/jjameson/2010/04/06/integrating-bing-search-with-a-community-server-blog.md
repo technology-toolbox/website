@@ -39,7 +39,14 @@ want to see the results from, say, just my blog.
 
 > **Update (2009-04-20)**
 >
-> After [switching my blog from the **default** Community Server template](/blog/jjameson/2010/04/19/new-blog-template-and-styling) to the **Simple - right sidebar** template, I discovered that the MSDN team had already updated that template to replace the default "Search All Blogs" functionality with the "Search This Blog" functionality that one would expect (with a much nicer user experience, I might add). Consequently I removed my custom search box. Apparently, I should have abandoned the default CS template a long time ago ;-)
+> After
+> [switching my blog from the **default** Community Server template](/blog/jjameson/2010/04/19/new-blog-template-and-styling)
+> to the **Simple - right sidebar** template, I discovered that the MSDN team
+> had already updated that template to replace the default "Search All Blogs"
+> functionality with the "Search This Blog" functionality that one would expect
+> (with a much nicer user experience, I might add). Consequently I removed my
+> custom search box. Apparently, I should have abandoned the default CS template
+> a long time ago ;-)
 
 After digging around a little in the
 [Bing Developer Center](http://www.bing.com/developers), I found some
@@ -183,7 +190,15 @@ your posts without having to specify a site filter each time.
 
 > **Update**
 >
-> Right after I published this post, I discovered that Bing does not preserve the "q1" querystring parameter when submitting additional searches. In other words, if you search for "faceted search" from the search box on my blog, then everything works as expected (i.e. the results are limited to my blog posts); however if you subsequently change the search keywords on the Bing search results page (presumably because you want to search for something else on my blog), then the site filter (originally specified with the "q1" query string parameter) is lost and therefore you get results from the entire Web. Bummer.
+> Right after I published this post, I discovered that Bing does not preserve
+> the "q1" querystring parameter when submitting additional searches. In other
+> words, if you search for "faceted search" from the search box on my blog, then
+> everything works as expected (i.e. the results are limited to my blog posts);
+> however if you subsequently change the search keywords on the Bing search
+> results page (presumably because you want to search for something else on my
+> blog), then the site filter (originally specified with the "q1" query string
+> parameter) is lost and therefore you get results from the entire Web. Bummer.
 >
-> To resolve this issue, I modified the JavaScript to simply append the site filter to the "q" query string parameter instead.
+> To resolve this issue, I modified the JavaScript to simply append the site
+> filter to the "q" query string parameter instead.
 

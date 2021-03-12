@@ -90,7 +90,8 @@ the Test team (in order to create test cases).
 
 > **Note**
 >
-> The daily build provides a "heartbeat" of the development effort that can be monitored regularly by all team members -- not just the Development team.
+> The daily build provides a "heartbeat" of the development effort that can be
+> monitored regularly by all team members -- not just the Development team.
 
 As this cycle repeats (as more features are implemented in the solution), the
 Test team -- in conjunction with the Development team -- identifies a specific

@@ -15,7 +15,9 @@ or if you've read one of the
 created on the [ELMAH project](http://code.google.com/p/elmah) -- then you might
 be wondering:
 
-> Why didn't Jeremy just "punt" the configuration-based filtering (after discovering the issues) and instead create an ELMAH filter in code (i.e. programmatically)?
+> Why didn't Jeremy just "punt" the configuration-based filtering (after
+> discovering the issues) and instead create an ELMAH filter in code (i.e.
+> programmatically)?
 
 Well, I actually tried that approach, but I didn't get very far down that road
 before encountering another blocking issue.

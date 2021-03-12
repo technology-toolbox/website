@@ -41,7 +41,11 @@ dismiss the popup window.
 
 > **Note**
 >
-> Web Parts that derive from **ModalPopupWebPart** are responsible for displaying the main content of the popup window. This is typically done by overriding the [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx) method to add controls to the **ModalPanel**.
+> Web Parts that derive from **ModalPopupWebPart** are responsible for
+> displaying the main content of the popup window. This is typically done by
+> overriding the
+> [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx)
+> method to add controls to the **ModalPanel**.
 
 The following figure illustrates the various UI elements of a modal popup
 window.

@@ -490,7 +490,11 @@ separate method:
 
 > **Note**
 >
-> You might have chosen to use LINQ instead of the `foreach` loop to verify the list of scorecard items all refer to the same KPI and return it. Just be sure you account for scenarios such as when the KPI names specified by the scorecard items differ only by case, or when the list of scorecard items is empty.
+> You might have chosen to use LINQ instead of the `foreach` loop to verify the
+> list of scorecard items all refer to the same KPI and return it. Just be sure
+> you account for scenarios such as when the KPI names specified by the
+> scorecard items differ only by case, or when the list of scorecard items is
+> empty.
 
 The original version of the **GetScorecardDetailTable** then simply needs to
 filter the scorecard items based on the specified KPI name (which is really easy
@@ -528,7 +532,14 @@ overload of the method (shown above):
 
 > **Important**
 >
-> Note that by replacing the original approach of filtering the scorecard items (using a DataView) with a LINQ query expression, we've made a substantial improvement in the code. For example, if we were to rename the KpiName column in the typed DataSet without making the corresponding change to the filtering code, we would get a compile-time error instead of a run-time error. When using the original DataView approach, a similar mistake would not be caught at compile-time (because the column name is embedded in the RowFilter string value).
+> Note that by replacing the original approach of filtering the scorecard items
+> (using a DataView) with a LINQ query expression, we've made a substantial
+> improvement in the code. For example, if we were to rename the KpiName column
+> in the typed DataSet without making the corresponding change to the filtering
+> code, we would get a compile-time error instead of a run-time error. When
+> using the original DataView approach, a similar mistake would not be caught at
+> compile-time (because the column name is embedded in the RowFilter string
+> value).
 
 Let's wrap this up with a few key points:
 

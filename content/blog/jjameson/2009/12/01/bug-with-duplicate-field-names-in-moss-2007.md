@@ -66,7 +66,12 @@ Next, I created the ContentTypes.xml file:
 
 > **Note**
 >
-> The really long ContentType ID above specifies that Announcement Page inherits from the out-of-the-box Welcome Page. I vaguely recall reading somebody's blog where he or she stated that you shouldn't inherit from the OOTB page types. However, I don't recall the justification -- if there even was one. I haven't encountered any problems with this approach and thus haven't seen any compelling reason to stop doing so.
+> The really long ContentType ID above specifies that Announcement Page inherits
+> from the out-of-the-box Welcome Page. I vaguely recall reading somebody's blog
+> where he or she stated that you shouldn't inherit from the OOTB page types.
+> However, I don't recall the justification -- if there even was one. I haven't
+> encountered any problems with this approach and thus haven't seen any
+> compelling reason to stop doing so.
 
 Then I created a page layout for the new Announcement Page content type.
 

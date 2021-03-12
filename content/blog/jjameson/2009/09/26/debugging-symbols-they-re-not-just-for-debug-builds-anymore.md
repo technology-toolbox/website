@@ -43,7 +43,8 @@ environments such as DEV.
 
 > **Important**
 >
-> Do not include Debug symbols in the Release configuration of the setup projects.
+> Do not include Debug symbols in the Release configuration of the setup
+> projects.
 
 {{< /blockquote >}}
 
@@ -81,7 +82,8 @@ In other words, the Development Plan should say:
 
 > **Important**
 >
-> Always include Debug symbols in the Release configuration of the setup projects -- or, preferably, make them available from a symbol server.
+> Always include Debug symbols in the Release configuration of the setup
+> projects -- or, preferably, make them available from a symbol server.
 
 Regarding John's book...I strongly recommend this book to anyone who considers
 himself or herself a "serious developer." It is chock full of great tips and

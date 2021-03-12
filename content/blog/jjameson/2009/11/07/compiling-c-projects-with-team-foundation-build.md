@@ -143,7 +143,8 @@ SDK is installed. However, this wasn't configured on DAZZLER.
 Also, I didn't find my copy of VCProjectEngine.dll in an **x64** folder, but
 rather in an **amd64** folder:
 
-> C:\Program Files (x86)\Microsoft Visual Studio 9.0\VC\bin\amd64\VCProjectEngine.dll
+> C:\Program Files (x86)\Microsoft Visual Studio
+> 9.0\VC\bin\amd64\VCProjectEngine.dll
 
 I know most of you out there are not doing much (if any) C++ work anymore, but I
 thought I should share this just in case you need it at some point.

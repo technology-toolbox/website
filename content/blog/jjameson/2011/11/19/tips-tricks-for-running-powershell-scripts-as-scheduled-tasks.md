@@ -122,7 +122,11 @@ Stop-Transcript
 
 > **Note**
 >
-> In order to avoid issues when running the script interactively from a PowerShell window, we really should call **Stop-Transcript** when an error occurs (i.e. by using **Trap**). Otherwise, if an error occurs while running the script from a PowerShell prompt, the transcript file remains open and you need to type {{< kbd "Stop-Transcript" >}} to close it.
+> In order to avoid issues when running the script interactively from a
+> PowerShell window, we really should call **Stop-Transcript** when an error
+> occurs (i.e. by using **Trap**). Otherwise, if an error occurs while running
+> the script from a PowerShell prompt, the transcript file remains open and you
+> need to type {{< kbd "Stop-Transcript" >}} to close it.
 
 Running the scheduled task now produces the following in the Temp.log file (as
 viewed in Notepad):
@@ -248,7 +252,9 @@ covered in
 > Release server to the Web server). Consequently, I encountered a bug in
 > PowerShell that is described in the following blog post:
 >
-> {{< reference title="Workaround: The OS handle's position is not what FileStream expected" linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
+> {{< reference
+> title="Workaround: The OS handle's position is not what FileStream expected"
+> linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
 >
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 

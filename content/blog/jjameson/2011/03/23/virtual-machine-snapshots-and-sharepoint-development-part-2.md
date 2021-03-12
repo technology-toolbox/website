@@ -198,7 +198,13 @@ It's also worth repeating the following warning from my previous post:
 
 > **Warning**
 >
-> If, like me, you decide to use Hyper-V snapshots in your SharePoint development environment, then make darn sure you've checked in any pending changes to TFS (or at least shelved your changes) before you apply a snapshot. [Note that when applying an earlier snapshot, I don't typically take a new snapshot before reverting to the earlier point in time and hence any work I've done that hasn't be "exported" somewhere (e.g. checked into TFS) is subsequently lost when I apply a snapshot.]
+> If, like me, you decide to use Hyper-V snapshots in your SharePoint
+> development environment, then make darn sure you've checked in any pending
+> changes to TFS (or at least shelved your changes) before you apply a snapshot.
+> [Note that when applying an earlier snapshot, I don't typically take a new
+> snapshot before reverting to the earlier point in time and hence any work I've
+> done that hasn't be "exported" somewhere (e.g. checked into TFS) is
+> subsequently lost when I apply a snapshot.]
 
 #### Create a New Snapshot After Each Release
 

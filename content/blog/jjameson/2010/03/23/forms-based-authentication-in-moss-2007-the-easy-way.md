@@ -142,7 +142,10 @@ the deployment scripts default to Release builds, Doug needs to set the
 
 > **Note**
 >
-> **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically be set using system environment variables as illustrated in the following figure. That way, the variables would only need to be set once per environment.
+> **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically
+> be set using system environment variables as illustrated in the following
+> figure. That way, the variables would only need to be set once per
+> environment.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png" alt="Setting environment variables" height="436" width="394" title="Figure 1: Setting environment variables" >}}
 
@@ -709,7 +712,11 @@ custom STSADM commands for extending the Web application and enabling FBA.
 
 > **Tip**
 >
-> If you haven't seen Gary Lapointe's custom STSADM commands already, I encourage you to take a look at them. You can find them on his blog: [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The custom STSADM commands used in the Fabrikam solution for extending (and unextending) the Web application were originally based on Gary's code.
+> If you haven't seen Gary Lapointe's custom STSADM commands already, I
+> encourage you to take a look at them. You can find them on his blog:
+> [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The custom STSADM
+> commands used in the Fabrikam solution for extending (and unextending) the Web
+> application were originally based on Gary's code.
 
 I should also point out that I explicitly left out the detailed steps for
 creating the service account used by the app pool as well as the

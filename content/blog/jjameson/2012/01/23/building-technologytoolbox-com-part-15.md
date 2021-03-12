@@ -49,7 +49,11 @@ cookie.") which I generally consider to just be "noise."
 
 > **Note**
 >
-> Sometimes it is important to investigate the attempts to hack your site, but -- assuming you actually want to accomplish something useful with your time -- you typically have to chock these up to a fact of life when hosting a site on the Internet. Make sure the code you write is secure, and don't be suprised when you see evidence that hackers are trying to find ways to torment you.
+> Sometimes it is important to investigate the attempts to hack your site, but
+> -- assuming you actually want to accomplish something useful with your time --
+> you typically have to chock these up to a fact of life when hosting a site on
+> the Internet. Make sure the code you write is secure, and don't be suprised
+> when you see evidence that hackers are trying to find ways to torment you.
 
 The errors below are not listed in the order in which they occurred (or fixed).
 Rather, the list is loosely ordered by the frequency of occurence and severity
@@ -547,7 +551,9 @@ While you would expect an HTTP 404 error (since the specified category does not
 exist), in a **Medium** trust configuration, Subtext 2.5.2.0 actually throws a
 **SecurityException**:
 
-> System.Security.SecurityException: Request for the permission of type 'System.Configuration.ConfigurationPermission, System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' failed.
+> System.Security.SecurityException: Request for the permission of type
+> 'System.Configuration.ConfigurationPermission, System.Configuration,
+> Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' failed.
 
 The problem is in the **OnLoad** method of the **CategoryEntryList** class. To
 fix this bug, I changed it to the following:
@@ -588,7 +594,11 @@ fix this bug, I changed it to the following:
 
 > **Important**
 >
-> There are a few other places in the Subtext solution where the **HttpHelper.SetFileNotFoundResponse** method is called (and should probably be updated as well to avoid issues when running in **Medium** trust). However, at present, I haven't bothered to change those (since I am trying to minimize the number of changes that I make to my Subtext branch).
+> There are a few other places in the Subtext solution where the
+> **HttpHelper.SetFileNotFoundResponse** method is called (and should probably
+> be updated as well to avoid issues when running in **Medium** trust). However,
+> at present, I haven't bothered to change those (since I am trying to minimize
+> the number of changes that I make to my Subtext branch).
 
 ### System.Web.HttpException: The file '/blog/jjameson/Services/Pingback.aspx' does not exist.
 
@@ -635,7 +645,10 @@ insufficient "boundary checking" somewhere in the code.
 
 > **Note**
 >
-> In case you are new to .NET development, you should never experience a **NullReferenceException**. **ArgumentNullException**? Yes, those are "good" (sort of)...a **NullReferenceException** is definitely indicative of "bad" code.
+> In case you are new to .NET development, you should never experience a
+> **NullReferenceException**. **ArgumentNullException**? Yes, those are "good"
+> (sort of)...a **NullReferenceException** is definitely indicative of "bad"
+> code.
 
 Honestly, this one hasn't occurred very often (only 16 times to date) -- and 10
 of these occurred back-to-back over a period of 14 seconds back on December
@@ -675,7 +688,11 @@ the guise of some "holding" company.
 Doh! It looks like the WinHost SQL Server environment was down when my site was
 actively trying to service a request:
 
-> System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+> System.Data.SqlClient.SqlException: A network-related or instance-specific
+> error occurred while establishing a connection to SQL Server. The server was
+> not found or was not accessible. Verify that the instance name is correct and
+> that SQL Server is configured to allow remote connections. (provider: Named
+> Pipes Provider, error: 40 - Could not open a connection to SQL Server)
 
 Well, I'm not exactly paying for five 9's reliability. One of the reasons why I
 picked WinHost is because they are *very* cost effective. On the other hand, the
@@ -692,7 +709,8 @@ frequently in the future.
 
 Similar to the previous error:
 
-> System.Data.SqlClient.SqlException: Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding.
+> System.Data.SqlClient.SqlException: Timeout expired. The timeout period
+> elapsed prior to completion of the operation or the server is not responding.
 
 It happened once on November 8th and then twice on January 11th. From my notes,
 I know that the November 8th instance was my own fault. I was doing a bulk
@@ -736,13 +754,17 @@ hacking "noise."
 > **Update (2012-02-28)**
 >
 > Refer to the following post for more information on configuring ELMAH filters:
-> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
+> {{< reference
+> title="Filter ELMAH email messages to avoid getting spammed by hackers"
+> linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers"
+> linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
 
 ### System.Web.HttpException: A public action method 'RecordAggregatorView' could not be found...
 
 Six of these in a span of approximately 3 seconds back on November 2nd:
 
-> System.Web.HttpException: A public action method 'RecordAggregatorView' could not be found on controller 'Subtext.Web.Controllers.StatisticsController'.
+> System.Web.HttpException: A public action method 'RecordAggregatorView' could
+> not be found on controller 'Subtext.Web.Controllers.StatisticsController'.
 
 Looks like another attempt at exploiting some "aggbug" vulnerability. Maybe it's
 time to Google "aggbug" and see what's up...
@@ -800,7 +822,14 @@ search engine I'm not familiar with (YandexBot).
 Only one instance of this (on November 1st), so it looks like it was probably
 YAHA (yet another hacking attempt):
 
-> System.ArgumentException: Invalid postback or callback argument. Event validation is enabled using &lt;pages enableEventValidation="true"/&gt; in configuration or &lt;%@ Page EnableEventValidation="true" %&gt; in a page. For security purposes, this feature verifies that arguments to postback or callback events originate from the server control that originally rendered them. If the data is valid and expected, use the ClientScriptManager.RegisterForEventValidation method in order to register the postback or callback data for validation.
+> System.ArgumentException: Invalid postback or callback argument. Event
+> validation is enabled using &lt;pages enableEventValidation="true"/&gt; in
+> configuration or &lt;%@ Page EnableEventValidation="true" %&gt; in a page. For
+> security purposes, this feature verifies that arguments to postback or
+> callback events originate from the server control that originally rendered
+> them. If the data is valid and expected, use the
+> ClientScriptManager.RegisterForEventValidation method in order to register the
+> postback or callback data for validation.
 
 **Recommendation:** Ignore it...or, better yet, take a moment to enjoy all of
 the out-of-the-box "goodness" we get for free when it comes to security in

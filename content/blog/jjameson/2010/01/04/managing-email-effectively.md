@@ -82,7 +82,9 @@ to me or to DLs that I belong to.
 
 > **Important**
 >
-> The reason for using DL folders under the **Inbox** folder -- instead of having the Outlook rules route directly to the archive (.pst) files -- is to ensure the rules are processed on the Exchange server.
+> The reason for using DL folders under the **Inbox** folder -- instead of
+> having the Outlook rules route directly to the archive (.pst) files -- is to
+> ensure the rules are processed on the Exchange server.
 > If you configure an Outlook rule to move messages to a .pst file, then
 > obviously that rule can only be processed on the client (where the .pst is
 > available). While that alternate approach might work for some people, anyone

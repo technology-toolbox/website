@@ -41,7 +41,8 @@ Here is some info from MSDN:
 > modes:
 >
 > - Windows Authentication Mode (Windows Authentication)
->   Windows Authentication mode allows a user to connect through a Microsoft Windows NT® 4.0 or Windows® 2000 user account.
+>   Windows Authentication mode allows a user to connect through a Microsoft
+>   Windows NT® 4.0 or Windows® 2000 user account.
 > - Mixed Mode (Windows Authentication and SQL Server Authentication)
 > - **Security Note** When possible, use Windows Authentication.
 >
@@ -72,9 +73,12 @@ Here is some info from MSDN:
 > Windows authentication is more secure than SQL authentication for the
 > following reasons:
 >
-> - Credentials are managed for you and the credentials are not transmitted over the network.
+> - Credentials are managed for you and the credentials are not transmitted over
+>   the network.
 > - You avoid embedding user names and passwords in connection strings.
-> - Logon security improves through password expiration periods, minimum lengths, and account lockout after multiple invalid logon requests. This mitigates the threat from dictionary attacks.
+> - Logon security improves through password expiration periods, minimum
+>   lengths, and account lockout after multiple invalid logon requests. This
+>   mitigates the threat from dictionary attacks.
 >
 > Pasted from &lt;
 > [http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;

@@ -33,7 +33,8 @@ The code above includes a fix for a bug that slipped undetected into the
 Production environment. On October 8, 2011, I received an email from ELMAH due
 to an unhandled exception on TechnologyToolbox.com:
 
-> System.InvalidOperationException: No analytics key specified for hostname (technologytoolbox.com).
+> System.InvalidOperationException: No analytics key specified for hostname
+> (technologytoolbox.com).
 
 Ouch.
 
@@ -111,11 +112,13 @@ difference between the two.
 
 The first rule shown above is equivalent to the following:
 
-> For any request in which the host is technologytoolbox.com, redirect it to www.technologytoolbox.com.
+> For any request in which the host is technologytoolbox.com, redirect it to
+> www.technologytoolbox.com.
 
 Whereas the second rule is equivalent to the following:
 
-> For any request in which the host is *not* www.technologytoolbox.com, redirect it to www.technologytoolbox.com.
+> For any request in which the host is *not* www.technologytoolbox.com, redirect
+> it to www.technologytoolbox.com.
 
 After learning about the new **Canonical domain name** SEO template, I was
 tempted to replace the original rule I created back in October. However, I

@@ -72,7 +72,11 @@ Search in SharePoint Server 2010:
 
 > **Note**
 >
-> For each service account listed in the table above, corresponding "-dev" and "-test" service accounts need to be created for the Development and Test environments. This allows the Development and Test teams to install and configure their environments without knowing the passwords for the Production environment.
+> For each service account listed in the table above, corresponding "-dev" and
+> "-test" service accounts need to be created for the Development and Test
+> environments. This allows the Development and Test teams to install and
+> configure their environments without knowing the passwords for the Production
+> environment.
 
 Note that the following script is based on my fictitious Fabrikam sample
 solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to

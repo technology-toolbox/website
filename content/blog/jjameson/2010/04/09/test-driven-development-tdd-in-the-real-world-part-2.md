@@ -517,7 +517,9 @@ That's certainly not good.
 
 > **Important**
 >
-> While you might be tempted to modify the **Truncate003** unit test to specify a string with multiple spaces in it, my recommendation is you resist the temptation to modify existing unit tests.
+> While you might be tempted to modify the **Truncate003** unit test to specify
+> a string with multiple spaces in it, my recommendation is you resist the
+> temptation to modify existing unit tests.
 
 The reason for this is that when familiarizing myself with code that I didn't
 write, I find it very helpful to be able to read through unit tests almost like

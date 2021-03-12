@@ -66,7 +66,8 @@ that actually works as intended ;-)
 
 > **Note**
 >
-> The development VM that I captured the above screenshot from has the following software installed:
+> The development VM that I captured the above screenshot from has the following
+> software installed:
 >
 > - Windows 7 (64-bit)
 > - Microsoft Visual Studio 2008
@@ -80,5 +81,10 @@ that actually works as intended ;-)
 > - Microsoft SQL Server 2012 with SP1
 > - WiX Toolset v3.7
 >
-> I don't typically install more than one version of Visual Studio in a VM. However, I built this "uber Visual Studio VM" in order to debug some issues with the [TFS Integration](http://visualstudiogallery.msdn.microsoft.com/eb77e739-c98c-4e36-9ead-fa115b27fefe) tool (which I use to synchronize my local TFS team projects with my clients' TFS instances).
+> I don't typically install more than one version of Visual Studio in a VM.
+> However, I built this "uber Visual Studio VM" in order to debug some issues
+> with the
+> [TFS Integration](http://visualstudiogallery.msdn.microsoft.com/eb77e739-c98c-4e36-9ead-fa115b27fefe)
+> tool (which I use to synchronize my local TFS team projects with my clients'
+> TFS instances).
 

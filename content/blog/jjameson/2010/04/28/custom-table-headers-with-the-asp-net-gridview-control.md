@@ -95,7 +95,15 @@ and then iterate the code until we've completed the scenario.
 
 > **Tip**
 >
-> The KPI dashboard is actually displayed in a customer portal based on Microsoft Office SharePoint Server (MOSS) 2007. However, my recommendation when creating a feature like this for a SharePoint application, is to first get it working in a simple ASP.NET application (using sample data), and, once it is working to your satisfaction, get it to render on a SharePoint site (using real data). If you try to do all of the development exclusively through your SharePoint Web application, you'll spend far more time iterating the development (for example, deploying updated files, GAC'ing assemblies, or recycling your app pool).
+> The KPI dashboard is actually displayed in a customer portal based on
+> Microsoft Office SharePoint Server (MOSS) 2007. However, my recommendation
+> when creating a feature like this for a SharePoint application, is to first
+> get it working in a simple ASP.NET application (using sample data), and, once
+> it is working to your satisfaction, get it to render on a SharePoint site
+> (using real data). If you try to do all of the development exclusively through
+> your SharePoint Web application, you'll spend far more time iterating the
+> development (for example, deploying updated files, GAC'ing assemblies, or
+> recycling your app pool).
 
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that
 encapsulates the presentation layer for the KPI scorecard:
@@ -271,7 +279,10 @@ event:
 
 > **Note**
 >
-> As I mentioned before, the KPI dashboard is actually displayed in a customer portal based on MOSS 2007. Consequently, I chose to reuse the KPI images that come out-of-the-box with MOSS 2007 (in case you were wondering why the image path refers to **\_layouts**).
+> As I mentioned before, the KPI dashboard is actually displayed in a customer
+> portal based on MOSS 2007. Consequently, I chose to reuse the KPI images that
+> come out-of-the-box with MOSS 2007 (in case you were wondering why the image
+> path refers to **\_layouts**).
 
 Running the Web application at this point shows the images in place of the
 lengthy column headings, similar to the following:
@@ -533,5 +544,6 @@ is rendered from view state.
 
 > **Update (2011-04-21)**
 >
-> I've attached a sample Visual Studio solution to make it easier to see this concept in action.
+> I've attached a sample Visual Studio solution to make it easier to see this
+> concept in action.
 

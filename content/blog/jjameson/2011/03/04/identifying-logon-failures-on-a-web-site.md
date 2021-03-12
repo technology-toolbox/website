@@ -53,11 +53,18 @@ for other events (and subsequently parse data from).
 
 > **Note**
 >
-> While I originally created these scripts for a solution based on MOSS 2007, you should be able to use them for any site based on ASP.NET. For example, this morning I verified the scripts still work as expected with [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010) and configured with claims-based authentication.
+> While I originally created these scripts for a solution based on MOSS 2007,
+> you should be able to use them for any site based on ASP.NET. For example,
+> this morning I verified the scripts still work as expected with
+> [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)
+> and configured with claims-based authentication.
 
 > **Important**
 >
-> You should obviously apply discretion when deciding when (and how often) to run these scripts against a Production envionment. With a little bit of effort, however, you could modify the scripts to work against saved event logs copied to another environment for analysis.
+> You should obviously apply discretion when deciding when (and how often) to
+> run these scripts against a Production envionment. With a little bit of
+> effort, however, you could modify the scripts to work against saved event logs
+> copied to another environment for analysis.
 
 ### ListLogonFailureEventsForServer.vbs
 

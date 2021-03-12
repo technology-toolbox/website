@@ -49,7 +49,9 @@ For a complete list of the IIS cmdlets, refer to the following Technet article:
 
 > **Important**
 >
-> If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then you cannot use the `Add-PSSSnapin WebAdministration` command specified in the above TechNet article. Instead you need to use `Import-Module WebAdministration` -- as shown below.
+> If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then you
+> cannot use the `Add-PSSSnapin WebAdministration` command specified in the
+> above TechNet article. Instead you need to use `Import-Module WebAdministration` -- as shown below.
 
 ```
 ...
@@ -100,7 +102,8 @@ function RemoveWebsite(
 > There is currently a bug in the `Get-Website` cmdlet, so be very careful if
 > you choose to use it:
 >
-> {{< reference title="Get-Website always returns full list of web sites" linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
+> {{< reference title="Get-Website always returns full list of web sites"
+> linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
 
 If you are wondering why I specify "``r`n`" at the end of each `Write-Host`
 command, I'll explain that in
@@ -141,7 +144,10 @@ same server as the website in that environment.
 
 > **Tip**
 >
-> Using the **[System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** class from the .NET Framework is a convenient way to parse URLs in PowerShell (for example to extract the hostname, as shown above).
+> Using the **
+> [System.Uri](http://msdn.microsoft.com/en-us/library/system.uri.aspx)** class
+> from the .NET Framework is a convenient way to parse URLs in PowerShell (for
+> example to extract the hostname, as shown above).
 
 ### Step 4 - Create website folder under Inetpub\wwwroot
 

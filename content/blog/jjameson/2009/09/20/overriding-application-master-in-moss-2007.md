@@ -222,7 +222,8 @@ application.master.
 To configure the custom HttpHandler for application pages (a.k.a. \_layouts
 pages), modify the Web.config file in
 
-> %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\12\TEMPLATE\LAYOUTS
+> %ProgramFiles%\Common Files\Microsoft Shared\web server
+> extensions\12\TEMPLATE\LAYOUTS
 
 Simply comment out the default PageHandlerFactory and add the custom
 ApplicationPageHandlerFactory:

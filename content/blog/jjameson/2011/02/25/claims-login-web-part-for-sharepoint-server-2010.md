@@ -326,7 +326,9 @@ PowerShell scripts, as described below.
    
    > **Note**
    > 
-   > You do not need to manually add the Web.config modifications for the "Fabrikam" Web application because this is done automatically upon activation of a feature (Fabrikam Demo - Web Application Configuration).
+   > You do not need to manually add the Web.config modifications for the
+   > "Fabrikam" Web application because this is done automatically upon
+   > activation of a feature (Fabrikam Demo - Web Application Configuration).
 
 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
 
@@ -350,5 +352,8 @@ to **Step 6** in my previous post for instructions on how to do this).
 
 > **Update (2011-02-26)**
 >
-> There was a bug in the original version of the code sample when logging in as an FBA user over HTTPS (while attempting to determine the membership and role providers from the IIS settings). This has been fixed in the updated attachment.
+> There was a bug in the original version of the code sample when logging in as
+> an FBA user over HTTPS (while attempting to determine the membership and role
+> providers from the IIS settings). This has been fixed in the updated
+> attachment.
 

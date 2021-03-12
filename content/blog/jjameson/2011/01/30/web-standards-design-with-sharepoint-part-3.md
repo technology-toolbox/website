@@ -97,7 +97,11 @@ fields defined on the **Welcome Page** content type. Consequently, a Web Part
 
 > **Note**
 >
-> You should always try to use the Summary Links fields (from the underlying content type) instead of Summary Links Web Parts whenever possible -- since this provides the ability to track the changes to the links over time. (In other words, changes to Web Part properties are not shown in the **Version History** for a page, whereas changes to a Summary Links field are shown.)
+> You should always try to use the Summary Links fields (from the underlying
+> content type) instead of Summary Links Web Parts whenever possible -- since
+> this provides the ability to track the changes to the links over time. (In
+> other words, changes to Web Part properties are not shown in the **Version
+> History** for a page, whereas changes to a Summary Links field are shown.)
 
 To mitigate these issues, I chose to tweak the default content for the home page
 (to replace the **Page Content** with semantic HTML -- while still preserving
@@ -130,7 +134,10 @@ To deploy the Fabrikam Demo to SharePoint:
    
    > **Note**
    > 
-   > While you don't have to use this URL, it is recommended for developer environments because it causes the deployment scripts to bypass the SharePoint timer infrastructure when deploying and retracting the solution.
+   > While you don't have to use this URL, it is recommended for developer
+   > environments because it causes the deployment scripts to bypass the
+   > SharePoint timer infrastructure when deploying and retracting the
+   > solution.
 
 3. Set environment variables to specify the credentials to use for the Fabrikam application pool:
    
@@ -186,5 +193,7 @@ page and page layouts leveraging the 960 Grid System.
 
 > **Tip**
 >
-> Once you have the site running in your environment, click **Sample Link 1** and **Sample Link 2** on the home page to view a couple of test pages that are created to demonstrate other custom page layouts.
+> Once you have the site running in your environment, click **Sample Link 1**
+> and **Sample Link 2** on the home page to view a couple of test pages that are
+> created to demonstrate other custom page layouts.
 

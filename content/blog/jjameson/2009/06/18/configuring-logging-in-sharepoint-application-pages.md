@@ -35,7 +35,8 @@ the
 [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx)
 must be specified in the Web.config file within the following folder:
 
-> %ProgramFiles%\Common Files\Microsoft Shared\Web Server Extensions\12\template\layouts
+> %ProgramFiles%\Common Files\Microsoft Shared\Web Server
+> Extensions\12\template\layouts
 
 Also be sure to enable tracing using the `<trace>` element within `<system.web>`
 in that Web.config file, as shown in my previous post.

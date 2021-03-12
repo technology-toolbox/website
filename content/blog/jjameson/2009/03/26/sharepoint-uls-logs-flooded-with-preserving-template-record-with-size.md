@@ -108,5 +108,7 @@ Toolbox for just such an occasion.
 
 > **Update (2009-06-02)**
 >
-> As noted in the comments, this issue appears to be fixed in the [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for Windows SharePoint Services.
+> As noted in the comments, this issue appears to be fixed in the
+> [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for
+> Windows SharePoint Services.
 

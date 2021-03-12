@@ -30,7 +30,9 @@ in SharePoint 2010.
 
 > **Note**
 >
-> You can achieve similar results in Microsoft Office SharePoint Server (MOSS) 2007 using the **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
+> You can achieve similar results in Microsoft Office SharePoint Server (MOSS)
+> 2007 using the **
+> [DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
 
 For those of you that haven't yet read my previous post, the goal was to take a
 SharePoint list like the one shown below...
@@ -465,7 +467,9 @@ described below.
 
 > **Note**
 >
-> Technically, you don't have to set the environment variables (and use the "-dev" accounts). However, I recommend this in order to bypass SharePoint timer jobs when deploying the WSPs.
+> Technically, you don't have to set the environment variables (and use the
+> "-dev" accounts). However, I recommend this in order to bypass SharePoint
+> timer jobs when deploying the WSPs.
 
 At this point you should be able to modify your hosts file accordingly and
 browse to either

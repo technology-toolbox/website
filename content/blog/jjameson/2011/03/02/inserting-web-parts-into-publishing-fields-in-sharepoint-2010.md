@@ -259,7 +259,11 @@ the page content with the desired Web Part:
 
 > **Note**
 >
-> The embedded CSS styles shown in the default page content above (e.g. margins, floats, and widths) are only intended for demonstration purposes. While I would have preferred to use something like the 960 Grid System instead, I was trying to minimize complexity in the original sample for the Claims Login Form Web Part.
+> The embedded CSS styles shown in the default page content above (e.g. margins,
+> floats, and widths) are only intended for demonstration purposes. While I
+> would have preferred to use something like the 960 Grid System instead, I was
+> trying to minimize complexity in the original sample for the Claims Login Form
+> Web Part.
 
 Note that the **ReplacePlaceholderWithLoginWebPart** method simply checks to see
 if the Web Part placeholder is found in the page content and, if it is,

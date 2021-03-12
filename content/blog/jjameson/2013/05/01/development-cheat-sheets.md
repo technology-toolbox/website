@@ -82,7 +82,9 @@ Remove-SPSite http://fabrikam-local/ -Confirm:$false
 
 > **Note**
 >
-> The “Delete Site Collections.ps1” script will delete all of the site collections created by the “Create Site Collections.ps1” script, so I typically just use the Remove-SPSite cmdlet directly (as illustrated above).
+> The “Delete Site Collections.ps1” script will delete all of the site
+> collections created by the “Create Site Collections.ps1” script, so I
+> typically just use the Remove-SPSite cmdlet directly (as illustrated above).
 
 Lastly, if I need to build (or rebuild) my environment and just want the
 absolute least amount of human effort (by sacrificing a little more “wait”

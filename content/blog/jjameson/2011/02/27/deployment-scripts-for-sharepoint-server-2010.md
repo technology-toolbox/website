@@ -624,7 +624,8 @@ Main
 
 > **Update (2011-03-02)**
 >
-> I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
+> I modified the original script above to ensure it works with TFS builds as
+> well as "desktop" builds (i.e. built from within Visual Studio).
 
 The optional `-Debug` parameter for this script makes it easy to debug the new
 PowerShell instance (without requiring you to temporarily specify
@@ -1446,7 +1447,8 @@ Main $force
 
 > **Update (2011-03-02)**
 >
-> I modified the original script above to ensure it works with TFS builds as well as "desktop" builds (i.e. built from within Visual Studio).
+> I modified the original script above to ensure it works with TFS builds as
+> well as "desktop" builds (i.e. built from within Visual Studio).
 
 ### Delete Web Application.ps1
 
@@ -1503,5 +1505,11 @@ able to rebuild my development environment in a matter of minutes.
 
 > **Warning**
 >
-> If, like me, you decide to use Hyper-V snapshots in your SharePoint development environment, then make darn sure you've checked in any pending changes to TFS (or at least shelved your changes) before you apply a snapshot. [Note that when applying an earlier snapshot, I don't typically take a new snapshot before reverting to the earlier point in time. In other words, I treat my SharePoint development VM as "volatile" -- or "disposable" (if you prefer that term instead).]
+> If, like me, you decide to use Hyper-V snapshots in your SharePoint
+> development environment, then make darn sure you've checked in any pending
+> changes to TFS (or at least shelved your changes) before you apply a snapshot.
+> [Note that when applying an earlier snapshot, I don't typically take a new
+> snapshot before reverting to the earlier point in time. In other words, I
+> treat my SharePoint development VM as "volatile" -- or "disposable" (if you
+> prefer that term instead).]
 

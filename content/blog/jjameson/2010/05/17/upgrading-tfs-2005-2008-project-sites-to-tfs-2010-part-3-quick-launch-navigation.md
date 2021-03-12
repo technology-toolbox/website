@@ -23,7 +23,8 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 
 > **Update (2010-05-20)**
 >
-> I made some changes to correct a few issues and also to include the final version of the XML input file that I used to update my TFS project sites.
+> I made some changes to correct a few issues and also to include the final
+> version of the XML input file that I used to update my TFS project sites.
 
 In my
 [previous post](/blog/jjameson/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell),
@@ -304,7 +305,8 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 >
 > {{< blockquote "font-italic text-danger" >}}
 >
-> An error occurred while enumerating through a collection: Cannot complete this action.
+> An error occurred while enumerating through a collection: Cannot complete this
+> action.
 >
 > {{< /blockquote >}}
 >

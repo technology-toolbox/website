@@ -114,7 +114,10 @@ group by month and count the number of rows for each month).
 
 > **Tip**
 >
-> If you are working with LINQ these days, and you haven't already discovered [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It makes it much quicker to iteratively build LINQ queries like the one shown above.
+> If you are working with LINQ these days, and you haven't already discovered
+> [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It
+> makes it much quicker to iteratively build LINQ queries like the one shown
+> above.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png" alt="LINQPad" class="screenshot" height="600" width="564" title="Figure 3: LINQPad" >}}
 

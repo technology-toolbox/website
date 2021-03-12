@@ -14,7 +14,9 @@ here is an overview of the CAPTCHA feature detailed in this post.
 
 > **Note**
 >
-> Although not illustrated in the screenshots below, the custom CAPTCHA control is also used on the Subtext blog pages to prevent bots from adding comments to blog posts. I'll explain why this is important in a moment.
+> Although not illustrated in the screenshots below, the custom CAPTCHA control
+> is also used on the Subtext blog pages to prevent bots from adding comments to
+> blog posts. I'll explain why this is important in a moment.
 
 ### Overview
 
@@ -267,7 +269,11 @@ default.
 Consequently, if the CAPTCHA control attempts to store the expected value in
 session state (as in Mahdi's implementation), an error occurs:
 
-> Session state can only be used when enableSessionState is set to true, either in a configuration file or in the Page directive. Please also make sure that System.Web.SessionStateModule or a custom session state module is included in the &lt;configuration&gt;\&lt;system.web&gt;\&lt;httpModules&gt; section in the application configuration.
+> Session state can only be used when enableSessionState is set to true, either
+> in a configuration file or in the Page directive. Please also make sure that
+> System.Web.SessionStateModule or a custom session state module is included in
+> the &lt;configuration&gt;\&lt;system.web&gt;\&lt;httpModules&gt; section in
+> the application configuration.
 
 To resolve this issue, I store the expected value in a cookie instead.
 Admittedly, it is not ideal to send the expected value to the client because
@@ -373,7 +379,8 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 
 > **Note**
 >
-> I've kept the comments in the code block above to help readers understand a couple of the more subtle details of the implementation.
+> I've kept the comments in the code block above to help readers understand a
+> couple of the more subtle details of the implementation.
 
 #### Captcha.ascx.cs
 

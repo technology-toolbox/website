@@ -170,7 +170,9 @@ VM) using SharePoint Designer.
 
 > **Tip**
 >
-> I typically check the prototype in on the Dev branch (e.g. $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not technically part of the solution.
+> I typically check the prototype in on the Dev branch (e.g.
+> $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not
+> technically part of the solution.
 
 The next task was to create the master page for the Tugboat site. I started with
 the minimal master page provided on MSDN and then applied some of the changes
@@ -452,7 +454,10 @@ To deploy the Tugboat sample site to SharePoint:
    
    > **Note**
    > 
-   > While you don't have to use this URL, it is recommended for developer environments because it causes the deployment scripts to bypass the SharePoint timer infrastructure when deploying and retracting the solution.
+   > While you don't have to use this URL, it is recommended for developer
+   > environments because it causes the deployment scripts to bypass the
+   > SharePoint timer infrastructure when deploying and retracting the
+   > solution.
 
 3. Set environment variables to specify the credentials to use for the Tugboat application pool:
    

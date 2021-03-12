@@ -64,7 +64,9 @@ researchportal-local.dow.com
 
 > **Update (2013-06-04)**
 >
-> I fixed a bug in the following scripts when more than one hostname is specified in the registry value. See my GitHub repository for details on the changes made to the original versions of the scripts.
+> I fixed a bug in the following scripts when more than one hostname is
+> specified in the registry value. See my GitHub repository for details on the
+> changes made to the original versions of the scripts.
 
 ### Get-BackConnectionHostNames.ps1
 

@@ -124,5 +124,10 @@ consider going live without enabling disk-based caching.
 
 > **Update (2009-03-28)**
 >
-> It occurred to me this morning that my previous statement about always enabling disk-based caching could be misconstrued. If you don't want to enable disk-based caching on your local VM to expedite your development activities (e.g. to avoid having to repeatedly clear your browser cache to see changes to CSS files), that's perfectly fine. Just make sure you enable disk-based caching on your Test and Production environments.
+> It occurred to me this morning that my previous statement about always
+> enabling disk-based caching could be misconstrued. If you don't want to enable
+> disk-based caching on your local VM to expedite your development activities
+> (e.g. to avoid having to repeatedly clear your browser cache to see changes to
+> CSS files), that's perfectly fine. Just make sure you enable disk-based
+> caching on your Test and Production environments.
 

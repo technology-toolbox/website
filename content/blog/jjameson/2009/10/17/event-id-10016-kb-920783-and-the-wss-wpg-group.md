@@ -80,7 +80,9 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Note**
 >
-> When creating a new Web application, SharePoint automatically adds the corresponding service account to the local WSS\_WPG group on each SharePoint server in your farm.
+> When creating a new Web application, SharePoint automatically adds the
+> corresponding service account to the local WSS\_WPG group on each SharePoint
+> server in your farm.
 
 > **Update (2009-10-29)**
 >
@@ -102,19 +104,31 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Update (2010-05-03)**
 >
-> If performing this step on Windows Server 2008 R2, you must first take ownership of the corresponding registry key and grant Administrators permissions to update the configuration.
+> If performing this step on Windows Server 2008 R2, you must first take
+> ownership of the corresponding registry key and grant Administrators
+> permissions to update the configuration.
 > To take allow the configuration of the IIS WAMREG Admin Service to be changed
 > using the Component Services console:
 >
-> 1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**. If prompted by **User Account Control** to allow the program to make changes to this computer, click **Yes**.
-> 2. In the **Registry Editor** window, search for "61738644-F196-11D0-9953-00C04FD919C1" to find HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
-> 3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and then click **Permissions**.
-> 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box, click **Advanced**.
-> 5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
+> 1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**.
+>    If prompted by **User Account Control** to allow the program to make changes
+>    to this computer, click **Yes**.
+> 2. In the **Registry Editor** window, search for
+>    "61738644-F196-11D0-9953-00C04FD919C1" to find
+>    HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
+> 3. Right-click on the
+>    **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and
+>    then click **Permissions**.
+> 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+>    box, click **Advanced**.
+> 5. In the **Advanced Security Settings for
+>    {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
 >    1. Click the **Owner** tab.
 >    2. In the **Change owner to** list, click the **Administrators** group.
 >    3. Click **OK**.
-> 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box, click the **Administrators** group, then click the checkbox to allow the group **Full Control**, and click **OK**.
+> 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+>    box, click the **Administrators** group, then click the checkbox to allow the
+>    group **Full Control**, and click **OK**.
 > 7. Close the Registry Editor window.
 >
 > Now that the Administrators group has sufficient permissions, follow the steps

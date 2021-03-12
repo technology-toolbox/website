@@ -92,7 +92,10 @@ the example bugs to get a feel for the level of detail expected during the
 > - Proposal -- "How should we resolve the issue?"
 > - Risks -- "What is the worst case scenario if we make this change?"
 > - Solution -- "What specifically needs to change?"
-> - Teams Impacted -- "How much work is required by Development, Test, Release Management, and (potentially) Product Management teams?" (note that the estimates need to come from the respective team members -- the investigator should not "guess")
+> - Teams Impacted -- "How much work is required by Development, Test, Release
+>   Management, and (potentially) Product Management teams?" (note that the
+>   estimates need to come from the respective team members -- the investigator
+>   should not "guess")
 >
 > Note that both **Solution** and **Teams Impacted** are not needed, one or the
 > other is fine. If the necessary change (and associated risk) is very small --
@@ -163,8 +166,14 @@ unless you actually were a member of this project ;-)
 >
 > There appear to be (at least) two problems when following the repro steps:
 >
-> 1. The **Literature Summary** list (rendered by LiteratureResults.asp when isortorder=9) should show the number of publications matching the specified criteria, grouped by **Literature Type** (a.k.a. publication type, a.k.a. Content Type in SharePoint, a.k.a. the ContentType2 managed property). The list should be ordered by **Literature Type**.
-> 2. Clicking on a publication type in the Literature Summary list should show the search results for publications of the selected type. According to the original description for this bug, an error occurred at this point.
+> 1. The **Literature Summary** list (rendered by LiteratureResults.asp when
+>    isortorder=9) should show the number of publications matching the specified
+>    criteria, grouped by **Literature Type** (a.k.a. publication type, a.k.a.
+>    Content Type in SharePoint, a.k.a. the ContentType2 managed property). The
+>    list should be ordered by **Literature Type**.
+> 2. Clicking on a publication type in the Literature Summary list should show
+>    the search results for publications of the selected type. According to the
+>    original description for this bug, an error occurred at this point.
 >
 > #### Proposal:
 >
@@ -189,8 +198,13 @@ unless you actually were a member of this project ;-)
 > from 200 to 1000) when rendering the **Literature Summary** view, this will
 > put considerable load on SharePoint Search for two reasons:
 >
-> 1. We need to order first by ContentType2 in order to return the result set in the order expected by the legacy ASP code that generates the **Literature Summary** view.
-> 2. SharePoint Search is optimized to sort by rank first (since it is typically desired to show the "best" results at the top of the list). In order to return a result set of, say, 1000 items sorted by something other than rank, SharePoint must do a lot more work before it can trim the result set.
+> 1. We need to order first by ContentType2 in order to return the result set in
+>    the order expected by the legacy ASP code that generates the **Literature
+>    Summary** view.
+> 2. SharePoint Search is optimized to sort by rank first (since it is typically
+>    desired to show the "best" results at the top of the list). In order to return
+>    a result set of, say, 1000 items sorted by something other than rank,
+>    SharePoint must do a lot more work before it can trim the result set.
 >
 > Therefore it is quite possible that SharePoint Search will require &gt; 10
 > seconds to generate these large result sets (although it is expected that
@@ -219,9 +233,12 @@ unless you actually were a member of this project ;-)
 
 > #### Repro steps:
 >
-> 1. Log on to [http://wcoslscd.cos.fabrikam.com/scripts/library.asp](http://wcoslscd.cos.fabrikam.com/scripts/library.asp)
-> 2. Select the publication type as "Certificate of Analysis" or "Material Safety Data Sheet" from the drop down and click on search
-> 3. There are no results displayed for these publication types even though there are lot of documents under these publication types in TEST
+> 1. Log on to
+>    [http://wcoslscd.cos.fabrikam.com/scripts/library.asp](http://wcoslscd.cos.fabrikam.com/scripts/library.asp)
+> 2. Select the publication type as "Certificate of Analysis" or "Material
+>    Safety Data Sheet" from the drop down and click on search
+> 3. There are no results displayed for these publication types even though
+>    there are lot of documents under these publication types in TEST
 >
 > #### Motivation:
 >

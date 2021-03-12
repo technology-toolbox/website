@@ -90,7 +90,10 @@ out-of-the-box with its table-based layout).
 
 > **Tip**
 >
-> If you choose to use the 960 Grid System, I also highly recommend leveraging the [960 Gridder](http://gridder.andreehansson.se) as well. This combination makes the task of creating great looking Web pages much easier (even for someone, like me, who is much more of a *developer* than a *designer*).
+> If you choose to use the 960 Grid System, I also highly recommend leveraging
+> the [960 Gridder](http://gridder.andreehansson.se) as well. This combination
+> makes the task of creating great looking Web pages much easier (even for
+> someone, like me, who is much more of a *developer* than a *designer*).
 
 To understand how the 960 Grid System is used on our SharePoint site, consider
 the following master page:
@@ -597,7 +600,8 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 
 > **Update (2011-01-31)**
 >
-> Part 3 in this series provides a sample SharePoint master page and various page layouts based on the 960 Grid System.
+> Part 3 in this series provides a sample SharePoint master page and various
+> page layouts based on the 960 Grid System.
 >
 > **Web Standards Design with SharePoint, Part 3**
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)

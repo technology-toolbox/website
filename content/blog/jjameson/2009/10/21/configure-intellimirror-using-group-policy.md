@@ -71,7 +71,12 @@ settings:
 
 > **Note**
 >
-> Those of you that have a very keen eye (and also a photographic memory) might recall that in a previous post, I listed BEAST as a database server (it is currently running SQL Server 2005). Yes, it's true, I'm breaking one of my own cardinal sins by having a SQL Server also serve as a file server. I don't recommend doing this unless, like me, you are trying to go as cheap as possible -- and, even then, only for a lab environment like mine.
+> Those of you that have a very keen eye (and also a photographic memory) might
+> recall that in a previous post, I listed BEAST as a database server (it is
+> currently running SQL Server 2005). Yes, it's true, I'm breaking one of my own
+> cardinal sins by having a SQL Server also serve as a file server. I don't
+> recommend doing this unless, like me, you are trying to go as cheap as
+> possible -- and, even then, only for a lab environment like mine.
 
 In order to allow users access to create their own folders on \\BEAST\Users$, I
 have configured the following permissions on C:\BackedUp\Users:

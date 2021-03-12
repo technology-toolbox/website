@@ -383,5 +383,9 @@ following:
 
 > **Update 2010-03-31**
 >
-> I enhanced the original version of **SharePointWebConfigHelper** to [wait for the Web.config modifications to finish](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish) in the **ApplyWebConfigModifications** method. If you don't want or need this fix, you can remove the reference to **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
+> I enhanced the original version of **SharePointWebConfigHelper** to
+> [wait for the Web.config modifications to finish](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)
+> in the **ApplyWebConfigModifications** method. If you don't want or need this
+> fix, you can remove the reference to **
+> [SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
 

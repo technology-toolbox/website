@@ -141,7 +141,10 @@ prototype:
 
 > **Note**
 >
-> Rather than trying to understand all of the discrete HTML elements shown in this post, focus instead on the high-level structure of the various pages and how they fit together. I'll discuss the semantic HTML used for the Technology Toolbox pages in more detail in subsequent posts.
+> Rather than trying to understand all of the discrete HTML elements shown in
+> this post, focus instead on the high-level structure of the various pages and
+> how they fit together. I'll discuss the semantic HTML used for the Technology
+> Toolbox pages in more detail in subsequent posts.
 
 Figure 1 shows the corresponding Design view of the master page in Expression
 Web (after adding the CSS rules to define the site fonts, colors, etc.).
@@ -666,7 +669,9 @@ blog post.
 
 > **Note**
 >
-> Observe how the prototype uses nested master pages in order to render the common masthead, global navigation, and footer content from Default.master in addition to the content specified in BlogPost.master.
+> Observe how the prototype uses nested master pages in order to render the
+> common masthead, global navigation, and footer content from Default.master in
+> addition to the content specified in BlogPost.master.
 
 ### Sample blog post - new-blog-location.aspx
 

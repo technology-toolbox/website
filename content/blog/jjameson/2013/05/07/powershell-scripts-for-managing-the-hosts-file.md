@@ -17,7 +17,16 @@ You may have noticed the Add-Hostnames.ps1 script in my
 
 > **Note**
 >
-> In the Fabrikam Extranet solution, the "Create Web Application.ps1" script checks if the environment is configured to use [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) and, if it is, it then checks for name resolution for that hostname. If name resolution fails, the Add-Hostnames.ps1 script is used to map **extranet-local.fabrikam.com** to the loopback address (127.0.0.1). That way, when people want to deploy the solution with as little effort as possible, they can simply run the "Rebuild Web Application.ps1" script and not have to worry about manually performing the steps in section 4.9 (DEV – Map Web application to loopback address in Hosts file).
+> In the Fabrikam Extranet solution, the "Create Web Application.ps1" script
+> checks if the environment is configured to use
+> [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) and,
+> if it is, it then checks for name resolution for that hostname. If name
+> resolution fails, the Add-Hostnames.ps1 script is used to map
+> **extranet-local.fabrikam.com** to the loopback address (127.0.0.1). That way,
+> when people want to deploy the solution with as little effort as possible,
+> they can simply run the "Rebuild Web Application.ps1" script and not have to
+> worry about manually performing the steps in section 4.9 (DEV – Map Web
+> application to loopback address in Hosts file).
 
 The following illustrates these scripts in action:
 

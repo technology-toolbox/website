@@ -21,7 +21,10 @@ tags: ["Infrastructure", "Windows 7"]
 
 > **Update (2010-08-05)**
 >
-> Note that I was unable to reproduce the virus infection after installing Soluto on a different environment. I encourage you to read [my next post](/blog/jjameson/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus) instead of -- or in addition to -- this post.
+> Note that I was unable to reproduce the virus infection after installing
+> Soluto on a different environment. I encourage you to read
+> [my next post](/blog/jjameson/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus)
+> instead of -- or in addition to -- this post.
 
 In one of the sessions I attended last week at TechReady (an internal training
 conference at Microsoft), the speaker mentioned a new piece of "anti-frustration

@@ -115,11 +115,20 @@ Here's a breakdown of the custom SharePoint list:
 
 > **Important**
 >
-> Even though the **Unit Price** column is defined using the **Currency** type and specifies a **Currency format** of **$123,456.00 (United States)**, you must specify the **DOLLAR** function in the formula for the calculated column. Otherwise, the values in the **Price** column would not appear as expected (e.g. "12.5 / lb.").
+> Even though the **Unit Price** column is defined using the **Currency** type
+> and specifies a **Currency format** of **$123,456.00 (United States)**, you
+> must specify the **DOLLAR** function in the formula for the calculated column.
+> Otherwise, the values in the **Price** column would not appear as expected
+> (e.g. "12.5 / lb.").
 
 > **Note**
 >
-> I chose to name the list "Specials" instead of "Weekly Specials" for a reason. If this were a real world solution, then there would be a significant chance the business rules would change over time (for example to show "Today's Specials" or "This Month's Specials"). By simply naming the list "Specials", we can avoid tightly coupling the implementation to the current business rules.
+> I chose to name the list "Specials" instead of "Weekly Specials" for a reason.
+> If this were a real world solution, then there would be a significant chance
+> the business rules would change over time (for example to show "Today's
+> Specials" or "This Month's Specials"). By simply naming the list "Specials",
+> we can avoid tightly coupling the implementation to the current business
+> rules.
 
 Assuming you are proficient in SharePoint, within a matter of a few minutes you
 should be able to create the list and populate the sample data shown in the
@@ -217,7 +226,10 @@ item is represented as a row:
 
 > **Tip**
 >
-> To view the "raw" XML document, insert the [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform) into the **&lt;xsl&gt;** element of the **XsltListViewWebPart**, save the page, and then browse to the page in Internet Explorer.
+> To view the "raw" XML document, insert the
+> [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform)
+> into the **&lt;xsl&gt;** element of the **XsltListViewWebPart**, save the
+> page, and then browse to the page in Internet Explorer.
 
 At this point, I recommend using Visual Studio to create two files (e.g.
 Specials.xml and Specials.xslt) for development purposes. Paste the data that
@@ -449,5 +461,7 @@ Stay tuned...
 
 > **Update (2011-05-02)**
 >
-> The [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6) is now available.
+> The
+> [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6)
+> is now available.
 

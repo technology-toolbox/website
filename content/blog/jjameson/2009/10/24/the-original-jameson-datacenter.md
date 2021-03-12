@@ -31,7 +31,9 @@ face and a sense of nostalgia. It also caused me to recall two things:
    
    > **Update**
    > 
-   > Doh! You would think a guy with a Master of Science degree in Mechanical Engineering could spell "Grateful Dead" correctly! I suppose that I really should do more proofreading before clicking that **Publish** button ;-)
+   > Doh! You would think a guy with a Master of Science degree in Mechanical
+   > Engineering could spell "Grateful Dead" correctly! I suppose that I really
+   > should do more proofreading before clicking that **Publish** button ;-)
 
 2. An article I read about a year ago describing the origin of Google that also included some photos of the original Google infrastructure in the Stanford University computer lab.
 

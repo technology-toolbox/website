@@ -309,7 +309,10 @@ The corresponding "view format" is shown below:
 
 > **Note**
 >
-> I have no idea why the out-of-the-box **Byline** and **Quote** reusable content items in SharePoint 2010 specify **Automatic Update** = **Yes**. I can see the reasoning for enabling automatic update of the default **Copyright** item, but these other two baffle me.
+> I have no idea why the out-of-the-box **Byline** and **Quote** reusable
+> content items in SharePoint 2010 specify **Automatic Update** = **Yes**. I can
+> see the reasoning for enabling automatic update of the default **Copyright**
+> item, but these other two baffle me.
 
 Look again at the sample "storage format" HTML above. Notice how the reusable
 content placeholders (i.e. the &lt;span&gt; elements) do not specify which
@@ -511,7 +514,10 @@ reviewing some of the unit tests that I created when developing the
 
 > **Note**
 >
-> Initially, I added the code for inserting reusable content into a page to the **SharePointPublishingHelper** class. However, I ended up refactoring this code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new class in more detail in part 3 of this series.
+> Initially, I added the code for inserting reusable content into a page to the
+> **SharePointPublishingHelper** class. However, I ended up refactoring this
+> code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new
+> class in more detail in part 3 of this series.
 
 ### Sample "Reusable Content" solution for SharePoint Server 2010
 
@@ -554,7 +560,9 @@ described below.
 
 > **Note**
 >
-> Technically, you don't have to set the environment variables (and use the "-dev" accounts). However, I recommend this in order to bypass SharePoint timer jobs when deploying the WSPs.
+> Technically, you don't have to set the environment variables (and use the
+> "-dev" accounts). However, I recommend this in order to bypass SharePoint
+> timer jobs when deploying the WSPs.
 
 At this point you should be able to modify your hosts file accordingly and
 browse to either

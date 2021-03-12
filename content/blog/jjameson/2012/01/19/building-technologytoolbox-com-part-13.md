@@ -34,7 +34,10 @@ resource).
 
 > **Note**
 >
-> Originally, I thought I needed to reference a local jQuery file during development in order to get Intellisense while writing JavaScript (i.e. by referencing a jQuery script residing side-by-side with a corresponding "vsdoc" file). However, that turned out not to be true. More on that in a moment.
+> Originally, I thought I needed to reference a local jQuery file during
+> development in order to get Intellisense while writing JavaScript (i.e. by
+> referencing a jQuery script residing side-by-side with a corresponding "vsdoc"
+> file). However, that turned out not to be true. More on that in a moment.
 
 Also note that version 1.4.1 of jQuery is rather "long in the tooth" these days
 -- considering it was released in early 2010. The current release (at the time
@@ -190,7 +193,11 @@ if you want to read more about this technique.)
 
 > **Note**
 >
-> If you are wondering why I use the **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)** method with the `<script>` elements but not the `<link>` elements, it's simply because it doesn't work otherwise (despite the presence of the `runat="server"` attribute in the `<head>` element).
+> If you are wondering why I use the **
+> [ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**
+> method with the `<script>` elements but not the `<link>` elements, it's simply
+> because it doesn't work otherwise (despite the presence of the
+> `runat="server"` attribute in the `<head>` element).
 
 Using the technique I have presented thus far works just fine in most scenarios,
 but there are a couple of potential issues (depending on your specific
@@ -200,7 +207,8 @@ circumstances):
 
 - If you need to support skins (á la Subtext) then you may not be able to use inline script (server-side script, obviously -- not client-side script). For example, if you try to conditionally include minified script files in a custom Subtext blog skin (i.e. by adding it to PageTemplate.ascx) then you'll be greeted with a rather nasty error message:
   
-  > The Controls collection cannot be modified because the control contains code blocks (i.e. &lt;% ... %&gt;).
+  > The Controls collection cannot be modified because the control contains
+  > code blocks (i.e. &lt;% ... %&gt;).
 
 To avoid these issues, I created a few server controls to render the `<script>`
 and `<link>` elements.

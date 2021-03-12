@@ -73,9 +73,19 @@ could be repeated for any particular build.
 
 > **Note**
 >
-> While VSS certainly provided the ability to retrieve a project based on a particular timestamp, it definitely wasn't easy (the only way that I was ever to do it was through [the SS command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)). Thus build labels provided a quick way of getting a snapshot of the code for a particular build.
+> While VSS certainly provided the ability to retrieve a project based on a
+> particular timestamp, it definitely wasn't easy (the only way that I was ever
+> to do it was through
+> [the SS command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)).
+> Thus build labels provided a quick way of getting a snapshot of the code for a
+> particular build.
 >
-> With the concept of changesets in TFS -- and the ability to quickly get the code for a specific changeset -- build labels are obviously not as important as they were in VSS. However, regardless of which particular source control system you are using, build labels provide an easy way to identify and retrieve important builds (such as **Beta 1**, **Beta 2**, **RC1**, and **v1.0**) or simply specific versions of the solution (e.g. 1.0.57.0).
+> With the concept of changesets in TFS -- and the ability to quickly get the
+> code for a specific changeset -- build labels are obviously not as important
+> as they were in VSS. However, regardless of which particular source control
+> system you are using, build labels provide an easy way to identify and
+> retrieve important builds (such as **Beta 1**, **Beta 2**, **RC1**, and
+> **v1.0**) or simply specific versions of the solution (e.g. 1.0.57.0).
 
 ### Source Code
 
@@ -128,11 +138,13 @@ in.
 
 > **Important**
 >
-> The source control must not be left in a broken state at any time. If a build breaks, resolving the problem becomes the highest priority.
+> The source control must not be left in a broken state at any time. If a build
+> breaks, resolving the problem becomes the highest priority.
 
 > **Tip**
 >
-> You can use the **Builds** check-in policy for TFS to ensure the solution compiles before a developer is allowed to check-in a changeset.
+> You can use the **Builds** check-in policy for TFS to ensure the solution
+> compiles before a developer is allowed to check-in a changeset.
 
 Each member of the Development team is responsible for ensuring the following:
 
@@ -145,7 +157,9 @@ Each member of the Development team is responsible for ensuring the following:
 
 > **Tip**
 >
-> You can use the **Testing Policy** check-in policy for TFS to ensure that specific unit tests pass before a developer is allowed to check-in a changeset.
+> You can use the **Testing Policy** check-in policy for TFS to ensure that
+> specific unit tests pass before a developer is allowed to check-in a
+> changeset.
 
 If any of the above conditions cannot be met, the code should not be checked
 into source control.
@@ -245,5 +259,8 @@ solution that point toward a particular fault in the system.
 
 > **Tip**
 >
-> A SharePoint site -- or even just a simple SharePoint list -- provides an excellent alternative to a Troubleshooting Guide document. Think of this site --or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)" for your solution.
+> A SharePoint site -- or even just a simple SharePoint list -- provides an
+> excellent alternative to a Troubleshooting Guide document. Think of this site
+> --or list -- as a simple " [Knowledge Base](http://support.microsoft.com/)"
+> for your solution.
 

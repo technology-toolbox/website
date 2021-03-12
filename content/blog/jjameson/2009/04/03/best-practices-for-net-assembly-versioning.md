@@ -54,7 +54,9 @@ version for a particular build.
 
 > **Update (2010-04-22)**
 >
-> In a follow-up post, I provide details for how I recommend [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build) (assuming you are using Team Foundation Server).
+> In a follow-up post, I provide details for how I recommend
+> [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build)
+> (assuming you are using Team Foundation Server).
 
 ### Assembly Version
 

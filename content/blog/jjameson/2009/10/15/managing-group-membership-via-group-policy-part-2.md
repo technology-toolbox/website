@@ -66,7 +66,9 @@ net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 
 > **Note**
 >
-> Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its predecessor -- Microsoft Operations Manager (MOM) -- and thus had already created a service account named **svc-mom-action**.
+> Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its
+> predecessor -- Microsoft Operations Manager (MOM) -- and thus had already
+> created a service account named **svc-mom-action**.
 
 To force this startup script to run on all monitored servers, I created a Group
 Policy object (named **Default Operations Manager Policy**) and linked it to the

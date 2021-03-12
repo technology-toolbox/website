@@ -66,7 +66,9 @@ are the details.
 
 > **Update (2011-03-11)**
 >
-> I've updated the following to reflect a few omissions in my original post (such as installing the Remote Server Administration Tools for Windows 7 *before* installing SP1).
+> I've updated the following to reflect a few omissions in my original post
+> (such as installing the Remote Server Administration Tools for Windows 7
+> *before* installing SP1).
 
 Start by installing Windows 7. When prompted to create a new user, specify a
 user name that will be used whenever you need administrator privileges (for
@@ -80,7 +82,10 @@ I then immediately installed the
 
 > **Warning**
 >
-> If you plan on using the Remote Server Administration Tools for Windows 7, then now is the time to install them. Otherwise [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1) -- at least not until the updated version is released.
+> If you plan on using the Remote Server Administration Tools for Windows 7,
+> then now is the time to install them. Otherwise
+> [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1)
+> -- at least not until the updated version is released.
 
 Next, I installed Windows 7 SP1 and subsequently joined the machine to the
 domain (TECHTOOLBOX). After rebooting, my various group policies kicked in, thus

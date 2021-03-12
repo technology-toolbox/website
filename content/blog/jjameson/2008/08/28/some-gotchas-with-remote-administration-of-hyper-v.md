@@ -110,7 +110,8 @@ According to the corresponding
 > This 32-bit update package includes the release version of the following:
 >
 > - The Hyper-V Manager console
-> - The Virtual Machine Connection tool for x86-based editions of Windows Server 2008
+> - The Virtual Machine Connection tool for x86-based editions of Windows Server
+>   2008
 
 Based on my experience installing the
 [Hyper-V Remote Management Update for Windows Vista (KB952627)](http://www.microsoft.com/downloads/details.aspx?familyid=BF909242-2125-4D06-A968-C8A3D75FF2AA&displaylang=en)
