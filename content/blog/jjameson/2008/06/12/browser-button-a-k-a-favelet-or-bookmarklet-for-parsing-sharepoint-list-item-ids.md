@@ -77,7 +77,8 @@ This script is safe to include in your browser).
 For Internet Explorer users:
 
 1. Right click the **Parse List Item ID** link and choose **Add to Favorites**.
-2. A security alert dialog will warn you that the link may be unsafe. Click **Yes**.
+2. A security alert dialog will warn you that the link may be unsafe. Click
+   **Yes**.
 3. In the **Save in** dropdown list, choose **Links**. Click **Add**.
 
 For Firefox users:
@@ -88,11 +89,15 @@ For Firefox users:
 
 For Internet Explorer users:
 
-1. Right click the **Parse List Item ID** button on the Favorites toolbar and choose **Delete**.
-2. A confirmation dialog will warn you that the button will be permanently deleted. Click **Yes**.
+1. Right click the **Parse List Item ID** button on the Favorites toolbar and
+   choose **Delete**.
+2. A confirmation dialog will warn you that the button will be permanently
+   deleted. Click **Yes**.
 
 For Firefox users:
 
-1. Right click the **Parse List Item ID** button on the Links/Bookmarks toolbar and choose **Delete**.
-2. A confirmation dialog will warn you that the button will be permanently deleted. Click **Yes**.
+1. Right click the **Parse List Item ID** button on the Links/Bookmarks toolbar
+   and choose **Delete**.
+2. A confirmation dialog will warn you that the button will be permanently
+   deleted. Click **Yes**.
 

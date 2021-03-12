@@ -41,7 +41,8 @@ Policy**) with the following settings:
             - **Minimum password length: 8 characters**
         - **Local Policies**
           - **Security Options**
-            - **Network security: LAN Manager authentication level: Send NTLMv2 response only. Refuse LM & NTLM**
+            - **Network security: LAN Manager authentication
+              level: Send NTLMv2 response only. Refuse LM & NTLM**
         - **System Services**
           - **TlntSvr**
             - **Startup Mode: Disabled**

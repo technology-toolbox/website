@@ -442,9 +442,22 @@ experience that I gained from it.
 
 So, in closing, here are some thoughts to consider:
 
-- When performing any kind of upgrade, always be prepared for the worst (because you never know when you might end up rebuilding from scratch)
-- There appears to be a significant difference in the way Analysis Services performs impersonation between Windows Server 2003/SQL Server 2005 and Windows Server 2008/SQL Server 2008
-- Before moving your TFS from one hardware configuration to another, ensure the "old" environment is running the same versions of Windows Server, SQL Server, and Windows SharePoint Services as the "new" environment (in my case, this would have prevented the "Prescan" issue when attaching the SharePoint content database as well as the issue with recovering the Reporting Services databases)
-- During the process of troubleshooting issues, always keep track of the changes you make so that you can subsequently revert them if they don't end up resolving the problem
-- Unless you're dealing with a lab environment, don't be cheap (like me) and try to use the same hardware for the "old" and "new" environments (thankfully, I didn't have a Development team waiting on me to get TFS back up and running again as soon as possible)
+- When performing any kind of upgrade, always be prepared for the worst
+  (because you never know when you might end up rebuilding from scratch)
+- There appears to be a significant difference in the way Analysis Services
+  performs impersonation between Windows Server 2003/SQL Server 2005 and
+  Windows Server 2008/SQL Server 2008
+- Before moving your TFS from one hardware configuration to another, ensure
+  the "old" environment is running the same versions of Windows Server, SQL
+  Server, and Windows SharePoint Services as the "new" environment (in my
+  case, this would have prevented the "Prescan" issue when attaching the
+  SharePoint content database as well as the issue with recovering the
+  Reporting Services databases)
+- During the process of troubleshooting issues, always keep track of the
+  changes you make so that you can subsequently revert them if they don't end
+  up resolving the problem
+- Unless you're dealing with a lab environment, don't be cheap (like me) and
+  try to use the same hardware for the "old" and "new" environments
+  (thankfully, I didn't have a Development team waiting on me to get TFS back
+  up and running again as soon as possible)
 

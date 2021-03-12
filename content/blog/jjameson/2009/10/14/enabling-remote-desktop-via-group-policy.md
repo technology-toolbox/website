@@ -42,7 +42,8 @@ Policy**) with the following settings:
         - **Terminal Services**
           - **Terminal Server**
             - **Connections**
-              - **Allow users to connect remotely using Terminal Services: Enabled**
+              - **Allow users to connect remotely using Terminal
+                Services: Enabled**
 
 By linking this Group Policy to the appropriate OUs (e.g.
 **Development/Resources/Servers**) I do not have to manually enable Remote

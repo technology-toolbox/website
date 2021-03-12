@@ -47,9 +47,24 @@ high-capacity DIMMs.
 On development VMs, I create separate VHDs for the D: and L: drives for several
 reasons:
 
-- Unlike Production environments, SQL Server is typically installed "side-by-side" with SharePoint in development environments. Thus I make sure that when installing SQL Server I change the default locations of database files and log files. Personally, I like to use "[D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///D:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)" and "[L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///L:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)").
-- On my Hyper-V server (ICEMAN) that I use to run SharePoint development VMs, I have two RAID 1 arrays and therefore split the VHDs across the two drives on the host, thus greatly reducing the possibility of I/O contention on a single physical drive.
-- Whenever I need to run a SharePoint VM from my laptop, I can easily split the VHDs between the laptop's internal hard drive and an external USB drive. [Note that I haven't run a SharePoint VM on my laptop since replacing the internal drive with a solid-state drive (SSD) so this may no longer be an issue. However, back when I had to do this at customer sites, using a combination of the internal drive and an external USB drive was the only way I could keep my sanity when running SharePoint VMs.]
+- Unlike Production environments, SQL Server is typically installed
+  "side-by-side" with SharePoint in development environments. Thus I make sure
+  that when installing SQL Server I change the default locations of database
+  files and log files. Personally, I like to use "
+  [D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///D:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)"
+  and "
+  [L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///L:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)").
+- On my Hyper-V server (ICEMAN) that I use to run SharePoint development VMs,
+  I have two RAID 1 arrays and therefore split the VHDs across the two drives
+  on the host, thus greatly reducing the possibility of I/O contention on a
+  single physical drive.
+- Whenever I need to run a SharePoint VM from my laptop, I can easily split
+  the VHDs between the laptop's internal hard drive and an external USB drive.
+  [Note that I haven't run a SharePoint VM on my laptop since replacing the
+  internal drive with a solid-state drive (SSD) so this may no longer be an
+  issue. However, back when I had to do this at customer sites, using a
+  combination of the internal drive and an external USB drive was the only way
+  I could keep my sanity when running SharePoint VMs.]
 
 When I used to have ICEMAN configured with a single logical drive (four physical
 drives in a RAID 10 array), I would occasionally receive alerts from Operations

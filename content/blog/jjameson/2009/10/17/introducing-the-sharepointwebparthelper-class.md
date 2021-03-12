@@ -32,8 +32,10 @@ SharePoint Server (MOSS) 2007. Thus I created a "PublicSiteConfiguration"
 feature that, upon activation:
 
 1. Automatically creates the **/Public** site
-2. Populates the page content on the /Public/Pages/default.aspx page and adds an instance of a custom Login Form Web Part to the page
-3. Creates the /Public/Pages/Disclaimer.aspx page and populates its default content
+2. Populates the page content on the /Public/Pages/default.aspx page and adds
+   an instance of a custom Login Form Web Part to the page
+3. Creates the /Public/Pages/Disclaimer.aspx page and populates its default
+   content
 
 I've already introduced the `SharePointPublishingHelper` class that performs the
 bulk of the work in creating and configuring publishing pages. In this post, I
@@ -43,9 +45,16 @@ simply a collection of helper methods for the SharePoint API.
 
 `SharePointWebPartHelper` makes it really easy to:
 
-- Attempt to retrieve a reference to a Web Part by specifying an [SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx) for a specific page and the title of the Web Part you are trying to find
+- Attempt to retrieve a reference to a Web Part by specifying an
+  [SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)
+  for a specific page and the title of the Web Part you are trying to find
 - Ensure a Web Part exists on a page (creating a new Web Part as necessary)
-- Ensuring a [ContentEditorWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.contenteditorwebpart.aspx) exists on a page and that it is configured with the specified HTML content and title (as well as removing the "chrome", since -- at least in my experience -- you don't want to show this to users for this type of Web Part)
+- Ensuring a
+  [ContentEditorWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.contenteditorwebpart.aspx)
+  exists on a page and that it is configured with the specified HTML content
+  and title (as well as removing the "chrome", since -- at least in my
+  experience -- you don't want to show this to users for this type of Web
+  Part)
 
 Note that one could argue that the stuff specific to the Content Editor Web Part
 doesn't really belong in this class, but nevertheless that's where it ended up

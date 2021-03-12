@@ -74,7 +74,10 @@ To make the presentation layer as flexible as possible, I chose to auto-generate
 the columns and rely on a couple of assumptions when rendering the table:
 
 - The first column will always contain the site names.
-- The last three columns will always contain the KPI thresholds from the most recent period. (Note that the business may decide to modify the KPI thresholds over time, but we'll always display the most recent KPI thresholds in the detail table.)
+- The last three columns will always contain the KPI thresholds from the most
+  recent period. (Note that the business may decide to modify the KPI
+  thresholds over time, but we'll always display the most recent KPI
+  thresholds in the detail table.)
 
 Consequently, we'll assume the underlying data source -- in this case, a simple
 DataTable -- that is bound to the grid control specifies the exact columns that
@@ -223,8 +226,13 @@ namespace Fabrikam.Demo.Web.UI.Tables
 
 A couple of important points about the implementation:
 
-- Assume the actual work required to get the scorecard detail table is substantial (e.g. the real data will be retrieved from an external Web service or database). Consequently, in the `Page_Load` event handler, we check if it is the not the initial page request (i.e. `this.Page.IsPostBack == true`), in which case we rely on the GridView to restore its content from view state.
-- A simple LinkButton allows us to test the scenario where some control on the page causes a post back to the server.
+- Assume the actual work required to get the scorecard detail table is
+  substantial (e.g. the real data will be retrieved from an external Web
+  service or database). Consequently, in the `Page_Load` event handler, we
+  check if it is the not the initial page request (i.e. `this.Page.IsPostBack == true`), in which case we rely on the GridView to restore its content from
+  view state.
+- A simple LinkButton allows us to test the scenario where some control on the
+  page causes a post back to the server.
 
 It turns out that rendering the GridView from view state is actually what makes
 adding a custom header row interesting enough for a blog post. I'll explain why

@@ -88,7 +88,9 @@ function Add-Zip
 
 However, there are a few problems with this approach:
 
-- If you use the function as David illustrates in his post (e.g. "`dir Fabrikam\*.* -Recurse | Add-Zip Fabrikam.zip`") then the folder hierarchy is not preserved within the zip file -- which is almost certainly not what you want (but seems to have been okay for David's scenario).
+- If you use the function as David illustrates in his post (e.g. "`dir Fabrikam\*.* -Recurse | Add-Zip Fabrikam.zip`") then the folder hierarchy is
+  not preserved within the zip file -- which is almost certainly not what you
+  want (but seems to have been okay for David's scenario).
 
 - If you try to operate on the folder instead (e.g. "`dir Fabrikam | Add-Zip Fabrikam.zip`") then an error occurs:
   {{< blockquote "font-italic text-danger" >}}
@@ -101,7 +103,9 @@ However, there are a few problems with this approach:
   
   {{< /blockquote >}}
 
-- Relying exclusively on a 500 ms delay (to wait for the asynchronous **CopyHere** operation to complete) seems a little "dicey" to me. In other words, how do you know the zip operation completed successfully?
+- Relying exclusively on a 500 ms delay (to wait for the asynchronous
+  **CopyHere** operation to complete) seems a little "dicey" to me. In other
+  words, how do you know the zip operation completed successfully?
 
 A different approach is to place the call to **Start-Sleep** inside a loop that
 checks the number of items in the zip file against the expected number (as shown

@@ -156,8 +156,12 @@ desired goal of creating or updating the SharePoint solution only when necessary
 The final piece is to "wire in" the custom target. There are a couple of ways to
 do this:
 
-1. Append `CreateSharePointSolutionPackage` to the `DefaultTargets` attribute for the project, or
-2. Add it as a dependency of the default `Build` target, using [the technique](http://blogs.msdn.com/msbuild/archive/2006/02/10/528822.aspx) described by Neil Enns (a.k.a. "Demo Boy") on the [MSBuild Team blog](http://blogs.msdn.com/msbuild).
+1. Append `CreateSharePointSolutionPackage` to the `DefaultTargets` attribute
+   for the project, or
+2. Add it as a dependency of the default `Build` target, using
+   [the technique](http://blogs.msdn.com/msbuild/archive/2006/02/10/528822.aspx)
+   described by Neil Enns (a.k.a. "Demo Boy") on the
+   [MSBuild Team blog](http://blogs.msdn.com/msbuild).
 
 The second option seems a little more elegant than the first, and hence is what
 I chose to use:

@@ -204,9 +204,15 @@ Using the technique I have presented thus far works just fine in most scenarios,
 but there are a couple of potential issues (depending on your specific
 circumstances):
 
-- If your site needs to support both HTTP and HTTPS, then the references to the jQuery script on the CDN should use the same protocol (otherwise users may receive warnings in their browsers).
+- If your site needs to support both HTTP and HTTPS, then the references to
+  the jQuery script on the CDN should use the same protocol (otherwise users
+  may receive warnings in their browsers).
 
-- If you need to support skins (á la Subtext) then you may not be able to use inline script (server-side script, obviously -- not client-side script). For example, if you try to conditionally include minified script files in a custom Subtext blog skin (i.e. by adding it to PageTemplate.ascx) then you'll be greeted with a rather nasty error message:
+- If you need to support skins (á la Subtext) then you may not be able to use
+  inline script (server-side script, obviously -- not client-side script). For
+  example, if you try to conditionally include minified script files in a
+  custom Subtext blog skin (i.e. by adding it to PageTemplate.ascx) then
+  you'll be greeted with a rather nasty error message:
   
   > The Controls collection cannot be modified because the control contains
   > code blocks (i.e. &lt;% ... %&gt;).

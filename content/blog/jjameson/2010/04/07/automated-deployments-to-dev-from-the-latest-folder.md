@@ -45,7 +45,8 @@ title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 
 The **\_latest** folder greatly simplifies the automated deployment process by:
 
-- Eliminating the need to determine which version (folder) to install from when deploying to DEV
+- Eliminating the need to determine which version (folder) to install from
+  when deploying to DEV
 - Avoiding the need to detect a broken build and abort the deployment
 
 If a build is broken (for example, a developer checks in code that doesn't
@@ -103,16 +104,22 @@ completes). [Note that the client name has been replaced to protect the innocent
 The first step (i.e. action) in the scheduled task rebuilds a custom database
 for the solution:
 
-- Program/script: **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment\Rebuild Database.cmd"**
+- Program/script:
+  **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment\Rebuild
+  Database.cmd"**
 - Arguments: **&gt; "C:\NotBackedUp\Rebuild Database - DEV.log" 2&gt;&1**
-- Start in: **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment**
+- Start in:
+  **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment**
 
 The second step in the scheduled task redeploys all of the custom SharePoint
 WSPs and features for the solution:
 
-- Program/script: **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts\Redeploy Features.cmd"**
+- Program/script:
+  **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts\Redeploy
+  Features.cmd"**
 - Arguments: **&gt; "C:\NotBackedUp\Redeploy Features - DEV.log" 2&gt;&1**
-- Start in: **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts**
+- Start in:
+  **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts**
 
 Assuming this scheduled task completes successfully, each morning we have a
 freshly rebuilt Development environment with the latest build of our solution.

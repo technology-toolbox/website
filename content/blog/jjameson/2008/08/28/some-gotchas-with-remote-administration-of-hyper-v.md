@@ -40,7 +40,8 @@ scenarios.
 The instructions in John's blog posts work when:
 
 - both the Hyper-V server and the client are in WORKGROUP mode, or
-- when the client and server are members of the same domain or trusted domains, or
+- when the client and server are members of the same domain or trusted
+  domains, or
 - when the Hyper-V server is in WORKGROUP but the client is in a domain
 
 [Note that I personally verified the second and third scenarios above while
@@ -110,8 +111,8 @@ According to the corresponding
 > This 32-bit update package includes the release version of the following:
 >
 > - The Hyper-V Manager console
-> - The Virtual Machine Connection tool for x86-based editions of Windows Server
->   2008
+> - The Virtual Machine Connection tool for x86-based editions of Windows
+>   Server 2008
 
 Based on my experience installing the
 [Hyper-V Remote Management Update for Windows Vista (KB952627)](http://www.microsoft.com/downloads/details.aspx?familyid=BF909242-2125-4D06-A968-C8A3D75FF2AA&displaylang=en)
@@ -125,9 +126,13 @@ fellow Architect with Microsoft Consulting Services in Russia.
 To enable Hyper-V Manager after installing KB950050, you need to enable the
 corresponding feature:
 
-1. Open **Server Manager**. (If Server Manager is not running, click **Start**, point to **Administrative Tools**, click **Server Manager**, and then, if prompted for permission to continue, click **Continue**.)
+1. Open **Server Manager**. (If Server Manager is not running, click **Start**,
+   point to **Administrative Tools**, click **Server Manager**, and then, if
+   prompted for permission to continue, click **Continue**.)
 2. In **Server Manager**, under **Features Summary**, click **Add Features**.
-3. In the **Add Features Wizard**, on the **Select Features** page, expand **Remote Server Administration Tools**, and then expand **Remote Administration Tools**
+3. In the **Add Features Wizard**, on the **Select Features** page, expand
+   **Remote Server Administration Tools**, and then expand **Remote
+   Administration Tools**
 4. Click **Hyper-V Tools**, and then proceed through the rest of the wizard.
 
 For more information on deploying Hyper-V, refer to the

@@ -39,16 +39,29 @@ goals (and non-goals) of the solution.
 
 The primary goals of the logging feature are:
 
-- Provide solution components a way of logging messages of various levels (e.g. errors, warnings, information) with minimal custom code.
-- Ensure log messages can be enabled in all environments (e.g. DEV, TEST, and PROD); in other words, in both Debug and Release builds (unlike the ` Debug.WriteLine` method, which relies on the DEBUG conditional compilation constant).
-- Through configuration, enable log messages to be routed to various outputs such as a text file, the Windows Event Log, or [ASP.NET tracing](http://msdn.microsoft.com/en-us/library/bb386420.aspx).
-- Ensure that different levels of log messages can be filtered and potentially routed to different outputs; for example, log all messages to the console, but only log errors and warnings to a text file.
+- Provide solution components a way of logging messages of various levels
+  (e.g. errors, warnings, information) with minimal custom code.
+- Ensure log messages can be enabled in all environments (e.g. DEV, TEST, and
+  PROD); in other words, in both Debug and Release builds (unlike the ` Debug.WriteLine` method, which relies on the DEBUG conditional compilation
+  constant).
+- Through configuration, enable log messages to be routed to various outputs
+  such as a text file, the Windows Event Log, or
+  [ASP.NET tracing](http://msdn.microsoft.com/en-us/library/bb386420.aspx).
+- Ensure that different levels of log messages can be filtered and potentially
+  routed to different outputs; for example, log all messages to the console,
+  but only log errors and warnings to a text file.
 
 Non-goals of the logging feature include:
 
-- Providing the fastest possible logging implementation; rather the performance impact of logging should be insignificant when compared with the "real" work performed by the solution components.
-- Changing logging configuration without reinitializing the solution; for example, to change the logging for an ASP.NET application, it is acceptable to restart the corresponding application pool.
-- Filtering log messages based on subsystems (or feature areas) of the solution; for example, when logging is enabled for debug messages, then log messages from all components are output.
+- Providing the fastest possible logging implementation; rather the
+  performance impact of logging should be insignificant when compared with the
+  "real" work performed by the solution components.
+- Changing logging configuration without reinitializing the solution; for
+  example, to change the logging for an ASP.NET application, it is acceptable
+  to restart the corresponding application pool.
+- Filtering log messages based on subsystems (or feature areas) of the
+  solution; for example, when logging is enabled for debug messages, then log
+  messages from all components are output.
 
 ### Introducing the Logger Class
 

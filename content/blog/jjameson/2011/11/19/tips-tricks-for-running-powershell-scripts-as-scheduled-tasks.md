@@ -270,8 +270,12 @@ The properties for the corresponding scheduled task are as follows:
   - **Run with highest privileges:** (checked)
 - **Actions**
   - **Start a program**
-    - **Program/script:** "C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts\Rebuild Website.cmd"
-    - **Start in:** C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts
+    - **Program/script:**
+      "C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment
+      Files\Scripts\Rebuild Website.cmd"
+    - **Start in:**
+      C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment
+      Files\Scripts
 
 Here is a sample log file (as viewed in Notepad), which shows the `Write-Host`
 messages as well as other output (e.g. "{{< sample-output

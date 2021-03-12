@@ -81,7 +81,8 @@ Here are the settings for the Group Policy:
     - **Windows Settings**
       - **Scripts (Startup/Shutdown)**
         - **Startup**
-          - **Name: OperationsManager\EnsureLocalGroupMembership.cmd**
+          - **Name:
+            OperationsManager\EnsureLocalGroupMembership.cmd**
 
 By linking this Group Policy to the appropriate OU (i.e.
 **IT/Resources/Servers**) the SCOM service account is ensured to be a member of

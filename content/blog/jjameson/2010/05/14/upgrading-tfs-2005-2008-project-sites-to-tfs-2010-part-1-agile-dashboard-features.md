@@ -186,9 +186,13 @@ Excel Reporting** feature on my site.
 
 Note that you can activate the feature in a variety of ways:
 
-- On the **Features** page in **Site Settings** (e.g. [http://cyclops/sites/AdventureWorks/\_layouts/ManageFeatures.aspx](http://cyclops/sites/AdventureWorks/_layouts/ManageFeatures.aspx))
-- Using StsAdm.exe (e.g. {{< kbd "stsadm -o activatefeature -name TfsDashboardAgileMoss -url http://cyclops/sites/AdventureWorks" >}})
-- If you are running SharePoint Server 2010, using PowerShell and the **[Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)** cmdlet.
+- On the **Features** page in **Site Settings** (e.g.
+  [http://cyclops/sites/AdventureWorks/\_layouts/ManageFeatures.aspx](http://cyclops/sites/AdventureWorks/_layouts/ManageFeatures.aspx))
+- Using StsAdm.exe (e.g. {{< kbd
+  "stsadm -o activatefeature -name TfsDashboardAgileMoss -url http://cyclops/sites/AdventureWorks" >}})
+- If you are running SharePoint Server 2010, using PowerShell and the **
+  [Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)**
+  cmdlet.
 
 Since I have a number of TFS project sites to upgrade, I chose to activate the
 feature using PowerShell:
@@ -216,10 +220,13 @@ template, the Burndown dashboard is set as the default page for the site.
 
 To make the Burndown dashboard the default page for an upgraded project site:
 
-1. Browse to the home page of the project site (e.g. [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)).
-2. In the quick launch navigation on the left, under the **Dashboards** heading, click **Burndown**.
+1. Browse to the home page of the project site (e.g.
+   [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)).
+2. In the quick launch navigation on the left, under the **Dashboards**
+   heading, click **Burndown**.
 3. On the **Burndown** page, select the **Page** tab.
-4. In the **Page Actions** group of the Ribbon, click **Make Homepage**. When prompted to set the page as the site's home page, click **OK**.
+4. In the **Page Actions** group of the Ribbon, click **Make Homepage**. When
+   prompted to set the page as the site's home page, click **OK**.
 
 If you want your upgraded project site to have similar navigation to a new
 project site created with the MSF Agile v5 template, you can configure the quick

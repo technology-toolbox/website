@@ -38,7 +38,8 @@ For the sake of explaining these various snapshots, let me relabel them in this
 post as follows:
 
 - Baseline SharePoint Server 2010 configuration - **Snapshot 1**
-  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) - **Snapshot 2**
+  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) -
+    **Snapshot 2**
   - Baseline {Client Name} Cloud Portal (Sprint-11) - **Snapshot 3**
 
 The first snapshot was taken after installing SharePoint Server 2010 and
@@ -52,7 +53,8 @@ installation guide to give you an idea of what's included up to that point:
   - 4.3 DEV - Configure domain controller
   - 4.4 Join member server to domain
   - 4.5 Create service accounts
-  - 4.6 Create Active Directory container to track SharePoint 2010 installations
+  - 4.6 Create Active Directory container to track SharePoint 2010
+    installations
   - 4.7 DEV -- Map Web application to loopback address in hosts file
   - 4.8 Allow specific host names mapped to 127.0.0.1
   - 4.9 DEV -- Set MaxPatchCacheSize to 0 (Optional)
@@ -66,7 +68,8 @@ installation guide to give you an idea of what's included up to that point:
   - 4.17 DEV - Install Additional Service Packs and Patches
 - 5 Install and configure SharePoint Server 2010
   - 5.1 Prepare the farm servers
-  - 5.2 Install security update for Web applications using Claims authentication
+  - 5.2 Install security update for Web applications using Claims
+    authentication
   - 5.3 Install SharePoint Server 2010 on the farm servers
   - 5.4 Create and configure the farm
   - 5.5 Add Web servers to the farm
@@ -104,9 +107,12 @@ to create and configure a sample Web application using claims authentication
 7:19:27 AM. In other words, it took me about 20 minutes to:
 
 1. Create the ASP.NET membership database
-2. Configure claims authentication for Central Administration and the Security Token Service
-3. Run the deployment scripts to create and configure the Fabrikam Demo Web application
-4. Create a couple of users (and one role) in the membership database and validate that claims authentication works as expected
+2. Configure claims authentication for Central Administration and the Security
+   Token Service
+3. Run the deployment scripts to create and configure the Fabrikam Demo Web
+   application
+4. Create a couple of users (and one role) in the membership database and
+   validate that claims authentication works as expected
 
 While 20 minutes isn't a lot of time to create and configure a new Web
 application, taking a snapshot of the Fabrikam Demo site allows me to revert to
@@ -129,7 +135,8 @@ headings from the installation guide:
   - 6.1 Set environment variables
   - 6.2 Create the Web application and initial site collections
   - 6.3 Configure claims based authentication
-    - 6.3.1 Add SharePoint farm service account to \*\*\*\*\*\*\*\*\*Portal database
+    - 6.3.1 Add SharePoint farm service account to
+      \*\*\*\*\*\*\*\*\*Portal database
     - 6.3.2 Add Web.config modifications for claims based authentication
   - 6.4 Configure the People Picker to support searches across one-way trust
   - 6.5 Expand content database files
@@ -144,18 +151,22 @@ headings from the installation guide:
 - 8 Install and configure Office Web Apps
   - 8.1 Install Office Web Apps
   - 8.2 Run PSConfig to register Office Web Apps services
-  - 8.3 Start the Office Web Apps service instances and create service applications
+  - 8.3 Start the Office Web Apps service instances and create service
+    applications
   - 8.4 Configure Excel Services Application trusted location
   - 8.5 Configure the Office Web Apps cache
-  - 8.6 Grant access to the Web application content database for Office Web Apps
+  - 8.6 Grant access to the Web application content database for Office Web
+    Apps
 - 9 Validate basic configuration of the Web application
 - 10 Deploy the Cloud Portal solution and configure the site
   - 10.1 Configure logging
-  - 10.2 Install \*\*\*\*\*\*\*\*\*.CloudPortal.Web solution and activate the features
+  - 10.2 Install \*\*\*\*\*\*\*\*\*.CloudPortal.Web solution and activate
+    the features
   - 10.3 Create a custom sign-in page
   - 10.4 Create and configure a client site
     - 10.4.1 Create site collection for a \*\*\*\*\*\*\*\*\* client
-    - 10.4.2 Apply the "\*\*\*\*\*\*\*\*\* Client Site" template to the top-level site
+    - 10.4.2 Apply the "\*\*\*\*\*\*\*\*\* Client Site" template to the
+      top-level site
     - 10.4.3 Update the client site home page
   - 10.5 Create and configure a team collaboration site
     - 10.5.1 Create the team collaboration site

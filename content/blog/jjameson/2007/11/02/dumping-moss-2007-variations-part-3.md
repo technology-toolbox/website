@@ -28,9 +28,14 @@ to abandon using them on their new Internet site.
 Here is a brief summary of the three major issues we encountered with variations
 prior to deployment:
 
-1. Incompatibility of out-of-the-box (OOTB) content types and variations (refer to [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1) for more details)
-2. Page propagation slows down dramatically as the number of pages grows (refer to [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) for more details)
-3. Attempting to create a new variation label after creating a large number of sites and pages results in an out-of-memory error on the server
+1. Incompatibility of out-of-the-box (OOTB) content types and variations (refer
+   to [part 1](/blog/jjameson/2007/10/30/dumping-moss-2007-variations-part-1)
+   for more details)
+2. Page propagation slows down dramatically as the number of pages grows (refer
+   to [part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2)
+   for more details)
+3. Attempting to create a new variation label after creating a large number of
+   sites and pages results in an out-of-memory error on the server
 
 I have not previously covered this last problem in the previous posts. If you
 manage to circumvent the first two problems, at some later point in time it is

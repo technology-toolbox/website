@@ -175,9 +175,18 @@ trying to solve.
 In order to resolve the issues around integrating the Silverlight XAP file into
 the WSP, I made the following changes:
 
-- Reverted the output path for the **Debug** configuration of the **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e. **Bin\Debug** instead of **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
-- Added a reference from the **Fabrikam.Portal.Web** project to the **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not explicitly required by the code within the **Fabrikam.Portal.Web** project, there really is a dependency between the two projects. Establishing this reference ensures the projects are built in the correct order (without having to manually tweak the build order of the projects in the solution).
-- Modified the **Fabrikam.Portal.Web** project (by unloading the project and then editing the MSBuild file directly) to include the following:
+- Reverted the output path for the **Debug** configuration of the
+  **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e.
+  **Bin\Debug** instead of
+  **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
+- Added a reference from the **Fabrikam.Portal.Web** project to the
+  **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not
+  explicitly required by the code within the **Fabrikam.Portal.Web** project,
+  there really is a dependency between the two projects. Establishing this
+  reference ensures the projects are built in the correct order (without
+  having to manually tweak the build order of the projects in the solution).
+- Modified the **Fabrikam.Portal.Web** project (by unloading the project and
+  then editing the MSBuild file directly) to include the following:
 
 ```
   <PropertyGroup>

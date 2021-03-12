@@ -122,8 +122,12 @@ The following table provides more detail on the various servers:
 Note that I use two different Active Directory domains (really two different
 forests):
 
-- **corp.fabrikam.com (FABRIKAM) -** I use this domain for development and testing purposes. In other words, whenever I want to do something "experimental", that may or may not be a permanent change.
-- **corp.technologytoolbox.com (TECHTOOLBOX) -** I treat this as my "production" domain. In other words, I typically only make changes in this domain after I've tested them in my FABRIKAM development/test domain.
+- **corp.fabrikam.com (FABRIKAM) -** I use this domain for development and
+  testing purposes. In other words, whenever I want to do something
+  "experimental", that may or may not be a permanent change.
+- **corp.technologytoolbox.com (TECHTOOLBOX) -** I treat this as my
+  "production" domain. In other words, I typically only make changes in this
+  domain after I've tested them in my FABRIKAM development/test domain.
 
 There is no trust relationship between these Active Directory domains. In other
 words, I can't login to one of the TECHTOOLBOX servers with my
@@ -160,9 +164,29 @@ You might be wondering why several of the servers are still running Windows
 Server 2003 and not Windows Server 2008. There are actually several reasons for
 this -- which vary by server:
 
-- As I discovered shortly after Windows Server 2008 came out, the POP3 service is no longer included in the operating system. I guess Microsoft simply wanted to deprecate this service in order to eventually terminate the corresponding support obligations. This shouldn't be a big deal to most people, since I seriously doubt many enterprise organizations -- or even small businesses -- use the POP3 service in Windows Server 2003 for e-mail. However, I neither need nor want to use a full-blown instance of Microsoft Exchange simply for the purposes of, say, demonstrating various e-mail notifications from MOSS 2007. Thus, BANSHEE and FAB-DC01 will probably not be moved to Windows Server 2008 anytime soon. While there are certainly third-party POP3 alternatives out there, I really don't want to go learn how to install and configure them. Trust me, there are many more valuable ways that I can spend that time.
-- BEAST is still running Windows Server 2003 because, well, I simply haven't seen any need to upgrade it. This server has been humming along for years and as the old saying goes, "if it ain't broke, don't fix it." ;-)
-- CYCLOPS is still running Windows Server 2003 for essentially the same reason. Since I've been running Team Foundation Server on CYCLOPS since shortly after its release as part of Visual Studio 2005 Team System, I've never bothered to upgrade the operating system. Sure, I've since migrated the VM from Virtual Server to Hyper-V, and also upgraded to Team Foundation Server 2008, but I haven't seen any need to upgrade the base OS -- at least not yet.
+- As I discovered shortly after Windows Server 2008 came out, the POP3 service
+  is no longer included in the operating system. I guess Microsoft simply
+  wanted to deprecate this service in order to eventually terminate the
+  corresponding support obligations. This shouldn't be a big deal to most
+  people, since I seriously doubt many enterprise organizations -- or even
+  small businesses -- use the POP3 service in Windows Server 2003 for e-mail.
+  However, I neither need nor want to use a full-blown instance of Microsoft
+  Exchange simply for the purposes of, say, demonstrating various e-mail
+  notifications from MOSS 2007. Thus, BANSHEE and FAB-DC01 will probably not
+  be moved to Windows Server 2008 anytime soon. While there are certainly
+  third-party POP3 alternatives out there, I really don't want to go learn how
+  to install and configure them. Trust me, there are many more valuable ways
+  that I can spend that time.
+- BEAST is still running Windows Server 2003 because, well, I simply haven't
+  seen any need to upgrade it. This server has been humming along for years
+  and as the old saying goes, "if it ain't broke, don't fix it." ;-)
+- CYCLOPS is still running Windows Server 2003 for essentially the same
+  reason. Since I've been running Team Foundation Server on CYCLOPS since
+  shortly after its release as part of Visual Studio 2005 Team System, I've
+  never bothered to upgrade the operating system. Sure, I've since migrated
+  the VM from Virtual Server to Hyper-V, and also upgraded to Team Foundation
+  Server 2008, but I haven't seen any need to upgrade the base OS -- at least
+  not yet.
 
 It's also worth pointing out that while the three physical servers are running
 x64 versions of the operating system, I have a mixture of x86 and x64 VMs.

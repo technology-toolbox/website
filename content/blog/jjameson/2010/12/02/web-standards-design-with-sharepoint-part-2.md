@@ -30,8 +30,14 @@ be familiar to anyone using SQL Server).
 However, two things really started to bother me as I began developing the
 sample:
 
-- The sample site became increasingly complex in terms of dependencies and deployment (for example, readers interested in downloading and installing the sample SharePoint site would need to first install the sample AdventureWorks OLTP database).
-- Since I was the "designer" of the Web site, one could argue that the design was "SharePoint-friendly" to begin with (in other words, the HTML and CSS used to render the pages was created in such a way that it rendered "as expected" in MOSS 2007).
+- The sample site became increasingly complex in terms of dependencies and
+  deployment (for example, readers interested in downloading and installing
+  the sample SharePoint site would need to first install the sample
+  AdventureWorks OLTP database).
+- Since I was the "designer" of the Web site, one could argue that the design
+  was "SharePoint-friendly" to begin with (in other words, the HTML and CSS
+  used to render the pages was created in such a way that it rendered "as
+  expected" in MOSS 2007).
 
 While the first issue didn't necessarily seem like a showstopper, the more I
 thought about the second issue, the less value I saw in completing the sample --
@@ -380,8 +386,12 @@ to configure a SharePoint site exactly the way we want it. For the Tugboat site,
 the HomeSiteConfiguration feature is used to:
 
 1. Set the master page for the site (SPWeb) to Tugboat.master.
-2. Upload the various images referenced on the home page (e.g. boat.jpg) to the **PublishingImages** library.
-3. Configure the default page for the site (i.e. change the page layout to TugboatWelcomePageLayout1, set the **PageContent** field to render the main content, add the Content Editor Web Part to render the secondary content, and add an instance of the FindLocationWebPart).
+2. Upload the various images referenced on the home page (e.g. boat.jpg) to the
+   **PublishingImages** library.
+3. Configure the default page for the site (i.e. change the page layout to
+   TugboatWelcomePageLayout1, set the **PageContent** field to render the main
+   content, add the Content Editor Web Part to render the secondary content,
+   and add an instance of the FindLocationWebPart).
 
 Fortunately, having done this kind of stuff many times in the past, it didn't
 take very long to write that code and mark the corresponding task as "Done."
@@ -460,7 +470,8 @@ to gain from formatting your hard drive ;-) ]
 
 To deploy the Tugboat sample site to SharePoint:
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, point to **All Programs**, point to **Accessories**, and
+   right-click **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
    
@@ -516,7 +527,8 @@ To deploy the Tugboat sample site to SharePoint:
    "Activate Features.cmd"
    ```
 
-9. Wait for the feature activations to complete, and then minimize or close the command prompt.
+9. Wait for the feature activations to complete, and then minimize or close the
+   command prompt.
 
 That's it! You're done.
 

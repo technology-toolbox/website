@@ -72,7 +72,15 @@ of the issue.
 
 So...lessons learned:
 
-- Do not use the Web application to delete a large site (e.g. a Document Center with lots of content) since it could timeout and leave your SharePoint databases in an inconsistent state; use "{{< kbd "stsadm.exe -o deletesite" >}}" or "{{< kbd "stsadm.exe -o deleteweb" >}}" instead
-- Not all data for a particular Web application is stored in the content database (e.g. WSS\_Content); a small amount of data about the site is also stored in SharePoint\_Config
-- Deleting a site does not perform a distributed transaction across the content database and the configuration database (the root of the issue when deleting a large site)
+- Do not use the Web application to delete a large site (e.g. a Document
+  Center with lots of content) since it could timeout and leave your
+  SharePoint databases in an inconsistent state; use "{{< kbd
+  "stsadm.exe -o deletesite" >}}" or "{{< kbd "stsadm.exe -o deleteweb" >}}"
+  instead
+- Not all data for a particular Web application is stored in the content
+  database (e.g. WSS\_Content); a small amount of data about the site is also
+  stored in SharePoint\_Config
+- Deleting a site does not perform a distributed transaction across the
+  content database and the configuration database (the root of the issue when
+  deleting a large site)
 

@@ -39,7 +39,10 @@ pages were not always propagating from the source site (i.e. label ) to other
 variation sites. Based on a cursory scan of the variation logs, the failures
 appeared to fall into one of the following error categories:
 
-1. The variation system failed to pair up pages [http://foobar/en-US/Support/FAQs/foo/Pages/default.aspx](http://foobar/en-US/Support/FAQs/foo/bar/Pages/default.aspx) and /ja-JP/Support/FAQs/foo/Pages/default.aspx because their Content Types do not match.
+1. The variation system failed to pair up pages
+   [http://foobar/en-US/Support/FAQs/foo/Pages/default.aspx](http://foobar/en-US/Support/FAQs/foo/bar/Pages/default.aspx)
+   and /ja-JP/Support/FAQs/foo/Pages/default.aspx because their Content Types
+   do not match.
 2. Object reference not set to an instance of an object.
 
 The first error is due to the fact that MOSS 2007 does not automatically change
@@ -83,9 +86,12 @@ migration tool to break it down into a series of steps (which were previously
 performed in a "fast-as-you-can" fashion). The "pace" of the migration would
 then need to controlled by the user performing the migration:
 
-1. Run the first step to create the FAQ sites with the default page having the default content type (i.e. **Welcome Page**)
-2. Wait for steady state (i.e. let the SharePoint timer job finish creating variation sites and "pairing" up the pages)
-3. Run the next step of the migration to change the default page of each and every FAQ site to use the custom **FAQ Node Page** content type
+1. Run the first step to create the FAQ sites with the default page having the
+   default content type (i.e. **Welcome Page**)
+2. Wait for steady state (i.e. let the SharePoint timer job finish creating
+   variation sites and "pairing" up the pages)
+3. Run the next step of the migration to change the default page of each and
+   every FAQ site to use the custom **FAQ Node Page** content type
 
 Last week, I had a conversation with the Program Manager who spec'ed the
 Variations feature and he was quick to trump what I consider to be a SharePoint
@@ -136,7 +142,8 @@ and no custom content types:
 
 2. Create a site collection using the **Publishing Portal** site definition
 
-3. Configure variations using / as the **Location** for the **Variation Home** (use defaults for all other settings)
+3. Configure variations using / as the **Location** for the **Variation Home**
+   (use defaults for all other settings)
 
 4. Create a new variation label with the following:
    
@@ -151,9 +158,14 @@ and no custom content types:
 
 6. Create a new site under the variation source site (**/en-US/foo**)
 
-7. Change the content type of the default page in the new site (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**. Note that in order to change the content type of the page, you need to view the underlying **Pages** library (use **Site Actions** --&gt; **View All Site Content**) and then edit the properties on the page.
+7. Change the content type of the default page in the new site
+   (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**.
+   Note that in order to change the content type of the page, you need to view
+   the underlying **Pages** library (use **Site Actions** --&gt; **View All
+   Site Content**) and then edit the properties on the page.
 
-8. Change the page layout to **Article page with summary links** and approve the page.
+8. Change the page layout to **Article page with summary links** and approve
+   the page.
 
 9. Create a new variation label with the following:
    
@@ -161,7 +173,8 @@ and no custom content types:
    Display Name: Japanese
    Locale: Japanese**
 
-10. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo** sites)
+10. Create the variation hierarchies (to create the **/ja-JP** and
+    **/ja-JP/foo** sites)
 
 11. View the variation logs and notice the failure with the following error:
     

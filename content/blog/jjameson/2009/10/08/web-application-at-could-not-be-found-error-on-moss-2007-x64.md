@@ -106,8 +106,18 @@ possibly want to run a 32-bit process on a 64-bit server?" Great question...
 
 There are at least a couple of scenarios that I'm aware of:
 
-- First, you might want to run some Visual Studio [unit tests that access a live SharePoint site](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator). These unit tests work great when you are developing on an x86 MOSS 2007 VM. However, they "blow chunks" on an x64 development VM. [Oh, and please don't get me started on the whole "mocking" topic for unit testing SharePoint. That could get me going for hours -- and I really do have more important things to do today ;-) ]
-- Second, you might have written a utility, let's say, something like ImportPages.exe, that bulk loads pages into a SharePoint site using an Excel input file. Since the SharePoint API in MOSS 2007 is not "remoteable" (without switching to calling Web services), you must run ImportPages.exe directly on one of the SharePoint servers in the farm.
+- First, you might want to run some Visual Studio
+  [unit tests that access a live SharePoint site](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).
+  These unit tests work great when you are developing on an x86 MOSS 2007 VM.
+  However, they "blow chunks" on an x64 development VM. [Oh, and please don't
+  get me started on the whole "mocking" topic for unit testing SharePoint.
+  That could get me going for hours -- and I really do have more important
+  things to do today ;-) ]
+- Second, you might have written a utility, let's say, something like
+  ImportPages.exe, that bulk loads pages into a SharePoint site using an Excel
+  input file. Since the SharePoint API in MOSS 2007 is not "remoteable"
+  (without switching to calling Web services), you must run ImportPages.exe
+  directly on one of the SharePoint servers in the farm.
 
 It's the latter scenario in which I first encountered this bug. However, rather
 than going into the details here, I want to cover the ImportPages.exe utility in

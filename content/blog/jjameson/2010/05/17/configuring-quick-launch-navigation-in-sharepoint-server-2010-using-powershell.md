@@ -149,9 +149,14 @@ Once I had the export working, I then proceeded to work on the import process.
 
 The "requirements" that I established for the import process are as follows:
 
-- Using the navigation link URL as the key (i.e. the `url` attribute of each `<NavigationNode>` element), ensure each navigation node specified in the XML exists in the quick launch navigation.
-- Ensure the order of the links in the quick launch navigation matches the order specified in the XML.
-- Ignore any links in the quick launch navigation on the site that are not specified in the XML (in other words, don't delete links if there are no corresponding elements in the XML).
+- Using the navigation link URL as the key (i.e. the `url` attribute of each
+  `<NavigationNode>` element), ensure each navigation node specified in the
+  XML exists in the quick launch navigation.
+- Ensure the order of the links in the quick launch navigation matches the
+  order specified in the XML.
+- Ignore any links in the quick launch navigation on the site that are not
+  specified in the XML (in other words, don't delete links if there are no
+  corresponding elements in the XML).
 
 The last item ensures that any custom links that might have been added to a team
 site are preserved.

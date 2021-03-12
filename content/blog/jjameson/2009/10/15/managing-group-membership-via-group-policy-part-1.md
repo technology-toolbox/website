@@ -51,7 +51,8 @@ settings:
       - **Security Settings**
         - **Restricted Groups**
           - **Group Name: Administrators**
-          - **Members: TECHTOOLBOX\Development Admins, TECHTOOLBOX\Domain Admins**
+          - **Members: TECHTOOLBOX\Development Admins,
+            TECHTOOLBOX\Domain Admins**
 
 By linking this Group Policy to the appropriate OU (i.e.
 **Development/Resources/Servers**) the members of the local **Administrators**

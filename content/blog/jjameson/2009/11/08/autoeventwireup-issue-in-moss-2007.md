@@ -55,8 +55,10 @@ page is deactivated, retracted, and deleted (as part of the
 ["DR.DADA" process](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development)),
 SharePoint has some "smarts" within it that essentially equates to:
 
-- Hey, this master page (or page layout) is currently in use so removing it could really break the site.
-- Therefore, I'd better make a copy of it and store it in the database (i.e. unghost it).
+- Hey, this master page (or page layout) is currently in use so removing it
+  could really break the site.
+- Therefore, I'd better make a copy of it and store it in the database (i.e.
+  unghost it).
 
 Unfortunately, when we subsequently added, deployed, and activated the
 solution/feature, SharePoint would still attempt to use the unghosted master
@@ -71,12 +73,23 @@ AutoEventWireup error would magically disappear.
 
 Here are the steps to reghost a master page or page layout:
 
-1. Browse to **Site Settings** page for your site. Note that if your master page is causing the AutoEventWireup error, you can explicitly specify the URL (e.g. http://fabrikam/\_layouts/settings.aspx).
-2. On the **Site Settings** page, under the **Look and Feel** section, click **Reset to site definition**.
+1. Browse to **Site Settings** page for your site. Note that if your master
+   page is causing the AutoEventWireup error, you can explicitly specify the
+   URL (e.g. http://fabrikam/\_layouts/settings.aspx).
+2. On the **Site Settings** page, under the **Look and Feel** section, click
+   **Reset to site definition**.
 3. On the **Reset Page to Site Definition Version**page:
-   1. In the **Reset to Site Definition** section, ensure the option to <label for="ctl00_PlaceHolderMain_ctl00_ResetOnePage"><strong>Reset specific page to site definition version</strong> is selected, and then in t</label>he **Local URL of the page** box, <label for="ctl00_PlaceHolderMain_ctl00_ResetOnePage">typtype the URL of the master page or page layout that you want reset (e.g. http://fabrikam/_catalogs/masterpage/FabrikamMinimal.master).</label>
+   1. In the **Reset to Site Definition** section, ensure the option to <label
+for="ctl00_PlaceHolderMain_ctl00_ResetOnePage"><strong>Reset specific
+      page to site definition version</strong> is selected, and then in
+      t</label>he **Local URL of the page** box, <label
+for="ctl00_PlaceHolderMain_ctl00_ResetOnePage">typtype the URL of the
+      master page or page layout that you want reset (e.g.
+      http://fabrikam/_catalogs/masterpage/FabrikamMinimal.master).</label>
    2. Click **Reset**.
-   3. In the confirmation dialog that appears stating that you will lose all customizations, including web part zones, custom controls, and in-line text, click **OK**.
+   3. In the confirmation dialog that appears stating that you will lose all
+      customizations, including web part zones, custom controls, and in-line
+      text, click **OK**.
 
 Note that in ASP.NET, the default value for the
 [`AutoEventWireup`](http://support.microsoft.com/kb/814745) attribute is true.

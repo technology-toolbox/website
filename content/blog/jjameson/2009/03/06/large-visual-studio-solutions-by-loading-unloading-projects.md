@@ -43,8 +43,11 @@ you.
 As you start adding more and more projects to a solution, you'll inevitably
 discover the following to be true:
 
-- Load time increases (i.e. the time it takes to start Visual Studio and open your solution)
-- Incremental build time increases, even when the only changes that have been made are in "leaf" projects (i.e. projects that don't reference other projects)
+- Load time increases (i.e. the time it takes to start Visual Studio and open
+  your solution)
+- Incremental build time increases, even when the only changes that have been
+  made are in "leaf" projects (i.e. projects that don't reference other
+  projects)
 
 Obviously we should expect the build time to take a while whenever we make a
 change in one project that is referenced by many others (e.g.

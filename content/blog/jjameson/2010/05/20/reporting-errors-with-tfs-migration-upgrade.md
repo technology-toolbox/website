@@ -101,8 +101,10 @@ procedures in the master and msdb databases to the RSExecRole database role.
 An easy way to confirm the problem is to browse to the Schedules tab in Report
 Manager:
 
-1. Browse to the Report Manager site (e.g. [http://cyclops-dev/Reports](http://cyclops-dev/Reports)).
-2. On the Report Manager home page, in the masthead of the page, click **Site Settings**.
+1. Browse to the Report Manager site (e.g.
+   [http://cyclops-dev/Reports](http://cyclops-dev/Reports)).
+2. On the Report Manager home page, in the masthead of the page, click **Site
+   Settings**.
 3. On the Site Settings page, click the **Schedules** tab.
 
 An error similar to the following should be displayed:

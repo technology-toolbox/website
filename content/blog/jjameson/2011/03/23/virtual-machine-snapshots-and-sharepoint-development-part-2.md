@@ -35,8 +35,10 @@ let's first review what makes it feasible to use Hyper-V snapshots for
 SharePoint development environments to begin with:
 
 - Hyper-V host running Windows Server 2008 R2 (preferably Server Core edition)
-- Domain controller running on separate VM (or better yet, multiple domain controllers on multiple VMs)
-- SQL Server for SharePoint farm running on same VM (and no other SharePoint servers in the farm)
+- Domain controller running on separate VM (or better yet, multiple domain
+  controllers on multiple VMs)
+- SQL Server for SharePoint farm running on same VM (and no other SharePoint
+  servers in the farm)
 
 ### Hyper-V Host Running Windows Server 2008 R2
 
@@ -146,7 +148,8 @@ For the sake of explaining more about these snapshots, I'll relabel them again
 in this post as follows:
 
 - Baseline SharePoint Server 2010 configuration - **Snapshot 1**
-  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) - **Snapshot 2**
+  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) -
+    **Snapshot 2**
   - Baseline {Client Name} Cloud Portal (Sprint-11) - **Snapshot 3**
 
 #### Think "Shallow Snapshot Trees" for Better Performance
@@ -164,7 +167,8 @@ be read when performing my primary day-to-day work.
 Consider the alternative snapshot structure:
 
 - Baseline SharePoint Server 2010 configuration - **Snapshot 1**
-  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) - **Snapshot 2**
+  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) -
+    **Snapshot 2**
     - Baseline {Client Name} Cloud Portal (Sprint-11) - **Snapshot 3**
 
 If I had used this snapshot structure instead, then my VM would have to read an

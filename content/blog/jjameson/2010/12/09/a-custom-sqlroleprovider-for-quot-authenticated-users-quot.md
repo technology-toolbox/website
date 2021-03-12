@@ -177,7 +177,8 @@ I then added the following steps to the installation guide:
 
 > To add the custom role provider to the IIS Administration.config file:
 >
-> 1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
+> 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
+>    right-click **Command Prompt**, and then click **Run as administrator**.
 >
 > 2. At the command prompt, change to the following directory:
 >    
@@ -568,8 +569,16 @@ namespace Fabrikam.Portal.Web.Security
 Note that there are a few issues in IIS Manager when using this custom role
 provider:
 
-- As described earlier, the **GetUsersInRole** method always returns an empty list for the "Authenticated Users" role. Consequently, IIS Manager will always display "0" for the number of users in the role.
-- Immediately after creating a new user, if you view the role membership for the user, then IIS Manager does not show **Authenticated Users** role as checked. This appears to be a caching issue in IIS Manager. Even if you don't check the Authenticated Users role when creating the user, the next time `IsUserInRole(username, "Authenticated Users")` is called, it will definitely return `true` -- and, similarly, the **GetRolesForUser** method will include "Authenticated Users" in the returned list.
+- As described earlier, the **GetUsersInRole** method always returns an empty
+  list for the "Authenticated Users" role. Consequently, IIS Manager will
+  always display "0" for the number of users in the role.
+- Immediately after creating a new user, if you view the role membership for
+  the user, then IIS Manager does not show **Authenticated Users** role as
+  checked. This appears to be a caching issue in IIS Manager. Even if you
+  don't check the Authenticated Users role when creating the user, the next
+  time `IsUserInRole(username, "Authenticated Users")` is called, it will
+  definitely return `true` -- and, similarly, the **GetRolesForUser** method
+  will include "Authenticated Users" in the returned list.
 
 Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider** again ;-)
 

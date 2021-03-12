@@ -25,9 +25,13 @@ In
 I provided the following steps to "reghost" all of the pages in a Team
 Foundation Server (TFS) project site:
 
-1. Browse to the Site Settings page for the site (e.g. [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
-2. On the **Site Settings** page, in the **Site Actions** section, click **Reset to site definition**.
-3. On the **Reset Page to Site Definition Version** page, click the option to **Reset all pages in this site to site definition version**, and then click **Reset**.
+1. Browse to the Site Settings page for the site (e.g.
+   [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
+2. On the **Site Settings** page, in the **Site Actions** section, click
+   **Reset to site definition**.
+3. On the **Reset Page to Site Definition Version** page, click the option to
+   **Reset all pages in this site to site definition version**, and then click
+   **Reset**.
 
 Today, I was about to perform this process manually on several sites, but then I
 decided to spend a few minutes exploring the **Reset Page to Site Definition

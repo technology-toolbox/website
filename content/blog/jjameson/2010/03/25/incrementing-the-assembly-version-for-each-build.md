@@ -156,7 +156,8 @@ sample Fabrikam solution are set as follows:
 However, when performing a Team Build (i.e. when a build is queued or scheduled
 on a build server), the properties are set as follows:
 
-- **SolutionRoot:** C:\Users\svc-build\AppData\Local\Temp\Demo\Automated Build - Main\Sources
+- **SolutionRoot:** C:\Users\svc-build\AppData\Local\Temp\Demo\Automated Build
+  - Main\Sources
 - **BuildProjectFolderPath:** $/Demo/Main/Source
 
 Consequently, define a new property (**SolutionWorkingDirectory**) and

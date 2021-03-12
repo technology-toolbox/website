@@ -44,8 +44,11 @@ To workaround the "Copy Local" bug and force a referenced assembly to always be
 copied to the output folder (regardless of whether the referenced assembly is in
 the GAC):
 
-1. In the **Solution Explorer** window in Visual Studio, expand the **References** folder for the project and then select the referenced assembly.
-2. In the **Properties** window, change the value of **Copy Local** to **False**, and then change it back to **True**.
+1. In the **Solution Explorer** window in Visual Studio, expand the
+   **References** folder for the project and then select the referenced
+   assembly.
+2. In the **Properties** window, change the value of **Copy Local** to
+   **False**, and then change it back to **True**.
 
 Following these two simple steps explicitly adds `<Private>True</Private>` to
 the project file, as shown in the following example:

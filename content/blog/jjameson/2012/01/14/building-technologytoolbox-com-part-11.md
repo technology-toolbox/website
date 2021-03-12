@@ -56,10 +56,12 @@ greatly reduced number of HTTP requests).
 There are a few things worth pointing out regarding the use of CSS sprites on
 the Technology Toolbox site:
 
-- Why are the images arranged in a diagonal line from the bottom-left corner to the top-right corner?
+- Why are the images arranged in a diagonal line from the bottom-left corner
+  to the top-right corner?
 - Why is there all that white space between the icons?
 - What happens when someone needs to add a new list item icon?
-- Are there any other benefits to using CSS sprites (i.e. besides reducing HTTP requests)?
+- Are there any other benefits to using CSS sprites (i.e. besides reducing
+  HTTP requests)?
 
 Let's tackle these one at a time...
 

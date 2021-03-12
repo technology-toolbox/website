@@ -146,7 +146,8 @@ malicious in there.]
 
 To deploy the Fabrikam Demo to SharePoint:
 
-1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, point to **All Programs**, point to **Accessories**, and
+   right-click **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
    
@@ -204,7 +205,8 @@ To deploy the Fabrikam Demo to SharePoint:
    "Activate Features.cmd"
    ```
 
-9. Wait for the feature activations to complete, and then minimize or close the command prompt.
+9. Wait for the feature activations to complete, and then minimize or close the
+   command prompt.
 
 That's it! (During feature activation, I automatically set the master page on
 the site, change the page layout of the home page, and update the corresponding

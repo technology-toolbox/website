@@ -57,7 +57,14 @@ project.]
 
 However, I see two problems with KB 920783:
 
-- First, it doesn't mention Microsoft Office SharePoint Server (MOSS) 2007 -- which might explain why I never came across this KB before when searching the Internet. Sure, we all know that MOSS 2007 is built on top of WSS v3 and thus KB articles that apply to "Microsoft Windows SharePoint Services 3.0" almost always apply to "Microsoft Office SharePoint Server 2007", but if you don't specifically state that, you shouldn't expect Bing or Google to return the KB article when searching for something like "MOSS 10016" or "Microsoft Office SharePoint Server 10016". Right?
+- First, it doesn't mention Microsoft Office SharePoint Server (MOSS) 2007 --
+  which might explain why I never came across this KB before when searching
+  the Internet. Sure, we all know that MOSS 2007 is built on top of WSS v3 and
+  thus KB articles that apply to "Microsoft Windows SharePoint Services 3.0"
+  almost always apply to "Microsoft Office SharePoint Server 2007", but if you
+  don't specifically state that, you shouldn't expect Bing or Google to return
+  the KB article when searching for something like "MOSS 10016" or "Microsoft
+  Office SharePoint Server 10016". Right?
 - Second, and much more important, the KB article instructs you to:
 
 {{< blockquote "font-italic" >}}
@@ -117,15 +124,15 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > To take allow the configuration of the IIS WAMREG Admin Service to be changed
 > using the Component Services console:
 >
-> 1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**.
->    If prompted by **User Account Control** to allow the program to make changes
->    to this computer, click **Yes**.
+> 1. Click the **Start** menu, type **regedit**, and then click
+>    **regedit.exe**. If prompted by **User Account Control** to allow the
+>    program to make changes to this computer, click **Yes**.
 > 2. In the **Registry Editor** window, search for
 >    "61738644-F196-11D0-9953-00C04FD919C1" to find
 >    HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
 > 3. Right-click on the
->    **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and
->    then click **Permissions**.
+>    **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key
+>    and then click **Permissions**.
 > 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
 >    box, click **Advanced**.
 > 5. In the **Advanced Security Settings for
@@ -134,8 +141,8 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    2. In the **Change owner to** list, click the **Administrators** group.
 >    3. Click **OK**.
 > 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
->    box, click the **Administrators** group, then click the checkbox to allow the
->    group **Full Control**, and click **OK**.
+>    box, click the **Administrators** group, then click the checkbox to allow
+>    the group **Full Control**, and click **OK**.
 > 7. Close the Registry Editor window.
 >
 > Now that the Administrators group has sufficient permissions, follow the steps

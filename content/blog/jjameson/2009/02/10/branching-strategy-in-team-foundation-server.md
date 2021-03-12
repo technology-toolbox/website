@@ -88,8 +88,23 @@ title="Figure 2: \"Reactive\" branch plan" >}}
 
 There are a couple of significant problems with reactive branching:
 
-- In order to merge code changes from a QFE (a.k.a. hotfix) or service pack back into **Main** (and remember, we almost always want the fixes in QFEs to be incorporated into **Main**), we would either need to first automerge the changes into the **Release** branch and then merge the changes into **Main** -- or else perform a baseless merge (which, generally speaking, we want to avoid). If we merge the changes into the **Release** branch, then that code no longer reflects the actual Release build (e.g. v1.0) but rather the Release build plus some number of changes. Yes, we could still use labels to "snapshot" the source code for the Release version, but as James pointed out, labels can be manipulated and therefore may not be sufficiently "bulletproof" to meet your requirements.
-- We could still use reactive branching, but avoid merging through **Release** by renaming a branch (e.g. the **Release** branch is renamed to **Service Pack**, and a new **Release** branch is created and "locked down" from a permissions perspective). However, this requires significantly more work with each release -- work that can be avoided altogether by using the branching strategy shown in Figure 1.
+- In order to merge code changes from a QFE (a.k.a. hotfix) or service pack
+  back into **Main** (and remember, we almost always want the fixes in QFEs to
+  be incorporated into **Main**), we would either need to first automerge the
+  changes into the **Release** branch and then merge the changes into **Main**
+  -- or else perform a baseless merge (which, generally speaking, we want to
+  avoid). If we merge the changes into the **Release** branch, then that code
+  no longer reflects the actual Release build (e.g. v1.0) but rather the
+  Release build plus some number of changes. Yes, we could still use labels to
+  "snapshot" the source code for the Release version, but as James pointed
+  out, labels can be manipulated and therefore may not be sufficiently
+  "bulletproof" to meet your requirements.
+- We could still use reactive branching, but avoid merging through **Release**
+  by renaming a branch (e.g. the **Release** branch is renamed to **Service
+  Pack**, and a new **Release** branch is created and "locked down" from a
+  permissions perspective). However, this requires significantly more work
+  with each release -- work that can be avoided altogether by using the
+  branching strategy shown in Figure 1.
 
 So, in summary, while it may seem a little backwards to create your **Service
 Pack** branch before your **Release** branch, there are compelling reasons to do

@@ -328,7 +328,8 @@ Safranski):
   
   Now, I certainly don't consider myself a jQuery expert but, generally speaking, this doesn't seem like very good practice when writing jQuery plugins.
 
-- It doesn't maintain chainability (which is generally recommended when [writing jQuery plugins](http://docs.jquery.com/Plugins/Authoring)).
+- It doesn't maintain chainability (which is generally recommended when
+  [writing jQuery plugins](http://docs.jquery.com/Plugins/Authoring)).
 
 Don't get me wrong...my intent is not to bash Kent's code. On the contrary, with
 just a little bit of work, I was able to tweak his code into the following:

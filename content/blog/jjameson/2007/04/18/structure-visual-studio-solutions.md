@@ -90,7 +90,34 @@ title="Figure 2: Windows Explorer view of Visual Studio solution" >}}
 
 A few notes...
 
-1. I like to use solution folders to "partition" the solution into manageable chunks. I'm a huge fan of the "single/master" solution approach. However as the solution grows larger I need way to quickly unload the majority of the projects so that we can quickly build and debug just the specific features I happen to be working on at the particular moment. I've worked on several projects where customers already had multiple solution files in place, and the effort required to compile the entire code base goes up dramatically compared to using a single solution. There are valid reasons for creating multiple solutions, the most obvious being enterprise level frameworks and utilities that are shared across multiple projects. As long as these are fairly "baked" and seldomly change, then building (and referencing) them separately (i.e.using *file* references instead of *project* references) is not an issue.
-2. You typically have a set of classes that contain low-level "helper" methods used by many of the other projects in your solution. The **CoreServices** project gives you a place to put these. The important thing about CoreServices is that is does not reference any other projects within that solution. [I didn't make up the name "CoreServices" -- if memory serves, I "stole" this from Jim Newkirk after browsing through the source code for NUnit a few years ago.]
-3. The **CoreServices.DeveloperTests** project contains all of the unit tests (created by the Development team) for the **CoreServices** project. While we could certainly choose to leave the project in the default **CoreServices.DeveloperTests** folder created by Visual Studio (i.e. C:\NotBackedUp\Microsoft\Samples\Main\CoreServices.DeveloperTests), it only takes about 30 seconds to remove the project, rename the folder from **CoreServices.DeveloperTests** to just **DeveloperTests** and then add the file again. The short reason is that I really hate to see "dots" in folder names, because where do we draw the line? If you don't do this, then pretty soon you start seeing 30 project folders within a single folder.
+1. I like to use solution folders to "partition" the solution into manageable
+   chunks. I'm a huge fan of the "single/master" solution approach. However as
+   the solution grows larger I need way to quickly unload the majority of the
+   projects so that we can quickly build and debug just the specific features I
+   happen to be working on at the particular moment. I've worked on several
+   projects where customers already had multiple solution files in place, and
+   the effort required to compile the entire code base goes up dramatically
+   compared to using a single solution. There are valid reasons for creating
+   multiple solutions, the most obvious being enterprise level frameworks and
+   utilities that are shared across multiple projects. As long as these are
+   fairly "baked" and seldomly change, then building (and referencing) them
+   separately (i.e.using *file* references instead of *project* references) is
+   not an issue.
+2. You typically have a set of classes that contain low-level "helper" methods
+   used by many of the other projects in your solution. The **CoreServices**
+   project gives you a place to put these. The important thing about
+   CoreServices is that is does not reference any other projects within that
+   solution. [I didn't make up the name "CoreServices" -- if memory serves, I
+   "stole" this from Jim Newkirk after browsing through the source code for
+   NUnit a few years ago.]
+3. The **CoreServices.DeveloperTests** project contains all of the unit tests
+   (created by the Development team) for the **CoreServices** project. While we
+   could certainly choose to leave the project in the default
+   **CoreServices.DeveloperTests** folder created by Visual Studio (i.e.
+   C:\NotBackedUp\Microsoft\Samples\Main\CoreServices.DeveloperTests), it only
+   takes about 30 seconds to remove the project, rename the folder from
+   **CoreServices.DeveloperTests** to just **DeveloperTests** and then add the
+   file again. The short reason is that I really hate to see "dots" in folder
+   names, because where do we draw the line? If you don't do this, then pretty
+   soon you start seeing 30 project folders within a single folder.
 

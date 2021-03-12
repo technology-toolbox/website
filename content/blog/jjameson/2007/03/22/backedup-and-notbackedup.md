@@ -43,10 +43,20 @@ do I use this apparently over-simplistic system?
 
 I attribute the reasoning to several factors:
 
-1. I download a lot of stuff (i.e. gigabytes) , much of which I need to access frequently -- regardless of which particular computer I happen to be working on at any particular moment
-2. If I were to lose any of the files that I create -- or contribute to -- it could require several days (or actually several late nights) to recreate the material; some of the documents that I have created have several man-weeks invested in them -- I dread the mere thought of losing one of those
-3. Long before the user experience improvements in Windows Vista, I needed "instant access" to my frequently used files (in fact, I still need these shortcuts whenever I am logged into a computer or VM running Windows Server 2003)
-4. I typically "rebuild" my laptop once a year either to install a new OS (such as last November when Vista was released) or to clean out all the old garbage that, being a developer, I tend to install for one reason or another
+1. I download a lot of stuff (i.e. gigabytes) , much of which I need to access
+   frequently -- regardless of which particular computer I happen to be working
+   on at any particular moment
+2. If I were to lose any of the files that I create -- or contribute to -- it
+   could require several days (or actually several late nights) to recreate the
+   material; some of the documents that I have created have several man-weeks
+   invested in them -- I dread the mere thought of losing one of those
+3. Long before the user experience improvements in Windows Vista, I needed
+   "instant access" to my frequently used files (in fact, I still need these
+   shortcuts whenever I am logged into a computer or VM running Windows Server
+   2003)
+4. I typically "rebuild" my laptop once a year either to install a new OS (such
+   as last November when Vista was released) or to clean out all the old
+   garbage that, being a developer, I tend to install for one reason or another
 
 Factor #1 is addressed by creating various folders under NotBackedUp and storing
 the gigabytes of stuff that I have managed to download over the last 8 years in

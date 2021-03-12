@@ -31,13 +31,20 @@ helper methods for the SharePoint publishing API.
 
 `SharePointPublishingHelper` makes it really easy to:
 
-- Attempt to retrieve a reference to a [PublishingPage](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.aspx) by specifying an [SPWeb](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.aspx) and the page URL name (e.g. default.aspx)
+- Attempt to retrieve a reference to a
+  [PublishingPage](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.aspx)
+  by specifying an
+  [SPWeb](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.aspx)
+  and the page URL name (e.g. default.aspx)
 - Ensure an expected page exists in a site (creating a new page as necessary)
 - Check if a page is checked out to anyone
 - Check if a page is checked out by the current user
-- Ensure a page is checked out to the current user (since you can't make any changes to a page that isn't checked out to you)
-- Ensure a page is associated with a specific page layout (and corresponding content type)
-- Publish a page (correctly handling page libraries that are configured for approval as well as those that are not configured for approval)
+- Ensure a page is checked out to the current user (since you can't make any
+  changes to a page that isn't checked out to you)
+- Ensure a page is associated with a specific page layout (and corresponding
+  content type)
+- Publish a page (correctly handling page libraries that are configured for
+  approval as well as those that are not configured for approval)
 - Delete a page by specifying the page URL name
 
 Here's the code for the `SharePointPublishingHelper` class:

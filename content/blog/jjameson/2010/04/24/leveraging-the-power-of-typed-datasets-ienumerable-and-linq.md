@@ -170,9 +170,11 @@ corresponding `rowspan` and `colspan` attributes.)]
 
 So far, we've addressed the following basic scenarios:
 
-- Retrieve a typed DataSet containing the scorecard data for a given list of sites.
+- Retrieve a typed DataSet containing the scorecard data for a given list of
+  sites.
 - Generate a summary table and display it on the page.
-- When the user selects a KPI in the summary table, generate a detail table and display it on the page.
+- When the user selects a KPI in the summary table, generate a detail table
+  and display it on the page.
 
 We've kept the presentation layer "thin" (i.e. minimized the code in
 KpiScorecard.ascx) by delegating most of the work to a class in the services
@@ -546,8 +548,15 @@ overload of the method (shown above):
 
 Let's wrap this up with a few key points:
 
-- You can greatly reduce the amount of code in the presentation layer by using a typed DataSet in combination with a corresponding "service" class (that is responsible for abstracting the details of populating the data, and also provides other methods for manipulating the data).
-- Get your core scenarios working and then refactor your code to address additional scenarios (such as filtering the data).
-- To support robust filtering of your data, add method overloads that accept an `IEnumerable<>` list of items (thus allowing the caller to filter the data in a variety of ways without requiring a change to the services layer).
-- Using LINQ with typed DataSets makes it very easy to filter your data (while also catching potential problems at compile-time instead of at run-time).
+- You can greatly reduce the amount of code in the presentation layer by using
+  a typed DataSet in combination with a corresponding "service" class (that is
+  responsible for abstracting the details of populating the data, and also
+  provides other methods for manipulating the data).
+- Get your core scenarios working and then refactor your code to address
+  additional scenarios (such as filtering the data).
+- To support robust filtering of your data, add method overloads that accept
+  an `IEnumerable<>` list of items (thus allowing the caller to filter the
+  data in a variety of ways without requiring a change to the services layer).
+- Using LINQ with typed DataSets makes it very easy to filter your data (while
+  also catching potential problems at compile-time instead of at run-time).
 

@@ -48,7 +48,9 @@ Applying the principles of TDD, we know we should:
 2. Add the minimal amount of code necessary to get the unit tests to compile.
 3. Run the tests and ensure they fail ("red").
 4. Write the code to make the unit tests pass ("green").
-5. Repeat steps 1-4 until you consider the feature "done." (Note that you should also consider checking in your code each time you successfully complete step 4.)
+5. Repeat steps 1-4 until you consider the feature "done." (Note that you
+   should also consider checking in your code each time you successfully
+   complete step 4.)
 
 So for this simple scenario, what unit test(s) should we write first?
 

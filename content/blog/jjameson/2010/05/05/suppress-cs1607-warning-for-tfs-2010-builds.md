@@ -32,9 +32,12 @@ I also found that one of my solutions compiled without error in Visual Studio
 2010 on my local development machine, but failed with the following errors when
 performing a "Team Build" (i.e. on a TFS build agent):
 
-- error CS1607: Assembly generation -- Referenced assembly 'mscorlib.dll' targets a different processor
-- error CS1607: Assembly generation -- Referenced assembly 'System.Data.dll' targets a different processor
-- CSC: Assembly signing failed; output may not be signed -- Error signing assembly -- The system cannot find the file specified
+- error CS1607: Assembly generation -- Referenced assembly 'mscorlib.dll'
+  targets a different processor
+- error CS1607: Assembly generation -- Referenced assembly 'System.Data.dll'
+  targets a different processor
+- CSC: Assembly signing failed; output may not be signed -- Error signing
+  assembly -- The system cannot find the file specified
 
 Note that [CS1607](http://msdn.microsoft.com/en-us/library/4a0640cd.aspx) is
 actually just a compiler warning -- meaning that it doesn't necessarily break

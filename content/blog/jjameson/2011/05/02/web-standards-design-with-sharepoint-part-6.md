@@ -464,11 +464,18 @@ described below.
 
 1. Create three service accounts for the Tugboat site:
    
-   - **{DOMAIN}\svc-web-tugboat-dev** - used as the application pool identity for the new Tugboat site
-   - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
-   - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full Control access to Web applications
+   - **{DOMAIN}\svc-web-tugboat-dev** - used as the application pool identity
+     for the new Tugboat site
+   - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full
+     Read access to Web applications (
+     [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+   - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
+     Control access to Web applications
 
-2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Tugboat\Main\Source\DeploymentFiles\Scripts), and run the following commands:
    

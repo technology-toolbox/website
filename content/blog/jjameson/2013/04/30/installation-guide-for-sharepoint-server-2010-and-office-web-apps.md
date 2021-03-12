@@ -28,7 +28,8 @@ instead). The scope for the first sprint is limited to the following:
 
 - Site branding (minimal customization to meet Fabrikam corporate standards)
 - Claims authentication for employees, partners, suppliers, and resellers
-- Collaboration sites used to share documents, contact details, and other information with Fabrikam partners
+- Collaboration sites used to share documents, contact details, and other
+  information with Fabrikam partners
 - Office Web Apps to enable people to view, create, and edit Office documents
 - Search (initial configuration)
 
@@ -67,11 +68,14 @@ as the Development team when configuring the Development integration environment
 - Infrastructure Model - Fabrikam Extranet
 - SQL Server Installation Guide - Fabrikam Extranet
 - {{< reference
-  title="Deployment scenario: Multiple servers for a three-tier farm (SharePoint Server 2010)"
-  linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx" >}}
+  title="Deployment scenario: Multiple servers for a three-tier farm
+  (SharePoint Server 2010)"
+  linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx"
+  > }}
 - {{< reference
   title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"
-  linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx" >}}
+  linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx"
+  > }}
 
 ## Document conventions
 
@@ -100,7 +104,8 @@ high-level steps.
 
 Before starting the installation:
 
-- Various settings and configuration parameters need to be thoroughly planned out
+- Various settings and configuration parameters need to be thoroughly planned
+  out
 - The environments and naming conventions need to be understood
 
 ## Step 2: Deploy and configure the server infrastructure
@@ -108,19 +113,24 @@ Before starting the installation:
 Prior to installing SharePoint Server 2010, the following tasks must be
 completed:
 
-- Windows Server 2008 must be installed and the server(s) must be joined to the domain
+- Windows Server 2008 must be installed and the server(s) must be joined to
+  the domain
 - Service accounts need to be created
 - Any host names mapped to the loopback address need to be configured
-- The Active Directory container used to track SharePoint 2010 installations should be created
+- The Active Directory container used to track SharePoint 2010 installations
+  should be created
 - SQL Server 2008 must be installed and configured
-- For the Development integration environment (DEV) and local development VMs, various development tools need to be installed (for example, Visual Studio 2010)
+- For the Development integration environment (DEV) and local development VMs,
+  various development tools need to be installed (for example, Visual Studio
+  2010)
 
 ## Step 3: Install and configure SharePoint Server 2010
 
 The installation and configuration of SharePoint Server 2010 consists of the
 following tasks:
 
-- Installing the prerequisite components on each SharePoint server that will participate in the farm
+- Installing the prerequisite components on each SharePoint server that will
+  participate in the farm
 - Creating the SharePoint farm
 - Joining additional servers to the farm
 - Configuring diagnostic logging and usage and health data logging
@@ -137,7 +147,8 @@ Creating and configuring the Web application consists of the following tasks:
 - Creating the Web application and initial site collections
 - Expanding content database files
 - Configure the object cache user accounts (e.g. “Portal Super User”)
-- Configuring the People Picker to support searches across the trust relationship between the extranet domain and Fabrikam's internal domain
+- Configuring the People Picker to support searches across the trust
+  relationship between the extranet domain and Fabrikam's internal domain
 - Configuring SSL on the Internet zone
 - Enabling anonymous access to the top-level site
 - Configuring claims-based authentication
@@ -238,10 +249,12 @@ images for virtual machines, refer to the following blog posts:
 
 - {{< reference title="Creating a VM/VHD Library"
   linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx"
+  > }}
 - {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines"
   linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx"
+  > }}
 
 ### Reset WSUS configuration
 
@@ -251,7 +264,8 @@ Services (WSUS) to keep machines up-to-date with the latest patches.
 To resolve the issue, remove the WSUS registry entries specified in
 [KB 903262](http://support.microsoft.com/kb/903262):
 
-1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, click **All Programs**, click **Accessories**, right-click
+   **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following commands:
    
@@ -280,7 +294,8 @@ Network Adapter #2").
 
 To cleanup the network adapters:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, click **All Programs**, click **Accessories**, right-click
+   **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following commands:
    
@@ -293,9 +308,16 @@ To cleanup the network adapters:
    
    1. Click the **View** menu and then click **Show hidden devices**.
    2. Expand **Network adapters**.
-   3. Right-click each network adapter that begins with **Microsoft Virtual Machine Bus Network Adapter** (e.g. "Microsoft Virtual Machine Bus Network Adapter", "Microsoft Virtual Machine Bus Network Adapter #2") and click **Uninstall**. When prompted to confirm the device uninstall, click **OK**.
-   4. If you notice any extra **Microsoft ISATAP Adapter** items, then uninstall those as well.
-   5. Right-click **Network adapters** and then click **Scan for hardware changes**. (This will recreate the default adapter named "Microsoft Virtual Machine Bus Network Adapter".)
+   3. Right-click each network adapter that begins with **Microsoft Virtual
+      Machine Bus Network Adapter** (e.g. "Microsoft Virtual Machine Bus
+      Network Adapter", "Microsoft Virtual Machine Bus Network Adapter #2")
+      and click **Uninstall**. When prompted to confirm the device uninstall,
+      click **OK**.
+   4. If you notice any extra **Microsoft ISATAP Adapter** items, then
+      uninstall those as well.
+   5. Right-click **Network adapters** and then click **Scan for hardware
+      changes**. (This will recreate the default adapter named "Microsoft
+      Virtual Machine Bus Network Adapter".)
 
 More information on this step is available in the following blog post:
 
@@ -361,7 +383,8 @@ policy to 0 in the registry.
 
 To configure the MaxPatchCacheSize policy:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, click **All Programs**, click **Accessories**, right-click
+   **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following command:
    
@@ -384,8 +407,10 @@ adapter(s).
 To disable TCP/IPv6 on the network adapter(s):
 
 1. In the **Network and Sharing Center**, click **Change adapter settings**.
-2. In the **Network Connections** window, right-click the network adapter and then click **Properties**.
-3. In the properties window for the network adapter, clear the checkbox for **Internet Protocol Version 6 (TCP/IPv6)** and then click **OK**.
+2. In the **Network Connections** window, right-click the network adapter and
+   then click **Properties**.
+3. In the properties window for the network adapter, clear the checkbox for
+   **Internet Protocol Version 6 (TCP/IPv6)** and then click **OK**.
 
 ## Join member server to domain
 
@@ -420,7 +445,8 @@ To create the necessary service accounts:
    5. Select the **Password never expires** checkbox.
    6. Click **Next**.
    7. Click **Finish**.
-5. Repeat steps 3 and 4 to create the remaining service accounts listed in Table 2.
+5. Repeat steps 3 and 4 to create the remaining service accounts listed in
+   Table 2.
 6. Close the **Active Directory Users and Computers** console.
 
 ## Create Active Directory container to track SharePoint 2010 installations
@@ -432,20 +458,33 @@ installing any SharePoint 2010 products in the environment.
 
 To create a service connection point container to track installations:
 
-1. On the domain controller, click **Start**, point to **Administrative Tools**, and then click **ADSI Edit**.
-2. On the **Action** menu, click **Connect to**, and connect to the domain that you want to use.
-3. In the console tree, expand the connection, expand the domain name, and then click **CN=System**.
-4. In the **Actions** pane, under the **CN=System** heading, click **More Actions**, click **New**, and then click **Object...**
+1. On the domain controller, click **Start**, point to **Administrative
+   Tools**, and then click **ADSI Edit**.
+2. On the **Action** menu, click **Connect to**, and connect to the domain that
+   you want to use.
+3. In the console tree, expand the connection, expand the domain name, and then
+   click **CN=System**.
+4. In the **Actions** pane, under the **CN=System** heading, click **More
+   Actions**, click **New**, and then click **Object...**
 5. In the **Create Object**dialog box:
-   1. In the **Select a class** list, click **container** and then click **Next**.
-   2. In the **Value** box, type **Microsoft SharePoint Products** as the container name, and then click **Next**.
+   1. In the **Select a class** list, click **container** and then click
+      **Next**.
+   2. In the **Value** box, type **Microsoft SharePoint Products** as the
+      container name, and then click **Next**.
    3. Click **Finish**.
 6. Double-click **CN=System** to view the items below it.
-7. Right click the new container (**CN=Microsoft SharePoint Products**), and then click **Properties**.
-8. In the **CN=Microsoft SharePoint Products Properties** window, on the **Security** tab, click **Advanced**.
-9. In the **Advanced Security Settings for Microsoft SharePoint Products** window, on the **Permissions** tab, in the **Permission entries** list, click **Authenticated Users**, and then click **Edit**.
-10. In the **Permission Entry for Microsoft SharePoint Products** window, in the **Permissions** list, select the **Allow** checkbox for **Create serviceConnectionPoint objects**, and then click **OK**.
-11. In the **Advanced Security Settings for Microsoft SharePoint Products** window, click **OK**.
+7. Right click the new container (**CN=Microsoft SharePoint Products**), and
+   then click **Properties**.
+8. In the **CN=Microsoft SharePoint Products Properties** window, on the
+   **Security** tab, click **Advanced**.
+9. In the **Advanced Security Settings for Microsoft SharePoint Products**
+   window, on the **Permissions** tab, in the **Permission entries** list,
+   click **Authenticated Users**, and then click **Edit**.
+10. In the **Permission Entry for Microsoft SharePoint Products** window, in the
+    **Permissions** list, select the **Allow** checkbox for **Create
+    serviceConnectionPoint objects**, and then click **OK**.
+11. In the **Advanced Security Settings for Microsoft SharePoint Products**
+    window, click **OK**.
 12. In the **CN=Microsoft SharePoint Products Properties** window, click **OK**.
 
 ## DEV – Map Web application to loopback address in Hosts file
@@ -455,7 +494,8 @@ SharePoint Web applications with the loopback address (127.0.0.1).
 
 To map the host name for a Web application to the loopback address:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, click **All Programs**, click **Accessories**, right-click
+   **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following command:
    
@@ -491,19 +531,23 @@ More details about this issue can be found in
 
 To enable host names that are mapped to the loopback address:
 
-1. Click **Start**, click **Run**, type **regedit**, and then click **OK**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. Click **Start**, click **Run**, type **regedit**, and then click **OK**. If
+   prompted by User Account Control to allow the program to make changes to the
+   computer, click **Yes**.
 
 2. In Registry Editor, locate and then click the following registry key:
    
    > **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
 
-3. Right-click **MSV1\_0**, point to **New**, and then click **Multi-String Value**.
+3. Right-click **MSV1\_0**, point to **New**, and then click **Multi-String
+   Value**.
 
 4. Type **BackConnectionHostNames**, and then press {{< kbd "ENTER" >}}.
 
 5. Right-click **BackConnectionHostNames**, and then click **Modify**.
 
-6. In the **Value data** box, type the host header corresponding to each Web application specified in Table 7. For example:
+6. In the **Value data** box, type the host header corresponding to each Web
+   application specified in Table 7. For example:
    
    > {{< kbd "extranet.fabrikam.com" >}}
    > 
@@ -520,21 +564,30 @@ To enable host names that are mapped to the loopback address:
 To install Windows PowerShell Integrated Scripting Environment (ISE):
 
 1. Start the **Server Manager** console.
-2. In the tree view on the left, click **Features**, and then in the **Features Summary** area, click **Add Features**.
+2. In the tree view on the left, click **Features**, and then in the **Features
+   Summary** area, click **Add Features**.
 3. In the **Add Features Wizard**:
    1. On the **Features**page:
-      1. In the list of features, select **Windows PowerShell Integrated Scripting Environment (ISE)**. If prompted to add features required for Windows PowerShell Integrated Scripting Environment (ISE), click **Add Required Features**.
+      1. In the list of features, select **Windows PowerShell Integrated
+         Scripting Environment (ISE)**. If prompted to add features required
+         for Windows PowerShell Integrated Scripting Environment (ISE), click
+         **Add Required Features**.
       2. Click **Next**.
-   2. On the **Confirmation** page, verify the features to be installed and then click **Install**.
+   2. On the **Confirmation** page, verify the features to be installed and
+      then click **Install**.
 
 ## DEV - Install Visual Studio 2010
 
 To install Visual Studio 2010:
 
 1. Start the Visual Studio 2010 installation.
-2. On the **Welcome to the Microsoft Visual Studio 2010 installation wizard**, click **Next**.
-3. Review the licensing agreement. If you accept the terms and conditions, select **I have read and accept the license terms**, and then click **Next**.
-4. On the **Select features to install** step, select **Custom** and then click **Next**.
+2. On the **Welcome to the Microsoft Visual Studio 2010 installation wizard**,
+   click **Next**.
+3. Review the licensing agreement. If you accept the terms and conditions,
+   select **I have read and accept the license terms**, and then click
+   **Next**.
+4. On the **Select features to install** step, select **Custom** and then click
+   **Next**.
 5. Clear the following checkboxes:
    - **Visual C++**
    - **Visual F#**
@@ -542,7 +595,8 @@ To install Visual Studio 2010:
    - **Microsoft SQL Server 2008 Express Service Pack 1 (x64)**
 6. Click **Install**.
 7. The **Installing Components** page shows the progress of the installation.
-8. Wait for the installation to complete, verify all components were successfully installed, and then click **Finish**.
+8. Wait for the installation to complete, verify all components were
+   successfully installed, and then click **Finish**.
 
 ## DEV - Install Team Explorer (Team Foundation Client)
 
@@ -553,14 +607,19 @@ To install Visual Studio 2010:
 
 To install Team Explorer:
 
-1. Open Windows Explorer, and browse to the installation media for Visual Studio 2010.
+1. Open Windows Explorer, and browse to the installation media for Visual
+   Studio 2010.
 2. Open the **Team Explorer** folder, and double-click **setup.exe**.
 3. The **Microsoft Visual Studio Team Explorer 2010 Setup** wizard starts.
 4. On the **Welcome to Setup** page, click **Next**.
-5. Review the licensing agreement. If you accept the terms and conditions, select **I have read and accept the license terms**, and then click **Next**.
-6. On the **Select features to install** page, ensure **Team Explorer** is checked and then click **Install**.
+5. Review the licensing agreement. If you accept the terms and conditions,
+   select **I have read and accept the license terms**, and then click
+   **Next**.
+6. On the **Select features to install** page, ensure **Team Explorer** is
+   checked and then click **Install**.
 7. The **Installing Components** page shows the progress of the installation.
-8. Wait for the installation to complete, verify all components were successfully installed, and then click **Finish**.
+8. Wait for the installation to complete, verify all components were
+   successfully installed, and then click **Finish**.
 
 ## DEV - Install Visual Studio 2010 Service Pack 1
 
@@ -601,46 +660,73 @@ SQL Server 2008 setup requires .NET Framework 3.5 to be installed.
 To install .NET Framework 3.5 on Windows Server 2008:
 
 1. Start the **Server Manager** console.
-2. In the tree view on the left, click **Features**, and then in the **Features Summary** area, click **Add Features**.
+2. In the tree view on the left, click **Features**, and then in the **Features
+   Summary** area, click **Add Features**.
 3. In the **Add Features Wizard**:
-   1. On the **Features** page, in the list of features, expand **.NET Framework 3.5.1 Features**, select **.NET Framework 3.5.1**, and then click **Next**.
-   2. On the **Confirmation** page, verify the features to be installed and then click **Install**.
+   1. On the **Features** page, in the list of features, expand **.NET
+      Framework 3.5.1 Features**, select **.NET Framework 3.5.1**, and then
+      click **Next**.
+   2. On the **Confirmation** page, verify the features to be installed and
+      then click **Install**.
 4. Run Windows Update to install the latest updates for the .NET Framework.
 5. Restart the computer.
 
 To install SQL Server:
 
-1. Start the SQL Server installation. If prompted about known compatibility issues (indicating that SQL Server 2008 SP1 must be applied), click **Run program**.
-2. On the **SQL Server Installation Center**, click **Installation**, and then click **New installation or add features to an existing installation**.
-3. On the **Setup Support Rules** step, ensure no failures or warnings were detected and then click **OK**.
-4. On the **Product Key** step, type the product key, if necessary, and then click **Next**.
-5. Review the licensing agreement. If you accept the terms and conditions, select **I accept the license terms**, and then click **Next**.
-6. On the **Setup Support Files** step, click **Install**. Wait for the support files to be installed.
-7. On the **Setup Support Rules** step, ensure no failures or warnings were detected (except for a warning regarding **Windows Firewall**) and then click **Next**.
-8. On the **Setup Role** step, ensure **SQL Server Feature Installation** is selected and then click **Next**.
+1. Start the SQL Server installation. If prompted about known compatibility
+   issues (indicating that SQL Server 2008 SP1 must be applied), click **Run
+   program**.
+2. On the **SQL Server Installation Center**, click **Installation**, and then
+   click **New installation or add features to an existing installation**.
+3. On the **Setup Support Rules** step, ensure no failures or warnings were
+   detected and then click **OK**.
+4. On the **Product Key** step, type the product key, if necessary, and then
+   click **Next**.
+5. Review the licensing agreement. If you accept the terms and conditions,
+   select **I accept the license terms**, and then click **Next**.
+6. On the **Setup Support Files** step, click **Install**. Wait for the support
+   files to be installed.
+7. On the **Setup Support Rules** step, ensure no failures or warnings were
+   detected (except for a warning regarding **Windows Firewall**) and then
+   click **Next**.
+8. On the **Setup Role** step, ensure **SQL Server Feature Installation** is
+   selected and then click **Next**.
 9. On the **Feature Selection**step:
    1. Select the following checkboxes:
       - **Database Engine Services**
       - **SQL Server Books Online**
       - **Management Tools - Complete**
    2. Click **Next**.
-10. On the **Installation Rules** step, ensure no failures or warnings were detected and then click **Next**.
-11. On the **Instance Configuration** step, ensure **Default instance** is selected, the **Instance ID** is set to **MSSQLSERVER**, and then click **Next**.
-12. On the **Disk Space Requirements** page, ensure there is sufficient disk space available, and then click **Next**.
+10. On the **Installation Rules** step, ensure no failures or warnings were
+    detected and then click **Next**.
+11. On the **Instance Configuration** step, ensure **Default instance** is
+    selected, the **Instance ID** is set to **MSSQLSERVER**, and then click
+    **Next**.
+12. On the **Disk Space Requirements** page, ensure there is sufficient disk
+    space available, and then click **Next**.
 13. On the **Server Configuration** step, on the **Service Accounts**tab:
     1. Enter the service accounts as specified in Table 2.
-    2. Ensure the **Startup Type** for **SQL Server Database Engine** is set to **Automatic**.
+    2. Ensure the **Startup Type** for **SQL Server Database Engine** is set to
+       **Automatic**.
     3. Click **Next.**
 14. On the **Database Engine Configuration**step:
     1. On the **Account Provisioning**tab:
        1. Ensure that **Windows authentication mode** is selected.
-       2. In the **Specify SQL Server administrators** section, click **Add Current User**.
-    2. On the **Data Directories** tab, specify the desired location of the various data and log files (for example, to place the data files on D: and the log files on L:).
+       2. In the **Specify SQL Server administrators** section, click **Add
+          Current User**.
+    2. On the **Data Directories** tab, specify the desired location of the
+       various data and log files (for example, to place the data files on D:
+       and the log files on L:).
     3. Click **Next**.
-15. On the **Error Reporting** step, optionally select the checkbox to send error reports to Microsoft or your corporate report server, and then click **Next**.
-16. On the **Installation Configuration Rules** step, ensure no failures or warnings were detected and then click **Next**.
-17. On the **Ready to Install** step, verify the components that will be installed and then click **Install**.
-18. Wait for the installation to complete, verify all components were successfully installed, and then click **Next**.
+15. On the **Error Reporting** step, optionally select the checkbox to send
+    error reports to Microsoft or your corporate report server, and then click
+    **Next**.
+16. On the **Installation Configuration Rules** step, ensure no failures or
+    warnings were detected and then click **Next**.
+17. On the **Ready to Install** step, verify the components that will be
+    installed and then click **Install**.
+18. Wait for the installation to complete, verify all components were
+    successfully installed, and then click **Next**.
 19. On the **Complete** step, click **Close**.
 
 ## Install latest service pack for SQL Server 2008
@@ -651,7 +737,8 @@ using Windows Update or by downloading it from one the following locations:
 - {{< reference title="Microsoft® SQL Server® 2008 R2 Service Pack 2"
   linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=30437" >}}
 - {{< reference title="SQL Server 2008 Service Pack 3"
-  linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594" >}}
+  linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594"
+  > }}
 
 ## DEV - Change databases to Simple recovery model
 
@@ -755,13 +842,19 @@ servers.
 
 To run the preparation tool:
 
-1. From the SharePoint Server 2010 installation location, double-click the appropriate executable file.
+1. From the SharePoint Server 2010 installation location, double-click the
+   appropriate executable file.
 
-2. Click **Install software prerequisites** on the splash screen. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+2. Click **Install software prerequisites** on the splash screen. If prompted
+   by User Account Control to allow the program to make changes to the
+   computer, click **Yes**.
 
-3. On the **Welcome to the Microsoft® SharePoint® 2010 Products Preparation Tool** page, click **Next**.
+3. On the **Welcome to the Microsoft® SharePoint® 2010 Products Preparation
+   Tool** page, click **Next**.
 
-4. Review the licensing agreement. If you accept the terms and conditions, select **I accept the terms of the License Agreement(s)**, and then click **Next**.
+4. Review the licensing agreement. If you accept the terms and conditions,
+   select **I accept the terms of the License Agreement(s)**, and then click
+   **Next**.
    
    > **Note**
    > 
@@ -828,23 +921,33 @@ SharePoint Server on each of the farm servers.
 
 To install SharePoint Server 2010:
 
-1. If the SharePoint installation splash screen is not already showing, from the SharePoint Server 2010 installation location, double-click the appropriate executable file.
+1. If the SharePoint installation splash screen is not already showing, from
+   the SharePoint Server 2010 installation location, double-click the
+   appropriate executable file.
 
-2. Click **Install SharePoint Server** on the splash screen. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+2. Click **Install SharePoint Server** on the splash screen. If prompted by
+   User Account Control to allow the program to make changes to the computer,
+   click **Yes**.
 
-3. On the **Enter your Product Key** page, type the corresponding SharePoint Server 2010 Enterprise CAL product key, and then click **Continue**.
+3. On the **Enter your Product Key** page, type the corresponding SharePoint
+   Server 2010 Enterprise CAL product key, and then click **Continue**.
 
-4. Review the licensing agreement. If you accept the terms and conditions, select **I accept the terms of this agreement**, and then click **Continue**.
+4. Review the licensing agreement. If you accept the terms and conditions,
+   select **I accept the terms of this agreement**, and then click
+   **Continue**.
 
 5. On the **Choose the installation you want** page, click **Server Farm**.
 
 6. On the **Server Type** tab, click **Complete**.
 
-7. On the **File Location** tab, change the installation and search index paths according to Table 3, and then click **Install Now**.
+7. On the **File Location** tab, change the installation and search index paths
+   according to Table 3, and then click **Install Now**.
 
 8. Wait for the installation to finish.
 
-9. On the **Run Configuration Wizard** page, clear the **Run the SharePoint Products and Technologies Configuration Wizard now** checkbox, and then click **Close**.
+9. On the **Run Configuration Wizard** page, clear the **Run the SharePoint
+   Products and Technologies Configuration Wizard now** checkbox, and then
+   click **Close**.
    
    > **Note**
    > 
@@ -868,22 +971,31 @@ Administration Web site.
 
 To run the configuration wizard and configure the farm:
 
-1. On the server that will host the Central Administration site, click **Start**, point to **All Programs**, click **Microsoft SharePoint 2010 Products**, and then click **SharePoint 2010 Products Configuration Wizard**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the server that will host the Central Administration site, click
+   **Start**, point to **All Programs**, click **Microsoft SharePoint 2010
+   Products**, and then click **SharePoint 2010 Products Configuration
+   Wizard**. If prompted by User Account Control to allow the program to make
+   changes to the computer, click **Yes**.
 
 2. On the **Welcome to SharePoint Products** page, click **Next**.
 
-3. In the dialog box that notifies you that some services may have to be started or reset during configuration, click **Yes**.
+3. In the dialog box that notifies you that some services may have to be
+   started or reset during configuration, click **Yes**.
 
-4. On the **Connect to a server farm** page, click **Create a new server farm**, and then click **Next**.
+4. On the **Connect to a server farm** page, click **Create a new server
+   farm**, and then click **Next**.
 
 5. On **the Specify Configuration Database Settings**page, do the following:
    
-   1. In the **Database server** box, type the name of the computer that is running SQL Server.
-   2. In the **Username** box, type the user name of the server farm account specified in Table 2.
+   1. In the **Database server** box, type the name of the computer that is
+      running SQL Server.
+   2. In the **Username** box, type the user name of the server farm account
+      specified in Table 2.
    3. In the **Password** box, type the password for the service account.
    4. Click **Next**.
 
-6. On the **Specify Farm Security Settings** page, type a passphrase, and then click **Next**.
+6. On the **Specify Farm Security Settings** page, type a passphrase, and then
+   click **Next**.
    Ensure that the passphrase meets the following criteria:
    
    - Contains at least eight characters
@@ -902,13 +1014,16 @@ To run the configuration wizard and configure the farm:
    > Configuration Wizard wizard. Ensure that you remember the passphrase,
    > because you must use it each time you add a server to the farm.
 
-7. On the **Configure SharePoint Central Administration Web Application**page, do the following:
+7. On the **Configure SharePoint Central Administration Web Application**page,
+   do the following:
    
-   1. Select the **Specify port number** checkbox and type the port number specified in Table 7.
+   1. Select the **Specify port number** checkbox and type the port number
+      specified in Table 7.
    2. In the **Configure Security Settings** section, ensure NTLM is selected.
    3. Click **Next**.
 
-8. On the **Completing the SharePoint Products Configuration Wizard** page, verify the configuration settings, and then click **Next**.
+8. On the **Completing the SharePoint Products Configuration Wizard** page,
+   verify the configuration settings, and then click **Next**.
 
 9. Wait for the product configuration to complete.
 
@@ -926,9 +1041,11 @@ To run the configuration wizard and configure the farm:
     > zone). In order to complete the steps in this section, type your username
     > and password to access Central Administration.
 
-12. In the **Help Make SharePoint Better** window, click the desired option and then click **OK**.
+12. In the **Help Make SharePoint Better** window, click the desired option and
+    then click **OK**.
 
-13. On the **Configure your SharePoint farm** page, click **Cancel** (since the services will be configured manually).
+13. On the **Configure your SharePoint farm** page, click **Cancel** (since the
+    services will be configured manually).
 
 ## Add Web servers to the farm
 
@@ -948,9 +1065,12 @@ the Central Administration site.
 To add the Central Administration site to the Local intranet zone:
 
 1. In Internet Explorer, on the **Tools** menu, click **Internet Options**.
-2. On the **Security** tab, in the **Select a zone to view or change security settings** box, click **Local intranet**, and then click **Sites**.
-3. Clear the **Require server verification (https:) for all sites in this zone** checkbox.
-4. In the **Add this Web site to the zone** box, type the URL for the SharePoint Central Administration Web site, and then click **Add**.
+2. On the **Security** tab, in the **Select a zone to view or change security
+   settings** box, click **Local intranet**, and then click **Sites**.
+3. Clear the **Require server verification (https:) for all sites in this
+   zone** checkbox.
+4. In the **Add this Web site to the zone** box, type the URL for the
+   SharePoint Central Administration Web site, and then click **Add**.
 5. Click **Close** to close the **Local intranet** dialog box.
 6. In the **Security level for this zone** section, click **Default level**.
 7. Click **OK** to close the **Internet Options** dialog box.
@@ -995,38 +1115,55 @@ WAMREG admin Service, as described in
 To grant Administrators permissions to update the configuration in Windows
 Server 2008 R2:
 
-1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**. If prompted by **User Account Control** to allow the program to make changes to this computer, click **Yes**.
+1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**.
+   If prompted by **User Account Control** to allow the program to make changes
+   to this computer, click **Yes**.
 
-2. In the **Registry Editor** window, search for "61738644-F196-11D0-9953-00C04FD919C1" to find:
+2. In the **Registry Editor** window, search for
+   "61738644-F196-11D0-9953-00C04FD919C1" to find:
    
    > HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
 
-3. Right-click on the **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and then click **Permissions**.
+3. Right-click on the
+   **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and
+   then click **Permissions**.
 
-4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box, click **Advanced**.
+4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+   box, click **Advanced**.
 
-5. In the **Advanced Security Settings for {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
+5. In the **Advanced Security Settings for
+   {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
    
    1. Click the **Owner** tab.
    2. In the **Change owner to** list, click the **Administrators** group.
    3. Click **OK**.
 
-6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box, click the **Administrators** group, then click the checkbox to allow the group **Full Control**, and click **OK**.
+6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+   box, click the **Administrators** group, then click the checkbox to allow
+   the group **Full Control**, and click **OK**.
 
 7. Close the Registry Editor window.
 
 To configure permissions for the IIS WAMREG Admin Service:
 
-1. Click the **Start** menu, type **dcomcnfg**, and then click **dcomcnfg.exe**.
-2. Expand **Component Services**, expand **Computers**, expand **My Computer**, and then click **DCOM Config**.
+1. Click the **Start** menu, type **dcomcnfg**, and then click
+   **dcomcnfg.exe**.
+2. Expand **Component Services**, expand **Computers**, expand **My Computer**,
+   and then click **DCOM Config**.
 3. Right-click **IIS WAMREG admin Service**, and then click **Properties**.
 4. Click the **Security** tab.
 5. Under **Launch and Activation Permissions**, click **Edit**.
 6. In the **Launch and Activation Permission** dialog box, click **Add**.
-7. In the **Select Users, Computers, Service Accounts, or Groups** dialog box, change the location to the local server. Then, type the local security groups **WSS\_ADMIN\_WPG** and **WSS\_WPG**, click **Check Names**, and then click **OK**.
+7. In the **Select Users, Computers, Service Accounts, or Groups** dialog box,
+   change the location to the local server. Then, type the local security
+   groups **WSS\_ADMIN\_WPG** and **WSS\_WPG**, click **Check Names**, and then
+   click **OK**.
 8. In the **Launch and Activation Permission**dialog box:
-   1. In the **Groups or user names** list, click **WSS\_ADMIN\_WPG**, in the **Permissions for WSS\_ADMIN\_WPG** list, click to select the **Allow** checkbox that is next to **Local Activation**.
-   2. Repeat the previous step to grant the **Local Activation** permission for the **WSS\_WPG** group.
+   1. In the **Groups or user names** list, click **WSS\_ADMIN\_WPG**, in the
+      **Permissions for WSS\_ADMIN\_WPG** list, click to select the **Allow**
+      checkbox that is next to **Local Activation**.
+   2. Repeat the previous step to grant the **Local Activation** permission
+      for the **WSS\_WPG** group.
    3. Click **OK**.
 9. In the **IIS WAMREG admin Service Properties** dialog box, click **OK**.
 
@@ -1052,7 +1189,9 @@ To rename the TaxonomyPicker.ascx file:
    > **C:\Program Files\Common Files\Microsoft Shared\Web Server
    > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 
-2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the filename to **TaxonomyPicker.ascx\_broken**. When prompted to confirm that you want to change the file name extension, click **Yes**.
+2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
+   filename to **TaxonomyPicker.ascx\_broken**. When prompted to confirm that
+   you want to change the file name extension, click **Yes**.
 
 > **Note**
 >
@@ -1066,15 +1205,21 @@ logging and usage and health data collection for the farm.
 
 To configure diagnostic logging:
 
-1. Click **Start**, point to **All Programs**, click **Microsoft SharePoint 2010 Products**, and then click **SharePoint 2010 Central Administration**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. Click **Start**, point to **All Programs**, click **Microsoft SharePoint
+   2010 Products**, and then click **SharePoint 2010 Central Administration**.
+   If prompted by User Account Control to allow the program to make changes to
+   the computer, click **Yes**.
 2. On the Central Administration home page, click **Monitoring**.
 3. In the **Reporting** section, click **Configure diagnostic logging**.
-4. On the **Diagnostic Logging** page, configure the settings as specified in Table 4, and then click **OK**.
+4. On the **Diagnostic Logging** page, configure the settings as specified in
+   Table 4, and then click **OK**.
 
 To configure usage and health data collection:
 
-1. On the **Monitoring** page in Central Administration, in the **Reporting** section, click **Configure usage and health data collection**.
-2. On the **Configure web analytics and health data collection** page, configure the settings as specified in Table 5, and then click **OK**.
+1. On the **Monitoring** page in Central Administration, in the **Reporting**
+   section, click **Configure usage and health data collection**.
+2. On the **Configure web analytics and health data collection** page,
+   configure the settings as specified in Table 5, and then click **OK**.
 
 ## Configure service accounts
 
@@ -1092,10 +1237,14 @@ Administration.
 
 To configure service accounts:
 
-1. On the Central Administration home page, under the **Security** section, click **Configure service accounts**.
+1. On the Central Administration home page, under the **Security** section,
+   click **Configure service accounts**.
 2. On the **Service Accounts** page, click **Register new managed account**.
-3. On the **Register Managed Account** page, in the **Account Registration** section, type the username and password for the service account for search services listed in Table 2, and the click **OK**.
-4. Repeat the previous steps to add the remaining SharePoint managed accounts listed in Table 2.
+3. On the **Register Managed Account** page, in the **Account Registration**
+   section, type the username and password for the service account for search
+   services listed in Table 2, and the click **OK**.
+4. Repeat the previous steps to add the remaining SharePoint managed accounts
+   listed in Table 2.
 
 ## Configure mail services
 
@@ -1105,8 +1254,10 @@ alerts to site users and notifications to site administrators.
 To configure the outgoing e-mail settings:
 
 1. On the Central Administration home page, click **System Settings**.
-2. On the **System Settings** page, in the **E-Mail and Text Messages (SMS)** section, click **Configure outgoing e-mail settings**.
-3. On the **Outgoing E-Mail Settings** page, in the **Mail Settings** section, configure the following settings from the values specified in Table 6:
+2. On the **System Settings** page, in the **E-Mail and Text Messages (SMS)**
+   section, click **Configure outgoing e-mail settings**.
+3. On the **Outgoing E-Mail Settings** page, in the **Mail Settings** section,
+   configure the following settings from the values specified in Table 6:
    - **Outbound SMTP server**
    - **From address**
    - **Reply-to address**
@@ -1123,7 +1274,10 @@ history table in the SharePoint\_Config database can cause issues.
 
 To change the schedule for deleting timer job history:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
 2. From the Windows PowerShell command prompt, type the following command:
    
@@ -1131,7 +1285,8 @@ To change the schedule for deleting timer job history:
    Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 12:00:00 and 13:00:00"
    ```
 
-3. Wait for the command to complete and verify no errors occurred during the process.
+3. Wait for the command to complete and verify no errors occurred during the
+   process.
 
 ## Install SharePoint Server 2010 Service Pack 1
 
@@ -1190,11 +1345,13 @@ available in the following blog posts:
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 1"
   linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx"
+  > }}
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 2"
   linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"
+  > }}
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
@@ -1244,9 +1401,13 @@ greater familiarity with the various configuration options in SharePoint Server
 
 To create the Web application using the PowerShell scripts:
 
-1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint 2010 Products, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint
+   2010 Products, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -1256,9 +1417,11 @@ To create the Web application using the PowerShell scripts:
    & '.\Create Web Application.ps1'
    ```
 
-4. If prompted for the the application pool credentials, verify the user name, type the password, and then click **OK**.
+4. If prompted for the the application pool credentials, verify the user name,
+   type the password, and then click **OK**.
 
-5. Wait for the script to complete and verify no errors occurred during the process.
+5. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 6. Type the following command:
    
@@ -1266,41 +1429,65 @@ To create the Web application using the PowerShell scripts:
    & '.\Create Site Collections.ps1'
    ```
 
-7. Wait for the script to complete and verify no errors occurred during the process.
+7. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 8. Proceed to the next section (Expand content database files).
 
 To create the Web application using SharePoint Central Administration:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Manage web applications**.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Manage web applications**.
 2. On the **Web Applications** tab, in the ribbon, click **New**.
 3. On the **Create New Web Application**page:
-   1. In the **Authentication** section, click **Claims Based Authentication**.
+   1. In the **Authentication** section, click **Claims Based
+      Authentication**.
    2. In the **IIS Web Site**section:
       1. Click **Create a new IIS web site**.
-      2. In the **Port** and **Host Header** boxes, type the corresponding values for the **Fabrikam Extranet** Web application specified in Table 7.
-   3. In the **Security Configuration** section, under **Allow Anonymous**, click **Yes**.
+      2. In the **Port** and **Host Header** boxes, type the corresponding
+         values for the **Fabrikam Extranet** Web application specified in
+         Table 7.
+   3. In the **Security Configuration** section, under **Allow Anonymous**,
+      click **Yes**.
    4. In the **Claims Authentication Types**section:
-      1. Ensure the **Enable Windows Authentication** checkbox is selected and in the **Integrated Windows authentication** drop-down menu, ensure **NTLM** is selected.
-      2. Select the **Enable Forms Based Authentication (FBA)** checkbox, in the **ASP.NET Membership provider name** box, type **FabrikamSqlMembershipProvider**, and in the **ASP.NET Role manager name** box, type **FabrikamSqlRoleProvider**.
+      1. Ensure the **Enable Windows Authentication** checkbox is selected
+         and in the **Integrated Windows authentication** drop-down menu,
+         ensure **NTLM** is selected.
+      2. Select the **Enable Forms Based Authentication (FBA)** checkbox, in
+         the **ASP.NET Membership provider name** box, type
+         **FabrikamSqlMembershipProvider**, and in the **ASP.NET Role manager
+         name** box, type **FabrikamSqlRoleProvider**.
    5. In the **Application Pool**section:
       1. Click **Create a new application pool**.
-      2. Under **Select a security account for this application pool**, click **Configurable**, and then select the service account specified in Table 7 for the Fabrikam Extranet Web application.
-   6. In the **Database Name and Authentication** section, in the **Database Name** box, type the corresponding value from Table 7.
-   7. In the **Service Application Connections** section, ensure **default** is selected in the drop-down menu.
+      2. Under **Select a security account for this application pool**, click
+         **Configurable**, and then select the service account specified in
+         Table 7 for the Fabrikam Extranet Web application.
+   6. In the **Database Name and Authentication** section, in the **Database
+      Name** box, type the corresponding value from Table 7.
+   7. In the **Service Application Connections** section, ensure **default**
+      is selected in the drop-down menu.
    8. Click **OK** to create the new Web application.
 4. Wait for the Web application to be created and then click **OK**.
 
 To create the initial site collections using SharePoint Central Administration:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Create site collections**.
-2. On the **Create Site Collection** page, in the **Web Application** section, ensure the Fabrikam Extranet Web application is selected ([**http://extranet.fabrikam.com**](http://extranet.fabrikam.com)).
-3. In the **Title and Description** section, type the title and description for the site collection using the corresponding values specified in Table 8.
-4. In the **Web Site Address** section, specify the path to use based on the value specified in Table 8.
-5. In the **Template Selection** section, in the **Select a template** list, select the template specified in Table 8.
-6. In the **Primary Site Collection Administrator** section, type the corresponding value specified in Table 8.
-7. In the **Secondary Site Collection Administrator** section, type the username specified in Table 8.
-8. In the **Quota Template** section, click the template in the **Select a quota template** list corresponding to the value specified in Table 8.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Create site collections**.
+2. On the **Create Site Collection** page, in the **Web Application** section,
+   ensure the Fabrikam Extranet Web application is selected (
+   [**http://extranet.fabrikam.com**](http://extranet.fabrikam.com)).
+3. In the **Title and Description** section, type the title and description for
+   the site collection using the corresponding values specified in Table 8.
+4. In the **Web Site Address** section, specify the path to use based on the
+   value specified in Table 8.
+5. In the **Template Selection** section, in the **Select a template** list,
+   select the template specified in Table 8.
+6. In the **Primary Site Collection Administrator** section, type the
+   corresponding value specified in Table 8.
+7. In the **Secondary Site Collection Administrator** section, type the
+   username specified in Table 8.
+8. In the **Quota Template** section, click the template in the **Select a
+   quota template** list corresponding to the value specified in Table 8.
 9. Click **OK**.
 10. Wait for the site collection to be created and then click **OK**.
 11. Create the remaining site collections specified in Table 8.
@@ -1322,9 +1509,12 @@ To increase the size of the database files:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
 2. In the **Object Explorer**, expand the **Databases** folder.
-3. Right-click the **WSS\_Content\_FabrikamExtranet** database and then click **Properties**.
-4. In the **Database Properties** dialog, in the **Select a page** area on the left, click **Files**.
-5. Using the settings specified in Table 9, type the new values for **Initial Size** and **Autogrowth**.
+3. Right-click the **WSS\_Content\_FabrikamExtranet** database and then click
+   **Properties**.
+4. In the **Database Properties** dialog, in the **Select a page** area on the
+   left, click **Files**.
+5. Using the settings specified in Table 9, type the new values for **Initial
+   Size** and **Autogrowth**.
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
@@ -1358,9 +1548,13 @@ Full Read access to the Web application.
 
 To configure object cache user accounts:
 
-1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint 2010 Products, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint
+   2010 Products, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -1370,7 +1564,8 @@ To configure object cache user accounts:
    & '.\Configure Object Cache User Accounts.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 5. Type the following command to reset Internet Information Services (IIS):
    
@@ -1390,7 +1585,8 @@ Extranet from the internal domain (FABRIKAM).
 
 To enable selection of people and groups from the internal Fabrikam domain:
 
-1. Click **Start**, click **All Programs**, click **Accessories**, right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, click **All Programs**, click **Accessories**, right-click
+   **Command Prompt**, and then click **Run as administrator**.
 
 2. Type the following command:
    
@@ -1427,22 +1623,32 @@ To enable selection of people and groups from the internal Fabrikam domain:
 To add a public URL for HTTPS:
 
 1. On the Central Administration home page, click **Application Management**.
-2. On the **Application Management** page, in the **Web Applications** section, click **Configure alternate access mappings**.
+2. On the **Application Management** page, in the **Web Applications** section,
+   click **Configure alternate access mappings**.
 3. On the **Alternate Access Mappings** page, click **Edit Public URLs**.
 4. On the **Edit Public Zone URLs**page:
-   1. In the **Alternate Access Mapping Collection** section, select the Web application specified in Table 7.
-   2. In the **Public URLs** section, copy the URL from the **Default** box to the **Internet** box, and change **http://** to **https://**.
+   1. In the **Alternate Access Mapping Collection** section, select the Web
+      application specified in Table 7.
+   2. In the **Public URLs** section, copy the URL from the **Default** box to
+      the **Internet** box, and change **http://** to **https://**.
    3. Click **Save**.
 
 To add an HTTPS binding to the site in IIS:
 
-1. Click **Start**, point to **Administrative Tools**, and then click **Internet Information Services (IIS) Manager**.
-2. In Internet Information Services (IIS) Manager, click the plus sign (+) next to the server name that contains the Web application, and then click the plus sign next to **Sites** to view the Web applications that have been created.
-3. Click the name of the Web application corresponding to the **Internet** zone (e.g. **SharePoint - extranet.fabrikam.com80**). In the **Actions** section, under the **Edit Site** heading, click **Bindings...**.
+1. Click **Start**, point to **Administrative Tools**, and then click
+   **Internet Information Services (IIS) Manager**.
+2. In Internet Information Services (IIS) Manager, click the plus sign (+) next
+   to the server name that contains the Web application, and then click the
+   plus sign next to **Sites** to view the Web applications that have been
+   created.
+3. Click the name of the Web application corresponding to the **Internet** zone
+   (e.g. **SharePoint - extranet.fabrikam.com80**). In the **Actions** section,
+   under the **Edit Site** heading, click **Bindings...**.
 4. In the **Site Bindings** window, click **Add**.
 5. In the **Add Site Binding**window:
    1. In the **Type:** dropdown, select **https**.
-   2. In the **SSL Certificate:** dropdown, select the certificate corresponding to the site (e.g. extranet.fabrikam.com).
+   2. In the **SSL Certificate:** dropdown, select the certificate
+      corresponding to the site (e.g. extranet.fabrikam.com).
    3. Click **OK**.
    4. In the **Site Bindings** window, click **Close**.
 
@@ -1455,9 +1661,13 @@ administration page on the site.
 
 To enable anonymous access to the site using PowerShell:
 
-1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint 2010 Products, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint
+   2010 Products, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -1467,16 +1677,19 @@ To enable anonymous access to the site using PowerShell:
    & '.\Enable Anonymous Acess.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 5. Proceed to the next section (Configure claims-based authentication).
 
 To enable anonymous access to the site using the site permissions page:
 
-1. Browse to the home page of the site ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+1. Browse to the home page of the site (
+   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 2. Click **Site Actions** and then click **Site Permissions**.
 3. On the site permissions page, in the ribbon, click **Anonymous Access**.
-4. In the **Anonymous Access** page, click **Entire Web site**, and then click **OK**.
+4. In the **Anonymous Access** page, click **Entire Web site**, and then click
+   **OK**.
 
 ## Configure claims-based authentication
 
@@ -1494,10 +1707,12 @@ In this section, claims-based authentication using a SQL Server database is
 configured using the following high-level steps:
 
 1. Create and configure the membership/role database
-2. Modify the Web.config files for the following sites in order to support claims-based authentication:
+2. Modify the Web.config files for the following sites in order to support
+   claims-based authentication:
    - SharePoint Central Administration v4
    - SecurityTokenServiceApplication
-   - Fabrikam Extranet Web application ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
+   - Fabrikam Extranet Web application (
+     [http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 3. Create a user in the database using IIS Manager
 4. Validate the configuration of the Web application
 
@@ -1509,7 +1724,8 @@ and specific service accounts are added to the appropriate database roles.
 
 To create the database used for storing membership and role information:
 
-1. Click **Start**, point to **All Programs**, click **Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
+1. Click **Start**, point to **All Programs**, click **Accessories**, and
+   right-click **Command Prompt**, and then click **Run as administrator**.
 
 2. At the command prompt, type the following command:
    
@@ -1523,9 +1739,11 @@ To create the database used for storing membership and role information:
    aspnet_regsql.exe
    ```
 
-4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click **Next**.
+4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click
+   **Next**.
 
-5. On the **Select a Setup Option** page, ensure the option to **Configure SQL Server for application services** is selected and then click **Next**.
+5. On the **Select a Setup Option** page, ensure the option to **Configure SQL
+   Server for application services** is selected and then click **Next**.
 
 6. On the **Select the Server and Database** page:
    
@@ -1534,7 +1752,8 @@ To create the database used for storing membership and role information:
    3. In the **Database** dropdown list, type **FabrikamDemo**.
    4. Click **Next**.
 
-7. On the **Confirm Your Settings** page, verify the settings, and then click **Next**.
+7. On the **Confirm Your Settings** page, verify the settings, and then click
+   **Next**.
 
 8. Wait for the database to be created and then click **Finish**.
 
@@ -1542,15 +1761,21 @@ To add the service accounts to the membership/role database:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
 2. In **Object Explorer**, expand **Security**, and then expand **Logins**.
-3. Right-click the login corresponding to the SharePoint farm service account (**EXTRANET\svc-sharepoint**) and then click **Properties**.
+3. Right-click the login corresponding to the SharePoint farm service account
+   (**EXTRANET\svc-sharepoint**) and then click **Properties**.
 4. In the login properties dialog box:
-   1. On the **User Mapping** page, in the **Users mapped to the login** list, click the checkbox for the membership/role database (**FabrikamDemo**), and then in the database role membership list, click the checkboxes for the following roles:
+   1. On the **User Mapping** page, in the **Users mapped to the login** list,
+      click the checkbox for the membership/role database (**FabrikamDemo**),
+      and then in the database role membership list, click the checkboxes for
+      the following roles:
       - **aspnet\_Membership\_BasicAccess**
       - **aspnet\_Membership\_ReportingAccess**
       - **aspnet\_Roles\_BasicAccess**
       - **aspnet\_Roles\_ReportingAccess**
    2. Click **OK**.
-5. Repeat the steps in this section to add the service account for the Fabrikam Extranet Web application (**EXTRANET\svc-web-fabrikam**) to the following roles:
+5. Repeat the steps in this section to add the service account for the Fabrikam
+   Extranet Web application (**EXTRANET\svc-web-fabrikam**) to the following
+   roles:
    - **aspnet\_Membership\_FullAccess**
    - **aspnet\_Roles\_BasicAccess**
    - **aspnet\_Roles\_ReportingAccess**
@@ -1577,7 +1802,8 @@ necessary to modify the Web.config files for the following sites:
 
 - SharePoint Central Administration v4
 - Security Token Service
-- Fabrikam Extranet ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
+- Fabrikam Extranet (
+  [http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 
 > **Important**
 >
@@ -1586,11 +1812,17 @@ necessary to modify the Web.config files for the following sites:
 
 To configure the Central Administration Web.config file:
 
-1. Click **Start**, point to **Administrative Tools**, and then click **Internet Information Services (IIS) Manager**.
+1. Click **Start**, point to **Administrative Tools**, and then click
+   **Internet Information Services (IIS) Manager**.
 
-2. In **Internet Information Services (IIS) Manager**, in the **Connections** pane, click the plus sign (+) next to the server name that contains the Web application, and then click the plus sign next to **Sites** to view the Web applications that have been created.
+2. In **Internet Information Services (IIS) Manager**, in the **Connections**
+   pane, click the plus sign (+) next to the server name that contains the Web
+   application, and then click the plus sign next to **Sites** to view the Web
+   applications that have been created.
 
-3. Right-click **SharePoint Central Administration v4**, and then click **Explore**. Windows Explorer opens, with the directories for the selected Web application listed.
+3. Right-click **SharePoint Central Administration v4**, and then click
+   **Explore**. Windows Explorer opens, with the directories for the selected
+   Web application listed.
    
    > **Important**
    > 
@@ -1643,11 +1875,14 @@ To configure the Central Administration Web.config file:
 
 6. Save the changes to the Web.config file and close the editor.
 
-7. Repeat the steps above on each Web server in the farm that hosts the Central Administration site.
+7. Repeat the steps above on each Web server in the farm that hosts the Central
+   Administration site.
 
 To configure the Security Token Service Web.config file:
 
-1. In **Internet Information Services (IIS) Manager**, in the **Connections** pane, expand the **SharePoint Web Services** site, right-click the **SecurityTokenServiceApplication** subsite, and then click **Explore**.
+1. In **Internet Information Services (IIS) Manager**, in the **Connections**
+   pane, expand the **SharePoint Web Services** site, right-click the
+   **SecurityTokenServiceApplication** subsite, and then click **Explore**.
    
    > **Important**
    > 
@@ -1700,7 +1935,9 @@ To configure the Security Token Service Web.config file:
 
 To configure the Web.config file for the Fabrikam Extranet Web application:
 
-1. In **Internet Information Services (IIS) Manager**, in the **Connections** pane, right-click the Web application (e.g. **SharePoint - extranet.fabrikam.com80**), and then click **Explore**.
+1. In **Internet Information Services (IIS) Manager**, in the **Connections**
+   pane, right-click the Web application (e.g. **SharePoint -
+   extranet.fabrikam.com80**), and then click **Explore**.
    
    > **Important**
    > 
@@ -1761,17 +1998,27 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
 
 To create a user for the Fabrikam Extranet:
 
-1. In **Internet Information Services (IIS) Manager**, click the Fabrikam Extranet Web application (e.g. **SharePoint -- extranet.fabrikam.com80**) and then double-click **.NET Users**.
-2. When prompted with an error stating the feature cannot be used because the default provider is not a trusted provider, click **OK**.
+1. In **Internet Information Services (IIS) Manager**, click the Fabrikam
+   Extranet Web application (e.g. **SharePoint -- extranet.fabrikam.com80**)
+   and then double-click **.NET Users**.
+2. When prompted with an error stating the feature cannot be used because the
+   default provider is not a trusted provider, click **OK**.
 3. In the **Actions** pane, click **Set Default Provider...**
-4. In the **Edit .NET Users Settings** dialog box, note that the default provider configured in SharePoint Server 2010 is "i". In the **Default Provider** list, click **FabrikamSqlMembershipProvider**, and then click **OK**.
+4. In the **Edit .NET Users Settings** dialog box, note that the default
+   provider configured in SharePoint Server 2010 is "i". In the **Default
+   Provider** list, click **FabrikamSqlMembershipProvider**, and then click
+   **OK**.
 5. In the **Actions** pane, click **Add...**
-6. When prompted with an error stating the default .NET Roles provider does not exist, click **OK**.
+6. When prompted with an error stating the default .NET Roles provider does not
+   exist, click **OK**.
 7. In the **Add .NET User**dialog:
-   1. On the **.NET User Account Details** page, type the appropriate values in the **User Name**, **E-mail**, **Password**, **Confirm Password**, **Question**, and **Answer** boxes, and then click **Next**.
+   1. On the **.NET User Account Details** page, type the appropriate values
+      in the **User Name**, **E-mail**, **Password**, **Confirm Password**,
+      **Question**, and **Answer** boxes, and then click **Next**.
    2. On the **.NET User Roles** page, click **Finish**.
 8. In the **Actions** pane, click **Set Default Provider...**
-9. In the **Edit .NET Users Settings** dialog box, in the **Default Provider** list, click **i**, and then click **OK**.
+9. In the **Edit .NET Users Settings** dialog box, in the **Default Provider**
+   list, click **i**, and then click **OK**.
 
 ### Validate claims authentication configuration
 
@@ -1799,31 +2046,44 @@ using both Forms-Based Authentication and Windows authentication.
 
 To login to the website using forms authentication:
 
-1. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click **Sign In**.
+1. Browse to the home page page the Fabrikam Extranet website (
+   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
+   **Sign In**.
 2. On the **Sign In**page:
    1. In the dropdown list, click **Forms Authentication**.
-   2. When prompted to enter the **User name** and **Password**, type the credentials specified in the previous step and then click **Sign In**.
-3. Verify the home page is displayed and the **Sign In** link has been replaced with the "Welcome" menu.
+   2. When prompted to enter the **User name** and **Password**, type the
+      credentials specified in the previous step and then click **Sign In**.
+3. Verify the home page is displayed and the **Sign In** link has been replaced
+   with the "Welcome" menu.
 
 To login to the website using Windows authentication:
 
-1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
+1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order
+   to seamlessly authenticate with the current domain credentials).
    
    > **Note**
    > 
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials"
-   > linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
-   > linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
-   > 
+   
+   linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
+   
+   
+   
+   linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
+   
    > > }}
 
-2. Browse to the home page page the Fabrikam Extranet website ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click **Sign In**.
+2. Browse to the home page page the Fabrikam Extranet website (
+   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
+   **Sign In**.
 
-3. On the **Sign In** page, in the dropdown list, click **Windows Authentication**.
+3. On the **Sign In** page, in the dropdown list, click **Windows
+   Authentication**.
 
-4. Verify the home page is displayed and the **Sign In** link has been replaced with the "Welcome" menu.
+4. Verify the home page is displayed and the **Sign In** link has been replaced
+   with the "Welcome" menu.
 
 ## Enable disk-based caching for the Web application
 
@@ -1854,11 +2114,17 @@ application.
 
 To configure BLOB cache settings:
 
-1. Click **Start**, point to **Administrative Tools**, and then click **Internet Information Services (IIS) Manager**.
+1. Click **Start**, point to **Administrative Tools**, and then click
+   **Internet Information Services (IIS) Manager**.
 
-2. In **Internet Information Services (IIS) Manager**, in the **Connections** pane, click the plus sign (+) next to the server name that contains the Web application, and then click the plus sign next to **Sites** to view the Web applications that have been created.
+2. In **Internet Information Services (IIS) Manager**, in the **Connections**
+   pane, click the plus sign (+) next to the server name that contains the Web
+   application, and then click the plus sign next to **Sites** to view the Web
+   applications that have been created.
 
-3. Right-click the name of the Web application to configure the disk-based cache for, and then click **Explore**. Windows Explorer opens, with the directories for the selected Web application listed.
+3. Right-click the name of the Web application to configure the disk-based
+   cache for, and then click **Explore**. Windows Explorer opens, with the
+   directories for the selected Web application listed.
    
    > **Important**
    > 
@@ -1874,7 +2140,9 @@ To configure BLOB cache settings:
    > **Select the program from a list**, and then click **OK**. In the **Open
    > With** dialog box, click **Notepad**, and then click **OK**.
 
-5. If the Windows dialog box appears, select **Select a program from a list of installed programs**, and then click **OK**. In the **Open With** dialog box, click **Notepad**, and then click **OK**.
+5. If the Windows dialog box appears, select **Select a program from a list of
+   installed programs**, and then click **OK**. In the **Open With** dialog
+   box, click **Notepad**, and then click **OK**.
 
 6. In the Web.config editor, find the following line:
    
@@ -1883,7 +2151,8 @@ To configure BLOB cache settings:
        enabled="false" />
    ```
 
-7. In this line, change the **location** attribute to specify a directory that has enough space to accommodate the cache size.
+7. In this line, change the **location** attribute to specify a directory that
+   has enough space to accommodate the cache size.
    
    > **Note**
    > 
@@ -1891,9 +2160,13 @@ To configure BLOB cache settings:
    > drive as where either the server operating system swap files or server log
    > files are stored.
 
-8. To add or remove file types from the list of file types to be cached, for the **path** attribute, modify the regular expression to include or remove the appropriate file extension. If you add file extensions, make sure to separate each file type with a pipe (|), as shown above.
+8. To add or remove file types from the list of file types to be cached, for
+   the **path** attribute, modify the regular expression to include or remove
+   the appropriate file extension. If you add file extensions, make sure to
+   separate each file type with a pipe (|), as shown above.
 
-9. To change the size of the cache, type a new number for **maxSize**. The size is expressed in gigabytes (GB), and 10 GB is the default.
+9. To change the size of the cache, type a new number for **maxSize**. The size
+   is expressed in gigabytes (GB), and 10 GB is the default.
    
    > **Important**
    > 
@@ -1910,15 +2183,22 @@ To configure BLOB cache settings:
 
 To add members to SharePoint groups:
 
-1. Browse to the home page of the site ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+1. Browse to the home page of the site (
+   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 2. Click the **Sign In** link and sign in using **Windows Authentication**.
-3. On the home page of the site, click **Site Actions** and then click **Site Permissions**.
-4. On the site permissions page, click the SharePoint group specified in Table 10.
-5. On the **People and Groups - {Group Name}** page, in the toolbar, click **New**, and then click **Add Users**.
+3. On the home page of the site, click **Site Actions** and then click **Site
+   Permissions**.
+4. On the site permissions page, click the SharePoint group specified in Table
+   10.
+5. On the **People and Groups - {Group Name}** page, in the toolbar, click
+   **New**, and then click **Add Users**.
 6. In the **Grant Permissions**dialog window:
-   1. In the **Select Users** section, type the group member(s) specified in Table 10. You can also click the applicable icon to check a name or browse for users and groups.
+   1. In the **Select Users** section, type the group member(s) specified in
+      Table 10. You can also click the applicable icon to check a name or
+      browse for users and groups.
    2. Click **OK**.
-7. Repeat the previous steps for the remaining SharePoint groups specified in Table 10.
+7. Repeat the previous steps for the remaining SharePoint groups specified in
+   Table 10.
 
 # Configure service applications
 
@@ -1935,9 +2215,13 @@ PowerShell.
 
 To configure the State Service:
 
-1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint 2010 Products, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint
+   2010 Products, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -1947,7 +2231,8 @@ To configure the State Service:
    & '.\Configure State Service.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 ## Create and configure the Search Service Application
 
@@ -1962,9 +2247,13 @@ Service Application is created and configured using PowerShell.
 
 To create and configure the Search Service Application:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -1974,11 +2263,14 @@ To create and configure the Search Service Application:
    & '.\Configure SharePoint Search.ps1'
    ```
 
-4. When prompted for default content access account credentials, verify the user name (EXTRANET\svc-index), type the password, and then click **OK**.
+4. When prompted for default content access account credentials, verify the
+   user name (EXTRANET\svc-index), type the password, and then click **OK**.
 
-5. If prompted for the service application credentials, verify the user name (EXTRANET\svc-spserviceapp), type the password, and then click **OK**.
+5. If prompted for the service application credentials, verify the user name
+   (EXTRANET\svc-spserviceapp), type the password, and then click **OK**.
 
-6. Wait for the script to complete and verify no errors occurred during the process.
+6. Wait for the script to complete and verify no errors occurred during the
+   process.
    
    > **Note**
    > 
@@ -1992,15 +2284,24 @@ content source.
 
 To configure the crawl schedules:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Manage service applications**.
-2. On the **Service Applications** tab, click **Search Service Application** (where the **Type** column is **Search Service Application**).
-3. On the **Search Administration** page, in the **Crawling** section, click **Content Sources**.
-4. On the **Manage Content Sources** page, click **Local SharePoint sites** to edit the content source.
-5. On the **Edit Content Source** page, in the **Crawl Schedules** section, under **Full Crawl**, click **Create schedule**.
-6. On the **Manage Schedules** page, configure the type of schedule and the schedule settings specified in Table 11, and then click **OK**.
-7. On the **Edit Content Source** page, in the **Crawl Schedules** section, under **Incremental Crawl**, click **Create schedule**.
-8. On the **Manage Schedules** page, configure the type of schedule and the schedule settings specified in Table 11, and then click **OK**.
-9. On the **Edit Content Source** page, in the **Start Full Crawl** section, click the **Start full crawl of this content source** checkbox.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Manage service applications**.
+2. On the **Service Applications** tab, click **Search Service Application**
+   (where the **Type** column is **Search Service Application**).
+3. On the **Search Administration** page, in the **Crawling** section, click
+   **Content Sources**.
+4. On the **Manage Content Sources** page, click **Local SharePoint sites** to
+   edit the content source.
+5. On the **Edit Content Source** page, in the **Crawl Schedules** section,
+   under **Full Crawl**, click **Create schedule**.
+6. On the **Manage Schedules** page, configure the type of schedule and the
+   schedule settings specified in Table 11, and then click **OK**.
+7. On the **Edit Content Source** page, in the **Crawl Schedules** section,
+   under **Incremental Crawl**, click **Create schedule**.
+8. On the **Manage Schedules** page, configure the type of schedule and the
+   schedule settings specified in Table 11, and then click **OK**.
+9. On the **Edit Content Source** page, in the **Start Full Crawl** section,
+   click the **Start full crawl of this content source** checkbox.
 10. Click **OK**.
 
 # Install and configure Office Web Apps
@@ -2015,17 +2316,24 @@ In this section, the Office Web Apps are installed from the installation source.
 
 To install Office Web Apps:
 
-1. From the Office Web Apps installation location, double-click the appropriate executable file.
+1. From the Office Web Apps installation location, double-click the appropriate
+   executable file.
 
-2. On the **Enter your Product Key** page, enter the corresponding product key, and then click **Continue**.
+2. On the **Enter your Product Key** page, enter the corresponding product key,
+   and then click **Continue**.
 
-3. Review the licensing agreement. If you accept the terms and conditions, select **I accept the terms of this agreement**, and then click **Continue**.
+3. Review the licensing agreement. If you accept the terms and conditions,
+   select **I accept the terms of this agreement**, and then click
+   **Continue**.
 
-4. On the **Choose a file location** tab, change the path for the search index files as specified in Table 3, and then click **Install Now**.
+4. On the **Choose a file location** tab, change the path for the search index
+   files as specified in Table 3, and then click **Install Now**.
 
 5. Wait for the installation to finish.
 
-6. On the **Run Configuration Wizard** page, clear the **Run the SharePoint Products and Technologies Configuration Wizard now** checkbox, and then click **Close**.
+6. On the **Run Configuration Wizard** page, clear the **Run the SharePoint
+   Products and Technologies Configuration Wizard now** checkbox, and then
+   click **Close**.
    
    > **Note**
    > 
@@ -2046,10 +2354,15 @@ server.
 
 To run PSConfig to register the services:
 
-1. Click **Start**, point to **All Programs**, click **Microsoft SharePoint 2010 Products**, and then click **SharePoint 2010 Products Configuration Wizard**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. Click **Start**, point to **All Programs**, click **Microsoft SharePoint
+   2010 Products**, and then click **SharePoint 2010 Products Configuration
+   Wizard**. If prompted by User Account Control to allow the program to make
+   changes to the computer, click **Yes**.
 2. On the **Welcome to SharePoint Products** page, click **Next**.
-3. In the dialog box that notifies you that some services may have to be started or reset during configuration, click **Yes**.
-4. On the **Completing the SharePoint Products Configuration Wizard** page, click **Next**.
+3. In the dialog box that notifies you that some services may have to be
+   started or reset during configuration, click **Yes**.
+4. On the **Completing the SharePoint Products Configuration Wizard** page,
+   click **Next**.
 5. Wait for the configuration to complete.
 6. On the **Configuration Successful** page, click **Finish**.
 7. Repeat the steps above on each SharePoint server in the farm.
@@ -2062,17 +2375,27 @@ Apps service applications.
 
 To start the service instances by using Central Administration:
 
-1. On the Central Administration home page, under **System Settings**, click **Manage services on server**.
-2. On the **Services on server** page, in the **Server** control, select a server, and then start **Excel Calculation Services**, **PowerPoint Service**, and **Word Viewing Service**. Repeat this step for each SharePoint server in the farm.
+1. On the Central Administration home page, under **System Settings**, click
+   **Manage services on server**.
+2. On the **Services on server** page, in the **Server** control, select a
+   server, and then start **Excel Calculation Services**, **PowerPoint
+   Service**, and **Word Viewing Service**. Repeat this step for each
+   SharePoint server in the farm.
 
 To create the service applications and proxies:
 
 1. On the Central Administration home page, click **Configuration Wizards**.
-2. On the **Configuration Wizards** page, click **Launch the Farm Configuration Wizard**.
-3. On the **Configure your SharePoint Farm** welcome page, click **Start the Wizard**.
+2. On the **Configuration Wizards** page, click **Launch the Farm Configuration
+   Wizard**.
+3. On the **Configure your SharePoint Farm** welcome page, click **Start the
+   Wizard**.
 4. On the **Configure your SharePoint Farm**page:
-   1. In the **Service Account** section, click **Use existing managed account**, and then select **EXTRANET\svc-spserviceapp** in the drop-down list.
-   2. In the **Services** section, clear all enabled checkboxes *except* for **Excel Services Application**, **PowerPoint Service Application**, and **Word Viewing Service**.
+   1. In the **Service Account** section, click **Use existing managed
+      account**, and then select **EXTRANET\svc-spserviceapp** in the
+      drop-down list.
+   2. In the **Services** section, clear all enabled checkboxes *except* for
+      **Excel Services Application**, **PowerPoint Service Application**, and
+      **Word Viewing Service**.
    3. Click **Next**.
 5. When prompted to create a new top-level Web site, click **Skip**.
 6. On the **Configure your SharePoint Farm** completion page, click **Finish**.
@@ -2105,15 +2428,23 @@ HTTPS.
 To configure the Excel Services Application trusted location for HTTPS instead
 of HTTP:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Manage service applications**.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Manage service applications**.
 
-2. On the **Service Applications** tab, click **Excel Services Application** (where the **Type** column is **Excel Services Application Web Service Application**).
+2. On the **Service Applications** tab, click **Excel Services Application**
+   (where the **Type** column is **Excel Services Application Web Service
+   Application**).
 
-3. On the **Manage Excel Services Application** page, click **Trusted File Locations**.
+3. On the **Manage Excel Services Application** page, click **Trusted File
+   Locations**.
 
-4. On the **Excel Services Application Trusted File Locations** page, click the default trusted file location (**http://**) to edit the corresponding settings.
+4. On the **Excel Services Application Trusted File Locations** page, click the
+   default trusted file location (**http://**) to edit the corresponding
+   settings.
 
-5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
+5. On the **Excel Services Application Edit Trusted File Location** page, in
+   the **Location** section, change the **Address** from **http://** to
+   **https://** and then click **OK**.
    
    > **Note**
    > 
@@ -2131,7 +2462,10 @@ cached content for Office Web Apps is stored in a SharePoint content database.
 To configure the Office Web Apps cache and create a separate content database
 for caching:
 
-1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint 2010 Products, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click Microsoft SharePoint
+   2010 Products, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
    
    > **Important**
    > 
@@ -2139,7 +2473,8 @@ for caching:
    > after installing Office Web Apps in order for the new PowerShell cmdlets
    > to be recognized (e.g. **Set-SPOfficeWebAppsCache**).
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -2149,7 +2484,8 @@ for caching:
    & '.\Configure Office Web Apps Cache.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
    
    > **Note**
    > 
@@ -2174,9 +2510,12 @@ To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
 2. In the **Object Explorer**, expand the **Databases** folder.
-3. Right-click the **OfficeWebAppsCache** database and then click **Properties**.
-4. In the **Database Properties** dialog, in the **Select a page** area on the left, click **Files**.
-5. Using the settings specified in Table 9, specify the new values for **Initial Size** and **Autogrowth**.
+3. Right-click the **OfficeWebAppsCache** database and then click
+   **Properties**.
+4. In the **Database Properties** dialog, in the **Select a page** area on the
+   left, click **Files**.
+5. Using the settings specified in Table 9, specify the new values for
+   **Initial Size** and **Autogrowth**.
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
@@ -2207,7 +2546,10 @@ application, it is necessary to explicitly grant access to the content database.
 
 To grant the Office Web Apps service account access to the content database:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
 2. From the Windows PowerShell command prompt, type the following commands:
    
@@ -2234,9 +2576,13 @@ created by an administrator.
 
 To add the new event source:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -2246,7 +2592,8 @@ To add the new event source:
    & '.\Add Event Log Sources.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
 
 5. Repeat the steps above on each SharePoint server in the farm.
 
@@ -2254,9 +2601,13 @@ To add the new event source:
 
 To install and activate the features:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -2278,7 +2629,8 @@ To install and activate the features:
    & '.\Activate Features.ps1'
    ```
 
-6. Wait for the feature activations to complete, and then minimize or close the PowerShell command prompt.
+6. Wait for the feature activations to complete, and then minimize or close the
+   PowerShell command prompt.
 
 At this point, the home page of the Fabrikam Extranet site should resemble the
 screenshot shown in Figure 4 (but without the **Sample Style Guide** and
@@ -2298,7 +2650,8 @@ The **Sample Style Guide** and **Reusable Content Sample** links shown in Figure
 
 To create the sample content:
 
-1. From a command prompt, change to the directory containing the "Test Console" utility.
+1. From a command prompt, change to the directory containing the "Test Console"
+   utility.
    
    > **Note**
    > 
@@ -2318,7 +2671,8 @@ To create the sample content:
    Fabrikam.Demo.Tools.TestConsole.exe
    ```
 
-3. Wait for the program to complete and verify no errors occurred during the process.
+3. Wait for the program to complete and verify no errors occurred during the
+   process.
 
 ## Create and configure a partner site
 
@@ -2329,9 +2683,13 @@ PowerShell script or through Central Administration.
 
 To create a site collection for a Fabrikam partner using the PowerShell script:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click **Yes**.
 
-2. From the Windows PowerShell command prompt, change to the following directory:
+2. From the Windows PowerShell command prompt, change to the following
+   directory:
    
    > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
 
@@ -2341,24 +2699,42 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the process.
+4. Wait for the script to complete and verify no errors occurred during the
+   process.
 
-5. Proceed to the next section (Apply the “Fabrikam Partner Site” template to the top-level site).
+5. Proceed to the next section (Apply the “Fabrikam Partner Site” template to
+   the top-level site).
 
 To create a site collection for a Fabrikam partner using Central Administration:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Create site collections**.
-2. On the **Create Site Collection** page, in the **Web Application** section, ensure the Fabrikam Extranet application is selected ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
-3. In the **Title and Description** section, in the **Title** box, type the name of the partner (e.g. “Contoso Shipping”).
-4. In the **Web Site Address** section, specify the path to use based on the name of the partner (it is recommended to replace spaces in the partner name with dashes).
-5. In the **Template Selection** section, in the **Select a template** list, click the **Custom** tab and then click **&lt; Select template later... &gt;**.
-6. In the **Primary Site Collection Administrator** section, type the name of the user who should have administrator permissions on the site collection.
-7. In the **Secondary Site Collection Administrator** section, type the name of another user who should have administrator permissions on the site collection.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Create site collections**.
+2. On the **Create Site Collection** page, in the **Web Application** section,
+   ensure the Fabrikam Extranet application is selected (
+   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+3. In the **Title and Description** section, in the **Title** box, type the
+   name of the partner (e.g. “Contoso Shipping”).
+4. In the **Web Site Address** section, specify the path to use based on the
+   name of the partner (it is recommended to replace spaces in the partner name
+   with dashes).
+5. In the **Template Selection** section, in the **Select a template** list,
+   click the **Custom** tab and then click **&lt; Select template later...
+   &gt;**.
+6. In the **Primary Site Collection Administrator** section, type the name of
+   the user who should have administrator permissions on the site collection.
+7. In the **Secondary Site Collection Administrator** section, type the name of
+   another user who should have administrator permissions on the site
+   collection.
 8. Click **OK**.
 9. Wait for the site collection to be created and then click **OK**.
-10. Browse to the new site collection (e.g. [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)). Since no template has been applied to the top-level site, the **Template Selection** page is displayed.
-11. On the **Template Selection** page, click **Site Actions**, and then click **Site Settings**.
-12. On the **Site Settings** page, in the **Site Collection Administration** section, click **Site collection features**.
+10. Browse to the new site collection (e.g.
+    [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
+    Since no template has been applied to the top-level site, the **Template
+    Selection** page is displayed.
+11. On the **Template Selection** page, click **Site Actions**, and then click
+    **Site Settings**.
+12. On the **Site Settings** page, in the **Site Collection Administration**
+    section, click **Site collection features**.
 13. On the site collection **Features**page, activate the following features:
     1. **Fabrikam Demo - Publishing Layouts**
     2. **Fabrikam Demo - Web Templates**
@@ -2367,11 +2743,16 @@ To create a site collection for a Fabrikam partner using Central Administration:
 
 To apply the custom site template to the top-level site in the site collection:
 
-1. Browse to the new site collection (e.g. [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)). Since no template has been applied to the top-level site, the **Template Selection** page is displayed.
+1. Browse to the new site collection (e.g.
+   [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
+   Since no template has been applied to the top-level site, the **Template
+   Selection** page is displayed.
 2. On the **Template Selection**page:
-   1. In the **Template Selection** section, click the **Fabrikam** tab, and then click the **Fabrikam Partner Site** template.
+   1. In the **Template Selection** section, click the **Fabrikam** tab, and
+      then click the **Fabrikam Partner Site** template.
    2. Click **OK**.
-3. On the **Set Up Groups for this Site** page, click **OK** to create the default groups.
+3. On the **Set Up Groups for this Site** page, click **OK** to create the
+   default groups.
 
 ### Update the partner site home page
 
@@ -2388,15 +2769,21 @@ Edit the site home page to:
 
 To create a team collaboration site for a partner site:
 
-1. Browse to the partner site collection (e.g. [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
-2. On the home page of the partner site, click **Site Actions**, and then click **New Site**.
+1. Browse to the partner site collection (e.g.
+   [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
+2. On the home page of the partner site, click **Site Actions**, and then click
+   **New Site**.
 3. In the dialog window for creating a new site:
-   1. In the **Filter By** section, click **Fabrikam**, and then click **Fabrikam Team Site**.
-   2. Type the title and URL name for the new site (e.g. Finance), and then click **More Options**.
+   1. In the **Filter By** section, click **Fabrikam**, and then click
+      **Fabrikam Team Site**.
+   2. Type the title and URL name for the new site (e.g. Finance), and then
+      click **More Options**.
    3. In the **Permissions** section, click **Use unique permissions**.
-   4. In the **Navigation Inheritance** section, click **Yes** to use the top link bar from the parent site.
+   4. In the **Navigation Inheritance** section, click **Yes** to use the top
+      link bar from the parent site.
    5. Click **Create**.
-   6. On the **Set Up Groups for this Site** page, in the **Visitors to this Site** section, click **Create a new group** and then click **OK**.
+   6. On the **Set Up Groups for this Site** page, in the **Visitors to this
+      Site** section, click **Create a new group** and then click **OK**.
 
 ### Update the team site home page
 

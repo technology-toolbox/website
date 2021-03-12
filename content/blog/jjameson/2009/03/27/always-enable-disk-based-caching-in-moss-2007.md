@@ -67,8 +67,10 @@ following settings:
   - TSQL
     - SQL:BatchCompleted
   - Column Filters
-    - DatabaseName Like {your content database} *(e.g. "WSS\_Content\_Fabrikam")*
-    - NTUserName Like {your app pool service account) *(e.g. "svc-fabrikam-dev")*
+    - DatabaseName Like {your content database} *(e.g.
+      "WSS\_Content\_Fabrikam")*
+    - NTUserName Like {your app pool service account) *(e.g.
+      "svc-fabrikam-dev")*
     - TextData Not Like exec sp\_reset\_connection
 
 These settings will filter out lots of "noise" -- such as requests by the
@@ -114,8 +116,18 @@ Server like this is certainly going to limit your scalability.
 
 Once you enable disk-based caching, two important things happen:
 
-1. An HTTP header (e.g. `Cache-Control: public, max-age=86400`) is added to the response for each file type specified using the `path` attribute of the `BlobCache` element. (Note that "\_layouts" items are cached differently than, for example, items in the **Style Library**). This explicit `Cache-Control` header greatly reduces the number of HTTP requests for clients that have already downloaded the various resource files (by eliminating the 304's mentioned before).
-2. For clients that haven't yet downloaded the various resources, SharePoint does not have to call the `proc_FetchDocForHttpGet` sproc to determine whether each file has been unghosted (customized). [Note that when you enable disk-based caching, a background process polls the database to check for updates -- as observed in SQL Server Profiler.]
+1. An HTTP header (e.g. `Cache-Control: public, max-age=86400`) is added to the
+   response for each file type specified using the `path` attribute of the
+   `BlobCache` element. (Note that "\_layouts" items are cached differently
+   than, for example, items in the **Style Library**). This explicit
+   `Cache-Control` header greatly reduces the number of HTTP requests for
+   clients that have already downloaded the various resource files (by
+   eliminating the 304's mentioned before).
+2. For clients that haven't yet downloaded the various resources, SharePoint
+   does not have to call the `proc_FetchDocForHttpGet` sproc to determine
+   whether each file has been unghosted (customized). [Note that when you
+   enable disk-based caching, a background process polls the database to check
+   for updates -- as observed in SQL Server Profiler.]
 
 I encourage you to repeat the SQL Server Profiler trace after setting
 `enabled="true"` in the `BlobCache` element of your Web.config files and

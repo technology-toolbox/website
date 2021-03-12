@@ -43,9 +43,14 @@ TfsConfig.exe setup /uninstall:All
 Next, remove the SharePoint content database (e.g. WSS\_Content\_TFS) containing
 the upgraded TFS project sites:
 
-1. On the SharePoint Central Administration home page, in the **Application Management** section, click **Manage content databases**.
-2. On the **Manage Content Databases** page, in the list of content databases, click the name of the content database to remove (e.g. **WSS\_Content\_TFS**).
-3. On the **Manage Content Database Settings** page, click the **Remove content database** checkbox. When prompted to confirm removing the content database, click **OK**.
+1. On the SharePoint Central Administration home page, in the **Application
+   Management** section, click **Manage content databases**.
+2. On the **Manage Content Databases** page, in the list of content databases,
+   click the name of the content database to remove (e.g.
+   **WSS\_Content\_TFS**).
+3. On the **Manage Content Database Settings** page, click the **Remove content
+   database** checkbox. When prompted to confirm removing the content database,
+   click **OK**.
 
 Delete the databases that will be restored from backup (e.g. ReportServerDB,
 ReportServerTempDB, TfsWarehouse, and WSS\_Content\_TFS) as well as the new TFS
@@ -76,7 +81,10 @@ the TFS project sites to the SharePoint Web application.
 To attach the content database in SharePoint Server 2010 by using Windows
 Powershell:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by **User Account Control** to allow the program to make changes to this computer, click **Yes**.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by **User Account Control** to
+   allow the program to make changes to this computer, click **Yes**.
 
 2. At the Windows PowerShell command prompt, type the following command:
    
@@ -88,10 +96,14 @@ Powershell:
    {{< console-block-end >}}
    Where:
    
-   - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to upgrade.
+   - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to
+     upgrade.
    - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
-   - <var>&lt;URL&gt;</var> is the URL for the Web application that will host the sites.
-   - <var>-Updateuserexperience</var> specifies to update the sites with the new SharePoint user experience (part of Visual Upgrade). If you omit this parameter, the sites retain the old user experience after upgrade.
+   - <var>&lt;URL&gt;</var> is the URL for the Web application that will host
+     the sites.
+   - <var>-Updateuserexperience</var> specifies to update the sites with the
+     new SharePoint user experience (part of Visual Upgrade). If you omit
+     this parameter, the sites retain the old user experience after upgrade.
    
    For example:
    

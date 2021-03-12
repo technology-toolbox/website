@@ -138,10 +138,10 @@ following:
 - Quickly disabling/enabling various browser features, such as caching,
   JavaScript, cookies, and CSS
 - Viewing and managing cookies
-- Resizing the browser window to view a page in standard sizes, such as 1024x768
-  or (shudder) even 800x600
-- Outlining specific HTML elements (such as all block level elements) to quickly
-  gain familiarity with the structure of a Web page
+- Resizing the browser window to view a page in standard sizes, such as
+  1024x768 or (shudder) even 800x600
+- Outlining specific HTML elements (such as all block level elements) to
+  quickly gain familiarity with the structure of a Web page
 - Validating HTML, CSS, and JavaScript
 
 A long time ago, I tried out the Internet Explorer Developer Toolbar. However,

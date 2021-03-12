@@ -35,7 +35,8 @@ While the above article includes *most* of the steps you need to perform when
 deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking a
 few important pieces (at least based upon my experience):
 
-- Configure Excel Services Application trusted location (if you are using both HTTP and HTTPS)
+- Configure Excel Services Application trusted location (if you are using both
+  HTTP and HTTPS)
 - Configure the Office Web Apps cache
 - Grant access to the Web application content database for Office Web Apps
 
@@ -95,21 +96,31 @@ HTTPS.
 
 #### To configure the Excel Services Application trusted location for HTTPS instead of HTTP:
 
-1. On the Central Administration home page, in the **Application Management** section, click **Manage service applications**.
+1. On the Central Administration home page, in the **Application Management**
+   section, click **Manage service applications**.
 
-2. On the **Service Applications** tab, click **Excel Services Application** (where the **Type** column is **Excel Services Application Web Service Application**).
+2. On the **Service Applications** tab, click **Excel Services Application**
+   (where the **Type** column is **Excel Services Application Web Service
+   Application**).
 
-3. On the **Manage Excel Services Application** page, click **Trusted File Locations**.
+3. On the **Manage Excel Services Application** page, click **Trusted File
+   Locations**.
 
-4. On the **Excel Services Application Trusted File Locations** page, click the default trusted file location (**http://**) to edit the corresponding settings.
+4. On the **Excel Services Application Trusted File Locations** page, click the
+   default trusted file location (**http://**) to edit the corresponding
+   settings.
 
-5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
+5. On the **Excel Services Application Edit Trusted File Location** page, in
+   the **Location** section, change the **Address** from **http://** to
+   **https://** and then click **OK**.
    
    > **Note**
    > 
    > Since users of the Fabrikam extranet site are automatically redirected
    > from http:// to https:// during sign in (via the
-   > [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
+   
+   [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
+   
    > it is not expected that Excel Services will be used over HTTP (only
    > HTTPS). If it is necessary to support both HTTP and HTTPS, then a separate
    > trusted file location will need to be configured.
@@ -144,7 +155,10 @@ database files.
 
 #### To configure the Office Web Apps cache and create a separate content database for caching:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click Yes.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click Yes.
 
 2. From the Windows PowerShell command prompt, run the following script:
    
@@ -210,7 +224,8 @@ database files.
    Main
    ```
 
-3. Wait for the script to complete and verify that no errors occurred during the process.
+3. Wait for the script to complete and verify that no errors occurred during
+   the process.
 
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
    
@@ -224,9 +239,11 @@ database files.
 
 2. In the **Object Explorer**, expand the **Databases** folder.
 
-3. Right-click the **OfficeWebAppsCache** database and then click **Properties**.
+3. Right-click the **OfficeWebAppsCache** database and then click
+   **Properties**.
 
-4. In the **Database Properties** dialog, in the **Select a page** area on the left, click **Files**.
+4. In the **Database Properties** dialog, in the **Select a page** area on the
+   left, click **Files**.
 
 5. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
    {{< table class="small"
@@ -270,7 +287,10 @@ databases used by the Web application.
 
 #### To grant the Office Web Apps service account access to the content databases:
 
-1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by User Account Control to allow the program to make changes to the computer, click Yes.
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+   2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
+   click **Run as administrator**. If prompted by User Account Control to allow
+   the program to make changes to the computer, click Yes.
 
 2. From the Windows PowerShell command prompt, type the following commands:
    

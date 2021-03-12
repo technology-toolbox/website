@@ -257,9 +257,12 @@ liked the way Subtext supports these distinct facets.
 
 Other blog-related topics that I plan to cover in subsequent posts include:
 
-- Why I (eventually) chose Subtext as the blog engine for the site after looking at numerous other blog solutions
-- How I migrated content from my old MSDN blog (running on the Telligent platform) to Subtext
-- Why I still prefer using Expression Web for authoring blog posts, including why I completely disabled the default HTML editor in Subtext
+- Why I (eventually) chose Subtext as the blog engine for the site after
+  looking at numerous other blog solutions
+- How I migrated content from my old MSDN blog (running on the Telligent
+  platform) to Subtext
+- Why I still prefer using Expression Web for authoring blog posts, including
+  why I completely disabled the default HTML editor in Subtext
 
 ### Logical Architecture
 

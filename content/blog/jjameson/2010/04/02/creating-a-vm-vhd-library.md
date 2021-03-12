@@ -38,21 +38,46 @@ virtualization platform -- the general approach is the same.
 
 To add a base Windows Server 2008 Standard Edition x86 VM to your library:
 
-1. Create a new virtual machine named **ws2008std-x86** with a dynamically expanding VHD. [Note that I used to set the maximum size of the primary VHD file to 16 GB (back in the days of Windows Server 2003) but now I typically set the maximum size to 20 GB. Remember that you can always expand it later as necessary, and you don't even need tools like Partition Magic anymore in order to increase the size of the partition because this "just works" in Windows Server 2008 directly from the Disk Management MMC snap-in.]
-2. Insert your DVD for Windows Server 2008 Standard Edition (x86) and install the operating system. I do not recommend adding any server roles or features at this point, because, honestly, I've just found there to be lots of issues when you SysPrep after installing more than just the base OS. Many times you can workaround these issues, but most of the time my preference is to avoid the problems altogether.
-3. After the OS is installed, run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE)** and **Shutdown** when SysPrep is done. [Note that for Windows Server 2003 you had to copy the SysPrep folder from a CAB file on the installation media (or download it from microsoft.com), but thankfully this extra step is no longer necessary in Windows Server 2008.]
-4. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_RTM.vhd**.
-5. Boot the VM, go through the Mini-Setup process and once again name the server **ws2008std-x86**.
-6. Next, install SP2 for Windows Server 2008. Then run the Windows Component Clean Tool (COMPCLN.exe) to [reclaim some disk space after installing SP2](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2) and reboot the VM.
+1. Create a new virtual machine named **ws2008std-x86** with a dynamically
+   expanding VHD. [Note that I used to set the maximum size of the primary VHD
+   file to 16 GB (back in the days of Windows Server 2003) but now I typically
+   set the maximum size to 20 GB. Remember that you can always expand it later
+   as necessary, and you don't even need tools like Partition Magic anymore in
+   order to increase the size of the partition because this "just works" in
+   Windows Server 2008 directly from the Disk Management MMC snap-in.]
+2. Insert your DVD for Windows Server 2008 Standard Edition (x86) and install
+   the operating system. I do not recommend adding any server roles or features
+   at this point, because, honestly, I've just found there to be lots of issues
+   when you SysPrep after installing more than just the base OS. Many times you
+   can workaround these issues, but most of the time my preference is to avoid
+   the problems altogether.
+3. After the OS is installed, run the SysPrep utility and specify the option to
+   **Enter System Out-of-Box Experience (OOBE)** and **Shutdown** when SysPrep
+   is done. [Note that for Windows Server 2003 you had to copy the SysPrep
+   folder from a CAB file on the installation media (or download it from
+   microsoft.com), but thankfully this extra step is no longer necessary in
+   Windows Server 2008.]
+4. After the VM shuts down, immediately make a copy of the VHD file to a new
+   file named **ws2008std-x86\_RTM.vhd**.
+5. Boot the VM, go through the Mini-Setup process and once again name the
+   server **ws2008std-x86**.
+6. Next, install SP2 for Windows Server 2008. Then run the Windows Component
+   Clean Tool (COMPCLN.exe) to
+   [reclaim some disk space after installing SP2](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2)
+   and reboot the VM.
 7. Run the SysPrep utility again and specify the same options as before.
-8. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_SP2.vhd**.
-9. Boot the VM again and go through the Mini-Setup process (once again naming the server **ws2008std-x86**).
+8. After the VM shuts down, immediately make a copy of the VHD file to a new
+   file named **ws2008std-x86\_SP2.vhd**.
+9. Boot the VM again and go through the Mini-Setup process (once again naming
+   the server **ws2008std-x86**).
 10. Run Windows Update, install all of the latest patches, and then reboot.
-11. Run the SysPrep utility one last time (specifying the same options as before).
+11. Run the SysPrep utility one last time (specifying the same options as
+    before).
 
 At this point, you have clean images for the following configurations:
 
-- Windows Server 2008 x86 RTM (note that for Windows Server 2008, SP1 was actually included in the initial release)
+- Windows Server 2008 x86 RTM (note that for Windows Server 2008, SP1 was
+  actually included in the initial release)
 - Windows Server 2008 x86 SP2
 - Windows Server 2008 x86 SP2 with all of the latest patches
 
@@ -85,11 +110,17 @@ released. Here is what I will do in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
 my home lab) at that point:
 
-1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86\_RTM.vhd** (thereby "purging" the baseline VM image of all of the patches and updates).
-2. Boot the VM, go through the Mini-Setup process and name the server **ws2008std-x86**.
-3. Install SP3 for Windows Server 2008 and, presumably, run the Windows Component Clean Tool (COMPCLN.exe) to reclaim some disk space, and reboot the VM.
-4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box Experience (OOBE)** and **Shutdown** when SysPrep is done.
-5. After the VM shuts down, immediately make a copy of the VHD file to a new file named **ws2008std-x86\_SP3.vhd**.
+1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86\_RTM.vhd**
+   (thereby "purging" the baseline VM image of all of the patches and updates).
+2. Boot the VM, go through the Mini-Setup process and name the server
+   **ws2008std-x86**.
+3. Install SP3 for Windows Server 2008 and, presumably, run the Windows
+   Component Clean Tool (COMPCLN.exe) to reclaim some disk space, and reboot
+   the VM.
+4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box
+   Experience (OOBE)** and **Shutdown** when SysPrep is done.
+5. After the VM shuts down, immediately make a copy of the VHD file to a new
+   file named **ws2008std-x86\_SP3.vhd**.
 
 I should point out that your **ws2008std-x86** image isn't going to do you much
 good if you need to install SharePoint Server 2010 (because it is 64-bit only).

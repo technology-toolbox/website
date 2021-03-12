@@ -39,7 +39,8 @@ from other I/O -- specifically, the paging file).
 For example, suppose you have the following disk configuration on your SQL
 Server cluster:
 
-- C: (Local Disk) - RAID 1 array for operating system files, program files, and paging file
+- C: (Local Disk) - RAID 1 array for operating system files, program files,
+  and paging file
 - D: (DATA01) - RAID 1+0 array for data files
 - L: (LOG01) - RAID 1+0 array for log files
 - Q: (Quorum)
@@ -57,8 +58,10 @@ to configure the default database locations similar to the following:
 - Server Properties
   - Database Settings
     - Default database locations
-      - Data: D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
-      - Log: L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
+      - Data: D:\NotBackedUp\Microsoft SQL
+        Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
+      - Log: L:\NotBackedUp\Microsoft SQL
+        Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
 
 You certainly don't have to use the
 [NotBackedUp](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder if you

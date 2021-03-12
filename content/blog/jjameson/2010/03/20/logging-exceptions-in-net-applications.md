@@ -88,8 +88,10 @@ namespace Fabrikam.Demo.Web.UI.Logging
 
 A couple of interesting notes about the ASP.NET error page:
 
-- The error message displayed at the top of the page is actually from the innermost exception (i.e. the "base" exception).
-- The stack trace shows the details for the actual exception that occurred as well as any inner exceptions.
+- The error message displayed at the top of the page is actually from the
+  innermost exception (i.e. the "base" exception).
+- The stack trace shows the details for the actual exception that occurred as
+  well as any inner exceptions.
 
 This makes perfect sense when you think about it because when you start
 investigating an error, it's best to begin with the crux of the problem. In
