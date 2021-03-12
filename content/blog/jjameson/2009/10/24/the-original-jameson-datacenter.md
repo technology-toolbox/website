@@ -46,7 +46,8 @@ often trigger distant memories with amazing clarity.
 For those of you that may not have seen the original Google server farm, I did a
 quick search this morning and managed to find the following:
 
-{{< reference title="Google Stanford Hardware" linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
+{{< reference title="Google Stanford Hardware"
+linkHref="http://geektechnique.org/media/google/googlehardware.html" >}}
 
 If you haven't seen this, take a quick peek. It will surely bring a smile -- if
 not a burst of laughter.
@@ -61,7 +62,10 @@ may come next on the Random Musings of Jeremy Jameson.
 Here's the physical architecture of what I now refer to as the "Old Jameson
 Datacenter":
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-600x460.png" alt="Old Jameson Datacenter - Physical Architecture" height="460" width="600" title="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-600x460.png"
+alt="Old Jameson Datacenter - Physical Architecture" height="460" width="600"
+title="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-987x757.png)
 
@@ -80,7 +84,10 @@ using these servers for.
 Notice that I use to run a back-to-back firewall configuration with a perimeter
 network (a.k.a. DMZ):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-600x471.png" alt="Old Jameson Datacenter - TCP/IP Configuration" height="471" width="600" title="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-600x471.png"
+alt="Old Jameson Datacenter - TCP/IP Configuration" height="471" width="600"
+title="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-960x754.png)
 
@@ -97,7 +104,10 @@ ever bother to read this and seriously start to question her father's sanity.]
 
 Anyway, here's the DNS and DHCP configuration for the original farm:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-600x186.png" alt="Old Jameson Datacenter - DNS/DHCP Configuration" height="186" width="600" title="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-600x186.png"
+alt="Old Jameson Datacenter - DNS/DHCP Configuration" height="186" width="600"
+title="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-794x246.png)
 
@@ -106,7 +116,10 @@ There's nothing really too interesting about that, I suppose.
 Perhaps the most laughable aspect of the Old Jameson Datacenter -- at least when
 compared to today -- was the storage infrastructure:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-600x475.png" alt="Old Jameson Datacenter - Disk Configuration" height="475" width="600" title="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-600x475.png"
+alt="Old Jameson Datacenter - Disk Configuration" height="475" width="600"
+title="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-697x552.png)
 

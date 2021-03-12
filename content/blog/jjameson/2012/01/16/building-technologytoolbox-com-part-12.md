@@ -14,7 +14,10 @@ I briefly mentioned how I use a CSS sprite and jQuery to render the expandable
 list under the **Archives** section on the various blog pages of the Technology
 Toolbox site.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png" alt="Blog home page" class="screenshot" height="600" width="374" title="Figure 1: Blog home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+alt="Blog home page" class="screenshot" height="600" width="374"
+title="Figure 1: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
@@ -79,7 +82,10 @@ If you've been following along in this series, then you know that by this point
 in the development timeline I had already created an ADO.NET Entity Data Model
 for accessing data from Subtext.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png" alt="Entity Data Model" class="screenshot" height="400" width="431" title="Figure 2: Entity Data Model" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
+alt="Entity Data Model" class="screenshot" height="400" width="431"
+title="Figure 2: Entity Data Model" >}}
 
 Consequently I spent a few minutes translating the SQL query in my head for
 grouping posts by year/month into the equivalent LINQ query against the data
@@ -119,7 +125,10 @@ group by month and count the number of rows for each month).
 > makes it much quicker to iteratively build LINQ queries like the one shown
 > above.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png" alt="LINQPad" class="screenshot" height="600" width="564" title="Figure 3: LINQPad" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
+alt="LINQPad" class="screenshot" height="600" width="564"
+title="Figure 3: LINQPad" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-821x873.png)
 
@@ -287,7 +296,8 @@ and allow users to expand them as desired.
 I did a quick Internet search for some existing jQuery that I could use instead
 of writing my own and I quickly discovered the following:
 
-{{< reference title="Simple jQuery Expand/Collapse Unordered Lists" linkHref="http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists" >}}
+{{< reference title="Simple jQuery Expand/Collapse Unordered Lists"
+linkHref="http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists" >}}
 
 Consequently, I downloaded the plugin and added it to my static HTML prototype
 in order try it out and verify everything worked as expected.
@@ -377,7 +387,10 @@ Note that I toggle a couple of CSS classes (specifically, `expanded` and
 `expandable`) on the list item that was clicked and use a corresponding CSS
 sprite to show the "plus" or "minus" icon next to the list item.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png" alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400" title="Figure 4: list-item-sprite-1.0.png" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
+alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
+title="Figure 4: list-item-sprite-1.0.png" >}}
 
 As I noted in my previous post, if separate image files are used for the "plus"
 and "minus" icons, users experience a subtle flashing effect the first time they

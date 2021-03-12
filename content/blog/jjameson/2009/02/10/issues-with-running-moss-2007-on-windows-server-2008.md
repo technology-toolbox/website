@@ -30,7 +30,12 @@ experts out there.
 
 What's wrong with this picture?
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-600x436.jpg" alt="MOSS 2007 Central Administration - Operations on Windows Server 2008" class="screenshot" height="436" width="600" title="Figure 1: MOSS 2007 Central Administration - Operations on Windows Server 2008" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-600x436.jpg"
+alt="MOSS 2007 Central Administration - Operations on Windows Server 2008"
+class="screenshot" height="436" width="600"
+title="Figure 1: MOSS 2007 Central Administration - Operations on Windows Server
+2008" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28non-Admin%29-1024x744.jpg)
 
@@ -50,7 +55,13 @@ See it now?
 No? Okay, how about if I make this really easy by zooming in on the area where
 you should be focusing your attention.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-closeup-414x225.jpg" alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)" class="screenshot" height="225" width="414" title="Figure 2: MOSS 2007 Central Administration - Operations on Windows Server 2008 (close-up of Topology and Services section)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(non-Admin)-closeup-414x225.jpg"
+alt="MOSS 2007 Central Administration - Operations on Windows Server 2008
+(close-up of Topology and Services section)"
+class="screenshot" height="225" width="414"
+title="Figure 2: MOSS 2007 Central Administration - Operations on Windows Server
+2008 (close-up of Topology and Services section)" >}}
 
 See anything missing?
 
@@ -71,7 +82,13 @@ click **All Programs**, and then right-click *that* **Internet Explorer**).
 You will then find all of the expected links under the **Topology and Services**
 section.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(Admin)-600x463.jpg" alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)" class="screenshot" height="463" width="600" title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations(Admin)-600x463.jpg"
+alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE
+running as administrator)"
+class="screenshot" height="463" width="600"
+title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server
+2008 (IE running as administrator)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28Admin%29-1027x792.jpg)
 

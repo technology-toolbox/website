@@ -27,7 +27,9 @@ tags: ["My System", "TFS"]
 >
 > {{< reference title="Bypassing a Gated Check-in in TFS 2010"
 > linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010"
-> linkText="http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx" >}}
+> linkText="http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx"
+>
+> > }}
 
 Earlier this year, I wrote a
 [post](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build)
@@ -122,7 +124,10 @@ solution, refer to the attachment to this post.]
 First, it is important to have a high-level understanding of the default
 workflow used in TFS 2010.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-DefaultTemplate-Overview-232x431.png" alt="DefaultTemplate.xaml - Overview" height="431" width="232" title="Figure 1: DefaultTemplate.xaml - Overview" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-DefaultTemplate-Overview-232x431.png"
+alt="DefaultTemplate.xaml - Overview" height="431" width="232"
+title="Figure 1: DefaultTemplate.xaml - Overview" >}}
 
 This "collapsed" view of the workflow illustrates the following high-level steps
 of the build process:
@@ -137,7 +142,10 @@ is the separation of the "Update Drop Location" activities from the "Run On
 Agent" activities. Let's take a quick look at the details of "Update Drop
 Location":
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Update-Drop-Location-254x464.png" alt="DefaultTemplate.xaml - Update Drop Location" height="464" width="254" title="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Update-Drop-Location-254x464.png"
+alt="DefaultTemplate.xaml - Update Drop Location" height="464" width="254"
+title="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
 
 As you can see, the portion of the workflow that updates the build number does
 not run on the build agent. In other words, it happens before the "Run On Agent"
@@ -182,14 +190,20 @@ The next step is to move a couple of the existing workflow activities out of the
 **Update Drop Location** sequence into a new sequence named **Update Build
 Number**, as shown below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-225x600.png" alt="CustomTemplate.xaml - Step 1" height="600" width="225" title="Figure 3: CustomTemplate.xaml - Step 1" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-225x600.png"
+alt="CustomTemplate.xaml - Step 1" height="600" width="225"
+title="Figure 3: CustomTemplate.xaml - Step 1" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-279x744.png)
 
 Next, move **Update Build Number** and **Update Drop Location** inside the **Run
 On Agent** scope, as shown below:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-166x600.png" alt="CustomTemplate.xaml - Step 2" height="600" width="166" title="Figure 4: CustomTemplate.xaml - Step 2" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-166x600.png"
+alt="CustomTemplate.xaml - Step 2" height="600" width="166"
+title="Figure 4: CustomTemplate.xaml - Step 2" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-255x921.png)
 
@@ -411,7 +425,11 @@ purpose of this second SyncWorkspace activity, I recommend changing the
 At this point, CustomTemplate.xaml should look like the following (in order to
 conserve space, only the **Update Build Number** portion is shown):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-3-292x586.png" alt="CustomTemplate.xaml (Update Build Number) - Step 3" height="586" width="292" title="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-3-292x586.png"
+alt="CustomTemplate.xaml (Update Build Number) - Step 3" height="586"
+width="292"
+title="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}
 
 That's it -- we're done!
 
@@ -477,7 +495,8 @@ In case you are wondering how I configure build definitions, here are the
 settings for the "daily build" as an example. If a setting is not listed in the
 following table, it means the default is used.
 
-{{< table class="small" caption="Build Definition: \"Automated Build - Main\"" >}}
+{{< table class="small"
+caption="Build Definition: \"Automated Build - Main\"" >}}
 
 | <br>                    Section<br>                 | <br>                    Property<br>                 | <br>                    Value<br>                 |
 | --- | --- | --- |

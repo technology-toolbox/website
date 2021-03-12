@@ -80,7 +80,8 @@ encountered errors similar to the following:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Access denied. Unable to establish communication between 'ROGUE' and 'WOLVERINE'.
+Access denied. Unable to establish communication between 'ROGUE' and
+'WOLVERINE'.
 
 {{< /blockquote >}}
 

@@ -142,5 +142,7 @@ your SharePoint site has warmed up again!
 >
 > {{< reference title="Sample Walkthrough of the DR.DADA Approach to SharePoint"
 > linkHref="/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint"
-> linkText="http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx" >}}
+> linkText="http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx"
+>
+> > }}
 

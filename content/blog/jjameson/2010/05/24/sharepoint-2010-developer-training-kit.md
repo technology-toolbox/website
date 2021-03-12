@@ -28,7 +28,12 @@ Here's the overview from the
 
 {{< blockquote "font-italic" >}}
 
-The SharePoint 2010 Developer Training Kit provides developers with deep guidance on how to develop for SharePoint 2010. Through PowerPoint decks, Hands-On Labs, Source Code, and Instructor-Led Videos, the developer kit walks you through an array of important developer topics--including Developer Roadmap, Visual Studio tooling, Workflow, Business Connectivity Services, and much, much more.
+The SharePoint 2010 Developer Training Kit provides developers with deep
+guidance on how to develop for SharePoint 2010. Through PowerPoint decks,
+Hands-On Labs, Source Code, and Instructor-Led Videos, the developer kit walks
+you through an array of important developer topics--including Developer Roadmap,
+Visual Studio tooling, Workflow, Business Connectivity Services, and much, much
+more.
 
 {{< /blockquote >}}
 

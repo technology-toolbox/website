@@ -60,7 +60,8 @@ TFS Branching Guide that was put together by the ALM Rangers. If you haven't
 seen the latest version (for TFS 2010), I definitely recommend taking a look at
 it:
 
-{{< reference title="Visual Studio TFS Branching Guide 2010" linkHref="http://tfsbranchingguideiii.codeplex.com/" >}}
+{{< reference title="Visual Studio TFS Branching Guide 2010"
+linkHref="http://tfsbranchingguideiii.codeplex.com/" >}}
 
 Note that for "Sprint-10" we are actually deploying "v2.0" of the portal (a
 "major" upgrade to support regional deployments in other countries, i.e.

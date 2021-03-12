@@ -168,7 +168,8 @@ find the response to be an HTTP 302 (redirect) with the following header:
 
 {{< blockquote "font-italic" >}}
 
-Location: http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
+Location:
+http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
 
 {{< /blockquote >}}
 

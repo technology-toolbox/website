@@ -251,7 +251,10 @@ DeveloperTests project:
 
 {{< blockquote "font-italic text-danger" >}}
 
-error : CA1804 : Microsoft.Performance : 'StringHelperTest.TruncateInvalidParameter001()' declares a variable, 'actual', of type 'string', which is never used or is only assigned to. Use this variable or remove it.
+error : CA1804 : Microsoft.Performance :
+'StringHelperTest.TruncateInvalidParameter001()' declares a variable, 'actual',
+of type 'string', which is never used or is only assigned to. Use this variable
+or remove it.
 
 {{< /blockquote >}}
 

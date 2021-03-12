@@ -28,7 +28,10 @@ quite a bit of information from a typed DataSet.
 
 Here is the example typed DataSet I introduced in the previous post.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png" alt="Typed DataSet example (ScorecardData)" height="330" width="600" title="Figure 1: Typed DataSet example (ScorecardData)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
+alt="Typed DataSet example (ScorecardData)" height="330" width="600"
+title="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 

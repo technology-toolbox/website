@@ -41,7 +41,10 @@ Then I looked more closely at the error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-The type 'System.Web.Security.MembershipProvider' is defined in an assembly that is not referenced. You must add a reference to assembly 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.
+The type 'System.Web.Security.MembershipProvider' is defined in an assembly that
+is not referenced. You must add a reference to assembly
+'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral,
+PublicKeyToken=31bf3856ad364e35'.
 
 {{< /blockquote >}}
 
@@ -57,7 +60,8 @@ Unfortunately, that's when I got the following warning:
 
 {{< blockquote "font-italic" >}}
 
-Attempted re-targeting of the project has been canceled. You cannot change the specified .NET framework version or profile for a test project.
+Attempted re-targeting of the project has been canceled. You cannot change the
+specified .NET framework version or profile for a test project.
 
 {{< /blockquote >}}
 

@@ -43,7 +43,9 @@ Installation Failure: Windows failed to install the following update with error
 
 A quick search for 0x80070643 led to the following KB article:
 
-{{< reference title="You receive error code 0x80070643 or error code 0x643 when you use the Windows Update or Microsoft Update Web sites to install updates" linkHref="http://support.microsoft.com/kb/958052" >}}
+{{< reference
+title="You receive error code 0x80070643 or error code 0x643 when you use the Windows Update or Microsoft Update Web sites to install updates"
+linkHref="http://support.microsoft.com/kb/958052" >}}
 
 Unfortunately, this error code indicates "generic errors that basically state
 that an error was encountered by Windows Installer." Rather than immediately
@@ -74,11 +76,13 @@ install Windows Server 2008 SP2!
 
 Then I came across the following:
 
-{{< reference title="Windows Server 2008 SP2 Deployment Guide" linkHref="http://technet.microsoft.com/en-us/library/dd351467(WS.10).aspx" >}}
+{{< reference title="Windows Server 2008 SP2 Deployment Guide"
+linkHref="http://technet.microsoft.com/en-us/library/dd351467(WS.10).aspx" >}}
 
 Here are the disk space requirements according to the deployment guide:
 
-{{< table class="small" caption="Disk Space Requirements for Windows Server 2008 SP2" >}}
+{{< table class="small"
+caption="Disk Space Requirements for Windows Server 2008 SP2" >}}
 
 | Installation method | Approximate disk space requirements |
 | --- | --- |

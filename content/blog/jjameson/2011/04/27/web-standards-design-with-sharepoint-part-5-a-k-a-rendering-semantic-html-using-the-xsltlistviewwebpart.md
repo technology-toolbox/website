@@ -38,7 +38,10 @@ SharePoint list.
 In case you aren't yet familiar with the Tugboat sample site, the following
 screenshot shows the site home page.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png" alt="Tugboat - Home page" class="screenshot" height="600" width="296" title="Figure 1: Tugboat - Home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
+alt="Tugboat - Home page" class="screenshot" height="600" width="296"
+title="Figure 1: Tugboat - Home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
@@ -134,7 +137,10 @@ Assuming you are proficient in SharePoint, within a matter of a few minutes you
 should be able to create the list and populate the sample data shown in the
 following screenshot.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png" alt="Specials list" class="screenshot" height="474" width="600" title="Figure 2: Specials list" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
+alt="Specials list" class="screenshot" height="474" width="600"
+title="Figure 2: Specials list" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
@@ -370,9 +376,12 @@ At this point, our HTML is very close to what we want it to be:
 
 ## This Week's Specials
 
-1. ![](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew** *$9.98 / lb.*
-2. ![](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold** *$12.50 / lb.*
-3. ![](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf** *$7.49 / lb.*
+1. ![](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
+   *$9.98 / lb.*
+2. ![](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
+   *$12.50 / lb.*
+3. ![](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf** *$7.49
+   / lb.*
 
 Obviously the image URLs are invalid (outside the context of the SharePoint site
 -- due to server-relative URLs), but that's okay...the images should appear as

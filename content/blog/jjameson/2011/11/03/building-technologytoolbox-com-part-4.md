@@ -481,7 +481,10 @@ not intended to be an eye chart. Normally, I would trim images like this before
 including them in a post, but in this case I wanted to be sure you could see the
 page in its entirety (by clicking the **See full-sized image** link below.)]
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-110x600.png" alt="Style Guide for TechnologyToolbox.com" class="screenshot" height="600" width="110" title="Figure 1: Style Guide for TechnologyToolbox.com" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-110x600.png"
+alt="Style Guide for TechnologyToolbox.com" class="screenshot" height="600"
+width="110" title="Figure 1: Style Guide for TechnologyToolbox.com" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-989x5388.png)
 
@@ -500,7 +503,10 @@ Now I simply create a bunch of "color swatches" in the Style Guide that show the
 various colors and provide descriptions for where the colors are used, as shown
 below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-518x600.png" alt="Technology Toolbox color palette" class="screenshot" height="600" width="518" title="Figure 2: Technology Toolbox color palette" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-518x600.png"
+alt="Technology Toolbox color palette" class="screenshot" height="600"
+width="518" title="Figure 2: Technology Toolbox color palette" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-556x644.png)
 

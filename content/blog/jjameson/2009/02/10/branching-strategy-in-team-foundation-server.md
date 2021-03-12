@@ -56,7 +56,10 @@ In the interest of not reinventing the wheel, allow me to pilfer one of the
 images from the
 [updated TFS Branching Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-600x260.png" alt="Basic branch plan" height="260" width="600" title="Figure 1: Basic branch plan" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-600x260.png"
+alt="Basic branch plan" height="260" width="600"
+title="Figure 1: Basic branch plan" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-820x356.png)
 
@@ -76,7 +79,10 @@ response to my question, Mario termed this "reactive branching" -- which seems
 like a very good way to describe it. To help visualize the difference, I mocked
 up the following figure.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-600x260.png" alt="\"Reactive\" branch plan" height="260" width="600" title="Figure 2: \"Reactive\" branch plan" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-600x260.png"
+alt="\"Reactive\" branch plan" height="260" width="600"
+title="Figure 2: \"Reactive\" branch plan" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-820x356.png)
 

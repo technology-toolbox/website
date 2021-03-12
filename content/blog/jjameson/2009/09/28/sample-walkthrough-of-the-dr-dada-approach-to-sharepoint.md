@@ -28,7 +28,9 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 >
 > {{< reference title="Building SharePoint WSPs with Team Foundation Build"
 > linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build"
-> linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
+> linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx"
+>
+> > }}
 
 In a previous post, I introduced
 [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development).
@@ -107,7 +109,11 @@ or my later post on
 then you know my first step is to build out a "shell" that looks like the
 following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png" alt="Visual Studio solution before adding SharePoint features" class="screenshot" height="178" width="355" title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png"
+alt="Visual Studio solution before adding SharePoint features"
+class="screenshot" height="178" width="355"
+title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
 
 Next, I create a new Visual Studio solution folder called **Publishing** and
 then add a new **Class Library** project named **Publishing.csproj** (in
@@ -156,7 +162,13 @@ scripts to deploy the solution -- into the **DeploymentFiles** folder.
 
 After that's all done, the Visual Studio solution looks like the following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png" alt="Visual Studio solution after adding SharePoint features and deployment files" class="screenshot" height="600" width="183" title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
+alt="Visual Studio solution after adding SharePoint features and deployment
+files"
+class="screenshot" height="600" width="183"
+title="Figure 2: Visual Studio solution after adding SharePoint features and
+deployment files" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 
@@ -858,7 +870,10 @@ then scrolling to the command I want -- to be a little more convenient. Unlike
 using the "up arrow" to repeat a command, selecting one after using F7 won't
 re-add it to the command history.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png" alt="Command history" class="screenshot" height="205" width="600" title="Figure 3: Command history" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png"
+alt="Command history" class="screenshot" height="205" width="600"
+title="Figure 3: Command history" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
 

@@ -26,7 +26,11 @@ is a blurb from
 
 {{< blockquote "font-italic" >}}
 
-Disk-based caching is one way in which you can achieve faster processing of content stored in a Web application database. If your Web application contains large files such as images and multimedia files, enabling disk-based caching improves page delivery time because the cache stores files on the front-end Web server, thus reducing database traffic.
+Disk-based caching is one way in which you can achieve faster processing of
+content stored in a Web application database. If your Web application contains
+large files such as images and multimedia files, enabling disk-based caching
+improves page delivery time because the cache stores files on the front-end Web
+server, thus reducing database traffic.
 
 {{< /blockquote >}}
 

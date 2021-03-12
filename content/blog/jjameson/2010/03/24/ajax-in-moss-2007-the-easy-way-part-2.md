@@ -28,7 +28,10 @@ Office SharePoint Server (MOSS) 2007.
 
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png" alt="AJAX in SharePoint" class="screenshot" height="417" width="600" title="Figure 1: AJAX in SharePoint" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
+alt="AJAX in SharePoint" class="screenshot" height="417" width="600"
+title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
@@ -122,7 +125,9 @@ tweaking the Web.config file to set `<SafeMode CallStack="true" ...>` and
 
 {{< blockquote "font-italic text-danger" >}}
 
-System.InvalidOperationException: The control with ID 'updatePanel' requires a ScriptManager on the page. The ScriptManager must appear before any controls that need it.
+System.InvalidOperationException: The control with ID 'updatePanel' requires a
+ScriptManager on the page. The ScriptManager must appear before any controls
+that need it.
 
 {{< /blockquote >}}
 

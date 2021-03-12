@@ -48,7 +48,8 @@ error in the event log:
 
 {{< blockquote "font-italic text-danger" >}}
 
-The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be used for communication because it is in the Faulted state.
+The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be
+used for communication because it is in the Faulted state.
 
 {{< /blockquote >}}
 
@@ -64,13 +65,15 @@ There are a number of blog posts that describe the issue as well as various
 hacks around the problem. However, the following MSDN article is the one that
 really captured my attention:
 
-{{< reference title="Avoiding Problems with the Using Statement" linkHref="http://msdn.microsoft.com/en-us/library/aa355056.aspx" >}}
+{{< reference title="Avoiding Problems with the Using Statement"
+linkHref="http://msdn.microsoft.com/en-us/library/aa355056.aspx" >}}
 
 Here's the first sentence from that article:
 
 {{< blockquote "font-italic" >}}
 
-This sample demonstrates how you should not use the C# "using" statement to automatically clean up resources when using a typed client.
+This sample demonstrates how you should not use the C# "using" statement to
+automatically clean up resources when using a typed client.
 
 {{< /blockquote >}}
 

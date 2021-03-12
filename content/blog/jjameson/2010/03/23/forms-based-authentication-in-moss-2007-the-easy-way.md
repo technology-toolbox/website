@@ -147,7 +147,10 @@ the deployment scripts default to Release builds, Doug needs to set the
 > figure. That way, the variables would only need to be set once per
 > environment.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png" alt="Setting environment variables" height="436" width="394" title="Figure 1: Setting environment variables" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png"
+alt="Setting environment variables" height="436" width="394"
+title="Figure 1: Setting environment variables" >}}
 
 ### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable
 

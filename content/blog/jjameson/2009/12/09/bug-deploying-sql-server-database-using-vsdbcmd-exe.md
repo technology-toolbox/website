@@ -23,7 +23,9 @@ Yesterday we encountered a bug while trying to deploy a new SQL Server database
 from a Visual Studio database project using the VSDBCMD.EXE utility, following
 the prescriptive guidance on MSDN:
 
-{{< reference title="How to: Prepare a Database for Deployment From a Command Prompt by Using VSDBCMD" linkHref="http://msdn.microsoft.com/en-us/library/dd193258.aspx" >}}
+{{< reference
+title="How to: Prepare a Database for Deployment From a Command Prompt by Using VSDBCMD"
+linkHref="http://msdn.microsoft.com/en-us/library/dd193258.aspx" >}}
 
 According to this MSDN article, all you need to do is copy some files to the
 server running Microsoft SQL Server, and then run the VSDBCMD.EXE utility
@@ -65,5 +67,7 @@ explanation for why you more than likely already have
 Microsoft.SqlServer.BatchParser.dll installed on your SQL Server -- in the
 following blog post:
 
-{{< reference title="Deploying your Database Project without VSTSDB installed. 2009-02-21" linkHref="http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx" >}}
+{{< reference
+title="Deploying your Database Project without VSTSDB installed. 2009-02-21"
+linkHref="http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx" >}}
 

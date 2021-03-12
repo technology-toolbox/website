@@ -56,7 +56,11 @@ quicker and easier to try installing it using the
 
 Shortly after starting the setup, I observed the following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-.NET-Framework-4-Setup-Requirements-503x470.png" alt="Microsoft .NET Framework 4 Setup - disk space requirements" class="screenshot" height="470" width="503" title="Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-.NET-Framework-4-Setup-Requirements-503x470.png"
+alt="Microsoft .NET Framework 4 Setup - disk space requirements"
+class="screenshot" height="470" width="503"
+title="Figure 1: Microsoft .NET Framework 4 Setup - disk space requirements" >}}
 
 Of course, had I actually read the **System Requirements** section of the
 [.NET Framework Download page](http://www.microsoft.com/net/Download.aspx)

@@ -36,7 +36,8 @@ Also note the following KB article is effectively worthless these days even
 though it includes a section for "Internet Explorer 4.x or Later (All
 Platforms)":
 
-{{< reference title="How to Remove an ActiveX Control in Windows" linkHref="http://support.microsoft.com/kb/154850" >}}
+{{< reference title="How to Remove an ActiveX Control in Windows"
+linkHref="http://support.microsoft.com/kb/154850" >}}
 
 [On a side note, I strongly recommend you think twice before using the phrase
 "or later" when referring to software. Think about it...it is highly unlikely

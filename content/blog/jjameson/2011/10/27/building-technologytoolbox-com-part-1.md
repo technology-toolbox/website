@@ -152,7 +152,8 @@ feeling a little queasy.
 The first is what appears to be a rather obvious bug that is described in a
 question posted on Stack Overflow:
 
-{{< reference title="How can I set the permissions for blogs in Orchard CMS?" linkHref="http://stackoverflow.com/questions/6941720/how-can-i-set-the-permissions-for-blogs-in-orchard-cms" >}}
+{{< reference title="How can I set the permissions for blogs in Orchard CMS?"
+linkHref="http://stackoverflow.com/questions/6941720/how-can-i-set-the-permissions-for-blogs-in-orchard-cms" >}}
 
 The second issue is related to the fundamental architecture of Orchard. When I
 used SQL Server Profiler to inspect the database calls for one of my sample blog
@@ -198,11 +199,13 @@ the site are served from a different ASP.NET application.
 In this configuration, I encountered an error similar to the one described in
 the following issue:
 
-{{< reference title="Error after installing blog" linkHref="http://blog4umbraco.codeplex.com/workitem/6895" >}}
+{{< reference title="Error after installing blog"
+linkHref="http://blog4umbraco.codeplex.com/workitem/6895" >}}
 
 Fortunately, a little digging around led to the corresponding fix:
 
-{{< reference title="xslt assumes Blog is in root" linkHref="http://blog4umbraco.codeplex.com/workitem/6783" >}}
+{{< reference title="xslt assumes Blog is in root"
+linkHref="http://blog4umbraco.codeplex.com/workitem/6783" >}}
 
 However, the more I looked at Umbraco, the more I felt like it was too complex
 for what I was looking for. The more I dug into Umbraco, the more I thought

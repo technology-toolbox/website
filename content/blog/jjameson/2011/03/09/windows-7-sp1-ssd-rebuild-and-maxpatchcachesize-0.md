@@ -57,7 +57,13 @@ still consumes about 2 GB of space (which certainly seems like a waste, in my
 opinion, but oh well). However, at least I can take some satisfaction in knowing
 that it could be much worse (i.e. by not constraining the patch cache).
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-600x507.png" alt="Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)" class="screenshot" height="507" width="600" title="Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-600x507.png"
+alt="Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)"
+class="screenshot" height="507" width="600"
+title="Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)"
+
+> }}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-927x784.png)
 

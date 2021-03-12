@@ -44,7 +44,8 @@ I encountered the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-This solution contains no resources scoped for a Web application and cannot be deployed to a particular Web application.
+This solution contains no resources scoped for a Web application and cannot be
+deployed to a particular Web application.
 
 {{< /blockquote >}}
 
@@ -65,7 +66,8 @@ Workflows feature:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Elements of type 'Workflow' are not supported at the 'WebApplication' scope. This feature could not be installed.
+Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
+This feature could not be installed.
 
 {{< /blockquote >}}
 
@@ -78,7 +80,8 @@ to deploy 7 of our 9 features. The remaining two produced the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-This solution contains resources scoped for a Web application and must be deployed to one or more Web applications.
+This solution contains resources scoped for a Web application and must be
+deployed to one or more Web applications.
 
 {{< /blockquote >}}
 

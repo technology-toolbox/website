@@ -86,7 +86,8 @@ to minimize the number of WSPs that need to be deployed (specifically four).
 
 To summarize:
 
-{{< table class="small" caption="Comparison of Visual Studio Solution Build Times" >}}
+{{< table class="small"
+caption="Comparison of Visual Studio Solution Build Times" >}}
 
 | Visual Studio Solution | Number of Projects | Lines of Code | Number of WSPs | Incremental Build Time |
 | --- | --- | --- | --- | --- |

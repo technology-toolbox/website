@@ -44,7 +44,9 @@ connecting, I was greeted with the following error:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT. This can happen if the remote computer does not support VDS, or if a connection cannot be established because it was blocked by Windows Firewall.
+Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
+This can happen if the remote computer does not support VDS, or if a connection
+cannot be established because it was blocked by Windows Firewall.
 
 {{< /blockquote >}}
 
@@ -82,7 +84,8 @@ completed with the expected results:
 {{< console-block-start >}}
 
 C:\&gt;{{< kbd
-"netsh advfirewall firewall set rule group=\"Remote Volume Management\" new enable=yes" >}}
+"netsh advfirewall firewall set rule group=\"Remote Volume Management\" new
+enable=yes" >}}
 
 {{< sample-block >}}
 

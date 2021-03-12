@@ -75,7 +75,10 @@ robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
 
 Factor #3 is simply a matter of creating two shortcuts on my taskbar:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg" alt="Taskbar Shortcuts" height="96" width="301" title="Figure 1 - Taskbar Shortcuts" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
+alt="Taskbar Shortcuts" height="96" width="301"
+title="Figure 1 - Taskbar Shortcuts" >}}
 
 Factor #4 (rebuilding my laptop) certainly isn't a quick ordeal (it typically
 takes about 4 hours, by the time I install the OS, SQL Server, Visual Studio,

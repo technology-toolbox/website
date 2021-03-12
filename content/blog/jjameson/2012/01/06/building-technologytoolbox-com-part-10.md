@@ -14,7 +14,10 @@ I shared the inner workings of the **Most Recent Posts** section on the
 Technology Toolbox home page. In this post, I'll show you how I built on that
 foundation to generate the content for the **Most Popular Posts** section.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png" alt="Technology Toolbox home page" class="screenshot" height="600" width="538" title="Figure 1: Technology Toolbox home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -22,7 +25,10 @@ Similar to the **Most Recent Posts** section, the **Most Popular Posts** section
 is generated using an ASP.NET user control, as illustrated in the corresponding
 page layout.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png" alt="Technology Toolbox home page (page layout)" class="screenshot" height="600" width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
+alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
+width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
@@ -50,7 +56,10 @@ I completed the following steps to update the entity model:
 
 At this point, the model should resemble the following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png" alt="Entity Data Model" class="screenshot" height="400" width="431" title="Figure 3: Entity Data Model" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
+alt="Entity Data Model" class="screenshot" height="400" width="431"
+title="Figure 3: Entity Data Model" >}}
 
 With the updated model, the following LINQ query can be used to retrieve the top
 10 most popular blog posts:
@@ -78,7 +87,9 @@ determining which posts are the most popular). That sproc is used to render the
 **Top Posts** section on the Subtext dashboard page, and I *believe* the formula
 is based on the following blog post:
 
-{{< reference title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09." linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
+{{< reference
+title="Rahien, Ayende (2007). Calculating most popular posts with SubText. 2007-03-09."
+linkHref="http://ayende.com/blog/2198/calculating-most-popular-posts-with-subtext" >}}
 
 I chose not to use the existing sproc for a couple of reasons:
 

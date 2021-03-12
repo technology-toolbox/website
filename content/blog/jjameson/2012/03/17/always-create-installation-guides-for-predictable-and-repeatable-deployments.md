@@ -48,7 +48,8 @@ included on TechNet. For example, the following section of TechNet provides
 step-by-step procedures for installing SharePoint Server 2010 in various
 scenarios:
 
-{{< reference title="Deployment scenarios (SharePoint Server 2010)" linkHref="http://technet.microsoft.com/en-us/library/cc303424.aspx" >}}
+{{< reference title="Deployment scenarios (SharePoint Server 2010)"
+linkHref="http://technet.microsoft.com/en-us/library/cc303424.aspx" >}}
 
 Consequently you might be tempted to simply reference a few dozen TechNet URLs
 in your installation guide and call it done. However I strongly recommend

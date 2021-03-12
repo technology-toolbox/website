@@ -27,7 +27,10 @@ nasty bug in Windows Update that I encountered along the way.
 Before I can explain the bug I first need to describe the environment. The
 following model shows the important pieces of the environment.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-600x456.jpg" alt="MOSS 2007 development environment" height="456" width="600" title="Figure 1: MOSS 2007 development environment" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-600x456.jpg"
+alt="MOSS 2007 development environment" height="456" width="600"
+title="Figure 1: MOSS 2007 development environment" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-785x596.jpg)
 
@@ -35,8 +38,10 @@ DEV is comprised of five VMs running on a single Virtual Server 2005 host:
 
 - DC1 - Active Directory domain controller for our development domain
 - SQL1 - SQL Server
-- SSP1 - MOSS 2007 Shared Services Provider (hosts Central Administration and indexes content)
-- WEB1 - MOSS 2007 Web server (hosts various Web applications and provides search functionality)
+- SSP1 - MOSS 2007 Shared Services Provider (hosts Central Administration and
+  indexes content)
+- WEB1 - MOSS 2007 Web server (hosts various Web applications and provides
+  search functionality)
 - ISA1 - ISA Server
 
 ISA Server is used to securely publish the Web applications (in other words, it
@@ -49,9 +54,15 @@ Using the Virtual Server Administration Website, I created virtual networks
 (VLAN1 and VLAN2) to represent the "front-end" and "backend" networks for the
 MOSS servers.
 
-- VLAN1 is used internally within DEV for all infrastructure traffic (such as Kerberos authentication and database queries).
-- VLAN1 is also used to allow the various VMs to connect to the "outside world" (the default gateway on the various DEV VMs is set to the IP address of ISA1 on VLAN1; therefore ISA1 acts as the router between the physical network and the virtual network used for the Development environment).
-- HTTP requests to DEV are routed through ISA1 on VLAN2 to WEB1 (for most Web applications) or SSP1 (for Central Administration and the SSP administration site).
+- VLAN1 is used internally within DEV for all infrastructure traffic (such as
+  Kerberos authentication and database queries).
+- VLAN1 is also used to allow the various VMs to connect to the "outside
+  world" (the default gateway on the various DEV VMs is set to the IP address
+  of ISA1 on VLAN1; therefore ISA1 acts as the router between the physical
+  network and the virtual network used for the Development environment).
+- HTTP requests to DEV are routed through ISA1 on VLAN2 to WEB1 (for most Web
+  applications) or SSP1 (for Central Administration and the SSP administration
+  site).
 
 Also note that in my current customer's environment, you must use a proxy server
 (PROXY1) in order to access the Internet. Note that PROXY1 is not an ISA Server

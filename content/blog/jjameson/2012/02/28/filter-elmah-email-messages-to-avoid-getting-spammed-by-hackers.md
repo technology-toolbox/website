@@ -110,7 +110,8 @@ error, you'll see the following:
 
 {{< blockquote "font-italic text-danger" >}}
 
-System.Web.HttpException: The state information is invalid for this page and might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.
+System.Web.HttpException: The state information is invalid for this page and
+might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.
 
 {{< /blockquote >}}
 
@@ -198,7 +199,9 @@ works fine when running in Full trust, but does not work in Medium trust.
 
 I created ELMAH issue 277 to track this bug:
 
-{{< reference title="errorFilter does not work in Medium trust configuration (SecurityException - \"Request for the permission of type 'System.Security.Permissions.ReflectionPermission...' failed\")" linkHref="http://code.google.com/p/elmah/issues/detail?id=277" >}}
+{{< reference
+title="errorFilter does not work in Medium trust configuration (SecurityException - \"Request for the permission of type 'System.Security.Permissions.ReflectionPermission...' failed\")"
+linkHref="http://code.google.com/p/elmah/issues/detail?id=277" >}}
 
 You can read the details by following the link above, if you are interested, but
 here is the gist of it:
@@ -295,7 +298,9 @@ not Medium trust.
 
 I created ELMAH issue 278 to track this bug:
 
-{{< reference title="JScript error filter does not work in Full trust configuration (when using FilterSourceType.Name)" linkHref="http://code.google.com/p/elmah/issues/detail?id=278" >}}
+{{< reference
+title="JScript error filter does not work in Full trust configuration (when using FilterSourceType.Name)"
+linkHref="http://code.google.com/p/elmah/issues/detail?id=278" >}}
 
 You can read the details by following the link above, if you are interested, but
 here is the gist of it:

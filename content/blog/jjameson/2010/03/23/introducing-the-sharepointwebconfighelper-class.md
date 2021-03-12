@@ -379,7 +379,9 @@ the namespace of the class that adds them.
 For some good details about using **SPWebConfigModification**, refer to the
 following:
 
-{{< reference title="Alirezaei, Reza (2008). SPWebConfigModification's Top 6 Issues. 2008-01-05." linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
+{{< reference
+title="Alirezaei, Reza (2008). SPWebConfigModification's Top 6 Issues. 2008-01-05."
+linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 
 > **Update 2010-03-31**
 >

@@ -41,7 +41,11 @@ Directory domain, namely **corp.technologytoolbox.com**.
 As you can see in the following figure, I've created a number of organizational
 units (OUs) which you would typically find in many enterprise organizations.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-302x600.png" alt="Jameson Datacenter - Active Directory domain structure" class="screenshot" height="600" width="302" title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-302x600.png"
+alt="Jameson Datacenter - Active Directory domain structure" class="screenshot"
+height="600" width="302"
+title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-305x605.png)
 
@@ -60,7 +64,8 @@ group, the **IT** group, and the **Sales** organization.
 
 The following table summarizes the various OUs in the domain:
 
-{{< table class="small" caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
+{{< table class="small"
+caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
 
 | <br>                    Organizational Unit<br>                 | <br>                    Description<br>                 |
 | --- | --- |

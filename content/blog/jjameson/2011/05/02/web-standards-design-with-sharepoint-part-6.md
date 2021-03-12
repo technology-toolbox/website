@@ -37,7 +37,10 @@ in SharePoint 2010.
 For those of you that haven't yet read my previous post, the goal was to take a
 SharePoint list like the one shown below...
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png" alt="Specials list" class="screenshot" height="474" width="600" title="Figure 1: Specials list" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
+alt="Specials list" class="screenshot" height="474" width="600"
+title="Figure 1: Specials list" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
@@ -91,7 +94,11 @@ happens if the number of items in the list is greater than the expected number?
 The following screenshot shows the updated home page content after adding a
 fourth item to the **Specials** list.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png" alt="Too many items in the weekly specials section" class="screenshot" height="411" width="600" title="Figure 2: Too many items in the weekly specials section" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png"
+alt="Too many items in the weekly specials section" class="screenshot"
+height="411" width="600"
+title="Figure 2: Too many items in the weekly specials section" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-1006x689.png)
 
@@ -127,7 +134,13 @@ Once we change the **XsltListViewWebPart** on the home page to use the **Most
 Recent Specials** view, the weekly specials section renders as expected
 regardless of the number of items in the **Specials** list.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png" alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" class="screenshot" height="324" width="600" title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
+alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders
+the home page as expected"
+class="screenshot" height="324" width="600"
+title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All
+Items\") renders the home page as expected" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-1006x544.png)
 
@@ -483,11 +496,16 @@ administrator).
 Here are some additional resources that you may find helpful for rendering
 SharePoint list items using the **XsltListViewWebPart**.
 
-{{< reference title="XsltListViewWebPart and Custom List Views" linkHref="http://msdn.microsoft.com/en-us/library/ff806162.aspx" >}}
+{{< reference title="XsltListViewWebPart and Custom List Views"
+linkHref="http://msdn.microsoft.com/en-us/library/ff806162.aspx" >}}
 
-{{< reference title="Overview of XSLT List View Rendering System" linkHref="http://msdn.microsoft.com/en-us/library/ff604024.aspx" >}}
+{{< reference title="Overview of XSLT List View Rendering System"
+linkHref="http://msdn.microsoft.com/en-us/library/ff604024.aspx" >}}
 
-{{< reference title="Examples of Input and Result Node Trees in XSLT Transformations" linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
+{{< reference
+title="Examples of Input and Result Node Trees in XSLT Transformations"
+linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
 
-{{< reference title="How to: Customize the Rendering of a Field on a List View" linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
+{{< reference title="How to: Customize the Rendering of a Field on a List View"
+linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
 

@@ -62,7 +62,10 @@ they wish for their individual workspaces.]
 To illustrate this concept, I quickly built out a "demo" solution, as shown
 below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG" alt="Linked files in a Visual Studio solution" class="screenshot" height="577" width="372" title="Figure 1: Linked files in a Visual Studio solution" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
+alt="Linked files in a Visual Studio solution" class="screenshot" height="577"
+width="372" title="Figure 1: Linked files in a Visual Studio solution" >}}
 
 The corresponding folder structure on disk resembles the following:
 

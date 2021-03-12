@@ -29,7 +29,8 @@ Server (MOSS) 2007?
 
 {{< blockquote "font-italic text-danger" >}}
 
-An error occurred during the processing of . The attribute 'autoeventwireup' is not allowed in this page.
+An error occurred during the processing of . The attribute 'autoeventwireup' is
+not allowed in this page.
 
 {{< /blockquote >}}
 

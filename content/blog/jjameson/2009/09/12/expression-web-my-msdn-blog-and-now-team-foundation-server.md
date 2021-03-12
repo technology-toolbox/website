@@ -107,7 +107,10 @@ create a new team project in TFS and then configure my workspace for source
 control. Once this was done, the TFS integration features of Expression Web 3
 simply just worked, as shown below:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-600x499.png" alt="Expression Web - my MSDN blog" height="499" width="600" title="Figure 1: Expression Web - my MSDN blog" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-600x499.png"
+alt="Expression Web - my MSDN blog" height="499" width="600"
+title="Figure 1: Expression Web - my MSDN blog" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
 

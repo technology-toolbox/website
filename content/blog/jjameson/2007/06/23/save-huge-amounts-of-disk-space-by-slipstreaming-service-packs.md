@@ -43,7 +43,10 @@ with a much longer history.]
 
 The following screenshot shows the breakdown of the VHD content:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-600x492.jpg" alt="Disk usage on VM before rebuild" class="screenshot" height="492" width="600" title="Figure 1: Disk usage on VM before rebuild" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-600x492.jpg"
+alt="Disk usage on VM before rebuild" class="screenshot" height="492"
+width="600" title="Figure 1: Disk usage on VM before rebuild" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-775x635.jpg)
 
@@ -69,7 +72,11 @@ patches from Windows Update several months before).
 Immediately after booting up with this new "clean" VHD, I captured the
 following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP1-slipstream)-600x419.jpg" alt="Disk usage on VM with Windows Server 2003 SP1 slipstreamed" class="screenshot" height="419" width="600" title="Figure 2: Disk usage on VM with Windows Server 2003 SP1 slipstreamed" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP1-slipstream)-600x419.jpg"
+alt="Disk usage on VM with Windows Server 2003 SP1 slipstreamed"
+class="screenshot" height="419" width="600"
+title="Figure 2: Disk usage on VM with Windows Server 2003 SP1 slipstreamed" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP1-slipstream%29-768x536.jpg)
 
@@ -86,7 +93,11 @@ me to begin installing SQL Server, Visual Studio, etc.
 Before beginning those installs however, I thought I would take capture the hard
 drive usage one more time. Here is what I saw:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(after-SP2-install)-600x418.jpg" alt="Disk usage on VM after installing Windows Server 2003 SP2" class="screenshot" height="418" width="600" title="Figure 3: Disk usage on VM after installing Windows Server 2003 SP2" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(after-SP2-install)-600x418.jpg"
+alt="Disk usage on VM after installing Windows Server 2003 SP2"
+class="screenshot" height="418" width="600"
+title="Figure 3: Disk usage on VM after installing Windows Server 2003 SP2" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28after-SP2-install%29-768x535.jpg)
 
@@ -101,7 +112,11 @@ rebuilding it from a slipstreamed Windows Server 2003 SP2 (I use
 [nLite](http://www.nliteos.com/), by the way, which works great IMHO). Here are
 the results after booting up with the new VHD:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP2-slipstreamed)-600x419.jpg" alt="Disk usage on VM with Windows Server 2003 SP2 slipstreamed" class="screenshot" height="419" width="600" title="Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP2-slipstreamed)-600x419.jpg"
+alt="Disk usage on VM with Windows Server 2003 SP2 slipstreamed"
+class="screenshot" height="419" width="600"
+title="Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP2-slipstreamed%29-600x419.jpg)
 

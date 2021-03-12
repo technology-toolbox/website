@@ -74,7 +74,8 @@ fact, here's a direct quote from page 38:
 
 ### Build All Builds with Debugging Symbols
 
-...build all builds, including release builds, with full debugging symbols. [...]
+...build all builds, including release builds, with full debugging symbols.
+[...]
 
 {{< /blockquote >}}
 

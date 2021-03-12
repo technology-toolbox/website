@@ -40,7 +40,9 @@ content. The following post does a great job of explaining what's happening
 behind the scenes when you insert a Web Part into the "Rich Content" content
 field on a page:
 
-{{< reference title="Programmatically adding Web Parts to Rich Content in SharePoint 2010" linkHref="http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/" >}}
+{{< reference
+title="Programmatically adding Web Parts to Rich Content in SharePoint 2010"
+linkHref="http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/" >}}
 
 Long ago, when I first started programmatically creating Publishing pages in
 MOSS 2007, I ended up creating a **

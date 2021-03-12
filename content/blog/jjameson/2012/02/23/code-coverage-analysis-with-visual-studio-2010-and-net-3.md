@@ -49,7 +49,9 @@ the following message from Visual Studio:
 
 {{< blockquote "font-italic" >}}
 
-Debugging tests running on a remote computer or with code coverage enabled is not supported. The tests will be run under the debugger locally and without code coverage enabled.
+Debugging tests running on a remote computer or with code coverage enabled is
+not supported. The tests will be run under the debugger locally and without code
+coverage enabled.
 
 {{< /blockquote >}}
 
@@ -60,7 +62,8 @@ in the **Test Results** window, I see the following:
 
 {{< blockquote "font-italic" >}}
 
-Cannot find any coverage data (.coverage or .coveragexml) files. Check test run details for possible errors.
+Cannot find any coverage data (.coverage or .coveragexml) files. Check test run
+details for possible errors.
 
 {{< /blockquote >}}
 
@@ -69,7 +72,8 @@ Visual Studio 2010 and projects that target .NET Framework 3.5 (e.g. SharePoint
 2010 solutions). However, you have to resort to some command-line tools, as
 described in the following post:
 
-{{< reference title="Manually Configure and Run code Coverage" linkHref="http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx" >}}
+{{< reference title="Manually Configure and Run code Coverage"
+linkHref="http://blogs.microsoft.co.il/blogs/royrose/archive/2011/08/30/manually-configure-and-run-code-coverage.aspx" >}}
 
 In
 [my next post](/blog/jjameson/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis),

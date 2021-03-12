@@ -47,7 +47,9 @@ Note that **Combined Views** is something I defined and is simply the sum of
 The following post provides a good explanation of the difference between "Views"
 and "AggViews" in Community Server.
 
-{{< reference title="Eriksson, J-O (2006). Views statistics of your blog. 2006-07-24." linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-of-your-blog.aspx" >}}
+{{< reference
+title="Eriksson, J-O (2006). Views statistics of your blog. 2006-07-24."
+linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-of-your-blog.aspx" >}}
 
 Here's the gist of it:
 
@@ -98,7 +100,10 @@ helpful for a number of people. Anyway, moving on...
 Here's a chart showing the combined views for each blog post that I've created
 so far.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-600x266.png" alt="Combined views for each blog post" height="266" width="600" title="Figure 1: Combined views for each blog post" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-600x266.png"
+alt="Combined views for each blog post" height="266" width="600"
+title="Figure 1: Combined views for each blog post" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-1136x503.png)
 
@@ -178,7 +183,10 @@ authoring of blog posts has varied over time.
 
 Let's start with the total number of posts by year:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-600x311.png" alt="Blog posts created by year" height="311" width="600" title="Figure 2: Blog posts created by year" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-600x311.png"
+alt="Blog posts created by year" height="311" width="600"
+title="Figure 2: Blog posts created by year" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-699x362.png)
 
@@ -188,7 +196,10 @@ have almost two months to go!
 
 Let's look at the total number of posts by month:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-600x330.png" alt="Blog posts created by month" height="330" width="600" title="Figure 3: Blog posts created by month" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-600x330.png"
+alt="Blog posts created by month" height="330" width="600"
+title="Figure 3: Blog posts created by month" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-699x384.png)
 
@@ -226,7 +237,8 @@ of referrals, I encountered the largest HTML table I've ever seen on a page
 into my Excel workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
-{{< table class="small" caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
+{{< table class="small"
+caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
 
 | <br>                    URL<br>                 | <br>                    Hits<br>                 | <br>                    Last Date<br>                 |
 | --- | --- | --- |
@@ -250,7 +262,8 @@ However, adding up the numbers for the top 10 referrals accounts for less than
 
 Breaking down the referrals by domain name, I found the following:
 
-{{< table class="small" caption="Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages" >}}
+{{< table class="small"
+caption="Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages" >}}
 
 | <br>                    Domain<br>                 | <br>                    Hits<br>                 |
 | --- | --- |
@@ -273,7 +286,13 @@ see **search.live.com** instead of **bing.com** in the top 10 list.
 To help me get a better feel for the Google vs. Microsoft ratio, I grouped the
 results into categories and subcategories.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png" alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages" height="387" width="600" title="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png"
+alt="Referrals by category for post - Issues Deploying SharePoint Solution
+Packages"
+height="387" width="600"
+title="Figure 4: Referrals by category for post - Issues Deploying SharePoint
+Solution Packages" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-689x444.png)
 

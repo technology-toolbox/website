@@ -66,7 +66,8 @@ That's when I found the problem, namely a `SqlException`:
 
 {{< blockquote "font-italic text-danger" >}}
 
-The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists', database 'FabrikamPortal', schema 'dbo'.
+The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists',
+database 'FabrikamPortal', schema 'dbo'.
 
 {{< /blockquote >}}
 

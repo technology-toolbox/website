@@ -31,7 +31,8 @@ quickly change a project setting in order to target an earlier version of the
 Note that you can force a managed C++ project to continue to target one of the
 older versions of the .NET Framework, as described in the following:
 
-{{< reference title="Visual Studio 2010 C++ Project Upgrade Guide" linkHref="http://blogs.msdn.com/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx" >}}
+{{< reference title="Visual Studio 2010 C++ Project Upgrade Guide"
+linkHref="http://blogs.msdn.com/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx" >}}
 
 However, you'll need to have Visual Studio 2008 installed on your build server
 -- or, presumably, you could choose to install the Microsoft Windows SDK for

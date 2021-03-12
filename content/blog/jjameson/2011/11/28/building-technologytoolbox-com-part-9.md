@@ -14,14 +14,20 @@ In
 I mentioned how the new Technology Toolbox home page highlights the most recent
 blog posts, as shown below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png" alt="Technology Toolbox home page" class="screenshot" height="600" width="538" title="Figure 1: Technology Toolbox home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 The content rendered in the **Most Recent Posts** section is generated using an
 ASP.NET user control, as illustrated in the corresponding page layout.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png" alt="Technology Toolbox home page (page layout)" class="screenshot" height="600" width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
+alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
+width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
@@ -30,7 +36,10 @@ Visual Studio solutions that are merged together during the deployment process.
 Requests for URLs under **/blog** are handled by Subtext. All other requests
 (such as the Technology Toolbox home page) are handled by the "Caelum" solution.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg" alt="Solution architecture" height="520" width="600" title="Figure 3: Solution architecture" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+alt="Solution architecture" height="520" width="600"
+title="Figure 3: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 

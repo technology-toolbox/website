@@ -53,7 +53,8 @@ server.
 
 Prior to initiating the rebuild, I found the following article on MSDN:
 
-{{< reference title="TFS 2005: How to: Move Your Data Tier to another computer" linkHref="http://support.microsoft.com/kb/955601" >}}
+{{< reference title="TFS 2005: How to: Move Your Data Tier to another computer"
+linkHref="http://support.microsoft.com/kb/955601" >}}
 
 Note that the article is for TFS 2005, but based on my knowledge of the
 differences between TFS 2005 and TFS 2008, it seemed reasonable that the steps
@@ -139,7 +140,9 @@ Rather than simply rebuilding the data tier, I decided to rebuild the entire TFS
 instance (i.e. data tier and application tier) by following the steps in the
 following MSDN article:
 
-{{< reference title="How to: Move Your Team Foundation Server from One Hardware Configuration to Another" linkHref="http://msdn.microsoft.com/en-us/library/ms404869(VS.80).aspx" >}}
+{{< reference
+title="How to: Move Your Team Foundation Server from One Hardware Configuration to Another"
+linkHref="http://msdn.microsoft.com/en-us/library/ms404869(VS.80).aspx" >}}
 
 Well, you can probably imagine what happened...
 
@@ -304,7 +307,9 @@ As a sanity check, I also found the following in
 
 {{< blockquote "font-italic" >}}
 
-You can choose to run an instance of Microsoft SQL Server Analysis Services in the security context of many different accounts. However, we recommend that you use a domain or local user account as the logon account for Analysis Services.
+You can choose to run an instance of Microsoft SQL Server Analysis Services in
+the security context of many different accounts. However, we recommend that you
+use a domain or local user account as the logon account for Analysis Services.
 
 {{< /blockquote >}}
 
@@ -318,7 +323,8 @@ process. More specifically, I had just completed the following step:
 
 {{< blockquote "font-italic" >}}
 
-1. Install Team Foundation Server in the new environment and make sure it is operational. For detailed instructions...
+1. Install Team Foundation Server in the new environment and make sure it is
+   operational. For detailed instructions...
 
 {{< /blockquote >}}
 
@@ -371,7 +377,8 @@ becomes quite a burden to perform manually.
 
 Fortunately, I found the following KB article:
 
-{{< reference title="How to recover the default reports in TFS 2008" linkHref="http://support.microsoft.com/kb/2003577" >}}
+{{< reference title="How to recover the default reports in TFS 2008"
+linkHref="http://support.microsoft.com/kb/2003577" >}}
 
 Unfortunately, the tool referenced in this KB article (TFSUploadReports.exe) was
 originally built for upgrading from TFS 2005 Beta 3 to TFS 2005 RTM.

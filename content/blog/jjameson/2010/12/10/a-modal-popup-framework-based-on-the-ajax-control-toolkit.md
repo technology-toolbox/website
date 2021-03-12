@@ -27,7 +27,8 @@ to render the modal popups -- specifically the **ModalPopupExtender** class.
 Refer to the following site for more information on the **ModalPopupExtender**
 class, including a sample page that demonstrates a popup window:
 
-{{< reference title="ModalPopup Demonstration" linkHref="http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx" >}}
+{{< reference title="ModalPopup Demonstration"
+linkHref="http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx" >}}
 
 To encapsulate the functionality for rendering modal popup windows, the
 "Announcements" feature builds upon a lightweight "Modal Popup Framework."
@@ -50,7 +51,10 @@ dismiss the popup window.
 The following figure illustrates the various UI elements of a modal popup
 window.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png" alt="Elements of a modal popup window" height="241" width="600" title="Figure 1: Elements of a modal popup window" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png"
+alt="Elements of a modal popup window" height="241" width="600"
+title="Figure 1: Elements of a modal popup window" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-649x261.png)
 
@@ -120,7 +124,12 @@ Note that by specifying the height of the **modalPanelContent** element:
 &hellip;it is possible to constrain the height of the modal popup window and
 show a scrollbar as necessary. This is illustrated in the following figure.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png" alt="Constraining the height of content displayed in a modal popup window" height="190" width="460" title="Figure 2: Constraining the height of content displayed in a modal popup window" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
+alt="Constraining the height of content displayed in a modal popup window"
+height="190" width="460"
+title="Figure 2: Constraining the height of content displayed in a modal popup
+window" >}}
 
 In addition to creating various user interface elements for modal popup windows,
 the **ModalPopupWebPart** also converts client-side events (e.g. clicking the

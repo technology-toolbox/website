@@ -27,7 +27,8 @@ the assemblies.
 It's nice to see that a similar process has already been covered on MSDN for
 SharePoint 2010:
 
-{{< reference title="How to Build SharePoint Projects with TFS Team Build" linkHref="http://msdn.microsoft.com/en-us/library/ff622991.aspx" >}}
+{{< reference title="How to Build SharePoint Projects with TFS Team Build"
+linkHref="http://msdn.microsoft.com/en-us/library/ff622991.aspx" >}}
 
 However, there are few things I noticed about this MSDN article.
 
@@ -51,7 +52,8 @@ assemblies to the GAC on the build server:
 
 - Microsoft.VisualStudio.SharePoint.Designers.Models.dll
 - Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
-- Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll Microsoft.VisualStudio.SharePoint.dll
+- Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
+  Microsoft.VisualStudio.SharePoint.dll
 
 {{< /blockquote >}}
 
@@ -70,7 +72,12 @@ warnings, like the following:
 
 {{< blockquote "font-italic" >}}
 
-CA0060 : The indirectly-referenced assembly 'Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could not be found. This assembly is not required for analysis, however, analysis results could be incomplete. This assembly was referenced by: C:\Program Files\Reference Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
+CA0060 : The indirectly-referenced assembly
+'Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral,
+PublicKeyToken=71e9bce111e9429c' could not be found. This assembly is not
+required for analysis, however, analysis results could be incomplete. This
+assembly was referenced by: C:\Program Files\Reference
+Assemblies\Microsoft\SharePoint v4\Microsoft.SharePoint.dll.
 
 {{< /blockquote >}}
 
@@ -78,7 +85,8 @@ Here are the assemblies that I ended up copying from FOOBAR5 (which has
 SharePoint Server 2010 installed) to DAZZLER (which does not have SharePoint
 Server 2010 installed):
 
-{{< table class="small" caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
+{{< table class="small"
+caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
 
 | Assembly | Source Location on SharePoint 2010 Server |
 | --- | --- |

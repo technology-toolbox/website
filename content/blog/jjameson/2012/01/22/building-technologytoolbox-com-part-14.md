@@ -87,7 +87,8 @@ PM&gt; {{< kbd "Install-Package elmah" >}}
 
 Refer to the following resource for more information on the ELMAH NuGet package:
 
-{{< reference title="NuGet Gallery - ELMAH" linkHref="http://nuget.org/packages/elmah" >}}
+{{< reference title="NuGet Gallery - ELMAH"
+linkHref="http://nuget.org/packages/elmah" >}}
 
 Note that there are a number of different "flavors" of ELMAH NuGet packages
 available (depending on how your want to log errors). For example, refer to one
@@ -164,7 +165,10 @@ improving the user experience by adding a custom error page.
 If you happen to encounter an unexpected error on the Technology Toolbox site,
 then you'll see something similar to the screenshot below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png" alt="Custom error page (Generic.aspx)" class="screenshot" height="295" width="600" title="Figure 1: Custom error page (Generic.aspx)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
+alt="Custom error page (Generic.aspx)" class="screenshot" height="295"
+width="600" title="Figure 1: Custom error page (Generic.aspx)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-1006x494.png)
 
@@ -388,7 +392,10 @@ Imagine that I send you an email and refer you to my blog, but I mistakenly type
 If you were to click the link in my email at this point, then you'd see the the
 out-of-the-box IIS "404" error page (404.htm) shown below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png" alt="IIS - default 404 page (404.htm)" class="screenshot" height="110" width="600" title="Figure 2: IIS - default 404 page (404.htm)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png"
+alt="IIS - default 404 page (404.htm)" class="screenshot" height="110"
+width="600" title="Figure 2: IIS - default 404 page (404.htm)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-1006x185.png)
 
@@ -408,7 +415,10 @@ from the original **HttpException**).
 In either case, it would be better to show users a custom 404 error page, like
 the one shown below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png" alt="HTTP 404 error page (404.aspx)" class="screenshot" height="295" width="600" title="Figure 3: HTTP 404 error page (404.aspx)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
+alt="HTTP 404 error page (404.aspx)" class="screenshot" height="295" width="600"
+title="Figure 3: HTTP 404 error page (404.aspx)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-1006x494.png)
 

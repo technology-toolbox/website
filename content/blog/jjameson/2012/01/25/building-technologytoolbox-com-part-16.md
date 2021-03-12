@@ -24,7 +24,10 @@ The Technology Toolbox website provides an online form prospective clients can
 use regarding potential projects and other contact requests, as shown in Figure
 1.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png" alt="Contact form with custom CAPTCHA control" class="screenshot" height="600" width="592" title="Figure 1: Contact form with custom CAPTCHA control" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
+alt="Contact form with custom CAPTCHA control" class="screenshot" height="600"
+width="592" title="Figure 1: Contact form with custom CAPTCHA control" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
 
@@ -41,7 +44,10 @@ When the incorrect image is selected (or no image is selected) in the CAPTCHA
 control, an error appears in the validation summary, similar to when required
 fields are missing.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png" alt="Contact form CAPTCHA validation error" class="screenshot" height="600" width="534" title="Figure 2: Contact form CAPTCHA validation error" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
+alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
+width="534" title="Figure 2: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
 
@@ -57,7 +63,8 @@ CAPTCHA implementation.
 The foundation for the CAPTCHA control used on TechnologyToolbox.com is based on
 a jQuery plugin created by Boban Karišik:
 
-{{< reference title="s3Capcha jQuery plugin" linkHref="http://www.serie3.info/s3capcha/" >}}
+{{< reference title="s3Capcha jQuery plugin"
+linkHref="http://www.serie3.info/s3capcha/" >}}
 
 s3Capcha is simple, yet elegant, and free for commercial use (provided you agree
 to preserve the copyright notice in the script file). The only drawback --
@@ -65,7 +72,8 @@ depending on your perspective -- is that Boban's implementation is based on PHP.
 
 Fortunately, Mahdi Yousefi created an ASP.NET version based on Boban's code:
 
-{{< reference title="Creating an ASP.NET captcha using jQuery and s3capcha" linkHref="http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap" >}}
+{{< reference title="Creating an ASP.NET captcha using jQuery and s3capcha"
+linkHref="http://www.codeproject.com/Articles/38934/Creating-an-ASP-NET-captcha-using-jQuery-and-s3cap" >}}
 
 I discovered a few issues in Mahdi's code and ended up making some significant
 changes for the Technology Toolbox website.

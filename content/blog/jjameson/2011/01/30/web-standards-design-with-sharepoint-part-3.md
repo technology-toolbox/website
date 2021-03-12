@@ -52,7 +52,13 @@ fictitious "Adventure Works" bicycle company.]
 If you've worked with MOSS 2007 at all, then you are undoubtedly familiar with
 the following:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-600x284.png" alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" class="screenshot" height="284" width="600" title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-600x284.png"
+alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy
+for an intranet divisional portal\")"
+class="screenshot" height="284" width="600"
+title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site
+hierarchy for an intranet divisional portal\")" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-1064x504.png)
 
@@ -73,7 +79,11 @@ layouts).
 Here's a screenshot showing the home page using the custom Fabrikam master page
 and page layout:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-600x299.png" alt="Home page with custom master page and page layout" class="screenshot" height="299" width="600" title="Figure 2: Home page with custom master page and page layout" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-600x299.png"
+alt="Home page with custom master page and page layout" class="screenshot"
+height="299" width="600"
+title="Figure 2: Home page with custom master page and page layout" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-1062x530.png)
 
@@ -87,7 +97,13 @@ HTML" and contains numerous nested tables (to achieve the two-column layout).
 This is easily seen in the following screenshot, in which I've disabled the
 linked style sheets:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-600x434.png" alt="Home page with custom master page and page layout (linked CSS files disabled)" class="screenshot" height="434" width="600" title="Figure 3: Home page with custom master page and page layout (linked CSS files disabled)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-600x434.png"
+alt="Home page with custom master page and page layout (linked CSS files
+disabled)"
+class="screenshot" height="434" width="600"
+title="Figure 3: Home page with custom master page and page layout (linked CSS
+files disabled)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-1045x756.png)
 
@@ -111,7 +127,13 @@ with corresponding Summary Links).
 The following figure shows the end result (note that I overlayed the grid using
 the [960 Gridder](http://gridder.andreehansson.se/) for illustrative purposes):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-600x361.png" alt="Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" class="screenshot" height="361" width="600" title="Figure 4: Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-600x361.png"
+alt="Home page with custom master page and page layout (semantic HTML and
+Summary Links field instead of Web Part)"
+class="screenshot" height="361" width="600"
+title="Figure 4: Home page with custom master page and page layout (semantic
+HTML and Summary Links field instead of Web Part)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-1045x628.png)
 

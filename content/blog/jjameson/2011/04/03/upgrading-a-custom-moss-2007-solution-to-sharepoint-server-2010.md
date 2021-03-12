@@ -36,7 +36,12 @@ development features in VS2010 as much as possible. The following figure
 illustrates the old and new solutions as well as the key mappings between the
 two.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-499x1472.jpg" alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" height="1472" width="499" title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-499x1472.jpg"
+alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
+height="1472" width="499"
+title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint
+Server 2010" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-768x2262.jpg)
 

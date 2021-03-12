@@ -23,7 +23,9 @@ SharePoint 2010. It is far easier than trying to handcraft CAML queries.
 Here is the link to this wonderful tool, in case you haven't come across it
 either:
 
-{{< reference title="U2U CAML Query Builder for SharePoint 2003 and SharePoint 2007 (Windows Version)" linkHref="http://www.u2u.net/Tools/wincamlquerybuilder/CamlQueryBuilder.aspx" >}}
+{{< reference
+title="U2U CAML Query Builder for SharePoint 2003 and SharePoint 2007 (Windows Version)"
+linkHref="http://www.u2u.net/Tools/wincamlquerybuilder/CamlQueryBuilder.aspx" >}}
 
 > **Note**
 >

@@ -31,7 +31,8 @@ warnings similar to the following:
 
 {{< blockquote "font-italic" >}}
 
-MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of 'Fabrikam' in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
+MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of
+'Fabrikam' in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
 
 {{< /blockquote >}}
 
@@ -49,7 +50,8 @@ directory associated with the tool under the user's profile
 
 {{< /blockquote >}}
 
-{{< reference title="Identifiers should be spelled correctly" linkHref="http://msdn.microsoft.com/en-us/library/bb264492.aspx" >}}
+{{< reference title="Identifiers should be spelled correctly"
+linkHref="http://msdn.microsoft.com/en-us/library/bb264492.aspx" >}}
 
 However, I don't recommend using any of these options. Here's why...
 

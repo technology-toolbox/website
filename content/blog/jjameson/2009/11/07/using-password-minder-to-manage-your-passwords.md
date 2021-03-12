@@ -88,7 +88,9 @@ when trying to load the 32-bit NativeHelpers.dll.
 
 {{< blockquote "font-italic text-danger" >}}
 
-Could not load file or assembly 'NativeHelpers, Version=1.5.0.4, Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was made to load a program with an incorrect format.
+Could not load file or assembly 'NativeHelpers, Version=1.5.0.4,
+Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was
+made to load a program with an incorrect format.
 
 {{< /blockquote >}}
 

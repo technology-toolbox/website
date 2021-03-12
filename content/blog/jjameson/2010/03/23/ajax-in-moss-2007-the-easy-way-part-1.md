@@ -37,7 +37,9 @@ Mike Ammerlaan's post from a couple of years ago introduced the concept of
 [integrating ASP.NET AJAX with SharePoint](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3).
 The detailed configuration steps eventually made their way onto MSDN as well:
 
-{{< reference title="Installing ASP.NET 2.0 AJAX Extensions 1.0 in Windows SharePoint Services Version 3.0" linkHref="http://msdn.microsoft.com/en-us/library/bb861898.aspx" >}}
+{{< reference
+title="Installing ASP.NET 2.0 AJAX Extensions 1.0 in Windows SharePoint Services Version 3.0"
+linkHref="http://msdn.microsoft.com/en-us/library/bb861898.aspx" >}}
 
 However, if you look at the comments on the previous MSDN article, it appears
 that the prescriptive guidance isn't always easy to follow and implement. I'll
@@ -223,7 +225,10 @@ application, fixing the master page, and adding the sample Web Part. Note that
 this sample isn't configured for FBA and anonymous access (since I was trying to
 pare down the samples as much as possible).
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png" alt="AJAX in SharePoint" class="screenshot" height="417" width="600" title="Figure 1: AJAX in SharePoint" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
+alt="AJAX in SharePoint" class="screenshot" height="417" width="600"
+title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 

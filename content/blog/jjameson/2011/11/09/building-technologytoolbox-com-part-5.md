@@ -18,7 +18,10 @@ I briefly considered using [my old MSDN blog](http://blogs.msdn.com/b/jjameson/)
 as a reference. However, I quickly dismissed that option after viewing my MSDN
 blog home page with CSS disabled.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png" alt="My MSDN blog home - CSS disabled" class="screenshot" height="600" width="328" title="Figure 1: My MSDN blog home - CSS disabled" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
+alt="My MSDN blog home - CSS disabled" class="screenshot" height="600"
+width="328" title="Figure 1: My MSDN blog home - CSS disabled" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
 
@@ -51,7 +54,11 @@ of Jeremy Jameson"?!
 Compare Figure 1 with the corresponding "naked" version of my new blog home
 page:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png" alt="Technology Toolbox blog home page - CSS disabled" class="screenshot" height="600" width="362" title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
+alt="Technology Toolbox blog home page - CSS disabled" class="screenshot"
+height="600" width="362"
+title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
 
@@ -86,18 +93,27 @@ exclusively weblog postings. [...]
 The hAtom schema consists of the following:
 
 - hfeed (**`hfeed`**). optional.
-  - **`feed category`**. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+- **`feed category`**. optional. keywords or phrases, using **
+  [rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
   - hentry (**`hentry`**).
     - **`entry-title`**. required. text.
     - **`entry-content`**. optional (see field description). text. [\*]
     - **`entry-summary`**. optional. text.
-    - **`updated`**. required using [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern"). [\*]
-    - **`published`**. optional using [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
-    - **`author`**. required using **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
-    - **`bookmark`** (permalink). optional, using **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
-    - tags. optional. keywords or phrases, using **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+- **`updated`**. required using
+  [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+  [\*]
+- **`published`**. optional using
+  [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+- **`author`**. required using **
+  [hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
+- **`bookmark`** (permalink). optional, using **
+  [rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+- tags. optional. keywords or phrases, using **
+  [rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 
-<cite>-- <a href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a> </cite>
+<cite>-- <a
+href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
+</cite>
 
 {{< /blockquote >}}
 
@@ -234,7 +250,10 @@ whereas the first post in the list does not. This is accomplished by adding an
 additional class to the list item to indicate that a particular post has no
 comments (i.e. `<li class="comments none">`).
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png" alt="Blog home page" class="screenshot" height="600" width="374" title="Figure 3: Blog home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+alt="Blog home page" class="screenshot" height="600" width="374"
+title="Figure 3: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 

@@ -144,7 +144,9 @@ A couple of things to note about the index:
   unless you don't object to falling under the "unsupported" moniker)
 - Since **tp\_DirName** specifies a server relative URL, this was chosen as
   the first column in the index -- rather than **tp\_SiteId**.
-- In environments where the content database only contains a single site collection (such as ours), including **tp\_SiteId** provides essentially no value (i.e. it does not influence the selectivity of the index)
+- In environments where the content database only contains a single site
+  collection (such as ours), including **tp\_SiteId** provides essentially no
+  value (i.e. it does not influence the selectivity of the index)
 
 Lastly, it is worth noting that even after adding the index to TEST, we were
 still experiencing relatively long execution times with other sprocs during the
@@ -156,8 +158,10 @@ abandoned additional tuning efforts due to schedule and resource constraints.
 
 SQL Profiler traces continued to show some latency in the various PRIME sprocs:
 
-- Over a 3-1/2 hour period, approximately 900 operations took longer than 1 second (a small fraction compared with before the index was added)
-- Of the 900, a small fraction were in the 10-12 second range (e.g. **proc\_DeplAddExportObjectLinks**)
+- Over a 3-1/2 hour period, approximately 900 operations took longer than 1
+  second (a small fraction compared with before the index was added)
+- Of the 900, a small fraction were in the 10-12 second range (e.g.
+  **proc\_DeplAddExportObjectLinks**)
 
 Overall, performance drastically improved with the new index on **AllUserData**.
 However, even with the index, variations page propagations still took around one

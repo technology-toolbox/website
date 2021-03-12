@@ -47,5 +47,7 @@ creating a new VM from a SysPrep'ed image.
 
 If you are not sure why this is helpful, refer to the following KB article:
 
-{{< reference title="A Windows 2000-based, Windows Server 2003-based, or Windows XP-based computer that was set up by using a Windows 2000, Windows Server 2003, or Windows XP image does not appear in the WSUS console" linkHref="http://support.microsoft.com/kb/903262/en-us" >}}
+{{< reference
+title="A Windows 2000-based, Windows Server 2003-based, or Windows XP-based computer that was set up by using a Windows 2000, Windows Server 2003, or Windows XP image does not appear in the WSUS console"
+linkHref="http://support.microsoft.com/kb/903262/en-us" >}}
 

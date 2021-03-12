@@ -80,7 +80,9 @@ configuration management system and build process.
 > {{< reference
 > title="Incrementing the Assembly Version for Each Build in TFS 2010"
 > linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010"
-> linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
+> linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx"
+>
+> > }}
 
 Unfortunately, there's no out-of-the-box task in the current version of MSBuild
 that increments an assembly version. However, you can write your own with just a
@@ -138,7 +140,7 @@ the assembly version files and subsequently check them back in:
 >
 > ```
 >   <PropertyGroup>
-> <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
+>     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
 >   </PropertyGroup>
 > ```
 

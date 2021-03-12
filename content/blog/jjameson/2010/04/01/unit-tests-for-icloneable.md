@@ -43,7 +43,9 @@ corresponding documentation on MSDN:
 
 {{< blockquote "font-italic" >}}
 
-Clone can be implemented either as a deep copy or a shallow copy. In a deep copy, all objects are duplicated; whereas, in a shallow copy, only the top-level objects are duplicated and the lower levels contain references.
+Clone can be implemented either as a deep copy or a shallow copy. In a deep
+copy, all objects are duplicated; whereas, in a shallow copy, only the top-level
+objects are duplicated and the lower levels contain references.
 
 {{< /blockquote >}}
 

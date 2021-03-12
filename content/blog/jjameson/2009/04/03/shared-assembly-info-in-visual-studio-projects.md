@@ -36,7 +36,13 @@ SharedAssemblyInfo.cs. You can also move the linked SharedAssemblyInfo.cs into
 the Properties folder so that it sits side-by-side with the AssemblyInfo.cs that
 is specific to each project in the solution, as shown below.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG" alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution" class="screenshot" height="577" width="372" title="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
+alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution"
+class="screenshot" height="577" width="372"
+title="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution"
+
+> }}
 
 I recommend placing the following assembly attributes in SharedAssemblyInfo.cs
 (and, of course, removing them as necessary from the project-specific

@@ -57,7 +57,8 @@ PM&gt; {{< kbd "Install-Package jQuery" >}}
 Refer to the following resource for more information on the jQuery NuGet
 package:
 
-{{< reference title="NuGet Gallery - jQuery" linkHref="http://nuget.org/packages/jQuery" >}}
+{{< reference title="NuGet Gallery - jQuery"
+linkHref="http://nuget.org/packages/jQuery" >}}
 
 Now let's add a little bit of script to a sample page:
 

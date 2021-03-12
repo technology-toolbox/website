@@ -31,7 +31,9 @@ projects in the solution:
 
 {{< blockquote "font-italic text-danger" >}}
 
-An error occurred while calculating code metrics for target file 'E:\NotBackedUp\...' in project ... The following error was encountered while reading module 'Microsoft.SharePoint': Could not resolve type: T ObjectModel.
+An error occurred while calculating code metrics for target file
+'E:\NotBackedUp\...' in project ... The following error was encountered while
+reading module 'Microsoft.SharePoint': Could not resolve type: T ObjectModel.
 
 {{< /blockquote >}}
 (Don't ask me what the '' character is supposed to mean -- I just copied and pasted this directly from Visual Studio.)

@@ -251,7 +251,9 @@ Otherwise, you'll encounter an error similar to the following:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master page '/\_catalogs/masterpage/default.master', verify content control's ContentPlaceHolderID attribute in the content page.
+Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master
+page '/\_catalogs/masterpage/default.master', verify content control's
+ContentPlaceHolderID attribute in the content page.
 
 {{< /blockquote >}}
 

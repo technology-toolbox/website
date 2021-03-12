@@ -27,7 +27,9 @@ is actually documented on the WinHost site:
 
 {{< /blockquote >}}
 
-{{< reference title="WinHost Support Portal - Can I control directory browsing on my site?" linkHref="http://support.winhost.com/KB/a590/can-i-control-directory-browsing-on-my-site.aspx" >}}
+{{< reference
+title="WinHost Support Portal - Can I control directory browsing on my site?"
+linkHref="http://support.winhost.com/KB/a590/can-i-control-directory-browsing-on-my-site.aspx" >}}
 
 Well shiver me timbers, mateys!
 

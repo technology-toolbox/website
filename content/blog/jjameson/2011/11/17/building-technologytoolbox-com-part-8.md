@@ -19,7 +19,10 @@ You may recall the following illustration from the post I wrote
 This shows how the Caelum and Subtext Visual Studio solutions are merged
 together during the deployment process.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg" alt="Solution architecture" height="520" width="600" title="Figure 1: Solution architecture" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+alt="Solution architecture" height="520" width="600"
+title="Figure 1: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
@@ -45,7 +48,9 @@ available after importing the IIS Module into the PowerShell instance).
 
 For a complete list of the IIS cmdlets, refer to the following Technet article:
 
-{{< reference title="Web Server (IIS) Administration Cmdlets in Windows PowerShell" linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
+{{< reference
+title="Web Server (IIS) Administration Cmdlets in Windows PowerShell"
+linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
 
 > **Important**
 >
@@ -103,7 +108,9 @@ function RemoveWebsite(
 > you choose to use it:
 >
 > {{< reference title="Get-Website always returns full list of web sites"
-> linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
+> linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites"
+>
+> > }}
 
 If you are wondering why I specify "``r`n`" at the end of each `Write-Host`
 command, I'll explain that in
@@ -189,7 +196,9 @@ The Subtext solution is deployed by copying files from the Release server
 For more details on the build process, refer to one of my posts from a couple of
 years ago:
 
-{{< reference title="Build and Deployment Overview" linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
+{{< reference title="Build and Deployment Overview"
+linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"
+linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx" >}}
 
 ### Step 7 - Configure permissions on Subtext App\_Data folder
 
@@ -442,7 +451,10 @@ As shown in the following figure, I recommend performing automated deployments
 to DEV on a daily basis (or more frequently depending on where you are in the
 release cycle).
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png" alt="Automated build and deployment" height="343" width="600" title="Figure 2: Automated build and deployment" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
+alt="Automated build and deployment" height="343" width="600"
+title="Figure 2: Automated build and deployment" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
@@ -466,7 +478,10 @@ While the DEV environment is automatically rebuilt (at least) once per day,
 deployments to the Test environment occur much less often -- for example, when a
 beta version of the solution is ready.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png" alt="\"Manual\" deployment to TEST" height="343" width="600" title="Figure 4: \"Manual\" deployment to TEST" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
+alt="\"Manual\" deployment to TEST" height="343" width="600"
+title="Figure 4: \"Manual\" deployment to TEST" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 

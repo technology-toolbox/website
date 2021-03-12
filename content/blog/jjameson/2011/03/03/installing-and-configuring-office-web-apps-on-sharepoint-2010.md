@@ -27,7 +27,9 @@ While creating the installation guide for this sprint, I used the following
 TechNet article as a reference for the section on installing and configuring
 Office Web Apps:
 
-{{< reference title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)" linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
+{{< reference
+title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"
+linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
 
 While the above article includes *most* of the steps you need to perform when
 deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking a
@@ -78,7 +80,8 @@ attempting to access an Excel workbook using a secured connection:
 
 {{< blockquote "font-italic text-danger" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services Application trusted location.
+This workbook cannot be opened because it is not stored in an Excel Services
+Application trusted location.
 
 {{< /blockquote >}}
 
@@ -226,7 +229,8 @@ database files.
 4. In the **Database Properties** dialog, in the **Select a page** area on the left, click **Files**.
 
 5. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
-   {{< table class="small" caption="Table 2 - Initial data and log file sizes" >}}
+   {{< table class="small"
+   caption="Table 2 - Initial data and log file sizes" >}}
    
    | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
    | --- | --- | --- | --- | --- | --- |

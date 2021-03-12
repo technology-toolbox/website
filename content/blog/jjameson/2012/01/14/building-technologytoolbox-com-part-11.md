@@ -14,14 +14,18 @@ I briefly mentioned how the **Most Popular Posts** section on the Technology
 Toolbox home page uses a CSS sprite to render the arrow image next to each list
 item.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png" alt="Technology Toolbox home page" class="screenshot" height="600" width="538" title="Figure 1: Technology Toolbox home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
+title="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 If you use Firebug to inspect one of the list items in the **Most Popular
 Posts** section, you'll notice the CSS `background` property is set to:
 
-url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px transparent
+url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px
+transparent
 
 > **Note**
 >
@@ -33,7 +37,10 @@ url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px transparen
 The "list item sprite" image is actually a 400x400 composite of multiple icons
 used throughout the site.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png" alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400" title="Figure 2: list-item-sprite-1.0.png" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
+alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
+title="Figure 2: list-item-sprite-1.0.png" >}}
 
 Notice that the "dashed arrow" icon used in the **Most Popular Posts** section
 is actually the fifth image in the set (starting from the lower-left corner).
@@ -60,7 +67,9 @@ Let's tackle these one at a time...
 
 If you look at some of the example CSS sprites in the following article...
 
-{{< reference title="CSS Sprites: What They Are, Why They’re Cool, and How To Use Them" linkHref="http://css-tricks.com/css-sprites/" >}}
+{{< reference
+title="CSS Sprites: What They Are, Why They’re Cool, and How To Use Them"
+linkHref="http://css-tricks.com/css-sprites/" >}}
 
 ...you will notice some sites "munge" a bunch of different images (of various
 sizes) into a single CSS sprite, whereas I have chosen to only combine the "list
@@ -80,7 +89,8 @@ users).
 
 Aaron Barker explains more about this technique in the following blog post:
 
-{{< reference title="Diagonal CSS Sprites" linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
+{{< reference title="Diagonal CSS Sprites"
+linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 
 > **Important**
 >
@@ -119,7 +129,10 @@ image) to quickly determine where to place the icons within the overall image.
 [If you click to enlarge the image, you can probably count the 50x50 pixels used
 for each cell in the grid -- or you can simply take my word for it :-) ]
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png" alt="List items sprite (Expression Design)" class="screenshot" height="377" width="600" title="Figure 3: List items sprite (Expression Design)" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png"
+alt="List items sprite (Expression Design)" class="screenshot" height="377"
+width="600" title="Figure 3: List items sprite (Expression Design)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
 
@@ -152,7 +165,10 @@ include this section?]
 Take a look at the **Archives** section displayed on the various blog pages in
 the site, such as the one shown in Figure 4.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png" alt="Blog home page" class="screenshot" height="600" width="374" title="Figure 4: Blog home page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+alt="Blog home page" class="screenshot" height="600" width="374"
+title="Figure 4: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 

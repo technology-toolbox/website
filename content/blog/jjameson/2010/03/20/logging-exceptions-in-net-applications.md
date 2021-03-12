@@ -33,7 +33,10 @@ I used the "
 provided by ASP.NET as a reference for logging the details of the exception.
 Here's a screenshot from a sample that I whipped up this morning:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png" alt="ASP.NET error page" class="screenshot" height="295" width="600" title="Figure 1: ASP.NET error page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
+alt="ASP.NET error page" class="screenshot" height="295" width="600"
+title="Figure 1: ASP.NET error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-1301x639.png)
 

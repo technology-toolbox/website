@@ -45,7 +45,8 @@ to Virtual Machine Management service..." message:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC service is running.
+Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC
+service is running.
 
 {{< /blockquote >}}
 

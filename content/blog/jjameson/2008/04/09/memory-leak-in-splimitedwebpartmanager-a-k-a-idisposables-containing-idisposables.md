@@ -66,7 +66,9 @@ something didn't feel "quite right" about it.
 This morning I did a quick search for "SPLimitedWebPartManager dispose" on
 Windows Live, and found the following:
 
-{{< reference title="Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? .. of ones and zeros.. 2007-06-05." linkHref="http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/" >}}
+{{< reference
+title="Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? .. of ones and zeros.. 2007-06-05."
+linkHref="http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/" >}}
 
 I, for one, agree with Bryan's assessment. The memory leak is inherently in
 `SPLimitedWebPartManager`. While it is true that Roger's example shows one way

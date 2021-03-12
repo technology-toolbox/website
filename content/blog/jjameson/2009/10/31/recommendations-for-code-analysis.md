@@ -55,7 +55,15 @@ Attempting this will now result in a broken build:
 
 {{< blockquote "font-italic text-danger" >}}
 
-Error 2 CA1305 : Microsoft.Globalization : Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'Program.Main(string[])' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.
+Error 2 CA1305 : Microsoft.Globalization : Because the behavior of
+'string.Format(string, object)' could vary based on the current user's locale
+settings, replace this call in 'Program.Main(string[])' with a call to
+'string.Format(IFormatProvider, string, params object[])'. If the result of
+'string.Format(IFormatProvider, string, params object[])' will be displayed to
+the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider'
+parameter. Otherwise, if the result will be stored and accessed by software,
+such as when it is persisted to disk or to a database, specify
+'CultureInfo.InvariantCulture'.
 
 {{< /blockquote >}}
 
@@ -96,7 +104,9 @@ most important, such as potential security issues.
 The following post provides some great information about which Code Analysis
 warnings to focus your attention on first:
 
-{{< reference title="What rules do Microsoft have turned on internally? 2007-08-09." linkHref="http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx" >}}
+{{< reference
+title="What rules do Microsoft have turned on internally? 2007-08-09."
+linkHref="http://blogs.msdn.com/fxcop/archive/2007/08/09/what-rules-do-microsoft-have-turned-on-internally.aspx" >}}
 
 This article is obviously a little dated, but still very relevant over two years
 later.

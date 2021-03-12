@@ -76,14 +76,20 @@ to Trace.axd (e.g.
 [http://fabrikam-local/Trace.axd](http://fabrikam-local/Trace.axd)) to display
 the Trace Viewer.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png" alt="ASP.NET Trace Viewer" class="screenshot" height="267" width="600" title="Figure 1: ASP.NET Trace Viewer" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
+alt="ASP.NET Trace Viewer" class="screenshot" height="267" width="600"
+title="Figure 1: ASP.NET Trace Viewer" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-705x314.png)
 
 Locate the request that you want to view log messages for and click the
 corresponding **View Details** link.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png" alt="ASP.NET Trace Viewer - Request Details" class="screenshot" height="600" width="474" title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
+alt="ASP.NET Trace Viewer - Request Details" class="screenshot" height="600"
+width="474" title="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-736x931.png)
 

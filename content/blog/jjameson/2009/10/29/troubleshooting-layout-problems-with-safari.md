@@ -38,7 +38,8 @@ Since I didn't have access to my faithful Firebug or Internet Explorer Developer
 Tools, I was initially stumped on troubleshooting the problem. However, a little
 bit of searching uncovered the following gem:
 
-{{< reference title="Firebug For Safari" linkHref="http://vision-media.ca/resources/misc/firefox-for-safari" >}}
+{{< reference title="Firebug For Safari"
+linkHref="http://vision-media.ca/resources/misc/firefox-for-safari" >}}
 
 Unlike many of the other search results that I looked at, this one doesn't
 actually discuss using Firebug in Safari (which I was reluctant to try because,

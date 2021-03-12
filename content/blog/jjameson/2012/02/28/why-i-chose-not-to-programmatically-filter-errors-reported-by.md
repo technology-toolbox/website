@@ -36,7 +36,8 @@ After a quick search of the issues list for ELMAH, I found
 Shortly thereafter, I stumbled upon a discussion thread which, quite honestly,
 made my head hurt (in one of those morning after New Year's Eve sort of ways):
 
-{{< reference title="The assembly strong naming conundrum" linkHref="http://nuget.codeplex.com/discussions/247827" >}}
+{{< reference title="The assembly strong naming conundrum"
+linkHref="http://nuget.codeplex.com/discussions/247827" >}}
 
 > **Warning**
 >

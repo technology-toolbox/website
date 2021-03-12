@@ -18,7 +18,10 @@ registry setting has, unfortunately, become less effective over the years since
 
 For example, here's what the disk usage looks like on one of my development VMs:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png" alt="Disk usage" class="screenshot" height="460" width="600" title="Figure 1:" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png"
+alt="Disk usage" class="screenshot" height="460" width="600"
+title="Figure 1:" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-991x760.png)
 
@@ -52,7 +55,8 @@ installing Visual Studio 2012.
 Unfortunately, it seems like this is just the way it's going to be from now on
 -- at least according to Heath Stewart from Microsoft:
 
-{{< reference title="How Visual Studio 2012 Avoids Prompts for Source" linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
+{{< reference title="How Visual Studio 2012 Avoids Prompts for Source"
+linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
 
 Heath, if you're reading this, then sorry, but I think Microsoft's decision to
 force this bloat on us is, um, stupid. Okay, maybe *shortsighted* is a softer

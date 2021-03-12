@@ -26,7 +26,10 @@ the Technology Toolbox website is actually built from two distinct Visual Studio
 solutions (specifically the "Caelum" solution in Visual Studio 2010 and the
 "Subtext" solution in Visual Studio 2008).
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg" alt="Solution architecture for TechnologyToolbox.com" height="520" width="600" title="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+alt="Solution architecture for TechnologyToolbox.com" height="520" width="600"
+title="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 

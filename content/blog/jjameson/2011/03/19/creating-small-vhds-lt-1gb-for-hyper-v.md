@@ -55,7 +55,9 @@ GB.
 This morning, I did a quick search for how to create a VHD using PowerShell and
 discovered the following post:
 
-{{< reference title="Hyper-V WMI Using PowerShell Scripts -- Part 2 (VHD Creation)" linkHref="http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx" >}}
+{{< reference
+title="Hyper-V WMI Using PowerShell Scripts -- Part 2 (VHD Creation)"
+linkHref="http://blogs.msdn.com/b/taylorb/archive/2008/05/02/hyper-v-wmi-using-powershell-scripts-part-2-vhd-creation.aspx" >}}
 
 [If, like me, you haven't come across that blog before, it's definitely worth
 taking a look at. Taylor Brown from the Hyper-V product team shares a lot of

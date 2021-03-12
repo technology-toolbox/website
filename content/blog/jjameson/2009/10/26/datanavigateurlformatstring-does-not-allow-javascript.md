@@ -69,7 +69,9 @@ attacks."
 
 Refer to the following for more detail:
 
-{{< reference title="asp:GridView does not render HyperLinkField when a colon (:) is included in the DataNavigateUrlFormatString. 2007-06-05." linkHref="https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=102300" >}}
+{{< reference
+title="asp:GridView does not render HyperLinkField when a colon (:) is included in the DataNavigateUrlFormatString. 2007-06-05."
+linkHref="https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=102300" >}}
 
 To workaround this, use a
 [TemplateField](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.templatefield.aspx)

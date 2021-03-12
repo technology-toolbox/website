@@ -52,7 +52,8 @@ So, a couple of minutes later, sure enough, there it was right in my capture:
 
 {{< blockquote "font-italic" >}}
 
-DNS: QueryId = 0x18FC, QUERY (Standard query), Query for wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
+DNS: QueryId = 0x18FC, QUERY (Standard query), Query for
+wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
 
 {{< /blockquote >}}
 

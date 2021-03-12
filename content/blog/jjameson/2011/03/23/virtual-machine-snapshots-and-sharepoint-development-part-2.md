@@ -64,7 +64,9 @@ the Hyper-V R2 release -- is the fact that disk performance is substantially
 improved in WS 2008 R2. If you haven't at least skimmed the following white
 paper, I recommend taking a look at it:
 
-{{< reference title="Virtual Hard Disk Performance - Windows Server 2008 / Windows Server 2008 R2 / Windows 7" linkHref="http://download.microsoft.com/download/0/7/7/0778C0BB-5281-4390-92CD-EC138A18F2F9/WS08_R2_VHD_Performance_WhitePaper.docx" >}}
+{{< reference
+title="Virtual Hard Disk Performance - Windows Server 2008 / Windows Server 2008 R2 / Windows 7"
+linkHref="http://download.microsoft.com/download/0/7/7/0778C0BB-5281-4390-92CD-EC138A18F2F9/WS08_R2_VHD_Performance_WhitePaper.docx" >}}
 
 In my experience,
 [VM performance is typically throttled by I/O](/blog/jjameson/2007/06/24/performance-of-virtual-machines)
@@ -133,7 +135,10 @@ effectively using snapshots.
 As a quick review, the following screenshot shows the snapshots for my primary
 SharePoint Server 2010 development VM (FOOBAR5):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png" alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600" title="Figure 1: FOOBAR5 snapshots" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
+alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
+title="Figure 1: FOOBAR5 snapshots" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
@@ -228,7 +233,10 @@ iteration.
 To understand this process, examine the snapshots shown below for one of my
 Microsoft Office SharePoint Server 2007 development VMs (FOOBAR2):
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png" alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600" title="Figure 2: FOOBAR2 snapshots" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
+alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600"
+title="Figure 2: FOOBAR2 snapshots" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
 

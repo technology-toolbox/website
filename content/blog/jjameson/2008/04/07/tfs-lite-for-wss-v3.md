@@ -106,7 +106,8 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    
    {{< /table >}}
    
-   <small>* You should actively change the default value for this column based on the target iteration for completing work items.</small>
+   <small>* You should actively change the default value for this column based
+   on the target iteration for completing work items.</small>
    <small>** Modify the out-of-the-box column accordingly.</small>
 
 7. Configure the following views:
@@ -144,13 +145,17 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
     
     {{< /table >}}
     
-    <small>* Change the filter as necessary to match the current iteration.</small>
+    <small>* Change the filter as necessary to match the current
+    iteration.</small>
 
 11. (Optional) Modify the **Project Summary** Web Part to display an image corresponding to the designated KPI value (using SharePoint Designer and a tiny bit of XSLT as described in my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
 
 12. In the **Links** list, add a link to the **Project Summary** page.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg" alt="Project Summary \"dashboard\"" class="screenshot" height="363" width="600" title="Figure 1: Project Summary \"dashboard\"" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
+alt="Project Summary \"dashboard\"" class="screenshot" height="363" width="600"
+title="Figure 1: Project Summary \"dashboard\"" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
 

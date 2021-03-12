@@ -34,7 +34,8 @@ Consequently I went looking for a secondary solution for formatting PowerShell
 scripts. A little searching on the Internet quickly led to a blog post by Lee
 Holmes:
 
-{{< reference title="More PowerShell Syntax Highlighting" linkHref="http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx" >}}
+{{< reference title="More PowerShell Syntax Highlighting"
+linkHref="http://www.leeholmes.com/blog/MorePowerShellSyntaxHighlighting.aspx" >}}
 
 While Lee's script outputs nicely formatted script as HTML, I decided to modify
 his approach a little. It's not that there's really anything wrong with Lee's

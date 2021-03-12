@@ -53,7 +53,9 @@ Fortunately for me, I didn't have to wait long for a response to my inquiry to
 one of the internal discussion lists. David Browne, a Technology Architect here
 at Microsoft, pointed me to the following:
 
-{{< reference title="Troubleshooting: Connecting to SQL Server When System Administrators Are Locked Out" linkHref="http://msdn.microsoft.com/en-us/library/dd207004.aspx" >}}
+{{< reference
+title="Troubleshooting: Connecting to SQL Server When System Administrators Are Locked Out"
+linkHref="http://msdn.microsoft.com/en-us/library/dd207004.aspx" >}}
 
 I wish that would have come up in my search!
 

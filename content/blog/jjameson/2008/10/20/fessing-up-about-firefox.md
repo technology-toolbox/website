@@ -114,7 +114,8 @@ Shortly thereafter, I found Screengrab! and I've never since looked for anything
 else. It is extremely "lightweight" and, unlike some of the other screen capture
 utilities for Firefox, it provides just the essential features:
 
-- Capture only the visible portion of the page, the entire page, or just a selected portion
+- Capture only the visible portion of the page, the entire page, or just a
+  selected portion
 - Copy the image to the clipboard or save directly to a PNG file
 
 The only quirk that I've noticed is that I can't copy a Web page and paste it
@@ -134,10 +135,13 @@ for Web development. Honestly, there are a lot more features in this add-on than
 I've ever even begun to use. However, I've found it very helpful simply for the
 following:
 
-- Quickly disabling/enabling various browser features, such as caching, JavaScript, cookies, and CSS
+- Quickly disabling/enabling various browser features, such as caching,
+  JavaScript, cookies, and CSS
 - Viewing and managing cookies
-- Resizing the browser window to view a page in standard sizes, such as 1024x768 or (shudder) even 800x600
-- Outlining specific HTML elements (such as all block level elements) to quickly gain familiarity with the structure of a Web page
+- Resizing the browser window to view a page in standard sizes, such as 1024x768
+  or (shudder) even 800x600
+- Outlining specific HTML elements (such as all block level elements) to quickly
+  gain familiarity with the structure of a Web page
 - Validating HTML, CSS, and JavaScript
 
 A long time ago, I tried out the Internet Explorer Developer Toolbar. However,

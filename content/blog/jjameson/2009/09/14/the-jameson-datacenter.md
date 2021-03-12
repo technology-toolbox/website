@@ -38,7 +38,11 @@ cooler during the day ;-)]
 The following figure shows the physical architecture of the various computers
 and network devices that comprise the "Jameson Datacenter":
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg" alt="The \"Jameson Datacenter\" - physical architecture" height="493" width="600" title="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
+alt="The \"Jameson Datacenter\" - physical architecture" height="493"
+width="600"
+title="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
 
@@ -56,7 +60,10 @@ Notice that I dedicate two servers specifically to running Hyper-V virtual
 machines (VMs). The following figure illustrates the various servers (both
 logical and physical) that typically run 24x7 in my lab:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg" alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600" title="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
+alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600"
+title="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
 
@@ -176,7 +183,11 @@ concede that Hyper-V VMs will forever be Hyper-V VMs.]
 The following figure provides more detail on the hardware configuration of the
 various servers:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg" alt="The \"Jameson Datacenter\" - hardware configuration" height="454" width="600" title="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
+alt="The \"Jameson Datacenter\" - hardware configuration" height="454"
+width="600"
+title="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
 

@@ -49,7 +49,8 @@ even just Excel -- on your SharePoint servers just for the sake of importing a
 few hundred (or perhaps a few thousand) pages into your site. Rather, you would
 simply need to install the following on one of the servers in your farm:
 
-{{< reference title="2007 Office System Driver: Data Connectivity Components" linkHref="http://www.microsoft.com/downloads/details.aspx?familyid=7554F536-8C28-4598-9B72-EF94E038C891&displaylang=en" >}}
+{{< reference title="2007 Office System Driver: Data Connectivity Components"
+linkHref="http://www.microsoft.com/downloads/details.aspx?familyid=7554F536-8C28-4598-9B72-EF94E038C891&displaylang=en" >}}
 
 Preferably, you would install this only on a backend "job/index" server that
 isn't servicing any user requests directly and then run the ImportPages.exe

@@ -40,13 +40,17 @@ extending the Web application -- say to the **Custom** zone -- and select the
 option to use SSL (e.g. [https://www.fabrikam.com](https://www.fabrikam.com/)).
 After all, this is the recommendation in the following TechNet article:
 
-{{< reference title="Update a Web application URL and IIS bindings (Windows SharePoint Services). (Updated 2009-04-23)." linkHref="http://technet.microsoft.com/en-us/library/cc298636.aspx" >}}
+{{< reference
+title="Update a Web application URL and IIS bindings (Windows SharePoint Services). (Updated 2009-04-23)."
+linkHref="http://technet.microsoft.com/en-us/library/cc298636.aspx" >}}
 
 Specifically, here is the text that I am referring to:
 
 {{< blockquote "font-italic" >}}
 
-We do not recommend reusing the same IIS Web site for your HTTP and SSL hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site, each assigned to its own alternate access mapping zone and URLs.
+We do not recommend reusing the same IIS Web site for your HTTP and SSL hosting.
+Instead, extend a dedicated HTTP and a dedicated SSL Web site, each assigned to
+its own alternate access mapping zone and URLs.
 
 {{< /blockquote >}}
 

@@ -38,7 +38,10 @@ solutions, it's not so great for Internet-facing sites.
 To understand why, consider a publishing site configured with
 **BlueBand.master** as the master page:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png" alt="Publishing site with BlueBand master page" class="screenshot" height="353" width="600" title="Figure 1: Publishing site with BlueBand master page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
+alt="Publishing site with BlueBand master page" class="screenshot" height="353"
+width="600" title="Figure 1: Publishing site with BlueBand master page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-1007x593.png)
 
@@ -104,7 +107,10 @@ namespace Fabrikam.Demo.WebParts
 As shown in the following screenshot, browsing to the home page now displays the
 SharePoint error page.
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png" alt="SharePoint error page" class="screenshot" height="366" width="600" title="Figure 2: SharePoint error page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
+alt="SharePoint error page" class="screenshot" height="366" width="600"
+title="Figure 2: SharePoint error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-1024x624.png)
 
@@ -153,7 +159,10 @@ see messages like "Troubleshoot issues with Windows SharePoint Services."
 The following screenshot shows a custom error page fashioned after
 BlueBand.master:
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png" alt="Custom SharePoint error page" class="screenshot" height="162" width="600" title="Figure 3: Custom SharePoint error page" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
+alt="Custom SharePoint error page" class="screenshot" height="162" width="600"
+title="Figure 3: Custom SharePoint error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-1024x276.png)
 
@@ -211,7 +220,9 @@ namespace Fabrikam.Demo.Publishing.Layouts.MasterPages
 Note that I'm essentially following the approach outlined in the following KB
 article:
 
-{{< reference title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET" linkHref="http://support.microsoft.com/kb/306355" >}}
+{{< reference
+title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET"
+linkHref="http://support.microsoft.com/kb/306355" >}}
 
 In the **Page\_Error** method, I first log the exception using
 [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications).

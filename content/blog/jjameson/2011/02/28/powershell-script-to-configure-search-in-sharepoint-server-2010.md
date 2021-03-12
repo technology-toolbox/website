@@ -50,7 +50,9 @@ The following post does a great job of explaining the fundamental problem that
 occurs when configuring Search using PowerShell and why the "create new
 topologies/delete original topologies" process is necessary:
 
-{{< reference title="SharePoint 2010 Configuring Search Service Application using PowerShell" linkHref="http://blogs.msdn.com/b/russmax/archive/2009/10/20/sharepoint-2010-configuring-search-service-application-using-powershell.aspx" >}}
+{{< reference
+title="SharePoint 2010 Configuring Search Service Application using PowerShell"
+linkHref="http://blogs.msdn.com/b/russmax/archive/2009/10/20/sharepoint-2010-configuring-search-service-application-using-powershell.aspx" >}}
 
 The other thing I noticed about the scripts that I came across -- and the
 primary reason why I'm sharing my own version -- is they appear to be missing
@@ -60,7 +62,8 @@ account other than the SharePoint farm account.
 The following table lists the service accounts that I recommend when configuring
 Search in SharePoint Server 2010:
 
-{{< table class="small" caption="Service accounts related to Search in SharePoint Server 2010" >}}
+{{< table class="small"
+caption="Service accounts related to Search in SharePoint Server 2010" >}}
 
 | User logon name | Full name | Description |
 | --- | --- | --- |

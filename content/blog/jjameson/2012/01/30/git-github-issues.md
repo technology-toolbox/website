@@ -55,7 +55,10 @@ working as expected.
 However, since I'm apparently in a ranting mood this morning, I thought I should
 share something else. What is wrong with the following screenshot?
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-600x350.png" alt="Git - pending changes - yes or no?" height="350" width="600" title="Figure 1: Git - pending changes - yes or no?" >}}
+{{< figure
+src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-600x350.png"
+alt="Git - pending changes - yes or no?" height="350" width="600"
+title="Figure 1: Git - pending changes - yes or no?" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-1113x650.png)
 
