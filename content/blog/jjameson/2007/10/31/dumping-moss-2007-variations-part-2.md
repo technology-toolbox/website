@@ -139,11 +139,11 @@ ON AllUserData
 A couple of things to note about the index:
 
 - The naming convention implies that this is not intended to be final
-  manifestation of this fix (you cannot add an index -- or make any other changes
-  -- to your SharePoint database unless it has been approved by PSS, unless you
-  don't object to falling under the "unsupported" moniker)
-- Since **tp\_DirName** specifies a server relative URL, this was chosen as the
-  first column in the index -- rather than **tp\_SiteId**.
+  manifestation of this fix (you cannot add an index -- or make any other
+  changes -- to your SharePoint database unless it has been approved by PSS,
+  unless you don't object to falling under the "unsupported" moniker)
+- Since **tp\_DirName** specifies a server relative URL, this was chosen as
+  the first column in the index -- rather than **tp\_SiteId**.
 - In environments where the content database only contains a single site collection (such as ours), including **tp\_SiteId** provides essentially no value (i.e. it does not influence the selectivity of the index)
 
 Lastly, it is worth noting that even after adding the index to TEST, we were

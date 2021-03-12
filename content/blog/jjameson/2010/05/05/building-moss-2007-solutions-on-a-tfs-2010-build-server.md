@@ -48,24 +48,25 @@ Microsoft.SharePoint.dll) were no longer available on the build server.
 To configure the build server to compile MOSS 2007 solutions:
 
 1. Create a folder ont the build server to contain the referenced assemblies for MOSS 2007:
+   
+   **C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
 
-**C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
 2. Copy the referenced SharePoint assemblies from another VM (which has MOSS 2007 installed) to this new folder. The list of SharePoint assemblies that you need to copy depends on the details of your solution, but typically includes:
-
-    - Microsoft.SharePoint.dll
-    - Microsoft.SharePoint.Publishing.dll
-    - Microsoft.SharePoint.Security.dll
-    - ...
+   
+   - Microsoft.SharePoint.dll
+   - Microsoft.SharePoint.Publishing.dll
+   - Microsoft.SharePoint.Security.dll
+   - ...
 
 3. Create a corresponding registry key for MSBuild to locate the reference assemblies. This is most easily accomplished by running the following from an Administrator command prompt:
-
-{{< console-block-start >}}
-
-reg add
-"HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
-v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
-
-{{< console-block-end >}}
+   
+   {{< console-block-start >}}
+   
+   reg add
+   "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
+   v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
+   
+   {{< console-block-end >}}
 
 After completing these steps, I queued another build of my Fabrikam.Demo
 solution and verified the errors caused by missing SharePoint assemblies no

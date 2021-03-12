@@ -89,16 +89,17 @@ function Add-Zip
 However, there are a few problems with this approach:
 
 - If you use the function as David illustrates in his post (e.g. "`dir Fabrikam\*.* -Recurse | Add-Zip Fabrikam.zip`") then the folder hierarchy is not preserved within the zip file -- which is almost certainly not what you want (but seems to have been okay for David's scenario).
+
 - If you try to operate on the folder instead (e.g. "`dir Fabrikam | Add-Zip Fabrikam.zip`") then an error occurs:
   {{< blockquote "font-italic text-danger" >}}
-
-You cannot call a method on a null-valued expression.
-At line:13 char:33
-
-+ $zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)
-  ...
-
-{{< /blockquote >}}
+  
+  You cannot call a method on a null-valued expression.
+  At line:13 char:33
+  
+  + $zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)
+    ...
+  
+  {{< /blockquote >}}
 
 - Relying exclusively on a 500 ms delay (to wait for the asynchronous **CopyHere** operation to complete) seems a little "dicey" to me. In other words, how do you know the zip operation completed successfully?
 

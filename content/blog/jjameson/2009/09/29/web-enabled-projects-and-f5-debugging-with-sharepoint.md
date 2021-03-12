@@ -73,21 +73,32 @@ directly.
 To Web-enable your C# class library project and configure for ASP.NET debugging:
 
 1. In the **Solution Explorer** window, select the class library project.
+
 2. Right-click the project name and then click **Unload Project**.
+
 3. Right-click the unloaded project and then click **Edit {project name}**.
+
 4. Below the `<ProjectGuid>` element, add the following:
+   
+   `<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>`
 
-`<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>`
 5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` element, add the following:
+   
+   `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
 
-`<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
 6. On the **File** menu, click **Close**. When prompted to save the file, click **Yes**.
+
 7. In the **Solution Explorer** window, right-click the project, and then click **Reload Project**.
+
 8. Wait for the project to finish loading, right-click the project name again, and click **Properties**. Notice that there is now a **Web** tab in the project settings.
+
 9. On the project settings **Web** tab, under the **Servers**section:
-1. Clear the **Apply server settings to all users (store in project file)** checkbox (since various members of the Development team might use different URLs for their local SharePoint sites).
-2. Select the **Use Custom Web Server** option, and in the **Server Url** box, type the URL of your SharePoint site (e.g. [http://fabweb-local](http://fabweb-local/)).
+   
+   1. Clear the **Apply server settings to all users (store in project file)** checkbox (since various members of the Development team might use different URLs for their local SharePoint sites).
+   2. Select the **Use Custom Web Server** option, and in the **Server Url** box, type the URL of your SharePoint site (e.g. [http://fabweb-local](http://fabweb-local/)).
+
 10. Close the project settings window.
+
 11. In the **Solution Explorer** window, right-click the project, and then click **Set as StartUp Project**.
 
 > **Note**

@@ -723,12 +723,12 @@ To run the preparation tool:
    > **Note**
    > 
    > After you complete the Microsoft SharePoint Products Preparation Tool, you
-   > must install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917) and
-   > [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server
-   > after installing these hotfixes.
+   > must install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917)
+   > and [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart
+   > the server after installing these hotfixes.
    > 
-   > When installing these hotfixes on Windows Server 2008 R2, you may be notified
-   > that these updates are not applicable.
+   > When installing these hotfixes on Windows Server 2008 R2, you may be
+   > notified that these updates are not applicable.
    
    > **Note**
    > 
@@ -1288,13 +1288,13 @@ To enable selection of people and groups from the internal Fabrikam domain:
    
    > **Note**
    > 
-   > The key specified above can be any string. It is used to encrypt the password
-   > specified in the following procedure when storing the credentials in the
-   > database.
+   > The key specified above can be any string. It is used to encrypt the
+   > password specified in the following procedure when storing the credentials
+   > in the database.
    > 
-   > This key is used to encrypt the password for the account used to access the
-   > forest or domain. The encryption string must be the same for every server in
-   > the farm.
+   > This key is used to encrypt the password for the account used to access
+   > the forest or domain. The encryption string must be the same for every
+   > server in the farm.
 
 3. Repeat the steps above on each Web server in the farm.
 
@@ -2127,11 +2127,11 @@ To create the sample content:
    > 
    > If deploying a build copied from the release server (i.e. DAZZLER), use the following path:
    > 
-   >     > **{build version}\{Debug|Release}**
+   > > **{build version}\{Debug|Release}**
    > 
    > If deploying a build to a local development environment from a TFS workspace, use the following path:
    > 
-   >     > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
+   > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
 
 2. Type the following command:
    

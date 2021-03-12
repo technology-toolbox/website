@@ -52,24 +52,25 @@ To resolve the error after applying an old Hyper-V snapshot on a VM joined to a
 domain:
 
 1. Login to the VM using a local administrator account.
+
 2. Open an administrator command prompt and run the following command:
-
-{{< console-block-start >}}
-
-netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:\*
-
-{{< console-block-end >}}
-For example:
-
-{{< console-block-start >}}
-
-netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
-
-{{< console-block-end >}}
-
-    > **Note**
-    > 
-    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
+   
+   {{< console-block-start >}}
+   
+   netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:\*
+   
+   {{< console-block-end >}}
+   For example:
+   
+   {{< console-block-start >}}
+   
+   netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
+   
+   {{< console-block-end >}}
+   
+   > **Note**
+   > 
+   > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
 
 3. Logout and log back in using a domain account.
 

@@ -226,8 +226,9 @@ database files.
    | --- | --- | --- | --- | --- | --- |
    | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted gerowth |
    |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
+   
+   {{< /table >}}
 
-{{< /table >}}
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes

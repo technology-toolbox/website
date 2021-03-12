@@ -77,29 +77,30 @@ To attach the content database in SharePoint Server 2010 by using Windows
 Powershell:
 
 1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint 2010 Products**, right-click **SharePoint 2010 Management Shell**, and then click **Run as administrator**. If prompted by **User Account Control** to allow the program to make changes to this computer, click **Yes**.
+
 2. At the Windows PowerShell command prompt, type the following command:
-
-{{< console-block-start >}}
-
-Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer
-&lt;ServerName&gt; -WebApplication &lt;URL&gt; [-Updateuserexperience]
-
-{{< console-block-end >}}
-Where:
-
-    - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to upgrade.
-    - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
-    - <var>&lt;URL&gt;</var> is the URL for the Web application that will host the sites.
-    - <var>-Updateuserexperience</var> specifies to update the sites with the new SharePoint user experience (part of Visual Upgrade). If you omit this parameter, the sites retain the old user experience after upgrade.
-
-For example:
-
-{{< console-block-start >}}
-
-Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
--WebApplication http://cyclops-dev -Updateuserexperience
-
-{{< console-block-end >}}
+   
+   {{< console-block-start >}}
+   
+   Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer
+   &lt;ServerName&gt; -WebApplication &lt;URL&gt; [-Updateuserexperience]
+   
+   {{< console-block-end >}}
+   Where:
+   
+   - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to upgrade.
+   - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
+   - <var>&lt;URL&gt;</var> is the URL for the Web application that will host the sites.
+   - <var>-Updateuserexperience</var> specifies to update the sites with the new SharePoint user experience (part of Visual Upgrade). If you omit this parameter, the sites retain the old user experience after upgrade.
+   
+   For example:
+   
+   {{< console-block-start >}}
+   
+   Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
+   -WebApplication http://cyclops-dev -Updateuserexperience
+   
+   {{< console-block-end >}}
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and
 click **Configure Installed Features**.

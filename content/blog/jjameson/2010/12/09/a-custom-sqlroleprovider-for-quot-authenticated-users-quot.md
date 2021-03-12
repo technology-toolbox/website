@@ -178,15 +178,17 @@ I then added the following steps to the installation guide:
 > To add the custom role provider to the IIS Administration.config file:
 >
 > 1. Click **Start**, point to **All Programs**, point to **Accessories**, and right-click **Command Prompt**, and then click **Run as administrator**.
+>
 > 2. At the command prompt, change to the following directory:
+>    
+>    **%WinDir%\system32\inetsrv\config
+>    **
 >
-> **%WinDir%\system32\inetsrv\config
-> **
 > 3. Type the following command:
->
->     ```
->     notepad administration.config
->     ```
+>    
+>    ```
+>    notepad administration.config
+>    ```
 >
 > 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
 >    

@@ -29,15 +29,15 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
 
 1. <cite>"The Media Guy"</cite>
    {{< blockquote "font-italic" >}}
-
-Great article.. was very helpful. I used 960.gs for my master page as well and
-all is good. I am now creating a 3 column page layout . I need a grid\_3 (left),
-grid\_6 (middle), and a grid\_3 (right). I would like these all to be blank web
-part zones. I started off with the "Blank web part page" as a template but it is
-using nested Tables and really hard to look at. Do you have any advice for a
-starting a page layout based on 960.gs?
-
-{{< /blockquote >}}
+   
+   Great article.. was very helpful. I used 960.gs for my master page as well
+   and all is good. I am now creating a 3 column page layout . I need a grid\_3
+   (left), grid\_6 (middle), and a grid\_3 (right). I would like these all to
+   be blank web part zones. I started off with the "Blank web part page" as a
+   template but it is using nested Tables and really hard to look at. Do you
+   have any advice for a starting a page layout based on 960.gs?
+   
+   {{< /blockquote >}}
 
 Rather than trying to explain to "The Media Guy" how to create a page layout
 based on the [960 Grid System](http://960.gs/), this weekend I revisited the
@@ -144,17 +144,18 @@ To deploy the Fabrikam Demo to SharePoint:
    > Be sure to specify a valid local or domain user.
 
 4. Change to the folder containing the deployment scripts:
+   
+   {{< console-block-start >}}
+   
+   cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
+   
+   {{< console-block-end >}}
 
-{{< console-block-start >}}
-
-cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
-
-{{< console-block-end >}}
 5. Type the following command:
-
-    ```
-    "Create Web Applications.cmd"
-    ```
+   
+   ```
+   "Create Web Applications.cmd"
+   ```
 
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
    

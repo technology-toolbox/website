@@ -130,35 +130,45 @@ Here are the repro steps to break the variations feature using no custom code
 and no custom content types:
 
 1. Create a new Web application
+
 2. Create a site collection using the **Publishing Portal** site definition
+
 3. Configure variations using / as the **Location** for the **Variation Home** (use defaults for all other settings)
+
 4. Create a new variation label with the following:
+   
+   **Label Name: en-US
+   Display Name: English (United States)
+   Locale: English (United States)
+   Source Variation: Yes
+   Publishing site template: Publishing Site with Workflow
+   **
 
-**Label Name: en-US
-Display Name: English (United States)
-Locale: English (United States)
-Source Variation: Yes
-Publishing site template: Publishing Site with Workflow
-**
 5. Create the variation hierarchies (to create the **/en-US** site)
+
 6. Create a new site under the variation source site (**/en-US/foo**)
+
 7. Change the content type of the default page in the new site (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**. Note that in order to change the content type of the page, you need to view the underlying **Pages** library (use **Site Actions** --&gt; **View All Site Content**) and then edit the properties on the page.
+
 8. Change the page layout to **Article page with summary links** and approve the page.
+
 9. Create a new variation label with the following:
+   
+   **Label Name: ja-JP
+   Display Name: Japanese
+   Locale: Japanese**
 
-**Label Name: ja-JP
-Display Name: Japanese
-Locale: Japanese**
 10. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo** sites)
+
 11. View the variation logs and notice the failure with the following error:
-
-{{< blockquote "font-italic text-danger" >}}
-
-The variation system failed to pair up pages
-http://foobar/en-US/foo/Pages/default.aspx and /ja-JP/foo/Pages/default.aspx
-because their Content Types do not match.
-
-{{< /blockquote >}}
+    
+    {{< blockquote "font-italic text-danger" >}}
+    
+    The variation system failed to pair up pages
+    http://foobar/en-US/foo/Pages/default.aspx and /ja-JP/foo/Pages/default.aspx
+    because their Content Types do not match.
+    
+    {{< /blockquote >}}
 
 [[Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this
 series is now available.]

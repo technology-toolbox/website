@@ -323,7 +323,6 @@ Features.cmd**.
 
 ```
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
-
 ```
 
 C:\Windows\system32&gt;{{< kbd

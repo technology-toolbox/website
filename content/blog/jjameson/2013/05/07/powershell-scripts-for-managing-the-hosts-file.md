@@ -63,7 +63,6 @@ tugboatcoffee-local                                         127.0.0.1
 www-local.fabrikam.com                                      127.0.0.1
 www-local.technologytoolbox.com                             127.0.0.1
 www-local.tugboatcoffee.com                                 127.0.0.1
-
 ```
 
 > **Note**
