@@ -54,12 +54,12 @@ the example bugs to get a feel for the level of detail expected during the
 > Microsoft uses Tell Mode and Ask Mode to refer to different time periods after
 > the Feature Complete milestone but prior to a release.
 >
-> During Tell Mode the Development team *tells* the rest of the team which issues
-> are actively being worked on (resolved). In other words, Development is
+> During Tell Mode the Development team *tells* the rest of the team which
+> issues are actively being worked on (resolved). In other words, Development is
 > primarily driving the stabilization process based on what they think should be
-> fixed -- as determined by priority, severity, complexity (i.e. risk), and effort
-> required. This works for a while, but at some point you have to reign in
-> Development in order to ship, er, release.
+> fixed -- as determined by priority, severity, complexity (i.e. risk), and
+> effort required. This works for a while, but at some point you have to reign
+> in Development in order to ship, er, release.
 >
 > Thus we transition into Ask Mode whereby Development must *ask* permission
 > before resolving any issues. It is okay to investigate issues, but <u>no code
@@ -70,9 +70,9 @@ the example bugs to get a feel for the level of detail expected during the
 > motivation for fixing it), we look at why the bug happens (regression, test
 > hole, coding error, etc.), and then we investigate the necessary source code
 > changes and associated risk. Every potential change is heavily scrutinized to
-> evaluate whether it is worth the risk to fix it, because <u>at this point in the
-> schedule, every change -- even one that seems trivial -- has the potential to
-> destabilize the solution and slip the schedule</u>.
+> evaluate whether it is worth the risk to fix it, because <u>at this point in
+> the schedule, every change -- even one that seems trivial -- has the potential
+> to destabilize the solution and slip the schedule</u>.
 >
 > While the overall process of the daily triage meetings stays the same as we
 > transition from Tell Mode to Ask Mode, there is a noticeable shift in focus.
@@ -96,11 +96,11 @@ the example bugs to get a feel for the level of detail expected during the
 >
 > Note that both **Solution** and **Teams Impacted** are not needed, one or the
 > other is fine. If the necessary change (and associated risk) is very small --
-> such as a configuration change -- then just documenting the **Solution** should
-> suffice. The goal is not to overburden ourselves with process -- but we also
-> need to ensure that no change is made unless it has been thoroughly evaluated.
-> If the change (or risk) is substantial, then document the impact on each of the
-> various teams.
+> such as a configuration change -- then just documenting the **Solution**
+> should suffice. The goal is not to overburden ourselves with process -- but we
+> also need to ensure that no change is made unless it has been thoroughly
+> evaluated. If the change (or risk) is substantial, then document the impact on
+> each of the various teams.
 >
 > You can see some example bugs from v1.0 for more details:
 > [1592](https://extranet.fabrikam.com/sites/Project1/Lists/Work%20Items/DispForm.aspx?ID=1592),
@@ -120,26 +120,28 @@ the example bugs to get a feel for the level of detail expected during the
 > Note that the Triage Team can certainly "overrule" the investigator, which is
 > why it is critical that no work be done on actually resolving the work item
 > until approval is received from the Triage Team (i.e. the **Triage** field is
-> set to **Approved**). Also note that, unless you are a member of the Triage Team
-> -- and even then, only during a formal triage meeting -- <u>you should not
-> change the <b>Triage</b> field to anything except <b>Recommend Approve</b> or
-> <b>Recommend Reject</b></u>. Otherwise, you should fully expect a thorough
+> set to **Approved**). Also note that, unless you are a member of the Triage
+> Team -- and even then, only during a formal triage meeting -- <u>you should
+> not change the <b>Triage</b> field to anything except <b>Recommend Approve</b>
+> or <b>Recommend Reject</b></u>. Otherwise, you should fully expect a thorough
 > hazing from virtually all team members.
 >
 > Everyone who was involved in v1.0 knows that we didn't strictly follow this
 > process in the first release of *[Project]*, but we also have the "scars" to
 > remind us that we need to improve our process for this release.
 >
-> It is also important to note that Microsoft fully acknowledges that we had many
-> more QFEs for v1.0 than we intended, and we never did deploy v1.1 as a separate
-> release. We need to be committed to ensuring that we don't repeat this in v2.
+> It is also important to note that Microsoft fully acknowledges that we had
+> many more QFEs for v1.0 than we intended, and we never did deploy v1.1 as a
+> separate release. We need to be committed to ensuring that we don't repeat
+> this in v2.
 >
-> Yes, we will release v2.0 with known issues. By now, everyone has heard Jeremy's
-> anecdote about the 64,000 "issues" in the RTM version of Windows 2000 -- so no
-> sense repeating that. Rather we need to focus on making sure that most of the
-> "issues" are known, we understand the impact of those issues on the user
-> experience, and -- where necessary -- we find creative ways to circumvent the
-> issues until the underlying changes can be implemented, tested, and deployed.
+> Yes, we will release v2.0 with known issues. By now, everyone has heard
+> Jeremy's anecdote about the 64,000 "issues" in the RTM version of Windows 2000
+> -- so no sense repeating that. Rather we need to focus on making sure that
+> most of the "issues" are known, we understand the impact of those issues on
+> the user experience, and -- where necessary -- we find creative ways to
+> circumvent the issues until the underlying changes can be implemented, tested,
+> and deployed.
 >
 > ***
 
@@ -167,25 +169,25 @@ unless you actually were a member of this project ;-)
 > #### Proposal:
 >
 > Correct the **Literature Summary** view to properly group and order by
-> publication type. Increase the maximum number of search results in this scenario
-> from 200 to 1000.
+> publication type. Increase the maximum number of search results in this
+> scenario from 200 to 1000.
 >
 > Ensure that clicking a publication type in the list shows the matching
 > publications of the specified type.
 >
 > #### Risk:
 >
-> The current implementation of LiteratureResults.asp uses a hard-coded maximum of
-> 200 search results (this limit was chosen for performance reasons since there is
-> significant cost in sending large result sets from the SharePoint farm to the
-> legacy ASP farm). Therefore, simply changing the sort order to publication type
-> could potentially truncate the **Literature Summary** view such that it only
-> showed one publication type (for example, if more than 200 Applications matched
-> the specified criteria).
+> The current implementation of LiteratureResults.asp uses a hard-coded maximum
+> of 200 search results (this limit was chosen for performance reasons since
+> there is significant cost in sending large result sets from the SharePoint
+> farm to the legacy ASP farm). Therefore, simply changing the sort order to
+> publication type could potentially truncate the **Literature Summary** view
+> such that it only showed one publication type (for example, if more than 200
+> Applications matched the specified criteria).
 >
-> While it is simple to increase the maximum number of results (for example, from
-> 200 to 1000) when rendering the **Literature Summary** view, this will put
-> considerable load on SharePoint Search for two reasons:
+> While it is simple to increase the maximum number of results (for example,
+> from 200 to 1000) when rendering the **Literature Summary** view, this will
+> put considerable load on SharePoint Search for two reasons:
 >
 > 1. We need to order first by ContentType2 in order to return the result set in the order expected by the legacy ASP code that generates the **Literature Summary** view.
 > 2. SharePoint Search is optimized to sort by rank first (since it is typically desired to show the "best" results at the top of the list). In order to return a result set of, say, 1000 items sorted by something other than rank, SharePoint must do a lot more work before it can trim the result set.
@@ -202,9 +204,9 @@ unless you actually were a member of this project ;-)
 > Modify LiteratureSearchResults.asp to change the max number of results to be a
 > variable with a default value of 200.
 >
-> Modify SetSortParameters in SearchModule.inc to set the sort expression used in
-> ESI (strSortExpression) and to override the default max results value to allow
-> 1000 results. (1 hour).
+> Modify SetSortParameters in SearchModule.inc to set the sort expression used
+> in ESI (strSortExpression) and to override the default max results value to
+> allow 1000 results. (1 hour).
 >
 > **Release Management**
 > Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM (1
@@ -223,10 +225,10 @@ unless you actually were a member of this project ;-)
 >
 > #### Motivation:
 >
-> LiteratureResults.aspx currently excludes the following content types (since the
-> number of publications of these types is disproportionately higher than other
-> publication types and also because these publication types have separate search
-> forms):
+> LiteratureResults.aspx currently excludes the following content types (since
+> the number of publications of these types is disproportionately higher than
+> other publication types and also because these publication types have separate
+> search forms):
 >
 > - Chromatogram
 > - Certificate of Analysis
@@ -244,12 +246,12 @@ unless you actually were a member of this project ;-)
 >
 > #### Risk:
 >
-> Of the roughly 33,000 publications in the EPI Warehouse, there are approximately
-> 1,300 Certificate of Analysis and 7,100 MSDS publications.
+> Of the roughly 33,000 publications in the EPI Warehouse, there are
+> approximately 1,300 Certificate of Analysis and 7,100 MSDS publications.
 >
-> Since the new SharePoint search includes full-text indexing as well as metadata,
-> including these two publication types by default may dramatically change the
-> search results.
+> Since the new SharePoint search includes full-text indexing as well as
+> metadata, including these two publication types by default may dramatically
+> change the search results.
 >
 > #### Teams Impacted
 >

@@ -282,12 +282,12 @@ store a "super-secret" hash of the expected value in the cookie.
 > almost laughable to use that word), and subsequently create a hack to spam the
 > site.
 >
-> If you do decide to do this, then a) you're a *loser*, and b) I'll just quickly
-> change the hashing code to generate some other value. In hindsight, I suppose I
-> could have encrypted the expected value for the CAPTCHA instead (so that even if
-> you saw the code, you wouldn't be able to spoof a valid cookie because you
-> wouldn't know the encryption key), but -- well, to be honest, that simply didn't
-> occur to me until just this moment.
+> If you do decide to do this, then a) you're a *loser*, and b) I'll just
+> quickly change the hashing code to generate some other value. In hindsight, I
+> suppose I could have encrypted the expected value for the CAPTCHA instead (so
+> that even if you saw the code, you wouldn't be able to spoof a valid cookie
+> because you wouldn't know the encryption key), but -- well, to be honest, that
+> simply didn't occur to me until just this moment.
 
 I also encountered some issues when using the CAPTCHA control on a page where
 view state is disabled and an **UpdatePanel** is used to perform a partial page

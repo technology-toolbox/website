@@ -32,9 +32,9 @@ the following:
 You will find page after page of results similar to the following:
 
 > [Microsoft Security Bulletin MS08-054 - Critical](http://www.microsoft.com/technet/security/Bulletin/MS08-054.mspx)
-> **Windows Server 2008 server core installation not affected**. The vulnerability
-> addressed by this update does not affect supported editions of Windows Server
-> 2008 if Windows Server ...
+> **Windows Server 2008 server core installation not affected**. The
+> vulnerability addressed by this update does not affect supported editions of
+> Windows Server 2008 if Windows Server ...
 > <cite>www.microsoft.com/technet/security/Bulletin/MS08-054.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76133794257994&mkt=en-US&setlang=en-US&w=e671a5b0,e59d79e9)
 >
@@ -46,9 +46,9 @@ You will find page after page of results similar to the following:
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76162242072335&mkt=en-US&setlang=en-US&w=c3f59bce,63fef00c)
 >
 > [Microsoft Security Bulletin MS08-053 - Critical](http://www.microsoft.com/technet/security/Bulletin/MS08-053.mspx)
-> **Windows Server 2008 server core installation not affected**. The vulnerability
-> addressed by this update does not affect supported editions of Windows Server
-> 2008 if Windows Server ...
+> **Windows Server 2008 server core installation not affected**. The
+> vulnerability addressed by this update does not affect supported editions of
+> Windows Server 2008 if Windows Server ...
 > <cite>www.microsoft.com/technet/security/Bulletin/MS08-053.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76116313320319&mkt=en-US&setlang=en-US&w=92aafff1,c365475a)
 >

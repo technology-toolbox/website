@@ -255,11 +255,11 @@ elsewhere.
 > (i.e. images based on a random key and IV), it may take several months before
 > you stop seeing this error. The good news is that Google will eventually "give
 > up" and remove the old CAPTCHA URLs from the index. The new CAPTCHA image URLs
-> (based on the fixed key and IV specified in Web.config) will no longer generate
-> the errors.
+> (based on the fixed key and IV specified in Web.config) will no longer
+> generate the errors.
 >
-> In my case, these errors stopped occurring around the middle of December (and I
-> switched to a fixed key and IV in early October).
+> In my case, these errors stopped occurring around the middle of December (and
+> I switched to a fixed key and IV in early October).
 
 **Recommendation:** Implement the fix described above and then be patient.
 

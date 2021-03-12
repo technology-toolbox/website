@@ -19,7 +19,8 @@ series on building TechnologyToolbox.com was the last post that I created
 I quickly discovered the following in the "Troubleshootize" page on the
 [Google Feedburner](http://feedburner.google.com) site:
 
-> **The trouble:** Your FeedBurner feed isn't up-to-date with your Original Feed.
+> **The trouble:** Your FeedBurner feed isn't up-to-date with your Original
+> Feed.
 > **The fix:** Try [pinging FeedBurner](http://feedburner.google.com/fb/a/ping)
 > using our Ping page. This action tells FeedBurner to go check your feed for
 > updates immediately.
@@ -36,13 +37,13 @@ the latest blog post.
 > when pinging my blog from Feedburner.
 >
 > According to the **Ping Feedburner** page, you are supposed to provide "the
-> address of the Web site hosting the source feed" but I encountered an error each
-> time I tried specifying the "Original Feed" address. I'm guessing this is caused
-> by the fact that Subtext redirects to the Feedburner URL whenever a request is
-> made to "rss.aspx" and the **User-Agent** HTTP header does not start with
-> `"FeedBurner"` (refer to the `RedirectToFeedBurnerIfNecessary()` method in
-> `BaseSyndicationHandler` if you are using Subtext and you aren't sure what I'm
-> talking about here).
+> address of the Web site hosting the source feed" but I encountered an error
+> each time I tried specifying the "Original Feed" address. I'm guessing this is
+> caused by the fact that Subtext redirects to the Feedburner URL whenever a
+> request is made to "rss.aspx" and the **User-Agent** HTTP header does not
+> start with `"FeedBurner"` (refer to the `RedirectToFeedBurnerIfNecessary()`
+> method in `BaseSyndicationHandler` if you are using Subtext and you aren't
+> sure what I'm talking about here).
 
 Unfortunately, after waiting a few minutes, "Part 4" was still nowhere to be
 found (except, of course, by browsing directly to my blog).

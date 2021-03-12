@@ -87,11 +87,11 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 > transaction log storage (even if you
 > [configure your SharePoint databases to use the Simple recovery model by default](/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments)).
 > Unfortunately, I discovered that when I tried to configure numerous service
-> applications on my development VM (to match my client's Production environment)
-> I ran out of space on my L: drive.
+> applications on my development VM (to match my client's Production
+> environment) I ran out of space on my L: drive.
 >
-> Instead of the 200 MB I originally thought that I could get away with, I now use
-> 500 MB. So far, I haven't encountered any issues with this increased size.
+> Instead of the 200 MB I originally thought that I could get away with, I now
+> use 500 MB. So far, I haven't encountered any issues with this increased size.
 
 Note that you'll probably need to change the permissions on the new VHD in order
 to avoid an "Access Denied" error message after attaching the VHD to a VM:

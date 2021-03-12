@@ -168,8 +168,8 @@ the following error in IIS Manager (after clicking **.NET Roles**):
 > provider.
 >
 > You can use this feature only when the default provider is a trusted provider.
-> If you are a server administrator, you can make a provider a trusted provider by
-> adding the provider type to the trusted providers list in the
+> If you are a server administrator, you can make a provider a trusted provider
+> by adding the provider type to the trusted providers list in the
 > Administration.config file. The provider has to be strongly typed and added to
 > the GAC (Global Assembly Cache).
 

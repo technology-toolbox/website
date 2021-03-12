@@ -75,16 +75,17 @@ the seamless redirect works as expected.
 > the Microsoft Office Live Add-in.
 >
 > Note that I tried reinstalling the Office Live Add-in on my VM to try to repro
-> the error again prior to installing the June 2009 CU. Unfortunately, I couldn't
-> find the 1.3 version available for download anymore from microsoft.com (the
-> download page is no longer available). When I downloaded and installed the 1.4
-> version, I was unable to repro the error when browsing locally from my VM.
+> the error again prior to installing the June 2009 CU. Unfortunately, I
+> couldn't find the 1.3 version available for download anymore from
+> microsoft.com (the download page is no longer available). When I downloaded
+> and installed the 1.4 version, I was unable to repro the error when browsing
+> locally from my VM.
 >
 > I subsequently downloaded the June 2009 CU and proceeded to install it on my
 > local VM (since I could still test with the 1.3 version of the Office Live
-> Add-in from my laptop). Unfortunately, I could only install the WSS part of this
-> CU -- not the MOSS part. (The MOSS patch is giving me the dreaded "expected
-> version of the product was not found on the system" error.)
+> Add-in from my laptop). Unfortunately, I could only install the WSS part of
+> this CU -- not the MOSS part. (The MOSS patch is giving me the dreaded
+> "expected version of the product was not found on the system" error.)
 >
 > However, even with just the WSS portion of the June 2009 CU, I am no longer
 > seeing the error when browsing to my local VM from my laptop.

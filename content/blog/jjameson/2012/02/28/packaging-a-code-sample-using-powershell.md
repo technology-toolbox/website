@@ -161,7 +161,7 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 >
 > This script uses the
 > [PowerShell Community Extensions](http://pscx.codeplex.com/) to create the zip
-> file. If you can't or don't want to install PSCX, refer to my previous post for
-> a way to create a zip file using out-of-the-box PowerShell and some scriptable
-> COM objects from the Windows Shell.
+> file. If you can't or don't want to install PSCX, refer to my previous post
+> for a way to create a zip file using out-of-the-box PowerShell and some
+> scriptable COM objects from the Windows Shell.
 

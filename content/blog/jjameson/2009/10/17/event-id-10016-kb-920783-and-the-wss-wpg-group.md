@@ -87,10 +87,10 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't specify
 > the **WSS\_ADMIN\_WPG** group -- only the **WSS\_WPG** group.
 >
-> Ugh...that will teach me to try to recall something like this from memory. When
-> I was writing this blog post, I mistakenly thought that the service account for
-> the SharePoint farm was added to both WSS\_ADMIN\_WPG and WSS\_WPG. However,
-> this isn't the case.
+> Ugh...that will teach me to try to recall something like this from memory.
+> When I was writing this blog post, I mistakenly thought that the service
+> account for the SharePoint farm was added to both WSS\_ADMIN\_WPG and
+> WSS\_WPG. However, this isn't the case.
 >
 > Therefore you need to be sure to apply the steps in
 > [KB 920783](http://support.microsoft.com/kb/920783) using both groups if you

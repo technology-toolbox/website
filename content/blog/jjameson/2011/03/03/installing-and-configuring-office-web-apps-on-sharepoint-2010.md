@@ -120,7 +120,8 @@ files (at least in a production environment).
 > **Important**
 >
 > You must start a new instance of the SharePoint 2010 Management Shell after
-> installing the Office Web Apps in order to use the new PowerShell cmdlets (e.g.
+> installing the Office Web Apps in order to use the new PowerShell cmdlets
+> (e.g.
 > [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
 >
 > Also note that you may need to wait a few minutes (after installing Office Web

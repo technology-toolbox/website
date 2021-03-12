@@ -270,8 +270,8 @@ The **GetMonthName** method is, as expected, rather trivial:
 >
 > Also note that there *may* be a way to combine the **GetMonthName** logic into
 > the actual LINQ query, but I couldn't find one. Keep in mind that the results
-> need to be ordered chronologically in reverse order (for example, for each year
-> the "November" results need to come before "January" results).
+> need to be ordered chronologically in reverse order (for example, for each
+> year the "November" results need to come before "January" results).
 
 At this point, the control is nearly identical to the feature on my old MSDN
 blog (which is to say that it serves the basic purpose, but it consumes too much

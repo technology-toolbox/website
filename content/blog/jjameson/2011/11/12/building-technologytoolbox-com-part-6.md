@@ -168,12 +168,12 @@ won't automatically create any necessary folders):
 
 > **Important**
 >
-> When migrating content from one system to another, I strive to minimize the load
-> on the source system -- in this case, by downloading the files one time from the
-> MSDN blog site. While I could certainly download these pages each time the
-> program runs, this would put an unnecessary load on the MSDN site (and also
-> significantly slow down the process of developing the content migration
-> utility).
+> When migrating content from one system to another, I strive to minimize the
+> load on the source system -- in this case, by downloading the files one time
+> from the MSDN blog site. While I could certainly download these pages each
+> time the program runs, this would put an unnecessary load on the MSDN site
+> (and also significantly slow down the process of developing the content
+> migration utility).
 >
 > Note that this is just one way of minimizing the impact of migrating content.
 > Another common approach that I've used in the past is to initially run the
@@ -791,14 +791,15 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around **
 > "good enough" to do its job but doesn't necessarily demonstrate best coding
 > practices. For example, I don't bother enabling *all* code analysis rules on
 > "throw away" code like this (which is typically one of the first things I do
-> after creating a new project in Visual Studio). Mind you, I definitely add these
-> kinds of utilities to source control, but that's primarily as a benefit during
-> development so I can easily rollback unwanted changes (and occasionally to go
-> back at some point in the future and review the code for reference purposes).
+> after creating a new project in Visual Studio). Mind you, I definitely add
+> these kinds of utilities to source control, but that's primarily as a benefit
+> during development so I can easily rollback unwanted changes (and occasionally
+> to go back at some point in the future and review the code for reference
+> purposes).
 >
-> If this utility was something I expected to be maintained going forward, I would
-> have spent more time trying to figure out why I couldn't get the Html Agility
-> Pack to fix the malformed HTML.
+> If this utility was something I expected to be maintained going forward, I
+> would have spent more time trying to figure out why I couldn't get the Html
+> Agility Pack to fix the malformed HTML.
 
 #### Migrating tags and categories
 

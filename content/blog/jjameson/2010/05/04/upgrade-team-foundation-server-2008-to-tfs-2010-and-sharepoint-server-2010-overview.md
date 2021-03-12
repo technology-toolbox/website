@@ -81,16 +81,16 @@ solution over time as your needs grow.
 
 > **Note**
 >
-> This recommendation really applies to most products that depend on SQL Server --
-> not just TFS. There are a few scenarios where I consider it acceptable to run
-> SQL Server side-by-side with other products and technologies, but in general,
-> you should try to isolate it whenever practical.
+> This recommendation really applies to most products that depend on SQL Server
+> -- not just TFS. There are a few scenarios where I consider it acceptable to
+> run SQL Server side-by-side with other products and technologies, but in
+> general, you should try to isolate it whenever practical.
 >
-> I should also point out that this is just *my* recommendation. According to the
-> TFS installation guide, a single server is recommended when you have less than
-> 500 users. On the other hand, I don't believe that official recommendation
-> covers running SharePoint Server 2010 on the same server -- since the SharePoint
-> team states
+> I should also point out that this is just *my* recommendation. According to
+> the TFS installation guide, a single server is recommended when you have less
+> than 500 users. On the other hand, I don't believe that official
+> recommendation covers running SharePoint Server 2010 on the same server --
+> since the SharePoint team states
 > [a minimum of 8 GB of RAM for any production deployment of their latest version](http://technet.microsoft.com/en-us/library/cc262485%28office.14%29.aspx).
 
 As I've mentioned before, in the "Jameson Datacenter", BEAST is my "Production"
@@ -155,9 +155,9 @@ guide...
 
 > **Important**
 >
-> If you need to access TFS 2010 from a VSTS 2008 client (for example, to continue
-> to use the source control integration features in Expression Web 3), you must
-> download and install an update:
+> If you need to access TFS 2010 from a VSTS 2008 client (for example, to
+> continue to use the source control integration features in Expression Web 3),
+> you must download and install an update:
 >
 > {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
 >

@@ -38,11 +38,11 @@ kept in English due to requirements from the support team.]
 > experience. Organizations should be able to expand their existing site
 > collections to support additional languages over time as the need arises.
 >
-> The only bug that I'm aware of when installing SharePoint language packs *after*
-> creating the site collection (and subsequently creating localized sites) is that
-> some items referenced by the SharePoint pages (e.g. CSS files) do not get added
-> to the Style Library. However, you can simply upload these files yourself to
-> workaround the issue.
+> The only bug that I'm aware of when installing SharePoint language packs
+> *after* creating the site collection (and subsequently creating localized
+> sites) is that some items referenced by the SharePoint pages (e.g. CSS files)
+> do not get added to the Style Library. However, you can simply upload these
+> files yourself to workaround the issue.
 
 One of the first things you'll discover when deploying custom code to a
 SharePoint environment that has language packs installed is whether or not your

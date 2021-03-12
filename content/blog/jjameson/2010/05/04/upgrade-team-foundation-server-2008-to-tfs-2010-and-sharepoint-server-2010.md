@@ -687,9 +687,9 @@ Explorer 2010.
 
 > **Important**
 >
-> If you need to access TFS 2010 from a VSTS 2008 client (for example, to continue
-> to use the source control integration features in Expression Web 3), you must
-> download and install an update:
+> If you need to access TFS 2010 from a VSTS 2008 client (for example, to
+> continue to use the source control integration features in Expression Web 3),
+> you must download and install an update:
 >
 > {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
 >

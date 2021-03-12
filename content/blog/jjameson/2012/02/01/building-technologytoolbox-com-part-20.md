@@ -277,12 +277,12 @@ the feature currently works on TechnologyToolbox.com.
 
 > **Note**
 >
-> Sending the contact request via SMTP isn't as "bulletproof" as, say, writing the
-> contact request to a database in real-time -- but it is probably "good enough"
-> for many organizations. Obviously if your site is fielding dozens or hundreds of
-> contact requests per day, then you should probably consider something a little
-> more robust (such as saving the contact request to a database and sending some
-> kind of notification to the appropriate people).
+> Sending the contact request via SMTP isn't as "bulletproof" as, say, writing
+> the contact request to a database in real-time -- but it is probably "good
+> enough" for many organizations. Obviously if your site is fielding dozens or
+> hundreds of contact requests per day, then you should probably consider
+> something a little more robust (such as saving the contact request to a
+> database and sending some kind of notification to the appropriate people).
 >
 > The [Agilent LSCA](http://www.chem.agilent.com) site, for example, uses
 > SharePoint and InfoPath Forms Services for the "

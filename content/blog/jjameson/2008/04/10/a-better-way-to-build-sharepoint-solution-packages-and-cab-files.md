@@ -108,21 +108,21 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 > > `Inputs="@(Compile);@(None);@(Content);@(ProjectReference);"`
 >
 > However, early this morning I discovered that there are a couple of rare
-> scenarios where the WSP/CAB file is not rebuilt when specifying those inputs --
-> even though the actual assembly is recompiled.
+> scenarios where the WSP/CAB file is not rebuilt when specifying those inputs
+> -- even though the actual assembly is recompiled.
 >
 > The first scenario is due to project references. If you dive deep into
 > Microsoft.Common.targets, you'll find targets like
 > **SplitProjectReferencesByType**, **ResolveProjectReferences**,
 > **ResolveVCProjectReferences**, and **ResolveReferences**. These handle the
-> "expansion" of the project references to determine the actual list of dependent
-> files corresponding to the project references. Not expanding the project
-> references in the list of inputs for `CreateSharePointSolutionPackage` is
-> usually benign, unless the referenced assembly is actually deployed within the
-> "referencing" project. For example, if ProjectA actually builds the WSP/CAB
-> file, but also includes the assembly from ProjectB, then a minor change in
-> ProjectB would first rebuild ProjectB, and then ProjectA, but would not rebuild
-> the corresponding WSP/CAB file.
+> "expansion" of the project references to determine the actual list of
+> dependent files corresponding to the project references. Not expanding the
+> project references in the list of inputs for `CreateSharePointSolutionPackage`
+> is usually benign, unless the referenced assembly is actually deployed within
+> the "referencing" project. For example, if ProjectA actually builds the
+> WSP/CAB file, but also includes the assembly from ProjectB, then a minor
+> change in ProjectB would first rebuild ProjectB, and then ProjectA, but would
+> not rebuild the corresponding WSP/CAB file.
 >
 > The second scenario that I discovered is when your project specifies embedded
 > resources. Unfortunately, the project that I started with last Friday did not

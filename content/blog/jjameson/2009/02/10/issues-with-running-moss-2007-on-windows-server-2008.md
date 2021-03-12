@@ -100,9 +100,10 @@ not aware of it. If I discover it later, I'll update this post.
 > **Update (2009-03-12)**
 >
 > Also note the following blurb from my [earlier post](/blog/jjameson/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address) (duplicated here since it took me more than 20 seconds to find it when the issue came up during a team discussion)...
-> Note that after aliasing my local VM name to the loopback address (127.0.0.1), I
-> had to use the workaround in [KB 896861](http://support.microsoft.com/kb/896861)
-> in order to resolve "access denied" errors when indexing content:
+> Note that after aliasing my local VM name to the loopback address (127.0.0.1),
+> I had to use the workaround in
+> [KB 896861](http://support.microsoft.com/kb/896861) in order to resolve
+> "access denied" errors when indexing content:
 >
 > > Access is denied. Check that the Default Content Access Account has access to this content, or add a crawl rule to crawl this content. (The item was deleted because it was either not found or the crawler was denied access to it.)
 

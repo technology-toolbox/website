@@ -92,9 +92,9 @@ which files to delete).
 
 > **Note**
 >
-> As shown in the HACK comment above, I fetch a new **SPList** object in order to
-> avoid the following error when configuring the expiration policy immediately
-> after creating a new document library:
+> As shown in the HACK comment above, I fetch a new **SPList** object in order
+> to avoid the following error when configuring the expiration policy
+> immediately after creating a new document library:
 >
 > The object has been updated by another user since it was last fetched.
 >

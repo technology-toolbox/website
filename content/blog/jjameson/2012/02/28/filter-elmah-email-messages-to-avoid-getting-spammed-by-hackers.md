@@ -199,10 +199,11 @@ I created ELMAH issue 277 to track this bug:
 You can read the details by following the link above, if you are interested, but
 here is the gist of it:
 
-> The filter should work in Medium trust (meaning the error should be logged, but
-> an email should not be sent from ELMAH due to the filter). Instead of correctly
-> applying the filter in the Medium trust configuration, a **SecurityException**
-> is thrown and the error is not logged at all (even by the **ErrorLogModule**).
+> The filter should work in Medium trust (meaning the error should be logged,
+> but an email should not be sent from ELMAH due to the filter). Instead of
+> correctly applying the filter in the Medium trust configuration, a
+> **SecurityException** is thrown and the error is not logged at all (even by
+> the **ErrorLogModule**).
 
 Ouch.
 
@@ -295,10 +296,10 @@ I created ELMAH issue 278 to track this bug:
 You can read the details by following the link above, if you are interested, but
 here is the gist of it:
 
-> It appears there is some sort of caching bug in **FullTrustEvaluationStrategy**
-> when using **FilterSourceType.Name** (in other words, **FilterSourceType.Name**
-> is not evaluated the second time through when the **ErrorMailModule** context
-> object is passed to the **Eval** method).
+> It appears there is some sort of caching bug in
+> **FullTrustEvaluationStrategy** when using **FilterSourceType.Name** (in other
+> words, **FilterSourceType.Name** is not evaluated the second time through when
+> the **ErrorMailModule** context object is passed to the **Eval** method).
 >
 > The filter should work the same in Full trust and Medium trust (meaning the
 > error should be logged, but an email should not be sent from ELMAH due to the

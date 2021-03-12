@@ -71,14 +71,14 @@ command:
 >
 > You must run the **File.BatchNewTeamProject** command directly on the
 > TFS/SharePoint Server (which means you must have previously installed Team
-> Explorer or Visual Studio on the server) -- not from a remote client with Visual
-> Studio.
+> Explorer or Visual Studio on the server) -- not from a remote client with
+> Visual Studio.
 >
-> If you attempt to run it from a remote client, you'll get an error that suggests
-> you specified an invalid value for the SharePoint Web application (i.e. the
-> `<ProjectSiteWebApplication>` element). Apparently, this command ultimately
-> invokes the SharePoint object model and therefore cannot find the SharePoint Web
-> application if you try to run it remotely.
+> If you attempt to run it from a remote client, you'll get an error that
+> suggests you specified an invalid value for the SharePoint Web application
+> (i.e. the `<ProjectSiteWebApplication>` element). Apparently, this command
+> ultimately invokes the SharePoint object model and therefore cannot find the
+> SharePoint Web application if you try to run it remotely.
 
 After running the command on the TFS/SharePoint Server with the above input
 file, I noticed that it didn't run for very long (i.e. the word "Ready" appeared

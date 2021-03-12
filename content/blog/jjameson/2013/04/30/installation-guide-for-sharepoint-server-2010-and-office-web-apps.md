@@ -722,8 +722,8 @@ To run the preparation tool:
    
    > **Note**
    > 
-   > After you complete the Microsoft SharePoint Products Preparation Tool, you must
-   > install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917) and
+   > After you complete the Microsoft SharePoint Products Preparation Tool, you
+   > must install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917) and
    > [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the server
    > after installing these hotfixes.
    > 
@@ -1293,8 +1293,8 @@ To enable selection of people and groups from the internal Fabrikam domain:
    > database.
    > 
    > This key is used to encrypt the password for the account used to access the
-   > forest or domain. The encryption string must be the same for every server in the
-   > farm.
+   > forest or domain. The encryption string must be the same for every server in
+   > the farm.
 
 3. Repeat the steps above on each Web server in the farm.
 

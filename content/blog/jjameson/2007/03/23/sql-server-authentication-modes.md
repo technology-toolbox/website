@@ -51,8 +51,8 @@ Here is some info from MSDN:
 > primarily due to its integration with the Windows NT 4.0 and Windows 2000
 > security system. Windows NT 4.0 and Windows 2000 security provides more
 > features, such as secure validation and encryption of passwords, auditing,
-> password expiration, minimum password length, and account lockout after multiple
-> invalid login requests.
+> password expiration, minimum password length, and account lockout after
+> multiple invalid login requests.
 >
 > ...
 >
@@ -62,15 +62,15 @@ Here is some info from MSDN:
 >
 > ...
 >
-> Even though Windows Authentication is recommended, SQL Server Authentication may
-> be required for connections with clients other than Windows NT 4.0 and Windows
-> 2000 clients; it may also be necessary for legacy applications.
+> Even though Windows Authentication is recommended, SQL Server Authentication
+> may be required for connections with clients other than Windows NT 4.0 and
+> Windows 2000 clients; it may also be necessary for legacy applications.
 >
 > Pasted from &lt;
 > [http://msdn.microsoft.com/library/en-us/adminsql/ad\_security\_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
 >
-> Windows authentication is more secure than SQL authentication for the following
-> reasons:
+> Windows authentication is more secure than SQL authentication for the
+> following reasons:
 >
 > - Credentials are managed for you and the credentials are not transmitted over the network.
 > - You avoid embedding user names and passwords in connection strings.
@@ -79,17 +79,18 @@ Here is some info from MSDN:
 > Pasted from &lt;
 > [http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;
 >
-> I remember speaking to a SQL Server Program Manager a few years ago at a session
-> where he stated that as of SQL Server [2000] SP3 (and some specific version of
-> MDAC which I don't recall) the authentication between the client and SQL Server
-> is automatically secured using SSL - assuming a trusted certificate is installed
-> on the SQL Server. Perhaps that is the route that is being used here at Fabrikam
-> [ed. actual customer name substituted]. In this case, the argument of sending
-> credentials in clear text no longer applies. However, the storage of
-> username/password in various config files is still valid regardless. Encrypting
-> the credentials in the config files vastly improves the situation, but this will
-> never be as secure as using Windows Authentication (primarily due to the
-> increased security provided by standard protocols such as Kerberos).
+> I remember speaking to a SQL Server Program Manager a few years ago at a
+> session where he stated that as of SQL Server [2000] SP3 (and some specific
+> version of MDAC which I don't recall) the authentication between the client
+> and SQL Server is automatically secured using SSL - assuming a trusted
+> certificate is installed on the SQL Server. Perhaps that is the route that is
+> being used here at Fabrikam [ed. actual customer name substituted]. In this
+> case, the argument of sending credentials in clear text no longer applies.
+> However, the storage of username/password in various config files is still
+> valid regardless. Encrypting the credentials in the config files vastly
+> improves the situation, but this will never be as secure as using Windows
+> Authentication (primarily due to the increased security provided by standard
+> protocols such as Kerberos).
 
 ***
 
