@@ -59,8 +59,8 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
    Windows Server 2008.]
 4. After the VM shuts down, immediately make a copy of the VHD file to a new
    file named **ws2008std-x86\_RTM.vhd**.
-5. Boot the VM, go through the Mini-Setup process and once again name the
-   server **ws2008std-x86**.
+5. Boot the VM, go through the Mini-Setup process and once again name the server
+   **ws2008std-x86**.
 6. Next, install SP2 for Windows Server 2008. Then run the Windows Component
    Clean Tool (COMPCLN.exe) to
    [reclaim some disk space after installing SP2](/blog/jjameson/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2)
@@ -115,8 +115,8 @@ my home lab) at that point:
 2. Boot the VM, go through the Mini-Setup process and name the server
    **ws2008std-x86**.
 3. Install SP3 for Windows Server 2008 and, presumably, run the Windows
-   Component Clean Tool (COMPCLN.exe) to reclaim some disk space, and reboot
-   the VM.
+   Component Clean Tool (COMPCLN.exe) to reclaim some disk space, and reboot the
+   VM.
 4. Run the SysPrep utility and specify the option to **Enter System Out-of-Box
    Experience (OOBE)** and **Shutdown** when SysPrep is done.
 5. After the VM shuts down, immediately make a copy of the VHD file to a new

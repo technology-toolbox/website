@@ -101,8 +101,8 @@ to concatenate the values specified in the other two columns).
 Here's a breakdown of the custom SharePoint list:
 
 - Name: **Specials**
-- Description: **Items in this list appear in the "This Week's Specials"
-  section of the site home page.**
+- Description: **Items in this list appear in the "This Week's Specials" section
+  of the site home page.**
 - Columns:
   - **Title** (Single line of text, Required)
   - **Unit Price** (Currency, Required)

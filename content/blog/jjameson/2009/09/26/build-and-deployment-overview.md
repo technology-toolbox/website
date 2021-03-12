@@ -41,8 +41,8 @@ title="Figure 1: Initial build and deployment of the solution" >}}
 Note the following key steps (corresponding to the various arrows in Figure 1):
 
 1. Using their local environments, members of the Development team add new code
-   -- or modify existing code -- and subsequently check the code into the
-   source control system.
+   -- or modify existing code -- and subsequently check the code into the source
+   control system.
 2. On the Build Server, the entire solution is labeled in the source control
    system to "snapshot" the exact state of the solution at the point in time
    just prior to the build. The label includes the version number (for example,
@@ -54,10 +54,10 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
    source control system.
 4. The solution is then compiled on the Build Server.
 5. Next, the output of the build is copied from the Build Server to the Release
-   Server (in a subfolder on the Builds share). The location of the build
-   output on the Release Server includes the build number (e.g. 1.0.1.0) as
-   well as the build configuration such as Debug or Release (note that the
-   build configuration is not illustrated in Figure 1). The initial build often
+   Server (in a subfolder on the Builds share). The location of the build output
+   on the Release Server includes the build number (e.g. 1.0.1.0) as well as the
+   build configuration such as Debug or Release (note that the build
+   configuration is not illustrated in Figure 1). The initial build often
    contains nothing more than the compiled code, which may be a group of
    assemblies (i.e. a number of EXE and/or DLL files) or a setup package (i.e.
    an MSI or CAB file) but most likely does not have an installation guide or
@@ -143,20 +143,20 @@ title="Figure 4: Installing the Beta 1 version to TEST" >}}
 Note the following key concepts illustrated in the previous figure:
 
 - The build selected by the Test team does not necessarily correspond to the
-  latest build -- as indicated by the ellipsis (&hellip;) after **1.0.57.0**
-  in Figure 4. It is common for a later build of the solution to be running in
-  the DEV environment, as a result of the daily build.
+  latest build -- as indicated by the ellipsis (&hellip;) after **1.0.57.0** in
+  Figure 4. It is common for a later build of the solution to be running in the
+  DEV environment, as a result of the daily build.
 - At one point in time, the version of the solution selected by the Test team
   was automatically installed to the DEV environment -- as indicated by the
   dashed line in the previous figure.
 - Before installing the selected build to the TEST environment, the
-  corresponding label in the source control system is annotated -- as
-  indicated by **(Beta 1)** in Figure 4. This allows the Development team to
-  quickly get the version of the source code in order to debug problems
-  encountered in the TEST environment.
+  corresponding label in the source control system is annotated -- as indicated
+  by **(Beta 1)** in Figure 4. This allows the Development team to quickly get
+  the version of the source code in order to debug problems encountered in the
+  TEST environment.
 - The Test team installs the solution in the TEST environment by following the
-  installation guide (which details the install scripts and configuration
-  steps to be used).
+  installation guide (which details the install scripts and configuration steps
+  to be used).
 
 Just as the daily build process (illustrated in Figure 3) is repeated throughout
 the development process, the promotion of selected builds to TEST is also
@@ -198,12 +198,12 @@ Note the following key concepts illustrated in the previous figure:
 - The build installed into PROD was previously installed and evaluated in the
   DEV and TEST environments.
 - Before installing the selected build to the PROD environment, the
-  corresponding label in the source control system is annotated -- as
-  indicated by **(V1.0)** in Figure 7. The Development team also creates a
-  branch in the source control system from this version in order to support
-  "hotfixes" (patches) and minor releases (e.g. V1.1).
-- Release Management installs the solution in the PROD environment by
-  following the installation guide (which details the install scripts and
-  configuration steps to be used) just as the Test team did when installing
-  the solution into the TEST environment.
+  corresponding label in the source control system is annotated -- as indicated
+  by **(V1.0)** in Figure 7. The Development team also creates a branch in the
+  source control system from this version in order to support "hotfixes"
+  (patches) and minor releases (e.g. V1.1).
+- Release Management installs the solution in the PROD environment by following
+  the installation guide (which details the install scripts and configuration
+  steps to be used) just as the Test team did when installing the solution into
+  the TEST environment.
 

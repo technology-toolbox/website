@@ -31,13 +31,13 @@ However, two things really started to bother me as I began developing the
 sample:
 
 - The sample site became increasingly complex in terms of dependencies and
-  deployment (for example, readers interested in downloading and installing
-  the sample SharePoint site would need to first install the sample
-  AdventureWorks OLTP database).
+  deployment (for example, readers interested in downloading and installing the
+  sample SharePoint site would need to first install the sample AdventureWorks
+  OLTP database).
 - Since I was the "designer" of the Web site, one could argue that the design
-  was "SharePoint-friendly" to begin with (in other words, the HTML and CSS
-  used to render the pages was created in such a way that it rendered "as
-  expected" in MOSS 2007).
+  was "SharePoint-friendly" to begin with (in other words, the HTML and CSS used
+  to render the pages was created in such a way that it rendered "as expected"
+  in MOSS 2007).
 
 While the first issue didn't necessarily seem like a showstopper, the more I
 thought about the second issue, the less value I saw in completing the sample --
@@ -390,8 +390,8 @@ the HomeSiteConfiguration feature is used to:
    **PublishingImages** library.
 3. Configure the default page for the site (i.e. change the page layout to
    TugboatWelcomePageLayout1, set the **PageContent** field to render the main
-   content, add the Content Editor Web Part to render the secondary content,
-   and add an instance of the FindLocationWebPart).
+   content, add the Content Editor Web Part to render the secondary content, and
+   add an instance of the FindLocationWebPart).
 
 Fortunately, having done this kind of stuff many times in the past, it didn't
 take very long to write that code and mark the corresponding task as "Done."
@@ -483,8 +483,7 @@ To deploy the Tugboat sample site to SharePoint:
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
-   > SharePoint timer infrastructure when deploying and retracting the
-   > solution.
+   > SharePoint timer infrastructure when deploying and retracting the solution.
 
 3. Set environment variables to specify the credentials to use for the Tugboat application pool:
    

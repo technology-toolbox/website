@@ -37,8 +37,8 @@ Here's the easiest way I know to find the content type ID:
    content types**.
 3. On the **Site Content Type Gallery** page, click the content type that you
    need to find the unique identifier for, such as **Article page**.
-4. On the **Site Content Type: {content type name}** page, copy the value of
-   the **ctype** query string parameter. For example, the content type ID for
+4. On the **Site Content Type: {content type name}** page, copy the value of the
+   **ctype** query string parameter. For example, the content type ID for
    **Article page** is
    0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D.
 

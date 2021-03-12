@@ -39,16 +39,15 @@ following settings:
         - **Windows Update**
           - **Configure Automatic Updates**
             - **Enabled**
-            - **Configure automatic updating: 4 -Auto download and
-              schedule the install**
+            - **Configure automatic updating: 4 -Auto download and schedule the
+              install**
             - **Scheduled install day: 0 - Every day**
             - **Scheduled install time: 03:00**
           - **Specify intranet Microsoft update service location**
             - **Enabled**
-            - **Set the intranet update service for detecting
-              updates: http://colossus**
-            - **Set the intranet statistics server:
+            - **Set the intranet update service for detecting updates:
               http://colossus**
+            - **Set the intranet statistics server: http://colossus**
 
 By linking this Group Policy to the entire domain (i.e.
 **corp.technologytoolbox.com**) Windows Update is automatically configured as

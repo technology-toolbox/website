@@ -41,8 +41,8 @@ Technologies, has Production servers named:
 - FAB-DC-02,
 - FAB-WEB-01 (the first Web server in a farm),
 - FAB-WEB-02,
-- FAB-SQL-01A (the first node in a SQL Server cluster, for which the cluster
-  is named FAB-SQL-01),
+- FAB-SQL-01A (the first node in a SQL Server cluster, for which the cluster is
+  named FAB-SQL-01),
 - FAB-SQL-01B,
 - etc.
 

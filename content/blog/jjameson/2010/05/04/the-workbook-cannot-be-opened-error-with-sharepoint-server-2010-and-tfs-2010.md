@@ -154,21 +154,21 @@ underlying content databases:
    2008**, and then click **SQL Server Management Studio**. The **Connect to
    Server** dialog box opens.
 2. In the **Server type** list, click **Database Engine**.
-3. Type the name of the server which hosts the SharePoint content databases,
-   and then click **Connect**.
+3. Type the name of the server which hosts the SharePoint content databases, and
+   then click **Connect**.
 4. In **Object Explorer**, expand **Security**, and then expand **Logins**.
 5. Right-click the login corresponding to the service account used for
    SharePoint service applications (**TECHTOOLBOX\svc-spserviceapp**) and then
    click **Properties**.
 6. In the login properties dialog box,
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
-      click the checkbox for the SharePoint content database
-      (**WSS\_Content**), and then in the database role membership list, click
-      the checkboxes for the following roles:
+      click the checkbox for the SharePoint content database (**WSS\_Content**),
+      and then in the database role membership list, click the checkboxes for
+      the following roles:
       - **db\_owner**
       - **public**
-   2. Repeat the previous step for any additional content databases that need
-      to be accessed by Excel Services.
+7. Repeat the previous step for any additional content databases that need to
+   be accessed by Excel Services.
    3. Click **OK**.
 
 {{< /deleted-block >}}

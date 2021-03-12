@@ -27,8 +27,8 @@ face and a sense of nostalgia. It also caused me to recall two things:
 
 1. That old Greatful Dead song "Truckin'" -- specifically the line
    
-   <q class="directQuote">Lately it occurs to me: What a long, strange trip
-   it's been.</q>
+   <q class="directQuote">Lately it occurs to me: What a long, strange trip it's
+   been.</q>
    
    > **Update**
    > 

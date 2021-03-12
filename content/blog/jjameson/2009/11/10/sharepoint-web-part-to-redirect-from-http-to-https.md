@@ -219,24 +219,23 @@ environment or server (for troubleshooting purposes):
 
 Also note that there are several scenarios in which a redirect is avoided:
 
-- When the connection is already secure (well, duh...we obviously don't want
-  to cause an endless redirect loop)
+- When the connection is already secure (well, duh...we obviously don't want to
+  cause an endless redirect loop)
 - When the request URL does not specify a fully qualified domain name, but
   rather an intranet URL (e.g. http://fabrikam). In this scenario, user are
-  expected to be authenticated using Windows Authentication, which does not
-  send credentials in clear text and therefore does not require SSL.
+  expected to be authenticated using Windows Authentication, which does not send
+  credentials in clear text and therefore does not require SSL.
 - In LOCAL developer environments (e.g. http://www-local.fabrikam.com) and the
-  Development Integration environment (DEV) -- e.g.
-  http://www-dev.fabrikam.com -- since these environments don't typically have
-  SSL certificates installed. This is an example of why a standard
+  Development Integration environment (DEV) -- e.g. http://www-dev.fabrikam.com
+  -- since these environments don't typically have SSL certificates installed.
+  This is an example of why a standard
   [environment naming convention](/blog/jjameson/2009/06/09/environment-naming-conventions)
   is important.
 - When the page where the Web Part resides is being edited (because we don't
   want to force a redirect immediately after someone adds the Web Part to a
   page). This scenario is not expected to occur, since content managers will
-  typically use the intranet URL (e.g. http://fabrikam) for creating and
-  editing pages. However, it is covered just in case the scenario is ever
-  encountered.
+  typically use the intranet URL (e.g. http://fabrikam) for creating and editing
+  pages. However, it is covered just in case the scenario is ever encountered.
 
 Assuming the `IsSslRedirectRequired` method returns `true`, the Web Part
 redirects to an HTTPS connection while preserving all of the query string

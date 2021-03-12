@@ -56,10 +56,10 @@ MOSS servers.
 
 - VLAN1 is used internally within DEV for all infrastructure traffic (such as
   Kerberos authentication and database queries).
-- VLAN1 is also used to allow the various VMs to connect to the "outside
-  world" (the default gateway on the various DEV VMs is set to the IP address
-  of ISA1 on VLAN1; therefore ISA1 acts as the router between the physical
-  network and the virtual network used for the Development environment).
+- VLAN1 is also used to allow the various VMs to connect to the "outside world"
+  (the default gateway on the various DEV VMs is set to the IP address of ISA1
+  on VLAN1; therefore ISA1 acts as the router between the physical network and
+  the virtual network used for the Development environment).
 - HTTP requests to DEV are routed through ISA1 on VLAN2 to WEB1 (for most Web
   applications) or SSP1 (for Central Administration and the SSP administration
   site).

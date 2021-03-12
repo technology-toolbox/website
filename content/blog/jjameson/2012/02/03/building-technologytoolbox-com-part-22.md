@@ -41,11 +41,11 @@ script for a couple of reasons:
   be recorded to Google. This data is meaningless and I don't see any sense in
   capturing it.
 - Based on my research, I had some concerns about potential performance issues
-  with Google Analytics. The original implementation of Google Analytics did
-  not run asynchronously and consequently had a negative impact on some
-  websites in the beginning. These issues were resolved several years ago, but
-  it still seems like a good idea to be able to quickly disable the Google
-  script just in case a problem is discovered in the future.
+  with Google Analytics. The original implementation of Google Analytics did not
+  run asynchronously and consequently had a negative impact on some websites in
+  the beginning. These issues were resolved several years ago, but it still
+  seems like a good idea to be able to quickly disable the Google script just in
+  case a problem is discovered in the future.
 
 To satisfy this design goal, I created a new
 [application setting](http://msdn.microsoft.com/en-us/library/cftf714c.aspx)

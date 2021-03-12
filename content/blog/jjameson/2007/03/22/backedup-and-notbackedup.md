@@ -55,8 +55,8 @@ I attribute the reasoning to several factors:
    shortcuts whenever I am logged into a computer or VM running Windows Server
    2003)
 4. I typically "rebuild" my laptop once a year either to install a new OS (such
-   as last November when Vista was released) or to clean out all the old
-   garbage that, being a developer, I tend to install for one reason or another
+   as last November when Vista was released) or to clean out all the old garbage
+   that, being a developer, I tend to install for one reason or another
 
 Factor #1 is addressed by creating various folders under NotBackedUp and storing
 the gigabytes of stuff that I have managed to download over the last 8 years in

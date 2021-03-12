@@ -73,16 +73,16 @@ AutoEventWireup error would magically disappear.
 
 Here are the steps to reghost a master page or page layout:
 
-1. Browse to **Site Settings** page for your site. Note that if your master
-   page is causing the AutoEventWireup error, you can explicitly specify the
-   URL (e.g. http://fabrikam/\_layouts/settings.aspx).
+1. Browse to **Site Settings** page for your site. Note that if your master page
+   is causing the AutoEventWireup error, you can explicitly specify the URL
+   (e.g. http://fabrikam/\_layouts/settings.aspx).
 2. On the **Site Settings** page, under the **Look and Feel** section, click
    **Reset to site definition**.
 3. On the **Reset Page to Site Definition Version**page:
    1. In the **Reset to Site Definition** section, ensure the option to <label
-for="ctl00_PlaceHolderMain_ctl00_ResetOnePage"><strong>Reset specific
-      page to site definition version</strong> is selected, and then in
-      t</label>he **Local URL of the page** box, <label
+for="ctl00_PlaceHolderMain_ctl00_ResetOnePage"><strong>Reset specific page
+      to site definition version</strong> is selected, and then in t</label>he
+      **Local URL of the page** box, <label
 for="ctl00_PlaceHolderMain_ctl00_ResetOnePage">typtype the URL of the
       master page or page layout that you want reset (e.g.
       http://fabrikam/_catalogs/masterpage/FabrikamMinimal.master).</label>

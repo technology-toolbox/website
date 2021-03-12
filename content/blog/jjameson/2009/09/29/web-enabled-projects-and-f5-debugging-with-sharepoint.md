@@ -82,7 +82,8 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
    
    `<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>`
 
-5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` element, add the following:
+5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
+   element, add the following:
    
    `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
 

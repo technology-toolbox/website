@@ -144,9 +144,9 @@ appropriate database roles.
    (**EXTRANET\svc-sharepoint**) and then click **Properties**.
 6. In the login properties dialog box:
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
-      click the checkbox for the ASP.NET membership database
-      (**FabrikamDemo**), and then in the database role membership list, click
-      the checkboxes for the following roles:
+      click the checkbox for the ASP.NET membership database (**FabrikamDemo**),
+      and then in the database role membership list, click the checkboxes for
+      the following roles:
       - **aspnet\_Membership\_BasicAccess**
       - **aspnet\_Membership\_ReportingAccess**
       - **aspnet\_Roles\_BasicAccess**
@@ -271,20 +271,19 @@ SSL certificate is configured for the Web site.
 
 #### To add an HTTPS binding to the site in IIS:
 
-1. Click **Start**, point to **Administrative Tools**, and then click
-   **Internet Information Services (IIS) Manager**.
+1. Click **Start**, point to **Administrative Tools**, and then click **Internet
+   Information Services (IIS) Manager**.
 2. In Internet Information Services (IIS) Manager, click the plus sign (+) next
-   to the server name that contains the Web application, and then click the
-   plus sign next to **Sites** to view the Web applications that have been
-   created.
-3. Click the name of the Web application (**SharePoint --
-   www.fabrikam.com80**). In the **Actions** section, under the **Edit Site**
-   heading, click **Bindings...**.
+   to the server name that contains the Web application, and then click the plus
+   sign next to **Sites** to view the Web applications that have been created.
+3. Click the name of the Web application (**SharePoint -- www.fabrikam.com80**).
+   In the **Actions** section, under the **Edit Site** heading, click
+   **Bindings...**.
 4. In the **Site Bindings** window, click **Add**.
 5. In the **Add Site Binding**window:
    1. In the **Type:** dropdown, select **https**.
-   2. In the **SSL Certificate:** dropdown, select the certificate
-      corresponding to the site.
+   2. In the **SSL Certificate:** dropdown, select the certificate corresponding
+      to the site.
    3. Click **OK**.
    4. In the **Site Bindings** window, click **Close**.
 
@@ -357,8 +356,8 @@ necessary to modify the Web.config files for the following sites:
 
 #### To configure the Central Administration Web.config file:
 
-1. Click **Start**, point to **Administrative Tools**, and then click
-   **Internet Information Services (IIS) Manager**.
+1. Click **Start**, point to **Administrative Tools**, and then click **Internet
+   Information Services (IIS) Manager**.
 
 2. In **Internet Information Services (IIS) Manager**, in the **Connections**
    pane, click the plus sign (+) next to the server name that contains the Web
@@ -521,8 +520,8 @@ necessary to modify the Web.config files for the following sites:
 #### To create a user for the Fabrikam Web site:
 
 1. In **Internet Information Services (IIS) Manager**, click the Fabrikam Web
-   application (e.g. **SharePoint -- www.fabrikam.com80**) and then
-   double-click **.NET Users**.
+   application (e.g. **SharePoint -- www.fabrikam.com80**) and then double-click
+   **.NET Users**.
 2. When prompted with an error stating the feature cannot be used because the
    default provider is not a trusted provider, click **OK**.
 3. In the **Actions** pane, click **Set Default Provider...**
@@ -534,8 +533,8 @@ necessary to modify the Web.config files for the following sites:
 6. When prompted with an error stating the default .NET Roles provider does not
    exist, click **OK**.
 7. In the **Add .NET User**dialog:
-   1. On the **.NET User Account Details** page, type the appropriate values
-      in the **User Name**, **E-mail**, **Password**, **Confirm Password**,
+   1. On the **.NET User Account Details** page, type the appropriate values in
+      the **User Name**, **E-mail**, **Password**, **Confirm Password**,
       **Question**, and **Answer** boxes, and then click **Next**.
    2. On the **.NET User Roles** page, click **Finish**.
 8. In the **Actions** pane, click **Set Default Provider...**

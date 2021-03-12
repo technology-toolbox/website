@@ -47,8 +47,8 @@ Microsoft.SharePoint.dll) were no longer available on the build server.
 
 To configure the build server to compile MOSS 2007 solutions:
 
-1. Create a folder ont the build server to contain the referenced assemblies
-   for MOSS 2007:
+1. Create a folder ont the build server to contain the referenced assemblies for
+   MOSS 2007:
    
    **C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
 
@@ -63,8 +63,8 @@ To configure the build server to compile MOSS 2007 solutions:
    - ...
 
 3. Create a corresponding registry key for MSBuild to locate the reference
-   assemblies. This is most easily accomplished by running the following from
-   an Administrator command prompt:
+   assemblies. This is most easily accomplished by running the following from an
+   Administrator command prompt:
    
    {{< console-block-start >}}
    

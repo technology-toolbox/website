@@ -60,8 +60,8 @@ authenticate:
 3. At this point, depending on whether you are using Windows Vista or Windows
    Server 2003, you may need to click the **Advanced** button to view the list
    of sites in this zone.
-4. Clear the **Require server verification (https:) for all sites in this
-   zone** check box.
+4. Clear the **Require server verification (https:) for all sites in this zone**
+   check box.
 5. In the **Add this Web site to the zone** box, type the URL for the Web site
    (e.g. [http://foobar](http://foobar/)), and then click **Add**.
 6. Click **Close** to close the **Local intranet** dialog box.

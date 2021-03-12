@@ -183,8 +183,8 @@ the WSP, I made the following changes:
   **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not
   explicitly required by the code within the **Fabrikam.Portal.Web** project,
   there really is a dependency between the two projects. Establishing this
-  reference ensures the projects are built in the correct order (without
-  having to manually tweak the build order of the projects in the solution).
+  reference ensures the projects are built in the correct order (without having
+  to manually tweak the build order of the projects in the solution).
 - Modified the **Fabrikam.Portal.Web** project (by unloading the project and
   then editing the MSBuild file directly) to include the following:
 

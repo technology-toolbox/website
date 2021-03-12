@@ -151,8 +151,8 @@ I then proceeded to install the following:
        [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
        now...probably not ever)
     2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
-       scripts in order to download quotes and credit card statements into
-       Money via OFX
+       scripts in order to download quotes and credit card statements into Money
+       via OFX
     3. **Windows Live Essentials --** primarily for Windows Live Photo Gallery
        and Windows Live Movie Maker
     4. **Sony Picture Utility --** unfortunately, I can't import video directly

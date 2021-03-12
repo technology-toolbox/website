@@ -50,11 +50,11 @@ To avoid warnings before refreshing external data in Excel Services:
 3. On the **Manage Excel Services Application** page, click **Trusted File
    Locations**.
 4. On the **Excel Services Application Trusted File Locations** page, point to
-   the trusted file location that you want to edit (e.g. **http://**), click
-   the arrow that appears, and then click **Edit**.
-5. On the **Excel Services Application Edit Trusted File Location** page, in
-   the **External Data** section, clear the **Refresh warning enabled**
-   checkbox, and then click **OK**.
+   the trusted file location that you want to edit (e.g. **http://**), click the
+   arrow that appears, and then click **Edit**.
+5. On the **Excel Services Application Edit Trusted File Location** page, in the
+   **External Data** section, clear the **Refresh warning enabled** checkbox,
+   and then click **OK**.
 
 Note that if you are using Microsoft Office SharePoint Server (MOSS) 2007, the
 configuration steps will be slightly different (the setting is changed through

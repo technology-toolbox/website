@@ -67,19 +67,18 @@ Application event log:
    2. Right-click **Rules**, and then click **Create a new rule...** to start
       the Create Rule Wizard.
 4. On the **Select a Rule Type**page:
-   1. Expand **Alert Generating Rules**, expand **Event Based**, and then
-      click **NT Event Log (Alert)**.
-   2. Select the destination management from the list (**Windows Core Library
-      - Customizations**) or click **New...** to create a management pack.
+   1. Expand **Alert Generating Rules**, expand **Event Based**, and then click
+      **NT Event Log (Alert)**.
+   2. Select the destination management from the list (**Windows Core Library -
+      Customizations**) or click **New...** to create a management pack.
    3. Click **Next**.
 5. On the **Rule Name and Description**page:
    1. In the **Rule name** box, type **Application Event Log Error**.
    2. Optionally, type a description for the rule.
    3. Click **Select** to select the item to target.
-   4. In the **Select Items to Target** dialog, select **Windows Computer**,
-      and then click **OK**.
-   5. Ensure the **Rule is enabled** option is checked and then click
-      **Next**.
+   4. In the **Select Items to Target** dialog, select **Windows Computer**, and
+      then click **OK**.
+   5. Ensure the **Rule is enabled** option is checked and then click **Next**.
 6. On the **Event Log Name** page, ensure **Log name** is set to
    **Application**, and then click **Next**.
 7. On the **Build Event Expression**page:
@@ -105,8 +104,8 @@ Application event log:
    
    2. In the **Severity** option, click **Warning**.
    
-   3. Click **Alert suppression...** to define the handling of duplicate
-      alerts. In the **Alert Suppression**dialog:
+   3. Click **Alert suppression...** to define the handling of duplicate alerts.
+      In the **Alert Suppression**dialog:
       
       1. Click the following fields:
          - **Event ID**

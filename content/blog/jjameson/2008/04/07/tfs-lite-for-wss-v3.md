@@ -69,8 +69,8 @@ you have many items in your list (say, around 2,500) then:
 1. The user experience of having to select from a list containing thousands of
    items leaves much to be desired.
 2. There is definitely a performance impact when you create or edit an item
-   (since SharePoint has to fetch all items in the list to allow you to
-   possibly associate any one of them to the current item).
+   (since SharePoint has to fetch all items in the list to allow you to possibly
+   associate any one of them to the current item).
 
 With these WSS v3 changes in mind, let's "upgrade" the TFS Lite site template
 accordingly...
@@ -79,12 +79,12 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 1. Create a new site collection using the **Team Site** template.
 
-2. Optionally delete the **Tasks** list that is automatically created as part
-   of the Team Site template (since a "task" is simply a work item where
-   Category = "Task").
+2. Optionally delete the **Tasks** list that is automatically created as part of
+   the Team Site template (since a "task" is simply a work item where Category =
+   "Task").
 
-3. Create a new list called **WorkItems** based on the **Tasks** list and
-   select **Yes** for the **Send e-mail when ownership is assigned?** option.
+3. Create a new list called **WorkItems** based on the **Tasks** list and select
+   **Yes** for the **Send e-mail when ownership is assigned?** option.
 
 4. Rename the **WorkItems** list to **Work Items**. (I prefer to avoid spaces
    when creating lists to avoid "garbage" in the URLs as a result of URL
@@ -137,8 +137,8 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    
    {{< /table >}}
 
-8. Create a new document library named **Pages** and select **Web Part page**
-   as the document template.
+8. Create a new document library named **Pages** and select **Web Part page** as
+   the document template.
 
 9. In the **Pages** library, create a new page called **ProjectSummary.aspx**
    using the **Header, Footer, 3 Columns** layout.

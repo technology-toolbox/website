@@ -58,8 +58,8 @@ I then proceeded to install the following:
 - Microsoft Visio Professional 2007
 - Microsoft Project Professional 2007
 - Microsoft Visual Studio Team System 2008 Team Suite -- mostly using the
-  default options but excluding Crystal Reports and including x64 compilers
-  and tools
+  default options but excluding Crystal Reports and including x64 compilers and
+  tools
 - Microsoft Expression Blend
 - Microsoft Expression Web
 
@@ -75,9 +75,9 @@ downloaded from the Internet each time.
 Windows Update then proceeded to install the following:
 
 - Definition Update for Windows Defender - KB915597 (Definition 1.27.6677.0)
-- Hold Em Poker Game -- I guess I am the only one to blame for this one, since
-  I am the WSUS administrator and therefore the one who approves or declines
-  all patches
+- Hold Em Poker Game -- I guess I am the only one to blame for this one, since I
+  am the WSUS administrator and therefore the one who approves or declines all
+  patches
 - BitLocker and EFS enhancements
 - Windows DreamScene
 - 2007 Microsoft Office Suite Service Pack 1 (SP1)

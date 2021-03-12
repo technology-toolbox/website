@@ -101,9 +101,9 @@ Powershell:
    - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
    - <var>&lt;URL&gt;</var> is the URL for the Web application that will host
      the sites.
-   - <var>-Updateuserexperience</var> specifies to update the sites with the
-     new SharePoint user experience (part of Visual Upgrade). If you omit
-     this parameter, the sites retain the old user experience after upgrade.
+   - <var>-Updateuserexperience</var> specifies to update the sites with the new
+     SharePoint user experience (part of Visual Upgrade). If you omit this
+     parameter, the sites retain the old user experience after upgrade.
    
    For example:
    

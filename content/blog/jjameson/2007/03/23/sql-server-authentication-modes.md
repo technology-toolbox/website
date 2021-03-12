@@ -73,8 +73,8 @@ Here is some info from MSDN:
 > Windows authentication is more secure than SQL authentication for the
 > following reasons:
 >
-> - Credentials are managed for you and the credentials are not transmitted
->   over the network.
+> - Credentials are managed for you and the credentials are not transmitted over
+>   the network.
 > - You avoid embedding user names and passwords in connection strings.
 > - Logon security improves through password expiration periods, minimum
 >   lengths, and account lockout after multiple invalid logon requests. This

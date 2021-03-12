@@ -125,9 +125,9 @@ Once you enable disk-based caching, two important things happen:
    eliminating the 304's mentioned before).
 2. For clients that haven't yet downloaded the various resources, SharePoint
    does not have to call the `proc_FetchDocForHttpGet` sproc to determine
-   whether each file has been unghosted (customized). [Note that when you
-   enable disk-based caching, a background process polls the database to check
-   for updates -- as observed in SQL Server Profiler.]
+   whether each file has been unghosted (customized). [Note that when you enable
+   disk-based caching, a background process polls the database to check for
+   updates -- as observed in SQL Server Profiler.]
 
 I encourage you to repeat the SQL Server Profiler trace after setting
 `enabled="true"` in the `BlobCache` element of your Web.config files and

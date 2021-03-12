@@ -110,20 +110,20 @@ HTTPS.
    default trusted file location (**http://**) to edit the corresponding
    settings.
 
-5. On the **Excel Services Application Edit Trusted File Location** page, in
-   the **Location** section, change the **Address** from **http://** to
-   **https://** and then click **OK**.
+5. On the **Excel Services Application Edit Trusted File Location** page, in the
+   **Location** section, change the **Address** from **http://** to **https://**
+   and then click **OK**.
    
    > **Note**
    > 
-   > Since users of the Fabrikam extranet site are automatically redirected
-   > from http:// to https:// during sign in (via the
+   > Since users of the Fabrikam extranet site are automatically redirected from
+   > http:// to https:// during sign in (via the
    
    [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
    
-   > it is not expected that Excel Services will be used over HTTP (only
-   > HTTPS). If it is necessary to support both HTTP and HTTPS, then a separate
-   > trusted file location will need to be configured.
+   > it is not expected that Excel Services will be used over HTTP (only HTTPS).
+   > If it is necessary to support both HTTP and HTTPS, then a separate trusted
+   > file location will need to be configured.
 
 ### Configure the Office Web Apps cache
 
@@ -224,8 +224,8 @@ database files.
    Main
    ```
 
-3. Wait for the script to complete and verify that no errors occurred during
-   the process.
+3. Wait for the script to complete and verify that no errors occurred during the
+   process.
 
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
    

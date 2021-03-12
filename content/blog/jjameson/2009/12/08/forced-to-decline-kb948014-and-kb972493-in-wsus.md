@@ -29,12 +29,10 @@ Server Update Services (WSUS).
 I should also mention that in order to get my WSUS report to come up completely
 clean, I had to decline the the following updates:
 
-- **Description of the Windows Server Update Services 3.0 Service Pack 1
-  package
+- **Description of the Windows Server Update Services 3.0 Service Pack 1 package
   **
   [http://support.microsoft.com/kb/948014](http://support.microsoft.com/kb/948014)
-- **Windows Server Update Services 3.0 SP2 Dynamic Installer for Server
-  Manager
+- **Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
   **
   [http://support.microsoft.com/kb/972493](http://support.microsoft.com/kb/972493)
 

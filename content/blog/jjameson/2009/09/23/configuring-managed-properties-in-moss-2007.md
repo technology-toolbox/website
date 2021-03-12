@@ -41,11 +41,11 @@ When SharePoint indexes content:
    PDF, etc). The IFilter is responsible for emitting text and properties from
    the underlying content item.
 3. These properties (e.g. Author) are then picked up as *crawled properties*.
-4. For custom columns in SharePoint list items and documents (e.g.
-   **Product**), the crawled properties are discovered and placed in the Office
-   category (e.g. **ows\_Product**). [If memory serves, "ows" refers to "Office
-   Web Server" (the original moniker for what ultimately became "SharePoint
-   Products and Technologies") -- if that helps you remember this any easier.]
+4. For custom columns in SharePoint list items and documents (e.g. **Product**),
+   the crawled properties are discovered and placed in the Office category (e.g.
+   **ows\_Product**). [If memory serves, "ows" refers to "Office Web Server"
+   (the original moniker for what ultimately became "SharePoint Products and
+   Technologies") -- if that helps you remember this any easier.]
 5. If any *managed properties* are mapped to the crawled properties, then the
    property values are stuffed into the SSP Search database (i.e. what used be
    called the "property store" in SharePoint Portal Server 2003) for each piece

@@ -235,8 +235,8 @@ This script performs the following:
 
 - Creates the Fabrikam Web application (e.g.
   [http://fabrikam-local](http://fabrikam-local/))
-- Resets IIS (which is recommended in SharePoint Central Administration
-  whenever you create a new Web application)
+- Resets IIS (which is recommended in SharePoint Central Administration whenever
+  you create a new Web application)
 - Extends the Fabrikam Web application to the Internet zone (e.g.
   [http://www-local.fabrikam.com](http://www-local.fabrikam.com/))
 - Enables FBA on the Internet zone
@@ -291,13 +291,12 @@ performed using a custom feature
 (**Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration**). Activating this
 feature on the Web application performs the following:
 
-- Adds the connection string for the membership database to the Web.config
-  files
+- Adds the connection string for the membership database to the Web.config files
 - Adds the Web.config changes for Forms-Based Authentication, specifically the
   `<authentication>`, `<membership>`, and `<roleManager>` elements
 - Enables anonymous access on the top-level site (a.k.a. the "root Web")
-- Creates a custom SharePoint timer job to set the default role provider in
-  the Web.config file for the Internet zone
+- Creates a custom SharePoint timer job to set the default role provider in the
+  Web.config file for the Internet zone
 
 Or, for those of you that prefer to read code instead...
 

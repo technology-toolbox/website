@@ -148,8 +148,8 @@ For the sake of explaining more about these snapshots, I'll relabel them again
 in this post as follows:
 
 - Baseline SharePoint Server 2010 configuration - **Snapshot 1**
-  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) -
-    **Snapshot 2**
+  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) - **Snapshot
+    2**
   - Baseline {Client Name} Cloud Portal (Sprint-11) - **Snapshot 3**
 
 #### Think "Shallow Snapshot Trees" for Better Performance
@@ -167,8 +167,8 @@ be read when performing my primary day-to-day work.
 Consider the alternative snapshot structure:
 
 - Baseline SharePoint Server 2010 configuration - **Snapshot 1**
-  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) -
-    **Snapshot 2**
+  - Baseline Fabrikam Demo Site (SharePointClaimsAuthentication) - **Snapshot
+    2**
     - Baseline {Client Name} Cloud Portal (Sprint-11) - **Snapshot 3**
 
 If I had used this snapshot structure instead, then my VM would have to read an

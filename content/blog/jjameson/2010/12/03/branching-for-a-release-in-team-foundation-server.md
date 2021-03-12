@@ -26,10 +26,10 @@ iteration specified in the title of the work item obviously varies each time).
 
 This work item serves a couple of purposes:
 
-- It reminds me to ensure the code is actually branched for a release
-  (something I'm not likely to forget, but still...)
-- It provides a work item to associate with the actual changesets used to
-  branch the code
+- It reminds me to ensure the code is actually branched for a release (something
+  I'm not likely to forget, but still...)
+- It provides a work item to associate with the actual changesets used to branch
+  the code
 
 Since one of the things I need to do today on my current project is branch the
 code, I thought this would be a good opportunity to share the process that I
@@ -141,14 +141,14 @@ To create a new "Service Pack" branch from the "Main" branch:
    1. In the **Source Files** channel, type a descriptive comment in the
       **Comment** box (e.g. **Branch changeset 302281 (build 2.0.371.0) from
       $/FabrikamPortal/Main to
-      $/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack**) and verify the
-      list of files selected to check in.
+      $/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack**) and verify the list
+      of files selected to check in.
    2. In the **Work Items** channel, select the corresponding work item (e.g.
-      **Create branch for Sprint-10 release**), and set the **Check-in
-      Action** to **Associate**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g.
-      "The Code Analysis Policy requires files to be check in through Visual
-      Studio with an open solution.")
+      **Create branch for Sprint-10 release**), and set the **Check-in Action**
+      to **Associate**.
+   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+      Code Analysis Policy requires files to be check in through Visual Studio
+      with an open solution.")
 
 > **Note**
 >
@@ -166,8 +166,8 @@ To create the "RTM" branch from the new "Service Pack" branch:
 2. In the **Branch**window:
    1. In the **Target** box, type the path for the new "RTM" branch (e.g.
       **$/FabrikamPortal/Release/v2.0/Sprint-10/RTM**).
-   2. In the **Branch from version** section, ensure that **Latest Version**
-      is specified.
+   2. In the **Branch from version** section, ensure that **Latest Version** is
+      specified.
    3. Clear the **Download the target item to your workspace** checkbox.
    4. Click **OK**.
 3. Wait for the branching operation to complete and then in **Source Control
@@ -181,21 +181,20 @@ To create the "RTM" branch from the new "Service Pack" branch:
       $/FabrikamPortal/Release/v2.0/Sprint-10/RTM**) and verify the list of
       files selected to check in.
    2. In the **Work Items** channel, select the corresponding work item (e.g.
-      **Create branch for Sprint-10 release**), and set the **Check-in
-      Action** to **Associate**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g.
-      "The Code Analysis Policy requires files to be check in through Visual
-      Studio with an open solution.")
+      **Create branch for Sprint-10 release**), and set the **Check-in Action**
+      to **Associate**.
+   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+      Code Analysis Policy requires files to be check in through Visual Studio
+      with an open solution.")
 
 To increment the Revision portion of the assembly version on the "Service Pack"
 branch (note that this assumes you are using the process I described in an
 earlier post for
 [incrementing the assembly version for each build](/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010)):
 
-1. In **Source Control Explorer**, in the new "Service Pack" branch,
-   right-click the **IncrementAssemblyVersion.proj** or **TFSBuild.proj** file
-   that is used to increment the assembly version, and then click **Get Latest
-   Version**.
+1. In **Source Control Explorer**, in the new "Service Pack" branch, right-click
+   the **IncrementAssemblyVersion.proj** or **TFSBuild.proj** file that is used
+   to increment the assembly version, and then click **Get Latest Version**.
 
 2. Next, double-click the file to open it in the editor.
 
@@ -216,14 +215,14 @@ earlier post for
 6. In the **Check In - Source Files**window:
    
    1. In the **Source Files** channel, type a descriptive comment in the
-      **Comment** box (e.g. **Increment revision portion of assembly version
-      on ServicePack branch (instead of the build number)**).
+      **Comment** box (e.g. **Increment revision portion of assembly version on
+      ServicePack branch (instead of the build number)**).
    2. In the **Work Items** channel, select the corresponding work item (e.g.
-      **Create branch for Sprint-10 release**), and set the **Check-in
-      Action** to **Resolve**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g.
-      "The Code Analysis Policy requires files to be check in through Visual
-      Studio with an open solution.")
+      **Create branch for Sprint-10 release**), and set the **Check-in Action**
+      to **Resolve**.
+   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+      Code Analysis Policy requires files to be check in through Visual Studio
+      with an open solution.")
 
 > **Tip**
 >

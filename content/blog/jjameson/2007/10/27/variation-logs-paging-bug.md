@@ -38,9 +38,9 @@ To view the variation logs and observe the paging bug:
    to **Site Settings**, and then click **Modify All Site Settings**.
 2. On the **Site Settings** page, in the **Site Collection Administration**
    section, click **Variation logs**.
-3. On the **Variation Logs** page, observe that the results are sorted by
-   **Time Started (GMT)** in descending order and that only the first 20 log
-   entries are shown.
+3. On the **Variation Logs** page, observe that the results are sorted by **Time
+   Started (GMT)** in descending order and that only the first 20 log entries
+   are shown.
 4. Click the right arrow in the paging control (i.e. "**1 - 20 &gt;**") to view
    the next page of results.
 5. Notice that the results now appear to be sorted by **Time Started (GMT)**

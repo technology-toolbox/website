@@ -45,8 +45,8 @@ title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 
 The **\_latest** folder greatly simplifies the automated deployment process by:
 
-- Eliminating the need to determine which version (folder) to install from
-  when deploying to DEV
+- Eliminating the need to determine which version (folder) to install from when
+  deploying to DEV
 - Avoiding the need to detect a broken build and abort the deployment
 
 If a build is broken (for example, a developer checks in code that doesn't

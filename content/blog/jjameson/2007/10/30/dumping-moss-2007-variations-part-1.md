@@ -41,8 +41,8 @@ appeared to fall into one of the following error categories:
 
 1. The variation system failed to pair up pages
    [http://foobar/en-US/Support/FAQs/foo/Pages/default.aspx](http://foobar/en-US/Support/FAQs/foo/bar/Pages/default.aspx)
-   and /ja-JP/Support/FAQs/foo/Pages/default.aspx because their Content Types
-   do not match.
+   and /ja-JP/Support/FAQs/foo/Pages/default.aspx because their Content Types do
+   not match.
 2. Object reference not set to an instance of an object.
 
 The first error is due to the fact that MOSS 2007 does not automatically change
@@ -159,13 +159,13 @@ and no custom content types:
 6. Create a new site under the variation source site (**/en-US/foo**)
 
 7. Change the content type of the default page in the new site
-   (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**.
-   Note that in order to change the content type of the page, you need to view
-   the underlying **Pages** library (use **Site Actions** --&gt; **View All
-   Site Content**) and then edit the properties on the page.
+   (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**. Note
+   that in order to change the content type of the page, you need to view the
+   underlying **Pages** library (use **Site Actions** --&gt; **View All Site
+   Content**) and then edit the properties on the page.
 
-8. Change the page layout to **Article page with summary links** and approve
-   the page.
+8. Change the page layout to **Article page with summary links** and approve the
+   page.
 
 9. Create a new variation label with the following:
    

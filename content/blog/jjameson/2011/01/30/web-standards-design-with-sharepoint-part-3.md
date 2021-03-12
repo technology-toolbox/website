@@ -32,8 +32,8 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
    
    Great article.. was very helpful. I used 960.gs for my master page as well
    and all is good. I am now creating a 3 column page layout . I need a grid\_3
-   (left), grid\_6 (middle), and a grid\_3 (right). I would like these all to
-   be blank web part zones. I started off with the "Blank web part page" as a
+   (left), grid\_6 (middle), and a grid\_3 (right). I would like these all to be
+   blank web part zones. I started off with the "Blank web part page" as a
    template but it is using nested Tables and really hard to look at. Do you
    have any advice for a starting a page layout based on 960.gs?
    
@@ -159,8 +159,7 @@ To deploy the Fabrikam Demo to SharePoint:
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
-   > SharePoint timer infrastructure when deploying and retracting the
-   > solution.
+   > SharePoint timer infrastructure when deploying and retracting the solution.
 
 3. Set environment variables to specify the credentials to use for the Fabrikam application pool:
    

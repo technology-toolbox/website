@@ -124,8 +124,8 @@ Studio to handle the bulk of the formatting work.
 However, there were a couple of "fixes" that I found I needed:
 
 - David's original code sample produced errors when I used it from SQL Server
-  Management Studio 2005 (note that SQL Server Management Studio uses the
-  Visual Studio "shell", so one should expect this to work)
+  Management Studio 2005 (note that SQL Server Management Studio uses the Visual
+  Studio "shell", so one should expect this to work)
 - David's code sample only inserted a `<pre>` tag (and not the corresponding
   `<code>` and `<div class="codeBlock">` tags that I also wanted)
 

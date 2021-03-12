@@ -308,9 +308,9 @@ the following features:
 - Replacing the hard-coded membership and role provider names
 - Rendering an "Employee Sign In" link to support Windows authentication (as
   shown in Figure 3)
-- Hiding the login form when the user is already authenticated (in case
-  somebody decides, for example, to drop an instance of the Claims Login Form
-  Web Part on the home page of the site)
+- Hiding the login form when the user is already authenticated (in case somebody
+  decides, for example, to drop an instance of the Claims Login Form Web Part on
+  the home page of the site)
 - Disable the form fields and validator controls when the page is in edit mode
   (so that content authors don't have to enter "bogus" credentials in order to
   save changes to the page)
@@ -323,10 +323,10 @@ the following features:
   Web.config file)
 - Better error messages when a user is locked out or when the account is not
   approved (in order to avoid confusing and frustrating users)
-- Detecting the scenario where the user clicks the "Sign In" link on the
-  custom sign-in page (instead of immediately entering credentials) and
-  redirect to "/" (instead of "/\_layouts/Authenticate.aspx?...") in order to
-  avoid an "Access Denied" error
+- Detecting the scenario where the user clicks the "Sign In" link on the custom
+  sign-in page (instead of immediately entering credentials) and redirect to "/"
+  (instead of "/\_layouts/Authenticate.aspx?...") in order to avoid an "Access
+  Denied" error
 
 ### Sample SharePoint solution
 
@@ -342,13 +342,13 @@ PowerShell scripts, as described below.
 
 1. Create three service accounts for the Fabrikam Demo Site:
    
-   - **{DOMAIN}\svc-web-fabrikam** - used as the application pool identity
-     for the new Fabrikam Web site
+   - **{DOMAIN}\svc-web-fabrikam** - used as the application pool identity for
+     the new Fabrikam Web site
    - **{DOMAIN}\svc-sp-psr** - object cache user account providing Full Read
      access to Web applications (
      [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
-   - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full
-     Control access to Web applications
+   - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full Control
+     access to Web applications
 
 2. Complete the procedures detailed in **Step 1** from
    [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010)
@@ -356,8 +356,8 @@ PowerShell scripts, as described below.
    membership/role database).
 
 3. Complete the procedures detailed in **Step 5**from my previous post to add
-   the Web.config modifications for claims-based authentication to the
-   following sites:
+   the Web.config modifications for claims-based authentication to the following
+   sites:
    
    - **SharePoint Central Administration v4**
    - **Security Token Service**

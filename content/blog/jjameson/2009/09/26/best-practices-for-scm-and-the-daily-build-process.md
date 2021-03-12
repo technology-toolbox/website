@@ -148,31 +148,29 @@ in.
 
 Each member of the Development team is responsible for ensuring the following:
 
-- Check-ins must not break functionality in the solution. If a developer
-  checks in a change in their area of the code, he or she must not expect
-  another developer to resolve errors caused by the check-in; either the
-  person checking in the code must fix the dependant code when they check-in
-  or the developer must work with the other developer(s) to coordinate the
-  check-in.
-- The installation process must also be kept in a functional state at all
-  times. Whenever a developer adds a feature, he or she is responsible for
-  making sure that any setup changes are completed as well. Feature owners are
-  ultimately responsible for the installation and configuration of their
-  features.
+- Check-ins must not break functionality in the solution. If a developer checks
+  in a change in their area of the code, he or she must not expect another
+  developer to resolve errors caused by the check-in; either the person checking
+  in the code must fix the dependant code when they check-in or the developer
+  must work with the other developer(s) to coordinate the check-in.
+- The installation process must also be kept in a functional state at all times.
+  Whenever a developer adds a feature, he or she is responsible for making sure
+  that any setup changes are completed as well. Feature owners are ultimately
+  responsible for the installation and configuration of their features.
 - The developer is responsible for writing any custom installation actions
-  needed to deploy their feature, for knowing what files need to be deployed
-  on which server, and what permissions the feature needs to run.
+  needed to deploy their feature, for knowing what files need to be deployed on
+  which server, and what permissions the feature needs to run.
 - The installation of the feature should be completed when the code is checked
-  into source control. The development of any custom installation actions
-  needs to be done in conjunction with the team lead(s), and should not be
-  done in isolation.
+  into source control. The development of any custom installation actions needs
+  to be done in conjunction with the team lead(s), and should not be done in
+  isolation.
 - Changes to the installation should be checked in to give the team sufficient
   time to test the changes before the next scheduled build.
 - Unit tests must pass in the local developer's environment (LOCAL) before a
-  check-in is performed. If the unit tests are broken because of changes to
-  the feature's functionality, the developer must resolve the failures -- or
-  reach agreement with the rest of the Development team to disable certain
-  tests until they can be fixed (which should be a rare occurrence).
+  check-in is performed. If the unit tests are broken because of changes to the
+  feature's functionality, the developer must resolve the failures -- or reach
+  agreement with the rest of the Development team to disable certain tests until
+  they can be fixed (which should be a rare occurrence).
 
 > **Tip**
 >

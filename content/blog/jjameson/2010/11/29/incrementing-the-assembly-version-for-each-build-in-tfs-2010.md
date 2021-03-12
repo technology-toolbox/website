@@ -171,8 +171,8 @@ high-level steps that I use for specifying the assembly version:
    incremented with each build. For now, let's assume we are building off the
    Main branch, so we want to increment the Build Number portion of the version
    number.
-3. The actual process of incrementing the version is performed using the
-   Version task from the
+3. The actual process of incrementing the version is performed using the Version
+   task from the
    [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). The
    Version task actually uses a simple text file (e.g. AssemblyVersionInfo.txt)
    to specify/increment the assembly version and subsequently generate the
