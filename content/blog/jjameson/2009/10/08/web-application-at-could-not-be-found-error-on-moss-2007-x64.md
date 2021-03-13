@@ -65,8 +65,7 @@ natively in 64-bit and everything works as expected:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd
-"PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
+C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
 ```
 {{< sample-output "Title: Fabrikam" >}}
@@ -79,8 +78,7 @@ to run in 32-bit then things don't go well:
 
 {{< console-block-start >}}
 
-C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd
-"PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
+C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
 ```
 Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local

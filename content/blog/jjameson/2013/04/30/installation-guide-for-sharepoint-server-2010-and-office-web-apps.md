@@ -2357,7 +2357,8 @@ connection:
 
 {{< blockquote "font-italic text-danger" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services Application trusted location.
+This workbook cannot be opened because it is not stored in an Excel Services
+Application trusted location.
 
 {{< /blockquote >}}
 
@@ -2791,7 +2792,9 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume all available space on a small VHD. Therefore enabling usage data collection and health data collection is *not* recommended in these environments.
+\* - In development environments, the WSS\_Logging database can quickly consume
+all available space on a small VHD. Therefore enabling usage data collection and
+health data collection is *not* recommended in these environments.
 
 {{< table class="small" caption="Table 6 - Outgoing e-mail settings" >}}
 
