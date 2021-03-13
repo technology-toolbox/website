@@ -114,8 +114,7 @@ included in
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-600x524.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
 class="screenshot" height="524" width="600"
-title="Figure 2: Development \"cheat sheet\" - Fabrikam Demo -
-SharePointExtranet branch" >}}
+title="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-1190x1040.png)
 

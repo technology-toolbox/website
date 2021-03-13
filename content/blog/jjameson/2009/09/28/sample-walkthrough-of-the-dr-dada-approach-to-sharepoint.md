@@ -164,11 +164,9 @@ After that's all done, the Visual Studio solution looks like the following:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
-alt="Visual Studio solution after adding SharePoint features and deployment
-files"
+alt="Visual Studio solution after adding SharePoint features and deployment files"
 class="screenshot" height="600" width="183"
-title="Figure 2: Visual Studio solution after adding SharePoint features and
-deployment files" >}}
+title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 

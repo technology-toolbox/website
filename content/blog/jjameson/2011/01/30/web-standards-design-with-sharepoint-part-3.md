@@ -54,11 +54,9 @@ the following:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-600x284.png"
-alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy
-for an intranet divisional portal\")"
+alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")"
 class="screenshot" height="284" width="600"
-title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site
-hierarchy for an intranet divisional portal\")" >}}
+title="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-1064x504.png)
 
@@ -99,11 +97,9 @@ linked style sheets:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-600x434.png"
-alt="Home page with custom master page and page layout (linked CSS files
-disabled)"
+alt="Home page with custom master page and page layout (linked CSS files disabled)"
 class="screenshot" height="434" width="600"
-title="Figure 3: Home page with custom master page and page layout (linked CSS
-files disabled)" >}}
+title="Figure 3: Home page with custom master page and page layout (linked CSS files disabled)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-1045x756.png)
 
@@ -129,11 +125,9 @@ the [960 Gridder](http://gridder.andreehansson.se/) for illustrative purposes):
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-600x361.png"
-alt="Home page with custom master page and page layout (semantic HTML and
-Summary Links field instead of Web Part)"
+alt="Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)"
 class="screenshot" height="361" width="600"
-title="Figure 4: Home page with custom master page and page layout (semantic
-HTML and Summary Links field instead of Web Part)" >}}
+title="Figure 4: Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-1045x628.png)
 

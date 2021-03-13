@@ -237,10 +237,7 @@ That is when it occurred to me that rather than using a single tracking code for
 all environments, I could just as easily use different codes for each
 environment, as illustrated in Figure 1.
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png"
-alt="Google Analytics (Account Home)" height="340" width="600"
-title="Figure 1: Google Analytics (Account Home)" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png" alt="Google Analytics (Account Home)" height="340" width="600" title="Figure 1: Google Analytics (Account Home)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
 

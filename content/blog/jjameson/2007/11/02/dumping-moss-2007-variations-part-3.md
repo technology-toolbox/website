@@ -94,8 +94,7 @@ The following graph "zooms in" on the time period after the index was added.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(after)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
 height="436" width="600"
-title="Figure 2: Elapsed Time for Variation Page Propagation with New
-AllUserData Index" >}}
+title="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28after%29-670x487.jpg)
 

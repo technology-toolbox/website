@@ -68,14 +68,11 @@ as the Development team when configuring the Development integration environment
 - Infrastructure Model - Fabrikam Extranet
 - SQL Server Installation Guide - Fabrikam Extranet
 - {{< reference
-  title="Deployment scenario: Multiple servers for a three-tier farm (SharePoint
-  Server 2010)"
-  linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx"
-  > }}
+  title="Deployment scenario: Multiple servers for a three-tier farm (SharePoint Server 2010)"
+  linkHref="http://technet.microsoft.com/en-us/library/ee805948(v=office.14).aspx" >}}
 - {{< reference
   title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"
-  linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx"
-  > }}
+  linkHref="http://technet.microsoft.com/en-us/library/ff431687(v=office.14).aspx" >}}
 
 ## Document conventions
 
@@ -249,12 +246,10 @@ images for virtual machines, refer to the following blog posts:
 
 - {{< reference title="Creating a VM/VHD Library"
   linkHref="/blog/jjameson/2010/04/02/creating-a-vm-vhd-library"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx"
-  > }}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx" >}}
 - {{< reference title="Using Sysprep'ed VHDs for New Hyper-V Virtual Machines"
   linkHref="/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx"
-  > }}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx" >}}
 
 ### Reset WSUS configuration
 
@@ -282,9 +277,7 @@ To resolve the issue, remove the WSUS registry entries specified in
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Script to Reset WSUS for Sysprep'ed Image"
-linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
+{{< reference title="Script to Reset WSUS for Sysprep'ed Image" linkHref="/blog/jjameson/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-Sysprep-ed-image.aspx" >}}
 
 ### Remove "stale" network adapters
 
@@ -321,9 +314,7 @@ To cleanup the network adapters:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM"
-linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
+{{< reference title="Removing \"Stale\" Network Adapters in Hyper-V VM" linkHref="/blog/jjameson/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx" >}}
 
 ## DEV - Configure VM storage
 
@@ -334,11 +325,7 @@ additional virtual hard drives (D: and L:). Whenever possible, spread the VHD
 files across multiple physical disks on the host, as illustrated in Figure 1, to
 reduce I/O contention.
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png"
-alt="Figure 1: SharePoint development VM configuration" class="screenshot"
-height="317" width="600"
-title="Figure 1: SharePoint development VM configuration" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" title="Figure 1: SharePoint development VM configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
 
@@ -372,9 +359,7 @@ To create a 500 MB VHD for the SQL Server log files:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V"
-linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
+{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
@@ -394,10 +379,7 @@ To configure the MaxPatchCacheSize policy:
 
 More information on this step is available in the following blog post:
 
-{{< reference
-title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0"
-linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx" >}}
+{{< reference title="Save Significant Disk Space by Setting MaxPatchCacheSize to 0" linkHref="/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx" >}}
 
 ## Disable Internet Protocol version 6 (TCP/IPv6)
 
@@ -624,16 +606,14 @@ To install Team Explorer:
 Install Visual Studio SP1 using Windows Update or by downloading and running the
 installer from the following location:
 
-{{< reference title="Microsoft Visual Studio 2010 Service Pack 1 (Installer)"
-linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691" >}}
+{{< reference title="Microsoft Visual Studio 2010 Service Pack 1 (Installer)" linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23691" >}}
 
 ## DEV – Install TFS Power Tools
 
 In order to leverage additional check-in policies, install the TFS Power Tools
 (using the default options):
 
-{{< reference title="Visual Studio Power Tools"
-linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
+{{< reference title="Visual Studio Power Tools" linkHref="http://msdn.microsoft.com/en-us/vstudio/bb980963.aspx" >}}
 
 ## Install SQL Server 2008
 
@@ -735,8 +715,7 @@ using Windows Update or by downloading it from one the following locations:
 - {{< reference title="Microsoft® SQL Server® 2008 R2 Service Pack 2"
   linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=30437" >}}
 - {{< reference title="SQL Server 2008 Service Pack 3"
-  linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594"
-  > }}
+  linkHref="http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27594" >}}
 
 ## DEV - Change databases to Simple recovery model
 
@@ -797,10 +776,7 @@ END
 
 More information on this step is available in the following blog post:
 
-{{< reference
-title="Using the Simple Recovery Model for SharePoint Development Environments"
-linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
+{{< reference title="Using the Simple Recovery Model for SharePoint Development Environments" linkHref="/blog/jjameson/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx" >}}
 
 ## DEV - Install Microsoft Office 2010
 
@@ -894,9 +870,7 @@ in the farm.
 
 Download and install the update from the following location:
 
-{{< reference
-title="KB979917 - QFE for Sharepoint issues - Perf Counter fix & User Impersonation"
-linkHref="http://code.msdn.microsoft.com/KB979917" >}}
+{{< reference title="KB979917 - QFE for Sharepoint issues - Perf Counter fix & User Impersonation" linkHref="http://code.msdn.microsoft.com/KB979917" >}}
 
 > **Important**
 >
@@ -1074,9 +1048,7 @@ To add the Central Administration site to the Local intranet zone:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials"
-linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+{{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 ## Add the URL for the extranet website to the Local intranet zone
 
@@ -1165,9 +1137,7 @@ To configure permissions for the IIS WAMREG Admin Service:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group"
-linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
+{{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group" linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx" >}}
 
 ## Rename TaxonomyPicker.ascx
 
@@ -1288,9 +1258,7 @@ To change the schedule for deleting timer job history:
 
 Install SharePoint Server 2010 Service Pack 1 on each server in the farm:
 
-{{< reference
-title="Service Pack 1 for Microsoft SharePoint Server 2010 (KB2460045)"
-linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=26623" >}}
+{{< reference title="Service Pack 1 for Microsoft SharePoint Server 2010 (KB2460045)" linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=26623" >}}
 
 > **Note**
 >
@@ -1302,9 +1270,7 @@ linkHref="http://www.microsoft.com/en-us/download/details.aspx?id=26623" >}}
 
 Install the SharePoint Server 2010 cumulative update for August 2012:
 
-{{< reference
-title="Description of the SharePoint Server 2010 cumulative update package (SharePoint server-package): August 28, 2012"
-linkHref="http://support.microsoft.com/kb/2687353" >}}
+{{< reference title="Description of the SharePoint Server 2010 cumulative update package (SharePoint server-package): August 28, 2012" linkHref="http://support.microsoft.com/kb/2687353" >}}
 
 After installing the update on each server in the farm, run the SharePoint
 Products and Technologies Configuration Wizard (PSConfigUI.exe) to upgrade the
@@ -1324,10 +1290,7 @@ For example, Figure 2 shows the environment variables for a local development VM
 (where FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png"
-alt="Setting environment variables" class="screenshot" height="436" width="394"
-title="Figure 2: Setting environment variables" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" title="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
 
@@ -1341,13 +1304,11 @@ available in the following blog posts:
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 1"
   linkHref="/blog/jjameson/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx"
-  > }}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-1.aspx" >}}
 - {{< reference
   title="Virtual Machine Snapshots and SharePoint Development, Part 2"
   linkHref="/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2"
-  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"
-  > }}
+  linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx" >}}
 
 ## Copy Fabrikam Extranet build to SharePoint server
 
@@ -2022,14 +1983,7 @@ created based on the Publishing Portal template.
 
 The site should resemble the following:
 
-[{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
-alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
-class="screenshot" height="374" width="600"
-title="Figure 3: Default home page for “Publishing Portal” site in SharePoint
-Server 2010"
-
-> }}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
+[{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png" alt="Default home page for “Publishing Portal” site in SharePoint Server 2010" class="screenshot" height="374" width="600" title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
 deployed, it is still possible to validate the basic functionality of the site
@@ -2067,7 +2021,7 @@ To login to the website using Windows authentication:
    
    linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
    
-   > > }}
+   > }}
 
 2. Browse to the home page page the Fabrikam Extranet website (
    [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
@@ -2087,9 +2041,7 @@ roundtrips for each and every page request on your site.
 
 This is discussed in more detail in the following blog post:
 
-{{< reference title="Always Enable Disk-Based Caching in SharePoint Server 2010"
-linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx" >}}
+{{< reference title="Always Enable Disk-Based Caching in SharePoint Server 2010" linkHref="/blog/jjameson/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx" >}}
 
 Use the following procedure to configure disk-based cache settings for a Web
 application.
@@ -2405,8 +2357,7 @@ connection:
 
 {{< blockquote "font-italic text-danger" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services
-Application trusted location.
+This workbook cannot be opened because it is not stored in an Excel Services Application trusted location.
 
 {{< /blockquote >}}
 
@@ -2629,10 +2580,7 @@ At this point, the home page of the Fabrikam Extranet site should resemble the
 screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 **Reusable Content Sample** links).
 
-{{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png"
-alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600"
-title="Figure 4: Fabrikam Extranet home page" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" title="Figure 4: Fabrikam Extranet home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
 
@@ -2831,8 +2779,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small"
-caption="Table 5 - Web analytics and health data collection" >}}
+{{< table class="small" caption="Table 5 - Web analytics and health data collection" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2844,9 +2791,7 @@ caption="Table 5 - Web analytics and health data collection" >}}
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume
-all available space on a small VHD. Therefore enabling usage data collection and
-health data collection is *not* recommended in these environments.
+\* - In development environments, the WSS\_Logging database can quickly consume all available space on a small VHD. Therefore enabling usage data collection and health data collection is *not* recommended in these environments.
 
 {{< table class="small" caption="Table 6 - Outgoing e-mail settings" >}}
 
@@ -2889,8 +2834,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small"
-caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
+{{< table class="small" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
 
 | SharePoint Group | Members | Permissions |
 | --- | --- | --- |

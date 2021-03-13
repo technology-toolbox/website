@@ -74,8 +74,7 @@ Figure 2 shows a subsequent build of the solution.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-600x271.png"
 alt="Subsequent build and deployment (with draft of installation guide)"
 height="271" width="600"
-title="Figure 2: Subsequent build and deployment (with draft of installation
-guide)" >}}
+title="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-829x375.png)
 
@@ -94,11 +93,9 @@ process.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
-alt="Automated build and deployment (with install scripts and updated
-installation guide)"
+alt="Automated build and deployment (with install scripts and updated installation guide)"
 height="343" width="600"
-title="Figure 3: Automated build and deployment (with install scripts and
-updated installation guide)" >}}
+title="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 

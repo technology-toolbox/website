@@ -136,11 +136,9 @@ regardless of the number of items in the **Specials** list.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
-alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders
-the home page as expected"
+alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
 class="screenshot" height="324" width="600"
-title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All
-Items\") renders the home page as expected" >}}
+title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-1006x544.png)
 

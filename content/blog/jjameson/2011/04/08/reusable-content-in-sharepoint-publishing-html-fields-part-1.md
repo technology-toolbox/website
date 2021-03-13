@@ -92,11 +92,9 @@ list item shown in Figure 1 above.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-600x211.png"
-alt="Page with missing content (due to \"Pending\" status in Reusable Content
-list)"
+alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
 class="screenshot" height="211" width="600"
-title="Figure 4: Page with missing content (due to \"Pending\" status in
-Reusable Content list)" >}}
+title="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-1006x353.png)
 

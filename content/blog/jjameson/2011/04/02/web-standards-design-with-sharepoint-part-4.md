@@ -70,8 +70,7 @@ following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-600x542.png"
 alt="Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)"
 class="screenshot" height="542" width="600"
-title="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB
-nightandday.master)" >}}
+title="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-1008x911.png)
 
@@ -220,11 +219,9 @@ clicked **Show Ribbon** from the **Site Actions** menu, I saw the following:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-600x368.png"
-alt="Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside
-the \"s4-searcharea\" &lt;div&gt;)"
+alt="Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)"
 class="screenshot" height="368" width="600"
-title="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\"
-not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
+title="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-1005x617.png)
 
@@ -412,11 +409,9 @@ scenario" as shown below:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-600x357.png"
-alt="Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from
-anonymous users)"
+alt="Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)"
 class="screenshot" height="357" width="600"
-title="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon
-content hidden from anonymous users)" >}}
+title="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-1008x599.png)
 
@@ -428,11 +423,9 @@ clicking **Show Ribbon** on the **Site Actions** menu:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-600x367.png"
-alt="Tugboat home page in SharePoint 2010 (broken ribbon as a result of using
-ASP.NET LoginView control)"
+alt="Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)"
 class="screenshot" height="367" width="600"
-title="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a
-result of using ASP.NET LoginView control)" >}}
+title="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-1007x616.png)
 
@@ -474,11 +467,9 @@ With this approach, the ribbon renders as expected for both anonymous users
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-600x368.png"
-alt="Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and
-accounted for, sir!\")"
+alt="Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")"
 class="screenshot" height="368" width="600"
-title="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs
-present and accounted for, sir!\")" >}}
+title="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-1007x617.png)
 
@@ -535,8 +526,7 @@ other words, as viewed by an authorized user):
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)"
 class="screenshot" height="357" width="600"
-title="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items
-formatted in bold)" >}}
+title="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-1008x599.png)
 

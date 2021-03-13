@@ -89,11 +89,9 @@ After rebooting a couple of times, my Vista partition looks like this:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-with-SP1-and-products-532x600.jpg"
-alt="Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and
-Expression"
+alt="Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression"
 class="screenshot" height="600" width="532"
-title="Figure 2: Disk usage on Windows Vista after installing SP1, Office 2007,
-VS 2008, and Expression" >}}
+title="Figure 2: Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-with-SP1-and-products-784x885.jpg)
 

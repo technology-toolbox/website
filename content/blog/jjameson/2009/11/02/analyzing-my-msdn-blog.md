@@ -288,11 +288,9 @@ results into categories and subcategories.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png"
-alt="Referrals by category for post - Issues Deploying SharePoint Solution
-Packages"
+alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages"
 height="387" width="600"
-title="Figure 4: Referrals by category for post - Issues Deploying SharePoint
-Solution Packages" >}}
+title="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-689x444.png)
 

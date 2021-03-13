@@ -128,8 +128,7 @@ show a scrollbar as necessary. This is illustrated in the following figure.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
 alt="Constraining the height of content displayed in a modal popup window"
 height="190" width="460"
-title="Figure 2: Constraining the height of content displayed in a modal popup
-window" >}}
+title="Figure 2: Constraining the height of content displayed in a modal popup window" >}}
 
 In addition to creating various user interface elements for modal popup windows,
 the **ModalPopupWebPart** also converts client-side events (e.g. clicking the

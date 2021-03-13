@@ -674,11 +674,9 @@ yet.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-600x481.png"
-alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting
-Services error)"
+alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)"
 class="screenshot" height="481" width="600"
-title="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with
-Reporting Services error)" >}}
+title="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-988x792.png)
 
