@@ -26,11 +26,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 > Team Foundation Build. Refer to the following post for the updated DDF file
 > and corresponding modifications to the project file:
 >
-> {{< reference title="Building SharePoint WSPs with Team Foundation Build"
-> linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build"
-> linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx"
->
-> > }}
+> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
 
 In a previous post, I introduced
 [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development).

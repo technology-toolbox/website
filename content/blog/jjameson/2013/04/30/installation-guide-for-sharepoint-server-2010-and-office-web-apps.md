@@ -528,8 +528,7 @@ To enable host names that are mapped to the loopback address:
 
 5. Right-click **BackConnectionHostNames**, and then click **Modify**.
 
-6. In the **Value data** box, type the host header corresponding to each Web
-   application specified in Table 7. For example:
+6. In the **Value data** box, type the host header corresponding to each Web application specified in Table 7. For example:
    
    > {{< kbd "extranet.fabrikam.com" >}}
    > 
@@ -2006,16 +2005,13 @@ To login to the website using forms authentication:
 
 To login to the website using Windows authentication:
 
-1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order to
-   seamlessly authenticate with the current domain credentials).
+1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
    
    > **Note**
    > 
    > This is discussed in more detail in the following blog post:
    > 
-   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials"
-   > linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
-   > linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 2. Browse to the home page page the Fabrikam Extranet website (
    [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
@@ -2423,8 +2419,7 @@ for caching:
    & '.\Configure Office Web Apps Cache.ps1'
    ```
 
-4. Wait for the script to complete and verify no errors occurred during the
-   process.
+4. Wait for the script to complete and verify no errors occurred during the process.
    
    > **Note**
    > 

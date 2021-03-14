@@ -254,11 +254,7 @@ covered in
 > Release server to the Web server). Consequently, I encountered a bug in
 > PowerShell that is described in the following blog post:
 >
-> {{< reference
-> title="Workaround: The OS handle's position is not what FileStream expected"
-> linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/"
->
-> > }}
+> {{< reference title="Workaround: The OS handle's position is not what FileStream expected" linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
 >
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 

@@ -359,11 +359,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 >
 > A newer version of the **Logger** class is available in the following post:
 >
-> {{< reference title="Logging Exceptions in .NET Applications"
-> linkHref="/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications"
-> linkText="http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"
->
-> > }}
+> {{< reference title="Logging Exceptions in .NET Applications" linkHref="/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" linkText="http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx" >}}
 
 Note that the Logger.cs file actually includes `#define TRACE` at the top of the
 file. This is because I originally wrote this class with an old version of

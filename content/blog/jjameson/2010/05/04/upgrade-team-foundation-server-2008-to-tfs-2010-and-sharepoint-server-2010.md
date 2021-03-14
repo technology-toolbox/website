@@ -707,13 +707,7 @@ To reset the home page for a TFS project site:
 > If you need to do this for a number of sites, you should consider using
 > PowerShell instead, as described in the following blog post:
 >
-> {{< reference
-> title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server
-> 2010"
-> linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010"
-> linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx"
->
-> > }}
+> {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
 
 To remove obolete links from the top link bar of a TFS project site:
 
@@ -871,12 +865,7 @@ Explorer 2010.
 > continue to use the source control integration features in Expression Web 3),
 > you must download and install an update:
 >
-> {{< reference
-> title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility
-> Update for Team Foundation Server 2010 (Installer)"
-> linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d"
->
-> > }}
+> {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
 >
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
