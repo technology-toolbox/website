@@ -2014,14 +2014,8 @@ To login to the website using Windows authentication:
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials"
-   
-   linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
-   
-   
-   
-   linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
-   
-   > }}
+   > linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
+   > linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
 2. Browse to the home page page the Fabrikam Extranet website (
    [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
