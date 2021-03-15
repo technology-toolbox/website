@@ -11,9 +11,9 @@ tags: ["Subtext"]
 This morning I discovered that Feedburner wasn't showing
 [the blog post I created last Thursday](/blog/jjameson/2011/11/03/building-technologytoolbox-com-part-4).
 
-No error was displayed. Rather the RSS feed simply made it look like "
-[Part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)" in my
-series on building TechnologyToolbox.com was the last post that I created
+No error was displayed. Rather the RSS feed simply made it look like
+"[Part 3](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)" in
+my series on building TechnologyToolbox.com was the last post that I created
 (having written it myself, I knew that "Part 4" was, in fact, the latest post).
 
 I quickly discovered the following in the "Troubleshootize" page on the
@@ -32,8 +32,8 @@ the latest blog post.
 >
 > I had to specify my "Feed Address" (i.e.
 > [http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson](http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson))
-> instead of my "Original Feed" (
-> [https://www.technologytoolbox.com/blog/jjameson/rss.aspx](/blog/jjameson/rss.aspx))
+> instead of my "Original Feed"
+> ([https://www.technologytoolbox.com/blog/jjameson/rss.aspx](/blog/jjameson/rss.aspx))
 > when pinging my blog from Feedburner.
 >
 > According to the **Ping Feedburner** page, you are supposed to provide "the
@@ -66,8 +66,8 @@ When I subsequently browsed to
 I found the blog feed to be 577 KB.
 
 Personally, I'd much rather see Feedburner show an error in this scenario,
-rather than making blog subscribers think everything is "
-[hunky-dory](http://www.merriam-webster.com/dictionary/hunky-dory)."
+rather than making blog subscribers think everything is
+"[hunky-dory](http://www.merriam-webster.com/dictionary/hunky-dory)."
 
 The Feedburner site recommends using a query string parameter to reduce the
 number of items included in the RSS feed (in order to get it down below 512K).

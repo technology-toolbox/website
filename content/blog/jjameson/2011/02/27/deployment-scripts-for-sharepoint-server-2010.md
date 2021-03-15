@@ -21,8 +21,8 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 
 A couple of years ago, I shared the scripts I created for deploying solutions
 based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer
-to as the "
-[DR.DADA approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)."
+to as the
+"[DR.DADA approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)."
 
 Well, I probably should have done this long before, but this week I finally got
 around to upgrading my MOSS 2007 batch files (a.k.a. "deployment scripts") to
@@ -39,8 +39,8 @@ I think you'll still find the previous post valuable for understanding how your
 development team can quickly build (or rebuild) a custom Web application based
 on SharePoint 2010.
 
-Suppose we are migrating the public Internet site for Fabrikam Technologies (
-[http://www.fabrikam.com](http://www.fabrikam.com)) to SharePoint Server 2010.
+Suppose we are migrating the public Internet site for Fabrikam Technologies
+([http://www.fabrikam.com](http://www.fabrikam.com)) to SharePoint Server 2010.
 We know that we'll need some customization and therefore we've created a custom
 SharePoint solution (Fabrikam.Demo.Web.wsp) that includes the following
 features:

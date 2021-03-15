@@ -25,8 +25,8 @@ which are free).
 
 From a source control perspective, one of my favorite features is check-in
 policies. Anything that improves the quality of software development with
-minimal effort is really a "
-[no-brainer](http://wordnetweb.princeton.edu/perl/webwn?s=no-brainer)" in my
+minimal effort is really a
+"[no-brainer](http://wordnetweb.princeton.edu/perl/webwn?s=no-brainer)" in my
 opinion.
 
 The check-in policies that I prefer to have configured on all TFS projects are

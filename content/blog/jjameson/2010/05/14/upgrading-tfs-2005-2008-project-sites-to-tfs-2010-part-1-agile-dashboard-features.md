@@ -190,8 +190,8 @@ Note that you can activate the feature in a variety of ways:
   [http://cyclops/sites/AdventureWorks/\_layouts/ManageFeatures.aspx](http://cyclops/sites/AdventureWorks/_layouts/ManageFeatures.aspx))
 - Using StsAdm.exe (e.g. {{< kbd
   "stsadm -o activatefeature -name TfsDashboardAgileMoss -url http://cyclops/sites/AdventureWorks" >}})
-- If you are running SharePoint Server 2010, using PowerShell and the **
-  [Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)**
+- If you are running SharePoint Server 2010, using PowerShell and the
+  **[Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)**
   cmdlet.
 
 Since I have a number of TFS project sites to upgrade, I chose to activate the

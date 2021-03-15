@@ -66,8 +66,8 @@ to perform the same operation on a SharePoint site created in the Spanish
 language. In this case, the code above will fail because the display name of the
 "Title" field is now localized in Spanish.
 
-Fortunately, SharePoint has long provided the **
-[SPBuiltInFieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbuiltinfieldid%28v=office.12%29.aspx)**
+Fortunately, SharePoint has long provided the
+**[SPBuiltInFieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbuiltinfieldid%28v=office.12%29.aspx)**
 class that makes it easy to reference out-of-the-box fields regardless of the
 language of the SharePoint site containing the list item:
 
@@ -107,8 +107,8 @@ time ago I wrote the following code:
 
 This code subseqeuntly broke when running against localized SharePoint sites.
 Similar to the **SPBuiltInFieldId** class, the SharePoint Publishing
-infrastructure provides the **
-[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)**
+infrastructure provides the
+**[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)**
 class for identifying fields like "Page Image":
 
 ```

@@ -28,10 +28,10 @@ corresponding tags and comments. However, as you can imagine, when I decided to
 leave Microsoft I obviously couldn't ask for a backup of the Telligent database
 in order to extract my blog post content and corresponding comments.
 
-Therefore I knew I would have to do some "
-[Web scraping](http://en.wikipedia.org/wiki/Web_scraping)" if I wanted to ensure
-the preservation of all the blog posts I spent countless hours creating in years
-past.
+Therefore I knew I would have to do some
+"[Web scraping](http://en.wikipedia.org/wiki/Web_scraping)" if I wanted to
+ensure the preservation of all the blog posts I spent countless hours creating
+in years past.
 
 One of the great features in Subtext is the ability to import blog posts using
 [BlogML](http://en.wikipedia.org/wiki/BlogML) (including categories, tags, and
@@ -147,8 +147,8 @@ corresponding Web page to an offline file.
 ```
 
 The **EnsureOfflineFile** method simply checks to see if the specified file
-exists and, if not, uses the **
-[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)**
+exists and, if not, uses the
+**[WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx)**
 class in the .NET Framework to download it (but first ensuring the specified
 destination folder exists -- since the
 [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx) method
@@ -693,8 +693,8 @@ the **HtmlDocument** class did not fix mismatched tags.
 
 Rather than attempting to debug somebody else's code, I decided to "punt" and
 just use my **HtmlCleaner** class instead -- since I've used this extensively in
-the past. Note that **HtmlCleaner** is really just a thin wrapper around **
-[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
+the past. Note that **HtmlCleaner** is really just a thin wrapper around
+**[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
 ```
     /// <summary>

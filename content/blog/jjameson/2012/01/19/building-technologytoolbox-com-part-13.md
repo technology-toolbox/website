@@ -194,8 +194,8 @@ if you want to read more about this technique.)
 
 > **Note**
 >
-> If you are wondering why I use the **
-> [ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**
+> If you are wondering why I use the
+> **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**
 > method with the `<script>` elements but not the `<link>` elements, it's simply
 > because it doesn't work otherwise (despite the presence of the
 > `runat="server"` attribute in the `<head>` element).
@@ -326,8 +326,8 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 ```
 
 Note that the .NET Framework doesn't currently include an "**HtmlScript**"
-control (similar to the **
-[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)**)
+control (similar to the
+**[HtmlLink](http://msdn.microsoft.com/en-us/library/system.web.ui.htmlcontrols.htmllink.aspx)**)
 control. Consequently it takes a tiny bit more code to render as expected.
 
 ### JQueryReference Control

@@ -30,9 +30,9 @@ selecting a blogging solution.
 
 The problem with dasBlog is that it appears to be "dead" from a development
 perspective -- meaning nobody seems to be actively working on it. If you look at
-the main dasBlog site ( [http://dasblog.info](http://dasblog.info/)) you will
-see that it still refers to the March 16th 2009 version as the latest release --
-and yet when you look at the
+the main dasBlog site ([http://dasblog.info](http://dasblog.info/)) you will see
+that it still refers to the March 16th 2009 version as the latest release -- and
+yet when you look at the
 [corresponding CodePlex project](http://dasblog.codeplex.com), you can see
 dozens of bug fixes and enhancements have been checked in since that time.
 Therefore I turned my attention from dasBlog and started focusing on
@@ -62,8 +62,8 @@ accessed through a provider that encapsulates the underlying storage mechanism.
 
 Suspecting the XML storage implementation to be the source of the performance
 problem, I spent a few minutes creating a SQL Server database and switching from
-the **XmlBlogProvider** to the **
-[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**
+the **XmlBlogProvider** to the
+**[DbBlogProvider](http://blogengine.codeplex.com/wikipage?title=SQLServerBlogProvider)**
 -- and subsequently migrated my historical content into the database. I fully
 expected this to resolve the scalability issue I discovered shortly before.
 

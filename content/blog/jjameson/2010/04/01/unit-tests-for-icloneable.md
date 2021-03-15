@@ -29,15 +29,15 @@ A common scenario in faceted search is to start with a search results URL and
 subsequently manipulate it in a multitude of ways to generate links to related
 search results.
 
-To support this scenario, **SharePointSearchUrlBuilder** implements the **
-[ICloneable](http://msdn.microsoft.com/en-us/library/system.icloneable.aspx)**
+To support this scenario, **SharePointSearchUrlBuilder** implements the
+**[ICloneable](http://msdn.microsoft.com/en-us/library/system.icloneable.aspx)**
 interface. In other words, an instance of **SharePointSearchUrlBuilder** can be
 created using the current URL of the search results page and subsequently cloned
 multiple times to add or change the search criteria in order to generate links
 to view related search results.
 
-Note that the **
-[ICloneable.Clone](http://msdn.microsoft.com/en-us/library/system.icloneable.clone.aspx)**
+Note that the
+**[ICloneable.Clone](http://msdn.microsoft.com/en-us/library/system.icloneable.clone.aspx)**
 method is defined rather ambiguously. Here are the remarks from the
 corresponding documentation on MSDN:
 

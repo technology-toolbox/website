@@ -26,7 +26,7 @@ order to save some significant disk space while installing the service pack).
 -- as I mentioned in my original post.]
 
 I've also mentioned in various posts that I make heavy use of virtualization in
-the " [Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)"
+the "[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)"
 (a.k.a. my home lab) and that I prefer to keep my VHDs reasonably small. This is
 especially valuable when, for example, I need to copy a VM from one of my home
 servers and take it "on the road" with me to a customer site.

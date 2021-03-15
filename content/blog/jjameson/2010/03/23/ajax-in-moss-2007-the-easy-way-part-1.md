@@ -46,8 +46,8 @@ that the prescriptive guidance isn't always easy to follow and implement. I'll
 be the first to admit that copying and pasting lots of "configuration goo" can
 be problematic.
 
-Using my custom **
-[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
+Using my custom
+**[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
 class, it's pretty easy to add the slew of Web.config modifications that are
 required to get ASP.NET AJAX working on a SharePoint site.
 
@@ -72,11 +72,11 @@ However, it's probably not a big deal in this particular case because what's the
 likelihood that you will start using AJAX and then later on decide to stop using
 it? Probably "next to zilch" would be my guess.
 
-Since it's just one line of code, I don't even bother with a separate **
-[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)**
+Since it's just one line of code, I don't even bother with a separate
+**[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)**
 class for the **Fabrikam.Demo.Web.AjaxConfiguration** feature. Instead, I just
-stuff the code directly into the class that inherits from **
-[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)**:
+stuff the code directly into the class that inherits from
+**[SPFeatureReceiver](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfeaturereceiver.aspx)**:
 
 ```
 using System;

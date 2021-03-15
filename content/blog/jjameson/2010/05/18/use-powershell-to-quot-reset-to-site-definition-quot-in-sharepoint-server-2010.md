@@ -38,8 +38,8 @@ decided to spend a few minutes exploring the **Reset Page to Site Definition
 Version** page (e.g.
 [http://cyclops/sites/Demo/\_layouts/reghost.aspx](http://cyclops/sites/Demo/_layouts/reghost.aspx)).
 
-That's when I discovered the **
-[SPWeb.RevertAllDocumentContentStreams](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.revertalldocumentcontentstreams.aspx)**
+That's when I discovered the
+**[SPWeb.RevertAllDocumentContentStreams](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.revertalldocumentcontentstreams.aspx)**
 method. [I'm actually a little embarrassed that I wasn't aware of this little
 gem before. A few years ago, while working on the Agilent Technologies project,
 I'd used some custom C# to reghost specific pages (to resolve deployment

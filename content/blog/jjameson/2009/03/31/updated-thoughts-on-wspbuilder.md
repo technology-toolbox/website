@@ -19,8 +19,8 @@ tags: ["MOSS 2007"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
 > I have copied it here in case that blog ever goes away.
 
-Several weeks ago, I wrote a post titled "
-[Why I'm Not a Fan of WSPBuilder](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder)."
+Several weeks ago, I wrote a post titled
+"[Why I'm Not a Fan of WSPBuilder](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder)."
 Shortly thereafter, I received a message from Carsten Keutmann, the creator of
 WSPBuilder.
 

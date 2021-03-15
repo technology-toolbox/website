@@ -93,8 +93,8 @@ exclusively weblog postings. [...]
 The hAtom schema consists of the following:
 
 - hfeed (**`hfeed`**). optional.
-  - **`feed category`**. optional. keywords or phrases, using **
-    [rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+  - **`feed category`**. optional. keywords or phrases, using
+    **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
   - hentry (**`hentry`**).
     - **`entry-title`**. required. text.
     - **`entry-content`**. optional (see field description). text. [\*]
@@ -104,12 +104,12 @@ The hAtom schema consists of the following:
       [\*]
     - **`published`**. optional using
       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
-    - **`author`**. required using **
-      [hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
-    - **`bookmark`** (permalink). optional, using **
-      [rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
-    - tags. optional. keywords or phrases, using **
-      [rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+    - **`author`**. required using
+      **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
+    - **`bookmark`** (permalink). optional, using
+      **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+    - tags. optional. keywords or phrases, using
+      **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 
 <cite>-- <a
 href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>

@@ -72,8 +72,8 @@ one or more language packs for SharePoint, when you subsequently go to create a
 new site, the **Create Site** page (newsbweb.aspx) displays a dropdown list
 listing the available languages.
 
-Let's suppose that you pick **Spanish** when creating a new site. The
-[SPWeb.Language](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.language%28v=office.12%29.aspx)
+Let's suppose that you pick **Spanish** when creating a new site.
+The[SPWeb.Language](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.language%28v=office.12%29.aspx)
 property on this new site is set to 3082 (not 1034 as suggested by the MSDN
 Library). Subsequent page requests for anything under the Spanish site will have
 the

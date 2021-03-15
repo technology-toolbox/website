@@ -105,8 +105,8 @@ than the fact that PowerShell.exe exited with return code 1.
 We need to be able to inspect a log file containing all of the output from the
 script.
 
-Like me, you might try using the **
-[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**
+Like me, you might try using the
+**[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**
 cmdlet to create a log file:
 
 ```

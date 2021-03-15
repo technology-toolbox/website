@@ -31,8 +31,8 @@ various samples from the TechNet Script Center.
 
 Note that I typically use this script only in development environments. I
 discovered a few years ago that Operations Manager doesn't like it when I clear
-the event logs on "Production" servers in the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
+the event logs on "Production" servers in the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
 my home lab). It's not that anything really bad happens, but rather the
 Operations Manager agent detects the event logs have been cleared and
 subsequently generates a warning. In other words, it's probably not considered a

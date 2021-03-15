@@ -19,8 +19,8 @@ application. Other errors might be completely unexpected (e.g. "What do you mean
 Isn't someone supposed to be monitoring that?").
 
 Many errors are avoidable, but you will inevitably encounter some situations
-where the best thing your site can do is cough up a decent "
-[mea maxima culpa](http://en.wikipedia.org/wiki/Mea_culpa)" message and try to
+where the best thing your site can do is cough up a decent
+"[mea maxima culpa](http://en.wikipedia.org/wiki/Mea_culpa)" message and try to
 avoid showing users the infamous Yellow Page of Death.
 
 Last year, I blogged my recommendations for
@@ -183,8 +183,8 @@ Web.config file using something like the following:
   </system.web>
 ```
 
-Note that if you don't specify the `redirectMode` attribute, it defaults to **
-[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)**,
+Note that if you don't specify the `redirectMode` attribute, it defaults to
+**[ResponseRedirect](http://msdn.microsoft.com/en-us/library/system.web.configuration.customerrorsredirectmode.aspx)**,
 which causes the URL to change to something like the following:
 
 > http://.../Errors/Generic.aspx?aspxerrorpath=...

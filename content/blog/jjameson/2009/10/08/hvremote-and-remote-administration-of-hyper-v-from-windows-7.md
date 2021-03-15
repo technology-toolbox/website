@@ -18,8 +18,8 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
 > I have copied it here in case that blog ever goes away.
 
-Last Sunday, I rebuilt my desktop (
-[WOLVERINE](/blog/jjameson/2009/09/14/the-jameson-datacenter)) with the RTM
+Last Sunday, I rebuilt my desktop
+([WOLVERINE](/blog/jjameson/2009/09/14/the-jameson-datacenter)) with the RTM
 build of Windows 7 Ultimate (x64). Previously, I'd been running the RC1 bits and
 I figured it was about time I got around to "upgrading" to the RTM version. [I
 say "upgrading" because -- at least it in my experience -- it is typically

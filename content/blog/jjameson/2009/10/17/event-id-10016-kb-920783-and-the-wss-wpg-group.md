@@ -48,8 +48,8 @@ There are lots of sources out on the Internet that provide the steps necessary
 to resolve these errors (essentially you need to grant the SharePoint service
 account Local Activation permission to the IIS WAMREG Admin Service).
 
-This week, I was glad to discover that Microsoft has a KnowledgeBase article (
-[KB 920783](http://support.microsoft.com/kb/920783)) describing the errors and
+This week, I was glad to discover that Microsoft has a KnowledgeBase article
+([KB 920783](http://support.microsoft.com/kb/920783)) describing the errors and
 the associated workaround. [This KB article appears to have been published over
 two years ago, but honestly, I was completely unaware of it until just yesterday
 when I was building out the Production MOSS 2007 environment on my latest

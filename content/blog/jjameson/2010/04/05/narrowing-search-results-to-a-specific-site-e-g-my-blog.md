@@ -55,8 +55,8 @@ that's not always the only way to do it.
 In MOSS 2007, you can specify a *contextual scope URL* (a.k.a. the "u" query
 string parameter).
 
-For example, if you browse to the home page for KPMG Global (
-[http://www.kpmg.com/global/en](http://www.kpmg.com/global/en)), and search for
+For example, if you browse to the home page for KPMG Global
+([http://www.kpmg.com/global/en](http://www.kpmg.com/global/en)), and search for
 "tax audit", you will find it generates a search results URL similar to the
 following:
 

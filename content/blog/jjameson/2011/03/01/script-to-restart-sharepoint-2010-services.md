@@ -19,8 +19,8 @@ tags: ["SharePoint 2010", "Toolbox"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
 > I have copied it here in case that blog ever goes away.
 
-A couple of years ago, I shared a script (
-[Restart SharePoint Services.cmd](/blog/jjameson/2009/03/26/script-to-restart-sharepoint-services))
+A couple of years ago, I shared a script
+([Restart SharePoint Services.cmd](/blog/jjameson/2009/03/26/script-to-restart-sharepoint-services))
 for restarting the various services in Microsoft Office SharePoint Server (MOSS)
 2007.
 

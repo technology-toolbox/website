@@ -58,8 +58,8 @@ case, it takes a little more work.
 
 If you Google "PowerShell zip files" you'll quickly discover a number of
 resources that show how to create a zip file using the **Set-Content** cmdlet,
-followed by the use of the **
-[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)**
+followed by the use of the
+**[CopyHere](http://msdn.microsoft.com/en-us/library/windows/desktop/ms723207.aspx)**
 method on the **Folder** shell object. For example,
 [David Aiken's blog post](http://blogs.msdn.com/b/daiken/archive/2007/02/12/compress-files-with-windows-powershell-then-package-a-windows-vista-sidebar-gadget.aspx)
 shows the following:

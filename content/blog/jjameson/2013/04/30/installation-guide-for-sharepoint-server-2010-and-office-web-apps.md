@@ -43,8 +43,8 @@ This document explains how to install and configure the Fabrikam Extranet.
 ## Purpose
 
 This installation guide provides the detailed guidance and step-by step
-procedures necessary to deploy the new extranet solution for Fabrikam (
-[extranet.fabrikam.com](http://extranet.fabrikam.com)), which is built on
+procedures necessary to deploy the new extranet solution for Fabrikam
+([extranet.fabrikam.com](http://extranet.fabrikam.com)), which is built on
 Microsoft SharePoint Server 2010 and uses Office Web Apps to provide a
 collaboration environment for Fabrikam employees, partners, suppliers, and
 resellers.
@@ -1429,8 +1429,8 @@ To create the initial site collections using SharePoint Central Administration:
 1. On the Central Administration home page, in the **Application Management**
    section, click **Create site collections**.
 2. On the **Create Site Collection** page, in the **Web Application** section,
-   ensure the Fabrikam Extranet Web application is selected (
-   [**http://extranet.fabrikam.com**](http://extranet.fabrikam.com)).
+   ensure the Fabrikam Extranet Web application is selected
+   ([**http://extranet.fabrikam.com**](http://extranet.fabrikam.com)).
 3. In the **Title and Description** section, type the title and description for
    the site collection using the corresponding values specified in Table 8.
 4. In the **Web Site Address** section, specify the path to use based on the
@@ -1638,8 +1638,8 @@ To enable anonymous access to the site using PowerShell:
 
 To enable anonymous access to the site using the site permissions page:
 
-1. Browse to the home page of the site (
-   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+1. Browse to the home page of the site
+   ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 2. Click **Site Actions** and then click **Site Permissions**.
 3. On the site permissions page, in the ribbon, click **Anonymous Access**.
 4. In the **Anonymous Access** page, click **Entire Web site**, and then click
@@ -1665,8 +1665,8 @@ configured using the following high-level steps:
    claims-based authentication:
    - SharePoint Central Administration v4
    - SecurityTokenServiceApplication
-   - Fabrikam Extranet Web application (
-     [http://extranet.fabrikam.com](http://extranet.fabrikam.com))
+   - Fabrikam Extranet Web application
+     ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 3. Create a user in the database using IIS Manager
 4. Validate the configuration of the Web application
 
@@ -1756,8 +1756,8 @@ necessary to modify the Web.config files for the following sites:
 
 - SharePoint Central Administration v4
 - Security Token Service
-- Fabrikam Extranet (
-  [http://extranet.fabrikam.com](http://extranet.fabrikam.com))
+- Fabrikam Extranet
+  ([http://extranet.fabrikam.com](http://extranet.fabrikam.com))
 
 > **Important**
 >
@@ -1993,8 +1993,8 @@ using both Forms-Based Authentication and Windows authentication.
 
 To login to the website using forms authentication:
 
-1. Browse to the home page page the Fabrikam Extranet website (
-   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
+1. Browse to the home page page the Fabrikam Extranet website
+   ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
    **Sign In**.
 2. On the **Sign In**page:
    1. In the dropdown list, click **Forms Authentication**.
@@ -2013,8 +2013,8 @@ To login to the website using Windows authentication:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
 
-2. Browse to the home page page the Fabrikam Extranet website (
-   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
+2. Browse to the home page page the Fabrikam Extranet website
+   ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
    **Sign In**.
 
 3. On the **Sign In** page, in the dropdown list, click **Windows
@@ -2119,8 +2119,8 @@ To configure BLOB cache settings:
 
 To add members to SharePoint groups:
 
-1. Browse to the home page of the site (
-   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+1. Browse to the home page of the site
+   ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 2. Click the **Sign In** link and sign in using **Windows Authentication**.
 3. On the home page of the site, click **Site Actions** and then click **Site
    Permissions**.
@@ -2641,8 +2641,8 @@ To create a site collection for a Fabrikam partner using Central Administration:
 1. On the Central Administration home page, in the **Application Management**
    section, click **Create site collections**.
 2. On the **Create Site Collection** page, in the **Web Application** section,
-   ensure the Fabrikam Extranet application is selected (
-   [http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
+   ensure the Fabrikam Extranet application is selected
+   ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)).
 3. In the **Title and Description** section, in the **Title** box, type the name
    of the partner (e.g. “Contoso Shipping”).
 4. In the **Web Site Address** section, specify the path to use based on the

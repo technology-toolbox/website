@@ -20,8 +20,8 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 > I have copied it here in case that blog ever goes away.
 
 Prior to the recent "v2" release on my current project, we had been using the
-ASP.NET **
-[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)**
+ASP.NET
+**[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)**
 to manage the various roles used by the Web site.
 
 Over a month ago, someone contacted me about an issue he was encountering with a

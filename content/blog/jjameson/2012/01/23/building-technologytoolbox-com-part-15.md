@@ -296,8 +296,8 @@ check-in comments below:
 
 Resolve errors with IdenticonHandler.ashx when running in "Medium" trust (by
 removing Identicon code in Subtext and instead relying on Gravatar service to
-render these images). This is very similar to Subtext revision r4237 (
-[http://code.google.com/p/subtext/source/detail?r=4237](http://code.google.com/p/subtext/source/detail?r=4237))
+render these images). This is very similar to Subtext revision r4237
+([http://code.google.com/p/subtext/source/detail?r=4237](http://code.google.com/p/subtext/source/detail?r=4237))
 but varies somewhat to account for differences in the expected behavior (for
 example, do not show Gravatar image when no email address or default image is
 specified).

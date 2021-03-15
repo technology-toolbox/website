@@ -147,8 +147,8 @@ not a fan of that approach, because it feels like using a 3-lb. sledge hammer to
 assemble a fine piece of furniture (meaning that you can make it work, but you
 might very well break something in the process).
 
-Instead, the approach that I like to use is to hook into the **
-[Error](http://msdn.microsoft.com/en-us/library/system.web.ui.templatecontrol.error.aspx)**
+Instead, the approach that I like to use is to hook into the
+**[Error](http://msdn.microsoft.com/en-us/library/system.web.ui.templatecontrol.error.aspx)**
 event from a custom master page. After all, if we're developing an
 Internet-facing Web site, aren't we going to utilize a custom master page for
 all of the pages that are visible to the general public?
@@ -226,8 +226,8 @@ linkHref="http://support.microsoft.com/kb/306355" >}}
 
 In the **Page\_Error** method, I first log the exception using
 [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications).
-Then I call the **
-[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)**
+Then I call the
+**[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)**
 method to prevent the error from continuing to the **Application\_Error** event
 handler (which would subsequently invoke the SharePoint error handling
 infrastucture). Finally, I transfer the request to a custom application page

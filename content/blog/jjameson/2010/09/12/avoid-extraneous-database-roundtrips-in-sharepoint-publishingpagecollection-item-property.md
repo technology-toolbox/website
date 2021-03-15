@@ -51,12 +51,12 @@ getting the list of pages within an **SPWeb** based on the navigation order.
 Note that the list of pages is simply an instance of `List<string>` where each
 item is the Web-relative URL of a page within the site (since this must be
 unique for each page within a site). Then it uses a simple `foreach` loop to
-append the content of each page to the "aggregate" document (via a generic **
-[TextWriter](http://msdn.microsoft.com/en-us/library/system.io.textwriter.aspx)**
+append the content of each page to the "aggregate" document (via a generic
+**[TextWriter](http://msdn.microsoft.com/en-us/library/system.io.textwriter.aspx)**
 object).
 
-Since I expect to aggregate all of the pages within the site, I use the **
-[PublishingWeb.GetPublishingPages()](http://msdn.microsoft.com/en-us/library/ms493244%28v=office.12%29.aspx)**
+Since I expect to aggregate all of the pages within the site, I use the
+**[PublishingWeb.GetPublishingPages()](http://msdn.microsoft.com/en-us/library/ms493244%28v=office.12%29.aspx)**
 method to return all pages for the specified site. Then, in the `foreach` loop,
 I fetch each particular page from the collection using the indexer (i.e. the
 **Item** property) specifying the URL of the page.
@@ -96,8 +96,8 @@ post), I started the trace and ran my console application. Based on my sample
 site, 432 database roundtrips were required based on my initial approach. It's
 important to note that my sample site contains 97 pages, but nevertheless this
 number of database roundtrips still seemed very high. After all, wasn't the
-whole point of using the **
-[PublishingWeb.GetPublishingPages()](http://msdn.microsoft.com/en-us/library/ms493244%28v=office.12%29.aspx)**
+whole point of using the
+**[PublishingWeb.GetPublishingPages()](http://msdn.microsoft.com/en-us/library/ms493244%28v=office.12%29.aspx)**
 method to get all of the pages at once?
 
 Upon closer inspection, I found that each call to the
@@ -150,8 +150,8 @@ say I agree. Keep in mind that the SharePoint API does a fair amount of "lazy
 loading" -- often in places you might not expect, such as accessing a simple
 property.
 
-For example, accessing the **
-[PublishingPage.Layout](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.layout.aspx)**
+For example, accessing the
+**[PublishingPage.Layout](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.layout.aspx)**
 property, as shown below, actually results in two database roundtrips:
 
 ```

@@ -107,8 +107,8 @@ For example here's the output from the log for this morning's backup:
 
 {{< /log-excerpt >}}
 
-I use similar token parsing of the output from the **
-[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)**
+I use similar token parsing of the output from the
+**[date](http://technet.microsoft.com/en-us/library/cc732776%28WS.10%29.aspx)**
 and
 [**time**](http://technet.microsoft.com/en-us/library/cc770579%28WS.10%29.aspx)
 system commands to generate the name of the backup file (e.g. {{< sample-output

@@ -178,8 +178,8 @@ underlying content databases:
 > I should have updated this post long ago based on the comment added by "todh2"
 > regarding granting access to the database. Instead of using SQL Server
 > Management Studio to configure permissions on the content database for the
-> service account, use a little PowerShell to invoke the **
-> [SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)**
+> service account, use a little PowerShell to invoke the
+> **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)**
 > method:
 >
 > ```

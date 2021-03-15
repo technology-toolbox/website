@@ -19,8 +19,8 @@ tags: ["My System", "Virtualization"]
 > [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
 > I have copied it here in case that blog ever goes away.
 
-I've mentioned before how I run two Hyper-V servers in the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (each
+I've mentioned before how I run two Hyper-V servers in the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (each
 one hosting a variety of different VMs).
 
 On the rare occasion that a patch comes out on Windows Update that affects

@@ -75,13 +75,13 @@ $DebugPreference = "Continue"
 AddWikiLibrary $web $name $description
 ```
 
-Note that in SharePoint, you create a new list (or library) using the **
-[SPListCollection.Add](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistcollection.add.aspx)**
+Note that in SharePoint, you create a new list (or library) using the
+**[SPListCollection.Add](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistcollection.add.aspx)**
 method. Also note that the template corresponding to **Wiki Page Library** is
-actually **
-[SPListTemplateType.WebPageLibrary](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splisttemplatetype.aspx)**,
-and you can use the **
-[SPUtility.AddDefaultWikiContent](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.utilities.sputility.adddefaultwikicontent.aspx)**
+actually
+**[SPListTemplateType.WebPageLibrary](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splisttemplatetype.aspx)**,
+and you can use the
+**[SPUtility.AddDefaultWikiContent](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.utilities.sputility.adddefaultwikicontent.aspx)**
 method to create the two default pages that are automatically added when you
 create a wiki library through the SharePoint site.
 

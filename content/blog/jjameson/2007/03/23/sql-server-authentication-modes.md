@@ -67,8 +67,8 @@ Here is some info from MSDN:
 > may be required for connections with clients other than Windows NT 4.0 and
 > Windows 2000 clients; it may also be necessary for legacy applications.
 >
-> Pasted from &lt;
-> [http://msdn.microsoft.com/library/en-us/adminsql/ad\_security\_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
+> Pasted from
+> &lt;[http://msdn.microsoft.com/library/en-us/adminsql/ad\_security\_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
 >
 > Windows authentication is more secure than SQL authentication for the
 > following reasons:
@@ -80,8 +80,8 @@ Here is some info from MSDN:
 >   lengths, and account lockout after multiple invalid logon requests. This
 >   mitigates the threat from dictionary attacks.
 >
-> Pasted from &lt;
-> [http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;
+> Pasted from
+> &lt;[http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;
 >
 > I remember speaking to a SQL Server Program Manager a few years ago at a
 > session where he stated that as of SQL Server [2000] SP3 (and some specific

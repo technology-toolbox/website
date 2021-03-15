@@ -113,8 +113,8 @@ could certainly type those PowerShell commands each time you need to configure
 the State Service, I find this script much more convenient.
 
 Thanks to [Todd Carter](http://www.todd-carter.com/) for providing the core
-PowerShell commands used in the script above. While apparently the "
-[wizard likes his GUIDs](http://todd-carter.com/post/2010/04/26/The-Wizard-Likes-His-GUIDs.aspx)"...Jeremy
+PowerShell commands used in the script above. While apparently the
+"[wizard likes his GUIDs](http://todd-carter.com/post/2010/04/26/The-Wizard-Likes-His-GUIDs.aspx)"...Jeremy
 most certainly does not (at least not when it comes to database names).
 
 Seriously, why doesn't SharePoint use a database name like "StateService" by

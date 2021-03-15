@@ -50,10 +50,10 @@ reasons:
 - Unlike Production environments, SQL Server is typically installed
   "side-by-side" with SharePoint in development environments. Thus I make sure
   that when installing SQL Server I change the default locations of database
-  files and log files. Personally, I like to use "
-  [D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///D:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)"
-  and "
-  [L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///L:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)").
+  files and log files. Personally, I like to use
+  "[D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///D:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)"
+  and
+  "[L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA](file:///L:/NotBackedUp/Microsoft%20SQL%20Server/MSSQL10.MSSQLSERVER/MSSQL/DATA)").
 - On my Hyper-V server (ICEMAN) that I use to run SharePoint development VMs, I
   have two RAID 1 arrays and therefore split the VHDs across the two drives on
   the host, thus greatly reducing the possibility of I/O contention on a single

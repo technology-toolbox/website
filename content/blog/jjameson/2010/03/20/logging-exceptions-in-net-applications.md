@@ -28,8 +28,8 @@ class.
 A few months ago, I enhanced the **Logger** class to log exceptions in a
 consistent fashion.
 
-I used the "
-[Yellow Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)"
+I used the
+"[Yellow Page of Death](http://en.wikipedia.org/wiki/Yellow_Screen_of_Death#Yellow)"
 provided by ASP.NET as a reference for logging the details of the exception.
 Here's a screenshot from a sample that I whipped up this morning:
 

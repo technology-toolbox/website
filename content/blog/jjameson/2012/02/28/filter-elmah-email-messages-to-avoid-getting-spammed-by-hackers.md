@@ -142,8 +142,8 @@ To suppress these messages, we can simply expand the ELMAH filter a little bit:
 
 Another common hack that I've seen attempted somewhat frequently against
 TechnologyToolbox.com is the so-called "padding oracle exploit" identified back
-in 2010 (
-[http://technet.microsoft.com/en-us/security/advisory/2416728](http://technet.microsoft.com/en-us/security/advisory/2416728)).
+in 2010
+([http://technet.microsoft.com/en-us/security/advisory/2416728](http://technet.microsoft.com/en-us/security/advisory/2416728)).
 The following errors are typically indicative of these hack attempts:
 
 - System.Web.HttpException: This is an invalid script resource request.

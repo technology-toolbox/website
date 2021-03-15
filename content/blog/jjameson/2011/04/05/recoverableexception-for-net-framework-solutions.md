@@ -20,8 +20,9 @@ tags: ["My System", "Core Development"]
 > I have copied it here in case that blog ever goes away.
 
 Do you remember the good ol' days before the **ApplicationException** class in
-the .NET Framework became "
-[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure do.
+the .NET Framework became
+"[persona non grata](http://en.wikipedia.org/wiki/Persona_non_grata)"? I sure
+do.
 
 If you were to look at .NET code that I wrote years ago, you'd probably see
 **ApplicationException** being used all over the place. After all, this seemed
@@ -195,7 +196,7 @@ an unexpected error).
 > **Note**
 >
 > A more elegant way of handling errors during asynchronous postbacks is to use
-> the **
-> [ScriptManager.AsyncPostBackError](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.asyncpostbackerror.aspx)**
+> the
+> **[ScriptManager.AsyncPostBackError](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.asyncpostbackerror.aspx)**
 > event. I'll cover that in a separate post.
 

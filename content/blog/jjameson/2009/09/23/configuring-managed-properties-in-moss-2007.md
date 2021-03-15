@@ -98,8 +98,8 @@ after activating the custom Search feature in a freshly rebuilt SharePoint
 environment.
 
 The "magic" behind automatically configuring managed properties upon feature
-activation is really not magic at all. It simply uses my "
-[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)
+activation is really not magic at all. It simply uses my
+"[FeatureConfigurator](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator)
 framework" (and even calling this a framework is definitely a stretch) with a
 little bit of help from my SharePointSearchHelper class:
 

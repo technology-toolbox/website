@@ -281,6 +281,6 @@ solution that point toward a particular fault in the system.
 >
 > A SharePoint site -- or even just a simple SharePoint list -- provides an
 > excellent alternative to a Troubleshooting Guide document. Think of this site
-> --or list -- as a simple " [Knowledge Base](http://support.microsoft.com/)"
-> for your solution.
+> --or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)" for
+> your solution.
 

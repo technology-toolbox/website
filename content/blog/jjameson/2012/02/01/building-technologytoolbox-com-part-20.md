@@ -133,8 +133,8 @@ allows the styling to be controlled via CSS. For example:
 ```
 
 In addition to required fields, you may need to add other types of validators
-(for example, to ensure a valid email address is specified). Be sure to add a **
-[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)**
+(for example, to ensure a valid email address is specified). Be sure to add a
+**[ValidationSummary](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.validationsummary.aspx)**
 control as well.
 
 At this point, the markup for the Contact form looked like this:
@@ -287,8 +287,8 @@ the feature currently works on TechnologyToolbox.com.
 > database and sending some kind of notification to the appropriate people).
 >
 > The [Agilent LSCA](http://www.chem.agilent.com) site, for example, uses
-> SharePoint and InfoPath Forms Services for the "
-> [Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)"
+> SharePoint and InfoPath Forms Services for the
+> "[Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)"
 > feature -- complete with "routing" rules on the backend to send the request to
 > the appropriate people.
 

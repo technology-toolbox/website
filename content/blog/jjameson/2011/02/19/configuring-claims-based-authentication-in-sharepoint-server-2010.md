@@ -84,8 +84,8 @@ the following high-level steps:
    claims-based authentication:
    - SharePoint Central Administration v4
    - SecurityTokenServiceApplication
-   - "Fabrikam" Web application (
-     [http://www.fabrikam.com](http://www.fabrikam.com))
+   - "Fabrikam" Web application
+     ([http://www.fabrikam.com](http://www.fabrikam.com))
 6. Create a user in the database using IIS Manager
 7. Validate the configuration of the Web application
 

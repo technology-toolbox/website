@@ -274,8 +274,8 @@ function UpdateGacAssemblyIfNecessary(
 
 > **Note**
 >
-> I've seen a number of resources that suggest using the **
-> [Publish.GacInstall](http://msdn.microsoft.com/en-us/library/system.enterpriseservices.internal.publish.gacinstall.aspx)**
+> I've seen a number of resources that suggest using the
+> **[Publish.GacInstall](http://msdn.microsoft.com/en-us/library/system.enterpriseservices.internal.publish.gacinstall.aspx)**
 > method (in the **System.EnterpriseServices.Internal** namespace) to install an
 > assembly in the GAC. However, I also recall seeing an MSDN blog post that
 > indicated this was only intended to be used for adding COM interop assemblies
@@ -549,8 +549,8 @@ Main
 I have attached a sample Visual Studio 2010 solution that contains a couple of
 assemblies that target .NET Framework 3.5 (one "generic" assembly and another
 that contains some SharePoint-specific code) as well as corresponding
-unit/integration tests. You should be able to extract the files, create an "
-[http://fabrikam-local](http://fabrikam-local)" Web application in SharePoint
+unit/integration tests. You should be able to extract the files, create an
+"[http://fabrikam-local](http://fabrikam-local)" Web application in SharePoint
 2010 (or use the FABRIKAM\_DEMO\_URL environment variable to point to one of
 your existing Web applications), and then run the PowerShell script from the
 **Source** folder to perform code coverage analysis:

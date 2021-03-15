@@ -24,15 +24,15 @@ tags: ["SharePoint 2010", "Tugboat"]
 In
 [part 5 of this series](/blog/jjameson/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart),
 I showed how you can render semantic HTML for SharePoint list items (instead of
-the out-of-the-box table layout) using the new **
-[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)**
+the out-of-the-box table layout) using the new
+**[XsltListViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.xsltlistviewwebpart.aspx)**
 in SharePoint 2010.
 
 > **Note**
 >
 > You can achieve similar results in Microsoft Office SharePoint Server (MOSS)
-> 2007 using the **
-> [DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
+> 2007 using the
+> **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
 
 For those of you that haven't yet read my previous post, the goal was to take a
 SharePoint list like the one shown below...
@@ -465,8 +465,8 @@ described below.
    - **{DOMAIN}\svc-web-tugboat-dev** - used as the application pool identity
      for the new Tugboat site
    - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full Read
-     access to Web applications (
-     [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+     access to Web applications
+     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
      Control access to Web applications
 

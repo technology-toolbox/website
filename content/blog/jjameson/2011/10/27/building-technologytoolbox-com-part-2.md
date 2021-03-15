@@ -42,8 +42,8 @@ constellations.
 Thus when it came time to name the project for creating the new
 TechnologyToolbox.com site, I took a look at the
 [list of constellations on Wikipedia](http://en.wikipedia.org/wiki/List_of_constellations).
-It didn't take long before I came across "
-[Caelum](http://en.wikipedia.org/wiki/Caelum_%28constellation%29)" which means
+It didn't take long before I came across
+"[Caelum](http://en.wikipedia.org/wiki/Caelum_%28constellation%29)" which means
 "the chisel" in Latin.
 
 Given the "Toolbox" portion of my company name, this sounded perfect! "Caelum"

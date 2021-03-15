@@ -45,8 +45,8 @@ title="Programmatically adding Web Parts to Rich Content in SharePoint 2010"
 linkHref="http://blog.mastykarz.nl/programmatically-adding-web-parts-rich-content-sharepoint-2010/" >}}
 
 Long ago, when I first started programmatically creating Publishing pages in
-MOSS 2007, I ended up creating a **
-[SharePointPublishingHelper](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class)**
+MOSS 2007, I ended up creating a
+**[SharePointPublishingHelper](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class)**
 class. For those of you that haven't seen the original post (and don't want to
 take the time to read it now), you just need to understand that
 **SharePointPublishingHelper** is simply intended to make the process of

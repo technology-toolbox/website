@@ -213,8 +213,8 @@ du /c 100 0f6de52a 0f6e0434
 ```
 
 ...and copied it to the clipboard. SHAZAM! No need to recall my content from my
-memory (which is far from "
-[photographic](http://en.wikipedia.org/wiki/Eidetic_memory)"). Woohoo!
+memory (which is far from
+"[photographic](http://en.wikipedia.org/wiki/Eidetic_memory)"). Woohoo!
 
 Yes, it's definitely "kludgey" -- and sure, I had to spend a few minutes
 tweaking the pasted content to get it back to valid HTML -- but it worked (and

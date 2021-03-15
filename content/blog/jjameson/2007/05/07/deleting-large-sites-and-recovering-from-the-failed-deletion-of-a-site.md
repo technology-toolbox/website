@@ -23,8 +23,8 @@ Microsoft Office SharePoint Server (MOSS) 2007. Last week I deleted -- or
 rather, attempted to delete -- a Document Center site in our Test environment in
 order to recreate it (to fix some bugs in our document migration process).
 Unfortunately, the deleteweb.aspx page timed out and left the database in an
-inconsistent state -- attempts to browse to the site (
-[http://server/Archive/Library](http://server/Archive/Library)) returned HTTP
+inconsistent state -- attempts to browse to the site
+([http://server/Archive/Library](http://server/Archive/Library)) returned HTTP
 400 - Bad Request. The "deleted" site showed up in the list of site collections
 in Central Administration (although you could not select it in order to delete
 it) but it did not show up in "{{< kbd "stsadm -o enumsites" >}}". Attempts to

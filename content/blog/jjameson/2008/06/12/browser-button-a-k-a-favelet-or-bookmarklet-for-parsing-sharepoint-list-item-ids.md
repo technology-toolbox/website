@@ -25,8 +25,8 @@ document, but there are scenarios where this is useful (or perhaps even
 required).
 
 My initial suggestion was to inform users to obtain the ID from the item
-properties URL. For example, if you are viewing the properties of a document (
-[http://server/Library/Forms/DispForm.aspx?ID=1956](http://server/Library/Forms/DispForm.aspx?ID=1956))
+properties URL. For example, if you are viewing the properties of a document
+([http://server/Library/Forms/DispForm.aspx?ID=1956](http://server/Library/Forms/DispForm.aspx?ID=1956))
 then you can inspect the URL and determine that **1956** is the ID. Okay, I'll
 admit, this gets a little cumbersome depending on the URL. For example, it
 certainly isn't as easy to extract ID **2531** from

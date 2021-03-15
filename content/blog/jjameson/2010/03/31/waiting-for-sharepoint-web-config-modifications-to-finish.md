@@ -67,8 +67,8 @@ before continuing. Otherwise, the "configuration modification operation is
 already running" error may occur when applying Web.config changes from two
 different features in rapid succession.
 
-To avoid the error, I added a little bit of code to the **
-[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
+To avoid the error, I added a little bit of code to the
+**[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
 class in the **ApplyWebConfigModifications** method:
 
 ```

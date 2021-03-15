@@ -254,8 +254,8 @@ following:
 
 Let's start customizing the header by replacing the lengthy column headings for
 the KPI thresholds with corresponding icons. This is easily achieved using a
-little bit of code in the **
-[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**
+little bit of code in the
+**[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**
 event:
 
 ```

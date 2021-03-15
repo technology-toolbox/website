@@ -149,8 +149,8 @@ the example bugs to get a feel for the level of detail expected during the
 > ***
 
 
-Note that I have replaced the project code name with *
-[Project]* in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a ["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)
+Note that I have replaced the project code name with
+*[Project]* in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a ["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)
 on a secured team site we used for the project (which obviously you wouldn't
 have access to -- unless you just happen to be one of my cohorts on the
 project).

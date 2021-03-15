@@ -19,8 +19,8 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 > I have copied it here in case that blog ever goes away.
 
 Back in February, Roger Lamb kicked off
-[his MSDN blog](http://blogs.msdn.com/rogerla) with a great post (
-[SharePoint 2007 and WSS 3.0 Dispose Patterns by Example](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx)).
+[his MSDN blog](http://blogs.msdn.com/rogerla) with a great post
+([SharePoint 2007 and WSS 3.0 Dispose Patterns by Example](http://blogs.msdn.com/rogerla/archive/2008/02/12/sharepoint-2007-and-wss-3-0-dispose-patterns-by-example.aspx)).
 It provides numerous code samples that demonstrate memory leaks commonly
 produced when working with the SharePoint object model. Kudos to Roger for
 putting this together.

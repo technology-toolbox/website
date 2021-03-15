@@ -21,8 +21,8 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 
 In a
 [previous post](/blog/jjameson/2008/11/05/server-core-installation-accessing-windows-in-notification-period),
-I noted how the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
+I noted how the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
 my home lab) currently runs two domain controllers (DCs) on a couple of VMs.
 
 If you choose to virtualize one or more DCs in your environment, make sure you

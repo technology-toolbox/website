@@ -43,8 +43,8 @@ title="Figure 2 - My Windows Explorer Jump List (Windows 7)" >}}
 Note that Windows Server 2008 R2 also includes the Jump Lists feature.
 Consequently, when I log on to one of my servers (for example, my SharePoint
 Server 2010 development VM) I can use the same Jump List items to quickly access
-various folders -- thanks to the fact that I use roaming profiles in the the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
+various folders -- thanks to the fact that I use roaming profiles in the the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
 my home lab).
 
 {{< figure

@@ -122,8 +122,8 @@ ORDER BY [System.Id]
 If you've done much SharePoint development, or if you've seen my
 [previous post on the **SharePointWebPartManager** class](/blog/jjameson/2009/10/17/introducing-the-sharepointwebparthelper-class),
 then you are likely familiar with programmatically manipulating Web Parts using
-the **
-[SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)**
+the
+**[SPLimitedWebPartManager](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.splimitedwebpartmanager.aspx)**
 class.
 
 Before listing the PowerShell script that will update the query on the **Project

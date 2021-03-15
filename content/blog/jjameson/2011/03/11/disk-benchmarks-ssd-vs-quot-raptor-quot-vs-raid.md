@@ -24,8 +24,8 @@ Earlier this week, I posted about
 while installing a new solid-state drive (SSD).
 
 This morning, I thought I would share some performance numbers that I gathered
-from the various disk configurations that I currently have running in the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
+from the various disk configurations that I currently have running in the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
 my home lab).
 
 Note that prior to installing the SSD in my desktop, I previously used a Western

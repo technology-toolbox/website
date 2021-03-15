@@ -105,8 +105,8 @@ namespace EnumFeatureDefs
 ```
 
 If you are wondering why you would ever need this kind of information, refer to
-my next post (
-[Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)).
+my next post
+([Creating a Site Template in MOSS 2007 that Works in WSS v3](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3)).
 
 Here is the list in case you don't want to download the attached file:
 

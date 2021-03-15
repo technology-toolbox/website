@@ -66,8 +66,8 @@ out-of-the-box Team Site with a little bit of customization (e.g. custom Web
 Parts and document libraries) -- which means the upgrade process to SharePoint
 Server 2010 is relatively simple.
 
-Note that in the "
-[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
+Note that in the
+"[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (a.k.a.
 my home lab), I use a dual server configuration for TFS -- an application-tier
 server and a separate database server. The "data tier" only runs SQL Server
 (Database Engine and Analysis Services), while the "application tier" runs the

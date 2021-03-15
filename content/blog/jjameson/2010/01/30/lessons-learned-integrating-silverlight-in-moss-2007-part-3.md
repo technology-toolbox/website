@@ -88,8 +88,8 @@ alt="Page menu items no longer obscured by windowless Silverlight control"
 class="screenshot" height="300" width="447"
 title="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}
 
-Here's a comment from Karl Erickson on his blog post entitled "
-[Limitations of Windowless mode for Silverlight](http://blogs.msdn.com/silverlight_sdk/archive/2008/11/12/limitations-of-windowless-mode-for-silverlight.aspx)":
+Here's a comment from Karl Erickson on his blog post entitled
+"[Limitations of Windowless mode for Silverlight](http://blogs.msdn.com/silverlight_sdk/archive/2008/11/12/limitations-of-windowless-mode-for-silverlight.aspx)":
 
 {{< blockquote "font-italic" >}}
 

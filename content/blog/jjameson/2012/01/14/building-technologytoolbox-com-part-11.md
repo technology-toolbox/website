@@ -47,8 +47,8 @@ is actually the fifth image in the set (starting from the lower-left corner).
 This explains the negative offsets specified in the CSS rule (specifically,
 -200px -137px).
 
-If you do a quick Internet search for *
-[CSS sprites](http://www.google.com/search?q=CSS+sprites)*, you will find a
+If you do a quick Internet search for
+*[CSS sprites](http://www.google.com/search?q=CSS+sprites)*, you will find a
 number of articles that explain more about the fundamental concepts of CSS
 sprites and why they are useful for optimizing site perfomance (due to the
 greatly reduced number of HTTP requests).

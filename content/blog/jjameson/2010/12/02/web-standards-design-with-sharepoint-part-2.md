@@ -68,8 +68,8 @@ yourself a favor and order it today.
 In Handcrafted CSS, Dan uses a sample site to explain various concepts and
 techniques. The site for the fictitious Tugboat Coffee Company consists of only
 two pages, but they are filled with lots of "bulletproof" HTML/CSS and even some
-"progressive enrichment" (or, as more people call it, "
-[progressive enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement)").
+"progressive enrichment" (or, as more people call it,
+"[progressive enhancement](http://en.wikipedia.org/wiki/Progressive_Enhancement)").
 
 A few weeks ago, it occurred to me that Dan's sample site would also make a
 great example for demonstrating Web standards design in SharePoint. Since it
@@ -411,8 +411,8 @@ functionality to display the map. Whoops!
 
 Note that I chose to deploy the jQuery JavaScript file referenced by the
 FindLocationWebPart (as well as the images) using the **wpresources** folder in
-SharePoint (i.e. via the **
-[ClassResources](http://msdn.microsoft.com/en-us/library/aa543503.aspx)**
+SharePoint (i.e. via the
+**[ClassResources](http://msdn.microsoft.com/en-us/library/aa543503.aspx)**
 element in the solution manifest file). You certainly don't *have* to do it this
 way, but this seems like the cleanest approach -- given the tight coupling
 between the Web Part and the corresponding resource files.
@@ -450,8 +450,8 @@ creating the FindLocationWebPart. However, I soon discovered that the *inner*
 HTML is the same (in other words, the HTML emitted by the Web Part) but the
 additional HTML added by the Web Part zone is enough to break Internet Explorer.
 In the long term, I'd like to fix this problem the *right way* by creating a
-custom **
-[WebPartZone](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.webpartzone.aspx)**
+custom
+**[WebPartZone](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.webpartzone.aspx)**
 for SharePoint that doesn't emit any additional markup (at least when
 **DesignMode** is **false**).
 

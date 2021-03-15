@@ -35,8 +35,8 @@ title="Figure 1: AJAX in SharePoint" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
-Assuming you are familiar with the **
-[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**
+Assuming you are familiar with the
+**[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**
 class in ASP.NET AJAX, the sample Web Part should be mostly self-explanatory:
 
 ```
@@ -132,8 +132,8 @@ that need it.
 {{< /blockquote >}}
 
 This is no real surprise, since BlueBand.master doesn't declare an instance of
-the ASP.NET **
-[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)**
+the ASP.NET
+**[ScriptManager](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.aspx)**
 (which is required for providing the ASP.NET AJAX script files on any
 AJAX-enabled page). Mike Ammerlaan covers this in
 [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3)
@@ -171,8 +171,8 @@ the **Edit Page** button in the page editing toolbar sometimes stops working. It
 doesn't seem to happen all the time, but when it does, it's obviously very
 frustrating.
 
-I've also seen the following error when using the **
-[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)**
+I've also seen the following error when using the
+**[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)**
 from the AJAX Control Toolkit on a SharePoint site:
 
 {{< blockquote "font-italic text-danger" >}}

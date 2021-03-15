@@ -234,8 +234,8 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 }
 ```
 
-Note that, thanks to the OOTB ASP.NET **
-[Login](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.login%28v=VS.90%29.aspx)**
+Note that, thanks to the OOTB ASP.NET
+**[Login](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.login%28v=VS.90%29.aspx)**
 control, very little custom code is required for the Claims Login Form Web Part.
 In fact, I think there are more lines of code to redirect the request after
 successful login, than there are to actually perform the claims authentication.
@@ -311,8 +311,8 @@ the following features:
 - Disable the form fields and validator controls when the page is in edit mode
   (so that content authors don't have to enter "bogus" credentials in order to
   save changes to the page)
-- Inheriting from my custom **
-  [SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)**
+- Inheriting from my custom
+  **[SslRequiredWebPart](/blog/jjameson/2009/11/10/sharepoint-web-part-to-redirect-from-http-to-https)**
   to automatically redirect from HTTP to HTTPS (except in development
   environments, of course)
 - Show a warning when the connection is not secure (i.e. in development
@@ -342,8 +342,8 @@ PowerShell scripts, as described below.
    - **{DOMAIN}\svc-web-fabrikam** - used as the application pool identity for
      the new Fabrikam Web site
    - **{DOMAIN}\svc-sp-psr** - object cache user account providing Full Read
-     access to Web applications (
-     [http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+     access to Web applications
+     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full Control
      access to Web applications
 

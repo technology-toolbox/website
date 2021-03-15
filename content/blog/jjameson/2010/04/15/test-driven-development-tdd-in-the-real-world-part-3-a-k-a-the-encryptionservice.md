@@ -257,8 +257,8 @@ If you are familiar with ASP.NET, you are probably aware that you can configure
 the
 [**SqlMembershipProvider**](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.aspx)
 to store passwords either in clear, encrypted, or hashed form. Here is some
-corresponding text from the MSDN page for **
-[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)**
+corresponding text from the MSDN page for
+**[SqlMembershipProvider.PasswordFormat](http://msdn.microsoft.com/en-us/library/system.web.security.sqlmembershipprovider.passwordformat.aspx)**
 property:
 
 {{< blockquote "font-italic" >}}
@@ -276,10 +276,10 @@ Assuming you implement the necessary security around your Web.config files, this
 mitigates the difficulty in managing the key necessary to encrypt and decrypt
 data.
 
-The actual implementation for encrypting a password is provided by the **
-[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)**
-method. Similarly, decrypting a password is provided by the **
-[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)**
+The actual implementation for encrypting a password is provided by the
+**[EncryptPassword](http://msdn.microsoft.com/en-us/library/ms152042.aspx)**
+method. Similarly, decrypting a password is provided by the
+**[DecryptPassword](http://msdn.microsoft.com/en-us/library/system.web.security.membershipprovider.decryptpassword.aspx)**
 method. Thus with very little effort, we can implement the necessary
 functionality to encrypt/decrypt arbitrary text (e.g. SSO credentials).
 
@@ -447,8 +447,8 @@ code (often via copy/paste like I explained above), I don't typically rely on
 these wrapper classes.
 
 An alternative for this scenario -- since our class is marked as `internal` --
-is to add an **
-[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)**
+is to add an
+**[InternalsVisibleToAttribute](http://msdn.microsoft.com/en-us/library/system.runtime.compilerservices.internalsvisibletoattribute.aspx)**
 to the AssemblyInfo.cs file for the **Security** project (which creates the
 **Fabrikam.Demo.Security** assembly):
 

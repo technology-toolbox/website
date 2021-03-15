@@ -120,7 +120,7 @@ set FABRIKAM_DEMO_URL=http://fabrikam-local
 ```
 
 By default, the scripts for deploying the Fabrikam solution install **Release**
-builds to ** [http://fabrikam](http://fabrikam/)**. However, the scripts use
+builds to **[http://fabrikam](http://fabrikam/)**. However, the scripts use
 environment variables to specify parameters that, well, *vary by environment* --
 such as the default URL for the Fabrikam site. Following the
 [recommended naming conventions](/blog/jjameson/2009/06/09/environment-naming-conventions),
@@ -420,10 +420,10 @@ to use either `AspNetWindowsTokenRoleProvider` (for the default/intranet URL) or
 
 #### SharePointWebConfigHelper.ApplyWebConfigModifications
 
-After "queuing up" our Web.config modifications (using **
-[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)**
-via the custom **
-[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
+After "queuing up" our Web.config modifications (using
+**[SPWebConfigModification](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx)**
+via the custom
+**[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
 class), we then must apply them in order to actually make the changes to the
 configuration files.
 
