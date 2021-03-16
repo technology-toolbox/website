@@ -62,12 +62,12 @@ Factor #1 is addressed by creating various folders under NotBackedUp and storing
 the gigabytes of stuff that I have managed to download over the last 8 years in
 various folders underneath:
 
-> \NotBackedUp\Builds
-> ...
-> \NotBackedUp\Public\Download
-> \NotBackedUp\Public\Toolbox
-> ...
-> \NotBackedUp\Temp
+> \NotBackedUp\Builds\
+> ...\
+> \NotBackedUp\Public\Download\
+> \NotBackedUp\Public\Toolbox\
+> ...\
+> \NotBackedUp\Temp\
 > \NotBackedUp\VMs
 
 Factor #2 is addressed by redirecting the "My Documents" folder to

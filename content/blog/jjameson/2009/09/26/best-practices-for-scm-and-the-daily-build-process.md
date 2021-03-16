@@ -78,8 +78,8 @@ could be repeated for any particular build.
 > to do it was through
 > [the SS command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)).
 > Thus build labels provided a quick way of getting a snapshot of the code for a
-> particular build.
->
+> particular build.\
+> \
 > With the concept of changesets in TFS -- and the ability to quickly get the
 > code for a specific changeset -- build labels are obviously not as important
 > as they were in VSS. However, regardless of which particular source control

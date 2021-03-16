@@ -33,7 +33,7 @@ Here are the changes that I *haven't* yet merged into my Subtext fork:
 
 - HACK: The current implementation in the HtmlHelper.ConvertToAllowedHtml method
   results in extraneous line breaks between paragraphs in comments (e.g.
-  "&lt;p&gt;foo&lt;/p&gt;{newline}
+  "&lt;p&gt;foo&lt;/p&gt;{newline}\
   &lt;p&gt;bar&lt;/p&gt;" becomes
   "&lt;p&gt;foo&lt;/p&gt;&lt;br/&gt;&lt;p&gt;bar&lt;/p&gt;"). To avoid
   formatting issues, remove the &lt;br/&gt; elements added by the

@@ -40,7 +40,7 @@ been, well, nixed...
 
 {{< blockquote "font-italic" >}}
 
-**SPSite.RootWeb Property**
+**SPSite.RootWeb Property**\
 An earlier version of this article indicated that the calling application should
 dispose of the SPSite.RootWeb property just before disposing of the SPSite
 object that is using it. This is no longer the official guidance. The dispose
@@ -48,8 +48,8 @@ cleanup is handled automatically by the SharePoint framework.
 
 ...
 
-**SPWeb.ParentWeb Property**
-**Updated Guidance**
+**SPWeb.ParentWeb Property**\
+**Updated Guidance**\
 An earlier version of this article recommended that the calling application
 should dispose of the SPWeb.ParentWeb. This is no longer the official guidance.
 The dispose cleanup is handled automatically by the SharePoint framework.

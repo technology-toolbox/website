@@ -426,7 +426,7 @@ This was necessary to avoid the following error:
 {{< blockquote "font-italic text-danger" >}}
 
 System.InvalidOperationException: Client found response content type of '', but
-expected 'text/xml'.
+expected 'text/xml'.\
 The request failed with an empty response.
 
 {{< /blockquote >}}

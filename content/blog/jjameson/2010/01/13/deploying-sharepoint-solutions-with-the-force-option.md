@@ -100,12 +100,12 @@ environment variable and then redeploy the solutions:
 {{< console-block-start >}}
 
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "set FORCE_OPTION=-force" >}}
+kbd "set FORCE_OPTION=-force" >}}\
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Retract Solutions.cmd\"" >}}
-...
+kbd "\"Retract Solutions.cmd\"" >}}\
+...\
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
-kbd "\"Deploy Solutions.cmd\"" >}}
+kbd "\"Deploy Solutions.cmd\"" >}}\
 ...
 
 {{< console-block-end >}}

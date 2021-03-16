@@ -145,12 +145,12 @@ and no custom content types:
 3. Configure variations using / as the **Location** for the **Variation Home**
    (use defaults for all other settings)
 
-4. Create a new variation label with the following:
-   
-   **Label Name: en-US
-   Display Name: English (United States)
-   Locale: English (United States)
-   Source Variation: Yes
+4. Create a new variation label with the following:\
+   \
+   **Label Name: en-US\
+   Display Name: English (United States)\
+   Locale: English (United States)\
+   Source Variation: Yes\
    Publishing site template: Publishing Site with Workflow
    **
 
@@ -167,10 +167,10 @@ and no custom content types:
 8. Change the page layout to **Article page with summary links** and approve the
    page.
 
-9. Create a new variation label with the following:
-   
-   **Label Name: ja-JP
-   Display Name: Japanese
+9. Create a new variation label with the following:\
+   \
+   **Label Name: ja-JP\
+   Display Name: Japanese\
    Locale: Japanese**
 
 10. Create the variation hierarchies (to create the **/ja-JP** and

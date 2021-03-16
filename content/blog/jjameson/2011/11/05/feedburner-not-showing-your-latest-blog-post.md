@@ -20,7 +20,7 @@ I quickly discovered the following in the "Troubleshootize" page on the
 [Google Feedburner](http://feedburner.google.com) site:
 
 > **The trouble:** Your FeedBurner feed isn't up-to-date with your Original
-> Feed.
+> Feed.\
 > **The fix:** Try [pinging FeedBurner](http://feedburner.google.com/fb/a/ping)
 > using our Ping page. This action tells FeedBurner to go check your feed for
 > updates immediately.

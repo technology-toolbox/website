@@ -25,8 +25,8 @@ refer to as the
 my home lab). For some geeky reason, seeing this again brought a smile to my
 face and a sense of nostalgia. It also caused me to recall two things:
 
-1. That old Greatful Dead song "Truckin'" -- specifically the line
-   
+1. That old Greatful Dead song "Truckin'" -- specifically the line\
+   \
    <q class="directQuote">Lately it occurs to me: What a long, strange trip it's
    been.</q>
    

@@ -29,8 +29,8 @@ reason, chooses to use SQL Authentication over Windows Authentication):
 ***
 
 
-**From:** Jeremy Jameson
-**To:** [names removed to protect the innocent]
+**From:** Jeremy Jameson\
+**To:** [names removed to protect the innocent]\
 **Subject:** SQL Server Authentication Modes
 
 Here is some info from MSDN:
@@ -40,7 +40,7 @@ Here is some info from MSDN:
 > Microsoft® SQL Server™ can operate in one of two security (authentication)
 > modes:
 >
-> - Windows Authentication Mode (Windows Authentication)
+> - Windows Authentication Mode (Windows Authentication)\
 >   Windows Authentication mode allows a user to connect through a Microsoft
 >   Windows NT® 4.0 or Windows® 2000 user account.
 > - Mixed Mode (Windows Authentication and SQL Server Authentication)

@@ -392,11 +392,10 @@ Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 
 To rename the TaxonomyPicker.ascx file:
 
-1. Open Windows Explorer and browse to the following folder:
-   
+1. Open Windows Explorer and browse to the following folder:\
+   \
    **C:\Program Files\Common Files\Microsoft Shared\Web Server
    Extensions\14\TEMPLATE\CONTROLTEMPLATES**
-
 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
    filename to **TaxonomyPicker.ascx\_broken**.
 
@@ -652,6 +651,7 @@ To attach the SharePoint content database by using Windows Powershell:
      SharePoint user experience (part of Visual Upgrade). If you omit this
      parameter, the sites retain the old user experience after upgrade.
    
+   \
    For example:
    
    {{< console-block-start >}}
@@ -749,9 +749,9 @@ Reporting Services Error
 
 
 An error has occurred during report processing. (rsProcessingAborted) Get Online
-Help
+Help\
 Query execution failed for dataset 'DefaultIterationParam'.
-(rsErrorExecutingCommand) Get Online Help
+(rsErrorExecutingCommand) Get Online Help\
 For more information about this error navigate to the report server on the local
 server machine, or enable remote errors
 

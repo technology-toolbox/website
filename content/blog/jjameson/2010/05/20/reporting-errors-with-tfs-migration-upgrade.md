@@ -44,10 +44,10 @@ Microsoft.ReportingServices.Diagnostics.Utilities.ReportServerStorageException:
 An error occurred within the report server database. This may be due to a
 connection failure, timeout or low disk condition within the database. ---&gt;
 System.Data.SqlClient.SqlException: The EXECUTE permission was denied on the
-object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema 'sys'.
+object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema 'sys'.\
 at
 Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String
-Report, Boolean CacheReport, ExpirationDefinition Expiration)
+Report, Boolean CacheReport, ExpirationDefinition Expiration)\
 at
 Microsoft.ReportingServices.WebServer.ReportingService2005.SetCacheOptions(String
 Report, Boolean CacheReport, ExpirationDefinition Expiration)

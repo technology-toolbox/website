@@ -1493,13 +1493,13 @@ the solution, and then run the scripts described above in the following order:
 
 {{< console-block-start >}}
 
-& '.\Create Web Application.ps1'
-& '.\Create Site Collections.ps1'
-& '.\Enable Anonymous Access.ps1'
-& '.\Configure Object Cache User Accounts.ps1'
-& '.\Add Event Log Sources.ps1'
-& '.\Add Solutions.ps1'
-& '.\Deploy Solutions.ps1'
+& '.\Create Web Application.ps1'\
+& '.\Create Site Collections.ps1'\
+& '.\Enable Anonymous Access.ps1'\
+& '.\Configure Object Cache User Accounts.ps1'\
+& '.\Add Event Log Sources.ps1'\
+& '.\Add Solutions.ps1'\
+& '.\Deploy Solutions.ps1'\
 & '.\Activate Features.ps1'
 
 {{< console-block-end >}}

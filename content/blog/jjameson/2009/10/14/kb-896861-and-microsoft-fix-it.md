@@ -32,7 +32,7 @@ When I browsed to KB 896861 this week, I noticed that it has been updated since
 the last time I saw it. Apparently, this has become such a common issue that
 Microsoft now provides an automated way to fix the issue:
 
-[Fix this problem](http://go.microsoft.com/?linkid=9686309 "Microsoft Fix it")
+[Fix this problem](http://go.microsoft.com/?linkid=9686309 "Microsoft Fix it")\
 Microsoft Fix it 50306
 
 This was the first time I've seen a reference to **Microsoft Fix it**, and I

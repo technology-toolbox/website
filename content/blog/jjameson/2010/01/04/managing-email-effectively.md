@@ -99,10 +99,10 @@ rules. Note that most of these rules follow the same basic structure:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-sent to people or distribution list
-move it to the specified folder
-except if my name is in the To or Cc box
+Apply this rule after the message arrives\
+sent to people or distribution list\
+move it to the specified folder\
+except if my name is in the To or Cc box\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -112,10 +112,10 @@ follows:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-sent to SharePoint 2010 Discussion
-move it to the SharePoint 2010 folder
-except if my name is in the To or Cc box
+Apply this rule after the message arrives\
+sent to SharePoint 2010 Discussion\
+move it to the SharePoint 2010 folder\
+except if my name is in the To or Cc box\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -141,8 +141,8 @@ Notifications** rule as follows:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-from [xxx@microsoft.com](mailto:xxx@microsoft.com)
+Apply this rule after the message arrives\
+from [xxx@microsoft.com](mailto:xxx@microsoft.com)\
 move it to the TFS Notifications folder
 
 {{< /blockquote >}}
@@ -154,8 +154,9 @@ Further down the list of email rules, I have one named **High Priority Items**:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine
+Apply this rule after the message arrives\
+from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John
+MacCatherine\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -169,8 +170,8 @@ Note that I also have a **Project Mail** rule configured for similar purposes:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-sent to FrontierV3Dev or KPMG-COM Project Team or ...
+Apply this rule after the message arrives\
+sent to FrontierV3Dev or KPMG-COM Project Team or ...\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -180,8 +181,8 @@ Items** and is configured as follows:
 
 {{< blockquote "font-italic" >}}
 
-Apply this rule after the message arrives
-move it to the Low Priority Items folder
+Apply this rule after the message arrives\
+move it to the Low Priority Items folder\
 except if my name is in the To or Cc box
 
 {{< /blockquote >}}

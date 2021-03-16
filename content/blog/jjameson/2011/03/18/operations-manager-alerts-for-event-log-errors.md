@@ -95,11 +95,11 @@ Application event log:
 8. On the **Configure Alerts**page:
    1. In the **Alert description** box, specify the following:
       
-      **Source: $Data/EventSourceName$
-      Event ID: $Data/EventDisplayNumber$
-      Event Category: $Data/EventCategory$
-      User: $Data/UserName$
-      Computer: $Data/LoggingComputer$
+      **Source: $Data/EventSourceName$\
+      Event ID: $Data/EventDisplayNumber$\
+      Event Category: $Data/EventCategory$\
+      User: $Data/UserName$\
+      Computer: $Data/LoggingComputer$\
       Event Description: $Data/EventDescription$**
    
    2. In the **Severity** option, click **Warning**.
@@ -125,15 +125,15 @@ Repeat the process to create a similar alert for errors in the System event log.
 > If you do not specify any fields in the Alert Suppression dialog, then you may
 > receive numerous alerts within a short period of time (for example, when
 > SharePoint Server 2010 floods the Application event log due to an issue with
-> least-privilege configuration).
->
+> least-privilege configuration).\
+> \
 > When this occurs, Operations Manager will detect the high frequency of alerts
 > and temporarily suspend the notification, and display a different alert
-> instead:
->
+> instead:\
+> \
 > **Alert rule:** Alert generation was temporarily suspended due to too many
-> alerts.
->
+> alerts.\
+> \
 > **Alert description:** A rule has generated 50 alerts in the last 60 seconds.
 > Usually, when a rule generates this many alerts, it is because the rule
 > definition is misconfigured. Please examine the rule for errors. In order to

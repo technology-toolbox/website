@@ -66,9 +66,9 @@ have in their development team.
 > ***
 >
 > 
-> **From:** Roee Adler
-> **Sent:** Sunday, August 01, 2010 11:36 AM
-> **To:** Jeremy Jameson
+> **From:** Roee Adler\
+> **Sent:** Sunday, August 01, 2010 11:36 AM\
+> **To:** Jeremy Jameson\
 > **Subject:** MSDN Blogs: Contact request: Your Soluto Post
 >
 > **Subject:** Your Soluto Post
@@ -114,9 +114,9 @@ have in their development team.
 > ***
 >
 > 
-> **From:** Jeremy Jameson
-> **Sent:** Monday, August 02, 2010 4:04 PM
-> **To:** Roee Adler
+> **From:** Jeremy Jameson\
+> **Sent:** Monday, August 02, 2010 4:04 PM\
+> **To:** Roee Adler\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 >
 > Rose,
@@ -139,14 +139,15 @@ have in their development team.
 >
 > Thanks,
 >
+> \
 > Jeremy
 >
 > ***
 >
 > 
-> **From:** Roee Adler
-> **Sent:** Monday, August 02, 2010 8:06 AM
-> **To:** Jeremy Jameson
+> **From:** Roee Adler\
+> **Sent:** Monday, August 02, 2010 8:06 AM\
+> **To:** Jeremy Jameson\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 >
 > Hi Jeremy.
@@ -179,16 +180,16 @@ have in their development team.
 >
 > Best,
 >
-> Roee Adler
-> Soluto
+> Roee Adler\
+> Soluto\
 > [...]
 >
 > ***
 >
 > 
-> **From:** Jeremy Jameson
-> **Sent:** Tuesday, August 03, 2010 1:35 AM
-> **To:** Roee Adler
+> **From:** Jeremy Jameson\
+> **Sent:** Tuesday, August 03, 2010 1:35 AM\
+> **To:** Roee Adler\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 >
 > Roee,
@@ -235,14 +236,15 @@ have in their development team.
 > and I sincerely hope that nobody ever experiences anything similar to what I
 > encountered yesterday.
 >
+> \
 > Jeremy
 >
 > ***
 >
 > 
-> **From:** Roee Adler
-> **Sent:** Tuesday, August 03, 2010 9:20 AM
-> **To:** Jeremy Jameson
+> **From:** Roee Adler\
+> **Sent:** Tuesday, August 03, 2010 9:20 AM\
+> **To:** Jeremy Jameson\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
 >
 > Thanks Jeremy :)
@@ -275,7 +277,7 @@ have in their development team.
 >
 > Best,
 >
-> Roee Adler
-> Soluto
+> Roee Adler\
+> Soluto\
 > [...]
 

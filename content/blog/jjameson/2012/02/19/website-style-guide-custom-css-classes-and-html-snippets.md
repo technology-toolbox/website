@@ -12,9 +12,9 @@ Time to get rid of another couple of
 [shortcuts on my Windows desktop](/blog/jjameson/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop)
 that have been parked there far too long:
 
-- **MDC style guide - MDC**
+- **MDC style guide - MDC**\
   [http://developer.mozilla.org/Project:En/MDC\_style\_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)
-- **Custom CSS Classes - MDC**
+- **Custom CSS Classes - MDC**\
   [http://developer.mozilla.org/Project:en/Custom\_CSS\_Classes](http://developer.mozilla.org/Project:en/Custom_CSS_Classes)
 
 When I stumbled upon these pages a few years ago, I immediately thought of that

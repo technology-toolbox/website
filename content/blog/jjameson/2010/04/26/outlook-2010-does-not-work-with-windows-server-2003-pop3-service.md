@@ -117,8 +117,8 @@ doesn't sound very appealing.
 > [One of the simplest options](http://weblogs.asp.net/hpreishuber/archive/2008/04/30/visendo-smtp-pop3-extender-for-windows-2008-server.aspx)
 > looked promising at first, but after reading through the multitude of comments
 > describing various issues with it, I discovered that it doesn't appear to work
-> with Outlook 2010 either.
->
+> with Outlook 2010 either.\
+> \
 > This morning, I decided to just "bite the bullet" and download Mozilla
 > Thunderbird to see if I could use this to connect to my Windows Server 2003
 > POP3 service for demo and training purposes. It took less than 10 minutes to
@@ -126,8 +126,8 @@ doesn't sound very appealing.
 > automatically detected the DNS names of my POP3 and SMTP servers (which are
 > really one and the same) just by typing in my e-mail address. The only
 > "tricky" part was ensuring that I checked the option to **Use secure
-> authentication** (since my POP3 service is configured to require SPA).
->
+> authentication** (since my POP3 service is configured to require SPA).\
+> \
 > I really don't like the idea of not using Outlook for demos, but unless
 > someone can point me to a POP3 service that is free, lightweight (i.e. can run
 > adequately in a VM with a mere 256MB of memory), and trivial to install and

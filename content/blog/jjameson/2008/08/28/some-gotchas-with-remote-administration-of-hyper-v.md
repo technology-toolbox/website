@@ -107,7 +107,7 @@ in order to use Hyper-V Manager to remotely administer the Hyper-V server.
 According to the corresponding
 [KB article](http://support.microsoft.com/kb/950050):
 
-> **Update for Windows Server 2008 (KB950050)**
+> **Update for Windows Server 2008 (KB950050)**\
 > This 32-bit update package includes the release version of the following:
 >
 > - The Hyper-V Manager console

@@ -30,9 +30,9 @@ upgrading one of my servers to Windows Server 2008 R2:
 > ***
 >
 > 
-> **From:** Jeremy Jameson
-> **Sent:** Friday, May 21, 2010 11:00 AM
-> **To:** [...]
+> **From:** Jeremy Jameson\
+> **Sent:** Friday, May 21, 2010 11:00 AM\
+> **To:** [...]\
 > **Subject:** Windows Server Backup: "Select Items to Recover" does not show
 > backed up files
 >
@@ -48,19 +48,19 @@ upgrading one of my servers to Windows Server 2008 R2:
 > According to the backup log file, all of the files in the specified location
 > are successfully backed up:
 >
-> Backed up C:\
-> Backed up C:\BackedUp\
-> ...
-> Backed up C:\BackedUp\Profiles\
-> Backed up C:\BackedUp\Profiles\jjameson\
-> Backed up C:\BackedUp\Profiles\jjameson\NTUSER.DAT
-> Backed up C:\BackedUp\Profiles\jjameson\ntuser.dat.LOG
-> Backed up C:\BackedUp\Profiles\jjameson\ntuser.ini
-> Backed up C:\BackedUp\Profiles\jjameson\ntuser.pol
-> Backed up C:\BackedUp\Profiles\jjameson\Application Data\
-> Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\
+> Backed up C:\\
+> Backed up C:\BackedUp\\
+> ...\
+> Backed up C:\BackedUp\Profiles\\
+> Backed up C:\BackedUp\Profiles\jjameson\\
+> Backed up C:\BackedUp\Profiles\jjameson\NTUSER.DAT\
+> Backed up C:\BackedUp\Profiles\jjameson\ntuser.dat.LOG\
+> Backed up C:\BackedUp\Profiles\jjameson\ntuser.ini\
+> Backed up C:\BackedUp\Profiles\jjameson\ntuser.pol\
+> Backed up C:\BackedUp\Profiles\jjameson\Application Data\\
+> Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\\
 > Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\CLR
-> Security Config\
+> Security Config\\
 > ...
 >
 > However, when I try to recover the files, it appears as if the files were not
@@ -93,8 +93,9 @@ upgrading one of my servers to Windows Server 2008 R2:
 > Doesn't this seem like a bug (since the files can be backed up, but they
 > cannot be recovered)?
 >
-> Jeremy Jameson
-> **Microsoft Consulting Services**
+> \
+> Jeremy Jameson\
+> **Microsoft Consulting Services**\
 > ...
 >
 > ***

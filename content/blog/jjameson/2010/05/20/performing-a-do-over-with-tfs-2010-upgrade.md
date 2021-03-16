@@ -105,6 +105,7 @@ Powershell:
      SharePoint user experience (part of Visual Upgrade). If you omit this
      parameter, the sites retain the old user experience after upgrade.
    
+   \
    For example:
    
    {{< console-block-start >}}

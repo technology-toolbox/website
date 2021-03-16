@@ -49,14 +49,14 @@ A little post mortem analysis further revealed the following event on COLOSSUS:
 
 {{< blockquote "font-italic" >}}
 
-Event Type: Information
-Event Source: MsiInstaller
-Event Category: None
-Event ID: 11724
-Date: 3/22/2008
-Time: 7:17:29 AM
-Computer: COLOSSUS
-Description:
+Event Type: Information\
+Event Source: MsiInstaller\
+Event Category: None\
+Event ID: 11724\
+Date: 3/22/2008\
+Time: 7:17:29 AM\
+Computer: COLOSSUS\
+Description:\
 Product: Microsoft Windows Server Update Services 3.0 -- Removal completed
 successfully.
 

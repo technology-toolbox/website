@@ -116,7 +116,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    {{< /table >}}
    
    <small>* You should actively change the default value for this column based
-   on the target iteration for completing work items.</small>
+   on the target iteration for completing work items.</small>\
    <small>** Modify the out-of-the-box column accordingly.</small>
 
 7. Configure the following views:

@@ -53,7 +53,7 @@ file:
 {{< blockquote "font-italic text-danger" >}}
 
 Failed to save the password file. Here are the gory details:
-GetVolumeInformation failed:
+GetVolumeInformation failed:\
 The filename, directory name, or volume label syntax is incorrect.
 
 {{< /blockquote >}}

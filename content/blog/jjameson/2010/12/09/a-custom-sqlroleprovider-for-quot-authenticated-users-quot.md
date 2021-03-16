@@ -180,8 +180,8 @@ I then added the following steps to the installation guide:
 > 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
 >    right-click **Command Prompt**, and then click **Run as administrator**.
 >
-> 2. At the command prompt, change to the following directory:
->    
+> 2. At the command prompt, change to the following directory:\
+>    \
 >    **%WinDir%\system32\inetsrv\config
 >    **
 >

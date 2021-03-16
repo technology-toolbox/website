@@ -55,16 +55,16 @@ following:
 
 {{< blockquote "font-italic" >}}
 
-Log Name: System
-Source: Microsoft-Windows-Service Pack Installer
-Date: 6/1/2009 3:02:00 AM
-Event ID: 8
-Task Category: None
-Level: Error
-Keywords:
-User: SYSTEM
-Computer: dazzler.corp.technologytoolbox.com
-Description:
+Log Name: System\
+Source: Microsoft-Windows-Service Pack Installer\
+Date: 6/1/2009 3:02:00 AM\
+Event ID: 8\
+Task Category: None\
+Level: Error\
+Keywords:\
+User: SYSTEM\
+Computer: dazzler.corp.technologytoolbox.com\
+Description:\
 Service Pack installation failed with error code 0x800f0826.
 
 {{< /blockquote >}}

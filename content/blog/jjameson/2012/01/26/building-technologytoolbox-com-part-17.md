@@ -86,7 +86,7 @@ If ELMAH is configured in the Web.config file of the root application (i.e.
 **blog\bin** folder (and presumably not in the GAC either), then any request
 processed by Subtext will generate an unhandled exception:
 
-> Exception type: ConfigurationErrorsException
+> Exception type: ConfigurationErrorsException\
 > Exception message: Could not load file or assembly 'Elmah' or one of its
 > dependencies. The system cannot find the file specified.
 

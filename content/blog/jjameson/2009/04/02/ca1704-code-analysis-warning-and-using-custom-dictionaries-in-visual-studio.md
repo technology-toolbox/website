@@ -41,7 +41,7 @@ will find the following:
 
 {{< blockquote "font-italic" >}}
 
-**How to Fix Violations**
+**How to Fix Violations**\
 To fix a violation of this rule, correct the spelling of the word or add the
 word to a custom dictionary named CustomDictionary.xml. Place the dictionary in
 the installation directory of the tool, the project directory, or in the
