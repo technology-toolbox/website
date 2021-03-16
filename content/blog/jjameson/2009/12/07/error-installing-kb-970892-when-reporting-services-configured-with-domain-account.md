@@ -29,10 +29,10 @@ Here's the first event I found regarding this error:
 
 {{< log-excerpt >}}
 
-<samp> Log Name: Application<br> Source: MsiInstaller<br> Date: 10/27/2009
-3:03:49 AM<br> Event ID: 10005<br> Task Category: None<br> Level: Error<br>
-Keywords: Classic<br> User: SYSTEM<br> Computer:
-jubilee.corp.technologytoolbox.com<br> Description:<br> Product: Microsoft SQL
+<samp> Log Name: Application<br>Source: MsiInstaller<br>Date: 10/27/2009 3:03:49
+AM<br>Event ID: 10005<br>Task Category: None<br>Level: Error<br>Keywords:
+Classic<br>User: SYSTEM<br>Computer:
+jubilee.corp.technologytoolbox.com<br>Description:<br>Product: Microsoft SQL
 Server 2005 Reporting Services (64-bit) -- Error 29528. The setup has
 encountered an unexpected error while Setting reporting service and share point
 exclusion path. The error is: Fatal error during installation.</samp>
@@ -43,10 +43,10 @@ This was quickly followed by another error in the event log:
 
 {{< log-excerpt >}}
 
-<samp> Log Name: Application<br> Source: MsiInstaller<br> Date: 10/27/2009
-3:04:55 AM<br> Event ID: 1023<br> Task Category: None<br> Level: Error<br>
-Keywords: Classic<br> User: SYSTEM<br> Computer:
-jubilee.corp.technologytoolbox.com<br> Description:<br> Product: Microsoft SQL
+<samp> Log Name: Application<br>Source: MsiInstaller<br>Date: 10/27/2009 3:04:55
+AM<br>Event ID: 1023<br>Task Category: None<br>Level: Error<br>Keywords:
+Classic<br>User: SYSTEM<br>Computer:
+jubilee.corp.technologytoolbox.com<br>Description:<br>Product: Microsoft SQL
 Server 2005 Reporting Services (64-bit) - Update 'GDR 4053 for SQL Server
 Reporting Services 2005 (64-bit) ENU (KB970892)' could not be installed. Error
 code 1603. Additional information is available in the log file C:\Program
@@ -59,10 +59,10 @@ Shortly thereafter, I started seeing the following error once every minute:
 
 {{< log-excerpt >}}
 
-<samp> Log Name: Application<br> Source: Report Server (MSSQLSERVER)<br> Date:
-10/27/2009 3:06:52 AM<br> Event ID: 107<br> Task Category: Management<br> Level:
-Error<br> Keywords: Classic<br> User: N/A<br> Computer:
-jubilee.corp.technologytoolbox.com<br> Description:<br> Report Server
+<samp> Log Name: Application<br>Source: Report Server (MSSQLSERVER)<br>Date:
+10/27/2009 3:06:52 AM<br>Event ID: 107<br>Task Category: Management<br>Level:
+Error<br>Keywords: Classic<br>User: N/A<br>Computer:
+jubilee.corp.technologytoolbox.com<br>Description:<br>Report Server
 (MSSQLSERVER) cannot connect to the report server database.</samp>
 
 {{< /log-excerpt >}}

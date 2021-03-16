@@ -44,12 +44,12 @@ the following:
 
 <samp> Using "VCBuild" task from assembly "Microsoft.Build.Tasks.v3.5,
 Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a". Task
-"VCBuild"<br> Locating vcbuild.exe: not found at "c:\Program Files
+"VCBuild"<br>Locating vcbuild.exe: not found at "c:\Program Files
 (x86)\Microsoft Visual Studio
-9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".<br> Locating vcbuild.exe:
-Visual C++ Express is not installed on this computer.<br> Locating vcbuild.exe:
-falling back to the system PATH variable.<br>
-C:\Users\svc-build\AppData\Local\Temp\Toolbox\Automated Build -
+9.0\Common7\IDE\..\..\vc\vcpackages\vcbuild.exe".<br>Locating vcbuild.exe:
+Visual C++ Express is not installed on this computer.<br>Locating vcbuild.exe:
+falling back to the system PATH
+variable.<br>C:\Users\svc-build\AppData\Local\Temp\Toolbox\Automated Build -
 Main\Sources\Source\Toolbox.sln : error MSB3411: Could not load the Visual C++
 component "VCBuild.exe". If the component is not installed, either 1) install
 the Microsoft Windows SDK for Windows Server 2008 and .NET Framework 3.5, or 2)
@@ -81,9 +81,9 @@ warning MSB3428: Could not load the Visual C++ component "VCProjectEngine.dll".
 To fix this, 1) install the Microsoft Windows SDK for Windows Server 2008 and
 .NET Framework 3.5, 2) install Microsoft Visual Studio 2008 or 3) add the
 location of the component to the system path if it is installed elsewhere.
-System error code: 126.<br>
-c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets : warning
-MSB3425: Could not resolve VC project reference
+System error code:
+126.<br>c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets :
+warning MSB3425: Could not resolve VC project reference
 "..\NativeHelpers\NativeHelpers.vcproj".</samp>
 
 {{< /log-excerpt >}}

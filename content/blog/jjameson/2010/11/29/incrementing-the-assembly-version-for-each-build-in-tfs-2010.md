@@ -516,12 +516,12 @@ caption="Build Definition: \"Automated Build - Main\"" >}}
 |  General  |  Build definition name  |  Automated Build - Main  |
 |  Trigger  | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> |  (selected)  |
 |   |  Queue the build on the build controller at:  |  4:45 AM  |
-|  Workspace  | <br>                    Source Control Folder<br><br>                    Build Agent Folder<br>                 | <br>                    $/foobar2010/Main<br><br>                    $(SourceDir)<br>                 |
+|  Workspace  | <br>                    Source Control Folder<br>Build Agent Folder<br>                 | <br>                    $/foobar2010/Main<br>$(SourceDir)<br>                 |
 |  Build Defaults  |  Copy build output to the following drop folder (UNC path, such as \\server\share):  |  \\dazzler\Builds\foobar2010  |
 |  Process  |  Build process template:  |  CustomTemplate.xaml  |
 |   |  Build process parameters:  |   |
-|   | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br><br>                            Release - Any CPU</li></ul> |
-|  Retention Policy  | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br><br>                    Keep All<br>                 |
+|   | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
+|  Retention Policy  | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All<br>                 |
 
 {{< /table >}}
 

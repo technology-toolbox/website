@@ -39,11 +39,11 @@ Looking at the event logs on the server, I found the following:
 
 {{< log-excerpt >}}
 
-<samp>Log Name: Application<br> Source: Microsoft-SharePoint Products-Secure
-Store Service<br> Date: 5/13/2010 6:11:25 AM<br> Event ID: 7493<br> Task
-Category: Secure Store<br> Level: Error<br> Keywords:<br> User:
-TECHTOOLBOX\svc-spserviceapp<br> Computer:
-cyclops.corp.technologytoolbox.com<br> Description: The Microsoft Secure Store
+<samp>Log Name: Application<br>Source: Microsoft-SharePoint Products-Secure
+Store Service<br>Date: 5/13/2010 6:11:25 AM<br>Event ID: 7493<br>Task Category:
+Secure Store<br>Level: Error<br>Keywords:<br>User:
+TECHTOOLBOX\svc-spserviceapp<br>Computer:
+cyclops.corp.technologytoolbox.com<br>Description: The Microsoft Secure Store
 Service application Secure Store Service failed to retrieve credentials. The
 error returned was 'Access is denied.'. For more information, see the Microsoft
 SharePoint Products and Technologies Software Development Kit (SDK). </samp>

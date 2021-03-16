@@ -27,7 +27,7 @@ Microsoft Office SharePoint Server (MOSS) 2007.
 If you've read that post, you might recall seeing the following lines in, for
 example, the Deploy Solutions.cmd script:
 
-`REM Sometimes it is necessary to force the deployment to circumvent errors REM set FORCE_OPTION=-force`
+`REM Sometimes it is necessary to force the deployment to circumvent errorsREM set FORCE_OPTION=-force`
 
 The FORCE\_OPTION environment variable is subsequently included in the line that
 invokes StsAdm.exe:

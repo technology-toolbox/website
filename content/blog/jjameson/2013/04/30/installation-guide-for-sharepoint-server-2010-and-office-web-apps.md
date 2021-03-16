@@ -2762,8 +2762,8 @@ configuration settings are listed in the following tables.
 | Setting | Value |
 | --- | --- |
 | Enable Event Log Flood Protection  | Yes (checked) |
-| Trace Log Path  | TEST and PROD:<br><br>					L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br><br>					DEV:<br><br>					%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Number of days to store log files  | TEST and PROD: 14<br><br>					DEV: 1 |
+| Trace Log Path  | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+| Number of days to store log files  | TEST and PROD: 14<br>DEV: 1 |
 | Restrict Trace Log disk space usage  | No (not checked)  |
 | Maximum storage space for Trace Logs (GB)  | N/A  |
 
@@ -2773,10 +2773,10 @@ configuration settings are listed in the following tables.
 
 | Setting | Value |
 | --- | --- |
-| Enable usage data collection | TEST and PROD: Yes (checked)<br><br><br>					DEV: No (not checked)\* |
-| Log file location | TEST and PROD:<br><br>					L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br><br>					DEV:<br><br>					C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Maximum log file size | TEST and PROD: 5<br><br><br>					DEV: 1 |
-| Enable health data collection | TEST and PROD: Yes (checked)<br><br><br>					DEV: No (not checked)\* |
+| Enable usage data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\* |
+| Log file location | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+| Maximum log file size | TEST and PROD: 5<br><br>DEV: 1 |
+| Enable health data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\* |
 | Database Name | WSS\_Logging |
 
 {{< /table >}}
@@ -2847,7 +2847,7 @@ health data collection is *not* recommended in these environments.
 | Run every  | 1 week  | 1 day  |
 | On:  | <ul><li>Sunday</li></ul> | N/A  |
 | Starting time  | 04:00 AM  | 12:00 AM  |
-| Repeat within the day  | No  | Yes<br><br>					Every 30 minutes<br><br>					For 1440 minutes  |
+| Repeat within the day  | No  | Yes<br>Every 30 minutes<br>For 1440 minutes  |
 
 {{< /table >}}
 
