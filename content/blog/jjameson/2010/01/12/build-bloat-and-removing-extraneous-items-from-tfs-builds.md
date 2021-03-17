@@ -142,4 +142,3 @@ Buh-bye, build bloat!
 > [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects)
 > for an update on this technique that works with TFS 2010 builds that don't use
 > the UpgradeTemplate.xaml build process template.
-

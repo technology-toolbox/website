@@ -264,4 +264,3 @@ another option would be to remove the **IDisposable** interface from
 
 And so continues my neverending quest to make the world of software a simpler --
 and happier -- place to live in ;-)
-

@@ -87,4 +87,3 @@ namespace Fabrikam.Project1.PublicationLibrary.DeveloperTests.Configuration
     }
 }
 ```
-

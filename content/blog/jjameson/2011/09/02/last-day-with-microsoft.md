@@ -70,4 +70,3 @@ hope our paths cross again...
 \
 Jeremy Jameson\
 [snip, snip]
-

@@ -52,4 +52,3 @@ MSDN article:
 
 {{< reference title="Content Type IDs"
 linkHref="http://msdn.microsoft.com/en-us/library/aa543822.aspx" >}}
-

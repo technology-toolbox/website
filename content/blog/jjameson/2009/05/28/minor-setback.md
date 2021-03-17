@@ -67,4 +67,3 @@ I've even been working for the past 4 weeks, rejoining a project where we are
 helping a large, international company deploy an Internet platform based on
 Microsoft Office SharePoint Server 2007. I just prop my leg up on a filing
 cabinet here in my home office and I'm good to go ;-)
-

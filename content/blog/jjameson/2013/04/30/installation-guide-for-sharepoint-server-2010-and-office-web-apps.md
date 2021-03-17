@@ -2850,4 +2850,3 @@ health data collection is *not* recommended in these environments.
 | Repeat within the day  | No  | Yes<br>Every 30 minutes<br>For 1440 minutes  |
 
 {{< /table >}}
-

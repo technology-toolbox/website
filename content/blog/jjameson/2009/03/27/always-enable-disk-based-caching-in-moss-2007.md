@@ -146,4 +146,3 @@ consider going live without enabling disk-based caching.
 > (e.g. to avoid having to repeatedly clear your browser cache to see changes to
 > CSS files), that's perfectly fine. Just make sure you enable disk-based
 > caching on your Test and Production environments.
-

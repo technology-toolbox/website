@@ -70,4 +70,3 @@ following blog post:
 {{< reference
 title="Deploying your Database Project without VSTSDB installed. 2009-02-21"
 linkHref="http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx" >}}
-

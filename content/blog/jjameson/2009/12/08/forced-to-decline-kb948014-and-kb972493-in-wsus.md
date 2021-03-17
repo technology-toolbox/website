@@ -71,4 +71,3 @@ I really wish there were some other way to resolve the issue without declining
 the updates altogether -- but I certainly couldn't find one, and based on a
 number of support cases I read regarding similar issues, this seems to be the
 recommended solution.
-

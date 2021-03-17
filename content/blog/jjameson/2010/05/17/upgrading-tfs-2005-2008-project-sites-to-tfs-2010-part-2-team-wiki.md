@@ -106,4 +106,3 @@ $sitesToUpgrade |
         $web.Dispose()
     }
 ```
-

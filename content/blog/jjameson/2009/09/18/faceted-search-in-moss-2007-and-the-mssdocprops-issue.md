@@ -162,4 +162,3 @@ Provided you dedicate a sufficient number of RAID 10 spindles to the SSP Search
 database, you should be fine. However, that certainly doesn't mean you shouldn't
 be monitoring your backend SQL node(s) and corresponding SAN storage for
 bottlenecks.
-

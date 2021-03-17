@@ -913,4 +913,3 @@ Using the steps provided in the TFS installation guide (**How to: Install Team
 Foundation Build Service**), install the Team Foundation Build Service on the
 build server (DAZZLER) using the parameters specified in
 [Table 9](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
-

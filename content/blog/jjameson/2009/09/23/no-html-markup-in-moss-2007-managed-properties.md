@@ -120,4 +120,3 @@ image URL from the PublishingRollupImage field).
 You can then create the **PublishingRollupImage** managed property, map it to
 **ows\_PublishingRollupImageUrl**, and subsequently display the rollup images in
 search results similar to the Content Query Web Part.
-

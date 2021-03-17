@@ -194,4 +194,3 @@ underlying content databases:
 
 Once this configuration change is made, the "workbook cannot be opened" error no
 longer occurs.
-

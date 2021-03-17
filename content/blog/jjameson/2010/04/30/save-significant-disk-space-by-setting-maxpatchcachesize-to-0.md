@@ -131,4 +131,3 @@ thought about it recently when setting up my laptop with a new 80GB SSD drive).
 Ultimately, it's a judgment call that you need to make based on how much disk
 space you are willing to trade for the convenience of simpler software and patch
 installations.
-

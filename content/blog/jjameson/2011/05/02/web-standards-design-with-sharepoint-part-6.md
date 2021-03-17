@@ -513,4 +513,3 @@ linkHref="http://msdn.microsoft.com/en-us/library/ff602042.aspx" >}}
 
 {{< reference title="How to: Customize the Rendering of a Field on a List View"
 linkHref="http://msdn.microsoft.com/en-us/library/ff606773.aspx" >}}
-

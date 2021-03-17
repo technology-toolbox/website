@@ -213,4 +213,3 @@ page and page layouts leveraging the 960 Grid System.
 > Once you have the site running in your environment, click **Sample Link 1**
 > and **Sample Link 2** on the home page to view a couple of test pages that are
 > created to demonstrate other custom page layouts.
-

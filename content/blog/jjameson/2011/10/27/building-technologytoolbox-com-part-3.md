@@ -798,4 +798,3 @@ ends up being very easy -- since I structure the prototype and ASP.NET Web
 application the same, the CSS files end up being identical. Thus I can simply
 copy/paste the entire content of a CSS file from one location to another
 immediately before I check-in a change.
-

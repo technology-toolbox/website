@@ -231,4 +231,3 @@ earlier post for
 > making trivial changes like the one described above. It doesn't take but a few
 > seconds, and it helps ensure I don't accidentally check in some unexpected
 > changes.
-

@@ -394,4 +394,3 @@ to **Step 6** in my previous post for instructions on how to do this).
 > an FBA user over HTTPS (while attempting to determine the membership and role
 > providers from the IIS settings). This has been fixed in the updated
 > attachment.
-

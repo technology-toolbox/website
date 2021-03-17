@@ -84,4 +84,3 @@ preserve the aspect ratio of the image).
 > Fortunately if you rename the image to remove the parentheses (and
 > subsequently upload the renamed file), then the image resizer works as
 > expected.
-

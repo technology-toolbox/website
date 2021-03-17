@@ -140,4 +140,3 @@ he or she is following along when configuring DEV or TEST.
 Since we typically have "infrastructure models" (i.e. Visio diagrams showing the
 physical architecture of DEV, TEST, and PROD), identifying servers and host
 headers in various environments is really straightforward.
-

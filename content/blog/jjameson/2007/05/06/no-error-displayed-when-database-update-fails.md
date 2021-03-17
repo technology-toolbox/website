@@ -30,4 +30,3 @@ I must have tried to modify the view three times before I finally tried
 something else and got a "Cannot complete this action" message. Only then did I
 start combing through the SharePoint log files and discover that the transaction
 log on SQL was full.
-

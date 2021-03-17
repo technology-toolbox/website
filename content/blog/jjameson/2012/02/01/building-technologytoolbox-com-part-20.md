@@ -665,4 +665,3 @@ in the **UpdatePanel**:
 You can see this for yourself by inspecting the AJAX postback using the
 **Network** tab in the Internet Explorer Developer Tools or via the **Net**
 panel in Firebug/Firefox.
-

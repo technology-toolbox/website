@@ -78,4 +78,3 @@ the TFS terminology, I know.]
 
 I'll work on applying the rest of my Subtext changes to my Subtext fork on
 GitHub in the near future.
-

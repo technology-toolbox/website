@@ -305,4 +305,3 @@ In this particular instance, it took 15 seconds for the Web.config changes to be
 applied and the corresponding one-time SharePoint timer job to be cleaned up.
 However, this trace was captured from a VM in my home lab. I suspect PROD will
 actually be significantly faster.
-

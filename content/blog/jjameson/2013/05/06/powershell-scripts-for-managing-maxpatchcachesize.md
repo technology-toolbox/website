@@ -160,4 +160,3 @@ Else
 Write-Host -Fore Green ("Successfully set MaxPatchCacheSize to {0}." `
     -f $maxPatchCacheSize)
 ```
-

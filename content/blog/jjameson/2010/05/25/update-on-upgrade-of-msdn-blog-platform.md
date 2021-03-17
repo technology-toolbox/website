@@ -47,4 +47,3 @@ from last week into the new environment.
 
 I can't tell you how nice it is to finally move up from Community Server 2.1
 after all these years. It was definitely getting a little "long in the tooth."
-

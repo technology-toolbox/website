@@ -142,4 +142,3 @@ using System.Runtime.InteropServices;
 In my
 [next post](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning),
 I'll discuss assembly versioning in more detail.
-

@@ -843,4 +843,3 @@ YAHA (yet another hacking attempt):
 the out-of-the-box "goodness" we get for free when it comes to security in
 ASP.NET. [It really helps to offset what you feel whenever you see Microsoft
 release a security patch for the .NET Framework.]
-

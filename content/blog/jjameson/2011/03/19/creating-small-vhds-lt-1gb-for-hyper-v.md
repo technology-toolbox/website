@@ -106,4 +106,3 @@ icacls foobar5\_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
 
 This is described in more detail in
 [one of my previous posts](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
-

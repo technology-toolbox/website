@@ -83,4 +83,3 @@ forums. I'm sure you can understand why I didn't feel comfortable registering
 any personal information with your site in light of my experience today.
 However, please feel free to contact me through my blog. I really would like to
 be able to eventually recommend Soluto to my friends, family, and customers.
-

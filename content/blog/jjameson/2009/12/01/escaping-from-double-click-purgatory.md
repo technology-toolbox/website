@@ -78,4 +78,3 @@ thousands) of clicks.
 
 Hopefully this post saves at least one person the days of anguish that I
 experienced in Double-Click Purgatory.
-

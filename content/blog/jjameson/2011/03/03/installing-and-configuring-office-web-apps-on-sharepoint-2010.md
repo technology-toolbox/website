@@ -299,4 +299,3 @@ databases used by the Web application.
    
    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
    ```
-

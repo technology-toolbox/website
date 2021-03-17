@@ -91,4 +91,3 @@ the seamless redirect works as expected.
 >
 > However, even with just the WSS portion of the June 2009 CU, I am no longer
 > seeing the error when browsing to my local VM from my laptop.
-

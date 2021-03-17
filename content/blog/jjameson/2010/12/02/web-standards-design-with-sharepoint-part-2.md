@@ -533,4 +533,3 @@ That's it! You're done.
 
 You are now ready to browse to the Tugboat sample site running in SharePoint.
 Woohoo!
-

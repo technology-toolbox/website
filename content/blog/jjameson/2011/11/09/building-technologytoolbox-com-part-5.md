@@ -340,4 +340,3 @@ Whenever you are creating a new website -- or adding a new feature to an
 existing site -- I encourage you to start by focusing on the "naked" structure.
 Once you have defined the meaningful structure for your content, you can then
 proceed to making it "look pretty."
-

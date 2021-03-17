@@ -157,4 +157,3 @@ read in the aforementioned support case -- specifically that for MOSS 2007,
 Firefox is considered a "Level 2" browser from a support perspective). However,
 if you decide you need a workaround for this bug for Firefox users, you might
 consider this an acceptable solution.
-

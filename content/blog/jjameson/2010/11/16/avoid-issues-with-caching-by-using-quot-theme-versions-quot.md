@@ -141,4 +141,3 @@ yet, clean these up by activating a custom "upgrade feature" on your site. The
 concept of an "upgrade feature" is something I started using recently and it is
 proving to be very powerful -- especially when you deploy to Production every 6
 weeks or so. Perhaps I'll talk more about that in a separate post.
-

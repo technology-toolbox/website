@@ -524,4 +524,3 @@ caption="Build Definition: \"Automated Build - Main\"" >}}
 |  Retention Policy  | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All<br>                 |
 
 {{< /table >}}
-

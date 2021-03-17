@@ -566,4 +566,3 @@ upgrading my TFS project sites:
     url="http://go.microsoft.com/fwlink/?LinkId=153652&amp;clcid=0x409" />
 </QuickLaunch>
 ```
-

@@ -337,4 +337,3 @@ can scrap my custom code and go with the out-of-the-box SharePoint code instead
 > SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like
 > the one I described in a
 > [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
-

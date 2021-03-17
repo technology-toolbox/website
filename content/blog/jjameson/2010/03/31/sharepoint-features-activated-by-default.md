@@ -58,4 +58,3 @@ From now on, whenever I create a feature scoped to **WebApplication**, I'll be
 sure to specify the **ActivateOnDefault** attribute and set it to **FALSE** to
 avoid having my features "mysteriously" activated on Web applications that I
 don't intend them to be.
-

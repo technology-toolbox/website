@@ -231,4 +231,3 @@ Unfortunately, this field definition doesn't specify `Format="DateOnly"` either
 
 Thus I reverted back to using my original AnnouncementStartDate and
 AnnouncementEndDate custom fields. It's not ideal, but it works.
-

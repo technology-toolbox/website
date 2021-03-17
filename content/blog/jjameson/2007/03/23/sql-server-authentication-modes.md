@@ -113,4 +113,3 @@ establish a cross-forest trust in order to be able to use Windows
 Authentication?
 
 IMO, absolutely!
-

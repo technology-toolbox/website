@@ -97,4 +97,3 @@ shown below, and eliminate those CA1704 warnings.
 
 Since the file is in source control, you can obviously track changes to the file
 and view the history at any point in the future.
-

@@ -89,4 +89,3 @@ Note that Visual Studio complains a little that `<WarningsNotAsErrors>` is not
 an expected element according the schema, but I can assure this is, in fact, a
 [valid option for the C# compiler](http://msdn.microsoft.com/en-us/library/microsoft.build.tasks.csc.warningsnotaserrors.aspx),
 and the project subsequently builds just fine.
-

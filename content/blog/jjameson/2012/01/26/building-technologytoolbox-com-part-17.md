@@ -254,4 +254,3 @@ To integrate this target into the TFS build process, I hook into the
     </OnAfter_CopyWebApplication>
   </PropertyGroup>
 ```
-

@@ -78,4 +78,3 @@ end up with a mere 107 MB of free space after installing .NET Framework 4 on
 this server (that is, until I expanded the corresponding VHD file for the VM).
 
 Live and learn.
-

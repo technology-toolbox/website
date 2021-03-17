@@ -120,4 +120,3 @@ In
 I'll show you how to "expand" the reusable content placeholders within, for
 example, the Page Content field (essentially just two lines of code), as well as
 some of the "gotchas" with the out-of-the-box solution (including a workaround).
-

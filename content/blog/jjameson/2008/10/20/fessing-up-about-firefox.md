@@ -223,4 +223,3 @@ through software.
 Will the new developer tools in Internet Explorer 8 be enough to win back some
 of the Web developer market share that we have lost? For that, I guess only time
 will tell.
-

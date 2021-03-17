@@ -133,4 +133,3 @@ doesn't sound very appealing.
 > adequately in a VM with a mere 256MB of memory), and trivial to install and
 > configure, then I'm going to stick with the Windows Server 2003 POP3 service
 > for now.
-

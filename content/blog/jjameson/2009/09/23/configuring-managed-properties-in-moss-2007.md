@@ -230,4 +230,3 @@ namespace Fabrikam.Project1.Search.Configuration
     }
 }
 ```
-

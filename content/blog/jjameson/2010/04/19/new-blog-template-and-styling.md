@@ -52,4 +52,3 @@ rules to constrain the width of the content.]
 
 Over the next few days, I'll tweak the formatting a little to resolve the new
 layout issues.
-

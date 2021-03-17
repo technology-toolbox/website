@@ -36,4 +36,3 @@ Visual Studio tooling, Workflow, Business Connectivity Services, and much, much
 more.
 
 {{< /blockquote >}}
-

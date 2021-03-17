@@ -175,4 +175,3 @@ because event logs nested under **Applications and Services Logs** (such as
 **TerminalServices-PNPDevices**) are not currently detected (and therefore
 subsequently saved/cleared). Honestly, this has never been enough of a pain for
 me to actually invest the effort in fixing the script.
-

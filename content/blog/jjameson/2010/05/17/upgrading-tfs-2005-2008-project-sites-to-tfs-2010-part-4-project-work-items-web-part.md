@@ -218,4 +218,3 @@ $sitesToUpgrade |
 After running this script, the **Project Work Items** Web Part on each dashboard
 page will show scenarios in addition to the other work item types in the MSF
 Agile v4 process template.
-

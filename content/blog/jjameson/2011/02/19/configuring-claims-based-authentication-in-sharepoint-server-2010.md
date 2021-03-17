@@ -583,4 +583,3 @@ In
 I explain how to create a custom Web Part that can be used to provide a
 "branded" login page (instead of the generic "Sign In" page provided
 out-of-the-box in SharePoint Server 2010).
-

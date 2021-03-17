@@ -581,4 +581,3 @@ provider:
   "Authenticated Users" in the returned list.
 
 Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider** again ;-)
-

@@ -828,4 +828,3 @@ end
     UpdateHostsFile $hostsEntries
 }
 ```
-

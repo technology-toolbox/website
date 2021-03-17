@@ -57,4 +57,3 @@ Note that I still use the **Default Domain Controllers Policy** to configure the
 security settings on the domain controllers (and thus domain accounts). In other
 words, the settings noted above only affect local accounts (e.g.
 COLOSSUS\Administrator, not TECHTOOLBOX\jjameson).
-

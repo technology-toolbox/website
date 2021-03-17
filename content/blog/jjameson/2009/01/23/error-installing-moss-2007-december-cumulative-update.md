@@ -162,4 +162,3 @@ Configuration of the SharePoint Products and Technologies has succeeded.
 It turns out there are several other gotchas when working with SharePoint on
 Windows Server 2008. However, given the length of this post, I think I'll blog
 about those separately ;-)
-

@@ -101,4 +101,3 @@ longer occurred.
 > these files will need to be copied out of the GAC on the MOSS 2007 server (in
 > other words, most of them are not located in the "Program Files\Common
 > Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
-

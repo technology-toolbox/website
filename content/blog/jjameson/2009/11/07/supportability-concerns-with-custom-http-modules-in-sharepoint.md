@@ -72,4 +72,3 @@ linkHref="http://msdn.microsoft.com/en-us/library/bb862635.aspx" >}}
 
 Obviously you want to be very cautious about using custom HTTP modules, but
 there are definitely scenarios where this is a good approach.
-

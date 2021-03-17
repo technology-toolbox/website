@@ -211,4 +211,3 @@ Summary** Web Part:
 
 Also note that grouping is used to loosely sort the major deliverables and
 milestones.
-

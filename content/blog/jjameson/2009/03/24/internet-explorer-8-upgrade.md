@@ -97,4 +97,3 @@ out of my toolbox ;-)
 > dialog altogether and instead integrating this feature into the main window.
 > You can now quickly use {{< kbd "CTRL+F" >}} repeatedly to search for
 > different terms on a page. IE8 even has "hit highlighting" similar to Firefox.
-

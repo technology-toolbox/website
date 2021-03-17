@@ -577,4 +577,3 @@ Remove-Item "C:\NotBackedUp\Fabrikam.zip"
 [IO.DirectoryInfo] $directory = Get-Item "C:\NotBackedUp\Fabrikam"
 ZipFolder $directory
 ```
-

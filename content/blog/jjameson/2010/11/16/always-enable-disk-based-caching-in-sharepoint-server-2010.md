@@ -119,4 +119,3 @@ the home page for a site based on the Publishing Portal template (yes, this is
 even after the site is "warmed" up). If you look at the calls to
 `proc_FetchDocForHttpGet`, you'll find a number of additional CSS files and
 images.
-

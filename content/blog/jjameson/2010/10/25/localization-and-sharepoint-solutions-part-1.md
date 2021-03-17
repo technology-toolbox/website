@@ -120,4 +120,3 @@ separate post.
 >
 > [Part 2 in this series](/blog/jjameson/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class)
 > is now available.
-

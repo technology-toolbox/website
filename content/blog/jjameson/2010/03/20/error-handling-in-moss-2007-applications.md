@@ -1632,4 +1632,3 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 ```
 
 I hope you find this post valuable when creating Internet sites with MOSS 2007.
-

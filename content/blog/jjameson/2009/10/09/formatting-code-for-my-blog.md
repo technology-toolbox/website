@@ -422,4 +422,3 @@ Studio, double-click Rtf2Html.exe in my
 into Expression Web. It's still a three-step process, but not one that takes
 more than three or four seconds, and more importantly, it now produces much
 better HTML markup than the hack I used to use with Microsoft Word.
-

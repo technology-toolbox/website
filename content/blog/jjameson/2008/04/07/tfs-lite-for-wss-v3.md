@@ -212,4 +212,3 @@ the performance impact as the number of work items grows large.
 > use in the project dashboard view are only available in MOSS 2007.
 > Consequently you will need to substitute your own images (or simply revert to
 > displaying the status as text).
-

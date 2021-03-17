@@ -101,4 +101,3 @@ that I'm not the only one who has found it a little confusing to enter MSDN
 product keys for Windows Server 2008 after installation.
 
 Anyway, enough ranting -- I need to get back to my "day job" ;-)
-

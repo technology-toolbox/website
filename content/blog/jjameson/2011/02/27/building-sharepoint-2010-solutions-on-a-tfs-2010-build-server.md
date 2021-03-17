@@ -132,4 +132,3 @@ without any warnings.
 > I also recommend you remove extraneous SharePoint assemblies from your build
 > output, as described in
 > [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects).
-

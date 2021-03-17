@@ -148,4 +148,3 @@ rather in an **amd64** folder:
 
 I know most of you out there are not doing much (if any) C++ work anymore, but I
 thought I should share this just in case you need it at some point.
-

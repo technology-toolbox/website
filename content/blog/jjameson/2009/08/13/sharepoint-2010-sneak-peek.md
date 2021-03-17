@@ -35,4 +35,3 @@ release for the World of SharePoint!
 If you want to get a glimpse at some of the new features of the next version, I
 encourage you to take a few minutes and explore the
 [SharePoint 2010 sneak peek site](http://sharepoint.microsoft.com/2010/sneak_peek).
-

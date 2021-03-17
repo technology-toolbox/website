@@ -52,4 +52,3 @@ Instead this is automatically configured as soon as I join a server to the
 domain and reboot.
 
 I'll cover some of the other Group Policy objects in subsequent posts.
-

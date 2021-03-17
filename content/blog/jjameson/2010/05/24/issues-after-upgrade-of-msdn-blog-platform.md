@@ -40,4 +40,3 @@ blog posts after a specific date, so I'm certainly hoping this is the case.
 [Fortunately, if it turns out that we do, in fact, have to resubmit our new posts, then at least I can go back to [my copies stored in TFS](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server).]
 
 Thank you for your patience.
-

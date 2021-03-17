@@ -1516,4 +1516,3 @@ able to rebuild my development environment in a matter of minutes.
 > snapshot before reverting to the earlier point in time. In other words, I
 > treat my SharePoint development VM as "volatile" -- or "disposable" (if you
 > prefer that term instead).]
-

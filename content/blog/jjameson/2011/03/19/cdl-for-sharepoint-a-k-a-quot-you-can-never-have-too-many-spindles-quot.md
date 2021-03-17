@@ -70,4 +70,3 @@ When I used to have ICEMAN configured with a single logical drive (four physical
 drives in a RAID 10 array), I would occasionally receive alerts from Operations
 Manager regarding high disk latency. Since splitting those same physical drives
 into two RAID 1 arrays, I haven't received any more disk latency alerts.
-

@@ -182,4 +182,3 @@ code we write the best -- and simplest -- that it can possibly be.
 
 Now, if we could just get that all-encompassing FxCop rule for ensuring that all
 `IDisposable` objects are wrapped in `using` blocks... ;-)
-

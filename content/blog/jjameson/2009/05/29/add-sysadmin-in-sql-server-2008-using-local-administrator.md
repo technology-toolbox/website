@@ -58,4 +58,3 @@ title="Troubleshooting: Connecting to SQL Server When System Administrators Are 
 linkHref="http://msdn.microsoft.com/en-us/library/dd207004.aspx" >}}
 
 I wish that would have come up in my search!
-

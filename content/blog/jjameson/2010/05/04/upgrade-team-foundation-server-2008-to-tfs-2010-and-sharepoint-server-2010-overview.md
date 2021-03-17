@@ -185,4 +185,3 @@ point of installing Visual Studio instead.
 As mentioned throughout this post, I'll provide details about the installation,
 configuration, and upgrade of TFS 2010 and SharePoint Server 2010 in my
 [next blog post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
-

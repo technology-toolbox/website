@@ -306,4 +306,3 @@ namespace Fabrikam.Demo.Web.UI
 >
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
-

@@ -94,4 +94,3 @@ caption="Build Definition: \"Gated Check-in - Main\"" >}}
 |   | Label Sources | False |
 
 {{< /table >}}
-

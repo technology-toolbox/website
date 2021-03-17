@@ -280,4 +280,3 @@ have in their development team.
 > Roee Adler\
 > Soluto\
 > [...]
-

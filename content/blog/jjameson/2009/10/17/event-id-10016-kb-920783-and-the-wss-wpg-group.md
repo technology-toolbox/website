@@ -147,4 +147,3 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >
 > Now that the Administrators group has sufficient permissions, follow the steps
 > in KB 920783 to make the changes to the IIS WAMREG Admin Service.
-

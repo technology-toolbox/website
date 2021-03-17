@@ -80,4 +80,3 @@ same as the value specified for **AssemblyFileVersionAttribute**. Setting
 to be the same as **AssemblyVersionAttribute** ensures the **Product version**
 shown in the file properties window matches the **Version** displayed in the
 [GAC shell extension](http://msdn.microsoft.com/en-us/library/34149zk3.aspx).
-

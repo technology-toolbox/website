@@ -201,4 +201,3 @@ your posts without having to specify a site filter each time.
 > \
 > To resolve this issue, I modified the JavaScript to simply append the site
 > filter to the "q" query string parameter instead.
-

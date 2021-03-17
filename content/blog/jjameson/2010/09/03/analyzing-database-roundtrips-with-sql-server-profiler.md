@@ -101,4 +101,3 @@ Even if you don't have access to the entire source code for your solution (e.g.
 your solution is built on top of SharePoint or some other API) there are often
 ways you can optimize in order to reduce database roundtrips. I'll cover a
 SharePoint-specific example in my next post.
-

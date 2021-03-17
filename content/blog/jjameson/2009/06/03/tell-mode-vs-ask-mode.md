@@ -287,4 +287,3 @@ unless you actually were a member of this project ;-)
 > Review new Library search results on legacy General Site to determine if the
 > large number of Certificate of Analysis and MSDS publications has a negative
 > impact on search results. (2 hours)
-

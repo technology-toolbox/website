@@ -171,4 +171,3 @@ R2. I highly recommend that you verify that all of your VM environments are
 running the latest version. I have been running R2 on my laptop as well as in
 the Jameson Data Center for so long that I never encountered these problems
 before.
-

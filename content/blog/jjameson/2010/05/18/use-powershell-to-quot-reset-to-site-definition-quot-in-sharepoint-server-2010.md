@@ -73,4 +73,3 @@ $sitesToReset |
         $web.Dispose()
     }
 ```
-

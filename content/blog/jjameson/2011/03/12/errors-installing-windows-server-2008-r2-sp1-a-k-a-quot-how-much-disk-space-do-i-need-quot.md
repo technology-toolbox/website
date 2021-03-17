@@ -41,4 +41,3 @@ linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-8
 
 Maybe it's time to head over to [newegg](http://www.newegg.com) and see if those
 terabyte drives are still on sale ;-)
-

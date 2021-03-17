@@ -60,4 +60,3 @@ you cannot create a new Document Center site.
 The workaround is to enable *both* the Enterprise and Standard features on the
 site collection. Then you can add a Document Center to a Publishing Portal site
 collection.
-

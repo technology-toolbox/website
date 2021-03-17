@@ -105,4 +105,3 @@ that I came up with, but actually it's something I picked up from a Unix
 sysadmin by the name of Gary Rittenhouse, who I used to work with at AT&T Bell
 Laboratories. [Gary, you'll probably never see this post, but if you do, thanks
 for all of the great tips and tricks you provided me in those early days.]
-

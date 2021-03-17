@@ -45,4 +45,3 @@ WHERE
 ORDER BY
     sysobjects.Namecode
 ```
-

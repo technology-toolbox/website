@@ -528,4 +528,3 @@ Internet-facing site).
 >
 > I've attached a sample Visual Studio solution that demonstrates the **Logger**
 > class.
-

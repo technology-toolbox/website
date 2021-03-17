@@ -89,4 +89,3 @@ synchronized from the domain controller). However, when using snapshots, the
 latency in waiting for the time to synchronize after applying a snapshot can
 quickly become unbearable (especially if you are frequently applying a
 snapshot).
-

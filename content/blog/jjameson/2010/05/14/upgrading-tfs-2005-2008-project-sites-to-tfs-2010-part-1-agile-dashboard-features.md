@@ -248,4 +248,3 @@ $sitesToUpgrade |
       Enable-SPFeature "TfsDashboardAgileMoss" -Url $_
    }
 ```
-

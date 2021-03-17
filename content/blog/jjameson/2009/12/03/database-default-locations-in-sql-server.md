@@ -138,4 +138,3 @@ print 'MasterPath = ' + @MasterPath
 ```
 
 Note that I truncated the actual SQL batch and added the `print` statements.
-

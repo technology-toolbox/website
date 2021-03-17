@@ -85,4 +85,3 @@ and consequently only require the "quick tests" to be executed before check-in.
 
 If you are fortunate enough to be using TFS on your project, I hope you are
 reaping the benefits of check-in policies.
-

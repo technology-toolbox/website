@@ -190,4 +190,3 @@ does not make the corresponding site template compatible with WSS v3. However,
 once I modified the manifest.xml to remove the MOSS 2007-specific features,
 recreated the CAB file, and changed the file extension back to .stp, I was able
 to successfully create a site in WSS v3 based on the site template. Woohoo!
-

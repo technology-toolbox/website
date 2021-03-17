@@ -78,4 +78,3 @@ installation).
 
 Thanks to Ana Paula Moreira Franco, a Senior Consultant with Microsoft
 Consulting Services in Brazil, for pointing out these search terms.
-

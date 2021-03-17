@@ -109,4 +109,3 @@ before I actually completed this post). Now it's time to install Visual Studio
 2008...
 
 I'll cover my group policy configuration in a separate post.
-

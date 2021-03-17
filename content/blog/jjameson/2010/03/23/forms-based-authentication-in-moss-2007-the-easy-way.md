@@ -767,4 +767,3 @@ from SharePoint).
 In my
 [next post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I
 cover a similar method for configuring AJAX in SharePoint applications.
-

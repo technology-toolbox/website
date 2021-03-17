@@ -74,4 +74,3 @@ error before.]
 
 After adding my administrator account to the group, the error no longer occurred
 and the dashboards rendered as expected.
-

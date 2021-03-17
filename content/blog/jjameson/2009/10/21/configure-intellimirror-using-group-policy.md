@@ -103,4 +103,3 @@ ultimately determine the level of access for all users).
 
 Thus when a new user logs in for the first time, a corresponding folder is
 created on the server and all of the user's files are stored on the server.
-

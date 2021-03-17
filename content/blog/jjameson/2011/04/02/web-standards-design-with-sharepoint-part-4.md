@@ -647,4 +647,3 @@ administrator).
 Okay, that's it...the weather here in Denver is absolutely gorgeous today and I
 really need to get outside and enjoy it. I think it's time for a long bike ride
 around Cherry Creek Reservoir :-)
-

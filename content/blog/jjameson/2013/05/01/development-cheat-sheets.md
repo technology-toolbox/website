@@ -148,4 +148,3 @@ height="461" width="600"
 title="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-1328x1021.png)
-

@@ -224,4 +224,3 @@ of my toolbox.
 
 I hope you find these tips useful for managing your ever-increasing amount of
 email.
-

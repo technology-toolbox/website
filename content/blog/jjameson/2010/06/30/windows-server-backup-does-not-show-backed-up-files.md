@@ -135,4 +135,3 @@ C:\BackedUp\Profiles\jjameson folder are now as follows:
 
 Once these permission changes were applied, I performed another backup and
 verified that the backed up files appeared in the Recovery Wizard as expected.
-

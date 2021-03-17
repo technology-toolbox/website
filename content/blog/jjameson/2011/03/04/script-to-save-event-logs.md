@@ -123,4 +123,3 @@ Private Function LPad(strValue, nLength, strPadCharacter)
     LPad = strPaddedValue
 End Function
 ```
-

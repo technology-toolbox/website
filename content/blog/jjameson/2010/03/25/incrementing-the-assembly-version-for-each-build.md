@@ -342,4 +342,3 @@ numbers like 1.0.38.1, 1.0.38.2, etc.).
 
 Refer to one of my previous posts more information on
 [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
-

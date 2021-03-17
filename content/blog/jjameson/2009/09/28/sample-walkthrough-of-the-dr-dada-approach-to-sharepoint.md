@@ -861,4 +861,3 @@ alt="Command history" class="screenshot" height="205" width="600"
 title="Figure 3: Command history" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
-

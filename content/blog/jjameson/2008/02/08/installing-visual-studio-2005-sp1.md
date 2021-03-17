@@ -139,4 +139,3 @@ again.
 I really hope Windows Server 2008 has been updated to acknowledge the fact that
 patches from Microsoft may very well be several hundred megabytes (so we don't
 have to hack the registry to get them to install in the future).
-

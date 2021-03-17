@@ -711,4 +711,3 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 
 In [part 2](/blog/jjameson/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2) of
 this post, I'll cover more detail on developing AJAX Web Parts for MOSS 2007.
-

@@ -390,4 +390,3 @@ linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 > in the **ApplyWebConfigModifications** method. If you don't want or need this
 > fix, you can remove the reference to
 > **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
-

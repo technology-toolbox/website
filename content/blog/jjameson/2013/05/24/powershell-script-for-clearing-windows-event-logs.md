@@ -90,4 +90,3 @@ $ErrorActionPreference = "Stop"
 
 wevtutil el | ForEach-Object { wevtutil cl $_ }
 ```
-

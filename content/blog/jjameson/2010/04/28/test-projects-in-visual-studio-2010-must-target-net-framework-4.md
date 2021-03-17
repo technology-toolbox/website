@@ -76,4 +76,3 @@ While I don't anticipate there to be any issues with this project setting for
 test projects, I would feel more comfortable if you could truly target an older
 version of the .NET Framework using Visual Studio 2010 (meaning, across all
 project types that you could create in Visual Studio 2008).
-

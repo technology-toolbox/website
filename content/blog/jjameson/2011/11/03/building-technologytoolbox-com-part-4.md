@@ -1779,4 +1779,3 @@ I typically use a "TestConsole" utility to programmatically create a Style Guide
 page in a SharePoint site for development and testing purposes. This makes it
 very easy to recreate the Style Guide page in new environments or after
 rebuilding a SharePoint Web application in DEV and TEST.
-

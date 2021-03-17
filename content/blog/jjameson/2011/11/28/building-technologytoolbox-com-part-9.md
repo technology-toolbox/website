@@ -482,4 +482,3 @@ Here is the complete source for RecentPosts.ascx:
     </asp:Repeater>
 </div>
 ```
-

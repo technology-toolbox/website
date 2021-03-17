@@ -182,4 +182,3 @@ future.
 
 [[Part 3](/blog/jjameson/2007/11/02/dumping-moss-2007-variations-part-3) in this
 series is now available.]
-

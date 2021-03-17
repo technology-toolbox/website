@@ -474,4 +474,3 @@ Stay tuned...
 > The
 > [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6)
 > is now available.
-

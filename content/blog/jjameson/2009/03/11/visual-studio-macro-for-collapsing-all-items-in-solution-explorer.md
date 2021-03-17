@@ -93,4 +93,3 @@ Perhaps in a future version of Visual Studio, we'll have the ability to
 right-click the solution in **Solution Explorer** and then click something like
 **Collapse All**. Until then, I don't see me giving up my dependency on this
 macro anytime soon.
-

@@ -41,4 +41,3 @@ the share (I believe the option is something like "I'll configure the share
 later using stsadm.exe"). However, deleting the share and having it recreated
 (thus following the documented steps in our Install Guide) somehow made me feel
 better. Go figure.
-

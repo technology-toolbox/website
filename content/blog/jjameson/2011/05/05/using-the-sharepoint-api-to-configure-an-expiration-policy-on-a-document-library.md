@@ -104,4 +104,3 @@ which files to delete).
 
 In my next post, I'll explain more about storing files temporarily in
 SharePoint.
-

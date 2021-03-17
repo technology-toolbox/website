@@ -96,4 +96,3 @@ that need to be merged into a Web.config file (i.e. "for a Web application")
 then you *must* specify the {{< kbd "url" >}} parameter. If your solution does
 not have an assembly or if your solution contains workflows, then you *cannot*
 specify the {{< kbd "url" >}} parameter.
-

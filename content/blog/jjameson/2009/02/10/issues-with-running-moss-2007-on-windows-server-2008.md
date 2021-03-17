@@ -131,4 +131,3 @@ not aware of it. If I discover it later, I'll update this post.
 > [**Temporary ASP.NET Files folder** is not being cleaned up](/blog/jjameson/2009/04/01/temporary-asp-net-files-are-not-deleted)
 > on my Windows Server 2008 development VM. I don't recall ever encountering
 > this problem before when using Windows Server 2003.
-

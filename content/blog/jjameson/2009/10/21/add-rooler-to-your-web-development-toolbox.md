@@ -33,4 +33,3 @@ various elements with almost no effort whatsoever.
 
 If you haven't already discovered [Rooler](http://blois.us/Rooler/), I strongly
 recommend you download it today.
-

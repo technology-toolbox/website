@@ -559,4 +559,3 @@ Let's wrap this up with a few key points:
   a variety of ways without requiring a change to the services layer).
 - Using LINQ with typed DataSets makes it very easy to filter your data (while
   also catching potential problems at compile-time instead of at run-time).
-

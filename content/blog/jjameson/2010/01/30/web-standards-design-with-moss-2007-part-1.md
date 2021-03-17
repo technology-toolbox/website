@@ -605,4 +605,3 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > \
 > **Web Standards Design with SharePoint, Part 3**\
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
-

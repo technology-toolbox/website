@@ -467,4 +467,3 @@ metrics for some other environment). In my Web.config files, however, the
 An alternative would be to store a mapping of domain names and analytics keys in
 Web.config (instead of hard-coding the values for DEV, TEST, and PROD).
 Personally, I don't believe this is worth the additional effort to implement.
-

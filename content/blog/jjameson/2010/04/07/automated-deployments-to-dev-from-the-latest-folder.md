@@ -131,4 +131,3 @@ Note that there are a number of enhancements in Team Foundation Server 2010
 related to the build and deployment process. The process I've shown here is
 based on TFS 2008 (although it dates back to the old days of Visual SourceSafe
 and NAnt).
-

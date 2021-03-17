@@ -395,4 +395,3 @@ If you want your PowerShell scripts to appear differently in your blog posts,
 all you would need to do is tweak the CSS accordingly.
 
 Kudos to Lee for providing such a solid foundation to build upon!
-

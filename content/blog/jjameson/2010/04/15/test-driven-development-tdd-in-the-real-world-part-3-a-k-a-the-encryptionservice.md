@@ -876,4 +876,3 @@ no, then we'll need to update the old unit tests to pass in `null` for the
 
 Given the length of this post, I'll leave the rest of the work on the encryption
 service as an exercise for the reader ;-)
-

@@ -159,4 +159,3 @@ occurring again in the future.
 I've attached my sample management pack with the two custom rules -- just in
 case you want to save yourself the 5 minutes or so it takes to configure the
 rules.
-

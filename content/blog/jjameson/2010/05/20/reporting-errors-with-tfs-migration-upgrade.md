@@ -220,4 +220,3 @@ occurred).
 
 After waiting for the cube to be processed, the reports on the TFS project sites
 appeared as expected.
-

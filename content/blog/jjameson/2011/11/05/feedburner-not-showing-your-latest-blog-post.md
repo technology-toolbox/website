@@ -87,4 +87,3 @@ entire content of each post). This definitely isn't how I prefer to syndicate my
 blog posts (since it requires people reading my blog to "go online" and download
 the full post), but considering the alternatives, this is definitely the logical
 choice.
-

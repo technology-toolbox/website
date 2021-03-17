@@ -79,4 +79,3 @@ conversion, but left a lot to be desired.
 
 Prince, on the other hand, was very good at rendering the PDF nearly identical
 to the on-screen version of the HTML content.
-

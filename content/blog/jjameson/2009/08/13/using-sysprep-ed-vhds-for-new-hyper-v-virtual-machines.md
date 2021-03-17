@@ -117,4 +117,3 @@ to my Active Directory domain and getting all of the latest patches applied
 using Windows Server Update Services (which, in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) is
 enforced through Group Policy).
-

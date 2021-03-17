@@ -45,4 +45,3 @@ Also note that this is not the exhaustive list of rules required to exclude the
 various SharePoint items from search results that you most likely don't want to
 show to users on an Internet-facing MOSS site. I'll defer that to a
 [subsequent post](/blog/jjameson/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites).
-

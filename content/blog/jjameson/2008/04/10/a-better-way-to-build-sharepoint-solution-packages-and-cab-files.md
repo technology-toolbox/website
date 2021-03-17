@@ -183,4 +183,3 @@ approach; the most important being that I didn't see any compelling reasons to
 switch from using post-build events. With true dependency checking to avoid
 superfluous calls to {{< kbd "makecab.exe" >}}, this is obviously no longer the
 case.
-

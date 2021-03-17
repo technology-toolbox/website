@@ -89,4 +89,3 @@ In other words, the Development Plan should say:
 Regarding John's book...I strongly recommend this book to anyone who considers
 himself or herself a "serious developer." It is chock full of great tips and
 recommendations for developing .NET solutions.
-

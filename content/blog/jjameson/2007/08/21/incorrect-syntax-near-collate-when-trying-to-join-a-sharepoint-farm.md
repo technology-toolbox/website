@@ -92,4 +92,3 @@ Configuration Wizard. Instead, I chose to simply type in the name of the
 configuration database (we are using the default, **SharePoint\_Config**) as
 well as the service account name and password. The configuration then completed
 without error.
-

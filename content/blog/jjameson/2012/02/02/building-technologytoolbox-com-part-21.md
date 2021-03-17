@@ -553,4 +553,3 @@ Here is the complete source for Search.aspx:
 
 I will describe the process of implementing Google Analytics in
 [my next post](/blog/jjameson/2012/02/03/building-technologytoolbox-com-part-22).
-

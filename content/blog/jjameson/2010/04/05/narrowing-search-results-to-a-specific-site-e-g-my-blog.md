@@ -66,4 +66,3 @@ While not quite as easy to read due to URL encoding of the parameter, the
 contextual scope URL in MOSS 2007 makes it relatively simple to implement search
 functionality like the "Search this site" and "Search all sites" features on the
 KPMG site.
-
