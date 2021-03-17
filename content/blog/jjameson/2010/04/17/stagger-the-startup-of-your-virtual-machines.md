@@ -64,14 +64,14 @@ In the **Startup delay** field, I specify the different values for each VM.
 
 {{< table class="small" caption="Automatic Start Settings" >}}
 
-| <br>                    Virtual Machine<br>                 | <br>                    Startup Delay [sec]<br>                 |
+| Virtual Machine | Startup Delay [sec] |
 | --- | --- |
-|  XAVIER1  |  0  |
-|  BANSHEE  |  60  |
-|  CYCLOPS  |  120  |
-|  DAZZLER  |  180  |
-|  DOGFOOD  |  240  |
-|  JUBILEE  |  300  |
+| XAVIER1 | 0 |
+| BANSHEE | 60 |
+| CYCLOPS | 120 |
+| DAZZLER | 180 |
+| DOGFOOD | 240 |
+| JUBILEE | 300 |
 
 {{< /table >}}
 

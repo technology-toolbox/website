@@ -83,14 +83,14 @@ caption="Build Definition: \"Gated Check-in - Main\"" >}}
 | Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
 | Build Defaults | This build copies output files to a drop folder | (not selected) |
 | Process | Build process template: | DefaultTemplate.xaml |
-|   | Build process parameters: |   |
-|   | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li><li>Release - Any CPU</li></ul> |
-|   | Clean Workspace | False |
-|   | Perform Code Analysis | Never |
-|   | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> | <br>False |
-|   | Agent Settings<ul><li>Maximum Agent Execution Time</li></ul> | <br>00:15:00 |
-|   | Copy Outputs to Drop Folder | False |
-|   | Create Work Item on Failure | False |
-|   | Label Sources | False |
+|  | Build process parameters: |  |
+|  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li><li>Release - Any CPU</li></ul> |
+|  | Clean Workspace | False |
+|  | Perform Code Analysis | Never |
+|  | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> | <br>False |
+|  | Agent Settings<ul><li>Maximum Agent Execution Time</li></ul> | <br>00:15:00 |
+|  | Copy Outputs to Drop Folder | False |
+|  | Create Work Item on Failure | False |
+|  | Label Sources | False |
 
 {{< /table >}}

@@ -61,7 +61,7 @@ following table.
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |
 | EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration database. |
-| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications  | Used as the application pool identity for SharePoint service applications  |
+| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Used as the application pool identity for SharePoint service applications |
 | EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam extranet Web application |
 
 {{< /table >}}

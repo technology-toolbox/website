@@ -246,7 +246,7 @@ following:
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Threshold - Exceeds | Threshold - Meets | Threshold - Does Not Meet |
 | --- | --- | --- | --- | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -300,7 +300,7 @@ lengthy column headings, similar to the following:
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -385,7 +385,7 @@ the corresponding columns, similar to the following:
 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -450,7 +450,7 @@ following:
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas  | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
 {{< /table >}}

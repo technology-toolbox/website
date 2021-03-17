@@ -152,20 +152,20 @@ these are in addition to the "default" work items listed in
 {{< table class="small"
 caption="Initial work items for the Tugboat project (partial list)" >}}
 
-| <br>                    Work Item Type<br>                 | <br>                    Title<br>                 |
+| Work Item Type | Title |
 | --- | --- |
-|  Product Backlog Item  |  Home page  |
-|  Product Backlog Item  |  Masthead  |
-|  Product Backlog Item  |  Find Location (static HTML)  |
-|  Product Backlog Item  |  Weekly Specials (static HTML)  |
-|  Product Backlog Item  |  News (static HTML)  |
-|  Product Backlog Item  |  Drink Menu (static HTML)  |
-|  Product Backlog Item  |  Reviews (static HTML)  |
-|  Task  |  Create static HTML prototype for Web site  |
-|  Task  |  Create minimal master page and basic look-and-feel  |
-|  Task  |  Create HomeSiteConfiguration feature  |
-|  Task  |  Create deployment scripts for SharePoint WSPs and features  |
-|  Task  |  Create scripts to build/rebuild Web application  |
+| Product Backlog Item | Home page |
+| Product Backlog Item | Masthead |
+| Product Backlog Item | Find Location (static HTML) |
+| Product Backlog Item | Weekly Specials (static HTML) |
+| Product Backlog Item | News (static HTML) |
+| Product Backlog Item | Drink Menu (static HTML) |
+| Product Backlog Item | Reviews (static HTML) |
+| Task | Create static HTML prototype for Web site |
+| Task | Create minimal master page and basic look-and-feel |
+| Task | Create HomeSiteConfiguration feature |
+| Task | Create deployment scripts for SharePoint WSPs and features |
+| Task | Create scripts to build/rebuild Web application |
 
 {{< /table >}}
 

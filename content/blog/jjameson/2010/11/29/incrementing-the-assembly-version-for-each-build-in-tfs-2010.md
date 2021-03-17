@@ -278,11 +278,11 @@ the **Update Build Number** sequence, and set the properties as follows:
 
 {{< table class="small" >}}
 
-| <br>                    Property<br>                 | <br>                    Value<br>                 |
+| Property | Value |
 | --- | --- |
-|  Arguments  |  "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt"""  |
-|  DisplayName  |  InvokeProcess to read AssemblyVersion from file  |
-|  FileName  |  "cmd.exe"  |
+| Arguments | "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt""" |
+| DisplayName | InvokeProcess to read AssemblyVersion from file |
+| FileName | "cmd.exe" |
 
 {{< /table >}}
 
@@ -329,10 +329,10 @@ the properties as follows:
 
 {{< table class="small" >}}
 
-| <br>                    Property<br>                 | <br>                    Value<br>                 |
+| Property | Value |
 | --- | --- |
-|  DisplayName  |  Increment AssemblyVersion for next build  |
-|  Project  |  SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj"  |
+| DisplayName | Increment AssemblyVersion for next build |
+| Project | SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj" |
 
 {{< /table >}}
 
@@ -511,16 +511,16 @@ following table, it means the default is used.
 {{< table class="small"
 caption="Build Definition: \"Automated Build - Main\"" >}}
 
-| <br>                    Section<br>                 | <br>                    Property<br>                 | <br>                    Value<br>                 |
+| Section | Property | Value |
 | --- | --- | --- |
-|  General  |  Build definition name  |  Automated Build - Main  |
-|  Trigger  | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> |  (selected)  |
-|   |  Queue the build on the build controller at:  |  4:45 AM  |
-|  Workspace  | <br>                    Source Control Folder<br>Build Agent Folder<br>                 | <br>                    $/foobar2010/Main<br>$(SourceDir)<br>                 |
-|  Build Defaults  |  Copy build output to the following drop folder (UNC path, such as \\server\share):  |  \\dazzler\Builds\foobar2010  |
-|  Process  |  Build process template:  |  CustomTemplate.xaml  |
-|   |  Build process parameters:  |   |
-|   | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
-|  Retention Policy  | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All<br>                 |
+| General | Build definition name | Automated Build - Main |
+| Trigger | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> | (selected) |
+|  | Queue the build on the build controller at: | 4:45 AM |
+| Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
+| Build Defaults | Copy build output to the following drop folder (UNC path, such as \\server\share): | \\dazzler\Builds\foobar2010 |
+| Process | Build process template: | CustomTemplate.xaml |
+|  | Build process parameters: |  |
+|  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
+| Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All |
 
 {{< /table >}}

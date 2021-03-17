@@ -35,43 +35,43 @@ into a simple table:
 
 {{< table class="small" caption="MOSS 2007 Master Page Comparison" >}}
 
-| <br>                    Placeholder<br>                 | <br>                    application.master<br>                 | <br>                    default.master<br>                 |
+| Placeholder | application.master | default.master |
 | --- | --- | --- |
-|  PlaceHolderPageTitle  |  X  |  X  |
-|  PlaceHolderAdditionalPageHead  |  X  |  X  |
-|  PlaceHolderGlobalNavigation  |  X  |  X  |
-|  PlaceHolderGlobalNavigationSiteMap  |  X  |  X  |
-|  PlaceHolderSiteName  |  X  |  X  |
-|  PlaceHolderSearchArea  |  X  |  X  |
-|  PlaceHolderTopNavBar  |  X  |  X  |
-|  PlaceHolderHorizontalNav  |   |  X  |
-|  WSSDesignConsole  |  X  |  X  |
-|  SPNavigation  |  X  |  X  |
-|  PlaceHolderPageImage  |  X  |  X  |
-|  PlaceHolderTitleLeftBorder  |  X  |  X  |
-|  PlaceHolderTitleAreaClass  |  X  |  X\*  |
-|  PlaceHolderTitleBreadcrumb  |  X  |  X  |
-|  PlaceHolderPageTitleInTitleArea  |  X  |  X  |
-|  PlaceHolderMiniConsole  |  X  |  X  |
-|  PlaceHolderTitleRightMargin  |  X  |  X  |
-|  PlaceHolderTitleAreaSeparator  |  X  |  X  |
-|  PlaceHolderLeftNavBarDataSource  |  X  |  X  |
-|  PlaceHolderCalendarNavigator  |  X  |  X  |
-|  PlaceHolderLeftNavBarTop  |  X  |  X  |
-|  PlaceHolderLeftNavBar  |  X  |  X  |
-|  PlaceHolderLeftActions  |  X  |  X  |
-|  PlaceHolderNavSpacer  |  X  |  X  |
-|  PlaceHolderLeftNavBarBorder  |  X  |  X  |
-|  PlaceHolderBodyLeftBorder  |  X  |  X  |
-|  MSO\_ContentDiv\*\*  |   |  X  |
-|  PlaceHolderBodyAreaClass  |  X  |  X\*  |
-|  PlaceHolderPageDescriptionRowAttr  |  X  |   |
-|  PlaceHolderPageDescription  |  X  |  X  |
-|  PlaceHolderPageDescriptionRowAttr2  |  X  |   |
-|  PlaceHolderMain  |  X  |  X  |
-|  PlaceHolderBodyRightMargin  |  X  |  X  |
-|  PlaceHolderFormDigest  |  X  |  X  |
-|  PlaceHolderUtilityContent  |  X  |  X  |
+| PlaceHolderPageTitle | X | X |
+| PlaceHolderAdditionalPageHead | X | X |
+| PlaceHolderGlobalNavigation | X | X |
+| PlaceHolderGlobalNavigationSiteMap | X | X |
+| PlaceHolderSiteName | X | X |
+| PlaceHolderSearchArea | X | X |
+| PlaceHolderTopNavBar | X | X |
+| PlaceHolderHorizontalNav |  | X |
+| WSSDesignConsole | X | X |
+| SPNavigation | X | X |
+| PlaceHolderPageImage | X | X |
+| PlaceHolderTitleLeftBorder | X | X |
+| PlaceHolderTitleAreaClass | X | X\* |
+| PlaceHolderTitleBreadcrumb | X | X |
+| PlaceHolderPageTitleInTitleArea | X | X |
+| PlaceHolderMiniConsole | X | X |
+| PlaceHolderTitleRightMargin | X | X |
+| PlaceHolderTitleAreaSeparator | X | X |
+| PlaceHolderLeftNavBarDataSource | X | X |
+| PlaceHolderCalendarNavigator | X | X |
+| PlaceHolderLeftNavBarTop | X | X |
+| PlaceHolderLeftNavBar | X | X |
+| PlaceHolderLeftActions | X | X |
+| PlaceHolderNavSpacer | X | X |
+| PlaceHolderLeftNavBarBorder | X | X |
+| PlaceHolderBodyLeftBorder | X | X |
+| MSO\_ContentDiv\*\* |  | X |
+| PlaceHolderBodyAreaClass | X | X\* |
+| PlaceHolderPageDescriptionRowAttr | X |  |
+| PlaceHolderPageDescription | X | X |
+| PlaceHolderPageDescriptionRowAttr2 | X |  |
+| PlaceHolderMain | X | X |
+| PlaceHolderBodyRightMargin | X | X |
+| PlaceHolderFormDigest | X | X |
+| PlaceHolderUtilityContent | X | X |
 
 {{< /table >}}
 

@@ -2735,16 +2735,16 @@ configuration settings are listed in the following tables.
 
 | User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
-| EXTRANET\svc-sql  | Service account for SQL Server  | No  | Used to run SQL Server and cluster services  |
-| EXTRANET\svc-sql-agent  | Service account for SQL Server Agent  | No  | Used to run SQL Server Agent  |
-| EXTRANET\svc-sharepoint  | Service account for SharePoint farm  | Yes  | The server farm account is used to create and access the <br>					SharePoint configuration database. It also acts as the application <br>					pool identity account for the SharePoint Central Administration <br>					application pool, and it is the account under which the Windows <br>					SharePoint Services Timer service runs. The SharePoint Products <br>					Configuration Wizard adds this account to the SQL Server<br>					**dbcreator** and **securityadmin** <br>					server roles.<br><br>The farm service account must be a domain user account, but <br>					it does not need to be a member of any specific security group <br>					on the servers in the farm. It is recommended to follow the <br>					principle of least privilege and specify a user account that <br>					is not a member of the Administrators group on any of the servers <br>					in the farm. |
-| EXTRANET\svc-search  | Service account for search services  | Yes  | Used for running search services (namely SharePoint Foundation 2010 Search and SharePoint Server 2010 Search)  |
-| EXTRANET\svc-index  | Service account for indexing content  | Yes  | Provides read-only access to any content that needs to be indexed (and thus included in search results)  |
-| EXTRANET\svc-spserviceapp  | Service account for SharePoint service applications  | Yes  | Used as the application pool identity for SharePoint service applications  |
-| EXTRANET\svc-web-fabrikam  | Service account for Fabrikam Web application  | Yes  | Used as the application pool identity for the new Fabrikam Extranet website  |
-| FABRIKAM\svc-web-fabrikam  | Service account for Fabrikam Web application  | No  | Proxy account used to enable internal Fabrikam users and groups to be selected using the People Picker in the SharePoint extranet farm. The username and password must not contain commas. |
-| EXTRANET\svc-sp-psr  | Service account for SharePoint "Portal Super Reader" | No  | Object cache user account with Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
-| EXTRANET\svc-sp-psu  | Service account for SharePoint "Portal Super User"  | No  | Object cache user account providing Full Control access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+| EXTRANET\svc-sql | Service account for SQL Server | No | Used to run SQL Server and cluster services |
+| EXTRANET\svc-sql-agent | Service account for SQL Server Agent | No | Used to run SQL Server Agent |
+| EXTRANET\svc-sharepoint | Service account for SharePoint farm | Yes | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the Windows SharePoint Services Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
+| EXTRANET\svc-search | Service account for search services | Yes | Used for running search services (namely SharePoint Foundation 2010 Search and SharePoint Server 2010 Search) |
+| EXTRANET\svc-index | Service account for indexing content | Yes | Provides read-only access to any content that needs to be indexed (and thus included in search results) |
+| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Yes | Used as the application pool identity for SharePoint service applications |
+| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web application | Yes | Used as the application pool identity for the new Fabrikam Extranet website |
+| FABRIKAM\svc-web-fabrikam | Service account for Fabrikam Web application | No | Proxy account used to enable internal Fabrikam users and groups to be selected using the People Picker in the SharePoint extranet farm. The username and password must not contain commas. |
+| EXTRANET\svc-sp-psr | Service account for SharePoint "Portal Super Reader" | No | Object cache user account with Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+| EXTRANET\svc-sp-psu | Service account for SharePoint "Portal Super User" | No | Object cache user account providing Full Control access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
 
 {{< /table >}}
 
@@ -2752,8 +2752,8 @@ configuration settings are listed in the following tables.
 
 | Setting | Value |
 | --- | --- |
-| Installation path  | C:\Program Files\Microsoft Office Servers  |
-| Search index files  | D:\Program Files\Microsoft Office Servers\14.0\Data  |
+| Installation path | C:\Program Files\Microsoft Office Servers |
+| Search index files | D:\Program Files\Microsoft Office Servers\14.0\Data |
 
 {{< /table >}}
 
@@ -2761,11 +2761,11 @@ configuration settings are listed in the following tables.
 
 | Setting | Value |
 | --- | --- |
-| Enable Event Log Flood Protection  | Yes (checked) |
-| Trace Log Path  | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Number of days to store log files  | TEST and PROD: 14<br>DEV: 1 |
-| Restrict Trace Log disk space usage  | No (not checked)  |
-| Maximum storage space for Trace Logs (GB)  | N/A  |
+| Enable Event Log Flood Protection | Yes (checked) |
+| Trace Log Path | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
+| Number of days to store log files | TEST and PROD: 14<br>DEV: 1 |
+| Restrict Trace Log disk space usage | No (not checked) |
+| Maximum storage space for Trace Logs (GB) | N/A |
 
 {{< /table >}}
 
@@ -2789,10 +2789,10 @@ health data collection is *not* recommended in these environments.
 
 | Setting | Value for PROD | Value for TEST | Value for DEV |
 | --- | --- | --- | --- |
-| Outbound SMTP server  | smtp.extranet.fabrikam.com  | smtp.extranet.fabrikam.com | smtp.fabrikam.com  |
-| From address  | svc-sharepoint@fabrikam.com  | svc-sharepoint-test@fabrikam.com  | svc-sharepoint-dev@fabrikam.com  |
-| Reply-to address  | no-reply@fabrikam.com  | no-reply@fabrikam.com  | no-reply@fabrikam.com  |
-| Character set  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  | 65001 (Unicode UTF-8)  |
+| Outbound SMTP server | smtp.extranet.fabrikam.com | smtp.extranet.fabrikam.com | smtp.fabrikam.com |
+| From address | svc-sharepoint@fabrikam.com | svc-sharepoint-test@fabrikam.com | svc-sharepoint-dev@fabrikam.com |
+| Reply-to address | no-reply@fabrikam.com | no-reply@fabrikam.com | no-reply@fabrikam.com |
+| Character set | 65001 (Unicode UTF-8) | 65001 (Unicode UTF-8) | 65001 (Unicode UTF-8) |
 
 {{< /table >}}
 
@@ -2802,8 +2802,8 @@ health data collection is *not* recommended in these environments.
 | --- | --- | --- | --- | --- | --- |
 | Name | Service Account |
 | --- | --- |
-| SharePoint Central Administration v4  | 22812  | (blank)  | No  |  | EXTRANET\svc-sharepoint  | SharePoint\_AdminContent\_{GUID}  |
-| Fabrikam Extranet | 80  | extranet.fabrikam.com  | Yes  | SharePoint – extranet.fabrikam.com80  | EXTRANET\svc-web-fabrikam  | WSS\_Content\_FabrikamExtranet  |
+| SharePoint Central Administration v4 | 22812 | (blank) | No |  | EXTRANET\svc-sharepoint | SharePoint\_AdminContent\_{GUID} |
+| Fabrikam Extranet | 80 | extranet.fabrikam.com | Yes | SharePoint – extranet.fabrikam.com80 | EXTRANET\svc-web-fabrikam | WSS\_Content\_FabrikamExtranet |
 
 {{< /table >}}
 
@@ -2811,7 +2811,7 @@ health data collection is *not* recommended in these environments.
 
 | Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| http://extranet.fabrikam.com  | Fabrikam Extranet  | (blank)  | /  | Publishing: Publishing Portal  | FABRIKAM\jjameson  | FABRIKAM\smasters | No Quota  |
+| http://extranet.fabrikam.com | Fabrikam Extranet | (blank) | / | Publishing: Publishing Portal | FABRIKAM\jjameson | FABRIKAM\smasters | No Quota |
 
 {{< /table >}}
 
@@ -2819,10 +2819,10 @@ health data collection is *not* recommended in these environments.
 
 | Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
-| WSS\_Content\_FabrikamExtranet | WSS\_Content\_FabrikamExtranet | Data  | PRIMARY  | 10,000  | By 500 MB, unrestricted growth  |
-|  | WSS\_Content\_FabrikamExtranet\_Log  | Log  | Not Applicable  | 400  | By 10 percent, restricted growth: 4,000 MB  |
-| OfficeWebAppsCache  | OfficeWebAppsCache  | Data  | PRIMARY  | 10,000  | By 500 MB, unrestricted growth  |
-|  | OfficeWebAppsCache\_Log  | Log  | Not Applicable  | 400  | By 10 percent, restricted growth: 4,000 MB  |
+| WSS\_Content\_FabrikamExtranet | WSS\_Content\_FabrikamExtranet | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
+|  | WSS\_Content\_FabrikamExtranet\_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
+| OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
+|  | OfficeWebAppsCache\_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
 
 {{< /table >}}
 
@@ -2830,8 +2830,8 @@ health data collection is *not* recommended in these environments.
 
 | SharePoint Group | Members | Permissions |
 | --- | --- | --- |
-| Approvers | FABRIKAM\Extranet Approvers | Approve  |
-| Fabrikam Extranet Members | FABRIKAM\Extranet Authors  | Contribute  |
+| Approvers | FABRIKAM\Extranet Approvers | Approve |
+| Fabrikam Extranet Members | FABRIKAM\Extranet Authors | Contribute |
 
 {{< /table >}}
 
@@ -2843,10 +2843,10 @@ health data collection is *not* recommended in these environments.
 
 | Setting | Full | Incremental |
 | --- | --- | --- |
-| Type  | Weekly  | Daily  |
-| Run every  | 1 week  | 1 day  |
-| On:  | <ul><li>Sunday</li></ul> | N/A  |
-| Starting time  | 04:00 AM  | 12:00 AM  |
-| Repeat within the day  | No  | Yes<br>Every 30 minutes<br>For 1440 minutes  |
+| Type | Weekly | Daily |
+| Run every | 1 week | 1 day |
+| On: | <ul><li>Sunday</li></ul> | N/A |
+| Starting time | 04:00 AM | 12:00 AM |
+| Repeat within the day | No | Yes<br>Every 30 minutes<br>For 1440 minutes |
 
 {{< /table >}}
