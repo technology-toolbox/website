@@ -1,8 +1,11 @@
 ---
 title: "XSLT \"Identity Transform\""
 date: 2009-03-25T07:58:00-06:00
-excerpt: "Last week, I was explaining to a teammate that it is often helpful to use the XSLT \"Identity Transform\" in order to view the raw XML -- in other words, without any \"real\" transformation by the XSL stylesheet. 
- For example, suppose you need to customize..."
+excerpt:
+  "Last week, I was explaining to a teammate that it is often helpful to use the
+  XSLT \"Identity Transform\" in order to view the raw XML -- in other words,
+  without any \"real\" transformation by the XSL stylesheet. 
+   For example, suppose you need to customize..."
 aliases: ["/blog/jjameson/archive/2009/03/24/xslt-identity-transform.aspx", "/blog/jjameson/archive/2009/03/25/xslt-identity-transform.aspx"]
 draft: true
 categories: ["SharePoint", "Development", "My System"]

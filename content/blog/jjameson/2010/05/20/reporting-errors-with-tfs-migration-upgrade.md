@@ -1,7 +1,11 @@
 ---
 title: "Reporting Errors with TFS Migration/Upgrade"
 date: 2010-05-20T04:07:00-06:00
-excerpt: "When upgrading Team Foundation Server (TFS) -- or, really, any application that utilizes SQL Server Reporting Services -- you might choose to restore your data to a new environment (for example, to migrate to new hardware, or to validate the upgrade in..."
+excerpt:
+  "When upgrading Team Foundation Server (TFS) -- or, really, any application
+  that utilizes SQL Server Reporting Services -- you might choose to restore
+  your data to a new environment (for example, to migrate to new hardware, or to
+  validate the upgrade in..."
 aliases: ["/blog/jjameson/archive/2010/05/19/reporting-errors-with-tfs-migration-upgrade.aspx", "/blog/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx"]
 draft: true
 categories: ["Development"]

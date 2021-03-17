@@ -1,8 +1,12 @@
 ---
 title: "PowerShell Script to Configure Search in SharePoint Server 2010"
 date: 2011-02-28T04:48:00-07:00
-excerpt: "This morning I thought I'd share one more very useful PowerShell script for SharePoint Server 2010. 
- When using Central Administration and/or the Farm Configuration Wizard to create and configure the Search Service Application, the resulting databases..."
+excerpt:
+  "This morning I thought I'd share one more very useful PowerShell script for
+  SharePoint Server 2010. 
+   When using Central Administration and/or the Farm Configuration Wizard to
+  create and configure the Search Service Application, the resulting
+  databases..."
 aliases: ["/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["SharePoint"]

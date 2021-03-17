@@ -1,8 +1,12 @@
 ---
 title: "Out-of-the-Box Permission (Policy) Levels"
 date: 2007-04-23T22:57:00-06:00
-excerpt: "For a couple of months now, I have been using the following command to add myself to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from a different server: 
- stsadm.exe –o addpermissionpolicy –url http://foobar/sites/Migration -userlogin..."
+excerpt:
+  "For a couple of months now, I have been using the following command to add
+  myself to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from
+  a different server: 
+   stsadm.exe –o addpermissionpolicy –url http://foobar/sites/Migration
+  -userlogin..."
 aliases: ["/blog/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx"]
 draft: true
 categories: ["SharePoint"]

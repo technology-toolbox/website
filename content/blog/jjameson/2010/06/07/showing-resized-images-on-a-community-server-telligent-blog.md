@@ -1,8 +1,11 @@
 ---
 title: "Showing Resized Images on a Community Server/Telligent Blog"
 date: 2010-06-07T07:57:00-06:00
-excerpt: "Back in Community Server 2.1 (i.e. prior to the recent upgrade of the MSDN/TechNet blog platform), I could specify a URL like the following to show a smaller version of an image in a blog post: 
- http://blogs.msdn.com/photos/jjameson/images/9997719/500x258..."
+excerpt:
+  "Back in Community Server 2.1 (i.e. prior to the recent upgrade of the
+  MSDN/TechNet blog platform), I could specify a URL like the following to show
+  a smaller version of an image in a blog post: 
+   http://blogs.msdn.com/photos/jjameson/images/9997719/500x258..."
 aliases: ["/blog/jjameson/archive/2010/06/06/showing-resized-images-on-a-community-server-telligent-blog.aspx", "/blog/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx"]
 draft: true
 categories: ["My System"]

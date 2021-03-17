@@ -1,8 +1,11 @@
 ---
 title: "Visual Studio Team System 2010 Week on Channel 9!"
 date: 2008-10-01T08:21:00-06:00
-excerpt: "Visual Studio just keeps getting better and better! 
- Check out the 20 new videos that will be released over the course of this week announcing the most exciting new features in Visual Studio 2010. The Technical Evanglelists (boy, isn't that a dream..."
+excerpt:
+  "Visual Studio just keeps getting better and better! 
+   Check out the 20 new videos that will be released over the course of this
+  week announcing the most exciting new features in Visual Studio 2010. The
+  Technical Evanglelists (boy, isn't that a dream..."
 aliases: ["/blog/jjameson/archive/2008/09/30/visual-studio-team-system-2010-week-on-channel-9.aspx", "/blog/jjameson/archive/2008/10/01/visual-studio-team-system-2010-week-on-channel-9.aspx"]
 draft: true
 categories: ["Development"]

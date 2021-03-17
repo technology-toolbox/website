@@ -1,7 +1,11 @@
 ---
 title: "PowerShell Script to Configure the State Service in SharePoint Server 2010"
 date: 2011-02-27T14:24:00-07:00
-excerpt: "In my first post today , I provided a number of scripts for deploying custom solutions and features in SharePoint Server 2010. However, those certainly weren't all of the PowerShell scripts that I currently use when working with SharePoint 2010. Here..."
+excerpt:
+  "In my first post today , I provided a number of scripts for deploying custom
+  solutions and features in SharePoint Server 2010. However, those certainly
+  weren't all of the PowerShell scripts that I currently use when working with
+  SharePoint 2010. Here..."
 aliases: ["/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["SharePoint"]

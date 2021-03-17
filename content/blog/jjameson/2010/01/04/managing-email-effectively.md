@@ -1,8 +1,11 @@
 ---
 title: "Managing Email Effectively"
 date: 2010-01-04T07:10:00-07:00
-excerpt: "First of all, Happy New Year! 
- This morning I'm back from a not-so-relaxing four weeks off -- although I have to admit, there's something quite nice about putting technology aside for a few weeks and laying travertine and building cabinets instead ..."
+excerpt:
+  "First of all, Happy New Year! 
+   This morning I'm back from a not-so-relaxing four weeks off -- although I
+  have to admit, there's something quite nice about putting technology aside for
+  a few weeks and laying travertine and building cabinets instead ..."
 aliases: ["/blog/jjameson/archive/2010/01/03/managing-email-effectively.aspx", "/blog/jjameson/archive/2010/01/04/managing-email-effectively.aspx"]
 draft: true
 categories: ["My System"]

@@ -1,8 +1,11 @@
 ---
 title: "Compiling C++ Projects with Team Foundation Build"
 date: 2009-11-07T08:24:00-07:00
-excerpt: "As I mentioned in my previous post , this week I incorporated Password Minder into my \"Toolbox\" Visual Studio solution that is scheduled to build daily through Team Foundation Server (TFS). 
- It's not that I really need daily builds of Password Minder;..."
+excerpt:
+  "As I mentioned in my previous post , this week I incorporated Password Minder
+  into my \"Toolbox\" Visual Studio solution that is scheduled to build daily
+  through Team Foundation Server (TFS). 
+   It's not that I really need daily builds of Password Minder;..."
 aliases: ["/blog/jjameson/archive/2009/11/06/compiling-c-projects-with-team-foundation-build.aspx", "/blog/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx"]
 draft: true
 categories: ["Development"]

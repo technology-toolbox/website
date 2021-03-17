@@ -1,10 +1,13 @@
 ---
 title: "ArgumentNullException with Optional PublishingPage.Description Property (with some thoughts on breaking the build, too)"
 date: 2009-03-19T07:06:00-06:00
-excerpt: "Yesterday morning I broke the build. 
- Ouch. 
- Technically speaking, the changes that I checked in did not break the build, per se, but rather my changes caused a nasty ArgumentNullException while redeploying our SharePoint site. 
- In \"Developerspeak..."
+excerpt:
+  "Yesterday morning I broke the build. 
+   Ouch. 
+   Technically speaking, the changes that I checked in did not break the build,
+  per se, but rather my changes caused a nasty ArgumentNullException while
+  redeploying our SharePoint site. 
+   In \"Developerspeak..."
 aliases: ["/blog/jjameson/archive/2009/03/18/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx", "/blog/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]

@@ -1,7 +1,11 @@
 ---
 title: "Identifying Logon Failures on a Web Site"
 date: 2011-03-04T05:01:00-07:00
-excerpt: "Several years ago, while working on the \"Frontier\" project at Agilent Technologies , I encountered a scenario where I needed to quickly identify logon failures on the site. The Agilent site was (and I believe still is) based on Microsoft Office SharePoint..."
+excerpt:
+  "Several years ago, while working on the \"Frontier\" project at Agilent
+  Technologies , I encountered a scenario where I needed to quickly identify
+  logon failures on the site. The Agilent site was (and I believe still is)
+  based on Microsoft Office SharePoint..."
 aliases: ["/blog/jjameson/archive/2011/03/03/identifying-logon-failures-on-a-web-site.aspx", "/blog/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx"]
 draft: true
 categories: ["SharePoint", "Infrastructure"]

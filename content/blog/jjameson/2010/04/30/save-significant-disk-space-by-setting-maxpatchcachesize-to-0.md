@@ -1,7 +1,11 @@
 ---
 title: "Save Significant Disk Space by Setting MaxPatchCacheSize to 0"
 date: 2010-04-30T14:51:00-06:00
-excerpt: "A little over two years ago, I wrote a post about installing Visual Studio 2005 Service Pack 1 , in which I mentioned setting the MaxPatchCacheSize registry setting to 0 (in order to save some significant disk space while installing the service pack)..."
+excerpt:
+  "A little over two years ago, I wrote a post about installing Visual Studio
+  2005 Service Pack 1 , in which I mentioned setting the MaxPatchCacheSize
+  registry setting to 0 (in order to save some significant disk space while
+  installing the service pack)..."
 aliases: ["/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"]
 draft: true
 categories: ["My System", "Infrastructure", "Development"]

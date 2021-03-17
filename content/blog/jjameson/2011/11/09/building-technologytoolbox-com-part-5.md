@@ -2,9 +2,13 @@
 title: "Semantic HTML for blog pages based on hAtom 0.1 microformat (a.k.a. Building TechnologyToolbox.com, part 5)"
 date: 2011-11-09T04:06:22-07:00
 lastmod: 2011-11-09T04:07:05-07:00
-excerpt: "While creating the new TechnologyToolbox.com site, one of my first tasks was to define the structure of the HTML for the blog pages.
-
-I briefly considered using my old MSDN blog as a reference. However, I quickly dismissed that option after viewing my MSDN blog home page with CSS disabled..."
+excerpt:
+  "While creating the new TechnologyToolbox.com site, one of my first tasks was
+  to define the structure of the HTML for the blog pages.
+  
+  I briefly considered using my old MSDN blog as a reference. However, I quickly
+  dismissed that option after viewing my MSDN blog home page with CSS
+  disabled..."
 aliases: ["/blog/jjameson/archive/2011/11/08/building-technologytoolbox-com-part-5.aspx", "/blog/jjameson/archive/2011/11/09/building-technologytoolbox-com-part-5.aspx"]
 draft: true
 categories: ["Development", "My System"]

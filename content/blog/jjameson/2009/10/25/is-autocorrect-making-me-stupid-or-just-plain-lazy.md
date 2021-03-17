@@ -1,8 +1,11 @@
 ---
 title: "Is AutoCorrect making me stupid or just plain lazy?"
 date: 2009-10-25T07:03:00-06:00
-excerpt: "Yesterday's post got me thinking about something. 
- Do you find yourself occasionally typing one word when you are actually thinking of a different word that sounds the same? A faint recollection from one or more of my English classes long ago suggested..."
+excerpt:
+  "Yesterday's post got me thinking about something. 
+   Do you find yourself occasionally typing one word when you are actually
+  thinking of a different word that sounds the same? A faint recollection from
+  one or more of my English classes long ago suggested..."
 aliases: ["/blog/jjameson/archive/2009/10/24/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx", "/blog/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx"]
 draft: true
 categories: ["Personal"]

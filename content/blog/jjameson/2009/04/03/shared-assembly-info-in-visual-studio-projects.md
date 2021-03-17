@@ -1,8 +1,11 @@
 ---
 title: "Shared Assembly Info in Visual Studio Projects"
 date: 2009-04-03T07:17:00-06:00
-excerpt: "Yesterday I introduced the concept of linked files in Visual Studio solutions with a follow-up on my recommendation for configuring a custom dictionary to eliminate CA1704 code analysis warnings. 
- Another practical application of linked files is what..."
+excerpt:
+  "Yesterday I introduced the concept of linked files in Visual Studio solutions
+  with a follow-up on my recommendation for configuring a custom dictionary to
+  eliminate CA1704 code analysis warnings. 
+   Another practical application of linked files is what..."
 aliases: ["/blog/jjameson/archive/2009/04/02/shared-assembly-info-in-visual-studio-projects.aspx", "/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx"]
 draft: true
 categories: ["My System", "Development"]

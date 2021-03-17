@@ -1,7 +1,11 @@
 ---
 title: "Dumping MOSS 2007 Variations - Part 2"
 date: 2007-10-31T07:56:00-06:00
-excerpt: "In part 1 of this series, I talked about my current customer's decision to abandon the use of the variations feature in Microsoft Office SharePoint Server (MOSS) 2007 after we encountered several major issues prior to deployment. The first issue that..."
+excerpt:
+  "In part 1 of this series, I talked about my current customer's decision to
+  abandon the use of the variations feature in Microsoft Office SharePoint
+  Server (MOSS) 2007 after we encountered several major issues prior to
+  deployment. The first issue that..."
 aliases: ["/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-2.aspx", "/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx"]
 draft: true
 categories: ["SharePoint"]

@@ -1,7 +1,9 @@
 ---
 title: "Be careful when using the SharePoint PublishingPage.Url property"
 date: 2012-02-11T01:17:16-07:00
-excerpt: "Intellisense isn't helpful when the underlying XML documentation in the code is wrong."
+excerpt:
+  "Intellisense isn't helpful when the underlying XML documentation in the code
+  is wrong."
 aliases: ["/blog/jjameson/archive/2012/02/10/be-careful-when-using-the-sharepoint-publishingpage-url-property.aspx", "/blog/jjameson/archive/2012/02/11/be-careful-when-using-the-sharepoint-publishingpage-url-property.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]

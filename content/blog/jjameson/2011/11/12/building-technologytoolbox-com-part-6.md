@@ -2,7 +2,12 @@
 title: "Migrating a blog from Telligent to Subtext using Web scraping, the Html Agility Pack, BlogML, and more (a.k.a. Building TechnologyToolbox.com, part 6)"
 date: 2011-11-12T23:51:46-07:00
 lastmod: 2011-11-12T23:52:07-07:00
-excerpt: "While I don't expect many people will need to migrate blog posts from Telligent to Subtext, I do believe it is valuable to provide a walkthrough of how I typically approach a \"content migration scenario\" -- since I frequently encounter this kind of requirement when working with enterprise customers..."
+excerpt:
+  "While I don't expect many people will need to migrate blog posts from
+  Telligent to Subtext, I do believe it is valuable to provide a walkthrough of
+  how I typically approach a \"content migration scenario\" -- since I
+  frequently encounter this kind of requirement when working with enterprise
+  customers..."
 aliases: ["/blog/jjameson/archive/2011/11/12/building-technologytoolbox-com-part-6.aspx"]
 draft: true
 categories: ["Development", "My System"]

@@ -1,7 +1,11 @@
 ---
 title: "Creating a simple \"Contact\" form in ASP.NET (a.k.a. Building TechnologyToolbox.com, part 20)"
 date: 2012-02-01T13:03:38-07:00
-excerpt: "In this post, I explain the iterative approach used to create the \"Contact\" form for the Technology Toolbox website. Through a sequence of 9 discrete steps, I describe my typical development process from initial concept to what I call \"feature complete.\""
+excerpt:
+  "In this post, I explain the iterative approach used to create the \"Contact\"
+  form for the Technology Toolbox website. Through a sequence of 9 discrete
+  steps, I describe my typical development process from initial concept to what
+  I call \"feature complete.\""
 aliases: ["/blog/jjameson/archive/2012/02/01/building-technologytoolbox-com-part-20.aspx"]
 draft: true
 categories: ["Development", "My System"]

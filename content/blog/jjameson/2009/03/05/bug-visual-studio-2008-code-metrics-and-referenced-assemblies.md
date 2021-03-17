@@ -1,8 +1,11 @@
 ---
 title: "Bug: Visual Studio 2008 Code Metrics and Referenced Assemblies"
 date: 2009-03-05T10:04:00-07:00
-excerpt: "Since I seem to be on a roll this morning with blogging, I figured I might as well get one more post in before moving on to my \"day job.\" 
- During the process of authoring a different post earlier today, I stumbled across a bug while using the Code Metrics..."
+excerpt:
+  "Since I seem to be on a roll this morning with blogging, I figured I might as
+  well get one more post in before moving on to my \"day job.\" 
+   During the process of authoring a different post earlier today, I stumbled
+  across a bug while using the Code Metrics..."
 aliases: ["/blog/jjameson/archive/2009/03/04/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx", "/blog/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]

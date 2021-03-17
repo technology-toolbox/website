@@ -1,7 +1,11 @@
 ---
 title: "\"Incorrect syntax near 'COLLATE'.\" Error When Trying to Join a SharePoint Farm"
 date: 2007-08-21T07:32:00-06:00
-excerpt: "I encountered another nasty bug this morning while rebuilding our Microsoft Office SharePoint Server (MOSS) 2007 Development environment (DEV). Since the time I originally created DEV, I installed SQL Server SP2 and also restored several legacy databases..."
+excerpt:
+  "I encountered another nasty bug this morning while rebuilding our Microsoft
+  Office SharePoint Server (MOSS) 2007 Development environment (DEV). Since the
+  time I originally created DEV, I installed SQL Server SP2 and also restored
+  several legacy databases..."
 aliases: ["/blog/jjameson/archive/2007/08/20/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx", "/blog/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx"]
 draft: true
 categories: ["SharePoint"]

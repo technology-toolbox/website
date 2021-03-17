@@ -1,7 +1,11 @@
 ---
 title: "Dumping MOSS 2007 Variations - Part 1"
 date: 2007-10-30T08:56:00-06:00
-excerpt: "Shortly before I headed out to the airport last Wednesday, I received the fateful email from my customer notifying us that they have decided to abandon using the variations feature in Microsoft Office SharePoint Server (MOSS) 2007. Note that the original..."
+excerpt:
+  "Shortly before I headed out to the airport last Wednesday, I received the
+  fateful email from my customer notifying us that they have decided to abandon
+  using the variations feature in Microsoft Office SharePoint Server (MOSS)
+  2007. Note that the original..."
 aliases: ["/blog/jjameson/archive/2007/10/29/dumping-moss-2007-variations-part-1.aspx", "/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx"]
 draft: true
 categories: ["SharePoint"]

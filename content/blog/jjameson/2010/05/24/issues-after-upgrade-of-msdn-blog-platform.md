@@ -1,8 +1,12 @@
 ---
 title: "Issues After Upgrade of MSDN Blog Platform"
 date: 2010-05-24T13:03:00-06:00
-excerpt: "By now you've undoubtedly noticed that the MSDN blogs have been cut over to the upgraded system. Things are obviously a little unstable right now, but hopefully over the next several hours, things will calm down and we'll get back to normal. 
- So far..."
+excerpt:
+  "By now you've undoubtedly noticed that the MSDN blogs have been cut over to
+  the upgraded system. Things are obviously a little unstable right now, but
+  hopefully over the next several hours, things will calm down and we'll get
+  back to normal. 
+   So far..."
 aliases: ["/blog/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx"]
 draft: true
 categories: [""]

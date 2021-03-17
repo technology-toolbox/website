@@ -1,7 +1,11 @@
 ---
 title: "Forced to Decline KB948014 and KB972493 in WSUS"
 date: 2009-12-08T07:48:00-07:00
-excerpt: "In last night's post , I discussed the solution for an issue I encountered installing KB 970892 on one of my servers. Thankfully, this morning I confirmed the server no longer increments the Computers with Errors column in the daily report I receive from..."
+excerpt:
+  "In last night's post , I discussed the solution for an issue I encountered
+  installing KB 970892 on one of my servers. Thankfully, this morning I
+  confirmed the server no longer increments the Computers with Errors column in
+  the daily report I receive from..."
 aliases: ["/blog/jjameson/archive/2009/12/07/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx", "/blog/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx"]
 draft: true
 categories: ["Infrastructure"]

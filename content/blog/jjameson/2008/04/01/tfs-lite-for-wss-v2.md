@@ -1,8 +1,11 @@
 ---
 title: "\"TFS Lite\" for WSS v2"
 date: 2008-04-01T07:02:00-06:00
-excerpt: "[Update (2008-04-07): \"TFS Lite\" for WSS v3 is now available.] 
- For almost as long as I can remember (okay, not really that long -- but at least as far back as 2003), I've been using SharePoint lists as a bug tracking tool on almost all of the customer..."
+excerpt:
+  "[Update (2008-04-07): \"TFS Lite\" for WSS v3 is now available.] 
+   For almost as long as I can remember (okay, not really that long -- but at
+  least as far back as 2003), I've been using SharePoint lists as a bug tracking
+  tool on almost all of the customer..."
 aliases: ["/blog/jjameson/archive/2008/03/31/tfs-lite-for-wss-v2.aspx", "/blog/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]

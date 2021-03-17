@@ -1,9 +1,12 @@
 ---
 title: "Still Crazy (About Typed DataSets) After All These Years"
 date: 2010-04-22T07:02:00-06:00
-excerpt: "First off, my apologies to Paul Simon regarding the title of this blog post -- but I simply couldn't resist ;-) 
- When architecting and building solutions for customers, I tend to make heavy use of typed DataSets. 
- I believe I used them on my very..."
+excerpt:
+  "First off, my apologies to Paul Simon regarding the title of this blog post
+  -- but I simply couldn't resist ;-) 
+   When architecting and building solutions for customers, I tend to make heavy
+  use of typed DataSets. 
+   I believe I used them on my very..."
 aliases: ["/blog/jjameson/archive/2010/04/21/still-crazy-about-typed-datasets-after-all-these-years.aspx", "/blog/jjameson/archive/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years.aspx"]
 draft: true
 categories: ["My System", "Development"]

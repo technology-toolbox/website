@@ -1,10 +1,13 @@
 ---
 title: "AJAX in MOSS 2007 -- The Easy Way, Part 2"
 date: 2010-03-24T04:36:00-06:00
-excerpt: "In my previous post , I showed how you can quickly create an AJAX-enabled Web application in Microsoft Office SharePoint Server (MOSS) 2007. 
- I also provided a sample AJAX Web Part, illustrated in the following screenshot: 
- 
- Figure 1: AJAX in SharePoint..."
+excerpt:
+  "In my previous post , I showed how you can quickly create an AJAX-enabled Web
+  application in Microsoft Office SharePoint Server (MOSS) 2007. 
+   I also provided a sample AJAX Web Part, illustrated in the following
+  screenshot: 
+   
+   Figure 1: AJAX in SharePoint..."
 aliases: ["/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-2.aspx", "/blog/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]

@@ -1,8 +1,11 @@
 ---
 title: "Resolving Issues After Applying Hyper-V Snapshot"
 date: 2011-03-12T04:04:00-07:00
-excerpt: "This morning I rolled back one of my development VMs to a snapshot I created about a month ago. When I subsequently tried to login with my domain credentials, I encountered the following error: 
- The trust relationship between this workstation and the..."
+excerpt:
+  "This morning I rolled back one of my development VMs to a snapshot I created
+  about a month ago. When I subsequently tried to login with my domain
+  credentials, I encountered the following error: 
+   The trust relationship between this workstation and the..."
 aliases: ["/blog/jjameson/archive/2011/03/11/resolving-issues-after-applying-hyper-v-snapshot.aspx", "/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx"]
 draft: true
 categories: ["Infrastructure"]

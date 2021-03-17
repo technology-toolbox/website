@@ -1,7 +1,11 @@
 ---
 title: "Update on Patching and Disk Space Usage"
 date: 2009-06-03T09:09:00-06:00
-excerpt: "About a year ago, I wrote a post about saving huge amounts of disk space by slipstreaming service packs . Having just been through an ordeal installing Windows Server 2008 SP2, I thought it would be worthwhile to provide an update (since that original..."
+excerpt:
+  "About a year ago, I wrote a post about saving huge amounts of disk space by
+  slipstreaming service packs . Having just been through an ordeal installing
+  Windows Server 2008 SP2, I thought it would be worthwhile to provide an update
+  (since that original..."
 aliases: ["/blog/jjameson/archive/2009/06/02/update-on-patching-and-disk-space-usage.aspx", "/blog/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx"]
 draft: true
 categories: ["Infrastructure"]

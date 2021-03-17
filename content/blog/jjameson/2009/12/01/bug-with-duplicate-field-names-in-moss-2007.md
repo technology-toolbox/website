@@ -1,7 +1,11 @@
 ---
 title: "Bug with Duplicate Field Names in MOSS 2007"
 date: 2009-12-01T08:12:00-07:00
-excerpt: "I encountered a rather nasty bug in Microsoft Office SharePoint Server (MOSS) 2007 yesterday that occurs when a custom field (i.e. site column) has the same name as an existing field. Note that this issue will also occur in Windows SharePoint Services..."
+excerpt:
+  "I encountered a rather nasty bug in Microsoft Office SharePoint Server (MOSS)
+  2007 yesterday that occurs when a custom field (i.e. site column) has the same
+  name as an existing field. Note that this issue will also occur in Windows
+  SharePoint Services..."
 aliases: ["/blog/jjameson/archive/2009/11/30/bug-with-duplicate-field-names-in-moss-2007.aspx", "/blog/jjameson/archive/2009/12/01/bug-with-duplicate-field-names-in-moss-2007.aspx"]
 draft: true
 categories: ["SharePoint"]

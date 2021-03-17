@@ -1,8 +1,12 @@
 ---
 title: "Performance of Virtual Machines"
 date: 2007-06-24T08:52:00-06:00
-excerpt: "Yesterday I had to rebuild our Test environment (TEST) to replace a VM (running on VMWare) with a physical server, due to very poor performance of the VM. 
- When I was copying files from the VM to a different server in order to deploy our solution, robocopy..."
+excerpt:
+  "Yesterday I had to rebuild our Test environment (TEST) to replace a VM
+  (running on VMWare) with a physical server, due to very poor performance of
+  the VM. 
+   When I was copying files from the VM to a different server in order to deploy
+  our solution, robocopy..."
 aliases: ["/blog/jjameson/archive/2007/06/23/performance-of-virtual-machines.aspx", "/blog/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx"]
 draft: true
 categories: ["Infrastructure"]

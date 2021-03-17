@@ -1,11 +1,14 @@
 ---
 title: "Web Standards Design with SharePoint, Part 3"
 date: 2011-01-30T20:29:00-07:00
-excerpt: "Last week I received the following comment on a blog post I wrote last year regarding Web standards design with Microsoft Office SharePoint Server (MOSS) 2007: 
- 
- \"The Media Guy\" 
- 
- Great article.. was very helpful. I used 960.gs for my master page..."
+excerpt:
+  "Last week I received the following comment on a blog post I wrote last year
+  regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
+  2007: 
+   
+   \"The Media Guy\" 
+   
+   Great article.. was very helpful. I used 960.gs for my master page..."
 aliases: ["/blog/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]

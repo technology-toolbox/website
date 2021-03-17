@@ -1,10 +1,11 @@
 ---
 title: "Lessons Learned Integrating Silverlight in MOSS 2007, Part 1"
 date: 2010-01-28T05:44:00-07:00
-excerpt: "The November 2008 edition of MSDN magazine contained the following article: 
- Light Up SharePoint With Silverlight 2 Web Parts 
- http://msdn.microsoft.com/en-us/magazine/dd148643.aspx 
- While the article provides a good introduction to integrating..."
+excerpt:
+  "The November 2008 edition of MSDN magazine contained the following article: 
+   Light Up SharePoint With Silverlight 2 Web Parts 
+   http://msdn.microsoft.com/en-us/magazine/dd148643.aspx 
+   While the article provides a good introduction to integrating..."
 aliases: ["/blog/jjameson/archive/2010/01/27/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx", "/blog/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]

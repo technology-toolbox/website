@@ -1,7 +1,11 @@
 ---
 title: "Branching for a Release in Team Foundation Server"
 date: 2010-12-03T13:05:00-07:00
-excerpt: "In my previous post , I mentioned that one of the recurring tasks I create in TFS each time I start a new iteration on a project is something like \"Create branch for Sprint-10\" (the iteration specified in the title of the work item obviously varies each..."
+excerpt:
+  "In my previous post , I mentioned that one of the recurring tasks I create in
+  TFS each time I start a new iteration on a project is something like \"Create
+  branch for Sprint-10\" (the iteration specified in the title of the work item
+  obviously varies each..."
 aliases: ["/blog/jjameson/archive/2010/12/02/branching-for-a-release-in-team-foundation-server.aspx", "/blog/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx"]
 draft: true
 categories: ["My System", "Development"]

@@ -1,8 +1,12 @@
 ---
 title: "Introducing the SharePointWebPartHelper Class"
 date: 2009-10-17T04:54:00-06:00
-excerpt: "In a previous post, I introduced the DR.DADA approach to SharePoint development and how I typically use the concept of a FeatureConfigurator to automatically configure one or more aspects of a SharePoint site when activating my feature. 
- For example..."
+excerpt:
+  "In a previous post, I introduced the DR.DADA approach to SharePoint
+  development and how I typically use the concept of a FeatureConfigurator to
+  automatically configure one or more aspects of a SharePoint site when
+  activating my feature. 
+   For example..."
 aliases: ["/blog/jjameson/archive/2009/10/16/introducing-the-sharepointwebparthelper-class.aspx", "/blog/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx"]
 draft: true
 categories: ["My System", "SharePoint"]

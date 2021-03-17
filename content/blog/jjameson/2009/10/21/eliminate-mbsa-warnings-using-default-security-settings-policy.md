@@ -1,8 +1,11 @@
 ---
 title: "Eliminate MBSA Warnings Using Default Security Settings Policy"
 date: 2009-10-21T03:57:00-06:00
-excerpt: "Another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a. my home lab) is one that I created a couple of years ago in order to eliminate various warnings from the Microsoft Baseline Security Advisor (MBSA). 
- To automatically change..."
+excerpt:
+  "Another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a.
+  my home lab) is one that I created a couple of years ago in order to eliminate
+  various warnings from the Microsoft Baseline Security Advisor (MBSA). 
+   To automatically change..."
 aliases: ["/blog/jjameson/archive/2009/10/20/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx", "/blog/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]

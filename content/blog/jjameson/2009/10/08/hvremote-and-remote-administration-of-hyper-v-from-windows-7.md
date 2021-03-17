@@ -1,7 +1,11 @@
 ---
 title: "HVRemote and Remote Administration of Hyper-V from Windows 7"
 date: 2009-10-08T06:21:00-06:00
-excerpt: "Last Sunday, I rebuilt my desktop ( WOLVERINE ) with the RTM build of Windows 7 Ultimate (x64). Previously, I'd been running the RC1 bits and I figured it was about time I got around to \"upgrading\" to the RTM version. [I say \"upgrading\" because -- at..."
+excerpt:
+  "Last Sunday, I rebuilt my desktop ( WOLVERINE ) with the RTM build of Windows
+  7 Ultimate (x64). Previously, I'd been running the RC1 bits and I figured it
+  was about time I got around to \"upgrading\" to the RTM version. [I say
+  \"upgrading\" because -- at..."
 aliases: ["/blog/jjameson/archive/2009/10/07/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx", "/blog/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx"]
 draft: true
 categories: ["Infrastructure", "My System"]

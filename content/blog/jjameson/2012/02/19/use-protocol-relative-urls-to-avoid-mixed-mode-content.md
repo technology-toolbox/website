@@ -1,7 +1,9 @@
 ---
 title: "Use protocol-relative URLs to avoid mixed mode content"
 date: 2012-02-19T23:39:17-07:00
-excerpt: "Here's a great tip I picked up from Phil Haack a few weeks ago for avoiding those pesky warnings like \"Only secure content is displayed.\""
+excerpt:
+  "Here's a great tip I picked up from Phil Haack a few weeks ago for avoiding
+  those pesky warnings like \"Only secure content is displayed.\""
 aliases: ["/blog/jjameson/archive/2012/02/19/use-protocol-relative-urls-to-avoid-mixed-mode-content.aspx"]
 draft: true
 categories: ["Development", "My System"]

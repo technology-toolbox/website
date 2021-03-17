@@ -1,7 +1,10 @@
 ---
 title: "Zip a folder using PowerShell"
 date: 2012-02-27T23:50:24-07:00
-excerpt: "There are a couple of options for creating a zip file for a specific folder. You can either use a third-party solution (like the PowerShell Community Extensions) or do it all with \"out-of-the-box\" functionality."
+excerpt:
+  "There are a couple of options for creating a zip file for a specific folder.
+  You can either use a third-party solution (like the PowerShell Community
+  Extensions) or do it all with \"out-of-the-box\" functionality."
 aliases: ["/blog/jjameson/archive/2012/02/27/zip-a-folder-using-powershell.aspx"]
 draft: true
 categories: ["Development", "Infrastructure"]

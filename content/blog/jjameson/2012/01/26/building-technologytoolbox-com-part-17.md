@@ -1,7 +1,10 @@
 ---
 title: "Shared files and assemblies in ASP.NET applications (a.k.a. Building TechnologyToolbox.com, part 17)"
 date: 2012-01-26T00:36:03-07:00
-excerpt: "This post describes a couple of scenarios where you might need to share files and assemblies within an ASP.NET website, as well as some tricks for making this completely painless (from a development and deployment perspective)."
+excerpt:
+  "This post describes a couple of scenarios where you might need to share files
+  and assemblies within an ASP.NET website, as well as some tricks for making
+  this completely painless (from a development and deployment perspective)."
 aliases: ["/blog/jjameson/archive/2012/01/25/building-technologytoolbox-com-part-17.aspx", "/blog/jjameson/archive/2012/01/26/building-technologytoolbox-com-part-17.aspx"]
 draft: true
 categories: ["Development", "My System"]

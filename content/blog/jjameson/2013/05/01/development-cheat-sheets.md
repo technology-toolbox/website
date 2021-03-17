@@ -1,7 +1,10 @@
 ---
 title: "\"Development Cheat Sheets\""
 date: 2013-05-01T01:00:45-06:00
-excerpt: "In this post, I explain how I like to use Microsoft OneNote to manage what I call \"development cheat sheets\" -- which are especially useful when developing SharePoint solutions."
+excerpt:
+  "In this post, I explain how I like to use Microsoft OneNote to manage what I
+  call \"development cheat sheets\" -- which are especially useful when
+  developing SharePoint solutions."
 aliases: ["/blog/jjameson/archive/2013/04/30/development-cheat-sheets.aspx", "/blog/jjameson/archive/2013/05/01/development-cheat-sheets.aspx"]
 draft: true
 categories: ["Development", "My System", "SharePoint"]

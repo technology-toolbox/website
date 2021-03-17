@@ -1,7 +1,11 @@
 ---
 title: "Tips & Tricks for Running PowerShell Scripts as Scheduled Tasks"
 date: 2011-11-19T02:26:24-07:00
-excerpt: "In my previous post, I described the PowerShell script used to rebuild the Development environment for TechnologyToolbox.com on a daily basis. This post explains the subtleties of running the script -- or, more generally, any PowerShell script -- using the Windows Task Scheduler..."
+excerpt:
+  "In my previous post, I described the PowerShell script used to rebuild the
+  Development environment for TechnologyToolbox.com on a daily basis. This post
+  explains the subtleties of running the script -- or, more generally, any
+  PowerShell script -- using the Windows Task Scheduler..."
 aliases: ["/blog/jjameson/archive/2011/11/18/tips-tricks-for-running-powershell-scripts-as-scheduled-tasks.aspx", "/blog/jjameson/archive/2011/11/19/tips-tricks-for-running-powershell-scripts-as-scheduled-tasks.aspx"]
 draft: true
 categories: ["Development", "My System"]

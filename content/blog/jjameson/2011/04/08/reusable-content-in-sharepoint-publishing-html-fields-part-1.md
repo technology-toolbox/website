@@ -1,7 +1,11 @@
 ---
 title: "Reusable Content in SharePoint Publishing HTML Fields, Part 1"
 date: 2011-04-08T06:59:00-06:00
-excerpt: "In one of the sprints last year for my current project, I built a custom \"document publishing\" system based on the Web Content Management (WCM) features in Microsoft Office SharePoint Server (MOSS) 2007. My client was looking to replace a legacy system..."
+excerpt:
+  "In one of the sprints last year for my current project, I built a custom
+  \"document publishing\" system based on the Web Content Management (WCM)
+  features in Microsoft Office SharePoint Server (MOSS) 2007. My client was
+  looking to replace a legacy system..."
 aliases: ["/blog/jjameson/archive/2011/04/07/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx", "/blog/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx"]
 draft: true
 categories: ["SharePoint"]

@@ -1,8 +1,11 @@
 ---
 title: "Claims Login Web Part for SharePoint Server 2010"
 date: 2011-02-25T05:43:00-07:00
-excerpt: "In my previous post , I provided the step-by-step process I use for configuring claims-based authentication in SharePoint Server 2010. 
- If you follow those steps, then when you browse to the home page of the site and click Sign In , you'll be redirected..."
+excerpt:
+  "In my previous post , I provided the step-by-step process I use for
+  configuring claims-based authentication in SharePoint Server 2010. 
+   If you follow those steps, then when you browse to the home page of the site
+  and click Sign In , you'll be redirected..."
 aliases: ["/blog/jjameson/archive/2011/02/24/claims-login-web-part-for-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx"]
 draft: true
 categories: ["SharePoint"]

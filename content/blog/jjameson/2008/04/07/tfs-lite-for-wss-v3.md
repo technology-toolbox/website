@@ -1,7 +1,11 @@
 ---
 title: "\"TFS Lite\" for WSS v3"
 date: 2008-04-07T11:08:00-06:00
-excerpt: "In my previous post , I introduced my \"TFS Lite\" SharePoint site template that I've been using for years as a simple scenario/task/bug/risk/milestone tracking \"application\" with various projects and customers. In today's post, I'll discuss some of the..."
+excerpt:
+  "In my previous post , I introduced my \"TFS Lite\" SharePoint site template
+  that I've been using for years as a simple scenario/task/bug/risk/milestone
+  tracking \"application\" with various projects and customers. In today's post,
+  I'll discuss some of the..."
 aliases: ["/blog/jjameson/archive/2008/04/06/tfs-lite-for-wss-v3.aspx", "/blog/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx"]
 draft: true
 categories: ["SharePoint", "Development"]

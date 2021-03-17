@@ -1,7 +1,11 @@
 ---
 title: "DataNavigateUrlFormatString Does Not Allow \"javascript:\""
 date: 2009-10-26T06:49:00-06:00
-excerpt: "I encountered an interesting bug last Friday with the ASP.NET HyperLinkField control. To understand the scenario, think of the typical \"view detail\" feature when showing summary data in a table. In other words, you want to provide users the ability to..."
+excerpt:
+  "I encountered an interesting bug last Friday with the ASP.NET HyperLinkField
+  control. To understand the scenario, think of the typical \"view detail\"
+  feature when showing summary data in a table. In other words, you want to
+  provide users the ability to..."
 aliases: ["/blog/jjameson/archive/2009/10/25/datanavigateurlformatstring-does-not-allow-javascript.aspx", "/blog/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx"]
 draft: true
 categories: ["Development"]

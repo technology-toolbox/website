@@ -1,8 +1,11 @@
 ---
 title: "Debugging Symbols -- They're Not Just for Debug Builds Anymore"
 date: 2009-09-26T08:20:00-06:00
-excerpt: "I started another new project this week. 
- Typically one of the first tasks on any new development project is to create a Development Plan that provides consistent guidelines and processes for the Development team. On this new project, another Microsoft..."
+excerpt:
+  "I started another new project this week. 
+   Typically one of the first tasks on any new development project is to create
+  a Development Plan that provides consistent guidelines and processes for the
+  Development team. On this new project, another Microsoft..."
 aliases: ["/blog/jjameson/archive/2009/09/25/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx", "/blog/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx"]
 draft: true
 categories: ["Development"]

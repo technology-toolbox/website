@@ -1,8 +1,11 @@
 ---
 title: "Updated Path to tf.exe for TFS 2010 Builds"
 date: 2010-05-05T04:32:00-06:00
-excerpt: "After upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010 , I found that I needed to tweak my TfsBuild.proj file in order to successfully build on my new TFS 2010 build server. 
- In a previous post, I detailed the process that I recommend..."
+excerpt:
+  "After upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010
+  , I found that I needed to tweak my TfsBuild.proj file in order to
+  successfully build on my new TFS 2010 build server. 
+   In a previous post, I detailed the process that I recommend..."
 aliases: ["/blog/jjameson/archive/2010/05/04/updated-path-to-tf-exe-for-tfs-2010-builds.aspx", "/blog/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx"]
 draft: true
 categories: ["My System", "Development"]

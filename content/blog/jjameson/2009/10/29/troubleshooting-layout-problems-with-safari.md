@@ -1,7 +1,11 @@
 ---
 title: "Troubleshooting Layout Problems with Safari"
 date: 2009-10-29T04:57:00-06:00
-excerpt: "I discovered a rather nasty UI bug last week with the new portal we are building for a customer. Unfortunately, the layout issue only occurred in the Safari browser. Even worse, I discovered it only a day before the CEO of customer discovered it himself..."
+excerpt:
+  "I discovered a rather nasty UI bug last week with the new portal we are
+  building for a customer. Unfortunately, the layout issue only occurred in the
+  Safari browser. Even worse, I discovered it only a day before the CEO of
+  customer discovered it himself..."
 aliases: ["/blog/jjameson/archive/2009/10/28/troubleshooting-layout-problems-with-safari.aspx", "/blog/jjameson/archive/2009/10/29/troubleshooting-layout-problems-with-safari.aspx"]
 draft: true
 categories: ["Development"]

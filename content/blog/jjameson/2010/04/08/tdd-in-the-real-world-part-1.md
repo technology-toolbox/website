@@ -1,7 +1,11 @@
 ---
 title: "TDD in the Real World, Part 1"
 date: 2010-04-08T19:40:00-06:00
-excerpt: "Earlier today I presented a \"Knowledge Transfer\" session to a team of developers on my current project. If you've ever worked with consultants, you've probably experienced a \"KT\" session or something similar. In essence, it's just a meeting intended to..."
+excerpt:
+  "Earlier today I presented a \"Knowledge Transfer\" session to a team of
+  developers on my current project. If you've ever worked with consultants,
+  you've probably experienced a \"KT\" session or something similar. In essence,
+  it's just a meeting intended to..."
 aliases: ["/blog/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx"]
 draft: true
 categories: ["Development"]

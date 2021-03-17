@@ -2,7 +2,10 @@
 title: "Use PowerShell to alleviate the pain of code coverage analysis in Visual Studio 2010 and .NET 3.5 solutions (e.g. SharePoint 2010)"
 date: 2012-02-23T14:17:26-07:00
 lastmod: 2012-02-23T14:18:01-07:00
-excerpt: "This PowerShell script makes it much easier to perform code coverage analysis in Visual Studio 2010 and .NET Framework 3.5 solutions (e.g. SharePoint 2010)."
+excerpt:
+  "This PowerShell script makes it much easier to perform code coverage analysis
+  in Visual Studio 2010 and .NET Framework 3.5 solutions (e.g. SharePoint
+  2010)."
 aliases: ["/blog/jjameson/archive/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis.aspx"]
 draft: true
 categories: ["Development", "SharePoint"]

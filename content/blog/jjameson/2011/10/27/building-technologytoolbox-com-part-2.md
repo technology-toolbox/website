@@ -1,7 +1,10 @@
 ---
 title: "Setting up a new Web development project (a.k.a. Building TechnologyToolbox.com, part 2)"
 date: 2011-10-27T05:42:45-06:00
-excerpt: "Once I settled on using Subtext as the blogging solution for the Technology Toolbox site, I turned my attention to working on the other areas of the site..."
+excerpt:
+  "Once I settled on using Subtext as the blogging solution for the Technology
+  Toolbox site, I turned my attention to working on the other areas of the
+  site..."
 aliases: ["/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-2.aspx", "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-2.aspx"]
 draft: true
 categories: ["Development", "My System"]

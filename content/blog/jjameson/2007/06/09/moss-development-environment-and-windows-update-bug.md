@@ -1,8 +1,12 @@
 ---
 title: "MOSS Development Environment and a Windows Update Bug"
 date: 2007-06-09T06:38:00-06:00
-excerpt: "In my previous post , I talked about splitting our Microsoft Office SharePoint Server (MOSS) 2007 Development environment (DEV) into multiple VMs. What I did not mention, however, is the nasty bug in Windows Update that I encountered along the way. 
-..."
+excerpt:
+  "In my previous post , I talked about splitting our Microsoft Office
+  SharePoint Server (MOSS) 2007 Development environment (DEV) into multiple VMs.
+  What I did not mention, however, is the nasty bug in Windows Update that I
+  encountered along the way. 
+  ..."
 aliases: ["/blog/jjameson/archive/2007/06/08/moss-development-environment-and-windows-update-bug.aspx", "/blog/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx"]
 draft: true
 categories: ["SharePoint", "Infrastructure"]

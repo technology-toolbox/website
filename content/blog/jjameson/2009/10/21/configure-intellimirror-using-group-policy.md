@@ -1,8 +1,12 @@
 ---
 title: "Configure IntelliMirror Using Group Policy"
 date: 2009-10-21T04:57:00-06:00
-excerpt: "Yet another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a. my home lab) is one to automatically configure roaming profiles and redirect the Desktop and Documents folders to a server(a.k.a. \"IntelliMirror\"). 
- Even though I don't have..."
+excerpt:
+  "Yet another Group Policy object that I use in the \"Jameson Datacenter\"
+  (a.k.a. my home lab) is one to automatically configure roaming profiles and
+  redirect the Desktop and Documents folders to a server(a.k.a.
+  \"IntelliMirror\"). 
+   Even though I don't have..."
 aliases: ["/blog/jjameson/archive/2009/10/20/configure-intellimirror-using-group-policy.aspx", "/blog/jjameson/archive/2009/10/21/configure-intellimirror-using-group-policy.aspx"]
 draft: true
 categories: ["My System", "Infrastructure"]

@@ -1,7 +1,11 @@
 ---
 title: "Default Recovery Models for SharePoint Databases"
 date: 2008-01-18T16:59:00-07:00
-excerpt: "Okay, I haven't blogged in over 7 weeks -- but hey, I was on vacation for 3 of them -- and I must warn you upfront that this post isn't exactly a \"zinger\" filled with juicy tidbits, recommendations, or workarounds. Rather, I simply can't seem to remember..."
+excerpt:
+  "Okay, I haven't blogged in over 7 weeks -- but hey, I was on vacation for 3
+  of them -- and I must warn you upfront that this post isn't exactly a
+  \"zinger\" filled with juicy tidbits, recommendations, or workarounds. Rather,
+  I simply can't seem to remember..."
 aliases: ["/blog/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx"]
 draft: true
 categories: ["SharePoint"]
