@@ -1408,20 +1408,20 @@ To create the Web application using SharePoint Central Administration:
       1. Ensure the **Enable Windows Authentication** checkbox is selected and
          in the **Integrated Windows authentication** drop-down menu, ensure
          **NTLM** is selected.
-   5. Select the **Enable Forms Based Authentication (FBA)** checkbox, in the
-      **ASP.NET Membership provider name** box, type
-      **FabrikamSqlMembershipProvider**, and in the **ASP.NET Role manager
-      name** box, type **FabrikamSqlRoleProvider**.
-   6. In the **Application Pool**section:
+      2. Select the **Enable Forms Based Authentication (FBA)** checkbox, in the
+         **ASP.NET Membership provider name** box, type
+         **FabrikamSqlMembershipProvider**, and in the **ASP.NET Role manager
+         name** box, type **FabrikamSqlRoleProvider**.
+   5. In the **Application Pool**section:
       1. Click **Create a new application pool**.
       2. Under **Select a security account for this application pool**, click
          **Configurable**, and then select the service account specified in
          Table 7 for the Fabrikam Extranet Web application.
-   7. In the **Database Name and Authentication** section, in the **Database
+   6. In the **Database Name and Authentication** section, in the **Database
       Name** box, type the corresponding value from Table 7.
-   8. In the **Service Application Connections** section, ensure **default** is
+   7. In the **Service Application Connections** section, ensure **default** is
       selected in the drop-down menu.
-   9. Click **OK** to create the new Web application.
+   8. Click **OK** to create the new Web application.
 4. Wait for the Web application to be created and then click **OK**.
 
 To create the initial site collections using SharePoint Central Administration:

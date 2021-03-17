@@ -58,7 +58,7 @@ to configure the default database locations similar to the following:
 - Server Properties
   - Database Settings
     - Default database locations
-    - Data: D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
+      - Data: D:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
       - Log: L:\NotBackedUp\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA
 
 You certainly don't have to use the

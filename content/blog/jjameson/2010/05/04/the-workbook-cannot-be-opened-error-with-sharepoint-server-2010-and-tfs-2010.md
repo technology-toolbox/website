@@ -167,8 +167,8 @@ underlying content databases:
       the following roles:
       - **db\_owner**
       - **public**
-7. Repeat the previous step for any additional content databases that need to
-   be accessed by Excel Services.
+   2. Repeat the previous step for any additional content databases that need to
+      be accessed by Excel Services.
    3. Click **OK**.
 
 {{< /deleted-block >}}

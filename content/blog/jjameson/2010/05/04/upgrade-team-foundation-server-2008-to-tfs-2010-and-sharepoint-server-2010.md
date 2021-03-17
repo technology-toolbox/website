@@ -828,8 +828,8 @@ content databases. ~~On the database server:~~
       the following roles:
       - **db\_owner**
       - **public**
-7. Repeat the previous step for any additional content databases that need to
-   be accessed by Excel Services (**WSS\_Content\_TFS**).
+   2. Repeat the previous step for any additional content databases that need to
+      be accessed by Excel Services (**WSS\_Content\_TFS**).
    3. Click **OK**.
 
 {{< /deleted-block >}}

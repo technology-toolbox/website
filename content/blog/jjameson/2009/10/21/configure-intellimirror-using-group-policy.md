@@ -39,18 +39,18 @@ settings:
     - **Windows Settings**
       - **Folder Redirection**
         - **AppData(Roaming)**
-        - **Setting: Basic (Redirect everyone's folder to the same location)**
-          - Path: \\beast\Users$\%USERNAME%\Application Data
+          - **Setting: Basic (Redirect everyone's folder to the same location)**
+            - Path: \\beast\Users$\%USERNAME%\Application Data
           - **Options**
             - Grant user exclusive rights to AppData(Roaming): Enabled
-          - Move the contents of AppData(Roaming) to the new location: Enabled
+            - Move the contents of AppData(Roaming) to the new location: Enabled
             - Also apply redirection policy to Windows 2000, Windows 2000
               server, Windows XP, and Windows Server 2003 operating systems:
               Enabled
             - Policy Removal Behavior: Leave contents
         - **Desktop**
-        - **Setting: Basic (Redirect everyone's folder to the same location)**
-          - Path: \\beast\Users$\%USERNAME%\Desktop
+          - **Setting: Basic (Redirect everyone's folder to the same location)**
+            - Path: \\beast\Users$\%USERNAME%\Desktop
           - **Options**
             - Grant user exclusive rights to Desktop: Enabled
             - Move the contents of Desktop to the new location: Enabled
@@ -59,8 +59,8 @@ settings:
               Enabled
             - Policy Removal Behavior: Leave contents
         - **Documents**
-        - **Setting: Basic (Redirect everyone's folder to the same location)**
-          - Path: \\beast\Users$\%USERNAME%\Documents
+          - **Setting: Basic (Redirect everyone's folder to the same location)**
+            - Path: \\beast\Users$\%USERNAME%\Documents
           - **Options**
             - Grant user exclusive rights to Documents: Enabled
             - Move the contents of Documentsto the new location: Enabled
