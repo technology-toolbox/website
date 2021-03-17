@@ -4,7 +4,11 @@ date: 2012-02-19T02:17:03-07:00
 excerpt:
   "If, like me, you use Expression Web to author HTML content, then I hope you
   take advantage of the \"Snippets\" feature."
-aliases: ["/blog/jjameson/archive/2012/02/18/website-style-guide-custom-css-classes-and-html-snippets.aspx", "/blog/jjameson/archive/2012/02/19/website-style-guide-custom-css-classes-and-html-snippets.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/18/website-style-guide-custom-css-classes-and-html-snippets.aspx",
+    "/blog/jjameson/archive/2012/02/19/website-style-guide-custom-css-classes-and-html-snippets.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System", "Subtext", "Web Development"]

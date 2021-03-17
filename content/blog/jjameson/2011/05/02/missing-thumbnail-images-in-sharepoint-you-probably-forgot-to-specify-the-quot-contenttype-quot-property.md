@@ -7,7 +7,11 @@ excerpt:
   the out-of-the-box SharePoint /PublishingImages picture library (via a
   feature). 
    Here is the content..."
-aliases: ["/blog/jjameson/archive/2011/05/01/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx", "/blog/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/05/01/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx",
+    "/blog/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

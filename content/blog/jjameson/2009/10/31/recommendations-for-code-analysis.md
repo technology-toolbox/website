@@ -7,7 +7,11 @@ excerpt:
   (TFS). However, there's a lot more to talk about with regards to using Code
   Analysis. 
    If you..."
-aliases: ["/blog/jjameson/archive/2009/10/30/recommendations-for-code-analysis.aspx", "/blog/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/30/recommendations-for-code-analysis.aspx",
+    "/blog/jjameson/archive/2009/10/31/recommendations-for-code-analysis.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio"]

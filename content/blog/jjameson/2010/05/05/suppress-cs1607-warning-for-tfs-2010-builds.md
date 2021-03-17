@@ -6,7 +6,11 @@ excerpt:
   (TFS) 2008 environment to TFS 2010 ... 
    While it's generally a good assumption that a solution that builds without
   error in Visual Studio 2008 (and on a TFS 2008 build server..."
-aliases: ["/blog/jjameson/archive/2010/05/04/suppress-cs1607-warning-for-tfs-2010-builds.aspx", "/blog/jjameson/archive/2010/05/05/suppress-cs1607-warning-for-tfs-2010-builds.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/04/suppress-cs1607-warning-for-tfs-2010-builds.aspx",
+    "/blog/jjameson/archive/2010/05/05/suppress-cs1607-warning-for-tfs-2010-builds.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "TFS"]

@@ -6,7 +6,11 @@ excerpt:
   process that I typically recommend on projects that I am involved with. It
   includes a series of illustrations that capture key concepts at various points
   in time. Specific parts of..."
-aliases: ["/blog/jjameson/archive/2009/09/25/build-and-deployment-overview.aspx", "/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/25/build-and-deployment-overview.aspx",
+    "/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

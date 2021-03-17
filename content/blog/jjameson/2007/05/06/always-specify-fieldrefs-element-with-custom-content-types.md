@@ -6,7 +6,11 @@ excerpt:
   Server (MOSS) 2007 -- especially nasty because troubleshooting it primarily
   involved trial and error since there were no error messages displayed on the
   page, in the SharePoint..."
-aliases: ["/blog/jjameson/archive/2007/05/05/always-specify-fieldrefs-element-with-custom-content-types.aspx", "/blog/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/05/05/always-specify-fieldrefs-element-with-custom-content-types.aspx",
+    "/blog/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

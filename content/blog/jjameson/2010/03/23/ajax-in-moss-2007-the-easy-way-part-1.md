@@ -6,7 +6,10 @@ excerpt:
   in Microsoft Office SharePoint Server (MOSS) 2007 and configure it for
   anonymous access and Forms-Based Authentication. 
    Let's suppose that instead of configuring FBA and anonymous..."
-aliases: ["/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]

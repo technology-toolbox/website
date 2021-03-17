@@ -6,7 +6,11 @@ excerpt:
   localize the client portal previously developed for the United States so that
   it can be used by other regions around the world -- initially Spain, Mexico,
   Argentina, and a few..."
-aliases: ["/blog/jjameson/archive/2010/10/24/localization-and-sharepoint-solutions-part-1.aspx", "/blog/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/10/24/localization-and-sharepoint-solutions-part-1.aspx",
+    "/blog/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

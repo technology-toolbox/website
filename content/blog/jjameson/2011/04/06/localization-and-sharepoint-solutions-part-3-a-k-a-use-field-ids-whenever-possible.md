@@ -6,7 +6,11 @@ excerpt:
   SharePoint sites in multiple languages is to install the corresponding
   SharePoint language packs prior to creating the sites. This is the most common
   deployment scenario for localization..."
-aliases: ["/blog/jjameson/archive/2011/04/05/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx", "/blog/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/05/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx",
+    "/blog/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

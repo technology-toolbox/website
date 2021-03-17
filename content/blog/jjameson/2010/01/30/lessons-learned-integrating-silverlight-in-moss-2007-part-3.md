@@ -6,7 +6,11 @@ excerpt:
   use of Silverlight in an Internet-facing customer portal built on Microsoft
   Office SharePoint Server (MOSS) 2007. 
    As I mentioned in the previous posts, the Silverlight application..."
-aliases: ["/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx", "/blog/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx",
+    "/blog/jjameson/archive/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Silverlight"]

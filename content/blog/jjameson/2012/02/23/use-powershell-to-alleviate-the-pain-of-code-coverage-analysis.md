@@ -6,7 +6,10 @@ excerpt:
   "This PowerShell script makes it much easier to perform code coverage analysis
   in Visual Studio 2010 and .NET Framework 3.5 solutions (e.g. SharePoint
   2010)."
-aliases: ["/blog/jjameson/archive/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/23/use-powershell-to-alleviate-the-pain-of-code-coverage-analysis.aspx",
+  ]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["Core Development", "MOSS 2007", "PowerShell", "SharePoint 2010", "Visual Studio"]

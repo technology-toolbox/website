@@ -6,7 +6,11 @@ excerpt:
    If you attempt to modify a view on a list in Microsoft Office SharePoint
   Server (MOSS) 2007, but SharePoint is unable to save your changes to the
   database, no error is displayed in the UI..."
-aliases: ["/blog/jjameson/archive/2007/05/05/no-error-displayed-when-database-update-fails.aspx", "/blog/jjameson/archive/2007/05/06/no-error-displayed-when-database-update-fails.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/05/05/no-error-displayed-when-database-update-fails.aspx",
+    "/blog/jjameson/archive/2007/05/06/no-error-displayed-when-database-update-fails.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

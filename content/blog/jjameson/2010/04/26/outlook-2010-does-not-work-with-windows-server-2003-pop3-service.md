@@ -6,7 +6,11 @@ excerpt:
   order to use the POP3 service for basic e-mail functionality, and that I
   didn't have any interest in finding an alternative when I discovered POP3 is
   no longer available in Windows..."
-aliases: ["/blog/jjameson/archive/2010/04/25/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx", "/blog/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/25/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx",
+    "/blog/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure"]

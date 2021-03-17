@@ -6,7 +6,11 @@ excerpt:
   render the expandable list under the \"Archives\" section on the various blog
   pages of the Technology Toolbox site. This post details the implementation of
   that feature."
-aliases: ["/blog/jjameson/archive/2012/01/15/building-technologytoolbox-com-part-12.aspx", "/blog/jjameson/archive/2012/01/16/building-technologytoolbox-com-part-12.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/15/building-technologytoolbox-com-part-12.aspx",
+    "/blog/jjameson/archive/2012/01/16/building-technologytoolbox-com-part-12.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]

@@ -6,7 +6,11 @@ excerpt:
   Operations Manager for my TFS 2010 build server (DAZZLER). 
    After a few minutes investigating the issue, I discovered that my \"Builds\"
   folder was consuming a little over 2 GB of storage..."
-aliases: ["/blog/jjameson/archive/2011/03/13/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx", "/blog/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/13/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx",
+    "/blog/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 2010"]

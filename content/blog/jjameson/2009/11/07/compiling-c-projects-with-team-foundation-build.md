@@ -6,7 +6,11 @@ excerpt:
   into my \"Toolbox\" Visual Studio solution that is scheduled to build daily
   through Team Foundation Server (TFS). 
    It's not that I really need daily builds of Password Minder;..."
-aliases: ["/blog/jjameson/archive/2009/11/06/compiling-c-projects-with-team-foundation-build.aspx", "/blog/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/06/compiling-c-projects-with-team-foundation-build.aspx",
+    "/blog/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]

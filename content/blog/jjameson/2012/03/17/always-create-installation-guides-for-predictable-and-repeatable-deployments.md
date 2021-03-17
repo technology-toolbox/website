@@ -5,7 +5,10 @@ excerpt:
   "Does your team utilize a step-by-step installation guide to build and deploy
   various environments, or do the Development, Test, and Release Management
   folks simply \"wing it\"? I certainly hope it's not the latter."
-aliases: ["/blog/jjameson/archive/2012/03/17/always-create-installation-guides-for-predictable-and-repeatable-deployments.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/03/17/always-create-installation-guides-for-predictable-and-repeatable-deployments.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]

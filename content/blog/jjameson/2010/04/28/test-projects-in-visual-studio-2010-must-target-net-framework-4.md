@@ -6,7 +6,11 @@ excerpt:
   I opened my Fabrikam.Demo solution in the new version of Visual Studio, but
   chose not to upgrade the target framework when prompted by Visual Studio
   during the solution upgrade..."
-aliases: ["/blog/jjameson/archive/2010/04/27/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx", "/blog/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/27/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx",
+    "/blog/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]

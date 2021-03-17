@@ -4,7 +4,11 @@ date: 2012-02-28T02:32:40-07:00
 excerpt:
   "Here is the PowerShell script I developed to avoid accidentally including
   \"junk\" in code samples I create for my blog."
-aliases: ["/blog/jjameson/archive/2012/02/27/packaging-a-code-sample-using-powershell.aspx", "/blog/jjameson/archive/2012/02/28/packaging-a-code-sample-using-powershell.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/27/packaging-a-code-sample-using-powershell.aspx",
+    "/blog/jjameson/archive/2012/02/28/packaging-a-code-sample-using-powershell.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["PowerShell", "TFS"]

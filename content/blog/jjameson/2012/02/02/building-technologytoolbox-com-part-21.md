@@ -5,7 +5,11 @@ excerpt:
   "In this post, I provide another step-by-step walkthrough of a feature, this
   time sharing the details of how I implemented the search functionality on
   TechnologyToolbox.com."
-aliases: ["/blog/jjameson/archive/2012/02/01/building-technologytoolbox-com-part-21.aspx", "/blog/jjameson/archive/2012/02/02/building-technologytoolbox-com-part-21.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/01/building-technologytoolbox-com-part-21.aspx",
+    "/blog/jjameson/archive/2012/02/02/building-technologytoolbox-com-part-21.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

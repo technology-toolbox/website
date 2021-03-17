@@ -6,7 +6,11 @@ excerpt:
    Typically one of the first tasks on any new development project is to create
   a Development Plan that provides consistent guidelines and processes for the
   Development team. On this new project, another Microsoft..."
-aliases: ["/blog/jjameson/archive/2009/09/25/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx", "/blog/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/25/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx",
+    "/blog/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Debugging"]

@@ -6,7 +6,11 @@ excerpt:
   doing since I joined Microsoft in 2000. While many things have certainly
   changed since the old \"Tahoe\" days, at least one thing remains relatively
   the same: my recommendation to..."
-aliases: ["/blog/jjameson/archive/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development.aspx", "/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/30/introducing-the-dr-dada-approach-to-sharepoint-development.aspx",
+    "/blog/jjameson/archive/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

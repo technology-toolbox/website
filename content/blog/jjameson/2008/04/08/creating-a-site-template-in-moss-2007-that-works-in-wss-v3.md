@@ -6,7 +6,10 @@ excerpt:
   Dragan Panjkov noted that attempting to create a new site in WSS v3 using the
   site template that I originally provided resulted in the following error: 
    The template you have..."
-aliases: ["/blog/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

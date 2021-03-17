@@ -6,7 +6,11 @@ excerpt:
   2008 environment to TFS 2010 ... 
    This morning I discovered that when you upgrade a managed C++ project from
   Visual Studio 2008 to Visual Studio 2010, the project is updated..."
-aliases: ["/blog/jjameson/archive/2010/05/06/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx", "/blog/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/06/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx",
+    "/blog/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "TFS"]

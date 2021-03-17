@@ -6,7 +6,10 @@ excerpt:
   SharePoint), I typically recommend creating a static HTML prototype to
   demonstrate key features, illustrate various design alternatives (e.g.
   different page layouts, color schemes, etc.), and gather feedback..."
-aliases: ["/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-3.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

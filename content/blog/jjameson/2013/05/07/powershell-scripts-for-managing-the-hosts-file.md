@@ -4,7 +4,10 @@ date: 2013-05-07T23:01:18-06:00
 excerpt:
   "Here's a set of scripts to make it easier to view the hostname mappings in
   the hosts file, as well as add and remove hostnames."
-aliases: ["/blog/jjameson/archive/2013/05/07/powershell-scripts-for-managing-the-hosts-file.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2013/05/07/powershell-scripts-for-managing-the-hosts-file.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System", "SharePoint", "Development"]
 tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]

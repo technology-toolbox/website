@@ -7,7 +7,10 @@ excerpt:
   arrow image next to each list item. In this post, I explain more about how CSS
   sprites are used on the site, why they are valuable, and some caveats when
   using them."
-aliases: ["/blog/jjameson/archive/2012/01/14/building-technologytoolbox-com-part-11.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/14/building-technologytoolbox-com-part-11.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

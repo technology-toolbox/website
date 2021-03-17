@@ -6,7 +6,11 @@ excerpt:
   fancy, or even supported, but it is free and it appears to do what it is
   supposed to without issue, specifically creating an ISO image from an existing
   CD-ROM or DVD-ROM. There..."
-aliases: ["/blog/jjameson/archive/2010/07/24/recommended-iso-tools.aspx", "/blog/jjameson/archive/2010/07/25/recommended-iso-tools.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/07/24/recommended-iso-tools.aspx",
+    "/blog/jjameson/archive/2010/07/25/recommended-iso-tools.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Toolbox"]

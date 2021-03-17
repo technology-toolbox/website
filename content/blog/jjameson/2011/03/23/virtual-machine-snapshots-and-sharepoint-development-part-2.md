@@ -6,7 +6,11 @@ excerpt:
   to quickly rollback my SharePoint development VMs to key points in time. For
   example, I can quickly revert to a \"baseline SharePoint Server 2010
   configuration\" in which no Web..."
-aliases: ["/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx", "/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx",
+    "/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "Windows Server", "Virtualization", "SharePoint 2010"]

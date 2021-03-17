@@ -6,7 +6,11 @@ excerpt:
   well get one more post in before moving on to my \"day job.\" 
    During the process of authoring a different post earlier today, I stumbled
   across a bug while using the Code Metrics..."
-aliases: ["/blog/jjameson/archive/2009/03/04/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx", "/blog/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/04/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx",
+    "/blog/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Visual Studio"]

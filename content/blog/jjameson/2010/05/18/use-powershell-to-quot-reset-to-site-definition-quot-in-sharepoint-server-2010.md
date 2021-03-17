@@ -7,7 +7,10 @@ excerpt:
    
    Browse to the Site Settings page for the site (e.g.
   http://cyclops/sites/Demo/_layouts/settings.aspx )...."
-aliases: ["/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 2010", "PowerShell"]

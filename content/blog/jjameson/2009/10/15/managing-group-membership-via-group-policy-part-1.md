@@ -6,7 +6,11 @@ excerpt:
   the \"Jameson Datacenter\" (a.k.a. my home lab), specifically one that
   automatically enables Remote Desktop (Terminal Services) whenever I add a new
   server to my Active Directory..."
-aliases: ["/blog/jjameson/archive/2009/10/14/managing-group-membership-via-group-policy-part-1.aspx", "/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/14/managing-group-membership-via-group-policy-part-1.aspx",
+    "/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]

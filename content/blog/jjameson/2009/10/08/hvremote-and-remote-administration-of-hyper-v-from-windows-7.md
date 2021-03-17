@@ -6,7 +6,11 @@ excerpt:
   7 Ultimate (x64). Previously, I'd been running the RC1 bits and I figured it
   was about time I got around to \"upgrading\" to the RTM version. [I say
   \"upgrading\" because -- at..."
-aliases: ["/blog/jjameson/archive/2009/10/07/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx", "/blog/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/07/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx",
+    "/blog/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "Virtualization", "Toolbox"]

@@ -7,7 +7,11 @@ excerpt:
   screen. 
    I definitely consider this tool a \"must have\" for anyone out there doing
   Web development. While tools..."
-aliases: ["/blog/jjameson/archive/2009/10/20/add-rooler-to-your-web-development-toolbox.aspx", "/blog/jjameson/archive/2009/10/21/add-rooler-to-your-web-development-toolbox.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/20/add-rooler-to-your-web-development-toolbox.aspx",
+    "/blog/jjameson/archive/2009/10/21/add-rooler-to-your-web-development-toolbox.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development", "Toolbox"]

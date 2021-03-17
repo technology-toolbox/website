@@ -6,7 +6,11 @@ excerpt:
   ago uses a modal popup window to display content to users. The solution
   leverages the AJAX Control Toolkit to render the modal popups &ndash;
   specifically the ModalPopupExtender..."
-aliases: ["/blog/jjameson/archive/2010/12/09/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx", "/blog/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/12/09/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx",
+    "/blog/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

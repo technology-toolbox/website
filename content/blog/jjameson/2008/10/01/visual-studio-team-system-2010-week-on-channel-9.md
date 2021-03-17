@@ -6,7 +6,11 @@ excerpt:
    Check out the 20 new videos that will be released over the course of this
   week announcing the most exciting new features in Visual Studio 2010. The
   Technical Evanglelists (boy, isn't that a dream..."
-aliases: ["/blog/jjameson/archive/2008/09/30/visual-studio-team-system-2010-week-on-channel-9.aspx", "/blog/jjameson/archive/2008/10/01/visual-studio-team-system-2010-week-on-channel-9.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/09/30/visual-studio-team-system-2010-week-on-channel-9.aspx",
+    "/blog/jjameson/archive/2008/10/01/visual-studio-team-system-2010-week-on-channel-9.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]

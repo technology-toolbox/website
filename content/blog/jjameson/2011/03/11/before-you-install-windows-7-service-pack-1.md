@@ -7,7 +7,11 @@ excerpt:
    Otherwise, like me, you'll likely resort to nuking your desktop and starting
   over. 
    Earlier this week, I posted..."
-aliases: ["/blog/jjameson/archive/2011/03/10/before-you-install-windows-7-service-pack-1.aspx", "/blog/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/10/before-you-install-windows-7-service-pack-1.aspx",
+    "/blog/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Windows 7"]

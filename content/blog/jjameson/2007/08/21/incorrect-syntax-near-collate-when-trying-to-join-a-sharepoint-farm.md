@@ -6,7 +6,11 @@ excerpt:
   Office SharePoint Server (MOSS) 2007 Development environment (DEV). Since the
   time I originally created DEV, I installed SQL Server SP2 and also restored
   several legacy databases..."
-aliases: ["/blog/jjameson/archive/2007/08/20/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx", "/blog/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/08/20/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx",
+    "/blog/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

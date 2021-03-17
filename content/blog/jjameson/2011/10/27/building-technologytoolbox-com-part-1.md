@@ -6,7 +6,11 @@ excerpt:
   Subtext -- or rather my own (slightly modified) version of Subtext 2.5. I also
   noted that Subtext wasn't my first choice when selecting a blogging
   solution..."
-aliases: ["/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-1.aspx", "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-1.aspx",
+    "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Subtext", "Web Development"]

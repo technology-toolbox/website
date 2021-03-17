@@ -6,7 +6,10 @@ excerpt:
   highlights 
   the most recent blog posts from Subtext. In this post, I'll show you how easy
   this feature was to develop -- thanks to the Entity Framework and LINQ."
-aliases: ["/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "Subtext", "My System", "Web Development"]

@@ -8,7 +8,11 @@ excerpt:
   solution. 
    Once you enable Code Analysis on your projects, you are likely to
   encounter..."
-aliases: ["/blog/jjameson/archive/2009/04/01/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx", "/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/04/01/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx",
+    "/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio"]

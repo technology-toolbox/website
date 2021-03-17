@@ -6,7 +6,11 @@ excerpt:
   based on Dan Cederholm's sample site for the fictitious Tugboat Coffee company
   (from his book Handcrafted CSS : More Bulletproof Web Design ). 
    Since I had originally \"ported..."
-aliases: ["/blog/jjameson/archive/2011/04/02/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/04/03/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/02/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx",
+    "/blog/jjameson/archive/2011/04/03/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010", "Tugboat"]

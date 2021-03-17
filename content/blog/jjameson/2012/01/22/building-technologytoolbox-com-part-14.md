@@ -5,7 +5,11 @@ excerpt:
   "So, you've created a custom error page, enabled the &lt;customErrors&gt;
   element in the Web.config file, and considered it done -- but are you sure
   that all the bases are covered?"
-aliases: ["/blog/jjameson/archive/2012/01/21/building-technologytoolbox-com-part-14.aspx", "/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/21/building-technologytoolbox-com-part-14.aspx",
+    "/blog/jjameson/archive/2012/01/22/building-technologytoolbox-com-part-14.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

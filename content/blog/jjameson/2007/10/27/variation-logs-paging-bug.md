@@ -6,7 +6,11 @@ excerpt:
   However it's even more embarrassing to disclose the paging bug when viewing
   the Variation Logs page in Microsoft Office SharePoint Server (MOSS) 2007. 
    [By the way, my intent..."
-aliases: ["/blog/jjameson/archive/2007/10/26/variation-logs-paging-bug.aspx", "/blog/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/10/26/variation-logs-paging-bug.aspx",
+    "/blog/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

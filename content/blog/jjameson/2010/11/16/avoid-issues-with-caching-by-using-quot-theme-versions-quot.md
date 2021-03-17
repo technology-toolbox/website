@@ -6,7 +6,10 @@ excerpt:
   use \"Theme\" folders to organize CSS files and related images that define a
   specific look-and-feel for a site. 
    For example, suppose we are tasked with building the Internet..."
-aliases: ["/blog/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]

@@ -6,7 +6,11 @@ excerpt:
   created back in December capturing my notes from a problem I was having with
   Windows Server Update Services (WSUS). Evidently I intended to blog about the
   issue, but apparently this..."
-aliases: ["/blog/jjameson/archive/2009/03/27/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx", "/blog/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/27/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx",
+    "/blog/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS", "Infrastructure"]

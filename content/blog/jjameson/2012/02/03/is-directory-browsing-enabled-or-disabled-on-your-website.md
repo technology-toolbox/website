@@ -4,7 +4,10 @@ date: 2012-02-03T07:57:15-07:00
 excerpt:
   "Starting with IIS 6, directory browsing is disabled by default -- but are you
   really sure this is the way your website is configured?"
-aliases: ["/blog/jjameson/archive/2012/02/03/is-directory-browsing-enabled-or-disabled-on-your-website.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/03/is-directory-browsing-enabled-or-disabled-on-your-website.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

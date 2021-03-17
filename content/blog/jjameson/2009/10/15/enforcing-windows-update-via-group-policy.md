@@ -6,7 +6,11 @@ excerpt:
   my home lab) is one to automatically configure Windows Update on all computers
   in the domain. This ensures that each server or workstation downloads updates
   from COLOSSUS (one..."
-aliases: ["/blog/jjameson/archive/2009/10/14/enforcing-windows-update-via-group-policy.aspx", "/blog/jjameson/archive/2009/10/15/enforcing-windows-update-via-group-policy.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/14/enforcing-windows-update-via-group-policy.aspx",
+    "/blog/jjameson/archive/2009/10/15/enforcing-windows-update-via-group-policy.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "WSUS", "Windows Server", "Infrastructure"]

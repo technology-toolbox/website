@@ -6,7 +6,11 @@ excerpt:
   the ASP.NET SqlRoleProvider to manage the various roles used by the Web site. 
    Over a month ago, someone contacted me about an issue he was encountering
   with a specific user...."
-aliases: ["/blog/jjameson/archive/2010/12/08/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx", "/blog/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/12/08/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx",
+    "/blog/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]

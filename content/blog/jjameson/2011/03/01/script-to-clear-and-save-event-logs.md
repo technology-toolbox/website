@@ -6,7 +6,11 @@ excerpt:
   previously shared the script I use to quickly clear the event logs on a server
   (but saving them first -- just in case I need to go back and retrieve
   something from the \"archive..."
-aliases: ["/blog/jjameson/archive/2011/02/28/script-to-clear-and-save-event-logs.aspx", "/blog/jjameson/archive/2011/03/01/script-to-clear-and-save-event-logs.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/02/28/script-to-clear-and-save-event-logs.aspx",
+    "/blog/jjameson/archive/2011/03/01/script-to-clear-and-save-event-logs.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Windows Server", "Windows 7", "Toolbox"]

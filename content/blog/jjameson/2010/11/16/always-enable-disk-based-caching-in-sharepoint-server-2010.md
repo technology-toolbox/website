@@ -6,7 +6,10 @@ excerpt:
   disk-based caching in Microsoft Office SharePoint Server (MOSS) 2007. 
    This morning a Microsoft PFE (Premier Field Engineer) reached out to me after
   he came across my blog..."
-aliases: ["/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

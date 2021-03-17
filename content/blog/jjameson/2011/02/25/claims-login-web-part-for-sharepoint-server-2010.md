@@ -6,7 +6,11 @@ excerpt:
   configuring claims-based authentication in SharePoint Server 2010. 
    If you follow those steps, then when you browse to the home page of the site
   and click Sign In , you'll be redirected..."
-aliases: ["/blog/jjameson/archive/2011/02/24/claims-login-web-part-for-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/02/24/claims-login-web-part-for-sharepoint-server-2010.aspx",
+    "/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]

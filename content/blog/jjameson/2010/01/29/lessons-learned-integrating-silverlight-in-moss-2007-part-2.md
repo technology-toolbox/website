@@ -6,7 +6,11 @@ excerpt:
   while integrating a Silverlight application into an Internet-facing customer
   service portal built on Microsoft Office SharePoint Server (MOSS) 2007. 
    As I mentioned in the previous..."
-aliases: ["/blog/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx", "/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx",
+    "/blog/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Silverlight"]

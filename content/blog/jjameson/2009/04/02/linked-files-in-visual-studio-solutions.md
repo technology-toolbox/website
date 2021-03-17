@@ -6,7 +6,11 @@ excerpt:
   Visual Studio solutions . However, I apparently forgot to post a follow-up
   providing additional details, such as configuring assembly versioning and what
   I like to call \"shared..."
-aliases: ["/blog/jjameson/archive/2009/04/01/linked-files-in-visual-studio-solutions.aspx", "/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/04/01/linked-files-in-visual-studio-solutions.aspx",
+    "/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS"]

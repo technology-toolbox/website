@@ -7,7 +7,11 @@ excerpt:
   the VM. 
    When I was copying files from the VM to a different server in order to deploy
   our solution, robocopy..."
-aliases: ["/blog/jjameson/archive/2007/06/23/performance-of-virtual-machines.aspx", "/blog/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/06/23/performance-of-virtual-machines.aspx",
+    "/blog/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Virtualization"]

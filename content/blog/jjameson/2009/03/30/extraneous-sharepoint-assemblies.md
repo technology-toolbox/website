@@ -6,7 +6,11 @@ excerpt:
   you may notice that certain SharePoint assemblies always get copied to your
   Visual Studio project output folder even though these referenced assemblies
   are configured with Copy..."
-aliases: ["/blog/jjameson/archive/2009/03/29/extraneous-sharepoint-assemblies.aspx", "/blog/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/29/extraneous-sharepoint-assemblies.aspx",
+    "/blog/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "Toolbox"]

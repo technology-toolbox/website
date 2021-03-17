@@ -6,7 +6,11 @@ excerpt:
   Reusable Content list item and subsequently add it to a Publishing HTML field
   on a page. I also provided a complete sample for SharePoint 2010 that
   demonstrates how this can be accomplished..."
-aliases: ["/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx", "/blog/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx",
+    "/blog/jjameson/archive/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

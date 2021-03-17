@@ -6,7 +6,10 @@ excerpt:
   developers on my current project. If you've ever worked with consultants,
   you've probably experienced a \"KT\" session or something similar. In essence,
   it's just a meeting intended to..."
-aliases: ["/blog/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

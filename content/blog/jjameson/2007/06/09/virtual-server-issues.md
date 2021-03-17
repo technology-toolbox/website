@@ -6,7 +6,11 @@ excerpt:
   environment (DEV) into multiple VMs -- one SQL Server VM, one Microsoft Office
   SharePoint Server (MOSS) 2007 VM for the SSP, and another MOSS 2007 VM for the
   front-end Web server..."
-aliases: ["/blog/jjameson/archive/2007/06/08/virtual-server-issues.aspx", "/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/06/08/virtual-server-issues.aspx",
+    "/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Virtualization"]

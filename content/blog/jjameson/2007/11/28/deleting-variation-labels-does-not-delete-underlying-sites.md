@@ -6,7 +6,11 @@ excerpt:
   encountered with Microsoft Office SharePoint Server (MOSS) 2007 variations.
   Several people have inquired about how to disable variations without losing
   their content. It's actually quite..."
-aliases: ["/blog/jjameson/archive/2007/11/27/deleting-variation-labels-does-not-delete-underlying-sites.aspx", "/blog/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/11/27/deleting-variation-labels-does-not-delete-underlying-sites.aspx",
+    "/blog/jjameson/archive/2007/11/28/deleting-variation-labels-does-not-delete-underlying-sites.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

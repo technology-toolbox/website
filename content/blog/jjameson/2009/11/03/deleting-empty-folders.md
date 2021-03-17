@@ -7,7 +7,11 @@ excerpt:
   there isn't important; all that matters is that you have some and you want to
   get rid of them. 
    A few..."
-aliases: ["/blog/jjameson/archive/2009/11/02/deleting-empty-folders.aspx", "/blog/jjameson/archive/2009/11/03/deleting-empty-folders.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/02/deleting-empty-folders.aspx",
+    "/blog/jjameson/archive/2009/11/03/deleting-empty-folders.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System"]

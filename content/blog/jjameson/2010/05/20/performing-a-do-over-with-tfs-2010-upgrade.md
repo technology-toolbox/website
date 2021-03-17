@@ -6,7 +6,11 @@ excerpt:
   the fact is you may encounter errors during your upgrade to Team Foundation
   Server (TFS) 2010 -- hopefully in your Development or Test environment first,
   not when upgrading your..."
-aliases: ["/blog/jjameson/archive/2010/05/19/performing-a-do-over-with-tfs-2010-upgrade.aspx", "/blog/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/19/performing-a-do-over-with-tfs-2010-upgrade.aspx",
+    "/blog/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["TFS"]

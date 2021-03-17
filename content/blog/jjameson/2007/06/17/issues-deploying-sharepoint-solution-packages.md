@@ -6,7 +6,11 @@ excerpt:
   solution packages instead of the batch scripts that we had been using in our
   Development environment. One of the issues that I discovered along the way is
   that SharePoint is rather..."
-aliases: ["/blog/jjameson/archive/2007/06/16/issues-deploying-sharepoint-solution-packages.aspx", "/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/06/16/issues-deploying-sharepoint-solution-packages.aspx",
+    "/blog/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

@@ -6,7 +6,11 @@ excerpt:
   SharePoint Server (MOSS) 2007 to replace a VM with a physical server (for
   performance reasons ). During the rebuild, I encountered the following error
   when starting Office SharePoint..."
-aliases: ["/blog/jjameson/archive/2007/06/25/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx", "/blog/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/06/25/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx",
+    "/blog/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

@@ -6,7 +6,11 @@ excerpt:
    Well, let me clarify that...it's not that I actually lost work items due to
   some bug in TFS or failure on the database server. Rather -- and I'm a little
   embarrassed to admit this..."
-aliases: ["/blog/jjameson/archive/2011/03/04/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx", "/blog/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/04/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx",
+    "/blog/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]

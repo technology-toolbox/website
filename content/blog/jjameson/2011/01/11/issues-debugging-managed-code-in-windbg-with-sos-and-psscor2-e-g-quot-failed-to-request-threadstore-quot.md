@@ -7,7 +7,11 @@ excerpt:
   Visual Studio). 
    However, I couldn't get the managed code debugging to work in WinDbg. I
   initially tried..."
-aliases: ["/blog/jjameson/archive/2011/01/10/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx", "/blog/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/01/10/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx",
+    "/blog/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Debugging"]

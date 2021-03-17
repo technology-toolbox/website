@@ -6,7 +6,11 @@ excerpt:
   Server 2007, I frequently see developers and other team members that I work
   with constantly entering their credentials when browsing to some Web page on a
   server. While this experience..."
-aliases: ["/blog/jjameson/archive/2007/03/21/be-in-the-zone-to-avoid-entering-credentials.aspx", "/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/03/21/be-in-the-zone-to-avoid-entering-credentials.aspx",
+    "/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System"]

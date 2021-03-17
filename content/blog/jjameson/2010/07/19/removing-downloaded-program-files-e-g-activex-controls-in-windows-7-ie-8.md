@@ -6,7 +6,10 @@ excerpt:
   feature to a customer service portal -- specifically, the ability to view live
   video feeds from security cameras. The vendor this particular customer has
   selected for providing..."
-aliases: ["/blog/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "Development"]
 tags: ["Windows Server", "Web Development", "Windows 7"]

@@ -6,7 +6,11 @@ excerpt:
   they are not only quick to design and update, but also very easy to
   understand. Essentially, if you can read an entity-relationship model
   (&agrave; la ERwin or a Visio database..."
-aliases: ["/blog/jjameson/archive/2010/04/23/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx", "/blog/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/23/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx",
+    "/blog/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

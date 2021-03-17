@@ -6,7 +6,11 @@ excerpt:
   of links to the quick launch navigation. Assuming the number of sites to be
   updated is relatively small, then it is reasonable to manually apply the
   configuration changes via..."
-aliases: ["/blog/jjameson/archive/2010/05/16/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx", "/blog/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/16/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx",
+    "/blog/jjameson/archive/2010/05/17/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]

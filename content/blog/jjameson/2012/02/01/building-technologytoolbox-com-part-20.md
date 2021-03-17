@@ -6,7 +6,10 @@ excerpt:
   form for the Technology Toolbox website. Through a sequence of 9 discrete
   steps, I describe my typical development process from initial concept to what
   I call \"feature complete.\""
-aliases: ["/blog/jjameson/archive/2012/02/01/building-technologytoolbox-com-part-20.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/01/building-technologytoolbox-com-part-20.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

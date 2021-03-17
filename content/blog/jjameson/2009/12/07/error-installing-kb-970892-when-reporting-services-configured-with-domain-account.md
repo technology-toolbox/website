@@ -6,7 +6,10 @@ excerpt:
   in the \"Jameson Datacenter\" (a.k.a. my home lab). Specifically, KB 970892
   simply would not install on JUBILEE -- my Systems Center Operations Manager
   (SCOM) 2007 VM, that I use..."
-aliases: ["/blog/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["SQL Server", "Infrastructure"]

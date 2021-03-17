@@ -5,7 +5,10 @@ excerpt:
   "Wondering why there was a long gap between my previous two blog posts? Give
   me a few minutes, and I'll get you caught up on what I've been doing for the
   past year."
-aliases: ["/blog/jjameson/archive/2013/04/30/blog-sabbatical.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2013/04/30/blog-sabbatical.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

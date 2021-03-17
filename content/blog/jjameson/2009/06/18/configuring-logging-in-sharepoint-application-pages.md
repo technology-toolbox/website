@@ -6,7 +6,10 @@ excerpt:
   logging can be used with ASP.NET Web applications -- including Microsoft
   Office SharePoint Server (MOSS) and Windows SharePoint Services (WSS). 
    Note that SharePoint application..."
-aliases: ["/blog/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["Simplify", "MOSS 2007", "WSS v3"]

@@ -6,7 +6,11 @@ excerpt:
   page on an Internet site powered by Microsoft Office SharePoint Server (MOSS)
   2007. For that post I captured various screenshots and sample code from one of
   my local development..."
-aliases: ["/blog/jjameson/archive/2010/03/22/forms-based-authentication-in-moss-2007-the-easy-way.aspx", "/blog/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/22/forms-based-authentication-in-moss-2007-the-easy-way.aspx",
+    "/blog/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]

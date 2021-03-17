@@ -6,7 +6,11 @@ excerpt:
   and folder names in Windows SharePoint Services 3.0 (WSS v3) and Microsoft
   Office SharePoint Server 2007 (MOSS 2007). However, I learned the hard way
   (i.e. during the process..."
-aliases: ["/blog/jjameson/archive/2008/09/25/additional-restrictions-on-file-and-folder-names-in-sharepoint.aspx", "/blog/jjameson/archive/2008/09/26/additional-restrictions-on-file-and-folder-names-in-sharepoint.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/09/25/additional-restrictions-on-file-and-folder-names-in-sharepoint.aspx",
+    "/blog/jjameson/archive/2008/09/26/additional-restrictions-on-file-and-folder-names-in-sharepoint.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

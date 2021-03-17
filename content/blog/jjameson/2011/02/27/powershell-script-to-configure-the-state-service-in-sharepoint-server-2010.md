@@ -6,7 +6,10 @@ excerpt:
   solutions and features in SharePoint Server 2010. However, those certainly
   weren't all of the PowerShell scripts that I currently use when working with
   SharePoint 2010. Here..."
-aliases: ["/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]

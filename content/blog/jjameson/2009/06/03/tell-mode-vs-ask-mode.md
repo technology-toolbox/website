@@ -6,7 +6,10 @@ excerpt:
   reached our \"Feature Complete\" milestone and now we have formally
   transitioned into the \"Stabilizing\" phase. 
    In a couple of team meetings this week, I mentioned the concepts of..."
-aliases: ["/blog/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

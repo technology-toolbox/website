@@ -6,7 +6,11 @@ excerpt:
   Assembly Version for Each Build in TFS 2010 , because after following the
   steps I provided, he encountered a problem due to the fact that he had
   previously configured a gated check..."
-aliases: ["/blog/jjameson/archive/2010/12/02/bypassing-a-gated-check-in-in-tfs-2010.aspx", "/blog/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/12/02/bypassing-a-gated-check-in-in-tfs-2010.aspx",
+    "/blog/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["TFS"]

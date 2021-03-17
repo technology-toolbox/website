@@ -6,7 +6,11 @@ excerpt:
   in the \"Jameson Datacenter\" (a.k.a. my home lab) is that it greatly reduces
   the amount of effort required to monitor numerous servers. 
    For example, in my environment I am..."
-aliases: ["/blog/jjameson/archive/2011/03/17/operations-manager-alerts-for-event-log-errors.aspx", "/blog/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/17/operations-manager-alerts-for-event-log-errors.aspx",
+    "/blog/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Infrastructure"]

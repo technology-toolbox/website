@@ -6,7 +6,10 @@ excerpt:
   Windows SharePoint Services (WSS) v3 or Microsoft Office SharePoint Server
   (MOSS) 2007. For these (admittedly rare) situations, I have attached an Excel
   spreadsheet containing the..."
-aliases: ["/blog/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

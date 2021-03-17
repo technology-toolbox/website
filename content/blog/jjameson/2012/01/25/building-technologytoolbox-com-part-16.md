@@ -5,7 +5,11 @@ excerpt:
   "In this post, I provide a detailed walkthrough of the custom CAPTCHA control
   used on the Technology Toolbox website (including some subtle issues
   discovered when using this control on Subtext blog pages)."
-aliases: ["/blog/jjameson/archive/2012/01/24/building-technologytoolbox-com-part-16.aspx", "/blog/jjameson/archive/2012/01/25/building-technologytoolbox-com-part-16.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/24/building-technologytoolbox-com-part-16.aspx",
+    "/blog/jjameson/archive/2012/01/25/building-technologytoolbox-com-part-16.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]

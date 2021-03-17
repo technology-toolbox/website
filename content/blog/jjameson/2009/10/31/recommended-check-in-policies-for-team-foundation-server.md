@@ -6,7 +6,11 @@ excerpt:
   \"goodness\" for software development that comes out-of-the-box; and there's
   even more available from Microsoft and other sources in the form of add-ons
   (many of which are free..."
-aliases: ["/blog/jjameson/archive/2009/10/30/recommended-check-in-policies-for-team-foundation-server.aspx", "/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/30/recommended-check-in-policies-for-team-foundation-server.aspx",
+    "/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "TFS"]

@@ -6,7 +6,10 @@ excerpt:
   class for logging exceptions in a consistent fashion. 
    While error handling in .NET console applications and ASP.NET Web
   applications is fairly straightforward, things get quite..."
-aliases: ["/blog/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

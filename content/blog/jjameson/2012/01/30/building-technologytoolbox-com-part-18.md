@@ -6,7 +6,10 @@ excerpt:
   submitted my first \"official\" bug fix for the Subtext blog engine. I'm sure
   it will get easier, but this experience was valuable for me, if for no other
   reason than making me appreciate how much I love Team Foundation Server."
-aliases: ["/blog/jjameson/archive/2012/01/30/building-technologytoolbox-com-part-18.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/30/building-technologytoolbox-com-part-18.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Subtext"]

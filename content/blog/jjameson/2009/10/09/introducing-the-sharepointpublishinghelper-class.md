@@ -6,7 +6,11 @@ excerpt:
   Office SharePoint Server (MOSS) 2007 from an Excel input file. 
    Aside from the code to read data from the input file into a DataSet, the main
   work is performed by the SharePointPublishingHelper..."
-aliases: ["/blog/jjameson/archive/2009/10/08/introducing-the-sharepointpublishinghelper-class.aspx", "/blog/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/08/introducing-the-sharepointpublishinghelper-class.aspx",
+    "/blog/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

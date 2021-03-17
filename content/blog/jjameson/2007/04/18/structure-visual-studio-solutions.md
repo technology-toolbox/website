@@ -7,7 +7,10 @@ excerpt:
   Visual Studio. 
    When starting a new project from scratch, I start by creating a blank Visual
   Studio..."
-aliases: ["/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio"]

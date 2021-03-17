@@ -6,7 +6,10 @@ excerpt:
   some issues with Subtext that required a few tweaks here and there. In this
   post, I describe the errors I've seen and my recommendations for addressing
   them."
-aliases: ["/blog/jjameson/archive/2012/01/23/building-technologytoolbox-com-part-15.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/23/building-technologytoolbox-com-part-15.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext"]

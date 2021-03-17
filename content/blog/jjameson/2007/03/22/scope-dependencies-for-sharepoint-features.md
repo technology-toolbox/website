@@ -7,7 +7,11 @@ excerpt:
   to another. 
    In our solution, we have created a feature for specifying custom fields (i.e.
   columns..."
-aliases: ["/blog/jjameson/archive/2007/03/21/scope-dependencies-for-sharepoint-features.aspx", "/blog/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/03/21/scope-dependencies-for-sharepoint-features.aspx",
+    "/blog/jjameson/archive/2007/03/22/scope-dependencies-for-sharepoint-features.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

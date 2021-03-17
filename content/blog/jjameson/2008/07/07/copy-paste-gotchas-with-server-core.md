@@ -6,7 +6,10 @@ excerpt:
   Hyper-V. In order to maximize performance and follow recommended best
   practices, I am using Server Core as the host OS. 
    I have to admit, doing this much administration from..."
-aliases: ["/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]

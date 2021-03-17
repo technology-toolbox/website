@@ -7,7 +7,11 @@ excerpt:
   Server 2010. 
    While creating the installation guide for this sprint, I used the following
   TechNet..."
-aliases: ["/blog/jjameson/archive/2011/03/02/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx", "/blog/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/02/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx",
+    "/blog/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "SharePoint"]
 tags: ["Infrastructure", "SharePoint 2010"]

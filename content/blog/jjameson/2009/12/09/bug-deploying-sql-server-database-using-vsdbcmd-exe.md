@@ -6,7 +6,11 @@ excerpt:
   database from a Visual Studio database project using the VSDBCMD.EXE utility,
   following the prescriptive guidance on MSDN: 
    How to: Prepare a Database for Deployment From a Command..."
-aliases: ["/blog/jjameson/archive/2009/12/08/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx", "/blog/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/12/08/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx",
+    "/blog/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["SQL Server", "Visual Studio"]

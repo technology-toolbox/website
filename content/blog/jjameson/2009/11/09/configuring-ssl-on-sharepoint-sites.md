@@ -7,7 +7,11 @@ excerpt:
   that matter -- then you must configure secure communication (HTTPS) using SSL
   certificates. 
    However..."
-aliases: ["/blog/jjameson/archive/2009/11/08/configuring-ssl-on-sharepoint-sites.aspx", "/blog/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/08/configuring-ssl-on-sharepoint-sites.aspx",
+    "/blog/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

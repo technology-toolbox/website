@@ -4,7 +4,10 @@ date: 2012-02-28T22:24:38-07:00
 excerpt:
   "If you think that programmatically filtering errors in ELMAH is as easy as
   specifying filters in Web.config, you might be in for a surprise."
-aliases: ["/blog/jjameson/archive/2012/02/28/why-i-chose-not-to-programmatically-filter-errors-reported-by.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/28/why-i-chose-not-to-programmatically-filter-errors-reported-by.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Web Development"]

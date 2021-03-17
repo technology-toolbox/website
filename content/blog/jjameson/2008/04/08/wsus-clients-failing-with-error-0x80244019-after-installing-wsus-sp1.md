@@ -6,7 +6,11 @@ excerpt:
   successfully from my intranet Windows Server Update Services (WSUS) server.
   Looking in WindowsUpdate.log file, I noticed errors similar to the following: 
    2008-03-22 18:53:24:377..."
-aliases: ["/blog/jjameson/archive/2008/04/07/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx", "/blog/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/07/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx",
+    "/blog/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS"]

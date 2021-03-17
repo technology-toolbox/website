@@ -6,7 +6,11 @@ excerpt:
   "Looking for a solution to convert from HTML to PDF? Here is a list of the
   products I discovered during my research as well as the results of the
   head-to-head competition."
-aliases: ["/blog/jjameson/archive/2012/02/18/html-to-pdf-converters.aspx", "/blog/jjameson/archive/2012/02/19/html-to-pdf-converters.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/18/html-to-pdf-converters.aspx",
+    "/blog/jjameson/archive/2012/02/19/html-to-pdf-converters.aspx",
+  ]
 draft: true
 categories: ["Development", "My System", "SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010", "Web Development"]

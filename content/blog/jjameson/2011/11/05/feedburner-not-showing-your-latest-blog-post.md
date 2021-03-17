@@ -5,7 +5,10 @@ excerpt:
   "This morning I discovered that Feedburner wasn't showing the blog post I
   created last Thursday. No error was displayed. Rather the RSS feed simply made
   it look like..."
-aliases: ["/blog/jjameson/archive/2011/11/05/feedburner-not-showing-your-latest-blog-post.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/11/05/feedburner-not-showing-your-latest-blog-post.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Subtext"]

@@ -6,7 +6,11 @@ excerpt:
   named AssemblyInfo is created that contains attributes used to define the
   version of the assembly during compilation. 
    Using assembly versions effectively enables various team..."
-aliases: ["/blog/jjameson/archive/2009/04/02/best-practices-for-net-assembly-versioning.aspx", "/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/04/02/best-practices-for-net-assembly-versioning.aspx",
+    "/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio"]

@@ -6,7 +6,11 @@ excerpt:
   remove dependencies on my home domain (I had to work out of the Microsoft
   office for a couple of days because my DSL router cratered). 
    However, while the SysPrep process was..."
-aliases: ["/blog/jjameson/archive/2009/05/28/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx", "/blog/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/05/28/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx",
+    "/blog/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx",
+  ]
 draft: true
 categories: [""]
 tags: ["SQL Server"]

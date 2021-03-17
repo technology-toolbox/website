@@ -6,7 +6,10 @@ excerpt:
   logging . As promised, this post introduces how to configure logging (based on
   a simple console application). 
    As noted in my previous post, one or more trace listeners can..."
-aliases: ["/blog/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "Core Development"]

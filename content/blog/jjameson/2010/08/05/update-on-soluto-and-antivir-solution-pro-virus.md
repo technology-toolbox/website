@@ -6,7 +6,11 @@ excerpt:
   virus after installing Soluto (\"anti-frustration software\" that analyzes the
   boot time of your PC). 
    Roee Adler, Chief Product Officer at Soluto, assured me the virus was not..."
-aliases: ["/blog/jjameson/archive/2010/08/04/update-on-soluto-and-antivir-solution-pro-virus.aspx", "/blog/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/08/04/update-on-soluto-and-antivir-solution-pro-virus.aspx",
+    "/blog/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx",
+  ]
 draft: true
 categories: [""]
 tags: [""]

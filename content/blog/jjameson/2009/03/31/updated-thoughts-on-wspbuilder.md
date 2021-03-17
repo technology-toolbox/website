@@ -7,7 +7,11 @@ excerpt:
   creator of WSPBuilder. 
    Here is the \"almost\" unabridged version of the email exchange (headers and
   signatures..."
-aliases: ["/blog/jjameson/archive/2009/03/30/updated-thoughts-on-wspbuilder.aspx", "/blog/jjameson/archive/2009/03/31/updated-thoughts-on-wspbuilder.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/30/updated-thoughts-on-wspbuilder.aspx",
+    "/blog/jjameson/archive/2009/03/31/updated-thoughts-on-wspbuilder.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

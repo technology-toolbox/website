@@ -6,7 +6,11 @@ excerpt:
   automate development tasks. 
    Before sharing some of my most frequently used macros, however, I wanted to
   first introduce the method I use to trace events and log messages while..."
-aliases: ["/blog/jjameson/archive/2009/03/10/tracing-and-logging-from-visual-studio-macros.aspx", "/blog/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/10/tracing-and-logging-from-visual-studio-macros.aspx",
+    "/blog/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]

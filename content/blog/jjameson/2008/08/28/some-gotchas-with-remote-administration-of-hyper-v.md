@@ -7,7 +7,11 @@ excerpt:
   therefore Hyper-V Manager -- on Server Core, you need to use remote
   administration to manage the VMs. 
   ..."
-aliases: ["/blog/jjameson/archive/2008/08/27/some-gotchas-with-remote-administration-of-hyper-v.aspx", "/blog/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/08/27/some-gotchas-with-remote-administration-of-hyper-v.aspx",
+    "/blog/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]

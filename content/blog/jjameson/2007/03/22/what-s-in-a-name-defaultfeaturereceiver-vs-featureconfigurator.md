@@ -6,7 +6,11 @@ excerpt:
   have noticed that in the Feature.xml file, I specified the feature receiver
   class as DefaultFeatureReceiver but the code sample is actually from
   FeatureConfigurator . This warrants..."
-aliases: ["/blog/jjameson/archive/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx", "/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx",
+    "/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

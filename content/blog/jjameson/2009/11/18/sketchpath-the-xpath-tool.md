@@ -7,7 +7,11 @@ excerpt:
   \" The XPath Tool.\" 
    I've seen a few other tools for quickly building and testing XPath
   expressions against an XML..."
-aliases: ["/blog/jjameson/archive/2009/11/17/sketchpath-the-xpath-tool.aspx", "/blog/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/17/sketchpath-the-xpath-tool.aspx",
+    "/blog/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "Toolbox"]

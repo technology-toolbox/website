@@ -6,7 +6,11 @@ excerpt:
   Database Files.sql . Unlike the script that I shared in my previous post that
   simply truncated all transaction logs to free up disk space, this script is
   suitable for running in a..."
-aliases: ["/blog/jjameson/archive/2008/05/29/shrinking-all-database-files.aspx", "/blog/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/05/29/shrinking-all-database-files.aspx",
+    "/blog/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "SQL Server", "Toolbox"]

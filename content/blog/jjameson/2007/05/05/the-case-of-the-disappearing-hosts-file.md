@@ -7,7 +7,11 @@ excerpt:
   project. 
    During the rebuild of our Test environment, the SharePoint Products and
   Technologies Configuration Wizard failed when it was unable..."
-aliases: ["/blog/jjameson/archive/2007/05/04/the-case-of-the-disappearing-hosts-file.aspx", "/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/05/04/the-case-of-the-disappearing-hosts-file.aspx",
+    "/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

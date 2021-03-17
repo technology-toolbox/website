@@ -6,7 +6,11 @@ excerpt:
   environments that I typically recommend (at a minimum) for every organization
   doing any form of software development. 
    This post describes, in greater detail, the various environments..."
-aliases: ["/blog/jjameson/archive/2009/09/24/development-and-build-environments.aspx", "/blog/jjameson/archive/2009/09/25/development-and-build-environments.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/24/development-and-build-environments.aspx",
+    "/blog/jjameson/archive/2009/09/25/development-and-build-environments.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

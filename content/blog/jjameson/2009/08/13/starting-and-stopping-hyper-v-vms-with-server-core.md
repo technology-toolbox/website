@@ -6,7 +6,11 @@ excerpt:
   I powered down the \"Jameson Datacenter\" (i.e. the four computers running in
   my home office). Since I would be gone for almost 8 full days, it didn't make
   sense to waste the electricity..."
-aliases: ["/blog/jjameson/archive/2009/08/12/starting-and-stopping-hyper-v-vms-with-server-core.aspx", "/blog/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/08/12/starting-and-stopping-hyper-v-vms-with-server-core.aspx",
+    "/blog/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "Virtualization", "Toolbox"]

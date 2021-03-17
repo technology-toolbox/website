@@ -6,7 +6,11 @@ excerpt:
   SysPrep'ed images , I usually end up having to do a quick Internet search for:
    device manager show hidden devices 
    I'm a little embarrassed to say that I simply can't remember..."
-aliases: ["/blog/jjameson/archive/2011/03/13/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx", "/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/13/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx",
+    "/blog/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Virtualization"]

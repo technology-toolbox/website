@@ -6,7 +6,11 @@ excerpt:
   approach to logging -- including a Logger class that is really just a thin
   wrapper around the System.Diagnostics.TraceSource class. 
    A few months ago, I enhanced the Logger class..."
-aliases: ["/blog/jjameson/archive/2010/03/19/logging-exceptions-in-net-applications.aspx", "/blog/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/19/logging-exceptions-in-net-applications.aspx",
+    "/blog/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]

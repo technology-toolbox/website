@@ -5,7 +5,10 @@ excerpt:
   "Can visitors browse your website using \"domain.com\" as well as
   \"www.domain.com\"? Is this documented in your test spec? It should be -- as I
   found out...the hard way."
-aliases: ["/blog/jjameson/archive/2012/02/03/building-technologytoolbox-com-part-23.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/03/building-technologytoolbox-com-part-23.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]

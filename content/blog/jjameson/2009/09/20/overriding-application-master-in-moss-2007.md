@@ -6,7 +6,11 @@ excerpt:
   out-of-the-box master pages. Many are provided primarily as samples (e.g.
   BlueBand.master) and serve as a starting point for creating your own master
   page. There's also default.master..."
-aliases: ["/blog/jjameson/archive/2009/09/19/overriding-application-master-in-moss-2007.aspx", "/blog/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/19/overriding-application-master-in-moss-2007.aspx",
+    "/blog/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

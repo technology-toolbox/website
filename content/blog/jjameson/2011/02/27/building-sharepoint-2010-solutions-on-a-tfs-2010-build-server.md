@@ -6,7 +6,11 @@ excerpt:
   (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server ,
   which talked about copying various SharePoint assemblies to a \"Reference
   Assemblies\" folder and adding..."
-aliases: ["/blog/jjameson/archive/2011/02/26/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx", "/blog/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/02/26/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx",
+    "/blog/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx",
+  ]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["Visual Studio", "TFS", "SharePoint 2010"]

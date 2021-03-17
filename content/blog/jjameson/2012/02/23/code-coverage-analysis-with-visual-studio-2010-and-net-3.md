@@ -5,7 +5,11 @@ excerpt:
   "It takes a little more work than expected, but you actually can \"have your
   cake and eat it too\" when it comes to Visual Studio 2010 code coverage
   analysis and .NET Framework 3.5 solutions (e.g. SharePoint 2010)."
-aliases: ["/blog/jjameson/archive/2012/02/22/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx", "/blog/jjameson/archive/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/22/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx",
+    "/blog/jjameson/archive/2012/02/23/code-coverage-analysis-with-visual-studio-2010-and-net-3.aspx",
+  ]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["Core Development", "MOSS 2007", "SharePoint 2010", "Visual Studio"]

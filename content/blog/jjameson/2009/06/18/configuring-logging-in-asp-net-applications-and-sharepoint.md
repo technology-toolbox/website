@@ -6,7 +6,10 @@ excerpt:
   approach to logging and the follow-up post which introduced configuring
   logging for console applications . 
    Obviously not all solutions are simple console-based applications..."
-aliases: ["/blog/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3", "Web Development"]

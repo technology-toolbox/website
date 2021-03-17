@@ -7,7 +7,11 @@ excerpt:
   job.\" 
    I typically use SQL Server Management Studio to configure and schedule
   database backups, because..."
-aliases: ["/blog/jjameson/archive/2008/05/29/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx", "/blog/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/05/29/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx",
+    "/blog/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["SQL Server", "WSUS", "Toolbox"]

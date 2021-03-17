@@ -6,7 +6,11 @@ excerpt:
   post that I started back in January but apparently never got it past \"draft
   mode.\" I figured it was time to finish it off. 
    If you've been using Windows SharePoint Services..."
-aliases: ["/blog/jjameson/archive/2009/03/25/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx", "/blog/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/25/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx",
+    "/blog/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "WSS v3", "Toolbox"]

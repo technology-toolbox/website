@@ -7,7 +7,10 @@ excerpt:
   hopefully over the next several hours, things will calm down and we'll get
   back to normal. 
    So far..."
-aliases: ["/blog/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx",
+  ]
 draft: true
 categories: [""]
 tags: [""]

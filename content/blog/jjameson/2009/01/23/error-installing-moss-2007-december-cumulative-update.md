@@ -7,7 +7,10 @@ excerpt:
   2008, and Visual Studio 2008. The process wasn't quite as smooth as I had
   hoped. 
    One of the issues..."
-aliases: ["/blog/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

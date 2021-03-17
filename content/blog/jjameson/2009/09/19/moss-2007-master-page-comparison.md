@@ -6,7 +6,11 @@ excerpt:
   created back when I was working on the Agilent Technologies project. The
   spreadsheet lists the various placeholder elements in both application.master
   and default.master for Microsoft..."
-aliases: ["/blog/jjameson/archive/2009/09/18/moss-2007-master-page-comparison.aspx", "/blog/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/18/moss-2007-master-page-comparison.aspx",
+    "/blog/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

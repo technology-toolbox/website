@@ -7,7 +7,10 @@ excerpt:
   messages due to failed hack attempts). During the process, I also discovered a
   couple of bugs in ELMAH (and learned a lot more about the internal workings of
   ELMAH)."
-aliases: ["/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

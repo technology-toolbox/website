@@ -6,7 +6,11 @@ excerpt:
   2.41 GB) in the C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\Temporary
   ASP.NET Files\\root folder of my development VM for Microsoft Office
   SharePoint Server (MOSS) 2007. Apparently..."
-aliases: ["/blog/jjameson/archive/2009/03/31/temporary-asp-net-files-are-not-deleted.aspx", "/blog/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/31/temporary-asp-net-files-are-not-deleted.aspx",
+    "/blog/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development", "My System"]
 tags: ["MOSS 2007", "Core Development", "Toolbox"]

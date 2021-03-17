@@ -6,7 +6,11 @@ excerpt:
   about a month ago. When I subsequently tried to login with my domain
   credentials, I encountered the following error: 
    The trust relationship between this workstation and the..."
-aliases: ["/blog/jjameson/archive/2011/03/11/resolving-issues-after-applying-hyper-v-snapshot.aspx", "/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/11/resolving-issues-after-applying-hyper-v-snapshot.aspx",
+    "/blog/jjameson/archive/2011/03/12/resolving-issues-after-applying-hyper-v-snapshot.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]

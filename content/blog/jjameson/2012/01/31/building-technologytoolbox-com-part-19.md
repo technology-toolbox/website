@@ -4,7 +4,10 @@ date: 2012-01-31T10:10:36-07:00
 excerpt:
   "In addition to the trivial bug fix that I mentioned in last night's post, I
   have merged a number of other changes into my Subtext fork on GitHub."
-aliases: ["/blog/jjameson/archive/2012/01/31/building-technologytoolbox-com-part-19.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/31/building-technologytoolbox-com-part-19.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext"]

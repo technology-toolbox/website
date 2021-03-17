@@ -6,7 +6,10 @@ excerpt:
   2005 Service Pack 1 , in which I mentioned setting the MaxPatchCacheSize
   registry setting to 0 (in order to save some significant disk space while
   installing the service pack)..."
-aliases: ["/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure", "Development"]
 tags: ["My System", "SQL Server", "Windows Server", "Infrastructure", "Virtualization", "Visual Studio"]

@@ -6,7 +6,11 @@ excerpt:
   use a blog site (creatively called the \"DevBlog\") in Microsoft Office
   SharePoint Server (MOSS) 2007 to track the work items that each member of the
   Development team has committed..."
-aliases: ["/blog/jjameson/archive/2008/04/22/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx", "/blog/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/22/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx",
+    "/blog/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

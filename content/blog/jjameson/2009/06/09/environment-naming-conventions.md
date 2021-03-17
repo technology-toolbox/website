@@ -6,7 +6,10 @@ excerpt:
   naming conventions for various environments -- or sometimes naming conventions
   that provide little or no value. 
    For about the last ten years, I've been a strong proponent..."
-aliases: ["/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/09/environment-naming-conventions.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Development", "Infrastructure"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3", "SQL Server", "Infrastructure"]

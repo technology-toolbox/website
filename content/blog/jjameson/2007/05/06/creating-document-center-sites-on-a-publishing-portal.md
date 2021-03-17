@@ -7,7 +7,11 @@ excerpt:
    When kicking off my current project back in December, I was convinced that a
   Document Center site in Microsoft Office SharePoint Server (MOSS) 2007 was the
   best..."
-aliases: ["/blog/jjameson/archive/2007/05/05/creating-document-center-sites-on-a-publishing-portal.aspx", "/blog/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/05/05/creating-document-center-sites-on-a-publishing-portal.aspx",
+    "/blog/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

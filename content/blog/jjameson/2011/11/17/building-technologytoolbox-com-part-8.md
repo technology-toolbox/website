@@ -8,7 +8,11 @@ excerpt:
   website (including the corresponding application pool), and then copies the
   files for the main site as well as the Subtext files for the /blog
   application..."
-aliases: ["/blog/jjameson/archive/2011/11/16/building-technologytoolbox-com-part-8.aspx", "/blog/jjameson/archive/2011/11/17/building-technologytoolbox-com-part-8.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/11/16/building-technologytoolbox-com-part-8.aspx",
+    "/blog/jjameson/archive/2011/11/17/building-technologytoolbox-com-part-8.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["My System", "PowerShell", "Subtext", "Web Development"]

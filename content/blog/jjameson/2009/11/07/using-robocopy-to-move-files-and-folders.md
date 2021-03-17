@@ -6,7 +6,11 @@ excerpt:
   remember using anything else. I was glad to see that it is now included
   out-of-the-box (starting with Vista), because I typically use it instead of
   Windows Explorer to move or..."
-aliases: ["/blog/jjameson/archive/2009/11/06/using-robocopy-to-move-files-and-folders.aspx", "/blog/jjameson/archive/2009/11/07/using-robocopy-to-move-files-and-folders.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/06/using-robocopy-to-move-files-and-folders.aspx",
+    "/blog/jjameson/archive/2009/11/07/using-robocopy-to-move-files-and-folders.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System", "Toolbox"]

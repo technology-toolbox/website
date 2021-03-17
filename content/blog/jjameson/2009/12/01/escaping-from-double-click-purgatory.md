@@ -7,7 +7,11 @@ excerpt:
   single-click (e.g. to select an item), it acted as if I double-clicked the
   mouse button. 
    At first I thought..."
-aliases: ["/blog/jjameson/archive/2009/11/30/escaping-from-double-click-purgatory.aspx", "/blog/jjameson/archive/2009/12/01/escaping-from-double-click-purgatory.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/30/escaping-from-double-click-purgatory.aspx",
+    "/blog/jjameson/archive/2009/12/01/escaping-from-double-click-purgatory.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

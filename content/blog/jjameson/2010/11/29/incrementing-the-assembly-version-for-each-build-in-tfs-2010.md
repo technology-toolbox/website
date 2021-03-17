@@ -8,7 +8,10 @@ excerpt:
   http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx
    
    Earlier this..."
-aliases: ["/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]

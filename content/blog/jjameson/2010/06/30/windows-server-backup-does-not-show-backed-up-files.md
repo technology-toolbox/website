@@ -7,7 +7,10 @@ excerpt:
   Grand Canyon, and then Scottsdale). It was a little hot, but a wonderful trip
   nonetheless.] 
    Here..."
-aliases: ["/blog/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure"]

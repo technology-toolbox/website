@@ -7,7 +7,11 @@ excerpt:
   re-activating features or running some migration utility to recreate the site
   hierarchy. 
    In fact, a few..."
-aliases: ["/blog/jjameson/archive/2010/05/26/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/26/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx",
+    "/blog/jjameson/archive/2010/05/27/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]

@@ -6,7 +6,11 @@ excerpt:
   across a rather old Visio document that showed the beginnings of what I now
   refer to as the \"Jameson Datacenter\" (a.k.a. my home lab). For some geeky
   reason, seeing this again..."
-aliases: ["/blog/jjameson/archive/2009/10/23/the-original-jameson-datacenter.aspx", "/blog/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/23/the-original-jameson-datacenter.aspx",
+    "/blog/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx",
+  ]
 draft: true
 categories: ["My System", "Personal", "Infrastructure"]
 tags: ["My System", "Personal", "Infrastructure"]

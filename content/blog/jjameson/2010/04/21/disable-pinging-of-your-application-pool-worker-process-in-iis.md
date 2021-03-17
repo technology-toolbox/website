@@ -6,7 +6,11 @@ excerpt:
   started walking through some code in a debugging session, I took a brief
   detour to show the team how I recommend disabling the \"ping\" functionality
   in IIS for your application pool..."
-aliases: ["/blog/jjameson/archive/2010/04/20/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx", "/blog/jjameson/archive/2010/04/21/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/20/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx",
+    "/blog/jjameson/archive/2010/04/21/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Debugging", "Web Development"]

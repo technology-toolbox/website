@@ -6,7 +6,11 @@ excerpt:
   each build . However, incrementing the assembing version is only part of my
   recommended build and deployment process . 
    The following figure illustrates how deployments to..."
-aliases: ["/blog/jjameson/archive/2010/04/06/automated-deployments-to-dev-from-the-latest-folder.aspx", "/blog/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/06/automated-deployments-to-dev-from-the-latest-folder.aspx",
+    "/blog/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Simplify", "Core Development", "TFS"]

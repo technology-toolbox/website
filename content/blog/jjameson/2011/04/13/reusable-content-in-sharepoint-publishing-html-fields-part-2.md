@@ -6,7 +6,10 @@ excerpt:
   Content\" feature in Microsoft Office SharePoint Server (MOSS) 2007 and
   SharePoint Server 2010. In this post, I show you how to programmatically add
   Reusable Content list items (which..."
-aliases: ["/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

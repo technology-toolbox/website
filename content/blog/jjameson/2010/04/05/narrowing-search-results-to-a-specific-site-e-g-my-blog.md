@@ -7,7 +7,11 @@ excerpt:
    In my response, I pointed out that you can narrow your search results from
   Bing to a specific site. 
    For example, suppose you were looking for a blog post that..."
-aliases: ["/blog/jjameson/archive/2010/04/04/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx", "/blog/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/04/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx",
+    "/blog/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "Simplify", "MOSS 2007"]

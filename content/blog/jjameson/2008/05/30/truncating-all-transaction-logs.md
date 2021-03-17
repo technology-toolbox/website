@@ -6,7 +6,11 @@ excerpt:
   Transaction Logs.sql . While I would never recommend running this script in a
   Production environment (PROD), I find it to be very helpful for periodically
   freeing up disk space in..."
-aliases: ["/blog/jjameson/archive/2008/05/29/truncating-all-transaction-logs.aspx", "/blog/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/05/29/truncating-all-transaction-logs.aspx",
+    "/blog/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["SQL Server", "Toolbox"]

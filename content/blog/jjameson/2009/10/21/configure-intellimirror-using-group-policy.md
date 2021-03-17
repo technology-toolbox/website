@@ -7,7 +7,11 @@ excerpt:
   redirect the Desktop and Documents folders to a server(a.k.a.
   \"IntelliMirror\"). 
    Even though I don't have..."
-aliases: ["/blog/jjameson/archive/2009/10/20/configure-intellimirror-using-group-policy.aspx", "/blog/jjameson/archive/2009/10/21/configure-intellimirror-using-group-policy.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/20/configure-intellimirror-using-group-policy.aspx",
+    "/blog/jjameson/archive/2009/10/21/configure-intellimirror-using-group-policy.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]

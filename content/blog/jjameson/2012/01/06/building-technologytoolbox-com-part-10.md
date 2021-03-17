@@ -6,7 +6,11 @@ excerpt:
   section on the Technology Toolbox home page. In this post, I'll show you how I
   built on that foundation to generate the content for the \"Most Popular
   Posts\" section."
-aliases: ["/blog/jjameson/archive/2012/01/05/building-technologytoolbox-com-part-10.aspx", "/blog/jjameson/archive/2012/01/06/building-technologytoolbox-com-part-10.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/01/05/building-technologytoolbox-com-part-10.aspx",
+    "/blog/jjameson/archive/2012/01/06/building-technologytoolbox-com-part-10.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "My System", "Subtext", "Web Development"]

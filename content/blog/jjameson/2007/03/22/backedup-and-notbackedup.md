@@ -6,7 +6,11 @@ excerpt:
   with commented on how developers tend to have their own unique way of managing
   files, but that mine was one of the most bizarre he had ever seen. It has been
   four years, but..."
-aliases: ["/blog/jjameson/archive/2007/03/21/backedup-and-notbackedup.aspx", "/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/03/21/backedup-and-notbackedup.aspx",
+    "/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System", "Toolbox"]

@@ -6,7 +6,11 @@ excerpt:
   week, I learned a lot -- not only about future versions of our products, but
   also numerous tips and tricks for current versions. One of the most valuable
   insights I gained was..."
-aliases: ["/blog/jjameson/archive/2009/02/09/branching-strategy-in-team-foundation-server.aspx", "/blog/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/02/09/branching-strategy-in-team-foundation-server.aspx",
+    "/blog/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]

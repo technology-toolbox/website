@@ -5,7 +5,10 @@ lastmod: 2013-05-24T21:57:54-06:00
 excerpt:
   "Even though it doesn't take long to add a folder to %Path% by clicking
   through Windows, I prefer to do this using a little PowerShell instead."
-aliases: ["/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-the-path-environment-variable.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2013/05/24/powershell-scripts-for-managing-the-path-environment-variable.aspx",
+  ]
 draft: true
 categories: ["Development", "Infrastructure", "My System", "SharePoint"]
 tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]

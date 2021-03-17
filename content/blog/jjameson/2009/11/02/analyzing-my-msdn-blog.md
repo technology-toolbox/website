@@ -6,7 +6,11 @@ excerpt:
   this morning I thought I would do something a little different by providing
   some analysis on my blog. 
    I extracted the data from Community Server into an Excel spreadsheet so..."
-aliases: ["/blog/jjameson/archive/2009/11/01/analyzing-my-msdn-blog.aspx", "/blog/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/01/analyzing-my-msdn-blog.aspx",
+    "/blog/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

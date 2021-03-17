@@ -6,7 +6,11 @@ excerpt:
   Datacenter\" while discussing one of the servers running in my basement. Since
   then I've referenced my home lab about a dozen times in different posts but
   never provided significant details..."
-aliases: ["/blog/jjameson/archive/2009/09/13/the-jameson-datacenter.aspx", "/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/13/the-jameson-datacenter.aspx",
+    "/blog/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Virtualization"]

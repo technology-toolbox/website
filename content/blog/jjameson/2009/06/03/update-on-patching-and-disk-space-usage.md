@@ -6,7 +6,11 @@ excerpt:
   slipstreaming service packs . Having just been through an ordeal installing
   Windows Server 2008 SP2, I thought it would be worthwhile to provide an update
   (since that original..."
-aliases: ["/blog/jjameson/archive/2009/06/02/update-on-patching-and-disk-space-usage.aspx", "/blog/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/02/update-on-patching-and-disk-space-usage.aspx",
+    "/blog/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista", "Windows Server", "Infrastructure", "Virtualization"]

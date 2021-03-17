@@ -6,7 +6,10 @@ excerpt:
   Studio projects to create SharePoint solution packages (WSPs). However, while
   this worked reasonably well, this method always bothered me a little because
   the post-build events..."
-aliases: ["/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]

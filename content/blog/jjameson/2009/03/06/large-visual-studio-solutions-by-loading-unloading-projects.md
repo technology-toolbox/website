@@ -6,7 +6,11 @@ excerpt:
   Studio solutions. Note that I put this in quotes, because the definition of
   \"large\" will likely vary widely based on your individual experience. Note
   that I'm not referring to \"large..."
-aliases: ["/blog/jjameson/archive/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects.aspx", "/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects.aspx",
+    "/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]

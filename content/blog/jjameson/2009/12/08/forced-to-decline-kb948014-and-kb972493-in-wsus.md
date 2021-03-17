@@ -6,7 +6,11 @@ excerpt:
   installing KB 970892 on one of my servers. Thankfully, this morning I
   confirmed the server no longer increments the Computers with Errors column in
   the daily report I receive from..."
-aliases: ["/blog/jjameson/archive/2009/12/07/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx", "/blog/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/12/07/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx",
+    "/blog/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS", "Infrastructure"]

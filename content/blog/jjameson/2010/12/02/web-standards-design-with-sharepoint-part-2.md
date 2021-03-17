@@ -6,7 +6,10 @@ excerpt:
   sites in Microsoft Office SharePoint Server (MOSS) 2007 based on Web standards
   and the 960 Grid System . I had intended on following up with a sample
   solution based on a fictitious..."
-aliases: ["/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "Tugboat"]

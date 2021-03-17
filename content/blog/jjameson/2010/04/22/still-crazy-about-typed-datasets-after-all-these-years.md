@@ -7,7 +7,11 @@ excerpt:
    When architecting and building solutions for customers, I tend to make heavy
   use of typed DataSets. 
    I believe I used them on my very..."
-aliases: ["/blog/jjameson/archive/2010/04/21/still-crazy-about-typed-datasets-after-all-these-years.aspx", "/blog/jjameson/archive/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/21/still-crazy-about-typed-datasets-after-all-these-years.aspx",
+    "/blog/jjameson/archive/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

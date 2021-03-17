@@ -7,7 +7,11 @@ excerpt:
   rows and columns within the table? 
    For example, consider the classic master/detail view that we often find in
   software applications, in which items are shown in a summary table..."
-aliases: ["/blog/jjameson/archive/2009/10/31/constraining-tables-with-css.aspx", "/blog/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/31/constraining-tables-with-css.aspx",
+    "/blog/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

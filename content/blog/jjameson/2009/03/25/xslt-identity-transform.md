@@ -6,7 +6,11 @@ excerpt:
   XSLT \"Identity Transform\" in order to view the raw XML -- in other words,
   without any \"real\" transformation by the XSL stylesheet. 
    For example, suppose you need to customize..."
-aliases: ["/blog/jjameson/archive/2009/03/24/xslt-identity-transform.aspx", "/blog/jjameson/archive/2009/03/25/xslt-identity-transform.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/24/xslt-identity-transform.aspx",
+    "/blog/jjameson/archive/2009/03/25/xslt-identity-transform.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development", "My System"]
 tags: ["MOSS 2007", "Core Development", "Toolbox"]

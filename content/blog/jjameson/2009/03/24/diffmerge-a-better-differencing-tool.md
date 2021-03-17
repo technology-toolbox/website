@@ -7,7 +7,11 @@ excerpt:
    DiffMerge can do everything WinDiff can, plus a whole lot more -- like
   intra-line highlighting, merging, and comparing files using configurable
   rulesets (although you'll..."
-aliases: ["/blog/jjameson/archive/2009/03/23/diffmerge-a-better-differencing-tool.aspx", "/blog/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/23/diffmerge-a-better-differencing-tool.aspx",
+    "/blog/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]

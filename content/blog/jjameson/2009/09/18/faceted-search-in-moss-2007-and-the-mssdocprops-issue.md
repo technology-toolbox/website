@@ -6,7 +6,11 @@ excerpt:
   have a requirement to provide some kind of \"faceted search\" feature that
   allows users to quickly and easily narrow their search results. Before I ever
   knew the commonly accepted..."
-aliases: ["/blog/jjameson/archive/2009/09/17/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx", "/blog/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/17/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx",
+    "/blog/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Infrastructure"]

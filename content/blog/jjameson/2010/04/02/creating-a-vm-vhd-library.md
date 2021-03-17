@@ -6,7 +6,11 @@ excerpt:
   specifically, he wanted to know how I created SysPrep'ed images in order to
   quickly \"spin up\" new VMs for development, testing, or demo purposes. 
    Note that I like to keep my environments..."
-aliases: ["/blog/jjameson/archive/2010/04/01/creating-a-vm-vhd-library.aspx", "/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/01/creating-a-vm-vhd-library.aspx",
+    "/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Virtualization"]

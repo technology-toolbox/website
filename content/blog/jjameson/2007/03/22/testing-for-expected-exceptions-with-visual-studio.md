@@ -7,7 +7,11 @@ excerpt:
   \"Da-da.\" 
    When transitioning a couple of years ago from using NUnit to Visual Studio
   2005, I noticed..."
-aliases: ["/blog/jjameson/archive/2007/03/21/testing-for-expected-exceptions-with-visual-studio.aspx", "/blog/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/03/21/testing-for-expected-exceptions-with-visual-studio.aspx",
+    "/blog/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development"]

@@ -4,7 +4,10 @@ date: 2011-09-02T14:43:00-06:00
 excerpt:
   "Today is my last day with Microsoft and it is with a heavy heart that I now
   say farewell to past and present teammates, coworkers, and managers..."
-aliases: ["/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

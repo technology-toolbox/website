@@ -6,7 +6,11 @@ excerpt:
   (a.k.a. my home lab). In a follow-up post, I also discussed the Active
   Directory domain structure and mentioned how I use the Group Policy feature of
   Active Directory to \"effortlessly..."
-aliases: ["/blog/jjameson/archive/2009/10/13/enabling-remote-desktop-via-group-policy.aspx", "/blog/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/13/enabling-remote-desktop-via-group-policy.aspx",
+    "/blog/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows Server", "Infrastructure"]

@@ -6,7 +6,10 @@ excerpt:
   free space on a 20 GB partition after installing Windows Vista and a handful
   of programs (which although I specified to install on a different partition,
   ended up \"bloating\" my..."
-aliases: ["/blog/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista"]

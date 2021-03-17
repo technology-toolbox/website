@@ -6,7 +6,11 @@ excerpt:
    I'm not sure why I'm repeatedly encountering issues with the latest version
   of Expression Web, but I suspect -- given the frequency at which it is
   crashing -- it may have something to..."
-aliases: ["/blog/jjameson/archive/2010/10/23/recovering-your-work-after-an-expression-web-crash.aspx", "/blog/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/10/23/recovering-your-work-after-an-expression-web-crash.aspx",
+    "/blog/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Debugging", "Web Development"]

@@ -6,7 +6,11 @@ excerpt:
   building solutions for Windows SharePoint Services (WSS) v3 and Microsoft
   Office SharePoint Server (MOSS) 2007. 
    If you use the SPWebConfigModification class to add or modify..."
-aliases: ["/blog/jjameson/archive/2010/03/22/introducing-the-sharepointwebconfighelper-class.aspx", "/blog/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/22/introducing-the-sharepointwebconfighelper-class.aspx",
+    "/blog/jjameson/archive/2010/03/23/introducing-the-sharepointwebconfighelper-class.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]

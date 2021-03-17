@@ -6,7 +6,11 @@ excerpt:
   \"application.master\" in Microsoft Office SharePoint Server (MOSS) 2007
   application pages (e.g. /Library/_layouts/viewlsts.aspx). 
    Note that for custom application pages (i.e. those ASP..."
-aliases: ["/blog/jjameson/archive/2009/09/19/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx", "/blog/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/19/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx",
+    "/blog/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

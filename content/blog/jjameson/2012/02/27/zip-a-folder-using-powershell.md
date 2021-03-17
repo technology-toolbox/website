@@ -5,7 +5,10 @@ excerpt:
   "There are a couple of options for creating a zip file for a specific folder.
   You can either use a third-party solution (like the PowerShell Community
   Extensions) or do it all with \"out-of-the-box\" functionality."
-aliases: ["/blog/jjameson/archive/2012/02/27/zip-a-folder-using-powershell.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/27/zip-a-folder-using-powershell.aspx",
+  ]
 draft: true
 categories: ["Development", "Infrastructure"]
 tags: ["PowerShell"]

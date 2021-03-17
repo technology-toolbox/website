@@ -8,7 +8,11 @@ excerpt:
    
    Public Sub CollapseAllItems()
    Dim solutionExplorer As Window = _..."
-aliases: ["/blog/jjameson/archive/2009/03/10/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx", "/blog/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/10/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx",
+    "/blog/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]

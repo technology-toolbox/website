@@ -6,7 +6,11 @@ excerpt:
   my home lab) is one that I created a couple of years ago in order to eliminate
   various warnings from the Microsoft Baseline Security Advisor (MBSA). 
    To automatically change..."
-aliases: ["/blog/jjameson/archive/2009/10/20/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx", "/blog/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/20/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx",
+    "/blog/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]

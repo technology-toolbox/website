@@ -7,7 +7,11 @@ excerpt:
   the important builds for the project (typically corresponding to each
   milestone or iteration). 
    There..."
-aliases: ["/blog/jjameson/archive/2010/11/28/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx", "/blog/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/11/28/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx",
+    "/blog/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]

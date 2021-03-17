@@ -7,7 +7,11 @@ excerpt:
   SharePoint.\" 
    Here's the overview from the download page : 
    The SharePoint 2010 Developer Training Kit provides..."
-aliases: ["/blog/jjameson/archive/2010/05/23/sharepoint-2010-developer-training-kit.aspx", "/blog/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/23/sharepoint-2010-developer-training-kit.aspx",
+    "/blog/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]

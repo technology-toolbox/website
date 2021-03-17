@@ -6,7 +6,11 @@ excerpt:
   Vista SP2 on my local WSUS (Windows Server Update Services) server. My
   expectation was that the various physical and virtual machines in the
   \"Jameson Datacenter\" would subsequently..."
-aliases: ["/blog/jjameson/archive/2009/05/31/errors-installing-windows-server-2008-sp2.aspx", "/blog/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/05/31/errors-installing-windows-server-2008-sp2.aspx",
+    "/blog/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista", "WSUS", "Windows Server", "Infrastructure"]

@@ -6,7 +6,11 @@ excerpt:
   solution solution based on Dan Cederholm's Tugboat sample site (from his most
   recent book, Handcrafted CSS : More Bulletproof Web Design ). 
    In that sample, however, all of the content..."
-aliases: ["/blog/jjameson/archive/2011/04/26/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx", "/blog/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/26/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx",
+    "/blog/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]

@@ -7,7 +7,10 @@ excerpt:
   searching for the following: 
    \"Windows Server 2008 Server Core installation not affected\"
   site:microsoft..."
-aliases: ["/blog/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["Simplify", "Windows Server", "Infrastructure", "Virtualization"]

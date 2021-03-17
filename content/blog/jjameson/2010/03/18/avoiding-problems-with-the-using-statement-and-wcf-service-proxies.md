@@ -6,7 +6,11 @@ excerpt:
   customer portal built on Microsoft Office SharePoint Server (MOSS) 2007 that
   integrates with multiple external systems via Web services. 
    The database indexes for one of the external..."
-aliases: ["/blog/jjameson/archive/2010/03/17/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx", "/blog/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/17/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx",
+    "/blog/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "WCF"]

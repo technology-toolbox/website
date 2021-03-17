@@ -7,7 +7,11 @@ excerpt:
    Consequently, one of my goals for this week was to update my \"dogfood\" VM
   with the CTP build of SharePoint Server 2010, so that I can continue
   building..."
-aliases: ["/blog/jjameson/archive/2009/08/12/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx", "/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/08/12/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx",
+    "/blog/jjameson/archive/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines.aspx",
+  ]
 draft: true
 categories: ["My System", "Development", "Infrastructure"]
 tags: ["My System", "Core Development", "Virtualization"]

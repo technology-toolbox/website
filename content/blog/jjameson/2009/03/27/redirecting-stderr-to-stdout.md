@@ -6,7 +6,11 @@ excerpt:
   that you can't redirect stderr to stdout in DOS -- er, I mean a command window
   in Microsoft Windows. 
    I would have sworn the last time I tried something like the following..."
-aliases: ["/blog/jjameson/archive/2009/03/26/redirecting-stderr-to-stdout.aspx", "/blog/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/26/redirecting-stderr-to-stdout.aspx",
+    "/blog/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx",
+  ]
 draft: true
 categories: ["Development", "Infrastructure"]
 tags: ["Core Development", "Windows Vista", "Windows Server"]

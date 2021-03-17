@@ -7,7 +7,11 @@ excerpt:
   Money. Heck, I even remember tracking my finances in an Excel workbook before
   that. 
    I just checked my Money..."
-aliases: ["/blog/jjameson/archive/2010/03/27/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx", "/blog/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/27/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx",
+    "/blog/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

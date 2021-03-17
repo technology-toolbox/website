@@ -6,7 +6,11 @@ excerpt:
   License -- but since I don't drive trucks for a living, I use the acronym for
   something entirely different. To me, these three letters correspond to the
   minimum number of drives I like..."
-aliases: ["/blog/jjameson/archive/2011/03/18/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx", "/blog/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/18/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx",
+    "/blog/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "Infrastructure", "SharePoint 2010"]

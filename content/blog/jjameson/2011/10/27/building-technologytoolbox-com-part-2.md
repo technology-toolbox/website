@@ -5,7 +5,11 @@ excerpt:
   "Once I settled on using Subtext as the blogging solution for the Technology
   Toolbox site, I turned my attention to working on the other areas of the
   site..."
-aliases: ["/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-2.aspx", "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-2.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-2.aspx",
+    "/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-2.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["My System", "TFS", "Visual Studio", "Web Development"]

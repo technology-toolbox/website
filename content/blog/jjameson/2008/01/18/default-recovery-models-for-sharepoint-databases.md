@@ -6,7 +6,10 @@ excerpt:
   of them -- and I must warn you upfront that this post isn't exactly a
   \"zinger\" filled with juicy tidbits, recommendations, or workarounds. Rather,
   I simply can't seem to remember..."
-aliases: ["/blog/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

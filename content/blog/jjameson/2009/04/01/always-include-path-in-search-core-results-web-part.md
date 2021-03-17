@@ -6,7 +6,11 @@ excerpt:
   stumbled across at least twice in the last couple of years...I'm hoping that
   if I take the time to blog about it, I won't forget it again. 
    If you don't include Path in the SelectColumns..."
-aliases: ["/blog/jjameson/archive/2009/03/31/always-include-path-in-search-core-results-web-part.aspx", "/blog/jjameson/archive/2009/04/01/always-include-path-in-search-core-results-web-part.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/31/always-include-path-in-search-core-results-web-part.aspx",
+    "/blog/jjameson/archive/2009/04/01/always-include-path-in-search-core-results-web-part.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

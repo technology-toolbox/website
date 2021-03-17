@@ -6,7 +6,11 @@ excerpt:
   Internet-facing site, you almost certainly don't want to include items like
   announcements, contacts, etc. in search results. 
    Consequently, I recommend customers create additional search..."
-aliases: ["/blog/jjameson/archive/2009/03/04/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx", "/blog/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/04/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx",
+    "/blog/jjameson/archive/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

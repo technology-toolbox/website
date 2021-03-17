@@ -6,7 +6,10 @@ excerpt:
   formatting on my blog posts (but only when viewing the default page -- listing
   the most recent posts -- and not when viewing individual posts). Tonight I
   thought I should spend..."
-aliases: ["/blog/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx",
+  ]
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]

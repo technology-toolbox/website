@@ -7,7 +7,11 @@ excerpt:
   product for years... 
    Any features that are scoped to the WebApplication level are automatically
   activated..."
-aliases: ["/blog/jjameson/archive/2010/03/30/sharepoint-features-activated-by-default.aspx", "/blog/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/30/sharepoint-features-activated-by-default.aspx",
+    "/blog/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

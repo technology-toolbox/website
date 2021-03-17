@@ -6,7 +6,11 @@ excerpt:
    Almost a month ago, I wrote a post about using Web standards with Microsoft
   Office SharePoint Server (MOSS) 2007 , but I noted that there would be more to
   come on that subject in the near future. Well, almost a full..."
-aliases: ["/blog/jjameson/archive/2010/02/27/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx", "/blog/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/02/27/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx",
+    "/blog/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Infrastructure", "Development"]
 tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TFS"]

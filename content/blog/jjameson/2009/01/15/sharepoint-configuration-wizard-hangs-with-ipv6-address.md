@@ -6,7 +6,10 @@ excerpt:
   VM for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
   \"corrupted\", I mean to say there were lots of errors in the event log about
   the SharePoint_Config database..."
-aliases: ["/blog/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

@@ -6,7 +6,11 @@ excerpt:
   the out-of-the-box tool that comes with Team Foundation Server (which is also
   called DiffMerge). If you haven't at least evaluated the SourceGear
   alternative, I definitely advise..."
-aliases: ["/blog/jjameson/archive/2009/10/24/essential-add-ins-for-team-foundation-server.aspx", "/blog/jjameson/archive/2009/10/25/essential-add-ins-for-team-foundation-server.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/24/essential-add-ins-for-team-foundation-server.aspx",
+    "/blog/jjameson/archive/2009/10/25/essential-add-ins-for-team-foundation-server.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Visual Studio", "TFS"]

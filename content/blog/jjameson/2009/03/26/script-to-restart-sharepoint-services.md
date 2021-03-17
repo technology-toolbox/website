@@ -7,7 +7,11 @@ excerpt:
   audience. 
    As I've noted in the past , memory leaks are certainly not uncommon in the
   world of SharePoint..."
-aliases: ["/blog/jjameson/archive/2009/03/25/script-to-restart-sharepoint-services.aspx", "/blog/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/25/script-to-restart-sharepoint-services.aspx",
+    "/blog/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "WSS v3", "Toolbox"]

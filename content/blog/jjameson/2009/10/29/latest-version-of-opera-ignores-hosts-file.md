@@ -6,7 +6,11 @@ excerpt:
   week with the new portal we are building for a customer. Unfortunately, the
   layout issue only occurred in the Safari browser. 
    Since I couldn't repro the issue in Internet..."
-aliases: ["/blog/jjameson/archive/2009/10/28/latest-version-of-opera-ignores-hosts-file.aspx", "/blog/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/28/latest-version-of-opera-ignores-hosts-file.aspx",
+    "/blog/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

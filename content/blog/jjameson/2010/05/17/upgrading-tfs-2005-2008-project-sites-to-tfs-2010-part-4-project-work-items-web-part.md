@@ -6,7 +6,10 @@ excerpt:
   functionality in Team Foundation Server (TFS) 2010 on project sites upgraded
   from TFS 2005/2008 (i.e. sites originally created with the MSF Agile v4.x
   process templates). I noted that..."
-aliases: ["/blog/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx",
+  ]
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 2010", "PowerShell"]

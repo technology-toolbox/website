@@ -6,7 +6,11 @@ excerpt:
   Datacenter \" (each one hosting a variety of different VMs). 
    On the rare occasion that a patch comes out on Windows Update that affects
   Windows Server 2008 Server Core edition (such..."
-aliases: ["/blog/jjameson/archive/2010/04/16/stagger-the-startup-of-your-virtual-machines.aspx", "/blog/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/16/stagger-the-startup-of-your-virtual-machines.aspx",
+    "/blog/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Virtualization"]

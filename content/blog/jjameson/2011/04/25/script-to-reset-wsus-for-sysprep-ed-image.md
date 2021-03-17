@@ -8,7 +8,11 @@ excerpt:
    Reset WSUS for SysPrep Image.cmd 
    
   ..."
-aliases: ["/blog/jjameson/archive/2011/04/24/script-to-reset-wsus-for-sysprep-ed-image.aspx", "/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/24/script-to-reset-wsus-for-sysprep-ed-image.aspx",
+    "/blog/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx",
+  ]
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["WSUS", "Infrastructure", "Virtualization", "Toolbox"]

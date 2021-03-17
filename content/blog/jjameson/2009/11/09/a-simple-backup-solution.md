@@ -6,7 +6,11 @@ excerpt:
   \"Jameson Datacenter\" (a.k.a. my home lab). However, that doesn't mean that I
   treat my infrastructure lightly. 
    In previous posts, I've covered many of the Group Policy objects..."
-aliases: ["/blog/jjameson/archive/2009/11/08/a-simple-backup-solution.aspx", "/blog/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/08/a-simple-backup-solution.aspx",
+    "/blog/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx",
+  ]
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows Server", "Infrastructure"]

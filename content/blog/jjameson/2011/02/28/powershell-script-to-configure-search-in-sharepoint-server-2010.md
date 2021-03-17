@@ -7,7 +7,11 @@ excerpt:
    When using Central Administration and/or the Farm Configuration Wizard to
   create and configure the Search Service Application, the resulting
   databases..."
-aliases: ["/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx", "/blog/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx",
+    "/blog/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]

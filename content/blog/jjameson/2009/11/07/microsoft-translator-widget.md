@@ -7,7 +7,11 @@ excerpt:
    Actually, this isn't really new (apparently it has been available for over
   six months now) but it was certainly new to me. 
    A colleague of mine on a previous project..."
-aliases: ["/blog/jjameson/archive/2009/11/06/microsoft-translator-widget.aspx", "/blog/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/06/microsoft-translator-widget.aspx",
+    "/blog/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

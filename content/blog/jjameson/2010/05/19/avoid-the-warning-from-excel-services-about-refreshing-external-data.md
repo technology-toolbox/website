@@ -7,7 +7,11 @@ excerpt:
   Warn on Refresh setting of the trusted file location for the Excel Services
   Application. 
    If you..."
-aliases: ["/blog/jjameson/archive/2010/05/18/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx", "/blog/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/18/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx",
+    "/blog/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "TFS", "SharePoint 2010"]

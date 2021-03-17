@@ -7,7 +7,10 @@ excerpt:
    Have you ever encountered the following error in Microsoft Office SharePoint
   Server (MOSS) 2007? 
    An error occurred during..."
-aliases: ["/blog/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

@@ -6,7 +6,11 @@ excerpt:
   features of the new Technology Toolbox website and provide a high-level
   overview of the underlying architecture. Subsequent posts will cover different
   aspects of the site in greater detail."
-aliases: ["/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx", "/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx",
+    "/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Subtext", "Web Development"]

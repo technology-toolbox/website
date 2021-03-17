@@ -6,7 +6,11 @@ excerpt:
   model for various SharePoint databases . In that post, I described how I would
   often toggle the SQL Server databases in SharePoint development environments
   from the default Full..."
-aliases: ["/blog/jjameson/archive/2011/03/18/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx", "/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/03/18/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx",
+    "/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "SQL Server", "SharePoint 2010"]

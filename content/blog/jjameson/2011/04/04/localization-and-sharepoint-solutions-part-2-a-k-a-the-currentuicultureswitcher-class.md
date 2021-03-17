@@ -6,7 +6,11 @@ excerpt:
   SharePoint projects for large, multinational corporations including Agilent
   Technologies and KPMG . I also mentioned how one of the sprints last year for
   my current project was dedicated..."
-aliases: ["/blog/jjameson/archive/2011/04/03/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx", "/blog/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/04/03/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx",
+    "/blog/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx",
+  ]
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "SharePoint 2010"]

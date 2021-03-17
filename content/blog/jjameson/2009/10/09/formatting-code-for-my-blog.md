@@ -7,7 +7,11 @@ excerpt:
   for the Web. 
    Actually, calling it \"my method\" is definitely a bit of a stretch. I
   certainly didn..."
-aliases: ["/blog/jjameson/archive/2009/10/08/formatting-code-for-my-blog.aspx", "/blog/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/08/formatting-code-for-my-blog.aspx",
+    "/blog/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]

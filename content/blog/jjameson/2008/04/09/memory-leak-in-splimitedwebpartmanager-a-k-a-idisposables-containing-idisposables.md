@@ -6,7 +6,10 @@ excerpt:
   SharePoint 2007 and WSS 3.0 Dispose Patterns by Example ). It provides
   numerous code samples that demonstrate memory leaks commonly produced when
   working with the SharePoint object..."
-aliases: ["/blog/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/04/09/memory-leak-in-splimitedwebpartmanager-a-k-a-idisposables-containing-idisposables.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]

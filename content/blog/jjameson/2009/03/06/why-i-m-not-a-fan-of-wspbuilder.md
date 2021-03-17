@@ -6,7 +6,11 @@ excerpt:
   customer from a legacy Web platform to Microsoft Office SharePoint Server
   (MOSS) 2007 came to an end a few weeks ago. Since then, I have joined another
   team helping a different..."
-aliases: ["/blog/jjameson/archive/2009/03/05/why-i-m-not-a-fan-of-wspbuilder.aspx", "/blog/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/05/why-i-m-not-a-fan-of-wspbuilder.aspx",
+    "/blog/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

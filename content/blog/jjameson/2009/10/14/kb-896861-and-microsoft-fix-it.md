@@ -6,7 +6,11 @@ excerpt:
   Office SharePoint Server (MOSS) 2007. As I've noted in a previous post , I've
   found that I need to apply one of the registry hacks described in the
   following KnowledgeBase article..."
-aliases: ["/blog/jjameson/archive/2009/10/13/kb-896861-and-microsoft-fix-it.aspx", "/blog/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/10/13/kb-896861-and-microsoft-fix-it.aspx",
+    "/blog/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx",
+  ]
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development"]

@@ -6,7 +6,11 @@ excerpt:
   the SearchBoxEx control in Microsoft Office SharePoint Server (MOSS) 2007 does
   not work consistently across different browsers. Specifically, I am referring
   to the issue where pressing..."
-aliases: ["/blog/jjameson/archive/2009/09/30/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx", "/blog/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/09/30/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx",
+    "/blog/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

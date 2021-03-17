@@ -6,7 +6,11 @@ excerpt:
   working with SharePoint Search URLs. The class is used to easily build or
   parse the various query string parameters used by SharePoint Search (e.g.
   keywords, search scope, additional..."
-aliases: ["/blog/jjameson/archive/2010/03/31/unit-tests-for-icloneable.aspx", "/blog/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/03/31/unit-tests-for-icloneable.aspx",
+    "/blog/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]

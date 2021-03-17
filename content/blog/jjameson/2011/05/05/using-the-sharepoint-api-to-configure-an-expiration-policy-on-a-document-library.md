@@ -6,7 +6,11 @@ excerpt:
   policy on a SharePoint document library, there may still be reasons why you
   want to do this using the SharePoint object model instead. 
    For example, suppose I have a \"Temporary..."
-aliases: ["/blog/jjameson/archive/2011/05/04/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx", "/blog/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/05/04/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx",
+    "/blog/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]

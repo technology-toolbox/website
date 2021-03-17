@@ -6,7 +6,11 @@ excerpt:
   fateful email from my customer notifying us that they have decided to abandon
   using the variations feature in Microsoft Office SharePoint Server (MOSS)
   2007. Note that the original..."
-aliases: ["/blog/jjameson/archive/2007/10/29/dumping-moss-2007-variations-part-1.aspx", "/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2007/10/29/dumping-moss-2007-variations-part-1.aspx",
+    "/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-1.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

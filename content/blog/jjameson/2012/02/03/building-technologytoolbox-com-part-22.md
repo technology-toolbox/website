@@ -5,7 +5,11 @@ excerpt:
   "In yesterday's post, I described how I integrated Google Site Search into the
   Technology Toolbox website. This post provides a similar walkthrough for
   implementing Google Analytics."
-aliases: ["/blog/jjameson/archive/2012/02/02/building-technologytoolbox-com-part-22.aspx", "/blog/jjameson/archive/2012/02/03/building-technologytoolbox-com-part-22.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2012/02/02/building-technologytoolbox-com-part-22.aspx",
+    "/blog/jjameson/archive/2012/02/03/building-technologytoolbox-com-part-22.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Web Development"]

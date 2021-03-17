@@ -6,7 +6,10 @@ excerpt:
   Consequently, I have re-added my custom CSS rules to make my blog posts look
   much like they did before the upgrade. 
    Kudos to Sean Jenkin and his team for tirelessly working through..."
-aliases: ["/blog/jjameson/archive/2010/05/25/update-on-upgrade-of-msdn-blog-platform.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/25/update-on-upgrade-of-msdn-blog-platform.aspx",
+  ]
 draft: true
 categories: [""]
 tags: [""]

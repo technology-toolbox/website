@@ -8,7 +8,10 @@ excerpt:
   the 
   beginning, I can rapidly define the structure of the content and subsequently
   create the corresponding CSS rules to style the pages..."
-aliases: ["/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx",
+  ]
 draft: true
 categories: ["My System", "Development"]
 tags: ["SharePoint 2010", "Web Development"]

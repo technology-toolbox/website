@@ -6,7 +6,11 @@ excerpt:
   toolbox: Count Records in All Tables.sql 
    Sometimes when I get \"dropped into\" a consulting situation with a new
   customer, I need to quickly get acquainted with one or more of their..."
-aliases: ["/blog/jjameson/archive/2008/05/29/counting-rows-in-all-database-tables.aspx", "/blog/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2008/05/29/counting-rows-in-all-database-tables.aspx",
+    "/blog/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["SQL Server", "Toolbox"]

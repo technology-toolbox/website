@@ -7,7 +7,11 @@ excerpt:
    I'll be honest, I tried one of the early betas of IE8 on a VM a long time
   ago, but I didn't spend a lot of time with it because it always seemed like
   there was some more..."
-aliases: ["/blog/jjameson/archive/2009/03/23/internet-explorer-8-upgrade.aspx", "/blog/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/23/internet-explorer-8-upgrade.aspx",
+    "/blog/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx",
+  ]
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]

@@ -9,7 +9,11 @@ excerpt:
   it when I got back home from Seattle.
   This morning I  installed Soluto on my Windows 7 x64 desktop at home.
   Everything seemed great...at first...."
-aliases: ["/blog/jjameson/archive/2010/07/31/soluto-and-antivir-solution-pro-virus.aspx", "/blog/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/07/31/soluto-and-antivir-solution-pro-virus.aspx",
+    "/blog/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Infrastructure", "Windows 7"]

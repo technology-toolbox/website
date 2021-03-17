@@ -6,7 +6,11 @@ excerpt:
   MSDN/TechNet blog platform), I could specify a URL like the following to show
   a smaller version of an image in a blog post: 
    http://blogs.msdn.com/photos/jjameson/images/9997719/500x258..."
-aliases: ["/blog/jjameson/archive/2010/06/06/showing-resized-images-on-a-community-server-telligent-blog.aspx", "/blog/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/06/06/showing-resized-images-on-a-community-server-telligent-blog.aspx",
+    "/blog/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System"]

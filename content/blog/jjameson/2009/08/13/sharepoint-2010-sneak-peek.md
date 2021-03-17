@@ -7,7 +7,11 @@ excerpt:
   Redmond. Needless to say, it was a very long week packed full of great
   information on what's new in the next version. 
    Note that we have been explicitly..."
-aliases: ["/blog/jjameson/archive/2009/08/12/sharepoint-2010-sneak-peek.aspx", "/blog/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/08/12/sharepoint-2010-sneak-peek.aspx",
+    "/blog/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]

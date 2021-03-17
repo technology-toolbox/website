@@ -6,7 +6,11 @@ excerpt:
   copying it from Visual Studio or SQL Server Management Studio and then running
   a simple console application to convert the RTF clipboard text to HTML). 
    I recently started doing..."
-aliases: ["/blog/jjameson/archive/2010/05/27/formatting-powershell-script-for-my-blog.aspx", "/blog/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/05/27/formatting-powershell-script-for-my-blog.aspx",
+    "/blog/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx",
+  ]
 draft: true
 categories: ["My System"]
 tags: ["My System", "PowerShell"]

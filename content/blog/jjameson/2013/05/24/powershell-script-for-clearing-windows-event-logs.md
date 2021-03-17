@@ -4,7 +4,10 @@ date: 2013-05-24T23:01:34-06:00
 excerpt:
   "Sure, you can just type \"wevtutil el | % { wevtutil cl $_ }\" whenever you
   feel like it, but how fun is that?!"
-aliases: ["/blog/jjameson/archive/2013/05/24/powershell-script-for-clearing-windows-event-logs.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2013/05/24/powershell-script-for-clearing-windows-event-logs.aspx",
+  ]
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server"]

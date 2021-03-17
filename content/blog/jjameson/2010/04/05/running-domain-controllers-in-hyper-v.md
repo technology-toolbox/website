@@ -6,7 +6,10 @@ excerpt:
   lab) currently runs two domain controllers (DCs) on a couple of VMs. 
    If you choose to virtualize one or more DCs in your environment, make sure
   you are aware of the considerations..."
-aliases: ["/blog/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx",
+  ]
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]

@@ -6,7 +6,11 @@ excerpt:
   Server Profiler in order to identify potential performance issues. 
    While working on some proof-of-concept code for my current project, I found
   the PublishingPageCollection..."
-aliases: ["/blog/jjameson/archive/2010/09/11/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx", "/blog/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2010/09/11/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx",
+    "/blog/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]

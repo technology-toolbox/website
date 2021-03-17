@@ -6,7 +6,11 @@ excerpt:
   the December 2008 CU), there appears to be a bug where a scope that only
   contains Property Query rules is not recognized as having any rules at all
   (i.e. empty) and therefore..."
-aliases: ["/blog/jjameson/archive/2009/03/04/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx", "/blog/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx"]
+aliases:
+  [
+    "/blog/jjameson/archive/2009/03/04/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx",
+    "/blog/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx",
+  ]
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
