@@ -204,7 +204,7 @@ your posts without having to specify a site filter each time.
 > however if you subsequently change the search keywords on the Bing search
 > results page (presumably because you want to search for something else on my
 > blog), then the site filter (originally specified with the "q1" query string
-> parameter) is lost and therefore you get results from the entire Web. Bummer.\
-> \
+> parameter) is lost and therefore you get results from the entire Web. Bummer.
+>
 > To resolve this issue, I modified the JavaScript to simply append the site
 > filter to the "q" query string parameter instead.

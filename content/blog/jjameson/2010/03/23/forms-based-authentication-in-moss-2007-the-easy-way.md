@@ -418,7 +418,7 @@ to the Web.config files:
 ```
 
 Notice that the default role provider is set to
-`AspNetWindowsTokenRoleProvider,` because this is required when accessing the
+`AspNetWindowsTokenRoleProvider`, because this is required when accessing the
 site via the intranet URL using Windows Authentication. Also note that the
 collection of role providers is not cleared, but rather the default
 `AspNetSqlRoleProvider` is explicitly removed instead. In other words, we want

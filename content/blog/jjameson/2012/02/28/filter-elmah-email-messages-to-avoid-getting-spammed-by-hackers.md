@@ -245,8 +245,8 @@ the issue as "invalid."
 Personally I'd much rather see the status designate something like **Won't Fix**
 (like we used to say back when I worked at Microsoft) rather than **Invalid** --
 but I suppose this is more of a nitpick with the setup of
-[http://code.google.com](http://code.google.com).\
-\
+[http://code.google.com](http://code.google.com).
+
 "Invalid" makes me think this isn't a bug -- and at the very least, I would
 really like to see some **Important** note on the
 [ELMAH error filter page](http://code.google.com/p/elmah/wiki/ErrorFiltering)

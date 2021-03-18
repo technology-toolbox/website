@@ -228,7 +228,7 @@ unless you actually were a member of this project ;-)
 > in ESI (strSortExpression) and to override the default max results value to
 > allow 1000 results. (1 hour).\
 > \
-> **Release Management**
+> **Release Management**\
 > Merge updated ASP files into legacy VSS and deploy to WCOSLSD and CAGCHEM (1
 > hour)\
 > \

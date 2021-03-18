@@ -126,7 +126,7 @@ alt="Disk usage on VM with Windows Server 2003 SP2 slipstreamed"
 class="screenshot" height="419" width="600"
 title="Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP2-slipstreamed%29-600x419.jpg)
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-%28SP2-slipstreamed%29-767x536.jpg)
 
 Comparing this with the previous snapshot from the SP1 slipstreamed version
 (prior to updating with SP2), you can see that the size of the **Windows**

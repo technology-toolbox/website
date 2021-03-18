@@ -552,7 +552,7 @@ deployment operations (for example, when you invoke the `Add-SPSolution`
 cmdlet). I discovered this issue the "hard way" -- in other words, by attaching
 WinDbg to my PowerShell command prompt.
 
-When I searched the Internet for ***PowerShell reload assembly** *(looking for
+When I searched the Internet for ***PowerShell reload assembly*** (looking for
 an easy way to unload a specific assembly), I discovered the following blog
 post:
 

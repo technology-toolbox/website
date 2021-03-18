@@ -48,7 +48,13 @@ width="600" title="Figure 2: Workaround for search scope bug" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-workaround-796x564.jpg)
 
-Note that in the screenshot above, **http://foobar** is the Web application that I want to include content from, while excluding the "Pages" libraries themselves from the results (i.e. items where **contentclass = STS\_List\_850**). In other words, I want individual pages within the Pages library to appear in the search results -- just not the actual **Pages** libraries themselves (e.g. the **All Items** view of the list).
+Note that in the screenshot above, **http://foobar** is the Web application that
+I want to include content from, while excluding the "Pages" libraries themselves
+from the results (i.e. items where **contentclass = STS\_List\_850**). In other
+words, I want individual pages within the Pages library to appear in the search
+results -- just not the actual **Pages** libraries themselves (e.g. the **All
+Items** view of the list).
+
 Also note that this is not the exhaustive list of rules required to exclude the
 various SharePoint items from search results that you most likely don't want to
 show to users on an Internet-facing MOSS site. I'll defer that to a

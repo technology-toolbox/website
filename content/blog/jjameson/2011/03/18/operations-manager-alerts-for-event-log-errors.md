@@ -132,15 +132,15 @@ Repeat the process to create a similar alert for errors in the System event log.
 > If you do not specify any fields in the Alert Suppression dialog, then you may
 > receive numerous alerts within a short period of time (for example, when
 > SharePoint Server 2010 floods the Application event log due to an issue with
-> least-privilege configuration).\
-> \
+> least-privilege configuration).
+>
 > When this occurs, Operations Manager will detect the high frequency of alerts
 > and temporarily suspend the notification, and display a different alert
-> instead:\
-> \
+> instead:
+>
 > **Alert rule:** Alert generation was temporarily suspended due to too many
-> alerts.\
-> \
+> alerts.
+>
 > **Alert description:** A rule has generated 50 alerts in the last 60 seconds.
 > Usually, when a rule generates this many alerts, it is because the rule
 > definition is misconfigured. Please examine the rule for errors. In order to

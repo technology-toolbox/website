@@ -73,8 +73,8 @@ in
 you will find that ASP.NET renders an anchor element with no `href` attribute
 (e.g. `<a>Mon Oct 26 08:23</a>`) -- which obviously doesn't work. This appears
 to be "by design" -- in order to "mitigate against cross-site scripting
-attacks."\
-\
+attacks."
+
 Refer to the following for more detail:
 
 {{< reference

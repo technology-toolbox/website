@@ -306,7 +306,7 @@ type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE** in
 
 {{< /blockquote >}}
 
-Thus I thought that I *should *be able to use a domain account for Analysis
+Thus I thought that I *should* be able to use a domain account for Analysis
 Services.
 
 As a sanity check, I also found the following in

@@ -159,8 +159,7 @@ and no custom content types:
    Display Name: English (United States)\
    Locale: English (United States)\
    Source Variation: Yes\
-   Publishing site template: Publishing Site with Workflow
-   **
+   Publishing site template: Publishing Site with Workflow**
 
 5. Create the variation hierarchies (to create the **/en-US** site)
 
