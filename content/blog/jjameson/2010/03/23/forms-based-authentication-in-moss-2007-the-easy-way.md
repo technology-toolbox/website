@@ -15,6 +15,10 @@ draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam - FBA Configuration.zip"
+  fileName: Fabrikam - FBA Configuration.zip
+  fileSizeInBytes: 81533
 ---
 
 In

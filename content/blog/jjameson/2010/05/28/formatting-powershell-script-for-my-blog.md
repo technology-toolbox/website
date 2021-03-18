@@ -15,6 +15,10 @@ draft: true
 categories: ["My System"]
 tags: ["My System", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Set-ClipboardScriptHtmlBlock.zip"
+  fileName: Set-ClipboardScriptHtmlBlock.zip
+  fileSizeInBytes: 3231
 ---
 
 In a [previous post](/blog/jjameson/2009/10/09/formatting-code-for-my-blog), I

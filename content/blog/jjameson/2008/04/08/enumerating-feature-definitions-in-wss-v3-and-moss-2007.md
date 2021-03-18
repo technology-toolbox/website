@@ -14,6 +14,10 @@ draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/08/enumerating-feature-definitions-in-wss-v3-and-moss-2007.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/MOSS 2007 Feature Definitions.xlsx"
+  fileName: MOSS 2007 Feature Definitions.xlsx
+  fileSizeInBytes: 24852
 ---
 
 There might be occasions where you need to "decode" the feature GUID in Windows

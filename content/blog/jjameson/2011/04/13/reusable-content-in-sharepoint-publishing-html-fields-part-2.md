@@ -14,6 +14,10 @@ draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam Demo - SharePointReusableContent.zip"
+  fileName: Fabrikam Demo - SharePointReusableContent.zip
+  fileSizeInBytes: 1241894
 ---
 
 In

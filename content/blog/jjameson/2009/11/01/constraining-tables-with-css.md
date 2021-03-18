@@ -16,6 +16,10 @@ draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo - Constraining Tables with CSS.zip"
+  fileName: Demo - Constraining Tables with CSS.zip
+  fileSizeInBytes: 24798
 ---
 
 Have you ever wanted to display data in a table but limit the size of the rows

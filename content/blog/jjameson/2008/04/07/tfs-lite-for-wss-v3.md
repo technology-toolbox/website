@@ -15,6 +15,10 @@ draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/TFS Lite - WSS v3.zip"
+  fileName: TFS Lite - WSS v3.zip
+  fileSizeInBytes: 372158
 ---
 
 In my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2), I

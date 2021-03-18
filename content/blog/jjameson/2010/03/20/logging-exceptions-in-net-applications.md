@@ -15,6 +15,10 @@ draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo %28LoggingAndDiagnostics%29.zip"
+  fileName: Demo (LoggingAndDiagnostics).zip
+  fileSizeInBytes: 42289
 ---
 
 Last summer I wrote a post introducing

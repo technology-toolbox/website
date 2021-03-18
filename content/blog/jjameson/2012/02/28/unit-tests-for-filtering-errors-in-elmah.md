@@ -12,6 +12,10 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "Web Development"]
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Elmah.DeveloperTests.zip"
+  fileName: Elmah.DeveloperTests.zip
+  fileSizeInBytes: 4843
 ---
 
 In

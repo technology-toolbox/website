@@ -15,6 +15,10 @@ draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/SharePointClaimsAuthentication.zip"
+  fileName: SharePointClaimsAuthentication.zip
+  fileSizeInBytes: 971819
 ---
 
 In

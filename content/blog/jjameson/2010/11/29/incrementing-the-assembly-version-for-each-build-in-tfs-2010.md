@@ -14,6 +14,10 @@ draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/foobar2010 - 1.0.12.0.zip"
+  fileName: foobar2010 - 1.0.12.0.zip
+  fileSizeInBytes: 21334
 ---
 
 > **Update (2010-12-03)**

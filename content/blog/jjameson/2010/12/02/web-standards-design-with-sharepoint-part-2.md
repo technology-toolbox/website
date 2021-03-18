@@ -14,6 +14,10 @@ draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Tugboat - 1.0.8.0 %28Sprint 1%29.zip"
+  fileName: Tugboat - 1.0.8.0 (Sprint 1).zip
+  fileSizeInBytes: 3809415
 ---
 
 In the

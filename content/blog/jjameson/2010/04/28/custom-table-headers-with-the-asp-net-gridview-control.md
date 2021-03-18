@@ -14,6 +14,10 @@ draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo - Custom Table Headers.zip"
+  fileName: Demo - Custom Table Headers.zip
+  fileSizeInBytes: 28462
 ---
 
 In my

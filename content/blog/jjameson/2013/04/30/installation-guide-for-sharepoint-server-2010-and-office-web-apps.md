@@ -13,6 +13,10 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam Demo - SharePointExtranet.zip"
+  fileName: Fabrikam Demo - SharePointExtranet.zip
+  fileSizeInBytes: 3704288
 ---
 
 This post provides a sample installation guide for an extranet platform based on

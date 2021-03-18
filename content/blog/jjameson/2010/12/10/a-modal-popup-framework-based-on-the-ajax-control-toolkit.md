@@ -15,6 +15,10 @@ draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/ModalPopupFramework.zip"
+  fileName: ModalPopupFramework.zip
+  fileSizeInBytes: 954874
 ---
 
 The "Announcements" feature that I developed for a customer about a year ago

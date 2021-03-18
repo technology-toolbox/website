@@ -14,6 +14,10 @@ draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam - AJAX Configuration.zip"
+  fileName: Fabrikam - AJAX Configuration.zip
+  fileSizeInBytes: 78002
 ---
 
 In my

@@ -15,6 +15,10 @@ draft: true
 categories: ["Development", "SharePoint"]
 tags: ["Core Development", "WSS v2"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/TFS Lite - WSS v2.zip"
+  fileName: TFS Lite - WSS v2.zip
+  fileSizeInBytes: 230157
 ---
 
 > **Update (2008-04-07)**

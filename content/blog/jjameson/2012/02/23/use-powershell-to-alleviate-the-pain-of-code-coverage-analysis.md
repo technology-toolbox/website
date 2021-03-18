@@ -12,6 +12,10 @@ aliases:
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["Core Development", "MOSS 2007", "PowerShell", "SharePoint 2010", "Visual Studio"]
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/SharePoint2010CodeCoverage.zip"
+  fileName: SharePoint2010CodeCoverage.zip
+  fileSizeInBytes: 136878
 ---
 
 In

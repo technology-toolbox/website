@@ -14,6 +14,10 @@ draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx"
+attachment: 
+  url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam %28SharePointDevelopment%29.zip"
+  fileName: Fabrikam (SharePointDevelopment).zip
+  fileSizeInBytes: 559957
 ---
 
 Last week I received the following comment on
