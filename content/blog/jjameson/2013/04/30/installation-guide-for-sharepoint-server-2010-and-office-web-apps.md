@@ -46,6 +46,8 @@ instead). The scope for the first sprint is limited to the following:
 ***
 
 
+{{< article-block-start "document numbered-headings" >}}
+
 # Introduction
 
 This document explains how to install and configure the Fabrikam Extranet.
@@ -2860,3 +2862,5 @@ health data collection is *not* recommended in these environments.
 | Repeat within the day | No | Yes<br>Every 30 minutes<br>For 1440 minutes |
 
 {{< /table >}}
+
+{{< article-block-end >}}
