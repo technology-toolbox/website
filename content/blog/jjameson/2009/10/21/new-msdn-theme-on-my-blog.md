@@ -4,8 +4,8 @@ date: 2009-10-21T03:12:00-06:00
 excerpt:
   "I noticed this morning that the new color scheme released this past week on
   MSDN has made its way into our Community Server template (and thus onto my
-  blog, since I'm currently using the default \"skin\"). 
-   I'm still not sure how I feel about the combination..."
+  blog, since I'm currently using the default \"skin\"). I'm still not sure how
+  I feel about the combination..."
 aliases:
   [
     "/blog/jjameson/archive/2009/10/20/new-msdn-theme-on-my-blog.aspx",

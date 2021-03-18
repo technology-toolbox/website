@@ -5,8 +5,7 @@ excerpt:
   In a previous post, I introduced the DR.DADA approach to SharePoint
   development and how I typically use the concept of a FeatureConfigurator to
   automatically configure one or more aspects of a SharePoint site when
-  activating my feature. 
-   For example...
+  activating my feature. For example...
 aliases:
   [
     "/blog/jjameson/archive/2009/10/16/introducing-the-sharepointwebparthelper-class.aspx",

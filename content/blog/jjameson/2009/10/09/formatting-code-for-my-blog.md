@@ -4,9 +4,8 @@ date: 2009-10-09T06:46:00-06:00
 excerpt:
   "It occurred to me this morning that while I previously shared some details on
   how I manage my MSDN blog , I've never shared my method for formatting code
-  for the Web. 
-   Actually, calling it \"my method\" is definitely a bit of a stretch. I
-  certainly didn..."
+  for the Web. Actually, calling it \"my method\" is definitely a bit of a
+  stretch. I certainly didn..."
 aliases:
   [
     "/blog/jjameson/archive/2009/10/08/formatting-code-for-my-blog.aspx",

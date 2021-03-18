@@ -4,9 +4,8 @@ date: 2009-10-21T02:19:00-06:00
 excerpt:
   "This past May, one of my colleagues notified me of a new tool called
   \"Rooler\" that allows you to easily measure anything displayed on your
-  screen. 
-   I definitely consider this tool a \"must have\" for anyone out there doing
-  Web development. While tools..."
+  screen. I definitely consider this tool a \"must have\" for anyone out there
+  doing Web development. While tools..."
 aliases:
   [
     "/blog/jjameson/archive/2009/10/20/add-rooler-to-your-web-development-toolbox.aspx",

@@ -4,8 +4,8 @@ date: 2010-12-04T04:49:00-07:00
 excerpt:
   In a previous post , I mentioned an issue I've been having with Expression Web
   4 crashing on me. In that post, I mentioned a few ways that you can create a
-  mini-dump for a process (e.g. with Visual Studio, WinDbg, or ADPlus). 
-   A couple of weeks ago...
+  mini-dump for a process (e.g. with Visual Studio, WinDbg, or ADPlus). A couple
+  of weeks ago...
 aliases:
   [
     "/blog/jjameson/archive/2010/12/03/procdump-an-easier-way-to-create-a-mini-dump.aspx",

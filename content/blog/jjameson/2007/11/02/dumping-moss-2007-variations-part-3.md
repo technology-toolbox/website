@@ -4,8 +4,8 @@ date: 2007-11-02T08:53:00-06:00
 excerpt:
   In part 1 and part 2 of this series, I talked about some major issues with the
   variations feature in Microsoft Office SharePoint Server (MOSS) 2007 that
-  caused my current customer to abandon using them on their new Internet site. 
-   Here is a brief summary...
+  caused my current customer to abandon using them on their new Internet site.
+  Here is a brief summary...
 aliases:
   [
     "/blog/jjameson/archive/2007/11/01/dumping-moss-2007-variations-part-3.aspx",

@@ -4,8 +4,8 @@ date: 2010-05-25T14:51:00-06:00
 excerpt:
   The dust has mostly settled after the upgrade of the MSDN blog platform.
   Consequently, I have re-added my custom CSS rules to make my blog posts look
-  much like they did before the upgrade. 
-   Kudos to Sean Jenkin and his team for tirelessly working through...
+  much like they did before the upgrade. Kudos to Sean Jenkin and his team for
+  tirelessly working through...
 aliases:
   [
     "/blog/jjameson/archive/2010/05/25/update-on-upgrade-of-msdn-blog-platform.aspx",

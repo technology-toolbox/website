@@ -4,8 +4,8 @@ date: 2009-02-10T17:41:00-07:00
 excerpt:
   In a previous post , I hinted at some issues that I recently encountered after
   switching from Windows Server 2003 to Windows Server 2008 on my primary
-  development VM for Microsoft Office SharePoint Server (MOSS) 2007. 
-   To make this a little more fun...
+  development VM for Microsoft Office SharePoint Server (MOSS) 2007. To make
+  this a little more fun...
 aliases:
   [
     "/blog/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx",

@@ -5,8 +5,7 @@ excerpt:
   "One of \"tweaks\" that I commonly make to the SharePoint team site created
   for each project in Team Foundation Server is to create a custom list to track
   the important builds for the project (typically corresponding to each
-  milestone or iteration). 
-   There..."
+  milestone or iteration). There..."
 aliases:
   [
     "/blog/jjameson/archive/2010/11/28/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx",

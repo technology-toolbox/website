@@ -5,8 +5,7 @@ excerpt:
   As I mentioned in my previous post , last month I built out a new virtual
   environment using Hyper-V on Server Core. Since you can't run MMC -- and
   therefore Hyper-V Manager -- on Server Core, you need to use remote
-  administration to manage the VMs. 
-  ...
+  administration to manage the VMs. ...
 aliases:
   [
     "/blog/jjameson/archive/2008/08/27/some-gotchas-with-remote-administration-of-hyper-v.aspx",

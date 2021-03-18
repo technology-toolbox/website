@@ -5,7 +5,7 @@ excerpt:
   "I thought it would be helpful to share my step-by-step procedures for
   manually configuring claims-based authentication in SharePoint Server 2010
   using an \"ASP.NET database\" and corresponding membership and role providers.
-   Note that the following TechNet..."
+  Note that the following TechNet..."
 aliases:
   [
     "/blog/jjameson/archive/2011/02/18/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx",

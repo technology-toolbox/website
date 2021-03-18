@@ -4,8 +4,8 @@ date: 2011-03-14T04:13:00-06:00
 excerpt:
   "Each time I create (or recreate) a virtual machine in Hyper-V using one of my
   SysPrep'ed images , I usually end up having to do a quick Internet search for:
-   device manager show hidden devices 
-   I'm a little embarrassed to say that I simply can't remember..."
+  device manager show hidden devices I'm a little embarrassed to say that I
+  simply can't remember..."
 aliases:
   [
     "/blog/jjameson/archive/2011/03/13/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx",

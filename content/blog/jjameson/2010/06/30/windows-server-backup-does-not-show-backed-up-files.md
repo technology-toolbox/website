@@ -5,8 +5,7 @@ excerpt:
   "[Sorry the blog has been relatively silent this month -- but, on the other
   hand, I did manage to make time for a vacation to Arizona this month (Sedona,
   Grand Canyon, and then Scottsdale). It was a little hot, but a wonderful trip
-  nonetheless.] 
-   Here..."
+  nonetheless.] Here..."
 aliases:
   [
     "/blog/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx",

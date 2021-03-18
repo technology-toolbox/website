@@ -3,9 +3,9 @@ title: Master Page Not Inherited by Document Center Sites
 date: 2007-05-06T07:55:00-06:00
 excerpt:
   This isn't a recent discovery -- I first encountered this in late Februrary --
-  but I realized that I had not yet covered this issue in my blog. 
-   If you happen to be using the Document Center template in Microsoft Office
-  SharePoint Server (MOSS) 2007...
+  but I realized that I had not yet covered this issue in my blog. If you happen
+  to be using the Document Center template in Microsoft Office SharePoint Server
+  (MOSS) 2007...
 aliases:
   [
     "/blog/jjameson/archive/2007/05/05/master-page-not-inherited-by-document-center-sites.aspx",

@@ -4,8 +4,8 @@ date: 2011-03-12T04:32:00-07:00
 excerpt:
   "A couple of years ago, I wrote a post about issues I encountered deploying
   Windows Server 2008 Service Pack 2 due to insufficient disk space on various
-  VMs in the the \"Jameson Datacenter\" (a.k.a. my home lab). 
-   This morning I encountered similar issues..."
+  VMs in the the \"Jameson Datacenter\" (a.k.a. my home lab). This morning I
+  encountered similar issues..."
 aliases:
   [
     "/blog/jjameson/archive/2011/03/11/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx",

@@ -5,8 +5,7 @@ excerpt:
   For the sake of this post, let's assume that you have a directory that
   contains some empty folders you want to get rid of. How the empty folders got
   there isn't important; all that matters is that you have some and you want to
-  get rid of them. 
-   A few...
+  get rid of them. A few...
 aliases:
   [
     "/blog/jjameson/archive/2009/11/02/deleting-empty-folders.aspx",

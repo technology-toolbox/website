@@ -5,8 +5,7 @@ excerpt:
   If you are using Basic Authentication or Forms-Based Authentication (FBA) with
   Microsoft Office SharePoint Server (MOSS) 2007 -- or any Web site, for that
   matter -- then you must configure secure communication (HTTPS) using SSL
-  certificates. 
-   However...
+  certificates. However...
 aliases:
   [
     "/blog/jjameson/archive/2009/11/08/configuring-ssl-on-sharepoint-sites.aspx",

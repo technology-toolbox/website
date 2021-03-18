@@ -4,8 +4,8 @@ date: 2011-03-18T06:14:00-06:00
 excerpt:
   "One of the things I like most about running System Center Operations Manager
   in the \"Jameson Datacenter\" (a.k.a. my home lab) is that it greatly reduces
-  the amount of effort required to monitor numerous servers. 
-   For example, in my environment I am..."
+  the amount of effort required to monitor numerous servers. For example, in my
+  environment I am..."
 aliases:
   [
     "/blog/jjameson/archive/2011/03/17/operations-manager-alerts-for-event-log-errors.aspx",

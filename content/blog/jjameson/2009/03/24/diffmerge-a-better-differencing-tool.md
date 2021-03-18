@@ -3,7 +3,7 @@ title: DiffMerge - A Better Differencing Tool
 date: 2009-03-24T09:01:00-06:00
 excerpt:
   Last summer, I added DiffMerge to my Toolbox and I haven't used WinDiff since.
-   DiffMerge can do everything WinDiff can, plus a whole lot more -- like
+  DiffMerge can do everything WinDiff can, plus a whole lot more -- like
   intra-line highlighting, merging, and comparing files using configurable
   rulesets (although you'll...
 aliases:

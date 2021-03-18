@@ -4,8 +4,8 @@ date: 2009-03-20T09:07:00-06:00
 excerpt:
   As I mentioned in a previous post , some customers prefer to show page
   descriptions in search results instead of the HitHighlightedSummary rendered
-  by default in Microsoft Office SharePoint Server (MOSS) 2007. 
-   After all, if content authors diligently...
+  by default in Microsoft Office SharePoint Server (MOSS) 2007. After all, if
+  content authors diligently...
 aliases:
   [
     "/blog/jjameson/archive/2009/03/19/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx",

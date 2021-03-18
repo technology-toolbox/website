@@ -4,9 +4,8 @@ date: 2009-11-18T04:21:00-07:00
 excerpt:
   "If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS)
   2007 project -- or if you've read my Sample Walkthrough of the DR.DADA
-  Approach to SharePoint -- then you've probably seen the following comment: 
-   
-   Note: Referenced assemblies..."
+  Approach to SharePoint -- then you've probably seen the following comment:
+  Note: Referenced assemblies..."
 aliases:
   [
     "/blog/jjameson/archive/2009/11/17/the-copy-local-bug-in-visual-studio.aspx",

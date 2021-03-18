@@ -2,18 +2,13 @@
 title: Test Driven Development (TDD) in the Real World, Part 2
 date: 2010-04-09T09:48:00-06:00
 excerpt:
-  "In part 
-  1 of this post, I provided my high-level thoughts on doing Test Driven
-  Development 
-  (TDD) in the real world, but I didn&#39;t get around to walking through an
-  actual sample.
-  To start off simple (but still real world), let&#39;s imagine we have a
-  scenario where we need to truncate 
-  a string to a limited number of characters for display or output purposes.
-  However, 
-  instead of just chopping off the string at the specified number of characters,
-  we 
-  want to apply a little &quot;intell"
+  "In part 1 of this post, I provided my high-level thoughts on doing Test
+  Driven Development (TDD) in the real world, but I didn&#39;t get around to
+  walking through an actual sample. To start off simple (but still real world),
+  let&#39;s imagine we have a scenario where we need to truncate a string to a
+  limited number of characters for display or output purposes. However, instead
+  of just chopping off the string at the specified number of characters, we want
+  to apply a little &quot;intell"
 aliases:
   [
     "/blog/jjameson/archive/2010/04/08/test-driven-development-tdd-in-the-real-world-part-2.aspx",

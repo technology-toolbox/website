@@ -4,8 +4,8 @@ date: 2010-11-16T16:45:00-07:00
 excerpt:
   "In a previous post discussing Web standards design, I mentioned how I like to
   use \"Theme\" folders to organize CSS files and related images that define a
-  specific look-and-feel for a site. 
-   For example, suppose we are tasked with building the Internet..."
+  specific look-and-feel for a site. For example, suppose we are tasked with
+  building the Internet..."
 aliases:
   [
     "/blog/jjameson/archive/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot.aspx",

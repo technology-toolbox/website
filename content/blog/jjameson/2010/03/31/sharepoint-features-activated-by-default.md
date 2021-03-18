@@ -4,9 +4,8 @@ date: 2010-03-31T04:55:00-06:00
 excerpt:
   Here's something interesting I discovered only recently about Microsoft Office
   SharePoint Server (MOSS) 2007 -- even though I've been working with the
-  product for years... 
-   Any features that are scoped to the WebApplication level are automatically
-  activated...
+  product for years... Any features that are scoped to the WebApplication level
+  are automatically activated...
 aliases:
   [
     "/blog/jjameson/archive/2010/03/30/sharepoint-features-activated-by-default.aspx",

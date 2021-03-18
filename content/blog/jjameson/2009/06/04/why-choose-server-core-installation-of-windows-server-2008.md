@@ -4,9 +4,8 @@ date: 2009-06-04T19:12:00-06:00
 excerpt:
   "If you ever find yourself looking for reasons or evidence why you should
   choose the \"Server Core\" installation option for Windows Server 2008, try
-  searching for the following: 
-   \"Windows Server 2008 Server Core installation not affected\"
-  site:microsoft..."
+  searching for the following: \"Windows Server 2008 Server Core installation
+  not affected\" site:microsoft..."
 aliases:
   [
     "/blog/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx",

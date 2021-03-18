@@ -4,8 +4,8 @@ date: 2007-10-27T08:01:00-06:00
 excerpt:
   "It's embarrassing how my blog posts rapidly died off after this past June.
   However it's even more embarrassing to disclose the paging bug when viewing
-  the Variation Logs page in Microsoft Office SharePoint Server (MOSS) 2007. 
-   [By the way, my intent..."
+  the Variation Logs page in Microsoft Office SharePoint Server (MOSS) 2007. [By
+  the way, my intent..."
 aliases:
   [
     "/blog/jjameson/archive/2007/10/26/variation-logs-paging-bug.aspx",

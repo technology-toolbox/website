@@ -4,8 +4,8 @@ date: 2011-03-05T04:05:00-07:00
 excerpt:
   Nearly three years ago, I wrote a post that described the BackedUp and
   NotBackedUp folders I use on almost every computer I ever log on to (my
-  laptop, desktop, a handful of servers, and more than a dozen VMs). 
-   I also showed how I created taskbar shortcuts...
+  laptop, desktop, a handful of servers, and more than a dozen VMs). I also
+  showed how I created taskbar shortcuts...
 aliases:
   [
     "/blog/jjameson/archive/2011/03/04/what-s-in-your-jump-list.aspx",

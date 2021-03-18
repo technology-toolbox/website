@@ -3,11 +3,9 @@ title: New Guidance on MSDN for Developing Applications for SharePoint 2010
 date: 2010-06-30T13:33:00-06:00
 excerpt:
   "A bunch of new content related to SharePoint 2010 application development was
-  released yesterday. 
-   You can browse the content online via MSDN: 
-   Developing Applications for SharePoint 2010 
-   http://msdn.microsoft.com/en-us/library/ff770300.aspx 
-  ..."
+  released yesterday. You can browse the content online via MSDN: Developing
+  Applications for SharePoint 2010
+  http://msdn.microsoft.com/en-us/library/ff770300.aspx ..."
 aliases:
   [
     "/blog/jjameson/archive/2010/06/30/new-guidance-on-msdn-for-developing-applications-for-sharepoint-2010.aspx",

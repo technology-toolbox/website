@@ -4,9 +4,8 @@ date: 2011-01-11T05:42:00-07:00
 excerpt:
   "Yesterday I found myself back in \"WinDbg-land\" after a long, long time
   (since 99% of my debugging is performed in development environments using
-  Visual Studio). 
-   However, I couldn't get the managed code debugging to work in WinDbg. I
-  initially tried..."
+  Visual Studio). However, I couldn't get the managed code debugging to work in
+  WinDbg. I initially tried..."
 aliases:
   [
     "/blog/jjameson/archive/2011/01/10/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx",

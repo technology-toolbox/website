@@ -3,21 +3,8 @@ title: Custom Table Headers With the ASP.NET GridView Control
 date: 2010-04-28T07:07:00-06:00
 excerpt:
   "In my previous post , I showed an example KPI dashboard for a Web application
-  with a table similar to the following: 
-   
-   Key Performance Indicators (Detail) 
-   
-   Site 2009 Q3 2009 Q4 2010 Q1 Thresholds 
-   
-   
-   
-   
-   
-   
-   
-   Duncan 
-   93% 
-   95% ..."
+  with a table similar to the following: Key Performance Indicators (Detail)
+  Site 2009 Q3 2009 Q4 2010 Q1 Thresholds Duncan 93% 95% ..."
 aliases:
   [
     "/blog/jjameson/archive/2010/04/27/custom-table-headers-with-the-asp-net-gridview-control.aspx",

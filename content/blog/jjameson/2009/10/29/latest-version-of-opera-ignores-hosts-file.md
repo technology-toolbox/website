@@ -4,8 +4,8 @@ date: 2009-10-29T05:17:00-06:00
 excerpt:
   As I mentioned in my previous post , I discovered a rather nasty UI bug last
   week with the new portal we are building for a customer. Unfortunately, the
-  layout issue only occurred in the Safari browser. 
-   Since I couldn't repro the issue in Internet...
+  layout issue only occurred in the Safari browser. Since I couldn't repro the
+  issue in Internet...
 aliases:
   [
     "/blog/jjameson/archive/2009/10/28/latest-version-of-opera-ignores-hosts-file.aspx",

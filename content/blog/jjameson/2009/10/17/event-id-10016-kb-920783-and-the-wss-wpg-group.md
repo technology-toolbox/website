@@ -5,8 +5,7 @@ excerpt:
   "If you've ever deployed Windows SharePoint Services (WSS) v3 or Microsoft
   Office SharePoint Server (MOSS) 2007 in a least privilege configuration, you
   have undoubtedly encountered errors similar to the following in your Windows
-  event log: 
-   The application..."
+  event log: The application..."
 aliases:
   [
     "/blog/jjameson/archive/2009/10/16/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx",

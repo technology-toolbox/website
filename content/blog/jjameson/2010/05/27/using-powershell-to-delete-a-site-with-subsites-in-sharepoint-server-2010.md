@@ -5,8 +5,7 @@ excerpt:
   "When using the \"DR.DADA\" approach to SharePoint development , I often find
   myself deleting sites (in DEV and TEST environments) and subsequently
   re-activating features or running some migration utility to recreate the site
-  hierarchy. 
-   In fact, a few..."
+  hierarchy. In fact, a few..."
 aliases:
   [
     "/blog/jjameson/archive/2010/05/26/using-powershell-to-delete-a-site-with-subsites-in-sharepoint-server-2010.aspx",

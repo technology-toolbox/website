@@ -4,8 +4,8 @@ date: 2011-04-02T10:06:00-06:00
 excerpt:
   "In part 2 of this series, I provided a sample Microsoft Office SharePoint
   Server (MOSS) 2007 solution based on Dan Cederholm's Tugboat sample site (from
-  his most recent book, Handcrafted CSS : More Bulletproof Web Design ). 
-   Ever since then, I've been..."
+  his most recent book, Handcrafted CSS : More Bulletproof Web Design ). Ever
+  since then, I've been..."
 aliases:
   [
     "/blog/jjameson/archive/2011/04/01/web-standards-design-with-sharepoint-part-4.aspx",

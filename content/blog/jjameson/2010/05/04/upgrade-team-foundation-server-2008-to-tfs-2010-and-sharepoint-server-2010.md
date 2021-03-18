@@ -4,8 +4,8 @@ date: 2010-05-04T08:44:00-06:00
 excerpt:
   In my previous post , I provided an overview of the process of upgrading from
   TFS 2008 (and Windows SharePoint Services v3) to TFS 2010 (and SharePoint
-  Server 2010). In this post, I provide more details about the upgrade process. 
-   Note that if you are...
+  Server 2010). In this post, I provide more details about the upgrade process.
+  Note that if you are...
 aliases:
   [
     "/blog/jjameson/archive/2010/05/03/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx",

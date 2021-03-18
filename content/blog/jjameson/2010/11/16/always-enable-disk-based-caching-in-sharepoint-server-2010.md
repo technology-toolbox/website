@@ -3,9 +3,9 @@ title: Always Enable Disk-Based Caching in SharePoint Server 2010
 date: 2010-11-16T15:43:00-07:00
 excerpt:
   In March, 2009, I wrote a post that explains why I always recommend enabling
-  disk-based caching in Microsoft Office SharePoint Server (MOSS) 2007. 
-   This morning a Microsoft PFE (Premier Field Engineer) reached out to me after
-  he came across my blog...
+  disk-based caching in Microsoft Office SharePoint Server (MOSS) 2007. This
+  morning a Microsoft PFE (Premier Field Engineer) reached out to me after he
+  came across my blog...
 aliases:
   [
     "/blog/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx",

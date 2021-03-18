@@ -4,9 +4,8 @@ date: 2011-03-03T07:16:00-07:00
 excerpt:
   In the current sprint of the project I'm working on, we are deploying Office
   Web Apps to support an enterprise collaboration platform based on SharePoint
-  Server 2010. 
-   While creating the installation guide for this sprint, I used the following
-  TechNet...
+  Server 2010. While creating the installation guide for this sprint, I used the
+  following TechNet...
 aliases:
   [
     "/blog/jjameson/archive/2011/03/02/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx",

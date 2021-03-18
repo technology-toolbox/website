@@ -4,9 +4,8 @@ date: 2010-05-24T04:11:00-06:00
 excerpt:
   "This is an update to the beta version that was released last December. It
   \"provides developers with advanced guidance on how to develop for
-  SharePoint.\" 
-   Here's the overview from the download page : 
-   The SharePoint 2010 Developer Training Kit provides..."
+  SharePoint.\" Here's the overview from the download page : The SharePoint 2010
+  Developer Training Kit provides..."
 aliases:
   [
     "/blog/jjameson/archive/2010/05/23/sharepoint-2010-developer-training-kit.aspx",

@@ -4,9 +4,8 @@ date: 2007-04-18T23:38:00-06:00
 excerpt:
   Over the years, I have refined how I create Visual Studio projects based on
   lessons learned and new capabilities provided with each subsequent release of
-  Visual Studio. 
-   When starting a new project from scratch, I start by creating a blank Visual
-  Studio...
+  Visual Studio. When starting a new project from scratch, I start by creating a
+  blank Visual Studio...
 aliases:
   [
     "/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx",

@@ -5,8 +5,7 @@ excerpt:
   "Yet another Group Policy object that I use in the \"Jameson Datacenter\"
   (a.k.a. my home lab) is one to automatically configure roaming profiles and
   redirect the Desktop and Documents folders to a server(a.k.a.
-  \"IntelliMirror\"). 
-   Even though I don't have..."
+  \"IntelliMirror\"). Even though I don't have..."
 aliases:
   [
     "/blog/jjameson/archive/2009/10/20/configure-intellimirror-using-group-policy.aspx",

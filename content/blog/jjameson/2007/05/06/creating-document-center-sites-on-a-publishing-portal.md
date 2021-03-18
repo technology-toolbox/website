@@ -3,10 +3,9 @@ title: Creating Document Center Sites on a Publishing Portal
 date: 2007-05-06T08:34:00-06:00
 excerpt:
   Here is another issue I discovered long ago, but haven't blogged about yet.
-  Shame on me. 
-   When kicking off my current project back in December, I was convinced that a
-  Document Center site in Microsoft Office SharePoint Server (MOSS) 2007 was the
-  best...
+  Shame on me. When kicking off my current project back in December, I was
+  convinced that a Document Center site in Microsoft Office SharePoint Server
+  (MOSS) 2007 was the best...
 aliases:
   [
     "/blog/jjameson/archive/2007/05/05/creating-document-center-sites-on-a-publishing-portal.aspx",
