@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx"
 ---
 
 > **Note**

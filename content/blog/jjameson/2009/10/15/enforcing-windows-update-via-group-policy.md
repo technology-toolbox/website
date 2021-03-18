@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "WSUS", "Windows Server", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/15/enforcing-windows-update-via-group-policy.aspx"
 ---
 
 > **Note**

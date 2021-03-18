@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010.aspx"
 ---
 
 > **Note**

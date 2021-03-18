@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx"
 ---
 
 > **Note**

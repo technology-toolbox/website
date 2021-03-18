@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010", "Tugboat"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/03/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx"
 ---
 
 > **Note**

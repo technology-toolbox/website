@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx"
 ---
 
 > **Note**

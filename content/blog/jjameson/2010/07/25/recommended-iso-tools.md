@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/07/25/recommended-iso-tools.aspx"
 ---
 
 > **Note**

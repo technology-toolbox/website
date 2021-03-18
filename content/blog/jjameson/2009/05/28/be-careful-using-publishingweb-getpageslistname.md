@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx"
 ---
 
 > **Note**

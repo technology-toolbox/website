@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["Simplify", "Windows Server", "Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx"
 ---
 
 > **Note**

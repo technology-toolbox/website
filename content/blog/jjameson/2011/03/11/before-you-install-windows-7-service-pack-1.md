@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Windows 7"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx"
 ---
 
 > **Note**

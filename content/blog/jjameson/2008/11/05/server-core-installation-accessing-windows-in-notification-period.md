@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx"
 ---
 
 > **Note**

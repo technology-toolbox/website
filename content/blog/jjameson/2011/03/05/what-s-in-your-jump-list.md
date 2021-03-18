@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure", "SharePoint"]
 tags: ["My System", "Windows Server", "SharePoint 2010", "Windows 7", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/05/what-s-in-your-jump-list.aspx"
 ---
 
 > **Note**

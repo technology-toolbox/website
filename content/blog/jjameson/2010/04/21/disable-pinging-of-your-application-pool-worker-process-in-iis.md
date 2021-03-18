@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Debugging", "Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/21/disable-pinging-of-your-application-pool-worker-process-in-iis.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx"
 ---
 
 > **Note**

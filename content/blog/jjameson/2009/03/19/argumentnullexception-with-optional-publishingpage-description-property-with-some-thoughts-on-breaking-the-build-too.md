@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too.aspx"
 ---
 
 > **Note**

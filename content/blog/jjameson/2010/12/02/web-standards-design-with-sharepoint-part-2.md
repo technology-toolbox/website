@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "Tugboat"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"
 ---
 
 > **Note**

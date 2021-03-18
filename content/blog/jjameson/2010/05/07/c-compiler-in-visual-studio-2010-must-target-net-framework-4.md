@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/07/c-compiler-in-visual-studio-2010-must-target-net-framework-4.aspx"
 ---
 
 > **Note**

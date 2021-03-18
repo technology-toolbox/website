@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Simplify", "Core Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx"
 ---
 
 > **Note**

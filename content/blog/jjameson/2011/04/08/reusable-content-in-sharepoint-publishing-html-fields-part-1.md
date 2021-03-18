@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx"
 ---
 
 > **Note**

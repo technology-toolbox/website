@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx"
 ---
 
 > **Note**

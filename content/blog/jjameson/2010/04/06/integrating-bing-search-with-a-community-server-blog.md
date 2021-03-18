@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx"
 ---
 
 > **Note**

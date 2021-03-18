@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["WSUS", "Infrastructure", "Virtualization", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/25/script-to-reset-wsus-for-sysprep-ed-image.aspx"
 ---
 
 > **Note**

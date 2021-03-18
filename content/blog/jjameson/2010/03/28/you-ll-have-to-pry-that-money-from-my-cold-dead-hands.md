@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx"
 ---
 
 > **Note**

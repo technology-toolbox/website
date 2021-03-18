@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx"
 ---
 
 > **Note**

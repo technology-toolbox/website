@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx"
 ---
 
 > **Note**

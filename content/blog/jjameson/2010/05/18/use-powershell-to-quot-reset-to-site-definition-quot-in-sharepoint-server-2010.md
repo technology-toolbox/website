@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 2010", "PowerShell"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx"
 ---
 
 > **Note**

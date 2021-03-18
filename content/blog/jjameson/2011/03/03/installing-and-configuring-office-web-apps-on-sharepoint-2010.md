@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure", "SharePoint"]
 tags: ["Infrastructure", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and-configuring-office-web-apps-on-sharepoint-2010.aspx"
 ---
 
 > **Note**

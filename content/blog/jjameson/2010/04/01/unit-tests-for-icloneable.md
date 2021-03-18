@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010", "PowerShell"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx"
 ---
 
 > **Note**

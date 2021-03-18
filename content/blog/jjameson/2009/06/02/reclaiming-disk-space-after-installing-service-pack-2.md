@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista", "Windows Server", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/02/reclaiming-disk-space-after-installing-service-pack-2.aspx"
 ---
 
 > **Note**

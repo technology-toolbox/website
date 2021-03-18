@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx"
 ---
 
 > **Note**

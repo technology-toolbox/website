@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx"
 ---
 
 > **Note**

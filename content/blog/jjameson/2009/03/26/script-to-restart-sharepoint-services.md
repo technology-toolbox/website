@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "WSS v3", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/26/script-to-restart-sharepoint-services.aspx"
 ---
 
 > **Note**

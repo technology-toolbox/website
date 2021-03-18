@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows 7"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx"
 ---
 
 > **Note**

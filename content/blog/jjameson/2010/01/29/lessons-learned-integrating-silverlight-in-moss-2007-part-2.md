@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Silverlight"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2.aspx"
 ---
 
 > **Note**

@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/09/02/new-blog-location-http-www-technologytoolbox-com-blog-jjameson.aspx"
 ---
 
 > **Note**

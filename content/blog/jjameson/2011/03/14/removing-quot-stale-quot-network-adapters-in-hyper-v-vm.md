@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/14/removing-quot-stale-quot-network-adapters-in-hyper-v-vm.aspx"
 ---
 
 > **Note**

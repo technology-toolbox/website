@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "WSS v3", "Debugging"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/29/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx"
 ---
 
 > **Note**

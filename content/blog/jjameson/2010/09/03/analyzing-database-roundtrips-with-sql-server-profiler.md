@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System", "SQL Server"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx"
 ---
 
 > **Note**

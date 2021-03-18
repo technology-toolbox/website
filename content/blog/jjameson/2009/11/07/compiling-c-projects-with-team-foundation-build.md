@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/compiling-c-projects-with-team-foundation-build.aspx"
 ---
 
 > **Note**

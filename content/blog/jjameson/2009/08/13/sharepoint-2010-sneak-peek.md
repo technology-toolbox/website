@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/08/13/sharepoint-2010-sneak-peek.aspx"
 ---
 
 > **Note**

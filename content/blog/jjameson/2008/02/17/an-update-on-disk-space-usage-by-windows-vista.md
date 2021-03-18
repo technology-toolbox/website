@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx"
 ---
 
 > **Note**

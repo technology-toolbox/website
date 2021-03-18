@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/07/bug-http-403-forbidden-with-fba-sharepoint-site.aspx"
 ---
 
 > **Note**

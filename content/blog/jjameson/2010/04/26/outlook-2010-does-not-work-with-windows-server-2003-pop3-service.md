@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service.aspx"
 ---
 
 > **Note**

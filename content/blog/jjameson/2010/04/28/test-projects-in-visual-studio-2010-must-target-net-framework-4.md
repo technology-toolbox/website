@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/06/creating-document-center-sites-on-a-publishing-portal.aspx"
 ---
 
 > **Note**

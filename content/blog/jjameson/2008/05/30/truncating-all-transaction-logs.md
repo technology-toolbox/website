@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["SQL Server", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx"
 ---
 
 > **Note**

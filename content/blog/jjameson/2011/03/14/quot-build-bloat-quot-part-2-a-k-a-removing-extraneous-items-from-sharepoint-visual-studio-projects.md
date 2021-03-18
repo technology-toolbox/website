@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/18/introducing-the-sharepointsmtphelper-class.aspx"
 ---
 
 > **Note**

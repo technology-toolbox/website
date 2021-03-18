@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "TFS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx"
 ---
 
 > **Note**

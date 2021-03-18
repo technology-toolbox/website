@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx"
 ---
 
 > **Note**

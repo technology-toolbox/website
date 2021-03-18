@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/06/07/showing-resized-images-on-a-community-server-telligent-blog.aspx"
 ---
 
 > **Note**

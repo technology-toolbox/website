@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/06/master-page-not-inherited-by-document-center-sites.aspx"
 ---
 
 > **Note**

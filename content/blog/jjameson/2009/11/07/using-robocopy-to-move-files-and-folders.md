@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-robocopy-to-move-files-and-folders.aspx"
 ---
 
 > **Note**

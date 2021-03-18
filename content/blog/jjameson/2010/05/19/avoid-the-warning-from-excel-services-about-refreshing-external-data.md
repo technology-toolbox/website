@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "TFS", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx"
 ---
 
 > **Note**

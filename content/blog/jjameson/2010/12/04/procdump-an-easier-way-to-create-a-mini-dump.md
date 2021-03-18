@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "Debugging", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/04/procdump-an-easier-way-to-create-a-mini-dump.aspx"
 ---
 
 > **Note**

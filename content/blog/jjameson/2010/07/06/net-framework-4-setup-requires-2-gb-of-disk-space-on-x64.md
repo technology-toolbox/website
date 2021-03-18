@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/07/06/net-framework-4-setup-requires-2-gb-of-disk-space-on-x64.aspx"
 ---
 
 > **Note**

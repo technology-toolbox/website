@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/01/bug-with-duplicate-field-names-in-moss-2007.aspx"
 ---
 
 > **Note**

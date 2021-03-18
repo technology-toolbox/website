@@ -15,6 +15,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"
 ---
 
 > **Note**

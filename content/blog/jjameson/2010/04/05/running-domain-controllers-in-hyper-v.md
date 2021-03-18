@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx"
 ---
 
 > **Note**

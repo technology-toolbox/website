@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System", "Simplify"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/04/managing-email-effectively.aspx"
 ---
 
 > **Note**

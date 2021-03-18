@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/02/17/disabling-hibernation-in-windows-vista-and-deleting-hiberfil-sys.aspx"
 ---
 
 > **Note**

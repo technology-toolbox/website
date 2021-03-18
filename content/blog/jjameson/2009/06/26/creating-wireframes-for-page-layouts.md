@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "MOSS 2007", "Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/26/creating-wireframes-for-page-layouts.aspx"
 ---
 
 > **Note**

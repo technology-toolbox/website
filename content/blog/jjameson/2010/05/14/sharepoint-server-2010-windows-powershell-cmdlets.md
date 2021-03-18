@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/14/sharepoint-server-2010-windows-powershell-cmdlets.aspx"
 ---
 
 > **Note**

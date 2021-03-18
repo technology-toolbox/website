@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"
 ---
 
 > **Note**

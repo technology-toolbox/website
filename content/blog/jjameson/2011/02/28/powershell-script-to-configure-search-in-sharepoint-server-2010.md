@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/28/powershell-script-to-configure-search-in-sharepoint-server-2010.aspx"
 ---
 
 > **Note**

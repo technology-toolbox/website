@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3", "Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows Server", "Infrastructure"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/09/a-simple-backup-solution.aspx"
 ---
 
 > **Note**

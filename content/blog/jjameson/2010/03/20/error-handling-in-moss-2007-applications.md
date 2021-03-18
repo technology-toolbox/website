@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx"
 ---
 
 > **Note**

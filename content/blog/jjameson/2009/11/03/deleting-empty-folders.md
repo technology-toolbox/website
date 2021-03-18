@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System"]
 tags: ["My System"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development", "SharePoint"]
 tags: ["My System", "Visual Studio", "TFS", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010.aspx"
 ---
 
 > **Note**

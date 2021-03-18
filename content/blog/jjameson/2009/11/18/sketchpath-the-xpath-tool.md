@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx"
 ---
 
 > **Note**

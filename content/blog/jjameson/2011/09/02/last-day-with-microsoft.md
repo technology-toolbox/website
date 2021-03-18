@@ -11,6 +11,7 @@ aliases:
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/14/the-jameson-datacenter.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx"
 ---
 
 > **Note**

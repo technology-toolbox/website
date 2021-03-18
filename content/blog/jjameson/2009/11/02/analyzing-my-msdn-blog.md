@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Personal"]
 tags: ["Personal"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx"
 ---
 
 > **Note**

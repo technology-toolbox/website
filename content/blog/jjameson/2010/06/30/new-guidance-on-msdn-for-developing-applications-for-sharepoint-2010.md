@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/06/30/new-guidance-on-msdn-for-developing-applications-for-sharepoint-2010.aspx"
 ---
 
 > **Note**

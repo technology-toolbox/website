@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "Virtualization", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx"
 ---
 
 > **Note**

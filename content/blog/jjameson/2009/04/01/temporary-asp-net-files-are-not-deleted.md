@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Development", "My System"]
 tags: ["MOSS 2007", "Core Development", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/04/01/temporary-asp-net-files-are-not-deleted.aspx"
 ---
 
 > **Note**

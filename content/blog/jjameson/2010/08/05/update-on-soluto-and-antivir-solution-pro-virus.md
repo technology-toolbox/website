@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: [""]
 tags: [""]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus.aspx"
 ---
 
 > **Note**

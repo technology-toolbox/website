@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/17/issues-deploying-sharepoint-solution-packages.aspx"
 ---
 
 > **Note**

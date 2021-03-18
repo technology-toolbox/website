@@ -17,6 +17,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2.aspx"
 ---
 
 > **Note**

@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development", "Toolbox"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/21/add-rooler-to-your-web-development-toolbox.aspx"
 ---
 
 > **Note**

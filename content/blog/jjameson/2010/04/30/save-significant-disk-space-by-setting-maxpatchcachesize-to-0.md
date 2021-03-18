@@ -13,6 +13,7 @@ aliases:
 draft: true
 categories: ["My System", "Infrastructure", "Development"]
 tags: ["My System", "SQL Server", "Windows Server", "Infrastructure", "Virtualization", "Visual Studio"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"
 ---
 
 > **Note**

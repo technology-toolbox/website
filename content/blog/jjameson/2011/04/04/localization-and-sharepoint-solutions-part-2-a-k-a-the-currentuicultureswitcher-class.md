@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "SharePoint 2010"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx"
 ---
 
 > **Note**

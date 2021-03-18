@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx"
 ---
 
 > **Note**

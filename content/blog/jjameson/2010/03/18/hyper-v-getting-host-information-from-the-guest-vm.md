@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Infrastructure"]
 tags: ["Infrastructure", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/18/hyper-v-getting-host-information-from-the-guest-vm.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "SharePoint", "Development", "Infrastructure"]
 tags: ["Simplify", "MOSS 2007", "Core Development", "Virtualization"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "ISA Server"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/09/moss-development-environment-and-windows-update-bug.aspx"
 ---
 
 > **Note**

@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx"
 ---
 
 > **Note**

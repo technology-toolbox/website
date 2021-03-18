@@ -14,6 +14,7 @@ aliases:
 draft: true
 categories: ["Development"]
 tags: ["Debugging", "Web Development"]
+msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/10/24/recovering-your-work-after-an-expression-web-crash.aspx"
 ---
 
 > **Note**
