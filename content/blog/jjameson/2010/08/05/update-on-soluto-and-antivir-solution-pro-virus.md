@@ -1,5 +1,5 @@
 ---
-title: "Update on Soluto and Antivir Solution Pro Virus"
+title: Update on Soluto and Antivir Solution Pro Virus
 date: 2010-08-05T04:26:00-06:00
 excerpt:
   "In my previous post , I described my encounter with the Antivir Solution Pro

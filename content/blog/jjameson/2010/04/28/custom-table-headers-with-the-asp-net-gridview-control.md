@@ -1,5 +1,5 @@
 ---
-title: "Custom Table Headers With the ASP.NET GridView Control"
+title: Custom Table Headers With the ASP.NET GridView Control
 date: 2010-04-28T07:07:00-06:00
 excerpt:
   "In my previous post , I showed an example KPI dashboard for a Web application

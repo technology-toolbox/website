@@ -1,5 +1,5 @@
 ---
-title: "Migrating a blog from Telligent to Subtext using Web scraping, the Html Agility Pack, BlogML, and more (a.k.a. Building TechnologyToolbox.com, part 6)"
+title: Migrating a blog from Telligent to Subtext using Web scraping, the Html Agility Pack, BlogML, and more (a.k.a. Building TechnologyToolbox.com, part 6)
 date: 2011-11-12T23:51:46-07:00
 lastmod: 2011-11-12T23:52:07-07:00
 excerpt:

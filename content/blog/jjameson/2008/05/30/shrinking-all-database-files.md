@@ -1,5 +1,5 @@
 ---
-title: "Shrinking All Database Files in SQL Server"
+title: Shrinking All Database Files in SQL Server
 date: 2008-05-30T08:50:00-06:00
 excerpt:
   "Here is another SQL script that I keep handy in my toolbox: Shrink All

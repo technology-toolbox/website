@@ -1,5 +1,5 @@
 ---
-title: "AJAX in MOSS 2007 -- The Easy Way, Part 2"
+title: AJAX in MOSS 2007 -- The Easy Way, Part 2
 date: 2010-03-24T04:36:00-06:00
 excerpt:
   "In my previous post , I showed how you can quickly create an AJAX-enabled Web

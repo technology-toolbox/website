@@ -1,5 +1,5 @@
 ---
-title: "Tell Mode vs. Ask Mode"
+title: Tell Mode vs. Ask Mode
 date: 2009-06-03T19:11:00-06:00
 excerpt:
   "The project I am currently working on is nearing the end. Last week we

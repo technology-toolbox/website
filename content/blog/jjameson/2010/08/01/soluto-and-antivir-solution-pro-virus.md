@@ -1,5 +1,5 @@
 ---
-title: "Soluto and Antivir Solution Pro Virus"
+title: Soluto and Antivir Solution Pro Virus
 date: 2010-08-01T06:26:00-06:00
 excerpt:
   "In one of the sessions I attended last week at TechReady (an internal

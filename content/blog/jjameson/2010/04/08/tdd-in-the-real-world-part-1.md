@@ -1,5 +1,5 @@
 ---
-title: "TDD in the Real World, Part 1"
+title: TDD in the Real World, Part 1
 date: 2010-04-08T19:40:00-06:00
 excerpt:
   "Earlier today I presented a \"Knowledge Transfer\" session to a team of

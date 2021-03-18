@@ -1,5 +1,5 @@
 ---
-title: "Minor Setback"
+title: Minor Setback
 date: 2009-05-28T07:55:00-06:00
 excerpt:
   "I haven't blogged in almost 8 weeks. Ouch. 

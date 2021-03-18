@@ -1,5 +1,5 @@
 ---
-title: "Formatting Code for My Blog"
+title: Formatting Code for My Blog
 date: 2009-10-09T06:46:00-06:00
 excerpt:
   "It occurred to me this morning that while I previously shared some details on

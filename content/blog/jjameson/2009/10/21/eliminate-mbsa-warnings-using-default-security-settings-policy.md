@@ -1,5 +1,5 @@
 ---
-title: "Eliminate MBSA Warnings Using Default Security Settings Policy"
+title: Eliminate MBSA Warnings Using Default Security Settings Policy
 date: 2009-10-21T03:57:00-06:00
 excerpt:
   "Another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a.

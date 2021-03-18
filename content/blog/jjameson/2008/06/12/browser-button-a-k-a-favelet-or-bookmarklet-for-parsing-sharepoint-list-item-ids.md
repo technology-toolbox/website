@@ -1,5 +1,5 @@
 ---
-title: "Browser Button (a.k.a. Favelet or Bookmarklet) for Parsing SharePoint List Item IDs"
+title: Browser Button (a.k.a. Favelet or Bookmarklet) for Parsing SharePoint List Item IDs
 date: 2008-06-12T08:06:00-06:00
 excerpt:
   "This morning I received an email from a customer inquiring about making it

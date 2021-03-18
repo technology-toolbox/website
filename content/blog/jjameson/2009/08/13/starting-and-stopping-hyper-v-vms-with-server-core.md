@@ -1,5 +1,5 @@
 ---
-title: "Starting and Stopping Hyper-V VMs with Server Core"
+title: Starting and Stopping Hyper-V VMs with Server Core
 date: 2009-08-13T11:21:00-06:00
 excerpt:
   "Last week before heading out to the airport for my SharePoint 2010 training,

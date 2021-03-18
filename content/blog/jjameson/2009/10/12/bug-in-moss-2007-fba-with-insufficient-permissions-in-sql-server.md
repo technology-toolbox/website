@@ -1,5 +1,5 @@
 ---
-title: "Bug in MOSS 2007 FBA with Insufficient Permissions in SQL Server"
+title: Bug in MOSS 2007 FBA with Insufficient Permissions in SQL Server
 date: 2009-10-12T05:58:00-06:00
 excerpt:
   "A couple of weeks ago I was setting up Forms-Based Authentication (FBA) on my

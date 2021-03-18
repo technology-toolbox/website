@@ -1,5 +1,5 @@
 ---
-title: "Web Standards Design with SharePoint, Part 3"
+title: Web Standards Design with SharePoint, Part 3
 date: 2011-01-30T20:29:00-07:00
 excerpt:
   "Last week I received the following comment on a blog post I wrote last year

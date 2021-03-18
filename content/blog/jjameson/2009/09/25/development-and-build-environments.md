@@ -1,5 +1,5 @@
 ---
-title: "Development and Build Environments"
+title: Development and Build Environments
 date: 2009-09-25T07:57:00-06:00
 excerpt:
   "In a previous post , I briefly touched on the \"DEV-TEST-PROD\" triad of

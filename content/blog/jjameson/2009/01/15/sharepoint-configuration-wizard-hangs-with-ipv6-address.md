@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Configuration Wizard Hangs with IPv6 Address"
+title: SharePoint Configuration Wizard Hangs with IPv6 Address
 date: 2009-01-15T17:20:00-07:00
 excerpt:
   "I came back from a nice long vacation only to find that my local development

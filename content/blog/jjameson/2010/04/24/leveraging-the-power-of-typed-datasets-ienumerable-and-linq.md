@@ -1,11 +1,11 @@
 ---
-title: "Leveraging the Power of Typed DataSets, IEnumerable<>, and LINQ"
+title: Leveraging the Power of Typed DataSets, IEnumerable<>, and LINQ
 date: 2010-04-24T07:59:00-06:00
 excerpt:
-  "In my previous post , I extolled my love of typed DataSets in .NET because
+  In my previous post , I extolled my love of typed DataSets in .NET because
   they are not only quick to design and update, but also very easy to
   understand. Essentially, if you can read an entity-relationship model
-  (&agrave; la ERwin or a Visio database..."
+  (&agrave; la ERwin or a Visio database...
 aliases:
   [
     "/blog/jjameson/archive/2010/04/23/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx",

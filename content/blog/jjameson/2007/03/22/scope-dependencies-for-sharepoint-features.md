@@ -1,12 +1,12 @@
 ---
-title: "Scope Dependencies for SharePoint Features"
+title: Scope Dependencies for SharePoint Features
 date: 2007-03-22T06:17:00-06:00
 excerpt:
-  "While integrating various SharePoint features last week, I discovered some of
+  While integrating various SharePoint features last week, I discovered some of
   the details around the dependency rules when trying to associate one feature
   to another. 
    In our solution, we have created a feature for specifying custom fields (i.e.
-  columns..."
+  columns...
 aliases:
   [
     "/blog/jjameson/archive/2007/03/21/scope-dependencies-for-sharepoint-features.aspx",

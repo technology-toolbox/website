@@ -1,5 +1,5 @@
 ---
-title: "Using the Entity Framework and LINQ to list the most popular posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 10)"
+title: Using the Entity Framework and LINQ to list the most popular posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 10)
 date: 2012-01-06T03:04:06-07:00
 excerpt:
   "In my previous post, I shared the inner workings of the \"Most Recent Posts\"

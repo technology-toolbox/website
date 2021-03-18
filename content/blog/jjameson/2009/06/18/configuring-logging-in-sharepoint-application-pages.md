@@ -1,11 +1,11 @@
 ---
-title: "Configuring Logging in SharePoint Application Pages"
+title: Configuring Logging in SharePoint Application Pages
 date: 2009-06-18T21:08:00-06:00
 excerpt:
-  "In my previous post I showed how my simple, but highly effective approach to
+  In my previous post I showed how my simple, but highly effective approach to
   logging can be used with ASP.NET Web applications -- including Microsoft
   Office SharePoint Server (MOSS) and Windows SharePoint Services (WSS). 
-   Note that SharePoint application..."
+   Note that SharePoint application...
 aliases:
   [
     "/blog/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx",

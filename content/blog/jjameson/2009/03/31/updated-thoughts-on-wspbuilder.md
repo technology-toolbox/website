@@ -1,5 +1,5 @@
 ---
-title: "Updated Thoughts on WSPBuilder"
+title: Updated Thoughts on WSPBuilder
 date: 2009-03-31T07:55:00-06:00
 excerpt:
   "Several weeks ago, I wrote a post titled \" Why I'm Not a Fan of WSPBuilder

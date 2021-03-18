@@ -1,5 +1,5 @@
 ---
-title: "Disable Pinging of Your Application Pool Worker Process in IIS"
+title: Disable Pinging of Your Application Pool Worker Process in IIS
 date: 2010-04-21T04:18:00-06:00
 excerpt:
   "Yesterday I was doing another \"Knowledge Transfer\" session and before I

@@ -1,5 +1,5 @@
 ---
-title: "Large Visual Studio Solutions and Loading/Unloading Projects"
+title: Large Visual Studio Solutions and Loading/Unloading Projects
 date: 2009-03-06T10:03:00-07:00
 excerpt:
   "As I noted in my previous post , I typically work with \"large\" Visual

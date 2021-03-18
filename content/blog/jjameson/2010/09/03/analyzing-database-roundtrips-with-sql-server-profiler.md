@@ -1,5 +1,5 @@
 ---
-title: "Analyzing Database Roundtrips with SQL Server Profiler"
+title: Analyzing Database Roundtrips with SQL Server Profiler
 date: 2010-09-03T04:50:00-06:00
 excerpt:
   "One of the \"good habits\" I've developed over the years while creating

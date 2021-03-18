@@ -1,5 +1,5 @@
 ---
-title: "Script to Clear (and Save) Event Logs"
+title: Script to Clear (and Save) Event Logs
 date: 2011-03-01T05:37:00-07:00
 excerpt:
   "As I was writing my first post earlier this morning , I wondered if I had

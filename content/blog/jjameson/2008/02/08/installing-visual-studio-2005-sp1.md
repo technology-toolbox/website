@@ -1,5 +1,5 @@
 ---
-title: "Installing Visual Studio 2005 Service Pack 1"
+title: Installing Visual Studio 2005 Service Pack 1
 date: 2008-02-08T08:12:00-07:00
 excerpt:
   "Stepping into the \"Wayback Machine\" for a moment, I realized that I hinted

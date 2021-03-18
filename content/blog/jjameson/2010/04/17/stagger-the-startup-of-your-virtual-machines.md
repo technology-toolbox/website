@@ -1,5 +1,5 @@
 ---
-title: "Stagger the Startup of Your Virtual Machines"
+title: Stagger the Startup of Your Virtual Machines
 date: 2010-04-17T04:50:00-06:00
 excerpt:
   "I've mentioned before how I run two Hyper-V servers in the \" Jameson

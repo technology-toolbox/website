@@ -1,5 +1,5 @@
 ---
-title: "Incrementing the Assembly Version for Each Build in TFS 2010"
+title: Incrementing the Assembly Version for Each Build in TFS 2010
 date: 2010-11-29T16:18:00-07:00
 excerpt:
   "Update (2010-12-03) 

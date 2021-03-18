@@ -1,12 +1,12 @@
 ---
-title: "Recommendations for Code Analysis"
+title: Recommendations for Code Analysis
 date: 2009-10-31T05:44:00-06:00
 excerpt:
-  "In my previous post , I briefly mentioned the Code Analysis feature of Visual
+  In my previous post , I briefly mentioned the Code Analysis feature of Visual
   Studio in the context of using check-in policies with Team Foundation Server
   (TFS). However, there's a lot more to talk about with regards to using Code
   Analysis. 
-   If you..."
+   If you...
 aliases:
   [
     "/blog/jjameson/archive/2009/10/30/recommendations-for-code-analysis.aspx",

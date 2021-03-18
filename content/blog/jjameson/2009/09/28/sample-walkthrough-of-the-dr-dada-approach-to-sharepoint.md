@@ -1,5 +1,5 @@
 ---
-title: "Sample Walkthrough of the DR.DADA Approach to SharePoint"
+title: Sample Walkthrough of the DR.DADA Approach to SharePoint
 date: 2009-09-28T05:38:00-06:00
 excerpt:
   "Update 2009-11-18 

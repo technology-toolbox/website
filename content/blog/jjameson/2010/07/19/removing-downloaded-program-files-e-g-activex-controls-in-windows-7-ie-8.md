@@ -1,11 +1,11 @@
 ---
-title: "Removing Downloaded Program Files (e.g. ActiveX Controls) in Windows 7/IE 8"
+title: Removing Downloaded Program Files (e.g. ActiveX Controls) in Windows 7/IE 8
 date: 2010-07-19T15:13:00-06:00
 excerpt:
-  "In the latest sprint on my current project, we are adding yet another major
+  In the latest sprint on my current project, we are adding yet another major
   feature to a customer service portal -- specifically, the ability to view live
   video feeds from security cameras. The vendor this particular customer has
-  selected for providing..."
+  selected for providing...
 aliases:
   [
     "/blog/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx",

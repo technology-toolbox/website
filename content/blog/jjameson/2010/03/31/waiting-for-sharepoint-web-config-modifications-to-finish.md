@@ -1,12 +1,12 @@
 ---
-title: "Waiting for SharePoint Web.config Modifications to Finish"
+title: Waiting for SharePoint Web.config Modifications to Finish
 date: 2010-03-31T08:38:00-06:00
 excerpt:
-  "This week I finally got around to fixing a bug that would occasionally occur
+  This week I finally got around to fixing a bug that would occasionally occur
   when deploying our solution based on Microsoft Office SharePoint Server (MOSS)
   2007. 
    In the solution we use a variety of different features to configure different
-  aspects..."
+  aspects...
 aliases:
   [
     "/blog/jjameson/archive/2010/03/30/waiting-for-sharepoint-web-config-modifications-to-finish.aspx",

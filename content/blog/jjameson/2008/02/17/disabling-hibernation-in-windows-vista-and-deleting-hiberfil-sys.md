@@ -1,5 +1,5 @@
 ---
-title: "Disabling Hibernation in Windows Vista (and Deleting Hiberfil.sys)"
+title: Disabling Hibernation in Windows Vista (and Deleting Hiberfil.sys)
 date: 2008-02-17T21:33:00-07:00
 excerpt:
   "As I described in my previous post , I found myself with a paltry 320 MB of

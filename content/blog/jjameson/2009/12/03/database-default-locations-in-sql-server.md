@@ -1,5 +1,5 @@
 ---
-title: "Database Default Locations in SQL Server"
+title: Database Default Locations in SQL Server
 date: 2009-12-03T05:30:00-07:00
 excerpt:
   "I've mentioned before the importance of using multiple \"spindles\" when

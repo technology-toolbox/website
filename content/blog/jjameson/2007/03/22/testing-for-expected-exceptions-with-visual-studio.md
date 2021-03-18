@@ -1,5 +1,5 @@
 ---
-title: "Testing for Expected Exceptions with Visual Studio"
+title: Testing for Expected Exceptions with Visual Studio
 date: 2007-03-22T07:28:00-06:00
 excerpt:
   "Since I seem to be on a roll blogging this morning, I thought I'd see if I

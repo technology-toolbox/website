@@ -1,10 +1,10 @@
 ---
-title: "Feedburner not showing your latest blog post? Your feed probably exceeds 512K."
+title: Feedburner not showing your latest blog post? Your feed probably exceeds 512K.
 date: 2011-11-05T23:00:01-06:00
 excerpt:
-  "This morning I discovered that Feedburner wasn't showing the blog post I
+  This morning I discovered that Feedburner wasn't showing the blog post I
   created last Thursday. No error was displayed. Rather the RSS feed simply made
-  it look like..."
+  it look like...
 aliases:
   [
     "/blog/jjameson/archive/2011/11/05/feedburner-not-showing-your-latest-blog-post.aspx",

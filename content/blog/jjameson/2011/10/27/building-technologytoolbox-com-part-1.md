@@ -1,11 +1,11 @@
 ---
-title: "Why was Subtext selected for TechnologyToolbox.com? (a.k.a. Building TechnologyToolbox.com, part 1)"
+title: Why was Subtext selected for TechnologyToolbox.com? (a.k.a. Building TechnologyToolbox.com, part 1)
 date: 2011-10-27T02:53:14-06:00
 excerpt:
-  "In my previous post, I mentioned how my new blog is currently powered by
+  In my previous post, I mentioned how my new blog is currently powered by
   Subtext -- or rather my own (slightly modified) version of Subtext 2.5. I also
   noted that Subtext wasn't my first choice when selecting a blogging
-  solution..."
+  solution...
 aliases:
   [
     "/blog/jjameson/archive/2011/10/26/building-technologytoolbox-com-part-1.aspx",

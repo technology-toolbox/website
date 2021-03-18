@@ -1,5 +1,5 @@
 ---
-title: "C++ Compiler in Visual Studio 2010 Must Target .NET Framework 4"
+title: C++ Compiler in Visual Studio 2010 Must Target .NET Framework 4
 date: 2010-05-07T05:38:00-06:00
 excerpt:
   "Another \"hiccup\" this week after upgrading my Team Foundation Server (TFS)

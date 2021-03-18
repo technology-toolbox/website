@@ -1,5 +1,5 @@
 ---
-title: "SPLimitedWebPartManager.AddWebPart Mysteriously Increments zoneIndex"
+title: SPLimitedWebPartManager.AddWebPart Mysteriously Increments zoneIndex
 date: 2009-06-05T08:08:00-06:00
 excerpt:
   "One of the common tasks when using the \"DR.DADA\" approach to SharePoint

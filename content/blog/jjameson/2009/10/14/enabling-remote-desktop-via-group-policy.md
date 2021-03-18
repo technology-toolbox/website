@@ -1,5 +1,5 @@
 ---
-title: "Enabling Remote Desktop via Group Policy"
+title: Enabling Remote Desktop via Group Policy
 date: 2009-10-14T04:53:00-06:00
 excerpt:
   "In a previous post, I provided some details on the \"Jameson Datacenter\"

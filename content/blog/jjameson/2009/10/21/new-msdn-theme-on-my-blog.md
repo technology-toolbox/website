@@ -1,5 +1,5 @@
 ---
-title: "New MSDN Theme on My Blog"
+title: New MSDN Theme on My Blog
 date: 2009-10-21T03:12:00-06:00
 excerpt:
   "I noticed this morning that the new color scheme released this past week on

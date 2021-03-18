@@ -1,11 +1,11 @@
 ---
-title: "Recommended ISO Tools"
+title: Recommended ISO Tools
 date: 2010-07-25T04:38:00-06:00
 excerpt:
-  "I added a new item to my Toolbox this weekend -- LC ISO Creator . It's not
+  I added a new item to my Toolbox this weekend -- LC ISO Creator . It's not
   fancy, or even supported, but it is free and it appears to do what it is
   supposed to without issue, specifically creating an ISO image from an existing
-  CD-ROM or DVD-ROM. There..."
+  CD-ROM or DVD-ROM. There...
 aliases:
   [
     "/blog/jjameson/archive/2010/07/24/recommended-iso-tools.aspx",

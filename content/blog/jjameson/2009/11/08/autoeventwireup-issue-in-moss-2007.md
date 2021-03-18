@@ -1,5 +1,5 @@
 ---
-title: "AutoEventWireup Issue in MOSS 2007"
+title: AutoEventWireup Issue in MOSS 2007
 date: 2009-11-08T18:15:00-07:00
 excerpt:
   "I recently promised to finish this blog post that has been sitting in

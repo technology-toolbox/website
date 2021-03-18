@@ -1,5 +1,5 @@
 ---
-title: "Bug Deploying SQL Server Database Using VSDBCMD.EXE"
+title: Bug Deploying SQL Server Database Using VSDBCMD.EXE
 date: 2009-12-09T06:32:00-07:00
 excerpt:
   "Yesterday we encountered a bug while trying to deploy a new SQL Server

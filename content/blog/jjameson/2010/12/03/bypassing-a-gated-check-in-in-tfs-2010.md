@@ -1,11 +1,11 @@
 ---
-title: "Bypassing a Gated Check-in in TFS 2010"
+title: Bypassing a Gated Check-in in TFS 2010
 date: 2010-12-03T07:32:00-07:00
 excerpt:
-  "Yesterday someone contacted me about my earlier post on Incrementing the
+  Yesterday someone contacted me about my earlier post on Incrementing the
   Assembly Version for Each Build in TFS 2010 , because after following the
   steps I provided, he encountered a problem due to the fact that he had
-  previously configured a gated check..."
+  previously configured a gated check...
 aliases:
   [
     "/blog/jjameson/archive/2010/12/02/bypassing-a-gated-check-in-in-tfs-2010.aspx",

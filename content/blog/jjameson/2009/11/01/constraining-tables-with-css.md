@@ -1,12 +1,12 @@
 ---
-title: "Constraining Tables with CSS"
+title: Constraining Tables with CSS
 date: 2009-11-01T05:15:00-07:00
 lastmod: 2009-11-01T06:15:00-07:00
 excerpt:
-  "Have you ever wanted to display data in a table but limit the size of the
-  rows and columns within the table? 
+  Have you ever wanted to display data in a table but limit the size of the rows
+  and columns within the table? 
    For example, consider the classic master/detail view that we often find in
-  software applications, in which items are shown in a summary table..."
+  software applications, in which items are shown in a summary table...
 aliases:
   [
     "/blog/jjameson/archive/2009/10/31/constraining-tables-with-css.aspx",

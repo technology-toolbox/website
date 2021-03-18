@@ -1,5 +1,5 @@
 ---
-title: "Web Standards Design with SharePoint, Part 4"
+title: Web Standards Design with SharePoint, Part 4
 date: 2011-04-02T10:06:00-06:00
 excerpt:
   "In part 2 of this series, I provided a sample Microsoft Office SharePoint

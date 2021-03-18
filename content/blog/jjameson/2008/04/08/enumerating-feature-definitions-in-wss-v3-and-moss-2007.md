@@ -1,5 +1,5 @@
 ---
-title: "Enumerating Feature Definitions in WSS v3 and MOSS 2007"
+title: Enumerating Feature Definitions in WSS v3 and MOSS 2007
 date: 2008-04-08T18:39:00-06:00
 excerpt:
   "There might be occasions where you need to \"decode\" the feature GUID in

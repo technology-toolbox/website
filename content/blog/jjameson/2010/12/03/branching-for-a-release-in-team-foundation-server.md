@@ -1,5 +1,5 @@
 ---
-title: "Branching for a Release in Team Foundation Server"
+title: Branching for a Release in Team Foundation Server
 date: 2010-12-03T13:05:00-07:00
 excerpt:
   "In my previous post , I mentioned that one of the recurring tasks I create in

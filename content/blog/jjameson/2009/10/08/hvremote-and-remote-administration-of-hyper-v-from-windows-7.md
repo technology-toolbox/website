@@ -1,5 +1,5 @@
 ---
-title: "HVRemote and Remote Administration of Hyper-V from Windows 7"
+title: HVRemote and Remote Administration of Hyper-V from Windows 7
 date: 2009-10-08T06:21:00-06:00
 excerpt:
   "Last Sunday, I rebuilt my desktop ( WOLVERINE ) with the RTM build of Windows

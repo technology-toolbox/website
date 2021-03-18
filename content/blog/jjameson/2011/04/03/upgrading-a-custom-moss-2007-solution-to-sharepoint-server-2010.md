@@ -1,5 +1,5 @@
 ---
-title: "Upgrading a Custom MOSS 2007 Solution to SharePoint Server 2010"
+title: Upgrading a Custom MOSS 2007 Solution to SharePoint Server 2010
 date: 2011-04-03T04:59:00-06:00
 excerpt:
   "In yesterday's post , I provided a custom SharePoint Server 2010 solution

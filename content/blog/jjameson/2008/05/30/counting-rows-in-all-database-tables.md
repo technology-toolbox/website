@@ -1,5 +1,5 @@
 ---
-title: "Counting Rows in All Database Tables in SQL Server"
+title: Counting Rows in All Database Tables in SQL Server
 date: 2008-05-30T08:56:00-06:00
 excerpt:
   "Here is yet another of the SQL scripts that I like to keep handy in my

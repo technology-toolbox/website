@@ -1,13 +1,13 @@
 ---
-title: "CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio"
+title: CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio
 date: 2009-04-02T09:16:00-06:00
 excerpt:
-  "In my previous post , I introduced the concept of linking files in Visual
+  In my previous post , I introduced the concept of linking files in Visual
   Studio solutions. 
    A good use of this feature is specifying a custom dictionary for your
   solution. 
    Once you enable Code Analysis on your projects, you are likely to
-  encounter..."
+  encounter...
 aliases:
   [
     "/blog/jjameson/archive/2009/04/01/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx",

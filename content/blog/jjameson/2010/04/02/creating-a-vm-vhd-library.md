@@ -1,5 +1,5 @@
 ---
-title: "Creating a VM/VHD Library"
+title: Creating a VM/VHD Library
 date: 2010-04-02T07:37:00-06:00
 excerpt:
   "Last week a colleague was asking me how I manage my various VMs. More

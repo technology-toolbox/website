@@ -1,5 +1,5 @@
 ---
-title: "Configuring Claims-Based Authentication in SharePoint Server 2010"
+title: Configuring Claims-Based Authentication in SharePoint Server 2010
 date: 2011-02-19T13:06:00-07:00
 excerpt:
   "I thought it would be helpful to share my step-by-step procedures for

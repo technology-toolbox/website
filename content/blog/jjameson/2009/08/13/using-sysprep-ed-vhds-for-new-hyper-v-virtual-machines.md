@@ -1,5 +1,5 @@
 ---
-title: "Using SysPrep'ed VHDs for New Hyper-V Virtual Machines"
+title: Using SysPrep'ed VHDs for New Hyper-V Virtual Machines
 date: 2009-08-13T10:16:00-06:00
 excerpt:
   "As noted in my previous post , I spent 7 days in \"alpha\" training last week

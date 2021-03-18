@@ -1,5 +1,5 @@
 ---
-title: "Variation Logs Paging Bug"
+title: Variation Logs Paging Bug
 date: 2007-10-27T08:01:00-06:00
 excerpt:
   "It's embarrassing how my blog posts rapidly died off after this past June.

@@ -1,5 +1,5 @@
 ---
-title: "Some Tips for Managing TFS Workspaces"
+title: Some Tips for Managing TFS Workspaces
 date: 2013-05-06T12:51:05-06:00
 excerpt:
   "Are you familiar with the \"tfpt scorch\" command? Have you ever used

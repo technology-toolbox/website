@@ -1,5 +1,5 @@
 ---
-title: "Code coverage analysis with Visual Studio 2010 and .NET 3.5 solutions (e.g. SharePoint 2010)"
+title: Code coverage analysis with Visual Studio 2010 and .NET 3.5 solutions (e.g. SharePoint 2010)
 date: 2012-02-23T02:08:16-07:00
 excerpt:
   "It takes a little more work than expected, but you actually can \"have your

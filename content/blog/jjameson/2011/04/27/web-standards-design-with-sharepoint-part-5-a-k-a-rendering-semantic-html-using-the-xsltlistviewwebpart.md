@@ -1,5 +1,5 @@
 ---
-title: "Web Standards Design with SharePoint, Part 5 (a.k.a. Rendering Semantic HTML Using the XsltListViewWebPart)"
+title: Web Standards Design with SharePoint, Part 5 (a.k.a. Rendering Semantic HTML Using the XsltListViewWebPart)
 date: 2011-04-27T07:33:00-06:00
 excerpt:
   "In part 4 of this series , I provided a sample SharePoint Server 2010

@@ -1,5 +1,5 @@
 ---
-title: "A Simple Backup Solution"
+title: A Simple Backup Solution
 date: 2009-11-09T05:44:00-07:00
 excerpt:
   "As I've mentioned before, I don't spend much money or time maintaining the

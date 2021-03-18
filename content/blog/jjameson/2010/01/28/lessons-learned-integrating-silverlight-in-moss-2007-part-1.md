@@ -1,5 +1,5 @@
 ---
-title: "Lessons Learned Integrating Silverlight in MOSS 2007, Part 1"
+title: Lessons Learned Integrating Silverlight in MOSS 2007, Part 1
 date: 2010-01-28T05:44:00-07:00
 excerpt:
   "The November 2008 edition of MSDN magazine contained the following article: 

@@ -1,5 +1,5 @@
 ---
-title: "Backing Up User Databases in SQL Server (and SQL Server Express)"
+title: Backing Up User Databases in SQL Server (and SQL Server Express)
 date: 2008-05-30T09:22:00-06:00
 excerpt:
   "Since I appear to be on a roll with my blog this morning, I figured that I

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Macro for Collapsing All Items in Solution Explorer"
+title: Visual Studio Macro for Collapsing All Items in Solution Explorer
 date: 2009-03-11T09:18:00-06:00
 excerpt:
   "Along with my Visual Studio macros for unloading/reloading projects in a

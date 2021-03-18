@@ -1,5 +1,5 @@
 ---
-title: "Zip a folder using PowerShell"
+title: Zip a folder using PowerShell
 date: 2012-02-27T23:50:24-07:00
 excerpt:
   "There are a couple of options for creating a zip file for a specific folder.

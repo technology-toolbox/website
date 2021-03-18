@@ -1,11 +1,11 @@
 ---
-title: "Redirecting stderr to stdout"
+title: Redirecting stderr to stdout
 date: 2009-03-27T06:29:00-06:00
 excerpt:
-  "Yesterday I replied to an email from a teammate in which I incorrectly stated
+  Yesterday I replied to an email from a teammate in which I incorrectly stated
   that you can't redirect stderr to stdout in DOS -- er, I mean a command window
   in Microsoft Windows. 
-   I would have sworn the last time I tried something like the following..."
+   I would have sworn the last time I tried something like the following...
 aliases:
   [
     "/blog/jjameson/archive/2009/03/26/redirecting-stderr-to-stdout.aspx",

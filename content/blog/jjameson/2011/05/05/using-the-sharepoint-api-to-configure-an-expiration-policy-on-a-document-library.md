@@ -1,5 +1,5 @@
 ---
-title: "Using the SharePoint API to Configure an Expiration Policy on a Document Library"
+title: Using the SharePoint API to Configure an Expiration Policy on a Document Library
 date: 2011-05-05T06:58:00-06:00
 excerpt:
   "While it typically takes less than a minute or two to configure an expiration

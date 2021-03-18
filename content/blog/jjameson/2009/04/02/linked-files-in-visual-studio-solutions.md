@@ -1,5 +1,5 @@
 ---
-title: "Linked Files in Visual Studio Solutions"
+title: Linked Files in Visual Studio Solutions
 date: 2009-04-02T08:20:00-06:00
 excerpt:
   "A couple of years ago, I wrote a post introducing my system for structuring

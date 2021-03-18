@@ -1,5 +1,5 @@
 ---
-title: "Enforcing Windows Update via Group Policy"
+title: Enforcing Windows Update via Group Policy
 date: 2009-10-15T04:15:00-06:00
 excerpt:
   "Another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a.

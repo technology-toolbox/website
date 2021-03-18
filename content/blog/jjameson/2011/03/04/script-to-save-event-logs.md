@@ -1,5 +1,5 @@
 ---
-title: "Script to Save Event Logs"
+title: Script to Save Event Logs
 date: 2011-03-04T05:35:00-07:00
 excerpt:
   "Earlier this week , I shared a script that I frequently use in my development

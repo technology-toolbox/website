@@ -1,5 +1,5 @@
 ---
-title: "Event ID 10016, KB 920783, and the WSS_WPG Group"
+title: Event ID 10016, KB 920783, and the WSS_WPG Group
 date: 2009-10-17T03:33:00-06:00
 excerpt:
   "If you've ever deployed Windows SharePoint Services (WSS) v3 or Microsoft

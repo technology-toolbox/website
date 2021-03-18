@@ -1,5 +1,5 @@
 ---
-title: "Incrementing the Assembly Version for Each Build"
+title: Incrementing the Assembly Version for Each Build
 date: 2010-03-25T04:59:00-06:00
 excerpt:
   "Last summer I wrote a post about best practices for .NET assembly versioning

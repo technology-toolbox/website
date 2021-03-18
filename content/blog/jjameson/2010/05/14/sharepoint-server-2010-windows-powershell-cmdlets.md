@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Server 2010 Windows PowerShell cmdlets"
+title: SharePoint Server 2010 Windows PowerShell cmdlets
 date: 2010-05-14T06:34:00-06:00
 excerpt:
   "Another essential resource for those (like me) upgrading from Microsoft

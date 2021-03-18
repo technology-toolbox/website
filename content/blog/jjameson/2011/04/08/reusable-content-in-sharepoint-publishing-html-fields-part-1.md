@@ -1,5 +1,5 @@
 ---
-title: "Reusable Content in SharePoint Publishing HTML Fields, Part 1"
+title: Reusable Content in SharePoint Publishing HTML Fields, Part 1
 date: 2011-04-08T06:59:00-06:00
 excerpt:
   "In one of the sprints last year for my current project, I built a custom

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 2010 Sneak Peek"
+title: SharePoint 2010 Sneak Peek
 date: 2009-08-13T09:43:00-06:00
 excerpt:
   "SharePoint 2010 is coming! 

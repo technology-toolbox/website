@@ -1,5 +1,5 @@
 ---
-title: "Test Driven Development (TDD) in the Real World, Part 2"
+title: Test Driven Development (TDD) in the Real World, Part 2
 date: 2010-04-09T09:48:00-06:00
 excerpt:
   "In part 

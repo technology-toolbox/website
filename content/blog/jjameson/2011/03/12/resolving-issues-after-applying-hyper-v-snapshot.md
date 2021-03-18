@@ -1,5 +1,5 @@
 ---
-title: "Resolving Issues After Applying Hyper-V Snapshot"
+title: Resolving Issues After Applying Hyper-V Snapshot
 date: 2011-03-12T04:04:00-07:00
 excerpt:
   "This morning I rolled back one of my development VMs to a snapshot I created

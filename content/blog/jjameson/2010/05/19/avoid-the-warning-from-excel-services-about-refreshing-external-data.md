@@ -1,12 +1,12 @@
 ---
-title: "Avoid the Warning from Excel Services About Refreshing External Data"
+title: Avoid the Warning from Excel Services About Refreshing External Data
 date: 2010-05-19T03:42:00-06:00
 excerpt:
-  "In my post earlier this month on upgrading to Team Foundation Server (TFS)
+  In my post earlier this month on upgrading to Team Foundation Server (TFS)
   2010 and SharePoint Server 2010 , I forgot to include the steps to change the
   Warn on Refresh setting of the trusted file location for the Excel Services
   Application. 
-   If you..."
+   If you...
 aliases:
   [
     "/blog/jjameson/archive/2010/05/18/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx",

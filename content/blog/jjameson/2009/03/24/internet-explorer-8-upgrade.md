@@ -1,12 +1,12 @@
 ---
-title: "Internet Explorer 8 Upgrade"
+title: Internet Explorer 8 Upgrade
 date: 2009-03-24T08:12:00-06:00
 excerpt:
-  "In case you missed the announcement, Internet Explorer 8 was released last
+  In case you missed the announcement, Internet Explorer 8 was released last
   week. 
    I'll be honest, I tried one of the early betas of IE8 on a VM a long time
   ago, but I didn't spend a lot of time with it because it always seemed like
-  there was some more..."
+  there was some more...
 aliases:
   [
     "/blog/jjameson/archive/2009/03/23/internet-explorer-8-upgrade.aspx",

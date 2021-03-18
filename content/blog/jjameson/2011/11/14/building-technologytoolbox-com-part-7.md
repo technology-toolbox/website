@@ -1,10 +1,10 @@
 ---
-title: "Refresh Development and Test environments with Production database (a.k.a. Building TechnologyToolbox.com, part 7)"
+title: Refresh Development and Test environments with Production database (a.k.a. Building TechnologyToolbox.com, part 7)
 date: 2011-11-14T07:53:58-07:00
 excerpt:
-  "In this post, I'll show you how I quickly restore the Production database for
+  In this post, I'll show you how I quickly restore the Production database for
   TechnologyToolbox.com to the corresponding Development and Test
-  environments..."
+  environments...
 aliases:
   [
     "/blog/jjameson/archive/2011/11/14/building-technologytoolbox-com-part-7.aspx",

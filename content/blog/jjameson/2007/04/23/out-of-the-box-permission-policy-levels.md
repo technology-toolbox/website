@@ -1,5 +1,5 @@
 ---
-title: "Out-of-the-Box Permission (Policy) Levels"
+title: Out-of-the-Box Permission (Policy) Levels
 date: 2007-04-23T22:57:00-06:00
 excerpt:
   "For a couple of months now, I have been using the following command to add

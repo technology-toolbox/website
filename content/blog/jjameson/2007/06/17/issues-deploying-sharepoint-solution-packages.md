@@ -1,11 +1,11 @@
 ---
-title: "Issues Deploying SharePoint Solution Packages"
+title: Issues Deploying SharePoint Solution Packages
 date: 2007-06-17T07:44:00-06:00
 excerpt:
-  "Several weeks ago, I converted our deployment process to use SharePoint
+  Several weeks ago, I converted our deployment process to use SharePoint
   solution packages instead of the batch scripts that we had been using in our
   Development environment. One of the issues that I discovered along the way is
-  that SharePoint is rather..."
+  that SharePoint is rather...
 aliases:
   [
     "/blog/jjameson/archive/2007/06/16/issues-deploying-sharepoint-solution-packages.aspx",

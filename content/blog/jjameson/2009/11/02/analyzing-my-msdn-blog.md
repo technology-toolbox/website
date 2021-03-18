@@ -1,5 +1,5 @@
 ---
-title: "Analyzing My MSDN Blog"
+title: Analyzing My MSDN Blog
 date: 2009-11-02T07:42:00-07:00
 excerpt:
   "According to my blog dashboard, this will be post #150 for my MSDN blog. So

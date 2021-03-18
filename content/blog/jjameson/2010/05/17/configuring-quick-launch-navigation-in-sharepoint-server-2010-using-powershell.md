@@ -1,11 +1,11 @@
 ---
-title: "Configuring Quick Launch Navigation in SharePoint Server 2010 Using PowerShell"
+title: Configuring Quick Launch Navigation in SharePoint Server 2010 Using PowerShell
 date: 2010-05-17T05:43:00-06:00
 excerpt:
-  "Suppose that you need to update a few SharePoint team sites to add a couple
-  of links to the quick launch navigation. Assuming the number of sites to be
+  Suppose that you need to update a few SharePoint team sites to add a couple of
+  links to the quick launch navigation. Assuming the number of sites to be
   updated is relatively small, then it is reasonable to manually apply the
-  configuration changes via..."
+  configuration changes via...
 aliases:
   [
     "/blog/jjameson/archive/2010/05/16/configuring-quick-launch-navigation-in-sharepoint-server-2010-using-powershell.aspx",

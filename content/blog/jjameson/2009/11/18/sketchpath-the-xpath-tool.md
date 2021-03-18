@@ -1,5 +1,5 @@
 ---
-title: "SketchPath - The XPath Tool"
+title: SketchPath - The XPath Tool
 date: 2009-11-18T03:40:00-07:00
 excerpt:
   "I added another tool to my Toolbox yesterday: SketchPath. 

@@ -1,5 +1,5 @@
 ---
-title: "Expression Web, My MSDN Blog, and (Now) Team Foundation Server"
+title: Expression Web, My MSDN Blog, and (Now) Team Foundation Server
 date: 2009-09-12T09:17:00-06:00
 excerpt:
   "In case you haven't picked it up from some of my previous posts, I became

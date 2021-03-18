@@ -1,5 +1,5 @@
 ---
-title: "No HTML Markup in MOSS 2007 Managed Properties"
+title: No HTML Markup in MOSS 2007 Managed Properties
 date: 2009-09-23T08:35:00-06:00
 excerpt:
   "In my previous post , I showed how to automatically configure managed

@@ -1,11 +1,11 @@
 ---
-title: "Localization and SharePoint Solutions, Part 2 (a.k.a. the CurrentUICultureSwitcher class)"
+title: Localization and SharePoint Solutions, Part 2 (a.k.a. the CurrentUICultureSwitcher class)
 date: 2011-04-04T04:33:00-06:00
 excerpt:
-  "In part 1 of this series , I mentioned how I've been involved in several
+  In part 1 of this series , I mentioned how I've been involved in several
   SharePoint projects for large, multinational corporations including Agilent
   Technologies and KPMG . I also mentioned how one of the sprints last year for
-  my current project was dedicated..."
+  my current project was dedicated...
 aliases:
   [
     "/blog/jjameson/archive/2011/04/03/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx",

@@ -1,5 +1,5 @@
 ---
-title: "RecoverableException for .NET Framework Solutions"
+title: RecoverableException for .NET Framework Solutions
 date: 2011-04-05T05:38:00-06:00
 excerpt:
   "Do you remember the good ol' days before the ApplicationException class in

@@ -1,5 +1,5 @@
 ---
-title: "ArgumentNullException with Optional PublishingPage.Description Property (with some thoughts on breaking the build, too)"
+title: ArgumentNullException with Optional PublishingPage.Description Property (with some thoughts on breaking the build, too)
 date: 2009-03-19T07:06:00-06:00
 excerpt:
   "Yesterday morning I broke the build. 

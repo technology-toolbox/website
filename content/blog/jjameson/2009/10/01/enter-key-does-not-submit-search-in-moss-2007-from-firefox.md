@@ -1,5 +1,5 @@
 ---
-title: "Enter Key Does Not Submit Search in MOSS 2007 from Firefox"
+title: Enter Key Does Not Submit Search in MOSS 2007 from Firefox
 date: 2009-10-01T07:58:00-06:00
 excerpt:
   "One issue that has \"bitten\" me on more than one occasion is the fact that

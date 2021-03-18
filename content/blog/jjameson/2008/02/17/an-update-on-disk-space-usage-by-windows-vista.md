@@ -1,5 +1,5 @@
 ---
-title: "An Update on Disk Space Usage by Windows Vista"
+title: An Update on Disk Space Usage by Windows Vista
 date: 2008-02-17T20:35:00-07:00
 excerpt:
   "Today I rebuilt my laptop to allow me to dual boot between Windows Server

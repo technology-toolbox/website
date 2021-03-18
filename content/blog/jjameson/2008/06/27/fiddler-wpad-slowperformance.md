@@ -1,11 +1,11 @@
 ---
-title: "Fiddler + WPAD - VPN = SlowPerformance"
+title: Fiddler + WPAD - VPN = SlowPerformance
 date: 2008-06-27T11:57:00-06:00
 excerpt:
-  "I needed to look at some low-level HTTP traffic this morning, so I fired up
+  I needed to look at some low-level HTTP traffic this morning, so I fired up
   Fiddler -- my tool of choice for this kind of thing. Unfortunately, I found
   that as soon as I enabled Fiddler, my browsing experience slowed to a crawl.
-  Page requests that previously..."
+  Page requests that previously...
 aliases:
   [
     "/blog/jjameson/archive/2008/06/26/fiddler-wpad-slowperformance.aspx",

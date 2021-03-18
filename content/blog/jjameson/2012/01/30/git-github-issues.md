@@ -1,9 +1,9 @@
 ---
-title: "Git/GitHub issues"
+title: Git/GitHub issues
 date: 2012-01-30T23:35:45-07:00
 excerpt:
-  "Follow along as I share my struggles using GitHub and the Git version control
-  system."
+  Follow along as I share my struggles using GitHub and the Git version control
+  system.
 aliases:
   [
     "/blog/jjameson/archive/2012/01/30/git-github-issues.aspx",

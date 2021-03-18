@@ -1,5 +1,5 @@
 ---
-title: "Finding the Content Type ID in MOSS 2007"
+title: Finding the Content Type ID in MOSS 2007
 date: 2009-09-30T05:45:00-06:00
 excerpt:
   "Yesterday I received the following question from someone regarding Microsoft

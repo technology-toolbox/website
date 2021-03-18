@@ -1,5 +1,5 @@
 ---
-title: "Operations Manager Alerts for Event Log Errors"
+title: Operations Manager Alerts for Event Log Errors
 date: 2011-03-18T06:14:00-06:00
 excerpt:
   "One of the things I like most about running System Center Operations Manager

@@ -1,11 +1,11 @@
 ---
-title: "Using the Entity Framework and LINQ to list the most recent posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 9)"
+title: Using the Entity Framework and LINQ to list the most recent posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 9)
 date: 2011-11-28T09:22:16-07:00
 excerpt:
-  "In a previous post, I mentioned how the new Technology Toolbox home page
+  In a previous post, I mentioned how the new Technology Toolbox home page
   highlights 
   the most recent blog posts from Subtext. In this post, I'll show you how easy
-  this feature was to develop -- thanks to the Entity Framework and LINQ."
+  this feature was to develop -- thanks to the Entity Framework and LINQ.
 aliases:
   [
     "/blog/jjameson/archive/2011/11/28/building-technologytoolbox-com-part-9.aspx",

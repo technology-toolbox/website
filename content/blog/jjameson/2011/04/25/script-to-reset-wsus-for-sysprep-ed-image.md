@@ -1,13 +1,13 @@
 ---
-title: "Script to Reset WSUS for SysPrep'ed Image"
+title: Script to Reset WSUS for SysPrep'ed Image
 date: 2011-04-25T04:03:00-06:00
 excerpt:
-  "Here's a useful script for those, like me, that use SysPrep'ed images to
+  Here's a useful script for those, like me, that use SysPrep'ed images to
   create new virtual machines and also leverage Windows Server Update Services
   (WSUS) to keep machines up-to-date with the latest patches. 
    Reset WSUS for SysPrep Image.cmd 
    
-  ..."
+  ...
 aliases:
   [
     "/blog/jjameson/archive/2011/04/24/script-to-reset-wsus-for-sysprep-ed-image.aspx",

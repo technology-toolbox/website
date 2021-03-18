@@ -1,10 +1,10 @@
 ---
-title: "Custom CAPTCHA control for ASP.NET application and Subtext blog (a.k.a. Building TechnologyToolbox.com, part 16)"
+title: Custom CAPTCHA control for ASP.NET application and Subtext blog (a.k.a. Building TechnologyToolbox.com, part 16)
 date: 2012-01-25T05:44:15-07:00
 excerpt:
-  "In this post, I provide a detailed walkthrough of the custom CAPTCHA control
+  In this post, I provide a detailed walkthrough of the custom CAPTCHA control
   used on the Technology Toolbox website (including some subtle issues
-  discovered when using this control on Subtext blog pages)."
+  discovered when using this control on Subtext blog pages).
 aliases:
   [
     "/blog/jjameson/archive/2012/01/24/building-technologytoolbox-com-part-16.aspx",

@@ -1,5 +1,5 @@
 ---
-title: "Always create installation guides for predictable and repeatable deployments"
+title: Always create installation guides for predictable and repeatable deployments
 date: 2012-03-17T22:37:26-06:00
 excerpt:
   "Does your team utilize a step-by-step installation guide to build and deploy

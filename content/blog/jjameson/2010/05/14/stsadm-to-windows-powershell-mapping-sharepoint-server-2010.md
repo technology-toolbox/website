@@ -1,5 +1,5 @@
 ---
-title: "StsAdm to Windows PowerShell Mapping (SharePoint Server 2010)"
+title: StsAdm to Windows PowerShell Mapping (SharePoint Server 2010)
 date: 2010-05-14T06:24:00-06:00
 excerpt:
   "Here is an essential resource for those (like me) upgrading from Microsoft

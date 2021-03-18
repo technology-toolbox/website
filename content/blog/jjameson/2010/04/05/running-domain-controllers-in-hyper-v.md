@@ -1,5 +1,5 @@
 ---
-title: "Running Domain Controllers in Hyper-V"
+title: Running Domain Controllers in Hyper-V
 date: 2010-04-05T15:29:00-06:00
 excerpt:
   "In a previous post , I noted how the \" Jameson Datacenter \" (a.k.a. my home

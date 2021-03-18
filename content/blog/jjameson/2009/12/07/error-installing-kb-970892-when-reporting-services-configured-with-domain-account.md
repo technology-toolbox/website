@@ -1,5 +1,5 @@
 ---
-title: "Error Installing KB 970892 When Reporting Services Configured with Domain Account"
+title: Error Installing KB 970892 When Reporting Services Configured with Domain Account
 date: 2009-12-07T21:11:00-07:00
 excerpt:
   "For a little over a month, Windows Update was failing on one of the servers

@@ -1,5 +1,5 @@
 ---
-title: "Faceted Search in MOSS 2007 and the MSSDocProps Issue"
+title: Faceted Search in MOSS 2007 and the MSSDocProps Issue
 date: 2009-09-18T08:34:00-06:00
 excerpt:
   "Many customers deploying Microsoft Office SharePoint Server (MOSS) 2007 often

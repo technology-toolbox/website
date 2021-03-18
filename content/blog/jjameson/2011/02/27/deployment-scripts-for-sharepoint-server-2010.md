@@ -1,5 +1,5 @@
 ---
-title: "Deployment Scripts for SharePoint Server 2010"
+title: Deployment Scripts for SharePoint Server 2010
 date: 2011-02-27T08:19:00-07:00
 excerpt:
   "A couple of years ago, I shared the scripts I created for deploying solutions

@@ -1,11 +1,11 @@
 ---
-title: "Introducing the SharePointSmtpHelper Class"
+title: Introducing the SharePointSmtpHelper Class
 date: 2009-10-18T06:29:00-06:00
 excerpt:
-  "Continuing in the spirit of my previous posts for the
+  Continuing in the spirit of my previous posts for the
   SharePointPublishingHelper class and SharePointWebPartHelper class, I'd like
   to introduce another helper class that you may find useful when building
-  solutions for Windows SharePoint Services (WSS..."
+  solutions for Windows SharePoint Services (WSS...
 aliases:
   [
     "/blog/jjameson/archive/2009/10/17/introducing-the-sharepointsmtphelper-class.aspx",

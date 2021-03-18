@@ -1,5 +1,5 @@
 ---
-title: "Sharepoint 2010 Developer Training Kit"
+title: Sharepoint 2010 Developer Training Kit
 date: 2010-05-24T04:11:00-06:00
 excerpt:
   "This is an update to the beta version that was released last December. It

@@ -1,5 +1,5 @@
 ---
-title: "Packaging a code sample using PowerShell"
+title: Packaging a code sample using PowerShell
 date: 2012-02-28T02:32:40-07:00
 excerpt:
   "Here is the PowerShell script I developed to avoid accidentally including

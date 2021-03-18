@@ -1,5 +1,5 @@
 ---
-title: "Showing Resized Images on a Community Server/Telligent Blog"
+title: Showing Resized Images on a Community Server/Telligent Blog
 date: 2010-06-07T07:57:00-06:00
 excerpt:
   "Back in Community Server 2.1 (i.e. prior to the recent upgrade of the

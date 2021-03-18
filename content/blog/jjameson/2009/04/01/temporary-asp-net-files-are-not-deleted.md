@@ -1,5 +1,5 @@
 ---
-title: "Temporary ASP.NET Files Are Not Deleted"
+title: Temporary ASP.NET Files Are Not Deleted
 date: 2009-04-01T07:14:00-06:00
 excerpt:
   "Yesterday afternoon, I discovered that there were 64,725 items (consuming

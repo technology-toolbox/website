@@ -1,5 +1,5 @@
 ---
-title: "Use protocol-relative URLs to avoid mixed mode content"
+title: Use protocol-relative URLs to avoid mixed mode content
 date: 2012-02-19T23:39:17-07:00
 excerpt:
   "Here's a great tip I picked up from Phil Haack a few weeks ago for avoiding

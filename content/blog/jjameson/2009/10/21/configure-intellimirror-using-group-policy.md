@@ -1,5 +1,5 @@
 ---
-title: "Configure IntelliMirror Using Group Policy"
+title: Configure IntelliMirror Using Group Policy
 date: 2009-10-21T04:57:00-06:00
 excerpt:
   "Yet another Group Policy object that I use in the \"Jameson Datacenter\"

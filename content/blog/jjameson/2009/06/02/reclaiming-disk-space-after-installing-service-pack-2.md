@@ -1,5 +1,5 @@
 ---
-title: "Reclaiming Disk Space After Installing Service Pack 2"
+title: Reclaiming Disk Space After Installing Service Pack 2
 date: 2009-06-02T08:39:00-06:00
 excerpt:
   "In yesterday's post , I noted the errors I encountered when trying to install

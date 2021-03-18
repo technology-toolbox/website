@@ -2,10 +2,10 @@
 title: "What's in a name? \"DefaultFeatureReceiver\" vs. \"FeatureConfigurator\""
 date: 2007-03-22T07:07:00-06:00
 excerpt:
-  "In my previous post ( Scope Dependencies for SharePoint Features ) you may
+  In my previous post ( Scope Dependencies for SharePoint Features ) you may
   have noticed that in the Feature.xml file, I specified the feature receiver
   class as DefaultFeatureReceiver but the code sample is actually from
-  FeatureConfigurator . This warrants..."
+  FeatureConfigurator . This warrants...
 aliases:
   [
     "/blog/jjameson/archive/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx",

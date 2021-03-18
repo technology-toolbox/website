@@ -1,5 +1,5 @@
 ---
-title: "Versioning Blog Posts in WSS v3 and MOSS 2007"
+title: Versioning Blog Posts in WSS v3 and MOSS 2007
 date: 2008-04-23T10:07:00-06:00
 excerpt:
   "Complementing the Work Items list that I described in a previous post , we

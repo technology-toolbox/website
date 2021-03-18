@@ -1,5 +1,5 @@
 ---
-title: "Using CSS sprites to improve site performance and user experience (a.k.a. Building TechnologyToolbox.com, part 11)"
+title: Using CSS sprites to improve site performance and user experience (a.k.a. Building TechnologyToolbox.com, part 11)
 date: 2012-01-14T23:02:25-07:00
 excerpt:
   "In my previous post, I briefly mentioned how the \"Most Popular Posts\"

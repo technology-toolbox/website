@@ -1,5 +1,5 @@
 ---
-title: "Using jQuery to create an expandable archive list for blog posts (a.k.a. Building TechnologyToolbox.com, part 12)"
+title: Using jQuery to create an expandable archive list for blog posts (a.k.a. Building TechnologyToolbox.com, part 12)
 date: 2012-01-16T02:43:57-07:00
 excerpt:
   "In my previous post, I briefly mentioned how I use a CSS sprite and jQuery to

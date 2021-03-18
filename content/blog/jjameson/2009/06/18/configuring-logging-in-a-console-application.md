@@ -1,11 +1,11 @@
 ---
-title: "Configuring Logging in a Console Application"
+title: Configuring Logging in a Console Application
 date: 2009-06-18T19:50:00-06:00
 excerpt:
-  "In my previous post, I introduced my simple, but highly effective approach to
+  In my previous post, I introduced my simple, but highly effective approach to
   logging . As promised, this post introduces how to configure logging (based on
   a simple console application). 
-   As noted in my previous post, one or more trace listeners can..."
+   As noted in my previous post, one or more trace listeners can...
 aliases:
   [
     "/blog/jjameson/archive/2009/06/18/configuring-logging-in-a-console-application.aspx",

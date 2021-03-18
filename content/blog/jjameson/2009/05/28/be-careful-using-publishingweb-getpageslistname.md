@@ -1,5 +1,5 @@
 ---
-title: "Be Careful Using PublishingWeb.GetPagesListName()"
+title: Be Careful Using PublishingWeb.GetPagesListName()
 date: 2009-05-28T08:52:00-06:00
 excerpt:
   "A couple of years ago when we began evaluating Language Packs for Microsoft

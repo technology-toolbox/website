@@ -1,9 +1,9 @@
 ---
-title: "Stop putting shortcuts on my Windows desktop!"
+title: Stop putting shortcuts on my Windows desktop!
 date: 2012-02-18T22:56:10-07:00
 excerpt:
-  "It is 2012 and there are still software applications that insist on creating
-  shortcuts on your Windows desktop. Pathetic."
+  It is 2012 and there are still software applications that insist on creating
+  shortcuts on your Windows desktop. Pathetic.
 aliases:
   [
     "/blog/jjameson/archive/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop.aspx",

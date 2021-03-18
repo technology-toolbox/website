@@ -1,5 +1,5 @@
 ---
-title: "Configuring Managed Properties in MOSS 2007"
+title: Configuring Managed Properties in MOSS 2007
 date: 2009-09-23T07:09:00-06:00
 excerpt:
   "As I've noted in a previous post , I typically use feature receivers in

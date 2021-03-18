@@ -1,5 +1,5 @@
 ---
-title: "Managing Group Membership via Group Policy - Part 1"
+title: Managing Group Membership via Group Policy - Part 1
 date: 2009-10-15T03:45:00-06:00
 excerpt:
   "In yesterday's post I covered one of the Group Policy objects that I use in

@@ -1,5 +1,5 @@
 ---
-title: "PowerShell Scripts for Managing BackConnectionHostNames (KB 896861)"
+title: PowerShell Scripts for Managing BackConnectionHostNames (KB 896861)
 date: 2013-05-24T07:34:01-06:00
 excerpt:
   "Here's a set of scripts to make it easier to view the items in the

@@ -1,5 +1,5 @@
 ---
-title: "Compiling C++ Projects with Team Foundation Build"
+title: Compiling C++ Projects with Team Foundation Build
 date: 2009-11-07T08:24:00-07:00
 excerpt:
   "As I mentioned in my previous post , this week I incorporated Password Minder

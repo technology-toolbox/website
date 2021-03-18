@@ -1,11 +1,11 @@
 ---
-title: "SQL Server Authentication Modes"
+title: SQL Server Authentication Modes
 date: 2007-03-23T07:12:00-06:00
 excerpt:
-  "A fellow consultant here in Denver sent out a message yesterday inquiring
+  A fellow consultant here in Denver sent out a message yesterday inquiring
   about formal recommendations regarding the use of Windows Authentication vs.
   SQL Authentication. It seems that quite a few customers out there ponder these
-  choices for a variety..."
+  choices for a variety...
 aliases:
   [
     "/blog/jjameson/archive/2007/03/22/sql-server-authentication-modes.aspx",

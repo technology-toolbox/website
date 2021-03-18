@@ -1,5 +1,5 @@
 ---
-title: "A Modal Popup Framework Based on the AJAX Control Toolkit"
+title: A Modal Popup Framework Based on the AJAX Control Toolkit
 date: 2010-12-10T09:40:00-07:00
 excerpt:
   "The \"Announcements\" feature that I developed for a customer about a year

@@ -1,11 +1,11 @@
 ---
-title: "New Blog Template and Styling"
+title: New Blog Template and Styling
 date: 2010-04-19T20:25:00-06:00
 excerpt:
-  "Last Thursday, I mentioned a problem that would occasionally occur with the
+  Last Thursday, I mentioned a problem that would occasionally occur with the
   formatting on my blog posts (but only when viewing the default page -- listing
   the most recent posts -- and not when viewing individual posts). Tonight I
-  thought I should spend..."
+  thought I should spend...
 aliases:
   [
     "/blog/jjameson/archive/2010/04/19/new-blog-template-and-styling.aspx",

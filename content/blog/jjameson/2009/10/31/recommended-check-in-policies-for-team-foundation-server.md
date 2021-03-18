@@ -1,5 +1,5 @@
 ---
-title: "Recommended Check-In Policies for Team Foundation Server"
+title: Recommended Check-In Policies for Team Foundation Server
 date: 2009-10-31T04:14:00-06:00
 excerpt:
   "I love using Team Foundation Server (TFS). There's just an amazing amount of

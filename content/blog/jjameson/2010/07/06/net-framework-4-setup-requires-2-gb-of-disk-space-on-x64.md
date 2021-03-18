@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4 Setup Requires ~2 GB of Disk Space on x64"
+title: .NET Framework 4 Setup Requires ~2 GB of Disk Space on x64
 date: 2010-07-06T04:26:00-06:00
 excerpt:
   "Windows Update started generating errors last week on one of my servers.

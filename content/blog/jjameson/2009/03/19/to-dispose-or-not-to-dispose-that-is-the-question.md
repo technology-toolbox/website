@@ -1,5 +1,5 @@
 ---
-title: "To Dispose or not to Dispose -- that is the question"
+title: To Dispose or not to Dispose -- that is the question
 date: 2009-03-19T08:26:00-06:00
 excerpt:
   "Last Saturday, another team member sent an email out to the team inquiring

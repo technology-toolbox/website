@@ -1,5 +1,5 @@
 ---
-title: "My first bug fix for Subtext now available on GitHub (a.k.a. Building TechnologyToolbox.com, part 18)"
+title: My first bug fix for Subtext now available on GitHub (a.k.a. Building TechnologyToolbox.com, part 18)
 date: 2012-01-30T13:31:04-07:00
 excerpt:
   "I finally got around to investigating all the hubbub with GitHub. I even
