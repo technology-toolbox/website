@@ -17,16 +17,6 @@ tags: ["My System", "Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I love using Team Foundation Server (TFS). There's just an amazing amount of
 "goodness" for software development that comes out-of-the-box; and there's even
 more available from Microsoft and other sources in the form of add-ons (many of

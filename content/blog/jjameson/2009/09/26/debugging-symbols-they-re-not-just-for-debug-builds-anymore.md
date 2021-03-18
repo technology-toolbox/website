@@ -17,16 +17,6 @@ tags: ["Core Development", "Debugging"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I started another new project this week.
 
 Typically one of the first tasks on any new development project is to create a

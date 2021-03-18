@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "SQL Server", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Here is another SQL script that I keep handy in my toolbox: **Shrink All
 Database Files.sql**. Unlike the script that I shared in my
 [previous post](/blog/jjameson/2008/05/30/truncating-all-transaction-logs) that

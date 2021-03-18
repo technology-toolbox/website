@@ -17,16 +17,6 @@ tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-recommendations-on-using-iterations-in-tfs.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Have you ever lost work items in Team Foundation Server? I know I have.
 
 Well, let me clarify that...it's not that I actually *lost* work items due to

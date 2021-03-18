@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/why-i-m-not-a-fan-of-wspbuilder.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 After 3 years, 2 months, and 30 days, my involvement with migrating a large
 customer from a legacy Web platform to Microsoft Office SharePoint Server (MOSS)
 2007 came to an end a few weeks ago. Since then, I have joined another team

@@ -17,16 +17,6 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/deployment-scripts-for-sharepoint-server-2010.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A couple of years ago, I shared the scripts I created for deploying solutions
 based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to refer
 to as the

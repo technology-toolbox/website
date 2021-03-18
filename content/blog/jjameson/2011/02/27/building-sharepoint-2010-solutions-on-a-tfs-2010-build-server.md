@@ -17,16 +17,6 @@ tags: ["Visual Studio", "TFS", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/27/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last year I wrote a post about
 [building Microsoft Office SharePoint Server (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server](/blog/jjameson/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server),
 which talked about copying various SharePoint assemblies to a "Reference

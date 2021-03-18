@@ -17,16 +17,6 @@ tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Since I seem to be on a roll blogging this morning, I thought I'd see if I could
 get one more in before my baby girl wakes up to have breakfast with "Da-da."
 

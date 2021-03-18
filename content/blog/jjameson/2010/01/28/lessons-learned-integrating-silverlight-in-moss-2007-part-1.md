@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3", "TFS", "Silverlight"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/28/lessons-learned-integrating-silverlight-in-moss-2007-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 The November 2008 edition of MSDN magazine contained the following article:
 
 {{< reference title="Light Up SharePoint With Silverlight 2 Web Parts"

@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Hmmm...how should I phrase this?
 
 It has been a very *educational* couple of weeks on my current SharePoint

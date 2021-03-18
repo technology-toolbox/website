@@ -17,16 +17,6 @@ tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 [Yesterday's post](/blog/jjameson/2009/10/24/the-original-jameson-datacenter)
 got me thinking about something.
 

@@ -17,16 +17,6 @@ tags: ["Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/28/test-projects-in-visual-studio-2010-must-target-net-framework-4.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last week I installed Visual Studio 2010 on my primary desktop. This morning, I
 opened my Fabrikam.Demo solution in the new version of Visual Studio, but chose
 not to upgrade the target framework when prompted by Visual Studio during the

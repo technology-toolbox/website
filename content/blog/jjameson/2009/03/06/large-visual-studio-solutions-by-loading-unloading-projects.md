@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 As I noted in my
 [previous post](/blog/jjameson/2009/03/06/why-i-m-not-a-fan-of-wspbuilder), I
 typically work with "large" Visual Studio solutions. Note that I put this in

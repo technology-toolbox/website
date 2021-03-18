@@ -17,16 +17,6 @@ tags: ["My System", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I've mentioned before how I run two Hyper-V servers in the
 "[Jameson Datacenter](/blog/jjameson/2009/09/14/the-jameson-datacenter)" (each
 one hosting a variety of different VMs).

@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 As I noted in my
 [previous post](/blog/jjameson/2009/11/18/the-copy-local-bug-in-visual-studio),
 I recently discovered that

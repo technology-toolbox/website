@@ -17,16 +17,6 @@ tags: ["Debugging"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Yesterday I found myself back in "WinDbg-land" after a long, long time (since
 99% of my debugging is performed in development environments using Visual
 Studio).

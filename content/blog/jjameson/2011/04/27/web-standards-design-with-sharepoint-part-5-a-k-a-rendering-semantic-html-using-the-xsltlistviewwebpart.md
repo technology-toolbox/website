@@ -17,16 +17,6 @@ tags: ["SharePoint 2010", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/27/web-standards-design-with-sharepoint-part-5-a-k-a-rendering-semantic-html-using-the-xsltlistviewwebpart.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [part 4 of this series](/blog/jjameson/2011/04/02/web-standards-design-with-sharepoint-part-4),
 I provided a sample SharePoint Server 2010 solution solution based on Dan

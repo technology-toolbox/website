@@ -17,16 +17,6 @@ tags: ["My System", "Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/25/incrementing-the-assembly-version-for-each-build.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last summer I wrote a post about
 [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 and made the following statement:

@@ -17,16 +17,6 @@ tags: ["SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A couple of months ago, I had to SysPrep a copy of one of my VMs in order to
 remove dependencies on my home domain (I had to work out of the Microsoft office
 for a couple of days because my DSL router cratered).

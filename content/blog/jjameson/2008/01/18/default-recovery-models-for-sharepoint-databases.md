@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Okay, I haven't blogged in over 7 weeks -- but hey, I was on vacation for 3 of
 them -- and I must warn you upfront that this post isn't exactly a "zinger"
 filled with juicy tidbits, recommendations, or workarounds. Rather, I simply

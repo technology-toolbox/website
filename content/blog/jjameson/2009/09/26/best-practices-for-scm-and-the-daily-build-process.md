@@ -17,16 +17,6 @@ tags: ["Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In a previous post, I briefly discussed
 [a simple branching strategy for Team Foundation Server](/blog/jjameson/2009/02/10/branching-strategy-in-team-foundation-server)
 (TFS). This was somewhat of a follow-up to another

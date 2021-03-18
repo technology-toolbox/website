@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my
 [previous post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1),
 I showed how you can quickly create an AJAX-enabled Web application in Microsoft

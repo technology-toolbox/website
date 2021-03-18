@@ -17,16 +17,6 @@ tags: ["SharePoint 2010", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [part 2](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
 of this series, I provided a sample Microsoft Office SharePoint Server (MOSS)

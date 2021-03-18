@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last summer I wrote a post introducing
 [my simple, but highly effective approach to logging](/blog/jjameson/2009/06/18/a-simple-but-highly-effective-approach-to-logging)
 -- including a **Logger** class that is really just a thin wrapper around the

@@ -16,16 +16,6 @@ tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3", "SQL 
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/09/environment-naming-conventions.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/06/09/environment-naming-conventions.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/09/environment-naming-conventions.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of the challenges I see in organizations that I work with is the lack of
 naming conventions for various environments -- or sometimes naming conventions
 that provide little or no value.

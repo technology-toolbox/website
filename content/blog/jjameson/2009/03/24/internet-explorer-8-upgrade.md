@@ -17,16 +17,6 @@ tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/24/internet-explorer-8-upgrade.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In case you missed the announcement,
 [Internet Explorer 8](http://www.microsoft.com/windows/internet-explorer/default.aspx)
 was released last week.

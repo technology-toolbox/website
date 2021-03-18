@@ -17,16 +17,6 @@ tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/microsoft-translator-widget.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This week I stumbled upon the new (and very cool)
 [Microsoft Translator Widget](http://www.microsofttranslator.com/Widget).
 

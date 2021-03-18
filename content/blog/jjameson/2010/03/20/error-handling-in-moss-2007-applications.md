@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/20/error-handling-in-moss-2007-applications.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my
 [previous post](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications),
 I described the enhancements to my

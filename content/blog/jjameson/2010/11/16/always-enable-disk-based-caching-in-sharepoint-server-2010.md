@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/16/always-enable-disk-based-caching-in-sharepoint-server-2010.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In March, 2009, I wrote a
 [post](/blog/jjameson/2009/03/27/always-enable-disk-based-caching-in-moss-2007)
 that explains why **I always recommend enabling disk-based caching** in

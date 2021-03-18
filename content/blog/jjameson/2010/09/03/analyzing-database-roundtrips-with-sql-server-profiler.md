@@ -17,16 +17,6 @@ tags: ["My System", "SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of the "good habits" I've developed over the years while creating
 applications is scrutinizing the interaction between logical or physical tiers.
 Given the nature of solutions that I'm typically involved with, this often

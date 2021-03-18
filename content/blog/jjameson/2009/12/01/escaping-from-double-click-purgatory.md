@@ -17,16 +17,6 @@ tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/01/escaping-from-double-click-purgatory.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/12/01/escaping-from-double-click-purgatory.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/01/escaping-from-double-click-purgatory.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A few weeks ago I started experiencing an incredibly frustrating problem on my
 laptop. When I clicked
 [the mouse](http://www.microsoft.com/products/info/product.aspx?view=22&pcid=90134df1-861e-417e-a584-86e088e38cdb&type=ovr),

@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I've mentioned before that I became somewhat of a
 [Web standards](http://en.wikipedia.org/wiki/Web_standards) zealot several years
 ago. Consequently, regardless of whether I'm building Web sites using the core

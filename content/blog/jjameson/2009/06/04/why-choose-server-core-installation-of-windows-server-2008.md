@@ -16,16 +16,6 @@ tags: ["Simplify", "Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/04/why-choose-server-core-installation-of-windows-server-2008.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 If you ever find yourself looking for reasons or evidence why you should choose
 the "Server Core" installation option for Windows Server 2008, try searching for
 the following:

@@ -16,16 +16,6 @@ tags: ["Windows Vista"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/17/an-update-on-disk-space-usage-by-windows-vista.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Today I rebuilt my laptop to allow me to dual boot between Windows Server 2008
 and Windows Vista. To enable this configuration, I created the following
 partions on my hard drive:

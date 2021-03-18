@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/23/out-of-the-box-permission-policy-levels.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 For a couple of months now, I have been using the following command to add
 myself to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from a
 different server:

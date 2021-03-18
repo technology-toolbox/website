@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/13/reusable-content-in-sharepoint-publishing-html-fields-part-2.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [my previous post](/blog/jjameson/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1),
 I introduced a scenario for using the "Reusable Content" feature in Microsoft

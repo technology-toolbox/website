@@ -17,16 +17,6 @@ tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In a previous [post](/blog/jjameson/2009/06/09/environment-naming-conventions),
 I briefly touched on the "DEV-TEST-PROD" triad of environments that I typically
 recommend (at a minimum) for every organization doing any form of software

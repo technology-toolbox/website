@@ -16,16 +16,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/23/error-installing-moss-2007-december-cumulative-update.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Earlier this week I built a new Microsoft Office SharePoint Server (MOSS) 2007
 development VM using a fresh install of Windows Server 2008, SQL Server 2008,
 and Visual Studio 2008. The process wasn't quite as smooth as I had hoped.

@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "Virtualization", "SharePoint
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [my previous post](/blog/jjameson/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot),
 I explained how I like to create separate VHDs for data and log files in my

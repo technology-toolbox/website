@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last week I received the following comment on
 [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1)
 regarding Web standards design with Microsoft Office SharePoint Server (MOSS)

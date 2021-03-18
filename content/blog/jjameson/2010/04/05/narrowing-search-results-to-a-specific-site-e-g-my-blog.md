@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A colleague asked me today if there was a way to search my blog for something
 specific.
 

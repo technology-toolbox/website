@@ -17,16 +17,6 @@ tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This post provides a high-level walkthrough of the build and deployment process
 that I typically recommend on projects that I am involved with. It includes a
 series of illustrations that capture key concepts at various points in time.

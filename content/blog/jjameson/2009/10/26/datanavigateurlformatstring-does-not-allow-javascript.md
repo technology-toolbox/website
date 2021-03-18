@@ -17,16 +17,6 @@ tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I encountered an interesting bug last Friday with the ASP.NET
 [HyperLinkField](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.hyperlinkfield.aspx)
 control. To understand the scenario, think of the typical "view detail" feature

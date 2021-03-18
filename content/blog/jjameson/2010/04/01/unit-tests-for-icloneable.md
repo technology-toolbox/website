@@ -17,16 +17,6 @@ tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/01/unit-tests-for-icloneable.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A few years ago I developed a class (**SharePointSearchUrlBuilder**) for working
 with SharePoint Search URLs. The class is used to easily build or parse the
 various query string parameters used by SharePoint Search (e.g. keywords, search

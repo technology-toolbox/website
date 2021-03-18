@@ -17,16 +17,6 @@ tags: ["My System", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/disk-benchmarks-ssd-vs-quot-raptor-quot-vs-raid.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Earlier this week, I posted about
 [how I rebuilt my Windows 7 desktop](/blog/jjameson/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0)
 while installing a new solid-state drive (SSD).

@@ -17,16 +17,6 @@ tags: ["Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/02/10/branching-strategy-in-team-foundation-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 While attending TechReady (an internal Microsoft training conference) last week,
 I learned a lot -- not only about future versions of our products, but also
 numerous tips and tricks for current versions. One of the most valuable insights

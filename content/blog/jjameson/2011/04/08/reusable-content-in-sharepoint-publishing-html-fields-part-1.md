@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/08/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In one of the sprints last year for my current project, I built a custom
 "document publishing" system based on the Web Content Management (WCM) features
 in Microsoft Office SharePoint Server (MOSS) 2007. My client was looking to

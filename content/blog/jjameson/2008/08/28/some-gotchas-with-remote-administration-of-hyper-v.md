@@ -17,16 +17,6 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/08/28/some-gotchas-with-remote-administration-of-hyper-v.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 As I mentioned in my
 [previous post](/blog/jjameson/2008/07/07/copy-paste-gotchas-with-server-core),
 last month I built out a new virtual environment using Hyper-V on Server Core.

@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1),
 I mentioned how I've been involved in several SharePoint projects for large,

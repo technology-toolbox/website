@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/04/06/localization-and-sharepoint-solutions-part-3-a-k-a-use-field-ids-whenever-possible.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [part 1 of this series](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1),
 I mentioned that one of the options for creating SharePoint sites in multiple

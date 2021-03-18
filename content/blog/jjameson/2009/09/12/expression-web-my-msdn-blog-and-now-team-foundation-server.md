@@ -17,16 +17,6 @@ tags: ["My System", "Web Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In case you haven't picked it up from some of my previous posts, I became
 somewhat of a "Web standards zealot" back in 2006 while creating a "community
 site" for a

@@ -17,16 +17,6 @@ tags: ["My System", "Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Whenever a new .NET assembly project is created in Visual Studio, a file named
 AssemblyInfo is created that contains attributes used to define the version of
 the assembly during compilation.

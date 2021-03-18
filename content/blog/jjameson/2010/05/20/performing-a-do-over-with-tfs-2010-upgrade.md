@@ -17,16 +17,6 @@ tags: ["TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/performing-a-do-over-with-tfs-2010-upgrade.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Regardless of whether you call it a "mulligan", a "do over", or whatever, the
 fact is you may encounter errors during your upgrade to Team Foundation Server
 (TFS) 2010 -- hopefully in your Development or Test environment first, not when

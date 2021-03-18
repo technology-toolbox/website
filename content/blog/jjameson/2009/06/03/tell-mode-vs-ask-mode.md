@@ -16,16 +16,6 @@ tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 The project I am currently working on is nearing the end. Last week we reached
 our "Feature Complete" milestone and now we have formally transitioned into the
 "Stabilizing" phase.

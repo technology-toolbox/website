@@ -17,16 +17,6 @@ tags: ["My System", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I thought it would be helpful to share my step-by-step procedures for manually
 configuring claims-based authentication in SharePoint Server 2010 using an
 "ASP.NET database" and corresponding membership and role providers.

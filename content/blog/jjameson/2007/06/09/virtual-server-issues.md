@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of the tasks that I completed this week was splitting our Development
 environment (DEV) into multiple VMs -- one SQL Server VM, one Microsoft Office
 SharePoint Server (MOSS) 2007 VM for the SSP, and another MOSS 2007 VM for the

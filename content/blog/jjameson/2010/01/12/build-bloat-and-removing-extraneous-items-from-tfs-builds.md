@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This week I am wrapping up the third sprint (a.k.a. *iteration* or *milestone*)
 on my current Microsoft Office SharePoint Server (MOSS) 2007 project. Although,
 honestly, I wasn't involved all that much in Sprint-3, since I was on vacation

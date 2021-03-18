@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/23/configuring-managed-properties-in-moss-2007.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 As I've noted in a
 [previous post](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development),
 I typically use feature receivers in Microsoft Office SharePoint Server (MOSS)

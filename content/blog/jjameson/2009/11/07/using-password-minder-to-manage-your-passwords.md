@@ -17,16 +17,6 @@ tags: ["My System", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I started using
 [Password Minder](http://msdn.microsoft.com/en-us/magazine/cc163958.aspx) almost
 immediately after reading about it in the July 2004 edition of MSDN Magazine. I

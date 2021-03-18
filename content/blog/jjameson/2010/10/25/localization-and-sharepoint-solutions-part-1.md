@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 The primary goal for the current sprint on the project I'm working on is to
 localize the client portal previously developed for the United States so that it
 can be used by other regions around the world -- initially Spain, Mexico,

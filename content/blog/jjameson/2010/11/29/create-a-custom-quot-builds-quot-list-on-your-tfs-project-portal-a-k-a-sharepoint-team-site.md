@@ -17,16 +17,6 @@ tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/11/29/create-a-custom-quot-builds-quot-list-on-your-tfs-project-portal-a-k-a-sharepoint-team-site.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of "tweaks" that I commonly make to the SharePoint team site created for
 each project in Team Foundation Server is to create a custom list to track the
 important builds for the project (typically corresponding to each milestone or

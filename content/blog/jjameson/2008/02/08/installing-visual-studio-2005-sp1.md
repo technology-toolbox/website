@@ -17,16 +17,6 @@ tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Stepping into the
 ["Wayback Machine"](http://en.wikipedia.org/wiki/Wayback_Machine) for a moment,
 I realized that I hinted about

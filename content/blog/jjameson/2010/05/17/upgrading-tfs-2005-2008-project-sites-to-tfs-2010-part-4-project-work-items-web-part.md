@@ -16,16 +16,6 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-4-project-work-items-web-part.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In the
 [part 1 of this series](/blog/jjameson/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features),
 I described how to enable the dashboard functionality in Team Foundation Server

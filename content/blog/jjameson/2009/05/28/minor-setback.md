@@ -17,16 +17,6 @@ tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/05/28/minor-setback.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/05/28/minor-setback.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/28/minor-setback.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I haven't blogged in almost 8 weeks. Ouch.
 
 However, I like to think I have a good excuse -- at least for a good portion of

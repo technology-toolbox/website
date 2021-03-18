@@ -17,16 +17,6 @@ tags: ["Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/11/05/server-core-installation-accessing-windows-in-notification-period.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I had a rather rough start this morning.
 
 When I attempted to boot up my primary workstation and login, I kept

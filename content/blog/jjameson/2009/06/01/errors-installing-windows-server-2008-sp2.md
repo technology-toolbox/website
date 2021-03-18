@@ -17,16 +17,6 @@ tags: ["Windows Vista", "WSUS", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Windows Vista
 SP2 on my local WSUS (Windows Server Update Services) server. My expectation was
 that the various physical and virtual machines in the

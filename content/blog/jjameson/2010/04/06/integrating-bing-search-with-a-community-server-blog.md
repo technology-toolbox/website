@@ -17,16 +17,6 @@ tags: ["My System"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/06/integrating-bing-search-with-a-community-server-blog.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [one of yesterday's posts](/blog/jjameson/2010/04/05/narrowing-search-results-to-a-specific-site-e-g-my-blog),
 I showed how you can easily filter the search results from Bing -- and other

@@ -17,16 +17,6 @@ tags: ["Infrastructure", "Virtualization", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/hvremote-and-remote-administration-of-hyper-v-from-windows-7.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last Sunday, I rebuilt my desktop
 ([WOLVERINE](/blog/jjameson/2009/09/14/the-jameson-datacenter)) with the RTM
 build of Windows 7 Ultimate (x64). Previously, I'd been running the RC1 bits and

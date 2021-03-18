@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Core Development", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last week, I was explaining to a teammate that it is often helpful to use the
 XSLT "Identity Transform" in order to view the raw XML -- in other words,
 without any "real" transformation by the XSL stylesheet.

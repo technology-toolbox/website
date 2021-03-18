@@ -17,16 +17,6 @@ tags: ["My System", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In a previous post, I provided some details on the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter), which
 is really just my home lab that I use for learning new technologies and

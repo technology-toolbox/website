@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Infrastructure", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Several years ago, while working on the "Frontier" project at
 [Agilent Technologies](http://chem.agilent.com), I encountered a scenario where
 I needed to quickly identify logon failures on the site. The Agilent site was

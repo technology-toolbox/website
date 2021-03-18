@@ -17,16 +17,6 @@ tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 According to my blog dashboard, this will be post #150 for my MSDN blog. So this
 morning I thought I would do something a little different by providing some
 analysis on my blog.

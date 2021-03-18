@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A couple of days ago, I rebuilt one of my development VMs for Microsoft Office
 SharePoint Server (MOSS) 2007. As I've noted in a
 [previous post](/blog/jjameson/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008),

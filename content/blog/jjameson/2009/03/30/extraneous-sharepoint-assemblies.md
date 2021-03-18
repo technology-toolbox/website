@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 If you develop solutions for Microsoft Office SharePoint Server (MOSS) 2007, you
 may notice that certain SharePoint assemblies always get copied to your Visual
 Studio project output folder even though these referenced assemblies are

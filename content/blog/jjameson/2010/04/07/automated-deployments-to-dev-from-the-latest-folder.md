@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/07/automated-deployments-to-dev-from-the-latest-folder.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last month I wrote a post detailing
 [how to increment the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build).
 However, incrementing the assembing version is only part of

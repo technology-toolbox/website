@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 If you've ever deployed Windows SharePoint Services (WSS) v3 or Microsoft Office
 SharePoint Server (MOSS) 2007 in a least privilege configuration, you have
 undoubtedly encountered errors similar to the following in your Windows event

@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This week I finally got around to fixing a bug that would occasionally occur
 when deploying our solution based on Microsoft Office SharePoint Server (MOSS)
 2007.

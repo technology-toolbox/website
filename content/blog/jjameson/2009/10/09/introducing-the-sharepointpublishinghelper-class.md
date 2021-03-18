@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my
 [previous post](/blog/jjameson/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file),
 I described a utility to import pages into Microsoft Office SharePoint Server

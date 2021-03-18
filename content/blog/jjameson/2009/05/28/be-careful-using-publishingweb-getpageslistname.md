@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/05/28/be-careful-using-publishingweb-getpageslistname.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A couple of years ago when we began evaluating Language Packs for Microsoft
 Office SharePoint Server (MOSS) 2007, we discovered that after installing
 certain Language Packs, the "Pages" library may be localized -- including both

@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/19/to-dispose-or-not-to-dispose-that-is-the-question.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last Saturday, another team member sent an email out to the team inquiring about
 the "MOSS object disposal problem" (as he termed it).
 

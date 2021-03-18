@@ -16,16 +16,6 @@ tags: ["Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/06/30/windows-server-backup-does-not-show-backed-up-files.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 [Sorry the blog has been relatively silent this month -- but, on the other hand,
 I did manage to make time for a vacation to Arizona this month (Sedona, Grand
 Canyon, and then Scottsdale). It was a little hot, but a wonderful trip

@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2), I
 introduced my "TFS Lite" SharePoint site template that I've been using for years
 as a simple scenario/task/bug/risk/milestone tracking "application" with various

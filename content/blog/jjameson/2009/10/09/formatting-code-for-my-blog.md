@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "Visual Studio", "Web Development", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/09/formatting-code-for-my-blog.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 It occurred to me this morning that while I previously shared some details on
 [how I manage my MSDN blog](/blog/jjameson/2009/09/12/expression-web-my-msdn-blog-and-now-team-foundation-server),
 I've never shared my method for formatting code for the Web.

@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "Infrastructure", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In the United States, "CDL" typically refers to a Commercial Driver's License --
 but since I don't drive trucks for a living, I use the acronym for something
 entirely different. To me, these three letters correspond to the minimum number

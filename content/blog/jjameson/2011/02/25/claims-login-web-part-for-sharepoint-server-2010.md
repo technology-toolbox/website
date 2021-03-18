@@ -17,16 +17,6 @@ tags: ["SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010),
 I provided the step-by-step process I use for configuring claims-based

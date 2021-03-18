@@ -17,16 +17,6 @@ tags: ["TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I've been using the
 [new Scrum template](http://visualstudiogallery.msdn.microsoft.com/en-us/59ac03e3-df99-4776-be39-1917cbfc5d8e)
 for Team Foundation Server 2010 for a little over three weeks now -- not on a

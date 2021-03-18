@@ -17,16 +17,6 @@ tags: ["Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-macro-for-collapsing-all-items-in-solution-explorer.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Along with
 [my Visual Studio macros for unloading/reloading projects in a solution](/blog/jjameson/2009/03/11/visual-studio-macros-for-unloading-reloading-projects),
 another macro that I use just as much, if not more frequently, is my

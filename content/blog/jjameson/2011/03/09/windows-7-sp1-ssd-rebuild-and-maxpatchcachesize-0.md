@@ -17,16 +17,6 @@ tags: ["My System", "Windows 7"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/09/windows-7-sp1-ssd-rebuild-and-maxpatchcachesize-0.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I spent a few hours last night (and another hour this morning) rebuilding my
 Windows 7 desktop that I use as my primary workstation (WOLVERINE).
 

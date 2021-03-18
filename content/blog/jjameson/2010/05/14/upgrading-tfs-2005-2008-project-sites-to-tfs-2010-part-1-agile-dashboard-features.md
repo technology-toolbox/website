@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [one of last week's posts](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
 I provided details on upgrading from Team Foundation Server 2008 to TFS 2010,

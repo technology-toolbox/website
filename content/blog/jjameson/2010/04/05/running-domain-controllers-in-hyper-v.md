@@ -16,16 +16,6 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/05/running-domain-controllers-in-hyper-v.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In a
 [previous post](/blog/jjameson/2008/11/05/server-core-installation-accessing-windows-in-notification-period),
 I noted how the

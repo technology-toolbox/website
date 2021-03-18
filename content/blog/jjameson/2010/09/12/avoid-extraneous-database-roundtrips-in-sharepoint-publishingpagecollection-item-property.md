@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [my previous post](/blog/jjameson/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler),
 I explained how I analyze database roundtrips using SQL Server Profiler in order

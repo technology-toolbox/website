@@ -17,16 +17,6 @@ tags: ["Core Development", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/18/sketchpath-the-xpath-tool.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I added another tool to my
 [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) yesterday:
 SketchPath.

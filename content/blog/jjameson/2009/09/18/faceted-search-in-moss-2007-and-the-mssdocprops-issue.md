@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Many customers deploying Microsoft Office SharePoint Server (MOSS) 2007 often
 have a requirement to provide some kind of "faceted search" feature that allows
 users to quickly and easily narrow their search results. Before I ever knew the

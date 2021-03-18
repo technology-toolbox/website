@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I was digging through my blog dashboard this morning and I came across this post
 that I started back in January but apparently never got it past "draft mode." I
 figured it was time to finish it off.

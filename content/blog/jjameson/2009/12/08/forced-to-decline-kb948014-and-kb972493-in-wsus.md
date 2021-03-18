@@ -17,16 +17,6 @@ tags: ["WSUS", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/08/forced-to-decline-kb948014-and-kb972493-in-wsus.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [last night's post](/blog/jjameson/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account),
 I discussed the solution for an issue I encountered installing

@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 As I mentioned in a
 [previous post](/blog/jjameson/2009/03/19/argumentnullexception-with-optional-publishingpage-description-property-with-some-thoughts-on-breaking-the-build-too),
 some customers prefer to show page descriptions in search results instead of the

@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "Visual Studio", "TFS", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Last week I received a <q class="directQuote">"Logical Disk Free Space is
 low"</q> alert from Operations Manager for my TFS 2010 build server (DAZZLER).
 

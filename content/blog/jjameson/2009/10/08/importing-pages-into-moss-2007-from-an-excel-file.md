@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/08/importing-pages-into-moss-2007-from-an-excel-file.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my
 [previous post](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64),
 I briefly introduced the concept of a utility to import pages into Microsoft

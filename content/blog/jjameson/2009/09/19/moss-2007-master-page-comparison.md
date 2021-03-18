@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/19/moss-2007-master-page-comparison.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This morning I came across an old (June 2007) Excel spreadsheet that I created
 back when I was working on the Agilent Technologies project. The spreadsheet
 lists the various placeholder elements in both application.master and

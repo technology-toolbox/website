@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/10/27/variation-logs-paging-bug.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 It's embarrassing how my blog posts rapidly died off after this past June.
 However it's even more embarrassing to disclose the paging bug when viewing the
 **Variation Logs** page in Microsoft Office SharePoint Server (MOSS) 2007.

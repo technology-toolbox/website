@@ -17,16 +17,6 @@ tags: ["My System", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In a previous post, I provided some details on the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
 my home lab). In a follow-up post, I also discussed the

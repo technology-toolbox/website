@@ -16,16 +16,6 @@ tags: ["My System", "SQL Server", "Windows Server", "Infrastructure", "Virtualiz
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 A little over two years ago, I wrote a post about
 [installing Visual Studio 2005 Service Pack 1](/blog/jjameson/2008/02/08/installing-visual-studio-2005-sp1),
 in which I mentioned setting the MaxPatchCacheSize registry setting to 0 (in

@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Up until about an hour ago, I'd been using post-build events on my Visual Studio
 projects to create SharePoint solution packages (WSPs). However, while this
 worked reasonably well, this method always bothered me a little because the

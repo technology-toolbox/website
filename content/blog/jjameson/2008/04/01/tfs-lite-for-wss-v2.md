@@ -17,16 +17,6 @@ tags: ["Core Development", "WSS v2"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 > **Update (2008-04-07)**
 >
 > ["TFS Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now

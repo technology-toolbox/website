@@ -17,16 +17,6 @@ tags: ["My System", "Personal", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This morning I was doing some cleanup of my documents folder and I stumbled
 across a rather old Visio document that showed the beginnings of what I now
 refer to as the

@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/12/03/database-default-locations-in-sql-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I've mentioned before the importance of using multiple "spindles" when working
 with large SQL Server databases.
 

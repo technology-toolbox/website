@@ -17,16 +17,6 @@ tags: ["SQL Server", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 When upgrading Team Foundation Server (TFS) -- or, really, any application that
 utilizes SQL Server Reporting Services -- you might choose to restore your data
 to a new environment (for example, to migrate to new hardware, or to validate

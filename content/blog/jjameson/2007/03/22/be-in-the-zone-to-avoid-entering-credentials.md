@@ -17,16 +17,6 @@ tags: ["My System"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Since I tend to work on server products such as Microsoft Office SharePoint
 Server 2007, I frequently see developers and other team members that I work with
 constantly entering their credentials when browsing to some Web page on a

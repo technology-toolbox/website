@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "TFS", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/05/19/avoid-the-warning-from-excel-services-about-refreshing-external-data.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my post earlier this month on
 [upgrading to Team Foundation Server (TFS) 2010 and SharePoint Server 2010](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
 I forgot to include the steps to change the **Warn on Refresh** setting of the

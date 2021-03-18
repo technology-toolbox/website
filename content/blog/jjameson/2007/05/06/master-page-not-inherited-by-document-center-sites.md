@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/06/master-page-not-inherited-by-document-center-sites.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/05/06/master-page-not-inherited-by-document-center-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/05/06/master-page-not-inherited-by-document-center-sites.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This isn't a recent discovery -- I first encountered this in late Februrary --
 but I realized that I had not yet covered this issue in my blog.
 

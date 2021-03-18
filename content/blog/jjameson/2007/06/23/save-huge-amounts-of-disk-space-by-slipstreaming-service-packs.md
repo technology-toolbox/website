@@ -17,16 +17,6 @@ tags: ["Simplify", "MOSS 2007", "Core Development", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/06/23/save-huge-amounts-of-disk-space-by-slipstreaming-service-packs.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 This is a little embarrassing, but I captured numerous screenshots back in April
 while rebuilding my SharePoint development VM, but I never got around to writing
 a blog post to actually share this information with anyone. Well, it's long

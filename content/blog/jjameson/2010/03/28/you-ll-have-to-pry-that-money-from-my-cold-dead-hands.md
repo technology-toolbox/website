@@ -17,16 +17,6 @@ tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I've been using Microsoft Money for as long as I can remember.
 
 Well, actually I can remember using Quicken at some point before switching to

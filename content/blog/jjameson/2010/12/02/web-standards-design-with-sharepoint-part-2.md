@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "Web Development", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In the
 [first part](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1)
 of this series, I explained one approach for building Web sites in Microsoft

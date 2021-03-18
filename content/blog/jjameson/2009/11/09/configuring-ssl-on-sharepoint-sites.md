@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/09/configuring-ssl-on-sharepoint-sites.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 If you are using Basic Authentication or Forms-Based Authentication (FBA) with
 Microsoft Office SharePoint Server (MOSS) 2007 -- or any Web site, for that
 matter -- then you must configure secure communication (HTTPS) using SSL

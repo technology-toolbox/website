@@ -17,16 +17,6 @@ tags: ["WSUS", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 While cleaning off my Desktop this morning, I came across a file that I created
 back in December capturing my notes from a problem I was having with Windows
 Server Update Services (WSUS). Evidently I intended to blog about the issue, but

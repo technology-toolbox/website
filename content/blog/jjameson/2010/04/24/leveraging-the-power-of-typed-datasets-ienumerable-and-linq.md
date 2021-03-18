@@ -17,16 +17,6 @@ tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/24/leveraging-the-power-of-typed-datasets-ienumerable-and-linq.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In my
 [previous post](/blog/jjameson/2010/04/22/still-crazy-about-typed-datasets-after-all-these-years),
 I extolled my love of typed DataSets in .NET because they are not only quick to

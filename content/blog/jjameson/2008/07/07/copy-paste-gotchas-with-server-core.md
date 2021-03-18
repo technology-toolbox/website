@@ -16,16 +16,6 @@ tags: ["Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I'm building out a new virtualized environment using Windows Server 2008 and
 Hyper-V. In order to maximize performance and follow recommended best practices,
 I am using Server Core as the host OS.

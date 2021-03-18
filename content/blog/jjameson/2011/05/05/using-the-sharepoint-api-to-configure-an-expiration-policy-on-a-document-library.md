@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 While it typically takes less than a minute or two to configure an expiration
 policy on a SharePoint document library, there may still be reasons why you want
 to do this using the SharePoint object model instead.

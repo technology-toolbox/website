@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of the things I like most about running System Center Operations Manager in
 the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)
 (a.k.a. my home lab) is that it greatly reduces the amount of effort required to

@@ -16,16 +16,6 @@ tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Earlier today I presented a "Knowledge Transfer" session to a team of developers
 on my current project. If you've ever worked with consultants, you've probably
 experienced a "KT" session or something similar. In essence, it's just a meeting

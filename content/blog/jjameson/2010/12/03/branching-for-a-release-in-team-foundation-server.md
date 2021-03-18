@@ -17,16 +17,6 @@ tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [my previous post](/blog/jjameson/2010/12/03/recurring-tasks-in-team-foundation-server),
 I mentioned that one of the recurring tasks I create in TFS each time I start a

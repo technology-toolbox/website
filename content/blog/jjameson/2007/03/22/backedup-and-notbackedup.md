@@ -17,16 +17,6 @@ tags: ["My System", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 About four years ago, one of the partners that I was working on an engagement
 with commented on how developers tend to have their own unique way of managing
 files, but that mine was one of the most bizarre he had ever seen. It has been
@@ -61,8 +51,8 @@ I attribute the reasoning to several factors:
    invested in them -- I dread the mere thought of losing one of those
 3. Long before the user experience improvements in Windows Vista, I needed
    "instant access" to my frequently used files (in fact, I still need these
-   shortcuts whenever I am logged into a computer or VM running Windows
-   Server 2003)
+   shortcuts whenever I am logged into a computer or VM running Windows Server
+   2003)
 4. I typically "rebuild" my laptop once a year either to install a new OS (such
    as last November when Vista was released) or to clean out all the old garbage
    that, being a developer, I tend to install for one reason or another

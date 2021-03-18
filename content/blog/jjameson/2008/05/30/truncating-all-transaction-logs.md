@@ -17,16 +17,6 @@ tags: ["SQL Server", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx](http://blogs.msdn.com/b/jjameson/archive/2008/05/30/truncating-all-transaction-logs.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 One of the SQL scripts that I keep handy in my toolbox is **Truncate All
 Transaction Logs.sql**. While I would never recommend running this script in a
 Production environment (PROD), I find it to be very helpful for periodically

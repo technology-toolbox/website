@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Microsoft Office SharePoint Server (MOSS) 2007 includes a variety of
 out-of-the-box master pages. Many are provided primarily as samples (e.g.
 BlueBand.master) and serve as a starting point for creating your own master

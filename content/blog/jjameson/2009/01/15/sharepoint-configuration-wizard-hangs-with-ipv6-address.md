@@ -16,16 +16,6 @@ tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 I came back from a nice long vacation only to find that my local development VM
 for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
 "corrupted", I mean to say there were lots of errors in the event log about the

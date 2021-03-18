@@ -18,16 +18,6 @@ tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Have you ever wanted to display data in a table but limit the size of the rows
 and columns within the table?
 

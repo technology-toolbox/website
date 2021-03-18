@@ -17,16 +17,6 @@ tags: ["Windows Server", "Infrastructure", "Windows 7"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2011/03/11/before-you-install-windows-7-service-pack-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 ...make darn sure you have already installed the
 [Remote Server Administration Tools for Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en)
 (if you want to use them, of course).

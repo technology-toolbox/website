@@ -17,16 +17,6 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/03/23/forms-based-authentication-in-moss-2007-the-easy-way.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In
 [one of Saturday's posts](/blog/jjameson/2010/03/20/error-handling-in-moss-2007-applications),
 I demonstrated how to implement a custom error page on an Internet site powered

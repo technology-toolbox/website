@@ -17,16 +17,6 @@ tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx](http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Prior to the recent "v2" release on my current project, we had been using the
 ASP.NET
 **[SqlRoleProvider](http://msdn.microsoft.com/en-us/library/system.web.security.sqlroleprovider.aspx)**

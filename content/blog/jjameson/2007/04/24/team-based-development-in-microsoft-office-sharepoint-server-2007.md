@@ -17,16 +17,6 @@ tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/04/24/team-based-development-in-microsoft-office-sharepoint-server-2007.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 Eric Charran has posted an article on MSDN with some great pointers on
 developing SharePoint solutions in a team environment:
 

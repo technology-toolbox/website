@@ -17,16 +17,6 @@ tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx"
 ---
 
-> **Note**
->
-> This post originally appeared on my MSDN blog:
->
-> [http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx](http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx)
->
-> Since
-> [I no longer work for Microsoft](/blog/jjameson/2011/09/02/last-day-with-microsoft),
-> I have copied it here in case that blog ever goes away.
-
 In yesterday's
 [post](/blog/jjameson/2009/10/14/enabling-remote-desktop-via-group-policy) I
 covered one of the Group Policy objects that I use in the
