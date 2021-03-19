@@ -147,14 +147,19 @@ C:\&gt;{{< kbd
 
 {{< sample-block >}}
 
-Microsoft (R) Windows Script Host Version 5.8\ Copyright (C) Microsoft
-Corporation. All rights reserved.\ \ Clearing event logs on localhost...\
-Clearing 'Application' event log on localhost...\ Clearing 'HardwareEvents'
-event log on localhost...\ Clearing 'Internet Explorer' event log on
-localhost...\ Clearing 'Key Management Service' event log on localhost...\
-Clearing 'OAlerts' event log on localhost...\ Clearing 'Security' event log on
-localhost...\ Clearing 'System' event log on localhost...\ Clearing 'Windows
-PowerShell' event log on localhost...\ Done
+Microsoft (R) Windows Script Host Version 5.8\
+Copyright (C) Microsoft Corporation. All rights reserved.\
+\
+Clearing event logs on localhost...\
+Clearing 'Application' event log on localhost...\
+Clearing 'HardwareEvents' event log on localhost...\
+Clearing 'Internet Explorer' event log on localhost...\
+Clearing 'Key Management Service' event log on localhost...\
+Clearing 'OAlerts' event log on localhost...\
+Clearing 'Security' event log on localhost...\
+Clearing 'System' event log on localhost...\
+Clearing 'Windows PowerShell' event log on localhost...\
+Done
 
 {{< /sample-block >}}
 

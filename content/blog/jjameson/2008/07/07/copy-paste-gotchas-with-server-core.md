@@ -85,7 +85,9 @@ C:\&gt;{{< kbd
 
 {{< sample-block >}}
 
-\ Updated 3 rule(s).\ Ok.
+\
+Updated 3 rule(s).\
+Ok.
 
 {{< /sample-block >}}
 

@@ -54,15 +54,27 @@ kbd "\"Deploy Solutions.cmd\"" >}}
 
 {{< sample-block >}}
 
-23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...\ \ Deploying
-Fabrikam.Portal.StsAdm.Commands...\ \ Timer job successfully created.\ \
-Executing .\ Operation completed successfully.\ \ Done\ 23:46 - Deploying
-solution: Fabrikam.Portal.Web...\ Deploying Fabrikam.Portal.Web on
-[http://fabrikam-test](http://fabrikam-test/)...\ \ Timer job successfully
-created.\ \ Executing .\ Executing
-solution-deployment-fabrikam.portal.web.wsp-0.\ The
-solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully, but
-could not be properly cleaned up. This job may execute again on this server.\
+23:46 - Deploying solution: Fabrikam.Portal.StsAdm.Commands...\
+\
+Deploying Fabrikam.Portal.StsAdm.Commands...\
+\
+Timer job successfully created.\
+\
+Executing .\
+Operation completed successfully.\
+\
+Done\
+23:46 - Deploying solution: Fabrikam.Portal.Web...\
+Deploying Fabrikam.Portal.Web on
+[http://fabrikam-test](http://fabrikam-test/)...\
+\
+Timer job successfully created.\
+\
+Executing .\
+Executing solution-deployment-fabrikam.portal.web.wsp-0.\
+The solution-deployment-fabrikam.portal.web.wsp-0 job completed successfully,
+but could not be properly cleaned up. This job may execute again on this
+server.\
 Operation completed successfully.
 
 {{< /sample-block >}}
