@@ -21,7 +21,7 @@ This morning I rolled back one of my development VMs to a snapshot I created
 about a month ago. When I subsequently tried to login with my domain
 credentials, I encountered the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The trust relationship between this workstation and the primary domain failed.
 
@@ -43,7 +43,7 @@ linkHref="http://support.microsoft.com/kb/325850" >}}
 Don't be put off by the title of this KB article. You just need to read a little
 bit into it:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 [...] This procedure is most frequently used on domain controllers, but also
 applies to any Windows machine account.

@@ -88,7 +88,7 @@ warning MSB3425: Could not resolve VC project reference
 
 That's when I discovered the following from the release notes for the SDK:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 #### 5.1.1 VCBuild fails to compile or upgrade projects
 

@@ -51,7 +51,7 @@ linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-
 
 Here's the gist of it:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Generally speaking, "Views" is the number of times somone viewed a post on the
 web via a browser, and "AggViews" is the number of times someone viewed the post

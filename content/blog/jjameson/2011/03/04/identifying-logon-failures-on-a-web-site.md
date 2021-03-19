@@ -30,7 +30,7 @@ Whenever a user failed to authenticate, I noticed that ASP.NET wrote a message
 to the Application event log on the Web server (Event ID: 1315) in which the
 Description contained the phrase:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Membership credential verification failed.
 

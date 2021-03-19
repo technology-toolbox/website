@@ -69,7 +69,7 @@ Allow me to explain...
 Rather than rewriting stuff I've already said before, I'll simply take an
 excerpt from an email I originally sent back on 2008-08-20:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 I believe the primary reason why the load on the Search database is extremely
 high is due to the changes in MOSS 2007 with regards to the "property store"
@@ -93,7 +93,7 @@ SQL Server farm.
 Here's a more lengthy explanation from an email I sent a couple of months later
 (when Agilent was still experiencing problems on their site):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Fact: MOSS 2007 is more resource intensive than SPS 2003. I believe with the
 release of the documentation for SP1, this was formally acknowledged by the

@@ -26,7 +26,7 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
 2007:
 
 1. <cite>"The Media Guy"</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    Great article.. was very helpful. I used 960.gs for my master page as well
    and all is good. I am now creating a 3 column page layout . I need a grid\_3

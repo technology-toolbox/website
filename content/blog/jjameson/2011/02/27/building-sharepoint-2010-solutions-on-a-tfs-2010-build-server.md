@@ -44,7 +44,7 @@ should be:
 Second, the MSDN article instructs you to copy several Visual Studio SharePoint
 assemblies to the GAC on the build server:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **Copy the SharePoint Tool Assemblies and Files to the GAC
 ** The following assemblies must be copied to the GAC of the build system:
@@ -69,7 +69,7 @@ solutions with TFS 2010, you'll probably want to copy more assemblies than those
 that are directly referenced in you project -- in order to avoid code analysis
 warnings, like the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 CA0060 : The indirectly-referenced assembly
 'Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral,

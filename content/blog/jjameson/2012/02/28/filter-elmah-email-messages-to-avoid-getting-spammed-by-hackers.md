@@ -120,7 +120,7 @@ following:
 These are actually the "inner" exceptions. If you look at the details for the
 error, you'll see the following:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 System.Web.HttpException: The state information is invalid for this page and
 might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.

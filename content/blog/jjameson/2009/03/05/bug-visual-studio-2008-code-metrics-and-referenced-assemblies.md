@@ -27,7 +27,7 @@ After clicking the **Analyze** menu, and then clicking **Calculate Code Metrics
 for Solution**, I encountered errors similar to the following for several
 projects in the solution:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 An error occurred while calculating code metrics for target file
 'E:\NotBackedUp\...' in project ... The following error was encountered while

@@ -26,7 +26,7 @@ If you leave this value set to the default (i.e. **Yes**), then you'll be
 greeted with the following message for each Excel Web Part on a TFS dashboard
 page:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 This workbook contains one or more queries that refresh external data. A
 malicious user can design a query to access confidential information and

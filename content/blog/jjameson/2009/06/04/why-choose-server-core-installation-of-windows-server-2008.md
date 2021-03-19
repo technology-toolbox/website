@@ -20,7 +20,7 @@ If you ever find yourself looking for reasons or evidence why you should choose
 the "Server Core" installation option for Windows Server 2008, try searching for
 the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 ["Windows Server 2008 Server Core installation not affected" site:microsoft.com/technet/security](http://www.bing.com/search?q=%22Windows+Server+2008+Server+Core+installation+not+affected%22+site%3Amicrosoft.com%2Ftechnet%2Fsecurity)
 

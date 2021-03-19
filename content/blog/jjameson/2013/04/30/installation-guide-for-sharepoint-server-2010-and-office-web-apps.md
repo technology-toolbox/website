@@ -2539,7 +2539,7 @@ location does not support HTTPS (https://) and therefore results in the
 following error when attempting to access an Excel workbook on a secured
 connection:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 This workbook cannot be opened because it is not stored in an Excel Services
 Application trusted location.
@@ -2629,7 +2629,7 @@ for caching:
    > The cache site collection is created via a SharePoint timer job.
    > Consequently you may encounter the following error (depending on how
    > quickly the installation steps are performed):
-   > {{< blockquote "font-italic text-danger" >}}
+   > {{< blockquote "fst-italic text-danger" >}}
    > 
    > Set-SPOfficeWebAppsCache : Specified web application doesn't exist or
    > doesn't have a cache site collection.

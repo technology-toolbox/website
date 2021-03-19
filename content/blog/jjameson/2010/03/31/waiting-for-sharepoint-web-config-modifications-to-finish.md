@@ -33,7 +33,7 @@ Production environment (PROD) is that when
 [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint),
 the following error occurred sporadically:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 A web configuration modification operation is already running.
 

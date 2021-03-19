@@ -26,7 +26,7 @@ about developing a "tough skin" ;-)]
 After a quick search for "WinHost directory browsing" I quickly discovered this
 is actually documented on the WinHost site:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 ... By default, directory browsing is enabled.
 

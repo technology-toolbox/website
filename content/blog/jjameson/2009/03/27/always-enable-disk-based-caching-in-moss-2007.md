@@ -23,7 +23,7 @@ Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a.
 is a blurb from
 [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Disk-based caching is one way in which you can achieve faster processing of
 content stored in a Web application database. If your Web application contains

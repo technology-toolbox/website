@@ -22,7 +22,7 @@ If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS)
 [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
 -- then you've probably seen the following comment:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Note: Referenced assemblies must be specified with a path corresponding to the
 build configuration. If the path is not specified to the referenced assembly,

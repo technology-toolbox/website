@@ -40,7 +40,7 @@ Note that the
 method is defined rather ambiguously. Here are the remarks from the
 corresponding documentation on MSDN:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Clone can be implemented either as a deep copy or a shallow copy. In a deep
 copy, all objects are duplicated; whereas, in a shallow copy, only the top-level

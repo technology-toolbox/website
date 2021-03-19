@@ -54,7 +54,7 @@ my mind, this morning I followed the steps in the sample
 and subsequently enabled code coverage inside Visual Studio. This resulted in
 the following message from Visual Studio:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Debugging tests running on a remote computer or with code coverage enabled is
 not supported. The tests will be run under the debugger locally and without code
@@ -67,7 +67,7 @@ tests outside the debugger (e.g. by using Ctrl + F5). Ummm...yeah...I tried that
 -- it doesn't work. When I click the Show Code Coverage Results toolbar button
 in the **Test Results** window, I see the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Cannot find any coverage data (.coverage or .coveragexml) files. Check test run
 details for possible errors.

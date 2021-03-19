@@ -27,7 +27,7 @@ For example, suppose you were looking for a blog post that I wrote about faceted
 search. All you need to do is specify the appropriate keywords as well as the
 corresponding property filter:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 faceted search site:blogs.msdn.com/jjameson
 

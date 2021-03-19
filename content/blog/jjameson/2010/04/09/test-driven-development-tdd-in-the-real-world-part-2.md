@@ -213,7 +213,7 @@ assuming you've enabled code analysis on the project (which is
 [something I always recommend doing](/blog/jjameson/2009/10/31/recommendations-for-code-analysis))
 -- due to the following errors:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 error : CA1801 : Microsoft.Usage : Parameter 'input' of
 'StringHelper.Truncate(string, int)' is never used. Remove the parameter or use
@@ -247,7 +247,7 @@ prefer to be used in `private` methods). We'll fix that in a minute.
 However, we still encounter one more error when trying to compile the
 DeveloperTests project:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 error : CA1804 : Microsoft.Performance :
 'StringHelperTest.TruncateInvalidParameter001()' declares a variable, 'actual',

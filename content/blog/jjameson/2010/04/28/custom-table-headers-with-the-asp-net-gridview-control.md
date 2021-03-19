@@ -536,7 +536,7 @@ Here's the short summary from MSDN for the
 [Page.SaveStateComplete](http://msdn.microsoft.com/en-us/library/system.web.ui.page.savestatecomplete.aspx)
 event:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Occurs after the page has completed saving all view state and control state
 information for the page and controls on the page.

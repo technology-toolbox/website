@@ -46,7 +46,7 @@ I followed Jon's post to configure my environment, but I found that when I
 browsed to a new TFS project site, all of the Excel Web Parts displayed the
 following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The workbook cannot be opened.
 

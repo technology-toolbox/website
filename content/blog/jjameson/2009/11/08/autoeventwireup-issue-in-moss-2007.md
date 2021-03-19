@@ -23,7 +23,7 @@ finish this blog post that has been sitting in "unpublished" status since June
 Have you ever encountered the following error in Microsoft Office SharePoint
 Server (MOSS) 2007?
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 An error occurred during the processing of . The attribute 'autoeventwireup' is
 not allowed in this page.
@@ -112,7 +112,7 @@ of changing something like this...
 Unfortunately -- at least in my experience -- this doesn't work. It only leads
 to other errors, such as:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The event handler 'OnPreRender' is not allowed in this page.
 
@@ -134,7 +134,7 @@ I attempted to resolve this by converting the
 method from the `Page_PreRender` event handler instead. However, that only led
 to yet another error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Code blocks are not allowed in this file.
 

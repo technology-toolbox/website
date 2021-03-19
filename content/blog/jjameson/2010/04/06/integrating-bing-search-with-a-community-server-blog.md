@@ -56,7 +56,7 @@ After digging around a little in the
 
 Here's the gist of it:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 To let your visitors search your website, add the following code to your page(s):
 

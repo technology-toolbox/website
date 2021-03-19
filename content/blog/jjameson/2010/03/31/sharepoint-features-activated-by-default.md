@@ -38,7 +38,7 @@ linkHref="http://msdn.microsoft.com/en-us/library/ms436075.aspx" >}}
 Here's the description for the **ActivateOnDefault** attribute of the
 **Feature** element:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Optional **Boolean**. **TRUE** if the Feature is activated by default during
 installation or when a Web application is created; **FALSE** if the Feature is

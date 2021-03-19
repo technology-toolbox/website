@@ -34,7 +34,7 @@ WITH NOFORMAT, NOINIT
 
 From SQL Server 2005 Books Online:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Taking a backup normally changes the database, in turn affecting other backups
 and how they are restored. Sometimes, however, a backup must be taken for a
@@ -67,7 +67,7 @@ However, there are a couple of issues with this approach:
 The second problem was puzzling to me. After specifying my backup file, when I
 attempted to change to the **Options** page, I encountered the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 You must select a restore source.
 

@@ -51,7 +51,7 @@ doesn't specify a CultureInfo:
 
 Attempting this will now result in a broken build:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Error 2 CA1305 : Microsoft.Globalization : Because the behavior of
 'string.Format(string, object)' could vary based on the current user's locale

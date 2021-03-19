@@ -106,7 +106,7 @@ function InstrumentAssembly(
 When you run [VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)
 against a signed assembly, the following warning is emitted:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly
 named assembly. It will need to be re-signed before it can be executed.

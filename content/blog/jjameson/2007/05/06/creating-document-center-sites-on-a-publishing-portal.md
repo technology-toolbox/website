@@ -32,7 +32,7 @@ management features and content approval workflows).
 Here is the excerpt from the email I sent back in December to one of our
 internal DLs:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Even if you enable the Document Center template on a "Publishing with Workflow"
 site, it still does not show up when you attempt to create a subsite.

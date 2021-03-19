@@ -38,7 +38,7 @@ or errors last week when I built it using Visual Studio 2008."
 
 Then I looked more closely at the error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The type 'System.Web.Security.MembershipProvider' is defined in an assembly that
 is not referenced. You must add a reference to assembly
@@ -57,7 +57,7 @@ been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
 
 Unfortunately, that's when I got the following warning:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Attempted re-targeting of the project has been canceled. You cannot change the
 specified .NET framework version or profile for a test project.

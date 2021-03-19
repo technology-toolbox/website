@@ -41,7 +41,7 @@ stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://f
 
 I encountered the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 This solution contains no resources scoped for a Web application and cannot be
 deployed to a particular Web application.
@@ -63,7 +63,7 @@ generated for the PublishingLayouts (since it was pure content).
 I also encountered the following error when trying to deploy our custom
 Workflows feature:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
 This feature could not be installed.
@@ -77,7 +77,7 @@ I then decided to try omitting the {{< kbd "url" >}} parameter when deploying
 all of the other solutions. Without the {{< kbd "url" >}} parameter, I was able
 to deploy 7 of our 9 features. The remaining two produced the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 This solution contains resources scoped for a Web application and must be
 deployed to one or more Web applications.

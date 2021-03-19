@@ -21,7 +21,7 @@ Shortly after publishing my previous post covering
 Panjkov noted that attempting to create a new site in WSS v3 using the site
 template that I originally provided resulted in the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The template you have chosen is invalid or cannot be found.
 

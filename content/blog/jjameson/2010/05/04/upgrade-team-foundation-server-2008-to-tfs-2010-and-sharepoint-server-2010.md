@@ -609,7 +609,7 @@ appear as expected.
 
 You may encounter the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The feature: "Scale-out deployment" is not supported in this edition of
 Reporting Services. (rsOperationNotSupported)
@@ -759,7 +759,7 @@ extensions for SharePoint have been installed).
 
 Note that a different error may be shown in the **Remaining Work** Web Part:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Reporting Services Error
 

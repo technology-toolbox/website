@@ -290,7 +290,7 @@ when configuring a cluster) and it's the way I've always done it. It was
 definitely the way BEAST was configured prior to this TFS rebuild. Note that the
 TFS install guide says to:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 type the name of a domain account or **NT AUTHORITY\NETWORK SERVICE** in
 **Account Name** for every service.
@@ -303,7 +303,7 @@ Services.
 As a sanity check, I also found the following in
 [SQL Server 2008 books online](http://msdn.microsoft.com/en-us/library/ms174905.aspx):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 You can choose to run an instance of Microsoft SQL Server Analysis Services in
 the security context of many different accounts. However, we recommend that you
@@ -319,7 +319,7 @@ that I could browse to the project team site (i.e. the SharePoint site).
 Note that after all this work, I was really only at the beginning of the overall
 process. More specifically, I had just completed the following step:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 1. Install Team Foundation Server in the new environment and make sure it is
    operational. For detailed instructions...
@@ -421,7 +421,7 @@ proxy:
 
 This was necessary to avoid the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 System.InvalidOperationException: Client found response content type of '', but
 expected 'text/xml'.\

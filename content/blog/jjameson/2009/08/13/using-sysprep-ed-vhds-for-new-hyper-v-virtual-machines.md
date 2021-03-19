@@ -43,7 +43,7 @@ you guessed it -- dogfood.vhd.
 I then proceeded to start the DOGFOOD VM using Hyper-V Manager. Unfortunately, I
 encountered the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Virtual Machine Connection
 

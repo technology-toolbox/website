@@ -23,7 +23,7 @@ This is an update to the beta version that was released last December. It
 Here's the overview from the
 [download page](http://www.microsoft.com/downloads/details.aspx?FamilyID=83A80A0F-0906-4D7D-98E1-3DD6F58FF059&displaylang=en):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 The SharePoint 2010 Developer Training Kit provides developers with deep
 guidance on how to develop for SharePoint 2010. Through PowerPoint decks,

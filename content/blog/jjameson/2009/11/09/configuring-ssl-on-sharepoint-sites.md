@@ -44,7 +44,7 @@ linkHref="http://technet.microsoft.com/en-us/library/cc298636.aspx" >}}
 
 Specifically, here is the text that I am referring to:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 We do not recommend reusing the same IIS Web site for your HTTP and SSL hosting.
 Instead, extend a dedicated HTTP and a dedicated SSL Web site, each assigned to

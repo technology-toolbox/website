@@ -30,7 +30,7 @@ it) but it did not show up in "{{< kbd "stsadm -o enumsites" >}}". Attempts to
 recreate the site (upon activation of one of our custom features) also failed
 with the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The system cannot find the path specified. (Exception from HRESULT: 0x80070003)
 

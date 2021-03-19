@@ -52,7 +52,7 @@ then Hyper-V Manager pukes with a message about not being able to connect to the
 RPC server. Also note that in this scenario Disk Management pukes as well with
 the infamous error message:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 RPC server is unavailable
 

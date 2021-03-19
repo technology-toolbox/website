@@ -26,7 +26,7 @@ Here is the "almost" unabridged version of the email exchange (headers and
 signatures removed):
 
 1. <cite>Keutmann</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    I would like to know that you are not talking about the STSDEV project, but
    it is really the WSPBuilder project. Because the WSPBuilder do not build the
@@ -39,7 +39,7 @@ signatures removed):
    {{< /blockquote >}}
 
 2. <cite>Jeremy</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    It's definitely WSPBuilder. The solution contains folders for WSPBuilder\_x64
    and WSPBuilder\_x86 (which contain executables, a config file, and a couple
@@ -53,7 +53,7 @@ signatures removed):
    {{< /blockquote >}}
 
 3. <cite>Keutmann</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    The standard installation of WSPBuilder Extensions for Visual Studio do not
    build the WSP package when building the project ({{< kbd "CTRL-SHIFT-B" >}}).
@@ -72,7 +72,7 @@ signatures removed):
    {{< /blockquote >}}
 
 4. <cite>Jeremy</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    Hmmm...I didn't install the WSPBuilder Extensions for Visual Studio in order
    to build the solution -- the team apparently already pulled in the necessary
@@ -84,7 +84,7 @@ signatures removed):
    {{< /blockquote >}}
 
 5. <cite>Keutmann</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    The SharePoint.WSPBuilder.targets file is not something that is shipped with
    WSPBuilder, so it must be something that someone in your project have added.
@@ -97,7 +97,7 @@ signatures removed):
    {{< /blockquote >}}
 
 6. <cite>Jeremy</cite>
-   {{< blockquote "font-italic" >}}
+   {{< blockquote "fst-italic" >}}
    
    Ah...well, it that case, it sounds like we **\*should\*** be treating
    WspBuilder the same as makecab.exe and calling it whenever an item in the

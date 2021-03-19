@@ -49,7 +49,7 @@ server. In other words, my encrypted password file is:
 Consequently, I encountered the following error when trying to save my password
 file:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Failed to save the password file. Here are the gory details:
 GetVolumeInformation failed:\
@@ -85,7 +85,7 @@ and thus pwm.exe would generate a
 [`BadImageFormatException`](http://msdn.microsoft.com/en-us/library/system.badimageformatexception.aspx)
 when trying to load the 32-bit NativeHelpers.dll.
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Could not load file or assembly 'NativeHelpers, Version=1.5.0.4,
 Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was

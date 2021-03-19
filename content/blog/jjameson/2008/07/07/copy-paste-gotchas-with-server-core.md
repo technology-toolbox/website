@@ -39,7 +39,7 @@ Management MMC console on my Windows Vista laptop and connected to the server --
 or, rather I should say that I *tried* to connect to the server. Instead of
 connecting, I was greeted with the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
 This can happen if the remote computer does not support VDS, or if a connection
@@ -64,7 +64,7 @@ enable=yes
 
 Unfortunately, the response wasn't exactly what I expected:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Group cannot be specified along with other identification conditions.
 

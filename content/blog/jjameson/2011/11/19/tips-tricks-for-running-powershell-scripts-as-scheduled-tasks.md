@@ -87,7 +87,7 @@ configured it to run as a scheduled task with the following properties:
 Deleting the temporary files and then running the scheduled task results in the
 following message in the **Last Run Result** column:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 The operation completed successfully. (0x0)
 
@@ -99,7 +99,7 @@ created by the script.
 However, when you run the scheduled task again (without deleting the files) the
 **Last Run Result** column displays:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 (0x1)
 

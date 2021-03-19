@@ -64,7 +64,7 @@ on the new VMs, I downloaded the ISO images from MSDN to the Virtual Server
 host. However, when I attached the SQL Server ISO image to the new VM, I
 encountered the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 setup.exe - Bad Image
 
@@ -82,7 +82,7 @@ Web server VM (figuring I could deal with the SQL issue later before running the
 SharePoint Configuration Wizard). On both VMs, I got the following error when
 starting the setup:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Visual Studio 2005 Setup
 
@@ -95,7 +95,7 @@ The last thing that I could think of was to copy the files from the "CD" (i.e.
 the mounted ISO file) to the local VHD. I opened a command prompt and started
 robocopying files, but I soon got the following error:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Error Performing Inpage Operation
 

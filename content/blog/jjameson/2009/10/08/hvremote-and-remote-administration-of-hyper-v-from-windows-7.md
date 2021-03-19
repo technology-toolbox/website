@@ -86,7 +86,7 @@ INFO: Are running the latest version
 However, when I attempted to connect to Hyper-V Manager to my Hyper-V servers, I
 encountered errors similar to the following:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Access denied. Unable to establish communication between 'ROGUE' and
 'WOLVERINE'.

@@ -36,7 +36,7 @@ My initial fix for this issue was to change references like:
 While this worked, Phil [pointed out](http://github.com/Haacked/Subtext/pull/7)
 there is a more elegant solution:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Actually, we should simply use a
 [protocol relative URL/network path reference](http://paulirish.com/2010/the-protocol-relative-url/).

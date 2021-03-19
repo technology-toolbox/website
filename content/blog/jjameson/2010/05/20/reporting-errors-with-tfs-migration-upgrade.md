@@ -32,7 +32,7 @@ During the upgrade, a warning occurs indicating the reports could not be
 successfully upgraded. The log file contains warnings for each TFS project that
 resemble the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 [Warning] Failed to upgrade Reporting settings for project AdventureWorks:
 TF30225: Error uploading report 'Work Item with Tasks':
@@ -56,7 +56,7 @@ Report, Boolean CacheReport, ExpirationDefinition Expiration)
 After the upgrade, when attempting to create a new TFS project (which adds new
 reports to Reporting Services), you may see the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **TF301777: Team Project Creation Failed**
 
@@ -108,7 +108,7 @@ Manager:
 
 An error similar to the following should be displayed:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database
 'mssqlsystemresource', schema 'sys'
@@ -163,7 +163,7 @@ to complete the upgrade of the reports for existing TFS projects (which failed
 during the TFS upgrade process). Otherwise, the Web Parts that render reports
 will continue to show errors similar to the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **Reporting Services Error**
 
@@ -198,7 +198,7 @@ While this successfully uploaded the missing reports (e.g.
 /TfsReports/DefaultCollection/AdventureWorks/Remaining Work), it only led to a
 different error.
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **Reporting Services Error**
 

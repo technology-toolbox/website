@@ -100,7 +100,7 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 
 ...then you will encounter an error similar to the following:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that has
 subsites.\

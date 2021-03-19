@@ -36,7 +36,7 @@ task tray), I was quickly informed that the attempt to install Visual Studio
 
 Looking at the event log, I noticed the following errors:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Event Type: Error\
 Event Source: MsiInstaller\

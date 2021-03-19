@@ -26,7 +26,7 @@ A good use of this feature is specifying a custom dictionary for your solution.
 Once you enable Code Analysis on your projects, you are likely to encounter
 warnings similar to the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of
 'Fabrikam' in namespace name 'Fabrikam.Demo.CoreServices.Logging'.
@@ -36,7 +36,7 @@ MSBUILD : warning : CA1704 : Microsoft.Naming : Correct the spelling of
 If you right-click one of these warnings and then click **Show Error Help**, you
 will find the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **How to Fix Violations**\
 To fix a violation of this rule, correct the spelling of the word or add the

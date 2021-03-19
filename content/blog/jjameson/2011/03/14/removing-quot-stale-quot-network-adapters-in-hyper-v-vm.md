@@ -21,7 +21,7 @@ Each time I create (or recreate) a virtual machine in Hyper-V using
 [one of my SysPrep'ed images](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines),
 I usually end up having to do a quick Internet search for:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 device manager show hidden devices
 

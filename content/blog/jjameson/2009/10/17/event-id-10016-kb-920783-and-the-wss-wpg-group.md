@@ -22,7 +22,7 @@ SharePoint Server (MOSS) 2007 in a least privilege configuration, you have
 undoubtedly encountered errors similar to the following in your Windows event
 log:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The application-specific permission settings do not grant Local Activation
 permission for the COM Server application with CLSID
@@ -65,7 +65,7 @@ However, I see two problems with KB 920783:
   SharePoint Server 10016". Right?
 - Second, and much more important, the KB article instructs you to:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 "type the domain user account that you specified as the Windows SharePoint
 Services 3.0 service account"

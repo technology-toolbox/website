@@ -119,7 +119,7 @@ Attempting to browse to the home page of the site now results in an error. After
 tweaking the Web.config file to set `<SafeMode CallStack="true" ...>` and
 `<customErrors mode="Off" />`, the details of the error are revealed:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 System.InvalidOperationException: The control with ID 'updatePanel' requires a
 ScriptManager on the page. The ScriptManager must appear before any controls
@@ -171,7 +171,7 @@ I've also seen the following error when using the
 **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)**
 from the AJAX Control Toolkit on a SharePoint site:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Extender Controls may not be Registered before PreRender
 

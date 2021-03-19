@@ -27,7 +27,7 @@ When I stumbled upon these pages a few years ago, I immediately thought of that
 quote from the
 [old Guinness commercials](http://www.youtube.com/watch?v=3DPKf7y1F-Q):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Brilliant!
 

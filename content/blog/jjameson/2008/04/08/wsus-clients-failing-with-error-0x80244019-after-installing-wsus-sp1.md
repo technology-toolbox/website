@@ -41,7 +41,7 @@ update on one of my servers to confirm that this resolved the issue.
 
 A little post mortem analysis further revealed the following event on COLOSSUS:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Event Type: Information\
 Event Source: MsiInstaller\

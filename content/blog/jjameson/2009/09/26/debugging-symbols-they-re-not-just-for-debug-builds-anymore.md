@@ -27,7 +27,7 @@ added some content from a Development Plan that I had created a few years ago.
 
 In the process of reviewing my old document, I came across the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 ### Installation
 
@@ -72,7 +72,7 @@ Robbins makes in
 [Debugging Microsoft .NET 2.0 Applications](http://amzn.com/0735622027). In
 fact, here's a direct quote from page 38:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 ### Build All Builds with Debugging Symbols
 

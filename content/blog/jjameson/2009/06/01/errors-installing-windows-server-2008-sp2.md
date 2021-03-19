@@ -27,7 +27,7 @@ Unfortunately when I examined the WSUS console this morning, I found a number of
 computers reporting errors. After selecting one of the failed computers, I
 discovered the following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Windows Server 2008 Service Pack 2 Standalone x64-based Systems (KB948465) -
 English, French, German, Japanese, Spanish
@@ -52,7 +52,7 @@ following the steps in the KB article to enable logging and try to reproduce the
 problem, I decided to take a quick look at the event logs and discovered the
 following:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Log Name: System\
 Source: Microsoft-Windows-Service Pack Installer\

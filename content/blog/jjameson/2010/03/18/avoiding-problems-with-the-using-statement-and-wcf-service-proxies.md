@@ -44,7 +44,7 @@ generic error message on the page where the error occurred.
 Shortly after starting to troubleshoot the problem, I discovered the following
 error in the event log:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be
 used for communication because it is in the Faulted state.
@@ -68,7 +68,7 @@ linkHref="http://msdn.microsoft.com/en-us/library/aa355056.aspx" >}}
 
 Here's the first sentence from that article:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 This sample demonstrates how you should not use the C# "using" statement to
 automatically clean up resources when using a typed client.

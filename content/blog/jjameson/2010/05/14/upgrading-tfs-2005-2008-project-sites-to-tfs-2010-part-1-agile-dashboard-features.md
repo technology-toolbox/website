@@ -90,7 +90,7 @@ file, I noticed that it didn't run for very long (i.e. the word "Ready" appeared
 almost immediately in the status bar in Visual Studio). Looking at the
 corresponding AdventureWorks.log file, I discovered the following:
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Exception Message: TF30270: The following team project site cannot be created
 because it already exists: AdventureWorks. Either specify another location for

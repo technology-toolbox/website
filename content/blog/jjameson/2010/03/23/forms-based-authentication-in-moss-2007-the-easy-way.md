@@ -66,7 +66,7 @@ As you might be aware by now, I'm also a big fan of scenario-based development.
 Therefore, let's use the following scenario to drive the the remainder of this
 post:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Doug has recently joined the team responsible for developing the Internet site
 for Fabrikam Technologies. Consequently Doug needs to get his local development

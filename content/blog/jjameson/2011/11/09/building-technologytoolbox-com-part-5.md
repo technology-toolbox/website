@@ -35,7 +35,7 @@ One of the most important concepts I learned a few years ago while reading
 [Transcending CSS](http://www.transcendingcss.com/) is that your HTML content
 should look good "naked" -- in other words, without any CSS rules applied:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 ...with no distracting layout, the meaningful structure of your naked content
 becomes clear: Visitors can more easily see headings and hierarchy, and they can
@@ -89,7 +89,7 @@ headed over to [http://microformats.org/wiki](http://microformats.org/wiki) to
 see if something already existed so I wouldn't have to start from scratch. That
 is when I discovered the hAtom 0.1 microformat:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 hAtom is a microformat for content that can be syndicated, primarily but not
 exclusively weblog postings. [...]

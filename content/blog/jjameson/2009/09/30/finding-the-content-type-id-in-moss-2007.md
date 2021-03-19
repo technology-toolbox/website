@@ -20,7 +20,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/30/finding-the-co
 Yesterday I received the following question from someone regarding Microsoft
 Office SharePoint Server (MOSS) 2007 content type IDs:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 I need to add another page type [that] inherits from the article page. How do
 you find the GUID of the article page to add it to the solution?

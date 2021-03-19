@@ -152,7 +152,7 @@ contains a mix of secured and unsecured content. In other words, the status bar
 shows a small lock icon with a bright red warning symbol, along with the
 following tooltip:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Warning: Contains unauthenticated content
 
@@ -164,7 +164,7 @@ source to specify
 However, if (like we did) you fire up Fiddler and request this URL, you will
 find the response to be an HTTP 302 (redirect) with the following header:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Location:
 http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png

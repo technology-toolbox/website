@@ -37,7 +37,7 @@ the "Replacement" information didn't help me in the slightest.
 
 I tried an Internet search (using both Windows Live Search and Google) for:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 add sysadmin SQL Server 2008
 

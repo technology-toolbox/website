@@ -49,7 +49,7 @@ of them.
 How can I say this with such conviction? Well, yesterday I came across the
 following on MSDN:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 #### Support Details
 

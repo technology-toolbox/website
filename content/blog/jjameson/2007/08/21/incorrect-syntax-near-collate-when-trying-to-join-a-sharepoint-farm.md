@@ -36,7 +36,7 @@ dialog displayed by the .NET Framework when something very bad happens.
 
 **Error message:**
 
-{{< blockquote "font-italic text-danger" >}}
+{{< blockquote "fst-italic text-danger" >}}
 
 Unhandled exception has occurred in your application. If you click Continue, the
 application will ignore this error and attempt to continue. If you click Quit,

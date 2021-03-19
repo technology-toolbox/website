@@ -307,7 +307,7 @@ to post comments.
 For the sake on not having to rehash an old topic, I'll just copy/paste my
 check-in comments below:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Resolve errors with IdenticonHandler.ashx when running in "Medium" trust (by
 removing Identicon code in Subtext and instead relying on Gravatar service to
@@ -644,7 +644,7 @@ posts on the Technology Toolbox site) but it certainly took more than an hour.
 Again, for the sake on not having to rehash an old topic, I'll just copy/paste
 my check-in comments below:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Fix numerous issues with pingback functionality in Subtext:\
 

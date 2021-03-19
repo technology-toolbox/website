@@ -36,7 +36,7 @@ the other in March 2009).
 In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has
 been, well, nixed...
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 **SPSite.RootWeb Property**\
 An earlier version of this article indicated that the calling application should

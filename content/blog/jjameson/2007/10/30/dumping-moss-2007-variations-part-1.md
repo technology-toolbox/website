@@ -180,7 +180,7 @@ and no custom content types:
 
 11. View the variation logs and notice the failure with the following error:
     
-    {{< blockquote "font-italic text-danger" >}}
+    {{< blockquote "fst-italic text-danger" >}}
     
     The variation system failed to pair up pages
     http://foobar/en-US/foo/Pages/default.aspx and /ja-JP/foo/Pages/default.aspx

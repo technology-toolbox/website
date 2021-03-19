@@ -21,7 +21,7 @@ Last summer I wrote a post about
 [best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 and made the following statement:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 The
 [AssemblyFileVersionAttribute](http://msdn.microsoft.com/en-us/library/system.reflection.assemblyfileversionattribute%28VS.71%29.aspx)
@@ -35,7 +35,7 @@ assembly version.
 
 Here was my response:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 While you certainly \*could\* increment the AssemblyFileVersionAttribute in a
 pre-build event, I definitely don't recommend it. Doing so would cause the

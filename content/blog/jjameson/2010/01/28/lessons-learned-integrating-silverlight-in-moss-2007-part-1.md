@@ -156,7 +156,7 @@ the expected location is not compatible with Team Foundation Build.
 As I noted in a
 [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 The problem with relative paths is that Team Foundation Build uses a different
 folder structure when compiling your projects.

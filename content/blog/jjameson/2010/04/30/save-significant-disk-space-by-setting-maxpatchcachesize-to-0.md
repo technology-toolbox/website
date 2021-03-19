@@ -44,7 +44,7 @@ Then I move on to installing products based on the intended purpose of the VM.
 Here's an excerpt from the
 [MSDN page for MaxPatchCacheSize](http://msdn.microsoft.com/en-us/library/aa369798%28VS.85%29.aspx):
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 If this per-machine system policy is set to a value greater than 0, Windows
 Installer saves older versions of files in a cache when a patch is applied to an

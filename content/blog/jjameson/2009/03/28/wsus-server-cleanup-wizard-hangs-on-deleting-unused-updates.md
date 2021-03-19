@@ -45,7 +45,7 @@ I then ran the WSUS **Server Cleanup Wizard** as I had attempted
 As with my previous attempts, the cleanup appeared to hang on the following
 step:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Deleting unused updates...
 

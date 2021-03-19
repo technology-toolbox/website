@@ -39,7 +39,7 @@ If you've worked with me in the past, you know that I am a huge fan of using
 scenario-based development. So for the purposes of this post, let's use a
 scenario to drive the development of our features:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Fabrikam Technologies
 [my favorite fictitious manufacturing company] has hired us to customize the look-and-feel of their corporate intranet site ([http://fabweb](http://fabweb/)),

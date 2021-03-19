@@ -304,7 +304,7 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 > After a navigation node has been deleted, you need to refresh the SPWeb object
 > to avoid errors like the following:
 >
-> {{< blockquote "font-italic text-danger" >}}
+> {{< blockquote "fst-italic text-danger" >}}
 >
 > An error occurred while enumerating through a collection: Cannot complete this
 > action.

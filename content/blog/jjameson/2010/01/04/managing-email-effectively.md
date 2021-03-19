@@ -99,7 +99,7 @@ to me or to DLs that I belong to.
 I just inspected my email rules in Outlook and found that I am now up to 32
 rules. Note that most of these rules follow the same basic structure:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 sent to people or distribution list\
@@ -112,7 +112,7 @@ stop processing more rules
 For example, I have a rule named **SharePoint 2010 discussions** configured as
 follows:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 sent to SharePoint 2010 Discussion\
@@ -141,7 +141,7 @@ review team progress) but obviously I don't want them clogging my inbox (or
 making my smartphone "chirp" incessantly). Consequently I configured my **TFS
 Notifications** rule as follows:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 from [xxx@microsoft.com](mailto:xxx@microsoft.com)\
@@ -154,7 +154,7 @@ the TFS service account (which I've replaced for obvious reasons).
 
 Further down the list of email rules, I have one named **High Priority Items**:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John
@@ -170,7 +170,7 @@ the very last rule.
 
 Note that I also have a **Project Mail** rule configured for similar purposes:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 sent to FrontierV3Dev or KPMG-COM Project Team or ...\
@@ -181,7 +181,7 @@ stop processing more rules
 The very last rule that I have configured in Outlook is named **Low Priority
 Items** and is configured as follows:
 
-{{< blockquote "font-italic" >}}
+{{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
 move it to the Low Priority Items folder\
