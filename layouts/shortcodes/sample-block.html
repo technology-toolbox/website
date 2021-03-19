@@ -1,1 +1,4 @@
-<samp>{{ .Inner | markdownify }}</samp>
+{{- $markdown := .Inner -}}
+{{- $markdown = replace $markdown "'" "&apos;" -}}
+{{- $markdown = replace $markdown "\"" "&quot;" -}}
+<samp>{{ $markdown | markdownify }}</samp>

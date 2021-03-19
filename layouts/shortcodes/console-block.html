@@ -1,5 +1,8 @@
 {{- $class := "consoleBlock text-monospace" -}}
 {{- with (.Get "class" | default (.Get 0)) -}}{{- $class = print $class " " . -}}{{- end -}}
+{{- $markdown := .Inner -}}
+{{- $markdown = replace $markdown "'" "&apos;" -}}
+{{- $markdown = replace $markdown "\"" "&quot;" -}}
 <div class="{{ $class }}">
-  {{ .Inner | markdownify }}
+  {{ $markdown | markdownify }}
 </div>
