@@ -7,6 +7,9 @@ theme = "techtoolbox-hugo"
   [markup.highlight]
     style = "monokailight"
 
+  [markup.goldmark.renderer]
+    unsafe= true
+
 [menu]
 
   [[menu.main]]
