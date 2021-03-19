@@ -3,6 +3,11 @@
 {{- $markdown := .Inner -}}
 {{- $markdown = replace $markdown "'" "&apos;" -}}
 {{- $markdown = replace $markdown "\"" "&quot;" -}}
+{{- $convertedMarkdown := $markdown | markdownify -}}
 <div class="{{ $class }}">
-  {{ $markdown | markdownify }}
+  {{- if not ( strings.Contains $markdown "<p>" ) -}}
+    <p>{{ $convertedMarkdown }}</p>
+  {{- else -}}
+    {{ $convertedMarkdown }}
+  {{- end -}}
 </div>
