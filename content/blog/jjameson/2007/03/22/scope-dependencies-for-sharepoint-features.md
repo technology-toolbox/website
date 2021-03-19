@@ -73,8 +73,9 @@ kbd "\"Activate Feature.cmd\"" >}}
 
 {{< sample-block >}}
 
-Activating Fabrikam.Project1.PublicationLibrary on url - http://project1-local\
-\ Dependency feature 'Fabrikam.Project1.PublicationContentTypes' (id:
+Activating Fabrikam.Project1.PublicationLibrary on url - http://project1-local
+
+Dependency feature 'Fabrikam.Project1.PublicationContentTypes' (id:
 9f5c14f1-cf58-47c7-bbba-da9a8637deab) is not properly scoped for feature
 'Fabrikam.Project1.PublicationLibrary' (id:
 49b204d0-7e35-4460-a691-a7d481c463b4). Its scope 'Site' must be equal to or
@@ -97,9 +98,10 @@ kbd "\"Install Feature.cmd\"" >}}
 
 {{< sample-block >}}
 
-Installing Fabrikam.Project1.PublicationContentTypes\ \ Elements of type 'Field'
-are not supported at the 'WebApplication' scope. This feature could not be
-installed.
+Installing Fabrikam.Project1.PublicationContentTypes
+
+Elements of type 'Field' are not supported at the 'WebApplication' scope. This
+feature could not be installed.
 
 {{< /sample-block >}}
 
