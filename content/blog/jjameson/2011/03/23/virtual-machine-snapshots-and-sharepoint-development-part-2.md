@@ -204,6 +204,8 @@ succession.
 
 It's also worth repeating the following warning from my previous post:
 
+{{< div-block "note warning" >}}
+
 > **Warning**
 >
 > If, like me, you decide to use Hyper-V snapshots in your SharePoint
@@ -213,6 +215,8 @@ It's also worth repeating the following warning from my previous post:
 > snapshot before reverting to the earlier point in time and hence any work I've
 > done that hasn't be "exported" somewhere (e.g. checked into TFS) is
 > subsequently lost when I apply a snapshot.]
+
+{{< /div-block >}}
 
 #### Create a New Snapshot After Each Release
 

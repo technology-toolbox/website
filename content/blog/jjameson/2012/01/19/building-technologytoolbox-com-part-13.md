@@ -39,12 +39,16 @@ greatly increases the probability that users will have already downloaded the
 jQuery file (as a result of browsing to another site that references the same
 resource).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Originally, I thought I needed to reference a local jQuery file during
 > development in order to get Intellisense while writing JavaScript (i.e. by
 > referencing a jQuery script residing side-by-side with a corresponding "vsdoc"
 > file). However, that turned out not to be true. More on that in a moment.
+
+{{< /div-block >}}
 
 Also note that version 1.4.1 of jQuery is rather "long in the tooth" these days
 -- considering it was released in early 2010. The current release (at the time
@@ -199,6 +203,8 @@ of the CSS files are updated. (Refer to
 [one of my previous posts](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot)
 if you want to read more about this technique.)
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > If you are wondering why I use the
@@ -206,6 +212,8 @@ if you want to read more about this technique.)
 > method with the `<script>` elements but not the `<link>` elements, it's simply
 > because it doesn't work otherwise (despite the presence of the
 > `runat="server"` attribute in the `<head>` element).
+
+{{< /div-block >}}
 
 Using the technique I have presented thus far works just fine in most scenarios,
 but there are a couple of potential issues (depending on your specific

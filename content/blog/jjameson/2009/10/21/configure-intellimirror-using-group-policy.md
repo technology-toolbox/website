@@ -73,6 +73,8 @@ settings:
         - **Videos**
           - Setting: Follow the Documents folder
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Those of you that have a very keen eye (and also a photographic memory) might
@@ -81,6 +83,8 @@ settings:
 > cardinal sins by having a SQL Server also serve as a file server. I don't
 > recommend doing this unless, like me, you are trying to go as cheap as
 > possible -- and, even then, only for a lab environment like mine.
+
+{{< /div-block >}}
 
 In order to allow users access to create their own folders on \\BEAST\Users$, I
 have configured the following permissions on C:\BackedUp\Users:

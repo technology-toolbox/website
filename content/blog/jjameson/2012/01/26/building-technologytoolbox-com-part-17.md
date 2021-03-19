@@ -140,12 +140,16 @@ To ensure this target is executed as part of every build, I modified the
   </PropertyGroup>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You might be tempted to use the **AfterBuild** target or a post-build event to
 > implement additional build steps like the ones described in this post.
 > However, in general, I don't recommend that (for reasons described in
 > [one of my previous blog posts](/blog/jjameson/2008/04/10/a-better-way-to-build-sharepoint-solution-packages-and-cab-files)).
+
+{{< /div-block >}}
 
 If you were to reload the project file at this point and perform a build, you
 would see the "TODO:" message in the **Output** window.

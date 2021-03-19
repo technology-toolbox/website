@@ -63,11 +63,15 @@ The contents of the script are actually quite trival:
 net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its
 > predecessor -- Microsoft Operations Manager (MOM) -- and thus had already
 > created a service account named **svc-mom-action**.
+
+{{< /div-block >}}
 
 To force this startup script to run on all monitored servers, I created a Group
 Policy object (named **Default Operations Manager Policy**) and linked it to the

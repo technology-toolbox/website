@@ -275,11 +275,17 @@ function UpdateGacAssemblyIfNecessary(
 }
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > This script does not currently support side-by-side versions of the same
 > assembly in the GAC. An exception is thrown if more than one matching assembly
 > is found in the GAC.
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Note**
 >
@@ -291,6 +297,8 @@ function UpdateGacAssemblyIfNecessary(
 > and that **gacutil.exe** should be used instead. For Development environments,
 > using **gacutil.exe** is acceptable, but for Test and Production environments,
 > you should not rely on **gacutil.exe** for installing assemblies in the GAC.
+
+{{< /div-block >}}
 
 ### Step 4: Start the code coverage profiler
 

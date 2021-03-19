@@ -103,6 +103,8 @@ a bunch of products and patches, then you're pretty much stuck with the "wasted"
 disk space -- unless you use something like MSIZAP to clean up the Installer
 files.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare
@@ -123,6 +125,8 @@ files.
 > command-line parameter) and search around a little for the expected file. Once
 > I located the version it needed, SQL Server Setup continued on its way and
 > completed successfully.
+
+{{< /div-block >}}
 
 Note that I don't set MaxPatchCacheSize to 0 on physical machines (although I
 thought about it recently when setting up my laptop with a new 80GB SSD drive).

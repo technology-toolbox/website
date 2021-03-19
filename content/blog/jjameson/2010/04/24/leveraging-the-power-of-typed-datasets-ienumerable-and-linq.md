@@ -492,6 +492,8 @@ separate method:
         }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You might have chosen to use LINQ instead of the `foreach` loop to verify the
@@ -499,6 +501,8 @@ separate method:
 > you account for scenarios such as when the KPI names specified by the
 > scorecard items differ only by case, or when the list of scorecard items is
 > empty.
+
+{{< /div-block >}}
 
 The original version of the **GetScorecardDetailTable** then simply needs to
 filter the scorecard items based on the specified KPI name (which is really easy
@@ -534,6 +538,8 @@ overload of the method (shown above):
         }
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Note that by replacing the original approach of filtering the scorecard items
@@ -544,6 +550,8 @@ overload of the method (shown above):
 > using the original DataView approach, a similar mistake would not be caught at
 > compile-time (because the column name is embedded in the RowFilter string
 > value).
+
+{{< /div-block >}}
 
 Let's wrap this up with a few key points:
 

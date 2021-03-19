@@ -163,6 +163,8 @@ Remove-Item "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage.zip"
 PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > This script uses the
@@ -170,3 +172,5 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 > file. If you can't or don't want to install PSCX, refer to my previous post
 > for a way to create a zip file using out-of-the-box PowerShell and some
 > scriptable COM objects from the Windows Shell.
+
+{{< /div-block >}}

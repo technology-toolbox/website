@@ -88,11 +88,15 @@ markup goes a long way in terms of prototyping the user experience. In the next
 two sections, I'll show you how this also helps expedite the process of
 converting from static HTML to ASP.NET controls and adding field validators.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Although not shown in the sample HTML above, there are times when it might be
 > helpful to prototype "alternate flow" scenarios as well -- for example, to
 > demonstrate the user experience when a required field is not specified.
+
+{{< /div-block >}}
 
 ### Step 2: From static HTML to ASP.NET
 
@@ -284,6 +288,8 @@ Depending on the size of your organization, you may be able to simply email the
 contact request to one or more individuals and be done with it. This is the way
 the feature currently works on TechnologyToolbox.com.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Sending the contact request via SMTP isn't as "bulletproof" as, say, writing
@@ -298,6 +304,8 @@ the feature currently works on TechnologyToolbox.com.
 > "[Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)"
 > feature -- complete with "routing" rules on the backend to send the request to
 > the appropriate people.
+
+{{< /div-block >}}
 
 To implement the basic functionality for sending the email from
 TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to

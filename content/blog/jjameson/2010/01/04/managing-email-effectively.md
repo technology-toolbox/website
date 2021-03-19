@@ -81,6 +81,8 @@ subsequently split the archive into multiple files.]
 I configure rules within Outlook to "preprocess" messages sent either directly
 to me or to DLs that I belong to.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > The reason for using DL folders under the **Inbox** folder -- instead of
@@ -91,6 +93,8 @@ to me or to DLs that I belong to.
 > available). While that alternate approach might work for some people, anyone
 > with a smartphone configured to receive email will quickly find it to be
 > rather useless.
+
+{{< /div-block >}}
 
 I just inspected my email rules in Outlook and found that I am now up to 32
 rules. Note that most of these rules follow the same basic structure:

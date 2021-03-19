@@ -54,6 +54,8 @@ reported in the Subtext error log for TechnologyToolbox.com are due to malicious
 people trying to hack the site (e.g. "Could not decrypt the authentication
 cookie.") which I generally consider to just be "noise."
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Sometimes it is important to investigate the attempts to hack your site, but
@@ -61,6 +63,8 @@ cookie.") which I generally consider to just be "noise."
 > you typically have to chock these up to a fact of life when hosting a site on
 > the Internet. Make sure the code you write is secure, and don't be suprised
 > when you see evidence that hackers are trying to find ways to torment you.
+
+{{< /div-block >}}
 
 The errors below are not listed in the order in which they occurred (or fixed).
 Rather, the list is loosely ordered by the frequency of occurence and severity
@@ -260,6 +264,8 @@ configuration without editing the file directly). However, it was a simple
 workaround to a rather annoying error -- allowing me to redirect my efforts
 elsewhere.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Since the Googlebot will likely have added "bad" CAPTCHA images to its index
@@ -271,6 +277,8 @@ elsewhere.
 >
 > In my case, these errors stopped occurring around the middle of December (and
 > I switched to a fixed key and IV in early October).
+
+{{< /div-block >}}
 
 **Recommendation:** Implement the fix described above and then be patient.
 
@@ -605,6 +613,8 @@ fix this bug, I changed it to the following:
         }
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > There are a few other places in the Subtext solution where the
@@ -612,6 +622,8 @@ fix this bug, I changed it to the following:
 > be updated as well to avoid issues when running in **Medium** trust). However,
 > at present, I haven't bothered to change those (since I am trying to minimize
 > the number of changes that I make to my Subtext branch).
+
+{{< /div-block >}}
 
 ### System.Web.HttpException: The file '/blog/jjameson/Services/Pingback.aspx' does not exist.
 
@@ -661,12 +673,16 @@ bourbon across state lines. Well, I'm sure we can figure something out.]
 Ah yes, the dreaded **NullReferenceException**. A surefire indicator of
 insufficient "boundary checking" somewhere in the code.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In case you are new to .NET development, you should never experience a
 > **NullReferenceException**. **ArgumentNullException**? Yes, those are "good"
 > (sort of)...a **NullReferenceException** is definitely indicative of "bad"
 > code.
+
+{{< /div-block >}}
 
 Honestly, this one hasn't occurred very often (only 16 times to date) -- and 10
 of these occurred back-to-back over a period of 14 seconds back on December
@@ -769,10 +785,14 @@ Looks like more pathetic hacking attempts.
 **Recommendation:** Consider configuring a filter in ELMAH to weed out the
 hacking "noise."
 
+{{< div-block "note update" >}}
+
 > **Update (2012-02-28)**
 >
 > Refer to the following post for more information on configuring ELMAH filters:
 > {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
+
+{{< /div-block >}}
 
 ### System.Web.HttpException: A public action method 'RecordAggregatorView' could not be found...
 

@@ -99,11 +99,15 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 11. In the **Solution Explorer** window, right-click the project, and then click
     **Set as StartUp Project**.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In addition to seeing the **Web** tab in project settings, you will also find
 > that adding items like ASPX pages and ASCX controls is much easier after
 > "Web-enabing" your project.
+
+{{< /div-block >}}
 
 To ensure ASP.NET debugging is enabled on the Web site [note these instructions
 are for Windows Server 2008]:

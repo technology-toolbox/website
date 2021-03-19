@@ -104,8 +104,12 @@ of log messages on a daily basis). While you can certainly *try* opening a
 copy of [LtfViewr4U](http://search.live.com/results.aspx?q=LtfViewr4U) in my
 Toolbox for just such an occasion.
 
+{{< div-block "note update" >}}
+
 > **Update (2009-06-02)**
 >
 > As noted in the comments, this issue appears to be fixed in the
 > [April 2009 Cumulative Update](http://support.microsoft.com/kb/968850) for
 > Windows SharePoint Services.
+
+{{< /div-block >}}

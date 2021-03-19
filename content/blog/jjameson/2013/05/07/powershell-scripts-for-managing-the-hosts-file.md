@@ -20,6 +20,8 @@ I also created a set of scripts to automate the process of managing hosts files.
 You may have noticed the Add-Hostnames.ps1 script in my
 [sample solution for an extranet site based on SharePoint Server 2010](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In the Fabrikam Extranet solution, the "Create Web Application.ps1" script
@@ -32,6 +34,8 @@ You may have noticed the Add-Hostnames.ps1 script in my
 > they can simply run the "Rebuild Web Application.ps1" script and not have to
 > worry about manually performing the steps in section 4.9 (DEV – Map Web
 > application to loopback address in Hosts file).
+
+{{< /div-block >}}
 
 The following illustrates these scripts in action:
 
@@ -79,11 +83,15 @@ www-local.technologytoolbox.com                             127.0.0.1
 www-local.tugboatcoffee.com                                 127.0.0.1
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You can download these scripts from my Toolbox repository on GitHub:
 >
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
+
+{{< /div-block >}}
 
 ### Get-Hostnames.ps1
 

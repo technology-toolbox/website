@@ -126,12 +126,16 @@ simple "GROUP BY DATEPART(YEAR, DateSyndicated)" T-SQL query with a
 [correlated subquery](http://en.wikipedia.org/wiki/Correlated_subquery) (to
 group by month and count the number of rows for each month).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If you are working with LINQ these days, and you haven't already discovered
 > [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It
 > makes it much quicker to iteratively build LINQ queries like the one shown
 > above.
+
+{{< /div-block >}}
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
@@ -280,6 +284,8 @@ The **GetMonthName** method is, as expected, rather trivial:
         }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > As I've noted before, there are some assumptions in this code that I currently
@@ -292,6 +298,8 @@ The **GetMonthName** method is, as expected, rather trivial:
 > the actual LINQ query, but I couldn't find one. Keep in mind that the results
 > need to be ordered chronologically in reverse order (for example, for each
 > year the "November" results need to come before "January" results).
+
+{{< /div-block >}}
 
 At this point, the control is nearly identical to the feature on my old MSDN
 blog (which is to say that it serves the basic purpose, but it consumes too much

@@ -377,6 +377,8 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > When doing TDD, we typically want to work in very small increments (i.e. get
@@ -384,6 +386,8 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 > case, it makes sense to add a couple more failing unit tests (as well as
 > another class) because our goal is to implement the **Encrypt** and
 > **Decrypt** methods with as little work (i.e. custom code) as possible.
+
+{{< /div-block >}}
 
 Next, copy/paste the **EncryptionService** class (i.e. EncryptionService.cs) to
 create the **InternalEncryptionService** class and make the necessary changes to
@@ -500,6 +504,8 @@ f51c80ce404188643aa17a1378eff241ed01a36b3d64c127334a0ba4eec58f95f3606e73e10305\
 With the **InternalsVisibleToAttribute** specifed, the solution builds and we
 now have four failing unit tests (instead of just the two that we had before).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If you tend to run your unit tests in Visual Studio using the **Test List
@@ -509,6 +515,8 @@ now have four failing unit tests (instead of just the two that we had before).
 > consider adding this column to the **Test Results** window. [Personally, I
 > find the **Full Class Name** column to be much more valuable than the
 > **Project** column that gets added by default.]
+
+{{< /div-block >}}
 
 Now let's focus on getting the two unit tests for the
 **InternalEncryptionService** class to pass.
@@ -865,12 +873,16 @@ optional in the methods on the **InternalEncryptionService** class as well? If
 no, then we'll need to update the old unit tests to pass in `null` for the
 `entropy` parameter.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Whenever you are changing existing unit tests (for the purposes of refactoring
 > or other reasons), be careful not to mistakenly change the intent of the unit
 > test -- unless, of course, the unit test fails because of an *expected* change
 > in behavior of the underlying code.
+
+{{< /div-block >}}
 
 Given the length of this post, I'll leave the rest of the work on the encryption
 service as an exercise for the reader ;-)

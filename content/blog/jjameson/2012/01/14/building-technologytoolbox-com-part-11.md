@@ -35,12 +35,16 @@ Posts** section, you'll notice the CSS `background` property is set to:
 url("Images/list-item-sprite-1.0.png") no-repeat scroll -200px -137px
 transparent
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You could also use the IE Developer Tools to inspect the element in order to
 > view the corresponding CSS rule, but I prefer the experience in Firebug
 > instead (since, unlike IE, Firebug actually shows you the image in a tooltip
 > when you hover over the URL in the CSS rule).
+
+{{< /div-block >}}
 
 The "list item sprite" image is actually a 400x400 composite of multiple icons
 used throughout the site.
@@ -102,6 +106,8 @@ Aaron Barker explains more about this technique in the following blog post:
 {{< reference title="Diagonal CSS Sprites"
 linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Not all of the CSS sprites used on the Technology Toolbox site use the
@@ -110,6 +116,8 @@ linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 > heading in Figure 1) are rendered using a 22x40 sprite. In this case, there's
 > no need to avoid potential issues due to a variable height of the element the
 > CSS rule applies to.
+
+{{< /div-block >}}
 
 ### Why is there all that white space between the icons?
 

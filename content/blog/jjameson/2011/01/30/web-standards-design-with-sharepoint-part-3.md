@@ -105,6 +105,8 @@ Second, the default page layout does not expose either of the Summary Links
 fields defined on the **Welcome Page** content type. Consequently, a Web Part
 (i.e. "News") is used to render the links at the bottom of the page.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You should always try to use the Summary Links fields (from the underlying
@@ -112,6 +114,8 @@ fields defined on the **Welcome Page** content type. Consequently, a Web Part
 > this provides the ability to track the changes to the links over time. (In
 > other words, changes to Web Part properties are not shown in the **Version
 > History** for a page, whereas changes to a Summary Links field are shown.)
+
+{{< /div-block >}}
 
 To mitigate these issues, I chose to tweak the default content for the home page
 (to replace the **Page Content** with semantic HTML -- while still preserving
@@ -147,11 +151,15 @@ To deploy the Fabrikam Demo to SharePoint:
    set FABRIKAM_INTRANET_URL=http://fabweb-local
    ```
    
+   {{< div-block "note" >}}
+   
    > **Note**
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
+   
+   {{< /div-block >}}
 
 3. Set environment variables to specify the credentials to use for the Fabrikam application pool:
    
@@ -160,9 +168,13 @@ To deploy the Fabrikam Demo to SharePoint:
    set FABRIKAM_APP_POOL_PASSWORD={password}
    ```
    
+   {{< div-block "note important" >}}
+   
    > **Important**
    > 
    > Be sure to specify a valid local or domain user.
+   
+   {{< /div-block >}}
 
 4. Change to the folder containing the deployment scripts:
    
@@ -206,8 +218,12 @@ content.)
 You are now ready to browse to the Fabrikam intranet site and review the master
 page and page layouts leveraging the 960 Grid System.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > Once you have the site running in your environment, click **Sample Link 1**
 > and **Sample Link 2** on the home page to view a couple of test pages that are
 > created to demonstrate other custom page layouts.
+
+{{< /div-block >}}

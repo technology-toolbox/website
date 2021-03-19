@@ -84,11 +84,15 @@ project. Consequently, I elected to use the branching model that provided the
 most flexibility (but also the one that requires more work to merge changes from
 the QFE branch eventually back to Main).
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Going forward, I'm going to switch from the "Advanced Branch Plan" to the
 > "Standard Branch Plan" (since -- at least for this particular project -- we
 > don't need both a **ServicePack** branch as well as a **QFE** branch).
+
+{{< /div-block >}}
 
 Note that build 2.0.371.0 is the version that has been approved for this
 release. When branching code for a release, I always branch from **Main** using
@@ -112,6 +116,8 @@ logical steps:
 3. Changing the "Service Pack" branch to increment the Revision portion of the
    assembly number instead of the Build (e.g. 2.0.371.1).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > If you are using the "Advanced Branch Plan" (as I was before), then branching
@@ -119,6 +125,8 @@ logical steps:
 > branch "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you
 > would increment the Revision portion of the assembly number on the "QFE"
 > branch instead of the "Service Pack" branch.
+
+{{< /div-block >}}
 
 To create a new "Service Pack" branch from the "Main" branch:
 
@@ -149,6 +157,8 @@ To create a new "Service Pack" branch from the "Main" branch:
       Code Analysis Policy requires files to be check in through Visual Studio
       with an open solution.")
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > If it really bothers you to override check-in policy failures like the one
@@ -156,6 +166,8 @@ To create a new "Service Pack" branch from the "Main" branch:
 > check in the changes through Visual Studio with the solution open. However, at
 > least in my mind, this isn't worth the extra time it requires when simply
 > branching the code for a release.
+
+{{< /div-block >}}
 
 To create the "RTM" branch from the new "Service Pack" branch:
 
@@ -223,6 +235,8 @@ earlier post for
       Code Analysis Policy requires files to be check in through Visual Studio
       with an open solution.")
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > Even though it probably seems silly to many people, I always compare my
@@ -230,3 +244,5 @@ earlier post for
 > making trivial changes like the one described above. It doesn't take but a few
 > seconds, and it helps ensure I don't accidentally check in some unexpected
 > changes.
+
+{{< /div-block >}}

@@ -70,6 +70,8 @@ branch, it applied to all files in the solution -- including the source code,
 setup files, and automated tests. This ensures that the installation and tests
 could be repeated for any particular build.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > While VSS certainly provided the ability to retrieve a project based on a
@@ -85,6 +87,8 @@ could be repeated for any particular build.
 > system you are using, build labels provide an easy way to identify and
 > retrieve important builds (such as **Beta 1**, **Beta 2**, **RC1**, and
 > **v1.0**) or simply specific versions of the solution (e.g. 1.0.57.0).
+
+{{< /div-block >}}
 
 ### Source Code
 
@@ -135,16 +139,23 @@ responsibility of the developer who checks in the code to ensure that the
 solution builds and all files that are needed to build the solution are checked
 in.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > The source control must not be left in a broken state at any time. If a build
 > breaks, resolving the problem becomes the highest priority.
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Tip**
 >
 > You can use the **Builds** check-in policy for TFS to ensure the solution
 > compiles before a developer is allowed to check-in a changeset.
 
+{{< /div-block >}}
 Each member of the Development team is responsible for ensuring the following:
 
 - Check-ins must not break functionality in the solution. If a developer checks
@@ -171,11 +182,15 @@ Each member of the Development team is responsible for ensuring the following:
   agreement with the rest of the Development team to disable certain tests until
   they can be fixed (which should be a rare occurrence).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > You can use the **Testing Policy** check-in policy for TFS to ensure that
 > specific unit tests pass before a developer is allowed to check-in a
 > changeset.
+
+{{< /div-block >}}
 
 If any of the above conditions cannot be met, the code should not be checked
 into source control.
@@ -276,9 +291,13 @@ investigating the problems with the solution and where to look for logs, events,
 etc. in the system. It should also capture patterns that have been seen in the
 solution that point toward a particular fault in the system.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > A SharePoint site -- or even just a simple SharePoint list -- provides an
 > excellent alternative to a Troubleshooting Guide document. Think of this site
 > --or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)" for
 > your solution.
+
+{{< /div-block >}}

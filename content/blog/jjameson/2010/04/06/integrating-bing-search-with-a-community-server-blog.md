@@ -35,6 +35,8 @@ Community Server search functionality with Bing search. If you click the
 use that search page, you get results from all MSDN blogs even though you may
 want to see the results from, say, just my blog.
 
+{{< div-block "note" >}}
+
 > **Update (2009-04-20)**
 >
 > After
@@ -45,6 +47,8 @@ want to see the results from, say, just my blog.
 > (with a much nicer user experience, I might add). Consequently I removed my
 > custom search box. Apparently, I should have abandoned the default CS template
 > a long time ago ;-)
+
+{{< /div-block >}}
 
 After digging around a little in the
 [Bing Developer Center](http://www.bing.com/developers), I found some
@@ -186,6 +190,8 @@ page, change the value of the **siteUrl** variable accordingly, and then click
 **Save**. Then you -- or anyone browsing your blog -- will be able to search
 your posts without having to specify a site filter each time.
 
+{{< div-block "note" >}}
+
 > **Update**
 >
 > Right after I published this post, I discovered that Bing does not preserve
@@ -199,3 +205,5 @@ your posts without having to specify a site filter each time.
 >
 > To resolve this issue, I modified the JavaScript to simply append the site
 > filter to the "q" query string parameter instead.
+
+{{< /div-block >}}

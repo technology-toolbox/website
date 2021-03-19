@@ -71,6 +71,8 @@ caption="Service accounts related to Search in SharePoint Server 2010" >}}
 
 {{< /table >}}
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > For each service account listed in the table above, corresponding "-dev" and
@@ -78,6 +80,8 @@ caption="Service accounts related to Search in SharePoint Server 2010" >}}
 > environments. This allows the Development and Test teams to install and
 > configure their environments without knowing the passwords for the Production
 > environment.
+
+{{< /div-block >}}
 
 Note that the following script is based on my fictitious Fabrikam sample
 solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to

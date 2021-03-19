@@ -197,6 +197,8 @@ adding a section to the **Description** field name named **Related Items** and
 then insert hyperlinks to other items. The primary reason for this is to avoid
 the performance impact as the number of work items grows large.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > There appears to be a bug in WSS v3 (and MOSS 2007) where the Web Parts on the
@@ -207,6 +209,10 @@ the performance impact as the number of work items grows large.
 > and group by settings revert to the default values. Fortunately it only takes
 > a few minutes to workaround this bug.
 
+{{< /div-block >}}
+
+{{< div-block "note update" >}}
+
 > **Update (2008-04-08)**
 >
 > The issue noted below by Dragan has been corrected. The fix is described in
@@ -215,3 +221,5 @@ the performance impact as the number of work items grows large.
 > use in the project dashboard view are only available in MOSS 2007.
 > Consequently you will need to substitute your own images (or simply revert to
 > displaying the status as text).
+
+{{< /div-block >}}

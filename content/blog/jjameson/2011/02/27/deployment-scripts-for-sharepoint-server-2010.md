@@ -480,9 +480,13 @@ necessary -- but please don't do this. It's just plain wrong.]
 
 The following script ensures the custom event source is registered.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > This script must be run on each SharePoint server in the farm.
+
+{{< /div-block >}}
 
 ```
 $ErrorActionPreference = "Stop"
@@ -622,10 +626,14 @@ function Main()
 Main
 ```
 
+{{< div-block "note update" >}}
+
 > **Update (2011-03-02)**
 >
 > I modified the original script above to ensure it works with TFS builds as
 > well as "desktop" builds (i.e. built from within Visual Studio).
+
+{{< /div-block >}}
 
 The optional `-Debug` parameter for this script makes it easy to debug the new
 PowerShell instance (without requiring you to temporarily specify
@@ -1447,10 +1455,14 @@ function Main(
 Main $force
 ```
 
+{{< div-block "note update" >}}
+
 > **Update (2011-03-02)**
 >
 > I modified the original script above to ensure it works with TFS builds as
 > well as "desktop" builds (i.e. built from within Visual Studio).
+
+{{< /div-block >}}
 
 ### Delete Web Application.ps1
 
@@ -1505,6 +1517,8 @@ the solution, and then run the scripts described above in the following order:
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm
 able to rebuild my development environment in a matter of minutes.
 
+{{< div-block "note warning" >}}
+
 > **Warning**
 >
 > If, like me, you decide to use Hyper-V snapshots in your SharePoint
@@ -1514,3 +1528,5 @@ able to rebuild my development environment in a matter of minutes.
 > snapshot before reverting to the earlier point in time. In other words, I
 > treat my SharePoint development VM as "volatile" -- or "disposable" (if you
 > prefer that term instead).]
+
+{{< /div-block >}}

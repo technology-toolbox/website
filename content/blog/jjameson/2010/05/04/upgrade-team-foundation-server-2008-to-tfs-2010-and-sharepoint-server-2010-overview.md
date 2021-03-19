@@ -76,6 +76,8 @@ Server as much as possible in your Production environment. This makes it much
 easier to monitor and troubleshoot the environment, as well as scale the
 solution over time as your needs grow.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > This recommendation really applies to most products that depend on SQL Server
@@ -89,6 +91,8 @@ solution over time as your needs grow.
 > recommendation covers running SharePoint Server 2010 on the same server --
 > since the SharePoint team states
 > [a minimum of 8 GB of RAM for any production deployment of their latest version](http://technet.microsoft.com/en-us/library/cc262485%28office.14%29.aspx).
+
+{{< /div-block >}}
 
 As I've mentioned before, in the "Jameson Datacenter", BEAST is my "Production"
 SQL Server instance, while CYCLOPS is the corresponding TFS server.
@@ -150,6 +154,8 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server
 Here's something I didn't see mentioned anywhere in the TFS installation
 guide...
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to
@@ -160,6 +166,8 @@ guide...
 >
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
+
+{{< /div-block >}}
 
 ### Upgrading Team Foundation Build
 

@@ -156,6 +156,8 @@ appropriate database roles.
    - **aspnet\_Roles\_BasicAccess**
    - **aspnet\_Roles\_ReportingAccess**
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Database access must be granted to both the service account used for the
@@ -163,6 +165,10 @@ appropriate database roles.
 > farm account does not have access to the database, the Security Token Service
 > used for claims-based authentication will be unable to validate the
 > credentials.
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Note**
 >
@@ -172,6 +178,8 @@ appropriate database roles.
 > application service account needs additional permissions in order to support
 > other scenarios for the Fabrikam site (e.g. "Change Password" and "Reset
 > Password").
+
+{{< /div-block >}}
 
 ### Step 2 - Create the Fabrikam Web application and initial site collection
 
@@ -362,23 +370,29 @@ necessary to modify the Web.config files for the following sites:
    application, and then click the plus sign next to **Sites** to view the Web
    applications that have been created.
 
-3. Right-click **SharePoint Central Administration v4**, and then click
-   **Explore**. Windows Explorer opens, with the directories for the selected
-   Web application listed.
+3. Right-click **SharePoint Central Administration v4**, and then click **Explore**. Windows Explorer opens, with the directories for the selected Web application listed.
+   
+   {{< div-block "note important" >}}
    
    > **Important**
    > 
    > Before you make changes to the Web.config file, make a copy of it by using
    > a different name (for example, "Web - Copy.config"), so that if a mistake
    > is made in the file, you can delete it and use the original file.
+   
+   {{< /div-block >}}
 
 4. Double-click the **Web.config** file to open the file.
+   
+   {{< div-block "note" >}}
    
    > **Note**
    > 
    > If you see a dialog box that says that Windows cannot open the file, click
    > **Select the program from a list**, and then click **OK**. In the **Open
    > With** dialog box, click **Notepad**, and then click **OK**.
+   
+   {{< /div-block >}}
 
 5. In the Web.config editor:
    
@@ -391,10 +405,14 @@ necessary to modify the Web.config files for the following sites:
         </connectionStrings>
       ```
       
+      {{< div-block "note important" >}}
+      
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
+      
+      {{< /div-block >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -457,10 +475,14 @@ necessary to modify the Web.config files for the following sites:
    </system.web>
    ```
    
+   {{< div-block "note important" >}}
+   
    > **Important**
    > 
    > Be sure to replace the **{databaseServer}** placeholder in the connection
    > string with the name of the database server.
+   
+   {{< /div-block >}}
 
 4. Save the changes to the Web.config file and close the editor.
 
@@ -480,10 +502,14 @@ necessary to modify the Web.config files for the following sites:
         </connectionStrings>
       ```
       
+      {{< div-block "note important" >}}
+      
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
+      
+      {{< /div-block >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -494,9 +520,13 @@ necessary to modify the Web.config files for the following sites:
         connectionStringName="FabrikamDemo" />
       ```
       
+      {{< div-block "note warning" >}}
+      
       > **Warning**
       > 
       > Do not overwrite any existing entries in this Web.config file.
+      
+      {{< /div-block >}}
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
@@ -559,11 +589,15 @@ both Forms-Based Authentication and Windows authentication.
 
 1. Add the Fabrikam Web site to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
    
+   {{< div-block "note" >}}
+   
    > **Note**
    > 
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
+   
+   {{< /div-block >}}
 
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.

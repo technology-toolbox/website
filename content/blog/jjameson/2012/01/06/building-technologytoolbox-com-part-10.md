@@ -147,6 +147,8 @@ list (`<ol>`) as the basis for the **Most Popular Posts** section:
 </div>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Based on the appearance of the list items shown in Figure 1, you might think
@@ -156,6 +158,8 @@ list (`<ol>`) as the basis for the **Most Popular Posts** section:
 > I'll cover that detail in a separate post. Rest assured, if you look at the
 > page "naked" (i.e. with CSS disabled), you will see the list of popular posts
 > with the corresponding rankings (i.e. 1-10).
+
+{{< /div-block >}}
 
 As noted in my previous post, I typically define the semantic markup for a
 feature using
@@ -192,10 +196,14 @@ a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 </div>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl`
 > method came from (or what it does).
+
+{{< /div-block >}}
 
 In the corresponding code-behind for the user control, I added code to retrieve
 the top 10 most popular posts and bind the results to the **Repeater** control:

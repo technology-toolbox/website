@@ -206,6 +206,8 @@ I'm essentially just following the original implementation in
 **HtmlEditorInternal** except that I don't rely on SPContext.Current and instead
 use the specified SPWeb parameter to access the **Reusable Content** list.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Also note that, unlike the original **HtmlEditorInternal** implementation, I
@@ -213,6 +215,8 @@ use the specified SPWeb parameter to access the **Reusable Content** list.
 > Consequently, you should be wary of using this implementation in very high
 > volume scenarios. For the purposes of my current project, performance has
 > proved to be more than adequate.
+
+{{< /div-block >}}
 
 I should point out, however, that I still prefer to use the out-of-the-box
 SharePoint code whenever possible, which is why I provide a wrapper method in
@@ -330,9 +334,13 @@ If this unit test ever starts failing, I'll know there's a good chance that I
 can scrap my custom code and go with the out-of-the-box SharePoint code instead
 ;-)
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You must be running Visual Studio 2010 Service Pack 1 in order to run my
 > SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like
 > the one I described in a
 > [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
+
+{{< /div-block >}}

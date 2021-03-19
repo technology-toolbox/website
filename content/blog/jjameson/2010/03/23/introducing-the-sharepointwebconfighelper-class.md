@@ -381,6 +381,8 @@ following:
 title="Alirezaei, Reza (2008). SPWebConfigModification's Top 6 Issues. 2008-01-05."
 linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 
+{{< div-block "note" >}}
+
 > **Update 2010-03-31**
 >
 > I enhanced the original version of **SharePointWebConfigHelper** to
@@ -388,3 +390,5 @@ linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 > in the **ApplyWebConfigModifications** method. If you don't want or need this
 > fix, you can remove the reference to
 > **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
+
+{{< /div-block >}}

@@ -134,9 +134,13 @@ deployment, then you can just GAC the updated assemblies, recycle your
 application pool, and you are off to the races -- or at least you will be once
 your SharePoint site has warmed up again!
 
+{{< div-block "note update" >}}
+
 > **Note**
 >
 > Refer to the following blog post for more details on the "DR.DADA" approach to
 > SharePoint development:
 >
 > {{< reference title="Sample Walkthrough of the DR.DADA Approach to SharePoint" linkHref="/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint" linkText="http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx" >}}
+
+{{< /div-block >}}

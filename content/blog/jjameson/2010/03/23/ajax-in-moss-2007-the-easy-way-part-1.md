@@ -204,6 +204,8 @@ cd ..\..\Web\DeploymentFiles\Scripts
 "Activate Features.cmd"
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > There is a bug in several of the out-of-the-box master pages in MOSS 2007
@@ -220,6 +222,8 @@ cd ..\..\Web\DeploymentFiles\Scripts
 > Yvan Duhamel has more detail in
 > [his post about this issue](http://blogs.msdn.com/yvan_duhamel/archive/2009/05/19/ajax-postbacks-not-working-with-any-masterpage-other-than-default-master.aspx),
 > if you are interested.
+
+{{< /div-block >}}
 
 The following screenshot shows what the site looks like after creating the Web
 application, fixing the master page, and adding the sample Web Part. Note that

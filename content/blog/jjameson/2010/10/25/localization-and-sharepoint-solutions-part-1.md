@@ -115,7 +115,11 @@ Therefore *most* of the localization infrastructure is provided for us
 out-of-the-box. As I mentioned before, I'll cover what isn't provided in a
 separate post.
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-04)**
 >
 > [Part 2 in this series](/blog/jjameson/2011/04/04/localization-and-sharepoint-solutions-part-2-a-k-a-the-currentuicultureswitcher-class)
 > is now available.
+
+{{< /div-block >}}

@@ -195,6 +195,8 @@ port across various environments -- LOCAL, DEV, TEST, and PROD). I was even more
 pleased to see SharePoint Central Administration come up on my pristine Windows
 Server 2008 VM.
 
+{{< div-block "note update" >}}
+
 > **Update (2008-01-19)**
 >
 > Note that after aliasing my local VM name to the loopback address (127.0.0.1),
@@ -206,3 +208,5 @@ Server 2008 VM.
 > > to this content, or add a crawl rule to crawl this content. (The item was
 > > deleted because it was either not found or the crawler was denied access to
 > > it.)
+
+{{< /div-block >}}

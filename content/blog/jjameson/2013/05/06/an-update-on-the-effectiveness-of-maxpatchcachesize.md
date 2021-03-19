@@ -73,6 +73,8 @@ All I'm asking for is to make the installation caches configurable. In other
 words, something like the MaxPatchCacheSize registry setting -- except something
 that actually works as intended ;-)
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The development VM that I captured the above screenshot from has the following
@@ -96,3 +98,5 @@ that actually works as intended ;-)
 > [TFS Integration](http://visualstudiogallery.msdn.microsoft.com/eb77e739-c98c-4e36-9ead-fa115b27fefe)
 > tool (which I use to synchronize my local TFS team projects with my clients'
 > TFS instances).
+
+{{< /div-block >}}

@@ -34,12 +34,16 @@ title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > At some point since I created my Build and Deployment slide in PowerPoint
 > years ago, I started naming the folder **\_latest** instead of **Latest** (so
 > that, by default, it appears above all of the version folders in Windows
 > Explorer).
+
+{{< /div-block >}}
 
 The **\_latest** folder greatly simplifies the automated deployment process by:
 

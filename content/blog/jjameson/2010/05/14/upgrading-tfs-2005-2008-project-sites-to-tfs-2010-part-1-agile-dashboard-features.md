@@ -68,6 +68,8 @@ command:
 </Project>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > You must run the **File.BatchNewTeamProject** command directly on the
@@ -80,6 +82,8 @@ command:
 > (i.e. the `<ProjectSiteWebApplication>` element). Apparently, this command
 > ultimately invokes the SharePoint object model and therefore cannot find the
 > SharePoint Web application if you try to run it remotely.
+
+{{< /div-block >}}
 
 After running the command on the TFS/SharePoint Server with the above input
 file, I noticed that it didn't run for very long (i.e. the word "Ready" appeared
@@ -203,6 +207,8 @@ Enable-SPFeature "TfsDashboardAgileMoss" -Url "http://cyclops/sites/AdventureWor
 After the feature finished activating, I once again browsed to my project site
 -- and this time was quite happy to find the dashboards had been created.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Even though the dashboards have been created, you still have some work to do
@@ -213,6 +219,8 @@ After the feature finished activating, I once again browsed to my project site
 > updated accordingly.
 >
 > I'll cover these configuration changes in a separate post.
+
+{{< /div-block >}}
 
 Note that when you create a new project site in TFS 2010 using the MSF Agile v5
 template, the Burndown dashboard is set as the default page for the site.

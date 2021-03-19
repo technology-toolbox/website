@@ -213,6 +213,8 @@ I use an unordered list to display the post metadata (`<ul class="post-info">`).
 The corresponding list items then specify the various `class` attributes
 according to the hAtom schema (e.g. `<li class="published">`).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > At this point, I have deliberately deviated from the
@@ -224,6 +226,8 @@ according to the hAtom schema (e.g. `<li class="published">`).
 >
 > Instead, I chose to use a simpler format based on the
 > [Value Class Pattern](http://microformats.org/wiki/value-class-pattern).
+
+{{< /div-block >}}
 
 The post summaries are rendered as paragraphs inside `<div class="entry-summary">` elements.
 
@@ -321,6 +325,8 @@ The "trick" to formatting the same HTML differently when viewing individual blog
 posts (for example, to show the time portion of the publication date) is to
 specify a different "container" element than the blog home page (e.g. `<div id="blogPost">` instead of `<div id="blogHome">`).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > I like to specify unique "container" elements like this for all pages in a Web
@@ -329,6 +335,8 @@ specify a different "container" element than the blog home page (e.g. `<div id="
 > when you need to tweak the formatting of some element on a particular page (or
 > set of pages). If each ASP.NET file specifies a unique "container" element,
 > customizing the formatting for specific pages is very easy.
+
+{{< /div-block >}}
 
 ### Resist the urge to change your HTML
 

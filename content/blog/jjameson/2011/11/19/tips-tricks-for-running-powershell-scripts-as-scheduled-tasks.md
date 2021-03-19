@@ -128,6 +128,8 @@ Write-Host "Success"
 Stop-Transcript
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In order to avoid issues when running the script interactively from a
@@ -135,6 +137,8 @@ Stop-Transcript
 > occurs (i.e. by using **Trap**). Otherwise, if an error occurs while running
 > the script from a PowerShell prompt, the transcript file remains open and you
 > need to type {{< kbd "Stop-Transcript" >}} to close it.
+
+{{< /div-block >}}
 
 Running the scheduled task now produces the following in the Temp.log file (as
 viewed in Notepad):
@@ -254,6 +258,8 @@ are written to the log file as well as the normal output. This is a trick I
 covered in
 [a previous blog post](/blog/jjameson/2009/03/27/redirecting-stderr-to-stdout).
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Depending on the content of the PowerShell script, you may encounter issues
@@ -265,6 +271,8 @@ covered in
 > {{< reference title="Workaround: The OS handle's position is not what FileStream expected" linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
 >
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
+
+{{< /div-block >}}
 
 The properties for the corresponding scheduled task are as follows:
 

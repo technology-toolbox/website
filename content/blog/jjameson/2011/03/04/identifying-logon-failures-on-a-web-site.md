@@ -50,6 +50,8 @@ These scripts are based on a sample I found in the
 for querying the event log. You should be able to easily modify them to search
 for other events (and subsequently parse data from).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > While I originally created these scripts for a solution based on MOSS 2007,
@@ -58,12 +60,18 @@ for other events (and subsequently parse data from).
 > [my Fabrikam Demo site based on SharePoint Server 2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)
 > and configured with claims-based authentication.
 
+{{< /div-block >}}
+
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > You should obviously apply discretion when deciding when (and how often) to
 > run these scripts against a Production envionment. With a little bit of
 > effort, however, you could modify the scripts to work against saved event logs
 > copied to another environment for analysis.
+
+{{< /div-block >}}
 
 ### ListLogonFailureEventsForServer.vbs
 

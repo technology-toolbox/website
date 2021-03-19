@@ -19,11 +19,15 @@ In case you haven't read the
 [introductory post for this series](/blog/jjameson/2011/10/18/introducing-technologytoolbox-com),
 here is an overview of the CAPTCHA feature detailed in this post.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Although not illustrated in the screenshots below, the custom CAPTCHA control
 > is also used on the Subtext blog pages to prevent bots from adding comments to
 > blog posts. I'll explain why this is important in a moment.
+
+{{< /div-block >}}
 
 ### Overview
 
@@ -296,6 +300,8 @@ someone could crack open the cookie and subsequently craft a hack to submit spam
 using a "spoofed" cookie. To mitigate this risk (ever so slightly), I actually
 store a "super-secret" hash of the expected value in the cookie.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The reason I put the words "super-secret" in quotes is because someone could
@@ -309,6 +315,8 @@ store a "super-secret" hash of the expected value in the cookie.
 > that even if you saw the code, you wouldn't be able to spoof a valid cookie
 > because you wouldn't know the encryption key), but -- well, to be honest, that
 > simply didn't occur to me until just this moment.
+
+{{< /div-block >}}
 
 I also encountered some issues when using the CAPTCHA control on a page where
 view state is disabled and an **UpdatePanel** is used to perform a partial page
@@ -392,10 +400,14 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 </div>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I've kept the comments in the code block above to help readers understand a
 > couple of the more subtle details of the implementation.
+
+{{< /div-block >}}
 
 #### Captcha.ascx.cs
 

@@ -44,9 +44,13 @@ made my head hurt (in one of those morning after New Year's Eve sort of ways):
 {{< reference title="The assembly strong naming conundrum"
 linkHref="http://nuget.codeplex.com/discussions/247827" >}}
 
+{{< div-block "note warning" >}}
+
 > **Warning**
 >
 > Click the link above at your own peril.
+
+{{< /div-block >}}
 
 Since Microsoft recommends signing assemblies as a best practice (there's even
 an FxCop rule for it), I've been signing .NET assemblies for as long as I can

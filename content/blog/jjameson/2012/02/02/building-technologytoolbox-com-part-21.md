@@ -223,12 +223,16 @@ Google's CSS file and adding the following rules to a CSS file for this website:
 }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I commented out a number of CSS rules (copied from Google's CSS file) because
 > I could not find instances in the HTML returned by Google where these are
 > used. This may depend on which features of Google Site Search you choose to
 > implement.
+
+{{< /div-block >}}
 
 Figure 3 shows the corresponding results.
 
@@ -413,6 +417,8 @@ After some refactoring, I ended up with an ASP.NET control that encapsulates the
 scripts used for Google Site Search and also contains logic to conditionally
 specify the analytics key.
 
+{{< div-block "note update" >}}
+
 > **Update (2011-02-20)**
 >
 > The code below originally specified "http://www.google.com/jsapi" which
@@ -420,6 +426,8 @@ specify the analytics key.
 > this to use a
 > [protocol-relative URL](/blog/jjameson/2012/02/20/use-protocol-relative-urls-to-avoid-mixed-mode-content)
 > instead ("//www.google.com/jsapi").
+
+{{< /div-block >}}
 
 ```
 using System;

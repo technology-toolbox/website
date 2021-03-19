@@ -180,11 +180,15 @@ and refine your HTML/CSS using a tool like Microsoft Expression Web, rather than
 trying to do the same on a "live" SharePoint site (i.e. your local development
 VM) using SharePoint Designer.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > I typically check the prototype in on the Dev branch (e.g.
 > $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not
 > technically part of the solution.
+
+{{< /div-block >}}
 
 The next task was to create the master page for the Tugboat site. I started with
 the minimal master page provided on MSDN and then applied some of the changes
@@ -481,11 +485,15 @@ To deploy the Tugboat sample site to SharePoint:
    set TUGBOAT_URL=http://tugboatcoffee-local
    ```
    
+   {{< div-block "note" >}}
+   
    > **Note**
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
+   
+   {{< /div-block >}}
 
 3. Set environment variables to specify the credentials to use for the Tugboat application pool:
    
@@ -494,9 +502,13 @@ To deploy the Tugboat sample site to SharePoint:
    set TUGBOAT_APP_POOL_PASSWORD={password}
    ```
    
+   {{< div-block "note important" >}}
+   
    > **Important**
    > 
    > Be sure to specify a valid local or domain user.
+   
+   {{< /div-block >}}
 
 4. Change to the folder containing the deployment scripts:
    

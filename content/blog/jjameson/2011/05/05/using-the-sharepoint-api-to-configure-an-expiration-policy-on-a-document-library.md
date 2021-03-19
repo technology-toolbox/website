@@ -88,6 +88,8 @@ library, then it it ignored (because the policy may have been modified by an
 administrator -- for example, to increase the time period used to determine
 which files to delete).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > As shown in the HACK comment above, I fetch a new **SPList** object in order
@@ -99,6 +101,8 @@ which files to delete).
 > This error occurred in Microsoft Office SharePoint Server (MOSS) 2007 --
 > although I just ran a quick test in SharePoint 2010 and it looks like this may
 > no longer be an issue in the new version.
+
+{{< /div-block >}}
 
 In my next post, I'll explain more about storing files temporarily in
 SharePoint.

@@ -526,7 +526,11 @@ necessarily adding a bunch or try/catch blocks, while still avoiding the
 out-of-the-box SharePoint error page (which doesn't look very good on an
 Internet-facing site).
 
+{{< div-block "note update" >}}
+
 > **Update (2011-01-31)**
 >
 > I've attached a sample Visual Studio solution that demonstrates the **Logger**
 > class.
+
+{{< /div-block >}}

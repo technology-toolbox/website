@@ -119,10 +119,14 @@ automatically installed into the DEV environment -- thus providing visibility to
 all team members on the progress of development. This is particularly useful for
 the Test team (in order to create test cases).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The daily build provides a "heartbeat" of the development effort that can be
 > monitored regularly by all team members -- not just the Development team.
+
+{{< /div-block >}}
 
 As this cycle repeats (as more features are implemented in the solution), the
 Test team -- in conjunction with the Development team -- identifies a specific

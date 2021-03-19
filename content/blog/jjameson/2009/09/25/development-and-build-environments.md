@@ -39,6 +39,8 @@ Since it is assumed that members of the Development team already have individual
 workstations or laptops, I typically refer to the abbreviated "DEV-TEST-PROD"
 triad when referencing the various environments.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > For very large development efforts, there may be multiple physical
@@ -48,6 +50,8 @@ triad when referencing the various environments.
 > project. PROD might also refer to multiple physical locations (i.e. for
 > disaster recovery) and depending on release schedules, an additional
 > Maintenance Environment (MAINT) might also be necessary.
+
+{{< /div-block >}}
 
 In addition to describing each environment, this post includes descriptions of
 the additional servers that are necessary to support the development process.
@@ -65,10 +69,14 @@ environment have all the applications required for the solution and all the
 tools required for building and debugging the solution, as well as the standard
 tools that are needed on the project (such as Microsoft Office).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Developers must have administrative privileges on their own local environments
 > in order to facilitate development and debugging.
+
+{{< /div-block >}}
 
 Most of the functionality for the solution should be able to run in a LOCAL
 environment. This allows the team members to work independently on their areas
@@ -98,6 +106,8 @@ build of the complete solution can be evaluated, including all of the various
 pieces contributed by various members of the Development team. DEV should have
 all the applications used in the solution and the tools to debug them.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > This environment is owned by the Development team. All members of the
@@ -105,6 +115,8 @@ all the applications used in the solution and the tools to debug them.
 > team) have administrative privileges in the DEV environment. Having
 > administrative privileges allows developers to easily debug and reconfigure
 > the environment.
+
+{{< /div-block >}}
 
 After the Build Server finishes compiling the source code, the solution is
 installed on the DEV environment. This is the first location where the
@@ -114,6 +126,8 @@ the basic functionality of the solution works.
 The DEV environment is important for catching problems early on. Any project
 stakeholder, not just members of the Development team, can use the DEV
 environment to evaluate the progress of the solution.
+
+{{< div-block "note important" >}}
 
 > **Important**
 >
@@ -129,6 +143,8 @@ environment to evaluate the progress of the solution.
 > reduce the time required to investigate the issue by avoiding concurrent
 > activities).
 
+{{< /div-block >}}
+
 ### Build Server
 
 The Build Server compiles all the code in the solution and creates the
@@ -141,11 +157,15 @@ state to perform the builds.
 All official builds that are distributed to be tested must be built on the Build
 Server.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Depending on the size of the organization and sophistication of the automated
 > build process, a subset of the Development team may need administrative
 > privileges on this server.
+
+{{< /div-block >}}
 
 ### Source Control Server
 
@@ -160,10 +180,14 @@ Backups should be scheduled at least once daily to ensure that the files can be
 recovered in the event of a failure. Backups should be kept in a separate
 location to ensure they can be recovered in case of hardware failure.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The Development team has limited read-write privileges on this server (i.e.
 > the minimum required for the source control system to function properly).
+
+{{< /div-block >}}
 
 ### Release Server
 
@@ -181,14 +205,20 @@ In addition to the folders corresponding to each build, there is a folder named
 **Latest** that always contains the most recent successful build. This
 simplifies the process of installing the solution to the DEV environment.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > All team members should have read-only access to the Builds share. Only the
 > service account used for the build process should have read-write access to
 > the Builds share.
 
+{{< /div-block >}}
+
 The shared folder on the Release Server should be protected by ACLs to ensure
 that only members of the solution team can access the shares.
+
+{{< div-block "note important" >}}
 
 > **Important**
 >
@@ -198,6 +228,8 @@ that only members of the solution team can access the shares.
 > the Test and Release Management teams. In other words, the **Latest** folder
 > should only be used for automated installs into the DEV environment -- it
 > should not be used for installations in the TEST or PROD environments.
+
+{{< /div-block >}}
 
 ### Test Environment (TEST)
 
@@ -215,6 +247,8 @@ differences between TEST and PROD are only regarding true fault tolerance (and
 not scale), then performance testing in TEST should accurately predict the
 performance of PROD.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > This environment is owned by the Test team. No member of the Development team
@@ -222,6 +256,8 @@ performance of PROD.
 > Members of the Test team should have the additional privileges necessary to
 > install the solution and assist the Development team with debugging issues in
 > the TEST environment.
+
+{{< /div-block >}}
 
 Typically, testers create their test cases and initially regress defects using
 the DEV environment, however the formal validation of each test case must be
@@ -237,7 +273,11 @@ Test team selects a successful build to promote to TEST.
 The Production environment is where the solution is ultimately deployed for end
 users. Strict security procedures must be enforced in this environment.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Only the Release Management team should have privileges in PROD above those of
 > the end users of the solution.
+
+{{< /div-block >}}

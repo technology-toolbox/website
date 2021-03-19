@@ -27,6 +27,8 @@ the Agilent Technologies project involved localizing just the pages accessed by
 customers -- whereas "administration" pages, such as **Site Settings**, were
 kept in English due to requirements from the support team.]
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I believe the SharePoint product team expects you to install language packs
@@ -42,6 +44,8 @@ kept in English due to requirements from the support team.]
 > sites) is that some items referenced by the SharePoint pages (e.g. CSS files)
 > do not get added to the Style Library. However, you can simply upload these
 > files yourself to workaround the issue.
+
+{{< /div-block >}}
 
 One of the first things you'll discover when deploying custom code to a
 SharePoint environment that has language packs installed is whether or not your

@@ -257,6 +257,8 @@ the page content with the desired Web Part:
         }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The embedded CSS styles shown in the default page content above (e.g. margins,
@@ -264,6 +266,8 @@ the page content with the desired Web Part:
 > would have preferred to use something like the 960 Grid System instead, I was
 > trying to minimize complexity in the original sample for the Claims Login Form
 > Web Part.
+
+{{< /div-block >}}
 
 Note that the **ReplacePlaceholderWithLoginWebPart** method simply checks to see
 if the Web Part placeholder is found in the page content and, if it is,

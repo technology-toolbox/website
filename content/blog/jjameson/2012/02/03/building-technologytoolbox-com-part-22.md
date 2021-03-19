@@ -140,12 +140,16 @@ element was wrapped in a `<span>` element. Oops.
 To resolve this, I changed the class to inherit from **Control** (rather than
 **WebControl**) and renamed the **RenderContents** method to **Render**.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I've used other techniques in the past to eliminate extraneous markup --
 > specifically overriding the **RenderBeginTag** and **RenderEndTag** methods.
 > In a followup post I will explain why I used a different approach for this
 > scenario.
+
+{{< /div-block >}}
 
 At this point, the script rendered as expected -- provided I remembered to
 change the **EnableAnalytics** setting in Web.config to **True** (i.e. for
@@ -227,6 +231,8 @@ Even though the data captured from the development and test environments was
 very small -- and thus would not skew the "real" data over time -- I was still a
 little concerned with this "junk" data being included in the analytics reports.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > While researching how other people handled this issue with development and
@@ -239,6 +245,8 @@ little concerned with this "junk" data being included in the analytics reports.
 > I experimented with that approach a little but quickly dismissed it due to the
 > enormous effort this would require to customize each of the default reports
 > provided by Google.
+
+{{< /div-block >}}
 
 That is when it occurred to me that rather than using a single tracking code for
 all environments, I could just as easily use different codes for each

@@ -34,6 +34,8 @@ for providing my recommendation to the client (Securitas).
 Rather than attaching the Excel worksheet to this post, I'll simply copy the
 content into a table.
 
+{{< div-block "note warning" >}}
+
 > **Warning - Internet Explorer Users**
 >
 > While publishing this post, I discovered the following table looks really ugly
@@ -47,6 +49,8 @@ content into a table.
 > bug in IE, I've got more important things to do this morning. If you are using
 > IE and you find the following table difficult to read, may I suggest using a
 > ~~better~~ different browser (e.g. Firefox)?
+
+{{< /div-block >}}
 
 {{< table class="small" caption="HTML-to-PDF Converters" >}}
 
@@ -63,11 +67,15 @@ content into a table.
 
 {{< /table >}}
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The pricing shown above has likely changed in the time since I gathered the
 > data, and there may very well be additional products available today that I
 > did not come across during my research.
+
+{{< /div-block >}}
 
 My intent for this post is not to provide an exhaustive list of the current
 options for converting HTML to PDF. Rather I simply wanted to share the

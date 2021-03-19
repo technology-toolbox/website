@@ -90,11 +90,17 @@ Rather than granting the Local Activation permission to each of these service
 accounts individually, it is much more effective to just grant the permission to
 the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > When creating a new Web application, SharePoint automatically adds the
 > corresponding service account to the local WSS\_WPG group on each SharePoint
 > server in your farm.
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Update (2009-10-29)**
 >
@@ -113,6 +119,10 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > are.
 >
 > Thanks, Matt, for pointing out my omission.
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Update (2010-05-03)**
 >
@@ -145,3 +155,5 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >
 > Now that the Administrators group has sufficient permissions, follow the steps
 > in KB 920783 to make the changes to the IIS WAMREG Admin Service.
+
+{{< /div-block >}}

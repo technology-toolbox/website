@@ -75,6 +75,8 @@ Toolbar. However, it's much too early to say whether you'll be able to pry
 [Firefox and its various add-ons](/blog/jjameson/2008/10/20/fessing-up-about-firefox)
 out of my toolbox ;-)
 
+{{< div-block "note update" >}}
+
 > **Update (2009-03-25)**
 >
 > Yesterday I forgot to mention another vastly improved feature in IE8.
@@ -95,3 +97,5 @@ out of my toolbox ;-)
 > dialog altogether and instead integrating this feature into the main window.
 > You can now quickly use {{< kbd "CTRL+F" >}} repeatedly to search for
 > different terms on a page. IE8 even has "hit highlighting" similar to Firefox.
+
+{{< /div-block >}}

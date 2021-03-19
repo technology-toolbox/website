@@ -60,6 +60,8 @@ It turns out the problem is caused by the Microsoft Office Live Add-in 1.3. Once
 you remove the add-in, close all instances of Internet Explorer, and restart IE,
 the seamless redirect works as expected.
 
+{{< div-block "note" >}}
+
 > **Update (2010-01-15)**
 >
 > This is a known bug:
@@ -89,3 +91,5 @@ the seamless redirect works as expected.
 >
 > However, even with just the WSS portion of the June 2009 CU, I am no longer
 > seeing the error when browsing to my local VM from my laptop.
+
+{{< /div-block >}}

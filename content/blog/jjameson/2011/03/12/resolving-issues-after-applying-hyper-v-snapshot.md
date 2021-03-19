@@ -70,9 +70,13 @@ domain:
    
    {{< console-block-end >}}
    
+   {{< div-block "note" >}}
+   
    > **Note**
    > 
    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
+   
+   {{< /div-block >}}
 
 3. Logout and log back in using a domain account.
 

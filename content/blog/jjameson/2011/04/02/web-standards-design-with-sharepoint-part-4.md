@@ -457,12 +457,16 @@ ManageSubwebs, ManageWeb, ViewUsageData ">
       ...
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > I originally specified `ViewFormPages` in the list of permissions, but
 > discovered anonymous users have this permission by default in SharePoint 2010.
 > I swear this wasn't the case in MOSS 2007 (due to the "form lockdown"
 > feature).
+
+{{< /div-block >}}
 
 With this approach, the ribbon renders as expected for both anonymous users
 (Figure 10) and authenticated users (Figure 12).
@@ -573,11 +577,15 @@ div.more-btn a:link, div.more-btn a:visited {
 }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I originally attempted to fix the "bold ribbon links" bug by qualifying on the
 > `<div id="wrap"> ` element but then realized I couldn't easily fix the color
 > of the "News Archives" button.
+
+{{< /div-block >}}
 
 The only other tweak that I made to the Tugboat master page was to move the page
 status bar above the masthead. In my opinion, this provides a better user
@@ -633,11 +641,15 @@ described below.
    & '.\Activate Features.ps1'
    ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.
+
+{{< /div-block >}}
 
 At this point you should be able to modify your hosts file accordingly and
 browse to either

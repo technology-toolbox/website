@@ -354,18 +354,20 @@ PowerShell scripts, as described below.
    to create and configure the **FabrikamDemo** database (i.e. the ASP.NET
    membership/role database).
 
-3. Complete the procedures detailed in **Step 5**from my previous post to add
-   the Web.config modifications for claims-based authentication to the following
-   sites:
+3. Complete the procedures detailed in **Step 5**from my previous post to add the Web.config modifications for claims-based authentication to the following sites:
    
    - **SharePoint Central Administration v4**
    - **Security Token Service**
+   
+   {{< div-block "note" >}}
    
    > **Note**
    > 
    > You do not need to manually add the Web.config modifications for the
    > "Fabrikam" Web application because this is done automatically upon
    > activation of a feature (Fabrikam Demo - Web Application Configuration).
+   
+   {{< /div-block >}}
 
 4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
@@ -390,9 +392,13 @@ At this point you should be able to browse to the Fabrikam site and click the
 login, you'll need to first add a user to the **FabrikamDemo** database (refer
 to **Step 6** in my previous post for instructions on how to do this).
 
+{{< div-block "note update" >}}
+
 > **Update (2011-02-26)**
 >
 > There was a bug in the original version of the code sample when logging in as
 > an FBA user over HTTPS (while attempting to determine the membership and role
 > providers from the IIS settings). This has been fixed in the updated
 > attachment.
+
+{{< /div-block >}}

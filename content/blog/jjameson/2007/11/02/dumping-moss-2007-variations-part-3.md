@@ -51,12 +51,16 @@ in a QFE (and, I believe, is scheduled to be included in MOSS 2007 Service Pack
 obtained earlier through the normal QFE process. However, we never pursued
 obtaining the patch and installing it in our environment.
 
+{{< div-block "note update" >}}
+
 > **Update (2007-11-28)**
 >
 > According to a
 > [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx)
 > by Stefan Goßner, only part of this bug is fixed in SP1. You'll need a
 > post-SP1 QFE to completely resolve the out-of-memory issue.
+
+{{< /div-block >}}
 
 As I have mentioned before, the decision to abandon variations was not an easy
 one to make and it is not possible to point to one particular problem as the

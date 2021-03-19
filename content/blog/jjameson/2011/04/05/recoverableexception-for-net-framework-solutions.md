@@ -191,9 +191,13 @@ configured for the user) and **Exception** for other errors (for example, when
 attempting to retrieve the list of sites from the remote application generates
 an unexpected error).
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > A more elegant way of handling errors during asynchronous postbacks is to use
 > the
 > **[ScriptManager.AsyncPostBackError](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.asyncpostbackerror.aspx)**
 > event. I'll cover that in a separate post.
+
+{{< /div-block >}}

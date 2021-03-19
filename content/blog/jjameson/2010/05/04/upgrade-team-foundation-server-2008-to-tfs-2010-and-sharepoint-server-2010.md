@@ -245,10 +245,14 @@ Complete the deployment procedures in the following sections:
 2. Run Setup
 3. Run the SharePoint Products Configuration Wizard
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Do not run the Farm Configuration Wizard (the TFS Web application and service
 > applications will be configured in the following steps).
+
+{{< /div-block >}}
 
 #### Add SharePoint Central Administration to the Local intranet zone
 
@@ -373,20 +377,28 @@ To fix the TaxonomyPicker.ascx file:
 
 {{< /deleted-block >}}
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-14)**
 >
 > The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010.
 > Instead of trying to fix the assembly name, just rename the file (since it
 > apparently isn't used by SharePoint).
 
+{{< /div-block >}}
+
 ### Rename TaxonomyPicker.ascx
 
 In order to avoid errors in the Windows event log (e.g. Source: SharePoint
 Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > This task must be completed on each SharePoint server in the farm.
+
+{{< /div-block >}}
 
 To rename the TaxonomyPicker.ascx file:
 
@@ -397,10 +409,14 @@ To rename the TaxonomyPicker.ascx file:
 2. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
    filename to **TaxonomyPicker.ascx\_broken**.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Changing the file extension causes the problematic file to be skipped by
 > ASP.NET when compiling the controls in the folder.
+
+{{< /div-block >}}
 
 ### Install SQL Server 2008 Reporting Services
 
@@ -700,12 +716,16 @@ To reset the home page for a TFS project site:
    **Reset all pages in this site to site definition version**, and then click
    **Reset**.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If you need to do this for a number of sites, you should consider using
 > PowerShell instead, as described in the following blog post:
 >
 > {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
+
+{{< /div-block >}}
 
 To remove obolete links from the top link bar of a TFS project site:
 
@@ -780,11 +800,15 @@ title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-987x1332.png)
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > To significantly improve the appearance of the upgraded TFS project home page,
 > edit the **Remaining Work** Web Part and set the **Height** to **600 pixels**
 > and the **Width** to **900 pixels**.
+
+{{< /div-block >}}
 
 For more information on updating a team project, refer to the following MSDN
 article:
@@ -832,6 +856,8 @@ content databases. ~~On the database server:~~
 
 {{< /deleted-block >}}
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-14)**
 >
 > ```
@@ -841,6 +867,8 @@ content databases. ~~On the database server:~~
 >
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
+
+{{< /div-block >}}
 
 #### Configure enterprise application definition for TFS dashboards
 
@@ -857,6 +885,8 @@ or Visual Studio 2010. If you want to be able to create new team projects (or
 browse existing projects) directly from the TFS application server, install Team
 Explorer 2010.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to
@@ -867,6 +897,8 @@ Explorer 2010.
 >
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
+
+{{< /div-block >}}
 
 ### Connect to TFS
 
@@ -885,11 +917,15 @@ To verify the TFS upgrade, create a new team project in TFS (for example, a new
 project named **Test**) using the **MSF for Agile Software Development v5.0**
 process template.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In order to create a new team project (with the default project options) using
 > Team Explorer on a server that hosts SharePoint Server 2010 and SQL Server
 > Reporting Services, you need to run Visual Studio as an administrator.
+
+{{< /div-block >}}
 
 For more information on creating a new TFS project, refer to the following:
 

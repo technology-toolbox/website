@@ -20,11 +20,15 @@ attachment:
   fileSizeInBytes: 21334
 ---
 
+{{< div-block "note update" >}}
+
 > **Update (2010-12-03)**
 >
 > If you are using gated check-ins, be sure to also read my follow-up post:
 >
 > {{< reference title="Bypassing a Gated Check-in in TFS 2010" linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" linkText="http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx" >}}
+
+{{< /div-block >}}
 
 Earlier this year, I wrote a
 [post](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build)

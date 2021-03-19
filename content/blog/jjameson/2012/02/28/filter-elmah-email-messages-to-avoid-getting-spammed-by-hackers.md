@@ -35,6 +35,8 @@ automatically move these messages out of my inbox, I was tired of seeing these
 messages altogether. So this past weekend, I decided to add a filter to ELMAH to
 avoid sending messages when an error occurs as a result of a known hack attempt.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > TechnologyToolbox.com is configured to log errors to both email and SQL
@@ -42,6 +44,8 @@ avoid sending messages when an error occurs as a result of a known hack attempt.
 > example, to keep tabs on the frequency of hack attempts). However I'm okay
 > with not getting notified via email whenever, for example, someone attempts to
 > hack the ASP.NET view state.
+
+{{< /div-block >}}
 
 It turned out to be a very educational experience for me because I ended up
 diving into the ELMAH source code in order to investigate some issues. I even

@@ -34,6 +34,8 @@ I quickly discovered the following in the "Troubleshootize" page on the
 Consequently I "pinged" my blog hoping this would miraculously make my feed show
 the latest blog post.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > I had to specify my "Feed Address" (i.e.
@@ -50,6 +52,8 @@ the latest blog post.
 > start with `"FeedBurner"` (refer to the `RedirectToFeedBurnerIfNecessary()`
 > method in `BaseSyndicationHandler` if you are using Subtext and you aren't
 > sure what I'm talking about here).
+
+{{< /div-block >}}
 
 Unfortunately, after waiting a few minutes, "Part 4" was still nowhere to be
 found (except, of course, by browsing directly to my blog).

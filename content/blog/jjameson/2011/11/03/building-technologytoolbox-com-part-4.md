@@ -474,12 +474,16 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 </asp:Content>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The `color-swatch` CSS rules at the top of Style-Guide.aspx are not kept in
 > the "main" cascading style sheet since these rules are applicable only to the
 > Style Guide itself. Also note that the default master page (specified in the
 > Web.config file) defines the `<link>` element that references the CSS file.
+
+{{< /div-block >}}
 
 Figure 1 shows the corresponding page rendered in the browser. [Note: This is
 not intended to be an eye chart. Normally, I would trim images like this before

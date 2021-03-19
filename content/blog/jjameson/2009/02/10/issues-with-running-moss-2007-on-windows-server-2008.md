@@ -106,6 +106,8 @@ expected -- which obviously made me think it was related to the browser
 This might very well be documented somewhere on TechNet, but at this point I am
 not aware of it. If I discover it later, I'll update this post.
 
+{{< div-block "note update" >}}
+
 > **Update (2009-03-12)**
 >
 > Also note the following blurb from my
@@ -122,9 +124,15 @@ not aware of it. If I discover it later, I'll update this post.
 > > deleted because it was either not found or the crawler was denied access to
 > > it.)
 
+{{< /div-block >}}
+
+{{< div-block "note update" >}}
+
 > **Update (2009-04-01)**
 >
 > Also see my post describing the issue where the
 > [**Temporary ASP.NET Files folder** is not being cleaned up](/blog/jjameson/2009/04/01/temporary-asp-net-files-are-not-deleted)
 > on my Windows Server 2008 development VM. I don't recall ever encountering
 > this problem before when using Windows Server 2003.
+
+{{< /div-block >}}

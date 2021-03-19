@@ -69,12 +69,16 @@ Note that this implementation has some specifics to Team Foundation Server, but
 I imagine you could tweak this fairly easily if you are using some other
 configuration management system and build process.
 
+{{< div-block "note update" >}}
+
 > **Update (2010-11-29)**
 >
 > This post was originally created for TFS 2005/2008. Refer to the following if
 > you are using TFS 2010:
 >
 > {{< reference title="Incrementing the Assembly Version for Each Build in TFS 2010" linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
+
+{{< /div-block >}}
 
 Unfortunately, there's no out-of-the-box task in the current version of MSBuild
 that increments an assembly version. However, you can write your own with just a
@@ -122,6 +126,8 @@ the assembly version files and subsequently check them back in:
   </PropertyGroup>
 ```
 
+{{< div-block "note" >}}
+
 > **Update (2010-05-05)**
 >
 > Note that the path to the TFS command-line utility
@@ -135,6 +141,8 @@ the assembly version files and subsequently check them back in:
 >     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
 >   </PropertyGroup>
 > ```
+
+{{< /div-block >}}
 
 One of the things that I've struggled with in the past is that "Desktop Builds"
 and "Team Builds" behave quite differently in certain areas. For example, when

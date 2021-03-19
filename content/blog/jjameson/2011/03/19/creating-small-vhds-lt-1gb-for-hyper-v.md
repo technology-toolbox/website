@@ -81,6 +81,8 @@ $vhdService.CreateDynamicVirtualHardDisk(
 
 Thanks, Taylor, for sharing this useful PowerShell script.
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-14)**
 >
 > Depending on the specific service applications that you need to configure in
@@ -93,6 +95,8 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 >
 > Instead of the 200 MB I originally thought that I could get away with, I now
 > use 500 MB. So far, I haven't encountered any issues with this increased size.
+
+{{< /div-block >}}
 
 Note that you'll probably need to change the permissions on the new VHD in order
 to avoid an "Access Denied" error message after attaching the VHD to a VM:

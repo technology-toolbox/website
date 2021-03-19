@@ -440,10 +440,14 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
   </system.diagnostics>
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Notice that I use an `EventTypeFilter` to avoid writing debug (a.k.a.
 > "verbose") messages to the event log.
+
+{{< /div-block >}}
 
 With the **EventLogTraceListener** configured, as soon as I browse to my site
 and trigger the unhandled exception, I'm presented with the OOTB SharePoint
@@ -1250,6 +1254,8 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 
 {{< console-block-end >}}
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > There's a known bug with the **SPWebConfigModification** class not removing
@@ -1262,6 +1268,8 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
 >
 > {{< console-block-end >}}
+
+{{< /div-block >}}
 
 Here is the class that implements the custom StsAdm.exe commands:
 

@@ -87,10 +87,14 @@ Application trusted location.
 Use the following procedure to change the default trusted location to support
 HTTPS.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Skip this section for environments that are not configured with SSL
 > certificates (e.g. development environments).
+
+{{< /div-block >}}
 
 #### To configure the Excel Services Application trusted location for HTTPS instead of HTTP:
 
@@ -108,20 +112,20 @@ HTTPS.
    default trusted file location (**http://**) to edit the corresponding
    settings.
 
-5. On the **Excel Services Application Edit Trusted File Location** page, in the
-   **Location** section, change the **Address** from **http://** to **https://**
-   and then click **OK**.
+5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
+   
+   {{< div-block "note" >}}
    
    > **Note**
    > 
    > Since users of the Fabrikam extranet site are automatically redirected from
    > http:// to https:// during sign in (via the
-   
-   [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
-   
+   > [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
    > it is not expected that Excel Services will be used over HTTP (only HTTPS).
    > If it is necessary to support both HTTP and HTTPS, then a separate trusted
    > file location will need to be configured.
+   
+   {{< /div-block >}}
 
 ### Configure the Office Web Apps cache
 
@@ -135,6 +139,8 @@ database(s) for the Web application. Also note that anytime you create a new
 SharePoint content database, it is recommended to expand the initial database
 files (at least in a production environment).
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > You must start a new instance of the SharePoint 2010 Management Shell after
@@ -146,6 +152,8 @@ files (at least in a production environment).
 > Apps or rebuilding the Web application) before performing the following
 > procedure (for the SharePoint timer job to configure the cache on the site
 > collection before moving it to a separate content database).
+
+{{< /div-block >}}
 
 The following procedures are used to reduce the Office Web Apps cache size to 30
 GB, move the cache to a new content database, and expand the corresponding

@@ -21,10 +21,14 @@ attachment:
   fileSizeInBytes: 230157
 ---
 
+{{< div-block "note update" >}}
+
 > **Update (2008-04-07)**
 >
 > ["TFS Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now
 > available.
+
+{{< /div-block >}}
 
 For almost as long as I can remember (okay, not really that long -- but at least
 as far back as 2003), I've been using SharePoint lists as a bug tracking tool on
@@ -114,10 +118,14 @@ For example, the **Area** field has been added to associate a work item with
 different areas of the solution. Similarly, the **Iteration** field has been
 added to group work items into different phases of the project.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The **Area** and **Iteration** fields should be customized for each project to
 > reflect the major work effort areas (e.g. features) and milestones.
+
+{{< /div-block >}}
 
 In addition to modifying the columns in the default Issues list, the Work Items
 list also supports several additional views (similar to the queries provided in

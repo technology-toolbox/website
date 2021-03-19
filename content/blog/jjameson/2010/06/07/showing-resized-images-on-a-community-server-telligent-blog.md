@@ -72,6 +72,8 @@ size. For example, "/\_\_size/500x0" produces similar results in the above
 example (in other words, the height is automatically calculated in order to
 preserve the aspect ratio of the image).
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > There appears to be a bug in Telligent Evolution 5.5 when the filename for the
@@ -82,3 +84,5 @@ preserve the aspect ratio of the image).
 > Fortunately if you rename the image to remove the parentheses (and
 > subsequently upload the renamed file), then the image resizer works as
 > expected.
+
+{{< /div-block >}}

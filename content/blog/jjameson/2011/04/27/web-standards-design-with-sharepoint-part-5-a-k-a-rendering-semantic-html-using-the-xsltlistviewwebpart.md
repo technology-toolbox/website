@@ -115,6 +115,8 @@ Here's a breakdown of the custom SharePoint list:
   - **Created By** (Person or Group)
   - **Modified By** (Person or Group)
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Even though the **Unit Price** column is defined using the **Currency** type
@@ -122,6 +124,10 @@ Here's a breakdown of the custom SharePoint list:
 > must specify the **DOLLAR** function in the formula for the calculated column.
 > Otherwise, the values in the **Price** column would not appear as expected
 > (e.g. "12.5 / lb.").
+
+{{< /div-block >}}
+
+{{< div-block "note" >}}
 
 > **Note**
 >
@@ -131,6 +137,8 @@ Here's a breakdown of the custom SharePoint list:
 > Specials" or "This Month's Specials"). By simply naming the list "Specials",
 > we can avoid tightly coupling the implementation to the current business
 > rules.
+
+{{< /div-block >}}
 
 Assuming you are proficient in SharePoint, within a matter of a few minutes you
 should be able to create the list and populate the sample data shown in the
@@ -229,12 +237,16 @@ item is represented as a row:
 </dsQueryResponse>
 ```
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > To view the "raw" XML document, insert the
 > [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform)
 > into the **&lt;xsl&gt;** element of the **XsltListViewWebPart**, save the
 > page, and then browse to the page in Internet Explorer.
+
+{{< /div-block >}}
 
 At this point, I recommend using Visual Studio to create two files (e.g.
 Specials.xml and Specials.xslt) for development purposes. Paste the data that
@@ -467,8 +479,12 @@ easy to fix -- thanks to the power of SharePoint.
 
 Stay tuned...
 
+{{< div-block "note update" >}}
+
 > **Update (2011-05-02)**
 >
 > The
 > [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6)
 > is now available.
+
+{{< /div-block >}}

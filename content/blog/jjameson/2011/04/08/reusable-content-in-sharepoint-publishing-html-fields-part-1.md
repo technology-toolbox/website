@@ -97,6 +97,8 @@ title="Figure 4: Page with missing content (due to \"Pending\" status in Reusabl
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-1006x353.png)
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > By default, the **Reusable Content** list is configured for content approval.
@@ -104,6 +106,8 @@ title="Figure 4: Page with missing content (due to \"Pending\" status in Reusabl
 > site), the **Approval Status** defaults to **Pending**. In order for users
 > with limited access to see the content as expected, a published version of the
 > **Reusable Content** list item must be available.
+
+{{< /div-block >}}
 
 Note that this post was primarily intended to introduce a scenario for using the
 reusable content feature in SharePoint.

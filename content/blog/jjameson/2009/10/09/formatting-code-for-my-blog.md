@@ -135,6 +135,8 @@ Note that -- at least to this point -- I haven't made any attempt to generate
 class names), because I think it would be somewhat brittle (i.e. dependent on
 the default color options in Visual Studio) and, honestly, not worth the effort.
 
+{{< div-block "note" >}}
+
 > **Update (2010-04-27)**
 >
 > After upgrading to Visual Studio 2010, I discovered that "\par" tags in the
@@ -143,6 +145,8 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 > Consequently I updated the code below to work with Visual Studio 2010 (similar
 > to the changes described in
 > [David's updated post from last December](http://blogs.msdn.com/delay/archive/2009/12/20/blogging-code-samples-stays-easy-update-to-free-convertclipboardrtftohtmltext-tool-and-source-code-for-visual-studio-2010.aspx)).
+
+{{< /div-block >}}
 
 Here's the updated code that I now use for my Rtf2Html.exe utility:
 

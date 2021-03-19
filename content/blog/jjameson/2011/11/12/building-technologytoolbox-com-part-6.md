@@ -49,12 +49,16 @@ supported by the new platform (Subtext). Conceptually, this is very similar to
 how I used the "PRIME" API a few years ago on the Agilent project to import
 content into SharePoint.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > If your new platform supports some kind of import functionality, then much of
 > the "heavy lifting" involved in migrating content has already been done. You
 > just need to figure out how to export content from the source system into the
 > "schema" expected by the import feature of the destination system.
+
+{{< /div-block >}}
 
 Here is the overall approach I used to migrate my content from Telligent to
 Subtext:
@@ -184,6 +188,8 @@ won't automatically create any necessary folders):
         }
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > When migrating content from one system to another, I strive to minimize the
@@ -199,6 +205,8 @@ won't automatically create any necessary folders):
 > environment for validation and verification purposes. The final content
 > migration is subsequently performed against the PROD environment one time only
 > (ideally).
+
+{{< /div-block >}}
 
 ### Step 2: Create a new BlogML document
 
@@ -376,6 +384,8 @@ to the BlogML document.
 </div>
 ```
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > Parsing with the Html Agility Pack works very well when the source HTML is
@@ -383,6 +393,8 @@ to the BlogML document.
 > the structure is very consistent. Handcrafted HTML, on the other hand, would
 > likely prove very difficult -- or downright impossible -- to parse in a
 > reliable manner.
+
+{{< /div-block >}}
 
 ### Step 4: Download each blog post and parse the HTML
 
@@ -804,6 +816,8 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
     }
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > This is probably a good place to stop and point out an essential concept when
@@ -829,6 +843,8 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 > If this utility was something I expected to be maintained going forward, I
 > would have spent more time trying to figure out why I couldn't get the Html
 > Agility Pack to fix the malformed HTML.
+
+{{< /div-block >}}
 
 #### Migrating tags and categories
 
@@ -979,6 +995,8 @@ mapping, illustrated below:
 
 {{< /table >}}
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Since posts tagged with **PowerShell** or **SQL Server** could fall into
@@ -986,6 +1004,8 @@ mapping, illustrated below:
 > **Infrastructure** or **Development**), I decided not to use these tags for
 > mapping (and instead rely on categories being derived from other tags on the
 > same post).
+
+{{< /div-block >}}
 
 This mapping is implemented in the **MapTagToCategory** method, which is called
 from the **FillPostCategories** method:
@@ -1069,6 +1089,8 @@ from the **FillPostCategories** method:
         }
 ```
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > Depending on the complexity of your taxonomy, you may need a more robust
@@ -1078,6 +1100,8 @@ from the **FillPostCategories** method:
 > were subsequently "scrubbed" by one of the Agilent team members and then
 > loaded into SharePoint lists that served as "dynamic lookup tables" during the
 > content migration process.
+
+{{< /div-block >}}
 
 ### Step 5: Export the comments for each post
 
@@ -1305,17 +1329,25 @@ request and pasted them into the code. Once I had a valid response being
 returned from Telligent, I wrote the code to decompress it (since the response
 is GZIP'ed) and parse the comments.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > You can easily inspect/copy HTTP requests and responses using Fiddler, the
 > **Network** tab in the Internet Explorer 9 developer tools, or with Firefox
 > and the Firebug add-on.
 
+{{< /div-block >}}
+
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > The cookie shown in the code above is only valid for a limited time.
 > Consequently I needed to periodically get a new cookie and paste it into the
 > code during the time I was developing this migration utility.
+
+{{< /div-block >}}
 
 ### Step 6: Save the BlogML document to an XML file
 

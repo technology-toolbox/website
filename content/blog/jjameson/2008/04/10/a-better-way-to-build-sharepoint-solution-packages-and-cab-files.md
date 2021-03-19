@@ -99,6 +99,8 @@ following:
 Cliff Hudson, an SDE on the Visual Studio Platform team, was kind enough to
 point me in the right direction. [Thanks for the tip, Cliff.]
 
+{{< div-block "note update" >}}
+
 > **Update (2008-04-14)**
 >
 > When I originally wrote this blog post last Friday, I specified the following:
@@ -134,6 +136,8 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 > other words, it handles scenarios where the only change is to an embedded
 > resource or when a dependent assembly specified using a project reference is
 > updated.
+
+{{< /div-block >}}
 
 Here is the updated MSBuild target with the correct inputs specified:
 

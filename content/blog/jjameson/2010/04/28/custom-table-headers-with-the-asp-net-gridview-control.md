@@ -84,6 +84,8 @@ contains the following columns:
 As I usually do when building a feature, let's start with a basic implementation
 and then iterate the code until we've completed the scenario.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > The KPI dashboard is actually displayed in a customer portal based on
@@ -95,6 +97,8 @@ and then iterate the code until we've completed the scenario.
 > your SharePoint Web application, you'll spend far more time iterating the
 > development (for example, deploying updated files, GAC'ing assemblies, or
 > recycling your app pool).
+
+{{< /div-block >}}
 
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that
 encapsulates the presentation layer for the KPI scorecard:
@@ -273,12 +277,16 @@ event:
         }
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > As I mentioned before, the KPI dashboard is actually displayed in a customer
 > portal based on MOSS 2007. Consequently, I chose to reuse the KPI images that
 > come out-of-the-box with MOSS 2007 (in case you were wondering why the image
 > path refers to **\_layouts**).
+
+{{< /div-block >}}
 
 Running the Web application at this point shows the images in place of the
 lengthy column headings, similar to the following:
@@ -539,7 +547,11 @@ With this change, the KPI detail table renders as expected (with the custom
 **Thresholds** header row and all of the expected data) even when the GridView
 is rendered from view state.
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-21)**
 >
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
+
+{{< /div-block >}}

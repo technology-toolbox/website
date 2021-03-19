@@ -27,6 +27,8 @@ of using my laptop at a customer site).
 In this post, I want to share details about how I've configured my Active
 Directory domain, namely **corp.technologytoolbox.com**.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Technology Toolbox is just a name I came up with about ten years ago before
@@ -36,6 +38,8 @@ Directory domain, namely **corp.technologytoolbox.com**.
 > [Don't bother trying to browse to [https://www.technologytoolbox.com](https://www.technologytoolbox.com/)
 > because, honestly, I haven't yet invested the time in actually creating the
 > Web site -- even after almost ten years.]
+
+{{< /div-block >}}
 
 As you can see in the following figure, I've created a number of organizational
 units (OUs) which you would typically find in many enterprise organizations.
@@ -87,10 +91,14 @@ caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
 
 {{< /table >}}
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The **Sales** OU contains similar OUs as **Development**. These are simply not
 > shown in the previous table.
+
+{{< /div-block >}}
 
 Note that this domain structure, I'm able to use the Group Policy feature of
 Active Directory to "effortlessly" configure new servers.

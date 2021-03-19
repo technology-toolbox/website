@@ -76,6 +76,8 @@ After completing these steps, I queued another build of my Fabrikam.Demo
 solution and verified the errors caused by missing SharePoint assemblies no
 longer occurred.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In addition to copying SharePoint assemblies that are directly referenced in
@@ -99,3 +101,5 @@ longer occurred.
 > these files will need to be copied out of the GAC on the MOSS 2007 server (in
 > other words, most of them are not located in the "Program Files\Common
 > Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
+
+{{< /div-block >}}

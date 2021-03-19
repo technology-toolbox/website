@@ -171,6 +171,8 @@ underlying content databases:
 
 {{< /deleted-block >}}
 
+{{< div-block "note update" >}}
+
 > **Update (2011-04-14)**
 >
 > I should have updated this post long ago based on the comment added by "todh2"
@@ -189,6 +191,8 @@ underlying content databases:
 > ```
 >
 > Thanks to "todh2" for pointing this out.
+
+{{< /div-block >}}
 
 Once this configuration change is made, the "workbook cannot be opened" error no
 longer occurs.

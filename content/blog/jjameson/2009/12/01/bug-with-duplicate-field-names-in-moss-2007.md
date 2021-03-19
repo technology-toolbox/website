@@ -63,6 +63,8 @@ Next, I created the ContentTypes.xml file:
 </Elements>
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The really long ContentType ID above specifies that Announcement Page inherits
@@ -71,6 +73,8 @@ Next, I created the ContentTypes.xml file:
 > However, I don't recall the justification -- if there even was one. I haven't
 > encountered any problems with this approach and thus haven't seen any
 > compelling reason to stop doing so.
+
+{{< /div-block >}}
 
 Then I created a page layout for the new Announcement Page content type.
 

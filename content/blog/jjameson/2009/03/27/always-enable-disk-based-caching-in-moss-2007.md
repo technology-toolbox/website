@@ -137,6 +137,8 @@ So, unless you just have lots of excess capacity on your SQL Server cluster (and
 therefore don't mind lots of extraneous database roundtrips), I hope you don't
 consider going live without enabling disk-based caching.
 
+{{< div-block "note update" >}}
+
 > **Update (2009-03-28)**
 >
 > It occurred to me this morning that my previous statement about always
@@ -145,3 +147,5 @@ consider going live without enabling disk-based caching.
 > (e.g. to avoid having to repeatedly clear your browser cache to see changes to
 > CSS files), that's perfectly fine. Just make sure you enable disk-based
 > caching on your Test and Production environments.
+
+{{< /div-block >}}

@@ -87,12 +87,16 @@ get considerably more complex when trying to support arbitrary sizing of the
 browser window (which is actually something that SharePoint does very well
 out-of-the-box with its table-based layout).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If you choose to use the 960 Grid System, I also highly recommend leveraging
 > the [960 Gridder](http://gridder.andreehansson.se) as well. This combination
 > makes the task of creating great looking Web pages much easier (even for
 > someone, like me, who is much more of a *developer* than a *designer*).
+
+{{< /div-block >}}
 
 To understand how the 960 Grid System is used on our SharePoint site, consider
 the following master page:
@@ -590,12 +594,18 @@ fun things on a Saturday afternoon.
 Don't fret, I'll cover many more details of Web standards design and SharePoint
 ~~in the very near future~~ eventually.
 
+{{< div-block "note update" >}}
+
 > **Update (2010-12-02)**
 >
 > Part 2 in this series in *finally* available ;-)\
 > \
 > **Web Standards Design with SharePoint, Part 2**\
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
+
+{{< /div-block >}}
+
+{{< div-block "note update" >}}
 
 > **Update (2011-01-31)**
 >
@@ -604,3 +614,5 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > \
 > **Web Standards Design with SharePoint, Part 3**\
 > [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
+
+{{< /div-block >}}

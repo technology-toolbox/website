@@ -140,11 +140,15 @@ replaceOnKeyPress();
 </script>
 ```
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > While this hack was verified to fix the problem in Firefox, it is somewhat
 > brittle due to the need to specify the unique identifier in the script (see my
 > comments in the server-side comment above).
+
+{{< /div-block >}}
 
 Given that this problem only occurs in Firefox (as noted earlier, I was unable
 to repro in Safari), we were once again "lucky" enough to convince the customer

@@ -94,6 +94,8 @@ To import the TechnologyToolbox.com log files into a SQL Server database
 Here is the script in hopes it helps others who wish to import their log files
 for subsequent analysis.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > In the past, I've worked on several "clickstream data warehousing" projects
@@ -103,6 +105,8 @@ for subsequent analysis.
 > serve as a replacement for a more sophisticated analytics solution. Rather I'm
 > sharing it here for those wishing to do "quick and dirty" analysis of their
 > data.
+
+{{< /div-block >}}
 
 ### Import Website Log Files.ps1
 
@@ -221,12 +225,16 @@ function Main
 Main
 ```
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > The script assumes you have installed Log Parser to the default location (on a
 > 64-bit environment). You'll also need to update the log file path and
 > connection string (unless you just happen to have a SQL Server named **BEAST**
 > and a database named **CaelumDW**).
+
+{{< /div-block >}}
 
 After running the script, you should see something like this:
 

@@ -171,6 +171,8 @@ the following:
     FieldName="Comments" /><asp:Literal runat="server" Text="&quot;&gt;" />
 ```
 
+{{< div-block "note update" >}}
+
 > **Update (2009-08-26)**
 >
 > Note that I originally specifed the following, but it looks like this was
@@ -178,6 +180,8 @@ the following:
 > after I originally validated the approach -- results in the first "&lt;"
 > character being escaped, thus it *does* emit the raw server tags (well,
 > almost).
+
+{{< /div-block >}}
 
 ```
 <meta name="description"

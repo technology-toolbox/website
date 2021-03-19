@@ -39,10 +39,14 @@ All Debug builds should create symbol files for debugging purposes. These
 symbols are included as part of the setup to facilitate debugging in other
 environments such as DEV.
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Do not include Debug symbols in the Release configuration of the setup
 > projects.
+
+{{< /div-block >}}
 
 {{< /blockquote >}}
 
@@ -79,10 +83,14 @@ fact, here's a direct quote from page 38:
 
 In other words, the Development Plan should say:
 
+{{< div-block "note important" >}}
+
 > **Important**
 >
 > Always include Debug symbols in the Release configuration of the setup
 > projects -- or, preferably, make them available from a symbol server.
+
+{{< /div-block >}}
 
 Regarding John's book...I strongly recommend this book to anyone who considers
 himself or herself a "serious developer." It is chock full of great tips and

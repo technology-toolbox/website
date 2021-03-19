@@ -50,11 +50,15 @@ every build. This file can then be "linked into" each project in the solution,
 thus ensuring all of the various assemblies in the solution share the same file
 version for a particular build.
 
+{{< div-block "note" >}}
+
 > **Update (2010-04-22)**
 >
 > In a follow-up post, I provide details for how I recommend
 > [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build)
 > (assuming you are using Team Foundation Server).
+
+{{< /div-block >}}
 
 ### Assembly Version
 

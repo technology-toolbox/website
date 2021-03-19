@@ -17,6 +17,8 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx"
 ---
 
+{{< div-block "note" >}}
+
 > **Update 2009-11-18**
 >
 > I discovered that using relative paths in the DDF file is not compatible with
@@ -24,6 +26,8 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthr
 > and corresponding modifications to the project file:
 >
 > {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
+
+{{< /div-block >}}
 
 In a previous post, I introduced
 [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development).
@@ -374,12 +378,16 @@ Done
 
 {{< console-block-end >}}
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > For environment variables that you expect team members (e.g. Development,
 > Test, and Release Management) to set in the Environment Variables dialog box,
 > consider prefixing the variables with your company name to "group" them
 > together and also avoid any potential naming conflicts.
+
+{{< /div-block >}}
 
 Here are the contents of **Add Solution.cmd**:
 
@@ -422,11 +430,15 @@ deploy Release builds -- not Debug builds. Whereas in development environments,
 we always want to install the Debug Builds. (Whether we install Debug or Release
 builds to the Test environment depends on where we are at in the release cycle.)
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > Having your scripts default settings for the Production environment -- but
 > allowing overrides for other environments -- minimizes the risk of "accidents"
 > when deploying to PROD.
+
+{{< /div-block >}}
 
 Also note that the error handling certainly isn't what I'd call "robust" but
 I've found no reason to change this after working with these scripts for several
@@ -491,11 +503,15 @@ environment variable or as a parameter to the script (which is occasionally
 useful for troubleshooting purposes -- for example, to quickly deploy to a
 "vanilla" SharePoint site).
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If you do have to use a SharePoint timer job, use `stsadm.exe -o execadmsvcjobs` to wait for the timer job to finish before continuing (as
 > shown in the script above when `DEPLOY_METHOD` is `-immediate` instead of
 > `-local`).
+
+{{< /div-block >}}
 
 Here are the contents of **Activate Features.cmd**:
 
@@ -748,10 +764,14 @@ Call :LogMessage "Done"
 I also added a minimal logging "function" that allows me to quickly see the
 duration of each portion of the "DR.DADA" process.
 
+{{< div-block "note" >}}
+
 > **Tip**
 >
 > If there is no need to deactivate/(re)activate your features when redeploying,
 > use `Redeploy Solution.cmd -quick` to streamline the process.
+
+{{< /div-block >}}
 
 ### Deploying Updated Code
 

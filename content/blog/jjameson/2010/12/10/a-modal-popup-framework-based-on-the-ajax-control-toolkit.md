@@ -43,6 +43,8 @@ class which is primarily responsible for rendering the **ModalPanel** (i.e. a
 popup window), the **Title Bar**, and link buttons (**OK** and **Cancel**) to
 dismiss the popup window.
 
+{{< div-block "note" >}}
+
 > **Note**
 >
 > Web Parts that derive from **ModalPopupWebPart** are responsible for
@@ -50,6 +52,8 @@ dismiss the popup window.
 > overriding the
 > [CreateChildControls](http://msdn.microsoft.com/en-us/library/system.web.ui.control.createchildcontrols.aspx)
 > method to add controls to the **ModalPanel**.
+
+{{< /div-block >}}
 
 The following figure illustrates the various UI elements of a modal popup
 window.
