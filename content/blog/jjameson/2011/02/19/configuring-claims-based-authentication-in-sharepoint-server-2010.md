@@ -405,14 +405,14 @@ necessary to modify the Web.config files for the following sites:
         </connectionStrings>
       ```
       
-      {{< div-block "note important" >}}
+      {{< div-block-start "note important" >}}
       
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -502,14 +502,14 @@ necessary to modify the Web.config files for the following sites:
         </connectionStrings>
       ```
       
-      {{< div-block "note important" >}}
+      {{< div-block-start "note important" >}}
       
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -520,13 +520,13 @@ necessary to modify the Web.config files for the following sites:
         connectionStringName="FabrikamDemo" />
       ```
       
-      {{< div-block "note warning" >}}
+      {{< div-block-start "note warning" >}}
       
       > **Warning**
       > 
       > Do not overwrite any existing entries in this Web.config file.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       

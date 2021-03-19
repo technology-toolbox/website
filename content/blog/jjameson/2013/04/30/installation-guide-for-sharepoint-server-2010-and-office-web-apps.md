@@ -1940,14 +1940,14 @@ To configure the Central Administration Web.config file:
         </connectionStrings>
       ```
       
-      {{< div-block "note important" >}}
+      {{< div-block-start "note important" >}}
       
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -2061,14 +2061,14 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
         </connectionStrings>
       ```
       
-      {{< div-block "note important" >}}
+      {{< div-block-start "note important" >}}
       
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
@@ -2079,13 +2079,13 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
         connectionStringName="FabrikamDemo" />
       ```
       
-      {{< div-block "note warning" >}}
+      {{< div-block-start "note warning" >}}
       
       > **Warning**
       > 
       > Do not overwrite any existing entries in this Web.config file.
       
-      {{< /div-block >}}
+      {{< div-block-end >}}
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
