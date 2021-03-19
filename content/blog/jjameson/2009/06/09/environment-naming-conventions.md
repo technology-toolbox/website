@@ -112,8 +112,8 @@ the corresponding FQDN in DEV, or should we even configure an FQDN for DEV? The
 answer to that latter question is a resounding "Yes!" and the answer to the
 former is [http://www-dev.fabrikam.com](http://www-dev.fabrikam.com/). Note that
 we almost certainly won't to expose DEV on the Internet -- although we may
-choose to expose TEST
-([http://www-test.fabrikam.com](http://www-test.fabrikam.com/))
+choose to expose TEST (
+[http://www-test.fabrikam.com](http://www-test.fabrikam.com/))
 
 The primary reason I recommend using these FQDNs (aside from the fact that we
 are following the simple "-suffix" naming convention) is that browsers behave

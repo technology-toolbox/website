@@ -59,5 +59,5 @@ group are automatically configured as soon as I join a new DEV server to the
 domain and reboot.
 
 See
-[Part 2 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-2)for
-an alternate method of managing group membership through Group Policy.
+[Part 2 of this post](/blog/jjameson/2009/10/15/managing-group-membership-via-group-policy-part-2)
+for an alternate method of managing group membership through Group Policy.

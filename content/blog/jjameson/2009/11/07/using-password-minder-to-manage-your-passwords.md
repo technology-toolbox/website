@@ -23,8 +23,8 @@ immediately after reading about it in the July 2004 edition of MSDN Magazine. I
 don't know about you, but trying to remember all of my various passwords for
 dozens of Web sites, numerous network accounts, VMs, etc. is really quite a
 nightmare.
-[I'm actually a little embarrassed to say that on more than one occasion I've had to hack one of my VMs in order to reset the password for a domain admin. This process definitely isn't for the faint of heart, but it was better than having to rebuild [my FABRIKAM domain](/blog/jjameson/2009/09/14/the-jameson-datacenter)from
-scratch.]
+[I'm actually a little embarrassed to say that on more than one occasion I've had to hack one of my VMs in order to reset the password for a domain admin. This process definitely isn't for the faint of heart, but it was better than having to rebuild [my FABRIKAM domain](/blog/jjameson/2009/09/14/the-jameson-datacenter)
+from scratch.]
 
 Instead I tend to use no more than three or four passwords that I can remember
 (and change every couple of months) and a whole bunch of randomly generated
