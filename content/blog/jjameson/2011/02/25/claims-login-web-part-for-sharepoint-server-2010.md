@@ -248,9 +248,7 @@ The problem is that when you click the out-of-the-box **Sign Out** link anytime
 after authenticating via the custom Web Part, a rather nasty unhandled exception
 occurs:
 
-{{< log-excerpt >}}
-
-```
+```Text
 [ArgumentException: Exception of type 'System.ArgumentException' was thrown.
 Parameter name: encodedValue]
 Microsoft.SharePoint.Administration.Claims.SPClaimEncodingManager.DecodeClaimFromFormsSuffix(String encodedValue) +25829214
@@ -260,8 +258,6 @@ Microsoft.SharePoint.ApplicationRuntime.SPRequestModule.PreRequestExecuteAppHand
 System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80
 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171
 ```
-
-{{< /log-excerpt >}}
 
 Obviously this exception doesn't occur when authenticating using the OOTB login
 pages. I also verified that it doesn't occur when using a custom application

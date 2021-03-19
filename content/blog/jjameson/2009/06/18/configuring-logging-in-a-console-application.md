@@ -350,9 +350,7 @@ corresponding `<filter>` element used to limit the file output to level
 
 This produces a file named AdminConsole.log with the following content:
 
-{{< log-excerpt >}}
-
-```
+```Text
 defaultTraceSource Information: 0 : AdminConsole.exe
     DateTime=2009-06-18T16:57:54.4488429Z
 defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
@@ -364,23 +362,17 @@ defaultTraceSource Information: 0 : Program complete.
     DateTime=2009-06-18T16:57:54.4828429Z
 ```
 
-{{< /log-excerpt >}}
-
 Unfortunately the TextWriterTraceListener class appends the timestamp onto a
 separate line, but you can easily substitute a custom listener that formats
 results like the following, if necessary:
 
-{{< log-excerpt >}}
-
-```
+```Text
 2009-06-18T17:17:43 Information: AdminConsole.exe
 2009-06-18T17:17:43 Warning: Unable to process work item -1 (The value must be greater than or equal to zero.
 Parameter name: d).
 2009-06-18T17:17:43 Information: Successfully completed processing.
 2009-06-18T17:17:43 Information: Program complete.
 ```
-
-{{< /log-excerpt >}}
 
 When I wrote the `Logger` class a few years ago, I also wrote a
 `SimpleTraceListener` class to do just this:

@@ -55,9 +55,7 @@ The workbook cannot be opened.
 Looking at the event log on the SharePoint/TFS server, I found the following
 error occurred each time I requested the dashboard page:
 
-{{< log-excerpt >}}
-
-```
+```Text
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 3760
 Task Category: Database
@@ -70,8 +68,6 @@ SQL Database 'WSS_Content' on SQL Server instance 'beast-test' not found. Additi
 Cannot open database "WSS_Content" requested by the login. The login failed.
 Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
 ```
-
-{{< /log-excerpt >}}
 
 Note that in my environment, I use different service accounts for the TFS Web
 application and SharePoint service applications (e.g. Excel Services and the
@@ -101,9 +97,7 @@ content databases for the Web application. At first, I tried giving it "low
 privilege" access, but I discovered this only resulted in different errors in
 the event log when browsing to the dashboard page:
 
-{{< log-excerpt >}}
-
-```
+```Text
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 5586
 Description:
@@ -113,13 +107,9 @@ is included below.
 CREATE TABLE permission denied in database 'WSS_Content'.
 ```
 
-{{< /log-excerpt >}}
-
 and
 
-{{< log-excerpt >}}
-
-```
+```Text
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 5617
 Description:
@@ -131,8 +121,6 @@ been upgraded to a higher level than the web server. The Web server and the
 database must be upgraded to the same version and build level to return to
 compatibility range.
 ```
-
-{{< /log-excerpt >}}
 
 While it's somewhat bewildering that Excel Services needs to create a table in
 the SharePoint content database, I decided to just go ahead and give the service

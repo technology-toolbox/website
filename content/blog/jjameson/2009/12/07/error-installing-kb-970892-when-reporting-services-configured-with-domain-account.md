@@ -81,9 +81,7 @@ the issue.
 After downloading and installing the standalone patch installation, I discovered
 the following in the installation log:
 
-{{< log-excerpt >}}
-
-```
+```Text
 MSI (s) (F0:54) [21:09:49:565]: Invoking remote custom action. DLL: C:\Windows\Installer\MSIAC31.tmp, Entrypoint: Do_RSSetSharePointExclusionPath
 <Func Name='LaunchFunction'>
 Function=Do_RSSetSharePointExclusionPath
@@ -99,8 +97,6 @@ Compiler Timestamp: Mon Nov 17 17:05:40 2008
 Function Name: Do_RSSetSharePointExclusionPath
 Source Line Number: 914
 ```
-
-{{< /log-excerpt >}}
 
 As noted in [KB 917826](http://support.microsoft.com/kb/917826), there appears
 to be a known issue when Reporting Services is configured to run using a domain

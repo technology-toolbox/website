@@ -52,15 +52,11 @@ administrator account to reconfigure the TFS project sites.
 
 Diving into the SharePoint ULS logs, I discovered the underlying problem:
 
-{{< log-excerpt >}}
-
-```
+```Text
 05/13/2010 06:11:25.69 ... Secure Store Service ... ValidateCredentialClaims - Access Denied: Claims stored in the credentials did not match with the group claim for a group app. ...
 05/13/2010 06:11:25.69 ... Secure Store Service ... The Microsoft Secure Store Service application Secure Store Service failed to retrieve credentials. The error returned was 'Access is denied.'. For more information, see the Microsoft SharePoint Products and Technologies Software Development Kit (SDK). ...
 05/13/2010 06:11:25.69 ... Secure Store Service ... GetCredentials failed with the following exception: System.ServiceModel.FaultException`1[Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault]: Access is denied. (Fault Detail is equal to Microsoft.Office.SecureStoreService.Server.SecureStoreServiceFault). ...
 ```
-
-{{< /log-excerpt >}}
 
 It turns out my administrator account (TECHTOOLBOX\jjameson-admin) was not in
 the group (TECHTOOLBOX\All Developers) that I originally specified when

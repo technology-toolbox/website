@@ -143,9 +143,7 @@ Stop-Transcript
 Running the scheduled task now produces the following in the Temp.log file (as
 viewed in Notepad):
 
-{{< log-excerpt >}}
-
-```
+```Text
 **********************
 Windows PowerShell Transcript Start
 Start time: 20111119062551
@@ -158,8 +156,6 @@ Windows PowerShell Transcript End
 End time: 20111119062551
 ***********************
 ```
-
-{{< /log-excerpt >}}
 
 While this resembles the expected output, it's definitely not very easy to read.
 This is a known issue:
@@ -215,9 +211,7 @@ following:
 Deleting the temporary files (to start with the "happy path" scenario first) and
 then running the scheduled task results in the following Temp.log file:
 
-{{< log-excerpt >}}
-
-```
+```Text
 
     Directory: C:\Users\jjameson\AppData\Local\Temp
 
@@ -225,8 +219,6 @@ Mode                LastWriteTime     Length Name
 ----                -------------     ------ ----
 -a---        11/19/2011   8:19 AM          6 Temp.txt
 ```
-
-{{< /log-excerpt >}}
 
 Notice the log file doesn't show the `Write-Host` output (e.g. "{{<
 sample-output "Changing to TEMP folder..." >}}") -- which would make it much
@@ -293,9 +285,7 @@ Here is a sample log file (as viewed in Notepad), which shows the `Write-Host`
 messages as well as other output (e.g. "{{< sample-output
 "processed file: C:\inetpub\wwwroot\..." >}}" from icacls.exe):
 
-{{< log-excerpt >}}
-
-```
+```Text
 Defaulting to latest build for Caelum...
 Defaulting to latest build for Subtext...
 Defaulting to Debug build configuration...
@@ -325,5 +315,3 @@ Copying Caelum website content...
 Successfully copied Caelum website content.
 Successfully rebuilt Web application.
 ```
-
-{{< /log-excerpt >}}

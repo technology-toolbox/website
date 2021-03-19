@@ -44,16 +44,12 @@ option didn't work).
 Here's a network trace (when SPA is enabled) from my primary desktop (WOLVERINE)
 with Outlook 2010 installed:
 
-{{< log-excerpt >}}
-
-```
+```Text
 449   3.055000   BANSHEE    WOLVERINE  POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846424703@banshee.corp.technologytoolbox.com> ready.
 450   3.055000   WOLVERINE  BANSHEE    POP3   POP3:Command: CAPA
 451   3.056000   BANSHEE    WOLVERINE  POP3   POP3:Response: -ERR, Error: Unacceptable command
 452   3.056000   WOLVERINE  BANSHEE    POP3   POP3:Command: QUIT
 ```
-
-{{< /log-excerpt >}}
 
 Like I said, it seems that Outlook 2010 doesn't like the simple implementation
 of the POP3 protocol in Windows Server 2003. Specifically, if the POP3 server
@@ -64,9 +60,7 @@ least not with SPA).
 Here is a similar network trace from one of my VMs (FOOBAR2) that still has
 Outlook 2007 installed:
 
-{{< log-excerpt >}}
-
-```
+```Text
 2225   15.118164   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846956359@banshee.corp.technologytoolbox.com> ready.
 2229   15.210937   FOOBAR2   BANSHEE   POP3   POP3:Command: AUTH
 2230   15.212890   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK
@@ -88,8 +82,6 @@ Outlook 2007 installed:
 2375   15.775390   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Message marked as deleted
 2433   15.819336   FOOBAR2   BANSHEE   POP3   POP3:Command: QUIT
 ```
-
-{{< /log-excerpt >}}
 
 I suspect the problem with Outlook 2010 might be due to the fact that I'm not
 using SSL to connect to my POP3 service. However, unless I'm missing something

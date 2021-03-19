@@ -42,17 +42,13 @@ am greeted with the low disk space notification due to hundreds of thousands of
 generated over the course of the previous 24 hours, as shown in the following
 log excerpt:
 
-{{< log-excerpt >}}
-
-```
+```Text
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 3301, use count 7, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 2225, use count 59, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5728, use count 1, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5731, use count 1, key ...
 01/26/2009 02:45:35.43  OWSTIMER.EXE (0x0158)                    0x1424 Windows SharePoint Services    General                        0 Medium   Preserving template record with size 5732, use count 1, key ...
 ```
-
-{{< /log-excerpt >}}
 
 The good news is that the "Preserving template record with size..." issue only
 seems to occur when system resources are fairly tight; for example, on my VM

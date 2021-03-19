@@ -45,9 +45,7 @@ Update!]
 
 Digging into the SharePoint logs I noticed the following:
 
-{{< log-excerpt >}}
-
-```
+```Text
 04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".
 04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
 04/08/2008 ... Marking web-scoped features active from manifest at URL "http://wss-dev/Test"
@@ -56,8 +54,6 @@ Digging into the SharePoint logs I noticed the following:
 04/08/2008 ... Failed to apply template "TfsLite.stp" to web at URL "http://wss-dev/Test", error The template you have chosen is invalid or cannot be found. 0x81071e44
 04/08/2008 ... The template you have chosen is invalid or cannot be found.
 ```
-
-{{< /log-excerpt >}}
 
 At this point, the problem seemed fairly obvious: the error occurred while
 trying to activate site-scoped features on the new site. Well, duh, that makes

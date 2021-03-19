@@ -457,9 +457,7 @@ undesired user experience.
 Enabling the call stack and disabling custom errors in the Web.config file
 reveals the following error:
 
-{{< log-excerpt >}}
-
-```
+```Text
 [SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.]
    System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly) +665
    System.Diagnostics.EventLog.SourceExists(String source, String machineName) +104
@@ -484,8 +482,6 @@ reveals the following error:
    System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
-
-{{< /log-excerpt >}}
 
 The problem is that the event source specified in the `initializeData` attribute
 (`"Fabrikam Site"`) does not exist and the service account doesn't have
@@ -521,9 +517,7 @@ However, even after creating the event source, you still can't use the
 Authentication and anonymous access. Attempting to do so results in the
 following error:
 
-{{< log-excerpt >}}
-
-```
+```Text
 [Win32Exception (0x80004005): The handle is invalid]
    System.Diagnostics.EventLog.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName) +517
    System.Diagnostics.EventLog.WriteEvent(EventInstance instance, Byte[] data, Object[] values) +313
@@ -545,8 +539,6 @@ following error:
    System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +181
    System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +75
 ```
-
-{{< /log-excerpt >}}
 
 To workaround this problem, I created a custom trace listener by essentially
 snarfing the code for the **EventLogTraceListener** class and wrapping the calls
@@ -1181,9 +1173,7 @@ log.
 
 Here's the event that I just captured from my sample Web Part:
 
-{{< log-excerpt >}}
-
-```
+```Text
 Log Name:      Application
 Source:        Fabrikam Site
 Date:          3/20/2010 5:12:39 PM
@@ -1215,8 +1205,6 @@ Stack Trace:
    at System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 ```
-
-{{< /log-excerpt >}}
 
 I don't know about you, but I think that's pretty darn cool!
 
