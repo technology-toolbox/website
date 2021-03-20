@@ -8,4 +8,5 @@
 {{ end }}
 {{ $htmlTable := replace $htmlTable $old $new }}
 {{ $htmlTable := replace $htmlTable "<thead>" "<thead class=\"table-primary\">" }}
+{{ with .Get "anchor" }}<a name="{{.}}"></a>{{ end }}
 {{ $htmlTable | safeHTML }}

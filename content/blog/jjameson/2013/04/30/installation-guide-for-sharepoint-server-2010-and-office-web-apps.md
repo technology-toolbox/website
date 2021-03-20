@@ -2415,11 +2415,11 @@ To configure the crawl schedules:
 5. On the **Edit Content Source** page, in the **Crawl Schedules** section,
    under **Full Crawl**, click **Create schedule**.
 6. On the **Manage Schedules** page, configure the type of schedule and the
-   schedule settings specified in Table 11, and then click **OK**.
+   schedule settings specified in [Table 11](#Table_11_-_Search_schedules), and then click **OK**.
 7. On the **Edit Content Source** page, in the **Crawl Schedules** section,
    under **Incremental Crawl**, click **Create schedule**.
 8. On the **Manage Schedules** page, configure the type of schedule and the
-   schedule settings specified in Table 11, and then click **OK**.
+   schedule settings specified in [Table 11](#Table_11_-_Search_schedules), and then click **OK**.
 9. On the **Edit Content Source** page, in the **Start Full Crawl** section,
    click the **Start full crawl of this content source** checkbox.
 10. Click **OK**.
@@ -3053,7 +3053,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 11 - Search schedules" >}}
+{{< table anchor="Table_11_-_Search_schedules" class="small table-striped" caption="Table 11 - Search schedules" >}}
 
 | Setting | Full | Incremental |
 | --- | --- | --- |
