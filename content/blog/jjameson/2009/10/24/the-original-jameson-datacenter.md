@@ -28,7 +28,7 @@ face and a sense of nostalgia. It also caused me to recall two things:
    \
    <q class="directQuote">Lately it occurs to me: What a long, strange trip it's been.</q>
    
-   {{< div-block "note" >}}
+   {{< div-block "note update" >}}
    
    > **Update**
    > 

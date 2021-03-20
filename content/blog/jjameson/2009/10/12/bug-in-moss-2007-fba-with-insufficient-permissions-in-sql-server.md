@@ -54,7 +54,11 @@ I then fired up SQL Server Profiler to verify that SharePoint was at least
 *trying* to query my ASP.NET database when adding a role to a SharePoint group.
 Sure enough, I saw the following statement in the profiler trace:
 
-`exec dbo.aspnet_Roles_RoleExists @ApplicationName=N'Fabrikam Portal',@RoleName=N'Authenticated Users'`
+```
+exec dbo.aspnet_Roles_RoleExists
+    @ApplicationName=N'Fabrikam Portal',
+    @RoleName=N'Authenticated Users'
+```
 
 Hmmm...from this I could tell that SharePoint was definitely attempting to
 validate the custom role. I then attached the debugger and set it to break on

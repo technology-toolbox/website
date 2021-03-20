@@ -135,7 +135,7 @@ Note that -- at least to this point -- I haven't made any attempt to generate
 class names), because I think it would be somewhat brittle (i.e. dependent on
 the default color options in Visual Studio) and, honestly, not worth the effort.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-04-27)**
 >

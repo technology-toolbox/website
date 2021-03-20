@@ -50,7 +50,7 @@ every build. This file can then be "linked into" each project in the solution,
 thus ensuring all of the various assemblies in the solution share the same file
 version for a particular build.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-04-22)**
 >

@@ -70,9 +70,6 @@ the Subtext skin specifies the following (in PostComment.ascx):
     <uc1:Captcha runat="server" ValidationGroup="SubtextComment" />
     ...
 </div>
-```
-
-```
 ...
 ```
 

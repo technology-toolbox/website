@@ -50,7 +50,9 @@ submission -- when the {{< kbd "Enter" >}} key is pressed in the search box.
 Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web
 Server Extensions\12\TEMPLATE\LAYOUTS\1033\Search.js:
 
-`try {if(null != event) event.returnValue = false;} catch (err) {}`
+```
+try {if(null != event) event.returnValue = false;} catch (err) {}
+```
 
 Instead of returning `false` -- and subsequently cascading this return value to
 the `OnKeyPress` event handler (which would subsequently return `false` to
@@ -62,7 +64,9 @@ Since the form submission is not canceled in Firefox, there is a "race
 condition" between the form submission caused by the `Enter` key being pressed
 and the redirect to the search results page (i.e. line 606 of Search.js):
 
-`window.location = Url + sch;`
+```
+window.location = Url + sch;
+```
 
 If we had access to the `event` object in the `GoSearch` function when browsing
 with Firefox, we could use the W3C standard `preventDefault()` method to cancel

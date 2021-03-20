@@ -381,7 +381,7 @@ following:
 title="Alirezaei, Reza (2008). SPWebConfigModification's Top 6 Issues. 2008-01-05."
 linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update 2010-03-31**
 >

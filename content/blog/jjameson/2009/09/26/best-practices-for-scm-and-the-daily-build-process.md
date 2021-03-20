@@ -37,7 +37,7 @@ the "Project Portal"). You also probably know that all SharePoint document
 libraries can be configured to support versioning similar to TFS source control,
 and thus allow you to, for example, view an old version of an installation guide
 stored on the Project Portal. However, just because you *can* do this doesn't
-mean that it is *recommended* as a best practice*.*
+mean that it is *recommended* as a best practice.
 
 Note that I'm not saying you should not store any documents on the Project
 Portal, nor am I saying that you should never enable versioning on document
@@ -297,7 +297,7 @@ solution that point toward a particular fault in the system.
 >
 > A SharePoint site -- or even just a simple SharePoint list -- provides an
 > excellent alternative to a Troubleshooting Guide document. Think of this site
-> --or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)" for
-> your solution.
+> -- or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)"
+> for your solution.
 
 {{< /div-block >}}

@@ -100,7 +100,7 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 {{< /div-block >}}
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2009-10-29)**
 >
@@ -122,7 +122,7 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 {{< /div-block >}}
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-05-03)**
 >

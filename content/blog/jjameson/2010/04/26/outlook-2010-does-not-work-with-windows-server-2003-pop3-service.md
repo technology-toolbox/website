@@ -99,7 +99,7 @@ The POP3 service in Windows Server 2003 was great for demo and training purposes
 client instead of Outlook 2010, but I'm sure you can imagine why that option
 doesn't sound very appealing.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-04-27)**
 >

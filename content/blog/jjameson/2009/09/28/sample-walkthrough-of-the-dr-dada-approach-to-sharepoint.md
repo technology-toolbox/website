@@ -2,10 +2,9 @@
 title: Sample Walkthrough of the DR.DADA Approach to SharePoint
 date: 2009-09-28T05:38:00-06:00
 excerpt:
-  "Update 2009-11-18 I discovered that using relative paths in the DDF file is
-  not compatible with Team Foundation Build. Refer to the following post for the
-  updated DDF file and corresponding modifications to the project file: Building
-  SharePoint..."
+  "In a previous post, I introduced the \"DR.DADA\" approach to SharePoint
+  development. This post walks you through an actual implementation of a feature
+  -- well, actually two features..."
 aliases:
   [
     "/blog/jjameson/archive/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx",
@@ -17,7 +16,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx"
 ---
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update 2009-11-18**
 >

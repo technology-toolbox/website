@@ -157,9 +157,6 @@ property, as shown below, actually results in two database roundtrips:
 
             if (page.Layout.Name != expectedPageLayout)
             {
-```
-
-```
                 ...
             }
 ```

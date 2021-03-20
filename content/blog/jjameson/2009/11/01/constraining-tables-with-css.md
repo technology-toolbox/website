@@ -44,9 +44,12 @@ title="Figure 1: Constrained table" >}}
 Here is the sample ASP.NET page that I created this morning to demonstrate this:
 
 ```
-<%@ Page Language="C#" AutoEventWireup="true"    CodeBehind="ConstrainedTable.aspx.cs"    Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>
+<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="ConstrainedTable.aspx.cs"
+    Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"                                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">

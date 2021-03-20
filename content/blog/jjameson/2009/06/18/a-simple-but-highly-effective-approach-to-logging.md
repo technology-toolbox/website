@@ -353,7 +353,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 }
 ```
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update 2010-03-20**
 >

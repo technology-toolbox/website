@@ -158,13 +158,7 @@ errors:
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="TechnologyToolbox.Caelum.ruleset"
-```
-
-```
   Description="Custom rule set for the TechnologyToolbox.Caelum solution."
-```
-
-```
   ToolsVersion="10.0">
   <IncludeAll Action="Error" />
 </RuleSet>

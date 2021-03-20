@@ -60,7 +60,7 @@ It turns out the problem is caused by the Microsoft Office Live Add-in 1.3. Once
 you remove the add-in, close all instances of Internet Explorer, and restart IE,
 the seamless redirect works as expected.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-01-15)**
 >
@@ -68,8 +68,7 @@ the seamless redirect works as expected.
 >
 > **You cannot view a forms-based authentication Windows SharePoint Services 3.0
 > site if you have Office Live Update 1.2 for Microsoft Office Live Workspace
-> installed
-> **
+> installed**\
 > [http://support.microsoft.com/kb/972535](http://support.microsoft.com/kb/972535)
 >
 > According to the KB article, it is fixed in the June 2009 Cumulative Update

@@ -126,7 +126,7 @@ the assembly version files and subsequently check them back in:
   </PropertyGroup>
 ```
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2010-05-05)**
 >

@@ -35,7 +35,7 @@ Community Server search functionality with Bing search. If you click the
 use that search page, you get results from all MSDN blogs even though you may
 want to see the results from, say, just my blog.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update (2009-04-20)**
 >
@@ -190,7 +190,7 @@ page, change the value of the **siteUrl** variable accordingly, and then click
 **Save**. Then you -- or anyone browsing your blog -- will be able to search
 your posts without having to specify a site filter each time.
 
-{{< div-block "note" >}}
+{{< div-block "note update" >}}
 
 > **Update**
 >

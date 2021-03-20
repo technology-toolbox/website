@@ -65,7 +65,7 @@ PS C:\Users\jjameson\AppData\Local\Temp>
 However, when you run the script again, an error occurs:
 
 ```
-PS C:\Users\jjameson\AppData\Local\Temp> C:\Temp.ps1
+PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
 New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.

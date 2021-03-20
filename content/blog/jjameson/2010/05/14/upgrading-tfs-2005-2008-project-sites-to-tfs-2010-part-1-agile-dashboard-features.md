@@ -102,7 +102,9 @@ Well, yeah, of course the team project site already exists -- that's why I'm
 trying to upgrade it with the new TFS 2010 features! Isn't that why I specified
 the following in my input file?
 
-`<AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>`
+```
+<AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
+```
 
 That's when I noticed
 [justbail](http://msdn.microsoft.com/en-us/library/community/user/81794.aspx)'s
@@ -116,7 +118,9 @@ it definitely left me feeling a little queasy.
 Since I was essentially blocked at that point, I decided to try running the
 command again, after making the following change to my input file:
 
-`<ProjectSiteEnabled>false</ProjectSiteEnabled>`
+```
+<ProjectSiteEnabled>false</ProjectSiteEnabled>
+```
 
 I noticed that the process ran for considerably longer (i.e. it took several
 seconds before the word "Ready" appeared in the status bar) so I was really
