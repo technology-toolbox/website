@@ -52,7 +52,7 @@ content into a table.
 
 {{< /div-block >}}
 
-{{< table class="small" caption="HTML-to-PDF Converters" >}}
+{{< table class="small table-striped" caption="HTML-to-PDF Converters" >}}
 
 | Product | URL | Pricing | Comments |
 | --- | --- | --- | --- |

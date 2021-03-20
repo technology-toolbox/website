@@ -105,7 +105,8 @@ the original MSF Agile template and don't take more than a few minutes to
 complete. However, I still like to include them to serve as a "checklist" on new
 projects.
 
-{{< table class="small" caption="Initial Tasks for a Scrum Project" >}}
+{{< table class="small table-striped"
+caption="Initial Tasks for a Scrum Project" >}}
 
 | Title | Description |
 | --- | --- |

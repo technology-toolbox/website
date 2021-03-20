@@ -112,7 +112,8 @@ my next post
 
 Here is the list in case you don't want to download the attached file:
 
-{{< table class="small" caption="MOSS 2007 Feature Definitions" >}}
+{{< table class="small table-striped"
+caption="MOSS 2007 Feature Definitions" >}}
 
 | Feature Id | Display Name | Scope | Solution |
 | --- | --- | --- | --- |

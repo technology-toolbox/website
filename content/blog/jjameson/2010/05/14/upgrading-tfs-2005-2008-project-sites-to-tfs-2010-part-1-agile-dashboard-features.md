@@ -141,7 +141,7 @@ Agile v5 template TFS 2010 (click **Site Settings**, then in the **Site
 Actions** section, click **Manage site features**), you will notice the
 following features are activated:
 
-{{< table class="small" caption="Site (Web) Features" >}}
+{{< table class="small table-striped" caption="Site (Web) Features" >}}
 
 | Display Name | Description | Name | Id |
 | --- | --- | --- | --- |
@@ -161,7 +161,7 @@ Similarly, if you look at the corresponding site collection features (click
 **Go to top level site settings**, then click **Site collection features**), you
 will notice the following feature is activated:
 
-{{< table class="small" caption="Site Collection Features" >}}
+{{< table class="small table-striped" caption="Site Collection Features" >}}
 
 | Display Name | Description | Name | Id |
 | --- | --- | --- | --- |

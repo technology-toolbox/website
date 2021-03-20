@@ -60,7 +60,7 @@ All of the VMs that run on ROGUE are configured with the following setting:
 
 In the **Startup delay** field, I specify the different values for each VM.
 
-{{< table class="small" caption="Automatic Start Settings" >}}
+{{< table class="small table-striped" caption="Automatic Start Settings" >}}
 
 | Virtual Machine | Startup Delay [sec] |
 | --- | --- |

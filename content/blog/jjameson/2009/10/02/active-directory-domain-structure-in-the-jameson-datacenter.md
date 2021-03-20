@@ -67,7 +67,7 @@ group, the **IT** group, and the **Sales** organization.
 
 The following table summarizes the various OUs in the domain:
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
 
 | Organizational Unit | Description |

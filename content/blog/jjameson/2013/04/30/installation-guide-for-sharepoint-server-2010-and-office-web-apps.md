@@ -91,7 +91,7 @@ as the Development team when configuring the Development integration environment
 To help you locate and interpret information easily, this document uses the
 following style conventions and terminology.
 
-{{< table class="small" caption="Table 1: Style conventions" >}}
+{{< table class="small table-striped" caption="Table 1: Style conventions" >}}
 
 | Element | Meaning |
 | --- | --- |
@@ -2943,7 +2943,7 @@ There are a number of configuration parameters that need to be determined before
 installing the Fabrikam Extranet solution. The various parameters and
 configuration settings are listed in the following tables.
 
-{{< table class="small" caption="Table 2 - Service accounts" >}}
+{{< table class="small table-striped" caption="Table 2 - Service accounts" >}}
 
 | User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
@@ -2960,7 +2960,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 3 - Installation file locations" >}}
+{{< table class="small table-striped" caption="Table 3 - Installation file locations" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2969,7 +2969,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 4 - Diagnostic logging" >}}
+{{< table class="small table-striped" caption="Table 4 - Diagnostic logging" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2981,7 +2981,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 5 - Web analytics and health data collection" >}}
+{{< table class="small table-striped" caption="Table 5 - Web analytics and health data collection" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2997,7 +2997,7 @@ configuration settings are listed in the following tables.
 all available space on a small VHD. Therefore enabling usage data collection and
 health data collection is *not* recommended in these environments.
 
-{{< table class="small" caption="Table 6 - Outgoing e-mail settings" >}}
+{{< table class="small table-striped" caption="Table 6 - Outgoing e-mail settings" >}}
 
 | Setting | Value for PROD | Value for TEST | Value for DEV |
 | --- | --- | --- | --- |
@@ -3008,7 +3008,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 7 - Web applications" >}}
+{{< table class="small table-striped" caption="Table 7 - Web applications" >}}
 
 | Application | Port | Host Header | Allow Anonymous | Application Pool | Web Application Database Name |
 | --- | --- | --- | --- | --- | --- |
@@ -3019,7 +3019,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 8 - Site collections" >}}
+{{< table class="small table-striped" caption="Table 8 - Site collections" >}}
 
 | Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -3027,7 +3027,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 9 - Initial data and log file sizes" >}}
+{{< table class="small table-striped" caption="Table 9 - Initial data and log file sizes" >}}
 
 | Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
@@ -3038,7 +3038,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
+{{< table class="small table-striped" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
 
 | SharePoint Group | Members | Permissions |
 | --- | --- | --- |
@@ -3047,11 +3047,11 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 {{< /table >}}
 
-{{< table class="small" caption="Table 11 - Search schedules" >}}
+{{< table class="small table-striped" caption="Table 11 - Search schedules" >}}
 
 | Setting | Full | Incremental |
 | --- | --- | --- |

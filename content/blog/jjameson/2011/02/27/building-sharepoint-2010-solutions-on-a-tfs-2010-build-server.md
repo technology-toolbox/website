@@ -84,7 +84,7 @@ Here are the assemblies that I ended up copying from FOOBAR5 (which has
 SharePoint Server 2010 installed) to DAZZLER (which does not have SharePoint
 Server 2010 installed):
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
 
 | Assembly | Source Location on SharePoint 2010 Server |

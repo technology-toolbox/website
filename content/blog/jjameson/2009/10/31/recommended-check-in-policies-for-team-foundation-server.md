@@ -31,7 +31,8 @@ opinion.
 The check-in policies that I prefer to have configured on all TFS projects are
 listed in the following table.
 
-{{< table class="small" caption="Recommended TFS Check-In Policies" >}}
+{{< table class="small table-striped"
+caption="Recommended TFS Check-In Policies" >}}
 
 | Policy Type | Description |
 | --- | --- |

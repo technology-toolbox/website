@@ -963,7 +963,7 @@ method above) when I realized I should have used a different tag on my MSDN blog
 In order to populate the list of categories for each post, I created a simple
 mapping, illustrated below:
 
-{{< table class="small" caption="Tag-to-Category Mapping" >}}
+{{< table class="small table-striped" caption="Tag-to-Category Mapping" >}}
 
 | Tag | Category |
 | --- | --- |

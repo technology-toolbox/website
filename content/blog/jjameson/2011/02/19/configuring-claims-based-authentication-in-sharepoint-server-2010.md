@@ -56,7 +56,7 @@ browser being used).]
 The relevant service accounts for claims-based authentication are listed in the
 following table.
 
-{{< table class="small" caption="Table 1 - Service Accounts" >}}
+{{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
 
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |

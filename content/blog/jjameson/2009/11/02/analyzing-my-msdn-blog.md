@@ -28,7 +28,8 @@ it.]
 
 Here's a quick summary of my initial analysis:
 
-{{< table class="small" caption="Table 1: MSDN Blog Usage Analysis" >}}
+{{< table class="small table-striped"
+caption="Table 1: MSDN Blog Usage Analysis" >}}
 
 | Metric | Views | AggViews | Comments | Combined Views |
 | --- | --- | --- | --- | --- |
@@ -115,7 +116,7 @@ identifying are my most popular posts, as well as my least popular posts.
 
 Let's start with the top 10 posts:
 
-{{< table class="small" caption="Table 2: Top 10 Blog Posts" >}}
+{{< table class="small table-striped" caption="Table 2: Top 10 Blog Posts" >}}
 
 | Rank | Post | Combined Views |
 | --- | --- | --- |
@@ -137,7 +138,8 @@ there ;-)
 
 What about the bottom 10 posts?
 
-{{< table class="small" caption="Table 3: Bottom 10 Blog Posts" >}}
+{{< table class="small table-striped"
+caption="Table 3: Bottom 10 Blog Posts" >}}
 
 | Rank | Post | Combined Views |
 | --- | --- | --- |
@@ -235,7 +237,7 @@ of referrals, I encountered the largest HTML table I've ever seen on a page
 into my Excel workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
 
 | URL | Hits | Last Date |
@@ -260,7 +262,7 @@ However, adding up the numbers for the top 10 referrals accounts for less than
 
 Breaking down the referrals by domain name, I found the following:
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages" >}}
 
 | Domain | Hits |

@@ -279,7 +279,7 @@ AssemblyVersionInfo.txt file. To do this, add a new **InvokeProcess** activity
 at the beginning of the **Update Build Number for Triggered Builds** activity in
 the **Update Build Number** sequence, and set the properties as follows:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Property | Value |
 | --- | --- |
@@ -330,7 +330,7 @@ Just below the InvokeProcess activity added earlier (inside the **Update Build
 Number for Triggered Builds** activity), add a new **MSBuild** activity, and set
 the properties as follows:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Property | Value |
 | --- | --- |
@@ -511,7 +511,7 @@ In case you are wondering how I configure build definitions, here are the
 settings for the "daily build" as an example. If a setting is not listed in the
 following table, it means the default is used.
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Build Definition: \"Automated Build - Main\"" >}}
 
 | Section | Property | Value |

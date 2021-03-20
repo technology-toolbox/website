@@ -86,7 +86,8 @@ Therefore, let's instead break the price into two parts: **Unit Price** and
 **Unit of Measure**. We can then use a calculated column for **Price (**in order
 to concatenate the values specified in the other two columns).
 
-{{< table class="small" caption="Data for \"This Week's Specials\"" >}}
+{{< table class="small table-striped"
+caption="Data for \"This Week's Specials\"" >}}
 
 | Title | Unit Price | Unit of Measure | Price | Rollup Image |
 | --- | --- | --- | --- | --- |

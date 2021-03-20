@@ -72,7 +72,7 @@ In case you are wondering how I configured the gated check-in build definition,
 here are the settings I used. If a setting is not listed in the following table,
 it means the default is used.
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Build Definition: \"Gated Check-in - Main\"" >}}
 
 | Section | Property | Value |

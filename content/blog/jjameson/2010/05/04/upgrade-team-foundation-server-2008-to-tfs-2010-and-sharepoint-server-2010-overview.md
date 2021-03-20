@@ -116,7 +116,7 @@ with my comments for each task. Note that in my
 I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server
 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
 
-{{< table class="small" caption="Preparation" >}}
+{{< table class="small table-striped" caption="Preparation" >}}
 
 | Task | Comments |
 | --- | --- |
@@ -140,7 +140,8 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server
 
 {{< /table >}}
 
-{{< table class="small" caption="Team Foundation Server Upgrade" >}}
+{{< table class="small table-striped"
+caption="Team Foundation Server Upgrade" >}}
 
 | Task | Comments |
 | --- | --- |

@@ -98,7 +98,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 6. Add the columns specified in the following table:
    
-   {{< table class="small" >}}
+   {{< table class="small table-striped" >}}
    
    | Column Name | Description | Type | Required | Additional Information | Default | Add to Default View |
    | --- | --- | --- | --- | --- | --- | --- |
@@ -124,7 +124,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 7. Configure the following views:
    
-   {{< table class="small" >}}
+   {{< table class="small table-striped" >}}
    
    | View | Columns | Sort | Filter | Group By |
    | --- | --- | --- | --- | --- |
@@ -148,7 +148,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 10. Create and configure the various project summary Web Parts based on the underlying Work Items list:
     
-    {{< table class="small" >}}
+    {{< table class="small table-striped" >}}
     
     | Web Part | Columns | Sort | Filter | Group By | Item Limit |
     | --- | --- | --- | --- | --- | --- |

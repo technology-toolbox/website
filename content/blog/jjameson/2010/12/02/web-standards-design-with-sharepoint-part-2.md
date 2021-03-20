@@ -151,7 +151,7 @@ Here are the corresponding work items that I added to the TFS project (note that
 these are in addition to the "default" work items listed in
 [my previous post](/blog/jjameson/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template)):
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Initial work items for the Tugboat project (partial list)" >}}
 
 | Work Item Type | Title |

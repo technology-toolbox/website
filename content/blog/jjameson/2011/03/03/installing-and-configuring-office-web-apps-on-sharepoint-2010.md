@@ -54,7 +54,7 @@ TechNet article.
 The relevant service accounts for the Fabrikam extranet site are listed in the
 following table.
 
-{{< table class="small" caption="Table 1 - Service Accounts" >}}
+{{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
 
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |
@@ -252,7 +252,7 @@ database files.
    left, click **Files**.
 
 5. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
-   {{< table class="small"
+   {{< table class="small table-striped"
    caption="Table 2 - Initial data and log file sizes" >}}
    
    | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |

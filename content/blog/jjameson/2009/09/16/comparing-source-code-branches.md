@@ -123,7 +123,7 @@ Note that I put the word *magic* in quotes because it's really not magic at all.
 When copying a source code branch, I simply use robocopy.exe and specify the
 following options:
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="robocoby.exe command-line options used in CopyBranch.cmd" >}}
 
 | Command-Line Option | Comments |

@@ -60,7 +60,7 @@ Using Expression Web, I created a site under the TFS workspace for the Caelum
 project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders and
 files corresponding to the basic structure of the website.
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Sample HTML content for the Caelum prototype" >}}
 
 | File | Description |

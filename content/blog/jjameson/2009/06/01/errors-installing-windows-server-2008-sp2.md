@@ -80,7 +80,7 @@ linkHref="http://technet.microsoft.com/en-us/library/dd351467(WS.10).aspx" >}}
 
 Here are the disk space requirements according to the deployment guide:
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Disk Space Requirements for Windows Server 2008 SP2" >}}
 
 | Installation method | Approximate disk space requirements |

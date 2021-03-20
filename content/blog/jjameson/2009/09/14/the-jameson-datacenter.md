@@ -98,7 +98,7 @@ I digress...
 
 The following table provides more detail on the various servers:
 
-{{< table class="small" caption="Server Configurations" >}}
+{{< table class="small table-striped" caption="Server Configurations" >}}
 
 | Server | Role(s) | Operating System | Domain |
 | --- | --- | --- | --- |

@@ -45,7 +45,7 @@ made, you can enable Item Version History on the list. Simply click **Settings**
 
 For example, here are the contents of the list for my current project:
 
-{{< table class="small" caption="Builds" >}}
+{{< table class="small table-striped" caption="Builds" >}}
 
 | Title | Version |
 | --- | --- |

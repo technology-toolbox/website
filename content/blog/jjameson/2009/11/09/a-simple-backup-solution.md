@@ -116,7 +116,7 @@ of backups on various schedules.
 
 Here are the scheduled backups on one of my servers (BEAST):
 
-{{< table class="small" caption="Scheduled Backups on BEAST" >}}
+{{< table class="small table-striped" caption="Scheduled Backups on BEAST" >}}
 
 | Name | Schedule |
 | --- | --- |

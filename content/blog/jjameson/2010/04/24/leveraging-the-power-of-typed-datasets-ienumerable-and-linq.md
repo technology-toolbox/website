@@ -110,7 +110,8 @@ period specified in the underlying data.
 To help visualize this, consider the following example summary view for a KPI
 scorecard:
 
-{{< table class="small" caption="Key Performance Indicators (Summary)" >}}
+{{< table class="small table-striped"
+caption="Key Performance Indicators (Summary)" >}}
 
 | KPI | 2009 Q3 | 2009 Q4 | 2010 Q1 |
 | --- | --- | --- | --- |
@@ -145,7 +146,8 @@ Similar to the **GetScorecardSummaryTable** method, the
 subsequently be rendered by the presentation tier (i.e. the ASP.NET user
 control). Perhaps something like this:
 
-{{< table class="small" caption="Key Performance Indicators (Detail)" >}}
+{{< table class="small table-striped"
+caption="Key Performance Indicators (Detail)" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |

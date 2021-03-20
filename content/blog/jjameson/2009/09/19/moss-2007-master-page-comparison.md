@@ -32,7 +32,8 @@ master page that could be used for:
 Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:
 
-{{< table class="small" caption="MOSS 2007 Master Page Comparison" >}}
+{{< table class="small table-striped"
+caption="MOSS 2007 Master Page Comparison" >}}
 
 | Placeholder | application.master | default.master |
 | --- | --- | --- |

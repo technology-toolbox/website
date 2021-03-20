@@ -25,7 +25,8 @@ In my
 I showed an example KPI dashboard for a Web application with a table similar to
 the following:
 
-{{< table class="small" caption="Key Performance Indicators (Detail)" >}}
+{{< table class="small table-striped"
+caption="Key Performance Indicators (Detail)" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
@@ -233,7 +234,7 @@ in a moment.
 Running the Web application at this point renders a simple table similar to the
 following:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Threshold - Exceeds | Threshold - Meets | Threshold - Does Not Meet |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -291,7 +292,7 @@ event:
 Running the Web application at this point shows the images in place of the
 lengthy column headings, similar to the following:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -374,7 +375,7 @@ binding the GridView control:
 Running the Web application at this point shows the **Thresholds** header above
 the corresponding columns, similar to the following:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
 | --- | --- | --- | --- | --- |
@@ -440,7 +441,7 @@ a LinkButton to test this very scenario. If you click the button (to cause a
 post back), the GridView renders itself from view state, similar to the
 following:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- | --- | --- | --- | --- |

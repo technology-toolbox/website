@@ -85,7 +85,7 @@ Application event log:
    **Application**, and then click **Next**.
 7. On the **Build Event Expression**page:
    1. Specify the following expression:
-      {{< table class="small" >}}
+      {{< table class="small table-striped" >}}
       
       | Parameter Name | Operator | Value |
       | --- | --- | --- |

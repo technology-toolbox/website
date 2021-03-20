@@ -54,7 +54,7 @@ Anyway, back to the default recovery models...
 From our freshly rebuilt DEV SharePoint environment, here are the databases and
 the various default recovery models:
 
-{{< table class="small" >}}
+{{< table class="small table-striped" >}}
 
 | Database Name | Default Recovery Model |
 | --- | --- |

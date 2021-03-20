@@ -60,7 +60,7 @@ account other than the SharePoint farm account.
 The following table lists the service accounts that I recommend when configuring
 Search in SharePoint Server 2010:
 
-{{< table class="small"
+{{< table class="small table-striped"
 caption="Service accounts related to Search in SharePoint Server 2010" >}}
 
 | User logon name | Full name | Description |
