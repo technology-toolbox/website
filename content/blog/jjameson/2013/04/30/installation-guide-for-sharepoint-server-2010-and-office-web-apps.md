@@ -2937,6 +2937,8 @@ Edit the site home page to:
 - Remove or replace the page image
 - Remove the **Getting Started** text
 
+{{< div-block-start "appendix no-numbered-headings" >}}
+
 # Appendix A - Planning worksheets
 
 There are a number of configuration parameters that need to be determined before
@@ -3062,5 +3064,7 @@ health data collection is *not* recommended in these environments.
 | Repeat within the day | No | Yes<br>Every 30 minutes<br>For 1440 minutes |
 
 {{< /table >}}
+
+{{< div-block-end >}}
 
 {{< article-block-end >}}
