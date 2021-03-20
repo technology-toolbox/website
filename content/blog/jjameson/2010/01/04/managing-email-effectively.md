@@ -102,8 +102,8 @@ rules. Note that most of these rules follow the same basic structure:
 {{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
-sent to people or distribution list\
-move it to the specified folder\
+sent to [people or distribution list](#)\
+move it to the [specified](#) folder\
 except if my name is in the To or Cc box\
 stop processing more rules
 
@@ -115,8 +115,8 @@ follows:
 {{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
-sent to SharePoint 2010 Discussion\
-move it to the SharePoint 2010 folder\
+sent to [SharePoint 2010 Discussion](#)\
+move it to the [SharePoint 2010](#) folder\
 except if my name is in the To or Cc box\
 stop processing more rules
 
@@ -145,7 +145,7 @@ Notifications** rule as follows:
 
 Apply this rule after the message arrives\
 from [xxx@microsoft.com](mailto:xxx@microsoft.com)\
-move it to the TFS Notifications folder
+move it to the [TFS Notifications](#) folder
 
 {{< /blockquote >}}
 
@@ -157,8 +157,8 @@ Further down the list of email rules, I have one named **High Priority Items**:
 {{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
-from Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John
-MacCatherine\
+from
+[Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine](#)\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -173,7 +173,7 @@ Note that I also have a **Project Mail** rule configured for similar purposes:
 {{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
-sent to FrontierV3Dev or KPMG-COM Project Team or ...\
+sent to [FrontierV3Dev or KPMG-COM Project Team or ...](#)\
 stop processing more rules
 
 {{< /blockquote >}}
@@ -184,7 +184,7 @@ Items** and is configured as follows:
 {{< blockquote "fst-italic" >}}
 
 Apply this rule after the message arrives\
-move it to the Low Priority Items folder\
+move it to the [Low Priority Items](#) folder\
 except if my name is in the To or Cc box
 
 {{< /blockquote >}}

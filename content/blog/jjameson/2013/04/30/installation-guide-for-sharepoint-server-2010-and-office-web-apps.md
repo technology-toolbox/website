@@ -193,9 +193,8 @@ Deploying the Fabrikam solution consists of the following tasks:
 
 There are a number of configuration parameters that need to be determined before
 installing a solution based on SharePoint Server 2010. The various parameters
-and configuration settings for the Fabrikam Extranet can be found in Appendix A
-
-- Planning worksheets.
+and configuration settings for the Fabrikam Extranet can be found in
+[Appendix A - Planning worksheets](#Appendix-A-Planning-worksheets).
 
 ## Environments and naming conventions
 
@@ -338,8 +337,11 @@ Expand the primary VHD for development VMs to a minimum of 33 GB.
 
 To improve the performance of SharePoint development environments, create two
 additional virtual hard drives (D: and L:). Whenever possible, spread the VHD
-files across multiple physical disks on the host, as illustrated in Figure 1, to
-reduce I/O contention.
+files across multiple physical disks on the host, as illustrated in
+[Figure 1](#Figure_1:_SharePoint_development_VM_configuration), to reduce I/O
+contention.
+
+{{< anchor name="Figure_1:_SharePoint_development_VM_configuration" >}}
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" title="Figure 1: SharePoint development VM configuration" >}}
 
@@ -444,7 +446,7 @@ To create the necessary service accounts:
 2. Select the node in the domain tree to contain the service accounts.
 3. On the **Action** menu, point to **New**, and then click **User**.
 4. In the **New User**dialog:
-   1. Enter the information from Table 2.
+   1. Enter the information from [Table 2](#Table_2_-_Service_accounts).
    2. Click **Next**.
    3. Clear the **User must change password at next logon** checkbox.
    4. Select the **User cannot change password** checkbox.
@@ -509,7 +511,7 @@ To map the host name for a Web application to the loopback address:
    notepad %WINDIR%\System32\Drivers\etc\hosts
    ```
 
-3. In Notepad, add a line to map the loopback address (127.0.0.1) to the "local" version of each host header specified in Table 7. For example:
+3. In Notepad, add a line to map the loopback address (127.0.0.1) to the "local" version of each host header specified in [Table 7](#Table_7_-_Web_applications). For example:
    
    ```
    127.0.0.1 	extranet-local.fabrikam.com
@@ -556,7 +558,7 @@ To enable host names that are mapped to the loopback address:
 
 5. Right-click **BackConnectionHostNames**, and then click **Modify**.
 
-6. In the **Value data** box, type the host header corresponding to each Web application specified in Table 7. For example:
+6. In the **Value data** box, type the host header corresponding to each Web application specified in [Table 7](#Table_7_-_Web_applications). For example:
    
    > {{< kbd "extranet.fabrikam.com" >}}
    > 
@@ -722,7 +724,8 @@ To install SQL Server:
 12. On the **Disk Space Requirements** page, ensure there is sufficient disk
     space available, and then click **Next**.
 13. On the **Server Configuration** step, on the **Service Accounts**tab:
-    1. Enter the service accounts as specified in Table 2.
+    1. Enter the service accounts as specified in
+       [Table 2](#Table_2_-_Service_accounts).
     2. Ensure the **Startup Type** for **SQL Server Database Engine** is set to
        **Automatic**.
     3. Click **Next.**
@@ -969,7 +972,8 @@ To install SharePoint Server 2010:
 6. On the **Server Type** tab, click **Complete**.
 
 7. On the **File Location** tab, change the installation and search index paths
-   according to Table 3, and then click **Install Now**.
+   according to [Table 3](#Table_3_-_Installation_file_locations), and then
+   click **Install Now**.
 
 8. Wait for the installation to finish.
 
@@ -1024,7 +1028,7 @@ To run the configuration wizard and configure the farm:
    1. In the **Database server** box, type the name of the computer that is
       running SQL Server.
    2. In the **Username** box, type the user name of the server farm account
-      specified in Table 2.
+      specified in [Table 2](#Table_2_-_Service_accounts).
    3. In the **Password** box, type the password for the service account.
    4. Click **Next**.
 
@@ -1055,7 +1059,7 @@ To run the configuration wizard and configure the farm:
    do the following:
    
    1. Select the **Specify port number** checkbox and type the port number
-      specified in Table 7.
+      specified in [Table 7](#Table_7_-_Web_applications).
    2. In the **Configure Security Settings** section, ensure NTLM is selected.
    3. Click **Next**.
 
@@ -1076,9 +1080,10 @@ To run the configuration wizard and configure the farm:
     > SharePoint Central Administration site to the **Local intranet** zone and
     > configure the default settings for this zone in Internet Explorer.
     > Instructions for configuring these settings are provided in a following
-    > section (Add SharePoint Central Administration to the Local intranet
-    > zone). In order to complete the steps in this section, type your username
-    > and password to access Central Administration.
+    > section
+    > ([Add SharePoint Central Administration to the Local intranet zone](#Add_SharePoint_Central_Administration_to_the_Local_intranet_zone)).
+    > In order to complete the steps in this section, type your username and
+    > password to access Central Administration.
     
     {{< /div-block >}}
 
@@ -1095,7 +1100,7 @@ following the process described in the previous section. However, rather than
 selecting the option to create a new farm, instead select the option to join an
 existing farm and then follow the wizard steps to join the farm.
 
-## Add SharePoint Central Administration to the Local intranet zone
+## Add SharePoint Central Administration to the Local intranet zone {#Add_SharePoint_Central_Administration_to_the_Local_intranet_zone}
 
 Adding the Central Administration site to the **Local intranet** zone (and using
 the default settings for this zone) enables single sign-on when accessing the
@@ -1264,14 +1269,16 @@ To configure diagnostic logging:
 2. On the Central Administration home page, click **Monitoring**.
 3. In the **Reporting** section, click **Configure diagnostic logging**.
 4. On the **Diagnostic Logging** page, configure the settings as specified in
-   Table 4, and then click **OK**.
+   [Table 4](#Table_4_-_Diagnostic_logging), and then click **OK**.
 
 To configure usage and health data collection:
 
 1. On the **Monitoring** page in Central Administration, in the **Reporting**
    section, click **Configure usage and health data collection**.
 2. On the **Configure web analytics and health data collection** page, configure
-   the settings as specified in Table 5, and then click **OK**.
+   the settings as specified in
+   [Table 5](#Table_5_-_Web_analytics_and_health_data_collection), and then
+   click **OK**.
 
 ## Configure service accounts
 
@@ -1298,7 +1305,8 @@ To configure service accounts:
 2. On the **Service Accounts** page, click **Register new managed account**.
 3. On the **Register Managed Account** page, in the **Account Registration**
    section, type the username and password for the service account for search
-   services listed in Table 2, and the click **OK**.
+   services listed in [Table 2](#Table_2_-_Service_accounts), and the click
+   **OK**.
 4. Repeat the previous steps to add the remaining SharePoint managed accounts
    listed in Table 2.
 
@@ -1313,7 +1321,8 @@ To configure the outgoing e-mail settings:
 2. On the **System Settings** page, in the **E-Mail and Text Messages (SMS)**
    section, click **Configure outgoing e-mail settings**.
 3. On the **Outgoing E-Mail Settings** page, in the **Mail Settings** section,
-   configure the following settings from the values specified in Table 6:
+   configure the following settings from the values specified in
+   [Table 6](#Table_6_-_Outgoing_e-mail_settings):
    - **Outbound SMTP server**
    - **From address**
    - **Reply-to address**
@@ -1380,9 +1389,12 @@ If installing the solution to a different URL, set the environment variable
 FABRIKAM\_EXTRANET\_URL to the URL of the site. To install Debug builds, set the
 environment variable FABRIKAM\_BUILD\_CONFIGURATION to Debug.
 
-For example, Figure 2 shows the environment variables for a local development VM
-(where FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
+For example, [Figure 2](#Figure_2:_Setting_environment_variables) shows the
+environment variables for a local development VM (where
+FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
 [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
+
+{{< anchor name="Figure_2:_Setting_environment_variables" >}}
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" title="Figure 2: Setting environment variables" >}}
 
@@ -1487,7 +1499,8 @@ To create the Web application using the PowerShell scripts:
 7. Wait for the script to complete and verify no errors occurred during the
    process.
 
-8. Proceed to the next section (Expand content database files).
+8. Proceed to the next section
+   ([Expand content database files](#Expand_content_database_files)).
 
 To create the Web application using SharePoint Central Administration:
 
@@ -1499,8 +1512,8 @@ To create the Web application using SharePoint Central Administration:
    2. In the **IIS Web Site**section:
       1. Click **Create a new IIS web site**.
       2. In the **Port** and **Host Header** boxes, type the corresponding
-         values for the **Fabrikam Extranet** Web application specified in Table
-         7.
+         values for the **Fabrikam Extranet** Web application specified in
+         [Table 7.](#Table_7_-_Web_applications)
    3. In the **Security Configuration** section, under **Allow Anonymous**,
       click **Yes**.
    4. In the **Claims Authentication Types**section:
@@ -1515,7 +1528,8 @@ To create the Web application using SharePoint Central Administration:
       1. Click **Create a new application pool**.
       2. Under **Select a security account for this application pool**, click
          **Configurable**, and then select the service account specified in
-         Table 7 for the Fabrikam Extranet Web application.
+         [Table 7](#Table_7_-_Web_applications) for the Fabrikam Extranet Web
+         application.
    6. In the **Database Name and Authentication** section, in the **Database
       Name** box, type the corresponding value from Table 7.
    7. In the **Service Application Connections** section, ensure **default** is
@@ -1531,7 +1545,8 @@ To create the initial site collections using SharePoint Central Administration:
    ensure the Fabrikam Extranet Web application is selected
    ([**http://extranet.fabrikam.com**](http://extranet.fabrikam.com)).
 3. In the **Title and Description** section, type the title and description for
-   the site collection using the corresponding values specified in Table 8.
+   the site collection using the corresponding values specified in
+   [Table 8](#Table_8_-_Site_collections).
 4. In the **Web Site Address** section, specify the path to use based on the
    value specified in Table 8.
 5. In the **Template Selection** section, in the **Select a template** list,
@@ -1546,7 +1561,7 @@ To create the initial site collections using SharePoint Central Administration:
 10. Wait for the site collection to be created and then click **OK**.
 11. Create the remaining site collections specified in Table 8.
 
-## Expand content database files
+## Expand content database files {#Expand_content_database_files}
 
 By default, SharePoint content database files are created with very small
 initial sizes but with autogrowth enabled. Specifically, the data and log files
@@ -1571,8 +1586,9 @@ To increase the size of the database files:
    **Properties**.
 4. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
-5. Using the settings specified in Table 9, type the new values for **Initial
-   Size** and **Autogrowth**.
+5. Using the settings specified in
+   [Table 9](#Table_9_-_Initial_data_and_log_file_sizes), type the new values
+   for **Initial Size** and **Autogrowth**.
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
@@ -1698,7 +1714,7 @@ To add a public URL for HTTPS:
 3. On the **Alternate Access Mappings** page, click **Edit Public URLs**.
 4. On the **Edit Public Zone URLs**page:
    1. In the **Alternate Access Mapping Collection** section, select the Web
-      application specified in Table 7.
+      application specified in [Table 7](#Table_7_-_Web_applications).
    2. In the **Public URLs** section, copy the URL from the **Default** box to
       the **Internet** box, and change **http://** to **https://**.
    3. Click **Save**.
@@ -1749,7 +1765,8 @@ To enable anonymous access to the site using PowerShell:
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 
-5. Proceed to the next section (Configure claims-based authentication).
+5. Proceed to the next section
+   ([Configure claims-based authentication](#Configure_claims-based_authentication)).
 
 To enable anonymous access to the site using the site permissions page:
 
@@ -1760,7 +1777,7 @@ To enable anonymous access to the site using the site permissions page:
 4. In the **Anonymous Access** page, click **Entire Web site**, and then click
    **OK**.
 
-## Configure claims-based authentication
+## Configure claims-based authentication {#Configure_claims-based_authentication}
 
 {{< div-block "note" >}}
 
@@ -2139,6 +2156,8 @@ created based on the Publishing Portal template.
 
 The site should resemble the following:
 
+{{< anchor name="Figure_3:_Default_home_page_for_“Publishing_Portal”_site_in_SharePoint_Server_2010" >}}
+
 [{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png" alt="Default home page for “Publishing Portal” site in SharePoint Server 2010" class="screenshot" height="374" width="600" title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
@@ -2305,8 +2324,8 @@ To add members to SharePoint groups:
 2. Click the **Sign In** link and sign in using **Windows Authentication**.
 3. On the home page of the site, click **Site Actions** and then click **Site
    Permissions**.
-4. On the site permissions page, click the SharePoint group specified in Table
-   10.
+4. On the site permissions page, click the SharePoint group specified in
+   [Table 10](#Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement).
 5. On the **People and Groups - {Group Name}** page, in the toolbar, click
    **New**, and then click **Add Users**.
 6. In the **Grant Permissions**dialog window:
@@ -2415,11 +2434,12 @@ To configure the crawl schedules:
 5. On the **Edit Content Source** page, in the **Crawl Schedules** section,
    under **Full Crawl**, click **Create schedule**.
 6. On the **Manage Schedules** page, configure the type of schedule and the
-   schedule settings specified in [Table 11](#Table_11_-_Search_schedules), and then click **OK**.
+   schedule settings specified in [Table 11](#Table_11_-_Search_schedules), and
+   then click **OK**.
 7. On the **Edit Content Source** page, in the **Crawl Schedules** section,
    under **Incremental Crawl**, click **Create schedule**.
 8. On the **Manage Schedules** page, configure the type of schedule and the
-   schedule settings specified in [Table 11](#Table_11_-_Search_schedules), and then click **OK**.
+   schedule settings specified in Table 11, and then click **OK**.
 9. On the **Edit Content Source** page, in the **Start Full Crawl** section,
    click the **Start full crawl of this content source** checkbox.
 10. Click **OK**.
@@ -2450,7 +2470,8 @@ To install Office Web Apps:
    select **I accept the terms of this agreement**, and then click **Continue**.
 
 4. On the **Choose a file location** tab, change the path for the search index
-   files as specified in Table 3, and then click **Install Now**.
+   files as specified in [Table 3](#Table_3_-_Installation_file_locations), and
+   then click **Install Now**.
 
 5. Wait for the installation to finish.
 
@@ -2653,8 +2674,9 @@ To increase the size of the database files for the Office Web Apps cache:
    **Properties**.
 4. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
-5. Using the settings specified in Table 9, specify the new values for **Initial
-   Size** and **Autogrowth**.
+5. Using the settings specified in
+   [Table 9](#Table_9_-_Initial_data_and_log_file_sizes), specify the new values
+   for **Initial Size** and **Autogrowth**.
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
@@ -2776,8 +2798,10 @@ To install and activate the features:
    PowerShell command prompt.
 
 At this point, the home page of the Fabrikam Extranet site should resemble the
-screenshot shown in Figure 4 (but without the **Sample Style Guide** and
-**Reusable Content Sample** links).
+screenshot shown in [Figure 4](#Figure_4:_Fabrikam_Extranet_home_page) (but
+without the **Sample Style Guide** and **Reusable Content Sample** links).
+
+{{< anchor name="Figure_4:_Fabrikam_Extranet_home_page" >}}
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" title="Figure 4: Fabrikam Extranet home page" >}}
 
@@ -2785,8 +2809,9 @@ screenshot shown in Figure 4 (but without the **Sample Style Guide** and
 
 ## Configure sample content (optional)
 
-The **Sample Style Guide** and **Reusable Content Sample** links shown in Figure
-4 are created by the "Test Console" utility in the Fabrikam solution.
+The **Sample Style Guide** and **Reusable Content Sample** links shown in
+[Figure 4](#Figure_4:_Fabrikam_Extranet_home_page) are created by the "Test
+Console" utility in the Fabrikam solution.
 
 To create the sample content:
 
@@ -2845,8 +2870,8 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 
-5. Proceed to the next section (Apply the “Fabrikam Partner Site” template to
-   the top-level site).
+5. Proceed to the next section
+   ([Apply the “Fabrikam Partner Site” template to the top-level site](#Apply_custom_site_template)).
 
 To create a site collection for a Fabrikam partner using Central Administration:
 
@@ -2882,7 +2907,7 @@ To create a site collection for a Fabrikam partner using Central Administration:
     1. **Fabrikam Demo - Publishing Layouts**
     2. **Fabrikam Demo - Web Templates**
 
-### Apply the “Fabrikam Partner Site” template to the top-level site
+### Apply the “Fabrikam Partner Site” template to the top-level site {#Apply_custom_site_template}
 
 To apply the custom site template to the top-level site in the site collection:
 
@@ -2939,13 +2964,13 @@ Edit the site home page to:
 
 {{< div-block-start "appendix no-numbered-headings" >}}
 
-# Appendix A - Planning worksheets
+# Appendix A - Planning worksheets {#Appendix-A-Planning-worksheets}
 
 There are a number of configuration parameters that need to be determined before
 installing the Fabrikam Extranet solution. The various parameters and
 configuration settings are listed in the following tables.
 
-{{< table class="small table-striped" caption="Table 2 - Service accounts" >}}
+{{< table class="small table-striped" anchor="Table_2_-_Service_accounts" caption="Table 2 - Service accounts" >}}
 
 | User logon name | Full name | SharePoint managed account | Description |
 | --- | --- | --- | --- |
@@ -2962,7 +2987,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 3 - Installation file locations" >}}
+{{< table class="small table-striped" anchor="Table_3_-_Installation_file_locations" caption="Table 3 - Installation file locations" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2971,7 +2996,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 4 - Diagnostic logging" >}}
+{{< table class="small table-striped" anchor="Table_4_-_Diagnostic_logging" caption="Table 4 - Diagnostic logging" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2983,7 +3008,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 5 - Web analytics and health data collection" >}}
+{{< table class="small table-striped" anchor="Table_5_-_Web_analytics_and_health_data_collection" caption="Table 5 - Web analytics and health data collection" >}}
 
 | Setting | Value |
 | --- | --- |
@@ -2999,7 +3024,7 @@ configuration settings are listed in the following tables.
 all available space on a small VHD. Therefore enabling usage data collection and
 health data collection is *not* recommended in these environments.
 
-{{< table class="small table-striped" caption="Table 6 - Outgoing e-mail settings" >}}
+{{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 
 | Setting | Value for PROD | Value for TEST | Value for DEV |
 | --- | --- | --- | --- |
@@ -3010,7 +3035,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 7 - Web applications" >}}
+{{< table class="small table-striped" anchor="Table_7_-_Web_applications" caption="Table 7 - Web applications" >}}
 
 | Application | Port | Host Header | Allow Anonymous | Application Pool | Web Application Database Name |
 | --- | --- | --- | --- | --- | --- |
@@ -3021,7 +3046,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 8 - Site collections" >}}
+{{< table class="small table-striped" anchor="Table_8_-_Site_collections" caption="Table 8 - Site collections" >}}
 
 | Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -3029,7 +3054,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 9 - Initial data and log file sizes" >}}
+{{< table class="small table-striped" anchor="Table_9_-_Initial_data_and_log_file_sizes" caption="Table 9 - Initial data and log file sizes" >}}
 
 | Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
@@ -3040,7 +3065,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
+{{< table class="small table-striped" anchor="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
 
 | SharePoint Group | Members | Permissions |
 | --- | --- | --- |
@@ -3053,7 +3078,7 @@ health data collection is *not* recommended in these environments.
 
 {{< /table >}}
 
-{{< table anchor="Table_11_-_Search_schedules" class="small table-striped" caption="Table 11 - Search schedules" >}}
+{{< table class="small table-striped" anchor="Table_11_-_Search_schedules" caption="Table 11 - Search schedules" >}}
 
 | Setting | Full | Incremental |
 | --- | --- | --- |

@@ -30,10 +30,10 @@ Development Plan deliverable.]
 When developing custom solutions, I typically recommend a minimum of four
 environments:
 
-- Local Developer Environments (LOCAL)
-- Development Integration Environment (DEV)
-- Test Environment (TEST)
-- Production Environment (PROD)
+- [Local Developer Environments (LOCAL)](#Local_Developer_Environments_-LOCAL)
+- [Development Integration Environment (DEV)](#Development_Integration_Environment_-DEV)
+- [Test Environment (TEST)](#Test_Environment_-TEST)
+- [Production Environment (PROD)](#Production_Environment_-PROD)
 
 Since it is assumed that members of the Development team already have individual
 workstations or laptops, I typically refer to the abbreviated "DEV-TEST-PROD"
@@ -57,11 +57,11 @@ In addition to describing each environment, this post includes descriptions of
 the additional servers that are necessary to support the development process.
 These additional servers include the following:
 
-- Build Server
-- Source Control Server
-- Release Server
+- [Build Server](#Build_Server)
+- [Source Control Server](#Source_Control_Server)
+- [Release Server](#Release_Server)
 
-### Local Developer Environments (LOCAL)
+### Local Developer Environments (LOCAL) {#Local_Developer_Environments_-LOCAL}
 
 The "LOCAL" environment refers to the standard machine configuration (or virtual
 machine configuration) for each developer. It is recommended that this
@@ -98,7 +98,7 @@ isolated (for example, when integrating with external systems, each developer's
 LOCAL environment is often configured to connect to the systems corresponding to
 the DEV environment).
 
-### Development Integration Environment (DEV)
+### Development Integration Environment (DEV) {#Development_Integration_Environment_-DEV}
 
 The "DEV" environment is similar to each developer's LOCAL environment. The
 primary purpose of DEV is to provide an integration environment where the latest
@@ -145,7 +145,7 @@ environment to evaluate the progress of the solution.
 
 {{< /div-block >}}
 
-### Build Server
+### Build Server {#Build_Server}
 
 The Build Server compiles all the code in the solution and creates the
 installation. It should have the same configuration as a Local Developer
@@ -167,7 +167,7 @@ Server.
 
 {{< /div-block >}}
 
-### Source Control Server
+### Source Control Server {#Source_Control_Server}
 
 The source control system should be deployed on a server whose primary purpose
 is to be the central repository for the source code. This should be dedicated
@@ -189,7 +189,7 @@ location to ensure they can be recovered in case of hardware failure.
 
 {{< /div-block >}}
 
-### Release Server
+### Release Server {#Release_Server}
 
 The Release Server keeps an archive of the output from each successful build.
 Under the share that is used to archive the solution, there is a folder
@@ -231,7 +231,7 @@ that only members of the solution team can access the shares.
 
 {{< /div-block >}}
 
-### Test Environment (TEST)
+### Test Environment (TEST) {#Test_Environment_-TEST}
 
 This environment should mirror the same configuration as the production
 environment as much as possible. Having an exact replica of the deployed
@@ -268,7 +268,7 @@ decide which specific build of the solution should be tested at any given time.
 "Smoke" tests are typically performed on each build in DEV. Periodically the
 Test team selects a successful build to promote to TEST.
 
-### Production Environment (PROD)
+### Production Environment (PROD) {#Production_Environment_-PROD}
 
 The Production environment is where the solution is ultimately deployed for end
 users. Strict security procedures must be enforced in this environment.

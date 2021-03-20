@@ -263,10 +263,10 @@ configuration.]
 
 For the Technology Toolbox site, most of the implementation resides in the
 master page (in other words, the content page is simply a "shell"). To
-understand why, refer to the next section (HTTP 404 Errors). The master page
-provides just enough HTML to indicate that something went wrong, along with
-links back to the home page (via the company logo) or to submit additional
-information (via the "Contact" form).
+understand why, refer to the next section ([HTTP 404 Errors](#HTTP_404_Errors)).
+The master page provides just enough HTML to indicate that something went wrong,
+along with links back to the home page (via the company logo) or to submit
+additional information (via the "Contact" form).
 
 #### Generic.aspx
 
@@ -389,7 +389,7 @@ than sit there and try adding things like "/user/CreateUser.aspx" to a URL on
 your site. (Yes, this is a real example from my own logs. Shame on you --
 whoever you are at IP 96.31.35.33!)]
 
-### HTTP 404 Errors
+### HTTP 404 Errors {#HTTP_404_Errors}
 
 Imagine that I send you an email and refer you to my blog, but I mistakenly type
 "bog" instead of "blog":

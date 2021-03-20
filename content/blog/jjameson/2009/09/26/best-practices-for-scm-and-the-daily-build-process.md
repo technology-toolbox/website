@@ -124,14 +124,14 @@ required for successful delivery.
 The following sections describe the steps in the build process and who is
 responsible for each part of the process:
 
-- Check-Ins
-- Automated Build Process
-- Build Verification Tests
-- Smoke Tests
-- Investigating Failures
-- Build Hand-off
+- [Check-Ins](#Check-Ins)
+- [Automated Build Process](#Automated_Build_Process)
+- [Build Verification Tests](#Build_Verification_Tests)
+- [Smoke Tests](#Smoke_Tests)
+- [Investigating Failures](#Investigating_Failures)
+- [Build Hand-off](#Build_Hand-off)
 
-### Check-Ins
+### Check-Ins {#Check-Ins}
 
 All code included in a build must be checked into source control before the
 build process is initiated. All checked-in code must compile and it is the
@@ -195,7 +195,7 @@ Each member of the Development team is responsible for ensuring the following:
 If any of the above conditions cannot be met, the code should not be checked
 into source control.
 
-### Automated Build Process
+### Automated Build Process {#Automated_Build_Process}
 
 The automated build process should:
 
@@ -215,7 +215,7 @@ mailed to the appropriate distribution list. Once the error is fixed, the build
 can be restarted. Note that the build/revision number should be incremented for
 the restarted build.
 
-### Build Verification Tests
+### Build Verification Tests {#Build_Verification_Tests}
 
 Build Verification Tests (BVTs) are a quick, automated test run on the solution
 to catch defects in the code. The BVTs should cover the major functionality of
@@ -243,7 +243,7 @@ the BVTs owned by Test, it ensures that there is a knowledge transfer between
 Development and Test for any changes to the behavior or architecture of the
 solution.
 
-### Smoke Tests
+### Smoke Tests {#Smoke_Tests}
 
 In order to successfully deploy the solution, automated tests should be written
 to survey the environments before and after the application has been deployed.
@@ -259,13 +259,13 @@ by the Test team is automated -- not manual. So whether you refer to your
 automated tests as BVTs and consider them part of a "smoke test" is really just
 a matter of semantics.
 
-### Investigating Failures
+### Investigating Failures {#Investigating_Failures}
 
 When a failure is found with the BVTs or automated smoke tests, the Test team
 should be the first point of contact to ensure that the tests are correct and
 the failure is valid.
 
-### Build Hand-off
+### Build Hand-off {#Build_Hand-off}
 
 The Release Management team should always lead the deployment of the solution,
 with Test and Development provided support as necessary.

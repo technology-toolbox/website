@@ -41,7 +41,8 @@ installing Team Foundation Server 2010 and SharePoint Server 2010. The various
 parameters and configuration settings for my environment are listed in the
 following tables.
 
-{{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
+{{< table class="small table-striped" anchor="tfs-upgrade-Table1"
+caption="Table 1 - Service Accounts" >}}
 
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |
@@ -56,7 +57,8 @@ following tables.
 
 {{< /table >}}
 
-{{< table class="small table-striped" caption="Table 2 - Domain Groups" >}}
+{{< table class="small table-striped" anchor="tfs-upgrade-Table2"
+caption="Table 2 - Domain Groups" >}}
 
 | Domain | Group Name | Group Scope | Group Type | Description |
 | --- | --- | --- | --- | --- |
@@ -66,7 +68,7 @@ following tables.
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table3"
 caption="Table 3 - SharePoint Server 2010 Installation Parameters" >}}
 
 | Parameter | Value |
@@ -78,7 +80,7 @@ caption="Table 3 - SharePoint Server 2010 Installation Parameters" >}}
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table4"
 caption="Table 4 - Outgoing E-Mail Settings" >}}
 
 | Setting | Value |
@@ -90,7 +92,7 @@ caption="Table 4 - Outgoing E-Mail Settings" >}}
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table5"
 caption="Table 5 - SharePoint Web Applications" >}}
 
 | Name | Port | Host Header | Allow Anonymous | URL | App Pool Service Account | Database Name(s) |
@@ -100,7 +102,7 @@ caption="Table 5 - SharePoint Web Applications" >}}
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table6"
 caption="Table 6 - Reporting Services Configuration Settings" >}}
 
 | Setting | Value |
@@ -112,7 +114,7 @@ caption="Table 6 - Reporting Services Configuration Settings" >}}
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table7"
 caption="Table 7 - Secure Store Target Application Settings for TFS Dashboards" >}}
 
 | Setting | Value |
@@ -125,7 +127,7 @@ caption="Table 7 - Secure Store Target Application Settings for TFS Dashboards" 
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table8"
 caption="Table 8 - TFS Configuration Settings" >}}
 
 | Setting | Value |
@@ -152,7 +154,7 @@ caption="Table 8 - TFS Configuration Settings" >}}
 
 {{< /table >}}
 
-{{< table class="small table-striped"
+{{< table class="small table-striped" anchor="tfs-upgrade-Table9"
 caption="Table 9 - Team Foundation Build Configuration Settings" >}}
 
 | Setting | Value |

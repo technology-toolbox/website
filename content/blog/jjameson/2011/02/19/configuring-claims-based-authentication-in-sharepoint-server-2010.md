@@ -56,7 +56,8 @@ browser being used).]
 The relevant service accounts for claims-based authentication are listed in the
 following table.
 
-{{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
+{{< table class="small table-striped" anchor="Table-1"
+caption="Table 1 - Service Accounts" >}}
 
 | User Logon Name | Full Name | Description |
 | --- | --- | --- |
@@ -90,8 +91,8 @@ the following high-level steps:
 ### Step 1 - Create and configure the membership/role database
 
 In this step, the database for storing ASP.NET membership and role information
-is created and the two service accounts specified in Table 1 are added to to the
-appropriate database roles.
+is created and the two service accounts specified in [Table 1](#Table-1) are
+added to to the appropriate database roles.
 
 #### To create the database used for storing ASP.NET membership and role information:
 
