@@ -7,5 +7,5 @@
     {{ $new = print $new "<caption>" . "</caption>" }}
 {{ end }}
 {{ $htmlTable := replace $htmlTable $old $new }}
-{{ $htmlTable := replace $htmlTable "<thead>" "<thead class=\"table-dark\">" }}
+{{ $htmlTable := replace $htmlTable "<thead>" "<thead class=\"table-primary\">" }}
 {{ $htmlTable | safeHTML }}
