@@ -111,7 +111,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
 Then I added the new control to the master page:
 
-```XML
+```ASP.NET
 <%@ Master ... %>
 <%@ Register Tagprefix="caelum"
   Namespace="TechnologyToolbox.Caelum.Website.Controls"
@@ -183,7 +183,7 @@ whether or not to emit the analytics script:
 I then updated the **AnalyticsScript** control to compare the URL of the current
 request with the filter specified in configuration:
 
-```C++
+```C#
         protected override void OnLoad(
             EventArgs e)
         {
@@ -338,7 +338,7 @@ The new **AnalyticsHelper** class contains some of the code originally added to
 the **AnalyticsScript** control. The original code has also been enhanced to
 support different analytics keys for DEV, TEST, and PROD:
 
-```C++
+```C#
 using System;
 using System.Globalization;
 using System.Text.RegularExpressions;

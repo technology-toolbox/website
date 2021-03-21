@@ -34,7 +34,7 @@ To do this, I created the following script and dropped it in my SharePoint
 (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Restart SharePoint
 Services.cmd):
 
-```Text
+```Batch
 @echo off
 
 @echo Stopping services...

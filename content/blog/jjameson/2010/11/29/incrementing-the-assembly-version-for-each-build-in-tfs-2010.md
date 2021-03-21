@@ -253,7 +253,7 @@ possible during the build process.]
 
 By default, the drop location is set to:
 
-```Shell
+```
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + BuildDetail.BuildNumber
 ```
 
@@ -270,7 +270,7 @@ Consequently, remove the "extraneous" folder by updating the **Set Drop
 Location** activity (inside the sequence within **If DropBuild And Build Reason
 is Triggered**) so the **DropLocation** is set to:
 
-```Shell
+```
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
 ```
 
@@ -306,7 +306,7 @@ activity, it's still a good idea to ensure proper error handling in our build
 process. Therefore, add a **Throw** activity (below the **errOutput** variable
 box) and set the **Exception** property to:
 
-```VBA
+```
 New Exception(errOutput)
 ```
 

@@ -78,7 +78,7 @@ two-step process:
 
 To convert an Excel file to a DataSet XML file:
 
-```XML
+```Console
 ConvertToDataSet.exe Sample.xslx
 ```
 

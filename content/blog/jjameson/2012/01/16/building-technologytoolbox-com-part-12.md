@@ -99,7 +99,7 @@ Consequently I spent a few minutes translating the SQL query in my head for
 grouping posts by year/month into the equivalent LINQ query against the data
 model. This is what I ended up:
 
-```JavaScript
+```C#
     var q = from entry in context.Entries
             group entry by entry.DateSyndicated.Value.Year
                 into YearGroups
@@ -274,7 +274,7 @@ query results:
 
 The **GetMonthName** method is, as expected, rather trivial:
 
-```C++
+```C#
         private static string GetMonthName(
             int month)
         {

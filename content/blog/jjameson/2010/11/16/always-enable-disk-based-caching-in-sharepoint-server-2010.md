@@ -78,7 +78,7 @@ While five database calls certainly *seems* reasonable for rendering a page
 request, the bad news is that the last three database calls resemble the
 following:
 
-```JavaScript
+```SQL
 exec proc_FetchDocForHttpGet @DocSiteId='...',@DocDirName=N'...',
     @DocLeafName=N'controls.css', ...
 

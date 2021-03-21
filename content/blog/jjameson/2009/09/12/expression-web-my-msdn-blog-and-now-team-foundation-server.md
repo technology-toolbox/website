@@ -49,7 +49,7 @@ I created, I could quickly and easily create blog posts with just the kind of
 My template simply contains a variety of markup that I commonly use when
 creating blog posts, such as:
 
-```JavaScript
+```HTML
 <blockquote class="directQuote errorMessage">
     [Direct quote, error message]</blockquote>
 ```

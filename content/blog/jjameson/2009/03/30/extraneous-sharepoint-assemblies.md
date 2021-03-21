@@ -40,7 +40,7 @@ Sometime last year, I created the following script and dropped it in my
 SharePoint [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder
 (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\DeleteExtraneousSharePointAssemblies.vbs):
 
-```VBA
+```VBScript
 Option Explicit
 
 Dim strFolder

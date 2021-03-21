@@ -101,7 +101,7 @@ eating your own dogfood!
 Thus, to circumvent the paging bug in the **Variation Logs** page, use a query
 similiar to the following:
 
-```JSON
+```SQL
 SELECT
     UserData.[nvarchar1] AS 'Log Entry'
     ,UserData.[tp_Created] AS 'Time Started (GMT)'
@@ -127,7 +127,7 @@ WHERE tp_Title = 'Long Running Operation Status'
 Note that we can actually get a significantly better query plan if we drop the
 superfluous **tp\_DirName** from the WHERE clause:
 
-```JSON
+```SQL
 SELECT
     UserData.[nvarchar1] AS 'Log Entry'
     ,UserData.[tp_Created] AS 'Time Started (GMT)'

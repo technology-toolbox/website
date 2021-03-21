@@ -80,7 +80,7 @@ caption="Sample HTML content for the Caelum prototype" >}}
 Here is the current content of the default master page for the static HTML
 prototype:
 
-```HTML
+```ASP.NET
 <%@ Master Language="C#" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -175,7 +175,7 @@ The site home page references Default.master and specifies its content using the
 needed to support the "slideshow" content (via the **AdditionalHeadContent**
 placeholder):
 
-```HTML
+```ASP.NET
 <%@ Page Title="" Language="C#" MasterPageFile="~/Default.master" %>
 <asp:Content runat="server" ContentPlaceHolderID="AdditionalHeadContent">
   <script type="text/javascript" src='/Scripts/jquery.nivo.slider.js'></script>
@@ -388,7 +388,7 @@ BlogPost.master defines a new **ContentPlaceHolder** control (i.e.
 **PostContent**) that is subsequently used to specify the content of a specific
 blog post.
 
-```HTML
+```ASP.NET
 <%@ Master Language="C#" MasterPageFile="~/Default.master"%>
 <asp:Content runat="server" ContentPlaceholderID="MainContent">
 <div id="blogPost">
@@ -701,7 +701,7 @@ Here is a sample blog page from the Caelum prototype (referencing
 BlogPost.master and specifying the content of the post in the **PostContent**
 placeholder):
 
-```HTML
+```ASP.NET
 <%@ Page Title="" Language="C#" MasterPageFile="../../../../BlogPost.master" %>
 
 <asp:Content ContentPlaceHolderID="PostContent" Runat="Server">

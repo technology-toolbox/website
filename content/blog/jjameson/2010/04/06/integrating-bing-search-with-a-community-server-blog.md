@@ -111,7 +111,7 @@ passed as query string parameters. With a little massaging of the HTML (to get
 rid of that nasty table-based layout) and crafting up some equivalent
 JavaScript, I came up with the following:
 
-```JavaScript
+```HTML
 <script language="javascript" type="text/javascript">
     function searchKeywords_onKeyPress(e) {
         if (e == null) {

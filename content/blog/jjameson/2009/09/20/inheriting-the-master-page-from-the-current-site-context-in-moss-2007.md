@@ -79,7 +79,7 @@ searching for **6850**, filtering the search results to **Library**, and then
 clicking one of the search results). Note that the `PublicationSummary` page
 class inherits from the `SharePointPage` base class.
 
-```TypeScript
+```C#
     public partial class PublicationSummary : SharePointPage,
         IView<PrimaryDocumentData.PrimaryDocumentRow>
     {

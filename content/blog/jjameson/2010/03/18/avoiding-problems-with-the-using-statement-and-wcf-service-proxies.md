@@ -107,7 +107,7 @@ and instead forcing the caller to cleanup the memory.
 The problem -- at least in my opinion -- is that the **Dispose** method in
 **ClientBase** is currently implemented as follows:
 
-```C++
+```C#
         void IDisposable.Dispose()
         {
             this.Close();
@@ -163,7 +163,7 @@ want is to wrap the object in a `using` block.]
 Wouldn't it be great if ClientBase actually implemented the **Dispose** method
 as follows?
 
-```C++
+```C#
         void IDisposable.Dispose()
         {
             if (this.State == CommunicationState.Faulted)
@@ -215,7 +215,7 @@ namespace Microsoft.ServiceModel.Samples
 With a couple of tweaks to the WCF sample code -- specifically replacing all
 instances of "`new CalculatorClient()`" with "`new CalculatorClientWithDisposeFix()`" -- the output changes from this:
 
-```HTML
+```Text
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =
@@ -235,7 +235,7 @@ Got System.ServiceModel.EndpointNotFoundException from Divide.
 
 ...to this:
 
-```JavaScript
+```Text
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =

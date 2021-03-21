@@ -93,7 +93,7 @@ and
 Here is the script that I found would need to be added to the custom master
 page:
 
-```JavaScript
+```ASP.NET
 <%--
 HACK: Bug 126525 - "Search" not working in Mozilla Firefox 3.0
 

@@ -125,7 +125,7 @@ The next step is to add field validators. For example, I added an
 
 This is how I typically markup a field validator:
 
-```XML
+```ASP.NET
 <asp:RequiredFieldValidator runat="server" ControlToValidate="contactName"
   Display="Dynamic" ErrorMessage="Name must be specified."
   Text="(required)" CssClass="validator required" ForeColor="" />
@@ -150,7 +150,7 @@ control as well.
 
 At this point, the markup for the Contact form looked like this:
 
-```XML
+```ASP.NET
   <p>
     Fill out the contact form below and you will receive a response within one business
     day. You may also send email directly to <a href="mailto:info@technologytoolbox.com">
@@ -240,7 +240,7 @@ To implement this functionality, I simply wrapped the markup shown above inside
 an ASP.NET **Panel** control (i.e. a `<div>` element) and added a second panel
 with the confirmation message:
 
-```XML
+```ASP.NET
   <asp:Panel runat="server" ID="contactForm">
     <p>
       Fill out the contact form below ...</p>
@@ -311,7 +311,7 @@ To implement the basic functionality for sending the email from
 TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to
 a new method that sends the email:
 
-```C++
+```C#
         private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
@@ -336,7 +336,7 @@ Thanks to built-in functionality in the .NET Framework, it doesn't require much
 code at all. Note that what you see above is the end result at this point after
 a little refactoring. Here is the **BuildEmailMessageBody** method:
 
-```C++
+```C#
         private string BuildEmailMessageBody()
         {
             StringBuilder buffer = new StringBuilder();
@@ -407,7 +407,7 @@ a couple of items under the **Settings** tab on the project properties:
 
 ...and updated the code accordingly:
 
-```C++
+```C#
         private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
@@ -532,7 +532,7 @@ they wish to be contacted via email.
 To accomplish this, I created a simple method to configure the form fields based
 on the currently selected option for **Preferred Contact Method**:
 
-```C++
+```C#
         private void ConfigureFormFields()
         {
             switch (preferredContactMethod.Text)
@@ -579,7 +579,7 @@ To ensure the fields are initially configured as expected, I call the
 Then I modified the **RadioButtonList** to automatically postback when the
 selected item is changed:
 
-```XML
+```ASP.NET
   <asp:RadioButtonList runat="server" ID="preferredContactMethod"
     CssClass="radio-list" RepeatDirection="Horizontal"
     AutoPostBack="true"
@@ -622,7 +622,7 @@ Generally speaking, this is how I approach AJAX-enabling a feature:
 The third item is important. For example, for step "9.2" you might start by
 adding an **UpdatePanel** around all of the form fields:
 
-```XML
+```ASP.NET
         <asp:Panel runat="server" ID="contactForm">
           <asp:UpdatePanel runat="server">
             <ContentTemplate>
@@ -642,7 +642,7 @@ However, in this particular scenario, only the **Email Address** and
 postback. Consequently, it is much more efficient to enclose only those controls
 in the **UpdatePanel**:
 
-```XML
+```ASP.NET
         <asp:Panel runat="server" ID="contactForm">
           <p>
             Fill out the contact form below...</p>

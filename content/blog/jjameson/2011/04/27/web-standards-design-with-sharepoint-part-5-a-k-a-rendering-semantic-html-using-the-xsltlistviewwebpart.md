@@ -409,7 +409,7 @@ final version of the XSL stylesheet that I developed to render items in the
 **Specials** list to match the original HTML specified by the Web designer
 (Dan):
 
-```XML
+```XSLT
 <xsl:stylesheet version='1.0'
     xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
     xmlns:msxsl='urn:schemas-microsoft-com:xslt'

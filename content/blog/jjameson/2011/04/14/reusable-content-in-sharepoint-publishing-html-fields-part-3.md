@@ -75,7 +75,7 @@ SharePoint HTTP request), then you can simply use the
 [HtmlField.GetFieldValueAsHtml](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fields.htmlfield.getfieldvalueashtml.aspx)
 method, as shown below:
 
-```JavaScript
+```C#
     HtmlField pageContentField =
         (HtmlField) page.Fields[FieldId.PublishingPageContent];
 
@@ -100,7 +100,7 @@ underlying the presentation layer.]
 
 The original code looked like this:
 
-```JavaScript
+```C#
                 if (pageContent.Contains("__publishingReusableFragment") == true)
                 {
                     // HACK: We need to "expand" the reusable content in order
@@ -161,7 +161,7 @@ warning message simply wasn't going to cut it in this case ;-)
 Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper**
 class for getting the "expanded" HTML content from a Publishing HTML field:
 
-```C++
+```C#
         public static string GetFieldValueAsHtml(
             SPWeb web,
             object value)

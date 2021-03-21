@@ -64,7 +64,7 @@ quickly responded pointing out the `PublishingWeb.GetPagesListName()` method.
 
 Unfortunately, the developer then added the following code to his feature:
 
-```HTML
+```C#
 SPList pages = web.Lists[PublishingWeb.GetPagesListName(web)];
 ```
 
@@ -92,7 +92,7 @@ The correct way to get the **Pages** list is to use the
 [`PublishingWeb.GetPagesListId`](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingweb.getpageslistid.aspx)
 method instead:
 
-```HTML
+```C#
 SPList pages = web.Lists[PublishingWeb.GetPagesListId(web)];
 ```
 

@@ -165,7 +165,7 @@ need to be tweaked after create a new site based on this template.
 A minimal amount of custom XSLT was then added to display an image based on the
 KPI value of each work item:
 
-```XML
+```XSLT
   <xsl:choose>
     <xsl:when test="@KPI='Green'">
       <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />

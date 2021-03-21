@@ -119,14 +119,14 @@ a Windows SDK command line window (as administrator in Vista:
 
 On an X86 machine, run:
 
-```Shell
+```Console
 cd %mssdk%\VC\bin
 regsvr32 vcprojectengine.dll
 ```
 
 On an X64 machine, run:
 
-```Shell
+```Console
 cd %mssdk%\VC\bin\X64
 regsvr32 vcprojectengine.dll
 ```

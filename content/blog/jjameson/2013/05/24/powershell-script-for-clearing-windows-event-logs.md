@@ -28,7 +28,7 @@ everything in that view.
 
 For example, after running:
 
-```XML
+```Console
 cscript "Clear Event Logs.vbs"
 ```
 
@@ -40,7 +40,7 @@ Consequently I switched over to using PowerShell to clear *all* the event logs
 
 I started out by simply typing the following in a PowerShell window:
 
-```JavaScript
+```PowerShell
 wevtutil el | % { wevtutil cl $_ }
 ```
 
@@ -81,7 +81,7 @@ C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
 
 ### Clear-EventLogs.ps1
 
-```XML
+```PowerShell
 <#
 .SYNOPSIS
 Clears all Windows event logs.

@@ -92,7 +92,7 @@ the .NET Framework 2.0 version of mscordacwks.dll.
 I then restarted WinDbg, attached to the IIS worker process, and ran the
 following:
 
-```C++
+```
 0:023> {{< kbd "ld mscorwks" >}}
 {{< sample-output "Symbols loaded for mscorwks" >}}
 0:023> {{< kbd ".cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727" >}}

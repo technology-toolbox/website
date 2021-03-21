@@ -52,14 +52,14 @@ SharePoint environment that has language packs installed is whether or not your
 code accesses SharePoint objects in a "language-agnostic" manner. For example,
 consider the following code:
 
-```INI
+```
     SPListItem oListItem = ...
 
     oListItem["Title"] = "My Item";
     ...
 ```
 
-```C++
+```C#
     oListItem.Update();
 ```
 
@@ -74,7 +74,7 @@ Fortunately, SharePoint has long provided the
 class that makes it easy to reference out-of-the-box fields regardless of the
 language of the SharePoint site containing the list item:
 
-```JavaScript
+```C#
     SPListItem oListItem = ...
 
     oListItem[SPBuiltInFieldId.Title] = "My Item";
@@ -90,7 +90,7 @@ Since I tend to work with large enterprise customers deploying Internet-facing
 sites with SharePoint, I work a lot with Publishing sites. Consequently, some
 time ago I wrote the following code:
 
-```JavaScript
+```C#
             ImageFieldValue pageImage =
                 (ImageFieldValue)page.ListItem["Page Image"];
 
@@ -114,7 +114,7 @@ infrastructure provides the
 **[FieldId](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fieldid.aspx)**
 class for identifying fields like "Page Image":
 
-```JavaScript
+```C#
             ImageFieldValue pageImage =
                 (ImageFieldValue)page.ListItem[FieldId.PublishingPageImage];
 

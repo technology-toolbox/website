@@ -235,7 +235,7 @@ database files.
 
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
    
-   ```XML
+   ```Console
    iisreset
    ```
 
@@ -267,7 +267,7 @@ database files.
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```JavaScript
+```SQL
 USE [master]
 GO
 ALTER DATABASE [OfficeWebAppsCache]

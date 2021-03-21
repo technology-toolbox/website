@@ -76,7 +76,7 @@ object.
 For example, consider the following method from my `SharePointHelper` class
 (which I've been using for years):
 
-```JavaScript
+```C#
      /// <summary>
     /// Finds a child Web based on the name (relative URL).
     /// </summary>

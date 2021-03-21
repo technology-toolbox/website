@@ -50,7 +50,7 @@ stored procedure sp\_dbcmptlevel.
 
 **Details:**
 
-```JavaScript
+```Text
 See the end of this message for details on invoking just-in-time (JIT) debugging instead of this dialog box.
 
 ************** Exception Text **************

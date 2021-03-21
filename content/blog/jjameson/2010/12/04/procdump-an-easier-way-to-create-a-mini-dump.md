@@ -32,7 +32,7 @@ makes this even easier. I've since made ProcDump a permanent addition to my
 Here's a little script that I keep on my desktop that shows how to write a
 mini-dump when an unhandled exception occurs in Expression Web:
 
-```Shell
+```Console
 cd C:\NotBackedUp\Temp\ExpressionWeb
 
 C:\NotBackedUp\Public\Toolbox\procdump.exe -e -ma ExpressionWeb.exe

@@ -104,7 +104,7 @@ and then iterate the code until we've completed the scenario.
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that
 encapsulates the presentation layer for the KPI scorecard:
 
-```HTML
+```ASP.NET
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KpiScorecard.ascx.cs"
     Inherits="Fabrikam.Demo.Web.UI.Tables.KpiScorecard" %>
 <div class="kpiScorecard">
@@ -251,7 +251,7 @@ little bit of code in the
 **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**
 event:
 
-```HTML
+```C#
         protected void ScorecardDetailView_RowCreated(
             object sender,
             GridViewRowEventArgs e)
@@ -306,7 +306,7 @@ lengthy column headings, similar to the following:
 Now let's add a method to insert another row into the table rendered by the
 GridView control:
 
-```C++
+```C#
         private static void AddThresholdsHeaderRow(
             GridView scorecardDetailView)
         {
@@ -391,7 +391,7 @@ the corresponding columns, similar to the following:
 Looking at the HTML source, we can see the extra table row has been inserted,
 and the `rowspan` and `colspan` attributes are being rendered as expected.
 
-```XSLT
+```HTML
     <table style="border-collapse: collapse"
         id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
         cellspacing="0">

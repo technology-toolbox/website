@@ -157,7 +157,7 @@ To package a code sample, first ensure the resulting zip file does not exist,
 and then simply call the `PackageCodeSample` function, specifying the path to
 the code to package:
 
-```VBA
+```PowerShell
 Remove-Item "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage.zip"
 
 PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"

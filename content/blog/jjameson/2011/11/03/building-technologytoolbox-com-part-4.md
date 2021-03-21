@@ -39,7 +39,7 @@ Guide to reproduce the issue and then update the CSS to resolve the bug.
 Here is the current content of the Style Guide for the static HTML prototype for
 TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 
-```HTML
+```ASP.NET
 <%@ Page language="C#" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="AdditionalHeadContent">

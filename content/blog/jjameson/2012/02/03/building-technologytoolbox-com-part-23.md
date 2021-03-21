@@ -17,7 +17,7 @@ tags: ["Subtext", "Web Development"]
 You may have noticed the following code in
 [my post from earlier today](building-technologytoolbox-com-part-22.aspx):
 
-```JavaScript
+```C#
                 ...
                 else if (string.Compare(
                     request.Url.Host,

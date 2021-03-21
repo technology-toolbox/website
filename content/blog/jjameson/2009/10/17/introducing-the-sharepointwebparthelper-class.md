@@ -62,7 +62,7 @@ after refactoring the code a few years ago on the Agilent Technologies project.
 
 Anyway, here's the code for the `SharePointWebPartHelper` class:
 
-```JavaScript
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -573,7 +573,7 @@ like I show in the code example above.
 Here's another code example where I configured a bunch of Web Parts on a search
 results page:
 
-```JavaScript
+```C#
 namespace Fabrikam.Web.Search.Configuration
 {
     /// <summary>

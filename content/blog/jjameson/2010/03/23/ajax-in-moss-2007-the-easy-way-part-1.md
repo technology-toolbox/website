@@ -56,13 +56,13 @@ Since I didn't necessarily want to limit this configuration to a SharePoint
 feature, I placed the bulk of the code in the **SharePointAjaxHelper** class.
 Consequently, enabling AJAX is simply a matter of calling the following method:
 
-```C++
+```C#
     SharePointAjaxHelper.AddAjaxWebConfigModifications(webApp);
 ```
 
 Likewise, disabling AJAX is simply a matter of calling the following method:
 
-```C++
+```C#
     SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
 ```
 
@@ -172,7 +172,7 @@ can be used to enable AJAX:
 
 {{< kbd "stsadm -o fabrikam-enableajax" >}}
 
-```XML
+```
 	Adds the necessary configuration changes to enable AJAX on a web application.
 
        -url <url of the Web application to enable AJAX on>
@@ -189,7 +189,7 @@ If you download the attached code, build it, and run the following commands, you
 can subsequently add the sample AJAX Web Part (**Fabrikam Sample AJAX Update**)
 to the home page:
 
-```XML
+```Console
 set FABRIKAM_DEMO_URL=http://fabrikam-local
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}

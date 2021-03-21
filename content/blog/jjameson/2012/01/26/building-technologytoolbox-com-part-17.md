@@ -58,7 +58,7 @@ corresponding locations within the Subtext **blog** application.
 For example, to use the custom CAPTCHA control described in my previous post,
 the Subtext skin specifies the following (in PostComment.ascx):
 
-```HTML
+```ASP.NET
 <%@ Control Language="C#" EnableTheming="false" AutoEventWireup="false"
   Inherits="Subtext.Web.UI.Controls.PostComment" %>
 <%@ Register src="~/Controls/Captcha/Captcha.ascx" TagName="Captcha"

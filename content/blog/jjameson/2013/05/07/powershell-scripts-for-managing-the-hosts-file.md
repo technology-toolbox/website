@@ -39,7 +39,7 @@ You may have noticed the Add-Hostnames.ps1 script in my
 
 The following illustrates these scripts in action:
 
-```Shell
+```Text
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-Hostnames.ps1 | sort Hostname" >}}
 
 Hostname                                                    IpAddress

@@ -1298,7 +1298,7 @@ If, like me, you get tired of cycling through the command history (F7) to
 repeatedly execute the "DR.DADA" process, then you can use the following script
 to save a few dozen keystrokes.
 
-```HTML
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 function Main()

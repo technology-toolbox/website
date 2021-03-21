@@ -29,7 +29,7 @@ NUnit would transparently perform an assertion on the actual message. In Visual
 Studio 2005, I found the following "pattern" useful for mimicking the familiar
 behavior of NUnit:
 
-```C++
+```C#
 [TestMethod()]
 [ExpectedException(typeof(ArgumentException))]
 public void FindByWhidWithInvalidWhid()

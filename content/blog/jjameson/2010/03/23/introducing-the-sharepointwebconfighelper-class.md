@@ -124,7 +124,7 @@ Notice that the code for instantiating new instances of the
 **SPWebConfigModification** class is now performed by the custom
 **SharePointWebConfigHelper** class:
 
-```JavaScript
+```C#
 using System;
 using System.Globalization;
 

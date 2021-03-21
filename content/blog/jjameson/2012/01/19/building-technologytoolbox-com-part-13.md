@@ -73,7 +73,7 @@ linkHref="http://nuget.org/packages/jQuery" >}}
 
 Now let's add a little bit of script to a sample page:
 
-```HTML
+```ASP.NET
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
   Inherits="Demo._Default" %>
 
@@ -143,7 +143,7 @@ attribute, due to the following transform specified in Web.Release.config:
 We can leverage this fact to conditionally include different versions of the
 jQuery file for Debug and Release builds, as follows:
 
-```XML
+```ASP.NET
 <% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
   <script
     src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
@@ -166,7 +166,7 @@ master page isn't actually referencing these versions).
 This technique obviously works with your own script files -- and CSS files as
 well. For example, you might end up with something like this:
 
-```XML
+```ASP.NET
 <head runat="server">
   ...
   <title>Technology Toolbox</title>
@@ -416,7 +416,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 Leveraging these new controls, the corresponding `<head>` section now looks like
 this:
 
-```XML
+```HTML
 <head runat="server">
   ...
   <title>Technology Toolbox</title>

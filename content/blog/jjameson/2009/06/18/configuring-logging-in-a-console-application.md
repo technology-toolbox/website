@@ -146,7 +146,7 @@ namespace Fabrikam.Demo.AdminConsole
 Running this program without configuring any trace listeners results in the
 following output to the console:
 
-```XML
+```
 The square root of 0 is 0.000.
 The square root of 1 is 1.000.
 The square root of 2 is 1.414.
@@ -200,7 +200,7 @@ of the application with the ".config" file name extension added).
 
 With this configuration, the console output shows:
 
-```JavaScript
+```Console
 defaultTraceSource Information: 0 : AdminConsole.exe
 defaultTraceSource Verbose: 0 : Starting processing...
 defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
@@ -275,7 +275,7 @@ debugging and information messages, and only show warning and error messages.
 
 With this configuration, the console output is:
 
-```XML
+```
 defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
 Parameter name: d).
 The square root of 0 is 0.000.

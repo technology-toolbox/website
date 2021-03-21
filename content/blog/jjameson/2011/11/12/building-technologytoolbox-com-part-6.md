@@ -107,7 +107,7 @@ Since I authored my first blog post back in 2007, I created a couple of `for`
 loops to iterate over all months in the last 4 years and download the
 corresponding Web page to an offline file.
 
-```C++
+```C#
         private static void ExportSummaryPages(
             Uri oldBlogBaseUrl,
             string summaryFolder)
@@ -166,7 +166,7 @@ destination folder exists -- since the
 [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx) method
 won't automatically create any necessary folders):
 
-```C++
+```C#
         private static void EnsureOfflineFile(
             Uri url,
             string offlineFilename)
@@ -431,7 +431,7 @@ iterating the collection of posts and processing each one individually. The
 first step is to download an offline copy of the post using the
 **EnsureOfflineFile** method shown above.
 
-```JavaScript
+```C#
         private static void ExportPosts(
             BlogMLBlog blog,
             string postsFolder,
@@ -477,7 +477,7 @@ first step is to download an offline copy of the post using the
 
 **FillPostDetail** is where things start to get more interesting...
 
-```JavaScript
+```C#
         private static void FillPostDetail(
             BlogMLBlog blog,
             BlogMLPost post,
@@ -580,7 +580,7 @@ content of each post in order to:
   from copying/pasting from Microsoft Word (e.g. curly quotes) -- since I
   frequently copy text from documents I've written when creating blog posts
 
-```C++
+```C#
         private static string TransformOriginalPostContent(
             HtmlNode postContent,
             Uri originalPostUrl,
@@ -651,7 +651,7 @@ Link translation is also relatively easy thanks to the **HtmlNode.Descendants**
 method and the fact that the URLs for each post on my new blog are very similar
 to the old URLs:
 
-```JavaScript
+```C#
         private static void TranslateLinksToOtherBlogPosts(
             HtmlNode postContent,
             Uri newBlogBaseUrl)
@@ -716,7 +716,7 @@ just use my **HtmlCleaner** class instead -- since I've used this extensively in
 the past. Note that **HtmlCleaner** is really just a thin wrapper around
 **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
-```JavaScript
+```C#
     /// <summary>
     /// Utility class for ensuring HTML is well-formed.
     /// </summary>
@@ -879,7 +879,7 @@ you can dynamically "create" new tags when creating or updating a post).
 
 Here is the helper method that adds the tags to each post:
 
-```JavaScript
+```C#
         private static void AppendBlogPostTags(
             HtmlDocument document,
             StringBuilder buffer)
@@ -1010,7 +1010,7 @@ mapping, illustrated below:
 This mapping is implemented in the **MapTagToCategory** method, which is called
 from the **FillPostCategories** method:
 
-```C++
+```C#
         private static void FillPostCategories(
             BlogMLBlog blog,
             BlogMLPost post,
@@ -1149,7 +1149,7 @@ collection of posts, calls another method to export the post comments to an
 offline file, and then processes the offline file to load the comments into the
 BlogML document:
 
-```C++
+```C#
         private static void ExportComments(
             BlogMLBlog blog,
             string commentsFolder,
@@ -1231,7 +1231,7 @@ attempts to download any comments:
 The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web
 scraping the fake Ajax request used to retrieve the comments:
 
-```C++
+```C#
         private static string GetFeedbackHtmlForPost(
             Uri postUrl)
         {

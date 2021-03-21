@@ -28,7 +28,7 @@ in the
 to recursively enumerate a folder structure, identify any empty folders, and
 subsequently delete them.
 
-```VBA
+```VBScript
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then

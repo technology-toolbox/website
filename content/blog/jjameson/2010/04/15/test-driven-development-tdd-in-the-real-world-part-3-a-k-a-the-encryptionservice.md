@@ -192,7 +192,7 @@ encrypting and decrypting the specified text!
 Well, that certainly isn't good. Let's modify the unit test a little to ensure
 that it fails based on the current implementation:
 
-```C++
+```C#
         [TestMethod]
         public void Decrypt001()
         {
@@ -220,7 +220,7 @@ Perhaps you'd rather see a more meaningful message when the test fails. In that
 case, you can specify the optional `message` parameter when using one of the
 methods on the **Assert** class:
 
-```C++
+```C#
             Assert.AreNotEqual<string>(
                 plaintext,
                 ciphertext,
@@ -528,7 +528,7 @@ Now let's focus on getting the two unit tests for the
 Start by replacing the implementation of the **Encrypt** method in the
 **InternalEncryptionService** class:
 
-```C++
+```C#
         public string Encrypt(
             string plaintext)
         {
@@ -544,7 +544,7 @@ Start by replacing the implementation of the **Encrypt** method in the
 Similarly, replace the implementation of the **Decrypt** method in the
 **InternalEncryptionService** class:
 
-```C++
+```C#
         public string Decrypt(
             string ciphertext)
         {
@@ -647,7 +647,7 @@ should try to remember to write the unit test first (ensuring that it fails
 before implementing the necessary work to make it pass). For example, add the
 following unit test to InternalEncryptionServiceTest.cs:
 
-```C++
+```C#
         /// <summary>
         /// Validates that an exception is thrown when the input string is null.
         /// </summary>
@@ -686,7 +686,7 @@ Add another unit test to validate that an empty string is also handled as
 expected (since it shouldn't take more than 30 seconds or so to copy/paste and
 make the necessary changes):
 
-```C++
+```C#
         /// <summary>
         /// Validates that an exception is thrown when the input string is empty.
         /// </summary>
@@ -780,7 +780,7 @@ to call it) when encrypting values like this."
 Consequently we should consider making the **Encrypt** and **Decrypt** methods
 more robust by adding another parameter:
 
-```XML
+```C#
 namespace Fabrikam.Demo.Security
 {
     /// <summary>

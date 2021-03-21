@@ -43,7 +43,7 @@ is:
 
 3. Start an instance of PowerShell then copy/paste the first four lines from my OneNote page:
    
-   ```VBA
+   ```PowerShell
    Add-PSSnapin Microsoft.SharePoint.PowerShell
    cd "C:\NotBackedUp\Fabrikam\Demo\Main\Source\Deployment Files\Scripts"
    cls
@@ -59,7 +59,7 @@ existing ASPX or ASCX file) then I typically just run the “Upgrade
 Solutions.ps1” script, since this shaves precious time off the iterative
 development process:
 
-```C++
+```PowerShell
 cls
 & '.\Upgrade Solutions.ps1'
 ```
@@ -68,7 +68,7 @@ If, for whatever reason, I want to run the individual scripts invoked by the
 “Redeploy Features.ps1” script, then I have a series of commands in my OneNote
 page to “DRDADA” the solutions/features:
 
-```C++
+```PowerShell
 cls
 & '.\Deactivate Features.ps1'
 & '.\Retract Solutions.ps1'
@@ -85,7 +85,7 @@ collection that I quickly want to discard, I can run the Remove-SPSite cmdlet,
 followed by “Create Site Collections.ps1” and “Redeploy Features.ps1” in order
 to quickly get back to a “known good” state:
 
-```HTML
+```PowerShell
 cls
 Remove-SPSite http://fabrikam-local/ -Confirm:$false
 & '.\Create Site Collections.ps1'
@@ -108,7 +108,7 @@ time), I can run the “Rebuild Web Application.ps1” script and then run the "
 Console" utility to populate some sample content. In my SharePoint development
 VMs, this process typically takes about two minutes:
 
-```XML
+```PowerShell
 cls
 & '.\Rebuild Web Application.ps1' -Confirm:$false
 pushd ..\..\Tools\TestConsole\bin\Debug

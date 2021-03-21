@@ -46,7 +46,7 @@ Write-Host "Success"
 When you run this script the first time, it should complete successfully and the
 output should resemble the following:
 
-```XML
+```Text
 PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
@@ -64,7 +64,7 @@ PS C:\Users\jjameson\AppData\Local\Temp>
 
 However, when you run the script again, an error occurs:
 
-```C++
+```Text
 PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
@@ -232,7 +232,7 @@ Then create a scheduled task which runs the command file.
 
 Here is the sample command file from my previous post (Rebuild Website.cmd):
 
-```C++
+```Console
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
 EXIT %ERRORLEVEL%
 ```

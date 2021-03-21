@@ -45,7 +45,7 @@ no other reason, than to
 From a Visual Studio command prompt, simply use the {{< kbd "tfpt scorch" >}}
 command. For example:
 
-```Shell
+```Console
 cd "\NotBackedUp\Dow\Collaboration\ELN HD"
 tfpt scorch Main /r
 ```
@@ -72,7 +72,7 @@ I start by invoking PowerShell from a Visual Studio command prompt, changing to
 the root folder for the project, and then storing the output from the {{< kbd
 "tf dir" >}} command in a variable:
 
-```Shell
+```PowerShell
 PowerShell
 cd C:\NotBackedUp\Dow\Collaboration
 $output = tf dir
@@ -80,7 +80,7 @@ $output = tf dir
 
 At this point, the `$output` variable contains something like:
 
-```Shell
+```Text
 $/Dow Collaboration:
 $2007
 $2010
@@ -108,7 +108,7 @@ $tfFolders = $output[1..($output.Length - 3)]
 
 Now the `$tfFolders` variable contains something like:
 
-```Shell
+```Text
 $2007
 $2010
 $BuildProcessTemplates
@@ -142,7 +142,7 @@ branch, and multiple release branches under the **Release** folder).
 
 Here are the commands to only get the **Main** branch:
 
-```JavaScript
+```Console
 tf workfold /decloak CoreServices
 tf workfold /cloak CoreServices/Dev
 tf workfold /cloak CoreServices/Release
@@ -155,7 +155,7 @@ only the **Main** branch -- for the **CoreServices** project.
 Since I probably also want to build the latest version of the ELN and Research
 Portal solutions, I can use similar commands for those folders:
 
-```JavaScript
+```Console
 tf workfold /decloak "ELN HD"
 tf workfold /cloak "ELN HD/Business Data Connectivity Models"
 tf workfold /cloak "ELN HD/Dev"

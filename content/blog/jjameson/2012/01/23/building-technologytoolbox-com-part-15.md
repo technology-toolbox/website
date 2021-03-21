@@ -84,7 +84,7 @@ Toolbox currently uses Google Site Search).
 
 The problem is due to the following code in **SubtextMasterPage**:
 
-```TypeScript
+```C#
         public void InitializeControls(ISkinControlLoader controlLoader)
         {
             ...
@@ -170,7 +170,7 @@ the Web application starts up. What I found particularly interesting is at some
 point there was intent to generate these values once per environment. At least
 that is what I inferred from the following comment:
 
-```JavaScript
+```C#
         static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
@@ -183,7 +183,7 @@ that is what I inferred from the following comment:
 
 To fix this issue, I changed the code as follows:
 
-```JavaScript
+```C#
         static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
@@ -424,7 +424,7 @@ Here is what my version of the **GravatarService** class looks like:
 In the **Comments** control, I modified the logic for displaying Gravatar images
 next to post comments:
 
-```JavaScript
+```C#
 protected void CommentsCreated(object sender, RepeaterItemEventArgs e)
 {
     if(...)
@@ -484,7 +484,7 @@ As noted in my comments in the code above, this allows greater flexibility in
 Subtext blog skins. For example, this is what is currently specified in the
 custom skin for the Technology Toolbox site (in Comments.ascx):
 
-```HTML
+```ASP.NET
 <div id="postComments">
   <h3>Comments</h3>
   ...

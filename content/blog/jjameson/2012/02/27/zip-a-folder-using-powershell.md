@@ -47,7 +47,7 @@ compress into a zip file (e.g. C:\NotBackedUp\Fabrikam.zip).
 Assuming you have installed the PowerShell Community Extensions, you could
 simply execute the following in Windows PowerShell:
 
-```C++
+```Text
 PS C:\Users\jjameson> {{< kbd "Import-Module Pscx" >}}
 PS C:\Users\jjameson> {{< kbd "cd C:\NotBackedUp" >}}
 {{< sample-output "C:\NotBackedUp" >}}
@@ -340,7 +340,7 @@ function CountZipItemsRecursive(
 
 The final step is to use these functions to create the zip file:
 
-```C++
+```Text
 PS C:\NotBackedUp> {{< kbd "$directory = Get-Item \"C:\NotBackedUp\Fabrikam\"" >}}
 PS C:\NotBackedUp> {{< kbd "ZipFolder $directory" >}}
 {{< sample-output "Creating zip file for folder (C:\NotBackedUp\Fabrikam)..." >}}

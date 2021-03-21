@@ -43,7 +43,7 @@ title="Figure 1: Constrained table" >}}
 
 Here is the sample ASP.NET page that I created this morning to demonstrate this:
 
-```CSS
+```ASP.NET
 <%@ Page Language="C#" AutoEventWireup="true"
     CodeBehind="ConstrainedTable.aspx.cs"
     Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>

@@ -122,7 +122,7 @@ Then I created a second unit test to verify the filter _does_ match an
 The next step was to translate these **TypeAssertion** unit tests into
 equivalent unit tests for the **JScriptAssertion** class:
 
-```JavaScript
+```C#
         [TestMethod()]
         public void JScriptAssertionTest001()
         {
@@ -176,7 +176,7 @@ BaseException instanceof HttpRequestValidationException";
 From there, I simply kept "iterating" the JavaScript filter being tested until
 it resembled the filter that I was having trouble with:
 
-```JavaScript
+```C#
         [TestMethod()]
         public void JScriptAssertionTest003()
         {

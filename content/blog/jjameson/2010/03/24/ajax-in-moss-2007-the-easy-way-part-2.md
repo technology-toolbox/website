@@ -109,7 +109,7 @@ After changing the base class and building the solution, the following commands
 are used to update the assembly in the GAC and recycle the application pool for
 the Fabrikam site:
 
-```XML
+```Console
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
 "GAC Assemblies.cmd"
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
@@ -140,7 +140,7 @@ alternative is to instead use a little bit of code in the
 **CreateChildControls** method of the Web Part to dynamically create one, if
 necessary:
 
-```JavaScript
+```C#
             if (ScriptManager.GetCurrent(this.Page) == null)
             {
                 ScriptManager scriptHandler = new ScriptManager();

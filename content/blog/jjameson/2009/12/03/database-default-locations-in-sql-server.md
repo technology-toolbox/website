@@ -80,7 +80,7 @@ fine), you will find that SQL Server Management Studio executes the following
 SQL statements when viewing the **Database Settings** page in the **Server
 Properties** window:
 
-```JavaScript
+```SQL
 declare @RegPathParams sysname
 declare @Arg sysname
 declare @Param sysname

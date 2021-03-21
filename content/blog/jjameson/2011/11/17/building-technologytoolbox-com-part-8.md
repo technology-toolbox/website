@@ -486,7 +486,7 @@ corresponding output, I created a simple batch file.
 
 #### Rebuild Website.cmd
 
-```C++
+```Console
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
 EXIT %ERRORLEVEL%
 ```
@@ -508,7 +508,7 @@ The reason I put the quotes around "manual" is because most of the deployment is
 scripted. The only thing that needs to be done is to open a PowerShell window
 (using the **Run as administrator** option) and execute the script above.:
 
-```C++
+```Text
 PS C:\> {{< kbd "cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'" >}}
 PS C:\NotBackedUp\...\Scripts> {{< kbd "& '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9" >}}
 ```

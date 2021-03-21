@@ -102,7 +102,7 @@ Assuming the referenced site is based on the out-of-the-box Team Site template,
 the above PowerShell will output the following XML (without the nice formatting,
 of course):
 
-```INI
+```XML
 <QuickLaunch>
   <NavigationNode
       title="Libraries"
@@ -163,7 +163,7 @@ site are preserved.
 To understand how the import process should work, consider the following input
 XML:
 
-```INI
+```XML
 <QuickLaunch>
   <NavigationNode
     title="My MSDN Blog"

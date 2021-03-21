@@ -279,7 +279,7 @@ To resolve the issue, remove the WSUS registry entries specified in
 
 2. At the command prompt, type the following commands:
    
-   ```XML
+   ```Console
    net stop wuauserv
    
    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
@@ -307,7 +307,7 @@ To cleanup the network adapters:
 
 2. At the command prompt, type the following commands:
    
-   ```Shell
+   ```Console
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```
@@ -395,7 +395,7 @@ To configure the MaxPatchCacheSize policy:
 
 2. At the command prompt, type the following command:
    
-   ```XML
+   ```Console
    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
    ```
 
@@ -507,13 +507,13 @@ To map the host name for a Web application to the loopback address:
 
 2. At the command prompt, type the following command:
    
-   ```XML
+   ```Console
    notepad %WINDIR%\System32\Drivers\etc\hosts
    ```
 
 3. In Notepad, add a line to map the loopback address (127.0.0.1) to the "local" version of each host header specified in [Table 7](#Table_7_-_Web_applications). For example:
    
-   ```JSON
+   ```Text
    127.0.0.1 	extranet-local.fabrikam.com
    ```
 
@@ -1346,7 +1346,7 @@ To change the schedule for deleting timer job history:
 
 2. From the Windows PowerShell command prompt, type the following command:
    
-   ```VBA
+   ```PowerShell
    Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 12:00:00 and 13:00:00"
    ```
 
@@ -1480,7 +1480,7 @@ To create the Web application using the PowerShell scripts:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Create Web Application.ps1'
    ```
 
@@ -1492,7 +1492,7 @@ To create the Web application using the PowerShell scripts:
 
 6. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Create Site Collections.ps1'
    ```
 
@@ -1594,7 +1594,7 @@ To increase the size of the database files:
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```JavaScript
+```SQL
 USE [master]
 GO
 ALTER DATABASE [WSS_Content_FabrikamExtranet]
@@ -1634,7 +1634,7 @@ To configure object cache user accounts:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Configure Object Cache User Accounts.ps1'
    ```
 
@@ -1643,7 +1643,7 @@ To configure object cache user accounts:
 
 5. Type the following command to reset Internet Information Services (IIS):
    
-   ```XML
+   ```Console
    iisreset
    ```
 
@@ -1668,7 +1668,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
 
 2. Type the following command:
    
-   ```JavaScript
+   ```Console
    stsadm -o setapppassword -password {Key}
    ```
    
@@ -1690,7 +1690,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
 
 4. On one of the front-end Web servers, type the following command:
    
-   ```CSS
+   ```Console
    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
    ```
    
@@ -1758,7 +1758,7 @@ To enable anonymous access to the site using PowerShell:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Enable Anonymous Acess.ps1'
    ```
 
@@ -1819,13 +1819,13 @@ To create the database used for storing membership and role information:
 
 2. At the command prompt, type the following command:
    
-   ```XML
+   ```Console
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 3. Type the following command:
    
-   ```XML
+   ```Console
    aspnet_regsql.exe
    ```
 
@@ -2363,7 +2363,7 @@ To configure the State Service:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Configure State Service.ps1'
    ```
 
@@ -2395,7 +2395,7 @@ To create and configure the Search Service Application:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Configure SharePoint Search.ps1'
    ```
 
@@ -2637,7 +2637,7 @@ for caching:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Configure Office Web Apps Cache.ps1'
    ```
 
@@ -2662,7 +2662,7 @@ for caching:
 
 5. Type the following command to reset Internet Information Services (IIS):
    
-   ```XML
+   ```Console
    iisreset
    ```
 
@@ -2682,7 +2682,7 @@ To increase the size of the database files for the Office Web Apps cache:
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```JavaScript
+```SQL
 USE [master]
 GO
 ALTER DATABASE [OfficeWebAppsCache]
@@ -2753,7 +2753,7 @@ To add the new event source:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Add Event Log Sources.ps1'
    ```
 
@@ -2778,19 +2778,19 @@ To install and activate the features:
 
 3. Type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Add Solutions.ps1'
    ```
 
 4. Wait for the solutions to be added and then type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Deploy Solutions.ps1'
    ```
 
 5. Wait for the solutions to be deployed and then type the following command:
    
-   ```C++
+   ```PowerShell
    & '.\Activate Features.ps1'
    ```
 
@@ -2835,7 +2835,7 @@ To create the sample content:
 
 2. Type the following command:
    
-   ```XML
+   ```Console
    Fabrikam.Demo.Tools.TestConsole.exe
    ```
 
@@ -2863,7 +2863,7 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
 
 3. Run the **Create Partner Site Collection.ps1** script and provide the name of the partner, for example:
    
-   ```C++
+   ```PowerShell
    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
    ```
 

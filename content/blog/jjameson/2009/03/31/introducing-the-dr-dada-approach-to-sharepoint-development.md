@@ -110,7 +110,7 @@ version of the DocumentCart feature, the list will be updated accordingly -- in
 each and every environment. It's almost like "magic" -- if we ignore the fact
 that some developer had to add a tiny bit of code to the feature:
 
-```JavaScript
+```C#
       SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
          SPFieldType.Text, false);
 ```

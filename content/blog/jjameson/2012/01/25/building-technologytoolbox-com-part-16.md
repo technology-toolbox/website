@@ -119,7 +119,7 @@ TechnologyToolbox.com.
 In Mahdi's code, the configuration file is read using the **LoadConfig** method
 in his **s3capcha** helper class:
 
-```C++
+```C#
     private static bool LoadConfig()
     {
         string FilePath = "~/s3capcha/config.xml";
@@ -136,7 +136,7 @@ in his **s3capcha** helper class:
 **LoadConfig** is called from the method used to retrieve the HTML for the
 CAPTCHA control:
 
-```C++
+```C#
     public static string GetHtmlCodes(string PathTo, out int SessionValue)
     {
         bool HasValue = false;
@@ -273,7 +273,7 @@ based on Mahdi's **LoadConfig** method.
 Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
 
-```XML
+```
     CaptchaConfiguration.Instance.Message
 ```
 
@@ -334,7 +334,7 @@ I chose to encapsulate most of the CAPTCHA code from Mahdi's CodeProject sample
 in an ASP.NET user control (Captcha.ascx). This is what my original user control
 looked like:
 
-```XML
+```ASP.NET
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
 <script language="javascript" type="text/javascript"
@@ -356,7 +356,7 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 
 #### Captcha.ascx
 
-```XML
+```ASP.NET
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
 <script language="javascript" type="text/javascript"

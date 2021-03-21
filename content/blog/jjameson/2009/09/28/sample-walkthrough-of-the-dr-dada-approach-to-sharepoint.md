@@ -212,7 +212,7 @@ Assuming you've developed custom SharePoint WSPs before, the contents of
 The contents of the WSP (i.e. files and folder structure) are defined in
 **wsp\_structure.ddf**:
 
-```XML
+```
 ;
 ; This ddf specifies the structure of the .wsp solution cab file.
 ;
@@ -331,7 +331,7 @@ Features.cmd**.
 
 {{< console-block-start >}}
 
-```XML
+```
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
 ```
 
@@ -343,7 +343,7 @@ C:\Windows\system32&gt;{{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publis
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Add Solution.cmd\"" >}}
 
-```XML
+```
 Adding Fabrikam.Demo.Publishing (Debug)...
 
 Operation completed successfully.
@@ -353,7 +353,7 @@ Done
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solution.cmd\"" >}}
 
-```HTML
+```
 Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
 
 Operation completed successfully.
@@ -363,7 +363,7 @@ Done
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Features.cmd\"" >}}
 
-```HTML
+```
 Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
 
 Operation completed successfully.
@@ -390,7 +390,7 @@ Done
 
 Here are the contents of **Add Solution.cmd**:
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -447,7 +447,7 @@ any errors).
 
 Here are the contents of **Deploy Solution.cmd**:
 
-```VBA
+```Batch
 @echo off
 
 setlocal
@@ -514,7 +514,7 @@ useful for troubleshooting purposes -- for example, to quickly deploy to a
 
 Here are the contents of **Activate Features.cmd**:
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -565,7 +565,7 @@ followed by **Retract Solution.cmd**, and then finally **Delete Solution.cmd**.
 
 Here are the contents of **Deactivate Features.cmd**:
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -609,7 +609,7 @@ echo Done
 
 Here are the contents of **Retract Solution.cmd**:
 
-```VBA
+```Batch
 @echo off
 
 setlocal
@@ -652,7 +652,7 @@ echo Done
 
 Here are the contents of **Delete Solution.cmd**:
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -692,7 +692,7 @@ features. Note that while I could certainly run each script individually, I find
 it much easier to utilize another script -- namely **Redeploy Features.cmd** --
 which is simply a "wrapper" for the six scripts described previously.
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -782,7 +782,7 @@ Shared\Web Server Extensions\12).
 While we could certainly use **Redeploy Features.cmd** (or even `Redeploy Solution.cmd -quick`) it's definitely not the most efficient way to accomplish
 our goal. Enter **GAC Assemblies.cmd**:
 
-```CSS
+```Batch
 @echo off
 
 setlocal
@@ -827,7 +827,7 @@ after updating the assemblies in the GAC:
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
-```XML
+```
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
 Assembly successfully added to the cache
 Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
@@ -837,7 +837,7 @@ Done
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
 
-```XML
+```
 "SharePoint - foobar-local80" successfully recycled
 ```
 

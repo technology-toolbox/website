@@ -162,7 +162,7 @@ programmatically manipulating SharePoint lists anyway.
 Here's the code I wrote to create automatically create and configure the new
 **Specials** list:
 
-```JavaScript
+```C#
         private static void ConfigureSpecialsList(
             SPWeb web)
         {
@@ -295,7 +295,7 @@ I populate the default list items using a couple of other helper methods (but
 only if the list is empty upon activation of the feature -- in order to avoid
 adding duplicate items to the list):
 
-```C++
+```C#
         private static void CreateDefaultItemsInSpecialsList(
             SPList list)
         {
@@ -359,13 +359,13 @@ this method is straightforward and sufficient for this scenario.
 In order to add the new **XsltListViewWebPart** to the home page, I modified the
 existing **ConfigureHomeSiteDefaultPage** method that I created previously:
 
-```C++
+```C#
         private static void ConfigureHomeSiteDefaultPage(
             SPWeb homeWeb)
         {
 ```
 
-```C++
+```C#
             ...
 
             // Configure Web Parts
@@ -481,7 +481,7 @@ described below.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Tugboat\Main\Source\DeploymentFiles\Scripts), and run the following commands:
    
-   ```HTML
+   ```PowerShell
    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
    & '.\Rebuild Web Application.ps1'

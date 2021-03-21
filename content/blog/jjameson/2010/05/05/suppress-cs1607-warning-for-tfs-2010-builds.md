@@ -79,7 +79,7 @@ I ended resolving the issue by keeping **Treat warnings as errors** set to
 I pasted this immediately below the following elements (for the Debug|x86 and
 Release|x86 configurations):
 
-```JavaScript
+```XML
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 ```
 

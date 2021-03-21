@@ -56,7 +56,7 @@ existing site configuration, but those are beyond the scope of this post.]
 
 For example, consider the following method of **SharePointPublishingHelper**:
 
-```C++
+```C#
         public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
@@ -66,7 +66,7 @@ For example, consider the following method of **SharePointPublishingHelper**:
 
 Imagine that you run the following code upon activation of a feature:
 
-```JavaScript
+```C#
             SPListItem reusableContent =
                 SharePointPublishingHelper.EnsureReusableContentItem(
                     web.Site,
@@ -90,7 +90,7 @@ has not been approved. Consequently, the **EnsureReusableContentItem** method
 also takes care of approving the list item (if it does not have at least one
 approved version):
 
-```JavaScript
+```C#
         public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
@@ -397,7 +397,7 @@ Rather than simply listing the code for inserting reusable content into a page
 reviewing some of the unit tests that I created when developing the
 **InsertReusableContentIntoHtmlField** method:
 
-```XML
+```C#
         /// <summary>
         /// Basic test for appending reusable content to an HTML field.
         /// </summary>
@@ -571,7 +571,7 @@ described below.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Fabrikam\Demo\Dev\SharePointReusableContent\Source\DeploymentFiles\Scripts), and run the following commands:
    
-   ```C++
+   ```PowerShell
    $env:FABRIKAM_DEMO_URL = "http://fabrikam-local"
    $env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"
    & '.\Add Event Log Sources.ps1'

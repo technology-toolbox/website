@@ -195,7 +195,7 @@ page.
 Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 **Repeater** control:
 
-```HTML
+```ASP.NET
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -278,7 +278,7 @@ In order to generate the URL for a specific blog post, I created a simple
 post (for example,
 "/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"):
 
-```C++
+```C#
 namespace TechnologyToolbox.Caelum.Website
 {
     /// ...
@@ -322,7 +322,7 @@ namespace TechnologyToolbox.Caelum.Website
 Then I replaced the placeholders for the post URL with corresponding calls to
 the **BlogHelper.GetEntryUrl** method:
 
-```HTML
+```ASP.NET
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -365,7 +365,7 @@ replaced the sample date/time values for each post with the actual values
 specified in **DateSyndicated**. This is simply a matter of formatting the
 **DateTime** value as shown below:
 
-```HTML
+```ASP.NET
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -396,7 +396,7 @@ words, when there are no comments for a post, the markup should be `<li class="c
 should be `<li class="comments">`. This makes it very easy to show or hide the
 comments icon (and corresponding link) using CSS.
 
-```HTML
+```ASP.NET
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -439,13 +439,13 @@ In order to greatly reduce the number of roundtrips to SQL Server, I added a
 cache directive to the user control and specified a duration of five minutes
 (300 seconds):
 
-```XML
+```ASP.NET
 <%@ OutputCache Duration="300" VaryByParam="None" %>
 ```
 
 Here is the complete source for RecentPosts.ascx:
 
-```HTML
+```ASP.NET
 <%@ Control Language="C#" AutoEventWireup="true"
     CodeBehind="RecentPosts.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.RecentPosts" %>

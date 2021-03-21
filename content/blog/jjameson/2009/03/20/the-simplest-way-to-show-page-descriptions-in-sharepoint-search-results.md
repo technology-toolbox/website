@@ -48,7 +48,7 @@ Everything should be as simple as possible, but not simpler.
 If you look at the default XSL for the Search Core Results Web Part in MOSS
 2007, you will find the following:
 
-```XML
+```XSLT
     <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="hithighlightedsummary[. != '']">
@@ -67,7 +67,7 @@ Well, that certainly makes this a trivial exercise...all I need to do is reverse
 the order so that if **description** is specified, then it takes precedence over
 **hithighlightedsummary**, right?
 
-```XML
+```XSLT
     <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="description[. != '']">
@@ -165,7 +165,7 @@ required. Just use the out-of-the-box
 control instead. In your master pages, modify your `<head>` element to include
 the following:
 
-```XML
+```ASP.NET
 <asp:Literal runat="server"
     Text="&lt;meta name=&quot;description&quot; content=&quot;" /><SharePoint:FieldValue runat="server"
     FieldName="Comments" /><asp:Literal runat="server" Text="&quot;&gt;" />

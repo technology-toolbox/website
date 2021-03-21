@@ -62,7 +62,7 @@ that last one. I created it primarily for the sake of completeness.
 
 ### Get-PathFolders.ps1
 
-```XML
+```PowerShell
 <#
 .SYNOPSIS
 Gets the list of folders specified in the Path environment variable.

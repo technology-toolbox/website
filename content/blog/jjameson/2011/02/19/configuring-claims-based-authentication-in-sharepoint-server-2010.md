@@ -101,13 +101,13 @@ added to to the appropriate database roles.
 
 2. At the command prompt, type the following command:
    
-   ```XML
+   ```Console
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 3. Type the following command:
    
-   ```XML
+   ```Console
    aspnet_regsql.exe
    ```
 

@@ -397,7 +397,7 @@ included in the HTML that is inserted into the page by Google).
 
 To hide the search box in the masthead, I added the following to Search.aspx:
 
-```JavaScript
+```ASP.NET
 <asp:Content runat="server" ContentPlaceHolderID="AdditionalHeadContent">
 <style type="text/css">
   #siteSearch {
@@ -532,7 +532,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
 Here is the complete source for Search.aspx:
 
-```HTML
+```ASP.NET
 <%@ Page Title="Search - Technology Toolbox" Language="C#"
   MasterPageFile="~/Default.master" %>
 

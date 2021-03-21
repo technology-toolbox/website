@@ -223,7 +223,7 @@ URL.
 Consequently, you should add a little code to set the status code to indicate
 something went wrong:
 
-```JavaScript
+```C#
         protected void Page_Load(
                object sender,
                EventArgs e)
@@ -270,7 +270,7 @@ additional information (via the "Contact" form).
 
 #### Generic.aspx
 
-```XML
+```ASP.NET
 <%@ Page Title="Error - Technology Toolbox" Language="C#" AutoEventWireup="true"
   CodeBehind="Generic.aspx.cs" MasterPageFile="~/Errors/Error.master"
   Inherits="TechnologyToolbox.Caelum.Website.Errors.GenericErrorPage" %>
@@ -291,7 +291,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 
 #### Error.master
 
-```HTML
+```ASP.NET
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Error.master.cs"
   Inherits="TechnologyToolbox.Caelum.Website.Errors.ErrorMasterPage" %>
 
@@ -478,7 +478,7 @@ what was specified (in case he or she simply mistyped part of the URL).
 
 #### 404.aspx
 
-```HTML
+```ASP.NET
 <%@ Page Title="404 Error - Technology Toolbox" Language="C#"
   AutoEventWireup="true" CodeBehind="404.aspx.cs"
   MasterPageFile="~/Errors/Error.master"

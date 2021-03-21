@@ -27,7 +27,7 @@ checking whatsoever.
 Here is a sample of a post-build event used to create a SharePoint solution
 package:
 
-```C#
+```Batch
 @echo Creating SharePoint solution package...
 makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
 ```

@@ -94,7 +94,7 @@ In this case, let's say that after getting the Fabrikam solution from TFS and
 building the solution, Doug opens a command prompt and runs the following
 commands:
 
-```XML
+```Console
 set FABRIKAM_DEMO_URL=http://fabrikam-local
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
@@ -118,7 +118,7 @@ step-by-step...
 
 ### Step 1 - Set FABRIKAM\_DEMO\_URL environment variable
 
-```Shell
+```Console
 set FABRIKAM_DEMO_URL=http://fabrikam-local
 ```
 
@@ -133,7 +133,7 @@ accordingly.
 
 ### Step 2 - Set FABRIKAM\_BUILD\_CONFIGURATION environment variable
 
-```Shell
+```Console
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 ```
 
@@ -161,7 +161,7 @@ title="Figure 1: Setting environment variables" >}}
 
 ### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable
 
-```JavaScript
+```Console
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
 ```
 
@@ -180,7 +180,7 @@ environment variable but rather always set temporarily via a command prompt.
 
 ### Step 4 - Change to the deployment scripts folder for the custom STSADM commands
 
-```C++
+```
 {{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts" >}}
 ```
 
@@ -197,7 +197,7 @@ corresponding WSP must first be added and deployed.
 
 ### Step 5 - Add the solution for the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Commands.wsp)
 
-```XML
+```Console
 "Add Solution.cmd"
 ```
 
@@ -208,7 +208,7 @@ to make this easier and less prone to human error.
 
 ### Step 6 - Deploy Fabrikam.Demo.StsAdm.Commands.wsp
 
-```XML
+```Console
 "Deploy Solution.cmd"
 ```
 
@@ -223,7 +223,7 @@ created until step 8.
 
 ### Step 7 - Change to the top-level deployment scripts folder
 
-```Shell
+```Console
 cd ..\..\..\..\DeploymentFiles\Scripts
 ```
 
@@ -234,7 +234,7 @@ these is used to create the Fabrikam Web applications.
 
 ### Step 8 - Create the Fabrikam Web applications
 
-```XML
+```Console
 "Create Web Applications.cmd"
 ```
 
@@ -258,7 +258,7 @@ Providers**).
 
 ### Step 9 - Change to the deployment scripts folder for the custom Fabrikam Web solution
 
-```XML
+```Console
 cd ..\..\Web\DeploymentFiles\Scripts
 ```
 
@@ -271,7 +271,7 @@ part of **Fabrikam.Demo.Web.wsp** -- which is deployed using the scripts in the
 
 ### Step 10 - Add the custom Fabrikam Web solution (Fabrikam.Demo.Web.wsp)
 
-```XML
+```Console
 "Add Solution.cmd"
 ```
 
@@ -280,7 +280,7 @@ SharePoint farm.
 
 ### Step 11 - Deploy Fabrikam.Demo.Web.wsp
 
-```XML
+```Console
 "Deploy Solution.cmd"
 ```
 
@@ -289,7 +289,7 @@ be activated.
 
 ### Step 12 - Activate the features in the Fabrikam Web solution
 
-```XML
+```Console
 "Activate Features.cmd"
 ```
 
@@ -455,7 +455,7 @@ must get the root **SPWeb** from the **SPWebApplication**:
 
 Here's the relevant code from the **SharePointWebHelper** class:
 
-```JavaScript
+```C#
         /// <summary>
         /// Ensures anonymous access is enabled on the specified site.
         /// </summary>
@@ -758,7 +758,7 @@ local Fabrikam site to login.
 To remove (or prepare to rebuild) the Fabrikam Web application, run the
 following:
 
-```XML
+```Console
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
 "Delete Web Applications.cmd"
 "Retract Solutions.cmd"

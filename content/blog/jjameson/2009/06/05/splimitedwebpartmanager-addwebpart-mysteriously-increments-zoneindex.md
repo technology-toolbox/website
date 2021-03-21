@@ -50,7 +50,7 @@ if the Web Part is not found, then it uses the `CreateWebPart` method to create
 a new Web Part. Here is the original implementation of the `CreateWebPart`
 method:
 
-```C++
+```C#
     private static WebPart CreateWebPart(
         SPWebPartPages.SPLimitedWebPartManager wpm,
         string webPartId,
@@ -125,7 +125,7 @@ within the same Web Part zone) isn't always incremented as you would expect.
 
 When adding the first, second, third, and fourth Web Parts to a zone:
 
-```SQL
+```C#
     SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
 ```
 
@@ -143,7 +143,7 @@ This behavior caused some Web Parts to appear in the wrong location, and
 therefore I had to come up with a hack for it. Here is my updated version of the
 `CreateWebPart` method:
 
-```C++
+```C#
     private static WebPart CreateWebPart(
         SPWebPartPages.SPLimitedWebPartManager wpm,
         string webPartId,

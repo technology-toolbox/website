@@ -245,7 +245,7 @@ haven't found the need to do this.]
 Here's the sample Error.aspx file that I created to capture the screenshot shown
 in Figure 3:
 
-```HTML
+```ASP.NET
 <%@ Assembly Name="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="Fabrikam.Demo.Publishing.Layouts.ApplicationPages.ErrorPage" %>
@@ -348,7 +348,7 @@ converting this to semantic markup.
 For comparison purposes, here's a much simpler custom error page based on
 [a Web standards design](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1):
 
-```HTML
+```ASP.NET
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs"
  Inherits="Fabrikam.Demo.Publishing.Layouts.ApplicationPages.ErrorPage,
    Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
@@ -1261,7 +1261,7 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 
 Here is the class that implements the custom StsAdm.exe commands:
 
-```C++
+```C#
 using System;
 using System.Collections.Specialized;
 using System.Diagnostics;

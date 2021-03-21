@@ -94,7 +94,7 @@ that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo) and
 **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)**
 cmdlet in SharePoint Server 2010 to delete the site...
 
-```Shell
+```PowerShell
 Remove-SPWeb "http://foobar/Test" -Confirm:$false
 ```
 

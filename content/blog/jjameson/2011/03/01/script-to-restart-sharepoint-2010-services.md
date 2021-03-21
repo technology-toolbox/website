@@ -36,7 +36,7 @@ updated the various service names for SharePoint 2010
 (\NotBackedUp\Public\Toolbox\SharePoint\Scripts\Restart SharePoint 2010
 Services.cmd):
 
-```Text
+```Batch
 @echo off
 
 @echo Stopping SharePoint 2010 services...

@@ -103,7 +103,7 @@ Upon closer inspection, I found that each call to the
 property resulted in several database calls. Specifically, the following
 statement results in **four** calls to SQL Server:
 
-```HTML
+```
                 PublishingPage page = pages[pageUrl];
 ```
 
@@ -152,7 +152,7 @@ For example, accessing the
 **[PublishingPage.Layout](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.layout.aspx)**
 property, as shown below, actually results in two database roundtrips:
 
-```C++
+```C#
             const string expectedPageLayout = "PageFromDocLayout.aspx";
 
             if (page.Layout.Name != expectedPageLayout)

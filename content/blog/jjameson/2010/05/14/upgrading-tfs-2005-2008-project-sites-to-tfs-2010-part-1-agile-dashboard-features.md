@@ -102,7 +102,7 @@ Well, yeah, of course the team project site already exists -- that's why I'm
 trying to upgrade it with the new TFS 2010 features! Isn't that why I specified
 the following in my input file?
 
-```JavaScript
+```XML
 <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
 ```
 
@@ -118,7 +118,7 @@ it definitely left me feeling a little queasy.
 Since I was essentially blocked at that point, I decided to try running the
 command again, after making the following change to my input file:
 
-```C++
+```XML
 <ProjectSiteEnabled>false</ProjectSiteEnabled>
 ```
 
@@ -204,7 +204,7 @@ Note that you can activate the feature in a variety of ways:
 Since I have a number of TFS project sites to upgrade, I chose to activate the
 feature using PowerShell:
 
-```JSON
+```PowerShell
 Enable-SPFeature "TfsDashboardAgileMoss" -Url "http://cyclops/sites/AdventureWorks"
 ```
 

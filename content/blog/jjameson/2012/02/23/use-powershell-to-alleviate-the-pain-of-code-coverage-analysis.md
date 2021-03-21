@@ -158,7 +158,7 @@ project:
 
 The corresponding array variable in PowerShell is:
 
-```JavaScript
+```PowerShell
     [string[]] $testAssemblies =
     @(
         ("CoreServices\DeveloperTests\bin\Debug" `
@@ -229,7 +229,7 @@ Also note that if the assemblies are deployed to the global assembly cache (e.g.
 for a SharePoint feature receiver), then we need to update the assembly in the
 GAC as well:
 
-```Shell
+```PowerShell
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
@@ -384,7 +384,7 @@ function RunTests(
 Once the unit/integration tests have completed, the final step is to stop the
 code coverage profiler:
 
-```Shell
+```PowerShell
     ToggleCodeCoverageProfiling $false
 ```
 
@@ -572,6 +572,6 @@ unit/integration tests. You should be able to extract the files, create an
 your existing Web applications), and then run the PowerShell script from the
 **Source** folder to perform code coverage analysis:
 
-```C++
+```PowerShell
 & '.\Run Developer Tests with Code Coverage.ps1'
 ```

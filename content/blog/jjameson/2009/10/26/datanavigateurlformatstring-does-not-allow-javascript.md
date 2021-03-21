@@ -37,7 +37,7 @@ function instead of specifying a simple URL.
 
 My initial attempt was to specify something like :
 
-```XML
+```ASP.NET
 <asp:GridView ID="summaryGrid" runat="server"
     AutoGenerateColumns="False"
     ...>
@@ -76,7 +76,7 @@ To workaround this, use a
 [TemplateField](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.templatefield.aspx)
 instead:
 
-```XML
+```ASP.NET
 <asp:GridView ID="summaryGrid" runat="server"
     AutoGenerateColumns="False"
     ...>
@@ -106,7 +106,7 @@ instead:
 Or, if you are really paranoid about the performance impact of using reflection
 in the DataBinder.Eval method, you can use strongly typed objects instead:
 
-```XML
+```ASP.NET
 <asp:GridView ID="summaryGrid" runat="server"
    AutoGenerateColumns="False"
    ...>
@@ -137,6 +137,6 @@ in the DataBinder.Eval method, you can use strongly typed objects instead:
 Of course, if you choose to go the strongly-typed route, you will need to
 reference the assembly containing your custom business objects. For example:
 
-```XML
+```ASP.NET
 <%@ Assembly Name="Fabrikam.Demo.Integration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
 ```

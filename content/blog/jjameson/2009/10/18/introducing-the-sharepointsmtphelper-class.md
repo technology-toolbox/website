@@ -289,7 +289,7 @@ Assuming you just want to send a simple message using the default "From address"
 specified in SharePoint Central Administration, you only need a single line of
 code that passes three parameters:
 
-```SQL
+```C#
             SharePointSmtpHelper.SendMessage(
                 "jeremy_jameson@fabrikam.com",
                 "Test message",

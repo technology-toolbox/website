@@ -150,7 +150,7 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 
 Here's the updated code that I now use for my Rtf2Html.exe utility:
 
-```HTML
+```C#
 // Original source:
 // http://blogs.msdn.com/delay/archive/2008/03/13/
 // blogging-code-samples-should-be-easy-free-convertclipboardrtftohtmltext-tool-and-source-code.aspx

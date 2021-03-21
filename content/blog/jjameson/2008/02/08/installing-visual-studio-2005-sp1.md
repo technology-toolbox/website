@@ -92,7 +92,7 @@ Here is the script I developed a long time ago for installing VS 2005 SP1 (well,
 actually, I just stole the pieces from
 [Heath's blog](http://blogs.msdn.com/heaths)):
 
-```XML
+```Batch
 :: This is basically a combination of two of Heath Stewart's blog postings
 ::
 :: http://blogs.msdn.com/heaths/archive/2007/01/11/workaround-for-error-1718.aspx

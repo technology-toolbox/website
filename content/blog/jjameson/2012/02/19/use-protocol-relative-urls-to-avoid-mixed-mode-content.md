@@ -23,7 +23,7 @@ linkHref="http://github.com/Haacked/Subtext/issues/18" >}}
 
 My initial fix for this issue was to change references like:
 
-```XML
+```HTML
 <script type="text/javascript" src="http://ajax.googleapis.com/.../jquery.min.js"></script>
 ```
 
@@ -55,7 +55,7 @@ a server-relative URL).
 
 Consequently I updated my fix to incorporate Phil's recommendation:
 
-```XML
+```HTML
 <script type="text/javascript" src="//ajax.googleapis.com/.../jquery.min.js"></script>
 ```
 
@@ -67,7 +67,7 @@ discovered a similar bug on the [Search page](/Search.aspx) of
 TechnologyToolbox.com when accessing the site via HTTPS, due to the script
 reference for Google Site Search:
 
-```XML
+```HTML
 <script src='http://www.google.com/jsapi' type='text/javascript'></script>
 ```
 

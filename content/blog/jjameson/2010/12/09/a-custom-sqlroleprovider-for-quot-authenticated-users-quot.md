@@ -57,7 +57,7 @@ therefore it requires very little code to implement the custom role provider.
 
 I started by overriding the **RoleExists** method:
 
-```C++
+```C#
         public override bool RoleExists(
             string roleName)
         {
@@ -79,7 +79,7 @@ in the underlying database.
 
 Next, I proceeded to override the **IsUserInRole** method:
 
-```C++
+```C#
         public override bool IsUserInRole(
             string username,
             string roleName)
@@ -185,7 +185,7 @@ I then added the following steps to the installation guide:
 >
 > 3. Type the following command:
 >    
->    ```XML
+>    ```Console
 >    notepad administration.config
 >    ```
 >
@@ -217,7 +217,7 @@ but I was concerned about performance with tens of thousands of users.
 
 Here is the complete source for the custom role provider:
 
-```XML
+```C#
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

@@ -78,7 +78,7 @@ title="Figure 3: Entity Data Model" >}}
 With the updated model, the following LINQ query can be used to retrieve the top
 10 most popular blog posts:
 
-```JavaScript
+```C#
         using (CaelumEntities context = new CaelumEntities())
         {
             var q = (from entry in context.Entries
@@ -175,7 +175,7 @@ home page.
 In order to render an ordered list, I use an ASP.NET **Repeater** control, with
 a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 
-```HTML
+```ASP.NET
 <div class="posts-most-popular">
     <h2>
         Most Popular Posts</h2>
@@ -249,7 +249,7 @@ As with the control used to render the **Most Recent Posts** ssection, I added a
 cache directive to the new user control (PopularPosts.ascx) and specified a
 duration of one hour (3600 seconds):
 
-```XML
+```ASP.NET
 <%@ OutputCache Duration="3600" VaryByParam="None" %>
 ```
 
@@ -263,7 +263,7 @@ then make adjustments as necessary after running some load tests.)
 
 Here is the complete source for PopularPosts.ascx:
 
-```HTML
+```ASP.NET
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PopularPosts.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.PopularPosts" %>
 <%@ OutputCache Duration="3600" VaryByParam="None" %>

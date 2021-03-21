@@ -238,7 +238,7 @@ Main
 
 After running the script, you should see something like this:
 
-```XML
+```Text
 PS C:\NotBackedUp\Public\Toolbox\PowerShell> {{< kbd "& \".\Import Website Log Files.ps1\"" >}}
 Creating archive folder for compressed log files...
 Extracting compressed log files...

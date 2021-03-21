@@ -116,7 +116,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 
 Note that by specifying the height of the **modalPanelContent** element:
 
-```C++
+```C#
             modalPanelContent.Height = new Unit(100);
 ```
 

@@ -126,7 +126,7 @@ $navigationXml.OuterXml > QuickLaunch-TFS2010.xml
 
 This will output XML similar to the following:
 
-```INI
+```XML
 <QuickLaunch>
   <NavigationNode
     title="Team Web Access"
@@ -200,7 +200,7 @@ However, for consistency with new TFS 2010 project sites (in terms of
 navigation), we'll keep the title of the quick launch navigation node as
 "Calendar" and simply refer to the **Calendar** view of the **Event** list:
 
-```INI
+```XML
     <NavigationNode
       title="Calendar"
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
@@ -209,7 +209,7 @@ navigation), we'll keep the title of the quick launch navigation node as
 We also need to add nodes for the existing document libraries (e.g.
 **Development**) under the new **Libraries** heading:
 
-```INI
+```XML
     <NavigationNode
       title="Development"
       url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
@@ -502,7 +502,7 @@ sites created with TFS 2010.
 Here is the final version of the QuickLaunch-TFS2010.xml file that I used for
 upgrading my TFS project sites:
 
-```INI
+```XML
 <QuickLaunch>
   <NavigationNode
     title="Team Web Access"
