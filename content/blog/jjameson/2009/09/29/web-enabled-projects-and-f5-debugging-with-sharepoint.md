@@ -138,7 +138,7 @@ pool:
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
-```
+```XML
 Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
 Assembly successfully added to the cache
 Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
@@ -148,7 +148,7 @@ Done
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "C:\Windows\System32\inetsrv\appcmd.exe recycle apppool \"SharePoint - foobar-local80\"" >}}
 
-```
+```C++
 {{< sample-output "\"SharePoint - foobar-local80\" successfully recycled" >}}
 ```
 

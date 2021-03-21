@@ -34,7 +34,7 @@ you can use the steps described below.
 First, use the Team Foundation Server Configuration Tool to unconfigure
 components on the server:
 
-```
+```XML
 cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
 TfsConfig.exe setup /uninstall:All
 ```

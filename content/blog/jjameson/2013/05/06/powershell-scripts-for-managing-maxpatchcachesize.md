@@ -41,7 +41,7 @@ use).
 
 The following illustrates these scripts in action:
 
-```
+```C++
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Set-MaxPatchCacheSize.ps1 0" >}}
 {{< sample-output "Successfully set MaxPatchCacheSize to 0." >}}
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-MaxPatchCacheSize.ps1" >}}
@@ -60,7 +60,7 @@ PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-MaxPatchCacheSize.ps1" >}}
 
 ### Get-MaxPatchCacheSize.ps1
 
-```
+```XML
 <#
 .SYNOPSIS
 Gets the maximum percentage of disk space the Windows installer can use for the
@@ -98,7 +98,7 @@ Get-ItemProperty -Path $installerPath -Name MaxPatchCacheSize |
 
 ### Set-MaxPatchCacheSize.ps1
 
-```
+```XML
 <#
 .SYNOPSIS
 Sets the maximum percentage of disk space the Windows installer can use for the

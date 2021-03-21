@@ -62,7 +62,7 @@ that last one. I created it primarily for the sake of completeness.
 
 ### Get-PathFolders.ps1
 
-```
+```XML
 <#
 .SYNOPSIS
 Gets the list of folders specified in the Path environment variable.
@@ -113,7 +113,7 @@ If ($pathFolders -ne $null)
 
 ### Add-PathFolders.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Adds one or more folders to the Path environment variable.
@@ -219,7 +219,7 @@ end
 
 ### Remove-PathFolders.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Removes one or more folders from the Path environment variable.

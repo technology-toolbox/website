@@ -65,7 +65,7 @@ using an
 to automatically set this field whenever an item is updated (by extracting the
 image URL from the PublishingRollupImage field).
 
-```
+```C#
         public override void ItemUpdating(
             SPItemEventProperties properties)
         {

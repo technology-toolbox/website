@@ -39,7 +39,7 @@ Guide to reproduce the issue and then update the CSS to resolve the bug.
 Here is the current content of the Style Guide for the static HTML prototype for
 TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 
-```
+```HTML
 <%@ Page language="C#" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="AdditionalHeadContent">
@@ -527,7 +527,7 @@ the appearance of the out-of-the-box styles users can specify in the SharePoint
 Rich Text Editor (e.g. "Colored Heading 1") as well as the multitude of
 different table formatting options (e.g. different odd/even rows).
 
-```
+```HTML
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

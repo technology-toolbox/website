@@ -84,7 +84,7 @@ Toolbox currently uses Google Site Search).
 
 The problem is due to the following code in **SubtextMasterPage**:
 
-```
+```TypeScript
         public void InitializeControls(ISkinControlLoader controlLoader)
         {
             ...
@@ -105,7 +105,7 @@ Since I really don't want the Subtext master page to "magically" suggest other
 blog posts to users (based on what they searched for using, say, Google), I
 updated the code as follows:
 
-```
+```C#
         public void InitializeControls(ISkinControlLoader controlLoader)
         {
             ...
@@ -131,7 +131,7 @@ updated the code as follows:
 
 ...and subsequently disabled the Subtext search engine via the Web.config file:
 
-```
+```XML
   <FullTextSearchEngineSettings
     type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
     <IsEnabled>false</IsEnabled>
@@ -170,7 +170,7 @@ the Web application starts up. What I found particularly interesting is at some
 point there was intent to generate these values once per environment. At least
 that is what I inferred from the following comment:
 
-```
+```JavaScript
         static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
@@ -183,7 +183,7 @@ that is what I inferred from the following comment:
 
 To fix this issue, I changed the code as follows:
 
-```
+```JavaScript
         static SymmetricAlgorithm InitializeEncryptionAlgorithm()
         {
             SymmetricAlgorithm rijaendel = Rijndael.Create();
@@ -237,7 +237,7 @@ To fix this issue, I changed the code as follows:
 Then I generated a key and IV and specified the Base64-encoded values in my
 Web.config file:
 
-```
+```XML
   <appSettings>
     <!--
       To avoid numerous CryptographicException ("Padding is invalid and cannot
@@ -321,7 +321,7 @@ specified).
 
 Here is what my version of the **GravatarService** class looks like:
 
-```
+```C#
     public class GravatarService
     {
         public GravatarService(NameValueCollection settings)
@@ -424,7 +424,7 @@ Here is what my version of the **GravatarService** class looks like:
 In the **Comments** control, I modified the logic for displaying Gravatar images
 next to post comments:
 
-```
+```JavaScript
 protected void CommentsCreated(object sender, RepeaterItemEventArgs e)
 {
     if(...)
@@ -484,7 +484,7 @@ As noted in my comments in the code above, this allows greater flexibility in
 Subtext blog skins. For example, this is what is currently specified in the
 custom skin for the Technology Toolbox site (in Comments.ascx):
 
-```
+```HTML
 <div id="postComments">
   <h3>Comments</h3>
   ...
@@ -579,7 +579,7 @@ exist), in a **Medium** trust configuration, Subtext 2.5.2.0 actually throws a
 The problem is in the **OnLoad** method of the **CategoryEntryList** class. To
 fix this bug, I changed it to the following:
 
-```
+```C#
         protected override void OnLoad(EventArgs e)
         {
             ...

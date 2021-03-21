@@ -65,7 +65,7 @@ I think this makes more sense with an example.
 Here's the corresponding pieces from my updated Web.csproj file for the Tugboat
 SharePoint sample:
 
-```
+```XML
   <Target Name="AfterBuild">
     <CallTarget Targets="RemoveExtraneousFilesFromBuild" />
   </Target>

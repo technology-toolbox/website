@@ -29,7 +29,7 @@ I also provided a link to allow users to see the full-size image, for example:
 
 Here's some typical HTML markup for showing images in my blog posts:
 
-```
+```HTML
     <div class="image">
         <img src="http://blogs.msdn.com/photos/jjameson/images/9997719/500x258.aspx"
             alt="Hyper-V Manager showing the staggered start of various VMs"

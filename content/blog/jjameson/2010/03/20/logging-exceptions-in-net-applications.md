@@ -45,7 +45,7 @@ title="Figure 1: ASP.NET error page" >}}
 The corresponding code-behind from the page that I used to generate the above
 screenshot is listed below:
 
-```
+```C#
 using System;
 
 using Fabrikam.Demo.CoreServices.Logging;
@@ -104,7 +104,7 @@ divide by zero" message from the **DivideByZeroException**, rather than the
 In order to log exceptions, I added two new overloads for the **LogError**
 method:
 
-```
+```C#
         /// <summary>
         /// Logs the specified exception to the trace listeners.
         /// </summary>
@@ -196,7 +196,7 @@ console applications).
 
 Here is the complete source for the updated **Logger** class:
 
-```
+```C#
 #define TRACE
 
 using System;

@@ -47,7 +47,7 @@ Here is my script (**C:\NotBackedUp\Public\Toolbox\Scripts\Delete Temporary
 ASP.NET Files root folder.cmd**), in case it might help anyone else out there
 with the same problem:
 
-```
+```Shell
 @echo off
 
 setlocal

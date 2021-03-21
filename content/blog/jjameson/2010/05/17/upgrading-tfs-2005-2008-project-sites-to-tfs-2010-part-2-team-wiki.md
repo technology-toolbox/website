@@ -40,7 +40,7 @@ at once?
 If you are using SharePoint Server 2010 (or SharePoint Foundation), then you can
 easily use PowerShell to add a wiki library:
 
-```
+```PowerShell
 # Adds a "Wiki" library to a SharePoint site
 
 function AddWikiLibrary(
@@ -86,7 +86,7 @@ create a wiki library through the SharePoint site.
 Lastly, as I demonstrated in the earlier post, by using PowerShell you can
 easily add a wiki library to a number of project sites at once:
 
-```
+```PowerShell
 $sitesToUpgrade =
     @(
         "http://cyclops/sites/AdventureWorks",

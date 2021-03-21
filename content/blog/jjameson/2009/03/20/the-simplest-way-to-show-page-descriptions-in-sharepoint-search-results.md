@@ -48,7 +48,7 @@ Everything should be as simple as possible, but not simpler.
 If you look at the default XSL for the Search Core Results Web Part in MOSS
 2007, you will find the following:
 
-```
+```XML
     <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="hithighlightedsummary[. != '']">
@@ -67,7 +67,7 @@ Well, that certainly makes this a trivial exercise...all I need to do is reverse
 the order so that if **description** is specified, then it takes precedence over
 **hithighlightedsummary**, right?
 
-```
+```XML
     <div class="srch-Description">
       <xsl:choose>
         <xsl:when test="description[. != '']">
@@ -122,7 +122,7 @@ title="Figure 1: MOSS 2007 Publishing - content type hierarchy" >}}
 Note that **Description** is inherited from the **System Page** content type.
 Here is the definition for that content type:
 
-```
+```XML
 <ContentType ID="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2"
     Name="System Page"
     Group="_Hidden"
@@ -165,7 +165,7 @@ required. Just use the out-of-the-box
 control instead. In your master pages, modify your `<head>` element to include
 the following:
 
-```
+```XML
 <asp:Literal runat="server"
     Text="&lt;meta name=&quot;description&quot; content=&quot;" /><SharePoint:FieldValue runat="server"
     FieldName="Comments" /><asp:Literal runat="server" Text="&quot;&gt;" />
@@ -183,7 +183,7 @@ the following:
 
 {{< /div-block >}}
 
-```
+```HTML
 <meta name="description"
     content="<SharePoint:FieldValue
     FieldName='Comments' runat='server'/>" />

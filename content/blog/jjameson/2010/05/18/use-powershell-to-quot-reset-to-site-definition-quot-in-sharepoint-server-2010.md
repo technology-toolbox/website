@@ -49,7 +49,7 @@ PowerShell.
 Here's a little script to reset all pages in a list of sites to the site
 definition version:
 
-```
+```PowerShell
 $sitesToReset =
     @(
         "http://cyclops/sites/AdventureWorks",

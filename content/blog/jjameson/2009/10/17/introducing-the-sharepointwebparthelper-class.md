@@ -62,7 +62,7 @@ after refactoring the code a few years ago on the Agilent Technologies project.
 
 Anyway, here's the code for the `SharePointWebPartHelper` class:
 
-```
+```JavaScript
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -535,7 +535,7 @@ Using the `SharePointWebPartHelper` class couldn't be easier. For a simple
 example, consider the scenario that I mentioned earlier about adding a Login
 Form Web Part to a page:
 
-```
+```C#
             // Configure Web Parts
             SPWebPartPages.SPLimitedWebPartManager wpm =
                 publicWeb.GetLimitedWebPartManager(
@@ -573,7 +573,7 @@ like I show in the code example above.
 Here's another code example where I configured a bunch of Web Parts on a search
 results page:
 
-```
+```JavaScript
 namespace Fabrikam.Web.Search.Configuration
 {
     /// <summary>

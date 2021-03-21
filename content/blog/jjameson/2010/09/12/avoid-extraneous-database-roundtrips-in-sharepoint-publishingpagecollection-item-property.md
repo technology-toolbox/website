@@ -61,7 +61,7 @@ I fetch each particular page from the collection using the indexer (i.e. the
 
 Here is the original code I started out with:
 
-```
+```C#
         private static void AppendPages(
             SPWeb web,
             TextWriter writer)
@@ -103,7 +103,7 @@ Upon closer inspection, I found that each call to the
 property resulted in several database calls. Specifically, the following
 statement results in **four** calls to SQL Server:
 
-```
+```HTML
                 PublishingPage page = pages[pageUrl];
 ```
 
@@ -114,7 +114,7 @@ I found that by replacing the **PublishingPageCollection** indexer with my own
 (albeit crude) indexer, I could eliminate roughly 200 database roundtrips (from
 432 to 244):
 
-```
+```C#
         private static PublishingPage GetPublishingPage2(
             PublishingPageCollection pages,
             string pageUrl)
@@ -152,7 +152,7 @@ For example, accessing the
 **[PublishingPage.Layout](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.layout.aspx)**
 property, as shown below, actually results in two database roundtrips:
 
-```
+```C++
             const string expectedPageLayout = "PageFromDocLayout.aspx";
 
             if (page.Layout.Name != expectedPageLayout)
@@ -177,7 +177,7 @@ application in Visual Studio, add a few references (**Microsoft.SharePoint**,
 and then call **PublishingDemo.Execute** in the main class (after substituting
 the URLs for your environment, of course).
 
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

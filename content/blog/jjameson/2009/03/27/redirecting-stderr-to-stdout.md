@@ -24,7 +24,7 @@ window* in Microsoft Windows.
 I would have sworn the last time I tried something like the following in Windows
 Server 2003 (a couple of years ago), I got an error message:
 
-```
+```C++
 "Redeploy Features.cmd" > tmp.log 2>&1
 ```
 

@@ -107,7 +107,7 @@ you. To see what happens when an unhandled exception occurs in your ASP.NET
 application, you could add an "error simulator" to your site (e.g.
 SimulateError.ashx):
 
-```
+```C#
 using System;
 using System.Web;
 
@@ -146,7 +146,7 @@ investigate errors.
 If the volume of traffic on your site is relatively low, you might consider
 configuring ELMAH to send you an email whenever something bad happens:
 
-```
+```XML
   <elmah>
     <errorMail
       from="no-reply@technologytoolbox.com"
@@ -182,7 +182,7 @@ width="600" title="Figure 1: Custom error page (Generic.aspx)" >}}
 You've probably created a similar error page before and "wired it up" in the
 Web.config file using something like the following:
 
-```
+```XML
   <system.web>
     ...
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
@@ -204,7 +204,7 @@ refresh the page all day long and nothing would ever change. That's certainly
 not a good thing -- so you should always specify
 `redirectMode="ResponseRewrite"`:
 
-```
+```XML
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
       redirectMode="ResponseRewrite" />
 ```
@@ -223,7 +223,7 @@ URL.
 Consequently, you should add a little code to set the status code to indicate
 something went wrong:
 
-```
+```JavaScript
         protected void Page_Load(
                object sender,
                EventArgs e)
@@ -270,7 +270,7 @@ additional information (via the "Contact" form).
 
 #### Generic.aspx
 
-```
+```XML
 <%@ Page Title="Error - Technology Toolbox" Language="C#" AutoEventWireup="true"
   CodeBehind="Generic.aspx.cs" MasterPageFile="~/Errors/Error.master"
   Inherits="TechnologyToolbox.Caelum.Website.Errors.GenericErrorPage" %>
@@ -278,7 +278,7 @@ additional information (via the "Contact" form).
 
 #### Generic.aspx.cs
 
-```
+```C#
 using System.Web.UI;
 
 namespace TechnologyToolbox.Caelum.Website.Errors
@@ -291,7 +291,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 
 #### Error.master
 
-```
+```HTML
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Error.master.cs"
   Inherits="TechnologyToolbox.Caelum.Website.Errors.ErrorMasterPage" %>
 
@@ -348,7 +348,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 
 #### Error.master.cs
 
-```
+```C#
 using System;
 using System.Web;
 using System.Web.UI;
@@ -435,7 +435,7 @@ To accomplish this, we simply need to create another ASP.NET page (e.g.
 For the first scenario (i.e. when the request specifies a path that does not
 correspond to a managed handler), the `<httpErrors>` element is used:
 
-```
+```XML
   <system.webServer>
     <httpErrors>
       <remove statusCode="404" subStatusCode="-1" />
@@ -449,7 +449,7 @@ correspond to a managed handler), the `<httpErrors>` element is used:
 For the second scenario (e.g. when the request specifies a non-existent ASPX
 page), the `<customErrors>` element is used:
 
-```
+```XML
   <system.web>
     ...
     <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
@@ -478,7 +478,7 @@ what was specified (in case he or she simply mistyped part of the URL).
 
 #### 404.aspx
 
-```
+```HTML
 <%@ Page Title="404 Error - Technology Toolbox" Language="C#"
   AutoEventWireup="true" CodeBehind="404.aspx.cs"
   MasterPageFile="~/Errors/Error.master"
@@ -501,7 +501,7 @@ what was specified (in case he or she simply mistyped part of the URL).
 
 #### 404.aspx.cs
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Web.UI;

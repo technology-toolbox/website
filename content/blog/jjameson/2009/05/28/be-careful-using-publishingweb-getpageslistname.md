@@ -33,7 +33,7 @@ Fortunately, the SharePoint API provides the ` PublishingWeb.GetPagesListName`
 method. In the following code sample, note how I use this method to avoid
 hard-coding the name of the **Pages** library:
 
-```
+```C#
         private static string GetDefaultSearchResultsPageUrl(
             SPWeb searchWeb)
         {
@@ -64,14 +64,14 @@ quickly responded pointing out the `PublishingWeb.GetPagesListName()` method.
 
 Unfortunately, the developer then added the following code to his feature:
 
-```
+```HTML
 SPList pages = web.Lists[PublishingWeb.GetPagesListName(web)];
 ```
 
 This seems natural, after all, since `web.Lists` is simply an `SPListCollection`
 and `SPListCollection` provides the following property:
 
-```
+```C#
 public SPList this [string strListName] { get; }
 ```
 
@@ -92,7 +92,7 @@ The correct way to get the **Pages** list is to use the
 [`PublishingWeb.GetPagesListId`](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingweb.getpageslistid.aspx)
 method instead:
 
-```
+```HTML
 SPList pages = web.Lists[PublishingWeb.GetPagesListId(web)];
 ```
 

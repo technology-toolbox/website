@@ -50,7 +50,7 @@ submission -- when the {{< kbd "Enter" >}} key is pressed in the search box.
 Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web
 Server Extensions\12\TEMPLATE\LAYOUTS\1033\Search.js:
 
-```
+```JavaScript
 try {if(null != event) event.returnValue = false;} catch (err) {}
 ```
 
@@ -64,7 +64,7 @@ Since the form submission is not canceled in Firefox, there is a "race
 condition" between the form submission caused by the `Enter` key being pressed
 and the redirect to the search results page (i.e. line 606 of Search.js):
 
-```
+```JavaScript
 window.location = Url + sch;
 ```
 
@@ -93,7 +93,7 @@ and
 Here is the script that I found would need to be added to the custom master
 page:
 
-```
+```JavaScript
 <%--
 HACK: Bug 126525 - "Search" not working in Mozilla Firefox 3.0
 

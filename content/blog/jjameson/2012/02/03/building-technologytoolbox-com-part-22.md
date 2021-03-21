@@ -61,7 +61,7 @@ named **EnableAnalytics** with a default value of **False**.
 Next I added an ASP.NET control named **AnalyticsScript** to encapsulate the
 logic to conditionally render the Google script:
 
-```
+```C#
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -111,7 +111,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
 Then I added the new control to the master page:
 
-```
+```XML
 <%@ Master ... %>
 <%@ Register Tagprefix="caelum"
   Namespace="TechnologyToolbox.Caelum.Website.Controls"
@@ -163,7 +163,7 @@ changed the default value for **EnableAnalytics** to **True** and added another
 application setting to specify a "filter" as an additional check for determining
 whether or not to emit the analytics script:
 
-```
+```XML
 <configuration>
   ...
   <applicationSettings>
@@ -183,7 +183,7 @@ whether or not to emit the analytics script:
 I then updated the **AnalyticsScript** control to compare the URL of the current
 request with the filter specified in configuration:
 
-```
+```C++
         protected override void OnLoad(
             EventArgs e)
         {
@@ -207,7 +207,7 @@ request with the filter specified in configuration:
 At this point, I also removed the hard-coded analytics key by adding another
 application setting in Web.config:
 
-```
+```XML
 <configuration>
   ...
   <applicationSettings>
@@ -259,7 +259,7 @@ environment, as illustrated in Figure 1.
 After some refactoring and performance optimization, here is the updated
 implementation of the **AnalyticsScript** class:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Web.UI;
@@ -338,7 +338,7 @@ The new **AnalyticsHelper** class contains some of the code originally added to
 the **AnalyticsScript** control. The original code has also been enhanced to
 support different analytics keys for DEV, TEST, and PROD:
 
-```
+```C++
 using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
@@ -459,7 +459,7 @@ specifying a value in the Web.config file (for example, if I wanted to record
 metrics for some other environment). In my Web.config files, however, the
 **AnalyticsKey** setting is left empty:
 
-```
+```XML
 <configuration>
   ...
   <applicationSettings>

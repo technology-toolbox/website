@@ -63,7 +63,7 @@ I even tried changing one of the "problem" assemblies to specify a
 fully-qualified assembly name (including the processor architecture), like
 this...
 
-```
+```XML
     <Reference Include="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, ProcessorArchitecture=x86" />
 ```
 
@@ -72,14 +72,14 @@ this...
 I ended resolving the issue by keeping **Treat warnings as errors** set to
 **All**, but adding the following to the project file:
 
-```
+```XML
     <WarningsNotAsErrors>1607</WarningsNotAsErrors>
 ```
 
 I pasted this immediately below the following elements (for the Debug|x86 and
 Release|x86 configurations):
 
-```
+```JavaScript
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 ```
 

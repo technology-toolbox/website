@@ -90,7 +90,7 @@ environments.
 
 ### Configure SharePoint Search.ps1
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0

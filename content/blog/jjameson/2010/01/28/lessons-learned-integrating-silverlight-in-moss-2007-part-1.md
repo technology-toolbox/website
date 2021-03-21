@@ -90,7 +90,7 @@ the original developer integrated the XAP file into the WSP file.
 
 Originally, the user control contained the following code:
 
-```
+```XML
     <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="100%" height="100%">
         <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
@@ -119,7 +119,7 @@ Silverlight developer simply changed the output path in the
 The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include
 the XAP file...
 
-```
+```XML
 .Set DestinationDir=Layouts\Fabrikam
 ...
 ..\..\12\TEMPLATE\Layouts\Fabrikam\Wheel.xap
@@ -127,7 +127,7 @@ the XAP file...
 
 ...and the manifest.xml file was updated to deploy the XAP file from the WSP:
 
-```
+```XML
   <TemplateFiles>
     ...
     <TemplateFile Location="Layouts\Fabrikam\Wheel.xap" />
@@ -184,7 +184,7 @@ the WSP, I made the following changes:
 - Modified the **Fabrikam.Portal.Web** project (by unloading the project and
   then editing the MSBuild file directly) to include the following:
 
-```
+```XML
   <PropertyGroup>
     <!-- Add the file extension for Silverlight application packages (.xap) to
     the list of extensions that reference resolution considers when looking for

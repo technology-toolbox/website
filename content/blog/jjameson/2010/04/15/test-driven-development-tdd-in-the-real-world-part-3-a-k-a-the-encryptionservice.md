@@ -66,7 +66,7 @@ The second thing we need to do is decide on a class name for the **Encrypt** and
 
 Now we can write a couple of very simple unit tests:
 
-```
+```C#
 using System;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -146,7 +146,7 @@ If we attempt to build the solution at this point, we get some compilation
 errors because the **EncryptionService** doesn't actually exist. Consequently,
 let's add the corresponding "shell" to the **Security** project:
 
-```
+```C#
 namespace Fabrikam.Demo.Security
 {
     /// <summary>
@@ -192,7 +192,7 @@ encrypting and decrypting the specified text!
 Well, that certainly isn't good. Let's modify the unit test a little to ensure
 that it fails based on the current implementation:
 
-```
+```C++
         [TestMethod]
         public void Decrypt001()
         {
@@ -220,7 +220,7 @@ Perhaps you'd rather see a more meaningful message when the test fails. In that
 case, you can specify the optional `message` parameter when using one of the
 methods on the **Assert** class:
 
-```
+```C++
             Assert.AreNotEqual<string>(
                 plaintext,
                 ciphertext,
@@ -308,7 +308,7 @@ With that in mind, let's copy/paste the unit tests for the **EncryptionService**
 class (i.e. EncryptionServiceTest.cs) to create unit tests for the
 **InternalEncryptionService** class:
 
-```
+```C#
 using System;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -394,7 +394,7 @@ create the **InternalEncryptionService** class and make the necessary changes to
 inherit from **SqlMembershipProvider** (note that you'll need to add references
 to System.Configuration and System.Web):
 
-```
+```C#
 using System.Web.Security;
 
 namespace Fabrikam.Demo.Security
@@ -454,7 +454,7 @@ is to add an
 to the AssemblyInfo.cs file for the **Security** project (which creates the
 **Fabrikam.Demo.Security** assembly):
 
-```
+```C#
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -528,7 +528,7 @@ Now let's focus on getting the two unit tests for the
 Start by replacing the implementation of the **Encrypt** method in the
 **InternalEncryptionService** class:
 
-```
+```C++
         public string Encrypt(
             string plaintext)
         {
@@ -544,7 +544,7 @@ Start by replacing the implementation of the **Encrypt** method in the
 Similarly, replace the implementation of the **Decrypt** method in the
 **InternalEncryptionService** class:
 
-```
+```C++
         public string Decrypt(
             string ciphertext)
         {
@@ -576,7 +576,7 @@ Add the following app.config file to the **Security.DeveloperTests** project (to
 mimic the necessary configuration elements we would normally specify in the
 Web.config file):
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <system.web>
@@ -595,7 +595,7 @@ The next step is to get the remaining unit tests (i.e. the two for the
 of delegating the work performed by the **EncryptionService** class to the
 corresponding methods in the **InternalEncryptionService** class:
 
-```
+```C#
     public static class EncryptionService
     {
         /// <summary>
@@ -647,7 +647,7 @@ should try to remember to write the unit test first (ensuring that it fails
 before implementing the necessary work to make it pass). For example, add the
 following unit test to InternalEncryptionServiceTest.cs:
 
-```
+```C++
         /// <summary>
         /// Validates that an exception is thrown when the input string is null.
         /// </summary>
@@ -686,7 +686,7 @@ Add another unit test to validate that an empty string is also handled as
 expected (since it shouldn't take more than 30 seconds or so to copy/paste and
 make the necessary changes):
 
-```
+```C++
         /// <summary>
         /// Validates that an exception is thrown when the input string is empty.
         /// </summary>
@@ -735,7 +735,7 @@ Assuming we agree with this expected behavior for encrypting an empty string
 (which seems reasonable), then it makes sense to replace the
 **EncryptWithInvalidParameter002** test with a different test:
 
-```
+```C#
         /// <summary>
         /// Validates that an empty string is encrypted successfully.
         /// </summary>
@@ -780,7 +780,7 @@ to call it) when encrypting values like this."
 Consequently we should consider making the **Encrypt** and **Decrypt** methods
 more robust by adding another parameter:
 
-```
+```XML
 namespace Fabrikam.Demo.Security
 {
     /// <summary>

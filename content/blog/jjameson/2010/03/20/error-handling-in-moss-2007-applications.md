@@ -45,7 +45,7 @@ width="600" title="Figure 1: Publishing site with BlueBand master page" >}}
 Now, similar to the example error demonstrated in my previous post, let's add a
 Web Part to the home page that throws an exception:
 
-```
+```C#
 using System;
 using System.Web.UI.WebControls.WebParts;
 
@@ -130,7 +130,7 @@ If our solution were simply built on top of ASP.NET -- instead of SharePoint --
 we could simply create an error page and use the `<customErrors> `element in the
 Web.config file:
 
-```
+```XML
     <customErrors defaultRedirect="/Error.aspx" mode="On" />
 ```
 
@@ -174,7 +174,7 @@ First, we need to add a little bit of code to our custom master page.
 Specifically, in the page **Init** event, we wire up an event handler for the
 page **Error** event:
 
-```
+```C#
 namespace Fabrikam.Demo.Publishing.Layouts.MasterPages
 {
     [CLSCompliant(false)]
@@ -245,7 +245,7 @@ haven't found the need to do this.]
 Here's the sample Error.aspx file that I created to capture the screenshot shown
 in Figure 3:
 
-```
+```HTML
 <%@ Assembly Name="Fabrikam.Demo.Publishing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="Fabrikam.Demo.Publishing.Layouts.ApplicationPages.ErrorPage" %>
@@ -348,7 +348,7 @@ converting this to semantic markup.
 For comparison purposes, here's a much simpler custom error page based on
 [a Web standards design](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1):
 
-```
+```HTML
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs"
  Inherits="Fabrikam.Demo.Publishing.Layouts.ApplicationPages.ErrorPage,
    Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
@@ -411,7 +411,7 @@ To demonstrate this, I'll add the following section to the Web.config file for
 the **Internet** zone of my sample Fabrikam site (which I've configured for
 Forms-Based Authentication and anonymous access):
 
-```
+```XML
   <system.diagnostics>
     <sources>
       <source name="defaultTraceSource" switchName="allTraceLevel">
@@ -496,7 +496,7 @@ Unfortunately, I'm not aware of any way to do this using OOTB functionality
 (e.g. from the Event Viewer console). Fortunately, it takes only a tiny bit of
 custom code to create the event source (assuming you have permissions to do so):
 
-```
+```C#
         private static string AddEventLogSource(
             string source)
         {
@@ -544,7 +544,7 @@ To workaround this problem, I created a custom trace listener by essentially
 snarfing the code for the **EventLogTraceListener** class and wrapping the calls
 to write events with ` SPSecurity.RunWithElevatedPrivileges`:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -1129,7 +1129,7 @@ Now, we can simply replace **System.Diagnostics.EventLogTraceListener** with the
 custom **Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener**
 in the Web.config file:
 
-```
+```XML
   <system.diagnostics>
     <sources>
       <source name="defaultTraceSource" switchName="allTraceLevel">
@@ -1261,7 +1261,7 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 
 Here is the class that implements the custom StsAdm.exe commands:
 
-```
+```C++
 using System;
 using System.Collections.Specialized;
 using System.Diagnostics;

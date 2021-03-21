@@ -107,7 +107,7 @@ Once I completed "step 1" (having the custom Tugboat.master rendering the exact
 same "nightandday.master" layout shown in Figure 2), I then replaced the link to
 nightandday.css with a link to the primary Tugboat CSS file (screen.css):
 
-```
+```JavaScript
 <SharePoint:CssRegistration
 name="<% $SPUrl:~sitecollection/Style Library/Tugboat/Themes/Theme1/css/screen.css%>"
 After="corev4.css" runat="server"/>
@@ -142,7 +142,7 @@ The first step in getting rid of the ribbon is to remove the search box and move
 the "top row elements" (e.g. the Welcome control and help link) into the `<div id="s4-searcharea">` element. This is essentially just a cut-and-paste of one
 section in the master page to another:
 
-```
+```HTML
 <div id="s4-searcharea" class="s4-search s4-rp">
     <SharePoint:DelegateControl runat="server" ControlId="GlobalSiteLink0" />
     <a href="#" tabindex="-1" style="display:none"></a>
@@ -190,7 +190,7 @@ Note that since I decided to remove the Search box for the sake of simplifying
 this sample, I had to add a corresponding `ContentPlaceHolder `control to the
 hidden `Panel `near the bottom of the page:
 
-```
+```XML
 <asp:Panel Visible="false" runat="server">
     ...
     <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" />
@@ -236,7 +236,7 @@ The next step is get rid of the OOTB `<div class="s4-notdlg top-row">` content
 (i.e. the "Adventure Works" logo) and add the custom Tugboat masthead farther
 down in the master page:
 
-```
+```HTML
 <div id="s4-workspace">
   <div class="s4-notdlg top-row">
     <div id="header" class="group">
@@ -311,7 +311,7 @@ This is simply a matter of removing a few elements (specifically `<div id="s4-ti
 consequently adding some more hidden `ContentPlaceHolder `controls at the bottom
 of the page:
 
-```
+```XML
 <asp:Panel Visible="false" runat="server">
   ...
   <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
@@ -340,7 +340,7 @@ title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
 Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv">` element to add the `<div class="group" id="wrap">` element
 expected by the Tugboat CSS files as well as the page footer:
 
-```
+```HTML
 <div class="s4-ca main-container" id="MSO_ContentDiv" runat="server">
   <a name="mainContent"></a>
   <div class="group" id="wrap">
@@ -380,7 +380,7 @@ This is easy to change by adding a little CSS to the custom SharePointFixes.css
 file. [Refer to my previous post for more explanation on the SharePointFixes.css
 file.]
 
-```
+```CSS
 .s4-ca {
     background-color: inherit;
     margin-left: 0;
@@ -444,7 +444,7 @@ functionality, but it does (at least in the RTM version of SharePoint Server
 So, instead of using a **LoginView** control, I wrapped the **SPRibbon** control
 in a **SPSecurityTrimmedControl** instead:
 
-```
+```HTML
 <div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
   <Sharepoint:SPSecurityTrimmedControl runat="server"
     PermissionMode="Any"
@@ -487,7 +487,7 @@ set a specific height for the `<div id="s4-ribbonrow">` element.
 Fortunately, this is fairly easy to override by adding a little CSS to the
 master page:
 
-```
+```XML
 <head runat="server">
 ...
 <asp:LoginView runat="server">
@@ -543,7 +543,7 @@ The problem is due the default link rules in the custom Tugboat CSS.
 Fortunately, this is another easy fix simply by tweaking the rule in the Tugboat
 master.css file:
 
-```
+```CSS
 /*
     HACK: Avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
 
@@ -563,7 +563,7 @@ element. However, this change "broke" one of the other CSS rules in the Tugboat
 solution (specifically the color of the "News Archives" button). Therefore, we
 need one more tweak to master.css:
 
-```
+```CSS
 /*
     HACK: The following CSS rule was tweaked slightly due to the change above
     to avoid making *all* links bold (e.g. buttons in the SharePoint ribbon)
@@ -628,7 +628,7 @@ described below.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Tugboat\Dev\Lab2\Source\DeploymentFiles\Scripts), and run the following commands:
    
-   ```
+   ```C++
    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
    & '.\Add Event Log Sources.ps1'

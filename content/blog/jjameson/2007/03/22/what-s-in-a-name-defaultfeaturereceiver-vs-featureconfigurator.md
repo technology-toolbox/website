@@ -28,7 +28,7 @@ it much easier to put the bulk of the code in a FeatureConfigurator class and
 then have the DefaultFeatureReceiver class simply be a "thin shell" that
 utilizes the underlying FeatureConfigurator class to do the bulk of the work:
 
-```
+```C++
 namespace Fabrikam.Project1.PublicationLibrary.Configuration
 {
     [CLSCompliant(false)]
@@ -61,7 +61,7 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
 The bulk of the development (and debugging) of the feature receiver is then
 performed using a separate Visual Studio test project:
 
-```
+```C#
 namespace Fabrikam.Project1.PublicationLibrary.DeveloperTests.Configuration
 {
     [TestClass()]

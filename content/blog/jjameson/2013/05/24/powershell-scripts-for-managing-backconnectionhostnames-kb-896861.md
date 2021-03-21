@@ -51,7 +51,7 @@ Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my
 
 The following illustrates these scripts in action:
 
-```
+```Shell
 PS C:\...\Toolbox\PowerShell>{{< kbd ".\Get-BackConnectionHostNames.ps1" >}}
 eln-local.dow.com
 researchportal-local.dow.com
@@ -88,7 +88,7 @@ researchportal-local.dow.com
 
 ### Get-BackConnectionHostNames.ps1
 
-```
+```XML
 <#
 .SYNOPSIS
 Gets the list of host names specified in the BackConnectionHostNames registry
@@ -130,7 +130,7 @@ If ($backConnectionHostNames -ne $null)
 
 ### Add-BackConnectionHostNames.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Adds one or more host names to the BackConnectionHostNames registry value.
@@ -281,7 +281,7 @@ end
 
 ### Remove-BackConnectionHostNames.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Removes one or more host names from the BackConnectionHostNames registry value.

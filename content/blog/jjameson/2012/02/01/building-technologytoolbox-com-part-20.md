@@ -33,7 +33,7 @@ iterate on the overall look-and-feel, and develop/refine the user experience
 
 Here is the HTML I created for the Contact form:
 
-```
+```HTML
   <p>
     Fill out the contact form below and you will receive a response within one
     business day. You may also send email directly to
@@ -125,7 +125,7 @@ The next step is to add field validators. For example, I added an
 
 This is how I typically markup a field validator:
 
-```
+```XML
 <asp:RequiredFieldValidator runat="server" ControlToValidate="contactName"
   Display="Dynamic" ErrorMessage="Name must be specified."
   Text="(required)" CssClass="validator required" ForeColor="" />
@@ -134,7 +134,7 @@ This is how I typically markup a field validator:
 Specifying the `CssClass` attribute (and overriding the `ForeColor` attribute),
 allows the styling to be controlled via CSS. For example:
 
-```
+```CSS
 .validator {
   background: url('Images/icon-error-16x16.png') no-repeat;
   color: #bd1c1c;
@@ -150,7 +150,7 @@ control as well.
 
 At this point, the markup for the Contact form looked like this:
 
-```
+```XML
   <p>
     Fill out the contact form below and you will receive a response within one business
     day. You may also send email directly to <a href="mailto:info@technologytoolbox.com">
@@ -240,7 +240,7 @@ To implement this functionality, I simply wrapped the markup shown above inside
 an ASP.NET **Panel** control (i.e. a `<div>` element) and added a second panel
 with the confirmation message:
 
-```
+```XML
   <asp:Panel runat="server" ID="contactForm">
     <p>
       Fill out the contact form below ...</p>
@@ -262,7 +262,7 @@ Then it was simply a matter of associating a little bit of code with the "click"
 event of the **Submit** button to hide the first panel and show the second
 panel:
 
-```
+```C#
         protected void SubmitButton_Click(
             object sender,
             EventArgs e)
@@ -311,7 +311,7 @@ To implement the basic functionality for sending the email from
 TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to
 a new method that sends the email:
 
-```
+```C++
         private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
@@ -336,7 +336,7 @@ Thanks to built-in functionality in the .NET Framework, it doesn't require much
 code at all. Note that what you see above is the end result at this point after
 a little refactoring. Here is the **BuildEmailMessageBody** method:
 
-```
+```C++
         private string BuildEmailMessageBody()
         {
             StringBuilder buffer = new StringBuilder();
@@ -407,7 +407,7 @@ a couple of items under the **Settings** tab on the project properties:
 
 ...and updated the code accordingly:
 
-```
+```C++
         private void SendContactRequestEmail()
         {
             string body = BuildEmailMessageBody();
@@ -428,7 +428,7 @@ specify multiple recipients (and, for whatever reason, we don't want to use a
 distribution list)? To support that scenario, the **ContactFormMailToAddress**
 would contain a semicolon-delimited list of email addresses. For example:
 
-```
+```XML
 <configuration>
   ...
   <applicationSettings>
@@ -444,7 +444,7 @@ would contain a semicolon-delimited list of email addresses. For example:
 
 Note that this requires a few tweaks to the code used to send the email:
 
-```
+```C#
     private void SendContactRequestEmail()
     {
         string body = BuildEmailMessageBody();
@@ -532,7 +532,7 @@ they wish to be contacted via email.
 To accomplish this, I created a simple method to configure the form fields based
 on the currently selected option for **Preferred Contact Method**:
 
-```
+```C++
         private void ConfigureFormFields()
         {
             switch (preferredContactMethod.Text)
@@ -564,7 +564,7 @@ on the currently selected option for **Preferred Contact Method**:
 To ensure the fields are initially configured as expected, I call the
 **ConfigureFormFields** method when the page is first requested:
 
-```
+```C#
         protected void Page_Load(
             object sender,
             EventArgs e)
@@ -579,7 +579,7 @@ To ensure the fields are initially configured as expected, I call the
 Then I modified the **RadioButtonList** to automatically postback when the
 selected item is changed:
 
-```
+```XML
   <asp:RadioButtonList runat="server" ID="preferredContactMethod"
     CssClass="radio-list" RepeatDirection="Horizontal"
     AutoPostBack="true"
@@ -591,7 +591,7 @@ selected item is changed:
 
 ...and subsequently call the **ConfigureFormFields** method:
 
-```
+```C#
         protected void PreferredContactMethod_SelectedIndexChanged(
             object sender,
             EventArgs e)
@@ -622,7 +622,7 @@ Generally speaking, this is how I approach AJAX-enabling a feature:
 The third item is important. For example, for step "9.2" you might start by
 adding an **UpdatePanel** around all of the form fields:
 
-```
+```XML
         <asp:Panel runat="server" ID="contactForm">
           <asp:UpdatePanel runat="server">
             <ContentTemplate>
@@ -642,7 +642,7 @@ However, in this particular scenario, only the **Email Address** and
 postback. Consequently, it is much more efficient to enclose only those controls
 in the **UpdatePanel**:
 
-```
+```XML
         <asp:Panel runat="server" ID="contactForm">
           <p>
             Fill out the contact form below...</p>

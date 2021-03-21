@@ -76,7 +76,7 @@ object.
 For example, consider the following method from my `SharePointHelper` class
 (which I've been using for years):
 
-```
+```JavaScript
      /// <summary>
     /// Finds a child Web based on the name (relative URL).
     /// </summary>
@@ -149,7 +149,7 @@ If you instantiate an object that implements `IDisposable` -- either through the
 should call `Dispose()` on that object, or, preferably if you are a C#
 developer, you should wrap your object in a `using` block, as shown below:
 
-```
+```C#
      private void ConfigureSampleContentWeb(
         SPWeb parentWeb)
     {

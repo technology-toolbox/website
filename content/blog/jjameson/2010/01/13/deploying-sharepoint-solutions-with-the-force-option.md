@@ -25,7 +25,7 @@ Microsoft Office SharePoint Server (MOSS) 2007.
 If you've read that post, you might recall seeing the following lines in, for
 example, the Deploy Solutions.cmd script:
 
-```
+```XML
 REM Sometimes it is necessary to force the deployment to circumvent errors
 REM set FORCE_OPTION=-force
 ```

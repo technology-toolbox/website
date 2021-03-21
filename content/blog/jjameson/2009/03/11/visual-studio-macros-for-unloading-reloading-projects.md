@@ -26,7 +26,7 @@ of the projects to unload or reload.
 
 Here is my `UnloadAllProjects()` macro:
 
-```
+```VBA
 Public Sub UnloadAllProjects()
     If (DTE.Solution Is Nothing _
         Or DTE.Solution.Count = 0) Then
@@ -75,7 +75,7 @@ End Sub
 The actual work of unloading a project is delegated to the `UnloadProject()`
 method:
 
-```
+```VBA
 Private Sub UnloadProject( _
     ByVal proj As Project, _
     ByVal solutionName As String, _
@@ -124,7 +124,7 @@ If you take the above code and essentially search-and-replace "unload" with
 "reload" then you will end up with my macro to reload all projects within the
 solution:
 
-```
+```VBA
 Public Sub ReloadAllProjects()
     If (DTE.Solution Is Nothing _
         Or DTE.Solution.Count = 0) Then

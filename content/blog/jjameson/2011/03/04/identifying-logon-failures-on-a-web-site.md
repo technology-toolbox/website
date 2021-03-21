@@ -79,7 +79,7 @@ This script searches the specified server's Application event log for ASP.NET
 logon failure events and subsequently parses the username from any events that
 are found:
 
-```
+```VBA
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
@@ -141,7 +141,7 @@ End Sub
 This script searches the Application event logs for each server in the farm
 looking for ASP.NET logon failure events for the specified username:
 
-```
+```VBA
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then

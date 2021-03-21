@@ -49,7 +49,7 @@ I created, I could quickly and easily create blog posts with just the kind of
 My template simply contains a variety of markup that I commonly use when
 creating blog posts, such as:
 
-```
+```JavaScript
 <blockquote class="directQuote errorMessage">
     [Direct quote, error message]</blockquote>
 ```
@@ -61,7 +61,7 @@ replacing the placeholder text with the corresponding content. Note that I have
 defined a few custom CSS rules in Community Server to change the style of my
 blog content, such as:
 
-```
+```CSS
 .directQuote {
     font-style: italic;
 }

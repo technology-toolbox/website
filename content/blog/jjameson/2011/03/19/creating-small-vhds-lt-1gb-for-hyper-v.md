@@ -70,7 +70,7 @@ WMI.
 In short (and with no error handling), use something like the following to
 create a 200 MB VHD:
 
-```
+```PowerShell
 $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
     -namespace "root\virtualization"
 

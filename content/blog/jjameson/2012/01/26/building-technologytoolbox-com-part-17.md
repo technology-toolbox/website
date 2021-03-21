@@ -58,7 +58,7 @@ corresponding locations within the Subtext **blog** application.
 For example, to use the custom CAPTCHA control described in my previous post,
 the Subtext skin specifies the following (in PostComment.ascx):
 
-```
+```HTML
 <%@ Control Language="C#" EnableTheming="false" AutoEventWireup="false"
   Inherits="Subtext.Web.UI.Controls.PostComment" %>
 <%@ Register src="~/Controls/Captcha/Captcha.ascx" TagName="Captcha"
@@ -118,7 +118,7 @@ I created a new MSBuild target named **CopySharedFilesToBlogApplication** (by
 unloading the **Website** project in Visual Studio and then editing the
 **Website.csproj** file):
 
-```
+```XML
   <Target Name="CopySharedFilesToBlogApplication">
     <Message Importance="high"
       Text="TODO: Copy CAPTCHA control and other shared files to blog folder..." />
@@ -128,7 +128,7 @@ unloading the **Website** project in Visual Studio and then editing the
 To ensure this target is executed as part of every build, I modified the
 **BuildDependsOn** property by adding a new **PropertyGroup**:
 
-```
+```XML
   <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);
@@ -154,7 +154,7 @@ would see the "TODO:" message in the **Output** window.
 To specify the list of files needed by the CAPTCHA control, I defined a new
 **ItemGroup**:
 
-```
+```XML
   <ItemGroup>
     <CaptchaFile Include="Controls\Captcha\Captcha.ascx" />
     <CaptchaFile Include="Controls\Captcha\config.xml" />
@@ -167,7 +167,7 @@ Then I added a **Copy** task to copy the CAPTCHA files into the corresponding
 locations under the **blog** folder (in other words, by preserving the relative
 path of each file that is copied):
 
-```
+```XML
   <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="@(CaptchaFile)"
@@ -181,7 +181,7 @@ the source file (which translates to
 **bin\TechnologyToolbox.Caelum.Website.dll**) and `"blog\bin"` as the
 destination folder:
 
-```
+```XML
   <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="$(OutDir)$(TargetFileName);"
@@ -192,7 +192,7 @@ destination folder:
 To copy dependencies (e.g. the ELMAH assembly and other Caelum assemblies
 referenced in the **Website** project), I added one more **Copy** task:
 
-```
+```XML
   <Target Name="CopySharedFilesToBlogApplication">
     ...
     <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
@@ -202,7 +202,7 @@ referenced in the **Website** project), I added one more **Copy** task:
 
 Here is the completed target:
 
-```
+```XML
   <Target Name="CopySharedFilesToBlogApplication">
     <Message Importance="high"
       Text="Copying CAPTCHA control and other shared files to blog folder..." />
@@ -229,7 +229,7 @@ mouthful, but so be it). This target is similar to the previous one, except that
 it uses the `$(WebProjectOutputDir)` variable to copy the files to the
 **\_PublishedWebsites** folder:
 
-```
+```XML
   <!--
     The following target is used to copy the shared files to the
     _PublishedWebsites\{app}\blog folder (when building the solution using Team
@@ -251,7 +251,7 @@ it uses the `$(WebProjectOutputDir)` variable to copy the files to the
 To integrate this target into the TFS build process, I hook into the
 **\_CopyWebApplication** target:
 
-```
+```XML
   <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);

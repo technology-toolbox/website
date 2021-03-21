@@ -54,7 +54,7 @@ Consequently, we create a class called **ScorecardService** and add a method to
 return a DataSet given a list of client sites (i.e. an array of site IDs --
 where each site ID is a `string`):
 
-```
+```C++
     public static class ScorecardService
     {
         public static ScorecardData GetScorecardData(
@@ -76,7 +76,7 @@ across all sites for various time periods. Rather than aggregating the scorecard
 data in the presentation layer, we can instead add another method to the
 **ScorecardService** class:
 
-```
+```C++
         public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
@@ -132,7 +132,7 @@ When the user selects a KPI in the summary view, we want to display more
 information in a detail view on the right side of the page. Consequently, we add
 another method to the **ScorecardService** class:
 
-```
+```C++
         public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)
@@ -201,7 +201,7 @@ if specified (i.e. is not null or empty), is subsequently used to limit the rows
 that are added to the summary table. In other words, we could refactor the
 **GetScorecardSummaryTable** method to add an overload, as follows:
 
-```
+```C++
         public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
@@ -258,7 +258,7 @@ In order to preserve the existing functionality -- and thus avoid having to
 change any existing unit tests -- we keep the original method, but simply have
 it call the new overload (passing in all rows from the **ScorecardItem** table):
 
-```
+```C++
         public static DataTable GetScorecardSummaryTable(
             ScorecardData data)
         {
@@ -285,7 +285,7 @@ In the user control (KpiScorecard.ascx), all we need to do is retrieve the
 scorecard data by providing a list of sites (in other words, get an instance of
 the **ScorecardData** DataSet), and subsequently determine which items to show:
 
-```
+```C#
         private void UpdateScorecardSummaryView()
         {
             Debug.Assert(scorecardData != null);
@@ -305,7 +305,7 @@ For the sake of simplicity, assume that we currently only need to support the
 ability to filter by site. The **GetScorecardItemsToShowInKpiSummary** method in
 the KpiScorecard.ascx file is implemented as follows:
 
-```
+```C#
         private IEnumerable<ScorecardData.ScorecardItemRow>
             GetScorecardItemsToShowInKpiSummary()
         {
@@ -344,7 +344,7 @@ remains the same.
 For example, suppose the original **GetScorecardDetailTable** method used a
 DataView to filter the **ScorecardItems** table on the specified KPI name:
 
-```
+```JavaScript
         public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)
@@ -393,7 +393,7 @@ couple of choices.
 We could simply add an overload that accepts an `IEnumerable` parameter in
 addition to the original <var>selectedKpiName</var> parameter:
 
-```
+```C++
         public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems,
             string selectedKpiName)
@@ -414,7 +414,7 @@ takes an `IEnumerable` parameter (and assume instead that all of the scorecard
 items refer to the same KPI). Note that we need to add some code to validate the
 new assumption:
 
-```
+```C#
         public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
         {
@@ -451,7 +451,7 @@ To reduce the amount of code in the method (and make it easier to understand and
 maintain), we should refactor the code that enforces the assumption into a
 separate method:
 
-```
+```C#
         public static DataTable GetScorecardDetailTable(
             IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
         {
@@ -511,7 +511,7 @@ filter the scorecard items based on the specified KPI name (which is really easy
 using a LINQ query expression) and defer the rest of the work to the new
 overload of the method (shown above):
 
-```
+```JavaScript
         public static DataTable GetScorecardDetailTable(
             ScorecardData data,
             string selectedKpiName)

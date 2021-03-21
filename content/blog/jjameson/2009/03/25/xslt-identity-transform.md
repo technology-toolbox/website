@@ -37,7 +37,7 @@ refer to this as the "Identity Transform."
 Regardless of what you call it, here is what I periodically use to view the raw
 XML:
 
-```
+```XSLT
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>

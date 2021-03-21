@@ -67,7 +67,7 @@ With the custom `Logger` class, logging a debug message is simply a matter of
 calling a static method, specifying nothing more than a string containing the
 message :
 
-```
+```C++
     Logger.LogDebug("Successfully loaded search results into DataSet.");
 ```
 
@@ -78,7 +78,7 @@ create additional classes within an assembly -- for logging purposes.
 Also note that the `Logger` class provides additional overloads to easily format
 log messages:
 
-```
+```JavaScript
     Logger.LogDebug(
         CultureInfo.InvariantCulture,
         "Successfully loaded embedded resource ({0})"
@@ -91,7 +91,7 @@ log messages:
 Note that the `Logger.LogDebug` method is simply a convenient alternative to the
 `Logger.Log` method:
 
-```
+```XML
     /// <summary>
     /// Logs an event to the trace listeners using the specified
     /// event type and message.
@@ -117,7 +117,7 @@ class.
 The `Logger` class declares a singleton `TraceSource` that is used to log all
 messages:
 
-```
+```C++
     private static TraceSource defaultTraceSource =
         new TraceSource("defaultTraceSource");
 ```
@@ -138,7 +138,7 @@ I introduce how to configure logging (starting out with a console application).
 
 Here is the complete source for the `Logger` class:
 
-```
+```XML
 #define TRACE
 
 using System;

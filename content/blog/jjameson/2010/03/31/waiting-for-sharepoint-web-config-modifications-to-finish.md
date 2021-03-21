@@ -69,7 +69,7 @@ To avoid the error, I added a little bit of code to the
 **[SharePointWebConfigHelper](/blog/jjameson/2010/03/23/introducing-the-sharepointwebconfighelper-class)**
 class in the **ApplyWebConfigModifications** method:
 
-```
+```C++
             if (webApp.Farm.TimerService.Instances.Count > 1)
             {
                 // HACK:
@@ -105,7 +105,7 @@ testing I found that 20 seconds seemed like a good choice for the
 
 Here is the code for the **SharePointTimerJobHelper** class:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;

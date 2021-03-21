@@ -49,7 +49,7 @@ formatted with CSS instead of via inline **style** attributes.
 Here is the updated script that I ended up with (I've also attached it to this
 post for easier downloading):
 
-```
+```PowerShell
 ################################################################################
 # Set-ClipboardScriptHtmlBlock.ps1
 #
@@ -338,7 +338,7 @@ paste the clipboard contents into the source window of Expression Web (currently
 
 I then specify rules similar to the following in the custom CSS for my blog:
 
-```
+```CSS
 code .attribute {
    color: #2b91af;
 }

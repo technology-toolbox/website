@@ -39,7 +39,7 @@ You may have noticed the Add-Hostnames.ps1 script in my
 
 The following illustrates these scripts in action:
 
-```
+```Shell
 PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-Hostnames.ps1 | sort Hostname" >}}
 
 Hostname                                                    IpAddress
@@ -95,7 +95,7 @@ www-local.tugboatcoffee.com                                 127.0.0.1
 
 ### Get-Hostnames.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Gets the hostnames (and corresponding IP addresses) specified in the hosts file.
@@ -236,7 +236,7 @@ process
 
 ### Add-Hostnames.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Adds one or more hostnames to the hosts file.
@@ -544,7 +544,7 @@ end
 
 ### Remove-Hostnames.ps1
 
-```
+```PowerShell
 <#
 .SYNOPSIS
 Removes one or more hostnames from the hosts file.

@@ -31,7 +31,7 @@ subsites.
 Note that there really wasn't much to the DeleteWeb program. Almost all of the
 work was performed by the **DeleteHelper** class:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -94,7 +94,7 @@ that has subsites (e.g. [http://foobar/Test/foo](http://foobar/Test/foo) and
 **[Remove-SPWeb](http://technet.microsoft.com/en-us/library/ff607890.aspx)**
 cmdlet in SharePoint Server 2010 to delete the site...
 
-```
+```Shell
 Remove-SPWeb "http://foobar/Test" -Confirm:$false
 ```
 
@@ -118,7 +118,7 @@ In order to delete a site that has subsites using PowerShell, we simply need to
 convert the C# code shown above into a corresponding PowerShell function, as
 shown below:
 
-```
+```PowerShell
 # Completely deletes the specified Web (including all subsites)
 
 function RemoveSPWebRecursively(

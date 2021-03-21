@@ -42,7 +42,7 @@ Here is the script from my
 [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder
 (\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs):
 
-```
+```VBA
 If WScript.Arguments.Count > 1 Then
     WScript.Echo
     WScript.Echo "Usage: cscript ""Clear Event Logs.vbs"" [computer name]"

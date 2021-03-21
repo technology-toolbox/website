@@ -41,7 +41,7 @@ Well shiver me timbers, mateys!
 Using IIS Manager, I made a quick change to disable directory browsing on
 TechnologyToolbox.com. This added the following element to the Web.config file:
 
-```
+```XML
 <configuration>
   ...
   <system.webServer>

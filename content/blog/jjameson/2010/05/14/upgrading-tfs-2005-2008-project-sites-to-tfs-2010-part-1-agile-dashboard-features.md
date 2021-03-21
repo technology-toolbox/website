@@ -48,7 +48,7 @@ However, there's a problem with the steps described in this article...
 Here is the XML input file that I used with the **File.BatchNewTeamProject**
 command:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="ProjectCreationSettingsFileSchema.xsd">
   <TFSName>http://cyclops:8080/tfs/DefaultCollection</TFSName>
@@ -102,7 +102,7 @@ Well, yeah, of course the team project site already exists -- that's why I'm
 trying to upgrade it with the new TFS 2010 features! Isn't that why I specified
 the following in my input file?
 
-```
+```JavaScript
 <AddFeaturesToExistingProject>true</AddFeaturesToExistingProject>
 ```
 
@@ -118,7 +118,7 @@ it definitely left me feeling a little queasy.
 Since I was essentially blocked at that point, I decided to try running the
 command again, after making the following change to my input file:
 
-```
+```C++
 <ProjectSiteEnabled>false</ProjectSiteEnabled>
 ```
 
@@ -204,7 +204,7 @@ Note that you can activate the feature in a variety of ways:
 Since I have a number of TFS project sites to upgrade, I chose to activate the
 feature using PowerShell:
 
-```
+```JSON
 Enable-SPFeature "TfsDashboardAgileMoss" -Url "http://cyclops/sites/AdventureWorks"
 ```
 
@@ -246,7 +246,7 @@ launch navigation accordingly.
 Lastly, note that if you use PowerShell to activate the dashboard feature, you
 can easily upgrade numerous project sites at once:
 
-```
+```PowerShell
 $sitesToUpgrade =
    @(
 	"http://cyclops/sites/AdventureWorks",

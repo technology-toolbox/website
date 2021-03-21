@@ -39,7 +39,7 @@ was about the simplest I can imagine.
 If you look at the HTML for a Subtext blog page, you'll discover it specifies a
 DOCTYPE of **XHTML 1.0 Transitional** but actually contains invalid XHTML:
 
-```
+```HTML
 <link id="opensearch" rel="search" type="..." href="..." Title="..." />
 ```
 

@@ -69,7 +69,7 @@ designated recipients.
 Since, like me, you probably don't want to be bothered by a message whenever
 someone attempts this hack, you could configure an ELMAH filter as follows:
 
-```
+```XML
   <elmah>
     ...
     <errorFilter>
@@ -90,7 +90,7 @@ Consequently we need to tweak the error filter a little bit (by adding an
 `<and>` element and checking if the current "filter source" is the
 **ErrorMailModule**):
 
-```
+```XML
     <errorFilter>
       <test>
         <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
@@ -129,7 +129,7 @@ might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.
 
 To suppress these messages, we can simply expand the ELMAH filter a little bit:
 
-```
+```XML
     <errorFilter>
       <test>
         <or>
@@ -163,7 +163,7 @@ The following errors are typically indicative of these hack attempts:
 
 Consequently we might as well add these to the ELMAH filter:
 
-```
+```XML
     <errorFilter>
       <test>
         <or>
@@ -229,14 +229,14 @@ Ouch.
 James Driscoll pointed out that you can avoid the issue in some cases, for
 example, by changing:
 
-```
+```XML
   <equal binding="FilterSourceType.Name" value="ErrorMailModule"
     type="String" />
 ```
 
 to:
 
-```
+```XML
   <is-type binding="FilterSource" type="Elmah.ErrorMailModule" />
 ```
 
@@ -260,7 +260,7 @@ Issue 277 became somewhat of a moot point last weekend because once I discovered
 the bug, I quickly turned my attention to finding a workaround. Consequently, I
 converted my filter configuration to use JavaScript instead:
 
-```
+```XML
     <errorFilter>
       <test>
         <jscript>

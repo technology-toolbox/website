@@ -43,7 +43,7 @@ title="Figure 1: Constrained table" >}}
 
 Here is the sample ASP.NET page that I created this morning to demonstrate this:
 
-```
+```CSS
 <%@ Page Language="C#" AutoEventWireup="true"
     CodeBehind="ConstrainedTable.aspx.cs"
     Inherits="Fabrikam.Demo.Web.UI.ConstrainedTable" %>
@@ -146,7 +146,7 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
 The most interesting parts of the ASP.NET page are the CSS rules for the
 `constrainedTable` class:
 
-```
+```CSS
 table.constrainedTable {
     table-layout: fixed;
     width: 540px;
@@ -194,7 +194,7 @@ event in order to set the
 property of the table cell. Just be sure to decode the contents of the cell to
 avoid having it encoded twice:
 
-```
+```C#
         protected void ConstrainedGrid_RowDataBound(
             object sender,
             GridViewRowEventArgs e)
@@ -224,7 +224,7 @@ long site names that don't fit within the 140 pixel width column constraint ;-)
 Here is the complete code-behind for my sample ASP.NET page so you can run it
 yourself:
 
-```
+```C#
 using System;
 using System.Data;
 using System.Globalization;

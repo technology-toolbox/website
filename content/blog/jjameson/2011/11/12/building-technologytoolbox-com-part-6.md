@@ -83,7 +83,7 @@ Subtext:
 I started by creating a C# console application and adding a small amount of code
 to download the monthly summary pages from my MSDN blog to a temporary folder.
 
-```
+```C#
         static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
@@ -107,7 +107,7 @@ Since I authored my first blog post back in 2007, I created a couple of `for`
 loops to iterate over all months in the last 4 years and download the
 corresponding Web page to an offline file.
 
-```
+```C++
         private static void ExportSummaryPages(
             Uri oldBlogBaseUrl,
             string summaryFolder)
@@ -166,7 +166,7 @@ destination folder exists -- since the
 [**DownloadFile**](http://msdn.microsoft.com/en-us/library/ms144194.aspx) method
 won't automatically create any necessary folders):
 
-```
+```C++
         private static void EnsureOfflineFile(
             Uri url,
             string offlineFilename)
@@ -216,7 +216,7 @@ my blog I discovered [BlogML .NET](http://blogml.codeplex.com/), which makes it
 very easy to create the corresponding XML file with substantially less coding on
 my part.
 
-```
+```C#
         static void Main(string[] args)
         {
             ...
@@ -252,7 +252,7 @@ my part.
 Note that by the time I had written this code, I had already exported a sample
 BlogML file from Subtext and observed the following in the XML file:
 
-```
+```XML
   <extended-properties>
     <property name="CommentModeration" value="Disabled" />
   </extended-properties>
@@ -267,7 +267,7 @@ The next step is to iterate through the offline archive files for each month and
 add a limited amount of information for each post into the **BlogMLBlog**
 instance.
 
-```
+```C#
         static void Main(string[] args)
         {
             ...
@@ -291,7 +291,7 @@ looks for a specific string (`"No blog posts have yet been created"`) to see if,
 in fact, there are any posts for the corresponding month, and then parses the
 HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
 
-```
+```C#
         private static void ExportPostSummaries(
             BlogMLBlog blog,
             string summaryFolder)
@@ -358,7 +358,7 @@ method. Here is a sample HTML fragment that shows the "interesting" elements
 that are used to extract the post title and excerpt (i.e. summary) and add these
 to the BlogML document.
 
-```
+```HTML
 <div class="abbreviated-post">
     <div class="post-application">
         ...
@@ -404,7 +404,7 @@ content for each post as well as set some additional metadata (e.g. the date
 each post was published). This functionality is implemented in the
 **ExportPosts** method.
 
-```
+```C#
         static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
@@ -431,7 +431,7 @@ iterating the collection of posts and processing each one individually. The
 first step is to download an offline copy of the post using the
 **EnsureOfflineFile** method shown above.
 
-```
+```JavaScript
         private static void ExportPosts(
             BlogMLBlog blog,
             string postsFolder,
@@ -477,7 +477,7 @@ first step is to download an offline copy of the post using the
 
 **FillPostDetail** is where things start to get more interesting...
 
-```
+```JavaScript
         private static void FillPostDetail(
             BlogMLBlog blog,
             BlogMLPost post,
@@ -580,7 +580,7 @@ content of each post in order to:
   from copying/pasting from Microsoft Word (e.g. curly quotes) -- since I
   frequently copy text from documents I've written when creating blog posts
 
-```
+```C++
         private static string TransformOriginalPostContent(
             HtmlNode postContent,
             Uri originalPostUrl,
@@ -627,7 +627,7 @@ content of each post in order to:
 Removing unwanted attributes in the HTML turns out to be rather trivial, thanks
 to the powerful XPath query capabilities of the Html Agility Pack:
 
-```
+```C#
         private static void RemoveUnwantedAttributes(
             HtmlNode postContent,
             string attributeName)
@@ -651,7 +651,7 @@ Link translation is also relatively easy thanks to the **HtmlNode.Descendants**
 method and the fact that the URLs for each post on my new blog are very similar
 to the old URLs:
 
-```
+```JavaScript
         private static void TranslateLinksToOtherBlogPosts(
             HtmlNode postContent,
             Uri newBlogBaseUrl)
@@ -716,7 +716,7 @@ just use my **HtmlCleaner** class instead -- since I've used this extensively in
 the past. Note that **HtmlCleaner** is really just a thin wrapper around
 **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
-```
+```JavaScript
     /// <summary>
     /// Utility class for ensuring HTML is well-formed.
     /// </summary>
@@ -879,7 +879,7 @@ you can dynamically "create" new tags when creating or updating a post).
 
 Here is the helper method that adds the tags to each post:
 
-```
+```JavaScript
         private static void AppendBlogPostTags(
             HtmlDocument document,
             StringBuilder buffer)
@@ -916,7 +916,7 @@ Here is the helper method that adds the tags to each post:
 The **GetPostTags** method simply uses the now familiar parsing functionality of
 **HtmlDocument** to extract the list of tags from the offline post file:
 
-```
+```C#
         private static string[] GetPostTags(
             HtmlDocument document)
         {
@@ -945,7 +945,7 @@ I created the **GetNewTag** method (called from the **AppendBlogPostTags**
 method above) when I realized I should have used a different tag on my MSDN blog
 (i.e. **SharePoint 2010** -- instead of **SharePoint Server 2010**):
 
-```
+```C#
         private static string GetNewTag(
             string oldTag)
         {
@@ -1010,7 +1010,7 @@ mapping, illustrated below:
 This mapping is implemented in the **MapTagToCategory** method, which is called
 from the **FillPostCategories** method:
 
-```
+```C++
         private static void FillPostCategories(
             BlogMLBlog blog,
             BlogMLPost post,
@@ -1124,7 +1124,7 @@ In order to spoof the Ajax requests to download blog comments, I implemented
 what essentially amounts to a "replay hack." Like the previous steps, let's
 start with a quick look at the updates to `Main`...
 
-```
+```C#
         static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson");
@@ -1149,7 +1149,7 @@ collection of posts, calls another method to export the post comments to an
 offline file, and then processes the offline file to load the comments into the
 BlogML document:
 
-```
+```C++
         private static void ExportComments(
             BlogMLBlog blog,
             string commentsFolder,
@@ -1195,7 +1195,7 @@ BlogML document:
 specified post (meaning the comments have already been downloaded) and, if not,
 attempts to download any comments:
 
-```
+```C#
         private static void ExportPostComments(
             Uri originalPostUrl,
             string commentsFilename)
@@ -1231,7 +1231,7 @@ attempts to download any comments:
 The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web
 scraping the fake Ajax request used to retrieve the comments:
 
-```
+```C++
         private static string GetFeedbackHtmlForPost(
             Uri postUrl)
         {
@@ -1355,7 +1355,7 @@ After running the migration utility at this point, the BlogML document contains
 all of the blog posts (including the categories, tags, and comments for each
 post) and is ready to be written to a file.
 
-```
+```C#
         static void Main(string[] args)
         {
 
@@ -1372,7 +1372,7 @@ post) and is ready to be written to a file.
 
 The **SaveBlogML** method is very simple...
 
-```
+```C#
         private static void SaveBlogML(
             BlogMLBlog blog,
             string filename)
@@ -1421,7 +1421,7 @@ file in Visual Studio and added a custom template for the `<posts>` elements
 namespace in order to get this to work as expected (since the BlogML file
 specifies a default namespace):
 
-```
+```XSLT
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

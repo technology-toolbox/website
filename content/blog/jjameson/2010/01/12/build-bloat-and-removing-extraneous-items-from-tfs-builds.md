@@ -93,7 +93,7 @@ Telerik.Web.UI.dll.
 To resolve the build bloat issue, I modified our TFSBuild.proj file to override
 the `BeforeDropBuild` target:
 
-```
+```XML
   <Target Name="BeforeDropBuild">
     <Message Importance="high"
       Text="Removing extraneous files from the build..." />

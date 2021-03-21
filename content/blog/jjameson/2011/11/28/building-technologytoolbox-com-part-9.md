@@ -81,7 +81,7 @@ follows:
 These changes make the LINQ queries much easier to read. For example, the
 following LINQ query can be used to retrieve the three most recent blog posts:
 
-```
+```C#
     using (CaelumEntities context = new CaelumEntities())
     {
         var q = (from entry in context.Entries
@@ -112,7 +112,7 @@ HTML for blog posts.
 Here is the HTML structure for the **Most Recent Posts** section on the site
 home page (corresponding to the screenshot in Figure 1):
 
-```
+```HTML
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <div class="hentry">
@@ -195,7 +195,7 @@ page.
 Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 **Repeater** control:
 
-```
+```HTML
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -243,7 +243,7 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 In the corresponding code-behind for the user control, I added code to retrieve
 the list of recent posts and bind the results to the **Repeater** control:
 
-```
+```C#
 using System;
 using System.Linq;
 using TechnologyToolbox.Caelum.Data;
@@ -278,7 +278,7 @@ In order to generate the URL for a specific blog post, I created a simple
 post (for example,
 "/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx"):
 
-```
+```C++
 namespace TechnologyToolbox.Caelum.Website
 {
     /// ...
@@ -322,7 +322,7 @@ namespace TechnologyToolbox.Caelum.Website
 Then I replaced the placeholders for the post URL with corresponding calls to
 the **BlogHelper.GetEntryUrl** method:
 
-```
+```HTML
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -365,7 +365,7 @@ replaced the sample date/time values for each post with the actual values
 specified in **DateSyndicated**. This is simply a matter of formatting the
 **DateTime** value as shown below:
 
-```
+```HTML
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -396,7 +396,7 @@ words, when there are no comments for a post, the markup should be `<li class="c
 should be `<li class="comments">`. This makes it very easy to show or hide the
 comments icon (and corresponding link) using CSS.
 
-```
+```HTML
 <div class="hfeed posts-recent">
     <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
@@ -439,13 +439,13 @@ In order to greatly reduce the number of roundtrips to SQL Server, I added a
 cache directive to the user control and specified a duration of five minutes
 (300 seconds):
 
-```
+```XML
 <%@ OutputCache Duration="300" VaryByParam="None" %>
 ```
 
 Here is the complete source for RecentPosts.ascx:
 
-```
+```HTML
 <%@ Control Language="C#" AutoEventWireup="true"
     CodeBehind="RecentPosts.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.RecentPosts" %>

@@ -75,7 +75,7 @@ SharePoint HTTP request), then you can simply use the
 [HtmlField.GetFieldValueAsHtml](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.fields.htmlfield.getfieldvalueashtml.aspx)
 method, as shown below:
 
-```
+```JavaScript
     HtmlField pageContentField =
         (HtmlField) page.Fields[FieldId.PublishingPageContent];
 
@@ -100,7 +100,7 @@ underlying the presentation layer.]
 
 The original code looked like this:
 
-```
+```JavaScript
                 if (pageContent.Contains("__publishingReusableFragment") == true)
                 {
                     // HACK: We need to "expand" the reusable content in order
@@ -161,7 +161,7 @@ warning message simply wasn't going to cut it in this case ;-)
 Consequently, I implemented a custom method in the **SharePointHtmlFieldHelper**
 class for getting the "expanded" HTML content from a Publishing HTML field:
 
-```
+```C++
         public static string GetFieldValueAsHtml(
             SPWeb web,
             object value)
@@ -223,7 +223,7 @@ SharePoint code whenever possible, which is why I provide a wrapper method in
 the **SharePointPublishingHelper** class that determines whether or not it is
 "safe" to use the **HtmlField.GetFieldValueAsHtml** method:
 
-```
+```C#
         /// <summary>
         /// Returns the value of the "Page Content" field for the specified page
         /// in HTML format. If the field contains any "reusable content"
@@ -272,7 +272,7 @@ various unit tests to verify things are working as expected, including the
 following unit test, which demonstrates why you can't use the
 **HtmlField.GetFieldValueAsHtml** method when SPContext.Current is null:
 
-```
+```C#
         /// <summary>
         /// This test simply demonstrates why the out-of-the-box
         /// <see cref="Microsoft.SharePoint.Publishing.Fields.HtmlField.GetFieldValueAsHtml"/>

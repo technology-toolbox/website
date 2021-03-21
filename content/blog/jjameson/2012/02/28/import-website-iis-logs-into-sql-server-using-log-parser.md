@@ -52,7 +52,7 @@ combine the "date" and "time" fields into a single DATETIME column, and add some
 
 Here is the script I use to create the table in SQL Server:
 
-```
+```SQL
 CREATE TABLE dbo.WebsiteLog
 (
     LogFilename VARCHAR(255) NOT NULL,
@@ -110,7 +110,7 @@ for subsequent analysis.
 
 ### Import Website Log Files.ps1
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Import-Module Pscx -EA 0
@@ -238,7 +238,7 @@ Main
 
 After running the script, you should see something like this:
 
-```
+```XML
 PS C:\NotBackedUp\Public\Toolbox\PowerShell> {{< kbd "& \".\Import Website Log Files.ps1\"" >}}
 Creating archive folder for compressed log files...
 Extracting compressed log files...

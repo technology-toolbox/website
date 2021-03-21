@@ -56,7 +56,7 @@ projects is to instrument the assemblies using
 Let's start by defining a list of the assemblies that will be analyzed for code
 coverage:
 
-```
+```PowerShell
     [string[]] $assembliesToInstrument =
     @(
         "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
@@ -79,7 +79,7 @@ class).
 
 Next we need to instrument each assembly in the list:
 
-```
+```PowerShell
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
@@ -90,7 +90,7 @@ The `InstrumentAssembly` function simply executes
 [VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx) on the
 specified assembly:
 
-```
+```PowerShell
 function InstrumentAssembly(
     [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
 {
@@ -119,7 +119,7 @@ specify a **Re-signing key file**.
 To re-sign the instrumented assembly from the PowerShell script, we need to use
 the Strong Name Tool (Sn.exe):
 
-```
+```PowerShell
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
@@ -132,7 +132,7 @@ The `SignAssembly` function simply executes
 [Sn.exe](http://msdn.microsoft.com/en-us/library/k5b5tt23.aspx) on the
 instrumented assembly:
 
-```
+```PowerShell
 function SignAssembly(
     [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
 {
@@ -158,7 +158,7 @@ project:
 
 The corresponding array variable in PowerShell is:
 
-```
+```JavaScript
     [string[]] $testAssemblies =
     @(
         ("CoreServices\DeveloperTests\bin\Debug" `
@@ -172,13 +172,13 @@ To copy the instrumented assemblies into the "bin" folders for the test
 projects, we first need to get the list of folders containing the test
 assemblies:
 
-```
+```PowerShell
     $testBinFolders = GetAssemblyFolders($testAssemblies)
 ```
 
 The `GetAssemblyFolders `function is straightforward:
 
-```
+```PowerShell
 function GetAssemblyFolders(
     [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"))
 {
@@ -199,7 +199,7 @@ With the list of instrumented assemblies and the list of folders containing the
 test assemblies, the next step is to copy the modified assemblies to the
 destination folders:
 
-```
+```PowerShell
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
@@ -213,7 +213,7 @@ destination folders:
 The function simply uses the **Copy-Item** cmdlet to copy the instrumented
 assembly to each destination "bin" older:
 
-```
+```PowerShell
 function CopyInstrumentedAssemblyToTestBinFolders(
     [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"),
     [string[]] $testBinFolders = $(Throw "Value cannot be null: testBinFolders"))
@@ -229,7 +229,7 @@ Also note that if the assemblies are deployed to the global assembly cache (e.g.
 for a SharePoint feature receiver), then we need to update the assembly in the
 GAC as well:
 
-```
+```Shell
     $assembliesToInstrument |
         ForEach-Object {
             InstrumentAssembly $_
@@ -247,7 +247,7 @@ assembly is already in the GAC (in which case it is replaced with the
 instrumented assembly). If the assembly is not already in the GAC, then no
 action is performed.
 
-```
+```PowerShell
 function UpdateGacAssemblyIfNecessary(
     [string] $assemblyPath = $(Throw "Value cannot be null: assemblyPath"))
 {
@@ -305,7 +305,7 @@ function UpdateGacAssemblyIfNecessary(
 After a little refactoring in the script, I ended up with a function used to
 start (and stop) the code coverage profiler:
 
-```
+```PowerShell
 function ToggleCodeCoverageProfiling(
     [bool] $enable)
 {
@@ -325,7 +325,7 @@ function ToggleCodeCoverageProfiling(
 
 To start the code coverage profiler, simply call the function and pass `$true`:
 
-```
+```PowerShell
     ToggleCodeCoverageProfiling $true
 ```
 
@@ -336,7 +336,7 @@ unit/integration tests. Note that in order to force the tests to run in a 64-bit
 process (in order for the SharePoint tests to work), a test settings file must
 be specified:
 
-```
+```PowerShell
     [string] $testSettingsPath = "LocalTestRun.testrunconfig"
 
     ...
@@ -355,7 +355,7 @@ In order to consolidate the results from multiple test projects, I execute
 **mstest.exe** only once and specify all of the test assemblies using separate
 **/testcontainer** parameters (one for each test assembly):
 
-```
+```PowerShell
 function RunTests(
     [string[]] $assemblyPaths = $(Throw "Value cannot be null: assemblyPaths"),
     [string] $testSettingsPath)
@@ -384,7 +384,7 @@ function RunTests(
 Once the unit/integration tests have completed, the final step is to stop the
 code coverage profiler:
 
-```
+```Shell
     ToggleCodeCoverageProfiling $false
 ```
 
@@ -395,7 +395,7 @@ Here is the script in its entirety.
 
 ### Run Developer Tests with Code Coverage.ps1
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 function CopyInstrumentedAssemblyToTestBinFolders(
@@ -572,6 +572,6 @@ unit/integration tests. You should be able to extract the files, create an
 your existing Web applications), and then run the PowerShell script from the
 **Source** folder to perform code coverage analysis:
 
-```
+```C++
 & '.\Run Developer Tests with Code Coverage.ps1'
 ```

@@ -101,7 +101,7 @@ out-of-the-box with its table-based layout).
 To understand how the 960 Grid System is used on our SharePoint site, consider
 the following master page:
 
-```
+```XML
 <%@ Master Language="C#" CodeBehind="Fabrikam.master.cs" Inherits="Fabrikam.Portal.Web.UI.FabrikamMasterPage, Fabrikam.Portal.Web,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=c8cdcbca6f69701f" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -219,7 +219,7 @@ Ignoring the differences in the page directives (which are irrelevant when
 discussing Web standards), the first thing you'll notice is that the master page
 specifies a DOCTYPE:
 
-```
+```HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 ```
@@ -229,7 +229,7 @@ dreaded [quirks mode](http://en.wikipedia.org/wiki/Quirks_mode) in Web browsers.
 Since, as I noted earlier, the markup emitted by SharePoint isn't always ideal,
 avoid the temptation to specify a strict DOCTYPE, such as:
 
-```
+```HTML
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
 ```
@@ -242,7 +242,7 @@ don't know if that will actually hold true, but regardless, the current version
 In the MSDN minimal master page sample, the following items immediately follow
 the `<html>` element:
 
-```
+```XML
   <WebPartPages:SPWebPartManager runat="server"/>
   <SharePoint:RobotsMetaTag runat="server"/>
 ```
@@ -260,13 +260,13 @@ The next important difference between the sample MSDN master page and the one
 shown above is with regards to the links to CSS files. The MSDN sample only
 specifies the following:
 
-```
+```XML
     <SharePoint:CssLink runat="server"/>
 ```
 
 My master page, however, specifies the following:
 
-```
+```XML
     <SharePoint:CssLink runat="server" />
     <!--Styles used for positioning, font and spacing definitions-->
     <SharePoint:CssRegistration
@@ -324,7 +324,7 @@ The reason why the custom CSS file contains the "-Main" suffix is because it
 typically refers to other CSS files. For example, the first two lines of
 Fabrikam-Main.css are:
 
-```
+```C++
 @import url('Fabrikam-Basic.css');
 @import url('960.css');
 ```
@@ -341,7 +341,7 @@ number of CSS files is very small for this project.
 
 Here are the contents of Fabrikam-Basic.css:
 
-```
+```CSS
 /* Reset styles to standardize formatting across various browsers (refer to
  * http://meyerweb.com/eric/tools/css/reset/ and
  * http://developer.yahoo.com/yui/reset/ for more info).
@@ -519,7 +519,7 @@ While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most
 people (since they are specific to one particular Web site), it is worth
 highlighting a few of the rules:
 
-```
+```CSS
 /* =core (SharePoint core.css overrides)
 ------------------------------------------------------------------------------*/
 .ms-pagebreadcrumb {
@@ -568,7 +568,7 @@ specified in the out-of-the-box SharePoint CSS files.
 Returning to the contents of the master page, the following element is used to
 encapsulate all of the page content:
 
-```
+```HTML
     <div class="container_12">
 ```
 

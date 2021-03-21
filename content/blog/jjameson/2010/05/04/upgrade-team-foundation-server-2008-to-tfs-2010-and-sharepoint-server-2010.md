@@ -865,7 +865,7 @@ content databases. ~~On the database server:~~
 
 > **Update (2011-04-14)**
 >
-> ```
+> ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
 >
 > $webApp = Get-SPWebApplication "http://cyclops"

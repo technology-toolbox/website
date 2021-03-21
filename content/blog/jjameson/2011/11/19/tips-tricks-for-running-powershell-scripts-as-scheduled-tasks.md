@@ -28,7 +28,7 @@ Windows Task Scheduler.
 Let's start with a very simple PowerShell script to use as an example
 (Temp.ps1):
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Write-Host "Changing to TEMP folder..."
@@ -46,7 +46,7 @@ Write-Host "Success"
 When you run this script the first time, it should complete successfully and the
 output should resemble the following:
 
-```
+```XML
 PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
@@ -64,7 +64,7 @@ PS C:\Users\jjameson\AppData\Local\Temp>
 
 However, when you run the script again, an error occurs:
 
-```
+```C++
 PS C:\Users\jjameson\AppData\Local\Temp> {{< kbd "C:\Temp.ps1" >}}
 Changing to TEMP folder...
 Creating file...
@@ -117,7 +117,7 @@ Like me, you might try using the
 **[Start-Transcript](http://technet.microsoft.com/en-us/library/dd347721.aspx)**
 cmdlet to create a log file:
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Start-Transcript -Path "$env:TEMP\Temp.log"
@@ -168,7 +168,7 @@ statement or avoiding `Write-Host` altogether and instead simply pipe a string
 to **Out-Default**. The latter option seems awkward, in my opinion, so let's use
 the former:
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Start-Transcript -Path "$env:TEMP\Temp.log"
@@ -232,7 +232,7 @@ Then create a scheduled task which runs the command file.
 
 Here is the sample command file from my previous post (Rebuild Website.cmd):
 
-```
+```C++
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
 EXIT %ERRORLEVEL%
 ```

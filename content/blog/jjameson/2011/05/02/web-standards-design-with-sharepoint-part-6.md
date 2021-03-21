@@ -50,7 +50,7 @@ title="Figure 1: Specials list" >}}
 
 ...and subsequently render the list items as an HTML ordered list:
 
-```
+```HTML
 <h2>This Week's Specials</h2>
 <ol class='specials group'>
     <li class='group'>
@@ -162,7 +162,7 @@ programmatically manipulating SharePoint lists anyway.
 Here's the code I wrote to create automatically create and configure the new
 **Specials** list:
 
-```
+```JavaScript
         private static void ConfigureSpecialsList(
             SPWeb web)
         {
@@ -244,7 +244,7 @@ Here's the code I wrote to create automatically create and configure the new
 Note that I use a separate method to configure the default views for the new
 list:
 
-```
+```C#
         private static void ConfigureViewsForSpecialsList(
             SPList list,
             string[] fields)
@@ -295,7 +295,7 @@ I populate the default list items using a couple of other helper methods (but
 only if the list is empty upon activation of the feature -- in order to avoid
 adding duplicate items to the list):
 
-```
+```C++
         private static void CreateDefaultItemsInSpecialsList(
             SPList list)
         {
@@ -359,13 +359,13 @@ this method is straightforward and sufficient for this scenario.
 In order to add the new **XsltListViewWebPart** to the home page, I modified the
 existing **ConfigureHomeSiteDefaultPage** method that I created previously:
 
-```
+```C++
         private static void ConfigureHomeSiteDefaultPage(
             SPWeb homeWeb)
         {
 ```
 
-```
+```C++
             ...
 
             // Configure Web Parts
@@ -401,7 +401,7 @@ existing **ConfigureHomeSiteDefaultPage** method that I created previously:
 
 The new **ConfigureSpecialsWebPart** method is shown below:
 
-```
+```C#
         private static void ConfigureSpecialsWebPart(
             SPWebPartPages.SPLimitedWebPartManager wpm,
             string zoneId,
@@ -481,7 +481,7 @@ described below.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Tugboat\Main\Source\DeploymentFiles\Scripts), and run the following commands:
    
-   ```
+   ```HTML
    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
    & '.\Rebuild Web Application.ps1'

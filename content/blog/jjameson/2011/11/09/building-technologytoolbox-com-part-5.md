@@ -135,7 +135,7 @@ The entire list is wrapped in an element with `class="hfeed"` and each post is
 represented as an element with `class="hentry"`. The title of each post (a.k.a.
 "entry") is rendered as an `<h2>` element with `class="entry-title"`.
 
-```
+```HTML
 <div class="hfeed">
   <div class="hentry">
     <h2 class="entry-title">
@@ -273,7 +273,7 @@ When viewing a specific blog post, the HTML markup is very similar to the blog
 home page. The primary difference is that the `<div class="entry-summary">`
 element is replaced by the `<div class="entry-content">` element.
 
-```
+```HTML
 <div id="blogPost">
   <div class="hentry">
     <h2 class="entry-title">

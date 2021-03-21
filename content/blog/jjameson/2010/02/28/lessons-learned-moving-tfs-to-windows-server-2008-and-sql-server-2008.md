@@ -403,7 +403,7 @@ and made a few tweaks to get the code to compile (e.g. changing
 debugging, I discovered that I also had to change the URL of the Web service
 proxy:
 
-```
+```C#
         private static void CreateReportServerProxy()
         {
             string reportsServerUrl = GetReportsServerUrl();

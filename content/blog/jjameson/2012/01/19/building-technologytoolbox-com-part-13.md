@@ -73,7 +73,7 @@ linkHref="http://nuget.org/packages/jQuery" >}}
 
 Now let's add a little bit of script to a sample page:
 
-```
+```HTML
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs"
   Inherits="Demo._Default" %>
 
@@ -115,7 +115,7 @@ should we go about doing this?
 You probably already know that the default Web.config file contains the
 following:
 
-```
+```XML
 <configuration>
     ...
     <system.web>
@@ -132,7 +132,7 @@ Studio.
 However the Web.config file for Release builds does not contain the `debug`
 attribute, due to the following transform specified in Web.Release.config:
 
-```
+```XML
 <configuration ...>
   <system.web>
     <compilation xdt:Transform="RemoveAttributes(debug)" />
@@ -143,7 +143,7 @@ attribute, due to the following transform specified in Web.Release.config:
 We can leverage this fact to conditionally include different versions of the
 jQuery file for Debug and Release builds, as follows:
 
-```
+```XML
 <% if (HttpContext.Current.IsDebuggingEnabled == true) { %>
   <script
     src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"
@@ -166,7 +166,7 @@ master page isn't actually referencing these versions).
 This technique obviously works with your own script files -- and CSS files as
 well. For example, you might end up with something like this:
 
-```
+```XML
 <head runat="server">
   ...
   <title>Technology Toolbox</title>
@@ -242,7 +242,7 @@ specifying the path using the `href` attribute, the default (minified) CSS file
 is specified using the `CssFile` attribute. A debug (uncompressed) CSS file can
 optionally be specified using the `DebugCssFile` attribute.
 
-```
+```C#
 using System;
 using System.Web;
 using System.Web.UI.HtmlControls;
@@ -286,7 +286,7 @@ Instead of specifying the script path using the `src` attribute, the default
 (uncompressed) script file can optionally be specified using the
 `DebugSourceFile` attribute.
 
-```
+```C#
 using System;
 using System.Web;
 using System.Web.UI;
@@ -355,7 +355,7 @@ still possible since **JQueryReference** inherits from **JavaScriptReference**).
 By default, I initialize **Version** to the current version of jQuery (i.e.
 1.7.1).
 
-```
+```C#
 using System;
 using System.Globalization;
 
@@ -416,7 +416,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 Leveraging these new controls, the corresponding `<head>` section now looks like
 this:
 
-```
+```XML
 <head runat="server">
   ...
   <title>Technology Toolbox</title>

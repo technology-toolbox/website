@@ -57,7 +57,7 @@ therefore it requires very little code to implement the custom role provider.
 
 I started by overriding the **RoleExists** method:
 
-```
+```C++
         public override bool RoleExists(
             string roleName)
         {
@@ -79,7 +79,7 @@ in the underlying database.
 
 Next, I proceeded to override the **IsUserInRole** method:
 
-```
+```C++
         public override bool IsUserInRole(
             string username,
             string roleName)
@@ -107,7 +107,7 @@ invalid user (since the user wouldn't be able to login in the first place).
 I then moved on to something slightly more challenging - implementing the
 **GetRolesForUser** method:
 
-```
+```C#
         public override string[] GetRolesForUser(
             string username)
         {
@@ -131,7 +131,7 @@ returned from the database (potentially adding a duplicate). Consequently, in
 the helper method I check to see if the role is already specified before
 prepending it to the list:
 
-```
+```C#
         private static string[] AddAuthenticatedUsersRole(
             string[] sqlRoles)
         {
@@ -185,13 +185,13 @@ I then added the following steps to the installation guide:
 >
 > 3. Type the following command:
 >    
->    ```
+>    ```XML
 >    notepad administration.config
 >    ```
 >
 > 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
 >    
->    ```
+>    ```XML
 >    <add
 >      type="Fabrikam.Portal.Web.Security.FabrikamSqlRoleProvider,
 >        Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
@@ -217,7 +217,7 @@ but I was concerned about performance with tens of thousands of users.
 
 Here is the complete source for the custom role provider:
 
-```
+```XML
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

@@ -133,7 +133,7 @@ hostname of the VM:
 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
-```
+```JavaScript
 
 Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
 Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
@@ -169,7 +169,7 @@ address:
 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
-```
+```HTML
 
 Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:
 Reply from 127.0.0.1: bytes=32 time<1ms TTL=128

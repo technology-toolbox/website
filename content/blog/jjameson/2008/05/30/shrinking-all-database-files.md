@@ -26,7 +26,7 @@ non-production environments, such as a shared Development environment (DEV).
 
 Here is the script:
 
-```
+```SQL
 DROP TABLE #CommandQueue
 
 CREATE TABLE #CommandQueue

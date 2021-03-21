@@ -104,7 +104,7 @@ and then iterate the code until we've completed the scenario.
 So let's start with a simple ASP.NET user control (KpiScorecard.ascx) that
 encapsulates the presentation layer for the KPI scorecard:
 
-```
+```HTML
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="KpiScorecard.ascx.cs"
     Inherits="Fabrikam.Demo.Web.UI.Tables.KpiScorecard" %>
 <div class="kpiScorecard">
@@ -119,7 +119,7 @@ In the corresponding code-behind file, we'll create some sample data (which will
 eventually be retrieved from a services layer) and bind it to the GridView
 control:
 
-```
+```C#
 using System;
 using System.Data;
 using System.Globalization;
@@ -251,7 +251,7 @@ little bit of code in the
 **[GridView.RowCreated](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.gridview.rowcreated.aspx)**
 event:
 
-```
+```HTML
         protected void ScorecardDetailView_RowCreated(
             object sender,
             GridViewRowEventArgs e)
@@ -306,7 +306,7 @@ lengthy column headings, similar to the following:
 Now let's add a method to insert another row into the table rendered by the
 GridView control:
 
-```
+```C++
         private static void AddThresholdsHeaderRow(
             GridView scorecardDetailView)
         {
@@ -359,7 +359,7 @@ Of course, we obviously need to call this method, so let's modify the
 **UpdateScorecardDetailView** method to add the thresholds header row after
 binding the GridView control:
 
-```
+```C#
         private void UpdateScorecardDetailView()
         {
             using (DataTable detailTable = GetScorecardDetailTable())
@@ -391,7 +391,7 @@ the corresponding columns, similar to the following:
 Looking at the HTML source, we can see the extra table row has been inserted,
 and the `rowspan` and `colspan` attributes are being rendered as expected.
 
-```
+```XSLT
     <table style="border-collapse: collapse"
         id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
         cellspacing="0">
@@ -464,7 +464,7 @@ method in the PreRenderComplete phase of the page instead of from the
 regardless of whether we are binding the GridView to a data source or rendering
 it from view state):
 
-```
+```C#
         protected void Page_Load(
             object sender,
             EventArgs e)
@@ -509,7 +509,7 @@ It turns out this is really easy. Instead of adding the header row during the
 PreRenderComplete phase of the page, let's instead call the
 **AddThresholdsHeaderRow** method in the SaveStateComplete phase:
 
-```
+```C#
         protected void Page_Load(
                     object sender,
                     EventArgs e)

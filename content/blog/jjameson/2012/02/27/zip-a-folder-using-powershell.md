@@ -47,7 +47,7 @@ compress into a zip file (e.g. C:\NotBackedUp\Fabrikam.zip).
 Assuming you have installed the PowerShell Community Extensions, you could
 simply execute the following in Windows PowerShell:
 
-```
+```C++
 PS C:\Users\jjameson> {{< kbd "Import-Module Pscx" >}}
 PS C:\Users\jjameson> {{< kbd "cd C:\NotBackedUp" >}}
 {{< sample-output "C:\NotBackedUp" >}}
@@ -70,7 +70,7 @@ method on the **Folder** shell object. For example,
 [David Aiken's blog post](http://blogs.msdn.com/b/daiken/archive/2007/02/12/compress-files-with-windows-powershell-then-package-a-windows-vista-sidebar-gadget.aspx)
 shows the following:
 
-```
+```PowerShell
 function Add-Zip
 {
 	param([string]$zipfilename)
@@ -139,7 +139,7 @@ operation is treated as a "transaction."
 First, we need a function to create a zip file for a specific folder (a.k.a.
 directory):
 
-```
+```PowerShell
 function ZipFolder(
     [IO.DirectoryInfo] $directory)
 {
@@ -180,7 +180,7 @@ function ZipFolder(
 
 The `WaitForZipOperationToFinish` function is where the "magic" happens:
 
-```
+```PowerShell
 function WaitForZipOperationToFinish(
     [__ComObject] $zipFile,
     [int] $expectedNumberOfItemsInZipFile)
@@ -243,7 +243,7 @@ I use a variable "wait interval" to account for scenarios ranging from very
 small folders to relatively large folders (but still assuming the zip operation
 should complete in less than 60 seconds):
 
-```
+```PowerShell
 function GetWaitInterval(
     [int] $waitTime)
 {
@@ -265,7 +265,7 @@ function GetWaitInterval(
 To determine if the **CopyHere** operation is running, I check to see if the zip
 file can be locked exclusively:
 
-```
+```PowerShell
 function IsFileLocked(
     [string] $path)
 {
@@ -308,7 +308,7 @@ function IsFileLocked(
 Once the zip file is no longer locked by the zip operation, it is time to count
 the total number of files and folders in a zip file:
 
-```
+```PowerShell
 function CountZipItems(
     [__ComObject] $zipFile)
 {
@@ -340,7 +340,7 @@ function CountZipItemsRecursive(
 
 The final step is to use these functions to create the zip file:
 
-```
+```C++
 PS C:\NotBackedUp> {{< kbd "$directory = Get-Item \"C:\NotBackedUp\Fabrikam\"" >}}
 PS C:\NotBackedUp> {{< kbd "ZipFolder $directory" >}}
 {{< sample-output "Creating zip file for folder (C:\NotBackedUp\Fabrikam)..." >}}
@@ -355,7 +355,7 @@ Here is the PowerShell script in its entirety.
 
 ### ZipFolder.ps1
 
-```
+```PowerShell
 function CountZipItems(
     [__ComObject] $zipFile)
 {

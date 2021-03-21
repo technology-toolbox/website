@@ -86,7 +86,7 @@ Well, as I'm fond of saying, "It is what it is."
 To get rid of the borders and extraneous spacing, I added a few CSS rules to
 override the table styles on the Search page:
 
-```
+```CSS
 #search table th,
 #search table td {
     border: none;
@@ -107,7 +107,7 @@ However, the search results still have the "look-and-feel" of Google -- not
 Technology Toolbox. I began resolving the styling issues by removing the link to
 Google's CSS file and adding the following rules to a CSS file for this website:
 
-```
+```CSS
 /* =search (Search page)
 ------------------------------------------------------------------------------*/
 /* HACK: Google uses table-based layout for search results (Yuck!) */
@@ -249,7 +249,7 @@ rules I had copied from Google -- specifically when an error occurs or no search
 results are found. To provide consistent styling in those scenarios, I added a
 few more CSS rules:
 
-```
+```CSS
 #search .gs-error-result .gs-snippet {
     background-color: #fbeded;
     border: 1px solid #bd1c1c;
@@ -268,7 +268,7 @@ something a little more "polished" for TechnologyToolbox.com.
 I started out by adding the following HTML to the master page in the static HTML
 prototype:
 
-```
+```HTML
   <div id="siteSearch">
     <h2>
       Search</h2>
@@ -283,7 +283,7 @@ location in the masthead.
 Next, I added a little JavaScript to redirect to the search results page
 (Search.aspx) when the search icon is clicked:
 
-```
+```HTML
   <div id="siteSearch">
     <h2>
       Search</h2>
@@ -320,7 +320,7 @@ removed.
 
 These two behaviors are easy to implement using jQuery:
 
-```
+```HTML
     <div id="siteSearch">
       <h2>
         Search</h2>
@@ -335,7 +335,7 @@ These two behaviors are easy to implement using jQuery:
 
 Here is the **configureSearchBox** function:
 
-```
+```JavaScript
 function configureSearchBox(searchBox)
 {
     searchBox.val("Search...");
@@ -373,7 +373,7 @@ similar to the out-of-the-box behavior of SharePoint Search.
 
 This requires a little more code in the **submitSearch** function shown earlier:
 
-```
+```JavaScript
 function submitSearch(searchBox)
 {
     var keywords = searchBox.val();
@@ -397,7 +397,7 @@ included in the HTML that is inserted into the page by Google).
 
 To hide the search box in the masthead, I added the following to Search.aspx:
 
-```
+```JavaScript
 <asp:Content runat="server" ContentPlaceHolderID="AdditionalHeadContent">
 <style type="text/css">
   #siteSearch {
@@ -429,7 +429,7 @@ specify the analytics key.
 
 {{< /div-block >}}
 
-```
+```C#
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -532,7 +532,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
 Here is the complete source for Search.aspx:
 
-```
+```HTML
 <%@ Page Title="Search - Technology Toolbox" Language="C#"
   MasterPageFile="~/Default.master" %>
 

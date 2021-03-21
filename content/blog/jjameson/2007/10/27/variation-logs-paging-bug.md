@@ -64,7 +64,7 @@ The long answer is derived by using SQL Server Profiler to capture the SELECT
 statement used to render the **Variation Logs** page. The query looks something
 like this:
 
-```
+```SQL
 SELECT ...
 FROM
     UserData
@@ -101,7 +101,7 @@ eating your own dogfood!
 Thus, to circumvent the paging bug in the **Variation Logs** page, use a query
 similiar to the following:
 
-```
+```JSON
 SELECT
     UserData.[nvarchar1] AS 'Log Entry'
     ,UserData.[tp_Created] AS 'Time Started (GMT)'
@@ -118,7 +118,7 @@ WHERE
 where {GUID} is the unique identifier for the **Long Running Operation Status**
 list, which can be obtained via the following query:
 
-```
+```SQL
 SELECT tp_ID
 FROM AllLists
 WHERE tp_Title = 'Long Running Operation Status'
@@ -127,7 +127,7 @@ WHERE tp_Title = 'Long Running Operation Status'
 Note that we can actually get a significantly better query plan if we drop the
 superfluous **tp\_DirName** from the WHERE clause:
 
-```
+```JSON
 SELECT
     UserData.[nvarchar1] AS 'Log Entry'
     ,UserData.[tp_Created] AS 'Time Started (GMT)'

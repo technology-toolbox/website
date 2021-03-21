@@ -43,7 +43,7 @@ below.
 
 ### Save Event Logs.vbs
 
-```
+```VBA
 If WScript.Arguments.Count > 1 Then
     WScript.Echo
     WScript.Echo "Usage: cscript ""Save Event Logs.vbs"" [computer name]"

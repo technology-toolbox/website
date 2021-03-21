@@ -41,7 +41,7 @@ Yes, this is going to be really painful for some developers.
 For example, you can say goodbye to using the overload of string.Format() that
 doesn't specify a CultureInfo:
 
-```
+```JavaScript
             string foo = "here";
 
             string logMessage = string.Format(
@@ -67,7 +67,7 @@ such as when it is persisted to disk or to a database, specify
 
 To avoid the CA1305 error, you will need to use something like this instead:
 
-```
+```JavaScript
             string foo = "here";
 
             string logMessage = string.Format(
@@ -122,7 +122,7 @@ of *choosing* a more strict compiler. For example, back in the days when I used
 to program in C on Unix, the compiler wouldn't complain when I wrote something
 like this (even though this is obviously very wrong):
 
-```
+```JavaScript
             if (i = 1)
             {
                 ...

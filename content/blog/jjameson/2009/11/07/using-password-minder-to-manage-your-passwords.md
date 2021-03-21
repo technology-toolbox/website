@@ -67,13 +67,13 @@ how that empty password managed to get saved to the file).
 
 Thus I made a small change to line 381 of CryptMaster.cs. The original code was:
 
-```
+```JavaScript
             if (null == record.EncryptedUserId) {
 ```
 
 I changed this to:
 
-```
+```JavaScript
             if (string.IsNullOrEmpty(record.EncryptedUserId) == true) {
 ```
 

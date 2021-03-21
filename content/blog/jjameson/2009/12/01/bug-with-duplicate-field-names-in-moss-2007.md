@@ -24,7 +24,7 @@ SharePoint Services (WSS) v3.
 
 I initially created the following Fields.xml file:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Field ID="{11F7E97D-6282-44b1-8222-2E6E377BCDFC}"
@@ -46,7 +46,7 @@ I initially created the following Fields.xml file:
 
 Next, I created the ContentTypes.xml file:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <ContentType
@@ -88,7 +88,7 @@ simply be StartDate and AnnouncementEndDate should simply be EndDate (thinking
 that we might want to use these fields for more than just announcements at some
 point in the future). Consequently, I changed the Fields.xml file as follows:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Field ID="{11F7E97D-6282-44b1-8222-2E6E377BCDFC}"
@@ -110,7 +110,7 @@ point in the future). Consequently, I changed the Fields.xml file as follows:
 
 I propagated the changes to the ContentTypes.xml file:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <ContentType
@@ -136,7 +136,7 @@ rather baffled by the issue. Then I discovered that by renaming
 AnnouncementStartDate to StartDate, I introduced a duplicate field name. Note
 the following field definition from the OOTB fieldswss.xml file:
 
-```
+```XML
     <Field ID="{64cd368d-2f95-4bfc-a1f9-8d4324ecb007}"
         Name="StartDate"
         SourceID="http://schemas.microsoft.com/sharepoint/v3"
@@ -173,7 +173,7 @@ customization whenever possible.
 
 In other words, I updated my ContentTypes.xml file to the following:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <ContentType
@@ -193,7 +193,7 @@ In other words, I updated my ContentTypes.xml file to the following:
 Unfortunately, I then discovered that the OOTB EndDate field does not parallel
 the definition of the OOTB StartDate field:
 
-```
+```XML
     <Field ID="{2684F9F2-54BE-429f-BA06-76754FC056BF}"
         Name="EndDate"
         Type="DateTime"
@@ -216,7 +216,7 @@ Time" -- instead of the expected "End Date". So much for consistency ;-)
 
 Lastly, note that the OOTB fieldswss.xml also contains the following:
 
-```
+```XML
     <Field ID="{8A121252-85A9-443d-8217-A1B57020FADF}"
         Name="_EndDate"
         Group="$Resources:Base_Columns"

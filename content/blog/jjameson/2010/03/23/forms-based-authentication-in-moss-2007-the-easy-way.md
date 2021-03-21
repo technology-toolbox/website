@@ -94,7 +94,7 @@ In this case, let's say that after getting the Fabrikam solution from TFS and
 building the solution, Doug opens a command prompt and runs the following
 commands:
 
-```
+```XML
 set FABRIKAM_DEMO_URL=http://fabrikam-local
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
@@ -118,7 +118,7 @@ step-by-step...
 
 ### Step 1 - Set FABRIKAM\_DEMO\_URL environment variable
 
-```
+```Shell
 set FABRIKAM_DEMO_URL=http://fabrikam-local
 ```
 
@@ -133,7 +133,7 @@ accordingly.
 
 ### Step 2 - Set FABRIKAM\_BUILD\_CONFIGURATION environment variable
 
-```
+```Shell
 set FABRIKAM_BUILD_CONFIGURATION=Debug
 ```
 
@@ -161,7 +161,7 @@ title="Figure 1: Setting environment variables" >}}
 
 ### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable
 
-```
+```JavaScript
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
 ```
 
@@ -180,7 +180,7 @@ environment variable but rather always set temporarily via a command prompt.
 
 ### Step 4 - Change to the deployment scripts folder for the custom STSADM commands
 
-```
+```C++
 {{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts" >}}
 ```
 
@@ -197,7 +197,7 @@ corresponding WSP must first be added and deployed.
 
 ### Step 5 - Add the solution for the custom StsAdm.exe commands (Fabrikam.Demo.StsAdm.Commands.wsp)
 
-```
+```XML
 "Add Solution.cmd"
 ```
 
@@ -208,7 +208,7 @@ to make this easier and less prone to human error.
 
 ### Step 6 - Deploy Fabrikam.Demo.StsAdm.Commands.wsp
 
-```
+```XML
 "Deploy Solution.cmd"
 ```
 
@@ -223,7 +223,7 @@ created until step 8.
 
 ### Step 7 - Change to the top-level deployment scripts folder
 
-```
+```Shell
 cd ..\..\..\..\DeploymentFiles\Scripts
 ```
 
@@ -234,7 +234,7 @@ these is used to create the Fabrikam Web applications.
 
 ### Step 8 - Create the Fabrikam Web applications
 
-```
+```XML
 "Create Web Applications.cmd"
 ```
 
@@ -258,7 +258,7 @@ Providers**).
 
 ### Step 9 - Change to the deployment scripts folder for the custom Fabrikam Web solution
 
-```
+```XML
 cd ..\..\Web\DeploymentFiles\Scripts
 ```
 
@@ -271,7 +271,7 @@ part of **Fabrikam.Demo.Web.wsp** -- which is deployed using the scripts in the
 
 ### Step 10 - Add the custom Fabrikam Web solution (Fabrikam.Demo.Web.wsp)
 
-```
+```XML
 "Add Solution.cmd"
 ```
 
@@ -280,7 +280,7 @@ SharePoint farm.
 
 ### Step 11 - Deploy Fabrikam.Demo.Web.wsp
 
-```
+```XML
 "Deploy Solution.cmd"
 ```
 
@@ -289,7 +289,7 @@ be activated.
 
 ### Step 12 - Activate the features in the Fabrikam Web solution
 
-```
+```XML
 "Activate Features.cmd"
 ```
 
@@ -307,7 +307,7 @@ feature on the Web application performs the following:
 
 Or, for those of you that prefer to read code instead...
 
-```
+```C#
          string databaseServer = webApp.ContentDatabases[0].Server;
          AddConnectionStringWebConfigModifications(webApp, databaseServer);
 
@@ -337,7 +337,7 @@ Let's peek under the covers of each these helper methods...
 The **AddConnectionStringWebConfigModifications** method adds the following
 elements to the Web.config files:
 
-```
+```XML
   <connectionStrings>
     <add name="FabrikamDemo"
       connectionString="Server={databaseServer};
@@ -354,7 +354,7 @@ the membership and role providers.
 The **AddAuthenticationWebConfigModifications** method adds the following
 elements to the Web.config files:
 
-```
+```XML
     <authentication mode="{Windows|Forms}">
       <forms
         defaultUrl="/"
@@ -376,7 +376,7 @@ in specifying the `<forms />` element even when `mode="Windows"`.
 The **AddMembershipWebConfigModifications** method adds the following elements
 to the Web.config files:
 
-```
+```XML
     <membership defaultProvider="FabrikamSqlMembershipProvider">
       <providers>
         <clear />
@@ -403,7 +403,7 @@ use (as opposed to the default providers specified in machine.config).
 The **AddRoleManagerWebConfigModifications** method adds the following elements
 to the Web.config files:
 
-```
+```XML
     <roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
       <providers>
         <remove name="AspNetSqlRoleProvider" />
@@ -440,7 +440,7 @@ Most of the work in enabling anonymous access on the top-level site is performed
 using a method in the custom **SharePointWebHelper** class. However, first we
 must get the root **SPWeb** from the **SPWebApplication**:
 
-```
+```C#
         internal static void EnableAnonymousAccessOnRootWeb(
             SPWebApplication webApp)
         {
@@ -455,7 +455,7 @@ must get the root **SPWeb** from the **SPWebApplication**:
 
 Here's the relevant code from the **SharePointWebHelper** class:
 
-```
+```JavaScript
         /// <summary>
         /// Ensures anonymous access is enabled on the specified site.
         /// </summary>
@@ -521,7 +521,7 @@ activation of the FBA configuration feature (and removed when the feature is
 deactivated). I scheduled the timer job to run every two minutes (which seems
 reasonable given the minimal amount of work performed by the timer job).
 
-```
+```C#
 using System;
 using System.Configuration;
 using System.Diagnostics;
@@ -758,7 +758,7 @@ local Fabrikam site to login.
 To remove (or prepare to rebuild) the Fabrikam Web application, run the
 following:
 
-```
+```XML
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\DeploymentFiles\Scripts
 "Delete Web Applications.cmd"
 "Retract Solutions.cmd"

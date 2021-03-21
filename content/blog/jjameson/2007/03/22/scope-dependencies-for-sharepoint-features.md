@@ -41,7 +41,7 @@ Originally, I had both features scoped to **Site** and setup a dependency from
 the **Publication Library** feature to the **Publication Content Types**
 feature:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Feature xmlns="http://schemas.microsoft.com/sharepoint/"
   Id="49B204D0-7E35-4460-A691-A7D481C463B4"
@@ -119,7 +119,7 @@ We already had a feature receiver for the **Publication Library** feature (as
 mentioned earlier to create and configure the Document Center). Why not just add
 a dependency check in there? Eureka!
 
-```
+```C#
 namespace Fabrikam.Project1.PublicationLibrary.Configuration
 {
     [CLSCompliant(false)]

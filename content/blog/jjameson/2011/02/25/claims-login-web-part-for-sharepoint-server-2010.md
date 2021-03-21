@@ -113,7 +113,7 @@ Part" (it's a mouthful, I know).
 
 I started out with a very basic implementation:
 
-```
+```C#
 using ...
 
 namespace Fabrikam.Demo.Web.UI.WebControls
@@ -372,7 +372,7 @@ PowerShell scripts, as described below.
 
 5. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts), and run the following scripts:
    
-   ```
+   ```C++
    & '.\Create Web Application.ps1'
    & '.\Create Site Collections.ps1'
    & '.\Enable Anonymous Access.ps1'

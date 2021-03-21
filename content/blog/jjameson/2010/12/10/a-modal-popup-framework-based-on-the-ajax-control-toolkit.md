@@ -74,7 +74,7 @@ of the main content).
 For example, the modal popup window shown in Figure 1 was generated using the
 following sample code:
 
-```
+```C#
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -116,13 +116,13 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 
 Note that by specifying the height of the **modalPanelContent** element:
 
-```
+```C++
             modalPanelContent.Height = new Unit(100);
 ```
 
 &hellip;and specifying a corresponding CSS rule:
 
-```
+```CSS
 .modalPanel div.modalPanelContent {
     overflow: auto;
 }
@@ -150,7 +150,7 @@ change the text of the **OK** button to be "Close" instead. When the user clicks
 the "Close" button, the derived Web Part can specify a server-side event handler
 (or simply override the **OnModalPopupOk** method) to perform some action.
 
-```
+```C#
         protected override void OnModalPopupOk(
             EventArgs e)
         {

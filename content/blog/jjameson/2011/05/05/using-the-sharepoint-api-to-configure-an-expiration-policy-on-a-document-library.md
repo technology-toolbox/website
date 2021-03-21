@@ -28,7 +28,7 @@ library.
 The following C# code shows how to configure an expiration policy on the
 specified document library (passed as an **SPList** object):
 
-```
+```C#
 using Microsoft.Office.RecordsManagement.InformationPolicy;
 using Microsoft.SharePoint;
 ...

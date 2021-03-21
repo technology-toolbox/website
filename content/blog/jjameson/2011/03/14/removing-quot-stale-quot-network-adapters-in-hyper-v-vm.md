@@ -44,7 +44,7 @@ Here is the process that I use to cleanup the network adapters:
 
 1. Start an administrator command prompt and then run the following two commands:
    
-   ```
+   ```Shell
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```

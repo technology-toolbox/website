@@ -49,7 +49,7 @@ What I mean by semantic markup is that code should be wrapped in a `<code>` tag
 indenting, etc.). To understand what I mean by semantic markup for code,
 consider the following example:
 
-```
+```C#
 using System;
 
 public class Class1
@@ -63,7 +63,7 @@ public class Class1
 
 In HTML markup, this is expressed as:
 
-```
+```HTML
 <div class='codeBlock'><pre><code><span style='color:#0000ff'>using</span> System;
 
 <span style='color:#0000ff'>public</span> <span style='color:#0000ff'>class</span> <span style='color:#2b91af'>Class1
@@ -83,7 +83,7 @@ Note that in the stricted sense, this isn't 100% semantic markup because the
 `<span>` tags are used to apply presentational styles, namely the various font
 colors. Truly semantic markup for code would specify something more like this:
 
-```
+```HTML
 <div class='codeBlock'><pre><code><span class='keyword'>using</span> System;
 
 <span class='keyword'>public</span> <span class='keyword'>class</span> <span class="userType">Class1
@@ -98,7 +98,7 @@ colors. Truly semantic markup for code would specify something more like this:
 
 CSS rules could then be used to achieve the color syntax highlighting:
 
-```
+```CSS
 code .keyword
 {
     color: #0000ff;
@@ -150,7 +150,7 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 
 Here's the updated code that I now use for my Rtf2Html.exe utility:
 
-```
+```HTML
 // Original source:
 // http://blogs.msdn.com/delay/archive/2008/03/13/
 // blogging-code-samples-should-be-easy-free-convertclipboardrtftohtmltext-tool-and-source-code.aspx

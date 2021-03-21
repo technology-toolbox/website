@@ -63,7 +63,7 @@ The AssemblyInfo.cs files typically have the following assembly attributes:
 
 Here is a sample SharedAssemblyInfo.cs file:
 
-```
+```C#
 using System;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -121,7 +121,7 @@ distinguish Debug and Release builds).
 
 Here is a sample AssemblyInfo.cs file:
 
-```
+```C#
 using System.Reflection;
 using System.Runtime.InteropServices;
 

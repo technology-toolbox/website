@@ -157,7 +157,7 @@ previously specified using static HTML. In other words, instead of rendering the
 SharePoint list items in a table, we need to render them using an ordered list
 (along with the corresponding CSS class names):
 
-```
+```HTML
 <h2>This Week's Specials</h2>
 <ol class='specials group'>
     <li class='group'>
@@ -215,7 +215,7 @@ Note that the **XsltListViewWebPart** provides a `<dsQueryResponse>` XML
 document containing the items from underlying the SharePoint list. Each list
 item is represented as a row:
 
-```
+```XML
 <dsQueryResponse ViewStyleID="" BaseViewID="1" TemplateType="100" RowLimit="30">
   <Rows>
     <Row ID="1"
@@ -259,7 +259,7 @@ Since we know that we want to generate HTML from the XML document, start by
 specifying the corresponding output element and a template that simply emits a
 heading:
 
-```
+```XSLT
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -279,7 +279,7 @@ second XSL template to render a list item element containing the value of the
 **Title** field for each "row" of data (in other words, for each SharePoint list
 item):
 
-```
+```XSLT
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -315,7 +315,7 @@ As you can see, we need to tweak the XSLT a little bit in order to render
 special characters as expected (such as an encoded apostrophe). This is simply a
 matter of adding the `disable-output-escaping` attribute:
 
-```
+```XSLT
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -343,7 +343,7 @@ Now that we have the basic implementation working, let's replace the content of
 the `<li>` element with the actual markup from the static HTML, and replace the
 various pieces of content with corresponding placeholders:
 
-```
+```XSLT
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -388,12 +388,12 @@ At this point, our HTML is very close to what we want it to be:
 
 ## This Week's Specials
 
-1. ![](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
-   *$9.98 / lb.*
-2. ![](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
-   *$12.50 / lb.*
-3. ![](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf** *$7.49
-   / lb.*
+1. [!\[\](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
+   *$9.98 / lb.*](#)
+2. [!\[\](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
+   *$12.50 / lb.*](#)
+3. [!\[\](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf**
+   *$7.49 / lb.*](#)
 
 Obviously the image URLs are invalid (outside the context of the SharePoint site
 -- due to server-relative URLs), but that's okay...the images should appear as
@@ -409,7 +409,7 @@ final version of the XSL stylesheet that I developed to render items in the
 **Specials** list to match the original HTML specified by the Web designer
 (Dan):
 
-```
+```XML
 <xsl:stylesheet version='1.0'
     xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
     xmlns:msxsl='urn:schemas-microsoft-com:xslt'

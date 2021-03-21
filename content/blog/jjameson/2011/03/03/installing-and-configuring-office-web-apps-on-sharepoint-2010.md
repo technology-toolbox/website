@@ -168,7 +168,7 @@ database files.
 
 2. From the Windows PowerShell command prompt, run the following script:
    
-   ```
+   ```PowerShell
    $ErrorActionPreference = "Stop"
    
    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -235,7 +235,7 @@ database files.
 
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
    
-   ```
+   ```XML
    iisreset
    ```
 
@@ -267,7 +267,7 @@ database files.
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```
+```JavaScript
 USE [master]
 GO
 ALTER DATABASE [OfficeWebAppsCache]
@@ -300,7 +300,7 @@ databases used by the Web application.
 
 2. From the Windows PowerShell command prompt, type the following commands:
    
-   ```
+   ```PowerShell
    $webApp = Get-SPWebApplication "http://extranet.fabrikam.com"
    
    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")

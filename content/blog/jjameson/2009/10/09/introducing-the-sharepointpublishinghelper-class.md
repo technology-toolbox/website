@@ -47,7 +47,7 @@ helper methods for the SharePoint publishing API.
 
 Here's the code for the `SharePointPublishingHelper` class:
 
-```
+```JavaScript
 using System;
 using System.Diagnostics;
 using System.Globalization;

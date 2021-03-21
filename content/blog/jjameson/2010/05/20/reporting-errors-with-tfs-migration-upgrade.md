@@ -120,7 +120,7 @@ simply a matter of granting the necessary permissions by running the following
 SQL statements (courtesy of Tudor Trufinescu in a
 [forum post on MSDN](http://social.msdn.microsoft.com/forums/en-US/sqlreportingservices/thread/444c3bab-985b-40a0-8362-2742df1a6577/)):
 
-```
+```SQL
 USE master
 GO
 GRANT EXECUTE ON master.dbo.xp_sqlagent_notify TO RSExecRole
@@ -175,7 +175,7 @@ found. (rsItemNotFound)
 I initially attempted to fix this issue using the File.BatchNewTeamProject
 command in Visual Studio, with the following XML input file:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="ProjectCreationSettingsFileSchema.xsd">
   <TFSName>http://cyclops-dev:8080/tfs/DefaultCollection</TFSName>

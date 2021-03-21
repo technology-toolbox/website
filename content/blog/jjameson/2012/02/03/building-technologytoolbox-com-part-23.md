@@ -17,7 +17,7 @@ tags: ["Subtext", "Web Development"]
 You may have noticed the following code in
 [my post from earlier today](building-technologytoolbox-com-part-22.aspx):
 
-```
+```JavaScript
                 ...
                 else if (string.Compare(
                     request.Url.Host,
@@ -70,7 +70,7 @@ configure the website to redirect requests for **technologytoolbox.com/...** to
 
 This resulted in the following elements being added to the Web.config file:
 
-```
+```XML
 <configuration>
   <system.webServer>
     ...
@@ -98,7 +98,7 @@ a fraction of the time to create when using IIS Manager).
 Here are the corresponding configuration elements added by the **Canonical
 domain name** SEO template in URL Rewrite 2.0:
 
-```
+```XML
     <rewrite>
       <rules>
         <rule name="CanonicalHostNameRule1">

@@ -73,7 +73,7 @@ simple scripts: DiffBranches.cmd and CopyBranch.cmd.
 
 Here are the contents of DiffBranches.cmd:
 
-```
+```JavaScript
 @echo off
 
 setlocal
@@ -104,7 +104,7 @@ I quickly switched to using it exclusively for all of my "diff'ing" activities.
 
 The real "magic" lies in CopyBranch.cmd:
 
-```
+```JavaScript
 @echo off
 
 setlocal

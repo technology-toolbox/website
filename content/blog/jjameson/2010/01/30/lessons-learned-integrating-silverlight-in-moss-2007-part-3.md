@@ -30,7 +30,7 @@ itself is hosted within a generic *User Control Web Part* (similar to
 
 I also mentioned that the user control originally contained the following code:
 
-```
+```XML
     <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="100%" height="100%">
         <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
@@ -101,7 +101,7 @@ in HTML UI from underneath.
 The latest version of the markup in the user control that hosts our Silverlight
 application is shown below:
 
-```
+```XML
     <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
         width="380px" height="410px" onFocus="this.style.outline='none';">
         <param name="source" value="<%= serviceWheelPackageUrl %>" />

@@ -59,7 +59,7 @@ To address this scenario, I created a startup script called
 
 The contents of the script are actually quite trival:
 
-```
+```XML
 net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 ```
 

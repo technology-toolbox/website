@@ -29,7 +29,7 @@ While you could certainly craft some SQL to `SELECT COUNT(*)` from each user
 table, this is very inefficient. A much better way is to simply query the system
 tables as shown below:
 
-```
+```SQL
 SELECT
     sysobjects.Name
     , sysindexes.Rows

@@ -43,7 +43,7 @@ The macro output pane is actually created on-the-fly, as necessary, whenever I
 run one of my macros that implements tracing (i.e. writes output). This is done
 via the `GetMacroOutputPane()` function, as shown below.
 
-```
+```VBA
     Private Function GetMacroOutputPane() As OutputWindowPane
         Dim ow As OutputWindow = _
             DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
@@ -66,7 +66,7 @@ new pane.
 In order to simplify writing output messages -- as well as timestamp each
 message as it is written -- I use the `WriteOutput()` method
 
-```
+```VBA
     Private Sub WriteOutput( _
         ByVal s As String)
 

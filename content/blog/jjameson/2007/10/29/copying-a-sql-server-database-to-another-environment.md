@@ -23,7 +23,7 @@ needed to copy the content database to another environment for further analysis
 and testing. An easy (an unobtrusive) way to "snapshot" a database and copy it
 to another environment is to create a backup with the **COPY\_ONLY** option:
 
-```
+```JavaScript
 BACKUP DATABASE [WSS_Content]
 TO DISK = N'H:\WSS_Content.bak'
 WITH NOFORMAT, NOINIT
@@ -77,14 +77,14 @@ When I first encountered this problem, I thought I had a corrupt backup file.
 However, by once again reverting to SQL instead of the UI, I was able to verify
 the backup was, in fact, valid:
 
-```
+```INI
 RESTORE FILELISTONLY
 FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
 ```
 
 To restore from a **COPY\_ONLY** backup, use a command similar to the following:
 
-```
+```Text
 RESTORE DATABASE [WSS_Content_TEST]
 FROM DISK = N'E:\NotBackedUp\Temp\WSS_Content.bak'
 WITH FILE = 1

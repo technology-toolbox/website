@@ -27,7 +27,7 @@ checking whatsoever.
 Here is a sample of a post-build event used to create a SharePoint solution
 package:
 
-```
+```C#
 @echo Creating SharePoint solution package...
 makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
 ```
@@ -35,7 +35,7 @@ makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
 Converting this simple "makecab" command to an MSBuild target is easy -- just
 use an `Exec` task:
 
-```
+```XML
 <Target Name="CreateSharePointSolutionPackage">
   <Message Text='Creating SharePoint solution package...' />
   <Exec Command='makecab /F "$(ProjectDir)DeploymentFiles\ProductionDeployment\wsp_structure.ddf"'
@@ -57,7 +57,7 @@ goal (i.e. building the CAB/WSP file only when necessary), you need to specify
 `Inputs` and `Outputs` on the `Target`. I then tested the following to verify
 that I was on the right track:
 
-```
+```XML
 <Target Name="CreateSharePointSolutionPackage"
   Inputs="DeploymentFiles\ProductionDeployment\wsp_structure.ddf"
   Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
@@ -78,7 +78,7 @@ the project, since any of them may be included in the DDF and consequently in
 the SharePoint solution package. In other words, I wanted to specify all of the
 following:
 
-```
+```XML
 <ItemGroup>
   <Reference Include="...">
 </ItemGroup
@@ -141,7 +141,7 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 
 Here is the updated MSBuild target with the correct inputs specified:
 
-```
+```XML
 <Target Name="CreateSharePointSolutionPackage"
   Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
   Outputs='$(ProjectDir)$(OutDir)Package\Fabrikam.Project1.PublicationContentTypes.wsp'>
@@ -168,7 +168,7 @@ do this:
 The second option seems a little more elegant than the first, and hence is what
 I chose to use:
 
-```
+```XML
 <PropertyGroup>
   <BuildDependsOn>
     $(BuildDependsOn);

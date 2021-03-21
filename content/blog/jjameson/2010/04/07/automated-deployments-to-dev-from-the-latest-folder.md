@@ -59,7 +59,7 @@ build).
 To copy the build to the **\_latest** folder, I add a custom target to the
 TFSBuild.proj file:
 
-```
+```XML
   <Target Name="CopyBuildToLatestFolder">
     <CreateItem Include="$(DropLocation)\$(BuildNumber)\**\*.*" >
       <Output TaskParameter="Include" ItemName="FilesToCopy"/>
@@ -74,7 +74,7 @@ TFSBuild.proj file:
 Then I override the **AfterDropBuild** target to invoke the custom target -- but
 only if the build was successful:
 
-```
+```XML
   <!-- After dropping a successful build, copy it to the "_latest" folder. -->
   <Target Name="AfterDropBuild"
     Condition=" '$(IsDesktopBuild)' != 'true' ">

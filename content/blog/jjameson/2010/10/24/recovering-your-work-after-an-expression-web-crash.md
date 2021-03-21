@@ -142,7 +142,7 @@ Therefore, the first thing I did (after setting up my symbol path again --
 **SRV\*C:\NotBackedUp\Symbols\*http://msdl.microsoft.com/download/symbols**) was
 to load the SOS extensions used for debugging managed code:
 
-```
+```XML
 .loadby sos clr
 ```
 
@@ -150,7 +150,7 @@ Hoping that my "lost" work (i.e. the HTML content) was stored somewhere in
 memory as a managed string, I decided to go looking for all of the "large"
 strings in the process at the time of the crash:
 
-```
+```Text
 !dumpheap -strings -min 500
 ```
 
@@ -163,7 +163,7 @@ like my HTML content, I had to go a little deeper.
 I then scanned the entire memory process for a phrase (i.e. "Agilent solution")
 that I knew existed in the content I had written:
 
-```
+```JavaScript
 s -u 0 L?0xffffffff "Agilent solution"
 ```
 
@@ -176,7 +176,7 @@ In my case, this returned several hundred results. However, I got lucky (which
 was quite nice in light of this morning's events) because I "hit the jackpot"
 with the first address returned:
 
-```
+```Text
 du /c 100 0f6dfa22
 ```
 
@@ -190,7 +190,7 @@ Here's the output from this command:
 
 0:000&gt; {{< kbd "du /c 100 0f6dfa22" >}}
 
-```
+```XML
 0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "
 0f6dfc22  "the "out-of-the-box" .	localization functionality.</p>.	<p>The "out-of-the-box" localization that I'm re"
 ```
@@ -202,7 +202,7 @@ window, typed in the address (0x0f6dfa22), and then clicked the **Previous** and
 **Next** button a few times to locate the beginning and end of my content. Once
 I knew the "bounds" of my content, I then dumped the entire content...
 
-```
+```Text
 du /c 100 0f6de52a 0f6e0434
 ```
 

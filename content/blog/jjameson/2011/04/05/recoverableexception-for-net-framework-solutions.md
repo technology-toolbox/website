@@ -51,7 +51,7 @@ busy" error).
 Here's an example implementation of a custom exception class to support these
 scenarios:
 
-```
+```XML
 using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
@@ -155,7 +155,7 @@ namespace Fabrikam.Demo.CoreServices
 The following code snippet shows an example of catching "expected" and
 "unexpected" exceptions and handling the scenarios accordingly:
 
-```
+```JavaScript
             try
             {
                 BindSiteList();

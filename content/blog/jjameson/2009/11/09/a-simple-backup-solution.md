@@ -42,7 +42,7 @@ running NTBackup since then.
 
 Here is the simple batch file that I use to perform scheduled backups:
 
-```
+```CSS
 @echo off
 
 setlocal

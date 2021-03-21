@@ -80,7 +80,7 @@ null or empty string, respectively.
 
 From this foundation, let's start with the following unit tests:
 
-```
+```C++
         /// <summary>
         /// Validates that a null input string returns null.
         /// </summary>
@@ -158,7 +158,7 @@ a minimum of 4.
 
 From this we can write another unit test right away:
 
-```
+```C++
         /// <summary>
         /// Validates that an exception is thrown when maxLength is less than 4.
         /// </summary>
@@ -195,7 +195,7 @@ the unit tests to compile").
 In order to get the unit tests to compile, we need to stub out the
 **StringHelper.Truncate** method:
 
-```
+```C++
     public static class StringHelper
     {
         public static string Truncate(
@@ -228,7 +228,7 @@ it in the method body.
 To resolve these errors, let's add a little more code to the **Truncate**
 method:
 
-```
+```C++
         public static string Truncate(
             string input,
             int maxLength)
@@ -259,7 +259,7 @@ or remove it.
 To resolve this error, we need to tweak the unit test a little bit (to remove
 the variable used to store the truncated string):
 
-```
+```C++
         /// <summary>
         /// Validates that an exception is thrown when maxLength is less than 4.
         /// </summary>
@@ -299,7 +299,7 @@ Now let's move on to TDD step 4 ("Write the code to make the unit tests pass").
 Let's replace the debug assertions with code that actually does what we need it
 to do:
 
-```
+```C++
         public static string Truncate(
             string input,
             int maxLength)
@@ -328,7 +328,7 @@ has a ways to go before it actually does something useful.
 Let's add another unit test by copying and pasting **Truncate001** and modifying
 it accordingly:
 
-```
+```C++
         /// <summary>
         /// Validates that an input string with a space is truncated as
         /// expected.
@@ -351,7 +351,7 @@ point, we are just returning `"TODO:"` from the **Truncate** method). Let's add
 a little bit of code to find the last space in the input string and truncate
 accordingly:
 
-```
+```C++
         public static string Truncate(
             string input,
             int maxLength)
@@ -387,7 +387,7 @@ input string doesn't contain any spaces.
 
 Let's add another test case to see what happens in this scenario:
 
-```
+```C++
         /// <summary>
         /// Validates that an input string without a space is truncated as
         /// expected.
@@ -412,7 +412,7 @@ Sure enough, this unit test fails -- and not in a good way (meaning our call to
 Let's add a check inside the **Truncate** method to handle the scenario where we
 fail to find a space in the input string:
 
-```
+```C++
         public static string Truncate(
             string input,
             int maxLength)
@@ -448,7 +448,7 @@ Hold on a minute...
 
 Let's test the boundaries a little by adding yet another unit test:
 
-```
+```C++
         /// <summary>
         /// Validates that the input string is not truncated when maxLength is
         /// sufficiently large.
@@ -472,7 +472,7 @@ the entire input string.
 
 Consequently, we need to add a little more code to the **Truncate** method:
 
-```
+```C++
         public static string Truncate(
             string input,
             int maxLength)
@@ -535,7 +535,7 @@ scenarios.
 Consequently, let's add one last test case for the **StringHelper.Truncate**
 method:
 
-```
+```C++
         /// <summary>
         /// Validates that the input string is truncated as expected.
         /// </summary>

@@ -29,7 +29,7 @@ items (e.g. "obj" folders), and finally packages the folder into a zip file.
 
 ### PackageCodeSample.ps1
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Import-Module Pscx -EA 0
@@ -157,7 +157,7 @@ To package a code sample, first ensure the resulting zip file does not exist,
 and then simply call the `PackageCodeSample` function, specifying the path to
 the code to package:
 
-```
+```VBA
 Remove-Item "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage.zip"
 
 PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"

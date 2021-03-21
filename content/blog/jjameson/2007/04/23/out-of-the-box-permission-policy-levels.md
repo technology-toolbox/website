@@ -55,7 +55,7 @@ Revisiting the issue a few hours later, I just spent a couple of minutes
 cranking out a console application to help me understand the available options
 for the {{< kbd "permissionlevel" >}} parameter:
 
-```
+```C#
 static void Main(string[] args)
 {
     Uri siteUrl = new Uri("http://foobar/sites/Migration");

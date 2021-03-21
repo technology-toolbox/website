@@ -72,7 +72,7 @@ linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
 
 {{< /div-block >}}
 
-```
+```PowerShell
 ...
 Import-Module WebAdministration
 
@@ -141,7 +141,7 @@ different server (as I noted in
 The default app pool identity can be used in DEV since the database runs on the
 same server as the website in that environment.
 
-```
+```PowerShell
 ...
     $siteUrl = [System.Uri] $env:CAELUM_URL
 ...
@@ -179,7 +179,7 @@ same server as the website in that environment.
 
 Prior to creating the IIS website, the corresponding folder must be created:
 
-```
+```PowerShell
     $sitePath = "C:\inetpub\wwwroot\" + $siteName
 
     Write-Host "Creating website folder ($sitePath)...`r`n"
@@ -191,7 +191,7 @@ Prior to creating the IIS website, the corresponding folder must be created:
 
 Next, the `New-Website` cmdlet is used to create the website in IIS:
 
-```
+```PowerShell
     Write-Host "Creating website ($sitePath)...`r`n"
     New-Website -Name $siteName -HostHeader $siteName `
         -PhysicalPath $sitePath -ApplicationPool $siteName > $null
@@ -206,7 +206,7 @@ The Subtext solution is deployed by copying files from the Release server
 "\_latest" or "2.5.2.9") to install as well as the build configuration (i.e.
 "Debug" or "Release").
 
-```
+```PowerShell
     Write-Host "Copying Subtext website content...`r`n"
     Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
     Write-Host "Successfully copied Subtext website content.`r`n"
@@ -225,7 +225,7 @@ Subtext requires read/write access to the App\_Data folder, so I use the
 **[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**
 utility to configure the NTFS permissions:
 
-```
+```PowerShell
     Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
     icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
     Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
@@ -239,7 +239,7 @@ Manager, this is accompished by right-clicking the **blog** folder and then
 clicking **Convert to Application**. In PowerShell, this is accomplished using
 the `New-WebApplication` command:
 
-```
+```PowerShell
     Write-Host "Creating new application for blog site...`r`n"
     New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
     Write-Host "Successfully created new application for blog site.`r`n"
@@ -251,7 +251,7 @@ Similar to step 6, the Caelum solution is deployed by copying files from the
 Release server. As with the deployment of the Subtext solution, variables are
 used to specify the version to deploy as well as the build configuration.
 
-```
+```PowerShell
     Write-Host "Copying Caelum website content...`r`n"
     Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
     Write-Host "Successfully copied Caelum website content.`r`n"
@@ -281,7 +281,7 @@ little more discipline to keep these files in-sync, but using a tool like
 [DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool)
 makes this rather easy.
 
-```
+```PowerShell
     If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
     {
         Write-Host "Overwriting Web.config files...`r`n"
@@ -297,7 +297,7 @@ Here is the complete script that incorporates all of the steps above.
 
 #### Rebuild Website.ps1
 
-```
+```PowerShell
 param(
     [string] $caelumVersion,
     [string] $subtextVersion,
@@ -486,7 +486,7 @@ corresponding output, I created a simple batch file.
 
 #### Rebuild Website.cmd
 
-```
+```C++
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
 EXIT %ERRORLEVEL%
 ```
@@ -508,7 +508,7 @@ The reason I put the quotes around "manual" is because most of the deployment is
 scripted. The only thing that needs to be done is to open a PowerShell window
 (using the **Run as administrator** option) and execute the script above.:
 
-```
+```C++
 PS C:\> {{< kbd "cd 'C:\NotBackedUp\TechnologyToolbox\Caelum\Main\Source\Deployment Files\Scripts'" >}}
 PS C:\NotBackedUp\...\Scripts> {{< kbd "& '.\Rebuild Website.ps1' 1.0.57.0 2.5.2.9" >}}
 ```

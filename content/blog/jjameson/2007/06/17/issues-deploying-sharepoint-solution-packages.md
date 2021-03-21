@@ -29,13 +29,13 @@ structure to the feature provided in Microsoft Office SharePoint Server (MOSS)
 2007. Creating the WSP file was quite straightforward, as was adding it to the
 solution store, using the following command:
 
-```
+```Shell
 stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
 ```
 
 However, as soon as I tried to deploy the solution using the following command:
 
-```
+```Shell
 stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://foobar/ -local
 ```
 
@@ -52,7 +52,7 @@ I must have spent 30 minutes trying to figure out why this command did not work
 (because it worked just fine for other features that I had converted to deploy
 with WSPs). It turns out that I needed to omit the {{< kbd "url" >}} parameter:
 
-```
+```Shell
 stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
 ```
 

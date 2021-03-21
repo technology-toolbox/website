@@ -78,7 +78,7 @@ two-step process:
 
 To convert an Excel file to a DataSet XML file:
 
-```
+```XML
 ConvertToDataSet.exe Sample.xslx
 ```
 
@@ -92,7 +92,7 @@ ImportPages.exe [http://fabrikam](http://fabrikam/) Sample.xml
 
 Here is the code for the ConvertToDataSet.exe utility:
 
-```
+```C#
 using System;
 using System.Data;
 using System.IO;
@@ -166,7 +166,7 @@ namespace Fabrikam.Demo.Tools.ConvertToDataSet
 Note that the bulk of the code has been refactored into my `DataSetHelper`
 class:
 
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -349,7 +349,7 @@ refactored into the `PageImporter` and `SharePointPublishingHelper` classes.
 
 Here's the code for the `PageImporter` class:
 
-```
+```C#
 using System;
 using System.Data;
 using System.Diagnostics;

@@ -53,7 +53,7 @@ Then you simply need to modify the IncrementAssemblyVersion.proj file (described
 in my previous post) to specify the {{< kbd "/bypass" >}} option with the {{<
 kbd "tf.exe checkin" >}} command.
 
-```
+```XML
 <Exec
   WorkingDirectory="$(BuildProjectFolderPath)"
   Command="$(TeamFoundationVersionControlTool) checkin /bypass /override:&quot;Check-in from automated build&quot; /comment:&quot;Increment assembly version ($(IncrementedAssemblyVersion)) $(NoCICheckinComment)&quot; AssemblyVersionInfo.txt AssemblyVersionInfo.cs"/>

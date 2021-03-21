@@ -60,7 +60,7 @@ Here's the gist of it:
 
 To let your visitors search your website, add the following code to your page(s):
 
-```
+```HTML
 <!-- Site search from Bing-->
 <form method="get" action="http://www.bing.com/search">
 <input type="hidden" name="cp" value="CODE PAGE USED BY YOUR HTML PAGE" />
@@ -111,7 +111,7 @@ passed as query string parameters. With a little massaging of the HTML (to get
 rid of that nasty table-based layout) and crafting up some equivalent
 JavaScript, I came up with the following:
 
-```
+```JavaScript
 <script language="javascript" type="text/javascript">
     function searchKeywords_onKeyPress(e) {
         if (e == null) {

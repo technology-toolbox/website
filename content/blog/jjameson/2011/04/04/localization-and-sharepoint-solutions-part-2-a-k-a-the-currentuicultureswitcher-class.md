@@ -77,7 +77,7 @@ whether everything works as expected or some error occurs.
 
 Enter the **CultureUICultureSwitcher** class...
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -177,7 +177,7 @@ seems to o convey the point of the class.
 
 Here's an example unit test that demonstrates how the class is expected to work:
 
-```
+```C#
         /// <summary>
         /// Basic test for CurrentUICultureSwitcher.
         /// </summary>
@@ -209,7 +209,7 @@ Here's an example unit test that demonstrates how the class is expected to work:
 Lastly, here's an excerpt from a custom "Announcements" feature that shows how
 the class is used to configure a localized SharePoint site:
 
-```
+```C#
         /// <summary>
         /// Creates and configures the "Announcements" site under the specified
         /// Web.

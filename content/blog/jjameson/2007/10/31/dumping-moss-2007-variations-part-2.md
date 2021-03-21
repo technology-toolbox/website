@@ -124,7 +124,7 @@ results for all three -- decreasing the execution time from around 140 seconds
 to approximately 2.2 seconds. Of the three indexes, the following was deemed to
 be the "least expensive" (in terms of overhead with DML operations):
 
-```
+```SQL
 CREATE INDEX Idx_AllUserData_Tmp2
 ON AllUserData
 (

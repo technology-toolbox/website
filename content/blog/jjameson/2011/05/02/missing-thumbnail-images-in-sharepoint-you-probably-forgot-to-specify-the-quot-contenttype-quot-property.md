@@ -26,7 +26,7 @@ library (via a feature).
 Here is the content of my original Elements.xml file (used to add the images to
 the library):
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module
@@ -43,7 +43,7 @@ the library):
 To get the thumbnails to render as expected, I simply modified the Elements.xml
 file as follows:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module

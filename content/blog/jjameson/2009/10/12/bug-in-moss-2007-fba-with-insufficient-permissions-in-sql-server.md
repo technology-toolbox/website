@@ -54,7 +54,7 @@ I then fired up SQL Server Profiler to verify that SharePoint was at least
 *trying* to query my ASP.NET database when adding a role to a SharePoint group.
 Sure enough, I saw the following statement in the profiler trace:
 
-```
+```INI
 exec dbo.aspnet_Roles_RoleExists
     @ApplicationName=N'Fabrikam Portal',
     @RoleName=N'Authenticated Users'
@@ -108,7 +108,7 @@ permission to the **aspnet\_Membership\_BasicAccess** database role).
 By the way, here's some script to automatically create a user in SQL Server for
 the service account and add it to the necessary database roles:
 
-```
+```SQL
 USE [FabrikamPortal]
 GO
 

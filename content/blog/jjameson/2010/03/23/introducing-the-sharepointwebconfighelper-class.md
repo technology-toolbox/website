@@ -26,7 +26,7 @@ If you use the
 class to add or modify Web.config files, you might have code that looks
 something like this:
 
-```
+```C#
         private static void AddAuthenticationWebConfigModifications(
             SPWebApplication webApp)
         {
@@ -88,7 +88,7 @@ looks like a good candidate for refactoring.
 
 Personally, I find the following equivalent to be much more readable:
 
-```
+```C#
         private static void AddAuthenticationWebConfigModifications(
             SPWebApplication webApp)
         {
@@ -124,7 +124,7 @@ Notice that the code for instantiating new instances of the
 **SPWebConfigModification** class is now performed by the custom
 **SharePointWebConfigHelper** class:
 
-```
+```JavaScript
 using System;
 using System.Globalization;
 

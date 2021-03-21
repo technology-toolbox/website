@@ -79,7 +79,7 @@ The correct answer seems to be "this is a bug in the Git Source Control Provider
 for Visual Studio." I say this based on the output from "{{< kbd
 "git status" >}}":
 
-```
+```JavaScript
 $ {{< kbd "cd /c/NotBackedUp/Subtext/" >}}
 
 jjameson@FOOBAR7 /c/NotBackedUp/Subtext (master)

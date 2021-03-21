@@ -55,7 +55,7 @@ Items** Web Part. This is simply an instance of the
 **Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart** with the
 **Query** property set to the following:
 
-```
+```JavaScript
 SELECT [System.Id], [System.Title]
 FROM WorkItems
 WHERE
@@ -80,7 +80,7 @@ Too bad the query specified for the Web Part doesn't explicitly *exclude*
 specified the following query, then **Scenario** work items would automatically
 be shown on upgraded project sites:
 
-```
+```JavaScript
 SELECT [System.Id], [System.Title]
 FROM WorkItems
 WHERE
@@ -100,7 +100,7 @@ include **Scenario** work items instead of **User Story** work items. I suggest
 applying a very minimal change to the Web Part query in order to specify the
 following:
 
-```
+```JavaScript
 SELECT [System.Id], [System.Title]
 FROM WorkItems
 WHERE
@@ -138,7 +138,7 @@ displayed on each of the dashboard pages:
 Since each instance of the Web Part specifies its own query, we need to update
 the Web Part on each of the pages:
 
-```
+```PowerShell
 # Updates the "Project Work Items" Web Part on the dashboard pages of TFS
 # project sites originally created with the MSF Agile v4.x process template
 # in order to show "Scenario" work items (instead of "User Story" work items)

@@ -66,7 +66,7 @@ page on each request for an application page.
 
 Here is the code for the custom HttpHandler:
 
-```
+```C#
 namespace Fabrikam.Project1.PublishingLayouts.Web.UI
 {
     public class ApplicationPageHandlerFactory : PageHandlerFactory
@@ -227,7 +227,7 @@ pages), modify the Web.config file in
 Simply comment out the default PageHandlerFactory and add the custom
 ApplicationPageHandlerFactory:
 
-```
+```XML
     <httpHandlers>
       <!--
       <add verb="*" path="*.aspx"

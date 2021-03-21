@@ -103,7 +103,7 @@ used in TEST (i.e.
 
 #### Restore PROD to TEST.sql
 
-```
+```SQL
 USE tempdb
 GO
 DROP DATABASE Caelum
@@ -156,7 +156,7 @@ script adds **IIS APPPOOL\www-dev.technologytoolbox.com**. The
 
 #### Restore PROD to DEV.sql
 
-```
+```SQL
 USE tempdb
 GO
 DROP DATABASE Caelum

@@ -29,7 +29,7 @@ can be configured for a particular
 To understand the configuration of various trace listeners, consider the
 following console application:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -146,7 +146,7 @@ namespace Fabrikam.Demo.AdminConsole
 Running this program without configuring any trace listeners results in the
 following output to the console:
 
-```
+```XML
 The square root of 0 is 0.000.
 The square root of 1 is 1.000.
 The square root of 2 is 1.414.
@@ -172,7 +172,7 @@ For a console application, this is done using the application configuration file
 (which is located in the folder with the application executable and has the name
 of the application with the ".config" file name extension added).
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <system.diagnostics>
@@ -200,7 +200,7 @@ of the application with the ".config" file name extension added).
 
 With this configuration, the console output shows:
 
-```
+```JavaScript
 defaultTraceSource Information: 0 : AdminConsole.exe
 defaultTraceSource Verbose: 0 : Starting processing...
 defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
@@ -231,7 +231,7 @@ can also be configured to control tracing and debug output. For example, the
 following configuration specifies that the trace source should ignore low-level
 debugging and information messages, and only show warning and error messages.
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <system.diagnostics>
@@ -275,7 +275,7 @@ debugging and information messages, and only show warning and error messages.
 
 With this configuration, the console output is:
 
-```
+```XML
 defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
 Parameter name: d).
 The square root of 0 is 0.000.
@@ -294,7 +294,7 @@ In the following configuration, note the new `logFileTraceListener` and the
 corresponding `<filter>` element used to limit the file output to level
 `"Information"` (and above -- which includes warning and error messages).
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
   <system.diagnostics>
@@ -377,7 +377,7 @@ Parameter name: d).
 When I wrote the `Logger` class a few years ago, I also wrote a
 `SimpleTraceListener` class to do just this:
 
-```
+```C#
 using System;
 using System.Collections;
 using System.Diagnostics;

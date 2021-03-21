@@ -76,13 +76,13 @@ configuration step -- specifically, setting the product key.
 For a Server Core installation, you need to use the Windows Software Licensing
 Management Tool (slmgr.vbs) to enter the product key:
 
-```
+```VBA
 slmgr.vbs -ipk <Product Key>
 ```
 
 After changing the product key, you then need to activate Windows:
 
-```
+```JSON
 slmgr.vbs -ato
 ```
 

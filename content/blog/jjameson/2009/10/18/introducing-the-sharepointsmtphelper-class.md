@@ -38,7 +38,7 @@ thanks to the classes provided by the .NET Framework in the
 namespace. It may look like more code than you might expect, but that's just
 because of all the overloads of the `SendMessage` method that I provide.
 
-```
+```C#
 using System;
 using System.Net.Mail;
 
@@ -289,7 +289,7 @@ Assuming you just want to send a simple message using the default "From address"
 specified in SharePoint Central Administration, you only need a single line of
 code that passes three parameters:
 
-```
+```SQL
             SharePointSmtpHelper.SendMessage(
                 "jeremy_jameson@fabrikam.com",
                 "Test message",

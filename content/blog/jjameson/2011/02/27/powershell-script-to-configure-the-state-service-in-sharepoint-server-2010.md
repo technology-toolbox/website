@@ -50,7 +50,7 @@ Here's a simple script to do just that.
 
 ### Configure State Service.ps1
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0

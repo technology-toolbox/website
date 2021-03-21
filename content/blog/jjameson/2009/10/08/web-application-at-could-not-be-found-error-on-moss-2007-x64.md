@@ -24,7 +24,7 @@ SharePoint API) on an x64 server.
 To provide the simplest repro possible, I created a sample console application
 that prints the title of a SharePoint site:
 
-```
+```C#
 using System;
 
 using Microsoft.SharePoint;
@@ -65,7 +65,7 @@ natively in 64-bit and everything works as expected:
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
-```
+```C++
 {{< sample-output "Title: Fabrikam" >}}
 ```
 
@@ -78,7 +78,7 @@ to run in 32-bit then things don't go well:
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
-```
+```XML
 Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local
 could not be found. Verify that you have typed the URL correctly. If the URL should
 be serving existing content, the system administrator may need to add a new request

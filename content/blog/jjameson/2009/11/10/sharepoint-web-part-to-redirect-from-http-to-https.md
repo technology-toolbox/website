@@ -27,7 +27,7 @@ redirection.
 Here is a base class that contains the core logic for detecting when a redirect
 from HTTP to HTTPS is required and automatically redirecting as necessary:
 
-```
+```C#
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -195,7 +195,7 @@ feature is turned on). However, by changing the property setting to `False` in
 the Web.config file, the feature can be disabled as necessary for a particular
 environment or server (for troubleshooting purposes):
 
-```
+```XML
 <configuration>
   <configSections>
     <sectionGroup

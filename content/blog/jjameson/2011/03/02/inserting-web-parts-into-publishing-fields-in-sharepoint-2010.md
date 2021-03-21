@@ -54,7 +54,7 @@ creating, configuring, and approving Publishing pages in SharePoint as
 Consequently, for SharePoint Server 2010, I added the following method to
 **SharePointPublishingHelper**:
 
-```
+```JavaScript
         public static void InsertWebPartIntoPageContent(
             Part webPart,
             PublishingPage page,
@@ -182,7 +182,7 @@ Note that I also added an overload for the **InsertWebPartIntoPageContent**
 method that simply appends the Web Part to the end of the field (rather than
 replacing some arbitrary placeholder text):
 
-```
+```C#
         public static void InsertWebPartIntoPageContent(
             Part webPart,
             PublishingPage page,
@@ -201,7 +201,7 @@ the page content, all I need to do is use a little bit of code to create the
 page, set the default page content, and subsequently replace the placeholder in
 the page content with the desired Web Part:
 
-```
+```JavaScript
         private const string loginFormPlaceholder =
             "{TODO: Insert Claims Login Form Web Part here}";
 
@@ -275,7 +275,7 @@ subsequently uses the
 **SharePointPublishingHelper.InsertWebPartIntoPageContent** method to replace it
 with an instance of the Web Part:
 
-```
+```C++
         private static void ReplacePlaceholderWithLoginWebPart(
             PublishingPage page,
             SPWebPartPages.SPLimitedWebPartManager wpm)

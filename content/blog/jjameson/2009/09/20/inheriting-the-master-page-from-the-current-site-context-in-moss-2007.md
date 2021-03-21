@@ -32,7 +32,7 @@ ASP.NET page lifecycle.
 
 This is precisely what I developed my custom `SharePointPage` base class for:
 
-```
+```C#
     /// <summary>
     /// Base class for ASP.NET pages that run under the context of a SharePoint
     /// site (e.g. /en-US/Search/Library/_layouts/PublicationSummary.aspx).
@@ -79,7 +79,7 @@ searching for **6850**, filtering the search results to **Library**, and then
 clicking one of the search results). Note that the `PublicationSummary` page
 class inherits from the `SharePointPage` base class.
 
-```
+```TypeScript
     public partial class PublicationSummary : SharePointPage,
         IView<PrimaryDocumentData.PrimaryDocumentRow>
     {

@@ -78,7 +78,7 @@ title="Figure 3: Entity Data Model" >}}
 With the updated model, the following LINQ query can be used to retrieve the top
 10 most popular blog posts:
 
-```
+```JavaScript
         using (CaelumEntities context = new CaelumEntities())
         {
             var q = (from entry in context.Entries
@@ -130,7 +130,7 @@ One of the primary goals in developing the Technology Toolbox site is ensuring
 that semantic HTML is used to render the content. As such, I chose an ordered
 list (`<ol>`) as the basis for the **Most Popular Posts** section:
 
-```
+```HTML
 <div class="posts-most-popular">
     <h2>Most Popular Posts</h2>
     <ol>
@@ -175,7 +175,7 @@ home page.
 In order to render an ordered list, I use an ASP.NET **Repeater** control, with
 a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 
-```
+```HTML
 <div class="posts-most-popular">
     <h2>
         Most Popular Posts</h2>
@@ -208,7 +208,7 @@ a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 In the corresponding code-behind for the user control, I added code to retrieve
 the top 10 most popular posts and bind the results to the **Repeater** control:
 
-```
+```C#
 using System;
 using System.Linq;
 using TechnologyToolbox.Caelum.Data;
@@ -249,7 +249,7 @@ As with the control used to render the **Most Recent Posts** ssection, I added a
 cache directive to the new user control (PopularPosts.ascx) and specified a
 duration of one hour (3600 seconds):
 
-```
+```XML
 <%@ OutputCache Duration="3600" VaryByParam="None" %>
 ```
 
@@ -263,7 +263,7 @@ then make adjustments as necessary after running some load tests.)
 
 Here is the complete source for PopularPosts.ascx:
 
-```
+```HTML
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PopularPosts.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.PopularPosts" %>
 <%@ OutputCache Duration="3600" VaryByParam="None" %>

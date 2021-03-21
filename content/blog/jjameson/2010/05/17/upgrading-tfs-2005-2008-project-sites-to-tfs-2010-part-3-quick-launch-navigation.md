@@ -79,7 +79,7 @@ configuration changes manually -- then start by exporting the quick launch
 navigation from a new project site created in TFS 2010 (for example,
 [http://cyclops/sites/DefaultCollection/Test](http://cyclops/sites/DefaultCollection/Test)):
 
-```
+```PowerShell
 # Exports the quick launch navigation for a SharePoint site as XML
 
 function ExportQuickLaunchNavigation(
@@ -126,7 +126,7 @@ $navigationXml.OuterXml > QuickLaunch-TFS2010.xml
 
 This will output XML similar to the following:
 
-```
+```INI
 <QuickLaunch>
   <NavigationNode
     title="Team Web Access"
@@ -200,7 +200,7 @@ However, for consistency with new TFS 2010 project sites (in terms of
 navigation), we'll keep the title of the quick launch navigation node as
 "Calendar" and simply refer to the **Calendar** view of the **Event** list:
 
-```
+```INI
     <NavigationNode
       title="Calendar"
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
@@ -209,7 +209,7 @@ navigation), we'll keep the title of the quick launch navigation node as
 We also need to add nodes for the existing document libraries (e.g.
 **Development**) under the new **Libraries** heading:
 
-```
+```INI
     <NavigationNode
       title="Development"
       url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
@@ -247,7 +247,7 @@ Suppose we want to remove the **Process Guidance** navigation link from a TFS
 project site originally created in TFS 2008 (e.g.
 [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)):
 
-```
+```PowerShell
 # Deletes a quick launch navigation link from a SharePoint site
 
 function DeleteNavigationNode(
@@ -321,7 +321,7 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 Now we can import the quick launch navigation from the XML into the project
 site:
 
-```
+```PowerShell
 # Imports the quick launch navigation for a SharePoint site from the specified
 # XML (adding, renaming, and moving navigation nodes as necessary)
 
@@ -470,7 +470,7 @@ If you want to upgrade the quick launch navigation for numerous project sites
 all at once, you can simply create a list and "pipe" it into the
 `ForEach-Object` cmdlet, as shown below:
 
-```
+```PowerShell
 $sitesToUpgrade =
     @(
         "http://cyclops/sites/AdventureWorks",
@@ -502,7 +502,7 @@ sites created with TFS 2010.
 Here is the final version of the QuickLaunch-TFS2010.xml file that I used for
 upgrading my TFS project sites:
 
-```
+```INI
 <QuickLaunch>
   <NavigationNode
     title="Team Web Access"

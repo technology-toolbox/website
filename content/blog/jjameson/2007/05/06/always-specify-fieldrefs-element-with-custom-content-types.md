@@ -32,7 +32,7 @@ It turns out that when I "rebuilt" our ContentTypes.xml file to include all of
 our final content types, I omitted the empty `<FieldRefs>` elements that had
 previously been there. For example:
 
-```
+```XML
   <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
     Name="Brochure"
     Description=""
@@ -43,7 +43,7 @@ previously been there. For example:
 
 instead of
 
-```
+```XML
   <ContentType ID="0x0101009F5C14F1CF5847c7BBBADA9A8637DEAB0106"
     Name="Brochure"
     Description=""

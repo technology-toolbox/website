@@ -107,7 +107,7 @@ and instead forcing the caller to cleanup the memory.
 The problem -- at least in my opinion -- is that the **Dispose** method in
 **ClientBase** is currently implemented as follows:
 
-```
+```C++
         void IDisposable.Dispose()
         {
             this.Close();
@@ -118,7 +118,7 @@ However, as noted in the above MSDN article (and corresponding code sample),
 this can cause problems when the C# "using" statement is used on the WCF service
 proxy:
 
-```
+```C#
         using (CalculatorClient client = new CalculatorClient())
         {
             // Call Divide and catch the associated Exception.  This throws because the
@@ -163,7 +163,7 @@ want is to wrap the object in a `using` block.]
 Wouldn't it be great if ClientBase actually implemented the **Dispose** method
 as follows?
 
-```
+```C++
         void IDisposable.Dispose()
         {
             if (this.State == CommunicationState.Faulted)
@@ -185,7 +185,7 @@ Let's see...
 
 How about creating a new "wrapper" class for the WCF service proxy?
 
-```
+```C#
 using System;
 using System.ServiceModel;
 
@@ -215,7 +215,7 @@ namespace Microsoft.ServiceModel.Samples
 With a couple of tweaks to the WCF sample code -- specifically replacing all
 instances of "`new CalculatorClient()`" with "`new CalculatorClientWithDisposeFix()`" -- the output changes from this:
 
-```
+```HTML
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =
@@ -235,7 +235,7 @@ Got System.ServiceModel.EndpointNotFoundException from Divide.
 
 ...to this:
 
-```
+```JavaScript
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =

@@ -28,7 +28,7 @@ in which I explained how to add a property so that we can use the TFS
 command-line utility to checkout the assembly version files and subsequently
 check them back in:
 
-```
+```XML
   <PropertyGroup>
     <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
   </PropertyGroup>
@@ -40,7 +40,7 @@ command-line utility has changed for a TFS 2010 build server.
 To use the same technique on a TFS 2010 build server, specify the following
 instead:
 
-```
+```XML
   <PropertyGroup>
     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
   </PropertyGroup>

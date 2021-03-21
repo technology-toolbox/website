@@ -97,14 +97,14 @@ attribute is not allowed in this page, right?
 In other words, the solution to the problem would seem to be simply be a matter
 of changing something like this...
 
-```
+```XML
 <%@ Master Language="C#" AutoEventWireup="true" Codebehind="FabrikamMinimal.master.cs"
     Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
 ```
 
 ...to this:
 
-```
+```XML
 <%@ Master Language="C#" Codebehind="FabrikamMinimal.master.cs"
     Inherits="Fabrikam.Demo.Publishing.Layouts.MasterPages.FabrikamMinimal" %>
 ```
@@ -121,7 +121,7 @@ The event handler 'OnPreRender' is not allowed in this page.
 The above error occurs when the master page contains something like the
 following:
 
-```
+```XML
             <asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
                 SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
                 RenderCurrentNodeAsLink="true"

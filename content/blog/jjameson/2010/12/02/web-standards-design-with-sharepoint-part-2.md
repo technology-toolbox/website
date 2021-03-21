@@ -310,7 +310,7 @@ the color of the links in the **Drink Menu** section was way off.
 Consequently I added a new CSS file (called SharePointFixes.css) containing the
 following:
 
-```
+```CSS
 /* =core (SharePoint core.css overrides)
 ------------------------------------------------------------------------------*/
 /* Override .ms-WPBody rules from core.css so that content within Web Parts
@@ -481,7 +481,7 @@ To deploy the Tugboat sample site to SharePoint:
 
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
    
-   ```
+   ```Shell
    set TUGBOAT_URL=http://tugboatcoffee-local
    ```
    
@@ -497,7 +497,7 @@ To deploy the Tugboat sample site to SharePoint:
 
 3. Set environment variables to specify the credentials to use for the Tugboat application pool:
    
-   ```
+   ```Shell
    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
    set TUGBOAT_APP_POOL_PASSWORD={password}
    ```
@@ -512,31 +512,31 @@ To deploy the Tugboat sample site to SharePoint:
 
 4. Change to the folder containing the deployment scripts:
    
-   ```
+   ```XML
    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
    ```
 
 5. Type the following command:
    
-   ```
+   ```XML
    "Create Web Applications.cmd"
    ```
 
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
    
-   ```
+   ```XML
    "Add Solutions.cmd"
    ```
 
 7. Wait for the solution to be added and then type the following command:
    
-   ```
+   ```XML
    "Deploy Solutions.cmd"
    ```
 
 8. Wait for the solution to be deployed and then type the following command:
    
-   ```
+   ```XML
    "Activate Features.cmd"
    ```
 

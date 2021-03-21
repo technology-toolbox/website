@@ -155,7 +155,7 @@ Even better, you can easily create your own custom rule set that specifies *all*
 code analysis rules should be enabled and any violations should be treated as
 errors:
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="TechnologyToolbox.Caelum.ruleset"
   Description="Custom rule set for the TechnologyToolbox.Caelum solution."

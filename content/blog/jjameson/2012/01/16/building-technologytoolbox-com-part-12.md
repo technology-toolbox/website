@@ -47,7 +47,7 @@ If you look "under the covers" at one of the pages on my new blog, you can see
 how I started out by defining some semantic markup for the **Archives** section
 [using a static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3):
 
-```
+```HTML
 <div class="posts-archive">
   <h2>Archives</h2>
   <ul>
@@ -99,7 +99,7 @@ Consequently I spent a few minutes translating the SQL query in my head for
 grouping posts by year/month into the equivalent LINQ query against the data
 model. This is what I ended up:
 
-```
+```JavaScript
     var q = from entry in context.Entries
             group entry by entry.DateSyndicated.Value.Year
                 into YearGroups
@@ -158,7 +158,7 @@ property (since it defaults to `<span>` -- and I want this control to emit a
 control to serve as a placeholder for the list(s) that will be generated from
 the query results.
 
-```
+```C#
 namespace TechnologyToolbox.Caelum.Website.Controls
 {
     public class PostArchiveList : WebControl
@@ -208,7 +208,7 @@ Once I confirmed the basic structure of the HTML was being emitted as desired, I
 added the code to generate the series of nested lists for each year/month in the
 query results:
 
-```
+```C#
         protected override void OnPreRender(
             EventArgs e)
         {
@@ -274,7 +274,7 @@ query results:
 
 The **GetMonthName** method is, as expected, rather trivial:
 
-```
+```C++
         private static string GetMonthName(
             int month)
         {
@@ -323,7 +323,7 @@ Safranski):
 
 - It didn't work with my markup because it assumes the parent `<ul>` elements have ID attributes. For example:
   
-  ```
+  ```JavaScript
   jQuery.fn.jqcollapse = function (o) {
   
       ...
@@ -350,7 +350,7 @@ Safranski):
 Don't get me wrong...my intent is not to bash Kent's code. On the contrary, with
 just a little bit of work, I was able to tweak his code into the following:
 
-```
+```JavaScript
 // collapseList() was originally based on the following jQuery plug-in:
 //
 //   http://www.fluidbyte.net/simple-jquery-expandcollapse-unordered-lists
@@ -418,7 +418,7 @@ tweaking the x and y positions toggles which icon is displayed.
 
 Here are the corresponding CSS rules:
 
-```
+```CSS
 ul li.expandable {
   background: url('Images/list-item-sprites-1.0.png') no-repeat -100px -246px;
   padding-left: 15px;
@@ -437,7 +437,7 @@ After adding the script to the **PostArchiveList** control (and adding a
 to improve performance by minimizing the number of database calls), I ended up
 with the following:
 
-```
+```C#
 using System;
 using System.Globalization;
 using System.Linq;

@@ -35,7 +35,7 @@ Assuming you are familiar with the
 **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**
 class in ASP.NET AJAX, the sample Web Part should be mostly self-explanatory:
 
-```
+```C#
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -109,7 +109,7 @@ After changing the base class and building the solution, the following commands
 are used to update the assembly in the GAC and recycle the application pool for
 the Fabrikam site:
 
-```
+```XML
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
 "GAC Assemblies.cmd"
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
@@ -140,7 +140,7 @@ alternative is to instead use a little bit of code in the
 **CreateChildControls** method of the Web Part to dynamically create one, if
 necessary:
 
-```
+```JavaScript
             if (ScriptManager.GetCurrent(this.Page) == null)
             {
                 ScriptManager scriptHandler = new ScriptManager();
@@ -153,7 +153,7 @@ necessary:
 Mike's post also describes adding the following startup script in order to
 enable UpdatePanels to be used on a page:
 
-```
+```HTML
 <script type='text/javascript'>
   _spOriginalFormAction = document.forms[0].action;
   _spSuppressFormOnSubmitWrapper=true;
@@ -183,7 +183,7 @@ the Init phase of the page lifecycle.
 The custom **AjaxWebPart** base class handles all of the fixup necessary to
 avoid these issues:
 
-```
+```C#
 using System;
 using System.Web.UI;
 using System.Web.UI.WebControls.WebParts;
@@ -260,7 +260,7 @@ instead of whatever content would normally be rendered in the Web Part if an
 error had not occurred. It's only purpose in this case is to enable Web Parts
 that derive from **AjaxWebPart** to use the error handling feature.
 
-```
+```C#
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls.WebParts;

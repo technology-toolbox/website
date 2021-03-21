@@ -58,7 +58,7 @@ comment and let me know.]
 I started by writing some PowerShell script to export the quick launch
 navigation elements for a specific site to XML:
 
-```
+```PowerShell
 # Exports the quick launch navigation for a SharePoint site as XML
 
 function ExportQuickLaunchNavigation(
@@ -102,7 +102,7 @@ Assuming the referenced site is based on the out-of-the-box Team Site template,
 the above PowerShell will output the following XML (without the nice formatting,
 of course):
 
-```
+```INI
 <QuickLaunch>
   <NavigationNode
       title="Libraries"
@@ -163,7 +163,7 @@ site are preserved.
 To understand how the import process should work, consider the following input
 XML:
 
-```
+```INI
 <QuickLaunch>
   <NavigationNode
     title="My MSDN Blog"
@@ -198,7 +198,7 @@ following after the import completes:
 Here is the corresponding PowerShell script to import the quick launch
 navigation for a site:
 
-```
+```PowerShell
 # Imports the quick launch navigation for a SharePoint site from the specified
 # XML (adding, renaming, and moving navigation nodes as necessary)
 

@@ -32,7 +32,7 @@ However, you'll notice in the following code sample that a little effort is
 required to convert the GUID for a solution into the corresponding solution name
 (handling "hidden" solutions, such as Microsoft.Office.Excel.Server):
 
-```
+```C#
 using System;
 
 using Microsoft.SharePoint;

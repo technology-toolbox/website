@@ -170,7 +170,7 @@ underlying content databases:
 > **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)**
 > method:
 >
-> ```
+> ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
 >
 > $webApp = Get-SPWebApplication "http://cyclops"

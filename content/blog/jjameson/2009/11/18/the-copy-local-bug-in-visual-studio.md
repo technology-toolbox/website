@@ -50,7 +50,7 @@ the GAC):
 Following these two simple steps explicitly adds `<Private>True</Private>` to
 the project file, as shown in the following example:
 
-```
+```XML
     <ProjectReference Include="..\CoreServices\CoreServices.csproj">
       <Project>{01C58D27-9818-45D6-A0B6-8EF765CA9397}</Project>
       <Name>CoreServices %28CoreServices\CoreServices%29</Name>

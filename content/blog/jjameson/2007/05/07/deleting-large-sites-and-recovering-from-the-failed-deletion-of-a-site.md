@@ -55,7 +55,7 @@ defunct site. This showed me that the site was still listed in the SiteMap table
 of the SharePoint\_Config database. I then ran the following statement to remove
 the site:
 
-```
+```JavaScript
 DELETE FROM SiteMap
 WHERE Id = 'A4E86B02-49E1-4960-843E-125BB13D6C54'
 ```

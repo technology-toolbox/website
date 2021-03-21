@@ -56,7 +56,7 @@ To ensure a class implements the **Clone** method as I expect, I first create a
 simple unit test that clones an object and then verifies that all of the members
 are still equal:
 
-```
+```C++
         /// <summary>
         /// Validates that an object is cloned as expected.
         /// </summary>
@@ -103,7 +103,7 @@ are still equal:
 Next, I create a unit test that clones an object, subsequently changes the
 original object, and then verifies that the cloned object is not modified:
 
-```
+```C++
         /// <summary>
         /// Validates that a deep copy is made when an object is cloned.
         /// </summary>
@@ -163,7 +163,7 @@ I also try to make sure that I explicitly document that a deep copy is made when
 cloning an object, as shown in the following example for the
 **SharePointSearchUrlBuilder** class:
 
-```
+```C#
         /// <summary>
         /// Creates a new object that is a deep copy of the current instance.
         /// </summary>

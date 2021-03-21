@@ -81,7 +81,7 @@ the linked file:
 Now you can simply add items to the CustomDictionary.xml for the solution, as
 shown below, and eliminate those CA1704 warnings.
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <Dictionary>
   <Words>

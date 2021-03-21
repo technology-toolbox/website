@@ -279,7 +279,7 @@ To resolve the issue, remove the WSUS registry entries specified in
 
 2. At the command prompt, type the following commands:
    
-   ```
+   ```XML
    net stop wuauserv
    
    reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
@@ -307,7 +307,7 @@ To cleanup the network adapters:
 
 2. At the command prompt, type the following commands:
    
-   ```
+   ```Shell
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```
@@ -370,7 +370,7 @@ To create a 500 MB VHD for the SQL Server log files:
 
 2. From the Windows PowerShell command prompt, type the following commands (update the VM name and VHD path as necessary):
    
-   ```
+   ```PowerShell
    $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
        -namespace "root\virtualization"
    
@@ -395,7 +395,7 @@ To configure the MaxPatchCacheSize policy:
 
 2. At the command prompt, type the following command:
    
-   ```
+   ```XML
    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
    ```
 
@@ -507,13 +507,13 @@ To map the host name for a Web application to the loopback address:
 
 2. At the command prompt, type the following command:
    
-   ```
+   ```XML
    notepad %WINDIR%\System32\Drivers\etc\hosts
    ```
 
 3. In Notepad, add a line to map the loopback address (127.0.0.1) to the "local" version of each host header specified in [Table 7](#Table_7_-_Web_applications). For example:
    
-   ```
+   ```JSON
    127.0.0.1 	extranet-local.fabrikam.com
    ```
 
@@ -768,7 +768,7 @@ a very small VHD to be used for the log files.
 Execute the following SQL script to change all user databases and the
 out-of-the-box **model** database to use the Simple recovery model:
 
-```
+```SQL
 IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
 
 CREATE TABLE #CommandQueue
@@ -1346,7 +1346,7 @@ To change the schedule for deleting timer job history:
 
 2. From the Windows PowerShell command prompt, type the following command:
    
-   ```
+   ```VBA
    Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 12:00:00 and 13:00:00"
    ```
 
@@ -1480,7 +1480,7 @@ To create the Web application using the PowerShell scripts:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Create Web Application.ps1'
    ```
 
@@ -1492,7 +1492,7 @@ To create the Web application using the PowerShell scripts:
 
 6. Type the following command:
    
-   ```
+   ```C++
    & '.\Create Site Collections.ps1'
    ```
 
@@ -1594,7 +1594,7 @@ To increase the size of the database files:
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```
+```JavaScript
 USE [master]
 GO
 ALTER DATABASE [WSS_Content_FabrikamExtranet]
@@ -1634,7 +1634,7 @@ To configure object cache user accounts:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Configure Object Cache User Accounts.ps1'
    ```
 
@@ -1643,7 +1643,7 @@ To configure object cache user accounts:
 
 5. Type the following command to reset Internet Information Services (IIS):
    
-   ```
+   ```XML
    iisreset
    ```
 
@@ -1668,7 +1668,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
 
 2. Type the following command:
    
-   ```
+   ```JavaScript
    stsadm -o setapppassword -password {Key}
    ```
    
@@ -1690,7 +1690,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
 
 4. On one of the front-end Web servers, type the following command:
    
-   ```
+   ```CSS
    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
    ```
    
@@ -1758,7 +1758,7 @@ To enable anonymous access to the site using PowerShell:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Enable Anonymous Acess.ps1'
    ```
 
@@ -1819,13 +1819,13 @@ To create the database used for storing membership and role information:
 
 2. At the command prompt, type the following command:
    
-   ```
+   ```XML
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 3. Type the following command:
    
-   ```
+   ```XML
    aspnet_regsql.exe
    ```
 
@@ -1950,7 +1950,7 @@ To configure the Central Administration Web.config file:
    
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
       
-      ```
+      ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
@@ -1968,7 +1968,7 @@ To configure the Central Administration Web.config file:
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -1977,7 +1977,7 @@ To configure the Central Administration Web.config file:
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -2008,7 +2008,7 @@ To configure the Security Token Service Web.config file:
 
 3. In the Web.config editor, add the following elements to the `<configuration>` root element:
    
-   ```
+   ```XML
    <connectionStrings>
      <add
      name="FabrikamDemo"
@@ -2071,7 +2071,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
    
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
       
-      ```
+      ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
@@ -2089,7 +2089,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -2106,7 +2106,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -2276,7 +2276,7 @@ To configure BLOB cache settings:
 
 6. In the Web.config editor, find the following line:
    
-   ```
+   ```XML
    <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
        enabled="false" />
    ```
@@ -2363,7 +2363,7 @@ To configure the State Service:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Configure State Service.ps1'
    ```
 
@@ -2395,7 +2395,7 @@ To create and configure the Search Service Application:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Configure SharePoint Search.ps1'
    ```
 
@@ -2637,7 +2637,7 @@ for caching:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Configure Office Web Apps Cache.ps1'
    ```
 
@@ -2662,7 +2662,7 @@ for caching:
 
 5. Type the following command to reset Internet Information Services (IIS):
    
-   ```
+   ```XML
    iisreset
    ```
 
@@ -2682,7 +2682,7 @@ To increase the size of the database files for the Office Web Apps cache:
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
 
-```
+```JavaScript
 USE [master]
 GO
 ALTER DATABASE [OfficeWebAppsCache]
@@ -2714,7 +2714,7 @@ To grant the Office Web Apps service account access to the content database:
 
 2. From the Windows PowerShell command prompt, type the following commands:
    
-   ```
+   ```PowerShell
    $webApp = Get-SPWebApplication -Identity "http://extranet.fabrikam.com"
    
    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
@@ -2753,7 +2753,7 @@ To add the new event source:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Add Event Log Sources.ps1'
    ```
 
@@ -2778,19 +2778,19 @@ To install and activate the features:
 
 3. Type the following command:
    
-   ```
+   ```C++
    & '.\Add Solutions.ps1'
    ```
 
 4. Wait for the solutions to be added and then type the following command:
    
-   ```
+   ```C++
    & '.\Deploy Solutions.ps1'
    ```
 
 5. Wait for the solutions to be deployed and then type the following command:
    
-   ```
+   ```C++
    & '.\Activate Features.ps1'
    ```
 
@@ -2835,7 +2835,7 @@ To create the sample content:
 
 2. Type the following command:
    
-   ```
+   ```XML
    Fabrikam.Demo.Tools.TestConsole.exe
    ```
 
@@ -2863,7 +2863,7 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
 
 3. Run the **Create Partner Site Collection.ps1** script and provide the name of the partner, for example:
    
-   ```
+   ```C++
    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
    ```
 

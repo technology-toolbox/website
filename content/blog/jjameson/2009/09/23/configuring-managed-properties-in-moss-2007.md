@@ -102,7 +102,7 @@ activation is really not magic at all. It simply uses my
 framework" (and even calling this a framework is definitely a stretch) with a
 little bit of help from my SharePointSearchHelper class:
 
-```
+```C#
 namespace Fabrikam.Project1.Search.Configuration
 {
     /// <summary>

@@ -29,7 +29,7 @@ periodically "nuke" them from time to time to start fresh.
 
 Here is the script:
 
-```
+```SQL
 DROP TABLE #CommandQueue
 
 CREATE TABLE #CommandQueue

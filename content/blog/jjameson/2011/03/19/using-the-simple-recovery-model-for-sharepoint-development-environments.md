@@ -34,7 +34,7 @@ for the database log files.
 Here's a short SQL script that changes all user databases and the out-of-the-box
 **model** database to use the Simple recovery model:
 
-```
+```SQL
 IF OBJECT_ID('tempdb..#CommandQueue') IS NOT NULL DROP TABLE #CommandQueue
 
 CREATE TABLE #CommandQueue

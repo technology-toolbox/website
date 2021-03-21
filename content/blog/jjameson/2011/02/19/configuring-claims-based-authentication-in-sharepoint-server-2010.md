@@ -101,13 +101,13 @@ added to to the appropriate database roles.
 
 2. At the command prompt, type the following command:
    
-   ```
+   ```XML
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 3. Type the following command:
    
-   ```
+   ```XML
    aspnet_regsql.exe
    ```
 
@@ -195,7 +195,7 @@ In this step, the Web application and initial site collection are created.
 
 2. From the Windows PowerShell command prompt, run the following script:
    
-   ```
+   ```PowerShell
    $ErrorActionPreference = "Stop"
    
    $appPoolUserName = "EXTRANET\svc-web-fabrikam"
@@ -239,7 +239,7 @@ In this step, the Web application and initial site collection are created.
 
 2. From the Windows PowerShell command prompt, run the following script:
    
-   ```
+   ```PowerShell
    $ErrorActionPreference = "Stop"
    
    $webAppUrl = "http://www.fabrikam.com"
@@ -306,7 +306,7 @@ the site collection must also be configured to enable anonymous access.
 
 2. From the Windows PowerShell command prompt, run the following script:
    
-   ```
+   ```PowerShell
    $ErrorActionPreference = "Stop"
    
    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -399,7 +399,7 @@ necessary to modify the Web.config files for the following sites:
    
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
       
-      ```
+      ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
@@ -417,7 +417,7 @@ necessary to modify the Web.config files for the following sites:
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -426,7 +426,7 @@ necessary to modify the Web.config files for the following sites:
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -446,7 +446,7 @@ necessary to modify the Web.config files for the following sites:
 
 3. In the Web.config editor, add the following elements to the `<configuration>` root element:
    
-   ```
+   ```XML
    <connectionStrings>
      <add
      name="FabrikamDemo"
@@ -496,7 +496,7 @@ necessary to modify the Web.config files for the following sites:
 3. In the Web.config editor:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
       
-      ```
+      ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
@@ -514,7 +514,7 @@ necessary to modify the Web.config files for the following sites:
    
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
@@ -531,7 +531,7 @@ necessary to modify the Web.config files for the following sites:
    
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
       
-      ```
+      ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"

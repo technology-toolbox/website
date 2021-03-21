@@ -89,7 +89,7 @@ manifest.xml to examine the contents.]
 Using WinDiff to compare the manifest file from the TFS Lite site template with
 the "vanilla" Team Site template, I observed the following differences:
 
-```
+```XML
 <SiteFeatures>
   <!-- CTypes -->
   <Feature ID="695b6570-a48b-4a8e-8ea5-26ea7fc1d162" />

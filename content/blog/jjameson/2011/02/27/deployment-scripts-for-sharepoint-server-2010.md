@@ -56,7 +56,7 @@ script to quickly create a new Web application in SharePoint.
 
 This script is used to create the Fabrikam Web application in SharePoint:
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -171,7 +171,7 @@ site collections. While the Fabrikam Internet site will likely end up having
 numerous site collections, let's start out by simply creating the top-level site
 (i.e. "/") using the **Publishing Portal** site definition.
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -240,7 +240,7 @@ configuration change in each environment (DEV, TEST, and PROD) or whenever a
 developer decides to rebuild the Web application in his or her local SharePoint
 environment.
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -318,7 +318,7 @@ Web application -- as described in the above TechNet article. It also ensures
 the specified service accounts are indeed valid (via the `GetUserDisplayName`
 function).
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -488,7 +488,7 @@ The following script ensures the custom event source is registered.
 
 {{< /div-block >}}
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Function AddEventLogSource(
@@ -557,7 +557,7 @@ linkHref="http://www.sharepointblues.com/2010/09/06/powershell-does-not-reload-u
 I found Lauri's approach to be invaluable for isolating the AppDomain that loads
 your assemblies, as shown in the following script.
 
-```
+```PowerShell
 param(
     [switch] $runInThisAppDomain,
     [switch] $debug)
@@ -662,7 +662,7 @@ script on each SharePoint server in the farm. Rather, when you run the script on
 *one* of the servers in the farm, SharePoint automatically creates a timer job
 on *each* server in the farm to deploy the solution on that server.
 
-```
+```PowerShell
 param(
     [switch] $force,
     [switch] $runInThisAppDomain,
@@ -779,7 +779,7 @@ jobs to finish (if one or more solution names are specified as parameters to the
 script) or to wait for *all* solution deployment jobs to finish (if no
 parameters are specified when running the script).
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -879,7 +879,7 @@ feature ... is already activated..." that terminate the script.
 Also note that, like **Deploy Solutions.ps1**, the following script supports an
 optional parameter to force the features to be activated.
 
-```
+```PowerShell
 param(
     [switch] $force,
     [switch] $runInThisAppDomain,
@@ -1011,7 +1011,7 @@ Let's start by deactivating the features...
 If you've carefully examined the **Activate Features.ps1** script, then there's
 really no point in scrutinizing the following script ;-)
 
-```
+```PowerShell
 param(
     [switch] $force,
     [switch] $runInThisAppDomain,
@@ -1144,7 +1144,7 @@ the Web application. Like the **Deploy Solutions.ps1** script, I try to avoid
 SharePoint timer jobs -- if possible -- so that developers can be as productive
 as possible.
 
-```
+```PowerShell
 param(
     [switch] $runInThisAppDomain,
     [switch] $debug)
@@ -1252,7 +1252,7 @@ Main
 
 Lastly, it's time to delete the old solution from the SharePoint farm...
 
-```
+```PowerShell
 # When a solution is deleted from SharePoint, the corresponding assembly is
 # *not* loaded into the PowerShell AppDomain. Consequently, there is no reason
 # to start a new PowerShell instance when running this script (unlike the
@@ -1298,7 +1298,7 @@ If, like me, you get tired of cycling through the command history (F7) to
 repeatedly execute the "DR.DADA" process, then you can use the following script
 to save a few dozen keystrokes.
 
-```
+```HTML
 $ErrorActionPreference = "Stop"
 
 function Main()
@@ -1345,7 +1345,7 @@ limited number of changes that can be made to a SharePoint solution in which a
 simple "Upgrade Solution" will suffice. Here's a script that performs the
 equivalent of the old {{< kbd "stsadm.exe -o upgradesolution" >}} command.
 
-```
+```PowerShell
 param(
     [switch] $force,
     [switch] $runInThisAppDomain,
@@ -1471,7 +1471,7 @@ application and start over from scratch. To achieve this, I "DRD" the Fabrikam
 solution/features and then run the following script and start over with the
 **Create Web Application.ps1** script.
 
-```
+```PowerShell
 $ErrorActionPreference = "Stop"
 
 Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0

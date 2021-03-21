@@ -147,7 +147,7 @@ To deploy the Fabrikam Demo to SharePoint:
 
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
    
-   ```
+   ```Shell
    set FABRIKAM_INTRANET_URL=http://fabweb-local
    ```
    
@@ -163,7 +163,7 @@ To deploy the Fabrikam Demo to SharePoint:
 
 3. Set environment variables to specify the credentials to use for the Fabrikam application pool:
    
-   ```
+   ```Shell
    set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
    set FABRIKAM_APP_POOL_PASSWORD={password}
    ```
@@ -186,25 +186,25 @@ To deploy the Fabrikam Demo to SharePoint:
 
 5. Type the following command:
    
-   ```
+   ```XML
    "Create Web Applications.cmd"
    ```
 
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
    
-   ```
+   ```XML
    "Add Solutions.cmd"
    ```
 
 7. Wait for the solution to be added and then type the following command:
    
-   ```
+   ```XML
    "Deploy Solutions.cmd"
    ```
 
 8. Wait for the solution to be deployed and then type the following command:
    
-   ```
+   ```XML
    "Activate Features.cmd"
    ```
 

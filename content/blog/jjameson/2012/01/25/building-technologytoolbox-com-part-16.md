@@ -98,7 +98,7 @@ TechnologyToolbox.com.
 
 #### config.xml
 
-```
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <s3capcha>
   <icons>
@@ -119,7 +119,7 @@ TechnologyToolbox.com.
 In Mahdi's code, the configuration file is read using the **LoadConfig** method
 in his **s3capcha** helper class:
 
-```
+```C++
     private static bool LoadConfig()
     {
         string FilePath = "~/s3capcha/config.xml";
@@ -136,7 +136,7 @@ in his **s3capcha** helper class:
 **LoadConfig** is called from the method used to retrieve the HTML for the
 CAPTCHA control:
 
-```
+```C++
     public static string GetHtmlCodes(string PathTo, out int SessionValue)
     {
         bool HasValue = false;
@@ -174,7 +174,7 @@ right" -- especially in solutions that I work on.
 To encapsulate the CAPTCHA configuration code, I created a new class called
 **CaptchaConfiguration**:
 
-```
+```C#
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Web;
@@ -273,7 +273,7 @@ based on Mahdi's **LoadConfig** method.
 Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
 
-```
+```XML
     CaptchaConfiguration.Instance.Message
 ```
 
@@ -334,7 +334,7 @@ I chose to encapsulate most of the CAPTCHA code from Mahdi's CodeProject sample
 in an ASP.NET user control (Captcha.ascx). This is what my original user control
 looked like:
 
-```
+```XML
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
 <script language="javascript" type="text/javascript"
@@ -356,7 +356,7 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 
 #### Captcha.ascx
 
-```
+```XML
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Captcha.ascx.cs"
     Inherits="TechnologyToolbox.Caelum.Website.Controls.Captcha.CaptchaControl" %>
 <script language="javascript" type="text/javascript"
@@ -411,7 +411,7 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 
 #### Captcha.ascx.cs
 
-```
+```C#
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -593,7 +593,7 @@ show "undefined" after the partial page update.
 To fix this bug, I changed the **endRequest** function in the Subtext common.js
 file from this:
 
-```
+```JavaScript
 function endRequest(sender, args) {
     //Re-enable button
     var button = $get(sender._postBackSettings.sourceElement.id);
@@ -609,7 +609,7 @@ function endRequest(sender, args) {
 
 ...to this:
 
-```
+```JavaScript
 function endRequest(sender, args) {
     //Re-enable button
     var button = $get(sender._postBackSettings.sourceElement.id);

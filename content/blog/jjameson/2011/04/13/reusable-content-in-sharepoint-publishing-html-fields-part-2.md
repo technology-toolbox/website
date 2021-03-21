@@ -56,7 +56,7 @@ existing site configuration, but those are beyond the scope of this post.]
 
 For example, consider the following method of **SharePointPublishingHelper**:
 
-```
+```C++
         public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
@@ -66,7 +66,7 @@ For example, consider the following method of **SharePointPublishingHelper**:
 
 Imagine that you run the following code upon activation of a feature:
 
-```
+```JavaScript
             SPListItem reusableContent =
                 SharePointPublishingHelper.EnsureReusableContentItem(
                     web.Site,
@@ -90,7 +90,7 @@ has not been approved. Consequently, the **EnsureReusableContentItem** method
 also takes care of approving the list item (if it does not have at least one
 approved version):
 
-```
+```JavaScript
         public static SPListItem EnsureReusableContentItem(
             SPSite site,
             string title,
@@ -278,7 +278,7 @@ are two key concepts to grasp:
 
 Here is a sample of the HTML content in "storage format":
 
-```
+```HTML
     <div id="__publishingReusableFragmentIdSection">
         <a href="/ReusableContent/1_.000">a</a>
         <a href="/ReusableContent/3_.000">a</a>
@@ -297,7 +297,7 @@ Here is a sample of the HTML content in "storage format":
 
 The corresponding "view format" is shown below:
 
-```
+```HTML
     <p>
         Here is some reusable content...</p>
     <p>
@@ -338,7 +338,7 @@ which is matched to the corresponding item specified in the "header" (by index).
 In other words, if you were to swap the order of the &lt;a&gt; elements in the
 "header"...
 
-```
+```HTML
     <div id="__publishingReusableFragmentIdSection">
         <a href="/ReusableContent/3_.000">a</a>
         <a href="/ReusableContent/1_.000">a</a>
@@ -349,7 +349,7 @@ In other words, if you were to swap the order of the &lt;a&gt; elements in the
 ...then the order of the reusable content in the corresponding "view format"
 would be reversed, as shown below:
 
-```
+```HTML
     <p>
         Here is some reusable content...</p>
     <p>
@@ -374,7 +374,7 @@ This actually makes the code for inserting reusable content into Publishing HTML
 fields significantly more complex than it would be if the "storage format"
 specified something like the following instead:
 
-```
+```HTML
     <div id="__publishingReusableFragmentIdSection" />
     <p>
         Here is some reusable content...</p>
@@ -397,7 +397,7 @@ Rather than simply listing the code for inserting reusable content into a page
 reviewing some of the unit tests that I created when developing the
 **InsertReusableContentIntoHtmlField** method:
 
-```
+```XML
         /// <summary>
         /// Basic test for appending reusable content to an HTML field.
         /// </summary>
@@ -571,7 +571,7 @@ described below.
 
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Fabrikam\Demo\Dev\SharePointReusableContent\Source\DeploymentFiles\Scripts), and run the following commands:
    
-   ```
+   ```C++
    $env:FABRIKAM_DEMO_URL = "http://fabrikam-local"
    $env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"
    & '.\Add Event Log Sources.ps1'

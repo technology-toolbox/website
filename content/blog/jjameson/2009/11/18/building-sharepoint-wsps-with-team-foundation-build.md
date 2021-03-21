@@ -96,7 +96,7 @@ assemblies.
 Here is the updated DDF file based on
 [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
 
-```
+```XML
 ;
 ; This ddf specifies the structure of the .wsp solution cab file.
 ;
@@ -174,7 +174,7 @@ if a trailing slash is found.
 
 Here is the corresponding update to the project file:
 
-```
+```XML
   <PropertyGroup>
     <BuildDependsOn>
       $(BuildDependsOn);

@@ -74,7 +74,7 @@ but at least I can refer back here from time to time as my memory fades.
 Oops...almost forgot..here's some SQL to quickly toggle the recovery model for a
 database:
 
-```
+```JSON
 USE [master]
 GO
 ALTER DATABASE [WSS_Content] SET RECOVERY SIMPLE

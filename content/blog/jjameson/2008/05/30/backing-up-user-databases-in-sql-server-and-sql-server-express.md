@@ -34,7 +34,7 @@ backups of the databases.
 
 In order to make this as painless as possible, I wrote the following script:
 
-```
+```JavaScript
 USE [Tools]
 GO
 /****** Object:  StoredProcedure [dbo].[BackupUserDatabases]    Script Date: 03/15/2007 07:55:44 ******/
@@ -135,7 +135,7 @@ title="Figure 1: Scheduled tasks for backing up databases" >}}
 Here is the command behind one of the scheduled tasks (you can easily deduce the
 others):
 
-```
+```Shell
 "C:\Program Files\Microsoft SQL Server\90\Tools\Binn\SQLCMD.EXE" -S .\SQLExpress -d Tools -Q "EXEC BackupUserDatabases @backupType='Full'"
 ```
 

@@ -22,7 +22,7 @@ Along with
 another macro that I use just as much, if not more frequently, is my
 `CollapseAllItems()` macro:
 
-```
+```VBA
 Public Sub CollapseAllItems()
     Dim solutionExplorer As Window = _
         DTE.Windows.Item(Constants.vsWindowKindSolutionExplorer)
@@ -50,7 +50,7 @@ End Sub
 The `CollapseItem()` method is used to recursively collapse each item in the
 hierarchy:
 
-```
+```VBA
 Private Sub CollapseItem( _
     ByVal item As UIHierarchyItem, _
     ByVal solutionHierarchy As UIHierarchy)

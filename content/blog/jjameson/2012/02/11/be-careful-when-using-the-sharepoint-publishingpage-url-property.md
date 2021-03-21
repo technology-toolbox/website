@@ -45,7 +45,7 @@ Here's a simple repro I whipped up this morning -- with hopes it will help me
 remember to only use the **PublishingPage.Url** property when I need the
 *site-relative* URL of the page:
 
-```
+```C#
 using System;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Publishing;
