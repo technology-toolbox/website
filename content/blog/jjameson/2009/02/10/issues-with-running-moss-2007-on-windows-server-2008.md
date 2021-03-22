@@ -71,7 +71,7 @@ you access Central Administration. In other words, you need to right-click
 Internet Explorer in the Start menu and then click **Run as administrator**.
 (Note that you cannot right-click the **Internet** shortcut -- since it doesn't
 give you the option to **Run as administrator**; you need to click Start, then
-click **All Programs**, and then right-click *that* **Internet Explorer**).
+click **All Programs**, and then right-click _that_ **Internet Explorer**).
 
 You will then find all of the expected links under the **Topology and Services**
 section.
@@ -86,7 +86,7 @@ title="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server
 
 This certainly isn't the only time you'll need to run as administrator when
 using MOSS 2007 on Windows Server 2008. Actually, you'll find yourself doing
-this *a lot*. For example, in order to run {{< kbd "stsadm.exe" >}}, you'll need
+this _a lot_. For example, in order to run {{< kbd "stsadm.exe" >}}, you'll need
 to first start a command prompt as administrator.
 
 I suppose that, technically speaking, you might be able to disable User Account

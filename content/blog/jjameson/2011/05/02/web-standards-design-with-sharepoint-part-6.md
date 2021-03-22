@@ -106,7 +106,7 @@ title="Figure 2: Too many items in the weekly specials section" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-1006x689.png)
 
-While we *could* modify the XSLT to only render the first three items from the
+While we _could_ modify the XSLT to only render the first three items from the
 SharePoint list, this really isn't the best implementation choice. A better way
 of limiting the number of list items rendered in the weekly specials section is
 to use a custom view on the underlying list (instead of rendering items based on

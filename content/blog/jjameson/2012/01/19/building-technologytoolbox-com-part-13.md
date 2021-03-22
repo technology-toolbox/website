@@ -159,7 +159,7 @@ Assuming you use Debug builds in DEV (and
 [LOCAL](/blog/jjameson/2009/09/25/development-and-build-environments)) and
 Release builds in PROD, you now have a much nicer debugging experience while
 still serving up minified jQuery script on your live site. Also note that
-Intellisense works as expected during development, which I *believe* is a result
+Intellisense works as expected during development, which I _believe_ is a result
 of having the jQuery files in the **Scripts** folder (even though the ASPX or
 master page isn't actually referencing these versions).
 

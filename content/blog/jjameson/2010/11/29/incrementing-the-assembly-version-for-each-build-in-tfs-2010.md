@@ -148,7 +148,7 @@ title="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
 
 As you can see, the portion of the workflow that updates the build number does
 not run on the build agent. In other words, it happens before the "Run On Agent"
-scope and therefore runs on the build *controller* -- not the build *agent*
+scope and therefore runs on the build _controller_ -- not the build _agent_
 (although, in the case of the Jameson Datacenter -- and, I suspect, most TFS
 environments -- there is a single build agent running on the build controller).
 
@@ -227,12 +227,12 @@ build agent) before updating the build number so we can access the various
 assembly version files (e.g. AssemblyVersionInfo.txt and
 AssemblyVersionInfo.cs). Also note that we want to ensure that the label applied
 to the source code in TFS matches the build number. Consequently, the **Update
-Build Number** sequence is placed *before* the activity that labels the source
+Build Number** sequence is placed _before_ the activity that labels the source
 code.
 
 In the out-of-the-box workflow, the **LabelName** variable is scoped to **Run On
 Agent** (which is okay provided the build number is set prior to entering the
-**Run On Agent** scope). Since we are now updating the build number *inside*
+**Run On Agent** scope). Since we are now updating the build number _inside_
 **Run On Agent**, we need to change the scope of the **LabelName** variable to
 ensure the label matches the updated build number.
 
@@ -245,7 +245,7 @@ To change the scope of the LabelName variable:
 
 In addition to the source code label, we want the drop location on the Release
 Server to match the build number (e.g. \\dazzler\Builds\foobar2010\1.0.1.0).
-Therefore the **Update Drop Location** sequence needs to come *after* the
+Therefore the **Update Drop Location** sequence needs to come _after_ the
 **Update Build Number** sequence. [Whether the **Update Drop Location** sequence
 comes before or after the activity that labels the source code really doesn't
 matter. To me, it simply "feels better" to label the source code as early as
@@ -414,15 +414,15 @@ instead of the `BuildType` (to generate assembly numbers like 1.0.51.1,
 1.0.51.2, etc.).
 
 Note that the **DisplayName** specified earlier for the new MSBuild activity is
-"Increment AssemblyVersion for *next* build" (as opposed to something like
-"Increment AssemblyVersion for *this* build"). This is an important point to
+"Increment AssemblyVersion for _next_ build" (as opposed to something like
+"Increment AssemblyVersion for _this_ build"). This is an important point to
 understand and warrants further explanation.
 
 When TFS 2010 starts a build, it uses a specific changeset to identify what
 version of the source code to get and compile. If, for example, a scheduled
 build starts at 5:00:00 AM on Tuesday, but one of the developers (say, Jeremy)
 happens to be working very early that morning and checks in code at 5:00:03 AM
-(3 seconds after the build started), then Jeremy's changes are *not* included in
+(3 seconds after the build started), then Jeremy's changes are _not_ included in
 the build. In other words, we don't want any changesets included in the build
 after the changeset specified for the build (i.e. the **GetVersion** that is
 specified as an argument when starting the build).

@@ -38,7 +38,7 @@ pages before the additional content types have been enabled on the **Pages**
 libraries (either manually or through some automated fashion). Oh, and good luck
 enabling these additional content types before propagation begins after creating
 a new variation label. Feature stapling (i.e. not relying on the OOTB
-**Publishing with Workflow** site definition like we did) *might* allow you to
+**Publishing with Workflow** site definition like we did) _might_ allow you to
 curcumvent this problem. However we did not explore this possibility, I am just
 thinking out loud here.
 

@@ -32,7 +32,7 @@ critical changes to the content migration utilities that avoid running out of
 memory when migrating thousands of pages. Kudos to Jon for digging into this and
 finding Roger's post.
 
-*Most* of Roger's examples are based on the (hopefully) well-known MSDN
+_Most_ of Roger's examples are based on the (hopefully) well-known MSDN
 whitepapers created by Scott Harris and Mike Ammerlaan:
 
 - [Best Practices: Using Disposable Windows SharePoint Services Objects](http://msdn2.microsoft.com/en-us/library/aa973248.aspx)
@@ -79,7 +79,7 @@ assuming the corresponding members were indeed instantiated -- instead of
 relying on the caller to dispose of these.
 
 After all, as in the case of `SPLimitedWebPartManager`, how is the caller
-supposed to *always* know when the internal objects are instantiated and
+supposed to _always_ know when the internal objects are instantiated and
 consequently need to be disposed?
 
 In general -- again, just speaking my opinion here -- if a class that implements

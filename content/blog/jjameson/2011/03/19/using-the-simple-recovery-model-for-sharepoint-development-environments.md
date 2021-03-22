@@ -25,7 +25,7 @@ Simple before migrating content.
 
 Since you typically don't care about potential data loss in SharePoint
 development VMs -- and consequently never bother to configure scheduled database
-backups -- you might as well *always* use the Simple recovery model for *all* of
+backups -- you might as well _always_ use the Simple recovery model for _all_ of
 your development databases. This alleviates the need to periodically backup your
 transaction logs and also allows you to
 [use a very small VHD](/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v)

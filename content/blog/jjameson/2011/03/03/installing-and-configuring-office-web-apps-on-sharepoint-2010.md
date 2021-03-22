@@ -29,7 +29,7 @@ Office Web Apps:
 title="Deploy Office Web Apps (Installed on SharePoint 2010 Products)"
 linkHref="http://technet.microsoft.com/en-us/library/ff431687.aspx" >}}
 
-While the above article includes *most* of the steps you need to perform when
+While the above article includes _most_ of the steps you need to perform when
 deploying Office Web Apps on SharePoint 2010, it currently seems to be lacking a
 few important pieces (at least based upon my experience):
 

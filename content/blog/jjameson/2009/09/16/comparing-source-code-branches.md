@@ -119,7 +119,7 @@ if ("%BRANCH2%") == ("") set BRANCH2="%BRANCH1%_tmp"
 robocopy "%BRANCH1%" "%BRANCH2%" /E /MIR /XD bin obj TestResults /XF *.scc *.suo *.user *.vspscc
 ```
 
-Note that I put the word *magic* in quotes because it's really not magic at all.
+Note that I put the word _magic_ in quotes because it's really not magic at all.
 When copying a source code branch, I simply use robocopy.exe and specify the
 following options:
 
@@ -147,7 +147,7 @@ C:\NotBackedUp\Agilent&gt;{{< kbd "DiffBranches.cmd v3.0 Main" >}}
 
 After the two branches are copied to their respective temporary folders,
 DiffMerge.exe is launched to compare the two branches. Since I exclude many of
-the directories and files that are *expected* to differ between the two
+the directories and files that are _expected_ to differ between the two
 branches, I can quickly view only the differences that I am interested in. I can
 even use DiffMerge.exe to apply the changes interactively (checking out the
 files to be updated beforehand as necessary). This greatly reduces the effort

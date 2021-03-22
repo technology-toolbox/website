@@ -43,7 +43,7 @@ by it again this morning while working on a code sample for another post.
 
 Here's a simple repro I whipped up this morning -- with hopes it will help me
 remember to only use the **PublishingPage.Url** property when I need the
-*site-relative* URL of the page:
+_site-relative_ URL of the page:
 
 ```C#
 using System;

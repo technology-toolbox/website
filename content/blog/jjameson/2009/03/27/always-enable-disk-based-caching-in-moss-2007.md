@@ -19,7 +19,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-
 
 For reasons completely unknown to me, the SharePoint team decided to ship
 Microsoft Office SharePoint Server (MOSS) 2007 with disk-based caching (a.k.a.
-*blob caching*) disabled. If you are not familiar with disk-based caching, here
+_blob caching_) disabled. If you are not familiar with disk-based caching, here
 is a blurb from
 [Microsoft Office Online](http://office.microsoft.com/en-us/sharepointserver/HA101762841033.aspx):
 
@@ -43,7 +43,7 @@ idea, indeed -- especially on a shared environment ;-) ]
 The problem is that statements like the one above make it sound like the primary
 benefit of disk-based caching is to avoid repeatedly transferring "large files"
 between the backend SQL Server and the frontend Web servers. While this is
-certainly *one* of the benefits, the primary reason why **I always recommend
+certainly _one_ of the benefits, the primary reason why **I always recommend
 enabling disk-based caching** is that you vastly reduce the number of database
 roundtrips for each and every page request on your site.
 
@@ -59,17 +59,17 @@ VM so you can isolate individual page requests) and start a trace with the
 following settings:
 
 - **General**
-  - Trace name: SharePoint Content *(or whatever you want to call it)*
+  - Trace name: SharePoint Content _(or whatever you want to call it)_
 - **Events Selection**
   - Stored Procedures
     - RPC:Completed
   - TSQL
     - SQL:BatchCompleted
   - Column Filters
-    - DatabaseName Like {your content database} *(e.g.
-      "WSS\_Content\_Fabrikam")*
-    - NTUserName Like {your app pool service account) *(e.g.
-      "svc-fabrikam-dev")*
+    - DatabaseName Like {your content database} _(e.g.
+      "WSS\_Content\_Fabrikam")_
+    - NTUserName Like {your app pool service account) _(e.g.
+      "svc-fabrikam-dev")_
     - TextData Not Like exec sp\_reset\_connection
 
 These settings will filter out lots of "noise" -- such as requests by the
@@ -99,7 +99,7 @@ Recall what I said earlier about statements that suggest enabling disk-based
 caching to avoid transferring "large files" from SQL Server. What is important
 to realize about the numerous `proc_FetchDocForHttpGet` sproc calls is that
 SharePoint is not actually returning the image or CSS file on every call.
-Assuming the resources are ghosted -- er, I mean *uncustomized* -- then the
+Assuming the resources are ghosted -- er, I mean _uncustomized_ -- then the
 files will actually be served up from the file system on the frontend Web
 servers. However, SharePoint first has to check whether each file is, in fact,
 ghosted (uncustomized).

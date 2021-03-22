@@ -291,10 +291,10 @@ The **GetMonthName** method is, as expected, rather trivial:
 > As I've noted before, there are some assumptions in this code that I currently
 > consider to be "good enough" (such as the hardcoded path to the blog -- i.e.
 > "/blog/jjameson/archive"). If the time comes when this code needs to support
-> other scenarios, then -- and probably *only* then -- I'll put the effort into
+> other scenarios, then -- and probably _only_ then -- I'll put the effort into
 > making it more robust.
 >
-> Also note that there *may* be a way to combine the **GetMonthName** logic into
+> Also note that there _may_ be a way to combine the **GetMonthName** logic into
 > the actual LINQ query, but I couldn't find one. Keep in mind that the results
 > need to be ordered chronologically in reverse order (for example, for each
 > year the "November" results need to come before "January" results).

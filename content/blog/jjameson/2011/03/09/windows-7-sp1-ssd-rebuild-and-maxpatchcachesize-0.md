@@ -28,7 +28,7 @@ latest rebuild was a new solid-state drive (SSD) that I recently received.
 
 I've been running an SSD in my Microsoft laptop for a while now and I must say
 the difference is amazing. If you are a developer running a laptop without an
-SSD then, believe me, I feel your pain. *Especially* if you are a SharePoint
+SSD then, believe me, I feel your pain. _Especially_ if you are a SharePoint
 developer running on a laptop without an SSD. Been there...done that...won't
 ever do it again.
 
@@ -36,7 +36,7 @@ These days, I do 99% of my development work using a number of Hyper-V VMs
 running in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
 my home lab) and -- at least in my opinion -- this is the only way to go. Well,
-okay, maybe not the *only* way, but it certainly eliminates any sensation of not
+okay, maybe not the _only_ way, but it certainly eliminates any sensation of not
 "firing on all cylinders" in terms of productivity.
 
 I've mentioned in a previous post about
@@ -72,7 +72,7 @@ are the details.
 >
 > I've updated the following to reflect a few omissions in my original post
 > (such as installing the Remote Server Administration Tools for Windows 7
-> *before* installing SP1).
+> _before_ installing SP1).
 
 {{< /div-block >}}
 
@@ -80,7 +80,7 @@ Start by installing Windows 7. When prompted to create a new user, specify a
 user name that will be used whenever you need administrator privileges (for
 example, to install software or make other configuration changes). Personally,
 I've been using "foo" for as long as I can remember. I strongly prefer my
-primary domain account (i.e. TECHTOOLBOX\jjameson) *not* be a member of the
+primary domain account (i.e. TECHTOOLBOX\jjameson) _not_ be a member of the
 Administrators group.
 
 I then immediately installed the

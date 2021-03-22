@@ -40,7 +40,7 @@ Shortly after completing a proof-of-concept of this feature for Agilent, while
 at the Microsoft TechReady conference in Seattle I was speaking with one of the
 Program Managers for MOSS Search and mentioned how I had wished that this kind
 of feature came out-of-the-box with MOSS 2007. With the ability to specify
-*[property filters](http://msdn.microsoft.com/en-us/library/ms582745.aspx)* in
+_[property filters](http://msdn.microsoft.com/en-us/library/ms582745.aspx)_ in
 addition to simple keywords, it certainly didn't take me long to create that
 initial POC (if memory serves, it was less than a day) but I obviously would
 have preferred to avoid custom code if at all possible. That's when he told me

@@ -33,8 +33,8 @@ everywhere in MOSS 2007, and while CSS rules are utilized for much of the
 styling, you'll quickly encounter limitations when trying to customize the
 look-and-feel of your site.
 
-However, it's important to understand that you *can* create Web sites using MOSS
-2007 that are *mostly* Web standards compliant -- without abandoning a large
+However, it's important to understand that you _can_ create Web sites using MOSS
+2007 that are _mostly_ Web standards compliant -- without abandoning a large
 amount of the "out-of-the-box goodness" that you get with MOSS 2007.
 
 For example, I'm not willing to forgo using Web Parts entirely on a MOSS 2007
@@ -94,7 +94,7 @@ out-of-the-box with its table-based layout).
 > If you choose to use the 960 Grid System, I also highly recommend leveraging
 > the [960 Gridder](http://gridder.andreehansson.se) as well. This combination
 > makes the task of creating great looking Web pages much easier (even for
-> someone, like me, who is much more of a *developer* than a *designer*).
+> someone, like me, who is much more of a _developer_ than a _designer_).
 
 {{< /div-block >}}
 
@@ -598,7 +598,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 
 > **Update (2010-12-02)**
 >
-> Part 2 in this series in *finally* available ;-)\
+> Part 2 in this series in _finally_ available ;-)\
 > \
 > **Web Standards Design with SharePoint, Part 2**\
 > [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)

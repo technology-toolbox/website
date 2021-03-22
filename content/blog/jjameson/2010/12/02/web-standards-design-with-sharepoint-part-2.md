@@ -137,7 +137,7 @@ Studio solution and added my "standard" list of project items (e.g.
 SharedAssemblyInfo.cs).
 
 For "Sprint 1", the Development team (which is comprised entirely of one person
--- *me*) committed to the following product backlog items:
+-- _me_) committed to the following product backlog items:
 
 - Home page
   - Masthead
@@ -372,7 +372,7 @@ seems to be a bug in Internet Explorer.]
 I tried a couple of different approaches to resolving the margin issue, and in
 the end, I settled on a very minimal change to Dan's original CSS (to specify
 the bottom margin on the `<ol>` element -- instead of on child `<li>` elements).
-[I really didn't *want* to change the original CSS files, but the other hacks
+[I really didn't _want_ to change the original CSS files, but the other hacks
 that I experimented with had their own issues.]
 
 At that point, I marked the "create master page" task in TFS as **"**Done" and
@@ -419,7 +419,7 @@ Note that I chose to deploy the jQuery JavaScript file referenced by the
 FindLocationWebPart (as well as the images) using the **wpresources** folder in
 SharePoint (i.e. via the
 **[ClassResources](http://msdn.microsoft.com/en-us/library/aa543503.aspx)**
-element in the solution manifest file). You certainly don't *have* to do it this
+element in the solution manifest file). You certainly don't _have_ to do it this
 way, but this seems like the cleanest approach -- given the tight coupling
 between the Web Part and the corresponding resource files.
 
@@ -452,10 +452,10 @@ work. [Note that this doesn't happen in IE8 when viewing the static HTML site
 (in other words, outside of SharePoint).]
 
 My first thought was that I must not have copied the HTML correctly when
-creating the FindLocationWebPart. However, I soon discovered that the *inner*
+creating the FindLocationWebPart. However, I soon discovered that the _inner_
 HTML is the same (in other words, the HTML emitted by the Web Part) but the
 additional HTML added by the Web Part zone is enough to break Internet Explorer.
-In the long term, I'd like to fix this problem the *right way* by creating a
+In the long term, I'd like to fix this problem the _right way_ by creating a
 custom
 **[WebPartZone](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.webpartzone.aspx)**
 for SharePoint that doesn't emit any additional markup (at least when

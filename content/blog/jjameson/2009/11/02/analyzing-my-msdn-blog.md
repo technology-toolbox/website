@@ -203,7 +203,7 @@ title="Figure 3: Blog posts created by month" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-699x384.png)
 
-Well, that certainly is, um...*erratic*. Oh, and where is December?!
+Well, that certainly is, um..._erratic_. Oh, and where is December?!
 
 Ouch...it looks like for the last two years I have completely neglected my blog
 in that month.
@@ -227,7 +227,7 @@ interesting that blog posts like
 [Issues Deploying SharePoint Solution Packages](/blog/jjameson/2007/06/17/issues-deploying-sharepoint-solution-packages)
 and
 [The Case of the Disappearing Hosts File](/blog/jjameson/2007/05/05/the-case-of-the-disappearing-hosts-file)
-are at the top of the list, what I find more interesting is *why* they appear at
+are at the top of the list, what I find more interesting is _why_ they appear at
 the top of the list.
 
 Let's start with the most popular post. Drilling down on the 12,246 views in the

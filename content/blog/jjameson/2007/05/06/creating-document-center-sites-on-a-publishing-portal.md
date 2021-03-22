@@ -55,6 +55,6 @@ available tempates) whereas the **New SharePoint Site** page
 features required by the Document Center site enabled on the collection, then
 you cannot create a new Document Center site.
 
-The workaround is to enable *both* the Enterprise and Standard features on the
+The workaround is to enable _both_ the Enterprise and Standard features on the
 site collection. Then you can add a Document Center to a Publishing Portal site
 collection.

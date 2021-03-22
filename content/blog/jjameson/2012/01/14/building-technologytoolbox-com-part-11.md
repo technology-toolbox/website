@@ -60,7 +60,7 @@ This explains the negative offsets specified in the CSS rule (specifically,
 -200px -137px).
 
 If you do a quick Internet search for
-*[CSS sprites](http://www.google.com/search?q=CSS+sprites)*, you will find a
+_[CSS sprites](http://www.google.com/search?q=CSS+sprites)_, you will find a
 number of articles that explain more about the fundamental concepts of CSS
 sprites and why they are useful for optimizing site perfomance (due to the
 greatly reduced number of HTTP requests).
@@ -156,8 +156,8 @@ width="600" title="Figure 3: List items sprite (Expression Design)" >}}
 
 ### What happens when someone needs to add a new list item icon?
 
-Ah yes...the astute reader will have realized by now (or perhaps known it *a
-priori*) that when I need to add a new icon to the sprite, using this "diagonal
+Ah yes...the astute reader will have realized by now (or perhaps known it _a
+priori_) that when I need to add a new icon to the sprite, using this "diagonal
 layout" method definitely comes with an inherent penalty.
 
 When this happens, I need to fire up Expression Design, expand the artboard (and

@@ -61,8 +61,8 @@ WHERE Id = 'A4E86B02-49E1-4960-843E-125BB13D6C54'
 ```
 
 This allowed me to activate the feature again which recreated the
-/Archive/Library site. It is important to note that *executing SQL statements
-directly against any SharePoint database is completely unsupported* (meaning you
+/Archive/Library site. It is important to note that _executing SQL statements
+directly against any SharePoint database is completely unsupported_ (meaning you
 shouldn't bother calling PSS once you have directly made any updates to the
 database). However, in our case, this risk was mitigated by the fact that we'll
 be deleting the databases during a rebuild soon. Otherwise, I definitely would

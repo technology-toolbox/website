@@ -151,7 +151,7 @@ Fortunately, in Visual Studio 2010, the list of code analysis rules that are
 enabled for a particular project is stored outside of the project file (in a
 .ruleset file).
 
-Even better, you can easily create your own custom rule set that specifies *all*
+Even better, you can easily create your own custom rule set that specifies _all_
 code analysis rules should be enabled and any violations should be treated as
 errors:
 

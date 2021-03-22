@@ -98,7 +98,7 @@ A few notes...
    multiple solutions, the most obvious being enterprise level frameworks and
    utilities that are shared across multiple projects. As long as these are
    fairly "baked" and seldomly change, then building (and referencing) them
-   separately (i.e.using *file* references instead of *project* references) is
+   separately (i.e.using _file_ references instead of _project_ references) is
    not an issue.
 2. You typically have a set of classes that contain low-level "helper" methods
    used by many of the other projects in your solution. The **CoreServices**

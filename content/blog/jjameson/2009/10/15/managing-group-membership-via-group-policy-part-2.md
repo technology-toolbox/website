@@ -37,7 +37,7 @@ For example, consider the fact that I use
 in order to monitor the various physical and virtual servers in the the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
 my home lab). One of the things I learned while deploying SCOM is that it is,
-um, *challenging* to deploy it in a least privilege configuration -- or at least
+um, _challenging_ to deploy it in a least privilege configuration -- or at least
 for someone who primarily considers himself an AppDev (Application Development)
 flavor of Microsoft consultant.
 
@@ -47,10 +47,10 @@ forcing myself to configure this on all of my existing servers as well on new
 servers and VMs that I will undoubtedly add in the future, I decided to apply
 this change using Group Policy instead.
 
-However, in this scenario, I don't want to *restrict* the members of the
+However, in this scenario, I don't want to _restrict_ the members of the
 **Performance Monitor Users** group on each monitored server. Rather I simply
-want to ensure that the SCOM service account is a member of this group *in
-addition to any other members*.
+want to ensure that the SCOM service account is a member of this group _in
+addition to any other members_.
 
 To address this scenario, I created a startup script called
 **EnsureLocalGroupMembership.cmd** in the following folder:

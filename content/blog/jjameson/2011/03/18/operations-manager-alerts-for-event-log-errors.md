@@ -43,7 +43,7 @@ addition to installing a number of management packs for things like Active
 Directory, SQL Server, SharePoint, and TFS.]
 
 In other words, I created two rules that generate alerts whenever an error
-occurs in the Application event log or the System event log on *any* server
+occurs in the Application event log or the System event log on _any_ server
 being monitored by Operation Manager. While there may be errors generated in
 other event logs (such as the custom "Operations Manager" log that gets created
 when you install the SCOM agent on a server), I don't attempt to monitor every

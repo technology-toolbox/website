@@ -155,7 +155,7 @@ My memory might be incorrect, but I vaguely recall getting an error a few years
 ago when trying to define a second field with the same name as an existing
 field. Obviously that was long before MOSS 2007 Service Pack 2 (which I am
 currently running) so it's possible the behavior has changed. [Honestly, while I
-*could* try to repro this using the MOSS 2007 RTM version, I'm not going to
+_could_ try to repro this using the MOSS 2007 RTM version, I'm not going to
 bother. It would take me about an hour to build out a vanilla MOSS 2007 RTM
 environment, and that is far longer than I am willing to invest in this issue.
 It's also possible that I am simply remembering a slightly different issue --

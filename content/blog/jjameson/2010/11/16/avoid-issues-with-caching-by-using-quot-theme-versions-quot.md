@@ -67,7 +67,7 @@ copies of the files.
 
 Second, the BlobCache folder on the file system will have an obsolete version of
 the CSS file. Sure, you can clear the blob cache, but that process is painful --
-er, I mean, *tedious*-- especially if you have a number of front-end Web servers
+er, I mean, _tedious_-- especially if you have a number of front-end Web servers
 in your farm.
 
 To avoid these issues with caching, I simply increment the "version" of the
@@ -98,7 +98,7 @@ Note that this rename is done at most once per Sprint (i.e. release to
 Production) -- it certainly isn't done each and every time a developer touches
 one of the CSS files.
 
-It is also worth noting that renaming the Theme folder will cause *all* files
+It is also worth noting that renaming the Theme folder will cause _all_ files
 within the folder to be downloaded by clients the next time they connect to the
 site. Consequently, a much better alternative to the structure shown above is:
 

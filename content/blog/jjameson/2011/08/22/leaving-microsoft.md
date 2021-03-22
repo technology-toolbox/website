@@ -42,7 +42,7 @@ business.
 It also wasn't that I was unable to find billable work (in other words, meet my
 "utilization target" -- which, by the way, was 119% for this past fiscal year).
 The truth is, prior to my current project (which started in late May), I billed
-the full rate for a Principal Consultant (i.e. $308.75/hr) at a *single*
+the full rate for a Principal Consultant (i.e. $308.75/hr) at a _single_
 customer for 18 months straight -- and no, that wasn't commissioned through one
 long contract, but rather the result of numerous extensions (made possible by
 continually delivering a release every six to eight weeks).
@@ -60,8 +60,8 @@ with Microsoft Consulting Services for the foreseeable future, I believe the
 time is right for change.
 
 If you've engaged my services through Microsoft in the past, then you know that,
-working together, we can achieve great things. No...not *great* things,
-*amazing* things -- in incredibly short periods of time. If we haven't worked
+working together, we can achieve great things. No...not _great_ things,
+_amazing_ things -- in incredibly short periods of time. If we haven't worked
 together in the past, but you are looking for top-notch SharePoint/.NET/SQL
 Server/TFS consulting services, then let's connect so we can discuss how I can
 help you maximize your investment in Microsoft technology.

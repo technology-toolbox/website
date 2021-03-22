@@ -25,7 +25,7 @@ customer portal built on Microsoft Office SharePoint Server (MOSS) 2007.
 
 As I mentioned in the previous posts, the Silverlight application is hosted
 inside of the SharePoint site by a user control (**ServiceWheel.ascx**) which
-itself is hosted within a generic *User Control Web Part* (similar to
+itself is hosted within a generic _User Control Web Part_ (similar to
 [SmartPart for SharePoint](http://www.codeplex.com/smartpart)).
 
 I also mentioned that the user control originally contained the following code:

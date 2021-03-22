@@ -63,7 +63,7 @@ This limitation is by design, and is documented in the
 {{< /blockquote >}}
 
 Then again, if you downloaded RSAT for Windows 7 a long time ago (like I did
-back in 2009), then you probably missed this announcement. Apparently I *really*
+back in 2009), then you probably missed this announcement. Apparently I _really_
 should have read the Windows 7 SP1 Deployment Guide before rebuilding my
 desktop. Ah...so much to read, so little time.
 

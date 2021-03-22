@@ -259,7 +259,7 @@ used to specify the version to deploy as well as the build configuration.
 
 ### Step 10 - Overwrite Web.config files (as necessary)
 
-While I like the *idea* behind
+While I like the _idea_ behind
 [Web.config transform files](http://msdn.microsoft.com/en-us/library/dd465326.aspx),
 I don't recommend them for most scenarios. Instead of limiting the
 transformations to build configurations (e.g. Web.Debug.config and

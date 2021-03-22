@@ -54,7 +54,7 @@ pages rendered with application.master. In other words, the bug that I found
 didn't explicitly mention the **Document Center** site template.
 
 Since we needed a solution for Agilent right away, I had to come up with a
-workaround, er, I mean *creative solution*. The following approach is based on
+workaround, er, I mean _creative solution_. The following approach is based on
 the original solution that I developed for Agilent (but improved to use the
 master page configured through **Site Settings**, rather than specifying the
 master page in a configuration file).

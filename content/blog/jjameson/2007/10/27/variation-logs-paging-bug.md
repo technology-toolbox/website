@@ -42,7 +42,7 @@ To view the variation logs and observe the paging bug:
 4. Click the right arrow in the paging control (i.e. "**1 - 20 &gt;**") to view
    the next page of results.
 5. Notice that the results now appear to be sorted by **Time Started (GMT)**
-   *ascending*. In other words, you have "jumped" from the viewing the newest
+   _ascending_. In other words, you have "jumped" from the viewing the newest
    log entries to viewing the oldest log entries.
 
 This makes it impossible to effectively view recent items when you have more

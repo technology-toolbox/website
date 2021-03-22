@@ -57,7 +57,7 @@ definitions. One of the things that still sticks with me from those days is that
 I really don't like CAML. Uh...perhaps that didn't exactly come out the way that
 intended it to.
 
-Actually, I like the *idea* of CAML and I have to admit that it is *incredibly*
+Actually, I like the _idea_ of CAML and I have to admit that it is _incredibly_
 powerful. I just don't want to dive into thousands of line of XML just to figure
 out why something isn't working the way I need it to. In my opinion, CAML is one
 of those things that is best left to the gurus on the SharePoint Product Team

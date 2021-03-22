@@ -34,7 +34,7 @@ Doing a random spot check of the files, I noticed that they are indeed owned by
 the various SharePoint service accounts (e.g. the identity of the app pool
 running the Web application itself, or the identity running the SSP app pool).
 However, I also confirmed that the corresponding service account has been
-granted **Full Control** on the containing folder -- and thus it *seems* like
+granted **Full Control** on the containing folder -- and thus it _seems_ like
 ASP.NET should have no problem deleting these files.
 
 Since this is only happening on my local development environment -- at least for

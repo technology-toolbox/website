@@ -37,7 +37,7 @@ adapter named something like ""Microsoft Virtual Machine Bus Network Adapter #2"
 (and a hidden network adapter named "Microsoft Virtual Machine Bus Network
 Adapter").
 
-I'm not aware of any issues by *not* deleting these network adapters, but I
+I'm not aware of any issues by _not_ deleting these network adapters, but I
 still like to clean them up anyway.
 
 Here is the process that I use to cleanup the network adapters:

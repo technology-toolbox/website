@@ -36,7 +36,7 @@ figure out what I was doing wrong.
 
 Since I needed to reconfigure the disks on the server, I opened the Disk
 Management MMC console on my Windows Vista laptop and connected to the server --
-or, rather I should say that I *tried* to connect to the server. Instead of
+or, rather I should say that I _tried_ to connect to the server. Instead of
 connecting, I was greeted with the following error:
 
 {{< blockquote "fst-italic text-danger" >}}

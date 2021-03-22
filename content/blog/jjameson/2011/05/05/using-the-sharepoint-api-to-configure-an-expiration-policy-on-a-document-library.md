@@ -83,7 +83,7 @@ using Microsoft.SharePoint;
 ```
 
 This code adds an expiration policy to the library if it hasn't yet been
-configured. If an expiration policy *has* been configured on the document
+configured. If an expiration policy _has_ been configured on the document
 library, then it it ignored (because the policy may have been modified by an
 administrator -- for example, to increase the time period used to determine
 which files to delete).

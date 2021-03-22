@@ -51,7 +51,7 @@ Riders, 2007: 65.</cite>
 {{< /blockquote >}}
 
 Even without clicking the **See full-sized image** link for Figure 1, it is
-pretty clear that my MSDN blog does *not* look very good "naked." Where are the
+pretty clear that my MSDN blog does _not_ look very good "naked." Where are the
 headings? Why do you have to scroll past the list of tags and the archive list
 (i.e. posts by month) to see the most recent posts? More importantly, why does
 each item in the list of most recent posts start with a link to "Random Musings
@@ -70,7 +70,7 @@ title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
 Notice how much easier it is to identify the different sections of the page --
 thanks to the use of HTML heading elements (which were almost nonexistent on my
-MSDN blog). Also note that the list of recent posts now appears *before* the
+MSDN blog). Also note that the list of recent posts now appears _before_ the
 list of tags and the archive list. Each post also includes the metadata (such as
 date published and number of comments) rendered as an unordered list immediately
 below the post title.
@@ -81,7 +81,7 @@ microformat.
 ### hAtom 0.1 microformat
 
 Another very useful tip that I picked up from reading Transcending CSS is using
-*microformats* as a way of -- as Andy puts it -- <q>"squeezing new meaning from
+_microformats_ as a way of -- as Andy puts it -- <q>"squeezing new meaning from
 XHTML."</q>
 
 Consequently, shortly after deciding not to use my MSDN blog as a reference, I
@@ -245,7 +245,7 @@ the date portion is shown:
 Since the list of recent posts will likely contain items that were published
 more than 24 hours ago, showing the time version of the publication date seems
 superfluous. On the other hand, when viewing an individual blog post, the time
-portion *is* shown:
+portion _is_ shown:
 
 > November 6, 2011     6:00 AM
 

@@ -57,7 +57,7 @@ assemblies to the GAC on the build server:
 {{< /blockquote >}}
 
 Since I chose to install Visual Studio 2010 on my build server (DAZZLER), then I
-shouldn't have to install *any* additional Visual Studio assemblies on my build
+shouldn't have to install _any_ additional Visual Studio assemblies on my build
 server. Everything should just work. When I looked at the GAC on my SharePoint
 Server 2010 development VM (FOOBAR5), I didn't see these assemblies, and since
 FOOBAR5 doesn't have any trouble building SharePoint projects without these

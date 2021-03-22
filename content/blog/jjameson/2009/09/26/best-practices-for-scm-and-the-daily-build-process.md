@@ -36,8 +36,8 @@ a source control repository as well as a project team site in SharePoint (a.k.a.
 the "Project Portal"). You also probably know that all SharePoint document
 libraries can be configured to support versioning similar to TFS source control,
 and thus allow you to, for example, view an old version of an installation guide
-stored on the Project Portal. However, just because you *can* do this doesn't
-mean that it is *recommended* as a best practice.
+stored on the Project Portal. However, just because you _can_ do this doesn't
+mean that it is _recommended_ as a best practice.
 
 Note that I'm not saying you should not store any documents on the Project
 Portal, nor am I saying that you should never enable versioning on document

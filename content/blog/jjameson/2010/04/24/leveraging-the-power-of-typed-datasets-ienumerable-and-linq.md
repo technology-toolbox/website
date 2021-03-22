@@ -222,7 +222,7 @@ that are added to the summary table. In other words, we could refactor the
 
 To be honest, I've used this approach in the past, and while it is relatively
 easy to make the corresponding changes when refactoring, it's not exactly
-*robust*.
+_robust_.
 
 For example, it's quite possible that a future scenario would force us to add
 yet another overload to the method. To understand why, suppose that instead of,
@@ -334,7 +334,7 @@ would "just work."
 Based on the previous change to **GetScorecardSummaryTable** (to support the
 ability to provide a filtered list of scorecard items instead of all scorecard
 items), we'll need to make a corresponding change to **GetScorecardDetailTable**
-(to ensure that only the details for the *filtered* scorecard items appear in
+(to ensure that only the details for the _filtered_ scorecard items appear in
 the detail table).
 
 Note that when refactoring code to add overloads that accept an `IEnumerable`

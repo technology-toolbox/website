@@ -15,7 +15,7 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-Software is never perfect. Errors *will* occur in your code. Don't fret, they
+Software is never perfect. Errors _will_ occur in your code. Don't fret, they
 occur in my code, too. There are nasty little errors in everyone's code -- idly
 biding their time until they can spring out and aggravate your users.
 
@@ -51,12 +51,12 @@ the multitude of exceptions that might occur at runtime. Therefore, the fewer
 Instead you should only catch an exception when you are absolutely sure you can
 do something useful. If you have `catch` blocks in your code that do nothing
 more than log the exception and then re-throw it up the call stack, then...well,
-I'll just say it, your code *blows*.
+I'll just say it, your code _blows_.
 
 Okay, maybe that's a little harsh, but you wouldn't believe how often I've seen
 this in the past. Even worse, though, are `catch` blocks that "swallow" the
 exceptions. If you think there's even a remote chance you might have these in
-your solution, then you should stop reading this post *immediately* and instead
+your solution, then you should stop reading this post _immediately_ and instead
 go do a search in Visual Studio for the word "catch" and scan through the
 results one-by-one.
 
@@ -209,15 +209,15 @@ not a good thing -- so you should always specify
       redirectMode="ResponseRewrite" />
 ```
 
-With this configuration, the original request URL is preserved and there's *at
-least a chance* that clicking "refresh" will resolve the issue.
+With this configuration, the original request URL is preserved and there's _at
+least a chance_ that clicking "refresh" will resolve the issue.
 
 However, there's still a big problem...
 
 If your custom error page is simply an ASP.NET page with no code-behind, then
 the HTTP response specifies a status code of 200 ("OK"). In other words, while
 users will know that something is wrong, search engines crawling your site will
-assume the error page content is what you *intended* to serve for the specified
+assume the error page content is what you _intended_ to serve for the specified
 URL.
 
 Consequently, you should add a little code to set the status code to indicate
@@ -414,7 +414,7 @@ On the other hand, if you try browsing to a non-existent ASP.NET page, such as:
 
 > https://www.technologytoolbox.com/foobar.aspx
 
-...then you *do* see the error page shown in Figure 1 (and if you use Firebug or
+...then you _do_ see the error page shown in Figure 1 (and if you use Firebug or
 the IE Developer Tools to inspect the response, you would see that it specifies
 a status code of 404 -- courtesy of the code above that gets the status code
 from the original **HttpException**).

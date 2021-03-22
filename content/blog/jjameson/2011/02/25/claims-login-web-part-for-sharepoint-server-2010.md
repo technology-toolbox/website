@@ -88,7 +88,7 @@ in order to authenticate with their Windows (i.e. domain) credentials.
 Now, if all we wanted was to replace the out-of-the-box login pages with the
 custom page shown in Figure 3, there are plenty of references out there already
 that show you how to do this. [Just search the Internet for something like
-***SharePoint claims custom login page*** and you'll find lots of examples that
+**_SharePoint claims custom login page_** and you'll find lots of examples that
 essentially demonstrate the same concept.]
 
 However, rather than replacing the OOTB sign-in experience with a custom

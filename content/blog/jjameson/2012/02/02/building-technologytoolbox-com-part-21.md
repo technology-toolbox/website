@@ -28,11 +28,11 @@ with "fluff" like that.
 All joking aside, if you have a website today that does not provide a search box
 somewhere on the home page (preferably "above the fold" if not at the very top),
 then from a usability perspective, I would probably say your site stinks. Sorry,
-but there really is *no excuse* for that anymore -- no matter how small your
+but there really is _no excuse_ for that anymore -- no matter how small your
 site is. [Okay, okay, I suppose if you have a site with less than three pages,
 then I should let it slide.]
 
-We may call it *browsing*, but people very rarely browse for information
+We may call it _browsing_, but people very rarely browse for information
 anymore. Ever since the days of Alta Vista (and probably before that, but that
 is as far back as I can recall) the human race has become more and more
 dependent on searching.

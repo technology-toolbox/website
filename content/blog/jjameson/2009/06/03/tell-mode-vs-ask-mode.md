@@ -42,7 +42,7 @@ the example bugs to get a feel for the level of detail expected during the
 > **Sent:** Thursday, October 18, 2007 8:03 AM\
 > **Subject:** v2.0 Transition from "Tell Mode" to "Ask Mode"
 >
-> On Sunday night, October 21st, RC4 of the *[Project]* v2.0 solution will be
+> On Sunday night, October 21st, RC4 of the _[Project]_ v2.0 solution will be
 > deployed to TEST. This will mark the official transition from "Tell Mode" to
 > "Ask Mode."
 >
@@ -51,14 +51,14 @@ the example bugs to get a feel for the level of detail expected during the
 > Microsoft uses Tell Mode and Ask Mode to refer to different time periods after
 > the Feature Complete milestone but prior to a release.
 >
-> During Tell Mode the Development team *tells* the rest of the team which
+> During Tell Mode the Development team _tells_ the rest of the team which
 > issues are actively being worked on (resolved). In other words, Development is
 > primarily driving the stabilization process based on what they think should be
 > fixed -- as determined by priority, severity, complexity (i.e. risk), and
 > effort required. This works for a while, but at some point you have to reign
 > in Development in order to ship, er, release.
 >
-> Thus we transition into Ask Mode whereby Development must *ask* permission
+> Thus we transition into Ask Mode whereby Development must _ask_ permission
 > before resolving any issues. It is okay to investigate issues, but <u>no code
 > changes can be made</u> to address an issue until approval by the "War Team"
 > (er, Triage Team) is granted.
@@ -127,7 +127,7 @@ the example bugs to get a feel for the level of detail expected during the
 > hazing from virtually all team members.
 >
 > Everyone who was involved in v1.0 knows that we didn't strictly follow this
-> process in the first release of *[Project]*, but we also have the "scars" to
+> process in the first release of _[Project]_, but we also have the "scars" to
 > remind us that we need to improve our process for this release.
 >
 > It is also important to note that Microsoft fully acknowledges that we had
@@ -147,7 +147,7 @@ the example bugs to get a feel for the level of detail expected during the
 
 
 Note that I have replaced the project code name with
-*[Project]* in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a ["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)
+_[Project]_ in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a ["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)
 on a secured team site we used for the project (which obviously you wouldn't
 have access to -- unless you just happen to be one of my cohorts on the
 project).

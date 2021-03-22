@@ -23,7 +23,7 @@ website. This post provides a similar walkthrough for implementing
 ### Step 1: Sign up for Google Analytics
 
 Unlike the options for integrating Google search into your website, there is
-*only* a free version of Google Analytics. All you need in order to sign up is a
+_only_ a free version of Google Analytics. All you need in order to sign up is a
 Google Account -- and chances are fairly high you already have one of those.
 
 Once you have signed up, Google assigns you a unique "tracking code" -- or what

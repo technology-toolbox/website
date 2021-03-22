@@ -19,9 +19,9 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/05/thoughts-and-r
 
 Have you ever lost work items in Team Foundation Server? I know I have.
 
-Well, let me clarify that...it's not that I actually *lost* work items due to
+Well, let me clarify that...it's not that I actually _lost_ work items due to
 some bug in TFS or failure on the database server. Rather -- and I'm a little
-embarrassed to admit this -- it's just that I somehow *misplaced* them (which
+embarrassed to admit this -- it's just that I somehow _misplaced_ them (which
 also occasionally happens with other items as well, such as my wallet). In other
 words, I can't seem to quickly find one or more work items that I'm certain I
 created previously in a particular TFS project.
@@ -120,7 +120,7 @@ the iterations for a TFS project similar to the following:
   - v1.1
   - vNext
 
-What you call them really doesn't matter to me. That's just a name. What *is*
+What you call them really doesn't matter to me. That's just a name. What _is_
 important, however, is that any work item that isn't assigned to a "real"
 iteration is considered to be invalid (because that means it's essentially
 fallen off the radar).

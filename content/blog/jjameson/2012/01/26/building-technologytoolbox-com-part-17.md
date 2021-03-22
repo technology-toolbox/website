@@ -22,7 +22,7 @@ in your ASP.NET Web applications and also showed you a
 that you can use with the Subtext blog engine as well as plain ol' ASP.NET apps.
 
 Now, suppose you want to use ELMAH and/or the CAPTCHA control in both an ASP.NET
-Web application and a Subtext-powered blog *at the same time*. In other words,
+Web application and a Subtext-powered blog _at the same time_. In other words,
 suppose you have a custom ASP.NET application that renders part of a website
 (e.g. "/" and "/Services") and uses Subtext to serve up other parts (e.g. URLs
 under "/blog").

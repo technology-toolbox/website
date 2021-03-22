@@ -96,11 +96,11 @@ above, you will end up with nested `<form>` elements. [While some browsers might
 be able to successfully handle nested `<form>` elements, it's definitely not
 valid HTML and therefore I don't recommend even attempting it.]
 
-Instead, we need to substitute *equivalent* functionality without relying on a
+Instead, we need to substitute _equivalent_ functionality without relying on a
 separate `<form>` element.
 
 The good news is that the code snippet provided by the Bing folks above
-essentially defines a *contract* with the search service. [In other words, I'm
+essentially defines a _contract_ with the search service. [In other words, I'm
 assuming the Bing team isn't going to change the parameters that need to be
 specified, because that would break all of the sites that followed their simple
 instructions for adding a basic search box.]

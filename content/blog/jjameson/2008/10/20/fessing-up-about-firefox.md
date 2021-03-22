@@ -32,7 +32,7 @@ disservice by not allowing them -- or, heck, even forcing them -- to upgrade to
 IE7. The improved security alone should be enough to justify upgrading to IE7 as
 soon as possible.
 
-Now, I know that there were definitely *some* compatibility issues with IE7
+Now, I know that there were definitely _some_ compatibility issues with IE7
 immediately after its release. For example, all of those "bad" Web applications
 that were hard-coded to detect version 6, rather than version 6 or later -- but
 surely all the owners of those Web applications have resolved these issues by
@@ -41,7 +41,7 @@ now ;-)
 I also acknowledge that IE6 is actually fairly poor -- at least by comparison --
 in its support for [Web standards](http://en.wikipedia.org/wiki/Web_standards).
 Anybody who has done any significant amount of Web development can tell you
-about their own personal frustrations -- er, I mean *experiences* -- dealing
+about their own personal frustrations -- er, I mean _experiences_ -- dealing
 with
 [box model hacks](http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
 and [quirks mode](http://en.wikipedia.org/wiki/Quirks_mode). [I can't tell you
@@ -50,13 +50,13 @@ how much I am looking forward to the improved standards support in IE8.]
 But alas, the purpose of this post is not to rant about IE6 or IE7, but rather
 to tell you about why I often use Firefox.
 
-It is true that Firefox currently supports Web standards, um, *differently* than
+It is true that Firefox currently supports Web standards, um, _differently_ than
 Internet Explorer -- and as a Web developer, I am responsible for making sure
 the my pages look great in both Internet Explorer and Firefox (and occasionally
 other browsers as well). However, that's not the real reason I use Firefox, or
 at least not the most important reason.
 
-Why I use Firefox can easily be summed up in one word: *add-ons*. [Okay,
+Why I use Firefox can easily be summed up in one word: _add-ons_. [Okay,
 technically speaking that may actually be two words, but...whatever.]
 
 In the beginning, my dependency on Firefox started with
@@ -207,7 +207,7 @@ I want to emphasize again that the intent of this post is not to say that I
 prefer Firefox over Internet Explorer, because, honestly, I don't.
 
 To be completely truthful, it's not the Web browser itself that I get excited
-about, but rather what gets rendered *inside* the browser that I occasionally
+about, but rather what gets rendered _inside_ the browser that I occasionally
 find myself saying "wow!" when I see it.
 
 I do believe in some ways, we were caught flat footed at Microsoft by Firefox

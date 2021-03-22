@@ -26,7 +26,7 @@ For example, after installing the Spanish Language Pack, if you had any code
 that referred to something like "/en-US/Products/Pages/default.aspx" then you
 would soon find that your code could break when referring to the equivalent page
 on a localized site. For example, on a Spanish site, the equivalent URL would be
-"/es-ES/Products/*Paginas*/default.aspx" (assuming you chose not to translate
+"/es-ES/Products/_Paginas_/default.aspx" (assuming you chose not to translate
 "Products" when creating the Spanish site).
 
 Fortunately, the SharePoint API provides the ` PublishingWeb.GetPagesListName`
@@ -80,7 +80,7 @@ The problem is that this doesn't work in all cases (meaning for all Language
 Packs).
 
 If you look at the documentation for the ` PublishingWeb.GetPagesListName`
-method, you will see that it states the method returns the "*URL* name of the
+method, you will see that it states the method returns the "_URL_ name of the
 pages list" (emphasis mine) -- which, in most cases, is the same as the "name of
 the pages list."
 

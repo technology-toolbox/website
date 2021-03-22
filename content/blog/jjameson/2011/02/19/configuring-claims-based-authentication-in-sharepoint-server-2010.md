@@ -21,7 +21,7 @@ I thought it would be helpful to share my step-by-step procedures for manually
 configuring claims-based authentication in SharePoint Server 2010 using an
 "ASP.NET database" and corresponding membership and role providers.
 
-Note that the following TechNet article provides *some* of the steps for
+Note that the following TechNet article provides _some_ of the steps for
 configuring claims-based authentication in SharePoint Server 2010 (using the
 LDAP provider instead of the ASP.NET SQL providers):
 

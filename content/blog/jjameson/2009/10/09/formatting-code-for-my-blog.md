@@ -41,7 +41,7 @@ When I started looking at approaches for improving the formatting of code for my
 blog, I found that there were numerous "solutions" out there. However, I knew
 what I really wanted was something that would produce a minimal amount of HTML
 markup (or at least a lot less HTML than Microsoft Word) and, preferably,
-something that generated semantic markup as well -- or at least *reasonably*
+something that generated semantic markup as well -- or at least _reasonably_
 semantic markup.
 
 What I mean by semantic markup is that code should be wrapped in a `<code>` tag

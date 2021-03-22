@@ -50,7 +50,7 @@ expanding the **User Name** column -- or even worse still, having to use {{< kbd
 2008) to determine which process to attach to.]
 
 Don't fret...attaching to the right worker process to debug your SharePoint code
-*can* be very easy.
+_can_ be very easy.
 
 Suppose you've created a **Class Library** project in Visual Studio for your
 feature, which includes things like a master page with code-behind, custom Web

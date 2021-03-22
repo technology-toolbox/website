@@ -40,7 +40,7 @@ your TFS project sites by going with MOSS 2007 -- unless, of course, you
 customized your project sites with MOSS 2007 features.
 
 However, unlike TFS 2008, the new version of TFS has some great features that
-are enabled via MOSS 2007 (and SharePoint Server 2010), namely *dashboards*.
+are enabled via MOSS 2007 (and SharePoint Server 2010), namely _dashboards_.
 While the dashboard functionality in TFS 2010 works -- to a limited extent --
 with WSS 3.0 (or SharePoint Foundation 2010), you'll have to open the
 corresponding Excel workbooks, rather than viewing the dashboards directly on
@@ -85,7 +85,7 @@ solution over time as your needs grow.
 > run SQL Server side-by-side with other products and technologies, but in
 > general, you should try to isolate it whenever practical.
 >
-> I should also point out that this is just *my* recommendation. According to
+> I should also point out that this is just _my_ recommendation. According to
 > the TFS installation guide, a single server is recommended when you have less
 > than 500 users. On the other hand, I don't believe that official
 > recommendation covers running SharePoint Server 2010 on the same server --

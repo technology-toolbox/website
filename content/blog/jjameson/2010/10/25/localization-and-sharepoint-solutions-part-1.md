@@ -44,7 +44,7 @@ localized in the various languages supported by your solution?
 
 Regardless of your answer to this question, the basic approach you take for
 localization is essentially the same (e.g. extracting strings into resource
-files). However, the answer to this question ultimately determines *how* the
+files). However, the answer to this question ultimately determines _how_ the
 resource files are actually used to display localized text.
 
 In the case of Agilent Technolgies, the answer to this first question was that
@@ -111,7 +111,7 @@ especially useful since we are leveraging things like the ASP.NET Login control
 provide the "log out" functionality), and consequently we don't have to spend
 any effort localizing them.
 
-Therefore *most* of the localization infrastructure is provided for us
+Therefore _most_ of the localization infrastructure is provided for us
 out-of-the-box. As I mentioned before, I'll cover what isn't provided in a
 separate post.
 

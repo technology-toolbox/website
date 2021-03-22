@@ -22,9 +22,9 @@ got me thinking about something.
 
 Do you find yourself occasionally typing one word when you are actually thinking
 of a different word that sounds the same? A faint recollection from one or more
-of my English classes long ago suggested that these words are called *homonyms*.
+of my English classes long ago suggested that these words are called _homonyms_.
 However, a quick search just now on Wikipedia indicates these are actually
-[*homophones*](http://en.wikipedia.org/wiki/Homophone).
+[_homophones_](http://en.wikipedia.org/wiki/Homophone).
 
 For example, have you ever typed the word "do" when you meant "due", or
 similarly "overdo" when you meant "overdue"? Surely you know the difference

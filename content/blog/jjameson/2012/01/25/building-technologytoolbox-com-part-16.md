@@ -166,9 +166,9 @@ to indicate success/failure (like **LoadConfig** does). I'd much rather see a
 `void` method that throws an exception when something goes wrong.
 
 Secondly, there's a subtle bug in Mahdi's code: it is not thread-safe. Note that
-**Message** is defined as a `static` member. Consequently it is *possible* that
+**Message** is defined as a `static` member. Consequently it is _possible_ that
 more than one thread could attempt to initialize the configuration via the
-**LoadConfig** method. Is it *probable*? No, but I still prefer to see it "done
+**LoadConfig** method. Is it _probable_? No, but I still prefer to see it "done
 right" -- especially in solutions that I work on.
 
 To encapsulate the CAPTCHA configuration code, I created a new class called
@@ -309,7 +309,7 @@ store a "super-secret" hash of the expected value in the cookie.
 > almost laughable to use that word), and subsequently create a hack to spam the
 > site.
 >
-> If you do decide to do this, then a) you're a *loser*, and b) I'll just
+> If you do decide to do this, then a) you're a _loser_, and b) I'll just
 > quickly change the hashing code to generate some other value. In hindsight, I
 > suppose I could have encrypted the expected value for the CAPTCHA instead (so
 > that even if you saw the code, you wouldn't be able to spoof a valid cookie

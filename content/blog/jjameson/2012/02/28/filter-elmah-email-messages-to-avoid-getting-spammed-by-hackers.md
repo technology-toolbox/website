@@ -334,7 +334,7 @@ to be honest, that's why I waited a couple of days before writing this post (to
 give them a chance to respond).
 
 On Sunday I decided I could "live with" the issue with the JavaScript filter in
-Full trust (since the Production environment for TechnologyToolbox.com *must*
+Full trust (since the Production environment for TechnologyToolbox.com _must_
 run in Medium trust due to the hosting environment).
 
 Regardless of my particular filter configuration, I'm glad to see the

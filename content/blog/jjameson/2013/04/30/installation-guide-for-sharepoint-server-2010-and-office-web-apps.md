@@ -33,7 +33,7 @@ For the sake of understanding the context of this installation guide, imagine
 being tasked with deploying a new extranet solution for Fabrikam Technologies
 (my favorite fictitious manufacturing company). The extranet solution needs to
 be available as soon as possible and thus various capabilities will be released
-over a series of short sprints (or *iterations*, if you prefer that term
+over a series of short sprints (or _iterations_, if you prefer that term
 instead). The scope for the first sprint is limited to the following:
 
 - Site branding (minimal customization to meet Fabrikam corporate standards)
@@ -98,7 +98,7 @@ following style conventions and terminology.
 | ALL CAPITALS | Acronyms, Active Directory domain names, server names, names of certain commands, and keys on the keyboard. |
 | **Bold** | Menus and menu commands, command buttons; tab and dialog box titles and options; command-line commands, options, and portions of syntax that must be typed exactly as shown. |
 | Initial Capitals | Names of applications, programs, paths (folders and filenames), and named windows. |
-| *Italic* | Information that you provide, terms that are being introduced, and book titles. |
+| _Italic_ | Information that you provide, terms that are being introduced, and book titles. |
 | Monospace | Examples, sample command lines, program code, and program output. |
 | "DEV -" prefix | Indicates a step that should only be performed in the Development integration environment (DEV) and local development VMs. Specifically, these sections are skipped when deploying to the Test and Production environments. |
 
@@ -2543,7 +2543,7 @@ To create the service applications and proxies:
    1. In the **Service Account** section, click **Use existing managed
       account**, and then select **EXTRANET\svc-spserviceapp** in the drop-down
       list.
-   2. In the **Services** section, clear all enabled checkboxes *except* for
+   2. In the **Services** section, clear all enabled checkboxes _except_ for
       **Excel Services Application**, **PowerPoint Service Application**, and
       **Word Viewing Service**.
    3. Click **Next**.
@@ -3022,7 +3022,7 @@ configuration settings are listed in the following tables.
 
 \* - In development environments, the WSS\_Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
-health data collection is *not* recommended in these environments.
+health data collection is _not_ recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 

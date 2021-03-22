@@ -70,8 +70,8 @@ The corresponding folder structure on disk resembles the following:
 
 - Fabrikam
   - Demo
-    - Dev *(branch)*
-      - Lab1 *(branch)*
+    - Dev _(branch)_
+      - Lab1 _(branch)_
         - AssemblyVersionInfo.cs
         
         - CustomDictionary.xml

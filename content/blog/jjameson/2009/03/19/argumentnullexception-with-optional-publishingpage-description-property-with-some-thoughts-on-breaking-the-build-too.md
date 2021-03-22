@@ -44,7 +44,7 @@ rendered by default in Microsoft Office SharePoint Server (MOSS) 2007. It seemed
 like a pretty trivial change and the unit tests I was running to validate my
 changes were, indeed, showing green.
 
-The problem is, I wasn't running *all* of the unit tests that I needed to.
+The problem is, I wasn't running _all_ of the unit tests that I needed to.
 Specifically, I was only running tests that actually specified a page
 description.
 
@@ -57,7 +57,7 @@ exception.
 At that point, I almost started to panic.
 
 Fortunately, by 11:54 AM, my updated changeset was checked in and the bug was
-fixed -- with 6 minutes to spare! However, as I mentioned before I *almost* got
+fixed -- with 6 minutes to spare! However, as I mentioned before I _almost_ got
 away with it.
 
 It turns out that Dan, another developer on the team, apparently got latest

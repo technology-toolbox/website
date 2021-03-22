@@ -525,7 +525,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 ```
 
 Most of the code in the `SharePointWebPartHelper` class is very straightforward.
-The most interesting hack -- er, I mean *workaround* -- in the code is to handle
+The most interesting hack -- er, I mean _workaround_ -- in the code is to handle
 the scenario where the `zoneIndex` is sometimes mysteriously incremented by more
 than one, but you can read more about this in a
 [previous post](/blog/jjameson/2009/06/05/splimitedwebpartmanager-addwebpart-mysteriously-increments-zoneindex)

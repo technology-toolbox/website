@@ -30,7 +30,7 @@ before encountering another blocking issue.
 As soon as I added a "`using Elmah;`" declaration to my code-behind file for
 Global.asax, I discovered the Elmah assembly is not signed. Since the "Caelum"
 assemblies (i.e. the code running TechnologyToolbox.com) are all signed with a
-strong name key, any assemblies *explicitly referenced at build time* must be
+strong name key, any assemblies _explicitly referenced at build time_ must be
 signed as well.
 
 Up to that point, I had gotten by using the unsigned Elmah.dll since it was

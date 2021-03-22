@@ -389,11 +389,11 @@ At this point, our HTML is very close to what we want it to be:
 ## This Week's Specials
 
 1. [!\[\](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
-   *$9.98 / lb.*](#)
+   _$9.98 / lb._](#)
 2. [!\[\](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
-   *$12.50 / lb.*](#)
+   _$12.50 / lb._](#)
 3. [!\[\](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf**
-   *$7.49 / lb.*](#)
+   _$7.49 / lb._](#)
 
 Obviously the image URLs are invalid (outside the context of the SharePoint site
 -- due to server-relative URLs), but that's okay...the images should appear as

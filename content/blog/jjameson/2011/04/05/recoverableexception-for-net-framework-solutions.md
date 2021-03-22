@@ -43,7 +43,7 @@ throwing a custom **RecoverableException** (or an exception that derives from
 **RecoverableException**) in scenarios where the user -- or an administrator --
 can take some action in order to resolve the error. In other words, somebody --
 besides a developer -- should be able to understand what the error means and
-consequently do *something* in order to recover from the error. Note that the
+consequently do _something_ in order to recover from the error. Note that the
 "something" might simply be a matter of waiting a short period and trying the
 operation again (for example, when a remote Web service returns a "server too
 busy" error).

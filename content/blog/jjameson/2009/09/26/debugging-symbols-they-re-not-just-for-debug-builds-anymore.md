@@ -58,7 +58,7 @@ outsider to understand your code).
 
 Well, any .NET developer who has ever fired up Reflector on somebody else's
 assembly (which hasn't been obfuscated, obviously) knows very well how easy it
-is to decompile -- er, I mean *disassemble* -- source code. In fact, regardless
+is to decompile -- er, I mean _disassemble_ -- source code. In fact, regardless
 of whether you have the PDB files, you can actually debug .NET code -- including
 setting breakpoints and examining variables -- using tools like
 [WinDbg](http://www.microsoft.com/whdc/devtools/debugging/default.mspx). I've

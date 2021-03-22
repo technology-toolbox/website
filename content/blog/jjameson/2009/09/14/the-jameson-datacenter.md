@@ -91,7 +91,7 @@ days. In fact, when I somehow managed to
 [kill one of my servers](http://en.wikipedia.org/wiki/Electrostatic_discharge) a
 few months back, I replaced the motherboard, CPU, and memory for $260.89 (and
 that included an AMD quad core processor and 8 GB of RAM). Since Microsoft isn't
-paying for these servers -- well, I suppose I should say "isn't *reimbursing me*
+paying for these servers -- well, I suppose I should say "isn't _reimbursing me_
 for these servers" since my paycheck comes from Microsoft -- I typically have to
 get approval from the wife before giving newegg my credit card number. But alas,
 I digress...
@@ -132,7 +132,7 @@ There is no trust relationship between these Active Directory domains. In other
 words, I can't login to one of the TECHTOOLBOX servers with my
 FABRIKAM\jjameson-admin account, nor can I login to any of the FABRIKAM servers
 with my TECHTOOLBOX\jjameson-admin account. In some enterprise organizations
-that I've consulted with, there actually *is* a trust relationship between the
+that I've consulted with, there actually _is_ a trust relationship between the
 "development" and "production" forests -- in order to avoid forcing developers
 to manage multiple accounts.
 

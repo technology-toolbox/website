@@ -92,8 +92,8 @@ is loosely based on the work item tracking features in Visual Studio Team
 Foundation Server (hence the name of the site template).
 
 The primary goal in developing the TFS Lite template was to support a "project
-dashboard" similar to Figure 1 *with minimal effort by the various team
-members*. In other words, as work items in the underlying SharePoint list are
+dashboard" similar to Figure 1 _with minimal effort by the various team
+members_. In other words, as work items in the underlying SharePoint list are
 updated, the project summary should automatically reflect the changes.
 
 Another key feature is the ability to show the status of important project

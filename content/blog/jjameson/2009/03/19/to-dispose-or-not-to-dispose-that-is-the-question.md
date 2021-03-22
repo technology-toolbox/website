@@ -64,7 +64,7 @@ Folks, this is huge!
 
 Now, if we could just eliminate the need for these whitepapers altogether ;-)
 
-You see, this shouldn't even *be* a SharePoint issue, and thus there should be
+You see, this shouldn't even _be_ a SharePoint issue, and thus there should be
 no need for developers to read 44 pages of prescriptive guidance (29 pages in
 one and 15 in the other).
 

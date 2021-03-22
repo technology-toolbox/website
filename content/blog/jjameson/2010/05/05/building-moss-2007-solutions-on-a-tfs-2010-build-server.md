@@ -81,7 +81,7 @@ longer occurred.
 > **Note**
 >
 > In addition to copying SharePoint assemblies that are directly referenced in
-> your projects, you also may want to copy assemblies that are *indirectly*
+> your projects, you also may want to copy assemblies that are _indirectly_
 > referenced, such as:
 >
 > - Microsoft.HtmlTrans.Interface.dll

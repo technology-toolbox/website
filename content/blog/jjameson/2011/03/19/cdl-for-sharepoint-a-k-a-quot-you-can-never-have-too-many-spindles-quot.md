@@ -23,7 +23,7 @@ entirely different. To me, these three letters correspond to the minimum number
 of drives I like to see on any server running SharePoint Server 2010 -- or its
 predecessor, Microsoft Office SharePoint Server 2007.
 
-In other words, I think *all* SharePoint servers -- yes, even your development
+In other words, I think _all_ SharePoint servers -- yes, even your development
 VMs -- should have a C: drive, a D: drive, and an L: drive.
 
 In general, the C: drive is used for operating system files, program files, the

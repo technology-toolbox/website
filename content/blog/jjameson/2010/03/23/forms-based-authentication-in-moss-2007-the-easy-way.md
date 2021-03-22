@@ -39,7 +39,7 @@ restricted information (e.g. sales collateral).
 
 So the question I have this morning is this...
 
-How long would it take *you* to create a new SharePoint Web application
+How long would it take _you_ to create a new SharePoint Web application
 (http://fabrikam), create the corresponding site collection using the Publishing
 Portal template, extend it to create an alternate access mapping for the
 Internet zone (http://www.fabrikam.com), enable anonymous access, and configure
@@ -124,7 +124,7 @@ set FABRIKAM_DEMO_URL=http://fabrikam-local
 
 By default, the scripts for deploying the Fabrikam solution install **Release**
 builds to **[http://fabrikam](http://fabrikam/)**. However, the scripts use
-environment variables to specify parameters that, well, *vary by environment* --
+environment variables to specify parameters that, well, _vary by environment_ --
 such as the default URL for the Fabrikam site. Following the
 [recommended naming conventions](/blog/jjameson/2009/06/09/environment-naming-conventions),
 Doug uses [**http://fabrikam-local**](http://fabrikam-local/) for the site on
@@ -249,7 +249,7 @@ This script performs the following:
 - Enables FBA on the Internet zone
 - Creates the root site collection (using the Publishing Portal template)
 
-Note that *enabling* FBA is performed in this step, whereas *configuring* FBA is
+Note that _enabling_ FBA is performed in this step, whereas _configuring_ FBA is
 not performend until step 12 below. In other words, at this point, all we have
 essentially done is scripted the process that would normally be completed on the
 **Edit Authentication** page in Central Administration (**Central

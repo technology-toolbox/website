@@ -74,7 +74,7 @@ title="Figure 2: Disk usage on Windows Server 2008 x64 VM (after installing SP2)
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-801x576.png)
 
 Observe that the Windows folder now consumes a little over 10 GB of storage.
-Ouch...3 GB for a service pack. That seems a little, um, *irritating* -- for
+Ouch...3 GB for a service pack. That seems a little, um, _irritating_ -- for
 VMs, anyway. Obviously for physical machines with 100+ GB hard drives, the
 additional space is trivial.
 
@@ -120,6 +120,6 @@ which roughly 10.5 GB is used by the WinSxS folder.
 
 The lesson here is that you should expect some "bloat" in the Windows folder
 over time (largely due to the WinSxS folder), and while the Windows Component
-Clean tool (COMPCLN.exe) undeniably reclaims *some* hard drive space after
+Clean tool (COMPCLN.exe) undeniably reclaims _some_ hard drive space after
 installing SP2, it's definitely not the same as starting with a "fresh" SP2
 install.

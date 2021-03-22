@@ -64,7 +64,7 @@ So, what can we do to mitigate these issues?
 
 One approach is to create multiple Visual Studio solutions with a subset of
 projects. Developers could then open the specific solution (or, possibly,
-*solutions* -- plural) containing a subset of the projects they need to work on
+_solutions_ -- plural) containing a subset of the projects they need to work on
 at any given time.
 
 I really don't like -- or obviously recommend -- this approach, because it can

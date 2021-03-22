@@ -35,7 +35,7 @@ cscript "Clear Event Logs.vbs"
 ...I would still see lots of warnings in the **Administrative Events** view from
 **TerminalServices-PnPDevices**.
 
-Consequently I switched over to using PowerShell to clear *all* the event logs
+Consequently I switched over to using PowerShell to clear _all_ the event logs
 -- not just the "classic" event logs (i.e. Application, Security, and System).
 
 I started out by simply typing the following in a PowerShell window:

@@ -123,7 +123,7 @@ The first rule shown above is equivalent to the following:
 
 Whereas the second rule is equivalent to the following:
 
-> For any request in which the host is *not* www.technologytoolbox.com, redirect
+> For any request in which the host is _not_ www.technologytoolbox.com, redirect
 > it to www.technologytoolbox.com.
 
 After learning about the new **Canonical domain name** SEO template, I was

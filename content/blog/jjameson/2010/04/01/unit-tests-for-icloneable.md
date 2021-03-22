@@ -48,7 +48,7 @@ objects are duplicated and the lower levels contain references.
 
 {{< /blockquote >}}
 
-In my mind, a cloned object should *always* be a deep copy. A shallow copy would
+In my mind, a cloned object should _always_ be a deep copy. A shallow copy would
 most likely lead to subtle bugs when the code that makes a copy doesn't
 "realize" it's a shallow copy.
 

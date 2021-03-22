@@ -27,7 +27,7 @@ rulesets (although you'll likely never need any more than those that come
 "out-of-the-box" with DiffMerge).
 
 And since the folks at SourceGear don't mind giving away DiffMerge for free,
-there's no reason *not* to use it!
+there's no reason _not_ to use it!
 
 Heck, I even configure Visual Studio to use DiffMerge as my comparison tool
 instead of the default tool that comes with Team Foundation Server (TFS).

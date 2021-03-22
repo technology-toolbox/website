@@ -92,7 +92,7 @@ slate, but instead are dealing with a substantial code base that causes the Code
 Analysis feature in Visual Studio to "light up like a Christmas tree" when you
 turn it on?
 
-Well, as with all software bugs, it all comes down to *triage*. You obviously
+Well, as with all software bugs, it all comes down to _triage_. You obviously
 cannot simply halt all feature development in order to resolve code analysis
 issues. Instead, you should go for the "low hanging fruit" (meaning the issues
 that occur frequently but can be resolved with relatively little effort or risk
@@ -118,7 +118,7 @@ Analysis warning (whenever practical) instead of simply suppressing a bunch of
 warnings.
 
 So, in conclusion, think of the Code Analysis feature in Visual Studio as a way
-of *choosing* a more strict compiler. For example, back in the days when I used
+of _choosing_ a more strict compiler. For example, back in the days when I used
 to program in C on Unix, the compiler wouldn't complain when I wrote something
 like this (even though this is obviously very wrong):
 

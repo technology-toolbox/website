@@ -36,7 +36,7 @@ and the
 We talked for a little bit about the effects of enabling disk-based caching,
 since the customer's SharePoint administrator was a little reluctant to enable
 it without some "data" to support it.
-[Note that there are *some* cons, which is something I really should have covered in a blog post by now. ~~I'll try to get to that soon, I promise.~~ Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot)
+[Note that there are _some_ cons, which is something I really should have covered in a blog post by now. ~~I'll try to get to that soon, I promise.~~ Refer to [my next post](/blog/jjameson/2010/11/16/avoid-issues-with-caching-by-using-quot-theme-versions-quot)
 for more on this.]
 
 I told the PFE to do some quick analysis on his Profiler trace to see how many
@@ -69,12 +69,12 @@ I then browsed to the home page of one of my sites (based on the out-of-the-box
 the browser, cleared the Profiler trace, and then started Internet Explorer and
 browsed to the site again.
 
-The good news is that Profiler shows a nominal *five* database roundtrips
+The good news is that Profiler shows a nominal _five_ database roundtrips
 required for SharePoint Server 2010 to render the home page for the site. Keep
 in mind that I was using a "vanilla" site with no customizations, so your actual
 number may vary, depending on your environment.
 
-While five database calls certainly *seems* reasonable for rendering a page
+While five database calls certainly _seems_ reasonable for rendering a page
 request, the bad news is that the last three database calls resemble the
 following:
 
@@ -103,7 +103,7 @@ environments). [As I noted in my previous post, you certainly don't have to
 enable BLOB caching in your development environments (I certainly don't).]
 
 However, this leads to an important question: What if my CSS files or images
-*do* change and I need to ensure that users get the updated versions? Well, as I
+_do_ change and I need to ensure that users get the updated versions? Well, as I
 hinted earlier in this post, that's a topic for a later time.
 
 ~~Don't worry, you won't have to wait very long.~~

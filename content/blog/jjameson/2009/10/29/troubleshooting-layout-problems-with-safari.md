@@ -51,7 +51,7 @@ effort).
 
 After spending about 45 minutes with the Safari developer tools, I was finally
 able to track down the `float` CSS rule that was causing my Login Form Web Part
-to be displayed *behind* the `<h1>` heading for the main content of the page in
+to be displayed _behind_ the `<h1>` heading for the main content of the page in
 Safari.
 
 A few minutes later and I had my fix checked-in to TFS. Whew!

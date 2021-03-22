@@ -24,7 +24,7 @@ replace a legacy system used to create Microsoft Word documents that are
 essentially "standard operating procedures" for their employees (or "SOPs" as we
 called them many years ago when I worked at Gambro Healthcare).
 
-While using SharePoint WCM features to create *documents* might seem a little
+While using SharePoint WCM features to create _documents_ might seem a little
 odd at first, it is important to understand that one of the key requirements for
 the solution (besides delivering it to Production in four weeks) is that some
 sections of the documents must be centrally managed (in other words, not
@@ -86,7 +86,7 @@ silently removed from the page. This makes sense when you think about it, but
 it's certainly a "gotcha" to be aware of.
 
 For example, consider the following screenshot that shows the same page as
-Figure 3. However, the following screenshot was taken *prior* to approving the
+Figure 3. However, the following screenshot was taken _prior_ to approving the
 list item shown in Figure 1 above.
 
 {{< figure

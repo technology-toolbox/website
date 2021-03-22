@@ -84,7 +84,7 @@ deployed to one or more Web applications.
 
 {{< /blockquote >}}
 
-For these two features, I *had* to specify the {{< kbd "url" >}} parameter when
+For these two features, I _had_ to specify the {{< kbd "url" >}} parameter when
 invoking stsadm.exe, because the manifest.xml file for the WSP specifies a
 `<SafeControl>` element. When deploying these two solutions, SharePoint needs to
 know which Web.config file to merge the `<SafeControl>` elements into, and
@@ -92,6 +92,6 @@ therefore the {{< kbd "url" >}} parameter must be specified.
 
 The bottom line is that if your solution specifies elements (a.k.a. "resources")
 that need to be merged into a Web.config file (i.e. "for a Web application")
-then you *must* specify the {{< kbd "url" >}} parameter. If your solution does
-not have an assembly or if your solution contains workflows, then you *cannot*
+then you _must_ specify the {{< kbd "url" >}} parameter. If your solution does
+not have an assembly or if your solution contains workflows, then you _cannot_
 specify the {{< kbd "url" >}} parameter.

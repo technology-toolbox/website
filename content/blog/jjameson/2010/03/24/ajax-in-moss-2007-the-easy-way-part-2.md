@@ -135,7 +135,7 @@ AJAX-enabled page). Mike Ammerlaan covers this in
 [his original post](http://sharepoint.microsoft.com/blogs/mike/Lists/Posts/Post.aspx?ID=3)
 that I referenced in yesterday's post.
 
-While we *could* modify BlueBand.master to declare a **ScriptManager**, an
+While we _could_ modify BlueBand.master to declare a **ScriptManager**, an
 alternative is to instead use a little bit of code in the
 **CreateChildControls** method of the Web Part to dynamically create one, if
 necessary:

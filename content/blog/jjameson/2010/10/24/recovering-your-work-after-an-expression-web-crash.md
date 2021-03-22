@@ -76,7 +76,7 @@ At first, I was horrified. Almost an hour's worth of work down the drain!
 
 In hindsight, I can't believe I didn't save my work-in-progress. [That
 "auto-save/auto-recover" functionality in the various Microsoft Office apps
-(that everyone is now accustomed to -- including me) *really* should be
+(that everyone is now accustomed to -- including me) _really_ should be
 mandatory for all "desktop" applications created by Microsoft.]
 
 After resisting the temptation to curse something I won't type here -- or, even
@@ -86,12 +86,12 @@ for a change. In the past couple of months, when Expression Web crashed, I would
 simply click the link to send my crash info to Microsoft (a.k.a. the Watson
 bucket) and restart the application. Then I would open my Web site again and
 start typing the lost work as best I could from memory. [Sending crash reports
-to Microsoft is definitely *constructive* -- in that it helps identify
+to Microsoft is definitely _constructive_ -- in that it helps identify
 problematic code -- but it certainly doesn't address your immediate desire to
 recover your lost work.]
 
 The very first thing I did was to take a screenshot of Expression Web so that at
-least I'd have *some* of the content available verbatim to type over again. Yes,
+least I'd have _some_ of the content available verbatim to type over again. Yes,
 this is admittedly very crude and almost certainly won't allow you to capture
 everything -- especially if you tend to work in "Split" view (code + WYSIWYG)
 like I do. However, it's still better than nothing.

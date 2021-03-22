@@ -33,8 +33,8 @@ disabling a bunch of "junk" on the VM assigned to me (e.g. extraneous SQL Server
 instances and SharePoint services) just so I could get my work done.
 
 On a related topic, I'm not sure whose idea it was at Microsoft to have the
-checkboxes for every service in the Farm Configuration Wizard be checked *by
-default*. If I had been a member of the SharePoint product group, I would have
+checkboxes for every service in the Farm Configuration Wizard be checked _by
+default_. If I had been a member of the SharePoint product group, I would have
 vehemently fought against that default configuration. While I agree the Farm
 Configuration Wizard is useful for some scenarios (e.g. demo environments and
 for small organizations that want to get up-and-running with minimal effort), I
@@ -66,7 +66,7 @@ content on TechNet, how do you know when it has changed (either to fix mistakes
 or when new content has been added)?
 
 While you typically want to include updates and corrections in your installation
-process, you need to make sure this is done according to *your* change
+process, you need to make sure this is done according to _your_ change
 management process -- not Microsoft's. This will help ensure that all of your
 environments are built and configured in a consistent manner.
 

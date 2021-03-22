@@ -49,7 +49,7 @@ engines, including Microsoft Office SharePoint Server (MOSS) 2007. In many
 cases, you specify the URL of the site in the search query terms. However,
 that's not always the only way to do it.
 
-In MOSS 2007, you can specify a *contextual scope URL* (a.k.a. the "u" query
+In MOSS 2007, you can specify a _contextual scope URL_ (a.k.a. the "u" query
 string parameter).
 
 For example, if you browse to the home page for KPMG Global

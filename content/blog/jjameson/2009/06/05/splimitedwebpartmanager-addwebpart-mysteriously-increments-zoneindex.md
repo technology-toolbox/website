@@ -115,7 +115,7 @@ with the `System.Web.UI.WebControls.WebParts` namespace). Also, please ignore
 the use of `ApplicationException` -- apparently there's still a little "code
 cleanup" to be done here.
 
-As I called out above, this code shows the *original* implementation of the
+As I called out above, this code shows the _original_ implementation of the
 method. It turns out there's a very obscure bug in it, that I only discovered
 within the last couple of months.
 

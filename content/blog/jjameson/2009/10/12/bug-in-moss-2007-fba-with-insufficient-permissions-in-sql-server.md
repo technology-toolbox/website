@@ -51,7 +51,7 @@ database to SharePoint groups, I just couldn't add roles. This certainly made me
 think that I had the necessary Web.config entries.
 
 I then fired up SQL Server Profiler to verify that SharePoint was at least
-*trying* to query my ASP.NET database when adding a role to a SharePoint group.
+_trying_ to query my ASP.NET database when adding a role to a SharePoint group.
 Sure enough, I saw the following statement in the profiler trace:
 
 ```SQL
@@ -102,7 +102,7 @@ In other words, when I said earlier that I could add FBA users to a SharePoint
 group when my service account was a member of the
 **aspnet\_Membership\_BasicAccess** database role, that only worked because I
 typed in the full username -- which gets validated using the
-**aspnet\_Membership\_GetUserByName** sproc (which *is* granted EXECUTE
+**aspnet\_Membership\_GetUserByName** sproc (which _is_ granted EXECUTE
 permission to the **aspnet\_Membership\_BasicAccess** database role).
 
 By the way, here's some script to automatically create a user in SQL Server for

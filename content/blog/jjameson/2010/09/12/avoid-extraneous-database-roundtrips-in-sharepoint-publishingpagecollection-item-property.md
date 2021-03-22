@@ -139,7 +139,7 @@ I found that by replacing the **PublishingPageCollection** indexer with my own
 I'll be the first to admit that this code certainly seems a little "wonky."
 After all, performing a
 [linear search](http://en.wikipedia.org/wiki/Linear_search) on a collection in
-order to find a specific item certainly *seems* less efficient. However, I'll
+order to find a specific item certainly _seems_ less efficient. However, I'll
 trust what I see with my own eyes in SQL Server Profiler over "gut feel" seven
 days a week and twice on Sunday.
 

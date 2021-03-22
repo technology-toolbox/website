@@ -20,7 +20,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/11/visual-studio-
 As promised in a
 [post](/blog/jjameson/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects)
 last week, here are the macros that I use to quickly unload or reload dozens of
-projects in a large Visual Studio solution. Hmmm, perhaps *effortlessly* is a
+projects in a large Visual Studio solution. Hmmm, perhaps _effortlessly_ is a
 better word choice -- considering I might need to wait 30 seconds or so for all
 of the projects to unload or reload.
 

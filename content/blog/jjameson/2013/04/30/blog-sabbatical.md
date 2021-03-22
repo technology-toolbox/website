@@ -23,8 +23,8 @@ my series of posts on
 
 This morning I was pleasantly surprised to see there are still some 89 people
 subscribed to my blog (according to FeedBurner). Yeah, I know, 89 is a pretty
-pathetic number -- but, hey, I suppose I should be happy to still have *that
-many* after "going dark" for over a year.
+pathetic number -- but, hey, I suppose I should be happy to still have _that
+many_ after "going dark" for over a year.
 
 Note that I didn't "check out" from a technology perspective during that time.
 Quite the contrary actually. On March 1, 2012 I began what started out as a
@@ -46,7 +46,7 @@ After the Research Portal, I switched gears to developing a synchronization
 solution for one of their internal databases (a very cool application called
 "FORCE" which is used to track formulations of various chemicals and materials).
 The synchronization piece that I developed was built on the Microsoft Sync
-Framework and had exactly *zero* lines of code running in SharePoint. In other
+Framework and had exactly _zero_ lines of code running in SharePoint. In other
 words, the "Sync Console" is a WPF application built on the Model-View-ViewModel
 pattern.
 

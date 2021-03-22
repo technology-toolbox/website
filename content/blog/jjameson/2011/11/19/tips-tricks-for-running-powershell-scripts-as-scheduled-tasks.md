@@ -20,7 +20,7 @@ In
 [my previous post](/blog/jjameson/2011/11/17/building-technologytoolbox-com-part-8),
 I described the PowerShell script used to rebuild the Development environment
 for TechnologyToolbox.com on a daily basis. This post explains the subtleties of
-running the script -- or, more generally, *any* PowerShell script -- using the
+running the script -- or, more generally, _any_ PowerShell script -- using the
 Windows Task Scheduler.
 
 ### Understanding the issues

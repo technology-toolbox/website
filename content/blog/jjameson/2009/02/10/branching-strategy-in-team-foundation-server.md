@@ -31,7 +31,7 @@ I had previously read the
 although I admit it has been a rather long time. Nevertheless, I still
 understood the commonly used **Main**, **Dev**, and **Release** branches.
 However, I discovered during the session last week that I had a fundamental
-misunderstanding about *baseless merges* in TFS. Prior to last week, I thought a
+misunderstanding about _baseless merges_ in TFS. Prior to last week, I thought a
 baseless merge occurred when the source and target do not share any ancestry in
 the branching tree. In other words, I thought that as long as the target resides
 on a branch that can be traced through some lineage to the source branch, then

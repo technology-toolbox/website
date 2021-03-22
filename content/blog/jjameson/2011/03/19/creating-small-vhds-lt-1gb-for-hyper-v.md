@@ -27,7 +27,7 @@ don't need to be very large.
 In the past, I've typically created data and log VHDs using sizes like 5 GB and
 1 GB, respectively. However, as I was thinking about this when writing my
 previous post, these admittedly arbitrary numbers seem a little ridiciulous. Am
-I ever really going to load *5 GB* of sample content into a local development
+I ever really going to load _5 GB_ of sample content into a local development
 VM? Not bloody likely.
 
 The more I think about it, a 1 GB VHD for data sounds like it should be plenty.

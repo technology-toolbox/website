@@ -487,7 +487,7 @@ blog posts managed by Subtext.
 
 In hindsight, I suppose I should have written this post first, followed by the
 other post detailing the CAPTCHA control. However, there's a reason this blog is
-called the "*Random* Musings of Jeremy Jameson" ;-)
+called the "_Random_ Musings of Jeremy Jameson" ;-)
 
 No point in repeating what I've already covered before. If you want to know the
 details of the CAPTCHA control, take a break and go read that post. Then come
@@ -507,8 +507,8 @@ bots.]
 However, at this point, there was still a minor issue with the form regarding
 the **Preferred Contact Method** and corresponding **Email Address** and
 **Telephone** fields. Up to this point, I had not made either of these fields
-mandatory, based on the reasoning that some people may want to specify *only*
-their email addresses, while others may want to specify *only* their telephone
+mandatory, based on the reasoning that some people may want to specify _only_
+their email addresses, while others may want to specify _only_ their telephone
 numbers.
 
 Yet, if you tell me that your "preferred contact method" is **Telephone**, but
@@ -605,7 +605,7 @@ expected, followed by another check-in of the updated code.
 
 ### Step 9: Use AJAX to improve the user experience
 
-Okay, *almost* done...
+Okay, _almost_ done...
 
 While all of the functionality was complete at this point, there was still a
 little room for improvement. Rather than doing a full postback whenever the

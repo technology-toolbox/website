@@ -17,11 +17,11 @@ tags: ["Core Development", "MOSS 2007", "SharePoint 2010", "Visual Studio"]
 
 Sometimes I wish I didn't develop in the world of SharePoint. Whenever I have
 the luxury of developing plain ol' ASP.NET solutions on .NET Framework 4, I am
-amazed at how *easy* things are.
+amazed at how _easy_ things are.
 
 In my experience doing .NET development with Visual Studio, things typically
-*just work*. When doing SharePoint development, on the other hand, things often
-behave, well, let's just say *erratically*.
+_just work_. When doing SharePoint development, on the other hand, things often
+behave, well, let's just say _erratically_.
 
 For example, back in the days when I worked primarily in Visual Studio 2008 and
 Microsoft Office SharePoint Server (MOSS) 2007, I discovered an

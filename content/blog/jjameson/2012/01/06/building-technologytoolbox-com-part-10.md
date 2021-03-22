@@ -96,9 +96,9 @@ viewed through the website, and **AggCount** represents "aggregated" views (e.g.
 posts viewed by RSS subscribers). Note that I chose to assign "weighting"
 factors to Web views vs. RSS views. This is similar to the formula used in the
 out-of-the-box **subtext\_GetPopularPosts** stored procedure (although, unlike
-that sproc, I chose *not* to include the number of post comments when
+that sproc, I chose _not_ to include the number of post comments when
 determining which posts are the most popular). That sproc is used to render the
-**Top Posts** section on the Subtext dashboard page, and I *believe* the formula
+**Top Posts** section on the Subtext dashboard page, and I _believe_ the formula
 is based on the following blog post:
 
 {{< reference
@@ -152,7 +152,7 @@ list (`<ol>`) as the basis for the **Most Popular Posts** section:
 > **Note**
 >
 > Based on the appearance of the list items shown in Figure 1, you might think
-> the **Most Popular Posts** section is rendered using an *uunordered* list
+> the **Most Popular Posts** section is rendered using an _uunordered_ list
 > (since there are no numbers next to the list items). However, that is simply
 > the result of a custom "sprite" image (to render the arrows) and a little CSS.
 > I'll cover that detail in a separate post. Rest assured, if you look at the

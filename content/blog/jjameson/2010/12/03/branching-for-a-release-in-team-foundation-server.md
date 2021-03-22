@@ -121,7 +121,7 @@ logical steps:
 > **Note**
 >
 > If you are using the "Advanced Branch Plan" (as I was before), then branching
-> for a release is comprised of *four* logical steps (because you would first
+> for a release is comprised of _four_ logical steps (because you would first
 > branch "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you
 > would increment the Revision portion of the assembly number on the "QFE"
 > branch instead of the "Service Pack" branch.

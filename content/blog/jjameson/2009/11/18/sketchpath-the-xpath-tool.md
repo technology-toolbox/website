@@ -22,7 +22,7 @@ I added another tool to my
 SketchPath.
 
 The [SketchPath site](http://www.sketchpath.com/) labels it as "The XPath Tool"
-but I'd say it more like "*The* XPath Tool."
+but I'd say it more like "_The_ XPath Tool."
 
 I've seen a few other tools for quickly building and testing XPath expressions
 against an XML document, but they pale in comparison to SketchPath. There are a

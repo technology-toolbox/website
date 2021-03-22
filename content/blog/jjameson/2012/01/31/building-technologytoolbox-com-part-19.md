@@ -34,7 +34,7 @@ linkText="https://github.com/Haacked/Subtext/issues/created_by/jeremy-jameson" >
 My Subtext fork does not currently include all of the changes I've made to
 Subtext for TechnologyToolbox.com, but it is close.
 
-Here are the changes that I *haven't* yet merged into my Subtext fork:
+Here are the changes that I _haven't_ yet merged into my Subtext fork:
 
 - HACK: The current implementation in the HtmlHelper.ConvertToAllowedHtml method
   results in extraneous line breaks between paragraphs in comments (e.g.

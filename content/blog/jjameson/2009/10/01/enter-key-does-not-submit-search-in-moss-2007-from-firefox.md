@@ -44,7 +44,7 @@ I spent a few hours that day investigating the bug myself as well as some
 various hacks to circumvent the issue that I found when searching the Internet.
 
 I discovered the fundamental problem is due to the way that SharePoint cancels
-the form submission -- or in the case of Firefox, does *not* cancel the form
+the form submission -- or in the case of Firefox, does _not_ cancel the form
 submission -- when the {{< kbd "Enter" >}} key is pressed in the search box.
 
 Specifically, line 608 of %ProgramFiles%\Common Files\microsoft shared\Web

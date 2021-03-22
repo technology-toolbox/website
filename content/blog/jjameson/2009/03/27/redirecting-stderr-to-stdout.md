@@ -18,8 +18,8 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-st
 ---
 
 Yesterday I replied to an email from a teammate in which I incorrectly stated
-that you can't redirect `stderr` to `stdout` in DOS -- er, I mean a *command
-window* in Microsoft Windows.
+that you can't redirect `stderr` to `stdout` in DOS -- er, I mean a _command
+window_ in Microsoft Windows.
 
 I would have sworn the last time I tried something like the following in Windows
 Server 2003 (a couple of years ago), I got an error message:
@@ -30,5 +30,5 @@ Server 2003 (a couple of years ago), I got an error message:
 
 Fortunately another teammate on the thread,
 [Prashant Nayak](http://blogs.msdn.com/pnayak), experimented with this and
-confirmed that it actually *does* work. Thanks, Prashant, for setting the record
+confirmed that it actually _does_ work. Thanks, Prashant, for setting the record
 straight!

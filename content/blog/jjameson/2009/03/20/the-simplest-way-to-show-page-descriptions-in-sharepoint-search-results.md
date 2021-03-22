@@ -178,7 +178,7 @@ the following:
 > Note that I originally specifed the following, but it looks like this was
 > deemed to be a bug of some sort. Consequently, a patch -- released sometime
 > after I originally validated the approach -- results in the first "&lt;"
-> character being escaped, thus it *does* emit the raw server tags (well,
+> character being escaped, thus it _does_ emit the raw server tags (well,
 > almost).
 
 {{< /div-block >}}

@@ -32,7 +32,7 @@ I did a quick Internet search for this error and found the following KB article:
 {{< reference title="Trust Relationship Between Workstation and Domain Fails"
 linkHref="http://support.microsoft.com/kb/162797" >}}
 
-While you *could* follow the instructions in KB 162797 to resolve this error
+While you _could_ follow the instructions in KB 162797 to resolve this error
 (removing the computer from the domain and then adding it back), there's a much
 easier way to resolve the error:
 

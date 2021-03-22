@@ -15,11 +15,11 @@ tags: ["Web Development"]
 
 A few weeks ago I was investigating an issue with the Technology Toolbox website
 and I discovered that directory browsing was enabled. This came as quite a shock
-since I was 99% certain that directory browsing is *disabled* by default in IIS.
+since I was 99% certain that directory browsing is _disabled_ by default in IIS.
 
 If I recall correctly, a big part of Windows Server 2003 (and IIS 6) was to
 change the default settings to provide a minimal attack surface. [Remember Code
-Red, Nimbda, et al.? Boy, I definitely don't miss those days *at all* --
+Red, Nimbda, et al.? Boy, I definitely don't miss those days _at all_ --
 especially since I was an employee of Microsoft throughout those times. Talk
 about developing a "tough skin" ;-)]
 

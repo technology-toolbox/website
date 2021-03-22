@@ -27,7 +27,7 @@ As I've
 memory leaks are certainly not uncommon in the world of SharePoint.
 Consequently, you may want to periodically simulate a reboot of your development
 environment in order to free up memory and get back to being productive. Trust
-me, *simulating* a reboot is much, much faster than actually rebooting.
+me, _simulating_ a reboot is much, much faster than actually rebooting.
 
 To do this, I created the following script and dropped it in my SharePoint
 [Toolbox](/blog/jjameson/2007/03/22/backedup-and-notbackedup) folder

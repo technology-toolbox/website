@@ -33,9 +33,9 @@ no other reason than to avoid having to update numerous Web Parts and Excel
 reports on upgraded TFS project sites. Obviously the TFS product group didn't
 ask for my opinion on the matter ;-)
 
-Personally, I have yet to meet anyone who can't understand that a *scenario* is
-essentially the same as a *user story*. Then again, I still like to use *interim
-milestones* (e.g. M0, M1, M2, ...) rather than *iterations* (Iteration 0,
+Personally, I have yet to meet anyone who can't understand that a _scenario_ is
+essentially the same as a _user story_. Then again, I still like to use _interim
+milestones_ (e.g. M0, M1, M2, ...) rather than _iterations_ (Iteration 0,
 Iteration 1, Iteration 2, ...), so I guess I'm just "old school" in some
 regards.]
 
@@ -74,9 +74,9 @@ ORDER BY [System.Id]
 
 See the problem with this Web Part and upgraded MSF Agile v4 TFS projects?
 
-Too bad the query specified for the Web Part doesn't explicitly *exclude*
+Too bad the query specified for the Web Part doesn't explicitly _exclude_
 "unwanted" work item types (i.e. **Issue** and **Shared Steps**) instead of
-*including* a list of specific work item types. In other words, if the Web Part
+_including_ a list of specific work item types. In other words, if the Web Part
 specified the following query, then **Scenario** work items would automatically
 be shown on upgraded project sites:
 

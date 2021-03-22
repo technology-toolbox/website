@@ -26,7 +26,7 @@ introduced my "TFS Lite" SharePoint site template that I've been using for years
 as a simple scenario/task/bug/risk/milestone tracking "application" with various
 projects and customers. In today's post, I'll discuss some of the important
 changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as
-the fact that *all* SharePoint lists now support versioning, not just the
+the fact that _all_ SharePoint lists now support versioning, not just the
 **Issues** list, as was the case in WSS v2 and SharePoint Portal Server (SPS)
 2003.
 

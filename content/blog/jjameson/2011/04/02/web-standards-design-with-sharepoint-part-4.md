@@ -132,7 +132,7 @@ Welcome control (i.e. the **Sign In** link) as well as the help button.
 In order to make the Tugboat sample in SharePoint match the HTML "prototype"
 created by the designers (i.e. Dan Cederholm and Ethan Marcotte), let's remove
 the SharePoint ribbon content when viewing the site as an anonymous user (in
-other words, when browing the *Internet* site using the fully-qualified domain
+other words, when browing the _Internet_ site using the fully-qualified domain
 name -- e.g. [http://www.tugboatcoffee.com](http://www.tugboatcoffee.com)). Note
 that we'll keep the ribbon for authenticated users (e.g. content authors and
 administrators accessing the site using the intranet URL -- e.g.

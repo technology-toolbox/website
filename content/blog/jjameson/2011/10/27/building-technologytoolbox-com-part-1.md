@@ -85,7 +85,7 @@ service layer "above" the provider.
 It turns out that BlogEngine.NET caches all of your blog posts in memory --
 regardless of whether you choose to store them in XML files or in a SQL Server
 database. And it's not just the post summary information that is cached in
-memory. Rather it's the *entire content of each and every post*.
+memory. Rather it's the _entire content of each and every post_.
 
 Specifically, in BlogEngine.NET all of the post content is stored in a static
 list -- which makes it even worse than if this same approach were implemented
@@ -105,7 +105,7 @@ looks like. In other words, are you running BlogEngine.NET on a dedicated server
 with multiple gigabytes of RAM? If that's the case, then the approach taken by
 the BlogEngine.NET development team isn't really an "architectural flaw" at all
 -- rather they are simply taking advantage of the "memory is cheap these days"
-mantra and it will take *a lot* of blog posts to consume even 1GB of memory.
+mantra and it will take _a lot_ of blog posts to consume even 1GB of memory.
 
 However what if, like me, you are running in a shared hosting environment? In
 that case, the "memory is cheap" excuse no longer holds true, because the
@@ -168,7 +168,7 @@ used SQL Server Profiler to inspect the database calls for one of my sample blog
 pages (as described in
 [one of my previous posts](/blog/jjameson/2010/09/03/analyzing-database-roundtrips-with-sql-server-profiler)),
 I observed over 40 separate round-trips to the database just to render a
-*single* page. [Note that I am going off memory here from a couple of months
+_single_ page. [Note that I am going off memory here from a couple of months
 ago, so I could be wrong about the number -- but I seem to recall something in
 the neighborhood of 42-44 round-trips to SQL Server.]
 
@@ -260,7 +260,7 @@ perspective (and to be honest, you can tell that [Phil](http://haacked.com/)
 doesn't place a great deal of value on the look-and-feel of the blog admin
 pages). Nevertheless, the core functionality appears to be very solid.
 
-Are there bugs in Subtext? Sure...there are bugs in *every* piece of software
+Are there bugs in Subtext? Sure...there are bugs in _every_ piece of software
 out there.
 
 Did I encounter any issues with Subtext while implementing it on

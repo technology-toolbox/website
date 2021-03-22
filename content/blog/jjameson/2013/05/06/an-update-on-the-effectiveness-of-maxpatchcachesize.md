@@ -40,7 +40,7 @@ gigabytes -- or perhaps even a terabyte or two -- in size.
 However, the same number is a different matter altogether on VHDs that you are
 trying to keep as small as possible. For example, maybe like me, you have a
 number of VMs running on SSDs. In that case, multiplying the "wasted space" in
-the Windows Installer folder by the number of VMs is, well, *aggravating*.
+the Windows Installer folder by the number of VMs is, well, _aggravating_.
 
 Also note from the screenshot above there's a considerable amount of disk space
 consumed by the following folders:
@@ -64,7 +64,7 @@ Unfortunately, it seems like this is just the way it's going to be from now on
 linkHref="http://blogs.msdn.com/b/heaths/archive/2012/07/26/how-visual-studio-2012-avoids-prompts-for-source.aspx" >}}
 
 Heath, if you're reading this, then sorry, but I think Microsoft's decision to
-force this bloat on us is, um, stupid. Okay, maybe *shortsighted* is a softer
+force this bloat on us is, um, stupid. Okay, maybe _shortsighted_ is a softer
 way to put it. I don't deny the numbers you reference in your blog post; I just
 wish you provided a better response to the SSD scenario (especially in light of
 the fact that many folks rely heavily on virtualization these days).

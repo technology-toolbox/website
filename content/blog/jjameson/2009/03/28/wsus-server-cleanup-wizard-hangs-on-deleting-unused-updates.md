@@ -23,7 +23,7 @@ Server Update Services (WSUS). Evidently I intended to blog about the issue, but
 apparently this task kept getting pushed to the back burner. Before moving on to
 more fun things today, I thought I should get this off my to-do list.
 
-Back in December, I noticed that my local WSUS server showed that I had *24,890*
+Back in December, I noticed that my local WSUS server showed that I had _24,890_
 updates downloaded and available for install. I remember thinking something to
 the effect of: "Wow, that's a lot of updates!"
 

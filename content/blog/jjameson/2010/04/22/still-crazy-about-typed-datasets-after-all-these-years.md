@@ -67,7 +67,7 @@ columns?
 - Each scorecard item may have one or more instances of a KPI status (i.e. the
   measure of the KPI for a particular period). The status -- i.e. "Exceeds",
   "Meets", or "Does Not Meet" (a.k.a. "Green", "Yellow", or "Red") is determined
-  by a corresponding set of *thresholds*.
+  by a corresponding set of _thresholds_.
 
 Why about the primary keys on the various tables?
 

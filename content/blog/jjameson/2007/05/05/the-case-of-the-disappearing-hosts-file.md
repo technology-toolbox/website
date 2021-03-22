@@ -19,7 +19,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-th
 
 Hmmm...how should I phrase this?
 
-It has been a very *educational* couple of weeks on my current SharePoint
+It has been a very _educational_ couple of weeks on my current SharePoint
 project.
 
 During the rebuild of our Test environment, the SharePoint Products and
@@ -108,7 +108,7 @@ that this is a bug. Here's why:
 I never recommend to customers having your service accounts be members of the
 local Administrators group. Quite honestly, this is simply too dangerous and
 presents a whole slew of risks that are beyond the scope of this posting. Since
-the service account that I am using is *not* a member of the local
+the service account that I am using is _not_ a member of the local
 Administrators group, when the timer job deletes the file, it does not have
 permission to recreate the file. Recall that earlier I mentioned that step 4 of
 the Configuration Wizard only grants permissions on the hosts file itself to the

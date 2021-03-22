@@ -300,7 +300,7 @@ If you haven't yet discovered errors in the event log after creating Publishing
 sites in SharePoint Server 2010, then you probably don't even bother to look at
 your event logs. In that case, shame on you ;-)
 
-If you *have* seen the errors I'm referring to, then you're probably familiar
+If you _have_ seen the errors I'm referring to, then you're probably familiar
 with the following TechNet article:
 
 {{< reference title="Configure object cache user accounts"
@@ -473,7 +473,7 @@ The Fabrikam solution includes a custom **SPLogger** class for writing trace
 messages and events. In order to write to the Windows event log with a custom
 source (e.g. "Fabrikam Demo Site"), you first need to create the event log
 source (assuming your solution is running with a least-privileged service
-account, and I certainly *hope* it is). Otherwise, a nasty error will occur when
+account, and I certainly _hope_ it is). Otherwise, a nasty error will occur when
 attempting to log an event. [If you solution is running with administrative
 privileges, then the custom event log source will be dynamically created as
 necessary -- but please don't do this. It's just plain wrong.]
@@ -530,8 +530,8 @@ have to update the script name in the Installation Guide for the Fabrikam site).
 
 At this point, we have a "vanilla" Web site created and configured in SharePoint
 Server 2010. Now we need to run the "ADA" portion of the "DR.DADA" process in
-order to *Add* our custom solution (Fabrikam.Demo.Web.wsp), *Deploy* the
-solution to the Fabrikam Web application, and, finally, *Activate* our features.
+order to _Add_ our custom solution (Fabrikam.Demo.Web.wsp), _Deploy_ the
+solution to the Fabrikam Web application, and, finally, _Activate_ our features.
 
 ### Add Solutions.ps1
 
@@ -547,7 +547,7 @@ deployment operations (for example, when you invoke the `Add-SPSolution`
 cmdlet). I discovered this issue the "hard way" -- in other words, by attaching
 WinDbg to my PowerShell command prompt.
 
-When I searched the Internet for ***PowerShell reload assembly*** (looking for
+When I searched the Internet for _**PowerShell reload assembly**_ (looking for
 an easy way to unload a specific assembly), I discovered the following blog
 post:
 
@@ -659,8 +659,8 @@ Files\Microsoft Shared\Web Server Extensions\14).
 Note that in a SharePoint farm comprised of multiple servers, this deployment
 must be done on each server in the farm. No, you don't execute the PowerShell
 script on each SharePoint server in the farm. Rather, when you run the script on
-*one* of the servers in the farm, SharePoint automatically creates a timer job
-on *each* server in the farm to deploy the solution on that server.
+_one_ of the servers in the farm, SharePoint automatically creates a timer job
+on _each_ server in the farm to deploy the solution on that server.
 
 ```PowerShell
 param(
@@ -776,7 +776,7 @@ instead.
 
 Here's a script that allows you to wait for either specific solution deployment
 jobs to finish (if one or more solution names are specified as parameters to the
-script) or to wait for *all* solution deployment jobs to finish (if no
+script) or to wait for _all_ solution deployment jobs to finish (if no
 parameters are specified when running the script).
 
 ```PowerShell
@@ -1493,7 +1493,7 @@ function Main()
 Main
 ```
 
-In fact, on several occasions I've found it to be *very* helpful to rollback my
+In fact, on several occasions I've found it to be _very_ helpful to rollback my
 SharePoint 2010 Hyper-V VM to a snapshot that I took shortly after installing
 SharePoint Server 2010 and creating the farm (but before creating any Web
 applications or configuring any service applications). Whenever I do that, I

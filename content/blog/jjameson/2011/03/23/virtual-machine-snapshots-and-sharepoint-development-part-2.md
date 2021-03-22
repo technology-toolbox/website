@@ -93,7 +93,7 @@ is also a nice bonus :-)
 
 The second item I noted before regarding making snapshots feasible is to ensure
 that you run a separate domain controller (or preferably multiple domain
-controllers). Sure, you *can* choose to run Active Directory locally on the same
+controllers). Sure, you _can_ choose to run Active Directory locally on the same
 server as SharePoint and still use snapshots -- provided the VM is completely
 isolated (meaning no other machines are joined to the domain). However, as soon
 as you forego the complete isolation of your domain controller, you also forego
@@ -118,7 +118,7 @@ SharePoint servers, etc.
 If you try to use snapshots in those scenarios, you are simply asking for
 trouble -- and I'm fairly certain you are officially "unsupported" if you do.
 The reason is due to the fact that unless you can simultaneously snapshot all of
-the servers in the farm -- and subsequently ensure that you *always* revert all
+the servers in the farm -- and subsequently ensure that you _always_ revert all
 servers in the farm to the same point in time -- then you'll likely end up
 "corrupting" your farm due to the fact that timer jobs are firing off constantly
 in SharePoint (I'm exaggerating this a little, but not much) and you need to be

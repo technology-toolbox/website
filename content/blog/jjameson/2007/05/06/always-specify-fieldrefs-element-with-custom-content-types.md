@@ -24,7 +24,7 @@ page, in the SharePoint log, or in the Windows event logs. I even attached the
 debugger and set it to break on all exceptions, but had no luck there either.
 
 The problem was that the document properties form no longer rendered for our
-custom content types, or rather that it would only *partially* render. The
+custom content types, or rather that it would only _partially_ render. The
 toolbar was there, as was the footer displaying the content type, version, date
 created, and date modified -- just no fields whatsoever.
 

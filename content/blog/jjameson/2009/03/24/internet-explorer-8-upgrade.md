@@ -27,16 +27,16 @@ some more pressing matter that required my attention. As I'm fond of saying,
 there are typically three levels of issues that get piled on my plate: hot,
 hotter, and thermonuclear!
 
-This past weekend, I upgraded 3 of my 10 *active* "machines" to IE8: my Vista
+This past weekend, I upgraded 3 of my 10 _active_ "machines" to IE8: my Vista
 x64 desktop, my Windows Server 2008 x64 laptop, and a Windows Server 2008 x86 VM
 that I am currently using as my SharePoint development environment.
-[I say *active*, because this is the number of physical and virtual machines that I keep running 24x7 in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)
+[I say _active_, because this is the number of physical and virtual machines that I keep running 24x7 in the ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter)
 -- a.k.a. my home office. No, I still haven't gotten around to running that CAT5
 cable from the second floor down to the basement so I can get these portable
-space heaters -- er, I mean *servers* -- out of the way.]
+space heaters -- er, I mean _servers_ -- out of the way.]
 
 I'll wait for IE8 to be available via Windows Update before upgrading the
-remaining active machines -- or the countless *inactive* machines in my
+remaining active machines -- or the countless _inactive_ machines in my
 inventory (i.e. VMs that haven't been fired up in months or more, but I still
 keep around for demos and reference material) if and when these are ever fired
 up again.

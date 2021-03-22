@@ -42,7 +42,7 @@ the errors are duplicates of the same issue (e.g. the IdenticonHandler.ashx
 error that I describe below) and many of them are caused by people trying to
 hack the site.
 
-I should also mention that *some* - but not *all* -- of the errors reported by
+I should also mention that _some_ - but not _all_ -- of the errors reported by
 ELMAH for the blog pages appear in the Subtext error log as well (i.e. Subtext
 admin dashboard → **Stats** → **Error Log**). Honestly, I've never bothered to
 investigate why some of the errors reported by ELMAH are not detected by
@@ -555,7 +555,7 @@ was initially hesitant about having both "tags" and "categories" for blog posts
 (since [my old MSDN blog](http://blogs.msdn.com/b/jjameson) only used tags).
 Therefore I started out only using categories (in other words, when migrating
 posts from my MSDN blog, each tag in Telligent was converted to a category in
-Subtext). Shortly thereafter, I decided it would be better to use *both*
+Subtext). Shortly thereafter, I decided it would be better to use _both_
 categories and tags in Subtext. Consequently I ended up deleting the categories
 I had previously created and starting over with a much smaller number. [Tags
 from Telligent were essentially migrated one-for-one to tags in Subtext. The
@@ -693,7 +693,7 @@ automated script, because I see a bunch of requests for URLs like
 The other instances occurred either in
 `Subtext.Framework.Web.Handlers.SubtextPage.get_Blog()` or
 `Subtext.Framework.Web.Handlers.SubtextPage.get_Repository()` -- and all but one
-do *not* specify an HTTP referrer. Again, this seems to point to hackers trying
+do _not_ specify an HTTP referrer. Again, this seems to point to hackers trying
 to find a vulnerability in the site.
 
 **Recommendation:** Keep an eye on this one and perhaps do some more research on
@@ -729,7 +729,7 @@ actively trying to service a request:
 > Pipes Provider, error: 40 - Could not open a connection to SQL Server)
 
 Well, I'm not exactly paying for five 9's reliability. One of the reasons why I
-picked WinHost is because they are *very* cost effective. On the other hand, the
+picked WinHost is because they are _very_ cost effective. On the other hand, the
 Technology Toolbox site is definitely a critical component for the company, so
 I'd better watch for similar outages in the future.
 
@@ -752,7 +752,7 @@ update on a number of blog posts (using a little utility that I wrote) and the
 tool ended up creating a lock on the **subtext\_Content** table. Ugh.
 
 See, this is exactly why Microsoft doesn't support directly querying SharePoint
-databases. You have to be *very* careful when accessing Production databases
+databases. You have to be _very_ careful when accessing Production databases
 (whether they are supporting SharePoint, Subtext, or some other system
 entirely). Otherwise you could inadvertently cause problems (e.g. due to
 locking).

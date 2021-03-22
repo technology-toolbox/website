@@ -59,7 +59,7 @@ Sometimes I dream about how nice it would be to just build something with
 nothing more than what comes out-of-the-box with Visual Studio and the .NET
 Framework. Things like ASP.NET MVC just seem so developer-friendly. Of course,
 then I start thinking about all the really cool things you can do with
-SharePoint -- even if it does make life more, um, *challenging* in some regards.
+SharePoint -- even if it does make life more, um, _challenging_ in some regards.
 
 The way I approach TDD is to do it where it makes sense, meaning that it adds
 more value over the long run than the effort you put into it. Many people might

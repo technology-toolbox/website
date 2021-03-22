@@ -71,7 +71,7 @@ Login failed for user 'TECHTOOLBOX\svc-spserviceapp-tst'.
 
 Note that in my environment, I use different service accounts for the TFS Web
 application and SharePoint service applications (e.g. Excel Services and the
-Secure Store Service). I *believe* Jon configured his environment such that the
+Secure Store Service). I _believe_ Jon configured his environment such that the
 Web application and SharePoint service applications use the same service
 account.
 

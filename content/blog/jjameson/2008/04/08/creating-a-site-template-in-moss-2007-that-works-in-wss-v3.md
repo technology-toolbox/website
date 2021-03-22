@@ -30,7 +30,7 @@ The template you have chosen is invalid or cannot be found.
 Ouch.
 
 Okay, time to fess up. You see, I didn't really create the template using WSS
-v3. Rather, I created it on one of my MOSS 2007 VMs and simply *assumed* it
+v3. Rather, I created it on one of my MOSS 2007 VMs and simply _assumed_ it
 would work with WSS v3. What is it they say about assumptions again? Never mind,
 don't answer that.
 

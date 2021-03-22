@@ -20,7 +20,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-tho
 I've been using the
 [new Scrum template](http://visualstudiogallery.msdn.microsoft.com/en-us/59ac03e3-df99-4776-be39-1917cbfc5d8e)
 for Team Foundation Server 2010 for a little over three weeks now -- not on a
-*real* project, admittedly, but rather on a sample project that I've been
+_real_ project, admittedly, but rather on a sample project that I've been
 working on. [On the customer project that I've been working on for over a year
 now, we're "stuck" on TFS 2008 until the extranet TFS instance hosted by
 Microsoft is upgraded to the new version. Of course, even after TFS is upgraded,

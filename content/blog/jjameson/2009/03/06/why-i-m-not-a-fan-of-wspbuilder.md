@@ -29,7 +29,7 @@ One such issue that quickly came to light on this most recent venture is using
 [WspBuilder](http://www.codeplex.com/wspbuilder) to create the WSP files for
 deploying custom features to a SharePoint farm. The issue isn't with the actual
 WSPs created by WspBuilder, but how WspBuilder works --or, rather how it
-*doesn't* work. Specifically, I am referring to the lack of true dependency
+_doesn't_ work. Specifically, I am referring to the lack of true dependency
 checking (i.e. determining whether any of the files packaged in the WSP have
 changed since the last build) and consequently the impact this can have on build
 times and developer productivity.
@@ -55,14 +55,14 @@ Using a simple [stopwatch utility](http://www.online-stopwatch.com), I just
 timed the build for the new solution after adding a comment to a unit test. I
 chose this scenario because there are no dependencies on the unit test project
 (and thus you would expect the incremental build time to be very short). On the
-contrary, the build took *1 minute 52 seconds* from the time I pressed {{< kbd
+contrary, the build took _1 minute 52 seconds_ from the time I pressed {{< kbd
 "CTRL+SHIFT+B" >}} to the time I received the {{< sample-output
 "\"Build: 30 succeeded or up-to-date, 0 failed, 0 skipped\"" >}} message in the
 **Output** window.
 
 For comparison purposes, I fired up the solution from my previous project and
 performed a similar test (i.e. timing the build after adding a comment to a unit
-test). For this solution, the build took a mere *28 seconds* from the time I
+test). For this solution, the build took a mere _28 seconds_ from the time I
 pressed {{< kbd "CTRL+SHIFT+B" >}} to the time I received the {{< sample-output
 "\"Build: 51 succeeded, 0 failed, 1 up-to-date, 0 skipped\"" >}} message in the
 **Output** window. While I'd certainly like it if this were even less than 28
@@ -117,7 +117,7 @@ WspBuilder should be abandoned around the world. Honestly, prior to joining this
 team, I had only read about WspBuilder -- I'd never actually used it before. I
 love the fact that it takes the grunt work out of creating and maintaining a
 Diamond Definition File (DDF) to define the structure of your CAB file, er, I
-mean *WSP*.
+mean _WSP_.
 
 However, offloading this effort from the development team comes at a very steep
 price for larger solutions (i.e. lengthy build times). In speaking with other

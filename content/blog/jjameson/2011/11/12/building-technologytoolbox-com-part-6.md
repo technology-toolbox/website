@@ -824,7 +824,7 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 > writing migration tools like this -- as well as similar kinds of "throw away"
 > code.
 >
-> Keep in mind the ultimate goal of this utility is to run it *one time* (after
+> Keep in mind the ultimate goal of this utility is to run it _one time_ (after
 > all of the development and testing effort is completed, of course). In other
 > words, when I'm writing utilities like this, I try not to focus on writing
 > highly maintainable code. Hence you don't see any significant error handling,
@@ -832,7 +832,7 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 >
 > The goal is to complete the code as quickly as possible -- ensuring that it is
 > "good enough" to do its job but doesn't necessarily demonstrate best coding
-> practices. For example, I don't bother enabling *all* code analysis rules on
+> practices. For example, I don't bother enabling _all_ code analysis rules on
 > "throw away" code like this (which is typically one of the first things I do
 > after creating a new project in Visual Studio). Mind you, I definitely add
 > these kinds of utilities to source control, but that's primarily as a benefit
@@ -848,7 +848,7 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 
 #### Migrating tags and categories
 
-I've mentioned before how Subtext supports both *tags* and *categories* for blog
+I've mentioned before how Subtext supports both _tags_ and _categories_ for blog
 posts. At first, I didn't really see the need for having two separate taxonomies
 (especially since my MSDN blog only supported tags), but the more I thought
 about it, the more I started to like the distinction.

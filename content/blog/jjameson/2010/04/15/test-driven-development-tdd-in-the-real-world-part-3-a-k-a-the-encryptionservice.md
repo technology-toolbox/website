@@ -135,8 +135,8 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 As you can see, my definition of encrypting a simple string "successfully" is
 very basic. Actually, you might call it laughable, since all I'm doing is
 ensuring we don't get back a null or empty string, as well as verifying the
-encrypted text (i.e. *ciphertext*) is not the same as the original text (i.e.
-*plaintext*). However, I'm assuming that the unit test for the **Decrypt**
+encrypted text (i.e. _ciphertext_) is not the same as the original text (i.e.
+_plaintext_). However, I'm assuming that the unit test for the **Decrypt**
 method will actually verify the **EncryptionService** is doing what we need it
 to do. One could argue that the **Encrypt001** unit test doesn't really add any
 value and therefore could be eliminated, but let's keep it for the sake of
@@ -718,7 +718,7 @@ make the necessary changes):
 
 What's interesting at this point is that while the
 **EncryptWithInvalidParameter002** test fails, the failure isn't due to an
-unexpected exception message but rather because an exception was *not* thrown.
+unexpected exception message but rather because an exception was _not_ thrown.
 This highlights an interesting scenario -- and perhaps prompts a question that
 you might never have asked yourself if you weren't using TDD: Should we be able
 to encrypt an empty string?
@@ -883,7 +883,7 @@ no, then we'll need to update the old unit tests to pass in `null` for the
 >
 > Whenever you are changing existing unit tests (for the purposes of refactoring
 > or other reasons), be careful not to mistakenly change the intent of the unit
-> test -- unless, of course, the unit test fails because of an *expected* change
+> test -- unless, of course, the unit test fails because of an _expected_ change
 > in behavior of the underlying code.
 
 {{< /div-block >}}
