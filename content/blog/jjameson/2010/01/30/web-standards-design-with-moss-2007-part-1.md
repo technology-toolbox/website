@@ -519,7 +519,7 @@ While most of the CSS rules in Fabrikam-Main.css wouldn't be of interest to most
 people (since they are specific to one particular Web site), it is worth
 highlighting a few of the rules:
 
-```Text
+```CSS
 /* =core (SharePoint core.css overrides)
 ------------------------------------------------------------------------------*/
 .ms-pagebreadcrumb {
