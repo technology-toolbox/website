@@ -787,14 +787,14 @@ Looks like more pathetic hacking attempts.
 **Recommendation:** Consider configuring a filter in ELMAH to weed out the
 hacking "noise."
 
-{{< div-block "note update" >}}
+{{< div-block-start "note update" >}}
 
 > **Update (2012-02-28)**
 >
 > Refer to the following post for more information on configuring ELMAH filters:
 > {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 ### System.Web.HttpException: A public action method 'RecordAggregatorView' could not be found...
 

@@ -116,7 +116,7 @@ function RemoveWebsite(
 }
 ```
 
-{{< div-block "note" >}}
+{{< div-block-start "note" >}}
 
 > **Note**
 >
@@ -125,7 +125,7 @@ function RemoveWebsite(
 >
 > {{< reference title="Get-Website always returns full list of web sites" linkHref="https://connect.microsoft.com/PowerShell/feedback/details/597787/get-website-always-returns-full-list-of-web-sites" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 If you are wondering why I specify "``r`n`" at the end of each `Write-Host`
 command, I'll explain that in

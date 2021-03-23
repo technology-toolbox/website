@@ -590,7 +590,7 @@ both Forms-Based Authentication and Windows authentication.
 
 1. Add the Fabrikam Web site to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
    
-   {{< div-block "note" >}}
+   {{< div-block-start "note" >}}
    
    > **Note**
    > 
@@ -598,7 +598,7 @@ both Forms-Based Authentication and Windows authentication.
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="http://blogs.msdn.com/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
    
-   {{< /div-block >}}
+   {{< div-block-end >}}
 
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.

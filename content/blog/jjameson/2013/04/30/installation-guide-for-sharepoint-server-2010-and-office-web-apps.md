@@ -2183,7 +2183,7 @@ To login to the website using Windows authentication:
 
 1. Add the Fabrikam Extranet website to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
    
-   {{< div-block "note" >}}
+   {{< div-block-start "note" >}}
    
    > **Note**
    > 
@@ -2191,7 +2191,7 @@ To login to the website using Windows authentication:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
    
-   {{< /div-block >}}
+   {{< div-block-end >}}
 
 2. Browse to the home page page the Fabrikam Extranet website
    ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click

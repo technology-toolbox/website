@@ -250,7 +250,7 @@ are written to the log file as well as the normal output. This is a trick I
 covered in
 [a previous blog post](/blog/jjameson/2009/03/27/redirecting-stderr-to-stdout).
 
-{{< div-block "note important" >}}
+{{< div-block-start "note important" >}}
 
 > **Important**
 >
@@ -264,7 +264,7 @@ covered in
 >
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 The properties for the corresponding scheduled task are as follows:
 

@@ -69,7 +69,7 @@ Note that this implementation has some specifics to Team Foundation Server, but
 I imagine you could tweak this fairly easily if you are using some other
 configuration management system and build process.
 
-{{< div-block "note update" >}}
+{{< div-block-start "note update" >}}
 
 > **Update (2010-11-29)**
 >
@@ -78,7 +78,7 @@ configuration management system and build process.
 >
 > {{< reference title="Incrementing the Assembly Version for Each Build in TFS 2010" linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" linkText="http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 Unfortunately, there's no out-of-the-box task in the current version of MSBuild
 that increments an assembly version. However, you can write your own with just a

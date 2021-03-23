@@ -721,7 +721,7 @@ To reset the home page for a TFS project site:
    **Reset all pages in this site to site definition version**, and then click
    **Reset**.
 
-{{< div-block "note" >}}
+{{< div-block-start "note" >}}
 
 > **Tip**
 >
@@ -730,7 +730,7 @@ To reset the home page for a TFS project site:
 >
 > {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 To remove obolete links from the top link bar of a TFS project site:
 
@@ -890,7 +890,7 @@ or Visual Studio 2010. If you want to be able to create new team projects (or
 browse existing projects) directly from the TFS application server, install Team
 Explorer 2010.
 
-{{< div-block "note important" >}}
+{{< div-block-start "note important" >}}
 
 > **Important**
 >
@@ -903,7 +903,7 @@ Explorer 2010.
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 ### Connect to TFS
 

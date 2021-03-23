@@ -353,7 +353,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 }
 ```
 
-{{< div-block "note update" >}}
+{{< div-block-start "note update" >}}
 
 > **Update 2010-03-20**
 >
@@ -361,7 +361,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 >
 > {{< reference title="Logging Exceptions in .NET Applications" linkHref="/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" linkText="http://blogs.msdn.com/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 Note that the Logger.cs file actually includes `#define TRACE` at the top of the
 file. This is because I originally wrote this class with an old version of

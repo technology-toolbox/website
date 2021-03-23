@@ -16,7 +16,7 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx"
 ---
 
-{{< div-block "note update" >}}
+{{< div-block-start "note update" >}}
 
 > **Update 2009-11-18**
 >
@@ -26,7 +26,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthr
 >
 > {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 In a previous post, I introduced
 [the "DR.DADA" approach to SharePoint development](/blog/jjameson/2009/03/31/introducing-the-dr-dada-approach-to-sharepoint-development).

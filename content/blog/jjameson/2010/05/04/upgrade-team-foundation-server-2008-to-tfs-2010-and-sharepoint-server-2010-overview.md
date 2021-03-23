@@ -155,7 +155,7 @@ caption="Team Foundation Server Upgrade" >}}
 Here's something I didn't see mentioned anywhere in the TFS installation
 guide...
 
-{{< div-block "note important" >}}
+{{< div-block-start "note important" >}}
 
 > **Important**
 >
@@ -168,7 +168,7 @@ guide...
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
 
-{{< /div-block >}}
+{{< div-block-end >}}
 
 ### Upgrading Team Foundation Build
 
