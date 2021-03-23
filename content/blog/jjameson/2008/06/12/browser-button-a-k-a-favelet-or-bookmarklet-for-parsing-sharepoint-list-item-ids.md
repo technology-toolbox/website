@@ -28,8 +28,11 @@ properties URL. For example, if you are viewing the properties of a document
 ([http://server/Library/Forms/DispForm.aspx?ID=1956](http://server/Library/Forms/DispForm.aspx?ID=1956))
 then you can inspect the URL and determine that **1956** is the ID. Okay, I'll
 admit, this gets a little cumbersome depending on the URL. For example, it
-certainly isn't as easy to extract ID **2531** from
-[http://server/sites/foobar/Lists/Work%20Items/EditForm.aspx?ID=2531&Source=http%3A%2F%2Fserver%2Fsites%2Ffoobar%2FLists%2FWork%2520Items%2FOpenItems%2Easpx](http://server/sites/foobar/Lists/Work%20Items/EditForm.aspx?ID=2531&Source=http%3A%2F%2Fserver%2Fsites%2Ffoobar%2FLists%2FWork%2520Items%2FOpenItems%2Easpx).
+certainly isn't as easy to extract ID **2531** from:
+
+```
+http://server/sites/foobar/Lists/Work%20Items/EditForm.aspx?ID=2531&Source=http%3A%2F%2Fserver%2Fsites%2Ffoobar%2FLists%2FWork%2520Items%2FOpenItems%2Easpx
+```
 
 My alternate suggestion -- if the former was deemed unacceptable -- was to
 display the ID on the item properties page by modifying the item "View"
@@ -59,7 +62,7 @@ With dreams of a creating a "killer utility for SharePoint", I set out to write
 a little code to do the work of parsing the ID from various forms of the URL.
 Here is what I came up with:
 
-> [Parse List Item ID](javascript:s=location.href;pos1=s.indexOf%28'DispForm.aspx?ID=',%200%29;if%28pos1==-1%29{window.alert%28"Unable%20to%20determine%20List%20Item%20ID%20from%20URL."%29;}else{pos1+='DispForm.aspx?ID='.length;pos2=s.indexOf%28'&',%20pos1%29;if%28pos2==-1%29{pos2=s.length;}listItemIntId=s.substr%28pos1,%20pos2-pos1%29;window.alert%28'List%20Item%20ID:%20'%20+%20listItemIntId%29;})
+> [Parse List Item ID](javascript:s=location.href;pos1=s.indexOf%28'DispForm.aspx?ID=',%200%29;if%28pos1==-1%29{window.alert%28'Unable%20to%20determine%20List%20Item%20ID%20from%20URL.'%29;}else{pos1+='DispForm.aspx?ID='.length;pos2=s.indexOf%28'&',%20pos1%29;if%28pos2==-1%29{pos2=s.length;}listItemIntId=s.substr%28pos1,%20pos2-pos1%29;window.alert%28'List%20Item%20ID:%20'%20+%20listItemIntId%29;})
 
 With all due credit to the MSDN team, here is some more detail that I snarfed
 from their [FAQ page](http://social.msdn.microsoft.com/bookmarks/en-US/FAQ)

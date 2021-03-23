@@ -143,7 +143,9 @@ search results" from being added by the Subtext master page -- or try upgrading
 to a newer version of Lucene.Net to see if it still spews errors when the HTTP
 referrer specifies something like:
 
-> [http://webcache.googleusercontent.com/search?q=cache:oYV0jIrX76cJ:www.technologytoolbox.com/blog/jjameson/archive/2011/05.aspx+%22visual+studio%22+%22new+XsltListViewWebPart%22&cd=33&hl=ru&ct=clnk&gl=lv](http://webcache.googleusercontent.com/search?q=cache:oYV0jIrX76cJ:www.technologytoolbox.com/blog/jjameson/archive/2011/05.aspx+%22visual+studio%22+%22new+XsltListViewWebPart%22&cd=33&hl=ru&ct=clnk&gl=lv)
+```
+http://webcache.googleusercontent.com/search?q=cache:oYV0jIrX76cJ:www.technologytoolbox.com/blog/jjameson/archive/2011/05.aspx+%22visual+studio%22+%22new+XsltListViewWebPart%22&cd=33&hl=ru&ct=clnk&gl=lv
+```
 
 ### System.Security.Cryptography.CryptographicException: Padding is invalid and cannot be removed.
 
