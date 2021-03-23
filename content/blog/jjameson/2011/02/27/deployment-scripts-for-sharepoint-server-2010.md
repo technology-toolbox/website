@@ -1332,7 +1332,7 @@ applies to SharePoint 2010):
 
 {{< reference title="SharePoint Features Activated by Default"
 linkHref="/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default"
-linkText="http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default" >}}
 
 Consequently, I used the **Redeploy Features.ps1** script to ensure the
 WebAppConfiguration feature is activated (thus ensuring my custom Sign In page

@@ -601,7 +601,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > Part 2 in this series in _finally_ available ;-)\
 > \
 > **Web Standards Design with SharePoint, Part 2**\
-> [http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
+> [https://www.technologytoolbox.com/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2](/blog/jjameson/2010/12/02/web-standards-design-with-sharepoint-part-2)
 
 {{< /div-block >}}
 
@@ -613,6 +613,6 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > page layouts based on the 960 Grid System.\
 > \
 > **Web Standards Design with SharePoint, Part 3**\
-> [http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
+> [https://www.technologytoolbox.com/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 
 {{< /div-block >}}

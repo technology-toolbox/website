@@ -24,7 +24,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthr
 > Team Foundation Build. Refer to the following post for the updated DDF file
 > and corresponding modifications to the project file:
 >
-> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="http://blogs.msdn.com/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx" >}}
+> {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" >}}
 
 {{< div-block-end >}}
 
