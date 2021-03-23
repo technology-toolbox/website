@@ -32,19 +32,20 @@ management features and content approval workflows).
 Here is the excerpt from the email I sent back in December to one of our
 internal DLs:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Even if you enable the Document Center template on a "Publishing with Workflow"
-site, it still does not show up when you attempt to create a subsite.
+> Even if you enable the Document Center template on a "Publishing with
+> Workflow" site, it still does not show up when you attempt to create a
+> subsite.
+>
+> What is really strange is that I when also enable the Records Center template,
+> then I have the option to create a Records Center when creating a subsite. So
+> there either must be some restrictions on where a Document Center can be used
+> or else this is a bug -- and a nasty bug at that, considering a single
+> document repository is one of the core features that my customer needs for
+> their externally facing (i.e. Publishing with Workflow) site.
 
-What is really strange is that I when also enable the Records Center template,
-then I have the option to create a Records Center when creating a subsite. So
-there either must be some restrictions on where a Document Center can be used or
-else this is a bug -- and a nasty bug at that, considering a single document
-repository is one of the core features that my customer needs for their
-externally facing (i.e. Publishing with Workflow) site.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 It turns out that it is a bug, but a very minor bug and one that is easy to
 workaround. After a little experimentation, I discovered that the **Page Layout

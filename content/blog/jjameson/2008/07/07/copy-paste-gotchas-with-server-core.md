@@ -39,13 +39,13 @@ Management MMC console on my Windows Vista laptop and connected to the server --
 or, rather I should say that I _tried_ to connect to the server. Instead of
 connecting, I was greeted with the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
-This can happen if the remote computer does not support VDS, or if a connection
-cannot be established because it was blocked by Windows Firewall.
+> Disk Management could not start Virtual Disk Service (VDS) on DMX-CORE1-MAINT.
+> This can happen if the remote computer does not support VDS, or if a
+> connection cannot be established because it was blocked by Windows Firewall.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 A quick Windows Live Search for
 ["Disk Management could not start Virtual Disk Service"](http://search.live.com/results.aspx?q=%22Disk+Management+could+not+start+Virtual+Disk+Service%22&form=QBRE)
@@ -64,11 +64,11 @@ enable=yes
 
 Unfortunately, the response wasn't exactly what I expected:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Group cannot be specified along with other identification conditions.
+> Group cannot be specified along with other identification conditions.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 It turns out that the quotes around {{< kbd "Remote Volume Management" >}} were
 "corrupted", meaning they were converted to the angled quotes that tend to break

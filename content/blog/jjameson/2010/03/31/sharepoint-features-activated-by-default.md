@@ -38,19 +38,19 @@ linkHref="http://msdn.microsoft.com/en-us/library/ms436075.aspx" >}}
 Here's the description for the **ActivateOnDefault** attribute of the
 **Feature** element:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Optional **Boolean**. **TRUE** if the Feature is activated by default during
-installation or when a Web application is created; **FALSE** if the Feature is
-not activated. This attribute equals **TRUE** by default. The
-**ActivateOnDefault** attribute does not apply to site collection (**Site**) or
-Web site (**Web**) scoped Features.
+> Optional **Boolean**. **TRUE** if the Feature is activated by default during
+> installation or when a Web application is created; **FALSE** if the Feature is
+> not activated. This attribute equals **TRUE** by default. The
+> **ActivateOnDefault** attribute does not apply to site collection (**Site**)
+> or Web site (**Web**) scoped Features.
+>
+> In general, **Farm**-scoped Features become activated during installation, and
+> when a new Web application is created, all installed **Web
+> application**-scoped Features in it become activated.
 
-In general, **Farm**-scoped Features become activated during installation, and
-when a new Web application is created, all installed **Web application**-scoped
-Features in it become activated.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 From now on, whenever I create a feature scoped to **WebApplication**, I'll be
 sure to specify the **ActivateOnDefault** attribute and set it to **FALSE** to

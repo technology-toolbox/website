@@ -41,20 +41,20 @@ update on one of my servers to confirm that this resolved the issue.
 
 A little post mortem analysis further revealed the following event on COLOSSUS:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Event Type: Information\
-Event Source: MsiInstaller\
-Event Category: None\
-Event ID: 11724\
-Date: 3/22/2008\
-Time: 7:17:29 AM\
-Computer: COLOSSUS\
-Description:\
-Product: Microsoft Windows Server Update Services 3.0 -- Removal completed
-successfully.
+> Event Type: Information\
+> Event Source: MsiInstaller\
+> Event Category: None\
+> Event ID: 11724\
+> Date: 3/22/2008\
+> Time: 7:17:29 AM\
+> Computer: COLOSSUS\
+> Description:\
+> Product: Microsoft Windows Server Update Services 3.0 -- Removal completed
+> successfully.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Ah, yes...now it was all coming back to me. On the morning of March 22nd, I
 decided to install WSUS Service Pack 1 (SP1). Since I did not encounter any

@@ -537,12 +537,12 @@ Here's the short summary from MSDN for the
 [Page.SaveStateComplete](http://msdn.microsoft.com/en-us/library/system.web.ui.page.savestatecomplete.aspx)
 event:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Occurs after the page has completed saving all view state and control state
-information for the page and controls on the page.
+> Occurs after the page has completed saving all view state and control state
+> information for the page and controls on the page.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 With this change, the KPI detail table renders as expected (with the custom
 **Thresholds** header row and all of the expected data) even when the GridView

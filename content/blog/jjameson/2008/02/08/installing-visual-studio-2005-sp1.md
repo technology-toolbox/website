@@ -36,50 +36,51 @@ task tray), I was quickly informed that the attempt to install Visual Studio
 
 Looking at the event log, I noticed the following errors:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Event Type: Error\
-Event Source: MsiInstaller\
-Event Category: None\
-Event ID: 1008\
-Date: 2/8/2008\
-Time: 6:03:44 AM\
-User: JJAMESON1\Administrator\
-Computer: JJAMESON1\
-Description:\
-The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to an
-error in software restriction policy processing. The object cannot be trusted.
+> Event Type: Error\
+> Event Source: MsiInstaller\
+> Event Category: None\
+> Event ID: 1008\
+> Date: 2/8/2008\
+> Time: 6:03:44 AM\
+> User: JJAMESON1\Administrator\
+> Computer: JJAMESON1\
+> Description:\
+> The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to
+> an error in software restriction policy processing. The object cannot be
+> trusted.
+>
+> Event Type: Error\
+> Event Source: MsiInstaller\
+> Event Category: None\
+> Event ID: 11718\
+> Date: 2/8/2008\
+> Time: 6:03:44 AM\
+> User: JJAMESON1\Administrator\
+> Computer: JJAMESON1\
+> Description:\
+> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU -- Error
+> 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature
+> check. For more information about a possible resolution for this problem, see
+> [http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
+>
+> Event Type: Error\
+> Event Source: MsiInstaller\
+> Event Category: None\
+> Event ID: 1023\
+> Date: 2/8/2008\
+> Time: 6:03:55 AM\
+> User: JJAMESON1\Administrator\
+> Computer: JJAMESON1\
+> Description:\
+> Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU - Update
+> 'Microsoft Visual Studio 2005 Team Explorer - ENU Service Pack 1 (KB926601)'
+> could not be installed. Error code 1603. Additional information is available
+> in the log file
+> C:\NOTBAC~1\Temp\Volatile\VS80sp1-KB926601-X86-ENU\VS80sp1-KB926601-X86-ENU-msi.0.log.
 
-Event Type: Error\
-Event Source: MsiInstaller\
-Event Category: None\
-Event ID: 11718\
-Date: 2/8/2008\
-Time: 6:03:44 AM\
-User: JJAMESON1\Administrator\
-Computer: JJAMESON1\
-Description:\
-Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU -- Error
-1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature
-check. For more information about a possible resolution for this problem, see
-[http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
-
-Event Type: Error\
-Event Source: MsiInstaller\
-Event Category: None\
-Event ID: 1023\
-Date: 2/8/2008\
-Time: 6:03:55 AM\
-User: JJAMESON1\Administrator\
-Computer: JJAMESON1\
-Description:\
-Product: Microsoft Visual Studio 2005 Premier Partner Edition - ENU - Update
-'Microsoft Visual Studio 2005 Team Explorer - ENU Service Pack 1 (KB926601)'
-could not be installed. Error code 1603. Additional information is available in
-the log file
-C:\NOTBAC~1\Temp\Volatile\VS80sp1-KB926601-X86-ENU\VS80sp1-KB926601-X86-ENU-msi.0.log.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 These errors quickly jogged my memory about the known issues with installing
 Visual Studio 2005 Service Pack 1. Consequently, I proceeded to delete the

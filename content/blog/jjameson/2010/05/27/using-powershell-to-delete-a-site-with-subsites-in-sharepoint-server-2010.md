@@ -100,19 +100,19 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 
 ...then you will encounter an error similar to the following:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that has
-subsites.\
-At line:1 char:13\
+> Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
+> has subsites.\
+> At line:1 char:13\
+>
+> + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false\
+> + CategoryInfo : InvalidData:
+>   (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb],
+>   SPException\
+> + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
-+ Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false\
-+ CategoryInfo : InvalidData:
-  (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb],
-  SPException\
-+ FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In order to delete a site that has subsites using PowerShell, we simply need to
 convert the C# code shown above into a corresponding PowerShell function, as

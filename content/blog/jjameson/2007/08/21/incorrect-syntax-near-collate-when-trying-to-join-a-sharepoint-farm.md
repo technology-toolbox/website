@@ -36,17 +36,17 @@ dialog displayed by the .NET Framework when something very bad happens.
 
 **Error message:**
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Unhandled exception has occurred in your application. If you click Continue, the
-application will ignore this error and attempt to continue. If you click Quit,
-the application will close immediately.
+> Unhandled exception has occurred in your application. If you click Continue,
+> the application will ignore this error and attempt to continue. If you click
+> Quit, the application will close immediately.
+>
+> Incorrect syntax near 'COLLATE'. You may need to set the compatibility level
+> of the current database to a higher value to enable this feature. See help for
+> the stored procedure sp\_dbcmptlevel.
 
-Incorrect syntax near 'COLLATE'. You may need to set the compatibility level of
-the current database to a higher value to enable this feature. See help for the
-stored procedure sp\_dbcmptlevel.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 **Details:**
 

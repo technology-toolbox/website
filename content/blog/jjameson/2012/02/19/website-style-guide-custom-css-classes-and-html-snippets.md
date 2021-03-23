@@ -27,11 +27,11 @@ When I stumbled upon these pages a few years ago, I immediately thought of that
 quote from the
 [old Guinness commercials](http://www.youtube.com/watch?v=3DPKf7y1F-Q):
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Brilliant!
+> Brilliant!
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I doubt the Mozilla folks were the first to fomalize their style guide and CSS
 rules into a "document" like this, but kudos to them anyway for sharing their

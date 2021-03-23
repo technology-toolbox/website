@@ -26,11 +26,11 @@ about developing a "tough skin" ;-)]
 After a quick search for "WinHost directory browsing" I quickly discovered this
 is actually documented on the WinHost site:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-... By default, directory browsing is enabled.
+> ... By default, directory browsing is enabled.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 {{< reference
 title="WinHost Support Portal - Can I control directory browsing on my site?"

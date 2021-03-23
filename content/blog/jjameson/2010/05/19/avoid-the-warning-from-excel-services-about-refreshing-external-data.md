@@ -26,19 +26,19 @@ If you leave this value set to the default (i.e. **Yes**), then you'll be
 greeted with the following message for each Excel Web Part on a TFS dashboard
 page:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-This workbook contains one or more queries that refresh external data. A
-malicious user can design a query to access confidential information and
-distribute it to other users or perform other harmful actions.
+> This workbook contains one or more queries that refresh external data. A
+> malicious user can design a query to access confidential information and
+> distribute it to other users or perform other harmful actions.
+>
+> If you trust the source of this workbook, click Yes to enable queries to
+> external data in this workbook. If you are not sure, click No so that changes
+> are not applied to your workbook.
+>
+> Do you want to enable queries to external data in this workbook?
 
-If you trust the source of this workbook, click Yes to enable queries to
-external data in this workbook. If you are not sure, click No so that changes
-are not applied to your workbook.
-
-Do you want to enable queries to external data in this workbook?
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To avoid warnings before refreshing external data in Excel Services:
 

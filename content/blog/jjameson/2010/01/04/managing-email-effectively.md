@@ -99,28 +99,28 @@ to me or to DLs that I belong to.
 I just inspected my email rules in Outlook and found that I am now up to 32
 rules. Note that most of these rules follow the same basic structure:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-sent to [people or distribution list](#)\
-move it to the [specified](#) folder\
-except if my name is in the To or Cc box\
-stop processing more rules
+> Apply this rule after the message arrives\
+> sent to [people or distribution list](#)\
+> move it to the [specified](#) folder\
+> except if my name is in the To or Cc box\
+> stop processing more rules
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 For example, I have a rule named **SharePoint 2010 discussions** configured as
 follows:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-sent to [SharePoint 2010 Discussion](#)\
-move it to the [SharePoint 2010](#) folder\
-except if my name is in the To or Cc box\
-stop processing more rules
+> Apply this rule after the message arrives\
+> sent to [SharePoint 2010 Discussion](#)\
+> move it to the [SharePoint 2010](#) folder\
+> except if my name is in the To or Cc box\
+> stop processing more rules
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 As you can see from the previous screenshot, this rule automatically routed
 1,837 messages sent to the **SharePoint 2010 Discussion** DL to the
@@ -141,27 +141,27 @@ review team progress) but obviously I don't want them clogging my inbox (or
 making my smartphone "chirp" incessantly). Consequently I configured my **TFS
 Notifications** rule as follows:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-from [xxx@microsoft.com](mailto:xxx@microsoft.com)\
-move it to the [TFS Notifications](#) folder
+> Apply this rule after the message arrives\
+> from [xxx@microsoft.com](mailto:xxx@microsoft.com)\
+> move it to the [TFS Notifications](#) folder
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Note that [xxx@microsoft.com](mailto:xxx@microsoft.com) is the email address of
 the TFS service account (which I've replaced for obvious reasons).
 
 Further down the list of email rules, I have one named **High Priority Items**:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-from
-[Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine](#)\
-stop processing more rules
+> Apply this rule after the message arrives\
+> from
+> [Ron Stutz or Scott Krebs or Sid Hayutin or Kit Ambrose or John MacCatherine](#)\
+> stop processing more rules
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 While somewhat serving as a list of various managers I've had during my tenure
 with Microsoft, this rule is really used to ensure that email from these
@@ -170,24 +170,24 @@ the very last rule.
 
 Note that I also have a **Project Mail** rule configured for similar purposes:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-sent to [FrontierV3Dev or KPMG-COM Project Team or ...](#)\
-stop processing more rules
+> Apply this rule after the message arrives\
+> sent to [FrontierV3Dev or KPMG-COM Project Team or ...](#)\
+> stop processing more rules
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 The very last rule that I have configured in Outlook is named **Low Priority
 Items** and is configured as follows:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Apply this rule after the message arrives\
-move it to the [Low Priority Items](#) folder\
-except if my name is in the To or Cc box
+> Apply this rule after the message arrives\
+> move it to the [Low Priority Items](#) folder\
+> except if my name is in the To or Cc box
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In other words, any email message that somehow makes its way into my inbox, but
 is neither processed by a previous email rule nor sent directly to me, is

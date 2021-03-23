@@ -41,12 +41,12 @@ stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://f
 
 I encountered the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-This solution contains no resources scoped for a Web application and cannot be
-deployed to a particular Web application.
+> This solution contains no resources scoped for a Web application and cannot be
+> deployed to a particular Web application.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I must have spent 30 minutes trying to figure out why this command did not work
 (because it worked just fine for other features that I had converted to deploy
@@ -63,12 +63,12 @@ generated for the PublishingLayouts (since it was pure content).
 I also encountered the following error when trying to deploy our custom
 Workflows feature:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
-This feature could not be installed.
+> Elements of type 'Workflow' are not supported at the 'WebApplication' scope.
+> This feature could not be installed.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I found that I had to omit the {{< kbd "url" >}} parameter for this solution as
 well.
@@ -77,12 +77,12 @@ I then decided to try omitting the {{< kbd "url" >}} parameter when deploying
 all of the other solutions. Without the {{< kbd "url" >}} parameter, I was able
 to deploy 7 of our 9 features. The remaining two produced the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-This solution contains resources scoped for a Web application and must be
-deployed to one or more Web applications.
+> This solution contains resources scoped for a Web application and must be
+> deployed to one or more Web applications.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 For these two features, I _had_ to specify the {{< kbd "url" >}} parameter when
 invoking stsadm.exe, because the manifest.xml file for the WSP specifies a

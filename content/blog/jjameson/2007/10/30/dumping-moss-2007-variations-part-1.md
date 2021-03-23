@@ -180,13 +180,13 @@ and no custom content types:
 
 11. View the variation logs and notice the failure with the following error:
     
-    {{< blockquote "fst-italic text-danger" >}}
+    {{< div-block-start "errorMessage" >}}
     
-    The variation system failed to pair up pages
-    http://foobar/en-US/foo/Pages/default.aspx and /ja-JP/foo/Pages/default.aspx
-    because their Content Types do not match.
+    > The variation system failed to pair up pages
+    > http://foobar/en-US/foo/Pages/default.aspx and
+    > /ja-JP/foo/Pages/default.aspx because their Content Types do not match.
     
-    {{< /blockquote >}}
+    {{< div-block-end >}}
 
 [[Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this
 series is now available.]

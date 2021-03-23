@@ -77,12 +77,12 @@ farm into Excel Services. However, this default trusted location does not
 support HTTPS (https://) and therefore results in the following error when
 attempting to access an Excel workbook using a secured connection:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services
-Application trusted location.
+> This workbook cannot be opened because it is not stored in an Excel Services
+> Application trusted location.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Use the following procedure to change the default trusted location to support
 HTTPS.

@@ -106,12 +106,12 @@ function InstrumentAssembly(
 When you run [VSInstr](http://msdn.microsoft.com/en-us/library/ms182402.aspx)
 against a signed assembly, the following warning is emitted:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly
-named assembly. It will need to be re-signed before it can be executed.
+> Warning VSP2001: ...\bin\Debug\Fabrikam.Demo.CoreServices.dll is a strongly
+> named assembly. It will need to be re-signed before it can be executed.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This is why the **Code Coverage Detail** dialog in Visual Studio allows you to
 specify a **Re-signing key file**.

@@ -36,18 +36,18 @@ My initial fix for this issue was to change references like:
 While this worked, Phil [pointed out](http://github.com/Haacked/Subtext/pull/7)
 there is a more elegant solution:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Actually, we should simply use a
-[protocol relative URL/network path reference](http://paulirish.com/2010/the-protocol-relative-url/).
+> Actually, we should simply use a
+> [protocol relative URL/network path reference](http://paulirish.com/2010/the-protocol-relative-url/).
+>
+> For example:
+>
+> src="//ajax.googleapis.com/..."
+>
+> That removes the need do use &lt;%= %&gt; blocks here and is cleaner.
 
-For example:
-
-src="//ajax.googleapis.com/..."
-
-That removes the need do use &lt;%= %&gt; blocks here and is cleaner.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I responded that I didn't even know that was possible (before reading Phil's
 comment, I would have assumed a URL beginning with "//" would be interpreted as

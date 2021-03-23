@@ -33,11 +33,11 @@ Production environment (PROD) is that when
 [activating the features through a script](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint),
 the following error occurred sporadically:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-A web configuration modification operation is already running.
+> A web configuration modification operation is already running.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 As a workaround, I simply activated the remaining features manually (initially
 by directly invoking {{< kbd "stsadm.exe -o activatefeature" >}}, but later by

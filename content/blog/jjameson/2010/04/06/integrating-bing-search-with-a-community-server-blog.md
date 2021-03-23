@@ -56,35 +56,35 @@ After digging around a little in the
 
 Here's the gist of it:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-To let your visitors search your website, add the following code to your page(s):
+> To let your visitors search your website, add the following code to your page(s):
+>
+> ```HTML
+> <!-- Site search from Bing-->
+> <form method="get" action="http://www.bing.com/search">
+> <input type="hidden" name="cp" value="CODE PAGE USED BY YOUR HTML PAGE" />
+> <input type="hidden" name="FORM" value="FREESS" />
+>   <table bgcolor="#FFFFFF">
+>     <tr>
+>       <td>
+>         <a href="http://www.bing.com/">
+>           <img src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
+>             border="0" ALT="Bing" />
+>           </a>
+>       </td>
+>       <td>
+>         <input type="text" name="q" size="30" />
+>         <input type="submit" value="Search Site" />
+>         <input type="hidden" name="q1" value="site:YOUR DOMAIN NAME GOES HERE" />
+>       </td>
+>     </tr>
+>   </table>
+> </form>
+> <!-- Site Search from Bing -->
+> ```
 
-```HTML
-<!-- Site search from Bing-->
-<form method="get" action="http://www.bing.com/search">
-<input type="hidden" name="cp" value="CODE PAGE USED BY YOUR HTML PAGE" />
-<input type="hidden" name="FORM" value="FREESS" />
-  <table bgcolor="#FFFFFF">
-    <tr>
-      <td>
-        <a href="http://www.bing.com/">
-          <img src="http://www.bing.com/siteowner/s/siteowner/Logo_51x19_Dark.png"
-            border="0" ALT="Bing" />
-          </a>
-      </td>
-      <td>
-        <input type="text" name="q" size="30" />
-        <input type="submit" value="Search Site" />
-        <input type="hidden" name="q1" value="site:YOUR DOMAIN NAME GOES HERE" />
-      </td>
-    </tr>
-  </table>
-</form>
-<!-- Site Search from Bing -->
-```
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This seems pretty simple...but, unfortunately it's a little too simple (unless
 your site is serving up plain ol' HTML pages).

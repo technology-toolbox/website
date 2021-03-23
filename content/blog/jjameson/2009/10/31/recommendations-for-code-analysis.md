@@ -51,19 +51,19 @@ doesn't specify a CultureInfo:
 
 Attempting this will now result in a broken build:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Error 2 CA1305 : Microsoft.Globalization : Because the behavior of
-'string.Format(string, object)' could vary based on the current user's locale
-settings, replace this call in 'Program.Main(string[])' with a call to
-'string.Format(IFormatProvider, string, params object[])'. If the result of
-'string.Format(IFormatProvider, string, params object[])' will be displayed to
-the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider'
-parameter. Otherwise, if the result will be stored and accessed by software,
-such as when it is persisted to disk or to a database, specify
-'CultureInfo.InvariantCulture'.
+> Error 2 CA1305 : Microsoft.Globalization : Because the behavior of
+> 'string.Format(string, object)' could vary based on the current user's locale
+> settings, replace this call in 'Program.Main(string[])' with a call to
+> 'string.Format(IFormatProvider, string, params object[])'. If the result of
+> 'string.Format(IFormatProvider, string, params object[])' will be displayed to
+> the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider'
+> parameter. Otherwise, if the result will be stored and accessed by software,
+> such as when it is persisted to disk or to a database, specify
+> 'CultureInfo.InvariantCulture'.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To avoid the CA1305 error, you will need to use something like this instead:
 

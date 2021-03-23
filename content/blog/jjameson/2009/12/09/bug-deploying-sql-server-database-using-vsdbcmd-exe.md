@@ -32,11 +32,11 @@ server running Microsoft SQL Server, and then run the VSDBCMD.EXE utility
 Unfortunately, when we attempted to deploy our database to our Test environment,
 we encountered a `NullReferenceException`:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Object reference not set to an instance of an object.
+> Object reference not set to an instance of an object.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Fortunately, it didn't take long to find
 [Gert's recommendation](http://social.msdn.microsoft.com/Forums/en-US/vstsdb/thread/32725cf6-74c1-4b5a-9057-b909ae8a2517)

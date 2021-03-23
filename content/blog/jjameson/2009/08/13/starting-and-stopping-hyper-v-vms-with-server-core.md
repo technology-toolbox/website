@@ -42,12 +42,12 @@ When I attempted to start the VMs using Hyper-V Manager from my Windows 7
 desktop, I encountered the following error shortly after seeing the "Connecting
 to Virtual Machine Management service..." message:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC
-service is running.
+> Cannot connect to the RPC service on computer 'ICEMAN'. Make sure your RPC
+> service is running.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Well, the RPC service was definitely running, but since both DCs were powered
 down, Hyper-V Manager had no way of authenticating me in order to access the

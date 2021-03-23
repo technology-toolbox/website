@@ -44,12 +44,12 @@ generic error message on the page where the error occurred.
 Shortly after starting to troubleshoot the problem, I discovered the following
 error in the event log:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The communication object, System.ServiceModel.Channels.ServiceChannel, cannot be
-used for communication because it is in the Faulted state.
+> The communication object, System.ServiceModel.Channels.ServiceChannel, cannot
+> be used for communication because it is in the Faulted state.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I also noticed from the stack trace that the error occurred while calling the
 **Dispose** method of the Web service proxy class.
@@ -68,12 +68,12 @@ linkHref="http://msdn.microsoft.com/en-us/library/aa355056.aspx" >}}
 
 Here's the first sentence from that article:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-This sample demonstrates how you should not use the C# "using" statement to
-automatically clean up resources when using a typed client.
+> This sample demonstrates how you should not use the C# "using" statement to
+> automatically clean up resources when using a typed client.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Huh?
 

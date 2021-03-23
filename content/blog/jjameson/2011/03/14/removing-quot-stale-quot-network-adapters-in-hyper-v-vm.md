@@ -21,11 +21,11 @@ Each time I create (or recreate) a virtual machine in Hyper-V using
 [one of my SysPrep'ed images](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines),
 I usually end up having to do a quick Internet search for:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-device manager show hidden devices
+> device manager show hidden devices
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I'm a little embarrassed to say that I simply can't remember the environment
 variable that I need to set in order to remove what I call "stale" network

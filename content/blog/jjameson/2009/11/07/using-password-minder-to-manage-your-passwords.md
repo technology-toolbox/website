@@ -49,13 +49,13 @@ server. In other words, my encrypted password file is:
 Consequently, I encountered the following error when trying to save my password
 file:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Failed to save the password file. Here are the gory details:
-GetVolumeInformation failed:\
-The filename, directory name, or volume label syntax is incorrect.
+> Failed to save the password file. Here are the gory details:
+> GetVolumeInformation failed:\
+> The filename, directory name, or volume label syntax is incorrect.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I discovered that I could avoid this error by clearing the **Let Password Minder
 control the DACL** checkbox in the **Password Minder Options** dialog window.
@@ -85,13 +85,13 @@ and thus pwm.exe would generate a
 [`BadImageFormatException`](http://msdn.microsoft.com/en-us/library/system.badimageformatexception.aspx)
 when trying to load the 32-bit NativeHelpers.dll.
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Could not load file or assembly 'NativeHelpers, Version=1.5.0.4,
-Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt was
-made to load a program with an incorrect format.
+> Could not load file or assembly 'NativeHelpers, Version=1.5.0.4,
+> Culture=neutral, PublicKeyToken=null' or one of its dependencies. An attempt
+> was made to load a program with an incorrect format.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This was easy enough to fix simply by setting **Platform target** to **x86** and
 then recompiling.

@@ -23,11 +23,11 @@ SharePoint Server (MOSS) 2007 to replace a VM with a physical server (for
 During the rebuild, I encountered the following error when starting Office
 SharePoint Server Search on the SSP server:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Failed to configure propagation share.
+> Failed to configure propagation share.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Be aware that the code for configuring the share is not exactly robust --
 meaning, if the share already exists then you'll get this error (even if the

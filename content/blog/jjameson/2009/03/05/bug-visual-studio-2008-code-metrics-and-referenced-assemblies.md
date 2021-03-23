@@ -27,13 +27,14 @@ After clicking the **Analyze** menu, and then clicking **Calculate Code Metrics
 for Solution**, I encountered errors similar to the following for several
 projects in the solution:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-An error occurred while calculating code metrics for target file
-'E:\NotBackedUp\...' in project ... The following error was encountered while
-reading module 'Microsoft.SharePoint': Could not resolve type: T ObjectModel.
+> An error occurred while calculating code metrics for target file
+> 'E:\NotBackedUp\...' in project ... The following error was encountered while
+> reading module 'Microsoft.SharePoint': Could not resolve type: T
+> ObjectModel.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 (Don't ask me what the '' character is supposed to mean -- I just copied and pasted this directly from Visual Studio.)
 It turns out that this is a known bug in Visual Studio 2008 due to the default
 setting that allows dependant assemblies to be used in a project without

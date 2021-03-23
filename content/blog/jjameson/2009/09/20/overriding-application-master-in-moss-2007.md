@@ -248,13 +248,13 @@ in both default.master and application.master (as noted in my
 [previous post](/blog/jjameson/2009/09/19/moss-2007-master-page-comparison)).
 Otherwise, you'll encounter an error similar to the following:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the master
-page '/\_catalogs/masterpage/default.master', verify content control's
-ContentPlaceHolderID attribute in the content page.
+> Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the
+> master page '/\_catalogs/masterpage/default.master', verify content control's
+> ContentPlaceHolderID attribute in the content page.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Lastly, I want to point out that this approach only affects application pages --
 not site and system pages. In other words, the code shown above in

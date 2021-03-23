@@ -21,11 +21,11 @@ Shortly after publishing my previous post covering
 Panjkov noted that attempting to create a new site in WSS v3 using the site
 template that I originally provided resulted in the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The template you have chosen is invalid or cannot be found.
+> The template you have chosen is invalid or cannot be found.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Ouch.
 

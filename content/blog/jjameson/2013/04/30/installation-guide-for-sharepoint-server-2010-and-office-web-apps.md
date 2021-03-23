@@ -2560,12 +2560,12 @@ location does not support HTTPS (https://) and therefore results in the
 following error when attempting to access an Excel workbook on a secured
 connection:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-This workbook cannot be opened because it is not stored in an Excel Services
-Application trusted location.
+> This workbook cannot be opened because it is not stored in an Excel Services
+> Application trusted location.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Use the following procedure to change the default trusted location to support
 HTTPS.
@@ -2647,15 +2647,14 @@ for caching:
    
    > **Note**
    > 
-   > The cache site collection is created via a SharePoint timer job.
-   > Consequently you may encounter the following error (depending on how
-   > quickly the installation steps are performed):
-   > {{< blockquote "fst-italic text-danger" >}}
+   > The cache site collection is created via a SharePoint timer job. Consequently you may encounter the following error (depending on how quickly the installation steps are performed):
    > 
-   > Set-SPOfficeWebAppsCache : Specified web application doesn't exist or
-   > doesn't have a cache site collection.
+   > {{< div-block-start "errorMessage" >}}
    > 
-   > {{< /blockquote >}}
+   > > Set-SPOfficeWebAppsCache : Specified web application doesn't exist or
+   > > doesn't have a cache site collection.
+   > 
+   > {{< div-block-end >}}
    > If this error occurs, wait a few minutes and then run the script again.
    
    {{< /div-block >}}

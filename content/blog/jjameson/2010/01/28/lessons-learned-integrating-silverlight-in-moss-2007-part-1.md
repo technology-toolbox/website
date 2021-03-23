@@ -156,12 +156,12 @@ the expected location is not compatible with Team Foundation Build.
 As I noted in a
 [previous post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build):
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-The problem with relative paths is that Team Foundation Build uses a different
-folder structure when compiling your projects.
+> The problem with relative paths is that Team Foundation Build uses a different
+> folder structure when compiling your projects.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In other words, whenever you find yourself about to specify ".." in the output
 path inside Visual Studio for a project, stop what you're doing, think about my

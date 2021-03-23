@@ -18,14 +18,14 @@ Section 5.8 in my sample
 [Installation Guide for SharePoint Server 2010 and Office Web Apps](/blog/jjameson/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps)
 states the following:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-On each SharePoint server in the farm, append **C:\Program Files\Common
-Files\Microsoft Shared\web server extensions\14\BIN** to the **Path**
-environment variable (in order to run stsadm.exe from various folder locations
-without having to specify the full path).
+> On each SharePoint server in the farm, append **C:\Program Files\Common
+> Files\Microsoft Shared\web server extensions\14\BIN** to the **Path**
+> environment variable (in order to run stsadm.exe from various folder locations
+> without having to specify the full path).
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Adding a folder to the Path environment variable is pretty basic stuff and it
 probably doesn't take more than 30 seconds to click through **Control Panel** →

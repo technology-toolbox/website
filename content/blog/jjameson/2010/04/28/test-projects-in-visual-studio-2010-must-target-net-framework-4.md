@@ -38,14 +38,14 @@ or errors last week when I built it using Visual Studio 2008."
 
 Then I looked more closely at the error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The type 'System.Web.Security.MembershipProvider' is defined in an assembly that
-is not referenced. You must add a reference to assembly
-'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral,
-PublicKeyToken=31bf3856ad364e35'.
+> The type 'System.Web.Security.MembershipProvider' is defined in an assembly
+> that is not referenced. You must add a reference to assembly
+> 'System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral,
+> PublicKeyToken=31bf3856ad364e35'.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Hmmm...that is strange indeed...didn't I just tell Visual Studio not to target
 .NET Framework 4?
@@ -57,12 +57,12 @@ been a glitch, I'll just change the setting back to **.NET Framework 3.5**...
 
 Unfortunately, that's when I got the following warning:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Attempted re-targeting of the project has been canceled. You cannot change the
-specified .NET framework version or profile for a test project.
+> Attempted re-targeting of the project has been canceled. You cannot change the
+> specified .NET framework version or profile for a test project.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 After clicking the **OK** button, I noticed the project setting -- not
 suprisingly -- was changed back to **.NET Framework 4**.

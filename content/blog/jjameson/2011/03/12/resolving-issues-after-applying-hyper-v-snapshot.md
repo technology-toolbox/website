@@ -21,11 +21,11 @@ This morning I rolled back one of my development VMs to a snapshot I created
 about a month ago. When I subsequently tried to login with my domain
 credentials, I encountered the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The trust relationship between this workstation and the primary domain failed.
+> The trust relationship between this workstation and the primary domain failed.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I did a quick Internet search for this error and found the following KB article:
 
@@ -43,12 +43,12 @@ linkHref="http://support.microsoft.com/kb/325850" >}}
 Don't be put off by the title of this KB article. You just need to read a little
 bit into it:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-[...] This procedure is most frequently used on domain controllers, but also
-applies to any Windows machine account.
+> [...] This procedure is most frequently used on domain controllers, but also
+> applies to any Windows machine account.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To resolve the error after applying an old Hyper-V snapshot on a VM joined to a
 domain:

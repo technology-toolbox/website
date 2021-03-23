@@ -27,28 +27,28 @@ added some content from a Development Plan that I had created a few years ago.
 
 In the process of reviewing my old document, I came across the following:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-### Installation
-
-...
-
-#### Debug Symbols
-
-All Debug builds should create symbol files for debugging purposes. These
-symbols are included as part of the setup to facilitate debugging in other
-environments such as DEV.
-
-{{< div-block "note important" >}}
-
-> **Important**
+> ### Installation
 >
-> Do not include Debug symbols in the Release configuration of the setup
-> projects.
+> ...
+>
+> #### Debug Symbols
+>
+> All Debug builds should create symbol files for debugging purposes. These
+> symbols are included as part of the setup to facilitate debugging in other
+> environments such as DEV.
+>
+> {{< div-block "note important" >}}
+>
+> > **Important**
+> > 
+> > Do not include Debug symbols in the Release configuration of the setup
+> > projects.
+>
+> {{< /div-block >}}
 
 {{< /div-block >}}
-
-{{< /blockquote >}}
 
 When I read this, I actually let out an audible laugh (okay, I suppose it was
 more of a chuckle). It must have been the old C++ developer in me that
@@ -72,14 +72,14 @@ Robbins makes in
 [Debugging Microsoft .NET 2.0 Applications](http://amzn.com/0735622027). In
 fact, here's a direct quote from page 38:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-### Build All Builds with Debugging Symbols
+> ### Build All Builds with Debugging Symbols
+>
+> ...build all builds, including release builds, with full debugging symbols.
+> [...]
 
-...build all builds, including release builds, with full debugging symbols.
-[...]
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In other words, the Development Plan should say:
 

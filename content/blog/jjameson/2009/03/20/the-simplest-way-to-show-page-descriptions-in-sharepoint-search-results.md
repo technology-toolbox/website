@@ -38,12 +38,12 @@ If you've read some of my previous posts -- or if you've worked with me
 personally -- then you know how much I love simplicity. As a patent clerk once
 said:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Everything should be as simple as possible, but not simpler.
--- Albert Einstein
+> Everything should be as simple as possible, but not simpler.
+> -- Albert Einstein
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 If you look at the default XSL for the Search Core Results Web Part in MOSS
 2007, you will find the following:

@@ -120,12 +120,13 @@ following:
 These are actually the "inner" exceptions. If you look at the details for the
 error, you'll see the following:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-System.Web.HttpException: The state information is invalid for this page and
-might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid viewstate.
+> System.Web.HttpException: The state information is invalid for this page and
+> might be corrupted. ---&gt; System.Web.UI.ViewStateException: Invalid
+> viewstate.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To suppress these messages, we can simply expand the ELMAH filter a little bit:
 

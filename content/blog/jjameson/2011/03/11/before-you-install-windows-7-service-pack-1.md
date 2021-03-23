@@ -39,28 +39,28 @@ Of course, this is clearly documented on the download page:
 {{< reference title="Remote Server Administration Tools for Windows 7"
 linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d&displaylang=en" >}}
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-...
+> ...
+>
+> **\*\*Remote Server Administration Tools for Windows 7 can be installed ONLY
+> on computers that are running the Enterprise, Professional, or Ultimate
+> editions of Windows 7. This software CANNOT BE INSTALLED on computers that are
+> running Windows 7 with Service Pack 1 (SP1). To run Remote Server
+> Administration Tools for Windows 7 on a computer on which you want to run
+> Windows 7 with SP1, first install Remote Server Administration Tools, and then
+> upgrade to Service Pack 1.\*\***
+>
+> ...
+>
+> This software is not supported on computers that are running Windows 7 with
+> Service Pack 1 (SP1). If your computer is running Windows 7 with SP1, and you
+> try to install Remote Server Administration Tools for Windows 7, the following
+> error message is displayed: "The update is not applicable to your computer."
+> This limitation is by design, and is documented in the
+> [Windows 7 with SP1 Deployment Guide](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-83fe-46e9-96d8-027ae59ddc11).
 
-**\*\*Remote Server Administration Tools for Windows 7 can be installed ONLY on
-computers that are running the Enterprise, Professional, or Ultimate editions of
-Windows 7. This software CANNOT BE INSTALLED on computers that are running
-Windows 7 with Service Pack 1 (SP1). To run Remote Server Administration Tools
-for Windows 7 on a computer on which you want to run Windows 7 with SP1, first
-install Remote Server Administration Tools, and then upgrade to Service Pack
-1.\*\***
-
-...
-
-This software is not supported on computers that are running Windows 7 with
-Service Pack 1 (SP1). If your computer is running Windows 7 with SP1, and you
-try to install Remote Server Administration Tools for Windows 7, the following
-error message is displayed: "The update is not applicable to your computer."
-This limitation is by design, and is documented in the
-[Windows 7 with SP1 Deployment Guide](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=61924cea-83fe-46e9-96d8-027ae59ddc11).
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Then again, if you downloaded RSAT for Windows 7 a long time ago (like I did
 back in 2009), then you probably missed this announcement. Apparently I _really_

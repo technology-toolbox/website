@@ -23,12 +23,12 @@ finish this blog post that has been sitting in "unpublished" status since June
 Have you ever encountered the following error in Microsoft Office SharePoint
 Server (MOSS) 2007?
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-An error occurred during the processing of . The attribute 'autoeventwireup' is
-not allowed in this page.
+> An error occurred during the processing of . The attribute 'autoeventwireup'
+> is not allowed in this page.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 I just
 [searched for this](http://www.bing.com/search?q=SharePoint+%22AutoEventWireup+is+not+allowed%22&form=QBRE&qs=n)
@@ -112,11 +112,11 @@ of changing something like this...
 Unfortunately -- at least in my experience -- this doesn't work. It only leads
 to other errors, such as:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The event handler 'OnPreRender' is not allowed in this page.
+> The event handler 'OnPreRender' is not allowed in this page.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 The above error occurs when the master page contains something like the
 following:
@@ -134,11 +134,11 @@ I attempted to resolve this by converting the
 method from the `Page_PreRender` event handler instead. However, that only led
 to yet another error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Code blocks are not allowed in this file.
+> Code blocks are not allowed in this file.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Sensing a very deep "rat hole" at this point, I decided it wasn't worth pursuing
 this issue any further.

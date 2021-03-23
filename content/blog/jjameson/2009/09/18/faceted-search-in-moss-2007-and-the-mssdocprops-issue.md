@@ -69,69 +69,70 @@ Allow me to explain...
 Rather than rewriting stuff I've already said before, I'll simply take an
 excerpt from an email I originally sent back on 2008-08-20:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-I believe the primary reason why the load on the Search database is extremely
-high is due to the changes in MOSS 2007 with regards to the "property store"
-(i.e. the database used to perform property searches, as opposed to "full text
-searching" against the content index). In SPS 2003 the property store was
-implemented as a local "Jet" database on each query server and thus the load
-incurred when performing property searches was distributed amongst the various
-query servers in the farm. However, in MOSS 2007, a couple of key changes were
-made. First, the property store was moved to SQL Server (i.e. the Search
-database) and therefore the load is now delegated from the query servers back to
-a single database server. Second, the manner in which MOSS 2007 filters its
-results using the property store uses some, shall we say, "interesting" queries
-(something along the lines of "SELECT TOP 2000 ... FROM MSSDocProps ..." in
-which the "2000" number varies depending on how many search results are
-requested). Judging from [SRX for another customer], it appears that our
-"official response" to this problem is to offload the Search database to another
-SQL Server farm.
+> I believe the primary reason why the load on the Search database is extremely
+> high is due to the changes in MOSS 2007 with regards to the "property store"
+> (i.e. the database used to perform property searches, as opposed to "full text
+> searching" against the content index). In SPS 2003 the property store was
+> implemented as a local "Jet" database on each query server and thus the load
+> incurred when performing property searches was distributed amongst the various
+> query servers in the farm. However, in MOSS 2007, a couple of key changes were
+> made. First, the property store was moved to SQL Server (i.e. the Search
+> database) and therefore the load is now delegated from the query servers back
+> to a single database server. Second, the manner in which MOSS 2007 filters its
+> results using the property store uses some, shall we say, "interesting"
+> queries (something along the lines of "SELECT TOP 2000 ... FROM MSSDocProps
+> ..." in which the "2000" number varies depending on how many search results
+> are requested). Judging from [SRX for another customer], it appears that our
+> "official response" to this problem is to offload the Search database to
+> another SQL Server farm.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Here's a more lengthy explanation from an email I sent a couple of months later
 (when Agilent was still experiencing problems on their site):
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Fact: MOSS 2007 is more resource intensive than SPS 2003. I believe with the
-release of the documentation for SP1, this was formally acknowledged by the
-SharePoint team.
+> Fact: MOSS 2007 is more resource intensive than SPS 2003. I believe with the
+> release of the documentation for SP1, this was formally acknowledged by the
+> SharePoint team.
+>
+> Fact: The Frontier physical architecture was originally planned for SPS 2003.
+> In hindsight, this should have been scaled accordingly when the decision was
+> made to go with MOSS 2007 instead of SPS 2003 (and MCMS 2002). However, there
+> were obviously no numbers in the beginning, and very limited
+> experience/knowledge on highly scalable MOSS environments. As the old saying
+> goes, hindsight is...blah...blah...blah
+>
+> Fact: In SPS 2003, the "property store" (which contains the metadata for items
+> in the content index) was implemented as a local database on each query
+> server. In other words, the data -- and processing -- of properties for search
+> results was distributed (across each query server in the farm).
+>
+> Fact: In MOSS 2007, the "property store" was moved to SQL Server.
+> Consequently, the data (and a good portion of the processing load) that was
+> previously distributed across the query servers is now on the backend SQL
+> Server.
+>
+> Fact: In the current implementation, SharePoint Search fetches a large number
+> of results from the MSSDocProps table in order to filter search results (if
+> you don't like my definition of "large", feel free to ask any SQL DBA if they
+> like to see queries like "SELECT TOP 1820 ..."). These specific queries have
+> often been reported as problematic for numerous customers [...]
+>
+> Fact: Issues with "property queries" have been acknowledged
+> [...] by the SharePoint support organization as well as the product team. In some cases, product functionality has actually been removed in order to help mitigate these issues (for example, [KB 950437](http://support.microsoft.com/kb/950437/)
+> -- which removes the **Contains**/**Does not contain** operators from the
+> Advanced Search Box). In other cases, Microsoft has formally recommended to
+> customers to offload the SQL portion of SharePoint Search to a different
+> database server (which, in any enterprise implementation, means a new SQL
+> Server cluster).
+>
+> [(Additional ranting intentionally removed)]
 
-Fact: The Frontier physical architecture was originally planned for SPS 2003. In
-hindsight, this should have been scaled accordingly when the decision was made
-to go with MOSS 2007 instead of SPS 2003 (and MCMS 2002). However, there were
-obviously no numbers in the beginning, and very limited experience/knowledge on
-highly scalable MOSS environments. As the old saying goes, hindsight
-is...blah...blah...blah
-
-Fact: In SPS 2003, the "property store" (which contains the metadata for items
-in the content index) was implemented as a local database on each query server.
-In other words, the data -- and processing -- of properties for search results
-was distributed (across each query server in the farm).
-
-Fact: In MOSS 2007, the "property store" was moved to SQL Server. Consequently,
-the data (and a good portion of the processing load) that was previously
-distributed across the query servers is now on the backend SQL Server.
-
-Fact: In the current implementation, SharePoint Search fetches a large number of
-results from the MSSDocProps table in order to filter search results (if you
-don't like my definition of "large", feel free to ask any SQL DBA if they like
-to see queries like "SELECT TOP 1820 ..."). These specific queries have often
-been reported as problematic for numerous customers [...]
-
-Fact: Issues with "property queries" have been acknowledged
-[...] by the SharePoint support organization as well as the product team. In some cases, product functionality has actually been removed in order to help mitigate these issues (for example, [KB 950437](http://support.microsoft.com/kb/950437/)
--- which removes the **Contains**/**Does not contain** operators from the
-Advanced Search Box). In other cases, Microsoft has formally recommended to
-customers to offload the SQL portion of SharePoint Search to a different
-database server (which, in any enterprise implementation, means a new SQL Server
-cluster).
-
-[(Additional ranting intentionally removed)]
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 The crux of the issue is that if you frequently specify property filters in MOSS
 2007 Search (which typically means you've provided some kind of faceted search

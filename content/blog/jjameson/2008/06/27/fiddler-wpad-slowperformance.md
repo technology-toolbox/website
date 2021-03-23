@@ -49,12 +49,12 @@ occurs when no networks are detected to capture.
 
 So, a couple of minutes later, sure enough, there it was right in my capture:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-DNS: QueryId = 0x18FC, QUERY (Standard query), Query for
-wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
+> DNS: QueryId = 0x18FC, QUERY (Standard query), Query for
+> wpad.northamerica.corp.microsoft.com of type Host Addr on class Internet
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 As soon as I saw the old "Web Proxy Auto Detect" I immediately became suspicious
 that this was the culprit. I then closed Fiddler and modified my Internet

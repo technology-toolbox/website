@@ -22,17 +22,18 @@ If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS)
 [Sample Walkthrough of the DR.DADA Approach to SharePoint](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint)
 -- then you've probably seen the following comment:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Note: Referenced assemblies must be specified with a path corresponding to the
-build configuration. If the path is not specified to the referenced assembly,
-then the build works fine as long as the referenced assembly is not in the GAC.
+> Note: Referenced assemblies must be specified with a path corresponding to the
+> build configuration. If the path is not specified to the referenced assembly,
+> then the build works fine as long as the referenced assembly is not in the
+> GAC.
+>
+> However, when the referenced assembly is in the GAC (i.e. after a deployment)
+> then MakeCAB will not be able to find the referenced assembly (since it is no
+> longer copied to the current project's bin\Debug or bin\Release folder).
 
-However, when the referenced assembly is in the GAC (i.e. after a deployment)
-then MakeCAB will not be able to find the referenced assembly (since it is no
-longer copied to the current project's bin\Debug or bin\Release folder).
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 It turns out that I was using a rather elaborate workaround for a problem that
 is actually much easier to solve.

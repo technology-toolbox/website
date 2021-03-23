@@ -54,25 +54,25 @@ my mind, this morning I followed the steps in the sample
 and subsequently enabled code coverage inside Visual Studio. This resulted in
 the following message from Visual Studio:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Debugging tests running on a remote computer or with code coverage enabled is
-not supported. The tests will be run under the debugger locally and without code
-coverage enabled.
+> Debugging tests running on a remote computer or with code coverage enabled is
+> not supported. The tests will be run under the debugger locally and without
+> code coverage enabled.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Okay, perhaps what that Microsoft MVP meant is that you need to run the unit
 tests outside the debugger (e.g. by using Ctrl + F5). Ummm...yeah...I tried that
 -- it doesn't work. When I click the Show Code Coverage Results toolbar button
 in the **Test Results** window, I see the following:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Cannot find any coverage data (.coverage or .coveragexml) files. Check test run
-details for possible errors.
+> Cannot find any coverage data (.coverage or .coveragexml) files. Check test
+> run details for possible errors.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Fortunately, there is a way to perform code coverage analysis when working with
 Visual Studio 2010 and projects that target .NET Framework 3.5 (e.g. SharePoint

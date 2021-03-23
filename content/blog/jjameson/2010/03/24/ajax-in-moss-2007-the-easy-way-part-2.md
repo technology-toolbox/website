@@ -119,13 +119,13 @@ Attempting to browse to the home page of the site now results in an error. After
 tweaking the Web.config file to set `<SafeMode CallStack="true" ...>` and
 `<customErrors mode="Off" />`, the details of the error are revealed:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-System.InvalidOperationException: The control with ID 'updatePanel' requires a
-ScriptManager on the page. The ScriptManager must appear before any controls
-that need it.
+> System.InvalidOperationException: The control with ID 'updatePanel' requires a
+> ScriptManager on the page. The ScriptManager must appear before any controls
+> that need it.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This is no real surprise, since BlueBand.master doesn't declare an instance of
 the ASP.NET
@@ -171,11 +171,11 @@ I've also seen the following error when using the
 **[ModalPopupExtender](http://www.asp.net/AJAX/AjaxControlToolkit/Samples/ModalPopup/ModalPopup.aspx)**
 from the AJAX Control Toolkit on a SharePoint site:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Extender Controls may not be Registered before PreRender
+> Extender Controls may not be Registered before PreRender
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To avoid this error, you have to force the child controls to be created during
 the Init phase of the page lifecycle.

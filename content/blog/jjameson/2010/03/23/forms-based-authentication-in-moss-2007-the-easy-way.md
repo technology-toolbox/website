@@ -66,23 +66,23 @@ As you might be aware by now, I'm also a big fan of scenario-based development.
 Therefore, let's use the following scenario to drive the the remainder of this
 post:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Doug has recently joined the team responsible for developing the Internet site
-for Fabrikam Technologies. Consequently Doug needs to get his local development
-environment created and configured as quickly as possible in order to start
-being a productive team member.
+> Doug has recently joined the team responsible for developing the Internet site
+> for Fabrikam Technologies. Consequently Doug needs to get his local
+> development environment created and configured as quickly as possible in order
+> to start being a productive team member.
+>
+> After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008 and
+> Visual Studio 2008. He then installs MOSS 2007 and subsequently creates a new
+> SharePoint "farm" (which in this case is comprised only of his single VM) and
+> a corresponding Shared Services Provider (SSP). Doug then gets the latest
+> version of the Fabrikam solution from Team Foundation Server and builds the
+> solution. Finally, he creates a new Web application (http://fabrikam-local)
+> that is extended to the Internet zone (http://www-local.fabrikam.com) and
+> configured for anonymous access and Forms-Based Authentication.
 
-After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008 and
-Visual Studio 2008. He then installs MOSS 2007 and subsequently creates a new
-SharePoint "farm" (which in this case is comprised only of his single VM) and a
-corresponding Shared Services Provider (SSP). Doug then gets the latest version
-of the Fabrikam solution from Team Foundation Server and builds the solution.
-Finally, he creates a new Web application (http://fabrikam-local) that is
-extended to the Internet zone (http://www-local.fabrikam.com) and configured for
-anonymous access and Forms-Based Authentication.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 For the purposes of this post, we'll focus on the last part of this scenario --
 specifically, making it quick and easy for Doug to create a local instance of

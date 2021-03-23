@@ -35,20 +35,20 @@ One of the most important concepts I learned a few years ago while reading
 [Transcending CSS](http://www.transcendingcss.com/) is that your HTML content
 should look good "naked" -- in other words, without any CSS rules applied:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-...with no distracting layout, the meaningful structure of your naked content
-becomes clear: Visitors can more easily see headings and hierarchy, and they can
-more easily identify paragraphs, quotations, and lists.
-
-Such meaningful markup and structure simplifies design. Everyone will benefit
-from an altogether simpler user experience, one that will be as easy to navigate
-on any device from a large monitor to a small-screen mobile phone. <cite>--
-Clarke, Andy. "Semantics Is Meaning." <a
+> ...with no distracting layout, the meaningful structure of your naked content
+> becomes clear: Visitors can more easily see headings and hierarchy, and they
+> can more easily identify paragraphs, quotations, and lists.
+>
+> Such meaningful markup and structure simplifies design. Everyone will benefit
+> from an altogether simpler user experience, one that will be as easy to
+> navigate on any device from a large monitor to a small-screen mobile phone.
+> <cite>-- Clarke, Andy. "Semantics Is Meaning." <a
 href="http://www.transcendingcss.com/">Transcending CSS</a>. Berkley: New
-Riders, 2007: 65.</cite>
+> Riders, 2007: 65.</cite>
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Even without clicking the **See full-sized image** link for Figure 1, it is
 pretty clear that my MSDN blog does _not_ look very good "naked." Where are the
@@ -89,39 +89,39 @@ headed over to [http://microformats.org/wiki](http://microformats.org/wiki) to
 see if something already existed so I wouldn't have to start from scratch. That
 is when I discovered the hAtom 0.1 microformat:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-hAtom is a microformat for content that can be syndicated, primarily but not
-exclusively weblog postings. [...]
-
-...
-
-The hAtom schema consists of the following:
-
-- hfeed (**`hfeed`**). optional.
-  - **`feed category`**. optional. keywords or phrases, using
-    **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
-  - hentry (**`hentry`**).
-    - **`entry-title`**. required. text.
-    - **`entry-content`**. optional (see field description). text. [\*]
-    - **`entry-summary`**. optional. text.
-    - **`updated`**. required using
-      [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
-      [\*]
-    - **`published`**. optional using
-      [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
-    - **`author`**. required using
-      **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
-    - **`bookmark`** (permalink). optional, using
-      **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
-    - tags. optional. keywords or phrases, using
-      **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
-
-<cite>-- <a
+> hAtom is a microformat for content that can be syndicated, primarily but not
+> exclusively weblog postings. [...]
+>
+> ...
+>
+> The hAtom schema consists of the following:
+>
+> - hfeed (**`hfeed`**). optional.
+>   - **`feed category`**. optional. keywords or phrases, using
+>     **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+>   - hentry (**`hentry`**).
+>     - **`entry-title`**. required. text.
+>     - **`entry-content`**. optional (see field description). text. [\*]
+>     - **`entry-summary`**. optional. text.
+>     - **`updated`**. required using
+>       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+>       [\*]
+>     - **`published`**. optional using
+>       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+>     - **`author`**. required using
+>       **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
+>     - **`bookmark`** (permalink). optional, using
+>       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+>     - tags. optional. keywords or phrases, using
+>       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
+>
+> <cite>-- <a
 href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
-</cite>
+> </cite>
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Excellent! Now all I had to do was mockup a few sample blog pages in
 [my static HTML prototype](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-3)

@@ -27,11 +27,11 @@ For example, suppose you were looking for a blog post that I wrote about faceted
 search. All you need to do is specify the appropriate keywords as well as the
 corresponding property filter:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-faceted search site:blogs.msdn.com/jjameson
+> faceted search site:blogs.msdn.com/jjameson
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 If you browse to [www.bing.com](http://www.bing.com/) and then type this into
 the search box, you will find that it generates a search results URL similar to

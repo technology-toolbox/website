@@ -86,12 +86,12 @@ INFO: Are running the latest version
 However, when I attempted to connect to Hyper-V Manager to my Hyper-V servers, I
 encountered errors similar to the following:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Access denied. Unable to establish communication between 'ROGUE' and
-'WOLVERINE'.
+> Access denied. Unable to establish communication between 'ROGUE' and
+> 'WOLVERINE'.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In addition to enabling the firewall rule, I found that I also needed to allow
 Anonymous Logon remote DCOM access:

@@ -213,17 +213,17 @@ assuming you've enabled code analysis on the project (which is
 [something I always recommend doing](/blog/jjameson/2009/10/31/recommendations-for-code-analysis))
 -- due to the following errors:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-error : CA1801 : Microsoft.Usage : Parameter 'input' of
-'StringHelper.Truncate(string, int)' is never used. Remove the parameter or use
-it in the method body.
+> error : CA1801 : Microsoft.Usage : Parameter 'input' of
+> 'StringHelper.Truncate(string, int)' is never used. Remove the parameter or
+> use it in the method body.
+>
+> error : CA1801 : Microsoft.Usage : Parameter 'maxLength' of
+> 'StringHelper.Truncate(string, int)' is never used. Remove the parameter or
+> use it in the method body.
 
-error : CA1801 : Microsoft.Usage : Parameter 'maxLength' of
-'StringHelper.Truncate(string, int)' is never used. Remove the parameter or use
-it in the method body.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To resolve these errors, let's add a little more code to the **Truncate**
 method:
@@ -247,14 +247,14 @@ prefer to be used in `private` methods). We'll fix that in a minute.
 However, we still encounter one more error when trying to compile the
 DeveloperTests project:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-error : CA1804 : Microsoft.Performance :
-'StringHelperTest.TruncateInvalidParameter001()' declares a variable, 'actual',
-of type 'string', which is never used or is only assigned to. Use this variable
-or remove it.
+> error : CA1804 : Microsoft.Performance :
+> 'StringHelperTest.TruncateInvalidParameter001()' declares a variable,
+> 'actual', of type 'string', which is never used or is only assigned to. Use
+> this variable or remove it.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To resolve this error, we need to tweak the unit test a little bit (to remove
 the variable used to store the truncated string):

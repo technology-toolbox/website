@@ -40,13 +40,13 @@ Note that the
 method is defined rather ambiguously. Here are the remarks from the
 corresponding documentation on MSDN:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Clone can be implemented either as a deep copy or a shallow copy. In a deep
-copy, all objects are duplicated; whereas, in a shallow copy, only the top-level
-objects are duplicated and the lower levels contain references.
+> Clone can be implemented either as a deep copy or a shallow copy. In a deep
+> copy, all objects are duplicated; whereas, in a shallow copy, only the
+> top-level objects are duplicated and the lower levels contain references.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In my mind, a cloned object should _always_ be a deep copy. A shallow copy would
 most likely lead to subtle bugs when the code that makes a copy doesn't

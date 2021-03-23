@@ -614,12 +614,12 @@ appear as expected.
 
 You may encounter the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The feature: "Scale-out deployment" is not supported in this edition of
-Reporting Services. (rsOperationNotSupported)
+> The feature: "Scale-out deployment" is not supported in this edition of
+> Reporting Services. (rsOperationNotSupported)
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To resolve this error, remove the duplicate server using one of the following
 methods:
@@ -764,26 +764,26 @@ extensions for SharePoint have been installed).
 
 Note that a different error may be shown in the **Remaining Work** Web Part:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-Reporting Services Error
+> Reporting Services Error
+>
+> ***
+>
+> 
+> An error has occurred during report processing. (rsProcessingAborted) Get
+> Online Help\
+> Query execution failed for dataset 'DefaultIterationParam'.
+> (rsErrorExecutingCommand) Get Online Help\
+> For more information about this error navigate to the report server on the
+> local server machine, or enable remote errors
+>
+> ***
+>
+> 
+> SQL Server Reporting Services
 
-***
-
-
-An error has occurred during report processing. (rsProcessingAborted) Get Online
-Help\
-Query execution failed for dataset 'DefaultIterationParam'.
-(rsErrorExecutingCommand) Get Online Help\
-For more information about this error navigate to the report server on the local
-server machine, or enable remote errors
-
-***
-
-
-SQL Server Reporting Services
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This error typically occurs when the TFS data warehouse (i.e. the OLAP cube) has
 not yet been processed. Wait for the warehouse database to be updated.

@@ -89,14 +89,14 @@ title="Figure 3: Page menu items no longer obscured by windowless Silverlight co
 Here's a comment from Karl Erickson on his blog post entitled
 "[Limitations of Windowless mode for Silverlight](http://blogs.msdn.com/silverlight_sdk/archive/2008/11/12/limitations-of-windowless-mode-for-silverlight.aspx)":
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Windowless mode is the only way to create user interfaces that blend HTML and
-Silverlight, regardless of which one is on top. Without Windowless mode, the
-Silverlight plug-in has its own window, which is always on top, and cannot blend
-in HTML UI from underneath.
+> Windowless mode is the only way to create user interfaces that blend HTML and
+> Silverlight, regardless of which one is on top. Without Windowless mode, the
+> Silverlight plug-in has its own window, which is always on top, and cannot
+> blend in HTML UI from underneath.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 The latest version of the markup in the user control that hosts our Silverlight
 application is shown below:

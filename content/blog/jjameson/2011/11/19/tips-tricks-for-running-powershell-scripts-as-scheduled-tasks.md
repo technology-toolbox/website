@@ -87,11 +87,11 @@ configured it to run as a scheduled task with the following properties:
 Deleting the temporary files and then running the scheduled task results in the
 following message in the **Last Run Result** column:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-The operation completed successfully. (0x0)
+> The operation completed successfully. (0x0)
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 If you were to look in the %TEMP% folder, you would see the two text files
 created by the script.
@@ -99,11 +99,11 @@ created by the script.
 However, when you run the scheduled task again (without deleting the files) the
 **Last Run Result** column displays:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-(0x1)
+> (0x1)
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 This is good because it tells us something went wrong running the PowerShell
 script, but imagine we didn't already know what the underlying error actually

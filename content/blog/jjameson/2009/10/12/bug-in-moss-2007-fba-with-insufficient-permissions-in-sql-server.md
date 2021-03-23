@@ -67,12 +67,12 @@ something).
 
 That's when I found the problem, namely a `SqlException`:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists',
-database 'FabrikamPortal', schema 'dbo'.
+> The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists',
+> database 'FabrikamPortal', schema 'dbo'.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Ugh...it turns out the **aspnet\_Roles\_RoleExists** stored procedure is by
 default only granted EXECUTE permission to the

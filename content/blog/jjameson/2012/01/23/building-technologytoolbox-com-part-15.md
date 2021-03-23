@@ -307,17 +307,17 @@ to post comments.
 For the sake on not having to rehash an old topic, I'll just copy/paste my
 check-in comments below:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Resolve errors with IdenticonHandler.ashx when running in "Medium" trust (by
-removing Identicon code in Subtext and instead relying on Gravatar service to
-render these images). This is very similar to Subtext revision r4237
-([http://code.google.com/p/subtext/source/detail?r=4237](http://code.google.com/p/subtext/source/detail?r=4237))
-but varies somewhat to account for differences in the expected behavior (for
-example, do not show Gravatar image when no email address or default image is
-specified).
+> Resolve errors with IdenticonHandler.ashx when running in "Medium" trust (by
+> removing Identicon code in Subtext and instead relying on Gravatar service to
+> render these images). This is very similar to Subtext revision r4237
+> ([http://code.google.com/p/subtext/source/detail?r=4237](http://code.google.com/p/subtext/source/detail?r=4237))
+> but varies somewhat to account for differences in the expected behavior (for
+> example, do not show Gravatar image when no email address or default image is
+> specified).
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Here is what my version of the **GravatarService** class looks like:
 
@@ -644,21 +644,21 @@ posts on the Technology Toolbox site) but it certainly took more than an hour.
 Again, for the sake on not having to rehash an old topic, I'll just copy/paste
 my check-in comments below:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Fix numerous issues with pingback functionality in Subtext:\
+> Fix numerous issues with pingback functionality in Subtext:\
+>
+> - Error in PROD (i.e. "System.Web.HttpException: The file
+>   '/blog/jjameson/Services/Pingback.aspx' does not exist.")\
+> - The "pingback" URL specified in the &lt;link&gt; head element should be an
+>   absolute URL (not a relative URL) according to the Pingback 1.0 specification
+>   (http://www.hixie.ch/specs/pingback/pingback)\
+> - According to the current Subtext routing functionality, the "pingback" URL
+>   needs to include the ID of the post (e.g.
+>   "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")\
+> - Method name was misspelled (i.e. "Notifiy" --&gt; "Notify")
 
-- Error in PROD (i.e. "System.Web.HttpException: The file
-  '/blog/jjameson/Services/Pingback.aspx' does not exist.")\
-- The "pingback" URL specified in the &lt;link&gt; head element should be an
-  absolute URL (not a relative URL) according to the Pingback 1.0 specification
-  (http://www.hixie.ch/specs/pingback/pingback)\
-- According to the current Subtext routing functionality, the "pingback" URL
-  needs to include the ID of the post (e.g.
-  "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")\
-- Method name was misspelled (i.e. "Notifiy" --&gt; "Notify")
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Then again, perhaps Pingback functionality and correct spelling (even in code)
 just isn't all that important to you.

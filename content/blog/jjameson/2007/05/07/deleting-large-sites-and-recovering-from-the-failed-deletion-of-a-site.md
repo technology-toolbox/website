@@ -30,11 +30,12 @@ it) but it did not show up in "{{< kbd "stsadm -o enumsites" >}}". Attempts to
 recreate the site (upon activation of one of our custom features) also failed
 with the following error:
 
-{{< blockquote "fst-italic text-danger" >}}
+{{< div-block "errorMessage" >}}
 
-The system cannot find the path specified. (Exception from HRESULT: 0x80070003)
+> The system cannot find the path specified. (Exception from HRESULT:
+> 0x80070003)
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Something similar happened last month on my initial deployment to TEST (I
 pressed {{< kbd "CTRL+C" >}} while activating one of the features that creates

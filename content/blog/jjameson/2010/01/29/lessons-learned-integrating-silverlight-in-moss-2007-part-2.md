@@ -152,11 +152,11 @@ contains a mix of secured and unsecured content. In other words, the status bar
 shows a small lock icon with a bright red warning symbol, along with the
 following tooltip:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Warning: Contains unauthenticated content
+> Warning: Contains unauthenticated content
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 To avoid this issue in Firefox, you might be tempted to simply change the image
 source to specify
@@ -164,12 +164,12 @@ source to specify
 However, if (like we did) you fire up Fiddler and request this URL, you will
 find the response to be an HTTP 302 (redirect) with the following header:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Location:
-http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
+> Location:
+> http://silverlight.dlservice.microsoft.com/download/d/2/9/d29e5571-4b68-4d95-b43a-4e81ba178455/2.0/ENU/InstallSilverlight.png
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 In other words, while the initial request for the image is HTTPS, the subsequent
 request will be HTTP. [Don't ask me to explain or make any sense of why

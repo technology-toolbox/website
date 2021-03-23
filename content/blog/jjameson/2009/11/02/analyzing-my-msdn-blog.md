@@ -52,18 +52,18 @@ linkHref="http://weblogs.asp.net/joeriksson/archive/2006/07/24/Views-statistics-
 
 Here's the gist of it:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-Generally speaking, "Views" is the number of times somone viewed a post on the
-web via a browser, and "AggViews" is the number of times someone viewed the post
-via the RSS and Atom feeds.
+> Generally speaking, "Views" is the number of times somone viewed a post on the
+> web via a browser, and "AggViews" is the number of times someone viewed the
+> post via the RSS and Atom feeds.
+>
+> More specifically, the web view count is only updated in the EntryView
+> control. This is displayed when you are viewing a single post. If you are
+> viewing a list of posts, such as on the blog home page, the view counts of the
+> posts are not updated.
 
-More specifically, the web view count is only updated in the EntryView control.
-This is displayed when you are viewing a single post. If you are viewing a list
-of posts, such as on the blog home page, the view counts of the posts are not
-updated.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Based on the second paragraph, the numbers shown above are not entirely accurate
 (specifically, they are less than the actual values) but my gut tells me they

@@ -44,13 +44,13 @@ linkHref="http://technet.microsoft.com/en-us/library/cc298636.aspx" >}}
 
 Specifically, here is the text that I am referring to:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-We do not recommend reusing the same IIS Web site for your HTTP and SSL hosting.
-Instead, extend a dedicated HTTP and a dedicated SSL Web site, each assigned to
-its own alternate access mapping zone and URLs.
+> We do not recommend reusing the same IIS Web site for your HTTP and SSL
+> hosting. Instead, extend a dedicated HTTP and a dedicated SSL Web site, each
+> assigned to its own alternate access mapping zone and URLs.
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 Wait a minute...let me see if I've got this right...you want me to extend my Web
 application -- thereby creating yet another copy of my Web.config files -- just

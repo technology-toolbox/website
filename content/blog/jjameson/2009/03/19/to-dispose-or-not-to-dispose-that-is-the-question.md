@@ -36,23 +36,24 @@ the other in March 2009).
 In particular, the guidance around disposing of `ParentWeb` and `RootWeb` has
 been, well, nixed...
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-**SPSite.RootWeb Property**\
-An earlier version of this article indicated that the calling application should
-dispose of the SPSite.RootWeb property just before disposing of the SPSite
-object that is using it. This is no longer the official guidance. The dispose
-cleanup is handled automatically by the SharePoint framework.
+> **SPSite.RootWeb Property**\
+> An earlier version of this article indicated that the calling application
+> should dispose of the SPSite.RootWeb property just before disposing of the
+> SPSite object that is using it. This is no longer the official guidance. The
+> dispose cleanup is handled automatically by the SharePoint framework.
+>
+> ...
+>
+> **SPWeb.ParentWeb Property**\
+> **Updated Guidance**\
+> An earlier version of this article recommended that the calling application
+> should dispose of the SPWeb.ParentWeb. This is no longer the official
+> guidance. The dispose cleanup is handled automatically by the SharePoint
+> framework.
 
-...
-
-**SPWeb.ParentWeb Property**\
-**Updated Guidance**\
-An earlier version of this article recommended that the calling application
-should dispose of the SPWeb.ParentWeb. This is no longer the official guidance.
-The dispose cleanup is handled automatically by the SharePoint framework.
-
-{{< /blockquote >}}
+{{< /div-block >}}
 
 {{< reference
 title="Scott Harris, et. al (2009). Best Practices: Using Disposable Windows SharePoint Services Objects 2009-03-19."

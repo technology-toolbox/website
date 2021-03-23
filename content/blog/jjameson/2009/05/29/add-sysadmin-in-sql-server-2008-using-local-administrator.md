@@ -37,11 +37,11 @@ the "Replacement" information didn't help me in the slightest.
 
 I tried an Internet search (using both Windows Live Search and Google) for:
 
-{{< blockquote "fst-italic" >}}
+{{< div-block "fst-italic" >}}
 
-add sysadmin SQL Server 2008
+> add sysadmin SQL Server 2008
 
-{{< /blockquote >}}
+{{< /div-block >}}
 
 However, neither search returned anything useful (at least not within the first
 two pages of results -- which is typically my threshold before I move on to a
