@@ -11,8 +11,11 @@
   {{- $linkHref := .Get "linkHref" -}}
   {{- $linkText := .Get "linkText" | default $linkHref -}}
 
-<blockquote class="reference">
+<div class="reference">
   <cite>{{ $title }}</cite>
-  <div class="referenceLink">
-    <a href="{{ $linkHref }}">{{ $linkText }}</a></div>
-</blockquote>
+  <p class="referenceLink">
+    <a href="{{ $linkHref }}" rel="noopener noreferrer" target="_blank">
+      {{ $linkText }}
+    </a>
+  </p>
+</div>
