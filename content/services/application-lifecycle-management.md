@@ -2,7 +2,6 @@
 layout: page-with-side-image
 title: "Application Lifecycle Management"
 date: 2021-02-11T05:59:24-07:00
-draft: true
 imageDescription: "Large icon with Visual Studio logo"
 imageUrl: "/services/img/icon-application-lifecycle-management-347x346.jpg"
 ---

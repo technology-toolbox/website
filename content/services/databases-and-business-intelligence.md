@@ -2,7 +2,6 @@
 layout: page-with-side-image
 title: "Databases and Business Intelligence"
 date: 2021-02-11T09:03:46-07:00
-draft: true
 imageDescription: "Large icon with database symbols and line chart"
 imageUrl: "/services/img/icon-databases-and-business-intelligence-347x346.jpg"
 ---

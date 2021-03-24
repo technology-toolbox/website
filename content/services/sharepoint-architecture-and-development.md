@@ -2,7 +2,6 @@
 layout: page-with-side-image
 title: "Sharepoint Architecture and Development"
 date: 2021-02-11T09:03:30-07:00
-draft: true
 imageDescription: "Large icon with SharePoint 2010 logo"
 imageUrl: "/services/img/icon-SharePoint-2010-347x346.jpg"
 ---
