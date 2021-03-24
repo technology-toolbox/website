@@ -1,7 +1,6 @@
 ---
 title: "Terms of Use"
 date: 2021-02-11T10:07:41-07:00
-draft: true
 ---
 
 ## Website Use

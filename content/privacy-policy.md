@@ -1,7 +1,6 @@
 ---
 title: "Privacy Policy"
 date: 2021-02-11T10:04:46-07:00
-draft: true
 ---
 
 Last updated: September 2011
