@@ -1,0 +1,23 @@
+{
+  "name": "technology-toolbox-website",
+  "version": "1.0.0",
+  "description": "Technology Toolbox website (https://www.technologytoolbox.com)",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier-plugin-go-template": "^0.0.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technology-toolbox/website.git"
+  },
+  "author": "Jeremy Jameson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technology-toolbox/website/issues"
+  },
+  "homepage": "https://github.com/technology-toolbox/website#readme"
+}
