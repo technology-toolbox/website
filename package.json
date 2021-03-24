@@ -10,6 +10,7 @@
     "prettier-plugin-go-template": "^0.0.10"
   },
   "scripts": {
+    "build:azure": "echo \"Note: Build for Azure Static Web Apps (preview) is handled in custom YAML step\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
