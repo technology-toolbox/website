@@ -40,12 +40,12 @@ should look good "naked" -- in other words, without any CSS rules applied:
 > ...with no distracting layout, the meaningful structure of your naked content
 > becomes clear: Visitors can more easily see headings and hierarchy, and they
 > can more easily identify paragraphs, quotations, and lists.
->
+> 
 > Such meaningful markup and structure simplifies design. Everyone will benefit
 > from an altogether simpler user experience, one that will be as easy to
 > navigate on any device from a large monitor to a small-screen mobile phone.
 > <cite>-- Clarke, Andy. "Semantics Is Meaning." <a
-href="http://www.transcendingcss.com/">Transcending CSS</a>. Berkley: New
+> href="http://www.transcendingcss.com/">Transcending CSS</a>. Berkley: New
 > Riders, 2007: 65.</cite>
 
 {{< /div-block >}}
@@ -93,11 +93,11 @@ is when I discovered the hAtom 0.1 microformat:
 
 > hAtom is a microformat for content that can be syndicated, primarily but not
 > exclusively weblog postings. [...]
->
+> 
 > ...
->
+> 
 > The hAtom schema consists of the following:
->
+> 
 > - hfeed (**`hfeed`**). optional.
 >   - **`feed category`**. optional. keywords or phrases, using
 >     **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
@@ -106,19 +106,20 @@ is when I discovered the hAtom 0.1 microformat:
 >     - **`entry-content`**. optional (see field description). text. [\*]
 >     - **`entry-summary`**. optional. text.
 >     - **`updated`**. required using
->       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
 >       [\*]
 >     - **`published`**. optional using
->       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
 >     - **`author`**. required using
 >       **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
 >     - **`bookmark`** (permalink). optional, using
->       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+> **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
 >     - tags. optional. keywords or phrases, using
 >       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
->
+> 
+> 
 > <cite>-- <a
-href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
+> href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
 > </cite>
 
 {{< /div-block >}}
@@ -216,20 +217,22 @@ according to the hAtom schema (e.g. `<li class="published">`).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > At this point, I have deliberately deviated from the
 > [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern")
 > for the publication date (i.e. `<li class="published">`) due to the known
 > accessibility issues with the Datetime Design Pattern (i.e. using an `<abbr>`
 > element to represent the date/time with the `title` attribute containing the
 > ISO8601 datetime value).
->
+> 
 > Instead, I chose to use a simpler format based on the
 > [Value Class Pattern](http://microformats.org/wiki/value-class-pattern).
 
 {{< /div-block >}}
 
-The post summaries are rendered as paragraphs inside `<div class="entry-summary">` elements.
+The post summaries are rendered as paragraphs inside `<div
+class="entry-summary">` elements.
 
 By adding the `<span class="label">` elements to various pieces of text, I can
 easily hide some portions of the content via CSS. For example, notice how the
@@ -323,12 +326,13 @@ element is replaced by the `<div class="entry-content">` element.
 
 The "trick" to formatting the same HTML differently when viewing individual blog
 posts (for example, to show the time portion of the publication date) is to
-specify a different "container" element than the blog home page (e.g. `<div id="blogPost">` instead of `<div id="blogHome">`).
+specify a different "container" element than the blog home page (e.g. `<div
+id="blogPost">` instead of `<div id="blogHome">`).
 
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > I like to specify unique "container" elements like this for all pages in a Web
 > application (e.g. `<div id="companyHome">`). Even though you typically want
 > CSS rules to be very generic (and thus apply to all pages), there may be times
@@ -354,3 +358,4 @@ Whenever you are creating a new website -- or adding a new feature to an
 existing site -- I encourage you to start by focusing on the "naked" structure.
 Once you have defined the meaningful structure for your content, you can then
 proceed to making it "look pretty."
+

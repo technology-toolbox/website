@@ -179,3 +179,4 @@ short on time this morning, so I'll tack "Part 1" onto this post and defer the
 rest to
 ["Part 2" in this series](/blog/jjameson/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2).
 Stay tuned.
+

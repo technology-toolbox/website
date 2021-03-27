@@ -207,18 +207,19 @@ cd ..\..\Web\DeploymentFiles\Scripts
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > There is a bug in several of the out-of-the-box master pages in MOSS 2007
 > (including **BlueBand.master**) that prevent AJAX from working correctly. The
 > asynchronous postback is triggered and processed on the server, but the
 > response is never reflected in the corresponding **UpdatePanel**. The problem
 > is that the `<WebPartPages:SPWebPartManager>` is declared outside of the
 > `<form>` element.
->
+> 
 > To fix this, you can edit the master page (e.g. using SharePoint Designer) and
 > move `<WebPartPages:SPWebPartManager>` inside the `<form>` element -- or
 > simply change the site to use **default.master**.
->
+> 
 > Yvan Duhamel has more detail in
 > [his post about this issue](http://blogs.msdn.com/yvan_duhamel/archive/2009/05/19/ajax-postbacks-not-working-with-any-masterpage-other-than-default-master.aspx),
 > if you are interested.
@@ -716,3 +717,4 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 
 In [part 2](/blog/jjameson/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2) of
 this post, I'll cover more detail on developing AJAX Web Parts for MOSS 2007.
+

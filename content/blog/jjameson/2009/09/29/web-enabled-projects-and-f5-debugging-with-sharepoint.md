@@ -80,7 +80,9 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
    element, add the following:\
    \
-   `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
+   `<Import
+   Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets"
+   Condition="" />`
 6. On the **File** menu, click **Close**. When prompted to save the file, click
    **Yes**.
 7. In the **Solution Explorer** window, right-click the project, and then click
@@ -102,7 +104,7 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > In addition to seeing the **Web** tab in project settings, you will also find
 > that adding items like ASPX pages and ASCX controls is much easier after
 > "Web-enabing" your project.
@@ -158,3 +160,4 @@ You can then simply press {{< kbd "F5" >}} to start debugging again. Woohoo,
 indeed!
 
 I hope this makes you a happier and more productive SharePoint developer.
+

@@ -98,35 +98,28 @@ added to to the appropriate database roles.
 
 1. Click **Start**, point to **All Programs**, click **Accessories**, and
    right-click **Command Prompt**, and then click **Run as administrator**.
-
 2. At the command prompt, type the following command:
-   
+
    ```Console
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
-
 3. Type the following command:
-   
+
    ```Console
    aspnet_regsql.exe
    ```
-
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click
    **Next**.
-
 5. On the **Select a Setup Option** page, ensure the option to **Configure SQL
    Server for application services** is selected and then click **Next**.
-
 6. On the **Select the Server and Database** page:
-   
+
    1. In the **Server** box, type the name of the database server.
    2. Ensure the **Windows authentication** option is selected.
    3. In the **Database** dropdown list, type **FabrikamDemo**.
    4. Click **Next**.
-
 7. On the **Confirm Your Settings** page, verify the settings, and then click
    **Next**.
-
 8. Wait for the database to be created and then click **Finish**.
 
 #### To add the service accounts to the membership/role database:
@@ -160,7 +153,7 @@ added to to the appropriate database roles.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Database access must be granted to both the service account used for the
 > Fabrikam Web application and the SharePoint farm account. If the SharePoint
 > farm account does not have access to the database, the Security Token Service
@@ -172,7 +165,7 @@ added to to the appropriate database roles.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The reason the database roles are different between the two service accounts
 > is because the SharePoint farm account only needs permissions to validate
 > credentials and determine role membership, whereas the Fabrikam Web
@@ -192,12 +185,11 @@ In this step, the Web application and initial site collection are created.
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click **Yes**.
-
 2. From the Windows PowerShell command prompt, run the following script:
-   
+
    ```PowerShell
    $ErrorActionPreference = "Stop"
-   
+
    $appPoolUserName = "EXTRANET\svc-web-fabrikam"
    $membershipProviderName = "FabrikamSqlMembershipProvider"
    $roleProviderName = "FabrikamSqlRoleProvider"
@@ -205,27 +197,27 @@ In this step, the Web application and initial site collection are created.
    $webAppUrl = "http://www.fabrikam.com"
    $contentDatabaseName = "WSS_Content_FabrikamDemo"
    $appPoolName = $webAppName
-   
+
    Write-Debug "Get service account for application pool ($appPoolUserName)..."
    $appPoolAccount = Get-SPManagedAccount -Identity $appPoolUserName -EA 0
-   
+
    if($appPoolAccount -eq $null)
    {
        Write-Host "Registering managed account ($appPoolUserName)..."
-   
+
        Write-Debug "Get credential ($appPoolUserName)..."
        $appPoolCredential = Get-Credential $appPoolUserName
-   
+
        $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential
-   }
-   
+   } 
+
    $windowsAuthProvider = New-SPAuthenticationProvider
    $formsAuthProvider = New-SPAuthenticationProvider `
        -ASPNETMembershipProvider $membershipProviderName `
        -ASPNETRoleProviderName $roleProviderName
-   
+
    $authProviders = $windowsAuthProvider, $formsAuthProvider
-   
+
    $webApp = New-SPWebApplication -Name $webAppName -AllowAnonymousAccess `
        -ApplicationPool $appPoolName -AuthenticationMethod "NTLM" `
        -ApplicationPoolAccount $appPoolAccount -Url $webAppUrl -Port 80 `
@@ -236,21 +228,20 @@ In this step, the Web application and initial site collection are created.
 
 1. If necessary, start an Administrator instance of the SharePoint 2010
    Management Shell.
-
 2. From the Windows PowerShell command prompt, run the following script:
-   
+
    ```PowerShell
    $ErrorActionPreference = "Stop"
-   
+
    $webAppUrl = "http://www.fabrikam.com"
    $siteName = "Fabrikam"
    $siteDescription = "Public Internet site for Fabrikam Technologies"
    $siteTemplate = "BLANKINTERNETCONTAINER#0"
-   
+
    $ownerAlias = $env:USERDOMAIN + "\" + $env:USERNAME
-   
+
    $siteUrl = $webAppUrl + "/"
-   
+
    New-SPSite $siteUrl -OwnerAlias $ownerAlias -Name $siteName `
        -Description $siteDescription -Template $siteTemplate
    ```
@@ -303,51 +294,50 @@ the site collection must also be configured to enable anonymous access.
 
 1. If necessary, start an Administrator instance of the SharePoint 2010
    Management Shell.
-
 2. From the Windows PowerShell command prompt, run the following script:
-   
+
    ```PowerShell
    $ErrorActionPreference = "Stop"
-   
+
    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-   
+
    $webUrl = "http://www.fabrikam.com/"
-   
+
    function EnableAnonymousAccess(
        [Microsoft.SharePoint.SPWeb] $web)
    {
        Write-Debug "Enabling anonymous access on site ($($web.Url))..."
-   
+
        $anonymousPermissionMask =
            [Microsoft.SharePoint.SPBasePermissions]::Open `
            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewFormPages `
            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewListItems `
            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewPages `
            -bor [Microsoft.SharePoint.SPBasePermissions]::ViewVersions
-   
+
        if ($web.AnonymousPermMask64 -eq $anonymousPermissionMask)
        {
            Write-Debug `
                "Anonymous access is already enabled on site ($($web.Url))."
-   
+               
            return;
        }
-   
+
        if ($web.HasUniqueRoleAssignments -eq $false)
        {
            $web.BreakRoleInheritance($true);
        }
-   
+
        $web.AnonymousPermMask64 = $anonymousPermissionMask;
        $web.Update();
-   
+       
        Write-Host -Fore Green `
            "Successfully enabled anonymous access on site ($($web.Url))."
    }
-   
+
    $DebugPreference = "SilentlyContinue"
    $web = Get-SPWeb $webUrl
-   
+
    $DebugPreference = "Continue"
    EnableAnonymousAccess $web
    ```
@@ -365,67 +355,60 @@ necessary to modify the Web.config files for the following sites:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **Internet
    Information Services (IIS) Manager**.
-
 2. In **Internet Information Services (IIS) Manager**, in the **Connections**
    pane, click the plus sign (+) next to the server name that contains the Web
    application, and then click the plus sign next to **Sites** to view the Web
    applications that have been created.
-
 3. Right-click **SharePoint Central Administration v4**, and then click **Explore**. Windows Explorer opens, with the directories for the selected Web application listed.
-   
+
    {{< div-block "note important" >}}
-   
+
    > **Important**
    > 
    > Before you make changes to the Web.config file, make a copy of it by using
    > a different name (for example, "Web - Copy.config"), so that if a mistake
    > is made in the file, you can delete it and use the original file.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 4. Double-click the **Web.config** file to open the file.
-   
+
    {{< div-block "note" >}}
-   
+
    > **Note**
    > 
    > If you see a dialog box that says that Windows cannot open the file, click
    > **Select the program from a list**, and then click **OK**. In the **Open
    > With** dialog box, click **Notepad**, and then click **OK**.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 5. In the Web.config editor:
-   
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
-      
+
       ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-      
+
       {{< div-block-start "note important" >}}
-      
+
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
-      
+
       {{< div-block-end >}}
-   
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-      
+
       ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
         connectionStringName="FabrikamDemo" />
       ```
-   
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-      
+
       ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -433,7 +416,6 @@ necessary to modify the Web.config files for the following sites:
         connectionStringName="FabrikamDemo"
         passwordFormat="Hashed" />
       ```
-
 6. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Security Token Service Web.config file:
@@ -441,18 +423,16 @@ necessary to modify the Web.config files for the following sites:
 1. In **Internet Information Services (IIS) Manager**, in the **Connections**
    pane, expand the **SharePoint Web Services** site, right-click the
    **SecurityTokenServiceApplication** subsite, and then click **Explore**.
-
 2. Double-click the **Web.config** file to open the file.
-
 3. In the Web.config editor, add the following elements to the `<configuration>` root element:
-   
+
    ```XML
    <connectionStrings>
      <add
      name="FabrikamDemo"
      connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
    </connectionStrings>
-   
+
    <system.web>
      <membership>
        <providers>
@@ -475,16 +455,15 @@ necessary to modify the Web.config files for the following sites:
      </roleManager>
    </system.web>
    ```
-   
+
    {{< div-block "note important" >}}
-   
+
    > **Important**
    > 
    > Be sure to replace the **{databaseServer}** placeholder in the connection
    > string with the name of the database server.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 4. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Web.config file for the Fabrikam Web application:
@@ -495,42 +474,40 @@ necessary to modify the Web.config files for the following sites:
 2. Double-click the **Web.config** file to open the file.
 3. In the Web.config editor:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
-      
+
       ```XML
         <connectionStrings>
           <add name="FabrikamDemo"
             connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
         </connectionStrings>
       ```
-      
+
       {{< div-block-start "note important" >}}
-      
+
       > **Important**
       > 
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
-      
+
       {{< div-block-end >}}
-   
    2. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
-      
+
       ```XML
       <add name="FabrikamSqlRoleProvider"
         type="System.Web.Security.SqlRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
         applicationName="Fabrikam Demo Site"
         connectionStringName="FabrikamDemo" />
       ```
-      
+
       {{< div-block-start "note warning" >}}
-      
+
       > **Warning**
       > 
       > Do not overwrite any existing entries in this Web.config file.
-      
+
       {{< div-block-end >}}
-   
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
-      
+
       ```XML
       <add name="FabrikamSqlMembershipProvider"
         type="System.Web.Security.SqlMembershipProvider, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
@@ -589,23 +566,21 @@ both Forms-Based Authentication and Windows authentication.
 #### To login to the Fabrikam Web site using Windows authentication:
 
 1. Add the Fabrikam Web site to the **Local intranet** zone (in order to seamlessly authenticate with the current domain credentials).
-   
+
    {{< div-block-start "note" >}}
-   
+
    > **Note**
+   > 
    > 
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 2. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.
-
 3. On the **Sign In** page, in the dropdown list, click **Windows
    Authentication**.
-
 4. Verify the home page is displayed and the **Sign In** link has been replaced
    with the "Welcome" menu.
 
@@ -616,3 +591,4 @@ In
 I explain how to create a custom Web Part that can be used to provide a
 "branded" login page (instead of the generic "Sign In" page provided
 out-of-the-box in SharePoint Server 2010).
+

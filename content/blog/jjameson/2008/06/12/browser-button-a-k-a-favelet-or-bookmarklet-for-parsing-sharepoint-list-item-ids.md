@@ -102,3 +102,4 @@ For Firefox users:
    and choose **Delete**.
 2. A confirmation dialog will warn you that the button will be permanently
    deleted. Click **Yes**.
+

@@ -165,10 +165,11 @@ the fact that I built lots of these on my previous project that I can reference
 {{< div-block "note update" >}}
 
 > **Update (2009-03-31)**
->
+> 
 > Note that I have posted an
 > [update on WSPBuilder](/blog/jjameson/2009/03/31/updated-thoughts-on-wspbuilder)
 > based on some feedback I received from Carsten Keutmann, the creator of
 > WSPBuilder.
 
 {{< /div-block >}}
+

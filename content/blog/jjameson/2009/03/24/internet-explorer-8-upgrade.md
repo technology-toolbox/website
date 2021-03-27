@@ -78,24 +78,26 @@ out of my toolbox ;-)
 {{< div-block "note update" >}}
 
 > **Update (2009-03-25)**
->
+> 
+> 
 > Yesterday I forgot to mention another vastly improved feature in IE8.
->
+> 
 > I tend to use {{< kbd "CTRL+F" >}} frequently to find a particular string on a
 > page (error messages, method names, etc.). When compared with Firefox, the
 > user experience of the "Find on this page" feature in versions prior to IE8
 > left a little to be desired -- to put it mildly.
->
+> 
 > Prior to IE8, your could {{< kbd "CTRL+F" >}}, start typing your search term,
 > and then press {{< kbd "Enter" >}} to quickly find the specified string on the
 > page; however, if you decided that you wanted to search for something else,
 > then a subsequent {{< kbd "CTRL+F" >}} would only cause the **Find** dialog
 > window to get focus, but you couldn't immediately start typing your new search
 > term (because the focus would be on the **Next** button).
->
+> 
 > Fortunately, this has been overhauled in IE8 by eliminating the **Find**
 > dialog altogether and instead integrating this feature into the main window.
 > You can now quickly use {{< kbd "CTRL+F" >}} repeatedly to search for
 > different terms on a page. IE8 even has "hit highlighting" similar to Firefox.
 
 {{< /div-block >}}
+

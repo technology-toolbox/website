@@ -140,3 +140,4 @@ was added back in a subsequent version, either Visual Studio .NET 2003 or Visual
 Studio 2005 (honestly, it's been too long to remember). Perhaps that the reason
 why the original prescriptive guidance on MSDN makes no mention of
 unloading/loading projects. Thank goodness it's back!
+

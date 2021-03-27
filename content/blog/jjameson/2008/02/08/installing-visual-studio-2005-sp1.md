@@ -50,7 +50,7 @@ Looking at the event log, I noticed the following errors:
 > The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to
 > an error in software restriction policy processing. The object cannot be
 > trusted.
->
+> 
 > Event Type: Error\
 > Event Source: MsiInstaller\
 > Event Category: None\
@@ -64,7 +64,7 @@ Looking at the event log, I noticed the following errors:
 > 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature
 > check. For more information about a possible resolution for this problem, see
 > [http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
->
+> 
 > Event Type: Error\
 > Event Source: MsiInstaller\
 > Event Category: None\
@@ -95,7 +95,7 @@ actually, I just stole the pieces from
 
 ```Batch
 :: This is basically a combination of two of Heath Stewart's blog postings
-::
+:: 
 :: http://blogs.msdn.com/heaths/archive/2007/01/11/workaround-for-error-1718.aspx
 :: http://blogs.msdn.com/heaths/archive/2006/11/28/save-time-and-space-for-vs-2005-sp1-by-disabling-the-patch-cache.aspx
 
@@ -139,3 +139,4 @@ again.
 I really hope Windows Server 2008 has been updated to acknowledge the fact that
 patches from Microsoft may very well be several hundred megabytes (so we don't
 have to hack the registry to get them to install in the future).
+

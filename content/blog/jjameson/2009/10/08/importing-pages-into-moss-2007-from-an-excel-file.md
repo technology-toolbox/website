@@ -308,7 +308,7 @@ namespace Fabrikam.Demo.CoreServices
 
             if (isExcelFile == true)
             {
-                // Get all of the Table names from the Excel workbook
+                // Get all of the Table names from the Excel workbook 
                 DataTable worksheetTables = connection.GetOleDbSchemaTable(
                     OleDbSchemaGuid.Tables,
                     null);
@@ -372,10 +372,10 @@ namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
     /// <remarks>
     /// All methods of the <c>PageImporter</c> class are static and can
     /// therefore be called without creating an instance of the class.
-    /// </remarks>
+    /// </remarks>    
     class PageImporter
     {
-        private PageImporter() { } // all members are static
+        private PageImporter() { } // all members are static 
 
         /// <summary>
         /// Imports pages into the specified SharePoint site using data from
@@ -606,3 +606,4 @@ namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
 
 I'll cover the details of the `SharePointPublishingHelper` class in a
 [separate post](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class).
+

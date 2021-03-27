@@ -47,7 +47,7 @@ using Microsoft.SharePoint;
             // fetched."
             SPList tempFilesLibrary2 =
                 tempFilesLibrary.ParentWeb.Lists[tempFilesLibrary.ID];
-
+            
             SPContentTypeId documentContentTypeId =
                 tempFilesLibrary2.ContentTypes.BestMatch(
                     SPBuiltInContentTypeId.Document);
@@ -56,7 +56,7 @@ using Microsoft.SharePoint;
                 tempFilesLibrary2.ContentTypes[documentContentTypeId];
 
             Debug.Assert(documentContentType != null);
-
+            
             Policy policy = Policy.GetPolicy(documentContentType);
 
             if (policy == null)
@@ -91,13 +91,14 @@ which files to delete).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > As shown in the HACK comment above, I fetch a new **SPList** object in order
 > to avoid the following error when configuring the expiration policy
 > immediately after creating a new document library:
->
+> 
 > The object has been updated by another user since it was last fetched.
->
+> 
 > This error occurred in Microsoft Office SharePoint Server (MOSS) 2007 --
 > although I just ran a quick test in SharePoint 2010 and it looks like this may
 > no longer be an issue in the new version.
@@ -106,3 +107,4 @@ which files to delete).
 
 In my next post, I'll explain more about storing files temporarily in
 SharePoint.
+

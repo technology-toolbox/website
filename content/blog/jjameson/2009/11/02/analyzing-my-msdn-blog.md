@@ -57,7 +57,7 @@ Here's the gist of it:
 > Generally speaking, "Views" is the number of times somone viewed a post on the
 > web via a browser, and "AggViews" is the number of times someone viewed the
 > post via the RSS and Atom feeds.
->
+> 
 > More specifically, the web view count is only updated in the EntryView
 > control. This is displayed when you are viewing a single post. If you are
 > viewing a list of posts, such as on the blog home page, the view counts of the
@@ -235,7 +235,6 @@ Community Server dashboard (which does not include "AggViews") to see the list
 of referrals, I encountered the largest HTML table I've ever seen on a page
 (over 5,500 rows). After a couple of attempts, I managed to copy all of the data
 into my Excel workbook and then sort by **Hits** descending.
-
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
 {{< table class="small table-striped"
 caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
@@ -306,3 +305,4 @@ most popular post, I would see very similar results.
 I'm not sure how useful this information might be to others, but I found it very
 enlightening. It gives me some great things to keep in mind when I sit down to
 work on my blog.
+

@@ -19,10 +19,11 @@ tags: ["Infrastructure", "Windows 7"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx"
 ---
 
+
 {{< div-block "note update" >}}
 
 > **Update (2010-08-05)**
->
+> 
 > Note that I was unable to reproduce the virus infection after installing
 > Soluto on a different environment. I encourage you to read
 > [my next post](/blog/jjameson/2010/08/05/update-on-soluto-and-antivir-solution-pro-virus)
@@ -87,3 +88,4 @@ forums. I'm sure you can understand why I didn't feel comfortable registering
 any personal information with your site in light of my experience today.
 However, please feel free to contact me through my blog. I really would like to
 be able to eventually recommend Soluto to my friends, family, and customers.
+

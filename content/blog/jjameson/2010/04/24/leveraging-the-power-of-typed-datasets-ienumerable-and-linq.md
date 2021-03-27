@@ -154,7 +154,7 @@ caption="Key Performance Indicators (Detail)" >}}
 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -497,7 +497,7 @@ separate method:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > You might have chosen to use LINQ instead of the `foreach` loop to verify the
 > list of scorecard items all refer to the same KPI and return it. Just be sure
 > you account for scenarios such as when the KPI names specified by the
@@ -543,7 +543,7 @@ overload of the method (shown above):
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Note that by replacing the original approach of filtering the scorecard items
 > (using a DataView) with a LINQ query expression, we've made a substantial
 > improvement in the code. For example, if we were to rename the KpiName column
@@ -568,3 +568,4 @@ Let's wrap this up with a few key points:
   a variety of ways without requiring a change to the services layer).
 - Using LINQ with typed DataSets makes it very easy to filter your data (while
   also catching potential problems at compile-time instead of at run-time).
+

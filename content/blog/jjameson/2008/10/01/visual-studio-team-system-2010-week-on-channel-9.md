@@ -25,3 +25,4 @@ that will be released over the course of this week announcing the most exciting
 new features in Visual Studio 2010. The Technical Evanglelists (boy, isn't that
 a dream job?!) have also created a
 [new area on Channel 9 devoted to Visual Studio and the .NET Framework](http://channel9.msdn.com/VisualStudio/).
+

@@ -86,29 +86,25 @@ Application event log:
 7. On the **Build Event Expression**page:
    1. Specify the following expression:
       {{< table class="small table-striped" >}}
-      
+
       | Parameter Name | Operator | Value |
       | --- | --- | --- |
       | Event Level | Equals | Error |
-      
+
       {{< /table >}}
-   
    2. Click **Next**.
 8. On the **Configure Alerts**page:
    1. In the **Alert description** box, specify the following:
-      
+
       **Source: $Data/EventSourceName$\
       Event ID: $Data/EventDisplayNumber$\
       Event Category: $Data/EventCategory$\
       User: $Data/UserName$\
       Computer: $Data/LoggingComputer$\
       Event Description: $Data/EventDescription$**
-   
    2. In the **Severity** option, click **Warning**.
-   
    3. Click **Alert suppression...** to define the handling of duplicate alerts.
       In the **Alert Suppression**dialog:
-      
       1. Click the following fields:
          - **Event ID**
          - **Event Source**
@@ -117,7 +113,6 @@ Application event log:
          - **User**
          - **Description**
       2. Click **OK**.
-   
    4. Click **Create**.
 
 Repeat the process to create a similar alert for errors in the System event log.
@@ -125,19 +120,20 @@ Repeat the process to create a similar alert for errors in the System event log.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > If you do not specify any fields in the Alert Suppression dialog, then you may
 > receive numerous alerts within a short period of time (for example, when
 > SharePoint Server 2010 floods the Application event log due to an issue with
 > least-privilege configuration).
->
+> 
 > When this occurs, Operations Manager will detect the high frequency of alerts
 > and temporarily suspend the notification, and display a different alert
 > instead:
->
+> 
 > **Alert rule:** Alert generation was temporarily suspended due to too many
 > alerts.
->
+> 
 > **Alert description:** A rule has generated 50 alerts in the last 60 seconds.
 > Usually, when a rule generates this many alerts, it is because the rule
 > definition is misconfigured. Please examine the rule for errors. In order to
@@ -148,7 +144,7 @@ Repeat the process to create a similar alert for errors in the System event log.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The reason why I choose to set the **Severity** to **Warning** (instead of the
 > default -- **Critical**) is so that when an event log error generates a
 > similar alert in one of the other management packs, I immediately focus on the
@@ -169,3 +165,4 @@ occurring again in the future.
 I've attached my sample management pack with the two custom rules -- just in
 case you want to save yourself the 5 minutes or so it takes to configure the
 rules.
+

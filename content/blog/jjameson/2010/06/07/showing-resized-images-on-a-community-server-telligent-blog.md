@@ -75,7 +75,7 @@ preserve the aspect ratio of the image).
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > There appears to be a bug in Telligent Evolution 5.5 when the filename for the
 > image contains certain characters (e.g. parentheses). For example, if you
 > upload an image named "Upgraded TFS project site in SharePoint Server 2010
@@ -86,3 +86,4 @@ preserve the aspect ratio of the image).
 > expected.
 
 {{< /div-block >}}
+

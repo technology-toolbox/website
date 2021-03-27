@@ -54,30 +54,28 @@ To resolve the error after applying an old Hyper-V snapshot on a VM joined to a
 domain:
 
 1. Login to the VM using a local administrator account.
-
 2. Open an administrator command prompt and run the following command:
-   
+
    {{< console-block-start >}}
-   
+
    netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:\*
-   
+
    {{< console-block-end >}}
    For example:
-   
+
    {{< console-block-start >}}
-   
+
    netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
-   
+
    {{< console-block-end >}}
-   
+
    {{< div-block "note" >}}
-   
+
    > **Note**
    > 
    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 3. Logout and log back in using a domain account.
 
 Note that this issue doesn't always occur when rolling back a snapshot. It
@@ -91,3 +89,4 @@ synchronized from the domain controller). However, when using snapshots, the
 latency in waiting for the time to synchronize after applying a snapshot can
 quickly become unbearable (especially if you are frequently applying a
 snapshot).
+

@@ -42,7 +42,7 @@ resource).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Originally, I thought I needed to reference a local jQuery file during
 > development in order to get Intellisense while writing JavaScript (i.e. by
 > referencing a jQuery script residing side-by-side with a corresponding "vsdoc"
@@ -206,7 +206,7 @@ if you want to read more about this technique.)
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > If you are wondering why I use the
 > **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**
 > method with the `<script>` elements but not the `<link>` elements, it's simply
@@ -222,13 +222,12 @@ circumstances):
 - If your site needs to support both HTTP and HTTPS, then the references to the
   jQuery script on the CDN should use the same protocol (otherwise users may
   receive warnings in their browsers).
-
 - If you need to support skins (á la Subtext) then you may not be able to use
   inline script (server-side script, obviously -- not client-side script). For
   example, if you try to conditionally include minified script files in a custom
   Subtext blog skin (i.e. by adding it to PageTemplate.ascx) then you'll be
   greeted with a rather nasty error message:
-  
+
   > The Controls collection cannot be modified because the control contains code
   > blocks (i.e. &lt;% ... %&gt;).
 
@@ -300,7 +299,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
         {
             this.Attributes.Add("type", "text/javascript");
         }
-
+        
         public string SourceFile { get; set; }
         public string DebugSourceFile { get; set; }
 
@@ -404,7 +403,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
                     this.Page.Request.IsSecureConnection ? "https" : "http",
                     this.Version);
             }
-
+                
             base.OnPreRender(e);
         }
     }
@@ -431,3 +430,4 @@ this:
   ...
 </head>
 ```
+

@@ -114,3 +114,4 @@ The space savings are obviously much higher on the Release Server that archives
 the Debug and Release outputs from each build.
 
 Note that we were using Visual Studio 2005 on my previous project.
+

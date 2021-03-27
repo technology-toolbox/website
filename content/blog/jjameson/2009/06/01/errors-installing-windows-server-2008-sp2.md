@@ -31,9 +31,9 @@ discovered the following:
 
 > Windows Server 2008 Service Pack 2 Standalone x64-based Systems (KB948465) -
 > English, French, German, Japanese, Spanish
->
+> 
 > Event reported at 6/1/2009 3:02 AM:
->
+> 
 > Installation Failure: Windows failed to install the following update with
 > error 0x80070643: Windows Server 2008 Service Pack 2 Standalone x64-based
 > Systems (KB948465) - English, French, German, Japanese, Spanish.
@@ -116,3 +116,4 @@ least not until Windows Server 2008 SP2 came along.
 
 Now all I have to do is add some more disk space to the other servers that are
 failing to install SP2.
+

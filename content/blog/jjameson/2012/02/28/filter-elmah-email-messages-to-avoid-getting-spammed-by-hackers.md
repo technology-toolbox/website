@@ -38,7 +38,7 @@ avoid sending messages when an error occurs as a result of a known hack attempt.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > TechnologyToolbox.com is configured to log errors to both email and SQL
 > Server. I still believe it is important to track all errors on the site (for
 > example, to keep tabs on the frequency of hack attempts). However I'm okay
@@ -322,7 +322,7 @@ here is the gist of it:
 > **FullTrustEvaluationStrategy** when using **FilterSourceType.Name** (in other
 > words, **FilterSourceType.Name** is not evaluated the second time through when
 > the **ErrorMailModule** context object is passed to the **Eval** method).
->
+> 
 > The filter should work the same in Full trust and Medium trust (meaning the
 > error should be logged, but an email should not be sent from ELMAH due to the
 > filter). Instead of correctly applying the filter in the Full trust
@@ -350,3 +350,4 @@ is never perfect."
 ELMAH may have a few issues in a small number of scenarios, but overall, I have
 to say that I consider it to be fantastic. In many ways, I even like it better
 than the equivalent error handling functionality in SharePoint :-)
+

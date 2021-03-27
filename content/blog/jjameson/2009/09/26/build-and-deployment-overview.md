@@ -122,7 +122,7 @@ the Test team (in order to create test cases).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The daily build provides a "heartbeat" of the development effort that can be
 > monitored regularly by all team members -- not just the Development team.
 
@@ -206,3 +206,4 @@ Note the following key concepts illustrated in the previous figure:
   the installation guide (which details the install scripts and configuration
   steps to be used) just as the Test team did when installing the solution into
   the TEST environment.
+

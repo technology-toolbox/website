@@ -463,7 +463,7 @@ page), the `<customErrors>` element is used:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > If you'd prefer to configure these settings in IIS Manager (rather than
 > editing the Web.config file directly), under the **IIS** section double-click
 > **Error Pages** (to modify the `<httpErrors>` element) or under the
@@ -527,7 +527,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
         /// (e.g. ".../404.aspx?aspxerrorpath=/blog/jjameson/...") depending on
         /// whether redirectMode="ResponseRewrite" or
         /// redirectMode="ResponseRedirect".
-        ///
+        /// 
         /// However, when a native IIS7 request redirects to this page (e.g.
         /// when requesting "/foobar") then Request.Url is something like
         // ".../Errors/404.aspx?404;https://www.technologytoolbox.com:80/foobar".
@@ -633,7 +633,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > I typically remove comments from code when pasting into blog posts. However,
 > I've kept all of the comments in this case so that you can understand the
 > details of the implementation (without having to describe them separately).
@@ -664,3 +664,4 @@ Assuming you haven't enabled Directory Browsing in IIS, then if someone hacks
 the URL to browse to /Dashboards then IIS would show its default 403 error page
 (similar to Figure 2). With very little work, you could create your own 403
 error page and "wire it up" via the Web.config file.
+

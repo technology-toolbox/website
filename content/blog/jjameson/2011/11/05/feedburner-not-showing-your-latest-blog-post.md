@@ -37,13 +37,14 @@ the latest blog post.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > I had to specify my "Feed Address" (i.e.
 > [http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson](http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson))
 > instead of my "Original Feed"
 > ([https://www.technologytoolbox.com/blog/jjameson/rss.aspx](/blog/jjameson/rss.aspx))
 > when pinging my blog from Feedburner.
->
+> 
 > According to the **Ping Feedburner** page, you are supposed to provide "the
 > address of the Web site hosting the source feed" but I encountered an error
 > each time I tried specifying the "Original Feed" address. I'm guessing this is
@@ -97,3 +98,4 @@ entire content of each post). This definitely isn't how I prefer to syndicate my
 blog posts (since it requires people reading my blog to "go online" and download
 the full post), but considering the alternatives, this is definitely the logical
 choice.
+

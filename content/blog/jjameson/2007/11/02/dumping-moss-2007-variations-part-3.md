@@ -54,7 +54,7 @@ obtaining the patch and installing it in our environment.
 {{< div-block "note update" >}}
 
 > **Update (2007-11-28)**
->
+> 
 > According to a
 > [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx)
 > by Stefan Goßner, only part of this bug is fixed in SP1. You'll need a
@@ -128,3 +128,4 @@ of the variations feature, such as automatically creating a new FAQ on the
 translation), when the corresponding FAQ is approved on the **en-US** site.
 
 Like I said, it was a difficult decision, and a painful one at that.
+

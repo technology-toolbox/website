@@ -46,3 +46,4 @@ years ahead of IE6 in terms of Web standards compliance.
 
 Does anyone know the current browser stats? It wouldn't surprise me if Opera was
 surpassed by Safari some time ago.
+

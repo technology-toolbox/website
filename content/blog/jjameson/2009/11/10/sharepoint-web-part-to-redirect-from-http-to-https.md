@@ -69,7 +69,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
             HttpContextWrapper contextWrapper = new HttpContextWrapper(context);
 
             bool forceRedirect = IsSslRedirectRequired(contextWrapper);
-
+            
             if (forceRedirect == false)
             {
                 return;
@@ -168,7 +168,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
                 if (formMode == SPControlMode.Edit
                     || formMode == SPControlMode.New)
                 {
-                    // Never redirect when editing a page
+                    // Never redirect when editing a page                
                     Logger.LogDebug(
                         CultureInfo.InvariantCulture,
                         "SslRequiredWebPart - SSL redirect is not required"
@@ -250,3 +250,4 @@ you prefer that approach instead of creating some kind of "Login" Web Part.
 Lastly, note that I allow the `IsSslRedirectRequired` method to be overridden in
 Web Parts that inherit from `SslRequiredWebPart` (e.g. `LoginFormWebPart`). I
 haven't yet found this to be necessary, but it's there just in case.
+

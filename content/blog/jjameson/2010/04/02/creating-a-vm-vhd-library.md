@@ -146,3 +146,4 @@ The second is that you will likely end up with extra network connections (e.g.
 network connections shouldn't cause any issues. However, if you want to remove
 them simply follow the steps detailed in
 [KB 269155](http://support.microsoft.com/kb/269155) (**Method 1**).
+

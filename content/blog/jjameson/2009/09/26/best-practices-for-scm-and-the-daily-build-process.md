@@ -73,14 +73,15 @@ could be repeated for any particular build.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > While VSS certainly provided the ability to retrieve a project based on a
 > particular timestamp, it definitely wasn't easy (the only way that I was ever
 > to do it was through
 > [the SS command line utility](http://msdn.microsoft.com/en-us/library/asxkfzy4%28VS.80%29.aspx)).
 > Thus build labels provided a quick way of getting a snapshot of the code for a
 > particular build.
->
+> 
 > With the concept of changesets in TFS -- and the ability to quickly get the
 > code for a specific changeset -- build labels are obviously not as important
 > as they were in VSS. However, regardless of which particular source control
@@ -142,7 +143,7 @@ in.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > The source control must not be left in a broken state at any time. If a build
 > breaks, resolving the problem becomes the highest priority.
 
@@ -151,13 +152,12 @@ in.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > You can use the **Builds** check-in policy for TFS to ensure the solution
 > compiles before a developer is allowed to check-in a changeset.
 
 {{< /div-block >}}
 Each member of the Development team is responsible for ensuring the following:
-
 - Check-ins must not break functionality in the solution. If a developer checks
   in a change in their area of the code, he or she must not expect another
   developer to resolve errors caused by the check-in; either the person checking
@@ -185,7 +185,7 @@ Each member of the Development team is responsible for ensuring the following:
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > You can use the **Testing Policy** check-in policy for TFS to ensure that
 > specific unit tests pass before a developer is allowed to check-in a
 > changeset.
@@ -294,10 +294,11 @@ solution that point toward a particular fault in the system.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > A SharePoint site -- or even just a simple SharePoint list -- provides an
 > excellent alternative to a Troubleshooting Guide document. Think of this site
 > -- or list -- as a simple "[Knowledge Base](http://support.microsoft.com/)"
 > for your solution.
 
 {{< /div-block >}}
+

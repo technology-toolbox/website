@@ -49,27 +49,25 @@ To configure the build server to compile MOSS 2007 solutions:
    MOSS 2007:\
    \
    **C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
-
 2. Copy the referenced SharePoint assemblies from another VM (which has MOSS
    2007 installed) to this new folder. The list of SharePoint assemblies that
    you need to copy depends on the details of your solution, but typically
    includes:
-   
+
    - Microsoft.SharePoint.dll
    - Microsoft.SharePoint.Publishing.dll
    - Microsoft.SharePoint.Security.dll
    - ...
-
 3. Create a corresponding registry key for MSBuild to locate the reference
    assemblies. This is most easily accomplished by running the following from an
    Administrator command prompt:
-   
+
    {{< console-block-start >}}
-   
+
    reg add
    "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
    v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
-   
+
    {{< console-block-end >}}
 
 After completing these steps, I queued another build of my Fabrikam.Demo
@@ -79,11 +77,12 @@ longer occurred.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > In addition to copying SharePoint assemblies that are directly referenced in
 > your projects, you also may want to copy assemblies that are _indirectly_
 > referenced, such as:
->
+> 
 > - Microsoft.HtmlTrans.Interface.dll
 > - Microsoft.Internal.Mime.dll
 > - Microsoft.Office.Server.dll
@@ -93,13 +92,15 @@ longer occurred.
 > - Microsoft.SharePoint.Library.dll
 > - Microsoft.SharePoint.Search.dll
 > - Microsoft.Web.Design.Server.dll
->
+> 
+> 
 > While not required to successfully build a SharePoint solution, copying these
 > additional assemblies will avoid warnings during the build.
->
+> 
 > If you choose to include these additional assemblies, be aware that many of
 > these files will need to be copied out of the GAC on the MOSS 2007 server (in
 > other words, most of them are not located in the "Program Files\Common
 > Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
 
 {{< /div-block >}}
+

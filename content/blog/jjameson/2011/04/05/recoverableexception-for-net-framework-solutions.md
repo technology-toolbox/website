@@ -194,10 +194,11 @@ an unexpected error).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > A more elegant way of handling errors during asynchronous postbacks is to use
 > the
 > **[ScriptManager.AsyncPostBackError](http://msdn.microsoft.com/en-us/library/system.web.ui.scriptmanager.asyncpostbackerror.aspx)**
 > event. I'll cover that in a separate post.
 
 {{< /div-block >}}
+

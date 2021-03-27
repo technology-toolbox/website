@@ -93,7 +93,7 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
             color: #FFF;
             padding: 8px 10px;
             border-bottom-width: 0;
-        }
+        }        
         table.displayTable tr.altRow {
             background: #F4F4F4;
         }
@@ -105,7 +105,7 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
         }
         table.constrainedTable th.nameColumn {
             width: 140px;
-        }
+        }        
         table.constrainedTable td {
             overflow: hidden;
             -o-text-overflow: ellipsis; /* Opera */
@@ -153,7 +153,7 @@ table.constrainedTable {
 }
 table.constrainedTable th.nameColumn {
     width: 140px;
-}
+}        
 table.constrainedTable td {
     overflow: hidden;
     -o-text-overflow: ellipsis; /* Opera */
@@ -168,14 +168,15 @@ remaining width of the table.
 
 Next, I specify that all cells in the constrained table should truncate the text
 within each cell if it is too wide to fit within the width of the column. This
-is achieved using the combination of `overflow: hidden` and `white-space: nowrap`. Finally, I use the ` text-overflow` CSS property to show ellipsis when
+is achieved using the combination of `overflow: hidden` and `white-space:
+nowrap`. Finally, I use the ` text-overflow` CSS property to show ellipsis when
 text within a cell is clipped (as well as a slight variation for the Opera
 browser).
 
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Support for the `text-overflow` CSS property is somewhat limited. In
 > particular, you will find that a clipped table cell renders without the
 > ellipsis in Firefox (at least in version 3.5.3). Oddly enough, this appears to
@@ -289,7 +290,7 @@ namespace Fabrikam.Demo.Web.UI
                         + " sapien, dignissim ultrices semper et, mollis"
                         + " interdum sem. "
                 });
-
+            
             grid.DataSource = sampleData;
             grid.DataBind();
         }
@@ -314,8 +315,9 @@ namespace Fabrikam.Demo.Web.UI
 {{< div-block "note update" >}}
 
 > **Update (2011-04-21)**
->
+> 
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
 
 {{< /div-block >}}
+

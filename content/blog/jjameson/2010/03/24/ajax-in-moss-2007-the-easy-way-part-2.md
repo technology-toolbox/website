@@ -311,3 +311,4 @@ namespace Fabrikam.Demo.Web.WebParts
 
 In a future post, I'll describe the AJAX modal popup framework that I developed
 for MOSS 2007 (for example, to display announcements on a site).
+

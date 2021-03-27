@@ -30,7 +30,7 @@ Directory domain, namely **corp.technologytoolbox.com**.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Technology Toolbox is just a name I came up with about ten years ago before
 > joining Microsoft. At the time, I was considering starting my own company and
 > therefore went looking for an available domain name. (I would have preferred
@@ -94,7 +94,7 @@ caption="Organizational Units in the corp.technologytoolbox.com Domain" >}}
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The **Sales** OU contains similar OUs as **Development**. These are simply not
 > shown in the previous table.
 
@@ -116,3 +116,4 @@ before I actually completed this post). Now it's time to install Visual Studio
 2008...
 
 I'll cover my group policy configuration in a separate post.
+

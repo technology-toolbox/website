@@ -79,3 +79,4 @@ I was doing before I noticed that I was running out of disk space ;-)
 Note that I tried using `%FrameworkDir%` instead of
 `%SystemRoot%\Microsoft.NET\Framework`, but that doesn't work unless you run the
 script from an Administrator command prompt.
+

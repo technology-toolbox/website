@@ -48,3 +48,4 @@ By the way, if you are a real life CSS-wizard (I only play one on TV) and you
 feel like taking a look at this on your own dime, then please go right ahead.
 I'll be sure to credit you if you send me the CSS changes that I need to make
 ;-)
+

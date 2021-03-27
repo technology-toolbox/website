@@ -61,16 +61,15 @@ probably not all that interesting to most people, but it does demonstrate the
 level of pride these folks have in their product as well as the confidence they
 have in their development team.
 
-> ***
->
+> * * *
 > 
 > **From:** Roee Adler\
 > **Sent:** Sunday, August 01, 2010 11:36 AM\
 > **To:** Jeremy Jameson\
 > **Subject:** MSDN Blogs: Contact request: Your Soluto Post
->
+> 
 > **Subject:** Your Soluto Post
->
+> 
 > Hi Jeremy, First - I'm sorry for the virus infection you went through, I'm
 > sure it hasn't been fun. I'm 100%, totally confident it has nothing to do with
 > Soluto. We actually heard of malware glued to Soluto installers that are
@@ -105,54 +104,52 @@ have in their development team.
 > wrote in this note hurt you in any way, I'm quite in shock right now. All my
 > contact details are below, I live in Israel, GMT+3. Best regards, Roee Adler
 > Chief Product Officer, Soluto [...]
->
+> 
 > This contact request was sent from [MSDN Blogs](http://blogs.msdn.com/) by
 > Roee Adler without sharing your email address.
->
-> ***
->
+> 
+> * * *
 > 
 > **From:** Jeremy Jameson\
 > **Sent:** Monday, August 02, 2010 4:04 PM\
 > **To:** Roee Adler\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
->
+> 
 > Rose,
->
+> 
 > Thank you for contacting me. I look forward to working together to resolve
 > this issue.
->
+> 
 > I am concerned about your statement about "malware glued to Soluto
 > installers." However I believe that I downloaded the Soluto installer directly
 > from [http://www.soluto.com](http://www.soluto.com). Note that I have no idea
 > where the installer downloaded the additional setup files from. I assumed
 > these also came from solute.com, but perhaps that is not necessarily the case.
->
+> 
 > I have attached the installer that I used yesterday to this message. It would
 > be wonderful if you could have one of your engineers validate the checksum on
 > this file against the "known good" installer.
->
+> 
 > In the meantime, I will install Soluto this morning on a clean Windows 7 VM to
 > see if I can repro the issue. I will let you know the results ASAP.
->
+> 
 > Thanks,
->
+> 
 > \
 > Jeremy
->
-> ***
->
+> 
+> * * *
 > 
 > **From:** Roee Adler\
 > **Sent:** Monday, August 02, 2010 8:06 AM\
 > **To:** Jeremy Jameson\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
->
+> 
 > Hi Jeremy.
->
+> 
 > Thanks for getting back to me. The file is proper (we compared the MD5) and
 > signed by VeriSign, as well as our MSI.
->
+> 
 > If you downloaded the file from soluto.com, as I mentioned in my note to you,
 > there's simply no way it has a virus. I really don't understand why you would
 > assume the virus came with Soluto, after you've heard about us inside
@@ -161,7 +158,7 @@ have in their development team.
 > meanwhile until you build confidence in us not being a virus. If your tests do
 > find out we're malware -- I invite you to publish your findings, but right now
 > I must say it's very insulting.
->
+> 
 > Your post was republished and retwitted several times by others, and our name
 > is smeared in the meanwhile with no real justification. You can see how open
 > we are about our problems in our support community, we hide nothing, and have
@@ -171,82 +168,80 @@ have in their development team.
 > trustworthy company to which you need to authenticate in order to publish your
 > questions/problems. We don't have access to your authentication information,
 > they are kept by GetSatisfaction.
->
+> 
 > We've already heard from friends who encountered your post and were astonished
 > by it. I hope you can take that into consideration and remove the blog post,
 > it's hurts hard-working people every minute it's up.
->
+> 
 > Best,
->
+> 
 > Roee Adler\
 > Soluto\
 > [...]
->
-> ***
->
+> 
+> * * *
 > 
 > **From:** Jeremy Jameson\
 > **Sent:** Tuesday, August 03, 2010 1:35 AM\
 > **To:** Roee Adler\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
->
+> 
 > Roee,
->
+> 
 > First of all, my apologies for misspelling your name on my initial email.
->
+> 
 > Second, I wanted to let you know that I did successfully install Soluto on a
 > clean Windows 7 VM earlier today and I have not subsequently found any
 > evidence of the Antivir Solution Pro virus on that VM.
->
+> 
 > At this point, I am as baffled as you are about how I got the Antivir Solution
 > Pro virus yesterday morning. As I mentioned in my post, I did not browse any
 > sites between the time I installed Soluto and the time I discovered the virus.
->
+> 
 > I also want to point out that I do **\*not\*** believe Soluto is malware.
 > Rather, based on my experience yesterday and the sequence of events that
 > transpired, it certainly **\*seemed\*** the virus was related to the install
 > of Soluto or the subsequent communication with the PC Genome project.
->
+> 
 > Perhaps, as you mentioned, I somehow got the "malware glued to Soluto
 > installers". However, since I downloaded the Soluto installer directly from
 > [http://www.soluto.com](http://www.soluto.com) -- which you have also
 > subsequently verified via MD5 checksum -- once again, I am simply at a loss
 > for explaining (or, more accurately, speculating) what happened.
->
+> 
 > Is it possible the virus somehow came from another source? Absolutely.
->
+> 
 > If you are as confident as you can possibly be that the virus I encountered
 > yesterday was in no way delivered via Soluto or the PC Genome service, then
 > I'd like to post an update to my blog based on our correspondence.
->
+> 
 > As you pointed out in your earlier email, there are a number of sites that
 > plagiarize blog posts from MSDN. Consequently, rather than removing my earlier
 > post, I will post an update with the latest findings.
->
+> 
 > With your permission, I would like to include your email correspondence
 > (without any contact info, of course) so that people are aware of what has
 > transpired since my original post -- most importantly being the fact that I
 > have been unable to reproduce the original issue (the infection with the
 > Antivir Solution Pro virus).
->
+> 
 > As I stated in my original post, I really do look forward to recommending
 > Soluto to my friends, family, and customers. I think it has great potential
 > and I sincerely hope that nobody ever experiences anything similar to what I
 > encountered yesterday.
->
+> 
 > \
 > Jeremy
->
-> ***
->
+> 
+> * * *
 > 
 > **From:** Roee Adler\
 > **Sent:** Tuesday, August 03, 2010 9:20 AM\
 > **To:** Jeremy Jameson\
 > **Subject:** RE: MSDN Blogs: Contact request: Your Soluto Post
->
+> 
 > Thanks Jeremy :)
->
+> 
 > One possible explanation can be that the installation of Soluto exposed the
 > virus to the Security Essentials. I consulted several friends here who told me
 > that these types of Trojans are sometimes capable of hiding themselves from
@@ -262,19 +257,19 @@ have in their development team.
 > aware of this, but the background of many of Soluto's team is in development
 > of low level enterprise security applications, most notably Onigma, which was
 > acquired by McAfee and now serves as McAfee's DLP solution.
->
+> 
 > About your update, you can also post my name and email if you wish, I invite
 > everyone to contact me with questions, we try to be as open as possible.
->
+> 
 > When you say you'll post an update -- do you mean an addition to the same
 > post, or a completely new one? If it's a new one, I'd appreciate it if you add
 > to the old one an update clarifying the status.
->
+> 
 > Thanks again and please always feel free to contact me with questions
 > regarding Soluto (or anything else).
->
+> 
 > Best,
->
+> 
 > Roee Adler\
 > Soluto\
 > [...]

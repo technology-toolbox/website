@@ -90,3 +90,4 @@ class inherits from the `SharePointPage` base class.
 For the sake of this post, ignore the `IView` interface. That is used for
 something else entirely (i.e. a simple Model-View-Controller framework) that
 perhaps one day I'll get around to covering as well.
+

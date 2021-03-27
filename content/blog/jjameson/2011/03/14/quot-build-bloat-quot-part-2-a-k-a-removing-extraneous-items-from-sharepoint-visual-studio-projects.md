@@ -111,3 +111,4 @@ With this change, my Tugboat builds are now a mere 1.13 MB on disk. Woohoo!
 After purging the bloated builds for the Tugboat and Fabrikam Demo solutions,
 I've managed to reclaim a couple of gigabytes of precious VHD space on my TFS
 build server.
+

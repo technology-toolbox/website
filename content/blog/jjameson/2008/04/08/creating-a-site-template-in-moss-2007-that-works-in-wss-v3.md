@@ -46,7 +46,7 @@ Update!]
 Digging into the SharePoint logs I noticed the following:
 
 ```Text
-04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".
+04/08/2008 ... Applying template "TfsLite.stp" to web at URL "http://wss-dev/Test".	 
 04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
 04/08/2008 ... Marking web-scoped features active from manifest at URL "http://wss-dev/Test"
 04/08/2008 ... Failed to mark site-scoped features active in site 'http://wss-dev/Test'.
@@ -183,3 +183,4 @@ does not make the corresponding site template compatible with WSS v3. However,
 once I modified the manifest.xml to remove the MOSS 2007-specific features,
 recreated the CAB file, and changed the file extension back to .stp, I was able
 to successfully create a site in WSS v3 based on the site template. Woohoo!
+

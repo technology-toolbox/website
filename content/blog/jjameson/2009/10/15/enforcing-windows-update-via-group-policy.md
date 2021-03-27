@@ -57,3 +57,4 @@ takes less than a half hour to get a new Windows Server 2008 VM with all the
 latest patches (since I start from a
 [SysPrep'ed VHD](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines)
 with Windows Server 2008 Service Pack 2).
+

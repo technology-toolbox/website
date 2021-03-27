@@ -72,3 +72,4 @@ environments are built and configured in a consistent manner.
 
 In my next post, I will provide a sample installation guide for an extranet
 solution based on SharePoint Server 2010 and Office Web Apps.
+

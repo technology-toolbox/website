@@ -218,7 +218,7 @@ assuming you've enabled code analysis on the project (which is
 > error : CA1801 : Microsoft.Usage : Parameter 'input' of
 > 'StringHelper.Truncate(string, int)' is never used. Remove the parameter or
 > use it in the method body.
->
+> 
 > error : CA1801 : Microsoft.Usage : Parameter 'maxLength' of
 > 'StringHelper.Truncate(string, int)' is never used. Remove the parameter or
 > use it in the method body.
@@ -519,7 +519,7 @@ That's certainly not good.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > While you might be tempted to modify the **Truncate003** unit test to specify
 > a string with multiple spaces in it, my recommendation is you resist the
 > temptation to modify existing unit tests.
@@ -568,3 +568,4 @@ In my
 [next post](/blog/jjameson/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice),
 I'll discuss an example of using TDD for a scenario that is considerably more
 complex than simply truncating a string.
+

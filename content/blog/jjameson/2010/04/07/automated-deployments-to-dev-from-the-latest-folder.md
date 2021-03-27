@@ -37,7 +37,7 @@ title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > At some point since I created my Build and Deployment slide in PowerPoint
 > years ago, I started naming the folder **\_latest** instead of **Latest** (so
 > that, by default, it appears above all of the version folders in Windows
@@ -133,3 +133,4 @@ Note that there are a number of enhancements in Team Foundation Server 2010
 related to the build and deployment process. The process I've shown here is
 based on TFS 2008 (although it dates back to the old days of Visual SourceSafe
 and NAnt).
+

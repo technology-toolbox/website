@@ -71,3 +71,4 @@ Perhaps it is the fact that I am frequently connecting to different networks
 to think most people don't encounter little gotchas like this. The mere thought
 of having to guide my mother through capturing a NetMon trace is, quite frankly,
 horrifying ;-)
+

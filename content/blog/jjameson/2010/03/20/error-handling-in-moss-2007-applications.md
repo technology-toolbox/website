@@ -279,7 +279,7 @@ in Figure 3:
                 <table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
                     <tr>
                         <td colspan="2" class="authoringRegion">
-
+                             
                         </td>
                     </tr>
                     <tr>
@@ -305,7 +305,7 @@ in Figure 3:
                                 </tr>
                                 <tr class="topNavContainer">
                                     <td>
-
+                                         
                                     </td>
                                 </tr>
                             </table>
@@ -443,7 +443,7 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Notice that I use an `EventTypeFilter` to avoid writing debug (a.k.a.
 > "verbose") messages to the event log.
 
@@ -1245,16 +1245,22 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > There's a known bug with the **SPWebConfigModification** class not removing
 > modifications from any Web.config file except the one for the **Default**
 > zone. In other words, running the following command will not remove the trace
 > listener configuration from the Web.config file for the **Internet** zone:
->
+> 
+> 
+> 
 > {{< console-block-start >}}
->
+> 
+> 
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
->
+> 
+> 
+> 
+> 
 > {{< console-block-end >}}
 
 {{< /div-block >}}
@@ -1538,7 +1544,7 @@ namespace Fabrikam.Demo.StsAdm.Commands
         }
 
         #endregion
-
+        
         private static void AddLoggingWebConfigModifications(
             SPWebApplication webApp)
         {
@@ -1625,3 +1631,4 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 ```
 
 I hope you find this post valuable when creating Internet sites with MOSS 2007.
+

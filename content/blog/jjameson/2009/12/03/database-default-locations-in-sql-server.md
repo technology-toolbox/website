@@ -102,14 +102,14 @@ begin
         @RegPathParams,
         @Arg,
         @Param OUTPUT
-
+        
     if(@Param like '-d%')
     begin
         select @Param=substring(@Param, 3, 255)
         select @MasterPath=substring(
             @Param,
             1,
-            len(@Param) - charindex('\', reverse(@Param)))
+            len(@Param) - charindex('\', reverse(@Param)))            
     end
     else if(@Param like '-l%')
     begin
@@ -127,12 +127,13 @@ begin
             1,
             len(@Param) - charindex('\', reverse(@Param)))
     end
-
+    
     select @n=@n+1
 end
-
+            
 print 'LogPath = ' + @LogPath
 print 'MasterPath = ' + @MasterPath
 ```
 
 Note that I truncated the actual SQL batch and added the `print` statements.
+

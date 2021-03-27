@@ -123,7 +123,7 @@ function replaceOnKeyPress()
 {
   var theFunction = "S5F221A6C_Submit();";
   var theInputID = "ctl00_siteSearchBoxEx_S5F221A6C_InputKeywords";
-
+ 
   var txt = document.getElementById(theInputID);
   var browser = navigator.appName;
   if (txt && (browser == "Netscape"))
@@ -139,7 +139,7 @@ function replaceOnKeyPress()
     }
   }
 }
-
+ 
 replaceOnKeyPress();
 </script>
 ```
@@ -147,7 +147,7 @@ replaceOnKeyPress();
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > While this hack was verified to fix the problem in Firefox, it is somewhat
 > brittle due to the need to specify the unique identifier in the script (see my
 > comments in the server-side comment above).
@@ -164,3 +164,4 @@ read in the aforementioned support case -- specifically that for MOSS 2007,
 Firefox is considered a "Level 2" browser from a support perspective). However,
 if you decide you need a workaround for this bug for Firefox users, you might
 consider this an acceptable solution.
+

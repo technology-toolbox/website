@@ -46,7 +46,7 @@ dismiss the popup window.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Web Parts that derive from **ModalPopupWebPart** are responsible for
 > displaying the main content of the popup window. This is typically done by
 > overriding the
@@ -94,7 +94,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
             modalPanelContent.CssClass = "modalPanelContent";
             modalPanelContent.Width = new Unit(400);
             base.ModalPanel.Controls.Add(modalPanelContent);
-
+            
             content = new LiteralControl();
             modalPanelContent.Controls.Add(content);
             content.Text =
@@ -168,3 +168,4 @@ then run it.
 
 In my next post, I'll describe the "Announcements" feature that builds upon this
 framework in order to show marketing announcements on a SharePoint site.
+

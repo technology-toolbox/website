@@ -36,7 +36,7 @@ Microsoft Office SharePoint Server (MOSS) 2007 -- including
 /// <remarks>
 /// All methods of the <b>SharePointWebPartHelper</b> class are static and
 /// can therefore be called without creating an instance of the class.
-/// </remarks>
+/// </remarks>    
 public sealed class SharePointWebPartHelper
 ```
 
@@ -96,9 +96,9 @@ method:
         }
 
         webPart.ID = webPartId;
-        wpm.AddWebPart(webPart, zoneId, zoneIndex);
+        wpm.AddWebPart(webPart, zoneId, zoneIndex);        
         zoneIndex++;
-
+        
         Logger.LogDebug(
             CultureInfo.InvariantCulture,
             "Successfully created Web Part ({0}) on page ({1}).",
@@ -220,7 +220,7 @@ therefore I had to come up with a hack for it. Here is my updated version of the
 
         Debug.Assert(webPart.ZoneIndex == zoneIndex);
         zoneIndex++;
-
+        
         Logger.LogDebug(
             CultureInfo.InvariantCulture,
             "Successfully created Web Part ({0}) on page ({1}).",
@@ -235,3 +235,4 @@ I was curious to know why SharePoint behaves this way and to see if this
 behavior is documented somewhere and I just missed it. Unfortunately, the e-mail
 I sent back in March to an internal discussion list received no responses. So I
 guess this will just have to remain a mystery.
+

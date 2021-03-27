@@ -138,7 +138,7 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 {{< div-block "note update" >}}
 
 > **Update (2010-04-27)**
->
+> 
 > After upgrading to Visual Studio 2010, I discovered that "\par" tags in the
 > RTF were not being converted to new lines in David's original code (because
 > Visual Studio 2008 didn't emit "\par" tags in the RTF, but rather "\r\n").
@@ -343,7 +343,7 @@ namespace ConvertClipboardRtfToHtmlText
                         }
                         i++;
                     }
-
+                    
                     // Trim any trailing empty lines
                     while ((2 <= sb.Length)
                         && ('\r' == sb[sb.Length - 2])
@@ -424,3 +424,4 @@ Studio, double-click Rtf2Html.exe in my
 into Expression Web. It's still a three-step process, but not one that takes
 more than three or four seconds, and more importantly, it now produces much
 better HTML markup than the hack I used to use with Microsoft Word.
+

@@ -52,7 +52,7 @@ content into SharePoint.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > If your new platform supports some kind of import functionality, then much of
 > the "heavy lifting" involved in migrating content has already been done. You
 > just need to figure out how to export content from the source system into the
@@ -87,7 +87,7 @@ to download the monthly summary pages from my MSDN blog to a temporary folder.
         static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
-
+            
             const string summaryFolder =
                 @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
 
@@ -191,14 +191,15 @@ won't automatically create any necessary folders):
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > When migrating content from one system to another, I strive to minimize the
 > load on the source system -- in this case, by downloading the files one time
 > from the MSDN blog site. While I could certainly download these pages each
 > time the program runs, this would put an unnecessary load on the MSDN site
 > (and also significantly slow down the process of developing the content
 > migration utility).
->
+> 
 > Note that this is just one way of minimizing the impact of migrating content.
 > Another common approach that I've used in the past is to initially run the
 > content migration against the DEV environment and later on against the TEST
@@ -245,7 +246,7 @@ my part.
                 "CommentModeration",
                 "Disabled");
 
-            blog.ExtendedProperties.Add(item);
+            blog.ExtendedProperties.Add(item);            
         }
 ```
 
@@ -326,7 +327,7 @@ HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
                     Debug.Assert(postHeading != null);
 
                     post.Title = HttpUtility.HtmlDecode(postHeading.InnerText);
-
+                    
                     HtmlNode postLink = postHeading.SelectSingleNode("a");
                     Debug.Assert(postHeading != null);
 
@@ -387,7 +388,7 @@ to the BlogML document.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > Parsing with the Html Agility Pack works very well when the source HTML is
 > dynamically generated using a template mechanism (like ASP.NET or PHP) because
 > the structure is very consistent. Handcrafted HTML, on the other hand, would
@@ -521,7 +522,7 @@ first step is to download an offline copy of the post using the
 
             buffer.Append("</div>");
             buffer.Append("</blockquote>");
-
+            
             HtmlNode postContent = document.DocumentNode.SelectSingleNode(
                     "//div[@class='post-content user-defined-markup']");
 
@@ -819,17 +820,18 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > This is probably a good place to stop and point out an essential concept when
 > writing migration tools like this -- as well as similar kinds of "throw away"
 > code.
->
+> 
 > Keep in mind the ultimate goal of this utility is to run it _one time_ (after
 > all of the development and testing effort is completed, of course). In other
 > words, when I'm writing utilities like this, I try not to focus on writing
 > highly maintainable code. Hence you don't see any significant error handling,
 > parameter validation, boundary checking, etc.
->
+> 
 > The goal is to complete the code as quickly as possible -- ensuring that it is
 > "good enough" to do its job but doesn't necessarily demonstrate best coding
 > practices. For example, I don't bother enabling _all_ code analysis rules on
@@ -839,7 +841,7 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 > during development so I can easily rollback unwanted changes (and occasionally
 > to go back at some point in the future and review the code for reference
 > purposes).
->
+> 
 > If this utility was something I expected to be maintained going forward, I
 > would have spent more time trying to figure out why I couldn't get the Html
 > Agility Pack to fix the malformed HTML.
@@ -998,7 +1000,7 @@ mapping, illustrated below:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Since posts tagged with **PowerShell** or **SQL Server** could fall into
 > different categories depending on their specific content (e.g.
 > **Infrastructure** or **Development**), I decided not to use these tags for
@@ -1040,7 +1042,7 @@ from the **FillPostCategories** method:
                 }
             }
         }
-
+        
         private static string MapTagToCategory(
             string tag)
         {
@@ -1092,7 +1094,7 @@ from the **FillPostCategories** method:
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > Depending on the complexity of your taxonomy, you may need a more robust
 > mapping implementation than the one I've shown here. For example, on the
 > Agilent project, I created an Excel workbook with a separate worksheet for
@@ -1300,7 +1302,7 @@ scraping the fake Ajax request used to retrieve the comments:
                 feedbackHtml = feedbackHtml.Replace(@"\/", "/");
                 feedbackHtml = feedbackHtml.Replace(@"\'", "'");
                 feedbackHtml = feedbackHtml.Replace("&#39;", "'");
-
+                                
                 feedbackHtml = feedbackHtml.Replace(
                     @"\r\n",
                     Environment.NewLine);
@@ -1332,7 +1334,7 @@ is GZIP'ed) and parse the comments.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > You can easily inspect/copy HTTP requests and responses using Fiddler, the
 > **Network** tab in the Internet Explorer 9 developer tools, or with Firefox
 > and the Firebug add-on.
@@ -1342,7 +1344,7 @@ is GZIP'ed) and parse the comments.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > The cookie shown in the code above is only valid for a limited time.
 > Consequently I needed to periodically get a new cookie and paste it into the
 > code during the time I was developing this migration utility.
@@ -1490,3 +1492,4 @@ time) required to do this through code. Of course, this depends largely on how
 much content you are migrating and how long the "manual" portion of the
 migration will take. Always keep in mind the concept of "business value" when
 writing migration code like this.
+

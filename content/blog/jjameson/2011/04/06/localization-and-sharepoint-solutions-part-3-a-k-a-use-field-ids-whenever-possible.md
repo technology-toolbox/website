@@ -30,15 +30,16 @@ kept in English due to requirements from the support team.]
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > I believe the SharePoint product team expects you to install language packs
 > prior to creating site collections that will contain localized sites. This is
 > based on something I recall reading on TechNet.
->
+> 
 > However, I don't believe this is a realistic expectation -- at least not in my
 > experience. Organizations should be able to expand their existing site
 > collections to support additional languages over time as the need arises.
->
+> 
 > The only bug that I'm aware of when installing SharePoint language packs
 > _after_ creating the site collection (and subsequently creating localized
 > sites) is that some items referenced by the SharePoint pages (e.g. CSS files)
@@ -104,7 +105,7 @@ time ago I wrote the following code:
                 pageImage.ImageUrl = defaultImageUrl;
                 page.ListItem["Page Image"] = pageImage;
                 page.Update();
-
+                
                 ...
 ```
 
@@ -203,3 +204,4 @@ the following Elements.xml file:
   </ContentType>
 </Elements>
 ```
+

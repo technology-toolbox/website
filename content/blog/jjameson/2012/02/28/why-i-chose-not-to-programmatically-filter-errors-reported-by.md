@@ -47,7 +47,7 @@ linkHref="http://nuget.codeplex.com/discussions/247827" >}}
 {{< div-block "note warning" >}}
 
 > **Warning**
->
+> 
 > Click the link above at your own peril.
 
 {{< /div-block >}}
@@ -65,3 +65,4 @@ be honest, I'm glad that I'm not involved in that mess ;-)
 
 Personally, I'm sticking with my "Thou shalt sign all .NET assemblies"
 commandment (until someone can convince me otherwise).
+

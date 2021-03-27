@@ -187,7 +187,7 @@ To create the necessary service accounts for SharePoint Server 2010 and TFS
 3. On the **Action** menu, point to **New**, and then click **User**.
 4. In the **New Object - User**dialog:
    1. Enter the information from
-      [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+   [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **Next**.
    3. Clear the **User must change password** at next logon check box.
    4. Select the **User cannot change password** check box.
@@ -207,7 +207,7 @@ To create the domain groups for SharePoint Server 2010 and TFS 2010:
 3. On the **Action** menu, point to **New**, and then click **Group**.
 4. In the **New Object - Group**dialog:
    1. Enter the information from
-      [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+   [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **OK**.
 5. Repeat steps 3 and 4 to create the remaining groups listed in
    [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
@@ -253,7 +253,7 @@ Complete the deployment procedures in the following sections:
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Do not run the Farm Configuration Wizard (the TFS Web application and service
 > applications will be configured in the following steps).
 
@@ -311,7 +311,7 @@ server:
 6. In the login properties dialog box:
    1. On the **General** page, in the **Login name** box, type the name of the
       SharePoint administrators group from
-      [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)
+   [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)
       using the form {DOMAIN}\{group name}.
    2. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox next to the SharePoint configuration database (from
@@ -366,16 +366,14 @@ To fix the TaxonomyPicker.ascx file:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
    right-click **Command Prompt**, and then click **Run as administrator**.
-
 2. At the command prompt, type the following command:
-   
+
    {{< console-block-start >}}
-   
+
    notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server
    Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
-   
-   {{< console-block-end >}}
 
+   {{< console-block-end >}}
 3. In Notepad, in the assembly specified in the **Control** directive, replace
    the **"&#44;**" (without the quotes) with a comma (',') and then save the
    file.
@@ -385,7 +383,7 @@ To fix the TaxonomyPicker.ascx file:
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
->
+> 
 > The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010.
 > Instead of trying to fix the assembly name, just rename the file (since it
 > apparently isn't used by SharePoint).
@@ -400,7 +398,7 @@ Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > This task must be completed on each SharePoint server in the farm.
 
 {{< /div-block >}}
@@ -417,7 +415,7 @@ To rename the TaxonomyPicker.ascx file:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Changing the file extension causes the problematic file to be skipped by
 > ASP.NET when compiling the controls in the folder.
 
@@ -473,7 +471,7 @@ Server 2010:
    2. In the **Service Account** section, ensure the option to **Create a new
       managed account** is selected, in the **User name** box, type the service
       account for SharePoint service applications listed in
-      [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
+   [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
       and type the corresponding password in the **Password** box. In the
       **Services** section, clear the checkboxes for all of the services except
       **Excel Services Application** and **Secure Store Service**. Click
@@ -650,17 +648,16 @@ To attach the SharePoint content database by using Windows Powershell:
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by **User Account Control** to
    allow the program to make changes to this computer, click **Yes**.
-
 2. At the Windows PowerShell command prompt, type the following command:
-   
+
    {{< console-block-start >}}
-   
+
    Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer
    &lt;ServerName&gt; -WebApplication &lt;URL&gt; [-Updateuserexperience]
-   
+
    {{< console-block-end >}}
    Where:
-   
+
    - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to
      upgrade.
    - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
@@ -669,15 +666,15 @@ To attach the SharePoint content database by using Windows Powershell:
    - **-Updateuserexperience** specifies to update the sites with the new
      SharePoint user experience (part of Visual Upgrade). If you omit this
      parameter, the sites retain the old user experience after upgrade.
-   
+
    \
    For example:
-   
+
    {{< console-block-start >}}
-   
+
    Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer BEAST
    -WebApplication http://cyclops -Updateuserexperience
-   
+
    {{< console-block-end >}}
 
 More information on attaching SharePoint content databases is provided in the
@@ -724,10 +721,11 @@ To reset the home page for a TFS project site:
 {{< div-block-start "note" >}}
 
 > **Tip**
->
+> 
+> 
 > If you need to do this for a number of sites, you should consider using
 > PowerShell instead, as described in the following blog post:
->
+> 
 > {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
 
 {{< div-block-end >}}
@@ -767,9 +765,8 @@ Note that a different error may be shown in the **Remaining Work** Web Part:
 {{< div-block "errorMessage" >}}
 
 > Reporting Services Error
->
-> ***
->
+> 
+> * * *
 > 
 > An error has occurred during report processing. (rsProcessingAborted) Get
 > Online Help\
@@ -777,9 +774,8 @@ Note that a different error may be shown in the **Remaining Work** Web Part:
 > (rsErrorExecutingCommand) Get Online Help\
 > For more information about this error navigate to the report server on the
 > local server machine, or enable remote errors
->
-> ***
->
+> 
+> * * *
 > 
 > SQL Server Reporting Services
 
@@ -808,7 +804,7 @@ title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > To significantly improve the appearance of the upgraded TFS project home page,
 > edit the **Remaining Work** Web Part and set the **Height** to **600 pixels**
 > and the **Width** to **900 pixels**.
@@ -864,12 +860,14 @@ content databases. ~~On the database server:~~
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
->
+> 
+> 
+> 
 > ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
->
+> 
 > $webApp = Get-SPWebApplication "http://cyclops"
->
+> 
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
 
@@ -893,13 +891,16 @@ Explorer 2010.
 {{< div-block-start "note important" >}}
 
 > **Important**
->
+> 
+> 
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to
 > continue to use the source control integration features in Expression Web 3),
 > you must download and install an update:
->
+> 
 > {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
->
+> 
+> 
+> 
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
 
@@ -925,7 +926,7 @@ process template.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > In order to create a new team project (with the default project options) using
 > Team Explorer on a server that hosts SharePoint Server 2010 and SQL Server
 > Reporting Services, you need to run Visual Studio as an administrator.
@@ -952,3 +953,4 @@ Using the steps provided in the TFS installation guide (**How to: Install Team
 Foundation Build Service**), install the Team Foundation Build Service on the
 build server (DAZZLER) using the parameters specified in
 [Table 9](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+

@@ -235,8 +235,8 @@ Fortunately, that's when I discovered Subtext.
 
 > If you've ever caught yourself throwing your hands in the air and declaring
 > that you're going to write your own blogging engine, then Subtext is for you.
->
-> - [http://subtextproject.com](http://subtextproject.com)
+> 
+> -- [http://subtextproject.com](http://subtextproject.com)
 
 When I read these words, I got goose bumps. Okay...not really...but they
 certainly did resonate with me based on my recent experience.
@@ -271,3 +271,4 @@ workings of Subtext, and I was able to make the necessary tweaks that I needed
 along the way.
 
 I'll explain more about those "tweaks" in subsequent posts.
+

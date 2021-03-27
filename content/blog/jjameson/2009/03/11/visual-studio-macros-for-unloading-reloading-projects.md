@@ -212,3 +212,4 @@ right-click the solution in **Solution Explorer** and then click something like
 Folder** option that is currently available -- but only for solution folders,
 not the solution itself). Until then, I don't see me giving up my dependency on
 these macros anytime soon.
+

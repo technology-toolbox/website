@@ -75,3 +75,4 @@ metrics on the second project yielded the aforementioned error.
 After explicitly referencing **Microsoft.SharePoint.Security** in the
 **PublicationLibrary.Workspaces.DeveloperTests** project, the error went away
 and I could view the code metrics for both projects.
+

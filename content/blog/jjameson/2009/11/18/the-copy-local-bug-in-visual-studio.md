@@ -28,7 +28,7 @@ If you've ever worked with me on a Microsoft Office SharePoint Server (MOSS)
 > build configuration. If the path is not specified to the referenced assembly,
 > then the build works fine as long as the referenced assembly is not in the
 > GAC.
->
+> 
 > However, when the referenced assembly is in the GAC (i.e. after a deployment)
 > then MakeCAB will not be able to find the referenced assembly (since it is no
 > longer copied to the current project's bin\Debug or bin\Release folder).
@@ -76,3 +76,4 @@ specifying relative paths to assemblies in the DDF file.
 
 I'll cover this in
 [my next post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build).
+

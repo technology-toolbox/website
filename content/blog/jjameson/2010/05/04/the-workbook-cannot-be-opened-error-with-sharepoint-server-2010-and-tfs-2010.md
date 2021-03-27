@@ -101,7 +101,7 @@ the event log when browsing to the dashboard page:
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 5586
 Description:
-Unknown SQL Exception 262 occurred. Additional error information from SQL Server
+Unknown SQL Exception 262 occurred. Additional error information from SQL Server 
 is included below.
 
 CREATE TABLE permission denied in database 'WSS_Content'.
@@ -113,12 +113,12 @@ and
 Source: Microsoft-SharePoint Products-SharePoint Foundation
 Event ID: 5617
 Description:
-There is a compatibility range mismatch between the Web server and database
-"WSS_Content", and connections to the data have been blocked to due to this
-incompatibility. This can happen when a content database has not been upgraded
-to be within the compatibility range of the Web server, or if the database has
-been upgraded to a higher level than the web server. The Web server and the
-database must be upgraded to the same version and build level to return to
+There is a compatibility range mismatch between the Web server and database 
+"WSS_Content", and connections to the data have been blocked to due to this 
+incompatibility. This can happen when a content database has not been upgraded 
+to be within the compatibility range of the Web server, or if the database has 
+been upgraded to a higher level than the web server. The Web server and the 
+database must be upgraded to the same version and build level to return to 
 compatibility range.
 ```
 
@@ -162,25 +162,30 @@ underlying content databases:
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
->
+> 
+> 
 > I should have updated this post long ago based on the comment added by "todh2"
 > regarding granting access to the database. Instead of using SQL Server
 > Management Studio to configure permissions on the content database for the
 > service account, use a little PowerShell to invoke the
 > **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)**
 > method:
->
+> 
+> 
+> 
 > ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
->
+> 
 > $webApp = Get-SPWebApplication "http://cyclops"
->
+> 
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
->
+> 
+> 
 > Thanks to "todh2" for pointing this out.
 
 {{< /div-block >}}
 
 Once this configuration change is made, the "workbook cannot be opened" error no
 longer occurs.
+

@@ -65,3 +65,4 @@ Perhaps this only happens when you have WSUS installed on a non-standard port or
 when you have SharePoint installed on the WSUS server. As you can see in the
 excerpt from WindowsUpdate.log above, I am using port 8530 for the WSUS Web
 site. This is because COLOSSUS is currently running both WSUS and MOSS 2007.
+

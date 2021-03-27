@@ -26,16 +26,16 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
 2007:
 
 1. <cite>"The Media Guy"</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > Great article.. was very helpful. I used 960.gs for my master page as well
    > and all is good. I am now creating a 3 column page layout . I need a
    > grid\_3 (left), grid\_6 (middle), and a grid\_3 (right). I would like these
    > all to be blank web part zones. I started off with the "Blank web part
    > page" as a template but it is using nested Tables and really hard to look
    > at. Do you have any advice for a starting a page layout based on 960.gs?
-   
+
    {{< div-block-end >}}
 
 Rather than trying to explain to "The Media Guy" how to create a page layout
@@ -109,7 +109,7 @@ fields defined on the **Welcome Page** content type. Consequently, a Web Part
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > You should always try to use the Summary Links fields (from the underlying
 > content type) instead of Summary Links Web Parts whenever possible -- since
 > this provides the ability to track the changes to the links over time. (In
@@ -145,70 +145,62 @@ To deploy the Fabrikam Demo to SharePoint:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
    right-click **Command Prompt**, and then click **Run as administrator**.
-
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
-   
+
    ```Console
    set FABRIKAM_INTRANET_URL=http://fabweb-local
    ```
-   
+
    {{< div-block "note" >}}
-   
+
    > **Note**
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 3. Set environment variables to specify the credentials to use for the Fabrikam application pool:
-   
+
    ```Console
    set FABRIKAM_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-fabrikam-dev
    set FABRIKAM_APP_POOL_PASSWORD={password}
    ```
-   
+
    {{< div-block "note important" >}}
-   
+
    > **Important**
    > 
    > Be sure to specify a valid local or domain user.
-   
+
    {{< /div-block >}}
-
 4. Change to the folder containing the deployment scripts:
-   
-   {{< console-block-start >}}
-   
-   cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
-   
-   {{< console-block-end >}}
 
+   {{< console-block-start >}}
+
+   cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
+
+   {{< console-block-end >}}
 5. Type the following command:
-   
+
    ```Console
    "Create Web Applications.cmd"
    ```
-
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
-   
+
    ```Console
    "Add Solutions.cmd"
    ```
-
 7. Wait for the solution to be added and then type the following command:
-   
+
    ```Console
    "Deploy Solutions.cmd"
    ```
-
 8. Wait for the solution to be deployed and then type the following command:
-   
+
    ```Console
    "Activate Features.cmd"
    ```
-
 9. Wait for the feature activations to complete, and then minimize or close the
    command prompt.
 
@@ -222,9 +214,10 @@ page and page layouts leveraging the 960 Grid System.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > Once you have the site running in your environment, click **Sample Link 1**
 > and **Sample Link 2** on the home page to view a couple of test pages that are
 > created to demonstrate other custom page layouts.
 
 {{< /div-block >}}
+

@@ -91,7 +91,7 @@ converting from static HTML to ASP.NET controls and adding field validators.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Although not shown in the sample HTML above, there are times when it might be
 > helpful to prototype "alternate flow" scenarios as well -- for example, to
 > demonstrate the user experience when a required field is not specified.
@@ -291,14 +291,15 @@ the feature currently works on TechnologyToolbox.com.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > Sending the contact request via SMTP isn't as "bulletproof" as, say, writing
 > the contact request to a database in real-time -- but it is probably "good
 > enough" for many organizations. Obviously if your site is fielding dozens or
 > hundreds of contact requests per day, then you should probably consider
 > something a little more robust (such as saving the contact request to a
 > database and sending some kind of notification to the appropriate people).
->
+> 
 > The [Agilent LSCA](http://www.chem.agilent.com) site, for example, uses
 > SharePoint and InfoPath Forms Services for the
 > "[Contact Us](http://www.chem.agilent.com/en-US/ContactUs/_layouts/agilent/contactusquery.aspx?XsnLocation=/FormServerTemplates/ContactUsQueryRequest.xsn&Source=/en-US/ContactUs/Pages/ContactUs.aspx&DefaultItemOpen=1&m=p)"
@@ -452,7 +453,7 @@ Note that this requires a few tweaks to the code used to send the email:
         string mailFrom = Settings.Default.ContactFormMailFromAddress;
         string[] mailTo = Settings.Default.ContactFormMailToAddress.Split(
             new char[] { ';' });
-
+            
         using (MailMessage mailMessage = new MailMessage(
             mailFrom,
             mailTo[0],
@@ -680,3 +681,4 @@ in the **UpdatePanel**:
 You can see this for yourself by inspecting the AJAX postback using the
 **Network** tab in the Internet Explorer Developer Tools or via the **Net**
 panel in Firebug/Firefox.
+

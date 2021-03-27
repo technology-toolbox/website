@@ -43,9 +43,9 @@ been, well, nixed...
 > should dispose of the SPSite.RootWeb property just before disposing of the
 > SPSite object that is using it. This is no longer the official guidance. The
 > dispose cleanup is handled automatically by the SharePoint framework.
->
+> 
 > ...
->
+> 
 > **SPWeb.ParentWeb Property**\
 > **Updated Guidance**\
 > An earlier version of this article recommended that the calling application
@@ -181,3 +181,4 @@ code we write the best -- and simplest -- that it can possibly be.
 
 Now, if we could just get that all-encompassing FxCop rule for ensuring that all
 `IDisposable` objects are wrapped in `using` blocks... ;-)
+

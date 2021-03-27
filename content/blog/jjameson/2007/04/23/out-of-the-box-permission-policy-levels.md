@@ -93,3 +93,4 @@ stsadm.exe -o addpermissionpolicy -url
 AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
 
 {{< console-block-end >}}
+

@@ -77,3 +77,4 @@ In my environment, 60 seconds appears to be a sufficient in most cases.
 Honestly, it's probably not enough to cover a "cold" boot of each VM (after a
 power outage) but it still gives each VM time to load up most of the way before
 the next VM starts accessing the disk.
+

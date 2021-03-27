@@ -129,7 +129,7 @@ group by month and count the number of rows for each month).
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > If you are working with LINQ these days, and you haven't already discovered
 > [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It
 > makes it much quicker to iteratively build LINQ queries like the one shown
@@ -178,7 +178,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
         protected override void CreateChildControls()
         {
             base.CreateChildControls();
-
+            
             this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
 
             list = new Literal();
@@ -287,13 +287,14 @@ The **GetMonthName** method is, as expected, rather trivial:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > As I've noted before, there are some assumptions in this code that I currently
 > consider to be "good enough" (such as the hardcoded path to the blog -- i.e.
 > "/blog/jjameson/archive"). If the time comes when this code needs to support
 > other scenarios, then -- and probably _only_ then -- I'll put the effort into
 > making it more robust.
->
+> 
 > Also note that there _may_ be a way to combine the **GetMonthName** logic into
 > the actual LINQ query, but I couldn't find one. Keep in mind that the results
 > need to be ordered chronologically in reverse order (for example, for each
@@ -322,28 +323,27 @@ However, I discovered a couple of issues with that code (written by Kent
 Safranski):
 
 - It didn't work with my markup because it assumes the parent `<ul>` elements have ID attributes. For example:
-  
+
   ```JavaScript
   jQuery.fn.jqcollapse = function (o) {
-  
+
       ...
-  
+
       $(this).each(function () {
-  
+
           var e = $(this).attr('id');
-  
+
           $('#' + e + ' li > ul').each(function (i) {
              ...
           });
-  
+
           ...
           $('#' + e + ' ul').hide();
       });
   };
   ```
-  
-  Now, I certainly don't consider myself a jQuery expert but, generally speaking, this doesn't seem like very good practice when writing jQuery plugins.
 
+  Now, I certainly don't consider myself a jQuery expert but, generally speaking, this doesn't seem like very good practice when writing jQuery plugins.
 - It doesn't maintain chainability (which is generally recommended when
   [writing jQuery plugins](http://docs.jquery.com/Plugins/Authoring)).
 
@@ -466,7 +466,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
         protected override void CreateChildControls()
         {
             base.CreateChildControls();
-
+            
             this.Controls.Add(new LiteralControl("<h2>Archives</h2>"));
 
             list = new Literal();
@@ -549,3 +549,4 @@ namespace TechnologyToolbox.Caelum.Website.Controls
     }
 }
 ```
+

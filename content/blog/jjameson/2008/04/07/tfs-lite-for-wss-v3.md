@@ -81,25 +81,20 @@ accordingly...
 Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 1. Create a new site collection using the **Team Site** template.
-
 2. Optionally delete the **Tasks** list that is automatically created as part of
    the Team Site template (since a "task" is simply a work item where Category =
    "Task").
-
 3. Create a new list called **WorkItems** based on the **Tasks** list and select
    **Yes** for the **Send e-mail when ownership is assigned?** option.
-
 4. Rename the **WorkItems** list to **Work Items**. (I prefer to avoid spaces
    when creating lists to avoid "garbage" in the URLs as a result of URL
    encoding.)
-
 5. Enable versioning on the **Work Items** list to create a version each time
    someone edits an item in this list.
-
 6. Add the columns specified in the following table:
-   
+
    {{< table class="small table-striped" >}}
-   
+
    | Column Name | Description | Type | Required | Additional Information | Default | Add to Default View |
    | --- | --- | --- | --- | --- | --- | --- |
    | Category |  | Choice | Yes | Choices:<ul><li>Bug</li><li>Quality of Service Requirement</li><li>Risk</li><li>Scenario</li><li>Task</li></ul> | Bug | Yes |
@@ -115,17 +110,16 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    | KPI | Key Performance Indicator representing the status of a key deliverable or milestone. | Choice | Yes | Choices:<ul><li>Green</li><li>Yellow</li><li>Red</li><li>Complete</li></ul> |  | No |
    | CreatedFilter | Calculated field used to filter recently created items (for example, to show items submitted during the last week). | Calculated (calculation based on other columns) |  | Formula:<br>=Created+7<br><br>The data type returned from this formula is: Date and Time<br><br>Date and Time Format: Date Only |  | No |
    | ModifiedFilter | Calculated field used to filter recently modified items (for example, to show accomplishments over the last week). | Calculated (calculation based on other columns) |  | Formula:<br>=Modified+7<br><br>The data type returned from this formula is: Date and Time<br><br>Date and Time Format: Date Only |  | No |
-   
+
    {{< /table >}}
-   
+
    <small>* You should actively change the default value for this column based
    on the target iteration for completing work items.</small>\
    <small>** Modify the out-of-the-box column accordingly.</small>
-
 7. Configure the following views:
-   
+
    {{< table class="small table-striped" >}}
-   
+
    | View | Columns | Sort | Filter | Group By |
    | --- | --- | --- | --- | --- |
    | All Work Items | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Blocked</li><li>Assigned To</li></ul> | ID |  |  |
@@ -137,36 +131,31 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    | Open Tasks | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed<br>And<br>Category is equal to Task | Priority |
    | Open Work Items | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Blocked</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed | <ol><li>Category</li><li>Priority</li></ol> |
    | Project Checklist | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li><li>KPI</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | <ol><li>Iteration</li><li>Category</li></ol> |
-   
-   {{< /table >}}
 
+   {{< /table >}}
 8. Create a new document library named **Pages** and select **Web Part page** as
    the document template.
-
 9. In the **Pages** library, create a new page called **ProjectSummary.aspx**
    using the **Header, Footer, 3 Columns** layout.
-
 10. Create and configure the various project summary Web Parts based on the underlying Work Items list:
-    
+
     {{< table class="small table-striped" >}}
-    
+
     | Web Part | Columns | Sort | Filter | Group By | Item Limit |
     | --- | --- | --- | --- | --- | --- |
     | Project Summary | <ul><li>KPI</li><li>Title</li></ul> | ID | Iteration is equal to v1.0\M0 <sup>*</sup> |  | 100 |
     | Top 10 Issues | <ul><li>Title</li><li>Assigned To</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Blocked is equal to Yes |  | 10 |
     | Accomplishments (Last 7 Days) | Title | Modified<br>(descending) | Status is equal to Closed<br>And<br>ModifiedFilter is greater than [Today] | Category<br>(Expanded) | 20<br>(Display items in batches of the specified size.) |
     | Priorities/Milestones | Title | ID | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | Iteration<br>(Expanded) | 100<br>(Display items in batches of the specified size.) |
-    
+
     {{< /table >}}
-    
+
     <small>* Change the filter as necessary to match the current
     iteration.</small>
-
 11. (Optional) Modify the **Project Summary** Web Part to display an image
     corresponding to the designated KPI value (using SharePoint Designer and a
     tiny bit of XSLT as described in my
     [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
-
 12. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure
@@ -200,7 +189,7 @@ the performance impact as the number of work items grows large.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > There appears to be a bug in WSS v3 (and MOSS 2007) where the Web Parts on the
 > Project Summary page are not configured with the correct views after creating
 > a new site from the attached site template. Consequently you will need to
@@ -214,7 +203,7 @@ the performance impact as the number of work items grows large.
 {{< div-block "note update" >}}
 
 > **Update (2008-04-08)**
->
+> 
 > The issue noted below by Dragan has been corrected. The fix is described in
 > [a subsequent post](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3).
 > However, as I originally suspected might be the case, the KPI images that I
@@ -223,3 +212,4 @@ the performance impact as the number of work items grows large.
 > displaying the status as text).
 
 {{< /div-block >}}
+

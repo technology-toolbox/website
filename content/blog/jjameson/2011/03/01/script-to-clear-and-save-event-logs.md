@@ -100,7 +100,7 @@ Private Sub ClearEventLog( _
         & ".evt"
 
         errBackupLog = objLogFile.BackupEventLog(backupFilename)
-        If errBackupLog <> 0 Then
+        If errBackupLog <> 0 Then        
             WScript.Echo "The " & strEventLogName & " event log on " _
                 & strComputer & " could not be backed up."
         Else
@@ -117,7 +117,7 @@ Private Function GetFormattedTimestamp()
         & LPad(Month(timestamp), 2, "0") _
         & LPad(Day(timestamp), 2, "0") _
         & "_" & Replace(FormatDateTime(timestamp, 4), ":", "")
-
+	
 End Function
 
 Private Function LPad( _
@@ -179,3 +179,4 @@ because event logs nested under **Applications and Services Logs** (such as
 **TerminalServices-PNPDevices**) are not currently detected (and therefore
 subsequently saved/cleared). Honestly, this has never been enough of a pain for
 me to actually invest the effort in fixing the script.
+

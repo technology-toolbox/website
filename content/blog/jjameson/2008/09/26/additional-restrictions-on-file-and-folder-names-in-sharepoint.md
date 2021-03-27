@@ -64,3 +64,4 @@ In addition, file and folder names cannot end with:
 - \_fitxategiak
 
 I'll update this post after my change request has been reviewed.
+

@@ -264,7 +264,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                 // continuing. Otherwise, we may encounter the following error
                 // (e.g. when applying Web.config changes from two different
                 // features in rapid succession):
-                //
+                // 
                 // "A web configuration modification operation is already
                 // running."
                 //
@@ -384,7 +384,7 @@ linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 {{< div-block "note update" >}}
 
 > **Update 2010-03-31**
->
+> 
 > I enhanced the original version of **SharePointWebConfigHelper** to
 > [wait for the Web.config modifications to finish](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)
 > in the **ApplyWebConfigModifications** method. If you don't want or need this
@@ -392,3 +392,4 @@ linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 > **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
 
 {{< /div-block >}}
+

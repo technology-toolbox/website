@@ -27,17 +27,16 @@ face and a sense of nostalgia. It also caused me to recall two things:
 1. That old Greatful Dead song "Truckin'" -- specifically the line\
    \
    <q class="directQuote">Lately it occurs to me: What a long, strange trip it's been.</q>
-   
+
    {{< div-block "note update" >}}
-   
+
    > **Update**
    > 
    > Doh! You would think a guy with a Master of Science degree in Mechanical
    > Engineering could spell "Grateful Dead" correctly! I suppose that I really
    > should do more proofreading before clicking that **Publish** button ;-)
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 2. An article I read about a year ago describing the origin of Google that also
    included some photos of the original Google infrastructure in the Stanford
    University computer lab.
@@ -146,3 +145,4 @@ and I sat in front of it typing in hundreds of lines of code from a magazine
 just so we could try to play some silly game based on "sprites." [Note that the
 games almost never worked due to some error or another, but nevertheless we kept
 trying anyway.]
+

@@ -323,7 +323,7 @@ process. More specifically, I had just completed the following step:
 {{< div-block "fst-italic" >}}
 
 > 1. Install Team Foundation Server in the new environment and make sure it is
->    operational. For detailed instructions...
+> operational. For detailed instructions...
 
 {{< /div-block >}}
 
@@ -459,3 +459,4 @@ So, in closing, here are some thoughts to consider:
   to use the same hardware for the "old" and "new" environments (thankfully, I
   didn't have a Development team waiting on me to get TFS back up and running
   again as soon as possible)
+

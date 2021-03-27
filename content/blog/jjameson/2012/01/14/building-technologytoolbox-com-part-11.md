@@ -38,7 +38,7 @@ transparent
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > You could also use the IE Developer Tools to inspect the element in order to
 > view the corresponding CSS rule, but I prefer the experience in Firebug
 > instead (since, unlike IE, Firebug actually shows you the image in a tooltip
@@ -109,7 +109,7 @@ linkHref="http://www.aaronbarker.net/2010/07/diagonal-sprites/" >}}
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Not all of the CSS sprites used on the Technology Toolbox site use the
 > diagonal layout. For example, the "radio button" images used in the "slider"
 > control (i.e. to the right of the **SharePoint Architecture and Development**
@@ -211,3 +211,4 @@ toggles which icon is displayed.
 I'll explain more about the jQuery expandable list used to render the
 **Archives** section in a separate
 [post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12).
+

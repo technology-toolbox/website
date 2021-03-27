@@ -33,7 +33,8 @@ Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > In the Fabrikam Extranet solution, the "Create Web Application.ps1" script
 > checks if the environment is configured to use
 > [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com). If
@@ -41,7 +42,7 @@ Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my
 > **extranet-local.fabrikam.com** to the
 > **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames**
 > registry key.
->
+> 
 > That way, when people want to deploy the solution with as little effort as
 > possible, they can simply run the "Rebuild Web Application.ps1" script and not
 > have to worry about manually performing the steps in section 4.10 (Allow
@@ -69,9 +70,10 @@ researchportal-local.dow.com
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > You can download these scripts from my Toolbox repository on GitHub:
->
+> 
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 {{< /div-block >}}
@@ -79,7 +81,7 @@ researchportal-local.dow.com
 {{< div-block "note update" >}}
 
 > **Update (2013-06-04)**
->
+> 
 > I fixed a bug in the following scripts when more than one hostname is
 > specified in the registry value. See my GitHub repository for details on the
 > changes made to the original versions of the scripts.
@@ -431,3 +433,4 @@ end
         + " from the BackConnectionHostNames registry value.")
 }
 ```
+

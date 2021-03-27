@@ -80,7 +80,7 @@ class in the **ApplyWebConfigModifications** method:
                 // continuing. Otherwise, we may encounter the following error
                 // (e.g. when applying Web.config changes from two different
                 // features in rapid succession):
-                //
+                // 
                 // "A web configuration modification operation is already
                 // running."
                 //
@@ -93,7 +93,8 @@ class in the **ApplyWebConfigModifications** method:
 
 As you can see, most of the work is delegated to the
 **SharePointTimerJobHelper** class. **SharePointWebConfigHelper** only knows the
-name of the one-time timer job (`"Windows SharePoint Services Web.Config Update"`) and a reasonable amount of time that the timer job should take to
+name of the one-time timer job (`"Windows SharePoint Services Web.Config
+Update"`) and a reasonable amount of time that the timer job should take to
 complete (20 seconds). Note that it doesn't necessarily wait the full 20 seconds
 for the timer job to complete (essentially the original hack that I thought
 about implementing). Rather it waits at most 20 seconds for the timer job to
@@ -283,15 +284,15 @@ When applying Web.config changes through a feature, messages similar to the
 following are logged:
 
 ```Text
-Verbose: Applying Web.config modifications to Web application (SharePoint - fabrikam-test80)...
-Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently idle. Waiting for the job to finish...
+Verbose: Applying Web.config modifications to Web application (SharePoint - fabrikam-test80)... 
+Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently idle. Waiting for the job to finish... 
 ...
-Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently running. Waiting for the job to finish...
+Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently running. Waiting for the job to finish... 
 ...
-Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently idle. Waiting for the job to finish...
+Verbose: The timer job (Windows SharePoint Services Web.Config Update) is currently idle. Waiting for the job to finish... 
 ...
-Verbose: The timer job (Windows SharePoint Services Web.Config Update) is not defined. It may have been removed because the job completed.
-Information: Waited 15 seconds for the one-time job (Windows SharePoint Services Web.Config Update) to finish.
+Verbose: The timer job (Windows SharePoint Services Web.Config Update) is not defined. It may have been removed because the job completed. 
+Information: Waited 15 seconds for the one-time job (Windows SharePoint Services Web.Config Update) to finish. 
 Information: Successfully applied Web.config modifications to Web application (SharePoint - fabrikam-test80).
 ```
 
@@ -299,3 +300,4 @@ In this particular instance, it took 15 seconds for the Web.config changes to be
 applied and the corresponding one-time SharePoint timer job to be cleaned up.
 However, this trace was captured from a VM in my home lab. I suspect PROD will
 actually be significantly faster.
+

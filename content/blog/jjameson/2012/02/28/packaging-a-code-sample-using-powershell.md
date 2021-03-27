@@ -43,7 +43,7 @@ function GetSolutionFile(
     }
 
     $solutionFile = Get-ChildItem $path -Filter *.sln -Recurse
-
+    
     If ($solutionFile -eq $null)
     {
         Throw "Solution file not found."
@@ -52,7 +52,7 @@ function GetSolutionFile(
     {
         Throw "More than one solution file was found."
     }
-
+    
     return $solutionFile
 }
 
@@ -65,11 +65,11 @@ function RemoveExtraneousItems(
     }
 
     Write-Host "Removing extraneous items from folder ($path)..."
-
+    
     Get-ChildItem $path -Include obj -Recurse |
         Remove-Item -Recurse
 }
-
+    
 function ZipFolder(
     [IO.DirectoryInfo] $directory)
 {
@@ -77,13 +77,13 @@ function ZipFolder(
     {
         Throw "Value cannot be null: directory"
     }
-
+    
     Write-Host ("Creating zip file for folder (" + $directory.FullName + ")...")
-
+    
     [IO.DirectoryInfo] $parentDir = $directory.Parent
-
+    
     [string] $zipFileName
-
+    
     If ($parentDir.FullName.EndsWith("\") -eq $true)
     {
         # e.g. $parentDir = "C:\"
@@ -93,12 +93,12 @@ function ZipFolder(
     {
         $zipFileName = $parentDir.FullName + "\" + $directory.Name + ".zip"
     }
-
+    
     If (Test-Path $zipFileName)
     {
         Throw "Zip file already exists ($zipFileName)."
     }
-
+    
     Write-Zip $directory.FullName -OutputPath $zipFileName -IncludeEmptyDirectories
 }
 
@@ -109,18 +109,18 @@ function PackageCodeSample(
     {
         Throw "Code sample folder must be specified."
     }
-
+    
     Write-Host ("Packaging code sample ($codeSampleFolder)...")
 
     If (Test-Path $codeSampleFolder)
     {
         Remove-Item $codeSampleFolder -Force -Recurse
     }
-
+    
     [string] $parentFolder = [Io.Path]::GetDirectoryName($codeSampleFolder)
     [string] $codeSampleFolderBaseName = [Io.Path]::GetFileName(
         $codeSampleFolder)
-
+    
     Push-Location $parentFolder
 
     $tf = "${env:ProgramFiles(x86)}" `
@@ -129,9 +129,9 @@ function PackageCodeSample(
     & $tf get $codeSampleFolderBaseName /force /recursive
 
     Pop-Location
-
+    
     $solutionFile = GetSolutionFile $codeSampleFolder
-
+        
     Push-Location $solutionFile.DirectoryName
 
     $msbuild = "${env:windir}" `
@@ -140,11 +140,11 @@ function PackageCodeSample(
     & $msbuild $solutionFile.Name
 
     Pop-Location
-
+    
     [IO.DirectoryInfo] $directory = Get-Item $codeSampleFolder
-
+    
     RemoveExtraneousItems $directory
-
+    
     ZipFolder $directory
 
     Write-Host -Fore Green ("Successfully packaged code sample (" `
@@ -166,7 +166,8 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > This script uses the
 > [PowerShell Community Extensions](http://pscx.codeplex.com/) to create the zip
 > file. If you can't or don't want to install PSCX, refer to my previous post
@@ -174,3 +175,4 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 > scriptable COM objects from the Windows Shell.
 
 {{< /div-block >}}
+

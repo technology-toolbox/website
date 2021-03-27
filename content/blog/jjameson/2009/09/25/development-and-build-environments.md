@@ -42,7 +42,7 @@ triad when referencing the various environments.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > For very large development efforts, there may be multiple physical
 > environments corresponding to DEV, TEST, and PROD. For example, numerous
 > "labs" are used within Microsoft for testing various configurations of
@@ -72,7 +72,7 @@ tools that are needed on the project (such as Microsoft Office).
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Developers must have administrative privileges on their own local environments
 > in order to facilitate development and debugging.
 
@@ -109,7 +109,7 @@ all the applications used in the solution and the tools to debug them.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > This environment is owned by the Development team. All members of the
 > Development team (or some subset, depending on the size and experience of the
 > team) have administrative privileges in the DEV environment. Having
@@ -130,7 +130,7 @@ environment to evaluate the progress of the solution.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > No development should occur on the DEV environment (in other words, no files
 > should ever be checked out directly to the DEV environment). The DEV
 > environment is shared by the entire team and must be treated appropriately as
@@ -160,7 +160,7 @@ Server.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Depending on the size of the organization and sophistication of the automated
 > build process, a subset of the Development team may need administrative
 > privileges on this server.
@@ -183,7 +183,7 @@ location to ensure they can be recovered in case of hardware failure.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The Development team has limited read-write privileges on this server (i.e.
 > the minimum required for the source control system to function properly).
 
@@ -208,7 +208,7 @@ simplifies the process of installing the solution to the DEV environment.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > All team members should have read-only access to the Builds share. Only the
 > service account used for the build process should have read-write access to
 > the Builds share.
@@ -221,7 +221,7 @@ that only members of the solution team can access the shares.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > The Test and Release Management teams should only install the solution from
 > the Release Server (or, preferrably, a CD or DVD containing the files from the
 > Release Server). Furthermore, only explicit build folders should be used by
@@ -250,7 +250,7 @@ performance of PROD.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > This environment is owned by the Test team. No member of the Development team
 > should have privileges in TEST above those of the end users of the solution.
 > Members of the Test team should have the additional privileges necessary to
@@ -268,7 +268,7 @@ decide which specific build of the solution should be tested at any given time.
 "Smoke" tests are typically performed on each build in DEV. Periodically the
 Test team selects a successful build to promote to TEST.
 
-### Production Environment (PROD) {#Production_Environment_-PROD}
+###  Production Environment (PROD) {#Production_Environment_-PROD}
 
 The Production environment is where the solution is ultimately deployed for end
 users. Strict security procedures must be enforced in this environment.
@@ -276,8 +276,9 @@ users. Strict security procedures must be enforced in this environment.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Only the Release Management team should have privileges in PROD above those of
 > the end users of the solution.
 
 {{< /div-block >}}
+

@@ -57,7 +57,7 @@ bug and associated workaround.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > As pointed out in a comment by Ramkumar Perumal,
 > Microsoft.SqlServer.BatchParser.dll does not exist in any of the specified
 > folders. This should also be reflected in the MSDN article.
@@ -72,3 +72,4 @@ following blog post:
 {{< reference
 title="Deploying your Database Project without VSTSDB installed. 2009-02-21"
 linkHref="http://blogs.msdn.com/bahill/archive/2009/02/21/deploying-your-database-project-without-vstsdb-installed.aspx" >}}
+

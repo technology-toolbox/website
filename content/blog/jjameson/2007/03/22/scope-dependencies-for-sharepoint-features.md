@@ -127,9 +127,9 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
     {
         readonly static Guid publicationContentTypesFeatureId =
             new Guid("9F5C14F1-CF58-47c7-BBBA-DA9A8637DEAB");
-
+        
         private FeatureConfigurator() { } // all methods are static
-
+        
         public static void Configure(
             SPWebApplication webApp)
         {
@@ -137,16 +137,16 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
             {
                 throw new ArgumentNullException("webApp");
             }
-
+            
             Debug.WriteLine("Configuring Fabrikam.Project1.PublicationLibrary feature...");
-
+            
             SPSite site = webApp.Sites["/"];
-
+            
             // We cannot specify an explicit dependency on the PublicationContentTypes feature
             // because that feature must be scoped to 'Site' (since it contains Field elements).
             // Therefore we check this dependency via custom code when this feature is activated.
             SPFeature feature = site.Features[publicationContentTypesFeatureId];
-
+            
             if (feature == null)
             {
                 throw new InvalidOperationException(
@@ -161,3 +161,4 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
 ```
 
 Good enough for me!
+

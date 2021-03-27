@@ -49,3 +49,4 @@ title="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
 7. Confirm the setting in the **Summary of changes** and then click **Finish**.
 
 Restart SharePoint Designer and you should be "good-to-go."
+

@@ -90,7 +90,7 @@ out-of-the-box with its table-based layout).
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > If you choose to use the 960 Grid System, I also highly recommend leveraging
 > the [960 Gridder](http://gridder.andreehansson.se) as well. This combination
 > makes the task of creating great looking Web pages much easier (even for
@@ -161,14 +161,14 @@ the following master page:
                     Generally speaking, style attributes should be avoided in
                     HTML. Styling should instead be applied exclusively through
                     CSS.
-
+                   
                     However the SharePoint SiteActionMenu control emits HTML
                     similar to the following:
-
+                   
                         <table height="100%" class="ms-siteaction" ...>
                             ...
                         </table>
-
+                   
                     When CSS is disabled, the height of the SiteActionMenu is
                     ridiculous (which makes it more difficult to troubleshoot
                     other styling issues). Consequently, limit the height of the
@@ -523,7 +523,7 @@ highlighting a few of the rules:
 /* =core (SharePoint core.css overrides)
 ------------------------------------------------------------------------------*/
 .ms-pagebreadcrumb {
-    border: 0;
+    border: 0;    
 }
 .ms-pagebreadcrumb a {
     background-color: inherit;
@@ -577,7 +577,8 @@ Grid System.
 
 Next comes the masthead, which contains the company logo, "welcome" area, and
 page editing toolbar (i.e. `<PublishingConsole:Console runat="server" />`). The
-main content for the page (i.e. `<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />`) comes after the masthead.
+main content for the page (i.e. `<asp:ContentPlaceHolder ID="PlaceHolderMain"
+runat="server" />`) comes after the masthead.
 
 Finally, the master page includes a hidden panel that encapsulates all of the
 various content placeholders that are required by SharePoint, but should not be
@@ -597,7 +598,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 {{< div-block "note update" >}}
 
 > **Update (2010-12-02)**
->
+> 
 > Part 2 in this series in _finally_ available ;-)\
 > \
 > **Web Standards Design with SharePoint, Part 2**\
@@ -608,7 +609,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 {{< div-block "note update" >}}
 
 > **Update (2011-01-31)**
->
+> 
 > Part 3 in this series provides a sample SharePoint master page and various
 > page layouts based on the 960 Grid System.\
 > \
@@ -616,3 +617,4 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > [https://www.technologytoolbox.com/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 
 {{< /div-block >}}
+

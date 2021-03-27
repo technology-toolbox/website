@@ -112,7 +112,7 @@ namespace Fabrikam.Project1.Search.Configuration
     /// <remarks>
     /// All methods of the <b>FeatureConfigurator</b> class are static and can
     /// therefore be called without creating an instance of the class.
-    /// </remarks>
+    /// </remarks>  
     [CLSCompliant(false)]
     [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
     public sealed class FeatureConfigurator
@@ -150,9 +150,9 @@ namespace Fabrikam.Project1.Search.Configuration
                 "Successfully configured Fabrikam.Project1.Search on site ({0}).",
                 site.Url);
         }
-
+        
         ...
-
+        
         private static void ConfigureManagedProperties(
             Schema sspSchema)
         {
@@ -188,7 +188,7 @@ namespace Fabrikam.Project1.Search.Configuration
             // Configure "ContentTypeName" managed property
             ...
         }
-
+        
         ...
 
         private static void ConfigureSspSettings(
@@ -216,7 +216,7 @@ namespace Fabrikam.Project1.Search.Configuration
                     context.Name);
 
                 throw new ArgumentException(message);
-            }
+            }            
 
             ConfigureFileTypes(context);
 
@@ -229,3 +229,4 @@ namespace Fabrikam.Project1.Search.Configuration
     }
 }
 ```
+

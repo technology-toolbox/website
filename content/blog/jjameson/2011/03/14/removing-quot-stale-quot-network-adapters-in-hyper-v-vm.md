@@ -43,14 +43,12 @@ still like to clean them up anyway.
 Here is the process that I use to cleanup the network adapters:
 
 1. Start an administrator command prompt and then run the following two commands:
-   
+
    ```Console
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```
-
 2. In the **Device Manager**window:
-   
    1. Click the **View** menu and then click **Show hidden devices**.
    2. Expand **Network adapters**.
    3. Right-click each network adapter that begins with **Microsoft Virtual
@@ -74,3 +72,4 @@ before configuring any network settings like DNS servers or a static IP address.
 Perhaps if the environment variable was <var>devmgmt_show_hidden_devices</var>
 (instead of <var>devmgr_show_nonpresent_devices</var>) then I could actually
 remember it ;-)
+

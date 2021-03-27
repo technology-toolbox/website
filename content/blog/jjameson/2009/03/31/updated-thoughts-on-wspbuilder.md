@@ -26,9 +26,9 @@ Here is the "almost" unabridged version of the email exchange (headers and
 signatures removed):
 
 1. <cite>Keutmann</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > I would like to know that you are not talking about the STSDEV project, but
    > it is really the WSPBuilder project. Because the WSPBuilder do not build
    > the WSP package on the {{< kbd "CTRL+SHIFT+B" >}} command, however the
@@ -36,13 +36,12 @@ signatures removed):
    > 
    > Please check up on this and let me know, furthermore I'll be happy to look
    > at the WSPBuilder code for optimizations if necessary.
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 2. <cite>Jeremy</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > It's definitely WSPBuilder. The solution contains folders for
    > WSPBuilder\_x64 and WSPBuilder\_x86 (which contain executables, a config
    > file, and a couple of other assemblies).
@@ -51,13 +50,12 @@ signatures removed):
    > ({{< kbd "CTRL+SHIFT+B" >}}) via MSBuild project files (including a common
    > SharePoint.WSPBuilder.targets). Is this not the typical way people use
    > WSPBuilder?
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 3. <cite>Keutmann</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > The standard installation of WSPBuilder Extensions for Visual Studio do not
    > build the WSP package when building the project
    > ({{< kbd "CTRL-SHIFT-B" >}}). Normally you have to build the WSP package by
@@ -71,13 +69,12 @@ signatures removed):
    > 
    > So just remove the WSPBuilder.exe from the MSBuild script on you project
    > and call the build of the WSP package manually when needed.
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 4. <cite>Jeremy</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > Hmmm...I didn't install the WSPBuilder Extensions for Visual Studio in
    > order to build the solution -- the team apparently already pulled in the
    > necessary dependencies in order to work on a "vanilla" Visual Studio
@@ -86,13 +83,12 @@ signatures removed):
    > Does the SharePoint.WSPBuilder.targets file ship as part of your utility?
    > I'm starting to wonder if this was something custom developed for this
    > project...
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 5. <cite>Keutmann</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > The SharePoint.WSPBuilder.targets file is not something that is shipped
    > with WSPBuilder, so it must be something that someone in your project have
    > added.
@@ -101,13 +97,12 @@ signatures removed):
    > SharePoint.WSPBuilder.targets file from the developing machines and install
    > the WSPBuilder Extensions for Visual Studio or use small bat scripts to run
    > WSPBuilder manually when needed.
-   
-   {{< div-block-end >}}
 
+   {{< div-block-end >}}
 6. <cite>Jeremy</cite>
-   
+
    {{< div-block-start "fst-italic" >}}
-   
+
    > Ah...well, it that case, it sounds like we **\*should\*** be treating
    > WspBuilder the same as makecab.exe and calling it whenever an item in the
    > project has been updated -- instead of whatever "magic" was put into the
@@ -125,7 +120,7 @@ signatures removed):
    > how the team implemented it into the build process).
    > 
    > Thanks for pointing this out.
-   
+
    {{< div-block-end >}}
 
 So, first of all, thanks to Keutmann (as he apparently prefers to be called) for
@@ -180,3 +175,4 @@ Perhaps I'm just an old dog... ;-)
 
 In my next post, I'll share my approach (a.k.a. the "DR.DADA" approach) for
 setting up a Visual Studio solution for SharePoint development.
+

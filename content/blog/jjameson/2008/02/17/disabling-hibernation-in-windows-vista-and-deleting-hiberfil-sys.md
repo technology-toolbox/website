@@ -44,9 +44,12 @@ that I had already thoroughly explored. Figuring I had simply missed the
 obvious, I proceeded to set the following options under advanced power settings:
 
 > **Sleep**
->
+> 
+> 
 > > **Hibernate after**
->
+> 
+> 
+> 
 > > > **On battery: Never**
 > > > 
 > > > **Plugged in: Never**
@@ -85,3 +88,4 @@ increased from 320 MB to 3.66 GB. Woohoo!
 
 That should get me going for a while -- or at least until I decide to install a
 few more programs on E: ;-)
+

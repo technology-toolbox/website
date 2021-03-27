@@ -246,3 +246,4 @@ update to this post if they do.]
 
 Later today, I'll try to finish up
 [the blog post I originally wanted to publish today](/blog/jjameson/2010/10/25/localization-and-sharepoint-solutions-part-1).
+

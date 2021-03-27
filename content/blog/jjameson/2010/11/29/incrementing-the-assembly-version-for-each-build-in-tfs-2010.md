@@ -20,12 +20,14 @@ attachment:
   fileSizeInBytes: 21334
 ---
 
+
 {{< div-block-start "note update" >}}
 
 > **Update (2010-12-03)**
->
+> 
+> 
 > If you are using gated check-ins, be sure to also read my follow-up post:
->
+> 
 > {{< reference title="Bypassing a Gated Check-in in TFS 2010" linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" >}}
 
 {{< div-block-end >}}
@@ -346,7 +348,7 @@ Next, create the actual MSBuild file to increment the assembly version
 <?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5"
   DefaultTargets="IncrementAssemblyVersion">
-
+  
   <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"/>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\TeamBuild\Microsoft.TeamFoundation.Build.targets" />
 
@@ -527,3 +529,4 @@ caption="Build Definition: \"Automated Build - Main\"" >}}
 | Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All |
 
 {{< /table >}}
+

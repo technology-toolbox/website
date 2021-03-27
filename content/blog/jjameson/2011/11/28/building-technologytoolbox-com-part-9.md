@@ -197,7 +197,7 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 
 ```ASP.NET
 <div class="hfeed posts-recent">
-    <h2>Most Recent Posts</h2>
+    <h2>Most Recent Posts</h2>    
     <asp:Repeater runat="server" ID="PostList">
         <ItemTemplate>
             <div class="hentry">
@@ -232,7 +232,7 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > When writing code, I generally prefer to take little steps -- rather than
 > trying to do too much at once. For example, as shown above, I will often add
 > "TODO:" placeholders to indicate where additional work needs to be done in
@@ -310,7 +310,7 @@ namespace TechnologyToolbox.Caelum.Website
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > The blog path (i.e. /blog/jjameson) is currently hard-coded in this method.
 > While I briefly considered enhancing this to support other scenarios, I
 > decided against it since it currently suits my needs. If and when I ever need
@@ -392,7 +392,8 @@ specified in **DateSyndicated**. This is simply a matter of formatting the
 At this point, the feature was almost complete. The only thing left to do was to
 replace the placeholder for the number of comments and conditionally add the
 `class="none"` attribute value to the `<li class="comments">` element. In other
-words, when there are no comments for a post, the markup should be `<li class="comments none">`, but when there is at least one comment the markup
+words, when there are no comments for a post, the markup should be `<li
+class="comments none">`, but when there is at least one comment the markup
 should be `<li class="comments">`. This makes it very easy to show or hide the
 comments icon (and corresponding link) using CSS.
 
@@ -496,3 +497,4 @@ Here is the complete source for RecentPosts.ascx:
     </asp:Repeater>
 </div>
 ```
+

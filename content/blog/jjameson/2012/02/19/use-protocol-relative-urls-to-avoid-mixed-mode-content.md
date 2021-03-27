@@ -40,11 +40,11 @@ there is a more elegant solution:
 
 > Actually, we should simply use a
 > [protocol relative URL/network path reference](http://paulirish.com/2010/the-protocol-relative-url/).
->
+> 
 > For example:
->
+> 
 > src="//ajax.googleapis.com/..."
->
+> 
 > That removes the need do use &lt;%= %&gt; blocks here and is cleaner.
 
 {{< /div-block >}}
@@ -87,3 +87,4 @@ protocol-relative URLs (no surprise there). However, I honestly couldn't care
 less about IE6 these days. Especially since I occasionally struggle with issues
 in IE9 that don't occur in Firefox and Chrome -- such as the one pointed out in
 [my previous post](/blog/jjameson/2012/02/19/html-to-pdf-converters).
+

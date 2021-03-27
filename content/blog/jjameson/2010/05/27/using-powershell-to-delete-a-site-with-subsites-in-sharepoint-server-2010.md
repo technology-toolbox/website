@@ -105,11 +105,10 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 > Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
 > has subsites.\
 > At line:1 char:13\
->
 > + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false\
 > + CategoryInfo : InvalidData:
->   (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb],
->   SPException\
+> (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb],
+> SPException\
 > + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
 {{< /div-block >}}
@@ -125,15 +124,15 @@ function RemoveSPWebRecursively(
     [Microsoft.SharePoint.SPWeb] $web)
 {
     Write-Debug "Removing site ($($web.Url))..."
-
+    
     $subwebs = $web.GetSubwebsForCurrentUser()
-
+    
     foreach($subweb in $subwebs)
     {
         RemoveSPWebRecursively($subweb)
         $subweb.Dispose()
     }
-
+    
     $DebugPreference = "SilentlyContinue"
     Remove-SPWeb $web -Confirm:$false
     $DebugPreference = "Continue"
@@ -153,3 +152,4 @@ If ($web -ne $null)
 Note that the script handles the case where `$web` is null -- in other words,
 when the specified Web doesn't exist (for example, when running the script a
 second time).
+

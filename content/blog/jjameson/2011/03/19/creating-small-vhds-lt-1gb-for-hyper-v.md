@@ -73,7 +73,7 @@ create a 200 MB VHD:
 ```PowerShell
 $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
     -namespace "root\virtualization"
-
+    
 $vhdService.CreateDynamicVirtualHardDisk(
     "C:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
     200MB)
@@ -84,7 +84,8 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
->
+> 
+> 
 > Depending on the specific service applications that you need to configure in
 > your SharePoint 2010 development environment, 200 MB not be sufficient for
 > transaction log storage (even if you
@@ -92,7 +93,7 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 > Unfortunately, I discovered that when I tried to configure numerous service
 > applications on my development VM (to match my client's Production
 > environment) I ran out of space on my L: drive.
->
+> 
 > Instead of the 200 MB I originally thought that I could get away with, I now
 > use 500 MB. So far, I haven't encountered any issues with this increased size.
 
@@ -109,3 +110,4 @@ icacls foobar5\_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
 
 This is described in more detail in
 [one of my previous posts](/blog/jjameson/2009/08/13/using-sysprep-ed-vhds-for-new-hyper-v-virtual-machines).
+

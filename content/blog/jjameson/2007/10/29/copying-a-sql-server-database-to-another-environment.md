@@ -40,7 +40,7 @@ From SQL Server 2005 Books Online:
 > and how they are restored. Sometimes, however, a backup must be taken for a
 > special purpose that should not affect the overall backup and restore
 > procedures for the database.
->
+> 
 > A data backup is normally a base backup for one or more differential backups
 > taken after it. Microsoft SQL Server 2005 introduces support for creating
 > copy-only backups, which do not affect the normal sequence of backups.
@@ -98,3 +98,4 @@ WITH FILE = 1
 Note that when copying a database from one environment to another, you often
 need to use the **MOVE** option to specify the new location for the data and log
 files (to account for different disk configurations and available disk space).
+

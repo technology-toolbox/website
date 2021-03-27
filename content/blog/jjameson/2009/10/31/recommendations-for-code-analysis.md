@@ -130,7 +130,8 @@ like this (even though this is obviously very wrong):
 ```
 
 I was relieved when I switched to C++ and these kinds of bugs were a thing of
-the past. [Note that I never switch my coding style to use something like "`1 == i`" in order to avoid these errors.]
+the past. [Note that I never switch my coding style to use something like "`1 ==
+i`" in order to avoid these errors.]
 
 Fortunately, in C# you don't have a choice about whether or not this compiles
 (it doesn't).
@@ -140,3 +141,4 @@ In other words, I want the compiler to tell me whenever I am doing something
 potentially wrong, because then I can spend just a little bit of time fixing my
 code to do it right. By forcing the Code Analysis warnings as errors, I don't
 have a choice -- meaning I have to fix them before check-in.
+

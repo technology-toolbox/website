@@ -46,7 +46,7 @@ with Outlook 2010 installed:
 
 ```Text
 449   3.055000   BANSHEE    WOLVERINE  POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846424703@banshee.corp.technologytoolbox.com> ready.
-450   3.055000   WOLVERINE  BANSHEE    POP3   POP3:Command: CAPA
+450   3.055000   WOLVERINE  BANSHEE    POP3   POP3:Command: CAPA 
 451   3.056000   BANSHEE    WOLVERINE  POP3   POP3:Response: -ERR, Error: Unacceptable command
 452   3.056000   WOLVERINE  BANSHEE    POP3   POP3:Command: QUIT
 ```
@@ -62,7 +62,7 @@ Outlook 2007 installed:
 
 ```Text
 2225   15.118164   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: Microsoft Windows POP3 Service Version 1.0 <846956359@banshee.corp.technologytoolbox.com> ready.
-2229   15.210937   FOOBAR2   BANSHEE   POP3   POP3:Command: AUTH
+2229   15.210937   FOOBAR2   BANSHEE   POP3   POP3:Command: AUTH  
 2230   15.212890   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK
 2231   15.241211   FOOBAR2   BANSHEE   POP3   POP3:Command: AUTH  NTLM
 2232   15.243164   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK
@@ -70,11 +70,11 @@ Outlook 2007 installed:
 2235   15.245117   BANSHEE   FOOBAR2   NLMP   NLMP:NTLM CHALLENGE MESSAGE
 2236   15.245117   FOOBAR2   BANSHEE   NLMP   NLMP:NTLM AUTHENTICATE MESSAGE, Domain: TECHTOOLBOX, User: jjameson, Workstation: FOOBAR2
 2239   15.335937   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: User successfully logged on
-2240   15.336914   FOOBAR2   BANSHEE   POP3   POP3:Command: STAT
+2240   15.336914   FOOBAR2   BANSHEE   POP3   POP3:Command: STAT 
 2241   15.336914   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: 1 827
-2242   15.337890   FOOBAR2   BANSHEE   POP3   POP3:Command: UIDL
+2242   15.337890   FOOBAR2   BANSHEE   POP3   POP3:Command: UIDL 
 2243   15.337890   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: 1 messages (827 octets)
-2244   15.337890   FOOBAR2   BANSHEE   POP3   POP3:Command: LIST
+2244   15.337890   FOOBAR2   BANSHEE   POP3   POP3:Command: LIST 
 2245   15.338867   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: 1 messages (827 octets)
 2262   15.383789   FOOBAR2   BANSHEE   POP3   POP3:Command: RETR  1
 2263   15.384765   BANSHEE   FOOBAR2   POP3   POP3:Response: +OK: 827 octects
@@ -102,7 +102,8 @@ doesn't sound very appealing.
 {{< div-block "note update" >}}
 
 > **Update (2010-04-27)**
->
+> 
+> 
 > I started investigating alternate e-mail services this morning, but quickly
 > discovered
 > [there are a lot of potential candidates](http://www.emailman.com/win/servers.html)
@@ -111,7 +112,7 @@ doesn't sound very appealing.
 > looked promising at first, but after reading through the multitude of comments
 > describing various issues with it, I discovered that it doesn't appear to work
 > with Outlook 2010 either.
->
+> 
 > This morning, I decided to just "bite the bullet" and download Mozilla
 > Thunderbird to see if I could use this to connect to my Windows Server 2003
 > POP3 service for demo and training purposes. It took less than 10 minutes to
@@ -120,7 +121,7 @@ doesn't sound very appealing.
 > really one and the same) just by typing in my e-mail address. The only
 > "tricky" part was ensuring that I checked the option to **Use secure
 > authentication** (since my POP3 service is configured to require SPA).
->
+> 
 > I really don't like the idea of not using Outlook for demos, but unless
 > someone can point me to a POP3 service that is free, lightweight (i.e. can run
 > adequately in a VM with a mere 256MB of memory), and trivial to install and
@@ -128,3 +129,4 @@ doesn't sound very appealing.
 > for now.
 
 {{< /div-block >}}
+

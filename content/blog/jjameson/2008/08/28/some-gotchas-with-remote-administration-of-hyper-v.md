@@ -107,7 +107,7 @@ According to the corresponding
 
 > **Update for Windows Server 2008 (KB950050)**\
 > This 32-bit update package includes the release version of the following:
->
+> 
 > - The Hyper-V Manager console
 > - The Virtual Machine Connection tool for x86-based editions of Windows Server
 >   2008
@@ -135,3 +135,4 @@ corresponding feature:
 
 For more information on deploying Hyper-V, refer to the
 [Hyper-V Planning and Deployment Guide](http://www.microsoft.com/downloads/details.aspx?familyid=5DA4058E-72CC-4B8D-BBB1-5E16A136EF42&displaylang=en).
+

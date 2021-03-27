@@ -70,3 +70,4 @@ there's a bug in MOSS 2007 in which a search scope that contains **Property
 Query** rules only is not recognized as having any rules at all. Consequently,
 you will need to explicitly include the URL of your Web application using a
 **Web Address** rule.
+

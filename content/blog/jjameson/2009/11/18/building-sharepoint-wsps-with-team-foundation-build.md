@@ -193,3 +193,4 @@ With these changes, the SharePoint WSP is successfully built regardless of
 whether it is compiled through Visual Studio, from the command line using
 MSBuild and the TFSBuild.proj file, or as an automated build using a Team
 Foundation Build server.
+

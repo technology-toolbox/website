@@ -116,7 +116,6 @@ solutions -- at least in my experience -- is "biting off" a reasonable chunk
 that can be delivered within a short period of time.
 
 With that in mind, the following scenario was identified for the first milestone
-
 - or, "M1" as I like to call it:
 
 - View Tugboat home page in SharePoint
@@ -183,7 +182,7 @@ VM) using SharePoint Designer.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > I typically check the prototype in on the Dev branch (e.g.
 > $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not
 > technically part of the solution.
@@ -315,7 +314,7 @@ following:
 ------------------------------------------------------------------------------*/
 /* Override .ms-WPBody rules from core.css so that content within Web Parts
  * (e.g. a Content Editor Web Part) appears similar to other text on the page
- * (for example, as defined in the CSS rules for <body>) */
+ * (for example, as defined in the CSS rules for <body>) */ 
 .ms-WPBody {
     /* HACK: Setting the rule to "inherit" works in Firefox, but not in IE8 */
     /* font-family: inherit; */
@@ -478,68 +477,60 @@ To deploy the Tugboat sample site to SharePoint:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
    right-click **Command Prompt**, and then click **Run as administrator**.
-
 2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
-   
+
    ```Console
    set TUGBOAT_URL=http://tugboatcoffee-local
    ```
-   
+
    {{< div-block "note" >}}
-   
+
    > **Note**
    > 
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 3. Set environment variables to specify the credentials to use for the Tugboat application pool:
-   
+
    ```Console
    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
    set TUGBOAT_APP_POOL_PASSWORD={password}
    ```
-   
+
    {{< div-block "note important" >}}
-   
+
    > **Important**
    > 
    > Be sure to specify a valid local or domain user.
-   
-   {{< /div-block >}}
 
+   {{< /div-block >}}
 4. Change to the folder containing the deployment scripts:
-   
+
    ```Console
    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
    ```
-
 5. Type the following command:
-   
+
    ```Console
    "Create Web Applications.cmd"
    ```
-
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
-   
+
    ```Console
    "Add Solutions.cmd"
    ```
-
 7. Wait for the solution to be added and then type the following command:
-   
+
    ```Console
    "Deploy Solutions.cmd"
    ```
-
 8. Wait for the solution to be deployed and then type the following command:
-   
+
    ```Console
    "Activate Features.cmd"
    ```
-
 9. Wait for the feature activations to complete, and then minimize or close the
    command prompt.
 
@@ -547,3 +538,4 @@ That's it! You're done.
 
 You are now ready to browse to the Tugboat sample site running in SharePoint.
 Woohoo!
+

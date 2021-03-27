@@ -64,7 +64,7 @@ Consequently, for SharePoint Server 2010, I added the following method to
             if (webPart == null)
             {
                 throw new ArgumentNullException("webPart");
-            }
+            }            
             else if (page == null)
             {
                 throw new ArgumentNullException("page");
@@ -96,7 +96,7 @@ Consequently, for SharePoint Server 2010, I added the following method to
 
                 throw new InvalidOperationException(message);
             }
-
+            
             if (string.IsNullOrEmpty(webPart.ID) == true
                 || webPart.ID.StartsWith(
                     "g_",
@@ -232,7 +232,7 @@ the page content with the desired Web Part:
                     bodyOnlyLayoutUrl);
 
             ...
-
+			
             SharePointPublishingHelper.SetDefaultPageContent(
                 page,
                 defaultSignInPageContent);
@@ -260,7 +260,7 @@ the page content with the desired Web Part:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The embedded CSS styles shown in the default page content above (e.g. margins,
 > floats, and widths) are only intended for demonstration purposes. While I
 > would have preferred to use something like the 960 Grid System instead, I was
@@ -313,3 +313,4 @@ originally created and configured during activation of the feature. (This also
 explains the "set default content" logic as well as the code to skip the
 configuration of the page if it is already approved -- because we don't want to
 trample any customization to the page made after it was initially created.)
+

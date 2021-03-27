@@ -70,3 +70,4 @@ Hopefully this helps others avoid this baffling situation.
 
 Note that the **Blog** template is also available in Windows SharePoint Services
 (WSS) v3.
+

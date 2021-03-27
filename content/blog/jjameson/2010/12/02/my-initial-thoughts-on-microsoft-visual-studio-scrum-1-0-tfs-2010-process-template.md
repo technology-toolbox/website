@@ -126,3 +126,4 @@ caption="Initial Tasks for a Scrum Project" >}}
 | Define the Sprint Backlog (v1.0\Sprint 1) | In the "Sprint Planning Meeting" with the entire team, select what work is to be done in the sprint and prepare the Sprint Backlog that details the time it will take to do the work. |
 
 {{< /table >}}
+

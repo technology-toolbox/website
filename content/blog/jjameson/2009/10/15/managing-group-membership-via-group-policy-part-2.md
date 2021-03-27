@@ -66,7 +66,7 @@ net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its
 > predecessor -- Microsoft Operations Manager (MOM) -- and thus had already
 > created a service account named **svc-mom-action**.
@@ -89,3 +89,4 @@ Here are the settings for the Group Policy:
 By linking this Group Policy to the appropriate OU (i.e.
 **IT/Resources/Servers**) the SCOM service account is ensured to be a member of
 the local **Performance Monitor Users** group on each monitored server. Voilà!
+

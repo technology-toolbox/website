@@ -16,10 +16,11 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx"
 ---
 
+
 {{< div-block "note update" >}}
 
 > **Update (2010-05-20)**
->
+> 
 > I made some changes to correct a few issues and also to include the final
 > version of the XML input file that I used to update my TFS project sites.
 
@@ -103,7 +104,7 @@ function AddNavigationElement(
     $url = $navigationNode.Url.Replace(
         $web.ServerRelativeUrl,
         "(`$web.ServerRelativeUrl)")
-
+        
     $navElement = $parentElement.OwnerDocument.CreateElement("NavigationNode")
 
     $parentElement.AppendChild($navElement) > $null
@@ -201,7 +202,7 @@ navigation), we'll keep the title of the quick launch navigation node as
 "Calendar" and simply refer to the **Calendar** view of the **Event** list:
 
 ```XML
-    <NavigationNode
+    <NavigationNode     
       title="Calendar"
       url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
 ```
@@ -265,7 +266,7 @@ function DeleteNavigationNode(
             {
                 Write-Debug ("Deleting navigation node" `
                     + " ($($tmpNode.Title) - $($tmpNode.Url))...")
-
+                    
                 $tmpNode.Delete()
             }
         }
@@ -273,7 +274,7 @@ function DeleteNavigationNode(
         {
             Write-Debug ("Deleting navigation node" `
                 + " ($($node.Title) - $($node.Url))...")
-
+                
             $node.Delete()
         }
     }
@@ -300,20 +301,27 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > After a navigation node has been deleted, you need to refresh the SPWeb object
 > to avoid errors like the following:
->
+> 
+> 
+> 
 > {{< div-block "errorMessage" >}}
->
+> 
+> 
 > > An error occurred while enumerating through a collection: Cannot complete
 > > this action.
->
+> 
+> 
+> 
+> 
 > {{< /div-block >}}
->
+> 
 > To refresh the SPWeb object (and consequently the associated
 > SPNavigationNodeCollection), simply call the `Get-SPWeb` cmdlet again:
->
+> 
 > `$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"`
 
 {{< /div-block >}}
@@ -331,7 +339,7 @@ function EnsureNavigationNode(
     [string] $url)
 {
     Write-Debug "Ensuring navigation node ($title - $url)..."
-
+        
     [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
         $nodes | Where-Object {$_.Url -eq $url}
 
@@ -375,7 +383,7 @@ function ImportNavigationNodes(
         $url = $url.Replace(
             "(`$web.ServerRelativeUrl)",
             $web.ServerRelativeUrl)
-
+        
         [Microsoft.SharePoint.Navigation.SPNavigationNode] $navigationNode =
             EnsureNavigationNode $nodes $title $url
 
@@ -403,7 +411,7 @@ function ImportQuickLaunchNavigation(
     [xml] $navigationXml)
 {
     Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
-
+    
     $nodes = $web.Navigation.QuickLaunch
 
     $navElements = $navigationXml.SelectNodes(
@@ -485,10 +493,10 @@ $sitesToUpgrade |
 
         $DebugPreference = "Continue"
         DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
-
+        
         $DebugPreference = "SilentlyContinue"
         $web = Get-SPWeb $_
-
+        
         $DebugPreference = "Continue"
         ImportQuickLaunchNavigation $web $navigationXml
     }
@@ -569,3 +577,4 @@ upgrading my TFS project sites:
     url="http://go.microsoft.com/fwlink/?LinkId=153652&amp;clcid=0x409" />
 </QuickLaunch>
 ```
+

@@ -57,12 +57,13 @@ hope our paths cross again...
 > was cut by the world's great flood and runs over rocks from the basement of
 > time. On some of the rocks are timeless raindrops. Under the rocks are the
 > words, and some of the words are theirs.
->
+> 
 > I am haunted by waters.
->
+> 
 > -- Norman Maclean, A River Runs Through It
 
 \
 \
 Jeremy Jameson\
 [snip, snip]
+

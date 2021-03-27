@@ -57,7 +57,7 @@ cookie.") which I generally consider to just be "noise."
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Sometimes it is important to investigate the attempts to hack your site, but
 > -- assuming you actually want to accomplish something useful with your time --
 > you typically have to chock these up to a fact of life when hosting a site on
@@ -269,14 +269,15 @@ elsewhere.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > Since the Googlebot will likely have added "bad" CAPTCHA images to its index
 > (i.e. images based on a random key and IV), it may take several months before
 > you stop seeing this error. The good news is that Google will eventually "give
 > up" and remove the old CAPTCHA URLs from the index. The new CAPTCHA image URLs
 > (based on the fixed key and IV specified in Web.config) will no longer
 > generate the errors.
->
+> 
 > In my case, these errors stopped occurring around the middle of December (and
 > I switched to a fixed key and IV in early October).
 
@@ -618,7 +619,7 @@ fix this bug, I changed it to the following:
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > There are a few other places in the Subtext solution where the
 > **HttpHelper.SetFileNotFoundResponse** method is called (and should probably
 > be updated as well to avoid issues when running in **Medium** trust). However,
@@ -649,15 +650,14 @@ my check-in comments below:
 {{< div-block "fst-italic" >}}
 
 > Fix numerous issues with pingback functionality in Subtext:\
->
 > - Error in PROD (i.e. "System.Web.HttpException: The file
->   '/blog/jjameson/Services/Pingback.aspx' does not exist.")\
+> '/blog/jjameson/Services/Pingback.aspx' does not exist.")\
 > - The "pingback" URL specified in the &lt;link&gt; head element should be an
->   absolute URL (not a relative URL) according to the Pingback 1.0 specification
->   (http://www.hixie.ch/specs/pingback/pingback)\
+> absolute URL (not a relative URL) according to the Pingback 1.0 specification
+> (http://www.hixie.ch/specs/pingback/pingback)\
 > - According to the current Subtext routing functionality, the "pingback" URL
->   needs to include the ID of the post (e.g.
->   "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")\
+> needs to include the ID of the post (e.g.
+> "https://www.technologytoolbox.com/blog/jjameson/Services/Pingback/315.aspx")\
 > - Method name was misspelled (i.e. "Notifiy" --&gt; "Notify")
 
 {{< /div-block >}}
@@ -678,7 +678,7 @@ insufficient "boundary checking" somewhere in the code.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > In case you are new to .NET development, you should never experience a
 > **NullReferenceException**. **ArgumentNullException**? Yes, those are "good"
 > (sort of)...a **NullReferenceException** is definitely indicative of "bad"
@@ -790,7 +790,7 @@ hacking "noise."
 {{< div-block-start "note update" >}}
 
 > **Update (2012-02-28)**
->
+> 
 > Refer to the following post for more information on configuring ELMAH filters:
 > {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
 
@@ -872,3 +872,4 @@ YAHA (yet another hacking attempt):
 the out-of-the-box "goodness" we get for free when it comes to security in
 ASP.NET. [It really helps to offset what you feel whenever you see Microsoft
 release a security patch for the .NET Framework.]
+

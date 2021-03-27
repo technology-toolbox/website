@@ -51,9 +51,9 @@ Here's an excerpt from the
 > an application. Caching can increase the performance of future installations
 > that otherwise need to obtain the old files from a original application
 > source.
->
+> 
 > ...
->
+> 
 > If the value of the MaxPatchCacheSize policy is set to 0, no additional files
 > are saved.
 
@@ -107,11 +107,12 @@ files.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare
 > occasions where you have to do a little more work when installing new products
 > or features.
->
+> 
 > For example, while testing my upgrade from TFS 2008 to TFS 2010 on a new set
 > of VMs, I first installed SharePoint Server 2010 on one of the VMs. Then I
 > subsequently needed to install Reporting Services on the same VM (for the TFS
@@ -121,7 +122,7 @@ files.
 > (because it was installed from a temporary folder via Windows Update but since
 > my MaxPatchCacheSize was set to 0, it wasn't copied to the
 > \Windows\Installer\$PatchCache$ folder).
->
+> 
 > Consequently, I simply had to extract the service pack (using the /EXTRACT
 > command-line parameter) and search around a little for the expected file. Once
 > I located the version it needed, SQL Server Setup continued on its way and
@@ -134,3 +135,4 @@ thought about it recently when setting up my laptop with a new 80GB SSD drive).
 Ultimately, it's a judgment call that you need to make based on how much disk
 space you are willing to trade for the convenience of simpler software and patch
 installations.
+

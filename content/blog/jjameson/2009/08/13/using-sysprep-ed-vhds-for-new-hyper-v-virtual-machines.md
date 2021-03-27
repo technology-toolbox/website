@@ -46,18 +46,18 @@ encountered the following error:
 {{< div-block "errorMessage" >}}
 
 > Virtual Machine Connection
->
+> 
 > The application encountered an error while attempting to change the state of
 > 'dogfood'
->
+> 
 > 'dogfood' failed to start.
->
+> 
 > Microsoft Emulated IDE Controller (Instance ID {GUID}): Failed to power on
 > with Error 'General access denied error'
->
+> 
 > IDE/ATAPI: Could not attach 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' to
 > location 0/0 of IDE Controller. Error: 'General access denied error'
->
+> 
 > The file 'C:\NotBackedUp\VMs\dogfood\dogfood.vhd' does not have the required
 > security settings. Error: 'General access denied error'
 
@@ -115,3 +115,4 @@ to my Active Directory domain and getting all of the latest patches applied
 using Windows Server Update Services (which, in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) is
 enforced through Group Policy).
+

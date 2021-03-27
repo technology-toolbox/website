@@ -72,7 +72,7 @@ post:
 > for Fabrikam Technologies. Consequently Doug needs to get his local
 > development environment created and configured as quickly as possible in order
 > to start being a productive team member.
->
+> 
 > After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008 and
 > Visual Studio 2008. He then installs MOSS 2007 and subsequently creates a new
 > SharePoint "farm" (which in this case is comprised only of his single VM) and
@@ -146,7 +146,7 @@ the deployment scripts default to Release builds, Doug needs to set the
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically
 > be set using system environment variables as illustrated in the following
 > figure. That way, the variables would only need to be set once per
@@ -319,7 +319,7 @@ Or, for those of you that prefer to read code instead...
          SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
 
          EnableAnonymousAccessOnRootWeb(webApp);
-
+            
          ConfigureSqlRoleProviderJob.Register(webApp);
 ```
 
@@ -596,7 +596,7 @@ namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
             }
 
             SPIisSettings iisSettings = webApp.IisSettings[SPUrlZone.Internet];
-
+            
             // HACK: It would be preferable to simply check the value of
             // iisSettings.RoleManager for the expected value. However, this
             // property was not always found to be consistent with the value
@@ -633,7 +633,7 @@ namespace Fabrikam.Demo.Web.FormsBasedAuthenticationConfiguration
 
             roleManagerSection.DefaultProvider = "FabrikamSqlRoleProvider";
             config.Save();
-
+            
             Logger.LogInfo(
                 "Successfully set default role provider for the Internet zone"
                     + " to FabrikamSqlRoleProvider.");
@@ -728,7 +728,7 @@ custom STSADM commands for extending the Web application and enabling FBA.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > If you haven't seen Gary Lapointe's custom STSADM commands already, I
 > encourage you to take a look at them. You can find them on his blog:
 > [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The custom STSADM
@@ -778,3 +778,4 @@ from SharePoint).
 In my
 [next post](/blog/jjameson/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1), I
 cover a similar method for configuring AJAX in SharePoint applications.
+

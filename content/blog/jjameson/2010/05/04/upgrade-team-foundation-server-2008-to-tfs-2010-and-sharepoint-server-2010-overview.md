@@ -79,12 +79,13 @@ solution over time as your needs grow.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > This recommendation really applies to most products that depend on SQL Server
 > -- not just TFS. There are a few scenarios where I consider it acceptable to
 > run SQL Server side-by-side with other products and technologies, but in
 > general, you should try to isolate it whenever practical.
->
+> 
 > I should also point out that this is just _my_ recommendation. According to
 > the TFS installation guide, a single server is recommended when you have less
 > than 500 users. On the other hand, I don't believe that official
@@ -158,13 +159,16 @@ guide...
 {{< div-block-start "note important" >}}
 
 > **Important**
->
+> 
+> 
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to
 > continue to use the source control integration features in Expression Web 3),
 > you must download and install an update:
->
+> 
 > {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
->
+> 
+> 
+> 
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
 
@@ -191,3 +195,4 @@ point of installing Visual Studio instead.
 As mentioned throughout this post, I'll provide details about the installation,
 configuration, and upgrade of TFS 2010 and SharePoint Server 2010 in my
 [next blog post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+

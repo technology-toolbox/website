@@ -69,7 +69,7 @@ are the details.
 {{< div-block "note update" >}}
 
 > **Update (2011-03-11)**
->
+> 
 > I've updated the following to reflect a few omissions in my original post
 > (such as installing the Remote Server Administration Tools for Windows 7
 > _before_ installing SP1).
@@ -89,7 +89,7 @@ I then immediately installed the
 {{< div-block "note warning" >}}
 
 > **Warning**
->
+> 
 > If you plan on using the Remote Server Administration Tools for Windows 7,
 > then now is the time to install them. Otherwise
 > [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1)
@@ -152,7 +152,7 @@ I then proceeded to install the following:
     forcing me to install the old 8.1.x version)
 17. Personal "stuff":
     1. **Microsoft Money** (yes, the "sunset" edition -- but
-       [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
+    [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
        now...probably not ever)
     2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
        scripts in order to download quotes and credit card statements into Money
@@ -169,3 +169,4 @@ for Office 2010).
 
 Wow, look at the time! It looks like I'll be working through lunch today to make
 up for my late start ;-)
+

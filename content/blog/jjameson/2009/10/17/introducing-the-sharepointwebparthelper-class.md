@@ -167,7 +167,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 
             Debug.Assert(webPart.ZoneIndex == zoneIndex);
             zoneIndex++;
-
+            
             Logger.LogInfo(
                 CultureInfo.InvariantCulture,
                 "Successfully created Web Part ({0}) on page ({1}).",
@@ -373,7 +373,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                     CultureInfo.InvariantCulture,
                     "Web Part ({0}) was not found in the Web Part Gallery.",
                     webPartFilename);
-
+                
                 throw new ArgumentException(
                     message,
                     "webPartFilename");
@@ -402,7 +402,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
         /// <param name="htmlContent">The content to display within the Web
         /// Part.</param>
         /// <param name="title">The title of the Web Part.</param>
-        /// <returns>The new or existing Web Part on the page.</returns>
+        /// <returns>The new or existing Web Part on the page.</returns>        
         [System.Diagnostics.CodeAnalysis.SuppressMessage(
             "Microsoft.Design",
             "CA1045:DoNotPassTypesByReference",
@@ -583,7 +583,7 @@ namespace Fabrikam.Web.Search.Configuration
     /// <remarks>
     /// All methods of the <b>FeatureConfigurator</b> class are static and can
     /// therefore be called without creating an instance of the class.
-    /// </remarks>
+    /// </remarks>  
     [CLSCompliant(false)]
     [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)]
     public sealed class FeatureConfigurator
@@ -657,7 +657,7 @@ namespace Fabrikam.Web.Search.Configuration
                     scopeName);
 
                 #endregion
-
+                
                 #region Zone2
 
                 zoneId = "Zone2";
@@ -712,7 +712,7 @@ namespace Fabrikam.Web.Search.Configuration
 
                 searchStats.DisplayResponseTime = false;
                 wpm.SaveChanges(searchStats);
-
+                
                 SharePointWebPartHelper.EnsureWebPart(
                     wpm,
                     "searchPaging1",
@@ -745,7 +745,7 @@ namespace Fabrikam.Web.Search.Configuration
                 }
 
                 #endregion
-
+                
                 // HACK: Avoid memory leak in SPLimitedWebPartManager
                 if (wpm.Web != null)
                 {
@@ -767,3 +767,4 @@ classes as useful as I have over the past several years.
 
 Be sure to stay tuned, because there are more SharePoint helper classes to come,
 but my daughter just woke up and now I need to go make some pancakes!
+

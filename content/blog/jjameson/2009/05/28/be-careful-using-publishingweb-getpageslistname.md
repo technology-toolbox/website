@@ -98,3 +98,4 @@ SPList pages = web.Lists[PublishingWeb.GetPagesListId(web)];
 
 It looks like the `PublishingWeb.GetPagesListName()` method really should have
 been called `GetPagesUrlName` instead.
+

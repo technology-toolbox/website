@@ -131,7 +131,7 @@ Stop-Transcript
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > In order to avoid issues when running the script interactively from a
 > PowerShell window, we really should call **Stop-Transcript** when an error
 > occurs (i.e. by using **Trap**). Otherwise, if an error occurs while running
@@ -147,8 +147,8 @@ viewed in Notepad):
 **********************
 Windows PowerShell Transcript Start
 Start time: 20111119062551
-Username  : TECHTOOLBOX\jjameson
-Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1)
+Username  : TECHTOOLBOX\jjameson 
+Machine	  : FOOBAR5 (Microsoft Windows NT 6.1.7601 Service Pack 1) 
 **********************
 Transcript started, output file is C:\Users\jjameson\AppData\Local\Temp\Temp.log
 Changing to TEMP folder...Creating file...New-Item : The file 'C:\Users\jjameson\AppData\Local\Temp\Temp.txt' already exists.At C:\Temp.ps1:9 char:9+ New-Item <<<<  Temp.txt -Type File -Value "foobar"    + CategoryInfo          : WriteError: (C:\Users\jjames...l\Temp\Temp.txt:String) [New-Item], IOException    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand **********************
@@ -253,15 +253,18 @@ covered in
 {{< div-block-start "note important" >}}
 
 > **Important**
->
+> 
+> 
 > Depending on the content of the PowerShell script, you may encounter issues
 > when redirecting `stderr` to `stdout`. For example, I originally used RoboCopy
 > in the PowerShell script described in my previous post (to copy files from the
 > Release server to the Web server). Consequently, I encountered a bug in
 > PowerShell that is described in the following blog post:
->
+> 
 > {{< reference title="Workaround: The OS handle's position is not what FileStream expected" linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
->
+> 
+> 
+> 
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 
 {{< div-block-end >}}
@@ -315,3 +318,4 @@ Copying Caelum website content...
 Successfully copied Caelum website content.
 Successfully rebuilt Web application.
 ```
+

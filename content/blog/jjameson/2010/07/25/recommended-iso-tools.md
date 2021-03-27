@@ -45,3 +45,4 @@ Daemon Tools for a while, but got fed up with all of the "crap" that got
 installed along with it. Virtual CloneDrive is much better, in my opinion.
 
 I hope you find these tools as valuable as I do.
+

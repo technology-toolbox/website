@@ -72,9 +72,9 @@ DECLARE @databases TABLE
 )
 
 INSERT INTO
-    @databases
+    @databases 
     SELECT name
-    FROM master.dbo.sysdatabases
+    FROM master.dbo.sysdatabases 
     WHERE name NOT IN ( 'master', 'model', 'msdb', 'tempdb' )
 
 DECLARE @id TINYINT
@@ -143,3 +143,4 @@ Lastly, note that I have a separate server periodically ROBOCOPY the backup
 files off of this server to another location -- just in case the WSUS server
 happens to catch on fire or some other act of God completely wipes out the local
 database backups ;-)
+

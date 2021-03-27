@@ -100,3 +100,4 @@ Be aware that the Web.config file you use for SharePoint applications varies
 depending on whether you want to view log messages for a content page or for an
 application (i.e. \_layouts) page. This is covered in my
 [next post](/blog/jjameson/2009/06/18/configuring-logging-in-sharepoint-application-pages).
+

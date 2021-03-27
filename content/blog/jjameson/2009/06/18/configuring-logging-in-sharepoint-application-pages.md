@@ -42,3 +42,4 @@ Now you can easily view log messages from a feature receiver that uses the
 custom `Logger` class regardless of whether the feature is "activated" via
 **Site Settings**, through stsadm.exe, or from within
 [Visual Studio via a unit test](/blog/jjameson/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator).
+

@@ -74,3 +74,4 @@ If you have an interest in one or more of the above fixes, let me know and we
 can see about getting them merged into my Subtext fork.
 
 Enjoy!
+

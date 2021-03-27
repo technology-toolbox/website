@@ -117,3 +117,4 @@ A few notes...
    file again. The short reason is that I really hate to see "dots" in folder
    names, because where do we draw the line? If you don't do this, then pretty
    soon you start seeing 30 project folders within a single folder.
+

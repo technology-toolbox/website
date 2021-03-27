@@ -208,7 +208,7 @@ function EnsureNavigationNode(
     [string] $url)
 {
     Write-Debug "Ensuring navigation node ($title - $url)..."
-
+        
     [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
         $nodes | Where-Object {$_.Url -eq $url}
 
@@ -275,7 +275,7 @@ function ImportQuickLaunchNavigation(
     [xml] $navigationXml)
 {
     Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
-
+    
     $nodes = $web.Navigation.QuickLaunch
 
     $navElements = $navigationXml.SelectNodes(
@@ -323,3 +323,4 @@ In my
 [next post](/blog/jjameson/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation),
 I'll show how you can use PowerShell to update the quick launch navigation for
 TFS 2005/2008 project sites upgraded to TFS 2010.
+

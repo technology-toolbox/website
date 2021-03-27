@@ -87,7 +87,7 @@ the QFE branch eventually back to Main).
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Going forward, I'm going to switch from the "Advanced Branch Plan" to the
 > "Standard Branch Plan" (since -- at least for this particular project -- we
 > don't need both a **ServicePack** branch as well as a **QFE** branch).
@@ -119,7 +119,7 @@ logical steps:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > If you are using the "Advanced Branch Plan" (as I was before), then branching
 > for a release is comprised of _four_ logical steps (because you would first
 > branch "Service Pack" to "QFE" and then "QFE" to "RTM"). Also note that you
@@ -160,7 +160,7 @@ To create a new "Service Pack" branch from the "Main" branch:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > If it really bothers you to override check-in policy failures like the one
 > noted above, you can certainly download the new branch to your workspace and
 > check in the changes through Visual Studio with the solution open. However, at
@@ -206,25 +206,19 @@ earlier post for
 1. In **Source Control Explorer**, in the new "Service Pack" branch, right-click
    the **IncrementAssemblyVersion.proj** or **TFSBuild.proj** file that is used
    to increment the assembly version, and then click **Get Latest Version**.
-
 2. Next, double-click the file to open it in the editor.
-
 3. Location the **&lt;Version&gt;** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
-   
+
    ```XML
        <Version
          VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
          BuildType="None"
          RevisionType="Increment">
    ```
-
 4. Save the changes to the file.
-
 5. Right-click the updated MSBuild file and click **Check In Pending
    Changes...**
-
 6. In the **Check In - Source Files**window:
-   
    1. In the **Source Files** channel, type a descriptive comment in the
       **Comment** box (e.g. **Increment revision portion of assembly version on
       ServicePack branch (instead of the build number)**).
@@ -238,7 +232,7 @@ earlier post for
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > Even though it probably seems silly to many people, I always compare my
 > changes on edited files before I click the **Check In** button -- even when
 > making trivial changes like the one described above. It doesn't take but a few
@@ -246,3 +240,4 @@ earlier post for
 > changes.
 
 {{< /div-block >}}
+

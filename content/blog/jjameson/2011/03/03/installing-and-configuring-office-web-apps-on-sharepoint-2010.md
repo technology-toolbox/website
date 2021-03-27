@@ -90,7 +90,7 @@ HTTPS.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Skip this section for environments that are not configured with SSL
 > certificates (e.g. development environments).
 
@@ -100,22 +100,18 @@ HTTPS.
 
 1. On the Central Administration home page, in the **Application Management**
    section, click **Manage service applications**.
-
 2. On the **Service Applications** tab, click **Excel Services Application**
    (where the **Type** column is **Excel Services Application Web Service
    Application**).
-
 3. On the **Manage Excel Services Application** page, click **Trusted File
    Locations**.
-
 4. On the **Excel Services Application Trusted File Locations** page, click the
    default trusted file location (**http://**) to edit the corresponding
    settings.
-
 5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
-   
+
    {{< div-block "note" >}}
-   
+
    > **Note**
    > 
    > Since users of the Fabrikam extranet site are automatically redirected from
@@ -124,7 +120,7 @@ HTTPS.
    > it is not expected that Excel Services will be used over HTTP (only HTTPS).
    > If it is necessary to support both HTTP and HTTPS, then a separate trusted
    > file location will need to be configured.
-   
+
    {{< /div-block >}}
 
 ### Configure the Office Web Apps cache
@@ -142,12 +138,13 @@ files (at least in a production environment).
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
+> 
 > You must start a new instance of the SharePoint 2010 Management Shell after
 > installing the Office Web Apps in order to use the new PowerShell cmdlets
 > (e.g.
 > [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
->
+> 
 > Also note that you may need to wait a few minutes (after installing Office Web
 > Apps or rebuilding the Web application) before performing the following
 > procedure (for the SharePoint timer job to configure the cache on the site
@@ -165,14 +162,13 @@ database files.
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click Yes.
-
 2. From the Windows PowerShell command prompt, run the following script:
-   
+
    ```PowerShell
    $ErrorActionPreference = "Stop"
-   
+
    Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-   
+
    function ConfigureOfficeWebAppsCache(
        [string] $webAppUrl,
        [int] $cacheSizeInGigabytes,
@@ -181,60 +177,58 @@ database files.
    {
        Write-Host ("Configuring Office Web Apps cache for Web application" `
            + " ($webAppUrl)...")
-   
+
        Write-Debug "cacheSizeInGigabytes: $cacheSizeInGigabytes"
        Write-Debug "expirationPeriodInDays: $expirationPeriodInDays"
        Write-Debug "cacheDatabaseName: $cacheDatabaseName"
-   
+   	
        $cacheSizeInBytes = $cacheSizeInGigabytes * 1024 * 1024 * 1024
        $webApp = Get-SPWebApplication --Identity $webAppUrl -Debug:$false
        $webApp | Set-SPOfficeWebAppsCache `
            -ExpirationPeriodInDays $expirationPeriodInDays `
            -MaxSizeInBytes $cacheSizeInBytes -Debug:$false
-   
+
        $cacheDatabase = Get-SPContentDatabase $cacheDatabaseName -Debug:$false -EA 0
-   
+
        if ($cacheDatabase -eq $null)
        {
            $cacheDatabase = New-SPContentDatabase -Name $cacheDatabaseName `
                -WebApplication $webApp -Debug:$false
        }
-   
+
        Get-SPOfficeWebAppsCache -WebApplication $webapp -Debug:$false |
            Move-SPSite -DestinationDatabase $cacheDatabase -Confirm:$false `
            -Debug:$false
-   
+
        Write-Host "Restricting the cache database to a single site collection..."
-   
+
        $database = Get-SPContentDatabase $cacheDatabase
-   
+
        $database.MaximumSiteCount = 1
        $database.WarningSiteCount = 0
        $database.Update()
-   
+
        Write-Host -Fore Green ("Successfully configured Office Web Apps cache for" `
            + " Web application ($webAppUrl).")
    }
-   
+
    function Main()
    {
        $webAppUrl = "http://extranet.fabrikam.com"
        $cacheSizeInGigabytes = 20
        $expirationPeriodInDays = 30
        $cacheDatabaseName = "OfficeWebAppsCache"
-   
+
        ConfigureOfficeWebAppsCache $webAppUrl $cacheSizeInGigabytes `
            $expirationPeriodInDays $cacheDatabaseName
    }
-   
+
    Main
    ```
-
 3. Wait for the script to complete and verify that no errors occurred during the
    process.
-
 4. Reset Internet Information Services (IIS) in order for the change to take effect:
-   
+
    ```Console
    iisreset
    ```
@@ -242,26 +236,21 @@ database files.
 #### To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
-
 2. In the **Object Explorer**, expand the **Databases** folder.
-
 3. Right-click the **OfficeWebAppsCache** database and then click
    **Properties**.
-
 4. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
-
 5. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
    {{< table class="small table-striped"
    caption="Table 2 - Initial data and log file sizes" >}}
-   
+
    | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
    | --- | --- | --- | --- | --- | --- |
    | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted gerowth |
    |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
-   
-   {{< /table >}}
 
+   {{< /table >}}
 6. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
@@ -297,11 +286,11 @@ databases used by the Web application.
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click Yes.
-
 2. From the Windows PowerShell command prompt, type the following commands:
-   
+
    ```PowerShell
    $webApp = Get-SPWebApplication "http://extranet.fabrikam.com"
-   
+
    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
    ```
+

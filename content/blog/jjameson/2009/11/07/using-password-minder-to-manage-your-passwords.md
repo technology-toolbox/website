@@ -103,3 +103,4 @@ discovered that my Team Foundation Build server wasn't setup to build C++
 projects, which is what I will blog about next.
 
 Stay tuned...I need to eat some breakfast first ;-)
+

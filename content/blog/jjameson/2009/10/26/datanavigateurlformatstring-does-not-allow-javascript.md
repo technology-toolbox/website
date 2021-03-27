@@ -42,13 +42,13 @@ My initial attempt was to specify something like :
     AutoGenerateColumns="False"
     ...>
     ...
-    <Columns>
+    <Columns>        
         <asp:HyperLinkField DataNavigateUrlFields="Id"
            DataNavigateUrlFormatString="javascript:ShowItemDetail({0})"
            DataTextField="CreateTime"
            DataTextFormatString="{0:ddd MMM dd HH:mm}"
            HeaderStyle-CssClass="dateColumn"
-           HeaderText="Date" />
+           HeaderText="Date" />  
        ...
     </Columns>
 </asp:GridView>
@@ -115,9 +115,9 @@ in the DataBinder.Eval method, you can use strongly typed objects instead:
       <%-- HACK: Ideally, we would just use an asp:HyperLinkField,
       but there's a bug when specifying "javascript:" in the
       DataNavigateUrlFormatString:
-
+        
       https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=102300
-
+        
       As a workaround, use a TemplateField instead.
       --%>
       <asp:TemplateField>
@@ -140,3 +140,4 @@ reference the assembly containing your custom business objects. For example:
 ```ASP.NET
 <%@ Assembly Name="Fabrikam.Demo.Integration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
 ```
+

@@ -68,7 +68,7 @@ able to verify (via the progress bar) that it was in fact progressing. I let it
 run to completion and observed the following results when it was finished:
 
 > Unused updates deleted 3082
->
+> 
 > Unused update revisions deleted: 5448
 
 I then ran the **Server Cleanup Wizard** again, but this time only selecting the
@@ -86,3 +86,4 @@ Since December, I have been able to run the **Server Cleanup Wizard** repeatedly
 with all of the options selected, and it usually completes in a matter of
 minutes. For some reason, it was only that first time through that I needed to
 run the steps individually to avoid the hang. Go figure.
+

@@ -84,17 +84,16 @@ Powershell:
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by **User Account Control** to
    allow the program to make changes to this computer, click **Yes**.
-
 2. At the Windows PowerShell command prompt, type the following command:
-   
+
    {{< console-block-start >}}
-   
+
    Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer
    &lt;ServerName&gt; -WebApplication &lt;URL&gt; [-Updateuserexperience]
-   
+
    {{< console-block-end >}}
    Where:
-   
+
    - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to
      upgrade.
    - <var>&lt;ServerName&gt;</var> is server on which the database is stored.
@@ -103,15 +102,15 @@ Powershell:
    - <var>-Updateuserexperience</var> specifies to update the sites with the new
      SharePoint user experience (part of Visual Upgrade). If you omit this
      parameter, the sites retain the old user experience after upgrade.
-   
+
    \
    For example:
-   
+
    {{< console-block-start >}}
-   
+
    Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
    -WebApplication http://cyclops-dev -Updateuserexperience
-   
+
    {{< console-block-end >}}
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and
@@ -119,3 +118,4 @@ click **Configure Installed Features**.
 
 This will launch the Team Foundation Server Configuration Center and allow you
 to complete the upgrade process again.
+

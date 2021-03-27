@@ -22,7 +22,7 @@ here is an overview of the CAPTCHA feature detailed in this post.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Although not illustrated in the screenshots below, the custom CAPTCHA control
 > is also used on the Subtext blog pages to prevent bots from adding comments to
 > blog posts. I'll explain why this is important in a moment.
@@ -185,7 +185,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
     internal sealed class CaptchaConfiguration
     {
         public const string CaptchaKey = "s3capcha";
-
+                
         public string Message { get; private set; }
         public string IconFolder { get; private set; }
         public string IconFileExtension { get; private set; }
@@ -303,12 +303,13 @@ store a "super-secret" hash of the expected value in the cookie.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > The reason I put the words "super-secret" in quotes is because someone could
 > certainly read this post, figure out the hashing "algorithm" (at present, it's
 > almost laughable to use that word), and subsequently create a hack to spam the
 > site.
->
+> 
 > If you do decide to do this, then a) you're a _loser_, and b) I'll just
 > quickly change the hashing code to generate some other value. In hindsight, I
 > suppose I could have encrypted the expected value for the CAPTCHA instead (so
@@ -403,7 +404,7 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > I've kept the comments in the code block above to help readers understand a
 > couple of the more subtle details of the implementation.
 
@@ -440,7 +441,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
                 {
                     string formValue =
                         Request.Form[CaptchaConfiguration.CaptchaKey];
-
+                    
                     int numericValue = 0;
 
                     bool success = int.TryParse(
@@ -471,7 +472,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
         private void BindCaptchaControl()
         {
             string basePath = ResolveClientUrl("~/Controls/Captcha");
-
+            
             List<int> values = new List<int>();
             for (int i = 0; i < config.IconNames.Count; i++)
             {
@@ -516,14 +517,14 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
                     config.Width,
                     config.Height);
             }
-
+            
             buffer.Append("<div style=\"clear:left\"></div></div>");
 
             CaptchaPlaceholder.Text = buffer.ToString();
 
             HttpCookie cookie = new HttpCookie(CaptchaConfiguration.CaptchaKey);
             cookie.Value = GetHashedCaptchaValue(randomValues[randomIndex]);
-
+            
             Response.SetCookie(cookie);
         }
 
@@ -567,7 +568,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls.Captcha
 
             return output;
         }
-
+        
         protected void ValidateCaptchaControl(
             object source,
             ServerValidateEventArgs e)
@@ -624,3 +625,4 @@ function endRequest(sender, args) {
     }
 }
 ```
+

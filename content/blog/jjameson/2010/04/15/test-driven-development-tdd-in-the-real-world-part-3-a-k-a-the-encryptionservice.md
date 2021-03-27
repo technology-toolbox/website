@@ -123,7 +123,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
             string plaintext = "foobar";
             string expected = plaintext;
             string ciphertext = EncryptionService.Encrypt(plaintext);
-
+           
             string actual = EncryptionService.Decrypt(ciphertext);
 
             Assert.AreEqual<string>(expected, actual);
@@ -199,7 +199,7 @@ that it fails based on the current implementation:
             string plaintext = "foobar";
             string expected = plaintext;
             string ciphertext = EncryptionService.Encrypt(plaintext);
-
+           
             string actual = EncryptionService.Decrypt(ciphertext);
 
             Assert.AreEqual<string>(expected, actual);
@@ -380,7 +380,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > When doing TDD, we typically want to work in very small increments (i.e. get
 > our existing tests to pass before adding more complexity). However, in this
 > case, it makes sense to add a couple more failing unit tests (as well as
@@ -461,7 +461,7 @@ using System.Runtime.InteropServices;
 
 // Note: Shared assembly information is specified in SharedAssemblyInfo.cs
 
-// General Information about an assembly is controlled through the following
+// General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Fabrikam.Demo.Security")]
@@ -511,7 +511,7 @@ now have four failing unit tests (instead of just the two that we had before).
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > If you tend to run your unit tests in Visual Studio using the **Test List
 > Editor** (like I do) then I recommend adding the **Full Class Name** column to
 > the view (in order to resolve any ambiguity between unit tests and easily
@@ -880,7 +880,7 @@ no, then we'll need to update the old unit tests to pass in `null` for the
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Whenever you are changing existing unit tests (for the purposes of refactoring
 > or other reasons), be careful not to mistakenly change the intent of the unit
 > test -- unless, of course, the unit test fails because of an _expected_ change
@@ -890,3 +890,4 @@ no, then we'll need to update the old unit tests to pass in `null` for the
 
 Given the length of this post, I'll leave the rest of the work on the encryption
 service as an exercise for the reader ;-)
+

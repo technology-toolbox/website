@@ -74,3 +74,4 @@ In the **C** column I added a new formula:
 
 By copying the "computed" values from the **C** column into a command prompt, I
 noticed that I could open numerous pages in Internet Explorer without issue.
+

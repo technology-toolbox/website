@@ -60,3 +60,4 @@ since.
 Perhaps Visual Studio 2010 will ship with a vastly improved differencing tool,
 but in the meantime -- or just in case it doesn't -- DiffMerge is my tool of
 choice.
+

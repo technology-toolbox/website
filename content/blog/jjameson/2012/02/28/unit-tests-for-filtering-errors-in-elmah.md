@@ -53,7 +53,7 @@ The first unit test I wrote was for the **TypeAssertion** class:
             bool byCompatibility = false;
 
             const bool expected = false;
-
+            
             Exception e = new FileNotFoundException();
 
             var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
@@ -133,13 +133,13 @@ equivalent unit tests for the **JScriptAssertion** class:
 
 BaseException instanceof HttpRequestValidationException";
 
-            Exception e = new FileNotFoundException();
+            Exception e = new FileNotFoundException(); 
             const bool expected = false;
 
             var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
                 e,
                 null);
-
+            
             JScriptAssertion target = new JScriptAssertion(expression);
             bool actual = target.Test(context);
 
@@ -231,7 +231,7 @@ FilterSourceType.Name == 'ErrorMailModule'
 
             Assert.AreEqual(expected, actual);
         }
-
+        
         [TestMethod()]
         public void JScriptAssertionTest005()
         {
@@ -365,3 +365,4 @@ and therefore not something I discovered via the unit tests.
 However, the unit tests I created for **JScriptAssertion** reassured me that I
 wasn't simply losing my mind when trying to figure out why the JavaScript filter
 wasn't working as expected.
+

@@ -52,3 +52,4 @@ you'll find the developer tools in IE9 to be even easier.]
 Note that at this point, I've only upgraded to IE9 on my Windows 7 desktop as
 well as my Microsoft-issued laptop. I'll wait until IE9 is available through
 WSUS to upgrade the rest of my physical and virtual machines.
+

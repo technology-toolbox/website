@@ -33,7 +33,7 @@ caption="Key Performance Indicators (Detail)" >}}
 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
 | --- | --- | --- |
 | Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: >= 90%, Meets: 86% - 90%, Does Not Meet: <= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
+| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
 | Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 | Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
 
@@ -88,7 +88,7 @@ and then iterate the code until we've completed the scenario.
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > The KPI dashboard is actually displayed in a customer portal based on
 > Microsoft Office SharePoint Server (MOSS) 2007. However, my recommendation
 > when creating a feature like this for a SharePoint application, is to first
@@ -281,7 +281,7 @@ event:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > As I mentioned before, the KPI dashboard is actually displayed in a customer
 > portal based on MOSS 2007. Consequently, I chose to reuse the KPI images that
 > come out-of-the-box with MOSS 2007 (in case you were wondering why the image
@@ -551,8 +551,9 @@ is rendered from view state.
 {{< div-block "note update" >}}
 
 > **Update (2011-04-21)**
->
+> 
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
 
 {{< /div-block >}}
+

@@ -45,3 +45,4 @@ instead:
     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
   </PropertyGroup>
 ```
+

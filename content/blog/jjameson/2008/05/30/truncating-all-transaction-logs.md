@@ -57,7 +57,7 @@ FROM #CommandQueue
 WHILE @id IS NOT NULL
 BEGIN
     DECLARE @sqlStatement VARCHAR(1000)
-
+    
     SELECT
         @sqlStatement = SqlStatement
     FROM
@@ -101,3 +101,4 @@ time in a FIFO (First-In-First-Out) manner -- nothing special there.
 In my [next post](/blog/jjameson/2008/05/30/shrinking-all-database-files), I
 share another useful script that follows the same pattern and potentially frees
 up even more disk space than simply truncating the transaction logs.
+

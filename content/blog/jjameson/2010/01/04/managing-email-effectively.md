@@ -84,7 +84,7 @@ to me or to DLs that I belong to.
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > The reason for using DL folders under the **Inbox** folder -- instead of
 > having the Outlook rules route directly to the archive (.pst) files -- is to
 > ensure the rules are processed on the Exchange server.
@@ -226,3 +226,4 @@ of my toolbox.
 
 I hope you find these tips useful for managing your ever-increasing amount of
 email.
+

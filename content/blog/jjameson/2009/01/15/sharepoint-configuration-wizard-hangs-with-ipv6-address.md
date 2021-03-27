@@ -83,7 +83,7 @@ I discovered the following (the interesting stuff starts about halfway down):
 01/15/2009 13:55:07  1  INF                        Leaving function PreRequisiteChecks.IsRightVersionOfIis
 01/15/2009 13:55:07  1  INF                        Entering function ServiceHelper.Start
 01/15/2009 13:55:07  1  INF                          Trying to start service W3SVC and waiting 120 sec to do so
-01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do
+01/15/2009 13:55:07  1  INF                          service W3SVC is Running, nothing to do 
 01/15/2009 13:55:07  1  INF                          starting service W3SVC (it may already be started)
 01/15/2009 13:55:07  1  INF                        Leaving function ServiceHelper.Start
 01/15/2009 13:55:07  1  INF                      Leaving function TaskCommon.EnsureIIs
@@ -194,15 +194,18 @@ Server 2008 VM.
 {{< div-block "note update" >}}
 
 > **Update (2008-01-19)**
->
+> 
+> 
 > Note that after aliasing my local VM name to the loopback address (127.0.0.1),
 > I had to use the workaround in
 > [KB 896861](http://support.microsoft.com/kb/896861) in order to resolve
 > "access denied" errors when indexing content:
->
+> 
+> 
 > > Access is denied. Check that the Default Content Access Account has access
 > > to this content, or add a crawl rule to crawl this content. (The item was
 > > deleted because it was either not found or the crawler was denied access to
 > > it.)
 
 {{< /div-block >}}
+

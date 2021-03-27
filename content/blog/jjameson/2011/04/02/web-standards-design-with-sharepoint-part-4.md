@@ -98,7 +98,8 @@ when trying something like that. It seems like one or more nasty bugs inevitably
 appears due to some missing piece in the upgrade process. For example, I noticed
 a number of community comments have been added to the above MSDN article about
 missing pieces (for example, one of the comments states there is a subtle but
-rather nasty issue when your master page is missing the `<div id="MSO_ContentDiv">` element).
+rather nasty issue when your master page is missing the `<div
+id="MSO_ContentDiv">` element).
 
 Consequently I chose to start from a master page (nightandday.master) that
 presumably has been extensively tested in SharePoint 2010.
@@ -139,7 +140,8 @@ administrators accessing the site using the intranet URL -- e.g.
 [http://tugboatcoffee](http://tugboatcoffee)).
 
 The first step in getting rid of the ribbon is to remove the search box and move
-the "top row elements" (e.g. the Welcome control and help link) into the `<div id="s4-searcharea">` element. This is essentially just a cut-and-paste of one
+the "top row elements" (e.g. the Welcome control and help link) into the `<div
+id="s4-searcharea">` element. This is essentially just a cut-and-paste of one
 section in the master page to another:
 
 ```ASP.NET
@@ -296,7 +298,8 @@ a different blog post.]
 
 You might also have noticed that I made a few minor tweaks to the HTML provided
 by the designer (specifically making the Tugboat logo link to the home page and
-wrapping the global navigation in the `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation"> `control). These changes make the master page
+wrapping the global navigation in the `<asp:ContentPlaceHolder
+id="PlaceHolderGlobalNavigation"> `control). These changes make the master page
 content more "SharePoint-like" without sacrificing the clean, semantic HTML and
 Web standards layout.
 
@@ -307,7 +310,9 @@ potentially offensive to our client (since we are no longer showing the
 Now let's get rid of the **Tugboat Coffee**, **Home**, and **Press Releases**
 content on the left side of the page.
 
-This is simply a matter of removing a few elements (specifically `<div id="s4-titlerow">` , `<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" /> ` and `<div id="s4-leftpanel">`) and
+This is simply a matter of removing a few elements (specifically `<div
+id="s4-titlerow">` , `<asp:ContentPlaceHolder
+id="PlaceHolderGlobalNavigationSiteMap" /> ` and `<div id="s4-leftpanel">`) and
 consequently adding some more hidden `ContentPlaceHolder `controls at the bottom
 of the page:
 
@@ -337,7 +342,8 @@ title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-1008x599.png)
 
-Next, let's tweak the OOTB `<div class="s4-ca main-container" id="MSO_ContentDiv">` element to add the `<div class="group" id="wrap">` element
+Next, let's tweak the OOTB `<div class="s4-ca main-container"
+id="MSO_ContentDiv">` element to add the `<div class="group" id="wrap">` element
 expected by the Tugboat CSS files as well as the page footer:
 
 ```ASP.NET
@@ -460,7 +466,7 @@ ManageSubwebs, ManageWeb, ViewUsageData ">
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > I originally specified `ViewFormPages` in the list of permissions, but
 > discovered anonymous users have this permission by default in SharePoint 2010.
 > I swear this wasn't the case in MOSS 2007 (due to the "form lockdown"
@@ -580,7 +586,7 @@ div.more-btn a:link, div.more-btn a:visited {
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > I originally attempted to fix the "bold ribbon links" bug by qualifying on the
 > `<div id="wrap"> ` element but then realized I couldn't easily fix the color
 > of the "News Archives" button.
@@ -612,22 +618,19 @@ described below.
 #### To deploy the Tugboat solution to SharePoint:
 
 1. Create three service accounts for the Tugboat site:
-   
    - **{DOMAIN}\svc-web-tugboat-dev** - used as the application pool identity
      for the new Tugboat site
    - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full Read
      access to Web applications
-     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+   ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
      Control access to Web applications
-
 2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click **Yes**.
-
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Tugboat\Dev\Lab2\Source\DeploymentFiles\Scripts), and run the following commands:
-   
+
    ```PowerShell
    $env:TUGBOAT_URL = "http://tugboatcoffee-local"
    $env:TUGBOAT_BUILD_CONFIGURATION = "Debug"
@@ -644,7 +647,7 @@ described below.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.
@@ -661,3 +664,4 @@ administrator).
 Okay, that's it...the weather here in Denver is absolutely gorgeous today and I
 really need to get outside and enjoy it. I think it's time for a long bike ride
 around Cherry Creek Reservoir :-)
+

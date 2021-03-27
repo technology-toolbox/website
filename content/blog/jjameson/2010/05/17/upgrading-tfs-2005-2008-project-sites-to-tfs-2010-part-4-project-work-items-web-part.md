@@ -147,7 +147,7 @@ function UpdateWorkItemSummaryWebPartOnEachDashboardPage(
     [Microsoft.SharePoint.SPWeb] $web)
 {
     Write-Debug "Updating work item summary Web Parts on site ($($web.Url))..."
-
+    
     $pagesToUpdate =
     @(
         "Dashboards/Burndown.aspx",
@@ -157,13 +157,13 @@ function UpdateWorkItemSummaryWebPartOnEachDashboardPage(
         "Dashboards/Build.aspx",
         "Dashboards/MyDashboard.aspx"
     )
-
+    
     $pagesToUpdate |
-        ForEach-Object {
+        ForEach-Object {                        
             $wpm = $web.GetLimitedWebPartManager(
                 $_,
                 [System.Web.UI.WebControls.WebParts.PersonalizationScope]::Shared)
-
+            
             UpdateWorkItemSummaryWebParts $wpm
             $wpm.Dispose()
         }
@@ -173,12 +173,12 @@ function UpdateWorkItemSummaryWebParts(
     [Microsoft.SharePoint.WebPartPages.SPLimitedWebPartManager] $wpm)
 {
     Write-Debug "Updating work item summary Web Part on page ($($wpm.ServerRelativeUrl))..."
-
+    
     $wpm.WebParts |
         Where-Object {
             $_ -is [Microsoft.TeamFoundation.WebAccess.WebParts.WorkItemSummaryWebPart]} |
         ForEach-Object {
-            UpdateWorkItemSummaryWebPart $wpm $_
+            UpdateWorkItemSummaryWebPart $wpm $_      
         }
 }
 
@@ -190,7 +190,7 @@ function UpdateWorkItemSummaryWebPart(
 
     $webPart.Query = $webPart.Query.Replace("User Story", "Scenario")
     $wpm.SaveChanges($webPart)
-
+    
     Write-Debug "Successfully updated Web Part ($($webPart.Title))."
 }
 
@@ -216,3 +216,4 @@ $sitesToUpgrade |
 After running this script, the **Project Work Items** Web Part on each dashboard
 page will show scenarios in addition to the other work item types in the MSF
 Agile v4 process template.
+

@@ -98,9 +98,9 @@ following:
 0:023> {{< kbd ".cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727" >}}
 {{< sample-output "CLR DLL status: No load attempts" >}}
 0:023> {{< kbd "!threads" >}}
-Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc
-0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0
-1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0
+Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
+0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 
+1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0 
 2 0000144c 0x7ffdd000 0x00df0000 0x00dee000 0x00db0000 0x00002000 0x0
 ...
 ```
@@ -109,3 +109,4 @@ Woohoo! (As you can see, the "!threads" command now works as expected.)
 
 Apparently the installation of .NET Framework 4.0 (via Windows Update) has
 necessitated a change in the debugging process.
+

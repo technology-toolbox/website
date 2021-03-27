@@ -37,12 +37,10 @@ Essentially all I need to do after starting one of my SharePoint development VMs
 is:
 
 1. Open Visual Studio and “Get Latest” on the solution
-
 2. Package the "CoreServices.SharePoint" and “Web” projects (in other words,
    build the WSPs for the two SharePoint projects in this particular solution)
-
 3. Start an instance of PowerShell then copy/paste the first four lines from my OneNote page:
-   
+
    ```PowerShell
    Add-PSSnapin Microsoft.SharePoint.PowerShell
    cd "C:\NotBackedUp\Fabrikam\Demo\Main\Source\Deployment Files\Scripts"
@@ -95,7 +93,7 @@ Remove-SPSite http://fabrikam-local/ -Confirm:$false
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > The “Delete Site Collections.ps1” script will delete all of the site
 > collections created by the “Create Site Collections.ps1” script, so I
 > typically just use the Remove-SPSite cmdlet directly (as illustrated above).
@@ -159,3 +157,4 @@ height="461" width="600"
 title="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-1328x1021.png)
+

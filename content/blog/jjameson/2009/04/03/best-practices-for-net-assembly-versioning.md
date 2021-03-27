@@ -27,11 +27,11 @@ particular environment (e.g. Development, Test, or Production).
 
 Assembly versions consist of four different parts ({Major Version}.{Minor
 Version}.{Build Number}.{Revision}):
-
 <dl><dt>Major Version</dt><dd>Manually incremented for major releases, such as adding many new features to the solution.</dd><dt>Minor Version</dt><dd>Manually incremented for minor releases, such as introducing small changes to existing features.</dd><dt>Build Number</dt><dd>Typically incremented automatically as part of every build performed on the Build Server. This allows each build to be tracked and tested.</dd><dt>Revision</dt><dd>Incremented for QFEs (a.k.a. "hotfixes" or patches) to builds released into the Production environment (PROD). This is set to zero for the initial release of any major/minor version of the solution.</dd></dl>
 As a general guideline, it is best to use the same version number for all
 assemblies compiled as part of the solution. This is easily accomplished using
 [linked files in Visual Studio solutions](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions).
+
 When building the solution, there are two version numbers that need to be
 considered: the file version number and the .NET assembly version number.
 
@@ -53,7 +53,7 @@ version for a particular build.
 {{< div-block "note update" >}}
 
 > **Update (2010-04-22)**
->
+> 
 > In a follow-up post, I provide details for how I recommend
 > [incrementing the assembly version for each build](/blog/jjameson/2010/03/25/incrementing-the-assembly-version-for-each-build)
 > (assuming you are using Team Foundation Server).
@@ -82,3 +82,4 @@ same as the value specified for **AssemblyFileVersionAttribute**. Setting
 to be the same as **AssemblyVersionAttribute** ensures the **Product version**
 shown in the file properties window matches the **Version** displayed in the
 [GAC shell extension](http://msdn.microsoft.com/en-us/library/34149zk3.aspx).
+

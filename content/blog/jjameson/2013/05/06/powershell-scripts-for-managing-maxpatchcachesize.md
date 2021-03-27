@@ -51,9 +51,10 @@ PS C:\NotBackedUp\Toolbox\PowerShell>{{< kbd ".\Get-MaxPatchCacheSize.ps1" >}}
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
+> 
 > You can download these scripts from my Toolbox repository on GitHub:
->
+> 
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 {{< /div-block >}}
@@ -169,3 +170,4 @@ Else
 Write-Host -Fore Green ("Successfully set MaxPatchCacheSize to {0}." `
     -f $maxPatchCacheSize)
 ```
+

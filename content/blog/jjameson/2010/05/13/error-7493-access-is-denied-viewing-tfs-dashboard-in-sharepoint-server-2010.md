@@ -27,7 +27,7 @@ used to render the dashboards:
 
 > An error occurred while accessing application id TFS from Secure Store
 > Service. The following connections failed to refresh:
->
+> 
 > TfsOlapReport
 
 {{< /div-block >}}
@@ -67,3 +67,4 @@ error before.]
 
 After adding my administrator account to the group, the error no longer occurred
 and the dashboards rendered as expected.
+

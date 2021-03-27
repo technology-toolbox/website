@@ -73,24 +73,17 @@ The corresponding folder structure on disk resembles the following:
     - Dev _(branch)_
       - Lab1 _(branch)_
         - AssemblyVersionInfo.cs
-        
         - CustomDictionary.xml
-        
         - Fabrikam.Demo.sln
-        
         - Fabrikam.Demo.snk
-        
         - SharedAssemblyInfo.cs
-        
+
         - AdminConsole
-          
           - AdminConsole.csproj
           - Program.cs
           - Properties
             - AssemblyInfo.cs
-        
         - CoreServices
-          
           - CoreServices.csproj
           - Logging
             - Logger.cs
@@ -111,3 +104,4 @@ practices over a series of follow-up posts, including:
 - [Best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 
 Stay tuned!
+

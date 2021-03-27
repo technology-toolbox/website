@@ -119,7 +119,7 @@ Here's a breakdown of the custom SharePoint list:
 {{< div-block "note important" >}}
 
 > **Important**
->
+> 
 > Even though the **Unit Price** column is defined using the **Currency** type
 > and specifies a **Currency format** of **$123,456.00 (United States)**, you
 > must specify the **DOLLAR** function in the formula for the calculated column.
@@ -131,7 +131,7 @@ Here's a breakdown of the custom SharePoint list:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > I chose to name the list "Specials" instead of "Weekly Specials" for a reason.
 > If this were a real world solution, then there would be a significant chance
 > the business rules would change over time (for example to show "Today's
@@ -241,7 +241,7 @@ item is represented as a row:
 {{< div-block "note" >}}
 
 > **Tip**
->
+> 
 > To view the "raw" XML document, insert the
 > [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform)
 > into the **&lt;xsl&gt;** element of the **XsltListViewWebPart**, save the
@@ -402,7 +402,8 @@ soon as we view this within the actual SharePoint site.
 However, there is still one minor discrepancy between the dynamic HTML generated
 using the above XSLT and the original static HTML created by Dan. The problem is
 that the third list item needs to have an additional CSS class name specified
-(in other words, for the last item in the list we need to render `<li class="group third">` instead of `<li class="group">`).
+(in other words, for the last item in the list we need to render `<li
+class="group third">` instead of `<li class="group">`).
 
 Fortunately, this is very easy to achieve using a little more XSLT. Here is the
 final version of the XSL stylesheet that I developed to render items in the
@@ -483,9 +484,10 @@ Stay tuned...
 {{< div-block "note update" >}}
 
 > **Update (2011-05-02)**
->
+> 
 > The
 > [next post in this series](/blog/jjameson/2011/05/02/web-standards-design-with-sharepoint-part-6)
 > is now available.
 
 {{< /div-block >}}
+

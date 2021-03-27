@@ -98,3 +98,4 @@ instead force them to pass in `string.Empty`. It's just not intuitive -- or am I
 the only developer who thinks this?
 
 Let me know if you agree or disagree.
+

@@ -190,7 +190,8 @@ locally on our SharePoint servers (deployed via **Fabrikam.Portal.Web.wsp**):
     </object>
 ```
 
-In hindsight, I suppose for consistency we could have used the ` SPUtility.MakeBrowserCacheSafeLayoutsUrl` method for the "Get Microsoft
+In hindsight, I suppose for consistency we could have used the `
+SPUtility.MakeBrowserCacheSafeLayoutsUrl` method for the "Get Microsoft
 Silverlight" image, but honestly, I don't think there is sufficient
 justification in this scenario.
 
@@ -200,3 +201,4 @@ Silverlight into SharePoint.
 Stay tuned, there's
 [more to come](/blog/jjameson/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3)!
 Same bat time, same bat channel ;-)
+

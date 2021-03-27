@@ -76,7 +76,7 @@ settings:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Those of you that have a very keen eye (and also a photographic memory) might
 > recall that in a previous post, I listed BEAST as a database server (it is
 > currently running SQL Server 2005). Yes, it's true, I'm breaking one of my own
@@ -105,3 +105,4 @@ ultimately determine the level of access for all users).
 
 Thus when a new user logs in for the first time, a corresponding folder is
 created on the server and all of the user's files are stored on the server.
+

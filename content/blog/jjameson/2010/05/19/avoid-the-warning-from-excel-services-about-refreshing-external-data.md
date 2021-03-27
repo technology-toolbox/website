@@ -31,11 +31,11 @@ page:
 > This workbook contains one or more queries that refresh external data. A
 > malicious user can design a query to access confidential information and
 > distribute it to other users or perform other harmful actions.
->
+> 
 > If you trust the source of this workbook, click Yes to enable queries to
 > external data in this workbook. If you are not sure, click No so that changes
 > are not applied to your workbook.
->
+> 
 > Do you want to enable queries to external data in this workbook?
 
 {{< /div-block >}}
@@ -60,3 +60,4 @@ the SSP admin page). Refer to the following for more information:
 
 {{< reference title="Manage Excel Services trusted file locations"
 linkHref="http://technet.microsoft.com/en-us/library/cc263009(office.12).aspx" >}}
+

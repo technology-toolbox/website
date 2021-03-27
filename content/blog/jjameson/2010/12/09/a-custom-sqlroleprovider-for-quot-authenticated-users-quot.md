@@ -38,12 +38,12 @@ created a work item in Team Foundation Server to come up with a solution for
 avoiding this issue in the future:
 
 > **Title:** Membership in the "Authenticated Users" role should be implicit
->
-> **Description:
-> ** Administrators shouldn't have to explicitly add users to the "Authenticated
+> 
+> **Description:**\
+> Administrators shouldn't have to explicitly add users to the "Authenticated
 > Users" role. Instead, membership in this role should be implicit, since anyone
 > that specifies a username/password is considered "authenticated".
->
+> 
 > Unfortunately, the out-of-the-box role provider (SqlRoleProvider) that we are
 > currently using doesn't function this way.
 
@@ -164,7 +164,7 @@ the following error in IIS Manager (after clicking **.NET Roles**):
 
 > This feature cannot be used because the default provider is not a trusted
 > provider.
->
+> 
 > You can use this feature only when the default provider is a trusted provider.
 > If you are a server administrator, you can make a provider a trusted provider
 > by adding the provider type to the trusted providers list in the
@@ -174,30 +174,29 @@ the following error in IIS Manager (after clicking **.NET Roles**):
 I then added the following steps to the installation guide:
 
 > To add the custom role provider to the IIS Administration.config file:
->
+> 
 > 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
 >    right-click **Command Prompt**, and then click **Run as administrator**.
->
 > 2. At the command prompt, change to the following directory:\
 >    \
->    **%WinDir%\system32\inetsrv\config
->    **
->
+>    **%WinDir%\system32\inetsrv\config**
 > 3. Type the following command:
->    
+> 
+> 
+> 
 >    ```Console
 >    notepad administration.config
 >    ```
->
 > 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
->    
+> 
+> 
+> 
 >    ```XML
 >    <add
 >      type="Fabrikam.Portal.Web.Security.FabrikamSqlRoleProvider,
 >        Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
 >        PublicKeyToken=c8cdcbca6f69701f" />
 >    ```
->
 > 5. Save the changes to the file and close Notepad.
 
 Once I had made the custom role provider a trusted provider, I was able to
@@ -579,3 +578,4 @@ provider:
   "Authenticated Users" in the returned list.
 
 Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider** again ;-)
+

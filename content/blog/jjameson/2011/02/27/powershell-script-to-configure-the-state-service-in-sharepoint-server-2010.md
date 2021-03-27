@@ -77,17 +77,17 @@ function ConfigureStateService(
         -Debug:$false -EA 0
 
     If ($serviceApp -ne $null)
-    {
+    {        
         Write-Host "The State Service has already been configured."
         return
     }
-
+    
     $database = New-SPStateServiceDatabase -Name $stateServiceDatabaseName `
         -Debug:$false
-
+	
     $serviceApp = New-SPStateServiceApplication -Name $stateServiceName `
         -Database $database -Debug:$false
-
+	
     New-SPStateServiceApplicationProxy -ServiceApplication $serviceApp `
         -Name $stateServiceName -DefaultProxyGroup -Debug:$false > $null
 
@@ -121,3 +121,4 @@ use, then -- and only then -- it appends a GUID in order to avoid a naming
 collision? I'm guessing 99.999% of the time there is only going to be one
 StateService database per SharePoint farm. [If you think I'm wrong, please tell
 me, because apparently I'm missing something.]
+

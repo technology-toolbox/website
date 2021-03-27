@@ -131,7 +131,7 @@ approved version):
             }
 
             // Note: comments and contentCategory may be null
-
+            
             SPLogger.Log(
                 LogCategory.Configuration,
                 TraceSeverity.Medium,
@@ -321,7 +321,7 @@ The corresponding "view format" is shown below:
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > I have no idea why the out-of-the-box **Byline** and **Quote** reusable
 > content items in SharePoint 2010 specify **Automatic Update** = **Yes**. I can
 > see the reasoning for enabling automatic update of the default **Copyright**
@@ -530,7 +530,7 @@ reviewing some of the unit tests that I created when developing the
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Initially, I added the code for inserting reusable content into a page to the
 > **SharePointPublishingHelper** class. However, I ended up refactoring this
 > code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new
@@ -555,22 +555,19 @@ described below.
 #### To deploy the sample solution to SharePoint 2010:
 
 1. Create three service accounts for the Fabrikam Demo site:
-   
    - **{DOMAIN}\svc-web-fabrikam-dev** - used as the application pool identity
      for the new "Fabrikam Demo" site
    - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full Read
      access to Web applications
-     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+   ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
      Control access to Web applications
-
 2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click **Yes**.
-
 3. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (e.g. C:\NotBackedUp\Fabrikam\Demo\Dev\SharePointReusableContent\Source\DeploymentFiles\Scripts), and run the following commands:
-   
+
    ```PowerShell
    $env:FABRIKAM_DEMO_URL = "http://fabrikam-local"
    $env:FABRIKAM_DEMO_BUILD_CONFIGURATION = "Debug"
@@ -587,7 +584,7 @@ described below.
 {{< div-block "note" >}}
 
 > **Note**
->
+> 
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.
@@ -613,3 +610,4 @@ In
 [part 3 of this series](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3),
 I'll discuss various ways of accessing the "expanded" HTML content (a.k.a. the
 "view format.")
+

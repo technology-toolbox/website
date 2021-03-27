@@ -165,7 +165,7 @@ cloning an object, as shown in the following example for the
 
 ```C#
         /// <summary>
-        /// Creates a new object that is a deep copy of the current instance.
+        /// Creates a new object that is a deep copy of the current instance. 
         /// </summary>
         /// <returns>A new object that is a deep copy of this instance.</returns>
         public object Clone()
@@ -185,3 +185,4 @@ cloning an object, as shown in the following example for the
             return clone;
         }
 ```
+
