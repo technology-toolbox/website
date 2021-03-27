@@ -65,7 +65,7 @@ To configure the build server to compile MOSS 2007 solutions:
    {{< console-block-start >}}
 
    reg add
-   "HKLM\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
+   "HKLM\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
    v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
 
    {{< console-block-end >}}

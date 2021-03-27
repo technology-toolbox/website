@@ -73,8 +73,8 @@ title="Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-%28with-SQL-2008-SP1%29-1024x727.png)
 
-Note that the \Windows\Installer\$PatchCache$ folder is consuming almost 1 GB of
-space on the VHD.
+Note that the \Windows\Installer\\$PatchCache$ folder is consuming almost 1 GB
+of space on the VHD.
 
 I've mentioned before that a gigabyte or two isn't all that much when your
 physical hard drive is several hundred gigabytes in size. However, the same
@@ -120,7 +120,7 @@ files.
 > complained about not being able to find the version of sqlncli.msi it needed
 > (because it was installed from a temporary folder via Windows Update but since
 > my MaxPatchCacheSize was set to 0, it wasn't copied to the
-> \Windows\Installer\$PatchCache$ folder).
+> \Windows\Installer\\$PatchCache$ folder).
 >
 > Consequently, I simply had to extract the service pack (using the /EXTRACT
 > command-line parameter) and search around a little for the expected file. Once

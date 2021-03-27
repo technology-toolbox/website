@@ -44,7 +44,7 @@ However, there were a few problems I had with the original Password Minder.
 First, it didn't like the fact that my Documents folder is redirected to a
 server. In other words, my encrypted password file is:
 
-> \\BEAST\Users$\jjameson\Documents\My Passwords.xml
+> \\\\BEAST\Users$\jjameson\Documents\My Passwords.xml
 
 Consequently, I encountered the following error when trying to save my password
 file:

@@ -30,7 +30,7 @@ projects in the solution:
 {{< div-block "errorMessage" >}}
 
 > An error occurred while calculating code metrics for target file
-> 'E:\NotBackedUp\...' in project ... The following error was encountered while
+> 'E:\NotBackedUp\\...' in project ... The following error was encountered while
 > reading module 'Microsoft.SharePoint': Could not resolve type: T
 > ObjectModel.
 

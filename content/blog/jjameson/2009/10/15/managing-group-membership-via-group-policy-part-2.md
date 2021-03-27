@@ -55,7 +55,7 @@ addition to any other members_.
 To address this scenario, I created a startup script called
 **EnsureLocalGroupMembership.cmd** in the following folder:
 
-> \\corp.technologytoolbox.com\SysVol\corp.technologytoolbox.com\Policies\{GUID}\Machine\Scripts\Startup\OperationsManager
+> \\\\corp.technologytoolbox.com\SysVol\corp.technologytoolbox.com\Policies\\{GUID}\Machine\Scripts\Startup\OperationsManager
 
 The contents of the script are actually quite trival:
 

@@ -137,9 +137,9 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    changes to this computer, click **Yes**.
 > 1. In the **Registry Editor** window, search for
 >    "61738644-F196-11D0-9953-00C04FD919C1" to find
->    HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
+>    HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}.
 > 1. Right-click on the
->    **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key
+>    **HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key
 >    and then click **Permissions**.
 > 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
 >    box, click **Advanced**.

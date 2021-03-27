@@ -76,7 +76,7 @@ not the location specified in the project settings within Visual Studio.
 
 In other words, if you refer to a referenced assembly using something like:
 
-> ..\..\..\CoreServices\bin\%BUILD\_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
+> ..\\..\\..\CoreServices\bin\\%BUILD\_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
 
 then you will find that this works just fine when building through Visual Studio
 -- or even when compiling using TFSBuild.proj from the command line (a.k.a. a

@@ -199,7 +199,7 @@ configuration in the solution (e.g. Debug, Release, etc.).
 
 For example:
 
-> \\BuildServer\Builds\Fabrikam\Project1\1.0.1.0\Debug
+> \\\\BuildServer\Builds\Fabrikam\Project1\1.0.1.0\Debug
 
 In addition to the folders corresponding to each build, there is a folder named
 **Latest** that always contains the most recent successful build. This

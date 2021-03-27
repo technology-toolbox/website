@@ -78,7 +78,7 @@ folder to one of my home servers:
 
 {{< console-block-start >}}
 
-robocopy C:\BackedUp \\beast\Backups\jjameson1\BackedUp /E
+robocopy C:\BackedUp \\\\beast\Backups\jjameson1\BackedUp /E
 
 {{< console-block-end >}}
 

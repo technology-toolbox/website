@@ -103,7 +103,7 @@ to avoid an "Access Denied" error message after attaching the VHD to a VM:
 
 {{< console-block-start >}}
 
-icacls foobar5\_Log01.vhd /grant "NT VIRTUAL MACHINE\{GUID}":(R,W)
+icacls foobar5\_Log01.vhd /grant "NT VIRTUAL MACHINE\\{GUID}":(R,W)
 
 {{< console-block-end >}}
 

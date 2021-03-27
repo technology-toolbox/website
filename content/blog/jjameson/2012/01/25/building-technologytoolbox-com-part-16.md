@@ -291,7 +291,7 @@ session state (as in Mahdi's implementation), an error occurs:
 > Session state can only be used when enableSessionState is set to true, either
 > in a configuration file or in the Page directive. Please also make sure that
 > System.Web.SessionStateModule or a custom session state module is included in
-> the &lt;configuration&gt;\&lt;system.web&gt;\&lt;httpModules&gt; section in
+> the &lt;configuration&gt;\\&lt;system.web&gt;\\&lt;httpModules&gt; section in
 > the application configuration.
 
 To resolve this issue, I store the expected value in a cookie instead.

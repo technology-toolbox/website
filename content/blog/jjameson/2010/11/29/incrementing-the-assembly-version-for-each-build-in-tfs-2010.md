@@ -244,7 +244,7 @@ To change the scope of the LabelName variable:
    **Scope** column, select **Create and Set Label for non-Shelveset Builds.**
 
 In addition to the source code label, we want the drop location on the Release
-Server to match the build number (e.g. \\dazzler\Builds\foobar2010\1.0.1.0).
+Server to match the build number (e.g. \\\\dazzler\Builds\foobar2010\1.0.1.0).
 Therefore the **Update Drop Location** sequence needs to come _after_ the
 **Update Build Number** sequence. [Whether the **Update Drop Location** sequence
 comes before or after the activity that labels the source code really doesn't
@@ -283,7 +283,7 @@ the **Update Build Number** sequence, and set the properties as follows:
 
 | Property | Value |
 | --- | --- |
-| Arguments | "/C type """ + SourcesDirectory + "\\Source\\AssemblyVersionInfo.txt""" |
+| Arguments | "/C type """ + SourcesDirectory + "\\\\Source\\\\AssemblyVersionInfo.txt""" |
 | DisplayName | InvokeProcess to read AssemblyVersion from file |
 | FileName | "cmd.exe" |
 
@@ -335,7 +335,7 @@ the properties as follows:
 | Property | Value |
 | --- | --- |
 | DisplayName | Increment AssemblyVersion for next build |
-| Project | SourcesDirectory + "\\Source\\IncrementAssemblyVersion.proj" |
+| Project | SourcesDirectory + "\\\\Source\\\\IncrementAssemblyVersion.proj" |
 
 {{< /table >}}
 
@@ -520,7 +520,7 @@ caption="Build Definition: \"Automated Build - Main\"" >}}
 | Trigger | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> | (selected) |
 |  | Queue the build on the build controller at: | 4:45 AM |
 | Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
-| Build Defaults | Copy build output to the following drop folder (UNC path, such as \\server\share): | \\dazzler\Builds\foobar2010 |
+| Build Defaults | Copy build output to the following drop folder (UNC path, such as \\\\server\share): | \\\\dazzler\Builds\foobar2010 |
 | Process | Build process template: | CustomTemplate.xaml |
 |  | Build process parameters: |  |
 |  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |

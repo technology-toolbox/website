@@ -55,11 +55,11 @@ creating blog posts, such as:
 ```
 
 Whenever I need to create a new blog post, I simply copy my template (i.e.
-default.htm) into the corresponding Archive\{year}\{month}\{day} folder, rename
-the file to something like **sharepoint-2010-sneak-peek.aspx**, and then start
-replacing the placeholder text with the corresponding content. Note that I have
-defined a few custom CSS rules in Community Server to change the style of my
-blog content, such as:
+default.htm) into the corresponding Archive\\{year}\\{month}\\{day} folder,
+rename the file to something like **sharepoint-2010-sneak-peek.aspx**, and then
+start replacing the placeholder text with the corresponding content. Note that I
+have defined a few custom CSS rules in Community Server to change the style of
+my blog content, such as:
 
 ```CSS
 .directQuote {

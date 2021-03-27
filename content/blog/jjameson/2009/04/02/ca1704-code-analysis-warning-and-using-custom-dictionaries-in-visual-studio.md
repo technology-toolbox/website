@@ -43,7 +43,7 @@ will find the following:
 > word to a custom dictionary named CustomDictionary.xml. Place the dictionary
 > in the installation directory of the tool, the project directory, or in the
 > directory associated with the tool under the user's profile
-> (%USERPROFILE%\Application Data\...).
+> (%USERPROFILE%\Application Data\\...).
 
 {{< /div-block >}}
 

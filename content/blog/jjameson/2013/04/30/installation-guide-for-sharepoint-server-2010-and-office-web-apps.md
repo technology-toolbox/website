@@ -1134,9 +1134,9 @@ Server 2008 R2:
 1. In the **Registry Editor** window, search for
    "61738644-F196-11D0-9953-00C04FD919C1" to find:
 
-   > HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}
+   > HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}
 1. Right-click on the
-   **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key and
+   **HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key and
    then click **Permissions**.
 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box,
    click **Advanced**.
@@ -1371,7 +1371,7 @@ available in the following blog posts:
 ## Copy Fabrikam Extranet build to SharePoint server
 
 Copy the Fabrikam Extranet build from the release server (e.g.
-[\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\{build version}](file://DAZZLER/Builds/Fabrikam/Demo))
+[\\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\{build version}](file://DAZZLER/Builds/Fabrikam/Demo))
 to the SharePoint server running Central Administration.
 
 For the Test and Production environments, always designate the specific build to
@@ -1379,7 +1379,7 @@ be deployed. For example:
 
 {{< console-block-start >}}
 
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0
+robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0
 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
 
 {{< console-block-end >}}
@@ -1389,7 +1389,7 @@ example:
 
 {{< console-block-start >}}
 
-robocopy \\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
+robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\_latest /E /MIR
 
 {{< console-block-end >}}
@@ -1427,7 +1427,7 @@ To create the Web application using the PowerShell scripts:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -1576,7 +1576,7 @@ To configure object cache user accounts:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -1694,7 +1694,7 @@ To enable anonymous access to the site using PowerShell:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2261,7 +2261,7 @@ To configure the State Service:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2291,7 +2291,7 @@ To create and configure the Search Service Application:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2519,7 +2519,7 @@ for caching:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2630,7 +2630,7 @@ To add the new event source:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2652,7 +2652,7 @@ To install and activate the features:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Type the following command:
 
    ```PowerShell
@@ -2701,12 +2701,12 @@ To create the sample content:
    > If deploying a build copied from the release server (i.e. DAZZLER), use the
    > following path:
    >
-   > > **{build version}\{Debug|Release}**
+   > > **{build version}\\{Debug|Release}**
    >
    > If deploying a build to a local development environment from a TFS
    > workspace, use the following path:
    >
-   > > **{branch folder}\Source\Tools\TestConsole\bin\{Debug|Release}**
+   > > **{branch folder}\Source\Tools\TestConsole\bin\\{Debug|Release}**
 
    {{< /div-block >}}
 1. Type the following command:
@@ -2734,7 +2734,7 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
-   > **{build version or branch folder}\[Source]\Deployment Files\Scripts**
+   > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
 1. Run the **Create Partner Site Collection.ps1** script and provide the name of the partner, for example:
 
    ```PowerShell

@@ -38,7 +38,7 @@ settings:
       - **Folder Redirection**
         - **AppData(Roaming)**
           - **Setting: Basic (Redirect everyone's folder to the same location)**
-            - Path: \\beast\Users$\%USERNAME%\Application Data
+            - Path: \\\\beast\Users$\\%USERNAME%\Application Data
           - **Options**
             - Grant user exclusive rights to AppData(Roaming): Enabled
             - Move the contents of AppData(Roaming) to the new location: Enabled
@@ -48,7 +48,7 @@ settings:
             - Policy Removal Behavior: Leave contents
         - **Desktop**
           - **Setting: Basic (Redirect everyone's folder to the same location)**
-            - Path: \\beast\Users$\%USERNAME%\Desktop
+            - Path: \\\\beast\Users$\\%USERNAME%\Desktop
           - **Options**
             - Grant user exclusive rights to Desktop: Enabled
             - Move the contents of Desktop to the new location: Enabled
@@ -58,7 +58,7 @@ settings:
             - Policy Removal Behavior: Leave contents
         - **Documents**
           - **Setting: Basic (Redirect everyone's folder to the same location)**
-            - Path: \\beast\Users$\%USERNAME%\Documents
+            - Path: \\\\beast\Users$\\%USERNAME%\Documents
           - **Options**
             - Grant user exclusive rights to Documents: Enabled
             - Move the contents of Documentsto the new location: Enabled
@@ -86,8 +86,8 @@ settings:
 
 {{< /div-block >}}
 
-In order to allow users access to create their own folders on \\BEAST\Users$, I
-have configured the following permissions on C:\BackedUp\Users:
+In order to allow users access to create their own folders on \\\\BEAST\Users$,
+I have configured the following permissions on C:\BackedUp\Users:
 
 - Domain Users
   - Apply onto: This folder only

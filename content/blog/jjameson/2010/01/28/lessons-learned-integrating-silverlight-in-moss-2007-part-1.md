@@ -114,7 +114,7 @@ In order to make the XAP file available to the project that creates the WSP, the
 Silverlight developer simply changed the output path in the
 **Fabrikam.Portal.Web.ServiceWheel** project to be:
 
-> ..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\
+> ..\\..\\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\
 
 The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include
 the XAP file...
@@ -174,7 +174,7 @@ the WSP, I made the following changes:
 - Reverted the output path for the **Debug** configuration of the
   **Fabrikam.Portal.Web.ServiceWheel** project to the default (i.e.
   **Bin\Debug** instead of
-  **..\..\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\**).
+  **..\\..\\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\\**).
 - Added a reference from the **Fabrikam.Portal.Web** project to the
   **Fabrikam.Portal.Web.ServiceWheel** project. Note that while this is not
   explicitly required by the code within the **Fabrikam.Portal.Web** project,

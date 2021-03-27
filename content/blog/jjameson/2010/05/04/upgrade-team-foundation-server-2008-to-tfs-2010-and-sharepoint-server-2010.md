@@ -312,7 +312,7 @@ server:
    1. On the **General** page, in the **Login name** box, type the name of the
       SharePoint administrators group from
       [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)
-      using the form {DOMAIN}\{group name}.
+      using the form {DOMAIN}\\{group name}.
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox next to the SharePoint configuration database (from
       Table 3), and then in the database role membership list, click the

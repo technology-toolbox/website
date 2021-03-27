@@ -43,7 +43,7 @@ I've mentioned in a previous post about
 [using MaxPatchCacheSize to save signficant disk space](/blog/jjameson/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0).
 When I first rebuilt my laptop with an 80 GB SSD, I didn't set MaxPatchCacheSize
 to 0 and consequently ended up wasting several gigabytes of "expensive storage"
-in the \Windows\Installer\$PatchCache$ folder (remember, this is SSD storage
+in the \Windows\Installer\\$PatchCache$ folder (remember, this is SSD storage
 that I'm talking about here). I've since rebuilt my laptop and ensured that I
 applied this setting immediately after installing the operating system.
 
