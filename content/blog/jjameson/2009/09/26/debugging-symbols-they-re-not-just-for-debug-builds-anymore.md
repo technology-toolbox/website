@@ -30,7 +30,9 @@ In the process of reviewing my old document, I came across the following:
 {{< div-block "fst-italic" >}}
 
 > ### Installation
+>
 > ...
+>
 > #### Debug Symbols
 >
 > All Debug builds should create symbol files for debugging purposes. These
@@ -73,6 +75,7 @@ fact, here's a direct quote from page 38:
 {{< div-block "fst-italic" >}}
 
 > ### Build All Builds with Debugging Symbols
+>
 > ...build all builds, including release builds, with full debugging symbols.
 > [...]
 
