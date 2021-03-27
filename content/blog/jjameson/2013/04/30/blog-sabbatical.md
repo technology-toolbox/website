@@ -69,4 +69,3 @@ So, what's the point of all this, you ask? It's rather simple actually...
 I've finally cleaned the cobwebs off the ol' "Random Musings of Jeremy Jameson"
 blog, and my head is swimming with topics for future posts. With that, I'll move
 one to writing a post that may actually help you in your day-to-day work.
-

@@ -320,4 +320,3 @@ namespace Fabrikam.Demo.Web.UI
 > concept in action.
 
 {{< /div-block >}}
-

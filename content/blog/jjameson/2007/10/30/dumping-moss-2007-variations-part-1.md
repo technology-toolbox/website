@@ -180,4 +180,3 @@ and no custom content types:
 
 [[Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this
 series is now available.]
-

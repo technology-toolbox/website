@@ -92,7 +92,6 @@ which files to delete).
 
 > **Note**
 > 
-> 
 > As shown in the HACK comment above, I fetch a new **SPList** object in order
 > to avoid the following error when configuring the expiration policy
 > immediately after creating a new document library:
@@ -107,4 +106,3 @@ which files to delete).
 
 In my next post, I'll explain more about storing files temporarily in
 SharePoint.
-

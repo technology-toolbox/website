@@ -31,4 +31,3 @@ your RSS feed by clicking the **Subscribe** link on my new blog.
 
 The blog will be in constant flux over the next week or so as I work on
 branding, layout, etc. So, as they say, please "pardon my dust" ;-)
-

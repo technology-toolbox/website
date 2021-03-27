@@ -108,4 +108,3 @@ file) wasn't very straightforward in Vista. Actually, this was really the
 driving factor behind this post and the one that follows (I don't expect many
 people to find graphical depcitions of disk space usage to be all that
 interesting).
-

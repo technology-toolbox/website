@@ -169,4 +169,3 @@ automatically detect HTTP connections and redirect to HTTPS. The second
 technique was essentially the same logic, but rather than utilizing code
 embedded in the login page, it is encapsulated in a Login Form Web Part. I'll
 discuss this redirect code in a follow-up post.
-

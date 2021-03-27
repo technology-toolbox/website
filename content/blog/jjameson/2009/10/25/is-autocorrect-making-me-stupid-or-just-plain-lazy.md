@@ -61,4 +61,3 @@ and subject myself to some exercises on that for a little while. Without a
 doubt, a few dozen pages on that -- and a couple of bottles of Liquid Paper, of
 course -- would cure whatever ailment I seem to have contracted in the last few
 years.
-

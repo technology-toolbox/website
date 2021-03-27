@@ -79,4 +79,3 @@ Jeremy Jameson."
 Until then, you can always reach me via my LinkedIn profile:
 
 > [http://www.linkedin.com/in/jeremyjameson](http://www.linkedin.com/in/jeremyjameson)
-

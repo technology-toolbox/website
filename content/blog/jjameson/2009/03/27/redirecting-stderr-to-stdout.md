@@ -32,4 +32,3 @@ Fortunately another teammate on the thread,
 [Prashant Nayak](http://blogs.msdn.com/pnayak), experimented with this and
 confirmed that it actually _does_ work. Thanks, Prashant, for setting the record
 straight!
-

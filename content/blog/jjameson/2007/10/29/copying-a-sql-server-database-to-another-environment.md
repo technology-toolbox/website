@@ -98,4 +98,3 @@ WITH FILE = 1
 Note that when copying a database from one environment to another, you often
 need to use the **MOVE** option to specify the new location for the data and log
 files (to account for different disk configurations and available disk space).
-

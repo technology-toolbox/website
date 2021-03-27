@@ -270,7 +270,6 @@ elsewhere.
 
 > **Important**
 > 
-> 
 > Since the Googlebot will likely have added "bad" CAPTCHA images to its index
 > (i.e. images based on a random key and IV), it may take several months before
 > you stop seeing this error. The good news is that Google will eventually "give
@@ -872,4 +871,3 @@ YAHA (yet another hacking attempt):
 the out-of-the-box "goodness" we get for free when it comes to security in
 ASP.NET. [It really helps to offset what you feel whenever you see Microsoft
 release a security patch for the .NET Framework.]
-

@@ -20,11 +20,9 @@ attachment:
   fileSizeInBytes: 21334
 ---
 
-
 {{< div-block-start "note update" >}}
 
 > **Update (2010-12-03)**
-> 
 > 
 > If you are using gated check-ins, be sure to also read my follow-up post:
 > 
@@ -529,4 +527,3 @@ caption="Build Definition: \"Automated Build - Main\"" >}}
 | Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All |
 
 {{< /table >}}
-

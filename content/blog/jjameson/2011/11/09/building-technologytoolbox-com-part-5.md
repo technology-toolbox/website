@@ -117,7 +117,6 @@ is when I discovered the hAtom 0.1 microformat:
 >     - tags. optional. keywords or phrases, using
 >       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 > 
-> 
 > <cite>-- <a
 > href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
 > </cite>
@@ -217,7 +216,6 @@ according to the hAtom schema (e.g. `<li class="published">`).
 {{< div-block "note" >}}
 
 > **Note**
-> 
 > 
 > At this point, I have deliberately deviated from the
 > [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern")
@@ -358,4 +356,3 @@ Whenever you are creating a new website -- or adding a new feature to an
 existing site -- I encourage you to start by focusing on the "naked" structure.
 Once you have defined the meaningful structure for your content, you can then
 proceed to making it "look pretty."
-

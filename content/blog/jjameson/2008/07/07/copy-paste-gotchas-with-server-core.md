@@ -92,4 +92,3 @@ Ok.
 {{< /sample-block >}}
 
 {{< console-block-end >}}
-

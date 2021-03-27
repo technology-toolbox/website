@@ -135,4 +135,3 @@ corresponding feature:
 
 For more information on deploying Hyper-V, refer to the
 [Hyper-V Planning and Deployment Guide](http://www.microsoft.com/downloads/details.aspx?familyid=5DA4058E-72CC-4B8D-BBB1-5E16A136EF42&displaylang=en).
-

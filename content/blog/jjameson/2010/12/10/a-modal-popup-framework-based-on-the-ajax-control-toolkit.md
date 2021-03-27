@@ -168,4 +168,3 @@ then run it.
 
 In my next post, I'll describe the "Announcements" feature that builds upon this
 framework in order to show marketing announcements on a SharePoint site.
-

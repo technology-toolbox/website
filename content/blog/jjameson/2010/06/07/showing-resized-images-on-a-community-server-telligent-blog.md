@@ -86,4 +86,3 @@ preserve the aspect ratio of the image).
 > expected.
 
 {{< /div-block >}}
-

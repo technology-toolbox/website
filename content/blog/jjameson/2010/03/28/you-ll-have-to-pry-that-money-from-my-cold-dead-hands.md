@@ -78,4 +78,3 @@ I'll be making that transition any time soon.
 [Although it applies to each and every post you read on my blog, it's probably
 worth explicitly mentioning again that the opinions expressed herein are
 obviously my own and do not reflect those of my employer ;-) ]
-

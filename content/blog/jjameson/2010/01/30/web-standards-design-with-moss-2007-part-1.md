@@ -617,4 +617,3 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 > [https://www.technologytoolbox.com/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3](/blog/jjameson/2011/01/30/web-standards-design-with-sharepoint-part-3)
 
 {{< /div-block >}}
-

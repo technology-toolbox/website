@@ -252,4 +252,3 @@ the class is used to configure a localized SharePoint site:
 
 I hope you find the **CurrentUICultureSwitcher** class to be useful when
 creating SharePoint solutions that need to support more than one language.
-

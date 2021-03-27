@@ -83,4 +83,3 @@ I have found this script to be especially useful when working with Microsoft
 Office SharePoint Server (MOSS) 2007, because I sometimes migrate large amounts
 of content when working on certain features (particularly Search) but later
 decide to remove the content and need to recover the disk space on my VM.
-

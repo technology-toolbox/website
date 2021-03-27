@@ -344,4 +344,3 @@ can scrap my custom code and go with the out-of-the-box SharePoint code instead
 > [post from a couple of years ago](/blog/jjameson/2009/10/08/web-application-at-could-not-be-found-error-on-moss-2007-x64)).
 
 {{< /div-block >}}
-

@@ -80,4 +80,3 @@ jobs. It all depends on how strict you need your content publishing process to
 be.
 
 My $0.02 anyway...let me know your thoughts.
-

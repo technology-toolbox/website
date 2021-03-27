@@ -868,7 +868,6 @@ To run the preparation tool:
 
    > **Note**
    > 
-   > 
    > After you complete the Microsoft SharePoint Products Preparation Tool, you
    > must install [KB 949516](http://go.microsoft.com/fwlink/?LinkId=148917) and
    > [KB 971831](http://go.microsoft.com/fwlink/?LinkID=165750). Restart the
@@ -1612,7 +1611,6 @@ To enable selection of people and groups from the internal Fabrikam domain:
 
    > **Note**
    > 
-   > 
    > The key specified above can be any string. It is used to encrypt the
    > password specified in the following procedure when storing the credentials
    > in the database.
@@ -2090,7 +2088,6 @@ To login to the website using Windows authentication:
 
    > **Note**
    > 
-   > 
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2007/03/22/be-in-the-zone-to-avoid-entering-credentials.aspx" >}}
@@ -2519,15 +2516,10 @@ for caching:
    > 
    > The cache site collection is created via a SharePoint timer job. Consequently you may encounter the following error (depending on how quickly the installation steps are performed):
    > 
-   > 
    > {{< div-block-start "errorMessage" >}}
-   > 
    > 
    > > Set-SPOfficeWebAppsCache : Specified web application doesn't exist or
    > > doesn't have a cache site collection.
-   > 
-   > 
-   > 
    > 
    > {{< div-block-end >}}
    > If this error occurs, wait a few minutes and then run the script again.
@@ -2950,4 +2942,3 @@ health data collection is _not_ recommended in these environments.
 {{< div-block-end >}}
 
 {{< article-block-end >}}
-

@@ -16,7 +16,6 @@ tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx"
 ---
 
-
 {{< div-block-start "note update" >}}
 
 > **Update 2009-11-18**
@@ -880,4 +879,3 @@ alt="Command history" class="screenshot" height="205" width="600"
 title="Figure 3: Command history" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
-

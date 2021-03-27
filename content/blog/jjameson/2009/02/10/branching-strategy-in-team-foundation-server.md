@@ -114,4 +114,3 @@ Thanks to James and Mario for setting me straight!
 
 By the way, if you haven't read the branching guidance created by the VSTS
 Rangers, I highly recommend it. Very good stuff.
-

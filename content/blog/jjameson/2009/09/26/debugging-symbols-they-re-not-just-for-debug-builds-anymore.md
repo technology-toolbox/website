@@ -37,18 +37,12 @@ In the process of reviewing my old document, I came across the following:
 > symbols are included as part of the setup to facilitate debugging in other
 > environments such as DEV.
 > 
-> 
-> 
 > {{< div-block "note important" >}}
-> 
 > 
 > > **Important**
 > > 
 > > Do not include Debug symbols in the Release configuration of the setup
 > > projects.
-> 
-> 
-> 
 > 
 > {{< /div-block >}}
 
@@ -98,4 +92,3 @@ In other words, the Development Plan should say:
 Regarding John's book...I strongly recommend this book to anyone who considers
 himself or herself a "serious developer." It is chock full of great tips and
 recommendations for developing .NET solutions.
-

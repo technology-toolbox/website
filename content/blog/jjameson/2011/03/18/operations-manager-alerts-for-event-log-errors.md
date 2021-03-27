@@ -121,7 +121,6 @@ Repeat the process to create a similar alert for errors in the System event log.
 
 > **Important**
 > 
-> 
 > If you do not specify any fields in the Alert Suppression dialog, then you may
 > receive numerous alerts within a short period of time (for example, when
 > SharePoint Server 2010 floods the Application event log due to an issue with
@@ -165,4 +164,3 @@ occurring again in the future.
 I've attached my sample management pack with the two custom rules -- just in
 case you want to save yourself the 5 minutes or so it takes to configure the
 rules.
-

@@ -288,7 +288,6 @@ The **GetMonthName** method is, as expected, rather trivial:
 
 > **Note**
 > 
-> 
 > As I've noted before, there are some assumptions in this code that I currently
 > consider to be "good enough" (such as the hardcoded path to the blog -- i.e.
 > "/blog/jjameson/archive"). If the time comes when this code needs to support
@@ -549,4 +548,3 @@ namespace TechnologyToolbox.Caelum.Website.Controls
     }
 }
 ```
-

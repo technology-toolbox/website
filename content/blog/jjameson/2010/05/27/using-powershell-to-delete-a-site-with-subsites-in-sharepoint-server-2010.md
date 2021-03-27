@@ -152,4 +152,3 @@ If ($web -ne $null)
 Note that the script handles the case where `$web` is null -- in other words,
 when the specified Web doesn't exist (for example, when running the script a
 second time).
-

@@ -97,4 +97,3 @@ pages, system pages, and application pages.
 
 I'll cover the topic of using a custom master page for application pages in a
 [separate post](/blog/jjameson/2009/09/20/overriding-application-master-in-moss-2007).
-

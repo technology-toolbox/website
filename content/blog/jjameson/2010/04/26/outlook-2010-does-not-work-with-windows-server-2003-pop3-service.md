@@ -103,7 +103,6 @@ doesn't sound very appealing.
 
 > **Update (2010-04-27)**
 > 
-> 
 > I started investigating alternate e-mail services this morning, but quickly
 > discovered
 > [there are a lot of potential candidates](http://www.emailman.com/win/servers.html)
@@ -129,4 +128,3 @@ doesn't sound very appealing.
 > for now.
 
 {{< /div-block >}}
-

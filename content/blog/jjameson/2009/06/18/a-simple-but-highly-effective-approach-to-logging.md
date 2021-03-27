@@ -375,4 +375,3 @@ As you can see, there's really not much to this class (which hopefully means
 there isn't much that can go wrong with it). Most, if not all, of it should be
 very straightforward. I'll explain the importance of the `Logger.Flush` method
 in my next post.
-

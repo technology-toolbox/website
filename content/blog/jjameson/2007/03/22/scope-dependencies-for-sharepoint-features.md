@@ -161,4 +161,3 @@ namespace Fabrikam.Project1.PublicationLibrary.Configuration
 ```
 
 Good enough for me!
-

@@ -34,4 +34,3 @@ used to it.
 
 In the meantime, I've updated some of my custom style elements to match the new
 color scheme.
-

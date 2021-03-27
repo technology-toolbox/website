@@ -220,4 +220,3 @@ page and page layouts leveraging the 960 Grid System.
 > created to demonstrate other custom page layouts.
 
 {{< /div-block >}}
-

@@ -108,7 +108,6 @@ files.
 
 > **Important**
 > 
-> 
 > Setting MaxPatchCacheSize to 0 doesn't come without penalty. There are rare
 > occasions where you have to do a little more work when installing new products
 > or features.
@@ -135,4 +134,3 @@ thought about it recently when setting up my laptop with a new 80GB SSD drive).
 Ultimately, it's a judgment call that you need to make based on how much disk
 space you are willing to trade for the convenience of simpler software and patch
 installations.
-

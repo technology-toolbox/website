@@ -41,7 +41,6 @@ upgrading one of my servers to Windows Server 2008 R2:
 > - Backup destinations: Local Disk (D:) -- using the **Back up to a volume**
 >   option
 > 
-> 
 > According to the backup log file, all of the files in the specified location
 > are successfully backed up:
 > 
@@ -63,11 +62,9 @@ upgrading one of my servers to Windows Server 2008 R2:
 > However, when I try to recover the files, it appears as if the files were not
 > backed up, as shown in the screenshot below.
 > 
-> 
 > {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-600x465.png" alt="Windows Server Backup-Recovery Wizard - bug" class="screenshot" height="465" width="600" >}}
 > 
 > [(See full-sized image)](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-756x586.png)
-> 
 > 
 > Note that the Recovery Wizard doesn't show any files or folders under the
 > C:\BackedUp\Profiles\jjameson folder (even though the backup log lists the
@@ -83,7 +80,6 @@ upgrading one of my servers to Windows Server 2008 R2:
 > - SYSTEM -- Full Control
 > - TECHTOOLBOX\jjameson -- Full Control (note that this is not my
 >   TECHTOOLBOX\jjameson-admin account)
-> 
 > 
 > It seems like the Recovery Wizard doesn't honor the "security override"
 > feature of the **Backup Operators** group. I don't recall having any issues
@@ -134,4 +130,3 @@ C:\BackedUp\Profiles\jjameson folder are now as follows:
 
 Once these permission changes were applied, I performed another backup and
 verified that the backed up files appeared in the Recovery Wizard as expected.
-

@@ -42,4 +42,3 @@ linkHref="http://www.u2u.net/Tools/wincamlquerybuilder/CamlQueryBuilder.aspx" >}
 > with SharePoint 2010.
 
 {{< /div-block >}}
-

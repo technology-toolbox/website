@@ -131,4 +131,3 @@ You'll obviously need to replace the name of your ASP.NET database and service
 account accordingly.
 
 Isn't it fun conforming to the principle of least privilege?!
-

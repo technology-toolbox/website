@@ -459,4 +459,3 @@ So, in closing, here are some thoughts to consider:
   to use the same hardware for the "old" and "new" environments (thankfully, I
   didn't have a Development team waiting on me to get TFS back up and running
   again as soon as possible)
-

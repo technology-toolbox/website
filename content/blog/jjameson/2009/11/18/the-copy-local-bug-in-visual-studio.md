@@ -76,4 +76,3 @@ specifying relative paths to assemblies in the DDF file.
 
 I'll cover this in
 [my next post](/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build).
-

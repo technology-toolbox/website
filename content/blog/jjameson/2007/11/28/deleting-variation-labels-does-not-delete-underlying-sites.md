@@ -33,4 +33,3 @@ PSS and it sounds like
 [several hotfixes](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx)
 are in the works. If you can "hang in there" for a few more months, the
 variations story should improve dramatically.
-

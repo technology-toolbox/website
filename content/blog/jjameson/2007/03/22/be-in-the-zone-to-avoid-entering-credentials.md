@@ -73,4 +73,3 @@ So, the next time you see that generic login box pop up when browsing to a local
 or intranet site, rather than entering the same username and password that you
 are currently authenticated with, click **Cancel** and then follow the steps
 above instead.
-

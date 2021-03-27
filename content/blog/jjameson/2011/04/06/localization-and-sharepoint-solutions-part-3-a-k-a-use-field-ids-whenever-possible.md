@@ -31,7 +31,6 @@ kept in English due to requirements from the support team.]
 
 > **Note**
 > 
-> 
 > I believe the SharePoint product team expects you to install language packs
 > prior to creating site collections that will contain localized sites. This is
 > based on something I recall reading on TechNet.
@@ -204,4 +203,3 @@ the following Elements.xml file:
   </ContentType>
 </Elements>
 ```
-

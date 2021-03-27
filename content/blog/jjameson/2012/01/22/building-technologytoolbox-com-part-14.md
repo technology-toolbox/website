@@ -664,4 +664,3 @@ Assuming you haven't enabled Directory Browsing in IIS, then if someone hacks
 the URL to browse to /Dashboards then IIS would show its default 403 error page
 (similar to Figure 2). With very little work, you could create your own 403
 error page and "wire it up" via the Web.config file.
-

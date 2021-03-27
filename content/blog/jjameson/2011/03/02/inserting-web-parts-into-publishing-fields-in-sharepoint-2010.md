@@ -313,4 +313,3 @@ originally created and configured during activation of the feature. (This also
 explains the "set default content" logic as well as the code to skip the
 configuration of the page if it is already approved -- because we don't want to
 trample any customization to the page made after it was initially created.)
-

@@ -200,4 +200,3 @@ the raw server tags, I can assure you it works (inserting the page description
 Once you have this specified in your master page, start a full crawl, modify
 your XSL to give preference to **description** over **hithighlightedsummary**
 (or to show them both), and you'll be all set!
-

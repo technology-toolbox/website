@@ -144,4 +144,3 @@ your SharePoint site has warmed up again!
 > {{< reference title="Sample Walkthrough of the DR.DADA Approach to SharePoint" linkHref="/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint" >}}
 
 {{< div-block-end >}}
-

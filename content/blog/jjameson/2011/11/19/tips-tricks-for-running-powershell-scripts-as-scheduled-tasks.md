@@ -254,7 +254,6 @@ covered in
 
 > **Important**
 > 
-> 
 > Depending on the content of the PowerShell script, you may encounter issues
 > when redirecting `stderr` to `stdout`. For example, I originally used RoboCopy
 > in the PowerShell script described in my previous post (to copy files from the
@@ -262,8 +261,6 @@ covered in
 > PowerShell that is described in the following blog post:
 > 
 > {{< reference title="Workaround: The OS handle's position is not what FileStream expected" linkHref="http://www.leeholmes.com/blog/2008/07/30/workaround-the-os-handles-position-is-not-what-filestream-expected/" >}}
-> 
-> 
 > 
 > To avoid this bug, I replaced the use of RoboCopy with `Copy-Item`.
 
@@ -318,4 +315,3 @@ Copying Caelum website content...
 Successfully copied Caelum website content.
 Successfully rebuilt Web application.
 ```
-

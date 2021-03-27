@@ -35,4 +35,3 @@ XML is not populated and consequently the search result links are rendered
 useless.
 
 ...and that's no April Fools joke!
-

@@ -365,4 +365,3 @@ and therefore not something I discovered via the unit tests.
 However, the unit tests I created for **JScriptAssertion** reassured me that I
 wasn't simply losing my mind when trying to figure out why the JavaScript filter
 wasn't working as expected.
-

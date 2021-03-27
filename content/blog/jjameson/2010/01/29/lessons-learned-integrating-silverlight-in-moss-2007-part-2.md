@@ -201,4 +201,3 @@ Silverlight into SharePoint.
 Stay tuned, there's
 [more to come](/blog/jjameson/2010/01/30/lessons-learned-integrating-silverlight-in-moss-2007-part-3)!
 Same bat time, same bat channel ;-)
-

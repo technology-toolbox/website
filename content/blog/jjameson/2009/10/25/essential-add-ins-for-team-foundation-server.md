@@ -52,4 +52,3 @@ work item "quick search" comes out-of-the-box in the next release (as well as a
 better DiffMerge tool). [I did do some hands-on labs back in February that cover
 the new branching visualization features in TFS 2010, and I have to say that I
 absolutely love what I've seen so far.]
-

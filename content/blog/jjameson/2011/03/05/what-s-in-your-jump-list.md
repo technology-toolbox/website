@@ -54,4 +54,3 @@ title="Figure 3 - My Windows Explorer Jump List (Windows Server 2008 R2)" >}}
 This should explain the "14" folder shown in the above screenshots. If you're a
 SharePoint developer, I'm sure you know where this shortcut leads to and why I
 have it in my Jump List ;-)
-

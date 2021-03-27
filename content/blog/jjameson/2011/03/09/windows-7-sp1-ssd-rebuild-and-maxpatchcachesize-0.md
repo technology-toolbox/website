@@ -169,4 +169,3 @@ for Office 2010).
 
 Wow, look at the time! It looks like I'll be working through lunch today to make
 up for my late start ;-)
-

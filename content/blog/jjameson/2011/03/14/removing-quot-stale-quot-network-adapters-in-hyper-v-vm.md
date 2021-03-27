@@ -72,4 +72,3 @@ before configuring any network settings like DNS servers or a static IP address.
 Perhaps if the environment variable was <var>devmgmt_show_hidden_devices</var>
 (instead of <var>devmgr_show_nonpresent_devices</var>) then I could actually
 remember it ;-)
-

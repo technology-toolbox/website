@@ -74,7 +74,6 @@ could be repeated for any particular build.
 
 > **Note**
 > 
-> 
 > While VSS certainly provided the ability to retrieve a project based on a
 > particular timestamp, it definitely wasn't easy (the only way that I was ever
 > to do it was through
@@ -301,4 +300,3 @@ solution that point toward a particular fault in the system.
 > for your solution.
 
 {{< /div-block >}}
-

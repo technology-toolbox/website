@@ -571,7 +571,6 @@ both Forms-Based Authentication and Windows authentication.
 
    > **Note**
    > 
-   > 
    > This is discussed in more detail in the following blog post:
    > 
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
@@ -591,4 +590,3 @@ In
 I explain how to create a custom Web Part that can be used to provide a
 "branded" login page (instead of the generic "Sign In" page provided
 out-of-the-box in SharePoint Server 2010).
-

@@ -21,7 +21,6 @@ attachment:
   fileSizeInBytes: 230157
 ---
 
-
 {{< div-block "note update" >}}
 
 > **Update (2008-04-07)**
@@ -222,4 +221,3 @@ Summary** Web Part:
 
 Also note that grouping is used to loosely sort the major deliverables and
 milestones.
-

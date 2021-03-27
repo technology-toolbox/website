@@ -64,7 +64,6 @@ the seamless redirect works as expected.
 
 > **Update (2010-01-15)**
 > 
-> 
 > This is a known bug:
 > 
 > **You cannot view a forms-based authentication Windows SharePoint Services 3.0
@@ -93,4 +92,3 @@ the seamless redirect works as expected.
 > seeing the error when browsing to my local VM from my laptop.
 
 {{< /div-block >}}
-

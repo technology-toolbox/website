@@ -60,4 +60,3 @@ SharePoint Unified Logging System another 5 GB of free space to fill with
 [useless log messages](/blog/jjameson/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size).
 [That is, of course, until I get the April 2009 Cumulative Update installed --
 which supposedly fixes this issue.]
-

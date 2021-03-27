@@ -98,27 +98,19 @@ That's when I discovered the following from the release notes for the SDK:
 > 
 > On compile:
 > 
-> 
-> 
 > {{< sample-block >}}
 > 
 > warning MSB3422: Failed to retrieve VC project information through the VC
 > project engine object model. System error code: 127.
 > 
-> 
-> 
 > {{< /sample-block >}}
 > 
 > On upgrade:
-> 
-> 
 > 
 > {{< sample-block >}}
 > 
 > Failed to upgrade project file 'foo.vcproj'. Please make sure the file exists
 > and is not write-protected.
-> 
-> 
 > 
 > {{< /sample-block >}}
 > 
@@ -127,19 +119,12 @@ That's when I discovered the following from the release notes for the SDK:
 > 
 > On an X86 machine, run:
 > 
-> 
-> 
-> 
 > ```Console
 > cd %mssdk%\VC\bin
 > regsvr32 vcprojectengine.dll
 > ```
 > 
-> 
 > On an X64 machine, run:
-> 
-> 
-> 
 > 
 > ```Console
 > cd %mssdk%\VC\bin\X64
@@ -161,4 +146,3 @@ rather in an **amd64** folder:
 
 I know most of you out there are not doing much (if any) C++ work anymore, but I
 thought I should share this just in case you need it at some point.
-

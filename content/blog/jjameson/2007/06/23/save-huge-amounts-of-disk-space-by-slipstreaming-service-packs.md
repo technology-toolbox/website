@@ -138,4 +138,3 @@ slipstreamed version of the OS. The **Installer** folder can still grow to be
 very large, especially if you happen to encounter any failed installations of
 Visual Studio 2005 Service Pack 1 -- but that is a topic for another post
 (perhaps after I have some pancakes with my daughter ;-)
-

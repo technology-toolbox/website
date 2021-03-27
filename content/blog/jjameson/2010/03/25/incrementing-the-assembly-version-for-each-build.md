@@ -73,7 +73,6 @@ configuration management system and build process.
 
 > **Update (2010-11-29)**
 > 
-> 
 > This post was originally created for TFS 2005/2008. Refer to the following if
 > you are using TFS 2010:
 > 
@@ -131,14 +130,11 @@ the assembly version files and subsequently check them back in:
 
 > **Update (2010-05-05)**
 > 
-> 
 > Note that the path to the TFS command-line utility
 > [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
 > 
 > To use the same technique on a TFS 2010 build server, specify the following
 > instead:
-> 
-> 
 > 
 > ```XML
 >   <PropertyGroup>
@@ -351,4 +347,3 @@ numbers like 1.0.38.1, 1.0.38.2, etc.).
 
 Refer to one of my previous posts more information on
 [shared assembly files in Visual Studio projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects).
-

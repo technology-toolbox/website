@@ -44,7 +44,6 @@ Here is some info from MSDN:
 > - Mixed Mode (Windows Authentication and SQL Server Authentication)
 > - **Security Note** When possible, use Windows Authentication.
 > 
-> 
 > ...
 > 
 > Windows Authentication has certain benefits over SQL Server Authentication,
@@ -79,7 +78,6 @@ Here is some info from MSDN:
 >   lengths, and account lockout after multiple invalid logon requests. This
 >   mitigates the threat from dictionary attacks.
 > 
-> 
 > Pasted from
 > &lt;[http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;
 > 
@@ -112,4 +110,3 @@ establish a cross-forest trust in order to be able to use Windows
 Authentication?
 
 IMO, absolutely!
-

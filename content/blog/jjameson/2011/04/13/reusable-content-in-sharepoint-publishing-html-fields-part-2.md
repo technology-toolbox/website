@@ -610,4 +610,3 @@ In
 [part 3 of this series](/blog/jjameson/2011/04/14/reusable-content-in-sharepoint-publishing-html-fields-part-3),
 I'll discuss various ways of accessing the "expanded" HTML content (a.k.a. the
 "view format.")
-

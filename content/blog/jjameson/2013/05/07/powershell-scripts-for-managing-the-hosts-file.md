@@ -87,7 +87,6 @@ www-local.tugboatcoffee.com                                 127.0.0.1
 
 > **Note**
 > 
-> 
 > You can download these scripts from my Toolbox repository on GitHub:
 > 
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
@@ -842,4 +841,3 @@ end
     UpdateHostsFile $hostsEntries
 }
 ```
-

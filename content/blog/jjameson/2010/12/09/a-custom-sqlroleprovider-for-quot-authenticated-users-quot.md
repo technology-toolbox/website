@@ -182,14 +182,10 @@ I then added the following steps to the installation guide:
 >    **%WinDir%\system32\inetsrv\config**
 > 3. Type the following command:
 > 
-> 
-> 
 >    ```Console
 >    notepad administration.config
 >    ```
 > 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
-> 
-> 
 > 
 >    ```XML
 >    <add
@@ -578,4 +574,3 @@ provider:
   "Authenticated Users" in the returned list.
 
 Somehow I doubt that I'll ever use the ASP.NET **SqlRoleProvider** again ;-)
-

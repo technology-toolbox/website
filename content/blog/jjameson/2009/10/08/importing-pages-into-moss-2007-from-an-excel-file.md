@@ -606,4 +606,3 @@ namespace Fabrikam.Demo.Tools.SharePoint.ImportPages
 
 I'll cover the details of the `SharePointPublishingHelper` class in a
 [separate post](/blog/jjameson/2009/10/09/introducing-the-sharepointpublishinghelper-class).
-

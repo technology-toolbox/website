@@ -103,12 +103,9 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 
 > **Update (2008-04-14)**
 > 
-> 
 > When I originally wrote this blog post last Friday, I specified the following:
 > 
-> 
 > > `Inputs="@(Compile);@(None);@(Content);@(ProjectReference);"`
-> 
 > 
 > However, early this morning I discovered that there are a couple of rare
 > scenarios where the WSP/CAB file is not rebuilt when specifying those inputs
@@ -188,4 +185,3 @@ approach; the most important being that I didn't see any compelling reasons to
 switch from using post-build events. With true dependency checking to avoid
 superfluous calls to {{< kbd "makecab.exe" >}}, this is obviously no longer the
 case.
-

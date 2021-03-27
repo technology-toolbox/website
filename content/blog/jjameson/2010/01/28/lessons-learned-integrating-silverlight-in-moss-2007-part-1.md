@@ -217,4 +217,3 @@ examination) most of these still seem to lack much depth.
 Stay tuned and I promise I'll cover some
 [more of the "juicy stuff"](/blog/jjameson/2010/01/29/lessons-learned-integrating-silverlight-in-moss-2007-part-2)
 ;-)
-

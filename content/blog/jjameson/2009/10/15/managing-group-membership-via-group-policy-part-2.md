@@ -89,4 +89,3 @@ Here are the settings for the Group Policy:
 By linking this Group Policy to the appropriate OU (i.e.
 **IT/Resources/Servers**) the SCOM service account is ensured to be a member of
 the local **Performance Monitor Users** group on each monitored server. Voilà!
-

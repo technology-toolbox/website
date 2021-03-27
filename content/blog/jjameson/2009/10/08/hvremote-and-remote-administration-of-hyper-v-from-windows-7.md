@@ -134,4 +134,3 @@ After both of these changes were made, I found that I could once again perform
 remote administration using Hyper-V Manager.
 
 Kudos to John for simplifying the necessary configuration steps!
-

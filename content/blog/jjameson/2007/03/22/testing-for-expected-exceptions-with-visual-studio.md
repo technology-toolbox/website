@@ -55,4 +55,3 @@ public void FindByWhidWithInvalidWhid()
 The internal try/catch block validates the expected message, whereas the
 `ExpectedException` attribute on the method delegates the remaining work to the
 Visual Studio test manager (i.e. showing green vs. red for each test).
-

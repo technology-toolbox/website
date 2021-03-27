@@ -77,7 +77,6 @@ that actually works as intended ;-)
 
 > **Note**
 > 
-> 
 > The development VM that I captured the above screenshot from has the following
 > software installed:
 > 
@@ -93,7 +92,6 @@ that actually works as intended ;-)
 > - Microsoft SQL Server 2012 with SP1
 > - WiX Toolset v3.7
 > 
-> 
 > I don't typically install more than one version of Visual Studio in a VM.
 > However, I built this "uber Visual Studio VM" in order to debug some issues
 > with the
@@ -102,4 +100,3 @@ that actually works as intended ;-)
 > TFS instances).
 
 {{< /div-block >}}
-

@@ -304,7 +304,6 @@ store a "super-secret" hash of the expected value in the cookie.
 
 > **Note**
 > 
-> 
 > The reason I put the words "super-secret" in quotes is because someone could
 > certainly read this post, figure out the hashing "algorithm" (at present, it's
 > almost laughable to use that word), and subsequently create a hack to spam the
@@ -625,4 +624,3 @@ function endRequest(sender, args) {
     }
 }
 ```
-

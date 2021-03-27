@@ -96,7 +96,6 @@ title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
 
 > **Note**
 > 
-> 
 > I recommend creating folders like **Documents** (or "docs" if you prefer that
 > instead), **References** (or "lib"), **Source** (or "src"), and **Tools**
 > under the **Main** folder.
@@ -240,4 +239,3 @@ of warnings) definitely comes with a little "pain" in the beginning. However, as
 you may have heard me say in the past, this is trivial compared to the pain of
 enabling code analysis later on (after you have a substantial code base already
 written).
-

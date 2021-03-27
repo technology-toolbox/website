@@ -104,4 +104,3 @@ practices over a series of follow-up posts, including:
 - [Best practices for .NET assembly versioning](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
 
 Stay tuned!
-

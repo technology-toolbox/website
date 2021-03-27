@@ -142,4 +142,3 @@ WHERE
 
 I hope you find this first blog post in a long while to be helpful when working
 with MOSS 2007.
-

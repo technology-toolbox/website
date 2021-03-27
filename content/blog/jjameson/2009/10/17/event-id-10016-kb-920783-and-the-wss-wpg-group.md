@@ -104,7 +104,6 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 
 > **Update (2009-10-29)**
 > 
-> 
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't specify
 > the **WSS\_ADMIN\_WPG** group -- only the **WSS\_WPG** group.
 > 
@@ -154,9 +153,7 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    the group **Full Control**, and click **OK**.
 > 7. Close the Registry Editor window.
 > 
-> 
 > Now that the Administrators group has sufficient permissions, follow the steps
 > in KB 920783 to make the changes to the IIS WAMREG Admin Service.
 
 {{< /div-block >}}
-

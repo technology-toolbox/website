@@ -192,7 +192,6 @@ won't automatically create any necessary folders):
 
 > **Important**
 > 
-> 
 > When migrating content from one system to another, I strive to minimize the
 > load on the source system -- in this case, by downloading the files one time
 > from the MSDN blog site. While I could certainly download these pages each
@@ -820,7 +819,6 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 {{< div-block "note important" >}}
 
 > **Important**
-> 
 > 
 > This is probably a good place to stop and point out an essential concept when
 > writing migration tools like this -- as well as similar kinds of "throw away"
@@ -1492,4 +1490,3 @@ time) required to do this through code. Of course, this depends largely on how
 much content you are migrating and how long the "manual" portion of the
 migration will take. Always keep in mind the concept of "business value" when
 writing migration code like this.
-

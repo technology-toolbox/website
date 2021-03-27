@@ -250,4 +250,3 @@ you prefer that approach instead of creating some kind of "Login" Web Part.
 Lastly, note that I allow the `IsSslRedirectRequired` method to be overridden in
 Web Parts that inherit from `SslRequiredWebPart` (e.g. `LoginFormWebPart`). I
 haven't yet found this to be necessary, but it's there just in case.
-

@@ -208,7 +208,6 @@ cd ..\..\Web\DeploymentFiles\Scripts
 
 > **Important**
 > 
-> 
 > There is a bug in several of the out-of-the-box master pages in MOSS 2007
 > (including **BlueBand.master**) that prevent AJAX from working correctly. The
 > asynchronous postback is triggered and processed on the server, but the
@@ -717,4 +716,3 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 
 In [part 2](/blog/jjameson/2010/03/24/ajax-in-moss-2007-the-easy-way-part-2) of
 this post, I'll cover more detail on developing AJAX Web Parts for MOSS 2007.
-

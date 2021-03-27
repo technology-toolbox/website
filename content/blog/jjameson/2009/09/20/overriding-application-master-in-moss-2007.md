@@ -264,4 +264,3 @@ possibility of having Microsoft Support throw the "unsupported" trump card on
 you when opening a service request (i.e. SRX), you should probably temporarily
 revert the Web.config change above (so that the default PageHandlerFactory is
 used) and reproduce your problem with the default, out-of-the-box configuration.
-

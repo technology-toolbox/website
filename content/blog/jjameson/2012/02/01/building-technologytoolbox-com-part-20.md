@@ -292,7 +292,6 @@ the feature currently works on TechnologyToolbox.com.
 
 > **Note**
 > 
-> 
 > Sending the contact request via SMTP isn't as "bulletproof" as, say, writing
 > the contact request to a database in real-time -- but it is probably "good
 > enough" for many organizations. Obviously if your site is fielding dozens or
@@ -681,4 +680,3 @@ in the **UpdatePanel**:
 You can see this for yourself by inspecting the AJAX postback using the
 **Network** tab in the Internet Explorer Developer Tools or via the **Net**
 panel in Firebug/Firefox.
-

@@ -295,4 +295,3 @@ code that passes three parameters:
                 "Test message",
                 "Testing the SharePointSmtpHelper class");
 ```
-

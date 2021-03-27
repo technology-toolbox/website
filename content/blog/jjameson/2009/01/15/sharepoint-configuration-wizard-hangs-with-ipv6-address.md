@@ -195,12 +195,10 @@ Server 2008 VM.
 
 > **Update (2008-01-19)**
 > 
-> 
 > Note that after aliasing my local VM name to the loopback address (127.0.0.1),
 > I had to use the workaround in
 > [KB 896861](http://support.microsoft.com/kb/896861) in order to resolve
 > "access denied" errors when indexing content:
-> 
 > 
 > > Access is denied. Check that the Default Content Access Account has access
 > > to this content, or add a crawl rule to crawl this content. (The item was
@@ -208,4 +206,3 @@ Server 2008 VM.
 > > it.)
 
 {{< /div-block >}}
-

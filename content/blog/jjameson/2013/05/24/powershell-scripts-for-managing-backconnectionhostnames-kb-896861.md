@@ -34,7 +34,6 @@ Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my
 
 > **Note**
 > 
-> 
 > In the Fabrikam Extranet solution, the "Create Web Application.ps1" script
 > checks if the environment is configured to use
 > [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com). If
@@ -70,7 +69,6 @@ researchportal-local.dow.com
 {{< div-block "note" >}}
 
 > **Note**
-> 
 > 
 > You can download these scripts from my Toolbox repository on GitHub:
 > 
@@ -433,4 +431,3 @@ end
         + " from the BackConnectionHostNames registry value.")
 }
 ```
-

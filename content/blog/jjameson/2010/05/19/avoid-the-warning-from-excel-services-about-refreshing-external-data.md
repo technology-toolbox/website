@@ -60,4 +60,3 @@ the SSP admin page). Refer to the following for more information:
 
 {{< reference title="Manage Excel Services trusted file locations"
 linkHref="http://technet.microsoft.com/en-us/library/cc263009(office.12).aspx" >}}
-

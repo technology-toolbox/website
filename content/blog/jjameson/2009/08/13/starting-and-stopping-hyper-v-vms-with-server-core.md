@@ -79,4 +79,3 @@ something like the following to start one of the VMs:
 cscript \NotBackedUp\Public\Toolbox\Scripts\ManageVM.vbs XAVIER1 start
 
 {{< console-block-end >}}
-

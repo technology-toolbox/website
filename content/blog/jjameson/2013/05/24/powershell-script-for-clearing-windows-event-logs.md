@@ -58,7 +58,6 @@ C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
 
 > **Important**
 > 
-> 
 > Unlike "Clear Event Logs.vbs", Clear-EventLogs.ps1 does not save the event
 > logs before clearing them. If you desire to maintain that functionality, then
 > you'll need to modify the script accordingly.
@@ -73,7 +72,6 @@ C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
 {{< div-block "note" >}}
 
 > **Note**
-> 
 > 
 > You can download this script from my Toolbox repository on GitHub:
 > 
@@ -105,4 +103,3 @@ $ErrorActionPreference = "Stop"
 
 wevtutil el | ForEach-Object { wevtutil cl $_ }
 ```
-

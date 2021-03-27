@@ -85,4 +85,3 @@ END
 Note that by changing the **model** database, any new databases created in the
 development environment (such as content databases created for new Web
 applications) will be configured to use the Simple recovery model by default.
-

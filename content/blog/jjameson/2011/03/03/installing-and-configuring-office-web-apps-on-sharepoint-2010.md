@@ -139,7 +139,6 @@ files (at least in a production environment).
 
 > **Important**
 > 
-> 
 > You must start a new instance of the SharePoint 2010 Management Shell after
 > installing the Office Web Apps in order to use the new PowerShell cmdlets
 > (e.g.
@@ -293,4 +292,3 @@ databases used by the Web application.
 
    $webApp.GrantAccessToProcessIdentity("EXTRANET\svc-spserviceapp")
    ```
-

@@ -83,4 +83,3 @@ So...lessons learned:
 - Deleting a site does not perform a distributed transaction across the content
   database and the configuration database (the root of the issue when deleting a
   large site)
-

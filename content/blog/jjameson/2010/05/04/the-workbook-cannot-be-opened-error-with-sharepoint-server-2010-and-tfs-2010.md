@@ -163,15 +163,12 @@ underlying content databases:
 
 > **Update (2011-04-14)**
 > 
-> 
 > I should have updated this post long ago based on the comment added by "todh2"
 > regarding granting access to the database. Instead of using SQL Server
 > Management Studio to configure permissions on the content database for the
 > service account, use a little PowerShell to invoke the
 > **[SPWebApplication.GrantAccessToProcessIdentity](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.administration.spwebapplication.grantaccesstoprocessidentity.aspx)**
 > method:
-> 
-> 
 > 
 > ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
@@ -181,11 +178,9 @@ underlying content databases:
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
 > 
-> 
 > Thanks to "todh2" for pointing this out.
 
 {{< /div-block >}}
 
 Once this configuration change is made, the "workbook cannot be opened" error no
 longer occurs.
-

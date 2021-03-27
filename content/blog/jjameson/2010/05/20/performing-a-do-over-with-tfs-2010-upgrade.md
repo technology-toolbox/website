@@ -118,4 +118,3 @@ click **Configure Installed Features**.
 
 This will launch the Team Foundation Server Configuration Center and allow you
 to complete the upgrade process again.
-

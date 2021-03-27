@@ -211,4 +211,3 @@ toggles which icon is displayed.
 I'll explain more about the jQuery expandable list used to render the
 **Archives** section in a separate
 [post](/blog/jjameson/2012/01/16/building-technologytoolbox-com-part-12).
-

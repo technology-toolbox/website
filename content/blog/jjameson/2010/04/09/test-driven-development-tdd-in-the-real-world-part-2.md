@@ -568,4 +568,3 @@ In my
 [next post](/blog/jjameson/2010/04/15/test-driven-development-tdd-in-the-real-world-part-3-a-k-a-the-encryptionservice),
 I'll discuss an example of using TDD for a scenario that is considerably more
 complex than simply truncating a string.
-

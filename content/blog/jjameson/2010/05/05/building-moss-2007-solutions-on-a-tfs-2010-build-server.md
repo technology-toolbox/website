@@ -78,7 +78,6 @@ longer occurred.
 
 > **Note**
 > 
-> 
 > In addition to copying SharePoint assemblies that are directly referenced in
 > your projects, you also may want to copy assemblies that are _indirectly_
 > referenced, such as:
@@ -93,7 +92,6 @@ longer occurred.
 > - Microsoft.SharePoint.Search.dll
 > - Microsoft.Web.Design.Server.dll
 > 
-> 
 > While not required to successfully build a SharePoint solution, copying these
 > additional assemblies will avoid warnings during the build.
 > 
@@ -103,4 +101,3 @@ longer occurred.
 > Files\microsoft shared\Web Server Extensions\12\ISAPI" folder).
 
 {{< /div-block >}}
-

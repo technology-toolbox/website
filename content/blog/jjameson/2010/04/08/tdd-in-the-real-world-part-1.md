@@ -118,4 +118,3 @@ Otherwise, stay tuned for part 2 of this post where I'll show you some of my
 "developer tests" (note that I often mix "unit tests" and "integration tests" in
 my ".DeveloperTests" projects, because in my mind, both of these types of tests
 add value, but sometimes one is more appropriate than the other).
-

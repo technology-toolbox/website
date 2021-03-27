@@ -60,7 +60,6 @@ Here's the gist of it:
 
 > To let your visitors search your website, add the following code to your page(s):
 > 
-> 
 > ```HTML
 > <!-- Site search from Bing-->
 > <form method="get" action="http://www.bing.com/search">
@@ -195,7 +194,6 @@ your posts without having to specify a site filter each time.
 
 > **Update**
 > 
-> 
 > Right after I published this post, I discovered that Bing does not preserve
 > the "q1" querystring parameter when submitting additional searches. In other
 > words, if you search for "faceted search" from the search box on my blog, then
@@ -209,4 +207,3 @@ your posts without having to specify a site filter each time.
 > filter to the "q" query string parameter instead.
 
 {{< /div-block >}}
-

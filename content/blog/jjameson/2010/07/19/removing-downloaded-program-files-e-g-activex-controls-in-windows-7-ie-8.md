@@ -73,4 +73,3 @@ Internet Explorer 8:
 
 These steps should also work for Windows Vista as well (although I haven't tried
 them) -- but, honestly, does anyone even care about Windows Vista anymore? ;-)
-

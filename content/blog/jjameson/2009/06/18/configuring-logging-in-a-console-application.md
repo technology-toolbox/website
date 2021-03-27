@@ -651,4 +651,3 @@ option.)
 In my
 [next post](/blog/jjameson/2009/06/18/configuring-logging-in-asp-net-applications-and-sharepoint),
 I discuss logging to the ASP.NET tracing feature.
-

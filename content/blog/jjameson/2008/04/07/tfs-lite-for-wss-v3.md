@@ -212,4 +212,3 @@ the performance impact as the number of work items grows large.
 > displaying the status as text).
 
 {{< /div-block >}}
-

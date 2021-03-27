@@ -76,4 +76,3 @@ The updated RSAT package for Windows 7 SP1 should be available soon ("scheduled
 for release in Spring 2011").
 
 Mercy...why couldn't this have sim-shipped with Windows 7 SP1?
-

@@ -128,4 +128,3 @@ of the variations feature, such as automatically creating a new FAQ on the
 translation), when the corresponding FAQ is approved on the **en-US** site.
 
 Like I said, it was a difficult decision, and a painful one at that.
-

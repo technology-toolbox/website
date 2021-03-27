@@ -135,4 +135,3 @@ on the **Solution Management** page shows **Deployed**.
 If you find this problem occurs frequently in your environment, you might
 consider always specifying the "-force" option when deploying SharePoint
 solutions (which is what we recently did on my latest project).
-

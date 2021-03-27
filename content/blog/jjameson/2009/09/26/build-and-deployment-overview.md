@@ -206,4 +206,3 @@ Note the following key concepts illustrated in the previous figure:
   the installation guide (which details the install scripts and configuration
   steps to be used) just as the Test team did when installing the solution into
   the TEST environment.
-

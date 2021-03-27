@@ -35,4 +35,3 @@ included it in his
 
 If you do any significant amount of work with XML, I recommend you download
 SketchPath today.
-

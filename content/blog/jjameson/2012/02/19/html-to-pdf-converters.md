@@ -38,7 +38,6 @@ content into a table.
 
 > **Warning - Internet Explorer Users**
 > 
-> 
 > While publishing this post, I discovered the following table looks really ugly
 > in IE9 (since the width is not properly constrained to the content area). I
 > spent no less than 20 minutes trying to force IE to make it look as nice as it
@@ -95,4 +94,3 @@ conversion, but left a lot to be desired.
 
 Prince, on the other hand, was very good at rendering the PDF nearly identical
 to the on-screen version of the HTML content.
-

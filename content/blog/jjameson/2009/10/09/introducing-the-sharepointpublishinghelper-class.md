@@ -721,4 +721,3 @@ other custom SharePoint "helper" classes, such `SharePointListHelper` and
 code that was previously repeated in numerous places. In other words, as Scott
 Hanselman likes to say...a developer should always try to write DRY code
 (meaning, don't repeat yourself).
-

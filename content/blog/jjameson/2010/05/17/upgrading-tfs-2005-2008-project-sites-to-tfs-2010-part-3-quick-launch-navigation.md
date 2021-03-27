@@ -16,7 +16,6 @@ tags: ["TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-3-quick-launch-navigation.aspx"
 ---
 
-
 {{< div-block "note update" >}}
 
 > **Update (2010-05-20)**
@@ -302,20 +301,13 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 
 > **Important**
 > 
-> 
 > After a navigation node has been deleted, you need to refresh the SPWeb object
 > to avoid errors like the following:
 > 
-> 
-> 
 > {{< div-block "errorMessage" >}}
-> 
 > 
 > > An error occurred while enumerating through a collection: Cannot complete
 > > this action.
-> 
-> 
-> 
 > 
 > {{< /div-block >}}
 > 
@@ -577,4 +569,3 @@ upgrading my TFS project sites:
     url="http://go.microsoft.com/fwlink/?LinkId=153652&amp;clcid=0x409" />
 </QuickLaunch>
 ```
-

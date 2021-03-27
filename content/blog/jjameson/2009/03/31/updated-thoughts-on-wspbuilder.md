@@ -175,4 +175,3 @@ Perhaps I'm just an old dog... ;-)
 
 In my next post, I'll share my approach (a.k.a. the "DR.DADA" approach) for
 setting up a Visual Studio solution for SharePoint development.
-

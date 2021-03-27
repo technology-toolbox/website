@@ -91,4 +91,3 @@ nothing to commit (working directory clean)
 Well, as I've said repeatedly before, software is never perfect. My experience
 over the last couple of days and this morning also reminds me of another common
 saying: "You get what you pay for."
-

@@ -121,4 +121,3 @@ use, then -- and only then -- it appends a GUID in order to avoid a naming
 collision? I'm guessing 99.999% of the time there is only going to be one
 StateService database per SharePoint farm. [If you think I'm wrong, please tell
 me, because apparently I'm missing something.]
-

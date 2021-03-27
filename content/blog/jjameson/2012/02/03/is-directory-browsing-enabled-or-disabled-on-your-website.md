@@ -53,4 +53,3 @@ TechnologyToolbox.com. This added the following element to the Web.config file:
 
 The next time I create a new ASP.NET application to be hosted externally, I
 think it would be wise to just add this to the Web.config file in the beginning.
-

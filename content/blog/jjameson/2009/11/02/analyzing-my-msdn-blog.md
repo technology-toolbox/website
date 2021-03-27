@@ -305,4 +305,3 @@ most popular post, I would see very similar results.
 I'm not sure how useful this information might be to others, but I found it very
 enlightening. It gives me some great things to keep in mind when I sit down to
 work on my blog.
-

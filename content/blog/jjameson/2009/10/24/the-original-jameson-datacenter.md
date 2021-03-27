@@ -145,4 +145,3 @@ and I sat in front of it typing in hundreds of lines of code from a magazine
 just so we could try to play some silly game based on "sprites." [Note that the
 games almost never worked due to some error or another, but nevertheless we kept
 trying anyway.]
-

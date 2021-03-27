@@ -324,4 +324,3 @@ release candidate builds become available.
 
 The actual development of the solution is performed on other servers (e.g.
 FOOBAR7 and FOOBAR2) that are not shown in the above infrastructure model.
-

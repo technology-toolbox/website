@@ -69,4 +69,3 @@ Just be sure to run it with
 [CScript](http://msdn.microsoft.com/en-us/library/xazzc41b%28VS.85%29.aspx) --
 and not the default WScript -- or you'll find the `WScript.Echo` messages rather
 frustrating.
-

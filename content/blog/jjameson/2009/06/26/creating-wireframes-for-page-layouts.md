@@ -127,4 +127,3 @@ Web development project for that matter -- I recommend creating a
 also keep a copy of the Visio file (typically named Models - Page Layouts.vsd)
 so I can quickly make changes as the content types and page layouts evolve over
 time.
-

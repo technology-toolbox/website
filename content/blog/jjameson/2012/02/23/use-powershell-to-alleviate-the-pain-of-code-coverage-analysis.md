@@ -575,4 +575,3 @@ your existing Web applications), and then run the PowerShell script from the
 ```PowerShell
 & '.\Run Developer Tests with Code Coverage.ps1'
 ```
-

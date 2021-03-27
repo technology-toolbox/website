@@ -37,11 +37,9 @@ the example bugs to get a feel for the level of detail expected during the
 
 > * * *
 > 
-> 
 > **From:** JAMESON,JEREMY (Non-A-BPI-AM,unix1)\
 > **Sent:** Thursday, October 18, 2007 8:03 AM\
 > **Subject:** v2.0 Transition from "Tell Mode" to "Ask Mode"
-> 
 > 
 > On Sunday night, October 21st, RC4 of the _[Project]_ v2.0 solution will be
 > deployed to TEST. This will mark the official transition from "Tell Mode" to
@@ -94,7 +92,6 @@ the example bugs to get a feel for the level of detail expected during the
 >   Management, and (potentially) Product Management teams?" (note that the
 >   estimates need to come from the respective team members -- the investigator
 >   should not "guess")
-> 
 > 
 > Note that both **Solution** and **Teams Impacted** are not needed, one or the
 > other is fine. If the necessary change (and associated risk) is very small --
@@ -173,7 +170,6 @@ unless you actually were a member of this project ;-)
 >    the search results for publications of the selected type. According to the
 >    original description for this bug, an error occurred at this point.
 > 
-> 
 > #### Proposal:
 > 
 > Correct the **Literature Summary** view to properly group and order by
@@ -204,7 +200,6 @@ unless you actually were a member of this project ;-)
 >    desired to show the "best" results at the top of the list). In order to
 >    return a result set of, say, 1000 items sorted by something other than
 >    rank, SharePoint must do a lot more work before it can trim the result set.
-> 
 > 
 > Therefore it is quite possible that SharePoint Search will require &gt; 10
 > seconds to generate these large result sets (although it is expected that
@@ -240,7 +235,6 @@ unless you actually were a member of this project ;-)
 > 3. There are no results displayed for these publication types even though
 >    there are lot of documents under these publication types in TEST
 > 
-> 
 > #### Motivation:
 > 
 > LiteratureResults.aspx currently excludes the following content types (since
@@ -251,7 +245,6 @@ unless you actually were a member of this project ;-)
 > - Chromatogram
 > - Certificate of Analysis
 > - Material Safety Data Sheet
-> 
 > 
 > However, the current user experience is not desirable since the search form
 > allows users to narrow their search results to just Certificate of Analysis or
@@ -289,4 +282,3 @@ unless you actually were a member of this project ;-)
 > Review new Library search results on legacy General Site to determine if the
 > large number of Certificate of Analysis and MSDS publications has a negative
 > impact on search results. (2 hours)
-

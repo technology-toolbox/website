@@ -47,4 +47,3 @@ environment.
 
 For lots more useful information on upgrading C++ projects to Visual Studio
 2010, refer to the "Project Upgrade Guide" post referenced above.
-

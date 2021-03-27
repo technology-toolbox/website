@@ -79,7 +79,6 @@ out of my toolbox ;-)
 
 > **Update (2009-03-25)**
 > 
-> 
 > Yesterday I forgot to mention another vastly improved feature in IE8.
 > 
 > I tend to use {{< kbd "CTRL+F" >}} frequently to find a particular string on a
@@ -100,4 +99,3 @@ out of my toolbox ;-)
 > different terms on a page. IE8 even has "hit highlighting" similar to Firefox.
 
 {{< /div-block >}}
-

@@ -235,7 +235,6 @@ little concerned with this "junk" data being included in the analytics reports.
 
 > **Note**
 > 
-> 
 > While researching how other people handled this issue with development and
 > test environments, I noticed a number of folks recommending that you filter
 > the reports based on the domain name. For example, for Technology Toolbox, I

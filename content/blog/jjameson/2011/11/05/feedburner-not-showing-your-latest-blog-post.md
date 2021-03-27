@@ -38,7 +38,6 @@ the latest blog post.
 
 > **Note**
 > 
-> 
 > I had to specify my "Feed Address" (i.e.
 > [http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson](http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson))
 > instead of my "Original Feed"
@@ -98,4 +97,3 @@ entire content of each post). This definitely isn't how I prefer to syndicate my
 blog posts (since it requires people reading my blog to "go online" and download
 the full post), but considering the alternatives, this is definitely the logical
 choice.
-

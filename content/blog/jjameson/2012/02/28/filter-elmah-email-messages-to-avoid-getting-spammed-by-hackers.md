@@ -350,4 +350,3 @@ is never perfect."
 ELMAH may have a few issues in a small number of scenarios, but overall, I have
 to say that I consider it to be fantastic. In many ways, I even like it better
 than the equivalent error handling functionality in SharePoint :-)
-

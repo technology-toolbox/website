@@ -271,4 +271,3 @@ workings of Subtext, and I was able to make the necessary tweaks that I needed
 along the way.
 
 I'll explain more about those "tweaks" in subsequent posts.
-

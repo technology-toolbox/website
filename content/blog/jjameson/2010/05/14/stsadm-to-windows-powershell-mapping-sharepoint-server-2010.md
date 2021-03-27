@@ -23,4 +23,3 @@ Office SharePoint Server (MOSS) 2007 to SharePoint Server 2010:
 {{< reference
 title="Stsadm to Windows PowerShell mapping (SharePoint Server 2010)"
 linkHref="http://technet.microsoft.com/en-us/library/ff621084(office.14).aspx" >}}
-

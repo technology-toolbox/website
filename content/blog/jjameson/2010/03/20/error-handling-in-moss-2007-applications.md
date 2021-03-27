@@ -1251,15 +1251,9 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 > zone. In other words, running the following command will not remove the trace
 > listener configuration from the Web.config file for the **Internet** zone:
 > 
-> 
-> 
 > {{< console-block-start >}}
 > 
-> 
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
-> 
-> 
-> 
 > 
 > {{< console-block-end >}}
 
@@ -1631,4 +1625,3 @@ SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode,
 ```
 
 I hope you find this post valuable when creating Internet sites with MOSS 2007.
-

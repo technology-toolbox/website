@@ -123,4 +123,3 @@ over time (largely due to the WinSxS folder), and while the Windows Component
 Clean tool (COMPCLN.exe) undeniably reclaims _some_ hard drive space after
 installing SP2, it's definitely not the same as starting with a "fresh" SP2
 install.
-

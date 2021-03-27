@@ -73,4 +73,3 @@ iisreset /start
 Note that I use a `pause` statement so that I can optionally perform other tasks
 while SharePoint is stopped (e.g. detach a content database, move it to a
 different disk, and then reattach it).
-

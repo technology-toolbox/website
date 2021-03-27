@@ -40,4 +40,3 @@ Guide and branching the code for release).
 In
 [my next post](/blog/jjameson/2010/12/03/branching-for-a-release-in-team-foundation-server),
 I'll talk more about the process I use to branch code for a particular release.
-

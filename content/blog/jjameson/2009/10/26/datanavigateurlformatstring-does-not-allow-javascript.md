@@ -140,4 +140,3 @@ reference the assembly containing your custom business objects. For example:
 ```ASP.NET
 <%@ Assembly Name="Fabrikam.Demo.Integration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=786f58ca4a6e3f60" %>
 ```
-

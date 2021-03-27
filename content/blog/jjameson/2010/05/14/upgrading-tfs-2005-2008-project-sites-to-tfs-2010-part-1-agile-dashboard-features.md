@@ -72,7 +72,6 @@ command:
 
 > **Note**
 > 
-> 
 > You must run the **File.BatchNewTeamProject** command directly on the
 > TFS/SharePoint Server (which means you must have previously installed Team
 > Explorer or Visual Studio on the server) -- not from a remote client with
@@ -216,7 +215,6 @@ After the feature finished activating, I once again browsed to my project site
 
 > **Important**
 > 
-> 
 > Even though the dashboards have been created, you still have some work to do
 > (assuming you want the dashboards and new TFS Web Parts to show accurate
 > information). This is due to the fact that the **Scenario** work item type was
@@ -261,4 +259,3 @@ $sitesToUpgrade |
       Enable-SPFeature "TfsDashboardAgileMoss" -Url $_
    }
 ```
-

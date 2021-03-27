@@ -45,4 +45,3 @@ You can
 about the Microsoft Translator Widget on the
 [Translation team's blog](http://blogs.msdn.com/translation) if you want more
 details.
-

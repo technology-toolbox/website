@@ -392,4 +392,3 @@ linkHref="http://blogs.devhorizon.com/reza/?p=459" >}}
 > **[SharePointTimerJobHelper](/blog/jjameson/2010/03/31/waiting-for-sharepoint-web-config-modifications-to-finish)**.
 
 {{< /div-block >}}
-
