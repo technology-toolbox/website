@@ -104,7 +104,7 @@ However, there are a few problems with this approach:
 
   > You cannot call a method on a null-valued expression.\
   > At line:13 char:33\
-  > + $zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)\
+  > \+ $zipPackage.CopyHere &lt;&lt;&lt;&lt; ($file.FullName)\
   > ...
 
   {{< div-block-end >}}

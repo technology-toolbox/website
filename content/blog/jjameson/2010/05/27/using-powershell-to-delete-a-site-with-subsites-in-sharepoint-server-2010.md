@@ -105,11 +105,11 @@ Remove-SPWeb "http://foobar/Test" -Confirm:$false
 > Remove-SPWeb : Error deleting Web site "/Test". You can't delete a site that
 > has subsites.\
 > At line:1 char:13\
-> + Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false\
-> + CategoryInfo : InvalidData:
+> \+ Remove-SPWeb &lt;&lt;&lt;&lt; "http://foobar/Test" -Confirm:$false\
+> \+ CategoryInfo : InvalidData:
 > (Microsoft.Share...CmdletRemoveWeb:SPCmdletRemoveWeb) [Remove-SPWeb],
 > SPException\
-> + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
+> \+ FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRemoveWeb
 
 {{< /div-block >}}
 
