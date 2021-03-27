@@ -38,7 +38,7 @@ signatures removed):
    > at the WSPBuilder code for optimizations if necessary.
 
    {{< div-block-end >}}
-2. <cite>Jeremy</cite>
+1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
 
@@ -52,7 +52,7 @@ signatures removed):
    > WSPBuilder?
 
    {{< div-block-end >}}
-3. <cite>Keutmann</cite>
+1. <cite>Keutmann</cite>
 
    {{< div-block-start "fst-italic" >}}
 
@@ -71,7 +71,7 @@ signatures removed):
    > and call the build of the WSP package manually when needed.
 
    {{< div-block-end >}}
-4. <cite>Jeremy</cite>
+1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
 
@@ -85,7 +85,7 @@ signatures removed):
    > project...
 
    {{< div-block-end >}}
-5. <cite>Keutmann</cite>
+1. <cite>Keutmann</cite>
 
    {{< div-block-start "fst-italic" >}}
 
@@ -99,7 +99,7 @@ signatures removed):
    > WSPBuilder manually when needed.
 
    {{< div-block-end >}}
-6. <cite>Jeremy</cite>
+1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
 

@@ -103,9 +103,9 @@ Manager:
 
 1. Browse to the Report Manager site (e.g.
    [http://cyclops-dev/Reports](http://cyclops-dev/Reports)).
-2. On the Report Manager home page, in the masthead of the page, click **Site
+1. On the Report Manager home page, in the masthead of the page, click **Site
    Settings**.
-3. On the Site Settings page, click the **Schedules** tab.
+1. On the Site Settings page, click the **Schedules** tab.
 
 An error similar to the following should be displayed:
 

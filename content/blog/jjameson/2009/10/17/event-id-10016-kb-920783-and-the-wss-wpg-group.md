@@ -135,23 +135,23 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > 1. Click the **Start** menu, type **regedit**, and then click **regedit.exe**.
 >    If prompted by **User Account Control** to allow the program to make
 >    changes to this computer, click **Yes**.
-> 2. In the **Registry Editor** window, search for
+> 1. In the **Registry Editor** window, search for
 >    "61738644-F196-11D0-9953-00C04FD919C1" to find
 >    HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}.
-> 3. Right-click on the
+> 1. Right-click on the
 >    **HKEY\_CLASSES\_ROOT\AppID\{61738644-F196-11D0-9953-00C04FD919C1}** key
 >    and then click **Permissions**.
-> 4. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+> 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
 >    box, click **Advanced**.
-> 5. In the **Advanced Security Settings for
+> 1. In the **Advanced Security Settings for
 >    {61738644-F196-11D0-9953-00C04FD919C1}**dialog box:
 >    1. Click the **Owner** tab.
->    2. In the **Change owner to** list, click the **Administrators** group.
->    3. Click **OK**.
-> 6. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
+>    1. In the **Change owner to** list, click the **Administrators** group.
+>    1. Click **OK**.
+> 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
 >    box, click the **Administrators** group, then click the checkbox to allow
 >    the group **Full Control**, and click **OK**.
-> 7. Close the Registry Editor window.
+> 1. Close the Registry Editor window.
 >
 > Now that the Administrators group has sufficient permissions, follow the steps
 > in KB 920783 to make the changes to the IIS WAMREG Admin Service.

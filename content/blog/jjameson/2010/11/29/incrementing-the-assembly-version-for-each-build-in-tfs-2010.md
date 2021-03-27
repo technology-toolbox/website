@@ -132,9 +132,9 @@ This "collapsed" view of the workflow illustrates the following high-level steps
 of the build process:
 
 1. Get the Build
-2. Update Drop Location
-3. Run On Agent
-4. Check In Gated Changes for CheckInShelveset Builds
+1. Update Drop Location
+1. Run On Agent
+1. Check In Gated Changes for CheckInShelveset Builds
 
 For the purposes of this post, the most interesting aspect of the build process
 is the separation of the "Update Drop Location" activities from the "Run On
@@ -163,14 +163,14 @@ high-level steps that I use for specifying the assembly version:
    Studio projects reference this shared file using the concept of
    ["linked files" in Visual Studio](/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions).
    Note that the assembly version is not incremented with each build.
-2. The assembly file version (e.g. 1.0.51.0) is specified in the
+1. The assembly file version (e.g. 1.0.51.0) is specified in the
    AssemblyVersionInfo.cs file, which is also located in the same folder as the
    Visual Studio solution. Depending on whether we are building off the Main
    branch or one of the QFE branches, either the Build Number or Revision is
    incremented with each build. For now, let's assume we are building off the
    Main branch, so we want to increment the Build Number portion of the version
    number.
-3. The actual process of incrementing the version is performed using the Version
+1. The actual process of incrementing the version is performed using the Version
    task from the
    [MSBuild Community Tasks Project](http://msbuildtasks.tigris.org/). The
    Version task actually uses a simple text file (e.g. AssemblyVersionInfo.txt)
@@ -239,8 +239,8 @@ ensure the label matches the updated build number.
 To change the scope of the LabelName variable:
 
 1. Within the **Run On Agent** scope, expand **If CreateLabel**.
-2. Select **Create and Set Label for non-Shelveset Builds**.
-3. Click the **Variables** tab, select the **LabelName** row, and in the
+1. Select **Create and Set Label for non-Shelveset Builds**.
+1. Click the **Variables** tab, select the **LabelName** row, and in the
    **Scope** column, select **Create and Set Label for non-Shelveset Builds.**
 
 In addition to the source code label, we want the drop location on the Release

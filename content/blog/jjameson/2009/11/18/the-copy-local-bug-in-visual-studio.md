@@ -45,7 +45,7 @@ the GAC):
 1. In the **Solution Explorer** window in Visual Studio, expand the
    **References** folder for the project and then select the referenced
    assembly.
-2. In the **Properties** window, change the value of **Copy Local** to
+1. In the **Properties** window, change the value of **Copy Local** to
    **False**, and then change it back to **True**.
 
 Following these two simple steps explicitly adds `<Private>True</Private>` to

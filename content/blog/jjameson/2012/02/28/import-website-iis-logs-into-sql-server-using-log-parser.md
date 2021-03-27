@@ -87,8 +87,8 @@ To import the TechnologyToolbox.com log files into a SQL Server database
 1. Extract (a.k.a. unzip) the log files in the /httplog folder (which I
    periodically FTP from the Production environment) and subsequently move the
    zip files to the /httplog/Archive folder.
-2. Import the log files using the LogParser utility.
-3. Remove the log files from the /httplog folder (to avoid inserting duplicate
+1. Import the log files using the LogParser utility.
+1. Remove the log files from the /httplog folder (to avoid inserting duplicate
    data the next time the script is run).
 
 Here is the script in hopes it helps others who wish to import their log files

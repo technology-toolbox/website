@@ -100,23 +100,23 @@ To configure an alternate access mapping:
 
 1. On the SharePoint Central Administration home page, click the **Application
    Management** tab on the top link bar.
-2. On the **Application Management** page, in the **SharePoint Web Application
+1. On the **Application Management** page, in the **SharePoint Web Application
    Management** section, click **Create or extend Web application**.
-3. On the **Create or Extend Web Application** page, in the **Adding a
+1. On the **Create or Extend Web Application** page, in the **Adding a
    SharePoint Web Application** section, click **Extend an existing Web
    application**.
-4. On the **Extend Web Application to Another IIS Web Site**page:
+1. On the **Extend Web Application to Another IIS Web Site**page:
    1. In the **Web Application** section, select the Web application to extend
       (e.g. [http://fabrikam](http://fabrikam/)).
-   2. In the **IIS Web Site** section, in the **Port** and **Host Header**
+   1. In the **IIS Web Site** section, in the **Port** and **Host Header**
       boxes, enter the corresponding values such as **80** and
       **www.fabrikam.com**, respectively.
-   3. In the **Security Configuration** section, keep the default options (you
+   1. In the **Security Configuration** section, keep the default options (you
       can configure forms authentication, anonymous access, and SSL later).
-   4. In the **Load Balanced URL** section, ensure the default value specified
+   1. In the **Load Balanced URL** section, ensure the default value specified
       in the **URL** box is correct (e.g. **http://www.fabrikam.com:80**) and in
       **Zone** dropdown list, select **Internet**.
-   5. Click **OK**.
+   1. Click **OK**.
 
 The next step is to install your SSL certificate on the site. Once you've
 procured your certificate and installed it through Internet Information Services
@@ -127,33 +127,33 @@ To add a public URL to HTTPS:
 
 1. On the SharePoint Central Administration home page, click the **Operations**
    tab on the top link bar.
-2. On the **Operations** page, in the **Global Configuration** section, click
+1. On the **Operations** page, in the **Global Configuration** section, click
    **Alternate access mappings**.
-3. On the **Alternate Access Mappings** page, click **Edit Public URLs**.
-4. On the **Edit Public Zone URLs**page:
+1. On the **Alternate Access Mappings** page, click **Edit Public URLs**.
+1. On the **Edit Public Zone URLs**page:
    1. In the **Alternate Access Mapping Collection** section, select the Web
       application (e.g. [http://fabrikam](http://fabrikam/)).
-   2. In the **Public URLs** section, copy the URL from the **Internet** box to
+   1. In the **Public URLs** section, copy the URL from the **Internet** box to
       the **Custom** box, and change **http://** to **https://**.
-   3. Click **Save**.
+   1. Click **Save**.
 
 To add an HTTPS binding to the site in IIS:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **Internet
    Information Services (IIS) Manager**.
-2. In Internet Information Services (IIS) Manager, click the plus sign (+) next
+1. In Internet Information Services (IIS) Manager, click the plus sign (+) next
    to the server name that contains the Web application, and then click the plus
    sign next to **Sites** to view the Web applications that have been created.
-3. Click the name of the Web application corresponding to the **Internet** zone
+1. Click the name of the Web application corresponding to the **Internet** zone
    (e.g. **SharePoint - www.fabrikam.com80**). In the **Actions** section, under
    the **Edit Site** heading, click **Bindings...**.
-4. In the **Site Bindings** window, click **Add**.
-5. In the **Add Site Binding**window:
+1. In the **Site Bindings** window, click **Add**.
+1. In the **Add Site Binding**window:
    1. In the **Type:** dropdown, select **https**.
-   2. In the **SSL Certificate:** dropdown, select the certificate corresponding
+   1. In the **SSL Certificate:** dropdown, select the certificate corresponding
       to the site (e.g. www.fabrikam.com).
-   3. Click **OK**.
-   4. In the **Site Bindings** window, click **Close**.
+   1. Click **OK**.
+   1. In the **Site Bindings** window, click **Close**.
 
 At this point, your SharePoint site supports Windows Authentication both
 internally (via [http://fabrikam](http://fabrikam/)) and externally (via

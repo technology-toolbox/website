@@ -34,8 +34,8 @@ Often I want to ensure that my TFS workspace matches the exact state of the
 solution in source control. I used to do this the "hard way" by:
 
 1. Cloaking the solution folder in Source Control Explorer
-2. Using Windows Explorer, deleting the solution folder on disk
-3. Uncloaking the solution folder in Source Control Explorer
+1. Using Windows Explorer, deleting the solution folder on disk
+1. Uncloaking the solution folder in Source Control Explorer
 
 Sometime last year, I discovered there's an easier way to do this, assuming you
 have installed the TFS Power Tools -- which I certainly hope you have (if, for

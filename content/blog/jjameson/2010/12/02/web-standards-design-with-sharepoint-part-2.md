@@ -391,9 +391,9 @@ to configure a SharePoint site exactly the way we want it. For the Tugboat site,
 the HomeSiteConfiguration feature is used to:
 
 1. Set the master page for the site (SPWeb) to Tugboat.master.
-2. Upload the various images referenced on the home page (e.g. boat.jpg) to the
+1. Upload the various images referenced on the home page (e.g. boat.jpg) to the
    **PublishingImages** library.
-3. Configure the default page for the site (i.e. change the page layout to
+1. Configure the default page for the site (i.e. change the page layout to
    TugboatWelcomePageLayout1, set the **PageContent** field to render the main
    content, add the Content Editor Web Part to render the secondary content, and
    add an instance of the FindLocationWebPart).
@@ -477,7 +477,7 @@ To deploy the Tugboat sample site to SharePoint:
 
 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
    right-click **Command Prompt**, and then click **Run as administrator**.
-2. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
+1. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
 
    ```Console
    set TUGBOAT_URL=http://tugboatcoffee-local
@@ -492,7 +492,7 @@ To deploy the Tugboat sample site to SharePoint:
    > SharePoint timer infrastructure when deploying and retracting the solution.
 
    {{< /div-block >}}
-3. Set environment variables to specify the credentials to use for the Tugboat application pool:
+1. Set environment variables to specify the credentials to use for the Tugboat application pool:
 
    ```Console
    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
@@ -506,37 +506,37 @@ To deploy the Tugboat sample site to SharePoint:
    > Be sure to specify a valid local or domain user.
 
    {{< /div-block >}}
-4. Change to the folder containing the deployment scripts:
+1. Change to the folder containing the deployment scripts:
 
    ```Console
    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
    ```
 
-5. Type the following command:
+1. Type the following command:
 
    ```Console
    "Create Web Applications.cmd"
    ```
 
-6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
+1. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
 
    ```Console
    "Add Solutions.cmd"
    ```
 
-7. Wait for the solution to be added and then type the following command:
+1. Wait for the solution to be added and then type the following command:
 
    ```Console
    "Deploy Solutions.cmd"
    ```
 
-8. Wait for the solution to be deployed and then type the following command:
+1. Wait for the solution to be deployed and then type the following command:
 
    ```Console
    "Activate Features.cmd"
    ```
 
-9. Wait for the feature activations to complete, and then minimize or close the
+1. Wait for the feature activations to complete, and then minimize or close the
    command prompt.
 
 That's it! You're done.

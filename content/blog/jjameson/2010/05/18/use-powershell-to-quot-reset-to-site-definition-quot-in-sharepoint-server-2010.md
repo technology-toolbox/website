@@ -23,9 +23,9 @@ Foundation Server (TFS) project site:
 
 1. Browse to the Site Settings page for the site (e.g.
    [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
-2. On the **Site Settings** page, in the **Site Actions** section, click **Reset
+1. On the **Site Settings** page, in the **Site Actions** section, click **Reset
    to site definition**.
-3. On the **Reset Page to Site Definition Version** page, click the option to
+1. On the **Reset Page to Site Definition Version** page, click the option to
    **Reset all pages in this site to site definition version**, and then click
    **Reset**.
 

@@ -51,19 +51,19 @@ was to expand the entity model.
 I completed the following steps to update the entity model:
 
 1. In Visual Studio, open the entity data model (**Caelum.edmx**).
-2. In the Entity Data Model Designer, right-click the background and then click
+1. In the Entity Data Model Designer, right-click the background and then click
    **Update Model from Database...**
-3. In the **Update Wizard**window:
+1. In the **Update Wizard**window:
    1. If necessary, on the **Choose Your Data Connection** step, ensure the
       Subtext database is selected and then click **Next**.
-   2. On the **Choose Your Database Objects** step, in the **Add** tab, expand
+   1. On the **Choose Your Database Objects** step, in the **Add** tab, expand
       **Tables**, click the check box for **subtext\_EntryViewCount** (and
       **subtext\_Content** if this table was not previously added to the model),
       and then click **Finish**.
-4. For the **subtext\_Content**table, ensure the properties are set as follows:
+1. For the **subtext\_Content**table, ensure the properties are set as follows:
    - **E****ntity Set Name:** Entries
    - **N****ame:** Entry
-5. For the **subtext\_EntryViewCount**table, ensure the properties are set as
+1. For the **subtext\_EntryViewCount**table, ensure the properties are set as
    follows:
    - **E****ntity Set Name:** EntryViewCounts
    - **N****ame:** EntryViewCount
@@ -115,7 +115,7 @@ I chose not to use the existing sproc for a couple of reasons:
    reality is that when you start getting blog posts with tens of thousands of
    hits (due to high rankings in Google search results), the influence of
    **AggCount** and number of comments becomes insignificant.
-2. Since I had already created the **Most Recent Posts** user control using the
+1. Since I had already created the **Most Recent Posts** user control using the
    Entity Framework and a simple LINQ query, I wanted to keep the implementation
    of the **Most Popular Posts** user control similar (to minimize development
    time and simplify maintenance of the code going forward).

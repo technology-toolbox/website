@@ -308,8 +308,8 @@ At this point, the HTML rendered by the **XsltListViewWebPart** is:
 ## This Week's Specials
 
 1. Fisherman&#39;s Brew
-2. Boathouse Bold
-3. Deadly Decaf
+1. Boathouse Bold
+1. Deadly Decaf
 
 As you can see, we need to tweak the XSLT a little bit in order to render
 special characters as expected (such as an encoded apostrophe). This is simply a
@@ -390,9 +390,9 @@ At this point, our HTML is very close to what we want it to be:
 
 1. [!\[\](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
    _$9.98 / lb._](#)
-2. [!\[\](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
+1. [!\[\](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
    _$12.50 / lb._](#)
-3. [!\[\](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf**
+1. [!\[\](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf**
    _$7.49 / lb._](#)
 
 Obviously the image URLs are invalid (outside the context of the SharePoint site

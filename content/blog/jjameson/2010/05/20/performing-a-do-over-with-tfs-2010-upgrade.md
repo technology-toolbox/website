@@ -44,10 +44,10 @@ the upgraded TFS project sites:
 
 1. On the SharePoint Central Administration home page, in the **Application
    Management** section, click **Manage content databases**.
-2. On the **Manage Content Databases** page, in the list of content databases,
+1. On the **Manage Content Databases** page, in the list of content databases,
    click the name of the content database to remove (e.g.
    **WSS\_Content\_TFS**).
-3. On the **Manage Content Database Settings** page, click the **Remove content
+1. On the **Manage Content Database Settings** page, click the **Remove content
    database** checkbox. When prompted to confirm removing the content database,
    click **OK**.
 
@@ -84,7 +84,7 @@ Powershell:
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by **User Account Control** to
    allow the program to make changes to this computer, click **Yes**.
-2. At the Windows PowerShell command prompt, type the following command:
+1. At the Windows PowerShell command prompt, type the following command:
 
    {{< console-block-start >}}
 

@@ -63,27 +63,27 @@ Application event log:
 
 1. Start the **Operations Console** as a member of the Operations Manager
    Authors or Administrators role.
-2. In the Operations console. click the **Authoring** button.
-3. In the navigation pane:
+1. In the Operations console. click the **Authoring** button.
+1. In the navigation pane:
    1. Expand **Authoring**, and then expand **Management Pack Objects**.
-   2. Right-click **Rules**, and then click **Create a new rule...** to start
+   1. Right-click **Rules**, and then click **Create a new rule...** to start
       the Create Rule Wizard.
-4. On the **Select a Rule Type**page:
+1. On the **Select a Rule Type**page:
    1. Expand **Alert Generating Rules**, expand **Event Based**, and then click
       **NT Event Log (Alert)**.
-   2. Select the destination management from the list (**Windows Core Library -
+   1. Select the destination management from the list (**Windows Core Library -
       Customizations**) or click **New...** to create a management pack.
-   3. Click **Next**.
-5. On the **Rule Name and Description**page:
+   1. Click **Next**.
+1. On the **Rule Name and Description**page:
    1. In the **Rule name** box, type **Application Event Log Error**.
-   2. Optionally, type a description for the rule.
-   3. Click **Select** to select the item to target.
-   4. In the **Select Items to Target** dialog, select **Windows Computer**, and
+   1. Optionally, type a description for the rule.
+   1. Click **Select** to select the item to target.
+   1. In the **Select Items to Target** dialog, select **Windows Computer**, and
       then click **OK**.
-   5. Ensure the **Rule is enabled** option is checked and then click **Next**.
-6. On the **Event Log Name** page, ensure **Log name** is set to
+   1. Ensure the **Rule is enabled** option is checked and then click **Next**.
+1. On the **Event Log Name** page, ensure **Log name** is set to
    **Application**, and then click **Next**.
-7. On the **Build Event Expression**page:
+1. On the **Build Event Expression**page:
    1. Specify the following expression:
       {{< table class="small table-striped" >}}
 
@@ -92,9 +92,9 @@ Application event log:
       | Event Level | Equals | Error |
 
       {{< /table >}}
-   2. Click **Next**.
+   1. Click **Next**.
 
-8. On the **Configure Alerts**page:
+1. On the **Configure Alerts**page:
    1. In the **Alert description** box, specify the following:
 
       **Source: $Data/EventSourceName$\
@@ -103,8 +103,8 @@ Application event log:
       User: $Data/UserName$\
       Computer: $Data/LoggingComputer$\
       Event Description: $Data/EventDescription$**
-   2. In the **Severity** option, click **Warning**.
-   3. Click **Alert suppression...** to define the handling of duplicate alerts.
+   1. In the **Severity** option, click **Warning**.
+   1. Click **Alert suppression...** to define the handling of duplicate alerts.
       In the **Alert Suppression**dialog:
       1. Click the following fields:
          - **Event ID**
@@ -113,8 +113,8 @@ Application event log:
          - **Event Category**
          - **User**
          - **Description**
-      2. Click **OK**.
-   4. Click **Create**.
+      1. Click **OK**.
+   1. Click **Create**.
 
 Repeat the process to create a similar alert for errors in the System event log.
 

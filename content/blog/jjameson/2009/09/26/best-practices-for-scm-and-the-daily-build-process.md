@@ -201,11 +201,11 @@ The automated build process should:
 1. Automatically increment the Build Number or Revision portion of the
    [assembly version](/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning)
    (depending on which branch is being built)
-2. Apply a build label (if appropriate)
-3. Retrieve the code from the source control system
-4. Compile the solution
-5. Run any associated unit tests
-6. Copy the build to the
+1. Apply a build label (if appropriate)
+1. Retrieve the code from the source control system
+1. Compile the solution
+1. Run any associated unit tests
+1. Copy the build to the
    [Release Server](/blog/jjameson/2009/09/25/development-and-build-environments)
 
 If an error occurs during the build -- including execution of the unit tests --

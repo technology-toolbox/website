@@ -343,11 +343,11 @@ PowerShell scripts, as described below.
      ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full Control
      access to Web applications
-2. Complete the procedures detailed in **Step 1** from
+1. Complete the procedures detailed in **Step 1** from
    [my previous post](/blog/jjameson/2011/02/19/configuring-claims-based-authentication-in-sharepoint-server-2010)
    to create and configure the **FabrikamDemo** database (i.e. the ASP.NET
    membership/role database).
-3. Complete the procedures detailed in **Step 5**from my previous post to add the Web.config modifications for claims-based authentication to the following sites:
+1. Complete the procedures detailed in **Step 5**from my previous post to add the Web.config modifications for claims-based authentication to the following sites:
    - **SharePoint Central Administration v4**
    - **Security Token Service**
 
@@ -360,11 +360,11 @@ PowerShell scripts, as described below.
    > activation of a feature (Fabrikam Demo - Web Application Configuration).
 
    {{< /div-block >}}
-4. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
+1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click **Yes**.
-5. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts), and run the following scripts:
+1. From the Windows PowerShell command prompt, change to the directory containing the deployment scripts (Demo\Dev\SharePointClaimsAuthentication\Source\DeploymentFiles\Scripts), and run the following scripts:
 
    ```PowerShell
    & '.\Create Web Application.ps1'

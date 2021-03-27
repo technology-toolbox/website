@@ -42,17 +42,17 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
 1. Using their local environments, members of the Development team add new code
    -- or modify existing code -- and subsequently check the code into the source
    control system.
-2. On the Build Server, the entire solution is labeled in the source control
+1. On the Build Server, the entire solution is labeled in the source control
    system to "snapshot" the exact state of the solution at the point in time
    just prior to the build. The label includes the version number (for example,
    **1.0.1.0** in the case of the initial build).
-3. Using the label established in the previous step, all of the source code for
+1. Using the label established in the previous step, all of the source code for
    the solution is copied from the Source Control Server to the Build Server,
    thereby ensuring that what is compiled into a specific version of the
    solution is based on the corresponding version of the source code in the
    source control system.
-4. The solution is then compiled on the Build Server.
-5. Next, the output of the build is copied from the Build Server to the Release
+1. The solution is then compiled on the Build Server.
+1. Next, the output of the build is copied from the Build Server to the Release
    Server (in a subfolder on the Builds share). The location of the build output
    on the Release Server includes the build number (e.g. 1.0.1.0) as well as the
    build configuration such as Debug or Release (note that the build
@@ -61,7 +61,7 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
    assemblies (i.e. a number of EXE and/or DLL files) or a setup package (i.e.
    an MSI or CAB file) but most likely does not have an installation guide or
    installation scripts.
-6. The solution is then installed by the Development team into the Development
+1. The solution is then installed by the Development team into the Development
    Integration Environment (DEV). This initial installation is typically
    performed manually (for example, by copying files, registering assemblies,
    modifying the server configuration, and/or interactively stepping through a

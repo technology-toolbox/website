@@ -38,14 +38,14 @@ To make this process relatively painless, I created a PowerShell script to
 perform the following:
 
 1. Instrument the assemblies that will be analyzed for code coverage
-2. Re-sign the assemblies (since the process of instrumenting an assembly
+1. Re-sign the assemblies (since the process of instrumenting an assembly
    removes the strong name)
-3. "Deploy" the instrumented assemblies (e.g. copy the instrumented assemblies
+1. "Deploy" the instrumented assemblies (e.g. copy the instrumented assemblies
    to the "bin" folders for the assemblies containing the unit/integration
    tests)
-4. Start the code coverage profiler
-5. Run the unit/integration tests
-6. Stop the code coverage profiler
+1. Start the code coverage profiler
+1. Run the unit/integration tests
+1. Stop the code coverage profiler
 
 ### Step 1: Instrument the assemblies
 

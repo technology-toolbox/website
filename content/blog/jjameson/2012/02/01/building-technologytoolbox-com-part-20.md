@@ -616,8 +616,8 @@ Contact form once it was almost completely "baked."
 Generally speaking, this is how I approach AJAX-enabling a feature:
 
 1. Get the feature working as expected (without any AJAX)
-2. Refine the solution to improve the user experience (by adding AJAX)
-3. Optimize for performance
+1. Refine the solution to improve the user experience (by adding AJAX)
+1. Optimize for performance
 
 The third item is important. For example, for step "9.2" you might start by
 adding an **UpdatePanel** around all of the form fields:

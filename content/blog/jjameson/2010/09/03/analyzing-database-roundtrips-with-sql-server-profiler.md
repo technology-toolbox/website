@@ -30,9 +30,9 @@ My general rule of thumb is the time required for each of the following
 operations differs by at least one order of magnitude from one to the next:
 
 1. In-memory operations (e.g. finding an object in a Hashtable)
-2. Operations that require disk I/O (e.g. reading/writing a file)
-3. Fetching data from a database
-4. Calling an external Web service
+1. Operations that require disk I/O (e.g. reading/writing a file)
+1. Fetching data from a database
+1. Calling an external Web service
 
 Consequently, if a Web application typically require dozens of roundtrips to the
 database in order to render a page (and that page is frequently accessed by

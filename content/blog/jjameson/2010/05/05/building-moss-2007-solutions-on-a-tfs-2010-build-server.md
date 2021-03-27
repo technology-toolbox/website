@@ -49,7 +49,7 @@ To configure the build server to compile MOSS 2007 solutions:
    MOSS 2007:\
    \
    **C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3**
-2. Copy the referenced SharePoint assemblies from another VM (which has MOSS
+1. Copy the referenced SharePoint assemblies from another VM (which has MOSS
    2007 installed) to this new folder. The list of SharePoint assemblies that
    you need to copy depends on the details of your solution, but typically
    includes:
@@ -58,7 +58,7 @@ To configure the build server to compile MOSS 2007 solutions:
    - Microsoft.SharePoint.Publishing.dll
    - Microsoft.SharePoint.Security.dll
    - ...
-3. Create a corresponding registry key for MSBuild to locate the reference
+1. Create a corresponding registry key for MSBuild to locate the reference
    assemblies. This is most easily accomplished by running the following from an
    Administrator command prompt:
 

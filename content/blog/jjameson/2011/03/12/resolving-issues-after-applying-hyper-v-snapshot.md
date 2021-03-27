@@ -54,7 +54,7 @@ To resolve the error after applying an old Hyper-V snapshot on a VM joined to a
 domain:
 
 1. Login to the VM using a local administrator account.
-2. Open an administrator command prompt and run the following command:
+1. Open an administrator command prompt and run the following command:
 
    {{< console-block-start >}}
 
@@ -76,7 +76,7 @@ domain:
    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
 
    {{< /div-block >}}
-3. Logout and log back in using a domain account.
+1. Logout and log back in using a domain account.
 
 Note that this issue doesn't always occur when rolling back a snapshot. It
 depends on how old the snapshot is (specifically whether or not the machine

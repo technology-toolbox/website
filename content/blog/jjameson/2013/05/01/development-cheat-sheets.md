@@ -37,9 +37,9 @@ Essentially all I need to do after starting one of my SharePoint development VMs
 is:
 
 1. Open Visual Studio and “Get Latest” on the solution
-2. Package the "CoreServices.SharePoint" and “Web” projects (in other words,
+1. Package the "CoreServices.SharePoint" and “Web” projects (in other words,
    build the WSPs for the two SharePoint projects in this particular solution)
-3. Start an instance of PowerShell then copy/paste the first four lines from my OneNote page:
+1. Start an instance of PowerShell then copy/paste the first four lines from my OneNote page:
 
    ```PowerShell
    Add-PSSnapin Microsoft.SharePoint.PowerShell

@@ -166,7 +166,7 @@ unless you actually were a member of this project ;-)
 >    criteria, grouped by **Literature Type** (a.k.a. publication type, a.k.a.
 >    Content Type in SharePoint, a.k.a. the ContentType2 managed property). The
 >    list should be ordered by **Literature Type**.
-> 2. Clicking on a publication type in the Literature Summary list should show
+> 1. Clicking on a publication type in the Literature Summary list should show
 >    the search results for publications of the selected type. According to the
 >    original description for this bug, an error occurred at this point.
 >
@@ -196,7 +196,7 @@ unless you actually were a member of this project ;-)
 > 1. We need to order first by ContentType2 in order to return the result set in
 >    the order expected by the legacy ASP code that generates the **Literature
 >    Summary** view.
-> 2. SharePoint Search is optimized to sort by rank first (since it is typically
+> 1. SharePoint Search is optimized to sort by rank first (since it is typically
 >    desired to show the "best" results at the top of the list). In order to
 >    return a result set of, say, 1000 items sorted by something other than
 >    rank, SharePoint must do a lot more work before it can trim the result set.
@@ -230,9 +230,9 @@ unless you actually were a member of this project ;-)
 >
 > 1. Log on to
 >    [http://wcoslscd.cos.fabrikam.com/scripts/library.asp](http://wcoslscd.cos.fabrikam.com/scripts/library.asp)
-> 2. Select the publication type as "Certificate of Analysis" or "Material
+> 1. Select the publication type as "Certificate of Analysis" or "Material
 >    Safety Data Sheet" from the drop down and click on search
-> 3. There are no results displayed for these publication types even though
+> 1. There are no results displayed for these publication types even though
 >    there are lot of documents under these publication types in TEST
 >
 > #### Motivation:

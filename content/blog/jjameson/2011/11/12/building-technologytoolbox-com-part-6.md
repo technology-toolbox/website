@@ -66,16 +66,16 @@ Subtext:
 1. Download the monthly summary pages to a temporary cache (e.g.
    [http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx)
    → C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html).
-2. Create a new BlogML "document" (using
+1. Create a new BlogML "document" (using
    [BlogML .NET](http://blogml.codeplex.com/)).
-3. Parse each summary page to get the posts for a particular month and add them
+1. Parse each summary page to get the posts for a particular month and add them
    to the BlogML document.
-4. Download each blog post to a temporary cache and then parse the HTML (using
+1. Download each blog post to a temporary cache and then parse the HTML (using
    the [Html Agility Pack](http://htmlagilitypack.codeplex.com/)) to extract the
    "main content" of each blog post as well as the tags.
-5. Export the comments for each post and add them to the BlogML document.
-6. Save the BlogML document to an XML file.
-7. Using the Subtext admin interface, import the BlogML file to create the list
+1. Export the comments for each post and add them to the BlogML document.
+1. Save the BlogML document to an XML file.
+1. Using the Subtext admin interface, import the BlogML file to create the list
    of categories and blog posts.
 
 ### Step 1: Download the monthly summary pages
@@ -1406,7 +1406,7 @@ discovered a couple of issues during my testing:
 1. When importing a blog post comment containing multiple paragraphs, extra line
    breaks appeared in the Subtext comment. I ended up modifying Subtext to avoid
    this issue. [I'll describe this change in a different post.]
-2. When exporting blog posts from my MSDN blog, recall that I used the monthly
+1. When exporting blog posts from my MSDN blog, recall that I used the monthly
    summary pages to get the list of posts. These summary pages do not list the
    posts in the order they were published, but rather in reverse order (in other
    words, showing the more recent posts first). When importing the posts, my
@@ -1470,7 +1470,7 @@ of reasons:
 1. The number of attachments included in my blog posts was rather low (and thus
    I estimated it would take substantially less time to migrate these manually
    than trying to automate it through code).
-2. The way images are stored in Subtext is fundamentally very different from the
+1. The way images are stored in Subtext is fundamentally very different from the
    way they are stored in Telligent. In particular, the way the resized images
    are created and stored is something I didn't even want to attempt to automate
    through my own code. If you've followed my blog for a while, then you have

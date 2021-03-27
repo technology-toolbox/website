@@ -160,7 +160,7 @@ do this:
 
 1. Append `CreateSharePointSolutionPackage` to the `DefaultTargets` attribute
    for the project, or
-2. Add it as a dependency of the default `Build` target, using
+1. Add it as a dependency of the default `Build` target, using
    [the technique](http://blogs.msdn.com/msbuild/archive/2006/02/10/528822.aspx)
    described by Neil Enns (a.k.a. "Demo Boy") on the
    [MSBuild Team blog](http://blogs.msdn.com/msbuild).

@@ -177,16 +177,16 @@ I then added the following steps to the installation guide:
 >
 > 1. Click **Start**, point to **All Programs**, point to **Accessories**, and
 >    right-click **Command Prompt**, and then click **Run as administrator**.
-> 2. At the command prompt, change to the following directory:\
+> 1. At the command prompt, change to the following directory:\
 >    \
 >    **%WinDir%\system32\inetsrv\config**
-> 3. Type the following command:
+> 1. Type the following command:
 >
 >    ```Console
 >    notepad administration.config
 >    ```
 >
-> 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
+> 1. In the /configuration/system.webServer/management/trustedProviders section, add the following:
 >
 >    ```XML
 >    <add
@@ -195,7 +195,7 @@ I then added the following steps to the installation guide:
 >        PublicKeyToken=c8cdcbca6f69701f" />
 >    ```
 >
-> 5. Save the changes to the file and close Notepad.
+> 1. Save the changes to the file and close Notepad.
 
 Once I had made the custom role provider a trusted provider, I was able to
 verify some basic functionality and fix a couple of bugs. For example, I

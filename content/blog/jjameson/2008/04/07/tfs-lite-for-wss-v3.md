@@ -71,7 +71,7 @@ you have many items in your list (say, around 2,500) then:
 
 1. The user experience of having to select from a list containing thousands of
    items leaves much to be desired.
-2. There is definitely a performance impact when you create or edit an item
+1. There is definitely a performance impact when you create or edit an item
    (since SharePoint has to fetch all items in the list to allow you to possibly
    associate any one of them to the current item).
 
@@ -81,17 +81,17 @@ accordingly...
 Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
 1. Create a new site collection using the **Team Site** template.
-2. Optionally delete the **Tasks** list that is automatically created as part of
+1. Optionally delete the **Tasks** list that is automatically created as part of
    the Team Site template (since a "task" is simply a work item where Category =
    "Task").
-3. Create a new list called **WorkItems** based on the **Tasks** list and select
+1. Create a new list called **WorkItems** based on the **Tasks** list and select
    **Yes** for the **Send e-mail when ownership is assigned?** option.
-4. Rename the **WorkItems** list to **Work Items**. (I prefer to avoid spaces
+1. Rename the **WorkItems** list to **Work Items**. (I prefer to avoid spaces
    when creating lists to avoid "garbage" in the URLs as a result of URL
    encoding.)
-5. Enable versioning on the **Work Items** list to create a version each time
+1. Enable versioning on the **Work Items** list to create a version each time
    someone edits an item in this list.
-6. Add the columns specified in the following table:
+1. Add the columns specified in the following table:
 
    {{< table class="small table-striped" >}}
 
@@ -117,7 +117,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    on the target iteration for completing work items.</small>\
    <small>** Modify the out-of-the-box column accordingly.</small>
 
-7. Configure the following views:
+1. Configure the following views:
 
    {{< table class="small table-striped" >}}
 
@@ -134,31 +134,31 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    | Project Checklist | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li><li>KPI</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | <ol><li>Iteration</li><li>Category</li></ol> |
 
    {{< /table >}}
-8. Create a new document library named **Pages** and select **Web Part page** as
+1. Create a new document library named **Pages** and select **Web Part page** as
    the document template.
-9. In the **Pages** library, create a new page called **ProjectSummary.aspx**
+1. In the **Pages** library, create a new page called **ProjectSummary.aspx**
    using the **Header, Footer, 3 Columns** layout.
-10. Create and configure the various project summary Web Parts based on the underlying Work Items list:
+1. Create and configure the various project summary Web Parts based on the underlying Work Items list:
 
-    {{< table class="small table-striped" >}}
+   {{< table class="small table-striped" >}}
 
-    | Web Part | Columns | Sort | Filter | Group By | Item Limit |
-    | --- | --- | --- | --- | --- | --- |
-    | Project Summary | <ul><li>KPI</li><li>Title</li></ul> | ID | Iteration is equal to v1.0\M0 <sup>*</sup> |  | 100 |
-    | Top 10 Issues | <ul><li>Title</li><li>Assigned To</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Blocked is equal to Yes |  | 10 |
-    | Accomplishments (Last 7 Days) | Title | Modified<br>(descending) | Status is equal to Closed<br>And<br>ModifiedFilter is greater than [Today] | Category<br>(Expanded) | 20<br>(Display items in batches of the specified size.) |
-    | Priorities/Milestones | Title | ID | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | Iteration<br>(Expanded) | 100<br>(Display items in batches of the specified size.) |
+   | Web Part | Columns | Sort | Filter | Group By | Item Limit |
+   | --- | --- | --- | --- | --- | --- |
+   | Project Summary | <ul><li>KPI</li><li>Title</li></ul> | ID | Iteration is equal to v1.0\M0 <sup>*</sup> |  | 100 |
+   | Top 10 Issues | <ul><li>Title</li><li>Assigned To</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Blocked is equal to Yes |  | 10 |
+   | Accomplishments (Last 7 Days) | Title | Modified<br>(descending) | Status is equal to Closed<br>And<br>ModifiedFilter is greater than [Today] | Category<br>(Expanded) | 20<br>(Display items in batches of the specified size.) |
+   | Priorities/Milestones | Title | ID | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | Iteration<br>(Expanded) | 100<br>(Display items in batches of the specified size.) |
 
-    {{< /table >}}
+   {{< /table >}}
 
-    <small>* Change the filter as necessary to match the current
-    iteration.</small>
+   <small>* Change the filter as necessary to match the current
+   iteration.</small>
 
-11. (Optional) Modify the **Project Summary** Web Part to display an image
-    corresponding to the designated KPI value (using SharePoint Designer and a
-    tiny bit of XSLT as described in my
-    [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
-12. In the **Links** list, add a link to the **Project Summary** page.
+1. (Optional) Modify the **Project Summary** Web Part to display an image
+   corresponding to the designated KPI value (using SharePoint Designer and a
+   tiny bit of XSLT as described in my
+   [previous post](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)).
+1. In the **Links** list, add a link to the **Project Summary** page.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"

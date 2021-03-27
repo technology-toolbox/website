@@ -71,11 +71,11 @@ Cleanup** utility.
 To delete hiberfil.sys in Windows Vista:
 
 1. Start **Disk Cleanup**.
-2. On the **Disk Cleanup Options** window, click **Files from all users on this
+1. On the **Disk Cleanup Options** window, click **Files from all users on this
    computer**.
-3. On the **Disk Cleanup: Drive Selection** window, click select the system
+1. On the **Disk Cleanup: Drive Selection** window, click select the system
    drive where Windows Vista is installed, and then click **OK**.
-4. Wait for the utility to scan the drive and then in the **Disk Cleanup**
+1. Wait for the utility to scan the drive and then in the **Disk Cleanup**
    window, click the checkbox next to **Hibernation File Cleaner**, clear all of
    the other checkboxes, and then click **OK**. When prompted to confirm the
    operation, click **Delete Files**.

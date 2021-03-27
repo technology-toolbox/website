@@ -34,14 +34,14 @@ To view the variation logs and observe the paging bug:
 
 1. Browse to the home page of the top level site, click **Site Actions**, point
    to **Site Settings**, and then click **Modify All Site Settings**.
-2. On the **Site Settings** page, in the **Site Collection Administration**
+1. On the **Site Settings** page, in the **Site Collection Administration**
    section, click **Variation logs**.
-3. On the **Variation Logs** page, observe that the results are sorted by **Time
+1. On the **Variation Logs** page, observe that the results are sorted by **Time
    Started (GMT)** in descending order and that only the first 20 log entries
    are shown.
-4. Click the right arrow in the paging control (i.e. "**1 - 20 &gt;**") to view
+1. Click the right arrow in the paging control (i.e. "**1 - 20 &gt;**") to view
    the next page of results.
-5. Notice that the results now appear to be sorted by **Time Started (GMT)**
+1. Notice that the results now appear to be sorted by **Time Started (GMT)**
    _ascending_. In other words, you have "jumped" from the viewing the newest
    log entries to viewing the oldest log entries.
 

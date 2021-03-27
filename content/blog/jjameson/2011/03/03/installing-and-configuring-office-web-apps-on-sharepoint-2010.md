@@ -100,15 +100,15 @@ HTTPS.
 
 1. On the Central Administration home page, in the **Application Management**
    section, click **Manage service applications**.
-2. On the **Service Applications** tab, click **Excel Services Application**
+1. On the **Service Applications** tab, click **Excel Services Application**
    (where the **Type** column is **Excel Services Application Web Service
    Application**).
-3. On the **Manage Excel Services Application** page, click **Trusted File
+1. On the **Manage Excel Services Application** page, click **Trusted File
    Locations**.
-4. On the **Excel Services Application Trusted File Locations** page, click the
+1. On the **Excel Services Application Trusted File Locations** page, click the
    default trusted file location (**http://**) to edit the corresponding
    settings.
-5. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
+1. On the **Excel Services Application Edit Trusted File Location** page, in the **Location** section, change the **Address** from **http://** to **https://** and then click **OK**.
 
    {{< div-block "note" >}}
 
@@ -161,7 +161,7 @@ database files.
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click Yes.
-2. From the Windows PowerShell command prompt, run the following script:
+1. From the Windows PowerShell command prompt, run the following script:
 
    ```PowerShell
    $ErrorActionPreference = "Stop"
@@ -225,9 +225,9 @@ database files.
    Main
    ```
 
-3. Wait for the script to complete and verify that no errors occurred during the
+1. Wait for the script to complete and verify that no errors occurred during the
    process.
-4. Reset Internet Information Services (IIS) in order for the change to take effect:
+1. Reset Internet Information Services (IIS) in order for the change to take effect:
 
    ```Console
    iisreset
@@ -236,12 +236,12 @@ database files.
 #### To increase the size of the database files for the Office Web Apps cache:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
-2. In the **Object Explorer**, expand the **Databases** folder.
-3. Right-click the **OfficeWebAppsCache** database and then click
+1. In the **Object Explorer**, expand the **Databases** folder.
+1. Right-click the **OfficeWebAppsCache** database and then click
    **Properties**.
-4. In the **Database Properties** dialog, in the **Select a page** area on the
+1. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
-5. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
+1. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
    {{< table class="small table-striped"
    caption="Table 2 - Initial data and log file sizes" >}}
 
@@ -251,7 +251,7 @@ database files.
    |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
 
    {{< /table >}}
-6. Click **OK**.
+1. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes
 through the Database Properties dialog:
@@ -286,7 +286,7 @@ databases used by the Web application.
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow
    the program to make changes to the computer, click Yes.
-2. From the Windows PowerShell command prompt, type the following commands:
+1. From the Windows PowerShell command prompt, type the following commands:
 
    ```PowerShell
    $webApp = Get-SPWebApplication "http://extranet.fabrikam.com"

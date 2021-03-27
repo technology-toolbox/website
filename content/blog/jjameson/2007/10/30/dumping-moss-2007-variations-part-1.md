@@ -42,7 +42,7 @@ appeared to fall into one of the following error categories:
    [http://foobar/en-US/Support/FAQs/foo/Pages/default.aspx](http://foobar/en-US/Support/FAQs/foo/bar/Pages/default.aspx)
    and /ja-JP/Support/FAQs/foo/Pages/default.aspx because their Content Types do
    not match.
-2. Object reference not set to an instance of an object.
+1. Object reference not set to an instance of an object.
 
 The first error is due to the fact that MOSS 2007 does not automatically change
 the content type of the variation page to match the source page and instead
@@ -87,9 +87,9 @@ then need to controlled by the user performing the migration:
 
 1. Run the first step to create the FAQ sites with the default page having the
    default content type (i.e. **Welcome Page**)
-2. Wait for steady state (i.e. let the SharePoint timer job finish creating
+1. Wait for steady state (i.e. let the SharePoint timer job finish creating
    variation sites and "pairing" up the pages)
-3. Run the next step of the migration to change the default page of each and
+1. Run the next step of the migration to change the default page of each and
    every FAQ site to use the custom **FAQ Node Page** content type
 
 Last week, I had a conversation with the Program Manager who spec'ed the
@@ -142,41 +142,41 @@ Here are the repro steps to break the variations feature using no custom code
 and no custom content types:
 
 1. Create a new Web application
-2. Create a site collection using the **Publishing Portal** site definition
-3. Configure variations using / as the **Location** for the **Variation Home**
+1. Create a site collection using the **Publishing Portal** site definition
+1. Configure variations using / as the **Location** for the **Variation Home**
    (use defaults for all other settings)
-4. Create a new variation label with the following:\
+1. Create a new variation label with the following:\
    \
    **Label Name: en-US\
    Display Name: English (United States)\
    Locale: English (United States)\
    Source Variation: Yes\
    Publishing site template: Publishing Site with Workflow**
-5. Create the variation hierarchies (to create the **/en-US** site)
-6. Create a new site under the variation source site (**/en-US/foo**)
-7. Change the content type of the default page in the new site
+1. Create the variation hierarchies (to create the **/en-US** site)
+1. Create a new site under the variation source site (**/en-US/foo**)
+1. Change the content type of the default page in the new site
    (**/en-US/foo/default.aspx**) from **Welcome Page** to **Article Page**. Note
    that in order to change the content type of the page, you need to view the
    underlying **Pages** library (use **Site Actions** --&gt; **View All Site
    Content**) and then edit the properties on the page.
-8. Change the page layout to **Article page with summary links** and approve the
+1. Change the page layout to **Article page with summary links** and approve the
    page.
-9. Create a new variation label with the following:\
+1. Create a new variation label with the following:\
    \
    **Label Name: ja-JP\
    Display Name: Japanese\
    Locale: Japanese**
-10. Create the variation hierarchies (to create the **/ja-JP** and
-    **/ja-JP/foo** sites)
-11. View the variation logs and notice the failure with the following error:
+1. Create the variation hierarchies (to create the **/ja-JP** and **/ja-JP/foo**
+   sites)
+1. View the variation logs and notice the failure with the following error:
 
-    {{< div-block-start "errorMessage" >}}
+   {{< div-block-start "errorMessage" >}}
 
-    > The variation system failed to pair up pages
-    > http://foobar/en-US/foo/Pages/default.aspx and
-    > /ja-JP/foo/Pages/default.aspx because their Content Types do not match.
+   > The variation system failed to pair up pages
+   > http://foobar/en-US/foo/Pages/default.aspx and
+   > /ja-JP/foo/Pages/default.aspx because their Content Types do not match.
 
-    {{< div-block-end >}}
+   {{< div-block-end >}}
 
 [[Part 2](/blog/jjameson/2007/10/31/dumping-moss-2007-variations-part-2) in this
 series is now available.]

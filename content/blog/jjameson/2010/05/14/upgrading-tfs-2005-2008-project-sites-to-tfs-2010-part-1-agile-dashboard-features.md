@@ -233,10 +233,10 @@ To make the Burndown dashboard the default page for an upgraded project site:
 
 1. Browse to the home page of the project site (e.g.
    [http://cyclops/sites/AdventureWorks](http://cyclops/sites/AdventureWorks)).
-2. In the quick launch navigation on the left, under the **Dashboards** heading,
+1. In the quick launch navigation on the left, under the **Dashboards** heading,
    click **Burndown**.
-3. On the **Burndown** page, select the **Page** tab.
-4. In the **Page Actions** group of the Ribbon, click **Make Homepage**. When
+1. On the **Burndown** page, select the **Page** tab.
+1. In the **Page Actions** group of the Ribbon, click **Make Homepage**. When
    prompted to set the page as the site's home page, click **OK**.
 
 If you want your upgraded project site to have similar navigation to a new

@@ -46,9 +46,9 @@ To view the list of downloaded program files (e.g. ActiveX controls) in Internet
 Explorer:
 
 1. Open Internet Explorer, click **Tools** and then click **Internet Options**.
-2. In the **Internet Options** window, on the **General** tab, in the **Browsing
+1. In the **Internet Options** window, on the **General** tab, in the **Browsing
    history** section, click **Settings**.
-3. In the **Temporary Internet Files and History Settings** window, click **View
+1. In the **Temporary Internet Files and History Settings** window, click **View
    Objects**.
 
 Some Microsoft KB articles suggest that you can easily remove a downloaded
@@ -62,12 +62,12 @@ To remove a downloaded program file (e.g. an ActiveX control) on Windows 7 with
 Internet Explorer 8:
 
 1. Open Internet Explorer, click **Tools** and then click **Internet Options**.
-2. In the **Internet Options** window, on the **Programs** tab, click **Manage
+1. In the **Internet Options** window, on the **Programs** tab, click **Manage
    add-ons**.
-3. In the **Manage Add-ons** window, in the **Show:** dropdown list, click
+1. In the **Manage Add-ons** window, in the **Show:** dropdown list, click
    **Downloaded controls**, right-click the item that you want to remove, and
    then click **More Information**.
-4. In the **More Information** window, click **Remove**. If necessary, enter the
+1. In the **More Information** window, click **Remove**. If necessary, enter the
    credentials for an administrator on the computer, and then click **Yes** to
    remove the downloaded program file.
 

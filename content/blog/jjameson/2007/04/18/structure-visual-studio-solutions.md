@@ -100,14 +100,14 @@ A few notes...
    fairly "baked" and seldomly change, then building (and referencing) them
    separately (i.e.using _file_ references instead of _project_ references) is
    not an issue.
-2. You typically have a set of classes that contain low-level "helper" methods
+1. You typically have a set of classes that contain low-level "helper" methods
    used by many of the other projects in your solution. The **CoreServices**
    project gives you a place to put these. The important thing about
    CoreServices is that is does not reference any other projects within that
    solution. [I didn't make up the name "CoreServices" -- if memory serves, I
    "stole" this from Jim Newkirk after browsing through the source code for
    NUnit a few years ago.]
-3. The **CoreServices.DeveloperTests** project contains all of the unit tests
+1. The **CoreServices.DeveloperTests** project contains all of the unit tests
    (created by the Development team) for the **CoreServices** project. While we
    could certainly choose to leave the project in the default
    **CoreServices.DeveloperTests** folder created by Visual Studio (i.e.

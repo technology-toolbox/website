@@ -54,20 +54,20 @@ To add a Web site to the Local intranet zone and configure IE to automatically
 authenticate:
 
 1. In Internet Explorer, on the **Tools** menu, click **Internet Options**.
-2. On the **Security** tab, in the **Select a zone to view or change security
+1. On the **Security** tab, in the **Select a zone to view or change security
    settings** box, click **Local intranet**, and then click **Sites**.
-3. At this point, depending on whether you are using Windows Vista or Windows
+1. At this point, depending on whether you are using Windows Vista or Windows
    Server 2003, you may need to click the **Advanced** button to view the list
    of sites in this zone.
-4. Clear the **Require server verification (https:) for all sites in this zone**
+1. Clear the **Require server verification (https:) for all sites in this zone**
    check box.
-5. In the **Add this Web site to the zone** box, type the URL for the Web site
+1. In the **Add this Web site to the zone** box, type the URL for the Web site
    (e.g. [http://foobar](http://foobar/)), and then click **Add**.
-6. Click **Close** to close the **Local intranet** dialog box.
-7. In the **Security level for this zone** section, click **Default level**
+1. Click **Close** to close the **Local intranet** dialog box.
+1. In the **Security level for this zone** section, click **Default level**
    (this will ensure that the default option to authenticate automatically only
    to URLs in the Local intranet zone is enabled ).
-8. Click **OK** to close the **Internet Options** dialog box.
+1. Click **OK** to close the **Internet Options** dialog box.
 
 So, the next time you see that generic login box pop up when browsing to a local
 or intranet site, rather than entering the same username and password that you

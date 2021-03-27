@@ -35,9 +35,9 @@ instead of the default tool that comes with Team Foundation Server (TFS).
 To customize your TFS comparison tool in Visual Studio 2008:
 
 1. On the **Tools** menu, click **Options...**
-2. In the **Options** window, expand **Source Control**, select **Visual Studio
+1. In the **Options** window, expand **Source Control**, select **Visual Studio
    Team Foundation Server**, and then click **Configure User Tools...**
-3. In the **Configure User Tools** window, click the Add... or Modify... button
+1. In the **Configure User Tools** window, click the Add... or Modify... button
    as necessary to configure the following:
 
 - Extension: **.\***

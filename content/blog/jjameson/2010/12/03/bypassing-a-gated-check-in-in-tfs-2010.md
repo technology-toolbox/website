@@ -40,12 +40,12 @@ To grant permission to bypass a gated check-in:
 
 1. In the **Team Explorer** window, expand the appropriate project, right-click
    **Builds**, and then click **Security...**
-2. In the **{Project} Security** window, in the **Add users and groups**
+1. In the **{Project} Security** window, in the **Add users and groups**
    section, click **Windows User or Group**, and then click **Add...**
-3. In the **Select Users, Computers, or Groups** window, type the name of the
+1. In the **Select Users, Computers, or Groups** window, type the name of the
    service account used for TFS builds (e.g. **TECHTOOLBOX\svc-build**), and
    then click **OK**.
-4. In the **{Project} Security** window, in the list of permissions, for the
+1. In the **{Project} Security** window, in the list of permissions, for the
    **Override check-in validation by build** permission, click the checkbox in
    the **Allow** column, and then click **OK**.
 

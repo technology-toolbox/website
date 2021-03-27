@@ -127,11 +127,11 @@ corresponding feature:
 1. Open **Server Manager**. (If Server Manager is not running, click **Start**,
    point to **Administrative Tools**, click **Server Manager**, and then, if
    prompted for permission to continue, click **Continue**.)
-2. In **Server Manager**, under **Features Summary**, click **Add Features**.
-3. In the **Add Features Wizard**, on the **Select Features** page, expand
+1. In **Server Manager**, under **Features Summary**, click **Add Features**.
+1. In the **Add Features Wizard**, on the **Select Features** page, expand
    **Remote Server Administration Tools**, and then expand **Remote
    Administration Tools**
-4. Click **Hyper-V Tools**, and then proceed through the rest of the wizard.
+1. Click **Hyper-V Tools**, and then proceed through the rest of the wizard.
 
 For more information on deploying Hyper-V, refer to the
 [Hyper-V Planning and Deployment Guide](http://www.microsoft.com/downloads/details.aspx?familyid=5DA4058E-72CC-4B8D-BBB1-5E16A136EF42&displaylang=en).

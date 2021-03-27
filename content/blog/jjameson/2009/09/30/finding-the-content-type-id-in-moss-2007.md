@@ -31,11 +31,11 @@ Here's the easiest way I know to find the content type ID:
 
 1. On the home page of the site, click **Site Actions**, point to **Site
    Setttings**, and then click **Modify All Site Settings**.
-2. On the **Site Settings** page, under the **Galleries** section, click **Site
+1. On the **Site Settings** page, under the **Galleries** section, click **Site
    content types**.
-3. On the **Site Content Type Gallery** page, click the content type that you
+1. On the **Site Content Type Gallery** page, click the content type that you
    need to find the unique identifier for, such as **Article page**.
-4. On the **Site Content Type: {content type name}** page, copy the value of the
+1. On the **Site Content Type: {content type name}** page, copy the value of the
    **ctype** query string parameter. For example, the content type ID for
    **Article page** is
    0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF3900242457EFB8B24247815D688C526CD44D.

@@ -103,11 +103,11 @@ to create and configure a sample Web application using claims authentication
 7:19:27 AM. In other words, it took me about 20 minutes to:
 
 1. Create the ASP.NET membership database
-2. Configure claims authentication for Central Administration and the Security
+1. Configure claims authentication for Central Administration and the Security
    Token Service
-3. Run the deployment scripts to create and configure the Fabrikam Demo Web
+1. Run the deployment scripts to create and configure the Fabrikam Demo Web
    application
-4. Create a couple of users (and one role) in the membership database and
+1. Create a couple of users (and one role) in the membership database and
    validate that claims authentication works as expected
 
 While 20 minutes isn't a lot of time to create and configure a new Web

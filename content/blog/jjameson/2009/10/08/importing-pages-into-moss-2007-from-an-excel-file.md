@@ -73,7 +73,7 @@ two-step process:
    does not necessarily have to be done on one of the SharePoint servers). In
    other words, you could have someone create the Excel input file on his or her
    laptop and then convert it to a DataSet XML file.
-2. Import the pages from the DataSet XML file. Note that this step must be
+1. Import the pages from the DataSet XML file. Note that this step must be
    performed on one of the SharePoint servers in the farm.
 
 To convert an Excel file to a DataSet XML file:

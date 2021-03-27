@@ -122,7 +122,7 @@ Once you enable disk-based caching, two important things happen:
    `Cache-Control` header greatly reduces the number of HTTP requests for
    clients that have already downloaded the various resource files (by
    eliminating the 304's mentioned before).
-2. For clients that haven't yet downloaded the various resources, SharePoint
+1. For clients that haven't yet downloaded the various resources, SharePoint
    does not have to call the `proc_FetchDocForHttpGet` sproc to determine
    whether each file has been unghosted (customized). [Note that when you enable
    disk-based caching, a background process polls the database to check for

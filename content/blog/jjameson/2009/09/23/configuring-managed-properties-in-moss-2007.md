@@ -36,16 +36,16 @@ When SharePoint indexes content:
 1. It first starts up a _protocol handler_ for the content source (e.g.
    SharePoint site, file system, Lotus Notes DB, etc.). The protocol handler is
    responsible for enumerating content items in the content source.
-2. For each content item, it then loads an _IFilter_ (e.g. HTML, Office doc,
+1. For each content item, it then loads an _IFilter_ (e.g. HTML, Office doc,
    PDF, etc). The IFilter is responsible for emitting text and properties from
    the underlying content item.
-3. These properties (e.g. Author) are then picked up as _crawled properties_.
-4. For custom columns in SharePoint list items and documents (e.g. **Product**),
+1. These properties (e.g. Author) are then picked up as _crawled properties_.
+1. For custom columns in SharePoint list items and documents (e.g. **Product**),
    the crawled properties are discovered and placed in the Office category (e.g.
    **ows\_Product**). [If memory serves, "ows" refers to "Office Web Server"
    (the original moniker for what ultimately became "SharePoint Products and
    Technologies") -- if that helps you remember this any easier.]
-5. If any _managed properties_ are mapped to the crawled properties, then the
+1. If any _managed properties_ are mapped to the crawled properties, then the
    property values are stuffed into the SSP Search database (i.e. what used be
    called the "property store" in SharePoint Portal Server 2003) for each piece
    of content.

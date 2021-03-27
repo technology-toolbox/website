@@ -108,60 +108,60 @@ patched).
 I then proceeded to install the following:
 
 1. **Microsoft Security Essentials**
-2. Alternate Web browers -- primarily used for testing and verifying sites that
+1. Alternate Web browers -- primarily used for testing and verifying sites that
    I develop:
    - **Firefox**
    - **Safari**
    - **Chrome**
    - **Opera**
-3. **Virtual CloneDrive --** my preferred tool for dealing with .iso and .img
+1. **Virtual CloneDrive --** my preferred tool for dealing with .iso and .img
    files downloaded from MSDN
-4. Essential productivity "stuff":
+1. Essential productivity "stuff":
    - **Microsoft Office Professional Plus 2010**
    - **Microsoft SharePoint Designer 2010**
    - **Microsoft Visio Premium 2010**
    - **Microsoft Outlook Hotmail Connector**
    - **Microsoft Office Live Meeting 2007 client**
-5. **Microsoft SQL Server 2008 R2**
-6. **Microsoft Visual Studio 2010 Ultimate**
-7. **Visual Studio 2010 Productivity Power Tools**
-8. **Team Foundation Server Power Tools**
-9. **Visual Studio 2010 Service Pack 1**
-10. **Microsoft Expression Studio 4**
-11. **System Center Operations Manager (SCOM) 2007 R2** -- just the Operations
-    Console (so I can easily manage the various servers in the "Jameson
-    Datacenter" from my Windows 7 desktop)
-12. **Mozilla Thunderbird (**if you are wondering why I use this in addition to
-    Microsoft Outlook, then apparently you haven't seen
-    [one of my other posts](/blog/jjameson/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service))
-13. **FeedDemon**
-14. Useful development and debugging "stuff":
-    1. **Debugging Tools for Windows (x86)**
-    2. **Debugging Tools for Windows (x64)**
-    3. **Microsoft NetMon**
-    4. **Fiddler**
-    5. **MSBuild Community Tasks**
-    6. **Paint.NET**
-    7. **Rooler**
-15. **Adobe Flash** -- I wish I didn't need this, but the Web "is what it
-    is"...although there's probably some people out there saying the same thing
-    about Silverlight :-)
-16. **Adobe Reader** -- another thing I wish I didn't need to install
-    (especially since the Adobe developers apparently can't figure out how -- or
-    are simply too lazy -- to get it to work with roaming profiles, thereby
-    forcing me to install the old 8.1.x version)
-17. Personal "stuff":
-    1. **Microsoft Money** (yes, the "sunset" edition -- but
-       [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
-       now...probably not ever)
-    2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
-       scripts in order to download quotes and credit card statements into Money
-       via OFX
-    3. **Windows Live Essentials --** primarily for Windows Live Photo Gallery
-       and Windows Live Movie Maker
-    4. **Sony Picture Utility --** unfortunately, I can't import video directly
-       onto my computer from my five-year old digital camcorder; intead I have
-       to use this (admittedly poor) software instead
+1. **Microsoft SQL Server 2008 R2**
+1. **Microsoft Visual Studio 2010 Ultimate**
+1. **Visual Studio 2010 Productivity Power Tools**
+1. **Team Foundation Server Power Tools**
+1. **Visual Studio 2010 Service Pack 1**
+1. **Microsoft Expression Studio 4**
+1. **System Center Operations Manager (SCOM) 2007 R2** -- just the Operations
+   Console (so I can easily manage the various servers in the "Jameson
+   Datacenter" from my Windows 7 desktop)
+1. **Mozilla Thunderbird (**if you are wondering why I use this in addition to
+   Microsoft Outlook, then apparently you haven't seen
+   [one of my other posts](/blog/jjameson/2010/04/26/outlook-2010-does-not-work-with-windows-server-2003-pop3-service))
+1. **FeedDemon**
+1. Useful development and debugging "stuff":
+   1. **Debugging Tools for Windows (x86)**
+   1. **Debugging Tools for Windows (x64)**
+   1. **Microsoft NetMon**
+   1. **Fiddler**
+   1. **MSBuild Community Tasks**
+   1. **Paint.NET**
+   1. **Rooler**
+1. **Adobe Flash** -- I wish I didn't need this, but the Web "is what it
+   is"...although there's probably some people out there saying the same thing
+   about Silverlight :-)
+1. **Adobe Reader** -- another thing I wish I didn't need to install (especially
+   since the Adobe developers apparently can't figure out how -- or are simply
+   too lazy -- to get it to work with roaming profiles, thereby forcing me to
+   install the old 8.1.x version)
+1. Personal "stuff":
+   1. **Microsoft Money** (yes, the "sunset" edition -- but
+      [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
+      now...probably not ever)
+   1. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
+      scripts in order to download quotes and credit card statements into Money
+      via OFX
+   1. **Windows Live Essentials --** primarily for Windows Live Photo Gallery
+      and Windows Live Movie Maker
+   1. **Sony Picture Utility --** unfortunately, I can't import video directly
+      onto my computer from my five-year old digital camcorder; intead I have to
+      use this (admittedly poor) software instead
 
 After installing all of this, I then went through the Windows Update cycle a few
 more times in order to apply additional updates (for example, security updates

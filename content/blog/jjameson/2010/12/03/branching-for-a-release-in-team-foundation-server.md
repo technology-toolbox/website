@@ -112,8 +112,8 @@ Branching for a release (with the "Standard Branch Plan") is comprised of three
 logical steps:
 
 1. Create a new "Service Pack" branch from the "Main" branch
-2. Create the "RTM" branch from the new "Service Pack" branch
-3. Changing the "Service Pack" branch to increment the Revision portion of the
+1. Create the "RTM" branch from the new "Service Pack" branch
+1. Changing the "Service Pack" branch to increment the Revision portion of the
    assembly number instead of the Build (e.g. 2.0.371.1).
 
 {{< div-block "note" >}}
@@ -132,28 +132,28 @@ To create a new "Service Pack" branch from the "Main" branch:
 
 1. In **Source Control Explorer**, right-click the **Main** branch for the
    project, point to **Branching and Merging**, and then click **Branch**.
-2. In the **Branch**window:
+1. In the **Branch**window:
    1. In the **Target** box, type the path for the new "Service Pack" branch
       (e.g. **$/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack**).
-   2. In the **Branch from version** section, in the **By** dropdown list,
+   1. In the **Branch from version** section, in the **By** dropdown list,
       select **Changeset** and then type the corresponding changeset number
       (e.g. **302281**).
-   3. Clear the **Download the target item to your workspace** checkbox.
-   4. Click **OK**.
-3. Wait for the branching operation to complete and then in **Source Control
+   1. Clear the **Download the target item to your workspace** checkbox.
+   1. Click **OK**.
+1. Wait for the branching operation to complete and then in **Source Control
    Explorer**, right-click the new branch (e.g.
    **$/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack**), and then click
    **Check In Pending Changes...**
-4. In the **Check In - Source Files**window:
+1. In the **Check In - Source Files**window:
    1. In the **Source Files** channel, type a descriptive comment in the
       **Comment** box (e.g. **Branch changeset 302281 (build 2.0.371.0) from
       $/FabrikamPortal/Main to
       $/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack**) and verify the list
       of files selected to check in.
-   2. In the **Work Items** channel, select the corresponding work item (e.g.
+   1. In the **Work Items** channel, select the corresponding work item (e.g.
       **Create branch for Sprint-10 release**), and set the **Check-in Action**
       to **Associate**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+   1. Click **Check In**. If necessary, override any policy failures (e.g. "The
       Code Analysis Policy requires files to be check in through Visual Studio
       with an open solution.")
 
@@ -174,27 +174,27 @@ To create the "RTM" branch from the new "Service Pack" branch:
 1. In **Source Control Explorer**, right-click the new "Service Pack" branch
    created using the steps in the previous section, point to **Branching and
    Merging**, and then click **Branch**.
-2. In the **Branch**window:
+1. In the **Branch**window:
    1. In the **Target** box, type the path for the new "RTM" branch (e.g.
       **$/FabrikamPortal/Release/v2.0/Sprint-10/RTM**).
-   2. In the **Branch from version** section, ensure that **Latest Version** is
+   1. In the **Branch from version** section, ensure that **Latest Version** is
       specified.
-   3. Clear the **Download the target item to your workspace** checkbox.
-   4. Click **OK**.
-3. Wait for the branching operation to complete and then in **Source Control
+   1. Clear the **Download the target item to your workspace** checkbox.
+   1. Click **OK**.
+1. Wait for the branching operation to complete and then in **Source Control
    Explorer**, right-click the new branch (e.g.
    **$/FabrikamPortal/Release/v2.0/Sprint-10/RTM**), and then click **Check In
    Pending Changes...**
-4. In the **Check In - Source Files**window:
+1. In the **Check In - Source Files**window:
    1. In the **Source Files** channel, type a descriptive comment in the
       **Comment** box (e.g. **Branch
       $/FabrikamPortal/Release/v2.0/Sprint-10/ServicePack to
       $/FabrikamPortal/Release/v2.0/Sprint-10/RTM**) and verify the list of
       files selected to check in.
-   2. In the **Work Items** channel, select the corresponding work item (e.g.
+   1. In the **Work Items** channel, select the corresponding work item (e.g.
       **Create branch for Sprint-10 release**), and set the **Check-in Action**
       to **Associate**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+   1. Click **Check In**. If necessary, override any policy failures (e.g. "The
       Code Analysis Policy requires files to be check in through Visual Studio
       with an open solution.")
 
@@ -206,8 +206,8 @@ earlier post for
 1. In **Source Control Explorer**, in the new "Service Pack" branch, right-click
    the **IncrementAssemblyVersion.proj** or **TFSBuild.proj** file that is used
    to increment the assembly version, and then click **Get Latest Version**.
-2. Next, double-click the file to open it in the editor.
-3. Location the **&lt;Version&gt;** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
+1. Next, double-click the file to open it in the editor.
+1. Location the **&lt;Version&gt;** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
 
    ```XML
        <Version
@@ -216,17 +216,17 @@ earlier post for
          RevisionType="Increment">
    ```
 
-4. Save the changes to the file.
-5. Right-click the updated MSBuild file and click **Check In Pending
+1. Save the changes to the file.
+1. Right-click the updated MSBuild file and click **Check In Pending
    Changes...**
-6. In the **Check In - Source Files**window:
+1. In the **Check In - Source Files**window:
    1. In the **Source Files** channel, type a descriptive comment in the
       **Comment** box (e.g. **Increment revision portion of assembly version on
       ServicePack branch (instead of the build number)**).
-   2. In the **Work Items** channel, select the corresponding work item (e.g.
+   1. In the **Work Items** channel, select the corresponding work item (e.g.
       **Create branch for Sprint-10 release**), and set the **Check-in Action**
       to **Resolve**.
-   3. Click **Check In**. If necessary, override any policy failures (e.g. "The
+   1. Click **Check In**. If necessary, override any policy failures (e.g. "The
       Code Analysis Policy requires files to be check in through Visual Studio
       with an open solution.")
 
