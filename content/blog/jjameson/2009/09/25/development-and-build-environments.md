@@ -268,7 +268,7 @@ decide which specific build of the solution should be tested at any given time.
 "Smoke" tests are typically performed on each build in DEV. Periodically the
 Test team selects a successful build to promote to TEST.
 
-###  Production Environment (PROD) {#Production_Environment_-PROD}
+### Production Environment (PROD) {#Production_Environment_-PROD}
 
 The Production environment is where the solution is ultimately deployed for end
 users. Strict security procedures must be enforced in this environment.
