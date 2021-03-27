@@ -106,14 +106,14 @@ is when I discovered the hAtom 0.1 microformat:
 >     - **`entry-content`**. optional (see field description). text. [\*]
 >     - **`entry-summary`**. optional. text.
 >     - **`updated`**. required using
-> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+>       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
 >       [\*]
 >     - **`published`**. optional using
-> [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
+>       [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern").
 >     - **`author`**. required using
 >       **[hCard](http://microformats.org/wiki/hcard "hcard")**. [\*]
 >     - **`bookmark`** (permalink). optional, using
-> **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
+>       **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
 >     - tags. optional. keywords or phrases, using
 >       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 >

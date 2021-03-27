@@ -340,7 +340,7 @@ PowerShell scripts, as described below.
      the new Fabrikam Web site
    - **{DOMAIN}\svc-sp-psr** - object cache user account providing Full Read
      access to Web applications
-   ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu** - object cache user account providing Full Control
      access to Web applications
 2. Complete the procedures detailed in **Step 1** from

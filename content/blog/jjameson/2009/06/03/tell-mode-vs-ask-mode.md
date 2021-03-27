@@ -229,7 +229,7 @@ unless you actually were a member of this project ;-)
 > #### Repro steps:
 >
 > 1. Log on to
-> [http://wcoslscd.cos.fabrikam.com/scripts/library.asp](http://wcoslscd.cos.fabrikam.com/scripts/library.asp)
+>    [http://wcoslscd.cos.fabrikam.com/scripts/library.asp](http://wcoslscd.cos.fabrikam.com/scripts/library.asp)
 > 2. Select the publication type as "Certificate of Analysis" or "Material
 >    Safety Data Sheet" from the drop down and click on search
 > 3. There are no results displayed for these publication types even though

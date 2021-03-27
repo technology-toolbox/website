@@ -152,7 +152,7 @@ I then proceeded to install the following:
     forcing me to install the old 8.1.x version)
 17. Personal "stuff":
     1. **Microsoft Money** (yes, the "sunset" edition -- but
-    [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
+       [I'm not switching to Quicken](/blog/jjameson/2010/03/28/you-ll-have-to-pry-that-money-from-my-cold-dead-hands)...not
        now...probably not ever)
     2. **ActivePython 2.7.1.3 (64-bit)** -- for running PocketSense (Python)
        scripts in order to download quotes and credit card statements into Money

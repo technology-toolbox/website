@@ -559,7 +559,7 @@ described below.
      for the new "Fabrikam Demo" site
    - **{DOMAIN}\svc-sp-psr-dev** - object cache user account providing Full Read
      access to Web applications
-   ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
+     ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))
    - **{DOMAIN}\svc-sp-psu-dev** - object cache user account providing Full
      Control access to Web applications
 2. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint

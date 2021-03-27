@@ -187,7 +187,7 @@ To create the necessary service accounts for SharePoint Server 2010 and TFS
 3. On the **Action** menu, point to **New**, and then click **User**.
 4. In the **New Object - User**dialog:
    1. Enter the information from
-   [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+      [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **Next**.
    3. Clear the **User must change password** at next logon check box.
    4. Select the **User cannot change password** check box.
@@ -207,7 +207,7 @@ To create the domain groups for SharePoint Server 2010 and TFS 2010:
 3. On the **Action** menu, point to **New**, and then click **Group**.
 4. In the **New Object - Group**dialog:
    1. Enter the information from
-   [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
+      [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
    2. Click **OK**.
 5. Repeat steps 3 and 4 to create the remaining groups listed in
    [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010).
@@ -311,7 +311,7 @@ server:
 6. In the login properties dialog box:
    1. On the **General** page, in the **Login name** box, type the name of the
       SharePoint administrators group from
-   [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)
+      [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010)
       using the form {DOMAIN}\{group name}.
    2. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox next to the SharePoint configuration database (from
@@ -471,7 +471,7 @@ Server 2010:
    2. In the **Service Account** section, ensure the option to **Create a new
       managed account** is selected, in the **User name** box, type the service
       account for SharePoint service applications listed in
-   [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
+      [Table 1](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
       and type the corresponding password in the **Password** box. In the
       **Services** section, clear the checkboxes for all of the services except
       **Excel Services Application** and **Secure Store Service**. Click
