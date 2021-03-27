@@ -186,21 +186,25 @@ To deploy the Fabrikam Demo to SharePoint:
    ```Console
    "Create Web Applications.cmd"
    ```
+
 6. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
 
    ```Console
    "Add Solutions.cmd"
    ```
+
 7. Wait for the solution to be added and then type the following command:
 
    ```Console
    "Deploy Solutions.cmd"
    ```
+
 8. Wait for the solution to be deployed and then type the following command:
 
    ```Console
    "Activate Features.cmd"
    ```
+
 9. Wait for the feature activations to complete, and then minimize or close the
    command prompt.
 

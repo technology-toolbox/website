@@ -48,6 +48,7 @@ Here is the process that I use to cleanup the network adapters:
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```
+
 2. In the **Device Manager**window:
    1. Click the **View** menu and then click **Show hidden devices**.
    2. Expand **Network adapters**.

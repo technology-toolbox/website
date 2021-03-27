@@ -93,6 +93,7 @@ Application event log:
 
       {{< /table >}}
    2. Click **Next**.
+
 8. On the **Configure Alerts**page:
    1. In the **Alert description** box, specify the following:
 

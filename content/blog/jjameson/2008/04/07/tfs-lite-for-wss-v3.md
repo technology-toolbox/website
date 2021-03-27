@@ -116,6 +116,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    <small>* You should actively change the default value for this column based
    on the target iteration for completing work items.</small>\
    <small>** Modify the out-of-the-box column accordingly.</small>
+
 7. Configure the following views:
 
    {{< table class="small table-striped" >}}
@@ -152,6 +153,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
     <small>* Change the filter as necessary to match the current
     iteration.</small>
+
 11. (Optional) Modify the **Project Summary** Web Part to display an image
     corresponding to the designated KPI value (using SharePoint Designer and a
     tiny bit of XSLT as described in my

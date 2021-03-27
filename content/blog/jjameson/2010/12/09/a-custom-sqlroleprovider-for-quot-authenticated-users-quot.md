@@ -185,6 +185,7 @@ I then added the following steps to the installation guide:
 >    ```Console
 >    notepad administration.config
 >    ```
+>
 > 4. In the /configuration/system.webServer/management/trustedProviders section, add the following:
 >
 >    ```XML
@@ -193,6 +194,7 @@ I then added the following steps to the installation guide:
 >        Fabrikam.Portal.Web, Version=2.0.0.0, Culture=neutral,
 >        PublicKeyToken=c8cdcbca6f69701f" />
 >    ```
+>
 > 5. Save the changes to the file and close Notepad.
 
 Once I had made the custom role provider a trusted provider, I was able to

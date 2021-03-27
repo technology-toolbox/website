@@ -308,6 +308,7 @@ To cleanup the network adapters:
    set devmgr_show_nonpresent_devices=1
    start devmgmt.msc
    ```
+
 3. In the **Device Manager**window:
    1. Click the **View** menu and then click **Show hidden devices**.
    2. Expand **Network adapters**.
@@ -502,11 +503,13 @@ To map the host name for a Web application to the loopback address:
    ```Console
    notepad %WINDIR%\System32\Drivers\etc\hosts
    ```
+
 3. In Notepad, add a line to map the loopback address (127.0.0.1) to the "local" version of each host header specified in [Table 7](#Table_7_-_Web_applications). For example:
 
    ```Text
    127.0.0.1 	extranet-local.fabrikam.com
    ```
+
 4. Save the changes to the file and close the editor.
 
 ## Allow specific host names mapped to 127.0.0.1
@@ -552,6 +555,7 @@ To enable host names that are mapped to the loopback address:
    > Be sure to specify the host header corresponding to the environment. For
    > example, specify {{< kbd "extranet-local.fabrikam.com" >}} for local
    > development environments.
+
 7. Quit Registry Editor, and then restart the IIS Admin Service.
 
 ## DEV - Install Windows PowerShell Integrated Scripting Environment
@@ -1297,6 +1301,7 @@ To change the schedule for deleting timer job history:
    ```PowerShell
    Set-SPTimerJob "job-delete-job-history" -Schedule "Daily between 12:00:00 and 13:00:00"
    ```
+
 3. Wait for the command to complete and verify no errors occurred during the
    process.
 
@@ -1428,6 +1433,7 @@ To create the Web application using the PowerShell scripts:
    ```PowerShell
    & '.\Create Web Application.ps1'
    ```
+
 4. If prompted for the the application pool credentials, verify the user name,
    type the password, and then click **OK**.
 5. Wait for the script to complete and verify no errors occurred during the
@@ -1437,6 +1443,7 @@ To create the Web application using the PowerShell scripts:
    ```PowerShell
    & '.\Create Site Collections.ps1'
    ```
+
 7. Wait for the script to complete and verify no errors occurred during the
    process.
 8. Proceed to the next section
@@ -1575,6 +1582,7 @@ To configure object cache user accounts:
    ```PowerShell
    & '.\Configure Object Cache User Accounts.ps1'
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 5. Type the following command to reset Internet Information Services (IIS):
@@ -1692,6 +1700,7 @@ To enable anonymous access to the site using PowerShell:
    ```PowerShell
    & '.\Enable Anonymous Acess.ps1'
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 5. Proceed to the next section
@@ -1749,11 +1758,13 @@ To create the database used for storing membership and role information:
    ```Console
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
+
 3. Type the following command:
 
    ```Console
    aspnet_regsql.exe
    ```
+
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click
    **Next**.
 5. On the **Select a Setup Option** page, ensure the option to **Configure SQL
@@ -1889,6 +1900,7 @@ To configure the Central Administration Web.config file:
         applicationName="Fabrikam Demo Site"
         connectionStringName="FabrikamDemo" />
       ```
+
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
       ```XML
@@ -1898,6 +1910,7 @@ To configure the Central Administration Web.config file:
         connectionStringName="FabrikamDemo"
         passwordFormat="Hashed" />
       ```
+
 6. Save the changes to the Web.config file and close the editor.
 7. Repeat the steps above on each Web server in the farm that hosts the Central
    Administration site.
@@ -2020,6 +2033,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
         requiresQuestionAndAnswer="true"
         requiresUniqueEmail="true" />
       ```
+
 4. Save the changes to the Web.config file and close the editor.
 5. Repeat the steps above on each Web server in the farm.
 
@@ -2173,6 +2187,7 @@ To configure BLOB cache settings:
    <BlobCache location="C:\BlobCache\14" path="...(gif|jpg|jpeg|...)$" maxSize="10"
        enabled="false" />
    ```
+
 7. In this line, change the **location** attribute to specify a directory that has enough space to accommodate the cache size.
 
    {{< div-block "note" >}}
@@ -2252,6 +2267,7 @@ To configure the State Service:
    ```PowerShell
    & '.\Configure State Service.ps1'
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 
@@ -2281,6 +2297,7 @@ To create and configure the Search Service Application:
    ```PowerShell
    & '.\Configure SharePoint Search.ps1'
    ```
+
 4. When prompted for default content access account credentials, verify the user
    name (EXTRANET\svc-index), type the password, and then click **OK**.
 5. If prompted for the service application credentials, verify the user name
@@ -2508,6 +2525,7 @@ for caching:
    ```PowerShell
    & '.\Configure Office Web Apps Cache.ps1'
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the process.
 
    {{< div-block "note" >}}
@@ -2618,6 +2636,7 @@ To add the new event source:
    ```PowerShell
    & '.\Add Event Log Sources.ps1'
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 5. Repeat the steps above on each SharePoint server in the farm.
@@ -2639,16 +2658,19 @@ To install and activate the features:
    ```PowerShell
    & '.\Add Solutions.ps1'
    ```
+
 4. Wait for the solutions to be added and then type the following command:
 
    ```PowerShell
    & '.\Deploy Solutions.ps1'
    ```
+
 5. Wait for the solutions to be deployed and then type the following command:
 
    ```PowerShell
    & '.\Activate Features.ps1'
    ```
+
 6. Wait for the feature activations to complete, and then minimize or close the
    PowerShell command prompt.
 
@@ -2692,6 +2714,7 @@ To create the sample content:
    ```Console
    Fabrikam.Demo.Tools.TestConsole.exe
    ```
+
 3. Wait for the program to complete and verify no errors occurred during the
    process.
 
@@ -2717,6 +2740,7 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
    ```PowerShell
    & '.\Create Partner Site Collection.ps1' "Contoso Shipping"
    ```
+
 4. Wait for the script to complete and verify no errors occurred during the
    process.
 5. Proceed to the next section

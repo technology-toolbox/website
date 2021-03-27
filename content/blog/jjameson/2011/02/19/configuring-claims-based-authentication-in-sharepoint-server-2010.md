@@ -103,11 +103,13 @@ added to to the appropriate database roles.
    ```Console
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
+
 3. Type the following command:
 
    ```Console
    aspnet_regsql.exe
    ```
+
 4. On the welcome page of the **ASP.NET SQL Server Setup Wizard**, click
    **Next**.
 5. On the **Select a Setup Option** page, ensure the option to **Configure SQL
@@ -407,6 +409,7 @@ necessary to modify the Web.config files for the following sites:
         applicationName="Fabrikam Demo Site"
         connectionStringName="FabrikamDemo" />
       ```
+
    3. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
       ```XML
@@ -416,6 +419,7 @@ necessary to modify the Web.config files for the following sites:
         connectionStringName="FabrikamDemo"
         passwordFormat="Hashed" />
       ```
+
 6. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Security Token Service Web.config file:
@@ -519,6 +523,7 @@ necessary to modify the Web.config files for the following sites:
         requiresQuestionAndAnswer="true"
         requiresUniqueEmail="true" />
       ```
+
 4. Save the changes to the Web.config file and close the editor.
 
 ### Step 6 - Create a user in the database using IIS Manager

@@ -215,6 +215,7 @@ earlier post for
          BuildType="None"
          RevisionType="Increment">
    ```
+
 4. Save the changes to the file.
 5. Right-click the updated MSBuild file and click **Check In Pending
    Changes...**
