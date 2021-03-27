@@ -197,7 +197,7 @@ Next I replaced the static `<div class="hentry">` elements with an ASP.NET
 
 ```ASP.NET
 <div class="hfeed posts-recent">
-    <h2>Most Recent Posts</h2>    
+    <h2>Most Recent Posts</h2>
     <asp:Repeater runat="server" ID="PostList">
         <ItemTemplate>
             <div class="hentry">

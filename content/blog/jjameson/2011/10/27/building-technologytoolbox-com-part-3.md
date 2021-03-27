@@ -111,9 +111,9 @@ prototype:
       <script type="text/javascript">
         function submitSearch() {
           var $searchKeywords = $('#searchKeywords');
-        
+
           var keywords = $searchKeywords.val();
-          
+
           window.location.href = "/Search.aspx?q=" + encodeURIComponent(keywords);
         }
       </script>
@@ -196,23 +196,23 @@ placeholder):
           <h2>
           <a href="/Services/SharePoint-Architecture-and-Development.aspx">
           SharePoint Architecture and Development</a></h2>
-          <p>Are you upgrading or migrating to SharePoint 2010? We have 
+          <p>Are you upgrading or migrating to SharePoint 2010? We have
           the experience and best practices to ensure your success.</p>
         </div>
         <div id="almCaption" class="nivo-html-caption">
           <h2>
-          <a href="/Services/Application-Lifecycle-Management.aspx">Application 
+          <a href="/Services/Application-Lifecycle-Management.aspx">Application
           Lifecycle Management</a></h2>
-          <p>Whether you are building on SharePoint or the core .NET Framework, 
-          you need a solid foundation for continuously managing the development 
+          <p>Whether you are building on SharePoint or the core .NET Framework,
+          you need a solid foundation for continuously managing the development
           lifecycle.</p>
         </div>
         <div id="biCaption" class="nivo-html-caption">
           <h2>
           <a href="/Services/Databases-and-Business-Intelligence.aspx">
           Databases and Business Intelligence</a></h2>
-          <p>Need help troubleshooting SQL Server or empowering business 
-          users with sophisticated analytics solutions? We can help with 
+          <p>Need help troubleshooting SQL Server or empowering business
+          users with sophisticated analytics solutions? We can help with
           that, too.</p>
         </div>
       </div>
@@ -225,12 +225,12 @@ placeholder):
         });
       </script>
       <h2>Your technology Sherpa for the Microsoft platform</h2>
-      <p>The path to success in the world of information technology is neither 
-      flat nor easy. It is often steep, rugged, and filled with hazards and 
-      pitfalls. However, partnering with an experienced guide vastly reduces 
+      <p>The path to success in the world of information technology is neither
+      flat nor easy. It is often steep, rugged, and filled with hazards and
+      pitfalls. However, partnering with an experienced guide vastly reduces
       the risk, effort, and duration of the journey.</p>
-      <p>Technology Toolbox helps businesses thrive by maximizing their investments 
-      in Microsoft products and technologies, including SharePoint, Team Foundation 
+      <p>Technology Toolbox helps businesses thrive by maximizing their investments
+      in Microsoft products and technologies, including SharePoint, Team Foundation
       Server, and SQL Server.</p>
     </div>
     <div id="contentSub">
@@ -243,9 +243,9 @@ placeholder):
             Last Day with Microsoft</a></h3>
             <ul class="post-info">
               <li class="published"><span class="label">Published
-              </span><span class="value">September 2, 2011</span><span class="label"> 
+              </span><span class="value">September 2, 2011</span><span class="label">
               at </span><span class="value">3:43 PM</span></li>
-              <li class="vcard author">by <span class="fn">Jeremy 
+              <li class="vcard author">by <span class="fn">Jeremy
               Jameson</span></li>
               <li class="comments">
               <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx#postComments">
@@ -263,8 +263,8 @@ placeholder):
               </li>
             </ul>
             <div class="entry-summary">
-              <p>Today is my last day with Microsoft and it is with 
-              a heavy heart that I now say farewell to past and present 
+              <p>Today is my last day with Microsoft and it is with
+              a heavy heart that I now say farewell to past and present
               teammates, coworkers, and managers...</p>
             </div>
           </div>
@@ -274,9 +274,9 @@ placeholder):
             New Blog Location - https://www.technologytoolbox.com/blog/jjameson</a></h3>
             <ul class="post-info">
               <li class="published"><span class="label">Published
-              </span><span class="value">September 2, 2011</span><span class="label"> 
+              </span><span class="value">September 2, 2011</span><span class="label">
               at </span><span class="value">1:59 PM</span></li>
-              <li class="vcard author">by <span class="fn">Jeremy 
+              <li class="vcard author">by <span class="fn">Jeremy
               Jameson</span></li>
               <li class="comments none">
               <a href="/blog/jjameson/archive/2011/09/02/new-blog-location.aspx#postComments">
@@ -294,10 +294,10 @@ placeholder):
               </li>
             </ul>
             <div class="entry-summary">
-              <p>As I mentioned in my previous post , today is my 
-              last day with Microsoft. I still have a lot of work 
-              to do in setting up my new website, but at this point, 
-              I've completed enough to continue blogging the "Random 
+              <p>As I mentioned in my previous post , today is my
+              last day with Microsoft. I still have a lot of work
+              to do in setting up my new website, but at this point,
+              I've completed enough to continue blogging the "Random
               Musings of Jeremy Jameson": http:...</p>
             </div>
           </div>
@@ -307,9 +307,9 @@ placeholder):
             Leaving Microsoft</a></h3>
             <ul class="post-info">
               <li class="published"><span class="label">Published
-              </span><span class="value">August 22, 2011</span><span class="label"> 
+              </span><span class="value">August 22, 2011</span><span class="label">
               at </span><span class="value">7:03 AM</span></li>
-              <li class="vcard author">by <span class="fn">Jeremy 
+              <li class="vcard author">by <span class="fn">Jeremy
               Jameson</span></li>
               <li class="comments none">
               <a href="/blog/jjameson/archive/2011/08/22/leaving-microsoft.aspx#postComments">
@@ -327,10 +327,10 @@ placeholder):
               </li>
             </ul>
             <div class="entry-summary">
-              <p>Last Thursday, I informed my manager that I have 
-              decided to leave Microsoft to pursue other opportunities. 
-              My last day will be September 2nd -- just a few days 
-              shy of my 11 year anniversary date with the company 
+              <p>Last Thursday, I informed my manager that I have
+              decided to leave Microsoft to pursue other opportunities.
+              My last day will be September 2nd -- just a few days
+              shy of my 11 year anniversary date with the company
               (my first day was September 5, 2000...</p>
             </div>
           </div>
@@ -342,19 +342,19 @@ placeholder):
           <ol>
             <li><a href="#">Issues Deploying SharePoint Solution Packages</a></li>
             <li><a href="#">The Case of the Disappearing Hosts File</a></li>
-            <li><a href="#">Upgrade Team Foundation Server 2008 to TFS 
+            <li><a href="#">Upgrade Team Foundation Server 2008 to TFS
             2010 (and SharePoint Server 2010)</a></li>
             <li><a href="#">Dumping MOSS 2007 Variations - Part 1</a></li>
-            <li><a href="#">The workbook cannot be opened Error with 
+            <li><a href="#">The workbook cannot be opened Error with
             SharePoint Server 2010 (and TFS 2010)</a></li>
-            <li><a href="#">Error Creating Control when using Microsoft 
+            <li><a href="#">Error Creating Control when using Microsoft
             Office SharePoint Designer 2007</a></li>
             <li><a href="#">Best Practices for .NET Assembly Versioning</a></li>
-            <li><a href="#">Counting Rows in All Database Tables in 
+            <li><a href="#">Counting Rows in All Database Tables in
             SQL Server</a></li>
-            <li><a href="#">Creating a Site Template in MOSS 2007 that 
+            <li><a href="#">Creating a Site Template in MOSS 2007 that
             Works in WSS v3</a></li>
-            <li><a href="#">Outlook 2010 Does Not Work with Windows 
+            <li><a href="#">Outlook 2010 Does Not Work with Windows
             Server 2003 POP3 Service</a></li>
           </ol>
         </div>
@@ -422,8 +422,8 @@ blog post.
             (invalid)</span>
             <div class="field-info">
               Optional, but recommended (especially if you have a
-              <a href="http://www.gravatar.com" target="_blank">Gravatar</a>). 
-              Note that your email address will not appear with your 
+              <a href="http://www.gravatar.com" target="_blank">Gravatar</a>).
+              Note that your email address will not appear with your
               comment.</div>
           </div>
           <div>
@@ -432,12 +432,12 @@ blog post.
             <span id="ctl11_ctl07" class="validator" style="display: none;">
             (invalid)</span>
             <div class="field-info">
-              If URL is specified, it will be included as a link with 
+              If URL is specified, it will be included as a link with
               your name.</div>
           </div>
           <div>
             <span class="checkbox">
-            <input id="ctl11_chkRemember" checked="checked" name="ctl11$chkRemember" type="checkbox" /><label for="ctl11_chkRemember">Remember 
+            <input id="ctl11_chkRemember" checked="checked" name="ctl11$chkRemember" type="checkbox" /><label for="ctl11_chkRemember">Remember
             me</label></span> </div>
           <div>
             <label for="ctl11_tbComment">Comment</label>
@@ -446,21 +446,21 @@ blog post.
             (required)</span></div>
           </fieldset>
           <div class="button-panel">
-            <span style="color: red; display: none;">Please enter the 
-            answer to the supplied question (custom).</span><span style="display: none;">Please 
+            <span style="color: red; display: none;">Please enter the
+            answer to the supplied question (custom).</span><span style="display: none;">Please
             add 2 and 1 and type the answer here:
             <input name="ctl11_ctl11_visibleanswer" type="text" value="" /></span><input name="ctl11_captcha_encrypted" type="hidden" value="D3w3iOYrarnJ9qs3gAEHj/nCD+z74YvsRCUaxHXKbbU=" /><div class="captcha">
-              <img border="0" height="50" src="/blog/images/services/CaptchaImage.ashx?spec=mbDRk9FMNIIe8ZXgEkkr8nOdGg4Opaxs5Bex2UB6s3AyO5RQSj8RNb62WWhANl%2bC" width="180" /><label for="ctl11_captcha_answer">Enter 
-              the code shown above:</label><span style="width: 180px; height: 50px; color: red; display: none;">Please 
+              <img border="0" height="50" src="/blog/images/services/CaptchaImage.ashx?spec=mbDRk9FMNIIe8ZXgEkkr8nOdGg4Opaxs5Bex2UB6s3AyO5RQSj8RNb62WWhANl%2bC" width="180" /><label for="ctl11_captcha_answer">Enter
+              the code shown above:</label><span style="width: 180px; height: 50px; color: red; display: none;">Please
               enter the correct word</span><input maxlength="4" name="ctl11_captcha_answer" size="4" type="text" value="" /></div>
             <input id="ctl11_btnSubmit" name="ctl11$btnSubmit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl11$btnSubmit&quot;, &quot;&quot;, true, &quot;SubtextComment&quot;, &quot;&quot;, false, false))" type="submit" value="Submit" />
           </div>
           <div id="ctl11_ctl10" class="validation-summary" style="">
-            There is a problem with your request. Please correct and 
+            There is a problem with your request. Please correct and
             try again.<ul>
               <li>Name must be specified.</li>
               <li>Title must be specified.</li>
-              <li>Email Address is not required, but if specified 
+              <li>Email Address is not required, but if specified
               it must be valid.</li>
               <li>Comment must be specified.</li>
             </ul>
@@ -471,7 +471,7 @@ blog post.
     <div id="contentSub" class="grid_4">
       <p class="rss-feed">
         <a href="http://feeds.feedburner.com/Random-Musings-of-Jeremy-Jameson">
-        <img alt="RSS icon" height="30" src="/Images/icon-rss-30x30.png" width="30" /> 
+        <img alt="RSS icon" height="30" src="/Images/icon-rss-30x30.png" width="30" />
         Subscribe to this blog (RSS)</a>
       </p>
       <div class="posts-recent">
@@ -488,11 +488,11 @@ blog post.
           Leaving Microsoft</a></li>
           <li>
           <a href="/blog/jjameson/archive/2011/05/05/using-the-sharepoint-api-to-configure-an-expiration-policy-on-a-document-library.aspx">
-          Using the SharePoint API to Configure an Expiration Policy on 
+          Using the SharePoint API to Configure an Expiration Policy on
           a Document Library</a></li>
           <li>
           <a href="/blog/jjameson/archive/2011/05/02/missing-thumbnail-images-in-sharepoint-you-probably-forgot-to-specify-the-quot-contenttype-quot-property.aspx">
-          Missing thumbnail images in SharePoint?...You probably forgot 
+          Missing thumbnail images in SharePoint?...You probably forgot
           to specify the "ContentType" property</a></li>
         </ul>
       </div>
@@ -577,100 +577,100 @@ blog post.
         <ul>
           <li>2011
           <ul>
-            <li><a href="/blog/jjameson/archive/2011/09.aspx">September 
+            <li><a href="/blog/jjameson/archive/2011/09.aspx">September
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/08.aspx">August 
+            <li><a href="/blog/jjameson/archive/2011/08.aspx">August
             (1)</a></li>
             <li><a href="/blog/jjameson/archive/2011/05.aspx">May (3)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/04.aspx">April 
+            <li><a href="/blog/jjameson/archive/2011/04.aspx">April
             (10)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/03.aspx">March 
+            <li><a href="/blog/jjameson/archive/2011/03.aspx">March
             (22)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/02.aspx">February 
+            <li><a href="/blog/jjameson/archive/2011/02.aspx">February
             (6)</a></li>
-            <li><a href="/blog/jjameson/archive/2011/01.aspx">January 
+            <li><a href="/blog/jjameson/archive/2011/01.aspx">January
             (2)</a></li>
           </ul>
           </li>
           <li>2010<ul>
-            <li><a href="/blog/jjameson/archive/2010/12.aspx">December 
+            <li><a href="/blog/jjameson/archive/2010/12.aspx">December
             (8)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/11.aspx">November 
+            <li><a href="/blog/jjameson/archive/2010/11.aspx">November
             (4)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/10.aspx">October 
+            <li><a href="/blog/jjameson/archive/2010/10.aspx">October
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/09.aspx">September 
+            <li><a href="/blog/jjameson/archive/2010/09.aspx">September
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/08.aspx">August 
+            <li><a href="/blog/jjameson/archive/2010/08.aspx">August
             (2)</a></li>
             <li><a href="/blog/jjameson/archive/2010/07.aspx">July (3)</a></li>
             <li><a href="/blog/jjameson/archive/2010/06.aspx">June (3)</a></li>
             <li><a href="/blog/jjameson/archive/2010/05.aspx">May (24)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/04.aspx">April 
+            <li><a href="/blog/jjameson/archive/2010/04.aspx">April
             (19)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/03.aspx">March 
+            <li><a href="/blog/jjameson/archive/2010/03.aspx">March
             (12)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/02.aspx">February 
+            <li><a href="/blog/jjameson/archive/2010/02.aspx">February
             (1)</a></li>
-            <li><a href="/blog/jjameson/archive/2010/01.aspx">January 
+            <li><a href="/blog/jjameson/archive/2010/01.aspx">January
             (8)</a></li>
           </ul>
           </li>
           <li>2009<ul>
-            <li><a href="/blog/jjameson/archive/2009/12.aspx">December 
+            <li><a href="/blog/jjameson/archive/2009/12.aspx">December
             (6)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/11.aspx">November 
+            <li><a href="/blog/jjameson/archive/2009/11.aspx">November
             (15)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/10.aspx">October 
+            <li><a href="/blog/jjameson/archive/2009/10.aspx">October
             (28)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/09.aspx">September 
+            <li><a href="/blog/jjameson/archive/2009/09.aspx">September
             (16)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/08.aspx">August 
+            <li><a href="/blog/jjameson/archive/2009/08.aspx">August
             (3)</a></li>
             <li><a href="/blog/jjameson/archive/2009/06.aspx">June (12)</a></li>
             <li><a href="/blog/jjameson/archive/2009/05.aspx">May (3)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/04.aspx">April 
+            <li><a href="/blog/jjameson/archive/2009/04.aspx">April
             (6)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/03.aspx">March 
+            <li><a href="/blog/jjameson/archive/2009/03.aspx">March
             (22)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/02.aspx">February 
+            <li><a href="/blog/jjameson/archive/2009/02.aspx">February
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2009/01.aspx">January 
+            <li><a href="/blog/jjameson/archive/2009/01.aspx">January
             (2)</a></li>
           </ul>
           </li>
           <li>2008<ul>
-            <li><a href="/blog/jjameson/archive/2008/11.aspx">November 
+            <li><a href="/blog/jjameson/archive/2008/11.aspx">November
             (1)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/10.aspx">October 
+            <li><a href="/blog/jjameson/archive/2008/10.aspx">October
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/09.aspx">September 
+            <li><a href="/blog/jjameson/archive/2008/09.aspx">September
             (1)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/08.aspx">August 
+            <li><a href="/blog/jjameson/archive/2008/08.aspx">August
             (1)</a></li>
             <li><a href="/blog/jjameson/archive/2008/07.aspx">July (1)</a></li>
             <li><a href="/blog/jjameson/archive/2008/06.aspx">June (2)</a></li>
             <li><a href="/blog/jjameson/archive/2008/05.aspx">May (4)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/04.aspx">April 
+            <li><a href="/blog/jjameson/archive/2008/04.aspx">April
             (8)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/02.aspx">February 
+            <li><a href="/blog/jjameson/archive/2008/02.aspx">February
             (3)</a></li>
-            <li><a href="/blog/jjameson/archive/2008/01.aspx">January 
+            <li><a href="/blog/jjameson/archive/2008/01.aspx">January
             (1)</a></li>
           </ul>
           </li>
           <li>2007<ul>
-            <li><a href="/blog/jjameson/archive/2007/11.aspx">November 
+            <li><a href="/blog/jjameson/archive/2007/11.aspx">November
             (2)</a></li>
-            <li><a href="/blog/jjameson/archive/2007/10.aspx">October 
+            <li><a href="/blog/jjameson/archive/2007/10.aspx">October
             (4)</a></li>
-            <li><a href="/blog/jjameson/archive/2007/08.aspx">August 
+            <li><a href="/blog/jjameson/archive/2007/08.aspx">August
             (1)</a></li>
             <li><a href="/blog/jjameson/archive/2007/06.aspx">June (6)</a></li>
             <li><a href="/blog/jjameson/archive/2007/05.aspx">May (6)</a></li>
-            <li><a href="/blog/jjameson/archive/2007/04.aspx">April 
+            <li><a href="/blog/jjameson/archive/2007/04.aspx">April
             (3)</a></li>
-            <li><a href="/blog/jjameson/archive/2007/03.aspx">March 
+            <li><a href="/blog/jjameson/archive/2007/03.aspx">March
             (8)</a></li>
           </ul>
           </li>
@@ -739,22 +739,22 @@ placeholder):
         </div>
         <p>Since
         <a href="/blog/jjameson/archive/2011/09/02/last-day-with-microsoft.aspx">
-        I no longer work for Microsoft</a>, I have copied it here in case 
+        I no longer work for Microsoft</a>, I have copied it here in case
         that blog ever goes away.</p>
       </div>
     </blockquote>
     <p>As I mentioned in my
-    <a href="/blog/jjameson/archive/2011/08/22/leaving-microsoft.aspx">previous 
+    <a href="/blog/jjameson/archive/2011/08/22/leaving-microsoft.aspx">previous
     post</a>, today is my last day with Microsoft.</p>
-    <p>I still have a lot of work to do in setting up my new website, but at 
-    this point, I've completed enough to continue blogging the "Random Musings 
+    <p>I still have a lot of work to do in setting up my new website, but at
+    this point, I've completed enough to continue blogging the "Random Musings
     of Jeremy Jameson":</p>
     <blockquote>
       <a href="https://www.technologytoolbox.com/blog/jjameson">https://www.technologytoolbox.com/blog/jjameson</a></blockquote>
-    <p>If you subscribed to my MSDN blog in the past, then I encourage you to 
-    update your RSS feed by clicking the <strong>Subscribe</strong> link on 
+    <p>If you subscribed to my MSDN blog in the past, then I encourage you to
+    update your RSS feed by clicking the <strong>Subscribe</strong> link on
     my new blog.</p>
-    <p>The blog will be in constant flux over the next week or so as I work 
+    <p>The blog will be in constant flux over the next week or so as I work
     on branding, layout, etc. So, as they say, please "pardon my dust" ;-)</p>
     <div class="tags">
       <h3>Tags</h3>

@@ -104,7 +104,7 @@ time ago I wrote the following code:
                 pageImage.ImageUrl = defaultImageUrl;
                 page.ListItem["Page Image"] = pageImage;
                 page.Update();
-                
+
                 ...
 ```
 

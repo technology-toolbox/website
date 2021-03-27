@@ -63,7 +63,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
 
         private static string smtpServer;
         private static string defaultFromAddress;
-        
+
         private SharePointSmtpHelper( ) { } // all members are static
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
         /// In other words, the addresses on the To line of the e-mail.</param>
         /// <param name="subject">The subject line for the e-mail message.
         /// </param>
-        /// <param name="body">The e-mail message body.</param>        
+        /// <param name="body">The e-mail message body.</param>
         /// <param name="isBodyHtml"><c>true</c> if the mail message body is
         /// formatted using HTML markup. <c>false</c> if the message is simply
         /// plain text.</param>
@@ -157,7 +157,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
         /// In other words, the addresses on the To line of the e-mail.</param>
         /// <param name="subject">The subject line for the e-mail message.
         /// </param>
-        /// <param name="body">The e-mail message body.</param>        
+        /// <param name="body">The e-mail message body.</param>
         /// <param name="isBodyHtml"><c>true</c> if the mail message body is
         /// formatted using HTML markup. <c>false</c> if the message is simply
         /// plain text.</param>
@@ -266,7 +266,7 @@ namespace Fabrikam.Demo.CoreServices.SharePoint
                                 webApp.OutboundMailServiceInstance.Server.Address;
                         }
 
-                        if (string.IsNullOrEmpty(smtpServer) == true)                            
+                        if (string.IsNullOrEmpty(smtpServer) == true)
                         {
                             throw new InvalidOperationException(
                                 "The outbound SMTP server is not specified in"

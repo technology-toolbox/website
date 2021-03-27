@@ -72,43 +72,43 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       <span class="current">Style Guide</span> </span></div>
     <div id="contentMain" class="grid_7">
       <h2>Heading 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus 
-      eleifend purus at est hendrerit consectetur pretium turpis tempus. Maecenas 
-      pulvinar mattis fringilla. Nam ornare sollicitudin dui sit amet pulvinar. 
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+      eleifend purus at est hendrerit consectetur pretium turpis tempus. Maecenas
+      pulvinar mattis fringilla. Nam ornare sollicitudin dui sit amet pulvinar.
       Proin nunc lacus, aliquet in sagittis rhoncus, suscipit sit amet leo.</p>
-      <p>Ut euismod lorem non nibh varius in lobortis enim aliquam. Aliquam 
-      sed semper lacus. Aliquam sed tellus nec nibh dignissim consectetur 
-      sit amet ac dolor. Donec auctor hendrerit vehicula. Maecenas a sollicitudin 
-      lorem. Mauris id nibh ut urna cursus auctor. Vestibulum scelerisque, 
-      nisi sit amet vulputate venenatis, ipsum leo vulputate dolor, sit amet 
+      <p>Ut euismod lorem non nibh varius in lobortis enim aliquam. Aliquam
+      sed semper lacus. Aliquam sed tellus nec nibh dignissim consectetur
+      sit amet ac dolor. Donec auctor hendrerit vehicula. Maecenas a sollicitudin
+      lorem. Mauris id nibh ut urna cursus auctor. Vestibulum scelerisque,
+      nisi sit amet vulputate venenatis, ipsum leo vulputate dolor, sit amet
       mattis ligula urna at leo.</p>
       <h3>Heading 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec 
-      diam nec sapien luctus iaculis. Nam neque. Mauris sit amet quam. Nunc 
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec
+      diam nec sapien luctus iaculis. Nam neque. Mauris sit amet quam. Nunc
       fermentum, erat in pellentesque porttitor,
-      <span class="highlightRed">magna mauris consectetur</span> nibh, et 
-      vestibulum augue urna in felis. Integer et sapien. Mauris neque nibh, 
-      rutrum sed, pharetra ut, suscipit in, lacus. Nullam mauris. Praesent 
-      fringilla sollicitudin nunc. Nullam ipsum neque, malesuada vitae, blandit 
+      <span class="highlightRed">magna mauris consectetur</span> nibh, et
+      vestibulum augue urna in felis. Integer et sapien. Mauris neque nibh,
+      rutrum sed, pharetra ut, suscipit in, lacus. Nullam mauris. Praesent
+      fringilla sollicitudin nunc. Nullam ipsum neque, malesuada vitae, blandit
       sed, tincidunt sed, mauris. Nullam blandit.
-      <span class="highlightYellow">Suspendisse sed turpis</span> sit amet 
+      <span class="highlightYellow">Suspendisse sed turpis</span> sit amet
       diam tincidunt imperdiet.</p>
       <blockquote class="directQuote errorMessage">
-        [Direct quote, error message] Pellentesque habitant morbi tristique 
+        [Direct quote, error message] Pellentesque habitant morbi tristique
         senectus et netus et malesuada fames ac turpis egestas.</blockquote>
       <h4>Heading 4</h4>
-      <p>Fusce blandit interdum pretium. Lorem ipsum dolor sit amet, consectetur 
-      adipiscing elit. Phasellus ut augue eget arcu blandit vestibulum. Maecenas 
+      <p>Fusce blandit interdum pretium. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Phasellus ut augue eget arcu blandit vestibulum. Maecenas
       a nisi libero, et elementum purus. </p>
       <h5>Heading 5</h5>
-      <p>Nullam consequat urna mattis eros sodales aliquet. Pellentesque habitant 
-      morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-      Integer eget purus velit, nec pellentesque mauris. Suspendisse et leo 
+      <p>Nullam consequat urna mattis eros sodales aliquet. Pellentesque habitant
+      morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      Integer eget purus velit, nec pellentesque mauris. Suspendisse et leo
       id enim scelerisque hendrerit.</p>
       <h6>Heading 6</h6>
-      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
-      per inceptos himenaeos. Donec viverra nunc eu ligula bibendum mattis. 
-      Pellentesque a tellus ac nunc vulputate commodo a consectetur nibh. 
+      <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos. Donec viverra nunc eu ligula bibendum mattis.
+      Pellentesque a tellus ac nunc vulputate commodo a consectetur nibh.
       Proin sit amet velit diam, in vulputate augue.</p>
       <p>Unordered list:</p>
       <ul>
@@ -118,7 +118,7 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
         <li>Aenean id metus vitae enim consequat lobortis.
         <ul>
           <li>Quisque sit amet nisi sit amet ipsum scelerisque pharetra.</li>
-          <li>Praesent interdum arcu eget eros condimentum eu sagittis 
+          <li>Praesent interdum arcu eget eros condimentum eu sagittis
           odio blandit.</li>
         </ul>
         </li>
@@ -128,7 +128,7 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       <p>Ordered list:</p>
       <ol>
         <li>Etiam sodales eros vel felis lacinia auctor.</li>
-        <li>In consequat est eget tortor dignissim non pellentesque augue 
+        <li>In consequat est eget tortor dignissim non pellentesque augue
         faucibus.</li>
         <li>Proin non diam nisl, eu cursus leo.</li>
         <li>Praesent nec sem ipsum, in euismod odio.<ol>
@@ -136,12 +136,12 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
           <li>Donec viverra tortor ut nisi viverra placerat eu vel nulla.
           <ol>
             <li>Quisque sit amet nisi sit amet ipsum scelerisque pharetra.</li>
-            <li>Praesent interdum arcu eget eros condimentum eu sagittis 
+            <li>Praesent interdum arcu eget eros condimentum eu sagittis
             odio blandit.</li>
           </ol>
           </li>
           <li>Quisque a tellus lectus, non vulputate ipsum.</li>
-          <li>Mauris aliquet leo ac mauris convallis eget sagittis mauris 
+          <li>Mauris aliquet leo ac mauris convallis eget sagittis mauris
           bibendum.</li>
         </ol>
         </li>
@@ -149,14 +149,14 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       <p>Ordered list within an unordered list:</p>
       <ul>
         <li>Etiam sodales eros vel felis lacinia auctor.</li>
-        <li>In consequat est eget tortor dignissim non pellentesque augue 
+        <li>In consequat est eget tortor dignissim non pellentesque augue
         faucibus.</li>
         <li>Proin non diam nisl, eu cursus leo.</li>
         <li>Praesent nec sem ipsum, in euismod odio.<ol>
           <li>Cras nec arcu eros, vitae blandit purus.</li>
           <li>Donec viverra tortor ut nisi viverra placerat eu vel nulla.</li>
           <li>Quisque a tellus lectus, non vulputate ipsum.</li>
-          <li>Mauris aliquet leo ac mauris convallis eget sagittis mauris 
+          <li>Mauris aliquet leo ac mauris convallis eget sagittis mauris
           bibendum.</li>
         </ol>
         </li>
@@ -210,7 +210,7 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       </div>
       <p>Reference:</p>
       <div class="reference">
-        <cite>Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak? 
+        <cite>Napier, Bryan (2007). SPLimitedWebPartManager Memory Leak?
         .. of ones and zeros.. 2007-06-05.</cite>
         <div class="referenceLink">
           <a href="http://blog.ofonesandzeros.com/2007/06/05/splimitedwebpartmanager-memory-leak/">
@@ -247,47 +247,47 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       <p>Definition list:</p>
       <dl>
         <dt>Major Version</dt>
-        <dd>Manually incremented for major releases, such as adding many 
+        <dd>Manually incremented for major releases, such as adding many
         new features to the solution. </dd>
         <dt>Minor Version</dt>
-        <dd>Manually incremented for minor releases, such as introducing 
+        <dd>Manually incremented for minor releases, such as introducing
         small changes to existing features. </dd>
         <dt>Build Number </dt>
-        <dd>Typically incremented automatically as part of every build performed 
+        <dd>Typically incremented automatically as part of every build performed
         on the Build Server. This allows each build to be tracked and tested.
         </dd>
         <dt>Revision </dt>
-        <dd>Incremented for QFEs (a.k.a. "hotfixes" or patches) to builds 
-        released into the Production environment (PROD). This is set to 
+        <dd>Incremented for QFEs (a.k.a. "hotfixes" or patches) to builds
+        released into the Production environment (PROD). This is set to
         zero for the initial release of any major/minor version of the solution.</dd>
       </dl>
       <p>Conversation:</p>
       <ol class="conversation">
         <li><cite>Dr. Jekyll</cite>
         <blockquote class="directQuote">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Nullam volutpat massa a sapien pharetra a dignissim metus rhoncus.</p>
-          <p>Morbi quis ipsum nec nunc mollis accumsan sit amet eu eros. 
-          Mauris porttitor posuere nunc sed tincidunt. Nulla facilisi. 
-          Duis tortor lacus, auctor et tempor et, porta at tortor. Mauris 
-          semper orci et nisl suscipit sit amet lacinia enim facilisis. 
-          Ut orci lorem, gravida vel dignissim ac, tincidunt sed enim. 
+          <p>Morbi quis ipsum nec nunc mollis accumsan sit amet eu eros.
+          Mauris porttitor posuere nunc sed tincidunt. Nulla facilisi.
+          Duis tortor lacus, auctor et tempor et, porta at tortor. Mauris
+          semper orci et nisl suscipit sit amet lacinia enim facilisis.
+          Ut orci lorem, gravida vel dignissim ac, tincidunt sed enim.
           In non est at tortor faucibus ullamcorper ut et enim.</p>
         </blockquote>
         </li>
         <li><cite>Mr. Hyde</cite>
         <blockquote class="directQuote">
-          <p>Ut vestibulum dictum nisl vel tempus. In sit amet sapien 
-          lectus, luctus varius dolor. Praesent eu nunc est. Maecenas 
-          pellentesque vulputate fermentum. Morbi venenatis quam enim, 
-          nec porta magna. Mauris rhoncus porttitor sapien, a gravida 
-          turpis porttitor at. Aliquam imperdiet eros eget erat hendrerit 
+          <p>Ut vestibulum dictum nisl vel tempus. In sit amet sapien
+          lectus, luctus varius dolor. Praesent eu nunc est. Maecenas
+          pellentesque vulputate fermentum. Morbi venenatis quam enim,
+          nec porta magna. Mauris rhoncus porttitor sapien, a gravida
+          turpis porttitor at. Aliquam imperdiet eros eget erat hendrerit
           sollicitudin consectetur magna ornare.</p>
         </blockquote>
         </li>
         <li><cite>Dr. Jekyll</cite>
         <blockquote class="directQuote">
-          <p>Nulla nec tellus dui. Aliquam ut augue mi, eget convallis 
+          <p>Nulla nec tellus dui. Aliquam ut augue mi, eget convallis
           augue.</p>
         </blockquote>
         </li>
@@ -300,13 +300,13 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
       </div>
       <p>Console block (complex - keyboard input and sample output):</p>
       <div class="consoleBlock">
-        <p>C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;<kbd>"Activate 
+        <p>C:\NotBackedUp\Fabrikam\Project1\Main\PublicationLibrary\DeploymentFiles\Scripts&gt;<kbd>"Activate
         Feature.cmd"</kbd></p>
-        <p><samp>Activating Fabrikam.Project1.PublicationLibrary on url 
+        <p><samp>Activating Fabrikam.Project1.PublicationLibrary on url
         - http://project1-local</samp></p>
-        <p><samp>Dependency feature 'Fabrikam.Project1.PublicationContentTypes' 
-        (id: 9f5c14f1-cf58-47c7-bbba-da9a8637deab) is not properly scoped 
-        for feature 'Fabrikam.Project1.PublicationLibrary' (id: 49b204d0-7e35-4460-a691-a7d481c463b4). 
+        <p><samp>Dependency feature 'Fabrikam.Project1.PublicationContentTypes'
+        (id: 9f5c14f1-cf58-47c7-bbba-da9a8637deab) is not properly scoped
+        for feature 'Fabrikam.Project1.PublicationLibrary' (id: 49b204d0-7e35-4460-a691-a7d481c463b4).
         Its scope 'Site' must be equal to or higher than 'WebApplication'.</samp></p>
       </div>
       <p>WinDbg session:</p>
@@ -316,15 +316,15 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 0:023&gt; <kbd>.cordll -lp C:\Windows\Microsoft.NET\Framework\v2.0.50727</kbd>
 <samp>CLR DLL status: No load attempts</samp>
 0:023&gt; <kbd>!threads</kbd>
-<samp>Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc 
-0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0 
-1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0 
+<samp>Index TID   TEB    StackBase   StackLimit   DeAlloc   StackSize   ThreadProc
+0 00000dec 0x7ffdf000 0x00110000 0x00105000 0x000d0000 0x0000b000 0x0
+1 0000156c 0x7ffde000 0x01550000 0x0154e000 0x01510000 0x00002000 0x0
 2 0000144c 0x7ffdd000 0x00df0000 0x00dee000 0x00db0000 0x00002000 0x0
 ...</samp></pre>
       </div>
       <p>Log excerpt:</p>
       <div class="logExcerpt">
-        <pre><samp>04/08/2008 ... Applying template &quot;TfsLite.stp&quot; to web at URL &quot;http://wss-dev/Test&quot;.   
+        <pre><samp>04/08/2008 ... Applying template &quot;TfsLite.stp&quot; to web at URL &quot;http://wss-dev/Test&quot;.
 04/08/2008 ... Failed to get the site template for language 1033, search key 'TfsLite.stp'. This warning is expected when provisioning from a custom web template.
 04/08/2008 ... Marking web-scoped features active from manifest at URL &quot;http://wss-dev/Test&quot;
 04/08/2008 ... Failed to mark site-scoped features active in site 'http://wss-dev/Test'.
@@ -356,14 +356,14 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
     <span class="variable">$libraryDescription</span>)
 {
     <span class="command">Write-Debug</span> <span class="string">&quot;Adding wiki library ($libraryName) to site ($($web.Url))...&quot;</span>
-                    
+
     <span class="variable">$listId</span> <span class="operator">=</span> <span class="variable">$web</span><span class="operator">.</span><span class="member">Lists</span><span class="operator">.</span><span class="member">Add</span>(
         <span class="variable">$name</span><span class="operator">,</span>
         <span class="variable">$description</span><span class="operator">,</span>
         <span class="userType">[Microsoft.SharePoint.SPListTemplateType]</span><span class="operator">::</span><span class="member">WebPageLibrary</span>)
-    
+
     <span class="variable">$wikiLibrary</span> <span class="operator">=</span> <span class="variable">$web</span><span class="operator">.</span><span class="member">Lists</span><span class="operator">[</span><span class="variable">$listId</span><span class="operator">]</span>
-    
+
     <span class="variable">$null</span> <span class="operator">=</span> <span class="userType">[Microsoft.SharePoint.Utilities.SPUtility]</span><span class="operator">::</span><span class="member">AddDefaultWikiContent</span>(
         <span class="variable">$wikiLibrary</span>)
 }
@@ -379,7 +379,7 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
   <span class="string">&quot;http://cyclops/sites/Demo&quot;</span><span class="operator">,</span>
   <span class="string">&quot;http://cyclops/sites/Toolbox&quot;</span>
    )
-   
+
 <span class="variable">$sitesToUpgrade</span> <span class="operator">|</span>
     <span class="command">ForEach-Object</span> {
         <span class="variable">$DebugPreference</span> <span class="operator">=</span> <span class="string">&quot;SilentlyContinue&quot;</span>
@@ -391,9 +391,9 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
     }</code></pre>
       </div>
       <h2>Colors</h2>
-      <p>The following swatches show all of the colors used throughout the 
-      site (with the exception of color syntax highlighting in code samples). 
-      However they do not necessarily list all instances where the colors 
+      <p>The following swatches show all of the colors used throughout the
+      site (with the exception of color syntax highlighting in code samples).
+      However they do not necessarily list all instances where the colors
       are used.</p>
       <div class="color-swatch" style="background-color: #4f4f4f; color: #fff">
         <strong>#4f4f4f</strong><ul>

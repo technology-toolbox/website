@@ -279,7 +279,7 @@ in Figure 3:
                 <table cellpadding="0" cellspacing="0" width="100%" class="masterContent">
                     <tr>
                         <td colspan="2" class="authoringRegion">
-                             
+
                         </td>
                     </tr>
                     <tr>
@@ -305,7 +305,7 @@ in Figure 3:
                                 </tr>
                                 <tr class="topNavContainer">
                                     <td>
-                                         
+
                                     </td>
                                 </tr>
                             </table>
@@ -1538,7 +1538,7 @@ namespace Fabrikam.Demo.StsAdm.Commands
         }
 
         #endregion
-        
+
         private static void AddLoggingWebConfigModifications(
             SPWebApplication webApp)
         {

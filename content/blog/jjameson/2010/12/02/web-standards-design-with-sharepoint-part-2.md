@@ -314,7 +314,7 @@ following:
 ------------------------------------------------------------------------------*/
 /* Override .ms-WPBody rules from core.css so that content within Web Parts
  * (e.g. a Content Editor Web Part) appears similar to other text on the page
- * (for example, as defined in the CSS rules for <body>) */ 
+ * (for example, as defined in the CSS rules for <body>) */
 .ms-WPBody {
     /* HACK: Setting the rule to "inherit" works in Firefox, but not in IE8 */
     /* font-family: inherit; */

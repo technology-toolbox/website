@@ -92,7 +92,7 @@ Private Sub SaveEventLog(strComputer, strEventLogName)
             & GetFormattedTimestamp() & ".evt"
 
         errBackupLog = objLogFile.BackupEventLog(backupFilename)
-        If errBackupLog <> 0 Then        
+        If errBackupLog <> 0 Then
             WScript.Echo "The " & strEventLogName & " event log on " _
                 & strComputer & " could not be backed up."
         End If
@@ -107,7 +107,7 @@ Private Function GetFormattedTimestamp
         & LPad(Month(timestamp), 2, "0") _
         & LPad(Day(timestamp), 2, "0") _
         & "_" & Replace(FormatDateTime(timestamp, 4),":","")
-	
+
 End Function
 
 Private Function LPad(strValue, nLength, strPadCharacter)

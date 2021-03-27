@@ -167,17 +167,17 @@ condititionally set it to the expected location:
   <!-- HACK: The values of $(SolutionRoot) and $(BuildProjectFolderPath) vary
   significantly between desktop builds and builds started using Team
   Foundation Build (in other words, builds queued on TFS build agents).
-  
+
   For desktop builds:
-  
+
   SolutionRoot = C:\NotBackedUp\Fabrikam\Demo
   BuildProjectFolderPath = C:\NotBackedUp\Fabrikam\Demo\Main\Source
-  
+
   For builds performed using Team Foundation Build:
-  
+
   SolutionRoot = C:\Users\svc-build\AppData\Local\Temp\Demo\Automated Build - Main\Sources
   BuildProjectFolderPath = $/Demo/Main/Source
-  
+
   In order to update files (i.e. check out and subseqeuntly check-in) in the solution
   regardless of which build type is currently running, conditionally  set the
   "SolutionWorkingDirectory" property.

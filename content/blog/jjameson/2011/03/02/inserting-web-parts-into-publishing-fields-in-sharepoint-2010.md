@@ -64,7 +64,7 @@ Consequently, for SharePoint Server 2010, I added the following method to
             if (webPart == null)
             {
                 throw new ArgumentNullException("webPart");
-            }            
+            }
             else if (page == null)
             {
                 throw new ArgumentNullException("page");
@@ -96,7 +96,7 @@ Consequently, for SharePoint Server 2010, I added the following method to
 
                 throw new InvalidOperationException(message);
             }
-            
+
             if (string.IsNullOrEmpty(webPart.ID) == true
                 || webPart.ID.StartsWith(
                     "g_",
@@ -232,7 +232,7 @@ the page content with the desired Web Part:
                     bodyOnlyLayoutUrl);
 
             ...
-			
+
             SharePointPublishingHelper.SetDefaultPageContent(
                 page,
                 defaultSignInPageContent);

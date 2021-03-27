@@ -180,7 +180,7 @@ database files.
        Write-Debug "cacheSizeInGigabytes: $cacheSizeInGigabytes"
        Write-Debug "expirationPeriodInDays: $expirationPeriodInDays"
        Write-Debug "cacheDatabaseName: $cacheDatabaseName"
-   	
+
        $cacheSizeInBytes = $cacheSizeInGigabytes * 1024 * 1024 * 1024
        $webApp = Get-SPWebApplication --Identity $webAppUrl -Debug:$false
        $webApp | Set-SPOfficeWebAppsCache `

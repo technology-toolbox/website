@@ -452,7 +452,7 @@ Note that this requires a few tweaks to the code used to send the email:
         string mailFrom = Settings.Default.ContactFormMailFromAddress;
         string[] mailTo = Settings.Default.ContactFormMailToAddress.Split(
             new char[] { ';' });
-            
+
         using (MailMessage mailMessage = new MailMessage(
             mailFrom,
             mailTo[0],

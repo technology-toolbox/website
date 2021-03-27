@@ -97,7 +97,7 @@ Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
 
 function ConfigureSharePointSearch(
     [Microsoft.SharePoint.Administration.SPIisWebServiceApplicationPool] $appPool,
-    [System.Management.Automation.PSCredential] $crawlCredentials,    
+    [System.Management.Automation.PSCredential] $crawlCredentials,
     [string] $serviceAppName = "Search Service Application",
     [string] $searchDatabaseName = "SearchService",
     [string] $searchServer = $env:COMPUTERNAME,
@@ -126,16 +126,16 @@ function ConfigureSharePointSearch(
     }
 
     Write-Host "Creating $serviceAppName..."
-    
+
     $searchApp = New-SPEnterpriseSearchServiceApplication -Name $serviceAppName `
         -ApplicationPool $appPool -DatabaseName $searchDatabaseName -Debug:$false
 
     Write-Host ("Starting the SharePoint Search Service instance and Search Admin" `
         + " component...")
-        
+
     $adminSearchInstance = Get-SPEnterpriseSearchServiceInstance -Debug:$false |
         Where { $_.Server -match $adminServer }
-        
+
     $admin = $searchApp |
         Get-SPEnterpriseSearchAdministrationComponent -Debug:$false
 
@@ -153,17 +153,17 @@ function ConfigureSharePointSearch(
         -Debug:$false)
 
     Write-Host -NoNewLine "Waiting for Search Admin component to initialize..."
-    
-    While (-not $admin.Initialized) 
+
+    While (-not $admin.Initialized)
     {
         Write-Host -NoNewLine "."
         Start-Sleep -Seconds 5
         $admin = $searchApp |
             Get-SPEnterpriseSearchAdministrationComponent -Debug:$false
     }
-        
+
     Write-Host
-    
+
     Write-Host "Setting the default content access account..."
     $searchApp | Set-SPEnterpriseSearchServiceApplication `
         -DefaultContentAccessAccountName $crawlCredentials.Username `
@@ -193,7 +193,7 @@ function ConfigureSharePointSearch(
     Write-Host "Getting initial topologies..."
     $initialCrawlTopology = $searchApp |
         Get-SPEnterpriseSearchCrawlTopology -Debug:$false
-        
+
     $initialQueryTopology = $searchApp |
         Get-SPEnterpriseSearchQueryTopology -Debug:$false
 
@@ -201,7 +201,7 @@ function ConfigureSharePointSearch(
     Write-Host "Creating new crawl topology..."
     $crawlTopology = $searchApp |
         New-SPEnterpriseSearchCrawlTopology -Debug:$false
-        
+
     $crawlDatabase = Get-SPEnterpriseSearchCrawlDatabase `
         -SearchApplication $searchApp -Debug:$false
 
@@ -209,7 +209,7 @@ function ConfigureSharePointSearch(
     Write-Host "Populating new crawl topology..."
     $crawlInstance = Get-SPEnterpriseSearchServiceInstance -Debug:$false |
         Where { $_.Server -match $crawlServer }
-        
+
     $crawlComponent = New-SPEnterpriseSearchCrawlComponent `
         -CrawlTopology $crawlTopology -CrawlDatabase $crawlDatabase `
         -SearchServiceInstance $crawlInstance -Debug:$false
@@ -219,15 +219,15 @@ function ConfigureSharePointSearch(
     $crawlTopology | Set-SPEnterpriseSearchCrawlTopology -Active -Debug:$false
 
     $initialCrawlTopology.CancelActivate()
-    
+
     Write-Host -NoNewLine "Waiting for initial crawl topology to be inactive..."
-    
+
     Do
     {
         Start-Sleep 5
         Write-Host -NoNewLine "."
     } While ($initialCrawlTopology.State -ne "Inactive")
-            
+
     Write-Host
 
     # Create new query topology
@@ -244,7 +244,7 @@ function ConfigureSharePointSearch(
     Write-Host "Setting index partition to use Property Store database..."
     $indexPartition = Get-SPEnterpriseSearchIndexPartition `
         -QueryTopology $queryTopology -Debug:$false
-        
+
     $indexPartition | Set-SPEnterpriseSearchIndexPartition `
         -PropertyDatabase $propertyDatabase -Debug:$false
 
@@ -252,7 +252,7 @@ function ConfigureSharePointSearch(
     Write-Host "Populating new query topology...."
     $queryInstance = Get-SPEnterpriseSearchServiceInstance -Debug:$false |
         Where { $_.Server -match $queryServer }
-        
+
     $queryComponent = New-SPEnterpriseSearchQueryComponent `
         -QueryTopology $queryTopology -IndexPartition $indexPartition `
         -SearchServiceInstance $queryInstance -Debug:$false
@@ -262,7 +262,7 @@ function ConfigureSharePointSearch(
     $QueryTopology | Set-SPEnterpriseSearchQueryTopology -Active -Debug:$false
 
     Write-Host -NoNewLine "Waiting for initial query topology to be inactive..."
-    
+
     Do
     {
         Start-Sleep 5
@@ -275,7 +275,7 @@ function ConfigureSharePointSearch(
     Write-Host "Removing initial topologies..."
     $initialCrawlTopology |
         Remove-SPEnterpriseSearchCrawlTopology -Confirm:$false -Debug:$false
-        
+
     $initialQueryTopology |
         Remove-SPEnterpriseSearchQueryTopology -Confirm:$false -Debug:$false
 
@@ -299,7 +299,7 @@ function GetServiceAppsAppPool(
         Write-Debug "The service application pool ($appPoolName) already exists."
         return $appPool
     }
-    
+
     Write-Host "Creating service application pool ($appPoolName)..."
 
     Write-Debug "Get service account for application pool ($appPoolUserName)..."
@@ -315,7 +315,7 @@ function GetServiceAppsAppPool(
 
         $appPoolAccount =
             New-SPManagedAccount -Credential $appPoolCredential -Debug:$false
-    } 
+    }
 
     If ($appPoolAccount -eq $null)
     {
@@ -330,7 +330,7 @@ function GetServiceAppsAppPool(
 
     Write-Host -Fore Green ("Successfully created service application pool" `
         + " ($appPoolName).")
-    
+
     return $appPool
 }
 
@@ -343,14 +343,14 @@ function ValidateCredentials(
     $password = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
         [Runtime.InteropServices.Marshal]::SecureStringToBSTR(
             $credentials.Password))
-    
+
     $currentDomain = "LDAP://" + ([ADSI]"").distinguishedName
 
     $domain = New-Object DirectoryServices.DirectoryEntry(
         $currentDomain,
         $credentials.UserName,
         $password)
-    
+
     trap { $script:err = $_ ; continue } &{
         $domain.Bind($true); $script:err = $null }
 
@@ -359,7 +359,7 @@ function ValidateCredentials(
         Write-Host -Fore Red $err.Exception.Message
         Exit 1
     }
-    
+
     Write-Debug "Successfully validated credentials ($($credentials.UserName))."
 }
 
@@ -397,13 +397,13 @@ function Main()
 
     Write-Host ("Please enter the password for the default content access account" `
         + " ($crawlServiceAccount)...")
-        
+
     $crawlCredentials = Get-Credential $crawlServiceAccount
     ValidateCredentials $crawlCredentials
 
     $appPool = GetServiceAppsAppPool $serviceAppsAppPoolName `
         $serviceAppsAppPoolUserName
-        
+
     ConfigureSharePointSearch $appPool $crawlCredentials $serviceAppName `
         $searchDatabaseName $searchServer $adminServer $crawlServer $queryServer
 

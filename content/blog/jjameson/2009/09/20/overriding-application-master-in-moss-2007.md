@@ -85,7 +85,7 @@ namespace Fabrikam.Project1.PublishingLayouts.Web.UI
                 pathTranslated);
 
             Debug.Assert(pageHandler != null, "pageHandler is null");
-            
+
             Page page = pageHandler as Page;
             Debug.Assert(page != null, "Handler is not of type Page.");
 
@@ -109,7 +109,7 @@ namespace Fabrikam.Project1.PublishingLayouts.Web.UI
             }
 
             SPWeb web = SPContext.Current.Web;
-            
+
             if (web == null)
             {
                 Logger.LogWarning(

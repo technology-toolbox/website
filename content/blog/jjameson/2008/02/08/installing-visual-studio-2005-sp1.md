@@ -95,7 +95,7 @@ actually, I just stole the pieces from
 
 ```Batch
 :: This is basically a combination of two of Heath Stewart's blog postings
-:: 
+::
 :: http://blogs.msdn.com/heaths/archive/2007/01/11/workaround-for-error-1718.aspx
 :: http://blogs.msdn.com/heaths/archive/2006/11/28/save-time-and-space-for-vs-2005-sp1-by-disabling-the-patch-cache.aspx
 

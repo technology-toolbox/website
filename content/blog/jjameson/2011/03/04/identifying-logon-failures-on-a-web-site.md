@@ -83,7 +83,7 @@ are found:
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
-    WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")    
+    WScript.Echo("Usage: ListLogonFailureEventsForServer.vbs {server}")
     WScript.Quit(1)
 End If
 
@@ -145,7 +145,7 @@ looking for ASP.NET logon failure events for the specified username:
 Option Explicit
 
 If (WScript.Arguments.Count <> 1) Then
-    WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")    
+    WScript.Echo("Usage: ListLogonFailureEventsForUser.vbs {username}")
     WScript.Quit(1)
 End If
 

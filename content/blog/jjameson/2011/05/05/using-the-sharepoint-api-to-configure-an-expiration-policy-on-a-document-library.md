@@ -47,7 +47,7 @@ using Microsoft.SharePoint;
             // fetched."
             SPList tempFilesLibrary2 =
                 tempFilesLibrary.ParentWeb.Lists[tempFilesLibrary.ID];
-            
+
             SPContentTypeId documentContentTypeId =
                 tempFilesLibrary2.ContentTypes.BestMatch(
                     SPBuiltInContentTypeId.Document);
@@ -56,7 +56,7 @@ using Microsoft.SharePoint;
                 tempFilesLibrary2.ContentTypes[documentContentTypeId];
 
             Debug.Assert(documentContentType != null);
-            
+
             Policy policy = Policy.GetPolicy(documentContentType);
 
             if (policy == null)

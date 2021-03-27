@@ -184,7 +184,7 @@ the following:
 {{< /div-block >}}
 
 ```HTML
-<meta name="description"        
+<meta name="description"
     content="<SharePoint:FieldValue
     FieldName='Comments' runat='server'/>" />
 ```

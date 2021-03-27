@@ -94,7 +94,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
             modalPanelContent.CssClass = "modalPanelContent";
             modalPanelContent.Width = new Unit(400);
             base.ModalPanel.Controls.Add(modalPanelContent);
-            
+
             content = new LiteralControl();
             modalPanelContent.Controls.Add(content);
             content.Text =

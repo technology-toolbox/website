@@ -73,7 +73,7 @@ create a 200 MB VHD:
 ```PowerShell
 $vhdService = Get-WmiObject -Class "Msvm_ImageManagementService" `
     -namespace "root\virtualization"
-    
+
 $vhdService.CreateDynamicVirtualHardDisk(
     "C:\NotBackedUp\VMs\foobar5\foobar5_Log01.vhd",
     200MB)

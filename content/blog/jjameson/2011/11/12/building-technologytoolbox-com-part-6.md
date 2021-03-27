@@ -87,7 +87,7 @@ to download the monthly summary pages from my MSDN blog to a temporary folder.
         static void Main(string[] args)
         {
             Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
-            
+
             const string summaryFolder =
                 @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
 
@@ -245,7 +245,7 @@ my part.
                 "CommentModeration",
                 "Disabled");
 
-            blog.ExtendedProperties.Add(item);            
+            blog.ExtendedProperties.Add(item);
         }
 ```
 
@@ -326,7 +326,7 @@ HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
                     Debug.Assert(postHeading != null);
 
                     post.Title = HttpUtility.HtmlDecode(postHeading.InnerText);
-                    
+
                     HtmlNode postLink = postHeading.SelectSingleNode("a");
                     Debug.Assert(postHeading != null);
 
@@ -521,7 +521,7 @@ first step is to download an offline copy of the post using the
 
             buffer.Append("</div>");
             buffer.Append("</blockquote>");
-            
+
             HtmlNode postContent = document.DocumentNode.SelectSingleNode(
                     "//div[@class='post-content user-defined-markup']");
 
@@ -1040,7 +1040,7 @@ from the **FillPostCategories** method:
                 }
             }
         }
-        
+
         private static string MapTagToCategory(
             string tag)
         {
@@ -1300,7 +1300,7 @@ scraping the fake Ajax request used to retrieve the comments:
                 feedbackHtml = feedbackHtml.Replace(@"\/", "/");
                 feedbackHtml = feedbackHtml.Replace(@"\'", "'");
                 feedbackHtml = feedbackHtml.Replace("&#39;", "'");
-                                
+
                 feedbackHtml = feedbackHtml.Replace(
                     @"\r\n",
                     Environment.NewLine);

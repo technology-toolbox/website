@@ -527,7 +527,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
         /// (e.g. ".../404.aspx?aspxerrorpath=/blog/jjameson/...") depending on
         /// whether redirectMode="ResponseRewrite" or
         /// redirectMode="ResponseRedirect".
-        /// 
+        ///
         /// However, when a native IIS7 request redirects to this page (e.g.
         /// when requesting "/foobar") then Request.Url is something like
         // ".../Errors/404.aspx?404;https://www.technologytoolbox.com:80/foobar".

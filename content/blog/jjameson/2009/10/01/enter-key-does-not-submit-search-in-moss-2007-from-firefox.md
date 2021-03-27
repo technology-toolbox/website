@@ -123,7 +123,7 @@ function replaceOnKeyPress()
 {
   var theFunction = "S5F221A6C_Submit();";
   var theInputID = "ctl00_siteSearchBoxEx_S5F221A6C_InputKeywords";
- 
+
   var txt = document.getElementById(theInputID);
   var browser = navigator.appName;
   if (txt && (browser == "Netscape"))
@@ -139,7 +139,7 @@ function replaceOnKeyPress()
     }
   }
 }
- 
+
 replaceOnKeyPress();
 </script>
 ```

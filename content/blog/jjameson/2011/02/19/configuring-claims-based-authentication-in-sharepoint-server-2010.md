@@ -209,7 +209,7 @@ In this step, the Web application and initial site collection are created.
        $appPoolCredential = Get-Credential $appPoolUserName
 
        $appPoolAccount = New-SPManagedAccount -Credential $appPoolCredential
-   } 
+   }
 
    $windowsAuthProvider = New-SPAuthenticationProvider
    $formsAuthProvider = New-SPAuthenticationProvider `
@@ -319,7 +319,7 @@ the site collection must also be configured to enable anonymous access.
        {
            Write-Debug `
                "Anonymous access is already enabled on site ($($web.Url))."
-               
+
            return;
        }
 
@@ -330,7 +330,7 @@ the site collection must also be configured to enable anonymous access.
 
        $web.AnonymousPermMask64 = $anonymousPermissionMask;
        $web.Update();
-       
+
        Write-Host -Fore Green `
            "Successfully enabled anonymous access on site ($($web.Url))."
    }

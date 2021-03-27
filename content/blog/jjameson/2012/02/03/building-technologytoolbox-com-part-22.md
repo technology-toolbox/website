@@ -274,7 +274,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 
         private static bool __initialized = false;
         private static object __lockObject = new object();
-        
+
         protected override void OnLoad(
             EventArgs e)
         {
@@ -430,7 +430,7 @@ namespace TechnologyToolbox.Caelum.Website
             if (enableAnalytics == true)
             {
                 string pattern = Settings.Default.AnalyticsEnvironmentFilter;
-                
+
                 Logger.LogDebug(
                     CultureInfo.CurrentCulture,
                     "Checking if host ({0}) matches analytics environment"

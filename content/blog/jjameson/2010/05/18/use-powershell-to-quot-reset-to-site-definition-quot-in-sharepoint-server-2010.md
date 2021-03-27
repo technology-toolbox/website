@@ -63,7 +63,7 @@ $sitesToReset |
         $web = Get-SPWeb $_
 
         $DebugPreference = "Continue"
-        
+
         Write-Debug "Reghosting all pages in site ($($web.Url))..."
         $web.RevertAllDocumentContentStreams()
         $web.Dispose()

@@ -93,7 +93,7 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
             color: #FFF;
             padding: 8px 10px;
             border-bottom-width: 0;
-        }        
+        }
         table.displayTable tr.altRow {
             background: #F4F4F4;
         }
@@ -105,7 +105,7 @@ Here is the sample ASP.NET page that I created this morning to demonstrate this:
         }
         table.constrainedTable th.nameColumn {
             width: 140px;
-        }        
+        }
         table.constrainedTable td {
             overflow: hidden;
             -o-text-overflow: ellipsis; /* Opera */
@@ -153,7 +153,7 @@ table.constrainedTable {
 }
 table.constrainedTable th.nameColumn {
     width: 140px;
-}        
+}
 table.constrainedTable td {
     overflow: hidden;
     -o-text-overflow: ellipsis; /* Opera */
@@ -290,7 +290,7 @@ namespace Fabrikam.Demo.Web.UI
                         + " sapien, dignissim ultrices semper et, mollis"
                         + " interdum sem. "
                 });
-            
+
             grid.DataSource = sampleData;
             grid.DataBind();
         }

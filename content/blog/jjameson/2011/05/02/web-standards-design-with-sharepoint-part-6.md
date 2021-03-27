@@ -186,10 +186,10 @@ Here's the code I wrote to create automatically create and configure the new
                 true);
 
             StringCollection unitOfMeasureChoices = new StringCollection();
-            
+
             const string defaultUnitOfMeasureChoice = "/ lb.";
             unitOfMeasureChoices.Add(defaultUnitOfMeasureChoice);
-            
+
             unitOfMeasureChoices.Add("ea.");
 
             SPFieldChoice unitOfMeasureField =
@@ -263,7 +263,7 @@ list:
             SharePointViewHelper.EnsureViewFields(
                 allItems,
                 fields);
-            
+
             // Configure "Most Recent Specials" view
             SPView mostRecentSpecials = SharePointViewHelper.EnsureView(
                 list,
@@ -395,7 +395,7 @@ existing **ConfigureHomeSiteDefaultPage** method that I created previously:
                 page,
                 "Published by Tugboat.Web.HomeSiteConfiguration"
                     + " feature.");
-            
+
         }
 ```
 

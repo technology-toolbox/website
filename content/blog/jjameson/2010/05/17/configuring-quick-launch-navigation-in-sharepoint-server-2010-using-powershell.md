@@ -208,7 +208,7 @@ function EnsureNavigationNode(
     [string] $url)
 {
     Write-Debug "Ensuring navigation node ($title - $url)..."
-        
+
     [Microsoft.SharePoint.Navigation.SPNavigationNode] $node =
         $nodes | Where-Object {$_.Url -eq $url}
 
@@ -275,7 +275,7 @@ function ImportQuickLaunchNavigation(
     [xml] $navigationXml)
 {
     Write-Debug "Importing quick launch navigation for site ($($web.Url))..."
-    
+
     $nodes = $web.Navigation.QuickLaunch
 
     $navElements = $navigationXml.SelectNodes(

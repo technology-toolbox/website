@@ -131,7 +131,7 @@ approved version):
             }
 
             // Note: comments and contentCategory may be null
-            
+
             SPLogger.Log(
                 LogCategory.Configuration,
                 TraceSeverity.Medium,
