@@ -43,7 +43,7 @@ instead). The scope for the first sprint is limited to the following:
 - Office Web Apps to enable people to view, create, and edit Office documents
 - Search (initial configuration)
 
-* * *
+***
 
 {{< article-block-start "document numbered-headings" >}}
 

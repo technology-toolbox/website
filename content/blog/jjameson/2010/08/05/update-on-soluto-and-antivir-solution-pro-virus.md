@@ -61,7 +61,7 @@ probably not all that interesting to most people, but it does demonstrate the
 level of pride these folks have in their product as well as the confidence they
 have in their development team.
 
-> * * *
+> ***
 > 
 > **From:** Roee Adler\
 > **Sent:** Sunday, August 01, 2010 11:36 AM\
@@ -108,7 +108,7 @@ have in their development team.
 > This contact request was sent from [MSDN Blogs](http://blogs.msdn.com/) by
 > Roee Adler without sharing your email address.
 > 
-> * * *
+> ***
 > 
 > **From:** Jeremy Jameson\
 > **Sent:** Monday, August 02, 2010 4:04 PM\
@@ -138,7 +138,7 @@ have in their development team.
 > \
 > Jeremy
 > 
-> * * *
+> ***
 > 
 > **From:** Roee Adler\
 > **Sent:** Monday, August 02, 2010 8:06 AM\
@@ -179,7 +179,7 @@ have in their development team.
 > Soluto\
 > [...]
 > 
-> * * *
+> ***
 > 
 > **From:** Jeremy Jameson\
 > **Sent:** Tuesday, August 03, 2010 1:35 AM\
@@ -233,7 +233,7 @@ have in their development team.
 > \
 > Jeremy
 > 
-> * * *
+> ***
 > 
 > **From:** Roee Adler\
 > **Sent:** Tuesday, August 03, 2010 9:20 AM\
