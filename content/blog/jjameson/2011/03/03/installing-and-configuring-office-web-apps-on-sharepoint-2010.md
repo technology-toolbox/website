@@ -90,7 +90,7 @@ HTTPS.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Skip this section for environments that are not configured with SSL
 > certificates (e.g. development environments).
 
@@ -113,7 +113,7 @@ HTTPS.
    {{< div-block "note" >}}
 
    > **Note**
-   > 
+   >
    > Since users of the Fabrikam extranet site are automatically redirected from
    > http:// to https:// during sign in (via the
    > [Claims Login Form Web Part](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)),
@@ -138,12 +138,12 @@ files (at least in a production environment).
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > You must start a new instance of the SharePoint 2010 Management Shell after
 > installing the Office Web Apps in order to use the new PowerShell cmdlets
 > (e.g.
 > [Set-SPOfficeWebAppsCache](http://technet.microsoft.com/en-us/library/ff608181.aspx)).
-> 
+>
 > Also note that you may need to wait a few minutes (after installing Office Web
 > Apps or rebuilding the Web application) before performing the following
 > procedure (for the SharePoint timer job to configure the cache on the site

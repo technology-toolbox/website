@@ -93,7 +93,7 @@ Remove-SPSite http://fabrikam-local/ -Confirm:$false
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The “Delete Site Collections.ps1” script will delete all of the site
 > collections created by the “Create Site Collections.ps1” script, so I
 > typically just use the Remove-SPSite cmdlet directly (as illustrated above).

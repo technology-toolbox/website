@@ -37,7 +37,7 @@ internal DLs:
 > Even if you enable the Document Center template on a "Publishing with
 > Workflow" site, it still does not show up when you attempt to create a
 > subsite.
-> 
+>
 > What is really strange is that I when also enable the Records Center template,
 > then I have the option to create a Records Center when creating a subsite. So
 > there either must be some restrictions on where a Document Center can be used

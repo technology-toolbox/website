@@ -140,7 +140,7 @@ consider going live without enabling disk-based caching.
 {{< div-block "note update" >}}
 
 > **Update (2009-03-28)**
-> 
+>
 > It occurred to me this morning that my previous statement about always
 > enabling disk-based caching could be misconstrued. If you don't want to enable
 > disk-based caching on your local VM to expedite your development activities

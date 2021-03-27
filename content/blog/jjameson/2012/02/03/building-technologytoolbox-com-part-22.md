@@ -143,7 +143,7 @@ To resolve this, I changed the class to inherit from **Control** (rather than
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > I've used other techniques in the past to eliminate extraneous markup --
 > specifically overriding the **RenderBeginTag** and **RenderEndTag** methods.
 > In a followup post I will explain why I used a different approach for this
@@ -234,14 +234,14 @@ little concerned with this "junk" data being included in the analytics reports.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > While researching how other people handled this issue with development and
 > test environments, I noticed a number of folks recommending that you filter
 > the reports based on the domain name. For example, for Technology Toolbox, I
 > could filter out non-Production data by only looking at the
 > www.technologytoolbox.com domain name (e.g. exclude
 > www-dev.technologytoolbox.com and www-test.technologytoolbox.com).
-> 
+>
 > I experimented with that approach a little but quickly dismissed it due to the
 > enormous effort this would require to customize each of the default reports
 > provided by Google.

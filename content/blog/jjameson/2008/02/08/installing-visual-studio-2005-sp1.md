@@ -50,7 +50,7 @@ Looking at the event log, I noticed the following errors:
 > The installation of C:\WINDOWS\Installer\49e8e21.msp is not permitted due to
 > an error in software restriction policy processing. The object cannot be
 > trusted.
-> 
+>
 > Event Type: Error\
 > Event Source: MsiInstaller\
 > Event Category: None\
@@ -64,7 +64,7 @@ Looking at the event log, I noticed the following errors:
 > 1718.File C:\WINDOWS\Installer\49e8e21.msp did not pass the digital signature
 > check. For more information about a possible resolution for this problem, see
 > [http://go.microsoft.com/fwlink/?LinkId=73863](http://go.microsoft.com/fwlink/?LinkId=73863).
-> 
+>
 > Event Type: Error\
 > Event Source: MsiInstaller\
 > Event Category: None\

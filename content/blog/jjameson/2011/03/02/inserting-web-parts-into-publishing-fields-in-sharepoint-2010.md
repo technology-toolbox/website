@@ -260,7 +260,7 @@ the page content with the desired Web Part:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The embedded CSS styles shown in the default page content above (e.g. margins,
 > floats, and widths) are only intended for demonstration purposes. While I
 > would have preferred to use something like the 960 Grid System instead, I was

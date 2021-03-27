@@ -36,7 +36,7 @@ linkHref="http://www.u2u.net/Tools/wincamlquerybuilder/CamlQueryBuilder.aspx" >}
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Don't be put off by title of the page referenced above. I'm not sure why the
 > U2U folks haven't updated the page title to reflect the fact that this works
 > with SharePoint 2010.

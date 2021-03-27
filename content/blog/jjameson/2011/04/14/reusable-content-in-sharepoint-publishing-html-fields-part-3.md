@@ -209,7 +209,7 @@ use the specified SPWeb parameter to access the **Reusable Content** list.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Also note that, unlike the original **HtmlEditorInternal** implementation, I
 > don't leverage any caching when fetching **Reusable Content** list items.
 > Consequently, you should be wary of using this implementation in very high
@@ -337,7 +337,7 @@ can scrap my custom code and go with the out-of-the-box SharePoint code instead
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You must be running Visual Studio 2010 Service Pack 1 in order to run my
 > SharePoint 2010 unit tests (in order to avoid bugs in 64-bit environments like
 > the one I described in a

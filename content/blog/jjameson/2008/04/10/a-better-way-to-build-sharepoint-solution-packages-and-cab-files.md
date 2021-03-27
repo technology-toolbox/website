@@ -102,15 +102,15 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 {{< div-block "note update" >}}
 
 > **Update (2008-04-14)**
-> 
+>
 > When I originally wrote this blog post last Friday, I specified the following:
-> 
+>
 > > `Inputs="@(Compile);@(None);@(Content);@(ProjectReference);"`
-> 
+>
 > However, early this morning I discovered that there are a couple of rare
 > scenarios where the WSP/CAB file is not rebuilt when specifying those inputs
 > -- even though the actual assembly is recompiled.
-> 
+>
 > The first scenario is due to project references. If you dive deep into
 > Microsoft.Common.targets, you'll find targets like
 > **SplitProjectReferencesByType**, **ResolveProjectReferences**,
@@ -123,13 +123,13 @@ point me in the right direction. [Thanks for the tip, Cliff.]
 > WSP/CAB file, but also includes the assembly from ProjectB, then a minor
 > change in ProjectB would first rebuild ProjectB, and then ProjectA, but would
 > not rebuild the corresponding WSP/CAB file.
-> 
+>
 > The second scenario that I discovered is when your project specifies embedded
 > resources. Unfortunately, the project that I started with last Friday did not
 > include embedded resources and consequently I did not notice that additional
 > item group until this morning when I was hunting around in
 > Microsoft.Common.targets.
-> 
+>
 > The updated inputs below ensure that the WSP/CAB is built whenever the project
 > assembly is built, by replacing `@(ProjectReference)` with
 > `$(OutDir)$(TargetFileName)` -- which also made `@(Compile)` superfluous. In

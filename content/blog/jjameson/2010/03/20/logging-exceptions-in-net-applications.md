@@ -529,7 +529,7 @@ Internet-facing site).
 {{< div-block "note update" >}}
 
 > **Update (2011-01-31)**
-> 
+>
 > I've attached a sample Visual Studio solution that demonstrates the **Logger**
 > class.
 

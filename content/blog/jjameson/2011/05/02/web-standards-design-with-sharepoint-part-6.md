@@ -31,7 +31,7 @@ in SharePoint 2010.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You can achieve similar results in Microsoft Office SharePoint Server (MOSS)
 > 2007 using the
 > **[DataViewWebPart](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.webpartpages.dataviewwebpart%28v=office.12%29.aspx)**.
@@ -487,7 +487,7 @@ described below.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.

@@ -23,9 +23,9 @@ attachment:
 {{< div-block-start "note update" >}}
 
 > **Update (2010-12-03)**
-> 
+>
 > If you are using gated check-ins, be sure to also read my follow-up post:
-> 
+>
 > {{< reference title="Bypassing a Gated Check-in in TFS 2010" linkHref="/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010" >}}
 
 {{< div-block-end >}}

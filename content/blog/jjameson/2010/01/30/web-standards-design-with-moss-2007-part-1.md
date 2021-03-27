@@ -90,7 +90,7 @@ out-of-the-box with its table-based layout).
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If you choose to use the 960 Grid System, I also highly recommend leveraging
 > the [960 Gridder](http://gridder.andreehansson.se) as well. This combination
 > makes the task of creating great looking Web pages much easier (even for
@@ -598,7 +598,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 {{< div-block "note update" >}}
 
 > **Update (2010-12-02)**
-> 
+>
 > Part 2 in this series in _finally_ available ;-)\
 > \
 > **Web Standards Design with SharePoint, Part 2**\
@@ -609,7 +609,7 @@ Don't fret, I'll cover many more details of Web standards design and SharePoint
 {{< div-block "note update" >}}
 
 > **Update (2011-01-31)**
-> 
+>
 > Part 3 in this series provides a sample SharePoint master page and various
 > page layouts based on the 960 Grid System.\
 > \

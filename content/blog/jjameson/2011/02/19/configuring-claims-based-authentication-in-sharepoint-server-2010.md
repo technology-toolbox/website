@@ -153,7 +153,7 @@ added to to the appropriate database roles.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Database access must be granted to both the service account used for the
 > Fabrikam Web application and the SharePoint farm account. If the SharePoint
 > farm account does not have access to the database, the Security Token Service
@@ -165,7 +165,7 @@ added to to the appropriate database roles.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The reason the database roles are different between the two service accounts
 > is because the SharePoint farm account only needs permissions to validate
 > credentials and determine role membership, whereas the Fabrikam Web
@@ -364,7 +364,7 @@ necessary to modify the Web.config files for the following sites:
    {{< div-block "note important" >}}
 
    > **Important**
-   > 
+   >
    > Before you make changes to the Web.config file, make a copy of it by using
    > a different name (for example, "Web - Copy.config"), so that if a mistake
    > is made in the file, you can delete it and use the original file.
@@ -375,7 +375,7 @@ necessary to modify the Web.config files for the following sites:
    {{< div-block "note" >}}
 
    > **Note**
-   > 
+   >
    > If you see a dialog box that says that Windows cannot open the file, click
    > **Select the program from a list**, and then click **OK**. In the **Open
    > With** dialog box, click **Notepad**, and then click **OK**.
@@ -394,7 +394,7 @@ necessary to modify the Web.config files for the following sites:
       {{< div-block-start "note important" >}}
 
       > **Important**
-      > 
+      >
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
 
@@ -459,7 +459,7 @@ necessary to modify the Web.config files for the following sites:
    {{< div-block "note important" >}}
 
    > **Important**
-   > 
+   >
    > Be sure to replace the **{databaseServer}** placeholder in the connection
    > string with the name of the database server.
 
@@ -485,7 +485,7 @@ necessary to modify the Web.config files for the following sites:
       {{< div-block-start "note important" >}}
 
       > **Important**
-      > 
+      >
       > Be sure to replace the **{databaseServer}** placeholder in the
       > connection string with the name of the database server.
 
@@ -502,7 +502,7 @@ necessary to modify the Web.config files for the following sites:
       {{< div-block-start "note warning" >}}
 
       > **Warning**
-      > 
+      >
       > Do not overwrite any existing entries in this Web.config file.
 
       {{< div-block-end >}}
@@ -570,9 +570,9 @@ both Forms-Based Authentication and Windows authentication.
    {{< div-block-start "note" >}}
 
    > **Note**
-   > 
+   >
    > This is discussed in more detail in the following blog post:
-   > 
+   >
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
 
    {{< div-block-end >}}

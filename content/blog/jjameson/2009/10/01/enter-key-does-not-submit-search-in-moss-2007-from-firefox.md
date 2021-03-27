@@ -147,7 +147,7 @@ replaceOnKeyPress();
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > While this hack was verified to fix the problem in Firefox, it is somewhat
 > brittle due to the need to specify the unique identifier in the script (see my
 > comments in the server-side comment above).

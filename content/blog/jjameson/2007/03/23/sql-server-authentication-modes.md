@@ -34,53 +34,53 @@ reason, chooses to use SQL Authentication over Windows Authentication):
 Here is some info from MSDN:
 
 > **SQL Server Authentication Modes**
-> 
+>
 > Microsoft® SQL Server™ can operate in one of two security (authentication)
 > modes:
-> 
+>
 > - Windows Authentication Mode (Windows Authentication)\
 >   Windows Authentication mode allows a user to connect through a Microsoft
 >   Windows NT® 4.0 or Windows® 2000 user account.
 > - Mixed Mode (Windows Authentication and SQL Server Authentication)
 > - **Security Note** When possible, use Windows Authentication.
-> 
+>
 > ...
-> 
+>
 > Windows Authentication has certain benefits over SQL Server Authentication,
 > primarily due to its integration with the Windows NT 4.0 and Windows 2000
 > security system. Windows NT 4.0 and Windows 2000 security provides more
 > features, such as secure validation and encryption of passwords, auditing,
 > password expiration, minimum password length, and account lockout after
 > multiple invalid login requests.
-> 
+>
 > ...
-> 
+>
 > SQL Server Authentication is provided for backward compatibility because
 > applications written for SQL Server version 7.0 or earlier may require the use
 > of SQL Server logins and passwords. [...]
-> 
+>
 > ...
-> 
+>
 > Even though Windows Authentication is recommended, SQL Server Authentication
 > may be required for connections with clients other than Windows NT 4.0 and
 > Windows 2000 clients; it may also be necessary for legacy applications.
-> 
+>
 > Pasted from
 > &lt;[http://msdn.microsoft.com/library/en-us/adminsql/ad\_security\_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
-> 
+>
 > Windows authentication is more secure than SQL authentication for the
 > following reasons:
-> 
+>
 > - Credentials are managed for you and the credentials are not transmitted over
 >   the network.
 > - You avoid embedding user names and passwords in connection strings.
 > - Logon security improves through password expiration periods, minimum
 >   lengths, and account lockout after multiple invalid logon requests. This
 >   mitigates the threat from dictionary attacks.
-> 
+>
 > Pasted from
 > &lt;[http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp](http://msdn.microsoft.com/practices/compcat/default.aspx?pull=/library/en-us/dnnetsec/html/SecNetch12.asp)&gt;
-> 
+>
 > I remember speaking to a SQL Server Program Manager a few years ago at a
 > session where he stated that as of SQL Server [2000] SP3 (and some specific
 > version of MDAC which I don't recall) the authentication between the client

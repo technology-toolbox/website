@@ -189,7 +189,7 @@ the performance impact as the number of work items grows large.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > There appears to be a bug in WSS v3 (and MOSS 2007) where the Web Parts on the
 > Project Summary page are not configured with the correct views after creating
 > a new site from the attached site template. Consequently you will need to
@@ -203,7 +203,7 @@ the performance impact as the number of work items grows large.
 {{< div-block "note update" >}}
 
 > **Update (2008-04-08)**
-> 
+>
 > The issue noted below by Dragan has been corrected. The fix is described in
 > [a subsequent post](/blog/jjameson/2008/04/08/creating-a-site-template-in-moss-2007-that-works-in-wss-v3).
 > However, as I originally suspected might be the case, the KPI images that I

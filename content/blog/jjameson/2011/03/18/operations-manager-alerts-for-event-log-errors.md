@@ -120,19 +120,19 @@ Repeat the process to create a similar alert for errors in the System event log.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > If you do not specify any fields in the Alert Suppression dialog, then you may
 > receive numerous alerts within a short period of time (for example, when
 > SharePoint Server 2010 floods the Application event log due to an issue with
 > least-privilege configuration).
-> 
+>
 > When this occurs, Operations Manager will detect the high frequency of alerts
 > and temporarily suspend the notification, and display a different alert
 > instead:
-> 
+>
 > **Alert rule:** Alert generation was temporarily suspended due to too many
 > alerts.
-> 
+>
 > **Alert description:** A rule has generated 50 alerts in the last 60 seconds.
 > Usually, when a rule generates this many alerts, it is because the rule
 > definition is misconfigured. Please examine the rule for errors. In order to
@@ -143,7 +143,7 @@ Repeat the process to create a similar alert for errors in the System event log.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The reason why I choose to set the **Severity** to **Warning** (instead of the
 > default -- **Critical**) is so that when an event log error generates a
 > similar alert in one of the other management packs, I immediately focus on the

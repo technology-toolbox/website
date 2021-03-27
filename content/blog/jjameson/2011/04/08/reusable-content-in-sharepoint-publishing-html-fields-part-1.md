@@ -100,7 +100,7 @@ title="Figure 4: Page with missing content (due to \"Pending\" status in Reusabl
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > By default, the **Reusable Content** list is configured for content approval.
 > Consequently when you add list items (either programmatically or through the
 > site), the **Approval Status** defaults to **Pending**. In order for users

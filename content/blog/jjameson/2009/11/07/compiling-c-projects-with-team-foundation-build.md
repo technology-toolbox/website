@@ -91,41 +91,41 @@ That's when I discovered the following from the release notes for the SDK:
 {{< div-block "fst-italic" >}}
 
 > #### 5.1.1 VCBuild fails to compile or upgrade projects
-> 
+>
 > In order for VCBuild to run properly, vcprojectengine.dll needs to be
 > registered. If vcprojectengine.dll is not registered, VCBuild.exe will fail
 > with errors such as:
-> 
+>
 > On compile:
-> 
+>
 > {{< sample-block >}}
-> 
+>
 > warning MSB3422: Failed to retrieve VC project information through the VC
 > project engine object model. System error code: 127.
-> 
+>
 > {{< /sample-block >}}
-> 
+>
 > On upgrade:
-> 
+>
 > {{< sample-block >}}
-> 
+>
 > Failed to upgrade project file 'foo.vcproj'. Please make sure the file exists
 > and is not write-protected.
-> 
+>
 > {{< /sample-block >}}
-> 
+>
 > To workaround this issue, vcprojectengine.dll must be manually registered.
 > From a Windows SDK command line window (as administrator in Vista:
-> 
+>
 > On an X86 machine, run:
-> 
+>
 > ```Console
 > cd %mssdk%\VC\bin
 > regsvr32 vcprojectengine.dll
 > ```
-> 
+>
 > On an X64 machine, run:
-> 
+>
 > ```Console
 > cd %mssdk%\VC\bin\X64
 > regsvr32 vcprojectengine.dll

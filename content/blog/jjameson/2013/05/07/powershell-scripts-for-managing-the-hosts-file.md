@@ -23,7 +23,7 @@ You may have noticed the Add-Hostnames.ps1 script in my
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > In the Fabrikam Extranet solution, the "Create Web Application.ps1" script
 > checks if the environment is configured to use
 > [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com) and,
@@ -86,9 +86,9 @@ www-local.tugboatcoffee.com                                 127.0.0.1
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You can download these scripts from my Toolbox repository on GitHub:
-> 
+>
 > [https://github.com/jeremy-jameson/Toolbox](https://github.com/jeremy-jameson/Toolbox)
 
 {{< /div-block >}}

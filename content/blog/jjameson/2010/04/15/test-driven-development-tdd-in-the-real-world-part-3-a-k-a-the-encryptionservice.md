@@ -380,7 +380,7 @@ namespace Fabrikam.Demo.Security.DeveloperTests
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > When doing TDD, we typically want to work in very small increments (i.e. get
 > our existing tests to pass before adding more complexity). However, in this
 > case, it makes sense to add a couple more failing unit tests (as well as
@@ -511,7 +511,7 @@ now have four failing unit tests (instead of just the two that we had before).
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If you tend to run your unit tests in Visual Studio using the **Test List
 > Editor** (like I do) then I recommend adding the **Full Class Name** column to
 > the view (in order to resolve any ambiguity between unit tests and easily
@@ -880,7 +880,7 @@ no, then we'll need to update the old unit tests to pass in `null` for the
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Whenever you are changing existing unit tests (for the purposes of refactoring
 > or other reasons), be careful not to mistakenly change the intent of the unit
 > test -- unless, of course, the unit test fails because of an _expected_ change

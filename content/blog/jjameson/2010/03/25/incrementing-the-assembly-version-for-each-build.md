@@ -41,16 +41,16 @@ Here was my response:
 > pre-build event, I definitely don't recommend it. Doing so would cause the
 > version to increment each and every time \*any\* member of the Development
 > team builds the solution.
-> 
+>
 > I suppose you could simply tell developers not to check-in the updated
 > AssemblyVersionInfo.cs file, but there are definitely better ways to
 > accomplish the desired outcome.
-> 
+>
 > Rather, I recommend incrementing the AssemblyFileVersionAttribute as part of
 > your automated build process. In other words, each time an "official" build is
 > created on the Build Server, the AssemblyVersionInfo.cs file is automatically
 > checked out from source control, incremented, and checked back in.
-> 
+>
 > Obviously, the actual implementation of this process will vary depending on
 > your particular toolset. For example, if you are using Team Foundation Server,
 > you can setup a custom task that increments the AssemblyFileVersionAttribute
@@ -72,10 +72,10 @@ configuration management system and build process.
 {{< div-block-start "note update" >}}
 
 > **Update (2010-11-29)**
-> 
+>
 > This post was originally created for TFS 2005/2008. Refer to the following if
 > you are using TFS 2010:
-> 
+>
 > {{< reference title="Incrementing the Assembly Version for Each Build in TFS 2010" linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" >}}
 
 {{< div-block-end >}}
@@ -129,13 +129,13 @@ the assembly version files and subsequently check them back in:
 {{< div-block "note update" >}}
 
 > **Update (2010-05-05)**
-> 
+>
 > Note that the path to the TFS command-line utility
 > [has changed for a TFS 2010 build server](/blog/jjameson/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds).
-> 
+>
 > To use the same technique on a TFS 2010 build server, specify the following
 > instead:
-> 
+>
 > ```XML
 >   <PropertyGroup>
 >     <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>

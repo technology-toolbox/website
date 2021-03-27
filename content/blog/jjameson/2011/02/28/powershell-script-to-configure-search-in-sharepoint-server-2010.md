@@ -74,7 +74,7 @@ caption="Service accounts related to Search in SharePoint Server 2010" >}}
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > For each service account listed in the table above, corresponding "-dev" and
 > "-test" service accounts need to be created for the Development and Test
 > environments. This allows the Development and Test teams to install and

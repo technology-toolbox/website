@@ -71,12 +71,12 @@ command:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You must run the **File.BatchNewTeamProject** command directly on the
 > TFS/SharePoint Server (which means you must have previously installed Team
 > Explorer or Visual Studio on the server) -- not from a remote client with
 > Visual Studio.
-> 
+>
 > If you attempt to run it from a remote client, you'll get an error that
 > suggests you specified an invalid value for the SharePoint Web application
 > (i.e. the `<ProjectSiteWebApplication>` element). Apparently, this command
@@ -214,14 +214,14 @@ After the feature finished activating, I once again browsed to my project site
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Even though the dashboards have been created, you still have some work to do
 > (assuming you want the dashboards and new TFS Web Parts to show accurate
 > information). This is due to the fact that the **Scenario** work item type was
 > renamed to **User Story** in MSF Agile v5, and consequently, the queries
 > specified in some of the dashboard Web Parts and Excel reports need to be
 > updated accordingly.
-> 
+>
 > I'll cover these configuration changes in a separate post.
 
 {{< /div-block >}}

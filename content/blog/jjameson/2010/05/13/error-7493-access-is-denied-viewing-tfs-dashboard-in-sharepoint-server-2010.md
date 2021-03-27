@@ -27,7 +27,7 @@ used to render the dashboards:
 
 > An error occurred while accessing application id TFS from Secure Store
 > Service. The following connections failed to refresh:
-> 
+>
 > TfsOlapReport
 
 {{< /div-block >}}

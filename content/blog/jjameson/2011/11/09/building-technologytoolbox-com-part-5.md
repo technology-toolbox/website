@@ -40,7 +40,7 @@ should look good "naked" -- in other words, without any CSS rules applied:
 > ...with no distracting layout, the meaningful structure of your naked content
 > becomes clear: Visitors can more easily see headings and hierarchy, and they
 > can more easily identify paragraphs, quotations, and lists.
-> 
+>
 > Such meaningful markup and structure simplifies design. Everyone will benefit
 > from an altogether simpler user experience, one that will be as easy to
 > navigate on any device from a large monitor to a small-screen mobile phone.
@@ -93,11 +93,11 @@ is when I discovered the hAtom 0.1 microformat:
 
 > hAtom is a microformat for content that can be syndicated, primarily but not
 > exclusively weblog postings. [...]
-> 
+>
 > ...
-> 
+>
 > The hAtom schema consists of the following:
-> 
+>
 > - hfeed (**`hfeed`**). optional.
 >   - **`feed category`**. optional. keywords or phrases, using
 >     **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
@@ -116,7 +116,7 @@ is when I discovered the hAtom 0.1 microformat:
 > **[rel-bookmark](http://microformats.org/wiki/rel-bookmark "rel-bookmark")**.
 >     - tags. optional. keywords or phrases, using
 >       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
-> 
+>
 > <cite>-- <a
 > href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
 > </cite>
@@ -216,14 +216,14 @@ according to the hAtom schema (e.g. `<li class="published">`).
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > At this point, I have deliberately deviated from the
 > [datetime-design-pattern](http://microformats.org/wiki/datetime-design-pattern "datetime-design-pattern")
 > for the publication date (i.e. `<li class="published">`) due to the known
 > accessibility issues with the Datetime Design Pattern (i.e. using an `<abbr>`
 > element to represent the date/time with the `title` attribute containing the
 > ISO8601 datetime value).
-> 
+>
 > Instead, I chose to use a simpler format based on the
 > [Value Class Pattern](http://microformats.org/wiki/value-class-pattern).
 
@@ -330,7 +330,7 @@ id="blogPost">` instead of `<div id="blogHome">`).
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > I like to specify unique "container" elements like this for all pages in a Web
 > application (e.g. `<div id="companyHome">`). Even though you typically want
 > CSS rules to be very generic (and thus apply to all pages), there may be times

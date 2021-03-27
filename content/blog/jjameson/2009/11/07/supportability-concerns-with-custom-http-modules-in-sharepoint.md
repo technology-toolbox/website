@@ -52,10 +52,10 @@ following on MSDN:
 {{< div-block "fst-italic" >}}
 
 > #### Support Details
-> 
+>
 > A HTTP module assembly can be installed in the Web application's \bin
 > directory or in the global assembly cache.
-> 
+>
 > Because an HTTP module is always called as part of the page processing
 > pipeline, a poorly designed or faulty module can have a detrimental effect on
 > performance or perceived stability of the environment. Thoroughly test each

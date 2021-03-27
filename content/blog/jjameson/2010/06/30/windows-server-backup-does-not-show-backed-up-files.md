@@ -25,25 +25,25 @@ Here's an email that I sent last month regarding an issue I discovered after
 upgrading one of my servers to Windows Server 2008 R2:
 
 > ***
-> 
+>
 > **From:** Jeremy Jameson\
 > **Sent:** Friday, May 21, 2010 11:00 AM\
 > **To:** [...]\
 > **Subject:** Windows Server Backup: "Select Items to Recover" does not show
 > backed up files
-> 
+>
 > On a server running Windows Server 2008 R2, I have completed a backup with the
 > following options:
-> 
+>
 > - Backup items: Selected files (C:\BackedUp\)
 > - Files excluded: None
 > - Advanced option: VSS Copy Backup
 > - Backup destinations: Local Disk (D:) -- using the **Back up to a volume**
 >   option
-> 
+>
 > According to the backup log file, all of the files in the specified location
 > are successfully backed up:
-> 
+>
 > Backed up C:\\
 > Backed up C:\BackedUp\\
 > ...\
@@ -58,42 +58,42 @@ upgrading one of my servers to Windows Server 2008 R2:
 > Backed up C:\BackedUp\Profiles\jjameson\Application Data\Microsoft\CLR
 > Security Config\\
 > ...
-> 
+>
 > However, when I try to recover the files, it appears as if the files were not
 > backed up, as shown in the screenshot below.
-> 
+>
 > {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-600x465.png" alt="Windows Server Backup-Recovery Wizard - bug" class="screenshot" height="465" width="600" >}}
-> 
+>
 > [(See full-sized image)](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Windows-Server-Backup-Recovery-Wizard-Bug-756x586.png)
-> 
+>
 > Note that the Recovery Wizard doesn't show any files or folders under the
 > C:\BackedUp\Profiles\jjameson folder (even though the backup log lists the
 > files and folders in this location).
-> 
+>
 > Also note that I am using my **TECHTOOLBOX\jjameson-admin** account -- which
 > is a Domain Admin account -- to perform the backup and restore operations. I
 > also added it to the **Backup Operators** group on the server (even though
 > this seems superfluous).
-> 
+>
 > The permissions on the C:\BackedUp\Profiles\jjameson folder are as follows:
-> 
+>
 > - SYSTEM -- Full Control
 > - TECHTOOLBOX\jjameson -- Full Control (note that this is not my
 >   TECHTOOLBOX\jjameson-admin account)
-> 
+>
 > It seems like the Recovery Wizard doesn't honor the "security override"
 > feature of the **Backup Operators** group. I don't recall having any issues
 > with these permissions when this server was running Windows Server 2003 and I
 > was using NTBackup.
-> 
+>
 > Doesn't this seem like a bug (since the files can be backed up, but they
 > cannot be recovered)?
-> 
+>
 > \
 > Jeremy Jameson\
 > **Microsoft Consulting Services**\
 > ...
-> 
+>
 > ***
 
 Unfortunately, I never received a single response to my inquiry. Fortunately, my

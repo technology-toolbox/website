@@ -22,7 +22,7 @@ here is an overview of the CAPTCHA feature detailed in this post.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Although not illustrated in the screenshots below, the custom CAPTCHA control
 > is also used on the Subtext blog pages to prevent bots from adding comments to
 > blog posts. I'll explain why this is important in a moment.
@@ -303,12 +303,12 @@ store a "super-secret" hash of the expected value in the cookie.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The reason I put the words "super-secret" in quotes is because someone could
 > certainly read this post, figure out the hashing "algorithm" (at present, it's
 > almost laughable to use that word), and subsequently create a hack to spam the
 > site.
-> 
+>
 > If you do decide to do this, then a) you're a _loser_, and b) I'll just
 > quickly change the hashing code to generate some other value. In hindsight, I
 > suppose I could have encrypted the expected value for the CAPTCHA instead (so
@@ -403,7 +403,7 @@ CAPTCHA control on the blog pages, this is what I ended up with:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > I've kept the comments in the code block above to help readers understand a
 > couple of the more subtle details of the implementation.
 

@@ -226,7 +226,7 @@ Google's CSS file and adding the following rules to a CSS file for this website:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > I commented out a number of CSS rules (copied from Google's CSS file) because
 > I could not find instances in the HTML returned by Google where these are
 > used. This may depend on which features of Google Site Search you choose to
@@ -420,7 +420,7 @@ specify the analytics key.
 {{< div-block "note update" >}}
 
 > **Update (2011-02-20)**
-> 
+>
 > The code below originally specified "http://www.google.com/jsapi" which
 > resulted in mixed mode content when browsing the site using HTTPS. I updated
 > this to use a

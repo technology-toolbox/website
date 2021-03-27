@@ -150,7 +150,7 @@ list (`<ol>`) as the basis for the **Most Popular Posts** section:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Based on the appearance of the list items shown in Figure 1, you might think
 > the **Most Popular Posts** section is rendered using an _uunordered_ list
 > (since there are no numbers next to the list items). However, that is simply
@@ -199,7 +199,7 @@ a custom **HeaderTemplate**, **ItemTemplate**, and **FooterTemplate**:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Refer to my previous post if it isn't clear where the `BlogHelper.GetEntryUrl`
 > method came from (or what it does).
 

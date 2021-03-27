@@ -47,7 +47,7 @@ linkHref="http://nuget.codeplex.com/discussions/247827" >}}
 {{< div-block "note warning" >}}
 
 > **Warning**
-> 
+>
 > Click the link above at your own peril.
 
 {{< /div-block >}}

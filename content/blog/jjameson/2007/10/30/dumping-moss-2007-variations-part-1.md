@@ -130,7 +130,7 @@ certainly not slated for SP1).
 {{< div-block "note update" >}}
 
 > **Update (2007-11-28)**
-> 
+>
 > According to a
 > [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx)
 > by Stefan Goßner, it appears this will be fixed in a QFE by enabling content

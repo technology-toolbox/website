@@ -66,7 +66,7 @@ net localgroup "Performance Monitor Users" TECHTOOLBOX\svc-mom-action /add
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Prior to deploying SCOM 2007 in the "Jameson Datacenter" I used its
 > predecessor -- Microsoft Operations Manager (MOM) -- and thus had already
 > created a service account named **svc-mom-action**.

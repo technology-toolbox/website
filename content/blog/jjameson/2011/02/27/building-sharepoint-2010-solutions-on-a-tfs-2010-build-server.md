@@ -48,7 +48,7 @@ assemblies to the GAC on the build server:
 
 > **Copy the SharePoint Tool Assemblies and Files to the GAC**\
 > The following assemblies must be copied to the GAC of the build system:
-> 
+>
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.dll
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.Features.dll
 > - Microsoft.VisualStudio.SharePoint.Designers.Models.Packages.dll
@@ -129,7 +129,7 @@ without any warnings.
 {{< div-block "note update" >}}
 
 > **Update (2011-03-14)**
-> 
+>
 > I also recommend you remove extraneous SharePoint assemblies from your build
 > output, as described in
 > [one of my later posts](/blog/jjameson/2011/03/14/quot-build-bloat-quot-part-2-a-k-a-removing-extraneous-items-from-sharepoint-visual-studio-projects).

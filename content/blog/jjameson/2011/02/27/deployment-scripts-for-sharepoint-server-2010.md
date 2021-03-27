@@ -483,7 +483,7 @@ The following script ensures the custom event source is registered.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > This script must be run on each SharePoint server in the farm.
 
 {{< /div-block >}}
@@ -629,7 +629,7 @@ Main
 {{< div-block "note update" >}}
 
 > **Update (2011-03-02)**
-> 
+>
 > I modified the original script above to ensure it works with TFS builds as
 > well as "desktop" builds (i.e. built from within Visual Studio).
 
@@ -1458,7 +1458,7 @@ Main $force
 {{< div-block "note update" >}}
 
 > **Update (2011-03-02)**
-> 
+>
 > I modified the original script above to ensure it works with TFS builds as
 > well as "desktop" builds (i.e. built from within Visual Studio).
 
@@ -1520,7 +1520,7 @@ able to rebuild my development environment in a matter of minutes.
 {{< div-block "note warning" >}}
 
 > **Warning**
-> 
+>
 > If, like me, you decide to use Hyper-V snapshots in your SharePoint
 > development environment, then make darn sure you've checked in any pending
 > changes to TFS (or at least shelved your changes) before you apply a snapshot.

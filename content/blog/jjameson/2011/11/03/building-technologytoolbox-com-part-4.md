@@ -477,7 +477,7 @@ TechnologyToolbox.com (i.e. $/Caelum/Dev/CaelumPrototype/Style-Guide.aspx):
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The `color-swatch` CSS rules at the top of Style-Guide.aspx are not kept in
 > the "main" cascading style sheet since these rules are applicable only to the
 > Style Guide itself. Also note that the default master page (specified in the

@@ -182,7 +182,7 @@ VM) using SharePoint Designer.
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > I typically check the prototype in on the Dev branch (e.g.
 > $/Tugboat/Dev/TugboatPrototype) instead of the Main branch, since it's not
 > technically part of the solution.
@@ -486,7 +486,7 @@ To deploy the Tugboat sample site to SharePoint:
    {{< div-block "note" >}}
 
    > **Note**
-   > 
+   >
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
@@ -502,7 +502,7 @@ To deploy the Tugboat sample site to SharePoint:
    {{< div-block "note important" >}}
 
    > **Important**
-   > 
+   >
    > Be sure to specify a valid local or domain user.
 
    {{< /div-block >}}

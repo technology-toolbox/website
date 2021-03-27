@@ -44,11 +44,11 @@ that I had already thoroughly explored. Figuring I had simply missed the
 obvious, I proceeded to set the following options under advanced power settings:
 
 > **Sleep**
-> 
+>
 > > **Hibernate after**
-> 
+>
 > > > **On battery: Never**
-> > > 
+> > >
 > > > **Plugged in: Never**
 
 Note that setting the value to **0** minutes is the same as saying "never

@@ -253,7 +253,7 @@ Complete the deployment procedures in the following sections:
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Do not run the Farm Configuration Wizard (the TFS Web application and service
 > applications will be configured in the following steps).
 
@@ -383,7 +383,7 @@ To fix the TaxonomyPicker.ascx file:
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
-> 
+>
 > The TaxonomyPicker.ascx file is fundamentally broken in SharePoint 2010.
 > Instead of trying to fix the assembly name, just rename the file (since it
 > apparently isn't used by SharePoint).
@@ -398,7 +398,7 @@ Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > This task must be completed on each SharePoint server in the farm.
 
 {{< /div-block >}}
@@ -415,7 +415,7 @@ To rename the TaxonomyPicker.ascx file:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Changing the file extension causes the problematic file to be skipped by
 > ASP.NET when compiling the controls in the folder.
 
@@ -721,10 +721,10 @@ To reset the home page for a TFS project site:
 {{< div-block-start "note" >}}
 
 > **Tip**
-> 
+>
 > If you need to do this for a number of sites, you should consider using
 > PowerShell instead, as described in the following blog post:
-> 
+>
 > {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010.aspx" >}}
 
 {{< div-block-end >}}
@@ -764,18 +764,18 @@ Note that a different error may be shown in the **Remaining Work** Web Part:
 {{< div-block "errorMessage" >}}
 
 > Reporting Services Error
-> 
+>
 > ***
-> 
+>
 > An error has occurred during report processing. (rsProcessingAborted) Get
 > Online Help\
 > Query execution failed for dataset 'DefaultIterationParam'.
 > (rsErrorExecutingCommand) Get Online Help\
 > For more information about this error navigate to the report server on the
 > local server machine, or enable remote errors
-> 
+>
 > ***
-> 
+>
 > SQL Server Reporting Services
 
 {{< /div-block >}}
@@ -803,7 +803,7 @@ title="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > To significantly improve the appearance of the upgraded TFS project home page,
 > edit the **Remaining Work** Web Part and set the **Height** to **600 pixels**
 > and the **Width** to **900 pixels**.
@@ -859,12 +859,12 @@ content databases. ~~On the database server:~~
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
-> 
+>
 > ```PowerShell
 > Add-PSSnapin Microsoft.SharePoint.PowerShell -EA 0
-> 
+>
 > $webApp = Get-SPWebApplication "http://cyclops"
-> 
+>
 > $webApp.GrantAccessToProcessIdentity("TECHTOOLBOX\svc-spserviceapp")
 > ```
 
@@ -888,13 +888,13 @@ Explorer 2010.
 {{< div-block-start "note important" >}}
 
 > **Important**
-> 
+>
 > If you need to access TFS 2010 from a VSTS 2008 client (for example, to
 > continue to use the source control integration features in Expression Web 3),
 > you must download and install an update:
-> 
+>
 > {{< reference title="Visual Studio Team System 2008 Service Pack 1 Forward Compatibility Update for Team Foundation Server 2010 (Installer)" linkHref="http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=cf13ea45-d17b-4edc-8e6c-6c5b208ec54d" >}}
-> 
+>
 > Refer to [KB 974558](http://support.microsoft.com/?kbid=974558) for more
 > information on the compatibility update.
 
@@ -920,7 +920,7 @@ process template.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > In order to create a new team project (with the default project options) using
 > Team Explorer on a server that hosts SharePoint Server 2010 and SQL Server
 > Reporting Services, you need to run Visual Studio as an administrator.

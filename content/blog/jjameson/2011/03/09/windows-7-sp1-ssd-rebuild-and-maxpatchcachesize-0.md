@@ -69,7 +69,7 @@ are the details.
 {{< div-block "note update" >}}
 
 > **Update (2011-03-11)**
-> 
+>
 > I've updated the following to reflect a few omissions in my original post
 > (such as installing the Remote Server Administration Tools for Windows 7
 > _before_ installing SP1).
@@ -89,7 +89,7 @@ I then immediately installed the
 {{< div-block "note warning" >}}
 
 > **Warning**
-> 
+>
 > If you plan on using the Remote Server Administration Tools for Windows 7,
 > then now is the time to install them. Otherwise
 > [you won't be able to install RSAT after upgrading to Windows 7 SP1](/blog/jjameson/2011/03/11/before-you-install-windows-7-service-pack-1)

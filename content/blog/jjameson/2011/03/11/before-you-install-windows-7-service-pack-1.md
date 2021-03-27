@@ -42,7 +42,7 @@ linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-6
 {{< div-block "fst-italic" >}}
 
 > ...
-> 
+>
 > **\*\*Remote Server Administration Tools for Windows 7 can be installed ONLY
 > on computers that are running the Enterprise, Professional, or Ultimate
 > editions of Windows 7. This software CANNOT BE INSTALLED on computers that are
@@ -50,9 +50,9 @@ linkHref="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-6
 > Administration Tools for Windows 7 on a computer on which you want to run
 > Windows 7 with SP1, first install Remote Server Administration Tools, and then
 > upgrade to Service Pack 1.\*\***
-> 
+>
 > ...
-> 
+>
 > This software is not supported on computers that are running Windows 7 with
 > Service Pack 1 (SP1). If your computer is running Windows 7 with SP1, and you
 > try to install Remote Server Administration Tools for Windows 7, the following

@@ -68,7 +68,7 @@ able to verify (via the progress bar) that it was in fact progressing. I let it
 run to completion and observed the following results when it was finished:
 
 > Unused updates deleted 3082
-> 
+>
 > Unused update revisions deleted: 5448
 
 I then ran the **Server Cleanup Wizard** again, but this time only selecting the

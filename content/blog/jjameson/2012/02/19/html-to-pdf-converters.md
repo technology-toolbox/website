@@ -37,14 +37,14 @@ content into a table.
 {{< div-block "note warning" >}}
 
 > **Warning - Internet Explorer Users**
-> 
+>
 > While publishing this post, I discovered the following table looks really ugly
 > in IE9 (since the width is not properly constrained to the content area). I
 > spent no less than 20 minutes trying to force IE to make it look as nice as it
 > does in Firefox and Chrome (e.g. by adding a **width** attribute to the table
 > and even explicitly specifying column widths using a **colgroup** element.
 > However, none of those hacks worked.
-> 
+>
 > While I would normally invest more effort trying to find a workaround for this
 > bug in IE, I've got more important things to do this morning. If you are using
 > IE and you find the following table difficult to read, may I suggest using a
@@ -70,7 +70,7 @@ content into a table.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The pricing shown above has likely changed in the time since I gathered the
 > data, and there may very well be additional products available today that I
 > did not come across during my research.

@@ -31,7 +31,7 @@ face and a sense of nostalgia. It also caused me to recall two things:
    {{< div-block "note update" >}}
 
    > **Update**
-   > 
+   >
    > Doh! You would think a guy with a Master of Science degree in Mechanical
    > Engineering could spell "Grateful Dead" correctly! I suppose that I really
    > should do more proofreading before clicking that **Publish** button ;-)

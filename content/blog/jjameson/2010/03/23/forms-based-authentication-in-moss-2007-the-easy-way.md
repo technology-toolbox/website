@@ -72,7 +72,7 @@ post:
 > for Fabrikam Technologies. Consequently Doug needs to get his local
 > development environment created and configured as quickly as possible in order
 > to start being a productive team member.
-> 
+>
 > After creating a new Windows Server 2008 VM, Doug installs SQL Server 2008 and
 > Visual Studio 2008. He then installs MOSS 2007 and subsequently creates a new
 > SharePoint "farm" (which in this case is comprised only of his single VM) and
@@ -146,7 +146,7 @@ the deployment scripts default to Release builds, Doug needs to set the
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically
 > be set using system environment variables as illustrated in the following
 > figure. That way, the variables would only need to be set once per
@@ -728,7 +728,7 @@ custom STSADM commands for extending the Web application and enabling FBA.
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If you haven't seen Gary Lapointe's custom STSADM commands already, I
 > encourage you to take a look at them. You can find them on his blog:
 > [http://stsadm.blogspot.com](http://stsadm.blogspot.com/). The custom STSADM

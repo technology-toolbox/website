@@ -321,7 +321,7 @@ The corresponding "view format" is shown below:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > I have no idea why the out-of-the-box **Byline** and **Quote** reusable
 > content items in SharePoint 2010 specify **Automatic Update** = **Yes**. I can
 > see the reasoning for enabling automatic update of the default **Copyright**
@@ -530,7 +530,7 @@ reviewing some of the unit tests that I created when developing the
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Initially, I added the code for inserting reusable content into a page to the
 > **SharePointPublishingHelper** class. However, I ended up refactoring this
 > code into the new **SharePointHtmlFieldHelper** class. I'll discuss this new
@@ -584,7 +584,7 @@ described below.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Technically, you don't have to set the environment variables (and use the
 > "-dev" accounts). However, I recommend this in order to bypass SharePoint
 > timer jobs when deploying the WSPs.

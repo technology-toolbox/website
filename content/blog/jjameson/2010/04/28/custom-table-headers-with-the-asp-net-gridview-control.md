@@ -88,7 +88,7 @@ and then iterate the code until we've completed the scenario.
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > The KPI dashboard is actually displayed in a customer portal based on
 > Microsoft Office SharePoint Server (MOSS) 2007. However, my recommendation
 > when creating a feature like this for a SharePoint application, is to first
@@ -281,7 +281,7 @@ event:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > As I mentioned before, the KPI dashboard is actually displayed in a customer
 > portal based on MOSS 2007. Consequently, I chose to reuse the KPI images that
 > come out-of-the-box with MOSS 2007 (in case you were wondering why the image
@@ -551,7 +551,7 @@ is rendered from view state.
 {{< div-block "note update" >}}
 
 > **Update (2011-04-21)**
-> 
+>
 > I've attached a sample Visual Studio solution to make it easier to see this
 > concept in action.
 

@@ -76,10 +76,10 @@ that actually works as intended ;-)
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The development VM that I captured the above screenshot from has the following
 > software installed:
-> 
+>
 > - Windows 7 (64-bit)
 > - Microsoft Visual Studio 2008
 > - Microsoft Visual Studio 2008 Team Explorer
@@ -91,7 +91,7 @@ that actually works as intended ;-)
 > - Microsoft Visual Studio 2012 Update 2
 > - Microsoft SQL Server 2012 with SP1
 > - WiX Toolset v3.7
-> 
+>
 > I don't typically install more than one version of Visual Studio in a VM.
 > However, I built this "uber Visual Studio VM" in order to debug some issues
 > with the

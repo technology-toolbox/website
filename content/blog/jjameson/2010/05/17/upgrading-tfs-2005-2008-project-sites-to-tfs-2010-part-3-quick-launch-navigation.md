@@ -19,7 +19,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-
 {{< div-block "note update" >}}
 
 > **Update (2010-05-20)**
-> 
+>
 > I made some changes to correct a few issues and also to include the final
 > version of the XML input file that I used to update my TFS project sites.
 
@@ -300,20 +300,20 @@ DeleteNavigationNode $web.Navigation.QuickLaunch "Process Guidance"
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > After a navigation node has been deleted, you need to refresh the SPWeb object
 > to avoid errors like the following:
-> 
+>
 > {{< div-block "errorMessage" >}}
-> 
+>
 > > An error occurred while enumerating through a collection: Cannot complete
 > > this action.
-> 
+>
 > {{< /div-block >}}
-> 
+>
 > To refresh the SPWeb object (and consequently the associated
 > SPNavigationNodeCollection), simply call the `Get-SPWeb` cmdlet again:
-> 
+>
 > `$web = Get-SPWeb "http://cyclops/sites/AdventureWorks"`
 
 {{< /div-block >}}

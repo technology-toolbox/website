@@ -463,7 +463,7 @@ page), the `<customErrors>` element is used:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > If you'd prefer to configure these settings in IIS Manager (rather than
 > editing the Web.config file directly), under the **IIS** section double-click
 > **Error Pages** (to modify the `<httpErrors>` element) or under the
@@ -633,7 +633,7 @@ namespace TechnologyToolbox.Caelum.Website.Errors
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > I typically remove comments from code when pasting into blog posts. However,
 > I've kept all of the comments in this case so that you can understand the
 > details of the implementation (without having to describe them separately).

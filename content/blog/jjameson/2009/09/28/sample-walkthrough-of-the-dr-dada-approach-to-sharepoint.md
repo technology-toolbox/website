@@ -19,11 +19,11 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/28/sample-walkthr
 {{< div-block-start "note update" >}}
 
 > **Update 2009-11-18**
-> 
+>
 > I discovered that using relative paths in the DDF file is not compatible with
 > Team Foundation Build. Refer to the following post for the updated DDF file
 > and corresponding modifications to the project file:
-> 
+>
 > {{< reference title="Building SharePoint WSPs with Team Foundation Build" linkHref="/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/11/18/building-sharepoint-wsps-with-team-foundation-build" >}}
 
 {{< div-block-end >}}
@@ -380,7 +380,7 @@ Done
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > For environment variables that you expect team members (e.g. Development,
 > Test, and Release Management) to set in the Environment Variables dialog box,
 > consider prefixing the variables with your company name to "group" them
@@ -432,7 +432,7 @@ builds to the Test environment depends on where we are at in the release cycle.)
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > Having your scripts default settings for the Production environment -- but
 > allowing overrides for other environments -- minimizes the risk of "accidents"
 > when deploying to PROD.
@@ -505,7 +505,7 @@ useful for troubleshooting purposes -- for example, to quickly deploy to a
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If you do have to use a SharePoint timer job, use `stsadm.exe -o
 > execadmsvcjobs` to wait for the timer job to finish before continuing (as
 > shown in the script above when `DEPLOY_METHOD` is `-immediate` instead of
@@ -767,7 +767,7 @@ duration of each portion of the "DR.DADA" process.
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If there is no need to deactivate/(re)activate your features when redeploying,
 > use `Redeploy Solution.cmd -quick` to streamline the process.
 

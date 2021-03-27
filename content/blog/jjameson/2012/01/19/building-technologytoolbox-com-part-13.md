@@ -42,7 +42,7 @@ resource).
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Originally, I thought I needed to reference a local jQuery file during
 > development in order to get Intellisense while writing JavaScript (i.e. by
 > referencing a jQuery script residing side-by-side with a corresponding "vsdoc"
@@ -206,7 +206,7 @@ if you want to read more about this technique.)
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > If you are wondering why I use the
 > **[ResolveUrl](http://msdn.microsoft.com/en-us/library/system.web.ui.control.resolveurl.aspx)**
 > method with the `<script>` elements but not the `<link>` elements, it's simply

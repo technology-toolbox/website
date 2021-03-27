@@ -166,7 +166,7 @@ PackageCodeSample "C:\NotBackedUp\Fabrikam\Demo\Dev\SharePoint2010CodeCoverage"
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > This script uses the
 > [PowerShell Community Extensions](http://pscx.codeplex.com/) to create the zip
 > file. If you can't or don't want to install PSCX, refer to my previous post

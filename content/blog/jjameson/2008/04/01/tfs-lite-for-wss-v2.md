@@ -24,7 +24,7 @@ attachment:
 {{< div-block "note update" >}}
 
 > **Update (2008-04-07)**
-> 
+>
 > ["TFS Lite" for WSS v3](/blog/jjameson/2008/04/07/tfs-lite-for-wss-v3) is now
 > available.
 
@@ -121,7 +121,7 @@ added to group work items into different phases of the project.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The **Area** and **Iteration** fields should be customized for each project to
 > reflect the major work effort areas (e.g. features) and milestones.
 

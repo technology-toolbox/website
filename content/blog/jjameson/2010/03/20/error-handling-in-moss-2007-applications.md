@@ -443,7 +443,7 @@ Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Notice that I use an `EventTypeFilter` to avoid writing debug (a.k.a.
 > "verbose") messages to the event log.
 
@@ -1245,16 +1245,16 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > There's a known bug with the **SPWebConfigModification** class not removing
 > modifications from any Web.config file except the one for the **Default**
 > zone. In other words, running the following command will not remove the trace
 > listener configuration from the Web.config file for the **Internet** zone:
-> 
+>
 > {{< console-block-start >}}
-> 
+>
 > stsadm -o fabrikam-disablelogging -url http://fabrikam
-> 
+>
 > {{< console-block-end >}}
 
 {{< /div-block >}}

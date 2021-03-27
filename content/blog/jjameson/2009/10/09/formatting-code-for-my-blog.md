@@ -138,7 +138,7 @@ the default color options in Visual Studio) and, honestly, not worth the effort.
 {{< div-block "note update" >}}
 
 > **Update (2010-04-27)**
-> 
+>
 > After upgrading to Visual Studio 2010, I discovered that "\par" tags in the
 > RTF were not being converted to new lines in David's original code (because
 > Visual Studio 2008 didn't emit "\par" tags in the RTF, but rather "\r\n").

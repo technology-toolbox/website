@@ -109,7 +109,7 @@ fields defined on the **Welcome Page** content type. Consequently, a Web Part
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You should always try to use the Summary Links fields (from the underlying
 > content type) instead of Summary Links Web Parts whenever possible -- since
 > this provides the ability to track the changes to the links over time. (In
@@ -154,7 +154,7 @@ To deploy the Fabrikam Demo to SharePoint:
    {{< div-block "note" >}}
 
    > **Note**
-   > 
+   >
    > While you don't have to use this URL, it is recommended for developer
    > environments because it causes the deployment scripts to bypass the
    > SharePoint timer infrastructure when deploying and retracting the solution.
@@ -170,7 +170,7 @@ To deploy the Fabrikam Demo to SharePoint:
    {{< div-block "note important" >}}
 
    > **Important**
-   > 
+   >
    > Be sure to specify a valid local or domain user.
 
    {{< /div-block >}}
@@ -214,7 +214,7 @@ page and page layouts leveraging the 960 Grid System.
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > Once you have the site running in your environment, click **Sample Link 1**
 > and **Sample Link 2** on the home page to view a couple of test pages that are
 > created to demonstrate other custom page layouts.

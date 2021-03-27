@@ -54,7 +54,7 @@ obtaining the patch and installing it in our environment.
 {{< div-block "note update" >}}
 
 > **Update (2007-11-28)**
-> 
+>
 > According to a
 > [follow-up](http://blogs.technet.com/stefan_gossner/archive/2007/11/15/some-comments-on-common-variation-problems.aspx)
 > by Stefan Goßner, only part of this bug is fixed in SP1. You'll need a

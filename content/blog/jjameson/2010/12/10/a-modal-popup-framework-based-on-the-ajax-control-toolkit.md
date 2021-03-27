@@ -46,7 +46,7 @@ dismiss the popup window.
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > Web Parts that derive from **ModalPopupWebPart** are responsible for
 > displaying the main content of the popup window. This is typically done by
 > overriding the

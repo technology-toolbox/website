@@ -59,26 +59,26 @@ reports to Reporting Services), you may see the following:
 {{< div-block "fst-italic" >}}
 
 > **TF301777: Team Project Creation Failed**
-> 
+>
 > New Team Project Wizard encountered the following error and could not
 > continue.
-> 
+>
 > **Error**
-> 
+>
 > The Project Creation Wizard encountered an error while creating reports to the
 > SQL Server Reporting Services on
 > http://cyclops-dev/ReportServer/ReportService2005.asmx.
-> 
+>
 > **Explanation**
-> 
+>
 > The Project Creation Wizard encountered a problem while creating reports on
 > the SQL Server Reporting Services on
 > http://cyclops-dev/ReportServer/ReportService2005.asmx. The reason for the
 > failure cannot be determined at this time. Because the operation failed, the
 > wizard was not able to finish creating the SQL Server Reporting Services site.
-> 
+>
 > **User Action**
-> 
+>
 > Contact the administrator for the SQL Server Reporting Services on
 > http://cyclops-dev/ReportServer/ReportService2005.asmx to confirm that the SQL
 > Server Reporting Services server is running and you have sufficient privileges
@@ -167,7 +167,7 @@ will continue to show errors similar to the following:
 {{< div-block "fst-italic" >}}
 
 > **Reporting Services Error**
-> 
+>
 > The item '/TfsReports/DefaultCollection/AdventureWorks/Remaining Work' cannot
 > be found. (rsItemNotFound)
 
@@ -202,7 +202,7 @@ different error.
 {{< div-block "fst-italic" >}}
 
 > **Reporting Services Error**
-> 
+>
 > Default value or value provided for the report parameter 'IterationParam' is
 > not a valid value. (rsInvalidReportParameter)
 

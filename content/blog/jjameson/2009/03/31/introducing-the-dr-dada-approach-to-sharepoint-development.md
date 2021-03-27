@@ -137,10 +137,10 @@ your SharePoint site has warmed up again!
 {{< div-block-start "note update" >}}
 
 > **Note**
-> 
+>
 > Refer to the following blog post for more details on the "DR.DADA" approach to
 > SharePoint development:
-> 
+>
 > {{< reference title="Sample Walkthrough of the DR.DADA Approach to SharePoint" linkHref="/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint" linkText="https://www.technologytoolbox.com/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint" >}}
 
 {{< div-block-end >}}

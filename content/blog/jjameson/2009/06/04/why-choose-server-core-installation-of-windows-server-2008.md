@@ -34,35 +34,35 @@ You will find page after page of results similar to the following:
 > Windows Server 2008 if Windows Server ...\
 > <cite>www.microsoft.com/technet/security/Bulletin/MS08-054.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76133794257994&mkt=en-US&setlang=en-US&w=e671a5b0,e59d79e9)
-> 
+>
 > [Microsoft Security Bulletin MS08-078 - Critical](http://www.microsoft.com/technet/security/bulletin/ms08-078.mspx)\
 > **Windows Server 2008 server core installation not affected**. The
 > vulnerabilities addressed by this update do not affect supported editions of
 > Windows Server 2008 if Windows Server ...\
 > <cite>www.microsoft.com/technet/security/bulletin/ms08-078.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76162242072335&mkt=en-US&setlang=en-US&w=c3f59bce,63fef00c)
-> 
+>
 > [Microsoft Security Bulletin MS08-053 - Critical](http://www.microsoft.com/technet/security/Bulletin/MS08-053.mspx)\
 > **Windows Server 2008 server core installation not affected**. The
 > vulnerability addressed by this update does not affect supported editions of
 > Windows Server 2008 if Windows Server ...\
 > <cite>www.microsoft.com/technet/security/Bulletin/MS08-053.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76116313320319&mkt=en-US&setlang=en-US&w=92aafff1,c365475a)
-> 
+>
 > [Microsoft Security Bulletin MS08-024 - Critical: Cumulative Security ...](http://www.microsoft.com/technet/security/Bulletin/MS08-024.mspx)\
 > **Windows Server 2008 server core installation not affected**. The
 > vulnerabilities addressed by these updates do not affect supported editions of
 > Windows Server 2008 if Windows Server ...\
 > <cite>www.microsoft.com/technet/security/Bulletin/MS08-024.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76113650584856&mkt=en-US&setlang=en-US&w=f7f0adec,d0a922b0)
-> 
+>
 > [Microsoft Security Bulletin MS08-052 - Critical](http://www.microsoft.com/technet/security/bulletin/ms08-052.mspx)\
 > **Windows Server 2008 Server Core installation not affected**. The
 > vulnerabilities addressed by this update do not affect supported editions of
 > Windows Server 2008 if Windows Server ...\
 > <cite>www.microsoft.com/technet/security/bulletin/ms08-052.mspx</cite> •
 > [Cached page](http://cc.bingj.com/cache.aspx?q=%22windows+server+2008+server+core+installation+not+affected%22&d=76123006445241&mkt=en-US&setlang=en-US&w=59991b53,79c72b54)
-> 
+>
 > ...
 
 Seeing all these results is refreshing when I think back on the challenges I had

@@ -45,7 +45,7 @@ Here's the description for the **ActivateOnDefault** attribute of the
 > not activated. This attribute equals **TRUE** by default. The
 > **ActivateOnDefault** attribute does not apply to site collection (**Site**)
 > or Web site (**Web**) scoped Features.
-> 
+>
 > In general, **Farm**-scoped Features become activated during installation, and
 > when a new Web application is created, all installed **Web
 > application**-scoped Features in it become activated.

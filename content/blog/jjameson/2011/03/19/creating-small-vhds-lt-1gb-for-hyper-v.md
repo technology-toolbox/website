@@ -84,7 +84,7 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 {{< div-block "note update" >}}
 
 > **Update (2011-04-14)**
-> 
+>
 > Depending on the specific service applications that you need to configure in
 > your SharePoint 2010 development environment, 200 MB not be sufficient for
 > transaction log storage (even if you
@@ -92,7 +92,7 @@ Thanks, Taylor, for sharing this useful PowerShell script.
 > Unfortunately, I discovered that when I tried to configure numerous service
 > applications on my development VM (to match my client's Production
 > environment) I ran out of space on my L: drive.
-> 
+>
 > Instead of the 200 MB I originally thought that I could get away with, I now
 > use 500 MB. So far, I haven't encountered any issues with this increased size.
 

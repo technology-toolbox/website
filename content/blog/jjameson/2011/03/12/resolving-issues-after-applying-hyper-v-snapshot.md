@@ -72,7 +72,7 @@ domain:
    {{< div-block "note" >}}
 
    > **Note**
-   > 
+   >
    > XAVIER1 is one of the domain controllers in my home lab (TECHTOOLBOX).
 
    {{< /div-block >}}

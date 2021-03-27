@@ -207,7 +207,7 @@ It's also worth repeating the following warning from my previous post:
 {{< div-block "note warning" >}}
 
 > **Warning**
-> 
+>
 > If, like me, you decide to use Hyper-V snapshots in your SharePoint
 > development environment, then make darn sure you've checked in any pending
 > changes to TFS (or at least shelved your changes) before you apply a snapshot.

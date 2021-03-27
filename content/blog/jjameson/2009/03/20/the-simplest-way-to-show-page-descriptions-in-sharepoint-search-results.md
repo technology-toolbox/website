@@ -174,7 +174,7 @@ the following:
 {{< div-block "note update" >}}
 
 > **Update (2009-08-26)**
-> 
+>
 > Note that I originally specifed the following, but it looks like this was
 > deemed to be a bug of some sort. Consequently, a patch -- released sometime
 > after I originally validated the approach -- results in the first "&lt;"

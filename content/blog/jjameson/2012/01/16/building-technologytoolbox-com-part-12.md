@@ -129,7 +129,7 @@ group by month and count the number of rows for each month).
 {{< div-block "note" >}}
 
 > **Tip**
-> 
+>
 > If you are working with LINQ these days, and you haven't already discovered
 > [LINQPad](http://www.linqpad.net/), I highly recommend checking it out. It
 > makes it much quicker to iteratively build LINQ queries like the one shown
@@ -287,13 +287,13 @@ The **GetMonthName** method is, as expected, rather trivial:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > As I've noted before, there are some assumptions in this code that I currently
 > consider to be "good enough" (such as the hardcoded path to the blog -- i.e.
 > "/blog/jjameson/archive"). If the time comes when this code needs to support
 > other scenarios, then -- and probably _only_ then -- I'll put the effort into
 > making it more robust.
-> 
+>
 > Also note that there _may_ be a way to combine the **GetMonthName** logic into
 > the actual LINQ query, but I couldn't find one. Keep in mind that the results
 > need to be ordered chronologically in reverse order (for example, for each

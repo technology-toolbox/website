@@ -66,7 +66,7 @@ Next, I created the ContentTypes.xml file:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > The really long ContentType ID above specifies that Announcement Page inherits
 > from the out-of-the-box Welcome Page. I vaguely recall reading somebody's blog
 > where he or she stated that you shouldn't inherit from the OOTB page types.

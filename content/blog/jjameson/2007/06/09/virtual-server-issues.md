@@ -67,7 +67,7 @@ encountered the following error:
 {{< div-block "errorMessage" >}}
 
 > setup.exe - Bad Image
-> 
+>
 > The application or DLL D:\SQL Server x86\Servers\Setup\setupex.dll is not a
 > valid Windows image. Please check this against your installation disk.
 
@@ -85,7 +85,7 @@ starting the setup:
 {{< div-block "errorMessage" >}}
 
 > Visual Studio 2005 Setup
-> 
+>
 > An unknown error occured while copying files to your temporary folder. Setup
 > will now exit.
 

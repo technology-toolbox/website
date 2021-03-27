@@ -497,7 +497,7 @@ separate method:
 {{< div-block "note" >}}
 
 > **Note**
-> 
+>
 > You might have chosen to use LINQ instead of the `foreach` loop to verify the
 > list of scorecard items all refer to the same KPI and return it. Just be sure
 > you account for scenarios such as when the KPI names specified by the
@@ -543,7 +543,7 @@ overload of the method (shown above):
 {{< div-block "note important" >}}
 
 > **Important**
-> 
+>
 > Note that by replacing the original approach of filtering the scorecard items
 > (using a DataView) with a LINQ query expression, we've made a substantial
 > improvement in the code. For example, if we were to rename the KpiName column
