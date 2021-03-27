@@ -168,10 +168,10 @@ remaining width of the table.
 
 Next, I specify that all cells in the constrained table should truncate the text
 within each cell if it is too wide to fit within the width of the column. This
-is achieved using the combination of `overflow: hidden` and `white-space:
-nowrap`. Finally, I use the ` text-overflow` CSS property to show ellipsis when
-text within a cell is clipped (as well as a slight variation for the Opera
-browser).
+is achieved using the combination of `overflow: hidden` and
+`white-space: nowrap`. Finally, I use the ` text-overflow` CSS property to show
+ellipsis when text within a cell is clipped (as well as a slight variation for
+the Opera browser).
 
 {{< div-block "note" >}}
 

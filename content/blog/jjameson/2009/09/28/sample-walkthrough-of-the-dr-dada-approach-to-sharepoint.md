@@ -506,10 +506,10 @@ useful for troubleshooting purposes -- for example, to quickly deploy to a
 
 > **Tip**
 >
-> If you do have to use a SharePoint timer job, use `stsadm.exe -o
-> execadmsvcjobs` to wait for the timer job to finish before continuing (as
-> shown in the script above when `DEPLOY_METHOD` is `-immediate` instead of
-> `-local`).
+> If you do have to use a SharePoint timer job, use
+> `stsadm.exe -o execadmsvcjobs` to wait for the timer job to finish before
+> continuing (as shown in the script above when `DEPLOY_METHOD` is `-immediate`
+> instead of `-local`).
 
 {{< /div-block >}}
 
@@ -780,9 +780,9 @@ page. In other words, we need to deploy updated code -- but not any changes to
 files deployed to the SPDIR folder (%ProgramFiles%\Common Files\Microsoft
 Shared\Web Server Extensions\12).
 
-While we could certainly use **Redeploy Features.cmd** (or even `Redeploy
-Solution.cmd -quick`) it's definitely not the most efficient way to accomplish
-our goal. Enter **GAC Assemblies.cmd**:
+While we could certainly use **Redeploy Features.cmd** (or even
+`Redeploy Solution.cmd -quick`) it's definitely not the most efficient way to
+accomplish our goal. Enter **GAC Assemblies.cmd**:
 
 ```Batch
 @echo off

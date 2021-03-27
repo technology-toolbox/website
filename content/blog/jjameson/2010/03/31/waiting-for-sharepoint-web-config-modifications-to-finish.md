@@ -93,13 +93,13 @@ class in the **ApplyWebConfigModifications** method:
 
 As you can see, most of the work is delegated to the
 **SharePointTimerJobHelper** class. **SharePointWebConfigHelper** only knows the
-name of the one-time timer job (`"Windows SharePoint Services Web.Config
-Update"`) and a reasonable amount of time that the timer job should take to
-complete (20 seconds). Note that it doesn't necessarily wait the full 20 seconds
-for the timer job to complete (essentially the original hack that I thought
-about implementing). Rather it waits at most 20 seconds for the timer job to
-complete. Also note that there is no guarantee that the timer job actually
-finished (or even ran) when the call to
+name of the one-time timer job
+(`"Windows SharePoint Services Web.Config Update"`) and a reasonable amount of
+time that the timer job should take to complete (20 seconds). Note that it
+doesn't necessarily wait the full 20 seconds for the timer job to complete
+(essentially the original hack that I thought about implementing). Rather it
+waits at most 20 seconds for the timer job to complete. Also note that there is
+no guarantee that the timer job actually finished (or even ran) when the call to
 `SharePointTimerJobHelper.WaitForOnetimeJobToFinish` returns. However, in my
 testing I found that 20 seconds seemed like a good choice for the
 <var>maximumWaitTime</var> parameter.

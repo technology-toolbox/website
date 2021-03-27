@@ -402,8 +402,8 @@ soon as we view this within the actual SharePoint site.
 However, there is still one minor discrepancy between the dynamic HTML generated
 using the above XSLT and the original static HTML created by Dan. The problem is
 that the third list item needs to have an additional CSS class name specified
-(in other words, for the last item in the list we need to render `<li
-class="group third">` instead of `<li class="group">`).
+(in other words, for the last item in the list we need to render
+`<li class="group third">` instead of `<li class="group">`).
 
 Fortunately, this is very easy to achieve using a little more XSLT. Here is the
 final version of the XSL stylesheet that I developed to render items in the

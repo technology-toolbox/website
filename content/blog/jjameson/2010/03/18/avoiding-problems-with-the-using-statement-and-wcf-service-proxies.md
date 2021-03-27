@@ -213,8 +213,8 @@ namespace Microsoft.ServiceModel.Samples
 ```
 
 With a couple of tweaks to the WCF sample code -- specifically replacing all
-instances of "`new CalculatorClient()`" with "`new
-CalculatorClientWithDisposeFix()`" -- the output changes from this:
+instances of "`new CalculatorClient()`" with
+"`new CalculatorClientWithDisposeFix()`" -- the output changes from this:
 
 ```Text
 =

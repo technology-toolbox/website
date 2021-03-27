@@ -392,8 +392,8 @@ specified in **DateSyndicated**. This is simply a matter of formatting the
 At this point, the feature was almost complete. The only thing left to do was to
 replace the placeholder for the number of comments and conditionally add the
 `class="none"` attribute value to the `<li class="comments">` element. In other
-words, when there are no comments for a post, the markup should be `<li
-class="comments none">`, but when there is at least one comment the markup
+words, when there are no comments for a post, the markup should be
+`<li class="comments none">`, but when there is at least one comment the markup
 should be `<li class="comments">`. This makes it very easy to show or hide the
 comments icon (and corresponding link) using CSS.
 

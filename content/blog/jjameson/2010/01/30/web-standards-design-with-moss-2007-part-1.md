@@ -577,8 +577,9 @@ Grid System.
 
 Next comes the masthead, which contains the company logo, "welcome" area, and
 page editing toolbar (i.e. `<PublishingConsole:Console runat="server" />`). The
-main content for the page (i.e. `<asp:ContentPlaceHolder ID="PlaceHolderMain"
-runat="server" />`) comes after the masthead.
+main content for the page (i.e.
+`<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />`) comes after
+the masthead.
 
 Finally, the master page includes a hidden panel that encapsulates all of the
 various content placeholders that are required by SharePoint, but should not be

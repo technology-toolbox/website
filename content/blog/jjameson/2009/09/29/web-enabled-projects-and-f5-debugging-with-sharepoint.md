@@ -80,9 +80,7 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 5. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
    element, add the following:\
    \
-   `<Import
-   Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets"
-   Condition="" />`
+   `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
 6. On the **File** menu, click **Close**. When prompted to save the file, click
    **Yes**.
 7. In the **Solution Explorer** window, right-click the project, and then click

@@ -229,8 +229,8 @@ according to the hAtom schema (e.g. `<li class="published">`).
 
 {{< /div-block >}}
 
-The post summaries are rendered as paragraphs inside `<div
-class="entry-summary">` elements.
+The post summaries are rendered as paragraphs inside
+`<div class="entry-summary">` elements.
 
 By adding the `<span class="label">` elements to various pieces of text, I can
 easily hide some portions of the content via CSS. For example, notice how the
@@ -324,8 +324,8 @@ element is replaced by the `<div class="entry-content">` element.
 
 The "trick" to formatting the same HTML differently when viewing individual blog
 posts (for example, to show the time portion of the publication date) is to
-specify a different "container" element than the blog home page (e.g. `<div
-id="blogPost">` instead of `<div id="blogHome">`).
+specify a different "container" element than the blog home page (e.g.
+`<div id="blogPost">` instead of `<div id="blogHome">`).
 
 {{< div-block "note" >}}
 

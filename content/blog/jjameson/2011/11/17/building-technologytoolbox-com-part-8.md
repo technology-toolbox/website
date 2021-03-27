@@ -68,8 +68,8 @@ linkHref="http://technet.microsoft.com/en-us/library/ee790599.aspx" >}}
 >
 > If, like me, you are using Windows Server 2008 R2 (and IIS 7.5), then you
 > cannot use the `Add-PSSSnapin WebAdministration` command specified in the
-> above TechNet article. Instead you need to use `Import-Module
-> WebAdministration` -- as shown below.
+> above TechNet article. Instead you need to use
+> `Import-Module WebAdministration` -- as shown below.
 
 {{< /div-block >}}
 
