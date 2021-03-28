@@ -35,7 +35,7 @@ upgrading one of my servers to Windows Server 2008 R2:
 > On a server running Windows Server 2008 R2, I have completed a backup with the
 > following options:
 >
-> - Backup items: Selected files (C:\BackedUp\)
+> - Backup items: Selected files (C:\BackedUp\\)
 > - Files excluded: None
 > - Advanced option: VSS Copy Backup
 > - Backup destinations: Local Disk (D:) -- using the **Back up to a volume**
