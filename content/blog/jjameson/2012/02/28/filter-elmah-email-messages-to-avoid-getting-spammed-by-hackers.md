@@ -60,7 +60,7 @@ if the **validateRequest** attribute has been set to **false** in the Web.config
 file or on a specific page. [If your website currently does this, I really hope
 you know what you are doing.]
 
-You can quickly check this by specifying a "?&lt;script&gt;" query string when
+You can quickly check this by specifying a "`?<script>`" query string when
 requesting a page. Assuming the default (i.e. secure) configuration, an
 **HttpRequestValidationException** will occur, and -- assuming the ELMAH
 **ErrorMailModule** is configured -- the exception will trigger an email to the

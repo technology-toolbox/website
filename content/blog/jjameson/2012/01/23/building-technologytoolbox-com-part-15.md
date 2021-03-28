@@ -73,7 +73,7 @@ experience). In other words, I have triaged the issues so that if you are
 running Subtext on your own site, you would most likely focus on the items that
 appear first.
 
-### Lucene.Net.QueryParsers.ParseException: Encountered "..." at line 1, column ... Was expecting one of: &lt;EOF&gt; &lt;AND&gt; ...
+### Lucene.Net.QueryParsers.ParseException: Encountered "..." at line 1, column ... Was expecting one of: `<EOF>` `<AND>` ...
 
 Having read a little about Subtext before implementing it, I knew that it uses
 [Lucene.Net](http://en.wikipedia.org/wiki/Lucene.net) to support searching

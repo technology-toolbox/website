@@ -244,8 +244,8 @@ item is represented as a row:
 >
 > To view the "raw" XML document, insert the
 > [XSLT identity transform](/blog/jjameson/2009/03/25/xslt-identity-transform)
-> into the **&lt;xsl&gt;** element of the **XsltListViewWebPart**, save the
-> page, and then browse to the page in Internet Explorer.
+> into the **`<xsl>`** element of the **XsltListViewWebPart**, save the page,
+> and then browse to the page in Internet Explorer.
 
 {{< /div-block >}}
 

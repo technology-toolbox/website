@@ -410,7 +410,7 @@ namespace TechnologyToolbox.Caelum.Website.Controls
 }
 ```
 
-### Updated &lt;head&gt; for ASPX or Master Page
+### Updated `<head>` for ASPX or Master Page
 
 Leveraging these new controls, the corresponding `<head>` section now looks like
 this:

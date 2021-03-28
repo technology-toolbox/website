@@ -207,7 +207,7 @@ earlier post for
    the **IncrementAssemblyVersion.proj** or **TFSBuild.proj** file that is used
    to increment the assembly version, and then click **Get Latest Version**.
 1. Next, double-click the file to open it in the editor.
-1. Location the **&lt;Version&gt;** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
+1. Location the **`<Version>`** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
 
    ```XML
        <Version

@@ -32,11 +32,10 @@ different combinations of static HTML content and dynamic content rendered by
 one or more Web Parts).
 
 The "trick" to rendering a Web Part inline with other content is to add the Web
-Part to a special "hidden" zone ("wpz") and then insert a "placeholder"
-&lt;div&gt; element where you want the Web Part to appear within the HTML
-content. The following post does a great job of explaining what's happening
-behind the scenes when you insert a Web Part into the "Rich Content" content
-field on a page:
+Part to a special "hidden" zone ("wpz") and then insert a "placeholder" `<div>`
+element where you want the Web Part to appear within the HTML content. The
+following post does a great job of explaining what's happening behind the scenes
+when you insert a Web Part into the "Rich Content" content field on a page:
 
 {{< reference
 title="Programmatically adding Web Parts to Rich Content in SharePoint 2010"

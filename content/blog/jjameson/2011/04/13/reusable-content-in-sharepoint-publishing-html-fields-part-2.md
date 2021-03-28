@@ -265,7 +265,7 @@ SharePoint (the foundation is the same in MOSS 2007 and SharePoint 2010). There
 are two key concepts to grasp:
 
 1. The "storage format" of the content in a Publishing HTML field uses a special
-   &lt;div&gt; element as a "header" and corresponding &lt;span&gt; elements to
+   `<div>` element as a "header" and corresponding `<span>` elements to
    designate the placeholders where reusable content is to be inserted (note
    that I'm only talking about reusable content that is specified to
    automatically update).
@@ -330,12 +330,12 @@ The corresponding "view format" is shown below:
 {{< /div-block >}}
 
 Look again at the sample "storage format" HTML above. Notice how the reusable
-content placeholders (i.e. the &lt;span&gt; elements) do not specify which
+content placeholders (i.e. the `<span>` elements) do not specify which
 **Reusable Content** list item to render. Rather, the list item is determined
 based on the position of the placeholder (relative to other placeholders) --
 which is matched to the corresponding item specified in the "header" (by index).
 
-In other words, if you were to swap the order of the &lt;a&gt; elements in the
+In other words, if you were to swap the order of the `<a>` elements in the
 "header"...
 
 ```HTML

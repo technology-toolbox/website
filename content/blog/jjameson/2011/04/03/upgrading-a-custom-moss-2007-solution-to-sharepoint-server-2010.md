@@ -148,8 +148,8 @@ those areas where the SharePoint tooling in Visual Studio 2010 isn't quite
 (specifically, the **Path** attributes), it doesn't make all of the necessary
 changes (e.g. the **Url** attributes are not updated). This might be a result of
 my tweaking of the Elements.xml file (for example, to add
-**Type="GhostableInLibrary"** to each &lt;File&gt; element), but it seems like
-this should be taken care of automatically.
+**Type="GhostableInLibrary"** to each `<File>` element), but it seems like this
+should be taken care of automatically.
 
 Fortunately, this isn't a scenario that occurs frequently.
 

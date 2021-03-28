@@ -77,7 +77,7 @@ caption="MOSS 2007 Master Page Comparison" >}}
 
 \* - The placeholder is tacked onto the end of the page
 
-\*\* - &lt;PlaceHolder&gt; element (not &lt;asp:ContentPlaceHolder&gt;)
+\*\* - `<PlaceHolder>` element (not `<asp:ContentPlaceHolder>`)
 
 I found the differences between the two master pages very interesting, as well
 as the fact that a couple of the placeholders are simply appended to the end of

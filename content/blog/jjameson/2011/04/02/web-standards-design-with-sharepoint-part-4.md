@@ -215,7 +215,7 @@ In** link.
 You might be wondering why I decided to place the "top row elements" inside the
 `<div id="s4-searcharea">` element, since this certainly isn't semantic HTML.
 Well, to be honest, I actually didn't do this initially (in other words, I
-placed the "top row elements" inside a different &lt;div&gt; container element).
+placed the "top row elements" inside a different `<div>` container element).
 
 At first, everything seemed to work just fine (from an anonymous user's
 perspective). However, when I viewed the site as an authenticated user and then
@@ -412,7 +412,7 @@ If you search the Internet for something like **SharePoint 2010 hide ribbon
 anonymous**, you'll find a number of different recommendations.
 
 Someone suggested wrapping the **SPRibbon** control in the
-**&lt;LoggedInTemplate&gt;** of an ASP.NET **LoginView** control. This certainly
+**`<LoggedInTemplate>`** of an ASP.NET **LoginView** control. This certainly
 sounds like a logical choice and indeed it does work in the "anonymous user
 scenario" as shown below:
 

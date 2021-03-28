@@ -38,10 +38,9 @@ Here are the changes that I _haven't_ yet merged into my Subtext fork:
 
 - HACK: The current implementation in the HtmlHelper.ConvertToAllowedHtml method
   results in extraneous line breaks between paragraphs in comments (e.g.
-  "&lt;p&gt;foo&lt;/p&gt;{newline}\
-  &lt;p&gt;bar&lt;/p&gt;" becomes
-  "&lt;p&gt;foo&lt;/p&gt;&lt;br/&gt;&lt;p&gt;bar&lt;/p&gt;"). To avoid
-  formatting issues, remove the &lt;br/&gt; elements added by the
+  "`<p>`foo`</p>`{newline}\
+  `<p>`bar`</p>`" becomes "`<p>`foo`</p>``<br/>``<p>`bar`</p>`"). To avoid
+  formatting issues, remove the `<br/>` elements added by the
   HtmlHelper.HtmlSafe method when paragraphs are separated by newline characters
 - Tweak messages displayed to blog readers
 - Overhaul the way Gravatar images are handled to provide more flexibility (such
