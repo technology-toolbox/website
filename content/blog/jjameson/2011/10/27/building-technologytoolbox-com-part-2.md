@@ -115,7 +115,7 @@ one of my earlier blog posts:
 {{< reference
 title="CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio"
 linkHref="/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio" >}}
 
 ### Generate strong name key and configure assembly signing
 
@@ -135,7 +135,7 @@ For more details about how to do this, refer to the following post:
 
 {{< reference title="Linked Files in Visual Studio Solutions"
 linkHref="/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/shared-assembly-info-in-visual-studio-projects.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects" >}}
 
 ### Create custom rule set and enable code analysis
 
@@ -176,7 +176,7 @@ about these files in the following post:
 
 {{< reference title="Shared Assembly Info in Visual Studio Projects"
 linkHref="/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/02/linked-files-in-visual-studio-solutions.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2009/04/02/linked-files-in-visual-studio-solutions" >}}
 
 ### Create custom Team Foundation Build workflow to increment the assembly version with each build
 
@@ -186,7 +186,7 @@ performed on the Build Server (i.e. through TFS Build):
 
 {{< reference title="Best Practices for .NET Assembly Versioning"
 linkHref="/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/04/03/best-practices-for-net-assembly-versioning.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2009/04/03/best-practices-for-net-assembly-versioning" >}}
 
 If you are not sure how to do this, and you are using TFS 2010, refer to the
 following post for step-by-step details on how to accomplish this:
@@ -194,7 +194,7 @@ following post for step-by-step details on how to accomplish this:
 {{< reference
 title="Incrementing the Assembly Version for Each Build in TFS 2010"
 linkHref="/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010" >}}
 
 ### Configure TFS check-in policies
 
@@ -204,7 +204,7 @@ described in the following post:
 
 {{< reference title="Recommended Check-In Policies for Team Foundation Server"
 linkHref="/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server"
-linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2009/10/31/recommended-check-in-policies-for-team-foundation-server.aspx" >}}
+linkText="https://www.technologytoolbox.com/blog/jjameson/2009/10/31/recommended-check-in-policies-for-team-foundation-server" >}}
 
 If you are wondering why I didn't configure these check-in policies earlier, the
 answer is that I do it this way in order to avoid issues when enabling code

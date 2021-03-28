@@ -511,12 +511,12 @@ custom skin for the Technology Toolbox site (in Comments.ascx):
 The following post shows an example of comments that specify email addresses
 (both with and without a corresponding Gravatar):
 
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/10/27/building-technologytoolbox-com-part-1.aspx](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1)
+> [https://www.technologytoolbox.com/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1](/blog/jjameson/2011/10/27/building-technologytoolbox-com-part-1)
 
 The following post shows an example where users added comments but did not
 specify their email addresses:
 
-> [https://www.technologytoolbox.com/blog/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)
+> [https://www.technologytoolbox.com/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010)
 
 Without the code changes in Subtext that I show above, your site can't address
 both scenarios. Then again, maybe you aren't quite as "nitpicky" as I am ;-)
@@ -791,7 +791,7 @@ hacking "noise."
 > **Update (2012-02-28)**
 >
 > Refer to the following post for more information on configuring ELMAH filters:
-> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers.aspx" >}}
+> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.technologytoolbox.com/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" >}}
 
 {{< div-block-end >}}
 
