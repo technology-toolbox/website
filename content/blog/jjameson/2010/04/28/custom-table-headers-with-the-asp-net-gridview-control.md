@@ -27,16 +27,7 @@ the following:
 
 {{< table class="small table-striped"
 caption="Key Performance Indicators (Detail)" >}}
-
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
-| --- | --- | --- | --- | --- |
-| ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
-| --- | --- | --- |
-| Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% ![(Different KPI Thresholds)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif "The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)") | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
-| Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
+<table cellspacing="0" class="kpiDetail"><thead><tr><th class="siteColumn" rowspan="2">Site</th><th class="firstPeriod" rowspan="2">2009 Q3</th><th rowspan="2">2009 Q4</th><th class="lastPeriod" rowspan="2">2010 Q1</th><th colspan="3">Thresholds</th></tr><tr><th><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr></thead><tbody><tr><td class="siteColumn">Duncan</td><td class="firstPeriod kpiGreen">93%</td><td class="kpiGreen">95%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Dallas</td><td class="firstPeriod kpiGreen">94% <img alt="(Different KPI Thresholds)" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif" title="The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)"></td><td class="kpiYellow">91%</td><td class="lastPeriod kpiYellow">90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td class="siteColumn">Albuquerque</td><td class="firstPeriod kpiGreen">91%</td><td class="kpiYellow">87%</td><td class="lastPeriod kpiRed">85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Denver</td><td class="firstPeriod kpiGreen">94%</td><td class="kpiGreen">91%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
 {{< /table >}}
 
 I also hinted that it took a little more work than I expected to render the
@@ -376,16 +367,7 @@ Running the Web application at this point shows the **Thresholds** header above
 the corresponding columns, similar to the following:
 
 {{< table class="small table-striped" >}}
-
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Thresholds |
-| --- | --- | --- | --- | --- |
-| ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
-| --- | --- | --- |
-| Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
-| Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
+<table id="KpiScorecard1_ScorecardDetailView" border="1" cellspacing="0" rules="all" style="BORDER-COLLAPSE: collapse"><tbody><tr><th rowspan="2" scope="col">Site</th><th rowspan="2" scope="col">2009 Q3</th><th rowspan="2" scope="col">2009 Q4</th><th rowspan="2" scope="col">2010 Q1</th><th colspan="3">Thresholds</th></tr><tr><th scope="col"><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th scope="col"><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th scope="col"><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr><tr><td>Duncan</td><td>93%</td><td>95%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Dallas</td><td>94%</td><td>91%</td><td>90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td>Albuquerque</td><td>91%</td><td>87%</td><td>85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Denver</td><td>94%</td><td>91%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
 {{< /table >}}
 
 Looking at the HTML source, we can see the extra table row has been inserted,
@@ -442,14 +424,7 @@ post back), the GridView renders itself from view state, similar to the
 following:
 
 {{< table class="small table-striped" >}}
-
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
-| --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |
-| Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
-| Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
+<table id="KpiScorecard1_ScorecardDetailView" border="1" cellspacing="0" rules="all" style="BORDER-COLLAPSE: collapse"><tbody><tr><th rowspan="2" scope="col">Site</th><th rowspan="2" scope="col">2009 Q3</th><th rowspan="2" scope="col">2009 Q4</th><th rowspan="2" scope="col">2010 Q1</th><th scope="col"><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th scope="col"><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th scope="col"><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Duncan</td><td>93%</td><td>95%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Dallas</td><td>94%</td><td>91%</td><td>90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td>Albuquerque</td><td>91%</td><td>87%</td><td>85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
 {{< /table >}}
 
 Notice that we no longer see the **Thresholds** header in the table. This is
