@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx"

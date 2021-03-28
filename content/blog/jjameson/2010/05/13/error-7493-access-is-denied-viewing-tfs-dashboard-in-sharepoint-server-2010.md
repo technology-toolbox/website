@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx",
   ]
-draft: true
 categories: ["Development", "SharePoint"]
 tags: ["TFS", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/13/error-7493-access-is-denied-viewing-tfs-dashboard-in-sharepoint-server-2010.aspx"

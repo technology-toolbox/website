@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2011/11/14/building-technologytoolbox-com-part-7.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["My System", "Subtext", "SQL Server"]
 ---

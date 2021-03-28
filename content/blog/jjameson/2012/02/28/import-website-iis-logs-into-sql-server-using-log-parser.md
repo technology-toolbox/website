@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/28/import-website-iis-logs-into-sql-server-using-log-parser.aspx",
   ]
-draft: true
 categories: ["Development", "Infrastructure"]
 tags: ["Infrastructure", "PowerShell", "SQL Server", "Toolbox", "Web Development"]
 ---

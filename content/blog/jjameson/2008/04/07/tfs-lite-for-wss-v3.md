@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/04/06/tfs-lite-for-wss-v3.aspx",
     "/blog/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx"

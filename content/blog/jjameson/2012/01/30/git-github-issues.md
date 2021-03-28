@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/01/30/git-github-issues.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Subtext"]
 ---

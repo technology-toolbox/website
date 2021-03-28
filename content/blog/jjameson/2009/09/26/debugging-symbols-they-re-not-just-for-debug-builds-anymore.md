@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/25/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx",
     "/blog/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Debugging"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/debugging-symbols-they-re-not-just-for-debug-builds-anymore.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/03/22/sql-server-authentication-modes.aspx",
     "/blog/jjameson/archive/2007/03/23/sql-server-authentication-modes.aspx",
   ]
-draft: true
 categories: [""]
 tags: ["SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/23/sql-server-authentication-modes.aspx"

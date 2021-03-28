@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/26/always-enable-disk-based-caching-in-moss-2007.aspx",
     "/blog/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/27/always-enable-disk-based-caching-in-moss-2007.aspx"

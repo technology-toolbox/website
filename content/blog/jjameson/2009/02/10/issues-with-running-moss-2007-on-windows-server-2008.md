@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/02/10/issues-with-running-moss-2007-on-windows-server-2008.aspx"

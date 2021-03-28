@@ -9,7 +9,6 @@ aliases:
     "/blog/jjameson/archive/2012/02/18/website-style-guide-custom-css-classes-and-html-snippets.aspx",
     "/blog/jjameson/archive/2012/02/19/website-style-guide-custom-css-classes-and-html-snippets.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "Subtext", "Web Development"]
 ---

@@ -10,7 +10,6 @@ aliases:
     "/blog/jjameson/archive/2010/04/27/custom-table-headers-with-the-asp-net-gridview-control.aspx",
     "/blog/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx"

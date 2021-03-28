@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/03/02/who-is-this-guy.aspx",
     "/blog/jjameson/archive/2007/03/03/who-is-this-guy.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/03/who-is-this-guy.aspx"

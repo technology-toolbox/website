@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/27/formatting-powershell-script-for-my-blog.aspx",
     "/blog/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/28/formatting-powershell-script-for-my-blog.aspx"

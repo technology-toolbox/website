@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/13/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx",
     "/blog/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/14/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-1-agile-dashboard-features.aspx"

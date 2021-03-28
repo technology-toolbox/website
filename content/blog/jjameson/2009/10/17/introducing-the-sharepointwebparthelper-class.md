@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/16/introducing-the-sharepointwebparthelper-class.aspx",
     "/blog/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/17/introducing-the-sharepointwebparthelper-class.aspx"

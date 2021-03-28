@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/20/new-msdn-theme-on-my-blog.aspx",
     "/blog/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/21/new-msdn-theme-on-my-blog.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/02/07/installing-visual-studio-2005-sp1.aspx",
     "/blog/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/02/08/installing-visual-studio-2005-sp1.aspx"

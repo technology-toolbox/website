@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/04/01/creating-a-vm-vhd-library.aspx",
     "/blog/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/02/creating-a-vm-vhd-library.aspx"

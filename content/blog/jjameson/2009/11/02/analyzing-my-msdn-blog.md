@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/11/01/analyzing-my-msdn-blog.aspx",
     "/blog/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/02/analyzing-my-msdn-blog.aspx"

@@ -12,7 +12,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/31/constraining-tables-with-css.aspx",
     "/blog/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"

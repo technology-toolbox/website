@@ -9,7 +9,6 @@ aliases:
     "/blog/jjameson/archive/2012/02/27/packaging-a-code-sample-using-powershell.aspx",
     "/blog/jjameson/archive/2012/02/28/packaging-a-code-sample-using-powershell.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["PowerShell", "TFS"]
 ---

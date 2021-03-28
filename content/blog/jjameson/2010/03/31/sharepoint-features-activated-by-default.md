@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/03/30/sharepoint-features-activated-by-default.aspx",
     "/blog/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/31/sharepoint-features-activated-by-default.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/11/06/using-password-minder-to-manage-your-passwords.aspx",
     "/blog/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/07/using-password-minder-to-manage-your-passwords.aspx"

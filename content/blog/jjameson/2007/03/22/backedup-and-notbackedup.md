@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/03/21/backedup-and-notbackedup.aspx",
     "/blog/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/backedup-and-notbackedup.aspx"

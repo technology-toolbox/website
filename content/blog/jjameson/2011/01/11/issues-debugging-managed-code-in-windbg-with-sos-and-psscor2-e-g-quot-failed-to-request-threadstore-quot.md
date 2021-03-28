@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/01/10/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx",
     "/blog/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Debugging"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/11/issues-debugging-managed-code-in-windbg-with-sos-and-psscor2-e-g-quot-failed-to-request-threadstore-quot.aspx"

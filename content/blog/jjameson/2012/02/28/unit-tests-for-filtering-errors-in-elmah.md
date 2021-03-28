@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/28/unit-tests-for-filtering-errors-in-elmah.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "Web Development"]
 attachment: 

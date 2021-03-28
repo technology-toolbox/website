@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/11/02/deleting-empty-folders.aspx",
     "/blog/jjameson/archive/2009/11/03/deleting-empty-folders.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/03/deleting-empty-folders.aspx"

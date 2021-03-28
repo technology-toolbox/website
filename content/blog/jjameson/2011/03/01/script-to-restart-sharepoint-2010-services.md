@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/02/28/script-to-restart-sharepoint-2010-services.aspx",
     "/blog/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx",
   ]
-draft: true
 categories: ["SharePoint", "My System"]
 tags: ["SharePoint 2010", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/01/script-to-restart-sharepoint-2010-services.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/17/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx",
     "/blog/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/18/faceted-search-in-moss-2007-and-the-mssdocprops-issue.aspx"

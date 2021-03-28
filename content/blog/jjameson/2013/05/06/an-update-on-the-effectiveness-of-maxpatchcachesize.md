@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/05/06/an-update-on-the-effectiveness-of-maxpatchcachesize.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "My System", "Virtualization", "Visual Studio"]
 ---

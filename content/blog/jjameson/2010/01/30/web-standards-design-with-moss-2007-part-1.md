@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/01/29/web-standards-design-with-moss-2007-part-1.aspx",
     "/blog/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/30/web-standards-design-with-moss-2007-part-1.aspx"

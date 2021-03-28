@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/03/tell-mode-vs-ask-mode.aspx"

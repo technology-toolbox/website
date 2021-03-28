@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/05/06/some-tips-for-managing-tfs-workspaces.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["My System", "PowerShell", "TFS"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/03/17/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx",
     "/blog/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "WCF"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/18/avoiding-problems-with-the-using-statement-and-wcf-service-proxies.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/26/redirecting-stderr-to-stdout.aspx",
     "/blog/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx",
   ]
-draft: true
 categories: ["Development", "Infrastructure"]
 tags: ["Core Development", "Windows Vista", "Windows Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/27/redirecting-stderr-to-stdout.aspx"

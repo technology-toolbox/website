@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/03/05/just-say-no-to-writing-sharepoint-caml-queries-from-scratch.aspx",
   ]
-draft: true
 categories: ["Development", "SharePoint"]
 tags: ["MOSS 2007", "SharePoint 2010", "WSS v3"]
 ---

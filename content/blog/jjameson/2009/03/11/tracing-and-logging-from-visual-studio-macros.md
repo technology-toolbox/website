@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/10/tracing-and-logging-from-visual-studio-macros.aspx",
     "/blog/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/11/tracing-and-logging-from-visual-studio-macros.aspx"

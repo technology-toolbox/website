@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/04/07/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx",
     "/blog/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/08/wsus-clients-failing-with-error-0x80244019-after-installing-wsus-sp1.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/28/latest-version-of-opera-ignores-hosts-file.aspx",
     "/blog/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/29/latest-version-of-opera-ignores-hosts-file.aspx"

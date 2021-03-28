@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2012/01/15/building-technologytoolbox-com-part-12.aspx",
     "/blog/jjameson/archive/2012/01/16/building-technologytoolbox-com-part-12.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext", "Web Development"]
 ---

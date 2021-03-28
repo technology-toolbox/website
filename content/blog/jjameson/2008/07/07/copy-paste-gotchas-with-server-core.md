@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/07/07/copy-paste-gotchas-with-server-core.aspx"

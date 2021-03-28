@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/03/21/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx",
     "/blog/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/what-s-in-a-name-defaultfeaturereceiver-vs-featureconfigurator.aspx"

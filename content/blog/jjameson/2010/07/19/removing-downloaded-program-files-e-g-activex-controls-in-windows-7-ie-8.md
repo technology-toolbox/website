@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "Development"]
 tags: ["Windows Server", "Web Development", "Windows 7"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/07/19/removing-downloaded-program-files-e-g-activex-controls-in-windows-7-ie-8.aspx"

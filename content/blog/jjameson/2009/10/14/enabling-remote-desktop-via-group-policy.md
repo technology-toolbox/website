@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/13/enabling-remote-desktop-via-group-policy.aspx",
     "/blog/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/14/enabling-remote-desktop-via-group-policy.aspx"

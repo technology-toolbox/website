@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/24/xslt-identity-transform.aspx",
     "/blog/jjameson/archive/2009/03/25/xslt-identity-transform.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development", "My System"]
 tags: ["MOSS 2007", "Core Development", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/25/xslt-identity-transform.aspx"

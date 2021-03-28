@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/03/script-to-save-event-logs.aspx",
     "/blog/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Windows Server", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/04/script-to-save-event-logs.aspx"

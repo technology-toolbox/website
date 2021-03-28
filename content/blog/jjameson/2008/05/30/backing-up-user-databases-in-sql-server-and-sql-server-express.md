@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/05/29/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx",
     "/blog/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["SQL Server", "WSUS", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx"

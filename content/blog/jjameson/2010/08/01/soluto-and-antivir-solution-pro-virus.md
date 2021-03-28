@@ -13,7 +13,6 @@ aliases:
     "/blog/jjameson/archive/2010/07/31/soluto-and-antivir-solution-pro-virus.aspx",
     "/blog/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Infrastructure", "Windows 7"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/08/01/soluto-and-antivir-solution-pro-virus.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/08/20/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx",
     "/blog/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/08/21/incorrect-syntax-near-collate-when-trying-to-join-a-sharepoint-farm.aspx"

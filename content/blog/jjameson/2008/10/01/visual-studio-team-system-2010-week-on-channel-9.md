@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/09/30/visual-studio-team-system-2010-week-on-channel-9.aspx",
     "/blog/jjameson/archive/2008/10/01/visual-studio-team-system-2010-week-on-channel-9.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/10/01/visual-studio-team-system-2010-week-on-channel-9.aspx"

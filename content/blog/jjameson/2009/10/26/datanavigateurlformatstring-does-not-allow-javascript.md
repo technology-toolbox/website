@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/25/datanavigateurlformatstring-does-not-allow-javascript.aspx",
     "/blog/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/26/datanavigateurlformatstring-does-not-allow-javascript.aspx"

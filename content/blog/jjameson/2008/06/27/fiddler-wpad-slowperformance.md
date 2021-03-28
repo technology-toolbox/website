@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/06/26/fiddler-wpad-slowperformance.aspx",
     "/blog/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "Development"]
 tags: ["Windows Vista", "Debugging"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/06/27/fiddler-wpad-slowperformance.aspx"

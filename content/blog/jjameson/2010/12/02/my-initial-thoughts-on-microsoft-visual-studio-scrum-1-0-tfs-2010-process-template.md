@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/12/01/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx",
     "/blog/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/my-initial-thoughts-on-microsoft-visual-studio-scrum-1-0-tfs-2010-process-template.aspx"

@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["Simplify", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/18/configuring-logging-in-sharepoint-application-pages.aspx"

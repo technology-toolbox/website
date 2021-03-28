@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/05/31/errors-installing-windows-server-2008-sp2.aspx",
     "/blog/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista", "WSUS", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/01/errors-installing-windows-server-2008-sp2.aspx"

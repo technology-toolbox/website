@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/04/16/stagger-the-startup-of-your-virtual-machines.aspx",
     "/blog/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/17/stagger-the-startup-of-your-virtual-machines.aspx"

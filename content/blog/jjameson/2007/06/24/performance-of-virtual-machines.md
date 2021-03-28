@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/06/23/performance-of-virtual-machines.aspx",
     "/blog/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/24/performance-of-virtual-machines.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/25/build-and-deployment-overview.aspx",
     "/blog/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/build-and-deployment-overview.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/17/operations-manager-alerts-for-event-log-errors.aspx",
     "/blog/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx"

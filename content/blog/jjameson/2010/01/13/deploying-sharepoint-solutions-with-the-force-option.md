@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/01/12/deploying-sharepoint-solutions-with-the-force-option.aspx",
     "/blog/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/13/deploying-sharepoint-solutions-with-the-force-option.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/27/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx",
     "/blog/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["WSUS", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/28/wsus-server-cleanup-wizard-hangs-on-deleting-unused-updates.aspx"

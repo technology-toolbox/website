@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/08/21/leaving-microsoft.aspx",
     "/blog/jjameson/archive/2011/08/22/leaving-microsoft.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/08/22/leaving-microsoft.aspx"

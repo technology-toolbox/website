@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/05/29/counting-rows-in-all-database-tables.aspx",
     "/blog/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["SQL Server", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/counting-rows-in-all-database-tables.aspx"

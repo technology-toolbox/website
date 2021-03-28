@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["SQL Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/07/error-installing-kb-970892-when-reporting-services-configured-with-domain-account.aspx"

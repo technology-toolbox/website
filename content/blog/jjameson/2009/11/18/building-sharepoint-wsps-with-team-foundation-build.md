@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/11/17/building-sharepoint-wsps-with-team-foundation-build.aspx",
     "/blog/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "MOSS 2007", "WSS v3", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/18/building-sharepoint-wsps-with-team-foundation-build.aspx"

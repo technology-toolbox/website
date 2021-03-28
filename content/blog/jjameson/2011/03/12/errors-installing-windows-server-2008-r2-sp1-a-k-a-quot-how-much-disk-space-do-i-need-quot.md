@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/11/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx",
     "/blog/jjameson/archive/2011/03/12/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/12/errors-installing-windows-server-2008-r2-sp1-a-k-a-quot-how-much-disk-space-do-i-need-quot.aspx"

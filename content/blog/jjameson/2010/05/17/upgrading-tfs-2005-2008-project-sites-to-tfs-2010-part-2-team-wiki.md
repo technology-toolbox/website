@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/16/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx",
     "/blog/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "TFS", "SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/17/upgrading-tfs-2005-2008-project-sites-to-tfs-2010-part-2-team-wiki.aspx"

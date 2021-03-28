@@ -10,7 +10,6 @@ aliases:
     "/blog/jjameson/archive/2012/01/25/building-technologytoolbox-com-part-17.aspx",
     "/blog/jjameson/archive/2012/01/26/building-technologytoolbox-com-part-17.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext", "TFS", "Visual Studio", "Web Development"]
 ---

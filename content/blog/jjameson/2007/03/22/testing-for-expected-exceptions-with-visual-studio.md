@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/03/21/testing-for-expected-exceptions-with-visual-studio.aspx",
     "/blog/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/03/22/testing-for-expected-exceptions-with-visual-studio.aspx"

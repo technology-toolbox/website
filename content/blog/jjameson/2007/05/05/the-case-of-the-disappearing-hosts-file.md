@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/05/04/the-case-of-the-disappearing-hosts-file.aspx",
     "/blog/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/05/the-case-of-the-disappearing-hosts-file.aspx"

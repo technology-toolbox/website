@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/25/best-practices-for-scm-and-the-daily-build-process.aspx",
     "/blog/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/26/best-practices-for-scm-and-the-daily-build-process.aspx"

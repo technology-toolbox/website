@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/27/zip-a-folder-using-powershell.aspx",
   ]
-draft: true
 categories: ["Development", "Infrastructure"]
 tags: ["PowerShell"]
 ---

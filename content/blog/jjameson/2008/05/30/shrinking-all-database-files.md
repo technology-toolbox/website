@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/05/29/shrinking-all-database-files.aspx",
     "/blog/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx",
   ]
-draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "SQL Server", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/05/30/shrinking-all-database-files.aspx"

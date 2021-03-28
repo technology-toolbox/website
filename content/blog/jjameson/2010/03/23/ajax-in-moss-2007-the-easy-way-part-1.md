@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx"

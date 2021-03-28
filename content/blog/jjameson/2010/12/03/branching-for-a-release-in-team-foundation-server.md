@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/12/02/branching-for-a-release-in-team-foundation-server.aspx",
     "/blog/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/03/branching-for-a-release-in-team-foundation-server.aspx"

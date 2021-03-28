@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/24/development-and-build-environments.aspx",
     "/blog/jjameson/archive/2009/09/25/development-and-build-environments.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/25/development-and-build-environments.aspx"

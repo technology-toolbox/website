@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/05/07/powershell-scripts-for-managing-the-hosts-file.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "My System", "SharePoint", "Development"]
 tags: ["Infrastructure", "My System", "PowerShell", "SharePoint 2010", "Toolbox"]
 ---

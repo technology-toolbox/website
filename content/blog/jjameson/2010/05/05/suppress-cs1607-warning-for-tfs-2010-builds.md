@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/04/suppress-cs1607-warning-for-tfs-2010-builds.aspx",
     "/blog/jjameson/archive/2010/05/05/suppress-cs1607-warning-for-tfs-2010-builds.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Visual Studio", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/05/suppress-cs1607-warning-for-tfs-2010-builds.aspx"

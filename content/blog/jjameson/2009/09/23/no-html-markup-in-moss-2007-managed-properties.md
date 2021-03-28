@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/22/no-html-markup-in-moss-2007-managed-properties.aspx",
     "/blog/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/23/no-html-markup-in-moss-2007-managed-properties.aspx"

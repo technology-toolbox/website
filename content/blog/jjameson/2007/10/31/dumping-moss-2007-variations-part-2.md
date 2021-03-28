@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/10/30/dumping-moss-2007-variations-part-2.aspx",
     "/blog/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/10/31/dumping-moss-2007-variations-part-2.aspx"

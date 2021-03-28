@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/01/active-directory-domain-structure-in-the-jameson-datacenter.aspx",
     "/blog/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/02/active-directory-domain-structure-in-the-jameson-datacenter.aspx"

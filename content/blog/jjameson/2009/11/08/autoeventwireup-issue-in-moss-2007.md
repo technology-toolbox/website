@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/08/autoeventwireup-issue-in-moss-2007.aspx"

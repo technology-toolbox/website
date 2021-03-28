@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/13/stsadm-to-windows-powershell-mapping-sharepoint-server-2010.aspx",
     "/blog/jjameson/archive/2010/05/14/stsadm-to-windows-powershell-mapping-sharepoint-server-2010.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/14/stsadm-to-windows-powershell-mapping-sharepoint-server-2010.aspx"

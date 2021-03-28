@@ -13,7 +13,6 @@ aliases:
     "/blog/jjameson/archive/2011/11/16/building-technologytoolbox-com-part-8.aspx",
     "/blog/jjameson/archive/2011/11/17/building-technologytoolbox-com-part-8.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["My System", "PowerShell", "Subtext", "Web Development"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/18/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx",
     "/blog/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint", "Infrastructure"]
 tags: ["My System", "MOSS 2007", "Infrastructure", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/19/cdl-for-sharepoint-a-k-a-quot-you-can-never-have-too-many-spindles-quot.aspx"

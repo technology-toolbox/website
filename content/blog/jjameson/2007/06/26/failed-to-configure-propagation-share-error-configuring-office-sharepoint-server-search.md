@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/06/25/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx",
     "/blog/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/26/failed-to-configure-propagation-share-error-configuring-office-sharepoint-server-search.aspx"

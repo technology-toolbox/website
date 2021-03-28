@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/23/the-original-jameson-datacenter.aspx",
     "/blog/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx",
   ]
-draft: true
 categories: ["My System", "Personal", "Infrastructure"]
 tags: ["My System", "Personal", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/24/the-original-jameson-datacenter.aspx"

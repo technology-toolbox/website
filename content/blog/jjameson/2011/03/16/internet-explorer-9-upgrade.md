@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/15/internet-explorer-9-upgrade.aspx",
     "/blog/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["Simplify", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/16/internet-explorer-9-upgrade.aspx"

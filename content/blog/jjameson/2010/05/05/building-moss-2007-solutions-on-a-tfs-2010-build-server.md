@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/04/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx",
     "/blog/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Visual Studio", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/05/building-moss-2007-solutions-on-a-tfs-2010-build-server.aspx"

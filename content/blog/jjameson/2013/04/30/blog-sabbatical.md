@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/04/30/blog-sabbatical.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/05/large-visual-studio-solutions-by-loading-unloading-projects.aspx",
     "/blog/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/06/large-visual-studio-solutions-by-loading-unloading-projects.aspx"

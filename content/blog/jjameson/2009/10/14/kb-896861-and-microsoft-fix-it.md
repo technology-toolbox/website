@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/13/kb-896861-and-microsoft-fix-it.aspx",
     "/blog/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/14/kb-896861-and-microsoft-fix-it.aspx"

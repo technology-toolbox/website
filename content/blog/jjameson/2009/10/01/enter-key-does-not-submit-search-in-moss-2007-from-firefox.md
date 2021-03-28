@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/30/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx",
     "/blog/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/01/enter-key-does-not-submit-search-in-moss-2007-from-firefox.aspx"

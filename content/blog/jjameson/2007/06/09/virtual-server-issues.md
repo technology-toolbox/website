@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/06/08/virtual-server-issues.aspx",
     "/blog/jjameson/archive/2007/06/09/virtual-server-issues.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/06/09/virtual-server-issues.aspx"

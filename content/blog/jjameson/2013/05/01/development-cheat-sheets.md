@@ -10,7 +10,6 @@ aliases:
     "/blog/jjameson/archive/2013/04/30/development-cheat-sheets.aspx",
     "/blog/jjameson/archive/2013/05/01/development-cheat-sheets.aspx",
   ]
-draft: true
 categories: ["Development", "My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]
 ---

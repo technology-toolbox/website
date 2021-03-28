@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/04/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx",
     "/blog/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-visual-studio-2008-code-metrics-and-referenced-assemblies.aspx"

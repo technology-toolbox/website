@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/19/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx",
     "/blog/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/20/the-simplest-way-to-show-page-descriptions-in-sharepoint-search-results.aspx"

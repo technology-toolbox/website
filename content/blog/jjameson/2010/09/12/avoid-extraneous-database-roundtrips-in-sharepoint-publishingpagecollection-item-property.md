@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/09/11/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx",
     "/blog/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/09/12/avoid-extraneous-database-roundtrips-in-sharepoint-publishingpagecollection-item-property.aspx"

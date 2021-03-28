@@ -10,7 +10,6 @@ aliases:
     "/blog/jjameson/archive/2013/04/29/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx",
     "/blog/jjameson/archive/2013/04/30/installation-guide-for-sharepoint-server-2010-and-office-web-apps.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]
 attachment: 

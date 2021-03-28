@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/18/using-microsoft-excel-to-open-numerous-web-pages.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "Web Development"]
 ---

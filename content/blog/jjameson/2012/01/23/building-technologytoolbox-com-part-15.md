@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/01/23/building-technologytoolbox-com-part-15.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["Subtext"]
 ---

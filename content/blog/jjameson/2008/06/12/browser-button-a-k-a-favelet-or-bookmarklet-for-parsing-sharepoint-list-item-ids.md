@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/06/11/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx",
     "/blog/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3", "WSS v2"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/06/12/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx"

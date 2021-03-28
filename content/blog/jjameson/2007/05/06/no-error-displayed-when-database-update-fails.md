@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/05/05/no-error-displayed-when-database-update-fails.aspx",
     "/blog/jjameson/archive/2007/05/06/no-error-displayed-when-database-update-fails.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/06/no-error-displayed-when-database-update-fails.aspx"

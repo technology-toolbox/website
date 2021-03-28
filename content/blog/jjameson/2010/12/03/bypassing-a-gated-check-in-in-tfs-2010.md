@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/12/02/bypassing-a-gated-check-in-in-tfs-2010.aspx",
     "/blog/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx"

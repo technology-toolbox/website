@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/10/17/introducing-technologytoolbox-com.aspx",
     "/blog/jjameson/archive/2011/10/18/introducing-technologytoolbox-com.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Subtext", "Web Development"]
 ---

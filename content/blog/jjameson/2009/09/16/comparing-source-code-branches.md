@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/15/comparing-source-code-branches.aspx",
     "/blog/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/16/comparing-source-code-branches.aspx"

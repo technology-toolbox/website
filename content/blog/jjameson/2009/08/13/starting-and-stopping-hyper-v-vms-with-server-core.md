@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/08/12/starting-and-stopping-hyper-v-vms-with-server-core.aspx",
     "/blog/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx",
   ]
-draft: true
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "Virtualization", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/08/13/starting-and-stopping-hyper-v-vms-with-server-core.aspx"

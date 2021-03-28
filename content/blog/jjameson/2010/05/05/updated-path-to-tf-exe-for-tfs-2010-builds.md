@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/04/updated-path-to-tf-exe-for-tfs-2010-builds.aspx",
     "/blog/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/05/updated-path-to-tf-exe-for-tfs-2010-builds.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/16/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx",
     "/blog/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "Simplify", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group.aspx"

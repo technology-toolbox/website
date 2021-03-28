@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/05/28/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx",
     "/blog/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx",
   ]
-draft: true
 categories: [""]
 tags: ["SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/05/29/add-sysadmin-in-sql-server-2008-using-local-administrator.aspx"

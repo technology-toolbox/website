@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/18/stop-putting-shortcuts-on-my-windows-desktop.aspx",
   ]
-draft: true
 categories: ["My System"]
 tags: ["My System", "Windows 7"]
 ---

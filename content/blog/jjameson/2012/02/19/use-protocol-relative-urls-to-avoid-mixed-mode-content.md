@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/19/use-protocol-relative-urls-to-avoid-mixed-mode-content.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["Simplify", "Web Development"]
 ---

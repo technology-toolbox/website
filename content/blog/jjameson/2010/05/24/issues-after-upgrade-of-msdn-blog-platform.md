@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx",
   ]
-draft: true
 categories: [""]
 tags: [""]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/24/issues-after-upgrade-of-msdn-blog-platform.aspx"

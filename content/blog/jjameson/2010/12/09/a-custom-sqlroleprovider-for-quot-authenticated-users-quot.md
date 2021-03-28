@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/12/08/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx",
     "/blog/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/09/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx"

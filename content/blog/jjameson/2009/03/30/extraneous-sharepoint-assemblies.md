@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/29/extraneous-sharepoint-assemblies.aspx",
     "/blog/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx",
   ]
-draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/30/extraneous-sharepoint-assemblies.aspx"

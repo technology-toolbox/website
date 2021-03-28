@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "PowerShell"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/27/powershell-script-to-configure-the-state-service-in-sharepoint-server-2010.aspx"

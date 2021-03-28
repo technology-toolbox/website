@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/06/02/update-on-patching-and-disk-space-usage.aspx",
     "/blog/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx",
   ]
-draft: true
 categories: ["Infrastructure"]
 tags: ["Windows Vista", "Windows Server", "Infrastructure", "Virtualization"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/03/update-on-patching-and-disk-space-usage.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/01/11/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx",
     "/blog/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "WSS v3", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/01/12/build-bloat-and-removing-extraneous-items-from-tfs-builds.aspx"

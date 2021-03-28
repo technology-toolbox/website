@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/11/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx",
     "/blog/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/12/bug-in-moss-2007-fba-with-insufficient-permissions-in-sql-server.aspx"

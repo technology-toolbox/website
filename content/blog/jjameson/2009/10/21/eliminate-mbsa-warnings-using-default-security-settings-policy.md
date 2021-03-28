@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/20/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx",
     "/blog/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/21/eliminate-mbsa-warnings-using-default-security-settings-policy.aspx"

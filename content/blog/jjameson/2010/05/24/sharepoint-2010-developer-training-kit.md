@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/23/sharepoint-2010-developer-training-kit.aspx",
     "/blog/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/24/sharepoint-2010-developer-training-kit.aspx"

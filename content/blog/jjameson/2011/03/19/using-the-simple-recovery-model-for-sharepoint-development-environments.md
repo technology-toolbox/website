@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/18/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx",
     "/blog/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "SQL Server", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/19/using-the-simple-recovery-model-for-sharepoint-development-environments.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/04/01/web-standards-design-with-sharepoint-part-4.aspx",
     "/blog/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx"

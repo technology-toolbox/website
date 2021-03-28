@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/04/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx",
     "/blog/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty.aspx"

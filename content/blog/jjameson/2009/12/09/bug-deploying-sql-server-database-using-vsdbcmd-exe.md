@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/12/08/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx",
     "/blog/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["SQL Server", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/12/09/bug-deploying-sql-server-database-using-vsdbcmd-exe.aspx"

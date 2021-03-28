@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2011/11/05/feedburner-not-showing-your-latest-blog-post.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Subtext"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/03/03/identifying-logon-failures-on-a-web-site.aspx",
     "/blog/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Infrastructure"]
 tags: ["MOSS 2007", "Infrastructure", "SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/04/identifying-logon-failures-on-a-web-site.aspx"

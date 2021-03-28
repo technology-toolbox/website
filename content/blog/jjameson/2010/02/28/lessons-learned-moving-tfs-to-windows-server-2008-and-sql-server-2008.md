@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/02/27/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx",
     "/blog/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Infrastructure", "Development"]
 tags: ["WSS v3", "SQL Server", "WSS v2", "Windows Server", "Infrastructure", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/02/28/lessons-learned-moving-tfs-to-windows-server-2008-and-sql-server-2008.aspx"

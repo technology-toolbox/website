@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/19/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx",
     "/blog/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/20/inheriting-the-master-page-from-the-current-site-context-in-moss-2007.aspx"

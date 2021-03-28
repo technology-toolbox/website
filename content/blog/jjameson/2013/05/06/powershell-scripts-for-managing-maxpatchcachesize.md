@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/05/06/powershell-scripts-for-managing-maxpatchcachesize.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "PowerShell", "Toolbox"]
 ---

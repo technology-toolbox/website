@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/04/22/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx",
     "/blog/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/23/versioning-blogs-posts-in-wss-v3-and-moss-2007.aspx"

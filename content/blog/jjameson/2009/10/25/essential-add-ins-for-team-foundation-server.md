@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/24/essential-add-ins-for-team-foundation-server.aspx",
     "/blog/jjameson/archive/2009/10/25/essential-add-ins-for-team-foundation-server.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Visual Studio", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/25/essential-add-ins-for-team-foundation-server.aspx"

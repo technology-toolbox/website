@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/03/is-directory-browsing-enabled-or-disabled-on-your-website.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 ---

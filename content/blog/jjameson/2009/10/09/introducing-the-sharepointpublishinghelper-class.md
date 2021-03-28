@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/08/introducing-the-sharepointpublishinghelper-class.aspx",
     "/blog/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/09/introducing-the-sharepointpublishinghelper-class.aspx"

@@ -9,7 +9,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/03/17/always-create-installation-guides-for-predictable-and-repeatable-deployments.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/11/17/the-copy-local-bug-in-visual-studio.aspx",
     "/blog/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx",
   ]
-draft: true
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/18/the-copy-local-bug-in-visual-studio.aspx"

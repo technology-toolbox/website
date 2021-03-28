@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2011/04/04/recoverableexception-for-net-framework-solutions.aspx",
     "/blog/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/05/recoverableexception-for-net-framework-solutions.aspx"

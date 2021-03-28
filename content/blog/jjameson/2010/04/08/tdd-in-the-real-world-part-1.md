@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/08/tdd-in-the-real-world-part-1.aspx"

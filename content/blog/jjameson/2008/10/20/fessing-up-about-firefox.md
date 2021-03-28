@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2008/10/19/fessing-up-about-firefox.aspx",
     "/blog/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/10/20/fessing-up-about-firefox.aspx"

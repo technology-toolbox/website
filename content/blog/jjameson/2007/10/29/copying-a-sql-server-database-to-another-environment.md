@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/10/28/copying-a-sql-server-database-to-another-environment.aspx",
     "/blog/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "SQL Server"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/10/29/copying-a-sql-server-database-to-another-environment.aspx"

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/04/14/blog-post-formatting-issues.aspx",
     "/blog/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/15/blog-post-formatting-issues.aspx"

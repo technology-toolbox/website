@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/09/19/overriding-application-master-in-moss-2007.aspx",
     "/blog/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/09/20/overriding-application-master-in-moss-2007.aspx"

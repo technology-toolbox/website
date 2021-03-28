@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2013/05/24/powershell-script-for-clearing-windows-event-logs.aspx",
   ]
-draft: true
 categories: ["Development", "My System"]
 tags: ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server"]
 ---

@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/25/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx",
     "/blog/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx",
   ]
-draft: true
 categories: ["SharePoint", "My System"]
 tags: ["MOSS 2007", "WSS v3", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/26/sharepoint-uls-logs-flooded-with-preserving-template-record-with-size.aspx"

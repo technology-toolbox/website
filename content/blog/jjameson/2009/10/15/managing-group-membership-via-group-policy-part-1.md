@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/14/managing-group-membership-via-group-policy-part-1.aspx",
     "/blog/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx",
   ]
-draft: true
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Windows Server", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/15/managing-group-membership-via-group-policy-part-1.aspx"

@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx",
   ]
-draft: true
 categories: ["My System", "SharePoint", "Development"]
 tags: ["Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/06/18/a-simple-but-highly-effective-approach-to-logging.aspx"

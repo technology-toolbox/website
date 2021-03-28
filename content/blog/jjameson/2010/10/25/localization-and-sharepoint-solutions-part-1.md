@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/10/24/localization-and-sharepoint-solutions-part-1.aspx",
     "/blog/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/10/25/localization-and-sharepoint-solutions-part-1.aspx"

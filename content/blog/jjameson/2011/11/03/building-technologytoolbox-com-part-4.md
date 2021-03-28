@@ -10,7 +10,6 @@ aliases:
   [
     "/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["SharePoint 2010", "Web Development"]
 ---

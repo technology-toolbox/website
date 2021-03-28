@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/03/23/diffmerge-a-better-differencing-tool.aspx",
     "/blog/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio", "TFS", "Toolbox"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/03/24/diffmerge-a-better-differencing-tool.aspx"

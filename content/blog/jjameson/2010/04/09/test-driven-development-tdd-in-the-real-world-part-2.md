@@ -14,7 +14,6 @@ aliases:
     "/blog/jjameson/archive/2010/04/08/test-driven-development-tdd-in-the-real-world-part-2.aspx",
     "/blog/jjameson/archive/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2.aspx",
   ]
-draft: true
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/09/test-driven-development-tdd-in-the-real-world-part-2.aspx"

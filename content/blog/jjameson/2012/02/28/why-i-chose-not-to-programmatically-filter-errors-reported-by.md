@@ -8,7 +8,6 @@ aliases:
   [
     "/blog/jjameson/archive/2012/02/28/why-i-chose-not-to-programmatically-filter-errors-reported-by.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Core Development", "Web Development"]
 ---

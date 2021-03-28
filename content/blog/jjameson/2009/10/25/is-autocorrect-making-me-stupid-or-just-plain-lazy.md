@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2009/10/24/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx",
     "/blog/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx",
   ]
-draft: true
 categories: ["Personal"]
 tags: ["Personal"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/10/25/is-autocorrect-making-me-stupid-or-just-plain-lazy.aspx"

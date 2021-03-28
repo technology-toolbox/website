@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2007/05/05/always-specify-fieldrefs-element-with-custom-content-types.aspx",
     "/blog/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx",
   ]
-draft: true
 categories: ["SharePoint"]
 tags: ["MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/05/06/always-specify-fieldrefs-element-with-custom-content-types.aspx"

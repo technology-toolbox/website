@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/12/09/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx",
     "/blog/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx"

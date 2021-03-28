@@ -11,7 +11,6 @@ aliases:
     "/blog/jjameson/archive/2010/05/19/reporting-errors-with-tfs-migration-upgrade.aspx",
     "/blog/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx",
   ]
-draft: true
 categories: ["Development"]
 tags: ["SQL Server", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/05/20/reporting-errors-with-tfs-migration-upgrade.aspx"
