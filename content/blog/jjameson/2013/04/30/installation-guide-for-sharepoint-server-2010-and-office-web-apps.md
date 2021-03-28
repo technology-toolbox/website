@@ -376,7 +376,7 @@ To create a 500 MB VHD for the SQL Server log files:
 
 More information on this step is available in the following blog post:
 
-{{< reference title="Creating Small VHDs (&lt; 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
+{{< reference title="Creating Small VHDs (< 1GB) for Hyper-V" linkHref="/blog/jjameson/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v" linkText="https://www.technologytoolbox.com/blog/jjameson/archive/2011/03/19/creating-small-vhds-lt-1gb-for-hyper-v.aspx" >}}
 
 ## Set MaxPatchCacheSize to 0 (Optional)
 
