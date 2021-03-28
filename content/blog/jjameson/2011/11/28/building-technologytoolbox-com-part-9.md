@@ -71,7 +71,7 @@ solution in order to isolate the DAL in a separate assembly
 (**TechnologyToolbox.Caelum.Data.dll**). Then I added a new **ADO.NET Entity
 Data Model** to the project (**Caelum.edmx**).
 
-Since Subtext stores blog posts in the **subtext\_Content** table, I added that
+Since Subtext stores blog posts in the **subtext_Content** table, I added that
 table to the model. Next I updated the properties to change the entity names as
 follows:
 

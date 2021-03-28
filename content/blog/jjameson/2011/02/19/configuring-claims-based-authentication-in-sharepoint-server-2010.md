@@ -141,16 +141,16 @@ added to to the appropriate database roles.
       click the checkbox for the ASP.NET membership database (**FabrikamDemo**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
-      - **aspnet\_Membership\_BasicAccess**
-      - **aspnet\_Membership\_ReportingAccess**
-      - **aspnet\_Roles\_BasicAccess**
-      - **aspnet\_Roles\_ReportingAccess**
+      - **aspnet_Membership_BasicAccess**
+      - **aspnet_Membership_ReportingAccess**
+      - **aspnet_Roles_BasicAccess**
+      - **aspnet_Roles_ReportingAccess**
    1. Click **OK**.
 1. Repeat the steps in this section to add the service account for the Fabrikam
    Web application (**EXTRANET\svc-web-fabrikam**) to the following roles:
-   - **aspnet\_Membership\_FullAccess**
-   - **aspnet\_Roles\_BasicAccess**
-   - **aspnet\_Roles\_ReportingAccess**
+   - **aspnet_Membership_FullAccess**
+   - **aspnet_Roles_BasicAccess**
+   - **aspnet_Roles_ReportingAccess**
 
 {{< div-block "note important" >}}
 

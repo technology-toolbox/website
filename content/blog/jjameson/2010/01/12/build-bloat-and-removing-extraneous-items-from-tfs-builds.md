@@ -84,7 +84,7 @@ these files as part of our deployment process for our solution).
 Note that the build bloat is exacerbated by compiling both Debug and Release
 builds, as well as the fact that the default build configuration for Team
 Foundation Server (TFS) copies the files for any Web site projects to a separate
-folder (\_PublishedWebsites).
+folder (_PublishedWebsites).
 
 When I started investigating the build bloat issue, I quickly discovered that
 there were actually five copies each of AjaxControlToolkit.dll and

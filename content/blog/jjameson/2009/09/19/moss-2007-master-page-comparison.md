@@ -27,7 +27,7 @@ master page that could be used for:
 
 - Site pages (e.g. /Library/default.aspx)
 - System pages (e.g. /Library/Brochures/Forms/AllItems.aspx)
-- Application pages (e.g. /Library/\_layouts/viewlsts.aspx)
+- Application pages (e.g. /Library/_layouts/viewlsts.aspx)
 
 Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:
@@ -63,7 +63,7 @@ caption="MOSS 2007 Master Page Comparison" >}}
 | PlaceHolderNavSpacer | X | X |
 | PlaceHolderLeftNavBarBorder | X | X |
 | PlaceHolderBodyLeftBorder | X | X |
-| MSO\_ContentDiv\*\* |  | X |
+| MSO_ContentDiv\*\* |  | X |
 | PlaceHolderBodyAreaClass | X | X\* |
 | PlaceHolderPageDescriptionRowAttr | X |  |
 | PlaceHolderPageDescription | X | X |

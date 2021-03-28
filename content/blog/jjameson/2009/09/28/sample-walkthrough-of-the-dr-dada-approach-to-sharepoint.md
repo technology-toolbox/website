@@ -210,7 +210,7 @@ Assuming you've developed custom SharePoint WSPs before, the contents of
 ```
 
 The contents of the WSP (i.e. files and folder structure) are defined in
-**wsp\_structure.ddf**:
+**wsp_structure.ddf**:
 
 ```
 ;
@@ -285,7 +285,7 @@ Fabrikam.Demo.Publishing.dll
 The most interesting aspect of this DDF is that we want to deploy the
 corresponding Debug or Release build of **Fabrikam.Demo.CoreServices.dll** as
 part of our WSP. The best way I found to do this is to specify the
-BUILD\_CONFIGURATION variable when calling makecab.exe.
+BUILD_CONFIGURATION variable when calling makecab.exe.
 
 Next, I unload **Publishing.csproj** and edit the MSBuild file directly in order
 to create the SharePoint solution package (WSP). As noted in an
@@ -421,13 +421,13 @@ echo Done
 ::
 ```
 
-Note how I allow certain variables (i.e. SPDIR and
-FABRIKAM\_BUILD\_CONFIGURATION) to be defined outside of the script. This is
-useful, for example, to deploy either Debug or Release builds depending on the
-environment. For example, in the Production environment, we always want to
-deploy Release builds -- not Debug builds. Whereas in development environments,
-we always want to install the Debug Builds. (Whether we install Debug or Release
-builds to the Test environment depends on where we are at in the release cycle.)
+Note how I allow certain variables (i.e. SPDIR and FABRIKAM_BUILD_CONFIGURATION)
+to be defined outside of the script. This is useful, for example, to deploy
+either Debug or Release builds depending on the environment. For example, in the
+Production environment, we always want to deploy Release builds -- not Debug
+builds. Whereas in development environments, we always want to install the Debug
+Builds. (Whether we install Debug or Release builds to the Test environment
+depends on where we are at in the release cycle.)
 
 {{< div-block "note" >}}
 

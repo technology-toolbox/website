@@ -30,13 +30,13 @@ REM Sometimes it is necessary to force the deployment to circumvent errors
 REM set FORCE_OPTION=-force
 ```
 
-The FORCE\_OPTION environment variable is subsequently included in the line that
+The FORCE_OPTION environment variable is subsequently included in the line that
 invokes StsAdm.exe:
 
 {{< console-block >}}
 
-%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION\_NAME%.wsp" -url
-%FABRIKAM\_PORTAL\_URL% %DEPLOY\_METHOD% -allowGacDeployment %FORCE\_OPTION%
+%SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION_NAME%.wsp" -url
+%FABRIKAM_PORTAL_URL% %DEPLOY_METHOD% -allowGacDeployment %FORCE_OPTION%
 
 {{< /console-block >}}
 
@@ -107,7 +107,7 @@ can be subsequently activated (i.e. the second "A" in the "DR.DADA" process).
 However, I never like to leave the **Solution Management** page showing any
 items with **Error** status (even if the error is benign, like this scenario).
 
-Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION
+Therefore, whenever I encounter this error, I simply set the FORCE_OPTION
 environment variable and then redeploy the solutions:
 
 {{< console-block >}}

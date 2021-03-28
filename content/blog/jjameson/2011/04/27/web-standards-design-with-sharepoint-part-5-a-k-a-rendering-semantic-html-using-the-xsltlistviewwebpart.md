@@ -196,7 +196,7 @@ SharePoint list items in a table, we need to render them using an ordered list
 Start SharePoint Designer 2010 and open the site containing the **Specials**
 list. In the **Site Objects** pane, click **Site Pages.** In the ribbon, click
 **Web Part Page** and then select the first page layout (i.e. the layout with
-exactly one Web Part zone) to create a new page (**Untitled\_1.aspx**).
+exactly one Web Part zone) to create a new page (**Untitled_1.aspx**).
 
 Click the new page to view the settings for the page. In the **Customization**
 section, click **Edit file**.

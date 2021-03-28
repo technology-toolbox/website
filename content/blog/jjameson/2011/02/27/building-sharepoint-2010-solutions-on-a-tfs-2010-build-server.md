@@ -90,26 +90,26 @@ caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
 | Assembly | Source Location on SharePoint 2010 Server |
 | --- | --- |
 | Microsoft.BusinessData.dll | ISAPI |
-| Microsoft.HtmlTrans.Interface.dll | GAC\_MSIL |
-| Microsoft.IdentityModel.dll | GAC\_MSIL |
+| Microsoft.HtmlTrans.Interface.dll | GAC_MSIL |
+| Microsoft.IdentityModel.dll | GAC_MSIL |
 | Microsoft.Office.Server.dll | ISAPI |
-| Microsoft.Office.Server.UI.dll | GAC\_MSIL |
+| Microsoft.Office.Server.UI.dll | GAC_MSIL |
 | Microsoft.Office.Server.UserProfiles.dll | ISAPI |
-| Microsoft.SharePoint.AdministrationOperation.dll | GAC\_MSIL |
-| Microsoft.SharePoint.Client.ServerRuntime.dll | GAC\_MSIL |
-| Microsoft.SharePoint.Diagnostics.dll | GAC\_MSIL |
+| Microsoft.SharePoint.AdministrationOperation.dll | GAC_MSIL |
+| Microsoft.SharePoint.Client.ServerRuntime.dll | GAC_MSIL |
+| Microsoft.SharePoint.Diagnostics.dll | GAC_MSIL |
 | Microsoft.SharePoint.dll | ISAPI |
-| Microsoft.SharePoint.Dsp.dll | GAC\_MSIL |
-| Microsoft.SharePoint.Library.dll | GAC\_MSIL |
-| Microsoft.SharePoint.Powershell.dll | GAC\_MSIL |
+| Microsoft.SharePoint.Dsp.dll | GAC_MSIL |
+| Microsoft.SharePoint.Library.dll | GAC_MSIL |
+| Microsoft.SharePoint.Powershell.dll | GAC_MSIL |
 | Microsoft.SharePoint.Publishing.dll | ISAPI |
 | Microsoft.SharePoint.Search.dll | ISAPI |
 | Microsoft.SharePoint.Security.dll | ISAPI |
 | Microsoft.SharePoint.Taxonomy.dll | ISAPI |
 | microsoft.sharepoint.WorkflowActions.dll | ISAPI |
-| Microsoft.Web.Administration.dll | GAC\_MSIL |
+| Microsoft.Web.Administration.dll | GAC_MSIL |
 | Microsoft.Web.CommandUI.dll | ISAPI |
-| Microsoft.Web.Design.Server.dll | GAC\_MSIL |
+| Microsoft.Web.Design.Server.dll | GAC_MSIL |
 
 {{< /table >}}
 
@@ -117,10 +117,10 @@ In case it's not immediately obvious, "ISAPI" in the above table means:
 
 > C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI
 
-...and "GAC\_MSIL" indicates the corresponding assembly folder under
-C:\Windows\assembly\GAC\_MSIL. For example:
+...and "GAC_MSIL" indicates the corresponding assembly folder under
+C:\Windows\assembly\GAC_MSIL. For example:
 
-> C:\Windows\assembly\GAC\_MSIL\Microsoft.BusinessData\14.0.0.0\_\_71e9bce111e9429c
+> C:\Windows\assembly\GAC_MSIL\Microsoft.BusinessData\14.0.0.0\_\_71e9bce111e9429c
 
 I may need to copy additional SharePoint assemblies to my build server in the
 future, but for now, these are sufficient to compile my current solutions

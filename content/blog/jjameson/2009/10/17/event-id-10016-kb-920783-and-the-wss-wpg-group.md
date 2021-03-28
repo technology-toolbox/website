@@ -74,7 +74,7 @@ However, I see two problems with KB 920783:
 
 I definitely don't recommend doing that -- unless you just like making more work
 for yourself than necessary. Instead, you should specify the local
-**WSS\_ADMIN\_WPG** and **WSS\_WPG** groups rather than a specific user. This is
+**WSS_ADMIN_WPG** and **WSS_WPG** groups rather than a specific user. This is
 what I've been doing for the last couple of years so trust me, it works.
 
 The reason why I recommend using the "Windows SharePoint Services Worker Process
@@ -88,14 +88,14 @@ account.
 
 Rather than granting the Local Activation permission to each of these service
 accounts individually, it is much more effective to just grant the permission to
-the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
+the WSS_ADMIN_WPG and WSS_WPG groups instead.
 
 {{< div-block "note" >}}
 
 > **Note**
 >
 > When creating a new Web application, SharePoint automatically adds the
-> corresponding service account to the local WSS\_WPG group on each SharePoint
+> corresponding service account to the local WSS_WPG group on each SharePoint
 > server in your farm.
 
 {{< /div-block >}}
@@ -105,12 +105,12 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 > **Update (2009-10-29)**
 >
 > Matt McEvoy contacted me last Monday regarding the fact that I didn't specify
-> the **WSS\_ADMIN\_WPG** group -- only the **WSS\_WPG** group.
+> the **WSS_ADMIN_WPG** group -- only the **WSS_WPG** group.
 >
 > Ugh...that will teach me to try to recall something like this from memory.
 > When I was writing this blog post, I mistakenly thought that the service
-> account for the SharePoint farm was added to both WSS\_ADMIN\_WPG and
-> WSS\_WPG. However, this isn't the case.
+> account for the SharePoint farm was added to both WSS_ADMIN_WPG and WSS_WPG.
+> However, this isn't the case.
 >
 > Therefore you need to be sure to apply the steps in
 > [KB 920783](http://support.microsoft.com/kb/920783) using both groups if you
@@ -137,10 +137,10 @@ the WSS\_ADMIN\_WPG and WSS\_WPG groups instead.
 >    changes to this computer, click **Yes**.
 > 1. In the **Registry Editor** window, search for
 >    "61738644-F196-11D0-9953-00C04FD919C1" to find
->    HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}.
+>    HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}.
 > 1. Right-click on the
->    **HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key
->    and then click **Permissions**.
+>    **HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key and
+>    then click **Permissions**.
 > 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog
 >    box, click **Advanced**.
 > 1. In the **Advanced Security Settings for

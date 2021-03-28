@@ -31,7 +31,7 @@ pages by clicking the **Master page** link under the **Look and Feel** section
 on the **Site Settings** page.
 
 However, note that your site also uses another master page -- application.master
--- for application pages (e.g. /\_layouts/viewlsts.aspx). In MOSS 2007, there is
+-- for application pages (e.g. /_layouts/viewlsts.aspx). In MOSS 2007, there is
 no out-of-the-box way to configure application pages to use a different master
 page. This typically isn't a significant issue because application pages are
 usually only used by administrators of the site. However, there's at least one
@@ -40,7 +40,7 @@ notable exception.
 When you create a site (say, for example, /Library) using the **Document
 Center** site template, then you will notice that the default page (e.g.
 /Library/default.aspx) has a link to **View All Site Content** which refers to
-the "view lists" page (e.g. /Library/\_layouts/viewlsts.aspx). Consequently when
+the "view lists" page (e.g. /Library/_layouts/viewlsts.aspx). Consequently when
 any of your users click this link, they actually see a page that is rendered
 with application.master.
 
@@ -251,7 +251,7 @@ Otherwise, you'll encounter an error similar to the following:
 {{< div-block "errorMessage" >}}
 
 > Cannot find ContentPlaceHolder 'PlaceHolderPageDescriptionRowAttr' in the
-> master page '/\_catalogs/masterpage/default.master', verify content control's
+> master page '/_catalogs/masterpage/default.master', verify content control's
 > ContentPlaceHolderID attribute in the content page.
 
 {{< /div-block >}}

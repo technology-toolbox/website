@@ -32,7 +32,7 @@ It turns out that the restrictions noted in this KB article are incomplete.
 
 While bulk importing content from the file system (e.g. images) via the PRIME
 API, I found out that SharePoint does not allow folders that end in ".files" or
-"\_files" (which my customer just happens to have). This is apparently a
+"_files" (which my customer just happens to have). This is apparently a
 [known issue](http://technet.microsoft.com/en-us/library/cc261812.aspx) (at
 least as early as 2008-06-28).
 

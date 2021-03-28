@@ -76,7 +76,7 @@ not the location specified in the project settings within Visual Studio.
 
 In other words, if you refer to a referenced assembly using something like:
 
-> ..\\..\\..\CoreServices\bin\\%BUILD\_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
+> ..\\..\\..\CoreServices\bin\\%BUILD_CONFIGURATION%\Fabrikam.Demo.CoreServices.dll
 
 then you will find that this works just fine when building through Visual Studio
 -- or even when compiling using TFSBuild.proj from the command line (a.k.a. a
@@ -164,13 +164,13 @@ Layouts\Web\UI\WebControls\StyleDeclarations.ascx
 Layouts\MasterPages\FabrikamMinimal.master
 ```
 
-Note how I've replaced the BUILD\_CONFIGURATION variable with the OUT\_DIR
-variable. Not surprisingly, the OUT\_DIR variable in the DDF is specified
-similar to how BUILD\_CONFIGURATION was previously specified when calling
-makecab.exe. However, unlike the build configuration the OutDir variable will
-likely contain spaces as well as a trailing slash (which makecab.exe apparently
-doesn't like). Therefore we must quote the OutDir variable and append with "."
-if a trailing slash is found.
+Note how I've replaced the BUILD_CONFIGURATION variable with the OUT_DIR
+variable. Not surprisingly, the OUT_DIR variable in the DDF is specified similar
+to how BUILD_CONFIGURATION was previously specified when calling makecab.exe.
+However, unlike the build configuration the OutDir variable will likely contain
+spaces as well as a trailing slash (which makecab.exe apparently doesn't like).
+Therefore we must quote the OutDir variable and append with "." if a trailing
+slash is found.
 
 Here is the corresponding update to the project file:
 

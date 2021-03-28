@@ -58,13 +58,13 @@ the various default recovery models:
 
 | Database Name | Default Recovery Model |
 | --- | --- |
-| SharePoint\_AdminContent\_{GUID} | Full |
-| SharePoint\_Config | Full |
-| {SSP name}\_DB | Simple |
-| {SSP name}\_Search\_DB | Simple |
-| WSS\_Content | Full |
-| WSS\_Content\_{SSP name} | Full |
-| WSS\_Search\_{server name} | Simple |
+| SharePoint_AdminContent\_{GUID} | Full |
+| SharePoint_Config | Full |
+| {SSP name}_DB | Simple |
+| {SSP name}_Search_DB | Simple |
+| WSS_Content | Full |
+| WSS_Content\_{SSP name} | Full |
+| WSS_Search\_{server name} | Simple |
 
 {{< /table >}}
 

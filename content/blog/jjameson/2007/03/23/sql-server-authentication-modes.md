@@ -66,7 +66,7 @@ Here is some info from MSDN:
 > Windows 2000 clients; it may also be necessary for legacy applications.
 >
 > Pasted from
-> &lt;[http://msdn.microsoft.com/library/en-us/adminsql/ad\_security\_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
+> &lt;[http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true](http://msdn.microsoft.com/library/en-us/adminsql/ad_security_47u6.asp?frame=true)&gt;
 >
 > Windows authentication is more secure than SQL authentication for the
 > following reasons:

@@ -28,8 +28,8 @@ authentication in SharePoint Server 2010.
 
 If you follow those steps, then when you browse to the home page of the site and
 click **Sign In**, you'll be redirected to the out-of-the-box login page
-(/\_login/default.aspx) shown in Figure 1. Note that since the Web application
-is configured to support both Forms-Based Authentication (FBA) and Windows
+(/_login/default.aspx) shown in Figure 1. Note that since the Web application is
+configured to support both Forms-Based Authentication (FBA) and Windows
 authentication, the login page requires you to specify the type of credentials
 to use to logon to the SharePoint site.
 
@@ -40,7 +40,7 @@ class="screenshot" height="250" width="600"
 title="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.aspx)" >}}
 
 If you click **Forms Authentication** in the dropdown list, you are redirected
-to the default login form (/\_forms/default.aspx), shown in Figure 2.
+to the default login form (/_forms/default.aspx), shown in Figure 2.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
@@ -274,7 +274,7 @@ login page:
       - 77u/PD94...
 
 I noticed a similar cookie when authenticating with the custom application page
-(e.g. /\_layouts/Fabrikam/SignIn.aspx).
+(e.g. /_layouts/Fabrikam/SignIn.aspx).
 
 However, when I logged in using the Claims Login Form Web Part, I found that
 there were two cookies:
@@ -290,8 +290,8 @@ removed from the subsequent request, the ".ASPXAUTH" cookie was not. In other
 words, the presence of an ".ASPXAUTH" cookie (without a "FedAuth" cookie) causes
 SharePoint Server 2010 to "blow chunks."
 
-To remedy the issue, I moved the code in the **LoginForm\_LoggedIn** event
-handler into the **LoginForm\_Authenticate** event handler. Since the user is
+To remedy the issue, I moved the code in the **LoginForm_LoggedIn** event
+handler into the **LoginForm_Authenticate** event handler. Since the user is
 redirected upon successful login, this prevents the ASP.NET **Login** control
 from generating the ".ASPXAUTH" cookie. With this change, the OOTB **Sign Out**
 link started working as expected.
@@ -320,7 +320,7 @@ the following features:
   approved (in order to avoid confusing and frustrating users)
 - Detecting the scenario where the user clicks the "Sign In" link on the custom
   sign-in page (instead of immediately entering credentials) and redirect to "/"
-  (instead of "/\_layouts/Authenticate.aspx?...") in order to avoid an "Access
+  (instead of "/_layouts/Authenticate.aspx?...") in order to avoid an "Access
   Denied" error
 
 ### Sample SharePoint solution

@@ -43,9 +43,9 @@ We know that we'll need some customization and therefore we've created a custom
 SharePoint solution (Fabrikam.Demo.Web.wsp) that includes the following
 features:
 
-- Fabrikam.Demo.Web\_HomeSiteConfiguration
-- Fabrikam.Demo.Web\_WebAppConfiguration
-- Fabrikam.Demo.Web\_WebParts
+- Fabrikam.Demo.Web_HomeSiteConfiguration
+- Fabrikam.Demo.Web_WebAppConfiguration
+- Fabrikam.Demo.Web_WebParts
 
 Let's start by assuming we've got a brand new SharePoint Server 2010 environment
 setup with "nothing" on it. In other words, we haven't yet created a Web
@@ -154,8 +154,8 @@ SharePoint debug messages.
 
 It's also worth mentioning that the URL for the Fabrikam Web site is expected to
 vary by environment (e.g. DEV, TEST, and PROD) and therefore the
-**FABRIKAM\_DEMO\_URL** environment variable can be used to specify the URL of
-the SharePoint Web application. For example, in the Development integration
+**FABRIKAM_DEMO_URL** environment variable can be used to specify the URL of the
+SharePoint Web application. For example, in the Development integration
 environment, the URL of the site is
 [http://www-dev.fabrikam.com](http://www-dev.fabrikam.com). This becomes
 important later on when deploying and retracting solutions.
@@ -235,7 +235,7 @@ site).
 For the Fabrikam site, most of the content will be available to anonymous users.
 Therefore, we use a script to avoid having to repeatedly configure anonymous
 access through **Site Actions** -&gt; **Site Permissions** (a.k.a.
-/\_layouts/user.aspx). By "repeatedly" I am referring to performing this
+/_layouts/user.aspx). By "repeatedly" I am referring to performing this
 configuration change in each environment (DEV, TEST, and PROD) or whenever a
 developer decides to rebuild the Web application in his or her local SharePoint
 environment.
@@ -641,7 +641,7 @@ PowerShell instance (without requiring you to temporarily specify
 
 Note how I allow the build configuration (Debug or Release) to be specified
 outside of the script depending on the environment (i.e. using the
-FABRIKAM\_BUILD\_CONFIGURATION environment variable). For example, in the
+FABRIKAM_BUILD_CONFIGURATION environment variable). For example, in the
 Production environment, we always want to deploy Release builds -- not Debug
 builds. Whereas in development environments, we always want to install the Debug
 builds. (Whether we install Debug or Release builds to the Test environment

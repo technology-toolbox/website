@@ -107,21 +107,21 @@ The first step (i.e. action) in the scheduled task rebuilds a custom database
 for the solution:
 
 - Program/script:
-  **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment\Rebuild
+  **"C:\NotBackedUp\Builds\Fabrikam\Portal\_latest\BusinessModel\Database\Deployment\Rebuild
   Database.cmd"**
 - Arguments: **&gt; "C:\NotBackedUp\Rebuild Database - DEV.log" 2&gt;&1**
 - Start in:
-  **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\BusinessModel\Database\Deployment**
+  **C:\NotBackedUp\Builds\Fabrikam\Portal\_latest\BusinessModel\Database\Deployment**
 
 The second step in the scheduled task redeploys all of the custom SharePoint
 WSPs and features for the solution:
 
 - Program/script:
-  **"C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts\Redeploy
+  **"C:\NotBackedUp\Builds\Fabrikam\Portal\_latest\Portal\DeploymentFiles\Scripts\Redeploy
   Features.cmd"**
 - Arguments: **&gt; "C:\NotBackedUp\Redeploy Features - DEV.log" 2&gt;&1**
 - Start in:
-  **C:\NotBackedUp\Builds\Fabrikam\Portal\\_latest\Portal\DeploymentFiles\Scripts**
+  **C:\NotBackedUp\Builds\Fabrikam\Portal\_latest\Portal\DeploymentFiles\Scripts**
 
 Assuming this scheduled task completes successfully, each morning we have a
 freshly rebuilt Development environment with the latest build of our solution.

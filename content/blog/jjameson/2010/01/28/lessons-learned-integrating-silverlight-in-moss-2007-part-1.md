@@ -116,7 +116,7 @@ Silverlight developer simply changed the output path in the
 
 > ..\\..\\..\Portal\Web\12\TEMPLATE\LAYOUTS\Fabrikam\
 
-The DDF file (wsp\_structure.ddf) used to create the WSP was updated to include
+The DDF file (wsp_structure.ddf) used to create the WSP was updated to include
 the XAP file...
 
 ```

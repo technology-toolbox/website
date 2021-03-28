@@ -30,11 +30,11 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
    {{< div-block-start "fst-italic" >}}
 
    > Great article.. was very helpful. I used 960.gs for my master page as well
-   > and all is good. I am now creating a 3 column page layout . I need a
-   > grid\_3 (left), grid\_6 (middle), and a grid\_3 (right). I would like these
-   > all to be blank web part zones. I started off with the "Blank web part
-   > page" as a template but it is using nested Tables and really hard to look
-   > at. Do you have any advice for a starting a page layout based on 960.gs?
+   > and all is good. I am now creating a 3 column page layout . I need a grid_3
+   > (left), grid_6 (middle), and a grid_3 (right). I would like these all to be
+   > blank web part zones. I started off with the "Blank web part page" as a
+   > template but it is using nested Tables and really hard to look at. Do you
+   > have any advice for a starting a page layout based on 960.gs?
 
    {{< div-block-end >}}
 

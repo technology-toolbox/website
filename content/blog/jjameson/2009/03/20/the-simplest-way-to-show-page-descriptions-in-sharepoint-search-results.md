@@ -96,20 +96,20 @@ following crawled properties:
 
 - **Office:6(Text)**
 - **DESCRIPTION(Text)**
-- **ows\_Description(Text)**
-- **ows\_SPSDescription(Text)**
-- **ows\_SiteDescription(Text)**
+- **ows_Description(Text)**
+- **ows_SPSDescription(Text)**
+- **ows_SiteDescription(Text)**
 - **People:AboutMe(Text)**
 
-Surely one of these is the one we want...how about **ows\_Description**? That
+Surely one of these is the one we want...how about **ows_Description**? That
 seems probable. After all, anyone familiar with SharePoint knows that pages are
 simply stored as list items with various columns (a.k.a. fields) and when we add
 a custom column, such as **Product**, to a content type then that field is
 subsequently discovered as a crawled property in the **SharePoint** crawled
 property category (00130329-0000-0130-c000-000000131346) and consequently
-prefixed with "ows\_" (for example, **ows\_Product**).
+prefixed with "ows\_" (for example, **ows_Product**).
 
-The problem is that **ows\_Description** does not correspond to
+The problem is that **ows_Description** does not correspond to
 [Microsoft.SharePoint.Publishing.PublishingPage.Description](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.publishingpage.description.aspx).
 This is counterintuitive, so let's start by looking at the out-of-the-box
 content type hierarchy:
@@ -146,7 +146,7 @@ Here is the definition for that content type:
 The **Description** field is actually **Comments**! This explains why the
 default crawled property mappings for the **Description** managed property fail
 to populate the values in search results. While you could try modifying the
-crawled property mappings for **Description** to add **ows\_Comments**,
+crawled property mappings for **Description** to add **ows_Comments**,
 [I don't recommend it](/blog/jjameson/2009/03/05/excluding-various-sharepoint-items-from-search-results-on-internet-facing-moss-sites).
 There's a better way to accomplish what we are trying to achieve.
 

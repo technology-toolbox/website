@@ -27,7 +27,7 @@ Note that SharePoint application (i.e. \_layouts) pages are served from a
 different virtual directory than content pages within the Web application.
 Consequently, in order to view log messages when, for example, activating a
 feature (e.g. using
-[http://fabrikam/en-US/Products/\_layouts/ManageFeatures.aspx](http://fabrikam/en-US/Products/_layouts/ManageFeatures.aspx))
+[http://fabrikam/en-US/Products/_layouts/ManageFeatures.aspx](http://fabrikam/en-US/Products/_layouts/ManageFeatures.aspx))
 the
 [System.Web.WebPageTraceListener](http://msdn.microsoft.com/en-us/library/system.web.webpagetracelistener.aspx)
 must be specified in the Web.config file within the following folder:

@@ -39,26 +39,25 @@ cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
 TfsConfig.exe setup /uninstall:All
 ```
 
-Next, remove the SharePoint content database (e.g. WSS\_Content\_TFS) containing
+Next, remove the SharePoint content database (e.g. WSS_Content_TFS) containing
 the upgraded TFS project sites:
 
 1. On the SharePoint Central Administration home page, in the **Application
    Management** section, click **Manage content databases**.
 1. On the **Manage Content Databases** page, in the list of content databases,
-   click the name of the content database to remove (e.g.
-   **WSS\_Content\_TFS**).
+   click the name of the content database to remove (e.g. **WSS_Content_TFS**).
 1. On the **Manage Content Database Settings** page, click the **Remove content
    database** checkbox. When prompted to confirm removing the content database,
    click **OK**.
 
 Delete the databases that will be restored from backup (e.g. ReportServerDB,
-ReportServerTempDB, TfsWarehouse, and WSS\_Content\_TFS) as well as the new TFS
+ReportServerTempDB, TfsWarehouse, and WSS_Content_TFS) as well as the new TFS
 2010 databases:
 
-- Tfs\_Configuration
-- Tfs\_DefaultCollection
-- Tfs\_Warehouse
-- Tfs\_Analysis (Analysis Services)
+- Tfs_Configuration
+- Tfs_DefaultCollection
+- Tfs_Warehouse
+- Tfs_Analysis (Analysis Services)
 
 Next, restore the following databases:
 
@@ -72,9 +71,9 @@ Next, restore the following databases:
 - TfsWarehouse (Analysis Services)
 - TfsWorkItemTracking
 - TfsWorkItemTrackingAttachments
-- WSS\_Content\_TFS
+- WSS_Content_TFS
 
-Then attach the SharePoint content database (e.g. WSS\_Content\_TFS) containing
+Then attach the SharePoint content database (e.g. WSS_Content_TFS) containing
 the TFS project sites to the SharePoint Web application.
 
 To attach the content database in SharePoint Server 2010 by using Windows
@@ -108,7 +107,7 @@ Powershell:
 
    {{< console-block >}}
 
-   Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
+   Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer CYCLOPS-DEV
    -WebApplication http://cyclops-dev -Updateuserexperience
 
    {{< /console-block >}}

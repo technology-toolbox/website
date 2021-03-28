@@ -221,11 +221,11 @@ article:
 title="How to create custom error reporting pages in ASP.NET by using Visual C# .NET"
 linkHref="http://support.microsoft.com/kb/306355" >}}
 
-In the **Page\_Error** method, I first log the exception using
+In the **Page_Error** method, I first log the exception using
 [my custom **Logger** class](/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications).
 Then I call the
 **[HttpContext.ClearError](http://msdn.microsoft.com/en-us/library/system.web.httpcontext.clearerror%28VS.80%29.aspx)**
-method to prevent the error from continuing to the **Application\_Error** event
+method to prevent the error from continuing to the **Application_Error** event
 handler (which would subsequently invoke the SharePoint error handling
 infrastucture). Finally, I transfer the request to a custom application page
 (Error.aspx) in the Layouts folder -- thus displaying a friendly error message

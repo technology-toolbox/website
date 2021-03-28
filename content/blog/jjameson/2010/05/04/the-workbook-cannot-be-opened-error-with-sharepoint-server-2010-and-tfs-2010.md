@@ -78,7 +78,7 @@ account.
 I say this because looking at SQL Server Management Studio, I discovered that
 while the service account for the app pool of the TFS Web application
 (TECHTOOLBOX\svc-web-tfs-test) had access to the underlying SharePoint content
-database (WSS\_Content), the service account for Excel Services
+database (WSS_Content), the service account for Excel Services
 (TECHTOOLBOX\svc-spserviceapp-tst) did not.
 
 This explained the error that I was seeing on my test SharePoint/TFS server
@@ -125,7 +125,7 @@ compatibility range.
 While it's somewhat bewildering that Excel Services needs to create a table in
 the SharePoint content database, I decided to just go ahead and give the service
 account for Excel Services the same permissions to the content database as the
-service account for the Web application (which, is to say, db\_owner). [Yeah, I
+service account for the Web application (which, is to say, db_owner). [Yeah, I
 know, that's essentially the same as using a single service account for both the
 Web application and SharePoint service applications. Perhaps someday the TFS
 dashboards and Excel Services will "play nicely" together, even when configured
@@ -148,10 +148,10 @@ underlying content databases:
    click **Properties**.
 1. In the login properties dialog box,
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
-      click the checkbox for the SharePoint content database (**WSS\_Content**),
+      click the checkbox for the SharePoint content database (**WSS_Content**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
-      - **db\_owner**
+      - **db_owner**
       - **public**
    1. Repeat the previous step for any additional content databases that need to
       be accessed by Excel Services.

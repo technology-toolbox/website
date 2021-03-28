@@ -71,7 +71,7 @@ Here are the steps to reghost a master page or page layout:
 
 1. Browse to **Site Settings** page for your site. Note that if your master page
    is causing the AutoEventWireup error, you can explicitly specify the URL
-   (e.g. http://fabrikam/\_layouts/settings.aspx).
+   (e.g. http://fabrikam/_layouts/settings.aspx).
 1. On the **Site Settings** page, under the **Look and Feel** section, click
    **Reset to site definition**.
 1. On the **Reset Page to Site Definition Version**page:
@@ -79,7 +79,7 @@ Here are the steps to reghost a master page or page layout:
       specific page to site definition version** is selected, and then in the
       **Local URL of the page** box, type the URL of the master page or page
       layout that you want reset (e.g.
-      http://fabrikam/\_catalogs/masterpage/FabrikamMinimal.master).
+      http://fabrikam/_catalogs/masterpage/FabrikamMinimal.master).
    1. Click **Reset**.
    1. In the confirmation dialog that appears stating that you will lose all
       customizations, including web part zones, custom controls, and in-line

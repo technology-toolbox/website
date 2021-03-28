@@ -541,8 +541,8 @@ To enable host names that are mapped to the loopback address:
    computer, click **Yes**.
 1. In Registry Editor, locate and then click the following registry key:
 
-   > **HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1\_0**
-1. Right-click **MSV1\_0**, point to **New**, and then click **Multi-String
+   > **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0**
+1. Right-click **MSV1_0**, point to **New**, and then click **Multi-String
    Value**.
 1. Type **BackConnectionHostNames**, and then press {{< kbd "ENTER" >}}.
 1. Right-click **BackConnectionHostNames**, and then click **Modify**.
@@ -1103,8 +1103,8 @@ without having to specify the full path).
 ## Grant DCOM permissions on IIS WAMREG admin Service
 
 In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant
-the WSS\_ADMIN\_WPG and WSS\_WPG groups appropriate permissions on the IIS
-WAMREG admin Service, as described in
+the WSS_ADMIN_WPG and WSS_WPG groups appropriate permissions on the IIS WAMREG
+admin Service, as described in
 [KB 920783](http://support.microsoft.com/kb/920783).
 
 {{< div-block "note important" >}}
@@ -1134,9 +1134,9 @@ Server 2008 R2:
 1. In the **Registry Editor** window, search for
    "61738644-F196-11D0-9953-00C04FD919C1" to find:
 
-   > HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}
+   > HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}
 1. Right-click on the
-   **HKEY\_CLASSES\_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key and
+   **HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key and
    then click **Permissions**.
 1. In the **Permissions for {61738644-F196-11D0-9953-00C04FD919C1}** dialog box,
    click **Advanced**.
@@ -1161,14 +1161,14 @@ To configure permissions for the IIS WAMREG Admin Service:
 1. In the **Launch and Activation Permission** dialog box, click **Add**.
 1. In the **Select Users, Computers, Service Accounts, or Groups** dialog box,
    change the location to the local server. Then, type the local security groups
-   **WSS\_ADMIN\_WPG** and **WSS\_WPG**, click **Check Names**, and then click
+   **WSS_ADMIN_WPG** and **WSS_WPG**, click **Check Names**, and then click
    **OK**.
 1. In the **Launch and Activation Permission**dialog box:
-   1. In the **Groups or user names** list, click **WSS\_ADMIN\_WPG**, in the
-      **Permissions for WSS\_ADMIN\_WPG** list, click to select the **Allow**
+   1. In the **Groups or user names** list, click **WSS_ADMIN_WPG**, in the
+      **Permissions for WSS_ADMIN_WPG** list, click to select the **Allow**
       checkbox that is next to **Local Activation**.
    1. Repeat the previous step to grant the **Local Activation** permission for
-      the **WSS\_WPG** group.
+      the **WSS_WPG** group.
    1. Click **OK**.
 1. In the **IIS WAMREG admin Service Properties** dialog box, click **OK**.
 
@@ -1196,8 +1196,8 @@ To rename the TaxonomyPicker.ascx file:
    > **C:\Program Files\Common Files\Microsoft Shared\Web Server
    > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 1. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
-   filename to **TaxonomyPicker.ascx\_broken**. When prompted to confirm that
-   you want to change the file name extension, click **Yes**.
+   filename to **TaxonomyPicker.ascx_broken**. When prompted to confirm that you
+   want to change the file name extension, click **Yes**.
 
 {{< div-block "note" >}}
 
@@ -1288,7 +1288,7 @@ SharePoint Server 2010 is configured by default to preserve 7 days of historical
 information about timer jobs. However, the cleanup job is scheduled to run once
 per week on Sundays. For development environments that are powered off on
 weekends, this cleanup job may never run and consequently the growth of the job
-history table in the SharePoint\_Config database can cause issues.
+history table in the SharePoint_Config database can cause issues.
 
 To change the schedule for deleting timer job history:
 
@@ -1338,12 +1338,12 @@ farm.
 By default, the installation scripts for the Fabrikam Extranet solution install
 Release builds to [http://extranet.fabrikam.com](http://extranet.fabrikam.com).
 If installing the solution to a different URL, set the environment variable
-FABRIKAM\_EXTRANET\_URL to the URL of the site. To install Debug builds, set the
-environment variable FABRIKAM\_BUILD\_CONFIGURATION to Debug.
+FABRIKAM_EXTRANET_URL to the URL of the site. To install Debug builds, set the
+environment variable FABRIKAM_BUILD_CONFIGURATION to Debug.
 
 For example, [Figure 2](#Figure_2:_Setting_environment_variables) shows the
 environment variables for a local development VM (where
-FABRIKAM\_BUILD\_CONFIGURATION = Debug and FABRIKAM\_EXTRANET\_URL =
+FABRIKAM_BUILD_CONFIGURATION = Debug and FABRIKAM_EXTRANET_URL =
 [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com)).
 
 {{< anchor name="Figure_2:_Setting_environment_variables" >}}
@@ -1389,8 +1389,8 @@ example:
 
 {{< console-block >}}
 
-robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
-C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\_latest /E /MIR
+robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\_latest
+C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\_latest /E /MIR
 
 {{< /console-block >}}
 
@@ -1529,7 +1529,7 @@ To increase the size of the database files:
 
 1. Start SQL Server Management Studio and connect to the appropriate server.
 1. In the **Object Explorer**, expand the **Databases** folder.
-1. Right-click the **WSS\_Content\_FabrikamExtranet** database and then click
+1. Right-click the **WSS_Content_FabrikamExtranet** database and then click
    **Properties**.
 1. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
@@ -1790,17 +1790,17 @@ To add the service accounts to the membership/role database:
       click the checkbox for the membership/role database (**FabrikamDemo**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
-      - **aspnet\_Membership\_BasicAccess**
-      - **aspnet\_Membership\_ReportingAccess**
-      - **aspnet\_Roles\_BasicAccess**
-      - **aspnet\_Roles\_ReportingAccess**
+      - **aspnet_Membership_BasicAccess**
+      - **aspnet_Membership_ReportingAccess**
+      - **aspnet_Roles_BasicAccess**
+      - **aspnet_Roles_ReportingAccess**
    1. Click **OK**.
 1. Repeat the steps in this section to add the service account for the Fabrikam
    Extranet Web application (**EXTRANET\svc-web-fabrikam**) to the following
    roles:
-   - **aspnet\_Membership\_FullAccess**
-   - **aspnet\_Roles\_BasicAccess**
-   - **aspnet\_Roles\_ReportingAccess**
+   - **aspnet_Membership_FullAccess**
+   - **aspnet_Roles_BasicAccess**
+   - **aspnet_Roles_ReportingAccess**
 
 {{< div-block "note important" >}}
 
@@ -2275,9 +2275,9 @@ To configure the State Service:
 
 When using the Farm Configuration Wizard to create and configure the Search
 Service Application, the resulting databases are named
-Search\_Service\_Application\_DB\_{GUID},
-Search\_Service\_Application\_CrawlDB\_{GUID}, and
-Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
+Search_Service_Application_DB\_{GUID},
+Search_Service_Application_CrawlDB\_{GUID}, and
+Search_Service_Application_PropertyStoreDB\_{GUID}.
 
 In order to avoid the lengthy database names containing GUIDs, the Search
 Service Application is created and configured using PowerShell.
@@ -2889,11 +2889,11 @@ configuration settings are listed in the following tables.
 | Log file location | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
 | Maximum log file size | TEST and PROD: 5<br><br>DEV: 1 |
 | Enable health data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\* |
-| Database Name | WSS\_Logging |
+| Database Name | WSS_Logging |
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume
+\* - In development environments, the WSS_Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
 health data collection is _not_ recommended in these environments.
 
@@ -2924,10 +2924,10 @@ health data collection is _not_ recommended in these environments.
 
 | Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
 | --- | --- | --- | --- | --- | --- |
-| WSS\_Content\_FabrikamExtranet | WSS\_Content\_FabrikamExtranet | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
-|  | WSS\_Content\_FabrikamExtranet\_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
+| WSS_Content_FabrikamExtranet | WSS_Content_FabrikamExtranet | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
+|  | WSS_Content_FabrikamExtranet_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
 | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
-|  | OfficeWebAppsCache\_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
+|  | OfficeWebAppsCache_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
 
 {{< /table >}}
 

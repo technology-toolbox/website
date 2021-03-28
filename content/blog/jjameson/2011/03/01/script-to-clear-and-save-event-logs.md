@@ -170,7 +170,7 @@ Also note that it's very easy to clear the event logs on a remote machine
 specifying the server name as a parameter to the script. If it's not readily
 apparent from the script above, the event logs are saved to the root of the C:
 drive with a corresponding timestamp (for example,
-Application\_20110301\_0559.evt) and subsequently cleared.
+Application_20110301_0559.evt) and subsequently cleared.
 
 It's also probably worth mentioning that the current version of this script
 isn't "bulletproof" -- meaning that you may still see a few warnings or errors

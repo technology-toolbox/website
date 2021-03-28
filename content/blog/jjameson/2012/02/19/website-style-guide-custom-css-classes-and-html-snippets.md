@@ -19,9 +19,9 @@ Time to get rid of another couple of
 that have been parked there far too long:
 
 - **MDC style guide - MDC**\
-  [http://developer.mozilla.org/Project:En/MDC\_style\_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)
+  [http://developer.mozilla.org/Project:En/MDC_style_guide](http://developer.mozilla.org/Project:En/MDC_style_guide)
 - **Custom CSS Classes - MDC**\
-  [http://developer.mozilla.org/Project:en/Custom\_CSS\_Classes](http://developer.mozilla.org/Project:en/Custom_CSS_Classes)
+  [http://developer.mozilla.org/Project:en/Custom_CSS_Classes](http://developer.mozilla.org/Project:en/Custom_CSS_Classes)
 
 When I stumbled upon these pages a few years ago, I immediately thought of that
 quote from the

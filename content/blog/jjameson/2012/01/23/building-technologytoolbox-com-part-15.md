@@ -750,7 +750,7 @@ Similar to the previous error:
 It happened once on November 8th and then twice on January 11th. From my notes,
 I know that the November 8th instance was my own fault. I was doing a bulk
 update on a number of blog posts (using a little utility that I wrote) and the
-tool ended up creating a lock on the **subtext\_Content** table. Ugh.
+tool ended up creating a lock on the **subtext_Content** table. Ugh.
 
 See, this is exactly why Microsoft doesn't support directly querying SharePoint
 databases. You have to be _very_ careful when accessing Production databases
@@ -816,7 +816,7 @@ only occurs with certain RSS readers.
 
 This error has only happened once (on December 19th).
 
-A quick look at the HTTP\_REFERER field tells me all I need to know. Seriously,
+A quick look at the HTTP_REFERER field tells me all I need to know. Seriously,
 whoever you are at 173.234.181.91, go away. I'm not interested in your
 "enhancements" and I don't think people visiting my site would be either.
 

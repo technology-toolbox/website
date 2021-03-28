@@ -36,7 +36,7 @@ title="Figure 1: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
-### Step 1 - Set CAELUM\_URL environment variable
+### Step 1 - Set CAELUM_URL environment variable
 
 In order to use a single script to rebuild both DEV and TEST, an environment
 variable is used to determine which environment the script is currently running
@@ -203,9 +203,9 @@ Write-Host "Successfully created website ($sitePath).`r`n"
 ### Step 6 - Copy Subtext website content
 
 The Subtext solution is deployed by copying files from the Release server
-(DAZZLER). Note that variables are used to specify which version (e.g.
-"\_latest" or "2.5.2.9") to install as well as the build configuration (i.e.
-"Debug" or "Release").
+(DAZZLER). Note that variables are used to specify which version (e.g. "_latest"
+or "2.5.2.9") to install as well as the build configuration (i.e. "Debug" or
+"Release").
 
 ```PowerShell
 Write-Host "Copying Subtext website content...`r`n"
@@ -220,9 +220,9 @@ years ago:
 linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"
 linkText="https://www.technologytoolbox.com/blog/jjameson/2009/09/26/build-and-deployment-overview" >}}
 
-### Step 7 - Configure permissions on Subtext App\_Data folder
+### Step 7 - Configure permissions on Subtext App_Data folder
 
-Subtext requires read/write access to the App\_Data folder, so I use the
+Subtext requires read/write access to the App_Data folder, so I use the
 **[icacls](http://technet.microsoft.com/en-us/library/cc753525%28WS.10%29.aspx)**
 utility to configure the NTFS permissions:
 
@@ -515,5 +515,4 @@ PS C:\NotBackedUp\...\Scripts> {{< kbd "& '.\Rebuild Website.ps1' 1.0.57.0 2.5.2
 ```
 
 Note that when running the script in TEST, the Caelum and Subtext versions must
-be specified (unlike DEV, which assumes "\_latest" if no versions are
-specified).
+be specified (unlike DEV, which assumes "_latest" if no versions are specified).

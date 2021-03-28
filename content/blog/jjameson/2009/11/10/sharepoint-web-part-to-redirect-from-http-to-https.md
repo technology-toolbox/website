@@ -244,7 +244,7 @@ requests are "not supported" (however they are not expected to occur either).
 This is because any form parameters specified in the body of an HTTP POST
 request would be dropped in the redirect.
 
-Similar code can also be used in a page (e.g. /\_layouts/Fabrikam/Login.aspx) if
+Similar code can also be used in a page (e.g. /_layouts/Fabrikam/Login.aspx) if
 you prefer that approach instead of creating some kind of "Login" Web Part.
 
 Lastly, note that I allow the `IsSslRedirectRequired` method to be overridden in

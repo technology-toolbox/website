@@ -42,8 +42,8 @@ When SharePoint indexes content:
 1. These properties (e.g. Author) are then picked up as _crawled properties_.
 1. For custom columns in SharePoint list items and documents (e.g. **Product**),
    the crawled properties are discovered and placed in the Office category (e.g.
-   **ows\_Product**). [If memory serves, "ows" refers to "Office Web Server"
-   (the original moniker for what ultimately became "SharePoint Products and
+   **ows_Product**). [If memory serves, "ows" refers to "Office Web Server" (the
+   original moniker for what ultimately became "SharePoint Products and
    Technologies") -- if that helps you remember this any easier.]
 1. If any _managed properties_ are mapped to the crawled properties, then the
    property values are stuffed into the SSP Search database (i.e. what used be
@@ -68,8 +68,7 @@ until SharePoint actually knows about the crawled property.
 
 In other words, if you start with a clean MOSS environment and then add a
 **Product** managed property, you will find that you cannot map it to
-**ows\_Product** because SharePoint doesn't yet know about that crawled
-property.
+**ows_Product** because SharePoint doesn't yet know about that crawled property.
 
 In order for it to recognize the crawled property, it must first have indexed a
 piece of content with a value specified in the **Product** field (column). Then

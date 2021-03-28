@@ -33,7 +33,7 @@ resolution.
 
 For those of you that may not have attempted to read the status messages as they
 flash by in the Configuration Wizard, step 4 changes the permissions on the
-hosts file to grant the WSS\_ADMIN\_WPG group the following permissions:
+hosts file to grant the WSS_ADMIN_WPG group the following permissions:
 
 - List Folder / Read Data
 - Read Attributes
@@ -74,9 +74,9 @@ File name: 'D:\WINNT\system32\drivers\etc\HOSTS'
 Argh! The hosts file has disappeared again!
 
 I restored the hosts file again and set the permissions manually for the
-WSS\_ADMIN\_WPG group. However I noticed that it quickly disappeared again.
+WSS_ADMIN_WPG group. However I noticed that it quickly disappeared again.
 
-I then restored the hosts file (yet) again, but did not give the WSS\_ADMIN\_WPG
+I then restored the hosts file (yet) again, but did not give the WSS_ADMIN_WPG
 group permission to delete the file. This resulted in the following event log
 entry:
 
@@ -112,10 +112,10 @@ the service account that I am using is _not_ a member of the local
 Administrators group, when the timer job deletes the file, it does not have
 permission to recreate the file. Recall that earlier I mentioned that step 4 of
 the Configuration Wizard only grants permissions on the hosts file itself to the
-WSS\_ADMIN\_WPG group (which the service account is a member of). Hence the
+WSS_ADMIN_WPG group (which the service account is a member of). Hence the
 disappearing hosts file.
 
-The workaround is to grant the following permissions for the WSS\_ADMIN\_WPG on
+The workaround is to grant the following permissions for the WSS_ADMIN_WPG on
 the **%SystemRoot%\System32\drivers\etc** folder:
 
 - Traverse Folder / Execute File

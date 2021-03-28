@@ -35,7 +35,7 @@ is to run the following from a command prompt:
 {{< console-block >}}
 
 reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize
-/t REG\_DWORD /d 0 /f
+/t REG_DWORD /d 0 /f
 
 {{< /console-block >}}
 

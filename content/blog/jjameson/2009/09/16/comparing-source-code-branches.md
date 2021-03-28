@@ -97,7 +97,7 @@ call CopyBranch.cmd "%BRANCH2%" "%BRANCH2%_tmp"
 
 As you can see, there's not much to it. I simply make temporary copies of the
 two branches (i.e. by copying the branch folder into a new folder appended with
-"\_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I
+"_tmp") and then use my "Diff Tool" to compare the two folders. Originally, I
 used WinDiff, but once I
 [discovered DiffMerge](/blog/jjameson/2009/03/24/diffmerge-a-better-differencing-tool),
 I quickly switched to using it exclusively for all of my "diff'ing" activities.
@@ -154,7 +154,7 @@ files to be updated beforehand as necessary). This greatly reduces the effort
 involved in manually merging changes from one branch into another.
 
 Note that it takes a little bit of time to copy a branch the first time, but
-this is lightning fast on subsequent runs. Hence why I don't delete the "\_tmp"
+this is lightning fast on subsequent runs. Hence why I don't delete the "_tmp"
 folders after comparing two branches.
 
 I occasionally use this process even on projects where we've used Team

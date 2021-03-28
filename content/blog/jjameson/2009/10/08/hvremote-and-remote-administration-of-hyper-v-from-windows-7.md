@@ -70,7 +70,7 @@ INFO: Computername is WOLVERINE\
 INFO: Computer is in domain corp.technologytoolbox.com\
 INFO: Current user is TECHTOOLBOX\jjameson-admin\
 INFO: Assuming /mode:client as the Hyper-V role is not installed\
-INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
+INFO: Build 7600.16385.amd64fre.win7_rtm.090713-1255\
 INFO: Detected Windows 7/Windows Server 2008 R2 OS\
 INFO: Remote Server Administration Tools are installed\
 INFO: Hyper-V Tools Windows feature is enabled\
@@ -115,7 +115,7 @@ Version 0.7 7th August 2009\
 INFO: Computername is WOLVERINE\
 INFO: Computer is in domain corp.technologytoolbox.com\
 INFO: Current user is TECHTOOLBOX\jjameson-admin\
-INFO: Build 7600.16385.amd64fre.win7\_rtm.090713-1255\
+INFO: Build 7600.16385.amd64fre.win7_rtm.090713-1255\
 INFO: Detected Windows 7/Windows Server 2008 R2 OS\
 INFO: Remote Server Administration Tools are installed\
 INFO: Hyper-V Tools Windows feature is enabled\

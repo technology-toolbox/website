@@ -19,7 +19,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/01/15/sharepoint-con
 I came back from a nice long vacation only to find that my local development VM
 for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
 "corrupted", I mean to say there were lots of errors in the event log about the
-SharePoint\_Config database being "out of whack." Okay, I'm paraphrasing this a
+SharePoint_Config database being "out of whack." Okay, I'm paraphrasing this a
 little, but you get the point.
 
 The corruption may very well have been caused by the fact that back in December

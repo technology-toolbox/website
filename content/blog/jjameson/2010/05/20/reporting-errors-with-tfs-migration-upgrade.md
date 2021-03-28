@@ -43,7 +43,7 @@ resemble the following:
 > An error occurred within the report server database. This may be due to a
 > connection failure, timeout or low disk condition within the database. ---&gt;
 > System.Data.SqlClient.SqlException: The EXECUTE permission was denied on the
-> object 'xp\_sqlagent\_notify', database 'mssqlsystemresource', schema 'sys'.\
+> object 'xp_sqlagent_notify', database 'mssqlsystemresource', schema 'sys'.\
 > at
 > Microsoft.ReportingServices.WebServer.ReportingService2005Impl.SetCacheOptions(String
 > Report, Boolean CacheReport, ExpirationDefinition Expiration)\
@@ -111,7 +111,7 @@ An error similar to the following should be displayed:
 
 {{< div-block "errorMessage" >}}
 
-> EXECUTE permission was denied on the object 'xp\_sqlagent\_notify', database
+> EXECUTE permission was denied on the object 'xp_sqlagent_notify', database
 > 'mssqlsystemresource', schema 'sys'
 
 {{< /div-block >}}

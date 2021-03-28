@@ -37,32 +37,32 @@ Here are the exclude rules that my custom
 `SharePointSearchHelper.EnsureScopeIsLimitedToDocumentsAndWebPagesOnly()` method
 applies to a search scope intended for Internet use:
 
-- contentclass = STS\_List\_850
-- contentclass = STS\_List\_Announcements
-- contentclass = STS\_List\_Contacts
-- contentclass = STS\_List\_DiscussionBoard
-- contentclass = STS\_List\_DocumentLibrary
-- contentclass = STS\_List\_Events
-- contentclass = STS\_List\_GanttTasks
-- contentclass = STS\_List\_GenericList
-- contentclass = STS\_List\_IssueTracking
-- contentclass = STS\_List\_Links
-- contentclass = STS\_List\_PictureLibrary
-- contentclass = STS\_List\_Survey
-- contentclass = STS\_List\_Tasks
-- contentclass = STS\_List\_WebPageLibrary
-- contentclass = STS\_List\_XMLForm
-- contentclass = STS\_ListItem\_Announcements
-- contentclass = STS\_ListItem\_Contacts
-- contentclass = STS\_ListItem\_DiscussionBoard
-- contentclass = STS\_ListItem\_Events
-- contentclass = STS\_ListItem\_GanttTasks
-- contentclass = STS\_ListItem\_GenericList
-- contentclass = STS\_ListItem\_IssueTracking
-- contentclass = STS\_ListItem\_Links
-- contentclass = STS\_ListItem\_Survey
-- contentclass = STS\_ListItem\_Tasks
-- contentclass = STS\_ListItem\_XMLForm
+- contentclass = STS_List_850
+- contentclass = STS_List_Announcements
+- contentclass = STS_List_Contacts
+- contentclass = STS_List_DiscussionBoard
+- contentclass = STS_List_DocumentLibrary
+- contentclass = STS_List_Events
+- contentclass = STS_List_GanttTasks
+- contentclass = STS_List_GenericList
+- contentclass = STS_List_IssueTracking
+- contentclass = STS_List_Links
+- contentclass = STS_List_PictureLibrary
+- contentclass = STS_List_Survey
+- contentclass = STS_List_Tasks
+- contentclass = STS_List_WebPageLibrary
+- contentclass = STS_List_XMLForm
+- contentclass = STS_ListItem_Announcements
+- contentclass = STS_ListItem_Contacts
+- contentclass = STS_ListItem_DiscussionBoard
+- contentclass = STS_ListItem_Events
+- contentclass = STS_ListItem_GanttTasks
+- contentclass = STS_ListItem_GenericList
+- contentclass = STS_ListItem_IssueTracking
+- contentclass = STS_ListItem_Links
+- contentclass = STS_ListItem_Survey
+- contentclass = STS_ListItem_Tasks
+- contentclass = STS_ListItem_XMLForm
 
 Note that, as described in my
 [previous post](/blog/jjameson/2009/03/05/bug-moss-2007-search-scope-with-property-query-rules-only-is-considered-empty),

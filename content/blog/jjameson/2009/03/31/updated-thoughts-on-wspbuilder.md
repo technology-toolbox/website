@@ -43,7 +43,7 @@ signatures removed):
    {{< div-block-start "fst-italic" >}}
 
    > It's definitely WSPBuilder. The solution contains folders for
-   > WSPBuilder\_x64 and WSPBuilder\_x86 (which contain executables, a config
+   > WSPBuilder_x64 and WSPBuilder_x86 (which contain executables, a config
    > file, and a couple of other assemblies).
    >
    > The WSP packages are built whenever I build the solution

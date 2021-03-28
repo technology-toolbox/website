@@ -22,7 +22,7 @@ I provided the following steps to "reghost" all of the pages in a Team
 Foundation Server (TFS) project site:
 
 1. Browse to the Site Settings page for the site (e.g.
-   [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
+   [http://cyclops/sites/Demo/_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 1. On the **Site Settings** page, in the **Site Actions** section, click **Reset
    to site definition**.
 1. On the **Reset Page to Site Definition Version** page, click the option to
@@ -32,7 +32,7 @@ Foundation Server (TFS) project site:
 Today, I was about to perform this process manually on several sites, but then I
 decided to spend a few minutes exploring the **Reset Page to Site Definition
 Version** page (e.g.
-[http://cyclops/sites/Demo/\_layouts/reghost.aspx](http://cyclops/sites/Demo/_layouts/reghost.aspx)).
+[http://cyclops/sites/Demo/_layouts/reghost.aspx](http://cyclops/sites/Demo/_layouts/reghost.aspx)).
 
 That's when I discovered the
 **[SPWeb.RevertAllDocumentContentStreams](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spweb.revertalldocumentcontentstreams.aspx)**

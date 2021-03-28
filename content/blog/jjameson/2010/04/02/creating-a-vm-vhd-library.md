@@ -56,7 +56,7 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
    microsoft.com), but thankfully this extra step is no longer necessary in
    Windows Server 2008.]
 1. After the VM shuts down, immediately make a copy of the VHD file to a new
-   file named **ws2008std-x86\_RTM.vhd**.
+   file named **ws2008std-x86_RTM.vhd**.
 1. Boot the VM, go through the Mini-Setup process and once again name the server
    **ws2008std-x86**.
 1. Next, install SP2 for Windows Server 2008. Then run the Windows Component
@@ -65,7 +65,7 @@ To add a base Windows Server 2008 Standard Edition x86 VM to your library:
    and reboot the VM.
 1. Run the SysPrep utility again and specify the same options as before.
 1. After the VM shuts down, immediately make a copy of the VHD file to a new
-   file named **ws2008std-x86\_SP2.vhd**.
+   file named **ws2008std-x86_SP2.vhd**.
 1. Boot the VM again and go through the Mini-Setup process (once again naming
    the server **ws2008std-x86**).
 1. Run Windows Update, install all of the latest patches, and then reboot.
@@ -87,8 +87,8 @@ patches.
 
 Note that there might be a scenario where you are trying to identify an issue
 that only occurs after installing SP2 or one of the recent patches from Windows
-Update. In this case, you would copy **ws2008std-x86\_RTM.vhd** or
-**ws2008std-x86\_SP2.vhd**, respectively, when overwriting **foobar.vhd**.
+Update. In this case, you would copy **ws2008std-x86_RTM.vhd** or
+**ws2008std-x86_SP2.vhd**, respectively, when overwriting **foobar.vhd**.
 
 In other words, the "snapshots" of the VHD file allow you to quickly go back to
 different baseline versions of the OS. Don't confuse the word "snapshots" that
@@ -108,7 +108,7 @@ released. Here is what I will do in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) (a.k.a.
 my home lab) at that point:
 
-1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86\_RTM.vhd**
+1. Overwrite the **ws2008std-x86.vhd** file with **ws2008std-x86_RTM.vhd**
    (thereby "purging" the baseline VM image of all of the patches and updates).
 1. Boot the VM, go through the Mini-Setup process and name the server
    **ws2008std-x86**.
@@ -118,7 +118,7 @@ my home lab) at that point:
 1. Run the SysPrep utility and specify the option to **Enter System Out-of-Box
    Experience (OOBE)** and **Shutdown** when SysPrep is done.
 1. After the VM shuts down, immediately make a copy of the VHD file to a new
-   file named **ws2008std-x86\_SP3.vhd**.
+   file named **ws2008std-x86_SP3.vhd**.
 
 I should point out that your **ws2008std-x86** image isn't going to do you much
 good if you need to install SharePoint Server 2010 (because it is 64-bit only).

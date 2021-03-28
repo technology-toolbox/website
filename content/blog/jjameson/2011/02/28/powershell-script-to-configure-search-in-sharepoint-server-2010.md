@@ -22,15 +22,15 @@ SharePoint Server 2010.
 
 When using Central Administration and/or the Farm Configuration Wizard to create
 and configure the Search Service Application, the resulting databases are named
-Search\_Service\_Application\_DB\_{GUID},
-Search\_Service\_Application\_CrawlDB\_{GUID}, and
-Search\_Service\_Application\_PropertyStoreDB\_{GUID}.
+Search_Service_Application_DB\_{GUID},
+Search_Service_Application_CrawlDB\_{GUID}, and
+Search_Service_Application_PropertyStoreDB\_{GUID}.
 
 Personally, I'm not a fan of these lengthy database names. While the "\_{GUID}"
 naming convention might be great for supporting multitenancy deployments (that's
 the only reason I can think of why SharePoint does this by default), I'd much
-rather see database names like SearchService, SearchService\_CrawlStore, and
-SearchService\_PropertyStore. [Actually, in all honesty, I'd much rather see
+rather see database names like SearchService, SearchService_CrawlStore, and
+SearchService_PropertyStore. [Actually, in all honesty, I'd much rather see
 SharePoint use far fewer distinct databases and instead leverage database
 schemas to segregate the various functional areas (or at least provide the
 option to do this) -- but that's obviously just wishful thinking.]
@@ -84,7 +84,7 @@ caption="Service accounts related to Search in SharePoint Server 2010" >}}
 {{< /div-block >}}
 
 Note that the following script is based on my fictitious Fabrikam sample
-solution and thus uses the FABRIKAM\_DEMO\_URL environment variable to
+solution and thus uses the FABRIKAM_DEMO_URL environment variable to
 automatically override the service account names for development and test
 environments.
 

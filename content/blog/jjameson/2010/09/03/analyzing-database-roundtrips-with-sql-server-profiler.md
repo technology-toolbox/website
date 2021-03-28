@@ -73,7 +73,7 @@ to the following:
 I also add the following column filter in order to exclude the "noise"
 associated with connection pooling:
 
-- **TextData Not Like exec sp\_reset\_connection%**
+- **TextData Not Like exec sp_reset_connection%**
 
 When analyzing a SharePoint solution, I also add column filters to isolate (as
 much as possible) the SQL calls initiated by the request for a Web page -- as

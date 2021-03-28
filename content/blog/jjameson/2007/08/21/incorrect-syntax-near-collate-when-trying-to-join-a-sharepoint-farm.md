@@ -44,7 +44,7 @@ dialog displayed by the .NET Framework when something very bad happens.
 >
 > Incorrect syntax near 'COLLATE'. You may need to set the compatibility level
 > of the current database to a higher value to enable this feature. See help for
-> the stored procedure sp\_dbcmptlevel.
+> the stored procedure sp_dbcmptlevel.
 
 {{< /div-block >}}
 
@@ -88,6 +88,6 @@ The solution documented in the SR (Service Request) was to backup the database
 (where the compatibility level is set to 70), change the compatibility level,
 and then proceed to re-run the SharePoint Products and Technologies
 Configuration Wizard. Instead, I chose to simply type in the name of the
-configuration database (we are using the default, **SharePoint\_Config**) as
-well as the service account name and password. The configuration then completed
+configuration database (we are using the default, **SharePoint_Config**) as well
+as the service account name and password. The configuration then completed
 without error.

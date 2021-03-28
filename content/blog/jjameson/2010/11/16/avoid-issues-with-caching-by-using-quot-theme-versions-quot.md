@@ -116,7 +116,7 @@ the same file each time the Theme folder is incremented.
 This, of course, assumes that the CSS file provided by the 960 Grid System --
 unlike Fabrikam-Main.css -- is fairly "baked" (meaning it doesn't change). Even
 if it did, you could certainly rename just that one file to something like
-960\_v2.css (and update the corresponding references to the file, of course).
+960_v2.css (and update the corresponding references to the file, of course).
 
 Obviously, you could alternatively choose to rename each individual CSS file
 once per release -- in which case, you are essentially doing manually what the

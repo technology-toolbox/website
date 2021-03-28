@@ -49,10 +49,10 @@ internal DLs:
 
 It turns out that it is a bug, but a very minor bug and one that is easy to
 workaround. After a little experimentation, I discovered that the **Page Layout
-and Site Template Settings** page (/\_layouts/AreaTemplateSettings.aspx) ignores
+and Site Template Settings** page (/_layouts/AreaTemplateSettings.aspx) ignores
 any feature dependencies of the site templates (and therefore shows you all
 available tempates) whereas the **New SharePoint Site** page
-(/\_layouts/newsbweb.aspx) apparently does not. Therefore if you don't have the
+(/_layouts/newsbweb.aspx) apparently does not. Therefore if you don't have the
 features required by the Document Center site enabled on the collection, then
 you cannot create a new Document Center site.
 

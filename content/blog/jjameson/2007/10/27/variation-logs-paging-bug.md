@@ -82,10 +82,9 @@ ORDER BY
 ```
 
 The first time you browse to the **Variation Logs** page, the ORDER BY clause
-specifies to sort first by **tp\_Created** descending and then by **tp\_ID**
+specifies to sort first by **tp_Created** descending and then by **tp_ID**
 ascending. However, when you page to the next set of results, the ORDER BY
-clause only specifies **tp\_ID** -- thus displaying the oldest log entries
-first.
+clause only specifies **tp_ID** -- thus displaying the oldest log entries first.
 
 Note that the previous SELECT statement is substantially shorter than the actual
 statement executed (large portions of the statement have been replaced by
@@ -125,7 +124,7 @@ WHERE tp_Title = 'Long Running Operation Status'
 ```
 
 Note that we can actually get a significantly better query plan if we drop the
-superfluous **tp\_DirName** from the WHERE clause:
+superfluous **tp_DirName** from the WHERE clause:
 
 ```SQL
 SELECT

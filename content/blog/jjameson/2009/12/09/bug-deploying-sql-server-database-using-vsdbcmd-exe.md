@@ -44,7 +44,7 @@ to add the following registry key:
 
 {{< console-block >}}
 
-reg add HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\9.0
+reg add HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\9.0
 
 {{< /console-block >}}
 

@@ -53,7 +53,7 @@ a last resort.
 Since my goal was to get TEST up and running as quickly as possible, I ended up
 using SQL Profiler while browsing the Central Administration page that listed my
 defunct site. This showed me that the site was still listed in the SiteMap table
-of the SharePoint\_Config database. I then ran the following statement to remove
+of the SharePoint_Config database. I then ran the following statement to remove
 the site:
 
 ```SQL
@@ -78,8 +78,8 @@ So...lessons learned:
   "stsadm.exe -o deletesite" >}}" or "{{< kbd "stsadm.exe -o deleteweb" >}}"
   instead
 - Not all data for a particular Web application is stored in the content
-  database (e.g. WSS\_Content); a small amount of data about the site is also
-  stored in SharePoint\_Config
+  database (e.g. WSS_Content); a small amount of data about the site is also
+  stored in SharePoint_Config
 - Deleting a site does not perform a distributed transaction across the content
   database and the configuration database (the root of the issue when deleting a
   large site)

@@ -93,11 +93,11 @@ data tier. In order to allow the Web application to communicate with the remote
 SQL Server database, the app pool in TEST is configured to run as
 **NetworkService**. In addition, the machine account for the Web server (i.e.
 CYCLOPS) must be granted access to the database. This is accomplished by adding
-**TECHTOOLBOX\CYCLOPS$** to the **db\_datareader** and **db\_datawriter**
-database roles.
+**TECHTOOLBOX\CYCLOPS$** to the **db_datareader** and **db_datawriter** database
+roles.
 
 Here is the SQL script I wrote to refresh the Test environment from Production.
-Also note that I update the **subtext\_Config** table to reflect the host header
+Also note that I update the **subtext_Config** table to reflect the host header
 used in TEST (i.e.
 [http://www-test.technologytoolbox.com](http://www-test.technologytoolbox.com)).
 
@@ -150,7 +150,7 @@ APPPOOL\www-dev.technologytoolbox.com**).
 
 Consequently, rather than adding the machine account to the database roles, the
 script adds **IIS APPPOOL\www-dev.technologytoolbox.com**. The
-**subtext\_Config** table is also updated to reflect the host header used in DEV
+**subtext_Config** table is also updated to reflect the host header used in DEV
 (i.e.
 [http://www-dev.technologytoolbox.com](http://www-dev.technologytoolbox.com)).
 

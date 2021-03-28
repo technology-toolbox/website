@@ -28,7 +28,7 @@ Suppose that you have created a custom field (column) called **Abstract** that
 allows users to specify formatting (i.e. HTML markup). Furthermore, suppose that
 you want to display **Abstract** for each search result, instead of, say, the
 HitHighlightedSummary. Therefore, you create a new **Abstract** managed
-property, map it to **ows\_Abstract**, and subsequently perform a full crawl to
+property, map it to **ows_Abstract**, and subsequently perform a full crawl to
 populate the new managed property. You then modify the properties of the Search
 Core Results Web Part to include **Abstract** in the list of columns returned in
 search results and also modify the XSLT to display the value of **Abstract**
@@ -50,8 +50,8 @@ fields such as PublishingRollupImage (i.e.
 For example, suppose you wanted to show the "rollup image" for each item in
 search results similar to the Content Query Web Part. You might think that you
 can simply create a new managed property and map it to the
-**ows\_PublishingRollupImage** crawled property and then perform similar steps
-as described above (for **Abstract**) in order to show the images.
+**ows_PublishingRollupImage** crawled property and then perform similar steps as
+described above (for **Abstract**) in order to show the images.
 
 Unfortunately, PublishingRollupImage essentially equates to an `<img>` HTML
 element, which is comprised entirely of markup, and therefore entirely stripped
@@ -117,5 +117,5 @@ public override void ItemUpdating(
 ```
 
 You can then create the **PublishingRollupImage** managed property, map it to
-**ows\_PublishingRollupImageUrl**, and subsequently display the rollup images in
+**ows_PublishingRollupImageUrl**, and subsequently display the rollup images in
 search results similar to the Content Query Web Part.

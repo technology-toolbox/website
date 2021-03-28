@@ -32,8 +32,8 @@ make FBA work.
 I'd also granted the following permissions in SQL Server to the service account
 for the application pool corresponding to my Web application:
 
-- **aspnet\_Membership\_BasicAccess**
-- **aspnet\_Roles\_BasicAccess**
+- **aspnet_Membership_BasicAccess**
+- **aspnet_Roles_BasicAccess**
 
 Like I said before, I had previously configured FBA in MOSS 2007 for a couple of
 previous projects, but this time, in addition to actually authenticating users
@@ -69,41 +69,40 @@ That's when I found the problem, namely a `SqlException`:
 
 {{< div-block "errorMessage" >}}
 
-> The EXECUTE permission was denied on the object 'aspnet\_Roles\_RoleExists',
+> The EXECUTE permission was denied on the object 'aspnet_Roles_RoleExists',
 > database 'FabrikamPortal', schema 'dbo'.
 
 {{< /div-block >}}
 
-Ugh...it turns out the **aspnet\_Roles\_RoleExists** stored procedure is by
-default only granted EXECUTE permission to the
-**aspnet\_Roles\_ReportingAccess** database role within SQL Server.
-Unfortunately, SharePoint was simply "swallowing" that `SqlException` and
-assuming the role simply did not exist. I don't know about you, but I consider a
-"swallowed exception" like this to be a bug. Others may disagree, but that's my
-opinion.
+Ugh...it turns out the **aspnet_Roles_RoleExists** stored procedure is by
+default only granted EXECUTE permission to the **aspnet_Roles_ReportingAccess**
+database role within SQL Server. Unfortunately, SharePoint was simply
+"swallowing" that `SqlException` and assuming the role simply did not exist. I
+don't know about you, but I consider a "swallowed exception" like this to be a
+bug. Others may disagree, but that's my opinion.
 
 The lesson learned here is that when using Forms-Based Authentication and the
 out-of-the-box ASP.NET membership and role providers, your service account needs
 to be added to the following database roles in your ASP.NET database:
 
-- **aspnet\_Membership\_BasicAccess**
-- **aspnet\_Membership\_ReportingAccess**
-- **aspnet\_Roles\_BasicAccess**
-- **aspnet\_Roles\_ReportingAccess**
+- **aspnet_Membership_BasicAccess**
+- **aspnet_Membership_ReportingAccess**
+- **aspnet_Roles_BasicAccess**
+- **aspnet_Roles_ReportingAccess**
 
-The reason you should add it the **aspnet\_Membership\_ReportingAccess**
-database role -- in addition to the **aspnet\_Roles\_ReportingAccess** database
-role -- is that the sprocs that allow you to do partial matching on user names
-(e.g. **aspnet\_Membership\_FindUsersByName**) are by default only granted
-EXECUTE permission to the **aspnet\_Membership\_ReportingAccess** database role
-(not **aspnet\_Membership\_BasicAccess**).
+The reason you should add it the **aspnet_Membership_ReportingAccess** database
+role -- in addition to the **aspnet_Roles_ReportingAccess** database role -- is
+that the sprocs that allow you to do partial matching on user names (e.g.
+**aspnet_Membership_FindUsersByName**) are by default only granted EXECUTE
+permission to the **aspnet_Membership_ReportingAccess** database role (not
+**aspnet_Membership_BasicAccess**).
 
 In other words, when I said earlier that I could add FBA users to a SharePoint
 group when my service account was a member of the
-**aspnet\_Membership\_BasicAccess** database role, that only worked because I
+**aspnet_Membership_BasicAccess** database role, that only worked because I
 typed in the full username -- which gets validated using the
-**aspnet\_Membership\_GetUserByName** sproc (which _is_ granted EXECUTE
-permission to the **aspnet\_Membership\_BasicAccess** database role).
+**aspnet_Membership_GetUserByName** sproc (which _is_ granted EXECUTE permission
+to the **aspnet_Membership_BasicAccess** database role).
 
 By the way, here's some script to automatically create a user in SQL Server for
 the service account and add it to the necessary database roles:

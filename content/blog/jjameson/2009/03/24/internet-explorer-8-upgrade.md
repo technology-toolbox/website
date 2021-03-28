@@ -55,7 +55,7 @@ eradicating IE6:
 
 - [http://www.stoplivinginthepast.com](http://www.stoplivinginthepast.com/)
 - [http://www.bringdownie6.com](http://www.bringdownie6.com/)
-- [http://ie6.forteller.net/index.php?title=Main\_Page](http://ie6.forteller.net/index.php?title=Main_Page)
+- [http://ie6.forteller.net/index.php?title=Main_Page](http://ie6.forteller.net/index.php?title=Main_Page)
 - [http://www.stopie6.com](http://www.stopie6.com/)
 - [http://www.stopie6.org](http://www.stopie6.org/)
 - [http://www.iedeathmarch.org](http://www.iedeathmarch.org/)

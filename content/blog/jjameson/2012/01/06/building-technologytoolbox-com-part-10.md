@@ -41,8 +41,8 @@ width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
 Note that in the Subtext database, blog posts are stored in the
-**subtext\_Content** table and the statistics about the number of views for each
-blog post are stored in the **subtext\_EntryViewCount** table. Therefore, the
+**subtext_Content** table and the statistics about the number of views for each
+blog post are stored in the **subtext_EntryViewCount** table. Therefore, the
 first step in developing the **Most Popular Posts** feature for the home page
 was to expand the entity model.
 
@@ -57,13 +57,13 @@ I completed the following steps to update the entity model:
    1. If necessary, on the **Choose Your Data Connection** step, ensure the
       Subtext database is selected and then click **Next**.
    1. On the **Choose Your Database Objects** step, in the **Add** tab, expand
-      **Tables**, click the check box for **subtext\_EntryViewCount** (and
-      **subtext\_Content** if this table was not previously added to the model),
+      **Tables**, click the check box for **subtext_EntryViewCount** (and
+      **subtext_Content** if this table was not previously added to the model),
       and then click **Finish**.
-1. For the **subtext\_Content**table, ensure the properties are set as follows:
+1. For the **subtext_Content**table, ensure the properties are set as follows:
    - **E****ntity Set Name:** Entries
    - **N****ame:** Entry
-1. For the **subtext\_EntryViewCount**table, ensure the properties are set as
+1. For the **subtext_EntryViewCount**table, ensure the properties are set as
    follows:
    - **E****ntity Set Name:** EntryViewCounts
    - **N****ame:** EntryViewCount
@@ -95,7 +95,7 @@ In Subtext, **WebCount** represents the number of times a blog post has been
 viewed through the website, and **AggCount** represents "aggregated" views (e.g.
 posts viewed by RSS subscribers). Note that I chose to assign "weighting"
 factors to Web views vs. RSS views. This is similar to the formula used in the
-out-of-the-box **subtext\_GetPopularPosts** stored procedure (although, unlike
+out-of-the-box **subtext_GetPopularPosts** stored procedure (although, unlike
 that sproc, I chose _not_ to include the number of post comments when
 determining which posts are the most popular). That sproc is used to render the
 **Top Posts** section on the Subtext dashboard page, and I _believe_ the formula

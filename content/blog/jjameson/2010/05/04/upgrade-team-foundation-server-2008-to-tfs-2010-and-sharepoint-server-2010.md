@@ -74,7 +74,7 @@ caption="Table 3 - SharePoint Server 2010 Installation Parameters" >}}
 | Parameter | Value |
 | --- | --- |
 | SharePoint configuration database server | beast |
-| SharePoint configuration database name | SharePoint\_Config |
+| SharePoint configuration database name | SharePoint_Config |
 | SharePoint Central Administration port number | 22812 |
 | SharePoint Central Administration authentication provider | NTLM |
 
@@ -97,7 +97,7 @@ caption="Table 5 - SharePoint Web Applications" >}}
 
 | Name | Port | Host Header | Allow Anonymous | URL | App Pool Service Account | Database Name(s) |
 | --- | --- | --- | --- | --- | --- | --- |
-| SharePoint Central Administration v4 | 22812 | (none) | No | http://cyclops:22812/ | TECHTOOLBOX\svc-sharepoint | SharePoint\_AdminContent\_{GUID} |
+| SharePoint Central Administration v4 | 22812 | (none) | No | http://cyclops:22812/ | TECHTOOLBOX\svc-sharepoint | SharePoint_AdminContent\_{GUID} |
 | SharePoint - 80 | 80 | (none) | No | http://cyclops/ | TECHTOOLBOX\svc-web-tfs | <ul><li>WSS_Content</li><li>WSS_Content_TFS (attached to Web application to restore existing TFS project sites)</li></ul> |
 
 {{< /table >}}
@@ -276,18 +276,18 @@ extensions\14\BIN** to the **PATH** environment variable (in order to run
 stsadm.exe from various folder locations without having to specify the full
 path).
 
-#### Add the SharePoint administrators group to the WSS\_ADMIN\_WPG group and SharePoint\_Shell\_Access database role
+#### Add the SharePoint administrators group to the WSS_ADMIN_WPG group and SharePoint_Shell_Access database role
 
-To add the SharePoint administrators group to the local WSS\_ADMIN\_WPG group,
-on the SharePoint server:
+To add the SharePoint administrators group to the local WSS_ADMIN_WPG group, on
+the SharePoint server:
 
 1. Click **Start**, point to **Administrative Tools**, and then click **Server
    Manager**.
 1. In the **Server Manager** console, expand **Configuration**, expand **Local
    Users and Groups**, and then click **Groups**.
-1. In the list of groups, right-click **WSS\_ADMIN\_WPG** and then click
+1. In the list of groups, right-click **WSS_ADMIN_WPG** and then click
    **Properties**.
-1. In the **WSS\_ADMIN\_WPG Properties** dialog box, click **Add**.
+1. In the **WSS_ADMIN_WPG Properties** dialog box, click **Add**.
 1. In the Select Users, Computers, Service Accounts or Groups dialog box, type
    the name of the SharePoint administrators group specified in
    [Table 2](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
@@ -316,7 +316,7 @@ server:
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox next to the SharePoint configuration database (from
       Table 3), and then in the database role membership list, click the
-      checkbox for **SharePoint\_Shell\_Access**.
+      checkbox for **SharePoint_Shell_Access**.
    1. Click **OK**.
 
 #### Configure mail services
@@ -345,8 +345,8 @@ was already created by the SharePoint Products Configuration Wizard.
 #### Grant DCOM permissions on IIS WAMREG admin Service
 
 In order to avoid errors in the Windows event log (e.g. Event ID 10016), grant
-the **WSS\_ADMIN\_WPG** and **WSS\_WPG** group appropriate permissions on the
-IIS WAMREG admin Service, as described in
+the **WSS_ADMIN_WPG** and **WSS_WPG** group appropriate permissions on the IIS
+WAMREG admin Service, as described in
 [KB 920783](http://support.microsoft.com/kb/920783). This is discussed in more
 detail in the following blog post:
 
@@ -356,7 +356,7 @@ linkText="https://www.technologytoolbox.com/blog/jjameson/2009/10/17/event-id-10
 
 {{< deleted-block >}}
 
-### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
+### Fix assembly name in /_controltemplates/TaxonomyPicker.ascx
 
 In order to avoid errors in the Windows event log (e.g. Source: SharePoint
 Foundation, Event ID: 7043), edit the TaxonomyPicker.ascx file to fix the
@@ -410,7 +410,7 @@ To rename the TaxonomyPicker.ascx file:
    **C:\Program Files\Common Files\Microsoft Shared\Web Server
    Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 1. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
-   filename to **TaxonomyPicker.ascx\_broken**.
+   filename to **TaxonomyPicker.ascx_broken**.
 
 {{< div-block "note" >}}
 
@@ -672,7 +672,7 @@ To attach the SharePoint content database by using Windows Powershell:
 
    {{< console-block >}}
 
-   Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer BEAST
+   Mount-SPContentDatabase -Name WSS_Content_TFS -DatabaseServer BEAST
    -WebApplication http://cyclops -Updateuserexperience
 
    {{< /console-block >}}
@@ -711,7 +711,7 @@ There are also a couple of other issues with the upgraded TFS project site:
 To reset the home page for a TFS project site:
 
 1. Browse to the Site Settings page for the site (e.g.
-   [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
+   [http://cyclops/sites/Demo/_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 1. On the **Site Settings** page, in the **Site Actions** section, click **Reset
    to site definition**.
 1. On the **Reset Page to Site Definition Version** page, click the option to
@@ -732,7 +732,7 @@ To reset the home page for a TFS project site:
 To remove obolete links from the top link bar of a TFS project site:
 
 1. Browse to the Site Settings page for the site (e.g.
-   [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
+   [http://cyclops/sites/Demo/_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 1. On the **Site Settings** page, in the **Look and Feel** section, click **Top
    link bar**.
 1. On the **Top Link Bar** page, click the edit icon next to the navigation
@@ -845,13 +845,13 @@ content databases. ~~On the database server:~~
    click **Properties**.
 1. In the login properties dialog box,
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
-      click the checkbox for the SharePoint content database (**WSS\_Content**),
+      click the checkbox for the SharePoint content database (**WSS_Content**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
-      - **db\_owner**
+      - **db_owner**
       - **public**
    1. Repeat the previous step for any additional content databases that need to
-      be accessed by Excel Services (**WSS\_Content\_TFS**).
+      be accessed by Excel Services (**WSS_Content_TFS**).
    1. Click **OK**.
 
 {{< /deleted-block >}}

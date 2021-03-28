@@ -39,7 +39,7 @@ Or perhaps you already noticed the Add-BackConnectionHostNames.ps1 script in my
 > [http://extranet-local.fabrikam.com](http://extranet-local.fabrikam.com). If
 > it is, the Add-BackConnectionHostNames.ps1 script is used to add
 > **extranet-local.fabrikam.com** to the
-> **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1\_0\BackConnectionHostNames**
+> **HKLM:\System\CurrentControlSet\Control\Lsa\MSV1_0\BackConnectionHostNames**
 > registry key.
 >
 > That way, when people want to deploy the solution with as little effort as

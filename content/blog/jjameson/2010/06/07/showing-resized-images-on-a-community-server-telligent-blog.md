@@ -62,7 +62,7 @@ blog file storage in Telligent Community 5.5.
 
 For example, the new URL corresponding to the first URL shown above is:
 
-> [http://blogs.msdn.com/resized-image.ashx/\_\_size/500x258/\_\_key/CommunityServer-Components-PostAttachments/00-09-99-77-19/Hyper\_2D00\_V-Staggered-Start.png](http://blogs.msdn.com/resized-image.ashx/__size/500x258/__key/CommunityServer-Components-PostAttachments/00-09-99-77-19/Hyper_2D00_V-Staggered-Start.png)
+> [http://blogs.msdn.com/resized-image.ashx/\_\_size/500x258/\_\_key/CommunityServer-Components-PostAttachments/00-09-99-77-19/Hyper_2D00_V-Staggered-Start.png](http://blogs.msdn.com/resized-image.ashx/__size/500x258/__key/CommunityServer-Components-PostAttachments/00-09-99-77-19/Hyper_2D00_V-Staggered-Start.png)
 
 Essentially it's a matter of replacing "cfs-filesystemfile.ashx" in the URL with
 "resized-image.ashx" and adding the desired size for the image.

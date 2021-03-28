@@ -90,10 +90,10 @@ in Europe replied that he had seen 3,000 pages take 7 days to propagate. Ouch.
 After investigating the perf problem, I discovered that the fundamental problem
 was due to the very lengthy SQL SELECT inside one of the PRIME (a.k.a. the
 SharePoint content deployment API) stored procedures (specifically,
-**proc\_DeplGetListItemData**). On the Friday we kicked off the FAQ migration,
+**proc_DeplGetListItemData**). On the Friday we kicked off the FAQ migration,
 this sproc was taking 30-40 seconds to complete. By the following Tuesday, it
 was taking roughly 100 seconds for each execution. Note that
-**proc\_DeplGetListItemData** is just one part of the variation propagation. On
+**proc_DeplGetListItemData** is just one part of the variation propagation. On
 Tuesday morning, each variation page propagation was taking about 10 minutes (to
 the four variation sites).
 
@@ -101,21 +101,21 @@ Seven days for 3,000 pages was looking optimistic at that point (most likely
 because we had more variation labels than my peer in Europe).
 
 Examining the execution plan for the lengthy SQL statement inside
-**proc\_DeplGetListItemData** identified that a Key Lookup was being performed
-on the **AllUserData** table. In our environment we were seeing on the order of
-2M reads for this one SELECT statement. It is also important to note that users
+**proc_DeplGetListItemData** identified that a Key Lookup was being performed on
+the **AllUserData** table. In our environment we were seeing on the order of 2M
+reads for this one SELECT statement. It is also important to note that users
 began complaining about the overall performance of SharePoint in this
 environment while the migration was running.
 
 The slow performance was subsequently confirmed by SQL Profiler traces. The
 traces identified that INSERTs, UPDATEs, and SELECTs on the **AllUserData**
-table (such as **proc\_AddListItem**, **proc\_UpdateDocument**,
-**proc\_UpdateListItem**, **proc\_CheckOutDocument**, etc.) would often require
+table (such as **proc_AddListItem**, **proc_UpdateDocument**,
+**proc_UpdateListItem**, **proc_CheckOutDocument**, etc.) would often require
 more than 60 seconds to complete -- obviously due to the very high I/O being
 performed on the **AllUserData** table.
 
 In parallel with another team member raising the issue to PSS and the Product
-Group, I then analyzed the SELECT statement in **proc\_DeplGetListItemData** to
+Group, I then analyzed the SELECT statement in **proc_DeplGetListItemData** to
 determine an index that could be added to eliminate the Key Lookup and greatly
 reduce the time required to execute this sproc.
 
@@ -141,16 +141,16 @@ A couple of things to note about the index:
   manifestation of this fix (you cannot add an index -- or make any other
   changes -- to your SharePoint database unless it has been approved by PSS,
   unless you don't object to falling under the "unsupported" moniker)
-- Since **tp\_DirName** specifies a server relative URL, this was chosen as the
-  first column in the index -- rather than **tp\_SiteId**.
+- Since **tp_DirName** specifies a server relative URL, this was chosen as the
+  first column in the index -- rather than **tp_SiteId**.
 - In environments where the content database only contains a single site
-  collection (such as ours), including **tp\_SiteId** provides essentially no
+  collection (such as ours), including **tp_SiteId** provides essentially no
   value (i.e. it does not influence the selectivity of the index)
 
 Lastly, it is worth noting that even after adding the index to TEST, we were
 still experiencing relatively long execution times with other sprocs during the
-variation page propagation -- specifically **proc\_DeplAddExportObjectLinks**
-and, to a lesser extent, **proc\_DeplCalculateChildrenToExport**. I attempted to
+variation page propagation -- specifically **proc_DeplAddExportObjectLinks**
+and, to a lesser extent, **proc_DeplCalculateChildrenToExport**. I attempted to
 resolve this in a similar fashion by creating a similar index on the **AllDocs**
 table. However, the initial index attempted did not improve performance and I
 abandoned additional tuning efforts due to schedule and resource constraints.
@@ -160,7 +160,7 @@ SQL Profiler traces continued to show some latency in the various PRIME sprocs:
 - Over a 3-1/2 hour period, approximately 900 operations took longer than 1
   second (a small fraction compared with before the index was added)
 - Of the 900, a small fraction were in the 10-12 second range (e.g.
-  **proc\_DeplAddExportObjectLinks**)
+  **proc_DeplAddExportObjectLinks**)
 
 Overall, performance drastically improved with the new index on **AllUserData**.
 However, even with the index, variations page propagations still took around one

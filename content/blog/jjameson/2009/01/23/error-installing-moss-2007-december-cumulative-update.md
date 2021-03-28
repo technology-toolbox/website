@@ -67,8 +67,8 @@ Configuration of SharePoint Products and Technologies failed. Configuration must
 be performed before you use SharePoint Products and Technologies. For further
 details, see the diagnostic log located at C:\Program Files\Common
 Files\Microsoft Shared\Web Server
-Extensions\12\LOGS\PSCDiagnostics\_1\_19\_2009\_6\_33\_30\_5\_252811372.log and
-the application event log.
+Extensions\12\LOGS\PSCDiagnostics_1_19_2009_6_33_30_5_252811372.log and the
+application event log.
 
 {{< /sample-block >}}
 

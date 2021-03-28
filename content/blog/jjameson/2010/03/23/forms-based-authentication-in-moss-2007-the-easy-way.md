@@ -116,7 +116,7 @@ home page of the site as an anonymous user.
 It seems pretty straightforward, doesn't it? Let's dive into the details,
 step-by-step...
 
-### Step 1 - Set FABRIKAM\_DEMO\_URL environment variable
+### Step 1 - Set FABRIKAM_DEMO_URL environment variable
 
 ```Console
 set FABRIKAM_DEMO_URL=http://fabrikam-local
@@ -128,10 +128,10 @@ environment variables to specify parameters that, well, _vary by environment_ --
 such as the default URL for the Fabrikam site. Following the
 [recommended naming conventions](/blog/jjameson/2009/06/09/environment-naming-conventions),
 Doug uses [**http://fabrikam-local**](http://fabrikam-local/) for the site on
-his local VM and therefore sets the **FABRIKAM\_DEMO\_URL** environment variable
+his local VM and therefore sets the **FABRIKAM_DEMO_URL** environment variable
 accordingly.
 
-### Step 2 - Set FABRIKAM\_BUILD\_CONFIGURATION environment variable
+### Step 2 - Set FABRIKAM_BUILD_CONFIGURATION environment variable
 
 ```Console
 set FABRIKAM_BUILD_CONFIGURATION=Debug
@@ -141,16 +141,15 @@ While we would obviously never want to deploy Debug builds to the Production
 environment (only Release builds), we almost always deploy Debug builds to LOCAL
 and DEV environments (in order to make it easier to troubleshoot issues). Since
 the deployment scripts default to Release builds, Doug needs to set the
-**FABRIKAM\_BUILD\_CONFIGURATION** environment variable to **Debug**.
+**FABRIKAM_BUILD_CONFIGURATION** environment variable to **Debug**.
 
 {{< div-block "note" >}}
 
 > **Note**
 >
-> **FABRIKAM\_BUILD\_CONFIGURATION** and **FABRIKAM\_DEMO\_URL** would typically
-> be set using system environment variables as illustrated in the following
-> figure. That way, the variables would only need to be set once per
-> environment.
+> **FABRIKAM_BUILD_CONFIGURATION** and **FABRIKAM_DEMO_URL** would typically be
+> set using system environment variables as illustrated in the following figure.
+> That way, the variables would only need to be set once per environment.
 
 {{< /div-block >}}
 
@@ -159,7 +158,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Enviro
 alt="Setting environment variables" height="436" width="394"
 title="Figure 1: Setting environment variables" >}}
 
-### Step 3 - Set FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD environment variable
+### Step 3 - Set FABRIKAM_DEMO_APP_POOL_PASSWORD environment variable
 
 ```Console
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
@@ -168,15 +167,15 @@ set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
 When creating the Web application for the Fabrikam site, a new application pool
 is created as necessary using the corresponding service account (e.g.
 %USERDOMAIN%\svc-web-fabrikam or %USERDOMAIN%\svc-web-fabrikam-dev). The
-**FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD** environment variable is used to avoid
+**FABRIKAM_DEMO_APP_POOL_PASSWORD** environment variable is used to avoid
 specifying the actual password for the service account in the script that
 creates the Web application.
 
 Note that this password only needs to be set when creating (or recreating) the
-Web application. In other words, unlike the **FABRIKAM\_BUILD\_CONFIGURATION**
-and **FABRIKAM\_DEMO\_URL** environment variables,
-**FABRIKAM\_DEMO\_APP\_POOL\_PASSWORD** should never be set as a system
-environment variable but rather always set temporarily via a command prompt.
+Web application. In other words, unlike the **FABRIKAM_BUILD_CONFIGURATION** and
+**FABRIKAM_DEMO_URL** environment variables, **FABRIKAM_DEMO_APP_POOL_PASSWORD**
+should never be set as a system environment variable but rather always set
+temporarily via a command prompt.
 
 ### Step 4 - Change to the deployment scripts folder for the custom STSADM commands
 
@@ -741,15 +740,15 @@ I should also point out that I explicitly left out the detailed steps for
 creating the service account used by the app pool as well as the
 **FabrikamDemo** database (since these are expected to be one-time operations
 for each environment). Use
-[aspnet\_regsql.exe](http://msdn.microsoft.com/en-us/library/ms229862%28VS.80%29.aspx)
+[aspnet_regsql.exe](http://msdn.microsoft.com/en-us/library/ms229862%28VS.80%29.aspx)
 to create the membership database and then use SQL Server Management Studio to
 add the Fabrikam service account (e.g. %USERDOMAIN%\svc-web-fabrikam-dev) to the
 following database roles in the **FabrikamDemo** database:
 
-- **aspnet\_Membership\_BasicAccess**
-- **aspnet\_Membership\_ReportingAccess**
-- **aspnet\_Roles\_BasicAccess**
-- **aspnet\_Roles\_ReportingAccess**
+- **aspnet_Membership_BasicAccess**
+- **aspnet_Membership_ReportingAccess**
+- **aspnet_Roles_BasicAccess**
+- **aspnet_Roles_ReportingAccess**
 
 Once you've done this, you should be able to add a user (using the IIS 7
 console) and subsequently click the **Sign In** link on the home page of your

@@ -229,7 +229,7 @@ We also need to add nodes for the existing document libraries (e.g.
 
 These new navigation nodes compensate for the fact the **Documents** heading is
 removed when updating the Quick Launch navigation. [This is removed because the
-link (e.g. /sites/AdventureWorks/\_layouts/1033/viewlsts.aspx?BaseType=1 ) is no
+link (e.g. /sites/AdventureWorks/_layouts/1033/viewlsts.aspx?BaseType=1 ) is no
 longer valid -- due to the removal of the LCID (e.g. 1033) from the URL.]
 
 Also note that project sites created with TFS 2010 do not include the process

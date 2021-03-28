@@ -21,7 +21,7 @@ In my
 [previous post](/blog/jjameson/2009/09/20/overriding-application-master-in-moss-2007),
 I showed how you can override the hard-coded "application.master" in Microsoft
 Office SharePoint Server (MOSS) 2007 application pages (e.g.
-/Library/\_layouts/viewlsts.aspx).
+/Library/_layouts/viewlsts.aspx).
 
 Note that for custom application pages (i.e. those ASP.NET pages that you create
 to run under the context of a SharePoint site) you don't need a custom

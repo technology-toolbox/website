@@ -36,7 +36,7 @@ nasty database names with a GUID in it.
 It's not that I put heroic effort into avoiding database names with GUIDs in
 them. After all, if you follow the instructions in one of the installation
 guides I've written for various SharePoint projects, then you'll find that
-PSConfig.exe creates the SharePoint\_AdminContent\_{GUID} database for Central
+PSConfig.exe creates the SharePoint_AdminContent\_{GUID} database for Central
 Administration. Personally, that one doesn't bother me (much) -- probably
 because the amount of SQL traffic to that database is negligible. However, I
 can't say the same for the numerous other SharePoint databases.

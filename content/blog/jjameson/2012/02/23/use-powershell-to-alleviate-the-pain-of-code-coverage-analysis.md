@@ -568,8 +568,8 @@ assemblies that target .NET Framework 3.5 (one "generic" assembly and another
 that contains some SharePoint-specific code) as well as corresponding
 unit/integration tests. You should be able to extract the files, create an
 "[http://fabrikam-local](http://fabrikam-local)" Web application in SharePoint
-2010 (or use the FABRIKAM\_DEMO\_URL environment variable to point to one of
-your existing Web applications), and then run the PowerShell script from the
+2010 (or use the FABRIKAM_DEMO_URL environment variable to point to one of your
+existing Web applications), and then run the PowerShell script from the
 **Source** folder to perform code coverage analysis:
 
 ```PowerShell

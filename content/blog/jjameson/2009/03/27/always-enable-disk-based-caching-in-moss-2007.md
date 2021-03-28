@@ -66,11 +66,10 @@ following settings:
   - TSQL
     - SQL:BatchCompleted
   - Column Filters
-    - DatabaseName Like {your content database} _(e.g.
-      "WSS\_Content\_Fabrikam")_
+    - DatabaseName Like {your content database} _(e.g. "WSS_Content_Fabrikam")_
     - NTUserName Like {your app pool service account) _(e.g.
       "svc-fabrikam-dev")_
-    - TextData Not Like exec sp\_reset\_connection
+    - TextData Not Like exec sp_reset_connection
 
 These settings will filter out lots of "noise" -- such as requests by the
 SharePoint Timer jobs that continually run in the background -- and show you
@@ -117,11 +116,11 @@ Once you enable disk-based caching, two important things happen:
 
 1. An HTTP header (e.g. `Cache-Control: public, max-age=86400`) is added to the
    response for each file type specified using the `path` attribute of the
-   `BlobCache` element. (Note that "\_layouts" items are cached differently
-   than, for example, items in the **Style Library**). This explicit
-   `Cache-Control` header greatly reduces the number of HTTP requests for
-   clients that have already downloaded the various resource files (by
-   eliminating the 304's mentioned before).
+   `BlobCache` element. (Note that "_layouts" items are cached differently than,
+   for example, items in the **Style Library**). This explicit `Cache-Control`
+   header greatly reduces the number of HTTP requests for clients that have
+   already downloaded the various resource files (by eliminating the 304's
+   mentioned before).
 1. For clients that haven't yet downloaded the various resources, SharePoint
    does not have to call the `proc_FetchDocForHttpGet` sproc to determine
    whether each file has been unghosted (customized). [Note that when you enable
