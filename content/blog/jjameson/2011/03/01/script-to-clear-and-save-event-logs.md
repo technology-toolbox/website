@@ -142,8 +142,8 @@ wscript.exe -- as shown below:
 
 {{< console-block-start >}}
 
-C:\\&gt;{{< kbd
-"cscript \"\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs\"" >}}
+C:\\&gt;{{< kbd `cscript
+"\NotBackedUp\Public\Toolbox\Scripts\Clear Event Logs.vbs" ` >}}
 
 {{< sample-block >}}
 

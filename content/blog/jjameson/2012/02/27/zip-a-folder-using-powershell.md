@@ -340,7 +340,7 @@ function CountZipItemsRecursive(
 The final step is to use these functions to create the zip file:
 
 ```Text
-PS C:\NotBackedUp> {{< kbd "$directory = Get-Item \"C:\NotBackedUp\Fabrikam\"" >}}
+PS C:\NotBackedUp> {{< kbd `$directory = Get-Item "C:\NotBackedUp\Fabrikam"` >}}
 PS C:\NotBackedUp> {{< kbd "ZipFolder $directory" >}}
 {{< sample-output "Creating zip file for folder (C:\NotBackedUp\Fabrikam)..." >}}
 
