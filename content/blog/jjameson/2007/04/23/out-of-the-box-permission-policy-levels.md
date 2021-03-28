@@ -20,13 +20,13 @@ For a couple of months now, I have been using the following command to add
 myself to a Microsoft Office SharePoint Server (MOSS) 2007 site restored from a
 different server:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 stsadm.exe -o addpermissionpolicy -url
 [http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin
 {DOMAIN\username} -permissionlevel "Full Control"
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 This site is backed up from our Test environment (where the business users
 specify the data) which happens to reside in a different domain. Consequently
@@ -38,13 +38,13 @@ problem and we wanted to grant read-only access on the site to everyone.
 
 I initially suggested the following command:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 stsadm.exe -o addpermissionpolicy -url
 [http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin "NT
 AUTHORITY\Authenticated Users" -permissionlevel "Read"
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 However, we quickly discovered that "Read" wasn't quite right. After spending no
 less than 10 minutes unsuccessfully trying variations -- such as "Read-only" and
@@ -86,10 +86,10 @@ Deny All
 
 Therefore the command that I should have suggested to my colleague is:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 stsadm.exe -o addpermissionpolicy -url
 [http://foobar/sites/Migration](http://foobar/sites/Migration) -userlogin "NT
 AUTHORITY\Authenticated Users" -permissionlevel "Full Read"
 
-{{< console-block-end >}}
+{{< /console-block >}}

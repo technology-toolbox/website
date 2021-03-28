@@ -139,11 +139,11 @@ For example, let's suppose that I've checked in some changes to the **v3.0**
 branch that need to be propagated to the **Main** branch. I would open a command
 prompt and run the following:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 C:\NotBackedUp\Agilent&gt;{{< kbd "DiffBranches.cmd v3.0 Main" >}}
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 After the two branches are copied to their respective temporary folders,
 DiffMerge.exe is launched to compare the two branches. Since I exclude many of

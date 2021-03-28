@@ -111,11 +111,11 @@ version. Inside the `<PropertyGroup>` element, add the following:
 
 Here is an example of specifying this property as a command-line option:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 msbuild TFSBuild.proj /property:SkipIncrementAssemblyVersion=true
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Next, add a property so that we can use the TFS command-line utility to checkout
 the assembly version files and subsequently check them back in:

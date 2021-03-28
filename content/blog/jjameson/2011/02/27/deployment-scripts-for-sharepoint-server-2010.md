@@ -1501,7 +1501,7 @@ simply need to force a "Get Latest" from TFS (since my TFS workspace isn't aware
 that I've rolled back my VHD to an earlier point in time), compile and package
 the solution, and then run the scripts described above in the following order:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 & '.\Create Web Application.ps1'\
 & '.\Create Site Collections.ps1'\
@@ -1512,7 +1512,7 @@ the solution, and then run the scripts described above in the following order:
 & '.\Deploy Solutions.ps1'\
 & '.\Activate Features.ps1'
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Thanks to the extremely robust scripting capabilities in SharePoint 2010, I'm
 able to rebuild my development environment in a matter of minutes.

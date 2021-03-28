@@ -42,11 +42,11 @@ Fortunately, it didn't take long to find
 [Gert's recommendation](http://social.msdn.microsoft.com/Forums/en-US/vstsdb/thread/32725cf6-74c1-4b5a-9057-b909ae8a2517)
 to add the following registry key:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 reg add HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\9.0
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 The error occurred since Visual Studio has never been installed on the SQL
 Server in TEST (unlike our local development VMs).

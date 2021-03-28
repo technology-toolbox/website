@@ -91,12 +91,12 @@ in Windows Vista and Windows Server 2008.
 Consequently, you can specify a command like the following to grant permissions
 on the VHD to the service account used by Hyper-V:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 icacls dogfood.vhd /grant "NT VIRTUAL
 MACHINE\C60995EB-8B7D-46DB-BD1E-3638CD1AEC32":(R,W)
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Note that the GUID varies with each VM, so you'll need to tweak this accordingly
 for your environment. To find the GUID to use, examine the **Virtual Machines**

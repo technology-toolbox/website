@@ -55,12 +55,12 @@ on enabling remote administration of Server Core. I then copied the command line
 for enabling the firewall rules for the Disk Management MMC snap-in and pasted
 it into my RDP session to the server:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 netsh advfirewall firewall set rule group="Remote Volume Management" new
 enable=yes
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Unfortunately, the response wasn't exactly what I expected:
 

@@ -176,11 +176,11 @@ To deploy the Fabrikam Demo to SharePoint:
    {{< /div-block >}}
 1. Change to the folder containing the deployment scripts:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
 1. Type the following command:
 
    ```Console

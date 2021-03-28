@@ -36,13 +36,13 @@ probably doesn't take more than 30 seconds to click through **Control Panel** â†
 Nevertheless, I prefer to use a PowerShell script to complete this task in a
 fraction of that time:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 C:\NotBackedUp\Public\Toolbox\PowerShell\Add-PathFolders.ps1 "C:\Program
 Files\Common Files\Microsoft Shared\web server extensions\14\BIN"
 -EnvironmentVariableTarget "Machine"
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 In addition to the script to add folders to the Path environment variable
 (Add-PathFolders.ps1), my Toolbox folder also contains a corresponding script to

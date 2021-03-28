@@ -128,11 +128,11 @@ With this, I can quickly run as command to cloak all of the folders. However,
 notice the dollar signs at the beginning of each line. I'll need to trim those
 off when passing each folder to the {{< kbd "tf workfold /cloak" >}} command:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 $tfFolders | foreach { tf workfold /cloak $\_.Substring(1) }
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Now suppose that I want to build the **CoreServices** project. Consequently I
 need to uncloak that folder and get the latest version from TFS. However, in

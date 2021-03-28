@@ -1377,22 +1377,22 @@ to the SharePoint server running Central Administration.
 For the Test and Production environments, always designate the specific build to
 be deployed. For example:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\1.0.176.0
 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\1.0.176.0 /E /MIR
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 For development environments, the "latest" version may be specified. For
 example:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
 C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\_latest /E /MIR
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Developers may alternately choose to deploy to local environments directly from
 a TFS workspace for a specific branch (e.g. C:\NotBackedUp\Fabrikam\Demo\Main).

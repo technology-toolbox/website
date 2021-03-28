@@ -48,11 +48,11 @@ However, typing that command even once every few days quickly grew tiresome, so
 I wrapped it up in a script in my Toolbox. Now I simply run the following to
 clear the event logs on a development VM:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 C:\NotBackedUp\Public\Toolbox\PowerShell\Clear-EventLogs.ps1
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 {{< div-block "note important" >}}
 

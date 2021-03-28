@@ -32,12 +32,12 @@ servers and take it "on the road" with me to a customer site.
 As such, one of the first things that I typically do when building out a new VM
 is to run the following from a command prompt:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize
 /t REG\_DWORD /d 0 /f
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Then I move on to installing products based on the intended purpose of the VM.
 

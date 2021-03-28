@@ -62,13 +62,13 @@ To configure the build server to compile MOSS 2007 solutions:
    assemblies. This is most easily accomplished by running the following from an
    Administrator command prompt:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    reg add
    "HKLM\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727\AssemblyFoldersEx\SharePoint
    v3" /d "C:\Program Files\Reference Assemblies\Microsoft\SharePoint v3"
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
 
 After completing these steps, I queued another build of my Fabrikam.Demo
 solution and verified the errors caused by missing SharePoint assemblies no

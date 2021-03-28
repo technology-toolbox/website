@@ -74,8 +74,8 @@ me -- than using "StartVM.vbs" to stop a VM).
 Now, whenever I am unable to manage my Hyper-V servers remotely, I can use
 something like the following to start one of the VMs:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 cscript \NotBackedUp\Public\Toolbox\Scripts\ManageVM.vbs XAVIER1 start
 
-{{< console-block-end >}}
+{{< /console-block >}}

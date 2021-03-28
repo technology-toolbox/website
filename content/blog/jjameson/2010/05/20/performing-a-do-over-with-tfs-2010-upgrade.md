@@ -86,12 +86,12 @@ Powershell:
    allow the program to make changes to this computer, click **Yes**.
 1. At the Windows PowerShell command prompt, type the following command:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    Mount-SPContentDatabase -Name &lt;DatabaseName&gt; -DatabaseServer
    &lt;ServerName&gt; -WebApplication &lt;URL&gt; [-Updateuserexperience]
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
    Where:
 
    - <var>&lt;DatabaseName&gt;</var> is the name of the database you want to
@@ -106,12 +106,12 @@ Powershell:
    \
    For example:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    Mount-SPContentDatabase -Name WSS\_Content\_TFS -DatabaseServer CYCLOPS-DEV
    -WebApplication http://cyclops-dev -Updateuserexperience
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
 
 Next, run the Team Foundation Server Administration Console (TfsMgmt.exe) and
 click **Configure Installed Features**.

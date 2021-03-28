@@ -56,18 +56,18 @@ domain:
 1. Login to the VM using a local administrator account.
 1. Open an administrator command prompt and run the following command:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    netdom resetpwd /s:{server} /ud:{DOMAIN\user} /pd:\*
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
    For example:
 
-   {{< console-block-start >}}
+   {{< console-block >}}
 
    netdom resetpwd /s:XAVIER1 /ud:TECHTOOLBOX\jjameson /pd:\*
 
-   {{< console-block-end >}}
+   {{< /console-block >}}
 
    {{< div-block "note" >}}
 

@@ -84,11 +84,11 @@ ConvertToDataSet.exe Sample.xslx
 
 To import pages from the generated DataSet XML file:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 ImportPages.exe [http://fabrikam](http://fabrikam/) Sample.xml
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Here is the code for the ConvertToDataSet.exe utility:
 

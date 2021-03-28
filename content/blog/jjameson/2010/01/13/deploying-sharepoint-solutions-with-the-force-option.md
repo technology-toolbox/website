@@ -33,12 +33,12 @@ REM set FORCE_OPTION=-force
 The FORCE\_OPTION environment variable is subsequently included in the line that
 invokes StsAdm.exe:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 %SPDIR%\bin\stsadm.exe -o deploysolution -name "%SOLUTION\_NAME%.wsp" -url
 %FABRIKAM\_PORTAL\_URL% %DEPLOY\_METHOD% -allowGacDeployment %FORCE\_OPTION%
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 What's all this nonsense about forcing the deployment to "circumvent errors"?
 Yes, it's admittedly a hack (although for some reason when I originally created
@@ -110,7 +110,7 @@ items with **Error** status (even if the error is benign, like this scenario).
 Therefore, whenever I encounter this error, I simply set the FORCE\_OPTION
 environment variable and then redeploy the solutions:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 C:\NotBackedUp\Fabrikam\Builds\1.0.39.0\Portal\DeploymentFiles\Scripts&gt;{{<
 kbd "set FORCE_OPTION=-force" >}}
@@ -125,7 +125,7 @@ kbd "\"Deploy Solutions.cmd\"" >}}
 
 ...
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 Fortunately, when the "-force" option is specified, even if the deployment timer
 job isn't properly cleaned up -- in other words, it isn't deleted -- no error

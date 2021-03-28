@@ -95,12 +95,12 @@ Note that I didn't attempt to restore the **TfsWarehouse** Analysis Services
 [**SetupWarehouse** utility](http://msdn.microsoft.com/en-us/library/ms400783.aspx),
 as prescribed in the aforementioned KB article:
 
-{{< console-block-start >}}
+{{< console-block >}}
 
 SetupWarehouse.exe -o -s beast -d TfsWarehouse -c warehouseschema.xml -a
 TECHTOOLBOX\svc-tfs -ra TECHTOOLBOX\svc-tfsreports -mturl http://cyclops:8080
 
-{{< console-block-end >}}
+{{< /console-block >}}
 
 This command completed successfully. However, when I attempted to process the
 **TfsWarehouse** OLAP database, I encountered an error that stated the service
