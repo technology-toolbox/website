@@ -85,20 +85,20 @@ Toolbox currently uses Google Site Search).
 The problem is due to the following code in **SubtextMasterPage**:
 
 ```C#
-        public void InitializeControls(ISkinControlLoader controlLoader)
-        {
-            ...
-                    var query = Query;
-                    if(!String.IsNullOrEmpty(query))
-                    {
-                        var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
-                        if(searchResults.Any())
-                        {
-                            AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
-                        }
-                    }
-            ...
-        }
+public void InitializeControls(ISkinControlLoader controlLoader)
+{
+    ...
+            var query = Query;
+            if(!String.IsNullOrEmpty(query))
+            {
+                var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
+                if(searchResults.Any())
+                {
+                    AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
+                }
+            }
+    ...
+}
 ```
 
 Since I really don't want the Subtext master page to "magically" suggest other
@@ -106,36 +106,36 @@ blog posts to users (based on what they searched for using, say, Google), I
 updated the code as follows:
 
 ```C#
-        public void InitializeControls(ISkinControlLoader controlLoader)
-        {
-            ...
+public void InitializeControls(ISkinControlLoader controlLoader)
+{
+    ...
 
-                    // Bug 1053: Allow errors in
-                    // Lucene.Net.QueryParsers.QueryParser to be avoided by
-                    // disabling the full text search engine in Web.config
-                    if (FullTextSearchEngineSettings.Settings.IsEnabled == true)
+            // Bug 1053: Allow errors in
+            // Lucene.Net.QueryParsers.QueryParser to be avoided by
+            // disabling the full text search engine in Web.config
+            if (FullTextSearchEngineSettings.Settings.IsEnabled == true)
+            {
+                var query = Query;
+                if(!String.IsNullOrEmpty(query))
+                {
+                    var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
+                    if(searchResults.Any())
                     {
-                        var query = Query;
-                        if(!String.IsNullOrEmpty(query))
-                        {
-                            var searchResults = SearchEngineService.Search(query, 5, Blog.Id, entryId);
-                            if(searchResults.Any())
-                            {
-                                AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
-                            }
-                        }
+                        AddMoreResultsControl(searchResults, controlLoader, apnlCommentsWrapper);
                     }
-            ...
-        }
+                }
+            }
+    ...
+}
 ```
 
 ...and subsequently disabled the Subtext search engine via the Web.config file:
 
 ```XML
-  <FullTextSearchEngineSettings
-    type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
-    <IsEnabled>false</IsEnabled>
-    ...  </FullTextSearchEngineSettings>
+<FullTextSearchEngineSettings
+  type="Subtext.Framework.Configuration.FullTextSearchEngineSettings, Subtext.Framework">
+  <IsEnabled>false</IsEnabled>
+  ...  </FullTextSearchEngineSettings>
 ```
 
 **Recommendation:** Implement the fix described above to prevent "automatic
@@ -173,91 +173,91 @@ point there was intent to generate these values once per environment. At least
 that is what I inferred from the following comment:
 
 ```C#
-        static SymmetricAlgorithm InitializeEncryptionAlgorithm()
-        {
-            SymmetricAlgorithm rijaendel = Rijndael.Create();
-            //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
-            rijaendel.GenerateKey();
-            rijaendel.GenerateIV();
-            return rijaendel;
-        }
+static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+{
+    SymmetricAlgorithm rijaendel = Rijndael.Create();
+    //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
+    rijaendel.GenerateKey();
+    rijaendel.GenerateIV();
+    return rijaendel;
+}
 ```
 
 To fix this issue, I changed the code as follows:
 
 ```C#
-        static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+static SymmetricAlgorithm InitializeEncryptionAlgorithm()
+{
+    SymmetricAlgorithm rijaendel = Rijndael.Create();
+
+    // To avoid numerous CryptographicException ("Padding is invalid and cannot
+    // be removed.") errors from occurring when Google crawls the site, use a
+    // static key and initialization vector for the CAPTCHA controls. If these
+    // settings are not specified, then a random key and IV are created each time
+    // the Subtext site starts up (which can cause CryptographicException errors
+    // to occur when Google requests images/services/CaptchaImage.ashx and
+    // specifies a query string that is no longer valid, because the app pool
+    // recycled between the time Google discovered the CaptchaImage.ashx
+    // reference and the time it actually initiates the request for
+    // CaptchaImage.ashx). If specified, the encryption key and IV are expected
+    // to be Base64 encoded.
+    string key = ConfigurationSettings.AppSettings["Captcha.Encryption.Key"];
+    string iv = ConfigurationSettings.AppSettings["Captcha.Encryption.IV"];
+
+    if (string.IsNullOrEmpty(key) == false)
+    {
+        if (string.IsNullOrEmpty(iv) == true)
         {
-            SymmetricAlgorithm rijaendel = Rijndael.Create();
-
-            // To avoid numerous CryptographicException ("Padding is invalid and cannot
-            // be removed.") errors from occurring when Google crawls the site, use a
-            // static key and initialization vector for the CAPTCHA controls. If these
-            // settings are not specified, then a random key and IV are created each time
-            // the Subtext site starts up (which can cause CryptographicException errors
-            // to occur when Google requests images/services/CaptchaImage.ashx and
-            // specifies a query string that is no longer valid, because the app pool
-            // recycled between the time Google discovered the CaptchaImage.ashx
-            // reference and the time it actually initiates the request for
-            // CaptchaImage.ashx). If specified, the encryption key and IV are expected
-            // to be Base64 encoded.
-            string key = ConfigurationSettings.AppSettings["Captcha.Encryption.Key"];
-            string iv = ConfigurationSettings.AppSettings["Captcha.Encryption.IV"];
-
-            if (string.IsNullOrEmpty(key) == false)
-            {
-                if (string.IsNullOrEmpty(iv) == true)
-                {
-                    throw new ConfigurationErrorsException(
-                        "Captcha.Encryption.IV application setting must be"
-                        + " specified when Captcha.Encryption.Key setting is"
-                        + " specified.");
-                }
-
-                rijaendel.Key = Convert.FromBase64String(key);
-                rijaendel.IV = Convert.FromBase64String(iv);
-            }
-            else
-            {
-                if (string.IsNullOrEmpty(iv) == false)
-                {
-                    throw new ConfigurationErrorsException(
-                        "Captcha.Encryption.Key application setting must be"
-                        + " specified when Captcha.Encryption.IV setting is"
-                        + " specified.");
-                }
-
-                //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
-                rijaendel.GenerateKey();
-                rijaendel.GenerateIV();
-            }
-
-            return rijaendel;
+            throw new ConfigurationErrorsException(
+                "Captcha.Encryption.IV application setting must be"
+                + " specified when Captcha.Encryption.Key setting is"
+                + " specified.");
         }
+
+        rijaendel.Key = Convert.FromBase64String(key);
+        rijaendel.IV = Convert.FromBase64String(iv);
+    }
+    else
+    {
+        if (string.IsNullOrEmpty(iv) == false)
+        {
+            throw new ConfigurationErrorsException(
+                "Captcha.Encryption.Key application setting must be"
+                + " specified when Captcha.Encryption.IV setting is"
+                + " specified.");
+        }
+
+        //TODO: We should set these values in the db the very first time this code is called and load them from the db every other time.
+        rijaendel.GenerateKey();
+        rijaendel.GenerateIV();
+    }
+
+    return rijaendel;
+}
 ```
 
 Then I generated a key and IV and specified the Base64-encoded values in my
 Web.config file:
 
 ```XML
-  <appSettings>
-    <!--
-      To avoid numerous CryptographicException ("Padding is invalid and cannot
-      be removed.") errors from occurring when Google crawls the site, use a
-      static key and initialization vector for the CAPTCHA controls. If these
-      settings are not specified, then a random key and IV are created each time
-      the Subtext site starts up (which can cause CryptographicException errors
-      to occur when Google requests images/services/CaptchaImage.ashx and
-      specifies a query string that is no longer valid, because the app pool
-      recycled between the time Google discovered the CaptchaImage.ashx
-      reference and the time it actually initiates the request for
-      CaptchaImage.ashx). If specified, the encryption key and IV are expected
-      to be Base64 encoded.
-    -->
-    <add key="Captcha.Encryption.Key" value="ppujW5AxO9oz...="/>
-    <add key="Captcha.Encryption.IV" value="eAP5g1WGujEF...=="/>
-    ...
-  </appSettings>
+<appSettings>
+  <!--
+    To avoid numerous CryptographicException ("Padding is invalid and cannot
+    be removed.") errors from occurring when Google crawls the site, use a
+    static key and initialization vector for the CAPTCHA controls. If these
+    settings are not specified, then a random key and IV are created each time
+    the Subtext site starts up (which can cause CryptographicException errors
+    to occur when Google requests images/services/CaptchaImage.ashx and
+    specifies a query string that is no longer valid, because the app pool
+    recycled between the time Google discovered the CaptchaImage.ashx
+    reference and the time it actually initiates the request for
+    CaptchaImage.ashx). If specified, the encryption key and IV are expected
+    to be Base64 encoded.
+  -->
+  <add key="Captcha.Encryption.Key" value="ppujW5AxO9oz...="/>
+  <add key="Captcha.Encryption.IV" value="eAP5g1WGujEF...=="/>
+  ...
+</appSettings>
 ```
 
 This is admittedly somewhat of a hack (I didn't develop any "tool" to create
@@ -582,37 +582,37 @@ The problem is in the **OnLoad** method of the **CategoryEntryList** class. To
 fix this bug, I changed it to the following:
 
 ```C#
-        protected override void OnLoad(EventArgs e)
+protected override void OnLoad(EventArgs e)
+{
+    ...
+    if(...)
+    {
+        ...
+        LinkCategory lc = Cacher.SingleCategory(SubtextContext);
+        ...
+        if(lc == null)
         {
-            ...
-            if(...)
-            {
-                ...
-                LinkCategory lc = Cacher.SingleCategory(SubtextContext);
-                ...
-                if(lc == null)
-                {
-                    // Bug 1054:
-                    // When running under Medium trust, calling
-                    // HttpHelper.SetFileNotFoundResponse() causes an
-                    // exception while attempting to read the
-                    // system.web/customErrors section of the Web.config
-                    // file ("System.Security.SecurityException: Request for the
-                    // permission of type
-                    // 'System.Configuration.ConfigurationPermission,
-                    // System.Configuration, Version=2.0.0.0, Culture=neutral,
-                    // PublicKeyToken=b03f5f7f11d50a3a' failed.").
-                    //
-                    // Therefore, just throw 404 HttpException instead.
-                    //
-                    //HttpHelper.SetFileNotFoundResponse();
-                    //return;
+            // Bug 1054:
+            // When running under Medium trust, calling
+            // HttpHelper.SetFileNotFoundResponse() causes an
+            // exception while attempting to read the
+            // system.web/customErrors section of the Web.config
+            // file ("System.Security.SecurityException: Request for the
+            // permission of type
+            // 'System.Configuration.ConfigurationPermission,
+            // System.Configuration, Version=2.0.0.0, Culture=neutral,
+            // PublicKeyToken=b03f5f7f11d50a3a' failed.").
+            //
+            // Therefore, just throw 404 HttpException instead.
+            //
+            //HttpHelper.SetFileNotFoundResponse();
+            //return;
 
-                    throw new HttpException(404, "Category not found.");
-                }
-                ...
-            }
+            throw new HttpException(404, "Category not found.");
         }
+        ...
+    }
+}
 ```
 
 {{< div-block "note important" >}}

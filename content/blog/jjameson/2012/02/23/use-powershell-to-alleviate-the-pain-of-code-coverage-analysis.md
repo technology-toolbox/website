@@ -57,12 +57,12 @@ Let's start by defining a list of the assemblies that will be analyzed for code
 coverage:
 
 ```PowerShell
-    [string[]] $assembliesToInstrument =
-    @(
-        "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
-        ("CoreServices\SharePoint\bin\Debug" `
-            + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
-    )
+[string[]] $assembliesToInstrument =
+@(
+    "CoreServices\bin\Debug\Fabrikam.Demo.CoreServices.dll",
+    ("CoreServices\SharePoint\bin\Debug" `
+        + "\Fabrikam.Demo.CoreServices.SharePoint.dll")
+)
 ```
 
 For the sake of understanding the example in this post, imagine Fabrikam has a
@@ -80,10 +80,10 @@ class).
 Next we need to instrument each assembly in the list:
 
 ```PowerShell
-    $assembliesToInstrument |
-        ForEach-Object {
-            InstrumentAssembly $_
-        }
+$assembliesToInstrument |
+    ForEach-Object {
+        InstrumentAssembly $_
+    }
 ```
 
 The `InstrumentAssembly` function simply executes
@@ -120,12 +120,12 @@ To re-sign the instrumented assembly from the PowerShell script, we need to use
 the Strong Name Tool (Sn.exe):
 
 ```PowerShell
-    $assembliesToInstrument |
-        ForEach-Object {
-            InstrumentAssembly $_
+$assembliesToInstrument |
+    ForEach-Object {
+        InstrumentAssembly $_
 
-            SignAssembly $_
-        }
+        SignAssembly $_
+    }
 ```
 
 The `SignAssembly` function simply executes
@@ -159,13 +159,13 @@ project:
 The corresponding array variable in PowerShell is:
 
 ```PowerShell
-    [string[]] $testAssemblies =
-    @(
-        ("CoreServices\DeveloperTests\bin\Debug" `
-            + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
-        ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
-            + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
-    )
+[string[]] $testAssemblies =
+@(
+    ("CoreServices\DeveloperTests\bin\Debug" `
+        + "\Fabrikam.Demo.CoreServices.DeveloperTests.dll"),
+    ("CoreServices\SharePoint\DeveloperTests\bin\Debug" `
+        + "\Fabrikam.Demo.CoreServices.SharePoint.DeveloperTests.dll")
+)
 ```
 
 To copy the instrumented assemblies into the "bin" folders for the test
@@ -173,7 +173,7 @@ projects, we first need to get the list of folders containing the test
 assemblies:
 
 ```PowerShell
-    $testBinFolders = GetAssemblyFolders($testAssemblies)
+$testBinFolders = GetAssemblyFolders($testAssemblies)
 ```
 
 The `GetAssemblyFolders `function is straightforward:
@@ -200,14 +200,14 @@ test assemblies, the next step is to copy the modified assemblies to the
 destination folders:
 
 ```PowerShell
-    $assembliesToInstrument |
-        ForEach-Object {
-            InstrumentAssembly $_
+$assembliesToInstrument |
+    ForEach-Object {
+        InstrumentAssembly $_
 
-            SignAssembly $_
+        SignAssembly $_
 
-            CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
-        }
+        CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
+    }
 ```
 
 The function simply uses the **Copy-Item** cmdlet to copy the instrumented
@@ -230,16 +230,16 @@ for a SharePoint feature receiver), then we need to update the assembly in the
 GAC as well:
 
 ```PowerShell
-    $assembliesToInstrument |
-        ForEach-Object {
-            InstrumentAssembly $_
+$assembliesToInstrument |
+    ForEach-Object {
+        InstrumentAssembly $_
 
-            SignAssembly $_
+        SignAssembly $_
 
-            CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
+        CopyInstrumentedAssemblyToTestBinFolders $_ $testBinFolders
 
-            UpdateGacAssemblyIfNecessary $_
-        }
+        UpdateGacAssemblyIfNecessary $_
+    }
 ```
 
 The `UpdateGacAssemblyIfNecessary` function uses **gacutil.exe** to check if the
@@ -326,7 +326,7 @@ function ToggleCodeCoverageProfiling(
 To start the code coverage profiler, simply call the function and pass `$true`:
 
 ```PowerShell
-    ToggleCodeCoverageProfiling $true
+ToggleCodeCoverageProfiling $true
 ```
 
 ### Step 5: Run the unit/integration tests
@@ -337,18 +337,18 @@ process (in order for the SharePoint tests to work), a test settings file must
 be specified:
 
 ```PowerShell
-    [string] $testSettingsPath = "LocalTestRun.testrunconfig"
+[string] $testSettingsPath = "LocalTestRun.testrunconfig"
 
-    ...
+...
 
-    $assembliesToInstrument |
-        ForEach-Object {
-            ...
-        }
+$assembliesToInstrument |
+    ForEach-Object {
+        ...
+    }
 
-    ToggleCodeCoverageProfiling $true
+ToggleCodeCoverageProfiling $true
 
-    RunTests $testAssemblies $testSettingsPath
+RunTests $testAssemblies $testSettingsPath
 ```
 
 In order to consolidate the results from multiple test projects, I execute
@@ -385,7 +385,7 @@ Once the unit/integration tests have completed, the final step is to stop the
 code coverage profiler:
 
 ```PowerShell
-    ToggleCodeCoverageProfiling $false
+ToggleCodeCoverageProfiling $false
 ```
 
 At this point, opening the code coverage file (Fabrikam.Demo.coverage) in Visual

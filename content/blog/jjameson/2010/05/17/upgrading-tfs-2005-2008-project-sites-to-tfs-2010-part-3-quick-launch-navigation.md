@@ -201,30 +201,30 @@ navigation), we'll keep the title of the quick launch navigation node as
 "Calendar" and simply refer to the **Calendar** view of the **Event** list:
 
 ```XML
-    <NavigationNode
-      title="Calendar"
-      url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
+<NavigationNode
+  title="Calendar"
+  url="($web.ServerRelativeUrl)/Lists/Events/calendar.aspx" />
 ```
 
 We also need to add nodes for the existing document libraries (e.g.
 **Development**) under the new **Libraries** heading:
 
 ```XML
-    <NavigationNode
-      title="Development"
-      url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
-    <NavigationNode
-      title="Project Management"
-      url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
-    <NavigationNode
-      title="Requirements"
-      url="($web.ServerRelativeUrl)/Requirements" />
-    <NavigationNode
-      title="Security"
-      url="($web.ServerRelativeUrl)/Security" />
-    <NavigationNode
-      title="Test"
-      url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
+<NavigationNode
+  title="Development"
+  url="($web.ServerRelativeUrl)/Development/Forms/AllItems.aspx" />
+<NavigationNode
+  title="Project Management"
+  url="($web.ServerRelativeUrl)/Project%20Management/Forms/AllItems.aspx" />
+<NavigationNode
+  title="Requirements"
+  url="($web.ServerRelativeUrl)/Requirements" />
+<NavigationNode
+  title="Security"
+  url="($web.ServerRelativeUrl)/Security" />
+<NavigationNode
+  title="Test"
+  url="($web.ServerRelativeUrl)/Test/Forms/AllItems.aspx" />
 ```
 
 These new navigation nodes compensate for the fact the **Documents** heading is

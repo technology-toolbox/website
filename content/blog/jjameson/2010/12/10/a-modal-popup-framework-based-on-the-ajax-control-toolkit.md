@@ -117,7 +117,7 @@ namespace Fabrikam.Demo.Web.UI.WebControls
 Note that by specifying the height of the **modalPanelContent** element:
 
 ```C#
-            modalPanelContent.Height = new Unit(100);
+modalPanelContent.Height = new Unit(100);
 ```
 
 &hellip;and specifying a corresponding CSS rule:
@@ -151,15 +151,15 @@ the "Close" button, the derived Web Part can specify a server-side event handler
 (or simply override the **OnModalPopupOk** method) to perform some action.
 
 ```C#
-        protected override void OnModalPopupOk(
-            EventArgs e)
-        {
-            Debug.WriteLine("SamplePopupWebPart::OnModalPopupOk()");
+protected override void OnModalPopupOk(
+    EventArgs e)
+{
+    Debug.WriteLine("SamplePopupWebPart::OnModalPopupOk()");
 
-            base.OnModalPopupOk(e);
+    base.OnModalPopupOk(e);
 
-            // Do something here...
-        }
+    // Do something here...
+}
 ```
 
 If you would like to see the "Modal Popup Framework" in action, simply download

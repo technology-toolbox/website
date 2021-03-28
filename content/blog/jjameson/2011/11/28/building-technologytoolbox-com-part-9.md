@@ -82,14 +82,14 @@ These changes make the LINQ queries much easier to read. For example, the
 following LINQ query can be used to retrieve the three most recent blog posts:
 
 ```C#
-    using (CaelumEntities context = new CaelumEntities())
-    {
-        var q = (from entry in context.Entries
-                 orderby entry.DateSyndicated descending
-                 select entry).Take(3);
+using (CaelumEntities context = new CaelumEntities())
+{
+    var q = (from entry in context.Entries
+             orderby entry.DateSyndicated descending
+             select entry).Take(3);
 
-        // TODO: Process the query results (e.g. data bind to a control)
-    }
+    // TODO: Process the query results (e.g. data bind to a control)
+}
 ```
 
 Note that **DateSyndicated** represents the date/time a blog post was published,

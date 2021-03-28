@@ -34,50 +34,50 @@ iterate on the overall look-and-feel, and develop/refine the user experience
 Here is the HTML I created for the Contact form:
 
 ```HTML
-  <p>
-    Fill out the contact form below and you will receive a response within one
-    business day. You may also send email directly to
-    <a href="mailto:info@technologytoolbox.com">info@technologytoolbox.com</a>.</p>
-  <fieldset>
-    <div>
-      <label for="contact-fullName">
-        Name</label>
-      <input id="contact-fullName" maxlength="32" size="20" type="text"
-        class="required" />
-    </div>
-    <div>
-      <label for="contact-companyName">
-        Company</label>
-      <input id="contact-companyName" maxlength="32" size="20" type="text"
-        class="required" />
-    </div>
-    <div>
-      <label for="contact-emailAddress">
-        Email Address</label>
-      <input id="contact-emailAddress" maxlength="254" size="20" type="text" />
-    </div>
-    <div>
-      <label for="contact-telephone">
-        Telephone Number</label>
-      <input id="contact-telephone" maxlength="32" size="20" type="text" />
-    </div>
-    <div>
-      <label for="contact-subject">
-        Subject</label>
-      <input id="contact-subject" maxlength="64" size="20" type="text"
-        class="required" />
-    </div>
-    <div>
-      <label for="contact-message">
-        Message</label>
-      <textarea id="contact-message" rows="5" cols="60" class="required">
-      </textarea>
-    </div>
-  </fieldset>
-  <div class="button-panel">
-    <button type="submit">
-      Submit</button>
+<p>
+  Fill out the contact form below and you will receive a response within one
+  business day. You may also send email directly to
+  <a href="mailto:info@technologytoolbox.com">info@technologytoolbox.com</a>.</p>
+<fieldset>
+  <div>
+    <label for="contact-fullName">
+      Name</label>
+    <input id="contact-fullName" maxlength="32" size="20" type="text"
+      class="required" />
   </div>
+  <div>
+    <label for="contact-companyName">
+      Company</label>
+    <input id="contact-companyName" maxlength="32" size="20" type="text"
+      class="required" />
+  </div>
+  <div>
+    <label for="contact-emailAddress">
+      Email Address</label>
+    <input id="contact-emailAddress" maxlength="254" size="20" type="text" />
+  </div>
+  <div>
+    <label for="contact-telephone">
+      Telephone Number</label>
+    <input id="contact-telephone" maxlength="32" size="20" type="text" />
+  </div>
+  <div>
+    <label for="contact-subject">
+      Subject</label>
+    <input id="contact-subject" maxlength="64" size="20" type="text"
+      class="required" />
+  </div>
+  <div>
+    <label for="contact-message">
+      Message</label>
+    <textarea id="contact-message" rows="5" cols="60" class="required">
+    </textarea>
+  </div>
+</fieldset>
+<div class="button-panel">
+  <button type="submit">
+    Submit</button>
+</div>
 ```
 
 Notice that in addition to specifying `id` attributes on the various input
@@ -151,77 +151,77 @@ control as well.
 At this point, the markup for the Contact form looked like this:
 
 ```ASP.NET
-  <p>
-    Fill out the contact form below and you will receive a response within one business
-    day. You may also send email directly to <a href="mailto:info@technologytoolbox.com">
-      info@technologytoolbox.com</a>.</p>
-  <fieldset>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="contactName" Text="Name" />
-      <asp:TextBox runat="server" ID="contactName" CssClass="required"
-        MaxLength="32" size="20" />
-      <asp:RequiredFieldValidator runat="server" ControlToValidate="contactName"
-        Display="Dynamic" ErrorMessage="Name must be specified."
-        Text="(required)" CssClass="validator required" ForeColor="" />
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="companyName" Text="Company" />
-      <asp:TextBox runat="server" ID="companyName" CssClass="required"
-        MaxLength="32" size="20" />
-      <asp:RequiredFieldValidator runat="server" ControlToValidate="companyName"
-        Display="Dynamic" ErrorMessage="Company must be specified."
-        Text="(required)" CssClass="validator required" ForeColor="" />
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="contactEmail"
-        Text="Email Address" />
-      <asp:TextBox runat="server" ID="contactEmail" MaxLength="254" size="20" />
-      <asp:RegularExpressionValidator runat="server"
-        ControlToValidate="contactEmail" ValidationExpression="^.*?@.+\..+$"
-        Display="dynamic"
-        ErrorMessage="Email Address is not required, but if specified it must be valid."
-        Text="(invalid)" CssClass="validator" ForeColor="" />
-      <div class="field-info">
-        Optional, but recommended (unless you wish to only be contacted by
-        telephone).</div>
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="contactTelephone"
-        Text="Telephone" />
-      <asp:TextBox runat="server" ID="contactTelephone" MaxLength="32"
-        size="20" />
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="preferredContactMethod"
-        Text="Preferred Contact Method" />
-      <asp:RadioButtonList runat="server" ID="preferredContactMethod"
-        CssClass="radio-list" RepeatDirection="Horizontal">
-        <asp:ListItem Text="Email" Selected="True" />
-        <asp:ListItem Text="Telephone" />
-      </asp:RadioButtonList>
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="subject" Text="Subject" />
-      <asp:TextBox runat="server" ID="subject" CssClass="required"
-        MaxLength="64" size="20" />
-      <asp:RequiredFieldValidator runat="server" ControlToValidate="subject"
-        Display="Dynamic" ErrorMessage="Subject must be specified."
-        Text="(required)" CssClass="validator required" ForeColor="" />
-    </div>
-    <div>
-      <asp:Label runat="server" AssociatedControlID="message" Text="Message" />
-      <asp:TextBox runat="server" ID="message" CssClass="required"
-        TextMode="MultiLine" Rows="10" Columns="60" />
-      <asp:RequiredFieldValidator runat="server" ControlToValidate="message"
-        Display="Dynamic" ErrorMessage="Message must be specified."
-        Text="(required)" CssClass="validator required" ForeColor="" /></div>
-  </fieldset>
-  <div class="button-panel">
-    <asp:Button runat="server" Text="Submit" />
+<p>
+  Fill out the contact form below and you will receive a response within one business
+  day. You may also send email directly to <a href="mailto:info@technologytoolbox.com">
+    info@technologytoolbox.com</a>.</p>
+<fieldset>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="contactName" Text="Name" />
+    <asp:TextBox runat="server" ID="contactName" CssClass="required"
+      MaxLength="32" size="20" />
+    <asp:RequiredFieldValidator runat="server" ControlToValidate="contactName"
+      Display="Dynamic" ErrorMessage="Name must be specified."
+      Text="(required)" CssClass="validator required" ForeColor="" />
   </div>
-  <asp:ValidationSummary runat="server" CssClass="validation-summary"
-    ForeColor=""
-    HeaderText="There is a problem with your request. Please correct and try again." />
+  <div>
+    <asp:Label runat="server" AssociatedControlID="companyName" Text="Company" />
+    <asp:TextBox runat="server" ID="companyName" CssClass="required"
+      MaxLength="32" size="20" />
+    <asp:RequiredFieldValidator runat="server" ControlToValidate="companyName"
+      Display="Dynamic" ErrorMessage="Company must be specified."
+      Text="(required)" CssClass="validator required" ForeColor="" />
+  </div>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="contactEmail"
+      Text="Email Address" />
+    <asp:TextBox runat="server" ID="contactEmail" MaxLength="254" size="20" />
+    <asp:RegularExpressionValidator runat="server"
+      ControlToValidate="contactEmail" ValidationExpression="^.*?@.+\..+$"
+      Display="dynamic"
+      ErrorMessage="Email Address is not required, but if specified it must be valid."
+      Text="(invalid)" CssClass="validator" ForeColor="" />
+    <div class="field-info">
+      Optional, but recommended (unless you wish to only be contacted by
+      telephone).</div>
+  </div>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="contactTelephone"
+      Text="Telephone" />
+    <asp:TextBox runat="server" ID="contactTelephone" MaxLength="32"
+      size="20" />
+  </div>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="preferredContactMethod"
+      Text="Preferred Contact Method" />
+    <asp:RadioButtonList runat="server" ID="preferredContactMethod"
+      CssClass="radio-list" RepeatDirection="Horizontal">
+      <asp:ListItem Text="Email" Selected="True" />
+      <asp:ListItem Text="Telephone" />
+    </asp:RadioButtonList>
+  </div>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="subject" Text="Subject" />
+    <asp:TextBox runat="server" ID="subject" CssClass="required"
+      MaxLength="64" size="20" />
+    <asp:RequiredFieldValidator runat="server" ControlToValidate="subject"
+      Display="Dynamic" ErrorMessage="Subject must be specified."
+      Text="(required)" CssClass="validator required" ForeColor="" />
+  </div>
+  <div>
+    <asp:Label runat="server" AssociatedControlID="message" Text="Message" />
+    <asp:TextBox runat="server" ID="message" CssClass="required"
+      TextMode="MultiLine" Rows="10" Columns="60" />
+    <asp:RequiredFieldValidator runat="server" ControlToValidate="message"
+      Display="Dynamic" ErrorMessage="Message must be specified."
+      Text="(required)" CssClass="validator required" ForeColor="" /></div>
+</fieldset>
+<div class="button-panel">
+  <asp:Button runat="server" Text="Submit" />
+</div>
+<asp:ValidationSummary runat="server" CssClass="validation-summary"
+  ForeColor=""
+  HeaderText="There is a problem with your request. Please correct and try again." />
 ```
 
 ### Step 4: Display confirmation message
@@ -241,21 +241,21 @@ an ASP.NET **Panel** control (i.e. a `<div>` element) and added a second panel
 with the confirmation message:
 
 ```ASP.NET
-  <asp:Panel runat="server" ID="contactForm">
-    <p>
-      Fill out the contact form below ...</p>
-    <fieldset>
-      ...
-    </fieldset>
+<asp:Panel runat="server" ID="contactForm">
+  <p>
+    Fill out the contact form below ...</p>
+  <fieldset>
     ...
-  </asp:Panel>
-  <asp:Panel runat="server" ID="confirmationPanel" Visible="false">
-    <p>
-      Thank you.</p>
-    <p>
-      Your contact request has been submitted. You will receive a response
-      within one business day.</p>
-  </asp:Panel>
+  </fieldset>
+  ...
+</asp:Panel>
+<asp:Panel runat="server" ID="confirmationPanel" Visible="false">
+  <p>
+    Thank you.</p>
+  <p>
+    Your contact request has been submitted. You will receive a response
+    within one business day.</p>
+</asp:Panel>
 ```
 
 Then it was simply a matter of associating a little bit of code with the "click"
@@ -263,20 +263,20 @@ event of the **Submit** button to hide the first panel and show the second
 panel:
 
 ```C#
-        protected void SubmitButton_Click(
-            object sender,
-            EventArgs e)
-        {
-            if (this.IsValid == false)
-            {
-                return;
-            }
+protected void SubmitButton_Click(
+    object sender,
+    EventArgs e)
+{
+    if (this.IsValid == false)
+    {
+        return;
+    }
 
-            // TODO: Send contact request email
+    // TODO: Send contact request email
 
-            contactForm.Visible = false;
-            confirmationPanel.Visible = true;
-        }
+    contactForm.Visible = false;
+    confirmationPanel.Visible = true;
+}
 ```
 
 Some quick {{< kbd "F5" >}} testing to ensure everything worked as expected and
@@ -312,24 +312,24 @@ TechnologyToolbox.com, I replaced the "TODO" comment shown above with a call to
 a new method that sends the email:
 
 ```C#
-        private void SendContactRequestEmail()
-        {
-            string body = BuildEmailMessageBody();
+private void SendContactRequestEmail()
+{
+    string body = BuildEmailMessageBody();
 
-            string mailFrom = "no-reply@technologytoolbox.com";
-            string mailTo = "info@technologytoolbox.com";
+    string mailFrom = "no-reply@technologytoolbox.com";
+    string mailTo = "info@technologytoolbox.com";
 
-            using (MailMessage mailMessage = new MailMessage(
-                mailFrom,
-                mailTo,
-                "Contact Request - " + subject.Text,
-                body))
-            {
-                SmtpClient client = new SmtpClient();
-                client.UseDefaultCredentials = true;
-                client.Send(mailMessage);
-            }
-        }
+    using (MailMessage mailMessage = new MailMessage(
+        mailFrom,
+        mailTo,
+        "Contact Request - " + subject.Text,
+        body))
+    {
+        SmtpClient client = new SmtpClient();
+        client.UseDefaultCredentials = true;
+        client.Send(mailMessage);
+    }
+}
 ```
 
 Thanks to built-in functionality in the .NET Framework, it doesn't require much
@@ -337,41 +337,41 @@ code at all. Note that what you see above is the end result at this point after
 a little refactoring. Here is the **BuildEmailMessageBody** method:
 
 ```C#
-        private string BuildEmailMessageBody()
-        {
-            StringBuilder buffer = new StringBuilder();
+private string BuildEmailMessageBody()
+{
+    StringBuilder buffer = new StringBuilder();
 
-            buffer.AppendFormat(
-                CultureInfo.CurrentCulture,
-                "Name: {0}" + Environment.NewLine,
-                contactName.Text);
+    buffer.AppendFormat(
+        CultureInfo.CurrentCulture,
+        "Name: {0}" + Environment.NewLine,
+        contactName.Text);
 
-            buffer.AppendFormat(
-                CultureInfo.CurrentCulture,
-                "Company: {0}" + Environment.NewLine,
-                companyName.Text);
+    buffer.AppendFormat(
+        CultureInfo.CurrentCulture,
+        "Company: {0}" + Environment.NewLine,
+        companyName.Text);
 
-            buffer.AppendFormat(
-                CultureInfo.CurrentCulture,
-                "Email Address: {0}" + Environment.NewLine,
-                contactEmail.Text);
+    buffer.AppendFormat(
+        CultureInfo.CurrentCulture,
+        "Email Address: {0}" + Environment.NewLine,
+        contactEmail.Text);
 
-            buffer.AppendFormat(
-                CultureInfo.CurrentCulture,
-                "Telephone: {0}" + Environment.NewLine,
-                contactTelephone.Text);
+    buffer.AppendFormat(
+        CultureInfo.CurrentCulture,
+        "Telephone: {0}" + Environment.NewLine,
+        contactTelephone.Text);
 
-            buffer.AppendFormat(
-                CultureInfo.CurrentCulture,
-                "Preferred Contact Method: {0}" + Environment.NewLine,
-                preferredContactMethod.Text);
+    buffer.AppendFormat(
+        CultureInfo.CurrentCulture,
+        "Preferred Contact Method: {0}" + Environment.NewLine,
+        preferredContactMethod.Text);
 
-            buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
 
-            buffer.Append(message.Text);
+    buffer.Append(message.Text);
 
-            return buffer.ToString();
-        }
+    return buffer.ToString();
+}
 ```
 
 Testing the solution at this point revealed some issues. Specifically, sending
@@ -408,15 +408,15 @@ a couple of items under the **Settings** tab on the project properties:
 ...and updated the code accordingly:
 
 ```C#
-        private void SendContactRequestEmail()
-        {
-            string body = BuildEmailMessageBody();
+private void SendContactRequestEmail()
+{
+    string body = BuildEmailMessageBody();
 
-            string mailFrom = Settings.Default.ContactFormMailFromAddress;
-            string[] mailTo = Settings.Default.ContactFormMailToAddress;
+    string mailFrom = Settings.Default.ContactFormMailFromAddress;
+    string[] mailTo = Settings.Default.ContactFormMailToAddress;
 
-            ...
-        }
+    ...
+}
 ```
 
 With those changes, the email addresses can be updated as needed in the
@@ -445,33 +445,33 @@ would contain a semicolon-delimited list of email addresses. For example:
 Note that this requires a few tweaks to the code used to send the email:
 
 ```C#
-    private void SendContactRequestEmail()
+private void SendContactRequestEmail()
+{
+    string body = BuildEmailMessageBody();
+
+    string mailFrom = Settings.Default.ContactFormMailFromAddress;
+    string[] mailTo = Settings.Default.ContactFormMailToAddress.Split(
+        new char[] { ';' });
+
+    using (MailMessage mailMessage = new MailMessage(
+        mailFrom,
+        mailTo[0],
+        "Contact Request - " + subject.Text,
+        body))
     {
-        string body = BuildEmailMessageBody();
-
-        string mailFrom = Settings.Default.ContactFormMailFromAddress;
-        string[] mailTo = Settings.Default.ContactFormMailToAddress.Split(
-            new char[] { ';' });
-
-        using (MailMessage mailMessage = new MailMessage(
-            mailFrom,
-            mailTo[0],
-            "Contact Request - " + subject.Text,
-            body))
+        for (int i = 1; i < mailTo.Length; i++)
         {
-            for (int i = 1; i < mailTo.Length; i++)
+            if (string.IsNullOrEmpty(mailTo[i]) == false)
             {
-                if (string.IsNullOrEmpty(mailTo[i]) == false)
-                {
-                    mailMessage.To.Add(mailTo[i]);
-                }
+                mailMessage.To.Add(mailTo[i]);
             }
-
-            SmtpClient client = new SmtpClient();
-            client.UseDefaultCredentials = true;
-            client.Send(mailMessage);
         }
+
+        SmtpClient client = new SmtpClient();
+        client.UseDefaultCredentials = true;
+        client.Send(mailMessage);
     }
+}
 ```
 
 Another quick round of testing at this point verified the enhancements function
@@ -533,71 +533,71 @@ To accomplish this, I created a simple method to configure the form fields based
 on the currently selected option for **Preferred Contact Method**:
 
 ```C#
-        private void ConfigureFormFields()
-        {
-            switch (preferredContactMethod.Text)
-            {
-                case "Email":
-                    contactEmail.CssClass = "required";
-                    contactTelephone.CssClass = null;
+private void ConfigureFormFields()
+{
+    switch (preferredContactMethod.Text)
+    {
+        case "Email":
+            contactEmail.CssClass = "required";
+            contactTelephone.CssClass = null;
 
-                    contactEmailRequiredValidator.Enabled = true;
-                    contactTelephoneRequiredValidator.Enabled = false;
-                    break;
+            contactEmailRequiredValidator.Enabled = true;
+            contactTelephoneRequiredValidator.Enabled = false;
+            break;
 
-                case "Telephone":
-                    contactEmail.CssClass = null;
-                    contactTelephone.CssClass = "required";
+        case "Telephone":
+            contactEmail.CssClass = null;
+            contactTelephone.CssClass = "required";
 
-                    contactEmailRequiredValidator.Enabled = false;
-                    contactTelephoneRequiredValidator.Enabled = true;
-                    break;
+            contactEmailRequiredValidator.Enabled = false;
+            contactTelephoneRequiredValidator.Enabled = true;
+            break;
 
-                default:
-                    throw new InvalidOperationException(
-                        "Unexpected option specified for preferred contact"
-                            + " method.");
-            }
-        }
+        default:
+            throw new InvalidOperationException(
+                "Unexpected option specified for preferred contact"
+                    + " method.");
+    }
+}
 ```
 
 To ensure the fields are initially configured as expected, I call the
 **ConfigureFormFields** method when the page is first requested:
 
 ```C#
-        protected void Page_Load(
-            object sender,
-            EventArgs e)
-        {
-            if (this.IsPostBack == false)
-            {
-                ConfigureFormFields();
-            }
-        }
+protected void Page_Load(
+    object sender,
+    EventArgs e)
+{
+    if (this.IsPostBack == false)
+    {
+        ConfigureFormFields();
+    }
+}
 ```
 
 Then I modified the **RadioButtonList** to automatically postback when the
 selected item is changed:
 
 ```ASP.NET
-  <asp:RadioButtonList runat="server" ID="preferredContactMethod"
-    CssClass="radio-list" RepeatDirection="Horizontal"
-    AutoPostBack="true"
-    OnSelectedIndexChanged="PreferredContactMethod_SelectedIndexChanged">
-    <asp:ListItem Text="Email" />
-    <asp:ListItem Text="Telephone" Selected="True" />
-  </asp:RadioButtonList>
+<asp:RadioButtonList runat="server" ID="preferredContactMethod"
+  CssClass="radio-list" RepeatDirection="Horizontal"
+  AutoPostBack="true"
+  OnSelectedIndexChanged="PreferredContactMethod_SelectedIndexChanged">
+  <asp:ListItem Text="Email" />
+  <asp:ListItem Text="Telephone" Selected="True" />
+</asp:RadioButtonList>
 ```
 
 ...and subsequently call the **ConfigureFormFields** method:
 
 ```C#
-        protected void PreferredContactMethod_SelectedIndexChanged(
-            object sender,
-            EventArgs e)
-        {
-            ConfigureFormFields();
-        }
+protected void PreferredContactMethod_SelectedIndexChanged(
+    object sender,
+    EventArgs e)
+{
+    ConfigureFormFields();
+}
 ```
 
 Another quick round of testing to verify the enhancements functioned as
@@ -623,18 +623,18 @@ The third item is important. For example, for step "9.2" you might start by
 adding an **UpdatePanel** around all of the form fields:
 
 ```ASP.NET
-        <asp:Panel runat="server" ID="contactForm">
-          <asp:UpdatePanel runat="server">
-            <ContentTemplate>
-              <p>
-                Fill out the contact form below...</p>
-              <fieldset>
-                ...
-              </fieldset>
-              ...
-            </ContentTemplate>
-          </asp:UpdatePanel>
-        </asp:Panel>
+<asp:Panel runat="server" ID="contactForm">
+  <asp:UpdatePanel runat="server">
+    <ContentTemplate>
+      <p>
+        Fill out the contact form below...</p>
+      <fieldset>
+        ...
+      </fieldset>
+      ...
+    </ContentTemplate>
+  </asp:UpdatePanel>
+</asp:Panel>
 ```
 
 However, in this particular scenario, only the **Email Address** and
@@ -643,38 +643,38 @@ postback. Consequently, it is much more efficient to enclose only those controls
 in the **UpdatePanel**:
 
 ```ASP.NET
-        <asp:Panel runat="server" ID="contactForm">
-          <p>
-            Fill out the contact form below...</p>
-          <fieldset>
-            ...
-            <div>
-              <asp:Label ... Text="Company" />
-              <asp:TextBox ... ID="companyName" />
-              <asp:RequiredFieldValidator ... ControlToValidate="companyName" />
-            </div>
-            <asp:UpdatePanel runat="server">
-              <ContentTemplate>
-                <div>
-                  <asp:Label ... Text="Email Address" />
-                  <asp:TextBox ... ID="contactEmail" />
-                  <asp:RegularExpressionValidator ControlToValidate="contactEmail" ... />
-                  <asp:RequiredFieldValidator ControlToValidate="contactEmail" ... />
-                  ...
-                </div>
-                ...
-              </ContentTemplate>
-            </asp:UpdatePanel>
-            <div>
-              <asp:Label ... Text="Subject" />
-              <asp:TextBox ... ID="subject" />
-              <asp:RequiredFieldValidator ControlToValidate="subject" ... />
-            </div>
-            ...
-          </fieldset>
+<asp:Panel runat="server" ID="contactForm">
+  <p>
+    Fill out the contact form below...</p>
+  <fieldset>
+    ...
+    <div>
+      <asp:Label ... Text="Company" />
+      <asp:TextBox ... ID="companyName" />
+      <asp:RequiredFieldValidator ... ControlToValidate="companyName" />
+    </div>
+    <asp:UpdatePanel runat="server">
+      <ContentTemplate>
+        <div>
+          <asp:Label ... Text="Email Address" />
+          <asp:TextBox ... ID="contactEmail" />
+          <asp:RegularExpressionValidator ControlToValidate="contactEmail" ... />
+          <asp:RequiredFieldValidator ControlToValidate="contactEmail" ... />
           ...
-        </asp:Panel>
+        </div>
         ...
+      </ContentTemplate>
+    </asp:UpdatePanel>
+    <div>
+      <asp:Label ... Text="Subject" />
+      <asp:TextBox ... ID="subject" />
+      <asp:RequiredFieldValidator ControlToValidate="subject" ... />
+    </div>
+    ...
+  </fieldset>
+  ...
+</asp:Panel>
+...
 ```
 
 You can see this for yourself by inspecting the AJAX postback using the

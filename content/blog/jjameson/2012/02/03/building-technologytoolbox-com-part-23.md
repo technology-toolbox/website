@@ -18,18 +18,18 @@ You may have noticed the following code in
 [my post from earlier today](building-technologytoolbox-com-part-22.aspx):
 
 ```C#
-                ...
-                else if (string.Compare(
-                    request.Url.Host,
-                    "technologytoolbox.com",
-                    StringComparison.OrdinalIgnoreCase) == 0
-                    || string.Compare(
-                        request.Url.Host,
-                        "www.technologytoolbox.com",
-                        StringComparison.OrdinalIgnoreCase) == 0)
-                {
-                    ...
-                }
+...
+else if (string.Compare(
+    request.Url.Host,
+    "technologytoolbox.com",
+    StringComparison.OrdinalIgnoreCase) == 0
+    || string.Compare(
+        request.Url.Host,
+        "www.technologytoolbox.com",
+        StringComparison.OrdinalIgnoreCase) == 0)
+{
+    ...
+}
 ```
 
 I wish I could say this is the way I wrote the code to begin with, but that
@@ -99,18 +99,18 @@ Here are the corresponding configuration elements added by the **Canonical
 domain name** SEO template in URL Rewrite 2.0:
 
 ```XML
-    <rewrite>
-      <rules>
-        <rule name="CanonicalHostNameRule1">
-          <match url="(.*)" />
-          <conditions>
-            <add input="{HTTP_HOST}" pattern="^www\.technologytoolbox\.com$"
-              negate="true" />
-          </conditions>
-          <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
-        </rule>
-      </rules>
-    </rewrite>
+<rewrite>
+  <rules>
+    <rule name="CanonicalHostNameRule1">
+      <match url="(.*)" />
+      <conditions>
+        <add input="{HTTP_HOST}" pattern="^www\.technologytoolbox\.com$"
+          negate="true" />
+      </conditions>
+      <action type="Redirect" url="https://www.technologytoolbox.com/{R:1}" />
+    </rule>
+  </rules>
+</rewrite>
 ```
 
 The rewrite rules are very similar. However there is subtle but important

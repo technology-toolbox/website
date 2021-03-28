@@ -290,8 +290,8 @@ specified in SharePoint Central Administration, you only need a single line of
 code that passes three parameters:
 
 ```C#
-            SharePointSmtpHelper.SendMessage(
-                "jeremy_jameson@fabrikam.com",
-                "Test message",
-                "Testing the SharePointSmtpHelper class");
+SharePointSmtpHelper.SendMessage(
+    "jeremy_jameson@fabrikam.com",
+    "Test message",
+    "Testing the SharePointSmtpHelper class");
 ```

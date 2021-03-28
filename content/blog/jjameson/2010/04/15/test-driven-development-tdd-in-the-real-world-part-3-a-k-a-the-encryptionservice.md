@@ -193,18 +193,18 @@ Well, that certainly isn't good. Let's modify the unit test a little to ensure
 that it fails based on the current implementation:
 
 ```C#
-        [TestMethod]
-        public void Decrypt001()
-        {
-            string plaintext = "foobar";
-            string expected = plaintext;
-            string ciphertext = EncryptionService.Encrypt(plaintext);
+[TestMethod]
+public void Decrypt001()
+{
+    string plaintext = "foobar";
+    string expected = plaintext;
+    string ciphertext = EncryptionService.Encrypt(plaintext);
 
-            string actual = EncryptionService.Decrypt(ciphertext);
+    string actual = EncryptionService.Decrypt(ciphertext);
 
-            Assert.AreEqual<string>(expected, actual);
-            Assert.AreNotEqual<string>(plaintext, ciphertext);
-        }
+    Assert.AreEqual<string>(expected, actual);
+    Assert.AreNotEqual<string>(plaintext, ciphertext);
+}
 ```
 
 That's better...now both of our unit tests fail due to the following error:
@@ -221,11 +221,11 @@ case, you can specify the optional `message` parameter when using one of the
 methods on the **Assert** class:
 
 ```C#
-            Assert.AreNotEqual<string>(
-                plaintext,
-                ciphertext,
-                "The encrypted text (ciphertext) should not be the same as the"
-                    + " unencrypted text (plaintext).");
+Assert.AreNotEqual<string>(
+    plaintext,
+    ciphertext,
+    "The encrypted text (ciphertext) should not be the same as the"
+        + " unencrypted text (plaintext).");
 ```
 
 With this change, the unit tests would fail with the following error:
@@ -529,32 +529,32 @@ Start by replacing the implementation of the **Encrypt** method in the
 **InternalEncryptionService** class:
 
 ```C#
-        public string Encrypt(
-            string plaintext)
-        {
-            byte[] data = Encoding.Unicode.GetBytes(plaintext);
+public string Encrypt(
+    string plaintext)
+{
+    byte[] data = Encoding.Unicode.GetBytes(plaintext);
 
-            byte[] encryptedData = base.EncryptPassword(data);
+    byte[] encryptedData = base.EncryptPassword(data);
 
-            string ciphertext = Convert.ToBase64String(encryptedData);
-            return ciphertext;
-        }
+    string ciphertext = Convert.ToBase64String(encryptedData);
+    return ciphertext;
+}
 ```
 
 Similarly, replace the implementation of the **Decrypt** method in the
 **InternalEncryptionService** class:
 
 ```C#
-        public string Decrypt(
-            string ciphertext)
-        {
-            byte[] encryptedData = Convert.FromBase64String(ciphertext);
+public string Decrypt(
+    string ciphertext)
+{
+    byte[] encryptedData = Convert.FromBase64String(ciphertext);
 
-            byte[] decryptedData = base.DecryptPassword(encryptedData);
+    byte[] decryptedData = base.DecryptPassword(encryptedData);
 
-            string plainText = Encoding.Unicode.GetString(decryptedData);
-            return plainText;
-        }
+    string plainText = Encoding.Unicode.GetString(decryptedData);
+    return plainText;
+}
 ```
 
 Building the solution and running the unit tests now results in a
@@ -596,30 +596,30 @@ of delegating the work performed by the **EncryptionService** class to the
 corresponding methods in the **InternalEncryptionService** class:
 
 ```C#
-    public static class EncryptionService
+public static class EncryptionService
+{
+    /// <summary>
+    /// Encrypts the specified text.
+    /// </summary>
+    public static string Encrypt(
+        string plaintext)
     {
-        /// <summary>
-        /// Encrypts the specified text.
-        /// </summary>
-        public static string Encrypt(
-            string plaintext)
-        {
-            InternalEncryptionService service = new InternalEncryptionService();
+        InternalEncryptionService service = new InternalEncryptionService();
 
-            return service.Encrypt(plaintext);
-        }
-
-        /// <summary>
-        /// Decrypts the specified text.
-        /// </summary>
-        public static string Decrypt(
-            string ciphertext)
-        {
-            InternalEncryptionService service = new InternalEncryptionService();
-
-            return service.Decrypt(ciphertext);
-        }
+        return service.Encrypt(plaintext);
     }
+
+    /// <summary>
+    /// Decrypts the specified text.
+    /// </summary>
+    public static string Decrypt(
+        string ciphertext)
+    {
+        InternalEncryptionService service = new InternalEncryptionService();
+
+        return service.Decrypt(ciphertext);
+    }
+}
 ```
 
 Building the solution and running all of the unit tests again confirms that all
@@ -648,33 +648,33 @@ before implementing the necessary work to make it pass). For example, add the
 following unit test to InternalEncryptionServiceTest.cs:
 
 ```C#
-        /// <summary>
-        /// Validates that an exception is thrown when the input string is null.
-        /// </summary>
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void EncryptWithInvalidParameter001()
-        {
-            const string plaintext = null;
+/// <summary>
+/// Validates that an exception is thrown when the input string is null.
+/// </summary>
+[TestMethod()]
+[ExpectedException(typeof(ArgumentNullException))]
+public void EncryptWithInvalidParameter001()
+{
+    const string plaintext = null;
 
-            InternalEncryptionService service = new InternalEncryptionService();
+    InternalEncryptionService service = new InternalEncryptionService();
 
-            const string expectedExceptionMessage =
-                "Value cannot be null."
-                + "\r\nParameter name: plaintext";
+    const string expectedExceptionMessage =
+        "Value cannot be null."
+        + "\r\nParameter name: plaintext";
 
-            try
-            {
-                // Prevent code analysis warning (CA1804) by not assigning
-                // the return value to a local variable.
-                service.Encrypt(plaintext);
-            }
-            catch (ArgumentNullException ex)
-            {
-                Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                throw;
-            }
-        }
+    try
+    {
+        // Prevent code analysis warning (CA1804) by not assigning
+        // the return value to a local variable.
+        service.Encrypt(plaintext);
+    }
+    catch (ArgumentNullException ex)
+    {
+        Assert.AreEqual(expectedExceptionMessage, ex.Message);
+        throw;
+    }
+}
 ```
 
 If you run this new unit test, you will find that it fails because, even though
@@ -687,33 +687,33 @@ expected (since it shouldn't take more than 30 seconds or so to copy/paste and
 make the necessary changes):
 
 ```C#
-        /// <summary>
-        /// Validates that an exception is thrown when the input string is empty.
-        /// </summary>
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void EncryptWithInvalidParameter002()
-        {
-            string plaintext = string.Empty;
+/// <summary>
+/// Validates that an exception is thrown when the input string is empty.
+/// </summary>
+[TestMethod()]
+[ExpectedException(typeof(ArgumentException))]
+public void EncryptWithInvalidParameter002()
+{
+    string plaintext = string.Empty;
 
-            InternalEncryptionService service = new InternalEncryptionService();
+    InternalEncryptionService service = new InternalEncryptionService();
 
-            const string expectedExceptionMessage =
-                "Value cannot be empty."
-                + "\r\nParameter name: plaintext";
+    const string expectedExceptionMessage =
+        "Value cannot be empty."
+        + "\r\nParameter name: plaintext";
 
-            try
-            {
-                // Prevent code analysis warning (CA1804) by not assigning
-                // the return value to a local variable.
-                service.Encrypt(plaintext);
-            }
-            catch (ArgumentException ex)
-            {
-                Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                throw;
-            }
-        }
+    try
+    {
+        // Prevent code analysis warning (CA1804) by not assigning
+        // the return value to a local variable.
+        service.Encrypt(plaintext);
+    }
+    catch (ArgumentException ex)
+    {
+        Assert.AreEqual(expectedExceptionMessage, ex.Message);
+        throw;
+    }
+}
 ```
 
 What's interesting at this point is that while the
@@ -736,21 +736,21 @@ Assuming we agree with this expected behavior for encrypting an empty string
 **EncryptWithInvalidParameter002** test with a different test:
 
 ```C#
-        /// <summary>
-        /// Validates that an empty string is encrypted successfully.
-        /// </summary>
-        [TestMethod]
-        public void Encrypt002()
-        {
-            string plaintext = string.Empty;
+/// <summary>
+/// Validates that an empty string is encrypted successfully.
+/// </summary>
+[TestMethod]
+public void Encrypt002()
+{
+    string plaintext = string.Empty;
 
-            InternalEncryptionService service = new InternalEncryptionService();
+    InternalEncryptionService service = new InternalEncryptionService();
 
-            string ciphertext = service.Encrypt(plaintext);
+    string ciphertext = service.Encrypt(plaintext);
 
-            Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
-            Assert.AreNotEqual<string>(plaintext, ciphertext);
-        }
+    Assert.IsFalse(string.IsNullOrEmpty(ciphertext));
+    Assert.AreNotEqual<string>(plaintext, ciphertext);
+}
 ```
 
 Even though this test might not appear to add any value (since it passes without

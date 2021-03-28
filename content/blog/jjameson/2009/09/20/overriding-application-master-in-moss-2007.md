@@ -228,17 +228,17 @@ Simply comment out the default PageHandlerFactory and add the custom
 ApplicationPageHandlerFactory:
 
 ```XML
-    <httpHandlers>
-      <!--
-      <add verb="*" path="*.aspx"
-        type="System.Web.UI.PageHandlerFactory, System.Web,
-          Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-      -->
-      <add verb="*" path="*.aspx"
-        type="Fabrikam.Project1.PublishingLayouts.Web.UI.ApplicationPageHandlerFactory,
-          Fabrikam.Project1.PublishingLayouts,
-          Version=1.0.0.0, Culture=neutral, PublicKeyToken=d006e8e37357742f" />
-    </httpHandlers>
+<httpHandlers>
+  <!--
+  <add verb="*" path="*.aspx"
+    type="System.Web.UI.PageHandlerFactory, System.Web,
+      Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  -->
+  <add verb="*" path="*.aspx"
+    type="Fabrikam.Project1.PublishingLayouts.Web.UI.ApplicationPageHandlerFactory,
+      Fabrikam.Project1.PublishingLayouts,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=d006e8e37357742f" />
+</httpHandlers>
 ```
 
 Be aware that if you use the approach shown here -- specifically, setting the

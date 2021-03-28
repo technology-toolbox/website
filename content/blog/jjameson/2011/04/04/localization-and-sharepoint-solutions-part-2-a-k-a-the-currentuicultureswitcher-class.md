@@ -178,76 +178,76 @@ seems to o convey the point of the class.
 Here's an example unit test that demonstrates how the class is expected to work:
 
 ```C#
-        /// <summary>
-        /// Basic test for CurrentUICultureSwitcher.
-        /// </summary>
-        [TestMethod()]
-        public void CurrentUICultureSwitcherTest001()
-        {
-            const int defaultCultureLcid = 1033;
-            const int newCultureLcid = 3082;
+/// <summary>
+/// Basic test for CurrentUICultureSwitcher.
+/// </summary>
+[TestMethod()]
+public void CurrentUICultureSwitcherTest001()
+{
+    const int defaultCultureLcid = 1033;
+    const int newCultureLcid = 3082;
 
-            Assert.AreEqual(
-                defaultCultureLcid,
-                CultureInfo.CurrentUICulture.LCID);
+    Assert.AreEqual(
+        defaultCultureLcid,
+        CultureInfo.CurrentUICulture.LCID);
 
-            CultureInfo newCulture = new CultureInfo(newCultureLcid);
+    CultureInfo newCulture = new CultureInfo(newCultureLcid);
 
-            using (new CurrentUICultureSwitcher(newCulture))
-            {
-                Assert.AreEqual(
-                    newCultureLcid,
-                    CultureInfo.CurrentUICulture.LCID);
-            }
+    using (new CurrentUICultureSwitcher(newCulture))
+    {
+        Assert.AreEqual(
+            newCultureLcid,
+            CultureInfo.CurrentUICulture.LCID);
+    }
 
-            Assert.AreEqual(
-                defaultCultureLcid,
-                CultureInfo.CurrentUICulture.LCID);
-        }
+    Assert.AreEqual(
+        defaultCultureLcid,
+        CultureInfo.CurrentUICulture.LCID);
+}
 ```
 
 Lastly, here's an excerpt from a custom "Announcements" feature that shows how
 the class is used to configure a localized SharePoint site:
 
 ```C#
-        /// <summary>
-        /// Creates and configures the "Announcements" site under the specified
-        /// Web.
-        /// </summary>
-        /// <param name="parentWeb">An
-        /// <see cref="Microsoft.SharePoint.SPWeb"/> object representing the
-        /// parent Web of the "Announcements" site. This can either be the
-        /// root Web ("/") or a language Web (e.g. "/es-ES").</param>
-        public static void Configure(
-            SPWeb parentWeb)
+/// <summary>
+/// Creates and configures the "Announcements" site under the specified
+/// Web.
+/// </summary>
+/// <param name="parentWeb">An
+/// <see cref="Microsoft.SharePoint.SPWeb"/> object representing the
+/// parent Web of the "Announcements" site. This can either be the
+/// root Web ("/") or a language Web (e.g. "/es-ES").</param>
+public static void Configure(
+    SPWeb parentWeb)
+{
+    if (parentWeb == null)
+    {
+        throw new ArgumentNullException("parentWeb");
+    }
+
+    Logger.LogDebug(
+        CultureInfo.CurrentCulture,
+        "Configuring Announcements site under parent Web ({0})...",
+        parentWeb.Url);
+
+    // Change CurrentUICulture to ensure the "Announcements" site is
+    // localized according to the language of the parent site.
+    using (new CurrentUICultureSwitcher(parentWeb.Locale))
+    {
+        using (SPWeb announcementsWeb = EnsureAnnouncementsWeb(
+            parentWeb))
         {
-            if (parentWeb == null)
-            {
-                throw new ArgumentNullException("parentWeb");
-            }
-
-            Logger.LogDebug(
-                CultureInfo.CurrentCulture,
-                "Configuring Announcements site under parent Web ({0})...",
-                parentWeb.Url);
-
-            // Change CurrentUICulture to ensure the "Announcements" site is
-            // localized according to the language of the parent site.
-            using (new CurrentUICultureSwitcher(parentWeb.Locale))
-            {
-                using (SPWeb announcementsWeb = EnsureAnnouncementsWeb(
-                    parentWeb))
-                {
-                    ConfigureAnnouncementsWeb(announcementsWeb);
-                }
-            }
-
-            Logger.LogInfo(
-                CultureInfo.CurrentCulture,
-                "Successfully configured Announcements site under parent"
-                    + " Web ({0}).",
-                parentWeb.Url);
+            ConfigureAnnouncementsWeb(announcementsWeb);
         }
+    }
+
+    Logger.LogInfo(
+        CultureInfo.CurrentCulture,
+        "Successfully configured Announcements site under parent"
+            + " Web ({0}).",
+        parentWeb.Url);
+}
 ```
 
 I hope you find the **CurrentUICultureSwitcher** class to be useful when

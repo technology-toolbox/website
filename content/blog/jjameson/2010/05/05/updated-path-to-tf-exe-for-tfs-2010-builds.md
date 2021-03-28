@@ -29,9 +29,9 @@ command-line utility to checkout the assembly version files and subsequently
 check them back in:
 
 ```XML
-  <PropertyGroup>
-    <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
-  </PropertyGroup>
+<PropertyGroup>
+  <TeamFoundationVersionControlTool>&quot;$(TeamBuildRefPath)\..\tf.exe&quot;</TeamFoundationVersionControlTool>
+</PropertyGroup>
 ```
 
 While this worked great on a TFS 2008 build server, the path to the TFS
@@ -41,7 +41,7 @@ To use the same technique on a TFS 2010 build server, specify the following
 instead:
 
 ```XML
-  <PropertyGroup>
-    <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
-  </PropertyGroup>
+<PropertyGroup>
+  <TeamFoundationVersionControlTool>&quot;$(VS100COMNTOOLS)..\IDE\tf.exe&quot;</TeamFoundationVersionControlTool>
+</PropertyGroup>
 ```

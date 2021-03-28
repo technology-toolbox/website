@@ -69,7 +69,7 @@ calling a static method, specifying nothing more than a string containing the
 message :
 
 ```C#
-    Logger.LogDebug("Successfully loaded search results into DataSet.");
+Logger.LogDebug("Successfully loaded search results into DataSet.");
 ```
 
 This example shows how the `Logger` class achieves the primary design goal. Note
@@ -80,29 +80,29 @@ Also note that the `Logger` class provides additional overloads to easily format
 log messages:
 
 ```C#
-    Logger.LogDebug(
-        CultureInfo.InvariantCulture,
-        "Successfully loaded embedded resource ({0})"
-            + " ({1:n0} bytes) from assembly ({2}).",
-        resourceName,
-        resourceContent.Length,
-        resourceAssembly.FullName);
+Logger.LogDebug(
+    CultureInfo.InvariantCulture,
+    "Successfully loaded embedded resource ({0})"
+        + " ({1:n0} bytes) from assembly ({2}).",
+    resourceName,
+    resourceContent.Length,
+    resourceAssembly.FullName);
 ```
 
 Note that the `Logger.LogDebug` method is simply a convenient alternative to the
 `Logger.Log` method:
 
 ```C#
-    /// <summary>
-    /// Logs an event to the trace listeners using the specified
-    /// event type and message.
-    /// </summary>
-    /// <param name="eventType">One of the System.Diagnostics.TraceEventType
-    /// values that specifies the type of event being logged.</param>
-    /// <param name="message">The message to log.</param>
-    public static void Log(
-        TraceEventType eventType,
-        string message)
+/// <summary>
+/// Logs an event to the trace listeners using the specified
+/// event type and message.
+/// </summary>
+/// <param name="eventType">One of the System.Diagnostics.TraceEventType
+/// values that specifies the type of event being logged.</param>
+/// <param name="message">The message to log.</param>
+public static void Log(
+    TraceEventType eventType,
+    string message)
 ```
 
 Other methods such as `LogInfo` and `LogError` provide similar overloads for
@@ -119,8 +119,8 @@ The `Logger` class declares a singleton `TraceSource` that is used to log all
 messages:
 
 ```C#
-    private static TraceSource defaultTraceSource =
-        new TraceSource("defaultTraceSource");
+private static TraceSource defaultTraceSource =
+    new TraceSource("defaultTraceSource");
 ```
 
 Various listeners can then be configured to output log messages. Each type of

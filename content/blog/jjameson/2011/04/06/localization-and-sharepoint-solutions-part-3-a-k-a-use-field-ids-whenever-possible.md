@@ -53,14 +53,14 @@ code accesses SharePoint objects in a "language-agnostic" manner. For example,
 consider the following code:
 
 ```
-    SPListItem oListItem = ...
+SPListItem oListItem = ...
 
-    oListItem["Title"] = "My Item";
-    ...
+oListItem["Title"] = "My Item";
+...
 ```
 
 ```C#
-    oListItem.Update();
+oListItem.Update();
 ```
 
 You might very well have code like this in your solution today and it has been
@@ -75,11 +75,11 @@ class that makes it easy to reference out-of-the-box fields regardless of the
 language of the SharePoint site containing the list item:
 
 ```C#
-    SPListItem oListItem = ...
+SPListItem oListItem = ...
 
-    oListItem[SPBuiltInFieldId.Title] = "My Item";
-    ...
-    oListItem.Update();
+oListItem[SPBuiltInFieldId.Title] = "My Item";
+...
+oListItem.Update();
 ```
 
 [Unfortunately, much of the sample code on MSDN does not show the use of **SPBuiltInFieldId** when referencing "built-in" fields. For example, just this morning I pulled the first code sample above from [http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem(v=office.12).aspx](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.splistitem%28v=office.12%29.aspx).
@@ -91,21 +91,21 @@ sites with SharePoint, I work a lot with Publishing sites. Consequently, some
 time ago I wrote the following code:
 
 ```C#
-            ImageFieldValue pageImage =
-                (ImageFieldValue)page.ListItem["Page Image"];
+ImageFieldValue pageImage =
+    (ImageFieldValue)page.ListItem["Page Image"];
 
-            if (pageImage == null)
-            {
-                pageImage = new ImageFieldValue();
-            }
+if (pageImage == null)
+{
+    pageImage = new ImageFieldValue();
+}
 
-            if (string.IsNullOrEmpty(pageImage.ImageUrl) == true)
-            {
-                pageImage.ImageUrl = defaultImageUrl;
-                page.ListItem["Page Image"] = pageImage;
-                page.Update();
+if (string.IsNullOrEmpty(pageImage.ImageUrl) == true)
+{
+    pageImage.ImageUrl = defaultImageUrl;
+    page.ListItem["Page Image"] = pageImage;
+    page.Update();
 
-                ...
+    ...
 ```
 
 This code subseqeuntly broke when running against localized SharePoint sites.
@@ -115,20 +115,20 @@ infrastructure provides the
 class for identifying fields like "Page Image":
 
 ```C#
-            ImageFieldValue pageImage =
-                (ImageFieldValue)page.ListItem[FieldId.PublishingPageImage];
+ImageFieldValue pageImage =
+    (ImageFieldValue)page.ListItem[FieldId.PublishingPageImage];
 
-            if (pageImage == null)
-            {
-                pageImage = new ImageFieldValue();
-            }
+if (pageImage == null)
+{
+    pageImage = new ImageFieldValue();
+}
 
-            if (string.IsNullOrEmpty(pageImage.ImageUrl) == true)
-            {
-                pageImage.ImageUrl = defaultImageUrl;
-                page.ListItem[FieldId.PublishingPageImage] = pageImage;
-                page.Update();
-                ...
+if (string.IsNullOrEmpty(pageImage.ImageUrl) == true)
+{
+    pageImage.ImageUrl = defaultImageUrl;
+    page.ListItem[FieldId.PublishingPageImage] = pageImage;
+    page.Update();
+    ...
 ```
 
 [Personally, I would have preferred this to be `PublishingFieldId.PageImage`

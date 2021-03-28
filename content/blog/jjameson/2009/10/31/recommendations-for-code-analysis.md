@@ -42,11 +42,11 @@ For example, you can say goodbye to using the overload of string.Format() that
 doesn't specify a CultureInfo:
 
 ```C#
-            string foo = "here";
+string foo = "here";
 
-            string logMessage = string.Format(
-                "Imagine something interesting {0}.",
-                foo);
+string logMessage = string.Format(
+    "Imagine something interesting {0}.",
+    foo);
 ```
 
 Attempting this will now result in a broken build:
@@ -68,12 +68,12 @@ Attempting this will now result in a broken build:
 To avoid the CA1305 error, you will need to use something like this instead:
 
 ```C#
-            string foo = "here";
+string foo = "here";
 
-            string logMessage = string.Format(
-                CultureInfo.InvariantCulture,
-                "Imagine something interesting {0}.",
-                foo);
+string logMessage = string.Format(
+    CultureInfo.InvariantCulture,
+    "Imagine something interesting {0}.",
+    foo);
 ```
 
 You will also need to enable signing of all assemblies with a strong name key,
@@ -123,10 +123,10 @@ to program in C on Unix, the compiler wouldn't complain when I wrote something
 like this (even though this is obviously very wrong):
 
 ```
-            if (i = 1)
-            {
-                ...
-            }
+if (i = 1)
+{
+    ...
+}
 ```
 
 I was relieved when I switched to C++ and these kinds of bugs were a thing of

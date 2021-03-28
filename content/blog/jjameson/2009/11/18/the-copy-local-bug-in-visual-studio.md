@@ -52,11 +52,11 @@ Following these two simple steps explicitly adds `<Private>True</Private>` to
 the project file, as shown in the following example:
 
 ```XML
-    <ProjectReference Include="..\CoreServices\CoreServices.csproj">
-      <Project>{01C58D27-9818-45D6-A0B6-8EF765CA9397}</Project>
-      <Name>CoreServices %28CoreServices\CoreServices%29</Name>
-      <Private>True</Private>
-    </ProjectReference>
+<ProjectReference Include="..\CoreServices\CoreServices.csproj">
+  <Project>{01C58D27-9818-45D6-A0B6-8EF765CA9397}</Project>
+  <Name>CoreServices %28CoreServices\CoreServices%29</Name>
+  <Private>True</Private>
+</ProjectReference>
 ```
 
 When you add a referenced assembly in Visual Studio using a project reference,

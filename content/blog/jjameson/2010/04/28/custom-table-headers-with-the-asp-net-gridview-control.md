@@ -243,30 +243,30 @@ little bit of code in the
 event:
 
 ```C#
-        protected void ScorecardDetailView_RowCreated(
-            object sender,
-            GridViewRowEventArgs e)
-        {
-            if (e == null)
-            {
-                throw new ArgumentNullException("e");
-            }
+protected void ScorecardDetailView_RowCreated(
+    object sender,
+    GridViewRowEventArgs e)
+{
+    if (e == null)
+    {
+        throw new ArgumentNullException("e");
+    }
 
-            if (e.Row.RowType == DataControlRowType.Header)
-            {
-                e.Row.Cells[e.Row.Cells.Count - 1].Text =
-                    "<img src='/_layouts/images/kpidefault-2.gif'"
-                        + " alt='Does Not Meet' />";
+    if (e.Row.RowType == DataControlRowType.Header)
+    {
+        e.Row.Cells[e.Row.Cells.Count - 1].Text =
+            "<img src='/_layouts/images/kpidefault-2.gif'"
+                + " alt='Does Not Meet' />";
 
-                e.Row.Cells[e.Row.Cells.Count - 2].Text =
-                    "<img src='/_layouts/images/kpidefault-1.gif'"
-                        + " alt='Meets' />";
+        e.Row.Cells[e.Row.Cells.Count - 2].Text =
+            "<img src='/_layouts/images/kpidefault-1.gif'"
+                + " alt='Meets' />";
 
-                e.Row.Cells[e.Row.Cells.Count - 3].Text =
-                    "<img src='/_layouts/images/kpidefault-0.gif'"
-                        + " alt='Exceeds' />";
-            }
-        }
+        e.Row.Cells[e.Row.Cells.Count - 3].Text =
+            "<img src='/_layouts/images/kpidefault-0.gif'"
+                + " alt='Exceeds' />";
+    }
+}
 ```
 
 {{< div-block "note" >}}
@@ -298,52 +298,52 @@ Now let's add a method to insert another row into the table rendered by the
 GridView control:
 
 ```C#
-        private static void AddThresholdsHeaderRow(
-            GridView scorecardDetailView)
+private static void AddThresholdsHeaderRow(
+    GridView scorecardDetailView)
+{
+    Debug.Assert(scorecardDetailView != null);
+
+    if (scorecardDetailView.Controls.Count < 1)
+    {
+        // No data to display in the grid (i.e. the user has not
+        // selected a KPI in the summary table and therefore the
+        // detail table has not yet been bound to any data)
+        return;
+    }
+
+    Debug.Assert(scorecardDetailView.Controls.Count == 1);
+    Table table = (Table)scorecardDetailView.Controls[0];
+    TableRow headerRow = table.Rows[0];
+
+    using (GridViewRow additionalHeaderRow = new GridViewRow(
+        -1,
+        -1,
+        DataControlRowType.Header,
+        DataControlRowState.Normal))
+    {
+
+        int numberOfHeaderCellsToMove = headerRow.Cells.Count - 3;
+
+        for (int i = 0; i < numberOfHeaderCellsToMove; i++)
         {
-            Debug.Assert(scorecardDetailView != null);
-
-            if (scorecardDetailView.Controls.Count < 1)
-            {
-                // No data to display in the grid (i.e. the user has not
-                // selected a KPI in the summary table and therefore the
-                // detail table has not yet been bound to any data)
-                return;
-            }
-
-            Debug.Assert(scorecardDetailView.Controls.Count == 1);
-            Table table = (Table)scorecardDetailView.Controls[0];
-            TableRow headerRow = table.Rows[0];
-
-            using (GridViewRow additionalHeaderRow = new GridViewRow(
-                -1,
-                -1,
-                DataControlRowType.Header,
-                DataControlRowState.Normal))
-            {
-
-                int numberOfHeaderCellsToMove = headerRow.Cells.Count - 3;
-
-                for (int i = 0; i < numberOfHeaderCellsToMove; i++)
-                {
-                    TableCell headerCell = headerRow.Cells[0];
-                    headerRow.Cells.RemoveAt(0);
-                    additionalHeaderRow.Cells.Add(headerCell);
-                    headerCell.RowSpan = 2;
-                }
-
-                using (TableHeaderCell newHeaderCell = new TableHeaderCell())
-                {
-                    newHeaderCell.ColumnSpan = 3;
-                    newHeaderCell.Text = "Thresholds";
-                    additionalHeaderRow.Cells.Add(newHeaderCell);
-                }
-
-                table.Controls.AddAt(
-                    0,
-                    additionalHeaderRow);
-            }
+            TableCell headerCell = headerRow.Cells[0];
+            headerRow.Cells.RemoveAt(0);
+            additionalHeaderRow.Cells.Add(headerCell);
+            headerCell.RowSpan = 2;
         }
+
+        using (TableHeaderCell newHeaderCell = new TableHeaderCell())
+        {
+            newHeaderCell.ColumnSpan = 3;
+            newHeaderCell.Text = "Thresholds";
+            additionalHeaderRow.Cells.Add(newHeaderCell);
+        }
+
+        table.Controls.AddAt(
+            0,
+            additionalHeaderRow);
+    }
+}
 ```
 
 Of course, we obviously need to call this method, so let's modify the
@@ -351,16 +351,16 @@ Of course, we obviously need to call this method, so let's modify the
 binding the GridView control:
 
 ```C#
-        private void UpdateScorecardDetailView()
-        {
-            using (DataTable detailTable = GetScorecardDetailTable())
-            {
-                ScorecardDetailView.DataSource = detailTable;
-                ScorecardDetailView.DataBind();
-            }
+private void UpdateScorecardDetailView()
+{
+    using (DataTable detailTable = GetScorecardDetailTable())
+    {
+        ScorecardDetailView.DataSource = detailTable;
+        ScorecardDetailView.DataBind();
+    }
 
-            AddThresholdsHeaderRow(ScorecardDetailView);
-        }
+    AddThresholdsHeaderRow(ScorecardDetailView);
+}
 ```
 
 Running the Web application at this point shows the **Thresholds** header above
@@ -374,41 +374,41 @@ Looking at the HTML source, we can see the extra table row has been inserted,
 and the `rowspan` and `colspan` attributes are being rendered as expected.
 
 ```HTML
-    <table style="border-collapse: collapse"
-        id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
-        cellspacing="0">
-        <tbody>
-            <tr>
-                <th rowspan="2" scope="col">
-                    Site
-                </th>
-                <th rowspan="2" scope="col">
-                    2009 Q3
-                </th>
-                <th rowspan="2" scope="col">
-                    2009 Q4
-                </th>
-                <th rowspan="2" scope="col">
-                    2010 Q1
-                </th>
-                <th colspan="3">
-                    Thresholds
-                </th>
-            </tr>
-            <tr>
-                <th scope="col">
-                    <img alt="Exceeds" src="/_layouts/images/kpidefault-0.gif">
-                </th>
-                <th scope="col">
-                    <img alt="Meets" src="/_layouts/images/kpidefault-1.gif">
-                </th>
-                <th scope="col">
-                    <img alt="Does Not Meet" src="/_layouts/images/kpidefault-2.gif">
-                </th>
-            </tr>
-            ...
-        </tbody>
-    </table>
+<table style="border-collapse: collapse"
+    id="KpiScorecard1_ScorecardDetailView" border="1" rules="all"
+    cellspacing="0">
+    <tbody>
+        <tr>
+            <th rowspan="2" scope="col">
+                Site
+            </th>
+            <th rowspan="2" scope="col">
+                2009 Q3
+            </th>
+            <th rowspan="2" scope="col">
+                2009 Q4
+            </th>
+            <th rowspan="2" scope="col">
+                2010 Q1
+            </th>
+            <th colspan="3">
+                Thresholds
+            </th>
+        </tr>
+        <tr>
+            <th scope="col">
+                <img alt="Exceeds" src="/_layouts/images/kpidefault-0.gif">
+            </th>
+            <th scope="col">
+                <img alt="Meets" src="/_layouts/images/kpidefault-1.gif">
+            </th>
+            <th scope="col">
+                <img alt="Does Not Meet" src="/_layouts/images/kpidefault-2.gif">
+            </th>
+        </tr>
+        ...
+    </tbody>
+</table>
 ```
 
 At this point, it seems like we are done, right? At least in regards to adding a
@@ -440,27 +440,27 @@ regardless of whether we are binding the GridView to a data source or rendering
 it from view state):
 
 ```C#
-        protected void Page_Load(
-            object sender,
-            EventArgs e)
-        {
-            this.Page.PreRenderComplete += new EventHandler(Page_PreRenderComplete);
+protected void Page_Load(
+    object sender,
+    EventArgs e)
+{
+    this.Page.PreRenderComplete += new EventHandler(Page_PreRenderComplete);
 
-            if (this.Page.IsPostBack == true)
-            {
-                // Render the KPI scorecard from view state
-                return;
-            }
+    if (this.Page.IsPostBack == true)
+    {
+        // Render the KPI scorecard from view state
+        return;
+    }
 
-            UpdateScorecardDetailView();
-        }
+    UpdateScorecardDetailView();
+}
 
-        void Page_PreRenderComplete(
-            object sender,
-            EventArgs e)
-        {
-            AddThresholdsHeaderRow(ScorecardDetailView);
-        }
+void Page_PreRenderComplete(
+    object sender,
+    EventArgs e)
+{
+    AddThresholdsHeaderRow(ScorecardDetailView);
+}
 ```
 
 Upon first inspection, this appeared to work because the **Thresholds** header
@@ -485,27 +485,27 @@ PreRenderComplete phase of the page, let's instead call the
 **AddThresholdsHeaderRow** method in the SaveStateComplete phase:
 
 ```C#
-        protected void Page_Load(
-                    object sender,
-                    EventArgs e)
-        {
-            this.Page.SaveStateComplete += new EventHandler(Page_SaveStateComplete);
-
-            if (this.Page.IsPostBack == true)
-            {
-                // Render the KPI scorecard from view state
-                return;
-            }
-
-            UpdateScorecardDetailView();
-        }
-
-        void Page_SaveStateComplete(
+protected void Page_Load(
             object sender,
             EventArgs e)
-        {
-            AddThresholdsHeaderRow(ScorecardDetailView);
-        }
+{
+    this.Page.SaveStateComplete += new EventHandler(Page_SaveStateComplete);
+
+    if (this.Page.IsPostBack == true)
+    {
+        // Render the KPI scorecard from view state
+        return;
+    }
+
+    UpdateScorecardDetailView();
+}
+
+void Page_SaveStateComplete(
+    object sender,
+    EventArgs e)
+{
+    AddThresholdsHeaderRow(ScorecardDetailView);
+}
 ```
 
 Here's the short summary from MSDN for the

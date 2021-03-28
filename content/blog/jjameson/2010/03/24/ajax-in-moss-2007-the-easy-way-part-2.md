@@ -141,13 +141,13 @@ alternative is to instead use a little bit of code in the
 necessary:
 
 ```C#
-            if (ScriptManager.GetCurrent(this.Page) == null)
-            {
-                ScriptManager scriptHandler = new ScriptManager();
-                scriptHandler.ID = "scriptHandler";
-                scriptHandler.EnablePartialRendering = true;
-                this.Controls.Add(scriptHandler);
-            }
+if (ScriptManager.GetCurrent(this.Page) == null)
+{
+    ScriptManager scriptHandler = new ScriptManager();
+    scriptHandler.ID = "scriptHandler";
+    scriptHandler.EnablePartialRendering = true;
+    this.Controls.Add(scriptHandler);
+}
 ```
 
 Mike's post also describes adding the following startup script in order to

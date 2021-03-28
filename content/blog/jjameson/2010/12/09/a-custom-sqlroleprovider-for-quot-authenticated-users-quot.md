@@ -58,19 +58,19 @@ therefore it requires very little code to implement the custom role provider.
 I started by overriding the **RoleExists** method:
 
 ```C#
-        public override bool RoleExists(
-            string roleName)
-        {
-            if (string.Compare(
-                roleName,
-                authenticatedUsersRoleName,
-                StringComparison.OrdinalIgnoreCase) == 0)
-            {
-                return true;
-            }
+public override bool RoleExists(
+    string roleName)
+{
+    if (string.Compare(
+        roleName,
+        authenticatedUsersRoleName,
+        StringComparison.OrdinalIgnoreCase) == 0)
+    {
+        return true;
+    }
 
-            return base.RoleExists(roleName);
-        }
+    return base.RoleExists(roleName);
+}
 ```
 
 As you can see, this simply checks if the "Authenticated Users" role was
@@ -80,20 +80,20 @@ in the underlying database.
 Next, I proceeded to override the **IsUserInRole** method:
 
 ```C#
-        public override bool IsUserInRole(
-            string username,
-            string roleName)
-        {
-            if (string.Compare(
-                roleName,
-                authenticatedUsersRoleName,
-                StringComparison.OrdinalIgnoreCase) == 0)
-            {
-                return true; // assume the specified user is valid
-            }
+public override bool IsUserInRole(
+    string username,
+    string roleName)
+{
+    if (string.Compare(
+        roleName,
+        authenticatedUsersRoleName,
+        StringComparison.OrdinalIgnoreCase) == 0)
+    {
+        return true; // assume the specified user is valid
+    }
 
-            return base.IsUserInRole(username, roleName);
-        }
+    return base.IsUserInRole(username, roleName);
+}
 ```
 
 Notice the comment that I added to the `return` statement. At first, I thought
@@ -108,15 +108,15 @@ I then moved on to something slightly more challenging - implementing the
 **GetRolesForUser** method:
 
 ```C#
-        public override string[] GetRolesForUser(
-            string username)
-        {
-            string[] sqlRoles = base.GetRolesForUser(username);
+public override string[] GetRolesForUser(
+    string username)
+{
+    string[] sqlRoles = base.GetRolesForUser(username);
 
-            string[] roles = AddAuthenticatedUsersRole(sqlRoles);
+    string[] roles = AddAuthenticatedUsersRole(sqlRoles);
 
-            return roles;
-        }
+    return roles;
+}
 ```
 
 As you can see, I'm simply augmenting the list of roles specified for the user
@@ -132,30 +132,30 @@ the helper method I check to see if the role is already specified before
 prepending it to the list:
 
 ```C#
-        private static string[] AddAuthenticatedUsersRole(
-            string[] sqlRoles)
+private static string[] AddAuthenticatedUsersRole(
+    string[] sqlRoles)
+{
+    Debug.Assert(sqlRoles != null);
+
+    foreach (string roleName in sqlRoles)
+    {
+        if (string.Compare(
+            roleName,
+            authenticatedUsersRoleName,
+            StringComparison.OrdinalIgnoreCase) == 0)
         {
-            Debug.Assert(sqlRoles != null);
-
-            foreach (string roleName in sqlRoles)
-            {
-                if (string.Compare(
-                    roleName,
-                    authenticatedUsersRoleName,
-                    StringComparison.OrdinalIgnoreCase) == 0)
-                {
-                    // The "Authenticated Users" role hasn't been removed from
-                    // the database
-                    return sqlRoles;
-                }
-            }
-
-            string[] roles = new string[sqlRoles.Length + 1];
-            roles[0] = authenticatedUsersRoleName;
-
-            sqlRoles.CopyTo(roles, 1);
-            return roles;
+            // The "Authenticated Users" role hasn't been removed from
+            // the database
+            return sqlRoles;
         }
+    }
+
+    string[] roles = new string[sqlRoles.Length + 1];
+    roles[0] = authenticatedUsersRoleName;
+
+    sqlRoles.CopyTo(roles, 1);
+    return roles;
+}
 ```
 
 After overriding a few more methods (e.g. **DeleteRole**), I then swapped out

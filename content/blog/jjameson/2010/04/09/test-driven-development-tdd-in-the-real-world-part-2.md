@@ -81,35 +81,35 @@ null or empty string, respectively.
 From this foundation, let's start with the following unit tests:
 
 ```C#
-        /// <summary>
-        /// Validates that a null input string returns null.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate001()
-        {
-            const string input = null;
-            const int maxLength = 80;
-            const string expected = null;
+/// <summary>
+/// Validates that a null input string returns null.
+/// </summary>
+[TestMethod()]
+public void Truncate001()
+{
+    const string input = null;
+    const int maxLength = 80;
+    const string expected = null;
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 
-        /// <summary>
-        /// Validates that an empty input string returns an empty string.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate002()
-        {
-            string input = string.Empty;
-            const int maxLength = 80;
-            string expected = string.Empty;
+/// <summary>
+/// Validates that an empty input string returns an empty string.
+/// </summary>
+[TestMethod()]
+public void Truncate002()
+{
+    string input = string.Empty;
+    const int maxLength = 80;
+    string expected = string.Empty;
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 You might have written the first unit test slightly different -- perhaps using
@@ -159,30 +159,30 @@ a minimum of 4.
 From this we can write another unit test right away:
 
 ```C#
-        /// <summary>
-        /// Validates that an exception is thrown when maxLength is less than 4.
-        /// </summary>
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TruncateInvalidParameter001()
-        {
-            const string expectedExceptionMessage =
-                "A string cannot be truncated to less than 4 characters."
-                + "\r\nParameter name: maxLength";
+/// <summary>
+/// Validates that an exception is thrown when maxLength is less than 4.
+/// </summary>
+[TestMethod()]
+[ExpectedException(typeof(ArgumentException))]
+public void TruncateInvalidParameter001()
+{
+    const string expectedExceptionMessage =
+        "A string cannot be truncated to less than 4 characters."
+        + "\r\nParameter name: maxLength";
 
-            const string input = null;
-            const int maxLength = 3;
+    const string input = null;
+    const int maxLength = 3;
 
-            try
-            {
-                string actual = StringHelper.Truncate(input, maxLength);
-            }
-            catch (ArgumentException ex)
-            {
-                Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                throw;
-            }
-        }
+    try
+    {
+        string actual = StringHelper.Truncate(input, maxLength);
+    }
+    catch (ArgumentException ex)
+    {
+        Assert.AreEqual(expectedExceptionMessage, ex.Message);
+        throw;
+    }
+}
 ```
 
 If this unit test doesn't make sense, take a look at my previous post on
@@ -229,15 +229,15 @@ To resolve these errors, let's add a little more code to the **Truncate**
 method:
 
 ```C#
-        public static string Truncate(
-            string input,
-            int maxLength)
-        {
-            Debug.Assert(input != null);
-            Debug.Assert(maxLength > 0);
+public static string Truncate(
+    string input,
+    int maxLength)
+{
+    Debug.Assert(input != null);
+    Debug.Assert(maxLength > 0);
 
-            return "TODO:";
-        }
+    return "TODO:";
+}
 ```
 
 Note that for `public` methods, I really don't like to see `Debug.Assert` being
@@ -260,32 +260,32 @@ To resolve this error, we need to tweak the unit test a little bit (to remove
 the variable used to store the truncated string):
 
 ```C#
-        /// <summary>
-        /// Validates that an exception is thrown when maxLength is less than 4.
-        /// </summary>
-        [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void TruncateInvalidParameter001()
-        {
-            const string expectedExceptionMessage =
-                "A string cannot be truncated to less than 4 characters."
-                + "\r\nParameter name: maxLength";
+/// <summary>
+/// Validates that an exception is thrown when maxLength is less than 4.
+/// </summary>
+[TestMethod()]
+[ExpectedException(typeof(ArgumentException))]
+public void TruncateInvalidParameter001()
+{
+    const string expectedExceptionMessage =
+        "A string cannot be truncated to less than 4 characters."
+        + "\r\nParameter name: maxLength";
 
-            const string input = null;
-            const int maxLength = 3;
+    const string input = null;
+    const int maxLength = 3;
 
-            try
-            {
-                // Prevent code analysis warning (CA1804) by not assigning
-                // the return value to a local variable.
-                StringHelper.Truncate(input, maxLength);
-            }
-            catch (ArgumentException ex)
-            {
-                Assert.AreEqual(expectedExceptionMessage, ex.Message);
-                throw;
-            }
-        }
+    try
+    {
+        // Prevent code analysis warning (CA1804) by not assigning
+        // the return value to a local variable.
+        StringHelper.Truncate(input, maxLength);
+    }
+    catch (ArgumentException ex)
+    {
+        Assert.AreEqual(expectedExceptionMessage, ex.Message);
+        throw;
+    }
+}
 ```
 
 At this point, the solution builds without any errors and we can advance to TDD
@@ -300,24 +300,24 @@ Let's replace the debug assertions with code that actually does what we need it
 to do:
 
 ```C#
-        public static string Truncate(
-            string input,
-            int maxLength)
-        {
-            if (maxLength < 4)
-            {
-                throw new ArgumentException(
-                    "A string cannot be truncated to less than 4 characters.",
-                    "maxLength");
-            }
+public static string Truncate(
+    string input,
+    int maxLength)
+{
+    if (maxLength < 4)
+    {
+        throw new ArgumentException(
+            "A string cannot be truncated to less than 4 characters.",
+            "maxLength");
+    }
 
-            if (string.IsNullOrEmpty(input))
-            {
-                return input;
-            }
+    if (string.IsNullOrEmpty(input))
+    {
+        return input;
+    }
 
-            return "TODO:";
-        }
+    return "TODO:";
+}
 ```
 
 Running the unit tests again, we find that all of the unit tests pass. Woohoo!
@@ -329,21 +329,21 @@ Let's add another unit test by copying and pasting **Truncate001** and modifying
 it accordingly:
 
 ```C#
-        /// <summary>
-        /// Validates that an input string with a space is truncated as
-        /// expected.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate003()
-        {
-            const string input = "foo bar";
-            const int maxLength = 6;
-            const string expected = "foo...";
+/// <summary>
+/// Validates that an input string with a space is truncated as
+/// expected.
+/// </summary>
+[TestMethod()]
+public void Truncate003()
+{
+    const string input = "foo bar";
+    const int maxLength = 6;
+    const string expected = "foo...";
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 Running the tests confirms that **Truncate003** fails as expected (since at this
@@ -352,28 +352,28 @@ a little bit of code to find the last space in the input string and truncate
 accordingly:
 
 ```C#
-        public static string Truncate(
-            string input,
-            int maxLength)
-        {
-            if (maxLength < 4)
-            {
-                throw new ArgumentException(
-                    "A string cannot be truncated to less than 4 characters.",
-                    "maxLength");
-            }
+public static string Truncate(
+    string input,
+    int maxLength)
+{
+    if (maxLength < 4)
+    {
+        throw new ArgumentException(
+            "A string cannot be truncated to less than 4 characters.",
+            "maxLength");
+    }
 
-            if (string.IsNullOrEmpty(input))
-            {
-                return input;
-            }
+    if (string.IsNullOrEmpty(input))
+    {
+        return input;
+    }
 
-            int index = input.LastIndexOf(' ', maxLength - 3);
+    int index = input.LastIndexOf(' ', maxLength - 3);
 
-            string truncatedText = input.Substring(0, index) + "...";
+    string truncatedText = input.Substring(0, index) + "...";
 
-            return truncatedText;
-        }
+    return truncatedText;
+}
 ```
 
 Running the unit tests shows that we are all "green" at this point. Excellent,
@@ -388,21 +388,21 @@ input string doesn't contain any spaces.
 Let's add another test case to see what happens in this scenario:
 
 ```C#
-        /// <summary>
-        /// Validates that an input string without a space is truncated as
-        /// expected.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate004()
-        {
-            const string input = "foobar";
-            const int maxLength = 5;
-            const string expected = "fo...";
+/// <summary>
+/// Validates that an input string without a space is truncated as
+/// expected.
+/// </summary>
+[TestMethod()]
+public void Truncate004()
+{
+    const string input = "foobar";
+    const int maxLength = 5;
+    const string expected = "fo...";
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 Sure enough, this unit test fails -- and not in a good way (meaning our call to
@@ -413,33 +413,33 @@ Let's add a check inside the **Truncate** method to handle the scenario where we
 fail to find a space in the input string:
 
 ```C#
-        public static string Truncate(
-            string input,
-            int maxLength)
-        {
-            if (maxLength < 4)
-            {
-                throw new ArgumentException(
-                    "A string cannot be truncated to less than 4 characters.",
-                    "maxLength");
-            }
+public static string Truncate(
+    string input,
+    int maxLength)
+{
+    if (maxLength < 4)
+    {
+        throw new ArgumentException(
+            "A string cannot be truncated to less than 4 characters.",
+            "maxLength");
+    }
 
-            if (string.IsNullOrEmpty(input))
-            {
-                return input;
-            }
+    if (string.IsNullOrEmpty(input))
+    {
+        return input;
+    }
 
-            int index = input.LastIndexOf(' ', maxLength - 3);
+    int index = input.LastIndexOf(' ', maxLength - 3);
 
-            if (index == -1)
-            {
-                index = maxLength - 3;
-            }
+    if (index == -1)
+    {
+        index = maxLength - 3;
+    }
 
-            string truncatedText = input.Substring(0, index) + "...";
+    string truncatedText = input.Substring(0, index) + "...";
 
-            return truncatedText;
-        }
+    return truncatedText;
+}
 ```
 
 Now all of the unit tests pass, so we're done, right?
@@ -449,21 +449,21 @@ Hold on a minute...
 Let's test the boundaries a little by adding yet another unit test:
 
 ```C#
-        /// <summary>
-        /// Validates that the input string is not truncated when maxLength is
-        /// sufficiently large.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate005()
-        {
-            const string input = "The quick brown fox jumped over the lazy dog.";
-            int maxLength = input.Length;
-            const string expected = input;
+/// <summary>
+/// Validates that the input string is not truncated when maxLength is
+/// sufficiently large.
+/// </summary>
+[TestMethod()]
+public void Truncate005()
+{
+    const string input = "The quick brown fox jumped over the lazy dog.";
+    int maxLength = input.Length;
+    const string expected = input;
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 Sure enough, this new test fails, because the string is truncated and the
@@ -473,37 +473,37 @@ the entire input string.
 Consequently, we need to add a little more code to the **Truncate** method:
 
 ```C#
-        public static string Truncate(
-            string input,
-            int maxLength)
-        {
-            if (maxLength < 4)
-            {
-                throw new ArgumentException(
-                    "A string cannot be truncated to less than 4 characters.",
-                    "maxLength");
-            }
+public static string Truncate(
+    string input,
+    int maxLength)
+{
+    if (maxLength < 4)
+    {
+        throw new ArgumentException(
+            "A string cannot be truncated to less than 4 characters.",
+            "maxLength");
+    }
 
-            if (string.IsNullOrEmpty(input))
-            {
-                return input;
-            }
-            else if (input.Length <= maxLength)
-            {
-                return input;
-            }
+    if (string.IsNullOrEmpty(input))
+    {
+        return input;
+    }
+    else if (input.Length <= maxLength)
+    {
+        return input;
+    }
 
-            int index = input.LastIndexOf(' ', maxLength - 3);
+    int index = input.LastIndexOf(' ', maxLength - 3);
 
-            if (index == -1)
-            {
-                index = maxLength - 3;
-            }
+    if (index == -1)
+    {
+        index = maxLength - 3;
+    }
 
-            string truncatedText = input.Substring(0, index) + "...";
+    string truncatedText = input.Substring(0, index) + "...";
 
-            return truncatedText;
-        }
+    return truncatedText;
+}
 ```
 
 At this point, we could very well call the **Truncate** method done and move on
@@ -536,20 +536,20 @@ Consequently, let's add one last test case for the **StringHelper.Truncate**
 method:
 
 ```C#
-        /// <summary>
-        /// Validates that the input string is truncated as expected.
-        /// </summary>
-        [TestMethod()]
-        public void Truncate006()
-        {
-            const string input = "The quick brown fox jumped over the lazy dog.";
-            const int maxLength = 29;
-            const string expected = "The quick brown fox jumped...";
+/// <summary>
+/// Validates that the input string is truncated as expected.
+/// </summary>
+[TestMethod()]
+public void Truncate006()
+{
+    const string input = "The quick brown fox jumped over the lazy dog.";
+    const int maxLength = 29;
+    const string expected = "The quick brown fox jumped...";
 
-            string actual = StringHelper.Truncate(input, maxLength);
+    string actual = StringHelper.Truncate(input, maxLength);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 At this point, it seems we can finally consider the feature "done."

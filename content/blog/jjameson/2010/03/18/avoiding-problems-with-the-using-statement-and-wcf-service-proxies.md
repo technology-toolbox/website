@@ -108,10 +108,10 @@ The problem -- at least in my opinion -- is that the **Dispose** method in
 **ClientBase** is currently implemented as follows:
 
 ```C#
-        void IDisposable.Dispose()
-        {
-            this.Close();
-        }
+void IDisposable.Dispose()
+{
+    this.Close();
+}
 ```
 
 However, as noted in the above MSDN article (and corresponding code sample),
@@ -119,24 +119,24 @@ this can cause problems when the C# "using" statement is used on the WCF service
 proxy:
 
 ```C#
-        using (CalculatorClient client = new CalculatorClient())
-        {
-            // Call Divide and catch the associated Exception.  This throws because the
-            // server aborts the channel before returning a reply.
-            try
-            {
-                client.Divide(0.0, 0.0);
-            }
-            catch (CommunicationException e)
-            {
-                Console.WriteLine("Got {0} from Divide.", e.GetType());
-            }
-        }
+using (CalculatorClient client = new CalculatorClient())
+{
+    // Call Divide and catch the associated Exception.  This throws because the
+    // server aborts the channel before returning a reply.
+    try
+    {
+        client.Divide(0.0, 0.0);
+    }
+    catch (CommunicationException e)
+    {
+        Console.WriteLine("Got {0} from Divide.", e.GetType());
+    }
+}
 
-        // The previous line calls Dispose on the client.  Dispose and Close are the
-        // same thing, and the Close is not successful because the server Aborted the
-        // channel.  This means that the code after the using statement does not run.
-        Console.WriteLine("Hope this code wasn't important, because it might not happen.");
+// The previous line calls Dispose on the client.  Dispose and Close are the
+// same thing, and the Close is not successful because the server Aborted the
+// channel.  This means that the code after the using statement does not run.
+Console.WriteLine("Hope this code wasn't important, because it might not happen.");
 ```
 
 The problem is that if an error occurs while calling the Web service, then when
@@ -164,17 +164,17 @@ Wouldn't it be great if ClientBase actually implemented the **Dispose** method
 as follows?
 
 ```C#
-        void IDisposable.Dispose()
-        {
-            if (this.State == CommunicationState.Faulted)
-            {
-                this.Abort();
-            }
-            else if (this.State != CommunicationState.Closed)
-            {
-                this.Close();
-            }
-        }
+void IDisposable.Dispose()
+{
+    if (this.State == CommunicationState.Faulted)
+    {
+        this.Abort();
+    }
+    else if (this.State != CommunicationState.Closed)
+    {
+        this.Close();
+    }
+}
 ```
 
 Wouldn't this avoid the **CommunicationObjectFaultedException** that occurs when

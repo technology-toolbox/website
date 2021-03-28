@@ -243,8 +243,8 @@ In the MSDN minimal master page sample, the following items immediately follow
 the `<html>` element:
 
 ```ASP.NET
-  <WebPartPages:SPWebPartManager runat="server"/>
-  <SharePoint:RobotsMetaTag runat="server"/>
+<WebPartPages:SPWebPartManager runat="server"/>
+<SharePoint:RobotsMetaTag runat="server"/>
 ```
 
 Since the `<html>` element should only contain `<head>` and `<body>` elements,
@@ -261,19 +261,19 @@ shown above is with regards to the links to CSS files. The MSDN sample only
 specifies the following:
 
 ```ASP.NET
-    <SharePoint:CssLink runat="server"/>
+<SharePoint:CssLink runat="server"/>
 ```
 
 My master page, however, specifies the following:
 
 ```ASP.NET
-    <SharePoint:CssLink runat="server" />
-    <!--Styles used for positioning, font and spacing definitions-->
-    <SharePoint:CssRegistration
-        runat="server"
-        Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
-    <link rel="stylesheet" type="text/css"
-        href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
+<SharePoint:CssLink runat="server" />
+<!--Styles used for positioning, font and spacing definitions-->
+<SharePoint:CssRegistration
+    runat="server"
+    Name="<% $SPUrl:~sitecollection/Style Library/~language/Core Styles/controls.css %>" />
+<link rel="stylesheet" type="text/css"
+    href="<% $SPUrl:~SiteCollection/Style Library/Fabrikam/Themes/Theme1/Fabrikam-Main.css%>" />
 ```
 
 Note that the controls.css file is referenced in the out-of-the-box MOSS 2007
@@ -569,7 +569,7 @@ Returning to the contents of the master page, the following element is used to
 encapsulate all of the page content:
 
 ```HTML
-    <div class="container_12">
+<div class="container_12">
 ```
 
 The `container_12` class refers to the 12-column template provided by the 960

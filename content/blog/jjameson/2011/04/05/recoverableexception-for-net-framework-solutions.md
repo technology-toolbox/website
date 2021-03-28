@@ -156,27 +156,27 @@ The following code snippet shows an example of catching "expected" and
 "unexpected" exceptions and handling the scenarios accordingly:
 
 ```C#
-            try
-            {
-                BindSiteList();
+try
+{
+    BindSiteList();
 
-                SelectDefaultSiteForExport();
-            }
-            catch (RecoverableException ex)
-            {
-                SiteList.Items.Clear();
+    SelectDefaultSiteForExport();
+}
+catch (RecoverableException ex)
+{
+    SiteList.Items.Clear();
 
-                DelayedLoadErrorMessage.Text = ex.Message;
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError(ex);
+    DelayedLoadErrorMessage.Text = ex.Message;
+}
+catch (Exception ex)
+{
+    Logger.LogError(ex);
 
-                SiteList.Items.Clear();
+    SiteList.Items.Clear();
 
-                DelayedLoadErrorMessage.Text =
-                    Resources.Error_UnexpectedError_ReferToEventLog);
-            }
+    DelayedLoadErrorMessage.Text =
+        Resources.Error_UnexpectedError_ReferToEventLog);
+}
 ```
 
 Note that it is generally a bad idea to catch instances of the **Exception**

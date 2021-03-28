@@ -105,85 +105,85 @@ In order to log exceptions, I added two new overloads for the **LogError**
 method:
 
 ```C#
-        /// <summary>
-        /// Logs the specified exception to the trace listeners.
-        /// </summary>
-        /// <param name="ex">The exception to log.</param>
-        public static void LogError(
-            Exception ex)
-        {
-            LogError(ex, null);
-        }
+/// <summary>
+/// Logs the specified exception to the trace listeners.
+/// </summary>
+/// <param name="ex">The exception to log.</param>
+public static void LogError(
+    Exception ex)
+{
+    LogError(ex, null);
+}
 
-        /// <summary>
-        /// Logs the specified exception to the trace listeners.
-        /// </summary>
-        /// <remarks>The details of the exception are logged using a format
-        /// similar to the ASP.NET error page. Information about the base
-        /// exception is logged first, followed by information for any
-        /// "outer" exceptions.</remarks>
-        /// <param name="ex">The exception to log.</param>
-        /// <param name="requestUrl">The URL of the web request for which the
-        /// exception occurred.</param>
-        public static void LogError(
-            Exception ex,
-            Uri requestUrl)
-        {
-            if (ex == null)
-            {
-                throw new ArgumentNullException("ex");
-            }
+/// <summary>
+/// Logs the specified exception to the trace listeners.
+/// </summary>
+/// <remarks>The details of the exception are logged using a format
+/// similar to the ASP.NET error page. Information about the base
+/// exception is logged first, followed by information for any
+/// "outer" exceptions.</remarks>
+/// <param name="ex">The exception to log.</param>
+/// <param name="requestUrl">The URL of the web request for which the
+/// exception occurred.</param>
+public static void LogError(
+    Exception ex,
+    Uri requestUrl)
+{
+    if (ex == null)
+    {
+        throw new ArgumentNullException("ex");
+    }
 
-            StringBuilder buffer = new StringBuilder();
+    StringBuilder buffer = new StringBuilder();
 
-            if (requestUrl == null)
-            {
-                buffer.Append(
-                    "An error occurred in the application.");
-            }
-            else
-            {
-                buffer.Append(
-                    "An error occurred during the execution of the"
-                    + " web request.");
-            }
+    if (requestUrl == null)
+    {
+        buffer.Append(
+            "An error occurred in the application.");
+    }
+    else
+    {
+        buffer.Append(
+            "An error occurred during the execution of the"
+            + " web request.");
+    }
 
-            buffer.Append(
-                " Please review the stack trace for more information about the"
-                + " error and where it originated in the code.");
+    buffer.Append(
+        " Please review the stack trace for more information about the"
+        + " error and where it originated in the code.");
 
-            buffer.Append(Environment.NewLine);
-            buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
 
-            if (requestUrl != null)
-            {
-                buffer.Append("Request URL: ");
-                buffer.Append(requestUrl.AbsoluteUri);
+    if (requestUrl != null)
+    {
+        buffer.Append("Request URL: ");
+        buffer.Append(requestUrl.AbsoluteUri);
 
-                buffer.Append(Environment.NewLine);
-                buffer.Append(Environment.NewLine);
-            }
+        buffer.Append(Environment.NewLine);
+        buffer.Append(Environment.NewLine);
+    }
 
-            Exception baseException = ex.GetBaseException();
-            Type baseExceptionType = baseException.GetType();
+    Exception baseException = ex.GetBaseException();
+    Type baseExceptionType = baseException.GetType();
 
-            buffer.Append("Exception Details: ");
-            buffer.Append(baseExceptionType.FullName);
-            buffer.Append(": ");
-            buffer.Append(baseException.Message);
+    buffer.Append("Exception Details: ");
+    buffer.Append(baseExceptionType.FullName);
+    buffer.Append(": ");
+    buffer.Append(baseException.Message);
 
-            buffer.Append(Environment.NewLine);
-            buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
 
-            buffer.Append("Stack Trace:");
-            buffer.Append(Environment.NewLine);
-            buffer.Append(Environment.NewLine);
+    buffer.Append("Stack Trace:");
+    buffer.Append(Environment.NewLine);
+    buffer.Append(Environment.NewLine);
 
-            AppendExceptionDetail(ex, buffer);
+    AppendExceptionDetail(ex, buffer);
 
-            string message = buffer.ToString();
-            Log(TraceEventType.Error, message);
-        }
+    string message = buffer.ToString();
+    Log(TraceEventType.Error, message);
+}
 ```
 
 Note that the stack trace is generated using the **AppendExceptionDetail**

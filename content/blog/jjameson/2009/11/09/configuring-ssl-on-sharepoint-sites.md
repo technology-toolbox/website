@@ -74,15 +74,15 @@ configured using the `<authentication>` element.
 For example, in the **Default** zone you probably want to specify:
 
 ```XML
-    <authentication mode="Windows" />
+<authentication mode="Windows" />
 ```
 
 Whereas in the **Internet** zone you instead need something like this:
 
 ```XML
-    <authentication mode="Forms">
-      <forms loginUrl="/Public/Pages/default.aspx" defaultUrl="/" />
-    </authentication>
+<authentication mode="Forms">
+  <forms loginUrl="/Public/Pages/default.aspx" defaultUrl="/" />
+</authentication>
 ```
 
 Okay, so if we want to avoid creating a new Web application -- and the

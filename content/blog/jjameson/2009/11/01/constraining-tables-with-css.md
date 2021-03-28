@@ -196,17 +196,17 @@ property of the table cell. Just be sure to decode the contents of the cell to
 avoid having it encoded twice:
 
 ```C#
-        protected void ConstrainedGrid_RowDataBound(
-            object sender,
-            GridViewRowEventArgs e)
-        {
-            foreach (TableCell cell in e.Row.Cells)
-            {
-                // Note: We need to decode the cell text in order to avoid
-                // having it encoded twice (e.g. "&amp;gt;")
-                cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
-            }
-        }
+protected void ConstrainedGrid_RowDataBound(
+    object sender,
+    GridViewRowEventArgs e)
+{
+    foreach (TableCell cell in e.Row.Cells)
+    {
+        // Note: We need to decode the cell text in order to avoid
+        // having it encoded twice (e.g. "&amp;gt;")
+        cell.ToolTip = HttpUtility.HtmlDecode(cell.Text);
+    }
+}
 ```
 
 This is somewhat of a "brute force" approach since it makes no attempt to

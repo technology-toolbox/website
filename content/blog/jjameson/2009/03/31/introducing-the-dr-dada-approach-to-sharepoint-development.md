@@ -111,8 +111,8 @@ each and every environment. It's almost like "magic" -- if we ignore the fact
 that some developer had to add a tiny bit of code to the feature:
 
 ```C#
-      SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
-         SPFieldType.Text, false);
+SharePointHelper.AddOrUpdateField(list, "File Icon", "FileIcon",
+   SPFieldType.Text, false);
 ```
 
 Note that stsadm.exe also has the **upgradesolution** operation -- which is

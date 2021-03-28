@@ -147,14 +147,14 @@ If the volume of traffic on your site is relatively low, you might consider
 configuring ELMAH to send you an email whenever something bad happens:
 
 ```XML
-  <elmah>
-    <errorMail
-      from="no-reply@technologytoolbox.com"
-      to="web-support@technologytoolbox.com"
-      priority="High"
-      smtpPort="25"
-      smtpServer="smtp.technologytoolbox.com" />
-  </elmah>
+<elmah>
+  <errorMail
+    from="no-reply@technologytoolbox.com"
+    to="web-support@technologytoolbox.com"
+    priority="High"
+    smtpPort="25"
+    smtpServer="smtp.technologytoolbox.com" />
+</elmah>
 ```
 
 You might prefer some other notification mechanism, such as
@@ -183,11 +183,11 @@ You've probably created a similar error page before and "wired it up" in the
 Web.config file using something like the following:
 
 ```XML
-  <system.web>
-    ...
-    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
-    ...
-  </system.web>
+<system.web>
+  ...
+  <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On" />
+  ...
+</system.web>
 ```
 
 Note that if you don't specify the `redirectMode` attribute, it defaults to
@@ -205,8 +205,8 @@ not a good thing -- so you should always specify
 `redirectMode="ResponseRewrite"`:
 
 ```XML
-    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
-      redirectMode="ResponseRewrite" />
+<customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
+  redirectMode="ResponseRewrite" />
 ```
 
 With this configuration, the original request URL is preserved and there's _at
@@ -224,22 +224,22 @@ Consequently, you should add a little code to set the status code to indicate
 something went wrong:
 
 ```C#
-        protected void Page_Load(
-               object sender,
-               EventArgs e)
-        {
-            Exception ex = Server.GetLastError();
+protected void Page_Load(
+       object sender,
+       EventArgs e)
+{
+    Exception ex = Server.GetLastError();
 
-            HttpException httpEx = ex as HttpException;
+    HttpException httpEx = ex as HttpException;
 
-            if (httpEx != null)
-            {
-                Response.StatusCode = httpEx.GetHttpCode();
-            }
-            else
-            {
-                Response.StatusCode = 500;
-            }
+    if (httpEx != null)
+    {
+        Response.StatusCode = httpEx.GetHttpCode();
+    }
+    else
+    {
+        Response.StatusCode = 500;
+    }
 ```
 
 Note that this code attempts to preserve the status code of the underlying
@@ -436,28 +436,28 @@ For the first scenario (i.e. when the request specifies a path that does not
 correspond to a managed handler), the `<httpErrors>` element is used:
 
 ```XML
-  <system.webServer>
-    <httpErrors>
-      <remove statusCode="404" subStatusCode="-1" />
-      <error statusCode="404" prefixLanguageFilePath=""
-        path="/Errors/404.aspx" responseMode="ExecuteURL" />
-    </httpErrors>
-    ...
-  </system.webServer>
+<system.webServer>
+  <httpErrors>
+    <remove statusCode="404" subStatusCode="-1" />
+    <error statusCode="404" prefixLanguageFilePath=""
+      path="/Errors/404.aspx" responseMode="ExecuteURL" />
+  </httpErrors>
+  ...
+</system.webServer>
 ```
 
 For the second scenario (e.g. when the request specifies a non-existent ASPX
 page), the `<customErrors>` element is used:
 
 ```XML
-  <system.web>
-    ...
-    <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
-      redirectMode="ResponseRewrite">
-      <error statusCode="404" redirect="~/Errors/404.aspx" />
-    </customErrors>
-    ...
-  </system.web>
+<system.web>
+  ...
+  <customErrors defaultRedirect="~/Errors/Generic.aspx" mode="On"
+    redirectMode="ResponseRewrite">
+    <error statusCode="404" redirect="~/Errors/404.aspx" />
+  </customErrors>
+  ...
+</system.web>
 ```
 
 {{< div-block "note" >}}

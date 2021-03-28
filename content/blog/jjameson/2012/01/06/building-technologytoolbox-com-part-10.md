@@ -79,16 +79,16 @@ With the updated model, the following LINQ query can be used to retrieve the top
 10 most popular blog posts:
 
 ```C#
-        using (CaelumEntities context = new CaelumEntities())
-        {
-            var q = (from entry in context.Entries
-                    join views in context.EntryViewCounts
-                        on entry.ID equals views.EntryID
-                    orderby (views.WebCount * 15)
-                            + (views.AggCount * 10) descending
-                    select entry).Take(10);
+using (CaelumEntities context = new CaelumEntities())
+{
+    var q = (from entry in context.Entries
+            join views in context.EntryViewCounts
+                on entry.ID equals views.EntryID
+            orderby (views.WebCount * 15)
+                    + (views.AggCount * 10) descending
+            select entry).Take(10);
 
-        }
+}
 ```
 
 In Subtext, **WebCount** represents the number of times a blog post has been

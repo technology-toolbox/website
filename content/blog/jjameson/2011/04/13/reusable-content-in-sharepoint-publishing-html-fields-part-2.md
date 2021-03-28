@@ -57,22 +57,22 @@ existing site configuration, but those are beyond the scope of this post.]
 For example, consider the following method of **SharePointPublishingHelper**:
 
 ```C#
-        public static SPListItem EnsureReusableContentItem(
-            SPSite site,
-            string title,
-            bool automaticUpdate,
-            string reusableHtml)
+public static SPListItem EnsureReusableContentItem(
+    SPSite site,
+    string title,
+    bool automaticUpdate,
+    string reusableHtml)
 ```
 
 Imagine that you run the following code upon activation of a feature:
 
 ```C#
-            SPListItem reusableContent =
-                SharePointPublishingHelper.EnsureReusableContentItem(
-                    web.Site,
-                    "Copyright",
-                    true,
-                    "Copyright&copy; 2009 Contoso Corporation - All Rights Reserved");
+SPListItem reusableContent =
+    SharePointPublishingHelper.EnsureReusableContentItem(
+        web.Site,
+        "Copyright",
+        true,
+        "Copyright&copy; 2009 Contoso Corporation - All Rights Reserved");
 ```
 
 If the specified **Reusable Content** list item already exists (found by
@@ -91,161 +91,161 @@ also takes care of approving the list item (if it does not have at least one
 approved version):
 
 ```C#
-        public static SPListItem EnsureReusableContentItem(
-            SPSite site,
-            string title,
-            bool automaticUpdate,
-            string reusableHtml,
-            string comments,
-            string contentCategory)
-        {
-            if (site == null)
-            {
-                throw new ArgumentNullException("site");
-            }
+public static SPListItem EnsureReusableContentItem(
+    SPSite site,
+    string title,
+    bool automaticUpdate,
+    string reusableHtml,
+    string comments,
+    string contentCategory)
+{
+    if (site == null)
+    {
+        throw new ArgumentNullException("site");
+    }
 
-            if (title == null)
-            {
-                throw new ArgumentNullException("title");
-            }
+    if (title == null)
+    {
+        throw new ArgumentNullException("title");
+    }
 
-            title = title.Trim();
-            if (string.IsNullOrEmpty(title) == true)
-            {
-                throw new ArgumentException(
-                    "The title must be specified.",
-                    "title");
-            }
+    title = title.Trim();
+    if (string.IsNullOrEmpty(title) == true)
+    {
+        throw new ArgumentException(
+            "The title must be specified.",
+            "title");
+    }
 
-            if (reusableHtml == null)
-            {
-                throw new ArgumentNullException("reusableHtml");
-            }
+    if (reusableHtml == null)
+    {
+        throw new ArgumentNullException("reusableHtml");
+    }
 
-            reusableHtml = reusableHtml.Trim();
-            if (string.IsNullOrEmpty(reusableHtml) == true)
-            {
-                throw new ArgumentException(
-                    "The reusable HTML must be specified.",
-                    "reusableHtml");
-            }
+    reusableHtml = reusableHtml.Trim();
+    if (string.IsNullOrEmpty(reusableHtml) == true)
+    {
+        throw new ArgumentException(
+            "The reusable HTML must be specified.",
+            "reusableHtml");
+    }
 
-            // Note: comments and contentCategory may be null
+    // Note: comments and contentCategory may be null
 
-            SPLogger.Log(
-                LogCategory.Configuration,
-                TraceSeverity.Medium,
-                "Configuring reusable content item ({0}) on site ({1})...",
-                title,
-                site.Url);
+    SPLogger.Log(
+        LogCategory.Configuration,
+        TraceSeverity.Medium,
+        "Configuring reusable content item ({0}) on site ({1})...",
+        title,
+        site.Url);
 
-            if (string.IsNullOrEmpty(contentCategory) == true)
-            {
-                SPLogger.Log(
-                    LogCategory.Configuration,
-                    TraceSeverity.Medium,
-                    "The content category was not specified, using default"
-                        + " value (None)",
-                    title);
+    if (string.IsNullOrEmpty(contentCategory) == true)
+    {
+        SPLogger.Log(
+            LogCategory.Configuration,
+            TraceSeverity.Medium,
+            "The content category was not specified, using default"
+                + " value (None)",
+            title);
 
-                contentCategory = "None";
-            }
+        contentCategory = "None";
+    }
 
-            const string rootFolderUrl = "ReusableContent";
+    const string rootFolderUrl = "ReusableContent";
 
-            SPList reusableContentList = SharePointListHelper.FindListByRootFolderUrl(
-                site.RootWeb.Lists,
-                rootFolderUrl);
+    SPList reusableContentList = SharePointListHelper.FindListByRootFolderUrl(
+        site.RootWeb.Lists,
+        rootFolderUrl);
 
-            if (reusableContentList == null)
-            {
-                string message = string.Format(
-                    CultureInfo.CurrentCulture,
-                    "The list ({0}) could not be found on the site ({1}).",
-                    rootFolderUrl,
-                    site.Url);
+    if (reusableContentList == null)
+    {
+        string message = string.Format(
+            CultureInfo.CurrentCulture,
+            "The list ({0}) could not be found on the site ({1}).",
+            rootFolderUrl,
+            site.Url);
 
-                throw new InvalidOperationException(message);
-            }
+        throw new InvalidOperationException(message);
+    }
 
-            EnsureReusableContentCategoryExists(reusableContentList, contentCategory);
+    EnsureReusableContentCategoryExists(reusableContentList, contentCategory);
 
-            string camlQuery =
-                "<Where><Eq><FieldRef Name='Title'/><Value Type='Text'>"
-                    + title + "</Value></Eq></Where>";
+    string camlQuery =
+        "<Where><Eq><FieldRef Name='Title'/><Value Type='Text'>"
+            + title + "</Value></Eq></Where>";
 
-            SPListItem listItem = SharePointListHelper.FindUniqueListItem(
-                reusableContentList,
-                camlQuery);
+    SPListItem listItem = SharePointListHelper.FindUniqueListItem(
+        reusableContentList,
+        camlQuery);
 
-            if (listItem == null)
-            {
-                SPLogger.Log(
-                    LogCategory.Configuration,
-                    TraceSeverity.Medium,
-                    "Adding reusable content item ({0}) to site ({1})...",
-                    title,
-                    site.Url);
+    if (listItem == null)
+    {
+        SPLogger.Log(
+            LogCategory.Configuration,
+            TraceSeverity.Medium,
+            "Adding reusable content item ({0}) to site ({1})...",
+            title,
+            site.Url);
 
-                listItem = reusableContentList.Items.Add();
-                listItem[SPBuiltInFieldId.Title] = title;
-                listItem[FieldId.AutomaticUpdate] = automaticUpdate;
-                listItem[FieldId.ReusableHtml] = reusableHtml;
-                listItem[SPBuiltInFieldId.Comments] = comments;
-                listItem[FieldId.ReusableTextType] = contentCategory;
+        listItem = reusableContentList.Items.Add();
+        listItem[SPBuiltInFieldId.Title] = title;
+        listItem[FieldId.AutomaticUpdate] = automaticUpdate;
+        listItem[FieldId.ReusableHtml] = reusableHtml;
+        listItem[SPBuiltInFieldId.Comments] = comments;
+        listItem[FieldId.ReusableTextType] = contentCategory;
 
-                listItem.Update();
+        listItem.Update();
 
-                SPLogger.LogEvent(
-                    LogCategory.Configuration,
-                    EventSeverity.Information,
-                    "Successfully added reusable content item ({0}) to site"
-                        + " ({1}).",
-                    title,
-                    site.Url);
-            }
+        SPLogger.LogEvent(
+            LogCategory.Configuration,
+            EventSeverity.Information,
+            "Successfully added reusable content item ({0}) to site"
+                + " ({1}).",
+            title,
+            site.Url);
+    }
 
-            if (listItem.HasPublishedVersion == false)
-            {
-                SPLogger.Log(
-                    LogCategory.Configuration,
-                    TraceSeverity.Medium,
-                    "The reusable content item ({0}) does not have a published"
-                        + " version. Approving list item ({1}/{2})...",
-                    title,
-                    listItem.Web.Url,
-                    listItem.Url);
+    if (listItem.HasPublishedVersion == false)
+    {
+        SPLogger.Log(
+            LogCategory.Configuration,
+            TraceSeverity.Medium,
+            "The reusable content item ({0}) does not have a published"
+                + " version. Approving list item ({1}/{2})...",
+            title,
+            listItem.Web.Url,
+            listItem.Url);
 
-                listItem.ModerationInformation.Status =
-                    SPModerationStatusType.Approved;
+        listItem.ModerationInformation.Status =
+            SPModerationStatusType.Approved;
 
-                listItem.Update();
+        listItem.Update();
 
-                SPLogger.LogEvent(
-                    LogCategory.Configuration,
-                    EventSeverity.Information,
-                    "Successfully approved reusable content item ({0})"
-                        + " ({1}/{2}).",
-                    title,
-                    listItem.Web.Url,
-                    listItem.Url);
-            }
-            else
-            {
-                SPLogger.Log(
-                    LogCategory.Configuration,
-                    TraceSeverity.Medium,
-                    "The reusable content item ({0}) already has a"
-                        + " published version and may have been customized, so"
-                        + " no changes will be made to the list item"
-                        + " ({1}/{2}).",
-                    title,
-                    listItem.Web.Url,
-                    listItem.Url);
-            }
+        SPLogger.LogEvent(
+            LogCategory.Configuration,
+            EventSeverity.Information,
+            "Successfully approved reusable content item ({0})"
+                + " ({1}/{2}).",
+            title,
+            listItem.Web.Url,
+            listItem.Url);
+    }
+    else
+    {
+        SPLogger.Log(
+            LogCategory.Configuration,
+            TraceSeverity.Medium,
+            "The reusable content item ({0}) already has a"
+                + " published version and may have been customized, so"
+                + " no changes will be made to the list item"
+                + " ({1}/{2}).",
+            title,
+            listItem.Web.Url,
+            listItem.Url);
+    }
 
-            return listItem;
-        }
+    return listItem;
+}
 ```
 
 The method is rather long, but keep in mind that roughly half of the code above
@@ -279,43 +279,43 @@ are two key concepts to grasp:
 Here is a sample of the HTML content in "storage format":
 
 ```HTML
-    <div id="__publishingReusableFragmentIdSection">
-        <a href="/ReusableContent/1_.000">a</a>
-        <a href="/ReusableContent/3_.000">a</a>
-    </div>
-    <p>
-        Here is some reusable content...</p>
-    <p>
-        <span id="__publishingReusableFragment"></span>
-    </p>
-    <p>
-        ...and here is some more:</p>
-    <p>
-        <span id="__publishingReusableFragment"></span>
-    </p>
+<div id="__publishingReusableFragmentIdSection">
+    <a href="/ReusableContent/1_.000">a</a>
+    <a href="/ReusableContent/3_.000">a</a>
+</div>
+<p>
+    Here is some reusable content...</p>
+<p>
+    <span id="__publishingReusableFragment"></span>
+</p>
+<p>
+    ...and here is some more:</p>
+<p>
+    <span id="__publishingReusableFragment"></span>
+</p>
 ```
 
 The corresponding "view format" is shown below:
 
 ```HTML
-    <p>
-        Here is some reusable content...</p>
-    <p>
-        <span class="ms-rtestate-read  ms-reusableTextView"
-            contenteditable="false" id="__publishingReusableFragment"
-            fragmentid="/ReusableContent/1_.000">
-            Copyright&copy; 2009 Contoso Corporation - All Rights
-            Reserved</span>
-    </p>
-    <p>
-        ...and here is some more:</p>
-    <p>
-        <span class="ms-rtestate-read  ms-reusableTextView"
-            contenteditable="false" id="__publishingReusableFragment"
-            fragmentid="/ReusableContent/3_.000">
-            <em>&quot;Example quotation&quot;</em>
-        </span>
-    </p>
+<p>
+    Here is some reusable content...</p>
+<p>
+    <span class="ms-rtestate-read  ms-reusableTextView"
+        contenteditable="false" id="__publishingReusableFragment"
+        fragmentid="/ReusableContent/1_.000">
+        Copyright&copy; 2009 Contoso Corporation - All Rights
+        Reserved</span>
+</p>
+<p>
+    ...and here is some more:</p>
+<p>
+    <span class="ms-rtestate-read  ms-reusableTextView"
+        contenteditable="false" id="__publishingReusableFragment"
+        fragmentid="/ReusableContent/3_.000">
+        <em>&quot;Example quotation&quot;</em>
+    </span>
+</p>
 ```
 
 {{< div-block "note" >}}
@@ -339,35 +339,35 @@ In other words, if you were to swap the order of the `<a>` elements in the
 "header"...
 
 ```HTML
-    <div id="__publishingReusableFragmentIdSection">
-        <a href="/ReusableContent/3_.000">a</a>
-        <a href="/ReusableContent/1_.000">a</a>
-    </div>
-    ...
+<div id="__publishingReusableFragmentIdSection">
+    <a href="/ReusableContent/3_.000">a</a>
+    <a href="/ReusableContent/1_.000">a</a>
+</div>
+...
 ```
 
 ...then the order of the reusable content in the corresponding "view format"
 would be reversed, as shown below:
 
 ```HTML
-    <p>
-        Here is some reusable content...</p>
-    <p>
-        <span class="ms-rtestate-read  ms-reusableTextView"
-            contenteditable="false" id="Span1"
-            fragmentid="/ReusableContent/3_.000">
-            <em>&quot;Example quotation&quot;</em>
-        </span>
-    </p>
-    <p>
-        ...and here is some more:</p>
-    <p>
-        <span class="ms-rtestate-read  ms-reusableTextView"
-            contenteditable="false" id="__publishingReusableFragment"
-            fragmentid="/ReusableContent/1_.000">
-            Copyright&copy; 2009 Contoso Corporation - All Rights
-            Reserved</span>
-    </p>
+<p>
+    Here is some reusable content...</p>
+<p>
+    <span class="ms-rtestate-read  ms-reusableTextView"
+        contenteditable="false" id="Span1"
+        fragmentid="/ReusableContent/3_.000">
+        <em>&quot;Example quotation&quot;</em>
+    </span>
+</p>
+<p>
+    ...and here is some more:</p>
+<p>
+    <span class="ms-rtestate-read  ms-reusableTextView"
+        contenteditable="false" id="__publishingReusableFragment"
+        fragmentid="/ReusableContent/1_.000">
+        Copyright&copy; 2009 Contoso Corporation - All Rights
+        Reserved</span>
+</p>
 ```
 
 This actually makes the code for inserting reusable content into Publishing HTML
@@ -375,21 +375,21 @@ fields significantly more complex than it would be if the "storage format"
 specified something like the following instead:
 
 ```HTML
-    <div id="__publishingReusableFragmentIdSection" />
-    <p>
-        Here is some reusable content...</p>
-    <p>
-        <span id="__publishingReusableFragment">
-            <a href="/ReusableContent/1_.000">a</a>
-        </span>
-    </p>
-    <p>
-        ...and here is some more:</p>
-    <p>
-        <span id="__publishingReusableFragment">
-            <a href="/ReusableContent/3_.000">a</a>
-        </span>
-    </p>
+<div id="__publishingReusableFragmentIdSection" />
+<p>
+    Here is some reusable content...</p>
+<p>
+    <span id="__publishingReusableFragment">
+        <a href="/ReusableContent/1_.000">a</a>
+    </span>
+</p>
+<p>
+    ...and here is some more:</p>
+<p>
+    <span id="__publishingReusableFragment">
+        <a href="/ReusableContent/3_.000">a</a>
+    </span>
+</p>
 ```
 
 Rather than simply listing the code for inserting reusable content into a page
@@ -398,133 +398,133 @@ reviewing some of the unit tests that I created when developing the
 **InsertReusableContentIntoHtmlField** method:
 
 ```C#
-        /// <summary>
-        /// Basic test for appending reusable content to an HTML field.
-        /// </summary>
-        [TestMethod()]
-        public void InsertReusableContentIntoHtmlField001()
-        {
-            const string reusableContentListItemUrl = "/ReusableContent/1_.000";
-            const string htmlFieldContent = null;
+/// <summary>
+/// Basic test for appending reusable content to an HTML field.
+/// </summary>
+[TestMethod()]
+public void InsertReusableContentIntoHtmlField001()
+{
+    const string reusableContentListItemUrl = "/ReusableContent/1_.000";
+    const string htmlFieldContent = null;
 
-            const string expected =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                    + "</div>"
-                    + "<span id=\"__publishingReusableFragment\"></span>";
+    const string expected =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+            + "</div>"
+            + "<span id=\"__publishingReusableFragment\"></span>";
 
-            string actual =
-                SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
-                    reusableContentListItemUrl,
-                    htmlFieldContent);
+    string actual =
+        SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
+            reusableContentListItemUrl,
+            htmlFieldContent);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 
-        /// <summary>
-        /// Basic test for appending reusable content to an HTML field which
-        /// already contains another piece of reusable content.
-        /// </summary>
-        [TestMethod()]
-        public void InsertReusableContentIntoHtmlField002()
-        {
-            const string reusableContentListItemUrl = "/ReusableContent/2_.000";
-            const string htmlFieldContent =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                    + "</div>"
-                    + "<span id=\"__publishingReusableFragment\"></span>";
+/// <summary>
+/// Basic test for appending reusable content to an HTML field which
+/// already contains another piece of reusable content.
+/// </summary>
+[TestMethod()]
+public void InsertReusableContentIntoHtmlField002()
+{
+    const string reusableContentListItemUrl = "/ReusableContent/2_.000";
+    const string htmlFieldContent =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+            + "</div>"
+            + "<span id=\"__publishingReusableFragment\"></span>";
 
-            const string expected =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                        + "<a href=\"/ReusableContent/2_.000\">a</a>"
-                    + "</div>"
-                    + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "<span id=\"__publishingReusableFragment\"></span>";
+    const string expected =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+                + "<a href=\"/ReusableContent/2_.000\">a</a>"
+            + "</div>"
+            + "<span id=\"__publishingReusableFragment\"></span>"
+            + "<span id=\"__publishingReusableFragment\"></span>";
 
-            string actual =
-                SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
-                    reusableContentListItemUrl,
-                    htmlFieldContent);
+    string actual =
+        SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
+            reusableContentListItemUrl,
+            htmlFieldContent);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 
-        /// <summary>
-        /// Basic test for inserting reusable content into an HTML field at a
-        /// specific location.
-        /// </summary>
-        [TestMethod()]
-        public void InsertReusableContentIntoHtmlField003()
-        {
-            const string placeholder = "{TODO: Insert reusable content here}";
+/// <summary>
+/// Basic test for inserting reusable content into an HTML field at a
+/// specific location.
+/// </summary>
+[TestMethod()]
+public void InsertReusableContentIntoHtmlField003()
+{
+    const string placeholder = "{TODO: Insert reusable content here}";
 
-            const string reusableContentListItemUrl = "/ReusableContent/1_.000";
-            const string htmlFieldContent = "<p>" + placeholder + "</p>";
+    const string reusableContentListItemUrl = "/ReusableContent/1_.000";
+    const string htmlFieldContent = "<p>" + placeholder + "</p>";
 
-            const string expected =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                    + "</div>"
-                    + "<p><span id=\"__publishingReusableFragment\"></span></p>";
+    const string expected =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+            + "</div>"
+            + "<p><span id=\"__publishingReusableFragment\"></span></p>";
 
-            string actual =
-                SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
-                    reusableContentListItemUrl,
-                    htmlFieldContent,
-                    placeholder);
+    string actual =
+        SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
+            reusableContentListItemUrl,
+            htmlFieldContent,
+            placeholder);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 
-        /// <summary>
-        /// Basic test for inserting reusable content into an HTML field which
-        /// already contains other pieces of reusable content.
-        /// </summary>
-        [TestMethod()]
-        public void InsertReusableContentIntoHtmlField004()
-        {
-            const string placeholder = "{TODO: Insert reusable content here}";
+/// <summary>
+/// Basic test for inserting reusable content into an HTML field which
+/// already contains other pieces of reusable content.
+/// </summary>
+[TestMethod()]
+public void InsertReusableContentIntoHtmlField004()
+{
+    const string placeholder = "{TODO: Insert reusable content here}";
 
-            const string reusableContentListItemUrl = "/ReusableContent/3_.000";
-            const string htmlFieldContent =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                        + "<a href=\"/ReusableContent/2_.000\">a</a>"
-                    + "</div>"
-                    + "<div id='reusableContent1'>"
-                        + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "</div>"
-                    + "<div id='reusableContent3'>" + placeholder + "</div>"
-                    + "<div id='reusableContent2'>"
-                        + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "</div>";
+    const string reusableContentListItemUrl = "/ReusableContent/3_.000";
+    const string htmlFieldContent =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+                + "<a href=\"/ReusableContent/2_.000\">a</a>"
+            + "</div>"
+            + "<div id='reusableContent1'>"
+                + "<span id=\"__publishingReusableFragment\"></span>"
+            + "</div>"
+            + "<div id='reusableContent3'>" + placeholder + "</div>"
+            + "<div id='reusableContent2'>"
+                + "<span id=\"__publishingReusableFragment\"></span>"
+            + "</div>";
 
-            const string expected =
-                "<div id=\"__publishingReusableFragmentIdSection\">"
-                        + "<a href=\"/ReusableContent/1_.000\">a</a>"
-                        + "<a href=\"/ReusableContent/3_.000\">a</a>"
-                        + "<a href=\"/ReusableContent/2_.000\">a</a>"
-                    + "</div>"
-                    + "<div id='reusableContent1'>"
-                        + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "</div>"
-                    + "<div id='reusableContent3'>"
-                        + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "</div>"
-                    + "<div id='reusableContent2'>"
-                        + "<span id=\"__publishingReusableFragment\"></span>"
-                    + "</div>";
+    const string expected =
+        "<div id=\"__publishingReusableFragmentIdSection\">"
+                + "<a href=\"/ReusableContent/1_.000\">a</a>"
+                + "<a href=\"/ReusableContent/3_.000\">a</a>"
+                + "<a href=\"/ReusableContent/2_.000\">a</a>"
+            + "</div>"
+            + "<div id='reusableContent1'>"
+                + "<span id=\"__publishingReusableFragment\"></span>"
+            + "</div>"
+            + "<div id='reusableContent3'>"
+                + "<span id=\"__publishingReusableFragment\"></span>"
+            + "</div>"
+            + "<div id='reusableContent2'>"
+                + "<span id=\"__publishingReusableFragment\"></span>"
+            + "</div>";
 
-            string actual =
-                SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
-                    reusableContentListItemUrl,
-                    htmlFieldContent,
-                    placeholder);
+    string actual =
+        SharePointHtmlFieldHelper.InsertReusableContentIntoHtmlField(
+            reusableContentListItemUrl,
+            htmlFieldContent,
+            placeholder);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 {{< div-block "note" >}}

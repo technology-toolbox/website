@@ -51,62 +51,62 @@ a new Web Part. Here is the original implementation of the `CreateWebPart`
 method:
 
 ```C#
-    private static WebPart CreateWebPart(
-        SPWebPartPages.SPLimitedWebPartManager wpm,
-        string webPartId,
-        string webPartFilename,
-        string zoneId,
-        ref int zoneIndex)
+private static WebPart CreateWebPart(
+    SPWebPartPages.SPLimitedWebPartManager wpm,
+    string webPartId,
+    string webPartFilename,
+    string zoneId,
+    ref int zoneIndex)
+{
+    Debug.Assert(wpm != null);
+    Debug.Assert(string.IsNullOrEmpty(webPartId) == false);
+    Debug.Assert(string.IsNullOrEmpty(webPartFilename) == false);
+    Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
+
+    Logger.LogDebug(
+        CultureInfo.InvariantCulture,
+        "Creating Web Part ({0}) on page ({1})...",
+        webPartId,
+        wpm.ServerRelativeUrl);
+
+    WebPart webPart = null;
+
+    SPFile wpFile = GetWebPartFileFromGallery(
+        wpm.Web.Site,
+        webPartFilename);
+
+    Debug.Assert(wpFile != null);
+
+    string errorMessage = string.Empty;
+
+    using (Stream stream = wpFile.OpenBinaryStream())
     {
-        Debug.Assert(wpm != null);
-        Debug.Assert(string.IsNullOrEmpty(webPartId) == false);
-        Debug.Assert(string.IsNullOrEmpty(webPartFilename) == false);
-        Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
-
-        Logger.LogDebug(
-            CultureInfo.InvariantCulture,
-            "Creating Web Part ({0}) on page ({1})...",
-            webPartId,
-            wpm.ServerRelativeUrl);
-
-        WebPart webPart = null;
-
-        SPFile wpFile = GetWebPartFileFromGallery(
-            wpm.Web.Site,
-            webPartFilename);
-
-        Debug.Assert(wpFile != null);
-
-        string errorMessage = string.Empty;
-
-        using (Stream stream = wpFile.OpenBinaryStream())
-        {
-            XmlReader reader = XmlReader.Create(stream);
-            webPart = wpm.ImportWebPart(reader, out errorMessage);
-        }
-
-        if (string.IsNullOrEmpty(errorMessage) == false)
-        {
-            string message =
-                "Error importing Web Part ("
-                    + webPartFilename + "): "
-                    + errorMessage;
-
-            throw new ApplicationException(message);
-        }
-
-        webPart.ID = webPartId;
-        wpm.AddWebPart(webPart, zoneId, zoneIndex);
-        zoneIndex++;
-
-        Logger.LogDebug(
-            CultureInfo.InvariantCulture,
-            "Successfully created Web Part ({0}) on page ({1}).",
-            webPartId,
-            wpm.ServerRelativeUrl);
-
-        return webPart;
+        XmlReader reader = XmlReader.Create(stream);
+        webPart = wpm.ImportWebPart(reader, out errorMessage);
     }
+
+    if (string.IsNullOrEmpty(errorMessage) == false)
+    {
+        string message =
+            "Error importing Web Part ("
+                + webPartFilename + "): "
+                + errorMessage;
+
+        throw new ApplicationException(message);
+    }
+
+    webPart.ID = webPartId;
+    wpm.AddWebPart(webPart, zoneId, zoneIndex);
+    zoneIndex++;
+
+    Logger.LogDebug(
+        CultureInfo.InvariantCulture,
+        "Successfully created Web Part ({0}) on page ({1}).",
+        webPartId,
+        wpm.ServerRelativeUrl);
+
+    return webPart;
+}
 ```
 
 Note that `SPWebPartPages` is simply an alias for the
@@ -126,7 +126,7 @@ within the same Web Part zone) isn't always incremented as you would expect.
 When adding the first, second, third, and fourth Web Parts to a zone:
 
 ```C#
-    SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
+SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
 ```
 
 behaves as expected, meaning that (`webPart.ZoneIndex == zoneIndex`).
@@ -144,91 +144,91 @@ therefore I had to come up with a hack for it. Here is my updated version of the
 `CreateWebPart` method:
 
 ```C#
-    private static WebPart CreateWebPart(
-        SPWebPartPages.SPLimitedWebPartManager wpm,
-        string webPartId,
-        string webPartFilename,
-        string zoneId,
-        ref int zoneIndex)
+private static WebPart CreateWebPart(
+    SPWebPartPages.SPLimitedWebPartManager wpm,
+    string webPartId,
+    string webPartFilename,
+    string zoneId,
+    ref int zoneIndex)
+{
+    Debug.Assert(wpm != null);
+    Debug.Assert(string.IsNullOrEmpty(webPartId) == false);
+    Debug.Assert(string.IsNullOrEmpty(webPartFilename) == false);
+    Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
+
+    Logger.LogDebug(
+        CultureInfo.InvariantCulture,
+        "Creating Web Part ({0}) on page ({1})...",
+        webPartId,
+        wpm.ServerRelativeUrl);
+
+    WebPart webPart = null;
+
+    SPFile wpFile = GetWebPartFileFromGallery(
+        wpm.Web.Site,
+        webPartFilename);
+
+    Debug.Assert(wpFile != null);
+
+    string errorMessage = string.Empty;
+
+    using (Stream stream = wpFile.OpenBinaryStream())
     {
-        Debug.Assert(wpm != null);
-        Debug.Assert(string.IsNullOrEmpty(webPartId) == false);
-        Debug.Assert(string.IsNullOrEmpty(webPartFilename) == false);
-        Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
-
-        Logger.LogDebug(
-            CultureInfo.InvariantCulture,
-            "Creating Web Part ({0}) on page ({1})...",
-            webPartId,
-            wpm.ServerRelativeUrl);
-
-        WebPart webPart = null;
-
-        SPFile wpFile = GetWebPartFileFromGallery(
-            wpm.Web.Site,
-            webPartFilename);
-
-        Debug.Assert(wpFile != null);
-
-        string errorMessage = string.Empty;
-
-        using (Stream stream = wpFile.OpenBinaryStream())
-        {
-            XmlReader reader = XmlReader.Create(stream);
-            webPart = wpm.ImportWebPart(reader, out errorMessage);
-        }
-
-        if (string.IsNullOrEmpty(errorMessage) == false)
-        {
-            string message =
-                "Error importing Web Part ("
-                    + webPartFilename + "): "
-                    + errorMessage;
-
-            throw new ApplicationException(message);
-        }
-
-        webPart.ID = webPartId;
-        wpm.AddWebPart(webPart, zoneId, zoneIndex);
-
-        // Bug 68288:
-        //
-        // HACK: When adding the first, second, third, and fourth Web Parts
-        // to a zone:
-        //
-        //    SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
-        //
-        // behaves as expected, meaning that
-        // (webPart.ZoneIndex == zoneIndex).
-        //
-        // However, when adding the fifth and sixth Web Parts to a zone,
-        // then (webPart.ZoneIndex == zoneIndex + 1).
-        if (webPart.ZoneIndex > zoneIndex)
-        {
-            Debug.Assert(zoneIndex >= 4);
-
-            Logger.LogDebug(
-                CultureInfo.InvariantCulture,
-                "HACK: webPart.ZoneIndex ({0})"
-                    + " is greater than zoneIndex ({1})."
-                    + " Setting zoneIndex to {0}...",
-                webPart.ZoneIndex,
-                zoneIndex);
-
-            zoneIndex = webPart.ZoneIndex;
-        }
-
-        Debug.Assert(webPart.ZoneIndex == zoneIndex);
-        zoneIndex++;
-
-        Logger.LogDebug(
-            CultureInfo.InvariantCulture,
-            "Successfully created Web Part ({0}) on page ({1}).",
-            webPartId,
-            wpm.ServerRelativeUrl);
-
-        return webPart;
+        XmlReader reader = XmlReader.Create(stream);
+        webPart = wpm.ImportWebPart(reader, out errorMessage);
     }
+
+    if (string.IsNullOrEmpty(errorMessage) == false)
+    {
+        string message =
+            "Error importing Web Part ("
+                + webPartFilename + "): "
+                + errorMessage;
+
+        throw new ApplicationException(message);
+    }
+
+    webPart.ID = webPartId;
+    wpm.AddWebPart(webPart, zoneId, zoneIndex);
+
+    // Bug 68288:
+    //
+    // HACK: When adding the first, second, third, and fourth Web Parts
+    // to a zone:
+    //
+    //    SPLimitedWebPartManager.AddWebPart(webPart, zoneId, zoneIndex)
+    //
+    // behaves as expected, meaning that
+    // (webPart.ZoneIndex == zoneIndex).
+    //
+    // However, when adding the fifth and sixth Web Parts to a zone,
+    // then (webPart.ZoneIndex == zoneIndex + 1).
+    if (webPart.ZoneIndex > zoneIndex)
+    {
+        Debug.Assert(zoneIndex >= 4);
+
+        Logger.LogDebug(
+            CultureInfo.InvariantCulture,
+            "HACK: webPart.ZoneIndex ({0})"
+                + " is greater than zoneIndex ({1})."
+                + " Setting zoneIndex to {0}...",
+            webPart.ZoneIndex,
+            zoneIndex);
+
+        zoneIndex = webPart.ZoneIndex;
+    }
+
+    Debug.Assert(webPart.ZoneIndex == zoneIndex);
+    zoneIndex++;
+
+    Logger.LogDebug(
+        CultureInfo.InvariantCulture,
+        "Successfully created Web Part ({0}) on page ({1}).",
+        webPartId,
+        wpm.ServerRelativeUrl);
+
+    return webPart;
+}
 ```
 
 I was curious to know why SharePoint behaves this way and to see if this

@@ -175,18 +175,18 @@ if a trailing slash is found.
 Here is the corresponding update to the project file:
 
 ```XML
-  <PropertyGroup>
-    <BuildDependsOn>
-      $(BuildDependsOn);
-      CreateSharePointSolutionPackage
-    </BuildDependsOn>
-    <QuotedOutDir>"$(OutDir)"</QuotedOutDir>
-    <QuotedOutDir Condition="HasTrailingSlash($(OutDir))">"$(OutDir)."</QuotedOutDir>
-  </PropertyGroup>
-  <Target Name="CreateSharePointSolutionPackage" Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);" Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
-    <Message Text="Creating SharePoint solution package..." />
-    <Exec Command="makecab /D OUT_DIR=$(QuotedOutDir) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;" />
-  </Target>
+<PropertyGroup>
+  <BuildDependsOn>
+    $(BuildDependsOn);
+    CreateSharePointSolutionPackage
+  </BuildDependsOn>
+  <QuotedOutDir>"$(OutDir)"</QuotedOutDir>
+  <QuotedOutDir Condition="HasTrailingSlash($(OutDir))">"$(OutDir)."</QuotedOutDir>
+</PropertyGroup>
+<Target Name="CreateSharePointSolutionPackage" Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);" Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
+  <Message Text="Creating SharePoint solution package..." />
+  <Exec Command="makecab /D OUT_DIR=$(QuotedOutDir) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;" />
+</Target>
 ```
 
 With these changes, the SharePoint WSP is successfully built regardless of

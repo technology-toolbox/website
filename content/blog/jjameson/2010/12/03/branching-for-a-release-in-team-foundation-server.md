@@ -210,10 +210,10 @@ earlier post for
 1. Location the **`<Version>`** task used to increment the assembly version and change the `BuildType` to `"None"` and the `RevisionType` to `"Increment"`, as shown below:
 
    ```XML
-       <Version
-         VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
-         BuildType="None"
-         RevisionType="Increment">
+   <Version
+     VersionFile="$(BuildProjectFolderPath)\AssemblyVersionInfo.txt"
+     BuildType="None"
+     RevisionType="Increment">
    ```
 
 1. Save the changes to the file.

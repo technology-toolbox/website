@@ -308,19 +308,19 @@ feature on the Web application performs the following:
 Or, for those of you that prefer to read code instead...
 
 ```C#
-         string databaseServer = webApp.ContentDatabases[0].Server;
-         AddConnectionStringWebConfigModifications(webApp, databaseServer);
+string databaseServer = webApp.ContentDatabases[0].Server;
+AddConnectionStringWebConfigModifications(webApp, databaseServer);
 
-         AddAuthenticationWebConfigModifications(webApp);
-         AddMembershipWebConfigModifications(webApp);
-         AddRoleManagerWebConfigModifications(webApp);
+AddAuthenticationWebConfigModifications(webApp);
+AddMembershipWebConfigModifications(webApp);
+AddRoleManagerWebConfigModifications(webApp);
 
-         webApp.Update();
-         SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
+webApp.Update();
+SharePointWebConfigHelper.ApplyWebConfigModifications(webApp);
 
-         EnableAnonymousAccessOnRootWeb(webApp);
+EnableAnonymousAccessOnRootWeb(webApp);
 
-         ConfigureSqlRoleProviderJob.Register(webApp);
+ConfigureSqlRoleProviderJob.Register(webApp);
 ```
 
 Note how I infer the database server from the content database for the Web
@@ -355,11 +355,11 @@ The **AddAuthenticationWebConfigModifications** method adds the following
 elements to the Web.config files:
 
 ```XML
-    <authentication mode="{Windows|Forms}">
-      <forms
-        defaultUrl="/"
-        timeout="60" />
-    </authentication>
+<authentication mode="{Windows|Forms}">
+  <forms
+    defaultUrl="/"
+    timeout="60" />
+</authentication>
 ```
 
 Note that SharePoint automatically sets the `mode` attribute correctly in the
@@ -377,21 +377,21 @@ The **AddMembershipWebConfigModifications** method adds the following elements
 to the Web.config files:
 
 ```XML
-    <membership defaultProvider="FabrikamSqlMembershipProvider">
-      <providers>
-        <clear />
-        <add name="FabrikamSqlMembershipProvider"
-          type="System.Web.Security.SqlMembershipProvider, System.Web,
-            Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Site"
-          connectionStringName="FabrikamDemo"
-          enablePasswordReset="true"
-          enablePasswordRetrieval="false"
-          passwordFormat="Hashed"
-          requiresQuestionAndAnswer="true"
-          requiresUniqueEmail="true" />
-      </providers>
-    </membership>
+<membership defaultProvider="FabrikamSqlMembershipProvider">
+  <providers>
+    <clear />
+    <add name="FabrikamSqlMembershipProvider"
+      type="System.Web.Security.SqlMembershipProvider, System.Web,
+        Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+      applicationName="Fabrikam Site"
+      connectionStringName="FabrikamDemo"
+      enablePasswordReset="true"
+      enablePasswordRetrieval="false"
+      passwordFormat="Hashed"
+      requiresQuestionAndAnswer="true"
+      requiresUniqueEmail="true" />
+  </providers>
+</membership>
 ```
 
 Note that the collection of membership providers is cleared in the Web.config
@@ -404,16 +404,16 @@ The **AddRoleManagerWebConfigModifications** method adds the following elements
 to the Web.config files:
 
 ```XML
-    <roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
-      <providers>
-        <remove name="AspNetSqlRoleProvider" />
-        <add name="FabrikamSqlRoleProvider"
-          type="System.Web.Security.SqlRoleProvider, System.Web,
-            Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-          applicationName="Fabrikam Site"
-          connectionStringName="FabrikamDemo" />
-      </providers>
-    </roleManager>
+<roleManager defaultProvider="AspNetWindowsTokenRoleProvider" enabled="true">
+  <providers>
+    <remove name="AspNetSqlRoleProvider" />
+    <add name="FabrikamSqlRoleProvider"
+      type="System.Web.Security.SqlRoleProvider, System.Web,
+        Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+      applicationName="Fabrikam Site"
+      connectionStringName="FabrikamDemo" />
+  </providers>
+</roleManager>
 ```
 
 Notice that the default role provider is set to
@@ -441,70 +441,70 @@ using a method in the custom **SharePointWebHelper** class. However, first we
 must get the root **SPWeb** from the **SPWebApplication**:
 
 ```C#
-        internal static void EnableAnonymousAccessOnRootWeb(
-            SPWebApplication webApp)
-        {
-            Debug.Assert(webApp != null);
+internal static void EnableAnonymousAccessOnRootWeb(
+    SPWebApplication webApp)
+{
+    Debug.Assert(webApp != null);
 
-            using (SPSite site = webApp.Sites["/"])
-            {
-                SharePointWebHelper.EnableAnonymousAccess(site.RootWeb);
-            }
-        }
+    using (SPSite site = webApp.Sites["/"])
+    {
+        SharePointWebHelper.EnableAnonymousAccess(site.RootWeb);
+    }
+}
 ```
 
 Here's the relevant code from the **SharePointWebHelper** class:
 
 ```C#
-        /// <summary>
-        /// Ensures anonymous access is enabled on the specified site.
-        /// </summary>
-        /// <param name="web">The site on which anonymous access should be
-        /// enabled.</param>
-        public static void EnableAnonymousAccess(
-            SPWeb web)
-        {
-            if (web == null)
-            {
-                throw new ArgumentNullException("web");
-            }
+/// <summary>
+/// Ensures anonymous access is enabled on the specified site.
+/// </summary>
+/// <param name="web">The site on which anonymous access should be
+/// enabled.</param>
+public static void EnableAnonymousAccess(
+    SPWeb web)
+{
+    if (web == null)
+    {
+        throw new ArgumentNullException("web");
+    }
 
-            Logger.LogDebug(
-                CultureInfo.InvariantCulture,
-                "Enabling anonymous access on site ({0})...",
-                web.Url);
+    Logger.LogDebug(
+        CultureInfo.InvariantCulture,
+        "Enabling anonymous access on site ({0})...",
+        web.Url);
 
-            SPBasePermissions anonymousPermissionMask =
-                SPBasePermissions.Open
-                | SPBasePermissions.ViewFormPages
-                | SPBasePermissions.ViewListItems
-                | SPBasePermissions.ViewPages
-                | SPBasePermissions.ViewVersions;
+    SPBasePermissions anonymousPermissionMask =
+        SPBasePermissions.Open
+        | SPBasePermissions.ViewFormPages
+        | SPBasePermissions.ViewListItems
+        | SPBasePermissions.ViewPages
+        | SPBasePermissions.ViewVersions;
 
-            if (web.AnonymousPermMask64 ==
-                anonymousPermissionMask)
-            {
-                Logger.LogDebug(
-                    CultureInfo.InvariantCulture,
-                    "Anonymous access is already enabled on site ({0}).",
-                    web.Url);
+    if (web.AnonymousPermMask64 ==
+        anonymousPermissionMask)
+    {
+        Logger.LogDebug(
+            CultureInfo.InvariantCulture,
+            "Anonymous access is already enabled on site ({0}).",
+            web.Url);
 
-                return;
-            }
+        return;
+    }
 
-            if (web.HasUniqueRoleAssignments == false)
-            {
-                web.BreakRoleInheritance(true);
-            }
+    if (web.HasUniqueRoleAssignments == false)
+    {
+        web.BreakRoleInheritance(true);
+    }
 
-            web.AnonymousPermMask64 = anonymousPermissionMask;
-            web.Update();
+    web.AnonymousPermMask64 = anonymousPermissionMask;
+    web.Update();
 
-            Logger.LogInfo(
-                CultureInfo.InvariantCulture,
-                "Successfully enabled anonymous access on site ({0}).",
-                web.Url);
-        }
+    Logger.LogInfo(
+        CultureInfo.InvariantCulture,
+        "Successfully enabled anonymous access on site ({0}).",
+        web.Url);
+}
 ```
 
 #### ConfigureSqlRoleProviderJob

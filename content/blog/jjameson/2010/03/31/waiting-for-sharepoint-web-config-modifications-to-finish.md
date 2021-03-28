@@ -70,25 +70,25 @@ To avoid the error, I added a little bit of code to the
 class in the **ApplyWebConfigModifications** method:
 
 ```C#
-            if (webApp.Farm.TimerService.Instances.Count > 1)
-            {
-                // HACK:
-                //
-                // When there are multiple front-end Web servers in the
-                // SharePoint farm, we need to wait for the timer job that
-                // performs the Web.config modifications to complete before
-                // continuing. Otherwise, we may encounter the following error
-                // (e.g. when applying Web.config changes from two different
-                // features in rapid succession):
-                //
-                // "A web configuration modification operation is already
-                // running."
-                //
-                SharePointTimerJobHelper.WaitForOnetimeJobToFinish(
-                   webApp.Farm,
-                   "Windows SharePoint Services Web.Config Update",
-                   20);
-            }
+if (webApp.Farm.TimerService.Instances.Count > 1)
+{
+    // HACK:
+    //
+    // When there are multiple front-end Web servers in the
+    // SharePoint farm, we need to wait for the timer job that
+    // performs the Web.config modifications to complete before
+    // continuing. Otherwise, we may encounter the following error
+    // (e.g. when applying Web.config changes from two different
+    // features in rapid succession):
+    //
+    // "A web configuration modification operation is already
+    // running."
+    //
+    SharePointTimerJobHelper.WaitForOnetimeJobToFinish(
+       webApp.Farm,
+       "Windows SharePoint Services Web.Config Update",
+       20);
+}
 ```
 
 As you can see, most of the work is delegated to the

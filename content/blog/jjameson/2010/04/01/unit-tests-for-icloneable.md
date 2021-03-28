@@ -57,101 +57,101 @@ simple unit test that clones an object and then verifies that all of the members
 are still equal:
 
 ```C#
-        /// <summary>
-        /// Validates that an object is cloned as expected.
-        /// </summary>
-        [TestMethod()]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Microsoft.Usage",
-            "CA2234:PassSystemUriObjectsInsteadOfStrings")]
-        public void Clone001()
-        {
-            const string searchUrl =
-                "/en-US/Search/Pages/default.aspx"
-                    + "?k=purification"
-                    + "&s=English+(U.S.)+Content"
-                    + "&a=ContentTypeName:Brochure";
+/// <summary>
+/// Validates that an object is cloned as expected.
+/// </summary>
+[TestMethod()]
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "Microsoft.Usage",
+    "CA2234:PassSystemUriObjectsInsteadOfStrings")]
+public void Clone001()
+{
+    const string searchUrl =
+        "/en-US/Search/Pages/default.aspx"
+            + "?k=purification"
+            + "&s=English+(U.S.)+Content"
+            + "&a=ContentTypeName:Brochure";
 
-            const string expectedUrl = searchUrl;
-            const string expectedPath =
-                "/en-US/Search/Pages/default.aspx";
+    const string expectedUrl = searchUrl;
+    const string expectedPath =
+        "/en-US/Search/Pages/default.aspx";
 
-            const string expectedScope = "English (U.S.) Content";
-            const string expectedKeywords = "purification";
-            const string expectedAdditionalQueryTerms =
-                "ContentTypeName:Brochure";
+    const string expectedScope = "English (U.S.) Content";
+    const string expectedKeywords = "purification";
+    const string expectedAdditionalQueryTerms =
+        "ContentTypeName:Brochure";
 
-            SharePointSearchUrlBuilder urlBuilder =
-                new SharePointSearchUrlBuilder(searchUrl);
+    SharePointSearchUrlBuilder urlBuilder =
+        new SharePointSearchUrlBuilder(searchUrl);
 
-            SharePointSearchUrlBuilder clone =
-                (SharePointSearchUrlBuilder)urlBuilder.Clone();
+    SharePointSearchUrlBuilder clone =
+        (SharePointSearchUrlBuilder)urlBuilder.Clone();
 
-            string actualUrl = clone.ToString();
+    string actualUrl = clone.ToString();
 
-            Assert.AreNotSame(urlBuilder, clone);
-            Assert.AreEqual(expectedUrl, actualUrl);
-            Assert.AreEqual(expectedPath, clone.Path);
-            Assert.AreEqual(expectedKeywords, clone.Keywords);
-            Assert.AreEqual(expectedScope, clone.Scope);
-            Assert.AreEqual(expectedAdditionalQueryTerms,
-                clone.AdditionalQueryTerms);
+    Assert.AreNotSame(urlBuilder, clone);
+    Assert.AreEqual(expectedUrl, actualUrl);
+    Assert.AreEqual(expectedPath, clone.Path);
+    Assert.AreEqual(expectedKeywords, clone.Keywords);
+    Assert.AreEqual(expectedScope, clone.Scope);
+    Assert.AreEqual(expectedAdditionalQueryTerms,
+        clone.AdditionalQueryTerms);
 
-        }
+}
 ```
 
 Next, I create a unit test that clones an object, subsequently changes the
 original object, and then verifies that the cloned object is not modified:
 
 ```C#
-        /// <summary>
-        /// Validates that a deep copy is made when an object is cloned.
-        /// </summary>
-        [TestMethod()]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage(
-            "Microsoft.Usage",
-            "CA2234:PassSystemUriObjectsInsteadOfStrings")]
-        public void Clone002()
-        {
-            const string searchUrl =
-                "/en-US/Search/Pages/default.aspx"
-                    + "?k=purification"
-                    + "&s=English+(U.S.)+Content"
-                    + "&a=ContentTypeName:Brochure";
+/// <summary>
+/// Validates that a deep copy is made when an object is cloned.
+/// </summary>
+[TestMethod()]
+[System.Diagnostics.CodeAnalysis.SuppressMessage(
+    "Microsoft.Usage",
+    "CA2234:PassSystemUriObjectsInsteadOfStrings")]
+public void Clone002()
+{
+    const string searchUrl =
+        "/en-US/Search/Pages/default.aspx"
+            + "?k=purification"
+            + "&s=English+(U.S.)+Content"
+            + "&a=ContentTypeName:Brochure";
 
-            const string expectedUrl = searchUrl;
-            const string expectedPath =
-                "/en-US/Search/Pages/default.aspx";
+    const string expectedUrl = searchUrl;
+    const string expectedPath =
+        "/en-US/Search/Pages/default.aspx";
 
-            const string expectedScope = "English (U.S.) Content";
-            const string expectedKeywords = "purification";
-            const string expectedAdditionalQueryTerms =
-                "ContentTypeName:Brochure";
+    const string expectedScope = "English (U.S.) Content";
+    const string expectedKeywords = "purification";
+    const string expectedAdditionalQueryTerms =
+        "ContentTypeName:Brochure";
 
-            SharePointSearchUrlBuilder urlBuilder =
-                new SharePointSearchUrlBuilder(searchUrl);
+    SharePointSearchUrlBuilder urlBuilder =
+        new SharePointSearchUrlBuilder(searchUrl);
 
-            SharePointSearchUrlBuilder clone =
-                (SharePointSearchUrlBuilder)urlBuilder.Clone();
+    SharePointSearchUrlBuilder clone =
+        (SharePointSearchUrlBuilder)urlBuilder.Clone();
 
-            urlBuilder.Keywords = "purificación";
-            urlBuilder.Scope = "Spanish Content";
-            urlBuilder.AdditionalQueryTerms = "ContentTypeName:Manual";
-            urlBuilder.AddPropertyFilter(
-                "ContentTypeName",
-                "MSDS");
+    urlBuilder.Keywords = "purificación";
+    urlBuilder.Scope = "Spanish Content";
+    urlBuilder.AdditionalQueryTerms = "ContentTypeName:Manual";
+    urlBuilder.AddPropertyFilter(
+        "ContentTypeName",
+        "MSDS");
 
-            string actualUrl = clone.ToString();
+    string actualUrl = clone.ToString();
 
-            Assert.AreNotSame(urlBuilder, clone);
-            Assert.AreEqual(expectedUrl, actualUrl);
-            Assert.AreEqual(expectedPath, clone.Path);
-            Assert.AreEqual(expectedKeywords, clone.Keywords);
-            Assert.AreEqual(expectedScope, clone.Scope);
-            Assert.AreEqual(expectedAdditionalQueryTerms,
-                clone.AdditionalQueryTerms);
+    Assert.AreNotSame(urlBuilder, clone);
+    Assert.AreEqual(expectedUrl, actualUrl);
+    Assert.AreEqual(expectedPath, clone.Path);
+    Assert.AreEqual(expectedKeywords, clone.Keywords);
+    Assert.AreEqual(expectedScope, clone.Scope);
+    Assert.AreEqual(expectedAdditionalQueryTerms,
+        clone.AdditionalQueryTerms);
 
-        }
+}
 ```
 
 Note that the second unit test makes the calls to `Assert.AreNotSame`
@@ -164,24 +164,24 @@ cloning an object, as shown in the following example for the
 **SharePointSearchUrlBuilder** class:
 
 ```C#
-        /// <summary>
-        /// Creates a new object that is a deep copy of the current instance.
-        /// </summary>
-        /// <returns>A new object that is a deep copy of this instance.</returns>
-        public object Clone()
-        {
-            SharePointSearchUrlBuilder clone =
-                new SharePointSearchUrlBuilder();
+/// <summary>
+/// Creates a new object that is a deep copy of the current instance.
+/// </summary>
+/// <returns>A new object that is a deep copy of this instance.</returns>
+public object Clone()
+{
+    SharePointSearchUrlBuilder clone =
+        new SharePointSearchUrlBuilder();
 
-            clone.cachedSearchUrl = this.cachedSearchUrl;
-            clone.path = this.path;
+    clone.cachedSearchUrl = this.cachedSearchUrl;
+    clone.path = this.path;
 
-            if (this.queryStringParams != null)
-            {
-                clone.queryStringParams =
-                    new Dictionary<string, string>(this.queryStringParams);
-            }
+    if (this.queryStringParams != null)
+    {
+        clone.queryStringParams =
+            new Dictionary<string, string>(this.queryStringParams);
+    }
 
-            return clone;
-        }
+    return clone;
+}
 ```

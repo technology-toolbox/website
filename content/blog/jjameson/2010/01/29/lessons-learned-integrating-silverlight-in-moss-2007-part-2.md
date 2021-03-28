@@ -34,18 +34,18 @@ hosted within a generic _User Control Web Part_ (similar to
 I also mentioned that the user control originally contained the following code:
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="100%" height="100%">
-        <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
-        <param name="onError" value="onSilverlightError" />
-        <param name="background" value="white" />
-        <param name="minRuntimeVersion" value="3.0.40624.0" />
-        <param name="autoUpgrade" value="true" />
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="100%" height="100%">
+    <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
+    <param name="onError" value="onSilverlightError" />
+    <param name="background" value="white" />
+    <param name="minRuntimeVersion" value="3.0.40624.0" />
+    <param name="autoUpgrade" value="true" />
+    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>
 ```
 
 There are two problems with this code.
@@ -80,34 +80,34 @@ file, I modified the user control that hosts the Silverlight application as
 follows:
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="380px" height="410px" onFocus="this.style.outline='none';">
-        <param name="source" value="<%= serviceWheelPackageUrl %>" />
-        ...
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="380px" height="410px" onFocus="this.style.outline='none';">
+    <param name="source" value="<%= serviceWheelPackageUrl %>" />
+    ...
+</object>
 ```
 
 The `serviceWheelPackageUrl` variable is defined and set in the code-behind for
 the ASCX file:
 
 ```C#
-    public partial class ServiceWheel : System.Web.UI.UserControl
+public partial class ServiceWheel : System.Web.UI.UserControl
+{
+    protected string serviceWheelPackageUrl;
+
+    protected void Page_Load(
+        object sender,
+        EventArgs e)
     {
-        protected string serviceWheelPackageUrl;
-
-        protected void Page_Load(
-            object sender,
-            EventArgs e)
-        {
-            serviceWheelPackageUrl = SPUtility.MakeBrowserCacheSafeLayoutsUrl(
-                "Fabrikam/Fabrikam.Portal.Web.ServiceWheel.xap",
-                false);
-
-            ...
-        }
+        serviceWheelPackageUrl = SPUtility.MakeBrowserCacheSafeLayoutsUrl(
+            "Fabrikam/Fabrikam.Portal.Web.ServiceWheel.xap",
+            false);
 
         ...
     }
+
+    ...
+}
 ```
 
 Consequently, whenever a page is requested with the Silverlight control the
@@ -130,10 +130,10 @@ of keeping this post reasonably short, I'll only cover two of them here.
 The second problem is a rather obscure issue in the `<img>` element:
 
 ```XML
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
+<a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+    <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
+        style="border-style: none" />
+</a>
 ```
 
 The intent of this markup is to show an image link to "Get Microsoft Silveright"
@@ -180,14 +180,14 @@ warnings in Firefox), we decided to simply host the InstallSilverlight.png image
 locally on our SharePoint servers (deployed via **Fabrikam.Portal.Web.wsp**):
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="380px" height="410px" onFocus="this.style.outline='none';">
-        ...
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="/_layouts/Images/Fabrikam/InstallSilverlight.png" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="380px" height="410px" onFocus="this.style.outline='none';">
+    ...
+    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <img src="/_layouts/Images/Fabrikam/InstallSilverlight.png" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>
 ```
 
 In hindsight, I suppose for consistency we could have used the

@@ -120,11 +120,11 @@ The above error occurs when the master page contains something like the
 following:
 
 ```ASP.NET
-            <asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
-                SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
-                RenderCurrentNodeAsLink="true"
-                SkipLinkText=""
-                OnPreRender="BreadcrumbSiteMapPath_OnPreRender">
+<asp:SiteMapPath ID="BreadcrumbSiteMapPath" Runat="server"
+    SiteMapProvider="CurrentNavSiteMapProviderNoEncode"
+    RenderCurrentNodeAsLink="true"
+    SkipLinkText=""
+    OnPreRender="BreadcrumbSiteMapPath_OnPreRender">
 ```
 
 I attempted to resolve this by converting the

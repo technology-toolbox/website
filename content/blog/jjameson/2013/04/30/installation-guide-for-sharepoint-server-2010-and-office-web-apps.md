@@ -1878,10 +1878,10 @@ To configure the Central Administration Web.config file:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
-        <connectionStrings>
-          <add name="FabrikamDemo"
-            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
+      <connectionStrings>
+        <add name="FabrikamDemo"
+          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+      </connectionStrings>
       ```
 
       {{< div-block-start "note important" >}}
@@ -1990,10 +1990,10 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
-        <connectionStrings>
-          <add name="FabrikamDemo"
-            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
+      <connectionStrings>
+        <add name="FabrikamDemo"
+          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+      </connectionStrings>
       ```
 
       {{< div-block-start "note important" >}}

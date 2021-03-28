@@ -100,25 +100,25 @@ grouping posts by year/month into the equivalent LINQ query against the data
 model. This is what I ended up:
 
 ```C#
-    var q = from entry in context.Entries
-            group entry by entry.DateSyndicated.Value.Year
-                into YearGroups
-            orderby YearGroups.Key descending
-            select new
-            {
-                Year = YearGroups.Key,
-                MonthGroups =
-                    from yearGroup in YearGroups
-                    group yearGroup
-                        by yearGroup.DateSyndicated.Value.Month
-                        into MonthGroups
-                    orderby MonthGroups.Key descending
-                    select new
-                    {
-                        Month = MonthGroups.Key,
-                        Count = MonthGroups.Count()
-                    }
-            };
+var q = from entry in context.Entries
+        group entry by entry.DateSyndicated.Value.Year
+            into YearGroups
+        orderby YearGroups.Key descending
+        select new
+        {
+            Year = YearGroups.Key,
+            MonthGroups =
+                from yearGroup in YearGroups
+                group yearGroup
+                    by yearGroup.DateSyndicated.Value.Month
+                    into MonthGroups
+                orderby MonthGroups.Key descending
+                select new
+                {
+                    Month = MonthGroups.Key,
+                    Count = MonthGroups.Count()
+                }
+        };
 ```
 
 It might look a little nasty at first glance, so you may want think of it as a
@@ -275,13 +275,13 @@ query results:
 The **GetMonthName** method is, as expected, rather trivial:
 
 ```C#
-        private static string GetMonthName(
-            int month)
-        {
-            DateTime date = new DateTime(2011, month, 1);
+private static string GetMonthName(
+    int month)
+{
+    DateTime date = new DateTime(2011, month, 1);
 
-            return date.ToString("MMMM", CultureInfo.CurrentCulture);
-        }
+    return date.ToString("MMMM", CultureInfo.CurrentCulture);
+}
 ```
 
 {{< div-block "note" >}}

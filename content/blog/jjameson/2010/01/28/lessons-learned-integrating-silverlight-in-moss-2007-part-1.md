@@ -91,18 +91,18 @@ the original developer integrated the XAP file into the WSP file.
 Originally, the user control contained the following code:
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="100%" height="100%">
-        <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
-        <param name="onError" value="onSilverlightError" />
-        <param name="background" value="white" />
-        <param name="minRuntimeVersion" value="3.0.40624.0" />
-        <param name="autoUpgrade" value="true" />
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="100%" height="100%">
+    <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
+    <param name="onError" value="onSilverlightError" />
+    <param name="background" value="white" />
+    <param name="minRuntimeVersion" value="3.0.40624.0" />
+    <param name="autoUpgrade" value="true" />
+    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>
 ```
 
 Notice that the XAP file is deployed to the \_layouts folder -- and in
@@ -128,10 +128,10 @@ the XAP file...
 ...and the manifest.xml file was updated to deploy the XAP file from the WSP:
 
 ```XML
-  <TemplateFiles>
-    ...
-    <TemplateFile Location="Layouts\Fabrikam\Wheel.xap" />
-  </TemplateFiles>
+<TemplateFiles>
+  ...
+  <TemplateFile Location="Layouts\Fabrikam\Wheel.xap" />
+</TemplateFiles>
 ```
 
 Note that the developer also had to manually configure the build order to ensure
@@ -185,17 +185,17 @@ the WSP, I made the following changes:
   then editing the MSBuild file directly) to include the following:
 
 ```XML
-  <PropertyGroup>
-    <!-- Add the file extension for Silverlight application packages (.xap) to
-    the list of extensions that reference resolution considers when looking for
-    files related to resolved references (i.e. project references). This ensures
-    that .xap files are copied to the output folder for this project and
-    subsequently added to the SharePoint Web solution package (WSP). -->
-    <AllowedReferenceRelatedFileExtensions>
-      $(AllowedReferenceRelatedFileExtensions);
-      .xap
-    </AllowedReferenceRelatedFileExtensions>
-  </PropertyGroup>
+<PropertyGroup>
+  <!-- Add the file extension for Silverlight application packages (.xap) to
+  the list of extensions that reference resolution considers when looking for
+  files related to resolved references (i.e. project references). This ensures
+  that .xap files are copied to the output folder for this project and
+  subsequently added to the SharePoint Web solution package (WSP). -->
+  <AllowedReferenceRelatedFileExtensions>
+    $(AllowedReferenceRelatedFileExtensions);
+    .xap
+  </AllowedReferenceRelatedFileExtensions>
+</PropertyGroup>
 ```
 
 This -- along with the project reference mentioned above -- ensures that the WSP

@@ -131,7 +131,7 @@ we could simply create an error page and use the `<customErrors> `element in the
 Web.config file:
 
 ```XML
-    <customErrors defaultRedirect="/Error.aspx" mode="On" />
+<customErrors defaultRedirect="/Error.aspx" mode="On" />
 ```
 
 However, that doesn't work in SharePoint applications, because SharePoint has
@@ -497,19 +497,19 @@ Unfortunately, I'm not aware of any way to do this using OOTB functionality
 custom code to create the event source (assuming you have permissions to do so):
 
 ```C#
-        private static string AddEventLogSource(
-            string source)
-        {
-            Debug.Assert(string.IsNullOrEmpty(source) == false);
+private static string AddEventLogSource(
+    string source)
+{
+    Debug.Assert(string.IsNullOrEmpty(source) == false);
 
-            bool sourceExists = EventLog.SourceExists(source);
-            if (sourceExists == false)
-            {
-                EventLog.CreateEventSource(source, "Application");
-            }
+    bool sourceExists = EventLog.SourceExists(source);
+    if (sourceExists == false)
+    {
+        EventLog.CreateEventSource(source, "Application");
+    }
 
-            return "Operation completed successfully.";
-        }
+    return "Operation completed successfully.";
+}
 ```
 
 However, even after creating the event source, you still can't use the
@@ -1130,33 +1130,33 @@ custom **Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener**
 in the Web.config file:
 
 ```XML
-  <system.diagnostics>
-    <sources>
-      <source name="defaultTraceSource" switchName="allTraceLevel">
-        <listeners>
-          <add name="eventLogTraceListener" />
-        </listeners>
-      </source>
-    </sources>
-    <sharedListeners>
-      <add type="Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener,
-          Fabrikam.Demo.CoreServices.SharePoint, Version=1.0.0.0,
-          Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
-        name="eventLogTraceListener"
-        initializeData="Fabrikam Site">
-        <filter type="System.Diagnostics.EventTypeFilter"
-          initializeData="Information" />
-      </add>
-    </sharedListeners>
-    <switches>
-      <add name="allTraceLevel" value="All" />
-      <add name="verboseTraceLevel" value="Verbose" />
-      <add name="infoTraceLevel" value="Info" />
-      <add name="warningTraceLevel" value="Warning" />
-      <add name="errorTraceLevel" value="Error" />
-      <add name="offTraceLevel" value="Off" />
-    </switches>
-  </system.diagnostics>
+<system.diagnostics>
+  <sources>
+    <source name="defaultTraceSource" switchName="allTraceLevel">
+      <listeners>
+        <add name="eventLogTraceListener" />
+      </listeners>
+    </source>
+  </sources>
+  <sharedListeners>
+    <add type="Fabrikam.Demo.CoreServices.SharePoint.SharePointEventLogTraceListener,
+        Fabrikam.Demo.CoreServices.SharePoint, Version=1.0.0.0,
+        Culture=neutral, PublicKeyToken=786f58ca4a6e3f60"
+      name="eventLogTraceListener"
+      initializeData="Fabrikam Site">
+      <filter type="System.Diagnostics.EventTypeFilter"
+        initializeData="Information" />
+    </add>
+  </sharedListeners>
+  <switches>
+    <add name="allTraceLevel" value="All" />
+    <add name="verboseTraceLevel" value="Verbose" />
+    <add name="infoTraceLevel" value="Info" />
+    <add name="warningTraceLevel" value="Warning" />
+    <add name="errorTraceLevel" value="Error" />
+    <add name="offTraceLevel" value="Off" />
+  </switches>
+</system.diagnostics>
 ```
 
 ...and, voilà! Everything just works!

@@ -62,25 +62,25 @@ I fetch each particular page from the collection using the indexer (i.e. the
 Here is the original code I started out with:
 
 ```C#
-        private static void AppendPages(
-            SPWeb web,
-            TextWriter writer)
-        {
-            Debug.Assert(web != null);
-            Debug.Assert(writer != null);
+private static void AppendPages(
+    SPWeb web,
+    TextWriter writer)
+{
+    Debug.Assert(web != null);
+    Debug.Assert(writer != null);
 
-            List<string> pageUrls = GetSitePagesInNavigationOrder(web);
+    List<string> pageUrls = GetSitePagesInNavigationOrder(web);
 
-            PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
+    PublishingWeb pubWeb = PublishingWeb.GetPublishingWeb(web);
 
-            PublishingPageCollection pages = pubWeb.GetPublishingPages();
+    PublishingPageCollection pages = pubWeb.GetPublishingPages();
 
-            foreach (string pageUrl in pageUrls)
-            {
-                PublishingPage page = pages[pageUrl];
-                AppendPage(writer, page);
-            }
-        }
+    foreach (string pageUrl in pageUrls)
+    {
+        PublishingPage page = pages[pageUrl];
+        AppendPage(writer, page);
+    }
+}
 ```
 
 After getting the basic implementation working, I fired up SQL Server Profiler
@@ -104,7 +104,7 @@ property resulted in several database calls. Specifically, the following
 statement results in **four** calls to SQL Server:
 
 ```
-                PublishingPage page = pages[pageUrl];
+PublishingPage page = pages[pageUrl];
 ```
 
 Consequently, I refactored the code a little to see if I could significantly
@@ -115,25 +115,25 @@ I found that by replacing the **PublishingPageCollection** indexer with my own
 432 to 244):
 
 ```C#
-        private static PublishingPage GetPublishingPage2(
-            PublishingPageCollection pages,
-            string pageUrl)
+private static PublishingPage GetPublishingPage2(
+    PublishingPageCollection pages,
+    string pageUrl)
+{
+    Debug.Assert(pages != null);
+    Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
+
+    foreach (PublishingPage page in pages)
+    {
+        if (page.Url == pageUrl)
         {
-            Debug.Assert(pages != null);
-            Debug.Assert(string.IsNullOrEmpty(pageUrl) == false);
-
-            foreach (PublishingPage page in pages)
-            {
-                if (page.Url == pageUrl)
-                {
-                    return page;
-                }
-            }
-
-            throw new ArgumentException(
-                "The specified page was not found in the collection.",
-                "pageUrl");
+            return page;
         }
+    }
+
+    throw new ArgumentException(
+        "The specified page was not found in the collection.",
+        "pageUrl");
+}
 ```
 
 I'll be the first to admit that this code certainly seems a little "wonky."
@@ -153,12 +153,12 @@ For example, accessing the
 property, as shown below, actually results in two database roundtrips:
 
 ```C#
-            const string expectedPageLayout = "PageFromDocLayout.aspx";
+const string expectedPageLayout = "PageFromDocLayout.aspx";
 
-            if (page.Layout.Name != expectedPageLayout)
-            {
-                ...
-            }
+if (page.Layout.Name != expectedPageLayout)
+{
+    ...
+}
 ```
 
 Personally, I'm not a big fan of implicit lazy loading like this in public APIs

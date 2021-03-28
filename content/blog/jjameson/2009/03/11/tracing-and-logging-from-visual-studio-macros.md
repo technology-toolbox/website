@@ -44,20 +44,20 @@ run one of my macros that implements tracing (i.e. writes output). This is done
 via the `GetMacroOutputPane()` function, as shown below.
 
 ```VBA
-    Private Function GetMacroOutputPane() As OutputWindowPane
-        Dim ow As OutputWindow = _
-            DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
+Private Function GetMacroOutputPane() As OutputWindowPane
+    Dim ow As OutputWindow = _
+        DTE.Windows.Item(Constants.vsWindowKindOutput).Object()
 
-        Dim outputPane As OutputWindowPane
+    Dim outputPane As OutputWindowPane
 
-        Try
-            outputPane = ow.OutputWindowPanes.Item("Macros")
-        Catch ex As Exception
-            outputPane = ow.OutputWindowPanes.Add("Macros")
-        End Try
+    Try
+        outputPane = ow.OutputWindowPanes.Item("Macros")
+    Catch ex As Exception
+        outputPane = ow.OutputWindowPanes.Add("Macros")
+    End Try
 
-        Return outputPane
-    End Function
+    Return outputPane
+End Function
 ```
 
 Pretty simple, eh? If the macro output pane exists, then use it; otherwise add a
@@ -67,19 +67,19 @@ In order to simplify writing output messages -- as well as timestamp each
 message as it is written -- I use the `WriteOutput()` method
 
 ```VBA
-    Private Sub WriteOutput( _
-        ByVal s As String)
+Private Sub WriteOutput( _
+    ByVal s As String)
 
-        Dim buffer As StringBuilder = New StringBuilder
+    Dim buffer As StringBuilder = New StringBuilder
 
-        buffer.Append(Date.Now.ToLongTimeString())
-        buffer.Append(" ")
-        buffer.Append(s)
-        buffer.Append(vbCrLf)
+    buffer.Append(Date.Now.ToLongTimeString())
+    buffer.Append(" ")
+    buffer.Append(s)
+    buffer.Append(vbCrLf)
 
-        Dim output As String = buffer.ToString()
+    Dim output As String = buffer.ToString()
 
-        Dim outputPane As OutputWindowPane = GetMacroOutputPane()
-        outputPane.OutputString(output)
-    End Sub
+    Dim outputPane As OutputWindowPane = GetMacroOutputPane()
+    outputPane.OutputString(output)
+End Sub
 ```

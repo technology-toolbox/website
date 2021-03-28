@@ -387,10 +387,10 @@ necessary to modify the Web.config files for the following sites:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
-        <connectionStrings>
-          <add name="FabrikamDemo"
-            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
+      <connectionStrings>
+        <add name="FabrikamDemo"
+          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+      </connectionStrings>
       ```
 
       {{< div-block-start "note important" >}}
@@ -480,10 +480,10 @@ necessary to modify the Web.config files for the following sites:
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
-        <connectionStrings>
-          <add name="FabrikamDemo"
-            connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
-        </connectionStrings>
+      <connectionStrings>
+        <add name="FabrikamDemo"
+          connectionString="Server={databaseServer};Database=FabrikamDemo;Integrated Security=true" />
+      </connectionStrings>
       ```
 
       {{< div-block-start "note important" >}}

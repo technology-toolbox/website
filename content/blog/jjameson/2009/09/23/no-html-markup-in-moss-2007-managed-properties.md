@@ -66,54 +66,54 @@ to automatically set this field whenever an item is updated (by extracting the
 image URL from the PublishingRollupImage field).
 
 ```C#
-        public override void ItemUpdating(
-            SPItemEventProperties properties)
-        {
-            SPListItem updatedPage = properties.ListItem;
+public override void ItemUpdating(
+    SPItemEventProperties properties)
+{
+    SPListItem updatedPage = properties.ListItem;
 
-            // Update PublishingRollupImageUrl (a simple Text field) based on
-            // PublishingRollupImage (a Publishing Image field).
-            // Note that Publishing Image fields are not compatible with
-            // SharePoint Search (i.e. attempting to map a managed property
-            // to a Publishing Image field results in a managed property
-            // that is always empty).
-            ImageFieldValue searchImage =
-                (ImageFieldValue)updatedPage["Rollup Image"];
+    // Update PublishingRollupImageUrl (a simple Text field) based on
+    // PublishingRollupImage (a Publishing Image field).
+    // Note that Publishing Image fields are not compatible with
+    // SharePoint Search (i.e. attempting to map a managed property
+    // to a Publishing Image field results in a managed property
+    // that is always empty).
+    ImageFieldValue searchImage =
+        (ImageFieldValue)updatedPage["Rollup Image"];
 
-            if (searchImage == null)
-            {
-                Logger.LogInfo(
-                    CultureInfo.InvariantCulture,
-                    "Setting PublishingRollupImageUrl on page ({0}/{1})"
-                        + " to null because no rollup image is specified.",
-                    updatedPage.Web.Url,
-                    updatedPage.Url);
+    if (searchImage == null)
+    {
+        Logger.LogInfo(
+            CultureInfo.InvariantCulture,
+            "Setting PublishingRollupImageUrl on page ({0}/{1})"
+                + " to null because no rollup image is specified.",
+            updatedPage.Web.Url,
+            updatedPage.Url);
 
-                updatedPage["Rollup Image URL"] = null;
-            }
-            else
-            {
-                Logger.LogInfo(
-                    CultureInfo.InvariantCulture,
-                    "Setting PublishingRollupImageUrl on page ({0}/{1})"
-                        + " to '{2}'.",
-                    updatedPage.Web.Url,
-                    updatedPage.Url,
-                    searchImage.ImageUrl);
+        updatedPage["Rollup Image URL"] = null;
+    }
+    else
+    {
+        Logger.LogInfo(
+            CultureInfo.InvariantCulture,
+            "Setting PublishingRollupImageUrl on page ({0}/{1})"
+                + " to '{2}'.",
+            updatedPage.Web.Url,
+            updatedPage.Url,
+            searchImage.ImageUrl);
 
-                updatedPage["Rollup Image URL"] = searchImage.ImageUrl;
-            }
+        updatedPage["Rollup Image URL"] = searchImage.ImageUrl;
+    }
 
-            try
-            {
-                this.DisableEventFiring();
-                updatedPage.SystemUpdate(false);
-            }
-            finally
-            {
-                this.EnableEventFiring();
-            }
-        }
+    try
+    {
+        this.DisableEventFiring();
+        updatedPage.SystemUpdate(false);
+    }
+    finally
+    {
+        this.EnableEventFiring();
+    }
+}
 ```
 
 You can then create the **PublishingRollupImage** managed property, map it to

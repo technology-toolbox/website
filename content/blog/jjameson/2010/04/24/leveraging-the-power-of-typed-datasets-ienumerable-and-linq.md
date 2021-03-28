@@ -55,14 +55,14 @@ return a DataSet given a list of client sites (i.e. an array of site IDs --
 where each site ID is a `string`):
 
 ```C#
-    public static class ScorecardService
+public static class ScorecardService
+{
+    public static ScorecardData GetScorecardData(
+        string[] sites)
     {
-        public static ScorecardData GetScorecardData(
-            string[] sites)
-        {
-            ...
-        }
+        ...
     }
+}
 ```
 
 Note that the presentation layer simply needs to know a list of sites to
@@ -77,11 +77,11 @@ data in the presentation layer, we can instead add another method to the
 **ScorecardService** class:
 
 ```C#
-        public static DataTable GetScorecardSummaryTable(
-            ScorecardData data)
-        {
-            ...
-        }
+public static DataTable GetScorecardSummaryTable(
+    ScorecardData data)
+{
+    ...
+}
 ```
 
 The purpose of **GetScorecardSummaryTable** is to aggregate the list of KPIs
@@ -133,12 +133,12 @@ information in a detail view on the right side of the page. Consequently, we add
 another method to the **ScorecardService** class:
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            ScorecardData data,
-            string selectedKpiName)
-        {
-            ...
-        }
+public static DataTable GetScorecardDetailTable(
+    ScorecardData data,
+    string selectedKpiName)
+{
+    ...
+}
 ```
 
 Similar to the **GetScorecardSummaryTable** method, the
@@ -193,22 +193,22 @@ that are added to the summary table. In other words, we could refactor the
 **GetScorecardSummaryTable** method to add an overload, as follows:
 
 ```C#
-        public static DataTable GetScorecardSummaryTable(
-            ScorecardData data)
-        {
-            return GetScorecardSummaryTable(data, null);
-        }
+public static DataTable GetScorecardSummaryTable(
+    ScorecardData data)
+{
+    return GetScorecardSummaryTable(data, null);
+}
 
-        public static DataTable GetScorecardSummaryTable(
-            ScorecardData data,
-            string selectedClientSiteId)
-        {
-            ...
+public static DataTable GetScorecardSummaryTable(
+    ScorecardData data,
+    string selectedClientSiteId)
+{
+    ...
 
-            // If selectedClientSiteId is specified, then filter the scorecard
-            // items accordingly
-            ...
-        }
+    // If selectedClientSiteId is specified, then filter the scorecard
+    // items accordingly
+    ...
+}
 ```
 
 To be honest, I've used this approach in the past, and while it is relatively
@@ -250,22 +250,22 @@ change any existing unit tests -- we keep the original method, but simply have
 it call the new overload (passing in all rows from the **ScorecardItem** table):
 
 ```C#
-        public static DataTable GetScorecardSummaryTable(
-            ScorecardData data)
-        {
-            if (data == null)
-            {
-                throw new ArgumentNullException("data");
-            }
+public static DataTable GetScorecardSummaryTable(
+    ScorecardData data)
+{
+    if (data == null)
+    {
+        throw new ArgumentNullException("data");
+    }
 
-            return GetScorecardSummaryTable(data.ScorecardItem);
-        }
+    return GetScorecardSummaryTable(data.ScorecardItem);
+}
 
-        public static DataTable GetScorecardSummaryTable(
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
-        {
-            ...
-        }
+public static DataTable GetScorecardSummaryTable(
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+{
+    ...
+}
 ```
 
 This turns out to be incredibly powerful because, in the presentation layer, we
@@ -277,19 +277,19 @@ scorecard data by providing a list of sites (in other words, get an instance of
 the **ScorecardData** DataSet), and subsequently determine which items to show:
 
 ```C#
-        private void UpdateScorecardSummaryView()
-        {
-            Debug.Assert(scorecardData != null);
+private void UpdateScorecardSummaryView()
+{
+    Debug.Assert(scorecardData != null);
 
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems =
-                GetScorecardItemsToShowInKpiSummary();
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems =
+        GetScorecardItemsToShowInKpiSummary();
 
-            DataTable summaryTable = ScorecardService.GetScorecardSummaryTable(
-                scorecardItems);
+    DataTable summaryTable = ScorecardService.GetScorecardSummaryTable(
+        scorecardItems);
 
-            ScorecardSummaryView.DataSource = summaryTable;
-            ScorecardSummaryView.DataBind();
-        }
+    ScorecardSummaryView.DataSource = summaryTable;
+    ScorecardSummaryView.DataBind();
+}
 ```
 
 For the sake of simplicity, assume that we currently only need to support the
@@ -297,25 +297,25 @@ ability to filter by site. The **GetScorecardItemsToShowInKpiSummary** method in
 the KpiScorecard.ascx file is implemented as follows:
 
 ```C#
-        private IEnumerable<ScorecardData.ScorecardItemRow>
-            GetScorecardItemsToShowInKpiSummary()
-        {
-            Debug.Assert(scorecardData != null);
+private IEnumerable<ScorecardData.ScorecardItemRow>
+    GetScorecardItemsToShowInKpiSummary()
+{
+    Debug.Assert(scorecardData != null);
 
-            if (string.IsNullOrEmpty(siteList.SelectedSiteId) == true)
-            {
-                return scorecardData.ScorecardItem;
-            }
-            else
-            {
-                var scorecardItems =
-                    from scorecardItem in scorecardData.ScorecardItem
-                    where scorecardItem.ClientSiteId == siteList.SelectedSiteId
-                    select scorecardItem;
+    if (string.IsNullOrEmpty(siteList.SelectedSiteId) == true)
+    {
+        return scorecardData.ScorecardItem;
+    }
+    else
+    {
+        var scorecardItems =
+            from scorecardItem in scorecardData.ScorecardItem
+            where scorecardItem.ClientSiteId == siteList.SelectedSiteId
+            select scorecardItem;
 
-                return scorecardItems;
-            }
-        }
+        return scorecardItems;
+    }
+}
 ```
 
 If we needed to support additional filtering in the future, we could simply
@@ -336,43 +336,43 @@ For example, suppose the original **GetScorecardDetailTable** method used a
 DataView to filter the **ScorecardItems** table on the specified KPI name:
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            ScorecardData data,
-            string selectedKpiName)
-        {
-            if (data == null)
-            {
-                throw new ArgumentNullException("data");
-            }
-            else if (selectedKpiName == null)
-            {
-                throw new ArgumentNullException("selectedKpiName");
-            }
-            else if (string.IsNullOrEmpty(selectedKpiName) == true)
-            {
-                throw new ArgumentException(
-                    "The name of the selected KPI must be specified.",
-                    "selectedKpiName");
-            }
+public static DataTable GetScorecardDetailTable(
+    ScorecardData data,
+    string selectedKpiName)
+{
+    if (data == null)
+    {
+        throw new ArgumentNullException("data");
+    }
+    else if (selectedKpiName == null)
+    {
+        throw new ArgumentNullException("selectedKpiName");
+    }
+    else if (string.IsNullOrEmpty(selectedKpiName) == true)
+    {
+        throw new ArgumentException(
+            "The name of the selected KPI must be specified.",
+            "selectedKpiName");
+    }
 
-            DataTable detailTable = new DataTable();
-            ...
+    DataTable detailTable = new DataTable();
+    ...
 
-            DataView view = new DataView(
-                data.ScorecardItem);
+    DataView view = new DataView(
+        data.ScorecardItem);
 
-            view.RowFilter = string.Format(
-                CultureInfo.InvariantCulture,
-                "KpiName = '{0}'",
-                selectedKpiName);
+    view.RowFilter = string.Format(
+        CultureInfo.InvariantCulture,
+        "KpiName = '{0}'",
+        selectedKpiName);
 
-            foreach (DataRowView row in view)
-            {
-                ...
-            }
+    foreach (DataRowView row in view)
+    {
+        ...
+    }
 
-            return detailTable;
-        }
+    return detailTable;
+}
 ```
 
 Note that this implementation inherently enforces the rule that all scorecard
@@ -385,12 +385,12 @@ We could simply add an overload that accepts an `IEnumerable` parameter in
 addition to the original <var>selectedKpiName</var> parameter:
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems,
-            string selectedKpiName)
-        {
-           ...
-        }
+public static DataTable GetScorecardDetailTable(
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems,
+    string selectedKpiName)
+{
+   ...
+}
 ```
 
 Note that with this approach, we would need to filter the list of scorecard
@@ -406,36 +406,36 @@ items refer to the same KPI). Note that we need to add some code to validate the
 new assumption:
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+public static DataTable GetScorecardDetailTable(
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+{
+    if (scorecardItems == null)
+    {
+        throw new ArgumentNullException("scorecardItems");
+    }
+
+    string selectedKpiName = null;
+
+    foreach (ScorecardData.ScorecardItemRow scorecardItem in
+        scorecardItems)
+    {
+        if (selectedKpiName == null)
         {
-            if (scorecardItems == null)
-            {
-                throw new ArgumentNullException("scorecardItems");
-            }
-
-            string selectedKpiName = null;
-
-            foreach (ScorecardData.ScorecardItemRow scorecardItem in
-                scorecardItems)
-            {
-                if (selectedKpiName == null)
-                {
-                    selectedKpiName = scorecardItem.KpiName;
-                }
-                else if (string.Compare(
-                    scorecardItem.KpiName,
-                    selectedKpiName,
-                    StringComparison.OrdinalIgnoreCase) != 0)
-                {
-                    throw new ArgumentException(
-                        "All scorecard items must refer to the same KPI.",
-                        "scorecardItems");
-                }
-            }
-
-            ...
+            selectedKpiName = scorecardItem.KpiName;
         }
+        else if (string.Compare(
+            scorecardItem.KpiName,
+            selectedKpiName,
+            StringComparison.OrdinalIgnoreCase) != 0)
+        {
+            throw new ArgumentException(
+                "All scorecard items must refer to the same KPI.",
+                "scorecardItems");
+        }
+    }
+
+    ...
+}
 ```
 
 To reduce the amount of code in the method (and make it easier to understand and
@@ -443,46 +443,46 @@ maintain), we should refactor the code that enforces the assumption into a
 separate method:
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+public static DataTable GetScorecardDetailTable(
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+{
+    if (scorecardItems == null)
+    {
+        throw new ArgumentNullException("scorecardItems");
+    }
+
+    string selectedKpiName = GetDistinctKpiName(scorecardItems);
+
+    ...
+}
+
+private static string GetDistinctKpiName(
+    IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+{
+    Debug.Assert(scorecardItems != null);
+
+    string selectedKpiName = null;
+
+    foreach (ScorecardData.ScorecardItemRow scorecardItem in
+        scorecardItems)
+    {
+        if (selectedKpiName == null)
         {
-            if (scorecardItems == null)
-            {
-                throw new ArgumentNullException("scorecardItems");
-            }
-
-            string selectedKpiName = GetDistinctKpiName(scorecardItems);
-
-            ...
+            selectedKpiName = scorecardItem.KpiName;
         }
-
-        private static string GetDistinctKpiName(
-            IEnumerable<ScorecardData.ScorecardItemRow> scorecardItems)
+        else if (string.Compare(
+            scorecardItem.KpiName,
+            selectedKpiName,
+            StringComparison.OrdinalIgnoreCase) != 0)
         {
-            Debug.Assert(scorecardItems != null);
-
-            string selectedKpiName = null;
-
-            foreach (ScorecardData.ScorecardItemRow scorecardItem in
-                scorecardItems)
-            {
-                if (selectedKpiName == null)
-                {
-                    selectedKpiName = scorecardItem.KpiName;
-                }
-                else if (string.Compare(
-                    scorecardItem.KpiName,
-                    selectedKpiName,
-                    StringComparison.OrdinalIgnoreCase) != 0)
-                {
-                    throw new ArgumentException(
-                        "All scorecard items must refer to the same KPI.",
-                        "scorecardItems");
-                }
-            }
-
-            return selectedKpiName;
+            throw new ArgumentException(
+                "All scorecard items must refer to the same KPI.",
+                "scorecardItems");
         }
+    }
+
+    return selectedKpiName;
+}
 ```
 
 {{< div-block "note" >}}
@@ -503,32 +503,32 @@ using a LINQ query expression) and defer the rest of the work to the new
 overload of the method (shown above):
 
 ```C#
-        public static DataTable GetScorecardDetailTable(
-            ScorecardData data,
-            string selectedKpiName)
-        {
-            if (data == null)
-            {
-                throw new ArgumentNullException("data");
-            }
-            else if (selectedKpiName == null)
-            {
-                throw new ArgumentNullException("selectedKpiName");
-            }
-            else if (string.IsNullOrEmpty(selectedKpiName) == true)
-            {
-                throw new ArgumentException(
-                    "The name of the selected KPI must be specified.",
-                    "selectedKpiName");
-            }
+public static DataTable GetScorecardDetailTable(
+    ScorecardData data,
+    string selectedKpiName)
+{
+    if (data == null)
+    {
+        throw new ArgumentNullException("data");
+    }
+    else if (selectedKpiName == null)
+    {
+        throw new ArgumentNullException("selectedKpiName");
+    }
+    else if (string.IsNullOrEmpty(selectedKpiName) == true)
+    {
+        throw new ArgumentException(
+            "The name of the selected KPI must be specified.",
+            "selectedKpiName");
+    }
 
-            var scorecardItems =
-                from scorecardItem in data.ScorecardItem
-                where scorecardItem.KpiName == selectedKpiName
-                select scorecardItem;
+    var scorecardItems =
+        from scorecardItem in data.ScorecardItem
+        where scorecardItem.KpiName == selectedKpiName
+        select scorecardItem;
 
-            return GetScorecardDetailTable(scorecardItems);
-        }
+    return GetScorecardDetailTable(scorecardItems);
+}
 ```
 
 {{< div-block "note important" >}}

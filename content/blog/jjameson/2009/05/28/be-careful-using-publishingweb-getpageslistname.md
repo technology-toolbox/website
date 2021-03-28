@@ -34,21 +34,21 @@ method. In the following code sample, note how I use this method to avoid
 hard-coding the name of the **Pages** library:
 
 ```C#
-        private static string GetDefaultSearchResultsPageUrl(
-            SPWeb searchWeb)
-        {
-            Debug.Assert(searchWeb != null);
+private static string GetDefaultSearchResultsPageUrl(
+    SPWeb searchWeb)
+{
+    Debug.Assert(searchWeb != null);
 
-            string pageListName = PublishingWeb.GetPagesListName(searchWeb);
+    string pageListName = PublishingWeb.GetPagesListName(searchWeb);
 
-            string defaultSearchResultsPageUrl = string.Format(
-                CultureInfo.InvariantCulture,
-                "{0}/{1}/Results.aspx",
-                searchWeb.ServerRelativeUrl,
-                pageListName);
+    string defaultSearchResultsPageUrl = string.Format(
+        CultureInfo.InvariantCulture,
+        "{0}/{1}/Results.aspx",
+        searchWeb.ServerRelativeUrl,
+        pageListName);
 
-            return defaultSearchResultsPageUrl;
-        }
+    return defaultSearchResultsPageUrl;
+}
 ```
 
 Consequently, this code works as expected, even on localized sites created with

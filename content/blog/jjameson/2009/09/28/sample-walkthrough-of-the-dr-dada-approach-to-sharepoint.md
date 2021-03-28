@@ -294,21 +294,21 @@ this is simply a matter of adding a custom build target that invokes makecab.exe
 and adding this new target as a dependency of the build:
 
 ```XML
-  <PropertyGroup>
-    <BuildDependsOn>
-      $(BuildDependsOn);
-      CreateSharePointSolutionPackage
-    </BuildDependsOn>
-  </PropertyGroup>
-  <Target
-    Name="CreateSharePointSolutionPackage"
-    Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
-    Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
-    <Message Text="Creating SharePoint solution package..." />
-    <Exec
-      Command="makecab /D BUILD_CONFIGURATION=$(ConfigurationName) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;"
-      WorkingDirectory="$(OutDir)" />
-  </Target>
+<PropertyGroup>
+  <BuildDependsOn>
+    $(BuildDependsOn);
+    CreateSharePointSolutionPackage
+  </BuildDependsOn>
+</PropertyGroup>
+<Target
+  Name="CreateSharePointSolutionPackage"
+  Inputs="@(None);@(Content);$(OutDir)$(TargetFileName);"
+  Outputs="$(ProjectDir)$(OutDir)Package\Fabrikam.Demo.Publishing.wsp">
+  <Message Text="Creating SharePoint solution package..." />
+  <Exec
+    Command="makecab /D BUILD_CONFIGURATION=$(ConfigurationName) /F &quot;$(ProjectDir)DeploymentFiles\PackageFiles\wsp_structure.ddf&quot;"
+    WorkingDirectory="$(OutDir)" />
+</Target>
 ```
 
 The next step is to build and deploy the solution. I start by pressing {{< kbd

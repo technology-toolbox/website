@@ -120,45 +120,45 @@ In Mahdi's code, the configuration file is read using the **LoadConfig** method
 in his **s3capcha** helper class:
 
 ```C#
-    private static bool LoadConfig()
+private static bool LoadConfig()
+{
+    string FilePath = "~/s3capcha/config.xml";
+    FilePath = HttpContext.Current.Server.MapPath(FilePath);
+    if (System.IO.File.Exists(FilePath))
     {
-        string FilePath = "~/s3capcha/config.xml";
-        FilePath = HttpContext.Current.Server.MapPath(FilePath);
-        if (System.IO.File.Exists(FilePath))
-        {
-            ...
-            return true;
-        }
-        return false;
+        ...
+        return true;
     }
+    return false;
+}
 ```
 
 **LoadConfig** is called from the method used to retrieve the HTML for the
 CAPTCHA control:
 
 ```C#
-    public static string GetHtmlCodes(string PathTo, out int SessionValue)
-    {
-        bool HasValue = false;
-        if (string.IsNullOrEmpty(Message))
-            HasValue = LoadConfig();
-        else
-            HasValue = true;
+public static string GetHtmlCodes(string PathTo, out int SessionValue)
+{
+    bool HasValue = false;
+    if (string.IsNullOrEmpty(Message))
+        HasValue = LoadConfig();
+    else
+        HasValue = true;
 
-        if (HasValue)
-        {
-            ...
-            string WriteThis = "<div class=\"s3capcha\"><p>" + ...
-            ...
-            SessionValue = RandomValues[RandomIndex];
-            return WriteThis;
-        }
-        else
-        {
-            SessionValue = -1;
-            return "Invalid data, config file not found";
-        }
+    if (HasValue)
+    {
+        ...
+        string WriteThis = "<div class=\"s3capcha\"><p>" + ...
+        ...
+        SessionValue = RandomValues[RandomIndex];
+        return WriteThis;
     }
+    else
+    {
+        SessionValue = -1;
+        return "Invalid data, config file not found";
+    }
+}
 ```
 
 First of all, I'm not a fan of using return values (`bool`, `int`, or otherwise)
@@ -274,7 +274,7 @@ Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
 
 ```
-    CaptchaConfiguration.Instance.Message
+CaptchaConfiguration.Instance.Message
 ```
 
 The other issue that I found with Mahdi's implementation is that it doesn't work

@@ -405,19 +405,19 @@ debugging, I discovered that I also had to change the URL of the Web service
 proxy:
 
 ```C#
-        private static void CreateReportServerProxy()
-        {
-            string reportsServerUrl = GetReportsServerUrl();
-            new Uri(reportsServerUrl);
-            //m_proxy = new ReportingService();
-            m_proxy = new ReportingService2005();
-            //m_proxy.Url = reportsServerUrl;
-            m_proxy.Url = reportsServerUrl.Replace(
-                "ReportService.asmx",
-                "ReportService2005.asmx");
+private static void CreateReportServerProxy()
+{
+    string reportsServerUrl = GetReportsServerUrl();
+    new Uri(reportsServerUrl);
+    //m_proxy = new ReportingService();
+    m_proxy = new ReportingService2005();
+    //m_proxy.Url = reportsServerUrl;
+    m_proxy.Url = reportsServerUrl.Replace(
+        "ReportService.asmx",
+        "ReportService2005.asmx");
 
-            m_proxy.Credentials = m_tfs.Credentials;
-        }
+    m_proxy.Credentials = m_tfs.Credentials;
+}
 ```
 
 This was necessary to avoid the following error:

@@ -163,130 +163,130 @@ Here's the code I wrote to create automatically create and configure the new
 **Specials** list:
 
 ```C#
-        private static void ConfigureSpecialsList(
-            SPWeb web)
-        {
-            Debug.Assert(web != null);
+private static void ConfigureSpecialsList(
+    SPWeb web)
+{
+    Debug.Assert(web != null);
 
-            SPList list = SharePointListHelper.EnsureList(
-                web,
-                "Lists/Specials",
-                SPListTemplateType.GenericList,
-                "Specials",
-                "Items in this list appear in the \"This Week's Specials\""
-                    + " section of the site home page.");
+    SPList list = SharePointListHelper.EnsureList(
+        web,
+        "Lists/Specials",
+        SPListTemplateType.GenericList,
+        "Specials",
+        "Items in this list appear in the \"This Week's Specials\""
+            + " section of the site home page.");
 
-            Debug.Assert(list != null);
+    Debug.Assert(list != null);
 
-            SPField unitPriceField = SharePointListHelper.EnsureField(
-                list,
-                "UnitPrice",
-                "Unit Price",
-                SPFieldType.Currency,
-                true);
+    SPField unitPriceField = SharePointListHelper.EnsureField(
+        list,
+        "UnitPrice",
+        "Unit Price",
+        SPFieldType.Currency,
+        true);
 
-            StringCollection unitOfMeasureChoices = new StringCollection();
+    StringCollection unitOfMeasureChoices = new StringCollection();
 
-            const string defaultUnitOfMeasureChoice = "/ lb.";
-            unitOfMeasureChoices.Add(defaultUnitOfMeasureChoice);
+    const string defaultUnitOfMeasureChoice = "/ lb.";
+    unitOfMeasureChoices.Add(defaultUnitOfMeasureChoice);
 
-            unitOfMeasureChoices.Add("ea.");
+    unitOfMeasureChoices.Add("ea.");
 
-            SPFieldChoice unitOfMeasureField =
-                (SPFieldChoice) SharePointListHelper.EnsureField(
-                    list,
-                    "UnitOfMeasure",
-                    "Unit of Measure",
-                    SPFieldType.Choice,
-                    true,
-                    string.Empty,
-                    unitOfMeasureChoices);
+    SPFieldChoice unitOfMeasureField =
+        (SPFieldChoice) SharePointListHelper.EnsureField(
+            list,
+            "UnitOfMeasure",
+            "Unit of Measure",
+            SPFieldType.Choice,
+            true,
+            string.Empty,
+            unitOfMeasureChoices);
 
-            unitOfMeasureField.DefaultValue = defaultUnitOfMeasureChoice;
-            unitOfMeasureField.Update();
+    unitOfMeasureField.DefaultValue = defaultUnitOfMeasureChoice;
+    unitOfMeasureField.Update();
 
-            SPFieldCalculated priceField =
-                (SPFieldCalculated) SharePointListHelper.EnsureField(
-                    list,
-                    "Price",
-                    "Price",
-                    SPFieldType.Calculated);
+    SPFieldCalculated priceField =
+        (SPFieldCalculated) SharePointListHelper.EnsureField(
+            list,
+            "Price",
+            "Price",
+            SPFieldType.Calculated);
 
-            priceField.Formula =
-                "= DOLLAR([Unit Price]) & \" \" & [Unit of Measure]";
+    priceField.Formula =
+        "= DOLLAR([Unit Price]) & \" \" & [Unit of Measure]";
 
-            priceField.Update();
+    priceField.Update();
 
-            SPField rollupImageField = web.AvailableFields[FieldId.RollupImage];
-            rollupImageField.Required = true;
+    SPField rollupImageField = web.AvailableFields[FieldId.RollupImage];
+    rollupImageField.Required = true;
 
-            SharePointListHelper.EnsureField(list, rollupImageField);
+    SharePointListHelper.EnsureField(list, rollupImageField);
 
-            string[] defaultViewFields = new string[] {
-                    list.Fields[SPBuiltInFieldId.Title].Title,
-                    unitPriceField.Title,
-                    unitOfMeasureField.Title,
-                    priceField.Title,
-                    rollupImageField.Title
-                };
+    string[] defaultViewFields = new string[] {
+            list.Fields[SPBuiltInFieldId.Title].Title,
+            unitPriceField.Title,
+            unitOfMeasureField.Title,
+            priceField.Title,
+            rollupImageField.Title
+        };
 
-            ConfigureViewsForSpecialsList(
-                list,
-                defaultViewFields);
+    ConfigureViewsForSpecialsList(
+        list,
+        defaultViewFields);
 
-            if (list.ItemCount == 0)
-            {
-                CreateDefaultItemsInSpecialsList(list);
-            }
-        }
+    if (list.ItemCount == 0)
+    {
+        CreateDefaultItemsInSpecialsList(list);
+    }
+}
 ```
 
 Note that I use a separate method to configure the default views for the new
 list:
 
 ```C#
-        private static void ConfigureViewsForSpecialsList(
-            SPList list,
-            string[] fields)
-        {
-            Debug.Assert(list != null);
-            Debug.Assert(fields != null);
-            Debug.Assert(fields.Length > 0);
+private static void ConfigureViewsForSpecialsList(
+    SPList list,
+    string[] fields)
+{
+    Debug.Assert(list != null);
+    Debug.Assert(fields != null);
+    Debug.Assert(fields.Length > 0);
 
-            // Configure "All Items" view
-            SPView allItems = SharePointViewHelper.EnsureView(
-                list,
-                "All Items",
-                fields,
-                "AllItems");
+    // Configure "All Items" view
+    SPView allItems = SharePointViewHelper.EnsureView(
+        list,
+        "All Items",
+        fields,
+        "AllItems");
 
-            SharePointViewHelper.EnsureViewFields(
-                allItems,
-                fields);
+    SharePointViewHelper.EnsureViewFields(
+        allItems,
+        fields);
 
-            // Configure "Most Recent Specials" view
-            SPView mostRecentSpecials = SharePointViewHelper.EnsureView(
-                list,
-                "Most Recent Specials",
-                fields,
-                "MostRecent");
+    // Configure "Most Recent Specials" view
+    SPView mostRecentSpecials = SharePointViewHelper.EnsureView(
+        list,
+        "Most Recent Specials",
+        fields,
+        "MostRecent");
 
-            SharePointViewHelper.EnsureDefaultView(mostRecentSpecials);
+    SharePointViewHelper.EnsureDefaultView(mostRecentSpecials);
 
-            SharePointViewHelper.EnsureViewQuery(
-                mostRecentSpecials,
-                "<OrderBy>"
-                    + "<FieldRef Name='Modified' Ascending='FALSE' />"
-                + "</OrderBy>");
+    SharePointViewHelper.EnsureViewQuery(
+        mostRecentSpecials,
+        "<OrderBy>"
+            + "<FieldRef Name='Modified' Ascending='FALSE' />"
+        + "</OrderBy>");
 
-            if (mostRecentSpecials.Paged != false
-                || mostRecentSpecials.RowLimit != 3)
-            {
-                mostRecentSpecials.Paged = false;
-                mostRecentSpecials.RowLimit = 3;
-                mostRecentSpecials.Update();
-            }
-        }
+    if (mostRecentSpecials.Paged != false
+        || mostRecentSpecials.RowLimit != 3)
+    {
+        mostRecentSpecials.Paged = false;
+        mostRecentSpecials.RowLimit = 3;
+        mostRecentSpecials.Update();
+    }
+}
 ```
 
 ## Adding the Default Items to the List
@@ -296,59 +296,59 @@ only if the list is empty upon activation of the feature -- in order to avoid
 adding duplicate items to the list):
 
 ```C#
-        private static void CreateDefaultItemsInSpecialsList(
-            SPList list)
-        {
-            Debug.Assert(list != null);
+private static void CreateDefaultItemsInSpecialsList(
+    SPList list)
+{
+    Debug.Assert(list != null);
 
-            CreateDefaultItemInSpecialsList(
-                list,
-                "Fisherman's Brew",
-                9.98,
-                "/ lb.",
-                "/PublishingImages/boat.jpg");
+    CreateDefaultItemInSpecialsList(
+        list,
+        "Fisherman's Brew",
+        9.98,
+        "/ lb.",
+        "/PublishingImages/boat.jpg");
 
-            CreateDefaultItemInSpecialsList(
-                list,
-                "Boathouse Bold",
-                12.50,
-                "/ lb.",
-                "/PublishingImages/ropes.jpg");
+    CreateDefaultItemInSpecialsList(
+        list,
+        "Boathouse Bold",
+        12.50,
+        "/ lb.",
+        "/PublishingImages/ropes.jpg");
 
-            CreateDefaultItemInSpecialsList(
-                list,
-                "Deadly Decaf",
-                7.49,
-                "/ lb.",
-                "/PublishingImages/fame.jpg");
-        }
+    CreateDefaultItemInSpecialsList(
+        list,
+        "Deadly Decaf",
+        7.49,
+        "/ lb.",
+        "/PublishingImages/fame.jpg");
+}
 
-        private static void CreateDefaultItemInSpecialsList(
-            SPList list,
-            string title,
-            double unitPrice,
-            string unitOfMeasure,
-            string rollupImageUrl)
-        {
-            Debug.Assert(list != null);
-            Debug.Assert(string.IsNullOrEmpty(title) == false);
-            Debug.Assert(unitPrice > 0);
-            Debug.Assert(string.IsNullOrEmpty(unitOfMeasure) == false);
-            Debug.Assert(string.IsNullOrEmpty(rollupImageUrl) == false);
+private static void CreateDefaultItemInSpecialsList(
+    SPList list,
+    string title,
+    double unitPrice,
+    string unitOfMeasure,
+    string rollupImageUrl)
+{
+    Debug.Assert(list != null);
+    Debug.Assert(string.IsNullOrEmpty(title) == false);
+    Debug.Assert(unitPrice > 0);
+    Debug.Assert(string.IsNullOrEmpty(unitOfMeasure) == false);
+    Debug.Assert(string.IsNullOrEmpty(rollupImageUrl) == false);
 
-            SPListItem item = list.Items.Add();
+    SPListItem item = list.Items.Add();
 
-            item[SPBuiltInFieldId.Title] = title;
-            item["Unit Price"] = unitPrice;
-            item["Unit of Measure"] = unitOfMeasure;
+    item[SPBuiltInFieldId.Title] = title;
+    item["Unit Price"] = unitPrice;
+    item["Unit of Measure"] = unitOfMeasure;
 
-            ImageFieldValue rollupImage = new ImageFieldValue();
-            rollupImage.ImageUrl = rollupImageUrl;
+    ImageFieldValue rollupImage = new ImageFieldValue();
+    rollupImage.ImageUrl = rollupImageUrl;
 
-            item[FieldId.RollupImage] = rollupImage;
+    item[FieldId.RollupImage] = rollupImage;
 
-            item.Update();
-        }
+    item.Update();
+}
 ```
 
 There are certainly other ways to avoid adding duplicate items to a list, but
@@ -360,95 +360,95 @@ In order to add the new **XsltListViewWebPart** to the home page, I modified the
 existing **ConfigureHomeSiteDefaultPage** method that I created previously:
 
 ```C#
-        private static void ConfigureHomeSiteDefaultPage(
-            SPWeb homeWeb)
-        {
+private static void ConfigureHomeSiteDefaultPage(
+    SPWeb homeWeb)
+{
 ```
 
 ```C#
-            ...
+    ...
 
-            // Configure Web Parts
-            SPWebPartPages.SPLimitedWebPartManager wpm =
-                homeWeb.GetLimitedWebPartManager(
-                    page.Url,
-                    PersonalizationScope.Shared);
+    // Configure Web Parts
+    SPWebPartPages.SPLimitedWebPartManager wpm =
+        homeWeb.GetLimitedWebPartManager(
+            page.Url,
+            PersonalizationScope.Shared);
 
-            using (wpm)
-            {
-                string zoneId = "TopLeftZone";
-                int zoneIndex = 0;
+    using (wpm)
+    {
+        string zoneId = "TopLeftZone";
+        int zoneIndex = 0;
 
-                SharePointWebPartHelper.EnsureWebPart(
-                    wpm,
-                    "FindLocation",
-                    "Tugboat_FindLocation.webpart",
-                    zoneId,
-                    ref zoneIndex);
+        SharePointWebPartHelper.EnsureWebPart(
+            wpm,
+            "FindLocation",
+            "Tugboat_FindLocation.webpart",
+            zoneId,
+            ref zoneIndex);
 
-                ConfigureSpecialsWebPart(wpm, zoneId, ref zoneIndex);
+        ConfigureSpecialsWebPart(wpm, zoneId, ref zoneIndex);
 
-                ...
-            }
+        ...
+    }
 
-            SharePointPublishingHelper.PublishPage(
-                page,
-                "Published by Tugboat.Web.HomeSiteConfiguration"
-                    + " feature.");
+    SharePointPublishingHelper.PublishPage(
+        page,
+        "Published by Tugboat.Web.HomeSiteConfiguration"
+            + " feature.");
 
-        }
+}
 ```
 
 The new **ConfigureSpecialsWebPart** method is shown below:
 
 ```C#
-        private static void ConfigureSpecialsWebPart(
-            SPWebPartPages.SPLimitedWebPartManager wpm,
-            string zoneId,
-            ref int zoneIndex)
-        {
-            Debug.Assert(wpm != null);
-            Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
+private static void ConfigureSpecialsWebPart(
+    SPWebPartPages.SPLimitedWebPartManager wpm,
+    string zoneId,
+    ref int zoneIndex)
+{
+    Debug.Assert(wpm != null);
+    Debug.Assert(string.IsNullOrEmpty(zoneId) == false);
 
-            SPList specialsList = wpm.Web.Lists["Specials"];
-            SPView mostRecentSpecialsView =
-                specialsList.Views["Most Recent Specials"];
+    SPList specialsList = wpm.Web.Lists["Specials"];
+    SPView mostRecentSpecialsView =
+        specialsList.Views["Most Recent Specials"];
 
-            WebPart webPart = SharePointWebPartHelper.FindWebPartByTitle(
-                wpm,
-                "Specials");
+    WebPart webPart = SharePointWebPartHelper.FindWebPartByTitle(
+        wpm,
+        "Specials");
 
-            SPWebPartPages.XsltListViewWebPart specials =
-                webPart as SPWebPartPages.XsltListViewWebPart;
+    SPWebPartPages.XsltListViewWebPart specials =
+        webPart as SPWebPartPages.XsltListViewWebPart;
 
-            if (specials == null)
-            {
-                specials = new SPWebPartPages.XsltListViewWebPart();
-                specials.Title = "Specials";
+    if (specials == null)
+    {
+        specials = new SPWebPartPages.XsltListViewWebPart();
+        specials.Title = "Specials";
 
-                specials.ListId = specialsList.ID;
+        specials.ListId = specialsList.ID;
 
-                wpm.AddWebPart(specials, zoneId, zoneIndex);
-                zoneIndex++;
-            }
-            else
-            {
-                specials.ListId = specialsList.ID;
-            }
+        wpm.AddWebPart(specials, zoneId, zoneIndex);
+        zoneIndex++;
+    }
+    else
+    {
+        specials.ListId = specialsList.ID;
+    }
 
-            specials.ChromeType = PartChromeType.None;
-            specials.ViewGuid = mostRecentSpecialsView.ID.ToString();
+    specials.ChromeType = PartChromeType.None;
+    specials.ViewGuid = mostRecentSpecialsView.ID.ToString();
 
-            Assembly thisAssembly = Assembly.GetExecutingAssembly();
+    Assembly thisAssembly = Assembly.GetExecutingAssembly();
 
-            specials.Xsl = AssemblyHelper.GetEmbeddedResourceAsString(
-                thisAssembly,
-                "Tugboat.Web.HomeSiteConfiguration.Xsl.Specials.xslt");
+    specials.Xsl = AssemblyHelper.GetEmbeddedResourceAsString(
+        thisAssembly,
+        "Tugboat.Web.HomeSiteConfiguration.Xsl.Specials.xslt");
 
-            wpm.SaveChanges(specials);
+    wpm.SaveChanges(specials);
 
-            specials.Dispose();
-        }
+    specials.Dispose();
+}
 ```
 
 ## Deploying the Sample Solution

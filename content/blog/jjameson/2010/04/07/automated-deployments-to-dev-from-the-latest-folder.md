@@ -60,33 +60,33 @@ To copy the build to the **\_latest** folder, I add a custom target to the
 TFSBuild.proj file:
 
 ```XML
-  <Target Name="CopyBuildToLatestFolder">
-    <CreateItem Include="$(DropLocation)\$(BuildNumber)\**\*.*" >
-      <Output TaskParameter="Include" ItemName="FilesToCopy"/>
-    </CreateItem>
-    <RemoveDir Directories="$(DropLocation)\_latest" />
-    <Copy
-      SourceFiles="@(FilesToCopy)"
-      DestinationFiles="@(FilesToCopy->'$(DropLocation)\_latest\\%(RecursiveDir)%(Filename)%(Extension)')"/>
-  </Target>
+<Target Name="CopyBuildToLatestFolder">
+  <CreateItem Include="$(DropLocation)\$(BuildNumber)\**\*.*" >
+    <Output TaskParameter="Include" ItemName="FilesToCopy"/>
+  </CreateItem>
+  <RemoveDir Directories="$(DropLocation)\_latest" />
+  <Copy
+    SourceFiles="@(FilesToCopy)"
+    DestinationFiles="@(FilesToCopy->'$(DropLocation)\_latest\\%(RecursiveDir)%(Filename)%(Extension)')"/>
+</Target>
 ```
 
 Then I override the **AfterDropBuild** target to invoke the custom target -- but
 only if the build was successful:
 
 ```XML
-  <!-- After dropping a successful build, copy it to the "_latest" folder. -->
-  <Target Name="AfterDropBuild"
-    Condition=" '$(IsDesktopBuild)' != 'true' ">
-    <GetBuildProperties
-      TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
-      BuildUri="$(BuildUri)">
-      <Output TaskParameter="CompilationSuccess" PropertyName="BuildCompilationSuccess" />
-    </GetBuildProperties>
+<!-- After dropping a successful build, copy it to the "_latest" folder. -->
+<Target Name="AfterDropBuild"
+  Condition=" '$(IsDesktopBuild)' != 'true' ">
+  <GetBuildProperties
+    TeamFoundationServerUrl="$(TeamFoundationServerUrl)"
+    BuildUri="$(BuildUri)">
+    <Output TaskParameter="CompilationSuccess" PropertyName="BuildCompilationSuccess" />
+  </GetBuildProperties>
 
-    <CallTarget Targets="CopyBuildToLatestFolder"
-      Condition=" '$(BuildCompilationSuccess)' == 'True' "/>
-  </Target>
+  <CallTarget Targets="CopyBuildToLatestFolder"
+    Condition=" '$(BuildCompilationSuccess)' == 'True' "/>
+</Target>
 ```
 
 Some people deploy their solution as part of the build process (in other words,

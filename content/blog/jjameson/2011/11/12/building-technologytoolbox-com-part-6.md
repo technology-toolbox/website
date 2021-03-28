@@ -84,15 +84,15 @@ I started by creating a C# console application and adding a small amount of code
 to download the monthly summary pages from my MSDN blog to a temporary folder.
 
 ```C#
-        static void Main(string[] args)
-        {
-            Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
+static void Main(string[] args)
+{
+    Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
 
-            const string summaryFolder =
-                @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
+    const string summaryFolder =
+        @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
 
-            ExportSummaryPages(oldBlogBaseUrl, summaryFolder);
-        }
+    ExportSummaryPages(oldBlogBaseUrl, summaryFolder);
+}
 ```
 
 Note that Telligent allows you to view the list of posts for a particular month
@@ -108,54 +108,54 @@ loops to iterate over all months in the last 4 years and download the
 corresponding Web page to an offline file.
 
 ```C#
-        private static void ExportSummaryPages(
-            Uri oldBlogBaseUrl,
-            string summaryFolder)
+private static void ExportSummaryPages(
+    Uri oldBlogBaseUrl,
+    string summaryFolder)
+{
+    Debug.Assert(oldBlogBaseUrl.AbsoluteUri.EndsWith("/") == true);
+
+    int yearFirstBlogPostCreated = 2007;
+
+    for (int year = yearFirstBlogPostCreated; year <= DateTime.Now.Year;
+        year++)
+    {
+        for (int month = 1; month < 13; month++)
         {
-            Debug.Assert(oldBlogBaseUrl.AbsoluteUri.EndsWith("/") == true);
+            string summaryPageRelativeUrl = string.Format(
+                "archive/{1}/{2:D2}.aspx",
+                oldBlogBaseUrl,
+                year,
+                month);
 
-            int yearFirstBlogPostCreated = 2007;
+            Uri summaryPageUrl = new Uri(
+                oldBlogBaseUrl,
+                summaryPageRelativeUrl);
 
-            for (int year = yearFirstBlogPostCreated; year <= DateTime.Now.Year;
-                year++)
+            string summaryPageFile = string.Format(
+                @"{0}\Monthly Summary {1}-{2:D2}.html",
+                summaryFolder,
+                year,
+                month);
+
+            EnsureOfflineFile(summaryPageUrl, summaryPageFile);
+
+            // HACK: 28 blog posts created in October 2009 (but summary
+            // pages only show 25 at a time)
+            if (year == 2009 && month == 10)
             {
-                for (int month = 1; month < 13; month++)
-                {
-                    string summaryPageRelativeUrl = string.Format(
-                        "archive/{1}/{2:D2}.aspx",
-                        oldBlogBaseUrl,
-                        year,
-                        month);
+                summaryPageUrl = new Uri(
+                    oldBlogBaseUrl,
+                    "archive/2009/10.aspx?PageIndex=2");
 
-                    Uri summaryPageUrl = new Uri(
-                        oldBlogBaseUrl,
-                        summaryPageRelativeUrl);
+                summaryPageFile =
+                    summaryFolder
+                    + @"\Monthly Summary 2009-10 Page 2.html";
 
-                    string summaryPageFile = string.Format(
-                        @"{0}\Monthly Summary {1}-{2:D2}.html",
-                        summaryFolder,
-                        year,
-                        month);
-
-                    EnsureOfflineFile(summaryPageUrl, summaryPageFile);
-
-                    // HACK: 28 blog posts created in October 2009 (but summary
-                    // pages only show 25 at a time)
-                    if (year == 2009 && month == 10)
-                    {
-                        summaryPageUrl = new Uri(
-                            oldBlogBaseUrl,
-                            "archive/2009/10.aspx?PageIndex=2");
-
-                        summaryPageFile =
-                            summaryFolder
-                            + @"\Monthly Summary 2009-10 Page 2.html";
-
-                        EnsureOfflineFile(summaryPageUrl, summaryPageFile);
-                    }
-                }
+                EnsureOfflineFile(summaryPageUrl, summaryPageFile);
             }
         }
+    }
+}
 ```
 
 The **EnsureOfflineFile** method simply checks to see if the specified file
@@ -167,25 +167,25 @@ destination folder exists -- since the
 won't automatically create any necessary folders):
 
 ```C#
-        private static void EnsureOfflineFile(
-            Uri url,
-            string offlineFilename)
+private static void EnsureOfflineFile(
+    Uri url,
+    string offlineFilename)
+{
+    if (File.Exists(offlineFilename) == false)
+    {
+        Console.WriteLine("Downloading {0}...", url);
+
+        string archiveFolder = Path.GetDirectoryName(offlineFilename);
+
+        if (Directory.Exists(archiveFolder) == false)
         {
-            if (File.Exists(offlineFilename) == false)
-            {
-                Console.WriteLine("Downloading {0}...", url);
-
-                string archiveFolder = Path.GetDirectoryName(offlineFilename);
-
-                if (Directory.Exists(archiveFolder) == false)
-                {
-                    Directory.CreateDirectory(archiveFolder);
-                }
-
-                WebClient client = new WebClient();
-                client.DownloadFile(url, offlineFilename);
-            }
+            Directory.CreateDirectory(archiveFolder);
         }
+
+        WebClient client = new WebClient();
+        client.DownloadFile(url, offlineFilename);
+    }
+}
 ```
 
 {{< div-block "note important" >}}
@@ -217,45 +217,45 @@ very easy to create the corresponding XML file with substantially less coding on
 my part.
 
 ```C#
-        static void Main(string[] args)
-        {
-            ...
+static void Main(string[] args)
+{
+    ...
 
-            Uri newBlogBaseUrl = new Uri(
-                "https://www.technologytoolbox.com/blog/jjameson/");
+    Uri newBlogBaseUrl = new Uri(
+        "https://www.technologytoolbox.com/blog/jjameson/");
 
-            ...
+    ...
 
-            BlogMLBlog blog = new BlogMLBlog();
-            blog.Title = "Random Musings of Jeremy Jameson";
-            blog.RootUrl = newBlogBaseUrl.AbsolutePath;
-            blog.DateCreated = new DateTime(2005, 5, 1);
+    BlogMLBlog blog = new BlogMLBlog();
+    blog.Title = "Random Musings of Jeremy Jameson";
+    blog.RootUrl = newBlogBaseUrl.AbsolutePath;
+    blog.DateCreated = new DateTime(2005, 5, 1);
 
-            BlogMLAuthor author = new BlogMLAuthor();
-            author.DateCreated = blog.DateCreated;
-            author.Email = "jjameson@technologytoolbox...";
-            author.Approved = true;
-            author.DateModified = DateTime.Now;
-            author.ID = "0";
-            author.Title = "Jeremy Jameson";
+    BlogMLAuthor author = new BlogMLAuthor();
+    author.DateCreated = blog.DateCreated;
+    author.Email = "jjameson@technologytoolbox...";
+    author.Approved = true;
+    author.DateModified = DateTime.Now;
+    author.ID = "0";
+    author.Title = "Jeremy Jameson";
 
-            blog.Authors.Add(author);
+    blog.Authors.Add(author);
 
-            Pair<string, string> item = new Pair<string, string>(
-                "CommentModeration",
-                "Disabled");
+    Pair<string, string> item = new Pair<string, string>(
+        "CommentModeration",
+        "Disabled");
 
-            blog.ExtendedProperties.Add(item);
-        }
+    blog.ExtendedProperties.Add(item);
+}
 ```
 
 Note that by the time I had written this code, I had already exported a sample
 BlogML file from Subtext and observed the following in the XML file:
 
 ```XML
-  <extended-properties>
-    <property name="CommentModeration" value="Disabled" />
-  </extended-properties>
+<extended-properties>
+  <property name="CommentModeration" value="Disabled" />
+</extended-properties>
 ```
 
 To ensure this appeared in the file generated from my migration utility, I added
@@ -268,21 +268,21 @@ add a limited amount of information for each post into the **BlogMLBlog**
 instance.
 
 ```C#
-        static void Main(string[] args)
-        {
-            ...
+static void Main(string[] args)
+{
+    ...
 
-            const string summaryFolder =
-                @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
+    const string summaryFolder =
+        @"C:\NotBackedUp\Temp\MSDN-blog\Post Summaries";
 
-            ...
+    ...
 
-            BlogMLBlog blog = new BlogMLBlog();
+    BlogMLBlog blog = new BlogMLBlog();
 
-            ...
+    ...
 
-            ExportPostSummaries(blog, summaryFolder);
-        }
+    ExportPostSummaries(blog, summaryFolder);
+}
 ```
 
 **ExportPostSummaries** enumerates each HTML file in the "summary folder" (e.g.
@@ -292,63 +292,63 @@ in fact, there are any posts for the corresponding month, and then parses the
 HTML using an instance of the **HtmlDocument** class from the Html Agility Pack.
 
 ```C#
-        private static void ExportPostSummaries(
-            BlogMLBlog blog,
-            string summaryFolder)
+private static void ExportPostSummaries(
+    BlogMLBlog blog,
+    string summaryFolder)
+{
+    string[] filenames = Directory.GetFiles(summaryFolder);
+
+    foreach (string filename in filenames)
+    {
+        string summaryPageContent = File.ReadAllText(filename);
+
+        if (summaryPageContent.Contains(
+            "No blog posts have yet been created") == true)
         {
-            string[] filenames = Directory.GetFiles(summaryFolder);
-
-            foreach (string filename in filenames)
-            {
-                string summaryPageContent = File.ReadAllText(filename);
-
-                if (summaryPageContent.Contains(
-                    "No blog posts have yet been created") == true)
-                {
-                    continue;
-                }
-
-                HtmlWeb htmlWeb = new HtmlWeb();
-
-                HtmlDocument document = htmlWeb.Load(filename);
-
-                HtmlNodeCollection abbreviatedPosts =
-                    document.DocumentNode.SelectNodes(
-                        "//*[@class='abbreviated-post']");
-
-                foreach (HtmlNode abbreviatedPost in abbreviatedPosts)
-                {
-                    BlogMLPost post = new BlogMLPost();
-
-                    HtmlNode postHeading = abbreviatedPost.SelectSingleNode(
-                        "h4");
-
-                    Debug.Assert(postHeading != null);
-
-                    post.Title = HttpUtility.HtmlDecode(postHeading.InnerText);
-
-                    HtmlNode postLink = postHeading.SelectSingleNode("a");
-                    Debug.Assert(postHeading != null);
-
-                    post.PostUrl = postLink.Attributes["href"].Value;
-
-                    HtmlNode postSummary = abbreviatedPost.SelectSingleNode(
-                        "div[@class='post-summary']");
-
-                    Debug.Assert(postSummary != null);
-
-                    post.Excerpt = BlogMLContent.Create(
-                        postSummary.InnerText,
-                        ContentTypes.Text);
-
-                    post.HasExcerpt = true;
-
-                    post.Authors.Add(blog.Authors[0].ID);
-
-                    blog.Posts.Add(post);
-                }
-            }
+            continue;
         }
+
+        HtmlWeb htmlWeb = new HtmlWeb();
+
+        HtmlDocument document = htmlWeb.Load(filename);
+
+        HtmlNodeCollection abbreviatedPosts =
+            document.DocumentNode.SelectNodes(
+                "//*[@class='abbreviated-post']");
+
+        foreach (HtmlNode abbreviatedPost in abbreviatedPosts)
+        {
+            BlogMLPost post = new BlogMLPost();
+
+            HtmlNode postHeading = abbreviatedPost.SelectSingleNode(
+                "h4");
+
+            Debug.Assert(postHeading != null);
+
+            post.Title = HttpUtility.HtmlDecode(postHeading.InnerText);
+
+            HtmlNode postLink = postHeading.SelectSingleNode("a");
+            Debug.Assert(postHeading != null);
+
+            post.PostUrl = postLink.Attributes["href"].Value;
+
+            HtmlNode postSummary = abbreviatedPost.SelectSingleNode(
+                "div[@class='post-summary']");
+
+            Debug.Assert(postSummary != null);
+
+            post.Excerpt = BlogMLContent.Create(
+                postSummary.InnerText,
+                ContentTypes.Text);
+
+            post.HasExcerpt = true;
+
+            post.Authors.Add(blog.Authors[0].ID);
+
+            blog.Posts.Add(post);
+        }
+    }
+}
 ```
 
 Even if you haven't used the Html Agility Pack before (which is something I
@@ -405,25 +405,25 @@ each post was published). This functionality is implemented in the
 **ExportPosts** method.
 
 ```C#
-        static void Main(string[] args)
-        {
-            Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
-            Uri newBlogBaseUrl = new Uri(
-                "https://www.technologytoolbox.com/blog/jjameson/");
+static void Main(string[] args)
+{
+    Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson/");
+    Uri newBlogBaseUrl = new Uri(
+        "https://www.technologytoolbox.com/blog/jjameson/");
 
-            ...
+    ...
 
-            const string postsFolder =
-                @"C:\NotBackedUp\Temp\MSDN-blog";
+    const string postsFolder =
+        @"C:\NotBackedUp\Temp\MSDN-blog";
 
-            ...
+    ...
 
-            BlogMLBlog blog = new BlogMLBlog();
+    BlogMLBlog blog = new BlogMLBlog();
 
-            ...
+    ...
 
-            ExportPosts(blog, postsFolder, oldBlogBaseUrl, newBlogBaseUrl);
-        }
+    ExportPosts(blog, postsFolder, oldBlogBaseUrl, newBlogBaseUrl);
+}
 ```
 
 Having previously populated the BlogML document, it is now simply a matter of
@@ -432,47 +432,47 @@ first step is to download an offline copy of the post using the
 **EnsureOfflineFile** method shown above.
 
 ```C#
-        private static void ExportPosts(
-            BlogMLBlog blog,
-            string postsFolder,
-            Uri oldBlogBaseUrl,
-            Uri newBlogBaseUrl)
-        {
-            foreach (BlogMLPost post in blog.Posts)
-            {
-                Uri originalPostUrl = GetOriginalPostUrl(
-                    post,
-                    oldBlogBaseUrl);
+private static void ExportPosts(
+    BlogMLBlog blog,
+    string postsFolder,
+    Uri oldBlogBaseUrl,
+    Uri newBlogBaseUrl)
+{
+    foreach (BlogMLPost post in blog.Posts)
+    {
+        Uri originalPostUrl = GetOriginalPostUrl(
+            post,
+            oldBlogBaseUrl);
 
-                string relativePath = originalPostUrl.AbsolutePath.Substring(
-                    oldBlogBaseUrl.AbsolutePath.Length);
+        string relativePath = originalPostUrl.AbsolutePath.Substring(
+            oldBlogBaseUrl.AbsolutePath.Length);
 
-                relativePath = relativePath.Replace('/', '\\');
+        relativePath = relativePath.Replace('/', '\\');
 
-                string offlinePostFilename = Path.Combine(
-                    postsFolder,
-                    relativePath);
+        string offlinePostFilename = Path.Combine(
+            postsFolder,
+            relativePath);
 
-                Debug.Assert(offlinePostFilename.EndsWith(".aspx") == true);
+        Debug.Assert(offlinePostFilename.EndsWith(".aspx") == true);
 
-                offlinePostFilename = Path.ChangeExtension(
-                    offlinePostFilename,
-                    ".html");
+        offlinePostFilename = Path.ChangeExtension(
+            offlinePostFilename,
+            ".html");
 
-                EnsureOfflineFile(originalPostUrl, offlinePostFilename);
+        EnsureOfflineFile(originalPostUrl, offlinePostFilename);
 
-                FillPostDetail(
-                    blog,
-                    post,
-                    offlinePostFilename,
-                    oldBlogBaseUrl,
-                    newBlogBaseUrl);
+        FillPostDetail(
+            blog,
+            post,
+            offlinePostFilename,
+            oldBlogBaseUrl,
+            newBlogBaseUrl);
 
-                post.PostUrl = originalPostUrl.AbsoluteUri.Replace(
-                    oldBlogBaseUrl.AbsoluteUri,
-                    newBlogBaseUrl.AbsoluteUri);
-            }
-        }
+        post.PostUrl = originalPostUrl.AbsoluteUri.Replace(
+            oldBlogBaseUrl.AbsoluteUri,
+            newBlogBaseUrl.AbsoluteUri);
+    }
+}
 ```
 
 **FillPostDetail** is where things start to get more interesting...
@@ -581,70 +581,70 @@ content of each post in order to:
   frequently copy text from documents I've written when creating blog posts
 
 ```C#
-        private static string TransformOriginalPostContent(
-            HtmlNode postContent,
-            Uri originalPostUrl,
-            Uri newBlogBaseUrl)
-        {
-            RemoveUnwantedAttributes(postContent, "mce_href");
-            RemoveUnwantedAttributes(postContent, "mce_keep");
-            RemoveUnwantedAttributes(postContent, "mce_src");
+private static string TransformOriginalPostContent(
+    HtmlNode postContent,
+    Uri originalPostUrl,
+    Uri newBlogBaseUrl)
+{
+    RemoveUnwantedAttributes(postContent, "mce_href");
+    RemoveUnwantedAttributes(postContent, "mce_keep");
+    RemoveUnwantedAttributes(postContent, "mce_src");
 
-            TranslateLinksToOtherBlogPosts(postContent, newBlogBaseUrl);
+    TranslateLinksToOtherBlogPosts(postContent, newBlogBaseUrl);
 
-            HtmlNode lastElement =
-                postContent.ChildNodes[postContent.ChildNodes.Count - 1];
+    HtmlNode lastElement =
+        postContent.ChildNodes[postContent.ChildNodes.Count - 1];
 
-            Debug.Assert(lastElement.Name == "div");
-            Debug.Assert(lastElement.Attributes["style"].Value == "clear:both;");
-            postContent.RemoveChild(lastElement);
+    Debug.Assert(lastElement.Name == "div");
+    Debug.Assert(lastElement.Attributes["style"].Value == "clear:both;");
+    postContent.RemoveChild(lastElement);
 
-            string htmlErrors;
+    string htmlErrors;
 
-            string newPostContent = HtmlCleaner.CleanFragment(
-                postContent.InnerHtml,
-                out htmlErrors);
+    string newPostContent = HtmlCleaner.CleanFragment(
+        postContent.InnerHtml,
+        out htmlErrors);
 
-            if (string.IsNullOrEmpty(htmlErrors) == false)
-            {
-                Console.WriteLine(
-                    "One or more errors detected in HTML for post ({0}):"
-                        + Environment.NewLine
-                        + "{1}",
-                    originalPostUrl,
-                    htmlErrors);
-            }
+    if (string.IsNullOrEmpty(htmlErrors) == false)
+    {
+        Console.WriteLine(
+            "One or more errors detected in HTML for post ({0}):"
+                + Environment.NewLine
+                + "{1}",
+            originalPostUrl,
+            htmlErrors);
+    }
 
-            newPostContent = newPostContent.Replace("&amp;ndash;", "--");
-            newPostContent = newPostContent.Replace("&amp;ldquo;", "\"");
-            newPostContent = newPostContent.Replace("&amp;rdquo;", "\"");
-            newPostContent = newPostContent.Replace("&amp;rsquo;", "'");
+    newPostContent = newPostContent.Replace("&amp;ndash;", "--");
+    newPostContent = newPostContent.Replace("&amp;ldquo;", "\"");
+    newPostContent = newPostContent.Replace("&amp;rdquo;", "\"");
+    newPostContent = newPostContent.Replace("&amp;rsquo;", "'");
 
-            return newPostContent;
-        }
+    return newPostContent;
+}
 ```
 
 Removing unwanted attributes in the HTML turns out to be rather trivial, thanks
 to the powerful XPath query capabilities of the Html Agility Pack:
 
 ```C#
-        private static void RemoveUnwantedAttributes(
-            HtmlNode postContent,
-            string attributeName)
-        {
-            HtmlNodeCollection nodes = postContent.SelectNodes(
-                "//@" + attributeName);
+private static void RemoveUnwantedAttributes(
+    HtmlNode postContent,
+    string attributeName)
+{
+    HtmlNodeCollection nodes = postContent.SelectNodes(
+        "//@" + attributeName);
 
-            if (nodes == null)
-            {
-                return;
-            }
+    if (nodes == null)
+    {
+        return;
+    }
 
-            foreach (HtmlNode node in nodes)
-            {
-                node.Attributes.Remove(attributeName);
-            }
-        }
+    foreach (HtmlNode node in nodes)
+    {
+        node.Attributes.Remove(attributeName);
+    }
+}
 ```
 
 Link translation is also relatively easy thanks to the **HtmlNode.Descendants**
@@ -652,55 +652,55 @@ method and the fact that the URLs for each post on my new blog are very similar
 to the old URLs:
 
 ```C#
-        private static void TranslateLinksToOtherBlogPosts(
-            HtmlNode postContent,
-            Uri newBlogBaseUrl)
+private static void TranslateLinksToOtherBlogPosts(
+    HtmlNode postContent,
+    Uri newBlogBaseUrl)
+{
+    Debug.Assert(newBlogBaseUrl.AbsoluteUri.EndsWith("/") == true);
+
+    IEnumerable<HtmlNode> nodes = postContent.Descendants("a");
+
+    foreach (HtmlNode node in nodes)
+    {
+        if (node.Attributes.Contains("href") == false)
         {
-            Debug.Assert(newBlogBaseUrl.AbsoluteUri.EndsWith("/") == true);
-
-            IEnumerable<HtmlNode> nodes = postContent.Descendants("a");
-
-            foreach (HtmlNode node in nodes)
-            {
-                if (node.Attributes.Contains("href") == false)
-                {
-                    continue;
-                }
-                else if (node.Attributes["href"].Value.StartsWith("#") == true)
-                {
-                    continue;
-                }
-
-                Uri href = new Uri(node.Attributes["href"].Value);
-
-                if (href.AbsoluteUri.StartsWith(
-                    "http://blogs.msdn.com/jjameson/",
-                    StringComparison.OrdinalIgnoreCase) == true)
-                {
-                    string relativeUrl = href.AbsolutePath.Substring(
-                        "/jjameson/".Length);
-
-                    Uri newHref = new Uri(
-                        newBlogBaseUrl,
-                        relativeUrl);
-
-                    node.Attributes["href"].Value = newHref.AbsolutePath;
-                }
-                else if (href.AbsoluteUri.StartsWith(
-                    "http://blogs.msdn.com/b/jjameson/",
-                    StringComparison.OrdinalIgnoreCase) == true)
-                {
-                    string relativeUrl = href.AbsolutePath.Substring(
-                        "/b/jjameson/".Length);
-
-                    Uri newHref = new Uri(
-                        newBlogBaseUrl,
-                        relativeUrl);
-
-                    node.Attributes["href"].Value = newHref.AbsolutePath;
-                }
-            }
+            continue;
         }
+        else if (node.Attributes["href"].Value.StartsWith("#") == true)
+        {
+            continue;
+        }
+
+        Uri href = new Uri(node.Attributes["href"].Value);
+
+        if (href.AbsoluteUri.StartsWith(
+            "http://blogs.msdn.com/jjameson/",
+            StringComparison.OrdinalIgnoreCase) == true)
+        {
+            string relativeUrl = href.AbsolutePath.Substring(
+                "/jjameson/".Length);
+
+            Uri newHref = new Uri(
+                newBlogBaseUrl,
+                relativeUrl);
+
+            node.Attributes["href"].Value = newHref.AbsolutePath;
+        }
+        else if (href.AbsoluteUri.StartsWith(
+            "http://blogs.msdn.com/b/jjameson/",
+            StringComparison.OrdinalIgnoreCase) == true)
+        {
+            string relativeUrl = href.AbsolutePath.Substring(
+                "/b/jjameson/".Length);
+
+            Uri newHref = new Uri(
+                newBlogBaseUrl,
+                relativeUrl);
+
+            node.Attributes["href"].Value = newHref.AbsolutePath;
+        }
+    }
+}
 ```
 
 On the Agilent project, for example, link translation was much more involved. We
@@ -717,103 +717,103 @@ the past. Note that **HtmlCleaner** is really just a thin wrapper around
 **[SgmlReader](http://archive.msdn.microsoft.com/SgmlReader):**
 
 ```C#
+/// <summary>
+/// Utility class for ensuring HTML is well-formed.
+/// </summary>
+internal static class HtmlCleaner
+{
     /// <summary>
-    /// Utility class for ensuring HTML is well-formed.
+    /// Ensures the specified HTML is well-formed.
     /// </summary>
-    internal static class HtmlCleaner
+    /// <param name="htmlInput">The content to convert to well-formed HTML.
+    /// </param>
+    /// <param name="errors">Errors detected during the "cleanup" of the
+    /// HTML input.</param>
+    /// <returns>A string containing the well-formed HTML based on the
+    /// specified input.</returns>
+    public static string Clean(
+        string htmlInput,
+        out string errors)
     {
-        /// <summary>
-        /// Ensures the specified HTML is well-formed.
-        /// </summary>
-        /// <param name="htmlInput">The content to convert to well-formed HTML.
-        /// </param>
-        /// <param name="errors">Errors detected during the "cleanup" of the
-        /// HTML input.</param>
-        /// <returns>A string containing the well-formed HTML based on the
-        /// specified input.</returns>
-        public static string Clean(
-            string htmlInput,
-            out string errors)
+        errors = null;
+
+        if (string.IsNullOrEmpty(htmlInput) == true)
         {
-            errors = null;
+            return htmlInput;
+        }
 
-            if (string.IsNullOrEmpty(htmlInput) == true)
+        using (StringReader sr = new StringReader(htmlInput))
+        {
+            using (StringWriter errorWriter = new StringWriter(
+                CultureInfo.CurrentCulture))
             {
-                return htmlInput;
-            }
+                SgmlReader reader = new SgmlReader();
+                reader.DocType = "HTML";
+                reader.CaseFolding = CaseFolding.ToLower;
+                reader.InputStream = sr;
+                reader.ErrorLog = errorWriter;
 
-            using (StringReader sr = new StringReader(htmlInput))
-            {
-                using (StringWriter errorWriter = new StringWriter(
+                using (StringWriter sw = new StringWriter(
                     CultureInfo.CurrentCulture))
                 {
-                    SgmlReader reader = new SgmlReader();
-                    reader.DocType = "HTML";
-                    reader.CaseFolding = CaseFolding.ToLower;
-                    reader.InputStream = sr;
-                    reader.ErrorLog = errorWriter;
-
-                    using (StringWriter sw = new StringWriter(
-                        CultureInfo.CurrentCulture))
+                    using (XmlTextWriter w = new XmlTextWriter(sw))
                     {
-                        using (XmlTextWriter w = new XmlTextWriter(sw))
+                        reader.Read();
+                        while (reader.EOF == false)
                         {
-                            reader.Read();
-                            while (reader.EOF == false)
-                            {
-                                w.WriteNode(reader, true);
-                            }
+                            w.WriteNode(reader, true);
                         }
-
-                        errorWriter.Flush();
-                        errors = errorWriter.ToString();
-
-                        string cleanedHtml = sw.ToString();
-
-                        return cleanedHtml;
                     }
+
+                    errorWriter.Flush();
+                    errors = errorWriter.ToString();
+
+                    string cleanedHtml = sw.ToString();
+
+                    return cleanedHtml;
                 }
             }
         }
-
-        /// <summary>
-        /// Ensures the specified HTML fragment is well-formed.
-        /// </summary>
-        /// <param name="htmlFragment">The content to convert to well-formed
-        /// HTML.</param>
-        /// <param name="errors">Errors detected during the "cleanup" of the
-        /// HTML input.</param>
-        /// <returns>A string containing the well-formed HTML based on the
-        /// specified input.</returns>
-        public static string CleanFragment(
-            string htmlFragment,
-            out string errors)
-        {
-            errors = null;
-
-            if (string.IsNullOrEmpty(htmlFragment) == true)
-            {
-                return htmlFragment;
-            }
-
-            string cleanedHtml = Clean(htmlFragment, out errors);
-
-            Debug.Assert(string.IsNullOrEmpty(cleanedHtml) == false);
-            Debug.Assert(cleanedHtml.StartsWith(
-                "<html>",
-                StringComparison.OrdinalIgnoreCase) == true);
-
-            Debug.Assert(cleanedHtml.EndsWith(
-                "</html>",
-                StringComparison.OrdinalIgnoreCase) == true);
-
-            cleanedHtml = cleanedHtml.Substring(
-                "<html>".Length,
-                cleanedHtml.Length - "<html>".Length - "</html>".Length);
-
-            return cleanedHtml;
-        }
     }
+
+    /// <summary>
+    /// Ensures the specified HTML fragment is well-formed.
+    /// </summary>
+    /// <param name="htmlFragment">The content to convert to well-formed
+    /// HTML.</param>
+    /// <param name="errors">Errors detected during the "cleanup" of the
+    /// HTML input.</param>
+    /// <returns>A string containing the well-formed HTML based on the
+    /// specified input.</returns>
+    public static string CleanFragment(
+        string htmlFragment,
+        out string errors)
+    {
+        errors = null;
+
+        if (string.IsNullOrEmpty(htmlFragment) == true)
+        {
+            return htmlFragment;
+        }
+
+        string cleanedHtml = Clean(htmlFragment, out errors);
+
+        Debug.Assert(string.IsNullOrEmpty(cleanedHtml) == false);
+        Debug.Assert(cleanedHtml.StartsWith(
+            "<html>",
+            StringComparison.OrdinalIgnoreCase) == true);
+
+        Debug.Assert(cleanedHtml.EndsWith(
+            "</html>",
+            StringComparison.OrdinalIgnoreCase) == true);
+
+        cleanedHtml = cleanedHtml.Substring(
+            "<html>".Length,
+            cleanedHtml.Length - "<html>".Length - "</html>".Length);
+
+        return cleanedHtml;
+    }
+}
 ```
 
 {{< div-block "note important" >}}
@@ -880,65 +880,65 @@ you can dynamically "create" new tags when creating or updating a post).
 Here is the helper method that adds the tags to each post:
 
 ```C#
-        private static void AppendBlogPostTags(
-            HtmlDocument document,
-            StringBuilder buffer)
-        {
-            string[] tags = GetPostTags(document);
+private static void AppendBlogPostTags(
+    HtmlDocument document,
+    StringBuilder buffer)
+{
+    string[] tags = GetPostTags(document);
 
-            if (tags == null || tags.Length < 1)
-            {
-                return;
-            }
+    if (tags == null || tags.Length < 1)
+    {
+        return;
+    }
 
-            buffer.Append("<div class='tags'>");
-            buffer.AppendFormat("<h3>Tags</h3>");
-            buffer.Append("<ul>");
+    buffer.Append("<div class='tags'>");
+    buffer.AppendFormat("<h3>Tags</h3>");
+    buffer.Append("<ul>");
 
-            foreach (string tag in tags)
-            {
-                buffer.Append("<li>");
+    foreach (string tag in tags)
+    {
+        buffer.Append("<li>");
 
-                string newTag = GetNewTag(tag);
+        string newTag = GetNewTag(tag);
 
-                buffer.AppendFormat(
-                    "<a rel='tag' href='/blog/jjameson/tags/{0}'>{0}</a>",
-                    newTag);
+        buffer.AppendFormat(
+            "<a rel='tag' href='/blog/jjameson/tags/{0}'>{0}</a>",
+            newTag);
 
-                buffer.Append("</li>");
-            }
+        buffer.Append("</li>");
+    }
 
-            buffer.Append("</ul>");
-            buffer.Append("</div>");
-        }
+    buffer.Append("</ul>");
+    buffer.Append("</div>");
+}
 ```
 
 The **GetPostTags** method simply uses the now familiar parsing functionality of
 **HtmlDocument** to extract the list of tags from the offline post file:
 
 ```C#
-        private static string[] GetPostTags(
-            HtmlDocument document)
-        {
-            HtmlNode postTagsSection = document.DocumentNode.SelectSingleNode(
-                "//div[@class='post-tags']");
+private static string[] GetPostTags(
+    HtmlDocument document)
+{
+    HtmlNode postTagsSection = document.DocumentNode.SelectSingleNode(
+        "//div[@class='post-tags']");
 
-            if (postTagsSection == null)
-            {
-                return null;
-            }
+    if (postTagsSection == null)
+    {
+        return null;
+    }
 
-            List<string> tags = new List<string>();
+    List<string> tags = new List<string>();
 
-            IEnumerable<HtmlNode> postTags = postTagsSection.Descendants("a");
+    IEnumerable<HtmlNode> postTags = postTagsSection.Descendants("a");
 
-            foreach (HtmlNode link in postTags)
-            {
-                tags.Add(link.InnerText);
-            }
+    foreach (HtmlNode link in postTags)
+    {
+        tags.Add(link.InnerText);
+    }
 
-            return tags.ToArray();
-        }
+    return tags.ToArray();
+}
 ```
 
 I created the **GetNewTag** method (called from the **AppendBlogPostTags**
@@ -946,18 +946,18 @@ method above) when I realized I should have used a different tag on my MSDN blog
 (i.e. **SharePoint 2010** -- instead of **SharePoint Server 2010**):
 
 ```C#
-        private static string GetNewTag(
-            string oldTag)
-        {
-            switch (oldTag)
-            {
-                case "SharePoint Server 2010":
-                    return "SharePoint 2010";
+private static string GetNewTag(
+    string oldTag)
+{
+    switch (oldTag)
+    {
+        case "SharePoint Server 2010":
+            return "SharePoint 2010";
 
-                default:
-                    return oldTag;
-            }
-        }
+        default:
+            return oldTag;
+    }
+}
 ```
 
 In order to populate the list of categories for each post, I created a simple
@@ -1011,82 +1011,82 @@ This mapping is implemented in the **MapTagToCategory** method, which is called
 from the **FillPostCategories** method:
 
 ```C#
-        private static void FillPostCategories(
-            BlogMLBlog blog,
-            BlogMLPost post,
-            HtmlDocument document)
+private static void FillPostCategories(
+    BlogMLBlog blog,
+    BlogMLPost post,
+    HtmlDocument document)
+{
+    string[] tags = GetPostTags(document);
+
+    if (tags == null || tags.Length < 1)
+    {
+        return;
+    }
+
+    foreach (string tag in tags)
+    {
+        string categoryTitle = MapTagToCategory(tag);
+
+        if (string.IsNullOrEmpty(categoryTitle) == false)
         {
-            string[] tags = GetPostTags(document);
+            BlogMLCategoryReference category = EnsureCategory(
+                blog,
+                categoryTitle,
+                post.DateCreated);
 
-            if (tags == null || tags.Length < 1)
-            {
-                return;
-            }
-
-            foreach (string tag in tags)
-            {
-                string categoryTitle = MapTagToCategory(tag);
-
-                if (string.IsNullOrEmpty(categoryTitle) == false)
-                {
-                    BlogMLCategoryReference category = EnsureCategory(
-                        blog,
-                        categoryTitle,
-                        post.DateCreated);
-
-                    AddCategoryIfNotAlreadyReferenced(
-                        post.Categories,
-                        category);
-                }
-            }
+            AddCategoryIfNotAlreadyReferenced(
+                post.Categories,
+                category);
         }
+    }
+}
 
-        private static string MapTagToCategory(
-            string tag)
-        {
-            switch (tag)
-            {
-                case "Core Development":
-                case "Debugging":
-                case "Silverlight":
-                case "TFS":
-                case "Visual Studio":
-                case "Web Development":
-                case "WCF":
-                    return "Development";
+private static string MapTagToCategory(
+    string tag)
+{
+    switch (tag)
+    {
+        case "Core Development":
+        case "Debugging":
+        case "Silverlight":
+        case "TFS":
+        case "Visual Studio":
+        case "Web Development":
+        case "WCF":
+            return "Development";
 
-                case "Infrastructure":
-                case "ISA Server":
-                case "Virtualization":
-                case "Windows 7":
-                case "Windows Server":
-                case "Windows Vista":
-                case "WSUS":
-                    return "Infrastructure";
+        case "Infrastructure":
+        case "ISA Server":
+        case "Virtualization":
+        case "Windows 7":
+        case "Windows Server":
+        case "Windows Vista":
+        case "WSUS":
+            return "Infrastructure";
 
-                case "My System":
-                case "Simplify":
-                case "Toolbox":
-                    return "My System";
+        case "My System":
+        case "Simplify":
+        case "Toolbox":
+            return "My System";
 
-                case "Personal":
-                    return "Personal";
+        case "Personal":
+            return "Personal";
 
-                case "MOSS 2007":
-                case "SharePoint Server 2010":
-                case "Tugboat":
-                case "WSS v2":
-                case "WSS v3":
-                    return "SharePoint";
+        case "MOSS 2007":
+        case "SharePoint Server 2010":
+        case "Tugboat":
+        case "WSS v2":
+        case "WSS v3":
+            return "SharePoint";
 
-                case "PowerShell":
-                case "SQL Server":
-                    return null;
+        case "PowerShell":
+        case "SQL Server":
+            return null;
 
-                default:
-                    throw new ArgumentException("Unexpected tag");
-            }
-        }
+        default:
+            throw new ArgumentException("Unexpected tag");
+    }
+}
 ```
 
 {{< div-block "note" >}}
@@ -1125,23 +1125,23 @@ what essentially amounts to a "replay hack." Like the previous steps, let's
 start with a quick look at the updates to `Main`...
 
 ```C#
-        static void Main(string[] args)
-        {
-            Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson");
+static void Main(string[] args)
+{
+    Uri oldBlogBaseUrl = new Uri("http://blogs.msdn.com/b/jjameson");
 
-            ...
+    ...
 
-            const string commentsFolder =
-                @"C:\NotBackedUp\Temp\MSDN-blog\Comments";
+    const string commentsFolder =
+        @"C:\NotBackedUp\Temp\MSDN-blog\Comments";
 
-            ...
+    ...
 
-            BlogMLBlog blog = new BlogMLBlog();
+    BlogMLBlog blog = new BlogMLBlog();
 
-            ...
+    ...
 
-            ExportComments(blog, commentsFolder, oldBlogBaseUrl);
-        }
+    ExportComments(blog, commentsFolder, oldBlogBaseUrl);
+}
 ```
 
 Similar to **ExportPosts**, the **ExportComments** method iterates the
@@ -1150,45 +1150,45 @@ offline file, and then processes the offline file to load the comments into the
 BlogML document:
 
 ```C#
-        private static void ExportComments(
-            BlogMLBlog blog,
-            string commentsFolder,
-            Uri oldBlogBaseUrl)
+private static void ExportComments(
+    BlogMLBlog blog,
+    string commentsFolder,
+    Uri oldBlogBaseUrl)
+{
+    foreach (BlogMLPost post in blog.Posts)
+    {
+        ...
+
+        Uri originalPostUrl = GetOriginalPostUrl(
+            post,
+            oldBlogBaseUrl);
+
+        string relativePath = originalPostUrl.AbsolutePath.Substring(
+            oldBlogBaseUrl.AbsolutePath.Length + 1);
+
+        relativePath = relativePath.Replace('/', '\\');
+
+        string commentsFilename = Path.Combine(
+            commentsFolder,
+            relativePath);
+
+        Debug.Assert(commentsFilename.EndsWith(".aspx") == true);
+
+        commentsFilename = Path.ChangeExtension(
+            commentsFilename,
+            ".html");
+
+        ExpostPostComments(originalPostUrl, commentsFilename);
+
+        if (File.Exists(commentsFilename) == true)
         {
-            foreach (BlogMLPost post in blog.Posts)
-            {
-                ...
-
-                Uri originalPostUrl = GetOriginalPostUrl(
-                    post,
-                    oldBlogBaseUrl);
-
-                string relativePath = originalPostUrl.AbsolutePath.Substring(
-                    oldBlogBaseUrl.AbsolutePath.Length + 1);
-
-                relativePath = relativePath.Replace('/', '\\');
-
-                string commentsFilename = Path.Combine(
-                    commentsFolder,
-                    relativePath);
-
-                Debug.Assert(commentsFilename.EndsWith(".aspx") == true);
-
-                commentsFilename = Path.ChangeExtension(
-                    commentsFilename,
-                    ".html");
-
-                ExpostPostComments(originalPostUrl, commentsFilename);
-
-                if (File.Exists(commentsFilename) == true)
-                {
-                    FillPostComments(
-                        blog,
-                        post,
-                        commentsFilename);
-                }
-            }
+            FillPostComments(
+                blog,
+                post,
+                commentsFilename);
         }
+    }
+}
 ```
 
 **ExportPostComments** checks to see if an offline comments file exists for the
@@ -1196,36 +1196,36 @@ specified post (meaning the comments have already been downloaded) and, if not,
 attempts to download any comments:
 
 ```C#
-        private static void ExportPostComments(
-            Uri originalPostUrl,
-            string commentsFilename)
+private static void ExportPostComments(
+    Uri originalPostUrl,
+    string commentsFilename)
+{
+    if (File.Exists(commentsFilename) == false)
+    {
+        Console.WriteLine(
+            "Downloading comments for post {0}...",
+            originalPostUrl);
+
+        string archiveFolder = Path.GetDirectoryName(commentsFilename);
+
+        if (Directory.Exists(archiveFolder) == false)
         {
-            if (File.Exists(commentsFilename) == false)
-            {
-                Console.WriteLine(
-                    "Downloading comments for post {0}...",
-                    originalPostUrl);
-
-                string archiveFolder = Path.GetDirectoryName(commentsFilename);
-
-                if (Directory.Exists(archiveFolder) == false)
-                {
-                    Directory.CreateDirectory(archiveFolder);
-                }
-
-                string feedbackHtml = GetFeedbackHtmlForPost(originalPostUrl);
-
-                if (string.IsNullOrEmpty(feedbackHtml) == true)
-                {
-                    return;
-                }
-
-                using (StreamWriter writer = File.CreateText(commentsFilename))
-                {
-                    writer.Write(feedbackHtml);
-                }
-            }
+            Directory.CreateDirectory(archiveFolder);
         }
+
+        string feedbackHtml = GetFeedbackHtmlForPost(originalPostUrl);
+
+        if (string.IsNullOrEmpty(feedbackHtml) == true)
+        {
+            return;
+        }
+
+        using (StreamWriter writer = File.CreateText(commentsFilename))
+        {
+            writer.Write(feedbackHtml);
+        }
+    }
+}
 ```
 
 The **GetFeedbackHtmlForPost** method is where the "magic" happens for Web
@@ -1356,36 +1356,36 @@ all of the blog posts (including the categories, tags, and comments for each
 post) and is ready to be written to a file.
 
 ```C#
-        static void Main(string[] args)
-        {
+static void Main(string[] args)
+{
 
-            ...
+    ...
 
-            string blogExportFile = @"C:\NotBackedUp\Temp\"
-                + "Random Musings of Jeremy Jameson-Export.xml";
+    string blogExportFile = @"C:\NotBackedUp\Temp\"
+        + "Random Musings of Jeremy Jameson-Export.xml";
 
-            ...
+    ...
 
-            SaveBlogML(blog, blogExportFile);
-        }
+    SaveBlogML(blog, blogExportFile);
+}
 ```
 
 The **SaveBlogML** method is very simple...
 
 ```C#
-        private static void SaveBlogML(
-            BlogMLBlog blog,
-            string filename)
-        {
-            BlogMLWriter writer = new BlogMLWriter(blog);
+private static void SaveBlogML(
+    BlogMLBlog blog,
+    string filename)
+{
+    BlogMLWriter writer = new BlogMLWriter(blog);
 
-            using (XmlTextWriter xmlWriter = new XmlTextWriter(
-                filename,
-                Encoding.UTF8))
-            {
-                writer.Write(xmlWriter);
-            }
-        }
+    using (XmlTextWriter xmlWriter = new XmlTextWriter(
+        filename,
+        Encoding.UTF8))
+    {
+        writer.Write(xmlWriter);
+    }
+}
 ```
 
 ...however -- much to my surprise -- BlogML .NET doesn't actually include all of

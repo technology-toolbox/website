@@ -31,18 +31,18 @@ itself is hosted within a generic _User Control Web Part_ (similar to
 I also mentioned that the user control originally contained the following code:
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="100%" height="100%">
-        <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
-        <param name="onError" value="onSilverlightError" />
-        <param name="background" value="white" />
-        <param name="minRuntimeVersion" value="3.0.40624.0" />
-        <param name="autoUpgrade" value="true" />
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="100%" height="100%">
+    <param name="source" value="_Layouts/Fabrikam/Wheel.xap" />
+    <param name="onError" value="onSilverlightError" />
+    <param name="background" value="white" />
+    <param name="minRuntimeVersion" value="3.0.40624.0" />
+    <param name="autoUpgrade" value="true" />
+    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>
 ```
 
 In addition to the two problems with this code that I covered in my previous
@@ -102,17 +102,17 @@ The latest version of the markup in the user control that hosts our Silverlight
 application is shown below:
 
 ```XML
-    <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
-        width="380px" height="410px" onFocus="this.style.outline='none';">
-        <param name="source" value="<%= serviceWheelPackageUrl %>" />
-        <param name="onError" value="onSilverlightError" />
-        <param name="background" value="white" />
-        <param name="minRuntimeVersion" value="3.0.40624.0" />
-        <param name="autoUpgrade" value="true" />
-        <param name="windowless" value="true" />
-        <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
-            <img src="/_layouts/Images/Fabrikam/InstallSilverlight.png" alt="Get Microsoft Silverlight"
-                style="border-style: none" />
-        </a>
-    </object>
+<object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
+    width="380px" height="410px" onFocus="this.style.outline='none';">
+    <param name="source" value="<%= serviceWheelPackageUrl %>" />
+    <param name="onError" value="onSilverlightError" />
+    <param name="background" value="white" />
+    <param name="minRuntimeVersion" value="3.0.40624.0" />
+    <param name="autoUpgrade" value="true" />
+    <param name="windowless" value="true" />
+    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0" style="text-decoration: none">
+        <img src="/_layouts/Images/Fabrikam/InstallSilverlight.png" alt="Get Microsoft Silverlight"
+            style="border-style: none" />
+    </a>
+</object>
 ```

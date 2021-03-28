@@ -536,34 +536,34 @@ example, consider the scenario that I mentioned earlier about adding a Login
 Form Web Part to a page:
 
 ```C#
-            // Configure Web Parts
-            SPWebPartPages.SPLimitedWebPartManager wpm =
-                publicWeb.GetLimitedWebPartManager(
-                    page.Url,
-                    PersonalizationScope.Shared);
+// Configure Web Parts
+SPWebPartPages.SPLimitedWebPartManager wpm =
+    publicWeb.GetLimitedWebPartManager(
+        page.Url,
+        PersonalizationScope.Shared);
 
-            using (wpm)
-            {
-                string zoneId = "LeftColumnZone";
-                int zoneIndex = 0;
+using (wpm)
+{
+    string zoneId = "LeftColumnZone";
+    int zoneIndex = 0;
 
-                LoginFormWebPart loginForm =
-                    (LoginFormWebPart) SharePointWebPartHelper.EnsureWebPart(
-                        wpm,
-                        "LoginForm",
-                        "Fabrikam_LoginForm.webpart",
-                        zoneId,
-                        ref zoneIndex);
+    LoginFormWebPart loginForm =
+        (LoginFormWebPart) SharePointWebPartHelper.EnsureWebPart(
+            wpm,
+            "LoginForm",
+            "Fabrikam_LoginForm.webpart",
+            zoneId,
+            ref zoneIndex);
 
-                loginForm.DisplayRememberMe = false;
-                wpm.SaveChanges(loginForm);
+    loginForm.DisplayRememberMe = false;
+    wpm.SaveChanges(loginForm);
 
-                // HACK: Avoid memory leak in SPLimitedWebPartManager
-                if (wpm.Web != null)
-                {
-                    wpm.Web.Dispose();
-                }
-            }
+    // HACK: Avoid memory leak in SPLimitedWebPartManager
+    if (wpm.Web != null)
+    {
+        wpm.Web.Dispose();
+    }
+}
 ```
 
 Just be sure to avoid

@@ -70,15 +70,15 @@ Since, like me, you probably don't want to be bothered by a message whenever
 someone attempts this hack, you could configure an ELMAH filter as follows:
 
 ```XML
-  <elmah>
-    ...
-    <errorFilter>
-      <test>
-        <is-type binding="BaseException"
-          type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-      </test>
-    </errorFilter>
-  </elmah>
+<elmah>
+  ...
+  <errorFilter>
+    <test>
+      <is-type binding="BaseException"
+        type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </test>
+  </errorFilter>
+</elmah>
 ```
 
 However, there's a problem with the configuration shown above: it completely
@@ -91,17 +91,17 @@ Consequently we need to tweak the error filter a little bit (by adding an
 **ErrorMailModule**):
 
 ```XML
-    <errorFilter>
-      <test>
-        <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
-        <and>
-          <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-            type="String" />
-          <is-type binding="BaseException"
-            type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-        </and>
-      </test>
-    </errorFilter>
+<errorFilter>
+  <test>
+    <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
+    <and>
+      <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+        type="String" />
+      <is-type binding="BaseException"
+        type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </and>
+  </test>
+</errorFilter>
 ```
 
 With the configuration shown above, anytime someone causes an
@@ -131,26 +131,26 @@ error, you'll see the following:
 To suppress these messages, we can simply expand the ELMAH filter a little bit:
 
 ```XML
-    <errorFilter>
-      <test>
-        <or>
-          <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
-          <and>
-            <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-              type="String" />
-            <is-type binding="BaseException"
-              type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-          </and>
-          <!-- Do not send email notification when someone attempts to hack view state -->
-          <and>
-            <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-              type="String" />
-            <equal binding="Exception.Message"
-              value="The state information is invalid for this page and might be corrupted." type="String" />
-          </and>
-        </or>
-      </test>
-    </errorFilter>
+<errorFilter>
+  <test>
+    <or>
+      <!-- Do not send email notification when hackers attempt something like "http://.../?<script>" -->
+      <and>
+        <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+          type="String" />
+        <is-type binding="BaseException"
+          type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </and>
+      <!-- Do not send email notification when someone attempts to hack view state -->
+      <and>
+        <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+          type="String" />
+        <equal binding="Exception.Message"
+          value="The state information is invalid for this page and might be corrupted." type="String" />
+      </and>
+    </or>
+  </test>
+</errorFilter>
 ```
 
 Another common hack that I've seen attempted somewhat frequently against
@@ -165,44 +165,44 @@ The following errors are typically indicative of these hack attempts:
 Consequently we might as well add these to the ELMAH filter:
 
 ```XML
-    <errorFilter>
-      <test>
+<errorFilter>
+  <test>
+    <or>
+      <!-- Do not send email notification when hackers attempt something
+        like "http://.../?<script>" -->
+      <and>
+        <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+          type="String" />
+        <is-type binding="BaseException"
+          type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      </and>
+      <!-- Do not send email notification when someone attempts to hack view
+        state -->
+      <and>
+        <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+          type="String" />
+        <equal binding="Exception.Message"
+          value="The state information is invalid for this page and might be corrupted."
+          type="String" />
+      </and>
+      <!-- Do not send email notification when someone attempts to hack the
+        site using the "padding oracle exploit"
+        (http://technet.microsoft.com/en-us/security/advisory/2416728) -->
+      <and>
+        <equal binding="FilterSourceType.Name" value="ErrorMailModule"
+          type="String" />
         <or>
-          <!-- Do not send email notification when hackers attempt something
-            like "http://.../?<script>" -->
-          <and>
-            <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-              type="String" />
-            <is-type binding="BaseException"
-              type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-          </and>
-          <!-- Do not send email notification when someone attempts to hack view
-            state -->
-          <and>
-            <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-              type="String" />
-            <equal binding="Exception.Message"
-              value="The state information is invalid for this page and might be corrupted."
-              type="String" />
-          </and>
-          <!-- Do not send email notification when someone attempts to hack the
-            site using the "padding oracle exploit"
-            (http://technet.microsoft.com/en-us/security/advisory/2416728) -->
-          <and>
-            <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-              type="String" />
-            <or>
-              <equal binding="Exception.Message"
-                value="This is an invalid script resource request."
-                type="String" />
-              <equal binding="Exception.Message"
-                value="This is an invalid webresource request."
-                type="String" />
-            </or>
-          </and>
+          <equal binding="Exception.Message"
+            value="This is an invalid script resource request."
+            type="String" />
+          <equal binding="Exception.Message"
+            value="This is an invalid webresource request."
+            type="String" />
         </or>
-      </test>
-    </errorFilter>
+      </and>
+    </or>
+  </test>
+</errorFilter>
 ```
 
 Obviously you could choose to refactor the filter configuration shown above a
@@ -231,14 +231,14 @@ James Driscoll pointed out that you can avoid the issue in some cases, for
 example, by changing:
 
 ```XML
-  <equal binding="FilterSourceType.Name" value="ErrorMailModule"
-    type="String" />
+<equal binding="FilterSourceType.Name" value="ErrorMailModule"
+  type="String" />
 ```
 
 to:
 
 ```XML
-  <is-type binding="FilterSource" type="Elmah.ErrorMailModule" />
+<is-type binding="FilterSource" type="Elmah.ErrorMailModule" />
 ```
 
 However, that may not be viable for all scenarios (such as comparing the
@@ -262,37 +262,37 @@ the bug, I quickly turned my attention to finding a workaround. Consequently, I
 converted my filter configuration to use JavaScript instead:
 
 ```XML
-    <errorFilter>
-      <test>
-        <jscript>
-          <expression>
-            <![CDATA[
-              // @assembly mscorlib
-              // @assembly System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-              // @import System.Web
+<errorFilter>
+  <test>
+    <jscript>
+      <expression>
+        <![CDATA[
+          // @assembly mscorlib
+          // @assembly System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+          // @import System.Web
 
-              // Do not send email notification when hackers attempt something
-              // like "http://.../?<script>"
-              (FilterSourceType.Name == "ErrorMailModule"
-                && BaseException instanceof HttpRequestValidationException)
-              // Do not send email notification when someone attempts to hack
-              // view state
-              || (FilterSourceType.Name == "ErrorMailModule"
-                && Exception.Message ==
-                  "The state information is invalid for this page and might be corrupted.")
-              // Do not send email notification when someone attempts to hack
-              // the site using the "padding oracle exploit"
-              // (http://technet.microsoft.com/en-us/security/advisory/2416728)
-              || (FilterSourceType.Name == "ErrorMailModule"
-                && (Exception.Message ==
-                    "This is an invalid script resource request."
-                  || Exception.Message ==
-                    "This is an invalid webresource request."))
-              ]]>
-          </expression>
-        </jscript>
-      </test>
-    </errorFilter>
+          // Do not send email notification when hackers attempt something
+          // like "http://.../?<script>"
+          (FilterSourceType.Name == "ErrorMailModule"
+            && BaseException instanceof HttpRequestValidationException)
+          // Do not send email notification when someone attempts to hack
+          // view state
+          || (FilterSourceType.Name == "ErrorMailModule"
+            && Exception.Message ==
+              "The state information is invalid for this page and might be corrupted.")
+          // Do not send email notification when someone attempts to hack
+          // the site using the "padding oracle exploit"
+          // (http://technet.microsoft.com/en-us/security/advisory/2416728)
+          || (FilterSourceType.Name == "ErrorMailModule"
+            && (Exception.Message ==
+                "This is an invalid script resource request."
+              || Exception.Message ==
+                "This is an invalid webresource request."))
+          ]]>
+      </expression>
+    </jscript>
+  </test>
+</errorFilter>
 ```
 
 However, while initially testing this new approach, I found that I still

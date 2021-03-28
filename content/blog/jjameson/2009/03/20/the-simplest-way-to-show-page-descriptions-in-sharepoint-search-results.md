@@ -49,18 +49,18 @@ If you look at the default XSL for the Search Core Results Web Part in MOSS
 2007, you will find the following:
 
 ```XSLT
-    <div class="srch-Description">
-      <xsl:choose>
-        <xsl:when test="hithighlightedsummary[. != '']">
-          <xsl:call-template name="HitHighlighting">
-            <xsl:with-param name="hh" select="hithighlightedsummary" />
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:when test="description[. != '']">
-          <xsl:value-of select="description"/>
-        </xsl:when>
-      </xsl:choose>
-    </div >
+<div class="srch-Description">
+  <xsl:choose>
+    <xsl:when test="hithighlightedsummary[. != '']">
+      <xsl:call-template name="HitHighlighting">
+        <xsl:with-param name="hh" select="hithighlightedsummary" />
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:when test="description[. != '']">
+      <xsl:value-of select="description"/>
+    </xsl:when>
+  </xsl:choose>
+</div >
 ```
 
 Well, that certainly makes this a trivial exercise...all I need to do is reverse
@@ -68,18 +68,18 @@ the order so that if **description** is specified, then it takes precedence over
 **hithighlightedsummary**, right?
 
 ```XSLT
-    <div class="srch-Description">
-      <xsl:choose>
-        <xsl:when test="description[. != '']">
-          <xsl:value-of select="description"/>
-        </xsl:when>
-        <xsl:when test="hithighlightedsummary[. != '']">
-          <xsl:call-template name="HitHighlighting">
-            <xsl:with-param name="hh" select="hithighlightedsummary" />
-          </xsl:call-template>
-        </xsl:when>
-      </xsl:choose>
-    </div >
+<div class="srch-Description">
+  <xsl:choose>
+    <xsl:when test="description[. != '']">
+      <xsl:value-of select="description"/>
+    </xsl:when>
+    <xsl:when test="hithighlightedsummary[. != '']">
+      <xsl:call-template name="HitHighlighting">
+        <xsl:with-param name="hh" select="hithighlightedsummary" />
+      </xsl:call-template>
+    </xsl:when>
+  </xsl:choose>
+</div >
 ```
 
 Well, not quite.

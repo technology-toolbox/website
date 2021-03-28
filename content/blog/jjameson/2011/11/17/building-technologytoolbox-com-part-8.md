@@ -181,11 +181,11 @@ same server as the website in that environment.
 Prior to creating the IIS website, the corresponding folder must be created:
 
 ```PowerShell
-    $sitePath = "C:\inetpub\wwwroot\" + $siteName
+$sitePath = "C:\inetpub\wwwroot\" + $siteName
 
-    Write-Host "Creating website folder ($sitePath)...`r`n"
-    New-Item -Type Directory -Path $sitePath > $null
-    Write-Host "Successfully created website folder ($sitePath).`r`n"
+Write-Host "Creating website folder ($sitePath)...`r`n"
+New-Item -Type Directory -Path $sitePath > $null
+Write-Host "Successfully created website folder ($sitePath).`r`n"
 ```
 
 ### Step 5 - Create IIS website
@@ -193,11 +193,11 @@ Prior to creating the IIS website, the corresponding folder must be created:
 Next, the `New-Website` cmdlet is used to create the website in IIS:
 
 ```PowerShell
-    Write-Host "Creating website ($sitePath)...`r`n"
-    New-Website -Name $siteName -HostHeader $siteName `
-        -PhysicalPath $sitePath -ApplicationPool $siteName > $null
+Write-Host "Creating website ($sitePath)...`r`n"
+New-Website -Name $siteName -HostHeader $siteName `
+    -PhysicalPath $sitePath -ApplicationPool $siteName > $null
 
-    Write-Host "Successfully created website ($sitePath).`r`n"
+Write-Host "Successfully created website ($sitePath).`r`n"
 ```
 
 ### Step 6 - Copy Subtext website content
@@ -208,9 +208,9 @@ The Subtext solution is deployed by copying files from the Release server
 "Debug" or "Release").
 
 ```PowerShell
-    Write-Host "Copying Subtext website content...`r`n"
-    Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
-    Write-Host "Successfully copied Subtext website content.`r`n"
+Write-Host "Copying Subtext website content...`r`n"
+Copy-Item "\\dazzler\Builds\Subtext\$subtextVersion\$buildConfiguration\_PublishedWebsites\Subtext.Web" "$sitePath\blog" -Recurse
+Write-Host "Successfully copied Subtext website content.`r`n"
 ```
 
 For more details on the build process, refer to one of my posts from a couple of
@@ -227,9 +227,9 @@ Subtext requires read/write access to the App\_Data folder, so I use the
 utility to configure the NTFS permissions:
 
 ```PowerShell
-    Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
-    icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
-    Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
+Write-Host "Granting read/write access on Subtext App_Data folder...`r`n"
+icacls "$sitePath\blog\App_Data" /grant ($appPoolIdentity + ":(OI)(CI)(M)") | Out-Default
+Write-Host "Successfully granted read/write access on Subtext App_Data folder.`r`n"
 ```
 
 ### Step 8 - Convert blog folder to application
@@ -241,9 +241,9 @@ clicking **Convert to Application**. In PowerShell, this is accomplished using
 the `New-WebApplication` command:
 
 ```PowerShell
-    Write-Host "Creating new application for blog site...`r`n"
-    New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
-    Write-Host "Successfully created new application for blog site.`r`n"
+Write-Host "Creating new application for blog site...`r`n"
+New-WebApplication -Site $siteName -Name blog -PhysicalPath "$sitePath\blog" -ApplicationPool $siteName > $null
+Write-Host "Successfully created new application for blog site.`r`n"
 ```
 
 ### Step 9 - Copy Caelum website content
@@ -253,9 +253,9 @@ Release server. As with the deployment of the Subtext solution, variables are
 used to specify the version to deploy as well as the build configuration.
 
 ```PowerShell
-    Write-Host "Copying Caelum website content...`r`n"
-    Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
-    Write-Host "Successfully copied Caelum website content.`r`n"
+Write-Host "Copying Caelum website content...`r`n"
+Copy-Item \\dazzler\Builds\Caelum\$caelumVersion\$buildConfiguration\_PublishedWebsites\Website\* $sitePath -Recurse -Force
+Write-Host "Successfully copied Caelum website content.`r`n"
 ```
 
 ### Step 10 - Overwrite Web.config files (as necessary)
@@ -283,13 +283,13 @@ little more discipline to keep these files in-sync, but using a tool like
 makes this rather easy.
 
 ```PowerShell
-    If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
-    {
-        Write-Host "Overwriting Web.config files...`r`n"
-        Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
-        Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
-        Write-Host "Successfully overwrote Web.config files.`r`n"
-    }
+If ($($siteUrl.AbsoluteUri) -eq "http://www-test.technologytoolbox.com/")
+{
+    Write-Host "Overwriting Web.config files...`r`n"
+    Copy-Item "$sitePath\Web.TEST.config" "$sitePath\Web.config" -Force
+    Copy-Item "$sitePath\blog\Web.TEST.config" "$sitePath\blog\Web.config" -Force
+    Write-Host "Successfully overwrote Web.config files.`r`n"
+}
 ```
 
 ### Putting it all together

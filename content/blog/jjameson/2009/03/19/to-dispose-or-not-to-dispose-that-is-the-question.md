@@ -78,60 +78,60 @@ For example, consider the following method from my `SharePointHelper` class
 (which I've been using for years):
 
 ```C#
-     /// <summary>
-    /// Finds a child Web based on the name (relative URL).
-    /// </summary>
-    /// <remarks>
-    /// This is useful because SPWebCollection[name] does not return null
-    /// or throw an exception if the specified web does not exist.
-    /// </remarks>
-    /// <param name="parentWeb">The parent Web to search.</param>
-    /// <param name="name">The name (i.e. URL) of the child Web to find.</param>
-    /// <returns>An SPWeb object (which must be disposed by the caller) if
-    /// the child Web is found, otherwise null.</returns>
-    public static SPWeb FindWeb(
-        SPWeb parentWeb,
-        string name)
+ /// <summary>
+/// Finds a child Web based on the name (relative URL).
+/// </summary>
+/// <remarks>
+/// This is useful because SPWebCollection[name] does not return null
+/// or throw an exception if the specified web does not exist.
+/// </remarks>
+/// <param name="parentWeb">The parent Web to search.</param>
+/// <param name="name">The name (i.e. URL) of the child Web to find.</param>
+/// <returns>An SPWeb object (which must be disposed by the caller) if
+/// the child Web is found, otherwise null.</returns>
+public static SPWeb FindWeb(
+    SPWeb parentWeb,
+    string name)
+{
+    if (parentWeb == null)
     {
-        if (parentWeb == null)
-        {
-            throw new ArgumentNullException("parentWeb");
-        }
-
-        if (name == null)
-        {
-            throw new ArgumentNullException("name");
-        }
-
-        name = name.Trim();
-        if (string.IsNullOrEmpty(name))
-        {
-            throw new ArgumentException(
-                "The name of the Web must be specified.",
-                "name");
-        }
-
-        SPWeb childWeb = parentWeb.Webs[name];
-
-        // HACK: SPWebCollection[name] does not return null or throw
-        // an exception if the specified web does not exist.
-        try
-        {
-            Guid webId = childWeb.ID;
-
-            // In order to avoid a code analysis warning about webId not
-            // being used we need to do "something" with webId;
-            // a simple assertion is sufficient
-            Debug.Assert(webId != Guid.Empty);
-        }
-        catch (FileNotFoundException)
-        {
-            childWeb.Dispose();
-            childWeb = null;
-        }
-
-        return childWeb;
+        throw new ArgumentNullException("parentWeb");
     }
+
+    if (name == null)
+    {
+        throw new ArgumentNullException("name");
+    }
+
+    name = name.Trim();
+    if (string.IsNullOrEmpty(name))
+    {
+        throw new ArgumentException(
+            "The name of the Web must be specified.",
+            "name");
+    }
+
+    SPWeb childWeb = parentWeb.Webs[name];
+
+    // HACK: SPWebCollection[name] does not return null or throw
+    // an exception if the specified web does not exist.
+    try
+    {
+        Guid webId = childWeb.ID;
+
+        // In order to avoid a code analysis warning about webId not
+        // being used we need to do "something" with webId;
+        // a simple assertion is sufficient
+        Debug.Assert(webId != Guid.Empty);
+    }
+    catch (FileNotFoundException)
+    {
+        childWeb.Dispose();
+        childWeb = null;
+    }
+
+    return childWeb;
+}
 ```
 
 As noted in the XML comments for this method, the caller is responsible for
@@ -151,15 +151,15 @@ should call `Dispose()` on that object, or, preferably if you are a C#
 developer, you should wrap your object in a `using` block, as shown below:
 
 ```C#
-     private void ConfigureSampleContentWeb(
-        SPWeb parentWeb)
+ private void ConfigureSampleContentWeb(
+    SPWeb parentWeb)
+{
+    using (SPWeb samplesWeb =
+        SharePointHelper.FindWeb(parentWeb, "Samples"))
     {
-        using (SPWeb samplesWeb =
-            SharePointHelper.FindWeb(parentWeb, "Samples"))
-        {
-            ConfigureSamplePages(samplesWeb);
-        }
+        ConfigureSamplePages(samplesWeb);
     }
+}
 ```
 
 Am I making this too easy?

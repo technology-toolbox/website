@@ -184,24 +184,24 @@ I then updated the **AnalyticsScript** control to compare the URL of the current
 request with the filter specified in configuration:
 
 ```C#
-        protected override void OnLoad(
-            EventArgs e)
-        {
-            base.OnLoad(e);
+protected override void OnLoad(
+    EventArgs e)
+{
+    base.OnLoad(e);
 
-            bool enableAnalytics = Settings.Default.EnableAnalytics;
+    bool enableAnalytics = Settings.Default.EnableAnalytics;
 
-            if (enableAnalytics == true)
-            {
-                string pattern = Settings.Default.AnalyticsEnvironmentFilter;
+    if (enableAnalytics == true)
+    {
+        string pattern = Settings.Default.AnalyticsEnvironmentFilter;
 
-                enableAnalytics = Regex.IsMatch(
-                    this.Page.Request.Url.Host,
-                    pattern);
-            }
+        enableAnalytics = Regex.IsMatch(
+            this.Page.Request.Url.Host,
+            pattern);
+    }
 
-            this.Visible = enableAnalytics;
-        }
+    this.Visible = enableAnalytics;
+}
 ```
 
 At this point, I also removed the hard-coded analytics key by adding another

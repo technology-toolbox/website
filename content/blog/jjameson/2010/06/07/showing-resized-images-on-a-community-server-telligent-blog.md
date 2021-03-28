@@ -30,18 +30,18 @@ I also provided a link to allow users to see the full-size image, for example:
 Here's some typical HTML markup for showing images in my blog posts:
 
 ```HTML
-    <div class="image">
-        <img src="http://blogs.msdn.com/photos/jjameson/images/9997719/500x258.aspx"
-            alt="Hyper-V Manager showing the staggered start of various VMs"
-            width="500" height="258" />
-        <div class="caption">
-            Figure 1: Hyper-V staggered start</div>
-        <div class="imageLink">
-            <a href="http://blogs.msdn.com/photos/jjameson/images/9997719/original.aspx"
-            target="_blank">
-                See full-sized image.</a>
-        </div>
+<div class="image">
+    <img src="http://blogs.msdn.com/photos/jjameson/images/9997719/500x258.aspx"
+        alt="Hyper-V Manager showing the staggered start of various VMs"
+        width="500" height="258" />
+    <div class="caption">
+        Figure 1: Hyper-V staggered start</div>
+    <div class="imageLink">
+        <a href="http://blogs.msdn.com/photos/jjameson/images/9997719/original.aspx"
+        target="_blank">
+            See full-sized image.</a>
     </div>
+</div>
 ```
 
 After the upgrade of the MSDN/TechNet blog platform to Telligent Community 5.5,

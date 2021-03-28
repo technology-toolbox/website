@@ -59,9 +59,9 @@ Also note that ASP.NET tracing must be enabled using the `<trace>` element
 within `<system.web>`:
 
 ```XML
-  <system.web>
-    <trace enabled="true" pageOutput="false" requestLimit="50" localOnly="true" />
-  </system.web>
+<system.web>
+  <trace enabled="true" pageOutput="false" requestLimit="50" localOnly="true" />
+</system.web>
 ```
 
 Be sure to set the `requestLimit` high enough to enable access to the page trace

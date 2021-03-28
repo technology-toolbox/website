@@ -269,12 +269,12 @@ I started out by adding the following HTML to the master page in the static HTML
 prototype:
 
 ```HTML
-  <div id="siteSearch">
-    <h2>
-      Search</h2>
-    <input type="text" id="searchKeywords" /><input type="image" alt="Search"
-      src="Images/icon-search-22x22.png" />
-  </div>
+<div id="siteSearch">
+  <h2>
+    Search</h2>
+  <input type="text" id="searchKeywords" /><input type="image" alt="Search"
+    src="Images/icon-search-22x22.png" />
+</div>
 ```
 
 ...and then adding some CSS rules to position the search box at the desired
@@ -284,22 +284,22 @@ Next, I added a little JavaScript to redirect to the search results page
 (Search.aspx) when the search icon is clicked:
 
 ```HTML
-  <div id="siteSearch">
-    <h2>
-      Search</h2>
-    <input type="text" id="searchKeywords" />
-    <a href="javascript:submitSearch()">
-      <img alt="Search" src="Images/icon-search-22x22.png" /></a>
-    <script type="text/javascript">
-      function submitSearch() {
-        var $searchKeywords = $('#searchKeywords');
+<div id="siteSearch">
+  <h2>
+    Search</h2>
+  <input type="text" id="searchKeywords" />
+  <a href="javascript:submitSearch()">
+    <img alt="Search" src="Images/icon-search-22x22.png" /></a>
+  <script type="text/javascript">
+    function submitSearch() {
+      var $searchKeywords = $('#searchKeywords');
 
-        var keywords = $searchKeywords.val();
+      var keywords = $searchKeywords.val();
 
-        window.location.href = "/Search.aspx?q=" + encodeURIComponent(keywords);
-      }
-    </script>
-  </div>
+      window.location.href = "/Search.aspx?q=" + encodeURIComponent(keywords);
+    }
+  </script>
+</div>
 ```
 
 At this point, I copied the code from the prototype (created in Expression Web)
@@ -321,16 +321,16 @@ removed.
 These two behaviors are easy to implement using jQuery:
 
 ```HTML
-    <div id="siteSearch">
-      <h2>
-        Search</h2>
-      <input type="text" id="searchKeywords" />
-      <a href="javascript:submitSearch($('#searchKeywords'))"><img alt="Search"
-        src="/Images/icon-search-22x22.png" /></a>
-      <script type="text/javascript">
-        $(document).ready(function () { configureSearchBox($('#searchKeywords')); });
-      </script>
-    </div>
+<div id="siteSearch">
+  <h2>
+    Search</h2>
+  <input type="text" id="searchKeywords" />
+  <a href="javascript:submitSearch($('#searchKeywords'))"><img alt="Search"
+    src="/Images/icon-search-22x22.png" /></a>
+  <script type="text/javascript">
+    $(document).ready(function () { configureSearchBox($('#searchKeywords')); });
+  </script>
+</div>
 ```
 
 Here is the **configureSearchBox** function:

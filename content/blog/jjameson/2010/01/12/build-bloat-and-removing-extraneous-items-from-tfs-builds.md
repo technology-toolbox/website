@@ -94,30 +94,30 @@ To resolve the build bloat issue, I modified our TFSBuild.proj file to override
 the `BeforeDropBuild` target:
 
 ```XML
-  <Target Name="BeforeDropBuild">
-    <Message Importance="high"
-      Text="Removing extraneous files from the build..." />
+<Target Name="BeforeDropBuild">
+  <Message Importance="high"
+    Text="Removing extraneous files from the build..." />
 
-    <!-- We do not currently deploy anything from the _PublishedWebsites folders -->
-    <RemoveDir
-      Directories="$(BinariesRoot)\Debug\_PublishedWebsites;
-        $(BinariesRoot)\Release\_PublishedWebsites;" />
+  <!-- We do not currently deploy anything from the _PublishedWebsites folders -->
+  <RemoveDir
+    Directories="$(BinariesRoot)\Debug\_PublishedWebsites;
+      $(BinariesRoot)\Release\_PublishedWebsites;" />
 
-    <!--
-      The following assemblies are either included in the WSPs
-      or else should not be included in the build
-      (e.g. Microsoft.Office.Server.Search.dll).
-    -->
-    <CreateItem
-      Include="$(BinariesRoot)\**\AjaxControlToolkit.dll;
-        $(BinariesRoot)\**\Microsoft.Office.Server.Search.dll;
-        $(BinariesRoot)\**\Microsoft.SharePoint.Server.Search.dll;
-        $(BinariesRoot)\**\Telerik.Web.UI.dll" >
-      <Output TaskParameter="Include" ItemName="FilesToDelete"/>
-    </CreateItem>
+  <!--
+    The following assemblies are either included in the WSPs
+    or else should not be included in the build
+    (e.g. Microsoft.Office.Server.Search.dll).
+  -->
+  <CreateItem
+    Include="$(BinariesRoot)\**\AjaxControlToolkit.dll;
+      $(BinariesRoot)\**\Microsoft.Office.Server.Search.dll;
+      $(BinariesRoot)\**\Microsoft.SharePoint.Server.Search.dll;
+      $(BinariesRoot)\**\Telerik.Web.UI.dll" >
+    <Output TaskParameter="Include" ItemName="FilesToDelete"/>
+  </CreateItem>
 
-    <Delete Files="@(FilesToDelete)" />
-  </Target>
+  <Delete Files="@(FilesToDelete)" />
+</Target>
 ```
 
 Note that by default, any Web projects in your solution are automatically copied

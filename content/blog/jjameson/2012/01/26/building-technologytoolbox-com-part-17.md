@@ -119,22 +119,22 @@ unloading the **Website** project in Visual Studio and then editing the
 **Website.csproj** file):
 
 ```XML
-  <Target Name="CopySharedFilesToBlogApplication">
-    <Message Importance="high"
-      Text="TODO: Copy CAPTCHA control and other shared files to blog folder..." />
-  </Target>
+<Target Name="CopySharedFilesToBlogApplication">
+  <Message Importance="high"
+    Text="TODO: Copy CAPTCHA control and other shared files to blog folder..." />
+</Target>
 ```
 
 To ensure this target is executed as part of every build, I modified the
 **BuildDependsOn** property by adding a new **PropertyGroup**:
 
 ```XML
-  <PropertyGroup>
-    <BuildDependsOn>
-      $(BuildDependsOn);
-      CopySharedFilesToBlogApplication
-    </BuildDependsOn>
-  </PropertyGroup>
+<PropertyGroup>
+  <BuildDependsOn>
+    $(BuildDependsOn);
+    CopySharedFilesToBlogApplication
+  </BuildDependsOn>
+</PropertyGroup>
 ```
 
 {{< div-block "note" >}}
@@ -155,12 +155,12 @@ To specify the list of files needed by the CAPTCHA control, I defined a new
 **ItemGroup**:
 
 ```XML
-  <ItemGroup>
-    <CaptchaFile Include="Controls\Captcha\Captcha.ascx" />
-    <CaptchaFile Include="Controls\Captcha\config.xml" />
-    <CaptchaFile Include="Controls\Captcha\Scripts\s3Capcha.js" />
-    <CaptchaFile Include="Controls\Captcha\**\*.jpg" />
-  </ItemGroup>
+<ItemGroup>
+  <CaptchaFile Include="Controls\Captcha\Captcha.ascx" />
+  <CaptchaFile Include="Controls\Captcha\config.xml" />
+  <CaptchaFile Include="Controls\Captcha\Scripts\s3Capcha.js" />
+  <CaptchaFile Include="Controls\Captcha\**\*.jpg" />
+</ItemGroup>
 ```
 
 Then I added a **Copy** task to copy the CAPTCHA files into the corresponding
@@ -168,11 +168,11 @@ locations under the **blog** folder (in other words, by preserving the relative
 path of each file that is copied):
 
 ```XML
-  <Target Name="CopySharedFilesToBlogApplication">
-    ...
-    <Copy SourceFiles="@(CaptchaFile)"
-      DestinationFolder="blog\%(CaptchaFile.RelativeDir)" />
-  </Target>
+<Target Name="CopySharedFilesToBlogApplication">
+  ...
+  <Copy SourceFiles="@(CaptchaFile)"
+    DestinationFolder="blog\%(CaptchaFile.RelativeDir)" />
+</Target>
 ```
 
 To copy the assembly containing the code-behind for the CAPTCHA user control, I
@@ -182,38 +182,38 @@ the source file (which translates to
 destination folder:
 
 ```XML
-  <Target Name="CopySharedFilesToBlogApplication">
-    ...
-    <Copy SourceFiles="$(OutDir)$(TargetFileName);"
-      DestinationFolder="blog\bin" />
-  </Target>
+<Target Name="CopySharedFilesToBlogApplication">
+  ...
+  <Copy SourceFiles="$(OutDir)$(TargetFileName);"
+    DestinationFolder="blog\bin" />
+</Target>
 ```
 
 To copy dependencies (e.g. the ELMAH assembly and other Caelum assemblies
 referenced in the **Website** project), I added one more **Copy** task:
 
 ```XML
-  <Target Name="CopySharedFilesToBlogApplication">
-    ...
-    <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
-      DestinationFiles="@(ReferenceCopyLocalPaths->'blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
-  </Target>
+<Target Name="CopySharedFilesToBlogApplication">
+  ...
+  <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
+    DestinationFiles="@(ReferenceCopyLocalPaths->'blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
+</Target>
 ```
 
 Here is the completed target:
 
 ```XML
-  <Target Name="CopySharedFilesToBlogApplication">
-    <Message Importance="high"
-      Text="Copying CAPTCHA control and other shared files to blog folder..." />
-    <Copy SourceFiles="@(CaptchaFile)"
-      DestinationFolder="blog\%(CaptchaFile.RelativeDir)" />
-    <Copy SourceFiles="$(OutDir)$(TargetFileName);"
-      DestinationFolder="blog\bin" />
-    <!-- copy referenced assemblies to blog\bin folder -->
-    <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
-      DestinationFiles="@(ReferenceCopyLocalPaths->'blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
-  </Target>
+<Target Name="CopySharedFilesToBlogApplication">
+  <Message Importance="high"
+    Text="Copying CAPTCHA control and other shared files to blog folder..." />
+  <Copy SourceFiles="@(CaptchaFile)"
+    DestinationFolder="blog\%(CaptchaFile.RelativeDir)" />
+  <Copy SourceFiles="$(OutDir)$(TargetFileName);"
+    DestinationFolder="blog\bin" />
+  <!-- copy referenced assemblies to blog\bin folder -->
+  <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
+    DestinationFiles="@(ReferenceCopyLocalPaths->'blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
+</Target>
 ```
 
 With these changes, whenever a file in the website project is updated, all of
@@ -230,35 +230,35 @@ it uses the `$(WebProjectOutputDir)` variable to copy the files to the
 **\_PublishedWebsites** folder:
 
 ```XML
-  <!--
-    The following target is used to copy the shared files to the
-    _PublishedWebsites\{app}\blog folder (when building the solution using Team
-    Build)
-  -->
-  <Target Name="CopySharedFilesToBlogApplicationInWebProjectOutputDir">
-    <Message Importance="high"
-      Text="Copying CAPTCHA control and other shared files to blog folder in Web project output directory..." />
-    <Copy SourceFiles="@(CaptchaFile)"
-      DestinationFolder="$(WebProjectOutputDir)\blog\%(CaptchaFile.RelativeDir)" />
-    <Copy SourceFiles="$(OutDir)$(TargetFileName);"
-      DestinationFolder="$(WebProjectOutputDir)\blog\bin" />
-    <!-- copy referenced assemblies to _PublishedWebsites\{app}\blog\bin folder -->
-    <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
-      DestinationFiles="@(ReferenceCopyLocalPaths->'$(WebProjectOutputDir)\blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
-  </Target>
+<!--
+  The following target is used to copy the shared files to the
+  _PublishedWebsites\{app}\blog folder (when building the solution using Team
+  Build)
+-->
+<Target Name="CopySharedFilesToBlogApplicationInWebProjectOutputDir">
+  <Message Importance="high"
+    Text="Copying CAPTCHA control and other shared files to blog folder in Web project output directory..." />
+  <Copy SourceFiles="@(CaptchaFile)"
+    DestinationFolder="$(WebProjectOutputDir)\blog\%(CaptchaFile.RelativeDir)" />
+  <Copy SourceFiles="$(OutDir)$(TargetFileName);"
+    DestinationFolder="$(WebProjectOutputDir)\blog\bin" />
+  <!-- copy referenced assemblies to _PublishedWebsites\{app}\blog\bin folder -->
+  <Copy SourceFiles="@(ReferenceCopyLocalPaths)"
+    DestinationFiles="@(ReferenceCopyLocalPaths->'$(WebProjectOutputDir)\blog\bin\%(DestinationSubDirectory)%(Filename)%(Extension)')" />
+</Target>
 ```
 
 To integrate this target into the TFS build process, I hook into the
 **\_CopyWebApplication** target:
 
 ```XML
-  <PropertyGroup>
-    <BuildDependsOn>
-      $(BuildDependsOn);
-      CopySharedFilesToBlogApplication
-    </BuildDependsOn>
-    <OnAfter_CopyWebApplication>
-      CopySharedFilesToBlogApplicationInWebProjectOutputDir
-    </OnAfter_CopyWebApplication>
-  </PropertyGroup>
+<PropertyGroup>
+  <BuildDependsOn>
+    $(BuildDependsOn);
+    CopySharedFilesToBlogApplication
+  </BuildDependsOn>
+  <OnAfter_CopyWebApplication>
+    CopySharedFilesToBlogApplicationInWebProjectOutputDir
+  </OnAfter_CopyWebApplication>
+</PropertyGroup>
 ```

@@ -44,45 +44,45 @@ worked as expected).
 The first unit test I wrote was for the **TypeAssertion** class:
 
 ```C#
-        [TestMethod()]
-        public void TypeAssertionTest001()
-        {
-            IContextExpression source = null;
+[TestMethod()]
+public void TypeAssertionTest001()
+{
+    IContextExpression source = null;
 
-            Type expectedType = typeof(HttpRequestValidationException);
-            bool byCompatibility = false;
+    Type expectedType = typeof(HttpRequestValidationException);
+    bool byCompatibility = false;
 
-            const bool expected = false;
+    const bool expected = false;
 
-            Exception e = new FileNotFoundException();
+    Exception e = new FileNotFoundException();
 
-            var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
-                e,
-                null);
+    var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
+        e,
+        null);
 
-            TypeAssertion target = new TypeAssertion(
-                source,
-                expectedType,
-                byCompatibility);
+    TypeAssertion target = new TypeAssertion(
+        source,
+        expectedType,
+        byCompatibility);
 
-            bool actual = target.Test(context);
+    bool actual = target.Test(context);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 The **TypeAssertion** shown above is equivalent to the following in Web.config:
 
 ```XML
-  <elmah>
-    ...
-    <errorFilter>
-      <test>
-        <is-type binding="BaseException"
-          type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-      </test>
-    </errorFilter>
-  </elmah>
+<elmah>
+  ...
+  <errorFilter>
+    <test>
+      <is-type binding="BaseException"
+        type="System.Web.HttpRequestValidationException, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </test>
+  </errorFilter>
+</elmah>
 ```
 
 The test simply verifies this filter does _not_ match a
@@ -92,31 +92,31 @@ Then I created a second unit test to verify the filter _does_ match an
 **HttpRequestValidationException**:
 
 ```C#
-        [TestMethod()]
-        public void TypeAssertionTest002()
-        {
-            IContextExpression source = null;
+[TestMethod()]
+public void TypeAssertionTest002()
+{
+    IContextExpression source = null;
 
-            Type expectedType = typeof(HttpRequestValidationException);
-            bool byCompatibility = false;
+    Type expectedType = typeof(HttpRequestValidationException);
+    bool byCompatibility = false;
 
-            const bool expected = true;
+    const bool expected = true;
 
-            Exception e = new HttpRequestValidationException();
+    Exception e = new HttpRequestValidationException();
 
-            var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
-                e,
-                null);
+    var context = new Elmah.ErrorFilterModule.AssertionHelperContext(
+        e,
+        null);
 
-            TypeAssertion target = new TypeAssertion(
-                source,
-                expectedType,
-                byCompatibility);
+    TypeAssertion target = new TypeAssertion(
+        source,
+        expectedType,
+        byCompatibility);
 
-            bool actual = target.Test(context);
+    bool actual = target.Test(context);
 
-            Assert.AreEqual(expected, actual);
-        }
+    Assert.AreEqual(expected, actual);
+}
 ```
 
 The next step was to translate these **TypeAssertion** unit tests into

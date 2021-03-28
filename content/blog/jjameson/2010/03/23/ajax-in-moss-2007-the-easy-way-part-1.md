@@ -57,13 +57,13 @@ feature, I placed the bulk of the code in the **SharePointAjaxHelper** class.
 Consequently, enabling AJAX is simply a matter of calling the following method:
 
 ```C#
-    SharePointAjaxHelper.AddAjaxWebConfigModifications(webApp);
+SharePointAjaxHelper.AddAjaxWebConfigModifications(webApp);
 ```
 
 Likewise, disabling AJAX is simply a matter of calling the following method:
 
 ```C#
-    SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
+SharePointAjaxHelper.RemoveAjaxWebConfigModifications(webApp);
 ```
 
 Note that due to the bug in the **SPWebConfigModification** infrastructure that

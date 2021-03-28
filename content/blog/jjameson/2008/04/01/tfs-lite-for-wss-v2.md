@@ -166,20 +166,20 @@ A minimal amount of custom XSLT was then added to display an image based on the
 KPI value of each work item:
 
 ```XSLT
-  <xsl:choose>
-    <xsl:when test="@KPI='Green'">
-      <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />
-    </xsl:when>
-    <xsl:when test="@KPI='Yellow'">
-      <img alt="Yellow" src="/sites/Frontier/Image%20Library/kpinormal-1.gif" />
-    </xsl:when>
-    <xsl:when test="@KPI='Red'">
-      <img alt="Red" src="/sites/Frontier/Image%20Library/kpinormal-2.gif" />
-    </xsl:when>
-    <xsl:otherwise>
-      <xsl:value-of disable-output-escaping="no" select="@KPI" />
-    </xsl:otherwise>
-  </xsl:choose>
+<xsl:choose>
+  <xsl:when test="@KPI='Green'">
+    <img alt="Green" src="/sites/Frontier/Image%20Library/kpinormal-0.gif" />
+  </xsl:when>
+  <xsl:when test="@KPI='Yellow'">
+    <img alt="Yellow" src="/sites/Frontier/Image%20Library/kpinormal-1.gif" />
+  </xsl:when>
+  <xsl:when test="@KPI='Red'">
+    <img alt="Red" src="/sites/Frontier/Image%20Library/kpinormal-2.gif" />
+  </xsl:when>
+  <xsl:otherwise>
+    <xsl:value-of disable-output-escaping="no" select="@KPI" />
+  </xsl:otherwise>
+</xsl:choose>
 ```
 
 Note that the image paths are hard-coded to use a picture library (named "Image
