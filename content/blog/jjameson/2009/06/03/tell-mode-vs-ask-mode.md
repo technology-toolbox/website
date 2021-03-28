@@ -35,7 +35,7 @@ reading just enough of my e-mail to understand the key concepts and perhaps skim
 the example bugs to get a feel for the level of detail expected during the
 "investigation" phase after switching to Ask Mode.
 
-> ***
+> ---
 >
 > **From:** JAMESON,JEREMY (Non-A-BPI-AM,unix1)\
 > **Sent:** Thursday, October 18, 2007 8:03 AM\
@@ -142,7 +142,7 @@ the example bugs to get a feel for the level of detail expected during the
 > circumvent the issues until the underlying changes can be implemented, tested,
 > and deployed.
 >
-> ***
+> ---
 
 Note that I have replaced the project code name with
 _[Project]_ in order to protect the innocent. I also "spoofed" the links to the referenced bugs, since these referred to a ["Work Items" list](/blog/jjameson/2008/04/01/tfs-lite-for-wss-v2)

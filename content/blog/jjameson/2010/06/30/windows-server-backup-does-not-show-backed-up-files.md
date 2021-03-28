@@ -24,7 +24,7 @@ nonetheless.]
 Here's an email that I sent last month regarding an issue I discovered after
 upgrading one of my servers to Windows Server 2008 R2:
 
-> ***
+> ---
 >
 > **From:** Jeremy Jameson\
 > **Sent:** Friday, May 21, 2010 11:00 AM\
@@ -94,7 +94,7 @@ upgrading one of my servers to Windows Server 2008 R2:
 > **Microsoft Consulting Services**\
 > ...
 >
-> ***
+> ---
 
 Unfortunately, I never received a single response to my inquiry. Fortunately, my
 initial suspicion was correct and I was able to resolve the issue a few days

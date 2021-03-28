@@ -25,7 +25,7 @@ choices for a variety of reasons.
 I dug up an email that I had sent to a different customer (that, for whatever
 reason, chooses to use SQL Authentication over Windows Authentication):
 
-***
+---
 
 **From:** Jeremy Jameson\
 **To:** [names removed to protect the innocent]\
@@ -94,7 +94,7 @@ Here is some info from MSDN:
 > Authentication (primarily due to the increased security provided by standard
 > protocols such as Kerberos).
 
-***
+---
 
 Note that some improvements have been made in SQL Server 2005 (such as password
 expiration policies) that mitigate some of the items I mentioned in my original

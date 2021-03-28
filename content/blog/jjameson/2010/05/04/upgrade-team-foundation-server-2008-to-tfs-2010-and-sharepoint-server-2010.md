@@ -765,7 +765,7 @@ Note that a different error may be shown in the **Remaining Work** Web Part:
 
 > Reporting Services Error
 >
-> ***
+> ---
 >
 > An error has occurred during report processing. (rsProcessingAborted) Get
 > Online Help\
@@ -774,7 +774,7 @@ Note that a different error may be shown in the **Remaining Work** Web Part:
 > For more information about this error navigate to the report server on the
 > local server machine, or enable remote errors
 >
-> ***
+> ---
 >
 > SQL Server Reporting Services
 
