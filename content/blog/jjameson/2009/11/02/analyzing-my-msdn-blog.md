@@ -236,7 +236,7 @@ into my Excel workbook and then sort by **Hits** descending.
 
 <!-- HACK: Community Server replaces the URLs, which blows out the table  -->
 
-{{< table class="small table-striped"
+{{< table class="small table-striped constrainedTable"
 caption="Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages" >}}
 
 | URL                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Hits | Last Date             |
