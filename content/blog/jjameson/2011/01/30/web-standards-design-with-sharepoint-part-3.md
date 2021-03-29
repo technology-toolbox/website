@@ -2,10 +2,10 @@
 title: Web Standards Design with SharePoint, Part 3
 date: 2011-01-30T20:29:00-07:00
 excerpt:
-  "Last week I received the following comment on a blog post I wrote last year
+  'Last week I received the following comment on a blog post I wrote last year
   regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
-  2007: \"The Media Guy\" Great article.. was very helpful. I used 960.gs for my
-  master page..."
+  2007: "The Media Guy" Great article.. was very helpful. I used 960.gs for my
+  master page...'
 aliases:
   [
     "/blog/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx",
@@ -13,7 +13,7 @@ aliases:
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/01/30/web-standards-design-with-sharepoint-part-3.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam %28SharePointDevelopment%29.zip"
   fileName: Fabrikam (SharePointDevelopment).zip
   fileSizeInBytes: 559957
@@ -23,6 +23,8 @@ Last week I received the following comment on
 [a blog post I wrote last year](/blog/jjameson/2010/01/30/web-standards-design-with-moss-2007-part-1)
 regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
 2007:
+
+<section class="conversation">
 
 1. <cite>"The Media Guy"</cite>
 
@@ -36,6 +38,8 @@ regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
    > have any advice for a starting a page layout based on 960.gs?
 
    {{< div-block-end >}}
+
+</section>
 
 Rather than trying to explain to "The Media Guy" how to create a page layout
 based on the [960 Grid System](http://960.gs/), this weekend I revisited the
@@ -159,6 +163,7 @@ To deploy the Fabrikam Demo to SharePoint:
    > SharePoint timer infrastructure when deploying and retracting the solution.
 
    {{< /div-block >}}
+
 1. Set environment variables to specify the credentials to use for the Fabrikam application pool:
 
    ```Console
@@ -173,6 +178,7 @@ To deploy the Fabrikam Demo to SharePoint:
    > Be sure to specify a valid local or domain user.
 
    {{< /div-block >}}
+
 1. Change to the folder containing the deployment scripts:
 
    {{< console-block >}}
@@ -180,6 +186,7 @@ To deploy the Fabrikam Demo to SharePoint:
    cd Demo\Dev\SharePointDevelopment\Source\DeploymentFiles\Scripts
 
    {{< /console-block >}}
+
 1. Type the following command:
 
    ```Console

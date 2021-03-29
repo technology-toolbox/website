@@ -2,10 +2,10 @@
 title: Updated Thoughts on WSPBuilder
 date: 2009-03-31T07:55:00-06:00
 excerpt:
-  "Several weeks ago, I wrote a post titled \" Why I'm Not a Fan of WSPBuilder
-  .\" Shortly thereafter, I received a message from Carsten Keutmann, the
-  creator of WSPBuilder. Here is the \"almost\" unabridged version of the email
-  exchange (headers and signatures..."
+  'Several weeks ago, I wrote a post titled " Why I''m Not a Fan of WSPBuilder
+  ." Shortly thereafter, I received a message from Carsten Keutmann, the
+  creator of WSPBuilder. Here is the "almost" unabridged version of the email
+  exchange (headers and signatures...'
 aliases:
   [
     "/blog/jjameson/archive/2009/03/30/updated-thoughts-on-wspbuilder.aspx",
@@ -24,6 +24,8 @@ WSPBuilder.
 Here is the "almost" unabridged version of the email exchange (headers and
 signatures removed):
 
+<section class="conversation">
+
 1. <cite>Keutmann</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -37,6 +39,7 @@ signatures removed):
    > at the WSPBuilder code for optimizations if necessary.
 
    {{< div-block-end >}}
+
 1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -51,6 +54,7 @@ signatures removed):
    > WSPBuilder?
 
    {{< div-block-end >}}
+
 1. <cite>Keutmann</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -70,6 +74,7 @@ signatures removed):
    > and call the build of the WSP package manually when needed.
 
    {{< div-block-end >}}
+
 1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -84,6 +89,7 @@ signatures removed):
    > project...
 
    {{< div-block-end >}}
+
 1. <cite>Keutmann</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -98,6 +104,7 @@ signatures removed):
    > WSPBuilder manually when needed.
 
    {{< div-block-end >}}
+
 1. <cite>Jeremy</cite>
 
    {{< div-block-start "fst-italic" >}}
@@ -121,6 +128,8 @@ signatures removed):
    > Thanks for pointing this out.
 
    {{< div-block-end >}}
+
+</section>
 
 So, first of all, thanks to Keutmann (as he apparently prefers to be called) for
 contacting me about the issue I blogged about; and second, my apologies for
