@@ -13,7 +13,7 @@ aliases:
 categories: ["My System", "SharePoint"]
 tags: ["My System", "MOSS 2007", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/23/ajax-in-moss-2007-the-easy-way-part-1.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam - AJAX Configuration.zip"
   fileName: Fabrikam - AJAX Configuration.zip
   fileSizeInBytes: 78002
@@ -171,11 +171,11 @@ can be used to enable AJAX:
 
 {{< kbd "stsadm -o fabrikam-enableajax" >}}
 
-```
-	Adds the necessary configuration changes to enable AJAX on a web application.
+{{< sample-block >}}
+Adds the necessary configuration changes to enable AJAX on a web application.
 
-       -url <url of the Web application to enable AJAX on>
-```
+&nbsp;&nbsp;&nbsp;&nbsp;-url \<url of the Web application to enable AJAX on\>
+{{< /sample-block >}}
 
 {{< console-block-end >}}
 
@@ -188,20 +188,32 @@ If you download the attached code, build it, and run the following commands, you
 can subsequently add the sample AJAX Web Part (**Fabrikam Sample AJAX Update**)
 to the home page:
 
-```Console
+{{< console-block >}}
 set FABRIKAM_DEMO_URL=http://fabrikam-local
+
 set FABRIKAM_BUILD_CONFIGURATION=Debug
+
 set FABRIKAM_DEMO_APP_POOL_PASSWORD={some password}
+
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\StsAdm\Commands\DeploymentFiles\Scripts
+
 "Add Solution.cmd"
+
 "Deploy Solution.cmd"
-cd ..\..\..\..\DeploymentFiles\Scripts
+
+cd ..\\..\\..\\..\DeploymentFiles\Scripts
+
 "Create Web Applications.cmd"
-cd ..\..\Web\DeploymentFiles\Scripts
+
+cd ..\\..\Web\DeploymentFiles\Scripts
+
 "Add Solution.cmd"
+
 "Deploy Solution.cmd"
+
 "Activate Features.cmd"
-```
+
+{{< /console-block >}}
 
 {{< div-block "note important" >}}
 

@@ -1,10 +1,9 @@
 ---
 title: Sample Walkthrough of the DR.DADA Approach to SharePoint
 date: 2009-09-28T05:38:00-06:00
-excerpt:
-  "In a previous post, I introduced the \"DR.DADA\" approach to SharePoint
+excerpt: 'In a previous post, I introduced the "DR.DADA" approach to SharePoint
   development. This post walks you through an actual implementation of a feature
-  -- well, actually two features..."
+  -- well, actually two features...'
 aliases:
   [
     "/blog/jjameson/archive/2009/09/27/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint.aspx",
@@ -211,7 +210,7 @@ Assuming you've developed custom SharePoint WSPs before, the contents of
 The contents of the WSP (i.e. files and folder structure) are defined in
 **wsp_structure.ddf**:
 
-```
+```DDF
 ;
 ; This ddf specifies the structure of the .wsp solution cab file.
 ;
@@ -330,9 +329,9 @@ Features.cmd**.
 
 {{< console-block-start >}}
 
-```
+{{< sample-block >}}
 Setting environment for using Microsoft Visual Studio 2008 x86 tools.
-```
+{{< /sample-block >}}
 
 C:\Windows\system32&gt;{{< kbd "set FABRIKAM_FABWEB_URL=http://fabweb-local" >}}
 
@@ -342,37 +341,37 @@ C:\Windows\system32&gt;{{< kbd "cd \NotBackedUp\Fabrikam\Demo\Main\Source\Publis
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Add Solution.cmd\"" >}}
 
-```
-Adding Fabrikam.Demo.Publishing (Debug)...
-
-Operation completed successfully.
-
+{{< sample-block >}}
+Adding Fabrikam.Demo.Publishing (Debug)...\
+\
+Operation completed successfully.\
+\
 Done
-```
+{{< /sample-block >}}
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Deploy Solution.cmd\"" >}}
 
-```
-Deploying Fabrikam.Demo.Publishing on http://fabweb-local...
-
-Operation completed successfully.
-
+{{< sample-block >}}
+Deploying Fabrikam.Demo.Publishing on http://fabweb-local...\
+\
+Operation completed successfully.\
+\
 Done
-```
+{{< /sample-block >}}
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"Activate Features.cmd\"" >}}
 
-```
-Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...
-
-Operation completed successfully.
-
-Activating Fabrikam.Demo.Publishing.DefaultSiteConfiguration on http://fabweb-local...
-
-Operation completed successfully.
-
+{{< sample-block >}}
+Activating Fabrikam.Demo.Publishing.Layouts on http://fabweb-local...\
+\
+Operation completed successfully.\
+\
+Activating Fabrikam.Demo.Publishing.DefaultSiteConfiguration on http://fabweb-local...\
+\
+Operation completed successfully.\
+\
 Done
-```
+{{< /sample-block >}}
 
 {{< console-block-end >}}
 
@@ -828,19 +827,17 @@ after updating the assemblies in the GAC:
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
-```
-Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
-Assembly successfully added to the cache
-Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
-Assembly successfully added to the cache
+{{< sample-block >}}
+Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)\
+Assembly successfully added to the cache\
+Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)\
+Assembly successfully added to the cache\
 Done
-```
+{{< /sample-block >}}
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd `C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"` >}}
 
-```
-"SharePoint - foobar-local80" successfully recycled
-```
+{{< sample-output "\"SharePoint - foobar-local80\" successfully recycled" >}}
 
 {{< console-block-end >}}
 

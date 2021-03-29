@@ -102,7 +102,7 @@ Upon closer inspection, I found that each call to the
 property resulted in several database calls. Specifically, the following
 statement results in **four** calls to SQL Server:
 
-```
+```C#
 PublishingPage page = pages[pageUrl];
 ```
 

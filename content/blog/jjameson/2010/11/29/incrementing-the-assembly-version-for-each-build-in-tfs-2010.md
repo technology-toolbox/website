@@ -13,7 +13,7 @@ aliases:
 categories: ["My System", "Development"]
 tags: ["My System", "TFS"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/11/29/incrementing-the-assembly-version-for-each-build-in-tfs-2010.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/foobar2010 - 1.0.12.0.zip"
   fileName: foobar2010 - 1.0.12.0.zip
   fileSizeInBytes: 21334
@@ -252,7 +252,7 @@ possible during the build process.]
 
 By default, the drop location is set to:
 
-```
+```Visual Basic .NET
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildDefinition.Name + "\" + BuildDetail.BuildNumber
 ```
 
@@ -269,7 +269,7 @@ Consequently, remove the "extraneous" folder by updating the **Set Drop
 Location** activity (inside the sequence within **If DropBuild And Build Reason
 is Triggered**) so the **DropLocation** is set to:
 
-```
+```Visual Basic .NET
 BuildDetail.DropLocationRoot + "\" + BuildDetail.BuildNumber
 ```
 
@@ -280,11 +280,11 @@ the **Update Build Number** sequence, and set the properties as follows:
 
 {{< table class="small table-striped" >}}
 
-| Property | Value |
-| --- | --- |
-| Arguments | "/C type """ + SourcesDirectory + "\\\\Source\\\\AssemblyVersionInfo.txt""" |
-| DisplayName | InvokeProcess to read AssemblyVersion from file |
-| FileName | "cmd.exe" |
+| Property    | Value                                                                       |
+| ----------- | --------------------------------------------------------------------------- |
+| Arguments   | "/C type """ + SourcesDirectory + "\\\\Source\\\\AssemblyVersionInfo.txt""" |
+| DisplayName | InvokeProcess to read AssemblyVersion from file                             |
+| FileName    | "cmd.exe"                                                                   |
 
 {{< /table >}}
 
@@ -305,7 +305,7 @@ activity, it's still a good idea to ensure proper error handling in our build
 process. Therefore, add a **Throw** activity (below the **errOutput** variable
 box) and set the **Exception** property to:
 
-```
+```Visual Basic .NET
 New Exception(errOutput)
 ```
 
@@ -331,10 +331,10 @@ the properties as follows:
 
 {{< table class="small table-striped" >}}
 
-| Property | Value |
-| --- | --- |
-| DisplayName | Increment AssemblyVersion for next build |
-| Project | SourcesDirectory + "\\\\Source\\\\IncrementAssemblyVersion.proj" |
+| Property    | Value                                                            |
+| ----------- | ---------------------------------------------------------------- |
+| DisplayName | Increment AssemblyVersion for next build                         |
+| Project     | SourcesDirectory + "\\\\Source\\\\IncrementAssemblyVersion.proj" |
 
 {{< /table >}}
 
@@ -513,16 +513,16 @@ following table, it means the default is used.
 {{< table class="small table-striped"
 caption="Build Definition: \"Automated Build - Main\"" >}}
 
-| Section | Property | Value |
-| --- | --- | --- |
-| General | Build definition name | Automated Build - Main |
-| Trigger | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> | (selected) |
-|  | Queue the build on the build controller at: | 4:45 AM |
-| Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
-| Build Defaults | Copy build output to the following drop folder (UNC path, such as \\\\server\share): | \\\\dazzler\Builds\foobar2010 |
-| Process | Build process template: | CustomTemplate.xaml |
-|  | Build process parameters: |  |
-|  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
-| Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul> | <br><br>Keep All |
+| Section          | Property                                                                                                                                                                    | Value                                                                                                  |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| General          | Build definition name                                                                                                                                                       | Automated Build - Main                                                                                 |
+| Trigger          | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> | (selected)                                                                                             |
+|                  | Queue the build on the build controller at:                                                                                                                                 | 4:45 AM                                                                                                |
+| Workspace        | Source Control Folder<br>Build Agent Folder                                                                                                                                 | $/foobar2010/Main<br>$(SourceDir)                                                                      |
+| Build Defaults   | Copy build output to the following drop folder (UNC path, such as \\\\server\share):                                                                                        | \\\\dazzler\Builds\foobar2010                                                                          |
+| Process          | Build process template:                                                                                                                                                     | CustomTemplate.xaml                                                                                    |
+|                  | Build process parameters:                                                                                                                                                   |                                                                                                        |
+|                  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul>                                                                                                   | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
+| Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul>                                                                                           | <br><br>Keep All                                                                                       |
 
 {{< /table >}}

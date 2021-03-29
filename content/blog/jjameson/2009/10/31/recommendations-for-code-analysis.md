@@ -121,7 +121,7 @@ of _choosing_ a more strict compiler. For example, back in the days when I used
 to program in C on Unix, the compiler wouldn't complain when I wrote something
 like this (even though this is obviously very wrong):
 
-```
+```C
 if (i = 1)
 {
     ...

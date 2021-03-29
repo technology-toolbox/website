@@ -141,7 +141,7 @@ Therefore, the first thing I did (after setting up my symbol path again --
 **SRV\*C:\NotBackedUp\Symbols\*http://msdl.microsoft.com/download/symbols**) was
 to load the SOS extensions used for debugging managed code:
 
-```
+```WinDbg
 .loadby sos clr
 ```
 
@@ -149,7 +149,7 @@ Hoping that my "lost" work (i.e. the HTML content) was stored somewhere in
 memory as a managed string, I decided to go looking for all of the "large"
 strings in the process at the time of the crash:
 
-```
+```WinDbg
 !dumpheap -strings -min 500
 ```
 
@@ -162,7 +162,7 @@ like my HTML content, I had to go a little deeper.
 I then scanned the entire memory process for a phrase (i.e. "Agilent solution")
 that I knew existed in the content I had written:
 
-```
+```WinDbg
 s -u 0 L?0xffffffff "Agilent solution"
 ```
 
@@ -175,7 +175,7 @@ In my case, this returned several hundred results. However, I got lucky (which
 was quite nice in light of this morning's events) because I "hit the jackpot"
 with the first address returned:
 
-```
+```WinDbg
 du /c 100 0f6dfa22
 ```
 
@@ -189,7 +189,7 @@ Here's the output from this command:
 
 0:000&gt; {{< kbd "du /c 100 0f6dfa22" >}}
 
-```
+```WinDbg
 0f6dfa22  "Agilent solution did not involve the use of any OS or .	SharePoint language packs and thus required "custom" localization .	functionality, whereas the KPMG solution followed the more typical approach .	of installing language packs and leveraging "
 0f6dfc22  "the "out-of-the-box" .	localization functionality.</p>.	<p>The "out-of-the-box" localization that I'm re"
 ```
@@ -201,7 +201,7 @@ window, typed in the address (0x0f6dfa22), and then clicked the **Previous** and
 **Next** button a few times to locate the beginning and end of my content. Once
 I knew the "bounds" of my content, I then dumped the entire content...
 
-```
+```WinDbg
 du /c 100 0f6de52a 0f6e0434
 ```
 
@@ -220,12 +220,9 @@ inspecting potentially hundreds of memory locations?"
 The answer -- thankfully -- is "no." You can just loop through all of the memory
 locations and dump each one:
 
-{{< console-block >}}
-
-.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo
-\*\*\*\*\*\*\*\*}
-
-{{< /console-block >}}
+```WinDbg
+.foreach(addr {s -[1]u 0 L?0xffffffff "Agilent solution"}){du /c 100 addr;.echo ********}
+```
 
 This command assigns each memory address to a variable ("addr") and subsequently
 runs the "dump Unicode" command on each address. It's going to generate a lot of

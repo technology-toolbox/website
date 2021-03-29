@@ -95,7 +95,7 @@ assemblies.
 Here is the updated DDF file based on
 [my earlier sample](/blog/jjameson/2009/09/28/sample-walkthrough-of-the-dr-dada-approach-to-sharepoint):
 
-```
+```DDF
 ;
 ; This ddf specifies the structure of the .wsp solution cab file.
 ;

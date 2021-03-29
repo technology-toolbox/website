@@ -118,7 +118,7 @@ Silverlight developer simply changed the output path in the
 The DDF file (wsp_structure.ddf) used to create the WSP was updated to include
 the XAP file...
 
-```
+```DDF
 .Set DestinationDir=Layouts\Fabrikam
 ...
 ..\..\12\TEMPLATE\Layouts\Fabrikam\Wheel.xap

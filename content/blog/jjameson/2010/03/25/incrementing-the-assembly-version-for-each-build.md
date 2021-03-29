@@ -222,7 +222,7 @@ Note that AssemblyVersionInfo.txt is just a simple text file used by the custom
 Version task from the MSBuild Community Tasks Project and only contains a simple
 version string. For example:
 
-```
+```Text
 1.0.38.0
 ```
 

@@ -1,11 +1,11 @@
 ---
-title: "\"Web-Enabled\" Projects and F5 Debugging with SharePoint"
+title: '"Web-Enabled" Projects and F5 Debugging with SharePoint'
 date: 2009-09-29T09:07:00-06:00
 excerpt:
-  "In yesterday's post , I provided a sample walkthrough of the \"DR.DADA\"
+  'In yesterday''s post , I provided a sample walkthrough of the "DR.DADA"
   approach to developing solutions for Microsoft Office SharePoint Server (MOSS)
   2007. However, I intentionally left out a few things because a) that post was
-  already getting ridiculously..."
+  already getting ridiculously...'
 aliases:
   [
     "/blog/jjameson/archive/2009/09/28/web-enabled-projects-and-f5-debugging-with-sharepoint.aspx",
@@ -73,13 +73,19 @@ To Web-enable your C# class library project and configure for ASP.NET debugging:
 1. In the **Solution Explorer** window, select the class library project.
 1. Right-click the project name and then click **Unload Project**.
 1. Right-click the unloaded project and then click **Edit {project name}**.
-1. Below the `<ProjectGuid>` element, add the following:\
-   \
-   `<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>`
+1. Below the `<ProjectGuid>` element, add the following:
+
+   ```XML
+   <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+   ```
+
 1. Below the `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
-   element, add the following:\
-   \
-   `<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />`
+   element, add the following:
+
+   ```XML
+   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+   ```
+
 1. On the **File** menu, click **Close**. When prompted to save the file, click
    **Yes**.
 1. In the **Solution Explorer** window, right-click the project, and then click
@@ -137,19 +143,17 @@ pool:
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd "\"GAC Assemblies.cmd\"" >}}
 
-```
-Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)
-Assembly successfully added to the cache
-Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)
-Assembly successfully added to the cache
+{{< sample-block >}}
+Installing assembly: Fabrikam.Demo.CoreServices.dll (Debug)\
+Assembly successfully added to the cache\
+Installing assembly: Fabrikam.Demo.Publishing.dll (Debug)\
+Assembly successfully added to the cache\
 Done
-```
+{{< /sample-block >}}
 
 C:\NotBackedUp\Fabrikam\Demo\Main\Source\Publishing\DeploymentFiles\Scripts&gt;{{< kbd `C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - foobar-local80"` >}}
 
-```
 {{< sample-output "\"SharePoint - foobar-local80\" successfully recycled" >}}
-```
 
 {{< console-block-end >}}
 

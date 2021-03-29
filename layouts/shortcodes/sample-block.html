@@ -1,4 +1,6 @@
 {{- $markdown := .Inner -}}
 {{- $markdown = replace $markdown "'" "&apos;" -}}
 {{- $markdown = replace $markdown "\"" "&quot;" -}}
-<samp>{{ $markdown | markdownify }}</samp>
+<div class="sampleOutput mb-3">
+  <samp>{{ $markdown | markdownify }}</samp>
+</div>

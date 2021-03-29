@@ -5,7 +5,7 @@
 {{- $markdown = replace $markdown "\"" "&quot;" -}}
 {{- $convertedMarkdown := $markdown | markdownify -}}
 <div class="{{ $class }}">
-  {{- if not ( strings.Contains $markdown "<p>" ) -}}
+  {{- if not ( strings.Contains $convertedMarkdown "<p>" ) -}}
     <p>{{ $convertedMarkdown }}</p>
   {{- else -}}
     {{ $convertedMarkdown }}

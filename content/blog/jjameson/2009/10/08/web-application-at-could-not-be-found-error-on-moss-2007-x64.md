@@ -1,5 +1,5 @@
 ---
-title: "\"Web application at ... could not be found\" Error on MOSS 2007 x64"
+title: '"Web application at ... could not be found" Error on MOSS 2007 x64'
 date: 2009-10-08T08:49:00-06:00
 excerpt:
   I encountered a rather nasty bug last week with Microsoft Office SharePoint
@@ -64,9 +64,7 @@ natively in 64-bit and everything works as expected:
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
-```
 {{< sample-output "Title: Fabrikam" >}}
-```
 
 {{< console-block-end >}}
 
@@ -77,15 +75,12 @@ to run in 32-bit then things don't go well:
 
 C:\NotBackedUp\Temp\PrintSharePointSiteTitle\bin\Debug&gt;{{< kbd "PrintSharePointSiteTitle.exe http://fabrikam-local" >}}
 
-```Text
-Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local
-could not be found. Verify that you have typed the URL correctly. If the URL should
-be serving existing content, the system administrator may need to add a new request
-URL mapping to the intended application.
-at Microsoft.SharePoint.SPSite..ctor(SPFarm farm, Uri requestUri, Boolean contextSite, SPUserToken userToken)
-at Microsoft.SharePoint.SPSite..ctor(String requestUrl)
+{{< sample-block >}}
+Unhandled Exception: System.IO.FileNotFoundException: The Web application at http://fabrikam-local could not be found. Verify that you have typed the URL correctly. If the URL should be serving existing content, the system administrator may need to add a new request URL mapping to the intended application.\
+at Microsoft.SharePoint.SPSite..ctor(SPFarm farm, Uri requestUri, Boolean contextSite, SPUserToken userToken)\
+at Microsoft.SharePoint.SPSite..ctor(String requestUrl)\
 at Fabrikam.Demo.PrintSharePointSiteTitle.Program.Main(String[] args) in C:\NotBackedUp\Temp\PrintSharePointSiteTitle\Program.cs:line 22
-```
+{{< /sample-block >}}
 
 {{< console-block-end >}}
 

@@ -323,7 +323,7 @@ The reason why the custom CSS file contains the "-Main" suffix is because it
 typically refers to other CSS files. For example, the first two lines of
 Fabrikam-Main.css are:
 
-```
+```CSS
 @import url('Fabrikam-Basic.css');
 @import url('960.css');
 ```
@@ -340,7 +340,7 @@ number of CSS files is very small for this project.
 
 Here are the contents of Fabrikam-Basic.css:
 
-```Text
+```CSS
 /* Reset styles to standardize formatting across various browsers (refer to
  * http://meyerweb.com/eric/tools/css/reset/ and
  * http://developer.yahoo.com/yui/reset/ for more info).

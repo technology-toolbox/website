@@ -2,10 +2,10 @@
 title: Browser Button (a.k.a. Favelet or Bookmarklet) for Parsing SharePoint List Item IDs
 date: 2008-06-12T08:06:00-06:00
 excerpt:
-  "This morning I received an email from a customer inquiring about making it
+  'This morning I received an email from a customer inquiring about making it
   easier for users to determine the unique identifier for each document in a
-  library. Typically, users don't really care about this \"List Item ID\" for a
-  document, but there are scenarios..."
+  library. Typically, users don''t really care about this "List Item ID" for a
+  document, but there are scenarios...'
 aliases:
   [
     "/blog/jjameson/archive/2008/06/11/browser-button-a-k-a-favelet-or-bookmarklet-for-parsing-sharepoint-list-item-ids.aspx",
@@ -29,7 +29,7 @@ then you can inspect the URL and determine that **1956** is the ID. Okay, I'll
 admit, this gets a little cumbersome depending on the URL. For example, it
 certainly isn't as easy to extract ID **2531** from:
 
-```
+```Text
 http://server/sites/foobar/Lists/Work%20Items/EditForm.aspx?ID=2531&Source=http%3A%2F%2Fserver%2Fsites%2Ffoobar%2FLists%2FWork%2520Items%2FOpenItems%2Easpx
 ```
 

@@ -145,13 +145,13 @@ namespace Fabrikam.Demo.AdminConsole
 Running this program without configuring any trace listeners results in the
 following output to the console:
 
-```
-The square root of 0 is 0.000.
-The square root of 1 is 1.000.
-The square root of 2 is 1.414.
-The square root of 3 is 1.732.
+{{< sample-block >}}
+The square root of 0 is 0.000.\
+The square root of 1 is 1.000.\
+The square root of 2 is 1.414.\
+The square root of 3 is 1.732.\
 The square root of 4 is 2.000.
-```
+{{< /sample-block >}}
 
 Notice that none of the log messages are displayed in the console output.
 
@@ -199,24 +199,24 @@ of the application with the ".config" file name extension added).
 
 With this configuration, the console output shows:
 
-```Console
-defaultTraceSource Information: 0 : AdminConsole.exe
-defaultTraceSource Verbose: 0 : Starting processing...
-defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
-Parameter name: d).
-defaultTraceSource Verbose: 0 : Computing square root of 0...
-The square root of 0 is 0.000.
-defaultTraceSource Verbose: 0 : Computing square root of 1...
-The square root of 1 is 1.000.
-defaultTraceSource Verbose: 0 : Computing square root of 2...
-The square root of 2 is 1.414.
-defaultTraceSource Verbose: 0 : Computing square root of 3...
-The square root of 3 is 1.732.
-defaultTraceSource Verbose: 0 : Computing square root of 4...
-The square root of 4 is 2.000.
-defaultTraceSource Information: 0 : Successfully completed processing.
+{{< sample-block >}}
+defaultTraceSource Information: 0 : AdminConsole.exe\
+defaultTraceSource Verbose: 0 : Starting processing...\
+defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.\
+Parameter name: d).\
+defaultTraceSource Verbose: 0 : Computing square root of 0...\
+The square root of 0 is 0.000.\
+defaultTraceSource Verbose: 0 : Computing square root of 1...\
+The square root of 1 is 1.000.\
+defaultTraceSource Verbose: 0 : Computing square root of 2...\
+The square root of 2 is 1.414.\
+defaultTraceSource Verbose: 0 : Computing square root of 3...\
+The square root of 3 is 1.732.\
+defaultTraceSource Verbose: 0 : Computing square root of 4...\
+The square root of 4 is 2.000.\
+defaultTraceSource Information: 0 : Successfully completed processing.\
 defaultTraceSource Information: 0 : Program complete.
-```
+{{< /sample-block >}}
 
 Notice that
 [System.Diagnostics.ConsoleTraceListener](http://msdn.microsoft.com/en-us/library/system.diagnostics.consoletracelistener.aspx)
@@ -274,15 +274,15 @@ debugging and information messages, and only show warning and error messages.
 
 With this configuration, the console output is:
 
-```
-defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.
-Parameter name: d).
-The square root of 0 is 0.000.
-The square root of 1 is 1.000.
-The square root of 2 is 1.414.
-The square root of 3 is 1.732.
+{{< sample-block >}}
+defaultTraceSource Warning: 0 : Unable to process work item -1 (The value must be greater than or equal to zero.\
+Parameter name: d).\
+The square root of 0 is 0.000.\
+The square root of 1 is 1.000.\
+The square root of 2 is 1.414.\
+The square root of 3 is 1.732.\
 The square root of 4 is 2.000.
-```
+{{< /sample-block >}}
 
 With just a little more configuration, we can specify that we want all log
 messages to go to the console (for example, so the person running the utility

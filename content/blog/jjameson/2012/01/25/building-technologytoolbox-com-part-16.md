@@ -31,8 +31,7 @@ here is an overview of the CAPTCHA feature detailed in this post.
 ### Overview
 
 The Technology Toolbox website provides an online form prospective clients can
-use regarding potential projects and other contact requests, as shown in Figure
-1.
+use regarding potential projects and other contact requests, as shown in Figure 1.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
@@ -272,7 +271,7 @@ based on Mahdi's **LoadConfig** method.
 Using this class, CAPTCHA configuration paramaters can be accessed using
 something like:
 
-```
+```C#
 CaptchaConfiguration.Instance.Message
 ```
 

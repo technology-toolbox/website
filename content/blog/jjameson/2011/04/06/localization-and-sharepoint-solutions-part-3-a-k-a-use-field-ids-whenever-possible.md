@@ -51,14 +51,12 @@ SharePoint environment that has language packs installed is whether or not your
 code accesses SharePoint objects in a "language-agnostic" manner. For example,
 consider the following code:
 
-```
+```C#
 SPListItem oListItem = ...
 
 oListItem["Title"] = "My Item";
 ...
-```
 
-```C#
 oListItem.Update();
 ```
 
