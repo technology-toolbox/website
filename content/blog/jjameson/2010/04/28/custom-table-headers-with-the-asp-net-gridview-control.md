@@ -13,7 +13,7 @@ aliases:
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/28/custom-table-headers-with-the-asp-net-gridview-control.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo - Custom Table Headers.zip"
   fileName: Demo - Custom Table Headers.zip
   fileSizeInBytes: 28462
@@ -24,10 +24,10 @@ In my
 I showed an example KPI dashboard for a Web application with a table similar to
 the following:
 
-{{< table class="small table-striped"
-caption="Key Performance Indicators (Detail)" >}}
-<table cellspacing="0" class="kpiDetail"><thead><tr><th class="siteColumn" rowspan="2">Site</th><th class="firstPeriod" rowspan="2">2009 Q3</th><th rowspan="2">2009 Q4</th><th class="lastPeriod" rowspan="2">2010 Q1</th><th colspan="3">Thresholds</th></tr><tr><th><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr></thead><tbody><tr><td class="siteColumn">Duncan</td><td class="firstPeriod kpiGreen">93%</td><td class="kpiGreen">95%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Dallas</td><td class="firstPeriod kpiGreen">94% <img alt="(Different KPI Thresholds)" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif" title="The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)"></td><td class="kpiYellow">91%</td><td class="lastPeriod kpiYellow">90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td class="siteColumn">Albuquerque</td><td class="firstPeriod kpiGreen">91%</td><td class="kpiYellow">87%</td><td class="lastPeriod kpiRed">85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Denver</td><td class="firstPeriod kpiGreen">94%</td><td class="kpiGreen">91%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
+  alt="Key Performance Indicators (Detail)" height="151" width="588"
+  title="Figure 1: Key Performance Indicators (Detail)" >}}
 
 I also hinted that it took a little more work than I expected to render the
 custom header for the table (i.e. the **Thresholds** label that spans the last
@@ -224,16 +224,10 @@ in a moment.
 Running the Web application at this point renders a simple table similar to the
 following:
 
-{{< table class="small table-striped" >}}
-
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | Threshold - Exceeds | Threshold - Meets | Threshold - Does Not Meet |
-| --- | --- | --- | --- | --- | --- | --- |
-| Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
-| Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v1-620x162.png"
+  alt="Key Performance Indicators (Detail) - \"v1\"" height="151" width="588"
+  title="Figure 2: Key Performance Indicators (Detail) - \"v1\"" >}}
 
 Let's start customizing the header by replacing the lengthy column headings for
 the KPI thresholds with corresponding icons. This is easily achieved using a
@@ -282,16 +276,10 @@ protected void ScorecardDetailView_RowCreated(
 Running the Web application at this point shows the images in place of the
 lengthy column headings, similar to the following:
 
-{{< table class="small table-striped" >}}
-
-| Site | 2009 Q3 | 2009 Q4 | 2010 Q1 | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
-| --- | --- | --- | --- | --- | --- | --- |
-| Duncan | 93% | 95% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Dallas | 94% | 91% | 90% | &gt;= 92% | 88% - 92% | &lt;= 88% |
-| Albuquerque | 91% | 87% | 85% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-| Denver | 94% | 91% | 92% | &gt;= 90% | 86% - 90% | &lt;= 85% |
-
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v2-519x146.png"
+  alt="Key Performance Indicators (Detail) - \"v2\"" height="146" width="519"
+  title="Figure 3: Key Performance Indicators (Detail) - \"v2\"" >}}
 
 Now let's add a method to insert another row into the table rendered by the
 GridView control:
@@ -365,9 +353,10 @@ private void UpdateScorecardDetailView()
 Running the Web application at this point shows the **Thresholds** header above
 the corresponding columns, similar to the following:
 
-{{< table class="small table-striped" >}}
-<table id="KpiScorecard1_ScorecardDetailView" border="1" cellspacing="0" rules="all" style="BORDER-COLLAPSE: collapse"><tbody><tr><th rowspan="2" scope="col">Site</th><th rowspan="2" scope="col">2009 Q3</th><th rowspan="2" scope="col">2009 Q4</th><th rowspan="2" scope="col">2010 Q1</th><th colspan="3">Thresholds</th></tr><tr><th scope="col"><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th scope="col"><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th scope="col"><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr><tr><td>Duncan</td><td>93%</td><td>95%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Dallas</td><td>94%</td><td>91%</td><td>90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td>Albuquerque</td><td>91%</td><td>87%</td><td>85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Denver</td><td>94%</td><td>91%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v3-519x175.png"
+  alt="Key Performance Indicators (Detail) - \"v3\"" height="175" width="519"
+  title="Figure 4: Key Performance Indicators (Detail) - \"v3\"" >}}
 
 Looking at the HTML source, we can see the extra table row has been inserted,
 and the `rowspan` and `colspan` attributes are being rendered as expected.
@@ -422,9 +411,10 @@ a LinkButton to test this very scenario. If you click the button (to cause a
 post back), the GridView renders itself from view state, similar to the
 following:
 
-{{< table class="small table-striped" >}}
-<table id="KpiScorecard1_ScorecardDetailView" border="1" cellspacing="0" rules="all" style="BORDER-COLLAPSE: collapse"><tbody><tr><th rowspan="2" scope="col">Site</th><th rowspan="2" scope="col">2009 Q3</th><th rowspan="2" scope="col">2009 Q4</th><th rowspan="2" scope="col">2010 Q1</th><th scope="col"><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th scope="col"><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th scope="col"><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Duncan</td><td>93%</td><td>95%</td><td>92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td>Dallas</td><td>94%</td><td>91%</td><td>90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td>Albuquerque</td><td>91%</td><td>87%</td><td>85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-Post-Back-Issue-575x131.png"
+  alt="Key Performance Indicators (Detail) - \"post back issue\"" height="131" width="575"
+  title="Figure 5: Key Performance Indicators (Detail) - \"post back issue\"" >}}
 
 Notice that we no longer see the **Thresholds** header in the table. This is
 because the **UpdateScorecardDetailView** method is not called on post back, and

@@ -109,16 +109,10 @@ period specified in the underlying data.
 To help visualize this, consider the following example summary view for a KPI
 scorecard:
 
-{{< table class="small table-striped"
-caption="Key Performance Indicators (Summary)" >}}
-
-| KPI | 2009 Q3 | 2009 Q4 | 2010 Q1 |
-| --- | --- | --- | --- |
-| Cycle Time | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) |
-| Utilization | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) | ![Meets](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif) |
-| Rejection Rate |  | ![Does Not Meet](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif) | ![Exceeds](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif) |
-
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Summary-342x106.png"
+  alt="Key Performance Indicators (Summary)" height="106" width="342"
+  title="Figure 2: Key Performance Indicators (Summary)" >}}
 
 While this example shows three periods of data, there might be cases where fewer
 columns are displayed (and perhaps other scenarios where more columns are
@@ -145,10 +139,10 @@ Similar to the **GetScorecardSummaryTable** method, the
 subsequently be rendered by the presentation tier (i.e. the ASP.NET user
 control). Perhaps something like this:
 
-{{< table class="small table-striped"
-caption="Key Performance Indicators (Detail)" >}}
-<table cellspacing="0" class="kpiDetail"><thead><tr><th class="siteColumn" rowspan="2">Site</th><th class="firstPeriod" rowspan="2">2009 Q3</th><th rowspan="2">2009 Q4</th><th class="lastPeriod" rowspan="2">2010 Q1</th><th colspan="3">Thresholds</th></tr><tr><th><img alt="Exceeds" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-0-16x16.gif"></th><th><img alt="Meets" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-1-16x16.gif"></th><th><img alt="Does Not Meet" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/kpidefault-2-16x16.gif"></th></tr></thead><tbody><tr><td class="siteColumn">Duncan</td><td class="firstPeriod kpiGreen">93%</td><td class="kpiGreen">95%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Dallas</td><td class="firstPeriod kpiGreen">94% <img alt="(Different KPI Thresholds)" src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Kpi_ShowProblems-16x16.gif" title="The KPI thresholds for this period were different from the current period. (Exceeds: &gt;= 90%, Meets: 86% - 90%, Does Not Meet: &lt;= 85%)"></td><td class="kpiYellow">91%</td><td class="lastPeriod kpiYellow">90%</td><td>&gt;= 92%</td><td>88% - 92%</td><td>&lt;= 88%</td></tr><tr><td class="siteColumn">Albuquerque</td><td class="firstPeriod kpiGreen">91%</td><td class="kpiYellow">87%</td><td class="lastPeriod kpiRed">85%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr><tr><td class="siteColumn">Denver</td><td class="firstPeriod kpiGreen">94%</td><td class="kpiGreen">91%</td><td class="lastPeriod kpiGreen">92%</td><td>&gt;= 90%</td><td>86% - 90%</td><td>&lt;= 85%</td></tr></tbody></table>
-{{< /table >}}
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
+  alt="Key Performance Indicators (Detail)" height="151" width="588"
+  title="Figure 3: Key Performance Indicators (Detail)" >}}
 
 Assuming you are proficient in ADO.NET, it shouldn't take you very long to
 implement the **GetScorecardSummaryTable** and **GetScorecardDetailTable**
