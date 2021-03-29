@@ -1,5 +1,5 @@
 ---
-title: "KB 896861 and \"Microsoft Fix it\""
+title: 'KB 896861 and "Microsoft Fix it"'
 date: 2009-10-14T04:25:00-06:00
 excerpt:
   A couple of days ago, I rebuilt one of my development VMs for Microsoft Office
@@ -30,8 +30,17 @@ When I browsed to KB 896861 this week, I noticed that it has been updated since
 the last time I saw it. Apparently, this has become such a common issue that
 Microsoft now provides an automated way to fix the issue:
 
+<div class="d-flex justify-content-center">
+  <a style="WIDTH: 139px; DISPLAY: block; BACKGROUND: url(http://support.microsoft.com/library/images/support/KBGraphics/PUBLIC/cn/FixItButton.jpg) no-repeat 0px 0px; HEIGHT: 56px;"
+  title="Microsoft Fix it"
+  href="http://go.microsoft.com/?linkid=9686309"></a>
+</div>
+<div class="text-center">
+
 [Fix this problem](http://go.microsoft.com/?linkid=9686309 "Microsoft Fix it")\
 Microsoft Fix it 50306
+
+</div>
 
 This was the first time I've seen a reference to **Microsoft Fix it**, and I
 have to say that I like it -- and for more than just the cute moniker and button
