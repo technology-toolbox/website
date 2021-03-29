@@ -1,8 +1,7 @@
 ---
 title: Web Standards Design with SharePoint, Part 5 (a.k.a. Rendering Semantic HTML Using the XsltListViewWebPart)
 date: 2011-04-27T07:33:00-06:00
-excerpt:
-  "In part 4 of this series , I provided a sample SharePoint Server 2010
+excerpt: "In part 4 of this series , I provided a sample SharePoint Server 2010
   solution solution based on Dan Cederholm's Tugboat sample site (from his most
   recent book, Handcrafted CSS : More Bulletproof Web Design ). In that sample,
   however, all of the content..."
@@ -88,11 +87,11 @@ to concatenate the values specified in the other two columns).
 {{< table class="small table-striped"
 caption="Data for \"This Week's Specials\"" >}}
 
-| Title | Unit Price | Unit of Measure | Price | Rollup Image |
-| --- | --- | --- | --- | --- |
-| Fisherman's Brew | $9.98 | / lb. | $9.98 / lb. | /PublishingImages/boat.jpg |
-| Boathouse Bold | $12.50 | / lb. | $12.50 / lb. | /PublishingImages/ropes.jpg |
-| Deadly Decaf | $7.49 | / lb. | $7.49 / lb. | /PublishingImages/fame.jpg |
+| Title            | Unit Price | Unit of Measure | Price        | Rollup Image                |
+| ---------------- | ---------- | --------------- | ------------ | --------------------------- |
+| Fisherman's Brew | $9.98      | / lb.           | $9.98 / lb.  | /PublishingImages/boat.jpg  |
+| Boathouse Bold   | $12.50     | / lb.           | $12.50 / lb. | /PublishingImages/ropes.jpg |
+| Deadly Decaf     | $7.49      | / lb.           | $7.49 / lb.  | /PublishingImages/fame.jpg  |
 
 {{< /table >}}
 
@@ -304,11 +303,16 @@ item):
 
 At this point, the HTML rendered by the **XsltListViewWebPart** is:
 
-## This Week's Specials
-
-1. Fisherman&#39;s Brew
-1. Boathouse Bold
-1. Deadly Decaf
+```HTML
+<div class="sample">
+  <h2>This Week's Specials</h2>
+  <ol class="specials group">
+    <li>Fisherman&amp;#39;s Brew</li>
+    <li>Boathouse Bold</li>
+    <li>Deadly Decaf</li>
+  </ol>
+</div>
+```
 
 As you can see, we need to tweak the XSLT a little bit in order to render
 special characters as expected (such as an encoded apostrophe). This is simply a
@@ -385,14 +389,64 @@ various pieces of content with corresponding placeholders:
 
 At this point, our HTML is very close to what we want it to be:
 
-## This Week's Specials
-
-1. [!\[\](http://blogs.msdn.com/PublishingImages/boat.jpg) **Fisherman's Brew**
-   _$9.98 / lb._](#)
-1. [!\[\](http://blogs.msdn.com/PublishingImages/ropes.jpg) **Boathouse Bold**
-   _$12.50 / lb._](#)
-1. [!\[\](http://blogs.msdn.com/PublishingImages/fame.jpg) **Deadly Decaf**
-   _$7.49 / lb._](#)
+```HTML
+<div class="sample">
+  <h2>This Week's Specials</h2>
+  <ol class="specials group">
+    <li class="group">
+      <div class="special">
+        <div class="special-img">
+          <a href="#">
+            <img src="http://blogs.msdn.com/PublishingImages/boat.jpg">
+            <span>
+              <strong>
+                Fisherman's Brew
+              </strong>
+              <em>
+                $9.98 / lb.
+              </em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="group">
+      <div class="special">
+        <div class="special-img">
+          <a href="#">
+            <img src="http://blogs.msdn.com/PublishingImages/ropes.jpg">
+            <span>
+              <strong>
+                Boathouse Bold
+              </strong>
+              <em>
+                $12.50 / lb.
+              </em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+    <li class="group">
+      <div class="special">
+        <div class="special-img">
+          <a href="#">
+            <img src="http://blogs.msdn.com/PublishingImages/fame.jpg">
+            <span>
+              <strong>
+                Deadly Decaf
+              </strong>
+              <em>
+                $7.49 / lb.
+              </em>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+  </ol>
+</div>
+```
 
 Obviously the image URLs are invalid (outside the context of the SharePoint site
 -- due to server-relative URLs), but that's okay...the images should appear as
