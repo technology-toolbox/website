@@ -2,10 +2,10 @@
 title: Operations Manager Alerts for Event Log Errors
 date: 2011-03-18T06:14:00-06:00
 excerpt:
-  "One of the things I like most about running System Center Operations Manager
-  in the \"Jameson Datacenter\" (a.k.a. my home lab) is that it greatly reduces
+  'One of the things I like most about running System Center Operations Manager
+  in the "Jameson Datacenter" (a.k.a. my home lab) is that it greatly reduces
   the amount of effort required to monitor numerous servers. For example, in my
-  environment I am..."
+  environment I am...'
 aliases:
   [
     "/blog/jjameson/archive/2011/03/17/operations-manager-alerts-for-event-log-errors.aspx",
@@ -14,7 +14,7 @@ aliases:
 categories: ["My System", "Infrastructure"]
 tags: ["My System", "Simplify", "Infrastructure"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/18/operations-manager-alerts-for-event-log-errors.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Windows.Core.Library.Customizations.xml"
   fileName: Windows.Core.Library.Customizations.xml
   fileSizeInBytes: 9663
@@ -83,17 +83,15 @@ Application event log:
 1. On the **Event Log Name** page, ensure **Log name** is set to
    **Application**, and then click **Next**.
 1. On the **Build Event Expression**page:
+
    1. Specify the following expression:
-      {{< table class="small table-striped" >}}
 
-      | Parameter Name | Operator | Value |
-      | --- | --- | --- |
-      | Event Level | Equals | Error |
+      <table class="table table-striped"><thead class="table-primary"><tr><th>Parameter Name</th><th>Operator</th><th>Value</th></tr></thead><tbody><tr><td>Event Level</td><td>Equals</td><td>Error</td></tr></tbody></table>
 
-      {{< /table >}}
    1. Click **Next**.
 
 1. On the **Configure Alerts**page:
+
    1. In the **Alert description** box, specify the following:
 
       **Source: $Data/EventSourceName$\
@@ -102,6 +100,7 @@ Application event log:
       User: $Data/UserName$\
       Computer: $Data/LoggingComputer$\
       Event Description: $Data/EventDescription$**
+
    1. In the **Severity** option, click **Warning**.
    1. Click **Alert suppression...** to define the handling of duplicate alerts.
       In the **Alert Suppression**dialog:
