@@ -1388,8 +1388,8 @@ example:
 
 {{< console-block >}}
 
-robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\_latest
-C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\_latest /E /MIR
+robocopy \\\\DAZZLER\Builds\Fabrikam\Demo\SharePointExtranet\\\_latest
+C:\NotBackedUp\Fabrikam\Demo\SharePointExtranet\\\_latest /E /MIR
 
 {{< /console-block >}}
 
