@@ -79,7 +79,11 @@ every laptop, desktop, and VM that I develop on).
 
 #### Screengrab!
 
+{{< div-block "border float-end ms-3 p-2" >}}
+
 [![Firefox Add-on - Screengrab!](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-801x738.png)
+
+{{< /div-block >}}
 
 When creating feature specs, or other documentation, I often embed screenshots
 of Web pages.
@@ -123,7 +127,11 @@ image into Word or Powerpoint).
 
 #### Web Developer
 
+{{< div-block "border float-start me-5 p-2" >}}
+
 [![Firefox Add-on - Web Developer](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-801x738.png)
+
+{{< /div-block >}}
 
 Chris Pederick's Web Developer add-on provides a toolbar chock-full of goodies
 for Web development. Honestly, there are a lot more features in this add-on than
@@ -149,7 +157,11 @@ how they stack up to this add-on and Firebug.
 
 #### Firebug
 
+{{< div-block "border float-end ms-3 p-2" >}}
+
 [![Firefox Add-on - Firebug](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-801x738.png)
+
+{{< /div-block >}}
 
 Compared to anything I had ever seen before or since (including the Web
 Developer toolbars for Firefox and Internet Explorer), Firebug takes Web
@@ -173,7 +185,11 @@ without it.
 
 #### YSlow
 
+{{< div-block "border float-start me-3 p-2" >}}
+
 [![Firefox Add-on - YSlow](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-286x380.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-843x1119.png)
+
+{{< /div-block >}}
 
 As I mentioned earlier, I only recently added YSlow to my list of "must have"
 add-ons.
