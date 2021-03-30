@@ -2925,7 +2925,7 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-\* - In development environments, the WSS_Logging database can quickly consume
+\* - In development environments, the WSS\_Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
 health data collection is _not_ recommended in these environments.
 
