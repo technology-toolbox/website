@@ -2925,9 +2925,9 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-\* - In development environments, the WSS*Logging database can quickly consume
+\* - In development environments, the WSS\_Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
-health data collection is \_not* recommended in these environments.
+health data collection is _not_ recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 
