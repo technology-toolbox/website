@@ -14,7 +14,7 @@ aliases:
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/05/02/web-standards-design-with-sharepoint-part-6.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Tugboat - 1.0.58.0.zip"
   fileName: Tugboat - 1.0.58.0.zip
   fileSizeInBytes: 2812033
@@ -362,9 +362,6 @@ existing **ConfigureHomeSiteDefaultPage** method that I created previously:
 private static void ConfigureHomeSiteDefaultPage(
     SPWeb homeWeb)
 {
-```
-
-```C#
     ...
 
     // Configure Web Parts
