@@ -12,7 +12,7 @@ aliases:
   ]
 categories: ["My System", "SharePoint"]
 tags: ["My System", "SharePoint 2010"]
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Fabrikam Demo - SharePointExtranet.zip"
   fileName: Fabrikam Demo - SharePointExtranet.zip
   fileSizeInBytes: 3704288
@@ -91,14 +91,14 @@ following style conventions and terminology.
 
 {{< table class="small table-striped" caption="Table 1: Style conventions" >}}
 
-| Element | Meaning |
-| --- | --- |
-| ALL CAPITALS | Acronyms, Active Directory domain names, server names, names of certain commands, and keys on the keyboard. |
-| **Bold** | Menus and menu commands, command buttons; tab and dialog box titles and options; command-line commands, options, and portions of syntax that must be typed exactly as shown. |
-| Initial Capitals | Names of applications, programs, paths (folders and filenames), and named windows. |
-| _Italic_ | Information that you provide, terms that are being introduced, and book titles. |
-| Monospace | Examples, sample command lines, program code, and program output. |
-| "DEV -" prefix | Indicates a step that should only be performed in the Development integration environment (DEV) and local development VMs. Specifically, these sections are skipped when deploying to the Test and Production environments. |
+| Element          | Meaning                                                                                                                                                                                                                     |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ALL CAPITALS     | Acronyms, Active Directory domain names, server names, names of certain commands, and keys on the keyboard.                                                                                                                 |
+| **Bold**         | Menus and menu commands, command buttons; tab and dialog box titles and options; command-line commands, options, and portions of syntax that must be typed exactly as shown.                                                |
+| Initial Capitals | Names of applications, programs, paths (folders and filenames), and named windows.                                                                                                                                          |
+| _Italic_         | Information that you provide, terms that are being introduced, and book titles.                                                                                                                                             |
+| Monospace        | Examples, sample command lines, program code, and program output.                                                                                                                                                           |
+| "DEV -" prefix   | Indicates a step that should only be performed in the Development integration environment (DEV) and local development VMs. Specifically, these sections are skipped when deploying to the Test and Production environments. |
 
 {{< /table >}}
 
@@ -128,8 +128,7 @@ completed:
   should be created
 - SQL Server 2008 must be installed and configured
 - For the Development integration environment (DEV) and local development VMs,
-  various development tools need to be installed (for example, Visual Studio
-  2010)
+  various development tools need to be installed (for example, Visual Studio 2010)
 
 ## Step 3: Install and configure SharePoint Server 2010
 
@@ -446,8 +445,7 @@ To create the necessary service accounts:
    1. Select the **Password never expires** checkbox.
    1. Click **Next**.
    1. Click **Finish**.
-1. Repeat steps 3 and 4 to create the remaining service accounts listed in Table
-   2.
+1. Repeat steps 3 and 4 to create the remaining service accounts listed in Table 2.
 1. Close the **Active Directory Users and Computers** console.
 
 ## Create Active Directory container to track SharePoint 2010 installations
@@ -541,6 +539,7 @@ To enable host names that are mapped to the loopback address:
 1. In Registry Editor, locate and then click the following registry key:
 
    > **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0**
+
 1. Right-click **MSV1_0**, point to **New**, and then click **Multi-String
    Value**.
 1. Type **BackConnectionHostNames**, and then press {{< kbd "ENTER" >}}.
@@ -608,8 +607,7 @@ To install Visual Studio 2010:
 
 To install Team Explorer:
 
-1. Open Windows Explorer, and browse to the installation media for Visual Studio
-   2010.
+1. Open Windows Explorer, and browse to the installation media for Visual Studio 2010.
 1. Open the **Team Explorer** folder, and double-click **setup.exe**.
 1. The **Microsoft Visual Studio Team Explorer 2010 Setup** wizard starts.
 1. On the **Welcome to Setup** page, click **Next**.
@@ -864,6 +862,7 @@ To run the preparation tool:
    > However, you will have to log back on to the server.
 
    {{< /div-block >}}
+
 1. On the **Installation Complete** page, click **Finish**.
 1. Restart the server to complete the installation of the prerequisites.
 
@@ -1022,6 +1021,7 @@ To run the configuration wizard and configure the farm:
    > because you must use it each time you add a server to the farm.
 
    {{< /div-block >}}
+
 1. On the **Configure SharePoint Central Administration Web Application**page,
    do the following:
    1. Select the **Specify port number** checkbox and type the port number
@@ -1048,6 +1048,7 @@ To run the configuration wizard and configure the farm:
    > password to access Central Administration.
 
    {{< /div-block >}}
+
 1. In the **Help Make SharePoint Better** window, click the desired option and
    then click **OK**.
 1. On the **Configure your SharePoint farm** page, click **Cancel** (since the
@@ -1134,6 +1135,7 @@ Server 2008 R2:
    "61738644-F196-11D0-9953-00C04FD919C1" to find:
 
    > HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}
+
 1. Right-click on the
    **HKEY_CLASSES_ROOT\AppID\\{61738644-F196-11D0-9953-00C04FD919C1}** key and
    then click **Permissions**.
@@ -1194,6 +1196,7 @@ To rename the TaxonomyPicker.ascx file:
 
    > **C:\Program Files\Common Files\Microsoft Shared\Web Server
    > Extensions\14\TEMPLATE\CONTROLTEMPLATES**
+
 1. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
    filename to **TaxonomyPicker.ascx_broken**. When prompted to confirm that you
    want to change the file name extension, click **Yes**.
@@ -1414,8 +1417,7 @@ The Web application and initial site collections can either be created using
 PowerShell scripts or through Central Administration. Using the PowerShell
 scripts will result in significantly shorter deployment times, whereas
 completing the equivalent procedures through Central Administration will provide
-greater familiarity with the various configuration options in SharePoint Server
-2010.
+greater familiarity with the various configuration options in SharePoint Server 2010.
 
 To create the Web application using the PowerShell scripts:
 
@@ -1427,6 +1429,7 @@ To create the Web application using the PowerShell scripts:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -1576,6 +1579,7 @@ To configure object cache user accounts:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -1627,6 +1631,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
    > in the farm.
 
    {{< /div-block >}}
+
 1. Repeat the steps above on each Web server in the farm.
 1. On one of the front-end Web servers, type the following command:
 
@@ -1694,6 +1699,7 @@ To enable anonymous access to the site using PowerShell:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -1721,6 +1727,7 @@ To enable anonymous access to the site using the site permissions page:
 > **Note**
 >
 > The Fabrikam Extranet solution:
+>
 > - Leverages the internal AD domain (FABRIKAM) for employees
 > - Uses the extranet AD domain (EXTRANET) primarily for service accounts and
 >   group policies for servers in the TEST and PROD farms
@@ -1774,6 +1781,7 @@ To create the database used for storing membership and role information:
    1. Ensure the **Windows authentication** option is selected.
    1. In the **Database** dropdown list, type **FabrikamDemo**.
    1. Click **Next**.
+
 1. On the **Confirm Your Settings** page, verify the settings, and then click
    **Next**.
 1. Wait for the database to be created and then click **Finish**.
@@ -1862,6 +1870,7 @@ To configure the Central Administration Web.config file:
    > is made in the file, you can delete it and use the original file.
 
    {{< /div-block >}}
+
 1. Double-click the **Web.config** file to open the file.
 
    {{< div-block "note" >}}
@@ -1873,7 +1882,9 @@ To configure the Central Administration Web.config file:
    > With** dialog box, click **Notepad**, and then click **OK**.
 
    {{< /div-block >}}
+
 1. In the Web.config editor:
+
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
@@ -1891,6 +1902,7 @@ To configure the Central Administration Web.config file:
       > connection string with the name of the database server.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
       ```XML
@@ -1927,6 +1939,7 @@ To configure the Security Token Service Web.config file:
    > is made in the file, you can delete it and use the original file.
 
    {{< /div-block >}}
+
 1. Double-click the **Web.config** file to open the file.
 1. In the Web.config editor, add the following elements to the `<configuration>` root element:
 
@@ -1968,6 +1981,7 @@ To configure the Security Token Service Web.config file:
    > string with the name of the database server.
 
    {{< /div-block >}}
+
 1. Save the changes to the Web.config file and close the editor.
 1. Repeat the steps above on each Web server in the farm.
 
@@ -1984,8 +1998,10 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
    > is made in the file, you can delete it and use the original file.
 
    {{< /div-block >}}
+
 1. Double-click the **Web.config** file to open the file.
 1. In the Web.config editor:
+
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
@@ -2003,6 +2019,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
       > connection string with the name of the database server.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
       ```XML
@@ -2019,6 +2036,7 @@ To configure the Web.config file for the Fabrikam Extranet Web application:
       > Do not overwrite any existing entries in this Web.config file.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
       ```XML
@@ -2106,6 +2124,7 @@ To login to the website using Windows authentication:
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
 
    {{< div-block-end >}}
+
 1. Browse to the home page page the Fabrikam Extranet website
    ([http://extranet.fabrikam.com](http://extranet.fabrikam.com)) and click
    **Sign In**.
@@ -2166,6 +2185,7 @@ To configure BLOB cache settings:
    > is made in the file, you can delete it and use the original file.
 
    {{< /div-block >}}
+
 1. Double-click the **Web.config** file to open the file.
 
    {{< div-block "note" >}}
@@ -2177,6 +2197,7 @@ To configure BLOB cache settings:
    > With** dialog box, click **Notepad**, and then click **OK**.
 
    {{< /div-block >}}
+
 1. If the Windows dialog box appears, select **Select a program from a list of
    installed programs**, and then click **OK**. In the **Open With** dialog box,
    click **Notepad**, and then click **OK**.
@@ -2198,6 +2219,7 @@ To configure BLOB cache settings:
    > files are stored.
 
    {{< /div-block >}}
+
 1. To add or remove file types from the list of file types to be cached, for the
    **path** attribute, modify the regular expression to include or remove the
    appropriate file extension. If you add file extensions, make sure to separate
@@ -2214,6 +2236,7 @@ To configure BLOB cache settings:
    > content that will be stored in the cache.
 
    {{< /div-block >}}
+
 1. To enable the BLOB cache, change the **enabled** attribute to **true**.
 1. Save the file, and then close it.
 
@@ -2261,6 +2284,7 @@ To configure the State Service:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -2291,6 +2315,7 @@ To create and configure the Search Service Application:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -2377,6 +2402,7 @@ To install Office Web Apps:
    > application and front-end Web servers in the farm.
 
    {{< /div-block >}}
+
 1. Repeat the steps above on each SharePoint server in the farm.
 
 ## Run PSConfig to register Office Web Apps services
@@ -2515,10 +2541,12 @@ for caching:
    > recognized (e.g. **Set-SPOfficeWebAppsCache**).
 
    {{< /div-block >}}
+
 1. From the Windows PowerShell command prompt, change to the following
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -2542,6 +2570,7 @@ for caching:
    > If this error occurs, wait a few minutes and then run the script again.
 
    {{< /div-block >}}
+
 1. Type the following command to reset Internet Information Services (IIS):
 
    ```Console
@@ -2630,6 +2659,7 @@ To add the new event source:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -2652,6 +2682,7 @@ To install and activate the features:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Type the following command:
 
    ```PowerShell
@@ -2708,6 +2739,7 @@ To create the sample content:
    > > **{branch folder}\Source\Tools\TestConsole\bin\\{Debug|Release}**
 
    {{< /div-block >}}
+
 1. Type the following command:
 
    ```Console
@@ -2734,6 +2766,7 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
    directory:
 
    > **{build version or branch folder}\\[Source]\Deployment Files\Scripts**
+
 1. Run the **Create Partner Site Collection.ps1** script and provide the name of the partner, for example:
 
    ```PowerShell
@@ -2844,98 +2877,99 @@ configuration settings are listed in the following tables.
 
 {{< table class="small table-striped" anchor="Table_2_-_Service_accounts" caption="Table 2 - Service accounts" >}}
 
-| User logon name | Full name | SharePoint managed account | Description |
-| --- | --- | --- | --- |
-| EXTRANET\svc-sql | Service account for SQL Server | No | Used to run SQL Server and cluster services |
-| EXTRANET\svc-sql-agent | Service account for SQL Server Agent | No | Used to run SQL Server Agent |
-| EXTRANET\svc-sharepoint | Service account for SharePoint farm | Yes | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the Windows SharePoint Services Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
-| EXTRANET\svc-search | Service account for search services | Yes | Used for running search services (namely SharePoint Foundation 2010 Search and SharePoint Server 2010 Search) |
-| EXTRANET\svc-index | Service account for indexing content | Yes | Provides read-only access to any content that needs to be indexed (and thus included in search results) |
-| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Yes | Used as the application pool identity for SharePoint service applications |
-| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web application | Yes | Used as the application pool identity for the new Fabrikam Extranet website |
-| FABRIKAM\svc-web-fabrikam | Service account for Fabrikam Web application | No | Proxy account used to enable internal Fabrikam users and groups to be selected using the People Picker in the SharePoint extranet farm. The username and password must not contain commas. |
-| EXTRANET\svc-sp-psr | Service account for SharePoint "Portal Super Reader" | No | Object cache user account with Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
-| EXTRANET\svc-sp-psu | Service account for SharePoint "Portal Super User" | No | Object cache user account providing Full Control access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx)) |
+| User logon name           | Full name                                            | SharePoint managed account | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EXTRANET\svc-sql          | Service account for SQL Server                       | No                         | Used to run SQL Server and cluster services                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| EXTRANET\svc-sql-agent    | Service account for SQL Server Agent                 | No                         | Used to run SQL Server Agent                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| EXTRANET\svc-sharepoint   | Service account for SharePoint farm                  | Yes                        | The server farm account is used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the SharePoint Central Administration application pool, and it is the account under which the Windows SharePoint Services Timer service runs. The SharePoint Products Configuration Wizard adds this account to the SQL Server **dbcreator** and **securityadmin** server roles.<br><br>The farm service account must be a domain user account, but it does not need to be a member of any specific security group on the servers in the farm. It is recommended to follow the principle of least privilege and specify a user account that is not a member of the Administrators group on any of the servers in the farm. |
+| EXTRANET\svc-search       | Service account for search services                  | Yes                        | Used for running search services (namely SharePoint Foundation 2010 Search and SharePoint Server 2010 Search)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| EXTRANET\svc-index        | Service account for indexing content                 | Yes                        | Provides read-only access to any content that needs to be indexed (and thus included in search results)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications  | Yes                        | Used as the application pool identity for SharePoint service applications                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web application         | Yes                        | Used as the application pool identity for the new Fabrikam Extranet website                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| FABRIKAM\svc-web-fabrikam | Service account for Fabrikam Web application         | No                         | Proxy account used to enable internal Fabrikam users and groups to be selected using the People Picker in the SharePoint extranet farm. The username and password must not contain commas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| EXTRANET\svc-sp-psr       | Service account for SharePoint "Portal Super Reader" | No                         | Object cache user account with Full Read access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| EXTRANET\svc-sp-psu       | Service account for SharePoint "Portal Super User"   | No                         | Object cache user account providing Full Control access to Web applications ([http://technet.microsoft.com/en-us/library/ff758656.aspx](http://technet.microsoft.com/en-us/library/ff758656.aspx))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_3_-_Installation_file_locations" caption="Table 3 - Installation file locations" >}}
 
-| Setting | Value |
-| --- | --- |
-| Installation path | C:\Program Files\Microsoft Office Servers |
+| Setting            | Value                                               |
+| ------------------ | --------------------------------------------------- |
+| Installation path  | C:\Program Files\Microsoft Office Servers           |
 | Search index files | D:\Program Files\Microsoft Office Servers\14.0\Data |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_4_-_Diagnostic_logging" caption="Table 4 - Diagnostic logging" >}}
 
-| Setting | Value |
-| --- | --- |
-| Enable Event Log Flood Protection | Yes (checked) |
-| Trace Log Path | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Number of days to store log files | TEST and PROD: 14<br>DEV: 1 |
-| Restrict Trace Log disk space usage | No (not checked) |
-| Maximum storage space for Trace Logs (GB) | N/A |
+| Setting                                   | Value                                                                                                                                                      |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Event Log Flood Protection         | Yes (checked)                                                                                                                                              |
+| Trace Log Path                            | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>%CommonProgramFiles%\Microsoft Shared\Web Server Extensions\14\LOGS\  |
+| Number of days to store log files         | TEST and PROD: 14<br>DEV: 1                                                                                                                                |
+| Restrict Trace Log disk space usage       | No (not checked)                                                                                                                                           |
+| Maximum storage space for Trace Logs (GB) | N/A                                                                                                                                                        |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_5_-_Web_analytics_and_health_data_collection" caption="Table 5 - Web analytics and health data collection" >}}
 
-| Setting | Value |
-| --- | --- |
-| Enable usage data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\* |
-| Log file location | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\ |
-| Maximum log file size | TEST and PROD: 5<br><br>DEV: 1 |
-| Enable health data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\* |
-| Database Name | WSS_Logging |
+| Setting                       | Value                                                                                                                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable usage data collection  | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\*                                                                                                         |
+| Log file location             | TEST and PROD:<br>L:\Program Files\Microsoft Office Servers\14.0\Logs<br><br>DEV:<br>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\  |
+| Maximum log file size         | TEST and PROD: 5<br><br>DEV: 1                                                                                                                                      |
+| Enable health data collection | TEST and PROD: Yes (checked)<br><br>DEV: No (not checked)\*                                                                                                         |
+| Database Name                 | WSS_Logging                                                                                                                                                         |
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume
+\* - In development environments, the WSS_Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
 health data collection is _not_ recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 
-| Setting | Value for PROD | Value for TEST | Value for DEV |
-| --- | --- | --- | --- |
-| Outbound SMTP server | smtp.extranet.fabrikam.com | smtp.extranet.fabrikam.com | smtp.fabrikam.com |
-| From address | svc-sharepoint@fabrikam.com | svc-sharepoint-test@fabrikam.com | svc-sharepoint-dev@fabrikam.com |
-| Reply-to address | no-reply@fabrikam.com | no-reply@fabrikam.com | no-reply@fabrikam.com |
-| Character set | 65001 (Unicode UTF-8) | 65001 (Unicode UTF-8) | 65001 (Unicode UTF-8) |
+| Setting              | Value for PROD              | Value for TEST                   | Value for DEV                   |
+| -------------------- | --------------------------- | -------------------------------- | ------------------------------- |
+| Outbound SMTP server | smtp.extranet.fabrikam.com  | smtp.extranet.fabrikam.com       | smtp.fabrikam.com               |
+| From address         | svc-sharepoint@fabrikam.com | svc-sharepoint-test@fabrikam.com | svc-sharepoint-dev@fabrikam.com |
+| Reply-to address     | no-reply@fabrikam.com       | no-reply@fabrikam.com            | no-reply@fabrikam.com           |
+| Character set        | 65001 (Unicode UTF-8)       | 65001 (Unicode UTF-8)            | 65001 (Unicode UTF-8)           |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_7_-_Web_applications" caption="Table 7 - Web applications" >}}
+
 <table cellspacing="0" class="accent1" width="940px"><thead><tr><th rowspan="2">Application</th><th rowspan="2">Port</th><th rowspan="2">Host Header</th><th rowspan="2">Allow Anonymous</th><th colspan="2">Application Pool</th><th rowspan="2">Web Application Database Name</th></tr><tr><th>Name</th><th>Service Account</th></tr></thead><tbody><tr><td>SharePoint Central Administration v4</td><td>22812</td><td>(blank)</td><td>No</td><td></td><td>EXTRANET\svc-sharepoint</td><td>SharePoint_AdminContent_{GUID}</td></tr><tr><td>Fabrikam Extranet</td><td>80</td><td>extranet.fabrikam.com</td><td>Yes</td><td>SharePoint – extranet.fabrikam.com80</td><td>EXTRANET\svc-web-fabrikam</td><td>WSS_Content_FabrikamExtranet</td></tr></tbody></table>
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_8_-_Site_collections" caption="Table 8 - Site collections" >}}
 
-| Web Application | Title | Description | URL | Template | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| http://extranet.fabrikam.com | Fabrikam Extranet | (blank) | / | Publishing: Publishing Portal | FABRIKAM\jjameson | FABRIKAM\smasters | No Quota |
+| Web Application              | Title             | Description | URL | Template                      | Primary Site Collection Administrator | Secondary Site Collection Administrator | Quota Template |
+| ---------------------------- | ----------------- | ----------- | --- | ----------------------------- | ------------------------------------- | --------------------------------------- | -------------- |
+| http://extranet.fabrikam.com | Fabrikam Extranet | (blank)     | /   | Publishing: Publishing Portal | FABRIKAM\jjameson                     | FABRIKAM\smasters                       | No Quota       |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_9_-_Initial_data_and_log_file_sizes" caption="Table 9 - Initial data and log file sizes" >}}
 
-| Database | Logical Name | File Type | Filegroup | Initial Size (MB) | Autogrowth |
-| --- | --- | --- | --- | --- | --- |
-| WSS_Content_FabrikamExtranet | WSS_Content_FabrikamExtranet | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
-|  | WSS_Content_FabrikamExtranet_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
-| OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted growth |
-|  | OfficeWebAppsCache_Log | Log | Not Applicable | 400 | By 10 percent, restricted growth: 4,000 MB |
+| Database                     | Logical Name                     | File Type | Filegroup      | Initial Size (MB) | Autogrowth                                 |
+| ---------------------------- | -------------------------------- | --------- | -------------- | ----------------- | ------------------------------------------ |
+| WSS_Content_FabrikamExtranet | WSS_Content_FabrikamExtranet     | Data      | PRIMARY        | 10,000            | By 500 MB, unrestricted growth             |
+|                              | WSS_Content_FabrikamExtranet_Log | Log       | Not Applicable | 400               | By 10 percent, restricted growth: 4,000 MB |
+| OfficeWebAppsCache           | OfficeWebAppsCache               | Data      | PRIMARY        | 10,000            | By 500 MB, unrestricted growth             |
+|                              | OfficeWebAppsCache_Log           | Log       | Not Applicable | 400               | By 10 percent, restricted growth: 4,000 MB |
 
 {{< /table >}}
 
 {{< table class="small table-striped" anchor="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement" caption="Table 10 - SharePoint groups and permissions used for entitlement" >}}
 
-| SharePoint Group | Members | Permissions |
-| --- | --- | --- |
-| Approvers | FABRIKAM\Extranet Approvers | Approve |
-| Fabrikam Extranet Members | FABRIKAM\Extranet Authors | Contribute |
+| SharePoint Group          | Members                     | Permissions |
+| ------------------------- | --------------------------- | ----------- |
+| Approvers                 | FABRIKAM\Extranet Approvers | Approve     |
+| Fabrikam Extranet Members | FABRIKAM\Extranet Authors   | Contribute  |
 
 {{< /table >}}
 
@@ -2945,13 +2979,13 @@ health data collection is _not_ recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_11_-_Search_schedules" caption="Table 11 - Search schedules" >}}
 
-| Setting | Full | Incremental |
-| --- | --- | --- |
-| Type | Weekly | Daily |
-| Run every | 1 week | 1 day |
-| On: | <ul><li>Sunday</li></ul> | N/A |
-| Starting time | 04:00 AM | 12:00 AM |
-| Repeat within the day | No | Yes<br>Every 30 minutes<br>For 1440 minutes |
+| Setting               | Full                     | Incremental                                 |
+| --------------------- | ------------------------ | ------------------------------------------- |
+| Type                  | Weekly                   | Daily                                       |
+| Run every             | 1 week                   | 1 day                                       |
+| On:                   | <ul><li>Sunday</li></ul> | N/A                                         |
+| Starting time         | 04:00 AM                 | 12:00 AM                                    |
+| Repeat within the day | No                       | Yes<br>Every 30 minutes<br>For 1440 minutes |
 
 {{< /table >}}
 
