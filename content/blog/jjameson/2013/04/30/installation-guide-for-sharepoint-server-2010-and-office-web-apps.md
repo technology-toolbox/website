@@ -2925,9 +2925,9 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume
+\* - In development environments, the WSS*Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
-health data collection is _not_ recommended in these environments.
+health data collection is \_not* recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 
@@ -2940,10 +2940,9 @@ health data collection is _not_ recommended in these environments.
 
 {{< /table >}}
 
-{{< table class="small table-striped" anchor="Table_7_-_Web_applications" caption="Table 7 - Web applications" >}}
+<a name="Table_7_-_Web_applications"></a>
 
-<table cellspacing="0" class="accent1" width="940px"><thead><tr><th rowspan="2">Application</th><th rowspan="2">Port</th><th rowspan="2">Host Header</th><th rowspan="2">Allow Anonymous</th><th colspan="2">Application Pool</th><th rowspan="2">Web Application Database Name</th></tr><tr><th>Name</th><th>Service Account</th></tr></thead><tbody><tr><td>SharePoint Central Administration v4</td><td>22812</td><td>(blank)</td><td>No</td><td></td><td>EXTRANET\svc-sharepoint</td><td>SharePoint_AdminContent_{GUID}</td></tr><tr><td>Fabrikam Extranet</td><td>80</td><td>extranet.fabrikam.com</td><td>Yes</td><td>SharePoint – extranet.fabrikam.com80</td><td>EXTRANET\svc-web-fabrikam</td><td>WSS_Content_FabrikamExtranet</td></tr></tbody></table>
-{{< /table >}}
+<table class="table small table-striped"><caption>Table 7 - Web applications</caption><thead class="table-primary"><tr><th rowspan="2">Application</th><th rowspan="2">Port</th><th rowspan="2">Host Header</th><th rowspan="2">Allow Anonymous</th><th colspan="2">Application Pool</th><th rowspan="2">Web Application Database Name</th></tr><tr><th>Name</th><th>Service Account</th></tr></thead><tbody><tr><td>SharePoint Central Administration v4</td><td>22812</td><td>(blank)</td><td>No</td><td></td><td>EXTRANET\svc-sharepoint</td><td>SharePoint_AdminContent_{GUID}</td></tr><tr><td>Fabrikam Extranet</td><td>80</td><td>extranet.fabrikam.com</td><td>Yes</td><td>SharePoint – extranet.fabrikam.com80</td><td>EXTRANET\svc-web-fabrikam</td><td>WSS_Content_FabrikamExtranet</td></tr></tbody></table>
 
 {{< table class="small table-striped" anchor="Table_8_-_Site_collections" caption="Table 8 - Site collections" >}}
 
