@@ -202,7 +202,7 @@ Write-Host "Successfully created website ($sitePath).`r`n"
 ### Step 6 - Copy Subtext website content
 
 The Subtext solution is deployed by copying files from the Release server
-(DAZZLER). Note that variables are used to specify which version (e.g. "_latest"
+(DAZZLER). Note that variables are used to specify which version (e.g. "\_latest"
 or "2.5.2.9") to install as well as the build configuration (i.e. "Debug" or
 "Release").
 
@@ -486,8 +486,9 @@ corresponding output, I created a simple batch file.
 
 #### Rebuild Website.cmd
 
-```Console
+```Batch
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
+
 EXIT %ERRORLEVEL%
 ```
 
@@ -514,4 +515,5 @@ PS C:\NotBackedUp\...\Scripts> {{< kbd "& '.\Rebuild Website.ps1' 1.0.57.0 2.5.2
 ```
 
 Note that when running the script in TEST, the Caelum and Subtext versions must
-be specified (unlike DEV, which assumes "_latest" if no versions are specified).
+be specified (unlike DEV, which assumes "\_latest" if no versions are
+specified).

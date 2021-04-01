@@ -108,9 +108,11 @@ After changing the base class and building the solution, the following commands
 are used to update the assembly in the GAC and recycle the application pool for
 the Fabrikam site:
 
-```Console
+```Batch
 cd \NotBackedUp\Fabrikam\Demo\Main\Source\Web\DeploymentFiles\Scripts
+
 "GAC Assemblies.cmd"
+
 C:\Windows\System32\inetsrv\appcmd.exe recycle apppool "SharePoint - fabrikam-local80"
 ```
 

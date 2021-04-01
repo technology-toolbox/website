@@ -1,11 +1,11 @@
 ---
-title: "A Custom SqlRoleProvider for \"Authenticated Users\""
+title: 'A Custom SqlRoleProvider for "Authenticated Users"'
 date: 2010-12-09T07:25:00-07:00
 excerpt:
-  "Prior to the recent \"v2\" release on my current project, we had been using
+  'Prior to the recent "v2" release on my current project, we had been using
   the ASP.NET SqlRoleProvider to manage the various roles used by the Web site.
   Over a month ago, someone contacted me about an issue he was encountering with
-  a specific user...."
+  a specific user....'
 aliases:
   [
     "/blog/jjameson/archive/2010/12/08/a-custom-sqlroleprovider-for-quot-authenticated-users-quot.aspx",
@@ -181,7 +181,7 @@ I then added the following steps to the installation guide:
 >    **%WinDir%\system32\inetsrv\config**
 > 1. Type the following command:
 >
->    ```Console
+>    ```Batch
 >    notepad administration.config
 >    ```
 >

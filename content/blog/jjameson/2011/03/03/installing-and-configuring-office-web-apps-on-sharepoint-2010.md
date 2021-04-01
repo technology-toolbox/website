@@ -17,8 +17,7 @@ msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/03/installing-and
 ---
 
 In the current sprint of the project I'm working on, we are deploying Office Web
-Apps to support an enterprise collaboration platform based on SharePoint Server
-2010.
+Apps to support an enterprise collaboration platform based on SharePoint Server 2010.
 
 While creating the installation guide for this sprint, I used the following
 TechNet article as a reference for the section on installing and configuring
@@ -55,11 +54,11 @@ following table.
 
 {{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
 
-| User Logon Name | Full Name | Description |
-| --- | --- | --- |
-| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration database. |
-| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Used as the application pool identity for SharePoint service applications |
-| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam extranet Web application |
+| User Logon Name           | Full Name                                           | Description                                                                              |
+| ------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| EXTRANET\svc-sharepoint   | Service account for SharePoint                      | SharePoint farm account used to create and access the SharePoint configuration database. |
+| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Used as the application pool identity for SharePoint service applications                |
+| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site               | Used for the application pool for the Fabrikam extranet Web application                  |
 
 {{< /table >}}
 
@@ -228,7 +227,7 @@ database files.
    process.
 1. Reset Internet Information Services (IIS) in order for the change to take effect:
 
-   ```Console
+   ```Batch
    iisreset
    ```
 
@@ -244,12 +243,13 @@ database files.
    {{< table class="small table-striped"
    caption="Table 2 - Initial data and log file sizes" >}}
 
-   | Database | Logical Name | File Type | Filegroup | Initial Size [MB] | Autogrowth |
-   | --- | --- | --- | --- | --- | --- |
-   | OfficeWebAppsCache | OfficeWebAppsCache | Data | PRIMARY | 10,000 | By 500 MB, unrestricted gerowth |
-   |  | OfficeWebAppsCache | Log | N/A | 400 | By 10 percent, restricted growth: 4,000 MB |
+   | Database           | Logical Name       | File Type | Filegroup | Initial Size [MB] | Autogrowth                                 |
+   | ------------------ | ------------------ | --------- | --------- | ----------------- | ------------------------------------------ |
+   | OfficeWebAppsCache | OfficeWebAppsCache | Data      | PRIMARY   | 10,000            | By 500 MB, unrestricted gerowth            |
+   |                    | OfficeWebAppsCache | Log       | N/A       | 400               | By 10 percent, restricted growth: 4,000 MB |
 
    {{< /table >}}
+
 1. Click **OK**.
 
 The following SQL statements can be used as an alternative to setting the sizes

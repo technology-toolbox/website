@@ -1,8 +1,7 @@
 ---
 title: Issues Deploying SharePoint Solution Packages
 date: 2007-06-17T07:44:00-06:00
-excerpt:
-  Several weeks ago, I converted our deployment process to use SharePoint
+excerpt: Several weeks ago, I converted our deployment process to use SharePoint
   solution packages instead of the batch scripts that we had been using in our
   Development environment. One of the issues that I discovered along the way is
   that SharePoint is rather...
@@ -24,19 +23,18 @@ deploy your solution package.
 
 I noted in a previous post that we have created a PublishingLayouts feature
 containing our custom master pages, images, and stylesheets -- similar in
-structure to the feature provided in Microsoft Office SharePoint Server (MOSS)
-2007. Creating the WSP file was quite straightforward, as was adding it to the
+structure to the feature provided in Microsoft Office SharePoint Server (MOSS) 2007. Creating the WSP file was quite straightforward, as was adding it to the
 solution store, using the following command:
 
-```Console
+{{< console-block >}}
 stsadm -o addsolution -filename Fabrikam.Project1.PublishingLayouts.wsp
-```
+{{< /console-block >}}
 
 However, as soon as I tried to deploy the solution using the following command:
 
-```Console
+{{< console-block >}}
 stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -url http://foobar/ -local
-```
+{{< /console-block >}}
 
 I encountered the following error:
 
@@ -51,9 +49,9 @@ I must have spent 30 minutes trying to figure out why this command did not work
 (because it worked just fine for other features that I had converted to deploy
 with WSPs). It turns out that I needed to omit the {{< kbd "url" >}} parameter:
 
-```Console
+{{< console-block >}}
 stsadm -o deploysolution -name Fabrikam.Project1.PublishingLayouts -local
-```
+{{< /console-block >}}
 
 The reason why the PublishingLayouts solution would not deploy with the {{< kbd
 "url" >}} parameter is because, unlike the other features, there was no assembly

@@ -13,7 +13,7 @@ aliases:
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Web Development", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/02/web-standards-design-with-sharepoint-part-2.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Tugboat - 1.0.8.0 %28Sprint 1%29.zip"
   fileName: Tugboat - 1.0.8.0 (Sprint 1).zip
   fileSizeInBytes: 3809415
@@ -115,6 +115,7 @@ solutions -- at least in my experience -- is "biting off" a reasonable chunk
 that can be delivered within a short period of time.
 
 With that in mind, the following scenario was identified for the first milestone
+
 - or, "M1" as I like to call it:
 
 - View Tugboat home page in SharePoint
@@ -152,20 +153,20 @@ these are in addition to the "default" work items listed in
 {{< table class="small table-striped"
 caption="Initial work items for the Tugboat project (partial list)" >}}
 
-| Work Item Type | Title |
-| --- | --- |
-| Product Backlog Item | Home page |
-| Product Backlog Item | Masthead |
-| Product Backlog Item | Find Location (static HTML) |
-| Product Backlog Item | Weekly Specials (static HTML) |
-| Product Backlog Item | News (static HTML) |
-| Product Backlog Item | Drink Menu (static HTML) |
-| Product Backlog Item | Reviews (static HTML) |
-| Task | Create static HTML prototype for Web site |
-| Task | Create minimal master page and basic look-and-feel |
-| Task | Create HomeSiteConfiguration feature |
-| Task | Create deployment scripts for SharePoint WSPs and features |
-| Task | Create scripts to build/rebuild Web application |
+| Work Item Type       | Title                                                      |
+| -------------------- | ---------------------------------------------------------- |
+| Product Backlog Item | Home page                                                  |
+| Product Backlog Item | Masthead                                                   |
+| Product Backlog Item | Find Location (static HTML)                                |
+| Product Backlog Item | Weekly Specials (static HTML)                              |
+| Product Backlog Item | News (static HTML)                                         |
+| Product Backlog Item | Drink Menu (static HTML)                                   |
+| Product Backlog Item | Reviews (static HTML)                                      |
+| Task                 | Create static HTML prototype for Web site                  |
+| Task                 | Create minimal master page and basic look-and-feel         |
+| Task                 | Create HomeSiteConfiguration feature                       |
+| Task                 | Create deployment scripts for SharePoint WSPs and features |
+| Task                 | Create scripts to build/rebuild Web application            |
 
 {{< /table >}}
 
@@ -478,7 +479,7 @@ To deploy the Tugboat sample site to SharePoint:
    right-click **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following command to set the enviroment variable corresponding to a local (developer) environment:
 
-   ```Console
+   ```Batch
    set TUGBOAT_URL=http://tugboatcoffee-local
    ```
 
@@ -491,10 +492,12 @@ To deploy the Tugboat sample site to SharePoint:
    > SharePoint timer infrastructure when deploying and retracting the solution.
 
    {{< /div-block >}}
+
 1. Set environment variables to specify the credentials to use for the Tugboat application pool:
 
-   ```Console
+   ```Batch
    set TUGBOAT_APP_POOL_IDENTITY=%USERDOMAIN%\svc-web-tugboat-dev
+
    set TUGBOAT_APP_POOL_PASSWORD={password}
    ```
 
@@ -505,33 +508,34 @@ To deploy the Tugboat sample site to SharePoint:
    > Be sure to specify a valid local or domain user.
 
    {{< /div-block >}}
+
 1. Change to the folder containing the deployment scripts:
 
-   ```Console
+   ```Batch
    cd Tugboat\Dev\Lab1\Source\DeploymentFiles\Scripts
    ```
 
 1. Type the following command:
 
-   ```Console
+   ```Batch
    "Create Web Applications.cmd"
    ```
 
 1. Wait for the new Web application and corresponding site collection to be created, and then type the following command:
 
-   ```Console
+   ```Batch
    "Add Solutions.cmd"
    ```
 
 1. Wait for the solution to be added and then type the following command:
 
-   ```Console
+   ```Batch
    "Deploy Solutions.cmd"
    ```
 
 1. Wait for the solution to be deployed and then type the following command:
 
-   ```Console
+   ```Batch
    "Activate Features.cmd"
    ```
 

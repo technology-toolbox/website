@@ -1,11 +1,11 @@
 ---
-title: "Performing a \"Do Over\" with TFS 2010 Upgrade"
+title: 'Performing a "Do Over" with TFS 2010 Upgrade'
 date: 2010-05-20T03:23:00-06:00
 excerpt:
-  "Regardless of whether you call it a \"mulligan\", a \"do over\", or whatever,
+  'Regardless of whether you call it a "mulligan", a "do over", or whatever,
   the fact is you may encounter errors during your upgrade to Team Foundation
   Server (TFS) 2010 -- hopefully in your Development or Test environment first,
-  not when upgrading your..."
+  not when upgrading your...'
 aliases:
   [
     "/blog/jjameson/archive/2010/05/19/performing-a-do-over-with-tfs-2010-upgrade.aspx",
@@ -33,10 +33,11 @@ you can use the steps described below.
 First, use the Team Foundation Server Configuration Tool to unconfigure
 components on the server:
 
-```Console
-cd "%ProgramFiles\Microsoft Team Foundation Server 2010\Tools"
+{{< console-block >}}
+cd "%ProgramFiles%\Microsoft Team Foundation Server 2010\Tools"
+
 TfsConfig.exe setup /uninstall:All
-```
+{{< /console-block >}}
 
 Next, remove the SharePoint content database (e.g. WSS_Content_TFS) containing
 the upgraded TFS project sites:

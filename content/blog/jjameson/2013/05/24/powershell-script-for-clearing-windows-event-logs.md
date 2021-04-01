@@ -2,14 +2,15 @@
 title: PowerShell Script for Clearing Windows Event Logs
 date: 2013-05-24T23:01:34-06:00
 excerpt:
-  "Sure, you can just type \"wevtutil el | % { wevtutil cl $_ }\" whenever you
-  feel like it, but how fun is that?!"
+  'Sure, you can just type "wevtutil el | % { wevtutil cl $_ }" whenever you
+  feel like it, but how fun is that?!'
 aliases:
   [
     "/blog/jjameson/archive/2013/05/24/powershell-script-for-clearing-windows-event-logs.aspx",
   ]
 categories: ["Development", "My System"]
-tags: ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server"]
+tags:
+  ["Core Development", "My System", "PowerShell", "Toolbox", "Windows Server"]
 ---
 
 A couple of years ago, I shared the
@@ -27,7 +28,7 @@ everything in that view.
 
 For example, after running:
 
-```Console
+```Batch
 cscript "Clear Event Logs.vbs"
 ```
 

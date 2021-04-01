@@ -2,10 +2,10 @@
 title: SharePoint Configuration Wizard Hangs with IPv6 Address
 date: 2009-01-15T17:20:00-07:00
 excerpt:
-  "I came back from a nice long vacation only to find that my local development
+  'I came back from a nice long vacation only to find that my local development
   VM for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
-  \"corrupted\", I mean to say there were lots of errors in the event log about
-  the SharePoint_Config database..."
+  "corrupted", I mean to say there were lots of errors in the event log about
+  the SharePoint_Config database...'
 aliases:
   [
     "/blog/jjameson/archive/2009/01/15/sharepoint-configuration-wizard-hangs-with-ipv6-address.aspx",
@@ -132,19 +132,18 @@ hostname of the VM:
 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
-```Console
+{{< sample-block >}}
+Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:\
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms\
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms\
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms\
+Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms\
 
-Pinging dmx-foobar2.windmx-dev.local [fe80::8d3a:793e:c6ee:67d9%12]:
-Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-Reply from fe80::8d3a:793e:c6ee:67d9%12: time<1ms
-
-Ping statistics for fe80::8d3a:793e:c6ee:67d9%12:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 0ms, Maximum = 0ms, Average = 0ms
-```
+Ping statistics for fe80::8d3a:793e:c6ee:67d9%12:\
+&nbsp;&nbsp;&nbsp;&nbsp;Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\
+Approximate round trip times in milli-seconds:\
+&nbsp;&nbsp;&nbsp;&nbsp;Minimum = 0ms, Maximum = 0ms, Average = 0ms
+{{< /sample-block >}}
 
 {{< console-block-end >}}
 
@@ -168,19 +167,18 @@ address:
 
 C:\Users\jjameson&gt;{{< kbd "ping dmx-foobar2" >}}
 
-```Console
+{{< sample-block >}}
+Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:\
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128\
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128\
+Reply from 127.0.0.1: bytes=32time<1ms TTL=128\
+Reply from 127.0.0.1: bytes=32 time<1ms TTL=128\
 
-Pinging dmx-foobar2.windmx-dev.local [127.0.0.1] with 32 bytes of data:
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-
-Ping statistics for 127.0.0.1:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 0ms, Maximum = 0ms, Average = 0ms
-```
+Ping statistics for 127.0.0.1:\
+&nbsp;&nbsp;&nbsp;&nbsp;Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\
+Approximate round trip times in milli-seconds:\
+&nbsp;&nbsp;&nbsp;&nbsp;Minimum = 0ms, Maximum = 0ms, Average = 0ms
+{{< /sample-block >}}
 
 {{< console-block-end >}}
 

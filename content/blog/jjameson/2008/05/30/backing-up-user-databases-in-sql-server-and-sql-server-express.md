@@ -2,10 +2,10 @@
 title: Backing Up User Databases in SQL Server (and SQL Server Express)
 date: 2008-05-30T09:22:00-06:00
 excerpt:
-  "Since I appear to be on a roll with my blog this morning, I figured that I
-  should write one more post about SQL Server before I get back to my \"day
-  job.\" I typically use SQL Server Management Studio to configure and schedule
-  database backups, because..."
+  'Since I appear to be on a roll with my blog this morning, I figured that I
+  should write one more post about SQL Server before I get back to my "day
+  job." I typically use SQL Server Management Studio to configure and schedule
+  database backups, because...'
 aliases:
   [
     "/blog/jjameson/archive/2008/05/29/backing-up-user-databases-in-sql-server-and-sql-server-express.aspx",
@@ -134,9 +134,9 @@ title="Figure 1: Scheduled tasks for backing up databases" >}}
 Here is the command behind one of the scheduled tasks (you can easily deduce the
 others):
 
-```Console
+{{< console-block >}}
 "C:\Program Files\Microsoft SQL Server\90\Tools\Binn\SQLCMD.EXE" -S .\SQLExpress -d Tools -Q "EXEC BackupUserDatabases @backupType='Full'"
-```
+{{< /console-block >}}
 
 Lastly, note that I have a separate server periodically ROBOCOPY the backup
 files off of this server to another location -- just in case the WSUS server

@@ -275,13 +275,13 @@ To resolve the issue, remove the WSUS registry entries specified in
    **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following commands:
 
-   ```Console
+   ```Batch
    net stop wuauserv
 
-   reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
-   reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
-   reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
-   reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
+   reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f
+   reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v AccountDomainSid /f
+   reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientId /f
+   reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v SusClientIDValidation /f
 
    net start wuauserv
    ```
@@ -302,8 +302,9 @@ To cleanup the network adapters:
    **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following commands:
 
-   ```Console
+   ```Batch
    set devmgr_show_nonpresent_devices=1
+
    start devmgmt.msc
    ```
 
@@ -387,9 +388,9 @@ To configure the MaxPatchCacheSize policy:
    **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following command:
 
-   ```Console
+   {{< console-block >}}
    reg add HKLM\Software\Policies\Microsoft\Windows\Installer /v MaxPatchCacheSize /t REG_DWORD /d 0 /f
-   ```
+   {{< /console-block >}}
 
 More information on this step is available in the following blog post:
 
@@ -497,7 +498,7 @@ To map the host name for a Web application to the loopback address:
    **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following command:
 
-   ```Console
+   ```Batch
    notepad %WINDIR%\System32\Drivers\etc\hosts
    ```
 
@@ -1590,7 +1591,7 @@ To configure object cache user accounts:
    process.
 1. Type the following command to reset Internet Information Services (IIS):
 
-   ```Console
+   ```Batch
    iisreset
    ```
 
@@ -1614,7 +1615,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
    **Command Prompt**, and then click **Run as administrator**.
 1. Type the following command:
 
-   ```Console
+   ```Batch
    stsadm -o setapppassword -password {Key}
    ```
 
@@ -1635,7 +1636,7 @@ To enable selection of people and groups from the internal Fabrikam domain:
 1. Repeat the steps above on each Web server in the farm.
 1. On one of the front-end Web servers, type the following command:
 
-   ```Console
+   ```Batch
    stsadm -o setproperty -pn peoplepicker-searchadforests -pv "domain:extranet.fabrikam.com,EXTRANET\svc-web-fabrikam,{password};domain:corp.fabrikam.com,FABRIKAM\svc-web-fabrikam,{password}" -url http://extranet.fabrikam.com
    ```
 
@@ -1761,13 +1762,13 @@ To create the database used for storing membership and role information:
    right-click **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following command:
 
-   ```Console
+   ```Batch
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 1. Type the following command:
 
-   ```Console
+   ```Batch
    aspnet_regsql.exe
    ```
 
@@ -2573,7 +2574,7 @@ for caching:
 
 1. Type the following command to reset Internet Information Services (IIS):
 
-   ```Console
+   ```Batch
    iisreset
    ```
 
@@ -2742,7 +2743,7 @@ To create the sample content:
 
 1. Type the following command:
 
-   ```Console
+   ```Batch
    Fabrikam.Demo.Tools.TestConsole.exe
    ```
 
@@ -2925,9 +2926,9 @@ configuration settings are listed in the following tables.
 
 {{< /table >}}
 
-\* - In development environments, the WSS\_Logging database can quickly consume
+\* - In development environments, the WSS*Logging database can quickly consume
 all available space on a small VHD. Therefore enabling usage data collection and
-health data collection is _not_ recommended in these environments.
+health data collection is \_not* recommended in these environments.
 
 {{< table class="small table-striped" anchor="Table_6_-_Outgoing_e-mail_settings" caption="Table 6 - Outgoing e-mail settings" >}}
 

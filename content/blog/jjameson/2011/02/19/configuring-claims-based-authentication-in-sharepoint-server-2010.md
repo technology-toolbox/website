@@ -1,11 +1,10 @@
 ---
 title: Configuring Claims-Based Authentication in SharePoint Server 2010
 date: 2011-02-19T13:06:00-07:00
-excerpt:
-  "I thought it would be helpful to share my step-by-step procedures for
+excerpt: 'I thought it would be helpful to share my step-by-step procedures for
   manually configuring claims-based authentication in SharePoint Server 2010
-  using an \"ASP.NET database\" and corresponding membership and role providers.
-  Note that the following TechNet..."
+  using an "ASP.NET database" and corresponding membership and role providers.
+  Note that the following TechNet...'
 aliases:
   [
     "/blog/jjameson/archive/2011/02/18/configuring-claims-based-authentication-in-sharepoint-server-2010.aspx",
@@ -58,10 +57,10 @@ following table.
 {{< table class="small table-striped" anchor="Table-1"
 caption="Table 1 - Service Accounts" >}}
 
-| User Logon Name | Full Name | Description |
-| --- | --- | --- |
-| EXTRANET\svc-sharepoint | Service account for SharePoint | SharePoint farm account used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the Central Administration site, as well as the application pool for the Security Token Service application. |
-| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam Web application |
+| User Logon Name           | Full Name                             | Description                                                                                                                                                                                                                                                     |
+| ------------------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| EXTRANET\svc-sharepoint   | Service account for SharePoint        | SharePoint farm account used to create and access the SharePoint configuration database. It also acts as the application pool identity account for the Central Administration site, as well as the application pool for the Security Token Service application. |
+| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site | Used for the application pool for the Fabrikam Web application                                                                                                                                                                                                  |
 
 {{< /table >}}
 
@@ -99,13 +98,13 @@ added to to the appropriate database roles.
    right-click **Command Prompt**, and then click **Run as administrator**.
 1. At the command prompt, type the following command:
 
-   ```Console
+   ```Batch
    cd %WinDir%\Microsoft.NET\Framework\v2.0.50727
    ```
 
 1. Type the following command:
 
-   ```Console
+   ```Batch
    aspnet_regsql.exe
    ```
 
@@ -119,6 +118,7 @@ added to to the appropriate database roles.
    1. Ensure the **Windows authentication** option is selected.
    1. In the **Database** dropdown list, type **FabrikamDemo**.
    1. Click **Next**.
+
 1. On the **Confirm Your Settings** page, verify the settings, and then click
    **Next**.
 1. Wait for the database to be created and then click **Finish**.
@@ -371,6 +371,7 @@ necessary to modify the Web.config files for the following sites:
    > is made in the file, you can delete it and use the original file.
 
    {{< /div-block >}}
+
 1. Double-click the **Web.config** file to open the file.
 
    {{< div-block "note" >}}
@@ -382,7 +383,9 @@ necessary to modify the Web.config files for the following sites:
    > With** dialog box, click **Notepad**, and then click **OK**.
 
    {{< /div-block >}}
+
 1. In the Web.config editor:
+
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
@@ -400,6 +403,7 @@ necessary to modify the Web.config files for the following sites:
       > connection string with the name of the database server.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
       ```XML
@@ -467,6 +471,7 @@ necessary to modify the Web.config files for the following sites:
    > string with the name of the database server.
 
    {{< /div-block >}}
+
 1. Save the changes to the Web.config file and close the editor.
 
 #### To configure the Web.config file for the Fabrikam Web application:
@@ -476,6 +481,7 @@ necessary to modify the Web.config files for the following sites:
    click **Explore**.
 1. Double-click the **Web.config** file to open the file.
 1. In the Web.config editor:
+
    1. After the end of the **/configuration/configSections** element (i.e. `</configSections>`), add the following elements:
 
       ```XML
@@ -493,6 +499,7 @@ necessary to modify the Web.config files for the following sites:
       > connection string with the name of the database server.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/roleManager/providers** section and add the following elements:
 
       ```XML
@@ -509,6 +516,7 @@ necessary to modify the Web.config files for the following sites:
       > Do not overwrite any existing entries in this Web.config file.
 
       {{< div-block-end >}}
+
    1. Find the **/configuration/system.web/membership/providers** section and add the following elements:
 
       ```XML
@@ -580,6 +588,7 @@ both Forms-Based Authentication and Windows authentication.
    > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
 
    {{< div-block-end >}}
+
 1. Browse to the home page page the Fabrikam Web site (http://www.fabrikam.com)
    and click **Sign In**.
 1. On the **Sign In** page, in the dropdown list, click **Windows

@@ -1,10 +1,9 @@
 ---
 title: Some Tips for Managing TFS Workspaces
 date: 2013-05-06T12:51:05-06:00
-excerpt:
-  "Are you familiar with the \"tfpt scorch\" command? Have you ever used
+excerpt: 'Are you familiar with the "tfpt scorch" command? Have you ever used
   PowerShell to quickly cloak/uncloak folders in your TFS workspaces? If not,
-  here are a couple of tips that could save you a little time."
+  here are a couple of tips that could save you a little time.'
 aliases:
   [
     "/blog/jjameson/archive/2013/05/06/some-tips-for-managing-tfs-workspaces.aspx",
@@ -44,10 +43,11 @@ no other reason, than to
 From a Visual Studio command prompt, simply use the {{< kbd "tfpt scorch" >}}
 command. For example:
 
-```Console
+{{< console-block >}}
 cd "\NotBackedUp\Dow\Collaboration\ELN HD"
+
 tfpt scorch Main /r
-```
+{{< /console-block >}}
 
 Note that {{< kbd "/r" >}} is short for {{< kbd "/recursive" >}}.
 
@@ -141,12 +141,15 @@ branch, and multiple release branches under the **Release** folder).
 
 Here are the commands to only get the **Main** branch:
 
-```Console
+{{< console-block >}}
 tf workfold /decloak CoreServices
+
 tf workfold /cloak CoreServices/Dev
+
 tf workfold /cloak CoreServices/Release
+
 tf get CoreServices /recursive
-```
+{{< /console-block >}}
 
 At this point, my workspace contains an exact copy of the **Main** branch -- and
 only the **Main** branch -- for the **CoreServices** project.
@@ -154,21 +157,33 @@ only the **Main** branch -- for the **CoreServices** project.
 Since I probably also want to build the latest version of the ELN and Research
 Portal solutions, I can use similar commands for those folders:
 
-```Console
+{{< console-block >}}
 tf workfold /decloak "ELN HD"
+
 tf workfold /cloak "ELN HD/Business Data Connectivity Models"
+
 tf workfold /cloak "ELN HD/Dev"
+
 tf workfold /cloak "ELN HD/POC Code"
+
 tf workfold /cloak "ELN HD/Release"
+
 tf workfold /cloak "ELN HD/Security"
+
 tf workfold /cloak "ELN HD/Storyboarding"
+
 tf workfold /cloak "ELN HD/UserInterface"
+
 tf get "ELN HD" /recursive
+
 tf workfold /decloak "ResearchPortal"
+
 tf workfold /cloak "ResearchPortal/Dev"
+
 tf workfold /cloak "ResearchPortal/Release"
+
 tf get "ResearchPortal" /recursive
-```
+{{< /console-block >}}
 
 Note that the **ELN HD** folder contains a number of "prototype" folders that
 probably should have been moved under the Dev folder by now...but you get the

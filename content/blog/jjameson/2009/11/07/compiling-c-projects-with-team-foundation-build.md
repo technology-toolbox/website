@@ -2,10 +2,10 @@
 title: Compiling C++ Projects with Team Foundation Build
 date: 2009-11-07T08:24:00-07:00
 excerpt:
-  "As I mentioned in my previous post , this week I incorporated Password Minder
-  into my \"Toolbox\" Visual Studio solution that is scheduled to build daily
-  through Team Foundation Server (TFS). It's not that I really need daily builds
-  of Password Minder;..."
+  'As I mentioned in my previous post , this week I incorporated Password Minder
+  into my "Toolbox" Visual Studio solution that is scheduled to build daily
+  through Team Foundation Server (TFS). It''s not that I really need daily builds
+  of Password Minder;...'
 aliases:
   [
     "/blog/jjameson/archive/2009/11/06/compiling-c-projects-with-team-foundation-build.aspx",
@@ -59,8 +59,7 @@ told me exactly what I needed to do to fix the problem. Well, almost...
 
 Note that DAZZLER (a VM in the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) that is
-my dedicated build server) does not have the full installation of Visual Studio
-2008. Rather it only has the Team Foundation Build install. In keeping with best
+my dedicated build server) does not have the full installation of Visual Studio 2008. Rather it only has the Team Foundation Build install. In keeping with best
 practices, I try to keep the build server as "clean" as possible. That means no
 Visual Studio, no SharePoint, etc.
 
@@ -78,8 +77,8 @@ warning MSB3428: Could not load the Visual C++ component "VCProjectEngine.dll".
 To fix this, 1) install the Microsoft Windows SDK for Windows Server 2008 and
 .NET Framework 3.5, 2) install Microsoft Visual Studio 2008 or 3) add the
 location of the component to the system path if it is installed elsewhere.
-System error code:
-126.<br>c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets :
+System error code: 126.<br>
+c:\Windows\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets :
 warning MSB3425: Could not resolve VC project reference
 "..\NativeHelpers\NativeHelpers.vcproj".</samp>
 
@@ -95,37 +94,23 @@ That's when I discovered the following from the release notes for the SDK:
 > registered. If vcprojectengine.dll is not registered, VCBuild.exe will fail
 > with errors such as:
 >
-> On compile:
+> On compile: <samp>warning MSB3422: Failed to retrieve VC project information through the VC project engine object model. System error code: 127.</samp>
 >
-> {{< sample-block >}}
->
-> warning MSB3422: Failed to retrieve VC project information through the VC
-> project engine object model. System error code: 127.
->
-> {{< /sample-block >}}
->
-> On upgrade:
->
-> {{< sample-block >}}
->
-> Failed to upgrade project file 'foo.vcproj'. Please make sure the file exists
-> and is not write-protected.
->
-> {{< /sample-block >}}
+> On upgrade: <samp>Failed to upgrade project file 'foo.vcproj'. Please make sure the file exists and is not write-protected.</samp>
 >
 > To workaround this issue, vcprojectengine.dll must be manually registered.
 > From a Windows SDK command line window (as administrator in Vista:
 >
 > On an X86 machine, run:
 >
-> ```Console
+> ```Batch
 > cd %mssdk%\VC\bin
 > regsvr32 vcprojectengine.dll
 > ```
 >
 > On an X64 machine, run:
 >
-> ```Console
+> ```Batch
 > cd %mssdk%\VC\bin\X64
 > regsvr32 vcprojectengine.dll
 > ```

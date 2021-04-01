@@ -23,7 +23,7 @@ up-to-date with the latest patches.
 
 ### Reset WSUS for SysPrep Image.cmd
 
-```Console
+```Batch
 net stop wuauserv
 
 reg.exe delete HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate /v PingID /f

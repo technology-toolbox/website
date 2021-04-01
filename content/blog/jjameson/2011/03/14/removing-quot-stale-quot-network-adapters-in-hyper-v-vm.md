@@ -1,5 +1,5 @@
 ---
-title: "Removing \"Stale\" Network Adapters in Hyper-V VM"
+title: 'Removing "Stale" Network Adapters in Hyper-V VM'
 date: 2011-03-14T04:13:00-06:00
 excerpt:
   "Each time I create (or recreate) a virtual machine in Hyper-V using one of my
@@ -43,8 +43,9 @@ Here is the process that I use to cleanup the network adapters:
 
 1. Start an administrator command prompt and then run the following two commands:
 
-   ```Console
+   ```Batch
    set devmgr_show_nonpresent_devices=1
+
    start devmgmt.msc
    ```
 

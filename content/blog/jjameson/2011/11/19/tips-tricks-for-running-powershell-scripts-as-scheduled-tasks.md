@@ -162,7 +162,7 @@ This is a known issue:
 {{< reference title="How to get Notepad to honor Start-Transcript line breaks"
 linkHref="http://social.technet.microsoft.com/Forums/en-US/ITCG/thread/e4784b39-ed97-4c6c-bc82-372be94e8c01/" >}}
 
-Some people suggest either adding "``r`n`" to the end of every `Write-Host`
+Some people suggest either adding "`` `r`n ``" to the end of every `Write-Host`
 statement or avoiding `Write-Host` altogether and instead simply pipe a string
 to **Out-Default**. The latter option seems awkward, in my opinion, so let's use
 the former:
@@ -231,8 +231,9 @@ Then create a scheduled task which runs the command file.
 
 Here is the sample command file from my previous post (Rebuild Website.cmd):
 
-```Console
+```Batch
 PowerShell.exe -Command ".\'Rebuild Website.ps1'; Exit $LASTEXITCODE" > "Rebuild Website.log" 2>&1
+
 EXIT %ERRORLEVEL%
 ```
 
