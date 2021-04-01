@@ -117,15 +117,7 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server
 
 {{< include-html "table-1.html" >}}
 
-{{< table class="small table-striped"
-caption="Team Foundation Server Upgrade" >}}
-
-| Task | Comments |
-| --- | --- |
-| Set up Team Foundation Server. | The only option I selected for the application-tier was **Team Foundation Server**.<br><br>You do not need to select the option for **Extensions for SharePoint Products and Technologies** if SharePoint Server 2010 is installed on the same server as TFS. |
-| Final configuration of Microsoft Office SharePoint Server 2007. | In addition to configuring the enterprise application definition, I also had to add the service account used for Excel Services to the SharePoint content databases for the TFS Web application.<br><br>This is described in more detail in my next two blog posts. |
-
-{{< /table >}}
+{{< include-html "table-2.html" >}}
 
 ### Upgrading VSTS 2008 Clients for TFS 2010
 
