@@ -369,8 +369,7 @@ To fix the TaxonomyPicker.ascx file:
 
    {{< console-block >}}
 
-   notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server
-   Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
+   notepad "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\CONTROLTEMPLATES\TaxonomyPicker.ascx"
 
    {{< /console-block >}}
 1. In Notepad, in the assembly specified in the **Control** directive, replace
