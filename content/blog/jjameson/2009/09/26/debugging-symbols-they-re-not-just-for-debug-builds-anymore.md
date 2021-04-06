@@ -38,14 +38,14 @@ In the process of reviewing my old document, I came across the following:
 > symbols are included as part of the setup to facilitate debugging in other
 > environments such as DEV.
 >
-> {{< div-block "note important" >}}
+> {{< div-block-start "note important" >}}
 >
 > > **Important**
 > >
 > > Do not include Debug symbols in the Release configuration of the setup
 > > projects.
 >
-> {{< /div-block >}}
+> {{< div-block-end >}}
 
 {{< /div-block >}}
 

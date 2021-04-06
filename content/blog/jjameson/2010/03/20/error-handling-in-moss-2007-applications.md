@@ -1250,11 +1250,7 @@ stsadm -o fabrikam-enablelogging -url http://fabrikam
 > zone. In other words, running the following command will not remove the trace
 > listener configuration from the Web.config file for the **Internet** zone:
 >
-> {{< console-block >}}
->
-> stsadm -o fabrikam-disablelogging -url http://fabrikam
->
-> {{< /console-block >}}
+> {{< console-block >}}stsadm -o fabrikam-disablelogging -url http://fabrikam{{< /console-block >}}
 
 {{< /div-block >}}
 
