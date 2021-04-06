@@ -2,8 +2,8 @@
 title: Use protocol-relative URLs to avoid mixed mode content
 date: 2012-02-19T23:39:17-07:00
 excerpt:
-  "Here's a great tip I picked up from Phil Haack a few weeks ago for avoiding
-  those pesky warnings like \"Only secure content is displayed.\""
+  'Here''s a great tip I picked up from Phil Haack a few weeks ago for avoiding
+  those pesky warnings like "Only secure content is displayed."'
 aliases:
   [
     "/blog/jjameson/archive/2012/02/19/use-protocol-relative-urls-to-avoid-mixed-mode-content.aspx",
@@ -28,7 +28,7 @@ My initial fix for this issue was to change references like:
 
 ...to detect a secure connection (in which case, specify "https://" instead):
 
-```HTML
+```ASP.NET
 <script type="text/javascript" src="<%= Request.IsSecureConnection ? "https" : "http" %>://ajax.googleapis.com/.../jquery.min.js"></script>
 ```
 

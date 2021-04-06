@@ -100,7 +100,7 @@ Here's a comment from Karl Erickson on his blog post entitled
 The latest version of the markup in the user control that hosts our Silverlight
 application is shown below:
 
-```XML
+```ASP.NET
 <object data="data:application/x-silverlight-2," type="application/x-silverlight-2"
     width="380px" height="410px" onFocus="this.style.outline='none';">
     <param name="source" value="<%= serviceWheelPackageUrl %>" />
