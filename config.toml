@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
+googleAnalytics = "UA-25915894-1"
+
 [markup]
   [markup.highlight]
     style = "monokailight"
