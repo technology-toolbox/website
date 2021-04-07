@@ -73,6 +73,20 @@
     top: 0;
   }
 
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    /*
+      For wide devices, set background color on carousel control icons to avoid
+      issue where controls are difficult to see (depending on darkness of
+      carousel image)
+    */
+    background-color: #959595;
+    background-size: 75%;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
   .carousel-item {
     margin-bottom: 0;
   }
