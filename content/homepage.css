@@ -7,8 +7,6 @@
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  background-color: #1e4173cc;
-  bottom: 0;
   left: 0;
   right: 0;
   padding: 0.5rem 1rem 0 1rem;
@@ -22,13 +20,62 @@
   /* z-index: 10; */
 }
 
+/*
+  For small devices, align carousel controls with bottom of caption
+*/
 .carousel-control-next,
 .carousel-control-prev {
+  bottom: 0;
+}
+
+.carousel-caption {
+  background-color: #4f4f4f;
+  bottom: -200px;
+  height: 200px;
+}
+
+.carousel-caption p {
+  margin-right: 7rem;
+}
+
+.carousel-item {
+  margin-bottom: 200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 85%;
+}
+
+@media (min-width: 992px) {
   /*
-    HACK: Set "bottom" on the carousel controls as a workaround for the z-index
-    issue with links in the caption.
+    For wide devices, overlay the caption on the image (using a partially
+    transparent color)
   */
-  bottom: 25%;
+  .carousel-caption {
+    background-color: #1e4173cc;
+    bottom: 0;
+    height: auto;
+  }
+
+  .carousel-caption p {
+    margin-right: 9rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    /*
+      HACK: Set "bottom" on carousel controls as a workaround for z-index issue
+      with links in caption.
+    */
+    bottom: 25%;
+    /* For wide devices, extend carousel controls to top of image */
+    top: 0;
+  }
+
+  .carousel-item {
+    margin-bottom: 0;
+  }
 }
 
 .carousel-indicators {
