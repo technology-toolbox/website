@@ -5,7 +5,7 @@ theme = "techtoolbox-hugo"
 
 [markup]
   [markup.highlight]
-    style = "monokailight"
+    noClasses = false # Use class attributes for code syntax highlighting
 
   [markup.goldmark.renderer]
     unsafe= true
