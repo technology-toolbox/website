@@ -46,7 +46,6 @@
 
 @media (min-width: 576px) {
   .carousel-caption {
-    background-color: #4f4f4f;
     bottom: -12rem;
     height: 12rem;
   }
