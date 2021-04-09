@@ -44,14 +44,14 @@
   margin-left: 0.5rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 500px) {
   .carousel-caption {
-    bottom: -12rem;
-    height: 12rem;
+    bottom: -13rem;
+    height: 13rem;
   }
 
   .carousel-item {
-    margin-bottom: 12rem;
+    margin-bottom: 13rem;
   }
 }
 
