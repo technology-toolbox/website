@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
+disqusShortname = "technology-toolbox"
+
 [markup]
   [markup.highlight]
     noClasses = false # Use class attributes for code syntax highlighting
