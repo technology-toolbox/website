@@ -33,7 +33,7 @@ Working with your people, we assess your business needs and provide
 recommendations for an optimal SQL Server architecture, whether you are
 deploying SharePoint, Team Foundation Server, or a custom application.
 
-If you are looking to upgrade to SQL Server 2008 R2 or consolidate a number of
+If you are looking to upgrade to SQL Server 2019 or consolidate a number of
 SQL Server instances, we create a roadmap with a migration plan specific to your
 scenario.
 
