@@ -2,7 +2,7 @@
 layout: page-with-side-image
 title: "Sharepoint Architecture and Development"
 date: 2021-02-11T09:03:30-07:00
-imageDescription: "Large icon with SharePoint 2010 logo"
+imageDescription: "Large icon with SharePoint logo"
 imageUrl: "/services/img/icon-SharePoint-2010-347x346.jpg"
 ---
 
@@ -25,7 +25,7 @@ costs.
 
 Delivering business value in ever shorter timeframes requires a fundamental
 shift in your approach. Starting with a more powerful, unified infrastructure
-like SharePoint 2010 is an essential first step, but that alone is not enough.
+like SharePoint 2019 is an essential first step, but that alone is not enough.
 
 You have to switch the focus from writing large amounts of custom code to
 instead leveraging out-of-the-box capabilities in the product. In other words,
@@ -35,7 +35,7 @@ However, every business is different and there will always be some level of
 customization required, even if it is simply a matter of minimal branding to
 adhere to your company standards.
 
-We can help you plan, customize, and deploy SharePoint 2010 to address your
+We can help you plan, customize, and deploy SharePoint 2019 to address your
 specific needs, whether you are upgrading from a previous version or migrating
 from another platform.
 
@@ -55,9 +55,9 @@ SharePoint deployment. A key deliverable of this effort is a roadmap explaining
 how your SharePoint platform is expected to evolve over time to support
 additional workloads.
 
-For businesses who have already deployed Microsoft Office SharePoint Server
-2007, we can provide similar assistance to create a migration plan for upgrading
-to SharePoint 2010.
+For businesses who have already deployed SharePoint, we can provide similar
+assistance to create a migration plan for upgrading to SharePoint 2019 or
+migrating to Microsoft 365.
 
 ## SharePoint Development
 
