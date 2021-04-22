@@ -30,41 +30,44 @@ application lifecycle management dramatically improves project success rates and
 helps avoid unexpected costs due to schedule overruns, poor software quality,
 and lack of effective change management.
 
-## Team Foundation Server
+## Azure DevOps
 
-Team Foundation Server (TFS) is Microsoft's core platform for application
-lifecycle management. It provides fundamental services such as work item
-tracking, version control, and build automation. TFS includes dashboards and
-flexible reporting capabilities that provide visibility into the overall project
-health, while promoting greater transparency regarding potential problems.
+Previously known as Team Foundation Server (TFS), Azure DevOps Server is
+Microsoft's core platform for application lifecycle management. It provides
+fundamental services such as work item tracking, version control, and build
+automation. Azure DevOps Server includes dashboards and flexible reporting
+capabilities that provide visibility into the overall project health, while
+promoting greater transparency regarding potential problems.
 
-However, while making the decision to adopt TFS is a great first step, it does
+Previously known as Visual Studio Team Services (VSTS), Azure DevOps Services is
+the cloud-hosted "software as a service" fully managed by Microsoft.
+
+While making the decision to adopt Azure DevOps is a great first step, it does
 not immediately enable your organization to realize the full potential of
 application lifecycle management.
 
-Technology Toolbox provides a variety of offerings to help your plan, deploy,
-and optimize Team Foundation Server:
+Technology Toolbox provides a variety of offerings to help you plan, deploy, and
+optimize Azure DevOps:
 
 - Assessment
-- TFS Pilot
+- Azure DevOps Pilot
 - Workshops
 
 ## Assessment
 
 We recommend starting with an assessment of your current processes and tools in
-order to provide a roadmap for successfully migrating or upgrading to Team
-Foundation Server 2010. By first understanding the maturity of your software
-development organization, we can identify the "low hanging fruit" for improving
-the predictability and success of your software projects in the short term,
-while also providing recommendations for improving efficiency over the longer
-term.
+order to provide a roadmap for successfully migrating or upgrading to Azure
+DevOps. By first understanding the maturity of your software development
+organization, we can identify the "low hanging fruit" for improving the
+predictability and success of your software projects in the short term, while
+also providing recommendations for improving efficiency over the longer term.
 
-## Team Foundation Server Pilot
+## Azure DevOps Pilot
 
 Regardless of whether you are upgrading from a previous version of TFS or
-migrating from a different toolset, we recommend installing TFS 2010 in a lab
-environment to understand the various capabilities and gain valuable hands-on
-experience using real world scenarios.
+migrating from a different toolset, we recommend using an Azure DevOps "lab
+environment" -- either in the cloud or on-premises -- to understand the various
+capabilities and gain valuable hands-on experience using real world scenarios.
 
 For example, using a lab environment, we can show you how to quickly implement
 an automated daily build and deployment process -- or continuous integration, if
@@ -74,15 +77,15 @@ evaluating different branching strategies and other aspects of source control
 management.
 
 Once you are ready for a production deployment, we can help you migrate a real
-project in order to verify the solution and document the governance of your TFS
-deployment going forward.
+project in order to verify the solution and document the governance of your
+Azure DevOps instance going forward.
 
 ## Workshops
 
-If you already have TFS installed, Technology Toolbox can deliver a variety of
-workshops to increase your knowledge of specific ALM techniques. For example,
-your team may be looking for ways to work more effectively in parallel on
-multiple versions of your solution (in other words, creating new features and
+If you already have Azure DevOps configured, Technology Toolbox can deliver a
+variety of workshops to increase your knowledge of specific ALM techniques. For
+example, your team may be looking for ways to work more effectively in parallel
+on multiple versions of your solution (in other words, creating new features and
 enhancements for vNext while also implementing hotfixes for the current
 release). We provide focused two-day workshops that cover this scenario and many
 others.
