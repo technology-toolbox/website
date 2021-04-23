@@ -1,0 +1,49 @@
+<table class="table small table-striped">
+  <caption>
+    Table 9 - Initial data and log file sizes
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>Database</th>
+      <th>Logical Name</th>
+      <th>File Type</th>
+      <th>Filegroup</th>
+      <th>Initial Size (MB)</th>
+      <th>Autogrowth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WSS_Content_FabrikamExtranet</td>
+      <td>WSS_Content_FabrikamExtranet</td>
+      <td>Data</td>
+      <td>PRIMARY</td>
+      <td>10,000</td>
+      <td>By 500 MB, unrestricted growth</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>WSS_Content_FabrikamExtranet_Log</td>
+      <td>Log</td>
+      <td>Not Applicable</td>
+      <td>400</td>
+      <td>By 10 percent, restricted growth: 4,000 MB</td>
+    </tr>
+    <tr>
+      <td>OfficeWebAppsCache</td>
+      <td>OfficeWebAppsCache</td>
+      <td>Data</td>
+      <td>PRIMARY</td>
+      <td>10,000</td>
+      <td>By 500 MB, unrestricted growth</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>OfficeWebAppsCache_Log</td>
+      <td>Log</td>
+      <td>Not Applicable</td>
+      <td>400</td>
+      <td>By 10 percent, restricted growth: 4,000 MB</td>
+    </tr>
+  </tbody>
+</table>
