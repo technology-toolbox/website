@@ -1448,6 +1448,7 @@ To create the Web application using SharePoint Central Administration:
    section, click **Manage web applications**.
 1. On the **Web Applications** tab, in the ribbon, click **New**.
 1. On the **Create New Web Application**page:
+
    1. In the **Authentication** section, click **Claims Based Authentication**.
    1. In the **IIS Web Site**section:
       1. Click **Create a new IIS web site**.
@@ -1457,13 +1458,20 @@ To create the Web application using SharePoint Central Administration:
    1. In the **Security Configuration** section, under **Allow Anonymous**,
       click **Yes**.
    1. In the **Claims Authentication Types**section:
+
+      <div class="overflow-auto">
+
       1. Ensure the **Enable Windows Authentication** checkbox is selected and
          in the **Integrated Windows authentication** drop-down menu, ensure
          **NTLM** is selected.
+
       1. Select the **Enable Forms Based Authentication (FBA)** checkbox, in the
          **ASP.NET Membership provider name** box, type
          **FabrikamSqlMembershipProvider**, and in the **ASP.NET Role manager
          name** box, type **FabrikamSqlRoleProvider**.
+
+      </div>
+
    1. In the **Application Pool**section:
       1. Click **Create a new application pool**.
       1. Under **Select a security account for this application pool**, click
@@ -1475,6 +1483,7 @@ To create the Web application using SharePoint Central Administration:
    1. In the **Service Application Connections** section, ensure **default** is
       selected in the drop-down menu.
    1. Click **OK** to create the new Web application.
+
 1. Wait for the Web application to be created and then click **OK**.
 
 To create the initial site collections using SharePoint Central Administration:
@@ -1784,21 +1793,34 @@ To add the service accounts to the membership/role database:
 1. Right-click the login corresponding to the SharePoint farm service account
    (**EXTRANET\svc-sharepoint**) and then click **Properties**.
 1. In the login properties dialog box:
+
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox for the membership/role database (**FabrikamDemo**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
+
+      <div class="overflow-auto">
+
       - **aspnet_Membership_BasicAccess**
       - **aspnet_Membership_ReportingAccess**
       - **aspnet_Roles_BasicAccess**
       - **aspnet_Roles_ReportingAccess**
+
+      </div>
+
    1. Click **OK**.
+
 1. Repeat the steps in this section to add the service account for the Fabrikam
    Extranet Web application (**EXTRANET\svc-web-fabrikam**) to the following
    roles:
+
+   <div class="overflow-auto">
+
    - **aspnet_Membership_FullAccess**
    - **aspnet_Roles_BasicAccess**
    - **aspnet_Roles_ReportingAccess**
+
+   </div>
 
 {{< div-block "note important" >}}
 
@@ -2771,6 +2793,8 @@ To create a site collection for a Fabrikam partner using the PowerShell script:
 
 To create a site collection for a Fabrikam partner using Central Administration:
 
+<div class="overflow-auto">
+
 1. On the Central Administration home page, in the **Application Management**
    section, click **Create site collections**.
 1. On the **Create Site Collection** page, in the **Web Application** section,
@@ -2803,9 +2827,13 @@ To create a site collection for a Fabrikam partner using Central Administration:
    1. **Fabrikam Demo - Publishing Layouts**
    1. **Fabrikam Demo - Web Templates**
 
+</div>
+
 ### Apply the “Fabrikam Partner Site” template to the top-level site {#Apply_custom_site_template}
 
 To apply the custom site template to the top-level site in the site collection:
+
+<div class="overflow-auto">
 
 1. Browse to the new site collection (e.g.
    [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
@@ -2817,6 +2845,8 @@ To apply the custom site template to the top-level site in the site collection:
    1. Click **OK**.
 1. On the **Set Up Groups for this Site** page, click **OK** to create the
    default groups.
+
+</div>
 
 ### Update the partner site home page
 
@@ -2833,6 +2863,8 @@ Edit the site home page to:
 
 To create a team collaboration site for a partner site:
 
+<div class="overflow-auto">
+
 1. Browse to the partner site collection (e.g.
    [http://extranet.fabrikam.com/sites/Contoso-Shipping](http://extranet.fabrikam.com/sites/Contoso-Shipping)).
 1. On the home page of the partner site, click **Site Actions**, and then click
@@ -2848,6 +2880,8 @@ To create a team collaboration site for a partner site:
    1. Click **Create**.
    1. On the **Set Up Groups for this Site** page, in the **Visitors to this
       Site** section, click **Create a new group** and then click **OK**.
+
+</div>
 
 ### Update the team site home page
 
