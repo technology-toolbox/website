@@ -2866,7 +2866,15 @@ installing the Fabrikam Extranet solution. The various parameters and
 configuration settings are listed in the following tables.
 
 <a name="Table_2_-_Service_accounts"></a>
-{{< include-html "table-2.html" >}}
+
+<div class="d-sm-none">
+  <a href="table-2-popout" target="_blank">Table 2 - Service accounts</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "table-2.html" >}}
+</div>
 
 <a name="Table_3_-_Installation_file_locations"></a>
 {{< include-html "table-3.html" >}}
@@ -2886,16 +2894,48 @@ configuration settings are listed in the following tables.
 {{< include-html "table-5.html" >}}
 
 <a name="Table_6_-_Outgoing_e-mail_settings"></a>
-{{< include-html "table-6.html" >}}
+
+<div class="d-md-none">
+  <a href="table-6-popout" target="_blank">Table 6 - Outgoing e-mail settings</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-md-block">
+   {{< include-html "table-6.html" >}}
+</div>
 
 <a name="Table_7_-_Web_applications"></a>
-{{< include-html "table-7.html" >}}
+
+<div class="d-lg-none">
+  <a href="table-7-popout" target="_blank">Table 7 - Web applications</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-lg-block">
+   {{< include-html "table-7.html" >}}
+</div>
 
 <a name="Table_8_-_Site_collections"></a>
-{{< include-html "table-8.html" >}}
+
+<div class="d-lg-none">
+  <a href="table-8-popout" target="_blank">Table 8 - Site collections</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-lg-block">
+   {{< include-html "table-8.html" >}}
+</div>
 
 <a name="Table_9_-_Initial_data_and_log_file_sizes"></a>
-{{< include-html "table-9.html" >}}
+
+<div class="d-lg-none">
+  <a href="table-9-popout" target="_blank">Table 9 - Initial data and log file sizes</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-lg-block">
+   {{< include-html "table-9.html" >}}
+</div>
 
 <a name="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement"></a>
 
