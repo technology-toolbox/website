@@ -1,0 +1,46 @@
+<table class="table small table-striped">
+  <caption>
+    Table 5 - Web analytics and health data collection
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>Setting</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable usage data collection</td>
+      <td>TEST and PROD: Yes (checked)<br /><br />DEV: No (not checked)*</td>
+    </tr>
+    <tr>
+      <td>Log file location</td>
+      <td>
+        TEST and PROD:<br />L:\Program Files\Microsoft Office
+        Servers\14.0\Logs<br /><br />DEV:<br />C:\Program Files\Common
+        Files\Microsoft Shared\Web Server Extensions\14\LOGS\
+      </td>
+    </tr>
+    <tr>
+      <td>Maximum log file size</td>
+      <td>TEST and PROD: 5<br /><br />DEV: 1</td>
+    </tr>
+    <tr>
+      <td>Enable health data collection</td>
+      <td>TEST and PROD: Yes (checked)<br /><br />DEV: No (not checked)*</td>
+    </tr>
+    <tr>
+      <td>Database Name</td>
+      <td>WSS_Logging</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  * - In development environments, the WSS<em
+    >Logging database can quickly consume all available space on a small VHD.
+    Therefore enabling usage data collection and health data collection is
+    _not</em
+  >
+  recommended in these environments.
+</p>

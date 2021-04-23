@@ -1,0 +1,39 @@
+<table class="table small table-striped">
+  <caption>
+    Table 7 - Web applications
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th rowspan="2">Application</th>
+      <th rowspan="2">Port</th>
+      <th rowspan="2">Host Header</th>
+      <th rowspan="2">Allow Anonymous</th>
+      <th colspan="2">Application Pool</th>
+      <th rowspan="2">Web Application Database Name</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Service Account</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SharePoint Central Administration v4</td>
+      <td>22812</td>
+      <td>(blank)</td>
+      <td>No</td>
+      <td></td>
+      <td>EXTRANET\svc-sharepoint</td>
+      <td>SharePoint_AdminContent_{GUID}</td>
+    </tr>
+    <tr>
+      <td>Fabrikam Extranet</td>
+      <td>80</td>
+      <td>extranet.fabrikam.com</td>
+      <td>Yes</td>
+      <td>SharePoint – extranet.fabrikam.com80</td>
+      <td>EXTRANET\svc-web-fabrikam</td>
+      <td>WSS_Content_FabrikamExtranet</td>
+    </tr>
+  </tbody>
+</table>

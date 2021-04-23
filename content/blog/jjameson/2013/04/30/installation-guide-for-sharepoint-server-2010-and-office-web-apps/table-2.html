@@ -1,0 +1,115 @@
+<table class="table small table-striped">
+  <caption>
+    Table 2 - Service accounts
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>User logon name</th>
+      <th>Full name</th>
+      <th>SharePoint managed account</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EXTRANET\svc-sql</td>
+      <td>Service account for SQL Server</td>
+      <td>No</td>
+      <td>Used to run SQL Server and cluster services</td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-sql-agent</td>
+      <td>Service account for SQL Server Agent</td>
+      <td>No</td>
+      <td>Used to run SQL Server Agent</td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-sharepoint</td>
+      <td>Service account for SharePoint farm</td>
+      <td>Yes</td>
+      <td>
+        The server farm account is used to create and access the SharePoint
+        configuration database. It also acts as the application pool identity
+        account for the SharePoint Central Administration application pool, and
+        it is the account under which the Windows SharePoint Services Timer
+        service runs. The SharePoint Products Configuration Wizard adds this
+        account to the SQL Server <strong>dbcreator</strong> and
+        <strong>securityadmin</strong> server roles.<br /><br />The farm service
+        account must be a domain user account, but it does not need to be a
+        member of any specific security group on the servers in the farm. It is
+        recommended to follow the principle of least privilege and specify a
+        user account that is not a member of the Administrators group on any of
+        the servers in the farm.
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-search</td>
+      <td>Service account for search services</td>
+      <td>Yes</td>
+      <td>
+        Used for running search services (namely SharePoint Foundation 2010
+        Search and SharePoint Server 2010 Search)
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-index</td>
+      <td>Service account for indexing content</td>
+      <td>Yes</td>
+      <td>
+        Provides read-only access to any content that needs to be indexed (and
+        thus included in search results)
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-spserviceapp</td>
+      <td>Service account for SharePoint service applications</td>
+      <td>Yes</td>
+      <td>
+        Used as the application pool identity for SharePoint service
+        applications
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-web-fabrikam</td>
+      <td>Service account for Fabrikam Web application</td>
+      <td>Yes</td>
+      <td>
+        Used as the application pool identity for the new Fabrikam Extranet
+        website
+      </td>
+    </tr>
+    <tr>
+      <td>FABRIKAM\svc-web-fabrikam</td>
+      <td>Service account for Fabrikam Web application</td>
+      <td>No</td>
+      <td>
+        Proxy account used to enable internal Fabrikam users and groups to be
+        selected using the People Picker in the SharePoint extranet farm. The
+        username and password must not contain commas.
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-sp-psr</td>
+      <td>Service account for SharePoint &ldquo;Portal Super Reader&rdquo;</td>
+      <td>No</td>
+      <td>
+        Object cache user account with Full Read access to Web applications (<a
+          href="http://technet.microsoft.com/en-us/library/ff758656.aspx"
+          >http://technet.microsoft.com/en-us/library/ff758656.aspx</a
+        >)
+      </td>
+    </tr>
+    <tr>
+      <td>EXTRANET\svc-sp-psu</td>
+      <td>Service account for SharePoint &ldquo;Portal Super User&rdquo;</td>
+      <td>No</td>
+      <td>
+        Object cache user account providing Full Control access to Web
+        applications (<a
+          href="http://technet.microsoft.com/en-us/library/ff758656.aspx"
+          >http://technet.microsoft.com/en-us/library/ff758656.aspx</a
+        >)
+      </td>
+    </tr>
+  </tbody>
+</table>
