@@ -90,7 +90,7 @@ as the Development team when configuring the Development integration environment
 To help you locate and interpret information easily, this document uses the
 following style conventions and terminology.
 
-{{< include-html "table-1.html" >}}
+{{< include-html "resources/table-1.html" >}}
 
 # Overview of the installation process
 
@@ -2903,88 +2903,88 @@ configuration settings are listed in the following tables.
 <a name="Table_2_-_Service_accounts"></a>
 
 <div class="d-sm-none">
-  <a href="table-2-popout" target="_blank">Table 2 - Service accounts</a>
+  <a href="../resources/table-2-popout" target="_blank">Table 2 - Service accounts</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
-   {{< include-html "table-2.html" >}}
+   {{< include-html "resources/table-2.html" >}}
 </div>
 
 <a name="Table_3_-_Installation_file_locations"></a>
-{{< include-html "table-3.html" >}}
+{{< include-html "resources/table-3.html" >}}
 
 <a name="Table_4_-_Diagnostic_logging"></a>
 
 <div class="d-sm-none">
-  <a href="table-4-popout" target="_blank">Table 4 - Diagnostic logging</a>
+  <a href="../resources/table-4-popout" target="_blank">Table 4 - Diagnostic logging</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
-   {{< include-html "table-4.html" >}}
+   {{< include-html "resources/table-4.html" >}}
 </div>
 
 <a name="Table_5_-_Web_analytics_and_health_data_collection"></a>
-{{< include-html "table-5.html" >}}
+{{< include-html "resources/table-5.html" >}}
 
 <a name="Table_6_-_Outgoing_e-mail_settings"></a>
 
 <div class="d-md-none">
-  <a href="table-6-popout" target="_blank">Table 6 - Outgoing e-mail settings</a>
+  <a href="../resources/table-6-popout" target="_blank">Table 6 - Outgoing e-mail settings</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-md-block">
-   {{< include-html "table-6.html" >}}
+   {{< include-html "resources/table-6.html" >}}
 </div>
 
 <a name="Table_7_-_Web_applications"></a>
 
 <div class="d-lg-none">
-  <a href="table-7-popout" target="_blank">Table 7 - Web applications</a>
+  <a href="../resources/table-7-popout" target="_blank">Table 7 - Web applications</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
-   {{< include-html "table-7.html" >}}
+   {{< include-html "resources/table-7.html" >}}
 </div>
 
 <a name="Table_8_-_Site_collections"></a>
 
 <div class="d-lg-none">
-  <a href="table-8-popout" target="_blank">Table 8 - Site collections</a>
+  <a href="../resources/table-8-popout" target="_blank">Table 8 - Site collections</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
-   {{< include-html "table-8.html" >}}
+   {{< include-html "resources/table-8.html" >}}
 </div>
 
 <a name="Table_9_-_Initial_data_and_log_file_sizes"></a>
 
 <div class="d-lg-none">
-  <a href="table-9-popout" target="_blank">Table 9 - Initial data and log file sizes</a>
+  <a href="../resources/table-9-popout" target="_blank">Table 9 - Initial data and log file sizes</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
-   {{< include-html "table-9.html" >}}
+   {{< include-html "resources/table-9.html" >}}
 </div>
 
 <a name="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement"></a>
 
 <div class="d-sm-none">
-  <a href="table-10-popout" target="_blank">Table 10 - SharePoint groups and permissions used for entitlement</a>
+  <a href="../resources/table-10-popout" target="_blank">Table 10 - SharePoint groups and permissions used for entitlement</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
-   {{< include-html "table-10.html" >}}
+   {{< include-html "resources/table-10.html" >}}
 </div>
 
 <a name="Table_11_-_Search_schedules"></a>
-{{< include-html "table-11.html" >}}
+{{< include-html "resources/table-11.html" >}}
 
 {{< div-block-end >}}
 
