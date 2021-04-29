@@ -86,7 +86,7 @@ Application event log:
 
    1. Specify the following expression:
 
-      <table class="table table-striped"><thead class="table-primary"><tr><th>Parameter Name</th><th>Operator</th><th>Value</th></tr></thead><tbody><tr><td>Event Level</td><td>Equals</td><td>Error</td></tr></tbody></table>
+      {{< include-html "resources/table-1.html" >}}
 
    1. Click **Next**.
 

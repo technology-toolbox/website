@@ -1,0 +1,44 @@
+<table class="table small table-striped">
+  <caption>
+    Table 5 - SharePoint Web Applications
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>Name</th>
+      <th>Port</th>
+      <th>Host Header</th>
+      <th>Allow Anonymous</th>
+      <th>URL</th>
+      <th>App Pool Service Account</th>
+      <th>Database Name(s)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SharePoint Central Administration v4</td>
+      <td>22812</td>
+      <td>(none)</td>
+      <td>No</td>
+      <td>http://cyclops:22812/</td>
+      <td>TECHTOOLBOX\svc-sharepoint</td>
+      <td>SharePoint_AdminContent_{GUID}</td>
+    </tr>
+    <tr>
+      <td>SharePoint - 80</td>
+      <td>80</td>
+      <td>(none)</td>
+      <td>No</td>
+      <td>http://cyclops/</td>
+      <td>TECHTOOLBOX\svc-web-tfs</td>
+      <td>
+        <ul>
+          <li>WSS_Content</li>
+          <li>
+            WSS_Content_TFS (attached to Web application to restore existing TFS
+            project sites)
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>

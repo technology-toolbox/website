@@ -104,24 +104,4 @@ the original MSF Agile template and don't take more than a few minutes to
 complete. However, I still like to include them to serve as a "checklist" on new
 projects.
 
-{{< table class="small table-striped"
-caption="Initial Tasks for a Scrum Project" >}}
-
-| Title | Description |
-| --- | --- |
-| Setup: Configure permissions for TFS project | Add team members to one of the four security groups: Builders, Contributors, Project Administrators, or Readers. To configure security, in the **Team Explorer** window, right-click the team project, point to **Team Project Settings** and then click **Group Membership**. |
-| Setup: Configure permissions on team project portal | Add team members to one of the five permission levels: Full Control, Design, Contribute, Read, or View Only. To configure security on the SharePoint team site, open the project portal, click **Site Actions**, and then click **Site Permissions**. |
-| Setup: Create project structure | Create the project structure that captures what areas the development team will be working in. To set project structure, in the **Team Explorer** window, right-click the team project, point to **Team Project Settings** and then click **Areas and Iterations**. |
-| Setup: Migrate work items | If you are bringing an existing project into VSTS, migrate work items such as bugs and tasks from the previous work item repository. You should complete migration of work items before team members are granted access to the team project. |
-| Setup: Migrate source code | If you are bringing an existing project into VSTS, migrate the source code from the previous source code repository. You should complete migration of source code before team members are granted access to the team project. |
-| Setup: Configure check-in policies | Setup the business rules or policies that govern source code check-ins. For more information, see **Check-in Policies and Notes** in the Visual Studio help. |
-| Setup: Create initial source tree and Visual Studio solution | Create the initial source tree, including the Main branch and additional Dev branches (as necessary). |
-| Setup: Add custom dictionary to Visual Studio solution | For more information on this task, refer to the following blog post:<br><br>**CA1704 Code Analysis Warning and Using Custom Dictionaries in Visual Studio**<br>[https://www.technologytoolbox.com/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio](/blog/jjameson/2009/04/02/ca1704-code-analysis-warning-and-using-custom-dictionaries-in-visual-studio) |
-| Setup: Generate strong name key and configure assembly signing | Use the strong name utility (sn.exe) to create a new strong name key and configure all projects in the solution to sign their respective assemblies using this key. |
-| Setup: Add "SharedAssemblyInfo" and "AssemblyVersionInfo" files to Visual Studio solution | For more information on this task, refer to the following blog post:<br><br>**Shared Assembly Info in Visual Studio Projects**<br>[https://www.technologytoolbox.com/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects](/blog/jjameson/2009/04/03/shared-assembly-info-in-visual-studio-projects) |
-| Setup: Configure automated build | Configure an automated build to run on a periodic basis (typically daily). For more information, see **Administering Team Foundation Build** in the Visual Studio help. |
-| Setup: Send email to users with TFS project details | Send an e-mail to team members that provides information about which Team Foundation Server they should connect to, and which team project they should use so they can get started working on the team project. |
-| Brainstorm and prioritize Product Backlog | The product backlog is a high-level list that is maintained throughout the entire project. It aggregates backlog items: broad descriptions of all potential features, prioritized as an absolute ordering by business value. It is therefore the "What" that will be built, sorted by importance. [[http://en.wikipedia.org/wiki/Scrum\_(development)](http://en.wikipedia.org/wiki/Scrum_%28development%29)] |
-| Define the Sprint Backlog (v1.0\Sprint 1) | In the "Sprint Planning Meeting" with the entire team, select what work is to be done in the sprint and prepare the Sprint Backlog that details the time it will take to do the work. |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}

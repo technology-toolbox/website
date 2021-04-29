@@ -71,24 +71,4 @@ In case you are wondering how I configured the gated check-in build definition,
 here are the settings I used. If a setting is not listed in the following table,
 it means the default is used.
 
-{{< table class="small table-striped"
-caption="Build Definition: \"Gated Check-in - Main\"" >}}
-
-| Section | Property | Value |
-| --- | --- | --- |
-| General | Build definition name | Gated Check-in - Main |
-| Trigger | Gated Check-in - accept check-ins only if the submitted changes merge and build successfully | (selected) |
-| Workspace | Source Control Folder<br>Build Agent Folder | $/foobar2010/Main<br>$(SourceDir) |
-| Build Defaults | This build copies output files to a drop folder | (not selected) |
-| Process | Build process template: | DefaultTemplate.xaml |
-|  | Build process parameters: |  |
-|  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul> | <br><ul><li>$/foobar2010/Main/Source/TechnologyToolbox.Foobar.sln</li><li>Release - Any CPU</li></ul> |
-|  | Clean Workspace | False |
-|  | Perform Code Analysis | Never |
-|  | Source And Symbol Server Settings<ul><li>Index Sources</li></ul> | <br>False |
-|  | Agent Settings<ul><li>Maximum Agent Execution Time</li></ul> | <br>00:15:00 |
-|  | Copy Outputs to Drop Folder | False |
-|  | Create Work Item on Failure | False |
-|  | Label Sources | False |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}

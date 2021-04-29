@@ -27,17 +27,7 @@ it.]
 
 Here's a quick summary of my initial analysis:
 
-{{< table class="small table-striped"
-caption="Table 1: MSDN Blog Usage Analysis" >}}
-
-| Metric  | Views   | AggViews | Comments | Combined Views |
-| ------- | ------- | -------- | -------- | -------------- |
-| Total   | 205,142 | 139,377  | 209      | 344,519        |
-| Maximum | 12,240  | 2,855    | 13       | 14,445         |
-| Minimum | 196     | 306      | 0        | 678            |
-| Average | 1,359   | 923      | 1.4      | 2,282          |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 Note that **Combined Views** is something I defined and is simply the sum of
 **Views** and **AggViews**.
