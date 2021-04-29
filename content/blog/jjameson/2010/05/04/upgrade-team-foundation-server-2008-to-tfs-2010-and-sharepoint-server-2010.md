@@ -326,7 +326,7 @@ detail in the following blog post:
 linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"
 linkText="https://www.technologytoolbox.com/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" >}}
 
-{{< deleted-block >}}
+{{< deleted-block "overflow-auto" >}}
 
 ### Fix assembly name in /\_controltemplates/TaxonomyPicker.ascx
 
