@@ -1,1 +1,4 @@
-<del>{{- .Inner | markdownify -}}</del>
+{{ $class := .Get "class" | default (.Get 0) }}
+<div {{ with $class }}class="{{.}}"{{ end }}>
+  <del>{{- .Inner | markdownify -}}</del>
+</div>
