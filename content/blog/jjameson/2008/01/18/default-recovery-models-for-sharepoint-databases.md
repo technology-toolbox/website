@@ -54,7 +54,7 @@ From our freshly rebuilt DEV SharePoint environment, here are the databases and
 the various default recovery models:
 
 <div class="d-sm-none">
-  <a href="resources/table-1-popout" target="_blank">Table 1 - Default recovery models</a>
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Default recovery models</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
