@@ -26,57 +26,12 @@ master page that could be used for:
 
 - Site pages (e.g. /Library/default.aspx)
 - System pages (e.g. /Library/Brochures/Forms/AllItems.aspx)
-- Application pages (e.g. /Library/_layouts/viewlsts.aspx)
+- Application pages (e.g. /Library/\_layouts/viewlsts.aspx)
 
 Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:
 
-{{< table class="small table-striped"
-caption="MOSS 2007 Master Page Comparison" >}}
-
-| Placeholder | application.master | default.master |
-| --- | --- | --- |
-| PlaceHolderPageTitle | X | X |
-| PlaceHolderAdditionalPageHead | X | X |
-| PlaceHolderGlobalNavigation | X | X |
-| PlaceHolderGlobalNavigationSiteMap | X | X |
-| PlaceHolderSiteName | X | X |
-| PlaceHolderSearchArea | X | X |
-| PlaceHolderTopNavBar | X | X |
-| PlaceHolderHorizontalNav |  | X |
-| WSSDesignConsole | X | X |
-| SPNavigation | X | X |
-| PlaceHolderPageImage | X | X |
-| PlaceHolderTitleLeftBorder | X | X |
-| PlaceHolderTitleAreaClass | X | X\* |
-| PlaceHolderTitleBreadcrumb | X | X |
-| PlaceHolderPageTitleInTitleArea | X | X |
-| PlaceHolderMiniConsole | X | X |
-| PlaceHolderTitleRightMargin | X | X |
-| PlaceHolderTitleAreaSeparator | X | X |
-| PlaceHolderLeftNavBarDataSource | X | X |
-| PlaceHolderCalendarNavigator | X | X |
-| PlaceHolderLeftNavBarTop | X | X |
-| PlaceHolderLeftNavBar | X | X |
-| PlaceHolderLeftActions | X | X |
-| PlaceHolderNavSpacer | X | X |
-| PlaceHolderLeftNavBarBorder | X | X |
-| PlaceHolderBodyLeftBorder | X | X |
-| MSO_ContentDiv\*\* |  | X |
-| PlaceHolderBodyAreaClass | X | X\* |
-| PlaceHolderPageDescriptionRowAttr | X |  |
-| PlaceHolderPageDescription | X | X |
-| PlaceHolderPageDescriptionRowAttr2 | X |  |
-| PlaceHolderMain | X | X |
-| PlaceHolderBodyRightMargin | X | X |
-| PlaceHolderFormDigest | X | X |
-| PlaceHolderUtilityContent | X | X |
-
-{{< /table >}}
-
-\* - The placeholder is tacked onto the end of the page
-
-\*\* - `<PlaceHolder>` element (not `<asp:ContentPlaceHolder>`)
+{{< include-html "resources/table-1.html" >}}
 
 I found the differences between the two master pages very interesting, as well
 as the fact that a couple of the placeholders are simply appended to the end of

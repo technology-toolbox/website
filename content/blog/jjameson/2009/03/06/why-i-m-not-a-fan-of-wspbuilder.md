@@ -84,15 +84,7 @@ to minimize the number of WSPs that need to be deployed (specifically four).
 
 To summarize:
 
-{{< table class="small table-striped"
-caption="Comparison of Visual Studio Solution Build Times" >}}
-
-| Visual Studio Solution | Number of Projects | Lines of Code | Number of WSPs | Incremental Build Time |
-| --- | --- | --- | --- | --- |
-| Solution1 | 30 | 23,110 | 4 | 00:01:52 |
-| Solution2 | 52 | 38,905 | 17 | 00:00:28 |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 From the data in this table, we can clearly see that something is amiss. The
 smaller solution (i.e. with 40% less code and 1/4 as many WSPs) takes almost

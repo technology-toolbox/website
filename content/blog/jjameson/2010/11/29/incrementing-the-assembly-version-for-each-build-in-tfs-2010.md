@@ -278,15 +278,7 @@ AssemblyVersionInfo.txt file. To do this, add a new **InvokeProcess** activity
 at the beginning of the **Update Build Number for Triggered Builds** activity in
 the **Update Build Number** sequence, and set the properties as follows:
 
-{{< table class="small table-striped" >}}
-
-| Property    | Value                                                                       |
-| ----------- | --------------------------------------------------------------------------- |
-| Arguments   | "/C type """ + SourcesDirectory + "\\\\Source\\\\AssemblyVersionInfo.txt""" |
-| DisplayName | InvokeProcess to read AssemblyVersion from file                             |
-| FileName    | "cmd.exe"                                                                   |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 All I'm doing here is using a little command-prompt "trickery" to read the
 contents of a file (using the
@@ -329,14 +321,7 @@ Just below the InvokeProcess activity added earlier (inside the **Update Build
 Number for Triggered Builds** activity), add a new **MSBuild** activity, and set
 the properties as follows:
 
-{{< table class="small table-striped" >}}
-
-| Property    | Value                                                            |
-| ----------- | ---------------------------------------------------------------- |
-| DisplayName | Increment AssemblyVersion for next build                         |
-| Project     | SourcesDirectory + "\\\\Source\\\\IncrementAssemblyVersion.proj" |
-
-{{< /table >}}
+{{< include-html "resources/table-2.html" >}}
 
 Next, create the actual MSBuild file to increment the assembly version
 (IncrementAssemblyVersion.proj):
@@ -510,19 +495,4 @@ In case you are wondering how I configure build definitions, here are the
 settings for the "daily build" as an example. If a setting is not listed in the
 following table, it means the default is used.
 
-{{< table class="small table-striped"
-caption="Build Definition: \"Automated Build - Main\"" >}}
-
-| Section          | Property                                                                                                                                                                    | Value                                                                                                  |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| General          | Build definition name                                                                                                                                                       | Automated Build - Main                                                                                 |
-| Trigger          | Schedule - build every week on the following days<ul><li>Monday</li><li>Tuesday</li><li>Wednesday</li><li>Thursday</li><li>Friday</li><li>Saturday</li><li>Sunday</li></ul> | (selected)                                                                                             |
-|                  | Queue the build on the build controller at:                                                                                                                                 | 4:45 AM                                                                                                |
-| Workspace        | Source Control Folder<br>Build Agent Folder                                                                                                                                 | $/foobar2010/Main<br>$(SourceDir)                                                                      |
-| Build Defaults   | Copy build output to the following drop folder (UNC path, such as \\\\server\share):                                                                                        | \\\\dazzler\Builds\foobar2010                                                                          |
-| Process          | Build process template:                                                                                                                                                     | CustomTemplate.xaml                                                                                    |
-|                  | Build process parameters:                                                                                                                                                   |                                                                                                        |
-|                  | Items to Build<ul><li>Solutions/Projects</li><li>Configurations</li></ul>                                                                                                   | <br><ul><li>$/foobar2010/Main/Source/foobar.sln</li><li>Debug - Any CPU<br>Release - Any CPU</li></ul> |
-| Retention Policy | Triggered and Manual<ul><li>Succeeded<ul><li>Retention Policy</li></ul></li></ul>                                                                                           | <br><br>Keep All                                                                                       |
-
-{{< /table >}}
+{{< include-html "resources/table-3.html" >}}

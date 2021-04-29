@@ -1,0 +1,239 @@
+<table class="table small table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>Column Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Additional Information</th>
+      <th>Default</th>
+      <th>Add to Default View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Category</td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>Bug</li>
+          <li>Quality of Service Requirement</li>
+          <li>Risk</li>
+          <li>Scenario</li>
+          <li>Task</li>
+        </ul>
+      </td>
+      <td>Bug</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Area</td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>Project</li>
+          <li>Project\Area1</li>
+          <li>Project\Area2</li>
+          <li>Project\Area3</li>
+        </ul>
+      </td>
+      <td></td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Iteration</td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>v1.0</li>
+          <li>v1.0\M0</li>
+          <li>v1.0\M1</li>
+          <li>v1.0\M2</li>
+          <li>v1.0\RC1</li>
+          <li>v1.0\RC2</li>
+          <li>v1.0\RTM</li>
+          <li>v1.1</li>
+          <li>v2.0</li>
+          <li>v2.0\M0</li>
+          <li>v2.0\M1</li>
+          <li>v2.0\M2</li>
+          <li>v2.0\RC1</li>
+          <li>v2.0\RC2</li>
+          <li>v2.0\RTM</li>
+          <li>vNext</li>
+        </ul>
+      </td>
+      <td>v1.0 <sup>*</sup></td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Triage</td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>1 - Needs Review</li>
+          <li>2 - Investigate</li>
+          <li>3 - Reviewed</li>
+          <li>4 - Recommend Approve</li>
+          <li>5 - Recommend Reject</li>
+          <li>6 - Approved</li>
+          <li>7 - Not Approved</li>
+        </ul>
+      </td>
+      <td>1 - Needs Review</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Priority <sup>**</sup></td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>1 - High</li>
+          <li>2 - Normal</li>
+          <li>3 - Low</li>
+        </ul>
+      </td>
+      <td>2 - Normal</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Severity</td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>1 - Critical</li>
+          <li>2 - Important</li>
+          <li>3 - Nuisance</li>
+          <li>4 - Useful</li>
+        </ul>
+      </td>
+      <td>4 - Useful</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Status <sup>**</sup></td>
+      <td></td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>Active</li>
+          <li>Resolved</li>
+          <li>Closed</li>
+        </ul>
+      </td>
+      <td>Active</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td></td>
+      <td>Multiple lines of text</td>
+      <td>Yes</td>
+      <td>Append Changes to Existing Text: Yes</td>
+      <td></td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Exit Criteria</td>
+      <td>
+        Indicates if the work item is a key deliverable for the iteration or
+        milestone. If the field is set to Yes, the work item displays in the
+        project summary view.
+      </td>
+      <td>Yes/No (check box)</td>
+      <td>No</td>
+      <td></td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Blocked</td>
+      <td>
+        Indicates if the work item is blocked in some manner. If the field is
+        set to Yes, the work item displays on the project summary view.
+      </td>
+      <td>Yes/No (check box)</td>
+      <td>No</td>
+      <td></td>
+      <td></td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>KPI</td>
+      <td>
+        Key Performance Indicator representing the status of a key deliverable
+        or milestone.
+      </td>
+      <td>Choice</td>
+      <td>Yes</td>
+      <td>
+        Choices:
+        <ul>
+          <li>Green</li>
+          <li>Yellow</li>
+          <li>Red</li>
+          <li>Complete</li>
+        </ul>
+      </td>
+      <td></td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>CreatedFilter</td>
+      <td>
+        Calculated field used to filter recently created items (for example, to
+        show items submitted during the last week).
+      </td>
+      <td>Calculated (calculation based on other columns)</td>
+      <td></td>
+      <td>
+        Formula:<br />=Created+7<br /><br />The data type returned from this
+        formula is: Date and Time<br /><br />Date and Time Format: Date Only
+      </td>
+      <td></td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>ModifiedFilter</td>
+      <td>
+        Calculated field used to filter recently modified items (for example, to
+        show accomplishments over the last week).
+      </td>
+      <td>Calculated (calculation based on other columns)</td>
+      <td></td>
+      <td>
+        Formula:<br />=Modified+7<br /><br />The data type returned from this
+        formula is: Date and Time<br /><br />Date and Time Format: Date Only
+      </td>
+      <td></td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  <small
+    >* You should actively change the default value for this column based on the
+    target iteration for completing work items.</small
+  ><br />
+  <small>** Modify the out-of-the-box column accordingly.</small>
+</p>

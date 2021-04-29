@@ -84,16 +84,7 @@ Therefore, let's instead break the price into two parts: **Unit Price** and
 **Unit of Measure**. We can then use a calculated column for **Price (**in order
 to concatenate the values specified in the other two columns).
 
-{{< table class="small table-striped"
-caption="Data for \"This Week's Specials\"" >}}
-
-| Title            | Unit Price | Unit of Measure | Price        | Rollup Image                |
-| ---------------- | ---------- | --------------- | ------------ | --------------------------- |
-| Fisherman's Brew | $9.98      | / lb.           | $9.98 / lb.  | /PublishingImages/boat.jpg  |
-| Boathouse Bold   | $12.50     | / lb.           | $12.50 / lb. | /PublishingImages/ropes.jpg |
-| Deadly Decaf     | $7.49      | / lb.           | $7.49 / lb.  | /PublishingImages/fame.jpg  |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 Here's a breakdown of the custom SharePoint list:
 

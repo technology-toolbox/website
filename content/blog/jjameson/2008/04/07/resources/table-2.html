@@ -1,0 +1,208 @@
+<table class="table small table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>View</th>
+      <th>Columns</th>
+      <th>Sort</th>
+      <th>Filter</th>
+      <th>Group By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All Work Items</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Blocked</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>ID</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>My Work Items<br />(default view)</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Blocked</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>
+        Status is not equal to Closed<br />And<br />Assigned To is equal to [Me]
+      </td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td>Active Bugs</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>Status is equal to Active<br />And<br />Category is equal to Bug</td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td>Resolved Bugs</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>
+        Status is equal to Resolved<br />And<br />Category is equal to Bug
+      </td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td>Open Issues</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>
+        Status is not equal to Closed<br />And<br />Blocked is equal to Yes
+      </td>
+      <td>
+        <ol>
+          <li>Category</li>
+          <li>Priority</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>Open Scenarios</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>
+        Status is not equal to Closed<br />And<br />Category is equal to
+        Scenario
+      </td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td>Open Tasks</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>
+        Status is not equal to Closed<br />And<br />Category is equal to Task
+      </td>
+      <td>Priority</td>
+    </tr>
+    <tr>
+      <td>Open Work Items</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Blocked</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>Severity</td>
+      <td>Status is not equal to Closed</td>
+      <td>
+        <ol>
+          <li>Category</li>
+          <li>Priority</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>Project Checklist</td>
+      <td>
+        <ul>
+          <li>ID</li>
+          <li>Title</li>
+          <li>Category</li>
+          <li>Status</li>
+          <li>Priority</li>
+          <li>Severity</li>
+          <li>Area</li>
+          <li>Assigned To</li>
+          <li>KPI</li>
+        </ul>
+      </td>
+      <td>
+        <ol>
+          <li>Priority</li>
+          <li>Severity</li>
+        </ol>
+      </td>
+      <td>
+        Status is not equal to Closed<br />And<br />Exit Criteria is equal to
+        Yes
+      </td>
+      <td>
+        <ol>
+          <li>Iteration</li>
+          <li>Category</li>
+        </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>

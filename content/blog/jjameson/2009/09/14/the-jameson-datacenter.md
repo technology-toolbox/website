@@ -1,11 +1,10 @@
 ---
-title: "The \"Jameson Datacenter\""
+title: 'The "Jameson Datacenter"'
 date: 2009-09-14T07:53:00-06:00
-excerpt:
-  "Back in a post from February 2008, I first referred to the \"Jameson
-  Datacenter\" while discussing one of the servers running in my basement. Since
-  then I've referenced my home lab about a dozen times in different posts but
-  never provided significant details..."
+excerpt: 'Back in a post from February 2008, I first referred to the "Jameson
+  Datacenter" while discussing one of the servers running in my basement. Since
+  then I''ve referenced my home lab about a dozen times in different posts but
+  never provided significant details...'
 aliases:
   [
     "/blog/jjameson/archive/2009/09/13/the-jameson-datacenter.aspx",
@@ -97,25 +96,7 @@ I digress...
 
 The following table provides more detail on the various servers:
 
-{{< table class="small table-striped" caption="Server Configurations" >}}
-
-| Server | Role(s) | Operating System | Domain |
-| --- | --- | --- | --- |
-| BANSHEE | E-mail server (POP3 and SMTP) | Windows Server 2003 Standard x64 Edition with Service Pack 2 | TECHTOOLBOX |
-| BEAST | Database server (SQL Server 2005) | Windows Server 2003 Enterprise x64 Edition with Service Pack 2 | TECHTOOLBOX |
-| COLOSSUS | Windows Server Update Services (WSUS) | Windows Server 2008 Standard x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| CYCLOPS | Team Foundation Server (TFS) application tier; note that databases reside on BEAST | Windows Server 2003 Enterprise x86 Edition with Service Pack 2 | TECHTOOLBOX |
-| DAZZLER | TFS build server | Windows Server 2008 Standard x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| DOGFOOD | Development server; SharePoint Server 2010; Visual Studio 2010 | Windows Server 2008 Standard x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| FAB-DC01 | Domain controller for corp.fabrikam.com; e-mail server (POP3 and SMTP) | Windows Server 2003 Enterprise x86 Edition with Service Pack 2 | FABRIKAM |
-| FOOBAR2 | Development server; Microsoft Office SharePoint Server (MOSS) 2007; Visual Studio 2008 | Windows Server 2008 Standard x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| ICEMAN | Hyper-V server | Windows Server 2008 Standard x64 Edition (core installation) with Service Pack 2 | TECHTOOLBOX |
-| JUBILEE | System Center Operations Manager 2007 R2; Root Management Server (RMS) | Windows Server 2008 Standard x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| ROGUE | Hyper-V server | Windows Server 2008 Standard x64 Edition (core installation) with Service Pack 2 | TECHTOOLBOX |
-| XAVIER1 | Domain controller for corp.technologytoolbox.com | Windows Server 2008 Enterprise x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-| XAVIER2 | Domain controller for corp.technologytoolbox.com | Windows Server 2008 Enterprise x64 Edition (full installation) with Service Pack 2 | TECHTOOLBOX |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 Note that I use two different Active Directory domains (really two different
 forests):
@@ -169,8 +150,7 @@ this -- which vary by server:
   seriously doubt many enterprise organizations -- or even small businesses --
   use the POP3 service in Windows Server 2003 for e-mail. However, I neither
   need nor want to use a full-blown instance of Microsoft Exchange simply for
-  the purposes of, say, demonstrating various e-mail notifications from MOSS
-  2007. Thus, BANSHEE and FAB-DC01 will probably not be moved to Windows Server
+  the purposes of, say, demonstrating various e-mail notifications from MOSS 2007. Thus, BANSHEE and FAB-DC01 will probably not be moved to Windows Server
   2008 anytime soon. While there are certainly third-party POP3 alternatives out
   there, I really don't want to go learn how to install and configure them.
   Trust me, there are many more valuable ways that I can spend that time.

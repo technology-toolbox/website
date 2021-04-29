@@ -112,12 +112,11 @@ Here is the checklist I used from the TFS installation guide (**In-Place or
 Migration Upgrade of Team Foundation Server on One or More Servers**), along
 with my comments for each task. Note that in my
 [next post](/blog/jjameson/2010/05/04/upgrade-team-foundation-server-2008-to-tfs-2010-and-sharepoint-server-2010),
-I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server
-2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
+I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
 
-{{< include-html "table-1.html" >}}
+{{< include-html "resources-upgrade-overview/table-1.html" >}}
 
-{{< include-html "table-2.html" >}}
+{{< include-html "resources-upgrade-overview/table-2.html" >}}
 
 ### Upgrading VSTS 2008 Clients for TFS 2010
 

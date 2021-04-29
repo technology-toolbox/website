@@ -52,15 +52,7 @@ TechNet article.
 The relevant service accounts for the Fabrikam extranet site are listed in the
 following table.
 
-{{< table class="small table-striped" caption="Table 1 - Service Accounts" >}}
-
-| User Logon Name           | Full Name                                           | Description                                                                              |
-| ------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| EXTRANET\svc-sharepoint   | Service account for SharePoint                      | SharePoint farm account used to create and access the SharePoint configuration database. |
-| EXTRANET\svc-spserviceapp | Service account for SharePoint service applications | Used as the application pool identity for SharePoint service applications                |
-| EXTRANET\svc-web-fabrikam | Service account for Fabrikam Web site               | Used for the application pool for the Fabrikam extranet Web application                  |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 In order to resolve a few issues with the deployment and ensure it conforms to
 recommended best practices, we need to perform some additional configuration
@@ -240,15 +232,7 @@ database files.
 1. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
 1. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
-   {{< table class="small table-striped"
-   caption="Table 2 - Initial data and log file sizes" >}}
-
-   | Database           | Logical Name       | File Type | Filegroup | Initial Size [MB] | Autogrowth                                 |
-   | ------------------ | ------------------ | --------- | --------- | ----------------- | ------------------------------------------ |
-   | OfficeWebAppsCache | OfficeWebAppsCache | Data      | PRIMARY   | 10,000            | By 500 MB, unrestricted gerowth            |
-   |                    | OfficeWebAppsCache | Log       | N/A       | 400               | By 10 percent, restricted growth: 4,000 MB |
-
-   {{< /table >}}
+   {{< include-html "resources/table-2.html" >}}
 
 1. Click **OK**.
 

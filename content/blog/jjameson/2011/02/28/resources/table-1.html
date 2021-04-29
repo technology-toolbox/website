@@ -1,0 +1,48 @@
+<table class="table small table-striped">
+  <caption>
+    Service accounts related to Search in SharePoint Server 2010
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>User logon name</th>
+      <th>Full name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{DOMAIN}\svc-sharepoint</td>
+      <td>Service account for SharePoint farm</td>
+      <td>
+        The server farm account is used to create and access the SharePoint
+        configuration database. It also acts as the application pool identity
+        account for the SharePoint Central Administration application pool, and
+        it is the account under which the SharePoint 2010 Timer service runs.
+        The SharePoint Products Configuration Wizard adds this account to the
+        SQL Server <strong>dbcreator</strong> and
+        <strong>securityadmin</strong> server roles.<br /><br />The farm service
+        account must be a domain user account, but it does not need to be a
+        member of any specific security group on the servers in the farm. It is
+        recommended to follow the principle of least privilege and specify a
+        user account that is not a member of the Administrators group on any of
+        the servers in the farm.
+      </td>
+    </tr>
+    <tr>
+      <td>{DOMAIN}\svc-index</td>
+      <td>Service account for indexing content</td>
+      <td>
+        Provides read-only access to any content that needs to be indexed (and
+        thus included in search results)
+      </td>
+    </tr>
+    <tr>
+      <td>{DOMAIN}\svc-spserviceapp</td>
+      <td>Service account for SharePoint service applications</td>
+      <td>
+        Used as the application pool identity for SharePoint service
+        applications
+      </td>
+    </tr>
+  </tbody>
+</table>

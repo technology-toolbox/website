@@ -2,10 +2,10 @@
 title: Default Recovery Models for SharePoint Databases
 date: 2008-01-18T16:59:00-07:00
 excerpt:
-  "Okay, I haven't blogged in over 7 weeks -- but hey, I was on vacation for 3
-  of them -- and I must warn you upfront that this post isn't exactly a
-  \"zinger\" filled with juicy tidbits, recommendations, or workarounds. Rather,
-  I simply can't seem to remember..."
+  'Okay, I haven''t blogged in over 7 weeks -- but hey, I was on vacation for 3
+  of them -- and I must warn you upfront that this post isn''t exactly a
+  "zinger" filled with juicy tidbits, recommendations, or workarounds. Rather,
+  I simply can''t seem to remember...'
 aliases:
   [
     "/blog/jjameson/archive/2008/01/18/default-recovery-models-for-sharepoint-databases.aspx",
@@ -53,19 +53,7 @@ Anyway, back to the default recovery models...
 From our freshly rebuilt DEV SharePoint environment, here are the databases and
 the various default recovery models:
 
-{{< table class="small table-striped" >}}
-
-| Database Name | Default Recovery Model |
-| --- | --- |
-| SharePoint_AdminContent\_{GUID} | Full |
-| SharePoint_Config | Full |
-| {SSP name}_DB | Simple |
-| {SSP name}_Search_DB | Simple |
-| WSS_Content | Full |
-| WSS_Content\_{SSP name} | Full |
-| WSS_Search\_{server name} | Simple |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 Well, there you have it. Like I warned you at the outset, it's not very "juicy",
 but at least I can refer back here from time to time as my memory fades.

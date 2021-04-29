@@ -1,0 +1,95 @@
+<table class="table small table-striped">
+  <caption>
+    Build Definition: "Automated Build - Main"
+  </caption>
+  <thead class="table-primary">
+    <tr>
+      <th>Section</th>
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>General</td>
+      <td>Build definition name</td>
+      <td>Automated Build - Main</td>
+    </tr>
+    <tr>
+      <td>Trigger</td>
+      <td>
+        Schedule - build every week on the following days
+        <ul>
+          <li>Monday</li>
+          <li>Tuesday</li>
+          <li>Wednesday</li>
+          <li>Thursday</li>
+          <li>Friday</li>
+          <li>Saturday</li>
+          <li>Sunday</li>
+        </ul>
+      </td>
+      <td>(selected)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Queue the build on the build controller at:</td>
+      <td>4:45 AM</td>
+    </tr>
+    <tr>
+      <td>Workspace</td>
+      <td>Source Control Folder<br />Build Agent Folder</td>
+      <td>$/foobar2010/Main<br />$(SourceDir)</td>
+    </tr>
+    <tr>
+      <td>Build Defaults</td>
+      <td>
+        Copy build output to the following drop folder (UNC path, such as
+        \\server\share):
+      </td>
+      <td>\\dazzler\Builds\foobar2010</td>
+    </tr>
+    <tr>
+      <td>Process</td>
+      <td>Build process template:</td>
+      <td>CustomTemplate.xaml</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Build process parameters:</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        Items to Build
+        <ul>
+          <li>Solutions/Projects</li>
+          <li>Configurations</li>
+        </ul>
+      </td>
+      <td>
+        <br />
+        <ul>
+          <li>$/foobar2010/Main/Source/foobar.sln</li>
+          <li>Debug - Any CPU<br />Release - Any CPU</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Retention Policy</td>
+      <td>
+        Triggered and Manual
+        <ul>
+          <li>
+            Succeeded
+            <ul>
+              <li>Retention Policy</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+      <td><br /><br />Keep All</td>
+    </tr>
+  </tbody>
+</table>

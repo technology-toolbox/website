@@ -2,10 +2,10 @@
 title: Building SharePoint 2010 Solutions on a TFS 2010 Build Server
 date: 2011-02-27T03:41:00-07:00
 excerpt:
-  "Last year I wrote a post about building Microsoft Office SharePoint Server
+  'Last year I wrote a post about building Microsoft Office SharePoint Server
   (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server ,
-  which talked about copying various SharePoint assemblies to a \"Reference
-  Assemblies\" folder and adding..."
+  which talked about copying various SharePoint assemblies to a "Reference
+  Assemblies" folder and adding...'
 aliases:
   [
     "/blog/jjameson/archive/2011/02/26/building-sharepoint-2010-solutions-on-a-tfs-2010-build-server.aspx",
@@ -83,34 +83,7 @@ Here are the assemblies that I ended up copying from FOOBAR5 (which has
 SharePoint Server 2010 installed) to DAZZLER (which does not have SharePoint
 Server 2010 installed):
 
-{{< table class="small table-striped"
-caption="Reference Assemblies for Building SharePoint 2010 Projects" >}}
-
-| Assembly | Source Location on SharePoint 2010 Server |
-| --- | --- |
-| Microsoft.BusinessData.dll | ISAPI |
-| Microsoft.HtmlTrans.Interface.dll | GAC_MSIL |
-| Microsoft.IdentityModel.dll | GAC_MSIL |
-| Microsoft.Office.Server.dll | ISAPI |
-| Microsoft.Office.Server.UI.dll | GAC_MSIL |
-| Microsoft.Office.Server.UserProfiles.dll | ISAPI |
-| Microsoft.SharePoint.AdministrationOperation.dll | GAC_MSIL |
-| Microsoft.SharePoint.Client.ServerRuntime.dll | GAC_MSIL |
-| Microsoft.SharePoint.Diagnostics.dll | GAC_MSIL |
-| Microsoft.SharePoint.dll | ISAPI |
-| Microsoft.SharePoint.Dsp.dll | GAC_MSIL |
-| Microsoft.SharePoint.Library.dll | GAC_MSIL |
-| Microsoft.SharePoint.Powershell.dll | GAC_MSIL |
-| Microsoft.SharePoint.Publishing.dll | ISAPI |
-| Microsoft.SharePoint.Search.dll | ISAPI |
-| Microsoft.SharePoint.Security.dll | ISAPI |
-| Microsoft.SharePoint.Taxonomy.dll | ISAPI |
-| microsoft.sharepoint.WorkflowActions.dll | ISAPI |
-| Microsoft.Web.Administration.dll | GAC_MSIL |
-| Microsoft.Web.CommandUI.dll | ISAPI |
-| Microsoft.Web.Design.Server.dll | GAC_MSIL |
-
-{{< /table >}}
+{{< include-html "resources/table-1.html" >}}
 
 In case it's not immediately obvious, "ISAPI" in the above table means:
 

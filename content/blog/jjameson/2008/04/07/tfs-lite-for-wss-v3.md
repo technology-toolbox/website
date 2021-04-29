@@ -1,11 +1,11 @@
 ---
-title: "\"TFS Lite\" for WSS v3"
+title: '"TFS Lite" for WSS v3'
 date: 2008-04-07T11:08:00-06:00
 excerpt:
-  "In my previous post , I introduced my \"TFS Lite\" SharePoint site template
-  that I've been using for years as a simple scenario/task/bug/risk/milestone
-  tracking \"application\" with various projects and customers. In today's post,
-  I'll discuss some of the..."
+  'In my previous post , I introduced my "TFS Lite" SharePoint site template
+  that I''ve been using for years as a simple scenario/task/bug/risk/milestone
+  tracking "application" with various projects and customers. In today''s post,
+  I''ll discuss some of the...'
 aliases:
   [
     "/blog/jjameson/archive/2008/04/06/tfs-lite-for-wss-v3.aspx",
@@ -14,7 +14,7 @@ aliases:
 categories: ["SharePoint", "Development"]
 tags: ["MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/07/tfs-lite-for-wss-v3.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/TFS Lite - WSS v3.zip"
   fileName: TFS Lite - WSS v3.zip
   fileSizeInBytes: 372158
@@ -26,8 +26,7 @@ as a simple scenario/task/bug/risk/milestone tracking "application" with various
 projects and customers. In today's post, I'll discuss some of the important
 changes in Windows SharePoint Services (WSS) v3 that impacted TFS Lite, such as
 the fact that _all_ SharePoint lists now support versioning, not just the
-**Issues** list, as was the case in WSS v2 and SharePoint Portal Server (SPS)
-2003.
+**Issues** list, as was the case in WSS v2 and SharePoint Portal Server (SPS) 2003.
 
 As I noted in the earlier post, the Work Items list at the heart of TFS Lite was
 originally based on the Issues list in order to maintain a history as items are
@@ -92,66 +91,19 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    someone edits an item in this list.
 1. Add the columns specified in the following table:
 
-   {{< table class="small table-striped" >}}
-
-   | Column Name | Description | Type | Required | Additional Information | Default | Add to Default View |
-   | --- | --- | --- | --- | --- | --- | --- |
-   | Category |  | Choice | Yes | Choices:<ul><li>Bug</li><li>Quality of Service Requirement</li><li>Risk</li><li>Scenario</li><li>Task</li></ul> | Bug | Yes |
-   | Area |  | Choice | Yes | Choices:<ul><li>Project</li><li>Project\Area1</li><li>Project\Area2</li><li>Project\Area3</li></ul> |  | Yes |
-   | Iteration |  | Choice | Yes | Choices:<ul><li>v1.0</li><li>v1.0\M0</li><li>v1.0\M1</li><li>v1.0\M2</li><li>v1.0\RC1</li><li>v1.0\RC2</li><li>v1.0\RTM</li><li>v1.1</li><li>v2.0</li><li>v2.0\M0</li><li>v2.0\M1</li><li>v2.0\M2</li><li>v2.0\RC1</li><li>v2.0\RC2</li><li>v2.0\RTM</li><li>vNext</li></ul> | v1.0 <sup>*</sup> | Yes |
-   | Triage |  | Choice | Yes | Choices:<ul><li>1 - Needs Review</li><li>2 - Investigate</li><li>3 - Reviewed</li><li>4 - Recommend Approve</li><li>5 - Recommend Reject</li><li>6 - Approved</li><li>7 - Not Approved</li></ul> | 1 - Needs Review | Yes |
-   | Priority <sup>**</sup> |  | Choice | Yes | Choices:<ul><li>1 - High</li><li>2 - Normal</li><li>3 - Low</li></ul> | 2 - Normal | Yes |
-   | Severity |  | Choice | Yes | Choices:<ul><li>1 - Critical</li><li>2 - Important</li><li>3 - Nuisance</li><li>4 - Useful</li></ul> | 4 - Useful | Yes |
-   | Status <sup>**</sup> |  | Choice | Yes | Choices:<ul><li>Active</li><li>Resolved</li><li>Closed</li></ul> | Active | Yes |
-   | Comments |  | Multiple lines of text | Yes | Append Changes to Existing Text: Yes |  | No |
-   | Exit Criteria | Indicates if the work item is a key deliverable for the iteration or milestone. If the field is set to Yes, the work item displays in the project summary view. | Yes/No (check box) | No |  | No | No |
-   | Blocked | Indicates if the work item is blocked in some manner. If the field is set to Yes, the work item displays on the project summary view. | Yes/No (check box) | No |  |  | Yes |
-   | KPI | Key Performance Indicator representing the status of a key deliverable or milestone. | Choice | Yes | Choices:<ul><li>Green</li><li>Yellow</li><li>Red</li><li>Complete</li></ul> |  | No |
-   | CreatedFilter | Calculated field used to filter recently created items (for example, to show items submitted during the last week). | Calculated (calculation based on other columns) |  | Formula:<br>=Created+7<br><br>The data type returned from this formula is: Date and Time<br><br>Date and Time Format: Date Only |  | No |
-   | ModifiedFilter | Calculated field used to filter recently modified items (for example, to show accomplishments over the last week). | Calculated (calculation based on other columns) |  | Formula:<br>=Modified+7<br><br>The data type returned from this formula is: Date and Time<br><br>Date and Time Format: Date Only |  | No |
-
-   {{< /table >}}
-
-   <small>* You should actively change the default value for this column based
-   on the target iteration for completing work items.</small>\
-   <small>** Modify the out-of-the-box column accordingly.</small>
+   {{< include-html "resources/table-1.html" >}}
 
 1. Configure the following views:
 
-   {{< table class="small table-striped" >}}
+   {{< include-html "resources/table-2.html" >}}
 
-   | View | Columns | Sort | Filter | Group By |
-   | --- | --- | --- | --- | --- |
-   | All Work Items | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Blocked</li><li>Assigned To</li></ul> | ID |  |  |
-   | My Work Items<br>(default view) | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Blocked</li></ul> | Severity | Status is not equal to Closed<br>And<br>Assigned To is equal to [Me] | Priority |
-   | Active Bugs | <ul><li>ID</li><li>Title</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is equal to Active<br>And<br>Category is equal to Bug | Priority |
-   | Resolved Bugs | <ul><li>ID</li><li>Title</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is equal to Resolved<br>And<br>Category is equal to Bug | Priority |
-   | Open Issues | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed<br>And<br>Blocked is equal to Yes | <ol><li>Category</li><li>Priority</li></ol> |
-   | Open Scenarios | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed<br>And<br>Category is equal to Scenario | Priority |
-   | Open Tasks | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed<br>And<br>Category is equal to Task | Priority |
-   | Open Work Items | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Blocked</li><li>Assigned To</li></ul> | Severity | Status is not equal to Closed | <ol><li>Category</li><li>Priority</li></ol> |
-   | Project Checklist | <ul><li>ID</li><li>Title</li><li>Category</li><li>Status</li><li>Priority</li><li>Severity</li><li>Area</li><li>Assigned To</li><li>KPI</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | <ol><li>Iteration</li><li>Category</li></ol> |
-
-   {{< /table >}}
 1. Create a new document library named **Pages** and select **Web Part page** as
    the document template.
 1. In the **Pages** library, create a new page called **ProjectSummary.aspx**
    using the **Header, Footer, 3 Columns** layout.
 1. Create and configure the various project summary Web Parts based on the underlying Work Items list:
 
-   {{< table class="small table-striped" >}}
-
-   | Web Part | Columns | Sort | Filter | Group By | Item Limit |
-   | --- | --- | --- | --- | --- | --- |
-   | Project Summary | <ul><li>KPI</li><li>Title</li></ul> | ID | Iteration is equal to v1.0\M0 <sup>*</sup> |  | 100 |
-   | Top 10 Issues | <ul><li>Title</li><li>Assigned To</li></ul> | <ol><li>Priority</li><li>Severity</li></ol> | Blocked is equal to Yes |  | 10 |
-   | Accomplishments (Last 7 Days) | Title | Modified<br>(descending) | Status is equal to Closed<br>And<br>ModifiedFilter is greater than [Today] | Category<br>(Expanded) | 20<br>(Display items in batches of the specified size.) |
-   | Priorities/Milestones | Title | ID | Status is not equal to Closed<br>And<br>Exit Criteria is equal to Yes | Iteration<br>(Expanded) | 100<br>(Display items in batches of the specified size.) |
-
-   {{< /table >}}
-
-   <small>* Change the filter as necessary to match the current
-   iteration.</small>
+   {{< include-html "resources/table-3.html" >}}
 
 1. (Optional) Modify the **Project Summary** Web Part to display an image
    corresponding to the designated KPI value (using SharePoint Designer and a

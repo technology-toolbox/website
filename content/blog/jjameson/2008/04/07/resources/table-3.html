@@ -1,0 +1,72 @@
+<table class="table small table-striped">
+  <thead class="table-primary">
+    <tr>
+      <th>Web Part</th>
+      <th>Columns</th>
+      <th>Sort</th>
+      <th>Filter</th>
+      <th>Group By</th>
+      <th>Item Limit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Project Summary</td>
+      <td>
+        <ul>
+          <li>KPI</li>
+          <li>Title</li>
+        </ul>
+      </td>
+      <td>ID</td>
+      <td>Iteration is equal to v1.0\M0 <sup>*</sup></td>
+      <td></td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Top 10 Issues</td>
+      <td>
+        <ul>
+          <li>Title</li>
+          <li>Assigned To</li>
+        </ul>
+      </td>
+      <td>
+        <ol>
+          <li>Priority</li>
+          <li>Severity</li>
+        </ol>
+      </td>
+      <td>Blocked is equal to Yes</td>
+      <td></td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Accomplishments (Last 7 Days)</td>
+      <td>Title</td>
+      <td>Modified<br />(descending)</td>
+      <td>
+        Status is equal to Closed<br />And<br />ModifiedFilter is greater than
+        [Today]
+      </td>
+      <td>Category<br />(Expanded)</td>
+      <td>20<br />(Display items in batches of the specified size.)</td>
+    </tr>
+    <tr>
+      <td>Priorities/Milestones</td>
+      <td>Title</td>
+      <td>ID</td>
+      <td>
+        Status is not equal to Closed<br />And<br />Exit Criteria is equal to
+        Yes
+      </td>
+      <td>Iteration<br />(Expanded)</td>
+      <td>100<br />(Display items in batches of the specified size.)</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  <small
+    >* Change the filter as necessary to match the current iteration.</small
+  >
+</p>
