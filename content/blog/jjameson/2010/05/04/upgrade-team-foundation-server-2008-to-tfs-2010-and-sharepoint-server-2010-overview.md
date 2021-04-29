@@ -115,7 +115,7 @@ with my comments for each task. Note that in my
 I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server 2010) and upgrading a previous TFS 2008 (and WSS v3) configuration.
 
 <div class="d-md-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Preparation</a>
+  <a href="../resources-upgrade-overview/table-1-popout" target="_blank">Table 1 - Preparation</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -124,7 +124,7 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server 2
 </div>
 
 <div class="d-sm-none">
-  <a href="../resources/table-2-popout" target="_blank">Table 2 - Team Foundation Server Upgrade</a>
+  <a href="../resources-upgrade-overview/table-2-popout" target="_blank">Table 2 - Team Foundation Server Upgrade</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
