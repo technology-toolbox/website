@@ -24,9 +24,13 @@ default.master for Microsoft Office SharePoint Server (MOSS) 2007.
 I put this together back when I was trying to figure out how to create a single
 master page that could be used for:
 
+<div class="overflow-auto">
+
 - Site pages (e.g. /Library/default.aspx)
 - System pages (e.g. /Library/Brochures/Forms/AllItems.aspx)
 - Application pages (e.g. /Library/\_layouts/viewlsts.aspx)
+
+</div>
 
 Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:

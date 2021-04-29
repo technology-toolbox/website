@@ -190,6 +190,8 @@ Excel Reporting** feature on my site.
 
 Note that you can activate the feature in a variety of ways:
 
+<div class="overflow-auto">
+
 - On the **Features** page in **Site Settings** (e.g.
   [http://cyclops/sites/AdventureWorks/\_layouts/ManageFeatures.aspx](http://cyclops/sites/AdventureWorks/_layouts/ManageFeatures.aspx))
 - Using StsAdm.exe (e.g. {{< kbd
@@ -197,6 +199,8 @@ Note that you can activate the feature in a variety of ways:
 - If you are running SharePoint Server 2010, using PowerShell and the
   **[Enable-SPFeature](http://technet.microsoft.com/en-us/library/ff607803%28office.14%29.aspx)**
   cmdlet.
+
+</div>
 
 Since I have a number of TFS project sites to upgrade, I chose to activate the
 feature using PowerShell:

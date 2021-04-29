@@ -2,12 +2,11 @@
 title: Migrating a blog from Telligent to Subtext using Web scraping, the Html Agility Pack, BlogML, and more (a.k.a. Building TechnologyToolbox.com, part 6)
 date: 2011-11-12T23:51:46-07:00
 lastmod: 2011-11-12T23:52:07-07:00
-excerpt:
-  "While I don't expect many people will need to migrate blog posts from
+excerpt: 'While I don''t expect many people will need to migrate blog posts from
   Telligent to Subtext, I do believe it is valuable to provide a walkthrough of
-  how I typically approach a \"content migration scenario\" -- since I
+  how I typically approach a "content migration scenario" -- since I
   frequently encounter this kind of requirement when working with enterprise
-  customers..."
+  customers...'
 aliases:
   [
     "/blog/jjameson/archive/2011/11/12/building-technologytoolbox-com-part-6.aspx",
@@ -23,8 +22,7 @@ encounter this kind of requirement when working with enterprise customers.
 
 For example, a big part of the [Agilent Technologies](http://chem.agilent.com/)
 project I worked on a few years ago involved migrating their legacy Internet
-site from a proprietary ASP application to Microsoft Office SharePoint Server
-2007. Consequently, we ended up creating a number of custom migration utilities
+site from a proprietary ASP application to Microsoft Office SharePoint Server 2007. Consequently, we ended up creating a number of custom migration utilities
 to export content from the old system and subsequently import it into
 SharePoint.
 
@@ -62,6 +60,8 @@ content into SharePoint.
 Here is the overall approach I used to migrate my content from Telligent to
 Subtext:
 
+{{< div-block "overflow-auto" >}}
+
 1. Download the monthly summary pages to a temporary cache (e.g.
    [http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx](http://blogs.msdn.com/b/jjameson/archive/2007/03.aspx)
    → C:\NotBackedUp\Temp\MSDN-blog\Post Summaries\Monthly Summary 2007-03.html).
@@ -76,6 +76,8 @@ Subtext:
 1. Save the BlogML document to an XML file.
 1. Using the Subtext admin interface, import the BlogML file to create the list
    of categories and blog posts.
+
+{{< /div-block >}}
 
 ### Step 1: Download the monthly summary pages
 
@@ -964,33 +966,33 @@ mapping, illustrated below:
 
 {{< table class="small table-striped" caption="Tag-to-Category Mapping" >}}
 
-| Tag | Category |
-| --- | --- |
-| Core Development | Development |
-| Debugging | Development |
-| Infrastructure | Infrastructure |
-| ISA Server | Infrastructure |
-| MOSS 2007 | SharePoint |
-| My System | My System |
-| Personal | Personal |
-| PowerShell | N/A |
-| SharePoint Server 2010 | SharePoint |
-| Silverlight | Development |
-| Simplify | My System |
-| SQL Server | N/A |
-| TFS | Development |
-| Toolbox | My System |
-| Tugboat | SharePoint |
-| Virtualization | Infrastructure |
-| Visual Studio | Development |
-| Web Development | Development |
-| WCF | Development |
-| Windows 7 | Infrastructure |
-| Windows Server | Infrastructure |
-| Windows Vista | Infrastructure |
-| WSS v2 | SharePoint |
-| WSS v3 | SharePoint |
-| WSUS | Infrastructure |
+| Tag                    | Category       |
+| ---------------------- | -------------- |
+| Core Development       | Development    |
+| Debugging              | Development    |
+| Infrastructure         | Infrastructure |
+| ISA Server             | Infrastructure |
+| MOSS 2007              | SharePoint     |
+| My System              | My System      |
+| Personal               | Personal       |
+| PowerShell             | N/A            |
+| SharePoint Server 2010 | SharePoint     |
+| Silverlight            | Development    |
+| Simplify               | My System      |
+| SQL Server             | N/A            |
+| TFS                    | Development    |
+| Toolbox                | My System      |
+| Tugboat                | SharePoint     |
+| Virtualization         | Infrastructure |
+| Visual Studio          | Development    |
+| Web Development        | Development    |
+| WCF                    | Development    |
+| Windows 7              | Infrastructure |
+| Windows Server         | Infrastructure |
+| Windows Vista          | Infrastructure |
+| WSS v2                 | SharePoint     |
+| WSS v3                 | SharePoint     |
+| WSUS                   | Infrastructure |
 
 {{< /table >}}
 
