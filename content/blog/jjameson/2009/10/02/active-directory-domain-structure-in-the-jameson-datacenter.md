@@ -67,7 +67,7 @@ group, the **IT** group, and the **Sales** organization.
 The following table summarizes the various OUs in the domain:
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Organizational Units in the corp.technologytoolbox.com Domain</a>
+  <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Organizational Units in the corp.technologytoolbox.com Domain</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

@@ -92,7 +92,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 1. Add the columns specified in the following table:
 
    <div class="d-md-none">
-      <a href="../resources/table-1-popout" target="_blank">Table 1 - Columns for <strong>Work Items</strong> list</a>
+      <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Columns for <strong>Work Items</strong> list</a>
       <i class="bi bi-arrow-up-right-square"></i>
       <p>(Insufficient width to show table content here.)</p>
    </div>
@@ -103,7 +103,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 1. Configure the following views:
 
    <div class="d-sm-none">
-      <a href="../resources/table-2-popout" target="_blank">Table 2 - Views for <strong>Work Items</strong> list</a>
+      <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Views for <strong>Work Items</strong> list</a>
       <i class="bi bi-arrow-up-right-square"></i>
       <p>(Insufficient width to show table content here.)</p>
    </div>
@@ -118,7 +118,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 1. Create and configure the various project summary Web Parts based on the underlying Work Items list:
 
    <div class="d-md-none">
-      <a href="../resources/table-3-popout" target="_blank">Table 3 - Project summary Web Parts</a>
+      <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3 - Project summary Web Parts</a>
       <i class="bi bi-arrow-up-right-square"></i>
       <p>(Insufficient width to show table content here.)</p>
    </div>
