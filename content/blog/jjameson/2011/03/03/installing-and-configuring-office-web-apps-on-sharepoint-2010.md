@@ -53,7 +53,7 @@ The relevant service accounts for the Fabrikam extranet site are listed in the
 following table.
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
+  <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Service Accounts</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -240,7 +240,7 @@ database files.
    left, click **Files**.
 1. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
    <div class="d-md-none">
-      <a href="../resources/table-2-popout" target="_blank">Table 2 - Initial data and log file sizes</a>
+      <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Initial data and log file sizes</a>
       <i class="bi bi-arrow-up-right-square"></i>
       <p>(Insufficient width to show table content here.)</p>
    </div>

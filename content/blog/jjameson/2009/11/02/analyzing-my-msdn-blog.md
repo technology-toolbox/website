@@ -28,7 +28,7 @@ it.]
 Here's a quick summary of my initial analysis:
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - MSDN Blog Usage Analysis</a>
+  <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - MSDN Blog Usage Analysis</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -113,7 +113,7 @@ identifying are my most popular posts, as well as my least popular posts.
 Let's start with the top 10 posts:
 
 <div class="d-sm-none">
-  <a href="../resources/table-2-popout" target="_blank">Table 2: Top 10 Blog Posts</a>
+  <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2: Top 10 Blog Posts</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -127,7 +127,7 @@ there ;-)
 What about the bottom 10 posts?
 
 <div class="d-sm-none">
-  <a href="../resources/table-3-popout" target="_blank">Table 3: Bottom 10 Blog Posts</a>
+  <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3: Bottom 10 Blog Posts</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -215,7 +215,7 @@ of referrals, I encountered the largest HTML table I've ever seen on a page
 into my Excel workbook and then sort by **Hits** descending.
 
 <div class="d-sm-none">
-  <a href="../resources/table-4-popout" target="_blank">Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages</a>
+  <a href='{{< relref "resources/table-4-popout" >}}' target="_blank">Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -230,7 +230,7 @@ However, adding up the numbers for the top 10 referrals accounts for less than
 Breaking down the referrals by domain name, I found the following:
 
 <div class="d-sm-none">
-  <a href="../resources/table-5-popout" target="_blank">Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages</a>
+  <a href='{{< relref "resources/table-5-popout" >}}' target="_blank">Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

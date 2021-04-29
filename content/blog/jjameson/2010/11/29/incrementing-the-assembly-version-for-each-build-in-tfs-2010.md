@@ -279,7 +279,7 @@ at the beginning of the **Update Build Number for Triggered Builds** activity in
 the **Update Build Number** sequence, and set the properties as follows:
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Properties for <strong>InvokeProcess</strong> activity</a>
+  <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Properties for <strong>InvokeProcess</strong> activity</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -329,7 +329,7 @@ Number for Triggered Builds** activity), add a new **MSBuild** activity, and set
 the properties as follows:
 
 <div class="d-sm-none">
-  <a href="../resources/table-2-popout" target="_blank">Table 2 - Properties for <strong>MSBuild</strong> activity</a>
+  <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Properties for <strong>MSBuild</strong> activity</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -510,7 +510,7 @@ settings for the "daily build" as an example. If a setting is not listed in the
 following table, it means the default is used.
 
 <div class="d-sm-none">
-  <a href="../resources/table-3-popout" target="_blank">Table 3 - Build Definition: <strong>Automated Build - Main</strong></a>
+  <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3 - Build Definition: <strong>Automated Build - Main</strong></a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
