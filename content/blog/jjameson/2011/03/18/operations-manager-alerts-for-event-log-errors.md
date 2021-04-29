@@ -86,7 +86,14 @@ Application event log:
 
    1. Specify the following expression:
 
-      {{< include-html "resources/table-1.html" >}}
+      <div class="d-sm-none">
+         <a href="../resources/table-1-popout" target="_blank">Table 1 - Parameters for "Build Event Expression" page</a>
+         <i class="bi bi-arrow-up-right-square"></i>
+         <p>(Insufficient width to show table content here.)</p>
+      </div>
+      <div class="d-none d-sm-block">
+         {{< include-html "resources/table-1.html" >}}
+      </div>
 
    1. Click **Next**.
 

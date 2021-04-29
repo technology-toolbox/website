@@ -139,7 +139,14 @@ Agile v5 template TFS 2010 (click **Site Settings**, then in the **Site
 Actions** section, click **Manage site features**), you will notice the
 following features are activated:
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Site (Web) Features</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 Note that there are other activated features (e.g. **Offline Synchronization for
 External Lists**), but from a TFS perspective -- and the purposes of this post
@@ -150,7 +157,14 @@ Similarly, if you look at the corresponding site collection features (click
 **Go to top level site settings**, then click **Site collection features**), you
 will notice the following feature is activated:
 
-{{< include-html "resources/table-2.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-2-popout" target="_blank">Table 2 - Site Collection Features</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-2.html" >}}
+</div>
 
 After poking around a little bit in the SharePoint feature files installed by
 TFS 2010 and looking at the corresponding feature assembly using Reflector, it

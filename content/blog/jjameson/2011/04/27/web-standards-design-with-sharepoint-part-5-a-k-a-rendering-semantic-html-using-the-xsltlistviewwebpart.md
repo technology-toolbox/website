@@ -84,7 +84,14 @@ Therefore, let's instead break the price into two parts: **Unit Price** and
 **Unit of Measure**. We can then use a calculated column for **Price (**in order
 to concatenate the values specified in the other two columns).
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Data for <strong>This Week's Specials</strong></a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 Here's a breakdown of the custom SharePoint list:
 

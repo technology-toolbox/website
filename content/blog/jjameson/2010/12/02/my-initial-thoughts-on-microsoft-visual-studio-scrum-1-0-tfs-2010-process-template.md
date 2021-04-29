@@ -104,4 +104,11 @@ the original MSF Agile template and don't take more than a few minutes to
 complete. However, I still like to include them to serve as a "checklist" on new
 projects.
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-md-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Initial Tasks for a Scrum Project</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-md-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>

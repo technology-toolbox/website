@@ -31,7 +31,14 @@ master page that could be used for:
 Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - MOSS 2007 Master Page Comparison</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 I found the differences between the two master pages very interesting, as well
 as the fact that a couple of the placeholders are simply appended to the end of

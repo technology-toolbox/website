@@ -91,11 +91,25 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    someone edits an item in this list.
 1. Add the columns specified in the following table:
 
-   {{< include-html "resources/table-1.html" >}}
+   <div class="d-md-none">
+      <a href="../resources/table-1-popout" target="_blank">Table 1 - Columns for <strong>Work Items</strong> list</a>
+      <i class="bi bi-arrow-up-right-square"></i>
+      <p>(Insufficient width to show table content here.)</p>
+   </div>
+   <div class="d-none d-md-block">
+      {{< include-html "resources/table-1.html" >}}
+   </div>
 
 1. Configure the following views:
 
-   {{< include-html "resources/table-2.html" >}}
+   <div class="d-sm-none">
+      <a href="../resources/table-2-popout" target="_blank">Table 2 - Views for <strong>Work Items</strong> list</a>
+      <i class="bi bi-arrow-up-right-square"></i>
+      <p>(Insufficient width to show table content here.)</p>
+   </div>
+   <div class="d-none d-sm-block">
+      {{< include-html "resources/table-2.html" >}}
+   </div>
 
 1. Create a new document library named **Pages** and select **Web Part page** as
    the document template.
@@ -103,7 +117,14 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
    using the **Header, Footer, 3 Columns** layout.
 1. Create and configure the various project summary Web Parts based on the underlying Work Items list:
 
-   {{< include-html "resources/table-3.html" >}}
+   <div class="d-md-none">
+      <a href="../resources/table-3-popout" target="_blank">Table 3 - Project summary Web Parts</a>
+      <i class="bi bi-arrow-up-right-square"></i>
+      <p>(Insufficient width to show table content here.)</p>
+   </div>
+   <div class="d-none d-md-block">
+      {{< include-html "resources/table-3.html" >}}
+   </div>
 
 1. (Optional) Modify the **Project Summary** Web Part to display an image
    corresponding to the designated KPI value (using SharePoint Designer and a

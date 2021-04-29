@@ -59,7 +59,14 @@ account other than the SharePoint farm account.
 The following table lists the service accounts that I recommend when configuring
 Search in SharePoint Server 2010:
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Service accounts related to Search in SharePoint Server 2010</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 {{< div-block "note" >}}
 

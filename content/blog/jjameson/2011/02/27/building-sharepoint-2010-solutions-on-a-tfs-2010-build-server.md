@@ -83,7 +83,14 @@ Here are the assemblies that I ended up copying from FOOBAR5 (which has
 SharePoint Server 2010 installed) to DAZZLER (which does not have SharePoint
 Server 2010 installed):
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Reference Assemblies for Building SharePoint 2010 Projects</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 In case it's not immediately obvious, "ISAPI" in the above table means:
 

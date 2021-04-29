@@ -27,7 +27,14 @@ it.]
 
 Here's a quick summary of my initial analysis:
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - MSDN Blog Usage Analysis</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 Note that **Combined Views** is something I defined and is simply the sum of
 **Views** and **AggViews**.

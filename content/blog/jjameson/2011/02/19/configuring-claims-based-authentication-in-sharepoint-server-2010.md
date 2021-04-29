@@ -55,7 +55,15 @@ The relevant service accounts for claims-based authentication are listed in the
 following table.
 
 <a name="Table-1"></a>
-{{< include-html "resources/table-1.html" >}}
+
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 [Assume that Fabrikam has established an "extranet" Active Directory domain
 which will be used to host the SharePoint farm. In order to allow Fabrikam
