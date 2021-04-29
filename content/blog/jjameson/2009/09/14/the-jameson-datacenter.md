@@ -97,7 +97,7 @@ I digress...
 The following table provides more detail on the various servers:
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Server Configurations</a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - Server Configurations</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

@@ -72,7 +72,7 @@ here are the settings I used. If a setting is not listed in the following table,
 it means the default is used.
 
 <div class="d-md-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Build Definition: <strong>Gated Check-in - Main</strong></a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - Build Definition: <strong>Gated Check-in - Main</strong></a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

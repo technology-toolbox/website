@@ -43,7 +43,7 @@ following tables.
 <a name="tfs-upgrade-Table1"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
+   <a href="resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -54,7 +54,7 @@ following tables.
 <a name="tfs-upgrade-Table2"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-2-popout" target="_blank">Table 2 - Domain Groups</a>
+   <a href="resources/table-2-popout" target="_blank">Table 2 - Domain Groups</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -65,7 +65,7 @@ following tables.
 <a name="tfs-upgrade-Table3"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-3-popout" target="_blank">Table 3 - SharePoint Server 2010 Installation Parameters</a>
+   <a href="resources/table-3-popout" target="_blank">Table 3 - SharePoint Server 2010 Installation Parameters</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -76,7 +76,7 @@ following tables.
 <a name="tfs-upgrade-Table4"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-4-popout" target="_blank">Table 4 - Outgoing E-Mail Settings</a>
+   <a href="resources/table-4-popout" target="_blank">Table 4 - Outgoing E-Mail Settings</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -87,7 +87,7 @@ following tables.
 <a name="tfs-upgrade-Table5"></a>
 
 <div class="d-md-none">
-   <a href="../resources/table-5-popout" target="_blank">Table 5 - SharePoint Web Applications</a>
+   <a href="resources/table-5-popout" target="_blank">Table 5 - SharePoint Web Applications</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -98,7 +98,7 @@ following tables.
 <a name="tfs-upgrade-Table6"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-6-popout" target="_blank">Table 6 - Reporting Services Configuration Settings</a>
+   <a href="resources/table-6-popout" target="_blank">Table 6 - Reporting Services Configuration Settings</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -109,7 +109,7 @@ following tables.
 <a name="tfs-upgrade-Table7"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-7-popout" target="_blank">Table 7 - Secure Store Target Application Settings for TFS Dashboards</a>
+   <a href="resources/table-7-popout" target="_blank">Table 7 - Secure Store Target Application Settings for TFS Dashboards</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -120,7 +120,7 @@ following tables.
 <a name="tfs-upgrade-Table8"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-8-popout" target="_blank">Table 8 - TFS Configuration Settings</a>
+   <a href="resources/table-8-popout" target="_blank">Table 8 - TFS Configuration Settings</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -131,7 +131,7 @@ following tables.
 <a name="tfs-upgrade-Table9"></a>
 
 <div class="d-sm-none">
-   <a href="../resources/table-9-popout" target="_blank">Table 9 - Team Foundation Build Configuration Settings</a>
+   <a href="resources/table-9-popout" target="_blank">Table 9 - Team Foundation Build Configuration Settings</a>
    <i class="bi bi-arrow-up-right-square"></i>
    <p>(Insufficient width to show table content here.)</p>
 </div>

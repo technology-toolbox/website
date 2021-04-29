@@ -2903,7 +2903,7 @@ configuration settings are listed in the following tables.
 <a name="Table_2_-_Service_accounts"></a>
 
 <div class="d-sm-none">
-  <a href="../resources/table-2-popout" target="_blank">Table 2 - Service accounts</a>
+  <a href="resources/table-2-popout" target="_blank">Table 2 - Service accounts</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2917,7 +2917,7 @@ configuration settings are listed in the following tables.
 <a name="Table_4_-_Diagnostic_logging"></a>
 
 <div class="d-sm-none">
-  <a href="../resources/table-4-popout" target="_blank">Table 4 - Diagnostic logging</a>
+  <a href="resources/table-4-popout" target="_blank">Table 4 - Diagnostic logging</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2931,7 +2931,7 @@ configuration settings are listed in the following tables.
 <a name="Table_6_-_Outgoing_e-mail_settings"></a>
 
 <div class="d-md-none">
-  <a href="../resources/table-6-popout" target="_blank">Table 6 - Outgoing e-mail settings</a>
+  <a href="resources/table-6-popout" target="_blank">Table 6 - Outgoing e-mail settings</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2942,7 +2942,7 @@ configuration settings are listed in the following tables.
 <a name="Table_7_-_Web_applications"></a>
 
 <div class="d-lg-none">
-  <a href="../resources/table-7-popout" target="_blank">Table 7 - Web applications</a>
+  <a href="resources/table-7-popout" target="_blank">Table 7 - Web applications</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2953,7 +2953,7 @@ configuration settings are listed in the following tables.
 <a name="Table_8_-_Site_collections"></a>
 
 <div class="d-lg-none">
-  <a href="../resources/table-8-popout" target="_blank">Table 8 - Site collections</a>
+  <a href="resources/table-8-popout" target="_blank">Table 8 - Site collections</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2964,7 +2964,7 @@ configuration settings are listed in the following tables.
 <a name="Table_9_-_Initial_data_and_log_file_sizes"></a>
 
 <div class="d-lg-none">
-  <a href="../resources/table-9-popout" target="_blank">Table 9 - Initial data and log file sizes</a>
+  <a href="resources/table-9-popout" target="_blank">Table 9 - Initial data and log file sizes</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
@@ -2975,7 +2975,7 @@ configuration settings are listed in the following tables.
 <a name="Table_10_-_SharePoint_groups_and_permissions_used_for_entitlement"></a>
 
 <div class="d-sm-none">
-  <a href="../resources/table-10-popout" target="_blank">Table 10 - SharePoint groups and permissions used for entitlement</a>
+  <a href="resources/table-10-popout" target="_blank">Table 10 - SharePoint groups and permissions used for entitlement</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

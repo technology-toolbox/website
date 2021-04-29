@@ -52,7 +52,7 @@ content into a table.
 {{< /div-block >}}
 
 <div class="d-md-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - HTML-to-PDF Converters</a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - HTML-to-PDF Converters</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
