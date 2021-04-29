@@ -80,10 +80,16 @@ the following high-level steps:
 1. Enable anonymous access to the site
 1. Modify the Web.config files for the following sites in order to support
    claims-based authentication:
+
+   <div class="overflow-auto">
+
    - SharePoint Central Administration v4
    - SecurityTokenServiceApplication
    - "Fabrikam" Web application
      ([http://www.fabrikam.com](http://www.fabrikam.com))
+
+   </div>
+
 1. Create a user in the database using IIS Manager
 1. Validate the configuration of the Web application
 
@@ -137,20 +143,33 @@ added to to the appropriate database roles.
 1. Right-click the login corresponding to the SharePoint farm service account
    (**EXTRANET\svc-sharepoint**) and then click **Properties**.
 1. In the login properties dialog box:
+
    1. On the **User Mapping** page, in the **Users mapped to the login** list,
       click the checkbox for the ASP.NET membership database (**FabrikamDemo**),
       and then in the database role membership list, click the checkboxes for
       the following roles:
+
+      <div class="overflow-auto">
+
       - **aspnet_Membership_BasicAccess**
       - **aspnet_Membership_ReportingAccess**
       - **aspnet_Roles_BasicAccess**
       - **aspnet_Roles_ReportingAccess**
+
+      </div>
+
    1. Click **OK**.
+
 1. Repeat the steps in this section to add the service account for the Fabrikam
    Web application (**EXTRANET\svc-web-fabrikam**) to the following roles:
+
+   <div class="overflow-auto">
+
    - **aspnet_Membership_FullAccess**
    - **aspnet_Roles_BasicAccess**
    - **aspnet_Roles_ReportingAccess**
+
+   </div>
 
 {{< div-block "note important" >}}
 

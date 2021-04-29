@@ -377,12 +377,16 @@ Foundation, Event ID: 7043), rename the out-of-the-box TaxonomyPicker.ascx file.
 
 To rename the TaxonomyPicker.ascx file:
 
+{{< div-block "overflow-auto" >}}
+
 1. Open Windows Explorer and browse to the following folder:\
    \
    **C:\Program Files\Common Files\Microsoft Shared\Web Server
    Extensions\14\TEMPLATE\CONTROLTEMPLATES**
 1. Right-click **TaxonomyPicker.ascx**, click **Rename**, and then change the
    filename to **TaxonomyPicker.ascx_broken**.
+
+{{< /div-block >}}
 
 {{< div-block "note" >}}
 
@@ -682,6 +686,8 @@ There are also a couple of other issues with the upgraded TFS project site:
 
 To reset the home page for a TFS project site:
 
+{{< div-block "overflow-auto" >}}
+
 1. Browse to the Site Settings page for the site (e.g.
    [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 1. On the **Site Settings** page, in the **Site Actions** section, click **Reset
@@ -689,6 +695,8 @@ To reset the home page for a TFS project site:
 1. On the **Reset Page to Site Definition Version** page, click the option to
    **Reset all pages in this site to site definition version**, and then click
    **Reset**.
+
+{{< /div-block >}}
 
 {{< div-block-start "note" >}}
 
@@ -703,6 +711,8 @@ To reset the home page for a TFS project site:
 
 To remove obolete links from the top link bar of a TFS project site:
 
+{{< div-block "overflow-auto" >}}
+
 1. Browse to the Site Settings page for the site (e.g.
    [http://cyclops/sites/Demo/\_layouts/settings.aspx](http://cyclops/sites/Demo/_layouts/settings.aspx)).
 1. On the **Site Settings** page, in the **Look and Feel** section, click **Top
@@ -712,6 +722,8 @@ To remove obolete links from the top link bar of a TFS project site:
 1. On the **Edit Navigation Link** page, click **Delete**. When prompted to
    confirm deleting the link, click **OK**.
 1. Repeat the previous two steps for any other links you want to remove.
+
+{{< /div-block >}}
 
 ### Install Team Foundation Server
 
