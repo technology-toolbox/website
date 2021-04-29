@@ -60,7 +60,7 @@ project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders and
 files corresponding to the basic structure of the website.
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Sample HTML content for the Caelum prototype</a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - Sample HTML content for the Caelum prototype</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

@@ -85,7 +85,7 @@ Therefore, let's instead break the price into two parts: **Unit Price** and
 to concatenate the values specified in the other two columns).
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Data for <strong>This Week's Specials</strong></a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - Data for <strong>This Week's Specials</strong></a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

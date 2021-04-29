@@ -36,7 +36,7 @@ Rather than make you open a spreadsheet attachment, I'll just copy the contents
 into a simple table:
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - MOSS 2007 Master Page Comparison</a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - MOSS 2007 Master Page Comparison</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>

@@ -84,7 +84,7 @@ SharePoint Server 2010 installed) to DAZZLER (which does not have SharePoint
 Server 2010 installed):
 
 <div class="d-sm-none">
-  <a href="../resources/table-1-popout" target="_blank">Table 1 - Reference Assemblies for Building SharePoint 2010 Projects</a>
+  <a href="resources/table-1-popout" target="_blank">Table 1 - Reference Assemblies for Building SharePoint 2010 Projects</a>
   <i class="bi bi-arrow-up-right-square"></i>
   <p>(Insufficient width to show table content here.)</p>
 </div>
