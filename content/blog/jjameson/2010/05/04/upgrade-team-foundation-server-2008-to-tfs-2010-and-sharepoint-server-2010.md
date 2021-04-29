@@ -41,31 +41,103 @@ parameters and configuration settings for my environment are listed in the
 following tables.
 
 <a name="tfs-upgrade-Table1"></a>
-{{< include-html "resources-upgrade/table-1.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-1.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table2"></a>
-{{< include-html "resources-upgrade/table-2.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-2-popout" target="_blank">Table 2 - Domain Groups</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-2.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table3"></a>
-{{< include-html "resources-upgrade/table-3.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-3-popout" target="_blank">Table 3 - SharePoint Server 2010 Installation Parameters</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-3.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table4"></a>
-{{< include-html "resources-upgrade/table-4.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-4-popout" target="_blank">Table 4 - Outgoing E-Mail Settings</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-4.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table5"></a>
-{{< include-html "resources-upgrade/table-5.html" >}}
+
+<div class="d-md-none">
+   <a href="../resources/table-5-popout" target="_blank">Table 5 - SharePoint Web Applications</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-md-block">
+   {{< include-html "resources-upgrade/table-5.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table6"></a>
-{{< include-html "resources-upgrade/table-6.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-6-popout" target="_blank">Table 6 - Reporting Services Configuration Settings</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-6.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table7"></a>
-{{< include-html "resources-upgrade/table-7.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-7-popout" target="_blank">Table 7 - Secure Store Target Application Settings for TFS Dashboards</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-7.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table8"></a>
-{{< include-html "resources-upgrade/table-8.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-8-popout" target="_blank">Table 8 - TFS Configuration Settings</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-8.html" >}}
+</div>
 
 <a name="tfs-upgrade-Table9"></a>
-{{< include-html "resources-upgrade/table-9.html" >}}
+
+<div class="d-sm-none">
+   <a href="../resources/table-9-popout" target="_blank">Table 9 - Team Foundation Build Configuration Settings</a>
+   <i class="bi bi-arrow-up-right-square"></i>
+   <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+   {{< include-html "resources-upgrade/table-9.html" >}}
+</div>
 
 ### Deploy and Configure the Server Infrastructure
 

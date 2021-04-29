@@ -52,7 +52,14 @@ TechNet article.
 The relevant service accounts for the Fabrikam extranet site are listed in the
 following table.
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Service Accounts</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 In order to resolve a few issues with the deployment and ensure it conforms to
 recommended best practices, we need to perform some additional configuration
@@ -232,7 +239,14 @@ database files.
 1. In the **Database Properties** dialog, in the **Select a page** area on the
    left, click **Files**.
 1. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
-   {{< include-html "resources/table-2.html" >}}
+   <div class="d-md-none">
+      <a href="../resources/table-2-popout" target="_blank">Table 2 - Initial data and log file sizes</a>
+      <i class="bi bi-arrow-up-right-square"></i>
+      <p>(Insufficient width to show table content here.)</p>
+   </div>
+   <div class="d-none d-md-block">
+      {{< include-html "resources/table-2.html" >}}
+   </div>
 
 1. Click **OK**.
 

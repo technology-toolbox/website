@@ -59,7 +59,14 @@ Using Expression Web, I created a site under the TFS workspace for the Caelum
 project (**$/Caelum/Dev/CaelumPrototype**). I then added various folders and
 files corresponding to the basic structure of the website.
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Sample HTML content for the Caelum prototype</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 ### Default.master
 

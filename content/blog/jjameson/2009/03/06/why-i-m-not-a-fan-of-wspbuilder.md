@@ -84,7 +84,14 @@ to minimize the number of WSPs that need to be deployed (specifically four).
 
 To summarize:
 
-{{< include-html "resources/table-1.html" >}}
+<div class="d-sm-none">
+  <a href="../resources/table-1-popout" target="_blank">Table 1 - Comparison of Visual Studio Solution Build Times</a>
+  <i class="bi bi-arrow-up-right-square"></i>
+  <p>(Insufficient width to show table content here.)</p>
+</div>
+<div class="d-none d-sm-block">
+  {{< include-html "resources/table-1.html" >}}
+</div>
 
 From the data in this table, we can clearly see that something is amiss. The
 smaller solution (i.e. with 40% less code and 1/4 as many WSPs) takes almost
