@@ -3,10 +3,6 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
-[params]
-  gitHubId = "technology-toolbox"
-  twitterId = "techtoolbox_"
-
 [markup]
   [markup.highlight]
     noClasses = false # Use class attributes for code syntax highlighting
@@ -36,3 +32,7 @@ theme = "techtoolbox-hugo"
 
 [permalinks]
   categories = "/blog/jjameson/category/:title/"
+
+[social]
+  github = "technology-toolbox"
+  twitter = "techtoolbox_"
