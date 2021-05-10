@@ -2,9 +2,16 @@
 title: '"Could not get nonce" Error with pfSense ACME Certificates Service'
 date: 2021-05-10T13:17:45-06:00
 categories: ["Infrastructure"]
+description:
+  Before googling "Could not get nonce" (like I did), you should first check the
+  Let's Encrypt status page or Twitter feed.
 excerpt:
-  Before you google "Could not get nonce" (like I did), you should first check
-  the Let's Encrypt status page or Twitter account.
+  Before googling "Could not get nonce" (like I did), you should first check the
+  Let's Encrypt status page or Twitter feed.
+images:
+  [
+    "https://assets.technologytoolbox.com/screenshots/F6/CCD11176635DADB76FC53C0D50DD4F718ED0D6F6-cover.png",
+  ]
 tags: ["Infrastructure", "pfSense"]
 ---
 
