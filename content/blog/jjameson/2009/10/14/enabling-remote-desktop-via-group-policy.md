@@ -1,7 +1,7 @@
 ---
 title: Enabling Remote Desktop via Group Policy
 date: 2009-10-14T04:53:00-06:00
-excerpt:
+description:
   "In a previous post, I provided some details on the \"Jameson Datacenter\"
   (a.k.a. my home lab). In a follow-up post, I also discussed the Active
   Directory domain structure and mentioned how I use the Group Policy feature of

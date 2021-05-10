@@ -1,7 +1,7 @@
 ---
 title: Errors Installing Windows Server 2008 SP2
 date: 2009-06-01T09:14:00-06:00
-excerpt:
+description:
   "Last week I approved Windows Server 2008 Service Pack 2 (SP2) and Windows
   Vista SP2 on my local WSUS (Windows Server Update Services) server. My
   expectation was that the various physical and virtual machines in the

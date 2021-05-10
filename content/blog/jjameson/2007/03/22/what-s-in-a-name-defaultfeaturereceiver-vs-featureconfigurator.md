@@ -1,7 +1,7 @@
 ---
 title: "What's in a name? \"DefaultFeatureReceiver\" vs. \"FeatureConfigurator\""
 date: 2007-03-22T07:07:00-06:00
-excerpt:
+description:
   In my previous post ( Scope Dependencies for SharePoint Features ) you may
   have noticed that in the Feature.xml file, I specified the feature receiver
   class as DefaultFeatureReceiver but the code sample is actually from

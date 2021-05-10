@@ -2,7 +2,7 @@
 title: Constraining Tables with CSS
 date: 2009-11-01T05:15:00-07:00
 lastmod: 2009-11-01T06:15:00-07:00
-excerpt:
+description:
   Have you ever wanted to display data in a table but limit the size of the rows
   and columns within the table? For example, consider the classic master/detail
   view that we often find in software applications, in which items are shown in

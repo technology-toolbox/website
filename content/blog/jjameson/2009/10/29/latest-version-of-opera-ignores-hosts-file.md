@@ -1,7 +1,7 @@
 ---
 title: Latest Version of Opera Ignores Hosts File
 date: 2009-10-29T05:17:00-06:00
-excerpt:
+description:
   As I mentioned in my previous post , I discovered a rather nasty UI bug last
   week with the new portal we are building for a customer. Unfortunately, the
   layout issue only occurred in the Safari browser. Since I couldn't repro the

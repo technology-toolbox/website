@@ -1,7 +1,7 @@
 ---
 title: Deleting Large Sites and Recovering from the Failed Deletion of a Site
 date: 2007-05-07T06:28:00-06:00
-excerpt:
+description:
   Apparently you cannot delete a site containing a large amount of content in
   Microsoft Office SharePoint Server (MOSS) 2007. Last week I deleted -- or
   rather, attempted to delete – a Document Center site in our Test environment

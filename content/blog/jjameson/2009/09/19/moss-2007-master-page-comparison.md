@@ -1,7 +1,7 @@
 ---
 title: MOSS 2007 Master Page Comparison
 date: 2009-09-19T07:56:00-06:00
-excerpt:
+description:
   This morning I came across an old (June 2007) Excel spreadsheet that I created
   back when I was working on the Agilent Technologies project. The spreadsheet
   lists the various placeholder elements in both application.master and

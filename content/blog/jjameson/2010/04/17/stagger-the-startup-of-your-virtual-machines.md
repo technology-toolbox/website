@@ -1,7 +1,7 @@
 ---
 title: Stagger the Startup of Your Virtual Machines
 date: 2010-04-17T04:50:00-06:00
-excerpt:
+description:
   "I've mentioned before how I run two Hyper-V servers in the \" Jameson
   Datacenter \" (each one hosting a variety of different VMs). On the rare
   occasion that a patch comes out on Windows Update that affects Windows Server

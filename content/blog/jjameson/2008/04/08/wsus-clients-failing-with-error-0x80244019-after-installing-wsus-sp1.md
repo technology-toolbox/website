@@ -1,7 +1,7 @@
 ---
 title: WSUS Clients Failing with Error 0x80244019 After Installing WSUS SP1
 date: 2008-04-08T07:04:00-06:00
-excerpt:
+description:
   "Last week I discovered that many of my servers were no longer updating
   successfully from my intranet Windows Server Update Services (WSUS) server.
   Looking in WindowsUpdate.log file, I noticed errors similar to the following:

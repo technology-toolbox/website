@@ -1,7 +1,7 @@
 ---
 title: Introducing the SharePointSmtpHelper Class
 date: 2009-10-18T06:29:00-06:00
-excerpt:
+description:
   Continuing in the spirit of my previous posts for the
   SharePointPublishingHelper class and SharePointWebPartHelper class, I'd like
   to introduce another helper class that you may find useful when building

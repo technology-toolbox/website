@@ -1,7 +1,7 @@
 ---
 title: Reusable Content in SharePoint Publishing HTML Fields, Part 1
 date: 2011-04-08T06:59:00-06:00
-excerpt:
+description:
   "In one of the sprints last year for my current project, I built a custom
   \"document publishing\" system based on the Web Content Management (WCM)
   features in Microsoft Office SharePoint Server (MOSS) 2007. My client was

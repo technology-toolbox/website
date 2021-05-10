@@ -1,7 +1,7 @@
 ---
 title: Configuring Logging in a Console Application
 date: 2009-06-18T19:50:00-06:00
-excerpt:
+description:
   In my previous post, I introduced my simple, but highly effective approach to
   logging . As promised, this post introduces how to configure logging (based on
   a simple console application). As noted in my previous post, one or more trace

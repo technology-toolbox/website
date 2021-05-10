@@ -1,7 +1,7 @@
 ---
 title: Upgrade Team Foundation Server 2008 to TFS 2010 (and SharePoint Server 2010) - Overview
 date: 2010-05-04T07:45:00-06:00
-excerpt:
+description:
   This past weekend, I upgraded my Team Foundation Server (TFS) 2008 environment
   to TFS 2010. I also upgraded the TFS project sites to SharePoint Server 2010.
   Why the SharePoint upgrade? The TFS project sites previously ran on Windows

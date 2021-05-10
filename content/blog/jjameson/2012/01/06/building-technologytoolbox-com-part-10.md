@@ -1,7 +1,7 @@
 ---
 title: Using the Entity Framework and LINQ to list the most popular posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 10)
 date: 2012-01-06T03:04:06-07:00
-excerpt:
+description:
   "In my previous post, I shared the inner workings of the \"Most Recent Posts\"
   section on the Technology Toolbox home page. In this post, I'll show you how I
   built on that foundation to generate the content for the \"Most Popular

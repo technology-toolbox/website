@@ -1,7 +1,7 @@
 ---
 title: "Know the Implications Before Enabling Kubernetes in Docker Desktop"
 date: 2021-04-30T14:19:09-06:00
-excerpt:
+description:
   Kubernetes is incredibly powerful, but should running it be as simple as
   selecting a checkbox?
 categories: ["Development", "Infrastructure"]

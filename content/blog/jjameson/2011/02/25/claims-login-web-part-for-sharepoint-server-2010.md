@@ -1,7 +1,7 @@
 ---
 title: Claims Login Web Part for SharePoint Server 2010
 date: 2011-02-25T05:43:00-07:00
-excerpt:
+description:
   In my previous post , I provided the step-by-step process I use for
   configuring claims-based authentication in SharePoint Server 2010. If you
   follow those steps, then when you browse to the home page of the site and

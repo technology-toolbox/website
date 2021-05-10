@@ -1,7 +1,7 @@
 ---
 title: Formatting Code for My Blog
 date: 2009-10-09T06:46:00-06:00
-excerpt:
+description:
   "It occurred to me this morning that while I previously shared some details on
   how I manage my MSDN blog , I've never shared my method for formatting code
   for the Web. Actually, calling it \"my method\" is definitely a bit of a

@@ -1,7 +1,7 @@
 ---
 title: Setting up a new Web development project (a.k.a. Building TechnologyToolbox.com, part 2)
 date: 2011-10-27T05:42:45-06:00
-excerpt:
+description:
   Once I settled on using Subtext as the blogging solution for the Technology
   Toolbox site, I turned my attention to working on the other areas of the
   site...

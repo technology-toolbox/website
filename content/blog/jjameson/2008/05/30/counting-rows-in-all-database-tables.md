@@ -1,7 +1,7 @@
 ---
 title: Counting Rows in All Database Tables in SQL Server
 date: 2008-05-30T08:56:00-06:00
-excerpt:
+description:
   "Here is yet another of the SQL scripts that I like to keep handy in my
   toolbox: Count Records in All Tables.sql Sometimes when I get \"dropped into\"
   a consulting situation with a new customer, I need to quickly get acquainted

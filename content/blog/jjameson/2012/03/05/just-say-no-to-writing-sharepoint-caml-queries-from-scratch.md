@@ -1,7 +1,7 @@
 ---
 title: "Just say \"no\" to writing SharePoint CAML queries from scratch"
 date: 2012-03-05T22:36:13-07:00
-excerpt:
+description:
   Do you use the U2U CAML Query Builder instead of writing CAML queries from
   scratch? If not, then you must really know your SharePoint (or perhaps you
   just enjoy making things harder than they need to be).

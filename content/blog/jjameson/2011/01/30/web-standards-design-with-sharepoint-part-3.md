@@ -1,7 +1,7 @@
 ---
 title: Web Standards Design with SharePoint, Part 3
 date: 2011-01-30T20:29:00-07:00
-excerpt:
+description:
   'Last week I received the following comment on a blog post I wrote last year
   regarding Web standards design with Microsoft Office SharePoint Server (MOSS)
   2007: "The Media Guy" Great article.. was very helpful. I used 960.gs for my

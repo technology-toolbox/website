@@ -1,7 +1,7 @@
 ---
 title: Test Driven Development (TDD) in the Real World, Part 2
 date: 2010-04-09T09:48:00-06:00
-excerpt:
+description:
   "In part 1 of this post, I provided my high-level thoughts on doing Test
   Driven Development (TDD) in the real world, but I didn&#39;t get around to
   walking through an actual sample. To start off simple (but still real world),

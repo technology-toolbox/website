@@ -1,7 +1,7 @@
 ---
 title: PowerShell Script for Clearing Windows Event Logs
 date: 2013-05-24T23:01:34-06:00
-excerpt:
+description:
   'Sure, you can just type "wevtutil el | % { wevtutil cl $_ }" whenever you
   feel like it, but how fun is that?!'
 aliases:

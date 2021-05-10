@@ -1,7 +1,7 @@
 ---
 title: Leveraging the Power of Typed DataSets, IEnumerable<>, and LINQ
 date: 2010-04-24T07:59:00-06:00
-excerpt:
+description:
   In my previous post , I extolled my love of typed DataSets in .NET because
   they are not only quick to design and update, but also very easy to
   understand. Essentially, if you can read an entity-relationship model

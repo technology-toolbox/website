@@ -1,7 +1,7 @@
 ---
 title: Internet Explorer 9 Upgrade
 date: 2011-03-16T06:23:00-06:00
-excerpt:
+description:
   Two years ago, I wrote a post about upgrading to Internet Explorer 8 . Well,
   in case you missed the announcement a couple of days ago, Internet Explorer 9
   has been released. Woohoo! It's been a long time coming, but I believe the

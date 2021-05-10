@@ -1,7 +1,7 @@
 ---
 title: Script to Clear (and Save) Event Logs
 date: 2011-03-01T05:37:00-07:00
-excerpt:
+description:
   "As I was writing my first post earlier this morning , I wondered if I had
   previously shared the script I use to quickly clear the event logs on a server
   (but saving them first -- just in case I need to go back and retrieve

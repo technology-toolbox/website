@@ -1,7 +1,7 @@
 ---
 title: New Blog Template and Styling
 date: 2010-04-19T20:25:00-06:00
-excerpt:
+description:
   Last Thursday, I mentioned a problem that would occasionally occur with the
   formatting on my blog posts (but only when viewing the default page -- listing
   the most recent posts -- and not when viewing individual posts). Tonight I

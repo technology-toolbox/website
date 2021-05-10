@@ -5,7 +5,7 @@ categories: ["Infrastructure"]
 description:
   Before googling "Could not get nonce" (like I did), you should first check the
   Let's Encrypt status page or Twitter feed.
-excerpt:
+description:
   Before googling "Could not get nonce" (like I did), you should first check the
   Let's Encrypt status page or Twitter feed.
 images:

@@ -1,7 +1,7 @@
 ---
 title: Enforcing Windows Update via Group Policy
 date: 2009-10-15T04:15:00-06:00
-excerpt:
+description:
   "Another Group Policy object that I use in the \"Jameson Datacenter\" (a.k.a.
   my home lab) is one to automatically configure Windows Update on all computers
   in the domain. This ensures that each server or workstation downloads updates

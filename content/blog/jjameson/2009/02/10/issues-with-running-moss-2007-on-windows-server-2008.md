@@ -1,7 +1,7 @@
 ---
 title: Issues with Running MOSS 2007 on Windows Server 2008
 date: 2009-02-10T17:41:00-07:00
-excerpt:
+description:
   In a previous post , I hinted at some issues that I recently encountered after
   switching from Windows Server 2003 to Windows Server 2008 on my primary
   development VM for Microsoft Office SharePoint Server (MOSS) 2007. To make

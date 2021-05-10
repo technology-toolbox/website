@@ -1,7 +1,7 @@
 ---
 title: Analyzing My MSDN Blog
 date: 2009-11-02T07:42:00-07:00
-excerpt:
+description:
   "According to my blog dashboard, this will be post #150 for my MSDN blog. So
   this morning I thought I would do something a little different by providing
   some analysis on my blog. I extracted the data from Community Server into an

@@ -1,7 +1,7 @@
 ---
 title: Forms-Based Authentication in MOSS 2007 -- The Easy Way
 date: 2010-03-23T09:54:00-06:00
-excerpt:
+description:
   In one of Saturday's posts , I demonstrated how to implement a custom error
   page on an Internet site powered by Microsoft Office SharePoint Server (MOSS)
   2007. For that post I captured various screenshots and sample code from one of

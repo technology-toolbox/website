@@ -1,7 +1,7 @@
 ---
 title: "\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)"
 date: 2010-05-04T08:50:00-06:00
-excerpt:
+description:
   In an earlier post today, I described how I recently upgraded from Team
   Foundation Server 2008 (and Windows SharePoint Services v3) to TFS 2010 (and
   SharePoint Server 2010). While most of the upgrade went fairly smooth, during

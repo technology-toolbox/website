@@ -1,7 +1,7 @@
 ---
 title: Temporary ASP.NET Files Are Not Deleted
 date: 2009-04-01T07:14:00-06:00
-excerpt:
+description:
   "Yesterday afternoon, I discovered that there were 64,725 items (consuming
   2.41 GB) in the C:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\Temporary
   ASP.NET Files\\root folder of my development VM for Microsoft Office

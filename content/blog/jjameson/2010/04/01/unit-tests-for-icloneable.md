@@ -1,7 +1,7 @@
 ---
 title: Unit Tests for ICloneable
 date: 2010-04-01T06:43:00-06:00
-excerpt:
+description:
   A few years ago I developed a class ( SharePointSearchUrlBuilder ) for working
   with SharePoint Search URLs. The class is used to easily build or parse the
   various query string parameters used by SharePoint Search (e.g. keywords,

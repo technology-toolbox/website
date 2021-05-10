@@ -1,7 +1,7 @@
 ---
 title: Using the SharePoint API to Configure an Expiration Policy on a Document Library
 date: 2011-05-05T06:58:00-06:00
-excerpt:
+description:
   "While it typically takes less than a minute or two to configure an expiration
   policy on a SharePoint document library, there may still be reasons why you
   want to do this using the SharePoint object model instead. For example,

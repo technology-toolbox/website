@@ -1,7 +1,7 @@
 ---
 title: Deployment Scripts for SharePoint Server 2010
 date: 2011-02-27T08:19:00-07:00
-excerpt:
+description:
   "A couple of years ago, I shared the scripts I created for deploying solutions
   based on Microsoft Office SharePoint Server (MOSS) 2007, or what I like to
   refer to as the \" DR.DADA approach to SharePoint .\" Well, I probably should

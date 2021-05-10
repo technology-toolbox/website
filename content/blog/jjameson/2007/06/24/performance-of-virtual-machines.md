@@ -1,7 +1,7 @@
 ---
 title: Performance of Virtual Machines
 date: 2007-06-24T08:52:00-06:00
-excerpt:
+description:
   Yesterday I had to rebuild our Test environment (TEST) to replace a VM
   (running on VMWare) with a physical server, due to very poor performance of
   the VM. When I was copying files from the VM to a different server in order to

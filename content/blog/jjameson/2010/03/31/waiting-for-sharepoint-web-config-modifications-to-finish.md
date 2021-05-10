@@ -1,7 +1,7 @@
 ---
 title: Waiting for SharePoint Web.config Modifications to Finish
 date: 2010-03-31T08:38:00-06:00
-excerpt:
+description:
   This week I finally got around to fixing a bug that would occasionally occur
   when deploying our solution based on Microsoft Office SharePoint Server (MOSS)
   2007. In the solution we use a variety of different features to configure

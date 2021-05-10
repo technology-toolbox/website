@@ -1,7 +1,7 @@
 ---
 title: Recurring Tasks in Team Foundation Server
 date: 2010-12-03T13:03:00-07:00
-excerpt:
+description:
   While the vast majority of work items created for each iteration (sprint) are
   unique and therefore require some planning effort beforehand, I've gotten into
   the habit of creating a few recurring tasks in TFS each time I start a new

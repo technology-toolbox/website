@@ -1,7 +1,7 @@
 ---
 title: Suppress CS1607 Warning for TFS 2010 Builds
 date: 2010-05-05T06:32:00-06:00
-excerpt:
+description:
   Here's another issue I encountered when upgrading my Team Foundation Server
   (TFS) 2008 environment to TFS 2010 ... While it's generally a good assumption
   that a solution that builds without error in Visual Studio 2008 (and on a TFS

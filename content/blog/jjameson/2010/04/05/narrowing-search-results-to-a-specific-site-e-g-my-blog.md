@@ -1,7 +1,7 @@
 ---
 title: Narrowing Search Results to a Specific Site (e.g. My Blog)
 date: 2010-04-05T11:58:00-06:00
-excerpt:
+description:
   A colleague asked me today if there was a way to search my blog for something
   specific. In my response, I pointed out that you can narrow your search
   results from Bing to a specific site. For example, suppose you were looking

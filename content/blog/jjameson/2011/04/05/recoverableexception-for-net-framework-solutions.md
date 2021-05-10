@@ -1,7 +1,7 @@
 ---
 title: RecoverableException for .NET Framework Solutions
 date: 2011-04-05T05:38:00-06:00
-excerpt:
+description:
   "Do you remember the good ol' days before the ApplicationException class in
   the .NET Framework became \" persona non grata \"? I sure do. If you were to
   look at .NET code that I wrote years ago, you'd probably see

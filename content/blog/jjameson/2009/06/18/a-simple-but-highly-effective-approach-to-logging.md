@@ -1,7 +1,7 @@
 ---
 title: A Simple, but Highly Effective Approach to Logging
 date: 2009-06-18T16:01:00-06:00
-excerpt:
+description:
   A common question that frequently arises both with customers and fellow
   consultants is what do I recommend for logging? As experienced software
   developers, we know that there are going to be errors in our solution -- as

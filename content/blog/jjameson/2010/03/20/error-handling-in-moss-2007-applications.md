@@ -1,7 +1,7 @@
 ---
 title: Error Handling in MOSS 2007 Applications
 date: 2010-03-20T16:06:00-06:00
-excerpt:
+description:
   In my previous post , I described the enhancements to my original Logger class
   for logging exceptions in a consistent fashion. While error handling in .NET
   console applications and ASP.NET Web applications is fairly straightforward,

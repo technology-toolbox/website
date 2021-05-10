@@ -1,7 +1,7 @@
 ---
 title: Avoid Extraneous Database Roundtrips in SharePoint PublishingPageCollection.Item Property
 date: 2010-09-12T06:38:00-06:00
-excerpt:
+description:
   In my previous post , I explained how I analyze database roundtrips using SQL
   Server Profiler in order to identify potential performance issues. While
   working on some proof-of-concept code for my current project, I found the

@@ -1,7 +1,7 @@
 ---
 title: Database Default Locations in SQL Server
 date: 2009-12-03T05:30:00-07:00
-excerpt:
+description:
   "I've mentioned before the importance of using multiple \"spindles\" when
   working with large SQL Server databases. Generally speaking, the
   recommendation is to use different RAID 1+0 arrays for data and log files --

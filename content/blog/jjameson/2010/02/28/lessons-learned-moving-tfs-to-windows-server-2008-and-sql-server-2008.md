@@ -1,7 +1,7 @@
 ---
 title: Lessons Learned Moving TFS to Windows Server 2008 and SQL Server 2008
 date: 2010-02-28T12:40:00-07:00
-excerpt:
+description:
   I've been a bad blogger this month. Almost a month ago, I wrote a post about
   using Web standards with Microsoft Office SharePoint Server (MOSS) 2007 , but
   I noted that there would be more to come on that subject in the near future.

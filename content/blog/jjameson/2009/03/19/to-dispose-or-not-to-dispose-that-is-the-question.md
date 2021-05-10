@@ -1,7 +1,7 @@
 ---
 title: To Dispose or not to Dispose -- that is the question
 date: 2009-03-19T08:26:00-06:00
-excerpt:
+description:
   "Last Saturday, another team member sent an email out to the team inquiring
   about the \"MOSS object disposal problem\" (as he termed it). Essentially, he
   was asking if anytime he referenced the ParentWeb property on an object,

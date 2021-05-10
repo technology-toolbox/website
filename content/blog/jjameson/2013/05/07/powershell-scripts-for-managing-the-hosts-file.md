@@ -1,7 +1,7 @@
 ---
 title: PowerShell Scripts for Managing the Hosts File
 date: 2013-05-07T23:01:18-06:00
-excerpt:
+description:
   Here's a set of scripts to make it easier to view the hostname mappings in the
   hosts file, as well as add and remove hostnames.
 aliases:

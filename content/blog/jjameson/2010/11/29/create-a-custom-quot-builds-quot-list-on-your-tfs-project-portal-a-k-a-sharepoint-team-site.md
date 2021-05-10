@@ -1,7 +1,7 @@
 ---
 title: "Create a Custom \"Builds\" List on Your TFS Project Portal (a.k.a. SharePoint Team Site)"
 date: 2010-11-29T06:11:00-07:00
-excerpt:
+description:
   "One of \"tweaks\" that I commonly make to the SharePoint team site created
   for each project in Team Foundation Server is to create a custom list to track
   the important builds for the project (typically corresponding to each

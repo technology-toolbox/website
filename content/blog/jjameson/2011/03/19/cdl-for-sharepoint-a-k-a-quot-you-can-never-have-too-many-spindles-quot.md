@@ -1,7 +1,7 @@
 ---
 title: "CDL for SharePoint (a.k.a. \"You can never have too many spindles\")"
 date: 2011-03-19T04:55:00-06:00
-excerpt:
+description:
   "In the United States, \"CDL\" typically refers to a Commercial Driver's
   License -- but since I don't drive trucks for a living, I use the acronym for
   something entirely different. To me, these three letters correspond to the

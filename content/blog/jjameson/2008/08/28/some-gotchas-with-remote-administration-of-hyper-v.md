@@ -1,7 +1,7 @@
 ---
 title: Some Gotchas with Remote Administration of Hyper-V
 date: 2008-08-28T08:41:00-06:00
-excerpt:
+description:
   As I mentioned in my previous post , last month I built out a new virtual
   environment using Hyper-V on Server Core. Since you can't run MMC -- and
   therefore Hyper-V Manager -- on Server Core, you need to use remote

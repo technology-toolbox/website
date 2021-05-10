@@ -1,7 +1,7 @@
 ---
 title: No Error Displayed When Database Update Fails
 date: 2007-05-06T08:38:00-06:00
-excerpt:
+description:
   Here’s a nasty bug that I ran into about three weeks ago... If you attempt to
   modify a view on a list in Microsoft Office SharePoint Server (MOSS) 2007, but
   SharePoint is unable to save your changes to the database, no error is

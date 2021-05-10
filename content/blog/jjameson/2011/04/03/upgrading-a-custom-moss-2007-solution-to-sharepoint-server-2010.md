@@ -1,7 +1,7 @@
 ---
 title: Upgrading a Custom MOSS 2007 Solution to SharePoint Server 2010
 date: 2011-04-03T04:59:00-06:00
-excerpt:
+description:
   "In yesterday's post , I provided a custom SharePoint Server 2010 solution
   based on Dan Cederholm's sample site for the fictitious Tugboat Coffee company
   (from his book Handcrafted CSS : More Bulletproof Web Design ). Since I had

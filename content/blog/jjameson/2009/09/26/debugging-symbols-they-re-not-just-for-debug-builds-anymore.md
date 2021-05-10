@@ -1,7 +1,7 @@
 ---
 title: Debugging Symbols -- They're Not Just for Debug Builds Anymore
 date: 2009-09-26T08:20:00-06:00
-excerpt:
+description:
   I started another new project this week. Typically one of the first tasks on
   any new development project is to create a Development Plan that provides
   consistent guidelines and processes for the Development team. On this new

@@ -1,7 +1,7 @@
 ---
 title: Incrementing the Assembly Version for Each Build in TFS 2010
 date: 2010-11-29T16:18:00-07:00
-excerpt:
+description:
   "Update (2010-12-03) If you are using gated check-ins, be sure to also read my
   follow-up post: Bypassing a Gated Check-in in TFS 2010
   http://blogs.msdn.com/b/jjameson/archive/2010/12/03/bypassing-a-gated-check-in-in-tfs-2010.aspx

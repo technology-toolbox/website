@@ -1,7 +1,7 @@
 ---
 title: Expression Web, My MSDN Blog, and (Now) Team Foundation Server
 date: 2009-09-12T09:17:00-06:00
-excerpt:
+description:
   "In case you haven't picked it up from some of my previous posts, I became
   somewhat of a \"Web standards zealot\" back in 2006 while creating a
   \"community site\" for a local organization of mental health professionals and

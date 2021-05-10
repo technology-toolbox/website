@@ -1,7 +1,7 @@
 ---
 title: What's in your Jump List?
 date: 2011-03-05T04:05:00-07:00
-excerpt:
+description:
   Nearly three years ago, I wrote a post that described the BackedUp and
   NotBackedUp folders I use on almost every computer I ever log on to (my
   laptop, desktop, a handful of servers, and more than a dozen VMs). I also

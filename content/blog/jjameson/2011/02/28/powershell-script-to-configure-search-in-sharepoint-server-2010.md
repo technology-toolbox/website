@@ -1,7 +1,7 @@
 ---
 title: PowerShell Script to Configure Search in SharePoint Server 2010
 date: 2011-02-28T04:48:00-07:00
-excerpt:
+description:
   This morning I thought I'd share one more very useful PowerShell script for
   SharePoint Server 2010. When using Central Administration and/or the Farm
   Configuration Wizard to create and configure the Search Service Application,

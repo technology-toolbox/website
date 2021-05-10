@@ -1,7 +1,7 @@
 ---
 title: An Update on Disk Space Usage by Windows Vista
 date: 2008-02-17T20:35:00-07:00
-excerpt:
+description:
   "Today I rebuilt my laptop to allow me to dual boot between Windows Server
   2008 and Windows Vista. To enable this configuration, I created the following
   partions on my hard drive: 20 GB - Windows Server 2008 x64 20 GB - Windows

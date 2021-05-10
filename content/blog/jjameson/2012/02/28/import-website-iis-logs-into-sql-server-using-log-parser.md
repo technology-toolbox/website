@@ -1,7 +1,7 @@
 ---
 title: Import website (IIS) logs into SQL Server using Log Parser and PowerShell
 date: 2012-02-28T23:26:57-07:00
-excerpt:
+description:
   "Here's a little PowerShell script I whipped up to import the
   TechnologyToolbox.com log files into a SQL Server database for some \"quick
   and dirty\" analysis."

@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint 2010 Solutions on a TFS 2010 Build Server
 date: 2011-02-27T03:41:00-07:00
-excerpt:
+description:
   'Last year I wrote a post about building Microsoft Office SharePoint Server
   (MOSS) 2007 solutions on a Team Foundation Server (TFS) 2010 build server ,
   which talked about copying various SharePoint assemblies to a "Reference

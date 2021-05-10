@@ -1,7 +1,7 @@
 ---
 title: Leaving Microsoft
 date: 2011-08-22T06:03:00-06:00
-excerpt:
+description:
   Last Thursday, I informed my manager that I have decided to leave Microsoft to
   pursue other opportunities. My last day will be September 2nd -- just a few
   days shy of my 11 year anniversary date with the company (my first day was

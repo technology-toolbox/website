@@ -1,7 +1,7 @@
 ---
 title: My Initial Thoughts on Microsoft Visual Studio Scrum 1.0 (TFS 2010 Process Template)
 date: 2010-12-02T11:26:00-07:00
-excerpt:
+description:
   "I've been using the new Scrum template for Team Foundation Server 2010 for a
   little over three weeks now -- not on a real project, admittedly, but rather
   on a sample project that I've been working on. [On the customer project that

@@ -1,7 +1,7 @@
 ---
 title: "\"Incorrect syntax near 'COLLATE'.\" Error When Trying to Join a SharePoint Farm"
 date: 2007-08-21T07:32:00-06:00
-excerpt:
+description:
   I encountered another nasty bug this morning while rebuilding our Microsoft
   Office SharePoint Server (MOSS) 2007 Development environment (DEV). Since the
   time I originally created DEV, I installed SQL Server SP2 and also restored

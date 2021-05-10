@@ -1,7 +1,7 @@
 ---
 title: '"Git" Your (Infrastructure) Act Together'
 date: 2021-04-30T11:27:13-06:00
-excerpt:
+description:
   Last year I migrated a relatively large OneNote notebook to Markdown -- which
   anyone can access on GitHub. Here is a little background on why this was done
   and how things improved as a result.

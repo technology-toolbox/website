@@ -1,7 +1,7 @@
 ---
 title: "Bug: HTTP 403 (Forbidden) with FBA SharePoint Site"
 date: 2010-01-07T07:29:00-07:00
-excerpt:
+description:
   We recently encountered a bug when trying to access a SharePoint site
   configured with Forms-Based Authentication from Internet Explorer. The root
   site is restricted to authenticated users, whereas the /Public site is

@@ -1,7 +1,7 @@
 ---
 title: Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 3 - Quick Launch Navigation
 date: 2010-05-17T18:49:00-06:00
-excerpt:
+description:
   Update (2010-05-20) I made some changes to correct a few issues and also to
   include the final version of the XML input file that I used to update my TFS
   project sites. In my previous post , I showed how you can use PowerShell to

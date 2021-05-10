@@ -1,7 +1,7 @@
 ---
 title: "\"Inheriting\" the Master Page from the Current Site Context in MOSS 2007"
 date: 2009-09-20T09:58:00-06:00
-excerpt:
+description:
   "In my previous post , I showed how you can override the hard-coded
   \"application.master\" in Microsoft Office SharePoint Server (MOSS) 2007
   application pages (e.g. /Library/_layouts/viewlsts.aspx). Note that for custom

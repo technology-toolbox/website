@@ -1,7 +1,7 @@
 ---
 title: "\"Build Bloat\", Part 2 (a.k.a. Removing Extraneous Items from SharePoint Visual Studio Projects)"
 date: 2011-03-14T06:54:00-06:00
-excerpt:
+description:
   "Last week I received a \"Logical Disk Free Space is low\" alert from
   Operations Manager for my TFS 2010 build server (DAZZLER). After a few minutes
   investigating the issue, I discovered that my \"Builds\" folder was consuming

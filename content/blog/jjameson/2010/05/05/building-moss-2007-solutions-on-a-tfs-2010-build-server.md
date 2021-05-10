@@ -1,7 +1,7 @@
 ---
 title: Building MOSS 2007 Solutions on a TFS 2010 Build Server
 date: 2010-05-05T04:15:00-06:00
-excerpt:
+description:
   After upgrading my Team Foundation Server (TFS) 2008 environment to TFS 2010 ,
   my next step was to upgrade various Visual Studio solutions to the 2010
   version and ensure they built successfully after the upgrade. Note that during

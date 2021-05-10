@@ -1,7 +1,7 @@
 ---
 title: Blog Sabbatical
 date: 2013-04-30T22:50:22-06:00
-excerpt:
+description:
   Wondering why there was a long gap between my previous two blog posts? Give me
   a few minutes, and I'll get you caught up on what I've been doing for the past
   year.

@@ -1,7 +1,7 @@
 ---
 title: Comparing Source Code Branches
 date: 2009-09-16T07:54:00-06:00
-excerpt:
+description:
   During the more than three years I spent helping Agilent Technologies migrate
   their Internet site from their legacy, proprietary platform to Microsoft
   Office SharePoint Server (MOSS) 2007, we unfortunately never used Team

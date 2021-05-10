@@ -1,7 +1,7 @@
 ---
 title: Introducing the SharePointPublishingHelper Class
 date: 2009-10-09T07:19:00-06:00
-excerpt:
+description:
   In my previous post , I described a utility to import pages into Microsoft
   Office SharePoint Server (MOSS) 2007 from an Excel input file. Aside from the
   code to read data from the input file into a DataSet, the main work is

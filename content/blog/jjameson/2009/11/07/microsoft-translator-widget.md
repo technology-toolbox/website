@@ -1,7 +1,7 @@
 ---
 title: Microsoft Translator Widget
 date: 2009-11-07T05:05:00-07:00
-excerpt:
+description:
   This week I stumbled upon the new (and very cool) Microsoft Translator Widget
   . Actually, this isn't really new (apparently it has been available for over
   six months now) but it was certainly new to me. A colleague of mine on a
