@@ -1,7 +1,7 @@
 ---
 title: Deleting Variation Labels Does Not Delete Underlying Sites
 date: 2007-11-28T08:01:00-07:00
-excerpt:
+description:
   I've received a number of responses to my series on the problems we
   encountered with Microsoft Office SharePoint Server (MOSS) 2007 variations.
   Several people have inquired about how to disable variations without losing

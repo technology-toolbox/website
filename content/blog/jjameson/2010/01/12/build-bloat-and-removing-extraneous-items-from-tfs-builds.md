@@ -1,7 +1,7 @@
 ---
 title: "\"Build Bloat\" and Removing Extraneous Items from TFS Builds"
 date: 2010-01-12T08:26:00-07:00
-excerpt:
+description:
   This week I am wrapping up the third sprint (a.k.a. iteration or milestone )
   on my current Microsoft Office SharePoint Server (MOSS) 2007 project.
   Although, honestly, I wasn't involved all that much in Sprint-3, since I was

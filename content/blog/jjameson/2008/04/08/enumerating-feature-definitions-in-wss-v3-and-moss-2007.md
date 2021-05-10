@@ -1,7 +1,7 @@
 ---
 title: Enumerating Feature Definitions in WSS v3 and MOSS 2007
 date: 2008-04-08T18:39:00-06:00
-excerpt:
+description:
   'There might be occasions where you need to "decode" the feature GUID in
   Windows SharePoint Services (WSS) v3 or Microsoft Office SharePoint Server
   (MOSS) 2007. For these (admittedly rare) situations, I have attached an Excel

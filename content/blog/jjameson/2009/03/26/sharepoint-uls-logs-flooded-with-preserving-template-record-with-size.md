@@ -1,7 +1,7 @@
 ---
 title: "SharePoint ULS Logs Flooded with \"Preserving template record with size...\""
 date: 2009-03-26T08:07:00-06:00
-excerpt:
+description:
   "I was digging through my blog dashboard this morning and I came across this
   post that I started back in January but apparently never got it past \"draft
   mode.\" I figured it was time to finish it off. If you've been using Windows

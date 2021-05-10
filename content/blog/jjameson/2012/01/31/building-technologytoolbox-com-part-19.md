@@ -1,7 +1,7 @@
 ---
 title: More bug fixes for Subtext now available on GitHub (a.k.a. Building TechnologyToolbox.com, part 19)
 date: 2012-01-31T10:10:36-07:00
-excerpt:
+description:
   In addition to the trivial bug fix that I mentioned in last night's post, I
   have merged a number of other changes into my Subtext fork on GitHub.
 aliases:

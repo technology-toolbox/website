@@ -1,7 +1,7 @@
 ---
 title: "The Original \"Jameson Datacenter\""
 date: 2009-10-24T05:18:00-06:00
-excerpt:
+description:
   "This morning I was doing some cleanup of my documents folder and I stumbled
   across a rather old Visio document that showed the beginnings of what I now
   refer to as the \"Jameson Datacenter\" (a.k.a. my home lab). For some geeky

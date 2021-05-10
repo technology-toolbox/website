@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Layout Problems with Safari
 date: 2009-10-29T04:57:00-06:00
-excerpt:
+description:
   I discovered a rather nasty UI bug last week with the new portal we are
   building for a customer. Unfortunately, the layout issue only occurred in the
   Safari browser. Even worse, I discovered it only a day before the CEO of

@@ -1,7 +1,7 @@
 ---
 title: "Why choose \"Server Core\" installation of Windows Server 2008?"
 date: 2009-06-04T19:12:00-06:00
-excerpt:
+description:
   "If you ever find yourself looking for reasons or evidence why you should
   choose the \"Server Core\" installation option for Windows Server 2008, try
   searching for the following: \"Windows Server 2008 Server Core installation

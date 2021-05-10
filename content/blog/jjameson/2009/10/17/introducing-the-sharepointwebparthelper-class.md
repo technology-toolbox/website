@@ -1,7 +1,7 @@
 ---
 title: Introducing the SharePointWebPartHelper Class
 date: 2009-10-17T04:54:00-06:00
-excerpt:
+description:
   In a previous post, I introduced the DR.DADA approach to SharePoint
   development and how I typically use the concept of a FeatureConfigurator to
   automatically configure one or more aspects of a SharePoint site when

@@ -1,7 +1,7 @@
 ---
 title: Variation Logs Paging Bug
 date: 2007-10-27T08:01:00-06:00
-excerpt:
+description:
   "It's embarrassing how my blog posts rapidly died off after this past June.
   However it's even more embarrassing to disclose the paging bug when viewing
   the Variation Logs page in Microsoft Office SharePoint Server (MOSS) 2007. [By

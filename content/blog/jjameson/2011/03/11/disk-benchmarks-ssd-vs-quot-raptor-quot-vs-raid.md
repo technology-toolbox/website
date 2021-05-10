@@ -1,7 +1,7 @@
 ---
 title: "Disk Benchmarks: SSD vs. \"Raptor\" vs. RAID"
 date: 2011-03-11T08:00:00-07:00
-excerpt:
+description:
   Earlier this week, I posted about how I rebuilt my Windows 7 desktop while
   installing a new solid-state drive (SSD). This morning, I thought I would
   share some performance numbers that I gathered from the various disk

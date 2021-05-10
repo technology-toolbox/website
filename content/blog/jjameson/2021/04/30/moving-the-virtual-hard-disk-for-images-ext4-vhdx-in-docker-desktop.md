@@ -1,7 +1,7 @@
 ---
 title: "Moving the Virtual Hard Disk for Images (ext4.vhdx) in Docker Desktop"
 date: 2021-04-30T11:39:05-06:00
-excerpt:
+description:
   "Are you a little irritated that Docker Desktop is consuming a large chunk of
   your C: drive? Don't fret, you can easily resolve the issue -- provided you
   have another disk available."

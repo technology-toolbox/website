@@ -1,7 +1,7 @@
 ---
 title: Analyzing Database Roundtrips with SQL Server Profiler
 date: 2010-09-03T04:50:00-06:00
-excerpt:
+description:
   "One of the \"good habits\" I've developed over the years while creating
   applications is scrutinizing the interaction between logical or physical
   tiers. Given the nature of solutions that I'm typically involved with, this

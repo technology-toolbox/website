@@ -1,7 +1,7 @@
 ---
 title: Reusable Content in SharePoint Publishing HTML Fields, Part 3
 date: 2011-04-14T05:56:00-06:00
-excerpt:
+description:
   In part 2 of this series , I explained how to programmatically add a new
   Reusable Content list item and subsequently add it to a Publishing HTML field
   on a page. I also provided a complete sample for SharePoint 2010 that

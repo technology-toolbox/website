@@ -1,7 +1,7 @@
 ---
 title: Excluding Various SharePoint Items from Search Results on Internet-Facing MOSS Sites
 date: 2009-03-05T08:25:00-07:00
-excerpt:
+description:
   When using Microsoft Office SharePoint Server (MOSS) 2007 on an
   Internet-facing site, you almost certainly don't want to include items like
   announcements, contacts, etc. in search results. Consequently, I recommend

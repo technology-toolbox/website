@@ -1,7 +1,7 @@
 ---
 title: "Hyper-V: Getting Host Information from the Guest VM"
 date: 2010-03-18T11:32:00-06:00
-excerpt:
+description:
   "While working on some documentation today, I wanted to know the names of the
   Hyper-V servers running the various VMs for our Development and Test
   environments. [These VMs are running in a Microsoft datacenter on the other

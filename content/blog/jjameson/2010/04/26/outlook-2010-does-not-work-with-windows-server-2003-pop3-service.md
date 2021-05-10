@@ -1,7 +1,7 @@
 ---
 title: Outlook 2010 Does Not Work with Windows Server 2003 POP3 Service
 date: 2010-04-26T06:55:00-06:00
-excerpt:
+description:
   I've mentioned in the past how I run a Windows Server 2003 mail server in
   order to use the POP3 service for basic e-mail functionality, and that I
   didn't have any interest in finding an alternative when I discovered POP3 is

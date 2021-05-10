@@ -1,7 +1,7 @@
 ---
 title: "Avoid Issues with Caching by Using \"Theme Versions\""
 date: 2010-11-16T16:45:00-07:00
-excerpt:
+description:
   "In a previous post discussing Web standards design, I mentioned how I like to
   use \"Theme\" folders to organize CSS files and related images that define a
   specific look-and-feel for a site. For example, suppose we are tasked with

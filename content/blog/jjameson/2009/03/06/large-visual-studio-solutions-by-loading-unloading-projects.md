@@ -1,7 +1,7 @@
 ---
 title: Large Visual Studio Solutions and Loading/Unloading Projects
 date: 2009-03-06T10:03:00-07:00
-excerpt:
+description:
   "As I noted in my previous post , I typically work with \"large\" Visual
   Studio solutions. Note that I put this in quotes, because the definition of
   \"large\" will likely vary widely based on your individual experience. Note

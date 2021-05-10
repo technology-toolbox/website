@@ -1,7 +1,7 @@
 ---
 title: Website style guide, custom CSS classes, and HTML snippets
 date: 2012-02-19T02:17:03-07:00
-excerpt:
+description:
   "If, like me, you use Expression Web to author HTML content, then I hope you
   take advantage of the \"Snippets\" feature."
 aliases:

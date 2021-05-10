@@ -1,7 +1,7 @@
 ---
 title: HVRemote and Remote Administration of Hyper-V from Windows 7
 date: 2009-10-08T06:21:00-06:00
-excerpt:
+description:
   "Last Sunday, I rebuilt my desktop ( WOLVERINE ) with the RTM build of Windows
   7 Ultimate (x64). Previously, I'd been running the RC1 bits and I figured it
   was about time I got around to \"upgrading\" to the RTM version. [I say

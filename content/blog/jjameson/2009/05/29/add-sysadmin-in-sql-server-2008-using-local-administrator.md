@@ -1,7 +1,7 @@
 ---
 title: Add sysadmin in SQL Server 2008 Using Local Administrator
 date: 2009-05-29T07:44:00-06:00
-excerpt:
+description:
   A couple of months ago, I had to SysPrep a copy of one of my VMs in order to
   remove dependencies on my home domain (I had to work out of the Microsoft
   office for a couple of days because my DSL router cratered). However, while

@@ -1,7 +1,7 @@
 ---
 title: A Better Way to Build SharePoint Solution Packages (and CAB Files)
 date: 2008-04-10T17:28:00-06:00
-excerpt:
+description:
   Up until about an hour ago, I'd been using post-build events on my Visual
   Studio projects to create SharePoint solution packages (WSPs). However, while
   this worked reasonably well, this method always bothered me a little because

@@ -1,7 +1,7 @@
 ---
 title: Creating a Site Template in MOSS 2007 that Works in WSS v3
 date: 2008-04-08T20:35:00-06:00
-excerpt:
+description:
   "Shortly after publishing my previous post covering \"TFS Lite\" for WSS v3 ,
   Dragan Panjkov noted that attempting to create a new site in WSS v3 using the
   site template that I originally provided resulted in the following error: The

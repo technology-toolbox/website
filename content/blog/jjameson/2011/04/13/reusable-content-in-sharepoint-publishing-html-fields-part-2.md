@@ -1,7 +1,7 @@
 ---
 title: Reusable Content in SharePoint Publishing HTML Fields, Part 2
 date: 2011-04-13T18:06:00-06:00
-excerpt:
+description:
   "In my previous post , I introduced a scenario for using the \"Reusable
   Content\" feature in Microsoft Office SharePoint Server (MOSS) 2007 and
   SharePoint Server 2010. In this post, I show you how to programmatically add

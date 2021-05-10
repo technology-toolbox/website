@@ -1,7 +1,7 @@
 ---
 title: Localization and SharePoint Solutions, Part 3 (a.k.a. use field IDs whenever possible)
 date: 2011-04-06T04:45:00-06:00
-excerpt:
+description:
   In part 1 of this series , I mentioned that one of the options for creating
   SharePoint sites in multiple languages is to install the corresponding
   SharePoint language packs prior to creating the sites. This is the most common

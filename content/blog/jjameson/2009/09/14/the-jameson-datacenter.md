@@ -1,7 +1,7 @@
 ---
 title: 'The "Jameson Datacenter"'
 date: 2009-09-14T07:53:00-06:00
-excerpt: 'Back in a post from February 2008, I first referred to the "Jameson
+description: 'Back in a post from February 2008, I first referred to the "Jameson
   Datacenter" while discussing one of the servers running in my basement. Since
   then I''ve referenced my home lab about a dozen times in different posts but
   never provided significant details...'

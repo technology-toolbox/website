@@ -1,7 +1,7 @@
 ---
 title: Extraneous SharePoint Assemblies
 date: 2009-03-30T08:10:00-06:00
-excerpt:
+description:
   If you develop solutions for Microsoft Office SharePoint Server (MOSS) 2007,
   you may notice that certain SharePoint assemblies always get copied to your
   Visual Studio project output folder even though these referenced assemblies

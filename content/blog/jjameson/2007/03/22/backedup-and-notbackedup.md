@@ -1,7 +1,7 @@
 ---
 title: BackedUp and NotBackedUp
 date: 2007-03-22T03:59:00-06:00
-excerpt:
+description:
   About four years ago, one of the partners that I was working on an engagement
   with commented on how developers tend to have their own unique way of managing
   files, but that mine was one of the most bizarre he had ever seen. It has been

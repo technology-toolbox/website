@@ -2,7 +2,7 @@
 title: An Update on the Effectiveness of MaxPatchCacheSize
 date: 2013-05-06T23:22:03-06:00
 lastmod: 2013-05-06T23:25:31-06:00
-excerpt:
+description:
   Wondering where all the precious free space in your SSD went? Well, here are a
   few possibilities.
 aliases:

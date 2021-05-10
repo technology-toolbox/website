@@ -1,7 +1,7 @@
 ---
 title: "\"Development Cheat Sheets\""
 date: 2013-05-01T01:00:45-06:00
-excerpt:
+description:
   "In this post, I explain how I like to use Microsoft OneNote to manage what I
   call \"development cheat sheets\" -- which are especially useful when
   developing SharePoint solutions."

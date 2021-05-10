@@ -1,7 +1,7 @@
 ---
 title: '"Web-Enabled" Projects and F5 Debugging with SharePoint'
 date: 2009-09-29T09:07:00-06:00
-excerpt:
+description:
   'In yesterday''s post , I provided a sample walkthrough of the "DR.DADA"
   approach to developing solutions for Microsoft Office SharePoint Server (MOSS)
   2007. However, I intentionally left out a few things because a) that post was

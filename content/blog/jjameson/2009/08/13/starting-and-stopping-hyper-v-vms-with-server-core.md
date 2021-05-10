@@ -1,7 +1,7 @@
 ---
 title: Starting and Stopping Hyper-V VMs with Server Core
 date: 2009-08-13T11:21:00-06:00
-excerpt:
+description:
   "Last week before heading out to the airport for my SharePoint 2010 training,
   I powered down the \"Jameson Datacenter\" (i.e. the four computers running in
   my home office). Since I would be gone for almost 8 full days, it didn't make

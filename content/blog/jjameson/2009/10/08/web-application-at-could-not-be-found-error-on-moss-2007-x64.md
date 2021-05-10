@@ -1,7 +1,7 @@
 ---
 title: '"Web application at ... could not be found" Error on MOSS 2007 x64'
 date: 2009-10-08T08:49:00-06:00
-excerpt:
+description:
   I encountered a rather nasty bug last week with Microsoft Office SharePoint
   Server (MOSS) 2007 when trying to run an x86 process (that utilizes the
   SharePoint API) on an x64 server. To provide the simplest repro possible, I

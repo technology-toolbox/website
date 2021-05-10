@@ -1,7 +1,7 @@
 ---
 title: Escaping from Double-Click Purgatory
 date: 2009-12-01T05:37:00-07:00
-excerpt:
+description:
   A few weeks ago I started experiencing an incredibly frustrating problem on my
   laptop. When I clicked the mouse , instead of responding with a single-click
   (e.g. to select an item), it acted as if I double-clicked the mouse button. At

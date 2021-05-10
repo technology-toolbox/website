@@ -1,7 +1,7 @@
 ---
 title: Operations Manager Alerts for Event Log Errors
 date: 2011-03-18T06:14:00-06:00
-excerpt:
+description:
   'One of the things I like most about running System Center Operations Manager
   in the "Jameson Datacenter" (a.k.a. my home lab) is that it greatly reduces
   the amount of effort required to monitor numerous servers. For example, in my

@@ -1,7 +1,7 @@
 ---
 title: Tips & Tricks for Running PowerShell Scripts as Scheduled Tasks
 date: 2011-11-19T02:26:24-07:00
-excerpt:
+description:
   In my previous post, I described the PowerShell script used to rebuild the
   Development environment for TechnologyToolbox.com on a daily basis. This post
   explains the subtleties of running the script -- or, more generally, any

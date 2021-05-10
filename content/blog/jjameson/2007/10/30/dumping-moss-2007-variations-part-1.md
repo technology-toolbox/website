@@ -1,7 +1,7 @@
 ---
 title: Dumping MOSS 2007 Variations - Part 1
 date: 2007-10-30T08:56:00-06:00
-excerpt:
+description:
   Shortly before I headed out to the airport last Wednesday, I received the
   fateful email from my customer notifying us that they have decided to abandon
   using the variations feature in Microsoft Office SharePoint Server (MOSS)

@@ -1,7 +1,7 @@
 ---
 title: AutoEventWireup Issue in MOSS 2007
 date: 2009-11-08T18:15:00-07:00
-excerpt:
+description:
   "I recently promised to finish this blog post that has been sitting in
   \"unpublished\" status since June 2008, so here it is... Have you ever
   encountered the following error in Microsoft Office SharePoint Server (MOSS)

@@ -1,7 +1,7 @@
 ---
 title: 'Active Directory Domain Structure in the "Jameson Datacenter"'
 date: 2009-10-02T07:50:00-06:00
-excerpt:
+description:
   'In a previous post, I provided some details on the "Jameson Datacenter" ,
   which is really just my home lab that I use for learning new technologies and
   improving my skills, as well as actually completing my day-to-day tasks on

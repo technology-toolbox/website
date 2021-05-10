@@ -1,7 +1,7 @@
 ---
 title: Recovering Your Work After an Expression Web Crash
 date: 2010-10-24T10:02:00-06:00
-excerpt:
+description:
   I am getting a little tired of Expression Web 4 crashing on me. I'm not sure
   why I'm repeatedly encountering issues with the latest version of Expression
   Web, but I suspect -- given the frequency at which it is crashing -- it may

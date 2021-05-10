@@ -1,7 +1,7 @@
 ---
 title: SharePoint Configuration Wizard Hangs with IPv6 Address
 date: 2009-01-15T17:20:00-07:00
-excerpt:
+description:
   'I came back from a nice long vacation only to find that my local development
   VM for Microsoft Office SharePoint Server (MOSS) 2007 was corrupted. By
   "corrupted", I mean to say there were lots of errors in the event log about

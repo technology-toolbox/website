@@ -1,7 +1,7 @@
 ---
 title: Supportability Concerns with Custom HTTP Modules in SharePoint
 date: 2009-11-07T05:34:00-07:00
-excerpt:
+description:
   I am sure that I'm not the first one to tell you this, but you can't believe
   everything you read on the Internet these days ;-) Case in point...I've seen a
   number of sources claim that custom HTTP modules are not supported in

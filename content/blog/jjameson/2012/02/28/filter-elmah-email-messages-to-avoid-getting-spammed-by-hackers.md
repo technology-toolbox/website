@@ -1,7 +1,7 @@
 ---
 title: Filter ELMAH email messages to avoid getting spammed by hackers
 date: 2012-02-28T13:24:53-07:00
-excerpt:
+description:
   I finally got around to configuring an ELMAH filter for the
   TechnologyToolbox.com website (so I wouldn't be bothered by frequent email
   messages due to failed hack attempts). During the process, I also discovered a

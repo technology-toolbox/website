@@ -1,7 +1,7 @@
 ---
 title: Essential Add-Ins for Team Foundation Server
 date: 2009-10-25T07:32:00-06:00
-excerpt:
+description:
   In a previous post , I mentioned how I use SourceGear's DiffMerge instead of
   the out-of-the-box tool that comes with Team Foundation Server (which is also
   called DiffMerge). If you haven't at least evaluated the SourceGear

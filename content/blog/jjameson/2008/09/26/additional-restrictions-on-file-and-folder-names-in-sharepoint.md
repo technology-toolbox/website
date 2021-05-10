@@ -1,7 +1,7 @@
 ---
 title: Additional Restrictions on File and Folder Names in SharePoint
 date: 2008-09-26T11:03:00-06:00
-excerpt:
+description:
   Up until this morning, I thought I knew what the restrictions were for file
   and folder names in Windows SharePoint Services 3.0 (WSS v3) and Microsoft
   Office SharePoint Server 2007 (MOSS 2007). However, I learned the hard way

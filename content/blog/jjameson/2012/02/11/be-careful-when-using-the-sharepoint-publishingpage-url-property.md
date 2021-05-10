@@ -1,7 +1,7 @@
 ---
 title: Be careful when using the SharePoint PublishingPage.Url property
 date: 2012-02-11T01:17:16-07:00
-excerpt:
+description:
   Intellisense isn't helpful when the underlying XML documentation in the code
   is wrong.
 aliases:

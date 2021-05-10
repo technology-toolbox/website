@@ -1,7 +1,7 @@
 ---
 title: SQL Server Authentication Modes
 date: 2007-03-23T07:12:00-06:00
-excerpt:
+description:
   A fellow consultant here in Denver sent out a message yesterday inquiring
   about formal recommendations regarding the use of Windows Authentication vs.
   SQL Authentication. It seems that quite a few customers out there ponder these

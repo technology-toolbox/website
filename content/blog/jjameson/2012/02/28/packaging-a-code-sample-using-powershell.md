@@ -1,7 +1,7 @@
 ---
 title: Packaging a code sample using PowerShell
 date: 2012-02-28T02:32:40-07:00
-excerpt:
+description:
   "Here is the PowerShell script I developed to avoid accidentally including
   \"junk\" in code samples I create for my blog."
 aliases:

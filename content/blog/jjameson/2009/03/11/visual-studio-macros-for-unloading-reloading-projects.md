@@ -1,7 +1,7 @@
 ---
 title: Visual Studio Macros for Unloading/Reloading Projects
 date: 2009-03-11T08:30:00-06:00
-excerpt:
+description:
   As promised in a post last week, here are the macros that I use to quickly
   unload or reload dozens of projects in a large Visual Studio solution. Hmmm,
   perhaps effortlessly is a better word choice -- considering I might need to

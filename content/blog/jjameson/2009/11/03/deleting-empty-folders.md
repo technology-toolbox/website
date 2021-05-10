@@ -1,7 +1,7 @@
 ---
 title: Deleting Empty Folders
 date: 2009-11-03T05:36:00-07:00
-excerpt:
+description:
   For the sake of this post, let's assume that you have a directory that
   contains some empty folders you want to get rid of. How the empty folders got
   there isn't important; all that matters is that you have some and you want to

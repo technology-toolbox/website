@@ -1,7 +1,7 @@
 ---
 title: Memory Leak in SPLimitedWebPartManager (a.k.a. IDisposables Containing IDisposables)
 date: 2008-04-09T13:00:00-06:00
-excerpt:
+description:
   Back in February, Roger Lamb kicked off his MSDN blog with a great post (
   SharePoint 2007 and WSS 3.0 Dispose Patterns by Example ). It provides
   numerous code samples that demonstrate memory leaks commonly produced when

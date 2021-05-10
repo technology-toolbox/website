@@ -1,7 +1,7 @@
 ---
 title: Errors running the Subtext blog engine -- and what I did about them (a.k.a. Building TechnologyToolbox.com, part 15)
 date: 2012-01-23T13:29:43-07:00
-excerpt:
+description:
   I've been running my new blog on Subtext for almost 4 months and encountered
   some issues with Subtext that required a few tweaks here and there. In this
   post, I describe the errors I've seen and my recommendations for addressing

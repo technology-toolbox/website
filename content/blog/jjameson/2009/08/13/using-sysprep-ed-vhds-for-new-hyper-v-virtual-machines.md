@@ -1,7 +1,7 @@
 ---
 title: Using SysPrep'ed VHDs for New Hyper-V Virtual Machines
 date: 2009-08-13T10:16:00-06:00
-excerpt:
+description:
   "As noted in my previous post , I spent 7 days in \"alpha\" training last week
   for SharePoint 2010. Consequently, one of my goals for this week was to update
   my \"dogfood\" VM with the CTP build of SharePoint Server 2010, so that I can

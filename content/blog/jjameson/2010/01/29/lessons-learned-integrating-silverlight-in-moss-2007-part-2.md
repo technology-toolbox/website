@@ -1,7 +1,7 @@
 ---
 title: Lessons Learned Integrating Silverlight in MOSS 2007, Part 2
 date: 2010-01-29T05:55:00-07:00
-excerpt:
+description:
   This is a continuation of yesterday's post detailing some lessons learned
   while integrating a Silverlight application into an Internet-facing customer
   service portal built on Microsoft Office SharePoint Server (MOSS) 2007. As I

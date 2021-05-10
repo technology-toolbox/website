@@ -1,7 +1,7 @@
 ---
 title: Creating Wireframes for Page Layouts
 date: 2009-06-26T08:34:00-06:00
-excerpt:
+description:
   When helping customers migrate their Internet sites to Microsoft Office
   SharePoint Server (MOSS) 2007, I've found it very helpful to create wireframes
   showing the various fields, Web Parts, and master page content. For the last

@@ -1,7 +1,7 @@
 ---
 title: "Missing thumbnail images in SharePoint?...You probably forgot to specify the \"ContentType\" property"
 date: 2011-05-02T05:33:00-06:00
-excerpt:
+description:
   During the process of creating my previous post , I discovered the thumbnail
   images were not rendering as expected for the custom images that I added to
   the out-of-the-box SharePoint /PublishingImages picture library (via a

@@ -1,7 +1,7 @@
 ---
 title: Shared Assembly Info in Visual Studio Projects
 date: 2009-04-03T07:17:00-06:00
-excerpt:
+description:
   Yesterday I introduced the concept of linked files in Visual Studio solutions
   with a follow-up on my recommendation for configuring a custom dictionary to
   eliminate CA1704 code analysis warnings. Another practical application of

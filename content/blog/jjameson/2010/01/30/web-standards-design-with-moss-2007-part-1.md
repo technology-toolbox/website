@@ -1,7 +1,7 @@
 ---
 title: Web Standards Design with MOSS 2007, Part 1
 date: 2010-01-30T13:00:00-07:00
-excerpt:
+description:
   I've mentioned before that I became somewhat of a Web standards zealot several
   years ago. Consequently, regardless of whether I'm building Web sites using
   the core ASP.NET platform or Microsoft Office SharePoint Server (MOSS) 2007, I

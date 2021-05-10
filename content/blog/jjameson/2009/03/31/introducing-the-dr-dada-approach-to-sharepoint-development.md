@@ -1,7 +1,7 @@
 ---
 title: "Introducing the \"DR.DADA\" Approach to SharePoint Development"
 date: 2009-03-31T09:16:00-06:00
-excerpt:
+description:
   "At times, it seems like developing SharePoint solutions is all I've been
   doing since I joined Microsoft in 2000. While many things have certainly
   changed since the old \"Tahoe\" days, at least one thing remains relatively

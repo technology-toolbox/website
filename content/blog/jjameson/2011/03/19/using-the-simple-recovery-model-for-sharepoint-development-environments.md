@@ -1,7 +1,7 @@
 ---
 title: Using the Simple Recovery Model for SharePoint Development Environments
 date: 2011-03-19T09:04:00-06:00
-excerpt:
+description:
   A little more than three years ago, I blogged about the default recovery model
   for various SharePoint databases . In that post, I described how I would often
   toggle the SQL Server databases in SharePoint development environments from

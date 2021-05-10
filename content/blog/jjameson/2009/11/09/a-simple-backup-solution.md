@@ -1,7 +1,7 @@
 ---
 title: A Simple Backup Solution
 date: 2009-11-09T05:44:00-07:00
-excerpt:
+description:
   "As I've mentioned before, I don't spend much money or time maintaining the
   \"Jameson Datacenter\" (a.k.a. my home lab). However, that doesn't mean that I
   treat my infrastructure lightly. In previous posts, I've covered many of the

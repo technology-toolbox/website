@@ -1,7 +1,7 @@
 ---
 title: Logging Exceptions in .NET Applications
 date: 2010-03-20T05:08:00-06:00
-excerpt:
+description:
   Last summer I wrote a post introducing my simple, but highly effective
   approach to logging -- including a Logger class that is really just a thin
   wrapper around the System.Diagnostics.TraceSource class. A few months ago, I

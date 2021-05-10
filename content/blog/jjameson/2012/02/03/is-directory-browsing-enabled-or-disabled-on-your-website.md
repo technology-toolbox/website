@@ -1,7 +1,7 @@
 ---
 title: Is directory browsing enabled or disabled on your website?
 date: 2012-02-03T07:57:15-07:00
-excerpt:
+description:
   Starting with IIS 6, directory browsing is disabled by default -- but are you
   really sure this is the way your website is configured?
 aliases:

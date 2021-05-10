@@ -1,7 +1,7 @@
 ---
 title: Installing and Configuring Office Web Apps (on SharePoint 2010)
 date: 2011-03-03T07:16:00-07:00
-excerpt:
+description:
   In the current sprint of the project I'm working on, we are deploying Office
   Web Apps to support an enterprise collaboration platform based on SharePoint
   Server 2010. While creating the installation guide for this sprint, I used the

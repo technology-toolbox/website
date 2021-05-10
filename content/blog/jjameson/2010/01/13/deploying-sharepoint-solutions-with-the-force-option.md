@@ -1,7 +1,7 @@
 ---
 title: "Deploying SharePoint Solutions with the \"-force\" Option"
 date: 2010-01-13T07:19:00-07:00
-excerpt:
+description:
   "In a previous post , I provided sample \"DR.DADA\" scripts that I use for
   deploying solutions based on Microsoft Office SharePoint Server (MOSS) 2007.
   If you've read that post, you might recall seeing the following lines in, for

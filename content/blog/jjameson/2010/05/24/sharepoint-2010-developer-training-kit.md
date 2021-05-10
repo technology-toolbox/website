@@ -1,7 +1,7 @@
 ---
 title: Sharepoint 2010 Developer Training Kit
 date: 2010-05-24T04:11:00-06:00
-excerpt:
+description:
   "This is an update to the beta version that was released last December. It
   \"provides developers with advanced guidance on how to develop for
   SharePoint.\" Here's the overview from the download page : The SharePoint 2010

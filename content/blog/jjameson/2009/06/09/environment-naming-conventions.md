@@ -1,7 +1,7 @@
 ---
 title: Environment Naming Conventions
 date: 2009-06-09T18:42:00-06:00
-excerpt:
+description:
   One of the challenges I see in organizations that I work with is the lack of
   naming conventions for various environments -- or sometimes naming conventions
   that provide little or no value. For about the last ten years, I've been a

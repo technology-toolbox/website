@@ -1,7 +1,7 @@
 ---
 title: Creating a style guide and color palette for a Web application (a.k.a. Building TechnologyToolbox.com, part 4)
 date: 2011-11-03T07:54:12-06:00
-excerpt:
+description:
   "In my previous post, I described how I typically create a \"static HTML
   prototype\" for an ASP.NET or SharePoint Web application. By working directly
   in HTML at the beginning, I can rapidly define the structure of the content

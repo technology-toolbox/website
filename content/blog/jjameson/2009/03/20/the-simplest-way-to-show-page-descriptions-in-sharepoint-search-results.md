@@ -1,7 +1,7 @@
 ---
 title: The Simplest Way to Show Page Descriptions in SharePoint Search Results
 date: 2009-03-20T09:07:00-06:00
-excerpt:
+description:
   As I mentioned in a previous post , some customers prefer to show page
   descriptions in search results instead of the HitHighlightedSummary rendered
   by default in Microsoft Office SharePoint Server (MOSS) 2007. After all, if

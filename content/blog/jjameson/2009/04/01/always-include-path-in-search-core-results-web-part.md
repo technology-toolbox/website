@@ -1,7 +1,7 @@
 ---
 title: "Always Include \"Path\" In Search Core Results Web Part"
 date: 2009-04-01T07:41:00-06:00
-excerpt:
+description:
   Here is a bug in Microsoft Office SharePoint Server (MOSS) 2007 that I've
   stumbled across at least twice in the last couple of years...I'm hoping that
   if I take the time to blog about it, I won't forget it again. If you don't

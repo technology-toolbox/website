@@ -1,7 +1,7 @@
 ---
 title: Sample Walkthrough of the DR.DADA Approach to SharePoint
 date: 2009-09-28T05:38:00-06:00
-excerpt: 'In a previous post, I introduced the "DR.DADA" approach to SharePoint
+description: 'In a previous post, I introduced the "DR.DADA" approach to SharePoint
   development. This post walks you through an actual implementation of a feature
   -- well, actually two features...'
 aliases:

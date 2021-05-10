@@ -1,7 +1,7 @@
 ---
 title: Forced to Decline KB948014 and KB972493 in WSUS
 date: 2009-12-08T07:48:00-07:00
-excerpt:
+description:
   In last night's post , I discussed the solution for an issue I encountered
   installing KB 970892 on one of my servers. Thankfully, this morning I
   confirmed the server no longer increments the Computers with Errors column in

@@ -1,7 +1,7 @@
 ---
 title: Testing for Expected Exceptions with Visual Studio
 date: 2007-03-22T07:28:00-06:00
-excerpt:
+description:
   "Since I seem to be on a roll blogging this morning, I thought I'd see if I
   could get one more in before my baby girl wakes up to have breakfast with
   \"Da-da.\" When transitioning a couple of years ago from using NUnit to Visual

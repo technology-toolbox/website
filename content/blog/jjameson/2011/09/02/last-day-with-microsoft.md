@@ -1,7 +1,7 @@
 ---
 title: Last Day with Microsoft
 date: 2011-09-02T14:43:00-06:00
-excerpt:
+description:
   Today is my last day with Microsoft and it is with a heavy heart that I now
   say farewell to past and present teammates, coworkers, and managers...
 aliases:

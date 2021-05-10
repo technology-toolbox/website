@@ -1,7 +1,7 @@
 ---
 title: Why I'm Not a Fan of WspBuilder
 date: 2009-03-06T08:06:00-07:00
-excerpt:
+description:
   After 3 years, 2 months, and 30 days, my involvement with migrating a large
   customer from a legacy Web platform to Microsoft Office SharePoint Server
   (MOSS) 2007 came to an end a few weeks ago. Since then, I have joined another

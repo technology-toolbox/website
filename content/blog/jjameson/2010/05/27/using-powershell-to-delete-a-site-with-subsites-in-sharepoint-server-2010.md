@@ -1,7 +1,7 @@
 ---
 title: Using PowerShell to Delete a Site with Subsites in SharePoint Server 2010
 date: 2010-05-27T05:39:00-06:00
-excerpt:
+description:
   "When using the \"DR.DADA\" approach to SharePoint development , I often find
   myself deleting sites (in DEV and TEST environments) and subsequently
   re-activating features or running some migration utility to recreate the site

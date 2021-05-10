@@ -1,7 +1,7 @@
 ---
 title: Virtual Server Issues and Recommendations for MOSS Virtual Environments
 date: 2007-06-09T04:42:00-06:00
-excerpt:
+description:
   One of the tasks that I completed this week was splitting our Development
   environment (DEV) into multiple VMs -- one SQL Server VM, one Microsoft Office
   SharePoint Server (MOSS) 2007 VM for the SSP, and another MOSS 2007 VM for the

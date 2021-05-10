@@ -1,7 +1,7 @@
 ---
 title: Serving minified jQuery/CSS in PROD and uncompressed versions in DEV (a.k.a. Building TechnologyToolbox.com, part 13)
 date: 2012-01-19T05:29:51-07:00
-excerpt:
+description:
   In this post, I show how to serve minified versions of JavaScript and CSS
   files in Production environments and uncompressed versions in Development
   environments.

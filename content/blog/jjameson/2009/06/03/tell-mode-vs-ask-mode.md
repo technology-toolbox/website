@@ -1,7 +1,7 @@
 ---
 title: Tell Mode vs. Ask Mode
 date: 2009-06-03T19:11:00-06:00
-excerpt:
+description:
   "The project I am currently working on is nearing the end. Last week we
   reached our \"Feature Complete\" milestone and now we have formally
   transitioned into the \"Stabilizing\" phase. In a couple of team meetings this

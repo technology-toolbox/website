@@ -1,7 +1,7 @@
 ---
 title: Recommended ISO Tools
 date: 2010-07-25T04:38:00-06:00
-excerpt:
+description:
   I added a new item to my Toolbox this weekend -- LC ISO Creator . It's not
   fancy, or even supported, but it is free and it appears to do what it is
   supposed to without issue, specifically creating an ISO image from an existing
