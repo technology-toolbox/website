@@ -4,6 +4,7 @@ date: 2021-04-30T14:19:09-06:00
 description:
   Kubernetes is incredibly powerful, but should running it be as simple as
   selecting a checkbox?
+images: ["https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png"]
 categories: ["Development", "Infrastructure"]
 tags: ["Docker", "Kubernetes"]
 ---

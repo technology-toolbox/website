@@ -5,6 +5,7 @@ description:
   Last year I migrated a relatively large OneNote notebook to Markdown -- which
   anyone can access on GitHub. Here is a little background on why this was done
   and how things improved as a result.
+images: ["https://assets.technologytoolbox.com/screenshots/B1/0C8A83374FAF35EB607DA8BDE2341F4E67F547B1.jpeg"]
 categories: ["Infrastructure", "My System"]
 tags: ["Infrastructure", "My System"]
 ---

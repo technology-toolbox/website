@@ -5,6 +5,7 @@ description:
   "Are you a little irritated that Docker Desktop is consuming a large chunk of
   your C: drive? Don't fret, you can easily resolve the issue -- provided you
   have another disk available."
+images: ["https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png"]
 categories: ["Development", "Infrastructure"]
 tags: ["Docker"]
 ---
