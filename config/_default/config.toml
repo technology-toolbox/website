@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "Technology Toolbox"
 theme = "techtoolbox-hugo"
 
-disqusShortname = "technology-toolbox"
+[params]
+  gitHubId = "technology-toolbox"
+  twitterId = "techtoolbox_"
 
 [markup]
   [markup.highlight]
