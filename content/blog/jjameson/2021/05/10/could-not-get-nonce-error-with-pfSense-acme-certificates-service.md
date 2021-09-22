@@ -1,6 +1,10 @@
 ---
 title: '"Could not get nonce" Error with pfSense ACME Certificates Service'
 date: 2021-05-10T13:17:45-06:00
+aliases:
+  [
+    "/blog/jjameson/2021/04-copy/10/could-not-get-nonce-error-with-pfsense-acme-certificates-service/",
+  ]
 categories: ["Infrastructure"]
 description:
   Before googling "Could not get nonce" (like I did), you should first check the
