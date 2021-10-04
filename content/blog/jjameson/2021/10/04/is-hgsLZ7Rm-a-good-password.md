@@ -71,7 +71,7 @@ of passwords comprised of random _characters_ and _letters_, I recommend
 (somewhat lengthy) passphrases comprised of random _words_.
 
 [The word list used by Bitwarden](https://github.com/bitwarden/jslib/blob/master/common/src/misc/wordlist.ts)
-contain nearly 8,000 items. By default, it generates passphrases with three
+contains nearly 8,000 items. By default, it generates passphrases with three
 words separated by a dash (`-`). Here is an example:
 
 > `doorman-blatancy-litter`
@@ -128,7 +128,7 @@ Bitwarden and checks them against Troy Hunt's
 
 > **Note:**
 >
-> It's probably worth noting that your actual passwords stored in Bitwarden are
-> never actually sent to Troy's website. Rather this is accomplished by
-> attempting to partially match a hash of each password in Bitwarden against a
-> list of hashes for exposed passwords.
+> It's probably worth noting that your passwords stored in Bitwarden are never
+> actually sent to Troy's website. Rather this is accomplished by attempting to
+> partially match a hash of each password in Bitwarden against a list of hashes
+> for exposed passwords.
