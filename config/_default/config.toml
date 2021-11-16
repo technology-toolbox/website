@@ -38,3 +38,9 @@ enableGitInfo = true
 [social]
   github = "technology-toolbox"
   twitter = "techtoolbox_"
+
+[server]
+[[server.headers]]
+  for = '/**'
+  [server.headers.values]
+    X-Frame-Options = 'DENY'
