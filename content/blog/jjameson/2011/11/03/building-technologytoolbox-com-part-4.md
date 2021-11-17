@@ -2,10 +2,10 @@
 title: Creating a style guide and color palette for a Web application (a.k.a. Building TechnologyToolbox.com, part 4)
 date: 2011-11-03T07:54:12-06:00
 description:
-  "In my previous post, I described how I typically create a \"static HTML
-  prototype\" for an ASP.NET or SharePoint Web application. By working directly
+  'In my previous post, I described how I typically create a "static HTML
+  prototype" for an ASP.NET or SharePoint Web application. By working directly
   in HTML at the beginning, I can rapidly define the structure of the content
-  and subsequently create the corresponding CSS rules to style the pages..."
+  and subsequently create the corresponding CSS rules to style the pages...'
 aliases:
   [
     "/blog/jjameson/archive/2011/11/03/building-technologytoolbox-com-part-4.aspx",
@@ -517,6 +517,17 @@ alt="Technology Toolbox color palette" class="screenshot" height="600"
 width="518" title="Figure 2: Technology Toolbox color palette" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-556x644.png)
+
+{{< div-block "note update" >}}
+
+> **Update (2021-11-16)**
+>
+> The light blue color (`#3c78c3`) has been darkened slightly (`#3b77c1`) -- 1%
+> to be specific -- in order to resolve
+> [an accessibility warning](https://github.com/technology-toolbox/techtoolbox-hugo/issues/23)
+> reported by [Lighthouse](https://developers.google.com/web/tools/lighthouse).
+
+{{< /div-block >}}
 
 ### Sample style guide for SharePoint 2010
 
