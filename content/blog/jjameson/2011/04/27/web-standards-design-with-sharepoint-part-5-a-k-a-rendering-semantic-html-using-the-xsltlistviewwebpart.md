@@ -1,7 +1,8 @@
 ---
 title: Web Standards Design with SharePoint, Part 5 (a.k.a. Rendering Semantic HTML Using the XsltListViewWebPart)
 date: 2011-04-27T07:33:00-06:00
-description: "In part 4 of this series , I provided a sample SharePoint Server 2010
+description:
+  "In part 4 of this series , I provided a sample SharePoint Server 2010
   solution solution based on Dan Cederholm's Tugboat sample site (from his most
   recent book, Handcrafted CSS : More Bulletproof Web Design ). In that sample,
   however, all of the content..."
@@ -86,7 +87,7 @@ to concatenate the values specified in the other two columns).
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Data for <strong>This Week's Specials</strong></a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

@@ -1,7 +1,8 @@
 ---
 title: 'The "Jameson Datacenter"'
 date: 2009-09-14T07:53:00-06:00
-description: 'Back in a post from February 2008, I first referred to the "Jameson
+description:
+  'Back in a post from February 2008, I first referred to the "Jameson
   Datacenter" while discussing one of the servers running in my basement. Since
   then I''ve referenced my home lab about a dozen times in different posts but
   never provided significant details...'
@@ -98,7 +99,7 @@ The following table provides more detail on the various servers:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Server Configurations</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

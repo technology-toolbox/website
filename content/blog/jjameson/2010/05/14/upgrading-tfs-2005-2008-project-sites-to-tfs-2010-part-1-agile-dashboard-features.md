@@ -1,7 +1,8 @@
 ---
 title: Upgrading TFS 2005/2008 Project Sites to TFS 2010, Part 1 - Agile Dashboard Features
 date: 2010-05-14T03:57:00-06:00
-description: In one of last week's posts , I provided details on upgrading from Team
+description:
+  In one of last week's posts , I provided details on upgrading from Team
   Foundation Server 2008 to TFS 2010, including some information about updating
   your TFS project sites. I also provided a reference to the following MSDN
   article for more information...
@@ -141,7 +142,7 @@ following features are activated:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Site (Web) Features</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -159,7 +160,7 @@ will notice the following feature is activated:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Site Collection Features</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

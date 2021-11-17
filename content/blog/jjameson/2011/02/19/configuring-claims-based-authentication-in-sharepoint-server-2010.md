@@ -1,7 +1,8 @@
 ---
 title: Configuring Claims-Based Authentication in SharePoint Server 2010
 date: 2011-02-19T13:06:00-07:00
-description: 'I thought it would be helpful to share my step-by-step procedures for
+description:
+  'I thought it would be helpful to share my step-by-step procedures for
   manually configuring claims-based authentication in SharePoint Server 2010
   using an "ASP.NET database" and corresponding membership and role providers.
   Note that the following TechNet...'
@@ -58,7 +59,7 @@ following table.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Service Accounts</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

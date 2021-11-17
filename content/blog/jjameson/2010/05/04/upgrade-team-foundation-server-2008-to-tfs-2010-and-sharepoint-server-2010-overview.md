@@ -116,7 +116,7 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server 2
 
 <div class="d-md-none">
   <a href='{{< relref "resources-upgrade-overview/table-1-popout" >}}' target="_blank">Table 1 - Preparation</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-md-block">
@@ -125,7 +125,7 @@ I'll provide the detailed steps for installing TFS 2010 (and SharePoint Server 2
 
 <div class="d-sm-none">
   <a href='{{< relref "resources-upgrade-overview/table-2-popout" >}}' target="_blank">Table 2 - Team Foundation Server Upgrade</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

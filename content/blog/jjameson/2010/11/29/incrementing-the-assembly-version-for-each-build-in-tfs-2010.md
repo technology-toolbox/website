@@ -280,7 +280,7 @@ the **Update Build Number** sequence, and set the properties as follows:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Properties for <strong>InvokeProcess</strong> activity</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -330,7 +330,7 @@ the properties as follows:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Properties for <strong>MSBuild</strong> activity</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -511,7 +511,7 @@ following table, it means the default is used.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3 - Build Definition: <strong>Automated Build - Main</strong></a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
