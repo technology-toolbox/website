@@ -93,7 +93,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
    <div class="d-md-none">
       <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Columns for <strong>Work Items</strong> list</a>
-      <i class="bi bi-arrow-up-right-square"></i>
+      {{< svg-icon "arrow-up-right-square" >}}
       <p>(Insufficient width to show table content here.)</p>
    </div>
    <div class="d-none d-md-block">
@@ -104,7 +104,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
    <div class="d-sm-none">
       <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Views for <strong>Work Items</strong> list</a>
-      <i class="bi bi-arrow-up-right-square"></i>
+      {{< svg-icon "arrow-up-right-square" >}}
       <p>(Insufficient width to show table content here.)</p>
    </div>
    <div class="d-none d-sm-block">
@@ -119,7 +119,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 
    <div class="d-md-none">
       <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3 - Project summary Web Parts</a>
-      <i class="bi bi-arrow-up-right-square"></i>
+      {{< svg-icon "arrow-up-right-square" >}}
       <p>(Insufficient width to show table content here.)</p>
    </div>
    <div class="d-none d-md-block">

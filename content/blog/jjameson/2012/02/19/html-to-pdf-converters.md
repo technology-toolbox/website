@@ -53,7 +53,7 @@ content into a table.
 
 <div class="d-md-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - HTML-to-PDF Converters</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-md-block">

@@ -54,7 +54,7 @@ following table.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Service Accounts</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -241,7 +241,7 @@ database files.
 1. Using the settings specified in the following table, specify the new values for **Initial Size** and **Autogrowth**.
    <div class="d-md-none">
       <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Initial data and log file sizes</a>
-      <i class="bi bi-arrow-up-right-square"></i>
+      {{< svg-icon "arrow-up-right-square" >}}
       <p>(Insufficient width to show table content here.)</p>
    </div>
    <div class="d-none d-md-block">

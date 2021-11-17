@@ -61,7 +61,7 @@ files corresponding to the basic structure of the website.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - Sample HTML content for the Caelum prototype</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

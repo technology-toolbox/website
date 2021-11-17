@@ -29,7 +29,7 @@ Here's a quick summary of my initial analysis:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - MSDN Blog Usage Analysis</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -114,7 +114,7 @@ Let's start with the top 10 posts:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2: Top 10 Blog Posts</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -128,7 +128,7 @@ What about the bottom 10 posts?
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-3-popout" >}}' target="_blank">Table 3: Bottom 10 Blog Posts</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -216,7 +216,7 @@ into my Excel workbook and then sort by **Hits** descending.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-4-popout" >}}' target="_blank">Table 4: Top referrals by URL for post - Issues Deploying SharePoint Solution Packages</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -231,7 +231,7 @@ Breaking down the referrals by domain name, I found the following:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-5-popout" >}}' target="_blank">Table 5: Top referrals by domain for post - Issues Deploying SharePoint Solution Packages</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

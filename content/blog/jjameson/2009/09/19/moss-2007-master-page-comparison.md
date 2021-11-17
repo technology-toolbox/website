@@ -37,7 +37,7 @@ into a simple table:
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-1-popout" >}}' target="_blank">Table 1 - MOSS 2007 Master Page Comparison</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">

@@ -2904,7 +2904,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-2-popout" >}}' target="_blank">Table 2 - Service accounts</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -2918,7 +2918,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-4-popout" >}}' target="_blank">Table 4 - Diagnostic logging</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
@@ -2932,7 +2932,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-md-none">
   <a href='{{< relref "resources/table-6-popout" >}}' target="_blank">Table 6 - Outgoing e-mail settings</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-md-block">
@@ -2943,7 +2943,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-lg-none">
   <a href='{{< relref "resources/table-7-popout" >}}' target="_blank">Table 7 - Web applications</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
@@ -2954,7 +2954,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-lg-none">
   <a href='{{< relref "resources/table-8-popout" >}}' target="_blank">Table 8 - Site collections</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
@@ -2965,7 +2965,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-lg-none">
   <a href='{{< relref "resources/table-9-popout" >}}' target="_blank">Table 9 - Initial data and log file sizes</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-lg-block">
@@ -2976,7 +2976,7 @@ configuration settings are listed in the following tables.
 
 <div class="d-sm-none">
   <a href='{{< relref "resources/table-10-popout" >}}' target="_blank">Table 10 - SharePoint groups and permissions used for entitlement</a>
-  <i class="bi bi-arrow-up-right-square"></i>
+  {{< svg-icon "arrow-up-right-square" >}}
   <p>(Insufficient width to show table content here.)</p>
 </div>
 <div class="d-none d-sm-block">
