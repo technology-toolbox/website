@@ -2103,7 +2103,13 @@ The site should resemble the following:
 
 {{< anchor name="Figure_3:_Default_home_page_for_“Publishing_Portal”_site_in_SharePoint_Server_2010" >}}
 
-[{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png" alt="Default home page for “Publishing Portal” site in SharePoint Server 2010" class="screenshot" height="374" width="600" caption="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
+{{< figure
+  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png"
+  alt="Default home page for “Publishing Portal” site in SharePoint Server 2010"
+  class="screenshot" height="374" width="600"
+  caption="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}
+
+[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
 deployed, it is still possible to validate the basic functionality of the site
