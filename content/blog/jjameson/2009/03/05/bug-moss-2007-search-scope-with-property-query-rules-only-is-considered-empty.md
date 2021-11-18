@@ -25,7 +25,7 @@ empty) and therefore is not compiled.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-600x424.jpg"
 alt="Search scope bug in MOSS 2007 December 2008 CU" class="screenshot"
 height="424" width="600"
-title="Figure 1: Search scope bug in MOSS 2007 December 2008 CU" >}}
+caption="Figure 1: Search scope bug in MOSS 2007 December 2008 CU" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-799x564.jpg)
 
@@ -34,7 +34,7 @@ To hack around this bug, add a **Web Address** rule, as shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-workaround-600x425.jpg"
 alt="Workaround for search scope bug" class="screenshot" height="425"
-width="600" title="Figure 2: Workaround for search scope bug" >}}
+width="600" caption="Figure 2: Workaround for search scope bug" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-workaround-796x564.jpg)
 

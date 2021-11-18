@@ -1,7 +1,8 @@
 ---
 title: Sample Walkthrough of the DR.DADA Approach to SharePoint
 date: 2009-09-28T05:38:00-06:00
-description: 'In a previous post, I introduced the "DR.DADA" approach to SharePoint
+description:
+  'In a previous post, I introduced the "DR.DADA" approach to SharePoint
   development. This post walks you through an actual implementation of a feature
   -- well, actually two features...'
 aliases:
@@ -107,7 +108,7 @@ following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-1-355x178.png"
 alt="Visual Studio solution before adding SharePoint features"
 class="screenshot" height="178" width="355"
-title="Figure 1: Visual Studio solution before adding SharePoint features" >}}
+caption="Figure 1: Visual Studio solution before adding SharePoint features" >}}
 
 Next, I create a new Visual Studio solution folder called **Publishing** and
 then add a new **Class Library** project named **Publishing.csproj** (in
@@ -160,7 +161,7 @@ After that's all done, the Visual Studio solution looks like the following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-183x600.png"
 alt="Visual Studio solution after adding SharePoint features and deployment files"
 class="screenshot" height="600" width="183"
-title="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
+caption="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 
@@ -872,6 +873,6 @@ re-add it to the command history.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-600x205.png"
 alt="Command history" class="screenshot" height="205" width="600"
-title="Figure 3: Command history" >}}
+caption="Figure 3: Command history" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)

@@ -53,7 +53,7 @@ VM:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-(baseline)-600x450.jpg"
 alt="Disk usage on Windows Server 2008 Standard x64 VM (baseline)"
 class="screenshot" height="450" width="600"
-title="Figure 1: Disk usage on Windows Server 2008 Standard x64 VM (baseline)" >}}
+caption="Figure 1: Disk usage on Windows Server 2008 Standard x64 VM (baseline)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Windows-Server-2008-%28baseline%29-800x600.jpg)
 
@@ -68,7 +68,7 @@ I then immediately installed Windows Server 2008 SP2 and captured the following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-600x431.png"
 alt="Disk usage on Windows Server 2008 x64 VM (after installing SP2)"
 class="screenshot" height="431" width="600"
-title="Figure 2: Disk usage on Windows Server 2008 x64 VM (after installing SP2)" >}}
+caption="Figure 2: Disk usage on Windows Server 2008 x64 VM (after installing SP2)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-ws2008std-x64-SP2-801x576.png)
 
@@ -85,7 +85,7 @@ which reclaimed approximately 900 MB of space.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-(WS2008-SP2-compcln)-600x429.png"
 alt="Disk usage on Windows Server 2008 x64 VM (after installing SP2 and running COMPCLN.exe)"
 class="screenshot" height="429" width="600"
-title="Figure 3: Disk usage on Windows Server 2008 x64 VM (after installing SP2 and running COMPCLN.exe)" >}}
+caption="Figure 3: Disk usage on Windows Server 2008 x64 VM (after installing SP2 and running COMPCLN.exe)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-x64-%28WS2008-SP2-compcln%29-801x573.png)
 
@@ -110,7 +110,7 @@ Unfortunately, it isn't even close, as shown in the following figure.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-(after-WS2008-SP2-install)-600x454.png"
 alt="Disk usage on a patched WSUS server (after installing SP2)" height="454"
 width="600"
-title="Figure 4: Disk usage on a patched WSUS server (after installing SP2)" >}}
+caption="Figure 4: Disk usage on a patched WSUS server (after installing SP2)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-COLOSSUS-%28after-WS2008-SP2-install%29-758x574.png)
 

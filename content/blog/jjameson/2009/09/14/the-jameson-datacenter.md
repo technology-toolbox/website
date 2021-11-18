@@ -40,7 +40,7 @@ and network devices that comprise the "Jameson Datacenter":
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture" height="493"
 width="600"
-title="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
+caption="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
 
@@ -61,7 +61,7 @@ logical and physical) that typically run 24x7 in my lab:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
 alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600"
-title="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
+caption="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
 
@@ -195,7 +195,7 @@ various servers:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration" height="454"
 width="600"
-title="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
+caption="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
 

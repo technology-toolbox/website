@@ -2,10 +2,10 @@
 title: Using jQuery to create an expandable archive list for blog posts (a.k.a. Building TechnologyToolbox.com, part 12)
 date: 2012-01-16T02:43:57-07:00
 description:
-  "In my previous post, I briefly mentioned how I use a CSS sprite and jQuery to
-  render the expandable list under the \"Archives\" section on the various blog
+  'In my previous post, I briefly mentioned how I use a CSS sprite and jQuery to
+  render the expandable list under the "Archives" section on the various blog
   pages of the Technology Toolbox site. This post details the implementation of
-  that feature."
+  that feature.'
 aliases:
   [
     "/blog/jjameson/archive/2012/01/15/building-technologytoolbox-com-part-12.aspx",
@@ -24,7 +24,7 @@ Toolbox site.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
-title="Figure 1: Blog home page" >}}
+caption="Figure 1: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
@@ -92,7 +92,7 @@ for accessing data from Subtext.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model" class="screenshot" height="400" width="431"
-title="Figure 2: Entity Data Model" >}}
+caption="Figure 2: Entity Data Model" >}}
 
 Consequently I spent a few minutes translating the SQL query in my head for
 grouping posts by year/month into the equivalent LINQ query against the data
@@ -139,7 +139,7 @@ group by month and count the number of rows for each month).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
 alt="LINQPad" class="screenshot" height="600" width="564"
-title="Figure 3: LINQPad" >}}
+caption="Figure 3: LINQPad" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-821x873.png)
 
@@ -342,6 +342,7 @@ Safranski):
   ```
 
   Now, I certainly don't consider myself a jQuery expert but, generally speaking, this doesn't seem like very good practice when writing jQuery plugins.
+
 - It doesn't maintain chainability (which is generally recommended when
   [writing jQuery plugins](http://docs.jquery.com/Plugins/Authoring)).
 
@@ -405,7 +406,7 @@ sprite to show the "plus" or "minus" icon next to the list item.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
-title="Figure 4: list-item-sprite-1.0.png" >}}
+caption="Figure 4: list-item-sprite-1.0.png" >}}
 
 As I noted in my previous post, if separate image files are used for the "plus"
 and "minus" icons, users experience a subtle flashing effect the first time they

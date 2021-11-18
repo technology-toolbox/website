@@ -98,7 +98,7 @@ so far.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-600x266.png"
 alt="Combined views for each blog post" height="266" width="600"
-title="Figure 1: Combined views for each blog post" >}}
+caption="Figure 1: Combined views for each blog post" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Combined-Views-1136x503.png)
 
@@ -164,7 +164,7 @@ Let's start with the total number of posts by year:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-600x311.png"
 alt="Blog posts created by year" height="311" width="600"
-title="Figure 2: Blog posts created by year" >}}
+caption="Figure 2: Blog posts created by year" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Year-699x362.png)
 
@@ -177,7 +177,7 @@ Let's look at the total number of posts by month:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-600x330.png"
 alt="Blog posts created by month" height="330" width="600"
-title="Figure 3: Blog posts created by month" >}}
+caption="Figure 3: Blog posts created by month" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Total-Posts-by-Month-699x384.png)
 
@@ -248,7 +248,7 @@ results into categories and subcategories.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-600x387.png"
 alt="Referrals by category for post - Issues Deploying SharePoint Solution Packages"
 height="387" width="600"
-title="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
+caption="Figure 4: Referrals by category for post - Issues Deploying SharePoint Solution Packages" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/MSDN-blog-Referrals-by-Category-689x444.png)
 

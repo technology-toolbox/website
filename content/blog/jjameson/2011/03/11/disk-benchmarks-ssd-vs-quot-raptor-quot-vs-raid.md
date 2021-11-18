@@ -1,5 +1,5 @@
 ---
-title: "Disk Benchmarks: SSD vs. \"Raptor\" vs. RAID"
+title: 'Disk Benchmarks: SSD vs. "Raptor" vs. RAID'
 date: 2011-03-11T08:00:00-07:00
 description:
   Earlier this week, I posted about how I rebuilt my Windows 7 desktop while
@@ -54,7 +54,7 @@ characteristics of each of these drives.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-600x404.png"
 alt="Disk performance on WOLVERINE" height="404" width="600"
-title="Figure 1: Disk performance on WOLVERINE" >}}
+caption="Figure 1: Disk performance on WOLVERINE" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-823x554.png)
 
@@ -84,7 +84,7 @@ the following chart which shows the performance of the SSD on my desktop
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-518x600.png"
 alt="Disk performance (various computers)" height="600" width="518"
-title="Figure 2: Disk performance (various computers)" >}}
+caption="Figure 2: Disk performance (various computers)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-823x954.png)
 

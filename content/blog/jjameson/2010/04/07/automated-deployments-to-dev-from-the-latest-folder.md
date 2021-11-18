@@ -29,7 +29,7 @@ Release Server.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="Automated deployment to DEV using the \"latest\" folder" height="343"
 width="600"
-title="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
+caption="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 

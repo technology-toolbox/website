@@ -11,7 +11,15 @@ aliases:
     "/blog/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx",
   ]
 categories: ["My System", "Infrastructure", "Development"]
-tags: ["My System", "SQL Server", "Windows Server", "Infrastructure", "Virtualization", "Visual Studio"]
+tags:
+  [
+    "My System",
+    "SQL Server",
+    "Windows Server",
+    "Infrastructure",
+    "Virtualization",
+    "Visual Studio",
+  ]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/04/30/save-significant-disk-space-by-setting-maxpatchcachesize-to-0.aspx"
 ---
 
@@ -68,7 +76,7 @@ Server 2008 Service Pack 1).
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-(with-SQL-2008-SP1)-600x426.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)"
 class="screenshot" height="426" width="600"
-title="Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)" >}}
+caption="Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-%28with-SQL-2008-SP1%29-1024x727.png)
 
@@ -88,7 +96,7 @@ SQL Server.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/After-restricting-MaxPatchCacheSize-600x493.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)"
 class="screenshot" height="493" width="600"
-title="Figure 2: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)" >}}
+caption="Figure 2: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/After-restricting-MaxPatchCacheSize-857x704.png)
 

@@ -43,7 +43,7 @@ SharePoint list like the one shown below...
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
 alt="Specials list" class="screenshot" height="474" width="600"
-title="Figure 1: Specials list" >}}
+caption="Figure 1: Specials list" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
@@ -101,7 +101,7 @@ fourth item to the **Specials** list.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png"
 alt="Too many items in the weekly specials section" class="screenshot"
 height="411" width="600"
-title="Figure 2: Too many items in the weekly specials section" >}}
+caption="Figure 2: Too many items in the weekly specials section" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-1006x689.png)
 
@@ -141,7 +141,7 @@ regardless of the number of items in the **Specials** list.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
 alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
 class="screenshot" height="324" width="600"
-title="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
+caption="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-1006x544.png)
 

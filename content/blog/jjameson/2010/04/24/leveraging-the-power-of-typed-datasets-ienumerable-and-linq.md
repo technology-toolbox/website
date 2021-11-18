@@ -29,7 +29,7 @@ Here is the example typed DataSet I introduced in the previous post.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
 alt="Typed DataSet example (ScorecardData)" height="330" width="600"
-title="Figure 1: Typed DataSet example (ScorecardData)" >}}
+caption="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 
@@ -112,7 +112,7 @@ scorecard:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Summary-342x106.png"
   alt="Key Performance Indicators (Summary)" height="106" width="342"
-  title="Figure 2: Key Performance Indicators (Summary)" >}}
+  caption="Figure 2: Key Performance Indicators (Summary)" >}}
 
 While this example shows three periods of data, there might be cases where fewer
 columns are displayed (and perhaps other scenarios where more columns are
@@ -142,7 +142,7 @@ control). Perhaps something like this:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
   alt="Key Performance Indicators (Detail)" height="151" width="588"
-  title="Figure 3: Key Performance Indicators (Detail)" >}}
+  caption="Figure 3: Key Performance Indicators (Detail)" >}}
 
 Assuming you are proficient in ADO.NET, it shouldn't take you very long to
 implement the **GetScorecardSummaryTable** and **GetScorecardDetailTable**

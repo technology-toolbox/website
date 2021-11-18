@@ -31,7 +31,7 @@ together during the deployment process.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
-title="Figure 1: Solution architecture" >}}
+caption="Figure 1: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
@@ -473,7 +473,7 @@ release cycle).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment" height="343" width="600"
-title="Figure 2: Automated build and deployment" >}}
+caption="Figure 2: Automated build and deployment" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
@@ -501,7 +501,7 @@ beta version of the solution is ready.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="\"Manual\" deployment to TEST" height="343" width="600"
-title="Figure 4: \"Manual\" deployment to TEST" >}}
+caption="Figure 4: \"Manual\" deployment to TEST" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 

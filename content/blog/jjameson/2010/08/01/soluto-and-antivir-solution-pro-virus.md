@@ -2,12 +2,12 @@
 title: Soluto and Antivir Solution Pro Virus
 date: 2010-08-01T06:26:00-06:00
 description:
-  "In one of the sessions I attended last week at TechReady (an internal
+  'In one of the sessions I attended last week at TechReady (an internal
   training conference at Microsoft), the speaker mentioned a new piece of
-  \"anti-frustration software\" called Soluto which analyzes the boot time of
+  "anti-frustration software" called Soluto which analyzes the boot time of
   your PC. It certainly sounded intriguing and I made a note to take a look at
   it when I got back home from Seattle. This morning I installed Soluto on my
-  Windows 7 x64 desktop at home. Everything seemed great...at first...."
+  Windows 7 x64 desktop at home. Everything seemed great...at first....'
 aliases:
   [
     "/blog/jjameson/archive/2010/07/31/soluto-and-antivir-solution-pro-virus.aspx",
@@ -64,7 +64,7 @@ Security Essentials, at which point it detected a Trojan horse on my computer
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-600x420.png"
 alt="Microsoft Security Essentials - trojans" class="screenshot" height="420"
-width="600" title="Figure 1: Microsoft Security Essentials - trojans" >}}
+width="600" caption="Figure 1: Microsoft Security Essentials - trojans" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-800x560.png)
 

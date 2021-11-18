@@ -4,7 +4,10 @@ date: 2021-04-30T14:19:09-06:00
 description:
   Kubernetes is incredibly powerful, but should running it be as simple as
   selecting a checkbox?
-images: ["https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png"]
+images:
+  [
+    "https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png",
+  ]
 categories: ["Development", "Infrastructure"]
 tags: ["Docker", "Kubernetes"]
 ---
@@ -18,7 +21,7 @@ installing the latest version of
 Shortly after installing Docker Desktop, I enabled Kubernetes as shown in the
 following screenshot.
 
-{{< figure src="https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png" class="screenshot" height="720" width="1250" title="Figure 1: Enabling Kubernetes in Docker Desktop" >}}
+{{< figure src="https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png" class="screenshot" height="720" width="1250" caption="Figure 1: Enabling Kubernetes in Docker Desktop" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/screenshots/1A/91DB918AABE5855CA91741DFEED8E25B38D7761A.png)
 
@@ -28,7 +31,7 @@ that my F: drive is used as "secondary" storage. I don't expect this to be
 anywhere near as fast as my "primary" storage. In fact, the volume label for the
 F: drive is **Bronze01**, as you can see in the screenshot below.
 
-{{< figure src="https://assets.technologytoolbox.com/screenshots/00/3598C3176A030CDB8BFA36F9155101C721B91300.png" class="screenshot" height="466" width="1011" title="Figure 2: Storage configuration on Windows 10 desktop (STORM)" >}}
+{{< figure src="https://assets.technologytoolbox.com/screenshots/00/3598C3176A030CDB8BFA36F9155101C721B91300.png" class="screenshot" height="466" width="1011" caption="Figure 2: Storage configuration on Windows 10 desktop (STORM)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/screenshots/00/3598C3176A030CDB8BFA36F9155101C721B91300.png)
 
@@ -48,7 +51,7 @@ tell just by the sound that my typically idle HDD was still very much active.
 I fired up Performance Monitor to confirm my hypothesis that the new behavior
 was due to Docker Desktop and, in particular, to enabling Kubernetes.
 
-{{< figure src="https://assets.technologytoolbox.com/screenshots/0F/5B8FA0E2895D56F6F3D60DC32272309C2C3DB00F.png" class="screenshot" height="1040" width="1286" title="Figure 3: Performance monitor for Docker Desktop and Kubernetes" >}}
+{{< figure src="https://assets.technologytoolbox.com/screenshots/0F/5B8FA0E2895D56F6F3D60DC32272309C2C3DB00F.png" class="screenshot" height="1040" width="1286" caption="Figure 3: Performance monitor for Docker Desktop and Kubernetes" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/screenshots/0F/5B8FA0E2895D56F6F3D60DC32272309C2C3DB00F.png)
 

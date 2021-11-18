@@ -87,7 +87,7 @@ illustrated in the following screenshot.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-600x420.png"
 alt="Caelum - Initial source tree and Visual Studio solution" class="screenshot"
 height="420" width="600"
-title="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
+caption="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-789x552.png)
 

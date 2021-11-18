@@ -157,7 +157,7 @@ Web (after adding the CSS rules to define the site fonts, colors, etc.).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-600x142.png"
 alt="Caelum prototype - Default.master" class="screenshot" height="142"
-width="600" title="Figure 1: Caelum prototype - Default.master" >}}
+width="600" caption="Figure 1: Caelum prototype - Default.master" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-1021x241.png)
 
@@ -367,7 +367,7 @@ screenshot from the HTML prototype.]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
-title="Figure 2: Technology Toolbox home page" >}}
+caption="Figure 2: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -768,7 +768,7 @@ it.]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post" class="screenshot" height="600" width="398"
-title="Figure 3: Sample blog post" >}}
+caption="Figure 3: Sample blog post" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 

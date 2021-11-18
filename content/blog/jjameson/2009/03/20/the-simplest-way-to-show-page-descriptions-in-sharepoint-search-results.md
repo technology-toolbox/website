@@ -116,7 +116,7 @@ content type hierarchy:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Publishing-Content-Type-Hierarchy-568x597.png"
 alt="MOSS 2007 Publishing - content type hierarchy" height="597" width="568"
-title="Figure 1: MOSS 2007 Publishing - content type hierarchy" >}}
+caption="Figure 1: MOSS 2007 Publishing - content type hierarchy" >}}
 
 Note that **Description** is inherited from the **System Page** content type.
 Here is the definition for that content type:

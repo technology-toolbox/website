@@ -7,9 +7,7 @@ description:
   Visual Studio. When starting a new project from scratch, I start by creating a
   blank Visual Studio...
 aliases:
-  [
-    "/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx",
-  ]
+  ["/blog/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx"]
 categories: ["My System", "Development"]
 tags: ["My System", "Core Development", "Visual Studio"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2007/04/18/structure-visual-studio-solutions.aspx"
@@ -72,7 +70,7 @@ able to quickly create the following shell structure:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Solution-Explorer-Step-1-314x452.JPG"
 alt="Solution Explorer view of Visual Studio solution" class="screenshot"
 height="452" width="314"
-title="Figure 1: Solution Explorer view of Visual Studio solution" >}}
+caption="Figure 1: Solution Explorer view of Visual Studio solution" >}}
 
 In Windows Explorer, the corresponding folder structure looks like this:
 
@@ -80,7 +78,7 @@ In Windows Explorer, the corresponding folder structure looks like this:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-600x379.JPG"
 alt="Windows Explorer view of Visual Studio solution" class="screenshot"
 height="379" width="600"
-title="Figure 2: Windows Explorer view of Visual Studio solution" >}}
+caption="Figure 2: Windows Explorer view of Visual Studio solution" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-767x485.JPG)
 

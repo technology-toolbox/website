@@ -14,7 +14,7 @@ aliases:
 categories: ["SharePoint"]
 tags: ["SharePoint 2010", "Tugboat"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/04/02/web-standards-design-with-sharepoint-part-4.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Tugboat - 1.0.25.0 %28Sprint 2%29.zip"
   fileName: Tugboat - 1.0.25.0 (Sprint 2).zip
   fileSizeInBytes: 2467079
@@ -45,12 +45,11 @@ with the content.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page" class="screenshot" height="600" width="296"
-title="Figure 1: Tugboat - Home page" >}}
+caption="Figure 1: Tugboat - Home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
-The first step was to get the actual content for the home page into SharePoint
-2010. To achieve this, I created a new site based on the **Publishing Portal**
+The first step was to get the actual content for the home page into SharePoint 2010. To achieve this, I created a new site based on the **Publishing Portal**
 template and uploaded the home page images (e.g. boat.jpg) to the **Site
 Collection Images** library.
 
@@ -71,7 +70,7 @@ following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-600x542.png"
 alt="Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)"
 class="screenshot" height="542" width="600"
-title="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)" >}}
+caption="Figure 2: Tugboat home page in SharePoint 2010 (with OOTB nightandday.master)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-1-1008x911.png)
 
@@ -119,7 +118,7 @@ Here are the results after step 2:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-2-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 2)" class="screenshot"
 height="357" width="600"
-title="Figure 3: Tugboat home page in SharePoint 2010 (step 2)" >}}
+caption="Figure 3: Tugboat home page in SharePoint 2010 (step 2)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-2-1008x599.png)
 
@@ -204,7 +203,7 @@ Here are the results after step 3:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 3)" class="screenshot"
 height="357" width="600"
-title="Figure 4: Tugboat home page in SharePoint 2010 (step 3)" >}}
+caption="Figure 4: Tugboat home page in SharePoint 2010 (step 3)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-1008x599.png)
 
@@ -224,7 +223,7 @@ clicked **Show Ribbon** from the **Site Actions** menu, I saw the following:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)"
 class="screenshot" height="368" width="600"
-title="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
+caption="Figure 5: Tugboat home page in SharePoint 2010 (with \"top row elements\" not inside the \"s4-searcharea\" &lt;div&gt;)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-3-bad-1005x617.png)
 
@@ -280,7 +279,7 @@ Here are the results after step 4:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-4-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 4)" class="screenshot"
 height="357" width="600"
-title="Figure 6: Tugboat home page in SharePoint 2010 (step 4)" >}}
+caption="Figure 6: Tugboat home page in SharePoint 2010 (step 4)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-4-1008x599.png)
 
@@ -337,7 +336,7 @@ Here are the results after step 5:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 5)" class="screenshot"
 height="357" width="600"
-title="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
+caption="Figure 7: Tugboat home page in SharePoint 2010 (step 5)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-5-1008x599.png)
 
@@ -370,7 +369,7 @@ Here are the results after step 6:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-6-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 6)" class="screenshot"
 height="357" width="600"
-title="Figure 8: Tugboat home page in SharePoint 2010 (step 6)" >}}
+caption="Figure 8: Tugboat home page in SharePoint 2010 (step 6)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-6-1008x599.png)
 
@@ -399,7 +398,7 @@ Here are the results after step 7:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-7-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 7)" class="screenshot"
 height="357" width="600"
-title="Figure 9: Tugboat home page in SharePoint 2010 (step 7)" >}}
+caption="Figure 9: Tugboat home page in SharePoint 2010 (step 7)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-7-1008x599.png)
 
@@ -419,7 +418,7 @@ scenario" as shown below:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)"
 class="screenshot" height="357" width="600"
-title="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)" >}}
+caption="Figure 10: Tugboat home page in SharePoint 2010 (step 8 - SPRibbon content hidden from anonymous users)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-1008x599.png)
 
@@ -433,7 +432,7 @@ clicking **Show Ribbon** on the **Site Actions** menu:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-600x367.png"
 alt="Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)"
 class="screenshot" height="367" width="600"
-title="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)" >}}
+caption="Figure 11: Tugboat home page in SharePoint 2010 (broken ribbon as a result of using ASP.NET LoginView control)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-bad-1007x616.png)
 
@@ -481,7 +480,7 @@ With this approach, the ribbon renders as expected for both anonymous users
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-600x368.png"
 alt="Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")"
 class="screenshot" height="368" width="600"
-title="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")" >}}
+caption="Figure 12: Tugboat home page in SharePoint 2010 (\"All ribbon tabs present and accounted for, sir!\")" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-8-good-1007x617.png)
 
@@ -518,7 +517,7 @@ Here are the results after step 9:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-9-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (step 9)" class="screenshot"
 height="357" width="600"
-title="Figure 13: Tugboat home page in SharePoint 2010 (step 9)" >}}
+caption="Figure 13: Tugboat home page in SharePoint 2010 (step 9)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Step-9-1008x599.png)
 
@@ -538,7 +537,7 @@ other words, as viewed by an authorized user):
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-600x357.png"
 alt="Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)"
 class="screenshot" height="357" width="600"
-title="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)" >}}
+caption="Figure 14: Tugboat home page in SharePoint 2010 (all ribbon items formatted in bold)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-SharePoint-2010-Bold-Links-1008x599.png)
 

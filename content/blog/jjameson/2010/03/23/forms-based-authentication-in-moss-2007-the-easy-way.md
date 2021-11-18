@@ -166,7 +166,7 @@ the deployment scripts default to Release builds, Doug needs to set the
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Environment-Variables-394x436.png"
 alt="Setting environment variables" height="436" width="394"
-title="Figure 1: Setting environment variables" >}}
+caption="Figure 1: Setting environment variables" >}}
 
 ### Step 3 - Set FABRIKAM_DEMO_APP_POOL_PASSWORD environment variable
 

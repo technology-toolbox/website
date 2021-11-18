@@ -15,7 +15,7 @@ aliases:
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2009/11/01/constraining-tables-with-css.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo - Constraining Tables with CSS.zip"
   fileName: Demo - Constraining Tables with CSS.zip
   fileSizeInBytes: 24798
@@ -38,7 +38,7 @@ The following figure illustrates the desired end result:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Constrained-Table-559x166.png"
 alt="Constrained table" height="166" width="559"
-title="Figure 1: Constrained table" >}}
+caption="Figure 1: Constrained table" >}}
 
 Here is the sample ASP.NET page that I created this morning to demonstrate this:
 

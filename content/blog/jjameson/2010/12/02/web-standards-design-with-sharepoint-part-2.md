@@ -85,7 +85,7 @@ The following screenshot shows the Tugboat home page:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page" class="screenshot" height="600" width="296"
-title="Figure 1: Tugboat - Home page" >}}
+caption="Figure 1: Tugboat - Home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
@@ -260,7 +260,7 @@ Web Parts on the Tugboat home page:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-296x600.png"
 alt="Tugboat - Home page (wireframe)" class="screenshot" height="600"
-width="296" title="Figure 2: Tugboat - Home page (wireframe)" >}}
+width="296" caption="Figure 2: Tugboat - Home page (wireframe)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-723x1464.png)
 
@@ -289,7 +289,7 @@ TugboatWelcomePageLayout1:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-WelcomePageLayout1-600x285.png"
 alt="TugboatWelcomePageLayout1" height="285" width="600"
-title="Figure 3: TugboatWelcomePageLayout1" >}}
+caption="Figure 3: TugboatWelcomePageLayout1" >}}
 
 As I mentioned before, for Sprint 1, I'll just be using the PageContent field
 and a couple of the Web Part zones (**Top Left Zone** and **Top Right Zone**).
@@ -431,7 +431,7 @@ It worked as expected in Firefox, as shown in the following screenshot:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-595x600.png"
 alt="\"Find a Location\" map (Firefox)" class="screenshot" height="600"
-width="595" title="Figure 4: \"Find a Location\" map (Firefox)" >}}
+width="595" caption="Figure 4: \"Find a Location\" map (Firefox)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-1017x1025.png)
 
@@ -441,7 +441,7 @@ rendered using IE8:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-600x598.png"
 alt="\"Find a Location\" map (IE8)" class="screenshot" height="598" width="600"
-title="Figure 5: \"Find a Location\" map (IE8)" >}}
+caption="Figure 5: \"Find a Location\" map (IE8)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-1024x1020.png)
 

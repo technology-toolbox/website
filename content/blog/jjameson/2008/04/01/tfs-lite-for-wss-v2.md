@@ -1,11 +1,11 @@
 ---
-title: "\"TFS Lite\" for WSS v2"
+title: '"TFS Lite" for WSS v2'
 date: 2008-04-01T07:02:00-06:00
 description:
-  "[Update (2008-04-07): \"TFS Lite\" for WSS v3 is now available.] For almost
+  '[Update (2008-04-07): "TFS Lite" for WSS v3 is now available.] For almost
   as long as I can remember (okay, not really that long -- but at least as far
-  back as 2003), I've been using SharePoint lists as a bug tracking tool on
-  almost all of the customer..."
+  back as 2003), I''ve been using SharePoint lists as a bug tracking tool on
+  almost all of the customer...'
 aliases:
   [
     "/blog/jjameson/archive/2008/03/31/tfs-lite-for-wss-v2.aspx",
@@ -14,7 +14,7 @@ aliases:
 categories: ["Development", "SharePoint"]
 tags: ["Core Development", "WSS v2"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2008/04/01/tfs-lite-for-wss-v2.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/TFS Lite - WSS v2.zip"
   fileName: TFS Lite - WSS v2.zip
   fileSizeInBytes: 230157
@@ -101,7 +101,7 @@ deliverables and milestones using KPI icons (green, yellow, and red).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-600x452.jpg"
 alt="Project Summary \"dashboard\"" class="screenshot" height="452" width="600"
-title="Figure 1: Project Summary \"dashboard\"" >}}
+caption="Figure 1: Project Summary \"dashboard\"" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-788x594.jpg)
 

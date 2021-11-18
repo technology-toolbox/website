@@ -2,11 +2,11 @@
 title: Using CSS sprites to improve site performance and user experience (a.k.a. Building TechnologyToolbox.com, part 11)
 date: 2012-01-14T23:02:25-07:00
 description:
-  "In my previous post, I briefly mentioned how the \"Most Popular Posts\"
+  'In my previous post, I briefly mentioned how the "Most Popular Posts"
   section on the Technology Toolbox home page uses a CSS sprite to render the
   arrow image next to each list item. In this post, I explain more about how CSS
   sprites are used on the site, why they are valuable, and some caveats when
-  using them."
+  using them.'
 aliases:
   [
     "/blog/jjameson/archive/2012/01/14/building-technologytoolbox-com-part-11.aspx",
@@ -24,7 +24,7 @@ item.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
-title="Figure 1: Technology Toolbox home page" >}}
+caption="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -51,7 +51,7 @@ used throughout the site.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
-title="Figure 2: list-item-sprite-1.0.png" >}}
+caption="Figure 2: list-item-sprite-1.0.png" >}}
 
 Notice that the "dashed arrow" icon used in the **Most Popular Posts** section
 is actually the fifth image in the set (starting from the lower-left corner).
@@ -149,7 +149,7 @@ for each cell in the grid -- or you can simply take my word for it :-) ]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-600x377.png"
 alt="List items sprite (Expression Design)" class="screenshot" height="377"
-width="600" title="Figure 3: List items sprite (Expression Design)" >}}
+width="600" caption="Figure 3: List items sprite (Expression Design)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
 
@@ -185,7 +185,7 @@ the site, such as the one shown in Figure 4.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
-title="Figure 4: Blog home page" >}}
+caption="Figure 4: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 

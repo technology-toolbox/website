@@ -14,7 +14,7 @@ aliases:
 categories: ["My System", "SharePoint", "Development"]
 tags: ["My System", "Simplify", "MOSS 2007", "Core Development", "WSS v3"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/03/20/logging-exceptions-in-net-applications.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/Demo %28LoggingAndDiagnostics%29.zip"
   fileName: Demo (LoggingAndDiagnostics).zip
   fileSizeInBytes: 42289
@@ -37,7 +37,7 @@ Here's a screenshot from a sample that I whipped up this morning:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
 alt="ASP.NET error page" class="screenshot" height="295" width="600"
-title="Figure 1: ASP.NET error page" >}}
+caption="Figure 1: ASP.NET error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-1301x639.png)
 

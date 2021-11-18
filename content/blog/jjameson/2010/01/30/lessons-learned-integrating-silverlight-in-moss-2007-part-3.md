@@ -54,7 +54,7 @@ Here's a partial screenshot of the home page of the portal, after clicking the
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-No-menu-open-447x300.png"
 alt="No menus open" class="screenshot" height="300" width="447"
-title="Figure 1: No menus open" >}}
+caption="Figure 1: No menus open" >}}
 
 While the above screenshot doesn't illustrate any problem, the caption gives you
 a hint as to what's coming next.
@@ -65,7 +65,7 @@ The following screenshot shows what happens when you click the **Page** menu.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Obscured-menu-447x300.png"
 alt="Page menu items obscured by Silverlight control" class="screenshot"
 height="300" width="447"
-title="Figure 2: Page menu items obscured by Silverlight control" >}}
+caption="Figure 2: Page menu items obscured by Silverlight control" >}}
 
 Good luck trying to click the **Delete Page**, **Add Web Parts**, and **Modify
 Web Parts** menu items!
@@ -83,7 +83,7 @@ screenshot:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Unobscured-menu-(windowless)-447x300.png"
 alt="Page menu items no longer obscured by windowless Silverlight control"
 class="screenshot" height="300" width="447"
-title="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}
+caption="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}
 
 Here's a comment from Karl Erickson on his blog post entitled
 "[Limitations of Windowless mode for Silverlight](http://blogs.msdn.com/silverlight_sdk/archive/2008/11/12/limitations-of-windowless-mode-for-silverlight.aspx)":

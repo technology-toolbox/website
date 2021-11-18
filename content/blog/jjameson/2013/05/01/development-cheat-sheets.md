@@ -1,10 +1,10 @@
 ---
-title: "\"Development Cheat Sheets\""
+title: '"Development Cheat Sheets"'
 date: 2013-05-01T01:00:45-06:00
 description:
-  "In this post, I explain how I like to use Microsoft OneNote to manage what I
-  call \"development cheat sheets\" -- which are especially useful when
-  developing SharePoint solutions."
+  'In this post, I explain how I like to use Microsoft OneNote to manage what I
+  call "development cheat sheets" -- which are especially useful when
+  developing SharePoint solutions.'
 aliases:
   [
     "/blog/jjameson/archive/2013/04/30/development-cheat-sheets.aspx",
@@ -28,7 +28,7 @@ Fabrikam Demo solution.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-600x393.png"
 alt="Development cheat sheet - Fabrikam Demo - Main branch" class="screenshot"
 height="393" width="600"
-title="Figure 1: Development \"cheat sheet\" - Fabrikam Demo - Main branch" >}}
+caption="Figure 1: Development \"cheat sheet\" - Fabrikam Demo - Main branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-Main-branch-1098x719.png)
 
@@ -122,7 +122,7 @@ included in
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-600x524.png"
 alt="Development cheat sheet - Fabrikam Demo - SharePointExtranet branch"
 class="screenshot" height="524" width="600"
-title="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
+caption="Figure 2: Development \"cheat sheet\" - Fabrikam Demo - SharePointExtranet branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Fabrikam-Demo-SharePointExtranet-branch-1190x1040.png)
 
@@ -153,6 +153,6 @@ upgrading) the ELN solutions (WSPs).
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-600x461.png"
 alt="Development cheat sheet - Dow ELN - Main branch" class="screenshot"
 height="461" width="600"
-title="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
+caption="Figure 3: Development \"cheat sheet\" - Dow ELN - Main branch" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Development-cheat-sheet-Dow-ELN-Main-branch-1328x1021.png)

@@ -27,7 +27,7 @@ The following screenshot shows the snapshots for my primary SharePoint Server
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
-title="Figure 1: FOOBAR5 snapshots" >}}
+caption="Figure 1: FOOBAR5 snapshots" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 

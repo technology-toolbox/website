@@ -2,10 +2,10 @@
 title: Linked Files in Visual Studio Solutions
 date: 2009-04-02T08:20:00-06:00
 description:
-  "A couple of years ago, I wrote a post introducing my system for structuring
+  'A couple of years ago, I wrote a post introducing my system for structuring
   Visual Studio solutions . However, I apparently forgot to post a follow-up
   providing additional details, such as configuring assembly versioning and what
-  I like to call \"shared..."
+  I like to call "shared...'
 aliases:
   [
     "/blog/jjameson/archive/2009/04/01/linked-files-in-visual-studio-solutions.aspx",
@@ -63,14 +63,18 @@ below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
 alt="Linked files in a Visual Studio solution" class="screenshot" height="577"
-width="372" title="Figure 1: Linked files in a Visual Studio solution" >}}
+width="372" caption="Figure 1: Linked files in a Visual Studio solution" >}}
 
 The corresponding folder structure on disk resembles the following:
 
 - Fabrikam
+
   - Demo
+
     - Dev _(branch)_
+
       - Lab1 _(branch)_
+
         - AssemblyVersionInfo.cs
         - CustomDictionary.xml
         - Fabrikam.Demo.sln

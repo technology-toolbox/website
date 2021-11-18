@@ -2,10 +2,10 @@
 title: Expression Web, My MSDN Blog, and (Now) Team Foundation Server
 date: 2009-09-12T09:17:00-06:00
 description:
-  "In case you haven't picked it up from some of my previous posts, I became
-  somewhat of a \"Web standards zealot\" back in 2006 while creating a
-  \"community site\" for a local organization of mental health professionals and
-  attorneys that help children and..."
+  'In case you haven''t picked it up from some of my previous posts, I became
+  somewhat of a "Web standards zealot" back in 2006 while creating a
+  "community site" for a local organization of mental health professionals and
+  attorneys that help children and...'
 aliases:
   [
     "/blog/jjameson/archive/2009/09/11/expression-web-my-msdn-blog-and-now-team-foundation-server.aspx",
@@ -40,8 +40,7 @@ Community Server (or at least the version of Community Server that Microsoft is
 currently using).
 
 Before finally choosing Expression Web, I looked at various other tools for
-authoring blog posts, including Windows Live Writer and even Microsoft Word
-2007. However, I found that by using Expression Web and a simple "template" that
+authoring blog posts, including Windows Live Writer and even Microsoft Word 2007. However, I found that by using Expression Web and a simple "template" that
 I created, I could quickly and easily create blog posts with just the kind of
 "minimal markup" that I was looking for.
 
@@ -86,8 +85,7 @@ directly on the site, but I believe it is well worth it. Even more so, now that
 my blog is stored in Team Foundation Server (TFS)...
 
 Back in August while I was in Redmond for SharePoint 2010 Training, I took the
-opportunity of being on the Microsoft campus to rebuild my laptop with Windows
-7. Prior to that rebuild, I had been running Windows Server 2008 on my laptop so
+opportunity of being on the Microsoft campus to rebuild my laptop with Windows 7. Prior to that rebuild, I had been running Windows Server 2008 on my laptop so
 that I could utilize Hyper-V regardless of whether I was working at a customer
 site or from home (with access to the
 ["Jameson Datacenter"](/blog/jjameson/2009/09/14/the-jameson-datacenter) and all
@@ -108,7 +106,7 @@ simply just worked, as shown below:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-600x499.png"
 alt="Expression Web - my MSDN blog" height="499" width="600"
-title="Figure 1: Expression Web - my MSDN blog" >}}
+caption="Figure 1: Expression Web - my MSDN blog" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
 

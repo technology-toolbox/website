@@ -36,7 +36,7 @@ use regarding potential projects and other contact requests, as shown in Figure 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form with custom CAPTCHA control" class="screenshot" height="600"
-width="592" title="Figure 1: Contact form with custom CAPTCHA control" >}}
+width="592" caption="Figure 1: Contact form with custom CAPTCHA control" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
 
@@ -56,7 +56,7 @@ fields are missing.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
-width="534" title="Figure 2: Contact form CAPTCHA validation error" >}}
+width="534" caption="Figure 2: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
 

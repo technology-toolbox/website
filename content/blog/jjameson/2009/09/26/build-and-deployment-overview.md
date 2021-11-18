@@ -32,7 +32,7 @@ solution.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/1-Initial-build-and-deployment-600x259.png"
 alt="Initial build and deployment of the solution" height="259" width="600"
-title="Figure 1: Initial build and deployment of the solution" >}}
+caption="Figure 1: Initial build and deployment of the solution" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/1-Initial-build-and-deployment-1210x523.png)
 
@@ -72,7 +72,7 @@ Figure 2 shows a subsequent build of the solution.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-600x271.png"
 alt="Subsequent build and deployment (with draft of installation guide)"
 height="271" width="600"
-title="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
+caption="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-829x375.png)
 
@@ -93,7 +93,7 @@ process.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment (with install scripts and updated installation guide)"
 height="343" width="600"
-title="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
+caption="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
@@ -135,7 +135,7 @@ Figure 4.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="Installing the Beta 1 version to TEST" height="343" width="600"
-title="Figure 4: Installing the Beta 1 version to TEST" >}}
+caption="Figure 4: Installing the Beta 1 version to TEST" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 
@@ -165,7 +165,7 @@ Figure 5 with the first "release candidate" of the solution.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-600x351.png"
 alt="Installing the RC1 version to TEST" height="351" width="600"
-title="Figure 5: Installing the RC1 version to TEST" >}}
+caption="Figure 5: Installing the RC1 version to TEST" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-1382x809.png)
 
@@ -175,7 +175,7 @@ promote yet another build to the TEST environment, as illustrated in Figure 6.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-600x351.png"
 alt="Installing the RC2 version to TEST" height="351" width="600"
-title="Figure 6: Installing the RC2 version to TEST" >}}
+caption="Figure 6: Installing the RC2 version to TEST" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-1381x808.png)
 
@@ -186,7 +186,7 @@ production environment, as illustrated in Figure 7.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-600x350.png"
 alt="Installing the V1.0 release to PROD" height="350" width="600"
-title="Figure 7: Installing the V1.0 release to PROD" >}}
+caption="Figure 7: Installing the V1.0 release to PROD" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-1382x807.png)
 

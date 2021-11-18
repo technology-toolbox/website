@@ -2,10 +2,10 @@
 title: Stagger the Startup of Your Virtual Machines
 date: 2010-04-17T04:50:00-06:00
 description:
-  "I've mentioned before how I run two Hyper-V servers in the \" Jameson
-  Datacenter \" (each one hosting a variety of different VMs). On the rare
+  'I''ve mentioned before how I run two Hyper-V servers in the " Jameson
+  Datacenter " (each one hosting a variety of different VMs). On the rare
   occasion that a patch comes out on Windows Update that affects Windows Server
-  2008 Server Core edition (such..."
+  2008 Server Core edition (such...'
 aliases:
   [
     "/blog/jjameson/archive/2010/04/16/stagger-the-startup-of-your-virtual-machines.aspx",
@@ -36,7 +36,7 @@ about:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Hyper-V-Staggered-Start-600x310.png"
 alt="Hyper-V staggered start" class="screenshot" height="310" width="600"
-title="Figure 1: Hyper-V staggered start" >}}
+caption="Figure 1: Hyper-V staggered start" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Hyper-V-Staggered-Start-1153x595.png)
 
@@ -62,13 +62,13 @@ In the **Startup delay** field, I specify the different values for each VM.
 {{< table class="small table-striped" caption="Automatic Start Settings" >}}
 
 | Virtual Machine | Startup Delay [sec] |
-| --- | --- |
-| XAVIER1 | 0 |
-| BANSHEE | 60 |
-| CYCLOPS | 120 |
-| DAZZLER | 180 |
-| DOGFOOD | 240 |
-| JUBILEE | 300 |
+| --------------- | ------------------- |
+| XAVIER1         | 0                   |
+| BANSHEE         | 60                  |
+| CYCLOPS         | 120                 |
+| DAZZLER         | 180                 |
+| DOGFOOD         | 240                 |
+| JUBILEE         | 300                 |
 
 {{< /table >}}
 

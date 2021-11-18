@@ -4,10 +4,7 @@ date: 2012-01-30T23:35:45-07:00
 description:
   Follow along as I share my struggles using GitHub and the Git version control
   system.
-aliases:
-  [
-    "/blog/jjameson/archive/2012/01/30/git-github-issues.aspx",
-  ]
+aliases: ["/blog/jjameson/archive/2012/01/30/git-github-issues.aspx"]
 categories: ["Development"]
 tags: ["Core Development", "Subtext"]
 ---
@@ -62,7 +59,7 @@ share something else. What is wrong with the following screenshot?
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-600x350.png"
 alt="Git - pending changes - yes or no?" height="350" width="600"
-title="Figure 1: Git - pending changes - yes or no?" >}}
+caption="Figure 1: Git - pending changes - yes or no?" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-1113x650.png)
 

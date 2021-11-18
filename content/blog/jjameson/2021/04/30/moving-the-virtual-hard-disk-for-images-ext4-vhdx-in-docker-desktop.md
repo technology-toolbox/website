@@ -5,7 +5,10 @@ description:
   "Are you a little irritated that Docker Desktop is consuming a large chunk of
   your C: drive? Don't fret, you can easily resolve the issue -- provided you
   have another disk available."
-images: ["https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png"]
+images:
+  [
+    "https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png",
+  ]
 categories: ["Development", "Infrastructure"]
 tags: ["Docker"]
 ---
@@ -28,7 +31,7 @@ That's not a lot, but -- as long as I'm careful about what I store on system
 drive -- it is sufficient for my needs. So, shortly after installing Docker
 Desktop for Windows and running a few containers, I discovered the following:
 
-{{< figure src="https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="1039" width="1918" title="Figure 1: Disk space consumed by Docker images" >}}
+{{< figure src="https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="1039" width="1918" caption="Figure 1: Disk space consumed by Docker images" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/screenshots/F3/5CCB258F8ECC8934921DD9F2FC5A3CBEDF7C91F3.png)
 

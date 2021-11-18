@@ -27,7 +27,7 @@ The following screenshot shows the current home page for Technology Toolbox.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
-title="Figure 1: Technology Toolbox home page" >}}
+caption="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -47,7 +47,7 @@ Here is the corresponding page layout for the site home page.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
-width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
+width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
@@ -129,7 +129,7 @@ a related illustration (typically obtained from
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
 alt="Services page" class="screenshot" height="494" width="600"
-title="Figure 3: Services page" >}}
+caption="Figure 3: Services page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-1058x871.png)
 
@@ -143,7 +143,7 @@ layout option).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
 alt="Services page (with grid)" class="screenshot" height="495" width="600"
-title="Figure 4: Services page (with grid)" >}}
+caption="Figure 4: Services page (with grid)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-1058x872.png)
 
@@ -169,7 +169,7 @@ projects and other contact requests, as shown in Figure 5.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form" class="screenshot" height="600" width="592"
-title="Figure 5: Contact form" >}}
+caption="Figure 5: Contact form" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-1058x1072.png)
 
@@ -180,7 +180,7 @@ background color (that changes to white when the field has the focus).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
 alt="Contact form validation errors" class="screenshot" height="600" width="505"
-title="Figure 6: Contact form validation errors" >}}
+caption="Figure 6: Contact form validation errors" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-1058x1258.png)
 
@@ -200,7 +200,7 @@ fields are missing.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
-width="534" title="Figure 7: Contact form CAPTCHA validation error" >}}
+width="534" caption="Figure 7: Contact form CAPTCHA validation error" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-1058x1189.png)
 
@@ -225,7 +225,7 @@ lists of links grouped by year).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
-title="Figure 8: Blog home page" >}}
+caption="Figure 8: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
@@ -246,7 +246,7 @@ redundant with the items shown in the primary content area on that page.]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post" class="screenshot" height="600" width="398"
-title="Figure 9: Sample blog post" >}}
+caption="Figure 9: Sample blog post" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 
@@ -299,7 +299,7 @@ the "Caelum" solution -- such as the site map file and the custom blog skin.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
-title="Figure 10: Solution architecture" >}}
+caption="Figure 10: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
@@ -312,7 +312,7 @@ servers are used for database services (i.e. SQL Server) and the Web tier.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure" height="399" width="600"
-title="Figure 11: Infrastructure" >}}
+caption="Figure 11: Infrastructure" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
