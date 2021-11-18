@@ -2,10 +2,10 @@
 title: Upgrading a Custom MOSS 2007 Solution to SharePoint Server 2010
 date: 2011-04-03T04:59:00-06:00
 description:
-  "In yesterday's post , I provided a custom SharePoint Server 2010 solution
-  based on Dan Cederholm's sample site for the fictitious Tugboat Coffee company
+  'In yesterday''s post , I provided a custom SharePoint Server 2010 solution
+  based on Dan Cederholm''s sample site for the fictitious Tugboat Coffee company
   (from his book Handcrafted CSS : More Bulletproof Web Design ). Since I had
-  originally \"ported..."
+  originally "ported...'
 aliases:
   [
     "/blog/jjameson/archive/2011/04/02/upgrading-a-custom-moss-2007-solution-to-sharepoint-server-2010.aspx",
@@ -37,7 +37,7 @@ two.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-499x1472.jpg"
 alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
 height="1472" width="499"
-title="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
+caption="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-768x2262.jpg)
 

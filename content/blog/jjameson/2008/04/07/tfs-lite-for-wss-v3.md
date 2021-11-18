@@ -135,7 +135,7 @@ Here is a step-by-step guide for creating the TFS Lite site template for WSS v3:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-600x363.jpg"
 alt="Project Summary \"dashboard\"" class="screenshot" height="363" width="600"
-title="Figure 1: Project Summary \"dashboard\"" >}}
+caption="Figure 1: Project Summary \"dashboard\"" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
 

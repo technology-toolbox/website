@@ -74,7 +74,7 @@ shows the elapsed time required to propagate each FAQ page from the source
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(before)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation" height="436" width="600"
-title="Figure 1: Elapsed Time for Variation Page Propagation" >}}
+caption="Figure 1: Elapsed Time for Variation Page Propagation" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28before%29-704x512.jpg)
 
@@ -95,7 +95,7 @@ The following graph "zooms in" on the time period after the index was added.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-(after)-600x436.jpg"
 alt="Elapsed Time for Variation Page Propagation with New AllUserData Index"
 height="436" width="600"
-title="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
+caption="Figure 2: Elapsed Time for Variation Page Propagation with New AllUserData Index" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Variation-Page-Propagation-%28after%29-670x487.jpg)
 

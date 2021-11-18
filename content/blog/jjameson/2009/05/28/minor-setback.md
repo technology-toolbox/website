@@ -2,10 +2,10 @@
 title: Minor Setback
 date: 2009-05-28T07:55:00-06:00
 description:
-  "I haven't blogged in almost 8 weeks. Ouch. However, I like to think I have a
+  'I haven''t blogged in almost 8 weeks. Ouch. However, I like to think I have a
   good excuse -- at least for a good portion of that time. On April 17, 2009, I
   broke my left leg in 6 places skiing one of my favorite runs at Mary Jane
-  called \"Outhouse..."
+  called "Outhouse...'
 aliases:
   [
     "/blog/jjameson/archive/2009/05/27/minor-setback.aspx",
@@ -38,7 +38,7 @@ all in place for about a week in order for the swelling to go down.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-600x450.jpg"
 alt="Broken tibia - external fixator" height="450" width="600"
-title="Figure 1: Broken tibia - external fixator" >}}
+caption="Figure 1: Broken tibia - external fixator" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-1024x768.jpg)
 

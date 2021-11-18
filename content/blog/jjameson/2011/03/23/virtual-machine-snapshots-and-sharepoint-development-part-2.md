@@ -2,17 +2,24 @@
 title: Virtual Machine Snapshots and SharePoint Development, Part 2
 date: 2011-03-23T05:51:00-06:00
 description:
-  "In part 1 of this post, I introduced the way I use VM snapshots to allow me
+  'In part 1 of this post, I introduced the way I use VM snapshots to allow me
   to quickly rollback my SharePoint development VMs to key points in time. For
-  example, I can quickly revert to a \"baseline SharePoint Server 2010
-  configuration\" in which no Web..."
+  example, I can quickly revert to a "baseline SharePoint Server 2010
+  configuration" in which no Web...'
 aliases:
   [
     "/blog/jjameson/archive/2011/03/22/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx",
     "/blog/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx",
   ]
 categories: ["My System", "SharePoint", "Infrastructure"]
-tags: ["My System", "MOSS 2007", "Windows Server", "Virtualization", "SharePoint 2010"]
+tags:
+  [
+    "My System",
+    "MOSS 2007",
+    "Windows Server",
+    "Virtualization",
+    "SharePoint 2010",
+  ]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/03/23/virtual-machine-snapshots-and-sharepoint-development-part-2.aspx"
 ---
 
@@ -110,8 +117,7 @@ means snapshots can be used without fear of wreaking havoc on your SharePoint
 environment.
 
 Imagine if this weren't the case. For example, your SharePoint environment
-consists of two VMs (one for SharePoint Server 2010 and the other for SQL Server
-2008) or perhaps the environment consists of three or more VMs with multiple
+consists of two VMs (one for SharePoint Server 2010 and the other for SQL Server 2008) or perhaps the environment consists of three or more VMs with multiple
 SharePoint servers, etc.
 
 If you try to use snapshots in those scenarios, you are simply asking for
@@ -138,7 +144,7 @@ SharePoint Server 2010 development VM (FOOBAR5):
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
-title="Figure 1: FOOBAR5 snapshots" >}}
+caption="Figure 1: FOOBAR5 snapshots" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
@@ -211,9 +217,9 @@ It's also worth repeating the following warning from my previous post:
 > development environment, then make darn sure you've checked in any pending
 > changes to TFS (or at least shelved your changes) before you apply a snapshot.
 > [Note that when applying an earlier snapshot, I don't typically take a new
-> snapshot before reverting to the earlier point in time and hence any work I've
-> done that hasn't be "exported" somewhere (e.g. checked into TFS) is
-> subsequently lost when I apply a snapshot.]
+> > snapshot before reverting to the earlier point in time and hence any work I've
+> > done that hasn't be "exported" somewhere (e.g. checked into TFS) is
+> > subsequently lost when I apply a snapshot.]
 
 {{< /div-block >}}
 
@@ -242,7 +248,7 @@ Microsoft Office SharePoint Server 2007 development VMs (FOOBAR2):
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
 alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600"
-title="Figure 2: FOOBAR2 snapshots" >}}
+caption="Figure 2: FOOBAR2 snapshots" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
 

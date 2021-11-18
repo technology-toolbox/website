@@ -26,7 +26,7 @@ blog home page with CSS disabled.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-328x600.png"
 alt="My MSDN blog home - CSS disabled" class="screenshot" height="600"
-width="328" title="Figure 1: My MSDN blog home - CSS disabled" >}}
+width="328" caption="Figure 1: My MSDN blog home - CSS disabled" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
 
@@ -63,7 +63,7 @@ page:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-362x600.png"
 alt="Technology Toolbox blog home page - CSS disabled" class="screenshot"
 height="600" width="362"
-title="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
+caption="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
 
@@ -117,8 +117,7 @@ is when I discovered the hAtom 0.1 microformat:
 >       **[rel-tag](http://microformats.org/wiki/rel-tag "rel-tag")**.
 >
 > <cite>-- <a
-> href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a>
-> </cite>
+> href="http://microformats.org/wiki/hatom">http://microformats.org/wiki/hatom</a> > </cite>
 
 {{< /div-block >}}
 
@@ -263,7 +262,7 @@ comments (i.e. `<li class="comments none">`).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
-title="Figure 3: Blog home page" >}}
+caption="Figure 3: Blog home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 

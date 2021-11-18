@@ -22,7 +22,7 @@ blog posts, as shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
-title="Figure 1: Technology Toolbox home page" >}}
+caption="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -32,7 +32,7 @@ ASP.NET user control, as illustrated in the corresponding page layout.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
-width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
+width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
@@ -44,7 +44,7 @@ Requests for URLs under **/blog** are handled by Subtext. All other requests
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
-title="Figure 3: Solution architecture" >}}
+caption="Figure 3: Solution architecture" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 

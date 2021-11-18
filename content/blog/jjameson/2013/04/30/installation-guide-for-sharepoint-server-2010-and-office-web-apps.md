@@ -328,7 +328,7 @@ contention.
 
 {{< anchor name="Figure_1:_SharePoint_development_VM_configuration" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" title="Figure 1: SharePoint development VM configuration" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" caption="Figure 1: SharePoint development VM configuration" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
 
@@ -1341,7 +1341,7 @@ FABRIKAM_BUILD_CONFIGURATION = Debug and FABRIKAM_EXTRANET_URL =
 
 {{< anchor name="Figure_2:_Setting_environment_variables" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" title="Figure 2: Setting environment variables" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Environment-Variables-Fabrikam-Extranet-394x436.png" alt="Setting environment variables" class="screenshot" height="436" width="394" caption="Figure 2: Setting environment variables" >}}
 
 ## DEV - Snapshot VM
 
@@ -2103,7 +2103,7 @@ The site should resemble the following:
 
 {{< anchor name="Figure_3:_Default_home_page_for_“Publishing_Portal”_site_in_SharePoint_Server_2010" >}}
 
-[{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png" alt="Default home page for “Publishing Portal” site in SharePoint Server 2010" class="screenshot" height="374" width="600" title="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
+[{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-600x374.png" alt="Default home page for “Publishing Portal” site in SharePoint Server 2010" class="screenshot" height="374" width="600" caption="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
 deployed, it is still possible to validate the basic functionality of the site
@@ -2723,7 +2723,7 @@ without the **Sample Style Guide** and **Reusable Content Sample** links).
 
 {{< anchor name="Figure_4:_Fabrikam_Extranet_home_page" >}}
 
-{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" title="Figure 4: Fabrikam Extranet home page" >}}
+{{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" caption="Figure 4: Fabrikam Extranet home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
 

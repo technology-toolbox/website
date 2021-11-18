@@ -1,8 +1,7 @@
 ---
 title: Claims Login Web Part for SharePoint Server 2010
 date: 2011-02-25T05:43:00-07:00
-description:
-  In my previous post , I provided the step-by-step process I use for
+description: In my previous post , I provided the step-by-step process I use for
   configuring claims-based authentication in SharePoint Server 2010. If you
   follow those steps, then when you browse to the home page of the site and
   click Sign In , you'll be redirected...
@@ -14,7 +13,7 @@ aliases:
 categories: ["SharePoint"]
 tags: ["SharePoint 2010"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2011/02/25/claims-login-web-part-for-sharepoint-server-2010.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/SharePointClaimsAuthentication.zip"
   fileName: SharePointClaimsAuthentication.zip
   fileSizeInBytes: 971819
@@ -27,7 +26,7 @@ authentication in SharePoint Server 2010.
 
 If you follow those steps, then when you browse to the home page of the site and
 click **Sign In**, you'll be redirected to the out-of-the-box login page
-(/_login/default.aspx) shown in Figure 1. Note that since the Web application is
+(/\_login/default.aspx) shown in Figure 1. Note that since the Web application is
 configured to support both Forms-Based Authentication (FBA) and Windows
 authentication, the login page requires you to specify the type of credentials
 to use to logon to the SharePoint site.
@@ -36,16 +35,16 @@ to use to logon to the SharePoint site.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-1-600x250.png"
 alt="Default login page in SharePoint Server 2010 (/_login/default.aspx)"
 class="screenshot" height="250" width="600"
-title="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.aspx)" >}}
+caption="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.aspx)" >}}
 
 If you click **Forms Authentication** in the dropdown list, you are redirected
-to the default login form (/_forms/default.aspx), shown in Figure 2.
+to the default login form (/\_forms/default.aspx), shown in Figure 2.
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
 alt="Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)"
 class="screenshot" height="250" width="600"
-title="Figure 2: Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)" >}}
+caption="Figure 2: Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)" >}}
 
 Note that if you click **Windows Authentication** in the dropdown list, you are
 presented with the login dialog provided by the Web browser (or, if you are
@@ -66,7 +65,7 @@ Figure 3.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-600x342.png"
 alt="Custom login page in SharePoint Server 2010" class="screenshot"
 height="342" width="600"
-title="Figure 3: Custom login page in SharePoint Server 2010" >}}
+caption="Figure 3: Custom login page in SharePoint Server 2010" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-1012x576.png)
 
@@ -273,7 +272,7 @@ login page:
       - 77u/PD94...
 
 I noticed a similar cookie when authenticating with the custom application page
-(e.g. /_layouts/Fabrikam/SignIn.aspx).
+(e.g. /\_layouts/Fabrikam/SignIn.aspx).
 
 However, when I logged in using the Claims Login Form Web Part, I found that
 there were two cookies:
@@ -319,7 +318,7 @@ the following features:
   approved (in order to avoid confusing and frustrating users)
 - Detecting the scenario where the user clicks the "Sign In" link on the custom
   sign-in page (instead of immediately entering credentials) and redirect to "/"
-  (instead of "/_layouts/Authenticate.aspx?...") in order to avoid an "Access
+  (instead of "/\_layouts/Authenticate.aspx?...") in order to avoid an "Access
   Denied" error
 
 ### Sample SharePoint solution
@@ -347,6 +346,7 @@ PowerShell scripts, as described below.
    to create and configure the **FabrikamDemo** database (i.e. the ASP.NET
    membership/role database).
 1. Complete the procedures detailed in **Step 5**from my previous post to add the Web.config modifications for claims-based authentication to the following sites:
+
    - **SharePoint Central Administration v4**
    - **Security Token Service**
 
@@ -359,6 +359,7 @@ PowerShell scripts, as described below.
    > activation of a feature (Fabrikam Demo - Web Application Configuration).
 
    {{< /div-block >}}
+
 1. On the **Start** menu, click **All Programs**, click **Microsoft SharePoint
    2010 Products**, right-click **SharePoint 2010 Management Shell**, and then
    click **Run as administrator**. If prompted by User Account Control to allow

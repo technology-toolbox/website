@@ -47,7 +47,7 @@ units (OUs) which you would typically find in many enterprise organizations.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-302x600.png"
 alt="Jameson Datacenter - Active Directory domain structure" class="screenshot"
 height="600" width="302"
-title="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
+caption="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-305x605.png)
 

@@ -59,7 +59,7 @@ returned from a long vacation).
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-297x600.png"
 alt="Outlook folders and archive structure" class="screenshot" height="600"
-width="297" title="Figure 1: Outlook folders and archive structure" >}}
+width="297" caption="Figure 1: Outlook folders and archive structure" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-and-archive-structure-334x675.png)
 
@@ -214,7 +214,7 @@ Compressor:
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-297x600.png"
 alt="Outlook folders after running Thread Compressor" class="screenshot"
 height="600" width="297"
-title="Figure 2: Outlook folders after running Thread Compressor" >}}
+caption="Figure 2: Outlook folders after running Thread Compressor" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Outlook-folders-after-Thread-Compressor-334x675.png)
 

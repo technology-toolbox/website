@@ -2,8 +2,8 @@
 title: Website style guide, custom CSS classes, and HTML snippets
 date: 2012-02-19T02:17:03-07:00
 description:
-  "If, like me, you use Expression Web to author HTML content, then I hope you
-  take advantage of the \"Snippets\" feature."
+  'If, like me, you use Expression Web to author HTML content, then I hope you
+  take advantage of the "Snippets" feature.'
 aliases:
   [
     "/blog/jjameson/archive/2012/02/18/website-style-guide-custom-css-classes-and-html-snippets.aspx",
@@ -70,6 +70,6 @@ Here is a screenshot that illustrates the snippets I've created.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-Technology-Toolbox-Blog-600x325.png"
 alt="Snippets in Expression Web" class="screenshot" height="325" width="600"
-title="Figure 1: Snippets in Expression Web" >}}
+caption="Figure 1: Snippets in Expression Web" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-Technology-Toolbox-Blog-1920x1040.png)

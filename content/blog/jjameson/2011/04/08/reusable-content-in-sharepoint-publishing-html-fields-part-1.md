@@ -2,10 +2,10 @@
 title: Reusable Content in SharePoint Publishing HTML Fields, Part 1
 date: 2011-04-08T06:59:00-06:00
 description:
-  "In one of the sprints last year for my current project, I built a custom
-  \"document publishing\" system based on the Web Content Management (WCM)
+  'In one of the sprints last year for my current project, I built a custom
+  "document publishing" system based on the Web Content Management (WCM)
   features in Microsoft Office SharePoint Server (MOSS) 2007. My client was
-  looking to replace a legacy system..."
+  looking to replace a legacy system...'
 aliases:
   [
     "/blog/jjameson/archive/2011/04/07/reusable-content-in-sharepoint-publishing-html-fields-part-1.aspx",
@@ -51,7 +51,7 @@ read-only access to the **Reusable Content** list.]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-List-463x600.png"
 alt="Reusable Content list" class="screenshot" height="600" width="463"
-title="Figure 1: Reusable Content list" >}}
+caption="Figure 1: Reusable Content list" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-List-991x1285.png)
 
@@ -64,7 +64,7 @@ highlighted text.]
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-600x511.png"
 alt="Reusable Content in \"view\" mode" class="screenshot" height="511"
-width="600" title="Figure 2: Reusable Content in \"view\" mode" >}}
+width="600" caption="Figure 2: Reusable Content in \"view\" mode" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-1006x857.png)
 
@@ -74,7 +74,7 @@ reusable content section as read-only, as shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-600x423.png"
 alt="Reusable Content in \"edit\" mode" class="screenshot" height="423"
-width="600" title="Figure 3: Reusable Content in \"edit\" mode" >}}
+width="600" caption="Figure 3: Reusable Content in \"edit\" mode" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-1011x713.png)
 
@@ -92,7 +92,7 @@ list item shown in Figure 1 above.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-600x211.png"
 alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
 class="screenshot" height="211" width="600"
-title="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
+caption="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-1006x353.png)
 

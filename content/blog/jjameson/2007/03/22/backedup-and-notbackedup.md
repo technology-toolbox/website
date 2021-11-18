@@ -50,8 +50,7 @@ I attribute the reasoning to several factors:
    invested in them -- I dread the mere thought of losing one of those
 1. Long before the user experience improvements in Windows Vista, I needed
    "instant access" to my frequently used files (in fact, I still need these
-   shortcuts whenever I am logged into a computer or VM running Windows Server
-   2003)
+   shortcuts whenever I am logged into a computer or VM running Windows Server 2003)
 1. I typically "rebuild" my laptop once a year either to install a new OS (such
    as last November when Vista was released) or to clean out all the old garbage
    that, being a developer, I tend to install for one reason or another
@@ -86,7 +85,7 @@ Factor #3 is simply a matter of creating two shortcuts on my taskbar:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
 alt="Taskbar Shortcuts" height="96" width="301"
-title="Figure 1 - Taskbar Shortcuts" >}}
+caption="Figure 1: Taskbar Shortcuts" >}}
 
 Factor #4 (rebuilding my laptop) certainly isn't a quick ordeal (it typically
 takes about 4 hours, by the time I install the OS, SQL Server, Visual Studio,

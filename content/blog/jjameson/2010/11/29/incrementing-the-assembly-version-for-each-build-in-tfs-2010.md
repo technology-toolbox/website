@@ -125,7 +125,7 @@ workflow used in TFS 2010.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-DefaultTemplate-Overview-232x431.png"
 alt="DefaultTemplate.xaml - Overview" height="431" width="232"
-title="Figure 1: DefaultTemplate.xaml - Overview" >}}
+caption="Figure 1: DefaultTemplate.xaml - Overview" >}}
 
 This "collapsed" view of the workflow illustrates the following high-level steps
 of the build process:
@@ -143,7 +143,7 @@ Location":
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Update-Drop-Location-254x464.png"
 alt="DefaultTemplate.xaml - Update Drop Location" height="464" width="254"
-title="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
+caption="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
 
 As you can see, the portion of the workflow that updates the build number does
 not run on the build agent. In other words, it happens before the "Run On Agent"
@@ -207,7 +207,7 @@ Number**, as shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-225x600.png"
 alt="CustomTemplate.xaml - Step 1" height="600" width="225"
-title="Figure 3: CustomTemplate.xaml - Step 1" >}}
+caption="Figure 3: CustomTemplate.xaml - Step 1" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-279x744.png)
 
@@ -217,7 +217,7 @@ On Agent** scope, as shown below:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-166x600.png"
 alt="CustomTemplate.xaml - Step 2" height="600" width="166"
-title="Figure 4: CustomTemplate.xaml - Step 2" >}}
+caption="Figure 4: CustomTemplate.xaml - Step 2" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-255x921.png)
 
@@ -443,7 +443,7 @@ conserve space, only the **Update Build Number** portion is shown):
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-3-292x586.png"
 alt="CustomTemplate.xaml (Update Build Number) - Step 3" height="586"
 width="292"
-title="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}
+caption="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}
 
 That's it -- we're done!
 

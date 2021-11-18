@@ -37,7 +37,7 @@ To understand why, consider a publishing site configured with
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-600x353.png"
 alt="Publishing site with BlueBand master page" class="screenshot" height="353"
-width="600" title="Figure 1: Publishing site with BlueBand master page" >}}
+width="600" caption="Figure 1: Publishing site with BlueBand master page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Publishing-Site-BlueBand-Master-Page-1007x593.png)
 
@@ -106,7 +106,7 @@ SharePoint error page.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-600x366.png"
 alt="SharePoint error page" class="screenshot" height="366" width="600"
-title="Figure 2: SharePoint error page" >}}
+caption="Figure 2: SharePoint error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Error-Page-1024x624.png)
 
@@ -158,7 +158,7 @@ BlueBand.master:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-600x162.png"
 alt="Custom SharePoint error page" class="screenshot" height="162" width="600"
-title="Figure 3: Custom SharePoint error page" >}}
+caption="Figure 3: Custom SharePoint error page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Custom-Error-Page-1024x276.png)
 

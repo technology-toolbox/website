@@ -25,7 +25,7 @@ For example, here's what the disk usage looks like on one of my development VMs:
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png"
 alt="Disk usage" class="screenshot" height="460" width="600"
-title="Figure 1:" >}}
+caption="Figure 1:" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-991x760.png)
 

@@ -2,10 +2,10 @@
 title: A Modal Popup Framework Based on the AJAX Control Toolkit
 date: 2010-12-10T09:40:00-07:00
 description:
-  "The \"Announcements\" feature that I developed for a customer about a year
+  'The "Announcements" feature that I developed for a customer about a year
   ago uses a modal popup window to display content to users. The solution
   leverages the AJAX Control Toolkit to render the modal popups &ndash;
-  specifically the ModalPopupExtender..."
+  specifically the ModalPopupExtender...'
 aliases:
   [
     "/blog/jjameson/archive/2010/12/09/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx",
@@ -14,7 +14,7 @@ aliases:
 categories: ["Development"]
 tags: ["Web Development"]
 msdnBlogUrl: "http://blogs.msdn.com/b/jjameson/archive/2010/12/10/a-modal-popup-framework-based-on-the-ajax-control-toolkit.aspx"
-attachment: 
+attachment:
   url: "https://assets.technologytoolbox.com/blog/jjameson/Documents/ModalPopupFramework.zip"
   fileName: ModalPopupFramework.zip
   fileSizeInBytes: 954874
@@ -60,7 +60,7 @@ window.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png"
 alt="Elements of a modal popup window" height="241" width="600"
-title="Figure 1: Elements of a modal popup window" >}}
+caption="Figure 1: Elements of a modal popup window" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-649x261.png)
 
@@ -134,7 +134,7 @@ show a scrollbar as necessary. This is illustrated in the following figure.
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
 alt="Constraining the height of content displayed in a modal popup window"
 height="190" width="460"
-title="Figure 2: Constraining the height of content displayed in a modal popup window" >}}
+caption="Figure 2: Constraining the height of content displayed in a modal popup window" >}}
 
 In addition to creating various user interface elements for modal popup windows,
 the **ModalPopupWebPart** also converts client-side events (e.g. clicking the

@@ -1,11 +1,11 @@
 ---
-title: "\"Error Creating Control\" when using Microsoft Office SharePoint Designer 2007"
+title: '"Error Creating Control" when using Microsoft Office SharePoint Designer 2007'
 date: 2007-03-22T05:57:00-06:00
 description:
-  "If, like me, you happen to encounter the following user experience when
-  attempting to edit a master page... Figure 1: SharePoint Designer - \"Error
-  Creating Control\" See full-sized image. ...then follow these steps to resolve
-  the issue: ..."
+  'If, like me, you happen to encounter the following user experience when
+  attempting to edit a master page... Figure 1: SharePoint Designer - "Error
+  Creating Control" See full-sized image. ...then follow these steps to resolve
+  the issue: ...'
 aliases:
   [
     "/blog/jjameson/archive/2007/03/21/error-creating-control-when-using-microsoft-office-sharepoint-designer-2007.aspx",
@@ -23,7 +23,7 @@ attempting to edit a master page...
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Designer-Error-Creating-Control-600x305.png"
 alt="SharePoint Designer - \"Error Creating Control\"" class="screenshot"
 height="305" width="600"
-title="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
+caption="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Designer-Error-Creating-Control-756x384.png)
 

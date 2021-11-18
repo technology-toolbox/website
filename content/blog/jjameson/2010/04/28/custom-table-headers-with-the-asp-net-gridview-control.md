@@ -27,7 +27,7 @@ the following:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
   alt="Key Performance Indicators (Detail)" height="151" width="588"
-  title="Figure 1: Key Performance Indicators (Detail)" >}}
+  caption="Figure 1: Key Performance Indicators (Detail)" >}}
 
 I also hinted that it took a little more work than I expected to render the
 custom header for the table (i.e. the **Thresholds** label that spans the last
@@ -227,7 +227,7 @@ following:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v1-620x162.png"
   alt="Key Performance Indicators (Detail) - \"v1\"" height="151" width="588"
-  title="Figure 2: Key Performance Indicators (Detail) - \"v1\"" >}}
+  caption="Figure 2: Key Performance Indicators (Detail) - \"v1\"" >}}
 
 Let's start customizing the header by replacing the lengthy column headings for
 the KPI thresholds with corresponding icons. This is easily achieved using a
@@ -279,7 +279,7 @@ lengthy column headings, similar to the following:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v2-519x146.png"
   alt="Key Performance Indicators (Detail) - \"v2\"" height="146" width="519"
-  title="Figure 3: Key Performance Indicators (Detail) - \"v2\"" >}}
+  caption="Figure 3: Key Performance Indicators (Detail) - \"v2\"" >}}
 
 Now let's add a method to insert another row into the table rendered by the
 GridView control:
@@ -356,7 +356,7 @@ the corresponding columns, similar to the following:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v3-519x175.png"
   alt="Key Performance Indicators (Detail) - \"v3\"" height="175" width="519"
-  title="Figure 4: Key Performance Indicators (Detail) - \"v3\"" >}}
+  caption="Figure 4: Key Performance Indicators (Detail) - \"v3\"" >}}
 
 Looking at the HTML source, we can see the extra table row has been inserted,
 and the `rowspan` and `colspan` attributes are being rendered as expected.
@@ -414,7 +414,7 @@ following:
 {{< figure
   src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-Post-Back-Issue-575x131.png"
   alt="Key Performance Indicators (Detail) - \"post back issue\"" height="131" width="575"
-  title="Figure 5: Key Performance Indicators (Detail) - \"post back issue\"" >}}
+  caption="Figure 5: Key Performance Indicators (Detail) - \"post back issue\"" >}}
 
 Notice that we no longer see the **Thresholds** header in the table. This is
 because the **UpdateScorecardDetailView** method is not called on post back, and

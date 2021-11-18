@@ -2,10 +2,10 @@
 title: Using the Entity Framework and LINQ to list the most popular posts from Subtext (a.k.a. Building TechnologyToolbox.com, part 10)
 date: 2012-01-06T03:04:06-07:00
 description:
-  "In my previous post, I shared the inner workings of the \"Most Recent Posts\"
-  section on the Technology Toolbox home page. In this post, I'll show you how I
-  built on that foundation to generate the content for the \"Most Popular
-  Posts\" section."
+  'In my previous post, I shared the inner workings of the "Most Recent Posts"
+  section on the Technology Toolbox home page. In this post, I''ll show you how I
+  built on that foundation to generate the content for the "Most Popular
+  Posts" section.'
 aliases:
   [
     "/blog/jjameson/archive/2012/01/05/building-technologytoolbox-com-part-10.aspx",
@@ -24,7 +24,7 @@ foundation to generate the content for the **Most Popular Posts** section.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
-title="Figure 1: Technology Toolbox home page" >}}
+caption="Figure 1: Technology Toolbox home page" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
@@ -35,7 +35,7 @@ page layout.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
-width="536" title="Figure 2: Technology Toolbox home page (page layout)" >}}
+width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
@@ -60,19 +60,19 @@ I completed the following steps to update the entity model:
       **subtext_Content** if this table was not previously added to the model),
       and then click **Finish**.
 1. For the **subtext_Content**table, ensure the properties are set as follows:
-   - **E****ntity Set Name:** Entries
-   - **N****ame:** Entry
+   - **E\*\***ntity Set Name:\*\* Entries
+   - **N\*\***ame:\*\* Entry
 1. For the **subtext_EntryViewCount**table, ensure the properties are set as
    follows:
-   - **E****ntity Set Name:** EntryViewCounts
-   - **N****ame:** EntryViewCount
+   - **E\*\***ntity Set Name:\*\* EntryViewCounts
+   - **N\*\***ame:\*\* EntryViewCount
 
 At this point, the model should resemble the following:
 
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model" class="screenshot" height="400" width="431"
-title="Figure 3: Entity Data Model" >}}
+caption="Figure 3: Entity Data Model" >}}
 
 With the updated model, the following LINQ query can be used to retrieve the top
 10 most popular blog posts:

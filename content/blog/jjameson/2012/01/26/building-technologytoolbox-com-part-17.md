@@ -35,7 +35,7 @@ solutions (specifically the "Caelum" solution in Visual Studio 2010 and the
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture for TechnologyToolbox.com" height="520" width="600"
-title="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
+caption="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 

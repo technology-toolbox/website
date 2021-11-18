@@ -47,7 +47,7 @@ For example, consider the typed DataSet shown below.
 {{< figure
 src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
 alt="Typed DataSet example (ScorecardData)" height="330" width="600"
-title="Figure 1: Typed DataSet example (ScorecardData)" >}}
+caption="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
 [See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 
