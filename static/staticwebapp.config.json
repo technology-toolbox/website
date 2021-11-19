@@ -1,6 +1,6 @@
 {
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.technologytoolbox.com ws://commento.technologytoolbox.com https://www.google-analytics.com; font-src 'self' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com; frame-src https://cse.google.com https://platform.twitter.com; img-src 'self' data: https://*.technologytoolbox.com clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com; script-src 'self' 'unsafe-eval' 'unsafe-inline' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com cse.google.com https://www.google.com https://www.google-analytics.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com https://cdnjs.cloudflare.com https://www.google.com;",
+    "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https://*.technologytoolbox.com https://www.google-analytics.com; script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';",
     "Permissions-Policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()",
     "X-Frame-Options": "DENY"
   },
@@ -14,6 +14,18 @@
       "route": "*.{css,gif,jpg,js,png}",
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "route": "/blog/*",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.technologytoolbox.com ws://commento.technologytoolbox.com https://www.google-analytics.com; font-src 'self' https://commento.technologytoolbox.com; frame-src https://platform.twitter.com; img-src 'self' data: https://*.technologytoolbox.com https://www.google-analytics.com; script-src 'self' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com;"
+      }
+    },
+    {
+      "route": "/search/*",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src https://cse.google.com; img-src 'self' data: clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com; script-src 'self' 'unsafe-eval' data: https://cdnjs.cloudflare.com cse.google.com https://www.google.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com https://www.google.com;"
       }
     }
   ]
