@@ -11,7 +11,7 @@ tags: ["Web Development"]
 ---
 
 This morning I
-[Googled _windows install date_](https://www.google.com/search?q=windows+install+date)
+[googled _windows install date_](https://www.google.com/search?q=windows+install+date)
 to determine when I last rebuilt my desktop. This was the top result:
 
 {{< reference title="How to Use Command Prompt to Verify Install Date of Microsoft Windows" linkHref="https://www.dell.com/support/kbdoc/en-us/000131940/how-to-use-command-prompt-to-verify-install-date-of-microsoft-windows" >}}
@@ -20,7 +20,7 @@ Unfortunately, both methods presented in the Dell article for finding the
 install date of Windows give incorrect information (at least in my particular
 case).
 
-> **Important:** Never assume the **Created** date for the **C:\Windows folder**
+> **Important:** Never assume the **Created** date for the **C:\Windows** folder
 > corresponds to the time you originally installed Windows. That _may_ have
 > worked at some point in the past, but today that's just plain _wrong_.
 > Similarly -- as mentioned in the Dell article -- don't trust the **Original
