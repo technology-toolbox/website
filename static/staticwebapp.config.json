@@ -1,6 +1,6 @@
 {
   "globalHeaders": {
-    "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https://*.technologytoolbox.com https://www.google-analytics.com; script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';",
+    "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; img-src 'self' data: https://*.techtoolbox.us https://www.google-analytics.com; script-src 'self' https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';",
     "Permissions-Policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()",
     "X-Frame-Options": "DENY"
   },
@@ -19,7 +19,7 @@
     {
       "route": "/blog/*",
       "headers": {
-        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.technologytoolbox.com ws://commento.technologytoolbox.com https://www.google-analytics.com; font-src 'self' https://commento.technologytoolbox.com; frame-src https://platform.twitter.com; img-src 'self' data: https://*.technologytoolbox.com https://www.google-analytics.com; script-src 'self' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com;"
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.technologytoolbox.com ws://commento.technologytoolbox.com https://www.google-analytics.com; font-src 'self' https://commento.technologytoolbox.com; frame-src https://platform.twitter.com; img-src 'self' data: https://*.techtoolbox.us https://www.google-analytics.com; script-src 'self' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com;"
       }
     },
     {
