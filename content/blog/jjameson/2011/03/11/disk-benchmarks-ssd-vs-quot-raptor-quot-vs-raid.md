@@ -56,7 +56,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Di
 alt="Disk performance on WOLVERINE" height="404" width="600"
 caption="Figure 1: Disk performance on WOLVERINE" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-823x554.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-823x554.png)
 
 The chart above clearly illustrates why performance is such as relative term
 when talking about hardware. While the speed of the Raptor drive was quite
@@ -86,7 +86,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Di
 alt="Disk performance (various computers)" height="600" width="518"
 caption="Figure 2: Disk performance (various computers)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-823x954.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-823x954.png)
 
 In my mind, the RAID 10 configuration on BEAST is still the "sweet spot" in
 terms of performance, reliability, and cost. Keep in mind that you can probably

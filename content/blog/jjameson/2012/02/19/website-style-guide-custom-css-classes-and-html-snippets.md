@@ -72,4 +72,4 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expre
 alt="Snippets in Expression Web" class="screenshot" height="325" width="600"
 caption="Figure 1: Snippets in Expression Web" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-Technology-Toolbox-Blog-1920x1040.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Expression-Web-My-Technology-Toolbox-Blog-1920x1040.png)

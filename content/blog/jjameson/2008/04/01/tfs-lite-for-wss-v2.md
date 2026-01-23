@@ -103,7 +103,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Li
 alt="Project Summary \"dashboard\"" class="screenshot" height="452" width="600"
 caption="Figure 1: Project Summary \"dashboard\"" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-788x594.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-788x594.jpg)
 
 #### Work Items List
 

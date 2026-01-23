@@ -27,7 +27,7 @@ alt="Search scope bug in MOSS 2007 December 2008 CU" class="screenshot"
 height="424" width="600"
 caption="Figure 1: Search scope bug in MOSS 2007 December 2008 CU" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-799x564.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-799x564.jpg)
 
 To hack around this bug, add a **Web Address** rule, as shown below.
 
@@ -36,7 +36,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2
 alt="Workaround for search scope bug" class="screenshot" height="425"
 width="600" caption="Figure 2: Workaround for search scope bug" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-workaround-796x564.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS-2007-Search-Scope-bug-workaround-796x564.jpg)
 
 Note that in the screenshot above, **http://foobar** is the Web application that
 I want to include content from, while excluding the "Pages" libraries themselves

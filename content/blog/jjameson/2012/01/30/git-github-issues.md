@@ -61,7 +61,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-P
 alt="Git - pending changes - yes or no?" height="350" width="600"
 caption="Figure 1: Git - pending changes - yes or no?" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-1113x650.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Git-Pending-changes-yes-or-no-1113x650.png)
 
 So, which is it?
 

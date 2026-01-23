@@ -108,7 +108,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expre
 alt="Expression Web - my MSDN blog" height="499" width="600"
 caption="Figure 1: Expression Web - my MSDN blog" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Expression-Web-My-MSDN-Blog-1251x1040.png)
 
 Notice how items that are checked into source control have a lock icon and new
 items that are pending have a "plus" icon next to them. In other words, the

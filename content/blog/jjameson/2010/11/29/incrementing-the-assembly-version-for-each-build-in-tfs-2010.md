@@ -209,7 +209,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2
 alt="CustomTemplate.xaml - Step 1" height="600" width="225"
 caption="Figure 3: CustomTemplate.xaml - Step 1" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-279x744.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-279x744.png)
 
 Next, move **Update Build Number** and **Update Drop Location** inside the **Run
 On Agent** scope, as shown below:
@@ -219,7 +219,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2
 alt="CustomTemplate.xaml - Step 2" height="600" width="166"
 caption="Figure 4: CustomTemplate.xaml - Step 2" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-255x921.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-255x921.png)
 
 Note that we need to first initialize the workspace (and hence be running on the
 build agent) before updating the build number so we can access the various

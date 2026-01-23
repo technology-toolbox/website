@@ -49,7 +49,7 @@ alt="Jameson Datacenter - Active Directory domain structure" class="screenshot"
 height="600" width="302"
 caption="Figure 1: Jameson Datacenter - Active Directory domain structure" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-305x605.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-AD-domain-structure-305x605.png)
 
 Note that I didn't really come up with this structure myself (except for the
 **Admin Accounts** OU, which I believe was an

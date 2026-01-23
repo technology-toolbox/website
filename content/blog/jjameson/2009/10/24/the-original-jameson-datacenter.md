@@ -71,7 +71,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Ol
 alt="Old Jameson Datacenter - Physical Architecture" height="460" width="600"
 caption="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-987x757.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-987x757.png)
 
 Apparently the last time I updated this Visio diagram, I still hadn't decided
 what to do with all of the Dell servers I had procured through various channels
@@ -93,7 +93,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Ol
 alt="Old Jameson Datacenter - TCP/IP Configuration" height="471" width="600"
 caption="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-960x754.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-960x754.png)
 
 This is because I had one server with a public (static) IP address and therefore
 ran a couple of Web sites on the old "ICEMAN" server -- hence the name "ICEMAN",
@@ -113,7 +113,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Ol
 alt="Old Jameson Datacenter - DNS/DHCP Configuration" height="186" width="600"
 caption="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-794x246.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-794x246.png)
 
 There's nothing really too interesting about that, I suppose.
 
@@ -125,7 +125,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Ol
 alt="Old Jameson Datacenter - Disk Configuration" height="475" width="600"
 caption="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-697x552.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-697x552.png)
 
 I can still remember when I thought the 18 GB of RAID1 and 72 GB of RAID5 on
 that Dell 4300 was

@@ -330,7 +330,7 @@ contention.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-600x317.png" alt="Figure 1: SharePoint development VM configuration" class="screenshot" height="317" width="600" caption="Figure 1: SharePoint development VM configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Development-VM-793x419.png)
 
 {{< div-block "note" >}}
 
@@ -2109,7 +2109,7 @@ The site should resemble the following:
   class="screenshot" height="374" width="600"
   caption="Figure 3: Default home page for “Publishing Portal” site in SharePoint Server 2010" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/SharePoint-Server-2010-Publishing-Portal-1006x627.png)
 
 Although the site does not yet have the Fabrikam branding or any custom code
 deployed, it is still possible to validate the basic functionality of the site
@@ -2731,7 +2731,7 @@ without the **Sample Style Guide** and **Reusable Content Sample** links).
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-600x277.png" alt="Fabrikam Extranet home page" class="screenshot" height="277" width="600" caption="Figure 4: Fabrikam Extranet home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Fabrikam-Extranet-home-page-1010x467.png)
 
 ## Configure sample content (optional)
 

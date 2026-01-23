@@ -31,7 +31,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed
 alt="Typed DataSet example (ScorecardData)" height="330" width="600"
 caption="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Typed-DataSet-example-%28ScorecardData%29-723x398.png)
 
 Suppose that we need to display KPI scorecard information in a Web application.
 How should we go about leveraging the typed DataSet?

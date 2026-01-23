@@ -40,7 +40,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-T
 alt="Broken tibia - external fixator" height="450" width="600"
 caption="Figure 1: Broken tibia - external fixator" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-1024x768.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-1024x768.jpg)
 
 In the second operation, the surgeon removed the "external fixator" and
 implanted an "internal fixator." Let's just say that you really don't want to be

@@ -34,7 +34,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="\"Generic\" page" class="screenshot" height="477" width="600"
 caption="Figure 1: \"Generic\" page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-%28Glycomics-Solution%29-939x747.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Generic-%28Glycomics-Solution%29-939x747.jpg)
 
 I then paste the screenshot into Visio.
 
@@ -66,7 +66,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="\"Generic\" page (Page Layout)" class="screenshot" height="489" width="600"
 caption="Figure 2: \"Generic\" page (Page Layout)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-%28Page-Layout%29-770x627.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Generic-%28Page-Layout%29-770x627.jpg)
 
 Here is another example, based on a press release.
 
@@ -75,7 +75,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="Sample Press Release" class="screenshot" height="600" width="478"
 caption="Figure 3: Sample Press Release" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-%28857%29-939x1178.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Press-Release-%28857%29-939x1178.jpg)
 
 Figure 4 shows the corresponding page layout.
 
@@ -84,7 +84,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="Press Release (Page Layout)" class="screenshot" height="600" width="461"
 caption="Figure 4: Press Release (Page Layout)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-%28Page-Layout%29-770x1002.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Press-Release-%28Page-Layout%29-770x1002.jpg)
 
 Note the importance of choosing good sample pages when mocking up the wireframes
 for page layouts. I chose the example press release above based on the fact that
@@ -104,7 +104,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="Sample product detail page" class="screenshot" height="600" width="545"
 caption="Figure 5: Sample product detail page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-%286890N-GC%29-940x1034.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Product-Detail-%286890N-GC%29-940x1034.jpg)
 
 In this scenario, the "Buy Zone" and "Announcements" features are both
 implemented as individual Web Parts (due to the dynamic nature of this content).
@@ -116,7 +116,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Gener
 alt="Product Detail (Page Layout)" class="screenshot" height="600" width="533"
 caption="Figure 7: Product Detail (Page Layout)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-%28Page-Layout%29-770x866.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Product-Detail-%28Page-Layout%29-770x866.jpg)
 
 Wireframes like these are valuable when you are trying to define the various
 content types and page layouts, as well as when it comes time to document your

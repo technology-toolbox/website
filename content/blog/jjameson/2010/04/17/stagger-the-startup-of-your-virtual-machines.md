@@ -38,7 +38,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Hy
 alt="Hyper-V staggered start" class="screenshot" height="310" width="600"
 caption="Figure 1: Hyper-V staggered start" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Hyper-V-Staggered-Start-1153x595.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Hyper-V-Staggered-Start-1153x595.png)
 
 Notice how XAVIER1 is already started, but the other VMs are waiting to start.
 

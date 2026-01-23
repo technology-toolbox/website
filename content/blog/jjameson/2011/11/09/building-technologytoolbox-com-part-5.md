@@ -28,7 +28,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-
 alt="My MSDN blog home - CSS disabled" class="screenshot" height="600"
 width="328" caption="Figure 1: My MSDN blog home - CSS disabled" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/MSDN-blog-home-CSS-disabled-989x1810.png)
 
 One of the most important concepts I learned a few years ago while reading
 [Transcending CSS](http://www.transcendingcss.com/) is that your HTML content
@@ -65,7 +65,7 @@ alt="Technology Toolbox blog home page - CSS disabled" class="screenshot"
 height="600" width="362"
 caption="Figure 2: Technology Toolbox blog home page - CSS disabled" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-CSS-disabled-989x1640.png)
 
 Notice how much easier it is to identify the different sections of the page --
 thanks to the use of HTML heading elements (which were almost nonexistent on my
@@ -264,7 +264,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 3: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 ### HTML markup for individual blog post
 

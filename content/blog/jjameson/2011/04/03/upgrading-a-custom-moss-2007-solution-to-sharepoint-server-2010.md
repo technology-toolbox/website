@@ -39,7 +39,7 @@ alt="Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010"
 height="1472" width="499"
 caption="Figure 1: Upgrading the Tugboat solution from MOSS 2007 to SharePoint Server 2010" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-768x2262.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Solution-Upgrade-768x2262.jpg)
 
 Here are the highlights from my experience upgrading the Tugboat project.
 

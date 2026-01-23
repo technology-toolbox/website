@@ -163,7 +163,7 @@ alt="Visual Studio solution after adding SharePoint features and deployment file
 class="screenshot" height="600" width="183"
 caption="Figure 2: Visual Studio solution after adding SharePoint features and deployment files" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-2-325x1066.png)
 
 ### Files for Creating SharePoint Web Solution Package (WSP)
 
@@ -875,4 +875,4 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DAD
 alt="Command history" class="screenshot" height="205" width="600"
 caption="Figure 3: Command history" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DR.DADA-3-996x341.png)

@@ -40,7 +40,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboa
 alt="Tugboat - Home page" class="screenshot" height="600" width="296"
 caption="Figure 1: Tugboat - Home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Home-991x2008.png)
 
 When I put on my "SharePoint Architect" hat and look at the content in the
 **This Week's Specials** section, I see a SharePoint list with columns like
@@ -147,7 +147,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboa
 alt="Specials list" class="screenshot" height="474" width="600"
 caption="Figure 2: Specials list" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-1005x794.png)
 
 The next step is to render the items in the list using the semantic markup
 previously specified using static HTML. In other words, instead of rendering the

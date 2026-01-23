@@ -146,7 +146,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR
 alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
 caption="Figure 1: FOOBAR5 snapshots" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-1056x674.png)
 
 For the sake of explaining more about these snapshots, I'll relabel them again
 in this post as follows:
@@ -250,7 +250,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR
 alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600"
 caption="Figure 2: FOOBAR2 snapshots" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-1051x652.png)
 
 On my current project, we are working on Sprint-12 which includes some
 enhancements to the "Client Portal". The previous release of the solution was

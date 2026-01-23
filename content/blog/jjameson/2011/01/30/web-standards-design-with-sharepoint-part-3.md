@@ -60,7 +60,7 @@ alt="Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy f
 class="screenshot" height="284" width="600"
 caption="Figure 1: Home page for \"Collaboration Portal\" (a.k.a. a \"starter site hierarchy for an intranet divisional portal\")" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-1064x504.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/DefaultMaster_DefaultPageLayout-1064x504.png)
 
 Let's suppose that Fabrikam Technologies wants to deploy SharePoint for their
 corporate intranet, but they want to brand the site with their corporate logo,
@@ -85,7 +85,7 @@ alt="Home page with custom master page and page layout" class="screenshot"
 height="299" width="600"
 caption="Figure 2: Home page with custom master page and page layout" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-1062x530.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout-1062x530.png)
 
 Note that the actual page content is identical in the two figures above -- I've
 simply "re-skinned" the site to look substantially different from the default
@@ -103,7 +103,7 @@ alt="Home page with custom master page and page layout (linked CSS files disable
 class="screenshot" height="434" width="600"
 caption="Figure 3: Home page with custom master page and page layout (linked CSS files disabled)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-1045x756.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-DefaultLayout2-1045x756.png)
 
 Second, the default page layout does not expose either of the Summary Links
 fields defined on the **Welcome Page** content type. Consequently, a Web Part
@@ -135,7 +135,7 @@ alt="Home page with custom master page and page layout (semantic HTML and Summar
 class="screenshot" height="361" width="600"
 caption="Figure 4: Home page with custom master page and page layout (semantic HTML and Summary Links field instead of Web Part)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-1045x628.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FabrikamDefaultMaster-CustomLayout-1045x628.png)
 
 Here are the instructions to deploy the Fabrikam Demo sample to your own
 SharePoint environment. First, download the attachment and unzip the files. Then

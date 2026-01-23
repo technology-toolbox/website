@@ -159,7 +159,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelu
 alt="Caelum prototype - Default.master" class="screenshot" height="142"
 width="600" caption="Figure 1: Caelum prototype - Default.master" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-1021x241.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Caelum-Default.master-1021x241.png)
 
 ### Default.aspx
 
@@ -369,7 +369,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 2: Technology Toolbox home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 ### BlogPost.master
 
@@ -770,7 +770,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Sample blog post" class="screenshot" height="600" width="398"
 caption="Figure 3: Sample blog post" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-1058x1595.png)
 
 ### Advantages of using a static HTML prototype
 

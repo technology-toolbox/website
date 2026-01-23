@@ -27,7 +27,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Di
 alt="Disk usage" class="screenshot" height="460" width="600"
 caption="Figure 1:" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-991x760.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-991x760.png)
 
 Note that the \Windows\Installer folder is consuming almost 5.5 GB of space on
 the VHD -- despite the fact that I set MaxPatchCacheSize to 0 immediately after

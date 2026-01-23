@@ -60,7 +60,7 @@ alt="Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)"
 class="screenshot" height="507" width="600"
 caption="Figure 1: Disk usage on WOLVERINE (baseline with MaxPatchCacheSize = 0)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-927x784.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-WOLVERINE-Baseline-927x784.png)
 
 In case anyone is interested in how I recommend building out a workstation, here
 are the details.

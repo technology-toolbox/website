@@ -32,7 +32,7 @@ alt="Disk usage on Windows Vista Ultimate x64 (baseline)" class="screenshot"
 height="600" width="537"
 caption="Figure 1: Disk usage on Windows Vista Ultimate x64 (baseline)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-Ultimate-x64-%28baseline%29-840x939.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-Ultimate-x64-%28baseline%29-840x939.jpg)
 
 From this, you can see that about 10 GB of the 20 GB partition is needed to
 install Windows Vista Ultimate x64.
@@ -87,7 +87,7 @@ alt="Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and
 class="screenshot" height="600" width="532"
 caption="Figure 2: Disk usage on Windows Vista after installing SP1, Office 2007, VS 2008, and Expression" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-with-SP1-and-products-784x885.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-usage-Vista-with-SP1-and-products-784x885.jpg)
 
 If you look closely, you'll notice that I only have 320 MB of the 20 GB free.
 Ouch.

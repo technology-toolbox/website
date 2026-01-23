@@ -37,7 +37,7 @@ That's when I encountered the following:
   class="screenshot" height="793" width="1266"
   caption="Figure 1: Error submitting feedback on Dell website" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png)
 
 As you can see, the feedback feature on the Dell website does not accept
 comments with "special characters: `<>()\`" -- which blocked me from submitting

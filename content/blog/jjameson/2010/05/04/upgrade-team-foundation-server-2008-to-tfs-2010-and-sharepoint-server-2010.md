@@ -670,7 +670,7 @@ alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Service
 class="screenshot" height="481" width="600"
 caption="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-988x792.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-988x792.png)
 
 There are also a couple of other issues with the upgraded TFS project site:
 
@@ -782,7 +782,7 @@ alt="Upgraded TFS project site in SharePoint Server 2010" class="screenshot"
 height="600" width="445"
 caption="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-987x1332.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Upgraded-TFS-project-site-987x1332.png)
 
 {{< div-block "note" >}}
 

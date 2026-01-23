@@ -28,7 +28,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-i
 alt="AJAX in SharePoint" class="screenshot" height="417" width="600"
 caption="Figure 1: AJAX in SharePoint" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-989x688.png)
 
 Assuming you are familiar with the
 **[UpdatePanel](http://msdn.microsoft.com/en-us/library/system.web.ui.updatepanel.aspx)**

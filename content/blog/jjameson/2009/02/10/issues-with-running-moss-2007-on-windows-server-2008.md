@@ -32,7 +32,7 @@ alt="MOSS 2007 Central Administration - Operations on Windows Server 2008"
 class="screenshot" height="436" width="600"
 caption="Figure 1: MOSS 2007 Central Administration - Operations on Windows Server 2008" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28non-Admin%29-1024x744.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28non-Admin%29-1024x744.jpg)
 
 A few of you might even be able to detect the problem without viewing the
 full-sized image.
@@ -81,7 +81,7 @@ alt="MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE ru
 class="screenshot" height="463" width="600"
 caption="Figure 3: MOSS 2007 Central Administration - Operations on Windows Server 2008 (IE running as administrator)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28Admin%29-1027x792.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS2007-WS2008-Operations%28Admin%29-1027x792.jpg)
 
 This certainly isn't the only time you'll need to run as administrator when
 using MOSS 2007 on Windows Server 2008. Actually, you'll find yourself doing

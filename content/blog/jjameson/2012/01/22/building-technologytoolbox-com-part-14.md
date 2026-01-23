@@ -176,7 +176,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Custom error page (Generic.aspx)" class="screenshot" height="295"
 width="600" caption="Figure 1: Custom error page (Generic.aspx)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-1006x494.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-1006x494.png)
 
 You've probably created a similar error page before and "wired it up" in the
 Web.config file using something like the following:
@@ -403,7 +403,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-4
 alt="IIS - default 404 page (404.htm)" class="screenshot" height="110"
 width="600" caption="Figure 2: IIS - default 404 page (404.htm)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-1006x185.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/IIS-404-1006x185.png)
 
 You might have expected the custom error page shown in Figure 1 to appear (based
 on the `<customErrors>` element shown above). However, in this scenario, the URL
@@ -426,7 +426,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="HTTP 404 error page (404.aspx)" class="screenshot" height="295" width="600"
 caption="Figure 3: HTTP 404 error page (404.aspx)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-1006x494.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-1006x494.png)
 
 To accomplish this, we simply need to create another ASP.NET page (e.g.
 404.aspx) and configure it to be used in the two scenarios described earlier.

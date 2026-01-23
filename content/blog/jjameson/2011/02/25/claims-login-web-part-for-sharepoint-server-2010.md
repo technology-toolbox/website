@@ -67,7 +67,7 @@ alt="Custom login page in SharePoint Server 2010" class="screenshot"
 height="342" width="600"
 caption="Figure 3: Custom login page in SharePoint Server 2010" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-1012x576.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-1012x576.png)
 
 Note that I didn't expend significant effort trying to get the custom login page
 to look great. Rather I wanted to focus on the core functionality. There's

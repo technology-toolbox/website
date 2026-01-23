@@ -26,7 +26,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 Similar to the **Most Recent Posts** section, the **Most Popular Posts** section
 is generated using an ASP.NET user control, as illustrated in the corresponding
@@ -37,7 +37,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
 width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-%28Page-Layout%29-1058x1185.png)
 
 Note that in the Subtext database, blog posts are stored in the
 **subtext_Content** table and the statistics about the number of views for each

@@ -37,7 +37,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Solution architecture for TechnologyToolbox.com" height="520" width="600"
 caption="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 Note that the Caelum website is a "classic" ASP.NET Web application, while
 Subtext is an ASP.NET MVC application. During the deployment process, the two

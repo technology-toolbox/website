@@ -137,7 +137,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Li
 alt="Project Summary \"dashboard\"" class="screenshot" height="363" width="600"
 caption="Figure 1: Project Summary \"dashboard\"" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v3-991x599.jpg)
 
 You might be wondering why I chose to base the Work Items list on Tasks instead
 of just creating a custom list from scratch. Aside from the fact that the Tasks

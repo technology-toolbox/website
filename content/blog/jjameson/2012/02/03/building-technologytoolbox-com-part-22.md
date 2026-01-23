@@ -253,7 +253,7 @@ environment, as illustrated in Figure 1.
 
 {{< figure src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-600x340.png" alt="Google Analytics (Account Home)" height="340" width="600" caption="Figure 1: Google Analytics (Account Home)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Analytics-Account-Home-767x435.png)
 
 After some refactoring and performance optimization, here is the updated
 implementation of the **AnalyticsScript** class:

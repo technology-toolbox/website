@@ -494,7 +494,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Style Guide for TechnologyToolbox.com" class="screenshot" height="600"
 width="110" caption="Figure 1: Style Guide for TechnologyToolbox.com" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-989x5388.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Style-Guide-989x5388.png)
 
 ### Color palette
 
@@ -516,7 +516,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Technology Toolbox color palette" class="screenshot" height="600"
 width="518" caption="Figure 2: Technology Toolbox color palette" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-556x644.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Color-Palette-556x644.png)
 
 {{< div-block "note update" >}}
 

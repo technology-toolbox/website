@@ -29,7 +29,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2
 alt="MOSS 2007 development environment" height="456" width="600"
 caption="Figure 1: MOSS 2007 development environment" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-785x596.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS-2007-Development-Environment-785x596.jpg)
 
 DEV is comprised of five VMs running on a single Virtual Server 2005 host:
 

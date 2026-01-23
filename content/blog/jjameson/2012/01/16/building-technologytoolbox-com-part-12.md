@@ -26,7 +26,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 1: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 One of my "love/hate" features on
 [my old MSDN blog](http://blogs.msdn.com/jjameson/) was the "Archive" list of
@@ -141,7 +141,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQP
 alt="LINQPad" class="screenshot" height="600" width="564"
 caption="Figure 3: LINQPad" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-821x873.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/LINQPad-821x873.png)
 
 ### PostArchiveList Control
 

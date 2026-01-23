@@ -80,7 +80,7 @@ alt="Windows Explorer view of Visual Studio solution" class="screenshot"
 height="379" width="600"
 caption="Figure 2: Windows Explorer view of Visual Studio solution" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-767x485.JPG)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Windows-Explorer-Step-1-767x485.JPG)
 
 A few notes...
 

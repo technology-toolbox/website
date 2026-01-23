@@ -62,7 +62,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal
 alt="Elements of a modal popup window" height="241" width="600"
 caption="Figure 1: Elements of a modal popup window" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-649x261.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-649x261.png)
 
 As noted previously, the **ModalPopupWebPart** base class does not specify the
 main content to render in the popup window; nor does it specify the dimensions

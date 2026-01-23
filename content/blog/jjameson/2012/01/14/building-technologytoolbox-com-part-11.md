@@ -26,7 +26,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 1: Technology Toolbox home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-1058x1179.png)
 
 If you use Firebug to inspect one of the list items in the **Most Popular
 Posts** section, you'll notice the CSS `background` property is set to:
@@ -151,7 +151,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-
 alt="List items sprite (Expression Design)" class="screenshot" height="377"
 width="600" caption="Figure 3: List items sprite (Expression Design)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/list-items-sprite-design-1594x1001.png)
 
 ### What happens when someone needs to add a new list item icon?
 
@@ -187,7 +187,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 4: Blog home page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-1058x1699.png)
 
 Notice the use of the "plus" icon from the sprite shown in Figure 2. If you
 click one of the years, the item expands to show the months within that year

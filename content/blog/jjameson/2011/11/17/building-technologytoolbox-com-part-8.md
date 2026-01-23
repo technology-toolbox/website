@@ -33,7 +33,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Techn
 alt="Solution architecture" height="520" width="600"
 caption="Figure 1: Solution architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-726x629.jpg)
 
 ### Step 1 - Set CAELUM_URL environment variable
 
@@ -475,7 +475,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Aut
 alt="Automated build and deployment" height="343" width="600"
 caption="Figure 2: Automated build and deployment" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/3-Automated-build-and-deployment-926x530.png)
 
 While you could use the new "Lab Management" features in Visual Studio 2010 to
 perform the deployments, for years I've simply been using scheduled tasks to
@@ -503,7 +503,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Ins
 alt="\"Manual\" deployment to TEST" height="343" width="600"
 caption="Figure 4: \"Manual\" deployment to TEST" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-940x538.png)
 
 The reason I put the quotes around "manual" is because most of the deployment is
 scripted. The only thing that needs to be done is to open a PowerShell window

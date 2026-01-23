@@ -53,7 +53,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusab
 alt="Reusable Content list" class="screenshot" height="600" width="463"
 caption="Figure 1: Reusable Content list" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-List-991x1285.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-List-991x1285.png)
 
 The following screenshot shows a sample page from one of the sites used to
 create a document. As you can see, the HTML content from the list item above has
@@ -66,7 +66,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusab
 alt="Reusable Content in \"view\" mode" class="screenshot" height="511"
 width="600" caption="Figure 2: Reusable Content in \"view\" mode" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-1006x857.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-1006x857.png)
 
 Note that when the document author is editing the page, SharePoint marks the
 reusable content section as read-only, as shown below.
@@ -76,7 +76,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusab
 alt="Reusable Content in \"edit\" mode" class="screenshot" height="423"
 width="600" caption="Figure 3: Reusable Content in \"edit\" mode" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-1011x713.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-1011x713.png)
 
 One of the more interesting issues that I encountered when using the reusable
 content feature in SharePoint is that when a user does not have access to the
@@ -94,7 +94,7 @@ alt="Page with missing content (due to \"Pending\" status in Reusable Content li
 class="screenshot" height="211" width="600"
 caption="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-1006x353.png)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-1006x353.png)
 
 {{< div-block "note important" >}}
 

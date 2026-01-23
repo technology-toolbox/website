@@ -19,7 +19,7 @@ attachment:
   class="screenshot" height="832" width="1435"
   caption="Figure 1: Phishing email with malicious HTML attachment" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/80/93675973B2017528FD670B724A4566314A06AA80.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/80/93675973B2017528FD670B724A4566314A06AA80.png)
 
 As you can see from the screenshot, the email was sent to the **Accounts
 Receivable** group at my company. This is actually the second time I received an
@@ -43,7 +43,7 @@ below:
   class="screenshot" height="832" width="1434"
   caption="Figure 3: Phishing login page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/96/20DCA266775344D835DB3EB50EC984B0B445DC96.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/96/20DCA266775344D835DB3EB50EC984B0B445DC96.png)
 
 This looks a lot like the original login page for Office 365 and Active
 Directory Federation Services (ADFS).
@@ -55,7 +55,7 @@ The source of the malicious HTML attachment is illustrated below:
   class="screenshot" height="245" width="1434"
   caption="Figure 4: HTML source for phishing login page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/DE/81ACE76BE282F5FD668F000D1FB5D778280779DE.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/DE/81ACE76BE282F5FD668F000D1FB5D778280779DE.png)
 
 My guess is the senders are using the JavaScript `unescape` function to hide
 their malicious content from email scanners (that might otherwise remove the
@@ -76,7 +76,7 @@ actual HTML rendered in the login page:
   class="screenshot" height="1040" width="1920"
   caption="Figure 5: Decoded HTML source for phishing login page" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/57/B8265772B3EB2DBA18D4D5E95E3B10A830DCCF57.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/57/B8265772B3EB2DBA18D4D5E95E3B10A830DCCF57.png)
 
 "Dissecting" the decoded HTML source a little bit reveals the following:
 
@@ -161,7 +161,7 @@ following:
   class="screenshot" height="1040" width="1920"
   caption="Figure 6: Undeliverable message when sending email with HTML attachment" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/C1/8907CF0C9E29B87871FC79136C5810D43EB67EC1.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/C1/8907CF0C9E29B87871FC79136C5810D43EB67EC1.png)
 
 ### References
 

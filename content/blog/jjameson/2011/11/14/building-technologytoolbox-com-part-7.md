@@ -57,7 +57,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Te
 alt="Infrastructure" height="399" width="600"
 caption="Figure 1: Infrastructure" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-1019x677.jpg)
 
 While I generally prefer to use Windows Authentication with SQL Server -- for
 reasons I described in

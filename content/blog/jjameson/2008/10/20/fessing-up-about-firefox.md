@@ -81,7 +81,7 @@ every laptop, desktop, and VM that I develop on).
 
 {{< div-block "border float-end ms-3 p-2" >}}
 
-[![Firefox Add-on - Screengrab!](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Screengrab-801x738.png)
+[![Firefox Add-on - Screengrab!](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Screengrab-380x350.png)](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Screengrab-801x738.png)
 
 {{< /div-block >}}
 
@@ -129,7 +129,7 @@ image into Word or Powerpoint).
 
 {{< div-block "border float-start me-5 p-2" >}}
 
-[![Firefox Add-on - Web Developer](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Web-Developer-801x738.png)
+[![Firefox Add-on - Web Developer](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Web-Developer-380x350.png)](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Web-Developer-801x738.png)
 
 {{< /div-block >}}
 
@@ -159,7 +159,7 @@ how they stack up to this add-on and Firebug.
 
 {{< div-block "border float-end ms-3 p-2" >}}
 
-[![Firefox Add-on - Firebug](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-380x350.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-Firebug-801x738.png)
+[![Firefox Add-on - Firebug](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Firebug-380x350.png)](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-Firebug-801x738.png)
 
 {{< /div-block >}}
 
@@ -187,7 +187,7 @@ without it.
 
 {{< div-block "border float-start me-3 p-2" >}}
 
-[![Firefox Add-on - YSlow](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-286x380.png)](https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Firefox-YSlow-843x1119.png)
+[![Firefox Add-on - YSlow](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-YSlow-286x380.png)](https://assets.techtoolbox.us/blog/jjameson/Images/Development/Firefox-YSlow-843x1119.png)
 
 {{< /div-block >}}
 

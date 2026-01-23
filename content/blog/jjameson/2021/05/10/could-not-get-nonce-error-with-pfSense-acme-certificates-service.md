@@ -33,7 +33,7 @@ Actually, I encountered 20 of these errors:
   class="screenshot" height="921" width="1024"
   caption="Figure 1: Errors creating ACME (Let's Encrypt) certificate" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/screenshots/F6/CCD11176635DADB76FC53C0D50DD4F718ED0D6F6.png)
+[See full-sized image.](https://assets.techtoolbox.us/screenshots/F6/CCD11176635DADB76FC53C0D50DD4F718ED0D6F6.png)
 
 While investigating the issue, I stepped through the shell script that is
 executed when you click the **Renew** button for a certificate -- starting with

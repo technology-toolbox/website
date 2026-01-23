@@ -42,7 +42,7 @@ alt="The \"Jameson Datacenter\" - physical architecture" height="493"
 width="600"
 caption="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-909x747.jpg)
 
 Note that I'm not suggesting development teams require a Windows Media Center or
 an Xbox 360 (which doubles as a Media Center Extender) -- I merely included
@@ -63,7 +63,7 @@ src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Ja
 alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-%282009-09-13%29-995x614.jpg)
 
 I should also point out that these aren't true enterprise servers -- meaning
 that they don't have redundant power supplies, remote management cards, etc.
@@ -197,7 +197,7 @@ alt="The \"Jameson Datacenter\" - hardware configuration" height="454"
 width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}
 
-[See full-sized image.](https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
+[See full-sized image.](https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-%282009-09-13%29-890x674.jpg)
 
 Since BEAST is essentially my "production" SQL Server instance, I chose to
 configure all four disks in a RAID 10 (1+0) configuration. Ideally, I'd throw
