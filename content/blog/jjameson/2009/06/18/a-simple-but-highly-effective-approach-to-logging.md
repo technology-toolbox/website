@@ -359,7 +359,7 @@ namespace Fabrikam.Demo.CoreServices.Logging
 >
 > A newer version of the **Logger** class is available in the following post:
 >
-> {{< reference title="Logging Exceptions in .NET Applications" linkHref="/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" linkText="https://www.technologytoolbox.com/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" >}}
+> {{< reference title="Logging Exceptions in .NET Applications" linkHref="/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" linkText="https://www.techtoolbox.us/blog/jjameson/2010/03/20/logging-exceptions-in-net-applications" >}}
 
 {{< div-block-end >}}
 

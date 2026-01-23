@@ -606,7 +606,7 @@ both Forms-Based Authentication and Windows authentication.
    >
    > This is discussed in more detail in the following blog post:
    >
-   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.technologytoolbox.com/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
+   > {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials" linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" linkText="https://www.techtoolbox.us/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
 
    {{< div-block-end >}}
 

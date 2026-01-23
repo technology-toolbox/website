@@ -73,5 +73,5 @@ backslashes in content submitted via the web...well, then maybe you shouldn't
 consider yourself a _qualified_ web developer.
 
 Dell, please "enhance" your feedback system to fix this issue -- or
-[hire a consultant who can easily do this for you](https://www.technologytoolbox.com/)
+[hire a consultant who can easily do this for you](https://www.techtoolbox.us/)
 ;-)
