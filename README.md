@@ -1,7 +1,7 @@
 # Technology Toolbox website
 
 This repository contains the Technology Toolbox website:
-[https://www.technologytoolbox.com](https://www.technologytoolbox.com).
+[https://www.techtoolbox.us](https://www.techtoolbox.us).
 
 ![Technology Toolbox responsive website](https://assets.techtoolbox.us/website/img/theme-screenshots/responsive-website-2300x1400.jpg)
 
