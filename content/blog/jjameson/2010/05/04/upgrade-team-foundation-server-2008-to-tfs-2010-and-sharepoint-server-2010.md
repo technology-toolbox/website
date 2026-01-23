@@ -665,7 +665,7 @@ This occurs because the TFS extensions for SharePoint have not been installed
 yet.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-600x481.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Upgraded-TFS-project-site-with-RS-error-600x481.png"
 alt="Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)"
 class="screenshot" height="481" width="600"
 caption="Figure 1: Upgraded TFS project site in SharePoint Server 2010 (with Reporting Services error)" >}}
@@ -777,7 +777,7 @@ Once the warehouse database has been updated, an upgraded TFS project site
 should appear similar to the following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Upgraded-TFS-project-site-445x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Upgraded-TFS-project-site-445x600.png"
 alt="Upgraded TFS project site in SharePoint Server 2010" class="screenshot"
 height="600" width="445"
 caption="Figure 2: Upgraded TFS project site in SharePoint Server 2010" >}}

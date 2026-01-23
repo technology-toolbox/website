@@ -22,7 +22,7 @@ list under the **Archives** section on the various blog pages of the Technology
 Toolbox site.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 1: Blog home page" >}}
 
@@ -90,7 +90,7 @@ in the development timeline I had already created an ADO.NET Entity Data Model
 for accessing data from Subtext.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Entity-Model-Caelum-Step-2-431x400.png"
 alt="Entity Data Model" class="screenshot" height="400" width="431"
 caption="Figure 2: Entity Data Model" >}}
 
@@ -137,7 +137,7 @@ group by month and count the number of rows for each month).
 {{< /div-block >}}
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/LINQPad-564x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/LINQPad-564x600.png"
 alt="LINQPad" class="screenshot" height="600" width="564"
 caption="Figure 3: LINQPad" >}}
 
@@ -404,7 +404,7 @@ Note that I toggle a couple of CSS classes (specifically, `expanded` and
 sprite to show the "plus" or "minus" icon next to the list item.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/list-item-sprites-1.0-400x400.png"
 alt="list-item-sprites-1.0.png" class="screenshot" height="400" width="400"
 caption="Figure 4: list-item-sprite-1.0.png" >}}
 

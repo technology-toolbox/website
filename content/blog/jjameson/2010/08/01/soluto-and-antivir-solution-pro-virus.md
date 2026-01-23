@@ -62,7 +62,7 @@ Security Essentials, at which point it detected a Trojan horse on my computer
 (as shown in the screenshot below).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-600x420.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Microsoft-Security-Essentials-trojans-600x420.png"
 alt="Microsoft Security Essentials - trojans" class="screenshot" height="420"
 width="600" caption="Figure 1: Microsoft Security Essentials - trojans" >}}
 

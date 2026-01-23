@@ -73,7 +73,7 @@ running Windows Update to install all of the latest patches (including SQL
 Server 2008 Service Pack 1).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-(with-SQL-2008-SP1)-600x426.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-WS2008-R2-(with-SQL-2008-SP1)-600x426.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)"
 class="screenshot" height="426" width="600"
 caption="Figure 1: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize not set)" >}}
@@ -93,7 +93,7 @@ this time with MaxPatchCacheSize set to 0 prior to starting the installation of
 SQL Server.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/After-restricting-MaxPatchCacheSize-600x493.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/After-restricting-MaxPatchCacheSize-600x493.png"
 alt="Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)"
 class="screenshot" height="493" width="600"
 caption="Figure 2: Disk usage on a Windows Server 2008 R2 VM with SQL Server 2008 SP1 (MaxPatchCacheSize set to 0)" >}}

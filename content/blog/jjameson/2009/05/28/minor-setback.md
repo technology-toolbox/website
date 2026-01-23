@@ -36,7 +36,7 @@ attached an "external fixator" to my shin, ankle, and foot in order to hold it
 all in place for about a week in order for the swelling to go down.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-600x450.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Personal/Broken-Tibia-External-Fixators-600x450.jpg"
 alt="Broken tibia - external fixator" height="450" width="600"
 caption="Figure 1: Broken tibia - external fixator" >}}
 

@@ -42,7 +42,7 @@ with a much longer history.]
 The following screenshot shows the breakdown of the VHD content:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-600x492.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-foobar-600x492.jpg"
 alt="Disk usage on VM before rebuild" class="screenshot" height="492"
 width="600" caption="Figure 1: Disk usage on VM before rebuild" >}}
 
@@ -71,7 +71,7 @@ Immediately after booting up with this new "clean" VHD, I captured the
 following:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP1-slipstream)-600x419.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP1-slipstream)-600x419.jpg"
 alt="Disk usage on VM with Windows Server 2003 SP1 slipstreamed"
 class="screenshot" height="419" width="600"
 caption="Figure 2: Disk usage on VM with Windows Server 2003 SP1 slipstreamed" >}}
@@ -92,7 +92,7 @@ Before beginning those installs however, I thought I would take capture the hard
 drive usage one more time. Here is what I saw:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(after-SP2-install)-600x418.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(after-SP2-install)-600x418.jpg"
 alt="Disk usage on VM after installing Windows Server 2003 SP2"
 class="screenshot" height="418" width="600"
 caption="Figure 3: Disk usage on VM after installing Windows Server 2003 SP2" >}}
@@ -111,7 +111,7 @@ rebuilding it from a slipstreamed Windows Server 2003 SP2 (I use
 the results after booting up with the new VHD:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP2-slipstreamed)-600x419.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-win2k3ee-base-(SP2-slipstreamed)-600x419.jpg"
 alt="Disk usage on VM with Windows Server 2003 SP2 slipstreamed"
 class="screenshot" height="419" width="600"
 caption="Figure 4: Disk usage on VM with Windows Server 2003 SP2 slipstreamed" >}}

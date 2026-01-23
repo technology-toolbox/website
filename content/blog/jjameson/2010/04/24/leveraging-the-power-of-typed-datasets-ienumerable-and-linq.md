@@ -27,7 +27,7 @@ quite a bit of information from a typed DataSet.
 Here is the example typed DataSet I introduced in the previous post.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Typed-DataSet-example-(ScorecardData)-600x330.png"
 alt="Typed DataSet example (ScorecardData)" height="330" width="600"
 caption="Figure 1: Typed DataSet example (ScorecardData)" >}}
 
@@ -110,7 +110,7 @@ To help visualize this, consider the following example summary view for a KPI
 scorecard:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Summary-342x106.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Summary-342x106.png"
   alt="Key Performance Indicators (Summary)" height="106" width="342"
   caption="Figure 2: Key Performance Indicators (Summary)" >}}
 
@@ -140,7 +140,7 @@ subsequently be rendered by the presentation tier (i.e. the ASP.NET user
 control). Perhaps something like this:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
   alt="Key Performance Indicators (Detail)" height="151" width="588"
   caption="Figure 3: Key Performance Indicators (Detail)" >}}
 

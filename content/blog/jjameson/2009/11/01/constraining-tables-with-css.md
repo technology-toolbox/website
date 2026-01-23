@@ -36,7 +36,7 @@ the full text when the mouse cursor hovers over the cell.
 The following figure illustrates the desired end result:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Constrained-Table-559x166.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Constrained-Table-559x166.png"
 alt="Constrained table" height="166" width="559"
 caption="Figure 1: Constrained table" >}}
 

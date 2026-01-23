@@ -73,7 +73,7 @@ to Trace.axd (e.g.
 the Trace Viewer.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/ASP.NET-Trace-Viewer-600x267.png"
 alt="ASP.NET Trace Viewer" class="screenshot" height="267" width="600"
 caption="Figure 1: ASP.NET Trace Viewer" >}}
 
@@ -83,7 +83,7 @@ Locate the request that you want to view log messages for and click the
 corresponding **View Details** link.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/ASP.NET-Trace-Sample-474x600.png"
 alt="ASP.NET Trace Viewer - Request Details" class="screenshot" height="600"
 width="474" caption="Figure 2: ASP.NET Trace Viewer - Request Details" >}}
 

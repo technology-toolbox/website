@@ -70,7 +70,7 @@ by Google into the page.
 At that point, the search page looked like Figure 1.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-1-296x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Site-Search-1-296x600.png"
 alt="Google Site Search (with borders)" class="screenshot" height="600"
 width="296" caption="Figure 1: Google Site Search (with borders)" >}}
 
@@ -96,7 +96,7 @@ override the table styles on the Search page:
 As you can see in the following screenshot, this improves things considerably.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-2-328x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Site-Search-2-328x600.png"
 alt="Google Site Search (without borders)" class="screenshot" height="600"
 width="328" caption="Figure 2: Google Site Search (without borders)" >}}
 
@@ -236,7 +236,7 @@ Google's CSS file and adding the following rules to a CSS file for this website:
 Figure 3 shows the corresponding results.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Google-Site-Search-3-381x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Google-Site-Search-3-381x600.png"
 alt="Google Site Search (final)" class="screenshot" height="600" width="381"
 caption="Figure 3: Google Site Search (final)" >}}
 

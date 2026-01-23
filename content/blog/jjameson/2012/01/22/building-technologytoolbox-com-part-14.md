@@ -172,7 +172,7 @@ If you happen to encounter an unexpected error on the Technology Toolbox site,
 then you'll see something similar to the screenshot below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Error-Generic-600x295.png"
 alt="Custom error page (Generic.aspx)" class="screenshot" height="295"
 width="600" caption="Figure 1: Custom error page (Generic.aspx)" >}}
 
@@ -399,7 +399,7 @@ If you were to click the link in my email at this point, then you'd see the the
 out-of-the-box IIS "404" error page (404.htm) shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/IIS-404-600x110.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/IIS-404-600x110.png"
 alt="IIS - default 404 page (404.htm)" class="screenshot" height="110"
 width="600" caption="Figure 2: IIS - default 404 page (404.htm)" >}}
 
@@ -422,7 +422,7 @@ In either case, it would be better to show users a custom 404 error page, like
 the one shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Error-404-600x295.png"
 alt="HTTP 404 error page (404.aspx)" class="screenshot" height="295" width="600"
 caption="Figure 3: HTTP 404 error page (404.aspx)" >}}
 

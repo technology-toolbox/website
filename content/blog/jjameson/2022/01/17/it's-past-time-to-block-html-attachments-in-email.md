@@ -15,7 +15,7 @@ This morning I received yet another phishing email with a malicious HTML
 attachment:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/80/93675973B2017528FD670B724A4566314A06AA80.png"
+  src="https://assets.techtoolbox.us/screenshots/80/93675973B2017528FD670B724A4566314A06AA80.png"
   class="screenshot" height="832" width="1435"
   caption="Figure 1: Phishing email with malicious HTML attachment" >}}
 
@@ -30,7 +30,7 @@ time around, why not try again?
 Clicking the HTML attachment in Outlook shows the following warning:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/FD/9B4A7408D98A998447392D781022496E305092FD.png"
+  src="https://assets.techtoolbox.us/screenshots/FD/9B4A7408D98A998447392D781022496E305092FD.png"
   class="screenshot" height="214" width="383"
   caption="Figure 2: Warning about opening a mail attachment" >}}
 
@@ -39,7 +39,7 @@ In this particular case, this results in a browser opening the login page shown
 below:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/96/20DCA266775344D835DB3EB50EC984B0B445DC96.png"
+  src="https://assets.techtoolbox.us/screenshots/96/20DCA266775344D835DB3EB50EC984B0B445DC96.png"
   class="screenshot" height="832" width="1434"
   caption="Figure 3: Phishing login page" >}}
 
@@ -51,7 +51,7 @@ Directory Federation Services (ADFS).
 The source of the malicious HTML attachment is illustrated below:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/DE/81ACE76BE282F5FD668F000D1FB5D778280779DE.png"
+  src="https://assets.techtoolbox.us/screenshots/DE/81ACE76BE282F5FD668F000D1FB5D778280779DE.png"
   class="screenshot" height="245" width="1434"
   caption="Figure 4: HTML source for phishing login page" >}}
 
@@ -72,7 +72,7 @@ something like
 actual HTML rendered in the login page:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/57/B8265772B3EB2DBA18D4D5E95E3B10A830DCCF57.png"
+  src="https://assets.techtoolbox.us/screenshots/57/B8265772B3EB2DBA18D4D5E95E3B10A830DCCF57.png"
   class="screenshot" height="1040" width="1920"
   caption="Figure 5: Decoded HTML source for phishing login page" >}}
 
@@ -157,7 +157,7 @@ as expected. You should receive an "undeliverable" message similar to the
 following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/C1/8907CF0C9E29B87871FC79136C5810D43EB67EC1.png"
+  src="https://assets.techtoolbox.us/screenshots/C1/8907CF0C9E29B87871FC79136C5810D43EB67EC1.png"
   class="screenshot" height="1040" width="1920"
   caption="Figure 6: Undeliverable message when sending email with HTML attachment" >}}
 

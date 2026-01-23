@@ -37,7 +37,7 @@ The following figure shows the physical architecture of the various computers
 and network devices that comprise the "Jameson Datacenter":
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-2009-09-13-600x493.jpg"
 alt="The \"Jameson Datacenter\" - physical architecture" height="493"
 width="600"
 caption="Figure 1: The \"Jameson Datacenter\" - physical architecture" >}}
@@ -59,7 +59,7 @@ machines (VMs). The following figure illustrates the various servers (both
 logical and physical) that typically run 24x7 in my lab:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Logical-(2009-09-13)-600x370.jpg"
 alt="The \"Jameson Datacenter\" - logical architecture" height="370" width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - logical architecture" >}}
 
@@ -192,7 +192,7 @@ The following figure provides more detail on the hardware configuration of the
 various servers:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Jameson-Datacenter-Hardware-(2009-09-13)-600x454.jpg"
 alt="The \"Jameson Datacenter\" - hardware configuration" height="454"
 width="600"
 caption="Figure 2: The \"Jameson Datacenter\" - hardware configuration" >}}

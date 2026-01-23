@@ -83,7 +83,7 @@ mention of SharePoint anywhere in Handcrafted CSS ;-)
 The following screenshot shows the Tugboat home page:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Home-296x600.png"
 alt="Tugboat - Home page" class="screenshot" height="600" width="296"
 caption="Figure 1: Tugboat - Home page" >}}
 
@@ -258,7 +258,7 @@ Here is a "wireframe" I put together to help visualize the various fields and
 Web Parts on the Tugboat home page:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-296x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Home-Page-Layout-296x600.png"
 alt="Tugboat - Home page (wireframe)" class="screenshot" height="600"
 width="296" caption="Figure 2: Tugboat - Home page (wireframe)" >}}
 
@@ -287,7 +287,7 @@ The following picture illustrates the various fields and Web Part zones for
 TugboatWelcomePageLayout1:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-WelcomePageLayout1-600x285.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-WelcomePageLayout1-600x285.png"
 alt="TugboatWelcomePageLayout1" height="285" width="600"
 caption="Figure 3: TugboatWelcomePageLayout1" >}}
 
@@ -429,7 +429,7 @@ work, right? Well, sort of...
 It worked as expected in Firefox, as shown in the following screenshot:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-595x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Map-Firefox-595x600.png"
 alt="\"Find a Location\" map (Firefox)" class="screenshot" height="600"
 width="595" caption="Figure 4: \"Find a Location\" map (Firefox)" >}}
 
@@ -439,7 +439,7 @@ However, take a look at the following screenshot that shows the exact same HTML
 rendered using IE8:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-600x598.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Map-IE8-600x598.png"
 alt="\"Find a Location\" map (IE8)" class="screenshot" height="598" width="600"
 caption="Figure 5: \"Find a Location\" map (IE8)" >}}
 

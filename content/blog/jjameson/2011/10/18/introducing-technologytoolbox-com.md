@@ -25,7 +25,7 @@ site in greater detail.
 The following screenshot shows the current home page for Technology Toolbox.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 1: Technology Toolbox home page" >}}
 
@@ -45,7 +45,7 @@ ready to serve as a reference for the visual design).
 Here is the corresponding page layout for the site home page.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-(Page-Layout)-536x600.png"
 alt="Technology Toolbox home page (page layout)" class="screenshot" height="600"
 width="536" caption="Figure 2: Technology Toolbox home page (page layout)" >}}
 
@@ -127,7 +127,7 @@ a related illustration (typically obtained from
 [iStockphoto](http://www.istockphoto.com) -- my image provider of choice).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-600x494.png"
 alt="Services page" class="screenshot" height="494" width="600"
 caption="Figure 3: Services page" >}}
 
@@ -141,7 +141,7 @@ secondary content spans the remaining 5 columns (since I chose the 12 column
 layout option).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Services-with-Grid-600x495.png"
 alt="Services page (with grid)" class="screenshot" height="495" width="600"
 caption="Figure 4: Services page (with grid)" >}}
 
@@ -167,7 +167,7 @@ The site provides an online form prospective clients can use regarding potential
 projects and other contact requests, as shown in Figure 5.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form" class="screenshot" height="600" width="592"
 caption="Figure 5: Contact form" >}}
 
@@ -178,7 +178,7 @@ when submitting the form. Also note how required fields have a light yellow
 background color (that changes to white when the field has the focus).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-validation-505x600.png"
 alt="Contact form validation errors" class="screenshot" height="600" width="505"
 caption="Figure 6: Contact form validation errors" >}}
 
@@ -198,7 +198,7 @@ control, an error appears in the validation summary, similar to when required
 fields are missing.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
 width="534" caption="Figure 7: Contact form CAPTCHA validation error" >}}
 
@@ -223,7 +223,7 @@ blog pages in the desired structure and format (for example, to show the
 lists of links grouped by year).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Home-374x600.png"
 alt="Blog home page" class="screenshot" height="600" width="374"
 caption="Figure 8: Blog home page" >}}
 
@@ -244,7 +244,7 @@ should try to "hook" them into reading other posts during the same visit. [The
 redundant with the items shown in the primary content area on that page.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post" class="screenshot" height="600" width="398"
 caption="Figure 9: Sample blog post" >}}
 
@@ -297,7 +297,7 @@ in IIS. It contains the Subtext solution and a few updated/additional files from
 the "Caelum" solution -- such as the site map file and the custom blog skin.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
 caption="Figure 10: Solution architecture" >}}
 
@@ -310,7 +310,7 @@ The production environment for TechnologyToolbox.com is currently hosted by
 servers are used for database services (i.e. SQL Server) and the Web tier.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure" height="399" width="600"
 caption="Figure 11: Infrastructure" >}}
 

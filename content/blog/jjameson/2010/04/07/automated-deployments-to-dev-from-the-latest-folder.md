@@ -26,7 +26,7 @@ The following figure illustrates how deployments to the Development environment
 Release Server.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="Automated deployment to DEV using the \"latest\" folder" height="343"
 width="600"
 caption="Figure 1: Automated deployment to DEV using the \"latest\" folder" >}}

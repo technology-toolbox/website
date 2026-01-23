@@ -55,7 +55,7 @@ images from the
 [updated TFS Branching Guide 2.0](http://www.codeplex.com/TFSBranchingGuideII):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Basic-600x260.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Branch-Plan-Basic-600x260.png"
 alt="Basic branch plan" height="260" width="600"
 caption="Figure 1: Basic branch plan" >}}
 
@@ -78,7 +78,7 @@ like a very good way to describe it. To help visualize the difference, I mocked
 up the following figure.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Branch-Plan-Problematic-600x260.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Branch-Plan-Problematic-600x260.png"
 alt="\"Reactive\" branch plan" height="260" width="600"
 caption="Figure 2: \"Reactive\" branch plan" >}}
 

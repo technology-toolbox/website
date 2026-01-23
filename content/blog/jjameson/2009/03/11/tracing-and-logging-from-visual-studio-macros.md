@@ -29,7 +29,7 @@ there is an item in the **Show output from** dropdown list titled **Macros**
 (a.k.a. "the macro output pane").
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Macro-Output-Pane-600x239.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Macro-Output-Pane-600x239.png"
 alt="Macro output pane" class="screenshot" height="239" width="600"
 caption="Figure 1: Macro output pane" >}}
 

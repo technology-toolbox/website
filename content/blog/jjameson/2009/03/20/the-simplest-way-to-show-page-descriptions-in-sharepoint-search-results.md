@@ -114,7 +114,7 @@ This is counterintuitive, so let's start by looking at the out-of-the-box
 content type hierarchy:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/MOSS-2007-Publishing-Content-Type-Hierarchy-568x597.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/MOSS-2007-Publishing-Content-Type-Hierarchy-568x597.png"
 alt="MOSS 2007 Publishing - content type hierarchy" height="597" width="568"
 caption="Figure 1: MOSS 2007 Publishing - content type hierarchy" >}}
 

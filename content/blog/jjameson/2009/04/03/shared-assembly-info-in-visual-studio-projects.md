@@ -34,7 +34,7 @@ the Properties folder so that it sits side-by-side with the AssemblyInfo.cs that
 is specific to each project in the solution, as shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Linked-Files-in-Visual-Studio-Solutions-372x577.JPG"
 alt="Linked SharedAssemblyInfo.cs files in a Visual Studio solution"
 class="screenshot" height="577" width="372"
 caption="Figure 1: Linked SharedAssemblyInfo.cs files in a Visual Studio solution" >}}

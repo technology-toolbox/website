@@ -14,7 +14,7 @@ This morning, I woke up to find the following "delightful" e-mail from Google in
 my inbox:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png"
+  src="https://assets.techtoolbox.us/screenshots/66/45EA6D5A31ADAE93C914117C826D91FA20115F66.png"
   class="screenshot" height="862" width="628"
   caption="Figure 1: E-mail notification for password found in data breach" >}}
 

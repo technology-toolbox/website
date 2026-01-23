@@ -142,7 +142,7 @@ As a quick review, the following screenshot shows the snapshots for my primary
 SharePoint Server 2010 development VM (FOOBAR5):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR5-Snapshots-600x383.png"
 alt="FOOBAR5 snapshots" class="screenshot" height="383" width="600"
 caption="Figure 1: FOOBAR5 snapshots" >}}
 
@@ -246,7 +246,7 @@ To understand this process, examine the snapshots shown below for one of my
 Microsoft Office SharePoint Server 2007 development VMs (FOOBAR2):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/FOOBAR2-Snapshots-600x372.png"
 alt="FOOBAR2 snapshots" class="screenshot" height="372" width="600"
 caption="Figure 2: FOOBAR2 snapshots" >}}
 

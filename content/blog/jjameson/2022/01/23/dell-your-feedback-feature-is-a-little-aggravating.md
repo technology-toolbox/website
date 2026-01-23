@@ -33,7 +33,7 @@ feedback in hopes that Dell might update the content to address the issues.
 That's when I encountered the following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png"
+  src="https://assets.techtoolbox.us/screenshots/36/FEEE6EA2FF806EC92F72D216E76799AAD8C2F336.png"
   class="screenshot" height="793" width="1266"
   caption="Figure 1: Error submitting feedback on Dell website" >}}
 

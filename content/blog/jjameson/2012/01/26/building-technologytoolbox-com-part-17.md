@@ -33,7 +33,7 @@ solutions (specifically the "Caelum" solution in Visual Studio 2010 and the
 "Subtext" solution in Visual Studio 2008).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture for TechnologyToolbox.com" height="520" width="600"
 caption="Figure 1: Solution architecture for TechnologyToolbox.com" >}}
 

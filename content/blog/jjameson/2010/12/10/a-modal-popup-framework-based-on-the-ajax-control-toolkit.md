@@ -58,7 +58,7 @@ The following figure illustrates the various UI elements of a modal popup
 window.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Modal-Popup-Window-Elements-600x241.png"
 alt="Elements of a modal popup window" height="241" width="600"
 caption="Figure 1: Elements of a modal popup window" >}}
 
@@ -131,7 +131,7 @@ modalPanelContent.Height = new Unit(100);
 show a scrollbar as necessary. This is illustrated in the following figure.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Modal-Popup-Window-Constrained-Height-460x190.png"
 alt="Constraining the height of content displayed in a modal popup window"
 height="190" width="460"
 caption="Figure 2: Constraining the height of content displayed in a modal popup window" >}}

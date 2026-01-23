@@ -25,7 +25,7 @@ I showed an example KPI dashboard for a Web application with a table similar to
 the following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v4-588x151.png"
   alt="Key Performance Indicators (Detail)" height="151" width="588"
   caption="Figure 1: Key Performance Indicators (Detail)" >}}
 
@@ -225,7 +225,7 @@ Running the Web application at this point renders a simple table similar to the
 following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v1-620x162.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v1-620x162.png"
   alt="Key Performance Indicators (Detail) - \"v1\"" height="151" width="588"
   caption="Figure 2: Key Performance Indicators (Detail) - \"v1\"" >}}
 
@@ -277,7 +277,7 @@ Running the Web application at this point shows the images in place of the
 lengthy column headings, similar to the following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v2-519x146.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v2-519x146.png"
   alt="Key Performance Indicators (Detail) - \"v2\"" height="146" width="519"
   caption="Figure 3: Key Performance Indicators (Detail) - \"v2\"" >}}
 
@@ -354,7 +354,7 @@ Running the Web application at this point shows the **Thresholds** header above
 the corresponding columns, similar to the following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v3-519x175.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-v3-519x175.png"
   alt="Key Performance Indicators (Detail) - \"v3\"" height="175" width="519"
   caption="Figure 4: Key Performance Indicators (Detail) - \"v3\"" >}}
 
@@ -412,7 +412,7 @@ post back), the GridView renders itself from view state, similar to the
 following:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-Post-Back-Issue-575x131.png"
+  src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Key-Performance-Indicators-Detail-Post-Back-Issue-575x131.png"
   alt="Key Performance Indicators (Detail) - \"post back issue\"" height="131" width="575"
   caption="Figure 5: Key Performance Indicators (Detail) - \"post back issue\"" >}}
 

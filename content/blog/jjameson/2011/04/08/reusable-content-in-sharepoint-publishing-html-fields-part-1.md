@@ -49,7 +49,7 @@ content. [Also note that in this particular solution, the document authors have
 read-only access to the **Reusable Content** list.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-List-463x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-List-463x600.png"
 alt="Reusable Content list" class="screenshot" height="600" width="463"
 caption="Figure 1: Reusable Content list" >}}
 
@@ -62,7 +62,7 @@ the section at the bottom of the page on my test site, so please ignore the
 highlighted text.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-600x511.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-600x511.png"
 alt="Reusable Content in \"view\" mode" class="screenshot" height="511"
 width="600" caption="Figure 2: Reusable Content in \"view\" mode" >}}
 
@@ -72,7 +72,7 @@ Note that when the document author is editing the page, SharePoint marks the
 reusable content section as read-only, as shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-600x423.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-edit-mode-600x423.png"
 alt="Reusable Content in \"edit\" mode" class="screenshot" height="423"
 width="600" caption="Figure 3: Reusable Content in \"edit\" mode" >}}
 
@@ -89,7 +89,7 @@ Figure 3. However, the following screenshot was taken _prior_ to approving the
 list item shown in Figure 1 above.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-600x211.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Reusable-Content-missing-content-600x211.png"
 alt="Page with missing content (due to \"Pending\" status in Reusable Content list)"
 class="screenshot" height="211" width="600"
 caption="Figure 4: Page with missing content (due to \"Pending\" status in Reusable Content list)" >}}

@@ -25,7 +25,7 @@ I also showed how I created taskbar shortcuts to quickly access my NotBackedUp
 and Toolbox folders.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/Taskbar-Shortcuts-301x96.jpg"
 alt="Taskbar shortcuts (Windows Vista)" height="96" width="301"
 caption="Figure 1: Taskbar shortcuts (Windows Vista)" >}}
 
@@ -33,7 +33,7 @@ I have long since upgraded from Windows Vista to Windows 7, so now I use the
 Windows Explorer Jump List to quickly access my most frequently used folders.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-Win7-360x283.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-Win7-360x283.png"
 alt="My Windows Explorer Jump List (Windows 7)" height="283" width="360"
 caption="Figure 2: My Windows Explorer Jump List (Windows 7)" >}}
 
@@ -45,7 +45,7 @@ various folders -- thanks to the fact that I use roaming profiles in the the
 my home lab).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-WS2008R2-333x298.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/My-System/My-Windows-Explorer-Jump-List-WS2008R2-333x298.png"
 alt="My Windows Explorer Jump List (Windows Server 2008 R2)" height="298"
 width="333"
 caption="Figure 3: My Windows Explorer Jump List (Windows Server 2008 R2)" >}}

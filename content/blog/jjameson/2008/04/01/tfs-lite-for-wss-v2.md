@@ -99,7 +99,7 @@ Another key feature is the ability to show the status of important project
 deliverables and milestones using KPI icons (green, yellow, and red).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-600x452.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/TFS-Lite-WSS-v2-600x452.jpg"
 alt="Project Summary \"dashboard\"" class="screenshot" height="452" width="600"
 caption="Figure 1: Project Summary \"dashboard\"" >}}
 

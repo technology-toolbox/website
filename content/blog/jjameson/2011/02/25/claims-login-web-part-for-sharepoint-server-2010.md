@@ -32,7 +32,7 @@ authentication, the login page requires you to specify the type of credentials
 to use to logon to the SharePoint site.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-1-600x250.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-1-600x250.png"
 alt="Default login page in SharePoint Server 2010 (/_login/default.aspx)"
 class="screenshot" height="250" width="600"
 caption="Figure 1: Default login page in SharePoint Server 2010 (/_login/default.aspx)" >}}
@@ -41,7 +41,7 @@ If you click **Forms Authentication** in the dropdown list, you are redirected
 to the default login form (/\_forms/default.aspx), shown in Figure 2.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-2010-OOTB-Sign-In-Page-2-600x250.png"
 alt="Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)"
 class="screenshot" height="250" width="600"
 caption="Figure 2: Default form for FBA in SharePoint Server 2010 (/_forms/default.aspx)" >}}
@@ -62,7 +62,7 @@ world solutions. Instead we need a "branded" login page like the one shown in
 Figure 3.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-600x342.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-2010-Custom-Sign-In-Page-600x342.png"
 alt="Custom login page in SharePoint Server 2010" class="screenshot"
 height="342" width="600"
 caption="Figure 3: Custom login page in SharePoint Server 2010" >}}

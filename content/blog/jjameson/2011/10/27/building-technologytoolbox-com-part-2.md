@@ -84,7 +84,7 @@ Visual Studio solution and a couple of projects (i.e. **CoreServices** and
 illustrated in the following screenshot.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Initial-source-tree-600x420.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Caelum-Initial-source-tree-600x420.png"
 alt="Caelum - Initial source tree and Visual Studio solution" class="screenshot"
 height="420" width="600"
 caption="Figure 1: Caelum - Initial source tree and Visual Studio solution" >}}

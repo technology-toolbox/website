@@ -123,7 +123,7 @@ First, it is important to have a high-level understanding of the default
 workflow used in TFS 2010.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-DefaultTemplate-Overview-232x431.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-DefaultTemplate-Overview-232x431.png"
 alt="DefaultTemplate.xaml - Overview" height="431" width="232"
 caption="Figure 1: DefaultTemplate.xaml - Overview" >}}
 
@@ -141,7 +141,7 @@ Agent" activities. Let's take a quick look at the details of "Update Drop
 Location":
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Update-Drop-Location-254x464.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Update-Drop-Location-254x464.png"
 alt="DefaultTemplate.xaml - Update Drop Location" height="464" width="254"
 caption="Figure 2: DefaultTemplate.xaml - Update Drop Location" >}}
 
@@ -205,7 +205,7 @@ The next step is to move a couple of the existing workflow activities out of the
 Number**, as shown below.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-225x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-1-225x600.png"
 alt="CustomTemplate.xaml - Step 1" height="600" width="225"
 caption="Figure 3: CustomTemplate.xaml - Step 1" >}}
 
@@ -215,7 +215,7 @@ Next, move **Update Build Number** and **Update Drop Location** inside the **Run
 On Agent** scope, as shown below:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-166x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-2-166x600.png"
 alt="CustomTemplate.xaml - Step 2" height="600" width="166"
 caption="Figure 4: CustomTemplate.xaml - Step 2" >}}
 
@@ -440,7 +440,7 @@ At this point, CustomTemplate.xaml should look like the following (in order to
 conserve space, only the **Update Build Number** portion is shown):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-3-292x586.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/TFS-2010-Increment-Version-Step-3-292x586.png"
 alt="CustomTemplate.xaml (Update Build Number) - Step 3" height="586"
 width="292"
 caption="Figure 5: CustomTemplate.xaml (Update Build Number) - Step 3" >}}

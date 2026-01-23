@@ -20,7 +20,7 @@ If, like me, you happen to encounter the following user experience when
 attempting to edit a master page...
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/SharePoint-Designer-Error-Creating-Control-600x305.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/SharePoint-Designer-Error-Creating-Control-600x305.png"
 alt="SharePoint Designer - \"Error Creating Control\"" class="screenshot"
 height="305" width="600"
 caption="Figure 1: SharePoint Designer - \"Error Creating Control\"" >}}

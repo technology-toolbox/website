@@ -34,7 +34,7 @@ The Technology Toolbox website provides an online form prospective clients can
 use regarding potential projects and other contact requests, as shown in Figure 1.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-592x600.png"
 alt="Contact form with custom CAPTCHA control" class="screenshot" height="600"
 width="592" caption="Figure 1: Contact form with custom CAPTCHA control" >}}
 
@@ -54,7 +54,7 @@ control, an error appears in the validation summary, similar to when required
 fields are missing.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Contact-CAPTCHA-534x600.png"
 alt="Contact form CAPTCHA validation error" class="screenshot" height="600"
 width="534" caption="Figure 2: Contact form CAPTCHA validation error" >}}
 

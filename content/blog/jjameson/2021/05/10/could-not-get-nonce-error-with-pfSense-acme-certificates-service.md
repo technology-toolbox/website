@@ -29,7 +29,7 @@ package in pfSense, I encountered the following error:
 Actually, I encountered 20 of these errors:
 
 {{< figure
-  src="https://assets.technologytoolbox.com/screenshots/F6/CCD11176635DADB76FC53C0D50DD4F718ED0D6F6.png"
+  src="https://assets.techtoolbox.us/screenshots/F6/CCD11176635DADB76FC53C0D50DD4F718ED0D6F6.png"
   class="screenshot" height="921" width="1024"
   caption="Figure 1: Errors creating ACME (Let's Encrypt) certificate" >}}
 

@@ -29,7 +29,7 @@ This shows how the Caelum and Subtext Visual Studio solutions are merged
 together during the deployment process.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Solution-Architecture-600x520.jpg"
 alt="Solution architecture" height="520" width="600"
 caption="Figure 1: Solution architecture" >}}
 
@@ -471,7 +471,7 @@ to DEV on a daily basis (or more frequently depending on where you are in the
 release cycle).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment" height="343" width="600"
 caption="Figure 2: Automated build and deployment" >}}
 
@@ -499,7 +499,7 @@ deployments to the Test environment occur much less often -- for example, when a
 beta version of the solution is ready.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="\"Manual\" deployment to TEST" height="343" width="600"
 caption="Figure 4: \"Manual\" deployment to TEST" >}}
 

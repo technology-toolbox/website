@@ -52,7 +52,7 @@ Here's a pivot chart that I put together that shows the performance
 characteristics of each of these drives.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-600x404.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-WOLVERINE-600x404.png"
 alt="Disk performance on WOLVERINE" height="404" width="600"
 caption="Figure 1: Disk performance on WOLVERINE" >}}
 
@@ -82,7 +82,7 @@ the following chart which shows the performance of the SSD on my desktop
 (WOLVERINE) compared with other hard drives running on various servers.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-518x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Benchmarks-Baseline-518x600.png"
 alt="Disk performance (various computers)" height="600" width="518"
 caption="Figure 2: Disk performance (various computers)" >}}
 

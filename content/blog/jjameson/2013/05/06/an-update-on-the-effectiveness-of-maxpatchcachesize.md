@@ -23,7 +23,7 @@ registry setting has, unfortunately, become less effective over the years since
 For example, here's what the disk usage looks like on one of my development VMs:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Disk-Usage-FOOBAR7-Baseline-600x460.png"
 alt="Disk usage" class="screenshot" height="460" width="600"
 caption="Figure 1:" >}}
 

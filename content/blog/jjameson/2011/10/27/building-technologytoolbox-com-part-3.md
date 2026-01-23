@@ -155,7 +155,7 @@ Figure 1 shows the corresponding Design view of the master page in Expression
 Web (after adding the CSS rules to define the site fonts, colors, etc.).
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Caelum-Default.master-600x142.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Caelum-Default.master-600x142.png"
 alt="Caelum prototype - Default.master" class="screenshot" height="142"
 width="600" caption="Figure 1: Caelum prototype - Default.master" >}}
 
@@ -365,7 +365,7 @@ the **Most Recent Posts** section. Hence I didn't bother capturing a different
 screenshot from the HTML prototype.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Home-538x600.png"
 alt="Technology Toolbox home page" class="screenshot" height="600" width="538"
 caption="Figure 2: Technology Toolbox home page" >}}
 
@@ -766,7 +766,7 @@ looks very similar and thus I didn't bother creating a separate screenshot for
 it.]
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Technology-Toolbox-Blog-Post-398x600.png"
 alt="Sample blog post" class="screenshot" height="600" width="398"
 caption="Figure 3: Sample blog post" >}}
 

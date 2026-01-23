@@ -35,7 +35,7 @@ provided by ASP.NET as a reference for logging the details of the exception.
 Here's a screenshot from a sample that I whipped up this morning:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/ASP.NET-Yellow-Page-of-Death-600x295.png"
 alt="ASP.NET error page" class="screenshot" height="295" width="600"
 caption="Figure 1: ASP.NET error page" >}}
 

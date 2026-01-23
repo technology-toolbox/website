@@ -52,7 +52,7 @@ Here's a partial screenshot of the home page of the portal, after clicking the
 **Site Actions** menu and then clicking **Edit Page**.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-No-menu-open-447x300.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Silverlight-No-menu-open-447x300.png"
 alt="No menus open" class="screenshot" height="300" width="447"
 caption="Figure 1: No menus open" >}}
 
@@ -62,7 +62,7 @@ a hint as to what's coming next.
 The following screenshot shows what happens when you click the **Page** menu.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Obscured-menu-447x300.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Silverlight-Obscured-menu-447x300.png"
 alt="Page menu items obscured by Silverlight control" class="screenshot"
 height="300" width="447"
 caption="Figure 2: Page menu items obscured by Silverlight control" >}}
@@ -80,7 +80,7 @@ property to **true** in the `<object>` element, as illustrated in the following
 screenshot:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Silverlight-Unobscured-menu-(windowless)-447x300.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Silverlight-Unobscured-menu-(windowless)-447x300.png"
 alt="Page menu items no longer obscured by windowless Silverlight control"
 class="screenshot" height="300" width="447"
 caption="Figure 3: Page menu items no longer obscured by windowless Silverlight control" >}}

@@ -67,7 +67,7 @@ Here's the physical architecture of what I now refer to as the "Old Jameson
 Datacenter":
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-600x460.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-System-Architecture-600x460.png"
 alt="Old Jameson Datacenter - Physical Architecture" height="460" width="600"
 caption="Figure 1: Old Jameson Datacenter - Physical Architecture" >}}
 
@@ -89,7 +89,7 @@ Notice that I use to run a back-to-back firewall configuration with a perimeter
 network (a.k.a. DMZ):
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-600x471.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-TCP-IP-Configuration-600x471.png"
 alt="Old Jameson Datacenter - TCP/IP Configuration" height="471" width="600"
 caption="Figure 2: Old Jameson Datacenter - TCP/IP Configuration" >}}
 
@@ -109,7 +109,7 @@ ever bother to read this and seriously start to question her father's sanity.]
 Anyway, here's the DNS and DHCP configuration for the original farm:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-600x186.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-DNS-Configuration-600x186.png"
 alt="Old Jameson Datacenter - DNS/DHCP Configuration" height="186" width="600"
 caption="Figure 1: Old Jameson Datacenter - DNS/DHCP Configuration" >}}
 
@@ -121,7 +121,7 @@ Perhaps the most laughable aspect of the Old Jameson Datacenter -- at least when
 compared to today -- was the storage infrastructure:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-600x475.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Old-Jameson-Datacenter-Disk-Configuration-600x475.png"
 alt="Old Jameson Datacenter - Disk Configuration" height="475" width="600"
 caption="Figure 1: Old Jameson Datacenter - Disk Configuration" >}}
 

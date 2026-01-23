@@ -30,7 +30,7 @@ a "Generic" page on the
 a couple of years ago.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-(Glycomics-Solution)-600x477.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Generic-(Glycomics-Solution)-600x477.jpg"
 alt="\"Generic\" page" class="screenshot" height="477" width="600"
 caption="Figure 1: \"Generic\" page" >}}
 
@@ -62,7 +62,7 @@ enough visibility of the underlying content to understand what each portion
 refers to.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Generic-(Page-Layout)-600x489.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Generic-(Page-Layout)-600x489.jpg"
 alt="\"Generic\" page (Page Layout)" class="screenshot" height="489" width="600"
 caption="Figure 2: \"Generic\" page (Page Layout)" >}}
 
@@ -71,7 +71,7 @@ caption="Figure 2: \"Generic\" page (Page Layout)" >}}
 Here is another example, based on a press release.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-(857)-478x600.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Press-Release-(857)-478x600.jpg"
 alt="Sample Press Release" class="screenshot" height="600" width="478"
 caption="Figure 3: Sample Press Release" >}}
 
@@ -80,7 +80,7 @@ caption="Figure 3: Sample Press Release" >}}
 Figure 4 shows the corresponding page layout.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Press-Release-(Page-Layout)-461x600.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Press-Release-(Page-Layout)-461x600.jpg"
 alt="Press Release (Page Layout)" class="screenshot" height="600" width="461"
 caption="Figure 4: Press Release (Page Layout)" >}}
 
@@ -100,7 +100,7 @@ Some pages may be comprised of both fields and Web Parts. For example, consider
 the following product detail page.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-(6890N-GC)-545x600.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Product-Detail-(6890N-GC)-545x600.jpg"
 alt="Sample product detail page" class="screenshot" height="600" width="545"
 caption="Figure 5: Sample product detail page" >}}
 
@@ -112,7 +112,7 @@ Figure 6 shows the corresponding page layout, highlighting the Web Parts in a
 different color.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/General-Site-Product-Detail-(Page-Layout)-533x600.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/General-Site-Product-Detail-(Page-Layout)-533x600.jpg"
 alt="Product Detail (Page Layout)" class="screenshot" height="600" width="533"
 caption="Figure 7: Product Detail (Page Layout)" >}}
 

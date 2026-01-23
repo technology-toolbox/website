@@ -53,7 +53,7 @@ The Production environment for TechnologyToolbox.com is currently hosted by
 servers are used for database services (i.e. SQL Server) and the Web tier.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Infrastructure/Technology-Toolbox-Infrastructure-600x399.jpg"
 alt="Infrastructure" height="399" width="600"
 caption="Figure 1: Infrastructure" >}}
 

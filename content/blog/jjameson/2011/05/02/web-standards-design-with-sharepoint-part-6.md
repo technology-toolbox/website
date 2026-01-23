@@ -41,7 +41,7 @@ For those of you that haven't yet read my previous post, the goal was to take a
 SharePoint list like the one shown below...
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-600x474.png"
 alt="Specials list" class="screenshot" height="474" width="600"
 caption="Figure 1: Specials list" >}}
 
@@ -98,7 +98,7 @@ The following screenshot shows the updated home page content after adding a
 fourth item to the **Specials** list.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Too-Many-Specials-600x411.png"
 alt="Too many items in the weekly specials section" class="screenshot"
 height="411" width="600"
 caption="Figure 2: Too many items in the weekly specials section" >}}
@@ -138,7 +138,7 @@ Recent Specials** view, the weekly specials section renders as expected
 regardless of the number of items in the **Specials** list.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/Tugboat-Specials-List-XsltListViewWebPart-600x324.png"
 alt="Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected"
 class="screenshot" height="324" width="600"
 caption="Figure 3: Using the \"Most Recent Specials\" view (instead of \"All Items\") renders the home page as expected" >}}

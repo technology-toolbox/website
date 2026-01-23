@@ -24,7 +24,7 @@ Office SharePoint Server (MOSS) 2007.
 I also provided a sample AJAX Web Part, illustrated in the following screenshot:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/SharePoint/AJAX-in-SharePoint-600x417.png"
 alt="AJAX in SharePoint" class="screenshot" height="417" width="600"
 caption="Figure 1: AJAX in SharePoint" >}}
 

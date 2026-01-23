@@ -67,7 +67,7 @@ So, if you know your way around Visual Studio even just a little, you should be
 able to quickly create the following shell structure:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Solution-Explorer-Step-1-314x452.JPG"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Solution-Explorer-Step-1-314x452.JPG"
 alt="Solution Explorer view of Visual Studio solution" class="screenshot"
 height="452" width="314"
 caption="Figure 1: Solution Explorer view of Visual Studio solution" >}}
@@ -75,7 +75,7 @@ caption="Figure 1: Solution Explorer view of Visual Studio solution" >}}
 In Windows Explorer, the corresponding folder structure looks like this:
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/Windows-Explorer-Step-1-600x379.JPG"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/Windows-Explorer-Step-1-600x379.JPG"
 alt="Windows Explorer view of Visual Studio solution" class="screenshot"
 height="379" width="600"
 caption="Figure 2: Windows Explorer view of Visual Studio solution" >}}

@@ -30,7 +30,7 @@ The following figure illustrates the initial build and deployment of the
 solution.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/1-Initial-build-and-deployment-600x259.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/1-Initial-build-and-deployment-600x259.png"
 alt="Initial build and deployment of the solution" height="259" width="600"
 caption="Figure 1: Initial build and deployment of the solution" >}}
 
@@ -69,7 +69,7 @@ Note the following key steps (corresponding to the various arrows in Figure 1):
 Figure 2 shows a subsequent build of the solution.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-600x271.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/2-Subsequent-build-and-deployment-600x271.png"
 alt="Subsequent build and deployment (with draft of installation guide)"
 height="271" width="600"
 caption="Figure 2: Subsequent build and deployment (with draft of installation guide)" >}}
@@ -90,7 +90,7 @@ build in which the manual installation to DEV has been replaced by an automated
 process.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/3-Automated-build-and-deployment-600x343.png"
 alt="Automated build and deployment (with install scripts and updated installation guide)"
 height="343" width="600"
 caption="Figure 3: Automated build and deployment (with install scripts and updated installation guide)" >}}
@@ -133,7 +133,7 @@ build of the solution to promote to the TEST environment. This is illustrated in
 Figure 4.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/4-Installing-the-Beta-1-version-to-TEST-600x343.png"
 alt="Installing the Beta 1 version to TEST" height="343" width="600"
 caption="Figure 4: Installing the Beta 1 version to TEST" >}}
 
@@ -163,7 +163,7 @@ periodically repeated, albeit much less frequently. This is illustrated in
 Figure 5 with the first "release candidate" of the solution.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-600x351.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/5-Installing-the-RC1-version-to-TEST-600x351.png"
 alt="Installing the RC1 version to TEST" height="351" width="600"
 caption="Figure 5: Installing the RC1 version to TEST" >}}
 
@@ -173,7 +173,7 @@ Note that if issues are discovered with the RC1 build, it may be necessary to
 promote yet another build to the TEST environment, as illustrated in Figure 6.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-600x351.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/6-Installing-the-RC2-version-to-TEST-600x351.png"
 alt="Installing the RC2 version to TEST" height="351" width="600"
 caption="Figure 6: Installing the RC2 version to TEST" >}}
 
@@ -184,7 +184,7 @@ passes all of the test cases. The final step is to install the solution into the
 production environment, as illustrated in Figure 7.
 
 {{< figure
-src="https://assets.technologytoolbox.com/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-600x350.png"
+src="https://assets.techtoolbox.us/blog/jjameson/Images/Development/7-Installing-the-V1.0-release-to-PROD-600x350.png"
 alt="Installing the V1.0 release to PROD" height="350" width="600"
 caption="Figure 7: Installing the V1.0 release to PROD" >}}
 
