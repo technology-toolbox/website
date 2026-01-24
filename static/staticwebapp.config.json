@@ -19,13 +19,13 @@
     {
       "route": "/blog/*",
       "headers": {
-        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.technologytoolbox.com ws://commento.technologytoolbox.com https://www.google-analytics.com; font-src 'self' https://commento.technologytoolbox.com; frame-src https://platform.twitter.com; img-src 'self' data: https://*.techtoolbox.us https://www.google-analytics.com; script-src 'self' data: https://commento.technologytoolbox.com https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com;"
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://commento.techtoolbox.us ws://commento.techtoolbox.us https://www.google-analytics.com; font-src 'self' https://commento.techtoolbox.us; frame-src https://platform.twitter.com; img-src 'self' data: https://*.techtoolbox.us https://www.google-analytics.com; script-src 'self' data: https://commento.techtoolbox.us https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.googletagmanager.com https://platform.twitter.com; style-src 'self' 'unsafe-inline' https://commento.techtoolbox.us;"
       }
     },
     {
       "route": "/search/*",
       "headers": {
-        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src https://cse.google.com; img-src 'self' data: clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com; script-src 'self' 'unsafe-eval' data: https://cdnjs.cloudflare.com cse.google.com https://www.google.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://commento.technologytoolbox.com https://www.google.com;"
+        "Content-Security-Policy": "default-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src https://cse.google.com; img-src 'self' data: clients1.google.com https://cse.google.com https://www.google.com https://www.googleapis.com https://www.google-analytics.com; script-src 'self' 'unsafe-eval' data: https://cdnjs.cloudflare.com cse.google.com https://www.google.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://commento.techtoolbox.us https://www.google.com;"
       }
     }
   ]
