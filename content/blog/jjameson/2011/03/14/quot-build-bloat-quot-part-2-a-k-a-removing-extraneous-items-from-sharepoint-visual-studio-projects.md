@@ -32,7 +32,7 @@ Fabrikam Demo and Tugboat).
 I quickly identified the crux of the issue by looking at a couple of the builds
 for the Tugboat solution. I noticed that a recent build of the Tugboat solution
 was almost 76 MB on disk. If you've seen the
-[Tugboat sample](/blog/jjameson/tags/Tugboat/), then you should know it
+[Tugboat sample](/tags/tugboat/), then you should know it
 certainly doesn't justify this amount of disk space.
 
 It turns out that 73 MB in each build folder was consumed by multiple copies of

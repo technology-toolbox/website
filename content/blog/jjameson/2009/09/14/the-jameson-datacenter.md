@@ -53,7 +53,7 @@ dramatically, contrary to what you might predict ;-)]
 
 If you've followed this blog for any significant length of time, you already
 know that I'm a
-[big fan of virtualization](/blog/jjameson/tags/Virtualization/default.aspx).
+[big fan of virtualization](/tags/virtualization/).
 Notice that I dedicate two servers specifically to running Hyper-V virtual
 machines (VMs). The following figure illustrates the various servers (both
 logical and physical) that typically run 24x7 in my lab:
