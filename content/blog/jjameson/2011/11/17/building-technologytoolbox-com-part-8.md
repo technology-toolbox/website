@@ -216,8 +216,8 @@ For more details on the build process, refer to one of my posts from a couple of
 years ago:
 
 {{< reference title="Build and Deployment Overview"
-linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview"
-linkText="https://www.techtoolbox.us/blog/jjameson/2009/09/26/build-and-deployment-overview" >}}
+linkHref="/blog/jjameson/2009/09/26/build-and-deployment-overview/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2009/09/26/build-and-deployment-overview/" >}}
 
 ### Step 7 - Configure permissions on Subtext App_Data folder
 

@@ -1323,15 +1323,15 @@ deployment configuration for a SharePoint project in Visual Studio.
 Consequently, I don't expect this to be used all that much during the
 development process. I've still found this useful, however, for some scenarios.
 For example, in the sample SharePoint solution I provided in
-[my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010),
+[my previous post](/blog/jjameson/2011/02/25/claims-login-web-part-for-sharepoint-server-2010/),
 you'll find that I changed the **Activate On Default** property of the
 "WebAppConfiguration" feature to **False**. For the reasons why I did this,
 refer to the following post (that was originally written for MOSS 2007 but still
 applies to SharePoint 2010):
 
 {{< reference title="SharePoint Features Activated by Default"
-linkHref="/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default"
-linkText="https://www.techtoolbox.us/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default" >}}
+linkHref="/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2010/03/31/sharepoint-features-activated-by-default/" >}}
 
 Consequently, I used the **Redeploy Features.ps1** script to ensure the
 WebAppConfiguration feature is activated (thus ensuring my custom Sign In page

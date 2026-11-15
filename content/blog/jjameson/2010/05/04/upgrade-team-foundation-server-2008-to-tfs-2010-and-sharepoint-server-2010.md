@@ -238,8 +238,8 @@ the default settings for this zone) enables single sign-on when accessing the
 site. This is discussed in more detail in the following blog post:
 
 {{< reference title="Be \"In the Zone\" to Avoid Entering Credentials"
-linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials"
-linkText="https://www.techtoolbox.us/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials" >}}
+linkHref="/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2007/03/22/be-in-the-zone-to-avoid-entering-credentials/" >}}
 
 #### Add the SharePoint bin folder to the PATH environment variable
 
@@ -323,8 +323,8 @@ WAMREG admin Service, as described in
 detail in the following blog post:
 
 {{< reference title="Event ID 10016, KB 920783, and the WSS_WPG Group"
-linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group"
-linkText="https://www.techtoolbox.us/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group" >}}
+linkHref="/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2009/10/17/event-id-10016-kb-920783-and-the-wss-wpg-group/" >}}
 
 {{< deleted-block "overflow-auto" >}}
 
@@ -705,7 +705,7 @@ To reset the home page for a TFS project site:
 > If you need to do this for a number of sites, you should consider using
 > PowerShell instead, as described in the following blog post:
 >
-> {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" linkText="https://www.techtoolbox.us/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010" >}}
+> {{< reference title="Use PowerShell to \"Reset to Site Definition\" in SharePoint Server 2010" linkHref="/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010/" linkText="https://www.techtoolbox.us/blog/jjameson/2010/05/18/use-powershell-to-quot-reset-to-site-definition-quot-in-sharepoint-server-2010/" >}}
 
 {{< div-block-end >}}
 
@@ -809,8 +809,8 @@ This is discussed in more detail in the following blog post:
 
 {{< reference
 title="\"The workbook cannot be opened\" Error with SharePoint Server 2010 (and TFS 2010)"
-linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010"
-linkText="https://www.techtoolbox.us/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010" >}}
+linkHref="/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010/"
+linkText="https://www.techtoolbox.us/blog/jjameson/2010/05/04/the-workbook-cannot-be-opened-error-with-sharepoint-server-2010-and-tfs-2010/" >}}
 
 To avoid this error, add the the second service account to the underlying
 content databases. ~~On the database server:~~

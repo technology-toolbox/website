@@ -790,7 +790,7 @@ hacking "noise."
 > **Update (2012-02-28)**
 >
 > Refer to the following post for more information on configuring ELMAH filters:
-> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" linkText="https://www.techtoolbox.us/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers" >}}
+> {{< reference title="Filter ELMAH email messages to avoid getting spammed by hackers" linkHref="/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers/" linkText="https://www.techtoolbox.us/blog/jjameson/2012/02/28/filter-elmah-email-messages-to-avoid-getting-spammed-by-hackers/" >}}
 
 {{< div-block-end >}}
 
