@@ -40,7 +40,7 @@ This repository contains the Technology Toolbox website:
    ```Shell
    cd website
 
-   git submodule add https://github.com/technology-toolbox/techtoolbox-hugo themes/techtoolbox-hugo
+   git submodule update --init themes/techtoolbox-hugo
    ```
 
 1. Install NPM dependencies:
