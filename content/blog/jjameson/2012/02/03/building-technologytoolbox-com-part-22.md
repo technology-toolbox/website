@@ -14,7 +14,7 @@ categories: ["Development", "My System"]
 tags: ["Web Development"]
 ---
 
-In [yesterday's post](../02/building-technologytoolbox-com-part-21.aspx), I
+In [yesterday's post](/blog/jjameson/2012/02/02/building-technologytoolbox-com-part-21/), I
 described how I integrated Google Site Search into the Technology Toolbox
 website. This post provides a similar walkthrough for implementing
 [Google Analytics](http://www.google.com/analytics/).
